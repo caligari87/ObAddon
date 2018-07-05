@@ -30,7 +30,7 @@ PREFABS.Wall_grated_thing =
 
   prob   = 15
   env   = "building"
-  theme = "tech"
+  theme = "!hell"
   
   where  = "edge"
   height = 128
@@ -51,7 +51,7 @@ PREFABS.Wall_inset =
 
   prob   = 15
   env   = "building"
-  theme = "tech"
+  theme = "!hell"
   
   where  = "edge"
   height = 128
@@ -72,7 +72,7 @@ PREFABS.Wall_vertical_light =
 
   prob   = 15
   env   = "building"
-  theme = "tech"
+  theme = "!hell"
   
   where  = "edge"
   height = 128
@@ -93,7 +93,7 @@ PREFABS.Wall_vertical_double_light =
 
   prob   = 15
   env   = "building"
-  theme = "tech"
+  theme = "!hell"
   
   where  = "edge"
   height = 128

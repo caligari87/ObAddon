@@ -9,7 +9,7 @@ PREFABS.Wall_hellarch =
 
   prob   = 50
   env   = "building"
-  theme = "!tech"
+  theme = "hell"
   
   where  = "edge"
   height = 128
@@ -30,7 +30,7 @@ PREFABS.Wall_hellarch_candlelit =
 
   prob   = 50
   env   = "building"
-  theme = "!tech"
+  theme = "hell"
   
   where  = "edge"
   height = 128
@@ -72,7 +72,7 @@ PREFABS.Wall_hell_fake_window =
 
   prob   = 50
   env   = "building"
-  theme = "!tech"
+  theme = "hell"
   
   where  = "edge"
   height = 128
@@ -102,6 +102,27 @@ PREFABS.Wall_hell_fake_window_outdoor_topstretch =
   z_fit = "bottom"
 }
 
+PREFABS.Wall_hell_fake_window_outdoor2 =
+{
+  template = "Wall_hell_fake_window"
+
+  group = "hell_fake_window_fireblu"
+  env = "outdoor"
+  
+  tex_ROCKRED1 = "FIREBLU1"
+}
+
+PREFABS.Wall_hell_fake_window_outdoor_topstretch2 =
+{
+  template = "Wall_hell_fake_window"
+
+  group = "hell_fake_window_fireblu"
+  env = "outdoor"
+  
+  tex_ROCKRED1 = "FIREBLU1"
+  z_fit = "bottom"
+}
+
 PREFABS.Wall_hell_flataccent_outdoor =
 {
   file   = "wall/gtd_wall_hell.wad"
@@ -109,7 +130,7 @@ PREFABS.Wall_hell_flataccent_outdoor =
 
   prob   = 50
   env   = "outdoor"
-  theme = "!tech"
+  theme = "hell"
   
   where  = "edge"
   height = 128
@@ -121,4 +142,76 @@ PREFABS.Wall_hell_flataccent_outdoor =
 
   x_fit = "stretch"
   z_fit = "stretch"
+}
+
+PREFABS.Wall_hell_thin_vaulted =
+{
+  file   = "wall/gtd_wall_hell.wad"
+  map    = "MAP06"
+
+  prob   = 50
+  env   = "building"
+  theme = "!tech"
+  
+  where  = "edge"
+  height = 128
+  long   = 128
+  deep   = 20
+
+  bound_z1 = 0
+  bound_z2 = 128
+
+  x_fit = "stretch"
+  z_fit = { 72-32,72-16 }
+}
+
+PREFABS.Wall_hell_thin_vaulted_outdoor =
+{
+  template = "Wall_hell_thin_vaulted"
+
+  env = "outdoor"
+ 
+  x_fit = "stretch"
+  z_fit = { 72-32,72-16 }
+}
+
+PREFABS.Wall_hell_fake_window_small =
+{
+  file   = "wall/gtd_wall_hell.wad"
+  map    = "MAP07"
+
+  prob   = 50
+  env   = "building"
+  theme = "hell"
+  
+  where  = "edge"
+  height = 128
+  long   = 128
+  deep   = 16
+
+  bound_z1 = 0
+  bound_z2 = 128
+
+  x_fit = "stretch"
+  z_fit = { 16-8,16+8 }
+}
+
+PREFABS.Wall_hell_fake_window_small_outdoor =
+{
+  template = "Wall_hell_fake_window_small"
+
+  env = "outdoor"
+ 
+  x_fit = "stretch"
+  z_fit = { 16-8,16+8 }
+}
+
+PREFABS.Wall_hell_fake_window_small_outdoor_stretchy =
+{
+  template = "Wall_hell_fake_window_small"
+
+  env = "outdoor"
+ 
+  x_fit = "stretch"
+  z_fit = { 48,56 }
 }

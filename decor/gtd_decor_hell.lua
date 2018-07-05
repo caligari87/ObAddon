@@ -22,7 +22,7 @@ PREFABS.Decor_blood_drip_pool =
   map    = "MAP02"
 
   prob   = 5000
-  theme  = "!tech"
+  theme  = "hell"
   env    = "building"
 
   where  = "point"
@@ -53,7 +53,7 @@ PREFABS.Decor_cage_n_corpses =
   map    = "MAP03"
 
   prob   = 5000
-  theme  = "!tech"
+  theme  = "hell"
   env    = "building"
 
   where  = "point"
@@ -77,7 +77,7 @@ PREFABS.Decor_hell_gazebo =
   map    = "MAP04"
 
   prob   = 5000
-  theme  = "!tech"
+  theme  = "hell"
 
   where  = "point"
   size   = 64
@@ -95,7 +95,7 @@ PREFABS.Decor_blood_filling_casket =
   map    = "MAP05"
 
   prob   = 5000
-  theme  = "!tech"
+  theme  = "hell"
   env    = "building"
 
   where  = "point"
@@ -114,7 +114,7 @@ PREFABS.Decor_vaulted_pillar =
   map    = "MAP06"
 
   prob   = 5000
-  theme  = "!tech"
+  theme  = "hell"
   env    = "building"
 
   where  = "point"
@@ -147,7 +147,7 @@ PREFABS.Decor_hell_throne =
   map    = "MAP08"
 
   prob   = 5000
-  theme  = "!tech"
+  theme  = "hell"
   env    = "building"
   
   where  = "point"
@@ -166,7 +166,7 @@ PREFABS.Decor_candle_altar =
   map    = "MAP09"
 
   prob   = 5000
-  theme  = "!tech"
+  theme  = "hell"
 
   where  = "point"
   size   = 64

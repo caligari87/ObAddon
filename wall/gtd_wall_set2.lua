@@ -9,7 +9,7 @@ PREFABS.Wall_machine_inset =
 
   prob   = 15
   env   = "building"
-  theme = "tech"
+  theme = "!hell"
   
   where  = "edge"
   height = 128
