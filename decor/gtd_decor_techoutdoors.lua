@@ -3,8 +3,8 @@ PREFABS.Decor_outdoor_freestanding_pillar =
   file   = "decor/gtd_decor_techoutdoors.wad"
   map    = "MAP01"
 
-  prob   = 666
-  theme  = "tech"
+  prob   = 5000
+  theme  = "!hell"
   env    = "outdoor"
 
   where  = "point"

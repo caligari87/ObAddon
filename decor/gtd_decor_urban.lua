@@ -92,3 +92,69 @@ PREFABS.Decor_marquee_sign4 =
    
    tex_CEMENT6 = "CEMENT4"
 }
+
+PREFABS.Decor_market_stall =
+{
+  file   = "decor/gtd_decor_urban.wad"
+  map    = "MAP05"
+
+  prob   = 5000
+  theme  = "urban"
+  env    = "building"
+
+  where  = "point"
+  size   = 64
+  height = 128
+
+  bound_z1 = 0
+  bound_z2 = 128
+
+  z_fit = "top"
+}
+
+PREFABS.Decor_street_barrier =
+{
+  file   = "decor/gtd_decor_urban.wad"
+  map    = "MAP06"
+
+  prob   = 6000
+  theme  = "urban"
+
+  where  = "point"
+  size   = 64
+
+  bound_z1 = 0
+}
+
+PREFABS.Decor_waiting_shed =
+{
+  file   = "decor/gtd_decor_urban.wad"
+  map    = "MAP07"
+
+  prob   = 5000
+  theme  = "urban"
+  env    = "building"
+
+  where  = "point"
+  size   = 64
+  height = 128
+
+  bound_z1 = 0
+  bound_z2 = 128
+
+  z_fit = "top"
+}
+
+PREFABS.Decor_cafe_table_set =
+{
+  file   = "decor/gtd_decor_urban.wad"
+  map    = "MAP08"
+
+  prob   = 5000
+  theme  = "urban"
+
+  where  = "point"
+  size   = 64
+
+  bound_z1 = 0
+}
