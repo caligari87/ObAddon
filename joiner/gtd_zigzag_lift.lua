@@ -1,6 +1,6 @@
 PREFABS.Joiner_zigzag_lift =
 {
-  file   = "joiner/zigzag_lift.wad"
+  file   = "joiner/gtd_zigzag_lift.wad"
   map = "MAP01"
 
   prob   = 1200
@@ -29,7 +29,7 @@ PREFABS.Joiner_zigzag_lift =
 
 PREFABS.Joiner_zigzag_lift =
 {
-  file   = "joiner/zigzag_lift.wad"
+  file   = "joiner/gtd_zigzag_lift.wad"
   map = "MAP02"
 
   prob   = 1200
