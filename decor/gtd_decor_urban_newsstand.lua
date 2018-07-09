@@ -1,7 +1,7 @@
 PREFABS.Decor_urban_newsstand =
 {
   file   = "decor/gtd_decor_urban_newsstand.wad"
-  map    = "MAP03"
+  map    = "MAP01"
 
   prob   = 5000
   theme  = "urban"

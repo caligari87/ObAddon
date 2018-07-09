@@ -76,21 +76,21 @@ PREFABS.Decor_marquee_sign2 =
 {
    template = "Decor_marquee_sign"
    
-   tex_CEMENT6 = "CEMENT1"
+   tex_SHAWN1 = "MARBFACE"
 }
    
 PREFABS.Decor_marquee_sign3 =
 {
    template = "Decor_marquee_sign"
    
-   tex_CEMENT6 = "CEMENT2"
+   tex_SHAWN1 = "MARBFAC2"
 }
 
 PREFABS.Decor_marquee_sign4 =
 {
    template = "Decor_marquee_sign"
    
-   tex_CEMENT6 = "CEMENT4"
+   tex_SHAWN1 = "MARBFAC3"
 }
 
 PREFABS.Decor_market_stall =
