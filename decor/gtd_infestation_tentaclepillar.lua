@@ -1,9 +1,9 @@
 PREFABS.Decor_tentaclepillar =
 {
-  file   = "decor/gtd_decor_hellontheme_tentaclepillar.wad"
+  file   = "decor/gtd_infestation_tentaclepillar.wad"
   map    = "MAP01"
 
-  prob   = 3000
+  prob   = 1500
 
   where  = "point"
   size   = 64

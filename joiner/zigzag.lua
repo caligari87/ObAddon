@@ -10,8 +10,8 @@ PREFABS.Joiner_zigzag1 =
   prob   = 2500
   style  = "steepness"
 
-  env      = "!cave"
-  neighbor = "!cave"
+  env      = "building"
+  neighbor = "building"
 
   where  = "seeds"
   shape  = "I"
