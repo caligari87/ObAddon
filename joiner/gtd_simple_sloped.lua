@@ -7,7 +7,8 @@ PREFABS.Joiner_simple_sloped =
   file   = "joiner/gtd_simple_sloped.wad"
   map    = "MAP01"
 
-  prob   = 90000
+  prob   = 1000
+  engine = "zdoom"
   theme  = "!hell"
 
   where  = "seeds"
