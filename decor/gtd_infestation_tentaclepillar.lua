@@ -6,6 +6,7 @@ PREFABS.Decor_tentaclepillar =
   prob   = 1500
 
   where  = "point"
+  env    = "!outdoor"
   size   = 64
   height = 128
 
