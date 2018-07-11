@@ -10,6 +10,8 @@ PREFABS.Joiner_simple_arched =
   prob   = 1000
   engine = "zdoom"
   theme  = "hell"
+  env = "!outdoor"
+  neighbor = "!outdoor"
 
   where  = "seeds"
   shape  = "I"
