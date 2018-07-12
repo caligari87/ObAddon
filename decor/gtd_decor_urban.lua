@@ -152,6 +152,7 @@ PREFABS.Decor_cafe_table_set =
 
   prob   = 5000
   theme  = "urban"
+  env    = "!cave"
 
   where  = "point"
   size   = 64
