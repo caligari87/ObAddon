@@ -19,7 +19,6 @@ PREFABS.Item_tech_window =
   
   bound_z1 = 0
 
-  z_fit = "top"
   y_fit = "top"
   x_fit = "frame"
 }
