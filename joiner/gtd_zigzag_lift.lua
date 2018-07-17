@@ -1,4 +1,4 @@
--- PREFABS.Joiner_zigzag_lift =
+-- PREFABS.Joiner_zigzag_lift_miniature =
 -- {
   -- file   = "joiner/gtd_zigzag_lift.wad"
   -- map = "MAP01"
@@ -60,7 +60,7 @@ PREFABS.Joiner_zigzag_lift =
 PREFABS.Joiner_zigzag_lift_mirrored =
 {
   file   = "joiner/gtd_zigzag_lift.wad"
-  map = "MAP02"
+  map = "MAP04"
 
   prob   = 750
   style  = "steepness"
