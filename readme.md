@@ -6,7 +6,8 @@ A repository of prefabs for Oblige.
 Copy the contents of this repository into your Oblige prefabs folder.
 
 * For Oblige version 7.70, this is under under `/games/doom/fabs/`
-* For Obige versions pre-7.70, this is under `/prefabs/`
+* For Obige versions pre-7.70 but not below 7.x, this is under `/prefabs/`
+* The prefab pack is highly unlikely to work for any non 7.x version of Oblige.
 
 ***
 
