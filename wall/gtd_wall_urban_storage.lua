@@ -38,11 +38,9 @@ PREFABS.Decor_urban_storage =
   file = "wall/gtd_wall_urban_storage"
   map = "MAP04"
   
-  prob = 50
+  prob = 5000
   theme = "!hell"
   env = "building"
-  
-  group = "gtd_wall_urban_storage"
 
   where = "point"
   size = 64
@@ -52,7 +50,7 @@ PREFABS.Decor_urban_storage =
   bound_z1 = 0
   bound_z2 = 128
   
-  z_fit = "top"
+  z_fit = { 64-4,64+4 }
 }
 
 PREFABS.Wall_urban_storage_diag =
@@ -61,7 +59,7 @@ PREFABS.Wall_urban_storage_diag =
   map    = "MAP05"
   
   prob   = 50
-  
+  theme = "!hell"
   group = "gtd_wall_urban_storage"
 
   where  = "diagonal"
