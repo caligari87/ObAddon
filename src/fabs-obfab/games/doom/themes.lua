@@ -1152,7 +1152,8 @@ DOOM.THEMES =
       torches6 = 3
       torches7 = 65
       torches11 = 7
-	  gtd_wall_urban_storage = 10
+	  gtd_wall_urban_storage = 25
+	  gtd_wall_tech_windows_topcorner = 25
     }
 
     window_groups =
@@ -1387,6 +1388,9 @@ DOOM.THEMES =
       torches6 = 5
       torches9 = 20 --burning barrel
       torches10 = 3 --skull rock
+	  gtd_wall_urban_storage = 8
+	  gtd_wall_tech_windows_topcorner = 8
+
     }
 
     window_groups =
@@ -1705,7 +1709,8 @@ DOOM.THEMES =
       cross4 = 5
       cross5 = 10
       mid_band_hell = 2
-	  gtd_wall_hell_bloodgutters = 80
+	  gtd_wall_hell_bloodgutters = 40
+	  gtd_wall_tech_windows_topcorner = 40
     }
 
     window_groups =
