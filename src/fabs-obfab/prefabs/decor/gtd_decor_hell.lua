@@ -151,7 +151,7 @@ PREFABS.Decor_hell_throne =
   env    = "building"
   
   where  = "point"
-  size   = 120
+  size   = 96
   height = 160
 
   bound_z1 = 0
