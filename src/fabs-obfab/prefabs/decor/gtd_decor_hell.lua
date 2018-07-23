@@ -158,6 +158,8 @@ PREFABS.Decor_hell_throne =
   bound_z2 = 160
   
   z_fit = { 144-16,144 }
+  
+  sink_mode = "never"
 }
 
 PREFABS.Decor_candle_altar =
