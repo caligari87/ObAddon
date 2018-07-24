@@ -3,12 +3,18 @@ A repository of prefabs for [Oblige](http://oblige.sourceforge.net/)
 
 ## Addons
 
-* [All Prefabs](files/ObFab_new.pk3) (v7.70) - All the prefabs from the ObFab project in one addon, packaged for Oblige v7.70.
-* [All Prefabs](files/ObFab_old.pk3) (pre-7.70) - All the prefabs from the ObFab project in one addon, packaged for Oblige versions before v.7.70 (such as 7.59)
+**For Oblige v7.70**
+
+* [ObFab_Prefabs-7.70.pk3](https://github.com/caligari87/ObFab/releases/download/2018-07-23/ObFab_Prefabs-7.70.pk3) - All the prefabs from the ObFab project.
+* [ObFab-SkyGen-7.70.pk3](https://github.com/caligari87/ObFab/releases/download/2018-07-23/ObFab-SkyGen-7.70.pk3) - Enhanced sky generation.
+* [ObFab-ShapeRules-7.70.pk3](https://github.com/caligari87/ObFab/releases/download/2018-07-23/ObFab-ShapeRules-7.70.pk3) - Additional room shape rules.
+* [ObFab-PrefabErrorLogger-7.70.pk3](https://github.com/caligari87/ObFab/releases/download/2018-07-23/ObFab-PrefabErrorLogger-7.70.pk3) - Optional error logger for debugging prefabs.
 
 ## Instructions
 
 Installation of prefabs, scripts, and other addons may vary by your Oblige version. Please be sure to follow the correct instructions for your version. The following instructions should apply to Oblige 7.x versions.
+
+**For Oblige v7.70**
 
 * Download the addon file you want for the version of Oblige you are running (such as v7.70)
 * Place the `.pk3` file into your Oblige `addons/` folder
