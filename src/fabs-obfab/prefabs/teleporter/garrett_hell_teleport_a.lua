@@ -1,12 +1,11 @@
-PREFABS.Hell_garrett_portal =
+PREFABS.Hell_garret_teleport_a =
 {
-  file   = "teleporter/garrett_hell_portal.wad"
+  file   = "teleporter/garrett_hell_teleport_a.wad"
   map    = "MAP01"
   prob   = 50
   
   theme  = "hell"
   where  = "seeds"
-  env    = "!outdoor"
   
   seed_w = 2
   seed_h = 2
@@ -19,4 +18,6 @@ PREFABS.Hell_garrett_portal =
   
   tag_1 = "?out_tag"
   tag_2 = "?in_tag"
+  
+  sector_8  = { [8]=60, [2]=10, [3]=10, [17]=10, [21]=10 }
 }

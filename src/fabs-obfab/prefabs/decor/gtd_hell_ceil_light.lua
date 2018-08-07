@@ -80,35 +80,35 @@ PREFABS.Light_gtd_hell_skylight2 =
 {
   template = "Light_gtd_hell_skylight"
   
-  tex_FLOOR1_6 = "FLOOR3_3"
+  flat_FLOOR1_6 = "FLOOR3_3"
 }
 
 PREFABS.Light_gtd_hell_skylight3 =
 {
   template = "Light_gtd_hell_skylight"
   
-  tex_FLOOR1_6 = "FLAT14"
+  flat_FLOOR1_6 = "FLAT14"
 }
 
 PREFABS.Light_gtd_hell_skylight4 =
 {
   template = "Light_gtd_hell_skylight"
   
-  tex_FLOOR1_6 = "RROCK01"
+  flat_FLOOR1_6 = "RROCK01"
 }
 
 PREFABS.Light_gtd_hell_skylight5 =
 {
   template = "Light_gtd_hell_skylight"
   
-  tex_FLOOR1_6 = "RROCK02"
+  flat_FLOOR1_6 = "RROCK02"
 }
 
 PREFABS.Light_gtd_hell_skylight6 =
 {
   template = "Light_gtd_hell_skylight"
   
-  tex_FLOOR1_6 = "RROCK04"
+  flat_FLOOR1_6 = "RROCK04"
 }
 
 PREFABS.Light_gtd_hell_lantern_square =
