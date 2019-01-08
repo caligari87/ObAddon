@@ -3510,6 +3510,116 @@ GROW_LIQUID_CANAL_OUT_ALT =
   }
 }
 
+-- [SINGLE_CANAL]
+
+GROW_LIQUID_SCANAL_ENTRY =
+{
+  prob = 12
+  
+  env = "building"
+  
+  structure =
+  {
+    "1..","111"
+    "1..","111"
+    "x..","x~~"
+    "x..","x~~"
+  }
+}
+
+GROW_LIQUID_SCANAL_ENTRY_FORWARD =
+{
+  prob = 12
+  
+  env = "building"
+  
+  structure =
+  {
+    "1....","111~~"
+    "1....","111~~"
+  }
+}
+
+GROW_LIQUID_SCANAL =
+{
+
+  prob = 60
+  
+  env = "building"
+  
+  structure =
+  {
+    "1.","11"
+    "1.","11"
+    "~.","~~"
+    "~.","~~"
+  }
+
+}
+
+GROW_LIQUID_SCANAL_OUTER_BEND =
+{
+
+  prob = 30
+  
+  env = "building"
+  
+  structure =
+  {
+    "1...","111%"
+    "1...","1111"
+    "~...","~~11"
+    "~...","~~11"
+  }
+  
+  diagonals =
+  {
+    "1."
+  }
+
+}
+
+GROW_LIQUID_SCANAL_INNER_BEND =
+{
+
+  prob = 30
+  
+  env = "building"
+  
+  structure =
+  {
+    "1...","11~~"
+    "1...","11~~"
+    "~...","~~~~"
+    "~...","~~~/"
+  }
+  
+  diagonals =
+  {
+    "~."
+  }
+}
+
+GROW_LIQUID_SCANAL_T_JUNCTION =
+{
+  prob = 20
+  
+  env = "building"
+  
+  structure =
+  {
+    "1.....","111111"
+    "1.....","111111"
+    "~.....","~%11/~"
+    "~.....","~~11~~"
+  }
+  
+  diagonals =
+  {
+    "~1","1~"
+  }
+}
+
 -- MSSP's escapes - these are special tiles intended to remove potential dead-ending tiles such as corners. [ESCAPE]
 
 GROW_SQUEEZE_EXIT =
@@ -3640,7 +3750,7 @@ GROW_PRIMITIVE_CIRCLE_2X =
 
 GROW_PRIMITIVE_HALFTRIANGLE_3X =
 {
-  prob = 35
+  prob = 25
   
   structure =
   {
@@ -3663,7 +3773,7 @@ GROW_PRIMITIVE_HALFTRIANGLE_3X =
 
 GROW_PRIMITIVE_TRIANGLE_2X =
 {
-  prob = 20
+  prob = 15
   
   structure =
   {
@@ -3861,6 +3971,35 @@ SERRATED_AREA_TRANSITION_SMOOTHER =
     ".1"
   }
 }
+
+-- MSSP's huge-arse rooms. [HUGE]
+
+-- GROW_HUGE_ROOM_12X =
+-- {
+  -- prob = 5000000000
+  -- prob_skew = 2
+
+  -- structure =
+  -- {
+    -- "............", "111111111111"
+    -- "............", "111111111111"
+    -- "............", "111111111111"
+    -- "............", "111111111111"
+    -- "............", "111111111111"
+    -- "............", "111111111111"
+    -- "............", "111111111111"
+    -- "............", "111111111111"
+    -- "............", "111111111111"
+    -- "............", "111111111111"
+    -- "............", "111111111111"
+    -- "............", "111111111111"
+    -- "............", "111111111111"
+    -- "............", "111111111111"
+    -- "............", "111111111111"
+    -- "............", "111111111111"
+    -- "11xxxxxxxxxx", "11xxxxxxxxxx"
+  -- }
+-- }
 
 -- end of SHAPE_GRAMMAR
 }
