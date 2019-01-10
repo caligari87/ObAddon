@@ -47,7 +47,7 @@ PREFABS.Decor_guardhouse =
   bound_z2 = 128
 
   z_fit = "top"
-  
+
   sink_mode = "never"
 }
 
@@ -68,28 +68,28 @@ PREFABS.Decor_marquee_sign =
   bound_z2 = 160
 
   z_fit = "top"
-  
+
   sink_mode = "never"
 }
 
 PREFABS.Decor_marquee_sign2 =
 {
    template = "Decor_marquee_sign"
-   
+
    tex_SHAWN1 = "MARBFACE"
 }
-   
+
 PREFABS.Decor_marquee_sign3 =
 {
    template = "Decor_marquee_sign"
-   
+
    tex_SHAWN1 = "MARBFAC2"
 }
 
 PREFABS.Decor_marquee_sign4 =
 {
    template = "Decor_marquee_sign"
-   
+
    tex_SHAWN1 = "MARBFAC3"
 }
 

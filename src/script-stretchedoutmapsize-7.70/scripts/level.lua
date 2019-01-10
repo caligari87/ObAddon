@@ -196,16 +196,16 @@ end
 function Episode_determine_map_sizes()
   each LEV in GAME.levels do
     local W, H = Level_determine_map_size(LEV)
-	
-	if OB_CONFIG.size == "stretched" then
-	  W = 7
-	  H = 112
-	  SEED_H = 112
-	end
+
+    if OB_CONFIG.size == "stretched" then
+      W = 7
+      H = 112
+      SEED_H = 112
+    end
 
     -- sanity check
-	if OB_CONFIG.size != "stretched" then
-	  assert(W + 4 <= SEED_W)
+    if OB_CONFIG.size != "stretched" then
+      assert(W + 4 <= SEED_W)
       assert(H + 4 <= SEED_H)
     end
 
@@ -654,8 +654,8 @@ function Episode_plan_monsters()
 
     -- Guard quota
 
-    local total = LEV.boss_quotas.tough +
-                  LEV.boss_quotas.nasty +
+    local total = LEV.boss_quotas.tough
+                  LEV.boss_quotas.nasty
                   LEV.boss_quotas.minor
 
     LEV.boss_quotas.guard = math.clamp(2, 4 - total, 4)

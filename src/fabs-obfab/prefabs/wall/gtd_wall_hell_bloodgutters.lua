@@ -8,7 +8,7 @@ PREFABS.Wall_hell_bloodgutters1 =
   env = "building"
 
   group = "gtd_wall_hell_bloodgutters"
-  
+
   where  = "edge"
   deep   = 16
   height = 128
@@ -30,7 +30,7 @@ PREFABS.Wall_hell_bloodgutters_diag =
 {
   file   = "wall/gtd_wall_hell_bloodgutters.wad"
   map    = "MAP03"
-  
+
   prob   = 50
   theme  = "hell"
   group = "gtd_wall_hell_bloodgutters"
@@ -38,7 +38,7 @@ PREFABS.Wall_hell_bloodgutters_diag =
   where  = "diagonal"
 
   height = 128
-  
+
   bound_z1 = 0
   bound_z2 = 128
 
@@ -50,10 +50,10 @@ PREFABS.Wall_hell_bloodgutters3 =
   template = "Wall_hell_bloodgutters1"
 
   map = "MAP04"
-  
+
   tex_SP_DUDE4 =
   {
     SP_DUDE4 = 50
-	SP_DUDE5 = 50
+    SP_DUDE5 = 50
   }
 }

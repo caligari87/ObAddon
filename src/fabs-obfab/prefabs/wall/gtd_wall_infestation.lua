@@ -9,7 +9,7 @@ PREFABS.Wall_infestation_guts_on_wall =
 
   prob   = 1.5
   env   = "building"
-  
+
   where  = "edge"
   height = 128
   long   = 128
@@ -29,7 +29,7 @@ PREFABS.Wall_infestation_guts_flowing_down_wall =
 
   prob   = 1.5
   env   = "building"
-  
+
   where  = "edge"
   height = 128
   long   = 128
@@ -49,7 +49,7 @@ PREFABS.Wall_infestation_evil_shrine_eye =
 
   prob   = 1
   env   = "building"
-  
+
   where  = "edge"
   height = 128
   long   = 128
@@ -70,7 +70,7 @@ PREFABS.Wall_infestation_evil_shrine_rune =
 
   prob   = 1
   env   = "building"
-  
+
   where  = "edge"
   height = 128
   long   = 128

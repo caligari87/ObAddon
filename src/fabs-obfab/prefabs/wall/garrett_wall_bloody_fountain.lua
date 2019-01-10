@@ -6,7 +6,7 @@ PREFABS.Wall_garrett_hell_bloody_fountain =
   prob   = 15
   theme  = "hell"
   env = "building"
-  
+
   where  = "edge"
   deep   = 36
   height = 128
@@ -20,13 +20,13 @@ PREFABS.Wall_garrett_hell_bloody_fountain =
 PREFABS.Wall_garrett_hell_bloody_fountain2 =
 {
   template = "Wall_garrett_hell_bloody_fountain"
-  
+
   map = "MAP02"
 }
 
 PREFABS.Wall_garrett_hell_bloody_fountain3 =
 {
   template = "Wall_garrett_hell_bloody_fountain"
-  
+
   map = "MAP03"
 }

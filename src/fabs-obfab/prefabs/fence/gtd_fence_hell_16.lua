@@ -9,7 +9,7 @@
 
   -- prob   = 50
   -- theme  = "!tech"
-  
+
   -- where  = "edge"
 
   -- long   = 128
