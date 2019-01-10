@@ -10,16 +10,16 @@ PREFABS.Wall_fake_window_thin =
   prob   = 10
   theme  = "tech"
   env    = "building"
-  
+
   where  = "edge"
 
   height = 128
   long   = 128
   deep   = 24
-  
+
   bound_z1 = 0
   bound_z2 = 128
-  
+
   x_fit  = { 64-4,64+4 }
   z_fit  = "bottom"
 }

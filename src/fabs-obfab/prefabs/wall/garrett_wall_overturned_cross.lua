@@ -6,7 +6,7 @@ PREFABS.Wall_garrett_overturned_cross =
   prob   = 35
   theme  = "hell"
   env = "building"
-  
+
   where  = "edge"
   deep   = 20
   height = 128

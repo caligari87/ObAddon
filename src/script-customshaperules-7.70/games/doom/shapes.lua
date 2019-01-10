@@ -266,7 +266,7 @@ EXIT_1 =
     "!!!!!", ".RRR."
     "!!!!!", "....."
   }
-  
+
   new_room =
   {
     usage = "boss"
@@ -2362,7 +2362,7 @@ GROW_COLONNADE_1 =
 {
   prob = 3
   prob_skew = 5
-  
+
   structure =
   {
     ".....", "11111"
@@ -2378,7 +2378,7 @@ GROW_COLONNADE_2 =
 {
   prob = 3
   prob_skew = 5
-  
+
   structure =
   {
     "......", "111111"
@@ -2395,7 +2395,7 @@ GROW_COLONNADE_2 =
 GROW_COLONNADE_TINY =
 {
   prob = 5
-  
+
   structure =
   {
     "...","111"
@@ -2410,7 +2410,7 @@ GROW_COLONNADE_PARTHENON =
 {
   prob = 3
   prob_skew = 3
-  
+
   structure =
   {
     "x...","x1>A"
@@ -2426,7 +2426,7 @@ GROW_COLONNADE_PARTHENON_3P =
 {
   prob = 3
   prob_skew = 3
-  
+
   structure =
   {
     "x...","x1>A"
@@ -2443,7 +2443,7 @@ GROW_COLONNADE_PARTHENON_LAKE =
 {
   prob = 5
   prob_skew = 3
-  
+
   structure =
   {
     "x.......","x111>>AA"
@@ -2451,7 +2451,7 @@ GROW_COLONNADE_PARTHENON_LAKE =
     "1.......","11/~#~%A"
     "x.......","x1~~~~~A"
   }
-  
+
   diagonals =
   {
     "1~","~A"
@@ -2472,13 +2472,13 @@ SPROUT_LIQUID_GUTTER_SIDE =
     ".11","~11"
     ".11","111"
     ".1x","11x"
-  } 
+  }
 }
 
 SPROUT_LIQUID_GUTTER_SIDE_MIRROR =
 {
   prob = 10
-  
+
   env = "building"
 
   structure =
@@ -2487,44 +2487,44 @@ SPROUT_LIQUID_GUTTER_SIDE_MIRROR =
     "11.","11~"
     "11.","111"
     "x1.","x11"
-  } 
+  }
 }
 
 SPROUT_LIQUID_GUTTER_CORNER =
 {
   prob = 10
-  
+
   env = "building"
 
   structure =
   {
     "....","~~11"
-	".111","~/11"
-	"x11x","x11x"
+    ".111","~/11"
+    "x11x","x11x"
   }
-  
+
   diagonals =
   {
-	"~1"
+    "~1"
   }
 }
 
 SPROUT_LIQUID_GUTTER_CORNER_REVERSED =
 {
   prob = 10
-  
+
   env = "building"
 
   structure =
   {
     "....","11~~"
-	"111.","11%~"
-	"x11x","x11x"
+    "111.","11%~"
+    "x11x","x11x"
   }
-  
+
   diagonals =
   {
-	"1~"
+    "1~"
   }
 }
 
@@ -2532,7 +2532,7 @@ GROW_LIQUID_POOL_1X1 =
 {
   prob = 5
   prob_skew = 5
-  
+
   structure =
   {
     "...","111"
@@ -2545,7 +2545,7 @@ GROW_LIQUID_POOL_2X2 =
 {
   prob = 5
   prob_skew = 5
-  
+
   structure =
   {
     "....","1111"
@@ -2559,7 +2559,7 @@ GROW_LIQUID_POOL_3X1 =
 {
   prob = 5
   prob_skew = 5
-  
+
   structure =
   {
     "...","111"
@@ -2573,7 +2573,7 @@ GROW_LIQUID_POOL_3X1 =
 GROW_LIQUID_PILLAR_CENTER =
 {
   prob = 10
-  
+
   structure =
   {
     ".....","11111"
@@ -2583,18 +2583,18 @@ GROW_LIQUID_PILLAR_CENTER =
     ".....","11111"
     "x111x","x111x"
   }
-  
+
   diagonals =
   {
     "1~","~1"
-	"1~","~1"
+    "1~","~1"
   }
 }
 
 GROW_LIQUID_PILLAR_CENTER_LONG =
 {
   prob = 10
-  
+
   structure =
   {
     ".....","11111"
@@ -2606,18 +2606,18 @@ GROW_LIQUID_PILLAR_CENTER_LONG =
     ".....","11111"
     "x111x","x111x"
   }
-  
+
     diagonals =
   {
     "1~","~1"
-	"1~","~1"
+    "1~","~1"
   }
 }
 
 GROW_LIQUID_SIDE_POOL_THICC =
 {
   prob = 15
-  
+
   structure =
   {
     "....","####"
@@ -2626,7 +2626,7 @@ GROW_LIQUID_SIDE_POOL_THICC =
     "1111","1111"
     "xxxx","xxxx"
   }
-  
+
   diagonals =
   {
     ".~","~."
@@ -2637,7 +2637,7 @@ GROW_LIQUID_SIDE_POOL_THICC =
 GROW_LIQUID_SIDE_POOL_THIN =
 {
   prob = 1
-  
+
   structure =
   {
     "....","####"
@@ -2646,7 +2646,7 @@ GROW_LIQUID_SIDE_POOL_THIN =
     "1111","1111"
     "xxxx","xxxx"
   }
-  
+
   diagonals =
   {
     ".~","~."
@@ -2656,9 +2656,9 @@ GROW_LIQUID_SIDE_POOL_THIN =
 GROW_LIQUID_FIGURE_CORRIDOR =
 {
   prob = 7
-  
+
   env = "building"
-  
+
   structure =
   {
     "....","1111"
@@ -2673,7 +2673,7 @@ GROW_LIQUID_FIGURE_CORRIDOR =
 GROW_LIQUID_BRIDGE_CORRIDOR =
 {
   prob = 15
-  
+
   env = "building"
 
   structure =
@@ -2684,7 +2684,7 @@ GROW_LIQUID_BRIDGE_CORRIDOR =
     "...","/1%"
     "111","111"
   }
-  
+
   diagonals =
   {
     "~1","1~"
@@ -2695,35 +2695,35 @@ GROW_LIQUID_BRIDGE_CORRIDOR =
 GROW_LIQUID_PLATFORM_FUNNEL =
 {
   prob = 15
-  
+
   env = "building"
-	
+
   structure =
   {
     "......","/~11~%"
     "......","~/11%~"
     "x1111x","x1111x"
   }
-  
+
   diagonals =
   {
-  
+
     ".~","~."
-	"~1","1~"
+    "~1","1~"
   }
 }
 
 GROW_LIQUID_WATERFALL_SIDES =
 {
   prob = 20
-  
+
   env = "building"
-	
+
   structure =
   {
     "...","AAA"
-	"...","~^~"
-	"111","111"
+    "...","~^~"
+    "111","111"
   }
 }
 
@@ -2738,9 +2738,9 @@ GROW_LIQUID_U =
     ".....","1~~~1"
     ".....","1%~/1"
     ".....","11111"
-	"x111x","x111x"
+    "x111x","x111x"
   }
-  
+
   diagonals =
   {
     "1~","~1"
@@ -2750,9 +2750,9 @@ GROW_LIQUID_U =
 GROW_LIQUID_S =
 {
   prob = 30
-  
+
   env = "building"
-  
+
   structure =
   {
     "......","111111"
@@ -2765,14 +2765,14 @@ GROW_LIQUID_S =
     "......","111111"
     "xx11xx","xx11xx"
   }
-  
+
   diagonals =
   {
     "~1"
     "~1"
     "1~"
     "1~"
-  }  
+  }
 }
 
 GROW_LIQUID_INTERSECTION =
@@ -2793,7 +2793,7 @@ GROW_LIQUID_INTERSECTION =
     ".........",".~/111~%."
     "xxx111xxx","xxx111xxx"
   }
-  
+
   diagonals =
   {
     "~1","1~"
@@ -2810,16 +2810,16 @@ GROW_RAMP_THIN_SINK =
 {
   prob = 20
   aversion = 5
-  
+
   structure =
-  { 
+  {
     "...","AAA"
     "...","%A/"
     "...","1^1"
     "...","1^1"
     "111","111"
   }
-  
+
   diagonals =
   {
     "1A","A1"
@@ -2830,7 +2830,7 @@ GROW_RAMP_THIN_RISE =
 {
   prob = 20
   aversion = 5
-  
+
   structure =
   {
     "...","AAA"
@@ -2840,7 +2840,7 @@ GROW_RAMP_THIN_RISE =
     "...","/1%"
     "111","111"
   }
-  
+
   diagonals =
   {
     "A1","1A"
@@ -2854,16 +2854,16 @@ GROW_SQUEEZE_ENTRY =
   prob = 50
   prob_skew = 10
   aversion = 25
-  
+
   env = "!cave"
-  
+
   structure =
   {
     ".....","..A.."
     ".....","#/A%#"
     "x111x","x111x"
   }
-  
+
   diagonals =
   {
     ".A","A."
@@ -2873,7 +2873,7 @@ GROW_SQUEEZE_ENTRY =
 GROW_SQUEEZE_IN_STAIRED =
 {
   prob = 15
-  
+
   structure =
   {
     ".....","..A.."
@@ -2886,14 +2886,14 @@ GROW_SQUEEZE_IN_STAIRED =
 GROW_SQUEEZE_OUT =
 {
   prob = 30
-  
+
   structure =
   {
     "...","AAA"
     "...","%A/"
     ".1.",".1."
   }
-  
+
   diagonals =
   {
     ".A","A."
@@ -2903,7 +2903,7 @@ GROW_SQUEEZE_OUT =
 GROW_SQUEEZE_STRAIGHT =
 {
   prob = 60
-  
+
   structure =
   {
     "...",".1."
@@ -2982,18 +2982,18 @@ GROW_SQUEEZE_EVEN_MORE_STAIRCASE =
 GROW_CAGE_BETWEEN_PILLAR =
 {
   prob = 10
-  
+
   skip_prob = 70
   aversion = 10
-  
-  structure = 
+
+  structure =
   {
     ".....","11111"
-	".....","1#C#1"
-    ".....","11111"	
-	"x111x","x111x"
+    ".....","1#C#1"
+    ".....","11111"
+    "x111x","x111x"
   }
-  
+
   cage_mode = "fancy"
 }
 
@@ -3007,71 +3007,71 @@ GROW_CAGE_AROUND_PILLAR =
     ".....","1C#C1"
     ".....","1CCC1"
     "11111","11111"
-	"x111x","x111x"
+    "x111x","x111x"
   }
-  
+
   cage_mode = "fancy"
 }
 
 GROW_CAGE_Z =
 {
   prob = 25
-  
+
   skip_prob = 70
   aversion = 5
-  
+
   structure =
   {
     "....","1111"
     "....","11CC"
     "....","1111"
     "....","CC11"
-	"....","1111"
+    "....","1111"
     "x11x","x11x"
   }
-  
+
   cage_mode = "fancy"
 }
 
 SPROUT_CAGE_SIMPLE_CORNER =
 {
   prob = 6
-  
+
   skip_prob = 70
   aversion = 10
-  
+
   structure =
   {
     "....","/C11"
     ".111","C111"
   }
-  
+
   diagonals =
   {
     ".C"
   }
-  
+
   cage_mode = "fancy"
 }
 
 SPROUT_CAGE_SIMPLE_REVERSED =
 {
   prob = 6
-  
+
   skip_prob = 70
   aversion = 10
-  
+
   structure =
   {
     "....","11C%"
     "111.","111C"
   }
-  
+
   diagonals =
   {
     "C."
   }
-  
+
   cage_mode = "fancy"
 }
 
@@ -3080,7 +3080,7 @@ SPROUT_CAGE_SIMPLE_REVERSED =
 GROW_CATWALK_BIFUNNEL_SINK =
 {
   prob = 15
-  structure = 
+  structure =
   {
     ".....",".111."
     ".....","A%1/A"
@@ -3089,7 +3089,7 @@ GROW_CATWALK_BIFUNNEL_SINK =
     ".....","11111"
     "x111x","x111x"
   }
-  
+
   diagonals =
   {
     "A1","1A"
@@ -3100,7 +3100,7 @@ GROW_CATWALK_BIFUNNEL_SINK =
 GROW_CATWALK_BIFUNNEL_RISE =
 {
   prob = 15
-  
+
   structure =
   {
     ".....","11111"
@@ -3108,20 +3108,20 @@ GROW_CATWALK_BIFUNNEL_RISE =
     ".....","AAAAA"
     ".....","A/^%A"
     ".....","11111"
-	"x111x","x111x"
+    "x111x","x111x"
   }
-  
+
   diagonals =
   {
     "A1","1A"
-	"A1","1A"
+    "A1","1A"
   }
 }
 
 GROW_CATWALK_BIFUNNEL_SINK_TALL =
 {
   prob = 10
-  
+
   structure =
   {
     ".......","..111.."
@@ -3132,18 +3132,18 @@ GROW_CATWALK_BIFUNNEL_SINK_TALL =
     ".......","1111111"
     "xx111xx","xx111xx"
   }
-  
+
   diagonals =
   {
     "A1","1A"
-	"A1","1A"
+    "A1","1A"
   }
 }
 
 GROW_CATWALK_BIFUNNEL_RISE_TALL =
 {
   prob = 10
-  
+
   structure =
   {
     ".......","..111.."
@@ -3155,18 +3155,18 @@ GROW_CATWALK_BIFUNNEL_RISE_TALL =
     ".......","111^111"
     "xx111xx","xx111xx"
   }
-  
+
   diagonals =
   {
     "A1","1A"
-	"A1","1A"
+    "A1","1A"
   }
 }
 
 GROW_CATWALK_SIDESTAIRS =
 {
   prob = 10
-  
+
   structure =
   {
     ".....","11111"
@@ -3175,7 +3175,7 @@ GROW_CATWALK_SIDESTAIRS =
     ".....","A<<1%"
     "x111x","x111x"
   }
-  
+
   diagonals =
   {
     "1A","1A"
@@ -3185,7 +3185,7 @@ GROW_CATWALK_SIDESTAIRS =
 GROW_CATWALK_U =
 {
   prob = 6
-  
+
   structure =
   {
     ".........","../111%.."
@@ -3197,7 +3197,7 @@ GROW_CATWALK_U =
     ".........","....#^^11"
     ".....111x",".....111x"
   }
-  
+
   diagonals =
   {
          ".1","1."
@@ -3212,7 +3212,7 @@ GROW_CATWALK_U =
 GROW_DIAGONAL_L =
 {
   prob = 20
-  
+
   structure =
   {
     "......","......"
@@ -3222,7 +3222,7 @@ GROW_DIAGONAL_L =
     "......",".111/."
     "x111xx","x111xx"
   }
-  
+
   diagonals =
   {
     ".1"
@@ -3235,7 +3235,7 @@ GROW_DIAGONAL_L =
 GROW_DIAGONAL_L_CATWALK =
 {
   prob = 20
-  
+
   structure =
   {
     "......","......"
@@ -3245,7 +3245,7 @@ GROW_DIAGONAL_L_CATWALK =
     "......",".^11/."
     "x111xx","x111xx"
   }
-  
+
   diagonals =
   {
        ".A"
@@ -3258,7 +3258,7 @@ GROW_DIAGONAL_L_CATWALK =
 GROW_DIAGONAL_L_CATWALK_CONTINUE =
 {
   prob = 20
-  
+
   structure =
   {
     "......",".../AA"
@@ -3268,7 +3268,7 @@ GROW_DIAGONAL_L_CATWALK_CONTINUE =
     "......",".^11/."
     "x111xx","x111xx"
   }
-  
+
   diagonals =
   {
        ".A"
@@ -3282,7 +3282,7 @@ GROW_DIAGONAL_L_CATWALK_CONTINUE =
 GROW_DIAGONAL_S =
 {
   prob = 20
-  
+
   structure =
   {
     "......","...111"
@@ -3292,7 +3292,7 @@ GROW_DIAGONAL_S =
     "......","111/.."
     "111xxx","111xxx"
   }
-  
+
   diagonals =
   {
     ".1"
@@ -3305,7 +3305,7 @@ GROW_DIAGONAL_S =
 -- GROW_DIAGONAL_SIDE_BLOB =
 -- {
   -- prob = 30
-  
+
   -- structure =
   -- {
     -- ".....","....."
@@ -3315,13 +3315,13 @@ GROW_DIAGONAL_S =
     -- "../xx",".%/xx"
     -- "..1xx","..1xx"
   -- }
-  
+
   -- diagonals =
   -- {
     -- "A."
-	-- ".1", "A1"
-	-- ".1", "A1"
-	-- ".1", ".A","A1"
+    -- ".1", "A1"
+    -- ".1", "A1"
+    -- ".1", ".A","A1"
   -- }
 -- }
 
@@ -3330,9 +3330,9 @@ GROW_DIAGONAL_S =
 GROW_LIQUID_CANAL_STRAIGHT =
 {
   prob = 60
-  
+
   env = "building"
-  
+
   structure =
   {
     "~.","~~"
@@ -3347,7 +3347,7 @@ GROW_LIQUID_CANAL_STRAIGHT =
 GROW_LIQUID_CANAL_STRAIGHT_AREA_TRANSITION =
 {
   prob = 20
-  
+
   env = "building"
 
   structure =
@@ -3363,7 +3363,7 @@ GROW_LIQUID_CANAL_STRAIGHT_AREA_TRANSITION =
 GROW_LIQUID_CANAL_STRAIGHT_STAIRCASE =
 {
   prob = 40
-  
+
   env = "building"
 
   structure =
@@ -3380,7 +3380,7 @@ GROW_LIQUID_CANAL_STRAIGHT_STAIRCASE =
 GROW_LIQUID_CANAL_STRAIGHT_BULGE =
 {
   prob = 40
-  
+
   env = "building"
 
   structure =
@@ -3392,7 +3392,7 @@ GROW_LIQUID_CANAL_STRAIGHT_BULGE =
     "~.....","~%11/~"
     "~.....","~~11~~"
   }
-  
+
   diagonals =
   {
     "~1","1~"
@@ -3403,7 +3403,7 @@ GROW_LIQUID_CANAL_STRAIGHT_BULGE =
 GROW_LIQUID_CANAL_CURVE =
 {
   prob = 60
-  
+
   env = "building"
 
   structure =
@@ -3415,7 +3415,7 @@ GROW_LIQUID_CANAL_CURVE =
     "~.....","~%11~~"
     "~.....","~~11~~"
   }
-  
+
   diagonals =
   {
     "~."
@@ -3428,9 +3428,9 @@ GROW_LIQUID_CANAL_ENTRY =
 {
   prob = 18
   aversion = 10
-  
+
   env = "building"
-  
+
   structure =
   {
     "x...","x./~"
@@ -3440,11 +3440,11 @@ GROW_LIQUID_CANAL_ENTRY =
     "xx..","xx~~"
     "x...","x.%~"
   }
-  
+
   diagonals =
   {
     ".~"
-	".~"
+    ".~"
   }
 }
 
@@ -3452,9 +3452,9 @@ GROW_LIQUID_CANAL_ENTRY =
 {
   prob = 12
   aversion = 10
-  
+
   env = "building"
-  
+
   structure =
   {
     "x..","x~~"
@@ -3464,11 +3464,11 @@ GROW_LIQUID_CANAL_ENTRY =
     "x..","x~~"
     "x..","x~~"
   }
-  
+
   diagonals =
   {
     ".~"
-	".~"
+    ".~"
   }
 }
 
@@ -3487,18 +3487,18 @@ GROW_LIQUID_CANAL_OUT =
     "..~",".~~"
     "..~",".%~"
   }
-  
+
   diagonals =
   {
     ".~"
-	".~"
+    ".~"
   }
 }
 
 GROW_LIQUID_CANAL_OUT_ALT =
 {
   prob = 10
-  
+
   env = "building"
 
   structure =
@@ -3515,9 +3515,9 @@ GROW_LIQUID_CANAL_OUT_ALT =
 GROW_LIQUID_SCANAL_ENTRY =
 {
   prob = 12
-  
+
   env = "building"
-  
+
   structure =
   {
     "1..","111"
@@ -3530,9 +3530,9 @@ GROW_LIQUID_SCANAL_ENTRY =
 GROW_LIQUID_SCANAL_ENTRY_FORWARD =
 {
   prob = 12
-  
+
   env = "building"
-  
+
   structure =
   {
     "1....","111~~"
@@ -3544,9 +3544,9 @@ GROW_LIQUID_SCANAL =
 {
 
   prob = 60
-  
+
   env = "building"
-  
+
   structure =
   {
     "1.","11"
@@ -3561,9 +3561,9 @@ GROW_LIQUID_SCANAL_OUTER_BEND =
 {
 
   prob = 30
-  
+
   env = "building"
-  
+
   structure =
   {
     "1...","111%"
@@ -3571,7 +3571,7 @@ GROW_LIQUID_SCANAL_OUTER_BEND =
     "~...","~~11"
     "~...","~~11"
   }
-  
+
   diagonals =
   {
     "1."
@@ -3583,9 +3583,9 @@ GROW_LIQUID_SCANAL_INNER_BEND =
 {
 
   prob = 30
-  
+
   env = "building"
-  
+
   structure =
   {
     "1...","11~~"
@@ -3593,7 +3593,7 @@ GROW_LIQUID_SCANAL_INNER_BEND =
     "~...","~~~~"
     "~...","~~~/"
   }
-  
+
   diagonals =
   {
     "~."
@@ -3603,9 +3603,9 @@ GROW_LIQUID_SCANAL_INNER_BEND =
 GROW_LIQUID_SCANAL_T_JUNCTION =
 {
   prob = 20
-  
+
   env = "building"
-  
+
   structure =
   {
     "1.....","111111"
@@ -3613,7 +3613,7 @@ GROW_LIQUID_SCANAL_T_JUNCTION =
     "~.....","~%11/~"
     "~.....","~~11~~"
   }
-  
+
   diagonals =
   {
     "~1","1~"
@@ -3626,7 +3626,7 @@ GROW_SQUEEZE_EXIT =
 {
   pass = "exit1_closet"
   prob = 40
-	
+
   structure =
   {
     "...","TTT"
@@ -3636,21 +3636,21 @@ GROW_SQUEEZE_EXIT =
     "...",".1."
     ".1.",".1."
   }
-  
+
   diagonals =
   {
     ".1","1."
   }
-  
+
   closet = { from_dir=2, usage="exit" }
 }
 
 GROW_LIQUID_CANAL_EXIT =
 {
   prob = 40
-  
+
   pass = "exit1_closet"
-  
+
   env = "building"
 
   structure =
@@ -3662,12 +3662,12 @@ GROW_LIQUID_CANAL_EXIT =
     "~......","~~....."
     "~......","~/....."
   }
-  
+
   diagonals =
   {
     "~."
-	"1."
-	"~."
+    "1."
+    "~."
   }
 
   closet = { from_dir=2, usage="exit" }
@@ -3677,9 +3677,9 @@ GROW_LIQUID_CANAL_EXIT =
 GROW_LIQUID_EMERGENCY_EXIT =
 {
   prob = 50
-  
+
   pass = "exit1_closet"
-  
+
   structure =
   {
     "...","TTT"
@@ -3688,12 +3688,12 @@ GROW_LIQUID_EMERGENCY_EXIT =
     "~~x","~1x"
     "x1x","x1x"
   }
-  
+
   diagonals =
   {
     "~1"
   }
-  
+
   closet = { from_dir=2, usage="exit" }
 }
 
@@ -3702,19 +3702,19 @@ GROW_LIQUID_EMERGENCY_EXIT =
 GROW_PRIMITIVE_CIRCLE_3X =
 {
   prob = 35
-  
+
   structure =
   {
     ".........","../111%.."
-	".........","./11111%."
-	".........","111111111"
-	".........","111111111"
-	".........","111111111"
-	".........",".%11111/."
-	".........","..%111/.."
-	"xxx111xxx","xxx111xxx"
+    ".........","./11111%."
+    ".........","111111111"
+    ".........","111111111"
+    ".........","111111111"
+    ".........",".%11111/."
+    ".........","..%111/.."
+    "xxx111xxx","xxx111xxx"
   }
-  
+
   diagonals =
   {
     ".1","1."
@@ -3727,18 +3727,18 @@ GROW_PRIMITIVE_CIRCLE_3X =
 GROW_PRIMITIVE_CIRCLE_2X =
 {
   prob = 20
-  
+
   structure =
   {
     "......","./11%."
-	"......","/1111%"
-	"......","111111"
-	"......","111111"
-	"......","%1111/"
-	"......",".%11/."
-	"xx11xx","xx11xx"
+    "......","/1111%"
+    "......","111111"
+    "......","111111"
+    "......","%1111/"
+    "......",".%11/."
+    "xx11xx","xx11xx"
   }
-  
+
   diagonals =
   {
     ".1","1."
@@ -3751,17 +3751,17 @@ GROW_PRIMITIVE_CIRCLE_2X =
 GROW_PRIMITIVE_HALFTRIANGLE_3X =
 {
   prob = 25
-  
+
   structure =
   {
     "......","../111"
     "......","./1111"
     "......","/11111"
-	"......","111111"
-	"......","%11111"
-	"xx11xx","xx11xx"
+    "......","111111"
+    "......","%11111"
+    "xx11xx","xx11xx"
   }
-  
+
   diagonals =
   {
     ".1"
@@ -3774,15 +3774,15 @@ GROW_PRIMITIVE_HALFTRIANGLE_3X =
 GROW_PRIMITIVE_TRIANGLE_2X =
 {
   prob = 15
-  
+
   structure =
   {
     "....","./11"
     "....","/111"
-	"....","%111"
-	"x11x","x11x"
+    "....","%111"
+    "x11x","x11x"
   }
-  
+
   diagonals =
   {
     ".1"
@@ -3799,15 +3799,15 @@ GROW_PRIMITIVE_TRIANGLE_2X =
 
   -- env = "building"
 
-  -- structure = 
+  -- structure =
   -- {
     -- "x111x","x111x"
-	-- "11111","1/A%1"
-	-- "11111","1AAA1"
-	-- "11111","1%A/1"
+    -- "11111","1/A%1"
+    -- "11111","1AAA1"
+    -- "11111","1%A/1"
     -- "x111x","x111x"
   -- }
-  
+
   -- diagonals =
   -- {
     -- "1.",".1"
@@ -3818,18 +3818,18 @@ GROW_PRIMITIVE_TRIANGLE_2X =
 -- DECORATE_FEATURES_CENTER_ALTER_RAISED =
 -- {
   -- prob = 10
-  
+
   -- env = "building"
 
-  -- structure = 
+  -- structure =
   -- {
     -- "x111x","x111x"
-	-- "11111","1/v%1"
-	-- "11111","1>A<1"
-	-- "11111","1%^/1"
+    -- "11111","1/v%1"
+    -- "11111","1>A<1"
+    -- "11111","1%^/1"
     -- "x111x","x111x"
   -- }
-  
+
   -- diagonals =
   -- {
     -- "1.",".1"
@@ -3843,13 +3843,13 @@ SERRATED_EDGE_SMOOTHER =
 {
   pass = "smoother"
   prob = 1000
-  
+
   structure =
   {
     "1","1"
     "/","1"
   }
-  
+
   diagonals =
   {
     ".1"
@@ -3860,14 +3860,14 @@ SERRATED_EDGE_SMOOTHER2 =
 {
   pass = "smoother"
   prob = 400
-  
+
   structure =
   {
     "/","/"
     "/","1"
-	"1","1"
+    "1","1"
   }
-  
+
   diagonals =
   {
     ".1",".1"
@@ -3879,7 +3879,7 @@ SERRATED_LIQUID_SMOOTHER =
 {
   pass = "smoother"
   prob = 400
-  
+
   env = "building"
 
   structure =
@@ -3888,7 +3888,7 @@ SERRATED_LIQUID_SMOOTHER =
     "/","~"
     "~","~"
   }
-  
+
   diagonals =
   {
     ".~"
@@ -3899,7 +3899,7 @@ SERRATED_LIQUID_SMOOTHER_REVERSED =
 {
   pass = "smoother"
   prob = 400
-  
+
   env = "building"
 
   structure =
@@ -3908,7 +3908,7 @@ SERRATED_LIQUID_SMOOTHER_REVERSED =
     "/","1"
     "1","1"
   }
-  
+
   diagonals =
   {
     "21"
@@ -3919,7 +3919,7 @@ SERRATED_LIQUID_SMOOTHER2 =
 {
   pass = "smoother"
   prob = 400
-  
+
   env = "building"
 
   structure =
@@ -3927,7 +3927,7 @@ SERRATED_LIQUID_SMOOTHER2 =
     "/~1","~~1"
     "/~1","~~1"
   }
-  
+
   diagonals =
   {
     ".~"
@@ -3939,15 +3939,15 @@ SERRATED_LIQUID_SMOOTHER3 =
 {
   pass = "smoother"
   prob = 100
-  
+
   env = "building"
-  
+
   structure =
   {
     "~~1","~~1"
     "/~1","~~1"
   }
-  
+
   diagonals =
   {
     ".~"
@@ -3958,14 +3958,14 @@ SERRATED_AREA_TRANSITION_SMOOTHER =
 {
   pass = "smoother"
   prob = 1000
-  
+
   structure =
   {
     "2","2"
     "/","1"
     "1","1"
   }
-  
+
   diagonals =
   {
     ".1"

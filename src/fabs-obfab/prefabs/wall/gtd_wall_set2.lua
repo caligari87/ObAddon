@@ -10,7 +10,7 @@ PREFABS.Wall_machine_inset =
   prob   = 15
   env   = "building"
   theme = "!hell"
-  
+
   where  = "edge"
   height = 128
   long   = 128
@@ -20,7 +20,7 @@ PREFABS.Wall_machine_inset =
   bound_z2 = 128
 
   x_fit = "frame"
-  z_fit = "top" 
+  z_fit = "top"
 }
 
 PREFABS.Wall_liquid_tank =
@@ -31,7 +31,7 @@ PREFABS.Wall_liquid_tank =
   prob   = 15
   env   = "building"
   theme = "tech"
-  
+
   where  = "edge"
   height = 128
   long   = 128
@@ -41,7 +41,7 @@ PREFABS.Wall_liquid_tank =
   bound_z2 = 128
 
   x_fit = "frame"
-  z_fit = "stretch" 
+  z_fit = "stretch"
 }
 
 PREFABS.Wall_double_light =
@@ -52,7 +52,7 @@ PREFABS.Wall_double_light =
   prob   = 15
   env   = "building"
   theme = "tech"
-  
+
   where  = "edge"
   height = 128
   long   = 128
@@ -62,7 +62,7 @@ PREFABS.Wall_double_light =
   bound_z2 = 128
 
   x_fit = "frame"
-  z_fit = "top" 
+  z_fit = "top"
 }
 
 PREFABS.Wall_diag_sewer =
@@ -73,10 +73,10 @@ PREFABS.Wall_diag_sewer =
   prob   = 50
   theme = "tech"
   env   = "building"
-  
+
   where  = "diagonal"
   height = 128
-  
+
   bound_z1 = 0
   bound_z2 = 128
 
@@ -91,10 +91,10 @@ PREFABS.Wall_diag_outcrop =
   prob   = 50
   theme = "tech"
   env   = "building"
-  
+
   where  = "diagonal"
   height = 128
-  
+
   bound_z1 = 0
   bound_z2 = 128
 
@@ -116,10 +116,10 @@ PREFABS.Wall_diag_triple_braced =
   prob   = 50
   theme = "tech"
   env   = "building"
-  
+
   where  = "diagonal"
   height = 128
-  
+
   bound_z1 = 0
   bound_z2 = 128
 

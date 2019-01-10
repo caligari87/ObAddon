@@ -135,7 +135,7 @@ PREFABS.Decor_server_rack =
 
   bound_z1 = 0
   bound_z2 = 160
-  
+
   z_fit = "top"
 }
 
@@ -173,7 +173,7 @@ PREFABS.Decor_floor_decal_stripes =
 
   bound_z1 = 0
   bound_z1 = 2
-  
+
   sink_mode = "never"
 }
 
@@ -192,7 +192,7 @@ PREFABS.Decor_sealed_storage =
 
   bound_z1 = 0
   bound_z2 = 160
-  
+
   z_fit = "top"
 }
 

@@ -20,7 +20,7 @@ PREFABS.Joiner_y2 =
   over   = 16
 
   flat_CRATOP1 = "FLOOR1_6"
-  
+
   delta_h  = 32
   nearby_h = 128
   can_flip = false
@@ -29,7 +29,7 @@ PREFABS.Joiner_y2 =
 PREFABS.Joiner_y2_blue =
 {
   template = "Joiner_y2"
-  
+
   tex_REDWALL = "COMPBLUE"
   flat_CRATOP1 = "CEIL4_2"
 }

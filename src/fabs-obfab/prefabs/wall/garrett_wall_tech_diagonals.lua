@@ -6,10 +6,10 @@ PREFABS.Wall_garrett_tech_mainframe_diagonal =
   prob   = 25
   theme = "!hell"
   env = "building"
-  
+
   where  = "diagonal"
   height = 128
-  
+
   bound_z1 = 0
   bound_z2 = 128
 
@@ -19,7 +19,7 @@ PREFABS.Wall_garrett_tech_mainframe_diagonal =
 PREFABS.Wall_garrett_tech_mainframe_diagonal2 =
 {
   template = "Wall_garrett_tech_mainframe_diagonal"
-  
+
   tex_COMPSTA2 = "COMPSTA1"
 }
 
@@ -31,10 +31,10 @@ PREFABS.Wall_garrett_tech_mainframe_diagonal_infected =
   prob   = 10
   theme = "!hell"
   env = "building"
-  
+
   where  = "diagonal"
   height = 128
-  
+
   bound_z1 = 0
   bound_z2 = 128
 
