@@ -1154,6 +1154,7 @@ DOOM.THEMES =
       torches11 = 7
 	  gtd_wall_urban_storage = 25
 	  gtd_wall_tech_windows_topcorner = 25
+	  gtd_wall_server_room = 25
     }
 
     window_groups =

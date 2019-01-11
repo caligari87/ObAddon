@@ -18,6 +18,8 @@
 --
 ------------------------------------------------------------------------
 
+-- MSSP's hints:
+-- Try not to use elements with staircases and water for caves...
 
 SHAPE_GRAMMAR =
 {
@@ -529,7 +531,7 @@ EXIT3_DECOR =
 
 GROW_2 =
 {
-  prob = 100
+  prob = 100 --Non-MSSP default: 100
   prob_skew = 2
 
   structure =
@@ -542,7 +544,7 @@ GROW_2 =
 
 GROW_3 =
 {
-  prob = 50 --20
+  prob = 50 --Non-MSSP default: 50
   prob_skew = 2
 
   structure =
@@ -555,7 +557,7 @@ GROW_3 =
 
 GROW_4 =
 {
-  prob = 50 --30
+  prob = 50 --Non-MSSP default: 50
   prob_skew = 2
   skip_prob = 25 --50
 
@@ -569,7 +571,7 @@ GROW_4 =
 
 GROW_BLOB_1 =
 {
-  prob = 25 --15
+  prob = 25 --Non-MSSP default: 25
 
   structure =
   {
@@ -2443,7 +2445,10 @@ GROW_COLONNADE_PARTHENON_LAKE =
 {
   prob = 5
   prob_skew = 3
+  aversion = 5
   
+  env = "building"
+
   structure =
   {
     "x.......","x111>>AA"
@@ -2749,7 +2754,8 @@ GROW_LIQUID_U =
 
 GROW_LIQUID_S =
 {
-  prob = 30
+  prob = 15
+  skip_prob = 5
   
   env = "building"
   
@@ -2777,7 +2783,8 @@ GROW_LIQUID_S =
 
 GROW_LIQUID_INTERSECTION =
 {
-  prob = 30
+  prob = 15
+  skip_prob = 5
 
   env = "building"
 
@@ -2789,8 +2796,8 @@ GROW_LIQUID_INTERSECTION =
     ".........","111111111"
     ".........","111111111"
     ".........","111111111"
-    ".........","./~111%~."
-    ".........",".~/111~%."
+    ".........","./~111~%."
+    ".........",".~/111%~."
     "xxx111xxx","xxx111xxx"
   }
   
@@ -2802,7 +2809,6 @@ GROW_LIQUID_INTERSECTION =
     "~1","1~"
   }
 }
-
 
 -- MSSP's thin ramps. [RAMP]
 
@@ -2851,7 +2857,7 @@ GROW_RAMP_THIN_RISE =
 
 GROW_SQUEEZE_ENTRY =
 {
-  prob = 50
+  prob = 25
   prob_skew = 10
   aversion = 25
   
@@ -3192,8 +3198,8 @@ GROW_CATWALK_U =
     ".........","./11111%."
     ".........","/11/A%11%"
     ".........","11/AAA%11"
-    ".........","..AA.AA11"
-    ".........","..AA#^^11"
+    ".........","11AA#AA11"
+    ".........","....#^^11"
     ".........","....#^^11"
     ".....111x",".....111x"
   }
@@ -3510,7 +3516,7 @@ GROW_LIQUID_CANAL_OUT_ALT =
   }
 }
 
--- [SINGLE_CANAL]
+-- [SINGLE_CANAL : SCANAL]
 
 GROW_LIQUID_SCANAL_ENTRY =
 {
@@ -3540,7 +3546,7 @@ GROW_LIQUID_SCANAL_ENTRY_FORWARD =
   }
 }
 
-GROW_LIQUID_SCANAL =
+GROW_LIQUID_SCANAL_STRAIGHT =
 {
 
   prob = 60
@@ -3554,7 +3560,22 @@ GROW_LIQUID_SCANAL =
     "~.","~~"
     "~.","~~"
   }
+}
 
+GROW_LIQUID_SCANAL_STAIR =
+{
+
+  prob = 40
+  
+  env = "building"
+  
+  structure =
+  {
+    "1..","1>A"
+    "1..","1>A"
+    "~..","~~~"
+    "~..","~~~"
+  }
 }
 
 GROW_LIQUID_SCANAL_OUTER_BEND =
@@ -3617,6 +3638,104 @@ GROW_LIQUID_SCANAL_T_JUNCTION =
   diagonals =
   {
     "~1","1~"
+  }
+}
+
+-- [NARROW CANALS : NCANALS]
+
+GROW_NARROW_CANAL_ENTRY =
+{
+  prob = 20
+  
+  env = "building"
+  
+  structure =
+  {
+    "1..","111"
+    "1..","111"
+    "x..","x~~"
+  }
+}
+
+GROW_NARROW_CANAL_ENTRY_FROMSIDE =
+{
+  prob = 10
+
+  env = "building"
+  
+  structure =
+  {
+    "1...","111~"
+    "1...","111~"
+  }
+}
+
+GROW_NARROW_CANAL_STRAIGHT =
+{
+  prob = 80
+
+  env = "building"
+  
+  structure =
+  {
+    "1.","11"
+    "1.","11"
+    "~.","~~"
+  }
+}
+
+GROW_NARROW_CANAL_STAIRS =
+{
+  prob = 60
+
+  env = "building"
+
+  structure =
+  {
+    "1..","1>A"
+    "1..","1>A"
+    "~..","~~~"
+  }
+}
+
+GROW_NARROW_CANAL_INNER_CURVE =
+{
+  prob = 30
+  
+  env = "building"
+  
+  structure =
+  {
+    "1...","111%"
+    "1...","1111"
+    "~...","~%11"
+    "x...","x~11"
+  }
+  
+  diagonals =
+  {
+    "1."
+	"~1"
+  }
+}
+
+GROW_NARROW_CANAL_OUTER_CURVE =
+{
+  prob = 30
+  
+  env = "building"
+  
+  structure =
+  {
+    "1..","11~"
+    "1..","1/~"
+    "~..","~~/"
+  }
+  
+  diagonals =
+  {
+    "1~"
+	"~."
   }
 }
 
@@ -3750,7 +3869,7 @@ GROW_PRIMITIVE_CIRCLE_2X =
 
 GROW_PRIMITIVE_HALFTRIANGLE_3X =
 {
-  prob = 25
+  prob = 18
   
   structure =
   {
@@ -3759,7 +3878,7 @@ GROW_PRIMITIVE_HALFTRIANGLE_3X =
     "......","/11111"
 	"......","111111"
 	"......","%11111"
-	"xx11xx","xx11xx"
+	"xxxx11","xxxx11"
   }
   
   diagonals =
@@ -3773,14 +3892,14 @@ GROW_PRIMITIVE_HALFTRIANGLE_3X =
 
 GROW_PRIMITIVE_TRIANGLE_2X =
 {
-  prob = 15
+  prob = 10
   
   structure =
   {
     "....","./11"
     "....","/111"
 	"....","%111"
-	"x11x","x11x"
+	"xx11","xx11"
   }
   
   diagonals =
@@ -3790,52 +3909,6 @@ GROW_PRIMITIVE_TRIANGLE_2X =
     ".1"
   }
 }
-
--- MSSP's random room features [FEATURES]
-
--- DECORATE_FEATURES_CENTER_ALTERED =
--- {
-  -- prob = 10
-
-  -- env = "building"
-
-  -- structure = 
-  -- {
-    -- "x111x","x111x"
-	-- "11111","1/A%1"
-	-- "11111","1AAA1"
-	-- "11111","1%A/1"
-    -- "x111x","x111x"
-  -- }
-  
-  -- diagonals =
-  -- {
-    -- "1.",".1"
-    -- "1.",".1"
-  -- }
--- }
-
--- DECORATE_FEATURES_CENTER_ALTER_RAISED =
--- {
-  -- prob = 10
-  
-  -- env = "building"
-
-  -- structure = 
-  -- {
-    -- "x111x","x111x"
-	-- "11111","1/v%1"
-	-- "11111","1>A<1"
-	-- "11111","1%^/1"
-    -- "x111x","x111x"
-  -- }
-  
-  -- diagonals =
-  -- {
-    -- "1.",".1"
-    -- "1.",".1"
-  -- }
--- }
 
 -- MSSP's shape tamers. Tries to get rid of strange architectural decisions such as pointy walls. [TAMERS]
 
@@ -3957,7 +4030,7 @@ SERRATED_LIQUID_SMOOTHER3 =
 SERRATED_AREA_TRANSITION_SMOOTHER =
 {
   pass = "smoother"
-  prob = 1000
+  prob = 10000
   
   structure =
   {
@@ -3972,34 +4045,733 @@ SERRATED_AREA_TRANSITION_SMOOTHER =
   }
 }
 
+FAILED_SQUEEZE_ENTRANCE_SMOOTHER =
+{
+  pass = "smoother"
+  prob = 10000
+  
+  structure =
+  {
+    "%..","%.."
+    "11.","1.."
+    "/..","/.."
+  }
+  
+  diagonals =
+  {
+    "1.","1."
+    "1.","1."
+  }
+}
+
+--MSSP's random room features [FEATURES]
+
+SPROUT_FEATURES_CENTER_ALTERED =
+{
+  prob = 20
+  skip_prob = 5
+
+  env = "building"
+
+  structure = 
+  {
+    "x111x","x111x"
+	"11111","1/A%1"
+	"11111","1AAA1"
+	"11111","1%A/1"
+    "x111x","x111x"
+  }
+  
+  diagonals =
+  {
+    "1.",".1"
+    "1.",".1"
+  }
+}
+
+SPROUT_FEATURES_CENTER_ALTER_RAISED =
+{
+  prob = 20
+  skip_prob = 5
+  
+  env = "building"
+
+  structure = 
+  {
+    "x111x","x111x"
+	"11111","1/v%1"
+	"11111","1>A<1"
+	"11111","1%^/1"
+    "x111x","x111x"
+  }
+  
+  diagonals =
+  {
+    "1.",".1"
+    "1.",".1"
+  }
+}
+
+SPROUT_WIDE_SPACE_DEPRESSION =
+{
+  prob = 20
+  skip_prob = 5
+
+  env = "building"
+  
+  structure =
+  {
+    "11111","11111"
+    "11111","11vvv"
+    "11111","11AAA"
+    "11111","11AAA"
+    "11111","11^^^"
+    "11111","11111"
+  }
+}
+
+SPROUT_WIDE_SPACE_CATWALK =
+{
+  prob = 25
+  skip_prob = 3
+  
+  env = "building"
+  
+  structure =
+  {
+    "11111","11111"
+    "11111","11AAA"
+    "11111","11%AA"
+    "11111","111^^"
+    "11111","11111"
+  }
+  
+  diagonals =
+  {
+    "1A"
+  }
+}
+
+SPROUT_WIDE_SPACE_CATWALK_PLAIN =
+{
+  prob = 25
+  skip_prob = 2
+  
+  env = "building"
+
+  structure =
+  {
+    "11111","11111"
+    "11111","111AA"
+    "11111","111AA"
+    "11111","111^^"
+    "11111","11111"
+  }
+}
+
+SPROUT_WIDE_SPACE_CATWALK_PLAIN_TO_WALL =
+{
+  prob = 40
+  skip_prob = 2
+  
+  env = "building"
+
+  structure =
+  {
+    ".....","....."
+    "11111","111AA"
+    "11111","111AA"
+    "11111","111^^"
+    "11111","11111"
+  }
+}
+
+SPROUT_WIDE_SPACE_CATWALK_TALL_PLAIN =
+{
+  prob = 25
+  skip_prob = 2
+  
+  env = "building"
+  
+  structure =
+  {
+    "11111","11111"
+    "11111","111AA"
+    "11111","111^^"
+    "11111","111^^"
+    "11111","11111"
+  }
+}
+
+SPROUT_WIDE_SPACE_CATWALK_TALL_PLAIN_TO_WALL =
+{
+  prob = 25
+  skip_prob = 2
+  
+  env = "building"
+  
+  structure =
+  {
+    ".....","....."
+    "11111","111AA"
+    "11111","111AA"
+    "11111","111^^"
+    "11111","111^^"
+    "11111","11111"
+  }
+}
+
+SPROUT_WIDE_SPACE_CATWALK_STRAIGHT =
+{
+  prob = 150
+  
+  env = "building"
+
+  structure =
+  {
+    "1111","1111"
+    "1111","1122"
+    "1122","1122"
+  }
+}
+
+SPROUT_WIDE_SPACE_CATWALK_STRAIGHT_3WIDE =
+{
+  prob = 200
+  
+  env = "building"
+
+  structure =
+  {
+    "11111","11111"
+    "11111","11222"
+    "11222","11222"
+  }
+}
+
+SPROUT_WIDE_SPACE_CATWALK_STRAIGHT_TO_WALL =
+{
+  prob = 80
+  
+  env = "building"
+
+  structure =
+  {
+    "....","...."
+    "1111","1122"
+    "1122","1122"
+  }
+}
+
+SPROUT_WIDE_SPACE_CATWALK_STRAIGHT_TO_WALL_3WIDE =
+{
+  prob = 80
+  
+  env = "building"
+
+  structure =
+  {
+    ".....","....."
+    "11111","11222"
+    "11222","11222"
+  }
+}
+
+SPROUT_WIDE_LOW_CEILING_SIDE =
+{
+  prob = 50
+  skip_prob = 2
+  
+  env = "building"
+
+  structure =
+  {
+    "1111.","1111."
+    "1111.","1.AA."
+    "1111.","1AAA."
+    "1111.","1AAA."
+    "1111.","1.AA."
+    "1111.","1111."
+  }
+}
+
+SPROUT_WIDE_LOW_CEILING_CENTER =
+{
+  prob = 50
+  skip_prob = 2
+  
+  env = "building"
+
+  structure =
+  {
+    "111111","111111"
+    "111111","1.AA.1"
+    "111111","1AAAA1"
+    "111111","1AAAA1"
+    "111111","1.AA.1"
+    "111111","111111"
+  }
+}
+
+SPROUT_WIDE_LOW_CEILING_CORNER =
+{
+  prob = 50
+  skip_prob = 2
+  
+  env = "building"
+
+  structure =
+  {
+    "......","......"
+    ".11111",".AAAA1"
+    ".11111",".AAA.1"
+    ".11111",".AAA/1"
+    ".11111",".A./11"
+    ".11111",".11111"
+  }
+  
+  diagonals =
+  {
+    "A1"  
+    "A1"
+  }
+}
+
+SMOOTHER_CHAMFER_WIDE_ROOM_CORNER =
+{
+  prob = 200
+  skip_prob = 10
+
+  pass = "smoother"
+
+  env = "building"
+  
+  structure =
+  {
+    ".....","....."
+    ".1111",".../1"
+    ".1111","../11"
+    ".1111","./111"
+    ".1111",".1111"
+  }
+  
+  diagonals =
+  {
+    ".1"
+    ".1"
+    ".1"
+  }
+}
+
+--This exit will cause errors, because it will keep looking for staircase prefabs 
+--at the specially matched height of any given two floors this rule may apply to. Bad idea!
+
+--[[DECORATE_WIDE_SPACE_CATWALK_EXIT = 
+{
+  prob = 20
+  
+  structure =
+  {
+    "1111","1111"
+    "1111","11^^"
+    "1122","1122"
+  }
+}]]
+
 -- MSSP's huge-arse rooms. [HUGE]
 
--- GROW_HUGE_ROOM_12X =
--- {
-  -- prob = 5000000000
-  -- prob_skew = 2
+ROOT_WIDE_SPACE_4X8 =
+{
+  prob = 100
+  
+  structure =
+  {
+    "1........","x11111111"
+    "1........","111111111"
+    "1........","111111111"
+    "1........","x11111111"
+  }
+}
 
-  -- structure =
-  -- {
-    -- "............", "111111111111"
-    -- "............", "111111111111"
-    -- "............", "111111111111"
-    -- "............", "111111111111"
-    -- "............", "111111111111"
-    -- "............", "111111111111"
-    -- "............", "111111111111"
-    -- "............", "111111111111"
-    -- "............", "111111111111"
-    -- "............", "111111111111"
-    -- "............", "111111111111"
-    -- "............", "111111111111"
-    -- "............", "111111111111"
-    -- "............", "111111111111"
-    -- "............", "111111111111"
-    -- "............", "111111111111"
-    -- "11xxxxxxxxxx", "11xxxxxxxxxx"
-  -- }
--- }
+ROOT_WIDE_SPACE_4X8 =
+{
+  prob = 100
+  
+  structure =
+  {
+    "x........","x11111111"
+    "x........","x11111111"
+    "1........","111111111"
+    "1........","111111111"
+    "1........","111111111"
+    "1........","111111111"
+    "x........","x11111111"
+    "x........","x11111111"
+  }
+}
+
+GROW_WIDE_SPACE_12x12 =
+{
+  prob = 100
+  
+  structure =
+  {
+    "1............","1111111111111"
+    "1............","1111111111111"
+    "x............","x111111111111"
+    "x............","x111111111111"
+    "x............","x111111111111"
+    "x............","x111111111111"
+    "x............","x111111111111"
+    "x............","x111111111111"
+    "x............","x111111111111"
+    "x............","x111111111111"
+    "x............","x111111111111"
+    "x............","x111111111111"
+  }
+}
+
+GROW_WIDE_SPACE_8x12 =
+{
+  prob = 100
+  
+  structure =
+  {
+    "1............","1111111111111"
+    "1............","1111111111111"
+    "x............","x111111111111"
+    "x............","x111111111111"
+    "x............","x111111111111"
+    "x............","x111111111111"
+    "x............","x111111111111"
+    "x............","x111111111111"
+  }
+}
+
+GROW_WIDE_SPACE_8x8 =
+{
+  prob = 100
+  
+  structure =
+  {
+    "1........","111111111"
+    "1........","111111111"
+    "x........","x11111111"
+    "x........","x11111111"
+    "x........","x11111111"
+    "x........","x11111111"
+    "x........","x11111111"
+    "x........","x11111111"
+  }
+}
+
+GROW_EXTRUSION_4X6 =
+{
+  prob = 125
+  
+  structure =
+  {
+    "1111","1111"
+    "....","1111"
+    "....","1111"
+    "....","1111"
+    "....","1111"
+    "....","1111"
+    "....","1111"
+  }
+}
+
+GROW_EXTRUSION_4X4 =
+{
+  prob = 150
+  
+  structure =
+  {
+    "1111","1111"
+    "....","1111"
+    "....","1111"
+    "....","1111"
+    "....","1111"
+  }
+}
+
+GROW_EXTRUSION_4X2 =
+{
+  prob = 200
+  
+  structure =
+  {
+    "1111","1111"
+    "....","1111"
+    "....","1111"
+  }
+}
+
+GROW_EXTRUSION_3X2 =
+{
+  prob = 125
+  
+  structure =
+  {
+    "111","111"
+    "...","111"
+    "...","111"
+  }
+}
+
+GROW_EXTRUSION_3X4 =
+{
+  prob = 200
+  
+  structure =
+  {
+    "111","111"
+    "...","111"
+    "...","111"
+    "...","111"
+    "...","111"
+  }
+}
+
+GROW_EXTRUSION_NEW_AREA_4x2 =
+{
+  prob = 80
+  
+  structure =
+  {
+    "1111","1111"
+	"....","AAAA"
+	"....","AAAA"
+  }
+}
+
+GROW_EXTRUSION_STAIRCASE_4x2 =
+{
+  prob = 80
+  
+  structure =
+  {
+    "1111","1111"
+	"....","AAvv"
+	"....","AAvv"
+	"....","AAAA"
+	"....","AAAA"
+  }
+}
+
+GROW_EXTRUSION_STAIRCASE_4x2_SIDEWAYS =
+{
+  prob = 80
+  
+  structure =
+  {
+    "1111","1111"
+	"....","A<<1"
+	"....","A<<1"
+	"....","AAAA"
+	"....","AAAA"
+  }
+}
+
+GROW_EXTRUSION_STAIRCASE_4x2_SMALL =
+{
+  prob = 80
+  
+  structure =
+  {
+    "1111","1111"
+	"....","AAAv"
+	"....","AAAA"
+	"....","AAAA"
+	"....","AAAA"
+  }
+}
+
+GROW_EXTRUSION_STAIRCASE_4x2_SMALL_SIDEWAYS =
+{
+  prob = 80
+  
+  structure =
+  {
+    "1111","1111"
+	"....","AA<1"
+	"....","AAAA"
+	"....","AAAA"
+	"....","AAAA"
+  }
+}
+
+GROW_EXTRUSION_SINK =
+{
+  prob = 5
+  
+  structure =
+  {
+    "1111","1111"
+    "....","1111"
+    "....","1vAA"
+    "....","1AAA"
+    "....","1^AA"
+    "....","1111"
+  }
+}
+
+DECORATE_CAGE_CANALS_STRAIGHT_3X =
+{
+  prob = 50
+  
+  env = "building"
+  
+  structure =
+  {
+    "...","CCC"
+    "~~~","~~~"
+    "111","111"
+  }
+  
+  cage_mode = "fancy"
+}
+
+DECORATE_CAGE_CANALS_STRAIGHT_1X =
+{
+  prob = 25
+
+  env = "building"
+  
+  structure =
+  {
+    "..","C."
+    "~~","~~"
+    "11","11"
+  }
+  
+  cage_mode = "fancy"
+}
+
+DECORATE_CAGE_CANALSWIDE_STRAIGHT_3X =
+{
+  prob = 40
+  
+  env = "building"
+  
+  structure =
+  {
+    "...","CCC"
+    "~~~","~~~"
+    "~~~","~~~"
+    "111","111"
+  }
+  
+  cage_mode = "fancy"
+}
+
+DECORATE_CAGE_CANALSWIDE_STRAIGHT_1X =
+{
+  prob = 25
+  
+  env = "building"
+  
+  structure =
+  {
+    "..","C."
+    "~~","~~"
+    "~~","~~"
+    "11","11"
+  }
+  
+  cage_mode = "fancy"
+}
+
+GROW_WIDE_SPACE_2X12 =
+{
+  prob = 2
+  prob_skew = 1
+  
+  structure =
+  {
+    "1............","1111111111111"
+    "1............","1111111111111"
+  }
+}
+
+GROW_WIDE_SPACE_2X12_SIDEWAYS =
+{
+  prob = 2
+  prob_skew = 1
+  
+  structure =
+  {
+    ".............","1111111111111"
+    ".............","1111111111111"
+    "11xxxxxxxxxxx","11xxxxxxxxxxx"
+  }
+}
+
+GROW_WIDE_SPACE_2X8 =
+{
+  prob = 2
+  prob_skew = 1
+  
+  structure =
+  {
+    "1........","111111111"
+    "1........","111111111"
+  }
+}
+
+GROW_WIDE_SPACE_2X8_SIDEWAYS =
+{
+  prob = 2
+  prob_skew = 1
+  
+  structure =
+  {
+    ".........","111111111"
+    ".........","111111111"
+    "11xxxxxxx","11xxxxxxx"
+  }
+}
+
+
+SPROUT_ROUNDED_CAP =
+{
+  prob = 20
+  prob_skew = 10
+  
+  structure =
+  {
+    "1...","111%"
+    "1...","1111"
+    "1...","1111"
+    "1...","111/"
+  }
+  
+  diagonals =
+  {
+    "1."
+	"1."
+  }
+}
+
+SPROUT_BLADED_CAP =
+{
+  prob = 20
+  prob_skew = 10
+  
+  structure =
+  {
+    "1..","111"
+    "1..","111"
+    "1..","11/"
+    "1..","1/."
+  }
+  
+  diagonals =
+  {
+    "1."
+	"1."
+  }
+}
 
 -- end of SHAPE_GRAMMAR
 }
