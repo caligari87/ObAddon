@@ -215,7 +215,7 @@ function Fab_expansion_groups(list, axis_name, fit_size, pf_size, map, file)
   if math.abs(extra) < 1 then return nil end
 
   if extra < 0 then
-    error("Prefab does not fit! (on " .. axis_name .. " axis) Culprit: " .. map .. " from " .. file)
+    error("Prefab does not fit! (on " .. axis_name .. " axis) Culprit: " .. map .. " from " .. file .. ". Required: " .. fit_size .. " Prefab has: " .. pf_size)
   end
 
   assert(extra > 0)
@@ -617,7 +617,7 @@ function Fab_transform_Z(fab, T)
 
   if fab.z_fit or T.fitted_z then
     if not T.fitted_z then
-      error("Fitted prefab used without fitted Z transform")
+      error("Fitted prefab used without fitted Z transform. Culprit: " .. fab.map .. " from " .. fab.file)
 
     elseif T.scale_z then
       error("Fitted transform used with scale_z. Culprit: " .. fab.map .. " from " .. fab.file)
@@ -681,8 +681,8 @@ function Fab_render(fab)
     fab_map = "It's the thing"
   end
   
-  if fab.where == "point" then
-    gui.printf("Meanwhile in " .. LEVEL.name .. ": Alright " .. fab.name .. ", I CHOOSE YOU! (" .. fab_map .. " in " .. fab.file .. ")\n")
+  if fab.where == "point" or fab.where == "seeds" then
+    gui.printf("Adding " .. fab.name .. " from " .. fab_map .. " in " .. fab.file .. "\n")
   end
 
   each B in fab.brushes do

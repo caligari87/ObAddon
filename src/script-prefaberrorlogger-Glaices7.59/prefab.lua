@@ -200,23 +200,22 @@ function Fab_load_all_definitions()
 
   PREFABS = {}
 
-  assert(GAME.game_dir)
-
-  visit_dir("games/" .. GAME.game_dir .. "/fabs")
+--TODO: visit_dir("games/" .. assert(GAME.game_dir) .. "/prefabs")
+  visit_dir("prefabs")
 
   preprocess_all()
 end
 
 
 
-function Fab_expansion_groups(list, axis_name, fit_size, pf_size)
+function Fab_expansion_groups(list, axis_name, fit_size, pf_size, map, file)
   local extra = fit_size - pf_size
 
   -- nothing needed if the size is the same
   if math.abs(extra) < 1 then return nil end
 
   if extra < 0 then
-    error("Prefab does not fit! (on " .. axis_name .. " axis) Cause: " .. fab.map .. " in " .. fab.file .. ")\n")
+    error("Prefab does not fit! (on " .. axis_name .. " axis) Culprit: " .. map .. " from " .. file .. ". Required: " .. fit_size .. " Prefab has: " .. pf_size)
   end
 
   assert(extra > 0)
@@ -492,16 +491,16 @@ function Fab_transform_XY(fab, T)
 
   if fab.x_fit or T.fitted_x then
     if not T.fitted_x then
-      error("Fitted prefab used without fitted X transform")
+      error("Fitted prefab used without fitted X transform Culprit: " .. fab.map .. " from " .. fab.file)
 
     elseif T.scale_x then
-      error("Fitted transform used with scale_x")
+      error("Fitted transform used with scale_x Culprit: " .. fab.map .. " from " .. fab.file)
 
     elseif math.abs(bbox.x1) > 0.1 then
-      error("Fitted prefab must have lowest X coord at 0")
+      error("Fitted prefab must have lowest X coord at 0. Culprit: " .. fab.map .. " from " .. fab.file)
     end
 
-    Trans.TRANSFORM.groups_x = Fab_expansion_groups(fab.x_fit, "x", T.fitted_x, bbox.x2)
+    Trans.TRANSFORM.groups_x = Fab_expansion_groups(fab.x_fit, "x", T.fitted_x, bbox.x2, fab.map, fab.file)
 
   else
     -- "loose" placement
@@ -512,16 +511,16 @@ function Fab_transform_XY(fab, T)
 
   if fab.y_fit or T.fitted_y then
     if not T.fitted_y then
-      error("Fitted prefab used without fitted Y transform")
+      error("Fitted prefab used without fitted Y transform. Culprit: " .. fab.map .. " from " .. fab.file)
 
     elseif T.scale_y then
-      error("Fitted transform used with scale_y")
+      error("Fitted transform used with scale_y. Culprit: " .. fab.map .. " from " .. fab.file)
 
     elseif math.abs(bbox.y1) > 0.1 then
-      error("Fitted prefab must have lowest Y coord at 0")
+      error("Fitted prefab must have lowest Y coord at 0. Culprit: " .. fab.map .. " from " .. fab.file)
     end
 
-    Trans.TRANSFORM.groups_y = Fab_expansion_groups(fab.y_fit, "y", T.fitted_y, bbox.y2)
+    Trans.TRANSFORM.groups_y = Fab_expansion_groups(fab.y_fit, "y", T.fitted_y, bbox.y2, fab.map, fab.file)
 
   else
     -- "loose" placement
@@ -618,19 +617,19 @@ function Fab_transform_Z(fab, T)
 
   if fab.z_fit or T.fitted_z then
     if not T.fitted_z then
-      error("Fitted prefab used without fitted Z transform! Cause: " .. fab.map .. " in " .. fab.file .. ")\n")
+      error("Fitted prefab used without fitted Z transform. Culprit: " .. fab.map .. " from " .. fab.file)
 
     elseif T.scale_z then
-      error("Fitted transform used with scale_z. Cause: " .. fab.map .. " in " .. fab.file .. ")\n")
+      error("Fitted transform used with scale_z. Culprit: " .. fab.map .. " from " .. fab.file)
 
     elseif not (bbox.dz and bbox.dz >= 1) then
-      error("Fitted prefab has no vertical range! Cause: " .. fab.map .. " in " .. fab.file .. ")\n")
+      error("Fitted prefab has no vertical range! Culprit: " .. fab.map .. " from " .. fab.file)
 
     elseif math.abs(bbox.z1) > 0.1 then
-      error("Fitted prefab must have lowest Z coord at 0! Cause: " .. fab.map .. " in " .. fab.file .. ")\n")
+      error("Fitted prefab must have lowest Z coord at 0. Culprit: " .. fab.map .. " from " .. fab.file)
     end
 
-    Trans.TRANSFORM.groups_z = Fab_expansion_groups(fab.z_fit, "z", T.fitted_z, bbox.z2)
+    Trans.TRANSFORM.groups_z = Fab_expansion_groups(fab.z_fit, "z", T.fitted_z, bbox.z2, fab.map, fab.file)
 
   else
     -- "loose" mode
@@ -674,6 +673,7 @@ function Fab_render(fab)
   assert(fab.state == "transform_z")
 
   fab.state = "rendered"
+  local fab_map = "lulz"
   
   if fab.map then
     fab_map = fab.map
@@ -681,9 +681,10 @@ function Fab_render(fab)
     fab_map = "It's the thing"
   end
   
-  if fab.where == "point" then
-    gui.printf("Meanwhile in " .. LEVEL.name .. ": Alright " .. fab.name .. ", I CHOOSE YOU! (" .. fab_map .. " in " .. fab.file .. ")\n")
+  if fab.where == "point" or fab.where == "seeds" then
+    gui.printf("Adding " .. fab.name .. " from " .. fab_map .. " in " .. fab.file .. "\n")
   end
+
   each B in fab.brushes do
     if B[1].m != "spot" then
       raw_add_brush(B)
@@ -1461,7 +1462,7 @@ function Fab_load_wad(def)
 
     local filename = assert(def.dir_name) .. "/" .. def.file
 
-    gui.printf("Loading wad-fab %s / %s\n", def.file, def.map or "*")
+    gui.debugf("Loading wad-fab %s / %s\n", def.file, def.map or "*")
 
     -- load the map structures into memory
     -- [ if map is not specified, use "*" to load the first one ]
