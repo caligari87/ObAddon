@@ -125,7 +125,7 @@ PREFABS.Wall_triple_vertical_outset =
   bound_z2 = 128
 
   x_fit = "frame"
-  z_fit = "stretch" 
+  z_fit = "top"
 }
 
 PREFABS.Wall_adorned_diag =
