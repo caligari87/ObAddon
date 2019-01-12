@@ -20,6 +20,12 @@ PREFABS.Pic_techy_vats =
   
   x_fit = "frame"
   y_fit = "top"
+  
+  tex_COMPBLUE =
+  {
+    COMPBLUE = 50
+	REDWALL = 50
+  }
 }
 
 

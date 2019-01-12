@@ -5,7 +5,7 @@ PREFABS.Wall_garrett_tech_diagonal_lamp =
 
   prob   = 50
   theme = "!tech"
-  env   = "!outdoor"
+  env   = "building"
   
   where  = "diagonal"
   height = 128
