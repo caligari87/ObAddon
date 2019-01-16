@@ -7,7 +7,7 @@ PREFABS.Wall_garrett_tech_diagonal_lamp =
   theme = "!tech"
 <<<<<<< HEAD
   env   = "building"
-  
+
 =======
   env   = "!outdoor"
 

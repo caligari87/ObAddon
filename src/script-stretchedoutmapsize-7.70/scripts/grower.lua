@@ -846,7 +846,7 @@ function Grower_decide_extents()
   --
   -- decides how much of the map we can use for growing rooms.
   --
-  
+
   if OB_CONFIG.size != "stretched" then
     assert(LEVEL.map_W < SEED_W)
     assert(LEVEL.map_H < SEED_H)
@@ -910,7 +910,7 @@ function Grower_decide_extents()
 
   LEVEL.min_rooms = math.max(3, int(base / 3))
   LEVEL.max_rooms = math.max(6, int(base))
-  
+
   gui.printf("Target # of rooms : %d .. %d\n", LEVEL.min_rooms, LEVEL.max_rooms)
 
 
@@ -1737,7 +1737,7 @@ stderrf("prelim_conn %s --> %s : S=%s dir=%d\n", c_out.R1.name, c_out.R2.name, S
         mx = LEVEL.sprout_x2 - 2
         dx = 8
       end]]
-	  
+
       return mx-dx, my-dy, mx+dx, my+dy
     end
 

@@ -5,19 +5,19 @@ PREFABS.Pic_hell_alcove_tomb =
 
   prob   = 25
   theme = "hell"
-  
+
   where  = "seeds"
   height = 128
-  
+
   seed_w = 2
   seed_h = 1
-  
+
   deep = 16
   over = -16
-  
+
   bound_z1 = 0
   bound_z2 = 128
-  
+
   x_fit = "frame"
   y_fit = "top"
 }
@@ -29,19 +29,19 @@ PREFABS.Pic_hell_alcove_furnace =
 
   prob   = 25
   theme = "hell"
-  
+
   where  = "seeds"
   height = 128
-  
+
   seed_w = 2
   seed_h = 1
-  
+
   deep = 16
   over = -16
-  
+
   bound_z1 = 0
   bound_z2 = 128
-  
+
   x_fit = "frame"
   y_fit = "top"
 }

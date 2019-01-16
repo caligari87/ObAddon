@@ -454,7 +454,7 @@ DOOM.SINKS =
     trim_dz  = 0
   }
 
--- End new 
+-- End new
 
   -- liquid floor --
 
@@ -1152,9 +1152,9 @@ DOOM.THEMES =
       torches6 = 3
       torches7 = 65
       torches11 = 7
-	  gtd_wall_urban_storage = 25
-	  gtd_wall_tech_windows_topcorner = 25
-	  gtd_wall_server_room = 25
+      gtd_wall_urban_storage = 25
+      gtd_wall_tech_windows_topcorner = 25
+      gtd_wall_server_room = 25
     }
 
     window_groups =
@@ -1389,8 +1389,8 @@ DOOM.THEMES =
       torches6 = 5
       torches9 = 20 --burning barrel
       torches10 = 3 --skull rock
-	  gtd_wall_urban_storage = 8
-	  gtd_wall_tech_windows_topcorner = 8
+      gtd_wall_urban_storage = 8
+      gtd_wall_tech_windows_topcorner = 8
 
     }
 
@@ -1710,8 +1710,8 @@ DOOM.THEMES =
       cross4 = 5
       cross5 = 10
       mid_band_hell = 2
-	  gtd_wall_hell_bloodgutters = 40
-	  gtd_wall_tech_windows_topcorner = 40
+      gtd_wall_hell_bloodgutters = 40
+      gtd_wall_tech_windows_topcorner = 40
     }
 
     window_groups =
@@ -1783,7 +1783,7 @@ DOOM.THEMES =
       red_pillar = 5
       red_column = 5
       red_column_skl = 3
-      
+
     }
 
     style_list =
@@ -2863,11 +2863,11 @@ DOOM.ROOM_THEMES =
       BRICK5  = 40
       BRICK6  = 40
       BRICK7  = 40
-      
+
       BRICK2  = 20
       BRICK8  = 20
       BRICK1  = 10
-      BRICK9  = 10     
+      BRICK9  = 10
     }
 
     floors =

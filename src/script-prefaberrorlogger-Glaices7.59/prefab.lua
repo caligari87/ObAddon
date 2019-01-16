@@ -476,7 +476,7 @@ function Fab_transform_XY(fab, T)
     end
   end
 
-  
+
   ---| Fab_transform_XY |---
 
   assert(fab.state == "skinned")
@@ -566,7 +566,7 @@ function Fab_transform_Z(fab, T)
     end
   end
 
-  
+
   local function entity_z(E)
     if E.z then
       E.z = Trans.apply_z(E.z)
@@ -602,7 +602,7 @@ function Fab_transform_Z(fab, T)
     end
   end
 
-  
+
   ---| Fab_transform_Z |---
 
   assert(fab.state == "transform_xy")
@@ -674,13 +674,13 @@ function Fab_render(fab)
 
   fab.state = "rendered"
   local fab_map = "lulz"
-  
+
   if fab.map then
     fab_map = fab.map
   else
     fab_map = "It's the thing"
   end
-  
+
   if fab.where == "point" or fab.where == "seeds" then
     gui.printf("Adding " .. fab.name .. " from " .. fab_map .. " in " .. fab.file .. "\n")
   end
@@ -884,7 +884,7 @@ end
 function Fab_parse_edges__OLD(skin)
   --| convert the 'north', 'east' (etc) fields of a skin into
   --| a list of portals in a 2D array.
-  
+
   if skin._seed_map then return end
 
   -- create the seed map
@@ -1185,7 +1185,7 @@ function Fab_load_wad(def)
 
 
   local function create_brush(S, coords, pass)
-    
+
     -- pass: 1 = create a floor brush (or solid wall)
     --       2 = create a ceiling brush
 
@@ -2208,7 +2208,7 @@ function Fab_find_matches(reqs, match_state)
     return factor
   end
 
-  
+
   local function prob_for_match(def, match_state)
     local prob = assert(def.use_prob)
 
@@ -2238,7 +2238,7 @@ function Fab_find_matches(reqs, match_state)
     if prob > 0 then
       -- Ok, add it
       -- a higher rank overrides anything lower
-      
+
       if (def.rank or 0) > match_state.rank then
         match_state.rank = def.rank
         tab = {}
