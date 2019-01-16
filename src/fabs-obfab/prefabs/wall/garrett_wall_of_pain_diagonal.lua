@@ -5,10 +5,10 @@ PREFABS.Wall_of_pain =
 
   prob   = 50
   theme = "hell"
-  
+
   where  = "diagonal"
   height = 128
-  
+
   bound_z1 = 0
   bound_z2 = 128
 

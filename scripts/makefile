@@ -54,3 +54,7 @@ prefaberrorlogger-build-old:
 # Clean
 clean:
 	rm -vr build/
+
+# Filter the files through a normalizer
+normalize:
+	./normalize-source.sh

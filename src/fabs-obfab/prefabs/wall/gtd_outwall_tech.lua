@@ -10,7 +10,7 @@ PREFABS.Wall_outdoor_fake_lit_window =
   prob   = 100
   env   = "outdoor"
   theme = "tech"
-  
+
   where  = "edge"
   height = 128
   long   = 128
@@ -18,8 +18,8 @@ PREFABS.Wall_outdoor_fake_lit_window =
 
   bound_z1 = 0
   bound_z2 = 128
-  
-  z_fit = "bottom" 
+
+  z_fit = "bottom"
 }
 
 PREFABS.Wall_outdoor_accent_flat =
@@ -30,7 +30,7 @@ PREFABS.Wall_outdoor_accent_flat =
   prob   = 50
   env   = "outdoor"
   theme = "tech"
-  
+
   where  = "edge"
   height = 128
   long   = 128
@@ -38,8 +38,8 @@ PREFABS.Wall_outdoor_accent_flat =
 
   bound_z1 = 0
   bound_z2 = 128
-  
-  z_fit = "bottom" 
+
+  z_fit = "bottom"
 }
 
 PREFABS.Wall_vertical_long_windows =
@@ -50,7 +50,7 @@ PREFABS.Wall_vertical_long_windows =
   prob   = 50
   env   = "outdoor"
   theme = "tech"
-  
+
   where  = "edge"
   height = 128
   long   = 128
@@ -58,7 +58,7 @@ PREFABS.Wall_vertical_long_windows =
 
   bound_z1 = 0
   bound_z2 = 128
-  
+
   z_fit = { 64-8,64+8 }
 }
 
@@ -70,7 +70,7 @@ PREFABS.Wall_layered_lights =
   prob   = 50
   env   = "outdoor"
   theme = "tech"
-  
+
   where  = "edge"
   height = 128
   long   = 128
@@ -78,7 +78,7 @@ PREFABS.Wall_layered_lights =
 
   bound_z1 = 0
   bound_z2 = 128
-  
+
   z_fit = "top"
 }
 
@@ -90,7 +90,7 @@ PREFABS.Wall_plain_diag =
   prob   = 50
   theme  = "tech"
   env    = "outdoor"
-  
+
   where  = "diagonal"
   height = 128
 

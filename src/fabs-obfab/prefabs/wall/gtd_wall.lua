@@ -10,112 +10,7 @@ PREFABS.Wall_raised_comp =
   prob   = 15
   env   = "building"
   theme = "tech"
-  
-  where  = "edge"
-  height = 128
-  long   = 128
-  deep   = 16
 
-  bound_z1 = 0
-  bound_z2 = 128
-
-  x_fit = "frame"
-  z_fit = "top" 
-}
-
-PREFABS.Wall_grated_thing =
-{
-  file   = "wall/gtd_wall.wad"
-  map    = "MAP02"
-
-  prob   = 15
-  env   = "building"
-  theme = "!hell"
-  
-  where  = "edge"
-  height = 128
-  long   = 128
-  deep   = 16
-
-  bound_z1 = 0
-  bound_z2 = 128
-
-  x_fit = "frame"
-  z_fit = "top" 
-}
-
-PREFABS.Wall_inset =
-{
-  file   = "wall/gtd_wall.wad"
-  map    = "MAP03"
-
-  prob   = 15
-  env   = "building"
-  theme = "!hell"
-  
-  where  = "edge"
-  height = 128
-  long   = 128
-  deep   = 16
-
-  bound_z1 = 0
-  bound_z2 = 128
-
-  x_fit = "frame"
-  z_fit = "top" 
-}
-
-PREFABS.Wall_vertical_light =
-{
-  file   = "wall/gtd_wall.wad"
-  map    = "MAP04"
-
-  prob   = 15
-  env   = "building"
-  theme = "!hell"
-  
-  where  = "edge"
-  height = 128
-  long   = 128
-  deep   = 16
-
-  bound_z1 = 0
-  bound_z2 = 128
-
-  x_fit = "frame"
-  z_fit = "top" 
-}
-
-PREFABS.Wall_vertical_double_light =
-{
-  file   = "wall/gtd_wall.wad"
-  map    = "MAP05"
-
-  prob   = 15
-  env   = "building"
-  theme = "!hell"
-  
-  where  = "edge"
-  height = 128
-  long   = 128
-  deep   = 16
-
-  bound_z1 = 0
-  bound_z2 = 128
-
-  x_fit = "frame"
-  z_fit = "top" 
-}
-
-PREFABS.Wall_triple_vertical_outset =
-{
-  file   = "wall/gtd_wall.wad"
-  map    = "MAP06"
-
-  prob   = 15
-  env   = "building"
-  theme = "tech"
-  
   where  = "edge"
   height = 128
   long   = 128
@@ -128,6 +23,115 @@ PREFABS.Wall_triple_vertical_outset =
   z_fit = "top"
 }
 
+PREFABS.Wall_grated_thing =
+{
+  file   = "wall/gtd_wall.wad"
+  map    = "MAP02"
+
+  prob   = 15
+  env   = "building"
+  theme = "!hell"
+
+  where  = "edge"
+  height = 128
+  long   = 128
+  deep   = 16
+
+  bound_z1 = 0
+  bound_z2 = 128
+
+  x_fit = "frame"
+  z_fit = "top"
+}
+
+PREFABS.Wall_inset =
+{
+  file   = "wall/gtd_wall.wad"
+  map    = "MAP03"
+
+  prob   = 15
+  env   = "building"
+  theme = "!hell"
+
+  where  = "edge"
+  height = 128
+  long   = 128
+  deep   = 16
+
+  bound_z1 = 0
+  bound_z2 = 128
+
+  x_fit = "frame"
+  z_fit = "top"
+}
+
+PREFABS.Wall_vertical_light =
+{
+  file   = "wall/gtd_wall.wad"
+  map    = "MAP04"
+
+  prob   = 15
+  env   = "building"
+  theme = "!hell"
+
+  where  = "edge"
+  height = 128
+  long   = 128
+  deep   = 16
+
+  bound_z1 = 0
+  bound_z2 = 128
+
+  x_fit = "frame"
+  z_fit = "top"
+}
+
+PREFABS.Wall_vertical_double_light =
+{
+  file   = "wall/gtd_wall.wad"
+  map    = "MAP05"
+
+  prob   = 15
+  env   = "building"
+  theme = "!hell"
+
+  where  = "edge"
+  height = 128
+  long   = 128
+  deep   = 16
+
+  bound_z1 = 0
+  bound_z2 = 128
+
+  x_fit = "frame"
+  z_fit = "top"
+}
+
+PREFABS.Wall_triple_vertical_outset =
+{
+  file   = "wall/gtd_wall.wad"
+  map    = "MAP06"
+
+  prob   = 15
+  env   = "building"
+  theme = "tech"
+
+  where  = "edge"
+  height = 128
+  long   = 128
+  deep   = 16
+
+  bound_z1 = 0
+  bound_z2 = 128
+
+  x_fit = "frame"
+<<<<<<< HEAD
+  z_fit = "top"
+=======
+  z_fit = "stretch"
+>>>>>>> fb62abfa059582b5f247ef9d6e7e19f69e56195c
+}
+
 PREFABS.Wall_adorned_diag =
 {
   file   = "wall/gtd_wall.wad"
@@ -136,10 +140,10 @@ PREFABS.Wall_adorned_diag =
   prob   = 50
   theme = "tech"
   env   = "building"
-  
+
   where  = "diagonal"
   height = 128
-  
+
   bound_z1 = 0
   bound_z2 = 128
 
@@ -154,7 +158,7 @@ PREFABS.Wall_flat_accent =
   prob   = 15
   theme = "tech"
   env   = "building"
-  
+
   where  = "edge"
   height = 128
   long   = 128
@@ -164,9 +168,9 @@ PREFABS.Wall_flat_accent =
   bound_z2 = 128
 
   x_fit = "frame"
-  z_fit = "top" 
+  z_fit = "top"
 }
-  
+
   PREFABS.Wall_caged_pipes =
 {
   file   = "wall/gtd_wall.wad"
@@ -175,7 +179,7 @@ PREFABS.Wall_flat_accent =
   prob   = 15
   theme = "tech"
   env   = "building"
-  
+
   where  = "edge"
   height = 128
   long   = 128
@@ -185,5 +189,5 @@ PREFABS.Wall_flat_accent =
   bound_z2 = 128
 
   x_fit = "frame"
-  z_fit = "top" 
+  z_fit = "top"
 }

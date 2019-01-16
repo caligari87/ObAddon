@@ -10,6 +10,6 @@ PREFABS.Decor_crackofdoom =
 
   bound_z1 = -64
   bound_z2 = 8
-  
+
   sink_mode = "never"
 }

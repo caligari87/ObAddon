@@ -15,6 +15,6 @@ PREFABS.Decor_garrett_mass_gallows =
   bound_z2 = 128
 
   z_fit = "frame"
-  
+
   sink_mode = "never"
 }

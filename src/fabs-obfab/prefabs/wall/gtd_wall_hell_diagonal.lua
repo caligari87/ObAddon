@@ -6,10 +6,10 @@ PREFABS.Wall_hell_buttress =
   prob   = 50
   theme = "!tech"
   env   = "outdoor"
-  
+
   where  = "diagonal"
   height = 256
-  
+
   bound_z1 = 0
   bound_z2 = 256
 

@@ -31,7 +31,7 @@ PREFABS.Decor_blood_drip_pool =
 
   bound_z1 = 0
   bound_z2 = 160
-  
+
   thing_76 =
   { gutted_victim1 = 50
     gutted_victim2 = 50
@@ -62,7 +62,7 @@ PREFABS.Decor_cage_n_corpses =
 
   bound_z1 = 0
   bound_z2 = 176
-  
+
   thing_25 =
   {
    impaled_human = 50
@@ -149,16 +149,16 @@ PREFABS.Decor_hell_throne =
   prob   = 5000
   theme  = "hell"
   env    = "building"
-  
+
   where  = "point"
   size   = 96
   height = 160
 
   bound_z1 = 0
   bound_z2 = 160
-  
+
   z_fit = { 144-16,144 }
-  
+
   sink_mode = "never"
 }
 

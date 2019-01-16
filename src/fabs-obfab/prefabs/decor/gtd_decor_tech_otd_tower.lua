@@ -13,7 +13,7 @@ PREFABS.Decor_outdoor_freestanding_tower =
 
   bound_z1 = 0
   bound_z2 = 512
-  
+
   z_fit  = { 40,48 }
 
   sink_mode = "never"

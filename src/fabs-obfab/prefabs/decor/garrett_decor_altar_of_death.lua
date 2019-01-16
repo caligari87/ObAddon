@@ -15,6 +15,6 @@ PREFABS.Decor_garrett_altar_of_death =
   bound_z2 = 128
 
   z_fit = "top"
-  
+
   tex_MARBFAC2 = { MARBFAC2=50, MARBFAC3=50, MARBFACE=50 }
 }

@@ -18,7 +18,7 @@ PREFABS.Joiner_zigzag1 =
 
   seed_w = 3
   seed_h = 1
-  
+
   deep   = 16
   over   = 16
 

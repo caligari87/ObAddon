@@ -846,7 +846,7 @@ function Grower_decide_extents()
   --
   -- decides how much of the map we can use for growing rooms.
   --
-
+  
   if OB_CONFIG.size != "stretched" then
     assert(LEVEL.map_W < SEED_W)
     assert(LEVEL.map_H < SEED_H)
@@ -910,8 +910,8 @@ function Grower_decide_extents()
 
   LEVEL.min_rooms = math.max(3, int(base / 3))
   LEVEL.max_rooms = math.max(6, int(base))
-
-  gui.debugf("Target # of rooms : %d .. %d\n", LEVEL.min_rooms, LEVEL.max_rooms)
+  
+  gui.printf("Target # of rooms : %d .. %d\n", LEVEL.min_rooms, LEVEL.max_rooms)
 
 
   -- calculate the coverage target
@@ -1177,12 +1177,14 @@ gui.debugf("new room %s : env = %s : parent = %s\n", R.name, tostring(info.env),
     A.prelim_h = 0
 
     -- max size of new area  [ for caves it is whole room ]
-    if R.is_cave or R.is_park then
+--    if R.is_cave or R.is_park then
       A.max_size = R.size_limit
-    else
+--[[    else
       A.max_size = rand.pick({ 16, 24, 32 })
     end
+]]
   end
+
 
   R.delta_limit_mode = rand.sel(50, "positive", "negative")
   R.delta_up_chance  = 50
@@ -1731,6 +1733,11 @@ stderrf("prelim_conn %s --> %s : S=%s dir=%d\n", c_out.R1.name, c_out.R2.name, S
         dx = 8
       end
 
+--[[      if cur_rule.absolute_pos == "bottom" then
+        mx = LEVEL.sprout_x2 - 2
+        dx = 8
+      end]]
+	  
       return mx-dx, my-dy, mx+dx, my+dy
     end
 
@@ -2993,7 +3000,7 @@ end
 
     -- SUCCESS --
 
-    gui.debugf("APPLIED rule: %s\n", cur_rule.name)
+    gui.printf("APPLIED rule: %s\n", cur_rule.name)
 
     update_aversions(cur_rule)
 

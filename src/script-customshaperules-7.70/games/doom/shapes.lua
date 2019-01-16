@@ -2360,6 +2360,8 @@ HALL_2_SPROUT_B =
 
 -- MsrSgtShooterPerson's kool x-perimental shapes of definite kool
 
+-- MSSP's Greek collonade sort of things. [MSSPCOLLONADE]
+
 GROW_COLONNADE_1 =
 {
   prob = 3
@@ -2810,7 +2812,7 @@ GROW_LIQUID_INTERSECTION =
   }
 }
 
--- MSSP's thin ramps. [RAMP]
+-- MSSP's ramps and all sorts of stuff. [RAMP]
 
 GROW_RAMP_THIN_SINK =
 {
@@ -2850,6 +2852,28 @@ GROW_RAMP_THIN_RISE =
   diagonals =
   {
     "A1","1A"
+  }
+}
+
+GROW_REVERSE_FUNNEL =
+{
+  prob = 75
+  
+  structure =
+  {
+    "x.....","x11AAA"
+    "1.....","111%AA"
+    "1.....","1111AA"
+    "x.....","x11>AA"
+    "x.....","x111AA"
+    "x.....","x11/AA"
+    "x.....","x11AAA"
+  }
+  
+  diagonals =
+  {
+    "1A"
+	"1A"
   }
 }
 
@@ -3021,7 +3045,7 @@ GROW_CAGE_AROUND_PILLAR =
 
 GROW_CAGE_Z =
 {
-  prob = 25
+  prob = 10
   
   skip_prob = 70
   aversion = 5
@@ -3085,7 +3109,7 @@ SPROUT_CAGE_SIMPLE_REVERSED =
 
 GROW_CATWALK_BIFUNNEL_SINK =
 {
-  prob = 15
+  prob = 10
   structure = 
   {
     ".....",".111."
@@ -3105,7 +3129,7 @@ GROW_CATWALK_BIFUNNEL_SINK =
 
 GROW_CATWALK_BIFUNNEL_RISE =
 {
-  prob = 15
+  prob = 10
   
   structure =
   {
@@ -3126,7 +3150,7 @@ GROW_CATWALK_BIFUNNEL_RISE =
 
 GROW_CATWALK_BIFUNNEL_SINK_TALL =
 {
-  prob = 10
+  prob = 7
   
   structure =
   {
@@ -3148,7 +3172,7 @@ GROW_CATWALK_BIFUNNEL_SINK_TALL =
 
 GROW_CATWALK_BIFUNNEL_RISE_TALL =
 {
-  prob = 10
+  prob = 7
   
   structure =
   {
@@ -4064,11 +4088,11 @@ FAILED_SQUEEZE_ENTRANCE_SMOOTHER =
   }
 }
 
---MSSP's random room features [FEATURES]
+--MSSP's random negative features [FEATURES] - 'negative' because they attempt to modify an existing room if it has too much clean space.
 
 SPROUT_FEATURES_CENTER_ALTERED =
 {
-  prob = 20
+  prob = 150
   skip_prob = 5
 
   env = "building"
@@ -4091,7 +4115,7 @@ SPROUT_FEATURES_CENTER_ALTERED =
 
 SPROUT_FEATURES_CENTER_ALTER_RAISED =
 {
-  prob = 20
+  prob = 150
   skip_prob = 5
   
   env = "building"
@@ -4114,8 +4138,7 @@ SPROUT_FEATURES_CENTER_ALTER_RAISED =
 
 SPROUT_WIDE_SPACE_DEPRESSION =
 {
-  prob = 20
-  skip_prob = 5
+  prob = 150
 
   env = "building"
   
@@ -4132,8 +4155,7 @@ SPROUT_WIDE_SPACE_DEPRESSION =
 
 SPROUT_WIDE_SPACE_CATWALK =
 {
-  prob = 25
-  skip_prob = 3
+  prob = 150
   
   env = "building"
   
@@ -4154,8 +4176,7 @@ SPROUT_WIDE_SPACE_CATWALK =
 
 SPROUT_WIDE_SPACE_CATWALK_PLAIN =
 {
-  prob = 25
-  skip_prob = 2
+  prob = 250
   
   env = "building"
 
@@ -4171,8 +4192,7 @@ SPROUT_WIDE_SPACE_CATWALK_PLAIN =
 
 SPROUT_WIDE_SPACE_CATWALK_PLAIN_TO_WALL =
 {
-  prob = 40
-  skip_prob = 2
+  prob = 150
   
   env = "building"
 
@@ -4188,8 +4208,7 @@ SPROUT_WIDE_SPACE_CATWALK_PLAIN_TO_WALL =
 
 SPROUT_WIDE_SPACE_CATWALK_TALL_PLAIN =
 {
-  prob = 25
-  skip_prob = 2
+  prob = 150
   
   env = "building"
   
@@ -4205,8 +4224,7 @@ SPROUT_WIDE_SPACE_CATWALK_TALL_PLAIN =
 
 SPROUT_WIDE_SPACE_CATWALK_TALL_PLAIN_TO_WALL =
 {
-  prob = 25
-  skip_prob = 2
+  prob = 150
   
   env = "building"
   
@@ -4223,7 +4241,7 @@ SPROUT_WIDE_SPACE_CATWALK_TALL_PLAIN_TO_WALL =
 
 SPROUT_WIDE_SPACE_CATWALK_STRAIGHT =
 {
-  prob = 150
+  prob = 1000
   
   env = "building"
 
@@ -4237,7 +4255,7 @@ SPROUT_WIDE_SPACE_CATWALK_STRAIGHT =
 
 SPROUT_WIDE_SPACE_CATWALK_STRAIGHT_3WIDE =
 {
-  prob = 200
+  prob = 1000
   
   env = "building"
 
@@ -4251,7 +4269,7 @@ SPROUT_WIDE_SPACE_CATWALK_STRAIGHT_3WIDE =
 
 SPROUT_WIDE_SPACE_CATWALK_STRAIGHT_TO_WALL =
 {
-  prob = 80
+  prob = 150
   
   env = "building"
 
@@ -4265,7 +4283,7 @@ SPROUT_WIDE_SPACE_CATWALK_STRAIGHT_TO_WALL =
 
 SPROUT_WIDE_SPACE_CATWALK_STRAIGHT_TO_WALL_3WIDE =
 {
-  prob = 80
+  prob = 150
   
   env = "building"
 
@@ -4277,10 +4295,32 @@ SPROUT_WIDE_SPACE_CATWALK_STRAIGHT_TO_WALL_3WIDE =
   }
 }
 
+SPROUT_SKILLET =
+{
+  prob = 150
+
+  env = "building"
+  
+  structure =
+  {
+    "111111","111111"
+    "111111","11/AA%"
+    "111111","1>AAAA"
+    "111111","1>AAAA"
+    "111111","11%AA/"
+	"111111","111111"
+  }
+  
+  diagonals =
+  {
+    "1A","A1"
+    "1A","A1"
+  }
+}
+
 SPROUT_WIDE_LOW_CEILING_SIDE =
 {
-  prob = 50
-  skip_prob = 2
+  prob = 150
   
   env = "building"
 
@@ -4297,8 +4337,7 @@ SPROUT_WIDE_LOW_CEILING_SIDE =
 
 SPROUT_WIDE_LOW_CEILING_CENTER =
 {
-  prob = 50
-  skip_prob = 2
+  prob = 150
   
   env = "building"
 
@@ -4315,8 +4354,7 @@ SPROUT_WIDE_LOW_CEILING_CENTER =
 
 SPROUT_WIDE_LOW_CEILING_CORNER =
 {
-  prob = 50
-  skip_prob = 2
+  prob = 150
   
   env = "building"
 
@@ -4337,10 +4375,159 @@ SPROUT_WIDE_LOW_CEILING_CORNER =
   }
 }
 
+SPROUT_COLLONADE_3_PILLARS =
+{
+  prob = 150
+
+  env = "building"
+  
+  structure =
+  {
+    "1111111","1111111"
+    "1111111","1.A.A.1"
+    "1111111","1AAAAA1"
+    "1111111","1AAAAA1"
+    ".......","......."
+  }
+}
+
+SPROUT_TRIANGULAR_LOW_CEILING =
+{
+  prob = 150
+  
+  env = "building"
+  
+  structure =
+  {
+    "1111111","1111111"
+    "1111111","11/.%11"
+	"1111111","1/AAA%1"
+	"1111111","/AAAAA%"
+	".......","......."
+  }
+  
+  diagonals =
+  {
+    "1A","A1"
+    "1A","A1"
+    "1A","A1"
+  }
+}
+
+SPROUT_PILLAR_2X2 =
+{
+  prob = 150
+
+  env = "building"
+  
+  structure =
+  {
+    "1111","1111"
+    "1111","1..1"
+    "1111","1..1"
+    "1111","1111"
+  }
+}
+
+SPROUT_PILLAR_3X3 =
+{
+  prob = 150
+
+  env = "building"
+  
+  structure =
+  {
+    "11111","11111"
+    "11111","1/.%1"
+    "11111","1...1"
+    "11111","1%./1"
+    "11111","11111"
+  }
+  
+  diagonals =
+  {
+    "1.",".1"
+    "1.",".1"
+  }
+}
+
+SPROUT_PILLAR_BEAN =
+{
+  prob = 150
+
+  env = "building"
+
+  structure =
+  {
+    "1111","1111"
+	"1111","1/.1"
+	"1111","1./1"
+	"1111","1111"
+  }
+  
+  diagonals =
+  {
+    "1."
+	".1"
+  }
+}
+
+SPROUT_PILLAR_GATE =
+{
+  prob = 150
+  
+  env = "building"
+  
+  structure =
+  {
+    "111111","111111"
+    "111111","1.AA.1"
+    "111111","111111"
+  }
+}
+
+SPROUT_CATWALK_SUPPORT_PILLAR_OUTER =
+{
+  prob = 150
+  
+  structure =
+  {
+    "1122","1122"
+    "1122","1.22"
+    "1122","1122"
+  }
+}
+
+SPROUT_CATWALK_SUPPORT_PILLAR_INNER =
+{
+  prob = 150
+  
+  structure =
+  {
+    "1122","1122"
+    "1122","11.2"
+    "1122","1122"
+  }
+}
+
+SPROUT_CATWALK_SUPPORT_PILLAR_INNER_DOUBLE =
+{
+  prob = 150
+  
+  structure =
+  {
+    "1122","1122"
+    "1122","11.2"
+    "1122","1122"
+    "1122","11.2"
+    "1122","1122"
+  }
+}
+
+
 SMOOTHER_CHAMFER_WIDE_ROOM_CORNER =
 {
-  prob = 200
-  skip_prob = 10
+  prob = 1500
 
   pass = "smoother"
 
@@ -4363,6 +4550,52 @@ SMOOTHER_CHAMFER_WIDE_ROOM_CORNER =
   }
 }
 
+SMOOTHER_CHAMFER_WIDE_ROOM_CORNER_OUTLET =
+{
+  prob = 1500
+
+  pass = "smoother"
+
+  env = "building"
+  
+  structure =
+  {
+    ".....","....."
+    ".1111","....1"
+    ".1111","....1"
+    ".1111",".../1"
+    ".1111",".1111"
+  }
+  
+  diagonals =
+  {
+    ".1"
+  }
+}
+
+SMOOTHER_CHAMFER_WIDE_ROOM_CORNER_OUTLET_SOLID =
+{
+  prob = 1500
+
+  pass = "smoother"
+
+  env = "building"
+  
+  structure =
+  {
+    ".....","....."
+    ".1111","...11"
+    ".1111","...11"
+    ".1111",".1111"
+    ".1111",".1111"
+  }
+  
+  diagonals =
+  {
+    ".1"
+  }
+}
+
 --This exit will cause errors, because it will keep looking for staircase prefabs 
 --at the specially matched height of any given two floors this rule may apply to. Bad idea!
 
@@ -4378,18 +4611,410 @@ SMOOTHER_CHAMFER_WIDE_ROOM_CORNER =
   }
 }]]
 
+-- MSSP's rooms shaped like English alphabet letters. [LETTERS]
+
+GROW_T =
+{
+  prob = 75
+  
+  structure =
+  {
+    "x............","x111111111111"
+    "1............","1111111111111"
+    "1............","1111111111111"
+    "x............","x111111111111"
+    "x............","x....1111...."
+    "x............","x....1111...."
+    "x............","x....1111...."
+    "x............","x....1111...."
+  }
+}
+
+GROW_T_STALK_ENTRY =
+{
+  prob = 65
+  
+  structure =
+  {
+    "............","111111111111"
+    "............","111111111111"
+    "............","111111111111"
+    "............","111111111111"
+    "............","....1111...."
+    "............","....1111...."
+    "............","....1111...."
+    "............","....1111...."
+    "xxxxx11xxxxx","xxxxx11xxxxx"
+  }
+}
+
+GROW_X =
+{
+  prob = 65
+  
+  structure =
+  {
+    "x............","x111%..../111"
+    "1............","11111%../1111"
+    "1............","1111111111111"
+    "x............","x111111111111"
+    "x............","x%1111111111/"
+    "x............","x.%11111111/."
+    "x............","x..11111111.."
+    "x............","x..11111111.."
+    "x............","x./11111111%."
+    "x............","x/1111111111%"
+    "x............","x111111111111"
+    "x............","x111111111111"
+    "x............","x1111/..%1111"
+    "x............","x111/....%111"
+  }
+  
+  diagonals =
+  {
+    "1.",".1"
+    "1.",".1"
+	".1","1."
+	".1","1."
+	".1","1."
+	".1","1."
+	"1.",".1"
+	"1.",".1"
+  } 
+}
+
+GROW_H =
+{
+  prob = 65
+  
+  structure =
+  {
+    "x............","x1111....1111"
+    "1............","11111....1111"
+    "1............","11111....1111"
+    "x............","x1111%../1111"
+    "x............","x111111111111"
+    "x............","x111111111111"
+    "x............","x111111111111"
+    "x............","x111111111111"
+    "x............","x1111/..%1111"
+    "x............","x1111....1111"
+    "x............","x1111....1111"
+    "x............","x1111....1111"
+  }
+  
+  diagonals =
+  {
+    "1.",".1"
+    "1.",".1"
+  }
+}
+
+GROW_H_STALK_ENTRY =
+{
+  prob = 65
+  
+  structure =
+  {
+    "x11xxxxxxxxx","x11xxxxxxxxx"
+    "............","1111....1111"
+    "............","1111....1111"
+    "............","1111....1111"
+    "............","1111%../1111"
+    "............","111111111111"
+    "............","111111111111"
+    "............","111111111111"
+    "............","111111111111"
+    "............","1111/..%1111"
+    "............","1111....1111"
+    "............","1111....1111"
+    "............","1111....1111"
+  }
+
+    diagonals =
+  {
+    "1.",".1"
+    "1.",".1"
+  }
+}
+
+GROW_Z =
+{
+  prob = 65
+  
+  structure =
+  {
+    "x........","x11111111"
+    "1........","111111111"
+    "1........","111111111"
+    "x........","x11111111"
+	"x........","x...1111/"
+	"x........","x../111/."
+	"x........","x./111/.."
+	"x........","x/1111..."
+    "x........","x11111111"
+    "x........","x11111111"
+    "x........","x11111111"
+    "x........","x11111111"
+  }
+  
+  diagonals =
+  {
+    "1."
+	".1","1."
+	".1","1."
+	".1"
+  }
+}
+
+GROW_Z_ALT =
+{
+  prob = 65
+  
+  structure =
+  {
+    "........x","11111111x"
+    "........1","111111111"
+    "........1","111111111"
+    "........x","11111111x"
+	"........x","...1111/x"
+	"........x","../111/.x"
+	"........x","./111/..x"
+	"........x","/1111...x"
+    "........x","11111111x"
+    "........x","11111111x"
+    "........x","11111111x"
+    "........x","11111111x"
+  }
+  
+  diagonals =
+  {
+    "1."
+	".1","1."
+	".1","1."
+	".1"
+  }
+}
+
+GROW_C =
+{
+  prob = 75
+  
+  structure =
+  {
+    "........x","./111111x"
+    "........1","/11111111"
+    "........1","111111111"
+    "........x","11111111x"
+    "........x","1111/...x"
+    "........x","1111....x"
+    "........x","1111....x"
+    "........x","1111%...x"
+    "........x","11111111x"
+    "........x","11111111x"
+    "........x","%1111111x"
+    "........x",".%111111x"
+  }
+  
+  diagonals =
+  {
+    ".1"
+    ".1"
+    "1."
+	"1."
+    ".1"
+    ".1"
+  }
+}
+
+GROW_O =
+{
+  prob = 75
+  
+  structure =
+  {
+    "........","./1111%."
+    "........","/111111%"
+	"........","11111111"
+	"........","111..111"
+	"........","111..111"
+	"........","11111111"
+	"........","%111111/"
+	"........",".%1111/."
+	"xxx11xxx","xxx11xxx"
+  }
+  
+  diagonals =
+  {
+    ".1","1."
+    ".1","1."
+    ".1","1."
+    ".1","1."
+  }
+}
+
+GROW_L =
+{
+  prob = 75
+  
+  structure =
+  {
+	"x11xxxxx","x11xxxxx"
+	"........","1111...."
+	"........","1111...."
+	"........","1111...."
+	"........","1111...."
+	"........","11111111"
+	"........","11111111"
+	"........","11111111"
+	"........","11111111"
+  }
+}
+
+-- Elevated letters.
+
+GROW_ELEVATED_T_STALK_ENTRY =
+{
+  prob = 25
+  
+  structure =
+  {
+    "x........","x1111AAAA"
+    "1........","11111AAAA"
+    "1........","11111AAAA"
+    "x........","x1111AAAA"
+    "x........","x11>AAAAA"
+    "x........","x11>AAAAA"
+    "x........","x11>AAAAA"
+    "x........","x11>AAAAA"
+    "x........","x1111AAAA"
+    "x........","x1111AAAA"
+    "x........","x1111AAAA"
+    "x........","x1111AAAA"
+  }
+}
+
+GROW_ELEVATED_T_SIDE_ENTRY =
+{
+  prob = 25
+  
+  structure =
+  {
+    "xxxxx11x","xxxxx11x"
+    "........","11111111"
+    "........","11111111"
+    "........","1111vvvv"
+    "........","1111AAAA"
+    "........","AAAAAAAA"
+    "........","AAAAAAAA"
+    "........","AAAAAAAA"
+    "........","AAAAAAAA"
+    "........","1111AAAA"
+    "........","1111^^^^"
+    "........","11111111"
+    "........","11111111"
+  }
+}
+
+GROW_ELEVATED_H_ENTRY =
+{
+  prob = 25
+  
+  structure =
+  {
+    "xxxxxxxxx11x","xxxxxxxxx11x"
+    "............","1111AAAA1111"
+    "............","1111AAAA1111"
+    "............","1111AAAA1111"
+    "............","1111^^^^1111"
+    "............","111111111111"
+    "............","111111111111"
+    "............","111111111111"
+    "............","111111111111"
+    "............","1111vvvv1111"
+    "............","1111AAAA1111"
+    "............","1111AAAA1111"
+    "............","1111AAAA1111"
+  }
+}
+
+GROW_ELEVATED_H_ALT =
+{
+  prob = 25
+  
+  structure =
+  {
+    "xxxxxxxxx11x","xxxxxxxxx11x"
+    "............","111111111111"
+    "............","111111111111"
+    "............","vvvv1111vvvv"
+    "............","AAAA1111AAAA"
+    "............","AAAAAAAAAAAA"
+    "............","AAAAAAAAAAAA"
+    "............","AAAAAAAAAAAA"
+    "............","AAAAAAAAAAAA"
+    "............","AAAA1111AAAA"
+    "............","^^^^1111^^^^"
+    "............","111111111111"
+    "............","111111111111"
+  }
+}
+
+GROW_ELEVATED_O =
+{
+  prob = 25
+  
+  structure =
+  {
+    "x11xxxxxxxxx","x11xxxxxxxxx"
+    "............","111111111111"
+    "............","111111111111"
+    "............","11/AAAAAA%11"
+    "............","11AAAAAAAA11"
+    "............","11AAAAAAAA11"
+    "............","11>AAAAAA<11"
+    "............","11>AAAAAA<11"
+    "............","11AAAAAAAA11"
+    "............","11AAAAAAAA11"
+    "............","11%AAAAAA/11"
+    "............","111111111111"
+    "............","111111111111"
+  }
+  
+  diagonals =
+  {
+    "1A","A1"
+    "1A","A1"
+  }
+}
+
+--[MISC SHAPES]
+
+--[[GROW_PILL =
+{
+  prob = 20
+  
+  structure =
+  {
+    "111111111111"
+    "111111111111"
+    "1111vvvv1111"
+    "AAAAAAAAAAAA"
+  }
+}]]
+
 -- MSSP's huge-arse rooms. [HUGE]
 
-ROOT_WIDE_SPACE_4X8 =
+ROOT_WIDE_SPACE_4X2 =
 {
   prob = 100
   
   structure =
   {
-    "1........","x11111111"
+    "x........","x11111111"
     "1........","111111111"
     "1........","111111111"
-    "1........","x11111111"
+    "x........","x11111111"
   }
 }
 
@@ -4412,7 +5037,7 @@ ROOT_WIDE_SPACE_4X8 =
 
 GROW_WIDE_SPACE_12x12 =
 {
-  prob = 100
+  prob = 75
   
   structure =
   {
