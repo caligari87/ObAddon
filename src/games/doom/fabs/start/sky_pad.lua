@@ -20,7 +20,7 @@ PREFABS.Start_sky_pad =
 
   x_fit  = { 72,80, 176,184 }
 
-  thing_2028 = 
+  thing_2028 =
   {
   lamp = 50
   mercury_lamp = 50
@@ -40,7 +40,7 @@ PREFABS.Start_sky_pad_hell =
   theme  = "hell"
 
   -- replace the lamps
-  thing_2028 = 
+  thing_2028 =
   {
   red_torch = 50
   blue_torch = 50
@@ -64,7 +64,7 @@ PREFABS.Start_sky_pad_urban =
 
   theme  = "urban"
 
-  thing_2028 = 
+  thing_2028 =
   {
   lamp = 50
   mercury_lamp = 50

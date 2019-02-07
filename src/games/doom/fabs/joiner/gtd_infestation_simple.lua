@@ -14,34 +14,34 @@ PREFABS.Joiner_infestation_caveout =
 
   seed_w = 3
   seed_h = 2
-  
+
   deep = 16
   over = 16
-  
+
   bound_z1 = -16
 
   x_fit = "frame"
   y_fit = "frame"
-  
+
   solid_ents = false
 }
 
 PREFABS.Joiner_natural_caveout =
 {
   template = "Joiner_infestation_caveout"
-  
+
   prob = 200
   theme = "!hell"
-  
+
   flat_BLOOD1 = "GRASS1"
   flat_SFLR6_4 = "GRASS1"
   flat_SFLR6_1 = "FLOOR6_2"
-  
+
   tex_SKSNAKE1 = "SP_ROCK1"
   tex_SKINEDGE = "SP_ROCK1"
   tex_SKSNAKE2 = "SP_ROCK1"
   tex_SKSPINE1 = "SP_ROCK1"
-  
+
   thing_59 = 0
   thing_63 = 0
   thing_77 = 0

@@ -22,7 +22,7 @@
 function Render_add_exit_sign(E, z)
   local def = PREFABS["Decor_exit_sign"]
   if not def then return end
-  
+
   assert(z)
 
   local x1,y1, x2,y2 = Edge_line_coords(E)
@@ -756,7 +756,7 @@ function Render_corner(cx, cy)
     each C in brush do
       C.u1 = 0
       C.v1 = 0
-    end   
+    end
 
     if corner.post_top_h then
       brushlib.add_top(brush, corner.post_top_h)
@@ -1111,42 +1111,42 @@ function Render_sink_part(A, S, where, sink)
     local ax3, ay3 = ax * k2 + cx * k1, ay * k2 + cy * k1
     local bx3, by3 = bx * k2 + cx * k1, by * k2 + cy * k1
 
-	-- default value if the corner style module is not used
-	if PARAM["corner_style"] == nil or PARAM["corner_style"] == '' then
-	  PARAM["corner_style"] = "sink_style_curved"
-	end
-	
-	if PARAM["corner_style"] != "sink_style_sharp" then
-	  if curve_mode == "curve" or curve_mode == "outie" then
-	    -- either B and C are on the diagonal line, otherwise A and C are
+    -- default value if the corner style module is not used
+    if PARAM["corner_style"] == nil or PARAM["corner_style"] == '' then
+      PARAM["corner_style"] = "sink_style_curved"
+    end
 
-	    if B + C == 10 then
-		  if curve_mode == "outie" then
-		    bx3 = bx * 0.25 + cx * 0.75
-	        by3 = by * 0.25 + cy * 0.75
-		  else
-		    bx3, by3 = bx2, by2
-		  end
+    if PARAM["corner_style"] != "sink_style_sharp" then
+      if curve_mode == "curve" or curve_mode == "outie" then
+        -- either B and C are on the diagonal line, otherwise A and C are
 
-		  bx2 = bx * 0.375 + cx * 0.625 --.375 .625
-		  by2 = by * 0.375 + cy * 0.625
+        if B + C == 10 then
+          if curve_mode == "outie" then
+            bx3 = bx * 0.25 + cx * 0.75
+            by3 = by * 0.25 + cy * 0.75
+          else
+            bx3, by3 = bx2, by2
+          end
 
-	    elseif A + C == 10 then
-		  if curve_mode == "outie" then
-		    ax3 = ax * 0.25 + cx * 0.75
-		    ay3 = ay * 0.25 + cy * 0.75
-		  else
-		    ax3, ay3 = ax2, ay2
-		  end
+          bx2 = bx * 0.375 + cx * 0.625 --.375 .625
+          by2 = by * 0.375 + cy * 0.625
 
-		ax2 = ax * 0.375 + cx * 0.625
-		ay2 = ay * 0.375 + cy * 0.625
+        elseif A + C == 10 then
+          if curve_mode == "outie" then
+            ax3 = ax * 0.25 + cx * 0.75
+            ay3 = ay * 0.25 + cy * 0.75
+          else
+            ax3, ay3 = ax2, ay2
+          end
 
-	    else
-		  error("do_triangle problem")
-	    end
-	  end
-	end
+        ax2 = ax * 0.375 + cx * 0.625
+        ay2 = ay * 0.375 + cy * 0.625
+
+        else
+          error("do_triangle problem")
+        end
+      end
+    end
 
 --[[ DEBUG
 stderrf("C = (%d %d)\n", cx, cy)
@@ -1391,14 +1391,14 @@ function Render_ceiling(A)
 
   local function render_seed(S)
     local c_h = S.ceil_h or A.ceil_h
-	
-    if not c_h then 
-	  gui.printf("%s : %s\n", (A.chunk and A.chunk.kind) or "-", table.tostr(A))
-	  gui.printf("\nblah:\n\n " .. table.tostr(S))
-	  gui.printf("\nblah:\n\n " .. table.tostr(A.room))
-	  gui.printf("\nblah:\n\n " .. table.tostr(S.room))
-	  assert(c_h)
-	end
+
+    if not c_h then
+      gui.printf("%s : %s\n", (A.chunk and A.chunk.kind) or "-", table.tostr(A))
+      gui.printf("\nblah:\n\n " .. table.tostr(S))
+      gui.printf("\nblah:\n\n " .. table.tostr(A.room))
+      gui.printf("\nblah:\n\n " .. table.tostr(S.room))
+      assert(c_h)
+    end
 
     local c_mat  = S.ceil_mat  or A.ceil_mat
     local c_side = S.ceil_side or S.ceil_mat or A.ceil_side or c_mat
@@ -2361,13 +2361,13 @@ function Render_all_areas()
   each depot in LEVEL.depots do
     Render_depot(depot)
   end
-  
+
   if OB_CONFIG.engine == "zdoom" or OB_CONFIG.engine == "gzdoom" then
     if OB_CONFIG.zdoom_vista == "enable" or OB_CONFIG.zdoom_vista == "debug" then
       Render_skybox()
-	end
+    end
   end
-  
+
 end
 
 

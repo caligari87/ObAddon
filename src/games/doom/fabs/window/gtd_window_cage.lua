@@ -32,7 +32,7 @@ PREFABS.Window_cage_2 =
   template = "Window_cage_1"
   map    = "MAP02"
   theme  = "!tech"
-  
+
   group  = "gtd_window_cage_lowbars"
 
   seed_w = 2
@@ -54,7 +54,7 @@ PREFABS.Window_cage_3 =
   template = "Window_cage_1"
   map    = "MAP03"
   theme  = "!tech"
-  
+
   group  = "gtd_window_cage_lowbars"
 
   seed_w = 3
@@ -75,9 +75,9 @@ PREFABS.Window_cage_1_HB =
 {
   template = "Window_cage_1"
   theme  = "!tech"
-  
+
   group = "gtd_window_cage_highbars"
-  
+
   tex_MIDBARS3 = "MIDBARS1"
 }
 
@@ -98,11 +98,11 @@ PREFABS.Window_cage_2_HB =
   template = "Window_cage_1"
   map = "MAP02"
   theme  = "!tech"
-  
+
   seed_w = 2
- 
+
   group = "gtd_window_cage_highbars"
-  
+
   tex_MIDBARS3 = "MIDBARS1"
 }
 
@@ -124,11 +124,11 @@ PREFABS.Window_cage_3_HB =
   template = "Window_cage_1"
   map = "MAP03"
   theme  = "!tech"
-  
+
   seed_w = 3
-  
+
   group = "gtd_window_cage_highbars"
-  
+
   tex_MIDBARS3 = "MIDBARS1"
 }
 
@@ -150,7 +150,7 @@ PREFABS.Window_cage_1_hell =
   template = "Window_cage_1"
 
   group = "gtd_window_cage_hell"
-  
+
   tex_MIDBARS3 = "MIDGRATE"
 }
 
@@ -158,11 +158,11 @@ PREFABS.Window_cage_2_hell =
 {
   template = "Window_cage_1"
   map = "MAP02"
-  
+
   seed_w = 2
-  
+
   group = "gtd_window_cage_hell"
-  
+
   tex_MIDBARS3 = "MIDGRATE"
 }
 
@@ -170,10 +170,10 @@ PREFABS.Window_cage_3_hell =
 {
   template = "Window_cage_1"
   map = "MAP03"
-  
+
   seed_w = 3
-  
+
   group = "gtd_window_cage_hell"
-  
+
   tex_MIDBARS3 = "MIDGRATE"
 }

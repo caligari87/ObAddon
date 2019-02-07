@@ -29,11 +29,11 @@ PREFABS.Locked_medium_red =
 PREFABS.Locked_medium_red_hell =
 {
   template = "Locked_medium_red"
-   
+
    theme = "hell"
    tex_BIGDOOR1 = { BIGDOOR5=50, BIGDOOR6=50, BIGDOOR7=50 }
    flat_FLAT23 = "CEIL5_2"
-  
+
 }
 
 
@@ -77,11 +77,11 @@ PREFABS.Locked_medium_blue_hell =
 
   tex_DOORRED = "DOORBLU"
   line_33     = 32
-   
+
    theme = "hell"
    tex_BIGDOOR1 = { BIGDOOR5=50, BIGDOOR6=50, BIGDOOR7=50 }
    flat_FLAT23 = "CEIL5_2"
-  
+
 }
 
 PREFABS.Locked_medium_blue_diag =
@@ -125,11 +125,11 @@ PREFABS.Locked_medium_yellow_hell =
 
   tex_DOORRED = "DOORYEL"
   line_33     = 34
-   
+
   theme = "hell"
   tex_BIGDOOR1 = { BIGDOOR5=50, BIGDOOR6=50, BIGDOOR7=50 }
   flat_FLAT23 = "CEIL5_2"
-  
+
 }
 
 PREFABS.Locked_medium_yellow_diag =

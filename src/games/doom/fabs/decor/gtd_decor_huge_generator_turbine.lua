@@ -6,7 +6,7 @@ PREFABS.Huge_generator_turbine =
   prob   = 1500
   theme  = "tech"
   env    = "!cave"
-  
+
   rank = 1
 
   where  = "point"

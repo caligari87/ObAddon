@@ -199,19 +199,19 @@ end
 function Episode_determine_map_sizes()
   each LEV in GAME.levels do
     local W, H = Level_determine_map_size(LEV)
-	
-	if OB_CONFIG.size == "stretched" then
-	  W = 7
-	  H = 112
-	  SEED_H = 112
-	end
+
+    if OB_CONFIG.size == "stretched" then
+      W = 7
+      H = 112
+      SEED_H = 112
+    end
 
     -- sanity check
-	if OB_CONFIG.size != "stretched" then
-	  assert(W + 4 <= SEED_W)
+    if OB_CONFIG.size != "stretched" then
+      assert(W + 4 <= SEED_W)
       assert(H + 4 <= SEED_H)
     end
-	
+
     LEV.map_W = W
     LEV.map_H = H
   end
@@ -2134,11 +2134,11 @@ function Level_do_styles()
   if LEVEL.secret_exit then
     STYLE.secrets = "heaps"
   end
-  
+
   if LEVEL.psychedelic then
     Mat_prepare_trip()
-  end  
-  
+  end
+
 end
 
 

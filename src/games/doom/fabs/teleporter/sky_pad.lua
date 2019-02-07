@@ -23,7 +23,7 @@ PREFABS.Teleporter_sky_pad =
   tag_1 = "?out_tag"
   tag_2 = "?in_tag"
 
-  thing_55 = 
+  thing_55 =
 {
   thing_55 = 50
   thing_56 = 50

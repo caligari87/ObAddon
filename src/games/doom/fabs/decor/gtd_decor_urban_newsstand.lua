@@ -15,6 +15,6 @@ PREFABS.Decor_urban_newsstand =
   bound_z2 = 128
 
   z_fit = "top"
-  
+
   sink_mode = "never"
 }

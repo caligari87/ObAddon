@@ -48,7 +48,7 @@ PREFABS.Joiner_barred1_hell =
   tex_METAL2   = "WOOD1"
   tex_METAL = { METAL=50, SUPPORT3=50 }
   flat_CEIL5_2 = "FLAT5_2"
-  
+
 }
 
 PREFABS.Joiner_barred1_hell2 =
@@ -60,7 +60,7 @@ PREFABS.Joiner_barred1_hell2 =
   tex_METAL2   = { SKSNAKE2=50, SKIN2=50 }
   tex_METAL = { METAL=50, SUPPORT3=50 }
   flat_CEIL5_2 = "BLOOD3"
-  
+
 }
 
 PREFABS.Joiner_barred1_urban =
@@ -72,7 +72,7 @@ PREFABS.Joiner_barred1_urban =
   tex_METAL = "METAL"
   tex_METAL2   = "PANBORD1"
   flat_CEIL5_2 = "RROCK09"
-  
+
 }
 
 PREFABS.Joiner_barred1_urban2 =
@@ -84,5 +84,5 @@ PREFABS.Joiner_barred1_urban2 =
   tex_METAL = "METAL"
   tex_METAL2   = "PANBORD1"
   flat_CEIL5_2 = "CEIL5_1"
-  
+
 }

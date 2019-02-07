@@ -50,17 +50,17 @@ OB_MODULES["layout_absurdifier"] =
 
   tooltip=_(
     "This is an experimental module. The layout absurdifier attempts to cause levels to overprefer specific shape rules from the ruleset in order to create odd and possibly broken but interesting combinations. Use at your own risk.")
-	
+
   options =
   {
     layout_absurdity =
-	{
-	  name = "layout_absurdity"
-	  label = _("Layout Absurdity")
-	  choices=LAYOUT_ABSURDIFIER.CHOICES
-	  default="NONE"
-	  tooltip = "Affects the amount of levels have the absurdity module activated on. Selecting ALL will not necessarily make all levels absurd as it is all still based on chance."
-	}
+    {
+      name = "layout_absurdity"
+      label = _("Layout Absurdity")
+      choices=LAYOUT_ABSURDIFIER.CHOICES
+      default="NONE"
+      tooltip = "Affects the amount of levels have the absurdity module activated on. Selecting ALL will not necessarily make all levels absurd as it is all still based on chance."
+    }
   }
 
 }]]

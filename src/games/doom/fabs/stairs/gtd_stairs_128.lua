@@ -23,7 +23,7 @@ PREFABS.Stairs_128_2X =
 {
   template = "Stairs_128"
   map    = "MAP02"
-  
+
   seed_h = 2
 }
 
@@ -31,6 +31,6 @@ PREFABS.Stairs_128_3X =
 {
   template = "Stairs_128"
   map    = "MAP03"
-  
+
   seed_h = 3
 }

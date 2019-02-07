@@ -20,7 +20,7 @@ PREFABS.Window_open_2 =
 {
   template = "Window_open_1"
   map      = "MAP02"
-  
+
   seed_w   = 2
 }
 
@@ -28,7 +28,7 @@ PREFABS.Window_open_3 =
 {
   template = "Window_open_1"
   map      = "MAP03"
-  
+
   seed_w   = 3
 }
 
@@ -36,6 +36,6 @@ PREFABS.Window_open_4 =
 {
   template = "Window_open_1"
   map      = "MAP03"
-  
+
   seed_w   = 4
 }

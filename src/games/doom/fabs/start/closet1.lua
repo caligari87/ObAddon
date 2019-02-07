@@ -34,7 +34,7 @@ PREFABS.Start_closet1_urban =
 
   prob  = 100
   theme = "urban"
- 
+
 
   -- door variations
   tex_DOOR1 = { WOODMET1=50, WOODMET2=50, WOOD4=20, WOODMET3=20, WOODMET4=15, WOODGARG=50 }
@@ -57,7 +57,7 @@ PREFABS.Start_closet1_hell =
 
   prob  = 100
   theme = "hell"
- 
+
 
   -- door variations
   tex_DOOR1 = { WOODMET1=40, WOODMET2=30, WOOD4=20, WOODMET3=40, WOODMET4=35, WOODGARG=50 }

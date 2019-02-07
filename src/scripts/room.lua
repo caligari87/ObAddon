@@ -1440,10 +1440,10 @@ function Room_border_up()
 
       elseif A2.border_type == "watery_drop" then
         Junction_make_railing(junc, "MIDBARS3", "block")
-		
-	  elseif A2.border_type == "bottomless_drop" then
-  		Junction_make_railing(junc, "MIDBARS3", "block")
-		
+
+      elseif A2.border_type == "bottomless_drop" then
+          Junction_make_railing(junc, "MIDBARS3", "block")
+
       else
         Junction_make_empty(junc)
       end

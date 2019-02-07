@@ -805,7 +805,7 @@ function Grower_calc_rule_probs()
     if not ob_match_game(rule)     then return 0 end
     if not ob_match_engine(rule)   then return 0 end
     if not ob_match_playmode(rule) then return 0 end
-	
+
     -- liquid check
     if not LEVEL.liquid and rule.styles and
        table.has_elem(rule.styles, "liquids")
@@ -828,7 +828,7 @@ function Grower_calc_rule_probs()
 
     prob = prob *  style_factor(rule)
     prob = prob * random_factor(rule)
-	
+
     return prob
   end
 
@@ -839,52 +839,52 @@ function Grower_calc_rule_probs()
 
   print("\nAbsurdity Module report:\n")
   if not OB_CONFIG.layout_absurdity then
-	print("Nothing is absurd and everything is normal. :(\n")
+    print("Nothing is absurd and everything is normal. :(\n")
   end
 
   local shape_is_absurd = false
   local level_is_absurd = false
-  
+
   if OB_CONFIG.layout_absurdity == "all" then
-	level_is_absurd = true
+    level_is_absurd = true
   elseif OB_CONFIG.layout_absurdity == "75" then
-	if rand.range(0,100) <= 75 then
-	  level_is_absurd = true
-	end
+    if rand.range(0,100) <= 75 then
+      level_is_absurd = true
+    end
   elseif OB_CONFIG.layout_absurdity == "50" then
-	if rand.range(0,100) <= 50 then
-	  level_is_absurd = true
-	end
+    if rand.range(0,100) <= 50 then
+      level_is_absurd = true
+    end
   elseif OB_CONFIG.layout_absurdity == "25" then
-	if rand.range(0,100) <= 25 then
-	  level_is_absurd = true
-	end
+    if rand.range(0,100) <= 25 then
+      level_is_absurd = true
+    end
   end
-  
+
   if level_is_absurd == true then
-	print("This level is absurd!\n")
+    print("This level is absurd!\n")
   else
     print("This level is not absurd...\n")
   end
-  
+
   each name,rule in SHAPE_GRAMMAR do
     rule.use_prob = calc_prob(rule)
-	
-	if level_is_absurd == true then
+
+    if level_is_absurd == true then
       local shape_absurd_chance = rand.range(0,100)
-	  if shape_absurd_chance <= 2.5 then
-	    shape_is_absurd = true
+      if shape_absurd_chance <= 2.5 then
+        shape_is_absurd = true
       end
-	end
-	
+    end
+
     if shape_is_absurd == true and level_is_absurd == true then
-	  rule.use_prob = rule.use_prob * 1000000
+      rule.use_prob = rule.use_prob * 1000000
       print(rule.name .. " is now ABSURDIFIED! WOOO!!!\n")
-	  shape_is_absurd = false
-	end
-	
+      shape_is_absurd = false
+    end
+
   end
-  
+
 end
 
 
@@ -893,7 +893,7 @@ function Grower_decide_extents()
   --
   -- decides how much of the map we can use for growing rooms.
   --
-  
+
   if OB_CONFIG.size != "stretched" then
     assert(LEVEL.map_W < SEED_W)
     assert(LEVEL.map_H < SEED_H)
@@ -957,7 +957,7 @@ function Grower_decide_extents()
 
   LEVEL.min_rooms = math.max(3, int(base / 3))
   LEVEL.max_rooms = math.max(6, int(base))
-  
+
   gui.printf("Target # of rooms : %d .. %d\n", LEVEL.min_rooms, LEVEL.max_rooms)
 
 
@@ -1786,7 +1786,7 @@ stderrf("prelim_conn %s --> %s : S=%s dir=%d\n", c_out.R1.name, c_out.R2.name, S
         mx = LEVEL.sprout_x2 - 2
         dx = 8
       end]]
-	  
+
       return mx-dx, my-dy, mx+dx, my+dy
     end
 
@@ -3143,7 +3143,7 @@ function Grower_grammatical_room(R, pass, is_emergency)
 
   if pass == "grow"     then stop_prob =  5 end
   if pass == "decorate" then stop_prob = 10 end
-  
+
   Grower_grammatical_pass(R, pass, apply_num, stop_prob, nil, nil, is_emergency)
 end
 

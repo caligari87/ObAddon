@@ -74,7 +74,7 @@ PREFABS.Locked_joiner_red_hell =
   flat_FLOOR7_2 = "CEIL5_2"
   tex_BIGDOOR3 = { BIGDOOR7=50, BIGDOOR5=50 }
   tex_DOORRED = "DOORRED2"
-  
+
 
   -- texture is already "DOORRED"
   -- line special is already #33
@@ -128,7 +128,7 @@ PREFABS.Locked_joiner_red_tech =
   flat_FLOOR7_2 = "FLAT20"
   tex_BIGDOOR3 = "BIGDOOR2"
   tex_DOORRED = "DOORRED2"
-  
+
 
   -- texture is already "DOORRED"
   -- line special is already #33
@@ -181,7 +181,7 @@ PREFABS.Locked_joiner_red_tech2 =
   flat_FLOOR7_2 = "FLOOR3_3"
   tex_BIGDOOR3 = "BIGDOOR4"
   tex_DOORRED = "DOORRED2"
-  
+
 
   -- texture is already "DOORRED"
   -- line special is already #33

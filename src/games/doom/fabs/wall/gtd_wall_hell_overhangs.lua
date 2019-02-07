@@ -6,7 +6,7 @@ PREFABS.Wall_hell_castle_maccicolations =
   prob   = 150
   env   = "!building"
   theme = "hell"
-  
+
   where  = "edge"
   height = 128
   long   = 128
@@ -16,14 +16,14 @@ PREFABS.Wall_hell_castle_maccicolations =
   bound_z2 = 128
 
   x_fit = "frame"
-  z_fit = "bottom" 
+  z_fit = "bottom"
 }
 
 PREFABS.Wall_hell_castle_maccicolations_overhang =
 {
   template = "Wall_hell_castle_maccicolations"
-  
+
   map = "MAP02"
-  
+
   deep = 32
 }

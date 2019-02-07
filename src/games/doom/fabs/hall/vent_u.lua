@@ -38,6 +38,6 @@ PREFABS.Hallway_vent_cage1_hell =
   tex_ICKWALL3 = "METAL"
   flat_FLAT20 = "CEIL5_2"
 
-  sector_1  = { [8]=50, [1]=15, [2]=5, [3]=5, [17]=10, [12]=7, [13]=7 }  
+  sector_1  = { [8]=50, [1]=15, [2]=5, [3]=5, [17]=10, [12]=7, [13]=7 }
 
 }

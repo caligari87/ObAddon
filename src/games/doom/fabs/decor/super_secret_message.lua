@@ -11,6 +11,6 @@ PREFABS.Decor_super_secret_message_dont_tell_anyone =
 
   bound_z1 = 0
   bound_z2 = 128
-  
+
   sink_mode = "never"
 }

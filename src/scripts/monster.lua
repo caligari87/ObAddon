@@ -55,7 +55,7 @@ end
 
 
 function Monster_prepare()
- 
+
   ---| Monster_prepare |---
 
   Monster_init()
@@ -268,7 +268,7 @@ function Monster_pacing()
     end
   end
 
-  
+
   ---| Monster_pacing |---
 
   collect_rooms()
@@ -489,7 +489,7 @@ function Monster_zone_palettes()
 
     assert(not table.empty(pal))
 
-    return pal 
+    return pal
   end
 
 
@@ -857,9 +857,9 @@ function Monster_fill_room(R)
     local qty
 
     if OB_CONFIG.mons == "mixed" then
-	  if OB_CONFIG.mix_it_up_lower_range == OB_CONFIG.mix_it_up_upper_range then
-	    error("Please pick different values for the Mix It Up range options, or don't use Mix It Up at all.")
-	  end
+      if OB_CONFIG.mix_it_up_lower_range == OB_CONFIG.mix_it_up_upper_range then
+        error("Please pick different values for the Mix It Up range options, or don't use Mix It Up at all.")
+      end
       qty = rand.range(MONSTER_QUANTITIES[OB_CONFIG.mix_it_up_lower_range], MONSTER_QUANTITIES[OB_CONFIG.mix_it_up_upper_range])
     else
       qty = MONSTER_QUANTITIES[OB_CONFIG.mons]
@@ -1583,7 +1583,7 @@ function Monster_fill_room(R)
 
           spot.find_cost = dist * 1.8
         end
-      end 
+      end
 
       -- tie breeker
       spot.find_cost = spot.find_cost + gui.random()
@@ -2250,7 +2250,7 @@ function Monster_make_battles()
 
   each R in LEVEL.rooms do
     Player_give_room_stuff(R)
-    
+
     Monster_collect_big_spots(R)
     Monster_visibility(R)
     Monster_fill_room(R)

@@ -1057,7 +1057,7 @@ function Edge_new(kind, S, dir, long)
       print("Seed already has an EDGE")
     else
       S.edge[dir] = EDGE
-	end
+    end
 
     S = S:neighbor(geom.RIGHT[dir])
   end

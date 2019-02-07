@@ -10,7 +10,7 @@ PREFABS.Wall_raised_comp =
   prob   = 15
   env   = "building"
   theme = "tech"
-  
+
   where  = "edge"
   height = 128
   long   = 128
@@ -20,7 +20,7 @@ PREFABS.Wall_raised_comp =
   bound_z2 = 128
 
   x_fit = "frame"
-  z_fit = "top" 
+  z_fit = "top"
 }
 
 PREFABS.Wall_grated_thing =
@@ -31,7 +31,7 @@ PREFABS.Wall_grated_thing =
   prob   = 15
   env   = "building"
   theme = "!hell"
-  
+
   where  = "edge"
   height = 128
   long   = 128
@@ -41,7 +41,7 @@ PREFABS.Wall_grated_thing =
   bound_z2 = 128
 
   x_fit = "frame"
-  z_fit = "top" 
+  z_fit = "top"
 }
 
 PREFABS.Wall_inset =
@@ -52,7 +52,7 @@ PREFABS.Wall_inset =
   prob   = 15
   env   = "building"
   theme = "!hell"
-  
+
   where  = "edge"
   height = 128
   long   = 128
@@ -62,7 +62,7 @@ PREFABS.Wall_inset =
   bound_z2 = 128
 
   x_fit = "frame"
-  z_fit = "top" 
+  z_fit = "top"
 }
 
 PREFABS.Wall_vertical_light =
@@ -73,7 +73,7 @@ PREFABS.Wall_vertical_light =
   prob   = 15
   env   = "building"
   theme = "!hell"
-  
+
   where  = "edge"
   height = 128
   long   = 128
@@ -83,7 +83,7 @@ PREFABS.Wall_vertical_light =
   bound_z2 = 128
 
   x_fit = "frame"
-  z_fit = "top" 
+  z_fit = "top"
 }
 
 PREFABS.Wall_vertical_double_light =
@@ -94,7 +94,7 @@ PREFABS.Wall_vertical_double_light =
   prob   = 15
   env   = "building"
   theme = "!hell"
-  
+
   where  = "edge"
   height = 128
   long   = 128
@@ -104,7 +104,7 @@ PREFABS.Wall_vertical_double_light =
   bound_z2 = 128
 
   x_fit = "frame"
-  z_fit = "top" 
+  z_fit = "top"
 }
 
 PREFABS.Wall_triple_vertical_outset =
@@ -115,7 +115,7 @@ PREFABS.Wall_triple_vertical_outset =
   prob   = 15
   env   = "building"
   theme = "tech"
-  
+
   where  = "edge"
   height = 128
   long   = 128
@@ -136,10 +136,10 @@ PREFABS.Wall_adorned_diag =
   prob   = 50
   theme = "tech"
   env   = "building"
-  
+
   where  = "diagonal"
   height = 128
-  
+
   bound_z1 = 0
   bound_z2 = 128
 
@@ -154,7 +154,7 @@ PREFABS.Wall_flat_accent =
   prob   = 15
   theme = "tech"
   env   = "building"
-  
+
   where  = "edge"
   height = 128
   long   = 128
@@ -164,9 +164,9 @@ PREFABS.Wall_flat_accent =
   bound_z2 = 128
 
   x_fit = "frame"
-  z_fit = "top" 
+  z_fit = "top"
 }
-  
+
   PREFABS.Wall_caged_pipes =
 {
   file   = "wall/gtd_wall.wad"
@@ -175,7 +175,7 @@ PREFABS.Wall_flat_accent =
   prob   = 15
   theme = "tech"
   env   = "building"
-  
+
   where  = "edge"
   height = 128
   long   = 128
@@ -185,5 +185,5 @@ PREFABS.Wall_flat_accent =
   bound_z2 = 128
 
   x_fit = "frame"
-  z_fit = "top" 
+  z_fit = "top"
 }

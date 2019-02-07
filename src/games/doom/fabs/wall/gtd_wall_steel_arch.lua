@@ -6,7 +6,7 @@ PREFABS.Wall_hell_thin_vaulted_outdoor =
   prob   = 50
   env   = "!building"
   theme = "!tech"
-  
+
   where  = "edge"
   height = 128
   long   = 128

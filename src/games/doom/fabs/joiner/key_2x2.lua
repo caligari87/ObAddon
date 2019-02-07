@@ -120,7 +120,7 @@ PREFABS.Locked_2x2_red_urban =
   tex_STONE = "WOOD1"
   flat_CEIL3_3 = "RROCK09"
   tex_BRICK4   = "TANROCK3"
-  
+
 }
 
 PREFABS.Locked_2x2_blue_urban =

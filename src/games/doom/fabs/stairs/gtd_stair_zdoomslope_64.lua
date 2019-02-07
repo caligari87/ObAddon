@@ -5,7 +5,7 @@ PREFABS.Stair_slope =
 
   prob   = 75
   style  = "steepness"
-  
+
   engine = "zdoom"
 
   where  = "seeds"
@@ -24,17 +24,17 @@ PREFABS.Stair_slope =
 PREFABS.Stair_slope_2 =
 {
   template = "Stair_slope"
-  
+
   map = "MAP02"
-  
+
   seed_h = 2
 }
 
 PREFABS.Stair_slope_3 =
 {
   template = "Stair_slope"
-  
+
   map = "MAP03"
-  
+
   seed_h = 3
 }

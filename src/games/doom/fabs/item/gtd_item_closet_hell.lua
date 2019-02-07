@@ -2,7 +2,7 @@ PREFABS.Item_closet_guts =
 {
   file   = "item/gtd_item_closet_hell.wad"
   map    = "MAP01"
-  
+
   prob   = 100
   theme  = "hell"
   env    = "!cave"
