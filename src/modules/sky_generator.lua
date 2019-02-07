@@ -37,7 +37,7 @@ SKY_GEN.HILL_PARAMS =
   "hp_random", _("Random"),
   "hp_hilly", _("Hills"),
   "hp_mountainous", _("Mountainous"),
-  "hp_cavernous", _("Cavernous"),  
+  "hp_cavernous", _("Cavernous"),
 }
 
 SKY_GEN.colormaps =
@@ -305,7 +305,7 @@ SKY_GEN.themes =
       DARKBROWN_HILLS = 20
     }
   }
-  
+
   psycho =
   {
     clouds =
@@ -334,7 +334,7 @@ SKY_GEN.themes =
     }
 
     -- no dark_hills
-  }  
+  }
 }
 
 function SKY_GEN.setup(self)
@@ -387,17 +387,17 @@ function SKY_GEN.generate_skies()
     assert(_index <= #theme_list)
 
     local seed = int(gui.random() * 1000000)
-    
-	local is_starry = (_index == starry_ep) or rand.odds(2)
-	
+
+    local is_starry = (_index == starry_ep) or rand.odds(2)
+
     if PARAM.force_sky == "sky_day" then
-	  is_starry = false
-	elseif PARAM.force_sky == "sky_night" then
-	  is_starry = true
-	end
-	
-	gui.printf("Forced sky: " .. PARAM.force_sky .. "\n")
-	
+      is_starry = false
+    elseif PARAM.force_sky == "sky_night" then
+      is_starry = true
+    end
+
+    gui.printf("Forced sky: " .. PARAM.force_sky .. "\n")
+
     local is_nebula = is_starry and rand.odds(60)
 
     -- only rarely combine stars + nebula + hills
@@ -412,10 +412,10 @@ function SKY_GEN.generate_skies()
       else
         theme_name = "urban"
       end
-	  
+
     elseif OB_CONFIG.theme == "psycho" then
       theme_name = "psycho"
-	  
+
     end
 
     local theme = all_themes[theme_name]
@@ -436,7 +436,7 @@ function SKY_GEN.generate_skies()
 
 
     --- Clouds ---
-	
+
     if not is_starry or is_nebula then
 
       local name
@@ -492,11 +492,11 @@ function SKY_GEN.generate_skies()
 
     --- Hills ---
     if PARAM.force_hills == "hs_none" then
-	   is_hilly = false
-	elseif PARAM.force_hills == "hs_always" then
-	   is_hilly = true
-	end
-	
+       is_hilly = false
+    elseif PARAM.force_hills == "hs_always" then
+       is_hilly = true
+    end
+
     if is_hilly then
 
       local name = rand.key_by_probs(hill_tab)
@@ -521,27 +521,27 @@ function SKY_GEN.generate_skies()
 
       info.frac_dim = rand.pick({1.4, 1.65, 1.8, 1.9 })
 
-	  if PARAM.force_hill_params == "hp_hilly" then
+      if PARAM.force_hill_params == "hp_hilly" then
         info.max_h = rand.pick({0.5, 0.55, 0.6, 0.65 })
       elseif PARAM.force_hill_params == "hp_mountainous" then
-	    info.max_h = rand.pick({.7, 0.75, 0.8, 0.85})
-	  elseif PARAM.force_hill_params == "hp_cavernous" then
-	    info.max_h = rand.pick({0.9, 1, 1.1, 1.2, 1.3})
-	    info.min_h = rand.pick({0, 0.1, 0.2, 0.3, 0.4, 0.5})
-	  end
-	  
+        info.max_h = rand.pick({.7, 0.75, 0.8, 0.85})
+      elseif PARAM.force_hill_params == "hp_cavernous" then
+        info.max_h = rand.pick({0.9, 1, 1.1, 1.2, 1.3})
+        info.min_h = rand.pick({0, 0.1, 0.2, 0.3, 0.4, 0.5})
+      end
+
       -- sometimes make more pointy mountains
       if rand.odds(50) then
         info.power = 3.1
         info.max_h = info.max_h + 0.1
         info.min_h = info.min_h + 0.3
       end
-	  
+
 
       gui.set_colormap(2, colormap)
       gui.fsky_add_hills(info)
     end
-	
+
     gui.fsky_write(EPI.sky_patch)
 
     if EPI.sky_patch2 then gui.fsky_write(EPI.sky_patch2) end
@@ -569,28 +569,28 @@ OB_MODULES["sky_generator"] =
     setup = SKY_GEN.setup
     get_levels = SKY_GEN.generate_skies
   }
-  
+
   options =
   {
-	force_sky = 
-	{ 
-	  label=_("Day/Night State")
-	  choices=SKY_GEN.SKY_CHOICES
-	  tooltip = "This forces the sky background (behind the hills and clouds) to either be night or day."
-	}
-	
-	force_hills = 
-	{ 
-	  label=_("Terrain Foreground")
-	  choices=SKY_GEN.HILL_STATE
-	  tooltip = "Influences whether the sky generator should generate terrain in the skybox."
-	}
-	
-	force_hill_params =
-	{
-	  label=_("Terrain Parameters")
-	  choices=SKY_GEN.HILL_PARAMS
-	  tooltip = "Changes the parameters of generated hills, if there are any. 'Cavernous' causes the terrain to nearly fill up most of the sky, making an impression of being inside a cave or crater."
-	}
+    force_sky =
+    {
+      label=_("Day/Night State")
+      choices=SKY_GEN.SKY_CHOICES
+      tooltip = "This forces the sky background (behind the hills and clouds) to either be night or day."
+    }
+
+    force_hills =
+    {
+      label=_("Terrain Foreground")
+      choices=SKY_GEN.HILL_STATE
+      tooltip = "Influences whether the sky generator should generate terrain in the skybox."
+    }
+
+    force_hill_params =
+    {
+      label=_("Terrain Parameters")
+      choices=SKY_GEN.HILL_PARAMS
+      tooltip = "Changes the parameters of generated hills, if there are any. 'Cavernous' causes the terrain to nearly fill up most of the sky, making an impression of being inside a cave or crater."
+    }
   }
 }

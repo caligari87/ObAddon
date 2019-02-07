@@ -454,7 +454,7 @@ DOOM.SINKS =
     trim_dz  = 0
   }
 
--- End new 
+-- End new
 
   -- liquid floor --
 
@@ -1152,10 +1152,10 @@ DOOM.THEMES =
       torches6 = 3
       torches7 = 65
       torches11 = 7
-	  gtd_wall_urban_storage = 25
-	  gtd_wall_tech_windows_topcorner = 25
-	  gtd_wall_server_room = 25
-	  gtd_wall_sewer = 25
+      gtd_wall_urban_storage = 25
+      gtd_wall_tech_windows_topcorner = 25
+      gtd_wall_server_room = 25
+      gtd_wall_sewer = 25
     }
 
     window_groups =
@@ -1167,7 +1167,7 @@ DOOM.THEMES =
       round  = 5
       gtd_window_cage_highbars = 20
       gtd_window_cage_lowbars = 10
-	  gtd_window_full_open = 30
+      gtd_window_full_open = 30
     }
 
     cave_torches =
@@ -1393,8 +1393,8 @@ DOOM.THEMES =
       torches6 = 5
       torches9 = 20 --burning barrel
       torches10 = 3 --skull rock
-	  gtd_wall_urban_storage = 8
-	  gtd_wall_tech_windows_topcorner = 8
+      gtd_wall_urban_storage = 8
+      gtd_wall_tech_windows_topcorner = 8
       gtd_wall_sewer = 10
     }
 
@@ -1407,8 +1407,8 @@ DOOM.THEMES =
       grate  = 40
       gtd_window_cage_highbars = 30
       gtd_window_cage_lowbars = 40
-	  gtd_window_arched = 40
-	  gtd_window_full_open = 75
+      gtd_window_arched = 40
+      gtd_window_full_open = 75
     }
 
     cave_torches =
@@ -1718,9 +1718,9 @@ DOOM.THEMES =
       cross4 = 5
       cross5 = 10
       mid_band_hell = 2
-	  gtd_wall_hell_bloodgutters = 30
-	  gtd_wall_tech_windows_topcorner = 40
-	  gtd_wall_hell_vaults = 40
+      gtd_wall_hell_bloodgutters = 30
+      gtd_wall_tech_windows_topcorner = 40
+      gtd_wall_hell_vaults = 40
     }
 
     window_groups =
@@ -1733,8 +1733,8 @@ DOOM.THEMES =
       gtd_window_cage_highbars = 20
       gtd_window_cage_lowbars = 20
       gtd_window_cage_hell = 50
-	  gtd_window_arched = 80
-	  gtd_window_full_open = 60
+      gtd_window_arched = 80
+      gtd_window_full_open = 60
     }
 
     cave_torches =
@@ -1797,7 +1797,7 @@ DOOM.THEMES =
       red_pillar = 5
       red_column = 5
       red_column_skl = 3
-      
+
     }
 
     style_list =
@@ -2877,11 +2877,11 @@ DOOM.ROOM_THEMES =
       BRICK5  = 40
       BRICK6  = 40
       BRICK7  = 40
-      
+
       BRICK2  = 20
       BRICK8  = 20
       BRICK1  = 10
-      BRICK9  = 10     
+      BRICK9  = 10
     }
 
     floors =

@@ -58,7 +58,7 @@ DOOM.MONSTERS =
   {
     id = 3004
     r = 20
-    h = 56 
+    h = 56
     level = 1
     prob = 50
     health = 20
@@ -78,7 +78,7 @@ DOOM.MONSTERS =
   {
     id = 9
     r = 20
-    h = 56 
+    h = 56
     level = 1.7
     prob = 90
     health = 30
@@ -101,7 +101,7 @@ DOOM.MONSTERS =
   {
     id = 3001
     r = 20
-    h = 56 
+    h = 56
     level = 1
     prob = 140
     health = 60
@@ -118,7 +118,7 @@ DOOM.MONSTERS =
   {
     id = 3006
     r = 16
-    h = 56 
+    h = 56
     level = 2
     prob = 25
     health = 100
@@ -138,7 +138,7 @@ DOOM.MONSTERS =
   {
     id = 3002
     r = 30
-    h = 56 
+    h = 56
     level = 1.75 --2
     prob = 50
     health = 150
@@ -155,7 +155,7 @@ DOOM.MONSTERS =
   {
     id = 58
     r = 30
-    h = 56 
+    h = 56
     level = 1.75 --2.8
     replaces = "demon"
     replace_prob = 35
@@ -178,7 +178,7 @@ DOOM.MONSTERS =
   {
     id = 3005
     r = 31
-    h = 56 
+    h = 56
     level = 3.8 --3
     prob = 30
     health = 400
@@ -202,7 +202,7 @@ DOOM.MONSTERS =
   {
     id = 3003
     r = 24
-    h = 64 
+    h = 64
     level = 6
     boss_type = "minor"
     boss_prob = 50
@@ -269,7 +269,7 @@ DOOM.MONSTERS =
   {
     id = 65
     r = 20
-    h = 56 
+    h = 56
     level = 3
     prob = 60
     health = 70
@@ -293,7 +293,7 @@ DOOM.MONSTERS =
   {
     id = 66
     r = 20
-    h = 64 
+    h = 64
     level = 4.6
     prob = 28
     health = 300
@@ -313,7 +313,7 @@ DOOM.MONSTERS =
   {
     id = 69
     r = 24
-    h = 64 
+    h = 64
     level = 5 --4
     prob = 26
     health = 500
@@ -333,7 +333,7 @@ DOOM.MONSTERS =
   {
     id = 67
     r = 48
-    h = 64 
+    h = 64
     level = 5.5 --4.3
     prob = 20
     health = 600
@@ -353,7 +353,7 @@ DOOM.MONSTERS =
   {
     id = 68
     r = 64
-    h = 64 
+    h = 64
     level = 5
     prob = 12
     health = 500
@@ -372,7 +372,7 @@ DOOM.MONSTERS =
   {
     id = 64
     r = 20
-    h = 56 
+    h = 56
     level = 8 --6.5
     boss_type = "nasty"
     boss_prob = 50
@@ -393,7 +393,7 @@ DOOM.MONSTERS =
   {
     id = 71
     r = 31
-    h = 56 
+    h = 56
     level = 5.5
     boss_type = "nasty"
     boss_prob = 15
@@ -417,7 +417,7 @@ DOOM.MONSTERS =
   {
     id = 84
     r = 20
-    h = 56 
+    h = 56
     level = 1
     prob  = 0
     crazy_prob = 0

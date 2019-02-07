@@ -165,7 +165,7 @@ function DOOM.get_levels()
     --Not called "The Chasm" for nothing, right?
     if map == 24 then
       LEV.style_list = { steepness = { heaps=100 } }
-    end												
+    end
     -- the 'dist_to_end' value is used for Boss monster decisions
     if map >= 26 and map <= 29 then
       LEV.dist_to_end = 30 - map
@@ -178,9 +178,9 @@ function DOOM.get_levels()
     -- prebuilt levels
     local pb_name = LEV.name
 
-	if OB_CONFIG.prebuilt_levels == "yes" then
+    if OB_CONFIG.prebuilt_levels == "yes" then
       LEV.prebuilt = GAME.PREBUILT_LEVELS[pb_name]
-	end
+    end
 
     if LEV.prebuilt then
       LEV.name_class = LEV.prebuilt.name_class or "BOSS"

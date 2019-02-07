@@ -21,7 +21,7 @@ PREFABS.Joiner_simple_sloped =
 
   deep   = 16
   over   = 16
-  
+
   bound_z1 = -8
 
   x_fit = { 128-4,128+4 }

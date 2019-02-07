@@ -163,24 +163,24 @@ function Fab_load_all_definitions()
 
 
   local function calc_prob(def)
-  	-- attachment for the prefab control module
+      -- attachment for the prefab control module
 
-	if PARAM["wall_prob"] == "fab_some" then
-	  fab_demultiplier = 100
-	elseif PARAM["wall_prob"] == "fab_less" then
-	  fab_demultiplier = 500
-	elseif PARAM["wall_prob"] == "fab_few" then
-	  fab_demultiplier = 1000
-	elseif PARAM["wall_prob"] == "fab_rare" then
-	  fab_demultiplier = 5000
-	elseif PARAM["wall_prob"] == "fab_random" then
-	  fab_demultiplier = rand.pick({ 50, 100, 500, 1000, 5000 })
-	else
-	  fab_demultiplier = 50
-	end
-	
-	PREFABS["Wall_plain"].prob = fab_demultiplier
-	PREFABS["Wall_plain_diag"].prob = fab_demultiplier
+    if PARAM["wall_prob"] == "fab_some" then
+      fab_demultiplier = 100
+    elseif PARAM["wall_prob"] == "fab_less" then
+      fab_demultiplier = 500
+    elseif PARAM["wall_prob"] == "fab_few" then
+      fab_demultiplier = 1000
+    elseif PARAM["wall_prob"] == "fab_rare" then
+      fab_demultiplier = 5000
+    elseif PARAM["wall_prob"] == "fab_random" then
+      fab_demultiplier = rand.pick({ 50, 100, 500, 1000, 5000 })
+    else
+      fab_demultiplier = 50
+    end
+
+    PREFABS["Wall_plain"].prob = fab_demultiplier
+    PREFABS["Wall_plain_diag"].prob = fab_demultiplier
     if def.skip_prob then
       if rand.odds(def.skip_prob) then return 0 end
     end
@@ -233,7 +233,7 @@ function Fab_expansion_groups(list, axis_name, fit_size, pf_size, map, file)
   -- nothing needed if the size is the same
   if math.abs(extra) < 1 then return nil end
 
-  
+
   if extra < 0 then
     error("Prefab does not fit! (on " .. axis_name .. " axis) Culprit: " .. map .. " from " .. file .. ". Required: " .. fit_size .. " Prefab has: " .. pf_size)
   end
@@ -496,7 +496,7 @@ function Fab_transform_XY(fab, T)
     end
   end
 
-  
+
   ---| Fab_transform_XY |---
 
   assert(fab.state == "skinned")
@@ -510,8 +510,8 @@ function Fab_transform_XY(fab, T)
   --- X ---
 
   if fab.x_fit or T.fitted_x then
-    if not T.fitted_x then    
-	  error("Fitted prefab used without fitted X transform Culprit: " .. fab.map .. " from " .. fab.file)
+    if not T.fitted_x then
+      error("Fitted prefab used without fitted X transform Culprit: " .. fab.map .. " from " .. fab.file)
 
     elseif T.scale_x then
       error("Fitted transform used with scale_x Culprit: " .. fab.map .. " from " .. fab.file)
@@ -587,7 +587,7 @@ function Fab_transform_Z(fab, T)
     end
   end
 
-  
+
   local function entity_z(E)
     if E.z then
       E.z = Trans.apply_z(E.z)
@@ -623,7 +623,7 @@ function Fab_transform_Z(fab, T)
     end
   end
 
-  
+
   ---| Fab_transform_Z |---
 
   assert(fab.state == "transform_xy")
@@ -695,13 +695,13 @@ function Fab_render(fab)
 
   fab.state = "rendered"
   local fab_map
-  
+
   if fab.map then
     fab_map = fab.map
   else
     fab_map = "object"
   end
-  
+
   if fab.where == "point" or fab.where == "seeds" then
     gui.printf("Adding " .. fab.name .. " from " .. fab_map .. " in " .. fab.file .. "\n")
   end
@@ -904,7 +904,7 @@ end
 function Fab_parse_edges__OLD(skin)
   --| convert the 'north', 'east' (etc) fields of a skin into
   --| a list of portals in a 2D array.
-  
+
   if skin._seed_map then return end
 
   -- create the seed map
@@ -1205,7 +1205,7 @@ function Fab_load_wad(def)
 
 
   local function create_brush(S, coords, pass)
-    
+
     -- pass: 1 = create a floor brush (or solid wall)
     --       2 = create a ceiling brush
 
@@ -2228,7 +2228,7 @@ function Fab_find_matches(reqs, match_state)
     return factor
   end
 
-  
+
   local function prob_for_match(def, match_state)
     local prob = assert(def.use_prob)
 
@@ -2258,7 +2258,7 @@ function Fab_find_matches(reqs, match_state)
     if prob > 0 then
       -- Ok, add it
       -- a higher rank overrides anything lower
-      
+
       if (def.rank or 0) > match_state.rank then
         match_state.rank = def.rank
         tab = {}

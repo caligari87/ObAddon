@@ -15,6 +15,6 @@ PREFABS.Decor_lifted_crate =
   bound_z2 = 128
 
   z_fit = { 16,24 }
-  
+
   sink_mode = "never"
 }

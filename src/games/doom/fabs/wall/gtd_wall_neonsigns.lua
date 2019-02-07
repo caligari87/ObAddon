@@ -6,7 +6,7 @@ PREFABS.Wall_urban_neon_sign =
   prob   = 8
   env    = "!building"
   theme  = "urban"
-  
+
   where  = "edge"
   height = 128
   long   = 128
@@ -16,7 +16,7 @@ PREFABS.Wall_urban_neon_sign =
   bound_z2 = 128
 
   sector_1  = { [0]=50, [1]=20, [8]=7 }
-  
+
   x_fit  = "frame"
   z_fit  = "bottom"
 }
@@ -27,13 +27,13 @@ PREFABS.Wall_urban_neon_sign_id =
   map    = "MAP04"
 
   prob   = 15
-  
+
   deep   = 80
-  
-  tex_O_RELIEF = 
+
+  tex_O_RELIEF =
   {
     CEMENT2 = 50
-	CEMENT4 = 50
+    CEMENT4 = 50
   }
 }
 
@@ -46,6 +46,6 @@ PREFABS.Wall_urban_neon_sign_huge =
 
   deep   = 144
   height = 192
-  
+
   bound_z2 = 192
 }

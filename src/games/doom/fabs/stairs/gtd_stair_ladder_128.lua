@@ -17,7 +17,7 @@ PREFABS.Ladder_128_rustic =
 
   delta_h = 128
   plain_ceiling = true
-  
+
   tex_STEPLAD1 = {STEPLAD1=50, STEP1=50, STEP3=50}
 }
 
@@ -25,9 +25,9 @@ PREFABS.Ladder_128_techy =
 {
   template = "Ladder_128_rustic"
   prob = 25
-  
+
   theme = "!hell"
-  
+
   tex_STEPLAD1 = "STEP4"
   tex_METAL = "SILVER1"
   tex_SUPPORT3 = {SUPPORT2=50, LITEBLU1=50, SUPPORT3=50}
@@ -37,9 +37,9 @@ PREFABS.Ladder_128_techy =
 PREFABS.Ladder_128_woody =
 {
   template = "Ladder_128_rustic"
-  
+
   theme = "!tech"
-  
+
   tex_STEPLAD1 = {STEP2=50, STEP6=50, STEP3=50}
   tex_METAL = "WOOD8"
   tex_SUPPORT3 = "WOOD8"
@@ -49,23 +49,23 @@ PREFABS.Ladder_128_woody =
 PREFABS.Ladder_128_rustic_2x =
 {
   template = "Ladder_128_rustic"
-  
+
   map = "MAP02"
-  
+
   seed_h = 2
 }
 
 PREFABS.Ladder_128_techy_2x =
 {
   template = "Ladder_128_rustic"
-  
+
   map = "MAP02"
-  prob = 25  
+  prob = 25
 
   seed_h = 2
-  
+
   theme = "!hell"
-  
+
   tex_STEPLAD1 = "STEP4"
   tex_METAL = "SILVER1"
   tex_SUPPORT3 = {SUPPORT2=50, LITEBLU1=50, SUPPORT3=50}
@@ -75,13 +75,13 @@ PREFABS.Ladder_128_techy_2x =
 PREFABS.Ladder_128_woody_2x =
 {
   template = "Ladder_128_rustic"
-  
+
   map = "MAP02"
-  
+
   seed_h = 2
-  
+
   theme = "!tech"
-  
+
   tex_STEPLAD1 = {STEP2=50, STEP6=50, STEP3=50}
   tex_METAL = "WOOD8"
   tex_SUPPORT3 = "WOOD8"
@@ -92,28 +92,28 @@ PREFABS.Ladder_thin =
 {
   file = "stairs/gtd_stair_ladder_128.wad"
   map = "MAP03"
-  
+
   prob = 40 --60
   style = "steepness"
-  
+
   where  = "seeds"
   shape  = "I"
-  
+
   seed_w = 1
-  
+
   x_fit = "frame"
-  
+
   bound_z1 = 0
-  
+
   delta_h = 128
   plain_ceiling = true
-  
+
   tex_STEPLAD1 =
   {
     STEPLAD1 = 50
-	STEP1 = 25
-	STEP3 = 25
-	STEPTOP = 50
+    STEP1 = 25
+    STEP3 = 25
+    STEPTOP = 50
   }
 }
 
@@ -121,6 +121,6 @@ PREFABS.Ladder_thin_2x =
 {
   template = "Ladder_thin"
   map = "MAP04"
-  
+
   seed_h = 2
 }

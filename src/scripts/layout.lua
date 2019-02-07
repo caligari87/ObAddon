@@ -898,51 +898,51 @@ function Layout_add_traps()
 
       local is_same = (info.room == R)
 
-	  --selecting between closets or teleports strictly
-	  
+      --selecting between closets or teleports strictly
+
       if closet_dice(info.room, is_same) then
-	    if OB_CONFIG.trap_style == "closets" or OB_CONFIG.trap_style == "default" then
+        if OB_CONFIG.trap_style == "closets" or OB_CONFIG.trap_style == "default" then
           closet_locs = locs_for_room(info.room, "closet")
-		end
+        end
       end
 
       if teleport_dice(info.room, is_same) then
-	    if OB_CONFIG.trap_style == "teleports" or OB_CONFIG.trap_style == "default" then
+        if OB_CONFIG.trap_style == "teleports" or OB_CONFIG.trap_style == "default" then
           telep_locs = locs_for_room(info.room, "teleport")
-		end
+        end
       end
-	  
-	  
-	  
-	  --selecting based on ratio
-	  
-	  local total_prob = rand.range(0,100)
-	  local closet_prob
-	  
-	  if OB_CONFIG.trap_style == "20" then
-	    closet_prob = 20
-	  elseif OB_CONFIG.trap_style == "40" then
-	    closet_prob = 40
-	  elseif OB_CONFIG.trap_style == "60" then
-	    closet_prob = 60
-	  elseif OB_CONFIG.trap_style == "80" then
-	    closet_prob = 80
-	  end
-	  
-	  if OB_CONFIG.trap_style == "20" then
-	    if closet_prob <= total_prob then
-		  if closet_dice(info.room, is_same) then
-		    closet_locs = locs_for_room(info.room, "closet")
-		  end
-		else
-		  if teleport_dice(info.room, is_same) then
-		    telep_locs = locs_for_room(info.room, "teleport")
-		  end
-		end
-	  end
 
-		
-		
+
+
+      --selecting based on ratio
+
+      local total_prob = rand.range(0,100)
+      local closet_prob
+
+      if OB_CONFIG.trap_style == "20" then
+        closet_prob = 20
+      elseif OB_CONFIG.trap_style == "40" then
+        closet_prob = 40
+      elseif OB_CONFIG.trap_style == "60" then
+        closet_prob = 60
+      elseif OB_CONFIG.trap_style == "80" then
+        closet_prob = 80
+      end
+
+      if OB_CONFIG.trap_style == "20" then
+        if closet_prob <= total_prob then
+          if closet_dice(info.room, is_same) then
+            closet_locs = locs_for_room(info.room, "closet")
+          end
+        else
+          if teleport_dice(info.room, is_same) then
+            telep_locs = locs_for_room(info.room, "teleport")
+          end
+        end
+      end
+
+
+
       -- break ties
       -- [ but in caves, prefer teleporting in ]
       if closet_locs and telep_locs then
@@ -1261,7 +1261,7 @@ end
 
 
 function Layout_decorate_rooms(pass)
-  -- 
+  --
   -- Decorate the rooms with crates, pillars, etc....
   --
   -- The 'pass' parameter is 1 for early pass, 2 for later pass.
@@ -1361,7 +1361,7 @@ function Layout_decorate_rooms(pass)
 
   local function try_intraroom_lock(R)
     -- try to lock an unlocked exit and place switch for it
-    
+
     if R.is_start then return end
     if R.is_exit  then return end
 
@@ -1615,7 +1615,7 @@ function Layout_decorate_rooms(pass)
   local function switch_up_room(R)
     -- locking exits and items
 
-    if THEME.no_switches then return end										
+    if THEME.no_switches then return end
     local switch_prob = style_sel("switches", 0, 20, 40, 80)
 
     for loop = 1, 2 do
@@ -2240,7 +2240,7 @@ function Layout_handle_corners()
     local corner = Corner_lookup(cx, cy)
 
     check_need_fencepost(corner)
-  end									 
+  end
   ---| Layout_handle_corners |---
 
   for cx = 1, SEED_W + 1 do

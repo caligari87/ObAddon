@@ -2,7 +2,7 @@ PREFABS.Item_closet_simple1 =
 {
   file   = "item/gtd_item_closet_simple.wad"
   map    = "MAP01"
-  
+
   prob   = 100
   theme  = "!hell"
   env    = "!cave"
@@ -24,7 +24,7 @@ PREFABS.Item_closet_simple2 =
 {
   file   = "item/gtd_item_closet_simple.wad"
   map    = "MAP02"
-  
+
   prob   = 100
   theme  = "!hell"
   env    = "!cave"
@@ -45,7 +45,7 @@ PREFABS.Item_closet_simple3 =
 {
   file   = "item/gtd_item_closet_simple.wad"
   map    = "MAP03"
-  
+
   prob   = 100
   theme  = "!hell"
   env    = "!cave"

@@ -6,20 +6,20 @@ PREFABS.Pic_bookstore =
 
   prob   = 25 --35
   theme = "urban"
-  
+
   where  = "seeds"
   height = 128
   long   = 128
-  
+
   seed_w = 2
   seed_h = 1
-  
+
   bound_z1 = 0
   bound_z2 = 128
 
   deep   =  16
   over   = -16
-  
+
   x_fit = "frame"
   y_fit = "top"
 }
@@ -31,20 +31,20 @@ PREFABS.Pic_lounge =
 
   prob   = 25 --35
   theme = "urban"
-  
+
   where  = "seeds"
   height = 128
   long   = 128
-  
+
   seed_w = 3
   seed_h = 1
-  
+
   bound_z1 = 0
   bound_z2 = 128
 
   deep   =  16
   over   = -16
-  
+
   x_fit = "frame"
   y_fit = "top"
 }
@@ -56,20 +56,20 @@ PREFABS.Pic_fresh_produce_grocery =
 
   prob   = 25 --35
   theme = "urban"
-  
+
   where  = "seeds"
   height = 128
   long   = 128
-  
+
   seed_w = 3
   seed_h = 1
-  
+
   bound_z1 = 0
   bound_z2 = 128
 
   deep   =  16
   over   = -16
-  
+
   x_fit = "frame"
   y_fit = "top"
 }
@@ -81,20 +81,20 @@ PREFABS.Pic_bank =
 
   prob   = 25 --35
   theme = "urban"
-  
+
   where  = "seeds"
   height = 128
   long   = 128
-  
+
   seed_w = 2
   seed_h = 1
-  
+
   bound_z1 = 0
   bound_z2 = 128
 
   deep   =  16
   over   = -16
-  
+
   x_fit = "frame"
   y_fit = "top"
 }

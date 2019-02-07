@@ -47,7 +47,7 @@ PREFABS.Decor_guardhouse =
   bound_z2 = 128
 
   z_fit = "top"
-  
+
   sink_mode = "never"
 }
 
@@ -68,19 +68,19 @@ PREFABS.Decor_marquee_sign =
   bound_z2 = 160
 
   z_fit = "top"
-  
+
   sink_mode = "never"
 
-  tex_SHAWN1 = 
+  tex_SHAWN1 =
   {
     SHAWN1   = 50
     MARBFACE = 16
     MARBFAC2 = 16
     MARBFAC3 = 16
-	O_NEON   = 50
-	O_CARVED = 50
-	O_PILL   = 50
-	O_RELIEF = 50
+    O_NEON   = 50
+    O_CARVED = 50
+    O_PILL   = 50
+    O_RELIEF = 50
   }
 
 }

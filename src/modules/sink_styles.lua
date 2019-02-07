@@ -32,16 +32,16 @@ OB_MODULES["sink_style"] =
   {
     setup = SINK_STYLE.setup
   }
-  
+
   options =
   {
-	corner_style = 
-	{ 
-	  name = "corner_style"
-	  label=_("Corner Style")
-	  choices=SINK_STYLE.CHOICES
-	  tooltip = "Determines the corner style Oblige uses when rendering sunken ceilings and floors. Default is Curved, where Oblige makes sink corners soft, while Sharp leaves the corners angular."
-	  default = "sink_style_curve"
-	}
+    corner_style =
+    {
+      name = "corner_style"
+      label=_("Corner Style")
+      choices=SINK_STYLE.CHOICES
+      tooltip = "Determines the corner style Oblige uses when rendering sunken ceilings and floors. Default is Curved, where Oblige makes sink corners soft, while Sharp leaves the corners angular."
+      default = "sink_style_curve"
+    }
   }
 }

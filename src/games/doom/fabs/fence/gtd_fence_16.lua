@@ -6,10 +6,10 @@
 -- {
   -- file   = "fence/gtd_fence_16.wad"
   -- map    = "MAP01"
-	
+
   -- prob   = 50
   -- theme  = "tech"
-  
+
   -- where  = "edge"
 
   -- long   = 128

@@ -4373,20 +4373,20 @@ function Cave_prepare_scenic_vista(area)
   local room = assert(area.face_room)
 
   -- decide what kind of vista to make
-  
-  local vista_type  
+
+  local vista_type
 
   if OB_CONFIG.engine == "zdoom" or OB_CONFIG.engine == "gzdoom" and OB_CONFIG.zdoom_vista == "enable" then
     vista_type = rand.pick({"simple_fence","watery_drop","bottomless_drop"})
   else
     vista_type = rand.pick({"simple_fence","watery_drop"})
   end
-  
+
   -- force bottomless pits
   if OB_CONFIG.zdoom_vista == "debug" then
     vista_type = "bottomless_drop"
   end
-  
+
   if room.has_hills or not LEVEL.liquid or vista_type == "simple_fence" then
     area.border_type = "simple_fence"
   elseif vista_type == "watery_drop" then
@@ -4511,7 +4511,7 @@ function Cave_build_a_scenic_vista(area)
     local FL = new_blob()
 
     FL.floor_h = (room.max_floor_h or room.entry_h) + 72
-	
+
     FL.floor_mat = assert(area.zone.fence_mat)
 
     FL.floor_y_offset = 0
@@ -4525,13 +4525,13 @@ function Cave_build_a_scenic_vista(area)
     area.floor_h = FL.floor_h
   end
 
-  
+
   local function make_bottomless_drop()
 
     local FL = new_blob()
 
     FL.floor_h = (room.max_floor_h or room.entry_h) -8192 --+ 72
-	
+
     FL.floor_mat = assert(area.zone.fence_mat)
 
     FL.floor_y_offset = 0
@@ -4544,8 +4544,8 @@ function Cave_build_a_scenic_vista(area)
     -- TEMP RUBBISH
     area.floor_h = FL.floor_h
   end
-  
-  
+
+
 
   local function make_watery_drop()
     --
@@ -4574,7 +4574,7 @@ function Cave_build_a_scenic_vista(area)
 
 
     -- create cliffs in the distance --
-	
+
     local CLIFF  = new_blob()
     local CLIFF2 = new_blob()
     local CLIFF3 = new_blob()
@@ -4610,7 +4610,7 @@ function Cave_build_a_scenic_vista(area)
     area.cliff_FLOOR = CLIFF
 
     --add some scenery objects
-	
+
     if THEME.cliff_trees then
       each id, reg in blob_map.regions do
         local cx, cy = blob_map:random_blob_cell(id)
@@ -4639,8 +4639,8 @@ function Cave_build_a_scenic_vista(area)
     -- TEMP RUBBISH
     area.floor_h = CLIFF.floor_h
 
-	
-	
+
+
     -- NOTE: the railing is setup in Room_border_up()
   end
 
@@ -4660,7 +4660,7 @@ function Cave_build_a_scenic_vista(area)
 
   elseif area.border_type == "watery_drop" then
     make_watery_drop()
-	
+
   elseif area.border_type == "bottomless_drop" then
     make_bottomless_drop()
   else

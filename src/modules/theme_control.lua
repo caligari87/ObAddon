@@ -27,7 +27,7 @@ THEME_CONTROL.CHOICES =
   "hell",   "Hell"
   "wolf",   "Wolfenstein"
   "egypt",  "Egypt (TNT)"
-  "psycho", "Psychedelic"  
+  "psycho", "Psychedelic"
 }
 
 
@@ -97,7 +97,7 @@ THEME_CONTROL.DOOM1_CHOICES =
   "hell",   "Hell"
   "flesh",  "Flesh"
 
-  "psycho", "Psychedelic"  
+  "psycho", "Psychedelic"
 }
 
 
