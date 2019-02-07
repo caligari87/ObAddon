@@ -1,0 +1,29 @@
+Themes
+
+[X] Integrate Frozsoul's Psychedelic theme.
+
+Fabz
+
+[X] Need to fix hell/urban outdoor metal arch wall having incorrect lighting. (make interior sectors shadowed)
+[ ] Finish tight switch fabs.
+[X] Wrong texture on opposite side of pillaged shop joiner fab.
+[X] Finish Garrett's hanging framework fab.
+[X] Fix texture issues on 128-height stairs.
+[X] Add monster blocking on all teleporters.
+[X] Neon-ish signs for urban!
+[ ] Try and add new tech windows similar to the bay sky window fab.
+[?] WE COULD ALWAYS USE MOAR FABS. THINK OF MORE FABS PLZ.
+
+Addons
+
+[ ] Build moar 3D skyboxes for the ZDoom Vista feature. Create at least one skybox tied to each map theme.
+[ ] Expand module to include ability to enable or disable 3D skybox, and recommend user to not use generated skybox terrain. (the sky generator generates skies below the horizon anyway, just not the mountains)
+[ ] Add Random setting to the sink styler.
+
+Shapez
+
+[X] Basic large footprint rooms with liquids at the center.
+[X] Procedural growth/expansion of liquid shapes just like the new platform and cliff rules.
+[?] There will be always more shape rules to write, so KEEP THINKING!
+
+[-] Check if old liquid canal shape rules finally work outdoors. --No, still doesn't. Parks are unable to properly process connections and edges against outdoor rooms with liquid borders.

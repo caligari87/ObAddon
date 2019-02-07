@@ -1,0 +1,47 @@
+type = "Doom Builder Map Settings Configuration";
+gameconfig = "ZDoom_DoomDoom.cfg";
+strictpatches = 0;
+
+maps
+{
+	
+	MAP04
+	{
+		defaultfloortexture = "CEIL5_1";
+		overrideceilheight = false;
+		
+		resources
+		{
+		}
+		defaulttoptexture = "DOORTRAK";
+		overridemiddletexture = false;
+		viewpositionx = -123.3259f;
+		viewpositiony = -25.62133f;
+		viewscale = 5.348213f;
+		overridefloortexture = false;
+		customceilheight = 128;
+		customfloorheight = 0;
+		
+		grid
+		{
+			background = "";
+			backoffsetx = 0;
+			backoffsety = 0;
+			backscalex = 100;
+			backscaley = 100;
+			backsource = 0;
+			gridsize = 32f;
+		}
+		defaultceiltexture = "CEIL5_1";
+		overridebrightness = false;
+		uselongtexturenames = false;
+		useresourcesinreadonlymode = false;
+		overridebottomtexture = false;
+		overridefloorheight = false;
+		overridetoptexture = false;
+		custombrightness = 196;
+		overrideceiltexture = false;
+		defaultwalltexture = "DOORTRAK";
+		defaultbottomtexture = "DOORTRAK";
+	}
+}

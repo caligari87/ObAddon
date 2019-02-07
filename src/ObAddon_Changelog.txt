@@ -1,0 +1,212 @@
+2/7/19
+
+- Integrated Glaice's rebalancing of monster quantities and changes to lighting!
+
+- Added new neon sign fabs for urban theme outdoors!
+- Added Glaice's new names for Psychedelic theme maps!
+
+- Fixed an issue caused by bad code merging on prefab.lua
+- Fixed a texture issue with the one of the hell item shelves adopting the sky ceiling when outdoors.
+- Fixed an issue with one of the liquid shapes causing inaccessible ledges... because of a typo.
+- Re-added the old Oblige ad pictures into the urban scrolling marquee fab!
+- Attempted to stop Oblige from causing an error when an edge already exists, and instead continue on. If might fix things, or it might break things.
+
+Affected files:
+
+                scripts/level.lua
+				       /layout.lua
+					   /defs.lua
+					   /ui_mons.lua
+					   /prefab.lua
+					   /seed.lua
+					   /naming.lua
+
+                games/doom/fabs/wall/gtd_wall_neonsigns.wad & .lua
+                               /item/gtd_item_closet_hell.wad
+					           /decor/gtd_decor_urban.wad & .lua
+					
+				     /doom/shapes.lua
+				     /heretic/shapes.lua
+
+=================================================================================================
+
+2/6/19b
+
+- HOTFIX: Tagged some shape rules to not spawn outdoors due to the continuing issue of parks unable to connect to or resolve against outdoor rooms with liquids at the edges.
+
+- Fixed texture issue in one of the hell item shelf fabs.
+
+Affected file: games/doom/shapes.lua
+               games/heretic/shapes.lua    <--- [ Because of load order, Oblige 7.7 actually overrides Doom's shape rules ]
+				                                [ with that of Heretic's. I just end up copying the Heretic version onto  ]
+												[ the Doom folder as insurance.	                                          ]
+
+               games/doom/fabs/item/gtd_item_closet_hell.wad
+												
+2/6/19
+
+- Integrated Glaice's monster rebalancing and damage reduction on deadly liquids!
+
+- Integrated Frozsoul's Psychedelic 7.7 theme!
+
+- Added a crapload of new liquid shape rules including...
+   - Huge new rooms with liquid-pools!
+   - New rules to expand platforms procedurally into these pools!
+   - New rules to decorate existing rooms with liquids and another touches likes pillars on liquids!
+
+- Added Garrett's new 'hanging framework' fab.
+- Added Garrett's new tech point portal fab.
+- Added new hell grouped walls - "vaults".
+
+- Created a more appropriate shadowed outdoor version of the metal arch fab found in Hell and Urban themes.
+- Fixed texture issues on some staircase and joiner prefabs.
+- Added monster blocking to all teleporter fabs due to large monsters often being stuck in them.
+- Adjusted height and textures on the arched windows. They had a tendency to go above the minimum ceiling height.
+- Adjusted probabilities on some window groups, as a debug value as left in one of them.
+
+Affected files:
+                games/doom/monsters.lua
+                          /materials.lua
+
+                          /fabs/decor/garrett_tech_hanging_framework.wad & .lua
+                          /fabs/teleporter/garrett_tech_pad.wad & .lua
+						  
+						  /fabs/window/gtd_window_arch_curved.wad
+						  
+						  /fabs/wall/gtd_wall_hell_vaults.wad & .lua
+						  
+						  /themes.lua
+						  
+			              /fabs/wall/gtd_wall_hell.lua
+						  /fabs/wall/gtd_wall_steel_arch.wad & .lua
+						  
+						  /fabs/joiner/gtd_ruins.wad
+						  
+						  /fabs/stairs/gtd_stair_ladder_128.wad
+						  
+						  /fabs/teleporter/closet2.wad
+						                  /pad1.wad
+						                  /pad2.wad
+						                  /sky_pad.wad
+										  
+		        games/doom/shapes.lua
+		        games/heretic/shapes.lua    <--- [ Because of load order, Oblige 7.7 actually overrides Doom's shape rules ]
+				                                 [ with that of Heretic's. I just end up copying the Heretic version onto  ]
+												 [ the Doom folder as insurance.										   ]    
+                scripts/brush.lua
+                       /defs.lua
+                       /level.lua
+                       /naming.lua
+					   
+                modules/sky_generator.lua
+                       /theme_control.lua				
+
+=================================================================================================
+
+2/5/19
+
+- All of ObAddon has now been refactored into the 7.7 codebase. There should be no effect to this... hopefully.
+- Added an option to disable all prebuilt levels for Doom 1 and Doom 2 games.
+- 3 new hell item shelf prefabs!
+- Expanded upon the Trap Styles module to have pie-ratios between closet traps or teleporter traps. May need more testing.
+
+- Made some tweaks to shapes, especially the cliff building rules.
+
+Affected files: 
+                prefabs/item/gtd_item_closet_hell.wad & .lua
+
+                scripts/layout.lua
+				modules/ui_mons.lua
+				
+				modules/ui_arch.lua
+				games/doom/levels.lua
+				games/doom/x_doom1.lua
+				
+				games/doom/shapes.lua (formerly scripts/rules.lua in pre-7.7)
+				games/heretic/shapes.lua (formerly scripts/rules.lua in pre-7.7)
+
+=================================================================================================
+
+2/4/19
+
+- A new option to allow or disallow monsters to spawn in secret rooms with selection for NONE, yes but at weakened strength, and yes at full typical strength (as per prefered monster properties).
+- Added a 6.20 style 128-height lift!
+- Re-activated and refitted an old unfinished item locker prefab as well as added a new one.
+
+- Normalized the values for some lift prefab spawn probabilities. (increased chances for lift-stairs, but reduced chances for the lift-joiners, especially on lift4)
+- Attempted to revise code for the Trap Styles selector. Instead of intercepting the moment a trap is installed, it intercepts the actual room tagging for trap types instead.
+
+Affected files: scripts/monster.lua
+                modules/ui_mons.lua
+				
+				scripts/layout.lua
+				
+				prefabs/stairs/frozsoul_620_lift_128.wad & .lua
+
+				prefabs/stairs/lift_64.lua
+				prefabs/joiners/lift3.lua
+				prefabs/joiners/lift4.lua
+				prefabs/joiners/lift_curve.lua
+				
+				prefabs/item/gtd_item_lockers.wad & .lua
+				
+				prefabs/joiners/gtd_zigzag_lift.lua
+
+=================================================================================================
+
+2/2/19
+
+- Added an option for Trap Styles, with the ability to choose between monster closet traps or teleporter traps, or default (both).
+- Added a new feature: the ZDoom Vista. If enabled, Oblige will render a custom 3D skybox into the map and allow for bottomless pits to form the map borders, giving the look of being on a rooftop or top of a mountain. Is currently unfinished and features only one 3D skybox prefab.
+
+- Transfered the Layout Absurdifier controls into the main architecture UI instead. The original script module is no longer necessary.
+- Removed the " - Copy" affix from gtd_wall.lua
+- Fixed an issue with a shape rule causing an error when generated outside.
+
+Affected files: [REMOVE]--> modules/layout_absurdifier.lua
+                scripts/grower.lua
+
+				modules/ui_mons.lua
+				scripts/layout.lua
+
+				scripts/cave.lua
+				scripts/render.lua
+				scripts/room.lua
+
+				prefabs/skybox/test_sky.wad & .lua
+
+				scripts/rules.lua
+
+				[RENAME] prefabs/wall/gtd_wall - Copy.lua --> prefabs/wall/gtd_wall.lua
+
+=================================================================================================
+				
+2/1/19
+
+- Added the Layout Absurdifier module! The layout absurdifier module creates a chance for a map to abuse a specific set of shape rules to look completely different and unique i.e. ridiculous amount of staircases, too many 1x1 pools of liquid, cages on every wall, etc.
+
+- Fixed an texturing issue with the new generic 128-height staircase fabs.
+- Outright removed the cage on the diagonal wall lamp fab to fix the cage texture issue.
+- Added make-new-area shape rules for the cliff-making rules. Decreased the probability of shapes with stairs running parallel to cliffs.
+- Added new shape rules for making liquid crossings, where the player has to jump the gap or simply run over a liquid sector. Only set to be available if ZDoom is the selected engine.
+- Removed the 'cage' textures around the hell ceiling lights, as Oblige sometimes misaligns them upon placement.
+
+Affected files: prefabs/stairs/gtd_stairs_128.wad
+                prefabs/walls/garrett_diagonal_lamp.wad
+                prefabs/walls/garrett_diagonal_lamp.lua
+                scripts/rules.lua
+                prefabs/decor/gtd_hell_ceil_light.wad
+				scripts/grower.lua
+				modules/layout_absurdifier.lua
+
+=================================================================================================
+				
+1/31/19
+
+- Expanded monster quantity choices and extended control module for monster quantity Mix It Up.
+- Added new generic 128-height staircase fab.
+
+Affected files: prefabs/stairs/gtd_stairs_128.wad & .lua
+                scripts/monster.lua
+                scripts/defs.lua
+                modules/ui_mons.lua
