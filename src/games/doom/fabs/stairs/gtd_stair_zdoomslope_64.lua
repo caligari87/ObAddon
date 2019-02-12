@@ -6,6 +6,8 @@ PREFABS.Stair_slope =
   prob   = 75
   style  = "steepness"
 
+  env = "!outdoor"
+
   engine = "zdoom"
 
   where  = "seeds"

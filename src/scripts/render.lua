@@ -251,8 +251,8 @@ function Render_edge(E)
 
     local c_brush = brushlib.copy(f_brush)
 
-    table.insert(f_brush, { t=A.floor_h, reachable=true })
-    table.insert(c_brush, { b=A.floor_h + 16, delta_z = -16 })
+    table.insert(f_brush, { t=A.floor_h - 8192, reachable=false })
+    table.insert(c_brush, { b=A.floor_h - 8192 + 16, delta_z = -8192 - 16 })
 
     brushlib.set_mat(f_brush, "_SKY", "_SKY")
     brushlib.set_mat(c_brush, "_SKY", "_SKY")
@@ -2363,7 +2363,7 @@ function Render_all_areas()
   end
 
   if OB_CONFIG.engine == "zdoom" or OB_CONFIG.engine == "gzdoom" then
-    if OB_CONFIG.zdoom_vista == "enable" or OB_CONFIG.zdoom_vista == "debug" then
+    if OB_CONFIG.zdoom_skybox == "enable" then
       Render_skybox()
     end
   end

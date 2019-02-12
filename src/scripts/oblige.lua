@@ -996,6 +996,10 @@ function ob_default_filename()
   str = string.gsub(str, "%p", "")
   str = string.gsub(str, " ", "_")
 
+  local current_date = os.date("*t")
+
+  str = current_date.month .. "-" .. current_date.day .. "-" .. current_date.year .. "-" .. str
+
   return str
 end
 
@@ -1215,14 +1219,13 @@ function ob_build_setup()
 
   Fab_load_all_definitions()
 
-  Grower_preprocess_grammar()
-
   gui.rand_seed(OB_CONFIG.seed + 0)
 
   table.name_up(GAME.THEMES)
   table.name_up(GAME.ROOM_THEMES)
   table.name_up(GAME.ROOMS)
 
+  Grower_preprocess_grammar()
 
   if GAME.sub_format then
     gui.property("sub_format", GAME.sub_format)

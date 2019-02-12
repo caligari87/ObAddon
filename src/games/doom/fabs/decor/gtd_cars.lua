@@ -6,6 +6,8 @@ PREFABS.Decor_sedan =
   prob   = 5000
   theme  = "urban"
 
+  env = "!building"
+
   where  = "point"
   height = 128
   size   = 160
@@ -41,6 +43,8 @@ PREFABS.Decor_minitruck =
 
   prob   = 5000
   theme  = "urban"
+
+  env = "!building"
 
   where  = "point"
   height = 128
