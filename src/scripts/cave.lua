@@ -4375,24 +4375,45 @@ function Cave_prepare_scenic_vista(area)
   -- decide what kind of vista to make
 
   local vista_type
+  local vista_list = {}
 
-  if OB_CONFIG.engine == "zdoom" or OB_CONFIG.engine == "gzdoom" and OB_CONFIG.zdoom_vista == "enable" then
-    vista_type = rand.pick({"simple_fence","watery_drop","bottomless_drop"})
-  else
-    vista_type = rand.pick({"simple_fence","watery_drop"})
+  if (OB_CONFIG.engine == "zdoom" or OB_CONFIG.engine == "gzdoom") and OB_CONFIG.zdoom_vista == "enable" then
+    table.insert(vista_list, "bottomless_drop")
   end
+
+  table.insert(vista_list, "simple_fence")
+
+  if LEVEL.liquid then
+    table.insert(vista_list, "watery_drop")
+    table.insert(vista_list, "ocean")
+  end
+
+  vista_type = rand.pick(vista_list)
 
   -- force bottomless pits
   if OB_CONFIG.zdoom_vista == "debug" then
     vista_type = "bottomless_drop"
   end
 
-  if room.has_hills or not LEVEL.liquid or vista_type == "simple_fence" then
-    area.border_type = "simple_fence"
-  elseif vista_type == "watery_drop" then
+  if (OB_CONFIG.engine == "zdoom" or OB_CONFIG.engine == "gzdoom") and OB_CONFIG.zdoom_vista == "enable" then
+    if style_sel("steepness", 0, 0, 0, 1) == 1 then
+      vista_type = "bottomless_drop"
+    end
+  end
+
+  -- if this level has heaps of liquids, go for oceans always because why not?
+  if style_sel("liquids", 0, 0, 0, 1) == 1 then
+    vista_type = "ocean"
+  end
+
+  if vista_type == "watery_drop" and LEVEL.liquid and not room.has_hills then
     area.border_type = "watery_drop"
-  elseif vista_type == "bottomless_drop" then
+  elseif vista_type == "bottomless_drop" and not room.has_hills then
     area.border_type = "bottomless_drop"
+  elseif vista_type == "ocean" and LEVEL.liquid and not room.has_hills then
+    area.border_type = "ocean"
+  elseif room.has_hills or vista_type == "simple_fence" then
+    area.border_type = "simple_fence"
   end
 end
 
@@ -4546,6 +4567,25 @@ function Cave_build_a_scenic_vista(area)
   end
 
 
+  local function make_ocean()
+
+    local FL = new_blob()
+
+    FL.floor_h = room.min_floor_h - 16
+
+    FL.floor_mat = assert(LEVEL.liquid.mat)
+
+    FL.floor_y_offset = 0
+
+    temp_install_floor(FL)
+
+    area.fence_FLOOR = FL
+
+
+    -- TEMP RUBBISH
+    area.floor_h = FL.floor_h
+  end
+
 
   local function make_watery_drop()
     --
@@ -4663,7 +4703,10 @@ function Cave_build_a_scenic_vista(area)
 
   elseif area.border_type == "bottomless_drop" then
     make_bottomless_drop()
-  else
+
+  elseif area.border_type == "ocean" then
+    make_ocean()
+    else
     error("Unknown border_type: " .. tostring(area.border_type))
   end
 end
@@ -4702,6 +4745,15 @@ function Cave_join_scenic_borders(junc)
       raise_floors(A.fence_FLOOR, B.fence_FLOOR)
     end
 
+    return
+  end
+
+  if A.border_type == "ocean" and B.border_type == "ocean" then
+      lower_floors(A.fence_FLOOR, B.fence_FLOOR)
+    return
+  end
+
+  if A.border_type == "bottomless_drop" and B.border_type == "bottomless_drop" then
     return
   end
 

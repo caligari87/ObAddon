@@ -20,3 +20,11 @@ PREFABS.Exit_tech_immersive_exit =
   sector_1  = { [0]=70, [1]=15 }
 }
 
+PREFABS.Exit_tech_immersive_exit_urban =
+{
+  template = "Exit_tech_immersive_exit"
+
+  map = "MAP02"
+
+  theme = "urban"
+}

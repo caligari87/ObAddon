@@ -1,32 +1,122 @@
+[ /// WARNING: CHANGES MADE BETWEEN 1/17/19 - 1/31/19 WERE NOT PROPERLY DOCUMENTED, SORRY! \\\ ]
+
+- Default filename mode now affixes the current date to the generated WAD filename.
+- Reduced the probability for the immersive start fab. It's probably better to have a control for this rather than use probability.
+
+Affected files:
+                scripts/oblige.lua
+                games/doom/fabs/start/gtd_generic_immersive_start.lua
+
+=================================================================================================
+                
+2/11/19c
+
+- Fixed an issue of the new plain start fab causing a fitting error.
+
+Affected files:
+
+                games/doom/fabs/start/gtd_generic_open_start.lua
+
+2/11/19b
+
+- Fixed an issue with ocean vista surfaces being occasionally higher than the playing area. The ocean vista will now always adapt down to the lowest connected area's floor height.
+- Fixed also an issue of the sky_edge map borders often not being low enough, resulting in a small _DEFAULT texture gap appearing at the edge.
+
+Affected files:
+                scripts/cave.lua
+                scripts/render.lua
+
+2/11/19
+
+- Added a new map border vista type - oceans! Ocean vistas are simply scenic rooms made entirely of the level's liquid, and will not appear if the level doesn't have any.
+- When several bottomless drop vistas are neighboring, they will try to not be separated by walls (same behavior as oceans).
+
+- Added a new immersive start room for urban theme. Hell theme should be next.
+- Added a new plain start fab - literally just a hole in the wall resembling old pre 7.x starts.
+- Fixed an issue with the generic immersive start fab apparently over-writing the one of the custom hell start fabs.
+- Integrated Glaice's texture enhancements on some exit fabs.
+- Disabled ZDoom slope stairs for outdoors, due to the issue of wall overhangs interfering with slope linedefs.
+
+Affected files:
+                games/doom/fabs/exit/closet3.wad
+                               /start/gtd_generic_immersive_start.wad & .lua
+                               /start/gtd_generic_open_start.wad & .lua
+                               /exit/gtd_generic_immersive_exit.wad & .lua
+                               /stairs/gtd_stair_zdoomslope_64.lua
+                
+                scripts/rooms.lua
+                       /layout.lua
+                       /cave.lua
+
+=================================================================================================
+
+2/9/19
+
+- Fixed texture issue with the urban marquee - texture option was wrongly spelt.
+- Shape rules: attempted to fix an issue of one of the platform-making sprout rules having a tendency to block off rooms when Oblige engage symmetry on it? (probably because of lack of symmetry information on the rule itself?) If this issue still continues, another solution will be attempted - if that solution also fails, the shape rule causing this problem will be removed.
+
+Affected files:
+
+                games/doom/fabs/deco/gtd_decor_urban.lua
+                     /heretic/shapes.lua
+                             /shapes_liquid_outdoors.lua
+
+=================================================================================================
+
+2/8/19
+
+- Attempted to find a hackish way to get Oblige to use rules with liquid elements at the borders for outdoors. While a level has not yet generated any park features, Oblige will use a completely different set of shape rules from normal until the first park room has been created. This should help fix most assert issues. A more ideal approach is being looked into.
+- Made Oblige stop using sprout and decorate rules with steepness or liquid elements in caves and park areas. This should also fix other assert issues when generating.
+
+Affected files:
+
+                scripts/grower.lua
+                scripts/room.lua
+                
+                heretic/shapes.lua
+                heretic/shapes_liquid_outdoors.lua
+
+=================================================================================================
+
 2/7/19
 
 - Integrated Glaice's rebalancing of monster quantities and changes to lighting!
 
 - Added new neon sign fabs for urban theme outdoors!
 - Added Glaice's new names for Psychedelic theme maps!
+- Seperated the option to have bottomless vistas (ZDoom vista) or the 3D skybox.
 
+- Revised the Trap Styles code as the ratio choices other than 20%/80% were not actually working.
 - Fixed an issue caused by bad code merging on prefab.lua
 - Fixed a texture issue with the one of the hell item shelves adopting the sky ceiling when outdoors.
+- Fixed shadowing on one of the arch-ish the hell diagonals.
+- Set vehicle fabs to only spawn outdoors.
 - Fixed an issue with one of the liquid shapes causing inaccessible ledges... because of a typo.
+- Prevented some shape rules from spawning outdoors.
 - Re-added the old Oblige ad pictures into the urban scrolling marquee fab!
 - Attempted to stop Oblige from causing an error when an edge already exists, and instead continue on. If might fix things, or it might break things.
 
 Affected files:
 
                 scripts/level.lua
-				       /layout.lua
-					   /defs.lua
-					   /ui_mons.lua
-					   /prefab.lua
-					   /seed.lua
-					   /naming.lua
+                       /layout.lua
+                       /defs.lua
+                       /ui_mons.lua
+                       /prefab.lua
+                       /seed.lua
+                       /naming.lua
+                       /render.lua
+                
+                modules/ui_arch.lua
 
                 games/doom/fabs/wall/gtd_wall_neonsigns.wad & .lua
+                               /wall/gtd_wall_hell_diagonal.wad
                                /item/gtd_item_closet_hell.wad
-					           /decor/gtd_decor_urban.wad & .lua
-					
-				     /doom/shapes.lua
-				     /heretic/shapes.lua
+                               /decor/gtd_decor_urban.wad & .lua
+                               /decor/gtd_cars.lua
+                    
+                     /doom/shapes.lua
+                     /heretic/shapes.lua
 
 =================================================================================================
 
@@ -38,11 +128,11 @@ Affected files:
 
 Affected file: games/doom/shapes.lua
                games/heretic/shapes.lua    <--- [ Because of load order, Oblige 7.7 actually overrides Doom's shape rules ]
-				                                [ with that of Heretic's. I just end up copying the Heretic version onto  ]
-												[ the Doom folder as insurance.	                                          ]
+                                                [ with that of Heretic's. I just end up copying the Heretic version onto  ]
+                                                [ the Doom folder as insurance.                                           ]
 
                games/doom/fabs/item/gtd_item_closet_hell.wad
-												
+                                                
 2/6/19
 
 - Integrated Glaice's monster rebalancing and damage reduction on deadly liquids!
@@ -70,36 +160,36 @@ Affected files:
 
                           /fabs/decor/garrett_tech_hanging_framework.wad & .lua
                           /fabs/teleporter/garrett_tech_pad.wad & .lua
-						  
-						  /fabs/window/gtd_window_arch_curved.wad
-						  
-						  /fabs/wall/gtd_wall_hell_vaults.wad & .lua
-						  
-						  /themes.lua
-						  
-			              /fabs/wall/gtd_wall_hell.lua
-						  /fabs/wall/gtd_wall_steel_arch.wad & .lua
-						  
-						  /fabs/joiner/gtd_ruins.wad
-						  
-						  /fabs/stairs/gtd_stair_ladder_128.wad
-						  
-						  /fabs/teleporter/closet2.wad
-						                  /pad1.wad
-						                  /pad2.wad
-						                  /sky_pad.wad
-										  
-		        games/doom/shapes.lua
-		        games/heretic/shapes.lua    <--- [ Because of load order, Oblige 7.7 actually overrides Doom's shape rules ]
-				                                 [ with that of Heretic's. I just end up copying the Heretic version onto  ]
-												 [ the Doom folder as insurance.										   ]    
+                          
+                          /fabs/window/gtd_window_arch_curved.wad
+                          
+                          /fabs/wall/gtd_wall_hell_vaults.wad & .lua
+                          
+                          /themes.lua
+                          
+                          /fabs/wall/gtd_wall_hell.lua
+                          /fabs/wall/gtd_wall_steel_arch.wad & .lua
+                          
+                          /fabs/joiner/gtd_ruins.wad
+                          
+                          /fabs/stairs/gtd_stair_ladder_128.wad
+                          
+                          /fabs/teleporter/closet2.wad
+                                          /pad1.wad
+                                          /pad2.wad
+                                          /sky_pad.wad
+                                          
+                games/doom/shapes.lua
+                games/heretic/shapes.lua    <--- [ Because of load order, Oblige 7.7 actually overrides Doom's shape rules ]
+                                                 [ with that of Heretic's. I just end up copying the Heretic version onto  ]
+                                                 [ the Doom folder as insurance.                                           ]    
                 scripts/brush.lua
                        /defs.lua
                        /level.lua
                        /naming.lua
-					   
+                       
                 modules/sky_generator.lua
-                       /theme_control.lua				
+                       /theme_control.lua               
 
 =================================================================================================
 
@@ -116,14 +206,14 @@ Affected files:
                 prefabs/item/gtd_item_closet_hell.wad & .lua
 
                 scripts/layout.lua
-				modules/ui_mons.lua
-				
-				modules/ui_arch.lua
-				games/doom/levels.lua
-				games/doom/x_doom1.lua
-				
-				games/doom/shapes.lua (formerly scripts/rules.lua in pre-7.7)
-				games/heretic/shapes.lua (formerly scripts/rules.lua in pre-7.7)
+                modules/ui_mons.lua
+                
+                modules/ui_arch.lua
+                games/doom/levels.lua
+                games/doom/x_doom1.lua
+                
+                games/doom/shapes.lua (formerly scripts/rules.lua in pre-7.7)
+                games/heretic/shapes.lua (formerly scripts/rules.lua in pre-7.7)
 
 =================================================================================================
 
@@ -138,19 +228,19 @@ Affected files:
 
 Affected files: scripts/monster.lua
                 modules/ui_mons.lua
-				
-				scripts/layout.lua
-				
-				prefabs/stairs/frozsoul_620_lift_128.wad & .lua
+                
+                scripts/layout.lua
+                
+                prefabs/stairs/frozsoul_620_lift_128.wad & .lua
 
-				prefabs/stairs/lift_64.lua
-				prefabs/joiners/lift3.lua
-				prefabs/joiners/lift4.lua
-				prefabs/joiners/lift_curve.lua
-				
-				prefabs/item/gtd_item_lockers.wad & .lua
-				
-				prefabs/joiners/gtd_zigzag_lift.lua
+                prefabs/stairs/lift_64.lua
+                prefabs/joiners/lift3.lua
+                prefabs/joiners/lift4.lua
+                prefabs/joiners/lift_curve.lua
+                
+                prefabs/item/gtd_item_lockers.wad & .lua
+                
+                prefabs/joiners/gtd_zigzag_lift.lua
 
 =================================================================================================
 
@@ -166,21 +256,21 @@ Affected files: scripts/monster.lua
 Affected files: [REMOVE]--> modules/layout_absurdifier.lua
                 scripts/grower.lua
 
-				modules/ui_mons.lua
-				scripts/layout.lua
+                modules/ui_mons.lua
+                scripts/layout.lua
 
-				scripts/cave.lua
-				scripts/render.lua
-				scripts/room.lua
+                scripts/cave.lua
+                scripts/render.lua
+                scripts/room.lua
 
-				prefabs/skybox/test_sky.wad & .lua
+                prefabs/skybox/test_sky.wad & .lua
 
-				scripts/rules.lua
+                scripts/rules.lua
 
-				[RENAME] prefabs/wall/gtd_wall - Copy.lua --> prefabs/wall/gtd_wall.lua
+                [RENAME] prefabs/wall/gtd_wall - Copy.lua --> prefabs/wall/gtd_wall.lua
 
 =================================================================================================
-				
+                
 2/1/19
 
 - Added the Layout Absurdifier module! The layout absurdifier module creates a chance for a map to abuse a specific set of shape rules to look completely different and unique i.e. ridiculous amount of staircases, too many 1x1 pools of liquid, cages on every wall, etc.
@@ -196,11 +286,11 @@ Affected files: prefabs/stairs/gtd_stairs_128.wad
                 prefabs/walls/garrett_diagonal_lamp.lua
                 scripts/rules.lua
                 prefabs/decor/gtd_hell_ceil_light.wad
-				scripts/grower.lua
-				modules/layout_absurdifier.lua
+                scripts/grower.lua
+                modules/layout_absurdifier.lua
 
 =================================================================================================
-				
+                
 1/31/19
 
 - Expanded monster quantity choices and extended control module for monster quantity Mix It Up.

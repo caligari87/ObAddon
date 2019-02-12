@@ -1,29 +1,35 @@
-Themes
-
-[X] Integrate Frozsoul's Psychedelic theme.
-
 Fabz
 
-[X] Need to fix hell/urban outdoor metal arch wall having incorrect lighting. (make interior sectors shadowed)
 [ ] Finish tight switch fabs.
-[X] Wrong texture on opposite side of pillaged shop joiner fab.
-[X] Finish Garrett's hanging framework fab.
-[X] Fix texture issues on 128-height stairs.
-[X] Add monster blocking on all teleporters.
-[X] Neon-ish signs for urban!
+[ ] Finish hell immersive start/exit fabs. Just use Garrett's start version as a base?
 [ ] Try and add new tech windows similar to the bay sky window fab.
+[ ] Integrate Garrett's new urban 3D skybox
+[ ] Generic grouped wall gap-style prefabs applicable to all themes i.e. the 3.x style rooms with support beams at the walls.
+[ ] Generic grouped wall gap-style prefabs applicable to all themes, playing with grate and grill textures i.e. exposed machinery behind grates or blood and guts behind bars.
 [?] WE COULD ALWAYS USE MOAR FABS. THINK OF MORE FABS PLZ.
 
 Addons
 
 [ ] Build moar 3D skyboxes for the ZDoom Vista feature. Create at least one skybox tied to each map theme.
-[ ] Expand module to include ability to enable or disable 3D skybox, and recommend user to not use generated skybox terrain. (the sky generator generates skies below the horizon anyway, just not the mountains)
+[ ] Integrate theme selection for 3D skyboxes.
 [ ] Add Random setting to the sink styler.
+[ ] /!\ STATUS CLITICAL /!\ - Users selecting Progressive or Extreme size will eventually encounter errors due to the amount of segs in a level from the detailed fabs in huge levels. Add a system in Prefab Control to automatically increase plain_walls should a level be Extreme so users won't have to deal with this.
+[X] New vista idea - water. Should only be available on levels with any sort of liquids.
+[ ] New vista idea - bottomless pits without fences, for those people who like to live life dangerously. Add killing sector to punish players who got pushed off? Some maps may actually be exceptionally difficult because of this.
+[ ] Remove DEBUG button from ZDoom vista selection.
 
 Shapez
 
-[X] Basic large footprint rooms with liquids at the center.
-[X] Procedural growth/expansion of liquid shapes just like the new platform and cliff rules.
+[ ] "Trenches" - 1-seed width platforms or depressions organically grown into rooms.
+[ ] "Sewers" - 1-seed width liquid tile surrounded by floors. (the water is surrounded in both sides)
+[ ] Expand "Cliff" building rules. Try tangental stairs, and large 8-seed width cliff styles. The goal is to make more interesting stepped elevations.
+[ ] Find way to deal with issue of platform growing rules occasionally blocking paths due to symmetry.
+[ ] // Long Term // Find a better solution for applying outdoor-liquid-bordered rooms. i.e. declare a is-liquid-bordered field to check against for usage instead of the current system.
 [?] There will be always more shape rules to write, so KEEP THINKING!
 
-[-] Check if old liquid canal shape rules finally work outdoors. --No, still doesn't. Parks are unable to properly process connections and edges against outdoor rooms with liquid borders.
+Level Type
+
+[ ] // Long Term // Procedural Gotcha - a map taking place largely in a single immense room where monster strength and quantity is increased, but so are also pickups just like old prebuilt Gotcha's. Players can choose to skip it and head directly to the exit. This is also to partly experiment a bit more about the meta-structure of levels in general.
+
+Vanilla Bugfixing
+[ ] See what can be done to make edge-building code around outdoor areas better.

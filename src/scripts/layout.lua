@@ -898,39 +898,41 @@ function Layout_add_traps()
 
       local is_same = (info.room == R)
 
-      --selecting between closets or teleports strictly
+      --default Oblige actions when Trap Styles isn't used.
 
-      if closet_dice(info.room, is_same) then
-        if OB_CONFIG.trap_style == "closets" or OB_CONFIG.trap_style == "default" then
+      if OB_CONFIG.trap_style == "default" or OB_CONFIG.trap_style == nil then
+
+        if closet_dice(info.room, is_same) then
           closet_locs = locs_for_room(info.room, "closet")
         end
-      end
 
-      if teleport_dice(info.room, is_same) then
-        if OB_CONFIG.trap_style == "teleports" or OB_CONFIG.trap_style == "default" then
+        if teleport_dice(info.room, is_same) then
           telep_locs = locs_for_room(info.room, "teleport")
         end
       end
 
 
-
       --selecting based on ratio
 
-      local total_prob = rand.range(0,100)
-      local closet_prob
+      local closet_prob = rand.range(0,100)
+      local teleport_prob
 
-      if OB_CONFIG.trap_style == "20" then
-        closet_prob = 20
-      elseif OB_CONFIG.trap_style == "40" then
-        closet_prob = 40
-      elseif OB_CONFIG.trap_style == "60" then
-        closet_prob = 60
+      if OB_CONFIG.trap_style == "closets" then
+        teleport_prob = 0
       elseif OB_CONFIG.trap_style == "80" then
-        closet_prob = 80
+        teleport_prob = 20
+      elseif OB_CONFIG.trap_style == "60" then
+        teleport_prob = 40
+      elseif OB_CONFIG.trap_style == "40" then
+        teleport_prob = 60
+      elseif OB_CONFIG.trap_style == "20" then
+        teleport_prob = 80
+      elseif OB_CONFIG.trap_style == "teleports" then
+        teleport_prob = 100
       end
 
-      if OB_CONFIG.trap_style == "20" then
-        if closet_prob <= total_prob then
+      if OB_CONFIG.trap_style != "default" then
+        if teleport_prob <= closet_prob then
           if closet_dice(info.room, is_same) then
             closet_locs = locs_for_room(info.room, "closet")
           end

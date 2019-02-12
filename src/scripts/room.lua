@@ -326,6 +326,24 @@ function ROOM_CLASS.has_sky_neighbor(R)
   return false
 end
 
+-- MSSP
+function ROOM_CLASS.is_adjecant_to_nature(R)
+  gui.printf("Is ROOM #" .. R.id .. " connected to nature? \*points at butterfly\*\n")
+  each C in R.conns do
+    gui.printf(C)
+    local is_it_a_park = C:other_room(R).is_park
+    gui.printf("The other room is " .. R2.id .. "\n")
+    if is_it_a_park == true then
+      gui.printf("Yes.\n")
+      return true
+    else
+      gui.printf("No.\n")
+      return false
+    end
+  end
+  gui.printf("It ain't connected to anything!\n")
+end
+
 
 function ROOM_CLASS.has_teleporter(R)
   each C in R.conns do
@@ -1444,6 +1462,9 @@ function Room_border_up()
       elseif A2.border_type == "bottomless_drop" then
           Junction_make_railing(junc, "MIDBARS3", "block")
 
+      elseif A2.border_type == "ocean" then
+          Junction_make_railing(junc, "MIDBARS3", "block")
+
       else
         Junction_make_empty(junc)
       end
@@ -2548,6 +2569,8 @@ function Room_floor_ceil_heights()
 
       -- outdoor heights are done later, get a dummy now
       if A.is_outdoor then
+        print(A)
+        print(R)
         A.ceil_h = A.floor_h + R.zone.sky_add_h - 8
         continue
       end

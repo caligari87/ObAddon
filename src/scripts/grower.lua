@@ -711,52 +711,61 @@ function Grower_preprocess_grammar()
 
   ---| Grower_preprocess_grammar |---
 
-  gui.debugf("Grower_preprocess_grammar...\n")
+  local gramgram = SHAPE_GRAMMAR
+  local gramgram2 = SHAPE_GRAMMAR_LIQUID_OUTDOORS
 
-  local grammar = SHAPE_GRAMMAR
+  local function process_some_cool_grammars(grammar)
 
-  table.name_up(grammar)
+      gui.printf("Grower_preprocess_grammar...\n")
 
-  table.expand_templates(grammar)
+      table.name_up(grammar)
 
-  each name,cur_def in grammar do
-    if cur_def.is_processed then continue end
-    cur_def.is_processed = true
+      table.expand_templates(grammar)
 
-    gui.debugf("processing: %s\n", name)
+      each name,cur_def in grammar do
+        if cur_def.is_processed then continue end
+        cur_def.is_processed = true
 
-    def = cur_def
+        gui.debugf("processing: %s\n", name)
 
-    if cur_def.pass == nil then
-       cur_def.pass = name_to_pass(name)
-    end
+        def = cur_def
 
-    if not def.styles then def.styles = {} end
+        if cur_def.pass == nil then
+           cur_def.pass = name_to_pass(name)
+        end
 
-    convert_structure()
-    finalize_structure()
-    check_symmetries()
+        if not def.styles then def.styles = {} end
 
-    find_focal_points()
-    find_connections()
+        convert_structure()
+        finalize_structure()
+        check_symmetries()
 
-    locate_all_contiguous_parts("stair")
-    locate_all_contiguous_parts("joiner")
-    locate_all_contiguous_parts("closet")
+        find_focal_points()
+        find_connections()
 
-    locate_all_contiguous_parts("hallway")
-    locate_all_contiguous_parts("hall2")
-    locate_all_contiguous_parts("hall3")
+        locate_all_contiguous_parts("stair")
+        locate_all_contiguous_parts("joiner")
+        locate_all_contiguous_parts("closet")
 
-    locate_all_contiguous_parts("link")
-    locate_all_contiguous_parts("link2")
+        locate_all_contiguous_parts("hallway")
+        locate_all_contiguous_parts("hall2")
+        locate_all_contiguous_parts("hall3")
 
-    if cur_def.teleporter then add_style("teleporters") end
+        locate_all_contiguous_parts("link")
+        locate_all_contiguous_parts("link2")
 
-    if string.match(name, "^HALL_") then cur_def.env = "hallway" end
-    if string.match(name, "^CAVE_") then cur_def.env = "cave" end
-    if string.match(name, "^PARK_") then cur_def.env = "park" end
+        if cur_def.teleporter then add_style("teleporters") end
+
+        if string.match(name, "^HALL_") then cur_def.env = "hallway" end
+        if string.match(name, "^CAVE_") then cur_def.env = "cave" end
+        if string.match(name, "^PARK_") then cur_def.env = "park" end
+      end
   end
+
+  process_some_cool_grammars(gramgram)
+
+  process_some_cool_grammars(gramgram2)
+
 end
 
 
@@ -867,23 +876,27 @@ function Grower_calc_rule_probs()
     print("This level is not absurd...\n")
   end
 
-  each name,rule in SHAPE_GRAMMAR do
-    rule.use_prob = calc_prob(rule)
+  local function Grower_absurdify(grammarset)
+    each name,rule in grammarset do
+      rule.use_prob = calc_prob(rule)
 
-    if level_is_absurd == true then
-      local shape_absurd_chance = rand.range(0,100)
-      if shape_absurd_chance <= 2.5 then
-        shape_is_absurd = true
+      if level_is_absurd == true then
+        local shape_absurd_chance = rand.range(0,100)
+        if shape_absurd_chance <= 2.5 then
+          shape_is_absurd = true
+        end
+      end
+
+      if shape_is_absurd == true and level_is_absurd == true then
+        rule.use_prob = rule.use_prob * 1000000
+        print(rule.name .. " is now ABSURDIFIED! WOOO!!!\n")
+        shape_is_absurd = false
       end
     end
-
-    if shape_is_absurd == true and level_is_absurd == true then
-      rule.use_prob = rule.use_prob * 1000000
-      print(rule.name .. " is now ABSURDIFIED! WOOO!!!\n")
-      shape_is_absurd = false
-    end
-
   end
+
+  Grower_absurdify(SHAPE_GRAMMAR)
+  Grower_absurdify(SHAPE_GRAMMAR_LIQUID_OUTDOORS)
 
 end
 
@@ -1156,7 +1169,7 @@ function Grower_add_room(parent_R, info, trunk)
 
   local R = ROOM_CLASS.new()
 
-gui.debugf("new room %s : env = %s : parent = %s\n", R.name, tostring(info.env), tostring(parent_R and parent_R.name))
+gui.printf("new room %s : env = %s : parent = %s\n", R.name, tostring(info.env), tostring(parent_R and parent_R.name))
 
   if info.force_start then
     R.is_start = true
@@ -1353,15 +1366,58 @@ function Grower_kill_room(R)
   Seed_squarify()
 end
 
-
-
 function Grower_grammatical_pass(R, pass, apply_num, stop_prob,
                                  parent_rule, is_create, is_emergency)
   --
   -- Creates rooms using Shape Grammars.
   --
 
-  local grammar = SHAPE_GRAMMAR
+  -- Trying to force liquid-bordered outdoors if parks haven't shown up yet.
+
+  -- This code just makes it so that if parks start existing,
+  -- stop using outdoor-liquid-border shapes. - MSSP
+
+  local natural_rooms
+
+  if natural_rooms == nil then
+    natural_rooms = 0
+  end
+
+  each i in LEVEL.rooms do
+    if i.is_park == true then
+      natural_rooms = natural_rooms + 1
+    end
+  end
+
+  gui.printf("# of natural rooms: " .. natural_rooms .. "\n")
+
+  -- This code tries to only use liquid-borders if the prior room was not a park.
+
+  if previous_room_is_park == nil then
+    previous_room_is_park = false
+  end
+
+  if previous_room_is_park == true and R.is_park == false then
+    you_can_outdoor_liquid_border = false
+  else
+    you_can_outdoor_liquid_border = true
+  end
+
+  local grammar
+
+  if natural_rooms <= 0 then
+    gui.printf("Outdoor Liquid Border State: Fun with water!\n")
+    grammar = SHAPE_GRAMMAR_LIQUID_OUTDOORS
+  else
+    gui.printf("Outdoor Liquid Border State: No fun no more here...\n")
+    grammar = SHAPE_GRAMMAR
+  end
+
+  if R.is_park == true then
+    previous_room_is_park = true
+  end
+
+  --
 
   local cur_rule
   local cur_symmetry
@@ -1528,6 +1584,14 @@ function Grower_grammatical_pass(R, pass, apply_num, stop_prob,
     if pass == "root" or pass == "grow" then
       if R.is_cave and rule.env != "cave" then return 0 end
       if R.is_park and rule.env != "park" then return 0 end
+    end
+
+    --MSSP attachment: never use liquids nor steepness in caves and stuff ever - very evil stuff ya know
+    if pass == "sprout" or pass == "decorate" then
+      if R.is_park and table.has_elem(rule.styles, "steepness") then return 0 end
+      if R.is_park and table.has_elem(rule.styles, "liquids") then return 0 end
+      if R.is_cave and table.has_elem(rule.styles, "steepness") then return 0 end
+      if R.is_cave and table.has_elem(rule.styles, "liquids") then return 0 end
     end
 
     if rule.new_room and rule.new_room.env == "cave" then
@@ -3145,6 +3209,7 @@ function Grower_grammatical_room(R, pass, is_emergency)
   if pass == "decorate" then stop_prob = 10 end
 
   Grower_grammatical_pass(R, pass, apply_num, stop_prob, nil, nil, is_emergency)
+
 end
 
 
