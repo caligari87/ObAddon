@@ -2859,6 +2859,7 @@ GROW_RAMP_THIN_RISE =
 GROW_REVERSE_FUNNEL =
 {
   prob = 20
+
   aversion = 3
 
   structure =
@@ -2881,9 +2882,7 @@ GROW_REVERSE_FUNNEL =
 
 GROW_SIDE_ON_RAMP =
 {
-  prob = 50
-
-  env = "building"
+  prob = 25
 
   structure =
   {
@@ -2902,9 +2901,7 @@ GROW_SIDE_ON_RAMP =
 
 GROW_SIDE_ON_RAMP_TALL =
 {
-  prob = 50
-
-  env = "building"
+  prob = 25
 
   structure =
   {
@@ -2924,7 +2921,7 @@ GROW_SIDE_ON_RAMP_TALL =
 
 GROW_CAUSEWAY =
 {
-  prob = 20
+  prob = 15
 
   structure =
   {
@@ -3347,6 +3344,52 @@ SPROUT_CAGE_SIMPLE_REVERSED =
   cage_mode = "fancy"
 }
 
+GROW_CAGE_DOOM_MAP01 =
+{
+  prob = 15
+
+  structure =
+  {
+    "......","111111"
+    "......","1C11C1"
+    "......","111111"
+    "......","111111"
+    "......","1C11C1"
+    "......","111111"
+    "xx11xx","xx11xx"
+  }
+}
+
+GROW_CAGE_DOOM_MAP01_PILLARED =
+{
+  prob = 15
+
+  structure =
+  {
+    "......","111111"
+    "......","1C11C1"
+    "......","1#11#1"
+    "......","111111"
+    "......","1#11#1"
+    "......","1C11C1"
+    "......","111111"
+    "xx11xx","xx11xx"
+  }
+}
+
+DECORATE_CAGE_ON_LIQUID_CANAL_SIDE =
+{
+  prob = 5
+
+  structure =
+  {
+    "~~~~","~CC~"
+    "1111","1111"
+    "1111","1111"
+    "~~~~","~CC~"
+  }
+}
+
 -- MSSP's elevated catwalks. [CATWALK]
 
 GROW_CATWALK_BIFUNNEL_SINK =
@@ -3618,7 +3661,7 @@ GROW_LIQUID_CANAL_STRAIGHT =
 
 GROW_LIQUID_CANAL_CROSSING =
 {
-  prob = 20
+  prob = 40
 
   env = "building"
 
@@ -3638,7 +3681,7 @@ GROW_LIQUID_CANAL_CROSSING =
 
 GROW_LIQUID_CANAL_STRAIGHT_AREA_TRANSITION =
 {
-  prob = 20
+  prob = 30
 
   env = "building"
 
@@ -3719,8 +3762,7 @@ GROW_LIQUID_CANAL_CURVE =
 
 GROW_LIQUID_CANAL_ENTRY =
 {
-  prob = 25
-  aversion = 5
+  prob = 50
 
   env = "building"
 
@@ -3744,7 +3786,6 @@ GROW_LIQUID_CANAL_ENTRY =
 GROW_LIQUID_CANAL_ENTRY =
 {
   prob = 25
-  aversion = 5
 
   env = "building"
 
@@ -3807,7 +3848,7 @@ GROW_LIQUID_CANAL_OUT_ALT =
 
 GROW_LIQUID_SCANAL_ENTRY =
 {
-  prob = 12
+  prob = 20
 
   env = "building"
 
@@ -3822,7 +3863,7 @@ GROW_LIQUID_SCANAL_ENTRY =
 
 GROW_LIQUID_SCANAL_ENTRY_FORWARD =
 {
-  prob = 12
+  prob = 20
 
   env = "building"
 
@@ -3852,7 +3893,7 @@ GROW_LIQUID_SCANAL_STRAIGHT =
 GROW_LIQUID_SCANAL_STRAIGHT_CROSSING =
 {
 
-  prob = 20
+  prob = 30
 
   env = "building"
 
@@ -3969,7 +4010,7 @@ GROW_NARROW_CANAL_ENTRY =
 
 GROW_NARROW_CANAL_ENTRY_FROMSIDE =
 {
-  prob = 10
+  prob = 20
 
   env = "building"
 
@@ -4573,6 +4614,7 @@ SPROUT_WIDE_SPACE_CATWALK_PLAIN =
   {
     "1111","1111"
     "1111","1AA1"
+    "1111","1AA1"
     "1111","1^^1"
     "1111","1111"
   }
@@ -4604,6 +4646,7 @@ SPROUT_WIDE_SPACE_PLATFORM_TINY =
   structure =
   {
     "1111","1111"
+    "1111","1AA1"
     "1111","1AA1"
     "1111","1>A1"
     "1111","1111"
@@ -5101,11 +5144,12 @@ SMOOTHER_CHAMFER_WIDE_ROOM_CORNER =
 
   structure =
   {
-    ".....","....."
-    ".1111",".../1"
-    ".1111","../11"
-    ".1111","./111"
-    ".1111",".1111"
+    "......","......"
+    ".11111",".../11"
+    ".1111x","../11x"
+    ".1111x","./111x"
+    ".1111x",".1111x"
+    ".1xxxx",".1xxxx"
   }
 
   diagonals =
@@ -5126,11 +5170,13 @@ SMOOTHER_CHAMFER_WIDE_ROOM_CORNER_OUTLET =
 
   structure =
   {
-    ".....","....."
-    ".1111","....1"
-    ".1111","....1"
-    ".1111",".../1"
-    ".1111",".1111"
+    "......","......"
+    ".11111","....11"
+    ".1111x","....1x"
+    ".1111x",".../1x"
+    ".1111x",".1111x"
+    ".1xxxx",".1xxxx"
+
   }
 
   diagonals =
@@ -5850,7 +5896,7 @@ DECORATE_CAGE_CANALS_STRAIGHT_3X =
 
 DECORATE_CAGE_CANALS_STRAIGHT_1X =
 {
-  prob = 25
+  prob = 8
 
   env = "building"
 
@@ -5866,7 +5912,7 @@ DECORATE_CAGE_CANALS_STRAIGHT_1X =
 
 DECORATE_CAGE_CANALSWIDE_STRAIGHT_3X =
 {
-  prob = 40
+  prob = 12
 
   env = "building"
 
@@ -5883,7 +5929,7 @@ DECORATE_CAGE_CANALSWIDE_STRAIGHT_3X =
 
 DECORATE_CAGE_CANALSWIDE_STRAIGHT_1X =
 {
-  prob = 25
+  prob = 8
 
   env = "building"
 
@@ -6034,12 +6080,26 @@ GROW_CLIFF_EXTENSION =
 
 GROW_CLIFF_EXTENSION_UP_WE_GO =
 {
-  prob = 350
+  prob = 150
 
   structure =
   {
     "x...","x..."
     "1...","1>AA"
+    "2...","2222"
+    "x...","x..."
+  }
+}
+
+GROW_CLIFF_EXTENSION_UPPER_WE_GO =
+{
+  prob = 500
+
+  structure =
+  {
+    "x...","xAAA"
+    "x...","xA^^"
+    "1...","1111"
     "2...","2222"
     "x...","x..."
   }
@@ -6106,6 +6166,21 @@ GROW_CLIFF_EXTENSION_X2_UP_WE_GO =
   {
     "1...","1>AA"
     "1...","1>AA"
+    "2...","2222"
+    "2...","2222"
+  }
+}
+
+GROW_CLIFF_EXTENSION_X2_UPPER_WE_GO =
+{
+  prob = 1000
+
+  structure =
+  {
+    "....","AAAA"
+    "....","AAAA"
+    "1...","1^^1"
+    "1...","1111"
     "2...","2222"
     "2...","2222"
   }
@@ -6180,7 +6255,7 @@ GROW_CLIFF_EXTENSON_NEW_AREA_INWARD =
 
 GROW_CLIFF_EXTENSION_NEW_AREA_X2 =
 {
-  prob = 750
+  prob = 250
 
   structure =
   {
@@ -6193,7 +6268,7 @@ GROW_CLIFF_EXTENSION_NEW_AREA_X2 =
 
 GROW_CLIFF_EXTENSION_NEW_AREA_INWARD_X2 =
 {
-  prob = 1500
+  prob = 500
 
   structure =
   {
@@ -6760,9 +6835,7 @@ GROW_HUGE_LIQUID_ROOM_STRAIGHT_SIDE_SMALLER =
 
 SPROUT_LIQUID_PLATFORM_ENTRY =
 {
-  prob = 250
-
-
+  prob = 1500
 
   structure =
   {
@@ -6794,7 +6867,7 @@ SPROUT_LIQUID_PLATFORM_STRAIGHT =
 
 SPROUT_LIQUID_PLATFORM_STRAIGHT_NEW_AREA =
 {
-  prob = 5000
+  prob = 3500
 
 
   structure =
@@ -6808,7 +6881,7 @@ SPROUT_LIQUID_PLATFORM_STRAIGHT_NEW_AREA =
 
 SPROUT_LIQUID_PLATFORM_STRAIGHT_NEW_AREA_STAIRS =
 {
-  prob = 5000
+  prob = 3500
 
 
   structure =
@@ -6836,7 +6909,7 @@ SPROUT_LIQUID_PLATFORM_STRAIGHT_LONG =
 
 SPROUT_LIQUID_PLATFORM_CURVED =
 {
-  prob = 3500
+  prob = 4000
 
 
   structure =
@@ -6856,7 +6929,7 @@ SPROUT_LIQUID_PLATFORM_CURVED =
 
 SPROUT_LIQUID_PLATFORM_LARGE_CIRCLE =
 {
-  prob = 5000
+  prob = 3500
 
   structure =
   {
@@ -6873,9 +6946,46 @@ SPROUT_LIQUID_PLATFORM_LARGE_CIRCLE =
   }
 }
 
+SPROUT_LIQUID_PLATFORM_CENTER_PILLAR =
+{
+  prob = 2500
+
+  structure =
+  {
+    "x~~~~","x/11%"
+    "1~~~~","111.1"
+    "1~~~~","111.1"
+    "x~~~~","x%11/"
+  }
+
+  diagonals =
+  {
+    "~1","1~"
+    "~1","1~"
+  }
+}
+
+SPROUT_LIQUID_PLATFORM_SIDE_PILLAR =
+{
+  prob = 2500
+
+  structure =
+  {
+    "1~~~~","11111"
+    "1~~~~","11111"
+    "x~~~~","x%11/"
+    "x~~~~","x~..~"
+  }
+
+  diagonals =
+  {
+    "~1","1~"
+  }
+}
+
 SPROUT_LIQUID_PLATFORM_4x4 =
 {
-  prob = 2000
+  prob = 2500
 
   structure =
   {
@@ -7067,6 +7177,57 @@ DECORATE_LIQUID_PILLAR_3X =
     "1~~","1.~"
   }
 }
+
+-- MSSP's single-seed trenches. [TRENCHES]
+
+GROW_TRENCH_ENTRY =
+{
+  prob = 50
+
+  structure =
+  {
+    "1...","1111"
+    "1...","1>AA"
+    "1...","1111"
+  }
+}
+
+GROW_TRENCH_STRAIGHT =
+{
+  prob = 150
+
+  structure =
+  {
+    "1..","111"
+    "2..","222"
+    "1..","111"
+  }
+}
+
+GROW_TRENCH_CURVED =
+{
+  prob = 100
+
+  structure =
+  {
+    "1..","111"
+    "2..","221"
+    "1..","121"
+    "1..","121"
+  }
+}
+
+--[[GROW_TRENCH_EXIT =
+{
+  prob = 50
+
+  structure =
+  {
+    "1..","111"
+    "2..","2>1"
+    "1..","111"
+  }
+}]]
 
 -- FORGET IT LMAO IT DOESN'T WORK
 --[[ MSSP's city streets. ExperiMENTAL. [STREETS]

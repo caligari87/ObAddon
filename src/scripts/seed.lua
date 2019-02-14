@@ -1055,9 +1055,9 @@ function Edge_new(kind, S, dir, long)
 
     if S.edge[dir] then
       print("Seed already has an EDGE")
-    else
-      S.edge[dir] = EDGE
     end
+
+    S.edge[dir] = EDGE
 
     S = S:neighbor(geom.RIGHT[dir])
   end
@@ -1411,7 +1411,13 @@ function CHUNK_CLASS.create_edge(chunk, kind, side)
 
   local S = SEEDS[sx][sy]
 
-  local E = Edge_new(kind, S, 10-side, long)
+  local E
+
+  if S then
+    E = Edge_new(kind, S, 10-side, long)
+  else
+    return nil
+  end
 
   E.other_area = chunk.area
 

@@ -48,7 +48,7 @@ function Monster_init()
   -- remove a replacement monster if the monster it replaces
   -- does not exist (e.g. stealth_gunner in DOOM 1 mode).
   each name,_ in dead_ones do
-    GAME.MONSTERS[name] = nil
+    GAME.MONSTERS[name].replaces = nil
   end
 end
 
@@ -819,6 +819,7 @@ function Monster_fill_room(R)
       factor = rand.range(MONSTER_KIND_TAB.few, MONSTER_KIND_TAB.heaps)
     else
       factor = MONSTER_KIND_TAB[OB_CONFIG.mons]
+      assert(factor)
     end
 
     -- apply 'mon_variety' style

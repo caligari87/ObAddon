@@ -861,6 +861,9 @@ function Quest_add_major_quests()
 
     local each_prob = style_sel("keys", 0, 40, 80, 100)
 
+    -- decide maximum number
+    local max_num = 1 + int(#LEVEL.rooms / 5)
+
     each name,_ in key_tab do
       if rand.odds(each_prob) then
         local GOAL = Goal_new("KEY")

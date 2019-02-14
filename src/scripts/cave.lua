@@ -4553,7 +4553,9 @@ function Cave_build_a_scenic_vista(area)
 
     FL.floor_h = (room.max_floor_h or room.entry_h) -8192 --+ 72
 
-    FL.floor_mat = assert(area.zone.fence_mat)
+    print(table.tostr(room.ceil_groups))
+
+    FL.floor_mat = assert("_SKY" --[[area.zone.fence_mat]])
 
     FL.floor_y_offset = 0
 

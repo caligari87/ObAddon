@@ -175,8 +175,13 @@ function Render_edge(E)
 
       seed_w = assert(E.long)
 
-      height = A.ceil_h - A.floor_h
+      height = math.abs(A.ceil_h - A.floor_h)
+
     }
+
+    if reqs.height <= 96 then
+      reqs.height = 96
+    end
 
     if geom.is_corner(dir) then
       reqs.where = "diagonal"
@@ -196,10 +201,18 @@ function Render_edge(E)
 
     local def = Fab_pick(reqs, sel(reqs.group, "none_ok", nil))
 
-    -- when a fancy wall is not available, use the plain one
+    -- when a wall group is not selected, use the ungrouped walls
     if not def then
       reqs.group = nil
       def = Fab_pick(reqs)
+    end
+
+    -- never use anything other than the plain wall on stair chunks
+    -- this is to prevent oddities like ZDoom slopes from being cut-off
+    if E.S.chunk then
+      if E.S.chunk.kind == "stair" then
+        def = PREFABS["Wall_plain"]
+      end
     end
 
     return def
@@ -271,6 +284,18 @@ function Render_edge(E)
     local skin = {}
 
     skin.wall = assert(E.wall_mat)
+    if E.area.ceil_mat then
+      skin.ceil = assert(E.area.ceil_mat)
+    end
+    if E.area.floor_mat then
+      skin.floor = assert (E.area.floor_mat)
+    end
+
+    -- scenic rooms will sometimes have inverted heights when facing indoor at times
+    -- it's just something that happens
+    if A.ceil_h < A.floor_h then
+      A.ceil_h, A.floor_h = A.floor_h, A.ceil_h
+    end
 
     local def = pick_wall_prefab()
 
@@ -1286,20 +1311,38 @@ stderrf("away = %s\n\n", string.bool(away))
     if p_val == 10 then do_triangle(1,3,7, false) ; do_triangle(9,7,3, true)  end
 
     -- the "proper" way
-    if p_val ==  9 then do_triangle(7,1,3, false) ; do_triangle(3,9,7, false) end
-    if p_val ==  6 then do_triangle(9,7,1, false) ; do_triangle(1,3,9, false) end
+    -- if p_val ==  9 then do_triangle(7,1,3, false) ; do_triangle(3,9,7, false) end
+    -- if p_val ==  6 then do_triangle(9,7,1, false) ; do_triangle(1,3,9, false) end
 
     -- the "alternative" way : connects the two sub-areas
-    -- if p_val ==  6 then do_triangle(7,1,3, true) ; do_triangle(3,9,7, true) end
-    -- if p_val ==  9 then do_triangle(9,7,1, true) ; do_triangle(1,3,9, true) end
+    if p_val ==  6 then do_triangle(7,1,3, true) ; do_triangle(3,9,7, true) end
+    if p_val ==  9 then do_triangle(9,7,1, true) ; do_triangle(1,3,9, true) end
 
+--[[
+                   MSSP put this here lol
+                       +---+   +---+
+                       |\ 9|   |7 /|
+                       | \ |   | / |
+                       |1 \|   |/ 3|
+                       +---+   +---+
+]]
     -- three corners open
 
-    if p_val == 14 then do_triangle(7,1,9, "outie")  ; do_triangle(9,1,3, "outie")  end
-    if p_val == 13 then do_triangle(1,3,7, "outie")  ; do_triangle(7,3,9, "outie")  end
+    if PARAM["corner_style"] == "sink_style_sharp" then
+      if p_val == 14 then do_triangle(7,1,3, "outie")  ; do_whole_triangle(3,9,7)  end
+      if p_val == 13 then do_triangle(1,3,9, "outie")  ; do_whole_triangle(7,1,9)  end
 
-    if p_val == 11 then do_triangle(3,7,1, "outie")  ; do_triangle(9,7,3, "outie")  end
-    if p_val ==  7 then do_triangle(1,9,7, "outie")  ; do_triangle(3,9,1, "outie")  end
+      if p_val == 11 then do_triangle(9,7,1, "outie")  ; do_whole_triangle(3,9,1)  end
+      if p_val ==  7 then do_triangle(3,9,7, "outie")  ; do_whole_triangle(1,3,7)  end
+    else
+      if p_val == 14 then do_triangle(7,1,9, "outie")  ; do_triangle(9,1,3, "outie")  end
+      if p_val == 13 then do_triangle(1,3,7, "outie")  ; do_triangle(7,3,9, "outie")  end
+
+      if p_val == 11 then do_triangle(3,7,1, "outie")  ; do_triangle(9,7,3, "outie")  end
+      if p_val ==  7 then do_triangle(1,9,7, "outie")  ; do_triangle(3,9,1, "outie")  end
+    end
+
+
   end
 end
 

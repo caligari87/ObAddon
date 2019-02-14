@@ -184,10 +184,10 @@ MONSTER_KIND_TAB =
   few    = 0.5
   less   = 0.75
   normal = 1.0
-  more   = 4.0
-  heaps  = 10.0
-  nuts   = 10.0
-  nutser = 10.0
+  more   = 1.33
+  heaps  = 1.6
+  nuts   = 2.0
+  nutser = 2.0
 }
 
 RAMP_UP_FACTORS =

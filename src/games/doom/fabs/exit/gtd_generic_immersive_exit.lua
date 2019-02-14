@@ -3,7 +3,7 @@ PREFABS.Exit_tech_immersive_exit =
   file   = "exit/gtd_generic_immersive_exit.wad"
   map    = "MAP01"
 
-  prob   = 1500
+  prob   = 500
   theme  = "tech"
 
   where  = "seeds"

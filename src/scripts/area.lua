@@ -1790,7 +1790,7 @@ function Area_pick_facing_rooms()
   assign_borders("outdoor")
 
 --TODO : support making windows from building --> scenic
---  assign_borders("building")
+  assign_borders("building")
 
   each A in scenics do
     if A.zone then
