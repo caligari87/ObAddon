@@ -1,11 +1,90 @@
 [ /// WARNING: CHANGES MADE BETWEEN 1/17/19 - 1/31/19 WERE NOT PROPERLY DOCUMENTED, SORRY! \\\ ]
 
-- Default filename mode now affixes the current date to the generated WAD filename.
-- Reduced the probability for the immersive start fab. It's probably better to have a control for this rather than use probability.
+[ CHANGES AFTER 2/14/19 will now be tracked on the ObAddon Git repo again! ]
+
+2/15/19
+
+- Attempted to fix the issue of vista ceilings working erratically.
+- Allowed outdoor and not-in-building wall fabs to spawn as part of the scenic rooms.
+
+- Fixed a minor texture issue in the tech-themed immersive exit fab.
+- Greatly increased the probability of some left-out vanilla 7.7 fabs to match up with the rest.
 
 Affected files:
+                scripts/room.lua
+                scripts/prefab.lua
+                games/doom/fabs/exit/gtd_generic_immersive_exit.wad
+                               /decor/dh_lamp.lua
+                               /decor/ruins.lua
+
+=================================================================================================
+
+2/14/19
+
+- Only the plain wall fab will ever spawn over seeds that are actually stairs. This is to stop overhangs from interfering with ZDoom ramps, and stop decorative walls in general from weirdly intersecting with staircase fabs.
+- Fixed the issue of jagged outie corners when Sharp Sink Style is selected. The vanilla curved style will unfortunately remain jagged.
+- Added a new generic beamed inset group fab available for all themes.
+- Added support for windows that look out into vistas!
+
+- Included Glaice's updated addon for disabling Oblige's hang lamps.
+- Included Glaice's new addon for disabling the "secret message".
+
+- Added Glaice's texture fixes on the new closet4!
+- ZDoom slopes are now re-activated for outdoors!
+- Fixed texture issues on some fabs.
+- Addressed an issue of an edge error cropping up because smoothing shape rules may often cut-off rooms from each other, and interfere with joiners.
+
+Affected files:
+                scripts/render.lua
+             
+                games/doom/fabs/stairs/gtd_stair_zdoomslope_64.lua
+                               /wall/gtd_wall_tech_server_room.wad
+                               /wall/gtd_wall_generic_beamed_inset.wad & .lua
+                               /exit/glaice_closet4.wad
+                               
+                scripts/room.lua
+                scripts/prefab.lua
+                scripts/area.lua
+                
+                addons/no_hang_lamp.pk3
+                addons/no_secret_message.pk3
+                
+                games/heretic/shapes.lua
+                             /shapes_liquid_outdoors.lua
+
+=================================================================================================
+
+2/13/19
+
+- Fixed an issue that broke Doom1/UltDoom support due to Oblige removing whole monsters if a replacement was from an incompatible game. The replacement value itself is now removed, instead of the whole subject monster itself...
+- Added a hack into the theme matching system to force the "Deimos" Doom1 theme to match against all tech and hell-themed rules and fabs, due to the issue of the Deimos theme often running out of definitions (prefabs, rules) due to the lack of explicit Deimos assets.
+- As an addendum, Thy Flesh now matches against all urban and hell-themed rules and fabs.
+- Fixed misaligned floor on the generic open start fab.
+
+Affected files:
+                games/doom/fabs/start/gtd_generic_open_start.wad
+                scripts/monster.lua
+                scripts/oblige.lua
+
+=================================================================================================
+
+2/12/19
+
+- Modified and added new shape rules! (trenches, 1-seed width sinks and elevations)
+- Added Glaice's new exit fab!
+- Default filename mode now affixes the current date to the generated WAD filename.
+
+- Reduced the probability for the immersive start fab. It's probably better to have a control for this rather than use probability at all.
+
+Affected files:
+                games/heretic/shapes.lua
+                             /shapes_liquid_outdoors.lua
+                
                 scripts/oblige.lua
                 games/doom/fabs/start/gtd_generic_immersive_start.lua
+                
+                               /exit/gtd_generic_immersive_exit.lua
+                               /exit/glaice_closet4.wad & .lua
 
 =================================================================================================
                 
