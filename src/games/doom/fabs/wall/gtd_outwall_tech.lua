@@ -8,7 +8,7 @@ PREFABS.Wall_outdoor_fake_lit_window =
   map    = "MAP01"
 
   prob   = 100
-  env   = "outdoor"
+  env   = "!building"
   theme = "tech"
 
   where  = "edge"
@@ -28,7 +28,7 @@ PREFABS.Wall_outdoor_accent_flat =
   map    = "MAP02"
 
   prob   = 50
-  env   = "outdoor"
+  env   = "!building"
   theme = "tech"
 
   where  = "edge"
@@ -48,7 +48,7 @@ PREFABS.Wall_vertical_long_windows =
   map    = "MAP03"
 
   prob   = 50
-  env   = "outdoor"
+  env   = "!building"
   theme = "tech"
 
   where  = "edge"
@@ -68,7 +68,7 @@ PREFABS.Wall_layered_lights =
   map    = "MAP04"
 
   prob   = 50
-  env   = "outdoor"
+  env   = "!building"
   theme = "tech"
 
   where  = "edge"

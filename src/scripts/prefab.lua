@@ -2110,12 +2110,19 @@ function Fab_find_matches(reqs, match_state)
     -- for this, the prefab definition says the *required* thing
     if def_k == nil or def_k == "any" then return true end
 
+    -- allow outdoor and !building prefabs to spawn on scenics,
+    -- which are actually non-rooms
+    if def_k == "outdoor" or def_k == "!building" then
+      if req_k == nil then return true end
+    end
+
     if req_k == nil then return false end
 
     if def_k == "outdoor" then
       if match_environment(req_k, "park")      then return true end
       if match_environment(req_k, "courtyard") then return true end
     end
+
 
     -- negated check?
     if string.sub(def_k, 1, 1) == '!' then
