@@ -264,6 +264,16 @@ function ob_match_level_theme(T)
     result = not result
   end
 
+  --hack fix for Deimos theme. It is now to use tech and hell defs altogether.
+  if LEVEL.theme_name == "deimos" and theme != "urban" then
+    return result
+  end
+
+  --hack fix for Thy Flesh theme too. Basically combine urban and hell fabs.
+  if LEVEL.theme_name == "flesh" and theme !="tech" then
+    return result
+  end
+
   -- normal check
   if ob_match_word_or_table(theme, LEVEL.theme_name) then
     return result

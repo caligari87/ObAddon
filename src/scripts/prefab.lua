@@ -163,7 +163,7 @@ function Fab_load_all_definitions()
 
 
   local function calc_prob(def)
-      -- attachment for the prefab control module
+    -- attachment for the prefab control module
 
     if PARAM["wall_prob"] == "fab_some" then
       fab_demultiplier = 100
@@ -2288,14 +2288,14 @@ function Fab_pick(reqs, allow_none)
   end
 
   if DEBUG_FAB_PICK then
-     gui.debugf("\n\nFAB_PICK = \n%s\n\n", table.tostr(tab))
+     gui.printf("\n\nFAB_PICK = \n%s\n\n", table.tostr(tab))
   end
 
   if table.empty(tab) then
     if allow_none then return nil end
 
-    gui.debugf("Fab_pick:\n")
-    gui.debugf("reqs  = \n%s\n", table.tostr(reqs))
+    gui.printf("Fab_pick:\n")
+    gui.printf("reqs  = \n%s\n", table.tostr(reqs))
 
     error("No matching prefabs for: " .. reqs.kind)
   end

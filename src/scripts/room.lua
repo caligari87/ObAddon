@@ -328,20 +328,15 @@ end
 
 -- MSSP
 function ROOM_CLASS.is_adjecant_to_nature(R)
-  gui.printf("Is ROOM #" .. R.id .. " connected to nature? \*points at butterfly\*\n")
   each C in R.conns do
     gui.printf(C)
     local is_it_a_park = C:other_room(R).is_park
-    gui.printf("The other room is " .. R2.id .. "\n")
     if is_it_a_park == true then
-      gui.printf("Yes.\n")
       return true
     else
-      gui.printf("No.\n")
       return false
     end
   end
-  gui.printf("It ain't connected to anything!\n")
 end
 
 
@@ -1105,6 +1100,9 @@ function Room_make_windows(A1, A2)
     if A.room and A.room.is_cave then return false end
 
     if A.mode == "void" then return false end
+
+    if A.mode == "scenic" then return false end
+
     if A.chunk and A.chunk.kind != "floor" then return false end
 
     if A.room.is_hallway then return false end
@@ -1122,6 +1120,10 @@ function Room_make_windows(A1, A2)
 
     if group1 == nil then return group2 end
     if group2 == nil then return group1 end
+
+    if not R2 then
+      return group1
+    end
 
     if R1.zone.along <= R2.zone.along then
       return group1
@@ -1325,9 +1327,20 @@ function Room_make_windows(A1, A2)
   ---| Room_make_windows |---
 
   if not area_can_window(A1) then return end
-  if not area_can_window(A2) then return end
+
+  if A2.mode != "scenic" then
+    if not area_can_window(A2) then return end
+  end
+
+  if A2.mode == "scenic" then
+     A2.floor_h = A1.floor_h
+     if A2.ceil_h <= A1.ceil_h then
+       A2.ceil_h  = A1.ceil_h
+     end
+  end
 
   local z, height = calc_vertical_space(A1, A2)
+
   if height < 128 then return end
 
   -- if theme has no window groups, we cannot make any windows
@@ -1456,13 +1469,19 @@ function Room_border_up()
       if A1.room.border != A2 then
         Junction_make_wall(junc)
 
-      elseif A2.border_type == "watery_drop" then
+      elseif not A1.is_outdoor and not A1.is_cave then
+        if A2.border_type != "simple_fence" then
+          Room_make_windows(A1, A2)
+        end
+        Junction_make_wall(junc)
+
+      elseif A2.border_type == "watery_drop" and A1.is_outdoor then
         Junction_make_railing(junc, "MIDBARS3", "block")
 
-      elseif A2.border_type == "bottomless_drop" then
+      elseif A2.border_type == "bottomless_drop" and A1.is_outdoor  then
           Junction_make_railing(junc, "MIDBARS3", "block")
 
-      elseif A2.border_type == "ocean" then
+      elseif A2.border_type == "ocean" and A1.is_outdoor  then
           Junction_make_railing(junc, "MIDBARS3", "block")
 
       else
@@ -2569,8 +2588,6 @@ function Room_floor_ceil_heights()
 
       -- outdoor heights are done later, get a dummy now
       if A.is_outdoor then
-        print(A)
-        print(R)
         A.ceil_h = A.floor_h + R.zone.sky_add_h - 8
         continue
       end
