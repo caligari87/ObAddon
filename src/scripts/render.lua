@@ -192,6 +192,11 @@ function Render_edge(E)
 
     if A.room then
       reqs.env = A.room:get_env()
+      -- allow outdoor walls to spawn on scenic walls
+      -- they're also outdoor anyway?
+      if reqs.env == "scenic" then
+        req.env = "outdoor"
+      end
     end
 
 
