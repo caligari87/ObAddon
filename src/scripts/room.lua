@@ -1334,9 +1334,9 @@ function Room_make_windows(A1, A2)
 
   if A2.mode == "scenic" then
      A2.floor_h = A1.floor_h
-     if A2.ceil_h <= A1.ceil_h then
+     --[[if A2.ceil_h <= A1.ceil_h then
        A2.ceil_h  = A1.ceil_h
-     end
+     end]]
   end
 
   local z, height = calc_vertical_space(A1, A2)
