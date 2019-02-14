@@ -296,8 +296,14 @@ function Render_edge(E)
 
     -- scenic rooms will sometimes have inverted heights when facing indoor at times
     -- it's just something that happens
-    if A.ceil_h < A.floor_h then
+    if A.ceil_h <= A.floor_h then
       A.ceil_h, A.floor_h = A.floor_h, A.ceil_h
+    end
+
+    -- just throw them Oblige's default minimum room height
+    -- if the generated vista is too low
+    if (A.ceil_h - A.floor_h) <= 2 then
+      A.ceil_h = A.floor_h + 96
     end
 
     local def = pick_wall_prefab()
