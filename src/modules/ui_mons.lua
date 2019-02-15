@@ -50,12 +50,12 @@ UI_MONS.MIX_QUANTITIES =
 
 UI_MONS.STRENGTHS =
 {
-  "weak",   _("Weak"),
-  "easier", _("Easier"),
-  "medium", _("Normal"),
-  "harder", _("Harder"),
-  "tough",  _("Tough"),
-  "crazy",  _("CRAZY"),
+  "weak",   _("[0.59] Weak"),
+  "easier", _("[0.77] Easier"),
+  "medium", _("[1] Normal"),
+  "harder", _("[1.3] Harder"),
+  "tough",  _("[1.7] Tough"),
+  "crazy",  _("[12] CRAZY"),
 }
 
 UI_MONS.BOSSES =
