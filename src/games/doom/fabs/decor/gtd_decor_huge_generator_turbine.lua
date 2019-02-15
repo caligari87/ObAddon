@@ -3,7 +3,7 @@ PREFABS.Huge_generator_turbine =
   file   = "decor/gtd_decor_huge_generator_turbine.wad"
   map    = "MAP01"
 
-  prob   = 1500
+  prob   = 2500
   theme  = "tech"
   env    = "!cave"
 
