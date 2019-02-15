@@ -28,4 +28,7 @@ PREFABS.Start_generic_open_hell =
   map = "MAP02"
 
   theme = "hell"
+
+  flat_GATE3 = { GATE1=50, GATE2=50, GATE3=70 }
+
 }

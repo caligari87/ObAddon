@@ -1700,6 +1700,13 @@ function Room_choose_size(R, not_big)
     --R.floor_limit = rand.pick({ 2,2,2,2,3,3,3,3,3,4,4,4,5,5 })
     --R.floor_limit = rand.pick({ 4,5,5,6,6,7 }) --Original
   end
+
+  -- Special instructions for procedural gotcha rooms
+  if LEVEL.is_procedural_gotcha and not R.is_start then
+    R.size_limit = LEVEL.map_W*30
+    R.floor_limit = 20
+    R.is_big = true
+  end
 end
 
 

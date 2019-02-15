@@ -206,6 +206,11 @@ function Episode_determine_map_sizes()
       SEED_H = 112
     end
 
+    if LEV.is_procedural_gotcha == true then
+      W = 26
+      H = 26
+    end
+
     -- sanity check
     if OB_CONFIG.size != "stretched" then
       assert(W + 4 <= SEED_W)
@@ -363,7 +368,31 @@ function Episode_plan_monsters()
     -- add some randomness
     mon_along = mon_along + 0.7 * (gui.random() ^ 2)
 
-    LEV.monster_level = mon_along
+    if LEV.is_procedural_gotcha then
+      local gotcha_strength
+
+      if PARAM["gotcha_strength"] then
+        if PARAM["gotcha_strength"] == "none" then
+          gotcha_strength = 0
+        elseif PARAM["gotcha_strength"] == "harder" then
+          gotcha_strength = 2
+        elseif PARAM["gotcha_strength"] == "tougher" then
+          gotcha_strength = 4
+        elseif PARAM["gotcha_strength"] == "crazier" then
+          gotcha_strength = 8
+        end
+      else
+        gotcha_strength = 2
+      end
+
+      LEV.monster_level = mon_along + gotcha_strength
+
+    else
+
+    -- used by standard levels
+      LEV.monster_level = mon_along
+    end
+
   end
 
 
@@ -461,7 +490,7 @@ function Episode_plan_monsters()
 
     each name,_ in LEV.seen_monsters do
       local info = GAME.MONSTERS[name]
-      if not info.boss_type or OB_CONFIG.strength == "crazy" then
+      if not info.boss_type or OB_CONFIG.strength == "crazy" or LEV.is_procedural_gotcha then
         LEV.global_pal[name] = 1
       end
     end
@@ -485,6 +514,8 @@ function Episode_plan_monsters()
 
 
   local function is_boss_usable(LEV, mon, info)
+    if LEV.is_procedural_gotcha then return true end
+
     if info.prob <= 0 then return false end
     if info.boss_prob == 0 then return false end
 
@@ -2137,6 +2168,18 @@ function Level_do_styles()
 
   if LEVEL.psychedelic then
     Mat_prepare_trip()
+  end
+
+  if LEVEL.is_procedural_gotcha then
+    STYLE.secrets = "none"
+    STYLE.hallways = "none"
+    STYLE.doors = "heaps"
+    STYLE.switches = "heaps"
+    STYLE.big_rooms = "heaps"
+    STYLE.traps = "none"
+    STYLE.ambushes = "none"
+    STYLE.caves = "none"
+    STYLE.parks = "none"
   end
 
 end

@@ -870,10 +870,14 @@ function Grower_calc_rule_probs()
     end
   end
 
-  if level_is_absurd == true then
+  if level_is_absurd == true and not LEVEL.is_procedural_gotcha then
     print("This level is absurd!\n")
   else
     print("This level is not absurd...\n")
+  end
+
+  if LEVEL.is_procedural_gotcha and OB_CONFIG.layout_absurdity then
+    print("This level doesn't need to be absurd. GOTCHA!\n")
   end
 
   local function Grower_absurdify(grammarset)
@@ -970,6 +974,13 @@ function Grower_decide_extents()
 
   LEVEL.min_rooms = math.max(3, int(base / 3))
   LEVEL.max_rooms = math.max(6, int(base))
+
+  -- specific instructions for procedural gotcha
+
+  if LEVEL.is_procedural_gotcha == true then
+    LEVEL.min_rooms = 2
+    LEVEL.max_rooms = 2
+  end
 
   gui.printf("Target # of rooms : %d .. %d\n", LEVEL.min_rooms, LEVEL.max_rooms)
 
@@ -3208,6 +3219,15 @@ function Grower_grammatical_room(R, pass, is_emergency)
   if pass == "grow"     then stop_prob =  5 end
   if pass == "decorate" then stop_prob = 10 end
 
+  --
+  if LEVEL.is_procedural_gotcha then
+    if pass == "grow" or pass == "sprout" then
+      apply_num = 75
+    elseif pass == "decorate" then
+      apply_num = 15
+    end
+  end
+
   Grower_grammatical_pass(R, pass, apply_num, stop_prob, nil, nil, is_emergency)
 
 end
@@ -3654,9 +3674,10 @@ gui.debugf("=== Coverage seeds: %d/%d  rooms: %d/%d\n",
     LEVEL.sprout_x2 = math.min(LEVEL.sprout_x2 + 2, LEVEL.walkable_x2)
     LEVEL.sprout_y2 = math.min(LEVEL.sprout_y2 + 2, LEVEL.walkable_y2)
 
-    if cov_rooms >= LEVEL.max_rooms then
+    if cov_rooms >= LEVEL.max_rooms and not LEVEL.is_procedural_gotcha then
       LEVEL.max_rooms = cov_rooms + 1
     end
+
   end
 
 
