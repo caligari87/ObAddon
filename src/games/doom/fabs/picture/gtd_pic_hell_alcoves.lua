@@ -26,6 +26,43 @@ PREFABS.Pic_hell_alcove_furnace =
 {
   template = "Pic_hell_alcove_tomb"
   map      = "MAP02"
+
+  -- FIRELAV2 is a static texture and not animated, I fixed it for you.
+  -- Also, FIREBLU1 is sometimes used here to mix it up.
+  tex_FIRELAV2 = { FIRELAVA=50, FIREBLU1=50 }
+
+  -- These vary the bodies seen inside the prefab
+   thing_78 = {
+   gutted_torso4 = 50,
+   gutted_torso3 = 50,
+   gutted_torso2 = 50,
+   gutted_torso1 = 50
+   }
+
+   thing_76 = {
+   gutted_torso4 = 50,
+   gutted_torso3 = 50,
+   gutted_torso2 = 50,
+   gutted_torso1 = 50
+   }
+
+   thing_59 = {
+   hang_arm_pair = 50,
+   hang_arm_gone = 50,
+   hang_twitching = 50,
+   gutted_victim1 = 50,
+   gutted_victim2 = 50
+   }
+
+   thing_73 = {
+   hang_arm_pair = 50,
+   hang_arm_gone = 50,
+   hang_twitching = 50,
+   gutted_victim1 = 50,
+   gutted_victim2 = 50
+   }
+
+
 }
 
 PREFABS.Pic_hell_alcove_window =
