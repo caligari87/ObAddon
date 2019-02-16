@@ -1,7 +1,11 @@
-PREFABS.Skybox_test =
+PREFABS.Skybox_garrett_city =
 {
-  file  = "skybox/test_sky.wad"
+  file  = "skybox/garrett_skybox_city.wad"
   map   = "MAP01"
+
+  theme = "urban"
+
+  kind = "skybox"
 
   seed_w = 3
   seed_h = 3
