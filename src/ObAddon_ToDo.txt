@@ -6,12 +6,14 @@ F - non-trivial / seemingly impossible
 
 Fabz
 
-[ ] Finish tight switch fabs.
+[X] Finish tight switch fabs.
 [ ] Finish hell immersive start/exit fabs. Just use Garrett's start version as a base?
 [ ] Try and add new tech windows similar to the bay sky window fab.
 [ ] Integrate Garrett's new urban 3D skybox
 [ ] Generic grouped wall gap-style prefabs applicable to all themes, playing with grate and grill textures i.e. exposed machinery behind grates or blood and guts behind bars.
-[ ] Allow env="outdoor" category to also pass for scenic rooms.
+[X] Allow env="outdoor" category to also pass for scenic rooms.
+[X] Remove the bay window fake sky fabs and turn them into real windows instead.
+[X] Convert the hell throne fab into a seed instead.
 [?] WE COULD ALWAYS USE MOAR FABS. THINK OF MORE FABS PLZ.
 
 Addons
@@ -21,10 +23,11 @@ Addons
 [ ] Add Random setting to the sink styler.
 [ ] /!\ STATUS CLITICAL /!\ - Users selecting Progressive or Extreme size will eventually encounter errors due to the amount of segs in a level from the detailed fabs in huge levels. Add a system in Prefab Control to automatically increase plain_walls should a level be Extreme so users won't have to deal with this.
 [ ] New vista idea - bottomless pits without fences, for those people who like to live life dangerously. Add killing sector to punish players who got pushed off? Some maps may actually be exceptionally difficult because of this.
-[ ] Remove DEBUG button from ZDoom vista selection.
+[X] Remove DEBUG button from ZDoom vista selection.
 [ ] Add options for the quantity and strength of monsters from traps. Suddenly being faced with 20 revenants in a cramped room without a BFG... oof, I tell ya. Oof!
 [ ] Alternatively, set teleporter traps to refuse installation on the same area to prevent ganking.
 [ ] Add Scenics control! Yes, it's gonna be back, baby!
+[ ] Add options to control default filename - no affixes, Y-M-D, M-D-Y date formats.
 
 Shapez
 
@@ -32,12 +35,9 @@ Shapez
 [/] Expand "Cliff" building rules. Try tangental stairs, and large 8-seed width cliff styles. The goal is to make more interesting stepped elevations.
 [ ] Find way to deal with issue of platform growing rules occasionally blocking paths due to symmetry.
 [ ] Create emergency sprout rule for SQUEEZE_IN. Maps that incidentally use SQUEEZE_IN for the start room are unable to grow further, resulting in a hilarious one-room map.
-[ ] // Long Term // Find a better solution for applying outdoor-liquid-bordered rooms. i.e. declare a is-liquid-bordered field to check against for usage instead of the current system.
+[/] // Long Term // Find a better solution for applying outdoor-liquid-bordered rooms. i.e. declare a is-liquid-bordered field to check against for usage instead of the current system.
 [?] There will be always more shape rules to write, so KEEP THINKING!
 
 Level Type
 
-[ ] // Long Term // Procedural Gotcha/Boss Arena - a map taking place largely in a single immense room where monster strength and quantity is increased, or a boss is added with a fleet of weaker monsters. Just like old Gotcha's or boss maps, a large amount of supplies are also available for the player. Players can choose to skip it and head directly to the exit if it doesn't land on tag 666/667-using maps. This is also to partly experiment a bit more about the meta-structure of levels in general.
-
-Vanilla Bugfixing
-[ ] See what can be done to make edge-building code around outdoor areas better.
+[ ] [Long Term] City streets mode. The start room on streets mode becomes entirely dependent on a start room using only street growing rules, allowing other rooms (essentially buildings) to branch off from the streets.

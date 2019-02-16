@@ -2,20 +2,60 @@
 
 [ CHANGES AFTER 2/14/19 will now be tracked on the ObAddon Git repo again! ]
 
+2/?/19
+
+- Added now snug-n-tight switches available for non-hell themes.
+- Converted the hell throne fab into a seed fab instead.
+- Converted the fake sky bay windows into real windows instead!
+- Replaced the original hell throne decor with a simple pool-of-guts fab.
+
+Affected files:
+                games/doom/fabs/pic/gtd_pic_hell_throne.wad & .lua
+                               /decor/gtd_decor_hell.wad & .lua
+                               /switch/tight.wad & .lua
+                               /switch/tight_UNFINISHED.wad <---[[ REMOVED ]]
+                               /window/gtd_window_bay.wad & .lua
+                
+=================================================================================================
+
 2/15/19
+
+- All new Procedural Gotchas! Massive single arenas with increased monster quantity strength! Control options include where to place the Procedural Gotchas, as well as how far off an offset from the regular ramp the difficulty is set!
+  + The main control for activating Procedural Gotchas is the architecture panel.
+  + Options for customizing the Gotcha content is under a new module called "Procedural Gotchas".
 
 - Attempted to fix the issue of vista ceilings working erratically.
 - Allowed outdoor and not-in-building wall fabs to spawn as part of the scenic rooms.
 
 - Fixed a minor texture issue in the tech-themed immersive exit fab.
 - Greatly increased the probability of some left-out vanilla 7.7 fabs to match up with the rest.
+- Added Glaice's texture fixes on the furnace alcoves 'picture' fab, with randomized bodies.
+- Removed a broken flat reference in the bodies-inside-the-wall hell diagonal.
+- Removed the bright light sector in one of the tech overhangs, doesn't look good on occasion.
+- Raised some sectors in the crack-of-doom fab as Oblige still frequently caused the lava area to disappear.
+- Attempted to fix the issue of one of the tech walls often becoming texture-misaligned when intersecting with a ceiling light.
 
 Affected files:
                 scripts/room.lua
-                scripts/prefab.lua
+                       /prefab.lua
+                       /grower.lua
+                       /level.lua
+                       /render.lua
+                       
+                modules/ui_arch.lua
+                       /ui_mons.lua
+                
+                modules/procedural_gotcha.lua
                 games/doom/fabs/exit/gtd_generic_immersive_exit.wad
                                /decor/dh_lamp.lua
                                /decor/ruins.lua
+                               /decor/blob_lamp.lua
+                               /picture/gtd_pic_hell_alcoves.lua
+                               /wall/garrett_wall_of_pain_diagonal.wad
+                               /wall/gtd_wall_tech_overhangs.wad
+                               /decor/gtd_infestation_crackofdoom.wad
+                               /wall/gtd_wall.wad
+                               /start/gtd_generic_open_start.wad & .lua
 
 =================================================================================================
 
@@ -36,19 +76,19 @@ Affected files:
 
 Affected files:
                 scripts/render.lua
-             
+
                 games/doom/fabs/stairs/gtd_stair_zdoomslope_64.lua
                                /wall/gtd_wall_tech_server_room.wad
                                /wall/gtd_wall_generic_beamed_inset.wad & .lua
                                /exit/glaice_closet4.wad
-                               
+
                 scripts/room.lua
                 scripts/prefab.lua
                 scripts/area.lua
-                
+
                 addons/no_hang_lamp.pk3
                 addons/no_secret_message.pk3
-                
+
                 games/heretic/shapes.lua
                              /shapes_liquid_outdoors.lua
 
@@ -79,15 +119,15 @@ Affected files:
 Affected files:
                 games/heretic/shapes.lua
                              /shapes_liquid_outdoors.lua
-                
+
                 scripts/oblige.lua
                 games/doom/fabs/start/gtd_generic_immersive_start.lua
-                
+
                                /exit/gtd_generic_immersive_exit.lua
                                /exit/glaice_closet4.wad & .lua
 
 =================================================================================================
-                
+
 2/11/19c
 
 - Fixed an issue of the new plain start fab causing a fitting error.
@@ -122,7 +162,7 @@ Affected files:
                                /start/gtd_generic_open_start.wad & .lua
                                /exit/gtd_generic_immersive_exit.wad & .lua
                                /stairs/gtd_stair_zdoomslope_64.lua
-                
+
                 scripts/rooms.lua
                        /layout.lua
                        /cave.lua
@@ -151,7 +191,7 @@ Affected files:
 
                 scripts/grower.lua
                 scripts/room.lua
-                
+
                 heretic/shapes.lua
                 heretic/shapes_liquid_outdoors.lua
 
@@ -185,7 +225,7 @@ Affected files:
                        /seed.lua
                        /naming.lua
                        /render.lua
-                
+
                 modules/ui_arch.lua
 
                 games/doom/fabs/wall/gtd_wall_neonsigns.wad & .lua
@@ -193,7 +233,7 @@ Affected files:
                                /item/gtd_item_closet_hell.wad
                                /decor/gtd_decor_urban.wad & .lua
                                /decor/gtd_cars.lua
-                    
+
                      /doom/shapes.lua
                      /heretic/shapes.lua
 
@@ -211,7 +251,7 @@ Affected file: games/doom/shapes.lua
                                                 [ the Doom folder as insurance.                                           ]
 
                games/doom/fabs/item/gtd_item_closet_hell.wad
-                                                
+
 2/6/19
 
 - Integrated Glaice's monster rebalancing and damage reduction on deadly liquids!
@@ -239,36 +279,36 @@ Affected files:
 
                           /fabs/decor/garrett_tech_hanging_framework.wad & .lua
                           /fabs/teleporter/garrett_tech_pad.wad & .lua
-                          
+
                           /fabs/window/gtd_window_arch_curved.wad
-                          
+
                           /fabs/wall/gtd_wall_hell_vaults.wad & .lua
-                          
+
                           /themes.lua
-                          
+
                           /fabs/wall/gtd_wall_hell.lua
                           /fabs/wall/gtd_wall_steel_arch.wad & .lua
-                          
+
                           /fabs/joiner/gtd_ruins.wad
-                          
+
                           /fabs/stairs/gtd_stair_ladder_128.wad
-                          
+
                           /fabs/teleporter/closet2.wad
                                           /pad1.wad
                                           /pad2.wad
                                           /sky_pad.wad
-                                          
+
                 games/doom/shapes.lua
                 games/heretic/shapes.lua    <--- [ Because of load order, Oblige 7.7 actually overrides Doom's shape rules ]
                                                  [ with that of Heretic's. I just end up copying the Heretic version onto  ]
-                                                 [ the Doom folder as insurance.                                           ]    
+                                                 [ the Doom folder as insurance.                                           ]
                 scripts/brush.lua
                        /defs.lua
                        /level.lua
                        /naming.lua
-                       
+
                 modules/sky_generator.lua
-                       /theme_control.lua               
+                       /theme_control.lua
 
 =================================================================================================
 
@@ -281,16 +321,16 @@ Affected files:
 
 - Made some tweaks to shapes, especially the cliff building rules.
 
-Affected files: 
+Affected files:
                 prefabs/item/gtd_item_closet_hell.wad & .lua
 
                 scripts/layout.lua
                 modules/ui_mons.lua
-                
+
                 modules/ui_arch.lua
                 games/doom/levels.lua
                 games/doom/x_doom1.lua
-                
+
                 games/doom/shapes.lua (formerly scripts/rules.lua in pre-7.7)
                 games/heretic/shapes.lua (formerly scripts/rules.lua in pre-7.7)
 
@@ -307,18 +347,18 @@ Affected files:
 
 Affected files: scripts/monster.lua
                 modules/ui_mons.lua
-                
+
                 scripts/layout.lua
-                
+
                 prefabs/stairs/frozsoul_620_lift_128.wad & .lua
 
                 prefabs/stairs/lift_64.lua
                 prefabs/joiners/lift3.lua
                 prefabs/joiners/lift4.lua
                 prefabs/joiners/lift_curve.lua
-                
+
                 prefabs/item/gtd_item_lockers.wad & .lua
-                
+
                 prefabs/joiners/gtd_zigzag_lift.lua
 
 =================================================================================================
@@ -349,7 +389,7 @@ Affected files: [REMOVE]--> modules/layout_absurdifier.lua
                 [RENAME] prefabs/wall/gtd_wall - Copy.lua --> prefabs/wall/gtd_wall.lua
 
 =================================================================================================
-                
+
 2/1/19
 
 - Added the Layout Absurdifier module! The layout absurdifier module creates a chance for a map to abuse a specific set of shape rules to look completely different and unique i.e. ridiculous amount of staircases, too many 1x1 pools of liquid, cages on every wall, etc.
@@ -369,7 +409,7 @@ Affected files: prefabs/stairs/gtd_stairs_128.wad
                 modules/layout_absurdifier.lua
 
 =================================================================================================
-                
+
 1/31/19
 
 - Expanded monster quantity choices and extended control module for monster quantity Mix It Up.

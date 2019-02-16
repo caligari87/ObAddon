@@ -1416,13 +1416,13 @@ function Grower_grammatical_pass(R, pass, apply_num, stop_prob,
 
   local grammar
 
-  if natural_rooms <= 0 then
-    gui.printf("Outdoor Liquid Border State: Fun with water!\n")
+  --[[if natural_rooms <= 0 then
+    gui.printf("Outdoor Liquid Border State: Fun with water!\n")]]
     grammar = SHAPE_GRAMMAR_LIQUID_OUTDOORS
-  else
+  --[[else
     gui.printf("Outdoor Liquid Border State: No fun no more here...\n")
     grammar = SHAPE_GRAMMAR
-  end
+  end]]
 
   if R.is_park == true then
     previous_room_is_park = true
