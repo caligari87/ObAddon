@@ -2390,9 +2390,30 @@ end
 
 
 function Render_skybox()
-  local skyfab = PREFABS["Skybox_test"]
-  local T = Trans.spot_transform(SEED_H*128, SEED_W*128, 4, 4)
-  Fabricate(nil, skyfab, T, {})
+
+  local skyfab_list = {}
+
+  -- this is really not ideal
+  table.insert(skyfab_list, PREFABS["Skybox_garrett_city"])
+  table.insert(skyfab_list, PREFABS["Skybox_generic"])
+
+  if OB_CONFIG.zdoom_skybox == "random" then
+    skyfab = rand.pick(skyfab_list)
+  elseif OB_CONFIG.zdoom_skybox == "themed" then
+  -- this should really use the proper sorting and picking code, not stuff like this
+    if LEVEL.theme_name == "urban" then
+      skyfab = PREFABS["Skybox_garrett_city"]
+    else
+      skyfab = PREFABS["Skybox_generic"]
+    end
+  elseif OB_CONFIG.zdoom_skybox == "generic" then
+    skyfab = PREFABS["Skybox_generic"]
+  end
+
+  if (OB_CONFIG.engine == "zdoom" or OB_CONFIG.engine == "gzdoom") and OB_CONFIG.zdoom_skybox != "disable" then
+    local T = Trans.spot_transform(SEED_H*128, SEED_W*128, 4, 4)
+    Fabricate(nil, skyfab, T, {})
+  end
 end
 
 function Render_all_areas()
@@ -2410,11 +2431,7 @@ function Render_all_areas()
     Render_depot(depot)
   end
 
-  if OB_CONFIG.engine == "zdoom" or OB_CONFIG.engine == "gzdoom" then
-    if OB_CONFIG.zdoom_skybox == "enable" then
-      Render_skybox()
-    end
-  end
+  Render_skybox()
 
 end
 

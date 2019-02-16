@@ -47,12 +47,13 @@ UI_ARCH.ZDOOM_VISTA_CHOICES =
 {
   "enable",  _("Enable"),
   "disable", _("Disable"),
-  "debug",   _("DEBUG: Enable, and Always Bottomless Pits"),
 }
 
 UI_ARCH.ZDOOM_SKYBOX_CHOICES =
 {
-  "enable",  _("Enable"),
+  "themed",  _("Per Theme"),
+  "random",  _("Random"),
+  "generic", _("Generic"),
   "disable", _("Disable"),
 }
 
