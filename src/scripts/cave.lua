@@ -4390,11 +4390,6 @@ function Cave_prepare_scenic_vista(area)
 
   vista_type = rand.pick(vista_list)
 
-  -- force bottomless pits
-  if OB_CONFIG.zdoom_vista == "debug" then
-    vista_type = "bottomless_drop"
-  end
-
   if (OB_CONFIG.engine == "zdoom" or OB_CONFIG.engine == "gzdoom") and OB_CONFIG.zdoom_vista == "enable" then
     if style_sel("steepness", 0, 0, 0, 1) == 1 then
       vista_type = "bottomless_drop"

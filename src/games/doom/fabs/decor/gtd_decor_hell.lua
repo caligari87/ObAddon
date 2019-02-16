@@ -139,9 +139,11 @@ PREFABS.Decor_pentagram_pedestal =
   size   = 64
 
   bound_z1 = 0
+
+  sink_mode = "never"
 }
 
-PREFABS.Decor_hell_throne =
+PREFABS.Decor_pool_of_guts =
 {
   file   = "decor/gtd_decor_hell.wad"
   map    = "MAP08"
@@ -151,13 +153,9 @@ PREFABS.Decor_hell_throne =
   env    = "building"
 
   where  = "point"
-  size   = 96
-  height = 160
+  size   = 80
 
   bound_z1 = 0
-  bound_z2 = 160
-
-  z_fit = { 144-16,144 }
 
   sink_mode = "never"
 }

@@ -2180,6 +2180,7 @@ function Level_do_styles()
     STYLE.ambushes = "none"
     STYLE.caves = "none"
     STYLE.parks = "none"
+    STYLE.symmetry = "more"
   end
 
 end

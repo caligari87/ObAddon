@@ -1169,6 +1169,7 @@ DOOM.THEMES =
       gtd_window_cage_highbars = 20
       gtd_window_cage_lowbars = 10
       gtd_window_full_open = 30
+      gtd_window_bay = 20
     }
 
     cave_torches =
@@ -1411,6 +1412,7 @@ DOOM.THEMES =
       gtd_window_cage_lowbars = 40
       gtd_window_arched = 40
       gtd_window_full_open = 75
+      gtd_window_bay = 30
     }
 
     cave_torches =

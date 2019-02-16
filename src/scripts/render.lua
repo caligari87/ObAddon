@@ -298,7 +298,7 @@ function Render_edge(E)
 
     -- just throw them Oblige's default minimum room height
     -- if the generated vista is too low
-    if (A.ceil_h - A.floor_h) <= 2 then
+    if (A.ceil_h - A.floor_h) <= 96 then
       A.ceil_h = A.floor_h + 96
     end
 

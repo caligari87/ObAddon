@@ -3,7 +3,7 @@ PREFABS.Pic_bay_windows =
   file   = "picture/gtd_pic_bay_windows.wad"
   map    = "MAP01"
 
-  prob   = 70
+  prob   = 0
   theme = "!hell"
 
   env = "building"
