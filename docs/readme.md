@@ -1,31 +1,22 @@
-# ObFab
-A repository of prefabs for [Oblige](http://oblige.sourceforge.net/)
+# ObAddon
+A repository of prefabs and other enhancements for [Oblige](http://oblige.sourceforge.net/)
 
-## Addons
+# Community
+Currently, the Oblige community resides on an unofficial Discord server since the official forums were shut down. You may join us at the following link:
 
-**For Oblige v7.70**
+[**Unofficial Oblige Discord**](https://discord.gg/AFws8ty)
 
-* [ObFab-Prefabs-7.70.pk3](https://github.com/caligari87/ObFab/releases/download/2018-07-24/ObFab-Prefabs-7.70.pk3) - All the prefabs from the ObFab project.
-* [ObFab-ShapeRules-7.70.pk3](https://github.com/caligari87/ObFab/releases/download/2018-07-24/ObFab-ShapeRules-7.70.pk3) - Additional room shape rules.
-* [ObFab-StretchedMap-7.70.pk3](https://github.com/caligari87/ObFab/releases/download/2018-07-24/ObFab-StretchedMap-7.70.pk3) - Additional room shape rules.
-* [ObFab-PrefabErrorLogger-7.70.pk3](https://github.com/caligari87/ObFab/releases/download/2018-07-24/ObFab-PrefabErrorLogger-7.70.pk3) - Optional error logger for debugging prefabs.
+## Download
+We are in the process of transitioning our development process! For now, new manual builds are being posted every couple days on the Discord server linked above. If the build linked below is very old, please check the `#readme` channel on the server to see if a newer build is available.
 
-**For Oblige v7.59**
-
-* [ObFab-Prefabs-7.59.pk3](https://github.com/caligari87/ObFab/releases/download/2018-07-24/ObFab-Prefabs-7.59.pk3) - All the prefabs from the ObFab project.
-* [ObFab-ShapeRules-7.59.pk3](https://github.com/caligari87/ObFab/releases/download/2018-07-24/ObFab-ShapeRules-7.59.pk3) - Additional room shape rules.
-* [ObFab-StretchedMap-7.59.pk3](https://github.com/caligari87/ObFab/releases/download/2018-07-24/ObFab-StretchedMap-7.59.pk3) - Additional room shape rules.
-* [ObFab-PrefabErrorLogger-7.59.pk3](https://github.com/caligari87/ObFab/releases/download/2018-07-24/ObFab-PrefabErrorLogger-7.59.pk3) - Optional error logger for debugging prefabs.
-
-**For any Oblige v7.xx**
-* [ObFab-SkyGen.pk3](https://github.com/caligari87/ObFab/releases/download/2018-07-24/ObFab-SkyGen.pk3) - Enhanced sky generation.
+[**ObAddon-2-17-19.pk3**](https://cdn.discordapp.com/attachments/405211037344989184/546694387414073347/ObAddon-2-17-19.pk3)
 
 ## Instructions
 
-Installation of prefabs, scripts, and other addons may vary by your Oblige version. Please be sure to follow the correct instructions for your version. The following instructions should apply to Oblige 7.x versions.
+Your `addons/` folder location may vary depending on your operating system and whether Oblige is installed system-wide.
 
-* Download the addon file you want for the version of Oblige you are running (such as v7.70)
-* Place the `.pk3` file into your Oblige `addons/` folder
+* Download ObAddon via the link above.
+* Place `ObAddon.pk3` file into your Oblige `addons/` folder
 * Open Oblige and go to Menu > Addons
-* Place a checkmark next to the addon `.pk3` to enable it.
-* Restart Oblige (if necessary).
+* Place a checkmark next to the addon `ObAddon.pk3` to enable it.
+* Restart Oblige.
