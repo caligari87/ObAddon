@@ -2,12 +2,23 @@
 
 [ CHANGES AFTER 2/14/19 will now be tracked on the ObAddon Git repo again! ]
 
-2/?/19
+2/17/19
+
+- Added Glaice's edits for monster weapon preferences and density.
+- Added Glaice's fix for Garrett's teleporter pad.
+
+- Integrated Garrett's new urban 3D skybox!
+- Included new options for the 3D Skybox picking, but the code for skybox picking options itself still needs work.
 
 - Added now snug-n-tight switches available for non-hell themes.
 - Converted the hell throne fab into a seed fab instead.
 - Converted the fake sky bay windows into real windows instead!
 - Replaced the original hell throne decor with a simple pool-of-guts fab.
+
+- Removed bottomless vista debug option.
+- Enforced "more" symmetry on Procedural Gotchas.
+- Attempted to force the outdoor-liquid-borders rules, instead of the current weird implementation.
+- Attempted to fix the issue vistas still being rendered on mostly indoor maps but are too low of a height for indoors to connect windows to. (still needs more fixing)
 
 Affected files:
                 games/doom/fabs/pic/gtd_pic_hell_throne.wad & .lua
@@ -15,7 +26,14 @@ Affected files:
                                /switch/tight.wad & .lua
                                /switch/tight_UNFINISHED.wad <---[[ REMOVED ]]
                                /window/gtd_window_bay.wad & .lua
-                
+                               
+                games/doom/monsters.lua
+                               
+                scripts/level.lua
+                       /render.lua
+                       /cave.lua
+                       /grower.lua
+                               
 =================================================================================================
 
 2/15/19
