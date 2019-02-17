@@ -1008,7 +1008,7 @@ function ob_default_filename()
 
   local current_date = os.date("*t")
 
-  str = current_date.month .. "-" .. current_date.day .. "-" .. current_date.year .. "-" .. str
+  str = current_date.year .. "-" .. current_date.month .. "-" .. current_date.day .. "-" .. str
 
   return str
 end
