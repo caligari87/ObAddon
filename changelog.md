@@ -1,20 +1,19 @@
-[ /// WARNING: CHANGES MADE BETWEEN 1/17/19 - 1/31/19 WERE NOT PROPERLY DOCUMENTED, SORRY! \\\ ]
+# Changelog
 
-[ CHANGES AFTER 2/14/19 will now be tracked on the ObAddon Git repo again! ]
+WARNING: CHANGES MADE BETWEEN 1/17/19 - 1/31/19 WERE NOT PROPERLY DOCUMENTED, SORRY!
 
-2/17/19
+CHANGES AFTER 2/14/19 will now be tracked on the ObAddon Git repo again!
+
+## 2/17/19
 
 - Added Glaice's edits for monster weapon preferences and density.
 - Added Glaice's fix for Garrett's teleporter pad.
-
 - Integrated Garrett's new urban 3D skybox!
 - Included new options for the 3D Skybox picking, but the code for skybox picking options itself still needs work.
-
 - Added now snug-n-tight switches available for non-hell themes.
 - Converted the hell throne fab into a seed fab instead.
 - Converted the fake sky bay windows into real windows instead!
 - Replaced the original hell throne decor with a simple pool-of-guts fab.
-
 - Removed bottomless vista debug option.
 - Enforced "more" symmetry on Procedural Gotchas.
 - Attempted to force the outdoor-liquid-borders rules, instead of the current weird implementation.
@@ -34,17 +33,13 @@ Affected files:
                        /cave.lua
                        /grower.lua
                                
-=================================================================================================
-
-2/15/19
+## 2/15/19
 
 - All new Procedural Gotchas! Massive single arenas with increased monster quantity strength! Control options include where to place the Procedural Gotchas, as well as how far off an offset from the regular ramp the difficulty is set!
-  + The main control for activating Procedural Gotchas is the architecture panel.
-  + Options for customizing the Gotcha content is under a new module called "Procedural Gotchas".
-
+  - The main control for activating Procedural Gotchas is the architecture panel.
+  - Options for customizing the Gotcha content is under a new module called "Procedural Gotchas".
 - Attempted to fix the issue of vista ceilings working erratically.
 - Allowed outdoor and not-in-building wall fabs to spawn as part of the scenic rooms.
-
 - Fixed a minor texture issue in the tech-themed immersive exit fab.
 - Greatly increased the probability of some left-out vanilla 7.7 fabs to match up with the rest.
 - Added Glaice's texture fixes on the furnace alcoves 'picture' fab, with randomized bodies.
@@ -75,18 +70,14 @@ Affected files:
                                /wall/gtd_wall.wad
                                /start/gtd_generic_open_start.wad & .lua
 
-=================================================================================================
-
-2/14/19
+## 2/14/19
 
 - Only the plain wall fab will ever spawn over seeds that are actually stairs. This is to stop overhangs from interfering with ZDoom ramps, and stop decorative walls in general from weirdly intersecting with staircase fabs.
 - Fixed the issue of jagged outie corners when Sharp Sink Style is selected. The vanilla curved style will unfortunately remain jagged.
 - Added a new generic beamed inset group fab available for all themes.
 - Added support for windows that look out into vistas!
-
 - Included Glaice's updated addon for disabling Oblige's hang lamps.
 - Included Glaice's new addon for disabling the "secret message".
-
 - Added Glaice's texture fixes on the new closet4!
 - ZDoom slopes are now re-activated for outdoors!
 - Fixed texture issues on some fabs.
@@ -110,9 +101,7 @@ Affected files:
                 games/heretic/shapes.lua
                              /shapes_liquid_outdoors.lua
 
-=================================================================================================
-
-2/13/19
+## 2/13/19
 
 - Fixed an issue that broke Doom1/UltDoom support due to Oblige removing whole monsters if a replacement was from an incompatible game. The replacement value itself is now removed, instead of the whole subject monster itself...
 - Added a hack into the theme matching system to force the "Deimos" Doom1 theme to match against all tech and hell-themed rules and fabs, due to the issue of the Deimos theme often running out of definitions (prefabs, rules) due to the lack of explicit Deimos assets.
@@ -124,14 +113,11 @@ Affected files:
                 scripts/monster.lua
                 scripts/oblige.lua
 
-=================================================================================================
-
-2/12/19
+## 2/12/19
 
 - Modified and added new shape rules! (trenches, 1-seed width sinks and elevations)
 - Added Glaice's new exit fab!
 - Default filename mode now affixes the current date to the generated WAD filename.
-
 - Reduced the probability for the immersive start fab. It's probably better to have a control for this rather than use probability at all.
 
 Affected files:
@@ -144,9 +130,7 @@ Affected files:
                                /exit/gtd_generic_immersive_exit.lua
                                /exit/glaice_closet4.wad & .lua
 
-=================================================================================================
-
-2/11/19c
+## 2/11/19c
 
 - Fixed an issue of the new plain start fab causing a fitting error.
 
@@ -154,7 +138,7 @@ Affected files:
 
                 games/doom/fabs/start/gtd_generic_open_start.lua
 
-2/11/19b
+## 2/11/19b
 
 - Fixed an issue with ocean vista surfaces being occasionally higher than the playing area. The ocean vista will now always adapt down to the lowest connected area's floor height.
 - Fixed also an issue of the sky_edge map borders often not being low enough, resulting in a small _DEFAULT texture gap appearing at the edge.
@@ -163,11 +147,10 @@ Affected files:
                 scripts/cave.lua
                 scripts/render.lua
 
-2/11/19
+## 2/11/19
 
 - Added a new map border vista type - oceans! Ocean vistas are simply scenic rooms made entirely of the level's liquid, and will not appear if the level doesn't have any.
 - When several bottomless drop vistas are neighboring, they will try to not be separated by walls (same behavior as oceans).
-
 - Added a new immersive start room for urban theme. Hell theme should be next.
 - Added a new plain start fab - literally just a hole in the wall resembling old pre 7.x starts.
 - Fixed an issue with the generic immersive start fab apparently over-writing the one of the custom hell start fabs.
@@ -185,9 +168,7 @@ Affected files:
                        /layout.lua
                        /cave.lua
 
-=================================================================================================
-
-2/9/19
+## 2/9/19
 
 - Fixed texture issue with the urban marquee - texture option was wrongly spelt.
 - Shape rules: attempted to fix an issue of one of the platform-making sprout rules having a tendency to block off rooms when Oblige engage symmetry on it? (probably because of lack of symmetry information on the rule itself?) If this issue still continues, another solution will be attempted - if that solution also fails, the shape rule causing this problem will be removed.
@@ -198,9 +179,7 @@ Affected files:
                      /heretic/shapes.lua
                              /shapes_liquid_outdoors.lua
 
-=================================================================================================
-
-2/8/19
+# 2/8/19
 
 - Attempted to find a hackish way to get Oblige to use rules with liquid elements at the borders for outdoors. While a level has not yet generated any park features, Oblige will use a completely different set of shape rules from normal until the first park room has been created. This should help fix most assert issues. A more ideal approach is being looked into.
 - Made Oblige stop using sprout and decorate rules with steepness or liquid elements in caves and park areas. This should also fix other assert issues when generating.
@@ -213,16 +192,12 @@ Affected files:
                 heretic/shapes.lua
                 heretic/shapes_liquid_outdoors.lua
 
-=================================================================================================
-
-2/7/19
+## 2/7/19
 
 - Integrated Glaice's rebalancing of monster quantities and changes to lighting!
-
 - Added new neon sign fabs for urban theme outdoors!
 - Added Glaice's new names for Psychedelic theme maps!
 - Seperated the option to have bottomless vistas (ZDoom vista) or the 3D skybox.
-
 - Revised the Trap Styles code as the ratio choices other than 20%/80% were not actually working.
 - Fixed an issue caused by bad code merging on prefab.lua
 - Fixed a texture issue with the one of the hell item shelves adopting the sky ceiling when outdoors.
@@ -255,12 +230,9 @@ Affected files:
                      /doom/shapes.lua
                      /heretic/shapes.lua
 
-=================================================================================================
-
-2/6/19b
+## 2/6/19b
 
 - HOTFIX: Tagged some shape rules to not spawn outdoors due to the continuing issue of parks unable to connect to or resolve against outdoor rooms with liquids at the edges.
-
 - Fixed texture issue in one of the hell item shelf fabs.
 
 Affected file: games/doom/shapes.lua
@@ -270,21 +242,17 @@ Affected file: games/doom/shapes.lua
 
                games/doom/fabs/item/gtd_item_closet_hell.wad
 
-2/6/19
+## 2/6/19
 
 - Integrated Glaice's monster rebalancing and damage reduction on deadly liquids!
-
 - Integrated Frozsoul's Psychedelic 7.7 theme!
-
 - Added a crapload of new liquid shape rules including...
-   - Huge new rooms with liquid-pools!
-   - New rules to expand platforms procedurally into these pools!
-   - New rules to decorate existing rooms with liquids and another touches likes pillars on liquids!
-
+  - Huge new rooms with liquid-pools!
+  - New rules to expand platforms procedurally into these pools!
+  - New rules to decorate existing rooms with liquids and another touches likes pillars on liquids!
 - Added Garrett's new 'hanging framework' fab.
 - Added Garrett's new tech point portal fab.
 - Added new hell grouped walls - "vaults".
-
 - Created a more appropriate shadowed outdoor version of the metal arch fab found in Hell and Urban themes.
 - Fixed texture issues on some staircase and joiner prefabs.
 - Added monster blocking to all teleporter fabs due to large monsters often being stuck in them.
@@ -328,15 +296,12 @@ Affected files:
                 modules/sky_generator.lua
                        /theme_control.lua
 
-=================================================================================================
-
-2/5/19
+## 2/5/19
 
 - All of ObAddon has now been refactored into the 7.7 codebase. There should be no effect to this... hopefully.
 - Added an option to disable all prebuilt levels for Doom 1 and Doom 2 games.
 - 3 new hell item shelf prefabs!
 - Expanded upon the Trap Styles module to have pie-ratios between closet traps or teleporter traps. May need more testing.
-
 - Made some tweaks to shapes, especially the cliff building rules.
 
 Affected files:
@@ -352,14 +317,11 @@ Affected files:
                 games/doom/shapes.lua (formerly scripts/rules.lua in pre-7.7)
                 games/heretic/shapes.lua (formerly scripts/rules.lua in pre-7.7)
 
-=================================================================================================
-
-2/4/19
+## 2/4/19
 
 - A new option to allow or disallow monsters to spawn in secret rooms with selection for NONE, yes but at weakened strength, and yes at full typical strength (as per prefered monster properties).
 - Added a 6.20 style 128-height lift!
 - Re-activated and refitted an old unfinished item locker prefab as well as added a new one.
-
 - Normalized the values for some lift prefab spawn probabilities. (increased chances for lift-stairs, but reduced chances for the lift-joiners, especially on lift4)
 - Attempted to revise code for the Trap Styles selector. Instead of intercepting the moment a trap is installed, it intercepts the actual room tagging for trap types instead.
 
@@ -379,13 +341,10 @@ Affected files: scripts/monster.lua
 
                 prefabs/joiners/gtd_zigzag_lift.lua
 
-=================================================================================================
-
-2/2/19
+## 2/2/19
 
 - Added an option for Trap Styles, with the ability to choose between monster closet traps or teleporter traps, or default (both).
 - Added a new feature: the ZDoom Vista. If enabled, Oblige will render a custom 3D skybox into the map and allow for bottomless pits to form the map borders, giving the look of being on a rooftop or top of a mountain. Is currently unfinished and features only one 3D skybox prefab.
-
 - Transfered the Layout Absurdifier controls into the main architecture UI instead. The original script module is no longer necessary.
 - Removed the " - Copy" affix from gtd_wall.lua
 - Fixed an issue with a shape rule causing an error when generated outside.
@@ -406,12 +365,9 @@ Affected files: [REMOVE]--> modules/layout_absurdifier.lua
 
                 [RENAME] prefabs/wall/gtd_wall - Copy.lua --> prefabs/wall/gtd_wall.lua
 
-=================================================================================================
-
-2/1/19
+## 2/1/19
 
 - Added the Layout Absurdifier module! The layout absurdifier module creates a chance for a map to abuse a specific set of shape rules to look completely different and unique i.e. ridiculous amount of staircases, too many 1x1 pools of liquid, cages on every wall, etc.
-
 - Fixed an texturing issue with the new generic 128-height staircase fabs.
 - Outright removed the cage on the diagonal wall lamp fab to fix the cage texture issue.
 - Added make-new-area shape rules for the cliff-making rules. Decreased the probability of shapes with stairs running parallel to cliffs.
@@ -426,9 +382,7 @@ Affected files: prefabs/stairs/gtd_stairs_128.wad
                 scripts/grower.lua
                 modules/layout_absurdifier.lua
 
-=================================================================================================
-
-1/31/19
+## 1/31/19
 
 - Expanded monster quantity choices and extended control module for monster quantity Mix It Up.
 - Added new generic 128-height staircase fab.

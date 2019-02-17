@@ -1,31 +1,11 @@
 # Credits
-By username that provided the original files
 
-## MsrSgtShooterPerson
-```
-decor/gtd_ceil_light.lua
-decor/gtd_ceil_light.wad
-decor/gtd_decor.dbs
-decor/gtd_decor.lua
-decor/gtd_decor.wad
-decor/gtd_decor_hell.lua
-decor/gtd_decor_hell.wad
-decor/gtd_decor_techoutdoors.lua
-decor/gtd_decor_techoutdoors.wad
+* **Andrew Apted** - The creator of Oblige.
 
-fence/gtd_fence_16.lua
-fence/gtd_fence_16.wad
-fence/gtd_fence_hell_16.lua
-fence/gtd_fence_hell_16.wad
+* **MsrSgtShooterPerson** - Repository maintainer, prefabs, shape rules, new modules, documentation.
+* **Glaice** - Original base tweaks to Oblige v7.59, prefabs.
+* **Frozsoul** - Prefabs.
+* **Garrett** - Prefabs.
+* **Caligari87** - Repository maintainer.
 
-wall/gtd_outwall_tech.lua
-wall/gtd_outwall_tech.wad
-wall/gtd_wall.lua
-wall/gtd_wall.wad
-wall/gtd_wall_fake_windows.lua
-wall/gtd_wall_fake_windows.wad
-wall/gtd_wall_hell.lua
-wall/gtd_wall_hell.wad
-wall/gtd_wall_set2.lua
-wall/gtd_wall_set2.wad
-```
+And the rest of the Oblige enthusiasts out there! If your name isn't her and should be, or any of the above needs to be fixed, please contact a repository maintainer either here on GitHub or the Oblige Discord server.
