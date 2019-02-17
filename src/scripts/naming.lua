@@ -1494,6 +1494,74 @@ namelib.NAMES =
         ["Welcome to Thy Doom"]=10
         ["What Color is Death?"]=10
         ["You May Not Pass!"]=10
+
+        -- MSSP adds names
+
+        ["1999"]=10
+        ["Absolute Terror Field"]=10
+        ["Appointment in Samarra"]=10
+        ["Armaggeddon"]=10
+        ["A Study In Red"]=10
+        ["Bad News"]=10
+        ["Bellum Infinitus"]=10
+        ["Big Guts"]=10
+        ["Bloodlust"]=10
+        ["Bring It"]=10
+        ["Catch-22"]=10
+        ["Damnation"]=10
+        ["Danger Zone"]=10
+        ["Dead Reckoning"]=10
+        ["Diabolus Ex"]=10
+        ["Don't Stop Me Now"]=10
+        ["Doom Eternal"]=10
+        ["Do You Want To Live Forever?"]=10
+        ["Exterminatus"]=10
+        ["Fear No Evil"]=10
+        ["Forlorn Hope"]=10
+        ["FUBAR"]=10
+        ["Fucking Run"]=10
+        ["Get Psyched!"]=10
+        ["Greased"]=10
+        ["Hardboiled"]=10
+        ["He Comes"]=10
+        ["Hellraiser"]=10
+        ["Here Comes the Night Train"]=10
+        ["Highway to Hell"]=10
+        ["I Don't Feel So Good"]=10
+        ["Judgement"]=10
+        ["Max Pain"]=10
+        ["Objective: Survive"]=10
+        ["No Rest For The Wicked"]=10
+        ["No Man's Land"]=10
+        ["No One Escapes"]=10
+        ["No Surrender"]=10
+        ["One Doomed Marine"]=10
+        ["Oof!"]=10
+        ["On Your Knees"]=10
+        ["Ouch!"]=10
+        ["Owie!"]=10
+        ["Painkiller"]=10
+        ["Pressure"]=10
+        ["Rains of Castamere"]=10
+        ["Realm of the Mad God"]=10
+        ["Red Alert"]=10
+        ["Resistence is Futile"]=10
+        ["Run"]=10
+        ["Seven Trumpets Sounding"]=10
+        ["Standoff"]=10
+        ["Stranglehold"]=10
+        ["Suicide Mission"]=10
+        ["Tears in the Rain"]=10
+        ["The Game Is On"]=10
+        ["The Sentinel's Playground"]=10
+        ["The Throne of Skulls"]=10
+        ["The Tribute"]=10
+        ["The World Burns"]=10
+        ["Trauma Conga Line"]=10
+        ["Wild Hunt"]=10
+        ["You Are Already Dead"]=10
+        ["You'll See"]=10
+        ["Zone of Alienation"]=10
       }
     }
   }
@@ -1697,6 +1765,42 @@ namelib.NAMES =
         ["You'll Shoot Your Eye Out"]=10
         ["Yloh Elbib"]=10
         ["Zone of a Billion Deaths"]=10
+
+        -- MSSP adds names
+        ["404 Not Found"]=10
+        ["Deleting System32"]=10
+        ["Device is not Responding"]=10
+        ["Hard Fault"]=10
+        ["Invalid String Value"]=10
+        ["LEV.description"]=10
+        ["Memory Dump"]=10
+        ["Please Reinstall Drivers"]=10
+        ["You Have 23 Infections!!!"]=10
+        ["Your System Is Below Requirements"]=10
+
+        ["1000-Degree Knives"]=10
+        ["Bad Unboxing"]=10
+        ["Chocolate Rain"]=10
+        ["Drink More Water"]=10
+        ["EA Sports. It's In The Game"]=10
+        ["Hey Sup Beautiful Bastards"]=10 --if we're really doing popular YouTubers
+        ["Nobody Got Time For That"]=10
+        ["VGCG"]=10
+        ["You Wouldn't Steal a Car"]=10
+
+        --literature (or derived/deviated from them)
+        ["Brave New World"]=10
+        ["Caught in the Rye"]=10
+        ["Silence of the Lambs"]=10
+        ["The Dragon Tattoo"]=10
+        ["The Raven"]=10
+
+        --bands or songs (generally or sort of psychedelic)
+        ["Here Comes The Rooster"]=10
+        ["Here Comes The Sun"]=10
+        ["Good Times Bad Times"]=10
+        ["White Rabbit"]=10
+        ["Tame Impala"]=10
       }
     }
   }
