@@ -2391,16 +2391,24 @@ end
 
 function Render_skybox()
 
-  local skyfab_list = {}
-
-  -- this is really not ideal
-  table.insert(skyfab_list, PREFABS["Skybox_garrett_city"])
-  table.insert(skyfab_list, PREFABS["Skybox_generic"])
+  local skyfab
 
   if OB_CONFIG.zdoom_skybox == "random" then
+    local skyfab_list = {}
+    table.insert(skyfab_list, PREFABS["Skybox_generic"])
+    table.insert(skyfab_list, PREFABS["Skybox_garrett_city"])
     skyfab = rand.pick(skyfab_list)
+
+    -- proper skybox picking code doesn't seem to work and
+    -- always returns nil
+
+    --[[local reqs =
+    {
+      kind = "skybox"
+    }
+    skyfab = Fab_pick(reqs)]]
+
   elseif OB_CONFIG.zdoom_skybox == "themed" then
-  -- this should really use the proper sorting and picking code, not stuff like this
     if LEVEL.theme_name == "urban" then
       skyfab = PREFABS["Skybox_garrett_city"]
     else

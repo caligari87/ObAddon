@@ -270,7 +270,7 @@ DOOM.MONSTERS =
     id = 65
     r = 20
     h = 56
-    level = 3
+    level = 2.6 --3
     prob = 60
     health = 70
     damage = 5.5
@@ -360,6 +360,7 @@ DOOM.MONSTERS =
     damage = 10.7
     attack = "missile"
     weap_min_damage = 60
+    weap_prefs = { launch=3.0, super=2.0, plasma=2.0, chain=1.2 }
     replaces = "mancubus"
     replace_prob = 25
     density = 0.5
@@ -382,8 +383,9 @@ DOOM.MONSTERS =
     health = 700
     damage = 25
     attack = "hitscan"
-    density = 0.15
+    density = 0.17
     room_size = "medium"
+    weap_prefs = { launch=2.0, super=3.0, plasma=2.0, bfg=1.5 }
     weap_min_damage = 120
     nasty = true
     infight_damage = 18
@@ -403,10 +405,10 @@ DOOM.MONSTERS =
     health = 900  -- 400 + 5 skulls
     damage = 14.5 -- about 5 skulls
     attack = "missile"
-    density = 0.1
+    density = 0.15
     float = true
     weap_min_damage = 100
-    weap_prefs = { launch=0.1 }
+    weap_prefs = { launch=2.0, super=3.0, chain=1.2, shotty=0.7 }
     room_size = "any" --large
     cage_factor = 0  -- never put in cages
     infight_damage = 4.5 -- guess
