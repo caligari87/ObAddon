@@ -186,12 +186,12 @@ function DOOM.get_levels()
       LEV.name_class = LEV.prebuilt.name_class or "BOSS"
     end
     -- procedural gotcha management code
-    
+
     -- Prebuilts are to exist over procedural gotchas
     -- this means procedural gotchas will not override
     -- Icon of Sin for example if prebuilts are still on
     if not LEV.prebuilt then
-    
+
       --handling for the Final Only option
       if OB_CONFIG.procedural_gotchas == "final" then
         if OB_CONFIG.length == "single" then
@@ -204,34 +204,34 @@ function DOOM.get_levels()
           if map == 30 then LEV.is_procedural_gotcha = true end
         end
       end
-      
+
       --every 10 maps
       if OB_CONFIG.procedural_gotchas == "10" then
         if map == 10 or map == 20 or map == 30 then
           LEV.is_procedural_gotcha = true
         end
       end
-      
+
       --5% of maps after map 4
       if OB_CONFIG.procedural_gotchas == "5p" then
-        if map > 4 then 
+        if map > 4 then
           if rand.odds(5) then LEV.is_procedural_gotcha = true end
         end
       end
-      
+
       -- 10% of maps after map 4
       if OB_CONFIG.procedural_gotchas == "10p" then
         if map > 4 then
           if rand.odds(10) then LEV.is_procedural_gotcha = true end
         end
       end
-      
+
       -- for masochists... or debug testing
       if OB_CONFIG.procedural_gotchas == "all" then
         LEV.is_procedural_gotcha = true
       end
     end
-    
+
     if MAP_NUM == 1 or (map % 10) == 3 then
       LEV.demo_lump = string.format("DEMO%d", ep_index)
     end
