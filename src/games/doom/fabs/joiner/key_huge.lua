@@ -10,6 +10,8 @@ PREFABS.Locked_huge_red =
 
   prob   = 200
 
+  theme  = "!tech"
+
   where  = "seeds"
   shape  = "I"
 
@@ -50,6 +52,44 @@ PREFABS.Locked_huge_yellow =
   line_135    = 137
 }
 
+-- Tech variant -MSSP
+
+PREFABS.Locked_huge_red_tech =
+{
+  template     = "Locked_huge_red"
+
+  theme        = "tech"
+
+  tex_BIGDOOR6 = "BIGDOOR4"
+}
+
+PREFABS.Locked_huge_blue_tech =
+{
+  template     = "Locked_huge_red"
+
+  theme        = "tech"
+
+  tex_BIGDOOR6 = "BIGDOOR4"
+
+  key          = "k_blue"
+
+  tex_DOORRED  = "DOORBLUE"
+  line_135     = 133
+}
+
+PREFABS.Locked_huge_yellow_tech =
+{
+  template     = "Locked_huge_red"
+
+  theme        = "tech"
+
+  tex_BIGDOOR6 = "BIGDOOR4"
+
+  key          = "k_yellow"
+
+  tex_DOORRED  = "DOORYEL"
+  line_135     = 137
+}
 
 --------------------------------------------
 ------- Another huge locked door -----------
