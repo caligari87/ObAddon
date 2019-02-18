@@ -989,7 +989,7 @@ function Grower_decide_extents()
 
   if not LEVEL.is_stretched then
     LEVEL.min_coverage = int(LEVEL.map_W * LEVEL.map_H * 0.85)
-  elseif LEVEL.is_stretched and not LEVEL.is_procedural_gotcha then
+  elseif LEVEL.is_stretched then
     LEVEL.min_coverage = int(LEVEL.map_W * LEVEL.map_H)
   end
 end
