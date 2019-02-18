@@ -73,7 +73,7 @@ PREFABS.Locked_huge_blue_tech =
 
   key          = "k_blue"
 
-  tex_DOORRED  = "DOORBLUE"
+  tex_DOORRED  = "DOORBLU"
   line_135     = 133
 }
 
