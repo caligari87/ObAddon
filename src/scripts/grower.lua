@@ -911,7 +911,7 @@ function Grower_decide_extents()
   -- decides how much of the map we can use for growing rooms.
   --
 
-  if OB_CONFIG.size != "stretched" then
+  if OB_CONFIG.stretched != "yes" then
     assert(LEVEL.map_W < SEED_W)
     assert(LEVEL.map_H < SEED_H)
   end
@@ -987,7 +987,11 @@ function Grower_decide_extents()
 
   -- calculate the coverage target
 
-  LEVEL.min_coverage = int(LEVEL.map_W * LEVEL.map_H * 0.85)
+  if not LEVEL.is_stretched then
+    LEVEL.min_coverage = int(LEVEL.map_W * LEVEL.map_H * 0.85)
+  elseif LEVEL.is_stretched and not LEVEL.is_procedural_gotcha then
+    LEVEL.min_coverage = int(LEVEL.map_W * LEVEL.map_H)
+  end
 end
 
 

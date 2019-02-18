@@ -23,7 +23,6 @@ UI_ARCH.SIZES =
   "epi",     _("Episodic"),
   "prog",    _("Progressive"),
   "mixed",   _("Mix It Up"),
-  "stretched", _("Stretched-Out"),
 
   -- this is a separator (not a usable choice)
   "_",       "_",
@@ -74,6 +73,12 @@ UI_ARCH.PROC_GOTCHA_CHOICES =
   "all",   _("Everything"),
 }
 
+UI_ARCH.STRECHED_OUT_CHOICES =
+{
+  "yes", _("Yes"),
+  "no",  _("No"),
+}
+
 OB_MODULES["ui_arch"] =
 {
   label = _("Architecture")
@@ -83,7 +88,16 @@ OB_MODULES["ui_arch"] =
 
   options =
   {
-    { name="size",         label=_("Level Size"), choices=UI_ARCH.SIZES,  default="epi",  gap=1 }
+    { name="size",         label=_("Level Size"), choices=UI_ARCH.SIZES,  default="epi" }
+    
+    {
+      name = "stretched",  
+      label=_("Stretched Mode"),
+      choices=UI_ARCH.STRECHED_OUT_CHOICES
+      default = "no"
+      tooltip = "Causes the width of the map to compress, creating a long, thin map layout. The height is still influenced by the prefered level size above."
+      gap=1
+    }
 
     { name="outdoors",     label=_("Outdoors"),   choices=STYLE_CHOICES }
     { name="caves",        label=_("Caves"),      choices=STYLE_CHOICES }

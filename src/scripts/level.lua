@@ -180,7 +180,7 @@ function Level_determine_map_size(LEV)
   else
     -- Named sizes --
 
-    local SIZES = { small=26, regular=36, large=48, extreme=68, stretched=72 }
+    local SIZES = { small=26, regular=36, large=48, extreme=68 }
 
     W = SIZES[ob_size]
   end
@@ -200,19 +200,24 @@ function Episode_determine_map_sizes()
   each LEV in GAME.levels do
     local W, H = Level_determine_map_size(LEV)
 
-    if OB_CONFIG.size == "stretched" then
-      W = 7
-      H = 112
-      SEED_H = 112
+    if OB_CONFIG.stretched == "yes" then
+      H = 7
+      SEED_H = 16
+      W = int(W * 2)
+      LEV.is_stretched = true
     end
 
     if LEV.is_procedural_gotcha == true then
       W = 26
       H = 26
+      if OB_CONFIG.stretched == "yes" then
+        W = 56
+        H = 7
+      end
     end
 
     -- sanity check
-    if OB_CONFIG.size != "stretched" then
+    if OB_CONFIG.stretched != "yes" then
       assert(W + 4 <= SEED_W)
       assert(H + 4 <= SEED_H)
     end
