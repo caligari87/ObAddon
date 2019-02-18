@@ -1,4 +1,6 @@
 # ObAddon
+![ObAddon Title Graphic](https://i.imgur.com/ux4QNv1.png)
+
 A repository of prefabs and other enhancements for [Oblige](http://oblige.sourceforge.net/)
 
 # Community
