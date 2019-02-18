@@ -85,6 +85,14 @@ UI_MONS.TRAP_STYLE =
   "80",        _("80% Closets - 20% Teleports"),
 }
 
+UI_MONS.TRAP_STRENGTH =
+{
+  "weaker",   _("Weaker"),
+  "normal",   _("Normal"),
+  "stronger", _("Stronger"),
+  "mixed",    _("Mix It Up"),
+}
+
 UI_MONS.SECRET_MONSTERS =
 {
   "yesyes", _("Yes - Full Strength"),
@@ -117,7 +125,7 @@ OB_MODULES["ui_mons"] =
       tooltip="If you have Mix It Up selected, you can define the upper bound here. Otherwise, this option is simply ignored."
     }
 
-        {
+    {
       name="mix_it_up_lower_range",
       label=_("Mixed Lower Range"),
       choices=UI_MONS.MIX_QUANTITIES,
@@ -135,8 +143,16 @@ OB_MODULES["ui_mons"] =
       name="trap_style",
       label=_("Trap Style"),
       choices=UI_MONS.TRAP_STYLE,
+      default="default",
+      tooltip="This option selects between using only teleport or closet traps. DEFAULT means both are used.",
+    }
+    {
+      name="trap_strength",
+      label=_("Trap Monsters"),
+      choices=UI_MONS.TRAP_STRENGTH,
+      default="normal",
+      tooltip="Changes the quantity of ambushing monsters from traps.",
       gap=1
-      tooltip="This option selects between using only teleport or closet traps. DEFAULT means both are used."
     }
     { name="cages",     label=_("Cages"),     choices=STYLE_CHOICES,  gap=1 }
 

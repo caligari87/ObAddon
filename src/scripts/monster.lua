@@ -1969,8 +1969,20 @@ gui.debugf("wants =\n%s\n\n", table.tostr(wants))
     -- determine quantity, applying user settings
     local qty = calc_quantity() + 30
     local f   = gui.random()
+    
+    local trap_weaken_factor
+    
+    if OB_CONFIG.trap_strength == "stronger" then
+      trap_weaken_factor = rand.range(100,180)
+    elseif OB_CONFIG.trap_strength == "normal" then
+      trap_weaken_factor = rand.range(180,360)
+    elseif OB_CONFIG.trap_strength == "weaker" then
+      trap_weaken_factor = rand.range(360,800)
+    elseif OB_CONFIG.trap_strength == "mixed" then
+      trap_weaken_factor = rand.range(100,800)
+    end
 
-    local want = total * qty / rand.pick({ 100,110,120,130,140,150,160,170,180,190,200,210,220 }) + f * f --qty is 250
+    local want = total * qty / trap_weaken_factor + f * f --qty is 250
     --local want = total * qty / 130 + f * f --qty is 250 --Original edit
 
     if spot.use_factor then
