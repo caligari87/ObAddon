@@ -1322,9 +1322,9 @@ SPROUT_DIRECT_2_EMERGENCY =
 SPROUT_DIRECT_THIN_EMERGENCY =
 {
   emergency = true
-  
+
   prob = 175
-  
+
   structure =
   {
     "..","RR"
@@ -1332,7 +1332,7 @@ SPROUT_DIRECT_THIN_EMERGENCY =
     "..","11"
     "x1","x1"
   }
-  
+
   new_room =
   {
     conn = { x=1, y=2, w=2, dir=8 }
@@ -4165,7 +4165,7 @@ GROW_LIQUID_CANAL_EXIT =
 GROW_LIQUID_EMERGENCY_EXIT =
 {
   prob = 50
-  
+
   pass = "exit1_closet"
 
   structure =
@@ -6135,7 +6135,7 @@ GROW_CLIFF_EXTENSION_INNER_CURVE =
 GROW_CLIFF_EXTENSION_WIDEN =
 {
   prob = 500
-  
+
   structure =
   {
     ".....","./111"
@@ -6143,7 +6143,7 @@ GROW_CLIFF_EXTENSION_WIDEN =
     "2....","22222"
     ".....",".%222"
   }
-  
+
   diagonals =
   {
     ".1"
@@ -6292,37 +6292,43 @@ GROW_CLIFF_EXTENSION_NEW_AREA_INWARD_X2 =
 DECORATE_CLIFF_CAGE =
 {
   prob = 3
-  
+
   structure =
   {
     "111","111"
     "111","1C1"
     "222","222"
   }
+
+  cage_mode = "fancy"
 }
 
 DECORATE_CLIFF_CAGE_3X_ROW =
 {
   prob = 3
-  
+
   structure =
   {
     "11111","11111"
     "11111","1CCC1"
     "22222","22222"
   }
+
+  cage_mode = "fancy"
 }
 
 DECORATE_CLIFF_CAGE_3X_STAGGERED =
 {
   prob = 3
-  
+
   structure =
   {
     "1111111","1111111"
     "1111111","1C1C1C1"
     "2222222","2222222"
   }
+
+  cage_mode = "fancy"
 }
 
 -- MSSP's huge liquid rooms. [HUGE-LIQUID]
@@ -7251,7 +7257,7 @@ GROW_TRENCH_CURVED =
 GROW_SEWER_ENTRY =
 {
   prob = 35
-  
+
   structure =
   {
     "1..","111"
@@ -7263,7 +7269,7 @@ GROW_SEWER_ENTRY =
 GROW_SEWER_STRAIGHT =
 {
   prob = 150
-  
+
   structure =
   {
     "1..","111"
@@ -7272,10 +7278,22 @@ GROW_SEWER_STRAIGHT =
   }
 }
 
+GROW_SEWER_STAIRS =
+{
+  prob = 40
+
+  structure =
+  {
+    "1...","1>AA"
+    "~...","~~~~"
+    "1...","1>AA"
+  }
+}
+
 GROW_SEWER_SWERVE =
 {
   prob = 40
-  
+
   structure =
   {
      "1...","111%"
@@ -7283,7 +7301,7 @@ GROW_SEWER_SWERVE =
      "1...","11%~"
      "x...","x%11"
   }
-  
+
   diagonals =
   {
     "1."
@@ -7296,7 +7314,7 @@ GROW_SEWER_SWERVE =
 GROW_SEWER_CURVED =
 {
   prob = 65
-  
+
   structure =
   {
     "1...","1111"
@@ -7304,7 +7322,7 @@ GROW_SEWER_CURVED =
     "1...","1%~1"
     "x...","x1~1"
   }
-  
+
   diagonals =
   {
     "~1"
@@ -7315,12 +7333,24 @@ GROW_SEWER_CURVED =
 GROW_SEWER_EXIT =
 {
   prob = 20
-  
+
   structure =
   {
     "1..","111"
     "~..","~~1"
     "1..","111"
+  }
+}
+
+GROW_SEWER_STAIRS_SIDE_EXIT_NEW_AREA =
+{
+  prob = 40
+
+  structure =
+  {
+    "1.....","1>AA11"
+    "~.....","~~~~~1"
+    "1.....","111111"
   }
 }
 
