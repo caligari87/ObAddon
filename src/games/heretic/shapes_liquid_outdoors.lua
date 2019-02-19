@@ -7201,6 +7201,72 @@ DECORATE_LIQUID_PILLAR_3X =
   }
 }
 
+DECORATE_LIQUID_MOAT_ROW =
+{
+  prob = 4
+
+  structure =
+  {
+    "11111","11111"
+    "22222","2~~~2"
+    "22222","22222"
+  }
+}
+
+DECORATE_LIQUID_MOAT_CORNER_OUTER =
+{
+  prob = 4
+  
+  structure =
+  {
+  
+    "x122","x122"
+    "1122","11~2"
+    "2222","2~~2"
+    "2222","2222"
+  }
+}
+
+DECORATE_LIQUID_MOAT_CORNER_INNER =
+{
+  prob = 4
+  
+  structure =
+  {
+  
+    "x112","x112"
+    "1112","11~2"
+    "1112","1~~2"
+    "2222","2222"
+  }
+}
+
+DECORATE_LIQUID_MOAT_EXTEND =
+{
+  prob = 10
+  
+  structure =
+  {
+    "111","111"
+    "~22","~~2"
+    "222","222"
+  }
+}
+
+SMOOTHER_LIQUID_MOAT_MERGE =
+{
+  pass = "smoother"
+
+  prob = 50
+  
+  structure =
+  {
+    "111","111"
+    "~2~","~~~"
+    "222","222"
+  }
+}
+
 -- MSSP's single-seed trenches. [TRENCHES]
 
 GROW_TRENCH_ENTRY =
