@@ -3,7 +3,7 @@ PREFABS.Joiner_pillaged_shop =
   file   = "joiner/gtd_ruins.wad"
   map    = "MAP01"
 
-  prob   = 500
+  prob   = 350
 
   theme  = "urban"
 
@@ -24,7 +24,7 @@ PREFABS.Joiner_bombed_building =
   file = "joiner/gtd_ruins.wad"
   map = "MAP02"
 
-  prob = 500
+  prob = 350
 
   theme = "urban"
 
