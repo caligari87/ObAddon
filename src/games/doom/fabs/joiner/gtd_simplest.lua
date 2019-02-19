@@ -3,7 +3,7 @@ PREFABS.Joiner_simplest =
   file   = "joiner/gtd_simplest.wad"
   map    = "MAP01"
 
-  prob   = 150
+  prob   = 250
   
   where  = "seeds"
   shape  = "I"
