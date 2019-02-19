@@ -57,7 +57,9 @@ Adds a HUGE library of prefabricates to decorate maps, a collection spanning mon
 * PsYcHeDeLiC theme.
 
 * Layout Absurdification! This module attempts to create more interesting maps by forcing certain shape rules in the grammar set to be much more prominent than normal.
-  
+
+* Strecthed mode! Create extremely long, stringy levels that expand towards only one direction - forwards or backwards!
+
 * Toggle for turning prebuilt levels on or off.
   
 * Exposed parameters for the Sky Generator such as day/night and mountain settings. Play an entire generated WAD at night mood... for the mood.
