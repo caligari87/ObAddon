@@ -17,5 +17,5 @@ PREFABS.Joiner_simplest =
   bound_z1 = -16
 
   x_fit = {60 , 68}
-  y_fit = "frame"
+  y_fit = {72, 88}
 }
