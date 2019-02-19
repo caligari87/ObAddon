@@ -78,8 +78,6 @@ Adds a HUGE library of prefabricates to decorate maps, a collection spanning mon
 
 * Buildings with windows that open into vistas.
 
-* Experimental "Stretched-Out" size tries to make the map stretchy and longitudinal.
-
 * New control to select ceiling and floor sink styles: curved and flowy, or sharp and angular.
 
 AND MORE TO COME!
