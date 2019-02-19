@@ -6,7 +6,7 @@ PREFABS.Switch_wall_tight =
 
   theme = "!hell"
 
-  prob   = 100 --considering the prob of the niche# fabs, this is playing nice...
+  prob   = 50
 
   where  = "seeds"
   seed_w = 1
