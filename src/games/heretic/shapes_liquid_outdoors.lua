@@ -6289,6 +6289,42 @@ GROW_CLIFF_EXTENSION_NEW_AREA_INWARD_X2 =
   }
 }
 
+DECORATE_CLIFF_CAGE =
+{
+  prob = 3
+  
+  structure =
+  {
+    "111","111"
+    "111","1C1"
+    "222","222"
+  }
+}
+
+DECORATE_CLIFF_CAGE_3X_ROW =
+{
+  prob = 3
+  
+  structure =
+  {
+    "11111","11111"
+    "11111","1CCC1"
+    "22222","22222"
+  }
+}
+
+DECORATE_CLIFF_CAGE_3X_STAGGERED =
+{
+  prob = 3
+  
+  structure =
+  {
+    "1111111","1111111"
+    "1111111","1C1C1C1"
+    "2222222","2222222"
+  }
+}
+
 -- MSSP's huge liquid rooms. [HUGE-LIQUID]
 
 GROW_HUGE_LIQUID_ROOM_ZIGZAG =
