@@ -7203,7 +7203,7 @@ DECORATE_LIQUID_PILLAR_3X =
 
 DECORATE_LIQUID_MOAT_ROW =
 {
-  prob = 4
+  prob = 10
 
   structure =
   {
@@ -7215,7 +7215,7 @@ DECORATE_LIQUID_MOAT_ROW =
 
 DECORATE_LIQUID_MOAT_CORNER_OUTER =
 {
-  prob = 4
+  prob = 10
   
   structure =
   {
@@ -7229,7 +7229,7 @@ DECORATE_LIQUID_MOAT_CORNER_OUTER =
 
 DECORATE_LIQUID_MOAT_CORNER_INNER =
 {
-  prob = 4
+  prob = 10
   
   structure =
   {
