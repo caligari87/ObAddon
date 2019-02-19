@@ -899,8 +899,10 @@ function Grower_calc_rule_probs()
     end
   end
 
-  Grower_absurdify(SHAPE_GRAMMAR)
-  Grower_absurdify(SHAPE_GRAMMAR_LIQUID_OUTDOORS)
+  if not LEVEL.is_procedural_gotcha then
+    Grower_absurdify(SHAPE_GRAMMAR)
+    Grower_absurdify(SHAPE_GRAMMAR_LIQUID_OUTDOORS)
+  end
 
 end
 
@@ -1404,7 +1406,7 @@ function Grower_grammatical_pass(R, pass, apply_num, stop_prob,
     end
   end
 
-  gui.printf("# of natural rooms: " .. natural_rooms .. "\n")
+  --gui.printf("# of natural rooms: " .. natural_rooms .. "\n")
 
   -- This code tries to only use liquid-borders if the prior room was not a park.
 
