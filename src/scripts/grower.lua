@@ -711,7 +711,7 @@ function Grower_preprocess_grammar()
 
   ---| Grower_preprocess_grammar |---
 
-  local gramgram = SHAPE_GRAMMAR
+  --local gramgram = SHAPE_GRAMMAR
   local gramgram2 = SHAPE_GRAMMAR_LIQUID_OUTDOORS
 
   local function process_some_cool_grammars(grammar)
@@ -762,7 +762,7 @@ function Grower_preprocess_grammar()
       end
   end
 
-  process_some_cool_grammars(gramgram)
+  --process_some_cool_grammars(gramgram)
 
   process_some_cool_grammars(gramgram2)
 
@@ -876,13 +876,15 @@ function Grower_calc_rule_probs()
     print("This level is not absurd...\n")
   end
 
-  if LEVEL.is_procedural_gotcha and OB_CONFIG.layout_absurdity then
+  if LEVEL.is_procedural_gotcha and level_is_absurd == true then
     print("This level doesn't need to be absurd. GOTCHA!\n")
   end
 
   local function Grower_absurdify(grammarset)
     each name,rule in grammarset do
       rule.use_prob = calc_prob(rule)
+      
+      if LEVEL.is_procedural_gotcha then continue end
 
       if level_is_absurd == true then
         local shape_absurd_chance = rand.range(0,100)
@@ -899,10 +901,7 @@ function Grower_calc_rule_probs()
     end
   end
 
-  if not LEVEL.is_procedural_gotcha then
-    Grower_absurdify(SHAPE_GRAMMAR)
-    Grower_absurdify(SHAPE_GRAMMAR_LIQUID_OUTDOORS)
-  end
+  Grower_absurdify(SHAPE_GRAMMAR_LIQUID_OUTDOORS)
 
 end
 

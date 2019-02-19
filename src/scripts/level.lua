@@ -755,6 +755,12 @@ function Episode_plan_monsters()
 
 --  stderrf("  count %1.2f for '%s'\n", count, mon)
 
+    if LEV.is_procedural_gotcha then
+      if count < 1 then
+        count = count + 1
+      end
+    end
+
     local FIGHT =
     {
       mon = mon
@@ -1455,7 +1461,7 @@ function Episode_plan_weapons()
 
     -- prefer simpler weapons for start rooms
     -- [ except in crazy monsters mode, player may need a bigger weapon! ]
-    if is_start and OB_CONFIG.strength != "crazy" then
+    if is_start and OB_CONFIG.strength != "crazy" or LEV.is_procedural_gotcha != "true" then
       if level <= 2 then prob = prob * 4 end
       if level == 3 then prob = prob * 2 end
 
