@@ -33,7 +33,7 @@
 
 gui.printf("Doom shape rules now being loaded!\n")
 
-SHAPE_GRAMMAR_LIQUID_OUTDOORS =
+SHAPE_GRAMMAR =
 {
 
 ROOT_1 =
@@ -6136,6 +6136,8 @@ GROW_CLIFF_EXTENSION_WIDEN =
   }
 }
 
+-- 2x2 cliffs
+
 GROW_CLIFF_EXTENSION_X2 =
 {
   prob = 3000
@@ -6273,6 +6275,164 @@ GROW_CLIFF_EXTENSION_NEW_AREA_INWARD_X2 =
     "2..","222"
   }
 }
+
+-- 4x cliffs
+
+GROW_CLIFF_ENTRY_X4 =
+{
+  prob = 200
+
+  structure =
+  {
+    "........","1111AAAA"
+    "........","1111AAAA"
+    "........","1111^^^^"
+    "........","11111111"
+    "........","11111111"
+    "x11xxxxx","x11xxxxx"
+  }
+}
+
+GROW_CLIFF_ENTRY_SIDEWAYS_X4 =
+{
+  prob = 200
+
+  structure =
+  {
+    "x11x....","x11x...."
+    "........","111>AAAA"
+    "........","111>AAAA"
+    "........","111>AAAA"
+    "........","111>AAAA"
+    "........","1111AAAA"
+  }
+}
+
+GROW_CLIFF_STRAIGHT_X4 =
+{
+  prob = 1500
+
+  aversion = -500
+
+  structure =
+  {
+    "........","11112222"
+    "........","11112222"
+    "11112222","11112222"
+  }
+}
+
+GROW_CLIFF_STRAIGHT_X4_STAIR =
+{
+  prob = 500
+
+  structure =
+  {
+    "........","1111AAAA"
+    "........","1111AAAA"
+    "........","1111^^^^"
+    "11112222","11112222"
+  }
+}
+
+GROW_CLIFF_STRAIGHT_X4_LONG =
+{
+  prob = 1000
+
+  aversion = -350
+
+  structure =
+  {
+    "........","11112222"
+    "........","11112222"
+    "........","11112222"
+    "........","11112222"
+    "11112222","11112222"
+  }
+}
+
+GROW_CLIFF_STRAIGHT_X4_JUMP =
+{
+  prob = 250
+
+  engine = "zdoom"
+
+  structure =
+  {
+    "........","11112222"
+    "........","1111%222"
+    "........","11111111"
+    "........","1111/222"
+    "11112222","11112222"
+  }
+
+  diagonals =
+  {
+    "12"
+    "12"
+  }
+}
+
+GROW_CLIFF_STRAIGHT_X4_SIDESTAIR =
+{
+  prob = 750
+
+  structure =
+  {
+    "............","1111222>AAAA"
+    "............","1111222>AAAA"
+    "............","1111222>AAAA"
+    "............","1111222>AAAA"
+    "11112222xxxx","11112222xxxx"
+  }
+}
+
+GROW_CLIFF_STRAIGHT_X4_BUMP =
+{
+  prob = 500
+
+  aversion = 100
+
+  structure =
+  {
+    "........","11112222"
+    "........","1111%222"
+    "........","11111222"
+    "........","11111222"
+    "........","1111/222"
+    "11112222","11112222"
+  }
+
+  diagonals =
+  {
+    "12"
+    "12"
+  }
+}
+
+GROW_CLIFF_CURVED_X4 =
+{
+  prob = 450
+
+  structure =
+  {
+    "1.......","11112222"
+    "1.......","11112222"
+    "1.......","11112222"
+    "1.......","111/2222"
+    "2.......","22222222"
+    "2.......","22222222"
+    "2.......","22222222"
+    "2.......","22222222"
+  }
+
+  diagonals =
+  {
+    "12"
+  }
+}
+
+-- cliff-side/area-to-area cages
 
 DECORATE_CLIFF_CAGE =
 {
@@ -7206,9 +7366,15 @@ DECORATE_LIQUID_MOAT_CORNER_OUTER =
   {
 
     "x122","x122"
-    "1122","11~2"
-    "2222","2~~2"
+    "1/22","1/~2"
+    "2222","2~/2"
     "2222","2222"
+  }
+
+  diagonals =
+  {
+    "12","1~"
+         "~2"
   }
 }
 
@@ -7220,9 +7386,15 @@ DECORATE_LIQUID_MOAT_CORNER_INNER =
   {
 
     "x112","x112"
-    "1112","11~2"
-    "1112","1~~2"
+    "1112","1/~2"
+    "11/2","1~/2"
     "2222","2222"
+  }
+
+  diagonals =
+  {
+    "1~"
+    "12","~2"
   }
 }
 

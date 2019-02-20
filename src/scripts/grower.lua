@@ -717,6 +717,15 @@ function Grower_preprocess_grammar()
 
       gui.printf("Grower_preprocess_grammar...\n")
 
+      local stuff
+      local dcount = 0
+
+      each stuff in grammar do
+        dcount = dcount + 1
+      end
+
+      gui.printf("\n" .. dcount .. " rules loaded!\n")
+
       table.name_up(grammar)
 
       table.expand_templates(grammar)
