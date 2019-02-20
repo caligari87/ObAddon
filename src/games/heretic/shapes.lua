@@ -6039,9 +6039,9 @@ GROW_INTO_CLIFF_TALL =
 
 GROW_CLIFF_EXTENSION =
 {
-  prob = 1000
+  prob = 750
 
-  aversion = -100
+  aversion = -50
 
   structure =
   {
@@ -6054,7 +6054,7 @@ GROW_CLIFF_EXTENSION =
 
 GROW_CLIFF_EXTENSION_UP_WE_GO =
 {
-  prob = 150
+  prob = 100
 
   structure =
   {
@@ -6067,7 +6067,7 @@ GROW_CLIFF_EXTENSION_UP_WE_GO =
 
 GROW_CLIFF_EXTENSION_UPPER_WE_GO =
 {
-  prob = 500
+  prob = 350
 
   structure =
   {
@@ -6081,7 +6081,7 @@ GROW_CLIFF_EXTENSION_UPPER_WE_GO =
 
 GROW_CLIFF_EXTENSION_OUTER_CURVE =
 {
-  prob = 750
+  prob = 500
 
   aversion = -75
 
@@ -6100,7 +6100,7 @@ GROW_CLIFF_EXTENSION_OUTER_CURVE =
 
 GROW_CLIFF_EXTENSION_INNER_CURVE =
 {
-  prob = 750
+  prob = 500
 
   aversion = -75
 
@@ -6140,7 +6140,7 @@ GROW_CLIFF_EXTENSION_WIDEN =
 
 GROW_CLIFF_EXTENSION_X2 =
 {
-  prob = 3000
+  prob = 2500
 
   aversion = -1000
 
@@ -6183,7 +6183,7 @@ GROW_CLIFF_EXTENSION_X2_UPPER_WE_GO =
 
 GROW_CLIFF_EXTENSION_OUTER_CURVE_X2 =
 {
-  prob = 2500
+  prob = 2000
 
   aversion = -1000
 
@@ -6203,7 +6203,7 @@ GROW_CLIFF_EXTENSION_OUTER_CURVE_X2 =
 
 GROW_CLIFF_EXTENSION_OUTER_CURVE_X2 =
 {
-  prob = 2500
+  prob = 2000
 
   aversion = -1000
 
@@ -6280,7 +6280,7 @@ GROW_CLIFF_EXTENSION_NEW_AREA_INWARD_X2 =
 
 GROW_CLIFF_ENTRY_X4 =
 {
-  prob = 200
+  prob = 150
 
   structure =
   {
@@ -6295,7 +6295,7 @@ GROW_CLIFF_ENTRY_X4 =
 
 GROW_CLIFF_ENTRY_SIDEWAYS_X4 =
 {
-  prob = 200
+  prob = 150
 
   structure =
   {
@@ -6310,9 +6310,9 @@ GROW_CLIFF_ENTRY_SIDEWAYS_X4 =
 
 GROW_CLIFF_STRAIGHT_X4 =
 {
-  prob = 1500
+  prob = 7500
 
-  aversion = -500
+  aversion = -1000
 
   structure =
   {
@@ -6324,7 +6324,7 @@ GROW_CLIFF_STRAIGHT_X4 =
 
 GROW_CLIFF_STRAIGHT_X4_STAIR =
 {
-  prob = 500
+  prob = 3000
 
   structure =
   {
@@ -6337,9 +6337,9 @@ GROW_CLIFF_STRAIGHT_X4_STAIR =
 
 GROW_CLIFF_STRAIGHT_X4_LONG =
 {
-  prob = 1000
+  prob = 5000
 
-  aversion = -350
+  aversion = -500
 
   structure =
   {
@@ -6353,7 +6353,7 @@ GROW_CLIFF_STRAIGHT_X4_LONG =
 
 GROW_CLIFF_STRAIGHT_X4_JUMP =
 {
-  prob = 250
+  prob = 1000
 
   engine = "zdoom"
 
@@ -6375,7 +6375,7 @@ GROW_CLIFF_STRAIGHT_X4_JUMP =
 
 GROW_CLIFF_STRAIGHT_X4_SIDESTAIR =
 {
-  prob = 750
+  prob = 3000
 
   structure =
   {
@@ -6389,7 +6389,7 @@ GROW_CLIFF_STRAIGHT_X4_SIDESTAIR =
 
 GROW_CLIFF_STRAIGHT_X4_BUMP =
 {
-  prob = 500
+  prob = 3000
 
   aversion = 100
 
@@ -6412,7 +6412,7 @@ GROW_CLIFF_STRAIGHT_X4_BUMP =
 
 GROW_CLIFF_CURVED_X4 =
 {
-  prob = 450
+  prob = 5000
 
   structure =
   {

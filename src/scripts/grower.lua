@@ -717,20 +717,16 @@ function Grower_preprocess_grammar()
 
       gui.printf("Grower_preprocess_grammar...\n")
 
-      local stuff
       local dcount = 0
-
-      each stuff in grammar do
-        dcount = dcount + 1
-      end
-
-      gui.printf("\n" .. dcount .. " rules loaded!\n")
 
       table.name_up(grammar)
 
       table.expand_templates(grammar)
 
       each name,cur_def in grammar do
+      
+        dcount = dcount + 1 -- debug counter for amount of shape rules read
+
         if cur_def.is_processed then continue end
         cur_def.is_processed = true
 
@@ -768,6 +764,9 @@ function Grower_preprocess_grammar()
         if string.match(name, "^CAVE_") then cur_def.env = "cave" end
         if string.match(name, "^PARK_") then cur_def.env = "park" end
       end
+
+      gui.printf("\n" .. dcount .. " rules loaded!\n")
+
   end
 
   process_some_cool_grammars(gramgram)
