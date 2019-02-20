@@ -89,9 +89,9 @@ OB_MODULES["ui_arch"] =
   options =
   {
     { name="size",         label=_("Level Size"), choices=UI_ARCH.SIZES,  default="epi" }
-    
+
     {
-      name = "stretched",  
+      name = "stretched",
       label=_("Stretched Mode"),
       choices=UI_ARCH.STRECHED_OUT_CHOICES
       default = "no"

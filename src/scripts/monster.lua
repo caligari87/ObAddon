@@ -1969,9 +1969,9 @@ gui.debugf("wants =\n%s\n\n", table.tostr(wants))
     -- determine quantity, applying user settings
     local qty = calc_quantity() + 30
     local f   = gui.random()
-    
+
     local trap_weaken_factor
-    
+
     if OB_CONFIG.trap_strength == "stronger" then
       trap_weaken_factor = rand.range(100,180)
     elseif OB_CONFIG.trap_strength == "normal" then

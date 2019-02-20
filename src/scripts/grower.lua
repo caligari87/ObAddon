@@ -711,8 +711,7 @@ function Grower_preprocess_grammar()
 
   ---| Grower_preprocess_grammar |---
 
-  --local gramgram = SHAPE_GRAMMAR
-  local gramgram2 = SHAPE_GRAMMAR_LIQUID_OUTDOORS
+  local gramgram = SHAPE_GRAMMAR
 
   local function process_some_cool_grammars(grammar)
 
@@ -762,9 +761,7 @@ function Grower_preprocess_grammar()
       end
   end
 
-  --process_some_cool_grammars(gramgram)
-
-  process_some_cool_grammars(gramgram2)
+  process_some_cool_grammars(gramgram)
 
 end
 
@@ -883,12 +880,12 @@ function Grower_calc_rule_probs()
   local function Grower_absurdify(grammarset)
     each name,rule in grammarset do
       rule.use_prob = calc_prob(rule)
-      
+
       if LEVEL.is_procedural_gotcha then continue end
 
       if level_is_absurd == true then
         local shape_absurd_chance = rand.range(0,100)
-        if shape_absurd_chance <= 2.5 then
+        if shape_absurd_chance <= 2 then
           shape_is_absurd = true
         end
       end
@@ -901,7 +898,7 @@ function Grower_calc_rule_probs()
     end
   end
 
-  Grower_absurdify(SHAPE_GRAMMAR_LIQUID_OUTDOORS)
+  Grower_absurdify(SHAPE_GRAMMAR)
 
 end
 
@@ -1390,48 +1387,7 @@ function Grower_grammatical_pass(R, pass, apply_num, stop_prob,
 
   -- Trying to force liquid-bordered outdoors if parks haven't shown up yet.
 
-  -- This code just makes it so that if parks start existing,
-  -- stop using outdoor-liquid-border shapes. - MSSP
-
-  local natural_rooms
-
-  if natural_rooms == nil then
-    natural_rooms = 0
-  end
-
-  each i in LEVEL.rooms do
-    if i.is_park == true then
-      natural_rooms = natural_rooms + 1
-    end
-  end
-
-  --gui.printf("# of natural rooms: " .. natural_rooms .. "\n")
-
-  -- This code tries to only use liquid-borders if the prior room was not a park.
-
-  if previous_room_is_park == nil then
-    previous_room_is_park = false
-  end
-
-  if previous_room_is_park == true and R.is_park == false then
-    you_can_outdoor_liquid_border = false
-  else
-    you_can_outdoor_liquid_border = true
-  end
-
-  local grammar
-
-  --[[if natural_rooms <= 0 then
-    gui.printf("Outdoor Liquid Border State: Fun with water!\n")]]
-    grammar = SHAPE_GRAMMAR_LIQUID_OUTDOORS
-  --[[else
-    gui.printf("Outdoor Liquid Border State: No fun no more here...\n")
-    grammar = SHAPE_GRAMMAR
-  end]]
-
-  if R.is_park == true then
-    previous_room_is_park = true
-  end
+  grammar = SHAPE_GRAMMAR
 
   --
 

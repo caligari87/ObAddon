@@ -33,7 +33,7 @@
 
 gui.printf("Doom shape rules now being loaded!\n")
 
-SHAPE_GRAMMAR =
+SHAPE_GRAMMAR_LIQUID_OUTDOORS =
 {
 
 ROOT_1 =
@@ -1319,6 +1319,27 @@ SPROUT_DIRECT_2_EMERGENCY =
 }
 
 
+SPROUT_DIRECT_THIN_EMERGENCY =
+{
+  emergency = true
+
+  prob = 175
+
+  structure =
+  {
+    "..","RR"
+    "..","RR"
+    "..","11"
+    "x1","x1"
+  }
+
+  new_room =
+  {
+    conn = { x=1, y=2, w=2, dir=8 }
+  }
+}
+
+
 SPROUT_DIRECT_3 =
 {
   prob = 400
@@ -2484,8 +2505,6 @@ GROW_COLONNADE_PARTHENON_LAKE =
 {
   prob = 30
 
-  env = "building"
-
   structure =
   {
     ".11","~11"
@@ -2498,8 +2517,6 @@ GROW_COLONNADE_PARTHENON_LAKE =
 SPROUT_LIQUID_GUTTER_CORNER =
 {
   prob = 30
-
-  env = "building"
 
   structure =
   {
@@ -2643,8 +2660,6 @@ GROW_LIQUID_FIGURE_CORRIDOR =
 {
   prob = 7
 
-  env = "building"
-
   structure =
   {
     "....","1111"
@@ -2659,8 +2674,6 @@ GROW_LIQUID_FIGURE_CORRIDOR =
 GROW_LIQUID_BRIDGE_CORRIDOR =
 {
   prob = 15
-
-  env = "building"
 
   structure =
   {
@@ -2682,8 +2695,6 @@ GROW_LIQUID_BRIDGE_CORRIDOR_CROSSING =
 {
   prob = 15
 
-  env = "building"
-
   structure =
   {
     "...","111"
@@ -2704,8 +2715,6 @@ GROW_LIQUID_PLATFORM_FUNNEL =
 {
   prob = 15
 
-  env = "building"
-
   structure =
   {
     "......","/~11~%"
@@ -2724,8 +2733,6 @@ GROW_LIQUID_PLATFORM_FUNNEL =
 GROW_LIQUID_WATERFALL_SIDES =
 {
   prob = 20
-
-  env = "building"
 
   structure =
   {
@@ -2760,8 +2767,6 @@ GROW_LIQUID_S =
   prob = 15
   skip_prob = 5
 
-  env = "building"
-
   structure =
   {
     "......","111111"
@@ -2788,8 +2793,6 @@ GROW_LIQUID_INTERSECTION =
 {
   prob = 15
   skip_prob = 5
-
-  env = "building"
 
   structure =
   {
@@ -2859,7 +2862,6 @@ GROW_RAMP_THIN_RISE =
 GROW_REVERSE_FUNNEL =
 {
   prob = 20
-
   aversion = 3
 
   structure =
@@ -2883,7 +2885,6 @@ GROW_REVERSE_FUNNEL =
 GROW_SIDE_ON_RAMP =
 {
   prob = 25
-
   structure =
   {
     "x...","xAA."
@@ -2902,7 +2903,6 @@ GROW_SIDE_ON_RAMP =
 GROW_SIDE_ON_RAMP_TALL =
 {
   prob = 25
-
   structure =
   {
     "x...","xAA."
@@ -3646,7 +3646,7 @@ GROW_LIQUID_CANAL_STRAIGHT =
 {
   prob = 60
 
-  env = "building"
+
 
   structure =
   {
@@ -3663,7 +3663,7 @@ GROW_LIQUID_CANAL_CROSSING =
 {
   prob = 40
 
-  env = "building"
+
 
   engine = "zdoom"
 
@@ -3682,9 +3682,6 @@ GROW_LIQUID_CANAL_CROSSING =
 GROW_LIQUID_CANAL_STRAIGHT_AREA_TRANSITION =
 {
   prob = 30
-
-  env = "building"
-
   structure =
   {
     "~.","~~"
@@ -3700,7 +3697,7 @@ GROW_LIQUID_CANAL_STRAIGHT_STAIRCASE =
 {
   prob = 40
 
-  env = "building"
+
 
   structure =
   {
@@ -3717,7 +3714,7 @@ GROW_LIQUID_CANAL_STRAIGHT_BULGE =
 {
   prob = 40
 
-  env = "building"
+
 
   structure =
   {
@@ -3740,7 +3737,7 @@ GROW_LIQUID_CANAL_CURVE =
 {
   prob = 60
 
-  env = "building"
+
 
   structure =
   {
@@ -3764,7 +3761,7 @@ GROW_LIQUID_CANAL_ENTRY =
 {
   prob = 50
 
-  env = "building"
+
 
   structure =
   {
@@ -3785,9 +3782,9 @@ GROW_LIQUID_CANAL_ENTRY =
 
 GROW_LIQUID_CANAL_ENTRY =
 {
-  prob = 25
+  prob = 50
 
-  env = "building"
+
 
   structure =
   {
@@ -3810,7 +3807,7 @@ GROW_LIQUID_CANAL_OUT =
 {
   prob = 10
 
-  env = "building"
+
 
   structure =
   {
@@ -3833,7 +3830,7 @@ GROW_LIQUID_CANAL_OUT_ALT =
 {
   prob = 10
 
-  env = "building"
+
 
   structure =
   {
@@ -3850,7 +3847,7 @@ GROW_LIQUID_SCANAL_ENTRY =
 {
   prob = 20
 
-  env = "building"
+
 
   structure =
   {
@@ -3865,7 +3862,7 @@ GROW_LIQUID_SCANAL_ENTRY_FORWARD =
 {
   prob = 20
 
-  env = "building"
+
 
   structure =
   {
@@ -3879,7 +3876,7 @@ GROW_LIQUID_SCANAL_STRAIGHT =
 
   prob = 60
 
-  env = "building"
+
 
   structure =
   {
@@ -3895,7 +3892,7 @@ GROW_LIQUID_SCANAL_STRAIGHT_CROSSING =
 
   prob = 30
 
-  env = "building"
+
 
   engine = "zdoom"
 
@@ -3918,7 +3915,7 @@ GROW_LIQUID_SCANAL_STAIR =
 
   prob = 40
 
-  env = "building"
+
 
   structure =
   {
@@ -3934,7 +3931,7 @@ GROW_LIQUID_SCANAL_OUTER_BEND =
 
   prob = 30
 
-  env = "building"
+
 
   structure =
   {
@@ -3956,7 +3953,7 @@ GROW_LIQUID_SCANAL_INNER_BEND =
 
   prob = 30
 
-  env = "building"
+
 
   structure =
   {
@@ -3976,7 +3973,7 @@ GROW_LIQUID_SCANAL_T_JUNCTION =
 {
   prob = 20
 
-  env = "building"
+
 
   structure =
   {
@@ -3998,7 +3995,7 @@ GROW_NARROW_CANAL_ENTRY =
 {
   prob = 20
 
-  env = "building"
+
 
   structure =
   {
@@ -4012,7 +4009,7 @@ GROW_NARROW_CANAL_ENTRY_FROMSIDE =
 {
   prob = 20
 
-  env = "building"
+
 
   structure =
   {
@@ -4025,7 +4022,7 @@ GROW_NARROW_CANAL_STRAIGHT =
 {
   prob = 80
 
-  env = "building"
+
 
   structure =
   {
@@ -4039,7 +4036,7 @@ GROW_NARROW_CANAL_STRAIGHT_CROSSING =
 {
   prob = 20
 
-  env = "building"
+
 
   engine = "zdoom"
 
@@ -4060,7 +4057,7 @@ GROW_NARROW_CANAL_STAIRS =
 {
   prob = 60
 
-  env = "building"
+
 
   structure =
   {
@@ -4074,7 +4071,7 @@ GROW_NARROW_CANAL_INNER_CURVE =
 {
   prob = 30
 
-  env = "building"
+
 
   structure =
   {
@@ -4095,7 +4092,7 @@ GROW_NARROW_CANAL_OUTER_CURVE =
 {
   prob = 30
 
-  env = "building"
+
 
   structure =
   {
@@ -4142,7 +4139,7 @@ GROW_LIQUID_CANAL_EXIT =
 
   pass = "exit1_closet"
 
-  env = "building"
+
 
   structure =
   {
@@ -4347,7 +4344,7 @@ SERRATED_LIQUID_SMOOTHER =
   pass = "smoother"
   prob = 400
 
-  env = "building"
+
 
   structure =
   {
@@ -4367,7 +4364,7 @@ SERRATED_LIQUID_SMOOTHER_REVERSED =
   pass = "smoother"
   prob = 400
 
-  env = "building"
+
 
   structure =
   {
@@ -4387,7 +4384,7 @@ SERRATED_LIQUID_SMOOTHER2 =
   pass = "smoother"
   prob = 400
 
-  env = "building"
+
 
   structure =
   {
@@ -4407,7 +4404,7 @@ SERRATED_LIQUID_SMOOTHER3 =
   pass = "smoother"
   prob = 100
 
-  env = "building"
+
 
   structure =
   {
@@ -4909,7 +4906,7 @@ SPROUT_SKILLET =
 {
   prob = 150
 
-  env = "building"
+
 
   structure =
   {
@@ -5134,23 +5131,19 @@ SPROUT_CATWALK_SUPPORT_PILLAR_INNER_DOUBLE =
   }
 }
 
-SMOOTHER_CHAMFER_WIDE_ROOM_CORNER =
+GROW_CHAMFER_WIDE_ROOM_CORNER =
 {
-  prob = 1500
-
-  pass = "smoother"
-
-  env = "building"
+  prob = 5
 
   structure =
   {
-    "......","......"
-    ".11111",".../11"
-    ".1111x","../11x"
-    ".1111x","./111x"
-    ".1111x",".1111x"
-    ".1xxxx",".1xxxx"
+    "x.....","x../11"
+    "x.....","x./111"
+    "x.....","x/1111"
+    "1.....","111111"
+    "1.....","111111"
   }
+
 
   diagonals =
   {
@@ -5160,23 +5153,17 @@ SMOOTHER_CHAMFER_WIDE_ROOM_CORNER =
   }
 }
 
-SMOOTHER_CHAMFER_WIDE_ROOM_CORNER_OUTLET =
+GROW_CHAMFER_WIDE_ROOM_CORNER_OUTLET =
 {
-  prob = 1500
-
-  pass = "smoother"
-
-  env = "building"
+  prob = 5
 
   structure =
   {
-    "......","......"
-    ".11111","....11"
-    ".1111x","....1x"
-    ".1111x",".../1x"
-    ".1111x",".1111x"
-    ".1xxxx",".1xxxx"
-
+    "x.....","x...11"
+    "x.....","x...11"
+    "x.....","x../11"
+    "1.....","111111"
+    "1.....","111111"
   }
 
   diagonals =
@@ -5185,21 +5172,16 @@ SMOOTHER_CHAMFER_WIDE_ROOM_CORNER_OUTLET =
   }
 }
 
-SMOOTHER_CHAMFER_WIDE_ROOM_CORNER_OUTLET_SOLID =
+GROW_CHAMFER_WIDE_ROOM_CORNER_OUTLET_SOLID =
 {
-  prob = 1500
-
-  pass = "smoother"
-
-  env = "building"
+  prob = 5
 
   structure =
   {
-    ".....","....."
-    ".1111","...11"
-    ".1111","...11"
-    ".1111",".1111"
-    ".1111",".1111"
+    ".....","x..11"
+    ".....","x..11"
+    "1....","11111"
+    "1....","11111"
   }
 
   diagonals =
@@ -5882,8 +5864,6 @@ DECORATE_CAGE_CANALS_STRAIGHT_3X =
 {
   prob = 50
 
-  env = "building"
-
   structure =
   {
     "...","CCC"
@@ -5897,8 +5877,6 @@ DECORATE_CAGE_CANALS_STRAIGHT_3X =
 DECORATE_CAGE_CANALS_STRAIGHT_1X =
 {
   prob = 8
-
-  env = "building"
 
   structure =
   {
@@ -5914,8 +5892,6 @@ DECORATE_CAGE_CANALSWIDE_STRAIGHT_3X =
 {
   prob = 12
 
-  env = "building"
-
   structure =
   {
     "...","CCC"
@@ -5930,8 +5906,6 @@ DECORATE_CAGE_CANALSWIDE_STRAIGHT_3X =
 DECORATE_CAGE_CANALSWIDE_STRAIGHT_1X =
 {
   prob = 8
-
-  env = "building"
 
   structure =
   {
@@ -6143,6 +6117,25 @@ GROW_CLIFF_EXTENSION_INNER_CURVE =
   }
 }
 
+GROW_CLIFF_EXTENSION_WIDEN =
+{
+  prob = 500
+
+  structure =
+  {
+    ".....","./111"
+    "1....","11111"
+    "2....","22222"
+    ".....",".%222"
+  }
+
+  diagonals =
+  {
+    ".1"
+    ".2"
+  }
+}
+
 GROW_CLIFF_EXTENSION_X2 =
 {
   prob = 3000
@@ -6281,6 +6274,48 @@ GROW_CLIFF_EXTENSION_NEW_AREA_INWARD_X2 =
   }
 }
 
+DECORATE_CLIFF_CAGE =
+{
+  prob = 3
+
+  structure =
+  {
+    "111","111"
+    "111","1C1"
+    "222","222"
+  }
+
+  cage_mode = "fancy"
+}
+
+DECORATE_CLIFF_CAGE_3X_ROW =
+{
+  prob = 3
+
+  structure =
+  {
+    "11111","11111"
+    "11111","1CCC1"
+    "22222","22222"
+  }
+
+  cage_mode = "fancy"
+}
+
+DECORATE_CLIFF_CAGE_3X_STAGGERED =
+{
+  prob = 3
+
+  structure =
+  {
+    "1111111","1111111"
+    "1111111","1C1C1C1"
+    "2222222","2222222"
+  }
+
+  cage_mode = "fancy"
+}
+
 -- MSSP's huge liquid rooms. [HUGE-LIQUID]
 
 GROW_HUGE_LIQUID_ROOM_ZIGZAG =
@@ -6288,8 +6323,6 @@ GROW_HUGE_LIQUID_ROOM_ZIGZAG =
   prob = 15
 
   aversion = 5
-
-  env = "building"
 
   structure =
   {
@@ -6314,9 +6347,6 @@ GROW_HUGE_LIQUID_ROOM_TUMOR =
   prob = 15
 
   aversion = 5
-
-  env = "building"
-
   structure =
   {
     "..........","~~~~11~~~~"
@@ -6342,9 +6372,6 @@ GROW_HUGE_LIQUID_ROOM_TUMOR_ELEVATED =
   prob = 15
 
   aversion = 5
-
-  env = "building"
-
   structure =
   {
     "..........","~~~~AA~~~~"
@@ -6371,8 +6398,6 @@ GROW_HUGE_LIQUID_ROOM_PILLARED_PLATFORM =
 
   aversion = 3
 
-  env = "building"
-
   structure =
   {
     "xxxx11xxxx","xxxx11xxxx"
@@ -6393,8 +6418,6 @@ GROW_HUGE_LIQUID_ROOM_PILLARED_PLATFORM_STAIRS =
   prob = 10
 
   aversion = 3
-
-  env = "building"
 
   structure =
   {
@@ -6417,8 +6440,6 @@ GROW_HUGE_LIQUID_ROOM_PILLARED_FROM_WALL =
 
   aversion = 3
 
-  env = "building"
-
   structure =
   {
     "xxxx11xxxx","xxxx11xxxx"
@@ -6436,8 +6457,6 @@ GROW_HUGE_LIQUID_ROOM_PILLARED_TO_WALL =
 
   aversion = 3
 
-  env = "building"
-
   structure =
   {
     "..........","~~111111~~"
@@ -6454,8 +6473,6 @@ GROW_HUGE_LIQUID_ROOM_PILLARED_TO_WALL_STAIRS =
   prob = 10
 
   aversion = 3
-
-  env = "building"
 
   structure =
   {
@@ -6593,8 +6610,6 @@ GROW_HUGE_LIQUID_ROOM_SQUARE_L =
 
   aversion = 15
 
-  env = "building"
-
   structure =
   {
     "............","11~~~~~~~~~~"
@@ -6620,11 +6635,9 @@ GROW_HUGE_LIQUID_ROOM_SQUARE_L =
 
 GROW_HUGE_LIQUID_ROOM_SQUARE_L_ELEVATED =
 {
-  prob = 35
+  prob = 75
 
   aversion = 15
-
-  env = "building"
 
   structure =
   {
@@ -6655,8 +6668,6 @@ GROW_HUGE_LIQUID_ROOM_SQUARE_U =
 
   aversion = 15
 
-  env = "building"
-
   structure =
   {
     "............","111111111111"
@@ -6680,8 +6691,6 @@ GROW_HUGE_LIQUID_ROOM_SQUARE_U_THIN =
   prob = 25
 
   aversion = 15
-
-  env = "building"
 
   structure =
   {
@@ -6709,8 +6718,6 @@ GROW_HUGE_LIQUID_ROOM_SQUARE_U_ELEVATED =
 
   aversion = 15
 
-  env = "building"
-
   structure =
   {
     "............","AAAAA<<11111"
@@ -6734,8 +6741,6 @@ GROW_HUGE_LIQUID_ROOM_SQUARE_U_ELEVATED =
   prob = 25
 
   aversion = 10
-
-  env = "building"
 
   structure =
   {
@@ -6763,8 +6768,6 @@ GROW_HUGE_LIQUID_ROOM_STRAIGHT_SIDE =
 
   aversion = 25
 
-  env = "building"
-
   structure =
   {
     "........","11~~~~~~"
@@ -6789,8 +6792,6 @@ GROW_HUGE_LIQUID_ROOM_STRAIGHT_SIDE_WIDER =
 
   aversion = 25
 
-  env = "building"
-
   structure =
   {
     "............","11~~~~~~~~~~"
@@ -6809,13 +6810,35 @@ GROW_HUGE_LIQUID_ROOM_STRAIGHT_SIDE_WIDER =
   }
 }
 
+GROW_HUGE_LIQUID_ROOM_STRAIGHT_SIDE_WIDER_ELEVATED =
+{
+  prob = 75
+
+  aversion = 25
+
+  structure =
+  {
+    "............","AA~~~~~~~~~~"
+    "............","AA~~~~~~~~~~"
+    "............","AA~~~~~~~~~~"
+    "............","AA~~~~~~~~~~"
+    "............","AA~~~~~~~~~~"
+    "............","^^~~~~~~~~~~"
+    "............","^^~~~~~~~~~~"
+    "............","11~~~~~~~~~~"
+    "............","11~~~~~~~~~~"
+    "............","11~~~~~~~~~~"
+    "............","11~~~~~~~~~~"
+    "............","11~~~~~~~~~~"
+    "11xxxxxxxxxx","11xxxxxxxxxx"
+  }
+}
+
 GROW_HUGE_LIQUID_ROOM_STRAIGHT_SIDE_SMALLER =
 {
   prob = 25
 
   aversion = 10
-
-  env = "building"
 
   structure =
   {
@@ -6835,8 +6858,7 @@ GROW_HUGE_LIQUID_ROOM_STRAIGHT_SIDE_SMALLER =
 
 SPROUT_LIQUID_PLATFORM_ENTRY =
 {
-  prob = 1500
-
+  prob = 2500
   structure =
   {
     "1~~~","1%~~"
@@ -6869,7 +6891,6 @@ SPROUT_LIQUID_PLATFORM_STRAIGHT_NEW_AREA =
 {
   prob = 3500
 
-
   structure =
   {
     "x~~","x~~"
@@ -6882,7 +6903,6 @@ SPROUT_LIQUID_PLATFORM_STRAIGHT_NEW_AREA =
 SPROUT_LIQUID_PLATFORM_STRAIGHT_NEW_AREA_STAIRS =
 {
   prob = 3500
-
 
   structure =
   {
@@ -6897,7 +6917,6 @@ SPROUT_LIQUID_PLATFORM_STRAIGHT_LONG =
 {
   prob = 5000
 
-
   structure =
   {
     "x~~~~","x~~~~"
@@ -6909,8 +6928,7 @@ SPROUT_LIQUID_PLATFORM_STRAIGHT_LONG =
 
 SPROUT_LIQUID_PLATFORM_CURVED =
 {
-  prob = 4000
-
+  prob = 3000
 
   structure =
   {
@@ -6929,7 +6947,7 @@ SPROUT_LIQUID_PLATFORM_CURVED =
 
 SPROUT_LIQUID_PLATFORM_LARGE_CIRCLE =
 {
-  prob = 3500
+  prob = 2000
 
   structure =
   {
@@ -6948,7 +6966,7 @@ SPROUT_LIQUID_PLATFORM_LARGE_CIRCLE =
 
 SPROUT_LIQUID_PLATFORM_CENTER_PILLAR =
 {
-  prob = 2500
+  prob = 2000
 
   structure =
   {
@@ -6967,7 +6985,7 @@ SPROUT_LIQUID_PLATFORM_CENTER_PILLAR =
 
 SPROUT_LIQUID_PLATFORM_SIDE_PILLAR =
 {
-  prob = 2500
+  prob = 2000
 
   structure =
   {
@@ -6985,7 +7003,7 @@ SPROUT_LIQUID_PLATFORM_SIDE_PILLAR =
 
 SPROUT_LIQUID_PLATFORM_4x4 =
 {
-  prob = 2500
+  prob = 1800
 
   structure =
   {
@@ -7002,8 +7020,6 @@ DECORATE_LIQUID_POOL_PLACE =
 {
   prob = 35
 
-  env = "building"
-
   structure =
   {
     "1111","1111"
@@ -7018,8 +7034,6 @@ DECORATE_LIQUID_POOL_PLACE_DIAMOND =
   prob = 5
 
   aversion = 1
-
-  env = "building"
 
   structure =
   {
@@ -7039,8 +7053,6 @@ DECORATE_LIQUID_POOL_PLACE_DIAMOND =
 DECORATE_LIQUID_POOL_PLACE_3x3 =
 {
   prob = 35
-
-  env = "building"
 
   structure =
   {
@@ -7062,8 +7074,6 @@ DECORATE_LIQUID_POOL_PLACE_3x6 =
 {
   prob = 40
 
-  env = "building"
-
   structure =
   {
     "1111111","1111111"
@@ -7084,8 +7094,6 @@ DECORATE_LIQUID_POOL_EXTEND_STRAIGHT =
 {
   prob = 100
 
-  env = "building"
-
   structure =
   {
     "x111","x111"
@@ -7099,7 +7107,7 @@ DECORATE_LIQUID_POOL_EXTEND_CURVED =
 {
   prob = 75
 
-  env = "building"
+
 
   structure =
   {
@@ -7178,6 +7186,72 @@ DECORATE_LIQUID_PILLAR_3X =
   }
 }
 
+DECORATE_LIQUID_MOAT_ROW =
+{
+  prob = 10
+
+  structure =
+  {
+    "11111","11111"
+    "22222","2~~~2"
+    "22222","22222"
+  }
+}
+
+DECORATE_LIQUID_MOAT_CORNER_OUTER =
+{
+  prob = 10
+
+  structure =
+  {
+
+    "x122","x122"
+    "1122","11~2"
+    "2222","2~~2"
+    "2222","2222"
+  }
+}
+
+DECORATE_LIQUID_MOAT_CORNER_INNER =
+{
+  prob = 10
+
+  structure =
+  {
+
+    "x112","x112"
+    "1112","11~2"
+    "1112","1~~2"
+    "2222","2222"
+  }
+}
+
+DECORATE_LIQUID_MOAT_EXTEND =
+{
+  prob = 10
+
+  structure =
+  {
+    "111","111"
+    "~22","~~2"
+    "222","222"
+  }
+}
+
+SMOOTHER_LIQUID_MOAT_MERGE =
+{
+  pass = "smoother"
+
+  prob = 50
+
+  structure =
+  {
+    "111","111"
+    "~2~","~~~"
+    "222","222"
+  }
+}
+
 -- MSSP's single-seed trenches. [TRENCHES]
 
 GROW_TRENCH_ENTRY =
@@ -7194,7 +7268,7 @@ GROW_TRENCH_ENTRY =
 
 GROW_TRENCH_STRAIGHT =
 {
-  prob = 150
+  prob = 220
 
   structure =
   {
@@ -7206,7 +7280,7 @@ GROW_TRENCH_STRAIGHT =
 
 GROW_TRENCH_CURVED =
 {
-  prob = 100
+  prob = 140
 
   structure =
   {
@@ -7228,6 +7302,108 @@ GROW_TRENCH_CURVED =
     "1..","111"
   }
 }]]
+
+-- MSSP's sewers [SEWER]
+
+GROW_SEWER_ENTRY =
+{
+  prob = 35
+
+  structure =
+  {
+    "1..","111"
+    "1..","1~~"
+    "1..","111"
+  }
+}
+
+GROW_SEWER_STRAIGHT =
+{
+  prob = 150
+
+  structure =
+  {
+    "1..","111"
+    "~..","~~~"
+    "1..","111"
+  }
+}
+
+GROW_SEWER_STAIRS =
+{
+  prob = 40
+
+  structure =
+  {
+    "1...","1>AA"
+    "~...","~~~~"
+    "1...","1>AA"
+  }
+}
+
+GROW_SEWER_SWERVE =
+{
+  prob = 40
+
+  structure =
+  {
+     "1...","111%"
+     "~...","~~%1"
+     "1...","11%~"
+     "x...","x%11"
+  }
+
+  diagonals =
+  {
+    "1."
+    "~1"
+    "1~"
+    ".1"
+  }
+}
+
+GROW_SEWER_CURVED =
+{
+  prob = 65
+
+  structure =
+  {
+    "1...","1111"
+    "~...","~~%1"
+    "1...","1%~1"
+    "x...","x1~1"
+  }
+
+  diagonals =
+  {
+    "~1"
+    "1~"
+  }
+}
+
+GROW_SEWER_EXIT =
+{
+  prob = 20
+
+  structure =
+  {
+    "1..","111"
+    "~..","~~1"
+    "1..","111"
+  }
+}
+
+GROW_SEWER_STAIRS_SIDE_EXIT_NEW_AREA =
+{
+  prob = 40
+
+  structure =
+  {
+    "1.....","1>AA11"
+    "~.....","~~~~~1"
+    "1.....","111111"
+  }
+}
 
 -- FORGET IT LMAO IT DOESN'T WORK
 --[[ MSSP's city streets. ExperiMENTAL. [STREETS]

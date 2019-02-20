@@ -4,7 +4,7 @@ PREFABS.Joiner_simplest =
   map    = "MAP01"
 
   prob   = 250
-  
+
   where  = "seeds"
   shape  = "I"
 

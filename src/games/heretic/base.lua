@@ -24,7 +24,6 @@ HERETIC = { }
 
 gui.import("params")
 gui.import("shapes")
-gui.import("shapes_liquid_outdoors")
 
 gui.import("entities")
 gui.import("monsters")

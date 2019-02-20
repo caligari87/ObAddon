@@ -13,7 +13,7 @@ PREFABS.Arch_simplest =
 
   x_fit  = { 60,68 }
   z_fit  = "bottom"
-  
+
   height = 128
 
   bound_z1 = 0
