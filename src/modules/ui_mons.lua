@@ -100,6 +100,12 @@ UI_MONS.SECRET_MONSTERS =
   "no",  _("No"),
 }
 
+UI_MONS.START_ROOM_MON_CHOICES =
+{
+  "default", _("DEFAULT"),
+  "none",    _("NONE"),
+}
+
 OB_MODULES["ui_mons"] =
 {
   label = _("Monsters")
@@ -162,6 +168,13 @@ OB_MODULES["ui_mons"] =
       choices=UI_MONS.SECRET_MONSTERS,
       tooltip="I'm in your secret rooms, placing some monsters. Note: default is none.",
       default="no",
+    }
+    {
+      name="start_room_mons",
+      label=_("Monsters in Start"),
+      choices=UI_MONS.START_ROOM_MON_CHOICES,
+      tooltip="I'm in your start rooms, placing some monsters. Note: Oblige normally spawns weak monsters in the start room.",
+      default="default",
     }
   }
 }

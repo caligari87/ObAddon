@@ -146,8 +146,11 @@ function Monster_pacing()
       return
     end
 
-    if R.is_start then
+    if R.is_start and OB_CONFIG.start_room_mons == "default" then
       set_room(R, "low")
+      return
+    elseif R.is_start and OB_CONFIG.start_room_mons == "none" then
+      set_room(R, "none")
       return
     end
 
@@ -830,6 +833,7 @@ function Monster_fill_room(R)
     factor = factor * (0.8 + LEVEL.game_along * 0.4)
 
     -- apply the room "pressure" type
+    if R.pressure == "none" then factor = -9001 end
     if R.pressure == "low"  then factor = factor / 2.1 end
     if R.pressure == "high" then factor = factor * 1.4 end
 
@@ -912,6 +916,7 @@ function Monster_fill_room(R)
     qty = qty * (THEME.monster_factor or 1)
 
     -- apply the room "pressure" type
+    if R.pressure == "none" then qty = -9001 end
     if R.pressure == "low"  then qty = qty / 2.5 end
     if R.pressure == "high" then qty = qty * 1.5 end
 
@@ -1122,6 +1127,8 @@ function Monster_fill_room(R)
   local function calc_strength_factor(info)
     -- weaker monsters in secrets
     if R.is_secret and OB_CONFIG.secret_monsters == "yes" then return 1 / info.damage end
+    
+    if R.is_start and OB_CONFIG.start_room_mons == "none" then return 0 end
 
     local factor = default_level(info)
 
