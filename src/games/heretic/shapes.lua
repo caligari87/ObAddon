@@ -5178,8 +5178,8 @@ GROW_CHAMFER_WIDE_ROOM_CORNER_OUTLET_SOLID =
 
   structure =
   {
-    ".....","x..11"
-    ".....","x..11"
+    "x....","x..11"
+    "x....","x..11"
     "1....","11111"
     "1....","11111"
   }
