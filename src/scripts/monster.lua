@@ -216,7 +216,7 @@ function Monster_pacing()
 
 
   local function handle_remaining_room(R)
-    local tab = { low=32, medium=64, high=32 }
+    local tab = { none=0, low=32, medium=64, high=32 }
 
     -- avoid being same as a direct neighbor
     each C in R.conns do
