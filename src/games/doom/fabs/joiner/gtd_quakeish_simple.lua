@@ -3,7 +3,7 @@ PREFABS.Joiner_quakeish =
   file   = "joiner/gtd_quakeish_simple.wad"
   map    = "MAP01"
 
-  prob   = 150
+  prob   = 300
 
   engine = "zdoom"
 
@@ -18,6 +18,6 @@ PREFABS.Joiner_quakeish =
 
   bound_z1 = -16
 
-  x_fit = "frame"
-  y_fit = "frame"
+  x_fit = {128,136}
+  y_fit = {32,48},{104,120}
 }
