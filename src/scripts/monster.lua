@@ -1127,7 +1127,7 @@ function Monster_fill_room(R)
   local function calc_strength_factor(info)
     -- weaker monsters in secrets
     if R.is_secret and OB_CONFIG.secret_monsters == "yes" then return 1 / info.damage end
-    
+
     if R.is_start and OB_CONFIG.start_room_mons == "none" then return 0 end
 
     local factor = default_level(info)

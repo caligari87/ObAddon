@@ -724,7 +724,7 @@ function Grower_preprocess_grammar()
       table.expand_templates(grammar)
 
       each name,cur_def in grammar do
-      
+
         dcount = dcount + 1 -- debug counter for amount of shape rules read
 
         if cur_def.is_processed then continue end
