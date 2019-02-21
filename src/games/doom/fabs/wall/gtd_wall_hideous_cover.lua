@@ -9,9 +9,8 @@ PREFABS.Wall_HD_crate_pile =
 
   is_hideous_destructor_fab = true
 
-  prob   = 0
+  prob   = 15
   env   = "building"
-  theme = "!hell"
 
   where  = "edge"
   height = 128

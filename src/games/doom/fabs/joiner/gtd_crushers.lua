@@ -5,7 +5,7 @@ PREFABS.Joiner_tech_triple_crusher =
 
   prob   = 1000
   
-  style  = "trap"
+  style  = "traps"
   
   theme  = "!hell"
 

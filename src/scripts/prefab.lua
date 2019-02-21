@@ -163,13 +163,6 @@ function Fab_load_all_definitions()
 
 
   local function calc_prob(def)
-    
-    -- attachment for the Hideous Destructor cover walls
-    if PARAM["hd_cover_walls"] != "enable" then
-      if def.is_hideous_destructor_fab = true then
-        prob = 0
-      end
-    end
 
     -- attachment for the prefab control module
     if PARAM["wall_prob"] == "fab_some" then
@@ -200,6 +193,13 @@ function Fab_load_all_definitions()
     -- normal logic --
 
     local prob = def.prob or 0
+
+    -- attachment for the Hideous Destructor cover walls
+    if PARAM["hd_cover_walls"] != "enable" then
+      if def.is_hideous_destructor_fab == true then
+        prob = 0
+      end
+    end
 
     prob = prob * random_factor(def)
 

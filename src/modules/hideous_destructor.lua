@@ -40,7 +40,7 @@ OB_MODULES["hd_support"] =
       name = "hd_cover_walls"
       label=_("Cover Walls")
       choices=HD_SUPPORT.WALL_CHOICES
-      tooltip = "Adds a some Hideous Destructor-specific fabs such as walls with cover to serve Hideous Destructor gameplay better."
+      tooltip = "Adds a some Hideous Destructor-specific fabs such as walls with cover to serve Hideous Destructor gameplay better. It is recommended to keep this disabled if you are not playing Hideous Destructor as these fabs will interfere with non-HD gameplay."
       default = "disable"
     }
   }
