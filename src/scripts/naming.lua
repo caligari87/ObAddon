@@ -197,7 +197,7 @@ namelib.NAMES =
         Dark=20, Treacherous=10, Frigid=3,
         Deconditioned=10, Dismal=5, Dreaded=5, Cold=10,
         Perverted=5, Doomed=10,
-        
+
         -- ObAddon contributor names
         MsrSgtShooterPerson=3, Glaice=3, Frozsoul=3,
         Garrett=3, Caligari87=3, SimonV=3,
@@ -521,7 +521,7 @@ namelib.NAMES =
         Baal=3, Malthus=3, Beelzebub=3, Moloch=3, Dante=5, Berith=3, Haagenti=3, Caim=2, Seir=3,
         Nybbas=2, Namtar=2, Lamashtu=2, Astaroth=2, Merihem=3, Gressil=3, Barong=2, Iblis=3, Ouroboros=5,
         Carreau=3, Oeillet=3, Rosier=2, Luvart=2, Cerberus=5, Linguica=1, Bloodshedder=1,
-        
+
         -- ObAddon contributor names
         MsrSgtShooterPerson=3, Glaice=3, Frozsoul=3,
         Garrett=3, Caligari87=3, SimonV=3,
@@ -1101,7 +1101,7 @@ namelib.NAMES =
         Ominous=15, Perilous=15,
         Slaughter=5, Murder=5, Killing=5,
         Catastrophic=5, Whispering=10,
-        
+
         -- ObAddon contributor names
         MsrSgtShooterPerson=3, Glaice=3, Frozsoul=3,
         Garrett=3, Caligari87=3, SimonV=3,
@@ -2095,9 +2095,10 @@ namelib.NAMES =
       -- <adj> <place>  e.g. dark dimension
       ["%a %p"] = 20
       ["The %a %p"] = 30
+      ["Into the %a %p"] = 20
 
       -- <adj> <thing>  e.g. eternal gore
-      ["%a %d"] = 40
+      ["%a %d"] = 25 --40
 
       ["%d Forever"]  = 5
       ["%d Always"]  = 5
@@ -2105,7 +2106,7 @@ namelib.NAMES =
       ["%d Revealed"] = 2
 
       -- <place> of <desc>  e.g. city of souls
-      ["%p of %d"] = 40
+      ["%p of %d"] = 25 --40
       ["%d in the %p"] = 6
       ["%d at the %p"] = 4
 
@@ -2113,7 +2114,7 @@ namelib.NAMES =
       ["%e in the %p"] = 3
 
       -- <place> of the <entity>  e.g. realm of the devil
-      ["%p of the %e"] = 60
+      ["%p of the %e"] = 30 --60
 
       -- miscellaneous
       ["Beyond the %p"] = 3
@@ -2125,6 +2126,24 @@ namelib.NAMES =
       ["Fight the %e"] = 2
       ["Age of the %e"] = 2
       ["Back to the %a %p"] = 5
+
+      -- MSSP adds grammar rules
+
+      ["Assault on %a %p"] = 8
+      ["Destroy the %a %p"] = 8
+      ["Attack of the %a %e"] = 8
+      ["Return of the %e"] = 8
+      ["A WAD full of %d"] = 5
+      ["The %e's %p"] = 12
+      ["The %e's %d"] = 12
+      ["Return of the %e"] = 8
+      ["A very %a %p"] = 8
+      ["Zone of %d"] = 8
+      ["The %e's WAD"] = 5
+      ["Showdown with the %e"] = 7
+
+      ["%c did this"] = 5
+
     }
 
     lexicon =
@@ -2332,6 +2351,16 @@ namelib.NAMES =
         Destroyer = 10
         Warmonger = 10
         Prophet = 10
+      }
+
+      c =
+      {
+        MsrSgtShooterPerson = 10
+        Glaice = 10
+        Caligari87 = 10
+        Garrett = 10
+        Frozsoul = 10
+        SimonV = 10
       }
     }
   }
