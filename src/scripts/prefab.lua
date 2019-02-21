@@ -163,8 +163,15 @@ function Fab_load_all_definitions()
 
 
   local function calc_prob(def)
-    -- attachment for the prefab control module
+    
+    -- attachment for the Hideous Destructor cover walls
+    if PARAM["hd_cover_walls"] != "enable" then
+      if def.is_hideous_destructor_fab = true then
+        prob = 0
+      end
+    end
 
+    -- attachment for the prefab control module
     if PARAM["wall_prob"] == "fab_some" then
       fab_demultiplier = 100
     elseif PARAM["wall_prob"] == "fab_less" then
