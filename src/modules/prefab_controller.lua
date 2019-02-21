@@ -59,7 +59,7 @@ OB_MODULES["prefab_control"] =
       name = "point_prob"
       label=_("Decor")
       choices=PREFAB_CONTROL.POINT_CHOICES
-      tooltip = "Decor prefabs are prefabs placed along the floors such as crates, pillars, and other decorative elements which aren't tied to walls. This directly modifies probabilities tied to placement code, not the individual probability of appearance for decor prefabs themselves.\n\nNote: Default behavior is actually Mix-It-Up."
+      tooltip = "Decor prefabs are prefabs placed along the floors such as crates, pillars, and other decorative elements which aren't tied to walls. This directly modifies probabilities on a per-room basis, not the density for decor prefabs in any given room.\n\nNote: DEFAULT actually behaves like Mix-It-Up."
       default = "fab_default"
     }
 
