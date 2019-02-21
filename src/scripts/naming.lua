@@ -2103,7 +2103,7 @@ namelib.NAMES =
       ["%d Forever"]  = 5
       ["%d Always"]  = 5
       ["Not enough %d"] = 7
-      ["%d Revealed"] = 2
+      ["%d Revealed"] = 5
 
       -- <place> of <desc>  e.g. city of souls
       ["%p of %d"] = 25 --40
@@ -2117,14 +2117,14 @@ namelib.NAMES =
       ["%p of the %e"] = 30 --60
 
       -- miscellaneous
-      ["Beyond the %p"] = 3
-      ["Journey to the %p"] = 2
+      ["Beyond the %p"] = 8
+      ["Journey to the %p"] = 6
 
-      ["The %e Cometh"] = 2
-      ["The %e will Rise"] = 2
-      ["The %e must Die"] = 2
-      ["Fight the %e"] = 2
-      ["Age of the %e"] = 2
+      ["The %e Cometh"] = 5
+      ["The %e will Rise"] = 5
+      ["The %e must Die"] = 5
+      ["Fight the %e"] = 5
+      ["Age of the %e"] = 5
       ["Back to the %a %p"] = 5
 
       -- MSSP adds grammar rules
@@ -2142,7 +2142,8 @@ namelib.NAMES =
       ["The %e's WAD"] = 5
       ["Showdown with the %e"] = 7
 
-      ["%c did this"] = 5
+      ["%c did this"] = 3
+      ["The %a %p of %c"] = 3
 
     }
 
