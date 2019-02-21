@@ -7,11 +7,21 @@ PREFAB_CONTROL = { }
 PREFAB_CONTROL.CHOICES =
 {
   "fab_default", _("DEFAULT"),
-  "fab_some", _("Some"),
-  "fab_less", _("Less"),
-  "fab_few", _("Few"),
-  "fab_rare", _("Rare"),
-  "fab_random", _("Mix It Up"),
+  "fab_some",    _("Some"),
+  "fab_less",    _("Less"),
+  "fab_few",     _("Few"),
+  "fab_rare",    _("Rare"),
+  "fab_random",  _("Mix It Up"),
+}
+
+PREFAB_CONTROL.POINT_CHOICES =
+{
+  "fab_none",    _("NONE"),
+  "fab_rare",    _("Rare"),
+  "fab_few",     _("Few"),
+  "fab_default", _("DEFAULT"),
+  "fab_more",    _("More"),
+  "fab_heaps",    _("Heaps"),
 }
 
 function PREFAB_CONTROL.setup(self)
@@ -44,14 +54,14 @@ OB_MODULES["prefab_control"] =
 
   options =
   {
-    --[[point_prob =
+    point_prob =
     {
       name = "point_prob"
-      label=_("Points")
-      choices=PREFAB_CONTROL.CHOICES
-      tooltip = "Point prefabs are prefabs placed along the floors such as crates, pillars, and other decorative elements which aren't tied to walls. What this does is actually increase the chances of Oblige picking a dummy empty prefab in place of an actual prefab rather than modify placement code."
+      label=_("Decor")
+      choices=PREFAB_CONTROL.POINT_CHOICES
+      tooltip = "Decor prefabs are prefabs placed along the floors such as crates, pillars, and other decorative elements which aren't tied to walls. This directly modifies probabilities tied to placement code, not the individual probability of appearance for decor prefabs themselves.\n\nNote: Default behavior is actually Mix-It-Up."
       default = "fab_default"
-    }]]
+    }
 
     wall_prob =
     {
