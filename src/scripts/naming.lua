@@ -197,6 +197,10 @@ namelib.NAMES =
         Dark=20, Treacherous=10, Frigid=3,
         Deconditioned=10, Dismal=5, Dreaded=5, Cold=10,
         Perverted=5, Doomed=10,
+        
+        -- ObAddon contributor names
+        MsrSgtShooterPerson=3, Glaice=3, Frozsoul=3,
+        Garrett=3, Caligari87=3, SimonV=3,
       }
 
       b =
@@ -517,6 +521,10 @@ namelib.NAMES =
         Baal=3, Malthus=3, Beelzebub=3, Moloch=3, Dante=5, Berith=3, Haagenti=3, Caim=2, Seir=3,
         Nybbas=2, Namtar=2, Lamashtu=2, Astaroth=2, Merihem=3, Gressil=3, Barong=2, Iblis=3, Ouroboros=5,
         Carreau=3, Oeillet=3, Rosier=2, Luvart=2, Cerberus=5, Linguica=1, Bloodshedder=1,
+        
+        -- ObAddon contributor names
+        MsrSgtShooterPerson=3, Glaice=3, Frozsoul=3,
+        Garrett=3, Caligari87=3, SimonV=3,
       }
 
       a =
@@ -1093,6 +1101,10 @@ namelib.NAMES =
         Ominous=15, Perilous=15,
         Slaughter=5, Murder=5, Killing=5,
         Catastrophic=5, Whispering=10,
+        
+        -- ObAddon contributor names
+        MsrSgtShooterPerson=3, Glaice=3, Frozsoul=3,
+        Garrett=3, Caligari87=3, SimonV=3,
       }
 
       n =
