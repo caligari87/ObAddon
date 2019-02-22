@@ -21,7 +21,7 @@ UI_MONS = { }
 UI_MONS.QUANTITIES =
 {
     "none",   _("[0] NONE"),
-    "rarest"  _("[0.1] Devoid"),
+    "rarest", _("[0.1] Devoid"),
     "rarer",  _("[0.35] Barren"),
     "rare",   _("[0.7] Rare"),
     "scarce", _("[1.0] Scarce"),
@@ -37,7 +37,7 @@ UI_MONS.QUANTITIES =
 
 UI_MONS.MIX_QUANTITIES =
 {
-    "rarest"  _("[0.1] Devoid"),
+    "rarest", _("[0.1] Devoid"),
     "rarer",  _("[0.35] Barren"),
     "rare",   _("[0.7] Rare"),
     "scarce", _("[1.0] Scarce"),
