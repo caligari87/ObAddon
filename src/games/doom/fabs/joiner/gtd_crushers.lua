@@ -4,9 +4,9 @@ PREFABS.Joiner_tech_triple_crusher =
   map    = "MAP01"
 
   prob   = 1000
-  
+
   style  = "traps"
-  
+
   theme  = "!hell"
 
   where  = "seeds"
@@ -19,7 +19,7 @@ PREFABS.Joiner_tech_triple_crusher =
   over = 16
 
   bound_z1 = -16
-  
+
   height = 128
 
   x_fit = "frame"

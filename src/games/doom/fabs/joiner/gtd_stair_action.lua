@@ -4,7 +4,7 @@ PREFABS.Joiner_unfolding_stairs =
   map    = "MAP01"
 
   prob   = 1000
-  
+
   style  = "steepness"
 
   where  = "seeds"
@@ -17,7 +17,7 @@ PREFABS.Joiner_unfolding_stairs =
   over = 16
 
   bound_z1 = -16
-  
+
   height = 128
   delta_h = 128
   nearby_h = 128

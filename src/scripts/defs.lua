@@ -140,6 +140,7 @@ SPOT_LEDGE    = 3
 -- monster and item stuff
 MONSTER_QUANTITIES =
 {
+  rarest = 0.1
   rarer  = 0.35
   rare   = 0.7
   scarce = 1.0
@@ -178,6 +179,7 @@ MONSTER_QUANTITIES =
 MONSTER_KIND_TAB =
 {
   none   = 0.5
+  rarest = 0.5
   rarer  = 0.5
   rare   = 0.5
   scarce = 0.5

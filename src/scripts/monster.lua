@@ -2188,6 +2188,8 @@ gui.debugf("FILLING TRAP in %s\n", R.name)
     --if R.no_monsters then return false end
     if R.is_secret and OB_CONFIG.secret_monsters == "no" then return false end
 
+    if R.is_start and OB_CONFIG.start_room_mons == "no" then return false end
+
     return true  -- YES --
   end
 
