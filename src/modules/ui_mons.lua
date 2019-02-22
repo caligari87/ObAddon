@@ -21,33 +21,34 @@ UI_MONS = { }
 UI_MONS.QUANTITIES =
 {
     "none",   _("[0] NONE"),
-    "rarest", _("[0.1] Devoid"),
-    "rarer",  _("[0.35] Barren"),
-    "rare",   _("[0.7] Rare"),
-    "scarce", _("[1.0] Scarce"),
-    "few",    _("[1.3] Few"),
-    "less",   _("[1.5] Less"),
-    "normal", _("[2.0] Normal"),
-    "more",   _("[2.5] More"),
-    "heaps",  _("[3.0] Hordes"),
-    "nuts",   _("[4.0] Nuts!"),
-    "nutser", _("[7.7] N! U! T! S!"),
+    "rarest", _("[0.1] Scarce"),
+    "rarer",  _("[0.35] Few"),
+    "rare",   _("[0.7] Less"),
+    "scarce", _("[1.0] id software"),
+    "few",    _("[1.3] Evilution"),
+    "less",   _("[1.5] Plutonia"),
+    "normal", _("[2.0] Valiant"),
+    "more",   _("[2.5] Ancient Aliens"),
+    "heaps",  _("[3.0] Sunlust"),
+    "nuts",   _("[4.0] Combat Shock 2"),
+    "nutser", _("[6.66] Sunder"),
     "mixed",  _("Mix It Up"),
 }
 
 UI_MONS.MIX_QUANTITIES =
 {
-    "rarest", _("[0.1] Devoid"),
-    "rarer",  _("[0.35] Barren"),
-    "rare",   _("[0.7] Rare"),
-    "scarce", _("[1.0] Scarce"),
-    "few",    _("[1.3] Few"),
-    "less",   _("[1.5] Less"),
-    "normal", _("[2.0] Normal"),
-    "more",   _("[2.5] More"),
-    "heaps",  _("[3.0] Hordes"),
-    "nuts",   _("[4.0] Nuts!"),
-    "nutser", _("[7.7] N! U! T! S!"),
+    "rarest", _("[0.1] Scarce"),
+    "rarer",  _("[0.35] Few"),
+    "rare",   _("[0.7] Less"),
+    "scarce", _("[1.0] id software"),
+    "few",    _("[1.3] Evilution"),
+    "less",   _("[1.5] Plutonia"),
+    "normal", _("[2.0] Valiant"),
+    "more",   _("[2.5] Ancient Aliens"),
+    "heaps",  _("[3.0] Sunlust"),
+    "nuts",   _("[4.0] Combat Shock 2"),
+    "nutser", _("[6.66] Sunder"),
+    "mixed",  _("Mix It Up"),
 }
 
 UI_MONS.STRENGTHS =
@@ -122,6 +123,7 @@ OB_MODULES["ui_mons"] =
       label=_("Quantity"),
       choices=UI_MONS.QUANTITIES,
       tooltip="For reference: Oblige 7.x's default for normal is 1.0",
+      default="scarce",
       gap = 1
     }
 

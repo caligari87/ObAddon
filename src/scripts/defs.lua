@@ -150,44 +150,21 @@ MONSTER_QUANTITIES =
   more   = 2.5
   heaps  = 3.0
   nuts   = 4.0
-  nutser = 7.7
+  nutser = 6.66
 }
-
--- Original quantities, comment out above and uncomment this
--- if you want the stock quantities of monsters. -Glaice, 2/5/18
---MONSTER_QUANTITIES =
---{
---  scarce = 0.35
---  less   = 0.7
---  normal = 1.0
---  more   = 1.5
---  heaps  = 2.5
---  nuts   = 7.7
---}
-
--- More experimenting with quantities, not stock.
---MONSTER_QUANTITIES =
---{
---  scarce = 0.35
---  less   = 0.7
---  normal = 1.0
---  more   = 1.5
---  heaps  = 3.0
---  nuts   = 4.5
---}
 
 MONSTER_KIND_TAB =
 {
-  none   = 0.5
-  rarest = 0.5
+  none   = 0.1
+  rarest = 0.25
   rarer  = 0.5
-  rare   = 0.5
-  scarce = 0.5
-  few    = 0.5
-  less   = 0.75
-  normal = 1.0
-  more   = 1.33
-  heaps  = 1.6
+  rare   = 0.75
+  scarce = 1.0
+  few    = 1.33
+  less   = 1.6
+  normal = 1.9
+  more   = 2.0
+  heaps  = 2.0
   nuts   = 2.0
   nutser = 2.0
 }
