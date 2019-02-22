@@ -1463,6 +1463,15 @@ function Room_border_up()
     end
 
 
+    -- scenic to room --
+
+    if not A1.room and A2.room then
+      if A1.border_type == "simple_fence" then
+        Junction_make_wall(junc)
+      end
+    end
+
+
     -- room to scenic --
 
     if not A2.room then
