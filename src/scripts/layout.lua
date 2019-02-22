@@ -1958,7 +1958,7 @@ stderrf("Cages in %s [%s pressure] --> any_prob=%d  per_prob=%d\n",
   local function pick_decorative_bling(R)
     local decor_prob
 
-    if PARAM["point_prob"] == "fb_default" or not PARAM["point_prob"] then
+    if PARAM["point_prob"] == "fab_default" or not PARAM["point_prob"] then
       decor_prob = rand.pick({ 20, 55, 90 })
     elseif PARAM["point_prob"] == "fab_heaps" then
       decor_prob = int(rand.range(72,90))
