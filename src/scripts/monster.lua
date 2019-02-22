@@ -879,7 +879,7 @@ function Monster_fill_room(R)
       if PARAM["gotcha_qty"] then
         if PARAM["gotcha_qty"] == "rarer" then
           gotcha_qty = -2
-        if PARAM["gotcha_qty"] == "fewer" then
+        elseif PARAM["gotcha_qty"] == "fewer" then
           gotcha_qty = -1
         elseif PARAM["gotcha_qty"] == "none" then
           gotcha_qty = 0

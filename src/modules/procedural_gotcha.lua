@@ -28,7 +28,7 @@ PROCEDURAL_GOTCHA_FINE_TUNE.GOTCHA_STRENGTH_CHOICES =
 
 PROCEDURAL_GOTCHA_FINE_TUNE.GOTCHA_QUANTITY_CHOICES =
 {
-  "rarer", _("[-2] Rarer")
+  "rarer", _("[-2] Rarer"),
   "fewer", _("[-1] Fewer"),
   "none",  _("NONE"),
   "more",  _("[+1] Even More"),
