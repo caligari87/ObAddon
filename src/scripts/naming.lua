@@ -2134,12 +2134,12 @@ namelib.NAMES =
       ["Attack of the %a %e"] = 8
       ["Return of the %e"] = 8
       ["A WAD full of %d"] = 5
-      ["The %e's %p"] = 12
-      ["The %e's %d"] = 12
+      ["The %p of the %e"] = 12
+      ["The %d of the %e"] = 12
       ["Return of the %e"] = 8
       ["A very %a %p"] = 8
       ["Zone of %d"] = 8
-      ["The %e's WAD"] = 5
+      ["The %e WAD"] = 5
       ["Showdown with the %e"] = 7
 
       ["%c did this"] = 3
