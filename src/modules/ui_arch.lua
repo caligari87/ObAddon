@@ -66,7 +66,7 @@ UI_ARCH.PROC_GOTCHA_CHOICES =
 {
   "none",  _("NONE"),
   "final", _("Final Map Only"),
-  "10",    _("Every 10th Map"),
+  "epi",   _("Episodic (MAP11, MAP21, MAP30)"),
   "_",     _("_"),
   "5p",    _("5% Chance, Any Map After MAP04"),
   "10p",   _("10% Chance, Any Map After MAP04"),

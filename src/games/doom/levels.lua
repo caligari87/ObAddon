@@ -206,8 +206,8 @@ function DOOM.get_levels()
       end
 
       --every 10 maps
-      if OB_CONFIG.procedural_gotchas == "10" then
-        if map == 10 or map == 20 or map == 30 then
+      if OB_CONFIG.procedural_gotchas == "epi" then
+        if map == 11 or map == 21 or map == 30 then
           LEV.is_procedural_gotcha = true
         end
       end

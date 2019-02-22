@@ -28,6 +28,8 @@ PROCEDURAL_GOTCHA_FINE_TUNE.GOTCHA_STRENGTH_CHOICES =
 
 PROCEDURAL_GOTCHA_FINE_TUNE.GOTCHA_QUANTITY_CHOICES =
 {
+  "rarer", _("[-2] Rarer")
+  "fewer", _("[-1] Fewer"),
   "none",  _("NONE"),
   "more",  _("[+1] Even More"),
   "lots",  _("[+2] Lots More"),
@@ -54,7 +56,7 @@ OB_MODULES["procedural_gotcha"] =
   }
 
   tooltip=_(
-    "This module allows you to fine tune the Procedural Gotcha experience if you have Procedural Gotchas enabled. Does not affect prebuilts.")
+    "This module allows you to fine tune the Procedural Gotcha experience if you have Procedural Gotchas enabled. Does not affect prebuilts. It is recommended to pick higher scales on one of the two options, but not both at once for a balanced challenge.")
 
   options =
   {
@@ -64,7 +66,7 @@ OB_MODULES["procedural_gotcha"] =
       label=_("Extra Quantity"),
       choices=PROCEDURAL_GOTCHA_FINE_TUNE.GOTCHA_QUANTITY_CHOICES,
       default="lots",
-      tooltip = "Offset monster strength from your default quantity of choice plus the increasing level ramp.",
+      tooltip = "Offset monster strength from your default quantity of choice plus the increasing level ramp. If your quantity choice is to reduce the monsters, the monster quantity will cap at a minimum of 0.1 (Devoid quantity setting).",
     }
 
     gotcha_strength =
