@@ -3,7 +3,7 @@ PREFABS.Ladder_128_rustic =
   file   = "stairs/gtd_stair_ladder_128.wad"
   map    = "MAP01"
 
-  prob   = 20
+  prob   = 5
   style  = "steepness"
 
   where  = "seeds"
@@ -24,7 +24,7 @@ PREFABS.Ladder_128_rustic =
 PREFABS.Ladder_128_techy =
 {
   template = "Ladder_128_rustic"
-  prob = 25
+  prob = 5
 
   theme = "!hell"
 
@@ -60,7 +60,7 @@ PREFABS.Ladder_128_techy_2x =
   template = "Ladder_128_rustic"
 
   map = "MAP02"
-  prob = 25
+  prob = 5
 
   seed_h = 2
 
@@ -93,7 +93,7 @@ PREFABS.Ladder_thin =
   file = "stairs/gtd_stair_ladder_128.wad"
   map = "MAP03"
 
-  prob = 40 --60
+  prob = 5 --60
   style = "steepness"
 
   where  = "seeds"

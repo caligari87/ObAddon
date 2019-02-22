@@ -3,7 +3,7 @@ PREFABS.Stairs_128 =
   file   = "stairs/gtd_stairs_128.wad"
   map    = "MAP01"
 
-  prob   = 30
+  prob   = 250
   style  = "steepness"
 
   where  = "seeds"
