@@ -1337,6 +1337,11 @@ function Room_make_windows(A1, A2)
      --[[if A2.ceil_h <= A1.ceil_h then
        A2.ceil_h  = A1.ceil_h
      end]]
+     local height_diff = A2.ceil_h - A1.floor_h
+ 
+     if A1.room.is_outdoor != true and height_diff <= 0 then
+       A2.ceil_h = A2.ceil_h + 96
+     end
   end
 
   local z, height = calc_vertical_space(A1, A2)

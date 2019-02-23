@@ -46,6 +46,8 @@
 
     border_type : keyword  -- "simple_fence"
                            -- "watery_drop"
+                           -- "bottomless_drop"
+                           -- "ocean"
 
     facade_group : FACADE_GROUP   -- used by facade logic (temporarily)
 
