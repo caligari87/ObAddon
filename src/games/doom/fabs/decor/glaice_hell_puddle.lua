@@ -12,7 +12,5 @@ PREFABS.Decor_glaice_hell_puddle =
 
   bound_z1 = 0
 
-  z_fit = "frame"
-
   sink_mode = "never"
 }
