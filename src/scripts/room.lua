@@ -1666,10 +1666,10 @@ function Room_choose_size(R, not_big)
   elseif R.is_start or R.is_exit then
     prob = 0
   elseif R.is_outdoor then
-    prob = style_sel("big_rooms", 0, 10, 20, 50)
+    prob = style_sel("big_rooms", 0, 35, 65, 90)
   else
 -- prob = style_sel("big_rooms", 0, 20, 40, 80) --Original
-  prob = style_sel("big_rooms", 0, 12, 24, 50)
+  prob = style_sel("big_rooms", 0, 35, 65, 90)
   end
 
   if rand.odds(prob) then
