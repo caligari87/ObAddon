@@ -7,10 +7,10 @@ PREFABS.Pic_glaice_hell_impaled_guys =
   theme = "hell"
 
   where  = "seeds"
-  height = 128
+  height = 144
   long   = 128
 
-  seed_w = 2
+  seed_w = 3
   seed_h = 1
 
   bound_z1 = 0
