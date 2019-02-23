@@ -177,6 +177,7 @@ function Render_edge(E)
 
       height = math.abs(A.ceil_h - A.floor_h)
 
+      on_liquids = E.area.mode
     }
 
     if reqs.height <= 96 then

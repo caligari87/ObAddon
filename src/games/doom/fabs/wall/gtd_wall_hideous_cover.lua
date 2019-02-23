@@ -8,6 +8,7 @@ PREFABS.Wall_HD_crate_pile =
   map    = "MAP01"
 
   is_hideous_destructor_fab = true
+  on_liquids = "never"
 
   prob   = 15
   env   = "building"

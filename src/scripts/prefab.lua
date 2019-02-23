@@ -2209,6 +2209,9 @@ function Fab_find_matches(reqs, match_state)
       if def.liquid == "harmful"  and not LEVEL.liquid.damage then return 0 end
     end
 
+    -- on liquids check
+    if def.on_liquids == "never" and reqs.on_liquids == "liquid" then return 0 end
+
     -- sink check
     if reqs.is_sink and def.sink_mode == "never" then return 0 end
 
