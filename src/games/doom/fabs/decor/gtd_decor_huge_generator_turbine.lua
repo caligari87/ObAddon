@@ -7,8 +7,6 @@ PREFABS.Huge_generator_turbine =
   theme  = "tech"
   env    = "!cave"
 
-  rank = 1
-
   where  = "point"
   size   = 256
   height = 168

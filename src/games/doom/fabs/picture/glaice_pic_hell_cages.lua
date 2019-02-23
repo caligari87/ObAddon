@@ -21,7 +21,7 @@ PREFABS.Pic_glaice_hell_cages =
 
   x_fit = "frame"
   y_fit = "top"
-  
+
   tex_MIDGRATE = {MIDGRATE=50, MIDBARS1=50}
 }
 
