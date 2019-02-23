@@ -12,7 +12,7 @@ Currently, the Oblige community resides on an unofficial Discord server since th
 ## Download
 We are in the process of transitioning our development process! For now, new manual builds are being posted every couple days on the Discord server linked above. If the build linked below is very old, please check the `#readme` channel on the server to see if a newer build is available.
 
-[**ObAddon-2-17-19.pk3**](https://cdn.discordapp.com/attachments/405211037344989184/546694387414073347/ObAddon-2-17-19.pk3)
+[**ObAddon-2-23-19.pk3**](https://cdn.discordapp.com/attachments/405211037344989184/548699851123195914/ObAddon-2-23-19.pk3)
 
 ## Instructions
 
