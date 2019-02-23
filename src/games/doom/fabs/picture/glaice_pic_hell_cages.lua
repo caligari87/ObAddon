@@ -21,4 +21,13 @@ PREFABS.Pic_glaice_hell_cages =
 
   x_fit = "frame"
   y_fit = "top"
+  
+  tex_MIDGRATE = {MIDGRATE=50, MIDBARS=50}
+}
+
+PREFABS.Pic_glaice_hell_cages2 =
+{
+  template = "Pic_glaice_hell_cages"
+
+  map = "MAP02"
 }
