@@ -22,6 +22,9 @@ PREFABS.Pic_control_room =
 
   x_fit = "frame"
   y_fit = "top"
+
+  sector_1  = { [0]=70, [1]=20, [2]=5, [3]=5, [8]=10 }
+
 }
 
 PREFABS.Pic_control_room_small_monitors =

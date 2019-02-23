@@ -28,7 +28,7 @@ PREFABS.Exit_pillar2_urban =
 {
   template = "Exit_pillar2"
 
-  prob  = 500
+  prob  = 200
   theme = "urban"
 
   tex_SW1STRTN = "SW1CMT"

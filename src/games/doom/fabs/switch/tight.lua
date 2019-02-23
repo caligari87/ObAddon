@@ -6,7 +6,7 @@ PREFABS.Switch_wall_tight =
 
   theme = "!hell"
 
-  prob   = 50
+  prob   = 35
 
   where  = "seeds"
   seed_w = 1
