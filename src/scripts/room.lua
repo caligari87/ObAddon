@@ -2115,9 +2115,6 @@ function Room_floor_ceil_heights()
           A.ceil_group = N2.ceil_group
         end
 
-        if ( N2.floor_h - N1.floor_h ) >= 128 then
-          A.ceil_group = N2.ceil_group
-        end
       end
     end
 
@@ -2619,6 +2616,10 @@ function Room_floor_ceil_heights()
 
       local N = chunk.from_area
       assert(N.ceil_h)
+
+      if (chunk.from_area.ceil_h - chunk.dest_area.floor_h) < 96 then
+        N = chunk.dest_area
+      end
 
       A.ceil_h   = N.ceil_h
       A.ceil_mat = N.ceil_mat
