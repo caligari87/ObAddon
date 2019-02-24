@@ -102,7 +102,14 @@ OB_MODULES["misc"] =
 
     { name="doors",       label=_("Doors"),          choices=STYLE_CHOICES }
     { name="keys",        label=_("Keyed Doors"),    choices=STYLE_CHOICES }
-    { name="switches",    label=_("Switched Doors"), choices=STYLE_CHOICES }
+    { name="switches",    label=_("Switched Doors"), choices=STYLE_CHOICES, gap=1 }
+
+    {
+      name="exit_signs"
+      label=_("Exit Signs")
+      choices=MISC_STUFF.YES_NO
+      tooltip=_("Places exit signs by exiting room")
+    }
 
 ---- PLANNED (UNFINISHED) STUFF ----
 
