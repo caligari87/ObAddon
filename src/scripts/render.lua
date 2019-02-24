@@ -1998,7 +1998,7 @@ chunk.goal.action = "S1_OpenDoor"  -- FIXME IT SHOULD BE SET WHEN JOINER IS REND
       end
 
       if E and not E.area.room.is_hallway then
-        if PARAM.exit_signs then 
+        if PARAM.exit_signs then
           Render_add_exit_sign(E, z1)
         end
       end

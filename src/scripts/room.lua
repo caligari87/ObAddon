@@ -1338,7 +1338,7 @@ function Room_make_windows(A1, A2)
        A2.ceil_h  = A1.ceil_h
      end
      local height_diff = A2.ceil_h - A1.floor_h
- 
+
      if A1.room.is_outdoor != true and height_diff <= 0 then
        A2.ceil_h = A2.ceil_h + 96
      end]]
@@ -2109,9 +2109,13 @@ function Room_floor_ceil_heights()
         local N1 = A.chunk.from_area
         local N2 = A.chunk.dest_area
 
-        if N1.floor_h > N2.floor_h then
+        if N1.floor_h < N2.floor_h then
           A.ceil_group = N1.ceil_group
         else
+          A.ceil_group = N2.ceil_group
+        end
+
+        if N1.ceil_h <= N2.floor_h then
           A.ceil_group = N2.ceil_group
         end
       end
