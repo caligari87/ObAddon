@@ -16,7 +16,6 @@ PREFABS.Stairs_128 =
   bound_z1 = 0
 
   delta_h = 128
-  plain_ceiling = true
 }
 
 PREFABS.Stairs_128_2X =

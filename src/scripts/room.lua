@@ -2115,7 +2115,7 @@ function Room_floor_ceil_heights()
           A.ceil_group = N2.ceil_group
         end
 
-        if N1.ceil_h <= N2.floor_h then
+        if ( N2.floor_h - N1.floor_h ) >= 128 then
           A.ceil_group = N2.ceil_group
         end
       end
