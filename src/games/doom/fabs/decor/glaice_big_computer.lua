@@ -3,7 +3,7 @@ PREFABS.Decor_glaice_big_computer =
   file   = "decor/glaice_big_computer.wad"
   map    = "MAP01"
 
-  prob   = 2500
+  prob   = 10000
   theme  = "tech"
   env    = "!cave"
 

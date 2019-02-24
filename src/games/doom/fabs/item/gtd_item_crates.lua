@@ -11,6 +11,8 @@ PREFABS.Item_weapon_case =
 PREFABS.Item_broken_crate =
 {
   template = "Item_weapon_case"
+  
+  size = 64
 
   map = "MAP02"
 }

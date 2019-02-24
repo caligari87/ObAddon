@@ -299,8 +299,8 @@ function Render_edge(E)
 
     -- just throw them Oblige's default minimum room height
     -- if the generated vista is too low
-    if (A.ceil_h - A.floor_h) <= 96 then
-      A.ceil_h = A.floor_h + 96
+    if (A.ceil_h - A.floor_h) <= 2 then
+      A.ceil_h = A.floor_h + 2
     end
 
     local def = pick_wall_prefab()
