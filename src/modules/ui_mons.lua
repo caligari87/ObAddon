@@ -21,7 +21,7 @@ UI_MONS = { }
 UI_MONS.QUANTITIES =
 {
     "none",   _("[0] NONE"),
-    "rarest", _("[0.1] Scarce"),
+    "rarest", _("[0.15] Scarce"),
     "rarer",  _("[0.35] Few"),
     "rare",   _("[0.7] Less"),
     "scarce", _("[1.0] id software"),
@@ -29,15 +29,19 @@ UI_MONS.QUANTITIES =
     "less",   _("[1.5] Plutonia"),
     "normal", _("[2.0] Valiant"),
     "more",   _("[2.5] Ancient Aliens"),
-    "heaps",  _("[3.0] Sunlust"),
-    "nuts",   _("[4.0] Combat Shock 2"),
-    "nutser", _("[6.66] Sunder"),
+    "heaps",  _("[3.0] Hell Revealed 2"),
+    "legions",_("[3.5] Sunlust"),
+    "insane", _("[4.0] Combat Shock 2"),
+    "deranged", _("[4.5] Swift Death"),
+    "nuts",   _("[5.0] Sunder"),
+    "nutser", _("[6.66] Holy Hell"),
     "mixed",  _("Mix It Up"),
 }
 
 UI_MONS.MIX_QUANTITIES =
 {
-    "rarest", _("[0.1] Scarce"),
+    "none",   _("[0] NONE"),
+    "rarest", _("[0.15] Scarce"),
     "rarer",  _("[0.35] Few"),
     "rare",   _("[0.7] Less"),
     "scarce", _("[1.0] id software"),
@@ -45,9 +49,12 @@ UI_MONS.MIX_QUANTITIES =
     "less",   _("[1.5] Plutonia"),
     "normal", _("[2.0] Valiant"),
     "more",   _("[2.5] Ancient Aliens"),
-    "heaps",  _("[3.0] Sunlust"),
-    "nuts",   _("[4.0] Combat Shock 2"),
-    "nutser", _("[6.66] Sunder"),
+    "heaps",  _("[3.0] Hell Revealed 2"),
+    "legions",_("[3.5] Sunlust"),
+    "insane", _("[4.0] Combat Shock 2"),
+    "deranged", _("[4.5] Swift Death"),
+    "nuts",   _("[5.0] Sunder"),
+    "nutser", _("[6.66] Holy Hell"),
     "mixed",  _("Mix It Up"),
 }
 
