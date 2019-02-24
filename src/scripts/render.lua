@@ -689,7 +689,7 @@ stderrf("dA = (%1.1f %1.1f)  dB = (%1.1f %1.1f)\n", adx, ady, bdx, bdy)
          E = E.peer
       end
 
-      Render_add_exit_sign(E, z)
+      if PARAM.exit_signs then Render_add_exit_sign(E, z)
     end
   end
 
