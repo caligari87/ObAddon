@@ -24,7 +24,7 @@ PREFABS.Decor_3x3_bookshelves_thin =
   }
 }
 
-PREFABS.Decor_3x3_bookshelves_thick
+PREFABS.Decor_3x3_bookshelves_thick =
 {
   template = "Decor_3x3_bookshelves_thin"
 
