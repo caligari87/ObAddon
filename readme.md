@@ -12,7 +12,7 @@ Currently, the Oblige community resides on an unofficial Discord server since th
 ## Download
 We are in the process of transitioning our development process! For now, new manual builds are being posted every couple days on the Discord server linked above. If the build linked below is very old, please check the `#readme` channel on the server to see if a newer build is available.
 
-[**ObAddon-2-23-19.pk3**](https://cdn.discordapp.com/attachments/405211037344989184/548699851123195914/ObAddon-2-23-19.pk3)
+[**ObAddon-2019-02-25.pk3**](https://cdn.discordapp.com/attachments/405211037344989184/549489355958517800/ObAddon-2019-02-25.pk3)
 
 ## Instructions
 
@@ -71,6 +71,8 @@ Adds a HUGE library of prefabricates to decorate maps, a collection spanning mon
 * Prefab Control module - can control the amount of detail desired for the map, for your visual preference or for stability.
 
 * Expanded prefab error reporting - you too, can make your own fabs and test them out.
+
+* Beams! Just like Oblige 3.x and 6.x, beams have a chance of appearing between borders of varying ceilings, floors and liquid zones!
 
 * Rudimentary support for prefabricated ZDoom 3D skyboxes.
 
