@@ -429,7 +429,7 @@ function Render_edge(E)
     skin.door_tag = E.door_tag
 
 
-    local z = assert(E.fence_top_z) - def.fence_h
+    local z = assert(E.beam_z)
 
     local T
 
@@ -437,7 +437,7 @@ function Render_edge(E)
       local dir2 = DIAG_DIR_MAP[dir]
       local S = E.S
 
-      T = Trans.box_transform(S.x1, S.y1, S.x2, S.y2, 0, dir2)
+      T = Trans.box_transform(S.x1, S.y1, S.x2, S.y2, z, dir2)
 
     else  -- axis-aligned edge
 

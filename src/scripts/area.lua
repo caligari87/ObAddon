@@ -725,6 +725,19 @@ function Junction_calc_fence_z(A1, A2)
 end
 
 
+function Junction_calc_beam_z(A1, A2)
+  local z1 = A1.floor_h
+  local z2 = A2.floor_h
+
+  if A1.podium_h then z1 = z1 + A1.podium_h end
+  if A2.podium_h then z2 = z2 + A2.podium_h end
+
+  local z = math.min(z1, z2)
+
+  return z
+end
+
+
 function Junction_make_fence(junc)
 
   junc.E1 =
@@ -749,7 +762,7 @@ function Junction_make_beams(junc)
   {
     kind = "beams"
     fence_mat = assert(junc.A1.zone.fence_mat)
-    fence_top_z = Junction_calc_fence_z(junc.A1, junc.A2)
+    beam_z = Junction_calc_beam_z(junc.A1, junc.A2)
     area = junc.A1
   }
 
