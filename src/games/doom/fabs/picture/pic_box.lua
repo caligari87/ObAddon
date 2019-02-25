@@ -191,31 +191,6 @@ PREFABS.Pic_box_big_faces =
   tex_PIPES = { MARBFACE=10, MARBFAC2=20, MARBFAC3=40 }
 }
 
-PREFABS.Pic_box_library =
-{
-  template = "Pic_box_template"
-  map      = "MAP02"
-
-  theme = "urban"
-
-  height = 176
-
-  tex_PIPES = "PANBOOK"
-}
-
-PREFABS.Pic_box_big_library =
-{
-  template = "Pic_box_template"
-  map      = "MAP06"
-
-  prob   = 300
-  theme  = "urban"
-
-  seed_w = 2
-  height = 176
-
-  tex_PIPES = "PANBOOK"
-}
 
 ----- HELL THEME ------------------------------
 
