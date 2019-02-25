@@ -15,7 +15,7 @@ PREFABS.Decor_frozsoul_097_water_pond1 =
   where  = "point"
   size   = 128
 
-  bound_z1 = -16
+  bound_z1 = 0
 
   sink_mode = "never"
 }
@@ -47,7 +47,7 @@ PREFABS.Decor_frozsoul_097_blood_pond1 =
 
 PREFABS.Decor_frozsoul_097_blood_pond2 =
 {
-  template = "Decor_frozsoul_097_pond2"
+  template = "Decor_frozsoul_097_water_pond2"
   theme = "!tech"
   flat_FWATER1 = "BLOOD1"
 }
