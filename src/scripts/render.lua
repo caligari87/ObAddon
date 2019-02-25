@@ -413,7 +413,7 @@ function Render_edge(E)
     Ambient_pop()
   end
 
-  
+
   local function straddle_beams()
     assert(E.fence_mat)
     local skin = { wall=E.fence_mat }
@@ -2466,6 +2466,7 @@ function Render_skybox()
     local skyfab_list = {}
     table.insert(skyfab_list, PREFABS["Skybox_generic"])
     table.insert(skyfab_list, PREFABS["Skybox_garrett_city"])
+    table.insert(skyfab_list, PREFABS["Skybox_garrett_hell"])
     skyfab = rand.pick(skyfab_list)
 
     -- proper skybox picking code doesn't seem to work and
@@ -2480,6 +2481,10 @@ function Render_skybox()
   elseif OB_CONFIG.zdoom_skybox == "themed" then
     if LEVEL.theme_name == "urban" then
       skyfab = PREFABS["Skybox_garrett_city"]
+    elseif LEVEL.theme_name == "tech" then
+      skyfab = PREFABS["Skybox_generic"]
+    elseif LEVEL.theme_name == "hell" then
+      skyfab = PREFABS["Skybox_generic"]
     else
       skyfab = PREFABS["Skybox_generic"]
     end

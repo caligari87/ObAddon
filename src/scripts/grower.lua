@@ -2906,7 +2906,7 @@ end
 
       -- an exit room should only have a single connection, so
       -- inhibit a mirrored sprout.
-      if what == "INSTALL" and pass == "sprout" and R.is_exit then
+      if what == "INSTALL" and pass == "sprout" and R.is_exit and not LEVEL.is_procedural_gotcha then
         -- la la la
       elseif not match_or_install_pat_raw(what, T2) then
         return false
@@ -3125,7 +3125,8 @@ end
     end
 
     -- exit rooms must have only a single entrance
-    if pass == "sprout" and R.is_exit and R:prelim_conn_num() >= 1 then
+    -- MSSP: unless it's a Procedural Gotcha map
+    if pass == "sprout" and R.is_exit and R:prelim_conn_num() >= 1 and not LEVEL.is_procedural_gotcha then
       break;
     end
 

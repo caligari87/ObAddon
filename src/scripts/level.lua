@@ -208,10 +208,10 @@ function Episode_determine_map_sizes()
     end
 
     if LEV.is_procedural_gotcha == true then
-      W = 26
-      H = 26
+      W = 30
+      H = 30
       if OB_CONFIG.stretched == "yes" then
-        W = 56
+        W = 60
         H = 7
       end
     end
@@ -2192,6 +2192,7 @@ function Level_do_styles()
     STYLE.caves = "none"
     STYLE.parks = "none"
     STYLE.symmetry = "more"
+    STYLE.teleporters = "none"
   end
 
 end

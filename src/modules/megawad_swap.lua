@@ -42,7 +42,7 @@ MEGAWAD_SWAP.doom1_music =
     "E3M4", "E3M5", "E3M6",
     "E3M7", "E3M9"
   }
-  
+
 }
 
 
@@ -79,7 +79,7 @@ function MEGAWAD_SWAP.get_levels(self)
 
   each _,src in epi_list do
     local dest = table.copy(src)
-    
+
     -- this shuffle algorithm ensures first entry is never the same
     -- [ I really get sick of hearing D_RUNNIN.... ]
     for i = 1, (#dest-2) do

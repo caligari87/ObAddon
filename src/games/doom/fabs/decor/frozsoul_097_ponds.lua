@@ -8,8 +8,8 @@ PREFABS.Decor_frozsoul_097_water_pond1 =
   file   = "decor/frozsoul_097_ponds.wad"
   map    = "MAP01"
 
-  prob   = 50000	-- high probability is needed to have a reasonable chance of appearing
-  theme  = "!hell"  
+  prob   = 5000    -- high probability is needed to have a reasonable chance of appearing
+  theme  = "!hell"
   env    = "outdoor"
 
   where  = "point"
@@ -64,7 +64,7 @@ PREFABS.Decor_frozsoul_097_lava_pond1 =
 PREFABS.Decor_frozsoul_097_lava_pond2 =
 {
   template = "Decor_frozsoul_097_water_pond1"
-  map      = "MAP02"  
+  map      = "MAP02"
   theme = "hell"
   flat_FWATER1 = "LAVA1"
 }

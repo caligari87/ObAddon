@@ -6,7 +6,7 @@ PREFABS.Beam =
 {
   file   = "fence/beam.wad"
   map    = "MAP01"
-  
+
   kind   = "beam"
 
   prob   = 50

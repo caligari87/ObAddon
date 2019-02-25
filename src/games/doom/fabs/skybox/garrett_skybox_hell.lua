@@ -1,13 +1,13 @@
-PREFABS.Skybox_generic =
+PREFABS.Skybox_garrett_hell =
 {
-  file  = "skybox/gtd_generic_sky.wad"
+  file  = "skybox/garrett_skybox_hell.wad"
   map   = "MAP01"
 
   prob  = 50
 
   kind  = "skybox"
 
-  theme = "tech"
+  theme = "hell"
 
   bound_z0 = -256
   bound_z1 = 256

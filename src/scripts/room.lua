@@ -1409,7 +1409,7 @@ function Room_border_up()
     if not A1.room or not A2.room then
       return false
     end
-    
+
     if A1.room and A2.room then
       if (A1.mode == "floor" or A1.mode == "liquid") and
          (A2.mode == "floor" or A2.mode == "liquid") then
@@ -1427,7 +1427,7 @@ function Room_border_up()
         return false
       end
     end
-    
+
     return false
   end
 
@@ -1753,6 +1753,11 @@ function Room_choose_size(R, not_big)
     R.size_limit = LEVEL.map_W*30
     R.floor_limit = 20
     R.is_big = true
+  end
+
+  if LEVEL.is_procedural_gotcha and R.is_start then
+    R.size_limit = R.size_limit * 4
+    R.floor_limit = R.floor_limit * 2
   end
 end
 

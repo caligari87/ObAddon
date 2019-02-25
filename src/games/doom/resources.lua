@@ -194,7 +194,7 @@ function DOOM.all_done()
   if OB_CONFIG.game == "doom1" or OB_CONFIG.game == "ultdoom" then
     gui.wad_merge_sections(dir .. "short_bars.wad")
   else
-    gui.wad_merge_sections(dir .. "hang_lamp.wad")
+    --gui.wad_merge_sections(dir .. "hang_lamp.wad")
   end
 
   if OB_CONFIG.length == "game" then
