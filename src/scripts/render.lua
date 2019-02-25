@@ -240,6 +240,27 @@ function Render_edge(E)
   end
 
 
+  local function pick_beam_prefab()
+    local reqs =
+    {
+      kind = "beam"
+
+      seed_w = assert(E.long)
+    }
+
+    if geom.is_corner(dir) then
+      reqs.where = "diagonal"
+      reqs.seed_h = reqs.seed_w
+    else
+      reqs.where = "edge"
+    end
+
+    local def = Fab_pick(reqs)
+
+    return def
+  end
+
+
   local function edge_outer_sky()
     assert(E.long == 1)
 
@@ -377,6 +398,46 @@ function Render_edge(E)
       local S = E.S
 
       T = Trans.box_transform(S.x1, S.y1, S.x2, S.y2, z, dir2)
+
+    else  -- axis-aligned edge
+
+      T = Trans.edge_transform(E, z, 0, 0, def.deep, def.over)
+    end
+
+    -- choose lighting to be the minimum of each side
+    local min_light = math.min(E.area.lighting, E.peer.area.lighting)
+    Ambient_push(min_light)
+
+    Fabricate(A.room, def, T, { skin })
+
+    Ambient_pop()
+  end
+
+  
+  local function straddle_beams()
+    assert(E.fence_mat)
+    local skin = { wall=E.fence_mat }
+
+
+    local def = E.prefab_def
+
+    if not def then
+      def = pick_beam_prefab()
+    end
+
+    -- this is set in Room_pick_edge_prefab()
+    skin.door_tag = E.door_tag
+
+
+    local z = assert(E.fence_top_z) - def.fence_h
+
+    local T
+
+    if geom.is_corner(dir) then
+      local dir2 = DIAG_DIR_MAP[dir]
+      local S = E.S
+
+      T = Trans.box_transform(S.x1, S.y1, S.x2, S.y2, 0, dir2)
 
     else  -- axis-aligned edge
 
@@ -716,6 +777,9 @@ stderrf("dA = (%1.1f %1.1f)  dB = (%1.1f %1.1f)\n", adx, ady, bdx, bdy)
   elseif E.kind == "doorway" or
          E.kind == "window" then
     straddle_door()
+
+  elseif E.kind == "beams" then
+    straddle_beams()
 
   else
     error("Unknown edge kind: " .. tostring(E.kind))

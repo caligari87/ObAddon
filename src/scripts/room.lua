@@ -1405,6 +1405,33 @@ function Room_border_up()
   end
 
 
+  local function can_beam(A1, A2)
+    if not A1.room or not A2.room then
+      return false
+    end
+    
+    if A1.room and A2.room then
+      if (A1.mode == "floor" or A1.mode == "liquid") and
+         (A2.mode == "floor" or A2.mode == "liquid") then
+        return true
+      else
+        return false
+      end
+    end
+
+    if A2.room and A1.room then
+      if (A2.mode == "floor" or A2.mode == "liquid") and
+         (A1.mode == "floor" or A1.mode == "liquid") then
+        return true
+      else
+        return false
+      end
+    end
+    
+    return false
+  end
+
+
   local function visit_junction(junc)
     local A1 = junc.A1
     local A2 = junc.A2
@@ -1509,6 +1536,12 @@ function Room_border_up()
     -- the same room --
 
     if A1.room == A2.room then
+      if not A1.is_outdoor and not A2.is_outdoor then
+        -- should eventually be controlled by beams architecture setting
+        if can_beam(A1, A2) and rand.odds(style_sel("beams",0,20,40,60)) then
+          Junction_make_beams(junc)
+        end
+      end
       return
     end
 

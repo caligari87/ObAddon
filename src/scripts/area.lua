@@ -726,6 +726,7 @@ end
 
 
 function Junction_make_fence(junc)
+
   junc.E1 =
   {
     kind = "fence"
@@ -738,6 +739,25 @@ function Junction_make_fence(junc)
 
   junc.E1.peer = junc.E2
   junc.E2.peer = junc.E1
+
+end
+
+
+function Junction_make_beams(junc)
+
+  junc.E1 =
+  {
+    kind = "beams"
+    fence_mat = assert(junc.A1.zone.fence_mat)
+    fence_top_z = Junction_calc_fence_z(junc.A1, junc.A2)
+    area = junc.A1
+  }
+
+  junc.E2 = { kind="nothing", area=junc.A2 }
+
+  junc.E1.peer = junc.E2
+  junc.E2.peer = junc.E1
+
 end
 
 

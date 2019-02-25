@@ -94,7 +94,8 @@ OB_MODULES["misc"] =
     { name="parks",       label=_("Parks"),          choices=STYLE_CHOICES, gap=1 }
 
     { name="windows",     label=_("Windows"),        choices=STYLE_CHOICES }
-    { name="symmetry",    label=_("Symmetry"),       choices=STYLE_CHOICES, gap=1 }
+    { name="symmetry",    label=_("Symmetry"),       choices=STYLE_CHOICES }
+    { name="beams",       label=_("Beams"),          choices=STYLE_CHOICES, gap=1 }
 
     { name="darkness",    label=_("Dark Outdoors"),  choices=STYLE_CHOICES }
     { name="mon_variety", label=_("Monster Variety"),choices=STYLE_CHOICES, tooltip=MISC_STUFF.variety_tip }
