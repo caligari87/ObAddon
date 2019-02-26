@@ -2144,6 +2144,7 @@ namelib.NAMES =
       ["Showdown with the %e"] = 7
       ["The %a %d of the %a %e"] = 7
       ["The %a %p of the %a %e"] = 7
+      ["They are %a"]=5
 
       ["%c did this"] = 3
       ["The %a %p of %c"] = 3
@@ -2160,12 +2161,14 @@ namelib.NAMES =
         Cold = 10
         Fiery = 10
         Frozen  = 10
+        Lightning = 10
         Smothering = 10
         Shocking = 10
         Poisonous = 10
 
         -- grit
         Festering = 5
+        Fecund = 5
         Fetid = 5
         Filthy = 5
         Foul  = 5
@@ -2266,6 +2269,7 @@ namelib.NAMES =
       {
         -- civilian places
         City = 15
+        Carnival = 10
         Causeway = 5
         Complex = 10
         Concourse = 10
@@ -2279,6 +2283,7 @@ namelib.NAMES =
         Streets = 5
         Towers = 15
         Prison = 10
+        Ward = 10
 
         -- generic locations/navigational
         Beacon = 10
@@ -2314,6 +2319,7 @@ namelib.NAMES =
         -- this one is sorted by size?
         World = 15
         Planet = 15
+        Territories = 10
         Realm = 15
         Dimension = 10
         Plane = 10
@@ -2376,8 +2382,13 @@ namelib.NAMES =
 
         -- not actually places
         Cult = 10
+        Feast = 10
+        Firmament = 10
+        Gallows = 8
         Harvest = 10
         Knowledge = 10
+        Life = 8
+        Lore = 10
         March = 10
         Portrait = 10
         Remembrance = 10
@@ -2400,7 +2411,7 @@ namelib.NAMES =
       }
 
       -- these are quite abstract
-      d =
+      d = -- treated a bit like objects
       {
         -- gibs
         Blood = 20
@@ -2425,9 +2436,11 @@ namelib.NAMES =
         Rage = 10
         Revulsion = 5
         Scorn = 10
+        Silence = 20
         Terror = 20
         Torment = 15
         Wrath = 10
+        Vengeance = 20
 
         -- occult
         Hell = 10
@@ -2437,16 +2450,22 @@ namelib.NAMES =
         Shadows = 10
 
         Death = 20
-        Chaos = 10
         Flames = 20
 
+        -- states of mind, states in mind
         Dreams = 20
+        Chaos = 10
         Nightmare = 20
-
-        Heroes = 10
         Insanity = 10
-        Silence = 20
-        Vengeance = 20
+
+        -- story devices
+        Creation = 10
+        Destruction = 10
+        Legend = 10
+        Heroes = 10
+        Villains = 10
+        Myths = 10
+        Tales = 7
       }
 
       e =
@@ -2461,9 +2480,11 @@ namelib.NAMES =
         Infidel = 20
         ["Left Behind"] = 10
         Martyr = 10
+        Pagans = 10
         Prophet = 10
         Saint = 10
         Sinner = 15
+        Shaman = 10
         Wicked = 20
         Wretched = 20
 
@@ -2471,16 +2492,20 @@ namelib.NAMES =
         Aliens = 10
         Ancients = 20
         Cerberus = 10
+        Cyclops = 5
         Damned = 10
         Drowned = 10
         Giants = 10
+        Keepers = 10
         Necromancer = 20
         Oracle = 10
+        ["Old Ones"] = 10
         Shaper = 10
         Trolls = 5
         Titans = 20
         Undead = 20
         Vampire = 7
+        Wight = 5
         Zombies = 10
 
         -- general adjectives
