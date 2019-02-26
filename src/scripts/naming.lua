@@ -2131,22 +2131,27 @@ namelib.NAMES =
 
       -- MSSP adds grammar rules
 
-      ["Assault on %a %p"] = 8
-      ["Destroy the %a %p"] = 8
-      ["Attack of the %a %e"] = 8
-      ["Return of the %e"] = 8
-      ["A WAD full of %d"] = 5
-      ["The %p of the %e"] = 12
-      ["The %d of the %e"] = 12
-      ["Return of the %e"] = 8
-      ["A very %a %p"] = 8
-      ["Zone of %d"] = 8
-      ["The %e WAD"] = 5
+      ["Assault on the %a %p"] = 8 -- Assault on the Descriptive Place
+      ["Destroy the %a %p"] = 8 -- Destroy the Descriptive Place
+      ["Attack of the %a %e"] = 8 -- Attack of the Descriptive Entity
+      ["Return of the %e"] = 8 -- Return of the Entity
+      ["A WAD full of %d"] = 5 -- A WAD Full of Abstract Objects
+      ["The %p of the %e"] = 12 -- The Place of the Entity
+      ["The %d of the %e"] = 12 -- The Abstract Object of the Entity
+      ["Return of the %e"] = 8 -- Return of the Entity
+      ["Some very %a %p"] = 8 -- Some very Descriptive Place
+      ["Zone of %d"] = 8 -- Zone of Asbtract Object
+      ["The %e WAD"] = 5 -- The Entity WAD
       ["Showdown with the %e"] = 7
-      ["The %a %d of the %a %e"] = 7
-      ["The %a %p of the %a %e"] = 7
+      ["The %a %d of the %a %e"] = 10
+      ["The %a %p of the %a %e"] = 10
       ["They are %a"] = 7
       ["Call of %d"] = 8
+      ["The %e and the %e"] = 10
+      ["The %e VS the %e"] = 7
+      ["The %d Within"] = 5
+      ["%a and %a"] = 8
+      ["Escape from the %a %e"] = 8
 
       ["%c did this"] = 3
       ["The %a %p of %c"] = 3
@@ -2161,12 +2166,15 @@ namelib.NAMES =
         Burning = 10
         Blazing = 15
         Cold = 10
+        Dry = 10
+        Earthen = 10
         Fiery = 10
         Frozen  = 10
         Lightning = 10
+        Poisonous = 10
         Smothering = 10
         Shocking = 10
-        Poisonous = 10
+        Stony = 10
 
         -- grit
         Festering = 5
@@ -2174,9 +2182,10 @@ namelib.NAMES =
         Fetid = 5
         Filthy = 5
         Foul  = 5
-        Infested = 10
         Gory = 10
         Grisly = 15
+        Infested = 10
+        Lacerating = 10
 
         -- size
         Endless = 20
@@ -2494,8 +2503,11 @@ namelib.NAMES =
 
         -- military
         Battle = 10
+        Campaign = 10
         Duty = 10
         Orders = 10
+        Siege = 10
+        Skirmish = 10
         War = 10
       }
 
@@ -2528,6 +2540,7 @@ namelib.NAMES =
         Damned = 15
         ["Deep Ones"] = 10
         Drowned = 10
+        Exile = 10
         Giants = 10
         Keepers = 15
         Necromancer = 20
@@ -2551,8 +2564,13 @@ namelib.NAMES =
 
         -- war
         Destroyer = 10
+        Executioner = 10
+        Horde = 10
+        Invaders = 10
+        Legion = 10
         Overlord = 20
         Warmonger = 10
+        Swarm = 10
       }
 
       c =
