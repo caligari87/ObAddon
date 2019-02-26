@@ -8,6 +8,7 @@
 --  Copyright (C) 2008-2009 Jon Vail
 --  Copyright (C)      2009 Enhas
 --  Copyright (C) 2010-2019 Chris Pisarczyk
+--  Copyright (C) 2019 MsrSgtShooterPerson
 --
 --  This program is free software; you can redistribute it and/or
 --  modify it under the terms of the GNU General Public License
@@ -1509,7 +1510,7 @@ namelib.NAMES =
 
         -- MSSP adds names
 
-        ["1999"]=10
+        ["1995"]=10
         ["Absolute Terror Field"]=10
         ["Appointment in Samarra"]=10
         ["Armaggeddon"]=10
@@ -2151,16 +2152,20 @@ namelib.NAMES =
 
     lexicon =
     {
-      a =
+      a = --adjectives
       {
-        -- temperature
+        -- elemental
         Burning = 10
         Blazing = 15
         Cold = 10
         Fiery = 10
         Frozen  = 10
+        Smothering = 10
+        Shocking = 10
+        Poisonous = 10
 
         -- grit
+        Festering = 5
         Fetid = 5
         Filthy = 5
         Foul  = 5
@@ -2187,14 +2192,16 @@ namelib.NAMES =
         Morbid = 20
         Nefarious = 15
         Savage = 30
+        Sonorous = 10
+        Sordid = 5
         Sullen = 5
         Tragic = 5
         Woeful = 10
-        Sordid = 5
 
         -- destroyed or decay
         Abandoned = 10
         Annihilated = 10
+        Astray = 10
         Banished = 10
         Bleak = 10
         Broken = 10
@@ -2203,20 +2210,21 @@ namelib.NAMES =
         Forsaken = 10
         Lost  = 10
         Oppressive = 10
+        Splintered = 10
         Wrecked = 10
 
         -- weird
+        Multifarious = 5
         Weird = 10
         Strange = 10
 
         -- evilz
-        Deathly = 20
         Demonic = 15
-        Doomed = 10
         Corrupt = 15
         Chaotic = 15
         Cursed = 10
-        Evil = 50
+        Evil = 15
+        Feral = 10
         Ghastly = 10
         Ghoulish  = 10
         Haunted = 10
@@ -2233,6 +2241,8 @@ namelib.NAMES =
 
         -- danger
         Ailing = 5
+        Deathly = 20
+        Doomed = 10
         Fatal = 10
         Macabre = 10
 
@@ -2246,84 +2256,147 @@ namelib.NAMES =
         Dreadful = 20
         Lurid = 10
         Hidden = 10
+
+        -- celestial
+        Solar = 10
+        Lunar = 10
       }
 
-      p =
+      p = -- places
       {
         -- civilian places
         City = 15
+        Causeway = 5
         Complex = 10
+        Concourse = 10
+        Crossing = 5
         Durance = 10
         Gateway = 10
         Ghetto = 5
+        Halls = 10
         House = 10
+        Hub = 10
         Streets = 5
         Towers = 15
         Prison = 10
 
+        -- generic locations/navigational
+        Beacon = 10
+        Center = 5
+        Path = 10
+        Waypoint = 10
+        Ways = 10
+
         -- beautification
         Garden = 10
         Mazes = 10
-        Path = 10
         Ruins = 10
 
         -- holy sites
         Basilica = 5
         Citadel = 15
         Chapel = 10
+        Chambers = 10
         Oracle = 10
         Tabernacle = 5
         Temple = 15
 
         -- medieval?
         Domain = 10
+        Den = 5
         Fiefdom = 5
         Kingdom = 10
+        Lair = 5
+        Strongold = 5
+        Pits = 10
 
         -- celestial/extraterrestrial
+        -- this one is sorted by size?
         World = 15
-        Plane = 10
         Planet = 15
         Realm = 15
         Dimension = 10
+        Plane = 10
+        Netherworld = 10
 
         -- natural landscapes
+        Acres = 10
+        Barrows = 15
         Caverns = 15
+        Canyon = 15
+        Coast = 10
+        Climb = 15
+        Crevice = 10
         Fields = 10
+        Hills = 10
+        Highlands = 10
         Island = 15
         Land = 10
         Mountains = 10
-        Moor = 10
+        Moor = 15
+        Paradise = 10
+        Pass = 15
+        Peak = 10
+        Plateau = 15
+        Pinnacle = 15
+        Ridge = 10
         River = 10
+        Sands = 10
         Shores = 20
+        Span = 10
         Steppe = 10
+        Strand = 10
         Valley = 20
         Vale = 20
+        Wastes = 10
+        Zenith = 10
 
         -- burials, netherworldly
+        Burial = 10
         Catacombs = 10
-        Crypt = 10
+        Crypt = 15
         Dungeons = 10
+        Hollows = 10
+        Inferno = 10
         Mausoleum = 10
+        Mortuary = 10
+        Necropolis = 10
+        Ossuary = 10
+        Polyandrium = 10
         Underworld = 10
         Tomb = 15
+        Vault = 10
 
         -- military
         Base = 10
+        Battlefront = 10
         Containment = 10
         Facility = 10
         Outpost = 10
 
         -- not actually places
         Cult = 10
+        Harvest = 10
         Knowledge = 10
+        March = 10
+        Portrait = 10
+        Remembrance = 10
+        Slaughter = 10
+        Watch = 10
 
-        -- times of day
+        -- times
+        Day = 10
         Dawn = 15
         Meridian = 10
         Noon = 10
         Night = 30
         Twilight = 10
+
+        -- scales of time
+        Eternity = 10
+        Millenium = 10
+        Century = 10
+        Decade = 10
       }
 
       -- these are quite abstract
@@ -2368,6 +2441,7 @@ namelib.NAMES =
         Flames = 20
 
         Dreams = 20
+        Nightmare = 20
 
         Heroes = 10
         Insanity = 10
@@ -2385,7 +2459,10 @@ namelib.NAMES =
         Gods  = 20
         Hellspawn = 20
         Infidel = 20
+        ["Left Behind"] = 10
+        Martyr = 10
         Prophet = 10
+        Saint = 10
         Sinner = 15
         Wicked = 20
         Wretched = 20
@@ -2394,8 +2471,12 @@ namelib.NAMES =
         Aliens = 10
         Ancients = 20
         Cerberus = 10
+        Damned = 10
+        Drowned = 10
+        Giants = 10
         Necromancer = 20
         Oracle = 10
+        Shaper = 10
         Trolls = 5
         Titans = 20
         Undead = 20
