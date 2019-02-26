@@ -2216,6 +2216,7 @@ namelib.NAMES =
         Forsaken = 10
         Lost  = 10
         Oppressive = 10
+        Ravaged = 10
         Splintered = 10
         Wrecked = 10
 
@@ -2441,6 +2442,7 @@ namelib.NAMES =
         Fury = 10
         Grief = 5
         Hate = 10
+        Madness = 10
         Misery = 10
         Pain = 10
         Rage = 10
@@ -2465,23 +2467,35 @@ namelib.NAMES =
         -- states of mind, states in mind
         Dreams = 20
         Chaos = 10
-        Nightmare = 20
+        Nightmares = 20
         Insanity = 10
         Transience = 10
 
         -- story devices
+        Bane = 10
+        Legends = 10
+        Genesis = 10
+        Heroes = 10
+        Imagination = 7
+        Myths = 10
+        Origins = 10
+        Tales = 7
+        Villains = 10
+
+        -- states of matter
+        Conception = 10
         Creation = 10
         Destruction = 10
-        Legends = 10
-        Heroes = 10
-        Villains = 10
-        Myths = 10
-        Tales = 7
+        Extinction = 10
+        Formation = 10
+        Nascency = 10
+        Subjugation = 10
+        Undoing = 10
 
         -- military
+        Battle = 10
         Duty = 10
         Orders = 10
-        Battle = 10
         War = 10
       }
 
@@ -2507,24 +2521,25 @@ namelib.NAMES =
 
         -- fantasy/magical
         Aliens = 10
-        Ancients = 20
+        Ancients = 15
         Bastards = 15
         Cerberus = 10
         Cyclops = 5
-        Damned = 10
+        Damned = 15
         ["Deep Ones"] = 10
         Drowned = 10
         Giants = 10
-        Keepers = 10
+        Keepers = 15
         Necromancer = 20
-        Oracle = 10
+        Oracle = 15
         ["Old Ones"] = 10
+        Reaper = 10
         Shaper = 10
-        Trolls = 5
-        Titans = 20
+        Trolls = 7
+        Titans = 10
         Undead = 20
         Vampire = 7
-        Wight = 5
+        Wight = 7
         Zombies = 10
 
         -- general adjectives
