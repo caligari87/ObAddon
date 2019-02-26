@@ -2181,10 +2181,11 @@ namelib.NAMES =
         Forlorn = 15
         Grievious = 15
         Grim = 15
+        Lonely = 10
+        Melancholic = 5
         Menacing = 20
         Morbid = 20
         Nefarious = 15
-        Lonely = 10
         Savage = 30
         Sullen = 5
         Tragic = 5
@@ -2193,8 +2194,10 @@ namelib.NAMES =
 
         -- destroyed or decay
         Abandoned = 10
+        Annihilated = 10
         Banished = 10
         Bleak = 10
+        Broken = 10
         Desolate = 15
         Forgotten = 10
         Forsaken = 10
@@ -2316,7 +2319,9 @@ namelib.NAMES =
         Knowledge = 10
 
         -- times of day
-        Dawn = 10
+        Dawn = 15
+        Meridian = 10
+        Noon = 10
         Night = 30
         Twilight = 10
       }
