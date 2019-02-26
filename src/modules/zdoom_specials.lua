@@ -4,13 +4,55 @@
 
 ZDOOM_SPECIALS = { }
 
-function ZDOOM_SPECIALS.setup(self)
+--[[function ZDOOM_SPECIALS.setup(self)
   print("ZDoom Special Addons module activated.")
-end
+end]]
 
 function ZDOOM_SPECIALS.do_special_stuff()
 
-  local fog_color = "DarkRed"
+  local fog_color
+
+  local level_count = 0
+
+  for LEV in GAME.levels do
+    level_count = level_count + 1
+  end
+
+
+
+  local function pick_sky_color_from_skygen_map(skytable, cur_level)
+    local color
+
+    local skyname = skytable[cur_level]
+
+    if skyname == "GREY_CLOUDS" then
+      color = "Gray"
+    elseif skyname == "DARK_CLOUDS" then
+      color = "Black"
+    elseif skyname == "BLUE_CLOUDS" then
+      color = "Blue"
+    elseif skyname == "HELL_CLOUDS" then
+      color = "DarkRed"
+    elseif skyname == "WHITE_CLOUDS" then
+      color = "White"
+    end
+
+    if color then
+      return color
+    else
+      gui.printf("\nCould not resolve skybox generator color.\n")
+      return "Black"
+    end
+  end
+
+
+
+  if PARAM.episode_sky_color then
+    fog_color = pick_sky_color_from_skygen_map(PARAM.episode_sky_color,1)
+  else
+    fog_color = "Black"
+  end
+
 
   local mapinfolump =
   {
@@ -62,12 +104,16 @@ OB_MODULES["zdoom_specials"] =
 
   game = "doomish"
 
+  side = "right"
+
+  priority = 50
+
   engine = { zdoom=1, gzdoom=1, skulltag=1 }
 
   hooks =
   {
     setup = ZDOOM_SPECIALS.setup
-    get_levels = ZDOOM_SPECIALS.do_special_stuff
+    all_done = ZDOOM_SPECIALS.do_special_stuff
   }
 
   tooltip = "Warning: This addon is entirely just an experiment at the moment and doesn't do anything good. Do not enable for now, it will probably break your game."

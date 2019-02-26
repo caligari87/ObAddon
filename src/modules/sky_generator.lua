@@ -342,6 +342,8 @@ function SKY_GEN.setup(self)
     local value = self.options[name].value
     PARAM[name] = value
   end
+  
+  PARAM.episode_sky_color = {}
 end
 
 function SKY_GEN.generate_skies()
@@ -463,6 +465,8 @@ function SKY_GEN.generate_skies()
       gui.fsky_add_clouds({ seed=seed, colmap=1, squish=2.0 })
 
       EPI.dark_prob = 10
+
+      table.insert(PARAM.episode_sky_color, name)
     end
 
 
