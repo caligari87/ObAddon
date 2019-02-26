@@ -4,9 +4,9 @@
 
 ZDOOM_SPECIALS = { }
 
---[[function ZDOOM_SPECIALS.setup(self)
+function ZDOOM_SPECIALS.setup(self)
   print("ZDoom Special Addons module activated.")
-end]]
+end
 
 function ZDOOM_SPECIALS.do_special_stuff()
 
@@ -98,7 +98,7 @@ function ZDOOM_SPECIALS.do_special_stuff()
 
 end
 
-OB_MODULES["zdoom_specials"] =
+--[[OB_MODULES["zdoom_specials"] =
 {
   label = _("ZDoom Special Addons")
 
@@ -117,4 +117,4 @@ OB_MODULES["zdoom_specials"] =
   }
 
   tooltip = "Warning: This addon is entirely just an experiment at the moment and doesn't do anything good. Do not enable for now, it will probably break your game."
-}
+}]]
