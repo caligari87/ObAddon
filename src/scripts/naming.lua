@@ -2397,8 +2397,9 @@ namelib.NAMES =
         ["Revisited"] = 10
         ["Reloaded"] = 10
         ["Special Edition"] = 10
-    ["Anniversary Edition"] = 10
-    ["Full Mag Edition"] = 10
+        ["Limited Edition"] = 10
+    	["Anniversary Edition"] = 10
+    	["Full Mag Edition"] = 10
 
         ["A New Generation"] = 40
         ["The Resurrection"] = 30
@@ -2423,6 +2424,17 @@ namelib.NAMES =
         ["The Prophecy Unfolds"] = 20
 
         ["Prelude to Destruction"] = 25
+
+        -- ObAddon specifics
+        ["ObAddon Special"] = 50
+        ["ObAddon Exclusive"] = 50
+        ["ObAddon Limited Ed"] = 50
+        ["By ObAddon Contribs"] = 35
+        ["Carthage Special"] = 20
+        ["Simon-v Special"] = 20
+        ["Glaice Approved"] = 20
+        ["Caligari Tested"] = 20
+        ["Frozsoul Edition"] = 20
 
         -- describe the place
         ["The Evil Within"] = 20
