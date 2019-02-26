@@ -2328,7 +2328,7 @@ namelib.NAMES =
         Fiefdom = 5
         Kingdom = 10
         Lair = 5
-        Strongold = 5
+        Stronghold = 5
         Pits = 10
 
         -- celestial/extraterrestrial
@@ -3294,4 +3294,3 @@ function Naming_grab_one(theme)
 
   return table.remove(namelib.cache[theme], 1)
 end
-
