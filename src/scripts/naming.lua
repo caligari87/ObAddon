@@ -2153,207 +2153,260 @@ namelib.NAMES =
     {
       a =
       {
-        Dark = 20
-        Menacing = 20
+        -- temperature
+        Burning = 10
+        Blazing = 15
         Cold = 10
         Fiery = 10
-        Blazing = 15
-        Savage = 30
-        Deathly = 20
-        Strange = 10
-        Burning = 10
         Frozen  = 10
 
-        Evil = 50
-        Chaotic = 15
-        Monstrous = 15
-        Sinful  = 15
-        Demonic = 15
-        Infested = 10
-        Doomed = 10
-        Malicious = 10
-        Forsaken = 10
-        Filthy   = 5
-
-        Morbid = 20
-        Lonely = 10
-        Weird = 10
-        Endless = 20
-        Infinite = 10
-        Gory = 10
-        Visceral = 15
-        Corrupt = 15
-        Wicked  = 10
-        Vile    = 5
-
-        Fatal = 10
-        Lost  = 10
+        -- grit
         Fetid = 5
+        Filthy = 5
         Foul  = 5
-        Cursed = 10
-        Haunted = 10
-        Cruel = 10
-
-        Hallowed = 10
-        Unholy = 10
-        Profane = 15
-        Tortured = 10
-        Forgotten = 10
-        Abandoned = 10
-        Ghoulish  = 10
-        Ghastly = 10
-        Grim = 15
-        Sullen = 5
-        Ailing = 5
-        Macabre = 10
-        Lurid = 10
+        Infested = 10
+        Gory = 10
         Grisly = 15
+
+        -- size
+        Endless = 20
+        Extreme = 10
+        Infinite = 10
+
+        -- emotion
+        Anguished = 5
+        Cruel = 10
+        Dejected = 5
+        Dolorous = 5
+        Forlorn = 15
+        Grievious = 15
+        Grim = 15
+        Menacing = 20
+        Morbid = 20
+        Nefarious = 15
+        Lonely = 10
+        Savage = 30
+        Sullen = 5
+        Tragic = 5
+        Woeful = 10
+        Sordid = 5
+
+        -- destroyed or decay
+        Abandoned = 10
+        Banished = 10
         Bleak = 10
         Desolate = 15
-        Grievious = 15
-        Woeful = 10
-        Tragic = 5
-        Forlorn = 15
-        Sordid = 5
-        Dejected = 5
-        Dreadful = 20
-        Dolorous = 5
-        Anguished = 5
+        Forgotten = 10
+        Forsaken = 10
+        Lost  = 10
         Oppressive = 10
-
-        Hidden = 10
-        Wretched = 15
-        Nefarious = 15
-        Extreme = 10
         Wrecked = 10
+
+        -- weird
+        Weird = 10
+        Strange = 10
+
+        -- evilz
+        Deathly = 20
+        Demonic = 15
+        Doomed = 10
+        Corrupt = 15
+        Chaotic = 15
+        Cursed = 10
+        Evil = 50
+        Ghastly = 10
+        Ghoulish  = 10
+        Haunted = 10
+        Malicious = 10
+        Monstrous = 15
+        Profane = 15
+        Sinful  = 15
+        Tortured = 10
+        Unholy = 10
+        Visceral = 15
+        Vile    = 5
+        Wicked  = 10
+        Wretched = 15
+
+        -- danger
+        Ailing = 5
+        Fatal = 10
+        Macabre = 10
+
+        -- holy
+        Righteous = 10
+        Hallowed = 10
+        Sanctimonious = 10
+
+        -- asthetic
+        Dark = 20
+        Dreadful = 20
+        Lurid = 10
+        Hidden = 10
       }
 
       p =
       {
+        -- civilian places
         City = 15
+        Complex = 10
+        Durance = 10
+        Gateway = 10
+        Ghetto = 5
+        House = 10
+        Streets = 5
+        Towers = 15
+        Prison = 10
+
+        -- beautification
+        Garden = 10
+        Mazes = 10
+        Path = 10
+        Ruins = 10
+
+        -- holy sites
+        Basilica = 5
         Citadel = 15
         Chapel = 10
-        Basilica = 5
-        Ghetto = 5
-        Towers = 15
-        Kingdom = 10
+        Oracle = 10
+        Tabernacle = 5
         Temple = 15
 
+        -- medieval?
+        Domain = 10
+        Fiefdom = 5
+        Kingdom = 10
+
+        -- celestial/extraterrestrial
         World = 15
+        Plane = 10
         Planet = 15
         Realm = 15
         Dimension = 10
 
-        Shores = 20
-        Valley = 20
-        Land = 10
+        -- natural landscapes
+        Caverns = 15
         Fields = 10
+        Island = 15
+        Land = 10
+        Mountains = 10
+        Moor = 10
         River = 10
+        Shores = 20
+        Steppe = 10
+        Valley = 20
+        Vale = 20
 
+        -- burials, netherworldly
+        Catacombs = 10
         Crypt = 10
         Dungeons = 10
+        Mausoleum = 10
         Underworld = 10
-        Catacombs = 10
-
-        Base = 10
-        Facility = 10
-        Complex = 10
-        Domain = 10
-        House = 10
-
-        Island = 15
-        Mazes = 10
-        Cult = 10
-        Ruins = 10
-        Caverns = 15
-        Garden = 10
-
-        Night = 30
-        Knowledge = 10
-        Twilight = 10
-        Gateway = 10
-        Prison = 10
         Tomb = 15
+
+        -- military
+        Base = 10
+        Containment = 10
+        Facility = 10
+        Outpost = 10
+
+        -- not actually places
+        Cult = 10
+        Knowledge = 10
+
+        -- times of day
+        Dawn = 10
+        Night = 30
+        Twilight = 10
       }
 
       -- these are quite abstract
       d =
       {
-        Death = 20
+        -- gibs
         Blood = 20
-        Hell = 10
-        Fury = 10
-        Horror = 10
-        Chaos = 10
         Slime = 5
 
-        Pain = 10
+        -- emotions/feels
+        Apathy = 5
+        Anguish = 10
         Agony = 20
-        Terror = 20
-        Fear = 20
-        Flames = 20
+        Contempt = 5
+        Cruelty = 10
         Doom = 10
         Despair = 10
         Dismay = 10
         Dread = 15
+        Fear = 20
+        Fury = 10
+        Grief = 5
+        Hate = 10
         Misery = 10
-        Scorn = 10
+        Pain = 10
+        Rage = 10
         Revulsion = 5
+        Scorn = 10
+        Terror = 20
+        Torment = 15
+        Wrath = 10
+
+        -- occult
+        Hell = 10
+        Horror = 10
+        Magic = 15
+        Souls = 10
+        Shadows = 10
+
+        Death = 20
+        Chaos = 10
+        Flames = 20
 
         Dreams = 20
-        Souls = 10
-        Hate = 10
-        Magic = 15
-        Rage = 10
-        Cruelty = 10
-        Contempt = 5
-        Grief = 5
-        Apathy = 5
-        Fury = 5
 
         Heroes = 10
         Insanity = 10
         Silence = 20
         Vengeance = 20
-        Shadows = 10
-        Wrath = 10
-        Anguish = 10
-        Torment = 15
       }
 
       e =
       {
-        Devil = 20
-        Gods  = 20
-        Overlord = 20
-        Ancients = 20
-        Infidel = 20
-
+        -- religion
         Antichrist = 10
-        Necromancer = 20
-        Oracle = 10
-        Wicked = 20
-        Titans = 20
-
         Beast = 20
         Demons = 20
+        Devil = 20
+        Gods  = 20
         Hellspawn = 20
-        Undead = 20
+        Infidel = 20
+        Prophet = 10
         Sinner = 15
+        Wicked = 20
+        Wretched = 20
+
+        -- fantasy/magical
+        Aliens = 10
+        Ancients = 20
         Cerberus = 10
+        Necromancer = 20
+        Oracle = 10
+        Trolls = 5
+        Titans = 20
+        Undead = 20
         Vampire = 7
         Zombies = 10
-        Trolls = 5
-        Aliens = 10
 
+        -- general adjectives
         Dead = 20
         Doomed = 30
         Fearless = 20
         Tormented = 20
-        Wretched = 20
+
+        -- war
         Destroyer = 10
+        Overlord = 20
         Warmonger = 10
-        Prophet = 10
       }
 
       c =

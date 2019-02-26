@@ -1340,6 +1340,49 @@ SPROUT_DIRECT_THIN_EMERGENCY =
 }
 
 
+SPROUT_DIRECT_THROUGH_2X_LIQUID =
+{
+  emergency = true
+
+  prob = 400
+
+  structure =
+  {
+    "..","RR"
+    "..","RR"
+    "~~","11"
+    "~~","11"
+    "11","11"
+  }
+
+  new_room =
+  {
+    conn = { x=1, y=3, w=2, dir=8 }
+  }
+}
+
+
+SPROUT_DIRECT_THROUGH_1X_LIQUID =
+{
+  emergency = true
+
+  prob = 400
+
+  structure =
+  {
+    "..","RR"
+    "..","RR"
+    "~~","11"
+    "11","11"
+  }
+
+  new_room =
+  {
+    conn = { x=1, y=2, w=2, dir=8 }
+  }
+}
+
+
 SPROUT_DIRECT_3 =
 {
   prob = 400
