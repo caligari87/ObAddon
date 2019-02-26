@@ -342,7 +342,7 @@ function SKY_GEN.setup(self)
     local value = self.options[name].value
     PARAM[name] = value
   end
-  
+
   PARAM.episode_sky_color = {}
 end
 
