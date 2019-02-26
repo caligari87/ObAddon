@@ -1797,6 +1797,7 @@ namelib.NAMES =
         ["Drink More Water"]=10
         ["EA Sports. It's In The Game"]=10
         ["Hey Sup Beautiful Bastards"]=10 --if we're really doing popular YouTubers
+        ["It's Just a Social Experiment"]=10
         ["Nobody Got Time For That"]=10
         ["VGCG"]=10
         ["You Wouldn't Steal a Car"]=10
@@ -2144,7 +2145,8 @@ namelib.NAMES =
       ["Showdown with the %e"] = 7
       ["The %a %d of the %a %e"] = 7
       ["The %a %p of the %a %e"] = 7
-      ["They are %a"]=5
+      ["They are %a"] = 7
+      ["Call of %d"] = 8
 
       ["%c did this"] = 3
       ["The %a %p of %c"] = 3
@@ -2198,6 +2200,7 @@ namelib.NAMES =
         Sonorous = 10
         Sordid = 5
         Sullen = 5
+        Spiteful = 5
         Tragic = 5
         Woeful = 10
 
@@ -2232,6 +2235,7 @@ namelib.NAMES =
         Ghoulish  = 10
         Haunted = 10
         Malicious = 10
+        Malevolent = 10
         Monstrous = 15
         Profane = 15
         Sinful  = 15
@@ -2257,6 +2261,7 @@ namelib.NAMES =
         -- asthetic
         Dark = 20
         Dreadful = 20
+        Eerie = 10
         Lurid = 10
         Hidden = 10
 
@@ -2296,6 +2301,7 @@ namelib.NAMES =
         Garden = 10
         Mazes = 10
         Ruins = 10
+        Tree = 10
 
         -- holy sites
         Basilica = 5
@@ -2381,17 +2387,21 @@ namelib.NAMES =
         Outpost = 10
 
         -- not actually places
+        Belief = 10
+        Ceremony = 10
         Cult = 10
         Feast = 10
         Firmament = 10
         Gallows = 8
         Harvest = 10
         Knowledge = 10
+        Labours = 10
         Life = 8
         Lore = 10
         March = 10
         Portrait = 10
         Remembrance = 10
+        Ritual = 10
         Slaughter = 10
         Watch = 10
 
@@ -2457,15 +2467,22 @@ namelib.NAMES =
         Chaos = 10
         Nightmare = 20
         Insanity = 10
+        Transience = 10
 
         -- story devices
         Creation = 10
         Destruction = 10
-        Legend = 10
+        Legends = 10
         Heroes = 10
         Villains = 10
         Myths = 10
         Tales = 7
+
+        -- military
+        Duty = 10
+        Orders = 10
+        Battle = 10
+        War = 10
       }
 
       e =
@@ -2491,9 +2508,11 @@ namelib.NAMES =
         -- fantasy/magical
         Aliens = 10
         Ancients = 20
+        Bastards = 15
         Cerberus = 10
         Cyclops = 5
         Damned = 10
+        ["Deep Ones"] = 10
         Drowned = 10
         Giants = 10
         Keepers = 10
@@ -2510,8 +2529,9 @@ namelib.NAMES =
 
         -- general adjectives
         Dead = 20
-        Doomed = 30
+        Doomed = 25
         Fearless = 20
+        Hunted = 20
         Tormented = 20
 
         -- war
@@ -2599,6 +2619,7 @@ namelib.NAMES =
         ["Glaice Approved"] = 20
         ["Caligari Tested"] = 20
         ["Frozsoul Edition"] = 20
+        ["Garrett Approves"] = 20
 
         -- describe the place
         ["The Evil Within"] = 20
