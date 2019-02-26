@@ -2141,6 +2141,8 @@ namelib.NAMES =
       ["Zone of %d"] = 8
       ["The %e WAD"] = 5
       ["Showdown with the %e"] = 7
+      ["The %a %d of the %a %e"] = 7
+      ["The %a %p of the %a %e"] = 7
 
       ["%c did this"] = 3
       ["The %a %p of %c"] = 3
