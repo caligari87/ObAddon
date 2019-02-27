@@ -4382,26 +4382,35 @@ function Cave_prepare_scenic_vista(area)
   end
 
   table.insert(vista_list, "simple_fence")
+  table.insert(vista_list, "watery_drop")
 
   if LEVEL.liquid then
-    table.insert(vista_list, "watery_drop")
     table.insert(vista_list, "ocean")
   end
 
   vista_type = rand.pick(vista_list)
 
+  -- if steepness = heaps, has a chance to become mostly bottomless pits
   if (OB_CONFIG.engine == "zdoom" or OB_CONFIG.engine == "gzdoom") and OB_CONFIG.zdoom_vista == "enable" then
     if style_sel("steepness", 0, 0, 0, 1) == 1 then
-      vista_type = "bottomless_drop"
+      if rand.odds(50) then
+        vista_type = "bottomless_drop"
+      else
+        vista_type = rand.pick(vista_list)
+      end
     end
   end
 
-  -- if this level has heaps of liquids, go for oceans always because why not?
+  -- if liquids = heaps, has a chance to become mostly ocean
   if style_sel("liquids", 0, 0, 0, 1) == 1 then
-    vista_type = "ocean"
+    if rand.odds(50) then
+      vista_type = "ocean"
+    else
+      vista_type = rand.pick(vista_list)
+    end
   end
 
-  if vista_type == "watery_drop" and LEVEL.liquid and not room.has_hills then
+  if vista_type == "watery_drop" and not room.has_hills then
     area.border_type = "watery_drop"
   elseif vista_type == "bottomless_drop" and not room.has_hills then
     area.border_type = "bottomless_drop"
@@ -4601,7 +4610,11 @@ function Cave_build_a_scenic_vista(area)
     local FL = new_blob()
 
     FL.floor_h   = (room.min_floor_h or room.entry_h) - drop_h
-    FL.is_liquid = true
+    if LEVEL.liquid then
+      FL.is_liquid = true
+    else
+      FL.floor_mat = assert(LEVEL.cliff_mat)
+    end
 
     temp_install_floor(FL)
 
