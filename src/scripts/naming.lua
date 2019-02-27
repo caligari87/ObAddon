@@ -2152,6 +2152,7 @@ namelib.NAMES =
       ["The %d Within"] = 5
       ["%a and %a"] = 8
       ["Escape from the %a %e"] = 8
+      ["The %e The %e and The %d"] = 8
 
       ["%c did this"] = 3
       ["The %a %p of %c"] = 3
@@ -3289,7 +3290,7 @@ function Naming_grab_one(theme)
   assert(cache)
 
   if not cache[theme] or table.empty(cache[theme]) then
-    cache[theme] = namelib.generate(theme, 30, PARAM.max_name_length or 28)
+    cache[theme] = namelib.generate(theme, 30, 40)
   end
 
   return table.remove(namelib.cache[theme], 1)

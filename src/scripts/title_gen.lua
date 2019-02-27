@@ -2154,9 +2154,12 @@ function Title_split_into_lines()
   end
 
   -- handle titles like "X of the Y"
-  if #words >= 4 then
+  if #words >= 4 and #words <=5 then
     words[2] = words[2] .. " " .. words[3]
     words[3] = words[4]
+    if words[5] then
+      words[3] = words[3] .. " " .. words[5]
+    end
   end
 
   -- no choice?
@@ -2170,6 +2173,13 @@ function Title_split_into_lines()
   if not rand.odds(split_prob) then return GAME.title end
 
   -- multiple lines
+  if words[6] then
+    local line1 = words[1]
+    local line2 = words[4] .. " " .. words[5] .. " " .. words[6]
+    local mid_line = words[2] .. " " .. words[3]
+    return line1, line2, mid_line, top_line
+  end
+
   if words[3] then
     return words[1], words[3], words[2], top_line
   else
