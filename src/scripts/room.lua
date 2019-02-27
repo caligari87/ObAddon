@@ -1410,6 +1410,17 @@ function Room_border_up()
       return false
     end
 
+    -- stop beams from going up in an area the same sky sinks because it looks silly
+    if A1.ceil_group and A2.ceil_group then
+      if A1.ceil_group.sink and A2.ceil_group.sink then
+        if A1.ceil_group == A2.ceil_group then
+          if A1.ceil_group.sink.mat == "_SKY" and A2.ceil_group.sink.mat == "_SKY" then
+            return false
+          end
+        end
+      end
+    end
+
     if A1.room and A2.room then
       if (A1.mode == "floor" or A1.mode == "liquid") and
          (A2.mode == "floor" or A2.mode == "liquid") then
@@ -1537,7 +1548,6 @@ function Room_border_up()
 
     if A1.room == A2.room then
       if not A1.is_outdoor and not A2.is_outdoor then
-        -- should eventually be controlled by beams architecture setting
         if can_beam(A1, A2) and rand.odds(style_sel("beams",0,20,40,60)) then
           Junction_make_beams(junc)
         end
