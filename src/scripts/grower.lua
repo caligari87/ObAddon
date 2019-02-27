@@ -862,15 +862,15 @@ function Grower_calc_rule_probs()
   if OB_CONFIG.layout_absurdity == "all" then
     level_is_absurd = true
   elseif OB_CONFIG.layout_absurdity == "75" then
-    if rand.range(0,100) <= 75 then
+    if rand.odds(75) then
       level_is_absurd = true
     end
   elseif OB_CONFIG.layout_absurdity == "50" then
-    if rand.range(0,100) <= 50 then
+    if rand.odds(50) then
       level_is_absurd = true
     end
   elseif OB_CONFIG.layout_absurdity == "25" then
-    if rand.range(0,100) <= 25 then
+    if rand.odds(25) then
       level_is_absurd = true
     end
   end
@@ -892,14 +892,15 @@ function Grower_calc_rule_probs()
       if LEVEL.is_procedural_gotcha then continue end
 
       if level_is_absurd == true then
-        local shape_absurd_chance = rand.range(0,100)
-        if shape_absurd_chance <= 2 then
+        if rand.odds(1.25) then
           shape_is_absurd = true
         end
       end
 
       if shape_is_absurd == true and level_is_absurd == true then
-        rule.use_prob = rule.use_prob * 1000000
+        if not string.match(name, "JOINER") then
+          rule.use_prob = rule.use_prob * 1000000
+        end
         print(rule.name .. " is now ABSURDIFIED! WOOO!!!\n")
         shape_is_absurd = false
       end
