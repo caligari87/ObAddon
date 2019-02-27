@@ -108,6 +108,8 @@ DOOM.MONSTERS =
     damage = 1.3
     attack = "missile"
     density = 1.0
+    replaces = "demon"
+    replace_prob = 20
     weap_prefs = { shotty=3.0, chain=2.0, super=1.5 }
     room_size = "any" --small
     trap_factor = 0.5 --0.3
