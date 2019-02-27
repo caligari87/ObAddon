@@ -11,7 +11,7 @@ PREFABS.Decor_wood_skull_shed =
   height = 256
 
   bound_z1 = 0
-  bound_z2 = 224
+  bound_z2 = 256
 
   z_fit  = { 16,224 }
 }
