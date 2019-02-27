@@ -898,9 +898,7 @@ function Grower_calc_rule_probs()
       end
 
       if shape_is_absurd == true and level_is_absurd == true then
-        if not string.match(name, "JOINER") then
-          rule.use_prob = rule.use_prob * 1000000
-        end
+        rule.use_prob = rule.use_prob * 1000000
         print(rule.name .. " is now ABSURDIFIED! WOOO!!!\n")
         shape_is_absurd = false
       end

@@ -25,6 +25,8 @@ PREFABS.Locked_huge_red =
 
   delta_h  = 8
   nearby_h = 160
+  
+  y_fit = { 276,276+8 }
 
   -- texture is already "DOORRED"
   -- line special is already #135 (open red door)
