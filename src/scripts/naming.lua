@@ -2616,8 +2616,8 @@ namelib.NAMES =
         ["Reloaded"] = 10
         ["Special Edition"] = 10
         ["Limited Edition"] = 10
-    	["Anniversary Edition"] = 10
-    	["Full Mag Edition"] = 10
+        ["Anniversary Edition"] = 10
+        ["Full Mag Edition"] = 10
 
         ["A New Generation"] = 40
         ["The Resurrection"] = 30
