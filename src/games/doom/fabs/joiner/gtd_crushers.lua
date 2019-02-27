@@ -20,8 +20,6 @@ PREFABS.Joiner_tech_triple_crusher =
 
   bound_z1 = -16
 
-  height = 128
-
   x_fit = "frame"
   y_fit = "frame"
 }
