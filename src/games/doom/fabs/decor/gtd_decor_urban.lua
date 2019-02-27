@@ -56,7 +56,7 @@ PREFABS.Decor_marquee_sign =
   file   = "decor/gtd_decor_urban.wad"
   map    = "MAP04"
 
-  prob   = 10000 --10000 from 3500 - Increased probability because the templates have now been replaced by a simple prob control.
+  prob   = 10000 --10000 -- Increased probability because the templates have now been replaced by a simple prob control.
   theme  = "urban"
   env    = "building"
 
@@ -80,7 +80,7 @@ PREFABS.Decor_marquee_sign =
     O_NEON   = 50
     O_BOLT   = 50
     O_PILL   = 50
-    O_RELIEF = 50
+    O_CARVE  = 50
   }
 
 }
