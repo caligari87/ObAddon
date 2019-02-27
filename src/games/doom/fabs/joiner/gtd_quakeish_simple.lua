@@ -19,5 +19,5 @@ PREFABS.Joiner_quakeish =
   bound_z1 = -16
 
   x_fit = {128,136}
-  y_fit = {32,48},{104,120}
+  y_fit = {72,88}
 }

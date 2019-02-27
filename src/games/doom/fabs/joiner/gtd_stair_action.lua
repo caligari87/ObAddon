@@ -16,7 +16,7 @@ PREFABS.Joiner_unfolding_stairs =
   deep = 16
   over = 16
 
-  delta_h = 128
+  delta_h = 64
   nearby_h = 128
 
   x_fit = {60 , 68}
