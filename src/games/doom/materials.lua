@@ -626,7 +626,7 @@ DOOM.MATERIALS =
   SLIME09  = { f="SLIME09", t="ROCKRED1" } -- animated
   SLIME13  = { f="SLIME13", t="BRICK10" }
   SLIME14  = { f="SLIME14", t="METAL2" }
-  SLIME15  = { f="SLIME15", t="COMPSPAN" }
+  SLIME15  = { f="SLIME15", t="METAL2" }
   SLIME16  = { f="SLIME16", t="SPACEW4" }
 
 
