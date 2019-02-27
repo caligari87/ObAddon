@@ -3,7 +3,7 @@ PREFABS.Joiner_unfolding_stairs =
   file   = "joiner/gtd_stair_action.wad"
   map    = "MAP01"
 
-  prob   = 1000
+  prob   = 250
 
   style  = "steepness"
 
