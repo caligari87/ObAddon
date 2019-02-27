@@ -5,6 +5,8 @@ PREFABS.Joiner_glaice_hell_simple =
 
   prob   = 300
 
+  theme  = "hell"
+
   where  = "seeds"
   shape  = "I"
 
