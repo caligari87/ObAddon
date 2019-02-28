@@ -30,6 +30,8 @@ PREFABS.Joiner_unfolding_stairs_switchlocked =
   template = "Joiner_unfolding_stairs"
   map    = "MAP02"
 
+  key    = "barred"
+
   tag_1  = "?door_tag"
   door_action = "S1_OpenDoor"
 }
