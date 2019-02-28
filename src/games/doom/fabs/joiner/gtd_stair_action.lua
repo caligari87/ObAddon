@@ -3,7 +3,7 @@ PREFABS.Joiner_unfolding_stairs =
   file   = "joiner/gtd_stair_action.wad"
   map    = "MAP01"
 
-  prob   = 250
+  prob   = 150
 
   style  = "steepness"
 
@@ -23,4 +23,13 @@ PREFABS.Joiner_unfolding_stairs =
   y_fit = "frame"
 
   can_flip = true
+}
+
+PREFABS.Joiner_unfolding_stairs_switchlocked =
+{
+  template = "Joiner_unfolding_stairs"
+  map    = "MAP02"
+
+  tag_1  = "?door_tag"
+  door_action = "S1_OpenDoor"
 }
