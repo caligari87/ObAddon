@@ -11,7 +11,7 @@ Currently, the Oblige community resides on an unofficial Discord server since th
 
 ## Download
 
-[**Newest ObAddon Release (2019-02-28)**](https://github.com/caligari87/ObAddon/releases/latest)
+Please visit our [**Latest Release**](https://github.com/caligari87/ObAddon/releases/latest) to download the current build of ObAddon. Older releases may be found [here](https://github.com/caligari87/ObAddon/releases) if required.
 
 ## Instructions
 
