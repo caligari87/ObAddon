@@ -25,7 +25,7 @@ PREFABS.Locked_huge_red =
 
   delta_h  = 8
   nearby_h = 160
-  
+
   y_fit = "frame"
 
   -- texture is already "DOORRED"

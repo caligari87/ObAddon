@@ -1334,15 +1334,9 @@ function Room_make_windows(A1, A2)
 
   if A2.mode == "scenic" then
      A2.floor_h = A1.floor_h
-     --[[if A2.ceil_h <= A1.ceil_h then
-       A2.ceil_h  = A1.ceil_h
-     end
-     local height_diff = A2.ceil_h - A1.floor_h
-
-     if A1.room.is_outdoor != true and height_diff <= 0 then
-       A2.ceil_h = A2.ceil_h + 96
-     end]]
   end
+
+  if A2.border_type == "simple_fence" then return end
 
   local z, height = calc_vertical_space(A1, A2)
 
@@ -1430,12 +1424,22 @@ function Room_border_up()
       end
     end
 
-    if A2.room and A1.room then
-      if (A2.mode == "floor" or A2.mode == "liquid") and
-         (A1.mode == "floor" or A1.mode == "liquid") then
+    return false
+  end
+
+
+  local function can_indoor_fence(A1, A2)
+    if not A1.room or not A2.room then
+      return false
+    end
+
+    if A1.floor_h == A2.floor_h then
+      return false
+    end
+
+    if A1.room and A2.room then
+      if A1.mode == "floor" and A2.mode == "floor" then
         return true
-      else
-        return false
       end
     end
 
@@ -1548,9 +1552,21 @@ function Room_border_up()
 
     if A1.room == A2.room then
       if not A1.is_outdoor and not A2.is_outdoor then
-        if can_beam(A1, A2) and rand.odds(style_sel("beams",0,20,40,60)) then
-          Junction_make_beams(junc)
-        end
+        --local indoor_border_type = rand.pick({"beams","railing","fence","none"})
+
+       -- if indoor_border_type == "beams" then
+          if can_beam(A1, A2) and rand.odds(style_sel("beams",0,20,40,60)) then
+            Junction_make_beams(junc)
+          end
+        --[[elseif indoor_border_type == "railing" then
+          if can_indoor_fence(A1, A2) and rand.pick({1,2,3,4,5,6,8}) < 5 then
+            Junction_make_railing(junc, "MIDBARS3", "block")
+          end
+        elseif indoor_border_type == "fence" then
+          if can_indoor_fence(A1, A2) and rand.pick({1,2,3,5,6,7,8}) < 5 then
+            Junction_make_fence(junc)
+          end
+        end]]
       end
       return
     end

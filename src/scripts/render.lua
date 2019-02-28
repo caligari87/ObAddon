@@ -180,8 +180,8 @@ function Render_edge(E)
       on_liquids = E.area.mode
     }
 
-    if reqs.height <= 96 then
-      reqs.height = 96
+    if reqs.height <= 2 then
+      reqs.height = 2
     end
 
     if geom.is_corner(dir) then
