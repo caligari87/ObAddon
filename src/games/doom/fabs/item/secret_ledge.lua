@@ -44,7 +44,7 @@ PREFABS.Item_secret_ledge2_down =
 {
   template  = "Item_secret_ledge"
   map = "MAP03"
-  theme "!tech"
+  theme = "!tech"
   prob = 800
 
 }
