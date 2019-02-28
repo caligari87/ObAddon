@@ -17,7 +17,7 @@ PREFABS.Locked_joiner_red =
   over   = 16
 
   x_fit  = "frame"
-  y_fit  = { 76,76+8}
+  y_fit  = "frame"
 
   nearby_h = 160
 
