@@ -2,7 +2,7 @@
 
 # ObAddon
 
-A repository of community-built prefabs and other enhancements for [Oblige 7.70](http://oblige.sourceforge.net/).
+A repository of new features, enhancements, and an extensive library of community-built prefabs for [Oblige 7.70](http://oblige.sourceforge.net/).
 
 ## Community
 Currently, the Oblige community resides on an unofficial Discord server since the official forums were shut down. You may join us at the following link:
@@ -10,9 +10,8 @@ Currently, the Oblige community resides on an unofficial Discord server since th
 [**Unofficial Oblige Discord**](https://discord.gg/AFws8ty)
 
 ## Download
-We are in the process of transitioning our development process! For now, new manual builds are being posted every couple days on the Discord server linked above. If the build linked below is very old, please check the `#readme` channel on the server to see if a newer build is available.
 
-[**ObAddon-2019-02-25.pk3**](https://cdn.discordapp.com/attachments/405211037344989184/549509478207455252/ObAddon-2019-02-25.pk3)
+[**Newest ObAddon Release (2019-02-28)**](https://github.com/caligari87/ObAddon/releases/latest)
 
 ## Instructions
 
