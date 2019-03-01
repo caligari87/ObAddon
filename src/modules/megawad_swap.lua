@@ -3,6 +3,7 @@
 ------------------------------------------------------------------------
 --
 --  Copyright (C) 2014 Andrew Apted
+--  Copyright (C) 2019 Glaice
 --
 --  This program is free software; you can redistribute it and/or
 --  modify it under the terms of the GNU General Public License
@@ -17,16 +18,6 @@
 ------------------------------------------------------------------------
 
 MEGAWAD_SWAP = {}
-
-
--- Notes:
---   1. these music lists exclude boss maps.
---
---   2. they are organized into episodes, and songs are only swapped
---      within an episode (never between them).  That is because
---      later episodes generally re-use songs from earlier ones, to
---      to avoid getting the same song two (or three!) times in a row.
---
 
 MEGAWAD_SWAP.doom1_music =
 {
