@@ -1978,6 +1978,24 @@ chunk.goal.action = "S1_OpenDoor"  -- FIXME IT SHOULD BE SET WHEN JOINER IS REND
     local skin = { ceil=ceil_mat }
     local T = Trans.spot_transform(chunk.mx, chunk.my, ceil_h, chunk.prefab_dir or 2)
 
+    -- parameter pass for ZDoom dynamic lights module
+    if not PARAM.light_fixtures then
+      PARAM.light_fixtures = {}
+      PARAM.light_fixture_count = 0
+    end
+
+    if def.kind == "light" then
+      PARAM.light_fixture_count = PARAM.light_fixture_count + 1
+      PARAM.light_fixtures[PARAM.light_fixture_count] =
+      {
+        map = LEVEL.id
+        prefab = def.name
+        x = chunk.mx
+        y = chunk.my
+        z = ceil_h + def.bound_z2 - def.bound_z1
+      }
+    end
+
     assert(def.z_fit == nil)
 
     Fabricate(A.room, def, T, { skin })

@@ -12,12 +12,7 @@ function ZDOOM_SPECIALS.do_special_stuff()
 
   local fog_color
 
-  local level_count = 0
-
-  for LEV in GAME.levels do
-    level_count = level_count + 1
-  end
-
+  local level_count = GAME.levels
 
 
   local function pick_sky_color_from_skygen_map(skytable, cur_level)
@@ -46,8 +41,17 @@ function ZDOOM_SPECIALS.do_special_stuff()
   end
 
 
+  if PARAM.light_fixtures then
+    for name,def in ipairs(PARAM.light_fixtures) do
+      print("\n" .. table.tostr(def))
+    end
+  end
+
 
   if PARAM.episode_sky_color then
+
+    print(table.tostr(PARAM.episode_sky_color))
+
     fog_color = pick_sky_color_from_skygen_map(PARAM.episode_sky_color,1)
   else
     fog_color = "Black"
