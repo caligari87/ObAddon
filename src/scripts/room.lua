@@ -1336,7 +1336,7 @@ function Room_make_windows(A1, A2)
      A2.floor_h = A1.floor_h
   end
 
-  if A2.border_type == "simple_fence" then return end
+  if A1.border_type == "simple_fence" or A2.border_type == "simple_fence" then return end
 
   local z, height = calc_vertical_space(A1, A2)
 
