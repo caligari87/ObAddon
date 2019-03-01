@@ -73,7 +73,7 @@ UI_ARCH.PROC_GOTCHA_CHOICES =
   "all",   _("Everything"),
 }
 
-UI_ARCH.STRECHED_OUT_CHOICES =
+UI_ARCH.YES_NO =
 {
   "yes", _("Yes"),
   "no",  _("No"),
@@ -93,10 +93,17 @@ OB_MODULES["ui_arch"] =
     {
       name = "stretched",
       label=_("Stretched Mode"),
-      choices=UI_ARCH.STRECHED_OUT_CHOICES
+      choices=UI_ARCH.YES_NO
       default = "no"
       tooltip = "Causes the width of the map to compress, creating a long, thin map layout. The height is still influenced by the prefered level size above."
-      gap=1
+    }
+    {
+      name = "streets_mode",
+      label=_("Streets Mode"),
+      choices=UI_ARCH.YES_NO,
+      default = "no"
+      tooltip = "[EXPERIMENTAL FEATURE] Allows Oblige to create large street-like outdoor rooms."
+      gap = 1
     }
 
     { name="outdoors",     label=_("Outdoors"),   choices=STYLE_CHOICES }

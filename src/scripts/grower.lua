@@ -1191,6 +1191,8 @@ function Grower_add_room(parent_R, info, trunk)
 
 gui.debugf("new room %s : env = %s : parent = %s\n", R.name, tostring(info.env), tostring(parent_R and parent_R.name))
 
+
+
   if info.force_start then
     R.is_start = true
     LEVEL.start_room = R
@@ -1199,6 +1201,13 @@ gui.debugf("new room %s : env = %s : parent = %s\n", R.name, tostring(info.env),
   if info.force_exit then
     R.is_exit = true
     LEVEL.exit_room = R
+  end
+
+  -- streets you gotta have
+  if OB_CONFIG.streets_mode == "yes" then
+    if R.is_start then
+      R.is_street = true
+    end
   end
 
   if trunk == nil then
@@ -1227,6 +1236,12 @@ gui.debugf("new room %s : env = %s : parent = %s\n", R.name, tostring(info.env),
     is_cave = true
   else
     is_outdoor = Room_choose_kind(R, parent_R)
+  end
+
+  if R.is_street then
+    is_outdoor = false
+    is_hallway = false
+    is_cave = false
   end
 
   Room_set_kind(R, is_hallway, is_outdoor, is_cave)
@@ -1564,6 +1579,7 @@ function Grower_grammatical_pass(R, pass, apply_num, stop_prob,
       if R.is_cave and rule.env != "cave" then return 0 end
       if R.is_park and rule.env != "park" then return 0 end
     end
+
 
     --MSSP attachment: never use liquids nor steepness in caves and stuff ever - very evil stuff ya know
     if pass == "sprout" or pass == "decorate" then
@@ -2939,7 +2955,7 @@ end
     -- successful, pick it and apply the substitution.
     --
 
---- gui.debugf("  Trying rule '%s'...\n", cur_rule.name)
+    --gui.printf("  Trying rule '%s'...\n", cur_rule.name)
 
     best = { score=-1, areas={} }
 
@@ -2991,6 +3007,7 @@ end
     end
 
     if best.score < 0 then
+      --gui.printf(" NOPE!\n")
       return false
     end
 
@@ -3094,6 +3111,10 @@ end
 
     gui.printf("APPLIED rule: %s\n", cur_rule.name)
 
+    if PARAM.live_minimap == "yes" then
+      Seed_draw_minimap() --MSSP:DELETEMEPLS
+    end
+
     update_aversions(cur_rule)
 
     -- apply any auxiliary rules
@@ -3156,6 +3177,10 @@ function Grower_grammatical_room(R, pass, is_emergency)
       end
     end
 
+    if R.is_street then
+      apply_num = rand.irange(2, 8)
+    end
+
   elseif pass == "sprout" then
     if R.is_exit then
       apply_num = 1
@@ -3178,7 +3203,15 @@ function Grower_grammatical_room(R, pass, is_emergency)
   elseif pass == "smoother" then
     apply_num = 15
 
-  else
+  elseif pass == "streets" then
+    apply_num = rand.irange(5,15)
+    R.is_outdoor = true
+
+  elseif pass == "streets_entry" then
+    apply_num = 1
+    R.is_outdoor = true
+
+    else
     error("unknown grammar pass: " .. tostring(pass))
   end
 
@@ -3332,6 +3365,7 @@ function Grower_grow_room(R)
 
   ---| Grower_grow_room |---
 
+
   Grower_grammatical_room(R, "grow")
 
   -- if room too small, try another grow pass, then kill it
@@ -3403,6 +3437,11 @@ function Grower_create_and_grow_room(trunk, mode, info)
     return R
   end
 
+  -- if it's a street, street it
+  if R.is_street then
+    Grower_grammatical_room(R, "streets_entry")
+    Grower_grammatical_room(R, "streets")
+  end
 
   -- grow it now
   Grower_grow_room(R)
@@ -3590,6 +3629,11 @@ gui.debugf("=== Coverage seeds: %d/%d  rooms: %d/%d\n",
         if PC.R1 == R or PC.R2 == R then
           local other = sel(PC.R1 == R, PC.R2, PC.R1)
 
+          if other.is_street then
+            Grower_grammatical_room(R, "streets_entry")
+            Grower_grammatical_room(R, "streets")
+          end
+
           Grower_grow_room(other)
           Grower_sprout_room(other)
           break;
@@ -3613,6 +3657,13 @@ gui.debugf("=== Coverage seeds: %d/%d  rooms: %d/%d\n",
     end
 
     each R in LEVEL.rooms do
+
+      -- if it's a street, street it
+      if R.is_street then
+        Grower_grammatical_room(R, "streets_entry")
+        Grower_grammatical_room(R, "streets")
+      end
+
       if not R.is_grown then
         Grower_grow_room(R)
         Grower_sprout_room(R)
@@ -4056,6 +4107,10 @@ function Grower_create_rooms()
   -- debugging aid
   if OB_CONFIG.svg then
     Seed_save_svg_image("grow_" .. OB_CONFIG.seed .. "_" .. LEVEL.name .. ".svg")
+  end
+
+  each R in LEVEL.rooms do
+    print(table.tostr(R))
   end
 
   Seed_draw_minimap()

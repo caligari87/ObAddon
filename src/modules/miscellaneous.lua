@@ -110,6 +110,14 @@ OB_MODULES["misc"] =
       label=_("Exit Signs")
       choices=MISC_STUFF.YES_NO
       tooltip=_("Places exit signs by exiting room")
+      gap=1
+    }
+
+    {
+      name="live_minimap"
+      label=_("Live Growth Minimap")
+      choices=MISC_STUFF.YES_NO
+      tooltip=_("Shows every single step Oblige performs on rooms as they are grown on the GUI minimap. May take minor hit on generation performance.")
     }
 
 ---- PLANNED (UNFINISHED) STUFF ----
