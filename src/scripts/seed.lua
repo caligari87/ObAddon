@@ -1010,6 +1010,10 @@ function Seed_draw_minimap()
       color = "#11aaff"
     end
 
+    if (R1 and R1.is_park) or (R2 and R2.is_park) then
+      color = "#70d872"
+    end
+
     draw_edge(S1, dir, color)
   end
 
