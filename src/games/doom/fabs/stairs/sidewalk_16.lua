@@ -7,6 +7,9 @@ PREFABS.Sidewalk_16 =
 
   where  = "seeds"
 
+  style  = "steepness"
+  shape  = "I"
+
   seed_h = 1
   seed_w = 1
 
