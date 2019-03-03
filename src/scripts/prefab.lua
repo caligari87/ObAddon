@@ -164,23 +164,25 @@ function Fab_load_all_definitions()
 
   local function calc_prob(def)
 
+    local prob_multiplier
+
     -- attachment for the prefab control module
     if PARAM["wall_prob"] == "fab_some" then
-      fab_demultiplier = 100
+      prob_multiplier = 100
     elseif PARAM["wall_prob"] == "fab_less" then
-      fab_demultiplier = 500
+      prob_multiplier = 500
     elseif PARAM["wall_prob"] == "fab_few" then
-      fab_demultiplier = 1000
+      prob_multiplier = 1000
     elseif PARAM["wall_prob"] == "fab_rare" then
-      fab_demultiplier = 5000
+      prob_multiplier = 5000
     elseif PARAM["wall_prob"] == "fab_random" then
-      fab_demultiplier = rand.pick({ 50, 100, 500, 1000, 5000 })
+      prob_multiplier = rand.pick({ 50, 100, 500, 1000, 5000 })
     else
-      fab_demultiplier = 50
+      prob_multiplier = 50
     end
 
-    PREFABS["Wall_plain"].prob = fab_demultiplier
-    PREFABS["Wall_plain_diag"].prob = fab_demultiplier
+    PREFABS["Wall_plain"].prob = prob_multiplier
+    PREFABS["Wall_plain_diag"].prob = prob_multiplier
     if def.skip_prob then
       if rand.odds(def.skip_prob) then return 0 end
     end

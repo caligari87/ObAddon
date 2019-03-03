@@ -1191,8 +1191,6 @@ function Grower_add_room(parent_R, info, trunk)
 
 gui.debugf("new room %s : env = %s : parent = %s\n", R.name, tostring(info.env), tostring(parent_R and parent_R.name))
 
-
-
   if info.force_start then
     R.is_start = true
     LEVEL.start_room = R
@@ -3111,8 +3109,8 @@ end
 
     gui.printf("APPLIED rule: %s\n", cur_rule.name)
 
-    if PARAM.live_minimap == "yes" then
-      Seed_draw_minimap() --MSSP:DELETEMEPLS
+    if PARAM.live_minimap == "step" then
+      Seed_draw_minimap()
     end
 
     update_aversions(cur_rule)
@@ -3377,6 +3375,10 @@ function Grower_grow_room(R)
       Grower_kill_room(R)
       return
     end
+  end
+
+  if PARAM["live_minimap"] == "room" then
+    Seed_draw_minimap()
   end
 
   R.is_grown = true
@@ -4107,10 +4109,6 @@ function Grower_create_rooms()
   -- debugging aid
   if OB_CONFIG.svg then
     Seed_save_svg_image("grow_" .. OB_CONFIG.seed .. "_" .. LEVEL.name .. ".svg")
-  end
-
-  each R in LEVEL.rooms do
-    print(table.tostr(R))
   end
 
   Seed_draw_minimap()

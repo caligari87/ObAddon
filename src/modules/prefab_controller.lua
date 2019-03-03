@@ -24,6 +24,12 @@ PREFAB_CONTROL.POINT_CHOICES =
   "fab_heaps",    _("Heaps"),
 }
 
+PREFAB_CONTROL.DETAIL_CHOICES =
+{
+  "on",  _("On"),
+  "off", _("Off"),
+}
+
 function PREFAB_CONTROL.setup(self)
   for name,opt in pairs(self.options) do
     local value = self.options[name].value
@@ -70,6 +76,15 @@ OB_MODULES["prefab_control"] =
       choices=PREFAB_CONTROL.CHOICES
       tooltip = "Determines the amount plain wall prefabs. What it actually does is greatly increase the probability of Oblige's basic plain wall prefab, rather than reduce the probability of all the prefabs in the library."
       default = "fab_default"
+    }
+
+    autodetail =
+    {
+      name = "autodetail"
+      label=("Auto Detailing")
+      choices=PREFAB_CONTROL.DETAIL_CHOICES
+      tooltip = "Forces Walls to be 'Less' if a map is Extreme-sized, in order to reduce linedef overflow and BSP leakage."
+      default = "on"
     }
   }
 }

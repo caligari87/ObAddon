@@ -40,6 +40,13 @@ MISC_STUFF.variety_tip = _(
     "Setting this to NONE will make each level use a single monster type")
 
 
+MISC_STUFF.LIVEMAP_CHOICES =
+{
+  "step", _("Per Step (Very Slow)"),
+  "room", _("Per Room (Slightly Slow)"),
+  "none", _("No Live Minimap"),
+}
+
 function MISC_STUFF.begin_level(self)
   each opt in self.options do
     local name  = assert(opt.name)
@@ -116,8 +123,8 @@ OB_MODULES["misc"] =
     {
       name="live_minimap"
       label=_("Live Growth Minimap")
-      choices=MISC_STUFF.YES_NO
-      tooltip=_("Shows every single step Oblige performs on rooms as they are grown on the GUI minimap. May take minor hit on generation performance.")
+      choices=MISC_STUFF.LIVEMAP_CHOICES
+      tooltip=_("Shows more steps Oblige performs on rooms as they are grown on the GUI minimap. May take a hit on generation speed.")
     }
 
 ---- PLANNED (UNFINISHED) STUFF ----
