@@ -154,11 +154,12 @@ function Level_determine_map_size(LEV)
 
   -- Mix It Up --
 
+  -- Greatly increased chance of Regular being used in Mix It Up
+  -- here. -Glaice, March 3rd, 2019
   if ob_size == "mixed" then
     local MIXED_PROBS =
     {
-      --small=30, regular=50, large=30, extreme=5
-      small=20, regular=85, large=30, extreme=5
+      small=25, regular=110, large=40, extreme=6
     }
 
     ob_size = rand.key_by_probs(MIXED_PROBS)
@@ -180,7 +181,9 @@ function Level_determine_map_size(LEV)
   else
     -- Named sizes --
 
-    local SIZES = { small=26, regular=36, large=48, extreme=68 }
+    --Extreme was 68, the BSP build failures might be attributing to this
+    --due to the extreme detail the maps have in them. --Glaice, March 3rd, 2019
+    local SIZES = { small=26, regular=36, large=48, extreme=58 }
 
     W = SIZES[ob_size]
   end
@@ -2504,4 +2507,3 @@ function Level_make_all()
 
   return "ok"
 end
-
