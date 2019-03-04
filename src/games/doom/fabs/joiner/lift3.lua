@@ -23,6 +23,7 @@ PREFABS.Joiner_lift3 =
   over   = 16
 
   x_fit  = "frame"
+  y_fit  = { 96,112 }
 
   delta_h  = 104
   can_flip = true

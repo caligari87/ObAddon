@@ -714,6 +714,7 @@ function Fab_render(fab)
   if fab.where == "point" or fab.where == "seeds" then
     gui.printf(LEVEL.name .. ": Adding " .. fab.name .. " from " .. fab_map .. " in " .. fab.file .. "\n")
   end
+
   each B in fab.brushes do
     if B[1].m != "spot" then
       raw_add_brush(B)

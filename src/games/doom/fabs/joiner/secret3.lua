@@ -23,7 +23,6 @@ PREFABS.Joiner_secret3_cage =
   over   = 16
 
   x_fit  = "frame"
-  y_fit  = "top"
 
   y_fit  = { 128,144 }
 }
