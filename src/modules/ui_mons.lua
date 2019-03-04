@@ -138,7 +138,7 @@ OB_MODULES["ui_mons"] =
       name="mix_it_up_upper_range",
       label=_("Mixed Upper Range"),
       choices=UI_MONS.MIX_QUANTITIES,
-      defualt="scarce",
+      default="scarce",
       tooltip="If you have Mix It Up selected, you can define the upper bound here. Otherwise, this option is simply ignored."
     }
 
@@ -189,4 +189,3 @@ OB_MODULES["ui_mons"] =
     }
   }
 }
-
