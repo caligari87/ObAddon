@@ -6421,28 +6421,6 @@ GROW_CLIFF_STRAIGHT_X4_LONG =
   }
 }
 
-GROW_CLIFF_STRAIGHT_X4_JUMP =
-{
-  prob = 1000
-
-  engine = "zdoom"
-
-  structure =
-  {
-    "........","11112222"
-    "........","1111%222"
-    "........","11111111"
-    "........","1111/222"
-    "11112222","11112222"
-  }
-
-  diagonals =
-  {
-    "12"
-    "12"
-  }
-}
-
 GROW_CLIFF_STRAIGHT_X4_SIDESTAIR =
 {
   prob = 3000

@@ -24,7 +24,8 @@ PREFABS.Locked_2x2_red =
   delta_h  = -40
   nearby_h = 128
 
-  y_fit = "frame"
+  y_fit = { 264,288 }
+  x_fit = "frame"
 
   -- texture is already "DOORRED"
   -- line special is already #135 (open red door)
