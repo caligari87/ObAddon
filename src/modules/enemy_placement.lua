@@ -434,6 +434,8 @@ OB_MODULES["harder_enemy"] =
   side = "left"
   game = "doomish"
 
+  tooltip = "Changes enemy placement and thus makes overall gameplay a bit harder."
+
   engine = { zdoom=1, gzdoom=1, skulltag=1, limit=1 }
 
   tables =
@@ -444,6 +446,5 @@ OB_MODULES["harder_enemy"] =
   hooks =
   {
     setup = HARDER_ENEMY.setup
-    tooltip = "Changes enemy placement and thus makes overall gameplay a bit harder."
   }
 }
