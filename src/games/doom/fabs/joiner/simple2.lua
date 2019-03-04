@@ -20,7 +20,7 @@ PREFABS.Joiner_simple2 =
   over   = 16
 
   x_fit = "frame"
-  y_fit = "frame"
+  y_fit = { 24,40 , 120,136 }
 
   tex_WOODMET4 = { WOODMET2=50, WOOD1=50, WOOD3=50, WOOD4=50, WOODVERT=50, WOODGARG=50, PANRED=50, PANBLUE=50, PANBLACK=50,
                    WOOD6=50, WOOD8=50, WOOD9=50 }

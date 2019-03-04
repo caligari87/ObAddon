@@ -26,7 +26,7 @@ PREFABS.Joiner_simple_arched =
   bound_z2 = 128+4
 
   x_fit = { 128-16,128+16 }
-  y_fit = "frame"
+  y_fit = { 64,96 , 192,224 }
 
   sector_1 = 0 -- a hack to stop Oblige from culling this sector, required by ZDoom slope linedefs
 
