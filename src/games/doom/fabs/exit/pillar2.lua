@@ -6,7 +6,7 @@ PREFABS.Exit_pillar2 =
 {
   file  = "exit/pillar2.wad"
 
-  prob  = 100
+  prob  = 25
   theme = "tech"
 
   where = "point"
@@ -17,7 +17,7 @@ PREFABS.Exit_pillar2_hell =
 {
   template = "Exit_pillar2"
 
-  prob  = 100
+  prob  = 25
   theme = "!tech"
 
   tex_SW1STRTN = "SW2GARG"
@@ -28,7 +28,7 @@ PREFABS.Exit_pillar2_urban =
 {
   template = "Exit_pillar2"
 
-  prob  = 200
+  prob  = 25
   theme = "urban"
 
   tex_SW1STRTN = "SW1CMT"
