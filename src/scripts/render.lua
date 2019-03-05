@@ -2484,7 +2484,7 @@ function Render_skybox()
     local skyfab_list = {}
     table.insert(skyfab_list, PREFABS["Skybox_generic"])
     table.insert(skyfab_list, PREFABS["Skybox_garrett_city"])
-    table.insert(skyfab_list, PREFABS["Skybox_garrett_hell"])
+    --table.insert(skyfab_list, PREFABS["Skybox_garrett_hell"])
     skyfab = rand.pick(skyfab_list)
 
     -- proper skybox picking code doesn't seem to work and
