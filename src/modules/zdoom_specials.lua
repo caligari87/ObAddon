@@ -151,6 +151,8 @@ function ZDOOM_SPECIALS.do_special_stuff()
     elseif map_num == 32 then
       map_id_next = 16
       secret_level_line = ''
+    else
+      secret_level_line = ''
     end
 
     local next_level_line = '  next = ' .. map_id_next .. '\n'
