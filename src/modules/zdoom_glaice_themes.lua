@@ -1,9 +1,28 @@
+----------------------------------------------------------------
+--  MODULE: Glaice Themes
+----------------------------------------------------------------
+--
+--  Copyright (C) 2019 MsrSgtShooterPerson
+--  Copyright (C) 2019 Glaice
+--
+--  This program is free software; you can redistribute it and/or
+--  modify it under the terms of the GNU General Public License
+--  as published by the Free Software Foundation; either version 2
+--  of the License, or (at your option) any later version.
+--
+--  This program is distributed in the hope that it will be useful,
+--  but WITHOUT ANY WARRANTY; without even the implied warranty of
+--  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+--  GNU General Public License for more details.
+--
+------------------------------------------------------------------
+
 GLAICE_THEMES =
 {
   tech_GrayMet =
   {
     env = "building"
-    prob = 250
+    prob = 120
 
     walls =
     {
@@ -37,7 +56,6 @@ GLAICE_THEMES =
       TEKSHAW = 30
 
       TKWALL2 = 15
-      TEKWALL2 = 15
       TEKWALL7 = 15
       TEKWALL8 = 15
       TEKWALL9 = 15
@@ -102,10 +120,286 @@ GLAICE_THEMES =
     }
   }
 
+  tech_Computers =
+  {
+    prob = 40
+    env = "building"
+
+    walls =
+    {
+      COMPSPAN = 30
+      CMPOHSO = 10
+      CMPTILE = 15
+      COMPBLUE = 10
+    }
+
+    floors =
+    {
+      FLAT14 = 70
+      FLOOR1_1 = 35
+      FLAT4 = 10
+      CEIL4_1 = 20
+      CEIL4_2 = 20
+      CEIL5_1 = 20
+      CEIL4_4 = 20
+    }
+
+    ceilings =
+    {
+      CEIL5_1 = 50
+      CEIL4_1 = 20
+      CEIL4_2 = 20
+      CEIL4_4 = 15
+      TEK1    = 7
+      TEK2    = 7
+      QFLAT09 = 5
+      GRATE3  = 5
+    }
+  }
+
+  -- Hooray, CEMENT textures!
+  tech_Cement =
+  {
+    env = "building"
+    prob = 100
+
+    walls =
+    {
+      CEM03 = 15
+      CEM04 = 15
+      CEM06 = 120
+      CEM07 = 120
+      CEM09 = 120
+    }
+
+    floors =
+    {
+      FLAT1 = 50
+      FLAT5_4 = 40
+      GRATE1  = 15
+      GRATE2  = 15
+      FLOOR4_8 = 10
+      FLOOR5_1 = 10
+      FLOOR51C = 10
+      FLOOR46D = 15
+      FLOOR46E = 15
+      DARKF01 = 15
+      DARKF02 = 15
+    }
+
+    ceilings =
+    {
+      FLAT19 = 50
+      FLAT5_4 = 20
+      MFLR8_1 = 15
+      FLAT5_2 = 5
+      CEIL1_1 = 5
+      FLAT5_2 = 5
+      GRATE4  = 10
+    }
+  }
+
+  tech_Shiny =
+  {
+    prob = 40
+    env = "building"
+
+    walls =
+    {
+      SHAWN2 = 60
+      SHAWN4 = 40
+      SHAWN5 = 40
+      TEKSHAW = 25
+      SHAWGRY4 = 10
+      HEX01  = 15
+      STARGR1 = 3
+      STARGR2 = 3
+      STARGRY1 = 5
+    }
+
+    floors =
+    {
+      FLOOR4_7 = 10
+      FLOOR4_8 = 10
+      FLOOR5_1 = 10
+      FLAT14 = 10
+      FLAT15 = 10
+      FLOOR1_1 = 5
+      FLOOR1_2 = 5
+      FLAT23 = 70
+      SHINY01 = 20
+      SHINY02 = 30
+      SHINY03 = 25
+    }
+
+    ceilings =
+    {
+      FLAT23 = 70
+      FLAT1  = 5
+      FLAT19 = 10
+      SHINY02 = 15
+      FLOOR4_7 = 10
+      SHINY03 = 15
+      SHINY04 = 10
+    }
+  }
+
+  tech_HeavyMetal =
+  {
+    env = "building"
+    prob = 120
+
+    walls =
+    {
+      METAL2 = 70
+      METAL8 = 70
+      METAL9 = 70
+      METAL10 = 50
+      BRONZE1 = 30
+      BRONZE3 = 30
+      METAL1 = 25
+    }
+
+    floors =
+    {
+      FLAT3 = 50
+      FLOOR0_1 = 30
+      FLOOR4_5 = 20
+      FLOOR4_6 = 20
+      FLOOR4_8 = 20
+      FLOOR5_1 = 15
+      FLOOR7_1 = 15
+      MFLR8_2  = 20
+      SLIME15 = 20
+      SLIME14 = 20
+      CEIL4_1 = 5
+      CEIL4_2 = 5
+      QFLAT09 = 10
+      QFLAT10 = 5
+      GRATE1 = 10
+      GRATE2 = 10
+      DARKF01 = 15
+      DARKF02 = 15
+      DARKF03 = 15
+      FLOOR46E = 10
+    }
+
+    ceilings =
+    {
+      CEIL5_1 = 40
+      CEIL5_2 = 15
+      SLIME15 = 40
+      CEIL4_1 = 20
+      SLIME14 = 40
+      SLIME16 = 20
+      GRATE3  = 20
+      GRATE5  = 15
+      GRATE6  = 15
+    }
+  }
+
+  tech_VeryGray =
+  {
+    env = "building"
+    prob = 85
+
+    walls =
+    {
+      GRAY1 = 80
+      GRAY5 = 80
+      GRAY4 = 80
+      GRAY6 = 60
+      GRAY7 = 80
+      GRAY8 = 60
+      ICKWALL1 = 10
+      ICKWALL2 = 10
+      ICKWALL3 = 10
+      TEKGRY01 = 10
+    }
+
+    floors =
+    {
+      FLAT4 = 50
+      FLOOR0_3 = 30
+      FLAT5_4 = 25
+      FLAT19 = 15
+      TILES4 = 15
+      FLOOR0_5 = 10
+      FLOOR4_7 = 15
+      SHINY01 = 5
+      SHINY02 = 5
+      SHINY03 = 10
+    }
+
+    ceilings =
+    {
+      FLAT19 = 40
+      FLAT5_4 = 20
+      FLAT4  = 20
+      FLAT23 = 10
+      FLAT1 = 10
+      FLOOR4_7 = 5
+      SHINY02 = 5
+      RROCK21 = 5
+      SHINY04 = 5
+      SLIME14 = 10
+      SLIME15 = 10
+    }
+  }
+
+  tech_VeryBrown =
+  {
+    env = "building"
+    prob = 50
+
+    walls =
+    {
+      BROWN1 = 30
+      BROWN3 = 5
+      BROWNGRN = 20
+      BROWNGR2 = 5
+      BROWNGR3 = 5
+      BROWNGR4 = 5
+      BROWN96 = 10
+      BRVINE = 5
+      BROVINE2 = 5
+    }
+
+    floors =
+    {
+      FLOOR0_1 = 30
+      FLOOR0_2 = 20
+      FLOOR3_3 = 20
+      FLOOR7_1 = 15
+      FLOOR4_5 = 30
+      FLOOR4_6 = 30
+      FLOOR5_2 = 30
+      FLAT5 = 20
+      FLAT14 = 15
+      FLAT5_4 = 10
+      FLOOR46D = 10
+      FLOOR46E = 10
+      DARKF01 = 5
+      DARKF02 = 5
+    }
+
+    ceilings =
+    {
+      CEIL5_1 = 20
+      CEIL3_3 = 15
+      CEIL3_5 = 50
+      FLAT1 = 20
+      FLOOR4_1 = 30
+      FLAT5_4 = 10
+      FLOOR5_4 = 10
+      QFLAT09 = 5
+    }
+  }
+
   hell_GlaiceGothic =
   {
     env  = "building"
-    prob = 350
+    prob = 150
 
     walls =
     {
@@ -204,10 +498,58 @@ GLAICE_THEMES =
     }
   }
 
+  hell_Cement =
+  {
+    env = "building"
+    prob = 100
+
+    walls =
+    {
+      CEM03 = 25
+      CEM04 = 25
+      CEM06 = 110
+      CEM07 = 110
+      CEM09 = 110
+      DRKCMT01 = 10
+      DRKCMT02 = 10
+      DRKCMT03 = 10
+      DRKCMT04 = 10
+    }
+
+    floors =
+    {
+      FLAT1 = 50
+      FLAT5_4 = 40
+      FLAT5_2 = 5
+      FLAT5_1 = 5
+      GRATE1  = 10
+      GRATE2  = 10
+      FLOOR4_8 = 10
+      FLOOR5_1 = 10
+      FLOOR51C = 10
+      FLOOR46D = 10
+      FLOOR46E = 10
+      DARKF01 = 10
+      DARKF02 = 10
+    }
+
+    ceilings =
+    {
+      FLAT19 = 50
+      FLAT5_4 = 20
+      MFLR8_1 = 15
+      FLAT5_2 = 5
+      CEIL1_1 = 5
+      FLAT5_2 = 5
+      GRATE4  = 10
+    }
+  }
+
+  -- 18 through 20 don't tile horizontally well so I removed them.
   urban_GlaiceBricks =
   {
     env = "building"
-    prob = 250
+    prob = 100
 
     walls =
     {
@@ -228,9 +570,6 @@ GLAICE_THEMES =
       BRIKS15 = 15
       BRIKS16 = 15
       BRIKS17 = 15
-      BRIKS18 = 15
-      BRIKS19 = 15
-      BRIKS20 = 15
       BRIKS21 = 15
       BRIKS22 = 15
       BRIKS23 = 15
@@ -299,8 +638,28 @@ GLAICE_THEMES =
 
 GLAICE_TECH_FACADES =
 {
+
+  STARTAN3 = 40
+  STARG3 = 40
+  BRONZE1 = 25
+  BRONZE3 = 25
+
   GRAY6 = 25
   GRAY8 = 25
+
+  STONE  = 20
+  STONE2 = 20
+  STONE3 = 20
+
+  BROWN1 = 20
+  BROWNGRN = 20
+  BRVINE = 20
+  BROVINE2 = 20
+
+  TEKGREN2 = 15
+  TEKSHAW  = 15
+  TEKGRY01 = 15
+  TEKGRY02 = 10
 
   GRAYMET1 = 10
   GRAYMET2 = 10
@@ -320,8 +679,117 @@ GLAICE_TECH_FACADES =
 
 GLAICE_HELL_FACADES =
 {
+  GSTONE1 = 50
+  WOOD5   = 50
+
+  MARBLE  = 25
+  MARBLE1 = 25
+  MARBLE2 = 25
+  MARBLE3 = 25
+  MARBGRAY = 25
+
+  SP_HOT1 = 20
+  STONE   = 20
+  STONE4  = 15
+  STONE6  = 15
+  STONE8  = 5
+  STONE9  = 5
+
+  GOTH08 = 20
+  GOTH09 = 20
+  GOTH10 = 20
+  GOTH11 = 20
+  GOTH28 = 10
+  GOTH29 = 20
+  GOTH30 = 20
+  GOTH31 = 20
+
+  HELMET1 = 20
+  HELMET2 = 20
+
+  SKTEK01 = 15
+  SKTEK02 = 15
+
+  SKINMET3 = 15
+  SKINMET4 = 15
+  SKINMET5 = 15
+  SKINMET6 = 5
+  SKINMET7 = 5
+  VINES1   = 5
+  VINES2   = 5
+  VINES3   = 5
+  VINES4   = 5
+
+  BROWN1   = 5
+  BRVINE   = 10
+
 }
 
 GLAICE_URBAN_FACADES =
 {
+
+BIGBRIK1 = 50
+BIGBRIK2 = 50
+STUCCO   = 50
+STUCCO1  = 20
+STUCCO3  = 20
+
+BLAKWAL1 = 35
+BLAKWAL2 = 35
+
+BSTONE1 = 25
+BSTONE2 = 25
+
+BRICK1 = 25
+BRICK10 = 25
+BRICK11 = 25
+BRICK12 = 25
+BRICK5  = 25
+BRICK6  = 25
+BRICK7  = 25
+BRICK8  = 25
+BRICK9  = 25
+
+STONE    = 25
+BIGSTONE = 25
+BIGSTON2 = 25
+BIGSTON3 = 25
+BIGSTON4 = 25
+
+BRIKS01 = 20
+BRIKS02 = 20
+BRIKS04 = 20
+BRIKS05 = 20
+BRIKS06 = 20
+BRIKS10 = 20
+BRIKS12 = 20
+BRIKS13 = 20
+BRIKS14 = 20
+BRIKS15 = 20
+BRIKS16 = 20
+BRIKS17 = 20
+BRIKS21 = 20
+BRIKS22 = 20
+BRIKS23 = 20
+BRIKS24 = 20
+BRIKS25 = 10
+BRIKS26 = 20
+BRIKS27 = 20
+BRIKS28 = 10
+BRIKS29 = 15
+BRIKS30 = 10
+GOTH45  = 20
+ROK17   = 20
+ROK18   = 20
+ROK19   = 15
+
+URBAN1 = 20
+URBAN2 = 20
+URBAN3 = 20
+URBAN4 = 20
+
+METAL2 = 15
+BRONZE1 = 10
+BRONZE3 = 10
+
 }
