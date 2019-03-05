@@ -229,18 +229,6 @@ function Episode_determine_map_sizes()
     LEV.map_W = W
     LEV.map_H = H
 
-    -- Prefab control auto-detail override
-    if PARAM["autodetail"] == "on" and H > 40 and H < 50 then
-      PREFABS["Wall_plain"].use_prob = 5000
-      PREFABS["Wall_plain_diag"].use_prob = 5000
-    elseif PARAM["autodetail"] == "on" and H > 50 then
-      PREFABS["Wall_plain"].use_prob = 10000
-      PREFABS["Wall_plain_diag"].use_prob = 10000
-    elseif H <= 48 then
-      PREFABS["Wall_plain"].use_prob = PREFABS["Wall_plain"].prob
-      PREFABS["Wall_plain_diag"].use_prob = PREFABS["Wall_plain_diag"].prob
-    end
-
   end
 end
 

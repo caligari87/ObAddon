@@ -303,6 +303,18 @@ function Render_edge(E)
 
     -- TODO : pictures
 
+    -- Prefab control auto-detail override
+    if PARAM["autodetail"] == "on" and LEVEL.map_H >= 40 and LEVEL.map_H < 50 then
+      PREFABS["Wall_plain"].use_prob = 1000
+      PREFABS["Wall_plain_diag"].use_prob = 1000
+    elseif PARAM["autodetail"] == "on" and LEVEL.map_H >= 50 then
+      PREFABS["Wall_plain"].use_prob = 5000
+      PREFABS["Wall_plain_diag"].use_prob = 5000
+    elseif LEVEL.map_H < 39 then
+      PREFABS["Wall_plain"].use_prob = PREFABS["Wall_plain"].prob
+      PREFABS["Wall_plain_diag"].use_prob = PREFABS["Wall_plain_diag"].prob
+    end
+
     local skin = {}
 
     skin.wall = assert(E.wall_mat)
