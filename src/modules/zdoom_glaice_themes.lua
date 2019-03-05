@@ -137,6 +137,84 @@ GLAICE_THEMES =
       MFLR8_4  = 15
     }
   }
+
+  urban_GlaiceBricks =
+  {
+    env = "building"
+    prob = 250
+
+    walls =
+    {
+      BRIKS01 = 15
+      BRIKS02 = 15
+      BRIKS03 = 15
+      BRIKS04 = 15
+      BRIKS05 = 15
+      BRIKS06 = 15
+      BRIKS07 = 15
+      BRIKS08 = 15
+      BRIKS09 = 15
+      BRIKS10 = 15
+      BRIKS11 = 15
+      BRIKS12 = 15
+      BRIKS13 = 15
+      BRIKS14 = 15
+      BRIKS15 = 15
+      BRIKS16 = 15
+      BRIKS17 = 15
+      BRIKS18 = 15
+      BRIKS19 = 15
+      BRIKS20 = 15
+      BRIKS21 = 15
+      BRIKS22 = 15
+      BRIKS23 = 15
+      BRIKS24 = 15
+      BRIKS25 = 15
+      BRIKS26 = 15
+      BRIKS27 = 15
+      BRIKS28 = 15
+      BRIKS29 = 15
+      BRIKS30 = 15
+
+      URBAN1 = 15
+      URBAN2 = 15
+      URBAN3 = 15
+    }
+
+    floors =
+    {
+      FLAT1_1 = 50
+      FLAT1_2 = 30
+      FLAT1   = 30
+      FLAT5   = 15
+      FLAT5_1 = 50
+      FLAT5_2 = 30
+      FLAT5_4 = 20
+      FLAT5_5 = 50
+      FLAT8   = 30
+
+      FLOOR0_1 = 20
+      FLOOR0_2 = 20
+      FLOOR0_3 = 20
+      FLOOR4_6 = 20
+      FLOOR5_3 = 25
+      FLOOR5_4 = 10
+    }
+
+    ceilings =
+    {
+      FLAT1   = 50
+      FLAT5_4 = 20
+      FLAT5_5 = 15
+      RROCK10 = 20
+      RROCK14 = 20
+      CEIL1_1 = 30
+      FLAT5_2 = 10
+      MFLR8_1 = 10
+      SLIME13 = 5
+    }
+  }
+  }
 }
 
 GLAICE_TECH_FACADES =
