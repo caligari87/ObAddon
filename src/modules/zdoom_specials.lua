@@ -23,20 +23,20 @@ ZDOOM_SPECIALS = { }
 
 function ZDOOM_SPECIALS.setup(self)
   print("ZDoom Special Addons module activated.")
+  ZDOOM_SPECIALS.put_new_materials()
 end
 
 function ZDOOM_SPECIALS.put_new_materials()
-  local garbage_bytes = {0}
-  gui.wad_add_binary_lump("TX_START",garbage_bytes)
-  gui.wad_merge_sections("games/doom/data/Oblige_Epic_Texture_Set_V620.wad")
-  gui.wad_add_binary_lump("TX_END",garbage_bytes)
-
   for skin,defs in pairs(GLAICE_MATERIALS) do
-    DOOM.MATERIALS[skin] = defs
+    GAME.MATERIALS[skin] = defs
+  end
+
+  for skin,defs in pairs(GLAICE_TECH_FACADES) do
+    GAME.THEMES.tech.facades[skin] = defs
   end
 
   for room_theme,defs in pairs(GLAICE_THEMES) do
-    DOOM.ROOM_THEMES[room_theme] = defs
+    GAME.ROOM_THEMES[room_theme] = defs
   end
 end
 
@@ -45,8 +45,6 @@ function ZDOOM_SPECIALS.do_special_stuff()
   local fog_color
 
   local level_count = #GAME.levels
-
-  print("There are " .. level_count .. " levels in this WAD!!!!! DOOD")
 
   local function pick_sky_color_from_skygen_map(skytable, cur_level)
     local color
@@ -104,9 +102,6 @@ function ZDOOM_SPECIALS.do_special_stuff()
 
 
   if PARAM.episode_sky_color then
-
-    print(table.tostr(PARAM.episode_sky_color))
-
     fog_color = pick_sky_color_from_skygen_map(PARAM.episode_sky_color,1)
   else
     fog_color = "00 00 00"
@@ -209,9 +204,14 @@ function ZDOOM_SPECIALS.do_special_stuff()
       table.insert(mapinfolump,line)
     end
   end
-  print(mapinfolump)
 
   gui.wad_add_text_lump("MAPINFO", mapinfolump)
+
+  -- Attach Glaice's Epic Texture set
+  local garbage_bytes = {0}
+  gui.wad_add_binary_lump("TX_START",garbage_bytes)
+  gui.wad_merge_sections("games/doom/data/Oblige_Epic_Texture_Set_V620.wad")
+  gui.wad_add_binary_lump("TX_END",garbage_bytes)
 
 end
 
@@ -230,7 +230,6 @@ OB_MODULES["zdoom_specials"] =
   hooks =
   {
     setup = ZDOOM_SPECIALS.setup
-    get_levels = ZDOOM_SPECIALS.put_new_materials
     all_done = ZDOOM_SPECIALS.do_special_stuff
   }
 

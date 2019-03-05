@@ -3,15 +3,27 @@ GLAICE_THEMES =
   tech_GrayMet =
   {
     env = "building"
-    prob = 50
+    prob = 250
 
     walls =
     {
-      GRAYMET1 = 30
-      GRAYMET2 = 30
-      GRAYMET3 = 30
-      GRAYMET4 = 30
-      GRAYMET5 = 30
+      GRAY6 = 50
+      GRAY8 = 50
+
+      GRAYMET1 = 15
+      GRAYMET2 = 15
+      GRAYMET3 = 15
+      GRAYMET4 = 15
+      GRAYMET5 = 15
+
+      METAL8 = 25
+      METAL9 = 25
+      METAL10 = 25
+      METAL11 = 25
+
+      SHAWN4 = 33
+      SHAWN5 = 33
+      HEX01 = 33
     }
 
     floors =
@@ -53,4 +65,25 @@ GLAICE_THEMES =
       FLAT23 = 5
     }
   }
+}
+
+GLAICE_TECH_FACADES =
+{
+  GRAY6 = 25
+  GRAY8 = 25
+
+  GRAYMET1 = 10
+  GRAYMET2 = 10
+  GRAYMET3 = 10
+  GRAYMET4 = 10
+  GRAYMET5 = 10
+
+  METAL8 = 12
+  METAL9 = 12
+  METAL10 = 12
+  METAL11 = 12
+
+  SHAWN4 = 15
+  SHAWN5 = 15
+  HEX01 = 15
 }
