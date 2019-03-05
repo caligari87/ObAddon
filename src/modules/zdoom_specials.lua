@@ -136,6 +136,7 @@ function ZDOOM_SPECIALS.do_special_stuff()
       --'  cluster = 1\n'
       '  sky1 = "' .. sky_tex .. '"\n'
       '  fade = "' .. fog_color .. '"\n'
+      '  fogdensity = 64\n'
       '}\n'
       --[['cluster 1\n'
       '{\n'
