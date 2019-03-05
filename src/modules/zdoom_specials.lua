@@ -107,7 +107,7 @@ function ZDOOM_SPECIALS.do_special_stuff()
 
     fog_color = pick_sky_color_from_skygen_map(PARAM.episode_sky_color,1)
   else
-    fog_color = "Black"
+    fog_color = "00 00 00"
   end
 
   local function add_mapinfo(mapinfo_tab)
@@ -136,7 +136,7 @@ function ZDOOM_SPECIALS.do_special_stuff()
       --'  cluster = 1\n'
       '  sky1 = "' .. sky_tex .. '"\n'
       '  fade = "' .. fog_color .. '"\n'
-      '  fogdensity = 48\n'
+      '  fogdensity = 32\n'
       '}\n'
       --[['cluster 1\n'
       '{\n'
