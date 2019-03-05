@@ -54,33 +54,33 @@ function ZDOOM_SPECIALS.do_special_stuff()
     local skyname = skytable[cur_level]
 
     if skyname == "SKY_CLOUDS" then
-      color = "c0 dd e0"
+      color = "a7 c3 ef"
     elseif skyname == "BLUE_CLOUDS" then
-      color = "79 99 c6"
+      color = "17 4f a8"
     elseif skyname == "WHITE_CLOUDS" then
-      color = "3c 3c 3d"
+      color = "f2 f4 f7"
     elseif skyname == "GREY_CLOUDS" then
-      color = "90 94 96"
+      color = "9d 9e a0"
     elseif skyname == "DARK_CLOUDS" then
-      color = "25 25 26"
+      color = "4f 50 51"
     elseif skyname == "BROWN_CLOUDS" then
-      color = "e0 a6 64"
+      color = "ba 68 1b"
     elseif skyname == "BROWNISH_CLOUDS" then
-      color = "d3 b3 8f"
+      color = "ba 85 53"
     elseif skyname == "PEACH_CLOUDS" then
-      color = "dd be d7"
+      color = "d3 b1 bb"
     elseif skyname == "YELLOW_CLOUDS" then
-      color = "ed ed 65"
+      color = "db dd 44"
     elseif skyname == "ORANGE_CLOUDS" then
-      color = "e0 a2 38"
+      color = "d3 95 5b"
     elseif skyname == "GREEN_CLOUDS" then
-      color = "60 c6 37"
+      color = "76 ce 40"
     elseif skyname == "JADE_CLOUDS" then
-      color = "68 d1 7d"
+      color = "92 c4 73"
     elseif skyname == "DARKRED_CLOUDS" then
-      color = "63 16 16"
+      color = "9e 1b 0c"
     elseif skyname == "HELLISH_CLOUDS" then
-      color = "db 7c 64"
+      color = "d8 27 13"
     elseif string.match( skyname,"NEBULA" ) then
       color = "00 00 00"
     end
@@ -136,7 +136,7 @@ function ZDOOM_SPECIALS.do_special_stuff()
       --'  cluster = 1\n'
       '  sky1 = "' .. sky_tex .. '"\n'
       '  fade = "' .. fog_color .. '"\n'
-      '  fogdensity = 64\n'
+      '  fogdensity = 48\n'
       '}\n'
       --[['cluster 1\n'
       '{\n'
