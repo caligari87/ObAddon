@@ -65,6 +65,78 @@ GLAICE_THEMES =
       FLAT23 = 5
     }
   }
+
+  hell_GlaiceGothic =
+  {
+    env  = "building"
+    prob = 350
+
+    walls =
+    {
+      GOTH01 = 15
+      GOTH02 = 15
+      GOTH03 = 15
+      GOTH06 = 15
+      GOTH07 = 15
+      GOTH08 = 15
+      GOTH09 = 15
+      GOTH10 = 15
+      GOTH11 = 15
+      GOTH12 = 15
+      GOTH13 = 15
+      GOTH14 = 15
+      GOTH15 = 15
+      GOTH16 = 15
+      GOTH17 = 15
+      GOTH18 = 15
+      GOTH23 = 15
+      GOTH24 = 15
+      GOTH25 = 15
+      GOTH26 = 15
+      GOTH27 = 15
+      GOTH28 = 15
+      GOTH34 = 15
+      GOTH35 = 15
+      GOTH36 = 15
+      GOTH37 = 15
+      GOTH38 = 15
+      GOTH39 = 15
+      GOTH40 = 15
+      GOTH41 = 15
+      GOTH42 = 15
+      GOTH43 = 15
+      GOTH44 = 15
+      GOTH45 = 15
+      GOTH46 = 15
+      GOTH47 = 15
+      GOTH48 = 15
+      GOTH49 = 15
+    }
+
+    floors =
+    {
+      GRNROCK  = 30
+      FLAT5_4  = 30
+      FLAT5_1  = 30
+      FLOOR7_1 = 30
+      DEM1_6   = 15
+      FLAT5_1  = 5
+      FLAT5_2  = 5
+
+      FLAT10   = 10
+      FLOOR6_2 = 10
+      MFLR8_2  = 10
+    }
+
+    ceilings =
+    {
+      FLOOR7_2 = 50
+      DEM1_5   = 20
+      FLOOR6_1 = 20
+      FLOOR6_2 = 20
+      MFLR8_4  = 15
+    }
+  }
 }
 
 GLAICE_TECH_FACADES =
@@ -86,4 +158,12 @@ GLAICE_TECH_FACADES =
   SHAWN4 = 15
   SHAWN5 = 15
   HEX01 = 15
+}
+
+GLAICE_HELL_FACADES =
+{
+}
+
+GLAICE_URBAN_FACADES =
+{
 }

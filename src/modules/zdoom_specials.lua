@@ -31,8 +31,16 @@ function ZDOOM_SPECIALS.put_new_materials()
     GAME.MATERIALS[skin] = defs
   end
 
-  for skin,defs in pairs(GLAICE_TECH_FACADES) do
-    GAME.THEMES.tech.facades[skin] = defs
+  for name,prob in pairs(GLAICE_TECH_FACADES) do
+    GAME.THEMES.tech.facades[name] = prob
+  end
+
+  for name,prob in pairs(GLAICE_HELL_FACADES) do
+    GAME.THEMES.hell.facades[name] = prob
+  end
+
+  for name,prob in pairs(GLAICE_URBAN_FACADES) do
+    GAME.THEMES.urban.facades[name] = prob
   end
 
   for room_theme,defs in pairs(GLAICE_THEMES) do
