@@ -185,7 +185,7 @@ GLAICE_THEMES =
       G20 = 40
       G21 = 40
 
-      GMET01 = 90 
+      GMET01 = 90
       GMET02 = 90
       GMET03 = 90
       GMET04 = 90
@@ -294,7 +294,6 @@ GLAICE_THEMES =
       MFLR8_1 = 10
       SLIME13 = 5
     }
-  }
   }
 }
 

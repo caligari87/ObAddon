@@ -16,35 +16,28 @@
 --
 -------------------------------------------------------------------
 
-gui.import("zdoom_glaice_materials.lua")
-gui.import("zdoom_glaice_themes.lua")
-
 ZDOOM_SPECIALS = { }
+
+ZDOOM_SPECIALS.YES_NO =
+{
+  "yes", _("Yes"),
+  "no",  _("No"),
+}
+
+ZDOOM_SPECIALS.FOG_CHOICES =
+{
+  "clear", _("Clear"),
+  "misty", _("Misty"),
+  "foggy", _("Foggy"),
+  "intense", _("Intense"),
+}
 
 function ZDOOM_SPECIALS.setup(self)
   print("ZDoom Special Addons module activated.")
-  ZDOOM_SPECIALS.put_new_materials()
-end
 
-function ZDOOM_SPECIALS.put_new_materials()
-  for skin,defs in pairs(GLAICE_MATERIALS) do
-    GAME.MATERIALS[skin] = defs
-  end
-
-  for name,prob in pairs(GLAICE_TECH_FACADES) do
-    GAME.THEMES.tech.facades[name] = prob
-  end
-
-  for name,prob in pairs(GLAICE_HELL_FACADES) do
-    GAME.THEMES.hell.facades[name] = prob
-  end
-
-  for name,prob in pairs(GLAICE_URBAN_FACADES) do
-    GAME.THEMES.urban.facades[name] = prob
-  end
-
-  for room_theme,defs in pairs(GLAICE_THEMES) do
-    GAME.ROOM_THEMES[room_theme] = defs
+  for name,opt in pairs(self.options) do
+    local value = self.options[name].value
+    PARAM[name] = value
   end
 end
 
@@ -160,14 +153,35 @@ function ZDOOM_SPECIALS.do_special_stuff()
 
     local next_level_line = '  next = ' .. map_id_next .. '\n'
 
+    local fog_color_line = '  fade = "' .. fog_color .. '"\n'
+
+    local fog_intensity = "48"
+
+    if PARAM.fog_intensity == "clear" then
+      fog_intensity = "48"
+    elseif PARAM.fog_intensity == "misty" then
+      fog_intensity = "128"
+    elseif PARAM.fog_intensity == "foggy" then
+      fog_intensity = "255"
+    elseif PARAM.fog_intensity == "intense" then
+      fog_intensity = "368"
+    end
+
+    local fog_intensity_line = '  fogdensity = ' .. fog_intensity .. '\n'
+
+    if PARAM.fog_generator == "no" then
+      fog_color_line = ""
+      fog_intensity_line = ""
+    end
+
     local mapinfo =
     {
       'map ' .. map_id .. ' lookup HUSTR_'.. map_num ..'\n'
       '{\n'
       --'  cluster = 1\n'
       '  sky1 = "' .. sky_tex .. '"\n'
-      '  fade = "' .. fog_color .. '"\n'
-      '  fogdensity = 32\n'
+      '' .. fog_color_line .. ''
+      '' .. fog_intensity_line .. ''
       '' .. next_level_line .. ''
       '' .. secret_level_line .. ''
       '}\n'
@@ -214,13 +228,6 @@ function ZDOOM_SPECIALS.do_special_stuff()
   end
 
   gui.wad_add_text_lump("MAPINFO", mapinfolump)
-
-  -- Attach Glaice's Epic Texture set
-  local garbage_bytes = {0}
-  gui.wad_add_binary_lump("TX_START",garbage_bytes)
-  gui.wad_merge_sections("games/doom/data/Oblige_Epic_Texture_Set_V620.wad")
-  gui.wad_add_binary_lump("TX_END",garbage_bytes)
-
 end
 
 OB_MODULES["zdoom_specials"] =
@@ -229,9 +236,9 @@ OB_MODULES["zdoom_specials"] =
 
   game = "doomish"
 
-  side = "right"
+  side = "left"
 
-  priority = 50
+  priority = 69
 
   engine = { zdoom=1, gzdoom=1, skulltag=1 }
 
@@ -241,5 +248,22 @@ OB_MODULES["zdoom_specials"] =
     all_done = ZDOOM_SPECIALS.do_special_stuff
   }
 
-  tooltip = "Warning: This module is fully incomplete but currently adds a small number of tech-themed custom textures as well as Sky Generator-based fog when enabled. Parameters will be included when more features are completed. It is preferable not to use this for now unless you want to participate in cutting edge testing."
+  tooltip = "This module adds new ZDoom-exclusive features such as fog. More ZDoom-specific features will be included soon."
+
+  options =
+  {
+    fog_generator = {
+      label = _("Fog Generator"),
+      choices = ZDOOM_SPECIALS.YES_NO
+      default = "no"
+      tooltip = "Generates fog colors based on Sky Generator input. Default black fog will be used if the Sky Generator is not used."
+    }
+
+    fog_intensity = {
+      label = _("Fog Intensity"),
+      choices = ZDOOM_SPECIALS.FOG_CHOICES
+      default = "no"
+      tooltip = "Determines thickness and intensity of fog, if the Fog Generator is enabled. Clear is recommended."
+    }
+  }
 }
