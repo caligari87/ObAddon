@@ -313,7 +313,7 @@ GLAICE_MATERIALS = {
   EGYPT04   = { t="EGYPT04",   f="SAND2" } --128x128
   EGYPT05   = { t="EGYPT05",   f="RROCK09" } --128x128
   EGYPT06   = { t="EGYPT06",   f="RROCK09" } --128x128
-  
+
   ESAND1   = { t="ESAND1",   f="SAND1" } -- Sand dune texture
   ESAND2   = { t="ESAND2",   f="SAND2" } -- Sand dune texture
 
