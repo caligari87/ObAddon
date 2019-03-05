@@ -81,6 +81,8 @@ function ZDOOM_SPECIALS.do_special_stuff()
       color = "9e 1b 0c"
     elseif skyname == "HELLISH_CLOUDS" then
       color = "d8 27 13"
+    elseif skyname == "HELL_CLOUDS" then
+      color = "d8 27 13"
     elseif string.match( skyname,"NEBULA" ) then
       color = "00 00 00"
     end
@@ -117,8 +119,14 @@ function ZDOOM_SPECIALS.do_special_stuff()
 
     if map_num < 10 then
       map_id = "MAP0" .. map_num
+      if map_num < 9 then
+        map_id_next = "MAP0" .. map_num + 1
+      else
+        map_id_next = "MAP10"
+      end
     else
       map_id = "MAP" .. map_num
+      map_id_next = "MAP" .. map_num + 1
     end
 
     if map_num <= 11 then
@@ -129,6 +137,12 @@ function ZDOOM_SPECIALS.do_special_stuff()
       sky_tex = "SKY3"
     end
 
+    local next_level_line = '  next = ' .. map_id_next .. '\n'
+
+    if map_num + 1 > level_count then
+      next_level_line = ''
+    end
+
     local mapinfo =
     {
       'map ' .. map_id .. ' lookup HUSTR_'.. map_num ..'\n'
@@ -137,6 +151,7 @@ function ZDOOM_SPECIALS.do_special_stuff()
       '  sky1 = "' .. sky_tex .. '"\n'
       '  fade = "' .. fog_color .. '"\n'
       '  fogdensity = 32\n'
+      '' .. next_level_line .. ''
       '}\n'
       --[['cluster 1\n'
       '{\n'
