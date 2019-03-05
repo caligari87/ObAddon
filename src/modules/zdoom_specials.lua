@@ -137,11 +137,23 @@ function ZDOOM_SPECIALS.do_special_stuff()
       sky_tex = "SKY3"
     end
 
-    local next_level_line = '  next = ' .. map_id_next .. '\n'
-
-    if map_num + 1 > level_count then
-      next_level_line = ''
+    if (map_num + 1 > level_count) or map_num == 30 then
+      map_id_next = '"EndTitle"'
     end
+
+    local secret_level_line
+
+    if map_num == 15 then
+      secret_level_line = '  secretnext = MAP31\n'
+    elseif map_num == 31 then
+      map_id_next = 16
+      secret_level_line = '  secretnext = MAP32\n'
+    elseif map_num == 32 then
+      map_id_next = 16
+      secret_level_line = ''
+    end
+
+    local next_level_line = '  next = ' .. map_id_next .. '\n'
 
     local mapinfo =
     {
@@ -152,6 +164,7 @@ function ZDOOM_SPECIALS.do_special_stuff()
       '  fade = "' .. fog_color .. '"\n'
       '  fogdensity = 32\n'
       '' .. next_level_line .. ''
+      '' .. secret_level_line .. ''
       '}\n'
       --[['cluster 1\n'
       '{\n'
