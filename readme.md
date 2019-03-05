@@ -59,6 +59,12 @@ Adds a HUGE library of prefabricates to decorate maps, a collection spanning mon
 
 * Stretched mode! Create extremely long, stringy levels that expand towards only one direction - forwards or backwards!
 
+* Streets mode! Create a map composed of largely outdoor street-like zones from which rooms (buildings!) will sprout from!
+
+* ZDoom fog! With the ZDoom Special Addons module, you can now get parametric fog (based on the Sky Generator inputs) within the levels!
+
+* Glaice's Epic Textures mod, now integrated from Oblige 6.x!
+
 * Toggle for turning prebuilt levels on or off.
   
 * Exposed parameters for the Sky Generator such as day/night and mountain settings. Play an entire generated WAD at night mood... for the mood.
@@ -77,7 +83,7 @@ Adds a HUGE library of prefabricates to decorate maps, a collection spanning mon
 
 * New vista types, such as bottomless pits (ZDoom only) and liquid oceans.
 
-* Buildings with windows that open into vistas.
+* Buildings with windows that open into vistas!
 
 * New control to select ceiling and floor sink styles: curved and flowy, or sharp and angular.
 
