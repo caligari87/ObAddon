@@ -1,10 +1,43 @@
+----------------------------------------------------------------
+--  MODULE: Glaice Materials
+----------------------------------------------------------------
+--
+--  Copyright (C) 2019 MsrSgtShooterPerson
+--  Copyright (C) 2015-2019 Glaice
+--
+--  This program is free software; you can redistribute it and/or
+--  modify it under the terms of the GNU General Public License
+--  as published by the Free Software Foundation; either version 2
+--  of the License, or (at your option) any later version.
+--
+--  This program is distributed in the hope that it will be useful,
+--  but WITHOUT ANY WARRANTY; without even the implied warranty of
+--  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+--  GNU General Public License for more details.
+--
+------------------------------------------------------------------
+
 GLAICE_MATERIALS = {
+
+  -- Organic
   ALTASH = { t="ALTASH", f="RROCK03" } --ASPHALT from Evilution
   ASH01  = { t="ASH01",  f="FLOOR6_2" } --ASHWALL2
   ASH02  = { t="ASH02",  f="RROCK03" } --ASHWALL3
   ASH03  = { t="ASH03",  f="FLAT10" } --ASHWALL4
   ASH04 = { t="ASH04", f="RROCK18" } --ASHWALL7 variant
+  GREEN01 = { t="GREEN01", f="RROCK20" } --Plutonia 2
+  GREEN02 = { t="GREEN02", f="RROCK20" } --Plutonia 2
+  GREEN03 = { t="GREEN03", f="RROCK20" } --Plutonia 2
+  VINES1 = { t="VINES1", f="RROCK16" }
+  VINES2 = { t="VINES2", f="RROCK16" }
+  VINES3 = { t="VINES3", f="RROCK16" }
+  VINES4 = { t="VINES4", f="RROCK16" }
+  ZIM1 = { t="ZIM1", f="RROCK20" } --ZIMMER1
+  ZIM2 = { t="ZIM2", f="RROCK20" } --ZIMMER2
+  ZIM3 = { t="ZIM3", f="RROCK18" } --ZIMMER3
+  ZIM4 = { t="ZIM4", f="RROCK18" } --ZIMMER4
 
+  -- Doors
   BIGDOOR8  = { t="BIGDOOR8",  f="CEIL5_2" } --Similar to BIGDOOR7
   BIGDOOR9  = { t="BIGDOOR9",  f="CEIL5_2" } --Similar to BIGDOOR7
   BIGDOOR0  = { t="BIGDOOR0",  f="CEIL5_2" } --Similar to BIGDOOR7
@@ -19,11 +52,8 @@ GLAICE_MATERIALS = {
   BIGDOORI  = { t="BIGDOORI",  f="CEIL5_2" }
   BIGDOORJ  = { t="BIGDOORJ",  f="CEIL5_2" }
 
-  BISHOP  = { t="BISHOP",  f="CEIL5_1" }
+  -- Bricks / Concrete
   BLIT01 = { t="BLIT01", f="RROCK10" } --BRICKLIT
-  BODIESB = { t="BODIESB", f="BODIESFL" } --Dark red AASHITTY/SP_FACE2
-  BODIESC = { t="BODIESC", f="FLAT5_6" } --Dark brown AASHITTY/SP_FACE2
-
   BRIKS01 = { t="BRIKS01", f="FLAT5_4" } --White bricks, 128x128
   BRIKS02 = { t="BRIKS02", f="FLOOR7_1" } --Brown bricks, 128x128
   BRIKS03 = { t="BRIKS03", f="RROCK09" } --Tan bricks, 128x128
@@ -55,6 +85,44 @@ GLAICE_MATERIALS = {
   BRIKS29 = { t="BRIKS29", f="FLAT1" }
   BRIKS30 = { t="BRIKS28", f="GSTN01" }
 
+  BST01  = { t="BST01",  f="RROCK11" } --BSTONE1
+  BST02  = { t="BST02",  f="RROCK12" } --BSTONE2
+  BST03  = { t="BST03",  f="RROCK12" } --BSTONE3
+
+  BRVINE  = { t="BRVINE",  f="FLOOR0_1" } --BROVINE
+
+  STON4 = { t="STON4", f="FLAT5_4" } --STONE4
+  STON6 = { t="STON6", f="RROCK09" } --STONE6
+  STON7 = { t="STON7", f="FLAT5_4" }
+
+  URBAN1 = { t="URBAN1", f="RROCK10" }
+  URBAN2 = { t="URBAN2", f="FLAT1" }
+  URBAN3 = { t="URBAN3", f="FLAT5_4" }
+  URBAN4 = { t="URBAN4", f="FLOOR0_1" }
+
+ -- Copies of the CEMENT# textures so they can be used normally.
+  CEM01  = { t="CEM01",  f="FLAT19" } --CEMENT7
+  CEM02  = { t="CEM02",  f="FLAT19" } --CEMENT9
+  CEM03  = { t="CEM03",  f="FLAT19" } --CEMENT1
+  CEM04  = { t="CEM04",  f="FLAT19" } --CEMENT5
+  CEM05  = { t="CEM05",  f="FLAT19" } --CEMENT2
+  CEM06  = { t="CEM06",  f="FLAT19" } --CEMENT3
+  CEM07  = { t="CEM07",  f="FLAT19" } --CEMENT6
+  CEM08  = { t="CEM08",  f="FLAT19" } --CEMENT4
+  CEM09  = { t="CEM09",  f="FLAT19" }
+
+   -- Not CEMENT type, just concrete type
+  CEM10  = { t="CEM10",  f="FLAT19" }
+  CEM11  = { t="CEM11",  f="FLOOR0_1" } --Tan
+
+  DRKCMT01  = { t="DRKCMT01",  f="RROCK03" } --Dark version of CEMENT1
+  DRKCMT02  = { t="DRKCMT02",  f="RROCK03" } --Dark version of CEMENT5
+  DRKCMT03  = { t="DRKCMT03",  f="RROCK03" } --Dark version of CEMENT3
+  DRKCMT04  = { t="DRKCMT04",  f="RROCK03" } --Dark version of CEMENT6
+  DRKCMT05  = { t="DRKCMT05",  f="RROCK03" } --Dark version of CEMENT7
+  DRKCMT06  = { t="DRKCMT06",  f="RROCK03" } --Dark version of CEMENT9
+
+  -- Bronze
   BRONZE5 =  { t="BRONZE5", f="MFLR8_2" }
   BRONZE6 =  { t="BRONZE6", f="MFLR8_2" }
   BRONZEG1 = { t="BRONZEG1", f="GMET07" }
@@ -66,28 +134,7 @@ GLAICE_MATERIALS = {
   BROWNGR3 = { t="BROWNGR3", f="FLOOR7_1" }
   BROWNGR4 = { t="BROWNGR4", f="FLOOR7_1" }
 
-  BRVINE  = { t="BRVINE",  f="FLOOR0_1" } --BROVINE
-
-  BST01  = { t="BST01",  f="RROCK11" } --BSTONE1
-  BST02  = { t="BST02",  f="RROCK12" } --BSTONE2
-  BST03  = { t="BST03",  f="RROCK12" } --BSTONE3
-
-  -- Copies of the CEMENT# textures so they can be used normally.
-
-  CEM01  = { t="CEM01",  f="FLAT19" } --CEMENT7
-  CEM02  = { t="CEM02",  f="FLAT19" } --CEMENT9
-  CEM03  = { t="CEM03",  f="FLAT19" } --CEMENT1
-  CEM04  = { t="CEM04",  f="FLAT19" } --CEMENT5
-  CEM05  = { t="CEM05",  f="FLAT19" } --CEMENT2
-  CEM06  = { t="CEM06",  f="FLAT19" } --CEMENT3
-  CEM07  = { t="CEM07",  f="FLAT19" } --CEMENT6
-  CEM08  = { t="CEM08",  f="FLAT19" } --CEMENT4
-  CEM09  = { t="CEM09",  f="FLAT19" }
-
-  -- Not CEMENT type, just concrete type
-  CEM10  = { t="CEM10",  f="FLAT19" }
-  CEM11  = { t="CEM11",  f="FLOOR0_1" } --Tan
-
+  -- Computers / Tech
   CGCANI00 = { t="CGCANI00", f="CEIL5_1" } --Animated
   CMPOHSO = { t="CMPOHSO", f="FLOOR7_1" } --COMPOHSO
   CMPTILE = { t="CMPTILE", f="CEIL5_1" }  --COMPTILE
@@ -123,37 +170,15 @@ GLAICE_MATERIALS = {
   CONSOLE7 = { t="CONSOLE7", f="CEIL5_1" }
   CONSOLE8 = { t="CONSOLE8", f="CEIL5_1" }
   CONSOLE9 = { t="CONSOLE9", f="CEIL5_1" }
-
-  CORPSES = { t="CORPSES", f="FLAT5_6" } --SLOPPY1
-
-  COLLITE1 = { t="COLLITE1", f="RROCK20" } --Green version of REDWALL1
-  COLLITE2 = { t="COLLITE2", f="RROCK01" } --Orange version of REDWALL1
-  COLLITE3 = { t="COLLITE3", f="CEIL4_2" } --Blue version of REDWALL1
-
-  CRAK01 = { t="CRAK01", f="RROCK01" } --CRACKLE2
-  CRAK02 = { t="CRAK02", f="RROCK02" } --CRACKLE4
-  DARKMET1 = { t="DARKMET1", f="DARKM01" }
-
-  DEATH1 = { t="DEATH1", f="FLAT5_4" }
-  DEATH2 = { t="DEATH2", f="FLAT5_4" }
-  DEATH3 = { t="DEATH3", f="FLAT5_4" }
   DECMP04A = { t="DECMP04A", f="CEIL5_1" } --Animated
+  GRAY6 = { t="GRAY6", f="FLAT18" }
+  GRAY8 = { t="GRAY8", f="FLAT18" }
+  GRAYBLU1 = { t="GRAYBLU1", f="FLAT14" }
+  NMONIA1 = { t="NMONIA1", f="FLAT1" } --Animated
+  SPACEW5  = { t="SPACEW5",  f="SLIME14" }
+  SPACEW6  = { t="SPACEW6",  f="SLIME15" }
 
-  DRKCMT01  = { t="DRKCMT01",  f="RROCK03" } --Dark version of CEMENT1
-  DRKCMT02  = { t="DRKCMT02",  f="RROCK03" } --Dark version of CEMENT5
-  DRKCMT03  = { t="DRKCMT03",  f="RROCK03" } --Dark version of CEMENT3
-  DRKCMT04  = { t="DRKCMT04",  f="RROCK03" } --Dark version of CEMENT6
-  DRKCMT05  = { t="DRKCMT05",  f="RROCK03" } --Dark version of CEMENT7
-  DRKCMT06  = { t="DRKCMT06",  f="RROCK03" } --Dark version of CEMENT9
-
-  EVILFACE = { t="EVILFACE", f="CEIL5_2" } --From Plutonia 2
-  EVILFAC2 = { t="EVILFAC2", f="FLAT5_4" }
-  EVILFAC3 = { t="EVILFAC3", f="FLAT5" }
-  EVILFAC4 = { t="EVILFAC4", f="BLACK0" }
-  EVILFAC5 = { t="EVILFAC5", f="BLACK0" }
-  EVILFAC6 = { t="EVILFAC6", f="GRATE4" }
-  EVILFAC7 = { t="EVILFAC7", f="GRATE4" }
-
+  -- Glass
   GLASS1 = { t="GLASS1", f="CEIL5_1" } --Red
   GLASS2 = { t="GLASS2", f="CEIL5_1" } --Blue
   GLASS3 = { t="GLASS3", f="CEIL5_1" } --Green
@@ -171,8 +196,8 @@ GLAICE_MATERIALS = {
   GLASS13 = { t="GLASS13", f="CEIL5_1" } --Red
   GLASS14 = { t="GLASS14", f="CEIL5_1" } --Blue
 
-  -- Gothic textures
-
+  -- Gothic
+  BISHOP  = { t="BISHOP",  f="CEIL5_1" }
   GOTH01 = { t="GOTH01", f="FLOOR7_1" } --Multicolor brown bricks
   GOTH02 = { t="GOTH02", f="GSTN03" } --Brown metallic bricks
   GOTH03 = { t="GOTH03", f="GSTN05" } --Brown metallic multicolored bricks
@@ -224,32 +249,10 @@ GLAICE_MATERIALS = {
   GOTH49 = { t="GOTH49", f="QFLAT05" }
   GOTH50 = { t="GOTH50", f="BLACK0" }
   GOTH51 = { t="GOTH51", f="BLACK0" }
-
-  GRAY6 = { t="GRAY6", f="FLAT18" }
-  GRAY8 = { t="GRAY8", f="FLAT18" }
-  GRAYBLU1 = { t="GRAYBLU1", f="FLAT14" }
-  GRAYMET1 = { t="GRAYMET1", f="FLAT23" }
-  GRAYMET2 = { t="GRAYMET2", f="SHINY04" }
-  GRAYMET3 = { t="GRAYMET3", f="SHINY04" }
-  GRAYMET4 = { t="GRAYMET4", f="SHINY04" }
-  GRAYMET5 = { t="GRAYMET5", f="SHINY04" }
-
-  GREEN01 = { t="GREEN01", f="RROCK20" } --Plutonia 2
-  GREEN02 = { t="GREEN02", f="RROCK20" } --Plutonia 2
-  GREEN03 = { t="GREEN03", f="RROCK20" } --Plutonia 2
-
-  GRNSTONE = { t="GRNSTONE", f="GRNRKF" }
-
-  GSTONE3 = { t="GSTONE3", f="FLOOR7_2" }
   GUY1 = { t="GUY1", f="FLAT1" }
-  HELMET1 = { t="HELMET1", f="CEIL5_1" }
-  HELWAL1 = { t="HELWAL1", f="RROCK03" } --Memento Mori 2
-  HELLROK1 = { t="HELLROK1", f="FLOOR6_1" }
-  HELWAL2 = { t="HELWAL2", f="FLOOR6_1" } --Plutonia 2
 
-  HEX01 = { t="HEX01", f="SHINY03" }
-
-  -- Marble textures --
+  -- Marble
+  GSTONE3 = { t="GSTONE3", f="FLOOR7_2" }
   ICONMRB1 = { t="ICONMRB1", f="FLOOR7_2" }
   MARBF01 = { t="MARBF01", f="FLOOR7_2" }
   MARBF02 = { t="MARBF02", f="FLOOR7_2" }
@@ -268,6 +271,20 @@ GLAICE_MATERIALS = {
   MBGRY = { t="MBGRY", f="FLOOR7_2" } --MARBGRAY
   MBGRY2 = { t="MBGRY2", f="FLOOR7_2" } --MARBFAC4
 
+  -- Metal / Rust
+  DARKMET1 = { t="DARKMET1", f="DARKM01" }
+  EVILFACE = { t="EVILFACE", f="CEIL5_2" } --From Plutonia 2
+  EVILFAC2 = { t="EVILFAC2", f="FLAT5_4" }
+  EVILFAC3 = { t="EVILFAC3", f="FLAT5" }
+  EVILFAC4 = { t="EVILFAC4", f="BLACK0" }
+  EVILFAC5 = { t="EVILFAC5", f="BLACK0" }
+  EVILFAC6 = { t="EVILFAC6", f="GRATE4" }
+  EVILFAC7 = { t="EVILFAC7", f="GRATE4" }
+  GRAYMET1 = { t="GRAYMET1", f="FLAT23" }
+  GRAYMET2 = { t="GRAYMET2", f="SHINY04" }
+  GRAYMET3 = { t="GRAYMET3", f="SHINY04" }
+  GRAYMET4 = { t="GRAYMET4", f="SHINY04" }
+  GRAYMET5 = { t="GRAYMET5", f="SHINY04" }
   METACOMP  = { t="METACOMP", f="CEIL5_2" }
   METAL8  = { t="METAL8", f="CEIL5_2" }
   METAL9  = { t="METAL9", f="CEIL5_2" }
@@ -289,34 +306,38 @@ GLAICE_MATERIALS = {
   MM207 = { t="MM207", f="G20" } --Green brick
   MM208 = { t="MM208", f="RROCK03" } --Brown and black stripe wall
 
-  NMONIA1 = { t="NMONIA1", f="FLAT1" } --Animated
+  -- Egypt
+  EGYPT01   = { t="EGYPT01",   f="FLAT1_1" } --64x64
+  EGYPT02   = { t="EGYPT02",   f="FLOOR7_1" } --128x128
+  EGYPT03   = { t="EGYPT03",   f="FLOOR7_1" } --64x128, doesn't tile horizontally that well
+  EGYPT04   = { t="EGYPT04",   f="SAND2" } --128x128
+  EGYPT05   = { t="EGYPT05",   f="RROCK09" } --128x128
+  EGYPT06   = { t="EGYPT06",   f="RROCK09" } --128x128
+  
+  ESAND1   = { t="ESAND1",   f="SAND1" } -- Sand dune texture
+  ESAND2   = { t="ESAND2",   f="SAND2" } -- Sand dune texture
 
-  PANBOOK2 = { t="PANBOOK2", f="RROCK09" }
+  EGDOOR1  = { t="EGDOOR1",  f="FLOOR7_1" } -- Door
 
-  -- Doom 2 panel stuff --
-  PANNY01   = { t="PANNY01", f="RROCK09" } --PANEL1
-  PANNY02   = { t="PANNY02",   f="RROCK09" } --PANEL2
-  PANNY03   = { t="PANNY03",   f="RROCK09" } --PANEL3
-  PANNY04   = { t="PANNY04",   f="RROCK09" } --PANEL4
-  PANNY05   = { t="PANNY05",   f="RROCK09" } --PANEL6
-  PANNY06   = { t="PANNY06",   f="RROCK09" } --PANEL7
-  PANNY07   = { t="PANNY07",   f="RROCK09" } --PANEL8
-  PANNY08   = { t="PANNY08",   f="RROCK09" } --PANEL9
-  PANNY09 = { t="PANNY09", f="RROCK09" } --PANCASE2
-  PANNYA = { t="PANNYA", f="RROCK09" } --TANROCK3
+  -- Egypt wall murals
+  MURAL3   = { t="MURAL3",   f="FLAT1_1" } --96x128
+  MURAL4   = { t="MURAL4",   f="FLAT1_1" } --96x128
+  MURAL5   = { t="MURAL5",   f="FLAT1_1" }
+  MURAL6   = { t="MURAL6",   f="FLAT1_1" }
+  MURAL7   = { t="MURAL7",   f="RROCK09" } --256x128
+  MURAL8   = { t="MURAL8",   f="RROCK03" } --256x128
+  MURAL9   = { t="MURAL9",   f="RROCK09" }
+  MURAL10  = { t="MURAL10",  f="RROCK09" }
+  MURAL11  = { t="MURAL11",  f="RROCK09" }
+  MURAL12  = { t="MURAL12",  f="RROCK09" }
+  MURAL13  = { t="MURAL13",  f="RROCK09" }
+  MURAL14  = { t="MURAL14",  f="RROCK09" }
+  MURAL15  = { t="MURAL15",  f="RROCK09" }
+  MURAL16  = { t="MURAL16",  f="RROCK09" }
 
-  PENTA1 = { t="PENTA1", f="RROCK03" }
-
-  PIPESV1 = { t="PIPESV1", f="FLAT1" }
-  PIPESV2 = { t="PIPESV2", f="FLAT5_5" }
-  PIPESV3 = { t="PIPESV3", f="RROCK20" }
-  PIPEDRK1 = { t="PIPEDRK1", f="RROCK03" }
-  PIPEWAL5 = { t="PIPEWAL5", f="RROCK03" }
-  RDLITE01 = { t="RDWAL01", f="FLOOR1_6" } --REDLITE
+  -- Rocks / Natural
+  GRNSTONE = { t="GRNSTONE", f="GRNRKF" }
   RDROK1 = { t="RDROK1", f="RROCK01" }
-  RDWAL01 = { t="RDWAL01", f="FLOOR1_6" } --REDWALL1
-
-  -- Rock walls --
   ROK01 = { t="ROK01", f="RROCK16" } --ROCK4
   ROK02 = { t="ROK02", f="RROCK09" } --ROCK5
   ROK03 = { t="ROK03", f="RROCK03" }
@@ -340,8 +361,18 @@ GLAICE_MATERIALS = {
   ROK21 = { t="ROK21", f="FLAT10" }
   ROK22 = { t="ROK22", f="RROCK18" }
   ROK23 = { t="ROK23", f="RROCK03" }
+  TNROK1 = { t="TNROK1", f="RROCK09" } --TANROCK4
+  TNROK2 = { t="TNROK2", f="RROCK03" } --TANROCK5
 
-  -- Silver textures --
+  -- Pipes
+  PIPESV1 = { t="PIPESV1", f="FLAT1" }
+  PIPESV2 = { t="PIPESV2", f="FLAT5_5" }
+  PIPESV3 = { t="PIPESV3", f="RROCK20" }
+  PIPEDRK1 = { t="PIPEDRK1", f="RROCK03" }
+  PIPEWAL5 = { t="PIPEWAL5", f="RROCK03" }
+
+  -- Silver / Shiny
+  HEX01 = { t="HEX01", f="SHINY03" }
   SHAWN4 = { t="SHAWN4", f="FLAT23" }
   SHAWN5 = { t="SHAWN5", f="FLAT23" }
   SHAWN01C = { t="SHAWN01C", f="FLAT23" }
@@ -359,7 +390,23 @@ GLAICE_MATERIALS = {
   SILVBLU1 = { t="SILVBLU1", f="FLAT23" }
   SILVCOMP = { t="SILVCOMP", f="FLAT23" }
 
-  -- Skin and hell stuff --
+  UACCRT1 = { t="UACCRT2", f="FLAT23" }
+  UACCRT2 = { t="UACCRT2", f="FLAT23" }
+
+  -- Skin and Hell
+  BODIESB = { t="BODIESB", f="BODIESFL" } --Dark red AASHITTY/SP_FACE2
+  BODIESC = { t="BODIESC", f="FLAT5_6" } --Dark brown AASHITTY/SP_FACE2
+  CORPSES = { t="CORPSES", f="FLAT5_6" } --SLOPPY1
+  CRAK01 = { t="CRAK01", f="RROCK01" } --CRACKLE2
+  CRAK02 = { t="CRAK02", f="RROCK02" } --CRACKLE4
+  DEATH1 = { t="DEATH1", f="FLAT5_4" }
+  DEATH2 = { t="DEATH2", f="FLAT5_4" }
+  DEATH3 = { t="DEATH3", f="FLAT5_4" }
+  HELMET1 = { t="HELMET1", f="CEIL5_1" }
+  HELWAL1 = { t="HELWAL1", f="RROCK03" } --Memento Mori 2
+  HELLROK1 = { t="HELLROK1", f="FLOOR6_1" }
+  HELWAL2 = { t="HELWAL2", f="FLOOR6_1" } --Plutonia 2
+  PENTA1 = { t="PENTA1", f="RROCK03" }
   SKIN3 = { t="SKIN3", f="SFLR6_4" }
   SKIN4 = { t="SKIN4", f="CRATOP2" }
   SKINHEAD = { t="SKINHEAD", f="SFLR6_4" }
@@ -375,9 +422,13 @@ GLAICE_MATERIALS = {
   SKULLS2 = { t="SKULLS2", f="FLAT5_6" }
   SKULLS3 = { t="SKULLS3", f="FLAT5_6" } --SKULWAL3
   SKULLS4 = { t="SKULLS4", f="FLAT5_6" } --SKULWALL
+  SPDUDE3 = { t="SPDUDE3", f="FLOOR7_2" } --SP_DUDE3
+  SPDUDE6 = { t="SPDUDE6", f="FLOOR7_2" } --SP_DUDE6
+  SPDUDE7 = { t="SPDUDE7", f="FLOOR5_4" } --SP_DUDE7
+  SPDUDE8 = { t="SPDUDE8", f="FLOOR5_4" } --SP_DUDE8
+  SPINE01 = { t="SPINE01", f="SFLR6_4" }
 
-  --Snow and ice textures
-
+  --Snow and Ice
   SNOW01 = { t="SNOW01", f="SNOW1" }
   SNOW02 = { t="SNOW02", f="SNOW1" }
   SNOW03 = { t="SNOW03", f="SNOW5" }
@@ -398,28 +449,9 @@ GLAICE_MATERIALS = {
   SNOWWAL3 = { t="SNOWWAL3", f="SHINY02" }
   SNOWWAL4 = { t="SNOWWAL4", f="SHINY01" }
 
-  --End Snow textures
-
-  SPACEW5  = { t="SPACEW5",  f="SLIME14" }
-  SPACEW6  = { t="SPACEW6",  f="SLIME15" }
-
-  SPDUDE3 = { t="SPDUDE3", f="FLOOR7_2" } --SP_DUDE3
-  SPDUDE6 = { t="SPDUDE6", f="FLOOR7_2" } --SP_DUDE6
-  SPDUDE7 = { t="SPDUDE7", f="FLOOR5_4" } --SP_DUDE7
-  SPDUDE8 = { t="SPDUDE8", f="FLOOR5_4" } --SP_DUDE8
-  SPINE01 = { t="SPINE01", f="SFLR6_4" }
-
+  -- Tekwall / Startan-types
   STARBR1 = { t="STARBR1", f="FLOOR0_2" }
   STARGRY1 = { t="STARGRY1", f="SHINY01" }
-
-  STON4 = { t="STON4", f="FLAT5_4" } --STONE4
-  STON6 = { t="STON6", f="RROCK09" } --STONE6
-  STON7 = { t="STON7", f="FLAT5_4" }
-  STUC01 = { t="STUC01", f="RROCK09" } --STUCCO
-
-  TNROK1 = { t="TNROK1", f="RROCK09" } --TANROCK4
-  TNROK2 = { t="TNROK2", f="RROCK03" } --TANROCK5
-
   TEKGRBLU = { t="TEKGRBLU", f="RROCK20" }
   TEKGRDR = { t="TEKGRDR", f="CEIL5_2" }
   TEKGRN01 = { t="TEKGRN01", f="RROCK20" } --RROCK20
@@ -432,22 +464,19 @@ GLAICE_MATERIALS = {
   TEKWALL9 = { t="TEKWALL9", f="TEK2" }
   TVSNOW01 = { t="TVSNOW01", f="CEIL5_1" } --Animated
 
+  -- Auxillary
+  COLLITE1 = { t="COLLITE1", f="RROCK20" } --Green version of REDWALL1
+  COLLITE2 = { t="COLLITE2", f="RROCK01" } --Orange version of REDWALL1
+  COLLITE3 = { t="COLLITE3", f="CEIL4_2" } --Blue version of REDWALL1
+  RDLITE01 = { t="RDWAL01", f="FLOOR1_6" } --REDLITE
+  RDWAL01 = { t="RDWAL01", f="FLOOR1_6" } --REDWALL1
+  SUPPORT4 = { t="SUPPORT4", f="FLAT23" }
+
+  -- Wood / Panel / Urban
+  PANBOOK2 = { t="PANBOOK2", f="RROCK09" }
+  STUC01 = { t="STUC01", f="RROCK09" } --STUCCO
   THATCH1 = { t="THATCH1", f="G03" }
   THATCH2 = { t="THATCH2", f="G02" }
-
-  UACCRT1 = { t="UACCRT2", f="FLAT23" }
-  UACCRT2 = { t="UACCRT2", f="FLAT23" }
-
-  URBAN1 = { t="URBAN1", f="RROCK10" }
-  URBAN2 = { t="URBAN2", f="FLAT1" }
-  URBAN3 = { t="URBAN3", f="FLAT5_4" }
-  URBAN4 = { t="URBAN4", f="FLOOR0_1" }
-
-  VINES1 = { t="VINES1", f="RROCK16" }
-  VINES2 = { t="VINES2", f="RROCK16" }
-  VINES3 = { t="VINES3", f="RROCK16" }
-  VINES4 = { t="VINES4", f="RROCK16" }
-
   WD01 = { t="WD01", f="FLAT5_2" } --WOOD8
   WD02 = { t="WD02", f="FLAT5_2" } --WOOD9
   WD03 = { t="WD03", f="FLAT5_2" }
@@ -459,13 +488,19 @@ GLAICE_MATERIALS = {
   WDMET02 = { t="WDMET02", f="CEIL5_2" } --WOODMET2
   WDMET03 = { t="WDMET03", f="CEIL5_2" }
 
-  ZIM1 = { t="ZIM1", f="RROCK20" } --ZIMMER1
-  ZIM2 = { t="ZIM2", f="RROCK20" } --ZIMMER2
-  ZIM3 = { t="ZIM3", f="RROCK18" } --ZIMMER3
-  ZIM4 = { t="ZIM4", f="RROCK18" } --ZIMMER4
+  -- Doom 2 Panels
+  PANNY01   = { t="PANNY01", f="RROCK09" } --PANEL1
+  PANNY02   = { t="PANNY02",   f="RROCK09" } --PANEL2
+  PANNY03   = { t="PANNY03",   f="RROCK09" } --PANEL3
+  PANNY04   = { t="PANNY04",   f="RROCK09" } --PANEL4
+  PANNY05   = { t="PANNY05",   f="RROCK09" } --PANEL6
+  PANNY06   = { t="PANNY06",   f="RROCK09" } --PANEL7
+  PANNY07   = { t="PANNY07",   f="RROCK09" } --PANEL8
+  PANNY08   = { t="PANNY08",   f="RROCK09" } --PANEL9
+  PANNY09 = { t="PANNY09", f="RROCK09" } --PANCASE2
+  PANNYA = { t="PANNYA", f="RROCK09" } --TANROCK3
 
-  -- Animated liquid walls --
-
+  -- Animated liquid walls
   GRYFALL1   = { t="GRYFALL1", f="SLUDGE01", sane=1 }
   MFALL1     = { t="MFALL1", f="MAGMA1", sane=1 }
   PFALL1     = { t="PFALL1", f="XWATER1", sane=1 }
@@ -488,8 +523,8 @@ GLAICE_MATERIALS = {
 
   BLACK0 = { t="ALTASH",  f="BLACK0" }
   BODIESFL = { f="BODIESFL", t="BODIESB" }
-  BRIK01 = { t="BRIKS06",  f="BRIK01" }
 
+  -- Carpet
   CARPET1 = { t="PANNYA",  f="CARPET1" }
   CARPET2 = { t="WOOD1",  f="CARPET2" }
   CARPET3 = { t="PANNYA",  f="CARPET3" }
@@ -505,6 +540,7 @@ GLAICE_MATERIALS = {
   GRNLITE2 = { f="GRNLITE2", t="TEKGRN01" }
   FFLAT01 = { t="GRAY8",  f="FFLAT01" }
 
+  -- Various Decayed Tech Flooring / etc
   FLOOR46D = { t="PIPEDRK1",  f="FLOOR46D" }
   FLOOR46E = { t="PIPEDRK1",  f="FLOOR46E" }
   FLAT15 = { t="FLAT15",  f="COMPRED" }
@@ -513,6 +549,17 @@ GLAICE_MATERIALS = {
   FLOOR51C = { f="FLOOR51C", t="METAL1" }
   FLOOR7_3 = { f="FLOOR7_3", t="GOTH11" }
 
+  -- Egypt
+  EG01  = { t="EGYPT03",  f="EG01" }
+  EG02  = { t="STONE6",  f="EG02" }
+  EG03  = { t="EGYPT03",  f="EG03" }
+  EG04  = { t="STONE6",  f="EG04" }
+  EG05  = { t="EGYPT04",  f="EG05" }
+  EG06  = { t="BRIKS06",  f="EG06" }
+  SAND1  = { t="ESAND1",  f="SAND1" }
+  SAND2  = { t="ESAND2",  f="SAND2" }
+
+  -- Gothic
   G01 = { t="GOTH34",  f="G01" } --Dark brown BRICK8-9 bricks
   G02 = { t="THATCH2",  f="G02" }  --Dark brown thatch pattern
   G03 = { t="THATCH1",  f="G03" }  --Brown thatch pattern
@@ -535,6 +582,7 @@ GLAICE_MATERIALS = {
   G20 = { t="GOTH10",  f="G20" } --Green bricks
   G21 = { t="GOTH44",  f="G21" } --Olive tiles
 
+  -- Glass
   GGLAS01 = { t="GLASS9",  f="GGLAS01" }
   GGLAS02 = { t="GLASS9",  f="GGLAS02" }
 
@@ -549,6 +597,7 @@ GLAICE_MATERIALS = {
   GLITE08 = { t="METL01",  f="GLITE08" } --White
   GLITE09 = { t="METL01",  f="GLITE09" } --Blue
 
+  -- Metal / Rust
   GMET01 = { t="METL02",  f="GMET01" }
   GMET02 = { t="METL02",  f="GMET02" } --Rivets
   GMET03 = { t="METL02",  f="GMET03" } --Less rivets
@@ -560,17 +609,23 @@ GLAICE_MATERIALS = {
   GRNRKF  = { f="GRNRKF", t="GRNSTONE" } --Green SP_ROCK1/MFLR8_3
   GRENFLOR = { f="GRENFLOR",  t="COMPGREN" }
 
+  -- Bricks
+  BRIK01 = { t="BRIKS06",  f="BRIK01" }
   GSTN01 = { t="GOTH07",  f="GSTN01" } --Gray
   GSTN02 = { t="GOTH07",  f="GSTN02" } --Dark gray
   GSTN03 = { t="GOTH02",  f="GSTN03" } --Dark brown bricks/bronze plates
   GSTN04 = { t="GOTH07",  f="GSTN04" } --Light brown
   GSTN05 = { t="GOTH07",  f="GSTN05" } --Multicolored brown
 
-  GWOD01 = { t="WOOD1",  f="GWOD01" }
-  GWOD02 = { t="WOOD1",  f="GWOD02" }
+  -- Wood flooring
+  GWOD01 = { t="WOOD1",  f="GWOD01" } -- Tiles poorly
+  GWOD02 = { t="WOOD1",  f="GWOD02" } -- Tiles poorly
   GWOD03 = { t="WD01",  f="GWOD03" }
   GWOD04 = { t="WD02",  f="GWOD04" }
+  WOODTIL = { t="WD03",  f="WOODTIL" }
+  WOODTI2 = { t="WD04",  f="WOODTI2" }
 
+  --
   GRATE1 = { t="METL01",  f="GRATE1" }
   GRATE2 = { t="METL01",  f="GRATE2" }
   GRATE3 = { t="METL01",  f="GRATE3" }
@@ -578,6 +633,7 @@ GLAICE_MATERIALS = {
   GRATE5 = { t="METL01",  f="GRATE5" }
   GRATE6 = { t="METL01",  f="GRATE6" }
 
+  -- Overhead Lights
   LITBL3F1 = { t="COMPSPAN", f="LITBL3F1" }
   LITBL3F2 = { t="COMPSPAN", f="LITBL3F2" }
   LITE4F1 = { t="SHAWN2", f="LITE4F1" }
@@ -590,9 +646,18 @@ GLAICE_MATERIALS = {
   LIGHTS2 = { t="METL01",  f="LIGHTS2" }
   LIGHTS3 = { t="METL01",  f="LIGHTS3" }
   LIGHTS4 = { t="METL01",  f="LIGHTS4" }
+  TLITE5_1 = { f="TLITE5_1", t="COMPSPAN" }
+  TLITE5_2 = { f="TLITE5_2", t="COMPSPAN" }
+  TLITE5_3 = { f="TLITE5_3", t="COMPSPAN" }
+  TLITE65B = { f="TLITE65B", t="COMPSPAN" }
+  TLITE65G = { f="TLITE65G", t="COMPSPAN" }
+  TLITE65O = { f="TLITE65O", t="COMPSPAN" }
+  TLITE65W = { f="TLITE65W", t="COMPSPAN" }
+  TLITE65Y = { f="TLITE65Y", t="COMPSPAN" }
 
   MEM01 = { t="HELMET2",  f="MEM01" }
 
+  -- Quake
   QFLAT01 = { t="BRIKS07",  f="QFLAT01" }
   QFLAT02 = { t="BRIKS07",  f="QFLAT02" }
   QFLAT03 = { t="BRIKS07",  f="QFLAT03" }
@@ -606,11 +671,13 @@ GLAICE_MATERIALS = {
   RROCK14Z  = { f="RROCK14Z", t="BRIKS09" } --Gray version
   RROCK21  = { f="RROCK21", t="TEKGRY01" }  --Grayscale version of RROCK20
 
+  -- Various shiny floors
   SHINY01 = { t="SHAWN2",  f="SHINY01" }
   SHINY02 = { t="SHAWN2",  f="SHINY02" }
   SHINY03 = { t="HEX01",  f="SHINY02" }
   SHINY04 = { t="SHAWN2",  f="SHINY04" }
 
+  -- Snow and Ice
   SNOW1 = { t="SNOW10",  f="SNOW1" } --Snow
   SNOW2 = { t="SNOW03",  f="SNOW2" } --Ice
   SNOW3 = { t="SNOW05",  f="SNOW3" } --Snowy stone
@@ -620,6 +687,7 @@ GLAICE_MATERIALS = {
   SNOW7 = { t="SNOW10",  f="SNOW7" } --Snow
   SNOW8 = { t="SNOW10",  f="SNOW8" } --Snow
 
+  -- Tech flats
   STARBR2F = { t="STARBR2", f="STARBR2F" }
   STARG1F = { t="STARG1", f="STARG1F" }
   STARGR1F = { t="STARG1", f="STARG1F" }
@@ -628,25 +696,14 @@ GLAICE_MATERIALS = {
   TEK2 = { t="TEKWALL9",  f="TEK2" }
   TEKFLR4 = { t="TEKWALL4",  f="TEKFLR4" }
 
+  -- Tiles
   TILES1 = { t="STARGRY1",  f="TILES1" }
   TILES2 = { t="BROWN1",  f="TILES2" }
   TILES3 = { t="STUC01",  f="TILES3" }
   TILES4 = { t="GRAY1",  f="TILES4" }
 
-  TLITE5_1 = { f="TLITE5_1", t="COMPSPAN" }
-  TLITE5_2 = { f="TLITE5_2", t="COMPSPAN" }
-  TLITE5_3 = { f="TLITE5_3", t="COMPSPAN" }
-  TLITE65B = { f="TLITE65B", t="COMPSPAN" }
-  TLITE65G = { f="TLITE65G", t="COMPSPAN" }
-  TLITE65O = { f="TLITE65O", t="COMPSPAN" }
-  TLITE65W = { f="TLITE65W", t="COMPSPAN" }
-  TLITE65Y = { f="TLITE65Y", t="COMPSPAN" }
-
   URB1 = { f="URB1", t="URBAN1" }
   URB2 = { f="URB2", t="URBAN2" }
-
-  WOODTIL = { t="WD03",  f="WOODTIL" }
-  WOODTI2 = { t="WD04",  f="WOODTI2" }
 
   -------------------------
   -- New animated floors --
