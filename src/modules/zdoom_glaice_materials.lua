@@ -1,4 +1,4 @@
-GLAICE.MATERIALS = {
+GLAICE_MATERIALS = {
   ALTASH = { t="ALTASH", f="RROCK03" } --ASPHALT from Evilution
   ASH01  = { t="ASH01",  f="FLOOR6_2" } --ASHWALL2
   ASH02  = { t="ASH02",  f="RROCK03" } --ASHWALL3

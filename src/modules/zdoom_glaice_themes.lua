@@ -1,4 +1,4 @@
-GLAICE.THEMES =
+GLAICE_THEMES =
 {
   tech_GrayMet =
   {
