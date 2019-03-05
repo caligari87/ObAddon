@@ -632,6 +632,8 @@ GLAICE_MATERIALS = {
   GRATE4 = { t="METL01",  f="GRATE4" }
   GRATE5 = { t="METL01",  f="GRATE5" }
   GRATE6 = { t="METL01",  f="GRATE6" }
+  GRATE7 = { t="METL01",  f="GRATE7" }
+  GRATE8 = { t="METL01",  f="GRATE8" }
 
   -- Overhead Lights
   LITBL3F1 = { t="COMPSPAN", f="LITBL3F1" }

@@ -10,11 +10,11 @@ GLAICE_THEMES =
       GRAY6 = 50
       GRAY8 = 50
 
-      GRAYMET1 = 15
-      GRAYMET2 = 15
-      GRAYMET3 = 15
-      GRAYMET4 = 15
-      GRAYMET5 = 15
+      GRAYMET1 = 20
+      GRAYMET2 = 20
+      GRAYMET3 = 20
+      GRAYMET4 = 20
+      GRAYMET5 = 20
 
       METAL8 = 25
       METAL9 = 25
@@ -24,12 +24,29 @@ GLAICE_THEMES =
       SHAWN4 = 33
       SHAWN5 = 33
       HEX01 = 33
+
+      DARKMET1 = 30
+      DARKM01 = 30
+
+      STARBR1 = 30
+      STARGRY1 = 30
+
+      TEKGRBLU = 30
+      TEKGRN01 = 30
+      TEKGRY01 = 30
+      TEKSHAW = 30
+
+      TKWALL2 = 15
+      TEKWALL2 = 15
+      TEKWALL7 = 15
+      TEKWALL8 = 15
+      TEKWALL9 = 15
     }
 
     floors =
     {
-      FLOOR4_8 = 50
-      FLOOR5_1 = 50
+      FLOOR4_8 = 25
+      FLOOR5_1 = 25
       FLOOR5_3 = 30
       FLOOR0_3 = 30
       FLOOR5_1 = 25
@@ -46,6 +63,25 @@ GLAICE_THEMES =
       FLOOR1_1 = 8
       FLOOR0_5 = 5
       FLAT5 = 5
+
+      GRATE1 = 100
+      GRATE2 = 100
+      GRATE3 = 100
+      GRATE4 = 100
+      GRATE5 = 100
+      GRATE6 = 100
+      GRATE7 = 100
+      GRATE8 = 100
+
+      DARKF01 = 75
+      DARKF02 = 75
+      DARKF03 = 75
+      DARKM01 = 75
+
+      SHINY01 = 75
+      SHINY02 = 75
+      SHINY03 = 75
+      SHINY04 = 75
     }
 
     ceilings =
@@ -126,6 +162,36 @@ GLAICE_THEMES =
       FLAT10   = 10
       FLOOR6_2 = 10
       MFLR8_2  = 10
+
+      G01 = 40
+      G02 = 40
+      G03 = 40
+      G04 = 40
+      G05 = 40
+      G06 = 40
+      G07 = 40
+      G08 = 40
+      G09 = 40
+      G10 = 40
+      G11 = 40
+      G12 = 40
+      G13 = 40
+      G14 = 40
+      G15 = 40
+      G16 = 40
+      G17 = 40
+      G18 = 40
+      G19 = 40
+      G20 = 40
+      G21 = 40
+
+      GMET01 = 90 
+      GMET02 = 90
+      GMET03 = 90
+      GMET04 = 90
+      GMET05 = 90
+      GMET06 = 90
+      GMET07 = 90
     }
 
     ceilings =
@@ -183,14 +249,14 @@ GLAICE_THEMES =
 
     floors =
     {
-      FLAT1_1 = 50
+      FLAT1_1 = 25
       FLAT1_2 = 30
       FLAT1   = 30
       FLAT5   = 15
-      FLAT5_1 = 50
+      FLAT5_1 = 25
       FLAT5_2 = 30
       FLAT5_4 = 20
-      FLAT5_5 = 50
+      FLAT5_5 = 25
       FLAT8   = 30
 
       FLOOR0_1 = 20
@@ -199,6 +265,21 @@ GLAICE_THEMES =
       FLOOR4_6 = 20
       FLOOR5_3 = 25
       FLOOR5_4 = 10
+
+      TILES1 = 80
+      TILES2 = 80
+      TILES3 = 80
+      TILES4 = 80
+
+      GMET04 = 80
+      GMET05 = 80
+
+      CARPET1 = 50
+      CARPET2 = 50
+      CARPET3 = 50
+      CARPET4 = 50
+
+      FFLAT1 = 80
     }
 
     ceilings =
