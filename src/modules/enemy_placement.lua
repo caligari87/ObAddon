@@ -88,7 +88,7 @@ HARDER_ENEMY.MONSTERS =
     id = 3006
     r = 16
     h = 56
-    level = 1.5
+    level = 3
     prob = 25
     health = 100
     damage = 1.7
@@ -295,7 +295,7 @@ HARDER_ENEMY.MONSTERS =
     species = "baron"
     replaces = "mancubus"
     replace_prob = 25
-    room_size = "medium"
+    room_size = "any" --medium
     infight_damage = 36
   }
 
