@@ -1338,8 +1338,6 @@ SPROUT_DIRECT_THIN_EMERGENCY =
   new_room =
   {
     conn = { x=1, y=2, w=2, dir=8 }
-
-    symmetry = { x=1, y=3, w=2, dir=8 }
   }
 }
 
@@ -1415,8 +1413,6 @@ SPROUT_DIRECT_FROM_DIAGONAL =
   new_room =
   {
     conn = { x=3, y=4, w=2, dir=8 }
-
-    symmetry = { x=3, y=4, w=2, dir=8 }
   }
 }
 
@@ -4522,7 +4518,7 @@ SERRATED_LIQUID_SMOOTHER3 =
   }
 }
 
---[[SERRATED_AREA_TRANSITION_SMOOTHER =
+SERRATED_AREA_TRANSITION_SMOOTHER =
 {
   pass = "smoother"
   prob = 10000
@@ -4538,7 +4534,7 @@ SERRATED_LIQUID_SMOOTHER3 =
   {
     ".1"
   }
-}]]
+}
 
 FAILED_SQUEEZE_ENTRANCE_SMOOTHER =
 {
