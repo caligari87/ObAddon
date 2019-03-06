@@ -2393,31 +2393,15 @@ namelib.NAMES =
         Tomb = 15
         Vault = 10
 
+        Firmament = 10
+        Gallows = 8
+
         -- military
         Base = 10
         Battlefront = 10
         Containment = 10
         Facility = 10
         Outpost = 10
-
-        -- not actually places
-        Belief = 10
-        Ceremony = 10
-        Cult = 10
-        Feast = 10
-        Firmament = 10
-        Gallows = 8
-        Harvest = 10
-        Knowledge = 10
-        Labours = 10
-        Life = 8
-        Lore = 10
-        March = 10
-        Portrait = 10
-        Remembrance = 10
-        Ritual = 10
-        Slaughter = 10
-        Watch = 10
 
         -- times
         Day = 10
@@ -2432,6 +2416,12 @@ namelib.NAMES =
         Millenium = 10
         Century = 10
         Decade = 10
+
+        -- seasons/weather
+        Rain = 15
+        Winter = 15
+        Storms = 15
+        Summer = 8
       }
 
       -- these are quite abstract
@@ -2440,6 +2430,26 @@ namelib.NAMES =
         -- gibs
         Blood = 20
         Slime = 5
+
+        -- words transfered from places
+        -- because these aren't places at all
+        -- needs to be categorized
+        Belief = 10
+        Ceremony = 10
+        Cult = 10
+        Feast = 10
+        Harvest = 10
+        Icons = 10
+        Idolatry = 10
+        Knowledge = 10
+        Labours = 10
+        Life = 8
+        Lore = 10
+        March = 10
+        Portrait = 10
+        Remembrance = 10
+        Ritual = 10
+        Watch = 10
 
         -- emotions/feels
         Apathy = 5
@@ -2511,12 +2521,29 @@ namelib.NAMES =
         Duty = 10
         Orders = 10
         Siege = 10
-        Skirmish = 10
+        Skirmishes = 10
         War = 10
+
+        -- uhh
+        Bondage = 10
+        Inflation = 10
+        Voraciousness = 10
+        Transmogrification = 10
+
+        -- acts of evil
+        Pillage = 10
+        Plunder = 10
+        Raid = 10
+        Ransack = 10
+        Slaughter = 10
       }
 
       e =
       {
+        -- DOOOOM!!!
+        Cyberdemon = 15
+        Mastermind = 15
+
         -- religion
         Antichrist = 10
         Beast = 20
@@ -2542,14 +2569,13 @@ namelib.NAMES =
         Cerberus = 10
         Cyclops = 5
         Damned = 15
-        ["Deep Ones"] = 10
+        Dragon = 10
         Drowned = 10
         Exile = 10
         Giants = 10
         Keepers = 15
         Necromancer = 20
         Oracle = 15
-        ["Old Ones"] = 10
         Reaper = 10
         Shaper = 10
         Trolls = 7
@@ -2559,22 +2585,69 @@ namelib.NAMES =
         Wight = 7
         Zombies = 10
 
+        -- Lovecraft
+        Elders = 10
+        ["Deep Ones"] = 10
+        ["Old Ones"] = 10
+        Tentacles = 10
+
+        -- predatious animals
+        --(or generally infamous animals)
+        Cobra = 8
+        Crow = 8
+        Deathstalkers = 10
+        Eagle = 8
+        Hawk = 8
+        Lion = 7
+        Piranha = 8
+        Raven = 8
+        Scorpion = 8
+        Snake = 8
+        Spider = 8
+        Wolf = 8
+
         -- general adjectives
         Dead = 20
         Doomed = 25
         Fearless = 20
         Hunted = 20
+        Lost = 20
         Tormented = 20
 
         -- war
+        Despoiler = 10
         Destroyer = 10
         Executioner = 10
+        Exterminator = 10
         Horde = 10
+        Iconoclast = 10
         Invaders = 10
         Legion = 10
+        Master = 10
         Overlord = 20
         Warmonger = 10
+        Ravager = 10
         Swarm = 10
+
+        -- people who do bad and/or kill people
+        Assassin = 10
+        Bandits = 8
+        Brigands = 10
+        Brutes = 10
+        Malefactor = 10
+        Marauder = 10
+        Murderer = 10
+        Outlaw = 8
+        Thief = 8
+        Transgressor = 10
+        Vandals = 8
+
+        -- people with normal jobs
+        -- but sound bad in certain contexts
+        Butcher = 10
+        Hunter = 10
+        Soldiers = 10
+        Slayer = 10
       }
 
       c =
