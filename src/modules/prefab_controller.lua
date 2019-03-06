@@ -37,10 +37,6 @@ function PREFAB_CONTROL.setup(self)
   end
 end
 
-function PREFAB_CONTROL.modify_prob()
-
-end
-
 ----------------------------------------------------------------
 
 OB_MODULES["prefab_control"] =
@@ -55,7 +51,6 @@ OB_MODULES["prefab_control"] =
   hooks =
   {
     setup = PREFAB_CONTROL.setup
-    get_levels = PREFAB_CONTROL.modify_prob
   }
 
   options =

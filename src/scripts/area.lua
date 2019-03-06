@@ -2568,13 +2568,37 @@ local test_textures =
 --  dump_facades()
 end
 
+-- Prefab control auto-detail override
+function Autodetail(w, h)
+  gui.printf("-- Auto Detail Module Report: --\n")
+  local map_area = w * h
 
+  if PARAM.autodetail == "on" then
+    if map_area < 1600 then
+      PREFABS["Wall_plain"].use_prob = PREFABS["Wall_plain"].prob
+      PREFABS["Wall_plain_diag"].use_prob = PREFABS["Wall_plain_diag"].prob
+      gui.printf("Map is normal. No toning down required.\n")
+    elseif map_area >= 1600 and map_area < 3600 then
+      PREFABS["Wall_plain"].use_prob = 1000
+      PREFABS["Wall_plain_diag"].use_prob = 1000
+      gui.printf("Map is huge. Toning down wall fabs.\n")
+    elseif map_area >= 3600 then
+      PREFABS["Wall_plain"].use_prob = 5000
+      PREFABS["Wall_plain_diag"].use_prob = 5000
+      gui.printf("Map is immense! Toning down wall fabs greatly!\n")
+    else
+      gui.printf("Could not read map size!!!\n")
+    end
+  end
+end
 
 function Area_create_rooms()
 
   gui.printf("\n--==| Creating Rooms |==--\n\n")
 
   gui.printf("Map size target: %dx%d seeds\n", LEVEL.map_W, LEVEL.map_H)
+
+  Autodetail(LEVEL.map_W, LEVEL.map_H)
 
   Grower_create_rooms()
 

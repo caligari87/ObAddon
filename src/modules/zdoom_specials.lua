@@ -244,7 +244,7 @@ function ZDOOM_SPECIALS.do_special_stuff()
     -- resolve proper episodic sky texture assignments
     if map_num <= 11 then
       sky_tex = "SKY1"
-    elseif map_num > 11 map_num <= 20 then
+    elseif map_num > 11 and map_num <= 20 then
       sky_tex = "SKY2"
     elseif map_num > 20 then
       sky_tex = "SKY3"
