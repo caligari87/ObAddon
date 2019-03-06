@@ -79,6 +79,15 @@ UI_ARCH.YES_NO =
   "no",  _("No"),
 }
 
+UI_ARCH.STREETS_CHOICES =
+{
+  "100urban", _("100% of Urban Maps"),
+  "75urban",  _("75% of Urban Maps"),
+  "50urban",  _("50% of Urban Maps"),
+  "50",       _("50% of all Levels"),
+  "all",      _("All Levels"),
+}
+
 OB_MODULES["ui_arch"] =
 {
   label = _("Architecture")
@@ -100,7 +109,7 @@ OB_MODULES["ui_arch"] =
     {
       name = "streets_mode",
       label=_("Streets Mode"),
-      choices=UI_ARCH.YES_NO,
+      choices=UI_ARCH.STREETS_CHOICES,
       default = "no"
       tooltip = "[EXPERIMENTAL FEATURE] Allows Oblige to create large street-like outdoor rooms."
       gap = 1

@@ -1203,7 +1203,7 @@ gui.debugf("new room %s : env = %s : parent = %s\n", R.name, tostring(info.env),
   end
 
   -- streets you gotta have
-  if OB_CONFIG.streets_mode == "yes" then
+  if LEVEL.has_streets then
     if R.is_start then
       R.is_street = true
     end
