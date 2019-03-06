@@ -18,6 +18,12 @@
 
 ZDOOM_SPECIALS = { }
 
+ZDOOM_SPECIALS.YES_NO =
+{
+  "yes", _("Yes"),
+  "no",  _("No"),
+}
+
 ZDOOM_SPECIALS.FOG_GEN_CHOICES =
 {
   "per_sky_gen",    _("Per Sky Generator"),
@@ -182,7 +188,7 @@ function ZDOOM_SPECIALS.do_special_stuff()
       fog_intensity = "128"
     elseif PARAM.fog_intensity == "foggy" then
       fog_intensity = "255"
-    elseif PARAM.fog_intensity == "intense" then
+    elseif PARAM.fog_intensity == "dense" then
       fog_intensity = "368"
     elseif PARAM.fog_intensity == "mixed" then
       fog_intensity = "" .. rand.irange(48,368)
@@ -190,15 +196,23 @@ function ZDOOM_SPECIALS.do_special_stuff()
 
     local fog_intensity_line = '  fogdensity = ' .. fog_intensity .. '\n'
 
+    -- fog forced to outdoors only
     if PARAM.fog_env == "outdoor" then
       fog_color_line = '  OutsideFog  = "' .. fog_color .. '"\n'
       fog_intensity_line = '  outsidefogdensity = ' .. fog_intensity .. '\n'
     end
 
+    -- if fog tints sky, based on ZDoom GL specs
+    if PARAM.fog_affects_sky == "yes" then
+      fog_intensity_line = fog_intensity_line .. '  skyfog = ' .. fog_intensity + 16 .. '\n'
+    end
+
+    -- no fog in MAPINFO at all if the fog generator is off
     if PARAM.fog_generator == "no" then
       fog_color_line = ""
       fog_intensity_line = ""
     end
+
 
     local mapinfo =
     {
@@ -305,6 +319,14 @@ OB_MODULES["zdoom_specials"] =
       choices = ZDOOM_SPECIALS.FOG_DENSITY_CHOICES
       default = "no"
       tooltip = "Determines thickness and intensity of fog, if the Fog Generator is enabled. Clear is recommended."
+    }
+
+    fog_affects_sky = {
+      label = _("Sky Fog"),
+      priority = 7
+      choices = ZDOOM_SPECIALS.YES_NO
+      default = "yes"
+      tooltip = "Tints the sky texture with the fog color, intensity is based on the Fog Intensity selection."
     }
   }
 }
