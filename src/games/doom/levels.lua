@@ -185,6 +185,7 @@ function DOOM.get_levels()
     if LEV.prebuilt then
       LEV.name_class = LEV.prebuilt.name_class or "BOSS"
     end
+
     -- procedural gotcha management code
 
     -- Prebuilts are to exist over procedural gotchas
