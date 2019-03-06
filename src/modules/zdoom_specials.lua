@@ -133,6 +133,99 @@ function ZDOOM_SPECIALS.do_special_stuff()
     fog_color = mapinfo_tab.fog_color
     map_num = mapinfo_tab.map_num
 
+    local function list_doom2_music()
+      local doom2_music_list = {}
+      doom2_music_list[1] = "$MUSIC_RUNNIN"
+      doom2_music_list[2] = "$MUSIC_STALKS"
+      doom2_music_list[3] = "$MUSIC_COUNTD"
+      doom2_music_list[4] = "$MUSIC_BETWEE"
+      doom2_music_list[5] = "$MUSIC_DOOM"
+      doom2_music_list[6] = "$MUSIC_THE_DA"
+      doom2_music_list[7] = "$MUSIC_SHAWN"
+      doom2_music_list[8] = "$MUSIC_DDTBLU"
+      doom2_music_list[9] = "$MUSIC_IN_CIT"
+      doom2_music_list[10] = "$MUSIC_DEAD"
+      doom2_music_list[11] = "$MUSIC_STLKS2"
+      doom2_music_list[12] = "$MUSIC_THEDA2"
+      doom2_music_list[13] = "$MUSIC_DOOM2"
+      doom2_music_list[14] = "$MUSIC_DDTBL2"
+      doom2_music_list[15] = "$MUSIC_RUNNI2"
+      doom2_music_list[16] = "$MUSIC_DEAD2"
+      doom2_music_list[17] = "$MUSIC_STLKS3"
+      doom2_music_list[18] = "$MUSIC_ROMERO"
+      doom2_music_list[19] = "$MUSIC_SHAWN2"
+      doom2_music_list[20] = "$MUSIC_MESSAG"
+      doom2_music_list[21] = "$MUSIC_COUNT2"
+      doom2_music_list[22] = "$MUSIC_DDTBL3"
+      doom2_music_list[23] = "$MUSIC_AMPIE"
+      doom2_music_list[24] = "$MUSIC_THEDA3"
+      doom2_music_list[25] = "$MUSIC_ADRIAN"
+      doom2_music_list[26] = "$MUSIC_MESSG2"
+      doom2_music_list[27] = "$MUSIC_ROMER2"
+      doom2_music_list[28] = "$MUSIC_TENSE"
+      doom2_music_list[29] = "$MUSIC_SHAWN3"
+      doom2_music_list[30] = "$MUSIC_OPENIN"
+      doom2_music_list[31] = "$MUSIC_EVIL"
+      doom2_music_list[32] = "$MUSIC_ULTIMA"
+      return doom2_music_list
+    end
+
+    local function list_doom1_music()
+      local doom1_music_list = {}
+      doom1_music_list[1] = "$MUSIC_E1M1"
+      doom1_music_list[2] = "$MUSIC_E1M2"
+      doom1_music_list[3] = "$MUSIC_E1M3"
+      doom1_music_list[4] = "$MUSIC_E1M4"
+      doom1_music_list[5] = "$MUSIC_E1M5"
+      doom1_music_list[6] = "$MUSIC_E1M6"
+      doom1_music_list[7] = "$MUSIC_E1M7"
+      doom1_music_list[8] = "$MUSIC_E1M8"
+      doom1_music_list[9] = "$MUSIC_E1M9"
+      doom1_music_list[10] = "$MUSIC_E2M1"
+      doom1_music_list[11] = "$MUSIC_E2M2"
+      doom1_music_list[12] = "$MUSIC_E2M3"
+      doom1_music_list[13] = "$MUSIC_E2M4"
+      doom1_music_list[14] = "$MUSIC_E2M5"
+      doom1_music_list[15] = "$MUSIC_E2M6"
+      doom1_music_list[16] = "$MUSIC_E2M7"
+      doom1_music_list[17] = "$MUSIC_E2M8"
+      doom1_music_list[18] = "$MUSIC_E2M9"
+      doom1_music_list[19] = "$MUSIC_E3M1"
+      doom1_music_list[20] = "$MUSIC_E3M2"
+      doom1_music_list[21] = "$MUSIC_E3M3"
+      doom1_music_list[22] = "$MUSIC_E3M4"
+      doom1_music_list[24] = "$MUSIC_E3M5"
+      doom1_music_list[25] = "$MUSIC_E3M6"
+      doom1_music_list[26] = "$MUSIC_E3M7"
+      doom1_music_list[27] = "$MUSIC_E3M8"
+      doom1_music_list[28] = "$MUSIC_E3M9"
+      doom1_music_list[29] = "$MUSIC_E3M4"
+      doom1_music_list[30] = "$MUSIC_E3M2"
+      doom1_music_list[31] = "$MUSIC_E3M3"
+      doom1_music_list[32] = "$MUSIC_E1M5"
+      return doom1_music_list
+    end
+
+    local music_list
+
+    if OB_CONFIG.game == "doom1" then
+      music_list = list_doom1_music()
+    else
+      music_list = list_doom2_music()
+    end
+
+    local music_line = ''
+
+    if PARAM.mapinfo_music_shuffler == "yes" then
+      music_list = rand.shuffle(music_list)
+    end
+
+    if music_list then
+      music_line = '  Music = ' .. music_list[map_num] .. '\n'
+    else
+      music_line = ''
+    end
+
     -- resolve map MAPINFO linkages
     if map_num < 10 then
       map_id = "MAP0" .. map_num
@@ -224,6 +317,7 @@ function ZDOOM_SPECIALS.do_special_stuff()
       '' .. fog_intensity_line .. ''
       '' .. next_level_line .. ''
       '' .. secret_level_line .. ''
+      '' .. music_line .. ''
       '}\n'
       --[['cluster 1\n'
       '{\n'
@@ -327,6 +421,15 @@ OB_MODULES["zdoom_specials"] =
       choices = ZDOOM_SPECIALS.YES_NO
       default = "yes"
       tooltip = "Tints the sky texture with the fog color, intensity is based on the Fog Intensity selection."
+      gap = 1
+    }
+
+    mapinfo_music_shuffler = {
+      label = _("Shuffle Music"),
+      priority = 6
+      choices = ZDOOM_SPECIALS.YES_NO
+      default = "no"
+      tooltip = "Shuffles music in the MAPINFO lump. Oblige's vanilla music shuffler uses a BEX lump and is therefore ignored when the ZDoom Addons module is active."
     }
   }
 }

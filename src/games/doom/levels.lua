@@ -262,7 +262,7 @@ function DOOM.get_levels()
         LEV.has_streets = true
       end
     end
-    
+
     -- handling for stretched mode (should not support streets)
     if not LEV.prebuilt or not LEV.has_streets then
       if OB_CONFIG.stretched == "all" then

@@ -2322,103 +2322,103 @@ function ULTDOOM.get_levels()
         LEV.name_class = LEV.prebuilt.name_class or "BOSS"
       end
 
-      if MAP_NUM == 1 or map == 3 then
-        LEV.demo_lump = string.format("DEMO%d", ep_index)
-      end
-    end -- for map
+      -- procedural gotcha management code
 
-    -- procedural gotcha management code
+      -- Prebuilts are to exist over procedural gotchas
+      -- this means procedural gotchas will not override
+      -- Icon of Sin for example if prebuilts are still on
+      if not LEV.prebuilt then
 
-    -- Prebuilts are to exist over procedural gotchas
-    -- this means procedural gotchas will not override
-    -- Icon of Sin for example if prebuilts are still on
-    if not LEV.prebuilt then
-
-      --handling for the Final Only option
-      if OB_CONFIG.procedural_gotchas == "final" then
-        if OB_CONFIG.length == "single" then
-          if map == 1 then LEV.is_procedural_gotcha = true end
-        elseif OB_CONFIG.length == "few" then
-          if map == 4 then LEV.is_procedural_gotcha = true end
-        elseif OB_CONFIG.length == "episode" then
-          if map == 11 then LEV.is_procedural_gotcha = true end
-        elseif OB_CONFIG.length == "game" then
-          if map == 30 then LEV.is_procedural_gotcha = true end
+        --handling for the Final Only option
+        if OB_CONFIG.procedural_gotchas == "final" then
+          if OB_CONFIG.length == "single" then
+            if map == 1 then LEV.is_procedural_gotcha = true end
+          elseif OB_CONFIG.length == "few" then
+            if map == 4 then LEV.is_procedural_gotcha = true end
+          elseif OB_CONFIG.length == "episode" then
+            if map == 11 then LEV.is_procedural_gotcha = true end
+          elseif OB_CONFIG.length == "game" then
+            if map == 30 then LEV.is_procedural_gotcha = true end
+          end
         end
-      end
 
-      --every 10 maps
-      if OB_CONFIG.procedural_gotchas == "epi" then
-        if map == 11 or map == 21 or map == 30 then
+        --every 10 maps
+        if OB_CONFIG.procedural_gotchas == "epi" then
+          if map == 11 or map == 21 or map == 30 then
+            LEV.is_procedural_gotcha = true
+          end
+        end
+
+        --5% of maps after map 4
+        if OB_CONFIG.procedural_gotchas == "5p" then
+          if map > 4 then
+            if rand.odds(5) then LEV.is_procedural_gotcha = true end
+          end
+        end
+
+        -- 10% of maps after map 4
+        if OB_CONFIG.procedural_gotchas == "10p" then
+          if map > 4 then
+            if rand.odds(10) then LEV.is_procedural_gotcha = true end
+          end
+        end
+
+        -- for masochists... or debug testing
+        if OB_CONFIG.procedural_gotchas == "all" then
           LEV.is_procedural_gotcha = true
         end
       end
 
-      --5% of maps after map 4
-      if OB_CONFIG.procedural_gotchas == "5p" then
-        if map > 4 then
-          if rand.odds(5) then LEV.is_procedural_gotcha = true end
+      -- handling for street mode
+      if not LEV.is_procedural_gotcha or not LEV.prebuilt then
+        if OB_CONFIG.streets_mode == "100urban" then
+          if LEV.theme_name == "urban" then
+            LEV.has_streets = true
+          end
+        elseif OB_CONFIG.streets_mode == "75urban" then
+          if LEV.theme_name == "urban" and rand.odds(75) then
+            LEV.has_streets = true
+          end
+        elseif OB_CONFIG.streets_mode == "50urban" then
+          if LEV.theme_name == "urban" and rand.odds(50) then
+            LEV.has_streets = true
+          end
+        elseif OB_CONFIG.streets_mode == "25urban" then
+          if LEV.theme_name == "urban" and rand.odds(25) then
+            LEV.has_streets = true
+          end
+        elseif OB_CONFIG.streets_mode == "75" and rand.odds(75) then
+          LEV.has_streets = true
+        elseif OB_CONFIG.streets_mode == "50" and rand.odds(50) then
+          LEV.has_streets = true
+        elseif OB_CONFIG.streets_mode == "25" and rand.odds(25) then
+          LEV.has_streets = true
+        elseif OB_CONFIG.streets_mode == "all" then
+          LEV.has_streets = true
         end
       end
 
-      -- 10% of maps after map 4
-      if OB_CONFIG.procedural_gotchas == "10p" then
-        if map > 4 then
-          if rand.odds(10) then LEV.is_procedural_gotcha = true end
+      -- handling for stretched mode (should not support streets)
+      if not LEV.prebuilt or not LEV.has_streets then
+        if OB_CONFIG.stretched == "all" then
+          LEV.is_stretched = true
+        elseif OB_CONFIG.stretched == "75" and rand.odds(75) then
+          LEV.is_stretched = true
+        elseif OB_CONFIG.stretched == "50" and rand.odds(50) then
+          LEV.is_stretched = true
+        elseif OB_CONFIG.stretched == "33" and rand.odds(33) then
+          LEV.is_stretched = true
+        elseif OB_CONFIG.stretched == "12" and rand.odds(12) then
+          LEV.is_stretched = true
+        elseif OB_CONFIG.stretched == "5" and rand.odds(5) then
+          LEV.is_stretched = true
         end
       end
 
-      -- for masochists... or debug testing
-      if OB_CONFIG.procedural_gotchas == "all" then
-        LEV.is_procedural_gotcha = true
+      if MAP_NUM == 1 or map == 3 then
+        LEV.demo_lump = string.format("DEMO%d", ep_index)
       end
-    end
-
-    -- handling for street mode
-    if not LEV.is_procedural_gotcha or not LEV.prebuilt then
-      if OB_CONFIG.streets_mode == "100urban" then
-        if LEV.theme_name == "urban" then
-          LEV.has_streets = true
-        end
-      elseif OB_CONFIG.streets_mode == "75urban" then
-        if LEV.theme_name == "urban" and rand.odds(75) then
-          LEV.has_streets = true
-        end
-      elseif OB_CONFIG.streets_mode == "50urban" then
-        if LEV.theme_name == "urban" and rand.odds(50) then
-          LEV.has_streets = true
-        end
-      elseif OB_CONFIG.streets_mode == "25urban" then
-        if LEV.theme_name == "urban" and rand.odds(25) then
-          LEV.has_streets = true
-        end
-      elseif OB_CONFIG.streets_mode == "75" and rand.odds(75) then
-        LEV.has_streets = true
-      elseif OB_CONFIG.streets_mode == "50" and rand.odds(50) then
-        LEV.has_streets = true
-      elseif OB_CONFIG.streets_mode == "25" and rand.odds(25) then
-        LEV.has_streets = true
-      elseif OB_CONFIG.streets_mode == "all" then
-        LEV.has_streets = true
-      end
-    end
-    
-    -- handling for stretched mode (should not support streets)
-    if not LEV.prebuilt or not LEV.has_streets then
-      if OB_CONFIG.stretched == "all" then
-        LEV.is_stretched = true
-      elseif OB_CONFIG.stretched == "75" and rand.odds(75) then
-        LEV.is_stretched = true
-      elseif OB_CONFIG.stretched == "50" and rand.odds(50) then
-        LEV.is_stretched = true
-      elseif OB_CONFIG.stretched == "33" and rand.odds(33) then
-        LEV.is_stretched = true
-      elseif OB_CONFIG.stretched == "12" and rand.odds(12) then
-        LEV.is_stretched = true
-      elseif OB_CONFIG.stretched == "5" and rand.odds(5) then
-        LEV.is_stretched = true
-      end
-    end
+    end -- for map
 
     -- set "dist_to_end" value
     if MAP_NUM >= 9 then
