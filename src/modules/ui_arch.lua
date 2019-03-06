@@ -56,7 +56,7 @@ UI_ARCH.ZDOOM_SKYBOX_CHOICES =
   "disable", _("Disable"),
 }
 
-UI_ARCH.PREBUILT_CHOICES =
+UI_ARCH.YES_NO =
 {
   "yes", _("Yes"),
   "no",  _("No"),
@@ -110,17 +110,24 @@ OB_MODULES["ui_arch"] =
 
     {
       name = "stretched",
-      label=_("Stretched Mode"),
-      choices=UI_ARCH.STRETCHED_CHOICES
+      label = _("Stretched Mode"),
+      choices = UI_ARCH.STRETCHED_CHOICES
       default = "no"
       tooltip = "Causes the width of the map to compress, creating a long, thin map layout. The height is still influenced by the prefered level size above."
     }
     {
       name = "streets_mode",
-      label=_("Streets Mode"),
-      choices=UI_ARCH.STREETS_CHOICES,
+      label = _("Streets Mode"),
+      choices = UI_ARCH.STREETS_CHOICES,
       default = "no"
       tooltip = "[EXPERIMENTAL FEATURE] Allows Oblige to create large street-like outdoor rooms."
+    }
+    {
+      name = "linear_mode"
+      label = _("Linear Mode"),
+      choices = UI_ARCH.YES_NO,
+      default = "no"
+      tooltip = "Creates linear levels, where rooms are connecting along a linear string."
       gap = 1
     }
 
@@ -135,7 +142,7 @@ OB_MODULES["ui_arch"] =
     {
       name="prebuilt_levels"
       label=_("Prebuilt Levels")
-      choices=UI_ARCH.PREBUILT_CHOICES
+      choices=UI_ARCH.YES_NO
       tooltip = "Enable or disable prebuilt maps. When disabled, are replaced with generated maps instead."
     }
     {

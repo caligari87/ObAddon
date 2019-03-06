@@ -3149,8 +3149,18 @@ end
     end
 
     -- exit rooms must have only a single entrance
-    -- MSSP: unless it's a Procedural Gotcha map
-    if pass == "sprout" and R.is_exit and R:prelim_conn_num() >= 1 and not LEVEL.is_procedural_gotcha then
+    if pass == "sprout" and R.is_exit and R:prelim_conn_num() >= 1 then
+      break;
+    end
+
+    -- Linear Mode
+    if OB_CONFIG.linear_mode == "yes" and pass == "sprout"
+    and R:prelim_conn_num() >= 2 then
+      break;
+    end
+
+    if OB_CONFIG.linear_mode == "yes" and pass == "sprout"
+    and R:prelim_conn_num() >= 1 and R.is_start then
       break;
     end
 
@@ -3200,8 +3210,8 @@ function Grower_grammatical_room(R, pass, is_emergency)
       apply_num = rand.irange(6,12)
     end
 
-    if R.is_exit and R.is_procedural_gotcha then
-      apply_num = rand.irange(1,3)
+    if OB_CONFIG.linear_mode == "yes" then
+      apply_num = 1
     end
 
   elseif pass == "decorate" then
