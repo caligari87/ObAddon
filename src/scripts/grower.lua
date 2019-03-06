@@ -898,7 +898,8 @@ function Grower_calc_rule_probs()
         end
       end
 
-      if shape_is_absurd == true and level_is_absurd == true then
+      if shape_is_absurd == true and level_is_absurd == true and
+      not string.match(rule.name,"JOINER") and not string.match(rule.name,"EMERGENCY") then
         rule.use_prob = rule.use_prob * 1000000
         print(rule.name .. " is now ABSURDIFIED! WOOO!!!\n")
         shape_is_absurd = false
@@ -3398,6 +3399,20 @@ function Grower_grow_room(R)
     if is_too_small(R) then
       Grower_kill_room(R)
       return
+    end
+  end
+
+  -- Linear Mode, kill mirrored sprouts of symmetric rooms
+  gui.printf("-- Linear mode culling --\n\n")
+  if OB_CONFIG.linear_mode == "yes" then
+    each R2 in LEVEL.rooms do
+      if R2.grow_parent == R.grow_parent and R2 != R then
+        gui.printf("OUCH OOF OWWIE ROOM_" .. R.id .. " JUST DIED, IT'S HORRIBLE!\n")
+        gui.printf("OH THE HUMANITY!!!!! FORGIVE ROOM_" .. R.id .. "\n")
+        gui.printf("FOR HE WAS STRICKEN, DEVIATING FROM THE LINEAR PATH!!!\n\n")
+        Grower_kill_room(R)
+        return
+      end
     end
   end
 

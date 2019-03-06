@@ -1323,7 +1323,7 @@ SPROUT_DIRECT_THIN_EMERGENCY =
 {
   emergency = true
 
-  prob = 175
+  prob = 250
 
   env = "!cave"
 
@@ -1338,6 +1338,8 @@ SPROUT_DIRECT_THIN_EMERGENCY =
   new_room =
   {
     conn = { x=1, y=2, w=2, dir=8 }
+
+    symmetry = { x=1, y=3, w=2, dir=8 }
   }
 }
 
@@ -1360,6 +1362,8 @@ SPROUT_DIRECT_THROUGH_2X_LIQUID =
   new_room =
   {
     conn = { x=1, y=3, w=2, dir=8 }
+
+    symmetry = { x=1, y=5, w=2, dir=8 }
   }
 }
 
@@ -1381,6 +1385,38 @@ SPROUT_DIRECT_THROUGH_1X_LIQUID =
   new_room =
   {
     conn = { x=1, y=2, w=2, dir=8 }
+
+    symmetry = { x=1, y=3, w=2, dir=8 }
+  }
+}
+
+
+SPROUT_DIRECT_FROM_DIAGONAL =
+{
+  emergency = true
+
+  prob = 250
+
+  structure =
+  {
+    "x...","x.RR"
+    "x...","x.RR"
+    "x...","x/1/"
+    "1%..","11/."
+    "11xx","11xx"
+  }
+
+  diagonals =
+  {
+    ".1","1."
+    "1.","1."
+  }
+
+  new_room =
+  {
+    conn = { x=3, y=4, w=2, dir=8 }
+
+    symmetry = { x=3, y=4, w=2, dir=8 }
   }
 }
 
@@ -2572,7 +2608,7 @@ GROW_COLONNADE_PARTHENON_LAKE =
 
 -- MSSP's liquid tiles. [MSSPLIQUID]
 
---[[SPROUT_LIQUID_GUTTER_SIDE =
+GROW_LIQUID_GUTTER_SIDE =
 {
   prob = 30
 
@@ -2583,9 +2619,9 @@ GROW_COLONNADE_PARTHENON_LAKE =
     ".11","111"
     ".1x","11x"
   }
-}--]]
+}
 
-SPROUT_LIQUID_GUTTER_CORNER =
+GROW_LIQUID_GUTTER_CORNER =
 {
   prob = 30
 
@@ -3370,7 +3406,7 @@ GROW_CAGE_Z =
   cage_mode = "fancy"
 }
 
-SPROUT_CAGE_SIMPLE_CORNER =
+GROW_CAGE_SIMPLE_CORNER =
 {
   prob = 6
 
@@ -3391,7 +3427,7 @@ SPROUT_CAGE_SIMPLE_CORNER =
   cage_mode = "fancy"
 }
 
-SPROUT_CAGE_SIMPLE_REVERSED =
+GROW_CAGE_SIMPLE_REVERSED =
 {
   prob = 6
 
@@ -4718,7 +4754,7 @@ SPROUT_WIDE_SPACE_PLATFORM_TINY =
   }
 }
 
---[[SPROUT_WIDE_SPACE_CATWALK_STRAIGHT =
+--[[GROW_WIDE_SPACE_CATWALK_STRAIGHT =
 {
   prob = 3500
 
@@ -4867,9 +4903,9 @@ SPROUT_WIDE_SPACE_CATWALK_CAPPER_4X =
 
   structure =
   {
-    "111.","111."
-    "111.","122."
-    "122.","122."
+    "111!","111!"
+    "111!","122!"
+    "122!","122!"
   }
 }
 
@@ -7295,7 +7331,7 @@ DECORATE_LIQUID_POOL_PLACE_3x6 =
   }
 }
 
---[[DECORATE_LIQUID_POOL_EXTEND_STRAIGHT =
+DECORATE_LIQUID_POOL_EXTEND_STRAIGHT =
 {
   prob = 100
 
@@ -7306,7 +7342,7 @@ DECORATE_LIQUID_POOL_PLACE_3x6 =
     "~111","~~~1"
     "1111","1111"
   }
-}]]
+}
 
 DECORATE_LIQUID_POOL_EXTEND_CURVED =
 {
