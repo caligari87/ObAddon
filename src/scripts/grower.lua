@@ -3380,9 +3380,21 @@ function Grower_grow_room(R)
 
   local function is_too_small(R)
     -- never prune a root room (including the exit)
-    if R.is_root then return false end
 
-    return R:calc_walk_vol() < 8
+    -- MSSP: Unless we're in linear mode, where
+    -- the map must continue growing elsewhere
+    -- or in Procedural Gotchas where the arena
+    -- is much too small.
+    if OB_CONFIG.linear_mode != "yes" or 
+    not LEVEL.is_procedural_gotcha then
+      if R.is_root then return false end
+    end
+
+    if LEVEL.is_procedural_gotcha then
+      return R:calc_walk_vol() < 24
+    else
+      return R:calc_walk_vol() < 8
+    end
   end
 
 
