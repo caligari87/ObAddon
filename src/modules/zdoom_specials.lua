@@ -221,7 +221,7 @@ function ZDOOM_SPECIALS.do_special_stuff()
     end
 
     if music_list then
-      music_line = '  Music = ' .. music_list[map_num] .. '\n'
+      music_line = '  Music = "' .. music_list[map_num] .. '"\n'
     else
       music_line = ''
     end
