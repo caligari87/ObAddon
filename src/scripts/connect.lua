@@ -274,6 +274,20 @@ function Connect_directly(P)
   C.A1 = assert(E1.S.area)
   C.A2 = assert(E2.S.area)
 
+  -- error check from MSSP
+  if C.A1.room != C.R1 or C.A2.room != C.R2 then
+    if C.R1 then
+      print(table.tostr(C.R1))
+    else
+      print("Hof")
+    end
+    if C.R2 then
+      print(table.tostr(C.R2))
+    else
+      print("Haf")
+    end
+  end
+
   assert(C.A1.room == C.R1)
   assert(C.A2.room == C.R2)
 

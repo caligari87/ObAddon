@@ -1399,7 +1399,7 @@ SPROUT_DIRECT_FROM_DIAGONAL =
   {
     "x...","x.RR"
     "x...","x.RR"
-    "x...","x/1/"
+    "x...","x/11"
     "1%..","11/."
     "11xx","11xx"
   }
@@ -1412,7 +1412,7 @@ SPROUT_DIRECT_FROM_DIAGONAL =
 
   new_room =
   {
-    conn = { x=3, y=4, w=2, dir=8 }
+    conn = { x=3, y=3, w=2, dir=8 }
   }
 }
 
