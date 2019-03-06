@@ -191,7 +191,7 @@ function ZDOOM_SPECIALS.do_special_stuff()
     local fog_intensity_line = '  fogdensity = ' .. fog_intensity .. '\n'
 
     if PARAM.fog_env == "outdoor" then
-      fog_color_line = '  OutsideFog  = ' .. fog_color .. '\n'
+      fog_color_line = '  OutsideFog  = "' .. fog_color .. '"\n'
       fog_intensity_line = '  outsidefogdensity = ' .. fog_intensity .. '\n'
     end
 
