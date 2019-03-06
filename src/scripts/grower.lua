@@ -3160,7 +3160,9 @@ end
       break;
     end
 
-    if OB_CONFIG.linear_mode == "yes" and pass == "sprout"
+    if (OB_CONFIG.linear_mode == "yes"
+    or PARAM["linear_start"] == "yes")
+    and pass == "sprout"
     and R:prelim_conn_num() >= 1 and R.is_start then
       break;
     end
@@ -3385,7 +3387,7 @@ function Grower_grow_room(R)
     -- the map must continue growing elsewhere
     -- or in Procedural Gotchas where the arena
     -- is much too small.
-    if OB_CONFIG.linear_mode != "yes" or 
+    if OB_CONFIG.linear_mode != "yes" or
     not LEVEL.is_procedural_gotcha then
       if R.is_root then return false end
     end
@@ -3424,6 +3426,17 @@ function Grower_grow_room(R)
         gui.printf("FOR HE WAS STRICKEN, DEVIATING FROM THE LINEAR PATH!!!\n\n")
         Grower_kill_room(R)
         return
+      end
+    end
+  end
+
+  if PARAM["linear_start"] == "yes" then
+    each R2 in LEVEL.rooms do
+      if R.grow_parent == R2.grow_parent and R2 != R then
+        if R2.is_start then
+          Grower_kill_room(R)
+          return
+        end
       end
     end
   end

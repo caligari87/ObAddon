@@ -122,6 +122,14 @@ OB_MODULES["misc"] =
     }
 
     {
+      name="linear_start"
+      label=_("Linear Start")
+      choices=MISC_STUFF.YES_NO
+      tooltip=_("Stops start rooms from having more than one external room connection. Can help reduce being overwhelmed by attacks from multiple directions when multiple neighboring rooms connect into the start room.")
+      gap=1
+    }
+
+    {
       name="live_minimap"
       label=_("Live Growth Minimap")
       choices=MISC_STUFF.LIVEMAP_CHOICES
