@@ -96,6 +96,8 @@ function ZDOOM_SPECIALS.do_special_stuff()
       color = "d8 27 13"
     elseif skyname == "HELL_CLOUDS" then
       color = "d8 27 13"
+    elseif skyname == "STARS" then
+      color = "00 00 00"
     else
       color = "00 00 00"
     end
@@ -242,7 +244,7 @@ function ZDOOM_SPECIALS.do_special_stuff()
     -- resolve proper episodic sky texture assignments
     if map_num <= 11 then
       sky_tex = "SKY1"
-    elseif map_num <= 20 then
+    elseif map_num > 11 map_num <= 20 then
       sky_tex = "SKY2"
     elseif map_num > 20 then
       sky_tex = "SKY3"
@@ -351,7 +353,7 @@ function ZDOOM_SPECIALS.do_special_stuff()
     if PARAM.fog_generator == "per_sky_gen" then
       if i <= 11 then
         info.fog_color = pick_sky_color_from_skygen_map(PARAM.episode_sky_color,1)
-      elseif i <= 20 then
+      elseif i > 11 and i <= 20 then
         info.fog_color = pick_sky_color_from_skygen_map(PARAM.episode_sky_color,2)
       elseif i > 20 then
         info.fog_color = pick_sky_color_from_skygen_map(PARAM.episode_sky_color,3)
