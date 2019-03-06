@@ -18,18 +18,26 @@
 
 ZDOOM_SPECIALS = { }
 
-ZDOOM_SPECIALS.YES_NO =
+ZDOOM_SPECIALS.FOG_GEN_CHOICES =
 {
-  "yes", _("Yes"),
-  "no",  _("No"),
+  "per_sky_gen",    _("Per Sky Generator"),
+  "random", _("Random"),
+  "no",     _("No"),
 }
 
-ZDOOM_SPECIALS.FOG_CHOICES =
+ZDOOM_SPECIALS.FOG_ENV_CHOICES =
+{
+  "all",     _("All"),
+  "outdoor", _("Outdoors Only"),
+}
+
+ZDOOM_SPECIALS.FOG_DENSITY_CHOICES =
 {
   "clear", _("Clear"),
   "misty", _("Misty"),
   "foggy", _("Foggy"),
-  "intense", _("Intense"),
+  "dense", _("Dense"),
+  "mixed", _("Mix It Up"),
 }
 
 function ZDOOM_SPECIALS.setup(self)
@@ -82,7 +90,7 @@ function ZDOOM_SPECIALS.do_special_stuff()
       color = "d8 27 13"
     elseif skyname == "HELL_CLOUDS" then
       color = "d8 27 13"
-    elseif string.match( skyname,"NEBULA" ) then
+    else
       color = "00 00 00"
     end
 
@@ -95,6 +103,17 @@ function ZDOOM_SPECIALS.do_special_stuff()
   end
 
 
+  local function pick_random_fog_color()
+    local function give_random_hex()
+      return rand.pick({'0','1','2','3','4','5','6','8','9','a','b','c','d','e','f'})
+    end
+    local octet1 = give_random_hex() .. give_random_hex()
+    local octet2 = give_random_hex() .. give_random_hex()
+    local octet3 = give_random_hex() .. give_random_hex()
+    return octet1 .. " " .. octet2 .. " " .. octet3
+  end
+
+
   --[[if PARAM.light_fixtures then
     for name,def in ipairs(PARAM.light_fixtures) do
       print("\n" .. table.tostr(def))
@@ -102,17 +121,13 @@ function ZDOOM_SPECIALS.do_special_stuff()
   end]]
 
 
-  if PARAM.episode_sky_color then
-    fog_color = pick_sky_color_from_skygen_map(PARAM.episode_sky_color,1)
-  else
-    fog_color = "00 00 00"
-  end
-
   local function add_mapinfo(mapinfo_tab)
+
     -- mapinfo table requires color for fog and map number
     fog_color = mapinfo_tab.fog_color
     map_num = mapinfo_tab.map_num
 
+    -- resolve map MAPINFO linkages
     if map_num < 10 then
       map_id = "MAP0" .. map_num
       if map_num < 9 then
@@ -125,6 +140,7 @@ function ZDOOM_SPECIALS.do_special_stuff()
       map_id_next = "MAP" .. map_num + 1
     end
 
+    -- resolve proper episodic sky texture assignments
     if map_num <= 11 then
       sky_tex = "SKY1"
     elseif map_num <= 20 then
@@ -133,12 +149,14 @@ function ZDOOM_SPECIALS.do_special_stuff()
       sky_tex = "SKY3"
     end
 
+    -- produce endtitle screen end of game
     if (map_num + 1 > level_count) or map_num == 30 then
       map_id_next = '"EndTitle"'
     end
 
     local secret_level_line
 
+    -- establish secret map MAPINFO links
     if map_num == 15 then
       secret_level_line = '  secretnext = MAP31\n'
     elseif map_num == 31 then
@@ -157,6 +175,7 @@ function ZDOOM_SPECIALS.do_special_stuff()
 
     local fog_intensity = "48"
 
+    -- resolve fog intensity
     if PARAM.fog_intensity == "clear" then
       fog_intensity = "48"
     elseif PARAM.fog_intensity == "misty" then
@@ -165,9 +184,16 @@ function ZDOOM_SPECIALS.do_special_stuff()
       fog_intensity = "255"
     elseif PARAM.fog_intensity == "intense" then
       fog_intensity = "368"
+    elseif PARAM.fog_intensity == "mixed" then
+      fog_intensity = "" .. rand.irange(48,368)
     end
 
     local fog_intensity_line = '  fogdensity = ' .. fog_intensity .. '\n'
+
+    if PARAM.fog_env == "outdoor" then
+      fog_color_line = '  OutsideFog  = ' .. fog_color .. '\n'
+      fog_intensity_line = '  outsidefogdensity = ' .. fog_intensity .. '\n'
+    end
 
     if PARAM.fog_generator == "no" then
       fog_color_line = ""
@@ -206,6 +232,7 @@ function ZDOOM_SPECIALS.do_special_stuff()
     return mapinfo
   end
 
+  -- collect lines for MAPINFO lump
   local mapinfolump = {}
   for i=1, #GAME.levels do
 
@@ -213,12 +240,16 @@ function ZDOOM_SPECIALS.do_special_stuff()
 
     info.map_num = i
 
-    if i <= 11 then
-      info.fog_color = pick_sky_color_from_skygen_map(PARAM.episode_sky_color,1)
-    elseif i <= 20 then
-      info.fog_color = pick_sky_color_from_skygen_map(PARAM.episode_sky_color,2)
-    elseif i > 20 then
-      info.fog_color = pick_sky_color_from_skygen_map(PARAM.episode_sky_color,3)
+    if PARAM.fog_generator == "per_sky_gen" then
+      if i <= 11 then
+        info.fog_color = pick_sky_color_from_skygen_map(PARAM.episode_sky_color,1)
+      elseif i <= 20 then
+        info.fog_color = pick_sky_color_from_skygen_map(PARAM.episode_sky_color,2)
+      elseif i > 20 then
+        info.fog_color = pick_sky_color_from_skygen_map(PARAM.episode_sky_color,3)
+      end
+    elseif PARAM.fog_generator == "random" then
+      info.fog_color = pick_random_fog_color()
     end
 
     local mapinfo_lines = add_mapinfo(info)
@@ -254,14 +285,24 @@ OB_MODULES["zdoom_specials"] =
   {
     fog_generator = {
       label = _("Fog Generator"),
-      choices = ZDOOM_SPECIALS.YES_NO
+      priority = 10
+      choices = ZDOOM_SPECIALS.FOG_GEN_CHOICES
       default = "no"
-      tooltip = "Generates fog colors based on Sky Generator input. Default black fog will be used if the Sky Generator is not used."
+      tooltip = "Generates fog colors based on the Sky Generator or generate completely randomly."
+    }
+
+    fog_env = {
+      label = _("Fog Environment"),
+      priority = 9
+      choices = ZDOOM_SPECIALS.FOG_ENV_CHOICES
+      default = "all"
+      tooltip = "Limits fog to outdoors (sectors with exposed sky ceilings) or allows for all."
     }
 
     fog_intensity = {
       label = _("Fog Intensity"),
-      choices = ZDOOM_SPECIALS.FOG_CHOICES
+      priority = 8
+      choices = ZDOOM_SPECIALS.FOG_DENSITY_CHOICES
       default = "no"
       tooltip = "Determines thickness and intensity of fog, if the Fog Generator is enabled. Clear is recommended."
     }
