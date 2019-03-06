@@ -917,9 +917,14 @@ function Grower_decide_extents()
   -- decides how much of the map we can use for growing rooms.
   --
 
-  if OB_CONFIG.stretched != "yes" then
+  if LEVEL.is_stretched then
     assert(LEVEL.map_W < SEED_W)
     assert(LEVEL.map_H < SEED_H)
+    SEED_H = SEED_H_STRETCHED
+  else
+    assert(LEVEL.map_W < SEED_W)
+    assert(LEVEL.map_H < SEED_H)
+    SEED_H = SEED_H_UNSTRETCHED
   end
 
   local map_x1 = 1 + int((SEED_W - LEVEL.map_W) / 2)
@@ -3191,6 +3196,14 @@ function Grower_grammatical_room(R, pass, is_emergency)
       pass = R.grow_pass .. "_sprout"
     end
 
+    if R.is_street then
+      apply_num = rand.irange(6,12)
+    end
+
+    if R.is_exit and R.is_procedural_gotcha then
+      apply_num = rand.irange(1,3)
+    end
+
   elseif pass == "decorate" then
     -- TODO: review this (and stop_prob), see what works best
     apply_num = sel(R.is_big, 10, 6)
@@ -3223,7 +3236,7 @@ function Grower_grammatical_room(R, pass, is_emergency)
   --
   if LEVEL.is_procedural_gotcha then
     if pass == "grow" or pass == "sprout" then
-      apply_num = 75
+      apply_num = 50
     elseif pass == "decorate" then
       apply_num = 15
     end

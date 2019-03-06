@@ -204,24 +204,25 @@ function Episode_determine_map_sizes()
   each LEV in GAME.levels do
     local W, H = Level_determine_map_size(LEV)
 
-    if OB_CONFIG.stretched == "yes" then
+    if LEV.is_stretched then
       H = 7
-      SEED_H = 16
+      SEED_H = SEED_H_STRETCHED
       W = int(W * 2)
-      LEV.is_stretched = true
+    else
+      SEED_H = SEED_H_UNSTRETCHED
     end
 
     if LEV.is_procedural_gotcha == true then
       W = 30
       H = 30
-      if OB_CONFIG.stretched == "yes" then
+      if LEV.is_stretched then
         W = 60
         H = 7
       end
     end
 
     -- sanity check
-    if OB_CONFIG.stretched != "yes" then
+    if not LEV.is_stretched then
       assert(W + 4 <= SEED_W)
       assert(H + 4 <= SEED_H)
     end

@@ -123,6 +123,10 @@ SEED_SIZE = 128
 SEED_W    = 112 --112
 SEED_H    = 112 --112
 
+-- total map size for stretched mode
+SEED_H_STRETCHED = 16
+SEED_H_UNSTRETCHED = 112
+
 -- highest possible Z coord (and lowest, when negative)
 EXTREME_H = 32000
 

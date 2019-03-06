@@ -4,6 +4,7 @@
 --
 --  Copyright (C) 2006-2017 Andrew Apted
 --  Copyright (C) 2011,2014 Chris Pisarczyk
+--  Copyright (C) 2019 MsrSgtShooterPerson
 --
 --  This program is free software; you can redistribute it and/or
 --  modify it under the terms of the GNU General Public License
@@ -2370,6 +2371,52 @@ function ULTDOOM.get_levels()
       -- for masochists... or debug testing
       if OB_CONFIG.procedural_gotchas == "all" then
         LEV.is_procedural_gotcha = true
+      end
+    end
+
+    -- handling for street mode
+    if not LEV.is_procedural_gotcha or not LEV.prebuilt then
+      if OB_CONFIG.streets_mode == "100urban" then
+        if LEV.theme_name == "urban" then
+          LEV.has_streets = true
+        end
+      elseif OB_CONFIG.streets_mode == "75urban" then
+        if LEV.theme_name == "urban" and rand.odds(75) then
+          LEV.has_streets = true
+        end
+      elseif OB_CONFIG.streets_mode == "50urban" then
+        if LEV.theme_name == "urban" and rand.odds(50) then
+          LEV.has_streets = true
+        end
+      elseif OB_CONFIG.streets_mode == "25urban" then
+        if LEV.theme_name == "urban" and rand.odds(25) then
+          LEV.has_streets = true
+        end
+      elseif OB_CONFIG.streets_mode == "75" and rand.odds(75) then
+        LEV.has_streets = true
+      elseif OB_CONFIG.streets_mode == "50" and rand.odds(50) then
+        LEV.has_streets = true
+      elseif OB_CONFIG.streets_mode == "25" and rand.odds(25) then
+        LEV.has_streets = true
+      elseif OB_CONFIG.streets_mode == "all" then
+        LEV.has_streets = true
+      end
+    end
+    
+    -- handling for stretched mode (should not support streets)
+    if not LEV.prebuilt or not LEV.has_streets then
+      if OB_CONFIG.stretched == "all" then
+        LEV.is_stretched = true
+      elseif OB_CONFIG.stretched == "75" and rand.odds(75) then
+        LEV.is_stretched = true
+      elseif OB_CONFIG.stretched == "50" and rand.odds(50) then
+        LEV.is_stretched = true
+      elseif OB_CONFIG.stretched == "33" and rand.odds(33) then
+        LEV.is_stretched = true
+      elseif OB_CONFIG.stretched == "12" and rand.odds(12) then
+        LEV.is_stretched = true
+      elseif OB_CONFIG.stretched == "5" and rand.odds(5) then
+        LEV.is_stretched = true
       end
     end
 

@@ -73,19 +73,28 @@ UI_ARCH.PROC_GOTCHA_CHOICES =
   "all",   _("Everything"),
 }
 
-UI_ARCH.YES_NO =
+UI_ARCH.STRETCHED_CHOICES =
 {
-  "yes", _("Yes"),
-  "no",  _("No"),
+  "all",  _("All"),
+  "75",   _("75% of All Levels"),
+  "50",   _("50% of All Levels"),
+  "33",   _("33% of All Levels"),
+  "12",   _("12% of All Levels"),
+  "5",    _("5% of All Levels"),
+  "none", _("NONE"),
 }
 
 UI_ARCH.STREETS_CHOICES =
 {
-  "100urban", _("100% of Urban Maps"),
+  "100urban", _("All Urban Maps"),
   "75urban",  _("75% of Urban Maps"),
   "50urban",  _("50% of Urban Maps"),
-  "50",       _("50% of all Levels"),
+  "25urban",  _("25% of Urban Maps"),
   "all",      _("All Levels"),
+  "75",       _("75% of All Levels"),
+  "50",       _("50% of All Levels"),
+  "25",       _("25% of All Levels"),
+  "no",       _("NONE"),
 }
 
 OB_MODULES["ui_arch"] =
@@ -102,7 +111,7 @@ OB_MODULES["ui_arch"] =
     {
       name = "stretched",
       label=_("Stretched Mode"),
-      choices=UI_ARCH.YES_NO
+      choices=UI_ARCH.STRETCHED_CHOICES
       default = "no"
       tooltip = "Causes the width of the map to compress, creating a long, thin map layout. The height is still influenced by the prefered level size above."
     }
