@@ -618,7 +618,7 @@ GLAICE_THEMES =
       CARPET3 = 50
       CARPET4 = 50
 
-      FFLAT1 = 80
+      FFLAT01 = 80
     }
 
     ceilings =
