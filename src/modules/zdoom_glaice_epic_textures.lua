@@ -97,6 +97,8 @@ function GLAICE_EPIC_TEXTURES.put_new_materials()
     GAME.THEMES.hell.floor_sinks = defs
   end
 
+  --hack for the street textures
+  GAME.SINKS.floor_streets.trim_mat = "WARN1"
 end
 
 function GLAICE_EPIC_TEXTURES.put_the_texture_wad_in()

@@ -1056,6 +1056,10 @@ function Edge_new(kind, S, dir, long)
 
   -- add it into each seed
   for i = 1, long do
+    if not S then
+      print(table.tostr(R))
+      print(table.tostr(A))
+    end
     assert(S)
 
     if S.edge[dir] then

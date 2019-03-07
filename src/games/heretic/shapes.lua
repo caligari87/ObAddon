@@ -4557,7 +4557,7 @@ FAILED_SQUEEZE_ENTRANCE_SMOOTHER =
 
 --MSSP's random negative features [FEATURES] - 'negative' because they attempt to modify an existing room if it has too much clean space.
 
-SPROUT_FEATURES_CENTER_ALTERED =
+GROW_FEATURES_CENTER_ALTERED =
 {
   prob = 150
   skip_prob = 5
@@ -4580,7 +4580,7 @@ SPROUT_FEATURES_CENTER_ALTERED =
   }
 }
 
-SPROUT_FEATURES_CENTER_ALTER_RAISED =
+GROW_FEATURES_CENTER_ALTER_RAISED =
 {
   prob = 150
   skip_prob = 5
@@ -4603,7 +4603,7 @@ SPROUT_FEATURES_CENTER_ALTER_RAISED =
   }
 }
 
-SPROUT_ELEVATED_PILLAR_ROUND =
+GROW_ELEVATED_PILLAR_ROUND =
 {
   prob = 150
 
@@ -4627,7 +4627,7 @@ SPROUT_ELEVATED_PILLAR_ROUND =
   }
 }
 
-SPROUT_ELEVATED_PILLAR_U =
+GROW_ELEVATED_PILLAR_U =
 {
   prob = 150
 
@@ -4645,7 +4645,7 @@ SPROUT_ELEVATED_PILLAR_U =
   }
 }
 
-SPROUT_ELEVATED_PILLAR_U_FULL =
+GROW_ELEVATED_PILLAR_U_FULL =
 {
   prob = 150
 
@@ -4663,7 +4663,7 @@ SPROUT_ELEVATED_PILLAR_U_FULL =
   }
 }
 
-SPROUT_WIDE_SPACE_DEPRESSION =
+GROW_WIDE_SPACE_DEPRESSION =
 {
   prob = 150
 
@@ -4680,7 +4680,7 @@ SPROUT_WIDE_SPACE_DEPRESSION =
   }
 }
 
-SPROUT_WIDE_SPACE_CATWALK_FUNNEL =
+GROW_WIDE_SPACE_CATWALK_FUNNEL =
 {
   prob = 80
 
@@ -4701,7 +4701,7 @@ SPROUT_WIDE_SPACE_CATWALK_FUNNEL =
   }
 }
 
-SPROUT_WIDE_SPACE_CATWALK_PLAIN =
+GROW_WIDE_SPACE_CATWALK_PLAIN =
 {
   prob = 75
 
@@ -4717,7 +4717,7 @@ SPROUT_WIDE_SPACE_CATWALK_PLAIN =
   }
 }
 
-SPROUT_WIDE_SPACE_CATWALK_TALL_PLAIN =
+GROW_WIDE_SPACE_CATWALK_TALL_PLAIN =
 {
   prob = 75
 
@@ -4734,7 +4734,7 @@ SPROUT_WIDE_SPACE_CATWALK_TALL_PLAIN =
   }
 }
 
-SPROUT_WIDE_SPACE_PLATFORM_TINY =
+GROW_WIDE_SPACE_PLATFORM_TINY =
 {
   prob = 75
 
@@ -4768,7 +4768,7 @@ SPROUT_WIDE_SPACE_PLATFORM_TINY =
   }
 }]]
 
-SPROUT_WIDE_SPACE_CATWALK_EXTRUDE =
+GROW_WIDE_SPACE_CATWALK_EXTRUDE =
 {
   prob = 4000
 
@@ -4785,7 +4785,7 @@ SPROUT_WIDE_SPACE_CATWALK_EXTRUDE =
   }
 }
 
-SPROUT_WIDE_SPACE_CATWALK_EXTRUDE_3X =
+GROW_WIDE_SPACE_CATWALK_EXTRUDE_3X =
 {
   prob = 4000
 
@@ -4802,7 +4802,7 @@ SPROUT_WIDE_SPACE_CATWALK_EXTRUDE_3X =
   }
 }
 
-SPROUT_WIDE_SPACE_CATWALK_CURVE =
+GROW_WIDE_SPACE_CATWALK_CURVE =
 {
   prob = 2500
 
@@ -4819,7 +4819,7 @@ SPROUT_WIDE_SPACE_CATWALK_CURVE =
   }
 }
 
-SPROUT_WIDE_SPACE_CATWALK_STRAIGHT_3X =
+GROW_WIDE_SPACE_CATWALK_STRAIGHT_3X =
 {
   prob = 3000
 
@@ -4834,7 +4834,7 @@ SPROUT_WIDE_SPACE_CATWALK_STRAIGHT_3X =
   }
 }
 
-SPROUT_WIDE_SPACE_CATWALK_STRAIGHT_4X =
+GROW_WIDE_SPACE_CATWALK_STRAIGHT_4X =
 {
   prob = 2000
 
@@ -4849,7 +4849,7 @@ SPROUT_WIDE_SPACE_CATWALK_STRAIGHT_4X =
   }
 }
 
-SPROUT_WIDE_SPACE_CATWALK_CAPPER_3X =
+GROW_WIDE_SPACE_CATWALK_CAPPER_3X =
 {
   prob = 1500
 
@@ -4869,7 +4869,7 @@ SPROUT_WIDE_SPACE_CATWALK_CAPPER_3X =
   }
 }
 
-SPROUT_WIDE_SPACE_CATWALK_CAPPER_4X =
+GROW_WIDE_SPACE_CATWALK_CAPPER_4X =
 {
   prob = 1500
 
@@ -5195,7 +5195,7 @@ SPROUT_PILLAR_GATE =
 
 SPROUT_CATWALK_SUPPORT_PILLAR_OUTER =
 {
-  prob = 150
+  prob = 35
 
   structure =
   {
@@ -5205,21 +5205,9 @@ SPROUT_CATWALK_SUPPORT_PILLAR_OUTER =
   }
 }
 
-SPROUT_CATWALK_SUPPORT_PILLAR_INNER =
-{
-  prob = 150
-
-  structure =
-  {
-    "1122","1122"
-    "1122","11.2"
-    "1122","1122"
-  }
-}
-
 SPROUT_CATWALK_SUPPORT_PILLAR_INNER_DOUBLE =
 {
-  prob = 150
+  prob = 35
 
   structure =
   {
@@ -7721,7 +7709,14 @@ STREETS_STRAIGHT =
     "......",".1111."
     "......",".1111."
     "......",".1111."
+    "......",".1111."
   }
+
+--[[street_markings =
+  {
+    p1 = { x=0,y=3,dir=8 }
+    p2 = { x=8,y=3,dir=8 }
+  }]]
 }
 
 STREETS_STRAIGHT_LONG =
@@ -7748,6 +7743,50 @@ STREETS_STRAIGHT_LONG =
     "......",".1111."
     "......",".1111."
     "......",".1111."
+    "......",".1111."
+  }
+
+--[[street_markings =
+  {
+    p1 = { x=0,y=3,dir=8 }
+    p2 = { x=16,y=3,dir=8 }
+  }]]
+}
+
+STREETS_BLOCK =
+{
+  prob = 25
+
+  pass = "streets"
+
+  structure =
+  {
+    "..........................",".1111................1111."
+    "1.........................","11111111111111111111111111"
+    "1.........................","11111111111111111111111111"
+    "1.........................","11111111111111111111111111"
+    "1.........................","11111111111111111111111111"
+    "..........................",".1111................1111."
+    "..........................",".1111................1111."
+    "..........................",".1111................1111."
+    "..........................",".1111................1111."
+    "..........................",".1111................1111."
+    "..........................",".1111................1111."
+    "..........................",".1111................1111."
+    "..........................",".1111................1111."
+    "..........................",".1111................1111."
+    "..........................",".1111................1111."
+    "..........................",".1111................1111."
+    "..........................",".1111................1111."
+    "..........................",".1111................1111."
+    "..........................",".1111................1111."
+    "..........................",".1111................1111."
+    "..........................",".1111................1111."
+    "..........................","11111111111111111111111111"
+    "..........................","11111111111111111111111111"
+    "..........................","11111111111111111111111111"
+    "..........................","11111111111111111111111111"
+    "..........................",".1111................1111."
   }
 }
 
@@ -7808,62 +7847,176 @@ STREETS_CURVE =
   }
 }
 
+-- MSSP's sidewalks
+
 SIDEWALK_STRAIGHT =
 {
   prob = 100
 
   pass = "sidewalk"
 
-  z_dir = "up"
-
   structure =
   {
-    "........","........"
-    "11111111","AAAA<AAA"
-    "11111111","11111111"
-    "11111111","11111111"
-    "11111111","AAAA<AAA"
-    "........","........"
+    "....","AAAA"
+    "....","AAAA"
+    "1111","1111"
   }
 }
 
-SIDEWALK_STRAIGHT_SMALL =
+SIDEWALK_STRAIGHT_LARGE =
+{
+  prob = 50
+
+  pass = "sidewalk"
+
+  structure =
+  {
+    "........","AAAAAAAA"
+    "........","AAAAAAAA"
+    "11111111","11111111"
+  }
+}
+
+SIDEWALK_STRAIGHT_LARGE =
+{
+  prob = 25
+
+  pass = "sidewalk"
+
+  structure =
+  {
+    "........","/AAAAAA%"
+    "........","AAAAAAAA"
+    "11111111","11111111"
+  }
+
+  diagonals =
+  {
+    ".A","A."
+  }
+}
+
+SIDEWALK_INTERSECTION_SIDE =
 {
   prob = 100
 
   pass = "sidewalk"
 
-  z_dir = "up"
-
   structure =
   {
-    "....","...."
-    "1111","AA<A"
-    "1111","1111"
-    "1111","1111"
-    "1111","AA<A"
-    "....","...."
+    "1....","1AAA%"
+    "1....","1AAAA"
+    "1....","1AAAA"
+    "1%...","1%AAA"
+    "11111","11111"
+  }
+
+  diagonals =
+  {
+    "A."
+    "1.","1A"
   }
 }
 
-SIDEWALK_STRAIGHT_TINY =
+SIDEWALK_OUTER_CORNER =
 {
   prob = 100
 
   pass = "sidewalk"
 
-  z_dir = "up"
+  structure =
+  {
+    "......","AAAAAA"
+    "......","AAAAAA"
+    "111%..","111%AA"
+    "1111..","1111AA"
+    "1111..","1111AA"
+  }
+
+  diagonals =
+  {
+    "1.","1A"
+  }
+}
+
+-- MSSP's street 'smoothers'
+
+STREET_CORNER_FIXER =
+{
+  prob = 100
+
+  pass = "street_fixer"
 
   structure =
   {
-    "..",".."
-    "11","A<"
-    "11","A1"
-    "11","A1"
-    "11","A<"
-    "..",".."
+    "x1111xx","x1111xx"
+    "111111.","11111.."
+    "111111.","11111.."
+    "111111.","11111.."
+    "111111.","1111/.."
+    "x1111..","x......"
+    "x......","x......"
+  }
+
+  diagonals =
+  {
+    "1."
   }
 }
+
+STREET_T_JUNCTION_FIXER =
+{
+  prob = 100
+
+  pass = "street_fixer"
+
+  structure =
+  {
+    "11111.","11111."
+    "11111.","1111/."
+    ".1111.","......"
+    "......","......"
+  }
+
+  diagonals =
+  {
+    "1."
+  }
+}
+
+STREET_WEIRD_DEAD_BRANCH_FIXER =
+{
+  prob = 100
+
+  pass = "street_fixer"
+
+  structure =
+  {
+    "111111","111111"
+    ".1111.","......"
+    "......","......"
+  }
+}
+
+STREET_DEAD_END_FIXER =
+{
+  prob = 100
+
+  pass = "street_fixer"
+
+  structure =
+  {
+    ".1111.",".1111."
+    ".1111.",".%11/."
+    "......","......"
+  }
+
+  diagonals =
+  {
+    ".1","1."
+  }
+}
+
 -- end of SHAPE_GRAMMAR
 
 }

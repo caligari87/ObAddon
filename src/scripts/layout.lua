@@ -1914,7 +1914,7 @@ stderrf("Cages in %s [%s pressure] --> any_prob=%d  per_prob=%d\n",
       end
 
       if R.is_street then
-        fg.sink = "floor_streets"
+        fg.sink = GAME.SINKS["floor_streets"]
       end
     end
   end

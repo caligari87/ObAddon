@@ -1231,10 +1231,12 @@ gui.debugf("new room %s : env = %s : parent = %s\n", R.name, tostring(info.env),
 
   -- streets you gotta have
   if LEVEL.has_streets then
-    if R.is_start and rand.odds(80) then
+    if R.is_start and rand.odds(90) then
       R.is_street = true
-    elseif R.id%5 == 4 then
+      R.is_outdoor = true
+    elseif R.id%4 == 0 and rand.odds(80) then
       R.is_street = true
+      R.is_outdoor = true
     end
   end
 
@@ -3206,7 +3208,7 @@ function Grower_grammatical_room(R, pass, is_emergency)
   local apply_num
 
   if pass == "grow" then
-    apply_num = rand.pick({ 10,20,30 })
+    apply_num = rand.pick({ 15,25,35,40 })
 
     if R.is_hallway then
       pass = assert(R.grow_pass)
@@ -3252,16 +3254,16 @@ function Grower_grammatical_room(R, pass, is_emergency)
     apply_num = 15
 
   elseif pass == "streets" then
-    apply_num = rand.irange(10,30)
-    R.is_outdoor = true
+    apply_num = rand.irange(5,10)
 
   elseif pass == "streets_entry" then
     apply_num = 1
-    R.is_outdoor = true
 
   elseif pass == "sidewalk" then
-    apply_num = 50
-    R.is_outdoor = true
+    apply_num = rand.irange(5,30)
+
+  elseif pass == "street_fixer" then
+    apply_num = 15
 
   else
     error("unknown grammar pass: " .. tostring(pass))
@@ -3443,8 +3445,8 @@ function Grower_grow_room(R)
   end
 
   -- Linear Mode, kill mirrored sprouts of symmetric rooms
-  gui.printf("-- Linear mode culling --\n\n")
   if OB_CONFIG.linear_mode == "yes" then
+  gui.printf("-- Linear mode culling --\n\n")
     each R2 in LEVEL.rooms do
       if R2.grow_parent == R.grow_parent and R2 != R then
         gui.printf("OUCH OOF OWWIE ROOM_" .. R.id .. " JUST DIED, IT'S HORRIBLE!\n")
@@ -3496,6 +3498,22 @@ end
 
 
 
+function Grower_make_street(R)
+  if R.is_streeted then return end
+
+  Grower_grammatical_room(R, "streets_entry")
+  Grower_grammatical_room(R, "streets")
+  Grower_grammatical_room(R, "street_fixer")
+  each A in R.areas do
+    A.is_road = true
+  end
+  Grower_grammatical_room(R, "sidewalk")
+  
+  R.is_streeted = true
+end
+
+
+
 function Grower_create_and_grow_room(trunk, mode, info)
   -- create the ROOM object
   local R = Grower_add_room(nil, info, trunk)
@@ -3530,10 +3548,8 @@ function Grower_create_and_grow_room(trunk, mode, info)
   end
 
   -- if it's a street, street it
-  if R.is_street and not R.has_been_streeted then
-    Grower_grammatical_room(R, "streets_entry")
-    Grower_grammatical_room(R, "streets")
-    R.has_been_streeted = true
+  if R.is_street then
+    Grower_make_street(R)
   end
 
   -- grow it now
@@ -3722,10 +3738,8 @@ gui.debugf("=== Coverage seeds: %d/%d  rooms: %d/%d\n",
         if PC.R1 == R or PC.R2 == R then
           local other = sel(PC.R1 == R, PC.R2, PC.R1)
 
-          if other.is_street and not R.has_been_streeted then
-            Grower_grammatical_room(R, "streets_entry")
-            Grower_grammatical_room(R, "streets")
-            R.has_been_streeted = true
+          if other.is_street then
+            Grower_make_street(R)
           end
 
           Grower_grow_room(other)
@@ -3753,10 +3767,8 @@ gui.debugf("=== Coverage seeds: %d/%d  rooms: %d/%d\n",
     each R in LEVEL.rooms do
 
       -- if it's a street, street it
-      if R.is_street and not R.has_been_streeted then
-        Grower_grammatical_room(R, "streets_entry")
-        Grower_grammatical_room(R, "streets")
-        R.has_been_streeted = true
+      if R.is_street then
+        Grower_make_street(R)
       end
 
       if not R.is_grown then

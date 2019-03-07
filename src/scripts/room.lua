@@ -1479,8 +1479,8 @@ function Room_border_up()
 
     -- void --
 
-    if A1.mode == "void" or A2.mode == "void" then
-      Junction_make_wall(junc)
+    if A1.mode == "void" and A2.mode == "void" then
+      Junction_make_empty(junc)
       return
     end
 
@@ -1960,6 +1960,10 @@ function Room_floor_ceil_heights()
       if not A2 then continue end
       if A2.floor_group then continue end
 
+      -- Street Mode:
+      -- keep the road area from the sidewalks
+      if A.is_road and not A2.is_road then continue end
+
       -- stair connections *must* use another group.
       -- direct connections generally use the same group.
 
@@ -2004,14 +2008,14 @@ function Room_floor_ceil_heights()
 
   local function do_floor_groups_touch(R, group1, group2)
     each A3 in R.areas do
-    each A4 in R.areas do
-      if A3.floor_group == group1 and
-         A4.floor_group == group2 and
-         A3:touches(A4)
-      then
-        return true
+      each A4 in R.areas do
+        if A3.floor_group == group1 and
+           A4.floor_group == group2 and
+           A3:touches(A4)
+        then
+          return true
+        end
       end
-    end
     end
 
     return false
