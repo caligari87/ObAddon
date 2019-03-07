@@ -68,13 +68,42 @@ function GLAICE_EPIC_TEXTURES.put_new_materials()
     GAME.ROOM_THEMES[room_theme] = defs
   end
 
+  -- SINKS
+  for name,def in pairs(GLAICE_SINK_DEFS) do
+    GAME.SINKS[name] = def
+  end
+
+  for name,prob in pairs(GLAICE_TECH_CEILING_SINKS) do
+    GAME.THEMES.tech.ceiling_sinks = defs
+  end
+
+  for name,prob in pairs(GLAICE_URBAN_CEILING_SINKS) do
+    GAME.THEMES.urban.ceiling_sinks = defs
+  end
+
+  for name,prob in pairs(GLAICE_HELL_CEILING_SINKS) do
+    GAME.THEMES.hell.ceiling_sinks = defs
+  end
+
+  for name,prob in pairs(GLAICE_TECH_FLOOR_SINKS) do
+    GAME.THEMES.tech.floor_sinks = defs
+  end
+
+  for name,prob in pairs(GLAICE_URBAN_FLOOR_SINKS) do
+    GAME.THEMES.urban.floor_sinks = defs
+  end
+
+  for name,prob in pairs(GLAICE_HELL_FLOOR_SINKS) do
+    GAME.THEMES.hell.floor_sinks = defs
+  end
+
 end
 
 function GLAICE_EPIC_TEXTURES.put_the_texture_wad_in()
-  local garbage_bytes = {0}
-  gui.wad_add_binary_lump("TX_START",garbage_bytes)
+--  local garbage_bytes = {0}
+--  gui.wad_add_binary_lump("TX_START",garbage_bytes)
   gui.wad_merge_sections("games/doom/data/Oblige_Epic_Texture_Set_V620.wad")
-  gui.wad_add_binary_lump("TX_END",garbage_bytes)
+--  gui.wad_add_binary_lump("TX_END",garbage_bytes)
 end
 ----------------------------------------------------------------
 

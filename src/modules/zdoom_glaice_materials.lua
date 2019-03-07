@@ -762,4 +762,8 @@ GLAICE_MATERIALS = {
   QLAVA1   = { t="LFAL21", f="QLAVA1", sane=1 }
 
   RAIL1 = { t="RAIL1", rail_h=32 }
+
+  -- Warning Strip --
+  
+  WARN1 = { t="WARN1", f="WARN2" }
 }

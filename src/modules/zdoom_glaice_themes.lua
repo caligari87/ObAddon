@@ -841,18 +841,6 @@ GLAICE_URBAN_FACADES =
 
 }
 
-GLAICE_URBAN_LIQUIDS =
-{
-  hotlava = 5
-  magma   = 5
-  qlava   = 5
-  pwater  = 30
-  sludge  = 60
-  gwater  = 60
-  ice     = 20
-  ice2    = 20
-}
-
 GLAICE_TECH_LIQUIDS =
 {
   hotlava = 3
@@ -865,6 +853,18 @@ GLAICE_TECH_LIQUIDS =
   ice2    = 30
 }
 
+GLAICE_URBAN_LIQUIDS =
+{
+  hotlava = 5
+  magma   = 5
+  qlava   = 5
+  pwater  = 30
+  sludge  = 60
+  gwater  = 60
+  ice     = 20
+  ice2    = 20
+}
+
 GLAICE_HELL_LIQUIDS =
 {
   hotlava = 80
@@ -875,4 +875,41 @@ GLAICE_HELL_LIQUIDS =
   gwater  = 25
   ice     = 40
   ice2    = 40
+}
+
+GLAICE_SINK_DEFS =
+{
+  liquid_warning_strip =
+  {
+    mat = "_LIQUID"
+    dz  = -8
+
+    trim_mat = "WARN1"
+    trim_dz  = 0
+  }
+}
+
+GLAICE_TECH_CEILING_SINKS =
+{
+}
+
+GLAICE_URBAN_CEILING_SINKS =
+{
+}
+
+GLAICE_HELL_CEILING_SINKS =
+{
+}
+
+GLAICE_TECH_FLOOR_SINKS =
+{
+  --liquid_warning_strip = 9001
+}
+
+GLAICE_URBAN_FLOOR_SINKS =
+{
+}
+
+GLAICE_HELL_FLOOR_SINKS =
+{
 }
