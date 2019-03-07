@@ -798,6 +798,15 @@ function Junction_make_railing(junc, rail_mat, block)
   if junc.A1.mode == "scenic" then z1 = z2 end
   if junc.A2.mode == "scenic" then z2 = z1 end
 
+  if not z1 then
+    print(junc.A1)
+    print(table.tostr(junc.A1))
+    print(junc.A1)
+    print(table.tostr(junc.A1))
+    z1 = 0
+    z2 = 0
+  end
+
   junc.E1.rail_z = math.max(z1, z2)
 
   junc.E2 = { kind="nothing", area=junc.A2 }

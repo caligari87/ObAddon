@@ -2162,7 +2162,7 @@ function Layout_sync_scenic_vista_heights()
         A.ceil_h = total_neighbor_height
       end
 
-      total_neighbor_height = 0
+      --[[total_neighbor_height = 0
       each N in A.neighbors do
         if N.border_type == A.border_type then
           if N.ceil_h then
@@ -2171,8 +2171,7 @@ function Layout_sync_scenic_vista_heights()
             end
           end
         end
-      end
-
+      end]]
 
     end
   end
@@ -2197,9 +2196,8 @@ function Layout_scenic_vistas()
     end
   end
 
-  if LEVEL.has_streets then
-    Layout_sync_scenic_vista_heights()
-  end
+  --MSSP-TODO
+  --Layout_sync_scenic_vista_heights()
 end
 
 

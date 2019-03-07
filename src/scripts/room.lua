@@ -327,19 +327,6 @@ function ROOM_CLASS.has_sky_neighbor(R)
   return false
 end
 
--- MSSP
-function ROOM_CLASS.is_adjecant_to_nature(R)
-  each C in R.conns do
-    gui.printf(C)
-    local is_it_a_park = C:other_room(R).is_park
-    if is_it_a_park == true then
-      return true
-    else
-      return false
-    end
-  end
-end
-
 
 function ROOM_CLASS.has_teleporter(R)
   each C in R.conns do
@@ -1481,16 +1468,32 @@ function Room_border_up()
 
     if A1.mode == "void" and A2.mode == "void" then
       Junction_make_empty(junc)
+      if A1 == A2 then
+        Junction_make_empty(junc)
+      end
       return
     end
 
 
-    -- room to void --
+    -- room to void / vice versa --
+
     if A1.mode != "void" and A2.mode == "void" then
+      Junction_make_wall(junc)
+      return
+    elseif A2.mode != "void" and A2.mode == "void" then
       Junction_make_wall(junc)
       return
     end
 
+    -- void to scenic / vice versa --
+    
+    if A1.mode == "void" and A2.mode == "scenic" then
+      Junction_make_wall(junc)
+      return
+    elseif A2.mode == "void" and A1.mode == "scenic" then
+      Junction_make_wall(junc)
+      return
+    end
 
     -- closets --
 
@@ -3122,12 +3125,40 @@ end
 
 
 function Room_sync_outdoor_heights()
-  -- sync all outdoor rooms to get capture
+
+  -- sync all outdoor rooms to capture
   -- the height of the tallest neighbor
   -- to prevent Escher space stuff
+
+  -- return a room's neighbor, neighbors
+  -- not necessarily being connected to, just
+  -- touching
+  local function get_outdoor_neighbors(R)
+    local neighbors_table = {}
+    each A in R.areas do
+
+      each N in A.neighbors do
+        if N.room and N.room != R then
+          if N.room.is_outdoor then
+            table.add_unique(neighbors_table, N.room)
+          end
+        end
+      end
+    end
+
+    if neighbors_table then
+      return neighbors_table
+    else
+      return nil
+    end
+  end
+
+  -- first, synchronize all outdoor room heights
+  -- to the tallest connecting room
   each R in LEVEL.rooms do
+    local tallest_height = -9999
+    print("Sync outdoor to tallest connecting room")
     if R.is_outdoor then
-      local tallest_height = 0
       each C in R.conns do
         each A in C.R2.areas do
           if A.ceil_h then
@@ -3137,15 +3168,39 @@ function Room_sync_outdoor_heights()
             end
           end
         end
+      end
 
-        if tallest_height > 0 then
-          each A in R.areas do
-            if A.ceil_h then
-              A.ceil_h = tallest_height
-            end
+      each A in R.areas do
+        if A.ceil_h then
+          A.ceil_h = tallest_height
+        end
+      end
+
+    end
+  end
+  print("Sync outdoor -> outdoor")
+  -- second, synchronize the height of
+  -- all outdoor rooms with outdoor neighbors
+  each R in LEVEL.rooms do
+    local tallest_height = -9999
+    if R.is_outdoor then
+      R.outdoor_neighbors = get_outdoor_neighbors(R)
+      each NR in R.outdoor_neighbors do
+        each A in NR.areas do
+          if A.ceil_h and A.ceil_h > tallest_height then
+            tallest_height = A.ceil_h
+            print("oofedry:")
+            print(tallest_height)
           end
         end
       end
+
+      each A in R.areas do
+        if A.ceil_h then
+          A.ceil_h = tallest_height
+        end
+      end
+
     end
   end
 end
@@ -3177,9 +3232,8 @@ function Room_build_all()
   Room_floor_ceil_heights()
   Room_set_sky_heights()
 
-  if LEVEL.has_streets then
-    Room_sync_outdoor_heights()
-  end
+  -- MSSP-TODO
+  -- Room_sync_outdoor_heights()
 
   -- this does other stuff (crates, free-standing cages, etc..)
   Layout_decorate_rooms(2)
