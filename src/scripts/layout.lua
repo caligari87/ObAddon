@@ -1889,9 +1889,9 @@ stderrf("Cages in %s [%s pressure] --> any_prob=%d  per_prob=%d\n",
 
   local function pick_floor_sinks(R)
 
-    if R.is_cave or 
-    (R.is_outdoor and not R.is_street) then 
-      return 
+    if R.is_cave or
+    (R.is_outdoor and not R.is_street) then
+      return
     end
 
     each fg in R.floor_groups do
@@ -1912,7 +1912,7 @@ stderrf("Cages in %s [%s pressure] --> any_prob=%d  per_prob=%d\n",
           fg.sink = nil
         end
       end
-      
+
       if R.is_street then
         fg.sink = "floor_streets"
       end

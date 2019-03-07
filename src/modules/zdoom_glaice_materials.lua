@@ -31,6 +31,7 @@ GLAICE_LIQUIDS =
   gwater   = { mat="SLUDGE01", special=0 }
   ice   = { mat="SNOW9", special=0 } --Looks best when outdoor environment is snow only
   ice2   = { mat="SNOW2", special=0 } --Looks best when outdoor environment is snow only
+
 }
 
 GLAICE_MATERIALS = {
@@ -116,6 +117,7 @@ GLAICE_MATERIALS = {
   URBAN3 = { t="URBAN3", f="FLAT5_4" }
   URBAN4 = { t="URBAN4", f="FLOOR0_1" }
 
+  -- Cement
  -- Copies of the CEMENT# textures so they can be used normally.
   CEM01  = { t="CEM01",  f="FLAT19" } --CEMENT7
   CEM02  = { t="CEM02",  f="FLAT19" } --CEMENT9
@@ -137,6 +139,15 @@ GLAICE_MATERIALS = {
   DRKCMT04  = { t="DRKCMT04",  f="RROCK03" } --Dark version of CEMENT6
   DRKCMT05  = { t="DRKCMT05",  f="RROCK03" } --Dark version of CEMENT7
   DRKCMT06  = { t="DRKCMT06",  f="RROCK03" } --Dark version of CEMENT9
+
+  HELLCMT1  = { t="HELLCMT1",  f="FLAT19" } --Red and white
+  HELLCMT2  = { t="HELLCMT2",  f="FLAT19" } --Red and white
+  HELLCMT3  = { t="HELLCMT3",  f="FLAT19" } --Red and white
+  HELLCMT4  = { t="HELLCMT4",  f="FLAT19" } --Red and white
+  HELLCMT5  = { t="HELLCMT5",  f="FLAT19" } --Red and white
+  HELLCMT6  = { t="HELLCMT6",  f="FLAT19" } --Red and white
+  HELLCMT7  = { t="HELLCMT7",  f="FLAT19" } --Black and white
+  HELLCMT8  = { t="HELLCMT8",  f="FLAT19" } --Black and white
 
   -- Bronze
   BRONZE5 =  { t="BRONZE5", f="MFLR8_2" }
@@ -533,6 +544,11 @@ GLAICE_MATERIALS = {
   SW1QUAK = { t="SW1QUAK", f="CEIL5_2" }
   SW2QUAK = { t="SW2QUAK", f="CEIL5_2" }
 
+  -- Fencing
+  FENCE1 = { t="FENCE1", rail_h=128 }
+  FENCE2 = { t="FENCE2", rail_h=128 }
+  FENCE3 = { t="FENCE3", rail_h=64 }
+
   --------------------
   --------------------
   --- Extra floors ---
@@ -730,6 +746,11 @@ GLAICE_MATERIALS = {
 -- Overwriting existing flats to use new patches for textures
 ---------------------------------------------------------------
 
+  WFALL1   = { t="WFALL1", f="FWATER1", sane=1 }
+  FWATER1  = { t="WFALL1", f="FWATER1", sane=1 }
+
+  LFALL1   = { t="LFALL1", f="LAVA1", sane=1 } --FIREMAG1
+
   BFALL1   = { t="BFAL1",  f="BLOOD1", sane=1 }
   BLOOD1   = { t="BFAL1",  f="BLOOD1", sane=1 }
 
@@ -764,6 +785,6 @@ GLAICE_MATERIALS = {
   RAIL1 = { t="RAIL1", rail_h=32 }
 
   -- Warning Strip --
-  
   WARN1 = { t="WARN1", f="WARN2" }
+
 }
