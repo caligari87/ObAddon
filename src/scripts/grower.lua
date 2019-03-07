@@ -918,14 +918,34 @@ function Grower_decide_extents()
   -- decides how much of the map we can use for growing rooms.
   --
 
+  -- urban streets code, because level theme is not yet
+  -- determined if it was done from games/[game]/level.lua
+  if OB_CONFIG.streets_mode == "100urban" then
+    if LEVEL.theme_name == "urban" then
+      LEVEL.has_streets = true
+    end
+  elseif OB_CONFIG.streets_mode == "75urban" then
+    if LEVEL.theme_name == "urban" and rand.odds(75) then
+      LEVEL.has_streets = true
+    end
+  elseif OB_CONFIG.streets_mode == "50urban" then
+    if LEVEL.theme_name == "urban" and rand.odds(50) then
+      LEVEL.has_streets = true
+    end
+  elseif OB_CONFIG.streets_mode == "25urban" then
+    if LEVEL.theme_name == "urban" and rand.odds(25) then
+      LEVEL.has_streets = true
+    end
+  end
+
   if LEVEL.is_stretched then
-    assert(LEVEL.map_W < SEED_W)
-    assert(LEVEL.map_H < SEED_H)
     SEED_H = SEED_H_STRETCHED
-  else
     assert(LEVEL.map_W < SEED_W)
     assert(LEVEL.map_H < SEED_H)
+  else
     SEED_H = SEED_H_UNSTRETCHED
+    assert(LEVEL.map_W < SEED_W)
+    assert(LEVEL.map_H < SEED_H)
   end
 
   local map_x1 = 1 + int((SEED_W - LEVEL.map_W) / 2)

@@ -32,6 +32,10 @@ function GLAICE_EPIC_TEXTURES.put_new_materials()
     GAME.MATERIALS[skin] = defs
   end
 
+  for skin,defs in pairs(GLAICE_LIQUIDS) do
+    GAME.LIQUIDS[skin] = defs
+  end
+
   for name,prob in pairs(GLAICE_TECH_FACADES) do
     GAME.THEMES.tech.facades[name] = prob
   end
