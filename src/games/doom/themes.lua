@@ -866,7 +866,16 @@ DOOM.SINKS =
     trim_dz  = -8
   }
 
+  floor_streets = --MSSP: Hi! This shouldn't be used anywhere
+  {               --except on streets
+    mat = "FLAT1"
+    dz = 48
+    light = 16
 
+    trim_mat = "CEIL5_1"
+    trim_dz = 64
+    trim_light = 16
+  }
 }
 
 

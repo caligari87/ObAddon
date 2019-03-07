@@ -1888,10 +1888,15 @@ stderrf("Cages in %s [%s pressure] --> any_prob=%d  per_prob=%d\n",
 
 
   local function pick_floor_sinks(R)
-    if R.is_cave or R.is_outdoor then return end
+
+    if R.is_cave or 
+    (R.is_outdoor and not R.is_street) then 
+      return 
+    end
 
     each fg in R.floor_groups do
-      if fg.openness < 0.4 then continue end
+      if fg.openness < 0.4 and
+      not R.is_street then continue end
 
       local tab = grab_usable_sinks(R, fg, "floor")
       if tab == nil then return end
@@ -1906,6 +1911,10 @@ stderrf("Cages in %s [%s pressure] --> any_prob=%d  per_prob=%d\n",
         if fg.sink.mat == "_LIQUID" and not LEVEL.liquid then
           fg.sink = nil
         end
+      end
+      
+      if R.is_street then
+        fg.sink = "floor_streets"
       end
     end
   end

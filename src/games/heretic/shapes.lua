@@ -7659,17 +7659,32 @@ GROW_SEWER_STAIRS_SIDE_EXIT_NEW_AREA =
 
 STREETS_ENTRY =
 {
-  prob = 1000
+  prob = 500
 
   pass = "streets_entry"
 
   structure =
   {
-    "x11x","x11x"
-    "....","1111"
-    "....","1111"
-    "....","1111"
-    "....","1111"
+    "xx11xx","xx11xx"
+    "......",".1111."
+    "......",".1111."
+    "......",".1111."
+    "......",".1111."
+  }
+}
+
+STREETS_ENTRY_OFFSET =
+{
+  prob = 500
+
+  pass = "streets_entry"
+
+  structure =
+  {
+    "x....","x1111"
+    "1....","11111"
+    "1....","11111"
+    "x....","x1111"
   }
 }
 
@@ -7692,7 +7707,7 @@ STREETS_ENTRY =
 
 STREETS_STRAIGHT =
 {
-  prob = 50
+  prob = 100
 
   pass = "streets"
 
@@ -7711,7 +7726,7 @@ STREETS_STRAIGHT =
 
 STREETS_STRAIGHT_LONG =
 {
-  prob = 100
+  prob = 50
 
   pass = "streets"
 
@@ -7738,7 +7753,7 @@ STREETS_STRAIGHT_LONG =
 
 STREETS_INTERSECTION =
 {
-  prob = 25
+  prob = 15
 
   pass = "streets"
 
@@ -7753,9 +7768,25 @@ STREETS_INTERSECTION =
   }
 }
 
+STREETS_T_JUNCTION =
+{
+  prob = 25
+
+  pass = "streets"
+
+  structure =
+  {
+    ".1111.",".1111."
+    "......","111111"
+    "......","111111"
+    "......","111111"
+    "......","111111"
+  }
+}
+
 STREETS_CURVE =
 {
-  prob = 40
+  prob = 15
 
   pass = "streets"
 
@@ -7777,6 +7808,62 @@ STREETS_CURVE =
   }
 }
 
+SIDEWALK_STRAIGHT =
+{
+  prob = 100
+
+  pass = "sidewalk"
+
+  z_dir = "up"
+
+  structure =
+  {
+    "........","........"
+    "11111111","AAAA<AAA"
+    "11111111","11111111"
+    "11111111","11111111"
+    "11111111","AAAA<AAA"
+    "........","........"
+  }
+}
+
+SIDEWALK_STRAIGHT_SMALL =
+{
+  prob = 100
+
+  pass = "sidewalk"
+
+  z_dir = "up"
+
+  structure =
+  {
+    "....","...."
+    "1111","AA<A"
+    "1111","1111"
+    "1111","1111"
+    "1111","AA<A"
+    "....","...."
+  }
+}
+
+SIDEWALK_STRAIGHT_TINY =
+{
+  prob = 100
+
+  pass = "sidewalk"
+
+  z_dir = "up"
+
+  structure =
+  {
+    "..",".."
+    "11","A<"
+    "11","A1"
+    "11","A1"
+    "11","A<"
+    "..",".."
+  }
+}
 -- end of SHAPE_GRAMMAR
 
 }

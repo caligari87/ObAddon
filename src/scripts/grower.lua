@@ -899,7 +899,8 @@ function Grower_calc_rule_probs()
       end
 
       if shape_is_absurd == true and level_is_absurd == true and
-      not string.match(rule.name,"JOINER") and not string.match(rule.name,"EMERGENCY") then
+      not string.match(rule.name,"JOINER") and not string.match(rule.name,"EMERGENCY") and
+      not string.match(rule.name,"STREET") and not string.match(rule.name,"SIDEWALK") then
         rule.use_prob = rule.use_prob * 1000000
         print(rule.name .. " is now ABSURDIFIED! WOOO!!!\n")
         shape_is_absurd = false
@@ -1230,7 +1231,9 @@ gui.debugf("new room %s : env = %s : parent = %s\n", R.name, tostring(info.env),
 
   -- streets you gotta have
   if LEVEL.has_streets then
-    if R.is_start then
+    if R.is_start and rand.odds(80) then
+      R.is_street = true
+    elseif R.id%5 == 4 then
       R.is_street = true
     end
   end
@@ -3215,7 +3218,7 @@ function Grower_grammatical_room(R, pass, is_emergency)
     end
 
     if R.is_street then
-      apply_num = rand.irange(2, 8)
+      apply_num = rand.irange(1,3)
     end
 
   elseif pass == "sprout" then
@@ -3230,7 +3233,7 @@ function Grower_grammatical_room(R, pass, is_emergency)
     end
 
     if R.is_street then
-      apply_num = rand.irange(6,12)
+      apply_num = rand.irange(6,20)
     end
 
     if OB_CONFIG.linear_mode == "yes" then
@@ -3249,14 +3252,18 @@ function Grower_grammatical_room(R, pass, is_emergency)
     apply_num = 15
 
   elseif pass == "streets" then
-    apply_num = rand.irange(5,10)
+    apply_num = rand.irange(10,30)
     R.is_outdoor = true
 
   elseif pass == "streets_entry" then
     apply_num = 1
     R.is_outdoor = true
 
-    else
+  elseif pass == "sidewalk" then
+    apply_num = 50
+    R.is_outdoor = true
+
+  else
     error("unknown grammar pass: " .. tostring(pass))
   end
 
@@ -3419,7 +3426,6 @@ function Grower_grow_room(R)
     end
   end
 
-
   ---| Grower_grow_room |---
 
 
@@ -3471,7 +3477,7 @@ end
 
 
 function Grower_sprout_room(R)
-  if R.is_dead then return end
+  if R.is_dead or R.is_street then return end
 
   Grower_grammatical_room(R, "sprout")
 
@@ -3524,9 +3530,10 @@ function Grower_create_and_grow_room(trunk, mode, info)
   end
 
   -- if it's a street, street it
-  if R.is_street then
+  if R.is_street and not R.has_been_streeted then
     Grower_grammatical_room(R, "streets_entry")
     Grower_grammatical_room(R, "streets")
+    R.has_been_streeted = true
   end
 
   -- grow it now
@@ -3715,9 +3722,10 @@ gui.debugf("=== Coverage seeds: %d/%d  rooms: %d/%d\n",
         if PC.R1 == R or PC.R2 == R then
           local other = sel(PC.R1 == R, PC.R2, PC.R1)
 
-          if other.is_street then
+          if other.is_street and not R.has_been_streeted then
             Grower_grammatical_room(R, "streets_entry")
             Grower_grammatical_room(R, "streets")
+            R.has_been_streeted = true
           end
 
           Grower_grow_room(other)
@@ -3745,9 +3753,10 @@ gui.debugf("=== Coverage seeds: %d/%d  rooms: %d/%d\n",
     each R in LEVEL.rooms do
 
       -- if it's a street, street it
-      if R.is_street then
+      if R.is_street and not R.has_been_streeted then
         Grower_grammatical_room(R, "streets_entry")
         Grower_grammatical_room(R, "streets")
+        R.has_been_streeted = true
       end
 
       if not R.is_grown then
@@ -3833,7 +3842,7 @@ function Grower_decorate_rooms()
   rand.shuffle(room_list)
 
   each R in room_list do
-    if not R.is_hallway then
+    if not R.is_hallway and not R.is_street then
       Grower_grammatical_room(R, "decorate")
     end
   end
@@ -3847,7 +3856,7 @@ function Grower_expand_parks()
   rand.shuffle(room_list)
 
   each R in room_list do
-    if R.is_outdoor then
+    if R.is_outdoor and not R.is_street then
       -- disable the seed limit
       each A in R.areas do
         if A.max_size then A.max_size = 999 end
@@ -3858,7 +3867,7 @@ function Grower_expand_parks()
   end
 
   each R in room_list do
-    if R.is_outdoor then
+    if R.is_outdoor and not R.is_street then
       Grower_grammatical_room(R, "smoother")
     end
   end
