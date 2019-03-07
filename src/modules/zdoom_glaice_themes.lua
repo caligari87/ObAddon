@@ -843,15 +843,36 @@ GLAICE_URBAN_FACADES =
 
 GLAICE_URBAN_LIQUIDS =
 {
-  
+  hotlava = 5
+  magma   = 5
+  qlava   = 5
+  pwater  = 30
+  sludge  = 60
+  gwater  = 60
+  ice     = 20
+  ice2    = 20
 }
 
 GLAICE_TECH_LIQUIDS =
 {
-  
+  hotlava = 3
+  magma   = 3
+  qlava   = 3
+  pwater  = 70
+  sludge  = 40
+  gwater  = 50
+  ice     = 30
+  ice2    = 30
 }
 
 GLAICE_HELL_LIQUIDS =
 {
-  
+  hotlava = 80
+  magma   = 80
+  qlava   = 80
+  pwater  = 5
+  sludge  = 20
+  gwater  = 25
+  ice     = 40
+  ice2    = 40
 }

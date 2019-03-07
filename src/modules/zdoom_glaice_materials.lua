@@ -31,7 +31,6 @@ GLAICE_LIQUIDS =
   gwater   = { mat="SLUDGE01", special=0 }
   ice   = { mat="SNOW9", special=0 } --Looks best when outdoor environment is snow only
   ice2   = { mat="SNOW2", special=0 } --Looks best when outdoor environment is snow only
-
 }
 
 GLAICE_MATERIALS = {
