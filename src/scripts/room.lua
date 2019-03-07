@@ -1485,6 +1485,13 @@ function Room_border_up()
     end
 
 
+    -- room to void --
+    if A1.mode != "void" and A2.mode == "void" then
+      Junction_make_wall(junc)
+      return
+    end
+
+
     -- closets --
 
     if (A1.mode == "chunk" and A1.chunk.occupy == "whole") or
@@ -1536,10 +1543,10 @@ function Room_border_up()
         Junction_make_railing(junc, "MIDBARS3", "block")
 
       elseif A2.border_type == "bottomless_drop" and A1.is_outdoor  then
-          Junction_make_railing(junc, "MIDBARS3", "block")
+        Junction_make_railing(junc, "MIDBARS3", "block")
 
       elseif A2.border_type == "ocean" and A1.is_outdoor  then
-          Junction_make_railing(junc, "MIDBARS3", "block")
+        Junction_make_railing(junc, "MIDBARS3", "block")
 
       else
         Junction_make_empty(junc)
@@ -1962,7 +1969,9 @@ function Room_floor_ceil_heights()
 
       -- Street Mode:
       -- keep the road area from the sidewalks
-      if A.is_road and not A2.is_road then continue end
+      if LEVEL.has_streets then
+        if A.is_road and not A2.is_road then continue end
+      end
 
       -- stair connections *must* use another group.
       -- direct connections generally use the same group.
@@ -3111,6 +3120,35 @@ function Room_add_camera()
 end
 
 
+
+function Room_sync_outdoor_heights()
+  -- sync all outdoor rooms to get capture
+  -- the height of the tallest neighbor
+  -- to prevent Escher space stuff
+  each R in LEVEL.rooms do
+    if R.is_outdoor then
+      local tallest_height = 0
+      each C in R.conns do
+        each A in C.R2.areas do
+          if A.ceil_h then
+            if A.ceil_h >= tallest_height then
+              tallest_height = A.ceil_h
+              print(tallest_height)
+            end
+          end
+        end
+
+        if tallest_height > 0 then
+          each A in R.areas do
+            if A.ceil_h then
+              A.ceil_h = tallest_height
+            end
+          end
+        end
+      end
+    end
+  end
+end
 ------------------------------------------------------------------------
 
 
@@ -3138,6 +3176,10 @@ function Room_build_all()
 
   Room_floor_ceil_heights()
   Room_set_sky_heights()
+
+  if LEVEL.has_streets then
+    Room_sync_outdoor_heights()
+  end
 
   -- this does other stuff (crates, free-standing cages, etc..)
   Layout_decorate_rooms(2)

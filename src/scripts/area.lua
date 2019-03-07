@@ -718,6 +718,12 @@ function Junction_calc_fence_z(A1, A2)
   if A2.podium_h then z2 = z2 + A2.podium_h end
 
   if A1.room then z1 = math.max(z1, A1.room.max_floor_h) end
+
+  if not z2 or not A2.room.max_floor_h then
+    error("If you are seeing this, it's MsrSgtShooterPerson's fault!!! WAAAAAA!!!" ..
+    "\nSpecifically, tell him that there's a missing junction somewhere in the map.")
+  end
+
   if A2.room then z2 = math.max(z2, A2.room.max_floor_h) end
 
   local top_z = math.max(z1, z2)

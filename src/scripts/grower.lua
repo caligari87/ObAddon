@@ -3508,7 +3508,7 @@ function Grower_make_street(R)
     A.is_road = true
   end
   Grower_grammatical_room(R, "sidewalk")
-  
+
   R.is_streeted = true
 end
 
