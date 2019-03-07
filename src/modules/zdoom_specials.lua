@@ -39,11 +39,12 @@ ZDOOM_SPECIALS.FOG_ENV_CHOICES =
 
 ZDOOM_SPECIALS.FOG_DENSITY_CHOICES =
 {
-  "clear", _("Clear"),
-  "misty", _("Misty"),
-  "foggy", _("Foggy"),
-  "dense", _("Dense"),
-  "mixed", _("Mix It Up"),
+  "clear",  _("Clear"),
+  "misty",  _("Misty"),
+  "smokey", _("Smokey"),
+  "foggy",  _("Foggy"),
+  "dense",  _("Dense"),
+  "mixed",  _("Mix It Up"),
 }
 
 function ZDOOM_SPECIALS.setup(self)
@@ -278,15 +279,17 @@ function ZDOOM_SPECIALS.do_special_stuff()
 
     -- resolve fog intensity
     if PARAM.fog_intensity == "clear" then
-      fog_intensity = "48"
+      fog_intensity = "16"
     elseif PARAM.fog_intensity == "misty" then
+      fog_intensity = "48"
+    elseif PARAM.fog_intensity == "smokey" then
       fog_intensity = "128"
     elseif PARAM.fog_intensity == "foggy" then
       fog_intensity = "255"
     elseif PARAM.fog_intensity == "dense" then
       fog_intensity = "368"
     elseif PARAM.fog_intensity == "mixed" then
-      fog_intensity = "" .. rand.irange(48,368)
+      fog_intensity = "" .. rand.irange(16,368)
     end
 
     local fog_intensity_line = '  fogdensity = ' .. fog_intensity .. '\n'
@@ -414,7 +417,7 @@ OB_MODULES["zdoom_specials"] =
       priority = 8
       choices = ZDOOM_SPECIALS.FOG_DENSITY_CHOICES
       default = "no"
-      tooltip = "Determines thickness and intensity of fog, if the Fog Generator is enabled. Clear is recommended."
+      tooltip = "Determines thickness and intensity of fog, if the Fog Generator is enabled. Clear or Misty is recommended."
     }
 
     fog_affects_sky = {

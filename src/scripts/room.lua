@@ -1486,7 +1486,7 @@ function Room_border_up()
     end
 
     -- void to scenic / vice versa --
-    
+
     if A1.mode == "void" and A2.mode == "scenic" then
       Junction_make_wall(junc)
       return

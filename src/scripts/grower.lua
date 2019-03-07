@@ -3219,10 +3219,6 @@ function Grower_grammatical_room(R, pass, is_emergency)
       end
     end
 
-    if R.is_street then
-      apply_num = rand.irange(1,3)
-    end
-
   elseif pass == "sprout" then
     if R.is_exit then
       apply_num = 1
@@ -3408,6 +3404,11 @@ end
 
 function Grower_grow_room(R)
   gui.ticker()
+
+  if R.is_street then
+    R.is_grown = true
+    return
+  end
 
   local function is_too_small(R)
     -- never prune a root room (including the exit)
