@@ -2569,27 +2569,48 @@ local test_textures =
 end
 
 -- Prefab control auto-detail override
-function Autodetail(w, h)
+function Autodetail(level)
   gui.printf("-- Auto Detail Module Report: --\n")
-  local map_area = w * h
+  local map_area = level.map_W * level.map_H
+  local total_walkable_area = 0
+
+  each R in level.rooms do
+    total_walkable_area = total_walkable_area + R.svolume
+  end
+
+  print("Total walkable volume: " .. total_walkable_area .. "\n")
+
+  local diag_wall_prob
+  local plain_wall_prob
+
+  local diag_wall_prob_default = PREFABS["Wall_plain_diag"].prob
+  local plain_wall_prob_default = PREFABS["Wall_plain"].prob
 
   if PARAM.autodetail == "on" then
-    if map_area < 1600 then
-      PREFABS["Wall_plain"].use_prob = PREFABS["Wall_plain"].prob
-      PREFABS["Wall_plain_diag"].use_prob = PREFABS["Wall_plain_diag"].prob
+    if total_walkable_area < 1800 then
+      plain_wall_prob = diag_wall_prob_default
+      diag_wall_prob = diag_wall_prob_default
       gui.printf("Map is normal. No toning down required.\n")
-    elseif map_area >= 1600 and map_area < 3600 then
-      PREFABS["Wall_plain"].use_prob = 1000
-      PREFABS["Wall_plain_diag"].use_prob = 1000
+    elseif total_walkable_area >= 1800 and total_walkable_area < 2400 then
+      plain_wall_prob = 250
+      diag_wall_prob = 250
       gui.printf("Map is huge. Toning down wall fabs.\n")
-    elseif map_area >= 3600 then
-      PREFABS["Wall_plain"].use_prob = 5000
-      PREFABS["Wall_plain_diag"].use_prob = 5000
+    elseif total_walkable_area >= 2400 and total_walkable_area < 3600 then
+      plain_wall_prob = 500
+      diag_wall_prob = 500
       gui.printf("Map is immense! Toning down wall fabs greatly!\n")
+    elseif total_walkable_area >= 3600 then
+      plain_wall_prob = 1000
+      diag_wall_prob = 1000
+      gui.printf("Map is crazy! Toning down wall fabs like there's no tomorrow!\n")
     else
       gui.printf("Could not read map size!!!\n")
     end
   end
+
+  PREFABS["Wall_plain"].use_prob = plain_wall_prob
+  PREFABS["Wall_plain_diag"].use_prob = diag_wall_prob
+
 end
 
 function Area_create_rooms()
@@ -2598,13 +2619,13 @@ function Area_create_rooms()
 
   gui.printf("Map size target: %dx%d seeds\n", LEVEL.map_W, LEVEL.map_H)
 
-  Autodetail(LEVEL.map_W, LEVEL.map_H)
-
   Grower_create_rooms()
 
   Area_divvy_up_borders()
 
   Area_analyse_areas()
+
+  Autodetail(LEVEL)
 
   Junction_init()
     Corner_init()
