@@ -102,7 +102,10 @@ end
 function GLAICE_EPIC_TEXTURES.put_the_texture_wad_in()
 --  local garbage_bytes = {0}
 --  gui.wad_add_binary_lump("TX_START",garbage_bytes)
-  gui.wad_merge_sections("games/doom/data/Oblige_Epic_Texture_Set_V620.wad")
+  local glaice_tex_wad_file = "games/doom/data/Oblige_Epic_Texture_Set_V620.wad"
+  gui.wad_transfer_lump(glaice_tex_wad_file, "ANIMDEFS", "ANIMDEFS")
+  gui.wad_transfer_lump(glaice_tex_wad_file, "CREDITS", "CREDITS")
+  gui.wad_merge_sections(glaice_tex_wad_file)
 --  gui.wad_add_binary_lump("TX_END",garbage_bytes)
 end
 ----------------------------------------------------------------
