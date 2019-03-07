@@ -28,6 +28,7 @@ end
 
 function GLAICE_EPIC_TEXTURES.put_new_materials()
 
+  -- put the custom material definitions in the materials table!!!
   for skin,defs in pairs(GLAICE_MATERIALS) do
     GAME.MATERIALS[skin] = defs
   end
@@ -36,6 +37,21 @@ function GLAICE_EPIC_TEXTURES.put_new_materials()
     GAME.LIQUIDS[skin] = defs
   end
 
+  -- put the custom theme definitions in the themes table!!!
+  -- LIQUIDZ
+  for name,prob in pairs(GLAICE_TECH_LIQUIDS) do
+    GAME.THEMES.tech.liquids[name] = prob
+  end
+
+  for name,prob in pairs(GLAICE_URBAN_LIQUIDS) do
+    GAME.THEMES.urban.liquids[name] = prob
+  end
+
+  for name,prob in pairs(GLAICE_HELL_LIQUIDS) do
+    GAME.THEMES.hell.liquids[name] = prob
+  end
+
+  -- FACADES
   for name,prob in pairs(GLAICE_TECH_FACADES) do
     GAME.THEMES.tech.facades[name] = prob
   end
