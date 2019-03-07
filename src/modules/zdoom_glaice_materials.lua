@@ -78,7 +78,7 @@ GLAICE_MATERIALS = {
   BRIKS22 = { t="BRIKS22", f="FLAT5_5" } --Tannish
   BRIKS23 = { t="BRIKS23", f="FLAT5_4" } --Gray
   BRIKS24 = { t="BRIKS24", f="FLAT5_5" } --Tannish
-  BRIKS25 = { t="BRIKS25", f="FLAT5_5" } --Green
+  BRIKS25 = { t="BRIKS25", f="RROCK20" } --Green
   BRIKS26 = { t="BRIKS26", f="FLAT5_4" } --Gray
   BRIKS27 = { t="BRIKS27", f="FLAT5_4" } --Gray
   BRIKS28 = { t="BRIKS28", f="RROCK16" } --Brown w/ vines
