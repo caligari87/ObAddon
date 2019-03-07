@@ -17,6 +17,8 @@
 --
 ------------------------------------------------------------------
 
+-- TODO: Needs hookup so general Tech/Urban/Hell can utilize extra cliff_mats property!
+
 GLAICE_THEMES =
 {
   tech_GrayMet =
@@ -122,7 +124,7 @@ GLAICE_THEMES =
 
   tech_Computers =
   {
-    prob = 40
+    prob = 50
     env = "building"
 
     walls =
@@ -350,7 +352,7 @@ GLAICE_THEMES =
   tech_VeryBrown =
   {
     env = "building"
-    prob = 50
+    prob = 60
 
     walls =
     {
@@ -496,6 +498,26 @@ GLAICE_THEMES =
       FLOOR6_2 = 20
       MFLR8_4  = 15
     }
+
+    cliff_mats =
+    {
+    GRNSTONE = 5
+    HELLROK1 = 10
+    RDROK1 = 15
+    ROK04 = 30
+    ROK05 = 30
+    ROK12 = 30
+    ROK13 = 30
+    ROK14 = 30
+    ROK15 = 30
+    ROK20 = 30
+    ROK21 = 30
+    ROK22 = 30
+    ROK23 = 30
+    SKULLS = 10
+    SKULLS2 = 10
+    BODIESB = 10
+    }
   }
 
   hell_Cement =
@@ -543,6 +565,27 @@ GLAICE_THEMES =
       FLAT5_2 = 5
       GRATE4  = 10
     }
+
+    cliff_mats =
+    {
+    GRNSTONE = 5
+    HELLROK1 = 10
+    RDROK1 = 15
+    ROK04 = 30
+    ROK05 = 30
+    ROK12 = 30
+    ROK13 = 30
+    ROK14 = 30
+    ROK15 = 30
+    ROK20 = 30
+    ROK21 = 30
+    ROK22 = 30
+    ROK23 = 30
+    SKULLS = 10
+    SKULLS2 = 10
+    BODIESB = 10
+    }
+
   }
 
   -- 18 through 20 don't tile horizontally well so I removed them.
@@ -639,13 +682,16 @@ GLAICE_THEMES =
 GLAICE_TECH_FACADES =
 {
 
-  STARTAN3 = 40
-  STARG3 = 40
+  STARTAN3 = 50
+  STARG3 = 50
   BRONZE1 = 25
   BRONZE3 = 25
+  BRONZE5 = 15
+  BRONZE6 = 10
 
   GRAY6 = 25
   GRAY8 = 25
+  GRAY9 = 25
 
   STONE  = 20
   STONE2 = 20
@@ -655,13 +701,15 @@ GLAICE_TECH_FACADES =
   BROWNGRN = 20
   BRVINE = 20
   BROVINE2 = 20
+  BROWNGR2 = 10
+  BROWNGR3 = 10
+  BROWNGR4 = 10
 
   TEKGREN2 = 15
   TEKSHAW  = 15
   TEKGRY01 = 15
   TEKGRY02 = 10
 
-  GRAYMET1 = 10
   GRAYMET2 = 10
   GRAYMET3 = 10
   GRAYMET4 = 10
@@ -670,7 +718,6 @@ GLAICE_TECH_FACADES =
   METAL8 = 12
   METAL9 = 12
   METAL10 = 12
-  METAL11 = 12
 
   SHAWN4 = 15
   SHAWN5 = 15

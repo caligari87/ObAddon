@@ -17,6 +17,23 @@
 --
 ------------------------------------------------------------------
 
+-- TODO: Getting new liquids working.
+-- TODO 2: Assuring animated textures work without giving "LACKING MATERIAL" error.
+
+-- Or should this be GLAICE.LIQUIDS?
+GLAICE_LIQUIDS =
+{
+  hotlava  = { mat="XLAV1", special=5, light_add=48, damage=10 }
+  magma  = { mat="MAGMA1",  special=5, light_add=32, damage=10 }
+  qlava  = { mat="QLAVA1", special=5, light_add=48, damage=10 }
+  pwater   = { mat="XWATER1", special=7, light_add=16, damage=5 }
+  sludge = { mat="OSLIME01", special=0 }
+  gwater   = { mat="SLUDGE01", special=0 }
+  ice   = { mat="SNOW9", special=0 } --Looks best when outdoor environment is snow only
+  ice2   = { mat="SNOW2", special=0 } --Looks best when outdoor environment is snow only
+
+}
+
 GLAICE_MATERIALS = {
 
   -- Organic
@@ -506,8 +523,10 @@ GLAICE_MATERIALS = {
   PFALL1     = { t="PFALL1", f="XWATER1", sane=1 }
   SLMFALL1   = { t="SLMFALL1", f="SLIME01", sane=1 }
   OFALL1     = { t="OFALL1", f="OSLIME01", sane=1 }
-  ICEFALL    = { t="ICEFALL", f="SNOW9", sane=1 }
-  ICEFALL2   = { t="ICEFALL2", f="SNOW2", sane=1 }
+  LFAL21     = { t="LFAL21", f="QLAVA1", sane=1 }
+  LFALL1     = { t="LFALL1", f="XLAV1", sane=1 }
+  ICEFALL    = { t="ICEFALL", f="SNOW9", sane=1 } --Not animated
+  ICEFALL2   = { t="ICEFALL2", f="SNOW2", sane=1 } --Not animated
 
   -- Switches --
   SW1GOTH = { t="SW1GOTH", f="CEIL5_2" }
@@ -681,13 +700,14 @@ GLAICE_MATERIALS = {
 
   -- Snow and Ice
   SNOW1 = { t="SNOW10",  f="SNOW1" } --Snow
-  SNOW2 = { t="SNOW03",  f="SNOW2" } --Ice
+  SNOW2 = { t="ICEFALL2",  f="SNOW2" } --Ice
   SNOW3 = { t="SNOW05",  f="SNOW3" } --Snowy stone
   SNOW4 = { t="SNOW01",  f="SNOW4" } --Snowy stone
   SNOW5 = { t="SNOW03",  f="SNOW5" } --Snowy wall
   SNOW6 = { t="SNOW10",  f="SNOW6" } --Snow
   SNOW7 = { t="SNOW10",  f="SNOW7" } --Snow
   SNOW8 = { t="SNOW10",  f="SNOW8" } --Snow
+  SNOW9 = { t="ICEFALL",  f="SNOW9" } --Ice
 
   -- Tech flats
   STARBR2F = { t="STARBR2", f="STARBR2F" }
@@ -707,6 +727,21 @@ GLAICE_MATERIALS = {
   URB1 = { f="URB1", t="URBAN1" }
   URB2 = { f="URB2", t="URBAN2" }
 
+---------------------------------------------------------------
+-- Overwriting existing flats to use new patches for textures
+---------------------------------------------------------------
+
+  BFALL1   = { t="BFAL1",  f="BLOOD1", sane=1 }
+  BLOOD1   = { t="BFAL1",  f="BLOOD1", sane=1 }
+
+  SFALL1   = { t="SFALL1",  f="NUKAGE1", sane=1 }
+  NUKAGE1  = { t="SFALL1",  f="NUKAGE1", sane=1 }
+
+  KFALL1   = { t="SLMFALL1", f="SLIME01", sane=1 }  -- new patches
+  KFALL5   = { t="SLMFALL1", f="SLIME05", sane=1 }
+  SLIME01  = { t="SLMFALL1", f="SLIME01", sane=1 }
+  SLIME05  = { t="SLMFALL1", f="SLIME05", sane=1 }
+
   -------------------------
   -- New animated floors --
   -------------------------
@@ -724,7 +759,8 @@ GLAICE_MATERIALS = {
   MAGMA1   = { t="MFALL1", f="MAGMA1", sane=1 }
   SNOW9 = { t="ICEFALL",  f="SNOW9", sane=1 } --Ice
   OSLIME01  = { t="OFALL1", f="OSLIME01", sane=1 }
-  XLAV1   = { t="LFAL21", f="XLAV1", sane=1 }
+  XLAV1   = { t="LFALL1", f="XLAV1", sane=1 }
+  QLAVA1   = { t="LFAL21", f="QLAVA1", sane=1 }
 
   RAIL1 = { t="RAIL1", rail_h=32 }
 }
