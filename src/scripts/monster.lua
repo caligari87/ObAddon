@@ -864,7 +864,7 @@ function Monster_fill_room(R)
 
     if OB_CONFIG.mons == "mixed" then
       if OB_CONFIG.mix_it_up_lower_range == OB_CONFIG.mix_it_up_upper_range then
-        error("Please pick different values for the Mix It Up range options, or don't use Mix It Up at all.")
+        qty = OB_CONFIG.mix_it_up_lower_range
       end
       qty = rand.range(MONSTER_QUANTITIES[OB_CONFIG.mix_it_up_lower_range], MONSTER_QUANTITIES[OB_CONFIG.mix_it_up_upper_range])
     else

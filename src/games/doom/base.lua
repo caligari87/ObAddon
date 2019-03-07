@@ -23,7 +23,6 @@ DOOM = { }
 
 
 gui.import("params")
-gui.import("shapes")
 
 gui.import("entities")
 gui.import("monsters")

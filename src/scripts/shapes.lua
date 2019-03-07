@@ -2,9 +2,10 @@
 --  GRAMMAR RULES
 ------------------------------------------------------------------------
 --
---  Oblige Level Maker
+--  Oblige Level Maker // ObAddon
 --
 --  Copyright (C) 2015-2017 Andrew Apted
+--  Copyright (C) 2018-2019 MsrSgtShooterPerson
 --
 --  This program is free software; you can redistribute it and/or
 --  modify it under the terms of the GNU General Public License
@@ -17,21 +18,6 @@
 --  GNU General Public License for more details.
 --
 ------------------------------------------------------------------------
-
---[[
- MSSP's hints:
- * Do not define a shape rule with new enclaved areas for caves. Caves never have new "areas".
- * Do not allow water tiles on the edges of shape rules, unless it's only for indoors.
-     If you really want it though, pad the edges with a # tile i.e.
-     "11##"
-     "11~#"
-     "11~#"
-     "11~#"
-     "11##"
-     Oblige seems to have an issue when certain shapes have adjecant water tiles and are used outdoors.
-]]
-
-gui.printf("Doom shape rules now being loaded!\n")
 
 SHAPE_GRAMMAR =
 {

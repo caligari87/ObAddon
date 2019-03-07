@@ -25,6 +25,7 @@ gui.import("brush")
 gui.import("prefab")
 
 gui.import("seed")
+gui.import("shapes")
 gui.import("grower")
 gui.import("area")
 gui.import("connect")
