@@ -3190,7 +3190,7 @@ end
 
     if OB_CONFIG.linear_mode == "yes"
     or (PARAM["linear_start"] == "yes"
-    and not LEVEL.has_streets)
+    and not R.is_street)
     and pass == "sprout"
     and R:prelim_conn_num() >= 1 and R.is_start then
       break;
