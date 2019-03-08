@@ -1803,6 +1803,11 @@ function Room_choose_size(R, not_big)
     R.is_big = true
     R.is_outdoor = true
   end
+
+  if R.is_sub_room then
+    R.size_limit = rand.irange(5,15)
+    R.floor_limit = rand.pick({1,1,2,3})
+  end
 end
 
 

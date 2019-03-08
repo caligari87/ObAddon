@@ -1336,6 +1336,7 @@ function Grower_kill_room(R)
 
   local hallway_neighbor
 
+  gui.printf("Killing " .. R.id)
 
   local function turn_joiner_into_closet(R2, chunk)
     chunk.kind = "closet"
@@ -3183,17 +3184,27 @@ end
     end
 
     -- Linear Mode
-    if OB_CONFIG.linear_mode == "yes" and pass == "sprout"
-    and R:prelim_conn_num() >= 2 then
-      break;
+    if OB_CONFIG.linear_mode == "yes" then
+
+      if pass == "sprout" then
+
+        if R:prelim_conn_num() >= 2 then
+          break;
+        end
+        
+        if R.is_start and R:prelim_conn_num() >= 1 then
+          break;
+        end
+
+      end
     end
 
-    if OB_CONFIG.linear_mode == "yes"
-    or (PARAM["linear_start"] == "yes"
-    and not R.is_street)
-    and pass == "sprout"
-    and R:prelim_conn_num() >= 1 and R.is_start then
-      break;
+    if PARAM["linear_start"] == "yes" then
+      if pass == "sprout" then
+        if not R.is_street and R:prelim_conn_num() >= 1 and R.is_start then
+          break;
+        end
+      end
     end
 
     -- stderrf("LOOP %d\n", loop)
@@ -4219,6 +4230,17 @@ function Grower_create_rooms()
   Grower_expand_parks()
 --TODO  Grower_flatten_outdoor_fences()
   Grower_split_liquids()
+
+  if OB_CONFIG.linear_mode == "yes" then
+  -- REMOVE_ME_EVENTUALLY
+    each R in LEVEL.rooms do
+      if R.grow_parent then
+        print(R.grow_parent.id .. " -> " .. R.id)
+      else
+        print(R.id)
+      end
+    end
+  end
 
   Seed_squarify()
 
