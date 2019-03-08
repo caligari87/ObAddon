@@ -3191,7 +3191,7 @@ end
         if R:prelim_conn_num() >= 2 then
           break;
         end
-        
+
         if R.is_start and R:prelim_conn_num() >= 1 then
           break;
         end

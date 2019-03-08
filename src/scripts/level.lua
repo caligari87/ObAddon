@@ -245,6 +245,11 @@ function Episode_pick_names()
     GAME.sub_title = Naming_grab_one("SUB_TITLE")
   end
 
+  if os.date("%m %d") == "04 01" then
+    GAME.title = "LOL"
+    GAME.subtitle = "It's That Day Of That Month"
+  end
+
   gui.printf("Game title: %s\n\n", GAME.title)
   gui.printf("Game sub-title: %s\n\n", GAME.sub_title)
 
@@ -318,6 +323,13 @@ function Episode_plan_monsters()
 
 
   local function init_monsters()
+
+    if os.date("%m %d") == "04 01" then
+      each name,def in GAME.MONSTERS do
+        def.id = 64
+      end
+    end
+
     each name,info in GAME.MONSTERS do
       if not info.id then
         error(string.format("Monster '%s' lacks an id field", name))
@@ -1612,7 +1624,17 @@ function Episode_plan_items()
   --
 
   ---| Episode_plan_items |---
-
+  if os.date("%m %d") == "04 01" then
+    each name,def in GAME.WEAPONS do
+      def.id = 2025
+    end
+    each name,def in GAME.PICKUPS do
+      def.id = 2025
+    end
+    each name,def in GAME.NICE_ITEMS do
+      def.id = 2025
+    end
+  end
   -- TODO
 end
 
@@ -2185,6 +2207,23 @@ function Level_do_styles()
 
   if LEVEL.psychedelic then
     Mat_prepare_trip()
+  end
+
+  if os.date("%m %d") == "04 01" then
+    each m,def in GAME.MATERIALS do
+      if not string.match(m, "_SKY") then
+        def.t = "FIREBLU1"
+        def.f = "FIREBLU2"
+      end
+    end
+    each e,def in GAME.ENTITIES do
+      if not string.match(e, "player")
+      and not string.match(e, "k_")
+      and not string.match(e, "ks_")
+      and not string.match(e, "spot") then
+        def.id = 2025
+      end
+    end
   end
 
   if LEVEL.is_procedural_gotcha then
