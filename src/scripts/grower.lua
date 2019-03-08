@@ -4255,7 +4255,7 @@ function Grower_create_rooms()
     for sx = 1, SEED_W do
     for sy = 1, SEED_H do
       local K = SEEDS[sx][sy].chunk
-      if K then assert(K.kind != "link") end
+      --if K then assert(K.kind != "link") end
     end
     end
 end
