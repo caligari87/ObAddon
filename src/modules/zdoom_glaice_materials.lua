@@ -17,10 +17,8 @@
 --
 ------------------------------------------------------------------
 
--- TODO: Getting new liquids working.
--- TODO 2: Assuring animated textures work without giving "LACKING MATERIAL" error.
+-- TODO: Special settings for snow/sand texture placement?
 
--- Or should this be GLAICE.LIQUIDS?
 GLAICE_LIQUIDS =
 {
   hotlava  = { mat="XLAV1", special=5, light_add=48, damage=10 }
@@ -100,13 +98,18 @@ GLAICE_MATERIALS = {
   BRIKS27 = { t="BRIKS27", f="FLAT5_4" } --Gray
   BRIKS28 = { t="BRIKS28", f="RROCK16" } --Brown w/ vines
   BRIKS29 = { t="BRIKS29", f="FLAT1" }
-  BRIKS30 = { t="BRIKS28", f="GSTN01" }
+  BRIKS30 = { t="BRIKS30", f="GSTN01" }
+  BRIKS31 = { t="BRIKS31", f="FLOOR7_1" }
+  BRIKS32 = { t="BRIKS32", f="FLAT5_4" }
 
   BST01  = { t="BST01",  f="RROCK11" } --BSTONE1
   BST02  = { t="BST02",  f="RROCK12" } --BSTONE2
   BST03  = { t="BST03",  f="RROCK12" } --BSTONE3
 
   BRVINE  = { t="BRVINE",  f="FLOOR0_1" } --BROVINE
+
+  GRAY6 = { t="GRAY6", f="FLAT18" }
+  GRAY8 = { t="GRAY8", f="FLAT18" }
 
   STON4 = { t="STON4", f="FLAT5_4" } --STONE4
   STON6 = { t="STON6", f="RROCK09" } --STONE6
@@ -197,9 +200,13 @@ GLAICE_MATERIALS = {
   CONSOLE7 = { t="CONSOLE7", f="CEIL5_1" }
   CONSOLE8 = { t="CONSOLE8", f="CEIL5_1" }
   CONSOLE9 = { t="CONSOLE9", f="CEIL5_1" }
+  CONSOLEA = { t="CONSOLEA", f="FLAT23" }
+  CONSOLEB = { t="CONSOLEB", f="FLAT23" }
+  CONSOLEC = { t="CONSOLEC", f="FLAT23" }
+  CONSOLED = { t="CONSOLED", f="FLAT23" }
+  CONSOLEE = { t="CONSOLEE", f="FLAT23" }
+  CONSOLEF = { t="CONSOLEF", f="FLAT23" }
   DECMP04A = { t="DECMP04A", f="CEIL5_1" } --Animated
-  GRAY6 = { t="GRAY6", f="FLAT18" }
-  GRAY8 = { t="GRAY8", f="FLAT18" }
   GRAYBLU1 = { t="GRAYBLU1", f="FLAT14" }
   NMONIA1 = { t="NMONIA1", f="FLAT1" } --Animated
   SPACEW5  = { t="SPACEW5",  f="SLIME14" }
@@ -365,6 +372,7 @@ GLAICE_MATERIALS = {
   -- Rocks / Natural
   GRNSTONE = { t="GRNSTONE", f="GRNRKF" }
   RDROK1 = { t="RDROK1", f="RROCK01" }
+  RDROK2 = { t="RDROK2", f="FLOOR6_1" }
   ROK01 = { t="ROK01", f="RROCK16" } --ROCK4
   ROK02 = { t="ROK02", f="RROCK09" } --ROCK5
   ROK03 = { t="ROK03", f="RROCK03" }
@@ -499,6 +507,9 @@ GLAICE_MATERIALS = {
   RDWAL01 = { t="RDWAL01", f="FLOOR1_6" } --REDWALL1
   SUPPORT4 = { t="SUPPORT4", f="FLAT23" }
 
+  -- Steps
+  WARNSTEP = { t="WARNSTEP", f="WARN1", sane=1 }
+
   -- Wood / Panel / Urban
   PANBOOK2 = { t="PANBOOK2", f="RROCK09" }
   STUC01 = { t="STUC01", f="RROCK09" } --STUCCO
@@ -548,6 +559,8 @@ GLAICE_MATERIALS = {
   FENCE1 = { t="FENCE1", rail_h=128 }
   FENCE2 = { t="FENCE2", rail_h=128 }
   FENCE3 = { t="FENCE3", rail_h=64 }
+  FENCE4 = { t="FENCE4", rail_h=128 }
+  FENCE5 = { t="FENCE5", rail_h=72 }
 
   --------------------
   --------------------
