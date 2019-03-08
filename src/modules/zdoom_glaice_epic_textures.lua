@@ -80,7 +80,7 @@ function GLAICE_EPIC_TEXTURES.put_new_materials()
   for name,prob in pairs(GLAICE_HELL_NATURALS) do
     GAME.ROOM_THEMES.hell_Outdoors_generic.naturals[name] = prob
   end
-  
+
   -- SINKS
   for name,def in pairs(GLAICE_SINK_DEFS) do
     GAME.SINKS[name] = def

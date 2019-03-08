@@ -2601,26 +2601,24 @@ function Autodetail(level)
   local diag_wall_prob_default = PREFABS["Wall_plain_diag"].prob
   local plain_wall_prob_default = PREFABS["Wall_plain"].prob
 
-  if PARAM.autodetail == "on" then
-    if total_walkable_area < 1800 then
-      plain_wall_prob = diag_wall_prob_default
-      diag_wall_prob = diag_wall_prob_default
-      gui.printf("Map is normal. No toning down required.\n")
-    elseif total_walkable_area >= 1800 and total_walkable_area < 2400 then
-      plain_wall_prob = 250
-      diag_wall_prob = 250
-      gui.printf("Map is huge. Toning down wall fabs.\n")
-    elseif total_walkable_area >= 2400 and total_walkable_area < 3600 then
-      plain_wall_prob = 500
-      diag_wall_prob = 500
-      gui.printf("Map is immense! Toning down wall fabs greatly!\n")
-    elseif total_walkable_area >= 3600 then
-      plain_wall_prob = 1000
-      diag_wall_prob = 1000
-      gui.printf("Map is crazy! Toning down wall fabs like there's no tomorrow!\n")
-    else
-      gui.printf("Could not read map size!!!\n")
-    end
+  if total_walkable_area < 1800 then
+    plain_wall_prob = diag_wall_prob_default
+    diag_wall_prob = diag_wall_prob_default
+    gui.printf("Map is normal. No toning down required.\n")
+  elseif total_walkable_area >= 1800 and total_walkable_area < 2400 then
+    plain_wall_prob = 250
+    diag_wall_prob = 250
+    gui.printf("Map is huge. Toning down wall fabs.\n")
+  elseif total_walkable_area >= 2400 and total_walkable_area < 3600 then
+    plain_wall_prob = 500
+    diag_wall_prob = 500
+    gui.printf("Map is immense! Toning down wall fabs greatly!\n")
+  elseif total_walkable_area >= 3600 then
+    plain_wall_prob = 1000
+    diag_wall_prob = 1000
+    gui.printf("Map is crazy! Toning down wall fabs like there's no tomorrow!\n")
+  else
+    gui.printf("Could not read map size!!!\n")
   end
 
   PREFABS["Wall_plain"].use_prob = plain_wall_prob
@@ -2640,7 +2638,9 @@ function Area_create_rooms()
 
   Area_analyse_areas()
 
-  Autodetail(LEVEL)
+  if PARAM["autodetail"] == "on" then
+    Autodetail(LEVEL)
+  end
 
   Junction_init()
     Corner_init()

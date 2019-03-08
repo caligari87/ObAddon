@@ -165,25 +165,6 @@ function Fab_load_all_definitions()
 
   local function calc_prob(def)
 
-    local prob_multiplier
-
-    -- attachment for the prefab control module
-    if PARAM["wall_prob"] == "fab_some" then
-      prob_multiplier = 100
-    elseif PARAM["wall_prob"] == "fab_less" then
-      prob_multiplier = 500
-    elseif PARAM["wall_prob"] == "fab_few" then
-      prob_multiplier = 1000
-    elseif PARAM["wall_prob"] == "fab_rare" then
-      prob_multiplier = 5000
-    elseif PARAM["wall_prob"] == "fab_random" then
-      prob_multiplier = rand.pick({ 50, 100, 500, 1000, 5000 })
-    else
-      prob_multiplier = 50
-    end
-
-    PREFABS["Wall_plain"].prob = prob_multiplier
-    PREFABS["Wall_plain_diag"].prob = prob_multiplier
     if def.skip_prob then
       if rand.odds(def.skip_prob) then return 0 end
     end
@@ -211,8 +192,39 @@ function Fab_load_all_definitions()
 
 
   local function preprocess_all()
+
+    local function prefab_plain_wall_controller_setup()
+      local prob_multiplier
+
+      -- attachment for the prefab control module
+      if PARAM["wall_prob"] == "fab_some" then
+        prob_multiplier = 100
+      elseif PARAM["wall_prob"] == "fab_less" then
+        prob_multiplier = 500
+      elseif PARAM["wall_prob"] == "fab_few" then
+        prob_multiplier = 1000
+      elseif PARAM["wall_prob"] == "fab_rare" then
+        prob_multiplier = 5000
+      elseif PARAM["wall_prob"] == "fab_random" then
+        prob_multiplier = rand.pick({ 50, 100, 500, 1000, 5000 })
+      else
+        prob_multiplier = 50
+      end
+
+      if not PARAM["wall_prob"] then
+        prob_multiplier = 50
+      end
+
+      PREFABS["Wall_plain"].prob = prob_multiplier
+      PREFABS["Wall_plain_diag"].prob = prob_multiplier
+    end
+
     table.name_up(PREFABS)
     table.expand_templates(PREFABS)
+
+    if PARAM["wall_prob"] then
+      prefab_plain_wall_controller_setup()
+    end
 
     each name,def in PREFABS do
       if not def.kind then
@@ -2251,6 +2263,11 @@ function Fab_find_matches(reqs, match_state)
 
 
   local function prob_for_match(def, match_state)
+    if not def.use_prob then
+      print(def)
+      print(table.tostr(def))
+    end
+
     local prob = assert(def.use_prob)
 
     if prob <= 0 then return 0 end
