@@ -68,6 +68,19 @@ function GLAICE_EPIC_TEXTURES.put_new_materials()
     GAME.ROOM_THEMES[room_theme] = defs
   end
 
+  -- NATURALS
+  for name,prob in pairs(GLAICE_TECH_NATURALS) do
+    GAME.ROOM_THEMES.tech_Outdoors_generic.naturals[name] = prob
+  end
+
+  for name,prob in pairs(GLAICE_URBAN_NATURALS) do
+    GAME.ROOM_THEMES.urban_Outdoors_generic.naturals[name] = prob
+  end
+
+  for name,prob in pairs(GLAICE_HELL_NATURALS) do
+    GAME.ROOM_THEMES.hell_Outdoors_generic.naturals[name] = prob
+  end
+  
   -- SINKS
   for name,def in pairs(GLAICE_SINK_DEFS) do
     GAME.SINKS[name] = def
