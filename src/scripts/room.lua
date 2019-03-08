@@ -1683,7 +1683,7 @@ function Room_set_kind(R, is_hallway, is_outdoor, is_cave)
 
   -- determine if outdoor room should be a park
   -- TODO : exit room cannot be a park, remove that restriction
-  if is_outdoor and not (is_hallway or is_cave) and
+  if is_outdoor and not (is_hallway or is_cave or R.is_street) and
      R.id != 1
   then
     local park_prob = style_sel("parks", 0, 22, 45, 90)

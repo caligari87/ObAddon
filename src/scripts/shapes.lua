@@ -7655,10 +7655,10 @@ STREETS_ENTRY_OFFSET =
 
   structure =
   {
-    "x....","x1111"
-    "1....","11111"
-    "1....","11111"
-    "x....","x1111"
+    "x.....","x.1111"
+    "1.....","111111"
+    "1.....","111111"
+    "x.....","x.1111"
   }
 }
 
@@ -8030,6 +8030,108 @@ STREET_DEAD_END_FIXER =
   diagonals =
   {
     ".1","1."
+  }
+}
+
+-- MSSP's building entrances... okay, just joiners and some such really
+
+STREET_BUILDING_ENTRANCE =
+{
+  prob = 300
+
+  pass = "building_entrance"
+
+  structure =
+  {
+    "..","RR"
+    "..","RR"
+    "11","11"
+  }
+
+  new_room =
+  {
+    env = "building"
+
+    conn = { x=1, y=1, w=2, dir=8 }
+
+    symmetry = { x=2, y=1, w=2, dir=8 }
+  }
+}
+
+STREET_BUILDING_ENTRANCE_WITH_JOINER_2X1 =
+{
+  prob = 100
+
+  pass = "building_entrance"
+
+  structure =
+  {
+    "....",".RR."
+    "....",".RR."
+    "x..x","xJJx"
+    "x11x","x11x"
+  }
+
+  new_room =
+  {
+    symmetry = { x=3, y=2, w=2, dir=8 }
+  }
+
+  joiner =
+  {
+    from_dir = 2
+  }
+}
+
+STREET_BUILDING_ENTRANCE_WITH_JOINER_2X2 =
+{
+  prob = 100
+
+  pass = "building_entrance"
+
+  structure =
+  {
+    "....",".RR."
+    "....",".RR."
+    "x..x","xJJx"
+    "x..x","xJJx"
+    "x11x","x11x"
+  }
+
+  new_room =
+  {
+    symmetry = { x=2, y=3, w=2, dir=8 }
+  }
+
+  joiner =
+  {
+    from_dir = 2
+  }
+}
+
+STREET_BUILDING_ENTRANCE_WITH_JOINER_3X2 =
+{
+  prob = 100
+
+  pass = "building_entrance"
+
+  structure =
+  {
+    ".....",".RRR."
+    ".....",".RRR."
+    "x...x","xJJJx"
+    "x...x","xJJJx"
+    "x111x","x111x"
+  }
+
+  new_room =
+  {
+    symmetry = { x=3, y=3, w=2, dir=8 }
+  }
+
+  joiner =
+  {
+    from_dir = 2
   }
 }
 

@@ -1234,7 +1234,7 @@ gui.debugf("new room %s : env = %s : parent = %s\n", R.name, tostring(info.env),
     if R.is_start and rand.odds(90) then
       R.is_street = true
       R.is_outdoor = true
-    elseif R.id%4 == 0 and rand.odds(80) 
+    elseif R.id%4 == 0 and rand.odds(80)
     and info.env != "hallway"
     and info.env != "cave"
     and not R.is_park then
@@ -3264,6 +3264,9 @@ function Grower_grammatical_room(R, pass, is_emergency)
   elseif pass == "street_fixer" then
     apply_num = 15
 
+  elseif pass == "building_entrance" then
+    apply_num = rand.irange(5,10)
+
   else
     error("unknown grammar pass: " .. tostring(pass))
   end
@@ -3512,6 +3515,9 @@ function Grower_make_street(R)
     A.is_road = true
   end
   Grower_grammatical_room(R, "sidewalk")
+  if not R.is_start then
+    Grower_grammatical_room(R, "building_entrance")
+  end
 
   R.is_streeted = true
 end
