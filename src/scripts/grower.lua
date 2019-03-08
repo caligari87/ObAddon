@@ -3188,8 +3188,9 @@ end
       break;
     end
 
-    if (OB_CONFIG.linear_mode == "yes"
-    or PARAM["linear_start"] == "yes")
+    if OB_CONFIG.linear_mode == "yes"
+    or (PARAM["linear_start"] == "yes"
+    and not LEVEL.has_streets)
     and pass == "sprout"
     and R:prelim_conn_num() >= 1 and R.is_start then
       break;
@@ -3468,7 +3469,7 @@ function Grower_grow_room(R)
   if PARAM["linear_start"] == "yes" then
     each R2 in LEVEL.rooms do
       if R.grow_parent == R2.grow_parent and R2 != R then
-        if R2.is_start then
+        if R2.is_start and not R2.is_street then
           Grower_kill_room(R)
           return
         end
