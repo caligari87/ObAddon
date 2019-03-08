@@ -216,14 +216,14 @@ function DOOM.get_levels()
 
       --5% of maps after map 4
       if OB_CONFIG.procedural_gotchas == "5p" then
-        if map > 4 then
+        if map > 4 and map != 15 and map != 31 then
           if rand.odds(5) then LEV.is_procedural_gotcha = true end
         end
       end
 
       -- 10% of maps after map 4
       if OB_CONFIG.procedural_gotchas == "10p" then
-        if map > 4 then
+        if map > 4 and map != 15 and map != 31 then
           if rand.odds(10) then LEV.is_procedural_gotcha = true end
         end
       end
