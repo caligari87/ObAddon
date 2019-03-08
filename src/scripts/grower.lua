@@ -1234,7 +1234,10 @@ gui.debugf("new room %s : env = %s : parent = %s\n", R.name, tostring(info.env),
     if R.is_start and rand.odds(90) then
       R.is_street = true
       R.is_outdoor = true
-    elseif R.id%4 == 0 and rand.odds(80) then
+    elseif R.id%4 == 0 and rand.odds(80) 
+    and info.env != "hallway"
+    and info.env != "cave"
+    and not R.is_park then
       R.is_street = true
       R.is_outdoor = true
     end
@@ -1268,13 +1271,13 @@ gui.debugf("new room %s : env = %s : parent = %s\n", R.name, tostring(info.env),
     is_outdoor = Room_choose_kind(R, parent_R)
   end
 
+  Room_set_kind(R, is_hallway, is_outdoor, is_cave)
+
   if R.is_street then
-    is_outdoor = false
+    is_outdoor = true
     is_hallway = false
     is_cave = false
   end
-
-  Room_set_kind(R, is_hallway, is_outdoor, is_cave)
 
   Room_choose_size(R)
 

@@ -7865,7 +7865,7 @@ SIDEWALK_STRAIGHT_LARGE =
 
 SIDEWALK_STRAIGHT_LARGE =
 {
-  prob = 25
+  prob = 15
 
   pass = "sidewalk"
 
@@ -7912,16 +7912,46 @@ SIDEWALK_OUTER_CORNER =
 
   structure =
   {
-    "......","AAAAAA"
-    "......","AAAAAA"
+    "......","...AAA"
+    "......","...AAA"
     "111%..","111%AA"
-    "1111..","1111AA"
-    "1111..","1111AA"
+    "1111..","1111.."
+    "1111..","1111.."
   }
 
   diagonals =
   {
     "1.","1A"
+  }
+}
+
+SIDEWALK_EXTEND_SIDEWAYS =
+{
+  prob = 250
+
+  pass = "sidewalk"
+
+  structure =
+  {
+    "2..","222"
+    "2..","222"
+    "111","111"
+    "111","111"
+  }
+}
+
+SIDEWALK_FILL_2X =
+{
+  prob = 25
+
+  pass = "sidewalk"
+
+  structure =
+  {
+    "2..2","2222"
+    "2..2","2222"
+    "x11x","x11x"
+    "1111","1111"
   }
 }
 
