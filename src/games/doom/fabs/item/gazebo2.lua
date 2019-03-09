@@ -8,7 +8,7 @@ PREFABS.Item_gazebo2 =
   map    = "MAP01"
 
   rank   = 2
-  prob   = 240
+  prob   = 320
   theme  = "urban"
 
   env    = "outdoor"
@@ -28,7 +28,7 @@ PREFABS.Item_gazebo2_trap =
 {
   template   = "Item_gazebo2"
   map  = "MAP02"
-  prob = 180
+  prob = 220
   style  = "traps"
   item_kind = "key"
 
@@ -60,7 +60,7 @@ PREFABS.Item_gazebo2_tech_trap =
 {
   template   = "Item_gazebo2"
   map  = "MAP02"
-  prob = 180
+  prob = 220
   style      = "traps"
 
   item_kind = "key"
@@ -80,7 +80,7 @@ PREFABS.Item_gazebo2_hell =
 {
   template   = "Item_gazebo2"
   map        = "MAP01"
-  prob       = 240
+  prob       = 320
 
   item_kind = "key"
   theme = "hell"
@@ -96,7 +96,7 @@ PREFABS.Item_gazebo2_hell_trap =
 {
   template   = "Item_gazebo2"
   map  = "MAP02"
-  prob = 180
+  prob = 220
   style   = "traps"
 
   item_kind = "key"
