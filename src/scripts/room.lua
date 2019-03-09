@@ -2558,7 +2558,8 @@ function Room_floor_ceil_heights()
       if N3.room == A.room and N3.mode == "nature" then return N3 end
     end
 
-    error("failed to find cage neighbor")
+    A.mode = "void"
+    -- error("failed to find cage neighbor")
   end
 
 
