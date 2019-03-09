@@ -2196,8 +2196,8 @@ function Layout_scenic_vistas()
     end
   end
 
-  --MSSP-TODO
-  --Layout_sync_scenic_vista_heights()
+  -- MSSP-TODO
+  -- Layout_sync_scenic_vista_heights()
 end
 
 

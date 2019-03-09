@@ -939,15 +939,8 @@ function Grower_decide_extents()
     end
   end
 
-  if LEVEL.is_stretched then
-    SEED_H = SEED_H_STRETCHED
-    assert(LEVEL.map_W < SEED_W)
-    assert(LEVEL.map_H < SEED_H)
-  else
-    SEED_H = SEED_H_UNSTRETCHED
-    assert(LEVEL.map_W < SEED_W)
-    assert(LEVEL.map_H < SEED_H)
-  end
+  assert(LEVEL.map_W < SEED_W)
+  assert(LEVEL.map_H < SEED_H)
 
   local map_x1 = 1 + int((SEED_W - LEVEL.map_W) / 2)
   local map_y1 = 1 + int((SEED_H - LEVEL.map_H) / 2)
@@ -1008,6 +1001,12 @@ function Grower_decide_extents()
   LEVEL.min_rooms = math.max(3, int(base / 3))
   LEVEL.max_rooms = math.max(6, int(base))
 
+  -- add more target rooms for streets mode
+  if LEVEL.has_streets then
+    LEVEL.min_rooms = LEVEL.min_rooms * 3
+    LEVEL.max_rooms = LEVEL.min_rooms * 3
+  end
+
   -- specific instructions for procedural gotcha
 
   if LEVEL.is_procedural_gotcha == true then
@@ -1020,9 +1019,10 @@ function Grower_decide_extents()
 
   -- calculate the coverage target
 
-  if not LEVEL.is_stretched then
+  if not LEVEL.has_streets then
     LEVEL.min_coverage = int(LEVEL.map_W * LEVEL.map_H * 0.85)
-  elseif LEVEL.is_stretched then
+  elseif LEVEL.has_streets then
+    gui.printf("-- Streets Mode activated! --\n")
     LEVEL.min_coverage = int(LEVEL.map_W * LEVEL.map_H)
   end
 end
@@ -1336,7 +1336,7 @@ function Grower_kill_room(R)
 
   local hallway_neighbor
 
-  gui.printf("Killing " .. R.id)
+  gui.printf("Killing " .. R.id .. "\n")
 
   local function turn_joiner_into_closet(R2, chunk)
     chunk.kind = "closet"
@@ -3506,7 +3506,7 @@ function Grower_sprout_room(R)
   Grower_grammatical_room(R, "sprout")
 
   if rand.odds(75) and not R.is_cave
-  and not R.is_hallway then
+  and not R.is_hallway and not R.is_street then
     Grower_grammatical_room(R, "square_out")
     R.is_squarified = true
   end

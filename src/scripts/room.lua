@@ -3160,24 +3160,29 @@ function Room_sync_outdoor_heights()
 
   -- first, synchronize all outdoor room heights
   -- to the tallest connecting room
+  print("-- Sync outdoor to tallest connecting room --")
   each R in LEVEL.rooms do
     local tallest_height = -9999
-    print("Sync outdoor to tallest connecting room")
     if R.is_outdoor then
+      gui.printf("Syncing for %s... \n", R.id)
       each C in R.conns do
         each A in C.R2.areas do
           if A.ceil_h then
+            gui.printf("  %s: %s \n", C.R2.id, A.ceil_h)
             if A.ceil_h >= tallest_height then
               tallest_height = A.ceil_h
-              print(tallest_height)
+              gui.printf("  Current height: %s \n",tallest_height)
             end
           end
         end
       end
 
       each A in R.areas do
+        gui.printf("Syncing height for %s!\n",R.id)
         if A.ceil_h then
+          gui.printf("  Before " .. A.ceil_h .. "\n")
           A.ceil_h = tallest_height
+          gui.printf("  Now " .. A.ceil_h .. "\n")
         end
       end
 

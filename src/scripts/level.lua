@@ -246,7 +246,7 @@ function Episode_pick_names()
   end
 
   if os.date("%m %d") == "04 01" then
-    GAME.title = "LOL"
+    GAME.title = "TROLOLOLO"
     GAME.subtitle = "It's That Day Of That Month"
   end
 
