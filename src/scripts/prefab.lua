@@ -2237,6 +2237,9 @@ function Fab_find_matches(reqs, match_state)
     -- for fabs to spawn on roads (and not sidewalks)
     if reqs.is_road and not def.can_be_on_roads then return 0 end
 
+    -- disable outdoor wall fab from appearing in scenic rooms
+    if reqs.scenic and def.on_scenics == "never" then return 0 end
+
     return 1
   end
 

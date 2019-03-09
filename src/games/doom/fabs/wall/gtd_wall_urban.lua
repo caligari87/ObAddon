@@ -8,6 +8,8 @@ PREFABS.Wall_fake_door =
 
   on_liquids = "never"
 
+  on_scenics = "never"
+
   where  = "edge"
   height = 128
   long   = 128
@@ -55,9 +57,10 @@ PREFABS.Wall_modern_shutter =
 
   prob   = 15
   theme = "urban"
-  env = "building"
 
   on_liquids = "never"
+
+  on_scenics = "never"
 
   where  = "edge"
   height = 128
