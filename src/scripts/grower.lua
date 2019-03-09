@@ -3279,6 +3279,9 @@ function Grower_grammatical_room(R, pass, is_emergency)
   elseif pass == "building_entrance" then
     apply_num = rand.irange(5,10)
 
+  elseif pass == "square_out" then
+    apply_num = rand.irange(10,15)
+
   else
     error("unknown grammar pass: " .. tostring(pass))
   end
@@ -3501,6 +3504,12 @@ function Grower_sprout_room(R)
   if R.is_dead or R.is_street then return end
 
   Grower_grammatical_room(R, "sprout")
+
+  if rand.odds(75) and not R.is_cave 
+  and not R.is_hallway then
+    Grower_grammatical_room(R, "square_out")
+    R.is_squarified = true
+  end
 
   -- if hallway did not sprout, try again
   if R.is_hallway and R:prelim_conn_num() < 2 then

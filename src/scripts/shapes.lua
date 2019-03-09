@@ -4541,6 +4541,76 @@ FAILED_SQUEEZE_ENTRANCE_SMOOTHER =
   }
 }
 
+--MSSP's square-out. Makes rooms less... wormy or spaghetti-ish.
+
+SQUARE_OUT_FROM_CORNER_2X =
+{
+  pass = "square_out"
+
+  prob = 100
+
+  structure =
+  {
+    "1..","111"
+    "x11","x11"
+  }
+}
+
+SQUARE_OUT_FROM_CORNER =
+{
+  pass = "square_out"
+
+  prob = 50
+
+  structure =
+  {
+    "1.","11"
+    "x1","x1"
+  }
+}
+
+SQUARE_OUT_MEET =
+{
+  pass = "square_out"
+
+  prob = 25
+
+  structure =
+  {
+    "1.1","111"
+    "x1x","x1x"
+  }
+}
+
+SQUARE_OUT_THICKEN_CLIFF_BOTH_SIDES =
+{
+  pass = "square_out"
+
+  prob = 150
+
+  structure =
+  {
+    "..","11"
+    "11","11"
+    "22","22"
+    "..","22"
+  }
+}
+
+SQUARE_OUT_THICKEN_CLIFF_ONE_SIDE =
+{
+  pass = "square_out"
+
+  prob = 125
+
+  structure =
+  {
+    "..","11"
+    "11","11"
+    "22","22"
+  }
+}
+
 --MSSP's random negative features [FEATURES] - 'negative' because they attempt to modify an existing room if it has too much clean space.
 
 GROW_FEATURES_CENTER_ALTERED =
@@ -6275,7 +6345,7 @@ GROW_CLIFF_EXTENSION_OUTER_CURVE_X2 =
   }
 }
 
-GROW_CLIFF_EXTENSION_OUTER_CURVE_X2 =
+GROW_CLIFF_EXTENSION_INNER_CURVE_X2 =
 {
   prob = 2000
 
