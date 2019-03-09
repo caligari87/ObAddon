@@ -717,12 +717,17 @@ function Junction_calc_fence_z(A1, A2)
   if A1.podium_h then z1 = z1 + A1.podium_h end
   if A2.podium_h then z2 = z2 + A2.podium_h end
 
-  if A1.room then z1 = math.max(z1, A1.room.max_floor_h) end
-
-  if not z2 or not A2.room.max_floor_h then
+  if not z2 or not A2.room.max_floor_h
+  or not z1 or not A2.room.max_floor_h then
+    print(A1)
+    print(table.tostr(A1))
+    print(A2)
+    print(table.tostr(A2))
     error("If you are seeing this, it's MsrSgtShooterPerson's fault!!! WAAAAAA!!!" ..
     "\nSpecifically, tell him that there's a missing junction somewhere in the map.")
   end
+
+  if A1.room then z1 = math.max(z1, A1.room.max_floor_h) end
 
   if A2.room then z2 = math.max(z2, A2.room.max_floor_h) end
 
@@ -1840,7 +1845,6 @@ function Area_pick_facing_rooms()
 
   assign_borders("outdoor")
 
---TODO : support making windows from building --> scenic
   assign_borders("building")
 
   each A in scenics do

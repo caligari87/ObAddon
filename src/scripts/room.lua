@@ -1480,7 +1480,7 @@ function Room_border_up()
     if A1.mode != "void" and A2.mode == "void" then
       Junction_make_wall(junc)
       return
-    elseif A2.mode != "void" and A2.mode == "void" then
+    elseif A2.mode != "void" and A1.mode == "void" then
       Junction_make_wall(junc)
       return
     end
