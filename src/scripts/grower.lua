@@ -1023,7 +1023,7 @@ function Grower_decide_extents()
     LEVEL.min_coverage = int(LEVEL.map_W * LEVEL.map_H * 0.85)
   elseif LEVEL.has_streets then
     gui.printf("-- Streets Mode activated! --\n")
-    LEVEL.min_coverage = int(LEVEL.map_W * LEVEL.map_H)
+    LEVEL.min_coverage = int(LEVEL.map_W * LEVEL.map_H * 0.95)
   end
 end
 
@@ -3280,7 +3280,7 @@ function Grower_grammatical_room(R, pass, is_emergency)
     apply_num = rand.irange(5,10)
 
   elseif pass == "square_out" then
-    apply_num = rand.irange(10,15)
+    apply_num = rand.irange(10,30)
 
   else
     error("unknown grammar pass: " .. tostring(pass))
@@ -3532,12 +3532,23 @@ function Grower_make_street(R)
   Grower_grammatical_room(R, "streets_entry")
   Grower_grammatical_room(R, "streets")
   Grower_grammatical_room(R, "street_fixer")
+
   each A in R.areas do
-    A.is_road = true
+    if not A.is_sidewalk then
+      A.is_road = true
+    end
   end
+
   Grower_grammatical_room(R, "sidewalk")
+
   if not R.is_start then
     Grower_grammatical_room(R, "building_entrance")
+  end
+
+  each A in R.areas do
+    if not A.is_road then
+      A.is_sidewalk = true
+    end
   end
 
   R.is_streeted = true

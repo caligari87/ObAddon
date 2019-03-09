@@ -787,7 +787,9 @@ function Layout_add_traps()
       local locs2 = {}
 
       each chunk in R.floor_chunks do
-        if not chunk.content then
+         -- MSSP-FIXME: instead of not placing teleporter traps on road areas,
+         -- find a way to keep the sink rendered
+        if not chunk.content and not chunk.area.is_road then
           if chunk.sw >= 2 and chunk.sh >= 2 then
             table.insert(locs, chunk)
           else

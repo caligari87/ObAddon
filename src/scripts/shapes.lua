@@ -4569,19 +4569,6 @@ SQUARE_OUT_FROM_CORNER =
   }
 }
 
-SQUARE_OUT_MEET =
-{
-  pass = "square_out"
-
-  prob = 25
-
-  structure =
-  {
-    "1.1","111"
-    "x1x","x1x"
-  }
-}
-
 SQUARE_OUT_THICKEN_CLIFF_BOTH_SIDES =
 {
   pass = "square_out"
@@ -7891,14 +7878,13 @@ STREETS_CURVE =
     ".......",".1111%."
     ".......",".111111"
     ".......",".111111"
+    ".......",".111111"
     ".......",".%11111"
-    ".......","..%1111"
   }
 
   diagonals =
   {
     "1."
-    ".1"
     ".1"
   }
 }
@@ -7916,6 +7902,19 @@ SIDEWALK_STRAIGHT =
     "....","AAAA"
     "....","AAAA"
     "1111","1111"
+  }
+}
+
+SIDEWALK_STRAIGHT_INWARD =
+{
+  prob = 35
+
+  pass = "sidewalk"
+
+  structure =
+  {
+    "1........","1AAAAAAAA"
+    "1........","1AAAAAAAA"
   }
 }
 
@@ -7982,11 +7981,11 @@ SIDEWALK_OUTER_CORNER =
 
   structure =
   {
-    "......","...AAA"
-    "......","...AAA"
-    "111%..","111%AA"
-    "1111..","1111.."
-    "1111..","1111.."
+    "xx....","xxAAAA"
+    "xx....","xxAAAA"
+    "x11%..","x11%AA"
+    "1111xx","1111xx"
+    "111xxx","111xxx"
   }
 
   diagonals =
@@ -8022,6 +8021,53 @@ SIDEWALK_FILL_2X =
     "2..2","2222"
     "x11x","x11x"
     "1111","1111"
+  }
+}
+
+SIDEWALK_SLOPE_SIDE_NEAR =
+{
+  prob = 15
+
+  pass = "sidewalk"
+
+  structure =
+  {
+    "11....","11AAAA"
+    "11....","11>>AA"
+    "11....","11>>AA"
+    "11....","11AAAA"
+  }
+}
+
+SIDEWALK_SLOPE_SIDE_FAR =
+{
+  prob = 10
+
+  pass = "sidewalk"
+
+  structure =
+  {
+    "11xx..","11xxAA"
+    "11....","11>>AA"
+    "11....","11>>AA"
+    "11xx..","11xxAA"
+  }
+}
+
+SIDEWALK_SLOPE_ON_RAMP =
+{
+  prob = 10
+
+  pass = "sidewalk"
+
+  structure =
+  {
+    "11x..","11xAA"
+    "11...","11>AA"
+    "11...","11>AA"
+    "11...","11>AA"
+    "11...","11>AA"
+    "11x..","11xAA"
   }
 }
 

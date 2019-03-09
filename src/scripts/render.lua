@@ -1429,14 +1429,6 @@ stderrf("away = %s\n\n", string.bool(away))
     if p_val ==  6 then do_triangle(7,1,3, true) ; do_triangle(3,9,7, true) end
     if p_val ==  9 then do_triangle(9,7,1, true) ; do_triangle(1,3,9, true) end
 
---[[
-                   MSSP put this here lol
-                       +---+   +---+
-                       |\ 9|   |7 /|
-                       | \ |   | / |
-                       |1 \|   |/ 3|
-                       +---+   +---+
-]]
     -- three corners open
 
     if PARAM["corner_style"] == "sink_style_sharp" then
