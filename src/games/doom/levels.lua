@@ -250,23 +250,6 @@ function DOOM.get_levels()
       end
     end
 
-    -- handling for stretched mode (should not support streets)
-    if not LEV.prebuilt or not LEV.has_streets then
-      if OB_CONFIG.stretched == "all" then
-        LEV.is_stretched = true
-      elseif OB_CONFIG.stretched == "75" and rand.odds(75) then
-        LEV.is_stretched = true
-      elseif OB_CONFIG.stretched == "50" and rand.odds(50) then
-        LEV.is_stretched = true
-      elseif OB_CONFIG.stretched == "33" and rand.odds(33) then
-        LEV.is_stretched = true
-      elseif OB_CONFIG.stretched == "12" and rand.odds(12) then
-        LEV.is_stretched = true
-      elseif OB_CONFIG.stretched == "5" and rand.odds(5) then
-        LEV.is_stretched = true
-      end
-    end
-
     if MAP_NUM == 1 or (map % 10) == 3 then
       LEV.demo_lump = string.format("DEMO%d", ep_index)
     end
