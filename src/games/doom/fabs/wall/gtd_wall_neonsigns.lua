@@ -3,7 +3,7 @@ PREFABS.Wall_urban_neon_sign =
   file   = "wall/gtd_wall_neonsigns.wad"
   map    = "MAP03"
 
-  prob   = 8
+  prob   = 16
   env    = "!building"
   theme  = "urban"
 
@@ -26,7 +26,7 @@ PREFABS.Wall_urban_neon_sign_id =
   template = "Wall_urban_neon_sign"
   map    = "MAP04"
 
-  prob   = 15
+  prob   = 30
 
   deep   = 80
 
@@ -42,7 +42,7 @@ PREFABS.Wall_urban_neon_sign_huge =
   template = "Wall_urban_neon_sign"
   map    = "MAP05"
 
-  prob   = 5
+  prob   = 10
 
   deep   = 144
   height = 192
