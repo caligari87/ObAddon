@@ -204,6 +204,32 @@ function Render_edge(E)
       reqs.group = E.area.floor_group.wall_group
     end
 
+    -- smart checking for wall fabs that are too long
+    -- stop them from occupying each others' space
+    if reqs.where == "edge" then
+
+      -- don't allow more than one wall that's not flat enough
+      -- on the same seed
+      if E.S.walls then
+        each W in E.S.walls do
+          if W.deep then
+            if W.deep > 16 then
+              reqs.flat = true
+            end
+          end
+        end
+      end
+
+      -- don't allow anything more than flat walls if
+      -- at least one seed ahead is not in the same area
+      -- as the current wall
+      local tx, ty = geom.nudge(E.S.x1, E.S.y1, dir, 1)
+      local that_seed = Seed_from_coord(tx, ty)
+      if that_seed.area != E.S.area then
+        reqs.flat = true
+      end
+    end
+
     local def = Fab_pick(reqs, sel(reqs.group, "none_ok", nil))
 
     -- when a wall group is not selected, use the ungrouped walls
@@ -330,6 +356,14 @@ function Render_edge(E)
     end
 
     local def = pick_wall_prefab()
+
+    E.deep = def.deep
+
+    if not E.S.walls then
+      E.S.walls = {}
+    end
+
+    table.insert(E.S.walls, E)
 
     local z = A.floor_h
 

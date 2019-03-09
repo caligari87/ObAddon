@@ -2240,6 +2240,9 @@ function Fab_find_matches(reqs, match_state)
     -- disable outdoor wall fab from appearing in scenic rooms
     if reqs.scenic and def.on_scenics == "never" then return 0 end
 
+    -- wall fabs that need to be flat, to specific walls from intersecting
+    if reqs.flat and def.deep > 16 then return 0 end
+
     return 1
   end
 

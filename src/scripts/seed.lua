@@ -58,6 +58,8 @@
     edge[DIR] : EDGE  -- set when an EDGE object exists at this seed
                       -- Note: it may be several seeds wide
 
+    walls : EDGE   -- actual edge object --MSSP
+
     chunk : CHUNK   -- only set when seed is part of a chunk
 
     mid_x, mid_y  -- mid point coordinate
@@ -102,6 +104,7 @@
 
     long : number   -- width of edge (in seeds)
 
+    deep : number   -- if this edge is rendered, this is the wall's depth -MSSP
 
     area : AREA
 
