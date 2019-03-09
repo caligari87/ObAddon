@@ -8024,6 +8024,21 @@ SIDEWALK_FILL_2X =
   }
 }
 
+SIDEWALK_SLOPE_SIDE_SMOL =
+{
+  prob = 15
+
+  pass = "sidewalk"
+
+  structure =
+  {
+    "11..","11AA"
+    "11..","11AA"
+    "11..","11AA"
+    "11..","11>A"
+  }
+}
+
 SIDEWALK_SLOPE_SIDE_NEAR =
 {
   prob = 15
