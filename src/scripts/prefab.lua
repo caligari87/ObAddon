@@ -2234,6 +2234,9 @@ function Fab_find_matches(reqs, match_state)
     -- darkness check
     if def.dark_map and not LEVEL.is_dark then return 0 end
 
+    -- for fabs to spawn on roads (and not sidewalks)
+    if reqs.is_road and not def.can_be_on_roads then return 0 end
+
     return 1
   end
 

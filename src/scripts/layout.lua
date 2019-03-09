@@ -1559,6 +1559,10 @@ function Layout_decorate_rooms(pass)
       reqs.env = A.room:get_env()
     end
 
+    if A.is_road then
+      reqs.is_road = true
+    end
+
     local sinkstat = analyse_chunk_sinkage(chunk, "floor")
 
     if sinkstat != "000" then

@@ -5,7 +5,6 @@ PREFABS.Wall_fake_door =
 
   prob   = 35
   theme = "urban"
-  env = "building"
 
   on_liquids = "never"
 
