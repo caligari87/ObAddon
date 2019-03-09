@@ -12,7 +12,7 @@ PREFABS.Decor_sedan =
 
   where  = "point"
   height = 128
-  size   = 160
+  size   = 128
 
   bound_z1 = 0
   bound_z2 = 128
@@ -52,7 +52,7 @@ PREFABS.Decor_minitruck =
 
   where  = "point"
   height = 128
-  size   = 160
+  size   = 128
 
   bound_z1 = 0
   bound_z2 = 128

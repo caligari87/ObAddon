@@ -8071,6 +8071,68 @@ SIDEWALK_SLOPE_ON_RAMP =
   }
 }
 
+SIDEWALK_CLOSET_2X1 =
+{
+  prob = 100
+
+  pass = "sidewalk"
+
+  structure =
+  {
+    "1..","1TT"
+    "1..","1TT"
+  }
+
+  closet = { from_dir=4 }
+}
+
+SIDEWALK_CLOSET_2X1 =
+{
+  prob = 100
+
+  pass = "sidewalk"
+
+  structure =
+  {
+    "1.","1T"
+    "1.","1T"
+  }
+
+  closet = { from_dir=4 }
+}
+
+SIDEWALK_CLOSET_3X1 =
+{
+  prob = 100
+
+  pass = "sidewalk"
+
+  structure =
+  {
+    "1.","1T"
+    "1.","1T"
+    "1.","1T"
+  }
+
+  closet = { from_dir=4 }
+}
+
+SIDEWALK_CLOSET_3X1 =
+{
+  prob = 100
+
+  pass = "sidewalk"
+
+  structure =
+  {
+    "1..","1TT"
+    "1..","1TT"
+    "1..","1TT"
+  }
+
+  closet = { from_dir=4 }
+}
+
 -- MSSP's street 'smoothers'
 
 STREET_CORNER_FIXER =
