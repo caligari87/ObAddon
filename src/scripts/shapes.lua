@@ -5164,9 +5164,9 @@ SPROUT_TRIANGULAR_LOW_CEILING =
   }
 }
 
-SPROUT_PILLAR_2X2 =
+DECORATE_PILLAR_2X2 =
 {
-  prob = 150
+  prob = 25
 
   env = "building"
 
@@ -5179,9 +5179,9 @@ SPROUT_PILLAR_2X2 =
   }
 }
 
-SPROUT_PILLAR_3X3 =
+DECORATE_PILLAR_3X3 =
 {
-  prob = 150
+  prob = 25
 
   env = "building"
 
@@ -5201,9 +5201,9 @@ SPROUT_PILLAR_3X3 =
   }
 }
 
-SPROUT_PILLAR_BEAN =
+DECORATE_PILLAR_BEAN =
 {
-  prob = 150
+  prob = 25
 
   env = "building"
 
@@ -5222,9 +5222,9 @@ SPROUT_PILLAR_BEAN =
   }
 }
 
-SPROUT_PILLAR_GATE =
+DECORATE_PILLAR_GATE =
 {
-  prob = 80
+  prob = 30
 
   env = "building"
 
