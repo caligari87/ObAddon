@@ -73,17 +73,6 @@ UI_ARCH.PROC_GOTCHA_CHOICES =
   "all",   _("Everything"),
 }
 
-UI_ARCH.STRETCHED_CHOICES =
-{
-  "all",  _("All"),
-  "75",   _("75% of All Levels"),
-  "50",   _("50% of All Levels"),
-  "33",   _("33% of All Levels"),
-  "12",   _("12% of All Levels"),
-  "5",    _("5% of All Levels"),
-  "none", _("NONE"),
-}
-
 UI_ARCH.STREETS_CHOICES =
 {
   "100urban", _("All Urban Maps"),
@@ -106,28 +95,24 @@ OB_MODULES["ui_arch"] =
 
   options =
   {
-    { name="size",         label=_("Level Size"), choices=UI_ARCH.SIZES,  default="epi" }
-
-    {
-      name = "stretched",
-      label = _("Stretched Mode"),
-      choices = UI_ARCH.STRETCHED_CHOICES
-      default = "no"
-      tooltip = "Causes the width of the map to compress, creating a long, thin map layout. The height is still influenced by the prefered level size above."
+    { name="size",         label=_("Level Size"), choices=UI_ARCH.SIZES,  default="epi"
+      tooltip = "WARNING! If you are planning to play on any choices that involve maps potentially becoming Large or Extreme-sized, it is preferable to turn on Autodetail under Prefab Control to prevent BSP issues and breaking side count limits."
+      gap = 1
     }
+
     {
       name = "streets_mode",
       label = _("Streets Mode"),
       choices = UI_ARCH.STREETS_CHOICES,
       default = "no"
-      tooltip = "[EXPERIMENTAL FEATURE] Allows Oblige to create large street-like outdoor rooms."
+      tooltip = "[EXPERIMENTAL FEATURE] Allows Oblige to create large street-like outdoor rooms. It is preferable to play on large to extreme sized maps to allow streets to grow as far as possible."
     }
     {
       name = "linear_mode"
       label = _("Linear Mode"),
       choices = UI_ARCH.YES_NO,
       default = "no"
-      tooltip = "Creates linear levels, where rooms are connecting along a linear string."
+      tooltip = "[EXPERIMENTAL FEATURE] Creates linear levels, where rooms are connecting along a linear string."
       gap = 1
     }
 
