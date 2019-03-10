@@ -50,6 +50,8 @@ PREFABS.Decor_urban_storage =
   bound_z1 = 0
   bound_z2 = 128
 
+  tex_CRATE3 = { CRATE3=50, CRATE2=50, CRATE1=50, CRATELIT=50 }
+
   z_fit = { 64-4,64+4 }
 }
 
@@ -70,4 +72,6 @@ PREFABS.Wall_urban_storage_diag =
   bound_z2 = 128
 
   z_fit  = "top"
+
+  tex_CRATELIT = { CRATELIT=50, CRATINY=20, CRATWIDE=50 }
 }
