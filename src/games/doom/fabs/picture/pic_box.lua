@@ -62,7 +62,6 @@ PREFABS.Pic_box_shawn3 =
   map  = "MAP13"
 
   theme = "tech"
-  game  = "doom2"
 
   tex_PIPES = "SHAWN3"
 }
