@@ -1919,7 +1919,7 @@ stderrf("Cages in %s [%s pressure] --> any_prob=%d  per_prob=%d\n",
         end
       end
 
-      if R.is_street and R.svolume < 16 then
+      if R.is_street and R.svolume > 16 then
         fg.sink = GAME.SINKS["floor_streets"]
       end
     end
