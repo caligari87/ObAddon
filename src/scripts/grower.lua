@@ -3924,6 +3924,9 @@ function Grower_expand_parks()
     if R.is_outdoor and not R.is_street then
       Grower_grammatical_room(R, "smoother")
     end
+    if PARAM["live_minimap"] == "room" then
+    Seed_draw_minimap()
+    end
   end
 
   -- fix area modes

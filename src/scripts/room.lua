@@ -3215,6 +3215,7 @@ function Room_sync_outdoor_heights()
     end
   end
 end
+
 ------------------------------------------------------------------------
 
 
@@ -3244,7 +3245,7 @@ function Room_build_all()
   Room_set_sky_heights()
 
   -- MSSP-TODO
-  -- Room_sync_outdoor_heights()
+  --Room_sync_outdoor_heights()
 
   -- this does other stuff (crates, free-standing cages, etc..)
   Layout_decorate_rooms(2)
@@ -3261,6 +3262,9 @@ function Room_build_all()
 
   Render_all_chunks()
   Render_all_areas()
+
+  -- MSSP-TODO
+  -- Render_all_street_markings()
 
   Render_triggers()
   Render_determine_spots()

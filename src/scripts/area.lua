@@ -2587,6 +2587,8 @@ local test_textures =
 --  dump_facades()
 end
 
+
+
 -- Prefab control auto-detail override
 function Autodetail(level)
   gui.printf("-- Auto Detail Module Report: --\n")
@@ -2630,6 +2632,8 @@ function Autodetail(level)
 
 end
 
+
+
 function Area_create_rooms()
 
   gui.printf("\n--==| Creating Rooms |==--\n\n")
@@ -2652,7 +2656,6 @@ function Area_create_rooms()
   Area_find_inner_points()
   Area_closet_edges()
 
-
   gui.printf("Seed Map:\n")
   Seed_dump_rooms()
 
@@ -2660,9 +2663,7 @@ function Area_create_rooms()
     gui.debugf("Final %s   size: %dx%d\n", R.name, R.sw, R.sh)
   end
 
-
   Connect_finalize()
 
   Area_locate_chunks()
 end
-

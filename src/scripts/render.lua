@@ -2547,6 +2547,8 @@ function Render_skybox()
   end
 end
 
+
+
 function Render_all_areas()
   each A in LEVEL.areas do
     Render_area(A)
@@ -2563,6 +2565,68 @@ function Render_all_areas()
   end
 
   Render_skybox()
+
+  Render_find_street_markings()
+  Render_all_street_markings()
+end
+
+
+
+function Render_all_street_markings()
+--MSSP-TODO
+end
+
+
+
+function Render_find_street_markings()
+  -- Render street markings -- MSSP-TODO
+  print("-- Render street markings --\n")
+
+  -- scan for 6x4 boxes in seeds, horizontally and vertically
+  -- for each box, test if the seeds follow the pattern of:
+  -- SRRRRS
+  -- SRRRRS
+  -- SRRRRS
+  -- SRRRRS
+  -- where S is street and R road
+  -- if this pattern exists, mark this spot as markable for
+  -- road markings
+  -- check vertically and horizontally
+
+  local road_marking_spots = {}
+
+
+  local function check_seed_street_property(S)
+    if S.area.is_road then return "road" end
+    if S.area.is_sidewalk then return "sidewalk" end
+  end
+
+  local function find_pivot()
+    local furthest_x = LEVEL.map_W
+    local furthest_y = LEVEL.map_H
+
+    local i,j = 1,1
+    repeat
+      repeat
+        S = SEEDS[i][j]
+        print("scanning seed: " .. i .. "x" .. j)
+        print(table.tostr(S))
+        if S.area then
+          if S.area.is_road and not S.street_tagged then
+            S.street_tagged = true
+            return S
+          end
+        end
+        S.street_tagged = true
+        j = j + 1
+      until(j > furthest_y)
+      i = i + 1
+      j = 1
+    until(i > furthest_x)
+    print("No streets left found to mark!")
+  end
+
+  print(find_pivot())
 
 end
 
