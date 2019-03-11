@@ -236,7 +236,7 @@ function ZDOOM_SPECIALS.do_special_stuff()
       music_line = ''
     end
 
-    if OS.date("%m %d") == "04 01" then
+    if os.date("%m %d") == "04 01" then
       music_line = '  Music = "$MUSIC_RUNNIN"\n'
     end
 

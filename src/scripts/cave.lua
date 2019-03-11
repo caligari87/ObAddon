@@ -4389,6 +4389,8 @@ function Cave_prepare_scenic_vista(area)
     table.insert(vista_list, "ocean")
   end
 
+  table.insert(vista_list, "no_vista")
+
   vista_type = rand.pick(vista_list)
 
   -- if steepness = heaps, has a chance to become mostly bottomless pits
@@ -4417,6 +4419,8 @@ function Cave_prepare_scenic_vista(area)
     area.border_type = "bottomless_drop"
   elseif vista_type == "ocean" and LEVEL.liquid and not room.has_hills then
     area.border_type = "ocean"
+  elseif vista_type == "no_vista" then
+    area.border_type = "no_vista"
   elseif room.has_hills or vista_type == "simple_fence" then
     area.border_type = "simple_fence"
   end
@@ -4694,6 +4698,24 @@ function Cave_build_a_scenic_vista(area)
   end
 
 
+  local function make_no_vista()
+    local FL = new_blob()
+
+    -- for people who don't like nice views
+
+    FL.floor_h = room.min_floor_h
+
+    FL.floor_mat = "_SKY"
+
+    FL.floor_y_offset = 0
+
+    temp_install_floor(FL)
+
+    area.floor_h = room.min_floor_h
+
+  end
+
+
   ---| Cave_build_a_scenic_vista |---
 
   assert(area.mode == "scenic")
@@ -4715,7 +4737,11 @@ function Cave_build_a_scenic_vista(area)
 
   elseif area.border_type == "ocean" then
     make_ocean()
-    else
+
+  elseif area.border_type == "no_vista" then
+    make_no_vista()
+
+  else
     error("Unknown border_type: " .. tostring(area.border_type))
   end
 end

@@ -1533,7 +1533,7 @@ function Room_border_up()
     -- room to scenic --
 
     if not A2.room then
-      if A1.room.border != A2 then
+      if A1.room.border != A2 or A2.border_type == "no_vista" then
         Junction_make_wall(junc)
 
       elseif not A1.is_outdoor and not A1.is_cave then
