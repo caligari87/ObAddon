@@ -3,7 +3,7 @@ PREFABS.Pic_glaice_hell_cages =
   file   = "picture/glaice_pic_hell_cages.wad"
   map    = "MAP01"
 
-  prob   = 25
+  prob   = 30
   theme = "hell"
 
   where  = "seeds"
@@ -30,4 +30,53 @@ PREFABS.Pic_glaice_hell_cages2 =
   template = "Pic_glaice_hell_cages"
 
   map = "MAP02"
+
+  thing_75 = 
+   {
+   hang_twitching = 50
+   hang_torso = 50
+   hang_leg   = 50
+   hang_leg_gone = 50
+   gutted_torso1 = 50
+   gutted_torso2 = 50
+   gutted_torso3 = 50
+   gutted_torso4 = 50
+   }
+
+  thing_60 =
+   {
+   hang_twitching = 50
+   hang_torso = 50
+   hang_leg   = 50
+   hang_leg_gone = 50
+   gutted_torso1 = 50
+   gutted_torso2 = 50
+   gutted_torso3 = 50
+   gutted_torso4 = 50
+   }
+
+   thing_76 =
+   {
+   hang_twitching = 50
+   hang_torso = 50
+   hang_leg   = 50
+   hang_leg_gone = 50
+   gutted_torso1 = 50
+   gutted_torso2 = 50
+   gutted_torso3 = 50
+   gutted_torso4 = 50
+   }
+
+   thing_63 =
+   {
+   hang_twitching = 50
+   hang_torso = 50
+   hang_leg   = 50
+   hang_leg_gone = 50
+   gutted_torso1 = 50
+   gutted_torso2 = 50
+   gutted_torso3 = 50
+   gutted_torso4 = 50
+   }
+
 }
