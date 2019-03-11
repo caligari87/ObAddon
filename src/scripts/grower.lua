@@ -1161,6 +1161,7 @@ function Grower_split_liquids()
           A.mode = "void"
           return
         end
+
         assert(S)
         assert(S.area == A)
 

@@ -237,29 +237,30 @@ function Render_edge(E)
 
       -- if seeds on either side don't belong to the same room
       -- then it's not solid
-      if that_seed.area.room != E.S.area.room then
-        reqs.has_solid_back = false
-
-        -- override: but if there are height differences
-        -- why not allow it?
-        if that_seed.floor_h and E.S.floor_h then
-          if that_seed.floor_h >= E.S.floor_h + 128 then
-            reqs.has_solid_back = true
-          end
-        end
-        if that_seed.ceil_h and E.S.ceil_h then
-          if that_seed.ceil_h <= E.S.floor_h then
-            reqs.has_solid_back = true
-          end
-        end
-
-        -- if the other side is a chunk (like a cage or closet)
-        -- or a liquid then disallow it again...
-        if that_seed.area.chunk == "closet"
-        or that_seed.area.mode == "liquid" then
+      if that_seed.area then
+        if that_seed.area.room != E.S.area.room then
           reqs.has_solid_back = false
-        end
 
+          -- override: but if there are height differences
+          -- why not allow it?
+          if that_seed.floor_h and E.S.floor_h then
+            if that_seed.floor_h >= E.S.floor_h + 128 then
+              reqs.has_solid_back = true
+            end
+          end
+          if that_seed.ceil_h and E.S.ceil_h then
+            if that_seed.ceil_h <= E.S.floor_h then
+              reqs.has_solid_back = true
+            end
+          end
+
+          -- if the other side is a chunk (like a cage or closet)
+          -- or a liquid then disallow it again...
+          if that_seed.area.chunk == "closet"
+          or that_seed.area.mode == "liquid" then
+            reqs.has_solid_back = false
+          end
+        end
       end
     end
 
