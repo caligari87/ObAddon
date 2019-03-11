@@ -202,6 +202,9 @@ namelib.NAMES =
         -- ObAddon contributor names
         MsrSgtShooterPerson=3, Glaice=3, Frozsoul=3,
         Garrett=3, Caligari87=3, SimonV=3,
+
+        -- special tag for the name generator
+        PROPERNOUNGENERATOR = 800
       }
 
       b =
@@ -3166,6 +3169,381 @@ namelib.IGNORE_WORDS =
 }
 
 
+
+namelib.ALPHABET =
+{
+  v =
+  {
+    'a',
+    'e',
+    'i',
+    'o',
+    'u',
+  }
+
+  c =
+  {
+    'q',
+    'w',
+    'r',
+    't',
+    'y',
+    'p',
+    's',
+    'd',
+    'f',
+    'g',
+    'h',
+    'j',
+    'k',
+    'l',
+    'z',
+    'x',
+    'c',
+    'v',
+    'b',
+    'n',
+    'm',
+  }
+}
+
+
+namelib.SYLLABLES =
+{
+  c =
+  {
+    -- country/place names
+    a = 50,
+    af = 50,
+    an = 50,
+    aq = 50,
+    ar = 50,
+    as = 50,
+    au = 50,
+    atia = 50,
+    ba = 50,
+    bab = 50,
+    bad = 50,
+    bah = 50,
+    bai = 50,
+    ban = 50,
+    bar = 50,
+    bang = 50,
+    be = 50,
+    ber = 50,
+    bi = 50,
+    bia = 50,
+    bis = 50,
+    bhu = 50,
+    bo = 50,
+    bon = 50
+    bou = 50,
+    bourg = 50,
+    bos = 50,
+    bot = 50,
+    bra = 50,
+    bri = 50,
+    bru = 50,
+    bu = 50,
+    bul = 50,
+    cam = 50,
+    can = 50,
+    cco = 50,
+    co = 50,
+    con = 50,
+    ce = 50,
+    cent = 50,
+    cez = 50,
+    chelles = 50,
+    ci = 50,
+    cia = 50,
+    chad = 50,
+    chi = 50,
+    cho = 50,
+    co = 50,
+    cro = 50,
+    cu = 50,
+    cua = 50,
+    cy = 50,
+    da = 50,
+    dad = 50,
+    dan = 50,
+    de = 50,
+    den = 50,
+    desh = 50,
+    di = 50,
+    dia = 50,
+    dines = 50,
+    dives = 50,
+    dji = 50,
+    ["do"] = 50,
+    dom = 50,
+    dos = 50,
+    dor = 50,
+    du = 50,
+    e = 50,
+    el = 50,
+    eg = 50,
+    em = 50,
+    eng = 50,
+    er = 50,
+    es = 50,
+    fa = 50,
+    fra = 50,
+    fi = 50,
+    fin = 50,
+    ga = 50,
+    gal = 50,
+    gan = 50,
+    gam = 50,
+    gar = 50,
+    geor = 50,
+    ger = 50,
+    gre = 50,
+    gree = 50,
+    gha = 50,
+    gen = 50,
+    ger = 50,
+    gia = 50,
+    gium = 50,
+    go = 50,
+    gol = 50,
+    gov = 50,
+    gre = 50,
+    gro = 50,
+    gu = 50,
+    gua = 50,
+    guay = 50,
+    gyz = 50,
+    ham = 50,
+    her = 50,
+    hon = 50,
+    i = 50,
+    ia = 50,
+    iet = 50,
+    ["in"] = 50,
+    ice = 50,
+    ina = 50,
+    ion = 50,
+    ir = 50,
+    ire = 50,
+    is = 50,
+    ish = 50,
+    ja = 50,
+    ji = 50,
+    jian = 50,
+    jor = 50,
+    ka = 50,
+    ken = 50,
+    ki = 50,
+    kia = 50,
+    king = 50,
+    kis = 50,
+    kitts = 50,
+    ko = 50,
+    ku = 50,
+    kyr = 50,
+    la = 50,
+    lan = 50,
+    land = 50,
+    lay = 50,
+    le = 50,
+    leo = 50,
+    les = 50,
+    li = 50,
+    lia = 50,
+    lib = 50,
+    lip = 50,
+    liech = 50,
+    lith = 50,
+    lize = 50,
+    lo = 50,
+    lom = 50,
+    lu = 50,
+    lua = 50,
+    lux = 50,
+    ma = 50,
+    mai = 50,
+    mal = 50,
+    mar = 50,
+    mark = 50,
+    mau = 50,
+    men = 50,
+    me = 50,
+    mex = 50,
+    mi = 50,
+    mo = 50,
+    moa = 50,
+    mor = 50,
+    mon = 50,
+    mya = 50,
+    na = 50,
+    nam = 50,
+    nau = 50,
+    ne = 50,
+    nea = 50,
+    nei = 50,
+    ni = 50,
+    nia = 50,
+    nis = 50,
+    no = 50,
+    nom = 50,
+    non = 50,
+    nor = 50,
+    nua = 50,
+    nin = 50,
+    ny = 50,
+    o = 50,
+    ["os"] = 50,
+    pa = 50,
+    pan = 50,
+    pe = 50,
+    po = 50,
+    por = 50,
+    pines = 50,
+    phi = 50,
+    prin = 50,
+    prus = 50,
+    pua = 50,
+    qa = 50,
+    que = 50,
+    ra = 50,
+    rain = 50,
+    ras = 50,
+    rea = 50,
+    ria = 50,
+    ri = 50,
+    ru = 50,
+    roon = 50,
+    ros = 50,
+    rus = 50,
+    rwan = 50,
+    tal = 50,
+    tar = 50,
+    tain = 50,
+    ["tan"] = 50,
+    ted = 50,
+    thai = 50,
+    ther = 50,
+    ti = 50,
+    to = 50,
+    ton = 50,
+    tine = 50,
+    tri = 50,
+    tria = 50,
+    tu = 50,
+    sao = 50,
+    sah = 50,
+    sal = 50,
+    sau = 50,
+    scot = 50,
+    se = 50,
+    ser = 50,
+    sey = 50,
+    shall = 50,
+    sia = 50,
+    sier = 50,
+    slo = 50,
+    so = 50,
+    ["sin"] = 50,
+    sov = 50,
+    sla = 50,
+    sri = 50,
+    swa = 50,
+    swe = 50,
+    stan = 50,
+    stein = 50,
+    su = 50,
+    sy = 50,
+    tai = 50,
+    ["tan"] = 50,
+    ten = 50,
+    tho = 50,
+    ti = 50,
+    ton = 50,
+    tral = 50,
+    tu = 50,
+    tzer = 50,
+    u = 50,
+    ua = 50,
+    un = 50,
+    und = 50,
+    uz = 50,
+    va = 50,
+    ve = 50,
+    ver = 50,
+    vo = 50,
+    via = 50,
+    viet = 50,
+    vin = 50,
+    vis = 50,
+    wa = 50,
+    we = 50,
+    wait = 50,
+    way = 50,
+    wi = 50,
+    xi = 50,
+    y = 50
+    ya = 50,
+    ye = 50,
+    yu = 50,
+    ypt = 50,
+    za = 50,
+    zam = 50,
+    zakh = 50,
+    zer = 50,
+    ze = 50,
+    zea = 50,
+    zi = 50,
+    zim = 50,
+    zil = 50,
+  }
+}
+
+-- MSSP-TODO
+function namelib.generate_unique_noun()
+
+  local function make_absolutely_random_syllable()
+    local patterns =
+    {  -- 1 for vowels, 2 for consonants
+      '12',
+      '112',
+      '21',
+      '1',
+      '2',
+    }
+
+    local syl_pattern = rand.pick(patterns)
+
+    syl_pattern = string.gsub(syl_pattern, "(1)", rand.pick(namelib.ALPHABET.v))
+
+    syl_pattern = string.gsub(syl_pattern, "(2)", rand.pick(namelib.ALPHABET.c))
+
+    return syl_pattern
+  end
+
+  local function make_placelike_syllable()
+    return rand.key_by_probs(namelib.SYLLABLES.c)
+  end
+
+  local name = ""
+  local syllable_count = rand.pick({2,2,3,3,3,3,3,4,4,4})
+
+  local i = 1
+
+  repeat
+    name = name .. make_placelike_syllable()
+    i = i + 1
+  until i > syllable_count
+
+  name = string.gsub(name,"^%l",string.upper)
+
+  print("MSSP name gen test: " .. name)
+
+  return name
+end
+
+
 function namelib.fix_up(name)
   -- convert "_" to "-"
   name = string.gsub(name, "_ ", "-")
@@ -3188,6 +3566,7 @@ function namelib.fix_up(name)
   name = string.gsub(name, "s/s", "")
   name = string.gsub(name, "/s", "")
 
+  name = string.gsub(name, "PROPERNOUNGENERATOR", namelib.generate_unique_noun())
   return name
 end
 

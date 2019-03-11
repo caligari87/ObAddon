@@ -1236,15 +1236,16 @@ gui.debugf("new room %s : env = %s : parent = %s\n", R.name, tostring(info.env),
 
   -- streets you gotta have
   if LEVEL.has_streets then
-    if R.is_start and rand.odds(90) then
-      R.is_street = true
-      R.is_outdoor = true
-    elseif R.id%4 == 0 and rand.odds(80)
-    and info.env != "hallway"
+    if info.env != "hallway"
     and info.env != "cave"
     and not R.is_park then
-      R.is_street = true
-      R.is_outdoor = true
+      if R.id == 2 and rand.odds(90) then
+        R.is_street = true
+        R.is_outdoor = true
+      elseif R.id%2 == 2 and rand.odds(66) and not R.id == 2 then
+        R.is_street = true
+        R.is_outdoor = true
+      end
     end
   end
 
