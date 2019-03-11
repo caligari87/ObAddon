@@ -51,21 +51,19 @@ Adds a HUGE library of prefabricates to decorate maps, a collection spanning mon
 
 ### Extensions
 
+* Streets mode! Create a map composed of largely outdoor street-like zones from which rooms (buildings!) will sprout from!
+
 * Procedural Gotchas! Massive procedurally generated arenas with increased challenge (and bosses), with customizable difficulty.
 
 * PsYcHeDeLiC theme.
 
 * Layout Absurdification! This module attempts to create more interesting maps by forcing certain shape rules in the grammar set to be much more prominent than normal.
 
-* Stretched mode! Create extremely long, stringy levels that expand towards only one direction - forwards or backwards!
-
-* Streets mode! Create a map composed of largely outdoor street-like zones from which rooms (buildings!) will sprout from!
-
 * ZDoom fog! With the ZDoom Special Addons module, you can now get parametric fog (based on the Sky Generator inputs) within the levels!
 
 * Glaice's Epic Textures mod, now integrated from Oblige 6.x!
 
-* Toggle for turning prebuilt levels on or off.
+* Toggle for turning prebuilt levels on or off!
   
 * Exposed parameters for the Sky Generator such as day/night and mountain settings. Play an entire generated WAD at night mood... for the mood.
 
@@ -86,6 +84,8 @@ Adds a HUGE library of prefabricates to decorate maps, a collection spanning mon
 * Buildings with windows that open into vistas!
 
 * New control to select ceiling and floor sink styles: curved and flowy, or sharp and angular.
+
+* Lots and lots and lots of bugfixes from base Oblige 7.7!
 
 AND MORE TO COME!
 
