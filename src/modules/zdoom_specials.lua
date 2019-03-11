@@ -219,8 +219,9 @@ function ZDOOM_SPECIALS.do_special_stuff()
 
     local music_line = ''
 
-    if PARAM.mapinfo_music_shuffler == "yes" then
+    if PARAM.mapinfo_music_shuffler == "yes" and not PARAM.all_shuffled then
       music_list = rand.shuffle(music_list)
+      PARAM.all_shuffled = true
     end
 
     if music_list then
