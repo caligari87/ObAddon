@@ -47,6 +47,79 @@ ZDOOM_SPECIALS.FOG_DENSITY_CHOICES =
   "mixed",  _("Mix It Up"),
 }
 
+ZDOOM_SPECIALS.MUSIC_DOOM =
+{
+  [1] = "$MUSIC_E1M1",
+  [2] = "$MUSIC_E1M2",
+  [3] = "$MUSIC_E1M3",
+  [4] = "$MUSIC_E1M4",
+  [5] = "$MUSIC_E1M5",
+  [6] = "$MUSIC_E1M6",
+  [7] = "$MUSIC_E1M7",
+  [8] = "$MUSIC_E1M8",
+  [9] = "$MUSIC_E1M9",
+  [10] = "$MUSIC_E2M1",
+  [11] = "$MUSIC_E2M2",
+  [12] = "$MUSIC_E2M3",
+  [13] = "$MUSIC_E2M4",
+  [14] = "$MUSIC_E2M5",
+  [15] = "$MUSIC_E2M6",
+  [16] = "$MUSIC_E2M7",
+  [17] = "$MUSIC_E2M8",
+  [18] = "$MUSIC_E2M9",
+  [19] = "$MUSIC_E3M1",
+  [20] = "$MUSIC_E3M2",
+  [21] = "$MUSIC_E3M3",
+  [22] = "$MUSIC_E3M4",
+  [24] = "$MUSIC_E3M5",
+  [25] = "$MUSIC_E3M6",
+  [26] = "$MUSIC_E3M7",
+  [27] = "$MUSIC_E3M8",
+  [28] = "$MUSIC_E3M9",
+  [29] = "$MUSIC_E3M4",
+  [30] = "$MUSIC_E3M2",
+  [31] = "$MUSIC_E3M3",
+  [32] = "$MUSIC_E1M5",
+}
+
+ZDOOM_SPECIALS.MUSIC_DOOM2 =
+{
+  [1] = "$MUSIC_RUNNIN"
+  [2] = "$MUSIC_STALKS"
+  [3] = "$MUSIC_COUNTD"
+  [4] = "$MUSIC_BETWEE"
+  [5] = "$MUSIC_DOOM"
+  [6] = "$MUSIC_THE_DA"
+  [7] = "$MUSIC_SHAWN"
+  [8] = "$MUSIC_DDTBLU"
+  [9] = "$MUSIC_IN_CIT"
+  [10] = "$MUSIC_DEAD"
+  [11] = "$MUSIC_STLKS2"
+  [12] = "$MUSIC_THEDA2"
+  [13] = "$MUSIC_DOOM2"
+  [14] = "$MUSIC_DDTBL2"
+  [15] = "$MUSIC_RUNNI2"
+  [16] = "$MUSIC_DEAD2"
+  [17] = "$MUSIC_STLKS3"
+  [18] = "$MUSIC_ROMERO"
+  [19] = "$MUSIC_SHAWN2"
+  [20] = "$MUSIC_MESSAG"
+  [21] = "$MUSIC_COUNT2"
+  [22] = "$MUSIC_DDTBL3"
+  [23] = "$MUSIC_AMPIE"
+  [24] = "$MUSIC_THEDA3"
+  [25] = "$MUSIC_ADRIAN"
+  [26] = "$MUSIC_MESSG2"
+  [27] = "$MUSIC_ROMER2"
+  [28] = "$MUSIC_TENSE"
+  [29] = "$MUSIC_SHAWN3"
+  [30] = "$MUSIC_OPENIN"
+  [31] = "$MUSIC_EVIL"
+  [32] = "$MUSIC_ULTIMA"
+}
+
+ZDOOM_SPECIALS.MUSIC = {}
+
 function ZDOOM_SPECIALS.setup(self)
   print("ZDoom Special Addons module activated.")
 
@@ -54,6 +127,23 @@ function ZDOOM_SPECIALS.setup(self)
     local value = self.options[name].value
     PARAM[name] = value
   end
+end
+
+function ZDOOM_SPECIALS.shuffle_music()
+
+  local music_table
+
+  if OB_CONFIG.game == "doom1" then
+    music_table = ZDOOM_SPECIALS.MUSIC_DOOM
+  else
+    music_table = ZDOOM_SPECIALS.MUSIC_DOOM2
+  end
+
+  if PARAM.mapinfo_music_shuffler == "yes" then
+    rand.shuffle(music_table)
+  end
+
+  ZDOOM_SPECIALS.MUSIC = music_table
 end
 
 function ZDOOM_SPECIALS.do_special_stuff()
@@ -136,98 +226,18 @@ function ZDOOM_SPECIALS.do_special_stuff()
     fog_color = mapinfo_tab.fog_color
     map_num = mapinfo_tab.map_num
 
-    local function list_doom2_music()
-      local doom2_music_list = {}
-      doom2_music_list[1] = "$MUSIC_RUNNIN"
-      doom2_music_list[2] = "$MUSIC_STALKS"
-      doom2_music_list[3] = "$MUSIC_COUNTD"
-      doom2_music_list[4] = "$MUSIC_BETWEE"
-      doom2_music_list[5] = "$MUSIC_DOOM"
-      doom2_music_list[6] = "$MUSIC_THE_DA"
-      doom2_music_list[7] = "$MUSIC_SHAWN"
-      doom2_music_list[8] = "$MUSIC_DDTBLU"
-      doom2_music_list[9] = "$MUSIC_IN_CIT"
-      doom2_music_list[10] = "$MUSIC_DEAD"
-      doom2_music_list[11] = "$MUSIC_STLKS2"
-      doom2_music_list[12] = "$MUSIC_THEDA2"
-      doom2_music_list[13] = "$MUSIC_DOOM2"
-      doom2_music_list[14] = "$MUSIC_DDTBL2"
-      doom2_music_list[15] = "$MUSIC_RUNNI2"
-      doom2_music_list[16] = "$MUSIC_DEAD2"
-      doom2_music_list[17] = "$MUSIC_STLKS3"
-      doom2_music_list[18] = "$MUSIC_ROMERO"
-      doom2_music_list[19] = "$MUSIC_SHAWN2"
-      doom2_music_list[20] = "$MUSIC_MESSAG"
-      doom2_music_list[21] = "$MUSIC_COUNT2"
-      doom2_music_list[22] = "$MUSIC_DDTBL3"
-      doom2_music_list[23] = "$MUSIC_AMPIE"
-      doom2_music_list[24] = "$MUSIC_THEDA3"
-      doom2_music_list[25] = "$MUSIC_ADRIAN"
-      doom2_music_list[26] = "$MUSIC_MESSG2"
-      doom2_music_list[27] = "$MUSIC_ROMER2"
-      doom2_music_list[28] = "$MUSIC_TENSE"
-      doom2_music_list[29] = "$MUSIC_SHAWN3"
-      doom2_music_list[30] = "$MUSIC_OPENIN"
-      doom2_music_list[31] = "$MUSIC_EVIL"
-      doom2_music_list[32] = "$MUSIC_ULTIMA"
-      return doom2_music_list
-    end
-
-    local function list_doom1_music()
-      local doom1_music_list = {}
-      doom1_music_list[1] = "$MUSIC_E1M1"
-      doom1_music_list[2] = "$MUSIC_E1M2"
-      doom1_music_list[3] = "$MUSIC_E1M3"
-      doom1_music_list[4] = "$MUSIC_E1M4"
-      doom1_music_list[5] = "$MUSIC_E1M5"
-      doom1_music_list[6] = "$MUSIC_E1M6"
-      doom1_music_list[7] = "$MUSIC_E1M7"
-      doom1_music_list[8] = "$MUSIC_E1M8"
-      doom1_music_list[9] = "$MUSIC_E1M9"
-      doom1_music_list[10] = "$MUSIC_E2M1"
-      doom1_music_list[11] = "$MUSIC_E2M2"
-      doom1_music_list[12] = "$MUSIC_E2M3"
-      doom1_music_list[13] = "$MUSIC_E2M4"
-      doom1_music_list[14] = "$MUSIC_E2M5"
-      doom1_music_list[15] = "$MUSIC_E2M6"
-      doom1_music_list[16] = "$MUSIC_E2M7"
-      doom1_music_list[17] = "$MUSIC_E2M8"
-      doom1_music_list[18] = "$MUSIC_E2M9"
-      doom1_music_list[19] = "$MUSIC_E3M1"
-      doom1_music_list[20] = "$MUSIC_E3M2"
-      doom1_music_list[21] = "$MUSIC_E3M3"
-      doom1_music_list[22] = "$MUSIC_E3M4"
-      doom1_music_list[24] = "$MUSIC_E3M5"
-      doom1_music_list[25] = "$MUSIC_E3M6"
-      doom1_music_list[26] = "$MUSIC_E3M7"
-      doom1_music_list[27] = "$MUSIC_E3M8"
-      doom1_music_list[28] = "$MUSIC_E3M9"
-      doom1_music_list[29] = "$MUSIC_E3M4"
-      doom1_music_list[30] = "$MUSIC_E3M2"
-      doom1_music_list[31] = "$MUSIC_E3M3"
-      doom1_music_list[32] = "$MUSIC_E1M5"
-      return doom1_music_list
-    end
-
-    local music_list
-
-    if OB_CONFIG.game == "doom1" then
-      music_list = list_doom1_music()
-    else
-      music_list = list_doom2_music()
-    end
+    local music_list = ZDOOM_SPECIALS.MUSIC
 
     local music_line = ''
-
-    if PARAM.mapinfo_music_shuffler == "yes" and not PARAM.all_shuffled then
-      music_list = rand.shuffle(music_list)
-      PARAM.all_shuffled = true
-    end
 
     if music_list then
       music_line = '  Music = "' .. music_list[map_num] .. '"\n'
     else
       music_line = ''
+    end
+
+    if OS.date(%m %d) == "04 01" then
+      music_line = '  Music = "$MUSIC_RUNNIN"\n'
     end
 
     -- resolve map MAPINFO linkages
@@ -390,6 +400,7 @@ OB_MODULES["zdoom_specials"] =
   hooks =
   {
     setup = ZDOOM_SPECIALS.setup
+    get_levels = ZDOOM_SPECIALS.shuffle_music
     all_done = ZDOOM_SPECIALS.do_special_stuff
   }
 
