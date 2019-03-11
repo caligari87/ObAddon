@@ -13,6 +13,8 @@ PREFABS.Wall_fake_window_thin =
 
   where  = "edge"
 
+  need_solid_back = true
+
   height = 128
   long   = 128
   deep   = 24

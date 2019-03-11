@@ -10,6 +10,8 @@ PREFABS.Wall_fake_door =
 
   on_scenics = "never"
 
+  need_solid_back = true
+
   where  = "edge"
   height = 128
   long   = 128
@@ -61,6 +63,8 @@ PREFABS.Wall_modern_shutter =
   on_liquids = "never"
 
   on_scenics = "never"
+
+  need_solid_back = true
 
   where  = "edge"
   height = 128

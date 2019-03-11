@@ -2243,6 +2243,9 @@ function Fab_find_matches(reqs, match_state)
     -- wall fabs that need to be flat, to specific walls from intersecting
     if reqs.flat and def.deep > 16 then return 0 end
 
+    -- for fabs that need the illusion of depth
+    if not reqs.has_solid_back and def.need_solid_back then return 0 end
+
     return 1
   end
 

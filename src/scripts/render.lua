@@ -228,6 +228,32 @@ function Render_edge(E)
       if that_seed.area != E.S.area then
         reqs.flat = true
       end
+
+      -- check for wall pieces that require solid depth behind
+      -- i.e. fake doors and windows
+      reqs.has_solid_back = true
+      tx, ty = geom.nudge(E.S.x1, E.S.y1, dir, -1)
+      that_seed = Seed_from_coord(tx, ty)
+
+      -- if seeds on either side don't belong to the same room
+      -- then it's not solid
+      if that_seed.area.room != E.S.area.room then
+        reqs.has_solid_back = false
+
+        -- override: but if there are height differences
+        -- why not allow it?
+        if that_seed.floor_h != E.S.floor_h then
+          reqs.has_solid_back = true
+        end
+
+        -- if the other side is a chunk (like a cage or closet)
+        -- or a liquid then disallow it again...
+        if that_seed.area.chunk == "closet"
+        or that_seed.area.mode == "liquid" then
+          reqs.has_solid_back = false
+        end
+
+      end
     end
 
     local def = Fab_pick(reqs, sel(reqs.group, "none_ok", nil))
@@ -2566,8 +2592,9 @@ function Render_all_areas()
 
   Render_skybox()
 
-  Render_find_street_markings()
-  Render_all_street_markings()
+  --MSSP-TODO
+  --Render_find_street_markings()
+  --Render_all_street_markings()
 end
 
 
