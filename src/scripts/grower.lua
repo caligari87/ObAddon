@@ -1157,6 +1157,10 @@ function Grower_split_liquids()
       if A.mode == "liquid" or A.mode == "cage" then
         local S = A.seeds[1]
 
+        if not S then
+          A.mode = "void"
+          return
+        end
         assert(S)
         assert(S.area == A)
 
