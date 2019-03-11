@@ -5045,7 +5045,7 @@ GROW_WIDE_SPACE_CATWALK_STRAIGHT_TO_WALL =
   }
 }]]
 
-SPROUT_SKILLET =
+GROW_SKILLET =
 {
   prob = 150
 
@@ -5068,7 +5068,7 @@ SPROUT_SKILLET =
   }
 }
 
-SPROUT_WIDE_LOW_CEILING_SIDE =
+DECORATE_WIDE_LOW_CEILING_SIDE =
 {
   prob = 150
 
@@ -5085,9 +5085,9 @@ SPROUT_WIDE_LOW_CEILING_SIDE =
   }
 }
 
-SPROUT_WIDE_LOW_CEILING_CENTER =
+DECORATE_WIDE_LOW_CEILING_CENTER =
 {
-  prob = 150
+  prob = 75
 
   env = "building"
 
@@ -5102,9 +5102,9 @@ SPROUT_WIDE_LOW_CEILING_CENTER =
   }
 }
 
-SPROUT_WIDE_LOW_CEILING_CORNER =
+DECORATE_WIDE_LOW_CEILING_CORNER =
 {
-  prob = 150
+  prob = 75
 
   env = "building"
 
@@ -5125,9 +5125,9 @@ SPROUT_WIDE_LOW_CEILING_CORNER =
   }
 }
 
-SPROUT_COLLONADE_3_PILLARS =
+DECORATE_COLLONADE_3_PILLARS =
 {
-  prob = 150
+  prob = 75
 
   env = "building"
 
@@ -5141,19 +5141,19 @@ SPROUT_COLLONADE_3_PILLARS =
   }
 }
 
-SPROUT_TRIANGULAR_LOW_CEILING =
+DECORATE_TRIANGULAR_LOW_CEILING =
 {
-  prob = 150
+  prob = 75
 
   env = "building"
 
   structure =
   {
-    "1111111","1111111"
-    "1111111","11/.%11"
-    "1111111","1/AAA%1"
-    "1111111","/AAAAA%"
-    ".......","......."
+    "111111111","111111111"
+    "111111111","111/.%111"
+    "111111111","11/AAA%11"
+    "111111111","1/AAAAA%1"
+    ".!.....!.",".!.....!."
   }
 
   diagonals =
@@ -5164,9 +5164,9 @@ SPROUT_TRIANGULAR_LOW_CEILING =
   }
 }
 
-DECORATE_PILLAR_2X2 =
+GROW_PILLAR_2X2 =
 {
-  prob = 25
+  prob = 15
 
   env = "building"
 
@@ -5181,7 +5181,7 @@ DECORATE_PILLAR_2X2 =
 
 DECORATE_PILLAR_3X3 =
 {
-  prob = 25
+  prob = 15
 
   env = "building"
 
@@ -5203,7 +5203,7 @@ DECORATE_PILLAR_3X3 =
 
 DECORATE_PILLAR_BEAN =
 {
-  prob = 25
+  prob = 15
 
   env = "building"
 
@@ -5224,7 +5224,7 @@ DECORATE_PILLAR_BEAN =
 
 DECORATE_PILLAR_GATE =
 {
-  prob = 30
+  prob = 15
 
   env = "building"
 

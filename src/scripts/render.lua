@@ -242,8 +242,15 @@ function Render_edge(E)
 
         -- override: but if there are height differences
         -- why not allow it?
-        if that_seed.floor_h != E.S.floor_h then
-          reqs.has_solid_back = true
+        if that_seed.floor_h and E.S.floor_h then
+          if that_seed.floor_h >= E.S.floor_h + 128 then
+            reqs.has_solid_back = true
+          end
+        end
+        if that_seed.ceil_h and E.S.ceil_h then
+          if that_seed.ceil_h <= E.S.floor_h then
+            reqs.has_solid_back = true
+          end
         end
 
         -- if the other side is a chunk (like a cage or closet)
