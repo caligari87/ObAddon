@@ -5070,7 +5070,7 @@ GROW_SKILLET =
 
 DECORATE_WIDE_LOW_CEILING_SIDE =
 {
-  prob = 150
+  prob = 15
 
   env = "building"
 
@@ -5087,7 +5087,7 @@ DECORATE_WIDE_LOW_CEILING_SIDE =
 
 DECORATE_WIDE_LOW_CEILING_CENTER =
 {
-  prob = 75
+  prob = 15
 
   env = "building"
 
@@ -5104,7 +5104,7 @@ DECORATE_WIDE_LOW_CEILING_CENTER =
 
 DECORATE_WIDE_LOW_CEILING_CORNER =
 {
-  prob = 75
+  prob = 15
 
   env = "building"
 
@@ -5127,7 +5127,7 @@ DECORATE_WIDE_LOW_CEILING_CORNER =
 
 DECORATE_COLLONADE_3_PILLARS =
 {
-  prob = 75
+  prob = 15
 
   env = "building"
 
@@ -5143,7 +5143,7 @@ DECORATE_COLLONADE_3_PILLARS =
 
 DECORATE_TRIANGULAR_LOW_CEILING =
 {
-  prob = 75
+  prob = 15
 
   env = "building"
 
@@ -5181,7 +5181,7 @@ GROW_PILLAR_2X2 =
 
 DECORATE_PILLAR_3X3 =
 {
-  prob = 15
+  prob = 10
 
   env = "building"
 
@@ -5203,7 +5203,7 @@ DECORATE_PILLAR_3X3 =
 
 DECORATE_PILLAR_BEAN =
 {
-  prob = 15
+  prob = 10
 
   env = "building"
 
@@ -5224,7 +5224,7 @@ DECORATE_PILLAR_BEAN =
 
 DECORATE_PILLAR_GATE =
 {
-  prob = 15
+  prob = 10
 
   env = "building"
 
