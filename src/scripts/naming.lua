@@ -3229,7 +3229,7 @@ namelib.ALPHABET =
 
 namelib.SYLLABLES =
 {
-  c =
+  e = -- EXOTIC names
   {
     -- country/place names
     a = 50,
@@ -3597,8 +3597,7 @@ namelib.SYLLABLES =
 
     reid = 50, -- nereid
 
-    cent = 50, -- centaurs
-    aurs = 50,
+    aurs = 50, -- centaurs
 
     cloids = 50, -- damocloids
 
@@ -3616,12 +3615,116 @@ namelib.SYLLABLES =
 
     oort = 50, -- oort
   }
+
+  a = --ANGLICAN names
+  {
+    bait = 50
+    bay = 50
+    beach = 50
+    brent = 50
+    bridge = 50
+    brook = 50
+    ca = 50
+    cal = 50
+    cen = 50
+    ches = 50
+    cho = 50
+    com = 50
+    dar = 50
+    den = 50
+    en = 50
+    es = 50
+    far = 50
+    field = 50
+    ford = 50
+    ford = 50
+    gar = 50
+    green = 50
+    gue = 50
+    hack = 50
+    hamp = 50
+    hamp = 50
+    hat = 50
+    hicks = 50
+    hol = 50
+    ien = 50
+    ing = 50
+    jones = 50
+    kers = 50
+    la = 50
+    lau = 50
+    le = 50
+    ley = 50
+    ley = 50
+    long = 50
+    low = 50
+    lyn = 50
+    mack = 50
+    man = 50
+    mas = 50
+    med = 50
+    mi = 50
+    mi = 50
+    mo = 50
+    na = 50
+    naan = 50
+    neo = 50
+    new = 50
+    nor = 50
+    nuet = 50
+    pat = 50
+    plains = 50
+    port = 50
+    ram = 50
+    rel = 50
+    rich = 50
+    ridge = 50
+    ry = 50
+    sack = 50
+    say = 50
+    sey = 50
+    shir = 50
+    shore = 50
+    smith = 50
+    stam = 50
+    stead = 50
+    stream = 50
+    tar = 50
+    ter = 50
+    ter = 50
+    tic = 50
+    ton = 50
+    town = 50
+    ty = 50
+    val = 50
+    ver = 50
+    vi = 50
+    ville = 50
+    wad = 50
+    walk = 50
+    wark = 50
+    west = 50
+    white = 50
+    wich = 50
+    wood = 50
+    yon = 50
+    ["tan"] = 50
+  }
 }
 
 
 
 -- MSSP-TODO
-function namelib.generate_unique_noun()
+function namelib.generate_unique_noun(m)
+  local mode = m
+
+  if rand.odds(50) then
+    mode = "exotic"
+  else
+    mode = "anglican"
+  end
+
+  mode = "anglican"
 
   local function make_absolutely_random_syllable()
     local patterns =
@@ -3643,11 +3746,20 @@ function namelib.generate_unique_noun()
   end
 
   local function make_placelike_syllable()
-    return rand.key_by_probs(namelib.SYLLABLES.c)
+    if mode == "anglican" then
+      return rand.key_by_probs(namelib.SYLLABLES.a)
+    elseif mode == "exotic" then
+      return rand.key_by_probs(namelib.SYLLABLES.e)
+    end
   end
 
   local name = ""
-  local syllable_count = rand.pick({2,2,3,3,3,3,3,4,4,4})
+  local syllable_count
+  if mode == "anglican" then
+    syllable_count = 2
+  elseif mode == "exotic" then
+    syllable_count = rand.pick({2,2,2,2,3,3,3,3,3,3,4})
+  end
 
   local i = 1
 
@@ -3657,8 +3769,6 @@ function namelib.generate_unique_noun()
   until i > syllable_count
 
   name = string.gsub(name,"^%l",string.upper)
-
-  print("MSSP name gen test: " .. name)
 
   return name
 end
