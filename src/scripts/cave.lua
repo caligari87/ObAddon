@@ -4413,7 +4413,7 @@ function Cave_prepare_scenic_vista(area)
     end
   end
 
-  local nice_view_prob = style_sel("scenics", 20, 40, 60, 100)
+  local nice_view_prob = style_sel("scenics", 0, 33, 67, 100)
   if rand.odds(math.abs(nice_view_prob-100)) then
     vista_type = "no_vista"
   end

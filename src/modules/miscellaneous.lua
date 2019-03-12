@@ -106,7 +106,7 @@ OB_MODULES["misc"] =
     { name="beams",       label=_("Beams"),          choices=STYLE_CHOICES,
       tooltip = "Allows the appearance of thin pillars to appear between the borders of different elevations.",
     }
-    { name="Scenics",     label=_("Scenics"),          choices=STYLE_CHOICES,
+    { name="scenics",     label=_("Scenics"),          choices=STYLE_CHOICES,
       tooltip = "Controls the amount of fancy scenics visible at room bordering the maps.",
       gap=1
     }
