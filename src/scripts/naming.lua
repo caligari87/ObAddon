@@ -204,8 +204,8 @@ namelib.NAMES =
         Garrett=3, Caligari87=3, SimonV=3,
 
         -- special tag for the name generator
-        PROPERNOUNGENERATOR_EXOTIC = 400
-        PROPERNOUNGENERATOR_ANGLICAN = 400
+        NOUNGENEXOTIC = 400
+        NOUNGENANGLICAN = 400
       }
 
       b =
@@ -531,7 +531,7 @@ namelib.NAMES =
         MsrSgtShooterPerson=3, Glaice=3, Frozsoul=3,
         Garrett=3, Caligari87=3, SimonV=3,
 
-        PROPERNOUNGENERATOR_EXOTIC = 150
+        NOUNGENEXOTIC = 150
       }
 
       a =
@@ -1127,8 +1127,8 @@ namelib.NAMES =
         MsrSgtShooterPerson=3, Glaice=3, Frozsoul=3,
         Garrett=3, Caligari87=3, SimonV=3,
 
-        PROPERNOUNGENERATOR_EXOTIC = 150
-        PROPERNOUNGENERATOR_ANGLICAN = 650
+        NOUNGENEXOTIC = 150
+        NOUNGENANGLICAN = 650
       }
 
       n =
@@ -3621,28 +3621,47 @@ namelib.SYLLABLES =
   a = --ANGLICAN names
   {
     ["lower"] = 50
+    ["or"] = 50
+    ["read"] = 50
     ["tan"] = 50
     ["upper"] = 50
     acre = 50
+    apple = 50
+    aus = 50
     bait = 50
     bay = 50
     beach = 50
+    belle = 50
+    bello = 50
     bick = 50
     bing = 50
     black = 50
+    blaine = 50
     bob = 50
+    body = 50
     booth = 50
+    born = 50
+    bos = 50
+    bowl = 50
     brent = 50
     brick = 50
     bridge = 50
     bron = 50
     brook = 50
+    broom = 50
+    bruns = 50
+    buck = 50
+    bur = 50
+    burgh = 50
+    bury = 50
     ca = 50
     cal = 50
+    car = 50
     castle = 50
     cen = 50
     ches = 50
     chest = 50
+    chi = 50
     cho = 50
     cis = 50
     co = 50
@@ -3651,6 +3670,8 @@ namelib.SYLLABLES =
     cres = 50
     dale = 50
     dar = 50
+    dave = 50
+    dear = 50
     del = 50
     den = 50
     don = 50
@@ -3658,48 +3679,79 @@ namelib.SYLLABLES =
     east = 50
     en = 50
     es = 50
+    eve = 50
+    eye = 50
     fair = 50
+    falls = 50
     far = 50
     field = 50
+    flag = 50
     ford = 50
     fran = 50
+    frank = 50
     fy = 50
+    galv = 50
     gar = 50
+    gate = 50
     gie = 50
+    gil = 50
+    glen = 50
+    go = 50
+    grand = 50
+    grape = 50
     green = 50
+    grove = 50
     gue = 50
+    gulf = 50
     hack = 50
     hamp = 50
+    harl = 50
     harp = 50
+    harris = 50
     hat = 50
+    haven = 50
     hicks = 50
+    hill = 50
     hol = 50
+    home = 50
     hunt = 50
     ien = 50
     ing = 50
+    john = 50
     jones = 50
     kel = 50
     kers = 50
     kings = 50
     la = 50
+    lake = 50
     lau = 50
     le = 50
+    lees = 50
     ley = 50
+    ling = 50
+    lock = 50
     long = 50
+    loo = 50
     lough = 50
     low = 50
     lyn = 50
     mac = 50
     mack = 50
     man = 50
+    maple = 50
     mas = 50
     may = 50
     med = 50
     mi = 50
+    mid = 50
     mint = 50
     mo = 50
     mont = 50
+    monte = 50
+    moore = 50
     more = 50
+    mound = 50
+    mount = 50
     na = 50
     naan = 50
     nas = 50
@@ -3708,10 +3760,15 @@ namelib.SYLLABLES =
     nor = 50
     north = 50
     nuet = 50
+    oak = 50
     pach = 50
+    palm = 50
     pat = 50
+    pea = 50
+    pete = 50
     plains = 50
     ple = 50
+    point = 50
     port = 50
     queens = 50
     ram = 50
@@ -3720,39 +3777,56 @@ namelib.SYLLABLES =
     rich = 50
     rick = 50
     ridge = 50
+    rock = 50
     rom = 50
+    roy = 50
     ry = 50
     sack = 50
+    san = 50
     say = 50
+    scran = 50
     sea = 50
     sey = 50
+    shawn = 50
     shef = 50
     shir = 50
     shore = 50
     smith = 50
+    son = 50
+    sota = 50
     south = 50
+    springs = 50
+    staff = 50
     stam = 50
     stead = 50
     stee = 50
     stone = 50
     stream = 50
     tar = 50
+    taunt = 50
     ter = 50
     thon = 50
     tic = 50
+    tin = 50
     ton = 50
     town = 50
+    tree = 50
+    trent = 50
     ty = 50
     val = 50
     vale = 50
     ve = 50
     ver = 50
+    vere = 50
     vi = 50
     ville = 50
+    vine = 50
     wad = 50
     walk = 50
+    wall = 50
     war = 50
     wark = 50
+    water = 50
     well = 50
     west = 50
     whit = 50
@@ -3762,7 +3836,9 @@ namelib.SYLLABLES =
     win = 50
     wind = 50
     wood = 50
+    yard = 50
     yon = 50
+    youngs = 50
   }
 }
 
@@ -3798,10 +3874,10 @@ function namelib.generate_unique_noun(m)
     return syl_pattern
   end
 
-  local function make_placelike_syllable()
-    if mode == "anglican" then
+  local function make_placelike_syllable(style)
+    if style == "anglican" then
       return rand.key_by_probs(namelib.SYLLABLES.a)
-    elseif mode == "exotic" then
+    elseif style == "exotic" then
       return rand.key_by_probs(namelib.SYLLABLES.e)
     end
   end
@@ -3817,7 +3893,7 @@ function namelib.generate_unique_noun(m)
   local i = 1
 
   repeat
-    name = name .. make_placelike_syllable()
+    name = name .. make_placelike_syllable(mode)
     i = i + 1
   until i > syllable_count
 
@@ -3849,8 +3925,8 @@ function namelib.fix_up(name)
   name = string.gsub(name, "s/s", "")
   name = string.gsub(name, "/s", "")
 
-  name = string.gsub(name, "PROPERNOUNGENERATOR_ANGLICAN", namelib.generate_unique_noun("anglican"))
-  name = string.gsub(name, "PROPERNOUNGENERATOR_EXOTIC", namelib.generate_unique_noun("exotic"))
+  name = string.gsub(name, "NOUNGENANGLICAN", namelib.generate_unique_noun("anglican"))
+  name = string.gsub(name, "NOUNGENEXOTIC", namelib.generate_unique_noun("exotic"))
   return name
 end
 
