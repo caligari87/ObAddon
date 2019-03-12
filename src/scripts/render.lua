@@ -2549,7 +2549,7 @@ function Render_skybox()
     local skyfab_list = {}
     table.insert(skyfab_list, PREFABS["Skybox_generic"])
     table.insert(skyfab_list, PREFABS["Skybox_garrett_city"])
-    --table.insert(skyfab_list, PREFABS["Skybox_garrett_hell"])
+    table.insert(skyfab_list, PREFABS["Skybox_garrett_hell"])
     skyfab = rand.pick(skyfab_list)
 
     -- proper skybox picking code doesn't seem to work and
@@ -2567,7 +2567,7 @@ function Render_skybox()
     elseif LEVEL.theme_name == "tech" then
       skyfab = PREFABS["Skybox_generic"]
     elseif LEVEL.theme_name == "hell" then
-      skyfab = PREFABS["Skybox_generic"]
+      skyfab = PREFABS["Skybox_garrett_hell"]
     else
       skyfab = PREFABS["Skybox_generic"]
     end
