@@ -103,12 +103,12 @@ OB_MODULES["misc"] =
 
     { name="windows",     label=_("Windows"),        choices=STYLE_CHOICES }
     { name="symmetry",    label=_("Symmetry"),       choices=STYLE_CHOICES }
-    { name="beams",       label=_("Beams"),          choices=STYLE_CHOICES, 
+    { name="beams",       label=_("Beams"),          choices=STYLE_CHOICES,
       tooltip = "Allows the appearance of thin pillars to appear between the borders of different elevations.",
     }
-    { name="Scenics",     label=_("Scenics"),          choices=STYLE_CHOICES, 
+    { name="Scenics",     label=_("Scenics"),          choices=STYLE_CHOICES,
       tooltip = "Controls the amount of fancy scenics visible at room bordering the maps.",
-      gap=1 
+      gap=1
     }
 
     { name="darkness",    label=_("Dark Outdoors"),  choices=STYLE_CHOICES }

@@ -232,8 +232,15 @@ function Episode_pick_names()
 
   local i = 0
   gui.printf("Noun generator test:\n")
+  gui.printf("Exotic:\n")
   repeat
-    gui.printf(namelib.generate_unique_noun() .. " | ")
+    gui.printf(namelib.generate_unique_noun("exotic") .. " | ")
+    i = i + 1
+  until i >= 30
+  i = 0
+  gui.printf("\nAnglican:\n")
+  repeat
+    gui.printf(namelib.generate_unique_noun("anglican") .. " | ")
     i = i + 1
   until i >= 30
   gui.printf("\n")

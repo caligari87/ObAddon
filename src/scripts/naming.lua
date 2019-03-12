@@ -204,7 +204,8 @@ namelib.NAMES =
         Garrett=3, Caligari87=3, SimonV=3,
 
         -- special tag for the name generator
-        PROPERNOUNGENERATOR = 800
+        PROPERNOUNGENERATOR_EXOTIC = 400
+        PROPERNOUNGENERATOR_ANGLICAN = 400
       }
 
       b =
@@ -530,7 +531,7 @@ namelib.NAMES =
         MsrSgtShooterPerson=3, Glaice=3, Frozsoul=3,
         Garrett=3, Caligari87=3, SimonV=3,
 
-        PROPERNOUNGENERATOR = 150
+        PROPERNOUNGENERATOR_EXOTIC = 150
       }
 
       a =
@@ -1126,7 +1127,8 @@ namelib.NAMES =
         MsrSgtShooterPerson=3, Glaice=3, Frozsoul=3,
         Garrett=3, Caligari87=3, SimonV=3,
 
-        PROPERNOUNGENERATOR = 750
+        PROPERNOUNGENERATOR_EXOTIC = 150
+        PROPERNOUNGENERATOR_ANGLICAN = 650
       }
 
       n =
@@ -3618,113 +3620,164 @@ namelib.SYLLABLES =
 
   a = --ANGLICAN names
   {
+    ["lower"] = 50
+    ["tan"] = 50
+    ["upper"] = 50
+    acre = 50
     bait = 50
     bay = 50
     beach = 50
+    bick = 50
+    bing = 50
+    black = 50
+    bob = 50
+    booth = 50
     brent = 50
+    brick = 50
     bridge = 50
+    bron = 50
     brook = 50
     ca = 50
     cal = 50
+    castle = 50
     cen = 50
     ches = 50
+    chest = 50
     cho = 50
+    cis = 50
+    co = 50
     com = 50
+    cour = 50
+    cres = 50
+    dale = 50
     dar = 50
+    del = 50
     den = 50
+    don = 50
+    drive = 50
+    east = 50
     en = 50
     es = 50
+    fair = 50
     far = 50
     field = 50
     ford = 50
-    ford = 50
+    fran = 50
+    fy = 50
     gar = 50
+    gie = 50
     green = 50
     gue = 50
     hack = 50
     hamp = 50
-    hamp = 50
+    harp = 50
     hat = 50
     hicks = 50
     hol = 50
+    hunt = 50
     ien = 50
     ing = 50
     jones = 50
+    kel = 50
     kers = 50
+    kings = 50
     la = 50
     lau = 50
     le = 50
     ley = 50
-    ley = 50
     long = 50
+    lough = 50
     low = 50
     lyn = 50
+    mac = 50
     mack = 50
     man = 50
     mas = 50
+    may = 50
     med = 50
     mi = 50
-    mi = 50
+    mint = 50
     mo = 50
+    mont = 50
+    more = 50
     na = 50
     naan = 50
+    nas = 50
     neo = 50
     new = 50
     nor = 50
+    north = 50
     nuet = 50
+    pach = 50
     pat = 50
     plains = 50
+    ple = 50
     port = 50
+    queens = 50
     ram = 50
+    red = 50
     rel = 50
     rich = 50
+    rick = 50
     ridge = 50
+    rom = 50
     ry = 50
     sack = 50
     say = 50
+    sea = 50
     sey = 50
+    shef = 50
     shir = 50
     shore = 50
     smith = 50
+    south = 50
     stam = 50
     stead = 50
+    stee = 50
+    stone = 50
     stream = 50
     tar = 50
     ter = 50
-    ter = 50
+    thon = 50
     tic = 50
     ton = 50
     town = 50
     ty = 50
     val = 50
+    vale = 50
+    ve = 50
     ver = 50
     vi = 50
     ville = 50
     wad = 50
     walk = 50
+    war = 50
     wark = 50
+    well = 50
     west = 50
+    whit = 50
     white = 50
     wich = 50
+    wick = 50
+    win = 50
+    wind = 50
     wood = 50
     yon = 50
-    ["tan"] = 50
   }
 }
 
 
 
 -- MSSP-TODO
+-- noun generator, creates nouns from syllables
+-- currently two modes:
+-- "Exotic" - syllables come from country names
+--            and solar system body names
+-- "Anglican" - syllables come from US and UK towns
+--              and places, usually emphasizes whole
+--              words as syllables
 function namelib.generate_unique_noun(m)
   local mode = m
-
-  if rand.odds(50) then
-    mode = "exotic"
-  else
-    mode = "anglican"
-  end
-
-  mode = "anglican"
 
   local function make_absolutely_random_syllable()
     local patterns =
@@ -3796,7 +3849,8 @@ function namelib.fix_up(name)
   name = string.gsub(name, "s/s", "")
   name = string.gsub(name, "/s", "")
 
-  name = string.gsub(name, "PROPERNOUNGENERATOR", namelib.generate_unique_noun())
+  name = string.gsub(name, "PROPERNOUNGENERATOR_ANGLICAN", namelib.generate_unique_noun("anglican"))
+  name = string.gsub(name, "PROPERNOUNGENERATOR_EXOTIC", namelib.generate_unique_noun("exotic"))
   return name
 end
 

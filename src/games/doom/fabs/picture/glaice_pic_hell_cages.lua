@@ -31,7 +31,7 @@ PREFABS.Pic_glaice_hell_cages2 =
 
   map = "MAP02"
 
-  thing_75 = 
+  thing_75 =
    {
    hang_twitching = 50
    hang_torso = 50
