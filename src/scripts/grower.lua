@@ -2726,8 +2726,8 @@ stderrf("Link pieces: %s dir:%d <--> %s dir:%d\n",
          prev_chunk.area.name, dir1,
               chunk.area.name, dir2)
 --]]
-          assert(prev_chunk.h_join[dir1] == nil)
-          assert(     chunk.h_join[dir2] == nil)
+          --assert(prev_chunk.h_join[dir1] == nil)
+          --assert(     chunk.h_join[dir2] == nil)
 
           prev_chunk.h_join[dir1] = chunk
                chunk.h_join[dir2] = prev_chunk
