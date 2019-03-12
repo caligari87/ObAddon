@@ -1242,7 +1242,7 @@ gui.debugf("new room %s : env = %s : parent = %s\n", R.name, tostring(info.env),
       if R.id == 2 and rand.odds(90) then
         R.is_street = true
         R.is_outdoor = true
-      elseif R.id%2 == 2 and rand.odds(66) and not R.id == 2 then
+      elseif R.id%2 == 0 and rand.odds(70) and R.id > 2 then
         R.is_street = true
         R.is_outdoor = true
       end
