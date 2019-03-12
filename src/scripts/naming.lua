@@ -3226,6 +3226,7 @@ namelib.ALPHABET =
 }
 
 
+
 namelib.SYLLABLES =
 {
   c =
@@ -3515,8 +3516,109 @@ namelib.SYLLABLES =
     zi = 50,
     zim = 50,
     zil = 50,
+
+    -- celestials
+    -- note: some of the syllables are deliberately incomplete
+    -- because they already show up in the country syllables list
+    sol = 50 -- our sun
+
+    ry = 50, --mercury
+
+    nus = 50, --venus
+
+    rra = 50, --terra
+
+    mars = 50,
+
+    ju = 50, --jupiter
+    pi = 50,
+    ter = 50,
+
+    sa = 50, --saturn
+    turn = 50,
+
+    nep = 50, --neptune
+    tune = 50,
+
+    ur = 50, --uranus
+    us = 50,
+
+    plu = 50, -- pluto
+
+    cer = 50, -- ceres
+
+    -- minor celestial bodies
+    kui = 50, -- kuiper belt
+    per = 50,
+
+    dei = 50, -- deimos
+
+    pho = 50, -- phobos
+
+    pal = 50, -- pallas
+    las = 50,
+
+    ves = 50, -- vesta
+
+    hy = 50, --hygiea
+    giea = 50,
+
+    eu = 50, -- europa
+
+    mede = 50, -- ganymede
+
+    cal = 50, -- callisto
+    lis = 50,
+
+    en = 50, -- enceladus
+    dus = 50,
+
+    thys = 50, -- tethys
+
+    dione = 50,
+
+    rhea = 50,
+
+    ia = 50, -- iapetus
+    tus = 50,
+
+    phoe = 50, --pheobe
+
+    ran = 50, -- miranda
+
+    riel = 50, -- ariel
+
+    umb = 50, -- umbriel
+
+    ron = 50, -- oberon
+
+    pro = 50, -- pro
+    teus = 50,
+
+    reid = 50, -- nereid
+
+    cent = 50, -- centaurs
+    aurs = 50,
+
+    cloids = 50, -- damocloids
+
+    cha = 50, -- charon
+
+    vanth = 50,
+
+    hau = 50, -- haumea
+    mea = 50,
+
+    ris = 50, -- eris
+
+    dys = 50, -- dysnomia
+    mia = 50,
+
+    oort = 50, -- oort
   }
 }
+
+
 
 -- MSSP-TODO
 function namelib.generate_unique_noun()
