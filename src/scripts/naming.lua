@@ -529,6 +529,8 @@ namelib.NAMES =
         -- ObAddon contributor names
         MsrSgtShooterPerson=3, Glaice=3, Frozsoul=3,
         Garrett=3, Caligari87=3, SimonV=3,
+
+        PROPERNOUNGENERATOR = 150
       }
 
       a =
@@ -1123,6 +1125,8 @@ namelib.NAMES =
         -- ObAddon contributor names
         MsrSgtShooterPerson=3, Glaice=3, Frozsoul=3,
         Garrett=3, Caligari87=3, SimonV=3,
+
+        PROPERNOUNGENERATOR = 750
       }
 
       n =
