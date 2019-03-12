@@ -568,7 +568,7 @@ GLAICE_MATERIALS = {
   --------------------
   --------------------
 
-  BLACK0 = { t="ALTASH",  f="BLACK0" }
+  -- Organic
   BODIESFL = { f="BODIESFL", t="BODIESB" }
 
   -- Carpet
@@ -577,17 +577,10 @@ GLAICE_MATERIALS = {
   CARPET3 = { t="PANNYA",  f="CARPET3" }
   CARPET4 = { t="WOOD3",  f="CARPET4" }
 
-  CEIL4_4 = { f="CEIL4_4", t="COMPBLUE" }
-
+  -- Various Decayed Tech Flooring / etc
   DARKF01 = { t="BROWNGRN",  f="DARKF01" }
   DARKF02 = { t="BROWNGRN",  f="DARKF02" }
   DARKF03 = { t="METL01",  f="DARKF03" }
-  DARKM01 = { t="DARKMET1",  f="DARKM01" }
-
-  GRNLITE2 = { f="GRNLITE2", t="TEKGRN01" }
-  FFLAT01 = { t="GRAY8",  f="FFLAT01" }
-
-  -- Various Decayed Tech Flooring / etc
   FLOOR46D = { t="PIPEDRK1",  f="FLOOR46D" }
   FLOOR46E = { t="PIPEDRK1",  f="FLOOR46E" }
   FLAT15 = { t="FLAT15",  f="COMPRED" }
@@ -645,6 +638,7 @@ GLAICE_MATERIALS = {
   GLITE09 = { t="METL01",  f="GLITE09" } --Blue
 
   -- Metal / Rust
+  DARKM01 = { t="DARKMET1",  f="DARKM01" }
   GMET01 = { t="METL02",  f="GMET01" }
   GMET02 = { t="METL02",  f="GMET02" } --Rivets
   GMET03 = { t="METL02",  f="GMET03" } --Less rivets
@@ -652,17 +646,23 @@ GLAICE_MATERIALS = {
   GMET05 = { t="GOTH15",  f="GMET05" }
   GMET06 = { t="GOTH15",  f="GMET06" }
   GMET07 = { t="METL01",  f="GMET07" }
-
-  GRNRKF  = { f="GRNRKF", t="GRNSTONE" } --Green SP_ROCK1/MFLR8_3
-  GRENFLOR = { f="GRENFLOR",  t="COMPGREN" }
+  MEM01 = { t="HELMET2",  f="MEM01" }
 
   -- Bricks
+  BLACK0 = { t="ALTASH",  f="BLACK0" }
   BRIK01 = { t="BRIKS06",  f="BRIK01" }
   GSTN01 = { t="GOTH07",  f="GSTN01" } --Gray
   GSTN02 = { t="GOTH07",  f="GSTN02" } --Dark gray
   GSTN03 = { t="GOTH02",  f="GSTN03" } --Dark brown bricks/bronze plates
   GSTN04 = { t="GOTH07",  f="GSTN04" } --Light brown
   GSTN05 = { t="GOTH07",  f="GSTN05" } --Multicolored brown
+  URB1 = { f="URB1", t="URBAN1" }
+  URB2 = { f="URB2", t="URBAN2" }
+
+  -- Rock
+  GRNRKF  = { f="GRNRKF", t="GRNSTONE" } --Green SP_ROCK1/MFLR8_3
+  RROCK14Z  = { f="RROCK14Z", t="BRIKS09" } --Gray version
+  RROCK21  = { f="RROCK21", t="TEKGRY01" }  --Grayscale version of RROCK20
 
   -- Wood flooring
   GWOD01 = { t="WOOD1",  f="GWOD01" } -- Tiles poorly
@@ -672,7 +672,7 @@ GLAICE_MATERIALS = {
   WOODTIL = { t="WD03",  f="WOODTIL" }
   WOODTI2 = { t="WD04",  f="WOODTI2" }
 
-  --
+  -- Grating
   GRATE1 = { t="METL01",  f="GRATE1" }
   GRATE2 = { t="METL01",  f="GRATE2" }
   GRATE3 = { t="METL01",  f="GRATE3" }
@@ -704,8 +704,6 @@ GLAICE_MATERIALS = {
   TLITE65W = { f="TLITE65W", t="COMPSPAN" }
   TLITE65Y = { f="TLITE65Y", t="COMPSPAN" }
 
-  MEM01 = { t="HELMET2",  f="MEM01" }
-
   -- Quake
   QFLAT01 = { t="BRIKS07",  f="QFLAT01" }
   QFLAT02 = { t="BRIKS07",  f="QFLAT02" }
@@ -716,9 +714,6 @@ GLAICE_MATERIALS = {
   QFLAT07 = { t="BRIKS07",  f="QFLAT07" }
   QFLAT09 = { t="METL01",  f="QFLAT09" }
   QFLAT10 = { t="METAL1",  f="QFLAT10" }
-
-  RROCK14Z  = { f="RROCK14Z", t="BRIKS09" } --Gray version
-  RROCK21  = { f="RROCK21", t="TEKGRY01" }  --Grayscale version of RROCK20
 
   -- Various shiny floors
   SHINY01 = { t="SHAWN2",  f="SHINY01" }
@@ -738,6 +733,9 @@ GLAICE_MATERIALS = {
   SNOW9 = { t="ICEFALL",  f="SNOW9" } --Ice
 
   -- Tech flats
+  CEIL4_4 = { f="CEIL4_4", t="COMPBLUE" }
+  GRENFLOR = { f="GRENFLOR",  t="COMPGREN" }
+  GRNLITE2 = { f="GRNLITE2", t="TEKGRN01" }
   STARBR2F = { t="STARBR2", f="STARBR2F" }
   STARG1F = { t="STARG1", f="STARG1F" }
   STARGR1F = { t="STARG1", f="STARG1F" }
@@ -747,13 +745,11 @@ GLAICE_MATERIALS = {
   TEKFLR4 = { t="TEKWALL4",  f="TEKFLR4" }
 
   -- Tiles
+  FFLAT01 = { t="GRAY8",  f="FFLAT01" }
   TILES1 = { t="STARGRY1",  f="TILES1" }
   TILES2 = { t="BROWN1",  f="TILES2" }
   TILES3 = { t="STUC01",  f="TILES3" }
   TILES4 = { t="GRAY1",  f="TILES4" }
-
-  URB1 = { f="URB1", t="URBAN1" }
-  URB2 = { f="URB2", t="URBAN2" }
 
 ---------------------------------------------------------------
 -- Overwriting existing flats to use new patches for textures

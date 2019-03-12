@@ -69,7 +69,6 @@ GLAICE_THEMES =
       FLOOR5_1 = 25
       FLOOR5_3 = 30
       FLOOR0_3 = 30
-      FLOOR5_1 = 25
       FLOOR3_3 = 20
       FLOOR0_2 = 20
       FLOOR0_1 = 20
@@ -87,21 +86,18 @@ GLAICE_THEMES =
       GRATE1 = 100
       GRATE2 = 100
       GRATE3 = 100
-      GRATE4 = 100
       GRATE5 = 100
       GRATE6 = 100
       GRATE7 = 100
-      GRATE8 = 100
 
       DARKF01 = 75
       DARKF02 = 75
       DARKF03 = 75
-      DARKM01 = 75
 
       SHINY01 = 75
       SHINY02 = 75
       SHINY03 = 75
-      SHINY04 = 75
+      SHINY04 = 35
     }
 
     ceilings =
@@ -139,6 +135,52 @@ GLAICE_THEMES =
     {
       FLAT14 = 70
       FLOOR1_1 = 35
+      FLAT4 = 10
+      CEIL4_1 = 20
+      CEIL4_2 = 20
+      CEIL5_1 = 20
+      CEIL4_4 = 20
+    }
+
+    ceilings =
+    {
+      CEIL5_1 = 50
+      CEIL4_1 = 20
+      CEIL4_2 = 20
+      CEIL4_4 = 15
+      TEK1    = 7
+      TEK2    = 7
+      QFLAT09 = 5
+      GRATE3  = 5
+    }
+  }
+
+  -- Multi colors here!
+  tech_ComputersMulti =
+  {
+    prob = 40
+    env = "building"
+
+    walls =
+    {
+      COMPSPAN = 20
+      CMPOHSO = 10
+      CMPTILE = 20
+      COMPTIL2 = 20
+      COMPTIL3 = 10
+      COMPTIL4 = 20
+      COMPTIL5 = 20
+      COMPBLUE = 10
+      COMPGREN = 10
+      COMPRED  = 10
+    }
+
+    floors =
+    {
+      FLAT14 = 70
+      FLOOR1_1 = 35
+      FLOOR1_2 = 30
+      GRENFLOR = 20
       FLAT4 = 10
       CEIL4_1 = 20
       CEIL4_2 = 20
@@ -266,30 +308,38 @@ GLAICE_THEMES =
     {
       FLAT3 = 50
       FLOOR0_1 = 30
+      GRATE1 = 30
+      GRATE2 = 30
+      GRATE3 = 30
       FLOOR4_5 = 20
       FLOOR4_6 = 20
       FLOOR4_8 = 20
       FLOOR5_1 = 15
       FLOOR7_1 = 15
+      GRATE7 = 15
       MFLR8_2  = 20
       SLIME15 = 20
       SLIME14 = 20
+      GRATE4 = 10
       CEIL4_1 = 5
       CEIL4_2 = 5
       QFLAT09 = 10
       QFLAT10 = 5
-      GRATE1 = 10
-      GRATE2 = 10
+      MEM01   = 10
       DARKF01 = 15
       DARKF02 = 15
       DARKF03 = 15
       FLOOR46E = 10
+      GMET06   = 10
+      GMET07   = 10
+      GMET05   = 15
     }
 
     ceilings =
     {
       CEIL5_1 = 40
       CEIL5_2 = 15
+      GRATE4  = 25
       SLIME15 = 40
       CEIL4_1 = 20
       SLIME14 = 40
@@ -297,6 +347,12 @@ GLAICE_THEMES =
       GRATE3  = 20
       GRATE5  = 15
       GRATE6  = 15
+      GRATE8  = 20
+      G15     = 10
+      GMET01  = 5
+      GMET02  = 15
+      GMET03  = 15
+      GMET04  = 20
     }
   }
 
@@ -331,6 +387,7 @@ GLAICE_THEMES =
       SHINY01 = 5
       SHINY02 = 5
       SHINY03 = 10
+      GMET07  = 3
     }
 
     ceilings =
@@ -554,6 +611,7 @@ GLAICE_THEMES =
       FLAT5_1 = 5
       GRATE1  = 10
       GRATE2  = 10
+      GRATE7  = 10
       FLOOR4_8 = 10
       FLOOR5_1 = 10
       FLOOR51C = 10
@@ -572,6 +630,7 @@ GLAICE_THEMES =
       CEIL1_1 = 5
       FLAT5_2 = 5
       GRATE4  = 10
+      GRATE8  = 10
     }
 
     cliff_mats =
@@ -594,6 +653,62 @@ GLAICE_THEMES =
     BODIESB = 10
     }
 
+  }
+
+  hell_fleshcraft =
+  {
+    env  = "building"
+    prob = 50
+
+    walls =
+    {
+     SKIN2 = 10
+     SKIN3 = 10
+     SKIN4 = 10
+     SKINMET1 = 30
+     SKINMET2 = 30
+     SKINLOW1 = 30
+     SKINMET3 = 20
+     SKINMET4 = 20
+     SKINMET5 = 30
+     SKINMET6 = 10
+     SKINMET7 = 10
+     SKTEK01 = 15
+     SKTEK02 = 15
+    }
+
+    floors =
+    {
+     FLAT5_1 = 50
+     FLAT5_2 = 50
+     FLAT5 = 30
+     WOODTIL = 30
+     WOODTI2 = 30
+     FLOOR46D = 30
+     FLOOR46E = 30
+     G13 = 20
+    }
+
+    ceilings =
+    {
+     CEIL1_1 = 50
+     FLAT5_2 = 50
+     G02 = 30
+     G03 = 30
+     FLOOR7_2 = 15
+     FLOOR7_3 = 15
+    }
+
+    cliff_mats =
+    {
+    SKSNAKE1 = 50
+    SKSNAKE2 = 50
+    SKINFACE = 50
+    SKIN2    = 50
+    SKIN4    = 50
+    BODIESB   = 30
+    SKULLS2  = 50
+    }
   }
 
   -- 18 through 20 don't tile horizontally well so I removed them.
@@ -685,6 +800,51 @@ GLAICE_THEMES =
       SLIME13 = 5
     }
   }
+
+  urban_MoreWood =
+  {
+    env = "building"
+    prob = 100
+
+    walls =
+    {
+      WOOD1 = 50
+      WOOD3 = 50
+      WOOD5 = 50
+      WOOD12 = 50
+      WOODVERT = 50
+      WD03   = 50
+      WD04   = 50
+    }
+
+    floors =
+    {
+      FLAT5_1 = 70
+      FLAT5_2 = 70
+      FLAT5_5 = 50
+
+      CARPET1 = 50
+      CARPET2 = 50
+      CARPET3 = 50
+      CARPET4 = 50
+
+      WOODTIL = 30
+      WOODTI2 = 30
+      FFLAT01 = 30
+    }
+
+    ceilings =
+    {
+    CEIL1_1 = 70
+    FLAT5_2 = 50
+    GSTN01  = 30
+    GSTN02  = 30
+    SLIME14 = 20
+    SLIME15 = 20
+
+    }
+  }
+
 }
 
 GLAICE_TECH_FACADES =
