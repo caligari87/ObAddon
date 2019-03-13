@@ -3,7 +3,7 @@ PREFABS.Wall_epic_obaddon_banner =
   file   = "wall/gtd_EPIC_wall_banners.wad"
   map    = "MAP01"
 
-  prob   = 50
+  prob   = 35
   env   = "!building"
   theme = "!hell"
 
@@ -27,5 +27,8 @@ PREFABS.Wall_epic_obaddon_banner2 =
 
   theme = "hell"
 
-  tex_OBDNBNR1 = "OBDNBNR2"
+  tex_OBDNBNR1 =
+  {
+    OBDNBNR2 = 100
+  }
 }
