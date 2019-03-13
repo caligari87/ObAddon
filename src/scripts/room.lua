@@ -1524,7 +1524,8 @@ function Room_border_up()
     -- scenic to room --
 
     if not A1.room and A2.room then
-      if A1.border_type == "simple_fence" or A1.border_type == nil then
+      if A1.border_type == "simple_fence" or A1.border_type == "no_vista"
+      or A1.border_type == nil then
         Junction_make_wall(junc)
       end
     end
