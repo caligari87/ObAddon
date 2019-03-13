@@ -3535,10 +3535,6 @@ end
 function Grower_make_street(R)
   if R.is_streeted then return end
 
-  each A in R.areas do
-    A.is_sidewalk = true
-  end
-
   Grower_grammatical_room(R, "streets_entry")
   Grower_grammatical_room(R, "streets")
   Grower_grammatical_room(R, "street_fixer")
