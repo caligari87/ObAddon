@@ -566,6 +566,8 @@ PREFABS.Light_hell_GLITE01 =
   theme  = "hell"
 
   flat_TLITE6_4 = "GLITE01"
+      tex_GRAY7 = "METAL"
+     flat_FLAT19 = "CEIL5_2"
 }
 
 PREFABS.Light_hell_GLITE02 =
@@ -577,6 +579,8 @@ PREFABS.Light_hell_GLITE02 =
   theme  = "hell"
 
   flat_TLITE6_4 = "GLITE02"
+      tex_GRAY7 = "METAL"
+     flat_FLAT19 = "CEIL5_2"
 }
 
 PREFABS.Light_hell_GLITE03 =
@@ -588,6 +592,8 @@ PREFABS.Light_hell_GLITE03 =
   theme  = "hell"
 
   flat_TLITE6_4 = "GLITE03"
+      tex_GRAY7 = "METAL"
+     flat_FLAT19 = "CEIL5_2"
 }
 
 PREFABS.Light_hell_GLITE04 =
@@ -599,6 +605,8 @@ PREFABS.Light_hell_GLITE04 =
   theme  = "hell"
 
   flat_TLITE6_4 = "GLITE04"
+      tex_GRAY7 = "METAL"
+     flat_FLAT19 = "CEIL5_2"
 }
 
 PREFABS.Light_hell_GLITE05 =
@@ -610,6 +618,8 @@ PREFABS.Light_hell_GLITE05 =
   theme  = "hell"
 
   flat_TLITE6_4 = "GLITE05"
+      tex_GRAY7 = "METAL"
+     flat_FLAT19 = "CEIL5_2"
 }
 
 PREFABS.Light_hell_GLITE06 =
@@ -621,6 +631,8 @@ PREFABS.Light_hell_GLITE06 =
   theme  = "hell"
 
   flat_TLITE6_4 = "GLITE06"
+      tex_GRAY7 = "METAL"
+     flat_FLAT19 = "CEIL5_2"
 }
 
 PREFABS.Light_hell_GLITE07 =
@@ -632,6 +644,8 @@ PREFABS.Light_hell_GLITE07 =
   theme  = "hell"
 
   flat_TLITE6_4 = "GLITE07"
+      tex_GRAY7 = "METAL"
+     flat_FLAT19 = "CEIL5_2"
 }
 
 PREFABS.Light_hell_GLITE08 =
@@ -643,6 +657,8 @@ PREFABS.Light_hell_GLITE08 =
   theme  = "hell"
 
   flat_TLITE6_4 = "GLITE08"
+      tex_GRAY7 = "METAL"
+     flat_FLAT19 = "CEIL5_2"
 }
 
 PREFABS.Light_hell_GLITE09 =
@@ -654,4 +670,6 @@ PREFABS.Light_hell_GLITE09 =
   theme  = "hell"
 
   flat_TLITE6_4 = "GLITE09"
+      tex_GRAY7 = "METAL"
+     flat_FLAT19 = "CEIL5_2"
 }

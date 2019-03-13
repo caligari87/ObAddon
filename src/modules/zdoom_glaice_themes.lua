@@ -1055,27 +1055,292 @@ GLAICE_SINK_DEFS =
     trim_mat = "WARN1"
     trim_dz  = 0
   }
+
+  light_TLITE5_1 =
+  {
+    mat = "TLITE5_1"
+    dz  = 8
+    light = 32
+
+    trim_mat = "METAL"
+    trim_dz  = -5
+    trim_light = 16
+  }
+
+  light_TLITE5_2 =
+  {
+    mat = "TLITE5_2"
+    dz  = 8
+    light = 32
+
+    trim_mat = "METAL"
+    trim_dz  = -5
+    trim_light = 16
+  }
+
+  light_TLITE5_3 =
+  {
+    mat = "TLITE5_3"
+    dz  = 8
+    light = 32
+
+    trim_mat = "METAL"
+    trim_dz  = -5
+    trim_light = 16
+  }
+
+  light_TLITE65B =
+  {
+    mat = "TLITE65B"
+    dz  = 8
+    light = 32
+
+    trim_mat = "METAL"
+    trim_dz  = -5
+    trim_light = 16
+  }
+
+  light_TLITE65G =
+  {
+    mat = "TLITE65G"
+    dz  = 8
+    light = 32
+
+    trim_mat = "METAL"
+    trim_dz  = -5
+    trim_light = 16
+  }
+
+  light_TLITE65O =
+  {
+    mat = "TLITE65O"
+    dz  = 8
+    light = 32
+
+    trim_mat = "METAL"
+    trim_dz  = -5
+    trim_light = 16
+  }
+
+  light_TLITE65W =
+  {
+    mat = "TLITE65W"
+    dz  = 8
+    light = 32
+
+    trim_mat = "METAL"
+    trim_dz  = -5
+    trim_light = 16
+  }
+
+  light_TLITE65Y =
+  {
+    mat = "TLITE65Y"
+    dz  = 8
+    light = 32
+
+    trim_mat = "METAL"
+    trim_dz  = -5
+    trim_light = 16
+  }
+
+  light_LIGHTS1 =
+  {
+    mat = "LIGHTS1"
+    dz  = 8
+    light = 32
+
+    trim_mat = "METAL"
+    trim_dz  = -5
+    trim_light = 16
+  }
+
+  light_LIGHTS2 =
+  {
+    mat = "LIGHTS2"
+    dz  = 8
+    light = 32
+
+    trim_mat = "METAL"
+    trim_dz  = -5
+    trim_light = 16
+  }
+
+  light_LIGHTS3 =
+  {
+    mat = "LIGHTS3"
+    dz  = 8
+    light = 32
+
+    trim_mat = "METAL"
+    trim_dz  = -5
+    trim_light = 16
+  }
+
+  light_LIGHTS4 =
+  {
+    mat = "LIGHTS4"
+    dz  = 8
+    light = 32
+
+    trim_mat = "METAL"
+    trim_dz  = -5
+    trim_light = 16
+  }
+
+  light_GLITE01 =
+  {
+    mat = "GLITE01"
+    dz  = 8
+    light = 32
+
+    trim_mat = "METAL"
+    trim_dz  = -5
+    trim_light = 16
+  }
+
+  light_GLITE02 =
+  {
+    mat = "GLITE02"
+    dz  = 8
+    light = 32
+
+    trim_mat = "METAL"
+    trim_dz  = -5
+    trim_light = 16
+  }
+
+  light_GLITE03 =
+  {
+    mat = "GLITE03"
+    dz  = 8
+    light = 32
+
+    trim_mat = "METAL"
+    trim_dz  = -5
+    trim_light = 16
+  }
+
+  light_GLITE04 =
+  {
+    mat = "GLITE04"
+    dz  = 8
+    light = 32
+
+    trim_mat = "METAL"
+    trim_dz  = -5
+    trim_light = 16
+  }
+
+  light_GLITE05 =
+  {
+    mat = "GLITE05"
+    dz  = 8
+    light = 32
+
+    trim_mat = "METAL"
+    trim_dz  = -5
+    trim_light = 16
+  }
+
+  light_GLITE06 =
+  {
+    mat = "GLITE06"
+    dz  = 8
+    light = 32
+
+    trim_mat = "METAL"
+    trim_dz  = -5
+    trim_light = 16
+  }
+
+  light_GLITE07 =
+  {
+    mat = "GLITE07"
+    dz  = 8
+    light = 32
+
+    trim_mat = "METAL"
+    trim_dz  = -5
+    trim_light = 16
+  }
+
+  light_GLITE08 =
+  {
+    mat = "GLITE08"
+    dz  = 8
+    light = 32
+
+    trim_mat = "METAL"
+    trim_dz  = -5
+    trim_light = 16
+  }
+
+  light_GLITE09 =
+  {
+    mat = "GLITE09"
+    dz  = 8
+    light = 32
+
+    trim_mat = "METAL"
+    trim_dz  = -5
+    trim_light = 16
+  }
 }
 
 GLAICE_TECH_CEILING_SINKS =
 {
+  light_TLITE5_1 = 7
+  light_TLITE5_2 = 7
+  light_TLITE5_3 = 7
+  light_TLITE65B = 7
+  light_TLITE65G = 7
+  light_TLITE65O = 7
+  light_TLITE65W = 7
+  light_TLITE65Y = 7
+  light_LIGHTS1 = 7
+  light_LIGHTS2 = 7
+  light_LIGHTS3 = 7
+  light_LIGHTS4 = 7
 }
 
 GLAICE_URBAN_CEILING_SINKS =
 {
+  light_TLITE5_1 = 7
+  light_TLITE5_2 = 7
+  light_TLITE5_3 = 7
+  light_TLITE65B = 7
+  light_TLITE65G = 7
+  light_TLITE65O = 7
+  light_TLITE65W = 7
+  light_TLITE65Y = 7
+  light_LIGHTS1 = 7
+  light_LIGHTS2 = 7
+  light_LIGHTS3 = 7
+  light_LIGHTS4 = 7
 }
 
 GLAICE_HELL_CEILING_SINKS =
 {
+  light_GLITE01 = 10
+  light_GLITE02 = 10
+  light_GLITE03 = 10
+  light_GLITE04 = 10
+  light_GLITE05 = 10
+  light_GLITE06 = 10
+  light_GLITE07 = 10
+  light_GLITE08 = 10
+  light_GLITE09 = 10
 }
 
 GLAICE_TECH_FLOOR_SINKS =
 {
-  --liquid_warning_strip = 9001
+  liquid_warning_strip = 10
 }
 
 GLAICE_URBAN_FLOOR_SINKS =
 {
+  liquid_warning_strip = 10
 }
 
 GLAICE_HELL_FLOOR_SINKS =
@@ -1084,43 +1349,43 @@ GLAICE_HELL_FLOOR_SINKS =
 
 GLAICE_TECH_NATURALS =
 {
-ALTASH = 20
-ROK04 = 30
-ROK05 = 10
-ROK06 = 30
-ROK12 = 50
-ROK13 = 30
-ROK14 = 30
-ROK15 = 30
-ROK20 = 20
-ROK21 = 50
-ROK22 = 30
-ROK23 = 20
-VINES1 = 10
-VINES2 = 10
-VINES3 = 10
-VINES4 = 10
+  ALTASH = 20
+  ROK04 = 30
+  ROK05 = 10
+  ROK06 = 30
+  ROK12 = 50
+  ROK13 = 30
+  ROK14 = 30
+  ROK15 = 30
+  ROK20 = 20
+  ROK21 = 50
+  ROK22 = 30
+  ROK23 = 20
+  VINES1 = 10
+  VINES2 = 10
+  VINES3 = 10
+  VINES4 = 10
 }
 
 GLAICE_URBAN_NATURALS =
 {
-ALTASH = 15
-ROK03 = 20
-ROK04 = 30
-ROK05 = 20
-ROK06 = 40
-ROK12 = 60
-ROK13 = 40
-ROK14 = 35
-ROK15 = 50
-ROK20 = 40
-ROK21 = 35
-ROK22 = 30
-ROK23 = 20
-VINES1 = 20
-VINES2 = 20
-VINES3 = 20
-VINES4 = 20
+  ALTASH = 15
+  ROK03 = 20
+  ROK04 = 30
+  ROK05 = 20
+  ROK06 = 40
+  ROK12 = 60
+  ROK13 = 40
+  ROK14 = 35
+  ROK15 = 50
+  ROK20 = 40
+  ROK21 = 35
+  ROK22 = 30
+  ROK23 = 20
+  VINES1 = 20
+  VINES2 = 20
+  VINES3 = 20
+  VINES4 = 20
 }
 
 GLAICE_HELL_NATURALS =
