@@ -5236,9 +5236,9 @@ DECORATE_PILLAR_GATE =
   }
 }
 
-SPROUT_CATWALK_SUPPORT_PILLAR_OUTER =
+DECORATE_CATWALK_SUPPORT_PILLAR_OUTER =
 {
-  prob = 35
+  prob = 15
 
   structure =
   {
@@ -5248,7 +5248,7 @@ SPROUT_CATWALK_SUPPORT_PILLAR_OUTER =
   }
 }
 
-SPROUT_CATWALK_SUPPORT_PILLAR_INNER_DOUBLE =
+DECORATE_CATWALK_SUPPORT_PILLAR_INNER_DOUBLE =
 {
   prob = 35
 
@@ -6099,7 +6099,7 @@ GROW_WIDE_SPACE_2X8_SIDEWAYS =
   }
 }
 
-SPROUT_ROUNDED_CAP =
+GROW_ROUNDED_CAP =
 {
   prob = 20
   prob_skew = 10
@@ -6119,7 +6119,7 @@ SPROUT_ROUNDED_CAP =
   }
 }
 
-SPROUT_BLADED_CAP =
+GROW_BLADED_CAP =
 {
   prob = 20
   prob_skew = 10
@@ -7124,9 +7124,12 @@ GROW_HUGE_LIQUID_ROOM_STRAIGHT_SIDE_SMALLER =
 
 -- MSSP's procedural platforms-on-liquids [LIQUID-PLATFORM]
 
-SPROUT_LIQUID_PLATFORM_ENTRY =
+LIQUID_PLATFORM_ENTRY =
 {
-  prob = 2500
+  prob = 150
+
+  pass = "liquid_platform"  
+
   structure =
   {
     "1~~~","1%~~"
@@ -7142,9 +7145,11 @@ SPROUT_LIQUID_PLATFORM_ENTRY =
   }
 }
 
-SPROUT_LIQUID_PLATFORM_STRAIGHT =
+LIQUID_PLATFORM_STRAIGHT =
 {
-  prob = 7000
+  prob = 500
+
+  pass = "liquid_platform"  
 
   structure =
   {
@@ -7155,9 +7160,11 @@ SPROUT_LIQUID_PLATFORM_STRAIGHT =
   }
 }
 
-SPROUT_LIQUID_PLATFORM_STRAIGHT_NEW_AREA =
+LIQUID_PLATFORM_STRAIGHT_NEW_AREA =
 {
-  prob = 3500
+  prob = 150
+
+  pass = "liquid_platform"  
 
   structure =
   {
@@ -7168,9 +7175,11 @@ SPROUT_LIQUID_PLATFORM_STRAIGHT_NEW_AREA =
   }
 }
 
-SPROUT_LIQUID_PLATFORM_STRAIGHT_NEW_AREA_STAIRS =
+LIQUID_PLATFORM_STRAIGHT_NEW_AREA_STAIRS =
 {
-  prob = 3500
+  prob = 150
+
+  pass = "liquid_platform"  
 
   structure =
   {
@@ -7181,9 +7190,11 @@ SPROUT_LIQUID_PLATFORM_STRAIGHT_NEW_AREA_STAIRS =
   }
 }
 
-SPROUT_LIQUID_PLATFORM_STRAIGHT_LONG =
+LIQUID_PLATFORM_STRAIGHT_LONG =
 {
-  prob = 5000
+  prob = 500
+
+  pass = "liquid_platform"  
 
   structure =
   {
@@ -7194,9 +7205,11 @@ SPROUT_LIQUID_PLATFORM_STRAIGHT_LONG =
   }
 }
 
-SPROUT_LIQUID_PLATFORM_CURVED =
+LIQUID_PLATFORM_CURVED =
 {
-  prob = 3000
+  prob = 300
+
+  pass = "liquid_platform"  
 
   structure =
   {
@@ -7213,9 +7226,11 @@ SPROUT_LIQUID_PLATFORM_CURVED =
   }
 }
 
-SPROUT_LIQUID_PLATFORM_LARGE_CIRCLE =
+LIQUID_PLATFORM_LARGE_CIRCLE =
 {
-  prob = 2000
+  prob = 250
+
+  pass = "liquid_platform"  
 
   structure =
   {
@@ -7232,9 +7247,11 @@ SPROUT_LIQUID_PLATFORM_LARGE_CIRCLE =
   }
 }
 
-SPROUT_LIQUID_PLATFORM_CENTER_PILLAR =
+LIQUID_PLATFORM_CENTER_PILLAR =
 {
-  prob = 2000
+  prob = 150
+
+  pass = "liquid_platform"  
 
   structure =
   {
@@ -7251,9 +7268,11 @@ SPROUT_LIQUID_PLATFORM_CENTER_PILLAR =
   }
 }
 
-SPROUT_LIQUID_PLATFORM_SIDE_PILLAR =
+LIQUID_PLATFORM_SIDE_PILLAR =
 {
-  prob = 2000
+  prob = 150
+
+  pass = "liquid_platform"  
 
   structure =
   {
@@ -7269,9 +7288,11 @@ SPROUT_LIQUID_PLATFORM_SIDE_PILLAR =
   }
 }
 
-SPROUT_LIQUID_PLATFORM_4x4 =
+LIQUID_PLATFORM_4x4 =
 {
-  prob = 1800
+  prob = 300
+
+  pass = "liquid_platform"  
 
   structure =
   {
@@ -7686,6 +7707,7 @@ GROW_SEWER_STAIRS_SIDE_EXIT_NEW_AREA =
 }
 
 -- FORGET IT LMAO IT DOESN'T WORK
+-- It works now. Cheer up, buddy. -- March, 2019
 -- MSSP's city streets. ExperiMENTAL. [STREETS]
 
 STREETS_ENTRY =

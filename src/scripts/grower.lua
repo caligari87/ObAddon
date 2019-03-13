@@ -3288,6 +3288,9 @@ function Grower_grammatical_room(R, pass, is_emergency)
   elseif pass == "square_out" then
     apply_num = rand.irange(10,30)
 
+  elseif pass == "liquid_platform" then
+    apply_num = rand.irange(2,10)
+
   else
     error("unknown grammar pass: " .. tostring(pass))
   end
@@ -3499,6 +3502,11 @@ function Grower_grow_room(R)
 
   if PARAM["live_minimap"] == "room" then
     Seed_draw_minimap()
+  end
+
+  -- liquid platform rules
+  if LEVEL.liquid and R.is_big and rand.odds(75) then
+    Grower_grammatical_room(R, "liquid_platform")
   end
 
   R.is_grown = true
