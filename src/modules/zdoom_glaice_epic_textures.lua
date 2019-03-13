@@ -24,6 +24,7 @@ GLAICE_EPIC_TEXTURES = { }
 
 function GLAICE_EPIC_TEXTURES.setup(self)
   GLAICE_EPIC_TEXTURES.put_new_materials()
+  PARAM.epic_textures_activated = true
 end
 
 function GLAICE_EPIC_TEXTURES.put_new_materials()

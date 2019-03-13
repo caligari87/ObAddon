@@ -184,6 +184,12 @@ function Fab_load_all_definitions()
         prob = 0
       end
     end
+    
+    if PARAM["epic_textures_activated"] then
+      if def.uses_epic_textures then
+        prob = 0
+      end
+    end
 
     prob = prob * random_factor(def)
 
