@@ -379,9 +379,9 @@ function Render_edge(E)
 
     -- scenic rooms will sometimes have inverted heights when facing indoor at times
     -- it's just something that happens
-    if A.ceil_h <= A.floor_h then
+    --[[if A.ceil_h <= A.floor_h then
       A.ceil_h, A.floor_h = A.floor_h, A.ceil_h
-    end
+    end]]
 
     -- just throw them Oblige's default minimum room height
     -- if the generated vista is too low
