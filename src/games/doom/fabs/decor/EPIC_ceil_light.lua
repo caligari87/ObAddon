@@ -5,7 +5,7 @@
 PREFABS.Light_EPIC_basic =
 {
   file   = "decor/ceil_light.wad"
-  map    = "MAP02"
+  map    = "MAP01"
 
   prob   = 0
   env    = "building"
@@ -37,7 +37,7 @@ PREFABS.Light_urban_LITBL3F1 =
   prob   = 50
   theme  = "urban"
 
-  flat_TLITE6_4 = "LITBL3F1"
+  flat_TLITE6_1 = "LITBL3F1"
 
   sector_1  = { [0]=90, [1]=15 }
 }
@@ -50,7 +50,7 @@ PREFABS.Light_urban_LITBL3F2 =
   prob   = 50
   theme  = "urban"
 
-  flat_TLITE6_4 = "LITBL3F2"
+  flat_TLITE6_1 = "LITBL3F2"
 
   sector_1  = { [0]=90, [1]=15 }
 }
@@ -63,7 +63,7 @@ PREFABS.Light_urban_LITE4F1 =
   prob   = 50
   theme  = "urban"
 
-  flat_TLITE6_4 = "LITE4F1"
+  flat_TLITE6_1 = "LITE4F1"
 
   sector_1  = { [0]=90, [1]=15 }
 }
@@ -76,7 +76,7 @@ PREFABS.Light_urban_LITE4F2 =
   prob   = 50
   theme  = "urban"
 
-  flat_TLITE6_4 = "LITE4F2"
+  flat_TLITE6_1 = "LITE4F2"
 
   sector_1  = { [0]=90, [1]=15 }
 }
@@ -89,7 +89,7 @@ PREFABS.Light_urban_LITES01 =
   prob   = 50
   theme  = "urban"
 
-  flat_TLITE6_4 = "LITES01"
+  flat_TLITE6_1 = "LITES01"
 
   sector_1  = { [0]=90, [1]=15 }
 }
@@ -102,7 +102,7 @@ PREFABS.Light_urban_LITES02 =
   prob   = 50
   theme  = "urban"
 
-  flat_TLITE6_4 = "LITES02"
+  flat_TLITE6_1 = "LITES02"
 
   sector_1  = { [0]=90, [1]=15 }
 }
@@ -115,7 +115,7 @@ PREFABS.Light_urban_LITES03 =
   prob   = 50
   theme  = "urban"
 
-  flat_TLITE6_4 = "LITES03"
+  flat_TLITE6_1 = "LITES03"
 
   sector_1  = { [0]=90, [1]=15 }
 }
@@ -128,7 +128,7 @@ PREFABS.Light_urban_LITES04 =
   prob   = 50
   theme  = "urban"
 
-  flat_TLITE6_4 = "LITES04"
+  flat_TLITE6_1 = "LITES04"
 
   sector_1  = { [0]=90, [1]=15 }
 }
@@ -141,7 +141,7 @@ PREFABS.Light_urban_LIGHTS1 =
   prob   = 50
   theme  = "urban"
 
-  flat_TLITE6_4 = "LIGHTS1"
+  flat_TLITE6_1 = "LIGHTS1"
 
   sector_1  = { [0]=90, [1]=15 }
 }
@@ -154,7 +154,7 @@ PREFABS.Light_urban_LIGHTS2 =
   prob   = 50
   theme  = "urban"
 
-  flat_TLITE6_4 = "LIGHTS2"
+  flat_TLITE6_1 = "LIGHTS2"
 
   sector_1  = { [0]=90, [1]=15 }
 }
@@ -167,7 +167,7 @@ PREFABS.Light_urban_LIGHTS3 =
   prob   = 50
   theme  = "urban"
 
-  flat_TLITE6_4 = "LIGHTS3"
+  flat_TLITE6_1 = "LIGHTS3"
 
   sector_1  = { [0]=90, [1]=15 }
 }
@@ -180,7 +180,7 @@ PREFABS.Light_urban_LIGHTS4 =
   prob   = 50
   theme  = "urban"
 
-  flat_TLITE6_4 = "LIGHTS4"
+  flat_TLITE6_1 = "LIGHTS4"
 
   sector_1  = { [0]=90, [1]=15 }
 }
@@ -193,7 +193,7 @@ PREFABS.Light_urban_TLITE5_1 =
   prob   = 50
   theme  = "urban"
 
-  flat_TLITE6_4 = "TLITE5_1"
+  flat_TLITE6_1 = "TLITE5_1"
 
   sector_1  = { [0]=90, [1]=15 }
 }
@@ -206,7 +206,7 @@ PREFABS.Light_urban_TLITE5_2 =
   prob   = 50
   theme  = "urban"
 
-  flat_TLITE6_4 = "TLITE5_2"
+  flat_TLITE6_1 = "TLITE5_2"
 
   sector_1  = { [0]=90, [1]=15 }
 }
@@ -219,7 +219,7 @@ PREFABS.Light_urban_TLITE5_3 =
   prob   = 50
   theme  = "urban"
 
-  flat_TLITE6_4 = "TLITE5_3"
+  flat_TLITE6_1 = "TLITE5_3"
 
   sector_1  = { [0]=90, [1]=15 }
 }
@@ -232,7 +232,7 @@ PREFABS.Light_urban_TLITE65B =
   prob   = 50
   theme  = "urban"
 
-  flat_TLITE6_4 = "TLITE65B"
+  flat_TLITE6_1 = "TLITE65B"
 
   sector_1  = { [0]=90, [1]=15 }
 }
@@ -245,7 +245,7 @@ PREFABS.Light_urban_TLITE65G =
   prob   = 50
   theme  = "urban"
 
-  flat_TLITE6_4 = "TLITE65G"
+  flat_TLITE6_1 = "TLITE65G"
 
   sector_1  = { [0]=90, [1]=15 }
 }
@@ -258,7 +258,7 @@ PREFABS.Light_urban_TLITE65O =
   prob   = 50
   theme  = "urban"
 
-  flat_TLITE6_4 = "TLITE65O"
+  flat_TLITE6_1 = "TLITE65O"
 
   sector_1  = { [0]=90, [1]=15 }
 }
@@ -271,7 +271,7 @@ PREFABS.Light_urban_TLITE65W =
   prob   = 50
   theme  = "urban"
 
-  flat_TLITE6_4 = "TLITE65W"
+  flat_TLITE6_1 = "TLITE65W"
 
   sector_1  = { [0]=90, [1]=15 }
 }
@@ -284,7 +284,7 @@ PREFABS.Light_urban_TLITE65Y =
   prob   = 50
   theme  = "urban"
 
-  flat_TLITE6_4 = "TLITE65Y"
+  flat_TLITE6_1 = "TLITE65Y"
 
   sector_1  = { [0]=90, [1]=15 }
 }
@@ -301,7 +301,7 @@ PREFABS.Light_tech_LITBL3F1 =
   prob   = 50
   theme  = "tech"
 
-  flat_TLITE6_4 = "LITBL3F1"
+  flat_TLITE6_1 = "LITBL3F1"
 
   sector_1  = { [0]=90, [1]=15 }
 }
@@ -314,7 +314,7 @@ PREFABS.Light_tech_LITBL3F2 =
   prob   = 50
   theme  = "tech"
 
-  flat_TLITE6_4 = "LITBL3F2"
+  flat_TLITE6_1 = "LITBL3F2"
 
   sector_1  = { [0]=90, [1]=15 }
 }
@@ -327,7 +327,7 @@ PREFABS.Light_tech_LITE4F1 =
   prob   = 50
   theme  = "tech"
 
-  flat_TLITE6_4 = "LITE4F1"
+  flat_TLITE6_1 = "LITE4F1"
 
   sector_1  = { [0]=90, [1]=15 }
 }
@@ -340,7 +340,7 @@ PREFABS.Light_tech_LITE4F2 =
   prob   = 50
   theme  = "tech"
 
-  flat_TLITE6_4 = "LITE4F2"
+  flat_TLITE6_1 = "LITE4F2"
 
   sector_1  = { [0]=90, [1]=15 }
 }
@@ -353,7 +353,7 @@ PREFABS.Light_tech_LITES01 =
   prob   = 50
   theme  = "tech"
 
-  flat_TLITE6_4 = "LITES01"
+  flat_TLITE6_1 = "LITES01"
 
   sector_1  = { [0]=90, [1]=15 }
 }
@@ -366,7 +366,7 @@ PREFABS.Light_tech_LITES02 =
   prob   = 50
   theme  = "tech"
 
-  flat_TLITE6_4 = "LITES02"
+  flat_TLITE6_1 = "LITES02"
 
   sector_1  = { [0]=90, [1]=15 }
 }
@@ -379,7 +379,7 @@ PREFABS.Light_tech_LITES03 =
   prob   = 50
   theme  = "tech"
 
-  flat_TLITE6_4 = "LITES03"
+  flat_TLITE6_1 = "LITES03"
 
   sector_1  = { [0]=90, [1]=15 }
 }
@@ -392,7 +392,7 @@ PREFABS.Light_tech_LITES04 =
   prob   = 50
   theme  = "tech"
 
-  flat_TLITE6_4 = "LITES04"
+  flat_TLITE6_1 = "LITES04"
 
   sector_1  = { [0]=90, [1]=15 }
 }
@@ -405,7 +405,7 @@ PREFABS.Light_tech_LIGHTS1 =
   prob   = 50
   theme  = "tech"
 
-  flat_TLITE6_4 = "LIGHTS1"
+  flat_TLITE6_1 = "LIGHTS1"
 
   sector_1  = { [0]=90, [1]=15 }
 }
@@ -418,7 +418,7 @@ PREFABS.Light_tech_LIGHTS2 =
   prob   = 50
   theme  = "tech"
 
-  flat_TLITE6_4 = "LIGHTS2"
+  flat_TLITE6_1 = "LIGHTS2"
 
   sector_1  = { [0]=90, [1]=15 }
 }
@@ -431,7 +431,7 @@ PREFABS.Light_tech_LIGHTS3 =
   prob   = 50
   theme  = "tech"
 
-  flat_TLITE6_4 = "LIGHTS3"
+  flat_TLITE6_1 = "LIGHTS3"
 
   sector_1  = { [0]=90, [1]=15 }
 }
@@ -444,7 +444,7 @@ PREFABS.Light_tech_LIGHTS4 =
   prob   = 50
   theme  = "tech"
 
-  flat_TLITE6_4 = "LIGHTS4"
+  flat_TLITE6_1 = "LIGHTS4"
 
   sector_1  = { [0]=90, [1]=15 }
 }
@@ -457,7 +457,7 @@ PREFABS.Light_tech_TLITE5_1 =
   prob   = 50
   theme  = "tech"
 
-  flat_TLITE6_4 = "TLITE5_1"
+  flat_TLITE6_1 = "TLITE5_1"
 
   sector_1  = { [0]=90, [1]=15 }
 }
@@ -470,7 +470,7 @@ PREFABS.Light_tech_TLITE5_2 =
   prob   = 50
   theme  = "tech"
 
-  flat_TLITE6_4 = "TLITE5_2"
+  flat_TLITE6_1 = "TLITE5_2"
 
   sector_1  = { [0]=90, [1]=15 }
 }
@@ -483,7 +483,7 @@ PREFABS.Light_tech_TLITE5_3 =
   prob   = 50
   theme  = "tech"
 
-  flat_TLITE6_4 = "TLITE5_3"
+  flat_TLITE6_1 = "TLITE5_3"
 
   sector_1  = { [0]=90, [1]=15 }
 }
@@ -496,7 +496,7 @@ PREFABS.Light_tech_TLITE65B =
   prob   = 50
   theme  = "tech"
 
-  flat_TLITE6_4 = "TLITE65B"
+  flat_TLITE6_1 = "TLITE65B"
 
   sector_1  = { [0]=90, [1]=15 }
 }
@@ -509,7 +509,7 @@ PREFABS.Light_tech_TLITE65G =
   prob   = 50
   theme  = "tech"
 
-  flat_TLITE6_4 = "TLITE65G"
+  flat_TLITE6_1 = "TLITE65G"
 
   sector_1  = { [0]=90, [1]=15 }
 }
@@ -522,7 +522,7 @@ PREFABS.Light_tech_TLITE65O =
   prob   = 50
   theme  = "tech"
 
-  flat_TLITE6_4 = "TLITE65O"
+  flat_TLITE6_1 = "TLITE65O"
 
   sector_1  = { [0]=90, [1]=15 }
 }
@@ -535,7 +535,7 @@ PREFABS.Light_tech_TLITE65W =
   prob   = 50
   theme  = "tech"
 
-  flat_TLITE6_4 = "TLITE65W"
+  flat_TLITE6_1 = "TLITE65W"
 
   sector_1  = { [0]=90, [1]=15 }
 }
@@ -548,7 +548,7 @@ PREFABS.Light_tech_TLITE65Y =
   prob   = 50
   theme  = "tech"
 
-  flat_TLITE6_4 = "TLITE65Y"
+  flat_TLITE6_1 = "TLITE65Y"
 
   sector_1  = { [0]=90, [1]=15 }
 }
