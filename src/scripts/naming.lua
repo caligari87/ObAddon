@@ -1067,6 +1067,16 @@ namelib.NAMES =
       ["%v %a %n"] = 25
 
       ["%s"] = 18
+
+      -- Types of roads, useful when Streets Mode
+      -- kicks in.
+      ["%a St."] = 10 -- Street
+      ["%a Rd."] = 10 -- Road
+      ["%a Ave."] = 10 -- Avenue
+      ["%a Dr."] = 5 -- Drive
+      ["%a Pl."] = 5 -- Place
+      ["%a Ln."] = 5 -- Lane
+
     }
 
     lexicon =
