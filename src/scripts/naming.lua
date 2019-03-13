@@ -490,10 +490,10 @@ namelib.NAMES =
   {
     patterns =
     {
-         ["%a %n"] = 60
+      ["%a %n"] = 60
       ["%t %a %n"] = 20
 
-         ["%n of %h"] = 26
+      ["%n of %h"] = 26
       ["%a %n of %h"] = 14
 
       ["%e's %n"]       = 10
@@ -504,6 +504,14 @@ namelib.NAMES =
       ["%v %a %n"] = 25
 
       ["%s"] = 18
+
+      ["Killing for %e"] = 5
+      ["Killing in %e's name"] = 5
+      ["Dying for %e"] = 5
+      ["Dying in %e's name"] = 5
+      ["Unworthy for %e"] = 5
+      ["%e's Bitch"] = 5
+
     }
 
     lexicon =
@@ -525,7 +533,7 @@ namelib.NAMES =
         Deccal=3, Ipos=3, Xezbeth=3, Yeenoghlu=3, Caasimolar=3, Abaddon=3, Soneillon=3, Phenex=2,
         Baal=3, Malthus=3, Beelzebub=3, Moloch=3, Dante=5, Berith=3, Haagenti=3, Caim=2, Seir=3,
         Nybbas=2, Namtar=2, Lamashtu=2, Astaroth=2, Merihem=3, Gressil=3, Barong=2, Iblis=3, Ouroboros=5,
-        Carreau=3, Oeillet=3, Rosier=2, Luvart=2, Cerberus=5, Linguica=1, Bloodshedder=1,
+        Carreau=3, Oeillet=3, Rosier=2, Luvart=2, Cerberus=5, Linguica=1, Bloodshedder=1, Romero=1
 
         -- ObAddon contributor names
         MsrSgtShooterPerson=3, Glaice=3, Frozsoul=3,
