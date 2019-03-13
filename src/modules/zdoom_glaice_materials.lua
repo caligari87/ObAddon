@@ -511,7 +511,10 @@ GLAICE_MATERIALS = {
   WARNSTEP = { t="WARNSTEP", f="WARN1", sane=1 }
 
   -- Wood / Panel / Urban
-  PANBOOK2 = { t="PANBOOK2", f="RROCK09" }
+  PANBOOK2 = { t="PANBOOK2", f="RROCK09" } -- 128x128
+  PANBOOK3 = { t="PANBOOK3", f="RROCK09" } -- 128x128
+  PANBOOK4 = { t="PANBOOK4", f="RROCK09" } -- 64x128
+  PANBOOK5 = { t="PANBOOK5", f="RROCK09" } -- 64x96
   STUC01 = { t="STUC01", f="RROCK09" } --STUCCO
   THATCH1 = { t="THATCH1", f="G03" }
   THATCH2 = { t="THATCH2", f="G02" }
@@ -549,7 +552,7 @@ GLAICE_MATERIALS = {
   ICEFALL    = { t="ICEFALL", f="SNOW9", sane=1 } --Not animated
   ICEFALL2   = { t="ICEFALL2", f="SNOW2", sane=1 } --Not animated
 
-  -- Switches --
+  -- Switches
   SW1GOTH = { t="SW1GOTH", f="CEIL5_2" }
   SW2GOTH = { t="SW2GOTH", f="CEIL5_2" }
   SW1QUAK = { t="SW1QUAK", f="CEIL5_2" }
@@ -561,6 +564,12 @@ GLAICE_MATERIALS = {
   FENCE3 = { t="FENCE3", rail_h=64 }
   FENCE4 = { t="FENCE4", rail_h=128 }
   FENCE5 = { t="FENCE5", rail_h=72 }
+
+  -- Oblige flags
+  -- Note: Due to being over 128 height, we may need to use HI_START/HI_END lumps if
+  -- we have problems with the textures being cut off in-game.
+  OBDNBNR1 = { t="OBDNBNR1", f="CRATOP2" } -- OBLIGE flag, yellow
+  OBDNBNR2 = { t="OBDNBNR2", f="SFLR6_4" } -- OBLIGE flag, hellish
 
   --------------------
   --------------------
