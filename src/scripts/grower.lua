@@ -3505,7 +3505,8 @@ function Grower_grow_room(R)
   end
 
   -- liquid platform rules
-  if LEVEL.liquid and R.is_big and rand.odds(75) then
+  if LEVEL.liquid and R.is_big and rand.odds(75)
+  and not R.is_hallway then
     Grower_grammatical_room(R, "liquid_platform")
   end
 
