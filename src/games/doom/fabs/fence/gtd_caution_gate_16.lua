@@ -3,7 +3,7 @@ PREFABS.Bars_caution_barrier =
   file   = "fence/gtd_caution_gate_16.wad"
   map    = "MAP01"
 
-  prob   = 9000000 --80
+  prob   = 100
 
   env    = "!hell"
 
