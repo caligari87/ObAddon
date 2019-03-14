@@ -26,7 +26,7 @@ PREFABS.Pic_EPIC_box_gothic_big =
     GLASS2 = 50
     GLASS3 = 50
     GLASS4 = 50
-    GLASS5 = 50
+    GLASS5 = 20 --Black glass looks poor, reduced prob
     GLASS6 = 50
     GLASS8 = 50
   }
@@ -73,6 +73,151 @@ PREFABS.Pic_EPIC_box_gothic_semibig =
   }
 }
 
+PREFABS.Pic_EPIC_box_skeletons =
+{
+  template = "Pic_EPIC_box_gothic_big"
+  map = "MAP01"
+
+  prob = 35 * 8
+
+  theme = "hell"
+
+  seed_w = 2
+
+  tex_GLASS1 =
+  {
+   DEATH1 = 50
+   DEATH2 = 50
+   DEATH3 = 50
+   GUY1   = 25
+   PENTA1 = 5
+  }
+}
+
+PREFABS.Pic_EPIC_box_lavawall =
+{
+  template = "Pic_EPIC_box_gothic_big"
+  map = "MAP01"
+
+  prob = 25 * 7
+
+  theme = "hell"
+
+  seed_w = 2
+
+  tex_GLASS1 =
+  {
+   LFAL21 = 50
+   LFALL1 = 50
+  }
+}
+
+PREFABS.Pic_EPIC_box_marblefaces =
+{
+  template = "Pic_EPIC_box_gothic_big"
+  map = "MAP01"
+
+  prob = 30 * 7
+
+  theme = "hell"
+
+  seed_w = 2
+
+  tex_GLASS1 =
+  {
+   MARBFAB1 = 50
+   MARBFAB2 = 50
+   MARBFAB3 = 50
+   MARBFAC5 = 50
+   MARBFAC6 = 50
+   MARBFAC7 = 50
+   MARBFACF = 50
+  }
+}
+
+PREFABS.Pic_EPIC_box_wallofskulls =
+{
+  template = "Pic_EPIC_box_gothic_big"
+  map = "MAP01"
+
+  prob = 35 * 8
+
+  theme = "hell"
+
+  seed_w = 2
+
+  tex_GLASS1 =
+  {
+   SKULLS  = 50
+   SKULLS2 = 50
+   BODIESB = 50
+   SKULLS3 = 50
+   SKULLS4 = 50
+  }
+}
+
+PREFABS.Pic_EPIC_box_doom2bodies =
+{
+  template = "Pic_EPIC_box_gothic_big"
+  map = "MAP01"
+
+  prob = 30 * 8
+
+  theme = "hell"
+
+  seed_w = 2
+
+  tex_GLASS1 =
+  {
+   SPDUDE7 = 50
+   SPDUDE8 = 50
+  }
+}
+
+-- Some of these we could probably implement into the bloodgutters prefab as a variant
+-- since it has a hanging corpse textures that were used in Doom1 and removed during
+-- Doom 2 development.
+PREFABS.Pic_EPIC_box_gothic_hangingbodies =
+{
+  template = "Pic_EPIC_box_gothic_big"
+  map = "MAP03"
+
+  prob = 30 * 2
+
+  seed_w = 1
+
+  tex_GLASS10 =
+  {
+   SPDUDE3 = 50 -- Doom1 exclusive
+   SPDUDE6 = 50 -- Doom1 exclusive
+   SP_DUDE4 = 30
+   SP_DUDE5 = 30
+  }
+}
+
+PREFABS.Pic_EPIC_box_small_facesofevil =
+{
+  template = "Pic_EPIC_box_gothic_big"
+  map = "MAP04"
+
+  prob = 40 * 9
+
+  height = 128
+
+  theme = "hell"
+
+  seed_w = 1
+
+  tex_COMPSA1 =
+  {
+   EVILFAC2 = 50
+   EVILFAC4 = 50
+   EVILFAC5 = 50
+   EVILFAC6 = 50
+   EVILFAC7 = 50
+  }
+}
+
 PREFABS.Pic_EPIC_box_metal_big =
 {
   template = "Pic_EPIC_box_gothic_big"
@@ -80,7 +225,7 @@ PREFABS.Pic_EPIC_box_metal_big =
 
   prob = 40 * 8
 
-  theme = "!hell"
+  theme = "tech"
 
   seed_w = 2
 
@@ -94,6 +239,99 @@ PREFABS.Pic_EPIC_box_metal_big =
     COMPCT06 = 50
     SHAWVENT = 50
     SHAWVEN2 = 50
+    CGCANI00 = 50
+  }
+}
+
+PREFABS.Pic_EPIC_box_bishop =
+{
+  template = "Pic_EPIC_box_gothic_big"
+  map = "MAP01"
+
+  prob = 30 * 8
+
+  theme = "!tech"
+
+  seed_w = 2
+
+  tex_GLASS1 =
+  {
+   BISHOP = 100
+   GOTH50 = 25
+  }
+}
+
+PREFABS.Pic_EPIC_box_metal_big =
+{
+  template = "Pic_EPIC_box_gothic_big"
+  map = "MAP01"
+
+  prob = 40 * 8
+
+  theme = "tech"
+
+  seed_w = 2
+
+  tex_GLASS1 =
+  {
+    COMPCT01 = 50
+    COMPCT02 = 50
+    COMPCT03 = 50
+    COMPCT04 = 50
+    COMPCT05 = 50
+    COMPCT06 = 50
+    SHAWVENT = 50
+    SHAWVEN2 = 50
+    CGCANI00 = 50
+  }
+}
+
+PREFABS.Pic_EPIC_box_metal_big_bunchacomputers =
+{
+  template = "Pic_EPIC_box_gothic_big"
+  map = "MAP01"
+
+  prob = 40 * 8
+
+  theme = "tech"
+
+  seed_w = 2
+
+  tex_GLASS1 =
+  {
+    CONSOLE4 = 50
+    CONSOLE6 = 50
+    CONSOLE7 = 25
+    CONSOLE8 = 50
+    CONSOLE9 = 25
+    CONSOLEA = 50
+    CONSOLEB = 50
+    CONSOLEC = 50
+    CONSOLED = 50
+    CONSOLEE = 50
+    CGCANI00 = 50
+    NOISE1   = 50
+  }
+}
+
+PREFABS.Pic_EPIC_box_static =
+{
+  template = "Pic_EPIC_box_gothic_big"
+  map = "MAP04"
+
+  prob = 25 * 10
+
+  height = 128
+
+  theme = "tech"
+
+  seed_w = 1
+
+  tex_COMPSA1 =
+  {
+   NOISE2A = 50
+   NOISE3A = 50
+   TVSNOW01 = 50
   }
 }
 
@@ -106,7 +344,7 @@ PREFABS.Pic_EPIC_box_metal_small =
 
   height = 128
 
-  theme = "!hell"
+  theme = "tech"
 
   seed_w = 1
 
@@ -122,6 +360,7 @@ PREFABS.Pic_EPIC_box_metal_small =
     COMPU3 = 50
     COMPVENT = 50
     COMPVEN2 = 50
+    NMONIA1 = 50
   }
 }
 
@@ -134,7 +373,7 @@ PREFABS.Pic_EPIC_box_metal_wide =
 
   height = 128
 
-  theme = "!hell"
+  theme = "tech"
 
   seed_w = 2
 
@@ -149,5 +388,27 @@ PREFABS.Pic_EPIC_box_metal_wide =
     COMPSTA9 = 50
     COMPSTAA = 50
     COMPSTAB = 50
+  }
+}
+
+PREFABS.Pic_EPIC_box_silverwall =
+{
+  template = "Pic_EPIC_box_gothic_big"
+  map = "MAP01"
+
+  prob = 25 * 7
+
+  theme = "tech"
+
+  seed_w = 2
+
+  tex_GLASS1 =
+  {
+   SILVER2 = 50
+   SILVER2G = 50
+   SILVER2O = 50
+   SILVER2R = 50
+   SILVER2W = 50
+   SILVER2Y = 50
   }
 }
