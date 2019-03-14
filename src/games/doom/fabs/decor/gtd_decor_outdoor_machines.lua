@@ -15,6 +15,13 @@ PREFABS.Decor_tech_point_HVAC_1 =
   bound_z2 = 104
 
   sink_mode = "never"
+
+  tex_MIDBARS3 =
+  {
+    MIDBARS1 = 50
+    MIDBARS3 = 50
+    MIDSPACE = 50
+  }
 }
 
 PREFABS.Decor_tech_point_HVAC_2 =
