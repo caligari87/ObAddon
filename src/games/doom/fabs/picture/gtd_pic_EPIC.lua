@@ -3,7 +3,7 @@ PREFABS.Pic_EPIC_box_gothic_big =
   file   = "picture/gtd_pic_EPIC.wad"
   map    = "MAP01"
 
-  prob  = 75 * 7
+  prob  = 40 * 7
   env   = "building"
   theme = "!tech"
 
@@ -43,7 +43,7 @@ PREFABS.Pic_EPIC_box_gothic_tall =
   template = "Pic_EPIC_box_gothic_big"
   map = "MAP02"
 
-  prob = 75 * 5
+  prob = 40 * 5
 
   seed_w = 1
 
@@ -62,7 +62,7 @@ PREFABS.Pic_EPIC_box_gothic_semibig =
   template = "Pic_EPIC_box_gothic_big"
   map = "MAP03"
 
-  prob = 75 * 2
+  prob = 40 * 2
 
   seed_w = 1
 
@@ -78,7 +78,7 @@ PREFABS.Pic_EPIC_box_metal_big =
   template = "Pic_EPIC_box_gothic_big"
   map = "MAP01"
 
-  prob = 75 * 8
+  prob = 40 * 8
 
   theme = "!hell"
 
@@ -102,7 +102,7 @@ PREFABS.Pic_EPIC_box_metal_small =
   template = "Pic_EPIC_box_gothic_big"
   map = "MAP04"
 
-  prob = 75 * 10
+  prob = 40 * 10
 
   height = 128
 
@@ -130,7 +130,7 @@ PREFABS.Pic_EPIC_box_metal_wide =
   template = "Pic_EPIC_box_gothic_big"
   map = "MAP05"
 
-  prob = 75 * 9
+  prob = 40 * 9
 
   height = 128
 

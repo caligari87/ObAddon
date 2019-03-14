@@ -3,7 +3,7 @@ PREFABS.Decor_EPIC_vending_machine =
   file   = "wall/gtd_EPIC_vending_machine.wad"
   map    = "MAP01"
 
-  prob   = 20
+  prob   = 8
   theme  = "!hell"
   env    = "!outdoor"
 
