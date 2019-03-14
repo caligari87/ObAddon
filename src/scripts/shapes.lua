@@ -4598,6 +4598,19 @@ SQUARE_OUT_THICKEN_CLIFF_ONE_SIDE =
   }
 }
 
+SQUARE_OUT_EXTEND_AREA_BORDER =
+{
+  pass = "square_out"
+
+  prob = 80
+
+  structure =
+  {
+    "x1","x1"
+    "2.","22"
+  }
+}
+
 --MSSP's random negative features [FEATURES] - 'negative' because they attempt to modify an existing room if it has too much clean space.
 
 GROW_FEATURES_CENTER_ALTERED =

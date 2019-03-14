@@ -4712,7 +4712,7 @@ function Cave_build_a_scenic_vista(area)
 
     FL.floor_mat = "_SKY"
 
-    FL.floor_y_offset = 0
+    FL.floor_y_offset = 9001
 
     temp_install_floor(FL)
 
