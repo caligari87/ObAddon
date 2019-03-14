@@ -7,7 +7,7 @@ PREFABS.Tech_helipad_H =
   theme  = "!hell"
   env    = "!building"
 
-  size   = 16
+  size   = 128
   height = 128
 
   bound_z1 = 0
