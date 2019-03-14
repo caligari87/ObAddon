@@ -42,6 +42,8 @@ PREFABS.Joiner_EPIC_door2_urban =
 
   map = "MAP01"
 
+  theme = "urban"
+
   tex_BIGDOOR4 =
   {
     BIGDOOR8 = 50
@@ -67,6 +69,8 @@ PREFABS.Joiner_EPIC_door2_hell =
   template = "Joiner_EPIC_door2_tech"
 
   map = "MAP02"
+
+  theme = "hell"
 
   tex_BIGDOOR6 =
   {
