@@ -1,6 +1,6 @@
 PREFABS.Pic_EPIC_box_gothic_big =
 {
-  file   = "picture/pic_box.wad"
+  file   = "picture/gtd_pic_EPIC.wad"
   map    = "MAP01"
 
   prob  = 75 * 7
@@ -30,6 +30,12 @@ PREFABS.Pic_EPIC_box_gothic_big =
     GLASS6 = 50
     GLASS8 = 50
   }
+
+  sector_1 = 0
+  line_2   = 0
+
+  offset_1 = 0
+  offset_2 = 0
 }
 
 PREFABS.Pic_EPIC_box_gothic_tall =
@@ -98,6 +104,8 @@ PREFABS.Pic_EPIC_box_metal_small =
 
   prob = 75 * 10
 
+  height = 128
+
   theme = "!hell"
 
   seed_w = 1
@@ -123,6 +131,8 @@ PREFABS.Pic_EPIC_box_metal_wide =
   map = "MAP05"
 
   prob = 75 * 9
+
+  height = 128
 
   theme = "!hell"
 
