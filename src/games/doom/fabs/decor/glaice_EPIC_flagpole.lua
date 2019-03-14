@@ -21,7 +21,7 @@ PREFABS.Decor_glaice_flagpole =
 }
 
 -- Uses OBLIGE logo!!
-UNFINISHED.Decor_glaice_flagpole_obaddon_logo_earth =
+PREFABS.Decor_glaice_flagpole_obaddon_logo_earth =
 {
   template = "Decor_glaice_flagpole"
   map    = "MAP02"
@@ -31,15 +31,15 @@ UNFINISHED.Decor_glaice_flagpole_obaddon_logo_earth =
 
   uses_epic_textures = true
 
-  height = 280
+  height = 384
   size   = 56
 
   bound_z1 = 0
-  bound_z2 = 280
+  bound_z2 = 384
 }
 
 -- Uses OBLIGE logo!!
-UNFINISHED.Decor_glaice_flagpole_obaddon_logo_hell =
+PREFABS.Decor_glaice_flagpole_obaddon_logo_hell =
 {
   template = "Decor_glaice_flagpole"
   map    = "MAP02"
@@ -49,11 +49,11 @@ UNFINISHED.Decor_glaice_flagpole_obaddon_logo_hell =
 
   uses_epic_textures = true
 
-  height = 282
+  height = 384
   size   = 56
 
   bound_z1 = 0
-  bound_z2 = 280
+  bound_z2 = 384
 
   tex_OBDNBNR1 =
   {
