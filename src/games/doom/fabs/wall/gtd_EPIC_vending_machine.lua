@@ -9,6 +9,8 @@ PREFABS.Decor_EPIC_vending_machine =
 
   uses_epic_textures = true
 
+  on_liquids = "never"
+
   where  = "edge"
   deep   = 48
   height = 128
