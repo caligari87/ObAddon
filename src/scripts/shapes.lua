@@ -7128,7 +7128,7 @@ LIQUID_PLATFORM_ENTRY =
 {
   prob = 150
 
-  pass = "liquid_platform"  
+  pass = "liquid_platform"
 
   structure =
   {
@@ -7149,7 +7149,7 @@ LIQUID_PLATFORM_STRAIGHT =
 {
   prob = 500
 
-  pass = "liquid_platform"  
+  pass = "liquid_platform"
 
   structure =
   {
@@ -7164,7 +7164,7 @@ LIQUID_PLATFORM_STRAIGHT_NEW_AREA =
 {
   prob = 150
 
-  pass = "liquid_platform"  
+  pass = "liquid_platform"
 
   structure =
   {
@@ -7179,7 +7179,7 @@ LIQUID_PLATFORM_STRAIGHT_NEW_AREA_STAIRS =
 {
   prob = 150
 
-  pass = "liquid_platform"  
+  pass = "liquid_platform"
 
   structure =
   {
@@ -7194,7 +7194,7 @@ LIQUID_PLATFORM_STRAIGHT_LONG =
 {
   prob = 500
 
-  pass = "liquid_platform"  
+  pass = "liquid_platform"
 
   structure =
   {
@@ -7209,7 +7209,7 @@ LIQUID_PLATFORM_CURVED =
 {
   prob = 300
 
-  pass = "liquid_platform"  
+  pass = "liquid_platform"
 
   structure =
   {
@@ -7230,7 +7230,7 @@ LIQUID_PLATFORM_LARGE_CIRCLE =
 {
   prob = 250
 
-  pass = "liquid_platform"  
+  pass = "liquid_platform"
 
   structure =
   {
@@ -7251,7 +7251,7 @@ LIQUID_PLATFORM_CENTER_PILLAR =
 {
   prob = 150
 
-  pass = "liquid_platform"  
+  pass = "liquid_platform"
 
   structure =
   {
@@ -7272,7 +7272,7 @@ LIQUID_PLATFORM_SIDE_PILLAR =
 {
   prob = 150
 
-  pass = "liquid_platform"  
+  pass = "liquid_platform"
 
   structure =
   {
@@ -7292,7 +7292,7 @@ LIQUID_PLATFORM_4x4 =
 {
   prob = 300
 
-  pass = "liquid_platform"  
+  pass = "liquid_platform"
 
   structure =
   {

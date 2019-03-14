@@ -192,6 +192,13 @@ function Fab_load_all_definitions()
       end
     end
 
+    -- support for the new replace field
+    if PARAM.epic_textures_activated then
+      if def.replaces then
+        PREFABS[def.replaces] = def
+      end
+    end
+
     prob = prob * random_factor(def)
 
     return prob
