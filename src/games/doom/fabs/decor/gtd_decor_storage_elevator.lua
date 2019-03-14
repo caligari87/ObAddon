@@ -1,4 +1,4 @@
-PREFABS.Decor_tech_point_HVAC_1 =
+PREFABS.Decor_tech_storage_elevator =
 {
   file   = "decor/gtd_decor_storage_elevator.wad"
   map    = "MAP01"
