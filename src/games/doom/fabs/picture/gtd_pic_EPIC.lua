@@ -184,6 +184,8 @@ PREFABS.Pic_EPIC_box_gothic_hangingbodies =
 
   prob = 30 * 2
 
+  theme = "hell"
+
   seed_w = 1
 
   tex_GLASS10 =
