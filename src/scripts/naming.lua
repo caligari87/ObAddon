@@ -2586,9 +2586,17 @@ namelib.NAMES =
         Raid = 10
         Ransack = 10
         Slaughter = 10
+
+        -- encounter
+        Accostment = 7
+        Confrontation = 10
+        Contact = 10
+        Encounter = 10
+        Rendezvous = 8
+        Meeting = 10
       }
 
-      e =
+      e = -- entities
       {
         -- DOOOOM!!!
         Cyberdemon = 15
@@ -2700,7 +2708,7 @@ namelib.NAMES =
         Slayer = 10
       }
 
-      c =
+      c = -- contributor names
       {
         MsrSgtShooterPerson = 10
         Glaice = 10

@@ -3556,9 +3556,9 @@ function Grower_make_street(R)
 
   Grower_grammatical_room(R, "sidewalk")
 
-  if not R.is_start then
+  --[[if not R.is_start then
     Grower_grammatical_room(R, "building_entrance")
-  end
+  end]]
 
   each A in R.areas do
     if not A.is_road then
