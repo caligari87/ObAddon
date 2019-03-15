@@ -564,6 +564,7 @@ GLAICE_MATERIALS = {
   FENCE3 = { t="FENCE3", rail_h=64 }
   FENCE4 = { t="FENCE4", rail_h=128 }
   FENCE5 = { t="FENCE5", rail_h=72 }
+  RAIL1 = { t="RAIL1", rail_h=32 }
 
   -- Oblige flags
   -- Note: Due to being over 128 height, we may need to use HI_START/HI_END lumps if
@@ -799,8 +800,6 @@ GLAICE_MATERIALS = {
   OSLIME01  = { t="OFALL1", f="OSLIME01", sane=1 }
   XLAV1   = { t="LFALL1", f="XLAV1", sane=1 }
   QLAVA1   = { t="LFAL21", f="QLAVA1", sane=1 }
-
-  RAIL1 = { t="RAIL1", rail_h=32 }
 
   -- Warning Strip --
   WARN1 = { t="WARN1", f="WARN2" }
