@@ -2238,7 +2238,9 @@ namelib.NAMES =
         Infinite = 10
 
         -- emotion
+        Acrimonious = 10
         Anguished = 5
+        Baleful = 10
         Cruel = 10
         Dejected = 5
         Dolorous = 5
@@ -2246,6 +2248,9 @@ namelib.NAMES =
         Grievious = 15
         Grim = 15
         Lonely = 10
+        Malevolent = 10
+        Maleficent = 5
+        Malignant = 7
         Melancholic = 5
         Menacing = 20
         Morbid = 20
@@ -2256,6 +2261,9 @@ namelib.NAMES =
         Sullen = 5
         Spiteful = 5
         Tragic = 5
+        Virulent = 10
+        Vindictive = 7
+        Vitriolic = 10
         Woeful = 10
 
         -- destroyed or decay
@@ -2278,6 +2286,7 @@ namelib.NAMES =
         Multifarious = 5
         Weird = 10
         Strange = 10
+        Surreal = 7
 
         -- evilz
         Demonic = 15
