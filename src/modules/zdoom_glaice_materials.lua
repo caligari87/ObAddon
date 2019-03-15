@@ -29,6 +29,8 @@ GLAICE_LIQUIDS =
   gwater   = { mat="SLUDGE01", special=0 }
   ice   = { mat="SNOW9", special=0 } --Looks best when outdoor environment is snow only
   ice2   = { mat="SNOW2", special=0 } --Looks best when outdoor environment is snow only
+  purwater   = { mat="PURW1", special=0 }
+
 
 }
 
@@ -66,6 +68,7 @@ GLAICE_MATERIALS = {
   BIGDOORH  = { t="BIGDOORH",  f="CEIL5_1" }
   BIGDOORI  = { t="BIGDOORI",  f="CEIL5_2" }
   BIGDOORJ  = { t="BIGDOORJ",  f="CEIL5_2" }
+  BIGDOORM  = { t="BIGDOORM",  f="WARN1" }
 
   -- Bricks / Concrete
   BLIT01 = { t="BLIT01", f="RROCK10" } --BRICKLIT
@@ -101,6 +104,10 @@ GLAICE_MATERIALS = {
   BRIKS30 = { t="BRIKS30", f="GSTN01" }
   BRIKS31 = { t="BRIKS31", f="FLOOR7_1" }
   BRIKS32 = { t="BRIKS32", f="FLAT5_4" }
+  BRIKS33 = { t="BRIKS33", f="FLOOR7_1" }
+  BRIKS34 = { t="BRIKS34", f="FLAT5_4" }
+  BRIKS35 = { t="BRIKS35", f="BLACK0" }
+  BRIKS36 = { t="BRIKS36", f="BLACK0" }
 
   BST01  = { t="BST01",  f="RROCK11" } --BSTONE1
   BST02  = { t="BST02",  f="RROCK12" } --BSTONE2
@@ -229,6 +236,11 @@ GLAICE_MATERIALS = {
   GLASS12 = { t="GLASS12", f="CEIL5_1" } --Orange
   GLASS13 = { t="GLASS13", f="CEIL5_1" } --Red
   GLASS14 = { t="GLASS14", f="CEIL5_1" } --Blue
+  WINGLAS1 = { t="WINGLAS1", f="CEIL5_1" } -- Yellow dragon, 192px tall
+  WINGLAS2 = { t="WINGLAS2", f="CEIL5_1" } -- Red dragon in flame, 192px tall
+  WINGLAS3 = { t="WINGLAS3", f="CEIL5_1" } -- Red Dragon, 192px tall
+  WINGLAS4 = { t="WINGLAS4", f="CEIL5_1" } -- Blue Dragon, 192px tall
+
 
   -- Gothic
   BISHOP  = { t="BISHOP",  f="CEIL5_1" }
@@ -319,6 +331,13 @@ GLAICE_MATERIALS = {
   GRAYMET3 = { t="GRAYMET3", f="SHINY04" }
   GRAYMET4 = { t="GRAYMET4", f="SHINY04" }
   GRAYMET5 = { t="GRAYMET5", f="SHINY04" }
+  GRAYMET6 = { t="GRAYMET6", f="SHINY04" } -- Blue plating inside
+  GRAYMET7 = { t="GRAYMET7", f="SHINY04" } -- Purple
+  GRAYMET8 = { t="GRAYMET8", f="SHINY04" } -- Green
+  GRAYMET9 = { t="GRAYMET9", f="SHINY04" } -- Red
+  GRAYMETA = { t="GRAYMETA", f="SHINY04" } -- Cyan
+  GRAYMETB = { t="GRAYMETB", f="SHINY04" } -- Purple-ish
+  GRAYMETC = { t="GRAYMETC", f="SHINY04" } -- Orange
   METACOMP  = { t="METACOMP", f="CEIL5_2" }
   METAL8  = { t="METAL8", f="CEIL5_2" }
   METAL9  = { t="METAL9", f="CEIL5_2" }
@@ -370,6 +389,12 @@ GLAICE_MATERIALS = {
   MURAL16  = { t="MURAL16",  f="RROCK09" }
 
   -- Rocks / Natural
+  CATACMB1 = { t="CATACMB1", f="RROCK03" } -- Dark gray rock, bones
+  CATACMB2 = { t="CATACMB2", f="RROCK03" } -- Dark gray rock, empty
+  CATACMB3 = { t="CATACMB3", f="RROCK03" } -- Dark gray rock
+  CATACMB4 = { t="CATACMB4", f="FLOOR7_1" } -- Dark brown rock, bones
+  CATACMB5 = { t="CATACMB5", f="FLOOR7_1" } -- Dark brown rock, empty
+  CATACMB6 = { t="CATACMB6", f="FLOOR7_1" } -- Dark brown rock
   GRNSTONE = { t="GRNSTONE", f="GRNRKF" }
   RDROK1 = { t="RDROK1", f="RROCK01" }
   RDROK2 = { t="RDROK2", f="FLOOR6_1" }
@@ -431,6 +456,9 @@ GLAICE_MATERIALS = {
   -- Skin and Hell
   BODIESB = { t="BODIESB", f="BODIESFL" } --Dark red AASHITTY/SP_FACE2
   BODIESC = { t="BODIESC", f="FLAT5_6" } --Dark brown AASHITTY/SP_FACE2
+  BONES1 = { t="BONES1", f="FLAT5_6" } -- Brown bones
+  BONES2 = { t="BONES2", f="FLAT5_6" } -- Gray bones
+  BONES3 = { t="BONES3", f="FLAT5_6" } -- Bloody bones
   CORPSES = { t="CORPSES", f="FLAT5_6" } --SLOPPY1
   CRAK01 = { t="CRAK01", f="RROCK01" } --CRACKLE2
   CRAK02 = { t="CRAK02", f="RROCK02" } --CRACKLE4
@@ -545,12 +573,16 @@ GLAICE_MATERIALS = {
   GRYFALL1   = { t="GRYFALL1", f="SLUDGE01", sane=1 }
   MFALL1     = { t="MFALL1", f="MAGMA1", sane=1 }
   PFALL1     = { t="PFALL1", f="XWATER1", sane=1 }
+  PURFAL1     = { t="PURFAL1", f="PURW1", sane=1 }
   SLMFALL1   = { t="SLMFALL1", f="SLIME01", sane=1 }
   OFALL1     = { t="OFALL1", f="OSLIME01", sane=1 }
   LFAL21     = { t="LFAL21", f="QLAVA1", sane=1 }
   LFALL1     = { t="LFALL1", f="XLAV1", sane=1 }
   ICEFALL    = { t="ICEFALL", f="SNOW9", sane=1 } --Not animated
   ICEFALL2   = { t="ICEFALL2", f="SNOW2", sane=1 } --Not animated
+
+  -- Candles / Misc Animated
+  CANDLE1     = { t="CANDLE1", f="MAGMA1", sane=1 } -- Burning candles, for decor, not walls
 
   -- Switches
   SW1GOTH = { t="SW1GOTH", f="CEIL5_2" }
@@ -565,6 +597,17 @@ GLAICE_MATERIALS = {
   FENCE4 = { t="FENCE4", rail_h=128 }
   FENCE5 = { t="FENCE5", rail_h=72 }
   RAIL1 = { t="RAIL1", rail_h=32 }
+
+  -- Transparent windows
+  MIDWIND1 = { t="MIDWIND1", f="CEIL5_1" } -- 32x128
+  MIDWIND2 = { t="MIDWIND2", f="CEIL5_1" } -- 32x128
+  MIDWIND3 = { t="MIDWIND3", f="CEIL5_1" } -- 64x128
+  MIDWIND4 = { t="MIDWIND4", f="CEIL5_1" } -- 32x96
+  MIDWIND5 = { t="MIDWIND5", f="CEIL5_1" } -- 64x128
+  MIDWIND6 = { t="MIDWIND6", f="CEIL5_1" } -- 32x96
+  MIDWIND7 = { t="MIDWIND7", f="CEIL5_1" } -- 32x128
+  MIDWIND8 = { t="MIDWIND8", f="CEIL5_1" } -- 128x128
+
 
   -- Oblige flags
   -- Note: Due to being over 128 height, we may need to use HI_START/HI_END lumps if
@@ -586,6 +629,10 @@ GLAICE_MATERIALS = {
   CARPET2 = { t="WOOD1",  f="CARPET2" }
   CARPET3 = { t="PANNYA",  f="CARPET3" }
   CARPET4 = { t="WOOD3",  f="CARPET4" }
+  CARPET5 = { t="WOOD1",  f="CARPET5" }
+  CARPET6 = { t="WOOD1",  f="CARPET6" }
+  CARPET7 = { t="WOODVERT",  f="CARPET7" }
+  CARPET8 = { t="WOODVERT",  f="CARPET8" }
 
   -- Various Decayed Tech Flooring / etc
   DARKF01 = { t="BROWNGRN",  f="DARKF01" }
@@ -800,6 +847,8 @@ GLAICE_MATERIALS = {
   OSLIME01  = { t="OFALL1", f="OSLIME01", sane=1 }
   XLAV1   = { t="LFALL1", f="XLAV1", sane=1 }
   QLAVA1   = { t="LFAL21", f="QLAVA1", sane=1 }
+  PURW1   = { t="PURFAL1", f="PURW1", sane=1 }
+
 
   -- Warning Strip --
   WARN1 = { t="WARN1", f="WARN2" }

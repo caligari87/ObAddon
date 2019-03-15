@@ -17,8 +17,6 @@
 --
 ------------------------------------------------------------------
 
--- TODO: Needs hookup so general Tech/Urban/Hell can utilize extra cliff_mats property!
-
 GLAICE_THEMES =
 {
   tech_GrayMet =
@@ -36,6 +34,13 @@ GLAICE_THEMES =
       GRAYMET3 = 20
       GRAYMET4 = 20
       GRAYMET5 = 20
+      GRAYMET6 = 6
+      GRAYMET7 = 6
+      GRAYMET8 = 6
+      GRAYMET9 = 6
+      GRAYMETA = 6
+      GRAYMETB = 6
+      GRAYMETC = 6
 
       METAL8 = 25
       METAL9 = 25
@@ -711,7 +716,7 @@ GLAICE_THEMES =
     }
   }
 
-  -- 18 through 20 don't tile horizontally well so I removed them.
+  -- 18 through 20 don't tile horizontally well so I removed them. 30 seems more like it works for exterior.
   urban_GlaiceBricks =
   {
     env = "building"
@@ -745,7 +750,10 @@ GLAICE_THEMES =
       BRIKS27 = 15
       BRIKS28 = 15
       BRIKS29 = 15
-      BRIKS30 = 15
+      BRIKS33 = 15
+      BRIKS34 = 15
+      BRIKS35 = 15
+      BRIKS36 = 15
 
       URBAN1 = 15
       URBAN2 = 15
@@ -783,6 +791,10 @@ GLAICE_THEMES =
       CARPET2 = 50
       CARPET3 = 50
       CARPET4 = 50
+      CARPET5 = 50
+      CARPET6 = 50
+      CARPET7 = 50
+      CARPET8 = 50
 
       FFLAT01 = 80
     }
@@ -819,14 +831,18 @@ GLAICE_THEMES =
 
     floors =
     {
-      FLAT5_1 = 70
-      FLAT5_2 = 70
+      FLAT5_1 = 80
+      FLAT5_2 = 80
       FLAT5_5 = 50
 
       CARPET1 = 50
       CARPET2 = 50
       CARPET3 = 50
       CARPET4 = 50
+      CARPET5 = 50
+      CARPET6 = 50
+      CARPET7 = 50
+      CARPET8 = 50
 
       WOODTIL = 30
       WOODTI2 = 30
@@ -918,6 +934,8 @@ GLAICE_HELL_FACADES =
   GOTH29 = 20
   GOTH30 = 20
   GOTH31 = 20
+  BRIKS35 = 15
+  BRIKS36 = 15
 
   HELMET1 = 20
   HELMET2 = 20
@@ -993,6 +1011,12 @@ GLAICE_URBAN_FACADES =
   BRIKS28 = 10
   BRIKS29 = 15
   BRIKS30 = 10
+  BRIKS31 = 10
+  BRIKS32 = 10
+  BRIKS33 = 15
+  BRIKS34 = 20
+  BRIKS35 = 15
+  BRIKS36 = 15
   GOTH45  = 20
   ROK17   = 20
   ROK18   = 20
@@ -1014,6 +1038,7 @@ GLAICE_TECH_LIQUIDS =
   hotlava = 3
   magma   = 3
   qlava   = 3
+  purwater = 15
   pwater  = 70
   sludge  = 40
   gwater  = 50
@@ -1026,6 +1051,7 @@ GLAICE_URBAN_LIQUIDS =
   hotlava = 5
   magma   = 5
   qlava   = 5
+  purwater = 20
   pwater  = 30
   sludge  = 60
   gwater  = 60
@@ -1039,6 +1065,7 @@ GLAICE_HELL_LIQUIDS =
   magma   = 80
   qlava   = 80
   pwater  = 5
+  purwater = 5
   sludge  = 20
   gwater  = 25
   ice     = 40
