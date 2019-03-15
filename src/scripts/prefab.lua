@@ -196,6 +196,7 @@ function Fab_load_all_definitions()
     if PARAM.epic_textures_activated then
       if def.replaces then
         PREFABS[def.replaces] = def
+        table.remove(PREFABS[def.name])
       end
     end
 
