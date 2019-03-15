@@ -5,7 +5,7 @@ PREFABS.Bars_caution_barrier =
 
   prob   = 100
 
-  env    = "!hell"
+  theme  = "!hell"
 
   where  = "edge"
   key    = "barred"
