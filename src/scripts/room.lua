@@ -1326,7 +1326,7 @@ function Room_make_windows(A1, A2)
 
   if A1.border_type == "simple_fence" or A2.border_type == "simple_fence" then return end
   if A1.border_type == "no_vista" or A2.border_type == "no_vista" then return end
-  
+
   local z, height = calc_vertical_space(A1, A2)
 
   if height < 128 then return end
@@ -1539,7 +1539,7 @@ function Room_border_up()
         Junction_make_wall(junc)
 
       elseif not A1.is_outdoor and not A1.is_cave then
-        if A2.border_type != "simple_fence" 
+        if A2.border_type != "simple_fence"
         or A1.border_type != "no_vista"
         or A2.border_type == nil then
           Room_make_windows(A1, A2)
