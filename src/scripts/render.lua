@@ -2586,13 +2586,14 @@ function Render_skybox()
 
     else
       skyfab = PREFABS["Skybox_generic"]
-      if PARAM.epic_textures_activated then
-        skyfab = PREFABS["Skybox_hellish_city_EPIC"]
-      end
 
     end
   elseif OB_CONFIG.zdoom_skybox == "generic" then
     skyfab = PREFABS["Skybox_generic"]
+    if PARAM.epic_textures_activated then
+      skyfab = PREFABS["Skybox_hellish_city_EPIC"]
+    end
+
   end
 
   if (OB_CONFIG.engine == "zdoom" or OB_CONFIG.engine == "gzdoom") and OB_CONFIG.zdoom_skybox != "disable" then
