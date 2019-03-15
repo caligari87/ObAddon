@@ -138,5 +138,5 @@ OB_MODULES["glaice_epic_textures"] =
     all_done = GLAICE_EPIC_TEXTURES.put_the_texture_wad_in
   }
 
-  tooltip = "If enabled, adds textures from Glaice's Epic Textures collection."
+  tooltip = "If enabled, adds textures from Glaice's Epic Textures collection, which also includes a few new Epic-texture exclusive prefabs."
 }
