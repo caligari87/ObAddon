@@ -1651,6 +1651,10 @@ function Room_border_up()
       local T = A.chunk
       if T.kind != "closet" then continue end
 
+      if A.border_type then
+        if A.border_type == "no_vista" then continue end
+      end
+
       if T:is_open_to_sky(A.room) then
         T.open_to_sky = true
       end
