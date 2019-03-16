@@ -25,9 +25,12 @@ PREFABS.Teleporter_sky_pad =
 
   thing_55 =
 {
-  thing_55 = 50
-  thing_56 = 50
-  thing_57 = 50
+  blue_torch = 50
+  blue_torch_sm = 50
+  green_torch = 50
+  green_torch_sm = 50
+  red_torch = 50
+  red_torch_sm = 50
 }
 
 flat_GATE1 = { GATE1=50, GATE2=50, GATE3=50, GATE4=50 }
