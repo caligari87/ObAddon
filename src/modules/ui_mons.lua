@@ -98,6 +98,7 @@ UI_MONS.TRAP_STYLE =
 UI_MONS.TRAP_STRENGTH =
 {
   "weaker",   _("Weaker"),
+  "easier",   _("Easier"),
   "normal",   _("Normal"),
   "stronger", _("Stronger"),
   "mixed",    _("Mix It Up"),

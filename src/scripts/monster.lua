@@ -1992,8 +1992,10 @@ gui.debugf("wants =\n%s\n\n", table.tostr(wants))
       trap_weaken_factor = rand.range(100,180)
     elseif OB_CONFIG.trap_strength == "normal" then
       trap_weaken_factor = rand.range(180,360)
+    elseif OB_CONFIG.trap_strength == "easier" then
+      trap_weaken_factor = rand.range(360,500)
     elseif OB_CONFIG.trap_strength == "weaker" then
-      trap_weaken_factor = rand.range(360,800)
+      trap_weaken_factor = rand.range(500,800)
     elseif OB_CONFIG.trap_strength == "mixed" then
       trap_weaken_factor = rand.range(100,800)
     end
