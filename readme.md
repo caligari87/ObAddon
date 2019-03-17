@@ -7,7 +7,7 @@ A repository of new features, enhancements, and an extensive library of communit
 ## Community
 Currently, the Oblige community resides on an unofficial Discord server since the official forums were shut down. You may join us at the following link:
 
-[**Unofficial Oblige Discord**](https://discord.gg/AFws8ty)
+[**Unofficial Oblige Discord**](https://discord.gg/dfqCt9v)
 
 ## Download
 
