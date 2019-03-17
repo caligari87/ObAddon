@@ -110,6 +110,8 @@ GLAICE_MATERIALS = {
   BRIKS34 = { t="BRIKS34", f="FLAT5_4" }
   BRIKS35 = { t="BRIKS35", f="BLACK0" }
   BRIKS36 = { t="BRIKS36", f="BLACK0" }
+  BRIKS37 = { t="BRIKS37", f="FLAT5_4" } -- Blue
+  BRIKS38 = { t="BRIKS38", f="FLAT5_4" } -- Blue
 
   BST01  = { t="BST01",  f="RROCK11" } --BSTONE1
   BST02  = { t="BST02",  f="RROCK12" } --BSTONE2
@@ -161,7 +163,7 @@ GLAICE_MATERIALS = {
   HELLCMT7  = { t="HELLCMT7",  f="FLAT19" } --Black and white
   HELLCMT8  = { t="HELLCMT8",  f="FLAT19" } --Black and white
 
-  -- Bronze
+  -- Bronze & Brown
   BRONZE5 =  { t="BRONZE5", f="MFLR8_2" }
   BRONZE6 =  { t="BRONZE6", f="MFLR8_2" }
   BRONZEG1 = { t="BRONZEG1", f="GMET07" }
@@ -172,6 +174,7 @@ GLAICE_MATERIALS = {
   BROWNGR2 = { t="BROWNGR2", f="FLOOR7_1" }
   BROWNGR3 = { t="BROWNGR3", f="FLOOR7_1" }
   BROWNGR4 = { t="BROWNGR4", f="FLOOR7_1" }
+  NUKESLAD = { t="NUKESLAD", f="FLOOR7_1" } -- Hey, from Doom1!
 
   -- Computers / Tech
   CGCANI00 = { t="CGCANI00", f="CEIL5_1" } --Animated
@@ -215,6 +218,7 @@ GLAICE_MATERIALS = {
   CONSOLED = { t="CONSOLED", f="FLAT23" }
   CONSOLEE = { t="CONSOLEE", f="FLAT23" }
   CONSOLEF = { t="CONSOLEF", f="FLAT23" }
+  CONSOLEG = { t="CONSOLEG", f="FLAT23" }
   DECMP04A = { t="DECMP04A", f="CEIL5_1" } --Animated
   GRAYBLU1 = { t="GRAYBLU1", f="FLAT14" }
   NMONIA1 = { t="NMONIA1", f="FLAT1" } --Animated
@@ -242,7 +246,6 @@ GLAICE_MATERIALS = {
   WINGLAS2 = { t="WINGLAS2", f="CEIL5_1" } -- Red dragon in flame, 192px tall
   WINGLAS3 = { t="WINGLAS3", f="CEIL5_1" } -- Red Dragon, 192px tall
   WINGLAS4 = { t="WINGLAS4", f="CEIL5_1" } -- Blue Dragon, 192px tall
-
 
   -- Gothic
   BISHOP  = { t="BISHOP",  f="CEIL5_1" }
@@ -423,6 +426,9 @@ GLAICE_MATERIALS = {
   ROK21 = { t="ROK21", f="FLAT10" }
   ROK22 = { t="ROK22", f="RROCK18" }
   ROK23 = { t="ROK23", f="RROCK03" }
+  ROK24 = { t="ROK24", f="RROCK03" }
+  ROK25 = { t="ROK25", f="RROCK17" }
+  ROK26 = { t="ROK26", f="RROCK16" }
   TNROK1 = { t="TNROK1", f="RROCK09" } --TANROCK4
   TNROK2 = { t="TNROK2", f="RROCK03" } --TANROCK5
 
@@ -457,7 +463,7 @@ GLAICE_MATERIALS = {
 
   -- Skin and Hell
   BODIESB = { t="BODIESB", f="BODIESFL" } --Dark red AASHITTY/SP_FACE2
-  BODIESC = { t="BODIESC", f="FLAT5_6" } --Dark brown AASHITTY/SP_FACE2
+  BODIESC = { t="BODIESC", f="BODIESF2" } --Dark brown AASHITTY/SP_FACE2
   BONES1 = { t="BONES1", f="FLAT5_6" } -- Brown bones
   BONES2 = { t="BONES2", f="FLAT5_6" } -- Gray bones
   BONES3 = { t="BONES3", f="FLAT5_6" } -- Bloody bones
@@ -525,8 +531,13 @@ GLAICE_MATERIALS = {
   TKWALL2 = { t="TKWALL2", f="CEIL5_1" }
   TEKWALL2 = { t="TEKWALL2", f="CEIL5_1" }
   TEKWALL7 = { t="TEKWALL7", f="FLOOR7_1" }
-  TEKWALL8 = { t="TEKWALL8", f="TEK1" }
-  TEKWALL9 = { t="TEKWALL9", f="TEK2" }
+  TEKWALL8 = { t="TEKWALL8", f="TEK1" } -- Red
+  TEKWALL9 = { t="TEKWALL9", f="TEK2" } -- Green
+  TEKWALLA = { t="TEKWALLA", f="TEK3" } -- Purple
+  TEKWALLB = { t="TEKWALLB", f="TEK4" } -- Blue
+  TEKWALLC = { t="TEKWALLC", f="TEK5" } -- Magenta
+  TEKWALLD = { t="TEKWALLD", f="TEK6" } -- Cyan/Aqua
+  TEKWALLE = { t="TEKWALLE", f="TEK7" } -- Orange
   TVSNOW01 = { t="TVSNOW01", f="CEIL5_1" } --Animated
 
   -- Auxillary
@@ -583,6 +594,9 @@ GLAICE_MATERIALS = {
   ICEFALL    = { t="ICEFALL", f="SNOW9", sane=1 } --Not animated
   ICEFALL2   = { t="ICEFALL2", f="SNOW2", sane=1 } --Not animated
 
+  -- Animated but not fully liquid walls
+   SLADRIP1 = { t="SLADRIP1", f="FLOOR7_1" }
+
   -- Candles / Misc Animated
   CANDLE1     = { t="CANDLE1", f="MAGMA1", sane=1 } -- Burning candles, for decor, not walls
 
@@ -592,12 +606,16 @@ GLAICE_MATERIALS = {
   SW1QUAK = { t="SW1QUAK", f="CEIL5_2" }
   SW2QUAK = { t="SW2QUAK", f="CEIL5_2" }
 
-  -- Fencing
+  -- Fencing & spacings
   FENCE1 = { t="FENCE1", rail_h=128 }
   FENCE2 = { t="FENCE2", rail_h=128 }
   FENCE3 = { t="FENCE3", rail_h=64 }
   FENCE4 = { t="FENCE4", rail_h=128 }
   FENCE5 = { t="FENCE5", rail_h=72 }
+  FENCE6 = { t="FENCE6", rail_h=72 }
+  FENCE7 = { t="FENCE7", rail_h=128 }
+  MIDSPAC2 = { t="MIDSPAC2", f="CEIL5_1" } -- Darker
+  MIDSPAC3 = { t="MIDSPAC3", f="CEIL5_1" } -- A thicker, metallic look
   RAIL1 = { t="RAIL1", rail_h=32 }
 
   -- Transparent windows
@@ -630,6 +648,7 @@ GLAICE_MATERIALS = {
 
   -- Organic
   BODIESFL = { f="BODIESFL", t="BODIESB" }
+  BODIESF2 = { f="BODIESF2", t="BODIESC" }
 
   -- Carpet
   CARPET1 = { t="PANNYA",  f="CARPET1" }
@@ -806,6 +825,11 @@ GLAICE_MATERIALS = {
   STARTANF = { t="STARTAN2", f="STARTANF" } -- Currently unused
   TEK1 = { t="TEKWALL8",  f="TEK1" }
   TEK2 = { t="TEKWALL9",  f="TEK2" }
+  TEK3 = { t="TEKWALLA",  f="TEK3" }
+  TEK4 = { t="TEKWALLB",  f="TEK4" }
+  TEK5 = { t="TEKWALLC",  f="TEK5" }
+  TEK6 = { t="TEKWALLD",  f="TEK6" }
+  TEK7 = { t="TEKWALLE",  f="TEK7" }
   TEKFLR4 = { t="TEKWALL4",  f="TEKFLR4" }
 
   -- Tiles

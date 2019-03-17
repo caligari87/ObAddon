@@ -66,6 +66,11 @@ GLAICE_THEMES =
       TEKWALL7 = 15
       TEKWALL8 = 15
       TEKWALL9 = 15
+      TEKWALLA = 10
+      TEKWALLB = 10
+      TEKWALLC = 10
+      TEKWALLD = 10
+      TEKWALLE = 10
     }
 
     floors =
@@ -279,6 +284,7 @@ GLAICE_THEMES =
       SHINY01 = 20
       SHINY02 = 30
       SHINY03 = 25
+      TILES4  = 5
     }
 
     ceilings =
@@ -579,6 +585,7 @@ GLAICE_THEMES =
     SKULLS = 10
     SKULLS2 = 10
     BODIESB = 10
+    BODIESC = 10
     }
   }
 
@@ -656,6 +663,7 @@ GLAICE_THEMES =
     SKULLS = 10
     SKULLS2 = 10
     BODIESB = 10
+    BODIESC = 10
     }
 
   }
@@ -712,7 +720,108 @@ GLAICE_THEMES =
     SKIN2    = 50
     SKIN4    = 50
     BODIESB   = 30
+    BODIESC   = 20
     SKULLS2  = 50
+    }
+  }
+
+  hell_glaicecave =
+  {
+    env  = "cave"
+    prob = 60
+
+    walls =
+    {
+    RDROK1   = 80
+    RDROK2   = 80
+    SP_ROCK1 = 50
+    ASHWALL2 = 50
+    ASHWALL3 = 50
+    ASHWALL4 = 50
+    ASHWALL6 = 50
+    ASHWALL7 = 50
+    ASH05    = 50
+    ROK04    = 35
+    ROK05    = 35
+    ROK12    = 35
+    ROK13    = 35
+    ROK14    = 30
+    ROK15    = 30
+    ROK20    = 20
+    ROK21    = 20
+    ROK22    = 20
+    ROK23    = 20
+    ROK24    = 15
+    ROK25    = 15
+    ROK26    = 10
+    }
+
+    floors =
+    {
+     FLAT10 = 60
+     MFLR8_3 = 50
+     RROCK03 = 50
+     RROCK09 = 30
+    }
+  }
+
+  hell_fireycave =
+  {
+    env  = "cave"
+    prob = 60
+
+    light_adjusts = { 32,48,64 }
+
+    walls =
+    {
+      ROCKRED1 = 50
+      HELLROK1 = 30
+      RDROK1   = 20
+      RDROK2   = 20
+      CRACKRED = 15
+      CRACKRD2 = 15
+      FIREBLU1 = 15
+      CRACKLE2 =  5
+      CRACKLE4 =  5
+    }
+
+    floors =
+    {
+      FLOOR6_2 = 40
+      FLOOR6_1 = 20
+
+      RROCK01  = 20
+      RROCK05  = 20
+      RROCK03  = 10
+      RROCK02  = 5
+    }
+  }
+
+  -- Hell has frozen over!
+  hell_icecave =
+  {
+    env  = "cave"
+    prob = 60
+
+    light_adjusts = { 16,24,32 }
+
+    walls =
+    {
+    SNOW03 = 50
+    SNOW07 = 100
+    SNOW08 = 100
+    SNOW09 = 100
+    SNOW10 = 100
+    SNOW11 = 100
+    }
+
+    floors =
+    {
+    SNOW1 = 50
+    SNOW5 = 50
+    SNOW6 = 50
+    SNOW7 = 50
+    SNOW8 = 50
     }
   }
 
@@ -858,6 +967,46 @@ GLAICE_THEMES =
     SLIME14 = 20
     SLIME15 = 20
 
+    }
+  }
+
+  urban_glaicecave =
+  {
+    env  = "cave"
+    prob = 60
+
+    walls =
+    {
+
+    SP_ROCK1 = 30
+    ASHWALL2 = 50
+    ASHWALL3 = 50
+    ASHWALL4 = 50
+    ASHWALL6 = 50
+    ASHWALL7 = 50
+    ASH05    = 50
+    ROK04    = 35
+    ROK05    = 35
+    ROK12    = 35
+    ROK13    = 35
+    ROK14    = 30
+    ROK15    = 30
+    ROK20    = 20
+    ROK21    = 20
+    ROK22    = 20
+    ROK23    = 20
+    ROK24    = 15
+    ROK25    = 15
+    ROK26    = 10
+    }
+
+    floors =
+    {
+     FLAT10 = 60
+     MFLR8_3 = 50
+     RROCK03 = 50
+     RROCK09 = 30
+     FLAT5_4 = 10
     }
   }
 
@@ -1017,6 +1166,8 @@ GLAICE_URBAN_FACADES =
   BRIKS34 = 20
   BRIKS35 = 15
   BRIKS36 = 15
+  BRIKS37 = 10
+  BRIKS38 = 10
   GOTH45  = 20
   ROK17   = 20
   ROK18   = 20
