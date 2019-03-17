@@ -280,6 +280,12 @@ function Render_edge(E)
       end
     end
 
+    if E.area.mode == "void" then
+      if E.peer.area.mode == "void" then
+        def = PREFABS["Wall_plain"]
+      end
+    end
+
     return def
   end
 
