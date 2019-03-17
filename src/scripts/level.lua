@@ -54,9 +54,6 @@
     is_secret   -- true if level is a secret level
     prebuilt    -- true if level will is prebuilt (not generated)
 
-    is_procedural_gotcha -- true if this level is a special Procedural Gotcha arena
-
-    has_streets -- true if this level contains Street Mode streets
 
     === General planning ===
 
