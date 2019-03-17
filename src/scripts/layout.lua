@@ -2301,7 +2301,7 @@ function Layout_handle_corners()
 
     if need_post then
       corner.kind = "post"
-      corner.post_top_h = rail_z + 76
+      corner.post_top_h = rail_z + 128
     end
   end
 
