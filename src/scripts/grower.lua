@@ -939,6 +939,10 @@ function Grower_decide_extents()
     end
   end
 
+  if LEVEL.has_streets and LEVEL.is_procedural_gotcha then
+    LEVEL.has_streets = false
+  end
+
   assert(LEVEL.map_W < SEED_W)
   assert(LEVEL.map_H < SEED_H)
 
