@@ -42,6 +42,8 @@ GLAICE_MATERIALS = {
   ASH02  = { t="ASH02",  f="RROCK03" } --ASHWALL3
   ASH03  = { t="ASH03",  f="FLAT10" } --ASHWALL4
   ASH04 = { t="ASH04", f="RROCK18" } --ASHWALL7 variant
+  ASH05  = { t="ASH05",  f="FLOOR6_2" } --ASHWALL
+  ASHWALL1  = { t="ASHWALL1", f="RROCK03" } --ASHWALL2 & ASHWALL3 combo
   GREEN01 = { t="GREEN01", f="RROCK20" } --Plutonia 2
   GREEN02 = { t="GREEN02", f="RROCK20" } --Plutonia 2
   GREEN03 = { t="GREEN03", f="RROCK20" } --Plutonia 2
@@ -516,7 +518,7 @@ GLAICE_MATERIALS = {
   STARBR1 = { t="STARBR1", f="FLOOR0_2" }
   STARGRY1 = { t="STARGRY1", f="SHINY01" }
   TEKGRBLU = { t="TEKGRBLU", f="RROCK20" }
-  TEKGRDR = { t="TEKGRDR", f="CEIL5_2" }
+  TEKGRDR = { t="TEKGRDR", f="CEIL5_2" } -- Usable as a door
   TEKGRN01 = { t="TEKGRN01", f="RROCK20" } --RROCK20
   TEKGRY01 = { t="TEKGRY01", f="RROCK21" }
   TEKSHAW = { t="TEKSHAW", f="SHINY02" }
@@ -614,6 +616,11 @@ GLAICE_MATERIALS = {
   -- we have problems with the textures being cut off in-game.
   OBDNBNR1 = { t="OBDNBNR1", f="CRATOP2" } -- OBLIGE flag, yellow
   OBDNBNR2 = { t="OBDNBNR2", f="SFLR6_4" } -- OBLIGE flag, hellish
+
+ -- Exiting textures with new definitions
+  FIREBLU1 = { t="FIREBLU1", f="FIRELAF1" }
+  FIREBLU2 = { t="FIREBLU2", f="FIRELAF2" }
+  TEKWALL4 = { t="TEKWALL4", f="TEKFLR4" }
 
   --------------------
   --------------------
@@ -793,10 +800,10 @@ GLAICE_MATERIALS = {
   CEIL4_4 = { f="CEIL4_4", t="COMPBLUE" }
   GRENFLOR = { f="GRENFLOR",  t="COMPGREN" }
   GRNLITE2 = { f="GRNLITE2", t="TEKGRN01" }
-  STARBR2F = { t="STARBR2", f="STARBR2F" }
-  STARG1F = { t="STARG1", f="STARG1F" }
-  STARGR1F = { t="STARG1", f="STARG1F" }
-  STARTANF = { t="STARTAN2", f="STARTANF" } --Possibly unused
+  STARBR2F = { t="STARBR2", f="STARBR2F" } -- Unused
+  STARG1F = { t="STARG1", f="STARG1F" } -- Unused
+  STARGR1F = { t="STARG1", f="STARG1F" } -- Unused
+  STARTANF = { t="STARTAN2", f="STARTANF" } -- Currently unused
   TEK1 = { t="TEKWALL8",  f="TEK1" }
   TEK2 = { t="TEKWALL9",  f="TEK2" }
   TEKFLR4 = { t="TEKWALL4",  f="TEKFLR4" }
@@ -828,11 +835,14 @@ GLAICE_MATERIALS = {
   SLIME01  = { t="SLMFALL1", f="SLIME01", sane=1 }
   SLIME05  = { t="SLMFALL1", f="SLIME05", sane=1 }
 
+  FLOOR6_2 = { f="FLOOR6_2", t="ASH05" }
+
   -------------------------
   -- New animated floors --
   -------------------------
 
   FIRELAF1 = { t="FIREBLU1",  f="FIRELAF1" }
+  FIRELAF2 = { t="FIREBLU2",  f="FIRELAF2" }
 
   ----------------------------------------
   -- End new animated non-liquid floors --
