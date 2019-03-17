@@ -3073,6 +3073,21 @@ function Room_set_sky_heights()
 
   ---| Room_set_sky_heights |---
 
+  -- MSSP: trying to get outdoor rooms to not
+  -- be taller than any indoor room in the same
+  -- zone
+  each Z in LEVEL.zones do
+    Z.sky_h = -9001
+    each A in Z.areas do
+      if A.ceil_h then
+        if A.ceil_h > Z.sky_h then
+          Z.sky_h = A.ceil_h
+        end
+      end
+    end
+
+  end
+
   each A in LEVEL.areas do
     -- visit all normal, outdoor areas
     if A.floor_h and A.is_outdoor and not A.mode != "scenic" then
