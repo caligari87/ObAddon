@@ -2301,7 +2301,7 @@ function Layout_handle_corners()
 
     if need_post then
       corner.kind = "post"
-      corner.post_top_h = rail_z + (corner.areas[1].room.scenic_fence.rail_h)
+      corner.post_top_h = rail_z + (corner.areas[1].room.scenic_fence.rail_h or 72)
     end
   end
 

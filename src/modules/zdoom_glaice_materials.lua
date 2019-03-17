@@ -623,7 +623,7 @@ GLAICE_MATERIALS = {
   MIDWIND2 = { t="MIDWIND2", f="CEIL5_1", rail_h = 128 } -- 32x128
   MIDWIND3 = { t="MIDWIND3", f="CEIL5_1", rail_h = 128 } -- 64x128
   MIDWIND4 = { t="MIDWIND4", f="CEIL5_1", rail_h = 96 } -- 32x96
-  MIDWIND5 = { t="MIDWIND5", f="CEIL5_1", rial_h = 128 } -- 64x128
+  MIDWIND5 = { t="MIDWIND5", f="CEIL5_1", rail_h = 128 } -- 64x128
   MIDWIND6 = { t="MIDWIND6", f="CEIL5_1", rail_h = 96} -- 32x96
   MIDWIND7 = { t="MIDWIND7", f="CEIL5_1", rail_h = 128 } -- 32x128
   MIDWIND8 = { t="MIDWIND8", f="CEIL5_1", rail_h = 128 } -- 128x128

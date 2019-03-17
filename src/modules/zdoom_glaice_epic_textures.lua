@@ -113,15 +113,15 @@ function GLAICE_EPIC_TEXTURES.put_new_materials()
 
   --new scenic fences feature
   for name,prob in pairs(GLAICE_TECH_SCENIC_FENCES) do
-    GAME.THEMES.tech.floor_sinks[name] = prob
+    GAME.THEMES.tech.scenic_fence[name] = prob
   end
 
   for name,prob in pairs(GLAICE_URBAN_SCENIC_FENCES) do
-    GAME.THEMES.urban.floor_sinks[name] = prob
+    GAME.THEMES.urban.scenic_fence[name] = prob
   end
 
   for name,prob in pairs(GLAICE_HELL_SCENIC_FENCES) do
-    GAME.THEMES.hell.floor_sinks[name] = prob
+    GAME.THEMES.hell.scenic_fence[name] = prob
   end
 
   --hack for the street textures
