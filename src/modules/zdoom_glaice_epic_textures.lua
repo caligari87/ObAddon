@@ -88,27 +88,40 @@ function GLAICE_EPIC_TEXTURES.put_new_materials()
   end
 
   for name,prob in pairs(GLAICE_TECH_CEILING_SINKS) do
-    GAME.THEMES.tech.ceiling_sinks = defs
+    GAME.THEMES.tech.ceiling_sinks[name] = prob
   end
 
   for name,prob in pairs(GLAICE_URBAN_CEILING_SINKS) do
-    GAME.THEMES.urban.ceiling_sinks = defs
+    GAME.THEMES.urban.ceiling_sinks[name] = prob
   end
 
   for name,prob in pairs(GLAICE_HELL_CEILING_SINKS) do
-    GAME.THEMES.hell.ceiling_sinks = defs
+    GAME.THEMES.hell.ceiling_sinks[name] = prob
   end
 
   for name,prob in pairs(GLAICE_TECH_FLOOR_SINKS) do
-    GAME.THEMES.tech.floor_sinks = defs
+    GAME.THEMES.tech.floor_sinks[name] = prob
   end
 
   for name,prob in pairs(GLAICE_URBAN_FLOOR_SINKS) do
-    GAME.THEMES.urban.floor_sinks = defs
+    GAME.THEMES.urban.floor_sinks[name] = prob
   end
 
   for name,prob in pairs(GLAICE_HELL_FLOOR_SINKS) do
-    GAME.THEMES.hell.floor_sinks = defs
+    GAME.THEMES.hell.floor_sinks[name] = prob
+  end
+
+  --new scenic fences feature
+  for name,prob in pairs(GLAICE_TECH_SCENIC_FENCES) do
+    GAME.THEMES.tech.floor_sinks[name] = prob
+  end
+
+  for name,prob in pairs(GLAICE_URBAN_SCENIC_FENCES) do
+    GAME.THEMES.urban.floor_sinks[name] = prob
+  end
+
+  for name,prob in pairs(GLAICE_HELL_SCENIC_FENCES) do
+    GAME.THEMES.hell.floor_sinks[name] = prob
   end
 
   --hack for the street textures

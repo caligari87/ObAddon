@@ -614,19 +614,19 @@ GLAICE_MATERIALS = {
   FENCE5 = { t="FENCE5", rail_h=72 }
   FENCE6 = { t="FENCE6", rail_h=72 }
   FENCE7 = { t="FENCE7", rail_h=128 }
-  MIDSPAC2 = { t="MIDSPAC2", f="CEIL5_1" } -- Darker
-  MIDSPAC3 = { t="MIDSPAC3", f="CEIL5_1" } -- A thicker, metallic look
+  MIDSPAC2 = { t="MIDSPAC2", f="CEIL5_1", rail_h = 128 } -- Darker
+  MIDSPAC3 = { t="MIDSPAC3", f="CEIL5_1", rail_h = 128 } -- A thicker, metallic look
   RAIL1 = { t="RAIL1", rail_h=32 }
 
   -- Transparent windows
-  MIDWIND1 = { t="MIDWIND1", f="CEIL5_1" } -- 32x128
-  MIDWIND2 = { t="MIDWIND2", f="CEIL5_1" } -- 32x128
-  MIDWIND3 = { t="MIDWIND3", f="CEIL5_1" } -- 64x128
-  MIDWIND4 = { t="MIDWIND4", f="CEIL5_1" } -- 32x96
-  MIDWIND5 = { t="MIDWIND5", f="CEIL5_1" } -- 64x128
-  MIDWIND6 = { t="MIDWIND6", f="CEIL5_1" } -- 32x96
-  MIDWIND7 = { t="MIDWIND7", f="CEIL5_1" } -- 32x128
-  MIDWIND8 = { t="MIDWIND8", f="CEIL5_1" } -- 128x128
+  MIDWIND1 = { t="MIDWIND1", f="CEIL5_1", rail_h = 128 } -- 32x128
+  MIDWIND2 = { t="MIDWIND2", f="CEIL5_1", rail_h = 128 } -- 32x128
+  MIDWIND3 = { t="MIDWIND3", f="CEIL5_1", rail_h = 128 } -- 64x128
+  MIDWIND4 = { t="MIDWIND4", f="CEIL5_1", rail_h = 96 } -- 32x96
+  MIDWIND5 = { t="MIDWIND5", f="CEIL5_1", rial_h = 128 } -- 64x128
+  MIDWIND6 = { t="MIDWIND6", f="CEIL5_1", rail_h = 96} -- 32x96
+  MIDWIND7 = { t="MIDWIND7", f="CEIL5_1", rail_h = 128 } -- 32x128
+  MIDWIND8 = { t="MIDWIND8", f="CEIL5_1", rail_h = 128 } -- 128x128
 
 
   -- Oblige flags
