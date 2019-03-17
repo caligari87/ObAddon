@@ -356,7 +356,7 @@ DOOM.MATERIALS =
   BRNSMAL2 = { t="BRNSMAL2", rail_h=64 }
   BRNSMALC = { t="BRNSMALC", rail_h=64 }
 
-  MIDBRN1  = { t="MIDBRN1",  rail_h=128 }
+  MIDBRN1  = { t="MIDBRN1",  rail_h=112 }
   MIDGRATE = { t="MIDGRATE", rail_h=128 }
 
 

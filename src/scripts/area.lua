@@ -789,9 +789,7 @@ end
 function Junction_make_railing(junc, rail_mat, block)
 
   if rail_mat == "FENCE_MAT_FROM_THEME" then
-    local scenic_fence_group = {}
-    scenic_fence_group = GAME.THEMES[LEVEL.theme_name]
-    rail_mat = rand.key_by_probs(scenic_fence_group.scenic_fence)
+    rail_mat = junc.A1.room.scenic_fence.t
   end
 
   if not rail_mat then

@@ -80,6 +80,8 @@
     guard_chunk : CHUNK   -- what a bossy monster is guarding
 
     aversions : table[name] -> factor
+
+    scenic_fence : table[name] -- specific fence material if this room looks at a vista
 --]]
 
 
@@ -175,6 +177,8 @@ function ROOM_CLASS.new()
     locked_fences = {}
 
     hazard_health = 0
+
+    scenic_fence = {}
   }
 
   table.set_class(R, ROOM_CLASS)
@@ -322,6 +326,19 @@ function ROOM_CLASS.has_sky_neighbor(R)
     if C.A1.room == C.A2.room then continue end
     local N = C:other_room(A)
     if N.is_outdoor and N.mode != "void" then return true end
+  end
+
+  return false
+end
+
+
+function ROOM_CLASS.has_vista_neighbor(R) --MSSP
+  each A in R.areas do
+    each N in A.neighbors do
+      if N.mode == "scenic" then
+        return true
+      end
+    end
   end
 
   return false
@@ -3224,6 +3241,20 @@ function Room_sync_outdoor_heights()
   end
 end
 
+
+
+function Room_do_vista_mats()
+  each R in LEVEL.rooms do
+    if R:has_vista_neighbor() then
+      local scenic_fence_group = {}
+      local mat_name = ''
+      scenic_fence_group = GAME.THEMES[LEVEL.theme_name]
+      mat_name = rand.key_by_probs(scenic_fence_group.scenic_fence)
+      R.scenic_fence = GAME.MATERIALS[mat_name]
+    end
+  end
+end
+
 ------------------------------------------------------------------------
 
 
@@ -3248,6 +3279,8 @@ function Room_build_all()
 
   Room_reckon_doors()
   Room_prepare_hallways()
+
+  Room_do_vista_mats() -- MSSP
 
   Room_floor_ceil_heights()
   Room_set_sky_heights()
