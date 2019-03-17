@@ -1219,7 +1219,7 @@ DOOM.THEMES =
     }
 
     style_list =
-   {
+    {
       caves = { none=75, few=35 }
       outdoors = { none=15, few=40, some=80, heaps=10 }
       big_rooms = { none=40, few=20, some=15, heaps=5 }
@@ -1238,6 +1238,14 @@ DOOM.THEMES =
       traps = { few=60, some=40, heaps=20 }
       barrels = { few=5, some=85, heaps=60 }
       ambushes = { few=30, some=75, heaps=20 }
+    }
+
+    scenic_fence =
+    {
+      MIDBARS3 = 10
+      MIDSPACE = 5
+      MIDBARS1 = 8
+      BRNSMALC = 2
     }
 
     techy_doors = true
@@ -1483,7 +1491,7 @@ DOOM.THEMES =
     }
 
     style_list =
-   {
+    {
       caves = { none=60, few=40, some=12, heaps=2 }
       outdoors = { none=10, few=35, some=90, heaps=30 }
       pictures = { few=20, some=80, heaps=30 }
@@ -1505,6 +1513,14 @@ DOOM.THEMES =
     }
 
     ceil_light_prob = 65
+
+    scenic_fence =
+    {
+      MIDBARS3 = 8
+      MIDSPACE = 8
+      MIDBARS1 = 8
+      BRNSMALC = 2
+    }
 
     archy_arches = true
   }
@@ -1815,7 +1831,7 @@ DOOM.THEMES =
     }
 
     style_list =
-   {
+    {
       doors = { none=15, few=30, some=65, heaps=25 }
       outdoors = { none=10, few=35, some=60, heaps=15 }
       steepness = { few=25, some=70, heaps=40 }
@@ -1852,6 +1868,12 @@ DOOM.THEMES =
       Mastermind = 1.5
     }
 
+    scenic_fence =
+    {
+      MIDBRN1 = 3
+      MIDGRATE = 10
+      MIDBARS3 = 8
+    }
 
     ceil_light_prob = 40
   }

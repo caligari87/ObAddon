@@ -1547,13 +1547,13 @@ function Room_border_up()
         Junction_make_wall(junc)
 
       elseif A2.border_type == "watery_drop" and A1.is_outdoor then
-        Junction_make_railing(junc, "MIDBARS3", "block")
+        Junction_make_railing(junc, "FENCE_MAT_FROM_THEME", "block")
 
       elseif A2.border_type == "bottomless_drop" and A1.is_outdoor  then
-        Junction_make_railing(junc, "MIDBARS3", "block")
+        Junction_make_railing(junc, "FENCE_MAT_FROM_THEME", "block")
 
       elseif A2.border_type == "ocean" and A1.is_outdoor  then
-        Junction_make_railing(junc, "MIDBARS3", "block")
+        Junction_make_railing(junc, "FENCE_MAT_FROM_THEME", "block")
 
       else
         Junction_make_empty(junc)

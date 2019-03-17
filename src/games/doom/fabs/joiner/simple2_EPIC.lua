@@ -59,7 +59,7 @@ PREFABS.Joiner_simple2_urban2_epic =
 
 PREFABS.Joiner_simple2_urban3_epic =
 {
-  template   = "Joiner_simple2_pic"
+  template   = "Joiner_simple2_epic"
   theme      = "urban"
 
   tex_WOODMET4 = { BLAKWAL1=50, BLAKWAL2=50, MODWALL1=50, MODWALL3=50 }
@@ -250,7 +250,7 @@ PREFABS.Joiner_simple2_hell5_epic =
 
 PREFABS.Joiner_simple2_general1_epic =
 {
-  template   = "Joiner_simple2"
+  template   = "Joiner_simple2_epic"
   theme      = "!tech"
 
   tex_WOODMET4 = { SW1GARG=50, SW1SATYR=50, SW1LION=50, SUPPORT3=50 }
@@ -261,7 +261,7 @@ PREFABS.Joiner_simple2_general1_epic =
 
 PREFABS.Joiner_simple2_general2_epic =
 {
-  template   = "Joiner_simple2"
+  template   = "Joiner_simple2_epic"
 
   tex_WOODMET4 = { BROWNHUG=50, BROWN144=50, BROWNGRN=50, BROWN96=50, BROWNPIP=50 }
   tex_SHAWN2 = "GRAY1"
