@@ -1716,7 +1716,7 @@ function Room_set_kind(R, is_hallway, is_outdoor, is_cave)
   end
 
   if R.is_park then
-    if style_sel("nature_park", 0, 33, 66, 90) then
+    if rand.odds(style_sel("nature_park", 0, 33, 66, 90)) then
       R.is_natural_park = true
     end
   end
