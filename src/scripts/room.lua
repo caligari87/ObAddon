@@ -1487,9 +1487,6 @@ function Room_border_up()
 
     if A1.mode == "void" and A2.mode == "void" then
       Junction_make_empty(junc)
-      if A1 == A2 then
-        Junction_make_empty(junc)
-      end
       return
     end
 
@@ -1504,6 +1501,7 @@ function Room_border_up()
       return
     end
 
+
     -- void to scenic / vice versa --
 
     if A1.mode == "void" and A2.mode == "scenic" then
@@ -1513,6 +1511,7 @@ function Room_border_up()
       Junction_make_wall(junc)
       return
     end
+
 
     -- closets --
 

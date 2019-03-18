@@ -207,6 +207,11 @@ function Render_edge(E)
     if E.area.room then
       if E.area.room.is_natural_park then
         reqs.group = "natural_walls"
+        if E.peer then
+          if not E.peer.area.room.is_outdoor then
+            reqs.group = nil
+          end
+        end
       end
     end
 
@@ -388,12 +393,6 @@ function Render_edge(E)
     if E.area.floor_mat then
       skin.floor = assert (E.area.floor_mat)
     end
-
-    -- scenic rooms will sometimes have inverted heights when facing indoor at times
-    -- it's just something that happens
-    --[[if A.ceil_h <= A.floor_h then
-      A.ceil_h, A.floor_h = A.floor_h, A.ceil_h
-    end]]
 
     -- just throw them Oblige's default minimum room height
     -- if the generated vista is too low

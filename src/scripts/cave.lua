@@ -4429,6 +4429,10 @@ function Cave_prepare_scenic_vista(area)
   elseif room.has_hills or vista_type == "simple_fence" then
     area.border_type = "simple_fence"
   end
+
+  if room.is_natural_park then
+    area.border_type = "no_vista"
+  end
 end
 
 

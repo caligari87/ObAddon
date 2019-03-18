@@ -2895,18 +2895,22 @@ function Quest_room_themes()
     end
 
     local tab = table.copy(THEME.facades)
+    local nature_tab = table.copy(THEME.cliff_mats)
 
     for pass = 1,2 do
     each Z in LEVEL.zones do
       local mat = rand.key_by_probs(tab)
+      local nature_mat = rand.key_by_probs(nature_tab)
 
       -- less likely to use it again
       tab[mat] = tab[mat] / 20
 
       if pass == 1 then
         Z.facade_mat = mat
+        Z.nature_facade = nature_mat
       else
         Z.other_facade = mat
+        Z.other_nature_facade = nature_mat
       end
     end -- pass, Z
     end
@@ -2988,7 +2992,6 @@ function Quest_room_themes()
 
     if R.is_natural_park then
       R.main_tex = rand.key_by_probs(assert(R.theme.naturals))
-      R.zone.facade_mat = R.main_tex
     end
 
     -- create a skin (for prefabs)

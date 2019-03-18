@@ -660,6 +660,7 @@ end
 function Junction_calc_wall_tex(A1, A2)
 
   if A1.zone != A2.zone then
+
     if A1.room and not A1.is_outdoor then
       return assert(A1.room.main_tex)
     end
@@ -672,6 +673,13 @@ function Junction_calc_wall_tex(A1, A2)
   end
 
   if A1.is_outdoor and A2:is_indoor() then
+
+    if A1.room then
+      if A1.room.is_natural_park then
+        return assert(A1.room.main_tex)
+      end
+    end
+
     if A2.facade_crap then
       return A2.facade_crap
     end
