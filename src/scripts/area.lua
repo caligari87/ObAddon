@@ -2571,15 +2571,6 @@ local test_textures =
       end
     end
 
-    -- override facades on zone borders if its a natural park
-    each A in LEVEL.areas do
-      if A.room then
-        if A.room.is_natural_park then
-          A.facade_crap = A.room.main_tex
-        end
-      end
-    end
-
     -- clear the groups (for the sake of straddling joiners)
     each A in LEVEL.areas do
       A.facade_group = nil
