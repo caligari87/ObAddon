@@ -49,3 +49,40 @@ PREFABS.Wall_natural5 =
 
   deep  = 40
 }
+
+PREFABS.Wall_natural6 =
+{
+  template = "Wall_natural1"
+  map      = "MAP06"
+
+  deep  = 24
+
+  bound_z2 = 128
+
+  z_fit = "stretch"
+}
+
+PREFABS.Wall_natural7 =
+{
+  template = "Wall_natural1"
+  map      = "MAP07"
+
+  deep  = 24
+
+  bound_z2 = 128
+
+  z_fit = "stretch"
+}
+
+PREFABS.Wall_natural8 =
+{
+  template = "Wall_natural1"
+  map      = "MAP08"
+
+  deep  = 32
+
+  bound_z2 = 128
+
+  z_fit = "stretch"
+
+}
