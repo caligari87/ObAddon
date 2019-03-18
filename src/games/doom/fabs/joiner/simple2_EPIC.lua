@@ -10,7 +10,7 @@ PREFABS.Joiner_simple2_epic =
   map    = "MAP01"
   theme  = "!tech"
 
-  prob   = 600
+  prob   = 0 --600
 
   where  = "seeds"
   shape  = "I"
