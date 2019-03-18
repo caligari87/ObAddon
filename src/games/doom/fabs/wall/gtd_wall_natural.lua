@@ -9,7 +9,7 @@ PREFABS.Wall_natural1 =
   group  = "natural_walls"
 
   where  = "edge"
-  deep   = 32
+  deep   = 48
 
   bound_z1 = 0
   bound_z2 = 2
@@ -31,7 +31,7 @@ PREFABS.Wall_natural3 =
   template = "Wall_natural1"
   map      = "MAP03"
 
-  deep  = 24
+  deep  = 40
 }
 
 PREFABS.Wall_natural4 =
