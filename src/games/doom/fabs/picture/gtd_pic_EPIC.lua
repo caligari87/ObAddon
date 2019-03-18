@@ -334,6 +334,7 @@ PREFABS.Pic_EPIC_box_static =
    NOISE2A = 50
    NOISE3A = 50
    TVSNOW01 = 50
+   COMPFUZ1 = 50
   }
 }
 
@@ -356,13 +357,14 @@ PREFABS.Pic_EPIC_box_metal_small =
     COMPSC1 = 50
     COMPSD1 = 50
     COMPY1 = 50
-    COMPFUZ1 = 50
+    COMPFUZ1 = 30
     COMPU1 = 50
     COMPU2 = 50
     COMPU3 = 50
     COMPVENT = 50
     COMPVEN2 = 50
     NMONIA1 = 50
+    DECMP04A = 50
   }
 }
 
@@ -381,6 +383,8 @@ PREFABS.Pic_EPIC_box_metal_wide =
 
   tex_COMPSTA3 =
   {
+    COMPSTA1 = 50
+    COMPSTA2 = 50
     COMPSTA3 = 50
     COMPSTA4 = 50
     COMPSTA5 = 50
@@ -413,4 +417,35 @@ PREFABS.Pic_EPIC_box_silverwall =
    SILVER2W = 50
    SILVER2Y = 50
   }
+}
+
+-- 3 seeds wide!!
+PREFABS.Pic_EPIC_box_metal_superwide =
+{
+  template = "Pic_EPIC_box_gothic_big"
+  map = "MAP06"
+
+  prob = 30 * 6
+
+  height = 128
+
+  theme = "tech"
+
+  seed_w = 3
+
+  tex_GLASS1 =
+  {
+   PLAN1    = 75
+   PLAN2    = 75
+   COMPCT07 = 50
+   CONSOLE3 = 50
+   CONSOLEF = 50
+   CONSOLEG = 50
+   SHAWCOMP = 10
+   METACOMP = 10
+   SILVCOMP = 10
+  }
+
+  sector_1  = { [0]=70, [1]=15 }
+
 }
