@@ -81,6 +81,9 @@
     facade_mat      -- material for outer walls of buildings
     other_facade    -- another one
 
+    nature_facade       -- natural facade for fully natural parks
+    other_nature_facade
+
     fence_mat       -- material for fences
 
 
@@ -2985,6 +2988,7 @@ function Quest_room_themes()
 
     if R.is_natural_park then
       R.main_tex = rand.key_by_probs(assert(R.theme.naturals))
+      R.zone.facade_mat = R.main_tex
     end
 
     -- create a skin (for prefabs)

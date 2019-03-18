@@ -41,3 +41,11 @@ PREFABS.Wall_natural4 =
 
   deep  = 40
 }
+
+PREFABS.Wall_natural5 =
+{
+  template = "Wall_natural1"
+  map      = "MAP05"
+
+  deep  = 40
+}
