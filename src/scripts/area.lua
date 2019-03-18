@@ -669,6 +669,12 @@ function Junction_calc_wall_tex(A1, A2)
       return LEVEL.cliff_mat
     end
 
+    if A1.room then
+      if A1.room.is_natural_park then
+        return assert(A1.room.main_tex)
+      end
+    end
+
     return assert(A1.zone.facade_mat)
   end
 
