@@ -2983,6 +2983,10 @@ function Quest_room_themes()
       R. ceil_mat = rand.key_by_probs(R.theme.ceilings)
     end
 
+    if R.is_natural_park then
+      R.main_tex = rand.key_by_probs(assert(R.theme.naturals))
+    end
+
     -- create a skin (for prefabs)
     R.skin =
     {

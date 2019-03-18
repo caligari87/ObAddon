@@ -28,6 +28,7 @@
     is_cave    : bool  -- true for caves (indoors)
     is_park    : bool  -- true for parks (outdoors)
 
+    is_natural_park : bool  -- parks with natural walls
 
     areas = list(AREA)
 

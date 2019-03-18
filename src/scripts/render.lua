@@ -204,6 +204,12 @@ function Render_edge(E)
       reqs.group = E.area.floor_group.wall_group
     end
 
+    if E.area.room then
+      if E.area.room.is_natural_park then
+        reqs.group = "natural_walls"
+      end
+    end
+
     -- smart checking for wall fabs that are too long
     -- stop them from occupying each others' space
     if reqs.where == "edge" then
