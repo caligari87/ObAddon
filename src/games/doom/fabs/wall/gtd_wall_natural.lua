@@ -86,3 +86,29 @@ PREFABS.Wall_natural8 =
   z_fit = "stretch"
 
 }
+
+PREFABS.Wall_natural9 =
+{
+  template = "Wall_natural1"
+  map      = "MAP09"
+
+  deep  = 40
+
+  bound_z2 = 128
+
+  z_fit = "stretch"
+
+}
+
+PREFABS.Wall_natural10 =
+{
+  template = "Wall_natural1"
+  map      = "MAP10"
+
+  deep  = 64
+
+  bound_z2 = 128
+
+  z_fit = "stretch"
+
+}
