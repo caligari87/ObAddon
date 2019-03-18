@@ -19,6 +19,7 @@ PREFABS.Exit_gazebo1 =
   open_to_sky = 1
 
   x_fit  = "frame"
+  y_fit  = "top"
 }
 
 
