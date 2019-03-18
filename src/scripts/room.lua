@@ -1664,6 +1664,7 @@ function Room_border_up()
 
       if not A.room then continue end
       if not A.room.is_outdoor then continue end
+      if A.room.border_type == "no_vista" then continue end
 
       local T = A.chunk
       if T.kind != "closet" then continue end
