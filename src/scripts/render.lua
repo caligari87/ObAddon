@@ -2556,9 +2556,8 @@ function Render_skybox()
     table.insert(skyfab_list, PREFABS["Skybox_generic"])
     table.insert(skyfab_list, PREFABS["Skybox_garrett_city"])
     table.insert(skyfab_list, PREFABS["Skybox_garrett_hell"])
-    if PARAM.epic_textures_activated then
-      table.insert(skyfab_list, PREFABS["Skybox_hellish_city_EPIC"])
-    end
+    table.insert(skyfab_list, PREFABS["Skybox_hellish_city"])
+
     skyfab = rand.pick(skyfab_list)
 
     -- proper skybox picking code doesn't seem to work and
@@ -2574,9 +2573,8 @@ function Render_skybox()
     if LEVEL.theme_name == "urban" then
       skyfab_list_urban = {}
       table.insert(skyfab_list_urban, PREFABS["Skybox_garrett_city"])
-      if PARAM.epic_textures_activated then
-        table.insert(skyfab_list_urban, PREFABS["Skybox_hellish_city_EPIC"])
-      end
+      table.insert(skyfab_list_urban, PREFABS["Skybox_hellish_city"])
+
       skyfab = rand.pick(skyfab_list_urban)
 
     elseif LEVEL.theme_name == "tech" then
@@ -2585,9 +2583,8 @@ function Render_skybox()
     elseif LEVEL.theme_name == "hell" then
       skyfab_list_hell = {}
       table.insert(skyfab_list_hell, PREFABS["Skybox_garrett_hell"])
-      if PARAM.epic_textures_activated then
-        table.insert(skyfab_list_hell, PREFABS["Skybox_hellish_city_EPIC"])
-      end
+      table.insert(skyfab_list_hell, PREFABS["Skybox_hellish_city"])
+
       skyfab = rand.pick(skyfab_list_hell)
 
     else
@@ -2596,9 +2593,7 @@ function Render_skybox()
     end
   elseif OB_CONFIG.zdoom_skybox == "generic" then
     skyfab = PREFABS["Skybox_generic"]
-    if PARAM.epic_textures_activated then
-      skyfab = PREFABS["Skybox_hellish_city_EPIC"]
-    end
+    skyfab = PREFABS["Skybox_hellish_city"]
 
   end
 
