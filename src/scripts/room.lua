@@ -1668,10 +1668,6 @@ function Room_border_up()
       local T = A.chunk
       if T.kind != "closet" then continue end
 
-      if A.border_type then
-        if A.border_type == "no_vista" then continue end
-      end
-
       if T:is_open_to_sky(A.room) then
         T.open_to_sky = true
       end
@@ -1715,6 +1711,12 @@ function Room_set_kind(R, is_hallway, is_outdoor, is_cave)
 
     if rand.odds(park_prob) then
       R.is_park = true
+    end
+  end
+
+  if R.is_park then
+    if style_sel("nature_park", 0, 33, 66, 90) then
+      R.is_natural_park = true
     end
   end
 

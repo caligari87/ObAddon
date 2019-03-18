@@ -99,7 +99,14 @@ OB_MODULES["misc"] =
     }
 
     { name="big_rooms",   label=_("Big Rooms"),      choices=STYLE_CHOICES }
-    { name="parks",       label=_("Parks"),          choices=STYLE_CHOICES, gap=1 }
+    { name="parks",       label=_("Parks"),          choices=STYLE_CHOICES }
+    {
+      name="natural_parks",
+      label=_("Natural Cliffs"),
+      tooltip=_("Percentage of parks that use completely naturalistic walls.")
+      choices=STYLE_CHOICES,
+      gap=1
+    }
 
     { name="windows",     label=_("Windows"),        choices=STYLE_CHOICES }
     { name="symmetry",    label=_("Symmetry"),       choices=STYLE_CHOICES }
