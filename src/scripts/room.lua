@@ -3319,8 +3319,8 @@ function Room_build_all()
 
   Render_set_all_properties()
 
-  Render_all_areas()
   Render_all_chunks()
+  Render_all_areas()
 
   -- MSSP-TODO
   -- Render_all_street_markings()

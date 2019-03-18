@@ -8,7 +8,7 @@ PREFABS.Exit_gazebo1 =
   map    = "MAP01"
 
   rank   = 2
-  prob   = 0 --100
+  prob   = 100 --100
 
   where  = "seeds"
   seed_w = 2
