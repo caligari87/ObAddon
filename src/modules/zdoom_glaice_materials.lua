@@ -511,6 +511,9 @@ GLAICE_MATERIALS = {
   SNOW09 = { t="SNOW09", f="SNOW5" }
   SNOW10 = { t="SNOW10", f="SNOW1" }
   SNOW11 = { t="SNOW11", f="SNOW6" }
+  SNOW12 = { t="SNOW12", f="SNOW6" }
+  SNOW13 = { t="SNOW13", f="SNOW2" } -- 256x256, beautiful ice
+  SNOW14 = { t="SNOW14", f="SNOW2" } -- 256x256
 
   SNOWBOX1 = { t="SNOWBOX1", f="SNOW6" }
   SNOWBOX2 = { t="SNOWBOX2", f="SNOW1" }

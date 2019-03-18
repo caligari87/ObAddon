@@ -801,9 +801,9 @@ GLAICE_THEMES =
   hell_icecave =
   {
     env  = "cave"
-    prob = 60
+    prob = 50
 
-    light_adjusts = { 16,24,32 }
+    light_adjusts = { 8,16,24 }
 
     walls =
     {
@@ -813,6 +813,9 @@ GLAICE_THEMES =
     SNOW09 = 100
     SNOW10 = 100
     SNOW11 = 100
+    SNOW12 = 100
+    SNOW13 = 100
+    SNOW14 = 100
     }
 
     floors =
