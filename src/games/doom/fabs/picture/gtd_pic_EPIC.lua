@@ -449,3 +449,24 @@ PREFABS.Pic_EPIC_box_metal_superwide =
   sector_1  = { [0]=70, [1]=15 }
 
 }
+
+-- This is 256x56
+PREFABS.Pic_EPIC_superwide_longconsole =
+{
+  template = "Pic_EPIC_box_gothic_big"
+  map = "MAP07"
+
+  prob = 25 * 5
+
+  theme = "tech"
+
+  seed_w = 3
+
+  tex_GLASS1 =
+  {
+   CONSOLE5 = 100
+  }
+
+  sector_1  = { [0]=70, [1]=20 }
+
+}
