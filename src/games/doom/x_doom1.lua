@@ -599,6 +599,11 @@ ULTDOOM.THEMES =
     {
       naturals = { none=30, few=70, some=30, heaps=2 }
     }
+
+    scenic_fence =
+    {
+      MIDBARS3 = 50
+    }
   }
 
 
@@ -668,6 +673,11 @@ ULTDOOM.THEMES =
     style_list =
     {
       naturals = { none=40, few=70, some=20, heaps=2 }
+    }
+
+    scenic_fence =
+    {
+      MIDBARS3 = 50
     }
   }
 
@@ -780,6 +790,11 @@ ULTDOOM.THEMES =
       zombie  = 0.3
       shooter = 0.6
       skull   = 2.0
+    }
+
+    scenic_fence =
+    {
+      MIDBARS3 = 50
     }
 
     ceil_light_prob = 20
