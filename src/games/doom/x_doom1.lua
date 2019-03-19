@@ -903,6 +903,11 @@ ULTDOOM.THEMES =
       skull = 1.2
       demon = 1.5
     }
+
+    scenic_fence =
+    {
+      MIDBARS3 = 50
+    }
   }
 }
 

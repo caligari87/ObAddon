@@ -10,7 +10,7 @@ PREFABS.Joiner_simple2_epic =
   map    = "MAP01"
   theme  = "!tech"
 
-  prob   = 0 --600
+  prob   = 600 --600
 
   where  = "seeds"
   shape  = "I"
@@ -24,7 +24,7 @@ PREFABS.Joiner_simple2_epic =
   over   = 16
 
   x_fit = "frame"
-  y_fit = { 24,40 , 120,136 }
+  y_fit = { 24,32 , 128,136 }
 
   tex_WOODMET4 = { WOODMET2=50, WOOD1=50, WOOD3=50, WOOD4=50, WOODVERT=50, WOODGARG=50, PANRED=50, PANBLUE=50, PANBLACK=50,
                    WOOD6=50, WOOD8=50, WOOD9=50 }
