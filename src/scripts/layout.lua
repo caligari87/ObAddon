@@ -1901,8 +1901,7 @@ stderrf("Cages in %s [%s pressure] --> any_prob=%d  per_prob=%d\n",
     end
 
     each fg in R.floor_groups do
-      if fg.openness < 0.4 and
-      not R.is_street then continue end
+      if fg.openness < 0.4 then continue end
 
       local tab = grab_usable_sinks(R, fg, "floor")
       if tab == nil then return end
