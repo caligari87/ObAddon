@@ -6,6 +6,8 @@ PREFABS.Pic_glaice_candles =
   prob   = 15
   theme = "hell"
 
+  uses_epic_textures = true
+
   where  = "seeds"
   height = 128
 
