@@ -128,6 +128,15 @@ OB_MODULES["misc"] =
     { name="switches",    label=_("Switched Doors"), choices=STYLE_CHOICES, gap=1 }
 
     {
+      name="road_markings",
+      label=_("Road Markings"),
+      choices=MISC_STUFF.YES_NO,
+      default = "no",
+      tooltip = _("[SUPER ALPHA FEATURE] Adds street markings to roads."),
+      gap = 1,
+    }
+
+    {
       name="exit_signs"
       label=_("Exit Signs")
       choices=MISC_STUFF.YES_NO

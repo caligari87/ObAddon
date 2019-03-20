@@ -2628,12 +2628,12 @@ function Render_all_areas()
   Render_skybox()
 
     --MSSP-TODO
-  --[[
-  if LEVEL.has_streets then
+
+  if LEVEL.has_streets and PARAM.road_markings == "yes" then
     Render_find_street_markings()
     Render_all_street_markings()
   end
-  ]]
+
 end
 
 
@@ -2734,7 +2734,7 @@ function Render_find_street_markings()
       until distance_checked >= distance_to_check
 
       if score == 4 then
-        local mark_x = S.x1
+        local mark_x = S.x2
         local mark_y = S.y1
         local mark_z = S.area.floor_h
         local mark_dir = 2
