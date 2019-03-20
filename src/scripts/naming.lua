@@ -2836,6 +2836,55 @@ namelib.NAMES =
         ["Nowhere Is Safe"] = 10
         ["The Seeds of War"] = 20
         ["The Will To Survive"] = 20
+
+         -- MSSP adds names
+        ["People Die When They Are Killed"] = 10
+
+        -- based on popular movie/TV slogans
+        ["A Minute in Hell"] = 20
+        ["Whoever Wins We Lose"] = 20
+        ["The Demons are Back"] = 20
+        ["Trapped in Hell"] = 20
+        ["Hell is War"] = 20
+        ["Escape or Die Trying"] = 20
+        ["No Rest for the Wicked"] = 20
+        ["Be Very Afraid"] = 20
+        ["There Can Only Be One"] = 20
+        ["Angels Fall"] = 20
+        ["The Last Man on Earth"] = 20
+        ["Welcome to the Suck"] = 20
+        ["A Hellspawn Reality"] = 20
+        ["Wake Up Screaming"] = 20
+        ["Wish You Were Here"] = 20
+        ["The Classic"] = 20
+        ["The Final Sentence"] = 20
+        ["The Mission is Survive"] = 20
+        ["There Will Be Blood"] = 20
+        ["Not A Romantic Comedy"] = 20
+        ["Might Hurt a Little"] = 20
+        ["Full Metal Jacket"] = 20
+        ["The Coast is Toast"] = 20
+        ["Too Proud To Run"] = 20
+        ["Fear Holds All Prisoner"] = 20
+        ["Nothing Spreads Like Fear"] = 20
+        ["A Few Days To Kill"] = 20
+        ["The Future is DOOM"] = 20
+
+        -- book serialization/publication buzzwords
+        ["The Anthology"] = 40
+        ["The Trilogy"] = 40
+        ["The Complete Works"] = 20
+        ["Omnibus Edition"] = 20
+        ["Editor's Choice"] = 30
+        ["The Next Chapter"] = 20
+
+        -- production-related phrases
+        ["An ObligeFlix Original Series"] = 40
+        ["Subscribe and Hit that Like Button"] = 40
+        ["The Official Video Game Tie-in"] = 20
+        ["No Microtransactions"] = 20
+        ["The Original Series"] = 20
+        ["11/10 IGN"] = 20
       }
     }
   }
