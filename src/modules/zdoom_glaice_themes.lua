@@ -285,6 +285,7 @@ GLAICE_THEMES =
       SHINY02 = 30
       SHINY03 = 25
       TILES4  = 5
+      TILES6  = 5
     }
 
     ceilings =
@@ -393,6 +394,8 @@ GLAICE_THEMES =
       FLAT5_4 = 25
       FLAT19 = 15
       TILES4 = 15
+      TILES5 = 10
+      TILES6 = 10
       FLOOR0_5 = 10
       FLOOR4_7 = 15
       SHINY01 = 5
@@ -821,6 +824,7 @@ GLAICE_THEMES =
       FIREBLU1 = 15
       CRACKLE2 =  5
       CRACKLE4 =  5
+      FIREBLK1 =  3
     }
 
     floors =
@@ -933,6 +937,8 @@ GLAICE_THEMES =
       TILES2 = 80
       TILES3 = 80
       TILES4 = 80
+      TILES5 = 80
+      TILES6 = 80
 
       GMET04 = 80
       GMET05 = 80
@@ -1107,12 +1113,14 @@ GLAICE_HELL_FACADES =
 {
   GSTONE1 = 50
   WOOD5   = 50
+  WOOD3   = 50
 
   MARBLE  = 25
   MARBLE1 = 25
   MARBLE2 = 25
   MARBLE3 = 25
   MARBGRAY = 25
+  BLAKMBGY = 20
 
   SP_HOT1 = 20
   STONE   = 20
@@ -1133,9 +1141,25 @@ GLAICE_HELL_FACADES =
   BRIKS36 = 15
   GSTONE3 = 10
 
+  MARBLE4 = 15
+  MARBLE5 = 15
+  MARBLE6 = 15
+  MARBLE7 = 10
+  MARBLE8 = 10
+  MM203   = 10
+  MM204   = 10
+  MM205   = 15
+  MM206   = 10
+  MM207   = 10
+  MM208   = 5
+
   HELMET1 = 20
   HELMET2 = 20
+  CATACMB3 = 10
+  CATACMB6 = 10
 
+  HELLCMT1 = 15
+  HELLCMT8 = 15
   SKTEK01 = 15
   SKTEK02 = 15
   KSTONE1 = 10
@@ -1152,6 +1176,7 @@ GLAICE_HELL_FACADES =
   VINES2   = 5
   VINES3   = 5
   VINES4   = 5
+  WDMET03  = 5
 
   BROWN1   = 5
   BRVINE   = 10
