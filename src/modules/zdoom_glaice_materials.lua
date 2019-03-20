@@ -114,6 +114,7 @@ GLAICE_MATERIALS = {
   BRIKS36 = { t="BRIKS36", f="BLACK0" }
   BRIKS37 = { t="BRIKS37", f="FLAT5_4" } -- Blue
   BRIKS38 = { t="BRIKS38", f="FLAT5_4" } -- Blue
+  BRIKS39 = { t="BRIKS39", f="GSTN02" }
 
   BST01  = { t="BST01",  f="RROCK11" } --BSTONE1
   BST02  = { t="BST02",  f="RROCK12" } --BSTONE2
@@ -509,7 +510,7 @@ GLAICE_MATERIALS = {
   HELWAL2 = { t="HELWAL2", f="FLOOR6_1" } --Plutonia 2
   PENTA1 = { t="PENTA1", f="RROCK03" }
   SKIN3 = { t="SKIN3", f="SFLR6_4" }
-  SKIN4 = { t="SKIN4", f="CRATOP2" }
+  SKIN4 = { t="SKIN4", f="SKINFLT1" }
   SKINHEAD = { t="SKINHEAD", f="SFLR6_4" }
   SKINLOW1  = { t="SKINLOW1",  f="FLAT5_2" } --128x128 version of SKINLOW
   SKINMET3 = { t="SKINMET3", f="CEIL5_2" }
@@ -605,6 +606,9 @@ GLAICE_MATERIALS = {
   WOODSKUL = { t="WOODSKUL", f="FLAT5_2" } -- Wood with skull on it. From Doom1
   WOOD13 = { t="WOOD13", f="FLAT5_2" }
   WOOD14 = { t="WOOD14", f="FLAT5_2" }
+  WOOD15 = { t="WOOD15", f="FLAT5_2" }
+  WOOD16 = { t="WOOD16", f="FLAT5_2" }
+  WOOD17 = { t="WOOD17", f="FLAT5_2" }
   WDMET01 = { t="WDMET01", f="CEIL5_2" } --WOODMET1
   WDMET02 = { t="WDMET02", f="CEIL5_2" } --WOODMET2
   WDMET03 = { t="WDMET03", f="CEIL5_2" }
@@ -662,6 +666,9 @@ GLAICE_MATERIALS = {
   MIDSPAC3 = { t="MIDSPAC3", f="CEIL5_1", rail_h = 128 } -- A thicker, metallic look
   MIDSPAC4 = { t="MIDSPAC4", f="WARN1", rail_h = 128 } -- Warning stripes
   MIDSPAC5 = { t="MIDSPAC5", f="WARN1", rail_h = 128 } -- Warning stripes
+  MIDSPAC6 = { t="MIDSPAC6", f="CEIL5_2", rail_h = 128 } -- Diamond holes
+  MIDSPAC7 = { t="MIDSPAC7", f="CEIL5_2", rail_h = 128 } -- Rectangular holes
+  MIDSPAC8 = { t="MIDSPAC8", f="CEIL5_2", rail_h = 128 } --  Diagonal holes
   MIDVINE1 = { t="MIDVINE1", f="CEIL5_1", rail_h = 128 } -- 256x128, brown vines
   MIDVINE2 = { t="MIDVINE2", f="CEIL5_1", rail_h = 128 } -- 256x128, brown & green vines
   RAIL1 = { t="RAIL1", rail_h=32 }
