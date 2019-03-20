@@ -3281,7 +3281,7 @@ function Grower_grammatical_room(R, pass, is_emergency)
     apply_num = 1
 
   elseif pass == "sidewalk" then
-    apply_num = rand.irange(5,30)
+    apply_num = rand.irange(10,30)
 
   elseif pass == "street_fixer" then
     apply_num = 15

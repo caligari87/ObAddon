@@ -8123,7 +8123,7 @@ SIDEWALK_SLOPE_ON_RAMP =
   }
 }
 
-SIDEWALK_CLOSET_2X1 =
+SIDEWALK_CLOSET_2X2 =
 {
   prob = 100
 
@@ -8131,8 +8131,8 @@ SIDEWALK_CLOSET_2X1 =
 
   structure =
   {
-    "1..","1TT"
-    "1..","1TT"
+    "1!!","1TT"
+    "1!!","1TT"
   }
 
   closet = { from_dir=4 }
@@ -8146,8 +8146,8 @@ SIDEWALK_CLOSET_2X1 =
 
   structure =
   {
-    "1.","1T"
-    "1.","1T"
+    "1!","1T"
+    "1!","1T"
   }
 
   closet = { from_dir=4 }
@@ -8161,9 +8161,9 @@ SIDEWALK_CLOSET_3X1 =
 
   structure =
   {
-    "1.","1T"
-    "1.","1T"
-    "1.","1T"
+    "1!","1T"
+    "1!","1T"
+    "1!","1T"
   }
 
   closet = { from_dir=4 }
@@ -8177,14 +8177,70 @@ SIDEWALK_CLOSET_3X1 =
 
   structure =
   {
-    "1..","1TT"
-    "1..","1TT"
-    "1..","1TT"
+    "1!!","1TT"
+    "1!!","1TT"
+    "1!!","1TT"
   }
 
   closet = { from_dir=4 }
 }
 
+SIDEWALK_CLOSET_4X1 =
+{
+  prob = 25
+
+  pass = "sidewalk"
+
+  structure =
+  {
+    "1!","1T"
+    "1!","1T"
+    "1!","1T"
+    "1!","1T"
+  }
+
+  closet = { from_dir=4 }
+}
+
+SIDEWALK_CLOSET_6X1 =
+{
+  prob = 25
+
+  pass = "sidewalk"
+
+  structure =
+  {
+    "1!","1T"
+    "1!","1T"
+    "1!","1T"
+    "1!","1T"
+    "1!","1T"
+    "1!","1T"
+  }
+
+  closet = { from_dir=4 }
+}
+
+SIDEWALK_CLOSET_8X1 =
+{
+  prob = 25
+
+  pass = "sidewalk"
+
+  structure =
+  {
+    "1!","1T"
+    "1!","1T"
+    "1!","1T"
+    "1!","1T"
+    "1!","1T"
+    "1!","1T"
+    "1!","1T"
+    "1!","1T"
+  }
+
+  closet = { from_dir=4 }
+}
 -- MSSP's street 'smoothers'
 
 STREET_CORNER_FIXER =
@@ -8219,9 +8275,9 @@ STREET_T_JUNCTION_FIXER =
   structure =
   {
     "11111.","11111."
-    "11111.","1111/."
-    ".1111.","......"
-    "......","......"
+    "11111!","1111/!"
+    "!1111!","!....!"
+    "!!!!!!","!!!!!!"
   }
 
   diagonals =
