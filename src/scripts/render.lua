@@ -2626,70 +2626,152 @@ function Render_all_areas()
   end
 
   Render_skybox()
-
-  --MSSP-TODO
-  --Render_find_street_markings()
-  --Render_all_street_markings()
 end
 
 
 
 function Render_all_street_markings()
---MSSP-TODO
+  each name,info in LEVEL.road_marking_spots do
+    local x = info.x
+    local y = info.y
+    local z = info.z
+    local dir = info.dir
+    local T = Trans.spot_transform(x, y, z, dir)
+    Fabricate(nil, PREFABS["Road_mark_temp"], T, {})
+  end
 end
 
 
 
 function Render_find_street_markings()
   -- Render street markings -- MSSP-TODO
-  print("-- Render street markings --\n")
+  gui.printf("--== Render street markings ==--\n")
 
-  -- scan for 6x4 boxes in seeds, horizontally and vertically
-  -- for each box, test if the seeds follow the pattern of:
-  -- SRRRRS
-  -- SRRRRS
-  -- SRRRRS
-  -- SRRRRS
-  -- where S is street and R road
-  -- if this pattern exists, mark this spot as markable for
-  -- road markings
-  -- check vertically and horizontally
+  LEVEL.road_marking_spots = {}
 
-  local road_marking_spots = {}
+  local markable_seeds = 0
+  local marked_seeds = 0
 
-
-  local function check_seed_street_property(S)
-    if S.area.is_road then return "road" end
-    if S.area.is_sidewalk then return "sidewalk" end
-  end
-
-  local function find_pivot()
-    local furthest_x = LEVEL.map_W
-    local furthest_y = LEVEL.map_H
-
-    local i,j = 1,1
+  local function debug_dump_seeds_by_table(mode)
+    local i, j
+    i = 1
+    j = 1
+    i_max = SEED_W
+    j_max = SEED_H
     repeat
+      i = 1
       repeat
         S = SEEDS[i][j]
-        print("scanning seed: " .. i .. "x" .. j)
-        print(table.tostr(S))
-        if S.area then
-          if S.area.is_road and not S.street_tagged then
-            S.street_tagged = true
-            return S
+        if not mode then
+          print(table.tostr(S))
+        elseif mode == "roads" then
+          if S.area and S.area.is_road then
+            print(table.tostr(S))
           end
         end
-        S.street_tagged = true
-        j = j + 1
-      until(j > furthest_y)
-      i = i + 1
-      j = 1
-    until(i > furthest_x)
-    print("No streets left found to mark!")
+        i = i + 1
+      until i >= i_max
+      j = j + 1
+    until j >= j_max
   end
 
-  print(find_pivot())
+  local function update_seeds_table()
+    each R in LEVEL.rooms do
+      each A in R.areas do
+        each S in A.seeds do
+          SEEDS[S.sx][S.sy] = S
+          if S.area.is_road and R.svolume > 16 then
+            markable_seeds = markable_seeds + 1
+          end
+        end
+      end
+    end
+  end
 
+  local function check_extents()
+
+    local function check_road_border(S, dir)
+
+      local distance_to_check = 5
+      local distance_checked = 1
+      local score = 0
+
+      if S.area.is_road then
+        score = score + 1
+      end
+
+      local Tx,Ty
+      repeat
+
+        Tx,Ty = geom.nudge(S.sx,S.sy,dir,distance_checked)
+
+        if distance_checked <= 4
+        and SEEDS[Tx][Ty].area.is_road then
+          score = score + 1
+        end
+
+        if distance_checked == 5
+        and not SEEDS[Tx][Ty].area.is_road then
+          score = score + 1
+        end
+
+        distance_checked = distance_checked + 1
+      until distance_checked >= distance_to_check
+
+      if score >= 5 then
+        local mark_x = S.x1
+        local mark_y = S.y1
+        local mark_z = S.area.floor_h
+        local mark_dir = 2
+
+        if dir == 2 then
+          mark_y = mark_y - 256
+          mark_x = mark_x + 64
+        elseif dir == 6 then
+          mark_y = mark_y + 64
+          mark_x = mark_x + 256
+          mark_dir = 6
+        end
+
+        local road_pos =
+        {
+          id = #LEVEL.road_marking_spots + 1
+          x = mark_x
+          y = mark_y
+          z = mark_z
+          dir = mark_dir
+        }
+        table.insert(LEVEL.road_marking_spots,road_pos)
+      end
+    end
+
+    local x = 1
+    local y = 1
+    local max_x = SEED_W
+    local max_y = SEED_H
+
+    repeat
+      x = 1
+      repeat
+        S = SEEDS[x][y]
+        if S.area and S.area.is_road
+        and S.area.room.svolume > 16 then
+          check_road_border(S, 2)
+          check_road_border(S, 6)
+        end
+        x = x + 1
+      until x >= max_x
+      y = y + 1
+    until y >= max_y
+
+  end
+
+  update_seeds_table()
+  gui.printf("Total road tile/seed count: " .. markable_seeds .. "\n")
+  check_extents()
+  each name,info in LEVEL.road_marking_spots do
+    print (table.tostr(info))
+  end
 end
 
 
