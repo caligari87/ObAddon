@@ -5,10 +5,12 @@ PREFABS.Road_mark_temp =
 
   prob   = 10
 
+  kind = "road_feature"
+
   where  = "point"
   height = 128
-  size   = 32
+  size   = 64
 
-  bound_z1 = 0
+  bound_z1 = -16
   bound_z2 = 128
 }

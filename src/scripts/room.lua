@@ -3322,12 +3322,6 @@ function Room_build_all()
   Render_all_chunks()
   Render_all_areas()
 
-  --MSSP-TODO
-  if LEVEL.has_streets then
-    Render_find_street_markings()
-    Render_all_street_markings()
-  end
-
   Render_triggers()
   Render_determine_spots()
 

@@ -2626,8 +2626,18 @@ function Render_all_areas()
   end
 
   Render_skybox()
+
+    --MSSP-TODO
+  --[[
+  if LEVEL.has_streets then
+    Render_find_street_markings()
+    Render_all_street_markings()
+  end
+  ]]
 end
 
+
+------------------------------------------------------------------------
 
 
 function Render_all_street_markings()
@@ -2692,7 +2702,7 @@ function Render_find_street_markings()
 
     local function check_road_border(S, dir)
 
-      local distance_to_check = 5
+      local distance_to_check = 4
       local distance_checked = 1
       local score = 0
 
@@ -2704,32 +2714,37 @@ function Render_find_street_markings()
       repeat
 
         Tx,Ty = geom.nudge(S.sx,S.sy,dir,distance_checked)
+        S2 = SEEDS[Tx][Ty]
 
-        if distance_checked <= 4
-        and SEEDS[Tx][Ty].area.is_road then
+        if distance_checked < 3
+        and S2.area.is_road then
           score = score + 1
         end
 
-        if distance_checked == 5
-        and not SEEDS[Tx][Ty].area.is_road then
-          score = score + 1
+        if distance_checked == 3 then
+          if not S2.area.is_road then
+            score = score + 1
+          elseif S2.area.is_road and
+          S.area.room.id != S2.area.room.id then
+            score = score + 1
+          end
         end
 
         distance_checked = distance_checked + 1
       until distance_checked >= distance_to_check
 
-      if score >= 5 then
+      if score == 4 then
         local mark_x = S.x1
         local mark_y = S.y1
         local mark_z = S.area.floor_h
         local mark_dir = 2
 
         if dir == 2 then
-          mark_y = mark_y - 256
-          mark_x = mark_x + 64
+          --mark_y = mark_y - 256
+          --mark_x = mark_x + 64
         elseif dir == 6 then
-          mark_y = mark_y + 64
-          mark_x = mark_x + 256
+          --mark_y = mark_y + 64
+          --mark_x = mark_x + 256
           mark_dir = 6
         end
 
@@ -2755,7 +2770,8 @@ function Render_find_street_markings()
       repeat
         S = SEEDS[x][y]
         if S.area and S.area.is_road
-        and S.area.room.svolume > 16 then
+        and S.area.room.svolume > 32
+        and not S.diagonal then
           check_road_border(S, 2)
           check_road_border(S, 6)
         end
