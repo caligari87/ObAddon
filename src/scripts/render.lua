@@ -2627,8 +2627,6 @@ function Render_all_areas()
 
   Render_skybox()
 
-    --MSSP-TODO
-
   if LEVEL.has_streets and PARAM.road_markings == "yes" then
     Render_find_street_markings()
     Render_all_street_markings()
@@ -2641,13 +2639,32 @@ end
 
 
 function Render_all_street_markings()
+
+  local road_fab_list =
+  {
+    Road_lane_marker = 100
+    Road_crosswalk = 5
+    Road_lane_marker_with_stop = 5
+  }
+
   each name,info in LEVEL.road_marking_spots do
     local x = info.x
     local y = info.y
     local z = info.z
     local dir = info.dir
+
+    local name = rand.key_by_probs(road_fab_list)
+
+    if rand.odds(50) then
+      if dir == 2 then
+        dir = 8
+      else
+        dir = 4
+      end
+    end
+
     local T = Trans.spot_transform(x, y, z, dir)
-    Fabricate(nil, PREFABS["Road_mark_temp"], T, {})
+    Fabricate(nil, PREFABS[name], T, {})
   end
 end
 
@@ -2662,11 +2679,11 @@ function Render_find_street_markings()
   --
   -- 1. Given a seed, it will scan either south
   --    or east.
-  -- 2. Should the scan encounter a non-road seed within
-  --    a distance of 4 from the pivot, it will
-  --    mark this as a 'road spot'. The final
-  --    marking direction is based from the direction
-  --    of the scan itself.
+  -- 2. From the pivot, it will scan in the pattern of
+  --    XVRRRX where X means anything that's not a road,
+  --    R is a road and V is the pivot seed (which, of course
+  --    is also a road). If this pattern exists, this is
+  --    therefore a valid and markable road section.
   -- 3. Given all new road marking spot info, render
   --    road markings.
   --
@@ -2814,9 +2831,7 @@ function Render_find_street_markings()
   update_seeds_table()
   gui.printf("Total road tile/seed count: " .. markable_seeds .. "\n")
   check_extents()
-  each name,info in LEVEL.road_marking_spots do
-    print (table.tostr(info))
-  end
+  gui.printf("Road mark spots found: " .. #LEVEL.road_marking_spots .. "\n")
 end
 
 
