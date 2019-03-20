@@ -69,6 +69,9 @@ PREFABS.Pic_urban_downtown_facade1 =
     TEKWALLC = 15
     TEKWALLD = 15
     TEKWALLE = 15
+    COLLITE1 = 50
+    COLLITE2 = 50
+    COLLITE3 = 50
   }
 
   tex_MODWALL4 =
