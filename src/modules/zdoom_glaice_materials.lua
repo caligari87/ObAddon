@@ -71,6 +71,8 @@ GLAICE_MATERIALS = {
   BIGDOORI  = { t="BIGDOORI",  f="CEIL5_2" }
   BIGDOORJ  = { t="BIGDOORJ",  f="CEIL5_2" }
   BIGDOORM  = { t="BIGDOORM",  f="WARN1" }
+  DOORHI  = { t="DOORHI",  f="FLAT19" } -- Tall 64x128 door. From Doom1
+  ICKDOOR1  = { t="ICKDOOR1",  f="FLAT19" } -- ICKWALL style door. From Doom1
 
   -- Bricks / Concrete
   BLIT01 = { t="BLIT01", f="RROCK10" } --BRICKLIT
@@ -121,10 +123,21 @@ GLAICE_MATERIALS = {
 
   GRAY6 = { t="GRAY6", f="FLAT18" }
   GRAY8 = { t="GRAY8", f="FLAT18" }
+  GRAYDANG = { t="GRAYDANG", f="FLAT18" } -- GRAY1 w/ no entry sign. From Doom1
 
   STON4 = { t="STON4", f="FLAT5_4" } --STONE4
   STON6 = { t="STON6", f="RROCK09" } --STONE6
   STON7 = { t="STON7", f="FLAT5_4" }
+  STONGARG = { t="STONGARG", f="FLAT1" } -- STONE3 with gargoyle faces. From Doom1
+
+  -- Urban specific
+  CITY01 = { t="CITY01", f="RROCK10" } -- BRICK1 style
+  CITY02 = { t="CITY02", f="FLOOR0_1" } -- Tannish marble w/ window
+  CITY03 = { t="CITY03", f="FLOOR7_1" } -- Darker tan bricks w/ window
+  CITY04 = { t="CITY04", f="FLOOR7_1" } -- Same as CITY03 but different window
+  CITY05 = { t="CITY05", f="FLAT1" } -- Gray bricks and black windows
+  CITY06 = { t="CITY06", f="FLOOR0_1" } -- BROWN1 style and black windows
+  CITY07 = { t="CITY07", f="FLAT1" } -- Industrial looking
 
   URBAN1 = { t="URBAN1", f="RROCK10" }
   URBAN2 = { t="URBAN2", f="FLAT1" }
@@ -224,6 +237,7 @@ GLAICE_MATERIALS = {
   NMONIA1 = { t="NMONIA1", f="FLAT1" } --Animated
   SPACEW5  = { t="SPACEW5",  f="SLIME14" }
   SPACEW6  = { t="SPACEW6",  f="SLIME15" }
+  STARTAN1  = { t="STARTAN1",  f="FLOOR0_1" } -- Plain STARTAN2. From Doom1
 
   -- Glass
   GLASS1 = { t="GLASS1", f="CEIL5_1" } --Red
@@ -303,8 +317,24 @@ GLAICE_MATERIALS = {
   GUY1 = { t="GUY1", f="FLAT1" }
 
   -- Marble
+  BLAKFACE = { t="BLAKFACE", f="BMARB3" } -- Black MARBFACE
+  BLAKFAC2 = { t="BLAKFAC2", f="BMARB3" } -- Black MARBFAC2
+  BLAKFAC3 = { t="BLAKFAC3", f="BMARB3" } -- Black MARBFAC3
+  BLAKMBGY = { t="BLAKMBGY", f="BMARB1" } -- Black MARBGRAY
+  BLAKMBG2 = { t="BLAKMBG2", f="BMARB1" } -- Black MARBFAC4
   GSTONE3 = { t="GSTONE3", f="FLOOR7_2" }
   ICONMRB1 = { t="ICONMRB1", f="FLOOR7_2" }
+  KMARBLE1 = { t="KMARBLE1", f="BMARB2" } -- Black MARBLE1
+  KMARBLE2 = { t="KMARBLE2", f="BMARB2" } -- Black MARBLE2
+  KMARBLE3 = { t="KMARBLE3", f="BMARB2" } -- Black MARBLE3
+  KSTONE1 = { t="KSTONE1", f="BMARB1" } -- Black GSTONE
+  KSTONE2 = { t="KSTONE2", f="BMARB3" } -- Black GSTONE, red edging
+  KSTONE3 = { t="KSTONE3", f="BMARB3" } -- Black GSTONE, green edging
+  KSTFONT1 = { t="KSTFONT1", f="BMARB3" } -- Black GSTONE, red fountain
+  KSTFNTG1 = { t="KSTFNTG1", f="BMARB3" } -- Black GSTONE, green fountain
+  KSTGARG = { t="KSTGARG", f="BMARB3" }
+  KSTLION = { t="KSTLION", f="BMARB3" }
+  KSTSATYR = { t="KSTSATYR", f="BMARB3" }
   MARBF01 = { t="MARBF01", f="FLOOR7_2" }
   MARBF02 = { t="MARBF02", f="FLOOR7_2" }
   MARBF03 = { t="MARBF03", f="FLOOR7_2" }
@@ -547,6 +577,11 @@ GLAICE_MATERIALS = {
   COLLITE1 = { t="COLLITE1", f="RROCK20" } --Green version of REDWALL1
   COLLITE2 = { t="COLLITE2", f="RROCK01" } --Orange version of REDWALL1
   COLLITE3 = { t="COLLITE3", f="CEIL4_2" } --Blue version of REDWALL1
+  LITE2 = { t="LITE2", f="FLOOR0_1" } -- BROWN1 variant w/ lights. From Doom1
+  LITE4 = { t="LITE4", f="FLAT19" } -- LITE5 and bigger light on bottom. From Doom1
+  LITE96 = { t="LITE96", f="FLOOR7_1" } -- BROWN96 variant w/ lights. From Doom1
+  LITEBLU3 = { t="LITEBLU3", f="CEIL5_1" } -- Large blue lights. From Doom1
+  LITESTON = { t="LITESTON", f="MFLR8_1" } -- STONE2 variant w/ lights. From Doom1
   RDLITE01 = { t="RDWAL01", f="FLOOR1_6" } --REDLITE
   RDWAL01 = { t="RDWAL01", f="FLOOR1_6" } --REDWALL1
   SUPPORT4 = { t="SUPPORT4", f="FLAT23" }
@@ -567,6 +602,7 @@ GLAICE_MATERIALS = {
   WD03 = { t="WD03", f="FLAT5_2" }
   WD04 = { t="WD04", f="FLAT5_1" }
   WOODFACE = { t="WOODFACE", f="FLAT5_2" }
+  WOODSKUL = { t="WOODSKUL", f="FLAT5_2" } -- Wood with skull on it. From Doom1
   WOOD13 = { t="WOOD13", f="FLAT5_2" }
   WOOD14 = { t="WOOD14", f="FLAT5_2" }
   WDMET01 = { t="WDMET01", f="CEIL5_2" } --WOODMET1
@@ -602,6 +638,11 @@ GLAICE_MATERIALS = {
 
   -- Candles / Misc Animated
   CANDLE1     = { t="CANDLE1", f="MAGMA1", sane=1 } -- Burning candles, for decor, not walls
+  FIREBLK1 = { t="FIREBLK1", f="FLOOR6_2" } -- Black FIREBLU1
+  LAVBLAK1 = { t="LAVBLAK1", f="RROCK03" } -- Black FIRELAVA
+  LAVBLUE1 = { t="LAVBLUE1", f="FASHBLU" } -- Blue FIRELAVA
+  LAVGREN1 = { t="LAVGREN1", f="FASHGREN" } -- Green FIRELAVA
+  LAVWHIT1 = { t="LAVWHIT1", f="FASHWITE" } -- White FIRELAVA
 
   -- Switches
   SW1GOTH = { t="SW1GOTH", f="CEIL5_2" }
@@ -619,6 +660,10 @@ GLAICE_MATERIALS = {
   FENCE7 = { t="FENCE7", rail_h=128 }
   MIDSPAC2 = { t="MIDSPAC2", f="CEIL5_1", rail_h = 128 } -- Darker
   MIDSPAC3 = { t="MIDSPAC3", f="CEIL5_1", rail_h = 128 } -- A thicker, metallic look
+  MIDSPAC4 = { t="MIDSPAC4", f="WARN1", rail_h = 128 } -- Warning stripes
+  MIDSPAC5 = { t="MIDSPAC5", f="WARN1", rail_h = 128 } -- Warning stripes
+  MIDVINE1 = { t="MIDVINE1", f="CEIL5_1", rail_h = 128 } -- 256x128, brown vines
+  MIDVINE2 = { t="MIDVINE2", f="CEIL5_1", rail_h = 128 } -- 256x128, brown & green vines
   RAIL1 = { t="RAIL1", rail_h=32 }
 
   -- Transparent windows
@@ -652,6 +697,10 @@ GLAICE_MATERIALS = {
   -- Organic
   BODIESFL = { f="BODIESFL", t="BODIESB" }
   BODIESF2 = { f="BODIESF2", t="BODIESC" }
+  FASHBLU = { f="FASHBLU", t="LAVBLUE1" } -- These four are to accompany the colored FIRELAVAs..
+  FASHGREN = { f="FASHGREN", t="LAVGREN1" }
+  FASHWITE = { f="FASHWITE", t="LAVWHIT1" }
+  FASHBLAK = { f="FASHBLAK", t="LAVBLAK1" }
 
   -- Carpet
   CARPET1 = { t="PANNYA",  f="CARPET1" }
@@ -758,6 +807,11 @@ GLAICE_MATERIALS = {
   WOODTIL = { t="WD03",  f="WOODTIL" }
   WOODTI2 = { t="WD04",  f="WOODTI2" }
 
+  -- Marble
+  BMARB1 = { t="KMARBLE1",  f="BMARB1" }
+  BMARB2 = { t="KMARBLE2",  f="BMARB2" }
+  BMARB3 = { t="KMARBLE1",  f="BMARB3" }
+
   -- Grating
   GRATE1 = { t="METL01",  f="GRATE1" }
   GRATE2 = { t="METL01",  f="GRATE2" }
@@ -841,6 +895,8 @@ GLAICE_MATERIALS = {
   TILES2 = { t="BROWN1",  f="TILES2" }
   TILES3 = { t="STUC01",  f="TILES3" }
   TILES4 = { t="GRAY1",  f="TILES4" }
+  TILES5 = { t="STARGRY1",  f="TILES5" }
+  TILES6 = { t="GRAY5",  f="TILES6" }
 
 ---------------------------------------------------------------
 -- Overwriting existing flats to use new patches for textures
