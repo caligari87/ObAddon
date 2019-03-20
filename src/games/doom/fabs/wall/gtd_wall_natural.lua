@@ -12,7 +12,7 @@ PREFABS.Wall_natural1 =
   deep   = 48
 
   bound_z1 = 0
-  bound_z2 = 2
+  bound_z2 = 128
 
   x_fit  = "stretch"
   z_fit  = "stretch"
@@ -22,6 +22,9 @@ PREFABS.Wall_natural2 =
 {
   template = "Wall_natural1"
   map      = "MAP02"
+
+  bound_z1 = 0
+  bound_z2 = 2
 
   deep  = 16
 }
@@ -56,10 +59,6 @@ PREFABS.Wall_natural6 =
   map      = "MAP06"
 
   deep  = 24
-
-  bound_z2 = 128
-
-  z_fit = "stretch"
 }
 
 PREFABS.Wall_natural7 =
@@ -68,10 +67,6 @@ PREFABS.Wall_natural7 =
   map      = "MAP07"
 
   deep  = 24
-
-  bound_z2 = 128
-
-  z_fit = "stretch"
 }
 
 PREFABS.Wall_natural8 =
@@ -80,11 +75,6 @@ PREFABS.Wall_natural8 =
   map      = "MAP08"
 
   deep  = 32
-
-  bound_z2 = 128
-
-  z_fit = "stretch"
-
 }
 
 PREFABS.Wall_natural9 =
@@ -93,11 +83,6 @@ PREFABS.Wall_natural9 =
   map      = "MAP09"
 
   deep  = 40
-
-  bound_z2 = 128
-
-  z_fit = "stretch"
-
 }
 
 PREFABS.Wall_natural10 =
@@ -106,9 +91,4 @@ PREFABS.Wall_natural10 =
   map      = "MAP10"
 
   deep  = 64
-
-  bound_z2 = 128
-
-  z_fit = "stretch"
-
 }
