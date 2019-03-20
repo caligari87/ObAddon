@@ -55,6 +55,7 @@ PREFABS.Pic_urban_downtown_facade1 =
     LIGHTS4 = 50
   }
 
+  -- textures for the top half of the 'door' area
   tex_MODWALL3 =
   {
     MODWALL2 = 50
@@ -74,6 +75,7 @@ PREFABS.Pic_urban_downtown_facade1 =
     COLLITE3 = 50
   }
 
+  -- textures for the bottom half (and all of the 'doors' in facade2)
   tex_MODWALL4 =
   {
     MODWALL2 = 50
@@ -81,6 +83,12 @@ PREFABS.Pic_urban_downtown_facade1 =
     MODWALL4 = 50
     BLAKWAL1 = 50
     BLAKWAL2 = 50
+    STEP1 = 50
+    STEP2 = 50
+    STEP3 = 50
+    STEP4 = 50
+    STEP5 = 50
+    STEPLAD1 = 50
   }
 }
 
