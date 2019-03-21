@@ -264,7 +264,7 @@ end
 
 
 
-function Fab_expansion_groups(list, axis_name, fit_size, pf_size, map, file)
+function Fab_expansion_groups(list, axis_name, fit_size, pf_size, fabinfo)
   local extra = fit_size - pf_size
 
   -- nothing needed if the size is the same
@@ -272,7 +272,14 @@ function Fab_expansion_groups(list, axis_name, fit_size, pf_size, map, file)
 
 
   if extra < 0 then
-    error("Prefab does not fit! (on " .. axis_name .. " axis) Culprit: " .. map .. " from " .. file .. ". Required: " .. fit_size .. " Prefab has: " .. pf_size)
+    local problem_string = "\n\nPREFAB DOES NOT FIT!!!\n"
+    problem_string = problem_string .. "(on " .. axis_name .. " axis)\n"
+    problem_string = problem_string .. "Fab info:\n"
+    problem_string = problem_string .. "Name: " .. fabinfo.name .. "\n"
+    problem_string = problem_string .. "Index: " .. fabinfo.map .. "\n"
+    problem_string = problem_string .. "File: " .. fabinfo.file .. "\n"
+    problem_string = problem_string .. "Required: " .. fit_size .. " Prefab has: " .. pf_size .. "\n\n"
+    gui.printf(problem_string)
   end
 
   assert(extra > 0)
@@ -548,16 +555,16 @@ function Fab_transform_XY(fab, T)
 
   if fab.x_fit or T.fitted_x then
     if not T.fitted_x then
-      error("Fitted prefab used without fitted X transform Culprit: " .. fab.map .. " from " .. fab.file)
+      error("Fitted prefab used without fitted X transform Culprit: " .. fab.map .. " from " .. fab.name)
 
     elseif T.scale_x then
-      error("Fitted transform used with scale_x Culprit: " .. fab.map .. " from " .. fab.file)
+      error("Fitted transform used with scale_x Culprit: " .. fab.map .. " from " .. fab.name)
 
     elseif math.abs(bbox.x1) > 0.1 then
-      error("Fitted prefab must have lowest X coord at 0. Culprit: " .. fab.map .. " from " .. fab.file)
+      error("Fitted prefab must have lowest X coord at 0. Culprit: " .. fab.map .. " from " .. fab.name)
     end
 
-    Trans.TRANSFORM.groups_x = Fab_expansion_groups(fab.x_fit, "x", T.fitted_x, bbox.x2, fab.map, fab.file)
+    Trans.TRANSFORM.groups_x = Fab_expansion_groups(fab.x_fit, "x", T.fitted_x, bbox.x2, fab)
 
 
   else
@@ -569,16 +576,16 @@ function Fab_transform_XY(fab, T)
 
   if fab.y_fit or T.fitted_y then
     if not T.fitted_y then
-      error("Fitted prefab used without fitted Y transform. Culprit: " .. fab.map .. " from " .. fab.file)
+      error("Fitted prefab used without fitted Y transform. Culprit: " .. fab.map .. " from " .. fab.name)
 
     elseif T.scale_y then
-      error("Fitted transform used with scale_y. Culprit: " .. fab.map .. " from " .. fab.file)
+      error("Fitted transform used with scale_y. Culprit: " .. fab.map .. " from " .. fab.name)
 
     elseif math.abs(bbox.y1) > 0.1 then
-      error("Fitted prefab must have lowest Y coord at 0. Culprit: " .. fab.map .. " from " .. fab.file)
+      error("Fitted prefab must have lowest Y coord at 0. Culprit: " .. fab.map .. " from " .. fab.name)
     end
 
-    Trans.TRANSFORM.groups_y = Fab_expansion_groups(fab.y_fit, "y", T.fitted_y, bbox.y2, fab.map, fab.file)
+    Trans.TRANSFORM.groups_y = Fab_expansion_groups(fab.y_fit, "y", T.fitted_y, bbox.y2, fab)
 
   else
     -- "loose" placement
@@ -675,19 +682,19 @@ function Fab_transform_Z(fab, T)
 
   if fab.z_fit or T.fitted_z then
     if not T.fitted_z then
-      error("Fitted prefab used without fitted Z transform. Culprit: " .. fab.map .. " from " .. fab.file)
+      error("Fitted prefab used without fitted Z transform. Culprit: " .. fab.map .. " from " .. fab.name)
 
     elseif T.scale_z then
-      error("Fitted transform used with scale_z. Culprit: " .. fab.map .. " from " .. fab.file)
+      error("Fitted transform used with scale_z. Culprit: " .. fab.map .. " from " .. fab.name)
 
     elseif not (bbox.dz and bbox.dz >= 1) then
-      error("Fitted prefab has no vertical range! Culprit: " .. fab.map .. " from " .. fab.file)
+      error("Fitted prefab has no vertical range! Culprit: " .. fab.map .. " from " .. fab.name)
 
     elseif math.abs(bbox.z1) > 0.1 then
-      error("Fitted prefab must have lowest Z coord at 0. Culprit: " .. fab.map .. " from " .. fab.file)
+      error("Fitted prefab must have lowest Z coord at 0. Culprit: " .. fab.map .. " from " .. fab.name)
     end
 
-    Trans.TRANSFORM.groups_z = Fab_expansion_groups(fab.z_fit, "z", T.fitted_z, bbox.z2, fab.map, fab.file)
+    Trans.TRANSFORM.groups_z = Fab_expansion_groups(fab.z_fit, "z", T.fitted_z, bbox.z2, fab.map)
 
   else
     -- "loose" mode
