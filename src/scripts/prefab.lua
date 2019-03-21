@@ -275,7 +275,7 @@ function Fab_expansion_groups(list, axis_name, fit_size, pf_size, fabinfo)
     local problem_string = "\n\nPREFAB DOES NOT FIT!!!\n"
     problem_string = problem_string .. "(on " .. axis_name .. " axis)\n"
     problem_string = problem_string .. "Fab info:\n"
-    problem_string = problem_string .. "Name: " .. fabinfo.name .. "\n"
+    problem_string = problem_string .. "Name: " .. fabinfo .. "\n"
     problem_string = problem_string .. "Index: " .. fabinfo.map .. "\n"
     problem_string = problem_string .. "File: " .. fabinfo.file .. "\n"
     problem_string = problem_string .. "Required: " .. fit_size .. " Prefab has: " .. pf_size .. "\n\n"
