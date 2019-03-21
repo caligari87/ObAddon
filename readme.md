@@ -1,4 +1,4 @@
-![ObAddon Title Graphic](https://i.imgur.com/InGFHSX.png)
+![ObAddon Title Graphic](https://i.imgur.com/SK5gc0r.png)
 
 # ObAddon
 
