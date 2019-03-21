@@ -215,6 +215,15 @@ function Render_edge(E)
       end
     end
 
+    -- REMOVE-ME
+    -- Don't get prefabs with a z_fit other than "top" for parks.
+    if E.area.room then
+      if E.area.room.is_park and
+      not E.area.room.is_natural_park then
+        reqs.no_top_fit = true
+      end
+    end
+
     -- smart checking for wall fabs that are too long
     -- stop them from occupying each others' space
     if reqs.where == "edge" then

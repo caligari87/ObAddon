@@ -2261,6 +2261,10 @@ function Fab_find_matches(reqs, match_state)
     -- for fabs that need the illusion of depth
     if not reqs.has_solid_back and def.need_solid_back then return 0 end
 
+    -- REMOVE-ME - temporary fix for the issue of non-natural walls looking
+    -- when placed in parks
+    if reqs.no_top_fit and def.z_fit == "top" then return 0 end
+
     return 1
   end
 

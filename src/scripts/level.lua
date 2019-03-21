@@ -233,21 +233,6 @@ function Episode_pick_names()
     GAME.sub_title = Naming_grab_one("SUB_TITLE")
   end
 
-  local i = 0
-  gui.printf("Noun generator test:\n")
-  gui.printf("Exotic:\n")
-  repeat
-    gui.printf(namelib.generate_unique_noun("exotic") .. " | ")
-    i = i + 1
-  until i >= 30
-  i = 0
-  gui.printf("\nAnglican:\n")
-  repeat
-    gui.printf(namelib.generate_unique_noun("anglican") .. " | ")
-    i = i + 1
-  until i >= 30
-  gui.printf("\n")
-
   if os.date("%m %d") == "04 01" then
     GAME.title = "TROLOLOLO"
     GAME.subtitle = "It's That Day Of That Month"
