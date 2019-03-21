@@ -2726,7 +2726,7 @@ function Render_find_street_markings()
       each A in R.areas do
         each S in A.seeds do
           SEEDS[S.sx][S.sy] = S
-          if S.area.is_road and R.svolume > 16 then
+          if S.area.is_road and R.svolume > 48 then
             markable_seeds = markable_seeds + 1
           end
         end
@@ -2816,7 +2816,7 @@ function Render_find_street_markings()
       repeat
         S = SEEDS[x][y]
         if S.area and S.area.is_road
-        and S.area.room.svolume > 32
+        and S.area.room.svolume > 48
         and not S.diagonal then
           check_road_border(S, 2)
           check_road_border(S, 6)
