@@ -2647,25 +2647,35 @@ function Render_all_street_markings()
     Road_lane_marker_with_stop = 5
   }
 
+  local road_segments = 0
+  local road_dead_ends = 0
   each name,info in LEVEL.road_marking_spots do
     local x = info.x
     local y = info.y
     local z = info.z
     local dir = info.dir
+    local kind = info.kind
 
-    local name = rand.key_by_probs(road_fab_list)
+    if kind == "segment" then
+      local name = rand.key_by_probs(road_fab_list)
 
-    if rand.odds(50) then
-      if dir == 2 then
-        dir = 8
-      else
-        dir = 4
+      if rand.odds(50) then
+        if dir == 2 then
+          dir = 8
+        else
+          dir = 4
+        end
       end
-    end
 
-    local T = Trans.spot_transform(x, y, z, dir)
-    Fabricate(nil, PREFABS[name], T, {})
+      local T = Trans.spot_transform(x, y, z, dir)
+      Fabricate(nil, PREFABS[name], T, {})
+      road_segments = road_segments + 1
+    elseif kind == "dead_end" then
+      road_dead_ends = road_dead_ends + 1
+    end
   end
+  gui.printf("Road dead ends: " .. road_dead_ends .. "\n")
+  gui.printf("Road segments: " .. road_segments .. "\n")
 end
 
 
@@ -2748,8 +2758,9 @@ function Render_find_street_markings()
 
       local Tx,Ty
 
+      -- check seeds from the pivot seed
       Tx,Ty = geom.nudge(S.sx,S.sy,dir,-1)
-      S2 = SEEDS[Tx][Ty]
+      local S2 = SEEDS[Tx][Ty]
 
       if not S2.area.is_road then
         score = score + 1
@@ -2780,18 +2791,59 @@ function Render_find_street_markings()
         distance_checked = distance_checked + 1
       until distance_checked >= distance_to_check
 
+      -- if the XVRRRX pattern checks out, this
+      -- road section can be marked
       if score == 6 then
         local mark_x = S.x2
         local mark_y = S.y1
         local mark_z = S.area.floor_h
         local mark_dir = 2
+        local mark_kind = "segment"
 
+        -- include proper offsets for each road section
         if dir == 2 then
           mark_x = mark_x - 64
           mark_y = mark_y - 128
         elseif dir == 6 then
           mark_x = mark_x + 128
           mark_dir = 6
+        end
+
+        -- determine if road section is a dead end
+        -- for dead ends on horizontal roads
+        if dir == 2 then
+
+          Tx,Ty = geom.nudge(S.sx,S.sy,4,1)
+          S2 = SEEDS[Tx][Ty]
+          if not S2.area.is_road or
+          S2.area.room != S.area.room then
+            mark_kind = "dead_end"
+          end
+
+          Tx,Ty = geom.nudge(S.sx,S.sy,6,1)
+          S2 = SEEDS[Tx][Ty]
+          if not S2.area.is_road or
+          S2.area.room != S.area.room then
+            mark_kind = "dead_end"
+          end
+        end
+
+        -- for dead ends on vertical roads
+        if dir == 6 then
+
+          Tx,Ty = geom.nudge(S.sx,S.sy,8,1)
+          S2 = SEEDS[Tx][Ty]
+          if not S2.area.is_road or
+          S2.area.room != S.area.room then
+            mark_kind = "dead_end"
+          end
+
+          Tx,Ty = geom.nudge(S.sx,S.sy,2,1)
+          S2 = SEEDS[Tx][Ty]
+          if not S2.area.is_road or
+          S2.area.room != S.area.room then
+            mark_kind = "dead_end"
+          end
         end
 
         local road_pos =
@@ -2801,7 +2853,9 @@ function Render_find_street_markings()
           y = mark_y
           z = mark_z
           dir = mark_dir
+          kind = mark_kind
         }
+
         table.insert(LEVEL.road_marking_spots,road_pos)
       end
     end
