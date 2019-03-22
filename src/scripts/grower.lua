@@ -3451,10 +3451,12 @@ function Grower_grow_room(R)
     -- the map must continue growing elsewhere
     -- or in Procedural Gotchas where the arena
     -- is much too small.
-    if OB_CONFIG.linear_mode != "yes" or
-    not LEVEL.is_procedural_gotcha then
-      if R.is_root then return false end
+    if OB_CONFIG.linear_mode == "yes" or
+    LEVEL.is_procedural_gotcha then
+      if R.is_start then return false end
     end
+
+    if R.is_root then return false end
 
     if LEVEL.is_procedural_gotcha then
       return R:calc_walk_vol() < 24

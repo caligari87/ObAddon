@@ -2784,7 +2784,8 @@ function Render_find_street_markings()
         S2 = SEEDS[Tx][Ty]
 
         if distance_checked < 4
-        and S2.area.is_road then
+        and S2.area.is_road
+        and S2.area.room == S.area.room then
           score = score + 1
         end
 
