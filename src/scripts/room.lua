@@ -2005,19 +2005,16 @@ function Room_floor_ceil_heights()
 
       -- Street Mode:
       -- keep the road area from the sidewalks
-      if LEVEL.has_streets then
+      if R.is_street then
         if A.is_road and not A2.is_road then continue end
       end
 
       -- stair connections *must* use another group.
       -- direct connections generally use the same group.
-
       if IC.kind != "direct" or rand.odds(prob_for_new_floor_group(A, A2)) then
         visit_floor_area(R, A2, "new")
       else
-        if not A.room.is_street then
-          visit_floor_area(R, A2, A.floor_group)
-        end
+        visit_floor_area(R, A2, A.floor_group)
       end
     end
   end
@@ -2045,7 +2042,7 @@ function Room_floor_ceil_heights()
 
     each A in R.areas do
       if A.floor_group == group2 then
-         A.floor_group =  group1
+        A.floor_group =  group1
       end
     end
 
@@ -2078,6 +2075,11 @@ function Room_floor_ceil_heights()
     if group1 == group2 then return end
 
     if group1.h != group2.h then return end
+
+    if R.is_street then
+      if A1.is_road and not A2.is_road then return end
+      if not A1.is_road and A2.is_road then return end
+    end
 
     if do_floor_groups_touch(R, group1, group2) then
       merge_floor_groups(R, group1, group2)
