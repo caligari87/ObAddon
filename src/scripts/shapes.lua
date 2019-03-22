@@ -1445,6 +1445,7 @@ SPROUT_DIRECT_4 =
 
 SPROUT_CASTLE_2 =
 {
+  theme = "!urban"
   env = "outdoor"
   prob = 350 --200
 

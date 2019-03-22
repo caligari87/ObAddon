@@ -2015,7 +2015,9 @@ function Room_floor_ceil_heights()
       if IC.kind != "direct" or rand.odds(prob_for_new_floor_group(A, A2)) then
         visit_floor_area(R, A2, "new")
       else
-        visit_floor_area(R, A2, A.floor_group)
+        if not A.room.is_street then
+          visit_floor_area(R, A2, A.floor_group)
+        end
       end
     end
   end
