@@ -2740,15 +2740,26 @@ function Room_floor_ceil_heights()
         continue
       end
 
-      local N = chunk.from_area
-      assert(N.ceil_h)
+      local N1 = chunk.from_area
+      local N2 = chunk.dest_area
+      assert(N1.ceil_h)
+      assert(N2.ceil_h)
 
-      if (chunk.from_area.ceil_h - chunk.dest_area.floor_h) < 96 then
-        N = chunk.dest_area
+      if N1.ceil_h < (N2.floor_h + 96) then
+        N1.ceil_h = N2.ceil_h
+        N1 = N2
       end
 
-      A.ceil_h   = N.ceil_h
-      A.ceil_mat = N.ceil_mat
+      A.ceil_h   = N1.ceil_h
+      A.ceil_mat = N1.ceil_mat
+    end
+
+    -- MSSP: second pass
+    each chunk in R.stairs do
+      local A = chunk.area
+      local N = chunk.from_area
+      
+      A.ceil_h = N.ceil_h
     end
   end
 
