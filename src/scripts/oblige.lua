@@ -620,7 +620,7 @@ function ob_read_all_config(need_full, log_only)
   end
 
   if OB_CONFIG.seed and OB_CONFIG.seed != 0 then
-    do_line("seed = %d",   OB_CONFIG.seed)
+    do_line("seed = " .. OB_CONFIG.seed)
     do_line("")
   end
 
