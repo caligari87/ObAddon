@@ -96,6 +96,9 @@ function Monster_pacing()
     each R in LEVEL.rooms do
       if R.is_hallway or R.is_secret then
         R.pressure = "low"
+        if R.is_secret and OB_CONFIG.secret_monsters == "yesyes" then
+          R.pressure = "high"
+        end
         continue
       end
 
@@ -914,8 +917,12 @@ function Monster_fill_room(R)
     end
 
     -- less in secrets (usually much less)
-    if R.is_secret and OB_CONFIG.secret_monsters == "yes" then
-      qty = qty * 2
+    if R.is_secret then
+      if OB_CONFIG.secret_monsters == "yes" then
+        qty = qty * 2
+      elseif OB_CONFIG.secret_monsters == "yesyes" then
+        qty = qty * 8
+      end
     else
       qty = qty * 8
     end
