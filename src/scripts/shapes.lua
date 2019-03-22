@@ -7757,23 +7757,6 @@ STREETS_ENTRY_OFFSET =
   }
 }
 
---[[STREETS_OFFSET =
-{
-  prob = 10
-
-  skip_prob = 8
-
-  aversion = 2
-
-  pass = "streets"
-
-  structure =
-  {
-    "111111","111111"
-    "......",".1111."
-  }
-}]]
-
 STREETS_STRAIGHT =
 {
   prob = 100
@@ -7792,12 +7775,6 @@ STREETS_STRAIGHT =
     "......",".1111."
     "......",".1111."
   }
-
---[[street_markings =
-  {
-    p1 = { x=0,y=3,dir=8 }
-    p2 = { x=8,y=3,dir=8 }
-  }]]
 }
 
 STREETS_STRAIGHT_LONG =
@@ -7953,6 +7930,23 @@ SIDEWALK_STRAIGHT_INWARD =
   {
     "1........","1AAAAAAAA"
     "1........","1AAAAAAAA"
+  }
+}
+
+SIDEWALK_STRAIGHT_INWARD_ANGLED =
+{
+  prob = 25
+
+  pass = "sidewalk"
+
+  structure =
+  {
+    "1......","1AAAAAA"
+    "1......","1AAAAAA"
+    "1......","1....AA"
+    "1......","1....AA"
+    "1......","1....AA"
+    "1......","1....AA"
   }
 }
 

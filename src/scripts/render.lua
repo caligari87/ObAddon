@@ -2816,6 +2816,7 @@ function Render_find_street_markings()
           mark_y = mark_y - 128
         elseif dir == 6 then
           mark_x = mark_x + 128
+          mark_y = mark_y + 64
           mark_dir = 6
         end
 
