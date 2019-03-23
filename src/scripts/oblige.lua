@@ -619,6 +619,15 @@ function ob_read_all_config(need_full, log_only)
      need_full = false
   end
 
+  do_line("-- ObAddon (C) 2018-2019")
+  do_line("-- MsrSgtShooterPerson")
+  do_line("-- Glaice")
+  do_line("-- Garrett")
+  do_line("-- Caligari87")
+  do_line("-- Frozsoul")
+  do_line("-- Simon-v")
+  do_line("-- https://github.com/caligari87/ObAddon/\n")
+
   if OB_CONFIG.seed and OB_CONFIG.seed != 0 then
     do_line("seed = " .. OB_CONFIG.seed)
     do_line("")
@@ -780,6 +789,21 @@ function ob_init()
     if fmt then gui.raw_debug_print(string.format(fmt, ...)) end
   end
 
+  gui.printf("***************************\n")
+  gui.printf("** ObAddon (C) 2018-2019 **\n")
+  gui.printf("***************************\n")
+  gui.printf("|    A Creation of the    |\n")
+  gui.printf("|        Community        |\n")
+  gui.printf("\\_________________________/\n\n")
+  gui.printf("    MsrSgtShooterPerson\n")
+  gui.printf("          Glaice\n")
+  gui.printf("          Garrett\n")
+  gui.printf("         Caligari87\n")
+  gui.printf("          Frozsoul\n")
+  gui.printf("          Simon-v\n\n")
+  gui.printf("--------------------------------------------\n")
+  gui.printf("-- https://github.com/caligari87/ObAddon/ --\n")
+  gui.printf("--------------------------------------------\n\n")
 
   gui.printf("~~ Oblige Lua initialization begun ~~\n\n")
 
