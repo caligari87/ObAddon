@@ -280,7 +280,7 @@ function Fab_expansion_groups(list, axis_name, fit_size, pf_size, fabinfo)
     gui.printf(problem_string)
   end
 
-  assert(extra > 0)
+  --assert(extra > 0)
 
   -- check some special keywords.
   -- missing 'x_fit' field (etc) defaults to "stretch"
