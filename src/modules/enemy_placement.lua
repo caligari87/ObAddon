@@ -46,7 +46,7 @@ HARDER_ENEMY.MONSTERS =
     id = 9
     r = 20
     h = 56
-    level = 1.2
+    level = 1
     prob = 90
     health = 30
     damage = 3.0
@@ -108,7 +108,7 @@ HARDER_ENEMY.MONSTERS =
     id = 3002
     r = 30
     h = 56
-    level = 1.5 --2
+    level = 1.4 --2
     prob = 50
     health = 150
     damage = 0.4
@@ -125,7 +125,7 @@ HARDER_ENEMY.MONSTERS =
     id = 58
     r = 30
     h = 56
-    level = 1.5 --2.8
+    level = 1.4 --2.8
     replaces = "demon"
     replace_prob = 35
     crazy_prob = 25
@@ -240,7 +240,7 @@ HARDER_ENEMY.MONSTERS =
     id = 65
     r = 20
     h = 56
-    level = 2
+    level = 1.5 --2
     prob = 60
     health = 70
     damage = 5.5
@@ -267,7 +267,7 @@ HARDER_ENEMY.MONSTERS =
     level = 3.5
     prob = 25
     health = 300
-    damage = 8.5
+    damage = 9 --8.5
     attack = "missile"
     weap_min_damage = 60
     density = 0.6
@@ -360,6 +360,7 @@ HARDER_ENEMY.MONSTERS =
     weap_min_damage = 120
     nasty = true
     infight_damage = 18
+    boss_replacement = "baron"
   }
 
   pain =
@@ -434,7 +435,7 @@ OB_MODULES["harder_enemy"] =
   side = "left"
   game = "doomish"
 
-  tooltip = "Changes enemy placement and thus makes overall gameplay a bit harder."
+  tooltip = "Changes enemy placement and thus makes overall gameplay a bit to fair bit harder, depending if you use additional mods in the case of GZDoom."
 
   engine = { zdoom=1, gzdoom=1, skulltag=1, limit=1 }
 
