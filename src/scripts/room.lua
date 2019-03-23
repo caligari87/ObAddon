@@ -686,6 +686,21 @@ function ROOM_CLASS.pick_stair_delta_h(R, from_h, chunk)
 end
 
 
+function ROOM_CLASS.get_highest_ceiling(R) --MSSP
+  -- should probably include accounting for
+  -- the ceiling sink too but ehhhhh
+  local h = -9001
+  each A in R.areas do
+    if A.ceil_h then
+      if A.ceil_h > h then
+        h = A.ceil_h
+      end
+    end
+  end
+
+  return h
+end
+
 ------------------------------------------------------------------------
 
 
@@ -3109,10 +3124,27 @@ function Room_set_sky_heights()
   -- in a zone-to-new-zone connection have
   -- proper outdoor heights
   each C in LEVEL.conns do
-    if C.R1.zone != C.R2.zone
-    and (C.R1.is_outdoor and C.R2.is_outdoor) then
-      C.R1.zone.sky_h = math.max(C.R1.zone.sky_h, C.R2.zone.sky_h)
-      C.R2.zone.sky_h = math.max(C.R1.zone.sky_h, C.R2.zone.sky_h)
+    if C.R1.zone != C.R2.zone then
+
+      if C.R1.is_outdoor and C.R2.is_outdoor then
+        C.R1.zone.sky_h = math.max(C.R1.zone.sky_h, C.R2.zone.sky_h)
+        C.R2.zone.sky_h = math.max(C.R1.zone.sky_h, C.R2.zone.sky_h)
+      end
+
+      if not C.R1.is_outdoor and C.R2.is_outdoor then
+        local from_room_max_height = C.R1:get_highest_ceiling()
+        if from_room_max_height > C.R2.zone.sky_h then
+          C.R2.zone.sky_h = from_room_max_height
+        end
+      end
+
+      if C.R1.is_outdoor and not C.R2.is_outdoor then
+        local dest_room_max_height = C.R2:get_highest_ceiling()
+        if dest_room_max_height > C.R1.zone.sky_h then
+          C.R1.zone.sky_h = dest_room_max_height
+        end
+      end
+
     end
   end
 
@@ -3198,94 +3230,6 @@ end
 
 
 
-function Room_sync_outdoor_heights()
-
-  -- sync all outdoor rooms to capture
-  -- the height of the tallest neighbor
-  -- to prevent Escher space stuff
-
-  -- return a room's neighbor, neighbors
-  -- not necessarily being connected to, just
-  -- touching
-  local function get_outdoor_neighbors(R)
-    local neighbors_table = {}
-    each A in R.areas do
-
-      each N in A.neighbors do
-        if N.room and N.room != R then
-          if N.room.is_outdoor then
-            table.add_unique(neighbors_table, N.room)
-          end
-        end
-      end
-    end
-
-    if neighbors_table then
-      return neighbors_table
-    else
-      return nil
-    end
-  end
-
-  -- first, synchronize all outdoor room heights
-  -- to the tallest connecting room
-  print("-- Sync outdoor to tallest connecting room --")
-  each R in LEVEL.rooms do
-    local tallest_height = -9999
-    if R.is_outdoor then
-      gui.printf("Syncing for %s... \n", R.id)
-      each C in R.conns do
-        each A in C.R2.areas do
-          if A.ceil_h then
-            gui.printf("  %s: %s \n", C.R2.id, A.ceil_h)
-            if A.ceil_h >= tallest_height then
-              tallest_height = A.ceil_h
-              gui.printf("  Current height: %s \n",tallest_height)
-            end
-          end
-        end
-      end
-
-      each A in R.areas do
-        gui.printf("Syncing height for %s!\n",R.id)
-        if A.ceil_h then
-          gui.printf("  Before " .. A.ceil_h .. "\n")
-          A.ceil_h = tallest_height
-          gui.printf("  Now " .. A.ceil_h .. "\n")
-        end
-      end
-
-    end
-  end
-  print("Sync outdoor -> outdoor")
-  -- second, synchronize the height of
-  -- all outdoor rooms with outdoor neighbors
-  each R in LEVEL.rooms do
-    local tallest_height = -9999
-    if R.is_outdoor then
-      R.outdoor_neighbors = get_outdoor_neighbors(R)
-      each NR in R.outdoor_neighbors do
-        each A in NR.areas do
-          if A.ceil_h and A.ceil_h > tallest_height then
-            tallest_height = A.ceil_h
-            print("oofedry:")
-            print(tallest_height)
-          end
-        end
-      end
-
-      each A in R.areas do
-        if A.ceil_h then
-          A.ceil_h = tallest_height
-        end
-      end
-
-    end
-  end
-end
-
-
-
 function Room_do_vista_mats()
   each R in LEVEL.rooms do
     if R:has_vista_neighbor() then
@@ -3327,9 +3271,6 @@ function Room_build_all()
 
   Room_floor_ceil_heights()
   Room_set_sky_heights()
-
-  -- MSSP-TODO
-  --Room_sync_outdoor_heights()
 
   -- this does other stuff (crates, free-standing cages, etc..)
   Layout_decorate_rooms(2)
