@@ -302,6 +302,8 @@ PREFABS.Light_tech_LITBL3F1 =
   theme  = "tech"
 
   flat_TLITE6_1 = "LITBL3F1"
+  flat_CEIL5_2  = "FLAT23"
+  tex_METAL = "SHAWN2"
 
   sector_1  = { [0]=90, [1]=15 }
 }
@@ -315,6 +317,8 @@ PREFABS.Light_tech_LITBL3F2 =
   theme  = "tech"
 
   flat_TLITE6_1 = "LITBL3F2"
+  flat_CEIL5_2  = "FLAT23"
+  tex_METAL = "SHAWN2"
 
   sector_1  = { [0]=90, [1]=15 }
 }
@@ -328,6 +332,8 @@ PREFABS.Light_tech_LITE4F1 =
   theme  = "tech"
 
   flat_TLITE6_1 = "LITE4F1"
+  flat_CEIL5_2  = "FLAT23"
+  tex_METAL = "SHAWN2"
 
   sector_1  = { [0]=90, [1]=15 }
 }
@@ -341,6 +347,8 @@ PREFABS.Light_tech_LITE4F2 =
   theme  = "tech"
 
   flat_TLITE6_1 = "LITE4F2"
+  flat_CEIL5_2  = "FLAT23"
+  tex_METAL = "SHAWN2"
 
   sector_1  = { [0]=90, [1]=15 }
 }
@@ -354,6 +362,8 @@ PREFABS.Light_tech_LITES01 =
   theme  = "tech"
 
   flat_TLITE6_1 = "LITES01"
+  flat_CEIL5_2  = "FLAT23"
+  tex_METAL = "SHAWN2"
 
   sector_1  = { [0]=90, [1]=15 }
 }
@@ -367,6 +377,8 @@ PREFABS.Light_tech_LITES02 =
   theme  = "tech"
 
   flat_TLITE6_1 = "LITES02"
+  flat_CEIL5_2  = "FLAT23"
+  tex_METAL = "SHAWN2"
 
   sector_1  = { [0]=90, [1]=15 }
 }
@@ -380,6 +392,8 @@ PREFABS.Light_tech_LITES03 =
   theme  = "tech"
 
   flat_TLITE6_1 = "LITES03"
+  flat_CEIL5_2  = "FLAT23"
+  tex_METAL = "SHAWN2"
 
   sector_1  = { [0]=90, [1]=15 }
 }
@@ -393,6 +407,8 @@ PREFABS.Light_tech_LITES04 =
   theme  = "tech"
 
   flat_TLITE6_1 = "LITES04"
+  flat_CEIL5_2  = "FLAT23"
+  tex_METAL = "SHAWN2"
 
   sector_1  = { [0]=90, [1]=15 }
 }
@@ -406,6 +422,8 @@ PREFABS.Light_tech_LIGHTS1 =
   theme  = "tech"
 
   flat_TLITE6_1 = "LIGHTS1"
+  flat_CEIL5_2  = "FLAT23"
+  tex_METAL = "SHAWN2"
 
   sector_1  = { [0]=90, [1]=15 }
 }
@@ -419,6 +437,8 @@ PREFABS.Light_tech_LIGHTS2 =
   theme  = "tech"
 
   flat_TLITE6_1 = "LIGHTS2"
+  flat_CEIL5_2  = "FLAT23"
+  tex_METAL = "SHAWN2"
 
   sector_1  = { [0]=90, [1]=15 }
 }
@@ -432,6 +452,8 @@ PREFABS.Light_tech_LIGHTS3 =
   theme  = "tech"
 
   flat_TLITE6_1 = "LIGHTS3"
+  flat_CEIL5_2  = "FLAT23"
+  tex_METAL = "SHAWN2"
 
   sector_1  = { [0]=90, [1]=15 }
 }
@@ -445,6 +467,8 @@ PREFABS.Light_tech_LIGHTS4 =
   theme  = "tech"
 
   flat_TLITE6_1 = "LIGHTS4"
+  flat_CEIL5_2  = "FLAT23"
+  tex_METAL = "SHAWN2"
 
   sector_1  = { [0]=90, [1]=15 }
 }
@@ -456,6 +480,8 @@ PREFABS.Light_tech_TLITE5_1 =
 
   prob   = 50
   theme  = "tech"
+  flat_CEIL5_2  = "FLAT23"
+  tex_METAL = "SHAWN2"
 
   flat_TLITE6_1 = "TLITE5_1"
 
@@ -469,6 +495,8 @@ PREFABS.Light_tech_TLITE5_2 =
 
   prob   = 50
   theme  = "tech"
+  flat_CEIL5_2  = "FLAT23"
+  tex_METAL = "SHAWN2"
 
   flat_TLITE6_1 = "TLITE5_2"
 
@@ -484,6 +512,8 @@ PREFABS.Light_tech_TLITE5_3 =
   theme  = "tech"
 
   flat_TLITE6_1 = "TLITE5_3"
+  flat_CEIL5_2  = "FLAT23"
+  tex_METAL = "SHAWN2"
 
   sector_1  = { [0]=90, [1]=15 }
 }
@@ -497,6 +527,8 @@ PREFABS.Light_tech_TLITE65B =
   theme  = "tech"
 
   flat_TLITE6_1 = "TLITE65B"
+  flat_CEIL5_2  = "FLAT23"
+  tex_METAL = "SHAWN2"
 
   sector_1  = { [0]=90, [1]=15 }
 }
@@ -510,6 +542,8 @@ PREFABS.Light_tech_TLITE65G =
   theme  = "tech"
 
   flat_TLITE6_1 = "TLITE65G"
+  flat_CEIL5_2  = "FLAT23"
+  tex_METAL = "SHAWN2"
 
   sector_1  = { [0]=90, [1]=15 }
 }
@@ -523,6 +557,8 @@ PREFABS.Light_tech_TLITE65O =
   theme  = "tech"
 
   flat_TLITE6_1 = "TLITE65O"
+  flat_CEIL5_2  = "FLAT23"
+  tex_METAL = "SHAWN2"
 
   sector_1  = { [0]=90, [1]=15 }
 }
@@ -536,6 +572,8 @@ PREFABS.Light_tech_TLITE65W =
   theme  = "tech"
 
   flat_TLITE6_1 = "TLITE65W"
+  flat_CEIL5_2  = "FLAT23"
+  tex_METAL = "SHAWN2"
 
   sector_1  = { [0]=90, [1]=15 }
 }
@@ -549,6 +587,8 @@ PREFABS.Light_tech_TLITE65Y =
   theme  = "tech"
 
   flat_TLITE6_1 = "TLITE65Y"
+  flat_CEIL5_2  = "FLAT23"
+  tex_METAL = "SHAWN2"
 
   sector_1  = { [0]=90, [1]=15 }
 }
