@@ -163,7 +163,7 @@ function Level_determine_map_size(LEV)
   if ob_size == "mixed" then
     local MIXED_PROBS =
     {
-      small=25, regular=110, large=40, extreme=6
+      small=28, regular=117, large=48, extreme=7
     }
 
     ob_size = rand.key_by_probs(MIXED_PROBS)
