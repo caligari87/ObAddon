@@ -3295,6 +3295,9 @@ function Grower_grammatical_room(R, pass, is_emergency)
   elseif pass == "liquid_platform" then
     apply_num = rand.irange(2,10)
 
+  elseif pass == "smooth_out" then
+    apply_num = rand.irange(2,6)
+
   else
     error("unknown grammar pass: " .. tostring(pass))
   end
@@ -3530,6 +3533,10 @@ function Grower_sprout_room(R)
   and not R.is_hallway and not R.is_street then
     Grower_grammatical_room(R, "square_out")
     R.is_squarified = true
+  end
+
+  if R.is_squarified then
+    Grower_grammatical_room(R, "smooth_out")
   end
 
   -- if hallway did not sprout, try again

@@ -2879,7 +2879,7 @@ GROW_LIQUID_S =
 GROW_LIQUID_INTERSECTION =
 {
   prob = 15
-  skip_prob = 5
+  skip_prob = 2
 
   structure =
   {
@@ -2899,6 +2899,32 @@ GROW_LIQUID_INTERSECTION =
     "~1","1~"
     "1~","~1"
     "1~","~1"
+    "~1","1~"
+  }
+}
+
+GROW_LIQUID_OVAL_SPLIT =
+{
+  prob = 15
+
+  structure =
+  {
+    "xxx11xxx","xxx11xxx"
+    "........","~~~11~~~"
+    "........","~~/11%~~"
+    "........","~/1/%1%~"
+    "........","~11~~11~"
+    "........","~11~~11~"
+    "........","~%1%/1/~"
+    "........","~~%11/~~"
+    "........","~~~11~~~"
+  }
+
+  diagonals =
+  {
+    "~1","1~"
+    "~1","1~","~1","1~"
+    "~1","1~","~1","1~"
     "~1","1~"
   }
 }
@@ -4195,6 +4221,56 @@ GROW_NARROW_CANAL_OUTER_CURVE =
   }
 }
 
+-- MSSP's liquid slabs. [LIQUID_SLABS]
+
+GROW_LIQUID_SLAB_ENTRY =
+{
+  prob = 30
+
+  structure =
+  {
+    ".....","~~1~~"
+    ".....","~~~~~"
+    ".....","~/1%~"
+    ".....","~111~"
+    "x111x","x111x"
+  }
+
+  diagonals =
+  {
+    "~1","1~"
+  }
+}
+
+GROW_LIQUID_SLAB_STRAIGHT =
+{
+  prob = 50
+
+  structure =
+  {
+    "...","~1~"
+    "...","~~~"
+    "~1~","~1~"
+  }
+}
+
+GROW_LIQUID_SLAB_EXIT =
+{
+  prob = 15
+
+  structure =
+  {
+    ".....","~111~"
+    ".....","~%1/~"
+    ".....","~~~~~"
+    "x~1~x","x~1~x"
+  }
+
+  diagonals =
+  {
+    "~1","1~"
+  }
+}
 -- MSSP's escapes - these are special tiles intended to remove potential dead-ending tiles such as corners. [ESCAPE]
 
 GROW_SQUEEZE_EXIT =
@@ -4609,6 +4685,27 @@ SQUARE_OUT_EXTEND_AREA_BORDER =
   {
     "x1","x1"
     "2.","22"
+  }
+}
+
+--MSSP's smooth-out. Makes rooms less... square after square-out.
+
+SMOOTH_OUT =
+{
+  pass = "smooth_out"
+
+  prob = 50
+
+  structure =
+  {
+    "11","11"
+    "1.","1/"
+  }
+
+  diagonals =
+  {
+    "1."
+
   }
 }
 
@@ -5180,7 +5277,7 @@ DECORATE_TRIANGULAR_LOW_CEILING =
 
 GROW_PILLAR_2X2 =
 {
-  prob = 15
+  prob = 3
 
   env = "building"
 
@@ -5195,7 +5292,7 @@ GROW_PILLAR_2X2 =
 
 DECORATE_PILLAR_3X3 =
 {
-  prob = 10
+  prob = 3
 
   env = "building"
 
@@ -5217,7 +5314,7 @@ DECORATE_PILLAR_3X3 =
 
 DECORATE_PILLAR_BEAN =
 {
-  prob = 10
+  prob = 3
 
   env = "building"
 
@@ -5238,7 +5335,7 @@ DECORATE_PILLAR_BEAN =
 
 DECORATE_PILLAR_GATE =
 {
-  prob = 10
+  prob = 3
 
   env = "building"
 
@@ -5252,7 +5349,7 @@ DECORATE_PILLAR_GATE =
 
 DECORATE_CATWALK_SUPPORT_PILLAR_OUTER =
 {
-  prob = 15
+  prob = 5
 
   structure =
   {
@@ -5264,7 +5361,7 @@ DECORATE_CATWALK_SUPPORT_PILLAR_OUTER =
 
 DECORATE_CATWALK_SUPPORT_PILLAR_INNER_DOUBLE =
 {
-  prob = 35
+  prob = 5
 
   structure =
   {
@@ -5351,21 +5448,6 @@ SMOOTHER_CATWALK_EDGES =
     "21"
   }
 }
-
---This exit will cause errors, because it will keep looking for staircase prefabs
---at the specially matched height of any given two floors this rule may apply to. Bad idea!
-
---[[DECORATE_WIDE_SPACE_CATWALK_EXIT =
-{
-  prob = 20
-
-  structure =
-  {
-    "1111","1111"
-    "1111","11^^"
-    "1122","1122"
-  }
-}]]
 
 -- MSSP's rooms shaped like English alphabet letters. [LETTERS]
 
@@ -7046,9 +7128,9 @@ GROW_HUGE_LIQUID_ROOM_SQUARE_U_ELEVATED =
 
 GROW_HUGE_LIQUID_ROOM_STRAIGHT_SIDE =
 {
-  prob = 50
+  prob = 35
 
-  aversion = 25
+  aversion = 15
 
   structure =
   {
@@ -7070,9 +7152,9 @@ GROW_HUGE_LIQUID_ROOM_STRAIGHT_SIDE =
 
 GROW_HUGE_LIQUID_ROOM_STRAIGHT_SIDE_WIDER =
 {
-  prob = 50
+  prob = 35
 
-  aversion = 25
+  aversion = 15
 
   structure =
   {
@@ -7094,9 +7176,9 @@ GROW_HUGE_LIQUID_ROOM_STRAIGHT_SIDE_WIDER =
 
 GROW_HUGE_LIQUID_ROOM_STRAIGHT_SIDE_WIDER_ELEVATED =
 {
-  prob = 75
+  prob = 40
 
-  aversion = 25
+  aversion = 15
 
   structure =
   {
@@ -7804,11 +7886,6 @@ STREETS_STRAIGHT_LONG =
     "......",".1111."
   }
 
---[[street_markings =
-  {
-    p1 = { x=0,y=3,dir=8 }
-    p2 = { x=16,y=3,dir=8 }
-  }]]
 }
 
 STREETS_BLOCK =
