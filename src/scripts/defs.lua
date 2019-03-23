@@ -178,9 +178,11 @@ MONSTER_KIND_TAB =
 
 RAMP_UP_FACTORS =
 {
-  slow   = 0.75 --0.60
+  veryslow = 0.5
+  slow   = 0.75
   medium = 1.00
-  fast   = 1.70
+  fast   = 1.50
+  veryfast = 2.00
 }
 
 BOSS_FACTORS =
