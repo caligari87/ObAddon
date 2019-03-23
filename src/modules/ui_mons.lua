@@ -78,9 +78,11 @@ UI_MONS.BOSSES =
 
 UI_MONS.RAMPS =
 {
+  "veryslow", _("Very Slow"),
   "slow",    _("Slow"),
   "medium",  _("Medium"),
   "fast",    _("Fast"),
+  "veryfast", _("Very Fast"),
   "epi",     _("Episodic"),
 }
 
