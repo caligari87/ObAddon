@@ -2758,7 +2758,7 @@ function Room_floor_ceil_heights()
     each chunk in R.stairs do
       local A = chunk.area
       local N = chunk.from_area
-      
+
       A.ceil_h = N.ceil_h
     end
   end
@@ -3103,7 +3103,17 @@ function Room_set_sky_heights()
         end
       end
     end
+  end
 
+  -- link also for instances where both rooms
+  -- in a zone-to-new-zone connection have
+  -- proper outdoor heights
+  each C in LEVEL.conns do
+    if C.R1.zone != C.R2.zone
+    and (C.R1.is_outdoor and C.R2.is_outdoor) then
+      C.R1.zone.sky_h = math.max(C.R1.zone.sky_h, C.R2.zone.sky_h)
+      C.R2.zone.sky_h = math.max(C.R1.zone.sky_h, C.R2.zone.sky_h)
+    end
   end
 
   each A in LEVEL.areas do

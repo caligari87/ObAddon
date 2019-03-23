@@ -40,7 +40,7 @@ PREFABS.Item_alcove_hell_epic =
   template = "Item_alcove_techy_epic"
   theme = "hell"
   map   = "MAP02"
-  
+
    tex_FIREBLU1 = { FIREBLU1=10, FIREBLK1=10, LAVBLAK1=10, LAVBLUE1=60, LAVGREN1=60, FIRELAVA=60, LAVWHIT1=10 }
    tex_GOTH32 = { GOTH32=50, HELLMET1=50, HELLMET2=50, METAL=20, SUPPORT3=20, GOTH41=20, METL02=20, METL03=20 }
    tex_STONE8 = { STONE8=50, STONE9=50 }
