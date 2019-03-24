@@ -9,6 +9,8 @@ PREFABS.Decor_bench_n_trashcan =
   where  = "point"
   size   = 64
 
+  on_liquids = "never"
+
   bound_z1 = 0
 
   sink_mode = "never"
@@ -147,6 +149,8 @@ PREFABS.Decor_cafe_table_set =
   prob   = 5000
   theme  = "urban"
   env    = "!cave"
+
+  on_liquids = "never"
 
   where  = "point"
   size   = 64
