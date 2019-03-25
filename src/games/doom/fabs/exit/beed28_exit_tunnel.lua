@@ -28,7 +28,7 @@ PREFABS.Exit_beed28_tunnel =
 
 PREFABS.Exit_beed28_tunnel_hell =
 {
-  template = "Exit_tunnel"
+  template = "Exit_beed28_tunnel"
 
   map = "MAP02"
 

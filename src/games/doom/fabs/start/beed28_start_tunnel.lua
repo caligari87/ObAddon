@@ -28,7 +28,7 @@ PREFABS.Start_beed28_tunnel =
 
 PREFABS.Start_beed28_tunnel_hell =
 {
-  template = "Start_tunnel"
+  template = "Start_beed28_tunnel"
 
   map = "MAP02"
 
