@@ -36,7 +36,7 @@ GLAICE_LIQUIDS =
 
 GLAICE_MATERIALS = {
 
-  -- Organic
+  -- Organic / Semi-organic
   ALTASH = { t="ALTASH", f="RROCK03" } --ASPHALT from Evilution
   ASH01  = { t="ASH01",  f="FLOOR6_2" } --ASHWALL2
   ASH02  = { t="ASH02",  f="RROCK03" } --ASHWALL3
@@ -71,6 +71,7 @@ GLAICE_MATERIALS = {
   BIGDOORI  = { t="BIGDOORI",  f="CEIL5_2" }
   BIGDOORJ  = { t="BIGDOORJ",  f="CEIL5_2" }
   BIGDOORM  = { t="BIGDOORM",  f="WARN1" }
+  BIGDOORN  = { t="BIGDOORN",  f="FLAT5_4" }
   DOORHI  = { t="DOORHI",  f="FLAT19" } -- Tall 64x128 door. From Doom1
   ICKDOOR1  = { t="ICKDOOR1",  f="FLAT19" } -- ICKWALL style door. From Doom1
 
@@ -115,6 +116,10 @@ GLAICE_MATERIALS = {
   BRIKS37 = { t="BRIKS37", f="FLAT5_4" } -- Blue
   BRIKS38 = { t="BRIKS38", f="FLAT5_4" } -- Blue
   BRIKS39 = { t="BRIKS39", f="GSTN02" }
+  BRIKS40 = { t="BRIKS40", f="RROCK09" }
+  BRIKS41 = { t="BRIKS41", f="RROCK09" }
+  BRIKS42 = { t="BRIKS42", f="FLOOR7_1" }
+  BRIKS43 = { t="BRIKS43", f="FLAT1" }
 
   BST01  = { t="BST01",  f="RROCK11" } --BSTONE1
   BST02  = { t="BST02",  f="RROCK12" } --BSTONE2
@@ -144,6 +149,13 @@ GLAICE_MATERIALS = {
   URBAN2 = { t="URBAN2", f="FLAT1" }
   URBAN3 = { t="URBAN3", f="FLAT5_4" }
   URBAN4 = { t="URBAN4", f="FLOOR0_1" }
+
+  -- These 4 can be useful for the urban shutters instead of the STEP# textures
+  URBAN5 = { t="URBAN5", f="FLOOR7_1" } -- Brown
+  URBAN6 = { t="URBAN6", f="FLOOR7_1" } -- Brown, warning lines
+  URBAN7 = { t="URBAN7", f="FLAT1" } -- Gray
+  URBAN8 = { t="URBAN8", f="FLAT1" } -- Gray, warning lines
+
 
   -- Cement
  -- Copies of the CEMENT# textures so they can be used normally.
@@ -353,6 +365,10 @@ GLAICE_MATERIALS = {
   MBGRY = { t="MBGRY", f="FLOOR7_2" } --MARBGRAY
   MBGRY2 = { t="MBGRY2", f="FLOOR7_2" } --MARBFAC4
 
+  REDMARB1 = { t="REDMARB1", f="BMARB3" }
+  REDMARB2 = { t="REDMARB2", f="RMARB1" }
+  REDMARB3 = { t="REDMARB3", f="RMARB2" }
+
   -- Metal / Rust
   DARKMET1 = { t="DARKMET1", f="DARKM01" }
   EVILFACE = { t="EVILFACE", f="CEIL5_2" } --From Plutonia 2
@@ -362,6 +378,9 @@ GLAICE_MATERIALS = {
   EVILFAC5 = { t="EVILFAC5", f="BLACK0" }
   EVILFAC6 = { t="EVILFAC6", f="GRATE4" }
   EVILFAC7 = { t="EVILFAC7", f="GRATE4" }
+  EVILFAC8 = { t="EVILFAC8", f="GRATE4" }
+  EVILFAC9 = { t="EVILFAC9", f="GRATE4" }
+  EVILFACA = { t="EVILFACA", f="GRATE4" }
   GRAYMET1 = { t="GRAYMET1", f="FLAT23" }
   GRAYMET2 = { t="GRAYMET2", f="SHINY04" }
   GRAYMET3 = { t="GRAYMET3", f="SHINY04" }
@@ -383,6 +402,11 @@ GLAICE_MATERIALS = {
   METL02 = { t="METL02", f="GMET01" }
   METL03 = { t="METL03", f="GMET01" }
   METL04 = { t="METL04", f="SLIME16" } --SPACEW4
+
+  RUSTWALL  = { t="RUSTWALL", f="GRATE8" }
+  RUSTWAL2  = { t="RUSTWAL2", f="G08" }
+  RUSTWAL3  = { t="RUSTWAL3", f="G08" }
+  RUSTWAL4  = { t="RUSTWAL4", f="G08" }
 
   --Memento Mori 2 textures
   HELMET2 = { t="HELMET2", f="CEIL5_2" }
@@ -662,6 +686,10 @@ GLAICE_MATERIALS = {
   FENCE5 = { t="FENCE5", rail_h=72 }
   FENCE6 = { t="FENCE6", rail_h=72 }
   FENCE7 = { t="FENCE7", rail_h=128 }
+  FENCE8 = { t="FENCE8", rail_h=96 } -- Shiny
+  FENCE9 = { t="FENCE9", rail_h=96 } -- Rusty
+  FENCEA = { t="FENCEA", rail_h=128 } -- Shiny
+  FENCEB = { t="FENCEB", rail_h=128 } -- Rusty
   MIDSPAC2 = { t="MIDSPAC2", f="CEIL5_1", rail_h = 128 } -- Darker
   MIDSPAC3 = { t="MIDSPAC3", f="CEIL5_1", rail_h = 128 } -- A thicker, metallic look
   MIDSPAC4 = { t="MIDSPAC4", f="WARN1", rail_h = 128 } -- Warning stripes
@@ -818,6 +846,10 @@ GLAICE_MATERIALS = {
   BMARB1 = { t="KMARBLE1",  f="BMARB1" }
   BMARB2 = { t="KMARBLE2",  f="BMARB2" }
   BMARB3 = { t="KMARBLE1",  f="BMARB3" }
+  RMARB1 = { t="REDMARB1",  f="RMARB1" }
+  RMARB2 = { t="REDMARB3",  f="RMARB2" }
+  RMARB3 = { t="REDMARB2",  f="RMARB3" }
+
 
   -- Grating
   GRATE1 = { t="METL01",  f="GRATE1" }
@@ -904,6 +936,15 @@ GLAICE_MATERIALS = {
   TILES4 = { t="GRAY1",  f="TILES4" }
   TILES5 = { t="STARGRY1",  f="TILES5" }
   TILES6 = { t="GRAY5",  f="TILES6" }
+
+  -- Teleporter pads
+
+  GATE4BL    = { f="GATE4BL", t="METAL" } -- Blue
+  GATE4MG    = { f="GATE4MG", t="METAL" } -- Magenta
+  GATE4OR    = { f="GATE4OR", t="METAL" } -- Orange
+  GATE4PU    = { f="GATE4PU", t="METAL" } -- Purple
+  GATE4RD    = { f="GATE4RD", t="METAL" } -- Red, just brighter
+  GATE4TN    = { f="GATE4TN", t="METAL" } -- Skin-like
 
 ---------------------------------------------------------------
 -- Overwriting existing flats to use new patches for textures

@@ -314,6 +314,7 @@ GLAICE_THEMES =
       BRONZE1 = 30
       BRONZE3 = 30
       METAL1 = 25
+      RUSTWALL = 20
     }
 
     floors =
@@ -361,7 +362,6 @@ GLAICE_THEMES =
       GRATE6  = 15
       GRATE8  = 20
       G15     = 10
-      GMET01  = 5
       GMET02  = 15
       GMET03  = 15
       GMET04  = 20
@@ -766,6 +766,41 @@ GLAICE_THEMES =
     }
   }
 
+
+  hell_crimson =
+  {
+    env  = "building"
+    prob = 40
+
+    walls =
+    {
+     REDMARB1 = 20
+     REDMARB2 = 60
+     REDMARB3 = 60
+    }
+
+    floors =
+    {
+     RMARB1 = 50
+     RMARB2 = 50
+     RMARB3 = 20
+    }
+
+    ceilings =
+    {
+     RMARB3 = 100
+     RMARB1 = 30
+    }
+
+    cliff_mats =
+    {
+    FIREBLU1 = 100
+    RDROK1 = 50
+    RDROK2 = 50
+    }
+  }
+
+
   hell_glaicecave =
   {
     env  = "cave"
@@ -908,6 +943,8 @@ GLAICE_THEMES =
       BRIKS34 = 15
       BRIKS35 = 15
       BRIKS36 = 15
+      BRIKS40 = 15
+      BRIKS43 = 15
 
       URBAN1 = 15
       URBAN2 = 15
@@ -1250,6 +1287,10 @@ GLAICE_URBAN_FACADES =
   BRIKS37 = 10
   BRIKS38 = 10
   BRIKS39 = 15
+  BRIKS40 = 10
+  BRIKS41 = 10
+  BRIKS42 = 15
+  BRIKS43 = 20
   GOTH45  = 20
   ROK17   = 20
   ROK18   = 20
@@ -1675,6 +1716,10 @@ GLAICE_TECH_SCENIC_FENCES =
   FENCE3 = 7
   FENCE6 = 5
   FENCE7 = 5
+  FENCE8 = 5
+  FENCE9 = 3
+  FENCEA = 5
+  FENCEB = 3
   RAIL1 = 10
   MIDWIND4 = 3
   MIDWIND6 = 3
@@ -1693,6 +1738,10 @@ GLAICE_URBAN_SCENIC_FENCES =
   FENCE3 = 5
   FENCE6 = 10
   FENCE7 = 10
+  FENCE8 = 4
+  FENCE9 = 4
+  FENCEA = 4
+  FENCEB = 4
   RAIL1 = 10
   MIDSPAC2 = 4
   MIDSPAC3 = 1
@@ -1714,6 +1763,10 @@ GLAICE_HELL_SCENIC_FENCES =
   FENCE2 = 5
   FENCE4 = 10
   FENCE5 = 10
+  FENCE8 = 2
+  FENCE9 = 4
+  FENCEA = 2
+  FENCEB = 4
   RAIL1 = 4
   MIDVINE1 = 4
   MIDVINE2 = 4
