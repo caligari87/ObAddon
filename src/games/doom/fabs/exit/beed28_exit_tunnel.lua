@@ -2,9 +2,9 @@
 -- Exit tunnel
 --
 
-PREFABS.Exit_tunnel =
+PREFABS.Exit_beed28_tunnel =
 {
-  file  = "exit/exit_tunnel.wad"
+  file  = "exit/beed28_exit_tunnel.wad"
 
   prob  = 1000
   theme = "!hell"
@@ -26,7 +26,7 @@ PREFABS.Exit_tunnel =
   }
 }
 
-PREFABS.Exit_tunnel_hell =
+PREFABS.Exit_beed28_tunnel_hell =
 {
   template = "Exit_tunnel"
 

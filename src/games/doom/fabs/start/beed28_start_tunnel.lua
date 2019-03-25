@@ -2,9 +2,9 @@
 -- Start tunnel
 --
 
-PREFABS.Start_tunnel =
+PREFABS.Start_beed28_tunnel =
 {
-  file  = "start/start_tunnel.wad"
+  file  = "start/beed28_start_tunnel.wad"
 
   prob  = 1000
   theme = "!hell"
@@ -26,7 +26,7 @@ PREFABS.Start_tunnel =
   }
 }
 
-PREFABS.Start_tunnel_hell =
+PREFABS.Start_beed28_tunnel_hell =
 {
   template = "Start_tunnel"
 
