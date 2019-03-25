@@ -57,7 +57,7 @@ PREFABS.Wall_modern_shutter =
   file   = "wall/gtd_wall_urban.wad"
   map    = "MAP03"
 
-  prob   = 15
+  prob   = 75
   theme = "urban"
 
   on_liquids = "never"
@@ -76,36 +76,56 @@ PREFABS.Wall_modern_shutter =
 
   x_fit = "frame"
   z_fit = "top"
+
+  tex_STEP4 =
+  {
+    STEP4 = 50
+    STEP1 = 50
+    STEP2 = 50
+    STEP3 = 50
+    STEP5 = 50
+  }
 }
 
-PREFABS.Wall_modern_shutter2 =
+PREFABS.Wall_modern_shutter_EPIC =
 {
-  template = "Wall_modern_shutter"
+  file   = "wall/gtd_wall_urban.wad"
+  map    = "MAP03"
 
-  tex_STEP4 = "STEP1"
+  prob   = 75
+  theme = "urban"
+
+  uses_epic_textures = true
+  replaces = "Wall_modern_shutter"
+
+  on_liquids = "never"
+
+  on_scenics = "never"
+
+  need_solid_back = true
+
+  where  = "edge"
+  height = 128
+  long   = 128
+  deep   = 16
+
+  bound_z1 = 0
+  bound_z2 = 128
+
+  x_fit = "frame"
+  z_fit = "top"
+
+  tex_STEP4 =
+  {
+    STEP4 = 50
+    STEP1 = 50
+    STEP2 = 50
+    STEP3 = 50
+    STEP5 = 50
+    URBAN6 = 150
+    URBAN8 = 150
+  }
 }
-
-PREFABS.Wall_modern_shutter3 =
-{
-  template = "Wall_modern_shutter"
-
-  tex_STEP4 = "STEP2"
-}
-
-PREFABS.Wall_modern_shutter4 =
-{
-  template = "Wall_modern_shutter"
-
-  tex_STEP4 = "STEP3"
-}
-
-PREFABS.Wall_modern_shutter5 =
-{
-  template = "Wall_modern_shutter"
-
-  tex_STEP4 = "STEP5"
-}
-
 
 PREFABS.Wall_fake_warehouse_window =
 {

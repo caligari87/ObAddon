@@ -17,7 +17,7 @@ PREFABS.Exit_tunnel =
   over  = -16
 
   x_fit = "frame"
-  
+
   thing_45 =
   {
    mercury_lamp = 50
@@ -33,7 +33,7 @@ PREFABS.Exit_tunnel_hell =
   map = "MAP02"
 
   theme = "hell"
-  
+
   thing_45 =
   {
    blue_torch = 50

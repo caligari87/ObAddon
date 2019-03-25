@@ -89,6 +89,8 @@ PREFABS.Pic_urban_downtown_facade1 =
     STEP4 = 50
     STEP5 = 50
     STEPLAD1 = 50
+    URBAN6 = 175
+    URBAN8 = 175
   }
 }
 

@@ -1,5 +1,5 @@
 --
--- Fancy walls
+-- Fancy fake windows
 --
 
 PREFABS.Wall_fake_window_thin =

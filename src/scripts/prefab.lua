@@ -197,6 +197,13 @@ function Fab_load_all_definitions()
       if def.replaces then
         PREFABS[def.replaces] = def
         table.remove(PREFABS[def.name])
+
+        -- remove templates of a replaced fab as well
+        each name,odef in PREFABS do
+          if odef.template == def.replaces then
+            table.remove(PREFABS[odef])
+          end
+        end
       end
     end
 
