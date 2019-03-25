@@ -85,5 +85,6 @@ PREFABS.Door_EPIC_plain_hell =
     BIGDOORI = 50
     BIGDOORJ = 50
     BIGDOORK = 50
+    BIGDOORN = 50
   }
 }
