@@ -334,6 +334,8 @@ function ZDOOM_SPECIALS.do_special_stuff()
       '' .. next_level_line .. ''
       '' .. secret_level_line .. ''
       '' .. music_line .. ''
+      '  EnterPic = "OBDNLOAD"\n'
+      '  ExitPic = "OBDNLOAD"\n'
       '}\n'
       --[['cluster 1\n'
       '{\n'
@@ -383,6 +385,7 @@ function ZDOOM_SPECIALS.do_special_stuff()
   end
 
   gui.wad_add_text_lump("MAPINFO", mapinfolump)
+  gui.wad_merge_sections("data/loading/loading_screens.wad")
 end
 
 OB_MODULES["zdoom_specials"] =
