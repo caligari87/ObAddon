@@ -118,6 +118,17 @@ ZDOOM_SPECIALS.MUSIC_DOOM2 =
   [32] = "$MUSIC_ULTIMA"
 }
 
+ZDOOM_SPECIALS.INTERPICS =
+{
+  OBDNLOAD = 50
+  OBDNLOA2 = 50
+  OBDNLOA3 = 50
+  OBDNLOA4 = 50
+  OBDNLOA5 = 50
+  OBDNLOA6 = 50
+  OBDNLOA7 = 50
+}
+
 ZDOOM_SPECIALS.MUSIC = {}
 
 function ZDOOM_SPECIALS.setup(self)
@@ -223,8 +234,9 @@ function ZDOOM_SPECIALS.do_special_stuff()
   local function add_mapinfo(mapinfo_tab)
 
     -- mapinfo table requires color for fog and map number
-    fog_color = mapinfo_tab.fog_color
-    map_num = mapinfo_tab.map_num
+    local fog_color = mapinfo_tab.fog_color
+    local map_num = mapinfo_tab.map_num
+    local interpic = mapinfo_tab.interpic
 
     local music_list = ZDOOM_SPECIALS.MUSIC
 
@@ -322,7 +334,6 @@ function ZDOOM_SPECIALS.do_special_stuff()
       fog_intensity_line = ""
     end
 
-
     local mapinfo =
     {
       'map ' .. map_id .. ' lookup HUSTR_'.. map_num ..'\n'
@@ -334,8 +345,8 @@ function ZDOOM_SPECIALS.do_special_stuff()
       '' .. next_level_line .. ''
       '' .. secret_level_line .. ''
       '' .. music_line .. ''
-      '  EnterPic = "OBDNLOAD"\n'
-      '  ExitPic = "OBDNLOAD"\n'
+      '  EnterPic = "' .. interpic .. '"\n'
+      '  ExitPic = "' .. interpic .. '"\n'
       '}\n'
       --[['cluster 1\n'
       '{\n'
@@ -358,13 +369,16 @@ function ZDOOM_SPECIALS.do_special_stuff()
     return mapinfo
   end
 
+  local info = {}
+
+  local ipic = rand.key_by_probs(ZDOOM_SPECIALS.INTERPICS)
+
   -- collect lines for MAPINFO lump
   local mapinfolump = {}
   for i=1, #GAME.levels do
 
-    local info = {}
-
     info.map_num = i
+    info.interpic = ipic
 
     if PARAM.fog_generator == "per_sky_gen" then
       if i <= 11 then
