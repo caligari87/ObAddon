@@ -6,7 +6,7 @@ PREFABS.Start_beed28_tunnel =
 {
   file  = "start/beed28_start_tunnel.wad"
 
-  prob  = 1000
+  prob  = 500
   theme = "!hell"
 
   where  = "seeds"
