@@ -6,6 +6,7 @@
 * **Glaice** - Original base tweaks to Oblige v7.59, prefabs, new modules.
 * **Frozsoul** - Prefabs.
 * **Garrett** - Prefabs.
+* **Beed28** - Prefabs.
 * **Caligari87** - Repository maintainer.
 
-And the rest of the Oblige enthusiasts out there! If your name isn't her and should be, or any of the above needs to be fixed, please contact a repository maintainer either here on GitHub or the Oblige Discord server.
+And the rest of the Oblige enthusiasts out there! If your name isn't here and should be, or any of the above needs to be fixed, please contact a repository maintainer either here on GitHub or the Oblige Discord server.
