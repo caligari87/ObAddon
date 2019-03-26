@@ -28,15 +28,32 @@ PREFABS.Door_glaice_door1 =
 
 PREFABS.Door_glaice_door_KEYRED =
 {
-  template = "Door_glaice_door1"
+  file   = "door/glaice_door1.wad"
   map    = "MAP02"
 
+  uses_epic_textures = true
+
+  prob   = 50
+
+  theme  = "!hell"
+
+  where  = "edge"
   key    = "k_red"
+
+  seed_w = 2
+
+  deep   = 32
+  over   = 32
+
+  x_fit  = "frame"
+
+  bound_z1 = 0
+  bound_z2 = 128
 }
 
 PREFABS.Door_glaice_door_KEYBLUE =
 {
-  template = "Door_glaice_door1"
+  template = "Door_glaice_door_KEYRED"
   map    = "MAP02"
 
   key    = "k_blue"
@@ -46,7 +63,7 @@ PREFABS.Door_glaice_door_KEYBLUE =
 
 PREFABS.Door_glaice_door_KEYYELLOW =
 {
-  template = "Door_glaice_door1"
+  template = "Door_glaice_door_KEYRED"
   map    = "MAP02"
 
   key    = "k_yellow"
