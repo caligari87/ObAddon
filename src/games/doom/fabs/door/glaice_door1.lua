@@ -17,13 +17,20 @@ PREFABS.Door_glaice_door1 =
   deep   = 32
   over   = 32
 
-  x_fit  = "frame"
+  x_fit  = { 112,144 }
 
   bound_z1 = 0
   bound_z2 = 128
 
   tag_1  = "?door_tag"
   door_action = "S1_OpenDoor"
+
+  tex_DOORHI =
+  {
+    DOORHI = 50
+    URBAN6 = 50
+    URBAN8 = 50
+  }
 }
 
 PREFABS.Door_glaice_door_KEYRED =
@@ -45,10 +52,17 @@ PREFABS.Door_glaice_door_KEYRED =
   deep   = 32
   over   = 32
 
-  x_fit  = "frame"
+  x_fit  = { 112,144 }
 
   bound_z1 = 0
   bound_z2 = 128
+
+  tex_DOORHI =
+  {
+    DOORHI = 50
+    URBAN6 = 50
+    URBAN8 = 50
+  }
 }
 
 PREFABS.Door_glaice_door_KEYBLUE =
