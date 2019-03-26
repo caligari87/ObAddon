@@ -34,7 +34,7 @@ PREFABS.Door_glaice_door_KEYRED =
   key    = "k_red"
 }
 
-PREFABS.Door_glaice_door_KEYRED =
+PREFABS.Door_glaice_door_KEYBLUE =
 {
   template = "Door_glaice_door1"
   map    = "MAP02"
@@ -44,7 +44,7 @@ PREFABS.Door_glaice_door_KEYRED =
   tex_DOORRED = "DOORBLU"
 }
 
-PREFABS.Door_glaice_door_KEYRED =
+PREFABS.Door_glaice_door_KEYYELLOW =
 {
   template = "Door_glaice_door1"
   map    = "MAP02"
