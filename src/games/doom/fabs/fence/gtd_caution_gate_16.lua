@@ -11,6 +11,7 @@ PREFABS.Bars_caution_barrier =
   key    = "barred"
 
   seed_w = 2
+
   deep   = 16
   over   = 16
 
