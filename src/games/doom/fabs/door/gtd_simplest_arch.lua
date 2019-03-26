@@ -11,10 +11,10 @@ PREFABS.Arch_simplest =
   deep   = 16
   over   = 16
 
+  seed_w = 1
+
   x_fit  = { 60,68 }
   z_fit  = "bottom"
-
-  height = 128
 
   bound_z1 = 0
   bound_z2 = 128
