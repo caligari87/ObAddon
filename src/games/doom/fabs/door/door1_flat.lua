@@ -3,7 +3,7 @@ PREFABS.Door_plain_flat =
   file   = "door/door1.wad"
   map    = "MAP01"
 
-  prob   = 250
+  prob   = 750
 
   where  = "edge"
   seed_w = 1
@@ -33,7 +33,7 @@ PREFABS.Door_plain_flat_EPIC =
   uses_epic_textures = true
   replaces = "Door_plain_flat"
 
-  prob   = 250
+  prob   = 750
 
   where  = "edge"
   seed_w = 1
