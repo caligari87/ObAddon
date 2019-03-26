@@ -58,6 +58,8 @@ PREFABS.Door_glaice_door_KEYBLUE =
 
   key    = "k_blue"
 
+  line_33 = 32
+
   tex_DOORRED = "DOORBLU"
 }
 
@@ -67,6 +69,8 @@ PREFABS.Door_glaice_door_KEYYELLOW =
   map    = "MAP02"
 
   key    = "k_yellow"
+
+  line_33 = 34
 
   tex_DOORRED = "DOORYEL"
 }
