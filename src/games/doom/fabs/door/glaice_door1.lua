@@ -5,7 +5,7 @@ PREFABS.Door_glaice_door1 =
 
   uses_epic_textures = true
 
-  prob   = 50
+  prob   = 20
 
   theme  = "!hell"
 
