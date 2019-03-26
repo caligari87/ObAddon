@@ -201,7 +201,7 @@ namelib.NAMES =
 
         -- ObAddon contributor names
         MsrSgtShooterPerson=3, Glaice=3, Frozsoul=3,
-        Garrett=3, Caligari87=3, SimonV=3,
+        Garrett=3, Caligari87=3, SimonV=3, Beed28 = 3,
 
         -- special tag for the name generator
         NOUNGENEXOTIC = 400
@@ -537,7 +537,7 @@ namelib.NAMES =
 
         -- ObAddon contributor names
         MsrSgtShooterPerson=3, Glaice=3, Frozsoul=3,
-        Garrett=3, Caligari87=3, SimonV=3,
+        Garrett=3, Caligari87=3, SimonV=3, Beed28 = 3,
 
         NOUNGENEXOTIC = 150
       }
@@ -1143,7 +1143,7 @@ namelib.NAMES =
 
         -- ObAddon contributor names
         MsrSgtShooterPerson=3, Glaice=3, Frozsoul=3,
-        Garrett=3, Caligari87=3, SimonV=3,
+        Garrett=3, Caligari87=3, SimonV=3, Beed28=3,
 
         NOUNGENEXOTIC = 150
         NOUNGENANGLICAN = 650
@@ -2332,6 +2332,8 @@ namelib.NAMES =
         -- celestial
         Solar = 10
         Lunar = 10
+
+        Lit = 8
       }
 
       p = -- places
@@ -2427,24 +2429,29 @@ namelib.NAMES =
         Wastes = 10
         Zenith = 10
 
-        -- burials, netherworldly
+        -- burials
         Burial = 10
         Catacombs = 10
         Crypt = 15
         Dungeons = 10
         Hollows = 10
-        Inferno = 10
         Mausoleum = 10
         Mortuary = 10
         Necropolis = 10
         Ossuary = 10
         Polyandrium = 10
-        Underworld = 10
         Tomb = 15
         Vault = 10
 
         Firmament = 10
         Gallows = 8
+
+        -- deep, deep underground
+        Abyss = 10
+        Perdition = 10
+        Purgatory = 10
+        Inferno = 10
+        Underworld = 10
 
         -- military
         Base = 10
@@ -2487,6 +2494,7 @@ namelib.NAMES =
         Belief = 10
         Ceremony = 10
         Cult = 10
+        Deliverance = 10
         Feast = 10
         Harvest = 10
         Icons = 10
@@ -2594,20 +2602,69 @@ namelib.NAMES =
         Encounter = 10
         Rendezvous = 8
         Meeting = 10
+
+        -- kinds of speech (sometimes bad)
+        Casuistry = 8
+        Chant = 10
+        Chorus = 10
+        Decree = 10
+        Declarations = 10
+        Edicts = 10
+        Mandate = 10
+        Paragolism = 10
+        Sophistry = 10
+
+        -- cups of metaphorical substrate
+        Canon = 8
+        Dogma = 10
+        Maxims = 8
+        Piety = 8
+        Precepts = 10
+        Tenets = 10
+
+        -- secret organizations
+        Cabal = 10
+        Circle = 10
+        League = 8
+        Order = 10
+        Sect = 8
+
+        -- state crimes
+        Collusion = 10
+        Conspiracy = 10
+        Machinations = 10
+        Ruse = 10
+        Subturfurge = 10
+        Treason = 10
+
+        -- curses
+        Affliction = 10
+        Anathema = 10
+        Bane = 10
+        Calamity = 8
+        Curse = 10
+        Pestilence = 8
+        Scourge = 10
+        Trouble = 8
+        Tribulation = 10
+        Vexation = 8
       }
 
       e = -- entities
       {
         -- DOOOOM!!!
         Cyberdemon = 15
+        Marine = 15
         Mastermind = 15
 
         -- religion
         Antichrist = 10
         Beast = 20
+        Crusaders = 10
         Demons = 20
         Devil = 20
         Gods  = 20
+        Heretic = 20
         Hellspawn = 20
         Infidel = 20
         ["Left Behind"] = 10
@@ -2631,7 +2688,9 @@ namelib.NAMES =
         Drowned = 10
         Exile = 10
         Giants = 10
+        Hexers = 10
         Keepers = 15
+        Minotaurs = 15
         Necromancer = 20
         Oracle = 15
         Reaper = 10
@@ -2665,11 +2724,13 @@ namelib.NAMES =
         Wolf = 8
 
         -- general adjectives
+        Cursed = 15
         Dead = 20
         Doomed = 25
         Fearless = 20
         Hunted = 20
         Lost = 20
+        Risen = 20
         Tormented = 20
 
         -- war
@@ -2716,6 +2777,7 @@ namelib.NAMES =
         Garrett = 10
         Frozsoul = 10
         SimonV = 10
+        Beed28 = 10
       }
     }
   }
@@ -2839,6 +2901,7 @@ namelib.NAMES =
 
          -- MSSP adds names
         ["People Die When They Are Killed"] = 10
+        ["So Sad Alexa Play D RUNNIN"] = 10
 
         -- based on popular movie/TV slogans
         ["A Minute in Hell"] = 20
