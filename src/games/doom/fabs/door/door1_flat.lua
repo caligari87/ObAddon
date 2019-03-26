@@ -53,6 +53,5 @@ PREFABS.Door_plain_flat_EPIC =
     DOOR1 = 50
     DOOR3 = 50
     DOORHI = 50
-    ICKDOOR = 50
-  }
+    }
 }
