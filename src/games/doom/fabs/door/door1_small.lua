@@ -1,4 +1,4 @@
-PREFABS.Door_plain_flat =
+PREFABS.Door_plain_small =
 {
   file   = "door/door1.wad"
   map    = "MAP01"
@@ -6,7 +6,7 @@ PREFABS.Door_plain_flat =
   prob   = 750
 
   where  = "edge"
-  seed_w = 1
+  seed_w = 2
 
   deep   = 32
   over   = 32
@@ -25,7 +25,7 @@ PREFABS.Door_plain_flat =
   }
 }
 
-PREFABS.Door_plain_flat_EPIC =
+PREFABS.Door_plain_small_EPIC =
 {
   file   = "door/door1.wad"
   map    = "MAP01"
@@ -36,7 +36,7 @@ PREFABS.Door_plain_flat_EPIC =
   prob   = 750
 
   where  = "edge"
-  seed_w = 1
+  seed_w = 2
 
   deep   = 32
   over   = 32
