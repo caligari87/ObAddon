@@ -3,7 +3,8 @@ PREFABS.Pic_glaice_candles =
   file   = "picture/glaice_candles.wad"
   map    = "MAP01"
 
-  prob   = 15
+  prob   = 20
+  env   = "building"
   theme = "hell"
 
   uses_epic_textures = true
