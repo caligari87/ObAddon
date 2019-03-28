@@ -944,6 +944,7 @@ DOOM.THEMES =
     wide_halls =
     {
       deuce = 50
+      metro = 20
     }
 
     floor_sinks =
@@ -2399,6 +2400,13 @@ DOOM.ROOM_THEMES =
       CEIL4_2 = 20
       CEIL5_1 = 40
     }
+
+
+  tech_metro_Hallway =
+  {
+    env   = "hallway"
+    group = "metro"
+    prob  = 15
   }
 
 
@@ -3335,6 +3343,12 @@ DOOM.ROOM_THEMES =
     }
   }
 
+  urban_metro_Hallway =
+  {
+    env   = "hallway"
+    group = "metro"
+    prob  = 35
+  }
 
   urban_Cave_generic =
   {
