@@ -1418,6 +1418,7 @@ DOOM.THEMES =
       gtd_wall_sewer = 10
       gtd_generic_beamed_inset = 15
       gtd_computers = 4
+      gtd_drywall = 10
     }
 
     window_groups =
