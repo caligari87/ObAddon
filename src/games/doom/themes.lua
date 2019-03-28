@@ -1167,6 +1167,7 @@ DOOM.THEMES =
       gtd_wall_sewer = 25
       gtd_generic_beamed_inset = 25
       gtd_computers = 25
+      gtd_writhing_mass = 2
     }
 
     window_groups =
@@ -1419,6 +1420,7 @@ DOOM.THEMES =
       gtd_generic_beamed_inset = 15
       gtd_computers = 4
       gtd_drywall = 10
+      gtd_writhing_mass = 2
     }
 
     window_groups =
@@ -1754,6 +1756,7 @@ DOOM.THEMES =
       gtd_wall_tech_windows_topcorner = 40
       gtd_wall_hell_vaults = 40
       gtd_generic_beamed_inset = 40
+      gtd_writhing_mass = 40
     }
 
     window_groups =
