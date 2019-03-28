@@ -2391,6 +2391,9 @@ function Level_make_level(LEV)
   -- must create the description before the copy (else games/modules won't see it)
   if not LEV.description and LEV.name_class then
     LEV.description = Naming_grab_one(LEV.name_class)
+    if os.date("%m %d") == "04 01" then
+      LEV.description = Naming_grab_one("PSYCHO")
+    end
   end
 
   if LEV.is_procedural_gotcha then

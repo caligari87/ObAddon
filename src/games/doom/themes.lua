@@ -1760,6 +1760,8 @@ DOOM.THEMES =
       gtd_generic_beamed_inset = 40
       gtd_writhing_mass = 40
       gtd_library = 40
+      gtd_furnace = 20
+      gtd_furnace_face = 20
     }
 
     window_groups =
