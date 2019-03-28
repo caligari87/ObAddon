@@ -1,4 +1,4 @@
-PREFABS.Start_garrett_start_center_pillar =
+PREFABS.Start_glaice_start_center_pillar =
 {
   file  = "start/glaice_start1.wad"
   map = "MAP01"
@@ -18,7 +18,7 @@ PREFABS.Start_garrett_start_center_pillar =
   y_fit = "top"
 }
 
-PREFABS.Start_garrett_start_lift =
+PREFABS.Start_glaice_start_lift =
 {
   file  = "start/glaice_start1.wad"
   map = "MAP02"
