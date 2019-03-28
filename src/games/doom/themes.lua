@@ -944,7 +944,7 @@ DOOM.THEMES =
     wide_halls =
     {
       deuce = 50
-      metro = 20
+      --metro = 20
     }
 
     floor_sinks =
@@ -2403,7 +2403,7 @@ DOOM.ROOM_THEMES =
   }
 
 
-  tech_metro_Hallway =
+  --[[tech_metro_Hallway =
   {
     env   = "hallway"
     group = "metro"
@@ -2423,7 +2423,7 @@ DOOM.ROOM_THEMES =
     {
       CEIL3_5 = 50
     }
-  }
+  }]]
 
 
 ----- HELL / GOTHIC -----------------------------
@@ -3359,7 +3359,7 @@ DOOM.ROOM_THEMES =
     }
   }
 
-  urban_metro_Hallway =
+  --[[urban_metro_Hallway =
   {
     env   = "hallway"
     group = "metro"
@@ -3379,7 +3379,7 @@ DOOM.ROOM_THEMES =
     {
       CEIL3_5 = 50
     }
-  }
+  }]]
 
 
   urban_Cave_generic =
