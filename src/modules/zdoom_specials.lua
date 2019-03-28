@@ -428,7 +428,7 @@ function ZDOOM_SPECIALS.do_special_stuff()
     info.map_num = i
     info.interpic = ipic
     if os.date("%m %d") == "04 01" then
-      info.interpic = "FIREBLU1"
+      info.interpic = "OBDNLOAT"
     end
 
     if PARAM.fog_generator == "per_sky_gen" then
