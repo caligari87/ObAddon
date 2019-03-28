@@ -279,6 +279,10 @@ function ZDOOM_SPECIALS.do_special_stuff()
       sky_tex = "SKY3"
     end
 
+    if os.date("%m %d") == "04 01" then
+      sky_tex = "FIREBLU1"
+    end
+
     -- produce endtitle screen end of game
     if OB_CONFIG.game == "doom2" then
       if (map_num + 1 > level_count) or map_num == 30 then
