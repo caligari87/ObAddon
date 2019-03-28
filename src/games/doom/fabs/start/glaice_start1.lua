@@ -12,7 +12,6 @@ PREFABS.Start_glaice_start_center_pillar =
   seed_h = 1
 
   deep  =  16
-  over  = -16
 
   x_fit = "frame"
   y_fit = "top"
@@ -32,7 +31,6 @@ PREFABS.Start_glaice_start_lift =
   seed_h = 2
 
   deep  =  16
-  over  = -16
 
   x_fit = "frame"
   y_fit = "top"
