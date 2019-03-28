@@ -80,6 +80,11 @@ ZDOOM_SPECIALS.MUSIC_DOOM =
   [30] = "$MUSIC_E3M2",
   [31] = "$MUSIC_E3M3",
   [32] = "$MUSIC_E1M5",
+  [33] = "$MUSIC_E2M7",
+  [34] = "%MUSIC_E2M4",
+  [35] = "$MUSIC_E2M6",
+  [36] = "$MUSIC_E2M5",
+  [37] = "$MUSIC_E1M9"
 }
 
 ZDOOM_SPECIALS.MUSIC_DOOM2 =
@@ -275,23 +280,62 @@ function ZDOOM_SPECIALS.do_special_stuff()
     end
 
     -- produce endtitle screen end of game
-    if (map_num + 1 > level_count) or map_num == 30 then
-      map_id_next = '"EndTitle"'
+    if OB_CONFIG.game == "doom2" then
+      if (map_num + 1 > level_count) or map_num == 30 then
+        map_id_next = '"EndTitle"'
+      end
+    elseif OB_CONFIG.game == "doom1" or OB_CONFIG.game == "ultdoom" then
+      if (map_num + 1 > level_count) or map_num == 35 then
+        map_id_next = '"EndTitle"'
+      end
     end
 
     local secret_level_line
 
     -- establish secret map MAPINFO links
-    if map_num == 15 then
-      secret_level_line = '  secretnext = MAP31\n'
-    elseif map_num == 31 then
-      map_id_next = 16
-      secret_level_line = '  secretnext = MAP32\n'
-    elseif map_num == 32 then
-      map_id_next = 16
-      secret_level_line = ''
-    else
-      secret_level_line = ''
+    -- for DOOM2
+    if OB_CONFIG.game == "doom2" then
+      if map_num == 15 then
+        next_level_line = '  next = MAP16'
+        secret_level_line = '  secretnext = MAP31\n'
+      elseif map_num == 31 then
+        map_id_next = 16
+        next_level_line = '  next = MAP16'
+        secret_level_line = '  secretnext = MAP32\n'
+      elseif map_num == 32 then
+        map_id_next = 16
+        secret_level_line = ''
+      else
+        secret_level_line = ''
+      end
+    end
+
+    -- for DOOM1
+    if OB_CONFIG.game == "doom1" or OB_CONFIG.game == "ultdoom" then
+      -- secret entrances
+      if map_num == 3 then
+        secret_level_line = '  secretnext = E1M9\n'
+      elseif map_num == 14 then
+        secret_level_line = '  secretnext = E2M9\n'
+      elseif map_num == 24 then
+        secret_level_line = '  secretnext = E3M9\n'
+      elseif map_num == 29 then
+        secret_level_line = '  secretnext = E4M9\n'
+      end
+
+      -- skip for secret levels
+      if map_num == 8 then
+        next_level_line = '  next = E2M1\n'
+      elseif map_num == 17 then
+        next_level_line = '  next = E3M1\n'
+      elseif map_num == 26 then
+        next_level_line = '  next = E4M1\n'
+      end
+
+      -- final level
+      if map_num == 35 then
+        next_level_line = ''
+      end
     end
 
     local next_level_line = '  next = ' .. map_id_next .. '\n'
