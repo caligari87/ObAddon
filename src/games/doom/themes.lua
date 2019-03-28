@@ -2408,6 +2408,21 @@ DOOM.ROOM_THEMES =
     env   = "hallway"
     group = "metro"
     prob  = 15
+
+    walls =
+    {
+      BROWN1   = 50
+    }
+
+    floors =
+    {
+      FLAT4  = 50
+    }
+
+    ceilings =
+    {
+      CEIL3_5 = 50
+    }
   }
 
 
@@ -3349,6 +3364,22 @@ DOOM.ROOM_THEMES =
     env   = "hallway"
     group = "metro"
     prob  = 35
+
+    walls =
+    {
+      BROWN1   = 50
+    }
+
+    floors =
+    {
+      FLAT4  = 50
+    }
+
+    ceilings =
+    {
+      CEIL3_5 = 50
+    }
+  }
   }
 
   urban_Cave_generic =
