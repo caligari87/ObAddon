@@ -3380,7 +3380,7 @@ DOOM.ROOM_THEMES =
       CEIL3_5 = 50
     }
   }
-  }
+
 
   urban_Cave_generic =
   {
