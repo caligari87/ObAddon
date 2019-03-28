@@ -2400,6 +2400,7 @@ DOOM.ROOM_THEMES =
       CEIL4_2 = 20
       CEIL5_1 = 40
     }
+  }
 
 
   tech_metro_Hallway =
