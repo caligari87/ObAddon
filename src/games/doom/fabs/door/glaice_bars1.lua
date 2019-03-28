@@ -18,7 +18,7 @@ PREFABS.Decor_Glaice_bars_EPIC =
   deep   = 16
   over   = 16
 
-  
+
   bound_z1 = 0
   bound_z2 = 128
 

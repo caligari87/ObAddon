@@ -53,6 +53,6 @@ PREFABS.Door_plain_small_EPIC =
     DOOR1 = 50
     DOOR3 = 50
     DOORHI = 50
-	ICKDOOR1 = 50
-    }
+    ICKDOOR1 = 50
+  }
 }
