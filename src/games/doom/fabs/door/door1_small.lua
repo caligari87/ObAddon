@@ -31,7 +31,7 @@ PREFABS.Door_plain_small_EPIC =
   map    = "MAP01"
 
   uses_epic_textures = true
-  replaces = "Door_plain_flat"
+  replaces = "Door_plain_small"
 
   prob   = 750
 
