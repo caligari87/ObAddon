@@ -3,7 +3,7 @@ PREFABS.Start_glaice_start_center_pillar =
   file  = "start/glaice_start1.wad"
   map = "MAP01"
 
-  prob  = 50
+  prob  = 500
   theme = "!hell"
 
   where = "seeds"
@@ -23,7 +23,7 @@ PREFABS.Start_glaice_start_lift =
   file  = "start/glaice_start1.wad"
   map = "MAP02"
 
-  prob  = 50
+  prob  = 500
   theme = "!hell"
 
   where = "seeds"
