@@ -8,7 +8,7 @@ PREFABS.Exit_glaice_simple_exit2 =
   where  = "seeds"
 
   seed_w = 1
-  seed_h = 1
+  seed_h = 2
 
   deep   =  16
   over   = -16
