@@ -1029,6 +1029,10 @@ function Grower_decide_extents()
     gui.printf("-- Streets Mode activated! --\n")
     LEVEL.min_coverage = int(LEVEL.map_W * LEVEL.map_H * 0.95)
   end
+
+  if LEVEL.is_linear then
+    gui.printf("-- Linear mode activated! --\n")
+  end
 end
 
 
@@ -3194,7 +3198,7 @@ end
     end
 
     -- Linear Mode
-    if OB_CONFIG.linear_mode == "yes" then
+    if LEVEL.is_linear then
 
       if pass == "sprout" then
 
@@ -3259,7 +3263,7 @@ function Grower_grammatical_room(R, pass, is_emergency)
       apply_num = rand.irange(6,20)
     end
 
-    if OB_CONFIG.linear_mode == "yes" then
+    if LEVEL.is_linear then
       apply_num = 1
     end
 
@@ -3454,7 +3458,7 @@ function Grower_grow_room(R)
     -- the map must continue growing elsewhere
     -- or in Procedural Gotchas where the arena
     -- is much too small.
-    if OB_CONFIG.linear_mode == "yes" or
+    if LEVEL.is_linear or
     LEVEL.is_procedural_gotcha then
       if R.is_start then return false end
     end
@@ -3485,7 +3489,7 @@ function Grower_grow_room(R)
   end
 
   -- Linear Mode, kill mirrored sprouts of symmetric rooms
-  if OB_CONFIG.linear_mode == "yes" then
+  if LEVEL.is_linear then
   gui.printf("-- Linear mode culling --\n\n")
     each R2 in LEVEL.rooms do
       if R2.grow_parent == R.grow_parent and R2 != R then
@@ -4282,7 +4286,7 @@ function Grower_create_rooms()
 --TODO  Grower_flatten_outdoor_fences()
   Grower_split_liquids()
 
-  if OB_CONFIG.linear_mode == "yes" then
+  if LEVEL.is_linear then
   -- REMOVE_ME_EVENTUALLY
     each R in LEVEL.rooms do
       if R.grow_parent then

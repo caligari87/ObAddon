@@ -250,6 +250,31 @@ function DOOM.get_levels()
       end
     end
 
+    -- handling for linear mode chance choices
+    if not LEV.prebuilt then
+      if OB_CONFIG.linear_mode == "all" then
+        LEV.is_linear = true
+      elseif OB_CONFIG.linear_mode == "75" and rand.odds(75) then
+        LEV.is_linear = true
+      elseif OB_CONFIG.linear_mode == "50" and rand.odds(50) then
+        LEV.is_linear = true
+      elseif OB_CONFIG.linear_mode == "25" and rand.odds(25) then
+        LEV.is_linear = true
+      elseif OB_CONFIG.linear_mode == "10" and rand.odds(10) then
+        LEV.is_linear = true
+      elseif OB_CONFIG.linear_mode == "5" and rand.odds(5) then
+        LEV.is_linear = true
+      end
+
+      -- ensure secret map entrances aren't linear moded
+      -- when the option is not "all"
+      if OB_CONFIG.linear_mode != "all" then
+        if map == 15 or map == 31 then
+          LEV.is_linear = false
+        end
+      end
+    end
+
     if MAP_NUM == 1 or (map % 10) == 3 then
       LEV.demo_lump = string.format("DEMO%d", ep_index)
     end

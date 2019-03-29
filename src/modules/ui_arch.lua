@@ -86,6 +86,17 @@ UI_ARCH.STREETS_CHOICES =
   "no",       _("NONE"),
 }
 
+UI_ARCH.LINEAR_CHOICES =
+{
+  "all",  _("All Levels"),
+  "75",   _("75% of All Levels"),
+  "50",   _("50% of All Levels"),
+  "25",   _("25% of All Levels"),
+  "10",   _("10% of All Levels"),
+  "5",    _("5% of All Levels"),
+  "none", _("NONE"),
+}
+
 OB_MODULES["ui_arch"] =
 {
   label = _("Architecture")
@@ -95,7 +106,7 @@ OB_MODULES["ui_arch"] =
 
   options =
   {
-    { name="size",         label=_("Level Size"), choices=UI_ARCH.SIZES,  default="epi"
+    { name="size", label=_("Level Size"), choices=UI_ARCH.SIZES,  default="epi"
       tooltip = "WARNING! If you are planning to play on any choices that involve maps potentially becoming Large or Extreme-sized, it is preferable to turn on Autodetail under Prefab Control to prevent BSP issues and breaking side count limits."
       gap = 1
     }
@@ -110,9 +121,9 @@ OB_MODULES["ui_arch"] =
     {
       name = "linear_mode"
       label = _("Linear Mode"),
-      choices = UI_ARCH.YES_NO,
-      default = "no"
-      tooltip = "[EXPERIMENTAL FEATURE] Creates linear levels, where rooms are connecting along a linear string."
+      choices = UI_ARCH.LINEAR_CHOICES,
+      default = "none"
+      tooltip = "[EXPERIMENTAL FEATURE] Creates linear levels, where rooms are connected along a linear layout from start to exit. All choices except 'All' will excempt levels with secret level entrances from becoming becoming linear."
       gap = 1
     }
 
