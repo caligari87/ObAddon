@@ -235,7 +235,7 @@ function Episode_pick_names()
 
   if os.date("%m %d") == "04 01" then
     GAME.title = "TROLOLOLO"
-    GAME.subtitle = "It's That Day Of That Month"
+    GAME.subtitle = ":D :D :D :D :D :D :D :D :D"
   end
 
   gui.printf("Game title: %s\n\n", GAME.title)
@@ -314,7 +314,7 @@ function Episode_plan_monsters()
 
     if os.date("%m %d") == "04 01" then
       each name,def in GAME.MONSTERS do
-        def.id = 64
+        def.id = rand.pick({64, 65, 66, 71})
       end
     end
 
@@ -1614,10 +1614,13 @@ function Episode_plan_items()
   ---| Episode_plan_items |---
   if os.date("%m %d") == "04 01" then
     each name,def in GAME.WEAPONS do
-      def.id = 2025
+      def.id = rand.pick({2003,82})
     end
     each name,def in GAME.PICKUPS do
       def.id = 2025
+      if def.kind == "ammo" then
+        def.id = 2014
+      end
     end
     each name,def in GAME.NICE_ITEMS do
       def.id = 2025
@@ -2200,8 +2203,13 @@ function Level_do_styles()
   if os.date("%m %d") == "04 01" then
     each m,def in GAME.MATERIALS do
       if not string.match(m, "_SKY") then
-        def.t = "FIREBLU1"
-        def.f = "FIREBLU2"
+        def.t = "GRAYTALL"
+        def.f = "FIREBLU1"
+      end
+      if string.match(m, "DOOR") or
+      string.match (m, "SW1") then
+        def.t = "DOORTRAK"
+        def.f = "FIREBLU1"
       end
     end
     each e,def in GAME.ENTITIES do
