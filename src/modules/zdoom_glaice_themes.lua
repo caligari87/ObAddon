@@ -905,7 +905,7 @@ GLAICE_THEMES =
     }
   }
 
-  18 through 20 don't tile horizontally well so I removed them. 14 and 30 seems more like it works for exterior.
+--  18 through 20 don't tile horizontally well so I removed them. 14 and 30 seems more like it works for exterior.
   urban_GlaiceBricks =
   {
     env = "building"
