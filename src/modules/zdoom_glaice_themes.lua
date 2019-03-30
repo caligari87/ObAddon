@@ -905,7 +905,7 @@ GLAICE_THEMES =
     }
   }
 
-  -- 18 through 20 don't tile horizontally well so I removed them. 30 seems more like it works for exterior.
+  18 through 20 don't tile horizontally well so I removed them. 14 and 30 seems more like it works for exterior.
   urban_GlaiceBricks =
   {
     env = "building"
@@ -925,7 +925,6 @@ GLAICE_THEMES =
       BRIKS10 = 15
       BRIKS11 = 15
       BRIKS12 = 15
-      BRIKS13 = 15
       BRIKS14 = 15
       BRIKS15 = 15
       BRIKS16 = 15
@@ -1313,11 +1312,11 @@ GLAICE_TECH_LIQUIDS =
   magma   = 3
   qlava   = 3
   purwater = 15
-  pwater  = 70
+  pwater  = 25
   sludge  = 40
   gwater  = 50
-  ice     = 30
-  ice2    = 30
+  ice     = 20
+  ice2    = 20
 }
 
 GLAICE_URBAN_LIQUIDS =
@@ -1326,7 +1325,7 @@ GLAICE_URBAN_LIQUIDS =
   magma   = 5
   qlava   = 5
   purwater = 20
-  pwater  = 30
+  pwater  = 15
   sludge  = 60
   gwater  = 60
   ice     = 20
