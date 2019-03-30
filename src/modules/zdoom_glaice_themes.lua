@@ -17,6 +17,7 @@
 --
 ------------------------------------------------------------------
 
+-- General room themes are placed here (includes cave rooms)
 GLAICE_THEMES =
 {
   tech_GrayMet =
@@ -1098,6 +1099,7 @@ GLAICE_THEMES =
 
 }
 
+-- Adds new facade texture inserts (outdoor building textures)
 GLAICE_TECH_FACADES =
 {
 
@@ -1306,6 +1308,7 @@ GLAICE_URBAN_FACADES =
 
 }
 
+-- Custom liquids
 GLAICE_TECH_LIQUIDS =
 {
   hotlava = 3
@@ -1345,6 +1348,7 @@ GLAICE_HELL_LIQUIDS =
   ice2    = 40
 }
 
+-- Custom sink definitions as well as probability tables.
 GLAICE_SINK_DEFS =
 {
   liquid_warning_strip =
@@ -1647,6 +1651,7 @@ GLAICE_HELL_FLOOR_SINKS =
 {
 }
 
+-- Natural textures for outdoor parks.
 GLAICE_TECH_NATURALS =
 {
   ALTASH = 20
@@ -1708,6 +1713,7 @@ GLAICE_HELL_NATURALS =
   VINES4 = 3
 }
 
+-- Adds custom ObAddon scenic fence textures to the set
 GLAICE_TECH_SCENIC_FENCES =
 {
   FENCE1 = 10
@@ -1781,4 +1787,17 @@ GLAICE_HELL_SCENIC_FENCES =
   MIDSPAC6 = 5
   MIDSPAC7 = 2
   MIDSPAC8 = 4
+}
+
+-- Adds group wall sets using Epic textures
+GLAICE_TECH_WALL_GROUPS =
+{
+}
+
+GLAICE_URBAN_WALL_GROUPS =
+{
+}
+
+GLAICE_HELL_WALL_GROUPS =
+{
 }

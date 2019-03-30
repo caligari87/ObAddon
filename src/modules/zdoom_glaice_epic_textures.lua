@@ -124,6 +124,19 @@ function GLAICE_EPIC_TEXTURES.put_new_materials()
     GAME.THEMES.hell.scenic_fence[name] = prob
   end
 
+  -- inserts for group walls
+  for name,prob in pairs(GLAICE_TECH_WALL_GROUPS) do
+    GAME.THEMES.tech.wall_groups[name] = prob
+  end
+
+  for name,prob in pairs(GLAICE_URBAN_WALL_GROUPS) do
+    GAME.THEMES.urban.wall_groups[name] = prob
+  end
+
+  for name,prob in pairs(GLAICE_HELL_WALL_GROUPS) do
+    GAME.THEMES.hell.wall_groups[name] = prob
+  end
+
   --hack for the street textures
   GAME.SINKS.floor_streets.trim_mat = "WARN1"
 end
