@@ -141,9 +141,9 @@ GLAICE_MATERIALS = {
   STON4 = { t="STON4", f="FLAT5_4" } --STONE4
   STON6 = { t="STON6", f="RROCK09" } --STONE6
   STON7 = { t="STON7", f="FLAT5_4" }
-  STONE8 = { t="STONE8", f="FLAT1" }  
+  STONE8 = { t="STONE8", f="FLAT1" }
   STONE9 = { t="STONE9", f="FLAT1" }
-  STONE10 = { t="STONE10", f="FLAT5_4" }  
+  STONE10 = { t="STONE10", f="FLAT5_4" }
   STONGARG = { t="STONGARG", f="FLAT1" } -- STONE3 with gargoyle faces. From Doom1
 
   -- Urban specific
@@ -540,7 +540,7 @@ GLAICE_MATERIALS = {
   SHAWVEN2 = { t="SHAWVEN2", f="FLAT23" }
   SILVBLU1 = { t="SILVBLU1", f="FLAT23" }
   SILVCOMP = { t="SILVCOMP", f="FLAT23" }
-  
+
   SILVER2G = { t="SILVER2G", f="FLAT23" }
   SILVER2R = { t="SILVER2R", f="FLAT23" }
   SILVER2O = { t="SILVER2O", f="FLAT23" }
