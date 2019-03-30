@@ -1589,7 +1589,7 @@ SPROUT_JOINER_4x1 =
 
 SPROUT_JOINER_2x2 =
 {
-  prob = 100 --100
+  prob = 2000 --100
 
   structure =
   {
@@ -1637,9 +1637,34 @@ SPROUT_JOINER_3x2 =
 }
 
 
+SPROUT_JOINER_4x2 =
+{
+  prob = 2500
+
+  structure =
+  {
+    "......", ".RRRR."
+    "......", ".RRRR."
+    "x....x", "xJJJJx"
+    "x....x", "xJJJJx"
+    "x1111x", "x1111x"
+  }
+
+  new_room =
+  {
+    symmetry = { x=4, y=4, dir=8 }
+  }
+
+  joiner =
+  {
+    from_dir = 2
+  }
+}
+
+
 SPROUT_JOINER_2x3 =
 {
-  prob = 80
+  prob = 800
 
   structure =
   {
