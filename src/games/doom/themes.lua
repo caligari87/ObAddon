@@ -1762,6 +1762,7 @@ DOOM.THEMES =
       gtd_library = 40
       gtd_furnace = 20
       gtd_furnace_face = 20
+      gtd_wall_marbface = 40
     }
 
     window_groups =
