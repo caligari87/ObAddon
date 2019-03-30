@@ -1796,8 +1796,16 @@ GLAICE_TECH_WALL_GROUPS =
 
 GLAICE_URBAN_WALL_GROUPS =
 {
+  gtd_tall_glass_epic_yellow = 2
+  gtd_tall_glass_epic_orange = 2
+  gtd_tall_glass_epic_red = 2
+  gtd_tall_glass_epic_blue = 2
 }
 
 GLAICE_HELL_WALL_GROUPS =
 {
+  gtd_tall_glass_epic_yellow = 15
+  gtd_tall_glass_epic_orange = 15
+  gtd_tall_glass_epic_red = 15
+  gtd_tall_glass_epic_blue = 15
 }
