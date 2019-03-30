@@ -70,12 +70,18 @@ GLAICE_MATERIALS = {
   BIGDOORH  = { t="BIGDOORH",  f="CEIL5_1" }
   BIGDOORI  = { t="BIGDOORI",  f="CEIL5_2" }
   BIGDOORJ  = { t="BIGDOORJ",  f="CEIL5_2" }
+  BIGDOORK  = { t="BIGDOORK",  f="CEIL5_2" }
+  BIGDOORL  = { t="BIGDOORL",  f="G08" }
   BIGDOORM  = { t="BIGDOORM",  f="WARN1" }
   BIGDOORN  = { t="BIGDOORN",  f="FLAT5_4" }
   DOORHI  = { t="DOORHI",  f="FLAT19" } -- Tall 64x128 door. From Doom1
   ICKDOOR1  = { t="ICKDOOR1",  f="FLAT19" } -- ICKWALL style door. From Doom1
 
   -- Bricks / Concrete
+  BIGSTONE = { t="BIGSTONE", f="FLAT5_4" }
+  BIGSTON2 = { t="BIGSTON2", f="FLAT5_4" }
+  BIGSTON3 = { t="BIGSTON3", f="FLAT1" }
+  BIGSTON4 = { t="BIGSTON4", f="FLOOR7_1" }
   BLIT01 = { t="BLIT01", f="RROCK10" } --BRICKLIT
   BRIKS01 = { t="BRIKS01", f="FLAT5_4" } --White bricks, 128x128
   BRIKS02 = { t="BRIKS02", f="FLOOR7_1" } --Brown bricks, 128x128
@@ -129,11 +135,15 @@ GLAICE_MATERIALS = {
 
   GRAY6 = { t="GRAY6", f="FLAT18" }
   GRAY8 = { t="GRAY8", f="FLAT18" }
+  GRAY9 = { t="GRAY9", f="FLAT5_4" }
   GRAYDANG = { t="GRAYDANG", f="FLAT18" } -- GRAY1 w/ no entry sign. From Doom1
 
   STON4 = { t="STON4", f="FLAT5_4" } --STONE4
   STON6 = { t="STON6", f="RROCK09" } --STONE6
   STON7 = { t="STON7", f="FLAT5_4" }
+  STONE8 = { t="STONE8", f="FLAT1" }  
+  STONE9 = { t="STONE9", f="FLAT1" }
+  STONE10 = { t="STONE10", f="FLAT5_4" }  
   STONGARG = { t="STONGARG", f="FLAT1" } -- STONE3 with gargoyle faces. From Doom1
 
   -- Urban specific
@@ -212,10 +222,21 @@ GLAICE_MATERIALS = {
   COMPRED = { t="COMPRED", f="FLOOR1_6" } --Red COMPBLUE
   COMPSTA3 = { t="COMPSTA3", f="FLAT23" }
   COMPSTA4 = { t="COMPSTA4", f="FLAT23" }
+  COMPSTA5 = { t="COMPSTA5", f="FLAT23" }
+  COMPSTA6 = { t="COMPSTA6", f="FLAT23" }
+  COMPSTA7 = { t="COMPSTA7", f="FLAT23" }
+  COMPSTA8 = { t="COMPSTA8", f="FLAT23" }
+  COMPSTA9 = { t="COMPSTA9", f="FLAT23" }
+  COMPSTAA = { t="COMPSTAA", f="FLAT23" }
+  COMPSTAB = { t="COMPSTAB", f="FLAT23" }
   COMPTIL2 = { t="COMPTIL2", f="FLOOR1_6" } --Red COMPTILE
   COMPTIL3 = { t="COMPTIL3", f="CEIL5_1" } --Black COMPTILE
   COMPTIL4 = { t="COMPTIL4", f="CEIL5_1" } --Green COMPTILE
   COMPTIL5 = { t="COMPTIL5", f="CEIL5_1" } --Yellow COMPTILE
+  COMPTIL6 = { t="COMPTIL6", f="CEIL5_1" } --Purple COMPTILE
+  COMPSA1 = { t="COMPSA1", f="CEIL5_1" } -- Animated broken screen
+  COMPSC1 = { t="COMPSC1", f="CEIL5_1" } -- Animated UAC screen
+  COMPSD1 = { t="COMPSD1", f="CEIL5_1" } -- Animated 4 green screens
   COMPU1 = { t="COMPU1", f="CEIL5_1" }
   COMPU2 = { t="COMPU2", f="CEIL5_1" }
   COMPU3 = { t="COMPU3", f="CEIL5_1" }
@@ -248,6 +269,11 @@ GLAICE_MATERIALS = {
   DECMP04A = { t="DECMP04A", f="CEIL5_1" } --Animated
   GRAYBLU1 = { t="GRAYBLU1", f="FLAT14" }
   NMONIA1 = { t="NMONIA1", f="FLAT1" } --Animated
+  NOISE1 = { t="NOISE1", f="CEIL5_1" } --Animated
+  NOISE2A = { t="NOISE2A", f="CEIL5_1" } --Animated
+  NOISE3A = { t="NOISE3A", f="CEIL5_1" } --Animated
+  PLAN1 = { t="PLAN1", f="FLAT23" }
+  PLAN2 = { t="PLAN2", f="FLAT23" }
   SPACEW5  = { t="SPACEW5",  f="SLIME14" }
   SPACEW6  = { t="SPACEW6",  f="SLIME15" }
   STARTAN1  = { t="STARTAN1",  f="FLOOR0_1" } -- Plain STARTAN2. From Doom1
@@ -357,6 +383,7 @@ GLAICE_MATERIALS = {
   MARBFAC5 = { t="MARBFAC5", f="FLOOR7_2" } --Plutonia 2
   MARBFAC6 = { t="MARBFAC6", f="FLOOR7_2" }
   MARBFAC7 = { t="MARBFAC7", f="FLOOR7_2" }
+  MARBLE = { t="MARBLE", f="FLOOR7_2" }
   MARBLE4 = { t="MARBLE4", f="FLOOR7_2" }
   MARBLE5 = { t="MARBLE5", f="FLOOR7_2" }
   MARBLE6 = { t="MARBLE6", f="FLOOR7_2" }
@@ -397,6 +424,7 @@ GLAICE_MATERIALS = {
   METAL8  = { t="METAL8", f="CEIL5_2" }
   METAL9  = { t="METAL9", f="CEIL5_2" }
   METAL10  = { t="METAL10", f="CEIL5_2" }
+  METAL11  = { t="METAL11", f="FLOOR4_8" }
 
   METL01 = { t="METL01", f="CEIL5_2" } --METAL2
   METL02 = { t="METL02", f="GMET01" }
@@ -512,6 +540,12 @@ GLAICE_MATERIALS = {
   SHAWVEN2 = { t="SHAWVEN2", f="FLAT23" }
   SILVBLU1 = { t="SILVBLU1", f="FLAT23" }
   SILVCOMP = { t="SILVCOMP", f="FLAT23" }
+  
+  SILVER2G = { t="SILVER2G", f="FLAT23" }
+  SILVER2R = { t="SILVER2R", f="FLAT23" }
+  SILVER2O = { t="SILVER2O", f="FLAT23" }
+  SILVER2Y = { t="SILVER2Y", f="FLAT23" }
+  SILVER2W = { t="SILVER2W", f="FLAT23" }
 
   UACCRT1 = { t="UACCRT2", f="FLAT23" }
   UACCRT2 = { t="UACCRT2", f="FLAT23" }
@@ -523,6 +557,8 @@ GLAICE_MATERIALS = {
   BONES2 = { t="BONES2", f="FLAT5_6" } -- Gray bones
   BONES3 = { t="BONES3", f="FLAT5_6" } -- Bloody bones
   CORPSES = { t="CORPSES", f="FLAT5_6" } --SLOPPY1
+  CRACKRED = { t="CRACKRED", f="RROCK01" }
+  CRACKRD2 = { t="CRACKRD2", f="RROCK01" }
   CRAK01 = { t="CRAK01", f="RROCK01" } --CRACKLE2
   CRAK02 = { t="CRAK02", f="RROCK02" } --CRACKLE4
   DEATH1 = { t="DEATH1", f="FLAT5_4" }
@@ -721,6 +757,7 @@ GLAICE_MATERIALS = {
  -- Exiting textures with new definitions
   FIREBLU1 = { t="FIREBLU1", f="FIRELAF1" }
   FIREBLU2 = { t="FIREBLU2", f="FIRELAF2" }
+  FIREWALA = { t="FIREWALA", f="FLOOR6_1" }
   TEKWALL4 = { t="TEKWALL4", f="TEKFLR4" }
 
   --------------------

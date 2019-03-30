@@ -181,6 +181,7 @@ GLAICE_THEMES =
       COMPTIL3 = 10
       COMPTIL4 = 20
       COMPTIL5 = 20
+	  COMPTIL6 = 20
       COMPBLUE = 10
       COMPGREN = 10
       COMPRED  = 10
@@ -1800,7 +1801,6 @@ GLAICE_URBAN_WALL_GROUPS =
   gtd_tall_glass_epic_orange = 2
   gtd_tall_glass_epic_red = 2
   gtd_tall_glass_epic_blue = 2
-  glaice_glass_huge = 3
 }
 
 GLAICE_HELL_WALL_GROUPS =
@@ -1809,20 +1809,4 @@ GLAICE_HELL_WALL_GROUPS =
   gtd_tall_glass_epic_orange = 15
   gtd_tall_glass_epic_red = 15
   gtd_tall_glass_epic_blue = 15
-  glaice_glass_huge = 25
-}
-
--- Adds new window groups using Epic textures
-GLAICE_TECH_WINDOW_GROUPS =
-{
-}
-
-GLAICE_URBAN_WINDOW_GROUPS =
-{
-  gtd_window_gothic_epic = 30
-}
-
-GLAICE_HELL_WINDOW_GROUPS =
-{
-  gtd_window_gothic_epic = 80
 }
