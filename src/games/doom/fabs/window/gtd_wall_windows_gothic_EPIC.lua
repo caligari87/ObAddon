@@ -19,15 +19,15 @@ PREFABS.Window_gothic_epic_1 =
 
 PREFABS.Window_gothic_epic_2 =
 {
-  template   = "Window_barred1"
-  map    = "MAP02"
+  template = "Window_gothic_epic_1"
+  map      = "MAP02"
 
-  seed_w = 2
+  seed_w   = 2
 }
 
 PREFABS.Window_gothic_epic_3 =
 {
-  template = "Window_barred1"
+  template = "Window_gothic_epic_1"
 
   map      = "MAP03"
   seed_w   = 3
