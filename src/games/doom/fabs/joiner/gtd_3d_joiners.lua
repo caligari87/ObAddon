@@ -17,7 +17,7 @@ PREFABS.Joiner_gtd_3D_joiner_center =
   deep   = 16
   over   = 16
 
-  x_fit  = { 120,136 }
+  x_fit  = { 24,32 , 224,232 }
   y_fit  = { 96,112 }
 
   delta_h  = 128
