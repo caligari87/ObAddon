@@ -1800,6 +1800,7 @@ GLAICE_URBAN_WALL_GROUPS =
   gtd_tall_glass_epic_orange = 2
   gtd_tall_glass_epic_red = 2
   gtd_tall_glass_epic_blue = 2
+  glaice_glass_huge = 3
 }
 
 GLAICE_HELL_WALL_GROUPS =
@@ -1808,6 +1809,7 @@ GLAICE_HELL_WALL_GROUPS =
   gtd_tall_glass_epic_orange = 15
   gtd_tall_glass_epic_red = 15
   gtd_tall_glass_epic_blue = 15
+  glaice_glass_huge = 25
 }
 
 -- Adds new window groups using Epic textures
