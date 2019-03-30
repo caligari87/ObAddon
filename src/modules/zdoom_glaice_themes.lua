@@ -1809,3 +1809,18 @@ GLAICE_HELL_WALL_GROUPS =
   gtd_tall_glass_epic_red = 15
   gtd_tall_glass_epic_blue = 15
 }
+
+-- Adds new window groups using Epic textures
+GLAICE_TECH_WINDOW_GROUPS =
+{
+}
+
+GLAICE_URBAN_WINDOW_GROUPS =
+{
+  gtd_window_gothic_epic = 30
+}
+
+GLAICE_HELL_WINDOW_GROUPS =
+{
+  gtd_window_gothic_epic = 80
+}

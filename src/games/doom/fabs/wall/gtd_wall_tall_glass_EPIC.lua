@@ -15,7 +15,7 @@ PREFABS.Wall_tall_glass_EPIC_yellow =
   bound_z1 = 0
   bound_z2 = 160
 
-  z_fit  = "top"
+  z_fit  = "frame"
 }
 
 PREFABS.Wall_tall_glass_EPIC_yellow_diag =
@@ -33,7 +33,7 @@ PREFABS.Wall_tall_glass_EPIC_yellow_diag =
   bound_z1 = 0
   bound_z2 = 160
 
-  z_fit  = "top"
+  z_fit  = "frame"
 }
 
 PREFABS.Wall_tall_glass_EPIC_orange =
