@@ -1223,15 +1223,15 @@ DOOM.THEMES =
 
     style_list =
     {
-      caves = { none=75, few=35 }
+      caves = { none=75, few=30 }
       outdoors = { none=15, few=40, some=80, heaps=10 }
-      big_rooms = { none=40, few=20, some=15, heaps=5 }
+      big_rooms = { none=40, few=25, some=15, heaps=5 }
       hallways = { none=15, few=45, some=20, heaps=10 }
       windows = { few=15, some=85, heaps=40 }
       pictures = { few=20, some=75, heaps=45 }
       liquids = { none=70, few=30, some=10, heaps=5 }
-      doors = { few=25, some=70, heaps=30 }
-      teleporters = { none=70, few=50, some=15, heaps=5 }
+      doors = { few=25, some=75, heaps=30 }
+      teleporters = { none=70, few=40, some=10, heaps=3 }
       keys = { none=20, few=80, some=70, heaps=30 }
       switches = { none=25, few=75, some=40, heaps=15 }
       secrets = { few=15, some=80, heaps=30 }
@@ -1510,7 +1510,7 @@ DOOM.THEMES =
       steepness = { few=25, some=50, heaps=90 }
       big_rooms = { none=25, few=40, some=25, heaps=15 }
       ambushes = { none=5, few=20, some=75, heaps=30 }
-      teleporters = { none=15, few=30, some=65, heaps=10 }
+      teleporters = { none=20, few=30, some=65, heaps=10 }
       keys = { none=15, few=50, some=50, heaps=20 }
       symmetry = { none=40, few=30, some=35, heaps=25 }
       switches = { none=20, few=60, some=40, heaps=10 }
