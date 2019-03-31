@@ -56,9 +56,10 @@ PREFABS.Wall_hell_bloodgutters3 =
     SP_DUDE4 = 50
     SP_DUDE5 = 50
   }
-  
-  -- This utilizes the Doom1 textures not seen in Doom 2
-  PREFABS.Wall_hell_bloodgutters3_EPIC =
+}
+
+-- This utilizes the Doom1 textures not seen in Doom 2
+PREFABS.Wall_hell_bloodgutters3_EPIC =
 {
   template = "Wall_hell_bloodgutters1"
   replaces = "Wall_hell_bloodgutters3"
