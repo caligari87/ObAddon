@@ -17,7 +17,7 @@ DOOM.LIQUIDS =
   water  = { mat="FWATER1", special=0 }
   blood  = { mat="BLOOD1",  special=0 }
   nukage = { mat="NUKAGE1", light_add=24, special=7,  damage=5 }
-  lava   = { mat="LAVA1",   light_add=48, special=5, damage=10 }
+  lava   = { mat="LAVA1",   light_add=56, special=5, damage=10 }
 
   -- Doom II only --
   slime  = { mat="SLIME01", special=0, light_add=8, damage=0 }
