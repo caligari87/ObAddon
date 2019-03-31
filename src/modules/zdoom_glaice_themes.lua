@@ -181,7 +181,7 @@ GLAICE_THEMES =
       COMPTIL3 = 10
       COMPTIL4 = 20
       COMPTIL5 = 20
-      COMPTIL6 = 20
+	  COMPTIL6 = 20
       COMPBLUE = 10
       COMPGREN = 10
       COMPRED  = 10
@@ -1793,6 +1793,7 @@ GLAICE_HELL_SCENIC_FENCES =
 -- Adds group wall sets using Epic textures
 GLAICE_TECH_WALL_GROUPS =
 {
+  gtd_wall_server_room2 = 25
 }
 
 GLAICE_URBAN_WALL_GROUPS =
