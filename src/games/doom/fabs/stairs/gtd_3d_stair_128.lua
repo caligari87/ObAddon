@@ -5,6 +5,7 @@ PREFABS.Ladder_3d_stair_128 =
 
   prob   = 75
   style  = "steepness"
+  env    = "building"
 
   where  = "seeds"
   shape  = "I"
