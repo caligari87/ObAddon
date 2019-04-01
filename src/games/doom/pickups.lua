@@ -46,7 +46,7 @@ DOOM.PICKUPS =
     id = 2014
     kind = "health"
     add_prob = 20
-    cluster = { 4,7 }
+    cluster = { 3,7 }
     give = { {health=1} }
   }
 
@@ -79,7 +79,7 @@ DOOM.PICKUPS =
     id = 2015
     kind = "armor"
     add_prob = 10
-    cluster = { 4,7 }
+    cluster = { 3,7 }
     give = { {health=1} }
   }
 
