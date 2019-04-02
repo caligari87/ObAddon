@@ -1169,6 +1169,8 @@ DOOM.THEMES =
       gtd_generic_beamed_inset = 25
       gtd_computers = 25
       gtd_writhing_mass = 2
+      gtd_wall_octagon_insets = 25
+      gtd_wall_grated_machines = 25
     }
 
     window_groups =
@@ -1423,6 +1425,7 @@ DOOM.THEMES =
       gtd_drywall = 10
       gtd_writhing_mass = 2
       gtd_library = 10
+      gtd_wall_grated_machines = 4
     }
 
     window_groups =
