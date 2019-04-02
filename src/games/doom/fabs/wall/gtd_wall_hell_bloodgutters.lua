@@ -71,7 +71,7 @@ PREFABS.Wall_hell_bloodgutters3_EPIC =
   {
     SP_DUDE4 = 50
     SP_DUDE5 = 50
-	SPDUDE3  = 50
-	SPDUDE6  = 25
+    SPDUDE3  = 50
+    SPDUDE6  = 25
   }
 }

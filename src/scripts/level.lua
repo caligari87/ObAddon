@@ -234,11 +234,6 @@ function Episode_pick_names()
     GAME.sub_title = Naming_grab_one("SUB_TITLE")
   end
 
-  if os.date("%m %d") == "04 01" then
-    GAME.title = "TROLOLOLO"
-    GAME.subtitle = ":D :D :D :D :D :D :D :D :D"
-  end
-
   gui.printf("Game title: %s\n\n", GAME.title)
   gui.printf("Game sub-title: %s\n\n", GAME.sub_title)
 
@@ -312,12 +307,6 @@ function Episode_plan_monsters()
 
 
   local function init_monsters()
-
-    if os.date("%m %d") == "04 01" then
-      each name,def in GAME.MONSTERS do
-        def.id = rand.pick({64, 65, 66, 71})
-      end
-    end
 
     each name,info in GAME.MONSTERS do
       if not info.id then
@@ -1613,20 +1602,6 @@ function Episode_plan_items()
   --
 
   ---| Episode_plan_items |---
-  if os.date("%m %d") == "04 01" then
-    each name,def in GAME.WEAPONS do
-      def.id = rand.pick({2003,82})
-    end
-    each name,def in GAME.PICKUPS do
-      def.id = 2025
-      if def.kind == "ammo" then
-        def.id = 2014
-      end
-    end
-    each name,def in GAME.NICE_ITEMS do
-      def.id = 2025
-    end
-  end
   -- TODO
 end
 
@@ -2201,7 +2176,7 @@ function Level_do_styles()
     Mat_prepare_trip()
   end
 
-  if os.date("%m %d") == "04 01" then
+  if PARAM.fireblu_mode then
     each m,def in GAME.MATERIALS do
       if not string.match(m, "_SKY") then
         def.t = "GRAYTALL"
@@ -2211,14 +2186,6 @@ function Level_do_styles()
       string.match (m, "SW1") then
         def.t = "DOORTRAK"
         def.f = "FIREBLU1"
-      end
-    end
-    each e,def in GAME.ENTITIES do
-      if not string.match(e, "player")
-      and not string.match(e, "k_")
-      and not string.match(e, "ks_")
-      and not string.match(e, "spot") then
-        def.id = 2025
       end
     end
   end
@@ -2400,9 +2367,6 @@ function Level_make_level(LEV)
   -- must create the description before the copy (else games/modules won't see it)
   if not LEV.description and LEV.name_class then
     LEV.description = Naming_grab_one(LEV.name_class)
-    if os.date("%m %d") == "04 01" then
-      LEV.description = Naming_grab_one("PSYCHO")
-    end
   end
 
   if LEV.is_procedural_gotcha then

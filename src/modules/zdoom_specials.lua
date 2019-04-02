@@ -253,10 +253,6 @@ function ZDOOM_SPECIALS.do_special_stuff()
       music_line = ''
     end
 
-    if os.date("%m %d") == "04 01" then
-      music_line = '  Music = "$MUSIC_RUNNIN"\n'
-    end
-
     -- resolve map MAPINFO linkages
     if map_num < 10 then
       map_id = "MAP0" .. map_num
@@ -279,7 +275,7 @@ function ZDOOM_SPECIALS.do_special_stuff()
       sky_tex = "SKY3"
     end
 
-    if os.date("%m %d") == "04 01" then
+    if PARAM.fireblu_mode then
       sky_tex = "FIREBLU1"
     end
 

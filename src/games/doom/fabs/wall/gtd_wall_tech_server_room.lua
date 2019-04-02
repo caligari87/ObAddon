@@ -46,7 +46,7 @@ PREFABS.Wall_urban_storage_diag_EPIC =
   prob   = 50
   theme = "tech"
   group = "gtd_wall_server_room2"
-    
+
   uses_epic_textures = true
 
   where  = "diagonal"
@@ -72,15 +72,15 @@ PREFABS.Wall_tech_server1_EPIC =
 {
   template = "Wall_tech_plain"
   replaces = "Wall_tech_server1"
-  
+
   uses_epic_textures = true
 
   prob = 50
 
   map = "MAP06"
-  
+
   tex_COMPSD1 = { COMPSD1=50, COMPFUZ1=50, COMPY1=50, COMPCT07=20 }
-  
+
 }
 
 PREFABS.Wall_tech_server2 =
