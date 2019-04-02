@@ -1889,6 +1889,21 @@ DECORATE_CLOSET_3x2 =
 }
 
 
+DECORATE_CLOSET_4x2 =
+{
+  prob = 60
+
+  structure =
+  {
+    "....", "TTTT"
+    "....", "TTTT"
+    "1111", "1111"
+  }
+
+  closet = { from_dir=2 }
+}
+
+
 
 ------------------------------------------
 --   Landscape stuff
