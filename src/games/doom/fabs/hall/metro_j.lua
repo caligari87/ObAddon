@@ -17,3 +17,11 @@ PREFABS.Hallway_metro_term =
   deep   = 16
 }
 
+PREFABS.Hallway_metro_term_secret =
+{
+  template = "Hallway_metro_term"
+
+  map  = "MAP02"
+  theme = "!hell"
+  key  = "secret"
+}
