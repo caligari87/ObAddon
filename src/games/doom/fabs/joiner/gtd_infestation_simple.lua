@@ -2,7 +2,7 @@
 -- Disgusting eww pls
 --
 
-PREFABS.Joiner_infestation_caveout =
+--[[PREFABS.Joiner_infestation_caveout =
 {
   file   = "joiner/gtd_infestation_simple.wad"
   map    = "MAP01"
@@ -17,8 +17,6 @@ PREFABS.Joiner_infestation_caveout =
 
   deep = 16
   over = 16
-
-  bound_z1 = -16
 
   x_fit = "frame"
   y_fit = "frame"
@@ -46,4 +44,4 @@ PREFABS.Joiner_natural_caveout =
   thing_63 = 0
   thing_77 = 0
   thing_78 = 0
-}
+}]]
