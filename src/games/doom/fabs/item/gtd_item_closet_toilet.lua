@@ -24,3 +24,10 @@ PREFABS.Item_closet_toilet_room =
   x_fit = "frame"
   y_fit = "top"
 }
+
+PREFABS.Item_closet_toilet_room_filthy =
+{
+  template   = "Item_closet_toilet_room"
+  map = "MAP02"
+  prob = 120
+}
