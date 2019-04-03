@@ -2935,7 +2935,30 @@ DOOM.ROOM_THEMES =
       WOODMET2 = 16
       WOODMET1 = 16
     }
-}
+  }
+
+
+  hell_metro_Hallway =
+  {
+    env   = "hallway"
+    group = "metro"
+    prob  = 15
+
+    walls =
+    {
+      BROWN1   = 50
+    }
+
+    floors =
+    {
+      FLAT4  = 50
+    }
+
+    ceilings =
+    {
+      CEIL3_5 = 50
+    }
+  }
 
 
 ----  URBAN / CITY / EARTH  -----------------------
