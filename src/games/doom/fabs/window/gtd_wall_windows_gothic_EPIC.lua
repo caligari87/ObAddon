@@ -15,6 +15,8 @@ PREFABS.Window_gothic_epic_1 =
 
   bound_z1 = 0
   bound_z2 = 128
+
+  x_fit = "frame"
 }
 
 PREFABS.Window_gothic_epic_2 =
