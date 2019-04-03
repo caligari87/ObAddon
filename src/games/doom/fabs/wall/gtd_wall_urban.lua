@@ -3,7 +3,7 @@ PREFABS.Wall_fake_door =
   file   = "wall/gtd_wall_urban.wad"
   map    = "MAP01"
 
-  prob   = 35
+  prob   = 30
   theme = "urban"
 
   on_liquids = "never"
@@ -57,7 +57,7 @@ PREFABS.Wall_modern_shutter =
   file   = "wall/gtd_wall_urban.wad"
   map    = "MAP03"
 
-  prob   = 75
+  prob   = 60
   theme = "urban"
 
   on_liquids = "never"
@@ -92,7 +92,7 @@ PREFABS.Wall_modern_shutter_EPIC =
   file   = "wall/gtd_wall_urban.wad"
   map    = "MAP03"
 
-  prob   = 75
+  prob   = 60
   theme = "urban"
 
   uses_epic_textures = true
