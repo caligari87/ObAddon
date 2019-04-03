@@ -1,13 +1,12 @@
-PREFABS.Wall_tech_grated_machines_insets_1 =
+PREFABS.Wall_quakish_insets_1 =
 {
-  file   = "wall/gtd_wall_tech_grated_machines.wad"
+  file   = "wall/gtd_wall_quakish_inset.wad"
   map    = "MAP01"
 
   prob   = 50
-  theme  = "tech"
   env = "building"
 
-  group = "gtd_wall_grated_machines"
+  group = "gtd_wall_quakish_insets"
 
   where  = "edge"
   deep   = 16
@@ -19,16 +18,15 @@ PREFABS.Wall_tech_grated_machines_insets_1 =
   z_fit  = "top"
 }
 
-PREFABS.Wall_tech_grated_machines_diagonal =
+PREFABS.Wall_quakish_insets_diagonal =
 {
-  file   = "wall/gtd_wall_tech_grated_machines.wad"
+  file   = "wall/gtd_wall_quakish_inset.wad"
   map    = "MAP02"
 
   prob   = 50
-  theme  = "tech"
   env = "building"
 
-  group = "gtd_wall_grated_machines"
+  group = "gtd_wall_quakish_insets"
 
   where  = "diagonal"
   deep   = 16
