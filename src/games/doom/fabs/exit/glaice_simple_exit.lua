@@ -11,7 +11,6 @@ PREFABS.Exit_glaice_simple_exit =
   seed_h = 2
 
   deep   =  16
-  over   = -16
 
   x_fit  = "frame"
   y_fit  = "top"
