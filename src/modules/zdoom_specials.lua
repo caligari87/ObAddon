@@ -321,6 +321,8 @@ function ZDOOM_SPECIALS.do_special_stuff()
         secret_level_line = '  secretnext = E3M9\n'
       elseif map_num == 29 then
         secret_level_line = '  secretnext = E4M9\n'
+      else
+        secret_level_line = ''
       end
 
       -- skip for secret levels
