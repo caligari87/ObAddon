@@ -2,7 +2,6 @@ PREFABS.Hallway_metro_u =
 {
   file   = "hall/metro_u.wad"
   map    = "MAP01"
-  theme  = "!hell"
 
   group  = "metro"
   prob   = 50

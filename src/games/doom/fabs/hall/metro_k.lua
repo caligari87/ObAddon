@@ -2,7 +2,6 @@ PREFABS.Hallway_metro_locked_red =
 {
   file   = "hall/metro_k.wad"
   map    = "MAP01"
-  theme  = "!hell"
 
   kind   = "terminator"
   group  = "metro"
@@ -41,7 +40,6 @@ PREFABS.Hallway_metro_barred =
 {
   file   = "hall/metro_k.wad"
   map    = "MAP02"
-  theme  = "!hell"
 
   kind   = "terminator"
   group  = "metro"
