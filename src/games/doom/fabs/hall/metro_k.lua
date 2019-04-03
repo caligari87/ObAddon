@@ -56,5 +56,5 @@ PREFABS.Hallway_metro_barred =
   deep   = 16
 
   tag_1  = "?door_tag"
-  door_action = "S1_OpenDoor"
+  door_action = "S1_LowerFloor"
 }
