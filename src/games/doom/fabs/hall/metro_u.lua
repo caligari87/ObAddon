@@ -11,4 +11,30 @@ PREFABS.Hallway_metro_u =
 
   seed_w = 2
   seed_h = 2
+  
+  sector_1  = { [0]=90, [1]=15 }
 }
+
+-- Probably needs more info to work so left as UNFINISHED.
+UNFINISHED.Hallway_metro_u_deadend1 =
+{
+  template = "Hallway_metro_u"
+  map      = "MAP02"
+  prob     = 50
+  
+  group    = "metro"
+  
+  sector_1  = { [0]=90, [1]=15 }
+  }
+  
+  -- Bloody dead end
+  PREFABS.Hallway_metro_u_deadend2 =
+  {
+  template = "Hallway_metro_u"
+  map      = "MAP03"
+  
+  group    = "metro"
+  prob     = 50
+  
+  sector_1  = { [0]=90, [1]=15 }
+  }

@@ -14,6 +14,8 @@ PREFABS.Hallway_metro_term =
   seed_h = 1
 
   deep   = 16
+  
+ sector_1  = { [0]=90, [1]=15 }
 }
 
 PREFABS.Hallway_metro_secret =
@@ -22,4 +24,6 @@ PREFABS.Hallway_metro_secret =
 
   map  = "MAP02"
   key  = "secret"
+  
+  sector_1  = { [0]=90, [1]=15 }
 }
