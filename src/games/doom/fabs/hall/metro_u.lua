@@ -15,8 +15,7 @@ PREFABS.Hallway_metro_u =
   sector_1  = { [0]=90, [1]=15 }
 }
 
--- Probably needs more info to work so left as UNFINISHED.
-UNFINISHED.Hallway_metro_u_deadend1 =
+PREFABS.Hallway_metro_u_deadend1 =
 {
   template = "Hallway_metro_u"
   map      = "MAP02"
