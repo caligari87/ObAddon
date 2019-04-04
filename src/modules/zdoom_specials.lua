@@ -149,7 +149,7 @@ function ZDOOM_SPECIALS.shuffle_music()
 
   local music_table
 
-  if OB_CONFIG.game == "doom1" then
+  if OB_CONFIG.game == "doom1" or OB_CONFIG.game == "ultdoom" then
     music_table = ZDOOM_SPECIALS.MUSIC_DOOM
   else
     music_table = ZDOOM_SPECIALS.MUSIC_DOOM2
