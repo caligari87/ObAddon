@@ -286,7 +286,7 @@ function ZDOOM_SPECIALS.do_special_stuff()
         map_id_next = '"EndTitle"'
       end
     elseif OB_CONFIG.game == "doom1" or OB_CONFIG.game == "ultdoom" then
-      if (map_num + 1 > level_count) or map_num == 35 then
+      if (map_num + 1 > level_count) or map_num == 36 then
         map_id_next = '"EndTitle"'
       end
     end
