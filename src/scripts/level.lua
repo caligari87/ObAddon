@@ -159,12 +159,12 @@ function Level_determine_map_size(LEV)
 
   -- Mix It Up --
 
-  -- Greatly increased chance of Regular being used in Mix It Up
-  -- here. -Glaice, March 3rd, 2019
+  -- Adjusted probabilities again, Extreme is very slim probability but
+  -- still possible to show up. -Glaice, April 4th, 2019
   if ob_size == "mixed" then
     local MIXED_PROBS =
     {
-      small=28, regular=117, large=48, extreme=7
+      small=25, regular=125, large=40, extreme=3
     }
 
     ob_size = rand.key_by_probs(MIXED_PROBS)
@@ -2257,15 +2257,20 @@ function Level_choose_darkness()
 
   -- NOTE: this style is only set via the Level Control module
   if STYLE.darkness then
-    prob = style_sel("darkness", 0, 15, 35, 97)
+    prob = style_sel("darkness", 0, 15, 35, 100) -- 0, 15, 35, 97
     --prob = style_sel("darkness", 0, 10, 30, 90) --Original
   end
 
   LEVEL.sky_light  = rand.pick({ 136,144,144,152,160,168,176,176,192,192,200,208 })
   LEVEL.sky_shadow = rand.pick({ 24,32,40 }) --24
 
+  -- How to get these to be chosen at random? -Glaice, Apr 4th, 2019
+  -- Commented out extra lines until then.
   if rand.odds(prob) then
     gui.printf("Darkness falls across the land...\n\n")
+  --gui.printf("This land becomes shrouded in darkness...\n\n")
+  --gui.printf("The world has become dark...\n\n")
+  --gui.printf("The Sun has been blotted out...\n\n")
 
     LEVEL.is_dark = true
     LEVEL.sky_light  = 144
