@@ -2152,7 +2152,7 @@ namelib.NAMES =
       ["%d Revealed"] = 5
 
       -- <place> of <desc>  e.g. city of souls
-      ["%p of %d"] = 25 --40
+      ["%p of %d"] = 25
       ["%d in the %p"] = 6
       ["%d at the %p"] = 4
 
@@ -2160,7 +2160,7 @@ namelib.NAMES =
       ["%e in the %p"] = 3
 
       -- <place> of the <entity>  e.g. realm of the devil
-      ["%p of the %e"] = 30 --60
+      ["%p of the %e"] = 30
 
       -- miscellaneous
       ["Beyond the %p"] = 8
@@ -2201,11 +2201,41 @@ namelib.NAMES =
       ["%c did this"] = 3
       ["The %a %p of %c"] = 3
 
+      -- Simply located lexicon location (So you don't need to scroll up and down if you forget)
+      -- %a = Adjective
+      -- %p = Place
+      -- %c = Contributor name
+      -- %d = Abstract / Abstract-like
+      -- %e = Entities
+
       -- Glaice adds more grammar rules
+      ["Doomguy VS the %e"] = 10 -- Doomguy VS the [Entity]
+      ["Doomguy and the %e"] = 10 -- Doomguy and the [Entity]
+      ["Vacation in the %d %p"] = 10 -- Vacation in the [Description] [Place]
+      ["%c's %d"] = 10 -- [Name]'s Abstract Object
+      ["%c's %a %p"] = 10 -- [Name]'s [Adjective] [Place]
+      ["%c's %p"] = 10 -- [Name]'s [Place]
+      ["Dirty Deeds for the %e"] = 7 -- Dirty Deeds for the [Entity]
+      ["The %e Attacks the %d %p"] = 7 -- The [Entity] Attacks the [Adjective] [Place]
+      ["Is %c %a?"] = 7 -- Is [Name] Adjective?
+      ["%c's Playhouse"] = 7 -- [Name]'s Playhouse
+      ["%c's Warzone"] = 7 -- [Name]'s Warzone
+      ["%d: the %a %p"] = 7
+      ["Death: %a %p"] = 7
       ["This WAD has %d"] = 5 -- This WAD has Abstract Objects
-      ["%c's Warzone"] = 5 -- [Name]'s Warzone
-      ["%c's %a WAD"] = 4 -- [Name]'s [Adjective] WAD
-      ["%c's WAD"] = 3
+      ["%c's %a WAD"] = 5 -- [Name]'s [Adjective] WAD
+      ["%c's WAD"] = 5
+      ["The %e Lurks Within"] = 5 -- The [Entity] Lurks Within
+      ["The %e Lurks Below"] = 5
+      ["Destruction of the %d %p"] = 5 -- Destruction of the [Adjective] [Place]
+      ["%a Black Metal"] = 5 -- [Adjective] Black Metal
+      ["Doomguy's Vacation with %c"] = 5 -- Doomguy's Vacation with [Name]
+      ["Sin City: The %a %p"] = 5
+      ["Sin City: The %d"] = 5
+      ["Dead Base: The %d"] = 5
+      ["%a Sorcery"] = 3
+      ["%a Witchcraft"] = 3
+
 
     }
 
@@ -2861,17 +2891,17 @@ namelib.NAMES =
       s =
       {
         -- sequels
-        ["II"]  = 80
-        ["III"] = 80
-        ["IV"]  = 40
-        ["V"]  = 20
-        ["VI"]  = 10
-        ["VII"]  = 10
-        ["VIII"]  = 10
-        ["IX"]  = 10
-        ["X"]  = 10
-        ["XI"]  = 10
-        ["XII"] = 10
+        ["II"]  = 60
+        ["III"] = 60
+        ["IV"]  = 30
+        ["V"]  = 15
+        ["VI"]  = 5
+        ["VII"]  = 5
+        ["VIII"]  = 5
+        ["IX"]  = 5
+        ["X"]  = 5
+        ["XI"]  = 5
+        ["XII"] = 5
 
         ["R E D U X"] = 10
         ["Revisited"] = 10
@@ -2969,36 +2999,40 @@ namelib.NAMES =
         ["People Die When They Are Killed"] = 10
         ["So Sad Alexa Play D RUNNIN"] = 10
 		
-		-- Glaice adds names
-		["A Masterpiece in Progress"] = 40
-		["A Bloody Good Time"] = 30
-		["A Withered World"] = 25
-		["Always Being Improved"] = 40
-		["An OnAddon Production"] = 40
-		["As Above, So Below"] = 30
-		["Burn It All Down"] = 30
-		["Crimes Against Humanity"] = 25
-		["Descent Into Madness"] = 30
-		["Doomguy's Vacation"] = 25
-		["Enter Combat"] = 25
-		["High Impact Abuse"] = 35
-		["It's Raw!"] = 30
-		["Not A Walk in the Park"] = 30
-		["Not Safe For Game Journalists"] = 35
-		["Now with more Impse"] = 30
-		["Oblige is Love, Oblige is Life"] = 40
-		["Perfect on Ultra-Violence"] = 30
-		["Ramp it to the MAX!"] = 25
-		["Skilled Players Sign Here"] = 25
-		["The Deadzone"] = 20
-		["The Principles of Doom"] = 30
-		["The World Beyond"] = 25
-		["Time to Man Up"] = 30
-		["Total Blackout"] = 20
-		["Under Construction"] = 25
-		["We Have to Start Somewhere"] = 20
-		["What Would Jesus Play?"] = 20
-		["You Guys Have Mods, Right?"] = 30
+	-- Glaice adds names
+	["A Masterpiece in Progress"] = 40
+	["A Bloody Good Time"] = 30
+	["A Withered World"] = 25
+	["Always Being Improved"] = 40
+	["An OnAddon Production"] = 40
+	["Are You Man Enough?"] = 20
+	["As Above, So Below"] = 30
+	["Bugs Do Exist, Plz Report!"] = 20
+	["Burn It All Down"] = 30
+	["Crimes Against Humanity"] = 25
+	["Descent Into Madness"] = 30
+	["Doomguy's Vacation"] = 25
+	["Enter Combat"] = 25
+	["High Impact Abuse"] = 35
+	["It's Raw!"] = 30
+	["Not A Walk in the Park!"] = 30
+	["Not Safe For Game Journalists"] = 35
+	["Not Your Typical Doomworld WAD"] = 30
+	["Now with more Impse"] = 30
+	["Oblige is Love, Oblige is Life"] = 40
+	["Perfect on Ultra-Violence"] = 30
+	["Ramp it to the MAX!"] = 25
+	["Skilled Players Sign Here"] = 25
+	["The Deadzone"] = 20
+	["The Principles of Doom"] = 30
+	["The World Beyond"] = 25
+	["This WAD Shouldn't Suck"] = 25
+	["Time to Man Up"] = 30
+	["Total Blackout"] = 20
+	["Under Construction"] = 25
+	["We Have to Start Somewhere"] = 20
+	["What Would Jesus Play?"] = 20
+	["You Guys Have Mods, Right?"] = 30
 
         -- based on popular movie/TV slogans
         ["A Minute in Hell"] = 20
