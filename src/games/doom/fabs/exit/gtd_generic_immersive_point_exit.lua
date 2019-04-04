@@ -4,7 +4,6 @@ PREFABS.Exit_immersive_point_exit1 =
   map    = "MAP01"
 
   where  = "point"
-  height = 112
 
   prob   = 1000
 }
