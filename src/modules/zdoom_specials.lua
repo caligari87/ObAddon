@@ -71,20 +71,20 @@ ZDOOM_SPECIALS.MUSIC_DOOM =
   [20] = "$MUSIC_E3M2",
   [21] = "$MUSIC_E3M3",
   [22] = "$MUSIC_E3M4",
-  [24] = "$MUSIC_E3M5",
-  [25] = "$MUSIC_E3M6",
-  [26] = "$MUSIC_E3M7",
-  [27] = "$MUSIC_E3M8",
-  [28] = "$MUSIC_E3M9",
-  [29] = "$MUSIC_E3M4",
-  [30] = "$MUSIC_E3M2",
-  [31] = "$MUSIC_E3M3",
-  [32] = "$MUSIC_E1M5",
-  [33] = "$MUSIC_E2M7",
-  [34] = "%MUSIC_E2M4",
-  [35] = "$MUSIC_E2M6",
-  [36] = "$MUSIC_E2M5",
-  [37] = "$MUSIC_E1M9"
+  [23] = "$MUSIC_E3M5",
+  [24] = "$MUSIC_E3M6",
+  [25] = "$MUSIC_E3M7",
+  [26] = "$MUSIC_E3M8",
+  [27] = "$MUSIC_E3M9",
+  [28] = "$MUSIC_E3M4",
+  [29] = "$MUSIC_E3M2",
+  [30] = "$MUSIC_E3M3",
+  [31] = "$MUSIC_E1M5",
+  [32] = "$MUSIC_E2M7",
+  [33] = "%MUSIC_E2M4",
+  [34] = "$MUSIC_E2M6",
+  [35] = "$MUSIC_E2M5",
+  [36] = "$MUSIC_E1M9"
 }
 
 ZDOOM_SPECIALS.MUSIC_DOOM2 =
@@ -248,6 +248,7 @@ function ZDOOM_SPECIALS.do_special_stuff()
     local music_line = ''
 
     if music_list then
+      gui.printf("Music index: " .. map_num .. "\n")
       music_line = '  Music = "' .. music_list[map_num] .. '"\n'
     else
       music_line = ''
