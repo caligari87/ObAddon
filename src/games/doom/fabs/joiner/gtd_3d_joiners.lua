@@ -3,7 +3,7 @@ PREFABS.Joiner_gtd_3D_joiner_center =
   file   = "joiner/gtd_3d_joiners.wad"
   map = "MAP01"
 
-  prob   = 500000 --500
+  prob   = 500 --500
   style  = "steepness"
 
   engine   = "zdoom"
