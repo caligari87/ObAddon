@@ -2180,7 +2180,7 @@ namelib.NAMES =
       ["Attack of the %a %e"] = 8 -- Attack of the Descriptive Entity
       ["Return of the %e"] = 8 -- Return of the Entity
       ["A WAD full of %d"] = 5 -- A WAD Full of Abstract Objects
-	  ["The %p of the %e"] = 12 -- The Place of the Entity
+      ["The %p of the %e"] = 12 -- The Place of the Entity
       ["The %d of the %e"] = 12 -- The Abstract Object of the Entity
       ["Return of the %e"] = 8 -- Return of the Entity
       ["Some very %a %p"] = 8 -- Some very Descriptive Place
@@ -2199,12 +2199,12 @@ namelib.NAMES =
       ["The %e The %e and The %d"] = 8
 
       ["%c did this"] = 3
-	  ["The %a %p of %c"] = 3
+      ["The %a %p of %c"] = 3
 
       -- Glaice adds more grammar rules
       ["This WAD has %d"] = 5 -- This WAD has Abstract Objects
-	  ["%c's Warzone"] = 5 -- [Name]'s Warzone
-	  ["%c's %a WAD"] = 4 -- [Name]'s [Adjective] WAD
+      ["%c's Warzone"] = 5 -- [Name]'s Warzone
+      ["%c's %a WAD"] = 4 -- [Name]'s [Adjective] WAD
       ["%c's WAD"] = 3
 
     }
