@@ -117,7 +117,7 @@ PREFABS.Item_secret_niche2_hell =
 }
 
 
--- this one gives the player a surprise
+--[[ this one gives the player a surprise
 PREFABS.Item_secret_trappy =
 {
   template = "Item_secret_niche1"
@@ -163,4 +163,4 @@ PREFABS.Item_secret_trappy_tech =
   }
 
   solid_ents = true
-}
+}]]
