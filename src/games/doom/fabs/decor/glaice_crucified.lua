@@ -5,7 +5,7 @@ PREFABS.Decor_glaice_crufiied_pillar_1 =
 
   prob   = 5000
   theme  = "hell"
-  
+
   where  = "point"
   size   = 88
   height = 136
@@ -20,7 +20,7 @@ PREFABS.Decor_glaice_crufiied_pillar_1_EPIC =
 {
   template   = "Decor_glaice_crufiied_pillar_1"
   prob       = 5000
-  
+
   uses_epic_textures = true
   replaces   = "Decor_glaice_crufiied_pillar_1"
 

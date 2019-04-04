@@ -2180,7 +2180,7 @@ namelib.NAMES =
       ["Attack of the %a %e"] = 8 -- Attack of the Descriptive Entity
       ["Return of the %e"] = 8 -- Return of the Entity
       ["A WAD full of %d"] = 5 -- A WAD Full of Abstract Objects
-	  ["The %p of the %e"] = 12 -- The Place of the Entity
+      ["The %p of the %e"] = 12 -- The Place of the Entity
       ["The %d of the %e"] = 12 -- The Abstract Object of the Entity
       ["Return of the %e"] = 8 -- Return of the Entity
       ["Some very %a %p"] = 8 -- Some very Descriptive Place
@@ -2199,12 +2199,12 @@ namelib.NAMES =
       ["The %e The %e and The %d"] = 8
 
       ["%c did this"] = 3
-	  ["The %a %p of %c"] = 3
+      ["The %a %p of %c"] = 3
 
       -- Glaice adds more grammar rules
       ["This WAD has %d"] = 5 -- This WAD has Abstract Objects
-	  ["%c's Warzone"] = 5 -- [Name]'s Warzone
-	  ["%c's %a WAD"] = 4 -- [Name]'s [Adjective] WAD
+      ["%c's Warzone"] = 5 -- [Name]'s Warzone
+      ["%c's %a WAD"] = 4 -- [Name]'s [Adjective] WAD
       ["%c's WAD"] = 3
 
     }
@@ -2686,22 +2686,22 @@ namelib.NAMES =
         -- fantasy/magical
         Aliens = 10
         Ancients = 15
-		Anima = 7
+        Anima = 7
         Bastards = 15
-		Banshee = 7
+        Banshee = 7
         Cerberus = 10
-		Chimera = 10
+        Chimera = 10
         Cyclops = 5
         Damned = 15
         Dragon = 10
         Drowned = 10
         Exile = 10
         Giants = 10
-		Ghouls = 7
+        Ghouls = 7
         Hexers = 10
         Keepers = 15
-		Lich = 10
-		Manticore = 10
+        Lich = 10
+        Manticore = 10
         Minotaurs = 15
         Necromancer = 20
         Oracle = 15
@@ -2712,9 +2712,9 @@ namelib.NAMES =
         Undead = 20
         Vampire = 7
         Wight = 7
-		Wraith = 10
-		Wyrm  = 7
-		Wyvern = 7
+        Wraith = 10
+        Wyrm  = 7
+        Wyvern = 7
         Zombies = 10
 
         -- Lovecraft
@@ -2917,37 +2917,37 @@ namelib.NAMES =
          -- MSSP adds names
         ["People Die When They Are Killed"] = 10
         ["So Sad Alexa Play D RUNNIN"] = 10
-		
-		-- Glaice adds names
-		["A Masterpiece in Progress"] = 40
-		["A Bloody Good Time"] = 30
-		["A Withered World"] = 25
-		["Always Being Improved"] = 40
-		["An OnAddon Production"] = 40
-		["As Above, So Below"] = 30
-		["Burn It All Down"] = 30
-		["Crimes Against Humanity"] = 25
-		["Descent Into Madness"] = 30
-		["Doomguy's Vacation"] = 25
-		["Enter Combat"] = 25
-		["High Impact Abuse"] = 35
-		["It's Raw!"] = 30
-		["Not A Walk in the Park"] = 30
-		["Not Safe For Game Journalists"] = 35
-		["Now with more Impse"] = 30
-		["Oblige is Love, Oblige is Life"] = 40
-		["Perfect on Ultra-Violence"] = 30
-		["Ramp it to the MAX!"] = 25
-		["Skilled Players Sign Here"] = 25
-		["The Deadzone"] = 20
-		["The Principles of Doom"] = 30
-		["The World Beyond"] = 25
-		["Time to Man Up"] = 30
-		["Total Blackout"] = 20
-		["Under Construction"] = 25
-		["We Have to Start Somewhere"] = 20
-		["What Would Jesus Play?"] = 20
-		["You Guys Have Mods, Right?"] = 30
+
+        -- Glaice adds names
+        ["A Masterpiece in Progress"] = 40
+        ["A Bloody Good Time"] = 30
+        ["A Withered World"] = 25
+        ["Always Being Improved"] = 40
+        ["An OnAddon Production"] = 40
+        ["As Above, So Below"] = 30
+        ["Burn It All Down"] = 30
+        ["Crimes Against Humanity"] = 25
+        ["Descent Into Madness"] = 30
+        ["Doomguy's Vacation"] = 25
+        ["Enter Combat"] = 25
+        ["High Impact Abuse"] = 35
+        ["It's Raw!"] = 30
+        ["Not A Walk in the Park"] = 30
+        ["Not Safe For Game Journalists"] = 35
+        ["Now with more Impse"] = 30
+        ["Oblige is Love, Oblige is Life"] = 40
+        ["Perfect on Ultra-Violence"] = 30
+        ["Ramp it to the MAX!"] = 25
+        ["Skilled Players Sign Here"] = 25
+        ["The Deadzone"] = 20
+        ["The Principles of Doom"] = 30
+        ["The World Beyond"] = 25
+        ["Time to Man Up"] = 30
+        ["Total Blackout"] = 20
+        ["Under Construction"] = 25
+        ["We Have to Start Somewhere"] = 20
+        ["What Would Jesus Play?"] = 20
+        ["You Guys Have Mods, Right?"] = 30
 
         -- based on popular movie/TV slogans
         ["A Minute in Hell"] = 20
