@@ -11,6 +11,6 @@ PREFABS.Hallway_metro_i =
 
   seed_w = 2
   seed_h = 2
-  
+
   sector_1  = { [0]=90, [1]=15 }
 }
