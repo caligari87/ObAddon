@@ -426,7 +426,8 @@ function ZDOOM_SPECIALS.do_special_stuff()
 
     info.map_num = i
     info.interpic = ipic
-    if os.date("%m %d") == "04 01" then
+
+    if PARAM.fireblu_mode then
       info.interpic = "OBDNLOAT"
     end
 
