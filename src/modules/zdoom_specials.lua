@@ -442,10 +442,25 @@ function ZDOOM_SPECIALS.do_special_stuff()
         '{\n'
         '' .. cluster_music_line .. ''
         '  pic = "' .. interpic .. '"\n'
+        --[['  entertext = \n'
+        '    "Time to enter the fray once more!",\n'
+        '    "The forces of hell have opened",\n'
+        '    "the gates to the netherworld",\n'
+        '    "and have spilled across the land.",\n'
+        '    " ",\n'
+        '    "Time to greet them the only way",\n'
+        '    "you know: locked and loaded!",\n'
+        '    " ",\n'
+        '    "Good luck out there",\n'
+        '    "and blast those hellspawn back",\n'
+        '    "to which they came!"\n']]
         '  exittext =\n'
-        '    "Hell has taken a strong hold upon these lands!",\n'
-        '    "Ahead, their forces gather in strength.",\n'
-        '    "It is time to stride forward and beat them back!"\n'
+        '    "Hell has taken a strong hold",\n'
+        '    "upon these lands, corrupting it",\n'
+        '    "in their wake!",\n'
+        '    " ",\n'
+        '    "Ahead, their forces gather in strength",\n'
+        '    "almost inumerable in count."\n'
         '}\n'
         'cluster 6\n' -- MAP06-MAP11
         '{\n'
@@ -453,10 +468,14 @@ function ZDOOM_SPECIALS.do_special_stuff()
         '  pic = "' .. interpic .. '"\n'
         '  exittext =\n'
         '    "A lieutenant of hell falls",\n'
-        '    "but otherworldly shrieks echo further still.",\n'
+        '    "but otherworldly shrieks echo",\n'
+        '    "further still.",\n'
         '    " ",\n'
-        '    "You pick up your armaments and point forward",\n'
-        '    "laying siege to the darkness.",\n'
+        '    "You pick up your armaments",\n'
+        '    "and point them forward",\n'
+        '    "to continue the siege",\n'
+        '    "against the darkness.",\n'
+        '    " ",\n'
         '    "The battle rages on!"\n'
         '}\n'
         'cluster 7\n' -- MAP12-14
@@ -464,10 +483,12 @@ function ZDOOM_SPECIALS.do_special_stuff()
         '' .. cluster_music_line .. ''
         '  pic = "' .. interpic .. '"\n'
         '  exittext =\n'
-        '    "You tirelessly battle against waves upon",\n'
-        '    "waves of seemingly infinite hellspawn.",\n'
+        '    "You tirelessly battle against",\n'
+        '    "waves upon waves of",\n'
+        '    "seemingly infinite hellspawn.",\n'
         '    " ",\n'
-        '    "Your tracker informs you a secret point of interest",\n'
+        '    "Your tracker informs you",\n'
+        '    "a secret point of interest",\n'
         '    "may exist nearby..."\n'
         '}\n'
         'cluster 8\n' -- MAP15-20
@@ -494,10 +515,12 @@ function ZDOOM_SPECIALS.do_special_stuff()
         '    "this place! Demonic entities flee in terror",\n'
         '    "from your display of indomitable strength.",\n'
         '    " ",\n'
-        '    "You realize, however, while hell lies defeated today,",\n'
+        '    "You realize, however,",\n'
+        '    "while hell lies defeated today,",\n'
         '    "hell has not yet been destroyed.",\n'
         '    "Rest for now, but remember:",\n'
-        '    "Hell is already preparing for another challenge."\n'
+        '    "Hell is already preparing",\n'
+        '    "for another challenge."\n'
         '}\n'
         'cluster 10\n' -- MAP31
         '{\n'
@@ -516,9 +539,10 @@ function ZDOOM_SPECIALS.do_special_stuff()
         '' .. cluster_music_line .. ''
         '  pic = "' .. interpic .. '"\n'
         '  entertext =\n'
-        '    "It seems this secret trail goes further",\n'
-        '    "than expected. It is time to finish this",\n'
-        '    "side venture once and for all and eradicate",\n'
+        '    "It seems this secret trail",\n'
+        '    "goes further than expected.",\n'
+        '    "It is time to finish this",\n'
+        '    "once and for all and eradicate",\n'
         '    "this hidden pocket of hellish infestation."\n'
         '}\n'
       }
@@ -564,7 +588,9 @@ function ZDOOM_SPECIALS.do_special_stuff()
     each line in clusterinfo_lines do
       table.insert(mapinfolump,line)
     end
-    gui.wad_insert_file("data/music/D_DM2INT.ogg","D_DM2INT")
+    if PARAM.generic_intermusic == "$MUSIC_DM2INT" then
+      gui.wad_insert_file("data/music/D_DM2INT.ogg","D_DM2INT")
+    end
   end
 
   gui.wad_add_text_lump("MAPINFO", mapinfolump)
