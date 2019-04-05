@@ -98,7 +98,7 @@ function GLAICE_DOOM1_EPIC_TEXTURES.put_new_materials()
   for name,prob in pairs(GLAICE_DOOM1_HELL_NATURALS) do
     GAME.ROOM_THEMES.hell_Outdoors_generic.naturals[name] = prob
   end
-  
+
   for name,prob in pairs(GLAICE_DOOM1_FLESH_NATURALS) do
     GAME.ROOM_THEMES.flesh_Outdoors_generic.naturals[name] = prob
   end
@@ -119,7 +119,7 @@ function GLAICE_DOOM1_EPIC_TEXTURES.put_new_materials()
   for name,prob in pairs(GLAICE_DOOM1_HELL_CEILING_SINKS) do
     GAME.THEMES.hell.ceiling_sinks[name] = prob
   end
-  
+
   for name,prob in pairs(GLAICE_DOOM1_FLESH_CEILING_SINKS) do
     GAME.THEMES.flesh.ceiling_sinks[name] = prob
   end
@@ -135,7 +135,7 @@ function GLAICE_DOOM1_EPIC_TEXTURES.put_new_materials()
   for name,prob in pairs(GLAICE_DOOM1_HELL_FLOOR_SINKS) do
     GAME.THEMES.hell.floor_sinks[name] = prob
   end
-  
+
   for name,prob in pairs(GLAICE_DOOM1_FLESH_FLOOR_SINKS) do
     GAME.THEMES.flesh.floor_sinks[name] = prob
   end
@@ -152,7 +152,7 @@ function GLAICE_DOOM1_EPIC_TEXTURES.put_new_materials()
   for name,prob in pairs(GLAICE_DOOM1_HELL_SCENIC_FENCES) do
     GAME.THEMES.hell.scenic_fence[name] = prob
   end
-  
+
   for name,prob in pairs(GLAICE_DOOM1_FLESH_SCENIC_FENCES) do
     GAME.THEMES.flesh.scenic_fence[name] = prob
   end
@@ -169,7 +169,7 @@ function GLAICE_DOOM1_EPIC_TEXTURES.put_new_materials()
   for name,prob in pairs(GLAICE_DOOM1_HELL_WALL_GROUPS) do
     GAME.THEMES.hell.wall_groups[name] = prob
   end
-  
+
   for name,prob in pairs(GLAICE_DOOM1_FLESH_WALL_GROUPS) do
     GAME.THEMES.flesh.wall_groups[name] = prob
   end
@@ -186,7 +186,7 @@ function GLAICE_DOOM1_EPIC_TEXTURES.put_new_materials()
   for name,prob in pairs(GLAICE_DOOM1_HELL_WINDOW_GROUPS) do
     GAME.THEMES.hell.window_groups[name] = prob
   end
-  
+
   for name,prob in pairs(GLAICE_DOOM1_FLESH_WINDOW_GROUPS) do
     GAME.THEMES.flesh.window_groups[name] = prob
   end

@@ -1890,6 +1890,11 @@ namelib.NAMES =
 
       ["Wading through the %j"] = 5
 
+      -- using the noun generator
+      ["The %p of NOUNGENEXOTIC"] = 25
+      ["Attack on NOUNGENANGLICAN"] = 12
+      ["Assault on NOUNGENANGLICAN"] = 12
+
       -- complete names
       ["%s"] = 100
 
@@ -1935,6 +1940,7 @@ namelib.NAMES =
         House = 5
         Metropolis = 10
         Road = 8
+        Trail = 8
 
         -- huge locations
         Boundary = 10
@@ -2175,6 +2181,7 @@ namelib.NAMES =
         Apocalyptic = 10
         Blasted = 10
         Bleak = 10
+        Broken = 10
         Derelict = 10
         Deserted = 10
         Desolate = 10
@@ -2182,6 +2189,7 @@ namelib.NAMES =
         Forlorn = 10
         Forsaken = 15
         Isolated = 10
+        Shattered = 10
         Solitary = 8
 
         Wanton = 10
@@ -2407,6 +2415,31 @@ namelib.NAMES =
         ["Mortally Challenged"] = 10 -- actually coined by Terry Pratchett
         ["Stormbreak"] = 10
         ["Firewinds"] = 10
+        ["The Kiss of Death"] = 10
+        ["Murder Without Sin"] = 10
+
+        ["A Night Full of Terrors"] = 10
+        ["The Throne of Fire"] = 10
+        ["Fire and Blood"] = 10
+        ["Remembrance"] = 10
+        ["What Is Dead May Never Die"] = 10 -- see, even great authors can do a
+        ["All Men Must Die"] = 10           -- "people die when they are killed"
+        ["The Dance of Demons"] = 10
+        ["The Gift of Death"] = 10
+
+        ["The Lord of Terror"] = 10
+        ["Soulreaver"] = 10
+        ["Trail of Tears"] = 10
+        ["The Curse of Undeath"] = 10
+        ["Hell's Foundry"] = 10
+        ["Angels Fall First"] = 10
+        ["Fresh Meat"] = 10
+        ["Demonic Invasion in Progress"] = 10
+        ["The Hammer Falls"] = 10
+        ["Egress"] = 10
+        ["The Culling"] = 10
+        ["Eye of the Storm"] = 10
+        ["Hallowed Ground"] = 10
 
         -- mythical underworlds (including from D&D)
         ["The Vestibule of Hell"] = 10

@@ -225,6 +225,20 @@ end
 
 
 function Episode_pick_names()
+
+  -- Episode title gen test - DELETEMELATER
+  local i = 1
+  gui.printf("\nEpisode Name Generator Test:\n")
+  while i <= 128 do
+    episode_test_name = Naming_grab_one("EPISODE")
+    gui.printf(episode_test_name .. " | ")
+    if i%4 == 0 then
+      gui.printf("\n")
+    end
+    i = i + 1
+  end
+  gui.printf("\n")
+
   -- game name (for title screen)
   if not GAME.title then
     GAME.title = Naming_grab_one("TITLE")
