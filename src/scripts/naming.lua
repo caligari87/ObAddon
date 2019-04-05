@@ -1905,6 +1905,7 @@ namelib.NAMES =
         Axis = 10
         Area = 10
         Center = 10
+        Circle = 10
         Edge = 10
         Frontier = 10
         Point = 10
@@ -1912,13 +1913,19 @@ namelib.NAMES =
         Sector = 10
         Zone = 10
 
+        -- geopolitical
+        Dominion = 10
+        Kingdom = 7
+        Hegemony = 10
+
         -- medieval
         Citadel = 15
         Fortress = 10
-        Kingdom = 7
         Palace = 7
         Spire = 5
         Towers = 15
+        Well = 8
+        Vaults = 10
 
         -- modern
         Arcology = 5
@@ -1951,6 +1958,7 @@ namelib.NAMES =
         Fields = 10
         Glaciers = 7
         Hills = 10
+        Lake = 7
         Lands = 15
         Mountains = 10
         Mire = 10
@@ -1964,10 +1972,12 @@ namelib.NAMES =
         Shores = 25
         Wasteland = 20
         Valley = 10
+        Veins = 7
 
-        -- dead
+        -- dead/underground
         Burrows = 7
         Catacombs = 7
+        Cavern = 10
         Chasm = 10
         Crypt = 5
         Dungeons = 10
@@ -1984,10 +1994,12 @@ namelib.NAMES =
         Facility = 5
         Installation = 5
         Outpost = 7
+        Redoubt = 7
         Quarters = 5
         Station = 10
 
         Cradle = 10
+        Skies = 10
 
         -- trapped places
         Entanglement = 5
@@ -2018,6 +2030,7 @@ namelib.NAMES =
         Firmament = 10
         Pillar = 10
         Vestibule = 10
+        Walls = 10
       }
 
       q = -- adverbs?
@@ -2042,6 +2055,7 @@ namelib.NAMES =
         Cold = 20
         Frozen = 20
         Fiery = 20
+        Elemental = 20
         Icy = 15
         Molten = 15
 
@@ -2051,6 +2065,7 @@ namelib.NAMES =
         Lightless = 10
         Lucid = 10
         Luminous = 10
+        Radiant = 8
         Shadowed = 15
         Tenebrous = 10
 
@@ -2067,7 +2082,8 @@ namelib.NAMES =
         Copper = 10
         Iron = 10
         Obsidian = 10
-        Stone = 10
+        Rocky = 7
+        Stone = 7
 
         Ebony = 10
         Ivory = 10
@@ -2082,6 +2098,7 @@ namelib.NAMES =
         Soaring = 10
         Towering = 10
         Titanic = 10
+        Infinite = 10
 
         -- bad personal qualities
         Avaricious = 5
@@ -2126,6 +2143,7 @@ namelib.NAMES =
         Macabre = 10
         Monstrous = 10
         Tortured = 10
+        Twisted = 10
         Unclean = 7
         Unholy = 10
         Wretched = 10
@@ -2134,6 +2152,7 @@ namelib.NAMES =
         Profane = 10
 
         -- decay
+        Burned = 8
         Corroded = 10
         Crumbled = 10
         Decayed = 10
@@ -2141,13 +2160,14 @@ namelib.NAMES =
         Fetid = 10
         Foul = 10
         Gloomy = 10
-        Murky = 5
-        Noxious = 5
+        Murky = 8
+        Noxious = 8
         Rancid = 10
         Rotten = 10
         Sordid = 10
         Squalid = 10
         Tainted = 10
+        Tarred = 7
         Torn = 10
         Vile = 10
 
@@ -2166,6 +2186,7 @@ namelib.NAMES =
 
         Wanton = 10
         Godless = 5
+        Nameless = 5
 
         -- finale
         Absolute = 5
@@ -2230,7 +2251,9 @@ namelib.NAMES =
         Adversity = 10
         Calamity = 10
         Cataclysm = 10
-        Trbulation = 10
+        Tremors = 10
+        Tribulation = 10
+        Quake = 7
         Woe = 7
 
         -- pollution
@@ -2377,12 +2400,13 @@ namelib.NAMES =
         ["Consumed by Flames"] = 3
 
         -- MSSP adds some more names
-        ["Abandon All Hope"] = 10
         ["Dead Rising"] = 10
         ["A Minute to Midnight"] = 10
         ["Maelstrom of Chaos"] = 10
         ["Shadows Fall"] = 10
-        ["Mortally Challeneged"] = 10 -- actually coined by Terry Pratchett
+        ["Mortally Challenged"] = 10 -- actually coined by Terry Pratchett
+        ["Stormbreak"] = 10
+        ["Firewinds"] = 10
 
         -- mythical underworlds (including from D&D)
         ["The Vestibule of Hell"] = 10
