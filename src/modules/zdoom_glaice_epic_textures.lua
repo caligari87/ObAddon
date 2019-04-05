@@ -22,9 +22,21 @@ gui.import("zdoom_glaice_themes.lua")
 
 GLAICE_EPIC_TEXTURES = { }
 
+GLAICE_EPIC_TEXTURES.YES_NO =
+{
+  "yes", _("Yes"),
+  "no",  _("No"),
+}
+
 function GLAICE_EPIC_TEXTURES.setup(self)
   GLAICE_EPIC_TEXTURES.put_new_materials()
   PARAM.epic_textures_activated = true
+
+  for name,opt in pairs(self.options) do
+    local value = self.options[name].value
+    PARAM[name] = value
+  end
+
 end
 
 function GLAICE_EPIC_TEXTURES.put_new_materials()
@@ -156,9 +168,11 @@ end
 
 function GLAICE_EPIC_TEXTURES.put_the_texture_wad_in()
   local glaice_tex_wad_file = "games/doom/data/Oblige_Epic_Texture_Set_V620.wad"
-  gui.wad_transfer_lump(glaice_tex_wad_file, "ANIMDEFS", "ANIMDEFS")
-  gui.wad_transfer_lump(glaice_tex_wad_file, "CREDITS", "CREDITS")
-  gui.wad_merge_sections(glaice_tex_wad_file)
+  if PARAM.include_package == "no" then
+    gui.wad_transfer_lump(glaice_tex_wad_file, "ANIMDEFS", "ANIMDEFS")
+    gui.wad_transfer_lump(glaice_tex_wad_file, "CREDITS", "CREDITS")
+    gui.wad_merge_sections(glaice_tex_wad_file)
+  end
 end
 ----------------------------------------------------------------
 
@@ -178,4 +192,19 @@ OB_MODULES["glaice_epic_textures"] =
   }
 
   tooltip = "If enabled, adds textures from Glaice's Epic Textures collection, which also includes a few new Epic-texture exclusive prefabs."
+
+  options =
+  {
+    include_package =
+    {
+      name = "include_package"
+      label = _("Texture WAD Merge")
+      choices = GLAICE_EPIC_TEXTURES.YES_NO
+      default = "yes"
+      tooltip =
+        "Allows the trimming down of resulting WAD by not merging the Epic texture WAD.\n\n" ..
+        "This will require you to extract and load up the WAD manually in your prefered sourceport installation.\n\n" ..
+        "This is the preferrable option for multiplayer situations and server owners and have each client obtain a copy of the texture pack instead.\n"
+    }
+  }
 }
