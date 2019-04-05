@@ -396,11 +396,11 @@ function ZDOOM_SPECIALS.do_special_stuff()
           cluster_line = "  Cluster = 5\n"
         elseif map_num > 5 and map_num <= 11 then
           cluster_line = "  Cluster = 6\n"
-        elseif map_num > 12 and map_num <= 15 then
+        elseif map_num > 11 and map_num <= 14 then
           cluster_line = "  Cluster = 7\n"
-        elseif map_num > 16 and map_num <= 20 then
+        elseif map_num > 14 and map_num <= 20 then
           cluster_line = "  Cluster = 8\n"
-        elseif map_num > 21 and map_num <= 30 then
+        elseif map_num > 20 and map_num <= 30 then
           cluster_line = "  Cluster = 9\n"
         elseif map_num == 31 then
           cluster_line = "  Cluster = 10\n"
