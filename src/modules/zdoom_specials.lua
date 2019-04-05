@@ -123,6 +123,46 @@ ZDOOM_SPECIALS.MUSIC_DOOM2 =
   [32] = "$MUSIC_ULTIMA"
 }
 
+ZDOOM_SPECIALS.DOOM1_MAP_NOMENCLATURE =
+{
+  [1] = "E1M1"
+  [2] = "E1M2"
+  [3] = "E1M3"
+  [4] = "E1M4"
+  [5] = "E1M5"
+  [6] = "E1M6"
+  [7] = "E1M7"
+  [8] = "E1M8"
+  [9] = "E1M9"
+  [10] = "E2M1"
+  [11] = "E2M2"
+  [12] = "E2M3"
+  [13] = "E2M4"
+  [14] = "E2M5"
+  [15] = "E2M6"
+  [16] = "E2M7"
+  [17] = "E2M8"
+  [18] = "E2M9"
+  [19] = "E3M1"
+  [20] = "E3M2"
+  [21] = "E3M3"
+  [22] = "E3M4"
+  [23] = "E3M5"
+  [24] = "E3M6"
+  [25] = "E3M7"
+  [26] = "E3M8"
+  [27] = "E3M9"
+  [28] = "E4M1"
+  [29] = "E4M2"
+  [30] = "E4M3"
+  [31] = "E4M4"
+  [32] = "E4M5"
+  [33] = "E4M6"
+  [34] = "E4M7"
+  [35] = "E4M8"
+  [36] = "E4M9"
+}
+
 ZDOOM_SPECIALS.INTERPICS =
 {
   OBDNLOAD = 50
@@ -261,16 +301,21 @@ function ZDOOM_SPECIALS.do_special_stuff()
     end
 
     -- resolve map MAPINFO linkages
-    if map_num < 10 then
-      map_id = "MAP0" .. map_num
-      if map_num < 9 then
-        map_id_next = "MAP0" .. map_num + 1
+    if OB_CONFIG.game == "doom2" then
+      if map_num < 10 then
+        map_id = "MAP0" .. map_num
+        if map_num < 9 then
+          map_id_next = "MAP0" .. map_num + 1
+        else
+          map_id_next = "MAP10"
+        end
       else
-        map_id_next = "MAP10"
+        map_id = "MAP" .. map_num
+        map_id_next = "MAP" .. map_num + 1
       end
-    else
-      map_id = "MAP" .. map_num
-      map_id_next = "MAP" .. map_num + 1
+    elseif OB_CONFIG.game == "doom1" or OB_CONFIG.game == "ultdoom" then
+      map_id = ZDOOM_SPECIALS.DOOM1_MAP_NOMENCLATURE[map_num]
+      map_id_next = ZDOOM_SPECIALS.DOOM1_MAP_NOMENCLATURE[map_num + 1]
     end
 
     -- resolve proper episodic sky texture assignments
@@ -430,13 +475,13 @@ function ZDOOM_SPECIALS.do_special_stuff()
     return mapinfo
   end
 
-  local function add_clusterinfo(interpic)
-    local clusterinfo = {''}
+  local function add_clusterdef(interpic)
+    local clusterdef = {''}
     if OB_CONFIG.game == "doom2" then
 
       local cluster_music_line = '  music = "' .. PARAM.generic_intermusic .. '"\n'
 
-      clusterinfo =
+      clusterdef =
       {
         'cluster 5\n' -- MAP01-05
         '{\n'
@@ -547,7 +592,27 @@ function ZDOOM_SPECIALS.do_special_stuff()
         '}\n'
       }
     end
-    return clusterinfo
+    return clusterdef
+  end
+
+  local function add_episodedef(map_num)
+    local episodedef = {''}
+
+    if OB_CONFIG.game == "doom2" then
+      local map_string = map_num
+      if map_num < 10 then
+        map_string = "0" .. map_num
+      end
+
+      episodedef =
+      {
+        'episode MAP' .. map_string .. '\n'
+        '{\n'
+        '  name = "' .. GAME.levels[map_num].episode.description .. '"\n'
+        '}\n'
+      }
+    end
+    return episodedef
   end
 
   local info = {}
@@ -581,10 +646,37 @@ function ZDOOM_SPECIALS.do_special_stuff()
     each line in mapinfo_lines do
       table.insert(mapinfolump,line)
     end
+
   end
 
+  -- lines for episode definition
+  if PARAM.episode_selection == "yes" then
+
+    -- for Doom2 (yes, there's no Doom2 episode splitting)
+    -- but there is from now on
+    local episode_1_info = add_episodedef(1)
+    each line in episode_1_info do
+      table.insert(mapinfolump,line)
+    end
+
+    if #GAME.levels > 11 then
+      local episode_2_info = add_episodedef(12)
+      local episode_3_info = add_episodedef(21)
+      each line in episode_2_info do
+        table.insert(mapinfolump,line)
+      end
+      each line in episode_3_info do
+        table.insert(mapinfolump,line)
+      end
+    end
+
+    -- for Doom1/UltDoom
+    -- TODO
+  end
+
+  -- collect lines for the cluster information in MAPINFO
   if PARAM.generic_clusterinfo == "yes" then
-    local clusterinfo_lines = add_clusterinfo(ipic)
+    local clusterinfo_lines = add_clusterdef(ipic)
     each line in clusterinfo_lines do
       table.insert(mapinfolump,line)
     end
@@ -675,6 +767,14 @@ OB_MODULES["zdoom_specials"] =
       choices = ZDOOM_SPECIALS.INTERPIC_MUSIC
       default = "$MUSIC_READ_M"
       tooltip = "Changes the music playing during intermission screens."
+    }
+
+    episode_selection = {
+      label = _("Episode Selection"),
+      priority = 3
+      choices = ZDOOM_SPECIALS.YES_NO
+      default = "no"
+      tooltip = "Creates a classic Doom/Ultimate Doom style episode selection."
     }
   }
 }
