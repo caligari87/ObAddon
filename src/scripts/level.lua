@@ -2266,11 +2266,16 @@ function Level_choose_darkness()
 
   -- How to get these to be chosen at random? -Glaice, Apr 4th, 2019
   -- Commented out extra lines until then.
+  local darkness_messages =
+  {
+    "Darkness falls across the land...\n\n",
+    "This land becomes shrouded in darkness...\n\n",
+    "The world has become dark...\n\n",
+    "The Sun has been blotted out...\n\n"
+  }
+
   if rand.odds(prob) then
-    gui.printf("Darkness falls across the land...\n\n")
-  --gui.printf("This land becomes shrouded in darkness...\n\n")
-  --gui.printf("The world has become dark...\n\n")
-  --gui.printf("The Sun has been blotted out...\n\n")
+    gui.printf(rand.pick(darkness_messages))
 
     LEVEL.is_dark = true
     LEVEL.sky_light  = 144

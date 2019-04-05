@@ -2509,31 +2509,31 @@ namelib.NAMES =
         Millenium = 10
         Century = 10
         Decade = 10
-	Eon = 10  -- 100k x 365d. 365k yr
-	Aeon = 10 -- 1m x 365d. 3.65m yr / 1B yrs / Could also represent an indefinite amount of time too
-	Indiction = 7 -- 15 year cycle
-	Epoch = 7 -- 7.3m yrs
-	Megannum = 7 -- 1m years
-	
+        Eon = 10  -- 100k x 365d. 365k yr
+        Aeon = 10 -- 1m x 365d. 3.65m yr / 1B yrs / Could also represent an indefinite amount of time too
+        Indiction = 7 -- 15 year cycle
+        Epoch = 7 -- 7.3m yrs
+        Megannum = 7 -- 1m years
+
 
         -- seasons/weather
         Rain = 15
         Winter = 15
         Storms = 15
-	Blizzard = 15
-	Snow     = 10
-	Drought  = 10
-	Wildfire = 10
-	Sandstorm = 10
-	Tornados = 10
-	Wind   = 10
-	Avalanche = 8
-	Mist   = 8
-	Fog    = 8
-	Autumn = 8
-	Fall   = 8
+        Blizzard = 15
+        Snow     = 10
+        Drought  = 10
+        Wildfire = 10
+        Sandstorm = 10
+        Tornados = 10
+        Wind   = 10
+        Avalanche = 8
+        Mist   = 8
+        Fog    = 8
+        Autumn = 8
+        Fall   = 8
         Summer = 8
-	Thundersnow = 8
+        Thundersnow = 8
       }
 
       -- these are quite abstract
@@ -2541,9 +2541,9 @@ namelib.NAMES =
       {
         -- gibs
         Blood = 20
-	Viscera = 10
+        Viscera = 10
         Slime = 5
-	Sludge = 5
+        Sludge = 5
 
         -- words transfered from places
         -- because these aren't places at all
@@ -2567,46 +2567,46 @@ namelib.NAMES =
         Watch = 10
 
         -- emotions/feels
-	Abused = 10
-	Adrift = 5
+        Abused = 10
+        Adrift = 5
         Apathy = 5
         Anguish = 10
         Agony = 20
-	Bereft = 10
-	Bleak = 5
-	Chaos = 10
+        Bereft = 10
+        Bleak = 5
+        Chaos = 10
         Contempt = 5
         Cruelty = 10
-	Cursed = 10
+        Cursed = 10
         Doom = 10
-	Defilement = 15
+        Defilement = 15
         Despair = 10
         Dismay = 10
         Dread = 15
-	Dreary = 20
+        Dreary = 20
         Fear = 20
         Fury = 10
         Grief = 5
         Hate = 10
-	Incompetent = 15
-	Inept = 10
-	Livid = 10
+        Incompetent = 15
+        Inept = 10
+        Livid = 10
         Madness = 10
         Misery = 10
-	Obstinate = 10
+        Obstinate = 10
         Pain = 10
         Rage = 10
         Revulsion = 5
         Scorn = 10
-	Spiteful = 15
+        Spiteful = 15
         Silence = 20
-	Tactless = 5
+        Tactless = 5
         Terror = 20
         Torment = 15
         Wrath = 10
         Vengeance = 20
-	Violent = 15
-	Withdrawn = 10
+        Violent = 15
+        Withdrawn = 10
 
         -- occult
         Hell = 10
@@ -2729,9 +2729,9 @@ namelib.NAMES =
         Cyberdemon = 15
         Marine = 15
         Mastermind = 15
-	["Hell Noble"] = 7 -- Also known as a Baron, I guess
-	["Arch-Vile"] = 7
-	["Lost Souls"] = 7
+        ["Hell Noble"] = 7 -- Also known as a Baron, I guess
+        ["Arch-Vile"] = 7
+        ["Lost Souls"] = 7
 
         -- religion
         Antichrist = 10
@@ -2756,22 +2756,22 @@ namelib.NAMES =
         -- fantasy/magical
         Aliens = 10
         Ancients = 15
-	Anima = 7
+        Anima = 7
         Bastards = 15
-	Banshee = 7
+        Banshee = 7
         Cerberus = 10
-	Chimera = 10
+        Chimera = 10
         Cyclops = 5
         Damned = 15
         Dragon = 10
         Drowned = 10
         Exile = 10
         Giants = 10
-	Ghouls = 7
+        Ghouls = 7
         Hexers = 10
         Keepers = 15
-	Lich = 10
-	Manticore = 10
+        Lich = 10
+        Manticore = 10
         Minotaurs = 15
         Necromancer = 20
         Oracle = 15
@@ -2782,9 +2782,9 @@ namelib.NAMES =
         Undead = 20
         Vampire = 7
         Wight = 7
-	Wraith = 10
-	Wyrm  = 7
-	Wyvern = 7
+        Wraith = 10
+        Wyrm  = 7
+        Wyvern = 7
         Zombies = 10
 
         -- Lovecraft
@@ -2852,13 +2852,13 @@ namelib.NAMES =
         Hunter = 10
         Soldiers = 10
         Slayer = 10
-	
-	 -- Glaice adds things here
-	["Sin Bringer"] = 10
-	["The Icon"] = 10
-	Hellbringers = 15
-	Deathbringers = 10
-	
+
+        -- Glaice adds things here
+        ["Sin Bringer"] = 10
+        ["The Icon"] = 10
+        Hellbringers = 15
+        Deathbringers = 10
+
       }
 
       c = -- contributor names
@@ -2994,41 +2994,41 @@ namelib.NAMES =
          -- MSSP adds names
         ["People Die When They Are Killed"] = 10
         ["So Sad Alexa Play D RUNNIN"] = 10
-		
-	-- Glaice adds names
-	["A Masterpiece in Progress"] = 40
-	["A Bloody Good Time"] = 30
-	["A Withered World"] = 25
-	["Always Being Improved"] = 40
-	["An OnAddon Production"] = 40
-	["Are You Man Enough?"] = 20
-	["As Above, So Below"] = 30
-	["Bugs Do Exist, Plz Report!"] = 20
-	["Burn It All Down"] = 30
-	["Crimes Against Humanity"] = 25
-	["Descent Into Madness"] = 30
-	["Doomguy's Vacation"] = 25
-	["Enter Combat"] = 25
-	["High Impact Abuse"] = 35
-	["It's Raw!"] = 30
-	["Not A Walk in the Park!"] = 30
-	["Not Safe For Game Journalists"] = 35
-	["Not Your Typical Doomworld WAD"] = 30
-	["Now with more Impse"] = 30
-	["Oblige is Love, Oblige is Life"] = 40
-	["Perfect on Ultra-Violence"] = 30
-	["Ramp it to the MAX!"] = 25
-	["Skilled Players Sign Here"] = 25
-	["The Deadzone"] = 20
-	["The Principles of Doom"] = 30
-	["The World Beyond"] = 25
-	["This WAD Shouldn't Suck"] = 25
-	["Time to Man Up"] = 30
-	["Total Blackout"] = 20
-	["Under Construction"] = 25
-	["We Have to Start Somewhere"] = 20
-	["What Would Jesus Play?"] = 20
-	["You Guys Have Mods, Right?"] = 30
+
+        -- Glaice adds names
+        ["A Masterpiece in Progress"] = 40
+        ["A Bloody Good Time"] = 30
+        ["A Withered World"] = 25
+        ["Always Being Improved"] = 40
+        ["An OnAddon Production"] = 40
+        ["Are You Man Enough?"] = 20
+        ["As Above, So Below"] = 30
+        ["Bugs Do Exist, Plz Report!"] = 20
+        ["Burn It All Down"] = 30
+        ["Crimes Against Humanity"] = 25
+        ["Descent Into Madness"] = 30
+        ["Doomguy's Vacation"] = 25
+        ["Enter Combat"] = 25
+        ["High Impact Abuse"] = 35
+        ["It's Raw!"] = 30
+        ["Not A Walk in the Park!"] = 30
+        ["Not Safe For Game Journalists"] = 35
+        ["Not Your Typical Doomworld WAD"] = 30
+        ["Now with more Impse"] = 30
+        ["Oblige is Love, Oblige is Life"] = 40
+        ["Perfect on Ultra-Violence"] = 30
+        ["Ramp it to the MAX!"] = 25
+        ["Skilled Players Sign Here"] = 25
+        ["The Deadzone"] = 20
+        ["The Principles of Doom"] = 30
+        ["The World Beyond"] = 25
+        ["This WAD Shouldn't Suck"] = 25
+        ["Time to Man Up"] = 30
+        ["Total Blackout"] = 20
+        ["Under Construction"] = 25
+        ["We Have to Start Somewhere"] = 20
+        ["What Would Jesus Play?"] = 20
+        ["You Guys Have Mods, Right?"] = 30
 
         -- based on popular movie/TV slogans
         ["A Minute in Hell"] = 20
