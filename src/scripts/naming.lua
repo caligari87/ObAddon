@@ -1892,38 +1892,52 @@ namelib.NAMES =
 
       -- complete names
       ["%s"] = 100
+
+      -- contributors and their shenanigans
+      ["The %a %p of %c"] = 30
     }
 
     lexicon =
     {
-      p =
+      p = -- places
       {
+        -- medieval
         Citadel = 15
+        Fortress = 10
+        Kingdom = 7
+        Spire = 5
+        Towers = 15
+
+        -- modern
         City = 15
         Ghetto = 5
-        Towers = 15
-        Kingdom = 7
+        House = 5
 
-        World = 10
+        -- huge locations
+        Dimension = 20
+        Domain = 10
+        Plane = 10
         Planet = 5
         Realm = 10
-        Shores = 30
-        Land = 10
-        Fields = 15
+        World = 10
 
+        -- terrain
+        Crater = 5
+        Fields = 15
+        Land = 10
+        Shores = 30
+
+        -- dead
+        Catacombs = 7
         Crypt = 5
-        Spire = 5
         Dungeons = 10
         Underworld = 10
-        Dimension = 20
 
-        Facility = 5
+        -- tech
         Base = 10
         Complex = 10
+        Facility = 5
         Quarters = 5
-        Domain = 10
-        Crater = 5
-        House = 5
       }
 
       q =
@@ -1938,49 +1952,60 @@ namelib.NAMES =
         ["Galore"] = 10
       }
 
-      a =
+      a = -- adjectives
       {
-        Creepy = 10
-        Lonely = 20
-        Dark = 20
-        Menacing = 20
+        -- elements
         Cold = 20
-        Savage = 20
-        Deathly = 20
-        Corrupted = 10
-        Apocalyptic = 10
-        Unholy = 10
-        Strange = 10
+        Dark = 20
+        Frozen = 20
+        Fiery = 20
 
-        Monstrous = 10
-        Demonic = 10
-        Infested = 10
-        Haunted = 5
-        Doomed = 5
-        Hateful = 5
-        Forsaken = 15
-        Evil = 10
-
-        Sinister = 10
-        Tainted = 10
-        Rotten = 10
+        -- bad personal qualities
+        Creepy = 10
+        Depraved = 5
+        Lonely = 20
+        Malignant = 10
+        Menacing = 20
         Nefarious = 5
-        Foul = 10
+        Hateful = 5
+        Savage = 20
+        Strange = 10
+        Sinister = 10
+        Sinful = 5
+        Wicked = 15
+
+        -- hellspawn qualities
+        Accursed = 10
+        Corrupted = 10
+        Deathly = 20
+        Demonic = 10
+        Doomed = 5
         Eldritch = 5
+        Evil = 10
+        Haunted = 5
+        Infested = 10
+        Monstrous = 10
+        Unholy = 10
+
+        -- decay
+        Foul = 10
+        Decayed = 10
         Murky = 5
         Gloomy = 10
-        Wicked = 15
-        Malignant = 10
-        Depraved = 5
-        Sinful = 5
-        Wanton = 10
+        Rotten = 10
+        Tainted = 10
+
+        -- abandonment
+        Apocalyptic = 10
         Deserted = 10
-        Godless = 5
-        Accursed = 10
+        Forsaken = 15
         Isolated = 10
+
+        Wanton = 10
+        Godless = 5
       }
 
-      k =
+      k = -- body parts (because Doom 1 Episode 1)
       {
         Knee = 30
         Neck = 20
@@ -1989,43 +2014,51 @@ namelib.NAMES =
         Thigh = 3
       }
 
-      j =
+      j = -- objects
       {
-        Gore = 30
-        Dead = 5
+        -- blood and guts
         Corpses = 20
         Bodies = 20
         Bones = 10
-        Death = 15
-        Carnage = 20
-        Slaughter = 10
-
         Blood = 20
-        Slime = 10
-        Nukage = 10
-        Mush = 5
-        Ash = 5
-        Filth = 10
+        Dead = 5
+        Gore = 30
         Viscera = 10
 
+        -- destructive acts
+        Carnage = 20
+        Death = 15
         Destruction = 10
-        Horror = 20
+        Slaughter = 10
+
+        -- pollution
+        Ash = 5
+        Filth = 10
+        Mush = 5
+        Nukage = 10
+        Slime = 10
+
+        -- creatures
+        Demons = 10
         Monsters = 10
         Zombies = 10
-        Demons = 10
 
-        Pain = 10
+        -- feels
         Agony = 10
-        Terror = 10
-        Fear = 10
-        Flames = 10
         Despair = 10
         Doom = 5
+        Fear = 10
+        Horror = 20
+        Madness = 10
+        Pain = 10
+        Terror = 10
 
+        -- elements
+        Flames = 10
         Darkness = 10
       }
 
-      s =
+      s = -- single whole names
       {
         ["A Price To Pay"] = 10
         ["Aftershock"] = 10
@@ -2126,6 +2159,17 @@ namelib.NAMES =
         ["Thy Shrivelled Mind"] = 5
         ["Thou Shalt Die"] = 5
         ["Consumed by Flames"] = 3
+      }
+
+      c = -- oh boy, here we go again...
+      {
+        MsrSgtShooterPerson = 5
+        Glaice = 5
+        Garrett = 5
+        Caligari87 = 5
+        Frozsoul = 5
+        SimonV = 5
+        Beed28 = 5
       }
     }
   }
