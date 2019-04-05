@@ -381,12 +381,36 @@ function ZDOOM_SPECIALS.do_special_stuff()
       fog_intensity_line = ""
     end
 
+    -- add cluster linking for DOOM2
+    local cluster_line = ''
+
+    if PARAM.generic_clusterinfo == "yes" then
+      if OB_CONFIG.game == "doom2" then
+        if map_num >= 1 and map_num <= 5 then
+          cluster_line = "  Cluster = 5\n"
+        elseif map_num > 5 and map_num <= 11 then
+          cluster_line = "  Cluster = 6\n"
+        elseif map_num > 12 and map_num <= 15 then
+          cluster_line = "  Cluster = 7\n"
+        elseif map_num > 16 and map_num <= 20 then
+          cluster_line = "  Cluster = 8\n"
+        elseif map_num > 21 and map_num <= 30 then
+          cluster_line = "  Cluster = 9\n"
+        elseif map_num == 31 then
+          cluster_line = "  Cluster = 10\n"
+        elseif map_num == 32 then
+          cluster_line = "  Cluster = 11\n"
+        end
+      end
+    end
+
     local mapinfo =
     {
       'map ' .. map_id .. ' lookup HUSTR_'.. map_num ..'\n'
       '{\n'
       --'  cluster = 1\n'
       '  sky1 = "' .. sky_tex .. '"\n'
+      '' .. cluster_line .. ''
       '' .. fog_color_line .. ''
       '' .. fog_intensity_line .. ''
       '' .. next_level_line .. ''
@@ -395,25 +419,102 @@ function ZDOOM_SPECIALS.do_special_stuff()
       '  EnterPic = "' .. interpic .. '"\n'
       '  ExitPic = "' .. interpic .. '"\n'
       '}\n'
-      --[['cluster 1\n'
-      '{\n'
-      '  entertext =\n'
-      '  "If you are reading this,",\n'
-      '  "it\'s because you turned on",\n'
-      '  "ZDoom Specials Addon even if",\n'
-      '  "it says it does nothing."\n'
-      '  exittext =\n'
-      '  "If you are reading this,",\n'
-      '  "it\'s because you turned on",\n'
-      '  "ZDoom Specials Addon even if",\n'
-      '  "it says it does nothing."\n'
-      '}\n'
-      'GameInfo {\n'
-      '  AddEventHandlers = "ObligeEvents"\n'
-      '}\n']]
     }
 
     return mapinfo
+  end
+
+  local function add_clusterinfo(interpic)
+    local clusterinfo = {''}
+    if OB_CONFIG.game == "doom2" then
+      clusterinfo =
+      {
+        'cluster 5\n' -- MAP01-05
+        '{\n'
+        '  music = "$MUSIC_READ_M"\n'
+        '  pic = "' .. interpic .. '"\n'
+        '  exittext =\n'
+        '    "Hell has taken a strong hold upon these lands!",\n'
+        '    "Ahead, their forces gather in strength.",\n'
+        '    "It is time to stride forward and beat them back!"\n'
+        '}\n'
+        'cluster 6\n' -- MAP06-MAP11
+        '{\n'
+        '  music = "$MUSIC_READ_M"\n'
+        '  pic = "' .. interpic .. '"\n'
+        '  exittext =\n'
+        '    "A lieutenant of hell falls",\n'
+        '    "but otherworldly shrieks echo further still.",\n'
+        '    " ",\n'
+        '    "You pick up your armaments and point forward",\n'
+        '    "laying siege to the darkness.",\n'
+        '    "The battle rages on!"\n'
+        '}\n'
+        'cluster 7\n' -- MAP12-14
+        '{\n'
+        '  music = "$MUSIC_READ_M"\n'
+        '  pic = "' .. interpic .. '"\n'
+        '  exittext =\n'
+        '    "You tirelessly battle against waves upon",\n'
+        '    "waves of seemingly infinite hellspawn.",\n'
+        '    " ",\n'
+        '    "Your tracker informs you a secret point of interest",\n'
+        '    "may exist nearby..."\n'
+        '}\n'
+        'cluster 8\n' -- MAP15-20
+        '{\n'
+        '  music = "$MUSIC_READ_M"\n'
+        '  pic = "' .. interpic .. '"\n'
+        '  exittext =\n'
+        '    "Hell\'s forces attempt to push back",\n'
+        '    "but your relentless assault on their",\n'
+        '    "breaches keeps them at bay!",\n'
+        '    " ",\n'
+        '    "More of their overlords have fallen",\n'
+        '    "and the opportunity for their defeat",\n'
+        '    "draws ever closer..."\n'
+        '}\n'
+        'cluster 9\n' -- MAP21-30
+        '{\n'
+        '  music = "$MUSIC_READ_M"\n'
+        '  pic = "' .. interpic .. '"\n'
+        '  exittext =\n'
+        '    "Mission Accomplished!",\n'
+        '    " ",\n'
+        '    "You have loosened hell\'s grip upon",\n'
+        '    "this place! Demonic entities flee in terror",\n'
+        '    "from your display of indomitable strength.",\n'
+        '    " ",\n'
+        '    "You realize, however, while hell lies defeated today,",\n'
+        '    "hell has not yet been destroyed.",\n'
+        '    "Rest for now, but remember:",\n'
+        '    "Hell is already preparing for another challenge."\n'
+        '}\n'
+        'cluster 10\n' -- MAP31
+        '{\n'
+        '  music = "$MUSIC_READ_M"\n'
+        '  pic = "' .. interpic .. '"\n'
+        '  entertext =\n'
+        '    "You have found a secret zone!",\n'
+        '    "It seems the hellspawn have barricaded",\n'
+        '    "themselves within its confines with the",\n'
+        '    "expectation of safety.",\n'
+        '    " ",\n'
+        '    "You are about to prove them otherwise."\n'
+        '}\n'
+        'cluster 11\n' -- MAP32
+        '{\n'
+        '  music = "$MUSIC_READ_M"\n'
+        '  pic = "' .. interpic .. '"\n'
+        '  entertext =\n'
+        '    "It seems this secret trail goes further",\n'
+        '    "than expected. It is time to finish this",\n'
+        '    "side venture once and for all and eradicate",\n'
+        '    "this hidden pocket of hellish infestation."\n'
+        '}\n'
+      }
+    end
+    return clusterinfo
   end
 
   local info = {}
@@ -445,6 +546,13 @@ function ZDOOM_SPECIALS.do_special_stuff()
 
     local mapinfo_lines = add_mapinfo(info)
     each line in mapinfo_lines do
+      table.insert(mapinfolump,line)
+    end
+  end
+
+  if PARAM.generic_clusterinfo == "yes" then
+    local clusterinfo_lines = add_clusterinfo(ipic)
+    each line in clusterinfo_lines do
       table.insert(mapinfolump,line)
     end
   end
@@ -515,6 +623,14 @@ OB_MODULES["zdoom_specials"] =
       choices = ZDOOM_SPECIALS.YES_NO
       default = "no"
       tooltip = "Shuffles music in the MAPINFO lump. Oblige's vanilla music shuffler uses a BEX lump and is therefore ignored when the ZDoom Addons module is active."
+    }
+
+    generic_clusterinfo = {
+      label = _("Generic Cluster Info"),
+      priority = 5
+      choices = ZDOOM_SPECIALS.YES_NO
+      default = "yes"
+      tooltip = "Adds cluster information with some generic story text into the MAPINFO structure."
     }
   }
 }
