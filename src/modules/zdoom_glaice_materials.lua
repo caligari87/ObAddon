@@ -551,6 +551,7 @@ GLAICE_MATERIALS = {
   UACCRT2 = { t="UACCRT2", f="FLAT23" }
 
   -- Skin and Hell
+  BODIES1 = { t="BODIES1", f="BODIESFL" } -- Copy of AASHITTY
   BODIESB = { t="BODIESB", f="BODIESFL" } --Dark red AASHITTY/SP_FACE2
   BODIESC = { t="BODIESC", f="BODIESF2" } --Dark brown AASHITTY/SP_FACE2
   BONES1 = { t="BONES1", f="FLAT5_6" } -- Brown bones
