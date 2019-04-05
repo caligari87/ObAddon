@@ -1894,115 +1894,284 @@ namelib.NAMES =
       ["%s"] = 100
 
       -- contributors and their shenanigans
-      ["The %a %p of %c"] = 30
+      -- ["The %a %p of %c"] = 30 -- TOO LONG
     }
 
     lexicon =
     {
       p = -- places
       {
+        -- arbitrary locations
+        Axis = 10
+        Area = 10
+        Center = 10
+        Edge = 10
+        Frontier = 10
+        Point = 10
+        Region = 10
+        Sector = 10
+        Zone = 10
+
         -- medieval
         Citadel = 15
         Fortress = 10
         Kingdom = 7
+        Palace = 7
         Spire = 5
         Towers = 15
 
         -- modern
+        Arcology = 5
         City = 15
+        District = 10
         Ghetto = 5
         House = 5
+        Metropolis = 10
+        Road = 8
 
         -- huge locations
+        Boundary = 10
         Dimension = 20
         Domain = 10
         Plane = 10
         Planet = 5
         Realm = 10
         World = 10
+        Territory = 5
 
         -- terrain
-        Crater = 5
-        Fields = 15
-        Land = 10
-        Shores = 30
+        Badlands = 10
+        Barrens = 10
+        Cliffs = 10
+        Crater = 10
+        Crags = 10
+        Desert = 10
+        Fens = 7
+        Forest = 7
+        Fields = 10
+        Glaciers = 7
+        Hills = 10
+        Lands = 15
+        Mountains = 10
+        Mire = 10
+        Moors = 10
+        Ocean = 7
+        Promontory = 8
+        Rift = 15
+        Ridge = 10
+        River = 10
+        Sea = 7
+        Shores = 25
+        Wasteland = 20
+        Valley = 10
 
         -- dead
+        Burrows = 7
         Catacombs = 7
+        Chasm = 10
         Crypt = 5
         Dungeons = 10
+        Hollow = 10
+        Maze = 10
+        Labyrinth = 7
+        Pits = 10
+        Warrens = 10
         Underworld = 10
 
         -- tech
         Base = 10
         Complex = 10
         Facility = 5
+        Installation = 5
+        Outpost = 7
         Quarters = 5
+        Station = 10
+
+        Cradle = 10
+
+        -- trapped places
+        Entanglement = 5
+        Maze = 10
+        Labyrinth = 10
+        Quagmire = 7
+        Snare = 7
+        Trap = 8
+        Web = 7
+
+        -- time
+        Dawn = 7
+        Dusk = 10
+        Midnight = 10
+        Night = 10
+
+        -- religious
+        Abyss = 10
+        Basilica = 10
+        Cathedral = 10
+        Limbo = 10
+        Inferno = 10
+        Purgatory = 10
+
+        -- architectural spots
+        Aisles = 10
+        Edifice = 10
+        Firmament = 10
+        Pillar = 10
+        Vestibule = 10
       }
 
-      q =
+      q = -- adverbs?
       {
-        Town = 20
         City = 5
+        Town = 20
         Zone = 20
         Central = 20
 
         ["All Around"] = 10
         ["Awaits Thee"] = 5
         ["Galore"] = 10
+
+        -- stuff MSSP adds
+        ["Eternal"] = 10
+        ["Raining Down"] = 5
       }
 
       a = -- adjectives
       {
         -- elements
         Cold = 20
-        Dark = 20
         Frozen = 20
         Fiery = 20
+        Icy = 15
+        Molten = 15
+
+        -- lighting
+        Dark = 20
+        Lambent = 15
+        Lightless = 10
+        Lucid = 10
+        Luminous = 10
+        Shadowed = 15
+        Tenebrous = 10
+
+        -- color
+        Black = 10
+        Red = 10
+        Gray = 10
+        White = 10
+        ["Fire-blue"] = 10 -- of course
+
+        -- material
+        Adamantine = 10
+        Crystal = 7
+        Copper = 10
+        Iron = 10
+        Obsidian = 10
+        Stone = 10
+
+        Ebony = 10
+        Ivory = 10
+
+        -- huge scales and measures
+        Abyssal = 10
+        Ancient = 10
+        Bottomless = 10
+        Colossal = 10
+        Eternal = 10
+        Gargantuan = 10
+        Soaring = 10
+        Towering = 10
+        Titanic = 10
 
         -- bad personal qualities
+        Avaricious = 5
         Creepy = 10
+        Cruel = 10
         Depraved = 5
+        Despicable = 10
         Lonely = 20
         Malignant = 10
+        Merciless = 10
         Menacing = 20
+        Morose = 10
+        Mortal = 10 -- lol
         Nefarious = 5
         Hateful = 5
         Savage = 20
+        Somber = 10
         Strange = 10
         Sinister = 10
         Sinful = 5
         Wicked = 15
+        Venal = 5
+        Vicious = 10
 
         -- hellspawn qualities
+        Aberrant = 10
         Accursed = 10
+        Contaminated = 10
         Corrupted = 10
         Deathly = 20
         Demonic = 10
-        Doomed = 5
+        Dreadful = 10
+        Doomed = 8
         Eldritch = 5
         Evil = 10
+        Grotesque = 10
         Haunted = 5
+        Hideous = 10
+        Immortal = 10
+        Impure = 10
         Infested = 10
+        Macabre = 10
         Monstrous = 10
+        Tortured = 10
+        Unclean = 7
         Unholy = 10
+        Wretched = 10
+
+        Forbidden = 10
+        Profane = 10
 
         -- decay
-        Foul = 10
+        Corroded = 10
+        Crumbled = 10
         Decayed = 10
-        Murky = 5
+        Feculent = 10
+        Fetid = 10
+        Foul = 10
         Gloomy = 10
+        Murky = 5
+        Noxious = 5
+        Rancid = 10
         Rotten = 10
+        Sordid = 10
+        Squalid = 10
         Tainted = 10
+        Torn = 10
+        Vile = 10
 
-        -- abandonment
+        -- abandonment/wrecked
         Apocalyptic = 10
+        Blasted = 10
+        Bleak = 10
+        Derelict = 10
         Deserted = 10
+        Desolate = 10
+        Faded = 5
+        Forlorn = 10
         Forsaken = 15
         Isolated = 10
+        Solitary = 8
 
         Wanton = 10
         Godless = 5
+
+        -- finale
+        Absolute = 5
+        Final = 10
+        Terminal = 5
+        Ultimate = 10
       }
 
       k = -- body parts (because Doom 1 Episode 1)
@@ -2016,31 +2185,70 @@ namelib.NAMES =
 
       j = -- objects
       {
+        -- battle
+        Battle = 10
+        War = 10
+
         -- blood and guts
         Corpses = 20
         Bodies = 20
         Bones = 10
         Blood = 20
-        Dead = 5
-        Gore = 30
+        Dead = 7
+        Demise = 5
+        Entrails = 7
+        Ichor = 8
+        Gore = 20
+        Gibs = 10
         Viscera = 10
 
         -- destructive acts
+        Annihilation = 10
+        Betrayal = 5
         Carnage = 20
+        Collusion = 10
+        Chaos = 15
         Death = 15
+        Deceit = 10
+        Deception = 10
         Destruction = 10
+        Devastation = 10
+        Extermination = 10
+        Extinction = 10
+        Ruin = 10
         Slaughter = 10
+        Treachery = 7
+        Trickery = 7
+
+        -- disease
+        Affliction = 7
+        Atrophy = 7
+        Pestilence = 10
+        Scourge = 10
+
+        -- disaster
+        Adversity = 10
+        Calamity = 10
+        Cataclysm = 10
+        Trbulation = 10
+        Woe = 7
 
         -- pollution
-        Ash = 5
+        Ash = 8
         Filth = 10
+        Grime = 8
         Mush = 5
         Nukage = 10
         Slime = 10
+        Sludge = 10
+        Slush = 5
 
-        -- creatures
+        -- creatures and mystical entities
+        Beasts = 10
+        Devils = 10
         Demons = 10
         Monsters = 10
+        Souls = 10
         Zombies = 10
 
         -- feels
@@ -2053,9 +2261,17 @@ namelib.NAMES =
         Pain = 10
         Terror = 10
 
+        Nightmares = 10
+        Illusion = 10
+
         -- elements
-        Flames = 10
         Darkness = 10
+        Fire = 10
+        Flames = 10
+        Frost = 10
+        Lava = 10
+        Magma = 10
+        Poison = 10
       }
 
       s = -- single whole names
@@ -2159,6 +2375,48 @@ namelib.NAMES =
         ["Thy Shrivelled Mind"] = 5
         ["Thou Shalt Die"] = 5
         ["Consumed by Flames"] = 3
+
+        -- MSSP adds some more names
+        ["Abandon All Hope"] = 10
+        ["Dead Rising"] = 10
+        ["A Minute to Midnight"] = 10
+        ["Maelstrom of Chaos"] = 10
+        ["Shadows Fall"] = 10
+        ["Mortally Challeneged"] = 10 -- actually coined by Terry Pratchett
+
+        -- mythical underworlds (including from D&D)
+        ["The Vestibule of Hell"] = 10
+        ["River of Acheron"] = 10
+        ["Caves of Avernus"] = 10
+        ["Planes of Asphodel"] = 10
+        ["The Wastes of Cania"] = 10
+        ["Cocytus"] = 10
+        ["The City of Dis"] = 10
+        ["The Void of Erebus"] = 10
+        ["Vale of Gehennom"] = 10
+        ["Maze of Maladomini"] = 10
+        ["Spires of Malbolge"] = 10
+        ["Pools of Minauros"] = 10
+        ["The Rift of Nessus"] = 10
+        ["The Void of Lethe"] = 10
+        ["Pits of Phlegethos"] = 10
+        ["Stygian Abyss"] = 10
+        ["Gates of Tartarus"] = 10
+
+        ["No Mercy"] = 10 -- yes, these are L4D campaign names
+        ["Crash Course"] = 10
+        ["Death Toll"] = 10
+        ["Dead Air"] = 10
+        ["Blood Harvest"] = 10
+        ["The Sacrifice"] = 10
+        ["The Last Stand"] = 10
+
+        ["Dead Center"] = 10 -- yes, now L4D2
+        ["The Passing"] = 10
+        ["Dark Carnival"] = 10
+        ["Swamp Fever"] = 10
+        ["Hard Rain"] = 10
+        ["The Parish"] = 10
       }
 
       c = -- oh boy, here we go again...
