@@ -168,7 +168,7 @@ end
 
 function GLAICE_EPIC_TEXTURES.put_the_texture_wad_in()
   local glaice_tex_wad_file = "games/doom/data/Oblige_Epic_Texture_Set_V620.wad"
-  if PARAM.include_package == "no" then
+  if PARAM.include_package != "no" then
     gui.wad_transfer_lump(glaice_tex_wad_file, "ANIMDEFS", "ANIMDEFS")
     gui.wad_transfer_lump(glaice_tex_wad_file, "CREDITS", "CREDITS")
     gui.wad_merge_sections(glaice_tex_wad_file)
