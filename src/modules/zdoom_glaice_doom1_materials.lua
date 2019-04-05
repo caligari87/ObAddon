@@ -551,6 +551,7 @@ GLAICE_DOOM1_MATERIALS = {
   UACCRT2 = { t="UACCRT2", f="FLAT23" }
 
   -- Skin and Hell
+  BODIES1 = { t="BODIES1", f="BODIESFL" } -- Copy of AASHITTY
   BODIESB = { t="BODIESB", f="BODIESFL" } --Dark red AASHITTY/SP_FACE2
   BODIESC = { t="BODIESC", f="BODIESF2" } --Dark brown AASHITTY/SP_FACE2
   BONES1 = { t="BONES1", f="FLAT5_6" } -- Brown bones
@@ -754,11 +755,79 @@ GLAICE_DOOM1_MATERIALS = {
   OBDNBNR1 = { t="OBDNBNR1", f="CRATOP2" } -- OBLIGE flag, yellow
   OBDNBNR2 = { t="OBDNBNR2", f="SFLR6_4" } -- OBLIGE flag, hellish
 
- -- Exiting textures with new definitions
+ -- Exiting textures with new definitions, especially so some prefabs using Doom 2 textures should
+ -- look a bit better with replacements for some of the Doom1 textures included in the Epic texture
+ -- set with the included Doom 2 flats.
+
+  ASHWALL2 = { t="ASH01",  f="FLOOR6_2" }
+  ASHWALL3 = { t="ASH02", f="RROCK03" }
+  ASHWALL4 = { t="ASH03", f="FLAT10" }
+  BIGBRIK1 = { t="BRIKS08",  f="FLOOR7_1" }
+  BIGBRIK2 = { t="BRIKS09", f="FLAT5_4" }
+  BRICK10 = { t="ROK11",  f="SLIME13" }
+  BRICKLIT = { t="BLIT01",  f="RROCK10" }
+  BRONZE1  = { t="BRONZE5",  f="FLOOR7_1" }
+  BRONZE2  = { t="BRONZE5",  f="FLOOR7_1" }
+  BRONZE3  = { t="BRONZE5",  f="FLOOR7_1" }
+  BSTONE1  = { t="BST01", f="RROCK11" }
+  BSTONE2  = { t="BST02", f="RROCK12" }
+  BSTONE3  = { t="BLIT02", f="RROCK12" }
+  CEMENT7  = { t="CEM01",  f="FLOOR7_2" }
+  CEMENT9  = { t="CEM02",  f="FLOOR7_2" }
+  CRACKLE2 = { t="CRAK01", f="RROCK01" }
+  CRACKLE4 = { t="CRAK02", f="RROCK02" }
   FIREBLU1 = { t="FIREBLU1", f="FIRELAF1" }
   FIREBLU2 = { t="FIREBLU2", f="FIRELAF2" }
   FIREWALA = { t="FIREWALA", f="FLOOR6_1" }
+  MARBFAC4 = { t="MBGRY2", f="DEM1_5" }
+  MARBGRAY = { t="MBGRY",  f="FLOOR7_2" }
+  PANBOOK  = { t="PANBOOK4", f="RROCK09" }
+  PANCASE1 = { t="PANNY09", f="RROCK09" }
+  PANCASE2 = { t="PANNYA",  f="RROCK09" }
+  PANEL1   = { t="PANNY01", f="RROCK09" }
+  PANEL2   = { t="PANNY02", f="RROCK09" }
+  PANEL3   = { t="PANNY03", f="RROCK09" }
+  PANEL4   = { t="PANNY04", f="RROCK09" }
+  PANEL6   = { t="PANNY05", f="RROCK09" }
+  PANEL7   = { t="PANNY06", f="RROCK09" }
+  PANEL8   = { t="PANNY07", f="RROCK09" }
+  PANEL9   = { t="PANNY08", f="RROCK09" }
+  PIPES    = { t="PIPESV2", f="FLOOR0_1" }
+  PIPEWAL2 = { t="PIPEWAL5", f="FLOOR4_5" }
+  ROCK1    = { t="ROK08",   f="GRNROCK" }
+  ROCK2    = { t="ROK09",   f="GRNROCK" }
+  ROCK3    = { t="ROK10",   f="RROCK12" }
+  ROCK4    = { t="ROK01",   f="RROCK15" } -- Can't think of a better flat for this one
+  ROCK5    = { t="ROK02",   f="RROCK09" }
+  SILVER2  = { t="SILVER2R", f="FLAT23" }
+  SILVER3  = { t="PLANET1",  f="FLAT23" }
+  SPACEW3  = { t="CONSOLE1", f="CEIL5_1" }
+  SLOPPY1  = { t="CORPSES", f="FLAT5_6" }
+  SLOPPY2  = { t="CORPSES", f="FLAT5_6" }
+  SP_DUDE7 = { t="SPDUDE7", f="FLOOR5_4" }
+  SP_DUDE8 = { t="SPDUDE8", f="FLOOR5_4" }
+  SP_FACE2 = { t="BODIES1", f="BODIESFL" }
+  STONE4   = { t="STON4",    f="FLAT5_4" }
+  STONE6   = { t="STON6", f="FLOOR7_1" }
+  STUCCO   = { t="STUC01", f="FLAT5_5" }
+  TANROCK4 = { t="TNROK1", f="RROCK09" }
+  TANROCK5 = { t="TNROK2", f="FLOOR7_1" }
+  TEKGREN2 = { t="TEKGRN01",   f="RROCK20" }
   TEKWALL4 = { t="TEKWALL4", f="TEKFLR4" }
+  TEKWALL6 = { t="TEKWALL7", f="CEIL5_1" }
+  WOOD8    = { t="WD01",    f="FLAT5_2" }
+  WOOD9    = { t="WD02",    f="FLAT5_2" }
+  WOODMET1 = { t="WDMET01",  f="CEIL5_2" }
+  WOODMET2 = { t="WDMET02",  f="CEIL5_2" }
+  ZIMMER1  = { t="ZIM1", f="RROCK20" }
+  ZIMMER2  = { t="ZIM2", f="RROCK20" }
+  ZIMMER3  = { t="ZIM3", f="FLAT10" }
+  ZIMMER4  = { t="ZIM4", f="FLAT10" }
+
+  -- Replacement rails
+  MIDBARS1 = { t="FENCE1", rail_h=128 }
+  MIDBRONZ = { t="MIDSPAC8", rail_h=128 }
+  MIDSPACE = { t="MIDSPAC4", rail_h=128 }
 
   --------------------
   --------------------
@@ -1003,7 +1072,36 @@ GLAICE_DOOM1_MATERIALS = {
   SLIME01  = { t="SLMFALL1", f="SLIME01", sane=1 }
   SLIME05  = { t="SLMFALL1", f="SLIME05", sane=1 }
 
+  -- Also needed so x_doom1.lua's Compatiblity section doesn't fuck things over.
+  -- Some flats lack materials, so I'll leave them commented out until we could
+  -- figure out a matching texture.
+
   FLOOR6_2 = { f="FLOOR6_2", t="ASH05" }
+  GRASS1 = { f="GRASS1", t="ZIM1" }
+  GRASS2 = { f="GRASS2", t="ZIM2" }
+  GRNLITE1 = { f="GRNLITE1", t="TEKGRN01" }
+  GRNROCK = { f="GRNROCK", t="ROK09" }
+
+  RROCK01 = { f="RROCK01", t="CRAK01" }
+  RROCK02 = { f="RROCK02", t="CRAK02" }
+  RROCK03 = { f="RROCK03", t="ASH03" }
+  RROCK04 = { f="RROCK04", t="ROK05" }
+  RROCK09 = { f="RROCK09", t="TNROK01" }
+  -- RROCK10 = { f="RROCK10", t="ZIM1" }
+  RROCK11 = { f="RROCK11", t="BST01" }
+  RROCK12 = { f="RROCK12", t="BST02" }
+  RROCK13 = { f="RROCK13", t="ROK10" }
+  RROCK14 = { f="RROCK14", t="BRIKS08" }
+  -- RROCK15 = { f="RROCK15", t="ZIM1" }
+  RROCK16 = { f="RROCK16", t="VINES3" }
+  RROCK17 = { f="RROCK17", t="ROK06" }
+  RROCK18 = { f="RROCK18", t="ROK22" }
+  RROCK19 = { f="RROCK19", t="ROK24" }
+  RROCK20 = { f="RROCK20", t="ZIM2" }
+  SLIME13 = { f="SLIME13", t="ROK11" }
+  SLIME14 = { f="SLIME14", t="METAL9" }
+  SLIME15 = { f="SLIME15", t="METAL10" }
+  SLIME16 = { f="SLIME16", t="STARBR1" } -- Could be better
 
   -------------------------
   -- New animated floors --
