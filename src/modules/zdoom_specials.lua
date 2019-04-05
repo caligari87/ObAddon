@@ -431,7 +431,7 @@ function ZDOOM_SPECIALS.do_special_stuff()
       {
         'cluster 5\n' -- MAP01-05
         '{\n'
-        '  music = "$MUSIC_READ_M"\n'
+        '  music = "$MUSIC_DM2INT"\n'
         '  pic = "' .. interpic .. '"\n'
         '  exittext =\n'
         '    "Hell has taken a strong hold upon these lands!",\n'
@@ -440,7 +440,7 @@ function ZDOOM_SPECIALS.do_special_stuff()
         '}\n'
         'cluster 6\n' -- MAP06-MAP11
         '{\n'
-        '  music = "$MUSIC_READ_M"\n'
+        '  music = "$MUSIC_DM2INT"\n'
         '  pic = "' .. interpic .. '"\n'
         '  exittext =\n'
         '    "A lieutenant of hell falls",\n'
@@ -452,7 +452,7 @@ function ZDOOM_SPECIALS.do_special_stuff()
         '}\n'
         'cluster 7\n' -- MAP12-14
         '{\n'
-        '  music = "$MUSIC_READ_M"\n'
+        '  music = "$MUSIC_DM2INT"\n'
         '  pic = "' .. interpic .. '"\n'
         '  exittext =\n'
         '    "You tirelessly battle against waves upon",\n'
@@ -463,7 +463,7 @@ function ZDOOM_SPECIALS.do_special_stuff()
         '}\n'
         'cluster 8\n' -- MAP15-20
         '{\n'
-        '  music = "$MUSIC_READ_M"\n'
+        '  music = "$MUSIC_DM2INT"\n'
         '  pic = "' .. interpic .. '"\n'
         '  exittext =\n'
         '    "Hell\'s forces attempt to push back",\n'
@@ -476,7 +476,7 @@ function ZDOOM_SPECIALS.do_special_stuff()
         '}\n'
         'cluster 9\n' -- MAP21-30
         '{\n'
-        '  music = "$MUSIC_READ_M"\n'
+        '  music = "$MUSIC_DM2INT"\n'
         '  pic = "' .. interpic .. '"\n'
         '  exittext =\n'
         '    "Mission Accomplished!",\n'
@@ -492,7 +492,7 @@ function ZDOOM_SPECIALS.do_special_stuff()
         '}\n'
         'cluster 10\n' -- MAP31
         '{\n'
-        '  music = "$MUSIC_READ_M"\n'
+        '  music = "$MUSIC_DM2INT"\n'
         '  pic = "' .. interpic .. '"\n'
         '  entertext =\n'
         '    "You have found a secret zone!",\n'
@@ -504,7 +504,7 @@ function ZDOOM_SPECIALS.do_special_stuff()
         '}\n'
         'cluster 11\n' -- MAP32
         '{\n'
-        '  music = "$MUSIC_READ_M"\n'
+        '  music = "$MUSIC_DM2INT"\n'
         '  pic = "' .. interpic .. '"\n'
         '  entertext =\n'
         '    "It seems this secret trail goes further",\n'
@@ -555,6 +555,7 @@ function ZDOOM_SPECIALS.do_special_stuff()
     each line in clusterinfo_lines do
       table.insert(mapinfolump,line)
     end
+    gui.wad_insert_file("data/music/D_DM2INT.ogg","D_DM2INT")
   end
 
   gui.wad_add_text_lump("MAPINFO", mapinfolump)
