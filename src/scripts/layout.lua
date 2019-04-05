@@ -2354,13 +2354,30 @@ function Layout_indoor_lighting()
     verydark = 96
   }
 
+  -- attachment for brightness offset options -MSSP
+  local light_offset = 0
+  if PARAM.brightness_offset == "-3" then
+    light_offset = -48
+  elseif PARAM.brightness_offset == "-2" then
+    light_offset = -24
+  elseif PARAM.brightness_offset == "-1" then
+    light_offset = -16
+  elseif PARAM.brightness_offset == "+1" then
+    light_offset = 16
+  elseif PARAM.brightness_offset == "+2" then
+    light_offset = 24
+  elseif PARAM.brightness_offset == "+3" then
+    light_offset = 48
+  else
+    light_offset = 0
+  end
+
   local function sky_light_to_keyword()
     if LEVEL.sky_light >= 168 then return "bright" end
     if LEVEL.sky_light >= 136 then return "normal" end
     if LEVEL.sky_light >= 120 then return "dark" end
     return "verydark"
   end
-
 
   local function set_room(R, what)
     R.light_level = what
@@ -2380,7 +2397,7 @@ function Layout_indoor_lighting()
     end
 
     each A in R.areas do
-      A.base_light = base_light
+      A.base_light = base_light + light_offset
     end
   end
 

@@ -433,6 +433,7 @@ OB_MODULES["harder_enemy"] =
   label = _("Harder Enemy Setup")
 
   side = "left"
+  priority = 61
   game = "doomish"
 
   tooltip = "Changes enemy placement and thus makes overall gameplay a bit to fair bit harder, depending if you use additional mods in the case of GZDoom."

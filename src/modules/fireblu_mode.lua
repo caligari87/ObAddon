@@ -27,7 +27,7 @@ OB_MODULES["fireblu_mode"] =
   label = _("FIREBLU Mode")
 
   side = "left"
-  priority = 65
+  priority = 60
 
   hooks =
   {
