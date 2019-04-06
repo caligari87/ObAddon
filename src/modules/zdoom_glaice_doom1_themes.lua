@@ -23,7 +23,7 @@ GLAICE_DOOM1_THEMES =
   tech_GrayMet =
   {
     env = "building"
-    prob = 120
+    prob = 65
 
     walls =
     {
@@ -63,7 +63,7 @@ GLAICE_DOOM1_THEMES =
       TEKGRY01 = 30
       TEKSHAW = 30
 
-      TKWALL2 = 15
+      TEKWALL2 = 15
       TEKWALL7 = 15
       TEKWALL8 = 15
       TEKWALL9 = 15
@@ -88,7 +88,6 @@ GLAICE_DOOM1_THEMES =
       FLAT4 = 15
       FLAT14 = 10
       SLIME15 = 10
-      SLIME16 = 10
       FLOOR1_6 = 6
       FLOOR1_1 = 8
       FLOOR0_5 = 5
@@ -131,14 +130,14 @@ GLAICE_DOOM1_THEMES =
 
   tech_Computers =
   {
-    prob = 50
+    prob = 70
     env = "building"
 
     walls =
     {
       COMPSPAN = 30
-      CMPOHSO = 10
-      CMPTILE = 15
+      COMPOHSO = 10
+      COMPTILE = 15
       COMPBLUE = 10
     }
 
@@ -169,14 +168,14 @@ GLAICE_DOOM1_THEMES =
   -- Multi colors here!
   tech_ComputersMulti =
   {
-    prob = 40
+    prob = 45
     env = "building"
 
     walls =
     {
       COMPSPAN = 20
-      CMPOHSO = 10
-      CMPTILE = 20
+      COMPOHSO = 10
+      COMPTILE = 20
       COMPTIL2 = 20
       COMPTIL3 = 10
       COMPTIL4 = 20
@@ -217,7 +216,7 @@ GLAICE_DOOM1_THEMES =
   tech_Cement =
   {
     env = "building"
-    prob = 100
+    prob = 60
 
     walls =
     {
@@ -302,78 +301,10 @@ GLAICE_DOOM1_THEMES =
     }
   }
 
-  tech_HeavyMetal =
-  {
-    env = "building"
-    prob = 120
-
-    walls =
-    {
-      METAL2 = 70
-      METAL8 = 70
-      METAL9 = 70
-      METAL10 = 50
-      BRONZE1 = 30
-      BRONZE3 = 30
-      METAL1 = 25
-      RUSTWALL = 20
-    }
-
-    floors =
-    {
-      FLAT3 = 50
-      FLOOR0_1 = 30
-      GRATE1 = 30
-      GRATE2 = 30
-      GRATE3 = 30
-      FLOOR4_5 = 20
-      FLOOR4_6 = 20
-      FLOOR4_8 = 20
-      FLOOR5_1 = 15
-      FLOOR7_1 = 15
-      GRATE7 = 15
-      MFLR8_2  = 20
-      SLIME15 = 20
-      SLIME14 = 20
-      GRATE4 = 10
-      CEIL4_1 = 5
-      CEIL4_2 = 5
-      QFLAT09 = 10
-      QFLAT10 = 5
-      MEM01   = 10
-      DARKF01 = 15
-      DARKF02 = 15
-      DARKF03 = 15
-      FLOOR46E = 10
-      GMET06   = 10
-      GMET07   = 10
-      GMET05   = 15
-    }
-
-    ceilings =
-    {
-      CEIL5_1 = 40
-      CEIL5_2 = 15
-      GRATE4  = 25
-      SLIME15 = 40
-      CEIL4_1 = 20
-      SLIME14 = 40
-      SLIME16 = 20
-      GRATE3  = 20
-      GRATE5  = 15
-      GRATE6  = 15
-      GRATE8  = 20
-      G15     = 10
-      GMET02  = 15
-      GMET03  = 15
-      GMET04  = 20
-    }
-  }
-
   tech_VeryGray =
   {
     env = "building"
-    prob = 85
+    prob = 80
 
     walls =
     {
@@ -386,7 +317,6 @@ GLAICE_DOOM1_THEMES =
       ICKWALL1 = 10
       ICKWALL2 = 10
       ICKWALL3 = 10
-      TEKGRY01 = 10
     }
 
     floors =
@@ -436,7 +366,7 @@ GLAICE_DOOM1_THEMES =
       BROWNGR3 = 5
       BROWNGR4 = 5
       BROWN96 = 10
-      BRVINE = 5
+      BROVINE = 5
       BROVINE2 = 5
     }
 
@@ -471,10 +401,98 @@ GLAICE_DOOM1_THEMES =
     }
   }
 
+-- DEIMOS THEMES --
+
+  deimos_icky =
+  {
+    env = "building"
+    prob = 70
+
+    walls =
+    {
+      ICKWALL1 = 60
+      ICKWALL2 = 20
+      ICKWALL3 = 40
+    }
+
+    floors =
+    {
+      FLAT4 = 30
+      FLOOR0_3 = 50
+      FLAT5_4 = 25
+      FLAT19 = 15
+      TILES4 = 15
+      TILES5 = 10
+      TILES6 = 10
+      FLOOR0_5 = 10
+      FLOOR4_7 = 15
+      SHINY01 = 5
+      SHINY02 = 5
+      SHINY03 = 10
+      GMET07  = 3
+    }
+
+    ceilings =
+    {
+      FLAT19 = 40
+      FLAT5_4 = 20
+      FLAT4  = 20
+      FLAT23 = 10
+      FLAT1 = 10
+      FLOOR4_7 = 5
+      SHINY02 = 5
+      RROCK21 = 5
+      SHINY04 = 5
+    }
+  }
+
+  deimos_Cement =
+  {
+    env = "building"
+    prob = 80
+
+    walls =
+    {
+      CEM03 = 15
+      CEM04 = 15
+      CEM06 = 120
+      CEM07 = 120
+      CEM09 = 120
+    }
+
+    floors =
+    {
+      FLAT1 = 50
+      FLAT5_4 = 40
+      GRATE1  = 15
+      GRATE2  = 15
+      FLOOR4_8 = 10
+      FLOOR5_1 = 10
+      FLOOR51C = 10
+      FLOOR46D = 15
+      FLOOR46E = 15
+      DARKF01 = 15
+      DARKF02 = 15
+    }
+
+    ceilings =
+    {
+      FLAT19 = 50
+      FLAT5_4 = 20
+      MFLR8_1 = 15
+      FLAT5_2 = 5
+      CEIL1_1 = 5
+      FLAT5_2 = 5
+      GRATE4  = 10
+    }
+  }
+
+ -- HELL THEMES --
+
   hell_GlaiceGothic =
   {
     env  = "building"
-    prob = 150
+    prob = 130
 
     walls =
     {
@@ -691,8 +709,8 @@ GLAICE_DOOM1_THEMES =
      SKINMET5 = 30
      SKINMET6 = 10
      SKINMET7 = 10
-     SKTEK01 = 15
-     SKTEK02 = 15
+     SKINTEK1 = 15
+     SKINTEK2 = 15
     }
 
     floors =
@@ -813,11 +831,7 @@ GLAICE_DOOM1_THEMES =
     RDROK1   = 80
     RDROK2   = 80
     SP_ROCK1 = 50
-    ASHWALL2 = 50
-    ASHWALL3 = 50
-    ASHWALL4 = 50
-    ASHWALL6 = 50
-    ASHWALL7 = 50
+    SP_ROCK2 = 20
     ASH05    = 50
     ROK04    = 35
     ROK05    = 35
@@ -846,7 +860,7 @@ GLAICE_DOOM1_THEMES =
   hell_fireycave =
   {
     env  = "cave"
-    prob = 60
+    prob = 70
 
     light_adjusts = { 32,48,64 }
 
@@ -859,8 +873,8 @@ GLAICE_DOOM1_THEMES =
       CRACKRED = 15
       CRACKRD2 = 15
       FIREBLU1 = 15
-      CRACKLE2 =  5
-      CRACKLE4 =  5
+      CRAK01 =  5
+      CRAK02 =  5
       FIREBLK1 =  3
     }
 
@@ -880,7 +894,7 @@ GLAICE_DOOM1_THEMES =
   hell_icecave =
   {
     env  = "cave"
-    prob = 50
+    prob = 40
 
     light_adjusts = { 8,16,24 }
 
@@ -907,18 +921,18 @@ GLAICE_DOOM1_THEMES =
     }
   }
 
-  urban_MoreWood =
+-- THY FLESH CONSUMED THEMES --
+
+  flesh_MoreWood =
   {
     env = "building"
-    prob = 100
+    prob = 150
 
     walls =
     {
       WOOD1 = 50
       WOOD3 = 50
       WOOD5 = 50
-      WOOD12 = 50
-      WOODVERT = 50
       WD03   = 50
       WD04   = 50
       WOOD15 = 50
@@ -958,20 +972,16 @@ GLAICE_DOOM1_THEMES =
     }
   }
 
-  urban_glaicecave =
+  flesh_glaicecave =
   {
     env  = "cave"
-    prob = 60
+    prob = 50
 
     walls =
     {
 
-    SP_ROCK1 = 30
-    ASHWALL2 = 50
-    ASHWALL3 = 50
-    ASHWALL4 = 50
-    ASHWALL6 = 50
-    ASHWALL7 = 50
+    SP_ROCK1 = 60
+    SP_ROCK2 = 20
     ASH05    = 50
     ROK04    = 35
     ROK05    = 35
@@ -995,6 +1005,135 @@ GLAICE_DOOM1_THEMES =
      RROCK03 = 50
      RROCK09 = 30
      FLAT5_4 = 10
+    }
+  }
+
+  flesh_ashblack =
+  {
+    env  = "building"
+    prob = 40
+
+    walls =
+    {
+     KSTONE1 = 50
+     KMARBLE2 = 50
+     KMARBLE3 = 50
+     KMARBLE1 = 20
+    }
+
+    floors =
+    {
+     BMARB1 = 50
+     BMARB2 = 50
+     BMARB3 = 20
+    }
+
+    ceilings =
+    {
+     BMARB3 = 100
+     BMARB1 = 30
+    }
+
+    cliff_mats =
+    {
+    FIREBLK1 = 100
+    BONES2  = 50
+    BODIESC   = 20
+    ESAND1 = 20
+    ESAND2 = 20
+    ASHWALL1 = 10
+    ASH05 = 5
+    }
+  }
+
+
+  flesh_bloodred =
+  {
+    env  = "building"
+    prob = 40
+
+    walls =
+    {
+     REDMARB1 = 20
+     REDMARB2 = 60
+     REDMARB3 = 60
+    }
+
+    floors =
+    {
+     RMARB1 = 50
+     RMARB2 = 50
+     RMARB3 = 20
+    }
+
+    ceilings =
+    {
+     RMARB3 = 100
+     RMARB1 = 30
+    }
+
+    cliff_mats =
+    {
+    FIREBLU1 = 100
+    RDROK1 = 50
+    RDROK2 = 50
+    }
+  }
+
+  flesh_skincraft =
+  {
+    env  = "building"
+    prob = 50
+
+    walls =
+    {
+     SKIN2 = 10
+     SKIN3 = 10
+     SKIN4 = 10
+     SKINMET1 = 30
+     SKINMET2 = 30
+     SKINLOW1 = 30
+     SKINMET3 = 20
+     SKINMET4 = 20
+     SKINMET5 = 30
+     SKINMET6 = 10
+     SKINMET7 = 10
+     SKINTEK1 = 15
+     SKINTEK2 = 15
+    }
+
+    floors =
+    {
+     FLAT5_1 = 50
+     FLAT5_2 = 50
+     FLAT5 = 30
+     WOODTIL = 30
+     WOODTI2 = 30
+     FLOOR46D = 30
+     FLOOR46E = 30
+     G13 = 20
+    }
+
+    ceilings =
+    {
+     CEIL1_1 = 50
+     FLAT5_2 = 50
+     G02 = 30
+     G03 = 30
+     FLOOR7_2 = 15
+     FLOOR7_3 = 15
+    }
+
+    cliff_mats =
+    {
+    SKSNAKE1 = 50
+    SKSNAKE2 = 50
+    SKINFACE = 50
+    SKIN2    = 50
+    SKIN4    = 50
+    BODIESB   = 30
+    BODIESC   = 20
+    SKULLS2  = 50
     }
   }
 
@@ -1022,7 +1161,7 @@ GLAICE_DOOM1_TECH_FACADES =
   BROWNGR2 = 10
   BROWNGR3 = 10
   BROWNGR4 = 10
-  GRAYVINE = 15
+  GRAYVINE = 20
 
   TEKSHAW  = 15
   TEKGRY01 = 15
@@ -1035,11 +1174,6 @@ GLAICE_DOOM1_TECH_FACADES =
   BROWN2   = 10
   BROWN3   = 10
 
-
-  METAL8 = 12
-  METAL9 = 12
-  METAL10 = 12
-
   SHAWN4 = 15
   SHAWN5 = 15
   HEX01 = 15
@@ -1050,14 +1184,14 @@ GLAICE_DOOM1_DEIMOS_FACADES =
 
   STARTAN3 = 40
   STARG3 = 40
-
-  GRAY6 = 25
-  GRAY8 = 25
-  GRAY9 = 25
+  
+  GRAY6 = 15
+  GRAY8 = 15
+  GRAY9 = 15
 
   STONE  = 20
-  STONE2 = 20
-  STONE3 = 20
+  STONE2 = 30
+  STONE3 = 30
 
   BROWN1 = 30
   BROWNGRN = 20
@@ -1074,10 +1208,6 @@ GLAICE_DOOM1_DEIMOS_FACADES =
 
   BROWN2   = 10
   BROWN3   = 10
-
-  SHAWN4 = 15
-  SHAWN5 = 15
-  HEX01 = 15
 }
 
 GLAICE_DOOM1_HELL_FACADES =
@@ -1090,13 +1220,13 @@ GLAICE_DOOM1_HELL_FACADES =
   MARBLE1 = 25
   MARBLE2 = 25
   MARBLE3 = 25
-  MARBGRAY = 25
+  MBGRY = 25
   BLAKMBGY = 20
 
   SP_HOT1 = 20
   STONE   = 20
-  STONE4  = 15
-  STONE6  = 15
+  STON4  = 15
+  STON6  = 15
   STONE8  = 5
   STONE9  = 5
 
@@ -1131,8 +1261,8 @@ GLAICE_DOOM1_HELL_FACADES =
 
   HELLCMT1 = 15
   HELLCMT8 = 15
-  SKTEK01 = 15
-  SKTEK02 = 15
+  SKINTEK1 = 15
+  SKINTEK2 = 15
   KSTONE1 = 10
   KMARBLE2 = 5
   KMARBLE3 = 5
@@ -1150,7 +1280,7 @@ GLAICE_DOOM1_HELL_FACADES =
   WDMET03  = 5
 
   BROWN1   = 5
-  BRVINE   = 10
+  BROVINE   = 10
 
 }
 
@@ -1200,11 +1330,11 @@ GLAICE_DOOM1_FLESH_LIQUIDS =
   magma   = 60
   qlava   = 60
   pwater  = 5
-  purwater = 5
-  sludge  = 20
+  purwater = 10
+  sludge  = 30
   gwater  = 25
-  ice     = 40
-  ice2    = 40
+  ice     = 30
+  ice2    = 30
 }
 
 -- Custom sink definitions as well as probability tables.
