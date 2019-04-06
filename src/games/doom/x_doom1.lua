@@ -421,8 +421,6 @@ ULTDOOM.ENTITIES =
 
 --------------------------------------------------------------------
 
---Fixed up for future use in V6 -Chris
-
 ULTDOOM.THEMES =
 {
   DEFAULTS =
@@ -449,6 +447,7 @@ ULTDOOM.THEMES =
     wide_halls =
     {
       deuce = 50
+      --metro = 20 --Currently disabled until everything checks out normally
     }
 
     barrels =
@@ -604,12 +603,38 @@ ULTDOOM.THEMES =
     {
       MIDBARS3 = 50
     }
+
+  -- prefab currently does not actually
+  -- have surfaces to recieve a custom skin
+  tech_metro_Hallway =
+  {
+    env   = "hallway"
+    group = "metro"
+    prob  = 25
+
+    walls =
+    {
+      BROWN1   = 50
+    }
+
+    floors =
+    {
+      FLAT4  = 50
+    }
+
+    ceilings =
+    {
+      CEIL3_5 = 50
+    }
+  }
+
+
   }
 
 
   ---- Episode 2 ----
 
-  -- Deimos theme by Chris Pisarczyk
+  -- Deimos theme by Chris Pisarczyk / Glaice
 
   deimos =
   {
@@ -1604,6 +1629,30 @@ ULTDOOM.ROOM_THEMES =
     }
   }
 
+  -- prefab currently does not actually
+  -- have surfaces to recieve a custom skin
+  deimos_metro_Hallway =
+  {
+    env   = "hallway"
+    group = "metro"
+    prob  = 15
+
+    walls =
+    {
+      BROWN1   = 50
+    }
+
+    floors =
+    {
+      FLAT4  = 50
+    }
+
+    ceilings =
+    {
+      CEIL3_5 = 50
+    }
+  }
+
 
 ----- EPISODE 3 : Hell ---------------------------
 
@@ -1919,6 +1968,31 @@ ULTDOOM.ROOM_THEMES =
     }
   }
 
+  -- prefab currently does not actually
+  -- have surfaces to recieve a custom skin
+  hell_metro_Hallway =
+  {
+    env   = "hallway"
+    group = "metro"
+    prob  = 15
+
+    walls =
+    {
+      BROWN1   = 50
+    }
+
+    floors =
+    {
+      FLAT4  = 50
+    }
+
+    ceilings =
+    {
+      CEIL3_5 = 50
+    }
+  }
+
+
 
 ----- EPISODE 4 -------------------------------
 
@@ -2177,6 +2251,32 @@ ULTDOOM.ROOM_THEMES =
       SKSNAKE2 = 10
     }
   }
+
+  -- prefab currently does not actually
+  -- have surfaces to recieve a custom skin
+  flesh_metro_Hallway =
+  {
+    env   = "hallway"
+    group = "metro"
+    prob  = 20
+
+    walls =
+    {
+      BROWN1   = 50
+    }
+
+    floors =
+    {
+      FLAT4  = 50
+    }
+
+    ceilings =
+    {
+      CEIL3_5 = 50
+    }
+  }
+
+
 }
 
 
