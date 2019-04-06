@@ -1867,6 +1867,15 @@ namelib.NAMES =
 
   --------------------------------------------------
 
+   -- lexicon legend:
+   -- %s = Full episode names
+   -- %k = Body parts
+   -- %p = Location
+   -- %q = Residential area / Adverbs
+   -- %a = Adjective
+   -- %j = Abstract / Objects
+   -- %c = Contributor name
+
   EPISODE =
   {
     patterns =
@@ -1899,7 +1908,18 @@ namelib.NAMES =
       ["%s"] = 100
 
       -- contributors and their shenanigans
-      -- ["The %a %p of %c"] = 30 -- TOO LONG
+
+      -- Glaice's additions
+      ["Dead Base: %a"] = 10
+      ["%cs Warzone"] = 7
+      ["%cs %p"] = 7
+      ["Silence: %a %j"] = 5
+      ["Crystal %p"] = 5
+      ["Vacation at NOUNGENEXOTIC"] = 5
+      ["Vacation at NOUNGENANGLICAN"] = 5
+      ["Breakdown: %j"] = 5
+      ["Crushed: %j"] = 5
+
     }
 
     lexicon =
