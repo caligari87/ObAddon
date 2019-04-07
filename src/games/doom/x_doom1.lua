@@ -84,6 +84,7 @@ ULTDOOM.MATERIALS =
 
   SP_DUDE6 = { t="SP_DUDE6", f="DEM1_5" }
   SP_ROCK1 = { t="SP_ROCK1", f="MFLR8_3" }
+  SP_ROCK2 = { t="SP_ROCK2", f="MFLR8_3" }
   STARTAN1 = { t="STARTAN1", f="FLOOR4_1" }
   STONGARG = { t="STONGARG", f="MFLR8_1" }
   STONPOIS = { t="STONPOIS", f="FLAT5_4" }
@@ -447,7 +448,7 @@ ULTDOOM.THEMES =
     wide_halls =
     {
       deuce = 50
-      --metro = 20 --Currently disabled until everything checks out normally
+      metro = 20 --Currently disabled until everything checks out normally
     }
 
     barrels =
@@ -540,7 +541,7 @@ ULTDOOM.THEMES =
     liquids =
     {
       nukage = 80
-      water  = 20
+      water  = 30
       lava   = 10
     }
 
@@ -553,13 +554,15 @@ ULTDOOM.THEMES =
       STONE3 = 10
       STARTAN3 = 30
       STARG3 = 20
+      BROVINE2 = 5
+      BROVINE  = 5
     }
 
     cliff_mats =
     {
-      ASHWALL  = 40
-      BROVINE  = 40
-      SP_ROCK1 = 20
+      SP_ROCK1 = 50
+      BROWNHUG = 30
+      ASHWALL  = 20
     }
 
     prefab_remap =
@@ -572,36 +575,144 @@ ULTDOOM.THEMES =
       liquid_plain = 10
       liquid_shiny = 5
       liquid_metal = 5
-      floor_green = 10
-      floor_blue2 = 5
+      floor_blue  = 10
+      floor_blue3 = 5
     }
 
     ceiling_sinks =
     {
-      PLAIN = 90
+      PLAIN = 120
       sky_shiny = 20
       sky_metal = 10
+      sky_tech3 = 2
       light_red_shiny = 20
       light_orange_shiny = 7
       light_brightred_metal = 7
+      light_brightred_metal2 = 5
+      light_diamond = 3
+      light_side1 = 5
+      light_side4 = 5
     }
 
     wall_groups =
     {
-      PLAIN = 70
-      low_gap = 50
-      mid_band = 25
-      lite2 = 15
+      PLAIN = 200
+      low_gap = 2
+      mid_band = 3
+      lite2 = 10
+      torches6 = 8
+      torches7 = 35
+      torches11 = 12
+      gtd_wall_urban_storage = 10
+      gtd_wall_tech_windows_topcorner = 25
+      gtd_wall_server_room = 25
+      gtd_wall_sewer = 10
+      gtd_generic_beamed_inset = 7
+      gtd_computers = 35
+      gtd_writhing_mass = 2
+      gtd_wall_octagon_insets = 18
+      gtd_wall_grated_machines = 15
+      gtd_wall_quakish_insets = 20
+    }
+
+    cage_mats =
+    {
+      METAL1   = 60
+      BROWN144 = 60
+      STONE    = 50
+      SHAWN2   = 40
+      TEKWALL1 = 40
+      TEKWALL4 = 40
+      STONE2   = 20
+    }
+
+    fences =
+    {
+      METAL1   = 60
+      STONE    = 60
+      STARG1   = 30
+      STONE2   = 20
+      STONE3   = 30
+      BROVINE  = 20
+      BROVINE2 = 20
+      GRAY1    = 20
+    }
+
+    passable_decor =
+    {
+      gibs = 60
+      gibbed_player = 20
+      dead_player = 35
+    }
+
+    park_decor =
+    {
+      burnt_tree = 95
+      brown_stub = 55
+      big_tree = 30
+    }
+
+    window_groups =
+    {
+      square = 90
+      tall   = 90
+      grate  = 40
+      barred = 10
+      round  = 5
+      gtd_window_cage_highbars = 20
+      gtd_window_cage_lowbars = 10
+      gtd_window_full_open = 30
+      gtd_window_bay = 20
+    }
+
+    cave_torches =
+    {
+      lamp        = 25
+      red_torch   = 70
+    }
+
+    outdoor_torches =
+    {
+      lamp   = 40
+      red_torch = 15
     }
 
     style_list =
     {
-      naturals = { none=30, few=70, some=30, heaps=2 }
+      caves = { none=70, few=30 }
+      outdoors = { few=40, some=80, heaps=10 }
+      big_rooms = { none=40, few=25, some=15, heaps=5 }
+      hallways = { none=15, few=45, some=20, heaps=10 }
+      windows = { few=15, some=85, heaps=40 }
+      pictures = { few=20, some=75, heaps=45 }
+      liquids = { none=60, few=30, some=10, heaps=5 }
+      doors = { few=25, some=75, heaps=30 }
+      teleporters = { none=75, few=30, some=10, heaps=3 }
+      keys = { none=15, few=60, some=70, heaps=30 }
+      switches = { none=25, few=75, some=40, heaps=15 }
+      secrets = { few=15, some=80, heaps=30 }
+      symmetry = { none=50, few=50, some=50, heaps=50 }
+      steepness = { few=30, some=70, heaps=40 }
+      cages = { none=70, few=25, some=10, heaps=5 }
+      traps = { few=60, some=40, heaps=20 }
+      barrels = { few=5, some=85, heaps=60 }
+      ambushes = { few=30, some=75, heaps=20 }
     }
 
     scenic_fence =
     {
-      MIDBARS3 = 50
+      MIDGRATE = 50
+    }
+
+    monster_prefs =
+    {
+      zombie  = 2.0
+      shooter = 1.25
+      imp     = 1.5
+      demon   = 1.25
+      caco    = 0.5
+      baron   = 0.35
+      skull   = 0.2
     }
 
   -- prefab currently does not actually
@@ -628,6 +739,7 @@ ULTDOOM.THEMES =
     }
   }
 
+  ceil_light_prob = 70
 
   }
 
@@ -643,6 +755,7 @@ ULTDOOM.THEMES =
       nukage = 60
       blood  = 20
       water  = 10
+      lava   = 3
     }
 
     -- Best facades would be STONE/2/3, BROVINE/2, BROWN1 and maybe a few others as I have not seen many
@@ -655,6 +768,7 @@ ULTDOOM.THEMES =
       BROVINE2 = 25
       BROWN1 = 50
       BROWNGRN = 20
+      STONE    = 15
     }
 
     cliff_mats =
@@ -662,7 +776,7 @@ ULTDOOM.THEMES =
       ROCKRED1 = 60
       ASHWALL  = 40
       SP_ROCK1 = 40
-      GRAYVINE = 20
+      BROWN144 = 20
     }
 
     prefab_remap =
@@ -675,34 +789,134 @@ ULTDOOM.THEMES =
       liquid_plain = 10
       liquid_shiny = 5
       liquid_metal = 5
-      floor_green = 10
+      floor_green = 5
+      floor_blue  = 10
       floor_blue2 = 5
+      floor_blue3 = 5
     }
 
     ceiling_sinks =
     {
-      PLAIN = 90
+      PLAIN = 120
       sky_shiny = 20
       sky_metal = 10
       light_red_shiny = 20
       light_orange_shiny = 7
       light_brightred_metal = 7
+      ceil_icky = 4
+      ceil_vdark2 = 3
+      light_side1 = 4
+      light_side2 = 4
+      light_side3 = 4
     }
 
+    park_decor =
+    {
+      burnt_tree = 95
+      brown_stub = 55
+      big_tree = 40
+    }
+
+    fences =
+    {
+      METAL1   = 90
+      BROVINE  = 60
+      STONE3   = 40
+      STONE2   = 40
+      BROVINE2 = 30
+      GRAY1    = 20
+      ICKWALL3 = 20
+    }
+
+   -- This is because of the slow Hellification of the Deimos base, hence a few Hell wall prefabs are here.
     wall_groups =
     {
-      -- TODO : appropriate wall detail for Deimos
-      PLAIN = 100
+      PLAIN = 200
+      low_gap = 7
+      mid_band = 5
+      lite2 = 5
+      torches1 = 5
+      torches2 = 5
+      torches3 = 3
+      torches6 = 10
+      torches7 = 50
+      torches8 = 10
+      torches11 = 15
+      runes1 = 1
+      runes2 = 1
+      runes3 = 1
+      runes4 = 1
+      runes5 = 1
+      cross1 = 1
+      cross2 = 3
+      cross3 = 1
+      cross4 = 1
+      cross5 = 3
+      mid_band_hell = 1
+      gtd_wall_urban_storage = 20
+      gtd_wall_tech_windows_topcorner = 30
+      gtd_wall_server_room = 30
+      gtd_wall_sewer = 10
+      gtd_generic_beamed_inset = 10
+      gtd_computers = 45
+      gtd_writhing_mass = 4
+      gtd_wall_octagon_insets = 25
+      gtd_wall_grated_machines = 20
+      gtd_wall_quakish_insets = 25
     }
+
+  ceil_light_prob = 65
 
     style_list =
     {
-      naturals = { none=40, few=70, some=20, heaps=2 }
+      caves = { none=60, few=40 }
+      outdoors = { few=40, some=80, heaps=10 }
+      big_rooms = { none=40, few=35, some=15, heaps=5 }
+      hallways = { none=15, few=45, some=20, heaps=10 }
+      windows = { few=15, some=85, heaps=40 }
+      pictures = { few=20, some=75, heaps=45 }
+      liquids = { none=60, few=30, some=12, heaps=5 }
+      doors = { few=25, some=75, heaps=30 }
+      teleporters = { none=55, few=40, some=15, heaps=3 }
+      keys = { none=15, few=60, some=70, heaps=40 }
+      switches = { none=20, few=65, some=50, heaps=15 }
+      secrets = { few=12, some=80, heaps=30 }
+      symmetry = { none=50, few=50, some=50, heaps=50 }
+      steepness = { few=40, some=80, heaps=40 }
+      cages = { none=55, few=35, some=10, heaps=5 }
+      traps = { few=40, some=60, heaps=30 }
+      barrels = { few=10, some=55, heaps=30 }
+      ambushes = { few=20, some=95, heaps=30 }
     }
+
+  -- prefab currently does not actually
+  -- have surfaces to recieve a custom skin
+  deimos_metro_Hallway =
+  {
+    env   = "hallway"
+    group = "metro"
+    prob  = 25
+
+    walls =
+    {
+      BROWN1   = 50
+    }
+
+    floors =
+    {
+      FLAT4  = 50
+    }
+
+    ceilings =
+    {
+      CEIL3_5 = 50
+    }
+  }
 
     scenic_fence =
     {
-      MIDBARS3 = 50
+      MIDGRATE = 50
+      MIDBRN1  = 10
     }
   }
 
@@ -733,15 +947,17 @@ ULTDOOM.THEMES =
       STONE2 = 10
       STONE3 = 15
       WOOD1 = 50
-      GSTONE1 = 45
+      GSTONE1 = 50
       MARBLE1 = 30
       BROWN1 = 5
       BROWNGRN = 5
-      WOOD5 = 25
-      SP_HOT1 = 10
+      WOOD5 = 30
+      SP_HOT1 = 15
       SKINMET1 = 10
       SKINMET2 = 10
       SKINTEK1 = 10
+      SKINTEK2 = 10
+      STONE = 5
     }
 
     cliff_mats =
@@ -749,7 +965,23 @@ ULTDOOM.THEMES =
       ROCKRED1 = 60
       ASHWALL  = 40
       SP_ROCK1 = 40
-      GRAYVINE = 20
+      FIREBLU1 = 20
+      SP_ROCK2 = 15
+    }
+
+    fences =
+    {
+    WOOD5 = 50
+    WOOD3 = 50
+    STONE3 = 40
+    STONE2 = 35
+    MARBLE2 = 30
+    GSTONE1 = 30
+    ASHWALL = 20
+    SKIN2   = 20
+    SKINFACE = 20
+    FIREBLU1 = 20
+    ICKWALL3 = 15
     }
 
     prefab_remap =
@@ -776,59 +1008,209 @@ ULTDOOM.THEMES =
       floor_skulls = 20
       floor_glowingrock = 10
       floor_snakes = 5
+      floor_red = 5
+      liquid_firelava = 5
+      liquid_ash = 4
+      liquid_marble = 4 
     }
 
     ceiling_sinks =
     {
-      PLAIN = 50
+      PLAIN = 170
       sky_metal = 20
       sky_plain = 20
       light_diamond = 10
       light_hell_red = 20
       light_hell_lava = 5
       ceil_redash = 5
+      ceil_hotrock = 5
+      ceil_hotrock2 = 5
+      ceil_blood = 7
+      ceil_sprock = 4
+      ceil_water = 4
+      ceil_icky = 10
+      sky_hell_10 = 3
+      sky_hell_11 = 3
+      sky_hell_12 = 3
+      sky_hell_13 = 3
     }
 
     wall_groups =
     {
-      PLAIN = 80
-      torches1 = 40
-      torches2 = 15
-      low_gap = 20
+      PLAIN = 150
+      torches2 = 30 --red
+      torches3 = 30 --blue
+      torches1 = 30 --green
+      torches6 = 10 --candelabra
+      torches8 = 10 --evil eye
+      torches10 = 7 --skull rock
+      lowhell1 = 4
+      lowhell2 = 2
+      lowhell3 = 4
       runes1 = 7
       runes2 = 7
       runes3 = 7
+      runes4 = 7
+      runes5 = 7
       cross1 = 7
       cross2 = 15
+      cross3 = 7
+      cross4 = 5
+      cross5 = 10
+      mid_band_hell = 2
+      gtd_wall_hell_bloodgutters = 30
+      gtd_wall_tech_windows_topcorner = 40
+      gtd_wall_hell_vaults = 40
+      gtd_generic_beamed_inset = 40
+      gtd_writhing_mass = 40
+      gtd_library = 40
+      gtd_furnace = 20
+      gtd_furnace_face = 20
+      gtd_wall_marbface = 40
+      gtd_wall_quakish_insets = 40
     }
 
     window_groups =
     {
-      round  = 80
-      barred = 40
-      tall   = 20
-      grate  = 10
+      round  = 80 --80
+      tall   = 65 --65
+      barred = 20 --20
+      grate  = 40 --40
+      square = 30 --30
+      gtd_window_cage_highbars = 20
+      gtd_window_cage_lowbars = 20
+      gtd_window_cage_hell = 50
+      gtd_window_arched = 80
+      gtd_window_full_open = 60
+    }
+
+    cave_torches =
+    {
+      red_torch   = 50
+      green_torch = 50
+      blue_torch  = 50
+      blue_torch_sm = 15
+      green_torch_sm = 15
+      red_torch_sm = 15
+
+      candelabra = 15
+      skull_rock = 15
+      skull_cairn = 20
+      evil_eye   = 10
+    }
+
+    outdoor_torches =
+    {
+      blue_torch = 70
+      red_torch  = 70
+      green_torch = 70
+      candelabra = 30
+      skull_rock = 30
+      blue_torch_sm = 15
+      red_torch_sm  = 15
+      green_torch_sm = 15
+    }
+
+    passable_decor =
+    {
+      gibs = 70
+      gibbed_player = 30
+      dead_player = 40
+      dead_zombie = 2
+      dead_shooter = 2
+      dead_imp = 1
+      dead_demon = 1
+      dead_caco  = 1
+    }
+
+    park_decor =
+    {
+      burnt_tree = 95
+      brown_stub = 55
+      big_tree = 40
+      evil_eye   = 15
+      skull_rock = 10
+      skull_cairn = 15
+      skull_pole = 10
+      skull_kebab = 10
+      green_pillar = 5
+      green_column  = 5
+      green_column_hrt = 3
+      red_pillar = 5
+      red_column = 5
+      red_column_skl = 3
+    }
+
+    style_list =
+    {
+      doors = { none=15, few=30, some=65, heaps=25 }
+      outdoors = { none=10, few=35, some=60, heaps=15 }
+      steepness = { few=25, some=70, heaps=40 }
+      pictures = { few=50, some=50, heaps=70 }
+      big_rooms = { none=25, few=60, some=15, heaps=10 }
+      ambushes = { none=10, few=15, some=55, heaps=35 }
+      hallways = { none=20, few=60, some=15, heaps=5 }
+      teleporters = { none=15, few=25, some=60, heaps=10 }
+      keys = { none=15, few=40, some=60, heaps=25 }
+      liquids = { none=20, few=45, some=25, heaps=15 }
+      traps = { few=20, some=70, heaps=40 }
+      switches = { none=25, few=60, some=35, heaps=10 }
+      cages    = { none=15, few=25, some=65, heaps=10 }
+      symmetry = { none=55, few=25, some=40, heaps=20 }
+      secrets = { few=65, some=40, heaps=10 }
+      caves = { none=60, few=35, some=8, heaps=3 }
+      barrels = { none=45, few=15, some=5, heaps=4 }
     }
 
     monster_prefs =
     {
-      zombie  = 0.3
-      shooter = 0.6
+      zombie  = 0.5
+      shooter = 0.75
+      imp     = 1.5
+      demon   = 1.3
+      spectre = 1.3
       skull   = 2.0
+      Cyberdemon = 1.25
+      Mastermind = 1.5
     }
+
+  -- prefab currently does not actually
+  -- have surfaces to recieve a custom skin
+  hell_metro_Hallway =
+  {
+    env   = "hallway"
+    group = "metro"
+    prob  = 12
+
+    walls =
+    {
+      BROWN1   = 50
+    }
+
+    floors =
+    {
+      FLAT4  = 50
+    }
+
+    ceilings =
+    {
+      CEIL3_5 = 50
+    }
+  }
 
     scenic_fence =
     {
-      MIDBARS3 = 50
+      MIDBRN1 = 3
+      MIDGRATE = 12
     }
 
-    ceil_light_prob = 20
+    ceil_light_prob = 35
   }
 
 
   ---- Episode 4 ----
 
-  -- Thy Flesh Consumed by Chris Pisarczyk
+  -- Thy Flesh Consumed by Chris Pisarczyk / Glaice
   -- Basically a modified version of "hell" to match id's E4 better
 
   flesh =
@@ -868,7 +1250,20 @@ ULTDOOM.THEMES =
       ROCKRED1 = 60
       ASHWALL  = 40
       SP_ROCK1 = 40
-      GRAYVINE = 20
+      BROWNHUG = 20
+    }
+
+    fences =
+    {
+     WOOD5 = 50
+     WOOD3 = 50
+     STONE = 50
+     STONE3 = 50
+     ICKWALL3 = 30
+     BROVINE = 30
+     ASHWALL = 30
+     SKIN2 = 20
+     SKINFACE = 20
     }
 
     prefab_remap =
@@ -892,46 +1287,164 @@ ULTDOOM.THEMES =
       PLAIN = 120
       liquid_plain = 10
       liquid_blood = 10
-      floor_skulls = 20
+      floor_skulls = 15
       floor_glowingrock = 10
       floor_snakes = 5
+      liquid_firelava = 5
+      floor_snakes2 = 5
     }
 
     ceiling_sinks =
     {
-      PLAIN = 50
+      PLAIN = 120
       sky_metal = 20
       sky_plain = 20
       light_diamond = 10
       light_hell_red = 20
       light_hell_lava = 5
       ceil_redash = 5
+      sky_urban_1 = 5
+      sky_urban_3 = 4
+      sky_hell_2 = 4
+      sky_hell_9 = 3
+      light_side4 = 3
+      ceil_vdark2 = 6
+      ceil_icky = 5
+      ceil_water = 4
+      ceil_blood = 4
+      ceil_sprock = 3
+      sky_hell_13 = 3
+      sky_hell_14 = 4
+      sky_hell_15 = 4
     }
 
     wall_groups =
     {
-      PLAIN = 80
-      torches1 = 40
-      torches2 = 15
-      low_gap = 20
-      runes1 = 7
-      runes2 = 7
-      runes3 = 7
-      cross1 = 7
-      cross2 = 15
+      PLAIN = 150
+      torches2 = 30 --red
+      torches3 = 30 --blue
+      torches1 = 30 --green
+      torches6 = 10 --candelabra
+      torches8 = 10 --evil eye
+      torches10 = 7 --skull rock
+      lowhell1 = 4
+      lowhell2 = 2
+      lowhell3 = 4
+      runes1 = 5
+      runes2 = 5
+      runes3 = 5
+      runes4 = 5
+      runes5 = 5
+      cross1 = 5
+      cross2 = 12
+      cross3 = 5
+      cross4 = 5
+      cross5 = 10
+      mid_band_hell = 2
+      gtd_wall_hell_bloodgutters = 30
+      gtd_wall_tech_windows_topcorner = 35
+      gtd_wall_hell_vaults = 40
+      gtd_generic_beamed_inset = 40
+      gtd_writhing_mass = 30
+      gtd_library = 40
+      gtd_furnace = 20
+      gtd_furnace_face = 20
+      gtd_wall_marbface = 30
+      gtd_wall_quakish_insets = 25
+    }
+
+    passable_decor =
+    {
+      gibs = 70
+      gibbed_player = 30
+      dead_player = 40
+      dead_zombie = 2
+      dead_shooter = 2
+      dead_imp = 1
+      dead_demon = 1
+      dead_caco  = 1
+    }
+
+    park_decor =
+    {
+      burnt_tree = 95
+      brown_stub = 55
+      big_tree = 45
+      evil_eye   = 7
+      skull_rock = 5
+      skull_cairn = 7
+      skull_pole = 5
+      skull_kebab = 5
+      green_pillar = 3
+      green_column  = 3
+      green_column_hrt = 2
+      red_pillar = 3
+      red_column = 3
+      red_column_skl = 2
     }
 
     monster_prefs =
     {
-      zombie = 0.6
-      shooter = 0.8
-      skull = 1.2
-      demon = 1.5
+      zombie  = 0.8
+      shooter = 1.25
+      imp     = 2.0
+      demon   = 1.1
+      spectre = 1.1
+      skull   = 0.7
+      Cyberdemon = 1.5
+      Mastermind = 1.5
     }
+
+    style_list =
+    {
+      doors = { none=10, few=30, some=65, heaps=20 }
+      outdoors = { none=10, few=35, some=60, heaps=15 }
+      steepness = { few=25, some=75, heaps=30 }
+      pictures = { few=30, some=50, heaps=70 }
+      big_rooms = { none=25, few=40, some=15, heaps=10 }
+      ambushes = { few=5, some=25, heaps=65 }
+      hallways = { none=20, few=60, some=15, heaps=5 }
+      teleporters = { none=15, few=25, some=60, heaps=10 }
+      keys = { none=15, few=40, some=60, heaps=25 }
+      liquids = { none=20, few=45, some=25, heaps=15 }
+      traps = { few=20, some=40, heaps=80 }
+      switches = { none=25, few=60, some=35, heaps=10 }
+      cages    = { none=15, few=25, some=65, heaps=10 }
+      symmetry = { none=55, few=25, some=40, heaps=20 }
+      secrets = { few=45, some=40, heaps=10 }
+      caves = { none=60, few=35, some=8, heaps=3 }
+      barrels = { none=45, few=15, some=5, heaps=4 }
+    }
+
+  -- prefab currently does not actually
+  -- have surfaces to recieve a custom skin
+  flesh_metro_Hallway =
+  {
+    env   = "hallway"
+    group = "metro"
+    prob  = 20
+
+    walls =
+    {
+      BROWN1   = 50
+    }
+
+    floors =
+    {
+      FLAT4  = 50
+    }
+
+    ceilings =
+    {
+      CEIL3_5 = 50
+    }
+  }
+
+    ceil_light_prob = 45
 
     scenic_fence =
     {
-      MIDBARS3 = 50
+      MIDGRATE = 50
     }
   }
 }
