@@ -791,8 +791,8 @@ GLAICE_MATERIALS = {
   DARKF03 = { t="METL01",  f="DARKF03" }
   FLOOR46D = { t="PIPEDRK1",  f="FLOOR46D" }
   FLOOR46E = { t="PIPEDRK1",  f="FLOOR46E" }
-  FLAT15 = { t="FLAT15",  f="COMPRED" }
-  FLOOR1_2 = { t="FLOOR1_2",  f="COMPRED" }
+  FLAT15 = { t="COMPRED",  f="FLAT15" }
+  FLOOR1_2 = { f="FLOOR1_2",  t="COMPRED" }
   FLOOR4_7 = { f="FLOOR4_7", t="STARGR1" }
   FLOOR51C = { f="FLOOR51C", t="METAL1" }
   FLOOR7_3 = { f="FLOOR7_3", t="GOTH11" }
