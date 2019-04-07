@@ -420,6 +420,12 @@ GLAICE_DOOM1_MATERIALS = {
   GRAYMETA = { t="GRAYMETA", f="SHINY04" } -- Cyan
   GRAYMETB = { t="GRAYMETB", f="SHINY04" } -- Purple-ish
   GRAYMETC = { t="GRAYMETC", f="SHINY04" } -- Orange
+  MET2  = { t="MET2", f="CEIL5_2" } -- METAL2
+  MET3  = { t="MET3", f="CEIL5_2" } -- METAL3
+  MET4  = { t="MET4", f="CEIL5_2" } -- METAL4
+  MET5  = { t="MET5", f="CEIL5_2" } -- METAL5
+  MET6  = { t="MET6", f="CEIL5_2" } -- METAL6
+  MET7  = { t="MET7", f="CEIL5_2" } -- METAL7
   METACOMP  = { t="METACOMP", f="CEIL5_2" }
   METAL8  = { t="METAL8", f="CEIL5_2" }
   METAL9  = { t="METAL9", f="CEIL5_2" }
@@ -703,11 +709,11 @@ GLAICE_DOOM1_MATERIALS = {
 
   -- Candles / Misc Animated
   CANDLE1     = { t="CANDLE1", f="MAGMA1", sane=1 } -- Burning candles, for decor, not walls
-  FIREBLK1 = { t="FIREBLK1", f="FLOOR6_2" } -- Black FIREBLU1
-  LAVBLAK1 = { t="LAVBLAK1", f="RROCK03" } -- Black FIRELAVA
-  LAVBLUE1 = { t="LAVBLUE1", f="FASHBLU" } -- Blue FIRELAVA
-  LAVGREN1 = { t="LAVGREN1", f="FASHGREN" } -- Green FIRELAVA
-  LAVWHIT1 = { t="LAVWHIT1", f="FASHWITE" } -- White FIRELAVA
+  FIREBLK1 = { t="FIREBLK1", f="FLOOR6_2", sane=1 } -- Black FIREBLU1
+  LAVBLAK1 = { t="LAVBLAK1", f="RROCK03", sane=1 } -- Black FIRELAVA
+  LAVBLUE1 = { t="LAVBLUE1", f="FASHBLU", sane=1 } -- Blue FIRELAVA
+  LAVGREN1 = { t="LAVGREN1", f="FASHGREN", sane=1 } -- Green FIRELAVA
+  LAVWHIT1 = { t="LAVWHIT1", f="FASHWITE", sane=1 } -- White FIRELAVA
 
   -- Switches
   SW1GOTH = { t="SW1GOTH", f="CEIL5_2" }
@@ -755,7 +761,7 @@ GLAICE_DOOM1_MATERIALS = {
   OBDNBNR1 = { t="OBDNBNR1", f="CRATOP2" } -- OBLIGE flag, yellow
   OBDNBNR2 = { t="OBDNBNR2", f="SFLR6_4" } -- OBLIGE flag, hellish
 
- -- Exiting textures with new definitions, especially so some prefabs using Doom 2 textures should
+ -- Existing textures with new definitions, especially so some prefabs using Doom 2 textures should
  -- look a bit better with replacements for some of the Doom1 textures included in the Epic texture
  -- set with the included Doom 2 flats.
 
@@ -781,6 +787,12 @@ GLAICE_DOOM1_MATERIALS = {
   FIREWALA = { t="FIREWALA", f="FLOOR6_1" }
   MARBFAC4 = { t="MBGRY2", f="DEM1_5" }
   MARBGRAY = { t="MBGRY",  f="FLOOR7_2" }
+  METAL2  = { t="MET2", f="CEIL5_2" }
+  METAL3  = { t="MET3", f="CEIL5_2" }
+  METAL4  = { t="MET4", f="CEIL5_2" }
+  METAL5  = { t="MET5", f="CEIL5_2" }
+  METAL6  = { t="MET6", f="CEIL5_2" }
+  METAL7  = { t="MET7", f="CEIL5_2" }
   PANBOOK  = { t="PANBOOK4", f="RROCK09" }
   PANCASE1 = { t="PANNY09", f="RROCK09" }
   PANCASE2 = { t="PANNYA",  f="RROCK09" }
