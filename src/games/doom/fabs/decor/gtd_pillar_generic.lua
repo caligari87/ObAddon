@@ -68,7 +68,6 @@ PREFABS.Pillar_gtd_generic2_hell =
   {
     FIRELAVA = 20
     FIREMAG = 20
-    _WALL = 50
   }
 }
 
