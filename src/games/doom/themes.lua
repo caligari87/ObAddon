@@ -788,6 +788,15 @@ DOOM.SINKS =
     trim_mat = "BLAKWAL2"
     trim_dz  = 0
   }
+  
+   ceil_vdark2 =
+  {
+    mat   = "CEIL4_1"
+    dz    = 64
+
+    trim_mat = "COMPSPAN"
+    trim_dz  = 0
+  }
 
   ceil_icky =
   {
