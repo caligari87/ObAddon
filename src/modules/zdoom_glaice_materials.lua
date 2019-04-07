@@ -702,12 +702,12 @@ GLAICE_MATERIALS = {
    SLADRIP1 = { t="SLADRIP1", f="FLOOR7_1" }
 
   -- Candles / Misc Animated
-  CANDLE1     = { t="CANDLE1", f="MAGMA1", sane=1 } -- Burning candles, for decor, not walls
-  FIREBLK1 = { t="FIREBLK1", f="FLOOR6_2" } -- Black FIREBLU1
-  LAVBLAK1 = { t="LAVBLAK1", f="RROCK03" } -- Black FIRELAVA
-  LAVBLUE1 = { t="LAVBLUE1", f="FASHBLU" } -- Blue FIRELAVA
-  LAVGREN1 = { t="LAVGREN1", f="FASHGREN" } -- Green FIRELAVA
-  LAVWHIT1 = { t="LAVWHIT1", f="FASHWITE" } -- White FIRELAVA
+  CANDLE1  = { t="CANDLE1", f="MAGMA1", sane=1 } -- Burning candles, for decor, not walls
+  FIREBLK1 = { t="FIREBLK1", f="FLOOR6_2", sane=1 } -- Black FIREBLU1
+  LAVBLAK1 = { t="LAVBLAK1", f="RROCK03", sane=1 } -- Black FIRELAVA
+  LAVBLUE1 = { t="LAVBLUE1", f="FASHBLU", sane=1 } -- Blue FIRELAVA
+  LAVGREN1 = { t="LAVGREN1", f="FASHGREN", sane=1 } -- Green FIRELAVA
+  LAVWHIT1 = { t="LAVWHIT1", f="FASHWITE", sane=1 } -- White FIRELAVA
 
   -- Switches
   SW1GOTH = { t="SW1GOTH", f="CEIL5_2" }
