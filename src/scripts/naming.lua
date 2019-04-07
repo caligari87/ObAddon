@@ -1910,15 +1910,35 @@ namelib.NAMES =
       -- contributors and their shenanigans
 
       -- Glaice's additions
-      ["Dead Base: %a"] = 10
-      ["%cs Warzone"] = 7
-      ["%cs %p"] = 7
+      ["%a %q"] = 10
+      ["%a %j"] = 10
+      ["Dead Base: %a"] = 5
+      ["%j and %j"] = 5
+      ["%cs Warzone"] = 5
+      ["%cs %p"] = 5
       ["Silence: %a %j"] = 5
       ["Crystal %p"] = 5
-      ["Vacation at NOUNGENEXOTIC"] = 5
-      ["Vacation at NOUNGENANGLICAN"] = 5
+      ["Hellfire: %j"] = 5
+      ["Portal to %j"] = 5
+      ["%p of %c"] = 5
+      ["%c is Missing"] = 5
+      ["%c did What?"] = 5
+      ["%j for the %p"] = 5
+      ["The %p: %j"] = 5
+      ["Discovery of NOUNGENEXOTIC"] = 5
+      ["Discovery of NOUNGENANGLICAN"] = 5
+      ["NOUNGENEXOTIC %j"] = 5
+      ["NOUNGENANGLICAN %j"] = 5
       ["Breakdown: %j"] = 5
       ["Crushed: %j"] = 5
+      ["Overdose: %a"] = 5
+      ["Below the %p"] = 4
+      ["%j: Downfall"] = 4
+      ["Death by %j"] = 4
+      ["Going to NOUNGENEXOTIC"] = 4
+      ["Going to NOUNGENANGLICAN"] = 4
+      ["Vacation at NOUNGENEXOTIC"] = 3
+      ["Vacation at NOUNGENANGLICAN"] = 3
 
     }
 
