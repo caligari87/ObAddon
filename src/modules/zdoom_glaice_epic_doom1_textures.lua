@@ -29,7 +29,7 @@ GLAICE_DOOM1_EPIC_TEXTURES.YES_NO =
 }
 
 function GLAICE_DOOM1_EPIC_TEXTURES.setup(self)
-  GLAICE_DOOM1_DOOM1_EPIC_TEXTURES.put_new_materials()
+  GLAICE_DOOM1_EPIC_TEXTURES.put_new_materials()
   PARAM.epic_textures_activated = true
 
   for name,opt in pairs(self.options) do
@@ -88,19 +88,19 @@ function GLAICE_DOOM1_EPIC_TEXTURES.put_new_materials()
 
   -- NATURALS
   for name,prob in pairs(GLAICE_DOOM1_TECH_NATURALS) do
-    GAME.ROOM_THEMES.tech_Outdoors_generic.naturals[name] = prob
+    GAME.ROOM_THEMES.tech_Outdoors.naturals[name] = prob
   end
 
   for name,prob in pairs(GLAICE_DOOM1_DEIMOS_NATURALS) do
-    GAME.ROOM_THEMES.deimos_Outdoors_generic.naturals[name] = prob
+    GAME.ROOM_THEMES.deimos_Outdoors.naturals[name] = prob
   end
 
   for name,prob in pairs(GLAICE_DOOM1_HELL_NATURALS) do
-    GAME.ROOM_THEMES.hell_Outdoors_generic.naturals[name] = prob
+    GAME.ROOM_THEMES.hell_Outdoors.naturals[name] = prob
   end
 
   for name,prob in pairs(GLAICE_DOOM1_FLESH_NATURALS) do
-    GAME.ROOM_THEMES.flesh_Outdoors_generic.naturals[name] = prob
+    GAME.ROOM_THEMES.flesh_Outdoors.naturals[name] = prob
   end
 
   -- SINKS
