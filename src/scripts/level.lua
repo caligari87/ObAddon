@@ -226,9 +226,19 @@ end
 
 function Episode_pick_names()
 
-  -- Episode title gen test - DELETEMELATER
+  --== Name Generator Test ==-- MSSP
+
+  -- If you want to add new names into the title generator
+  -- and test a mass of outputs without having to generate
+  -- entire WAD's just to see names, uncomment
+  -- the code block below. You can replace the
+  -- parameter in Naming_grab_one with any of the themes
+  -- i.e. TITLE, SUB_TITLE, EPISODE, TECH, URBAN, GOTHIC
+  -- and so on...
+
+  --[[
   local i = 1
-  gui.printf("\nEpisode Name Generator Test:\n")
+  gui.printf("\nGenerator Test:\n")
   while i <= 128 do
     episode_test_name = Naming_grab_one("EPISODE")
     gui.printf(episode_test_name .. " | ")
@@ -238,6 +248,7 @@ function Episode_pick_names()
     i = i + 1
   end
   gui.printf("\n")
+  ]]
 
   -- game name (for title screen)
   if not GAME.title then
