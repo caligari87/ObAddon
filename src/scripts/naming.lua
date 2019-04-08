@@ -1919,7 +1919,11 @@ namelib.NAMES =
         Zone = 10
 
         -- geopolitical
+        Colony = 5
+        Commune = 3
+        City-state = 3
         Dominion = 10
+        Duchy = 5
         Kingdom = 7
         Hegemony = 10
 
@@ -2018,6 +2022,7 @@ namelib.NAMES =
 
         -- time
         Dawn = 7
+        Day = 7
         Dusk = 10
         Midnight = 10
         Night = 10
@@ -2058,6 +2063,7 @@ namelib.NAMES =
       a = -- adjectives
       {
         -- elements
+        Blazing = 15
         Cold = 20
         Frozen = 20
         Fiery = 20
@@ -2066,6 +2072,7 @@ namelib.NAMES =
         Molten = 15
 
         -- lighting
+        Bright = 15
         Dark = 20
         Lambent = 15
         Lightless = 10
@@ -2077,9 +2084,12 @@ namelib.NAMES =
 
         -- color
         Black = 10
+        Blue = 10
         Red = 10
         Gray = 10
+        Green = 10
         White = 10
+        Yellow = 10
         ["Fire-blue"] = 10 -- of course
 
         -- material
@@ -2101,7 +2111,9 @@ namelib.NAMES =
         Colossal = 10
         Eternal = 10
         Gargantuan = 10
+        Giant = 10
         Soaring = 10
+        Massive = 10
         Towering = 10
         Titanic = 10
         Infinite = 10
@@ -2112,6 +2124,7 @@ namelib.NAMES =
         Cruel = 10
         Depraved = 5
         Despicable = 10
+        Insane = 10
         Lonely = 20
         Malignant = 10
         Merciless = 10
@@ -2244,6 +2257,7 @@ namelib.NAMES =
         Devastation = 10
         Extermination = 10
         Extinction = 10
+        Genocide = 5
         Ruin = 10
         Slaughter = 10
         Treachery = 7
@@ -2273,17 +2287,21 @@ namelib.NAMES =
         Slime = 10
         Sludge = 10
         Slush = 5
+        Smog = 10
+        Soot = 10
 
         -- creatures and mystical entities
         Beasts = 10
         Devils = 10
         Demons = 10
+        Imps = 10
         Monsters = 10
         Souls = 10
         Zombies = 10
 
         -- feels
         Agony = 10
+        Anger = 5
         Despair = 10
         Doom = 5
         Fear = 10
@@ -2651,6 +2669,7 @@ namelib.NAMES =
         Menacing = 20
         Morbid = 20
         Nefarious = 15
+        Raging = 10
         Savage = 30
         Sonorous = 10
         Sordid = 5
@@ -2672,6 +2691,7 @@ namelib.NAMES =
         Desolate = 15
         Forgotten = 10
         Forsaken = 10
+        Lonely = 10
         Lost  = 10
         Oppressive = 10
         Ravaged = 10
@@ -2694,6 +2714,7 @@ namelib.NAMES =
         Ghastly = 10
         Ghoulish  = 10
         Haunted = 10
+        Hellish = 10
         Malicious = 10
         Malevolent = 10
         Monstrous = 15
@@ -3263,6 +3284,7 @@ namelib.NAMES =
         ["R E D U X"] = 10
         ["Revisited"] = 10
         ["Reloaded"] = 10
+        ["Remastered"] = 10
         ["Special Edition"] = 10
         ["Limited Edition"] = 10
         ["Anniversary Edition"] = 10
@@ -3446,6 +3468,8 @@ namelib.NAMES =
         ["The Official Video Game Tie-in"] = 20
         ["No Microtransactions"] = 20
         ["The Original Series"] = 20
+        ["Day One Edition"] = 20
+        ["Game of the Year Edition"] = 20
         ["11/10 IGN"] = 20
       }
     }
@@ -3498,6 +3522,8 @@ namelib.NAMES =
       ["The Zombie Lord"] = 20
 
       ["Doctor Kruger"] = 10
+      
+      ["Hans Grosse"] = 5
     }
 
     lexicon = {}
