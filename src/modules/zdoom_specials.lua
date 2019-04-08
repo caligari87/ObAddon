@@ -455,9 +455,17 @@ function ZDOOM_SPECIALS.do_special_stuff()
       end
     end
 
+    -- fix for level name string linking between Doom VS Doom 2
+    local name_string_map_id
+    if OB_CONFIG.game == "doom1" or OB_CONFIG.game == "ultdoom" then
+      name_string_map_id = map_id
+    else
+      name_string_map_id = map_num
+    end
+
     local mapinfo =
     {
-      'map ' .. map_id .. ' lookup HUSTR_'.. map_num ..'\n'
+      'map ' .. map_id .. ' lookup HUSTR_'.. name_string_map_id ..'\n'
       '{\n'
       --'  cluster = 1\n'
       '  sky1 = "' .. sky_tex .. '"\n'
