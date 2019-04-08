@@ -1420,7 +1420,7 @@ DOOM.THEMES =
 
     wall_groups =
     {
-      PLAIN = 300
+      PLAIN = 175
       torches2 = 25 --red
       torches3 = 25 --blue
       torches1 = 25 --green
@@ -1746,7 +1746,7 @@ DOOM.THEMES =
 
     wall_groups =
     {
-      PLAIN = 300
+      PLAIN = 425
       torches2 = 30 --red
       torches3 = 30 --blue
       torches1 = 30 --green
