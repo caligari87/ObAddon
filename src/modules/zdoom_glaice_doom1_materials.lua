@@ -811,6 +811,7 @@ GLAICE_DOOM1_MATERIALS = {
   ROCK3    = { t="ROK10",   f="RROCK12" }
   ROCK4    = { t="ROK01",   f="RROCK15" } -- Can't think of a better flat for this one
   ROCK5    = { t="ROK02",   f="RROCK09" }
+  SFALL1    = { t="NFALL1",   f="NUKAGE1" }
   SILVER2  = { t="SILVER2R", f="FLAT23" }
   SILVER3  = { t="PLANET1",  f="FLAT23" }
   SPACEW3  = { t="CONSOLE1", f="CEIL5_1" }
@@ -822,6 +823,7 @@ GLAICE_DOOM1_MATERIALS = {
   STONE4   = { t="STON4",    f="FLAT5_4" }
   STONE6   = { t="STON6", f="FLOOR7_1" }
   STUCCO   = { t="STUC01", f="FLAT5_5" }
+  SW1MET2  = { t="SW1DIRT",   f="FLOOR7_1" }
   TANROCK4 = { t="TNROK1", f="RROCK09" }
   TANROCK5 = { t="TNROK2", f="FLOOR7_1" }
   TEKGREN2 = { t="TEKGRN01",   f="RROCK20" }
