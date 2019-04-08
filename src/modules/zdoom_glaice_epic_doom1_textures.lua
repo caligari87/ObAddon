@@ -145,7 +145,7 @@ function GLAICE_DOOM1_EPIC_TEXTURES.put_new_materials()
     GAME.THEMES.tech.scenic_fence[name] = prob
   end
 
-  for name,prob in pairs(GLAICE_DEIMOS_SCENIC_FENCES) do
+  for name,prob in pairs(GLAICE_DOOM1_DEIMOS_SCENIC_FENCES) do
     GAME.THEMES.deimos.scenic_fence[name] = prob
   end
 
