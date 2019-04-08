@@ -1784,7 +1784,7 @@ ULTDOOM.ROOM_THEMES =
   }
 
 
-  tech_Outdoors =
+  tech_Outdoors_Generic =
   {
     env = "outdoor"
     prob = 50
@@ -2120,7 +2120,7 @@ ULTDOOM.ROOM_THEMES =
   }
 
 
-  deimos_Outdoors =
+  deimos_Outdoors_Generic =
   {
     env = "outdoor"
     prob = 50
@@ -2387,7 +2387,7 @@ ULTDOOM.ROOM_THEMES =
   }
 
 
-  hell_Outdoors =
+  hell_Outdoors_Generic =
   {
     env = "outdoor"
     prob = 50
