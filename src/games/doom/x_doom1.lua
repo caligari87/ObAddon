@@ -1,9 +1,10 @@
 --------------------------------------------------------------------
---  DOOM THEMES
+--  DOOM 1 / ULTIMATE DOOM
 --------------------------------------------------------------------
 --
 --  Copyright (C) 2006-2017 Andrew Apted
---  Copyright (C) 2011,2017 Chris Pisarczyk
+--  Copyright (C) 2011,2014 Chris Pisarczyk
+--  Copyright (C) 2019 MsrSgtShooterPerson
 --
 --  This program is free software; you can redistribute it and/or
 --  modify it under the terms of the GNU General Public License
@@ -11,885 +12,417 @@
 --  of the License, or (at your option) any later version.
 --
 --------------------------------------------------------------------
+--
+--  NOTE:
+--    Doom 1 and Ultimate Doom are treated here somewhat like a
+--    mod of Doom 2.  Hence the MONSTERS table here removes all
+--    the Doom 2 monsters and weapons (etc...)
+--
+--    This is not ideal, but seems better than the previous way
+--    of mixing the two games in one file (DOOM1 vs DOOM2 tables)
+--    which was probably very confusing to most people.
+--
+
+ULTDOOM = { }
 
 
-DOOM.SINKS =
+ULTDOOM.PARAMETERS =
 {
-  -- sky holes --
+  skip_monsters = { 15,25,35 }
 
-  sky_plain =
-  {
-    mat   = "_SKY"
-    dz    = 64
-    light = 16
-  }
+  episodic_monsters = true
 
-  sky_metal =
-  {
-    mat   = "_SKY"
-    dz    = 48
-    light = 16
-
-    trim_mat = "METAL"
-    trim_dz  = -9
-    trim_light = 16
-  }
-
-  sky_shiny =
-  {
-    mat   = "_SKY"
-    dz    = 32
-    light = 16
-
-    trim_mat = "FLAT23"
-    trim_dz  = -5
-    trim_light = 16
-  }
-
-  sky_red =
-  {
-    mat   = "_SKY"
-    dz    = 32
-    light = 16
-
-    trim_mat = "REDWALL"
-    trim_dz  = -5
-    trim_light = 16
-  }
-
-
-  sky_tech1 =
-  {
-    mat   = "_SKY"
-    dz    = 128
-    light = 16
-
-    trim_mat = "STARBR2"
-    trim_dz  = 0
-  }
-
-  sky_tech2 =
-  {
-    mat   = "_SKY"
-    dz    = 128
-    light = 16
-
-    trim_mat = "STARG2"
-    trim_dz  = 0
-  }
-
-  sky_tech3 =
-  {
-    mat   = "_SKY"
-    dz    = 144
-    light = 16
-
-    trim_mat = "COMPTALL"
-    trim_dz  = 16
-  }
-
-
-  sky_urban_1 =
-  {
-    mat   = "_SKY"
-    dz    = 64
-    light = 16
-
-    trim_mat = "WOOD4"
-    trim_dz  = 0
-  }
-
-  sky_urban_2 =
-  {
-    mat   = "_SKY"
-    dz    = 72
-    light = 16
-
-    trim_mat = "BRONZE1"
-    trim_dz  = 0
-  }
-
-  sky_urban_3 =
-  {
-    mat   = "_SKY"
-    dz    = 96
-    light = 16
-
-    trim_mat = "SLADSKUL"
-    trim_dz  = 0
-  }
-
-
-  sky_hell_1 =
-  {
-    mat   = "_SKY"
-    dz    = 128
-    light = 16
-
-    trim_mat = "WOODMET2"
-    trim_dz  = 0
-  }
-
-  sky_hell_2 =
-  {
-    mat   = "_SKY"
-    dz    = 128
-    light = 16
-
-    trim_mat = "SKINSYMB"
-    trim_dz  = 0
-  }
-
-  sky_hell_3 =
-  {
-    mat   = "_SKY"
-    dz    = 64
-    light = 16
-
-    trim_mat = "BIGBRIK2"
-    trim_dz  = 0
-  }
-
--- New stuff
-
-  sky_hell_4 =
-  {
-    mat   = "_SKY"
-    dz    = 128
-    light = 16
-
-    trim_mat = "MARBFAC4"
-    trim_dz  = 0
-  }
-
-  sky_bronze =
-  {
-    mat   = "_SKY"
-    dz    = 48
-    light = 16
-
-    trim_mat = "BRONZE1"
-    trim_dz  = -9
-    trim_light = 16
-  }
-
-  sky_metal2 =
-  {
-    mat   = "_SKY"
-    dz    = 48
-    light = 16
-
-    trim_mat = "METAL2"
-    trim_dz  = -9
-    trim_light = 16
-  }
-
-  sky_pipes =
-  {
-    mat   = "_SKY"
-    dz    = 128
-    light = 16
-
-    trim_mat = "PIPEWAL2"
-    trim_dz  = 0
-  }
-
-  sky_hell_5 =
-  {
-    mat   = "_SKY"
-    dz    = 64
-    light = 16
-
-    trim_mat = "BIGBRIK1"
-    trim_dz  = 0
-  }
-
-  sky_tech4 =
-  {
-    mat   = "_SKY"
-    dz    = 144
-    light = 16
-
-    trim_mat = "TEKWALL4"
-    trim_dz  = 16
-  }
-
-  sky_stone_1 =
-  {
-    mat   = "_SKY"
-    dz    = 64
-    light = 16
-
-    trim_mat = "STONE2"
-    trim_dz  = 0
-  }
-
-  sky_stone_2 =
-  {
-    mat   = "_SKY"
-    dz    = 64
-    light = 16
-
-    trim_mat = "STONE3"
-    trim_dz  = 0
-  }
-
-  sky_hell_6 =
-  {
-    mat   = "_SKY"
-    dz    = 128
-    light = 16
-
-    trim_mat = "WOODMET4"
-    trim_dz  = 0
-  }
-
-  sky_hell_7 =
-  {
-    mat   = "_SKY"
-    dz    = 128
-    light = 16
-
-    trim_mat = "GSTVINE1"
-    trim_dz  = 0
-  }
-
-  sky_hell_8 =
-  {
-    mat   = "_SKY"
-    dz    = 128
-    light = 16
-
-    trim_mat = "GSTVINE2"
-    trim_dz  = 0
-  }
-
-  sky_hell_9 =
-  {
-    mat   = "_SKY"
-    dz    = 80
-    light = 16
-
-    trim_mat = "SP_FACE1"
-    trim_dz  = 0
-  }
-
-  sky_tech5 =
-  {
-    mat   = "_SKY"
-    dz    = 128
-    light = 16
-
-    trim_mat = "GRAYTALL"
-    trim_dz  = 16
-  }
-
-  sky_tech6 =
-  {
-    mat   = "_SKY"
-    dz    = 128
-    light = 16
-
-    trim_mat = "BROVINE2"
-    trim_dz  = 16
-  }
-
-  sky_tech7 =
-  {
-    mat   = "_SKY"
-    dz    = 48
-    light = 16
-
-    trim_mat = "SHAWN3"
-    trim_dz  = 16
-  }
-
-  sky_tech8 =
-  {
-    mat   = "_SKY"
-    dz    = 128
-    light = 16
-
-    trim_mat = "METAL1"
-    trim_dz  = 16
-  }
-
-  sky_tech9 =
-  {
-    mat   = "_SKY"
-    dz    = 128
-    light = 16
-
-    trim_mat = "GRAYBIG"
-    trim_dz  = 16
-  }
-
-  sky_cement =
-  {
-    mat   = "_SKY"
-    dz    = 64
-    light = 16
-
-    trim_mat = "CEMENT9"
-    trim_dz  = 16
-  }
-
-  sky_brick10 =
-  {
-    mat   = "_SKY"
-    dz    = 64
-    light = 16
-
-    trim_mat = "BRICK10"
-    trim_dz  = 16
-  }
-
-  sky_brownpip =
-  {
-    mat   = "_SKY"
-    dz    = 112
-    light = 16
-
-    trim_mat = "BROWNPIP"
-    trim_dz  = 16
-  }
-
-  sky_crackle1 =
-  {
-    mat   = "_SKY"
-    dz    = 80
-    light = 16
-
-    trim_mat = "CRACKLE2"
-    trim_dz  = 16
-  }
-
-  sky_crackle2 =
-  {
-    mat   = "_SKY"
-    dz    = 64
-    light = 16
-
-    trim_mat = "CRACKLE4"
-    trim_dz  = 16
-  }
-
-  sky_fireblu =
-  {
-    mat   = "_SKY"
-    dz    = 80
-    light = 32
-
-    trim_mat = "FIREBLU2"
-    trim_dz  = 16
-  }
-
-  sky_modwall =
-  {
-    mat   = "_SKY"
-    dz    = 64
-    light = 16
-
-    trim_mat = "MODWALL3"
-    trim_dz  = 16
-  }
-
-  sky_hell_10 =
-  {
-    mat   = "_SKY"
-    dz    = 128
-    light = 16
-
-    trim_mat = "GSTGARG"
-    trim_dz  = 16
-  }
-
-  sky_hell_11 =
-  {
-    mat   = "_SKY"
-    dz    = 128
-    light = 16
-
-    trim_mat = "GSTLION"
-    trim_dz  = 16
-  }
-
-  sky_hell_12 =
-  {
-    mat   = "_SKY"
-    dz    = 128
-    light = 16
-
-    trim_mat = "GSTSATYR"
-    trim_dz  = 16
-  }
-
-  sky_hell_13 =
-  {
-    mat   = "_SKY"
-    dz    = 96
-    light = 16
-
-    trim_mat = "SKSPINE2"
-    trim_dz  = 16
-  }
-
-  sky_hell_14 =
-  {
-    mat   = "_SKY"
-    dz    = 128
-    light = 16
-
-    trim_mat = "SKINCUT"
-    trim_dz  = 16
-  }
-
-  sky_hell_15 =
-  {
-    mat   = "_SKY"
-    dz    = 104
-    light = 16
-
-    trim_mat = "SKINLOW"
-    trim_dz  = 0
-  }
-
--- End new
-
-  -- liquid floor --
-
-  liquid_plain =
-  {
-    mat = "_LIQUID"
-    dz  = -12
-  }
-
-  liquid_blood =
-  {
-    mat = "BLOOD1"
-    dz  = -12
-    --light = 16
-  }
-
-  liquid_shiny =
-  {
-    mat = "_LIQUID"
-    dz  = -8
-
-    trim_mat = "FLAT23"
-    trim_dz  = 0
-  }
-
-  liquid_metal =
-  {
-    mat = "_LIQUID"
-    dz  = -8
-
-    trim_mat = "METAL"
-    trim_dz  = 0
-  }
-
--- New stuff here --
-
-  liquid_marble =
-  {
-    mat = "_LIQUID"
-    dz  = -12
-
-    trim_mat = "MARBGRAY"
-    trim_dz  = 0
-  }
-
-  liquid_ash =
-  {
-    mat = "_LIQUID"
-    dz  = -10
-
-    trim_mat = "ASHWALL3"
-    trim_dz  = 2
-  }
-
-  liquid_firelava =
-  {
-    mat = "_LIQUID"
-    dz  = -8
-    light = 40
-
-    trim_mat = "FIREBLU1"
-    trim_dz  = 2
-  }
-
-  liquid_metal2 =
-  {
-    mat = "_LIQUID"
-    dz  = -8
-
-    trim_mat = "METAL2"
-    trim_dz  = 0
-  }
-
-  liquid_bstone =
-  {
-    mat = "_LIQUID"
-    dz  = -8
-
-    trim_mat = "BSTONE1"
-    trim_dz  = 2
-  }
-
-  liquid_bstone2 =
-  {
-    mat = "_LIQUID"
-    dz  = -8
-
-    trim_mat = "BSTONE2"
-    trim_dz  = 2
-  }
-
--- End new --
-
-
-  -- ceiling lights --
-
-  light_red_shiny =
-  {
-    mat = "TLITE6_5"
-    dz  = 4
-    light = 16
-
-    trim_mat = "FLAT23"
-    trim_dz  = -5
-  }
-
-  light_orange_shiny =
-  {
-    mat = "TLITE6_6"
-    dz  = 4
-    light = 16
-
-    trim_mat = "FLAT23"
-    trim_dz  = -5
-  }
-
-  light_brightred_metal =
-  {
-    mat = "FLOOR1_7"
-    dz  = 8
-    light = 32
-
-    trim_mat = "METAL"
-    trim_dz  = -5
-    trim_light = 16
-  }
-
-  light_brightred_metal2 =
-  {
-    mat = "FLOOR1_7"
-    dz  = 8
-    light = 32
-
-    trim_mat = "SHAWN2"
-    trim_dz  = -5
-    trim_light = 16
-  }
-
-  light_diamond =
-  {
-    mat = "TLITE6_1"
-    dz  = 8
-    light = 16
-  }
-
-  light_urban1 =
-  {
-    mat = "CEIL3_4"
-    dz  = 4
-    light = 32
-
-    trim_mat = "METAL"
-    trim_dz  = -5
-  }
-
-  light_hell_red =
-  {
-    mat = "FLAT5_3"
-    dz  = 16
-    light = 16
-  }
-
-  light_hell_lava =
-  {
-    mat = "LAVA1"
-    dz  = 16
-    light = 32
-  }
-
-  light_side1 =
-  {
-    mat = "CEIL4_3"
-    dz  = 16
-    light = 32
-
-    trim_mat = "LITE5"
-    trim_dz  = 0
-  }
-
-  light_side2 =
-  {
-    mat = "SLIME15"
-    dz  = 16
-    light = 16
-
-    trim_mat = "LITE5"
-    trim_dz  = 0
-  }
-
-  light_side3 =
-  {
-    mat = "CEIL5_1"
-    dz  = 16
-    light = 32
-
-    trim_mat = "METAL7"
-    trim_dz  = 0
-  }
-
-  light_side4 =
-  {
-    mat = "CEIL4_2"
-    dz  = 16
-    light = 32
-
-    trim_mat = "LITE5"
-    trim_dz  = 0
-  }
-
-  light_side5 =
-  {
-    mat = "SLIME14"
-    dz  = 16
-    light = 16
-
-    trim_mat = "LITE5"
-    trim_dz  = 0
-  }
-
-  light_side6 =
-  {
-    mat = "CEIL5_2"
-    dz  = 24
-    light = 24
-
-    trim_mat = "BRONZE4"
-    trim_dz  = 0
-  }
-
-  -- misc floor --
-
-  floor_glowingrock =
-  {
-    mat = "RROCK05"
-    dz  = -8
-  }
-
-  floor_skulls =
-  {
-    mat = "FLAT5_6"
-    dz  = -8
-  }
-
-  floor_snakes =
-  {
-    mat = "SFLR6_4"
-    dz  = -8
-  }
-
-  floor_green =
-  {
-    mat = "DEM1_5"
-    dz  = -8
-  }
-
-  floor_red =
-  {
-    mat = "FLOOR6_1"
-    dz  = -8
-  }
-
-  floor_blue =
-  {
-    mat = "FLAT14"
-    dz  = -8
-  }
-
-  floor_blue2 =
-  {
-    mat = "CEIL4_3"
-    dz  = -8
-  }
-
--- New stuff
-
-  floor_glowingrock2 =
-  {
-    mat = "SLIME09"
-    dz  = -8
-  }
-
-  floor_blue3 =
-  {
-    mat = "CEIL4_2"
-    dz  = -8
-  }
-
-  floor_green2 =
-  {
-    mat = "DEM1_6"
-    dz  = -8
-  }
-
-  floor_dirt1 =
-  {
-    mat = "RROCK16"
-    dz  = -8
-  }
-
-  floor_dirt2 =
-  {
-    mat = "RROCK17"
-    dz  = -8
-  }
-
-  floor_dirt3 =
-  {
-    mat = "RROCK18"
-    dz  = -8
-  }
-
-  floor_snakes2 =
-  {
-    mat = "SFLR6_1"
-    dz  = -8
-  }
-
-  -- misc ceiling --
-
-  ceil_redash =
-  {
-    mat = "FLOOR6_1"
-    dz  = 8
-  }
-
-  ceil_vdark =
-  {
-    mat   = "CEIL4_1"
-    dz    = 64
-
-    trim_mat = "BLAKWAL2"
-    trim_dz  = 0
-  }
-
-   ceil_vdark2 =
-  {
-    mat   = "CEIL4_1"
-    dz    = 64
-
-    trim_mat = "COMPSPAN"
-    trim_dz  = 0
-  }
-
-  ceil_icky =
-  {
-    mat   = "FLAT5_4"
-    dz    = 64
-
-    trim_mat = "ICKWALL1"
-    trim_dz  = 64
-  }
-
-  ceil_glowrock =
-  {
-    mat = "RROCK05"
-    dz    = 64
-    light = 16
-
-    trim_mat = "ROCKRED1"
-    trim_dz  = -8
-  }
-
-  ceil_glowrock2 =
-  {
-    mat = "SLIME09"
-    dz    = 64
-    light = 16
-
-    trim_mat = "ROCKRED1"
-    trim_dz  = -8
-  }
-
-  ceil_hotrock =
-  {
-    mat = "RROCK01"
-    dz    = 64
-    light = 24
-
-    trim_mat = "SP_HOT1"
-    trim_dz  = -8
-  }
-
-  ceil_hotrock2 =
-  {
-    mat = "RROCK02"
-    dz    = 64
-    light = 24
-
-    trim_mat = "SP_HOT1"
-    trim_dz  = -8
-  }
-
-  ceil_water =
-  {
-    mat = "FWATER1"
-    dz    = 64
-
-    trim_mat = "STONE2"
-    trim_dz  = -8
-  }
-
-  ceil_blood =
-  {
-    mat = "BLOOD1"
-    dz    = 64
-
-    trim_mat = "STONE3"
-    trim_dz  = -8
-  }
-
-  ceil_sprock =
-  {
-    mat = "MFLR8_3"
-    dz    = 64
-    light = 24
-
-    trim_mat = "SP_ROCK1"
-    trim_dz  = -8
-  }
-
-  floor_streets = --MSSP: Hi! This shouldn't be used anywhere
-  {               --except on streets
-    mat = "CEIL5_1"
-    dz = 2
-    light = 16
-
-    trim_mat = "FLAT1"
-    trim_dz = 2
-    trim_light = 16
-  }
+  doom2_monsters = false
+  doom2_weapons  = false
+  doom2_skies    = false
 }
 
 
+ULTDOOM.MATERIALS =
+{
+  -- These materials are unique to DOOM I / Ultimate DOOM...
 
-DOOM.THEMES =
+
+  -- walls --
+
+  ASHWALL  = { t="ASHWALL",  f="FLOOR6_2" }
+  BROVINE  = { t="BROVINE",  f="FLOOR0_1" }
+  BRNPOIS2 = { t="BRNPOIS2", f="FLOOR7_1" }
+  BROWNWEL = { t="BROWNWEL", f="FLOOR7_1" }
+
+  COMP2    = { t="COMP2",    f="CEIL5_1" }
+  COMPOHSO = { t="COMPOHSO", f="FLOOR7_1" }
+  COMPTILE = { t="COMPTILE", f="CEIL5_1" }
+  COMPUTE1 = { t="COMPUTE1", f="FLAT19" }
+  COMPUTE2 = { t="COMPUTE2", f="CEIL5_1" }
+  COMPUTE3 = { t="COMPUTE3", f="CEIL5_1" }
+
+  DOORHI   = { t="DOORHI",   f="FLAT19" }
+  GRAYDANG = { t="GRAYDANG", f="FLAT19" }
+  GSTVINE1 = { t="GSTVINE1", f="FLOOR7_2" }
+  ICKDOOR1 = { t="ICKDOOR1", f="FLAT19" }
+  ICKWALL6 = { t="ICKWALL6", f="FLAT18" }
+
+  LITE2    = { t="LITE2",    f="FLOOR0_1" }
+  LITE4    = { t="LITE4",    f="FLAT19" }
+  LITE96   = { t="LITE96",   f="FLOOR7_1" }
+  LITEBLU2 = { t="LITEBLU2", f="FLAT23" }
+  LITEBLU3 = { t="LITEBLU3", f="FLAT23" }
+  LITEMET  = { t="LITEMET",  f="FLOOR4_8" }
+  LITERED  = { t="LITERED",  f="FLOOR1_6" }
+  LITESTON = { t="LITESTON", f="MFLR8_1" }
+
+  NUKESLAD = { t="NUKESLAD", f="FLOOR7_1" }
+  PLANET1  = { t="PLANET1",  f="FLAT23" }
+  REDWALL1 = { t="REDWALL1", f="FLOOR1_6" }
+  SKINBORD = { t="SKINBORD", f="FLAT5_5" }
+  SKINTEK1 = { t="SKINTEK1", f="FLAT5_5" }
+  SKINTEK2 = { t="SKINTEK2", f="FLAT5_5" }
+  SKULWAL3 = { t="SKULWAL3", f="FLAT5_6" }
+  SKULWALL = { t="SKULWALL", f="FLAT5_6" }
+  SLADRIP1 = { t="SLADRIP1", f="FLOOR7_1" }
+
+  SP_DUDE6 = { t="SP_DUDE6", f="DEM1_5" }
+  SP_ROCK1 = { t="SP_ROCK1", f="MFLR8_3" }
+  SP_ROCK2 = { t="SP_ROCK2", f="MFLR8_3" }
+  STARTAN1 = { t="STARTAN1", f="FLOOR4_1" }
+  STONGARG = { t="STONGARG", f="MFLR8_1" }
+  STONPOIS = { t="STONPOIS", f="FLAT5_4" }
+  TEKWALL2 = { t="TEKWALL2", f="CEIL5_1" }
+  TEKWALL3 = { t="TEKWALL3", f="CEIL5_1" }
+  TEKWALL5 = { t="TEKWALL5", f="CEIL5_1" }
+  WOODSKUL = { t="WOODSKUL", f="FLAT5_2" }
+
+
+  -- switches --
+
+  SW1BRN1  = { t="SW1BRN1",  f="FLOOR0_1" }
+  SW1STARG = { t="SW1STARG", f="FLAT23" }
+  SW1STONE = { t="SW1STONE", f="FLAT1" }
+  SW1STON2 = { t="SW1STON2", f="MFLR8_1" }
+
+
+  -- floors --
+
+  FLAT5_6  = { f="FLAT5_6", t="SKULWALL" }
+  FLAT5_7  = { f="FLAT5_7", t="ASHWALL" }
+  FLAT5_8  = { f="FLAT5_8", t="ASHWALL" }
+  FLOOR6_2 = { f="FLOOR6_2", t="ASHWALL" }
+  MFLR8_4  = { f="MFLR8_4",  t="ASHWALL" }
+
+
+  -- flats with different side textures --
+
+  CONS1_1  = { f="CONS1_1", t="COMPWERD" }
+  CONS1_5  = { f="CONS1_5", t="COMPWERD" }
+  CONS1_7  = { f="CONS1_7", t="COMPWERD" }
+
+  FLAT8    = { f="FLAT8",   t="BROWN1" }
+  FLAT10   = { f="FLAT10",  t="BROWNHUG" }
+  FLAT1_1  = { f="FLAT1_1", t="BROWN1" }
+  FLAT1_2  = { f="FLAT1_2", t="BROWN1" }
+  FLAT1_3  = { f="FLAT1_3", t="BROWN1" }
+  FLAT5_5  = { f="FLAT5_5", t="BROWN1" }
+
+
+  -- rails --
+
+  BRNBIGC  = { t="BRNBIGC",  rail_h=128 }
+
+  MIDVINE1 = { t="MIDVINE1", rail_h=128 }
+  MIDVINE2 = { t="MIDVINE2", rail_h=128 }
+
+  -- this is the MIDBARS3 texture from FreeDoom
+  MIDBARS3 = { t="SP_DUDE3", rail_h=72 }
+
+
+  -- liquid stuff (using new patches)
+  BFALL1   = { t="BLODGR1",  f="BLOOD1", sane=1 }
+  BLOOD1   = { t="BLODGR1",  f="BLOOD1", sane=1 }
+
+  SFALL1   = { t="SLADRIP1", f="NUKAGE1", sane=1 }
+  NUKAGE1  = { t="SLADRIP1", f="NUKAGE1", sane=1 }
+
+
+  --------------------------------------------------------------------
+  --
+  -- Compatibility section
+  --
+  -- These allow prefabs containing DOOM 2 specific flats or textures
+  -- to at least work in DOOM / Ultimate DOOM (a bit mucked up though).
+  --
+  -- Big thanks to Chris Pisarczyk for doing the grunt work.
+  --
+
+  -- flats
+  GRASS1   = { f="DEM1_5",   t="MARBLE1" }
+  GRASS2   = { f="DEM1_5",   t="MARBLE1" }
+  GRNLITE1 = { f="TLITE6_6", t="METAL" }
+  GRNROCK  = { f="MFLR8_3",  t="SP_ROCK1" }
+
+  RROCK01  = { f="FLOOR6_1", t="REDWALL" }
+  RROCK02  = { f="LAVA1",    t="FIREMAG1" }
+  RROCK03  = { f="FLOOR6_2", t="ASHWALL" }
+  RROCK04  = { f="FLOOR6_2", t="ASHWALL" }
+  RROCK05  = { f="FLOOR6_1", t="REDWALL" }
+  RROCK06  = { f="FLOOR6_1", t="REDWALL" }
+  RROCK07  = { f="FLOOR6_1", t="REDWALL" }
+  RROCK08  = { f="FLOOR6_1", t="REDWALL" }
+  RROCK09  = { f="FLOOR7_1", t="BROWNHUG" }
+  RROCK10  = { f="FLAT5",    t="BROWNHUG" }
+  RROCK11  = { f="FLAT5",    t="BROWNHUG" }
+  RROCK12  = { f="FLAT5",    t="BROWNHUG" }
+  RROCK13  = { f="MFLR8_3",  t="SP_ROCK1" }
+  RROCK14  = { f="FLOOR7_1", t="BROWNHUG" }
+  RROCK15  = { f="FLOOR7_1", t="BROWNHUG" }
+  RROCK16  = { f="FLOOR7_1", t="BROWNHUG" }
+  RROCK17  = { f="FLOOR7_1", t="BROWNHUG" }
+  RROCK18  = { f="FLOOR7_1", t="BROWNHUG" }
+  RROCK19  = { f="FLOOR7_1", t="BROWNHUG" }
+  RROCK20  = { f="FLOOR7_2", t="MARBLE1" }
+
+  SLIME01  = { f="NUKAGE1",  t="SLADRIP1" }
+  SLIME02  = { f="NUKAGE1",  t="SLADRIP1" }
+  SLIME03  = { f="NUKAGE1",  t="SLADRIP1" }
+  SLIME04  = { f="NUKAGE1",  t="SLADRIP1" }
+  SLIME05  = { f="BLOOD1",   t="BLODGR1" }
+  SLIME06  = { f="BLOOD1",   t="BLODGR1" }
+  SLIME07  = { f="BLOOD1",   t="BLODGR1" }
+  SLIME08  = { f="BLOOD1",   t="BLODGR1" }
+  SLIME09  = { f="FLOOR6_1", t="REDWALL" }
+  SLIME10  = { f="FLOOR6_1", t="REDWALL" }
+  SLIME11  = { f="FLOOR6_1", t="REDWALL" }
+  SLIME12  = { f="FLOOR6_1", t="REDWALL" }
+  SLIME13  = { f="FLOOR7_2", t="MARBLE1" }
+  SLIME14  = { f="FLOOR4_8", t="METAL1" }
+  SLIME15  = { f="FLOOR4_8", t="METAL1" }
+  SLIME16  = { f="FLAT1_1",  t="BROWN1" }
+
+  -- textures
+  ASHWALL2 = { t="ASHWALL",  f="FLOOR6_2" }
+  ASHWALL3 = { t="BROWNHUG", f="FLOOR7_1" }
+  ASHWALL4 = { t="BROWNHUG", f="FLOOR7_1" }
+  ASHWALL6 = { t="PIPE2",    f="FLOOR4_5" }
+  ASHWALL7 = { t="PIPE4",    f="FLOOR4_5" }
+  BIGBRIK1 = { t="BROWN96",  f="FLOOR7_1" }
+  BIGBRIK2 = { t="STONE2",   f="MFLR8_1" }
+  BIGBRIK3 = { t="LITE3",    f="FLAT19" }
+  BLAKWAL1 = { t="COMPSPAN", f="CEIL5_1" }
+  BLAKWAL2 = { t="COMPSPAN", f="CEIL5_1" }
+
+  BRICK1   = { t="BROWN1",   f="FLOOR0_1" }
+  BRICK10  = { t="BROWNGRN", f="FLOOR7_1" }
+  BRICK11  = { t="REDWALL",  f="FLAT5_3" }
+  BRICK12  = { t="BROWN1",   f="FLOOR0_1" }
+  BRICK2   = { t="BROWN1",   f="FLOOR0_1" }
+  BRICK3   = { t="BROWN1",   f="FLOOR0_1" }
+  BRICK4   = { t="BROVINE",  f="FLOOR0_1" }
+  BRICK5   = { t="BROVINE2", f="FLOOR7_1" }
+  BRICK6   = { t="BROWN1",   f="FLOOR0_1" }
+  BRICK7   = { t="BROWN96",  f="FLOOR7_1" }
+  BRICK8   = { t="BROWN96",  f="FLOOR7_1" }
+  BRICK9   = { t="BROWN144", f="FLOOR7_1" }
+  BRICKLIT = { t="LITEMET",  f="CEIL5_1" }
+  BRONZE1  = { t="BROWN96",  f="FLOOR7_1" }
+  BRONZE2  = { t="BROWN96",  f="FLOOR7_1" }
+  BRONZE3  = { t="BROWN96",  f="FLOOR7_1" }
+  BRONZE4  = { t="LITE96",   f="FLOOR7_1" }
+  BRWINDOW = { t="BROWN1",   f="FLOOR0_1" }
+  BSTONE1  = { t="SLADWALL", f="FLOOR7_1" }
+  BSTONE2  = { t="SLADWALL", f="FLOOR7_1" }
+  BSTONE3  = { t="LITE3",    f="FLAT19" }
+
+  CEMENT7  = { t="GRAY1",    f="FLAT18" }
+  CEMENT8  = { t="GRAY5",    f="FLAT18" }
+  CEMENT9  = { t="GRAYVINE", f="FLAT1" }
+  CRACKLE2 = { t="ROCKRED1", f="FLOOR6_1" }
+  CRACKLE4 = { t="ROCKRED1", f="FLOOR6_1" }
+  CRATE3   = { t="CRATELIT", f="CRATOP1" }
+  DBRAIN1  = { t="FIREBLU1", f="FLOOR6_1" }
+  DBRAIN2  = { t="FIREBLU1", f="FLOOR6_1" }
+  DBRAIN3  = { t="FIREBLU1", f="FLOOR6_1" }
+  DBRAIN4  = { t="FIREBLU1", f="FLOOR6_1" }
+  MARBFAC4 = { t="SP_DUDE6", f="DEM1_5" }
+  MARBGRAY = { t="GSTONE1",  f="FLOOR7_2" }
+
+  METAL2   = { t="METAL1",   f="FLOOR4_8" }
+  METAL3   = { t="METAL1",   f="FLOOR4_8" }
+  METAL4   = { t="METAL1",   f="FLOOR4_8" }
+  METAL5   = { t="METAL1",   f="FLOOR4_8" }
+  METAL6   = { t="METAL1",   f="FLOOR4_8" }
+  METAL7   = { t="LITE3",    f="FLAT19" }
+  MODWALL1 = { t="ICKWALL1", f="FLAT19" }
+  MODWALL2 = { t="ICKWALL1", f="FLAT19" }
+  MODWALL3 = { t="ICKWALL3", f="FLAT19" }
+  MODWALL4 = { t="ICKWALL3", f="FLAT19" }
+
+  PANBLACK = { t="LITE5",    f="FLAT19" }
+  PANBLUE  = { t="LITEBLU4", f="FLAT1" }
+  PANBOOK  = { t="WOODSKUL", f="FLAT5_2" }
+  PANBORD1 = { t="WOOD1",    f="FLAT5_2" }
+  PANBORD2 = { t="WOOD1",    f="FLAT5_2" }
+  PANCASE1 = { t="WOOD1",    f="FLAT5_2" }
+  PANCASE2 = { t="WOOD1",    f="FLAT5_2" }
+  PANEL1   = { t="SKINMET1", f="CEIL5_2" }
+  PANEL2   = { t="SKINMET1", f="CEIL5_2" }
+  PANEL3   = { t="SKINMET1", f="CEIL5_2" }
+  PANEL4   = { t="WOOD1",    f="FLAT5_2" }
+  PANEL5   = { t="WOODGARG", f="FLAT5_2" }
+  PANEL6   = { t="WOOD3",    f="FLAT5_1" }
+  PANEL7   = { t="WOOD3",    f="FLAT5_1" }
+  PANEL8   = { t="WOOD3",    f="FLAT5_1" }
+  PANEL9   = { t="WOOD3",    f="FLAT5_1" }
+  PANRED   = { t="LITERED",  f="FLOOR1_6" }
+  PIPES    = { t="BROWNPIP", f="FLOOR0_1" }
+  PIPEWAL1 = { t="PIPE2",    f="FLOOR4_5" }
+  PIPEWAL2 = { t="PIPE2",    f="FLOOR4_5" }
+  ROCK1    = { t="STONE2",   f="MFLR8_1" }
+  ROCK2    = { t="STONE3",   f="MFLR8_1" }
+  ROCK3    = { t="STONE2",   f="MFLR8_1" }
+  ROCK4    = { t="SP_ROCK1", f="MFLR8_3" }
+  ROCK5    = { t="SP_ROCK1", f="MFLR8_3" }
+
+  SILVER1  = { t="SHAWN2",   f="FLAT23" }
+  SILVER2  = { t="COMPUTE1", f="FLAT23" }
+  SILVER3  = { t="PLANET1",  f="FLAT23" }
+  SPACEW2  = { t="TEKWALL4", f="CEIL5_1" }
+  SPACEW3  = { t="COMPUTE1", f="FLAT1" }
+  SPACEW4  = { t="TEKWALL1", f="CEIL5_1" }
+  SPCDOOR1 = { t="BIGDOOR4", f="FLOOR3_3" }
+  SPCDOOR2 = { t="BIGDOOR2", f="FLAT1" }
+  SPCDOOR3 = { t="BIGDOOR2", f="FLAT1" }
+  SPCDOOR4 = { t="BIGDOOR4", f="FLOOR3_3" }
+
+  SK_LEFT  = { t="SKULWAL3", f="FLAT5_6" }
+  SK_RIGHT = { t="SKULWAL3", f="FLAT5_6" }
+  SLOPPY1  = { t="SKULWAL3", f="FLAT5_6" }
+  SLOPPY2  = { t="SKULWAL3", f="FLAT5_6" }
+  SP_DUDE7 = { t="SKULWAL3", f="FLAT5_6" }
+  SP_DUDE8 = { t="SKULWALL", f="FLAT5_6" }
+  SP_FACE2 = { t="SKULWAL3", f="FLAT5_6" }
+
+  STONE4   = { t="STONE",    f="FLAT5_4" }
+  STONE5   = { t="STONE",    f="FLAT5_4" }
+  STONE6   = { t="BROWNHUG", f="FLOOR7_1" }
+  STONE7   = { t="BROWNHUG", f="FLOOR7_1" }
+  STUCCO   = { t="SKINTEK1", f="FLAT5_5" }
+  STUCCO1  = { t="SKINTEK1", f="FLAT5_5" }
+  STUCCO2  = { t="SKINTEK2", f="FLAT5_5" }
+  STUCCO3  = { t="SKINTEK2", f="FLAT5_5" }
+
+  SW1BRIK  = { t="SW1STONE", f="FLAT1" }
+  SW1MARB  = { t="SW1GSTON", f="FLOOR7_2" }
+  SW1MET2  = { t="SW1GARG",  f="CEIL5_2" }
+  SW1MOD1  = { t="SW1GRAY1", f="FLAT19" }
+  SW1PANEL = { t="SW1WOOD",  f="FLAT5_2" }
+  SW1ROCK  = { t="SW1SATYR", f="CEIL5_2" }
+  SW1SKULL = { t="SW1SKIN",  f="CRATOP2" }
+  SW1STON6 = { t="SW1DIRT",  f="FLOOR7_1" }
+  SW1TEK   = { t="SW1STRTN", f="FLOOR4_1" }
+  SW1WDMET = { t="SW1LION",  f="CEIL5_2" }
+  SW1ZIM   = { t="SW1SLAD",  f="FLOOR7_1" }
+
+  TANROCK2 = { t="BROWNHUG", f="FLOOR7_1" }
+  TANROCK3 = { t="BROWNHUG", f="FLOOR7_1" }
+  TANROCK4 = { t="BROWNHUG", f="FLOOR7_1" }
+  TANROCK5 = { t="BROWNHUG", f="FLOOR7_1" }
+  TANROCK7 = { t="BROWN144", f="FLOOR7_1" }
+  TANROCK8 = { t="BROVINE",  f="FLOOR0_1" }
+  TEKBRON1 = { t="TEKWALL4", f="CEIL5_1" }
+  TEKBRON2 = { t="TEKWALL4", f="CEIL5_1" }
+  TEKGREN1 = { t="STARG1",   f="FLAT23" }
+  TEKGREN2 = { t="STARG1",   f="FLAT23" }
+  TEKGREN3 = { t="STARG1",   f="FLAT23" }
+  TEKGREN4 = { t="STARG2",   f="FLAT23" }
+  TEKGREN5 = { t="LITE3",    f="FLAT19" }
+  TEKLITE  = { t="LITE3",    f="FLAT19" }
+  TEKLITE2 = { t="LITE4",    f="FLAT19" }
+  TEKWALL6 = { t="TEKWALL4", f="CEIL5_1" }
+
+  WOOD6    = { t="WOOD5",    f="CEIL5_2" }
+  WOOD7    = { t="WOOD3",    f="FLAT5_1" }
+  WOOD8    = { t="WOOD3",    f="FLAT5_1" }
+  WOOD9    = { t="WOOD1",    f="FLAT5_2" }
+  WOOD10   = { t="WOOD1",    f="FLAT5_2" }
+  WOOD12   = { t="WOOD1",    f="FLAT5_2" }
+  WOODMET1 = { t="WOOD5",    f="CEIL5_2" }
+  WOODMET2 = { t="WOOD5",    f="CEIL5_2" }
+  WOODMET3 = { t="WOOD5",    f="CEIL5_2" }
+  WOODMET4 = { t="WOOD5",    f="CEIL5_2" }
+  WOODVERT = { t="WOOD3",    f="FLAT5_1" }
+
+  ZDOORB1  = { t="SHAWN2",   f="FLAT23" }
+  ZDOORF1  = { t="SHAWN2",   f="FLAT23" }
+  ZELDOOR  = { t="BIGDOOR2", f="FLAT1" }
+
+  ZIMMER1  = { t="SP_ROCK1", f="MFLR8_3" }
+  ZIMMER2  = { t="SP_ROCK1", f="MFLR8_3" }
+  ZIMMER3  = { t="BROWNHUG", f="FLOOR7_1" }
+  ZIMMER4  = { t="BROWNHUG", f="FLOOR7_1" }
+  ZIMMER5  = { t="ASHWALL",  f="FLOOR6_2" }
+  ZIMMER7  = { t="ASHWALL",  f="FLOOR6_2" }
+  ZIMMER8  = { t="SP_ROCK1", f="MFLR8_3" }
+
+  ZZZFACE4 = { t="MARBFACE", f="DEM1_5" }
+
+  -- rails
+  MIDBARS1 = { t="MIDGRATE", rail_h=128 }
+  MIDBRONZ = { t="MIDGRATE", rail_h=128 }
+  MIDSPACE = { t="MIDGRATE", rail_h=128 }
+}
+
+
+--------------------------------------------------------------------
+
+ULTDOOM.WEAPONS =
+{
+  super = REMOVE_ME
+}
+
+
+ULTDOOM.NICE_ITEMS =
+{
+  mega = REMOVE_ME
+}
+
+
+ULTDOOM.MONSTERS =
+{
+  gunner   = REMOVE_ME
+  revenant = REMOVE_ME
+  knight   = REMOVE_ME
+  mancubus = REMOVE_ME
+  arach    = REMOVE_ME
+  vile     = REMOVE_ME
+  pain     = REMOVE_ME
+  ss_nazi  = REMOVE_ME
+}
+
+
+ULTDOOM.ENTITIES =
+{
+  -- compatible replacements for things lacking in DOOM 1 / Ultimate DOOM
+
+  mercury_lamp  = { id=2028, r=16, h=48 }
+  mercury_small = { id=2028, r=16, h=48 }
+
+  gutted_victim1 = { id=59, r=20, h=84, ceil=true, pass=true }
+  gutted_victim2 = { id=61, r=20, h=52, ceil=true, pass=true }
+
+  gutted_torso1  = { id=59, r=20, h=84, ceil=true, pass=true }
+  gutted_torso2  = { id=61, r=20, h=52, ceil=true, pass=true }
+  gutted_torso3  = { id=63, r=20, h=68, ceil=true, pass=true }
+  gutted_torso4  = { id=63, r=20, h=68, ceil=true, pass=true }
+
+  pool_blood_1  = { id=24, r=20, h=16, pass=true }
+  pool_blood_2  = { id=24, r=20, h=16, pass=true }
+  pool_brains   = { id=10, r=20, h=16, pass=true }
+}
+
+
+--------------------------------------------------------------------
+
+ULTDOOM.THEMES =
 {
   DEFAULTS =
   {
@@ -900,6 +433,24 @@ DOOM.THEMES =
       k_yellow = 50
     }
 
+    window_groups =
+    {
+      square = 90
+      tall   = 30
+      grate  = 10
+    }
+
+    narrow_halls =
+    {
+      vent = 50
+    }
+
+    wide_halls =
+    {
+      deuce = 50
+      metro = 20 --Currently disabled until everything checks out normally
+    }
+
     barrels =
     {
       barrel = 50
@@ -907,10 +458,7 @@ DOOM.THEMES =
 
     passable_decor =
     {
-      gibs = 20
-      pool_blood_1 = 20
-      pool_blood_2 = 20
-      pool_brains  = 10
+      gibs = 40
 
       gibbed_player = 10
       dead_player = 10
@@ -923,7 +471,9 @@ DOOM.THEMES =
 
     cave_torches =
     {
-      red_torch = 50
+      red_torch   = 60
+      green_torch = 40
+      blue_torch  = 20
     }
 
     cliff_trees =
@@ -942,45 +492,16 @@ DOOM.THEMES =
 
     fences =
     {
-      STONE = 50
+      BROWN144 = 60
+      WOOD5    = 40
+      STONE    = 30
+      SLADWALL = 20
+
+      BROVINE  = 15
+      GRAYVINE = 15
+      GSTVINE2 = 15
+      SP_ROCK1 =  5
     }
-
-    narrow_halls =
-    {
-      vent = 50
-    }
-
-    wide_halls =
-    {
-      deuce = 50
-      metro = 20
-    }
-
-    floor_sinks =
-    {
-      PLAIN = 100
-    }
-
-    ceiling_sinks =
-    {
-      PLAIN = 100
-    }
-
-    wall_groups =
-    {
-      PLAIN = 100
-    }
-
-    window_groups =
-    {
-      square = 100
-    }
-
-    -- FIXME: temp crud
-    has_triple_key_door = true
-    has_double_switch_door = true
-
-    steps_mat = "GRAY7"
 
     cliff_mats =
     {
@@ -995,200 +516,148 @@ DOOM.THEMES =
 
       STONE    = 20
       SLADWALL = 20
-      WOODVERT = 20
+      WOOD1    = 20
     }
+
+    --  8 = oscillates
+    -- 12 = flashes @ 1 hz
+    -- 13 = flashes @ 2 hz
+    -- 17 = flickering
+    cage_lights = { 0, 8, 12, 13, 17 }
+
+    wall_groups =
+    {
+      PLAIN = 100
+    }
+
+    ceil_light_prob = 60
   }
 
-  ------------------------------------
+
+  ---- Episode 1 ----
 
   tech =
   {
     liquids =
     {
-      nukage = 70
+      nukage = 80
       water  = 30
-      slime  = 10
-      lava   = 5
+      lava   = 10
     }
 
     facades =
     {
-      BROWN1   = 80
-      STARTAN3 = 50
-      STARG3   = 40
-      BROWNGRN = 40
-      STONE    = 30
-      STONE2   = 30
-      STONE3   = 30
-      TEKGREN2 = 25
-      BROVINE2 = 15
-      GRAY7    = 15
-      GRAYVINE = 10
-
-      BROWN96  = 20
-      METAL2   = 15
-      BRONZE1  = 15
-      BRONZE3  = 15
-      METAL1   = 10
-      SLADWALL = 20
-    }
-
-    fences =
-    {
-      BROWN144 = 60
-      STONE    = 40
-      STONE2   = 40
-      STONE3   = 30
-      STONE4   = 30
-      METAL2   = 30
-      BRONZE1  = 30
-      STONE6   = 30
-      SLADWALL = 30
-
-      CEMENT9  = 10
-      BRICK10  = 10
-      METAL1   = 10
+      BROWN1 = 50
+      BROWNGRN = 20
+      BROWN96 = 5
+      STONE2 = 10
+      STONE3 = 10
+      STARTAN3 = 30
+      STARG3 = 20
+      BROVINE2 = 5
+      BROVINE  = 5
     }
 
     cliff_mats =
     {
-      ASHWALL2 = 60
-      ASHWALL3 = 60
-      ASHWALL4 = 60
-      ASHWALL7 = 40
-      ZIMMER1  = 40
-      ZIMMER2  = 40
-      ZIMMER3  = 40
-      ZIMMER4  = 40
-      ZIMMER5  = 40
-      SP_ROCK1 = 40
-      STONE4   = 40
-      STONE5   = 40
-      STONE6   = 40
-      STONE7   = 40
-      ZIMMER7  = 30
-      ZIMMER8  = 30
-    }
-
-    cage_mats =
-    {
-      METAL1   = 60
-      METAL2   = 60
-      BROWN144 = 60
-      STONE    = 60
-      ICKWALL2 = 40
-      ICKWALL3 = 40
-      SILVER1  = 40
-      BROWNHUG = 40
-      SHAWN2   = 40
-      TEKWALL1 = 40
-      TEKWALL4 = 40
-
-      GRAY4    = 20
-      GRAYBIG  = 20
-      PIPEWAL2 = 20
-      STONE    = 20
-      STONE2   = 20
-      STONE4   = 20
-      TEKLITE  = 20
+      SP_ROCK1 = 50
+      BROWNHUG = 30
+      ASHWALL  = 20
     }
 
     prefab_remap =
     {
     }
 
-    entity_remap =
-    {
-      green_torch = "mercury_lamp"
-    }
-
     floor_sinks =
     {
-      PLAIN = 400
+      PLAIN = 200
       liquid_plain = 10
       liquid_shiny = 5
-      liquid_metal2 = 5
-      floor_blue2 = 25
-      floor_blue3 = 25
+      liquid_metal = 5
+      floor_blue  = 10
+      floor_blue3 = 5
     }
 
     ceiling_sinks =
     {
-      PLAIN = 400
+      PLAIN = 120
       sky_shiny = 20
-      sky_metal2 = 20
-      sky_stone_1 = 5
-      sky_stone_2 = 5
-      sky_tech1 = 7
-      sky_tech2 = 7
-      sky_tech3 = 20
-      sky_tech4 = 15
-      sky_tech5 = 10
-      sky_tech6 = 10
-      sky_tech7 = 5
-      sky_tech8 = 10
-      sky_tech9 = 10
-      sky_bronze = 10
-      sky_pipes  = 7
-      sky_cement = 5
-      sky_brownpip = 10
+      sky_metal = 10
+      sky_tech3 = 2
+      light_red_shiny = 20
+      light_orange_shiny = 7
+      light_brightred_metal = 7
+      light_brightred_metal2 = 5
+      light_diamond = 3
+      light_side1 = 5
+      light_side4 = 5
+    }
 
-      light_red_shiny = 40
-      light_orange_shiny = 20
-      light_brightred_metal2 = 20
-      light_side1 = 100
-      light_side2 = 100
-      light_side3 = 100
-      light_side4 = 100
-      light_side5 = 100
-      light_side6 = 100
+    wall_groups =
+    {
+      PLAIN = 200
+      low_gap = 2
+      mid_band = 3
+      lite2 = 10
+      torches6 = 8
+      torches7 = 35
+      torches11 = 12
+      gtd_wall_urban_storage = 10
+      gtd_wall_tech_windows_topcorner = 25
+      gtd_wall_server_room = 25
+      gtd_wall_sewer = 10
+      gtd_generic_beamed_inset = 7
+      gtd_computers = 35
+      gtd_writhing_mass = 2
+      gtd_wall_octagon_insets = 18
+      gtd_wall_grated_machines = 15
+      gtd_wall_quakish_insets = 20
+    }
+
+    cage_mats =
+    {
+      METAL1   = 60
+      BROWN144 = 60
+      STONE    = 50
+      SHAWN2   = 40
+      TEKWALL1 = 40
+      TEKWALL4 = 40
+      STONE2   = 20
+    }
+
+    fences =
+    {
+      METAL1   = 60
+      STONE    = 60
+      STARG1   = 30
+      STONE2   = 20
+      STONE3   = 30
+      BROVINE  = 20
+      BROVINE2 = 20
+      GRAY1    = 20
     }
 
     passable_decor =
     {
       gibs = 60
-      pool_blood_1 = 10
-      pool_blood_2 = 25
-      pool_brains  = 2
-
       gibbed_player = 20
       dead_player = 35
     }
 
-    wall_groups =
+    park_decor =
     {
-      PLAIN = 300
-      low_gap = 2
-      low_gap2 = 2
-      low_gap3 = 3
-      low_gap4 = 3
-      mid_band = 3
-      mid_band2 = 3
-      lite1 = 7
-      lite2 = 12
-      torches4 = 35
-      torches5 = 35
-      torches6 = 3
-      torches7 = 65
-      torches11 = 7
-      gtd_wall_urban_storage = 25
-      gtd_wall_tech_windows_topcorner = 25
-      gtd_wall_server_room = 25
-      gtd_wall_sewer = 25
-      gtd_generic_beamed_inset = 25
-      gtd_computers = 25
-      gtd_writhing_mass = 2
-      gtd_wall_octagon_insets = 25
-      gtd_wall_grated_machines = 25
-      gtd_wall_quakish_insets = 25
+      burnt_tree = 95
+      brown_stub = 55
+      big_tree = 30
     }
 
     window_groups =
     {
-      square = 70
-      tall   = 80
-      grate  = 45
-      barred = 5
+      square = 90
+      tall   = 90
+      grate  = 40
+      barred = 10
       round  = 5
       gtd_window_cage_highbars = 20
       gtd_window_cage_lowbars = 10
@@ -1198,53 +667,28 @@ DOOM.THEMES =
 
     cave_torches =
     {
-      blue_torch  = 20
+      lamp        = 25
       red_torch   = 70
-
-      lamp = 30
-      mercury_small = 30
-      mercury_lamp  = 10
     }
 
     outdoor_torches =
     {
-      lamp   = 10
-      mercury_lamp  = 40
-      mercury_small = 20
-    }
-
-    ceil_light_prob = 70
-
-    monster_prefs =
-    {
-      zombie  = 1.5
-      shooter = 1.25
-      gunner  = 1.25
-      imp     = 1.5
-      demon   = 1.25
-      spectre = 1.25
-      knight  = 0.75
-      revenant = 0.5
-      mancubus = 0.6
-      caco    = 0.6
-      baron   = 0.5
-      pain    = 0.4
-      skull   = 0.25
-      vile    = 0.25  --Shouldn't be too many in Tech maps
+      lamp   = 40
+      red_torch = 15
     }
 
     style_list =
     {
-      caves = { none=75, few=30 }
-      outdoors = { none=15, few=40, some=80, heaps=10 }
+      caves = { none=70, few=30 }
+      outdoors = { few=40, some=80, heaps=10 }
       big_rooms = { none=40, few=25, some=15, heaps=5 }
       hallways = { none=15, few=45, some=20, heaps=10 }
       windows = { few=15, some=85, heaps=40 }
       pictures = { few=20, some=75, heaps=45 }
-      liquids = { none=70, few=30, some=10, heaps=5 }
+      liquids = { none=60, few=30, some=10, heaps=5 }
       doors = { few=25, some=75, heaps=30 }
-      teleporters = { none=70, few=40, some=10, heaps=3 }
-      keys = { none=20, few=80, some=70, heaps=30 }
+      teleporters = { none=75, few=30, some=10, heaps=3 }
+      keys = { none=15, few=60, some=70, heaps=30 }
       switches = { none=25, few=75, some=40, heaps=15 }
       secrets = { few=15, some=80, heaps=30 }
       symmetry = { none=50, few=50, some=50, heaps=50 }
@@ -1257,304 +701,236 @@ DOOM.THEMES =
 
     scenic_fence =
     {
-      MIDBARS3 = 10
-      MIDSPACE = 5
-      MIDBARS1 = 8
-      BRNSMALC = 2
-    }
-
-    techy_doors = true
-  }
-
-  ------------------------------------
-
-  urban =
-  {
-    liquids =
-    {
-      water = 60
-      blood = 40
-      slime = 25
-      nukage = 10
-      lava  = 7
-    }
-
-    facades =
-    {
-      BIGBRIK1 = 40
-      BIGBRIK2 = 30
-      MODWALL1 = 30
-      MODWALL3 = 30
-      STONE3   = 30
-      STONE2   = 30
-      BLAKWAL1 = 20
-      BLAKWAL2 = 20
-      CEMENT7  = 20
-      CEMENT9  = 20
-      BRICK12  = 20
-      BRICK7   = 20
-      BRICK5   = 20
-      STONE    = 20
-      BRICK6   = 15
-      BRICK8   = 15
-      BRICK9   = 15
-      STUCCO   = 15
-      BROVINE2 = 10
-      BRICK10 = 10
-      BRICK11 = 10
-      METAL2  = 10
-      GRAYVINE = 10
-      METAL1   = 5
-      BROWN1   = 5
-      BSTONE1  = 10
-      BSTONE2  = 10
-    }
-
-    fences =
-    {
-      BSTONE2  = 60
-      WOOD5    = 60
-      BSTONE1  = 40
-      STONE4   = 30
-      STONE6   = 30
-      CEMENT9  = 30
-      BRICK12  = 20
-      METAL2   = 20
-      BRICK10  = 10
-      BRICK11  = 10
-      STUCCO   = 10
-      STUCCO3  = 10
-    }
-
-    cliff_mats =
-    {
-      ROCK1    = 60
-      ROCK2    = 60
-      ROCK3    = 60
-      ASHWALL6 = 40
-      TANROCK8 = 40
-      TANROCK5 = 40
-      TANROCK4 = 40
-      ZIMMER1  = 40
-      ZIMMER5  = 40
-      ZIMMER7  = 40
-      SP_ROCK1 = 30
-      ASHWALL7 = 30
-      ZIMMER8  = 25
-      ZIMMER3  = 25
-      ASHWALL2 = 25
-      ASHWALL3 = 25
-      ASHWALL4 = 25
-      BSTONE2  = 20
-      ROCK5    = 20
-    }
-
-    cage_mats =
-    {
-
-      WOOD1    = 60
-      PANEL4   = 60
-      MODWALL1 = 60
-      CEMENT9  = 60
-      PIPE4    = 40
-      PANEL1   = 40
-      BROWN1   = 40
-      BROWN144 = 40
-      STONE2   = 20
-      STONE3   = 20
-      WOODVERT = 20
-      METAL2   = 20
-      BSTONE1  = 20
-    }
-
-    prefab_remap =
-    {
-      SW1COMP  = "SW1PANEL"
-      SILVER3  = "WOODGARG"
-      METAL3   = "WOOD4"
-    }
-
-
-    floor_sinks =
-    {
-      PLAIN = 400
-      liquid_plain = 20
-      liquid_metal = 10
-      floor_red = 40
-      floor_blue = 30
-      floor_green = 20
-      floor_green2 = 15
-      liquid_bstone = 5
-      liquid_bstone2 = 5
-      liquid_ash = 3
-    }
-
-    ceiling_sinks =
-    {
-      PLAIN = 400
-      sky_metal = 25
-      sky_plain = 10
-      sky_modwall = 7
-      sky_stone_1 = 3
-      sky_stone_2 = 3
-      sky_urban_1 = 8
-      sky_urban_2 = 4
-      sky_urban_3 = 8
-      sky_cement = 8
-      sky_brick10 = 5
-      sky_brownpip = 3
-
-      light_urban1 = 50
-      light_diamond = 10
-      ceil_redash = 12
-      ceil_icky   = 50
-
-      light_side1 = 70
-      light_side2 = 70
-      light_side3 = 70
-      light_side4 = 70
-      light_side5 = 70
-      light_side6 = 70
-
-    }
-
-    wall_groups =
-    {
-      PLAIN = 300
-      torches2 = 25 --red
-      torches3 = 25 --blue
-      torches1 = 25 --green
-      torches6 = 5
-      torches9 = 20 --burning barrel
-      torches10 = 3 --skull rock
-      gtd_wall_urban_storage = 8
-      gtd_wall_tech_windows_topcorner = 8
-      gtd_wall_sewer = 10
-      gtd_generic_beamed_inset = 15
-      gtd_computers = 4
-      gtd_drywall = 10
-      gtd_writhing_mass = 2
-      gtd_library = 10
-      gtd_wall_grated_machines = 4
-      gtd_wall_quakish_insets = 8
-    }
-
-    window_groups =
-    {
-      barred = 30
-      tall   = 95
-      round  = 30
-      square = 20
-      grate  = 40
-      gtd_window_cage_highbars = 30
-      gtd_window_cage_lowbars = 40
-      gtd_window_arched = 40
-      gtd_window_full_open = 75
-      gtd_window_bay = 30
-    }
-
-    cave_torches =
-    {
-      green_torch = 50
-      blue_torch  = 50
-      red_torch   = 50
-      blue_torch_sm = 15
-      red_torch_sm  = 15
-      green_torch_sm = 15
-
-      lamp = 10
-      candelabra = 10
-      burning_barrel = 20
-    }
-
-    outdoor_torches =
-    {
-      blue_torch = 50
-      red_torch  = 50
-      green_torch = 50
-      candelabra = 30
-      skull_rock = 30
-      blue_torch_sm = 15
-      red_torch_sm  = 15
-      green_torch_sm = 15
-      burning_barrel = 25
-    }
-
-    passable_decor =
-    {
-      gibs = 20
-      pool_blood_1 = 5
-      pool_blood_2 = 15
-      pool_brains  = 3
-
-      gibbed_player = 15
-      dead_player = 20
-      dead_zombie = 2
-      dead_shooter = 2
-      dead_imp = 2
-      dead_demon = 1
-      dead_caco  = 1
+      MIDGRATE = 50
     }
 
     monster_prefs =
     {
-      demon    = 1.2
-      spectre  = 1.1
-      revenant = 1.1
-      knight   = 1.2
-      gunner   = 1.5
-      shooter  = 1.1
-      zombie   = 0.7
-      vile     = 0.6 --Slightly less because multiple Arch-Viles in one area can be a pain in the ass -Chris
-      pain     = 0.8
-      mancubus = 1.1
-      Cyberdemon = 1.25
+      zombie  = 2.0
+      shooter = 1.25
+      imp     = 1.5
+      demon   = 1.25
+      caco    = 0.5
+      baron   = 0.35
+      skull   = 0.2
     }
 
-    style_list =
+  -- prefab currently does not actually
+  -- have surfaces to recieve a custom skin
+  tech_metro_Hallway =
+  {
+    env   = "hallway"
+    group = "metro"
+    prob  = 25
+
+    walls =
     {
-      caves = { none=60, few=40, some=12, heaps=2 }
-      outdoors = { none=10, few=35, some=90, heaps=30 }
-      pictures = { few=20, some=80, heaps=30 }
-      hallways = { none=30, few=80, some=15, heaps=10 }
-      windows = { few=25, some=50, heaps=90 }
-      cages = { none=30, few=50, some=20, heaps=10 }
-      liquids = { none=45, few=30, some=20, heaps=5 }
-      doors = { few=20, some=70, heaps=30 }
-      steepness = { few=25, some=50, heaps=90 }
-      big_rooms = { none=25, few=40, some=25, heaps=15 }
-      ambushes = { none=5, few=20, some=75, heaps=30 }
-      teleporters = { none=20, few=30, some=65, heaps=10 }
-      keys = { none=15, few=50, some=50, heaps=20 }
-      symmetry = { none=40, few=30, some=35, heaps=25 }
-      switches = { none=20, few=60, some=40, heaps=10 }
-      secrets = { few=5, some=80, heaps=25 }
-      traps   = { none=10, few=40, some=70, heaps=25 }
-      barrels = { none=10, few=50, some=20, heaps=5 }
+      BROWN1   = 50
     }
 
-    ceil_light_prob = 65
-
-    scenic_fence =
+    floors =
     {
-      MIDBARS3 = 8
-      MIDSPACE = 8
-      MIDBARS1 = 8
-      BRNSMALC = 2
+      FLAT4  = 50
     }
 
-    archy_arches = true
+    ceilings =
+    {
+      CEIL3_5 = 50
+    }
   }
 
-  ------------------------------------
+  ceil_light_prob = 70
 
-  hell =
+  }
+
+
+  ---- Episode 2 ----
+
+  -- Deimos theme by Chris Pisarczyk / Glaice
+
+  deimos =
   {
     liquids =
     {
-      lava   = 80
+      nukage = 60
+      blood  = 20
+      water  = 10
+      lava   = 3
+    }
+
+    -- Best facades would be STONE/2/3, BROVINE/2, BROWN1 and maybe a few others as I have not seen many
+    -- other textures on the episode 2 exterior.
+    facades =
+    {
+      STONE2 = 40
+      STONE3 = 60
+      BROVINE = 30
+      BROVINE2 = 25
+      BROWN1 = 50
+      BROWNGRN = 20
+      STONE    = 15
+    }
+
+    cliff_mats =
+    {
+      ROCKRED1 = 60
+      ASHWALL  = 40
+      SP_ROCK1 = 40
+      BROWN144 = 20
+    }
+
+    prefab_remap =
+    {
+    }
+
+    floor_sinks =
+    {
+      PLAIN = 200
+      liquid_plain = 10
+      liquid_shiny = 5
+      liquid_metal = 5
+      floor_green = 5
+      floor_blue  = 10
+      floor_blue2 = 5
+      floor_blue3 = 5
+    }
+
+    ceiling_sinks =
+    {
+      PLAIN = 120
+      sky_shiny = 20
+      sky_metal = 10
+      light_red_shiny = 20
+      light_orange_shiny = 7
+      light_brightred_metal = 7
+      ceil_icky = 4
+      ceil_vdark2 = 3
+      light_side1 = 4
+      light_side2 = 4
+      light_side3 = 4
+    }
+
+    park_decor =
+    {
+      burnt_tree = 95
+      brown_stub = 55
+      big_tree = 40
+    }
+
+    fences =
+    {
+      METAL1   = 90
+      BROVINE  = 60
+      STONE3   = 40
+      STONE2   = 40
+      BROVINE2 = 30
+      GRAY1    = 20
+      ICKWALL3 = 20
+    }
+
+   -- This is because of the slow Hellification of the Deimos base, hence a few Hell wall prefabs are here.
+    wall_groups =
+    {
+      PLAIN = 200
+      low_gap = 7
+      mid_band = 5
+      lite2 = 5
+      torches1 = 5
+      torches2 = 5
+      torches3 = 3
+      torches6 = 10
+      torches7 = 50
+      torches8 = 10
+      torches11 = 15
+      runes1 = 1
+      runes2 = 1
+      runes3 = 1
+      runes4 = 1
+      runes5 = 1
+      cross1 = 1
+      cross2 = 3
+      cross3 = 1
+      cross4 = 1
+      cross5 = 3
+      mid_band_hell = 1
+      gtd_wall_urban_storage = 20
+      gtd_wall_tech_windows_topcorner = 30
+      gtd_wall_server_room = 30
+      gtd_wall_sewer = 10
+      gtd_generic_beamed_inset = 10
+      gtd_computers = 45
+      gtd_writhing_mass = 4
+      gtd_wall_octagon_insets = 25
+      gtd_wall_grated_machines = 20
+      gtd_wall_quakish_insets = 25
+    }
+
+  ceil_light_prob = 65
+
+    style_list =
+    {
+      caves = { none=60, few=40 }
+      outdoors = { few=40, some=80, heaps=10 }
+      big_rooms = { none=40, few=35, some=15, heaps=5 }
+      hallways = { none=15, few=45, some=20, heaps=10 }
+      windows = { few=15, some=85, heaps=40 }
+      pictures = { few=20, some=75, heaps=45 }
+      liquids = { none=60, few=30, some=12, heaps=5 }
+      doors = { few=25, some=75, heaps=30 }
+      teleporters = { none=55, few=40, some=15, heaps=3 }
+      keys = { none=15, few=60, some=70, heaps=40 }
+      switches = { none=20, few=65, some=50, heaps=15 }
+      secrets = { few=12, some=80, heaps=30 }
+      symmetry = { none=50, few=50, some=50, heaps=50 }
+      steepness = { few=40, some=80, heaps=40 }
+      cages = { none=55, few=35, some=10, heaps=5 }
+      traps = { few=40, some=60, heaps=30 }
+      barrels = { few=10, some=55, heaps=30 }
+      ambushes = { few=20, some=95, heaps=30 }
+    }
+
+  -- prefab currently does not actually
+  -- have surfaces to recieve a custom skin
+  deimos_metro_Hallway =
+  {
+    env   = "hallway"
+    group = "metro"
+    prob  = 25
+
+    walls =
+    {
+      BROWN1   = 50
+    }
+
+    floors =
+    {
+      FLAT4  = 50
+    }
+
+    ceilings =
+    {
+      CEIL3_5 = 50
+    }
+  }
+
+    scenic_fence =
+    {
+      MIDGRATE = 50
+      MIDBRN1  = 10
+    }
+  }
+
+
+  ---- Episode 3 ----
+
+  hell =
+  {
+    --  Water is seen in a few locations in episode 3 -Chris
+
+    liquids =
+    {
+      lava   = 90
       blood  = 30
-      slime  = 15
       water  = 10
       nukage = 5
     }
@@ -1568,98 +944,44 @@ DOOM.THEMES =
 
     facades =
     {
-      MARBGRAY = 60
-      SP_HOT1  = 40
-      GSTONE1  = 40
-      STONE3   = 30
-      SKINMET2 = 20
-      GSTVINE1 = 20
-      GSTVINE2 = 20
-      WOOD3    = 15
-      WOOD5    = 15
-      STONE2   = 10
-      STONE    = 10
-      STUCCO   = 10
-      MARBLE1  = 10
-      MARBLE2  = 10
-      MARBLE3  = 10
-      BSTONE1  = 15
-      BSTONE2  = 15
-      SKINMET1 = 10
-      BROWN1  = 10
-      METAL2  = 5
+      STONE2 = 10
+      STONE3 = 15
+      WOOD1 = 50
+      GSTONE1 = 50
+      MARBLE1 = 30
+      BROWN1 = 5
       BROWNGRN = 5
-      BROVINE2 = 5
-    }
-
-    fences =
-    {
-      MARBLE3  = 60
-      WOOD5    = 60
-      WOOD3    = 40
-      WOOD1    = 40
-      STONE4   = 40
-      BSTONE2  = 40
-      MODWALL1 = 30
-      MARBGRAY = 30
-      BSTONE1  = 20
-      ICKWALL3 = 20
-      PIPE4    = 20
-      SKIN2    = 20
-      GSTVINE1 = 15
-      GSTVINE2 = 15
-      SP_HOT1  = 15
-      FIREBLU1 = 10
-      BRICK10  = 10
-      SKINCUT  = 10
-      STUCCO3  = 10
+      WOOD5 = 30
+      SP_HOT1 = 15
+      SKINMET1 = 10
+      SKINMET2 = 10
+      SKINTEK1 = 10
+      SKINTEK2 = 10
+      STONE = 5
     }
 
     cliff_mats =
     {
-      ROCKRED1 = 80
+      ROCKRED1 = 60
+      ASHWALL  = 40
       SP_ROCK1 = 40
-      ASHWALL2 = 40
-      ROCK3    = 40
-      CRACKLE4 = 40
-      ASHWALL4 = 20
-      SKSNAKE1 = 20
-      SKSNAKE2 = 20
-      SKIN2    = 20
-      CRACKLE2 = 20
-      FIREBLU2 = 20
-      ROCK5    = 10
-      SKINFACE = 10
-      SP_FACE2 = 10
+      FIREBLU1 = 20
+      SP_ROCK2 = 15
     }
 
-    cage_mats =
+    fences =
     {
-     FIREBLU1 = 60
-     FIREBLU2 = 60
-     ICKWALL1 = 60
-     REDWALL  = 60
-     SKSNAKE2 = 60
-     SUPPORT3 = 60
-     BSTONE2  = 40
-     ASHWALL3 = 40
-     MARBGRAY = 40
-     ICKWALL2 = 40
-     MODWALL1 = 40
-     SKINFACE = 40
-     STONE6   = 40
-     ICKWALL3 = 40
-     STONE3   = 40
-     WOOD9    = 40
-     STUCCO3  = 20
-     BROWNHUG = 20
-     SKINCUT  = 20
-     METAL2   = 20
-     ICKWALL7 = 20
-     MODWALL3 = 20
-     SKSPINE1 = 20
-     STONE4   = 20
-     TANROCK8 = 20
+    WOOD5 = 50
+    WOOD3 = 50
+    STONE3 = 40
+    STONE2 = 35
+    MARBLE2 = 30
+    GSTONE1 = 30
+    ASHWALL = 20
+    SKIN2   = 20
+    SKINFACE = 20
+    FIREBLU1 = 20
+    ICKWALL3 = 15
     }
 
     prefab_remap =
@@ -1676,83 +998,51 @@ DOOM.THEMES =
       SW1COMP  = "SW1LION"
       SW1PIPE  = "SW1BROWN"
       SILVER3  = "MARBFACE"
-      METAL3   = "MARBFAC4"
     }
 
     floor_sinks =
     {
-      PLAIN = 300
+      PLAIN = 120
       liquid_plain = 10
       liquid_blood = 10
       floor_skulls = 20
-      floor_glowingrock = 12
-      floor_glowingrock2 = 12
-      floor_snakes = 10
-      floor_snakes2 = 7
-      floor_dirt1 = 10
-      floor_dirt2 = 10
-      floor_dirt3 = 10
-      liquid_ash = 5
+      floor_glowingrock = 10
+      floor_snakes = 5
+      floor_red = 5
       liquid_firelava = 5
-      liquid_bstone = 5
-      liquid_bstone2 = 5
-      liquid_marble = 5
+      liquid_ash = 4
+      liquid_marble = 4
     }
 
     ceiling_sinks =
     {
-      PLAIN = 400
-
-      sky_plain = 20
+      PLAIN = 170
       sky_metal = 20
-      sky_stone_1 = 10
-      sky_stone_2 = 10
-      sky_fireblu = 15
-      sky_crackle1 = 10
-      sky_crackle2 = 10
-      ceil_hotrock = 80
-      ceil_hotrock2 = 50
-      ceil_glowrock = 50
-      ceil_glowrock2 = 50
-      ceil_blood = 30
-      ceil_water = 25
-      ceil_sprock = 25
-
-      sky_hell_1 = 10
-      sky_hell_2 = 10
-      sky_hell_3 = 20
-      sky_hell_4 = 15
-      sky_hell_5 = 20
-      sky_hell_6 = 10
-      sky_hell_7 = 10
-      sky_hell_8 = 10
-      sky_hell_9 = 7
-      sky_hell_10 = 12
-      sky_hell_11 = 12
-      sky_hell_12 = 12
-      sky_hell_13 = 10
-      sky_hell_14 = 15
-      sky_hell_15 = 15
-      sky_cement = 10
-      sky_brick10 = 10
-      sky_metal2 = 10
-
-      light_diamond = 35
-      light_hell_red = 80
-      light_hell_lava = 40
-      ceil_redash = 25
-      ceil_vdark = 10
+      sky_plain = 20
+      light_diamond = 10
+      light_hell_red = 20
+      light_hell_lava = 5
+      ceil_redash = 5
+      ceil_hotrock = 5
+      ceil_hotrock2 = 5
+      ceil_blood = 7
+      ceil_sprock = 4
+      ceil_water = 4
+      ceil_icky = 10
+      sky_hell_10 = 3
+      sky_hell_11 = 3
+      sky_hell_12 = 3
+      sky_hell_13 = 3
     }
 
     wall_groups =
     {
-      PLAIN = 300
+      PLAIN = 150
       torches2 = 30 --red
       torches3 = 30 --blue
       torches1 = 30 --green
       torches6 = 10 --candelabra
       torches8 = 10 --evil eye
-      torches9 = 5  --burning barrel
       torches10 = 7 --skull rock
       lowhell1 = 4
       lowhell2 = 2
@@ -1819,18 +1109,13 @@ DOOM.THEMES =
       blue_torch_sm = 15
       red_torch_sm  = 15
       green_torch_sm = 15
-      burning_barrel = 10
     }
 
     passable_decor =
     {
-      gibs = 50
-      pool_blood_1 = 10
-      pool_blood_2 = 30
-      pool_brains  = 3
-
-      gibbed_player = 20
-      dead_player = 30
+      gibs = 70
+      gibbed_player = 30
+      dead_player = 40
       dead_zombie = 2
       dead_shooter = 2
       dead_imp = 1
@@ -1854,7 +1139,6 @@ DOOM.THEMES =
       red_pillar = 5
       red_column = 5
       red_column_skl = 3
-
     }
 
     style_list =
@@ -1882,34 +1166,296 @@ DOOM.THEMES =
     {
       zombie  = 0.5
       shooter = 0.75
-      vile    = 1.3
       imp     = 1.5
       demon   = 1.3
       spectre = 1.3
       skull   = 2.0
-      gunner  = 0.85
-      revenant = 0.8
-      mancubus = 1.2
-      knight = 1.2
       Cyberdemon = 1.25
       Mastermind = 1.5
     }
 
+  -- prefab currently does not actually
+  -- have surfaces to recieve a custom skin
+  hell_metro_Hallway =
+  {
+    env   = "hallway"
+    group = "metro"
+    prob  = 12
+
+    walls =
+    {
+      BROWN1   = 50
+    }
+
+    floors =
+    {
+      FLAT4  = 50
+    }
+
+    ceilings =
+    {
+      CEIL3_5 = 50
+    }
+  }
+
     scenic_fence =
     {
       MIDBRN1 = 3
-      MIDGRATE = 10
-      MIDBARS3 = 8
+      MIDGRATE = 12
     }
 
-    ceil_light_prob = 40
+    ceil_light_prob = 35
+  }
+
+
+  ---- Episode 4 ----
+
+  -- Thy Flesh Consumed by Chris Pisarczyk / Glaice
+  -- Basically a modified version of "hell" to match id's E4 better
+
+  flesh =
+  {
+    liquids =
+    {
+      blood  = 60
+      lava   = 30
+      water  = 20
+      nukage = 10
+    }
+
+    entity_remap =
+    {
+      k_red    = "ks_red"
+      k_blue   = "ks_blue"
+      k_yellow = "ks_yellow"
+    }
+
+    facades =
+    {
+      STONE2 = 20
+      STONE3 = 15
+      WOOD1 = 50
+      GSTONE1 = 30
+      MARBLE1 = 20
+      BROWN1 = 10
+      BROWNGRN = 10
+      WOOD5 = 40
+      SP_HOT1 = 5
+      SKINMET1 = 10
+      SKINMET2 = 10
+    }
+
+    cliff_mats =
+    {
+      ROCKRED1 = 60
+      ASHWALL  = 40
+      SP_ROCK1 = 40
+      BROWNHUG = 20
+    }
+
+    fences =
+    {
+     WOOD5 = 50
+     WOOD3 = 50
+     STONE = 50
+     STONE3 = 50
+     ICKWALL3 = 30
+     BROVINE = 30
+     ASHWALL = 30
+     SKIN2 = 20
+     SKINFACE = 20
+    }
+
+    prefab_remap =
+    {
+      DOORBLU  = "DOORBLU2"
+      DOORRED  = "DOORRED2"
+      DOORYEL  = "DOORYEL2"
+
+      BIGDOOR1 = "BIGDOOR6"
+      BIGDOOR2 = "BIGDOOR7"
+      BIGDOOR3 = "BIGDOOR7"
+      BIGDOOR4 = "BIGDOOR5"
+
+      SW1COMP  = "SW1GARG"
+      SW1PIPE  = "SW1BROWN"
+      SILVER3  = "STONGARG"
+    }
+
+    floor_sinks =
+    {
+      PLAIN = 120
+      liquid_plain = 10
+      liquid_blood = 10
+      floor_skulls = 15
+      floor_glowingrock = 10
+      floor_snakes = 5
+      liquid_firelava = 5
+      floor_snakes2 = 5
+    }
+
+    ceiling_sinks =
+    {
+      PLAIN = 120
+      sky_metal = 20
+      sky_plain = 20
+      light_diamond = 10
+      light_hell_red = 20
+      light_hell_lava = 5
+      ceil_redash = 5
+      sky_urban_1 = 5
+      sky_urban_3 = 4
+      sky_hell_2 = 4
+      sky_hell_9 = 3
+      light_side4 = 3
+      ceil_vdark2 = 6
+      ceil_icky = 5
+      ceil_water = 4
+      ceil_blood = 4
+      ceil_sprock = 3
+      sky_hell_13 = 3
+      sky_hell_14 = 4
+      sky_hell_15 = 4
+    }
+
+    wall_groups =
+    {
+      PLAIN = 150
+      torches2 = 30 --red
+      torches3 = 30 --blue
+      torches1 = 30 --green
+      torches6 = 10 --candelabra
+      torches8 = 10 --evil eye
+      torches10 = 7 --skull rock
+      lowhell1 = 4
+      lowhell2 = 2
+      lowhell3 = 4
+      runes1 = 5
+      runes2 = 5
+      runes3 = 5
+      runes4 = 5
+      runes5 = 5
+      cross1 = 5
+      cross2 = 12
+      cross3 = 5
+      cross4 = 5
+      cross5 = 10
+      mid_band_hell = 2
+      gtd_wall_hell_bloodgutters = 30
+      gtd_wall_tech_windows_topcorner = 35
+      gtd_wall_hell_vaults = 40
+      gtd_generic_beamed_inset = 40
+      gtd_writhing_mass = 30
+      gtd_library = 40
+      gtd_furnace = 20
+      gtd_furnace_face = 20
+      gtd_wall_marbface = 30
+      gtd_wall_quakish_insets = 25
+    }
+
+    passable_decor =
+    {
+      gibs = 70
+      gibbed_player = 30
+      dead_player = 40
+      dead_zombie = 2
+      dead_shooter = 2
+      dead_imp = 1
+      dead_demon = 1
+      dead_caco  = 1
+    }
+
+    park_decor =
+    {
+      burnt_tree = 95
+      brown_stub = 55
+      big_tree = 45
+      evil_eye   = 7
+      skull_rock = 5
+      skull_cairn = 7
+      skull_pole = 5
+      skull_kebab = 5
+      green_pillar = 3
+      green_column  = 3
+      green_column_hrt = 2
+      red_pillar = 3
+      red_column = 3
+      red_column_skl = 2
+    }
+
+    monster_prefs =
+    {
+      zombie  = 0.8
+      shooter = 1.25
+      imp     = 2.0
+      demon   = 1.1
+      spectre = 1.1
+      skull   = 0.7
+      Cyberdemon = 1.5
+      Mastermind = 1.5
+    }
+
+    style_list =
+    {
+      doors = { none=10, few=30, some=65, heaps=20 }
+      outdoors = { none=10, few=35, some=60, heaps=15 }
+      steepness = { few=25, some=75, heaps=30 }
+      pictures = { few=30, some=50, heaps=70 }
+      big_rooms = { none=25, few=40, some=15, heaps=10 }
+      ambushes = { few=5, some=25, heaps=65 }
+      hallways = { none=20, few=60, some=15, heaps=5 }
+      teleporters = { none=15, few=25, some=60, heaps=10 }
+      keys = { none=15, few=40, some=60, heaps=25 }
+      liquids = { none=20, few=45, some=25, heaps=15 }
+      traps = { few=20, some=40, heaps=80 }
+      switches = { none=25, few=60, some=35, heaps=10 }
+      cages    = { none=15, few=25, some=65, heaps=10 }
+      symmetry = { none=55, few=25, some=40, heaps=20 }
+      secrets = { few=45, some=40, heaps=10 }
+      caves = { none=60, few=35, some=8, heaps=3 }
+      barrels = { none=45, few=15, some=5, heaps=4 }
+    }
+
+  -- prefab currently does not actually
+  -- have surfaces to recieve a custom skin
+  flesh_metro_Hallway =
+  {
+    env   = "hallway"
+    group = "metro"
+    prob  = 20
+
+    walls =
+    {
+      BROWN1   = 50
+    }
+
+    floors =
+    {
+      FLAT4  = 50
+    }
+
+    ceilings =
+    {
+      CEIL3_5 = 50
+    }
+  }
+
+    ceil_light_prob = 45
+
+    scenic_fence =
+    {
+      MIDGRATE = 50
+    }
   }
 }
 
 
 
-DOOM.ROOM_THEMES =
+ULTDOOM.ROOM_THEMES =
 {
+  -- this ensures the following room themes REPLACE those of Doom 2.
+  replace_all = true
+
 
 -----  GENERIC STUFF  ------------------------------
 
@@ -1922,25 +1468,16 @@ DOOM.ROOM_THEMES =
     walls =
     {
       GRAY1 = 50
-      GRAY5 = 50
-      ICKWALL1 = 30
-      ICKWALL3 = 30
     }
 
     floors =
     {
       FLAT1 = 30
-      FLOOR0_3 = 20
-      FLAT20 = 15
-      FLAT3 = 10
     }
 
     ceilings =
     {
-      FLAT1 = 30
-      FLAT19 = 20
-      FLAT23 = 20
-      FLAT5_4 = 15
+      CEIL3_5 = 30
     }
   }
 
@@ -1954,301 +1491,147 @@ DOOM.ROOM_THEMES =
     walls =
     {
       GRAY1 = 50
-      GRAY5 = 50
-      ICKWALL1 = 30
-      ICKWALL3 = 30
     }
 
     floors =
     {
-      FLAT3 = 30
-      FLOOR0_3 = 10
-      FLAT20  = 15
-      FLAT23 = 20
+      FLAT1 = 30
     }
 
     ceilings =
     {
-      FLAT3 = 30
-      FLAT23 = 15
-      FLAT20 = 20
-      FLAT5_4 = 10
+      CEIL3_5 = 30
     }
   }
 
 
------  TECH BASES  --------------------------------
+------ EPISODE 1 : Tech Bases ----------------------
 
-  tech_Startan =
-  {
-    env  = "building"
-    prob = 70
-
-    walls =
-    {
-      STARTAN3 = 60
-      STARG3 = 40
-      STARG2 = 10
-
-      STARTAN2 = 50
-      STARBR2  = 40
-    }
-
-    floors =
-    {
-      FLOOR4_8 = 50
-      FLOOR5_1 = 50
-      FLOOR5_3 = 30
-      FLOOR0_3 = 30
-      FLOOR5_1 = 25
-      FLOOR3_3 = 20
-      FLOOR0_2 = 20
-      FLOOR0_1 = 20
-      FLOOR4_6 = 15
-      FLOOR7_1 = 15
-      FLAT4 = 15
-      FLAT14 = 10
-      SLIME15 = 10
-      SLIME16 = 10
-      FLOOR1_6 = 6
-      FLOOR1_1 = 8
-      FLOOR0_5 = 5
-      FLAT5 = 5
-    }
-
-    ceilings =
-    {
-      CEIL3_1 = 20
-      CEIL3_2 = 20
-      CEIL3_5 = 20
-      CEIL3_3 = 15
-      CEIL4_2 = 10
-      CEIL4_3 = 10
-      CEIL5_1 = 15
-
-      FLAT9  = 30
-      FLAT19 = 20
-      FLAT4  = 20
-      FLAT9  = 15
-      FLAT23 = 5
-    }
-  }
-
-
-  tech_Tekgren =
-  {
-    env  = "building"
-    prob = 20
-
-    walls =
-    {
-      TEKGREN2 = 50
-    }
-
-    floors =
-    {
-      FLAT14 = 45
-      FLAT4 = 30
-      FLAT5_4 = 30
-      CEIL4_2  = 20
-      CEIL4_1  = 20
-      FLOOR1_1 = 20
-      FLOOR0_3 = 20
-      FLOOR3_3 = 40
-      FLOOR5_1 = 20
-      FLOOR4_8 = 20
-      FLOOR5_1 = 20
-      FLOOR4_6 = 20
-      FLAT5 = 10
-    }
-
-    ceilings =
-    {
-      FLAT1   = 15
-      CEIL3_5 = 5
-      SLIME15 = 5
-      SLIME14 = 5
-      CEIL4_1 = 3
-      CEIL4_2 = 3
-    }
-  }
-
-
-  tech_Metal =
+  tech_Room =
   {
     env  = "building"
     prob = 50
 
     walls =
     {
-      METAL2 = 90
-      METAL1 = 35
-      BRONZE1 = 30
-      BRONZE3 = 30
-      METAL4 = 15
-      PIPE4 = 10
+      STARTAN3 = 25
+      STARTAN2 = 12
+      STARTAN1 = 5
+      STARG1 = 5
+      STARG2 = 15
+      STARG3 = 15
+      STARBR2 = 5
+      STARGR2 = 10
+      METAL1 = 2
     }
 
     floors =
     {
-      FLAT3 = 50
       FLOOR0_1 = 30
-      FLOOR4_5 = 20
+      FLOOR0_2 = 20
+      FLOOR0_3 = 30
+      FLOOR0_7 = 20
+      FLOOR3_3 = 15
+      FLOOR7_1 = 10
+      FLOOR4_5 = 30
       FLOOR4_6 = 20
-      FLOOR4_8 = 20
-      FLOOR0_2 = 15
-      FLOOR5_1 = 15
-      FLOOR7_1 = 15
-      MFLR8_2  = 20
-      SLIME15 = 20
-      SLIME14 = 20
-      CEIL4_1 = 5
-      CEIL4_2 = 5
+      FLOOR4_8 = 50
+      FLOOR5_1 = 35
+      FLOOR5_2 = 30
+      FLAT1 = 10
+      FLAT5 = 20
+      FLAT14 = 20
+      FLAT5_4 = 20
     }
 
     ceilings =
     {
-      CEIL5_1 = 40
-      CEIL5_2 = 15
-      SLIME15 = 40
-      CEIL4_1 = 20
-      SLIME14 = 40
-      SLIME16 = 20
+      CEIL5_1 = 20
+      CEIL3_3 = 15
+      CEIL3_5 = 50
+      FLAT1 = 20
+      FLAT4 = 15
+      FLAT18 = 20
+      FLOOR0_2 = 10
+      FLOOR4_1 = 30
+      FLOOR5_1 = 15
+      FLOOR5_4 = 10
+      CEIL4_1 = 15
+      CEIL4_2 = 15
     }
   }
 
 
-  tech_Gray =
+  tech_Brown =
   {
     env  = "building"
-    prob = 25
+    prob = 50
 
     walls =
     {
-      GRAY1 = 80
-      GRAY5 = 80
-      GRAY4 = 80
-      GRAY7 = 50
-      ICKWALL1 = 10
-      ICKWALL2 = 10
-      ICKWALL3 = 10
+      BROWN1 = 30
+      BROWNGRN = 20
+      BROWN96 = 10
+      BROVINE = 5
+      BROVINE2 = 5
     }
 
     floors =
     {
-      FLAT4 = 50
-      FLOOR0_5 = 40
+      FLOOR0_1 = 30
       FLOOR0_2 = 20
       FLOOR3_3 = 20
-      FLOOR4_6 = 15
-      CEIL3_2  = 20
-      FLOOR5_1 = 10
-      FLOOR4_8 = 10
-      FLAT19  = 10
-      SLIME14 = 20
-      SLIME15 = 20
-      SLIME16 = 20
+      FLOOR7_1 = 15
+      FLOOR4_5 = 30
+      FLOOR4_6 = 30
+      FLOOR5_2 = 30
+      FLAT5 = 20
+      FLAT14 = 10
+      FLAT5_4 = 10
     }
 
     ceilings =
     {
-      CEIL5_1 = 10
-      CEIL3_1 = 20
-      CEIL3_5 = 20
-      FLAT5_4 = 20
-      FLAT4   = 10
-      SLIME14 = 10
-      SLIME15 = 10
-      SLIME16 = 10
-      FLAT5_5 = 5
-      FLAT1   = 5
+      CEIL5_1 = 20
+      CEIL3_3 = 15
+      CEIL3_5 = 50
+      FLAT1 = 20
+      FLOOR4_1 = 30
+      FLAT5_4 = 10
+      FLOOR5_4 = 10
     }
   }
 
 
-  tech_Sladwall =
-  {
-    env  = "building"
-    prob = 15
-
-    walls =
-    {
-      SLADWALL = 50
-    }
-
-    floors =
-    {
-      FLOOR5_1 = 50
-      FLOOR4_8 = 30
-      FLOOR7_1 = 30
-      FLOOR0_1 = 40
-      FLAT5    = 30
-      FLOOR0_5 = 30
-      SLIME15  = 20
-      FLOOR3_3 = 10
-    }
-
-    ceilings =
-    {
-      CEIL3_2 = 30
-      CEIL3_5 = 30
-      FLAT1 = 30
-      FLAT4 = 20
-      FLOOR7_1 = 20
-      SLIME14 = 10
-      SLIME15 = 10
-      MFLR8_1 = 5
-    }
-  }
-
-
-  tech_VeryShiny =
+  tech_Computer =
   {
     env = "building"
-    prob = 5
+    prob = 10
 
     walls =
     {
-      SHAWN2 = 50
+      COMPSPAN = 30
+      COMPOHSO = 10
+      COMPTILE = 15
+      COMPBLUE = 15
+      TEKWALL4 = 3
     }
 
     floors =
     {
-      FLAT1 = 60
-      FLAT9 = 60
-      FLOOR4_5 = 20
+      FLAT14 = 50
+      FLOOR1_1 = 15
+      FLAT4 = 10
+      CEIL4_1 = 20
+      CEIL4_2 = 20
       CEIL5_1 = 20
     }
 
     ceilings =
     {
-      FLAT23 = 50
-    }
-  }
-
-
-  tech_VeryTekky =
-  {
-    env  = "building"
-    prob = 5
-
-    walls =
-    {
-      TEKWALL4 = 50
-    }
-
-    floors =
-    {
-      CEIL4_3  = 60
-      FLOOR0_2 = 60
-      FLOOR5_1 = 40
-      SLIME14  = 20
-      CEIL5_1  = 20
-    }
-
-    ceilings =
-    {
       CEIL5_1 = 50
+      CEIL4_1 = 15
+      CEIL4_2 = 15
     }
 
     wall_groups =
@@ -2258,129 +1641,72 @@ DOOM.ROOM_THEMES =
       mid_band2 = 10
       lite1 = 5
       lite2 = 15
-      torches1 = 15
     }
   }
 
 
-  tech_VeryBluey =
+  tech_Shiny =
   {
     env = "building"
-    prob = 5
+    prob = 10
 
     walls =
     {
-      COMPBLUE = 50
+      SHAWN2 = 50
+      METAL1 = 5
     }
 
     floors =
     {
-      FLAT14 = 30
-      FLOOR1_1 = 10
-
-      CEIL4_1 = 20
-      CEIL4_2 = 20
-
-      FLAT4   = 10
-      CEIL5_1 = 20
+      FLOOR4_8 = 10
+      FLAT14 = 10
+      FLOOR1_1 = 5
+      FLAT23 = 60
     }
 
     ceilings =
     {
-      CEIL5_1 = 40
-      CEIL4_1 = 25
-      CEIL4_2 = 15
-
-      FLOOR4_1 = 10
-      FLAT23 = 10
+      FLAT23 = 50
     }
   }
 
 
-  tech_Cave_generic =
+  tech_Gray =
   {
-    env  = "cave"
-    prob = 50
+    env = "building"
+    prob = 20
 
     walls =
     {
-      ZIMMER1  = 20
-      ZIMMER2  = 20
-      ZIMMER3  = 20
-      ZIMMER4  = 20
-      ZIMMER5  = 20
-      ZIMMER7  = 20
-      ZIMMER8  = 40
-      BSTONE1  = 10
-      BSTONE2  = 10
-
-      ASHWALL2 = 20
-      ASHWALL3 = 20
-      ASHWALL4 = 20
-      ASHWALL6 = 10
-      ASHWALL7 = 10
-      TANROCK4 = 10
-      TANROCK5 = 10
-
-      STONE4   = 10
-      STONE6   = 10
+      GRAY1 = 50
+      GRAY4 = 30
+      GRAY7 = 30
+      ICKWALL1 = 40
+      ICKWALL3 = 20
     }
 
     floors =
     {
-      ZIMMER8  = 20
-      ZIMMER7  = 20
-      BROWN144 = 30
-      BSTONE1  = 30
+      FLAT4 = 50
+      FLOOR0_3 = 30
+      FLAT5_4 = 25
+      FLAT19 = 15
+      FLAT1 = 15
+      FLOOR0_5 = 10
+    }
 
-      ASHWALL4 = 20
-      ASHWALL3 = 20
-      ASHWALL2 = 20
-      TANROCK5 = 10
+    ceilings =
+    {
+      FLAT19 = 40
+      FLAT5_4 = 20
+      FLAT4  = 20
+      FLAT23 = 10
+      FLAT1 = 10
     }
   }
 
 
-  tech_Outdoors_generic =
-  {
-    env  = "outdoor"
-    prob = 50
-
-    floors =
-    {
-      BROWN1 = 10
-      FLAT1 = 40
-      SLIME14 = 5
-      SLIME15 = 6
-
-      BROWN144 = 85
-      GRASS1 = 25
-      GRASS2 = 25
-      RROCK19 = 15
-    }
-
-    naturals =
-    {
-      RROCK17  = 50
-      RROCK18  = 50
-      RROCK19  = 50
-      RROCK20  = 50
-      ASHWALL2 = 20
-      ASHWALL3 = 20
-      ASHWALL4 = 20
-      SP_ROCK1 = 70
-      ZIMMER1  = 10
-      ZIMMER2  = 10
-      ZIMMER3  = 10
-      ZIMMER4  = 10
-      ZIMMER5  = 10
-      ZIMMER7  = 10
-      ROCK5    = 20
-    }
-  }
-
-
-  tech_deuce_Hallway =
+  tech_Hallway =
   {
     env   = "hallway"
     group = "deuce"
@@ -2388,43 +1714,437 @@ DOOM.ROOM_THEMES =
 
     walls =
     {
-      BROWN1   = 50
-      GRAY7    = 20
-
-      TEKWALL4 = 20
-      TEKGREN2 = 30
-      STARGR1 = 10
-      STARTAN3 = 15
-      STARG3 = 15
-
-      PIPEWAL2 = 40
-      PIPE2 = 10
-      PIPE4 = 10
+      BROWN1 = 33
+      BROWNGRN = 50
+      STARBR2 = 15
+      STARTAN3 = 30
+      STARG3 = 30
+      TEKWALL4 = 5
     }
 
     floors =
     {
-      FLAT4  = 50
-      FLAT14 = 50
-      FLAT1  = 20
-      FLOOR4_8 = 15
+      FLOOR0_1 = 30
       FLOOR0_2 = 20
+      FLOOR0_3 = 30
+      FLOOR0_7 = 20
+      FLOOR3_3 = 15
+      FLOOR7_1 = 15
+      FLOOR4_5 = 30
+      FLOOR4_6 = 20
+      FLOOR4_8 = 30
+      FLOOR5_1 = 35
+      FLOOR5_2 = 30
+      FLAT1 = 10
+      FLAT4 = 20
+      FLAT5 = 20
+      FLAT9 = 5
+      FLAT14 = 20
+      FLAT5_4 = 20
+      CEIL5_1 = 30
+      CEIL4_1 = 10
+      CEIL4_2 = 10
+    }
+
+    ceilings =
+    {
+      FLAT4 = 20
+      CEIL5_1 = 35
+      CEIL3_5 = 50
+      CEIL3_3 = 20
+      FLAT19 = 20
+      FLAT23 = 20
+      FLAT5_4 = 15
+      CEIL4_1 = 20
+      CEIL4_2 = 20
+    }
+  }
+
+
+  tech_Cave =
+  {
+    env  = "cave"
+    prob = 50
+
+    walls =
+    {
+      ASHWALL = 30
+      SP_ROCK1 = 60
+      GRAYVINE = 20
+      TEKWALL4 = 3
+    }
+
+    floors =
+    {
+      ASHWALL = 30
+      SP_ROCK1 = 60
+      GRAYVINE = 20
+      TEKWALL4 = 3
+    }
+  }
+
+
+  tech_Outdoors_Generic =
+  {
+    env = "outdoor"
+    prob = 50
+
+    floors =
+    {
+      BROWN144 = 30
+      BROWN1 = 20
+      STONE = 20
+      ASHWALL = 5
+      FLAT10 = 5
+    }
+
+    naturals =
+    {
+      ASHWALL = 35
+      SP_ROCK1 = 70
+      GRAYVINE = 20
+      STONE = 30
+    }
+  }
+
+
+------ EPISODE 2 ------------------------------
+
+  deimos_Room =
+  {
+    env = "building"
+    prob = 50
+
+    walls =
+    {
+      STARTAN3 = 10
+      STARTAN2 = 5
+      STARTAN1 = 5
+      STARG2 = 15
+      ICKWALL1 = 15
+      STARBR2 = 15
+      STARGR2 = 10
+      STARG1 = 5
+      STARG2 = 5
+      STARG3 = 7
+      ICKWALL3 = 30
+      GRAY7 = 20
+      GRAY5 = 15
+      GRAY1 = 15
+      BROWN1 = 5
+      BROWNGRN = 10
+      BROWN96 = 5
+      STONE2 = 30
+      STONE3 = 20
+    }
+
+    floors =
+    {
+      FLOOR0_1 = 30
+      FLOOR0_2 = 40
+      FLOOR0_3 = 30
+      CEIL4_1 = 5
+      FLOOR0_7 = 10
+      FLOOR3_3 = 20
+      FLOOR7_1 = 20
+      CEIL4_2 = 10
+      FLOOR4_1 = 30
+      FLOOR4_6 = 20
+      FLOOR4_8 = 50
+      FLOOR5_2 = 35
+      FLAT1 = 40
+      FLAT5 = 30
+      FLAT14 = 10
+      FLAT1_1 = 30
+      FLOOR1_6 = 3
+      FLAT1_2 = 30
+      FLOOR5_1 = 50
+      FLAT3 = 15
+      FLAT5_4 = 15
+    }
+
+    ceilings =
+    {
+      CEIL5_1 = 30
+      CEIL3_3 = 70
+      CEIL3_5 = 50
+      CEIL4_1 = 10
+      CEIL4_2 = 10
+      FLAT1 = 30
+      FLAT4 = 20
+      FLAT19 = 30
+      FLAT8 = 15
+      FLAT5_4 = 20
+      FLOOR0_2 = 20
+      FLOOR4_1 = 50
+      FLOOR5_1 = 50
+      FLOOR5_4 = 10
+    }
+  }
+
+
+  deimos_Hellish =
+  {
+    env = "building"
+    prob = 50
+
+    walls =
+    {
+      MARBLE1 = 15
+      MARBLE2 = 15
+      MARBLE3 = 15
+      BROWNGRN = 15
+      COMPTILE = 15
+      BROWN1 = 15
+      STARTAN3 = 15
+      STARG3 = 15
+      WOOD1 = 15
+      WOOD3 = 15
+      WOOD5 = 15
+      BROVINE = 15
+      BROVINE2 = 15
+      ICKWALL3 = 15
+      GRAY7 = 15
+    }
+
+    floors =
+    {
+      DEM1_5 = 30
+      DEM1_6 = 50
+      FLAT10 = 5
+      FLOOR7_1 = 5
+      FLOOR7_2 = 50
+      FLOOR4_1 = 30
+      FLOOR4_6 = 20
+      FLOOR4_8 = 50
+      FLOOR5_2 = 35
+      FLAT1 = 40
+      FLAT5 = 30
+      FLAT14 = 10
+    }
+
+    ceilings =
+    {
+      FLOOR7_2 = 50
+      DEM1_5 = 50
+      DEM1_6 = 30
+      FLOOR6_2 = 5
+      CEIL5_1 = 30
+      CEIL3_3 = 50
+      CEIL3_5 = 30
+      CEIL4_1 = 10
+      CEIL4_2 = 10
+    }
+  }
+
+
+  deimos_Lab =
+  {
+    env = "building"
+    prob = 10
+
+    walls =
+    {
+      COMPTILE = 40
+      COMPBLUE = 10
+      COMPSPAN = 15
+      METAL1 = 20
+    }
+
+    floors =
+    {
+      FLOOR4_8 = 15
+      FLOOR5_1 = 15
+      FLAT14 = 40
+      FLOOR1_1 = 30
+      CEIL4_2 = 20
       CEIL4_1 = 20
     }
 
     ceilings =
     {
-      CEIL3_5 = 50
-      CEIL3_1 = 50
-      RROCK03 = 50
-      CEIL4_2 = 20
-      CEIL5_1 = 40
+      CEIL5_1 = 30
+      CEIL4_1 = 10
+      CEIL4_2 = 15
+      FLOOR4_8 = 15
+      FLAT14 = 10
+    }
+  }
+
+
+  deimos_Hallway =
+  {
+    env   = "hallway"
+    group = "deuce"
+    prob  = 50
+
+    walls =
+    {
+      BROWN1 = 33
+      BROWNGRN = 50
+      BROVINE = 20
+      BROVINE2 = 15
+      GRAY1 = 50
+      GRAY5 = 33
+      ICKWALL1 = 30
+      ICKWALL3 = 30
+      STONE2 = 40
+      STONE3 = 50
+      METAL1 = 30
+    }
+
+    floors =
+    {
+      FLAT4 = 30
+      CEIL4_1 = 15
+      CEIL4_2 = 15
+      CEIL5_1 = 30
+      FLAT14 = 20
+      FLAT5_4 = 20
+      FLOOR3_3 = 30
+      FLOOR4_8 = 40
+      FLOOR5_1 = 25
+      FLOOR5_2 = 10
+      FLAT5 = 20
+      FLOOR1_6 = 4
+      FLOOR7_2 = 3
+      FLAT5_1 = 3
+      FLAT5_2 = 3
+      DEM1_5 = 3
+      DEM1_6 = 3
+    }
+
+    ceilings =
+    {
+      FLAT4 = 20
+      CEIL4_1 = 15
+      CEIL4_2 = 15
+      CEIL5_1 = 30
+      CEIL3_5 = 25
+      CEIL3_3 = 50
+      FLAT18 = 15
+      FLAT19 = 20
+      FLAT5_4 = 10
+      FLOOR4_8 = 25
+      FLOOR5_1 = 20
+      FLOOR7_1 = 15
+      FLOOR7_2 = 2
+      FLAT5_1 = 2
+      FLAT5_2 = 2
+      DEM1_5 = 2
+      DEM1_6 = 2
+    }
+  }
+
+
+  deimos_Hallway_hell =
+  {
+    env   = "hallway"
+    group = "deuce"
+    prob  = 50
+
+    walls =
+    {
+      MARBLE1 = 20
+      MARBLE2 = 20
+      MARBLE3 = 20
+      GSTONE1 = 20
+      BROVINE = 20
+      COMPTILE = 20
+    }
+
+    floors =
+    {
+      FLAT4 = 30
+      CEIL4_1 = 15
+      CEIL4_2 = 15
+      CEIL5_1 = 30
+      FLAT14 = 20
+      FLAT5_4 = 20
+      FLOOR3_3 = 30
+      FLOOR4_8 = 40
+      FLOOR5_1 = 25
+      FLOOR5_2 = 10
+      FLAT5 = 20
+      FLOOR1_6 = 4
+      FLOOR7_2 = 15
+      FLAT5_1 = 15
+      FLAT5_2 = 15
+      DEM1_5 = 15
+      DEM1_6 = 15
+    }
+
+    ceilings =
+    {
+      FLAT4 = 20
+      CEIL4_1 = 15
+      CEIL4_2 = 15
+      CEIL5_1 = 30
+      CEIL3_5 = 25
+      CEIL3_3 = 20
+      FLAT18 = 15
+      FLAT19 = 20
+      FLAT5_4 = 10
+      FLOOR4_8 = 15
+      FLOOR5_1 = 20
+      FLOOR7_1 = 15
+      FLOOR7_2 = 15
+      FLAT5_1 = 15
+      FLAT5_2 = 15
+      DEM1_5 = 15
+      DEM1_6 = 15
+    }
+  }
+
+
+  deimos_Cave =
+  {
+    env  = "cave"
+    prob = 50
+
+    walls =
+    {
+      SP_ROCK1 = 90
+      ASHWALL = 20
+      BROWNHUG = 15
+      GRAYVINE = 10
+    }
+
+    floors =
+    {
+      SP_ROCK1 = 90
+      ASHWALL = 20
+      BROWNHUG = 15
+      GRAYVINE = 10
+    }
+  }
+
+
+  deimos_Outdoors_Generic =
+  {
+    env = "outdoor"
+    prob = 50
+
+--Makes sense for high prob for SP_ROCK1 because the intermission screen shows
+--Deimos has a desolate, gray ground.
+    floors =
+    {
+      BROWN144 = 30
+      BROWN1 = 10
+      STONE = 10
+    }
+
+    naturals =
+    {
+      SP_ROCK1 = 60
+      ASHWALL = 2
+      FLAT10 = 3
     }
   }
 
   -- prefab currently does not actually
   -- have surfaces to recieve a custom skin
-  tech_metro_Hallway =
+  deimos_metro_Hallway =
   {
     env   = "hallway"
     group = "metro"
@@ -2447,506 +2167,322 @@ DOOM.ROOM_THEMES =
   }
 
 
------ HELL / GOTHIC -----------------------------
+----- EPISODE 3 : Hell ---------------------------
 
-
-  hell_GreenMarble =
+  hell_Marble =
   {
-    env  = "building"
-    prob = 40
-
-    walls =
-    {
-      MARBLE1 = 20
-      MARBLE2 = 50
-      MARBLE3 = 50
-    }
-
-    floors =
-    {
-      GRNROCK  = 30
-      FLAT5_4  = 30
-      FLAT5_1  = 30
-      FLOOR7_1 = 30
-      DEM1_6   = 15
-      FLAT5_1  = 5
-      FLAT5_2  = 5
-
-      FLAT10   = 10
-      FLOOR6_2 = 10
-      MFLR8_2  = 10
-    }
-
-    ceilings =
-    {
-      FLOOR7_2 = 50
-      DEM1_5   = 20
-      FLOOR6_1 = 20
-      FLOOR6_2 = 20
-      MFLR8_4  = 15
-    }
-  }
-
-
-  hell_GrayMarble =
-  {
-    env  = "building"
-    prob = 60
-
-    walls =
-    {
-      MARBGRAY = 50
-    }
-
-    floors =
-    {
-      FLOOR7_1 = 50
-      DEM1_5   = 40
-      DEM1_6   = 20
-      FLAT10   = 20
-      FLAT5_4  = 20
-      FLAT5_7  = 20
-      FLAT5_8  = 20
-      FLAT5_1  = 5
-      FLAT5_2  = 5
-    }
-
-    ceilings =
-    {
-      FLOOR7_2 = 60
-      DEM1_5   = 20
-      FLOOR6_1 = 20
-      FLOOR6_2 = 20
-      MFLR8_4  = 15
-    }
-  }
-
-  hell_gstone =
-  {
-    prob = 40
     env = "building"
+    prob = 90
 
     walls =
     {
-      GSTONE1 = 80
-      GSTVINE1 = 5
-      GSTVINE2 = 5
+      MARBLE1 = 30
+      MARBLE2 = 15
+      MARBLE3 = 20
+      GSTVINE1 = 20
+      GSTVINE2 = 20
+      SKINMET1 = 3
+      SKINMET2 = 3
+      SKINTEK1 = 5
+      SKINTEK2 = 5
     }
 
     floors =
     {
-      FLAT1 = 10
-      FLOOR6_2 = 5
-      FLOOR7_1 = 10
-      FLOOR7_2 = 20
-      DEM1_6 = 20
-      DEM1_5 = 20
-      FLAT5_1  = 2
-      FLAT5_2  = 2
-      FLAT1_1 = 2
-    }
-
-    ceilings =
-    {
-      FLAT1 = 5
-      FLAT10 = 3
-      FLOOR6_2 = 3
-      FLOOR7_2 = 30
-      FLOOR6_1 = 3
-      DEM1_5 = 10
-    }
-
-  }
-
-
-  hell_Hotbrick =
-  {
-    env  = "building"
-    prob = 40
-
-    walls =
-    {
-      SP_HOT1 = 50
-    }
-
-    floors =
-    {
-      FLAT5_3 = 30
-      FLAT10 = 50
-      FLAT1 = 20
-      FLOOR7_1 = 50
+      DEM1_5 = 30
+      DEM1_6 = 30
       FLAT5_7 = 10
-      FLAT5_8 = 10
-      FLOOR6_1 = 10
-      FLOOR6_2 = 5
+      FLAT5_8 = 5
+      FLAT10 = 10
+      FLOOR7_1 = 10
+      FLOOR7_2 = 30
+      FLAT1 = 10
+      FLAT5 = 5
+      FLAT8 = 5
+      FLOOR5_2 = 10
     }
 
     ceilings =
-    {
-      FLOOR6_1 = 20
-      FLOOR6_2 = 20
-      FLAT10 = 15
-      FLAT5_3 = 10
-    }
-  }
-
-
-  hell_Stone =
-  {
-    env  = "building"
-    prob = 60
-
-    walls =
-    {
-      STONE3 = 50
-      STONE2 = 10
-    }
-
-    floors =
-    {
-      FLOOR6_2 = 30
-      RROCK13  = 30
-      GRNROCK  = 30
-      DEM1_6   = 30
-      SLIME13  = 30
-    }
-
-    ceilings =
-    {
-      RROCK12  = 30
-      RROCK03  = 30
-      MFLR8_2  = 30
-      FLAT5_1  = 30
-    }
-  }
-
-
-  hell_Viney =
-  {
-    env  = "building"
-    prob = 10
-
-    walls =
-    {
-      GSTVINE2 = 50
-      GSTVINE1 = 10
-    }
-
-    floors =
     {
       FLAT1 = 10
-      FLOOR7_1 = 10
-      DEM1_6 = 5
-      DEM1_5 = 5
-      FLOOR7_2 = 10
-    }
-
-    ceilings =
-    {
-      FLAT1 = 5
-      FLOOR7_2 = 20
-      FLOOR6_1 = 3
+      FLAT10 = 10
+      FLAT5_5 = 5
+      FLOOR7_2 = 30
+      DEM1_5 = 30
+      DEM1_6 = 30
+      FLOOR6_2 = 5
+      FLAT5_1 = 5
+      FLAT5_2 = 5
+      CEIL1_1 = 5
     }
   }
 
 
   hell_Wood =
   {
-    env  = "building"
+    env = "building"
     prob = 20
 
     walls =
     {
       WOOD1 = 50
       WOOD3 = 30
-      WOOD5 = 30
-      WOOD12 = 30
-      WOODVERT = 10
+      WOOD5 = 20
     }
 
     floors =
     {
-      FLAT5_1 = 50
+      FLAT5_1 = 30
       FLAT5_2 = 50
-      FLOOR7_1 = 50
-      FLAT5_4 = 20
-      FLOOR4_6 = 10
-      FLAT5    = 10
-      FLAT1_1  = 10
-      DEM1_6  = 5
-    }
-
-    ceilings =
-    {
-      FLOOR7_2 = 50
-      RROCK14 = 40
-      CEIL1_1 = 30
-      FLAT5_2 = 15
-      FLAT5_7 = 10
-      RROCK13 = 10
-      FLOOR7_1 = 5
-    }
-  }
-
-  hell_Panel =
-  {
-    prob = 30
-    env = "building"
-
-    walls =
-    {
-      PANEL2 = 40
-      PANEL3 = 40
-      PANCASE2 = 25
-      PANEL6 = 20
-      PANEL8 = 35
-      PANEL9 = 35
-      TANROCK3 = 20
-      STUCCO = 15
-      WOOD1 = 5
-      WOOD3 = 5
-      WOOD5 = 5
-      WOOD12 = 5
-      WOODVERT = 5
-    }
-
-    floors =
-    {
-      FLAT5_5 = 50
-      FLAT5_1 = 50
-      FLAT5_2 = 50
-      FLOOR3_3 = 15
-      FLOOR1_6 = 10
-      FLAT5 = 10
-      DEM1_6 = 3
-    }
-
-    ceilings =
-    {
       FLAT5_5 = 15
-      CEIL1_1 = 20
-      FLAT5_1 = 25
-      FLAT5_2 = 25
-      FLOOR7_1 = 5
+    }
+
+    ceilings =
+    {
+      CEIL1_1 = 50
+      FLAT5_2 = 30
+      FLAT5_1 = 15
     }
   }
+
 
   hell_Skin =
   {
-    env  = "building"
-    prob = 10
+    env = "building"
+    prob = 20
 
     walls =
     {
+      SKIN2 = 15
+      SKINFACE = 20
+      SKSNAKE2 = 20
+      SKINTEK1 = 10
+      SKINTEK2 = 10
       SKINMET1 = 50
-      SKINMET2 = 50
-      SKINCUT  = 5
+      SKINMET2 = 40
+      SKINCUT = 10
       SKINSYMB = 5
     }
 
     floors =
     {
-      FLAT5_1  = 7
-      FLAT5_2  = 5
-      DEM1_5   = 10
-      DEM1_6   = 10
-      SFLR6_1  = 10
+      SFLR6_1 = 10
       FLOOR7_1 = 20
+      FLAT5_5 = 10
       FLOOR6_1 = 40
-      SLIME13 = 20
+      MFLR8_2 = 10
+      MFLR8_4 = 10
     }
 
     ceilings =
     {
       SFLR6_1 = 30
-      SFLR6_4 = 30
-      FLAT5_2 = 5
-      FLAT5_3 = 7
-      FLAT5_4 = 5
-      FLOOR7_2 = 10
-      DEM1_5 = 10
-    }
-  }
-
-
-  hell_Cave_generic =
-  {
-    env  = "cave"
-    prob = 40
-
-    walls =
-    {
-      SP_ROCK1 = 30
-
-      ASHWALL2 = 30
-      ASHWALL3 = 30
-      ASHWALL4 = 30
-      ASHWALL6 = 30
-      ASHWALL7 = 30
-      STONE4   = 10
-      STONE6   = 15
-      TANROCK5 = 10
-      ROCK1    = 10
-      ROCK2    = 10
-      ROCK3    = 10
-      SKINEDGE = 10
-      CRACKLE4 = 10
-      SKSNAKE1 = 10
-      SKSNAKE2 = 10
-    }
-
-    floors =
-    {
-      MFLR8_3  = 20
-      RROCK16  = 30
-      RROCK09  = 30
-
-      ASHWALL2 = 30
-      RROCK04  = 20
+      SFLR6_4 = 10
       FLOOR6_1 = 20
-      STONE    = 10
-
-      RROCK02  = 10
-      SKSNAKE1 = 10
     }
   }
 
 
-  hell_Cave_Hot =
+  hell_Hot =
   {
-    env  = "cave"
+    env = "building"
     prob = 60
 
-    light_adjusts = { 32,48,64 }
-
     walls =
     {
-      ROCKRED1 = 50
-      FIRELAVA = 15
-      FIREBLU1 = 15
-      CRACKLE2 =  5
-      CRACKLE4 =  5
+      SP_HOT1 = 70
+      GSTVINE1 = 15
+      GSTVINE2 = 15
+      STONE = 10
+      STONE3 = 5
+      SKINMET2 = 5
+      BROWN1 = 2
+      SKINCUT = 2
+      SKINTEK1 = 5
+      SKINTEK2 = 5
     }
 
     floors =
     {
-      FLOOR6_2 = 40
-      FLOOR6_1 = 20
-
-      RROCK01  = 20
-      RROCK05  = 20
-      RROCK03  = 10
-      RROCK02  = 5
-    }
-  }
-
-
-  hell_Outdoors_generic =
-  {
-    env  = "outdoor"
-    prob = 50
-
-    floors =
-    {
-      FLOOR6_2 = 12
-      FLAT5_7 = 20
+      FLAT5_7 = 10
       FLAT5_8 = 10
-      RROCK03 = 30
-      RROCK04 = 30
-      RROCK09 = 15
-      MFLR8_3 = 15
-      SLIME13 = 10
-      RROCK11 = 10
-      RROCK12 = 10
-      RROCK13 = 5
-      RROCK01 = 5
-      RROCK02 = 3
-    }
-
-    naturals =
-    {
-      ROCKRED1 = 50
-      SP_ROCK1 = 30
-      ASHWALL2 = 30
-      ASHWALL3  = 25
-      ASHWALL6  = 20
-      ASHWALL7  = 15
-      ASHWALL4 = 30
-      SKIN2 = 10
-      SKSNAKE1 = 30
-      SKSNAKE2 = 30
-    }
-  }
-
-
-  hell_deuce_Hallway =
-  {
-    env   = "hallway"
-    group = "deuce"
-    prob  = 100
-
-    walls =
-    {
-      MARBGRAY = 80
-      REDWALL  = 60
-      SKIN2    = 60
-
-      SKSPINE2 = 45
-      SKINSYMB = 45
-      GSTVINE1 = 40
-      GSTVINE2 = 40
-      WOODMET4 = 30
-      WOODMET2 = 25
-      WOODMET1 = 25
-      GSTONE1  = 20
-      SKINMET1 = 10
-      SKINMET2 = 10
-      SW1LION  = 10
-      SW1GARG  = 10
-      SW1SATYR = 10
-    }
-
-    floors =
-    {
-      FLAT1 = 50
-      DEM1_6  = 30
-      FLOOR6_2 = 15
-      FLOOR7_1 = 20
-      FLOOR7_2 = 25
-      FLAT10  = 20
+      FLAT10 = 10
+      FLAT5_3 = 30
+      FLOOR7_1 = 15
+      FLAT1 = 10
+      FLOOR5_2 = 10
+      FLOOR6_1 = 35
+      FLAT8 = 15
+      FLAT5 = 15
     }
 
     ceilings =
     {
-      FLAT1 = 50
-      SFLR6_1 = 20
-      SFLR6_4 = 20
-      FLAT5_2 = 10
-      FLOOR7_2 = 20
-      CEIL1_1 = 15
-      BLOOD1 = 20
-      LAVA1 = 15
-    }
-
-
-    y_offsets =
-    {
-      MARBGRAY = 24
-      SKINSYMB = 30
-      SKINMET1 = 30
-      SKINMET2 = 30
-      SKSPINE2 = 13
-      SW1WOOD  = 47
-      SW1LION  = 47
-      SW1GARG  = 47
-      SW1SATYR  = 47
-      WOODMET4 = 16
-      WOODMET2 = 16
-      WOODMET1 = 16
+      FLAT1 = 15
+      FLOOR6_1 = 30
+      FLOOR6_2 = 15
+      FLAT10 = 10
+      FLAT8 = 5
+      FLAT5_3 = 20
+      FLAT5_1 = 5
+      FLAT5_2 = 5
+      CEIL1_1 = 5
     }
   }
 
 
+  hell_Hallway =
+  {
+    env   = "hallway"
+    group = "deuce"
+    prob  = 50
+
+    walls =
+    {
+      FIREBLU1 = 50
+      FIREWALL = 50
+      SKSPINE2 = 50
+      SKIN2    = 50
+      SKINSYMB = 50
+      MARBGRAY = 50
+    }
+
+    floors =
+    {
+      BLOOD1 = 50
+      FLAT4 = 30
+      CEIL4_1 = 15
+      CEIL5_1 = 30
+      FLAT14 = 20
+      FLAT5_4 = 20
+      FLOOR5_2 = 10
+      FLAT5 = 20
+      FLOOR7_2 = 3
+      FLAT5_2 = 3
+      DEM1_5 = 3
+      DEM1_6 = 3
+    }
+
+    ceilings =
+    {
+      BLOOD1 = 50
+      LAVA1 = 20
+      FLAT4 = 20
+      CEIL4_2 = 15
+      CEIL5_1 = 30
+      CEIL3_3 = 50
+      FLAT19 = 20
+      FLAT5_4 = 10
+      FLOOR7_1 = 2
+      FLAT5_1 = 2
+      DEM1_6 = 2
+    }
+
+    y_offsets =
+    {
+      SKSPINE2 = 13
+      SKINSYMB = 30
+      MARBGRAY = 24
+    }
+  }
+
+
+  hell_Outdoors_Generic =
+  {
+    env = "outdoor"
+    prob = 50
+
+    floors =
+    {
+      ASHWALL = 30
+      FLAT5_4 = 5
+      FLAT10 = 20
+      FLOOR6_1 = 40
+      SFLR6_1 = 10
+      SFLR6_4 = 10
+      MFLR8_2 = 15
+      MFLR8_4 = 10
+      FLAT5_2 = 5
+      FLAT5 = 5
+    }
+
+    naturals =
+    {
+      ASHWALL = 50
+      GRAYVINE = 20
+      SP_ROCK1 = 50
+      ROCKRED1 = 90
+      SKSNAKE1 = 10
+      SKSNAKE2 = 10
+    }
+  }
+
+
+  hell_Outdoors_hot =
+  {
+    env = "outdoor"
+    prob = 50
+
+    floors =
+    {
+      FLAT5_6 = 5
+      ASHWALL = 10
+      FLAT10 = 20
+      DEM1_5 = 15
+      DEM1_6 = 15
+      FLOOR7_2 = 20
+      FLOOR7_1 = 15
+      SFLR6_1 = 10
+      SFLR6_4 = 15
+      MFLR8_2 = 10
+      FLAT5_2 = 5
+    }
+
+    naturals =
+    {
+      ASHWALL = 30
+      GRAYVINE = 15
+      SP_ROCK1 = 50
+      ROCKRED1 = 90
+      SKSNAKE1 = 10
+      SKSNAKE2 = 10
+      FIREBLU1 = 70
+    }
+  }
+
+
+  hell_Cave =
+  {
+    env  = "cave"
+    prob = 50
+
+    walls =
+    {
+      ROCKRED1 = 90
+      SKIN2 = 30
+      SKINFACE = 25
+      SKSNAKE1 = 35
+      SKSNAKE2 = 35
+      FIREBLU1 = 50
+      FIRELAVA = 50
+      ASHWALL  = 20
+    }
+
+    floors =
+    {
+      ROCKRED1 = 90
+      SKIN2 = 30
+      SKINFACE = 25
+      SKSNAKE1 = 35
+      SKSNAKE2 = 35
+      FIREBLU1 = 50
+      FIRELAVA = 50
+      ASHWALL  = 20
+    }
+  }
+
+  -- prefab currently does not actually
+  -- have surfaces to recieve a custom skin
   hell_metro_Hallway =
   {
     env   = "hallway"
@@ -2970,446 +2506,272 @@ DOOM.ROOM_THEMES =
   }
 
 
-----  URBAN / CITY / EARTH  -----------------------
 
+----- EPISODE 4 -------------------------------
 
-  urban_Brick =
+  flesh_Room =
   {
-    env  = "building"
-    prob = 100
+    env = "building"
+    prob = 90
 
     walls =
     {
-      BIGBRIK1 = 80
-      BIGBRIK2 = 80
-
-      BRICK12 = 60
-      BRICK5  = 40
-      BRICK6  = 40
-      BRICK7  = 40
-
-      BRICK2  = 20
-      BRICK8  = 20
-      BRICK1  = 10
-      BRICK9  = 10
+      BROWNGRN = 20
+      BROVINE2 = 15
+      WOOD5 = 10
+      GSTONE1 = 20
+      STONE = 10
+      STONE2 = 5
+      STONE3 = 10
     }
 
     floors =
     {
-      FLAT1_1 = 50
-      FLAT1_2 = 30
-      FLAT1   = 30
-      FLAT5   = 15
-      FLAT5_1 = 50
-      FLAT5_2 = 30
-      FLAT5_4 = 20
-      FLAT5_5 = 50
-      FLAT8   = 30
-
-      FLOOR0_1 = 20
-      FLOOR0_2 = 20
-      FLOOR0_3 = 20
-      FLOOR4_6 = 20
-      FLOOR5_3 = 25
+      DEM1_5 = 10
+      DEM1_6 = 10
+      FLAT5_5 = 10
+      FLAT5_7 = 7
+      FLAT5_8 = 7
+      FLAT10 = 12
+      FLOOR7_1 = 10
+      FLOOR7_2 = 10
+      FLOOR5_2 = 10
+      FLOOR5_3 = 10
       FLOOR5_4 = 10
-    }
-
-    ceilings =
-    {
-      FLAT1   = 50
-      FLAT5_4 = 20
-      FLAT5_5 = 15
-      RROCK10 = 20
-      RROCK14 = 20
-      CEIL1_1 = 30
-      FLAT5_2 = 10
-      MFLR8_1 = 10
-      SLIME13 = 5
-    }
-  }
-
-
-  urban_Panel =
-  {
-    env  = "building"
-    prob = 50
-
-    walls =
-    {
-      PANEL6 = 50
-      PANEL8 = 50
-      PANEL9 = 30
-      PANEL7 = 20
-      PANEL3 = 50
-      PANEL2 = 50
-      PANCASE2 = 30
-    }
-
-    floors =
-    {
-      FLOOR0_2 = 15
-      FLOOR5_3 = 20
-      FLOOR5_4 = 15
-      FLAT1_1 = 30
-      FLAT1_2 = 30
-      FLAT1 = 15
+      FLAT5 = 10
       FLAT8 = 10
-      FLAT5_5 = 50
-      FLAT5_1 = 40
-      FLAT5_2 = 40
-      FLAT5 = 20
-      FLOOR3_3 = 10
-      FLOOR4_6 = 10
+      SFLR6_1 = 5
+      SFLR6_4 = 5
+      MFLR8_1 = 5
+      MFLR8_2 = 10
     }
 
     ceilings =
     {
-      FLAT1 = 50
-      CEIL1_1 = 20
-      FLAT5_2 = 20
-      CEIL3_3 = 10
-      RROCK10 = 20
-      RROCK11 = 10
-      FLOOR7_1 = 5
-      CEIL3_5 = 5
-    }
-  }
-
-
-  urban_Stone =
-  {
-    env  = "building"
-    prob = 40
-
-    walls =
-    {
-      STONE  = 20
-      STONE2 = 60
-      STONE3 = 50
-      ROCK1  = 10
-      ROCK3  = 10
-    }
-
-    floors =
-    {
-      FLAT1_2 = 50
-      FLAT1_1 = 20
-      FLAT5_1 = 50
-      FLAT5_2 = 50
-      FLAT1 = 50
-      FLAT8 = 20
-      FLAT5_4 = 35
-      FLAT5_5 = 20
-      FLAT5_1 = 50
-      SLIME14 = 15
-      SLIME15 = 15
-    }
-
-    ceilings =
-    {
-      FLAT1 = 50
-      CEIL1_1 = 20
-      CEIL3_5 = 25
-      MFLR8_1 = 30
-      FLAT5_4 = 20
-      RROCK11 = 20
-      RROCK12 = 20
-      FLAT5_2 = 10
-    }
-  }
-
-
-  urban_RedBrick =
-  {
-    env  = "building"
-    prob = 20
-
-    walls =
-    {
-      BRICK11 = 50
-    }
-
-    floors =
-    {
-      RROCK14  = 40
-      MFLR8_2  = 40
-      FLAT1_1  = 40
-      FLOOR3_3 = 20
-      FLOOR5_4 = 20
+      FLAT1 = 10
+      FLAT10 = 10
+      FLAT5_5 = 10
+      FLOOR7_2 = 15
+      DEM1_6 = 10
+      FLOOR6_1 = 10
       FLOOR6_2 = 10
-    }
-
-    ceilings =
-    {
-      FLOOR6_1 = 30
-      FLAT5_1  = 20
-      CEIL3_5  = 20
-      FLAT8    = 10
-      FLAT5_2  = 10
-      FLAT5_4  = 5
-    }
-  }
-
-
-  urban_GreenBrick =
-  {
-    env  = "building"
-    prob = 20
-
-    walls =
-    {
-      BRICK10 = 50
-    }
-
-    floors =
-    {
-      RROCK14  = 40
-      MFLR8_1  = 40
-      FLAT5_8  = 30
-      FLAT1    = 20
-      FLOOR7_1 = 10
-      FLOOR3_3 = 10
-    }
-
-    ceilings =
-    {
-      GRNROCK  = 40
-      FLOOR7_2 = 20
-      FLAT10   = 20
-      CEIL3_5  = 20
-      CEIL5_1  = 20
-      RROCK13  = 20
-      FLAT8    = 10
-    }
-  }
-
-
-  urban_Cement =
-  {
-    env  = "building"
-    prob = 20
-
-    walls =
-    {
-      CEMENT7 = 50
-    }
-
-    floors =
-    {
-      FLAT1    = 40
-      FLAT5_4  = 40
-      FLAT3    = 40
-      FLAT10   = 20
-      FLOOR3_3 = 20
-      FLOOR6_2 = 20
-      MFLR8_2  = 20
-      FLOOR4_8 = 10
-      FLOOR5_1 = 10
-      FLAT5_2 = 5
+      MFLR8_1 = 12
+      FLAT5_4 = 10
+      SFLR6_1 = 5
+      SFLR6_4 = 5
+      CEIL1_1 = 10
       FLAT5_1 = 5
-    }
-
-    ceilings =
-    {
-      FLAT19 = 50
-      FLAT18 = 20
-      FLAT5_4 = 25
-      RROCK13  = 30
-      MFLR8_1  = 30
-      SLIME13  = 20
-      FLOOR7_1 = 10
-      FLAT4    = 10
-      FLAT9 = 5
       FLAT5_2 = 5
-      CEIL1_1 = 5
+      FLAT8 = 8
     }
   }
 
 
-  -- TODO : this is same as hell_Wood, differentiate it...
-  urban_Wood =
+  flesh_Wood =
   {
-    env  = "building"
-    prob = 20
+    env = "building"
+    prob = 50
 
     walls =
     {
       WOOD1 = 50
       WOOD3 = 30
-      WOOD5 = 30
-      WOOD12 = 30
-      WOODVERT = 10
+      WOOD5 = 20
+      SKINMET1 = 15
+      SKINMET2 = 15
+      SKINTEK1 = 6
+      SKINTEK2 = 6
     }
 
     floors =
     {
-      FLAT5_1 = 50
+      FLAT5_1 = 30
       FLAT5_2 = 50
-      FLOOR7_1 = 50
-      FLAT5_4 = 20
-      FLOOR4_6 = 10
-      FLAT5_5  = 15
-      DEM1_5   = 10
-      DEM1_6   = 15
+      FLAT5_5 = 15
+      FLAT5 = 7
+      FLAT8 = 7
+    }
+
+    ceilings =
+    {
+      CEIL1_1 = 50
+      FLAT5_2 = 30
+      FLAT5_1 = 15
+      FLOOR7_1 = 10
+    }
+  }
+
+
+  flesh_Marble =
+  {
+    env = "building"
+    prob = 30
+
+    walls =
+    {
+      MARBLE1 = 50
+      MARBLE2 = 25
+      MARBLE3 = 20
+    }
+
+    floors =
+    {
+      DEM1_5 = 30
+      DEM1_6 = 50
+      FLAT10 = 5
+      FLOOR7_1 = 5
+      FLOOR7_2 = 50
     }
 
     ceilings =
     {
       FLOOR7_2 = 50
-      RROCK14 = 40
-      CEIL1_1 = 30
-      FLAT5_2 = 10
-      FLAT5_7 = 10
-      RROCK10 = 10
-      RROCK11 = 10
-      RROCK12 = 10
-      FLOOR7_1 = 5
+      DEM1_5 = 50
+      DEM1_6 = 50
+      FLOOR6_2 = 5
     }
   }
 
 
-  urban_Stucco =
-  {
-    env  = "building"
-    prob = 15
+  -- andrewj: this is a straight copy of deimos_Hallway_hell
 
-    walls =
-    {
-      STUCCO3 = 60
-      STUCCO1 = 30
-    }
-
-    floors =
-    {
-      FLAT5_5  = 50
-      FLAT8    = 20
-      FLOOR4_6 = 25
-      FLOOR5_4 = 20
-      FLAT1_1  = 30
-      FLAT1_2  = 30
-      DEM1_6   = 10
-
-      FLAT5    = 30
-      CEIL3_5  = 30
-      MFLR8_2  = 20
-      FLOOR1_6 = 10
-      FLAT5_1  = 10
-      FLAT5_2  = 10
-    }
-
-    ceilings =
-    {
-      CEIL1_1  = 30
-      FLAT5_5  = 10
-      FLAT5_2  = 5
-
-      CEIL3_5  = 30
-      FLAT18   = 20
-      FLAT19   = 30
-      RROCK03  = 10
-      RROCK10  = 10
-      RROCK12  = 5
-    }
-  }
-
-
-  urban_Modwall =
-  {
-    env  = "building"
-    prob = 10
-
-    walls =
-    {
-      MODWALL1 = 60
-      MODWALL3 = 30
-    }
-
-    floors =
-    {
-      FLAT5_4  = 50
-      FLAT8    = 20
-      FLOOR4_6 = 25
-      FLAT1_1  = 30
-
-      FLAT5    = 30
-      CEIL3_5  = 30
-      MFLR8_2  = 20
-      FLOOR1_6 = 10
-      FLAT5_1  = 10
-      FLAT5_2  = 10
-    }
-
-    ceilings =
-    {
-      CEIL1_1  = 30
-      FLAT5_5  = 10
-      FLAT5_2  = 5
-
-      CEIL3_5  = 30
-      FLAT18   = 20
-      FLAT19   = 30
-      RROCK03  = 10
-      RROCK10  = 10
-      RROCK12  = 5
-    }
-  }
-
-
-  urban_deuce_Hallway =
+  flesh_Hallway_hell =
   {
     env   = "hallway"
     group = "deuce"
-    prob  = 75
+    prob  = 50
 
     walls =
     {
-      WOOD1    = 90
-      WOOD12   = 90
-      WOOD9    = 90
-      WOODVERT = 90
-
-      BIGBRIK1 = 50
-      BIGBRIK2 = 50
-      BRICK10  = 50
-      BRICK11  = 10
-
-      PANEL1   = 50
-      PANEL7   = 30
-      PANEL8   = 30
-      PANEL9   = 30
-      STUCCO   = 30
-      STUCCO1  = 30
-      STUCCO3  = 30
+      MARBLE1 = 20
+      MARBLE2 = 20
+      MARBLE3 = 20
+      GSTONE1 = 20
+      BROVINE = 20
+      COMPTILE = 20
     }
 
     floors =
     {
-      FLAT5_1 = 50
-      FLAT5_2 = 20
-      FLAT8   = 50
-      FLAT5_4 = 50
-      MFLR8_1 = 50
-      FLOOR5_3 = 20
+      FLAT4 = 30
+      CEIL4_1 = 15
+      CEIL4_2 = 15
+      CEIL5_1 = 30
+      FLAT14 = 20
+      FLAT5_4 = 20
+      FLOOR3_3 = 30
+      FLOOR4_8 = 40
+      FLOOR5_1 = 25
+      FLOOR5_2 = 10
       FLAT5 = 20
+      FLOOR1_6 = 4
+      FLOOR7_2 = 15
+      FLAT5_1 = 15
+      FLAT5_2 = 15
+      DEM1_5 = 15
+      DEM1_6 = 15
     }
 
     ceilings =
     {
-      CEIL1_1 = 30
-      FLAT5_2 = 25
-      CEIL3_5 = 20
-      MFLR8_1 = 50
-      FLAT1   = 30
+      FLAT4 = 20
+      CEIL4_1 = 15
+      CEIL4_2 = 15
+      CEIL5_1 = 30
+      CEIL3_5 = 25
+      CEIL3_3 = 20
+      FLAT18 = 15
+      FLAT19 = 20
+      FLAT5_4 = 10
+      FLOOR4_8 = 15
+      FLOOR5_1 = 20
+      FLOOR7_1 = 15
+      FLOOR7_2 = 15
+      FLAT5_1 = 15
+      FLAT5_2 = 15
+      DEM1_5 = 15
+      DEM1_6 = 15
+    }
+  }
+
+
+  flesh_Cave =
+  {
+    env = "cave"
+    prob = 50
+
+    walls =
+    {
+      ROCKRED1 = 70
+      SP_ROCK1 = 50
+      BROWNHUG = 15
+      SKIN2 = 10
+      SKINFACE = 20
+      SKSNAKE1 = 5
+      SKSNAKE2 = 5
+      FIREBLU1 = 10
+      FIRELAVA = 10
+    }
+
+    floors =
+    {
+      ROCKRED1 = 70
+      SP_ROCK1 = 50
+      BROWNHUG = 15
+      SKIN2 = 10
+      SKINFACE = 20
+      SKSNAKE1 = 5
+      SKSNAKE2 = 5
+      FIREBLU1 = 10
+      FIRELAVA = 10
+    }
+  }
+
+
+  flesh_Outdoors =
+  {
+    env = "outdoor"
+    prob = 50
+
+    floors =
+    {
+      ASHWALL = 12
+      FLAT1_1 = 15
+      FLAT5_4 = 10
+      FLAT10 = 20
+      FLAT5_7 = 10
+      FLAT5_8 = 10
+      MFLR8_4 = 10
+      FLOOR7_1 = 15
+      SFLR6_1 = 8
+      SFLR6_4 = 8
+      FLAT5 = 7
+      MFLR8_2 = 5
+      FLAT1_1 = 10
+      FLAT1_2 = 10
+      MFLR8_3 = 10
+      FLAT5_2 = 20
+    }
+
+    naturals =
+    {
+      ASHWALL = 30
+      GRAYVINE = 20
+      SP_ROCK1 = 70
+      ROCKRED1 = 70
+      BROWNHUG = 20
+      SKSNAKE1 = 10
+      SKSNAKE2 = 10
     }
   }
 
   -- prefab currently does not actually
   -- have surfaces to recieve a custom skin
-  urban_metro_Hallway =
+  flesh_metro_Hallway =
   {
     env   = "hallway"
     group = "metro"
-    prob  = 35
+    prob  = 20
 
     walls =
     {
@@ -3428,250 +2790,323 @@ DOOM.ROOM_THEMES =
   }
 
 
-  urban_Cave_generic =
-  {
-    env  = "cave"
-    prob = 50
-
-    walls =
-    {
-      ROCK1    = 40
-      ROCK2    = 40
-      ROCK3    = 40
-      ASHWALL2 = 40
-      ASHWALL3 = 40
-      ASHWALL4 = 40
-
-      ZIMMER1  = 10
-      ZIMMER2  = 10
-      ZIMMER3  = 20
-      ZIMMER4  = 20
-      ZIMMER5  = 20
-      ZIMMER7  = 20
-      ROCK5    = 15
-
-      BSTONE1  = 10
-      BSTONE2  = 10
-      STONE4   = 10
-      STONE5   = 10
-      ASHWALL7 = 10
-    }
-
-    floors =
-    {
-      ROCK2    = 40
-      ASHWALL2 = 40
-      ASHWALL4 = 40
-
-      ZIMMER1  = 10
-      ZIMMER5  = 20
-
-      BSTONE2  = 10
-      STONE5   = 10
-      RROCK18  = 20
-      RROCK19  = 20
-    }
-  }
-
-
-  urban_Outdoors_generic =
-  {
-    env  = "outdoor"
-    prob = 50
-
-    floors =
-    {
-      STONE    = 50
-      RROCK18  = 35
-      RROCK19  = 35
-      FLAT5_2  = 15
-      FLAT1    = 25
-      RROCK17  = 20
-      FLOOR7_1 = 20
-      GRASS1   = 15
-      GRASS2   = 15
-      RROCK03  = 10
-      MFLR8_3  = 10
-      FLOOR6_2 = 5
-    }
-
-    naturals =
-    {
-      ASHWALL2 = 50
-      ASHWALL3 = 50
-      FLAT10   = 40
-      ASHWALL4 = 50
-      ASHWALL6 = 35
-      ASHWALL7 = 35
-      TANROCK4 = 20
-      TANROCK5 = 20
-      SP_ROCK1 = 20
-      BSTONE1  = 20
-      BSTONE2  = 20
-      ZIMMER1  = 15
-      ZIMMER2  = 15
-      ZIMMER3  = 15
-      ZIMMER4  = 15
-      ZIMMER5  = 15
-      ZIMMER7  = 15
-      ZIMMER8  = 15
-      TANROCK7 = 15
-      ROCK1    = 30
-      ROCK2    = 20
-      ROCK3    = 70
-    }
-  }
 }
 
 
 --------------------------------------------------------------------
 
-DOOM.ROOMS =
+ULTDOOM.EPISODES =
 {
-  GENERIC =
+  episode1 =
   {
-    env = "any"
-  }
+    ep_index = 1
 
-
-  ---- Indoors ----
-
-  COMPUTER =
-  {
     theme = "tech"
-    prob  = 50
+    sky_patch = "SKY1"
+    dark_prob = 10
+
+    name_patch = "M_EPI1"
+    description = "Knee-Deep in the Dead"
+    bex_end_name = "E1TEXT"
   }
 
-  STORAGE =
+  episode2 =
   {
-    prob  = 50
+    ep_index = 2
+
+    theme = "deimos"
+    sky_patch = "SKY2"
+    dark_prob = 40
+
+    name_patch = "M_EPI2"
+    description = "The Shores of Hell"
+    bex_end_name = "E2TEXT"
   }
 
-  WASTE =
+  episode3 =
   {
-    theme = "!hell"
-    style = "liquids"
-    prob  = 50
-  }
+    ep_index = 3
 
-  PRISON =
-  {
-    style = "cages"
-    prob  = 50
-  }
-
-  TORTURE =
-  {
-    theme = { hell=1, urban=0.2 }
-    prob  = 50
-  }
-
-  CHAPEL =
-  {
     theme = "hell"
-    prob  = 15
+    sky_patch = "SKY3"
+    dark_prob = 10
+
+    name_patch = "M_EPI3"
+    description = "Inferno"
+    bex_end_name = "E3TEXT"
   }
 
-  LIBRARY =
+  episode4 =
   {
-    theme = "urban"
-    prob  = 15
-  }
+    ep_index = 4
 
+    theme = "flesh"
+    sky_patch = "SKY4"
+    dark_prob = 10
 
-  ---- Outdoors ----
-
-  LAUNCH =
-  {
-    env = "outdoor"
-    theme = "tech"
-    prob = 10
-  }
-
-  GARDEN =
-  {
-    env = "outdoor"
-    theme = "urban"
-    prob = 50
-  }
-
-  GRAVEYARD =
-  {
-    env = "outdoor"
-    theme = { hell=1, urban=0.4 }
-    prob = 20
+    name_patch = "M_EPI4"
+    description  = "Thy Flesh Consumed"
+    bex_end_name = "E4TEXT"
   }
 }
+
+
+ULTDOOM.PREBUILT_LEVELS =
+{
+  E1M8 =
+  {
+    { prob=50,  file="games/doom/data/boss1/anomaly1.wad", map="E1M8" }
+    { prob=50,  file="games/doom/data/boss1/anomaly2.wad", map="E1M8" }
+    { prob=100, file="games/doom/data/boss1/anomaly3.wad", map="E1M8" }
+    { prob=50,  file="games/doom/data/boss1/ult_anomaly.wad",  map="E1M8" }
+    { prob=100, file="games/doom/data/boss1/ult_anomaly2.wad", map="E1M8" }
+  }
+
+  E2M8 =
+  {
+    { prob=40,  file="games/doom/data/boss1/tower1.wad", map="E2M8" }
+    { prob=60,  file="games/doom/data/boss1/tower2.wad", map="E2M8" }
+    { prob=100, file="games/doom/data/boss1/ult_tower.wad", map="E2M8" }
+  }
+
+  E3M8 =
+  {
+    { prob=50,  file="games/doom/data/boss1/dis1.wad", map="E3M8" }
+    { prob=100, file="games/doom/data/boss1/ult_dis.wad", map="E3M8" }
+  }
+
+  E4M6 =
+  {
+    { prob=50, file="games/doom/data/boss1/tower1.wad", map="E2M8" }
+  }
+
+  E4M8 =
+  {
+    { prob=50, file="games/doom/data/boss1/dis1.wad", map="E3M8" }
+  }
+}
+
+
+function ULTDOOM.get_levels()
+  local EP_MAX  = sel(OB_CONFIG.game   == "ultdoom", 4, 3)
+  local EP_NUM  = sel(OB_CONFIG.length == "game", EP_MAX, 1)
+
+  local MAP_LEN_TAB = { single=1, few=4 }
+
+  local MAP_NUM = MAP_LEN_TAB[OB_CONFIG.length] or 9
+
+  -- this accounts for last two levels are BOSS and SECRET level
+  local LEV_MAX = MAP_NUM
+  if LEV_MAX == 9 then LEV_MAX = 7 end
+
+  -- create episode info...
+
+  for ep_index = 1,4 do
+    local ep_info = GAME.EPISODES["episode" .. ep_index]
+    assert(ep_info)
+
+    local EPI = table.copy(ep_info)
+
+    EPI.levels = { }
+
+    table.insert(GAME.episodes, EPI)
+  end
+
+  -- create level info...
+
+  for ep_index = 1,EP_NUM do
+    local EPI = GAME.episodes[ep_index]
+
+    for map = 1,MAP_NUM do
+      local ep_along = map / LEV_MAX
+
+      if MAP_NUM == 1 then
+        ep_along = rand.range(0.3, 0.7);
+      elseif map == 9 then
+        ep_along = 0.5
+      end
+
+      local LEV =
+      {
+        episode = EPI
+
+        name  = string.format("E%dM%d",   ep_index,   map)
+        patch = string.format("WILV%d%d", ep_index-1, map-1)
+
+        ep_along = ep_along
+        game_along = (ep_index - 1 + ep_along) / EP_NUM
+      }
+
+      table.insert( EPI.levels, LEV)
+      table.insert(GAME.levels, LEV)
+
+      LEV.secret_exit = GAME.SECRET_EXITS[LEV.name]
+
+      if map == 9 then
+        LEV.is_secret = true
+      end
+
+      -- prebuilt levels
+      if OB_CONFIG.prebuilt_levels == "yes" then
+        LEV.prebuilt = GAME.PREBUILT_LEVELS[LEV.name]
+      end
+
+      if LEV.prebuilt then
+        LEV.name_class = LEV.prebuilt.name_class or "BOSS"
+      end
+
+      -- procedural gotcha management code
+
+      -- Prebuilts are to exist over procedural gotchas
+      -- this means procedural gotchas will not override
+      -- Icon of Sin for example if prebuilts are still on
+      if not LEV.prebuilt then
+
+        --handling for the Final Only option
+        if OB_CONFIG.procedural_gotchas == "final" then
+          if OB_CONFIG.length == "single" then
+            if map == 1 then LEV.is_procedural_gotcha = true end
+          elseif OB_CONFIG.length == "few" then
+            if map == 4 then LEV.is_procedural_gotcha = true end
+          elseif OB_CONFIG.length == "episode" then
+            if map == 11 then LEV.is_procedural_gotcha = true end
+          elseif OB_CONFIG.length == "game" then
+            if map == 30 then LEV.is_procedural_gotcha = true end
+          end
+        end
+
+        --every 10 maps
+        if OB_CONFIG.procedural_gotchas == "epi" then
+          if map == 11 or map == 21 or map == 30 then
+            LEV.is_procedural_gotcha = true
+          end
+        end
+
+        --5% of maps after map 4
+        if OB_CONFIG.procedural_gotchas == "5p" then
+          if map > 4 then
+            if rand.odds(5) then LEV.is_procedural_gotcha = true end
+          end
+        end
+
+        -- 10% of maps after map 4
+        if OB_CONFIG.procedural_gotchas == "10p" then
+          if map > 4 then
+            if rand.odds(10) then LEV.is_procedural_gotcha = true end
+          end
+        end
+
+        -- for masochists... or debug testing
+        if OB_CONFIG.procedural_gotchas == "all" then
+          LEV.is_procedural_gotcha = true
+        end
+      end
+
+      -- handling for street mode
+      if not LEV.is_procedural_gotcha or not LEV.prebuilt then
+        if OB_CONFIG.streets_mode == "100urban" then
+          if LEV.theme_name == "urban" then
+            LEV.has_streets = true
+          end
+        elseif OB_CONFIG.streets_mode == "75urban" then
+          if LEV.theme_name == "urban" and rand.odds(75) then
+            LEV.has_streets = true
+          end
+        elseif OB_CONFIG.streets_mode == "50urban" then
+          if LEV.theme_name == "urban" and rand.odds(50) then
+            LEV.has_streets = true
+          end
+        elseif OB_CONFIG.streets_mode == "25urban" then
+          if LEV.theme_name == "urban" and rand.odds(25) then
+            LEV.has_streets = true
+          end
+        elseif OB_CONFIG.streets_mode == "75" and rand.odds(75) then
+          LEV.has_streets = true
+        elseif OB_CONFIG.streets_mode == "50" and rand.odds(50) then
+          LEV.has_streets = true
+        elseif OB_CONFIG.streets_mode == "25" and rand.odds(25) then
+          LEV.has_streets = true
+        elseif OB_CONFIG.streets_mode == "all" then
+          LEV.has_streets = true
+        end
+      end
+
+      if MAP_NUM == 1 or map == 3 then
+        LEV.demo_lump = string.format("DEMO%d", ep_index)
+      end
+    end -- for map
+
+    -- set "dist_to_end" value
+    if MAP_NUM >= 9 then
+      EPI.levels[7].dist_to_end = 1
+      EPI.levels[6].dist_to_end = 2
+      EPI.levels[5].dist_to_end = 3
+
+    elseif MAP_NUM == 4 then
+      EPI.levels[4].dist_to_end = 1
+      EPI.levels[3].dist_to_end = 3
+    end
+
+  end -- for episode
+end
+
+
+function ULTDOOM.setup()
+  -- nothing needed
+end
 
 
 --------------------------------------------------------------------
 
-DOOM.NAMES =
+OB_GAMES["doom1"] =
 {
-  -- these tables provide *additional* words to those in naming.lua
+  label = _("Doom 1")
 
-  TECH =
+  priority = 98  -- keep at second spot
+
+  format = "doom"
+  game_dir = "doom"
+  iwad_name = "doom.wad"
+
+  tables =
   {
-    lexicon =
-    {
-      a =
-      {
-        Deimos=40
-        Phobos=40
-        Ganymede=30
-        Io=30
-        Europa=30
-        Callisto=30
-        Lazarus=20
-        Mimas=20
-        Rhea=20
-        Iapetus=20
-        ["Tei Tenga"]=25
-      }
+    DOOM, ULTDOOM
+  }
 
-      b =
-      {
-        UAC=30
-      }
+  hooks =
+  {
+    setup      = ULTDOOM.setup
+    get_levels = ULTDOOM.get_levels
 
-      s =
-      {
-        ["UAC Crisis"]=30
-      }
-    }
+    end_level  = DOOM.end_level
+    all_done   = DOOM.all_done
   }
 }
 
 
---------------------------------------------------------------------
-
-OB_THEMES["tech"] =
+OB_GAMES["ultdoom"] =
 {
-  label = _("Tech")
-  game = "doomish"
-  priority = 18
-  name_class = "TECH"
-  mixed_prob = 90
+  label = _("Ultimate Doom")
+
+  extends = "doom1"
+
+  priority = 97  -- keep at third spot
+
+  -- no additional tables
+
+  -- no additional hooks
 }
 
+
+--------------------------------------------------------------------
 
 OB_THEMES["deimos"] =
 {
   label = _("Deimos")
   game = "doom1"
-  priority = 15
+  priority = 16
   name_class = "TECH"
-  mixed_prob = 35
-}
-
-
-OB_THEMES["hell"] =
-{
-  label = _("Hell")
-  game = "doomish"
-  priority = 12
-  name_class = "GOTHIC"
-  mixed_prob = 35
+  mixed_prob = 30
 }
 
 
@@ -3679,17 +3114,9 @@ OB_THEMES["flesh"] =
 {
   label = _("Thy Flesh")
   game = "ultdoom"
-  priority = 12
+  priority = 13
   name_class = "GOTHIC"
-  mixed_prob = 35
-}
-
-
-OB_THEMES["mostly_tech"] =
-{
-  label = _("Tech-ish")
-  game = "doomish"
-  priority = 17
+  mixed_prob = 20
 }
 
 
@@ -3697,20 +3124,14 @@ OB_THEMES["mostly_deimos"] =
 {
   label = _("Deimos-ish")
   game = "doom1"
-  priority = 14
+  priority = 15
 }
 
-
-OB_THEMES["mostly_hell"] =
-{
-  label = _("Hell-ish")
-  game = "doomish"
-  priority = 11
-}
 
 OB_THEMES["mostly_flesh"] =
 {
-  label = _("Flesh-ish")
+  label = _("The Flesh-ish")
   game = "ultdoom"
-  priority = 11
+  priority = 12
 }
+
