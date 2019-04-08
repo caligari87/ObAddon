@@ -3,6 +3,8 @@
 ------------------------------------------------------------------------
 --
 --  Copyright (C) 2016-2017 Andrew Apted
+--  Copyright (C) 2019 Glaice
+--  Copyright (C) 2019 MsrSgtShooterPerson
 --
 --  This program is free software; you can redistribute it and/or
 --  modify it under the terms of the GNU General Public License
@@ -62,7 +64,7 @@ UI_MONS.STRENGTHS =
 {
   "weak",   _("[0.59] Weak"),
   "easier", _("[0.77] Easier"),
-  "medium", _("[1] Normal"),
+  "medium", _("[1] Average"),
   "harder", _("[1.3] Harder"),
   "tough",  _("[1.7] Tough"),
   "crazy",  _("[12] CRAZY"),
@@ -72,7 +74,7 @@ UI_MONS.BOSSES =
 {
   "none",   _("NONE"),
   "easier", _("Easier"),
-  "medium", _("Normal"),
+  "medium", _("Average"),
   "harder", _("Harder"),
 }
 
@@ -80,7 +82,7 @@ UI_MONS.RAMPS =
 {
   "veryslow", _("Very Slow"),
   "slow",    _("Slow"),
-  "medium",  _("Medium"),
+  "medium",  _("Average"),
   "fast",    _("Fast"),
   "veryfast", _("Very Fast"),
   "epi",     _("Episodic"),
@@ -101,7 +103,7 @@ UI_MONS.TRAP_STRENGTH =
 {
   "weaker",   _("Weaker"),
   "easier",   _("Easier"),
-  "normal",   _("Normal"),
+  "normal",   _("Average"),
   "stronger", _("Stronger"),
   "mixed",    _("Mix It Up"),
 }
