@@ -3,7 +3,7 @@
 --------------------------------------------------------------------
 --
 --  Copyright (C) 2006-2017 Andrew Apted
---  Copyright (C) 2011,2014 Chris Pisarczyk
+--  Copyright (C) 2011,2019 Chris Pisarczyk / Glaice
 --  Copyright (C) 2019 MsrSgtShooterPerson
 --
 --  This program is free software; you can redistribute it and/or
@@ -448,7 +448,7 @@ ULTDOOM.THEMES =
     wide_halls =
     {
       deuce = 50
-      metro = 20 --Currently disabled until everything checks out normally
+      --metro = 20 --Currently disabled until everything checks out normally
     }
 
     barrels =
@@ -1393,6 +1393,20 @@ ULTDOOM.THEMES =
       skull   = 0.7
       Cyberdemon = 1.5
       Mastermind = 1.5
+    }
+
+    window_groups =
+    {
+      round  = 20
+      tall   = 90
+      barred = 15
+      grate  = 25
+      square = 50
+      gtd_window_cage_highbars = 30
+      gtd_window_cage_lowbars = 20
+      gtd_window_cage_hell = 40
+      gtd_window_arched = 80
+      gtd_window_full_open = 40
     }
 
     style_list =
