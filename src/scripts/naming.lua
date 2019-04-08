@@ -266,7 +266,40 @@ namelib.NAMES =
         Electronics=5, Electrical=5, Diffusion=3,
         Worm_hole=5, Black_hole=5, Teleport=3,
         Hybrid=5, Cryogenic=5, Cryo_=2,
-        Robotic=1, Laser=1, Photonic=1, Bio_=2,
+        Robotic=5, Laser=5, Photonic=3, Bio_=2,
+
+        -- some even odder materials! -MSSP
+        Chromium=3, Plasma=10, Ion=8,
+        Dilithium=7, Verteron=5, --nerd
+        Deuterium=5, Antimatter=5, Isotope=3,
+        Syngas=5,
+
+        -- can't get enough weird sci-fi buzzwords -MSSP
+        Axioinic=3, Gravimetric=5,
+        Graviton=5, Nitrogen=5, Hyperwave=7,
+        Magnetic=5, Nanosphere=5, Nanobrane=3,
+        Geodesic=7, Biaxial=5,
+        Phased=5, Metatronic=5, Vacuum=5,
+        Superluminal=5, Rubidium=3, Magmatic=3,
+        Temporal=5, Sonic=5, Optic=3,
+        Damping=5, Hydraulic=7, Flux=10,
+
+        -- mechanical processes -MSSP
+        Filtration=5, Pneumatic=5, Catalytic=3,
+        Pyrolytic=5,
+
+        -- mathematical shapes/structures
+        Toroidal=5, Solenoid=5, Helical=5,
+        Parabolic=5, Polyform=5, Auxetic=3,
+        Biconcave=3, Hyperboloid=3, Convex=5,
+        Octant=5, Polytopic=3,
+
+        -- elementary particles! -MSSP
+        Lepton=3, Muon=3, Hadron=5,
+        Quark=5, Boson=5, Neutrino=5,
+        Electron=7,
+
+        Weapons=10,
 
         ["I/O"]=5,
       }
@@ -310,6 +343,43 @@ namelib.NAMES =
         Dimension=3, Paradox=3, Vortex=5,
         Enigma=5, Artifact=1, Quagmire=1,
         Catalyst=2,
+
+        -- MSSP adds
+        Dome=7, Basin=5,
+
+        -- storage-ish words -MSSP
+        Armory=10, Yard=7, Depository=8,
+        Terminus=10, Pool=5, Arsenal=8,
+        Magazine=5, Range=5, Cache=10,
+        Munitions=8, Repository=8, Archive=5,
+        Reserve=7,
+
+        -- military stuff -MSSP
+        Casern=5, ["F.O.B."]=7, ["Fire Base"]=10,
+        Garrison=10, Logistics=10, Containment=7,
+
+        -- machine/electronic parts -MSSP
+        -- and weird science-y buzzwords
+        -- and also car parts
+        Oscillator=5, Magnetron=5, Emulsifier=5,
+        Alternator=5, Induction=5, Stabilizer=5,
+        Processor=10, Suspension=5, Conduit=5,
+        Synthesizer=3, Mainframe=10, Modulator=5,
+        Converter=4, Inverter=4, Array=5,
+        Manifold=5, Regulator=5, Inhibitor=7,
+        Pulser=3, Nacelles=3, Filament=3,
+        Scrambler=3, Emitter=5, Capacitor=10,
+        Compressor=7, Condenser=7, Matrix=10,
+        Feed=8, Refractory=6, Deflector=5,
+        Junction=7, Analyser=7, Reciprocator=5,
+        Collector=3, Centrifuge=7, Splitter=5,
+        Scrubber=5, Injector=7, Accelerator=10,
+        Infuser=5, Collider=10, Energizer=5,
+        Transducer=5, Bearing=3, Incubation=5,
+        Coil=10, Gearbox=5, Radiator=5,
+        Caliper=3, Rotor=5, Shield=10,
+        Synchronizer=5, Conditioner=3, Distillery=5,
+        Transistor=3, Diode=3, Boiler=3,
       }
 
       s =
@@ -644,6 +714,61 @@ namelib.NAMES =
         Ache=2, Apocalypse=1, Resurrection=5,
         Absolution=5, Crux=5, Culmination=5,
         Sacrament=5, Plight=5, Liturgy=5,
+
+        -- Shadiversity approved castle parts -MSSP
+        Ramparts=8, Keep=10, Gatehouse=8,
+        Bailey=5, Barbican=5, Well=10,
+        Motte=4, Battlements=10, Ward=7,
+        Turrets=3, Oubliette=3, Stockades=3,
+        Bartizan=3, Brattice=3, Embrasure=5,
+        Balistraria=2, Castellation=2, Crenels=2,
+        Merlons=2,
+
+        Postern=3, Cistern=3
+
+        -- temples of sorts
+        Abbey=10, Monastery=10, Friary=3,
+        Priorate=5, Lamasery=3, Convent=10,
+        Hermitage=5, Ziggurat=10,
+
+        -- deady stuff
+        Mausoleum=15, Undercroft=5, Entombment=5,
+
+        Domicile=5,
+        Library=15,
+
+        -- medieval architecture
+        Collonade=5, Aisles=5, Ambulatory=3,
+        Apse=3, Arcade=10, Courts=5,
+        Billet=5, Hoarding=5, Loggia=3,
+        Oriel=3, Pier=5, Triforium=3,
+        Jetty=2, Pylon=5,
+
+        Hypostyle=2,
+
+        -- church bits
+        Baptistery=3, Ciborium=3, Nave=3,
+        Clerestory=3, Transept=5, Scriptorium=7,
+        Synagogue=10, Belfries=2, Pulpitum=3,
+        Dais=3, Feretory=5, Maqsurah=3,
+        Peripteral=3,
+
+        Minaret=3,
+
+        Monstrance=3, Reliquary=10,
+
+        Chancellery=5
+
+        -- generic architectural stuff
+        Banister=5, Gallery=5,
+        Parapet=5, Terraces=5, Banquette=2,
+        Balcony=3, Cusp=3, Dome=10, Portal=5,
+        Tribune=7, Vestibule=10, Atrium=10,
+        Terastyle=2, Hexastyle=2, Monitor=5,
+        Niche=10, Oculus=5, Solar=5,
+        Rotunda=2, Cellars=10,
+
+        Pavillion=5, Monument=10,
       }
 
       h =
@@ -1197,6 +1322,15 @@ namelib.NAMES =
 
         -- weird ones
         Echo=1,
+
+        -- commercial -MSSP
+        Mall=5, Strip=5, Market=8,
+
+        -- civic -MSSP
+        Hospital=5, Park=5, Commons=10,
+
+        -- residential -MSSP
+        Projects=10, Housing=5,
       }
 
       h =
