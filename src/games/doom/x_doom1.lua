@@ -1784,7 +1784,7 @@ ULTDOOM.ROOM_THEMES =
   }
 
 
-  tech_Outdoors_Generic =
+  tech_Outdoors =
   {
     env = "outdoor"
     prob = 50
@@ -2120,7 +2120,7 @@ ULTDOOM.ROOM_THEMES =
   }
 
 
-  deimos_Outdoors_Generic =
+  deimos_Outdoors =
   {
     env = "outdoor"
     prob = 50
@@ -2387,7 +2387,7 @@ ULTDOOM.ROOM_THEMES =
   }
 
 
-  hell_Outdoors_Generic =
+  hell_Outdoors =
   {
     env = "outdoor"
     prob = 50
@@ -3134,4 +3134,3 @@ OB_THEMES["mostly_flesh"] =
   game = "ultdoom"
   priority = 12
 }
-
