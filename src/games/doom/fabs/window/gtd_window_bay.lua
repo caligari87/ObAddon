@@ -5,8 +5,6 @@ PREFABS.Window_bay_1 =
   group  = "gtd_window_bay"
   prob   = 50
 
-  theme  = "!hell"
-
   where  = "edge"
   seed_w = 1
 
