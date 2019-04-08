@@ -597,21 +597,31 @@ function ZDOOM_SPECIALS.do_special_stuff()
 
   local function add_episodedef(map_num)
     local episodedef = {''}
+    local map_string
 
     if OB_CONFIG.game == "doom2" then
-      local map_string = map_num
+      map_string = map_num
       if map_num < 10 then
         map_string = "0" .. map_num
       end
 
-      episodedef =
-      {
-        'episode MAP' .. map_string .. '\n'
-        '{\n'
-        '  name = "' .. GAME.levels[map_num].episode.description .. '"\n'
-        '}\n'
-      }
     end
+    if OB_CONFIG.game == "doom1" or OB_CONFIG.game == "ultdoom" then
+       map_string = ZDOOM_SPECIALS.DOOM1_MAP_NOMENCLATURE[map_num]
+    end
+
+    if not map_string then
+      return nil
+    end
+
+    episodedef =
+    {
+      'episode MAP' .. map_string .. '\n'
+      '{\n'
+      '  name = "' .. GAME.levels[map_num].episode.description .. '"\n'
+      '}\n'
+    }
+
     return episodedef
   end
 
@@ -654,24 +664,48 @@ function ZDOOM_SPECIALS.do_special_stuff()
 
     -- for Doom2 (yes, there's no Doom2 episode splitting)
     -- but there is from now on
-    local episode_1_info = add_episodedef(1)
-    each line in episode_1_info do
-      table.insert(mapinfolump,line)
-    end
-
-    if #GAME.levels > 11 then
-      local episode_2_info = add_episodedef(12)
-      local episode_3_info = add_episodedef(21)
-      each line in episode_2_info do
+    if OB_CONFIG.game == "doom2" then
+      local episode_1_info = add_episodedef(1)
+      each line in episode_1_info do
         table.insert(mapinfolump,line)
       end
-      each line in episode_3_info do
-        table.insert(mapinfolump,line)
+
+      if #GAME.levels > 11 then
+        local episode_2_info = add_episodedef(12)
+        local episode_3_info = add_episodedef(21)
+        each line in episode_2_info do
+          table.insert(mapinfolump,line)
+        end
+        each line in episode_3_info do
+          table.insert(mapinfolump,line)
+        end
       end
     end
 
-    -- for Doom1/UltDoom
-    -- TODO
+    if OB_CONFIG.game == "doom1" or OB_CONFIG.game == "ultdoom" then
+      local episode_info = add_episodedef(1)
+      each line in episode_1_info do
+        table.insert(mapinfolump,line)
+      end
+
+      if #GAME.levels > 9 then
+        episode_info = add_episodedef(10)
+        each line in episode_info do
+          table.insert(mapinfolump,line)
+        end
+        episode_info = add_episodedef(19)
+        each line in episode_info do
+          table.insert(mapinfolump,line)
+        end
+      end
+
+      if #GAME.levels > 27 then
+        episode_info = add_episodedef(28)
+        each line in episode_info do
+          table.insert(mapinfolump,line)
+        end
+      end
+    end
   end
 
   -- collect lines for the cluster information in MAPINFO

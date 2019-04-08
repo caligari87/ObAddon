@@ -1011,7 +1011,7 @@ ULTDOOM.THEMES =
       floor_red = 5
       liquid_firelava = 5
       liquid_ash = 4
-      liquid_marble = 4 
+      liquid_marble = 4
     }
 
     ceiling_sinks =
