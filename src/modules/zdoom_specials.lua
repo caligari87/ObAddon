@@ -178,6 +178,7 @@ ZDOOM_SPECIALS.INTERPIC_MUSIC =
 {
   "$MUSIC_DM2INT", _("Universal Intermission"),
   "$MUSIC_READ_M", _("Doom 2 Vanilla"),
+  "$MUSIC_INTER",  _("Doom 1 Vanilla")
 }
 
 ZDOOM_SPECIALS.MUSIC = {}
@@ -344,6 +345,8 @@ function ZDOOM_SPECIALS.do_special_stuff()
 
     local secret_level_line
 
+    local next_level_line = '  next = ' .. map_id_next .. '\n'
+
     -- establish secret map MAPINFO links
     -- for DOOM2
     if OB_CONFIG.game == "doom2" then
@@ -391,8 +394,6 @@ function ZDOOM_SPECIALS.do_special_stuff()
         next_level_line = ''
       end
     end
-
-    local next_level_line = '  next = ' .. map_id_next .. '\n'
 
     local fog_color_line = '  fade = "' .. fog_color .. '"\n'
 
@@ -477,6 +478,7 @@ function ZDOOM_SPECIALS.do_special_stuff()
       '' .. music_line .. ''
       '  EnterPic = "' .. interpic .. '"\n'
       '  ExitPic = "' .. interpic .. '"\n'
+      '' .. special_attributes .. ''
       '}\n'
     }
 
