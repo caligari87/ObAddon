@@ -382,16 +382,16 @@ function ZDOOM_SPECIALS.do_special_stuff()
 
       -- skip for secret levels
       if map_num == 8 then
-        next_level_line = '  next = E2M1\n'
+        next_level_line = '  next = "EndGame1"\n'
       elseif map_num == 17 then
-        next_level_line = '  next = E3M1\n'
+        next_level_line = '  next = "EndGame2\n'
       elseif map_num == 26 then
-        next_level_line = '  next = E4M1\n'
+        next_level_line = '  next = "endbunny"\n'
       end
 
       -- final level
       if map_num == 35 then
-        next_level_line = ''
+        next_level_line = '  next = "EndGame4"\n'
       end
     end
 
@@ -462,6 +462,34 @@ function ZDOOM_SPECIALS.do_special_stuff()
       name_string_map_id = map_id
     else
       name_string_map_id = map_num
+    end
+
+    -- special tags for Doom 1 stuff
+    local special_attributes
+    if OB_CONFIG.game == "doom1" or OB_CONFIG.game == "ultdoom" then
+      if map_id == "E1M8" then
+        special_attributes = '  nointermission\n'
+        special_attributes = special_attributes .. '  nosoundclipping\n'
+        special_attributes = special_attributes .. '  baronspecial\n'
+        special_attributes = special_attributes .. '  specialaction_lowerfloor\n'
+      elseif map_id == "E2M8" then
+        special_attributes = '  nointermission\n'
+        special_attributes = special_attributes .. '  nosoundclipping\n'
+        special_attributes = special_attributes .. '  cyberdemonspecial\n'
+        special_attributes = special_attributes .. '  specialaction_exitlevel\n'
+      elseif map_id == "E3M8" then
+        special_attributes = '  nointermission\n'
+        special_attributes = special_attributes .. '  nosoundclipping\n'
+        special_attributes = special_attributes .. '  spidermastermindspecial\n'
+        special_attributes = special_attributes .. '  specialaction_exitlevel\n'
+      elseif map_id == "E4M8" then
+        special_attributes = '  nointermission\n'
+        special_attributes = special_attributes .. '  nosoundclipping\n'
+        special_attributes = special_attributes .. '  spidermastermindspecial\n'
+        special_attributes = special_attributes .. '  specialaction_lowerfloor\n'
+      else
+        special_attributes = ''
+      end
     end
 
     local mapinfo =
