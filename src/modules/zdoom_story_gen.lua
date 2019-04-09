@@ -18,5 +18,21 @@
 
 gui.import("zdoom_stories.lua")
 
--- NO ACTUAL CODE HERE YET
+function fetch_story_chunk()
+  local story_chunk = rand.pick(ZDOOM_STORIES)
+  local hook = rand.pick(story_chunk.hooks)
+  local conclusion = rand.pick(story_chunk.conclusions)
+  return hook, conclusion
+end
+
+function hook_me_with_a_story(level_info)
+end
+
+function conclude_my_story(level_info, story_chunk)
+end
+
+local function format_story()
+end
+
+-- NO USABLE CODE HERE YET
 -- SO SAD ALEXA PLAY D_RUNNIN

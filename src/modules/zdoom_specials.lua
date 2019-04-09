@@ -471,24 +471,32 @@ function ZDOOM_SPECIALS.do_special_stuff()
     if OB_CONFIG.game == "doom1" or OB_CONFIG.game == "ultdoom" then
       if map_id == "E1M8" then
         special_attributes = '  nointermission\n'
-        special_attributes = special_attributes .. '  nosoundclipping\n'
-        special_attributes = special_attributes .. '  baronspecial\n'
-        special_attributes = special_attributes .. '  specialaction_lowerfloor\n'
+        if GAME.levels[map_num].prebuilt then
+          special_attributes = special_attributes .. '  nosoundclipping\n'
+          special_attributes = special_attributes .. '  baronspecial\n'
+          special_attributes = special_attributes .. '  specialaction_lowerfloor\n'
+        end
       elseif map_id == "E2M8" then
         special_attributes = '  nointermission\n'
-        special_attributes = special_attributes .. '  nosoundclipping\n'
-        special_attributes = special_attributes .. '  cyberdemonspecial\n'
-        special_attributes = special_attributes .. '  specialaction_exitlevel\n'
+        if GAME.levels[map_num].prebuilt then
+          special_attributes = special_attributes .. '  nosoundclipping\n'
+          special_attributes = special_attributes .. '  cyberdemonspecial\n'
+          special_attributes = special_attributes .. '  specialaction_exitlevel\n'
+        end
       elseif map_id == "E3M8" then
         special_attributes = '  nointermission\n'
-        special_attributes = special_attributes .. '  nosoundclipping\n'
-        special_attributes = special_attributes .. '  spidermastermindspecial\n'
-        special_attributes = special_attributes .. '  specialaction_exitlevel\n'
+        if GAME.levels[map_num].prebuilt then
+          special_attributes = special_attributes .. '  nosoundclipping\n'
+          special_attributes = special_attributes .. '  spidermastermindspecial\n'
+          special_attributes = special_attributes .. '  specialaction_exitlevel\n'
+        end
       elseif map_id == "E4M8" then
         special_attributes = '  nointermission\n'
-        special_attributes = special_attributes .. '  nosoundclipping\n'
-        special_attributes = special_attributes .. '  spidermastermindspecial\n'
-        special_attributes = special_attributes .. '  specialaction_lowerfloor\n'
+        if GAME.levels[map_num].prebuilt then
+          special_attributes = special_attributes .. '  nosoundclipping\n'
+          special_attributes = special_attributes .. '  spidermastermindspecial\n'
+          special_attributes = special_attributes .. '  specialaction_lowerfloor\n'
+        end
       else
         special_attributes = ''
       end

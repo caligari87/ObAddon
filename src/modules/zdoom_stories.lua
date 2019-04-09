@@ -19,12 +19,13 @@
 --[[
 Some keywords for parsing later on:
 
-  RAND_DEMON = name of a demonic entity
+  _SPACE = non-breaking double space for formatting
+  _RAND_DEMON = name of a demonic entity
                (based on the GOTHIC entity names table)
 
-  RAND_GAL
-  RAND_GUY
-  RAND_HUMAN = names for a mere mortals (there is no human name generator
+  _RAND_GAL
+  _RAND_GUY
+  _RAND_HUMAN = names for a mere mortals (there is no human name generator
                yet as of 2019-04-09)
 
 Notes and Tips:
@@ -38,6 +39,9 @@ Notes and Tips:
   Conclusions can vary from positive, to negative, or even weird results.
   Be creative!
 
+* For each story chunk under the STORIES table, there can be any number
+  of hooks and conclusion per story.
+
 * Hooks are placed at any point before the end of the episode
   but preferably at least in the first few maps of that episode.
   Conclusions are strictly placed at the end of each episode so
@@ -45,9 +49,6 @@ Notes and Tips:
 
 * Doomguy doesn't care about story. But we do, we can just keep saying
   things about things he ends up doing, so be creative.
-
-* For each story type under the STORIES table, there can be any number
-  of hooks and conclusion per story.
 
 ]]
 
@@ -69,7 +70,7 @@ ZDOOM_STORIES =
 
       [[You are slowly drawn to a mysterious source of energy
       as you progress and notice the continued flow of demons
-      into the fray. There must be an entrance to hell nearby...]]
+      into the fray. There must be an entrance to hell nearby...]],
     }
 
     conclusions =
@@ -84,7 +85,7 @@ ZDOOM_STORIES =
 
       [[It was a trap! As the demon's corpse crashes into the floor,
       a portal to hell was underneath all along! The platform crumbles
-      and throws you into its maw - you find yourself in a new place...]]
+      and throws you into its maw - you find yourself in a new place...]],
     }
   }
 
@@ -103,7 +104,56 @@ ZDOOM_STORIES =
       is being transmitted through from hell! With a quick bash
       with your fists, the conduit is damaged beyond repair.
       The power goes out through the region - but so does the
-      corruption hell has radiated throughout.]]
+      corruption hell has radiated throughout.]],
+
+      [[The generator translating hellish energies into
+      electrical power has allowed the decaying force
+      of Argent Energy to mutate this place. You destroy
+      the generator but as it falls silent, a well of souls
+      burst open, flying about and escaping into the atmosphere!]],
     }
+  }
+
+  rescue_scientists =
+  {
+    hooks =
+    {
+      [[Your tracker lights up and is apparently receiving a
+      distress signal from a nearby location. A few UAC scientists
+      seem to have barricaded themselves, surrounded by the
+      demonic horde and is looking for an escape. You acknowledge
+      and proceed...]],
+    }
+
+    conclusions =
+    {
+      [[With the defeat of the demonic host, you have freed
+      the scientists from their assault! The scientists have
+      sworn off any continued cooperation with UAC's experimentation
+      with hell and leave through some escape pods! You remain
+      as there is more to discover...]],
+
+      [[As the final demon collapses before its feet, it utters
+      a terrible laughter that echoes through the chambers.
+      Behind it you discover the remains of the butchered scientists.
+      Misfortunate has befallen them and there is no way you
+      could have reached them in time. You trudge on...]],
+
+      [[You have found the scientists! It seems however they are
+      not what they seem... one of them carries a strange artifact
+      with a fiery glow through its gaps. You suddenly notice
+      madness in the scientist's eyes! A burst of energy
+      throws you across the floor, killing the scientist instantly!
+      A surge of demonic energies herald the coming of new hellspawn!
+      It looks like your task isn't over yet!]]
+    }
+  }
+
+  ABSOLUTE_ENDING =
+  {
+    [[While hell's forces continue its assault elsewhere,
+    your efforts at keeping the demons at bay is rest assured for now!
+    _SPACE
+    The story will continue!]],
   }
 }
