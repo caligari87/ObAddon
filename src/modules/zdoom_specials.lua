@@ -16,6 +16,8 @@
 --
 -------------------------------------------------------------------
 
+gui.import("zdoom_story_gen.lua")
+
 ZDOOM_SPECIALS = { }
 
 ZDOOM_SPECIALS.YES_NO =
@@ -465,7 +467,7 @@ function ZDOOM_SPECIALS.do_special_stuff()
     end
 
     -- special tags for Doom 1 stuff
-    local special_attributes
+    local special_attributes = ''
     if OB_CONFIG.game == "doom1" or OB_CONFIG.game == "ultdoom" then
       if map_id == "E1M8" then
         special_attributes = '  nointermission\n'
