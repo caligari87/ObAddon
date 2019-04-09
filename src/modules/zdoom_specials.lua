@@ -49,6 +49,13 @@ ZDOOM_SPECIALS.FOG_DENSITY_CHOICES =
   "mixed",  _("Mix It Up"),
 }
 
+ZDOOM_SPECIALS.STORY_CHOICES =
+{
+  "generic", _("Generic"),
+  "proc",    _("Generated"),
+  "none",    _("NONE"),
+}
+
 ZDOOM_SPECIALS.MUSIC_DOOM =
 {
   [1] = "$MUSIC_E1M1",
@@ -448,7 +455,7 @@ function ZDOOM_SPECIALS.do_special_stuff()
     -- add cluster linking for DOOM2
     local cluster_line = ''
 
-    if PARAM.generic_clusterinfo == "yes" then
+    if PARAM.story_generator == "generic" then
       if OB_CONFIG.game == "doom2" then
         if map_num >= 1 and map_num <= 5 then
           cluster_line = "  Cluster = 5\n"
@@ -767,11 +774,17 @@ function ZDOOM_SPECIALS.do_special_stuff()
   end
 
   -- collect lines for the cluster information in MAPINFO
-  if PARAM.generic_clusterinfo == "yes" then
+  if PARAM.story_generator == "generic" then
     local clusterinfo_lines = add_clusterdef(ipic)
     each line in clusterinfo_lines do
       table.insert(mapinfolump,line)
     end
+  elseif PARAM.story_generator == "proc" then
+    -- language lump is written inside the story generator
+  end
+
+  -- insert custom music
+  if PARAM.story_generator != "none" then
     if PARAM.generic_intermusic == "$MUSIC_DM2INT" then
       gui.wad_insert_file("data/music/D_DM2INT.ogg","D_DM2INT")
     end
@@ -845,12 +858,12 @@ OB_MODULES["zdoom_specials"] =
       tooltip = "Shuffles music in the MAPINFO lump. Oblige's vanilla music shuffler uses a BEX lump and is therefore ignored when the ZDoom Addons module is active."
     }
 
-    generic_clusterinfo = {
-      label = _("Generic Cluster Info"),
+    story_generator = {
+      label = _("Story Generator"),
       priority = 5
-      choices = ZDOOM_SPECIALS.YES_NO
-      default = "yes"
-      tooltip = "Adds cluster information with some generic story text into the MAPINFO structure."
+      choices = ZDOOM_SPECIALS.STORY_CHOICES
+      default = "proc"
+      tooltip = "Adds cluster information with generic or randomized story text into the MAPINFO structure!"
     }
 
     generic_intermusic = {

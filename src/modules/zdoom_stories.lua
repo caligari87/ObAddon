@@ -24,7 +24,10 @@ Some keywords for parsing later on:
   _RAND_DEMON = name of a demonic entity
                (based on the GOTHIC entity names table)
 
-  -RAND_CONTRIBUTOR = name of a random contributor
+  _EVULZ = a rank title for a demonic entity based
+           on the evil titles table below.
+
+  _RAND_CONTRIBUTOR = name of a random contributor
                       (actually based on the specific
                       contributors table under TITLE)
 
@@ -34,6 +37,10 @@ Some keywords for parsing later on:
                yet as of 2019-04-09)
 
   _GOTHIC_LEVEL = name from the gothic level generator
+
+  _MCGUFFIN_HELL
+  _MCGUFFIN_TECH = returns a name of a plot McGuffin from the McGuffins
+                   table below.
 
 Notes and Tips:
 
@@ -57,21 +64,25 @@ Notes and Tips:
 * Doomguy doesn't care about story. But we do, we can just keep saying
   things about things he ends up doing, so be creative.
 
+* If you are using np++, hit ALT+4 (not ALT+F4!!!) to collapse groups
+  down to the story chunk pieces. This will make it easier to navigate.
 ]]
 
 ZDOOM_STORIES = { }
 
 ZDOOM_STORIES.LIST =
 {
-  portal_to_hell = 50
-  fuck_argent_energy = 10
-  rescue_scientists = 30
+  portal_to_hell = 40
+  fuck_argent_energy = 20
+  rescue_scientists = 40
   reinforce_marines = 40
   attack = 50
-  i_challenge_you_to_a_duel = 60
+  i_challenge_you_to_a_duel = 70
   deus_ex_machina = 5
   beacon = 50
-  aa_guns = 10
+  aa_guns = 20
+  destroy_the_evil_experiment = 40
+  weab = 3
 }
 
 ZDOOM_STORIES.STORIES =
@@ -137,7 +148,9 @@ ZDOOM_STORIES.STORIES =
       electrical power has allowed the decaying force
       of Argent Energy to mutate this place. You destroy
       the generator but as it falls silent, a well of souls
-      burst open, flying about and escaping into the atmosphere!]],
+      burst open, flying about and escaping into the atmosphere!
+      You are unsure of what you have done, but at least hell's
+      influence is banished for now.]],
     }
   }
 
@@ -254,7 +267,7 @@ ZDOOM_STORIES.STORIES =
     conclusions =
     {
       [[You have destroyed the horde leader,
-      _DEMON_NAME of _GOTHIC_LEVEL! The demonic
+      _RAND_DEMON of _GOTHIC_LEVEL! The demonic
       forces scatter, unable to continue their assault! With
       this place freed, the taint of hell's energies fades with
       the retreat of the darkness.]],
@@ -275,6 +288,7 @@ ZDOOM_STORIES.STORIES =
   {
     hooks =
     {
+      -- the visage of fire
       [[A deep harrowing wail suddenly resounds through the halls.
       A visage of fire manifests before you and speaks in a monstrous tone:
       "Pitiful mortal. You think you can defeat me,
@@ -282,6 +296,7 @@ ZDOOM_STORIES.STORIES =
       Come to me and meet your fate. I shall demonstrate
       the powers of the underworld to you."]],
 
+      -- the wall shadow
       [[A strange shadow seems to creep up the walls before you.
       It shudders and shakes. A pair of searing red eyes open
       from the inky surface. It speaks:
@@ -289,13 +304,53 @@ ZDOOM_STORIES.STORIES =
       You have entered my realm. I shall deal with you accordingly."
       The shadow fades away.]],
 
-      [[Stranges echoes reverberate through the walls. A dark figure
+      -- the vengeful
+      [[Strange echoes reverberate through the walls. A dark figure
       menaces you with its presence and speaks.
       "You may have defeated me before but know this, mortal.
       Perhaps once I was a lowly imp, but now I am
       _RAND_DEMON the baron of _GOTHIC_LEVEL.
       I will repay your insolence by crushing and dragging your
       entrails across the stone!"]],
+
+      -- Hannibal totem
+      [[The wind blows by with a scent of sulfur. Ahead, you spot
+      something terrifying: an effigy to hell. The monument is of
+      twisted human corpses, sewn together to create a totem. It
+      suddenly catches a blue fire and you hear a voice.
+      _SPACE
+      "I am _RAND_DEMON the _EVULZ. We are legion. We do not forgive."
+      The voice disappears as with the totem.]]
+
+      -- the bounty hunter
+      [["DOOMSLAYER!" a scream echoes through the halls. An
+      enormous creature steps from the shadows. "I am _RAND_DEMON the
+      _EVULZ. Hell has a bounty upon you. I shall claim it from your head
+      and all darkness shall know me for my deed."
+      Finished with its threat, _RAND_DEMON recedes into the shadows
+      and awaits you in its infernal arena.]]
+
+      -- it's all in your mind
+      [[A loud scratch startles you. You look around but your tracker
+      hints to no movement. A voice suddenly speaks into your mind.
+      "Mortal. You have become our quarry for your intrusions upon hell.
+      I, _RAND_DEMON the _EVULZ, have marked you for death. You are hunted."
+      The voice disappears followed by infernal howls further ahead...]]
+
+      -- I seeeee youuuuu
+      [[You feel a crawl upon your skin. In the darkness, it feels as
+      though a thousand eyes are suddenly looking upon you. A deep
+      voice echoes through the chambers. "I see you, mortal. The guardians of
+      _GOTHIC_LEVEL await you. I, _RAND_DEMON the _EVULZ, will personally
+      see to the sealing of your fate. We will meet soon."]]
+
+      -- eye for an eye
+      [["You!" a bellowing voices beckons. You cannot trace the source, but
+      its speech continues. "You have scarred me before. You do not remember
+      me but soon you will. I am _RAND_DEMON the _EVULZ. I shall inflict
+      pain on you as you had on me. I will tear you limb from limb."
+      Your tracker indicates an energy surge some distance away. You know what
+      to do.]]
     }
 
     conclusions =
@@ -391,7 +446,7 @@ ZDOOM_STORIES.STORIES =
       You help yourself to the newfound munitions. It seems there is no
       evidence as to who activated the beacon. You shut it off.]],
 
-      [[It was a trap all along! The hell general _DEMON_NAME activated the beacon,
+      [[It was a trap all along! The hell general _RAND_DEMON activated the beacon,
       expecting you to follow it. They did not, however, expect a thorough
       defeat despite their machinations. You deactivate the beacon
       so no further individual may fall prey to it.]],
@@ -431,16 +486,89 @@ ZDOOM_STORIES.STORIES =
     }
     conclusions =
     {
-      [[The great demon _DEMON_NAME of _GOTHIC_LEVEL has fallen!
+      [[The great demon _RAND_DEMON of _GOTHIC_LEVEL has fallen!
       In the wake of its defeat, your tracker informs you that
       the local ground defense system has rebooted. You watch as
       civilian spacecraft rise to the skies and exit the atmosphere safely.]],
 
-      [[The battle with _DEMON_NAME of _GOTHIC_LEVEL was difficult
+      [[The battle with _RAND_DEMON of _GOTHIC_LEVEL was difficult
       but you came out victorious nonetheless. You smash the
       defense terminal, causing it to power down. You watch as friendly dropships
       safely descend in the distance from the clouds. Hell will fight back
       but this should make your own battle easier. Hopefully.]]
+    }
+  }
+
+  destroy_the_evil_experiment =
+  {
+    hooks =
+    {
+      [[This area bares the hallmarks of UAC technology. Energy signatures
+      match your own equipment. It seems a wicked experiment has been left
+      behind by the UAC nearby. Whatever it is, time to shut it down.]],
+
+      [[Your computer map lights up with the words: "WARNING. You are entering
+      a restricted zone. Your clearance level is insufficient for access."
+      A UAC security clearance warning is an invitation for you to blow some
+      doors open. You continue upon your path.]],
+
+      [[You find the corpse of a dead UAC scientist slumped along the wall.
+      There is a scorched note on his pocket. The nearly illegible writing
+      spells out "kill it before it turns". It seems the UAC have left a
+      surprise ahead. Time to investigate.]],
+    }
+
+    conclusions =
+    {
+      [[You have destroyed _RAND_DEMON the _EVULZ! The creature was an
+      abominable amalgamation of technology and the demonic. You shake
+      your head once again at humanity's attempt to tame hell. It is
+      clear the UAC has not learned its lesson.]],
+
+      [[With the destruction of demonic presence in the area, you find
+      an experimental UAC teleporter had gone haywire, its destination
+      connecting to hell. You smash the panel with your fists and the
+      portal closes. The demons will have to find another way through.]],
+
+      [[A massive manufacturing plant seems to have been retrofitted to
+      produce abominations. Mechanical limbs and viscera hang from chains
+      above you. You toss an explosive barrel into the machine's maw causing
+      a chain of explosions that rock the building. Hell's war factory
+      has been destroyed, but there are probably more...]],
+
+      [[With the fall of the final monster, the room stills to a hush.
+      You only hear the faint noise of beeps from a computer terminal.
+      You find the portable terminal and archives in the system indicate
+      humans had been forced to turn into demons through technological means
+      here. You punch right through the monitor, effectively destroying the
+      archive and leave in disgust.]],
+    }
+  }
+
+  weab =
+  {
+    hooks =
+    {
+      [[Three strange creatures, each round and colored differently
+      with vertical slits for eyes bounce towards you. They bob and stack upon
+      each other. Suddenly, you hear a meek, feminine voice singing.
+      _SPACE
+      "Dango. Dango. Dango. Dango. Daikazoku."
+      _SPACE
+      The simply melody of phrases repeat for a while longer.
+      Your regain senses and the creatures disappear. What was that?]]
+    }
+
+    conclusions =
+    {
+      [[As hell's forces retreat, a vision enters your mind of world
+      full of winter. The distant figure of a girl seems to dig herself
+      out of the fields of white. The snow slowly recedes and the gray skies
+      turn blue. The girl waves at you, thanking you for being the bringer of summer
+      to her world from the winter hell had heralded.
+      _SPACE
+      The vision dissipates. Your HUD indicates no presence of hallucinogens
+      in the area.]]
     }
   }
 }
@@ -451,4 +579,204 @@ ZDOOM_STORIES.ABSOLUTE_ENDINGS =
   your efforts at keeping the demons at bay is rest assured for now!
   _SPACE
   The story will continue!]],
+}
+
+ZDOOM_STORIES.SECRET_ENTRANCES =
+{
+}
+
+ZDOOM_STORIES.EVIL_TITLES =
+{
+  -- as in titles for individuals i.e. Snowball the TERRIBLE.
+  Abhorrent=5,
+  Abominable=5,
+  Amputator=5,
+  Anathema=5,
+  Annihilator=5,
+  Antichrist=5,
+  Atrocious=5,
+  ["Bane of Mortals"]=5,
+  Barbarous=5,
+  Baleful=5,
+  ["Bearer of Anguish"]=5,
+  Beast=5,
+  Berserker=5,
+  Betrayer=5,
+  ["Bringer of Doom"]=5,
+  ["Bone Collector"]=5,
+  Breaker=5,
+  Brutal=5,
+  Brute=5,
+  Butcher=5,
+  Calamity=5,
+  Coldblooded=5,
+  Condemned=5,
+  ["Corpse-grinder"]=5,
+  Corrupted=5,
+  ["Champion of Hell"]=5,
+  ["Chant of Death"]=5,
+  Crucifier=5,
+  Cruel=5,
+  Cursed=5,
+  Damned=5,
+  Deceiver=5,
+  Defiler=5,
+  Despicable=5,
+  Despoiler=5,
+  ["Destroyer of Worlds"]=5,
+  Depraved=5,
+  Devourer=5,
+  Deviant=5,
+  Dire=5,
+  Dominator=5,
+  Dragon=5,
+  ["Eater of Souls"]=5,
+  Eternal=5,
+  Executioner=5,
+  Faceless=5,
+  Faceripper=5,
+  Fanatic=5,
+  ["Father of the Coven"]=5,
+  Feral=5,
+  ["Flesh-render"]=5,
+  Fiend=5,
+  Foul=5,
+  Glutton=5,
+  Grim=5,
+  Grinder=5,
+  ["Hand of Darkness"]=5,
+  Hateful=5,
+  Harbinger=5,
+  Hellborn=5,
+  Hellspawn=5,
+  ["Herald of Disaster"]=5,
+  Heinous=5,
+  Honorless=5,
+  Horrible=5,
+  Hungering=5,
+  Iconoclast=5,
+  Impaler=5,
+  Impious=5,
+  Inexorable=5,
+  ["Inflictor of Pain"]=5,
+  Infernal=5,
+  Inquisitor=5,
+  Judge=5,
+  ["Keeper of Shadows"]=5,
+  Kinslayer=5,
+  ["King of Skulls"]=5,
+  Lacerator=5,
+  Loathsome=5,
+  ["Lich-king"]=5,
+  ["Life-drinker"]=5,
+  Lurker=5,
+  Mad=5,
+  Malificent=5,
+  Malevolent=5,
+  Malicious=5,
+  Malign=5,
+  Malignant=5,
+  ["Man-eater"]=5,
+  Mastermind=5,
+  ["Maw of Hell"]=5,
+  ["Master of Discord"]=5,
+  Merciless=5,
+  Miscreated=5,
+  Mountain=5, -- like Clegane the Mountain
+  Necromancer=5,
+  Nefarious=5,
+  Nemesis=5,
+  Nightbringer=5,
+  Overseer=5,
+  Overlord=5,
+  Persecutor=5,
+  Pestilent=5,
+  Pillager=5,
+  ["Pit Fiend"]=5,
+  Plagued=5,
+  Plunderer=5,
+  Poisoner=5,
+  ["Prince of Darkness"]=5,
+  Profane=5,
+  Provoker=5,
+  Raider=5,
+  Ragemind=5,
+  Ravager=5,
+  Reprotabe=5,
+  Revelator=5,
+  Revenger=5,
+  Rotted=5,
+  Ruthless=5,
+  Savage=5,
+  Serpent=5,
+  Shameless=5,
+  Skinflayer=5,
+  Slaughterer=5,
+  Slayer=5,
+  Slavemaster=5,
+  Shadow=5,
+  ["Shield of the Beast"]=5,
+  Sorcerer=5,
+  Soultaker=5,
+  Spiteful=5,
+  ["Storm-bringer"]=5,
+  ["Sword of the Underdark"]=5,
+  Tainted=5,
+  Terror=5,
+  Terrible=5,
+  Torturer=5,
+  Tormentor=5,
+  Tower=5,
+  Tyrant=5,
+  Undying=5,
+  Unholy=5,
+  Unveiled=5,
+  Rancorous=5,
+  Reaper=5,
+  Reaver=5,
+  Ripper=5,
+  Venom=5,
+  Vengeful=5,
+  Vicious=5,
+  Vile=5,
+  Virulent=5,
+  Vitriolic=5,
+  Vivisector=5,
+  Warlord=5,
+  ["Woe to Man"]=5,
+  Wrath=5,
+  Wretched=5,
+  Wicked=5,
+  ["Whore of Babylon"]=5,
+}
+
+ZDOOM_STORIES.MCGUFFINS =
+{
+  -- McGuffins. Quintessential items in a story
+  -- that characters work for or against, but
+  -- the object's actual significance is almost always unclear
+  hellish =
+  {
+    ["obsidian orb containing hellfire"]=5,
+    ["icon of miscreation"]=5,
+    ["desacrated totem"]=5,
+    ["adamantium skull"]=5,
+    ["baleful gem"]=5,
+    ["devil's horn"]=5,
+    ["cursed talisman"]=5,
+    ["dark crystal shard"]=5,
+  }
+  tech =
+  {
+    ["tectonic transducer"]=5,
+    ["flux capacitor"]=5,
+    ["security matrix"]=5,
+    ["network card"]=5,
+    ["energy diode"]=5,
+    ["BFG component"]=5,
+    ["positron relay"]=5,
+    ["plasma inductor"]=5,
+    ["quantum cipher"]=5,
+    ["dielectric coil"]=5,
+  }
 }
