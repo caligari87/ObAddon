@@ -210,12 +210,12 @@ function ZDOOM_SPECIALS.shuffle_music()
 
   ZDOOM_SPECIALS.MUSIC = music_table
 
-  local story_id, info = ZStorygen_fetch_story_chunk()
+  local story_id, info = ZStoryGen_fetch_story_chunk()
   gui.printf("\n--== Story Generator test ==--\n")
   gui.printf("\nHook:\n")
-  ZStorygen_hook_me_with_a_story(story_id, info)
+  ZStoryGen_hook_me_with_a_story(story_id, info)
   gui.printf("\n\nConclusion:\n")
-  ZStorygen_conclude_my_story(story_id, info)
+  ZStoryGen_conclude_my_story(story_id, info)
   gui.printf("\n")
 end
 
