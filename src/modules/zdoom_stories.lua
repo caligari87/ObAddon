@@ -24,6 +24,10 @@ Some keywords for parsing later on:
   _RAND_DEMON = name of a demonic entity
                (based on the GOTHIC entity names table)
 
+  -RAND_CONTRIBUTOR = name of a random contributor
+                      (actually based on the specific
+                      contributors table under TITLE)
+
   _RAND_GAL
   _RAND_GUY
   _RAND_HUMAN = names for a mere mortals (there is no human name generator
@@ -64,7 +68,10 @@ ZDOOM_STORIES.LIST =
   rescue_scientists = 30
   reinforce_marines = 40
   attack = 50
-  i_challenge_you_to_a_duel = 50
+  i_challenge_you_to_a_duel = 60
+  deus_ex_machina = 5
+  beacon = 50
+  aa_guns = 10
 }
 
 ZDOOM_STORIES.STORIES =
@@ -246,7 +253,8 @@ ZDOOM_STORIES.STORIES =
 
     conclusions =
     {
-      [[You have destroyed the horde's leader! The demonic
+      [[You have destroyed the horde leader,
+      _DEMON_NAME of _GOTHIC_LEVEL! The demonic
       forces scatter, unable to continue their assault! With
       this place freed, the taint of hell's energies fades with
       the retreat of the darkness.]],
@@ -309,11 +317,130 @@ ZDOOM_STORIES.STORIES =
       and dissapates.
       _RAND_DEMON escapes your grasp, but it is scarred forever.]],
 
-      [[As the _RAND_DEMON falls, its body implodes into a cloud of
+      [[As _RAND_DEMON falls, its body implodes into a cloud of
       darkness, and slowly fades. An ethereal voice speaks.
       "You have returned me to the void, mortal. Your strength
-      is admirable but remember. The Dark Lords are watching you."
+      is admirable but remember: the Dark Lords are watching you."
       The voice fades.]],
+    }
+  }
+
+  deus_ex_machina =
+  {
+    hooks =
+    {
+      [[The situation seems to be growing hopeless. Hell has opened
+      a great rift and the tides of hell's forces have befallen
+      this place greatly. You have no choice but to escape and thus attempt
+      to breach between their gaps...]],
+
+      [[Hell's grip upon this area seems to be tightening. Swarms
+      of hellspawn rigorously continue their defense and it seems
+      their numbers are unending. You decide to fight on however
+      bleak the circumstance.]],
+    }
+    conclusions =
+    {
+      [[Despite your great efforts, the forces of hell have surrounded
+      you entirely! Towering beasts march over the carcasses of the
+      hellspawn you have just felled. Suddenly, a bright opening
+      in the skies appear.
+      _SPACE
+      It is _RAND_CONTRIBUTOR, one of the Contributors of ObAddon!
+      A rain of plasma bolts fall from the sky, searing every beast
+      around you down to ashes. _RAND_CONTRIBUTOR waves at you
+      and disappears again above the clouds...]],
+
+      [[As you down the final demon, horrifying screams and screaches
+      fill the room! As you turn back, an entire host of demons
+      are charging at you! From the opposite direction however, comes
+      an immense orb of light! The orb shoots beams into the belly of
+      each creature turning them into nothing but clouds of dust.
+      _SPACE
+      It's _RAND_CONTRIBUTOR, one of the Contributors of ObAddon!
+      "You'll need all the help you can get." _RAND_CONTRIBUTOR
+      turns back and leaves, while gesturing at you to keep up
+      the good fight.]]
+    }
+  }
+
+  beacon =
+  {
+    hooks =
+    {
+      [[Your tracker lights up and informs you that a beacon with a
+      UAC signature has suddenly began transmitting nearby. It seems
+      someone is deliberately calling your attention. The position is
+      logged and you attempt to head in its direction...]],
+
+      [[It seems a reinforcement beacon has been activated nearby.
+      A group of friendly forces may be attempting to fight it out
+      with the forces of hell. You begin your journey towards the
+      position of the beacon...]],
+
+      [[Your radio picks up on a mysterious signal. Parsing it through
+      your tracker, you find a beacon transmitting at a military frequency.
+      It is a potential point of interest so you begin your journey towards
+      it accepting the potential risk.]],
+    }
+
+    conclusions =
+    {
+      [[After destroying the hordes, it seems you have found a cache
+      of essential supplies they were attempting to keep from you.
+      You help yourself to the newfound munitions. It seems there is no
+      evidence as to who activated the beacon. You shut it off.]],
+
+      [[It was a trap all along! The hell general _DEMON_NAME activated the beacon,
+      expecting you to follow it. They did not, however, expect a thorough
+      defeat despite their machinations. You deactivate the beacon
+      so no further individual may fall prey to it.]],
+
+      [[You have found the beacon attached to a badly damaged cargo pod.
+      You pry open the doors pocked with bullet holes and claw marks.
+      Out spill a group of civilians.
+      _SPACE
+      "Thank you for saving us! Those creatures just appeared out of nowhere!"
+      You gesture towards the exit. "Yes, we know a way out of here. We can't
+      repay you with anything, but we hope you bring down more of those demons!"
+      The civilians leave.]],
+
+      [[After a great battle with the minions of hell, you find a group of fallen
+      marines before you who have made a last stand, their bodies scattered around
+      a crater. One of them still grips an emergency beacon tightly in their bloody hands.
+      You disable the beacon and take their dog tags.
+      Their sacrifices will be remembered.]],
+    }
+  }
+
+  aa_guns =
+  {
+    hooks =
+    {
+      [[You hear the great roaring of explosions in the distance.
+      You look up the skies and see spacecraft cashing down the
+      atmosphere. It seems hell has taken control of the ground defense
+      systems and have turned them against humans. You must find a way
+      to disable the rogue system!]],
+
+      [[Your radio stutters open and an indirected transmission blares out
+      the following instruction: "If you are hearing this, we are
+      attempting to land in our target area but hostiles have taken control
+      of the ground defense system! If you have means to disable it,
+      this will allow friendly forces to land and push through!"]]
+    }
+    conclusions =
+    {
+      [[The great demon _DEMON_NAME of _GOTHIC_LEVEL has fallen!
+      In the wake of its defeat, your tracker informs you that
+      the local ground defense system has rebooted. You watch as
+      civilian spacecraft rise to the skies and exit the atmosphere safely.]],
+
+      [[The battle with _DEMON_NAME of _GOTHIC_LEVEL was difficult
+      but you came out victorious nonetheless. You smash the
+      defense terminal, causing it to power down. You watch as friendly dropships
+      safely descend in the distance from the clouds. Hell will fight back
+      but this should make your own battle easier. Hopefully.]]
     }
   }
 }

@@ -26,6 +26,7 @@ function ZStoryGen_format_story_chunk(story_strings, info)
   -- replace special word tags with their proper ones from the name gen
   story_strings = string.gsub(story_strings, "_RAND_DEMON", info.demon_name)
   story_strings = string.gsub(story_strings, "_GOTHIC_LEVEL", info.gothic_level)
+  story_strings = string.gsub(story_strings, "_RAND_CONTRIBUTOR", info.contributor_name)
 
   -- remove the spaces left behind by Lua's square bracket stuff.
   story_strings = string.gsub(story_strings, "      ", "")
@@ -35,7 +36,7 @@ function ZStoryGen_format_story_chunk(story_strings, info)
   -- ensure words are always within the width of Doom's intermission screens
   -- based on the above defined line_max_length
   local i = 1
-  local manhandled_string = ''
+  local manhandled_string = "'"
   local manhandled_string_length = 0
 
   for word in story_strings:gmatch("%S+") do
@@ -43,7 +44,7 @@ function ZStoryGen_format_story_chunk(story_strings, info)
     manhandled_string_length = manhandled_string_length + word:len() + 1
 
     if manhandled_string_length + word:len() > line_max_length then
-      manhandled_string = manhandled_string .. word .. "\\n"
+      manhandled_string = manhandled_string .. word .. "\\n'\n'"
       manhandled_string_length = 0
     else
       manhandled_string = manhandled_string .. word .. " "
@@ -51,7 +52,7 @@ function ZStoryGen_format_story_chunk(story_strings, info)
 
     i = i + 1
   end
-  story_strings = manhandled_string
+  story_strings = manhandled_string .. "';"
 
   story_strings = string.gsub(story_strings, "_SPACE", "\n")
 
@@ -67,11 +68,13 @@ function ZStoryGen_fetch_story_chunk(lev_info)
 
   local demon_name = rand.key_by_probs(namelib.NAMES.GOTHIC.lexicon.e)
   local gothic_level = Naming_grab_one("GOTHIC")
+  local contributor_name = rand.key_by_probs(namelimb.NAMES.TITLE.lexicon.c)
 
   demon_name = string.gsub(demon_name, "NOUNGENEXOTIC", namelib.generate_unique_noun("exotic"))
 
   info.demon_name = demon_name
   info.gothic_level = gothic_level
+  info.contributor_name = contributor_name
 
   return rand.key_by_probs(ZDOOM_STORIES.LIST), info
 end
@@ -88,6 +91,22 @@ function ZStoryGen_conclude_my_story(story_id, info)
   local story_string = rand.pick(story_chunk.conclusions)
   story_string = ZStoryGen_format_story_chunk(story_string, info)
   return story_string
+end
+
+function ZStoryGen_init()
+  if OB_CONFIG.game == "doom2" then
+    local stories = {}
+      local x = 1
+      for x <= #GAME.episodes do
+        local story_id, info = ZStoryGen_fetch_story_chunk()
+        local hook = ZStoryGen_hook_me_with_a_story(story_id, info)
+        local conclusion = ZStoryGen_conclude_my_story(story_id, info)
+        table.insert(stories.hook[x], hook)
+        table.insert(stories.conclusion[x], conclusion)
+        x = x + 1
+      end
+    end
+  end
 end
 
 -- LOOK AT ALL THIS CODE NOW
