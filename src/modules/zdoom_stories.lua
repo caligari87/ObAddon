@@ -19,6 +19,8 @@
 --[[
 Some keywords for parsing later on:
 
+  _SPACE = creates a linebreak
+
   _RAND_DEMON = name of a demonic entity
                (based on the GOTHIC entity names table)
 
@@ -58,9 +60,9 @@ ZDOOM_STORIES = { }
 ZDOOM_STORIES.LIST =
 {
   portal_to_hell = 50
-  fuck_argent_energy = 50
-  rescue_scientists = 50
-  reinforce_marines = 50
+  fuck_argent_energy = 10
+  rescue_scientists = 30
+  reinforce_marines = 40
   attack = 50
   i_challenge_you_to_a_duel = 50
 }
@@ -267,9 +269,25 @@ ZDOOM_STORIES.STORIES =
     {
       [[A deep harrowing wail suddenly resounds through the halls.
       A visage of fire manifests before you and speaks in a monstrous tone:
-      "Pitiful mortal. You think you can defeat me, _RAND_DEMON the Lord of
-      _GOTHIC_LEVEL? Come to me and meet your fate. I shall demonstrate
+      "Pitiful mortal. You think you can defeat me,
+      _RAND_DEMON the Lord of _GOTHIC_LEVEL?
+      Come to me and meet your fate. I shall demonstrate
       the powers of the underworld to you."]],
+
+      [[A strange shadow seems to creep up the walls before you.
+      It shudders and shakes. A pair of searing red eyes open
+      from the inky surface. It speaks:
+      "I am _RAND_DEMON the King of _GOTHIC_LEVEL.
+      You have entered my realm. I shall deal with you accordingly."
+      The shadow fades away.]],
+
+      [[Stranges echoes reverberate through the walls. A dark figure
+      menaces you with its presence and speaks.
+      "You may have defeated me before but know this, mortal.
+      Perhaps once I was a lowly imp, but now I am
+      _RAND_DEMON the baron of _GOTHIC_LEVEL.
+      I will repay your insolence by crushing and dragging your
+      entrails across the stone!"]],
     }
 
     conclusions =
@@ -277,19 +295,33 @@ ZDOOM_STORIES.STORIES =
       [[A great battle has just concluded. _RAND_DEMON collapses
       before you. "No! How could this be?! The forces of hell
       are infinite and unfor-"
-
+      _SPACE
       Its dialogue is interrupted as with the crack of your knuckles,
       you send its head flying square off its shoulders across
       the room with an upper cut. The remaining minions of hell
       shriek in fear and retreat!]],
+
+      [[As a critical hit falls upon the demon's body, _RAND_DEMON
+      stutters. "This is not how it ends, mortal! I will return
+      and feast upon your soul!"
+      _SPACE
+      The creature quickly steps into a newly opened portal behind
+      and dissapates.
+      _RAND_DEMON escapes your grasp, but it is scarred forever.]],
+
+      [[As the _RAND_DEMON falls, its body implodes into a cloud of
+      darkness, and slowly fades. An ethereal voice speaks.
+      "You have returned me to the void, mortal. Your strength
+      is admirable but remember. The Dark Lords are watching you."
+      The voice fades.]],
     }
   }
 }
 
 ZDOOM_STORIES.ABSOLUTE_ENDINGS =
 {
-  [[While hell's forces continue its assault elsewhere,
+  [[While hell's forces continues its assault elsewhere,
   your efforts at keeping the demons at bay is rest assured for now!
-
+  _SPACE
   The story will continue!]],
 }
