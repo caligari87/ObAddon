@@ -68,7 +68,7 @@ function ZStoryGen_fetch_story_chunk(lev_info)
 
   local demon_name = rand.key_by_probs(namelib.NAMES.GOTHIC.lexicon.e)
   local gothic_level = Naming_grab_one("GOTHIC")
-  local contributor_name = rand.key_by_probs(namelimb.NAMES.TITLE.lexicon.c)
+  local contributor_name = rand.key_by_probs(namelib.NAMES.TITLE.lexicon.c)
 
   demon_name = string.gsub(demon_name, "NOUNGENEXOTIC", namelib.generate_unique_noun("exotic"))
 
