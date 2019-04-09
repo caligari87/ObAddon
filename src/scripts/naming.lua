@@ -2097,7 +2097,7 @@ namelib.NAMES =
         -- geopolitical
         Colony = 5
         Commune = 3
-        City-state = 3
+        ["City-state"] = 3
         Dominion = 10
         Duchy = 5
         Kingdom = 7
