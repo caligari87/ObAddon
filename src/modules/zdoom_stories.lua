@@ -19,7 +19,6 @@
 --[[
 Some keywords for parsing later on:
 
-  _SPACE = non-breaking double space for formatting
   _RAND_DEMON = name of a demonic entity
                (based on the GOTHIC entity names table)
 
@@ -27,6 +26,8 @@ Some keywords for parsing later on:
   _RAND_GUY
   _RAND_HUMAN = names for a mere mortals (there is no human name generator
                yet as of 2019-04-09)
+
+  _GOTHIC_LEVEL = name from the gothic level generator
 
 Notes and Tips:
 
@@ -52,7 +53,19 @@ Notes and Tips:
 
 ]]
 
-ZDOOM_STORIES =
+ZDOOM_STORIES = { }
+
+ZDOOM_STORIES.LIST =
+{
+  portal_to_hell = 50
+  fuck_argent_energy = 50
+  rescue_scientists = 50
+  reinforce_marines = 50
+  attack = 50
+  i_challenge_you_to_a_duel = 50
+}
+
+ZDOOM_STORIES.STORIES =
 {
   portal_to_hell =
   {
@@ -96,6 +109,11 @@ ZDOOM_STORIES =
       [[As you continue, a quiet but distinct hum of power seems
       to permeate this area. It feels hair-raising and ominous.
       It must be Argent Energy. The source must be closed.]],
+
+      [[Monitors flicker on and off, and occult runes and symbols
+      seem to occasionally appear on them. The area seems to be
+      powered by Argent Energy, the impure power source from hell.
+      It must be stopped.]]
     }
 
     conclusions =
@@ -123,6 +141,18 @@ ZDOOM_STORIES =
       seem to have barricaded themselves, surrounded by the
       demonic horde and is looking for an escape. You acknowledge
       and proceed...]],
+
+      [[A portable terminal has revealed the position of a group
+      of scientists nearby. You attempt to establish communications,
+      but no response returns. The last footage from the terminal
+      reveals them panicking, running from demons. You may still
+      have opportunity for to save them...]],
+
+      [[Heavily hysteric chatter suddenly sounds off on your
+      radio. It seems a group of scientists are looking for a way
+      out of this place and hellspawn are on their trails.
+      You are not able to respond to them, so you attempt to make
+      your way towards their position...]],
     }
 
     conclusions =
@@ -145,15 +175,121 @@ ZDOOM_STORIES =
       madness in the scientist's eyes! A burst of energy
       throws you across the floor, killing the scientist instantly!
       A surge of demonic energies herald the coming of new hellspawn!
-      It looks like your task isn't over yet!]]
+      It looks like your task isn't over yet!]],
     }
   }
 
-  ABSOLUTE_ENDING =
+  reinforce_marines =
   {
-    [[While hell's forces continue its assault elsewhere,
-    your efforts at keeping the demons at bay is rest assured for now!
-    _SPACE
-    The story will continue!]],
+    hooks =
+    {
+      [[Your radio receives a badly garbled transmission but
+      you can make out a few words. "Need assistance! *ZZT*
+      Surrounded! *ZZT* Running low on supplies!" The transmission
+      abruptly cuts off. You hurry to track their last position.]],
+
+      [[Your tracker reveals several green dots on the map.
+      They are fleet-footed, and it seems the dots are moving
+      quickly. They are marines and it seems they are in the middle
+      of an engagement. They are some distance away, but you
+      may still be able to reach them...]],
+
+      [[As you step across the floor, you come up to a pair of dog tags
+      below your boots. You pick it up and hear the distant thunder
+      of gunfire. It seems a group of marines have gone through
+      here some time ago. It might be a good idea to join them.]],
+    }
+
+    conclusions =
+    {
+      [[A mess of craters and holes now lie where demonic
+      figures used to stand. The marines congratulate
+      you on a swift assist and hell is held back! The marines
+      extract for now, awaiting their next mission as you stay
+      behind to explore further...]],
+
+      [[As the final creature falls, it harkens to you.
+      "Foolish mortal. Attracted to the sound of despair.
+      Such easy trickey for a famed warrior as you."
+      The demon's corpse fades into ashes.
+      There is no sign of the embattled marines
+      anywhere but general of hell still lies defeated.]],
+
+      [[The armies of hell rout from your relentless onslaught.
+      You find a badly blasted barricade and find the corpses
+      of the marines who sacrificed themselves to battle hell.
+      You pick up their dog tags in respect and scurry on...]],
+    }
   }
+
+  attack =
+  {
+    hooks =
+    {
+      [[A fetid odor fills the air of this place. It seems the
+      forces of hell are amassing ahead in preparation for
+      an assault. It is prime opportunity to throw off their
+      gathering before an attack can begin...]],
+
+      [[A hellish infestation seems to be running amuck about
+      this region. Hell's reign is expanding and their armies
+      gather in number elsewhere. Perhaps you can get a shot
+      on them first before they begin a new assault...]],
+
+      [[A strange overgrowth of bloody viscera seems to be
+      overtaking this place. Hell's infestion is interacting
+      with reality to accomodate hellspawn over mortals.
+      Time to change that.]],
+    }
+
+    conclusions =
+    {
+      [[You have destroyed the horde's leader! The demonic
+      forces scatter, unable to continue their assault! With
+      this place freed, the taint of hell's energies fades with
+      the retreat of the darkness.]],
+
+      [[It was a trap! An entire batallion of hall's banners fall
+      before you. It turns out you were the target all along
+      but with your dexterity and wit, you have outmaneuvered
+      their forces and crushed them utterly.]],
+
+      [[With your relentless barrage upon the hellspawn, their
+      numbers shrink but you have a feeling this was not the bulk
+      of their force... it seems you were lured here through
+      a ruse! The demonic army unleashes itself elsewhere...]],
+    }
+  }
+
+  i_challenge_you_to_a_duel =
+  {
+    hooks =
+    {
+      [[A deep harrowing wail suddenly resounds through the halls.
+      A visage of fire manifests before you and speaks in a monstrous tone:
+      "Pitiful mortal. You think you can defeat me, _RAND_DEMON the Lord of
+      _GOTHIC_LEVEL? Come to me and meet your fate. I shall demonstrate
+      the powers of the underworld to you."]],
+    }
+
+    conclusions =
+    {
+      [[A great battle has just concluded. _RAND_DEMON collapses
+      before you. "No! How could this be?! The forces of hell
+      are infinite and unfor-"
+
+      Its dialogue is interrupted as with the crack of your knuckles,
+      you send its head flying square off its shoulders across
+      the room with an upper cut. The remaining minions of hell
+      shriek in fear and retreat!]],
+    }
+  }
+}
+
+ZDOOM_STORIES.ABSOLUTE_ENDINGS =
+{
+  [[While hell's forces continue its assault elsewhere,
+  your efforts at keeping the demons at bay is rest assured for now!
+
+  The story will continue!]],
 }

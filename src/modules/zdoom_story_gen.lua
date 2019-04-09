@@ -18,20 +18,48 @@
 
 gui.import("zdoom_stories.lua")
 
-function fetch_story_chunk()
-  local story_chunk = rand.pick(ZDOOM_STORIES)
-  local hook = rand.pick(story_chunk.hooks)
-  local conclusion = rand.pick(story_chunk.conclusions)
-  return hook, conclusion
+ZDOOM_STORY_GENERATOR = { }
+
+table.name_up(ZDOOM_STORIES.STORIES)
+
+function ZDOOM_STORY_GENERATOR.format_story_chunk(story_strings, info)
+
+  -- remove the spaces left behind by Lua's square bracket stuff.
+  story_strings = string.gsub(story_strings, "      ", "")
+
+  story_strings = string.gsub(story_strings, "_RAND_DEMON", info.demon_name)
+  story_strings = string.gsub(story_strings, "_GOTHIC_LEVEL", info.gothic_level)
+  story_strings = string.gsub(story_strings, "NOUNGENANGLICAN", namelib.generate_unique_noun("anglican"))
+  story_strings = string.gsub(story_strings, "NOUNGENEXOTIC", namelib.generate_unique_noun("exotic"))
+  return story_strings
 end
 
-function hook_me_with_a_story(level_info)
+function ZDOOM_STORY_GENERATOR.fetch_story_chunk()
+  local info = { }
+
+  local demon_name = rand.key_by_probs(namelib.NAMES.GOTHIC.lexicon.e)
+  local gothic_level = Naming_grab_one("GOTHIC")
+  info =
+  {
+    demon_name = demon_name
+    gothic_level = gothic_level
+  }
+
+  return rand.key_by_probs(ZDOOM_STORIES.LIST), info
 end
 
-function conclude_my_story(level_info, story_chunk)
+function ZDOOM_STORY_GENERATOR.hook_me_with_a_story(story_id, info)
+  local story_chunk = ZDOOM_STORIES.STORIES[story_id]
+  local story_string = rand.pick(story_chunk.hooks)
+  story_string = ZDOOM_STORY_GENERATOR.format_story_chunk(story_string, info)
+  return story_string
 end
 
-local function format_story()
+function ZDOOM_STORY_GENERATOR.conclude_my_story(story_id, info)
+  local story_chunk = ZDOOM_STORIES.STORIES[story_id]
+  local story_string = rand.pick(story_chunk.conclusions)
+  story_string = ZDOOM_STORY_GENERATOR.format_story_chunk(story_string, info)
+  return story_string
 end
 
 -- NO USABLE CODE HERE YET
