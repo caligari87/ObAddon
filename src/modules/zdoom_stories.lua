@@ -765,6 +765,10 @@ ZDOOM_STORIES.MCGUFFINS =
     ["devil's horn"]=5,
     ["cursed talisman"]=5,
     ["dark crystal shard"]=5,
+    ["bloody hand"]=5,
+    ["skeletal torso"]=5,
+    ["unholy chalice"]=5,
+    ["ornate dagger"]=5,
   }
   tech =
   {
@@ -776,7 +780,14 @@ ZDOOM_STORIES.MCGUFFINS =
     ["BFG component"]=5,
     ["positron relay"]=5,
     ["plasma inductor"]=5,
+    ["plasma relay"]=5,
     ["quantum cipher"]=5,
     ["dielectric coil"]=5,
+    ["disc reader"]=5,
+    ["card reader"]=5,
+    ["base station uplink"]=5,
+    ["flash drive"]=5,
+    ["hard token authenticator"]=5,
+    ["baseband modulator"]=5,
   }
 }
