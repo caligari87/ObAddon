@@ -96,15 +96,14 @@ end
 function ZStoryGen_init()
   if OB_CONFIG.game == "doom2" then
     local stories = {}
-      local x = 1
-      for x <= #GAME.episodes do
-        local story_id, info = ZStoryGen_fetch_story_chunk()
-        local hook = ZStoryGen_hook_me_with_a_story(story_id, info)
-        local conclusion = ZStoryGen_conclude_my_story(story_id, info)
-        table.insert(stories.hook[x], hook)
-        table.insert(stories.conclusion[x], conclusion)
-        x = x + 1
-      end
+    local x = 1
+    while x <= #GAME.episodes do
+      local story_id, info = ZStoryGen_fetch_story_chunk()
+      local hook = ZStoryGen_hook_me_with_a_story(story_id, info)
+      local conclusion = ZStoryGen_conclude_my_story(story_id, info)
+      table.insert(stories.hook[x], hook)
+      table.insert(stories.conclusion[x], conclusion)
+      x = x + 1
     end
   end
 end
