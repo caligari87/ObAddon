@@ -335,10 +335,10 @@ function ZDOOM_SPECIALS.do_special_stuff()
     -- produce endtitle screen end of game
     if OB_CONFIG.game == "doom2" then
       if (map_num + 1 > level_count) or map_num == 30 then
-        map_id_next = '"EndTitle"'
+        map_id_next = '"EndGameC"'
       end
     elseif OB_CONFIG.game == "doom1" or OB_CONFIG.game == "ultdoom" then
-      if (map_num + 1 > level_count) or map_num == 36 then
+      if (map_num + 1 > level_count) then
         map_id_next = '"EndTitle"'
       end
     end
@@ -384,7 +384,7 @@ function ZDOOM_SPECIALS.do_special_stuff()
       if map_num == 8 then
         next_level_line = '  next = "EndGame1"\n'
       elseif map_num == 17 then
-        next_level_line = '  next = "EndGame2\n'
+        next_level_line = '  next = "EndGame2"\n'
       elseif map_num == 26 then
         next_level_line = '  next = "endbunny"\n'
       end
