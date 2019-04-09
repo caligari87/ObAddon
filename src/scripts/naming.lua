@@ -3698,7 +3698,7 @@ namelib.NAMES =
       ["The Zombie Lord"] = 20
 
       ["Doctor Kruger"] = 10
-      
+
       ["Hans Grosse"] = 5
     }
 

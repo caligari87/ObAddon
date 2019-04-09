@@ -692,7 +692,7 @@ function ZDOOM_SPECIALS.do_special_stuff()
 
     if OB_CONFIG.game == "doom1" or OB_CONFIG.game == "ultdoom" then
       local episode_info = add_episodedef(1)
-      each line in episode_1_info do
+      each line in episode_info do
         table.insert(mapinfolump,line)
       end
 
