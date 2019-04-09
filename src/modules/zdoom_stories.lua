@@ -170,7 +170,7 @@ ZDOOM_STORIES.STORIES =
       reveals them panicking, running from demons. You may still
       have opportunity for to save them...]],
 
-      [[Heavily hysteric chatter suddenly sounds off on your
+      [[Badly hysteric chatter suddenly sounds off on your
       radio. It seems a group of scientists are looking for a way
       out of this place and hellspawn are on their trails.
       You are not able to respond to them, so you attempt to make
@@ -555,13 +555,13 @@ ZDOOM_STORIES.STORIES =
       _SPACE
       "Dango. Dango. Dango. Dango. Daikazoku."
       _SPACE
-      The simply melody of phrases repeat for a while longer.
-      Your regain senses and the creatures disappear. What was that?]]
+      The simple melody of phrases repeat for a while longer.
+      You regain senses and the creatures disappear. What was that?]]
     }
 
     conclusions =
     {
-      [[As hell's forces retreat, a vision enters your mind of world
+      [[As hell's forces retreat, a vision enters your mind of a world
       full of winter. The distant figure of a girl seems to dig herself
       out of the fields of white. The snow slowly recedes and the gray skies
       turn blue. The girl waves at you, thanking you for being the bringer of summer
