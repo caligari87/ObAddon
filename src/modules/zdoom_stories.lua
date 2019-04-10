@@ -841,6 +841,13 @@ ZDOOM_STORIES.MCGUFFINS =
     ["skeletal torso"]=5,
     ["unholy chalice"]=5,
     ["ornate dagger"]=5,
+    ["spear of destiny"]=5, --because why not lol
+    ["sword of darkness"]=5,
+    ["khronos device"]=5,
+    ["soul-x agitator"]=5,
+    ["blood imprinter"]=5,
+    ["brass bauble"]=5,
+    
   }
   tech =
   {
@@ -861,5 +868,7 @@ ZDOOM_STORIES.MCGUFFINS =
     ["flash drive"]=5,
     ["hard token authenticator"]=5,
     ["baseband modulator"]=5,
+    ["gravitronic amplifier"]=5,
+    ["quantum disrupter"]=5,
   }
 }
