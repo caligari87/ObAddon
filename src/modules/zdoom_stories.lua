@@ -61,6 +61,11 @@ Notes and Tips:
   Conclusions are strictly placed at the end of each episode so
   it meshes with the climax of a boss battle or procedural gotcha.
 
+* Don't make the stories too long! Remember, they have to fit the intermission
+  screen. You can make it long enough to fill the whole screen and the
+  Story Generator formatting code will try to fit the lines within
+  the intermission screen as best as possible.
+
 * Doomguy doesn't care about story. But we do, we can just keep saying
   things about things he ends up doing, so be creative.
 
@@ -80,8 +85,10 @@ ZDOOM_STORIES.LIST =
   i_challenge_you_to_a_duel = 70
   deus_ex_machina = 5
   beacon = 50
-  aa_guns = 20
+  aa_guns = 30
   destroy_the_evil_experiment = 40
+  found_this_weird_tech_mcguffin = 25
+  found_this_weird_hell_mcguffin = 25
   weab = 3
 }
 
@@ -571,6 +578,101 @@ ZDOOM_STORIES.STORIES =
       in the area.]]
     }
   }
+
+  found_this_weird_tech_mcguffin =
+  {
+    hooks =
+    {
+      [[You stumble upon a safety deposit box marked by the UAC with various
+      warning labels. This doesn't look like the kind of thing that should
+      fall into the wrong hands. You pry open crate open and find
+      _MCGUFFIN_TECH. You take it with you.]],
+
+      [[Power surges and electrical fluctuations in the area is causing
+      unusual behavior on your HUD. You find a panel on the wall with
+      caution markings. With the right hit exacted on the lock, the panel
+      swings open to reveal _MCGUFFIN_TECH. You pry it off, and the
+      fluctuations stop... this might be useful elsewhere.]],
+
+      [[You find a military cargo pod ahead. It seems to have been here
+      for a while with its intentional recipients having never claimed it.
+      You interface your suit on the terminal and the pod reveals _MCGUFFIN_TECH
+      inside. Better for you to hold on to it than the hellspawn.]],
+
+      [[A shot in the right place brings down a shotgun-carrying shambler of a corpse.
+      It seems it has a bulging backpack. You strip the corpse of supplies and open
+      the backpack to reveal the contents: _MCGUFFIN_TECH. You take it with you.]],
+    }
+
+    conclusions =
+    {
+      [[After a battle with the demons, it seems your path ahead is blocked by
+      an enormous bulkhead gate. A receptacle on the side seems to precisely fit
+      _MCGUFFIN_TECH. You insert into the slot and a steady rumbling begins to
+      shake the halls. The bulkhead gate slowly rises up, granting you passage.]],
+
+      [[In the wake of battle, you realize gunfire is coming across the room.
+      You see a group of marines just fresh off of their own skirmish.
+      "Whoa! It's good to see someone else! We're on a retrieval mission for
+      _MCGUFFIN_TECH."
+      _SPACE
+      Right on time. You offer your finding. "Hell yeah! This should help
+      us get out of here! Thanks!" After some short chatter and relief, you part
+      with the group as your mission beckons you elsewhere...]],
+
+      [[It seems as though the demons were attempting to breach into a small
+      automated UAC firebase with a field plasma turret. The terminal indicates
+      the requirement of a _MCGUFFIN_TECH for its activation. You supply it
+      with the necessities. The terminal announces "Automated security system activated."
+      The turret activates and begins swinging around,
+      looking for hellspawn to target. Now we're talking!]],
+    }
+  }
+
+  found_this_weird_hell_mcguffin =
+  {
+    hooks =
+    {
+      [[A strange altar lined with demonic effigies lies along the wall.
+      It seems the creatures are worshipping the object on the pedestal.
+      It's _MCGUFFIN_HELL! A relic of this sort is better off not in the hands
+      of hell. You take it with you.]],
+
+      [[Ahead is an interlinking of various portable machines and terminals.
+      Each display shows graphs and readings you cannot interpret. The machines
+      are linked to a pedestal with _MCGUFFIN_HELL over it! You take a swipe
+      of the item and the displays lose their readings. UAC experiments rarely
+      turn out good, you thought to yourself.]],
+
+      [[Radiant energies permeate through this place. It seems to come from
+      this stone totem. It must be helping the forces of hell rally somehow.
+      Atop the totem is _MCGUFFIN_HELL. You topple the totem over and pilfer.
+      Hell won't have a use for this anymore!]],
+    }
+
+    conclusions =
+    {
+      [[A great demon shows itself before you. It seems any weapon is failing
+      to damage the creature at all.
+      "You have no chance against inferno!"
+      _SPACE
+      In a moment of desperation, you take out _MCGUFFIN_HELL from your backpack.
+      "No, what are you doing?!" It begins emitting a wave of light. Upon
+      touching the demonic creature, its body is incinerated and particles
+      are sucked into the relic. The relic fades from your hands.]],
+
+      [[It seems the minions of hell were attempting to stop you from reaching
+      this place. Ahead is an ancient portal from which the demons apparently
+      spilled through. A receptacle on the center seems to fit _MCGUFFIN_HELL
+      precisely. You lodge it into the receptacle and the portal to hell
+      collapses. Time to move on.]],
+
+      [[The final creature falls. A whispering voice rings through the air.
+      "You have something that belongs to hell. Know that we will return
+      to take it from your dead hands, mortal." The voice fades. It seems
+      they were after _MCGUFFIN_HELL. It's better off in your possession.]],
+    }
+  }
 }
 
 ZDOOM_STORIES.ABSOLUTE_ENDINGS =
@@ -829,46 +931,47 @@ ZDOOM_STORIES.MCGUFFINS =
   -- the object's actual significance is almost always unclear
   hellish =
   {
-    ["obsidian orb containing hellfire"]=5,
-    ["icon of miscreation"]=5,
-    ["desacrated totem"]=5,
-    ["adamantium skull"]=5,
-    ["baleful gem"]=5,
-    ["devil's horn"]=5,
-    ["cursed talisman"]=5,
-    ["dark crystal shard"]=5,
-    ["bloody hand"]=5,
-    ["skeletal torso"]=5,
-    ["unholy chalice"]=5,
-    ["ornate dagger"]=5,
-    ["spear of destiny"]=5, --because why not lol
-    ["sword of darkness"]=5,
-    ["khronos device"]=5,
-    ["soul-x agitator"]=5,
-    ["blood imprinter"]=5,
-    ["brass bauble"]=5,
-
+    ["an obsidian orb containing hellfire"]=5,
+    ["an icon of miscreation"]=5,
+    ["a desacrated totem"]=5,
+    ["an adamantium skull"]=5,
+    ["a baleful gem"]=5,
+    ["a devil's horn"]=5,
+    ["a cursed talisman"]=5,
+    ["a dark crystal shard"]=5,
+    ["a bloody hand"]=5,
+    ["a skeletal torso"]=5,
+    ["an unholy chalice"]=5,
+    ["an ornate dagger"]=5,
+    ["the Spear of Destiny"]=5, --because why not lol
+    ["the Sword of Darkness"]=5,
+    ["the Khronos Device"]=5,
+    ["the Soul-x Agitator"]=5,
+    ["a blood imprinter"]=5,
+    ["a brass bauble"]=5,
   }
   tech =
   {
-    ["tectonic transducer"]=5,
-    ["flux capacitor"]=5,
-    ["security matrix"]=5,
-    ["network card"]=5,
-    ["energy diode"]=5,
-    ["BFG component"]=5,
-    ["positron relay"]=5,
-    ["plasma inductor"]=5,
-    ["plasma relay"]=5,
-    ["quantum cipher"]=5,
-    ["dielectric coil"]=5,
-    ["disc reader"]=5,
-    ["card reader"]=5,
-    ["base station uplink"]=5,
-    ["flash drive"]=5,
-    ["hard token authenticator"]=5,
-    ["baseband modulator"]=5,
-    ["gravitronic amplifier"]=5,
-    ["quantum disrupter"]=5,
+    ["a tectonic transducer"]=5,
+    ["a flux capacitor"]=5,
+    ["a security matrix"]=5,
+    ["a network card"]=5,
+    ["an energy diode"]=5,
+    ["various BFG components"]=5,
+    ["a positron relay"]=5,
+    ["a plasma inductor"]=5,
+    ["a plasma relay"]=5,
+    ["a quantum cipher"]=5,
+    ["a dielectric coil"]=5,
+    ["a disc reader"]=5,
+    ["a card reader"]=5,
+    ["a base station uplink"]=5,
+    ["a flash drive"]=5,
+    ["a hard token authenticator"]=5,
+    ["a baseband modulator"]=5,
+    ["a gravitronic amplifier"]=5,
+    ["a quantum disrupter"]=5,
+    ["a MAPINFO lump"]=5, -- getting meta here, huh?
+    ["a coop server"]=5,
   }
 }
