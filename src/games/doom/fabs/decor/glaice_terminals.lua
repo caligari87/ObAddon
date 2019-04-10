@@ -3,7 +3,7 @@ PREFABS.Decor_glaice_2x2_terminal =
   file   = "decor/glaice_terminals.wad"
   where  = "point"
 
-  prob   = 5000
+  prob   = 7000
   theme  = "tech"
   env    = "building"
 
