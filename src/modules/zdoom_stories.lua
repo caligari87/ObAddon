@@ -66,6 +66,10 @@ Notes and Tips:
   Story Generator formatting code will try to fit the lines within
   the intermission screen as best as possible.
 
+* Addendum: Also try to avoid extremely long words. The parser expects that
+  lines will be 35 characters long to fit the constraints of the engine.
+  Amount of lines is also limited.
+
 * Doomguy doesn't care about story. But we do, we can just keep saying
   things about things he ends up doing, so be creative.
 
@@ -101,7 +105,7 @@ ZDOOM_STORIES.STORIES =
       [[It seems as though demons continue to spill into the area
       despite your best efforts. Your locator marks a massive spike
       in energy nearby. It seems the source of the demonic surge
-      is from that direction...]],
+      is in that direction...]],
 
       [[Hell's forces continue to lay siege upon this region. It
       is clear their numbers are being reinforced from elsewhere.
@@ -115,17 +119,17 @@ ZDOOM_STORIES.STORIES =
 
     conclusions =
     {
-      [[You have destroyed the guardian waiting upon a portal to hell!
+      [[You have destroyed the guardian protecting a portal to hell!
       With his defeat, the portal collapses. Hell will find it more
       difficult to return to this place!]],
 
-      [[Hell's commanders went through great means to guard this portal
+      [[Hell's commanders went through great efforts to guard this portal
       to hell. You slip through to find yourself in a new place, in which
-      the source of the demonic invasion seems to further come from...]],
+      the source of the demonic invasion seems to originate from...]],
 
-      [[It was a trap! As the demon's corpse crashes into the floor,
-      a portal to hell was underneath all along! The platform crumbles
-      and throws you into its maw - you find yourself in a new place...]],
+      [[It was a trap! As the demon's corpse crashes onto the floor,
+      a portal to hell turns out to be underneath all along! The platform 
+      crumbles and throws you into its maw - you find yourself in a new place...]],
     }
   }
 
@@ -146,16 +150,16 @@ ZDOOM_STORIES.STORIES =
     conclusions =
     {
       [[You have found a conduit through which Argent Energy
-      is being transmitted through from hell! With a quick bash
-      with your fists, the conduit is damaged beyond repair.
-      The power goes out through the region - but so does the
-      corruption hell has radiated throughout.]],
+      is being transmitted through from hell! With a crash
+      of your fists, the conduit is damaged beyond repair.
+      The power goes out throughout the region - 
+      but so does the corruption hell has radiated over it.]],
 
       [[The generator translating hellish energies into
       electrical power has allowed the decaying force
       of Argent Energy to mutate this place. You destroy
       the generator but as it falls silent, a well of souls
-      burst open, flying about and escaping into the atmosphere!
+      bursts open, the spirits escaping into the atmosphere!
       You are unsure of what you have done, but at least hell's
       influence is banished for now.]],
     }
@@ -168,26 +172,26 @@ ZDOOM_STORIES.STORIES =
       [[Your tracker lights up and is apparently receiving a
       distress signal from a nearby location. A few UAC scientists
       seem to have barricaded themselves, surrounded by the
-      demonic horde and is looking for an escape. You acknowledge
+      demonic horde and is seeking rescue. You acknowledge
       and proceed...]],
 
       [[A portable terminal has revealed the position of a group
       of scientists nearby. You attempt to establish communications,
-      but no response returns. The last footage from the terminal
+      but receive no response. The last footage from the terminal
       reveals them panicking, running from demons. You may still
       have opportunity for to save them...]],
 
-      [[Badly hysteric chatter suddenly sounds off on your
+      [[Badly hysteric chatter suddenly rings off of your
       radio. It seems a group of scientists are looking for a way
-      out of this place and hellspawn are on their trails.
-      You are not able to respond to them, so you attempt to make
+      out of this place and hellspawn are on their trail.
+      Unable to respond to them, you attempt to make
       your way towards their position...]],
     }
 
     conclusions =
     {
       [[With the defeat of the demonic host, you have freed
-      the scientists from their assault! The scientists have
+      the scientists from the assault! The scientists have
       sworn off any continued cooperation with UAC's experimentation
       with hell and leave through some escape pods! You remain
       as there is more to discover...]],
@@ -218,10 +222,10 @@ ZDOOM_STORIES.STORIES =
       abruptly cuts off. You hurry to track their last position.]],
 
       [[Your tracker reveals several green dots on the map.
-      They are fleet-footed, and it seems the dots are moving
+      They are fleet-footed, as it seems the dots are moving
       quickly. They are marines and it seems they are in the middle
       of an engagement. They are some distance away, but you
-      may still be able to reach them...]],
+      may still be able to reach them in time...]],
 
       [[As you step across the floor, you come up to a pair of dog tags
       below your boots. You pick it up and hear the distant thunder
@@ -241,11 +245,11 @@ ZDOOM_STORIES.STORIES =
       "Foolish mortal. Attracted to the sound of despair.
       Such easy trickey for a famed warrior as you."
       The demon's corpse fades into ashes.
-      There is no sign of the embattled marines
-      anywhere but general of hell still lies defeated.]],
+      There is no sign of the embattled marines anywhere
+      but the general of hell still lies defeated.]],
 
-      [[The armies of hell rout from your relentless onslaught.
-      You find a badly blasted barricade and find the corpses
+      [[The armies of hell are routed by your relentless onslaught.
+      You find a badly blasted barricade and in it the corpses
       of the marines who sacrificed themselves to battle hell.
       You pick up their dog tags in respect and scurry on...]],
     }
@@ -262,7 +266,7 @@ ZDOOM_STORIES.STORIES =
 
       [[A hellish infestation seems to be running amuck about
       this region. Hell's reign is expanding and their armies
-      gather in number elsewhere. Perhaps you can get a shot
+      gather in numbers elsewhere. Perhaps you can get a shot
       on them first before they begin a new assault...]],
 
       [[A strange overgrowth of bloody viscera seems to be
@@ -279,7 +283,7 @@ ZDOOM_STORIES.STORIES =
       this place freed, the taint of hell's energies fades with
       the retreat of the darkness.]],
 
-      [[It was a trap! An entire batallion of hall's banners fall
+      [[It was a trap! An entire batallion of hell's banners fall
       before you. It turns out you were the target all along
       but with your dexterity and wit, you have outmaneuvered
       their forces and crushed them utterly.]],
@@ -368,7 +372,7 @@ ZDOOM_STORIES.STORIES =
       _SPACE
       Its dialogue is interrupted as with the crack of your knuckles,
       you send its head flying square off its shoulders across
-      the room with an upper cut. The remaining minions of hell
+      the room with an uppercut. The remaining minions of hell
       shriek in fear and retreat!]],
 
       [[As a critical hit falls upon the demon's body, _RAND_DEMON
@@ -392,13 +396,13 @@ ZDOOM_STORIES.STORIES =
     hooks =
     {
       [[The situation seems to be growing hopeless. Hell has opened
-      a great rift and the tides of hell's forces have befallen
-      this place greatly. You have no choice but to escape and thus attempt
-      to breach between their gaps...]],
+      a great rift and the tides of hell's forces have corrupted
+      this place deeply. You have no choice but to escape 
+      and thus attempt to breach between their gaps...]],
 
       [[Hell's grip upon this area seems to be tightening. Swarms
       of hellspawn rigorously continue their defense and it seems
-      their numbers are unending. You decide to fight on however
+      their numbers are unending. You decide to fight on, however
       bleak the circumstance.]],
     }
     conclusions =
@@ -414,8 +418,8 @@ ZDOOM_STORIES.STORIES =
       and disappears again above the clouds...]],
 
       [[As you down the final demon, horrifying screams and screaches
-      fill the room! As you turn back, an entire host of demons
-      are charging at you! From the opposite direction however, comes
+      fill the room! As you turn back, an entire horde of demons
+      is charging at you! However, the opposite direction comes
       an immense orb of light! The orb shoots beams into the belly of
       each creature turning them into nothing but clouds of dust.
       _SPACE
@@ -442,7 +446,7 @@ ZDOOM_STORIES.STORIES =
 
       [[Your radio picks up on a mysterious signal. Parsing it through
       your tracker, you find a beacon transmitting at a military frequency.
-      It is a potential point of interest so you begin your journey towards
+      It likely is a point of interest so you begin your journey towards
       it accepting the potential risk.]],
     }
 
@@ -456,14 +460,14 @@ ZDOOM_STORIES.STORIES =
       [[It was a trap all along! The hell general _RAND_DEMON activated the beacon,
       expecting you to follow it. They did not, however, expect a thorough
       defeat despite their machinations. You deactivate the beacon
-      so no further individual may fall prey to it.]],
+      so no marine after you may fall prey to it.]],
 
       [[You have found the beacon attached to a badly damaged cargo pod.
       You pry open the doors pocked with bullet holes and claw marks.
       Out spill a group of civilians.
       _SPACE
       "Thank you for saving us! Those creatures just appeared out of nowhere!"
-      You gesture towards the exit. "Yes, we know a way out of here. We can't
+      You gesture towards the exit. "Thank you for getting rid of them. We can't
       repay you with anything, but we hope you bring down more of those demons!"
       The civilians leave.]],
 
@@ -479,8 +483,8 @@ ZDOOM_STORIES.STORIES =
   {
     hooks =
     {
-      [[You hear the great roaring of explosions in the distance.
-      You look up the skies and see spacecraft cashing down the
+      [[You hear the great roar of explosions in the distance.
+      You look up the skies and see spacecraft crashing into the
       atmosphere. It seems hell has taken control of the ground defense
       systems and have turned them against humans. You must find a way
       to disable the rogue system!]],
@@ -512,7 +516,7 @@ ZDOOM_STORIES.STORIES =
     {
       [[This area bares the hallmarks of UAC technology. Energy signatures
       match your own equipment. It seems a wicked experiment has been left
-      behind by the UAC nearby. Whatever it is, time to shut it down.]],
+      behind by the UAC in this area. Whatever it is, time to shut it down.]],
 
       [[Your computer map lights up with the words: "WARNING. You are entering
       a restricted zone. Your clearance level is insufficient for access."
@@ -569,7 +573,7 @@ ZDOOM_STORIES.STORIES =
     conclusions =
     {
       [[As hell's forces retreat, a vision enters your mind of a world
-      full of winter. The distant figure of a girl seems to dig herself
+      covered in snow. The distant figure of a girl seems to emerge
       out of the fields of white. The snow slowly recedes and the gray skies
       turn blue. The girl waves at you, thanking you for being the bringer of summer
       to her world from the winter hell had heralded.
@@ -596,7 +600,7 @@ ZDOOM_STORIES.STORIES =
 
       [[You find a military cargo pod ahead. It seems to have been here
       for a while with its intentional recipients having never claimed it.
-      You interface your suit on the terminal and the pod reveals _MCGUFFIN_TECH
+      You interface your suit to the terminal and the pod reveals _MCGUFFIN_TECH
       inside. Better for you to hold on to it than the hellspawn.]],
 
       [[A shot in the right place brings down a shotgun-carrying shambler of a corpse.
@@ -635,19 +639,19 @@ ZDOOM_STORIES.STORIES =
     {
       [[A strange altar lined with demonic effigies lies along the wall.
       It seems the creatures are worshipping the object on the pedestal.
-      It's _MCGUFFIN_HELL! A relic of this sort is better off not in the hands
-      of hell. You take it with you.]],
+      It's _MCGUFFIN_HELL! A relic of this sort is better off in your hands
+      than hell's. You take it with you.]],
 
-      [[Ahead is an interlinking of various portable machines and terminals.
+      [[Ahead is an large setup of various portable machines and terminals.
       Each display shows graphs and readings you cannot interpret. The machines
-      are linked to a pedestal with _MCGUFFIN_HELL over it! You take a swipe
-      of the item and the displays lose their readings. UAC experiments rarely
-      turn out good, you thought to yourself.]],
+      are linked to a pedestal with _MCGUFFIN_HELL over it! You swipe the item
+      off its pedestal and the displays lose their readings. UAC experiments rarely
+      turn out good, you think to yourself.]],
 
       [[Radiant energies permeate through this place. It seems to come from
       this stone totem. It must be helping the forces of hell rally somehow.
-      Atop the totem is _MCGUFFIN_HELL. You topple the totem over and pilfer.
-      Hell won't have a use for this anymore!]],
+      Atop the totem is _MCGUFFIN_HELL. You topple the totem over and pilfer
+      the object. Hell won't have a use for this anymore!]],
     }
 
     conclusions =
@@ -705,19 +709,18 @@ ZDOOM_STORIES.GENERIC_STORIES =
   d2_MAP11_exit =
   {
     [[A lieutenant of hell falls but otherworldly shrieks echo
-    further still. You pick up your armaments
-    and point them forward to continue the siege
-    against the darkness
+    further still. You pick up your armaments and point them 
+    forward to continue the siege against the darkness.
     _SPACE
     The battle rages on!]]
   }
   d2_MAP20_exit=
   {
-    [[Hell's forces attempt to push back but your relentless assault on their
-    breaches keeps them at bay!
+    [[Hell's forces attempt to push back but your relentless assault
+    on their breaches keeps them at bay!
     _SPACE
-    More of their overlords have fallen and the opportunity for their defeat
-    draws ever closer...]]
+    More of their overlords have fallen and the opportunity for
+    their defeat draws ever closer...]]
   }
   d2_MAP30_exit =
   {
@@ -737,7 +740,7 @@ ZDOOM_STORIES.SECRET_TEXTS =
   d2_secretnearby =
   {
     [[You tirelessly battle against waves upon waves of
-    seemingly infinite hellspawn
+    seemingly infinite hellspawn.
     _SPACE
     Your tracker informs you a secret point of interest
     may exist nearby...]],
