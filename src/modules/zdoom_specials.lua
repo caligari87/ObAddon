@@ -689,7 +689,7 @@ function ZDOOM_SPECIALS.do_special_stuff()
         '{\n'
         '' .. cluster_music_line .. ''
         '  pic = "' .. interpic .. '"\n'
-        '  exittext = lookup, "SECRETNEXT"\n'
+        '  exittext = lookup, "SECRETNEARBY"\n'
         '}\n'
         'cluster 5\n' -- MAP15-MAP20
         '{\n'
