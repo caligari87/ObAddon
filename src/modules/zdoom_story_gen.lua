@@ -59,7 +59,7 @@ function ZStoryGen_format_story_chunk(story_strings, info)
     end
 
     if word == "_SPACE" then
-      word = "\\n"
+      word = "\\n\\n"
     end
 
     manhandled_string_length = manhandled_string_length + word:len()
@@ -70,7 +70,11 @@ function ZStoryGen_format_story_chunk(story_strings, info)
       manhandled_string = ""
       manhandled_string_length = 0
     else
-      manhandled_string = manhandled_string .. word .. " "
+      if word != "\\n\\n" then
+        manhandled_string = manhandled_string .. word .. " "
+      else
+        manhandled_string = manhandled_string .. word
+      end
     end
   end
 
@@ -171,17 +175,17 @@ function ZStoryGen_init()
   local secret2 = ZStoryGen_format_story_chunk(rand.pick(ZDOOM_STORIES.SECRET_TEXTS.d2_secret2))
   table.insert(language_lump, "SECRETNEARBY =\n")
   for _,line in pairs(secret_entry) do
-    table.insert(language_lump, " " .. line .. "\n")
+    table.insert(language_lump, "  " .. line .. "\n")
   end
   table.insert(language_lump, "\n")
   table.insert(language_lump, "SECRET1 =\n")
   for _,line in pairs(secret1) do
-    table.insert(language_lump, " " .. line .. "\n")
+    table.insert(language_lump, "  " .. line .. "\n")
   end
   table.insert(language_lump, "\n")
   table.insert(language_lump, "SECRET2 =\n")
   for _,line in pairs(secret2) do
-    table.insert(language_lump, " " .. line .. "\n")
+    table.insert(language_lump, "  " .. line .. "\n")
   end
 
   gui.wad_add_text_lump("LANGUAGE",language_lump)
