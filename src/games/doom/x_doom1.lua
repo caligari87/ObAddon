@@ -680,23 +680,23 @@ ULTDOOM.THEMES =
     style_list =
     {
       caves = { none=70, few=30 }
-      outdoors = { few=40, some=80, heaps=10 }
-      big_rooms = { none=40, few=25, some=15, heaps=5 }
-      hallways = { none=15, few=45, some=20, heaps=10 }
+      outdoors = { few=70, some=30, heaps=10 }
+      big_rooms = { none=50, few=25, some=10, heaps=5 }
+      hallways = { none=20, few=45, some=20, heaps=10 }
       windows = { few=15, some=85, heaps=40 }
       pictures = { few=20, some=75, heaps=45 }
-      liquids = { none=60, few=30, some=10, heaps=5 }
+      liquids = { none=50, few=35, some=10, heaps=5 }
       doors = { few=25, some=75, heaps=30 }
       teleporters = { none=75, few=30, some=10, heaps=3 }
-      keys = { none=15, few=60, some=70, heaps=30 }
+      keys = { none=15, few=40, some=70, heaps=30 }
       switches = { none=25, few=75, some=40, heaps=15 }
       secrets = { few=15, some=80, heaps=30 }
       symmetry = { none=50, few=50, some=50, heaps=50 }
       steepness = { few=30, some=70, heaps=40 }
-      cages = { none=70, few=25, some=10, heaps=5 }
-      traps = { few=60, some=40, heaps=20 }
+      cages = { none=70, few=20, some=10, heaps=2 }
+      traps = { few=60, some=40, heaps=15 }
       barrels = { few=5, some=85, heaps=60 }
-      ambushes = { few=30, some=75, heaps=20 }
+      ambushes = { few=35, some=65, heaps=20 }
     }
 
     scenic_fence =
@@ -776,7 +776,7 @@ ULTDOOM.THEMES =
       ROCKRED1 = 60
       ASHWALL  = 40
       SP_ROCK1 = 40
-      BROWN144 = 20
+      BROWNHUG = 20
     }
 
     prefab_remap =
@@ -870,7 +870,7 @@ ULTDOOM.THEMES =
     style_list =
     {
       caves = { none=60, few=40 }
-      outdoors = { few=40, some=80, heaps=10 }
+      outdoors = { few=40, some=70, heaps=10 }
       big_rooms = { none=40, few=35, some=15, heaps=5 }
       hallways = { none=15, few=45, some=20, heaps=10 }
       windows = { few=15, some=85, heaps=40 }
@@ -882,7 +882,7 @@ ULTDOOM.THEMES =
       switches = { none=20, few=65, some=50, heaps=15 }
       secrets = { few=12, some=80, heaps=30 }
       symmetry = { none=50, few=50, some=50, heaps=50 }
-      steepness = { few=40, some=80, heaps=40 }
+      steepness = { few=40, some=80, heaps=35 }
       cages = { none=55, few=35, some=10, heaps=5 }
       traps = { few=40, some=60, heaps=30 }
       barrels = { few=10, some=55, heaps=30 }
@@ -1145,7 +1145,7 @@ ULTDOOM.THEMES =
     {
       doors = { none=15, few=30, some=65, heaps=25 }
       outdoors = { none=10, few=35, some=60, heaps=15 }
-      steepness = { few=25, some=70, heaps=40 }
+      steepness = { few=35, some=70, heaps=30 }
       pictures = { few=50, some=50, heaps=70 }
       big_rooms = { none=25, few=60, some=15, heaps=10 }
       ambushes = { none=10, few=15, some=55, heaps=35 }
@@ -1524,7 +1524,7 @@ ULTDOOM.ROOM_THEMES =
   tech_Room =
   {
     env  = "building"
-    prob = 50
+    prob = 90
 
     walls =
     {
@@ -1555,7 +1555,7 @@ ULTDOOM.ROOM_THEMES =
       FLAT1 = 10
       FLAT5 = 20
       FLAT14 = 20
-      FLAT5_4 = 20
+      FLAT5_4 = 15
     }
 
     ceilings =
@@ -1579,7 +1579,7 @@ ULTDOOM.ROOM_THEMES =
   tech_Brown =
   {
     env  = "building"
-    prob = 50
+    prob = 70
 
     walls =
     {
@@ -1600,8 +1600,6 @@ ULTDOOM.ROOM_THEMES =
       FLOOR4_6 = 30
       FLOOR5_2 = 30
       FLAT5 = 20
-      FLAT14 = 10
-      FLAT5_4 = 10
     }
 
     ceilings =
@@ -1620,7 +1618,7 @@ ULTDOOM.ROOM_THEMES =
   tech_Computer =
   {
     env = "building"
-    prob = 10
+    prob = 25
 
     walls =
     {
@@ -1651,18 +1649,23 @@ ULTDOOM.ROOM_THEMES =
     wall_groups =
     {
       PLAIN = 90
-      mid_band = 25
+      gtd_computers = 35
+      mid_band = 12
       mid_band2 = 10
       lite1 = 5
       lite2 = 15
+      gtd_wall_server_room = 20
+      gtd_wall_tech_windows_topcorner = 15
+      torches6 = 5
+      torches7 = 8
+      torches11 = 5
     }
   }
-
 
   tech_Shiny =
   {
     env = "building"
-    prob = 10
+    prob = 15
 
     walls =
     {
@@ -1688,7 +1691,7 @@ ULTDOOM.ROOM_THEMES =
   tech_Gray =
   {
     env = "building"
-    prob = 20
+    prob = 40
 
     walls =
     {
@@ -1784,16 +1787,14 @@ ULTDOOM.ROOM_THEMES =
     {
       ASHWALL = 30
       SP_ROCK1 = 60
-      GRAYVINE = 20
-      TEKWALL4 = 3
+      BROWNHUG = 20
     }
 
     floors =
     {
       ASHWALL = 30
       SP_ROCK1 = 60
-      GRAYVINE = 20
-      TEKWALL4 = 3
+      FLOOR7_1 = 20
     }
   }
 
@@ -1827,7 +1828,7 @@ ULTDOOM.ROOM_THEMES =
   deimos_Room =
   {
     env = "building"
-    prob = 50
+    prob = 70
 
     walls =
     {
@@ -1955,7 +1956,7 @@ ULTDOOM.ROOM_THEMES =
   deimos_Lab =
   {
     env = "building"
-    prob = 10
+    prob = 15
 
     walls =
     {
@@ -2235,7 +2236,7 @@ ULTDOOM.ROOM_THEMES =
   hell_Wood =
   {
     env = "building"
-    prob = 20
+    prob = 45
 
     walls =
     {
@@ -2263,7 +2264,7 @@ ULTDOOM.ROOM_THEMES =
   hell_Skin =
   {
     env = "building"
-    prob = 20
+    prob = 25
 
     walls =
     {
@@ -2293,6 +2294,7 @@ ULTDOOM.ROOM_THEMES =
       SFLR6_1 = 30
       SFLR6_4 = 10
       FLOOR6_1 = 20
+      FLAT5_2 = 5
     }
   }
 
@@ -2328,6 +2330,8 @@ ULTDOOM.ROOM_THEMES =
       FLOOR6_1 = 35
       FLAT8 = 15
       FLAT5 = 15
+      FLAT5_1 = 5
+      FLAT5_2 = 5
     }
 
     ceilings =
@@ -2526,7 +2530,7 @@ ULTDOOM.ROOM_THEMES =
   flesh_Room =
   {
     env = "building"
-    prob = 90
+    prob = 110
 
     walls =
     {
@@ -2584,13 +2588,13 @@ ULTDOOM.ROOM_THEMES =
   flesh_Wood =
   {
     env = "building"
-    prob = 50
+    prob = 80
 
     walls =
     {
-      WOOD1 = 50
-      WOOD3 = 30
-      WOOD5 = 20
+      WOOD1 = 70
+      WOOD3 = 50
+      WOOD5 = 40
       SKINMET1 = 15
       SKINMET2 = 15
       SKINTEK1 = 6
@@ -2619,7 +2623,7 @@ ULTDOOM.ROOM_THEMES =
   flesh_Marble =
   {
     env = "building"
-    prob = 30
+    prob = 40
 
     walls =
     {
