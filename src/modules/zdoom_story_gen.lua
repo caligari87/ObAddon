@@ -30,13 +30,15 @@ function ZStoryGen_format_story_chunk(story_strings, info)
     story_strings = string.gsub(story_strings, "_EVULZ", info.demon_title)
     story_strings = string.gsub(story_strings, "_GOTHIC_LEVEL", info.gothic_level)
     story_strings = string.gsub(story_strings, "_RAND_CONTRIBUTOR", info.contributor_name)
+    story_strings = string.gsub(story_strings, "_MCGUFFIN_TECH", info.hell_mcguffin)
+    story_strings = string.gsub(story_strings, "_MCGUFFIN_HELL", info.tech_mcguffin)
   end
 
   -- dialogue quotes and apostrphes, man
   story_strings = string.gsub(story_strings, '\"', "'")
 
   -- remove the spaces left behind by Lua's square bracket stuff.
-  story_strings = string.gsub(story_strings, "      ", "")
+  story_strings = string.gsub(story_strings, "  ", "")
   gui.printf(story_strings .. "\n\n")
   story_strings = string.gsub(story_strings, "\n", " ")
 
@@ -57,6 +59,10 @@ function ZStoryGen_format_story_chunk(story_strings, info)
 
     if manhandled_string_length == 1 then
       manhandled_string = '"' .. manhandled_string
+    end
+
+    if word == "_SPACE" then
+      word = "\\n"
     end
 
     manhandled_string_length = manhandled_string_length + word:len()
@@ -93,6 +99,8 @@ function ZStoryGen_fetch_story_chunk(lev_info)
   info.demon_title = rand.key_by_probs(ZDOOM_STORIES.EVIL_TITLES)
   info.gothic_level = Naming_grab_one("GOTHIC")
   info.contributor_name = rand.key_by_probs(namelib.NAMES.TITLE.lexicon.c)
+  info.hell_mcguffin = rand.key_by_probs(ZDOOM_STORIES.MCGUFFINS.hellish)
+  info.tech_mcguffin = rand.key_by_probs(ZDOOM_STORIES.MCGUFFINS.tech)
 
   return rand.key_by_probs(ZDOOM_STORIES.LIST), info
 end
@@ -157,23 +165,26 @@ function ZStoryGen_init()
 
 
   -- create secret messages
-  local secret_entry = ZStoryGen_format_story_chunk(ZDOOM_STORIES.SECRET_TEXTS.d2_secret_nearby)
-  local secret1 = ZStoryGen_format_story_chunk(ZDOOM_STORIES.SECRET_TEXTS.d2_secret1)
-  local secret2 = ZStoryGen_format_story_chunk(ZDOOM_STORIES.SECRET_TEXTS.d2_secret2)
+  local secret_entry = ZStoryGen_format_story_chunk(rand.pick(ZDOOM_STORIES.SECRET_TEXTS.d2_secretnearby))
+  local secret1 = ZStoryGen_format_story_chunk(rand.pick(ZDOOM_STORIES.SECRET_TEXTS.d2_secret1))
+  local secret2 = ZStoryGen_format_story_chunk(rand.pick(ZDOOM_STORIES.SECRET_TEXTS.d2_secret2))
   table.insert(language_lump, "SECRETNEARBY =\n")
-  for line in secret_entry do
-    table.insert(language_lump, line)
+  for _,line in pairs(secret_entry) do
+    table.insert(language_lump, " " .. line .. "\n")
   end
-  table.insert(language_lump, "\n")
+  language_lump[#language_lump] = string.gsub(language_lump[#language_lump], "\n", ";")
+  table.insert(language_lump, "\n\n")
   table.insert(language_lump, "SECRET1 =\n")
-  for line in secret1 do
-    table.insert(language_lump, line)
+  for _,line in pairs(secret1) do
+    table.insert(language_lump, " " .. line .. "\n")
   end
-  table.insert(language_lump, "\n")
+  language_lump[#language_lump] = string.gsub(language_lump[#language_lump], "\n", ";")
+  table.insert(language_lump, "\n\n")
   table.insert(language_lump, "SECRET2 =\n")
-  for line in secret2 do
-    table.insert(language_lump, line)
+  for _,line in pairs(secret2) do
+    table.insert(language_lump, " " .. line .. "\n")
   end
+  language_lump[#language_lump] = string.gsub(language_lump[#language_lump], "\n", ";")
 
   gui.wad_add_text_lump("LANGUAGE",language_lump)
 end

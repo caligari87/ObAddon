@@ -674,20 +674,20 @@ function ZDOOM_SPECIALS.do_special_stuff()
         '{\n'
         '' .. cluster_music_line .. ''
         '  pic = "' .. interpic .. '"\n'
-        '  starttext = lookup, "STORYSTART3"'
-        '  exittext = lookup, "STORYEND3"'
+        '  entertext = lookup, "STORYSTART3"\n'
+        '  exittext = lookup, "STORYEND3"\n'
         '}\n'
         'cluster 6\n' -- MAP31
         '{\n'
         '' .. cluster_music_line .. ''
         '  pic = "' .. interpic .. '"\n'
-        '  starttext = lookup, "SECRET1"'
+        '  entertext = lookup, "SECRET1"\n'
         '}\n'
         'cluster 7\n' -- MAP32
         '{\n'
         '' .. cluster_music_line .. ''
         '  pic = "' .. interpic .. '"\n'
-        '  starttext = lookup, "SECRET2"'
+        '  entertext = lookup, "SECRET2"\n'
         '}\n'
       }
     end
