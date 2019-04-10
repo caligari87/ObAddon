@@ -448,7 +448,7 @@ function ZDOOM_SPECIALS.do_special_stuff()
     -- add cluster linking for DOOM2
     local cluster_line = ''
 
-    if PARAM.story_generator == "generic" then
+    if PARAM.story_generator != "none" then
       if OB_CONFIG.game == "doom2" then
         if map_num >= 1 and map_num <= 5 then
           cluster_line = "  Cluster = 5\n"
@@ -645,45 +645,45 @@ function ZDOOM_SPECIALS.do_special_stuff()
       -- create cluster information
       clusterdef =
       {
-        'cluster 1\n' -- MAP01-MAP05
+        'cluster 5\n' -- MAP01-MAP05
         '{\n'
         '' .. cluster_music_line .. ''
         '  pic = "' .. interpic .. '"\n'
         '  exittext = lookup, "STORYSTART1"\n'
         '}\n'
-        'cluster 2\n' -- MAP06-MAP11
+        'cluster 6\n' -- MAP06-MAP11
         '{\n'
         '' .. cluster_music_line .. ''
         '  pic = "' .. interpic .. '"\n'
         '  exittext = lookup, "STORYEND1"\n'
         '}\n'
-        'cluster 3\n' -- MAP012-15
+        'cluster 7\n' -- MAP012-15
         '{\n'
         '' .. cluster_music_line .. ''
         '  pic = "' .. interpic .. '"\n'
         '  entertext = lookup, "STORYSTART2"\n'
         '  exittext = lookup, "SECRETNEARBY"\n'
         '}\n'
-        'cluster 4\n' -- MAP16-20
+        'cluster 8\n' -- MAP16-20
         '{\n'
         '' .. cluster_music_line .. ''
         '  pic = "' .. interpic .. '"\n'
         '  exittext = lookup, "STORYEND2"\n'
         '}\n'
-        'cluster 5\n' -- MAP21-30
+        'cluster 9\n' -- MAP21-30
         '{\n'
         '' .. cluster_music_line .. ''
         '  pic = "' .. interpic .. '"\n'
         '  entertext = lookup, "STORYSTART3"\n'
         '  exittext = lookup, "STORYEND3"\n'
         '}\n'
-        'cluster 6\n' -- MAP31
+        'cluster 10\n' -- MAP31
         '{\n'
         '' .. cluster_music_line .. ''
         '  pic = "' .. interpic .. '"\n'
         '  entertext = lookup, "SECRET1"\n'
         '}\n'
-        'cluster 7\n' -- MAP32
+        'cluster 11\n' -- MAP32
         '{\n'
         '' .. cluster_music_line .. ''
         '  pic = "' .. interpic .. '"\n'
