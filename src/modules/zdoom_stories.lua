@@ -581,8 +581,80 @@ ZDOOM_STORIES.ABSOLUTE_ENDINGS =
   The story will continue!]],
 }
 
-ZDOOM_STORIES.SECRET_ENTRANCES =
+ZDOOM_STORIES.GENERIC_STORIES =
 {
+  d2_entry = -- not used but I'll leave it here anyway
+  {
+    [[Time to enter the fray once more! The forces of hell have opened
+    the gates to the netherworld and have spilled across the land.
+    _SPACE
+    Time to greet them the only way you know: locked and loaded!
+    _SPACE
+    Good luck out there and blast those hellspawn back
+    to which they came!]]
+  }
+  d2_MAP05_exit =
+  {
+    [[Hell has taken a strong hold upon these lands, corrupting it
+    in their wake!
+    _SPACE
+    Ahead, their forces gather in strength almost inumerable in count.]]
+  }
+  d2_MAP11_exit =
+  {
+    [[A lieutenant of hell falls but otherworldly shrieks echo
+    further still. You pick up your armaments
+    and point them forward to continue the siege
+    against the darkness
+    _SPACE
+    The battle rages on!]]
+  }
+  d2_MAP20_exit=
+  {
+    [[Hell's forces attempt to push back but your relentless assault on their
+    breaches keeps them at bay!
+    _SPACE
+    More of their overlords have fallen and the opportunity for their defeat
+    draws ever closer...]]
+  }
+  d2_MAP30_exit =
+  {
+    [[You have loosened hell's grip upon
+    this place! Demonic entities flee in terror
+    from your display of indomitable strength.
+    _SPACE
+    You realize, however, while hell lies
+    defeated today hell has not yet been destroyed.
+    Rest for now, but remember:
+    Hell is already preparing for another challenge.]]
+  }
+}
+
+ZDOOM_STORIES.SECRET_TEXTS =
+{
+  d2_secretnearby =
+  {
+    [[You tirelessly battle against waves upon waves of
+    seemingly infinite hellspawn
+    _SPACE
+    Your tracker informs you a secret point of interest
+    may exist nearby...]],
+  }
+  d2_secret1 =
+  {
+    [[You have found a secret zone!
+    It seems the hellspawn have barricaded
+    themselves within its confines
+    with the expectation of safety.
+    _SPACE
+    You are about to prove them otherwise.]],
+  }
+  d2_secret2 =
+  {
+    [[It seems this secret trail goes further than expected.
+    It is time to finish this once and for all and eradicate
+    this hidden pocket of hellish infestation.]],
+  }
 }
 
 ZDOOM_STORIES.EVIL_TITLES =

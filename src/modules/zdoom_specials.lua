@@ -535,9 +535,11 @@ function ZDOOM_SPECIALS.do_special_stuff()
 
   local function add_clusterdef(interpic)
     local clusterdef = {''}
-    if OB_CONFIG.game == "doom2" then
 
-      local cluster_music_line = '  music = "' .. PARAM.generic_intermusic .. '"\n'
+    local cluster_music_line = '  music = "' .. PARAM.generic_intermusic .. '"\n'
+
+    if OB_CONFIG.game == "doom2" and PARAM.story_generator == "generic" then
+
 
       clusterdef =
       {
@@ -545,18 +547,6 @@ function ZDOOM_SPECIALS.do_special_stuff()
         '{\n'
         '' .. cluster_music_line .. ''
         '  pic = "' .. interpic .. '"\n'
-        --[['  entertext = \n'
-        '    "Time to enter the fray once more!",\n'
-        '    "The forces of hell have opened",\n'
-        '    "the gates to the netherworld",\n'
-        '    "and have spilled across the land.",\n'
-        '    " ",\n'
-        '    "Time to greet them the only way",\n'
-        '    "you know: locked and loaded!",\n'
-        '    " ",\n'
-        '    "Good luck out there",\n'
-        '    "and blast those hellspawn back",\n'
-        '    "to which they came!"\n']]
         '  exittext =\n'
         '    "Hell has taken a strong hold",\n'
         '    "upon these lands, corrupting it",\n'
@@ -650,6 +640,58 @@ function ZDOOM_SPECIALS.do_special_stuff()
         '}\n'
       }
     end
+
+    if OB_CONFIG.game == "doom2" and PARAM.story_generator == "proc" then
+      -- create cluster information
+      clusterdef =
+      {
+        'cluster 1\n' -- MAP01-MAP05
+        '{\n'
+        '' .. cluster_music_line .. ''
+        '  pic = "' .. interpic .. '"\n'
+        '  exittext = lookup, "STORYSTART1"\n'
+        '}\n'
+        'cluster 2\n' -- MAP06-MAP11
+        '{\n'
+        '' .. cluster_music_line .. ''
+        '  pic = "' .. interpic .. '"\n'
+        '  exittext = lookup, "STORYEND1"\n'
+        '}\n'
+        'cluster 3\n' -- MAP012-15
+        '{\n'
+        '' .. cluster_music_line .. ''
+        '  pic = "' .. interpic .. '"\n'
+        '  entertext = lookup, "STORYSTART2"\n'
+        '  exittext = lookup, "SECRETNEARBY"\n'
+        '}\n'
+        'cluster 4\n' -- MAP16-20
+        '{\n'
+        '' .. cluster_music_line .. ''
+        '  pic = "' .. interpic .. '"\n'
+        '  exittext = lookup, "STORYEND2"\n'
+        '}\n'
+        'cluster 5\n' -- MAP21-30
+        '{\n'
+        '' .. cluster_music_line .. ''
+        '  pic = "' .. interpic .. '"\n'
+        '  starttext = lookup, "STORYSTART3"'
+        '  exittext = lookup, "STORYEND3"'
+        '}\n'
+        'cluster 6\n' -- MAP31
+        '{\n'
+        '' .. cluster_music_line .. ''
+        '  pic = "' .. interpic .. '"\n'
+        '  starttext = lookup, "SECRET1"'
+        '}\n'
+        'cluster 7\n' -- MAP32
+        '{\n'
+        '' .. cluster_music_line .. ''
+        '  pic = "' .. interpic .. '"\n'
+        '  starttext = lookup, "SECRET2"'
+        '}\n'
+      }
+    end
+
     return clusterdef
   end
 
@@ -767,12 +809,14 @@ function ZDOOM_SPECIALS.do_special_stuff()
   end
 
   -- collect lines for the cluster information in MAPINFO
-  if PARAM.story_generator == "generic" then
-    local clusterinfo_lines = add_clusterdef(ipic)
+  local clusterinfo_lines = add_clusterdef(ipic)
+  if clusterinfo_lines then
     each line in clusterinfo_lines do
       table.insert(mapinfolump,line)
     end
-  elseif PARAM.story_generator == "proc" then
+  end
+
+  if PARAM.story_generator == "proc" then
     -- language lump is written inside the story generator
     ZStoryGen_init()
   end
