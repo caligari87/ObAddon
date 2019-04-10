@@ -22,7 +22,7 @@ table.name_up(ZDOOM_STORIES.STORIES)
 
 function ZStoryGen_format_story_chunk(story_strings, info)
 
-  local line_max_length = 32
+  local line_max_length = 35
 
   -- replace special word tags with their proper ones from the name gen
   if info then
