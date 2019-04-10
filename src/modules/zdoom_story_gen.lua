@@ -134,28 +134,21 @@ function ZStoryGen_init()
   while x <= #GAME.episodes do
 
     -- insert story start sequence
-    y = 1
     table.insert(language_lump, "STORYSTART" .. x .. " =\n")
     for _,line in pairs(hooks[x]) do
-      if y == #hooks[x] then
-        line = line .. ";"
-      end
       table.insert(language_lump, "  " .. line .. "\n")
-      y = y + 1
     end
+    language_lump[#language_lump] = string.gsub(language_lump[#language_lump], "\n", ";")
+    table.insert(language_lump, "\n")
 
     -- insert story end sequences
     table.insert(language_lump, "\n")
     table.insert(language_lump, "STORYEND" .. x .. " =\n")
-    y = 1
     for _,line in pairs(conclusions[x]) do
-      if y == #hooks[x] then
-        line = line .. ";"
-      end
       table.insert(language_lump, "  " .. line .. "\n")
-      y = y + 1
     end
-    table.insert(language_lump, "\n")
+    language_lump[#language_lump] = string.gsub(language_lump[#language_lump], "\n", ";")
+    table.insert(language_lump, "\n\n")
     x = x + 1
   end
 

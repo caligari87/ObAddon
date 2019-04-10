@@ -188,7 +188,7 @@ ZDOOM_STORIES.STORIES =
       [[As the final demon collapses before its feet, it utters
       a terrible laughter that echoes through the chambers.
       Behind it you discover the remains of the butchered scientists.
-      Misfortunate has befallen them and there is no way you
+      Misfortune has befallen them and there is no way you
       could have reached them in time. You trudge on...]],
 
       [[You have found the scientists! It seems however they are
