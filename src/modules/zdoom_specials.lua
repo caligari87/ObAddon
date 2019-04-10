@@ -448,7 +448,7 @@ function ZDOOM_SPECIALS.do_special_stuff()
     -- add cluster linking for DOOM2
     local cluster_line = ''
 
-    if PARAM.story_generator != "none" then
+    if PARAM.story_generator == "generic" then
       if OB_CONFIG.game == "doom2" then
         if map_num >= 1 and map_num <= 5 then
           cluster_line = "  Cluster = 5\n"
@@ -464,6 +464,28 @@ function ZDOOM_SPECIALS.do_special_stuff()
           cluster_line = "  Cluster = 10\n"
         elseif map_num == 32 then
           cluster_line = "  Cluster = 11\n"
+        end
+      end
+    elseif PARAM.story_generator == "proc" then
+      if OB_CONFIG.game == "doom2" then
+        if map_num >= 1 and map_num <= 5 then
+          cluster_line = "  Cluster = 1\n"
+        elseif map_num > 5 and map_num <= 11 then
+          cluster_line = "  Cluster = 2\n"
+        elseif map_num == 12 then
+          cluster_line = "  Cluster = 3\n"
+        elseif map_num > 12 and map_num <= 14 then
+          cluster_line = "  Cluster = 4\n"
+        elseif map_num > 14 and map_num <= 20 then
+          cluster_line = "  Cluster = 5\n"
+        elseif map_num == 21 then
+          cluster_line = "  Cluster = 6\n"
+        elseif map_num > 21 and map_num <= 30 then
+          cluster_line = "  Cluster = 7\n"
+        elseif map_num == 31 then
+          cluster_line = "  Cluster = 8\n"
+        elseif map_num == 32 then
+          cluster_line = "  Cluster = 9\n"
         end
       end
     end
@@ -645,45 +667,55 @@ function ZDOOM_SPECIALS.do_special_stuff()
       -- create cluster information
       clusterdef =
       {
-        'cluster 5\n' -- MAP01-MAP05
+        'cluster 1\n' -- MAP01-MAP05
         '{\n'
         '' .. cluster_music_line .. ''
         '  pic = "' .. interpic .. '"\n'
         '  exittext = lookup, "STORYSTART1"\n'
         '}\n'
-        'cluster 6\n' -- MAP06-MAP11
+        'cluster 2\n' -- MAP06-MAP11
         '{\n'
         '' .. cluster_music_line .. ''
         '  pic = "' .. interpic .. '"\n'
         '  exittext = lookup, "STORYEND1"\n'
         '}\n'
-        'cluster 7\n' -- MAP012-15
+        'cluster 3\n' -- MAP012
         '{\n'
         '' .. cluster_music_line .. ''
         '  pic = "' .. interpic .. '"\n'
-        '  entertext = lookup, "STORYSTART2"\n'
-        '  exittext = lookup, "SECRETNEARBY"\n'
+        '  exittext = lookup, "STORYSTART2"\n'
         '}\n'
-        'cluster 8\n' -- MAP16-20
+        'cluster 4\n' -- MAP13-MAP14
+        '{\n'
+        '' .. cluster_music_line .. ''
+        '  pic = "' .. interpic .. '"\n'
+        '  exittext = lookup, "SECRETNEXT"\n'
+        '}\n'
+        'cluster 5\n' -- MAP15-MAP20
         '{\n'
         '' .. cluster_music_line .. ''
         '  pic = "' .. interpic .. '"\n'
         '  exittext = lookup, "STORYEND2"\n'
         '}\n'
-        'cluster 9\n' -- MAP21-30
+        'cluster 6\n' -- MAP21
         '{\n'
         '' .. cluster_music_line .. ''
         '  pic = "' .. interpic .. '"\n'
-        '  entertext = lookup, "STORYSTART3"\n'
+        '  exittext = lookup, "STORYSTART3"\n'
+        '}\n'
+        'cluster 7\n' -- MAP22-30
+        '{\n'
+        '' .. cluster_music_line .. ''
+        '  pic = "' .. interpic .. '"\n'
         '  exittext = lookup, "STORYEND3"\n'
         '}\n'
-        'cluster 10\n' -- MAP31
+        'cluster 8\n' -- MAP31
         '{\n'
         '' .. cluster_music_line .. ''
         '  pic = "' .. interpic .. '"\n'
         '  entertext = lookup, "SECRET1"\n'
         '}\n'
-        'cluster 11\n' -- MAP32
+        'cluster 9\n' -- MAP32
         '{\n'
         '' .. cluster_music_line .. ''
         '  pic = "' .. interpic .. '"\n'

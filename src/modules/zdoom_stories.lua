@@ -493,7 +493,7 @@ ZDOOM_STORIES.STORIES =
       the following instruction: "If you are hearing this, we are
       attempting to land in our target area but hostiles have taken control
       of the ground defense system! If you have means to disable it,
-      this will allow friendly forces to land and push through!"]]
+      this will allow friendly forces to land and push through!"]],
     }
     conclusions =
     {
@@ -506,7 +506,7 @@ ZDOOM_STORIES.STORIES =
       but you came out victorious nonetheless. You smash the
       defense terminal, causing it to power down. You watch as friendly dropships
       safely descend in the distance from the clouds. Hell will fight back
-      but this should make your own battle easier. Hopefully.]]
+      but this should make your own battle easier. Hopefully.]],
     }
   }
 
@@ -567,7 +567,7 @@ ZDOOM_STORIES.STORIES =
       "Dango. Dango. Dango. Dango. Daikazoku."
       _SPACE
       The simple melody of phrases repeat for a while longer.
-      You regain senses and the creatures disappear. What was that?]]
+      You regain senses and the creatures disappear. What was that?]],
     }
 
     conclusions =
@@ -579,7 +579,7 @@ ZDOOM_STORIES.STORIES =
       to her world from the winter hell had heralded.
       _SPACE
       The vision dissipates. Your HUD indicates no presence of hallucinogens
-      in the area.]]
+      in the area.]],
     }
   }
 
