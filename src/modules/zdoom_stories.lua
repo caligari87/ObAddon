@@ -847,7 +847,7 @@ ZDOOM_STORIES.MCGUFFINS =
     ["soul-x agitator"]=5,
     ["blood imprinter"]=5,
     ["brass bauble"]=5,
-    
+
   }
   tech =
   {
