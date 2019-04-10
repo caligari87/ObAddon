@@ -92,15 +92,16 @@ ZDOOM_STORIES.LIST =
   reinforce_marines = 40
   attack = 50
   i_challenge_you_to_a_duel = 70
-  deus_ex_machina = 5
+  deus_ex_machina = 6
   beacon = 50
   aa_guns = 30
   destroy_the_evil_experiment = 40
   found_this_weird_tech_mcguffin = 30
   found_this_weird_hell_mcguffin = 30
-  weab = 3
-  repercussions_of_evil = 3
+  weab = 2
+  repercussions_of_evil = 2
   spaceship_crash = 25
+  zero_wing = 2
 }
 
 ZDOOM_STORIES.STORIES =
@@ -762,6 +763,41 @@ ZDOOM_STORIES.STORIES =
       You interface and find a final recording: it seems the starship was
       crashed deliberately after a host of demons have boarded it. There is
       nothing else here. You continue your trek.]],
+    }
+  }
+
+  zero_wing =
+  {
+    hooks =
+    {
+      [[The war between mankind and demons rages on.
+      _SPACE
+      It seems the demons have set you up a bomb nearby. As you narrowly jump aside
+      to avoid the blast, you get a signal on your receiver.
+      _SPACE
+      It's _RAND_DEMON!!
+      _SPACE
+      "How are you, mortal? All of your bases are now belong to us." It growls with
+      malicious laughter. "All of Humanity is on the way to destruction. You have
+      no chance to survive this battle, so enjoy the little time you have left.
+      Ha ha ha ha ha..."
+      _SPACE
+      You know what to do. Time to move and strike back, for great justice.]],
+    }
+
+    conclusions =
+    {
+      [[Congratulations!!
+      _SPACE
+      All bases of _RAND_DEMON in this area have been destroyed. Peace to the
+      world can finally be restored... but that is what you could only wish
+      for.
+      _SPACE
+      Despite your best efforts, _RAND_DEMON is still alive. You must fight
+      against _RAND_DEMON's horde of forces again and destroy them
+      completely!
+      _SPACE
+      Good luck...]],
     }
   }
 }
