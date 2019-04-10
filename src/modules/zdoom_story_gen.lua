@@ -27,6 +27,7 @@ function ZStoryGen_format_story_chunk(story_strings, info)
   -- replace special word tags with their proper ones from the name gen
   if info then
     story_strings = string.gsub(story_strings, "_RAND_DEMON", info.demon_name)
+    story_strings = string.gsub(story_strings, "_RAND_ENGLISH_PLACE", info.anglican_name)
     story_strings = string.gsub(story_strings, "_EVULZ", info.demon_title)
     story_strings = string.gsub(story_strings, "_GOTHIC_LEVEL", info.gothic_level)
     story_strings = string.gsub(story_strings, "_RAND_CONTRIBUTOR", info.contributor_name)
@@ -95,6 +96,8 @@ function ZStoryGen_fetch_story_chunk(lev_info)
   local demon_name = rand.key_by_probs(namelib.NAMES.GOTHIC.lexicon.e)
   demon_name = string.gsub(demon_name, "NOUNGENEXOTIC", namelib.generate_unique_noun("exotic"))
   info.demon_name = demon_name
+
+  info.anglican_name = namelib.generate_unique_noun("anglican")
 
   info.demon_title = rand.key_by_probs(ZDOOM_STORIES.EVIL_TITLES)
   info.gothic_level = Naming_grab_one("GOTHIC")

@@ -24,6 +24,9 @@ Some keywords for parsing later on:
   _RAND_DEMON = name of a demonic entity
                (based on the GOTHIC entity names table)
 
+  _RAND_ENGLISH_PLACE = name fetched directly from the Anglican
+                        noun generator.
+
   _EVULZ = a rank title for a demonic entity based
            on the evil titles table below.
 
@@ -91,9 +94,11 @@ ZDOOM_STORIES.LIST =
   beacon = 50
   aa_guns = 30
   destroy_the_evil_experiment = 40
-  found_this_weird_tech_mcguffin = 25
-  found_this_weird_hell_mcguffin = 25
+  found_this_weird_tech_mcguffin = 30
+  found_this_weird_hell_mcguffin = 30
   weab = 3
+  repercussions_of_evil = 3
+  spaceship_crash = 25
 }
 
 ZDOOM_STORIES.STORIES =
@@ -128,7 +133,7 @@ ZDOOM_STORIES.STORIES =
       the source of the demonic invasion seems to originate from...]],
 
       [[It was a trap! As the demon's corpse crashes onto the floor,
-      a portal to hell turns out to be underneath all along! The platform 
+      a portal to hell turns out to be underneath all along! The platform
       crumbles and throws you into its maw - you find yourself in a new place...]],
     }
   }
@@ -152,7 +157,7 @@ ZDOOM_STORIES.STORIES =
       [[You have found a conduit through which Argent Energy
       is being transmitted through from hell! With a crash
       of your fists, the conduit is damaged beyond repair.
-      The power goes out throughout the region - 
+      The power goes out throughout the region -
       but so does the corruption hell has radiated over it.]],
 
       [[The generator translating hellish energies into
@@ -179,7 +184,7 @@ ZDOOM_STORIES.STORIES =
       of scientists nearby. You attempt to establish communications,
       but receive no response. The last footage from the terminal
       reveals them panicking, running from demons. You may still
-      have opportunity for to save them...]],
+      have opportunity to save them...]],
 
       [[Badly hysteric chatter suddenly rings off of your
       radio. It seems a group of scientists are looking for a way
@@ -331,7 +336,7 @@ ZDOOM_STORIES.STORIES =
       suddenly catches a blue fire and you hear a voice.
       _SPACE
       "I am _RAND_DEMON the _EVULZ. We are legion. We do not forgive."
-      The voice disappears as with the totem.]]
+      The voice disappears as with the totem.]],
 
       -- the bounty hunter
       [["DOOMSLAYER!" a scream echoes through the halls. An
@@ -339,21 +344,21 @@ ZDOOM_STORIES.STORIES =
       _EVULZ. Hell has a bounty upon you. I shall claim it from your head
       and all darkness shall know me for my deed."
       Finished with its threat, _RAND_DEMON recedes into the shadows
-      and awaits you in its infernal arena.]]
+      and awaits you in its infernal arena.]],
 
       -- it's all in your mind
       [[A loud scratch startles you. You look around but your tracker
       hints to no movement. A voice suddenly speaks into your mind.
       "Mortal. You have become our quarry for your intrusions upon hell.
       I, _RAND_DEMON the _EVULZ, have marked you for death. You are hunted."
-      The voice disappears followed by infernal howls further ahead...]]
+      The voice disappears followed by infernal howls further ahead...]],
 
       -- I seeeee youuuuu
       [[You feel a crawl upon your skin. In the darkness, it feels as
       though a thousand eyes are suddenly looking upon you. A deep
       voice echoes through the chambers. "I see you, mortal. The guardians of
       _GOTHIC_LEVEL await you. I, _RAND_DEMON the _EVULZ, will personally
-      see to the sealing of your fate. We will meet soon."]]
+      see to the sealing of your fate. We will meet soon."]],
 
       -- eye for an eye
       [["You!" a bellowing voices beckons. You cannot trace the source, but
@@ -361,7 +366,15 @@ ZDOOM_STORIES.STORIES =
       me but soon you will. I am _RAND_DEMON the _EVULZ. I shall inflict
       pain on you as you had on me. I will tear you limb from limb."
       Your tracker indicates an energy surge some distance away. You know what
-      to do.]]
+      to do.]],
+
+      -- the poisoner
+      [[Dark viscera seems to extrude from the walls and floors. Hell's corrupting
+      influence has a greater grip upon this area. A porous appendage
+      suddenly rises from the floor, forming the figure of a humanoid. It speaks
+      in a distorted voice. "You are encroaching upon our nest, mortal. My brood
+      do not take kindly to you. But I, _RAND_DEMON of _GOTHIC_LEVEL, will
+      greet you with glee. Come and enter." The figure dissolves back into the viscera.]],
     }
 
     conclusions =
@@ -396,8 +409,8 @@ ZDOOM_STORIES.STORIES =
     hooks =
     {
       [[The situation seems to be growing hopeless. Hell has opened
-      a great rift and the tides of hell's forces have corrupted
-      this place deeply. You have no choice but to escape 
+      a great rift and the tides of hell have corrupted
+      this place deeply. You have no choice but to escape
       and thus attempt to breach between their gaps...]],
 
       [[Hell's grip upon this area seems to be tightening. Swarms
@@ -677,6 +690,78 @@ ZDOOM_STORIES.STORIES =
       they were after _MCGUFFIN_HELL. It's better off in your possession.]],
     }
   }
+
+  repercussions_of_evil =
+  {
+    hooks =
+    {
+      [[Alarms blare out through the area. You find yourself standing
+      among rows upon rows of corpses, human and demon alike. It seems
+      a huge rampage had occured here but its instigator is unclear. You
+      find a torn armor piece among the debris. The nameplate reads "John Stalvern".
+      You wonder what happened and continue on.]],
+    }
+
+    conclusions =
+    {
+      [[Demons that have crossed the threshold have met a terrible fate
+      by your hands. You wonder if there will ever be a time of peace
+      after the gates of hell first opened. A strange voice in your
+      head suddenly echoes a repeating phrase.
+      _SPACE
+      "No John, you are the demons."
+      _SPACE
+      You clearly aren't John-whomever. This place is clear of demonic
+      presence for now and you resume your expedition against hell.]],
+    }
+  }
+
+  spaceship_crash =
+  {
+    hooks =
+    {
+      [[You hear a thunderous noise from the sky. You watch in the distance
+      as a burning starship descends from the clouds and crashes into
+      the ground with a bright, blinding flash. The shape was difficult to tell
+      but it looked like a UAC cruiser. There might still be survivors.]],
+
+      [[The ground shakes and an eruption of loud explosions deafens you.
+      As you get your grips on the situation, you see burning fragments of metal rain
+      down from the skies. You take shelter nearby and watch as the fragments litter the
+      floor. A large shard reads "UACS _RAND_ENGLISH_PLACE". It seems a UAC vessel
+      has crash-landed nearby.]],
+
+      [[You spot a thick column of smoke in the distance. Along the gray haze,
+      you can barely make out the silhouette of what seems to be a fallen starship.
+      The wreckage seems to have been there for a while. You plot a course
+      towards the vessel.]],
+    }
+
+    conclusions =
+    {
+      [[The sound of battle dies down to only the crackling of fire and melting steel.
+      You have found the remains of the crashed starship. Among the debris, you hear a
+      knocking sound. You find a marine that has been pinned to the ground by a beam.
+      With your strength, you help lift the beam, freeing the marine.
+      _SPACE
+      "I thought I was a goner there. You came just in time! I'm wounded, but I
+      should be able to make my way from here." You offer him supplies but he
+      refuses anything other than just a stim. You part ways.]],
+
+      [[The last demon has been ripped off its feet and you find yourself
+      within a huge field of molten metal and twisted debris. It seems these
+      are the remains of the vessel you witnessed crash earlier. You attempt
+      to explore further, but it seems nothing of value was left from the ship's
+      destruction. You continue on...]],
+
+      [[A hanging pile of wreckage falls upon the imps before you could act.
+      It seems gravity just helped end your battle. You find yourself within
+      the bowels of the crashed vessel. Amongst the wreckage is a black box.
+      You interface and find a final recording: it seems the starship was
+      crashed deliberately after a host of demons have boarded it. There is
+      nothing else here. You continue your trek.]],
+    }
+  }
 }
 
 ZDOOM_STORIES.ABSOLUTE_ENDINGS =
@@ -709,7 +794,7 @@ ZDOOM_STORIES.GENERIC_STORIES =
   d2_MAP11_exit =
   {
     [[A lieutenant of hell falls but otherworldly shrieks echo
-    further still. You pick up your armaments and point them 
+    further still. You pick up your armaments and point them
     forward to continue the siege against the darkness.
     _SPACE
     The battle rages on!]]
@@ -952,6 +1037,8 @@ ZDOOM_STORIES.MCGUFFINS =
     ["the Soul-x Agitator"]=5,
     ["a blood imprinter"]=5,
     ["a brass bauble"]=5,
+    ["a vial of ectoplasm"]=5,
+    ["the Mark of Kain"]=5,
   }
   tech =
   {
