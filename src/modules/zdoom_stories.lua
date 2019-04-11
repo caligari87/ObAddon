@@ -102,6 +102,7 @@ ZDOOM_STORIES.LIST =
   repercussions_of_evil = 2
   spaceship_crash = 25
   zero_wing = 2
+  the_avenger = 40
 }
 
 ZDOOM_STORIES.STORIES =
@@ -382,6 +383,7 @@ ZDOOM_STORIES.STORIES =
 
     conclusions =
     {
+      -- STFU
       [[A great battle has just concluded. _RAND_DEMON collapses
       before you. "No! How could this be?! The forces of hell
       are infinite and unfor-"
@@ -391,6 +393,7 @@ ZDOOM_STORIES.STORIES =
       the room with an uppercut. The remaining minions of hell
       shriek in fear and retreat!]],
 
+      -- the escape
       [[As a critical hit falls upon the demon's body, _RAND_DEMON
       stutters. "This is not how it ends, mortal! I will return
       and feast upon your soul!"
@@ -399,11 +402,21 @@ ZDOOM_STORIES.STORIES =
       and dissapates.
       _RAND_DEMON escapes your grasp, but it is scarred forever.]],
 
+      -- they are watching
       [[As _RAND_DEMON falls, its body implodes into a cloud of
       darkness, and slowly fades. An ethereal voice speaks.
       "You have returned me to the void, mortal. Your strength
       is admirable but remember: the Dark Lords are watching you."
       The voice fades.]],
+
+      -- the fissure
+      [[_RAND_DEMON's body crashes on the floor. The ground begins
+      to shake and a fissure opens, filling the room with an infernal
+      red glow. _RAND_DEMON is absorbed into the fissure, and the cracks
+      disappear. A foreboding voice speaks "I will return, mortal.
+      The void consumes me but in my place a new demon shall stand."
+      You ignore the threat. You already know hell's bounty on you and
+      continue on.]]
     }
   }
 
@@ -795,9 +808,66 @@ ZDOOM_STORIES.STORIES =
       _SPACE
       Despite your best efforts, _RAND_DEMON is still alive. You must fight
       against _RAND_DEMON's horde of forces again and destroy them
-      completely!
+      completely.]],
+    }
+  }
+
+  the_avenger =
+  {
+    hooks =
+    {
+      -- the vengeful marine
+      [[You find a marine slumped against the wall, battered and bloodied.
+      His armor his torn from claws marks but he still alive. "Hey, you.
+      I don't have much time left! That creature _RAND_DEMON did this to me.
+      I want you to... to make that demon scum pay." Life escapes the marine's eyes.
+      You take his dog tags and swear vengeance upon _RAND_DEMON.]],
+
+      -- hear my plea
+      [[You hear a weak sobbing around the corner. You turn around to see
+      a horrible sight: a mass of civilian corpses butchered by hell's forces.
+      Amongst the carnage is a raised hand. One of them is still alive. You approach.
       _SPACE
-      Good luck...]],
+      "Please. Help... please help me... _RAND_DEMON killed everyone..."
+      The woman's body is utterly crushed.
+      She uttered her last words and her hand falls to the ground. Hell
+      will pay tenfold for this.]],
+
+      -- don't let them get away with this
+      [[You are interrupted by a scientist. He walks on a limp and his lab coat
+      is strewn with blood. "Hey." he backs to a wall, gripping his arm.
+      "The UAC. They made us work on Project _RAND_DEMON. It was an attempt at
+      capturing one of the class 5 entities but it escaped the containment
+      field and killed everyone. I was the only one left. You have to take it down!"
+      You feel anger but lecturing the scientist would not solve the problem.
+      You offer a medkit but the scientist refuses. "No, I'll handle this part.
+      Just take that creature down." You nod and leave.]],
+    }
+
+    conclusions =
+    {
+      -- STFU part 2
+      [[As _RAND_DEMON's body falls upon the floor, you step over its chest.
+      "Mortal! Your transgressions against hell will not be forgo-"
+      _SPACE
+      You silence the creature by landing a fist right between its eyes.
+      A gaping maw of blood, guts, and cables lie were its face used to be.
+      Vengeance is served. You make your exit.]],
+
+      -- put a sock in it
+      [[_RAND_DEMON curses you as its body crumbles. "No! This is not
+      our last battle, mortal! Hell is unending! We are legion! We-"
+      _SPACE
+      You stuff a barrel of nukage into its mouth. A shot in the right
+      place detonates the barrel, scattering blood and debris around the
+      room. Vengeance has been sought. You escape the area.]],
+
+      -- I'm gonna rip your arm off and beat you with it
+      [[The weakened _RAND_DEMON tries to limp away. You rush and grip
+      one of its limbs tightly, tearing it from its socket. "GRAAAAHH!
+      Leave, mortal!" With a strong swing of the piece, a crash of flesh
+      and metal is met with an explosion of blood and intestines. The demon is
+      defeated. You leave the area.]],
     }
   }
 }
@@ -949,7 +1019,7 @@ ZDOOM_STORIES.EVIL_TITLES =
   Harbinger=5,
   Hellborn=5,
   Hellspawn=5,
-  ["Herald of Disaster"]=5,
+  ["Herald of Winter"]=5,
   Heinous=5,
   Honorless=5,
   Horrible=5,
@@ -981,6 +1051,7 @@ ZDOOM_STORIES.EVIL_TITLES =
   ["Maw of Hell"]=5,
   ["Master of Discord"]=5,
   Merciless=5,
+  ["Messenger of Omens"]=5,
   Miscreated=5,
   Mountain=5, -- like Clegane the Mountain
   Necromancer=5,
@@ -989,6 +1060,7 @@ ZDOOM_STORIES.EVIL_TITLES =
   Nightbringer=5,
   Overseer=5,
   Overlord=5,
+  ["Perpetual Night"]=5,
   Persecutor=5,
   Pestilent=5,
   Pillager=5,
