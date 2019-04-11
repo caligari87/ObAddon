@@ -3,14 +3,14 @@ PREFABS.Decor_3x3_bookshelves_thin =
   file   = "decor/glaice_library.wad"
   map    = "MAP01"
 
-  prob   = 5000
+  prob   = 3500
 
   where  = "point"
   theme  = "!tech"
 
-  env    = "indoor"
+  env    = "building"
 
-  size   = 240
+  size   = 144
   height = 128
 
   bound_z1 = 0
@@ -30,7 +30,7 @@ PREFABS.Decor_3x3_bookshelves_thick =
 
   map      = "MAP02"
 
-  size     = 320
+  size     = 208
 }
 
 PREFABS.Decor_3x1_bookshelves =
@@ -39,5 +39,5 @@ PREFABS.Decor_3x1_bookshelves =
 
   map      = "MAP03"
 
-  size     = 224
+  size     = 144
 }
