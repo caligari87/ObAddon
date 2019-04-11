@@ -1142,6 +1142,7 @@ DOOM.THEMES =
       light_side4 = 100
       light_side5 = 100
       light_side6 = 100
+      ceil_vdark2 = 30
     }
 
     passable_decor =
@@ -1383,6 +1384,7 @@ DOOM.THEMES =
       liquid_metal = 10
       floor_red = 40
       floor_blue = 30
+      floor_blue3 = 20
       floor_green = 20
       floor_green2 = 15
       liquid_bstone = 5
@@ -1409,7 +1411,8 @@ DOOM.THEMES =
       light_diamond = 10
       ceil_redash = 12
       ceil_icky   = 50
-
+      ceil_vdark  = 30
+      
       light_side1 = 70
       light_side2 = 70
       light_side3 = 70
