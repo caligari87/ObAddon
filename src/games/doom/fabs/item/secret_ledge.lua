@@ -39,7 +39,7 @@ PREFABS.Item_secret_ledge_tech =
   tex_SUPPORT3 = "DOORSTOP"
 }
 
-PREFFABS.Item_secret_ledge_universal_flipped =
+PREFABS.Item_secret_ledge_universal_flipped =
 {
   template  = "Item_secret_ledge_universal"
 
