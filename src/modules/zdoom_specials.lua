@@ -363,14 +363,13 @@ function ZDOOM_SPECIALS.do_special_stuff()
     -- for DOOM2
     if OB_CONFIG.game == "doom2" then
       if map_num == 15 then
-        next_level_line = '  next = MAP16'
+        next_level_line = '  next = MAP16\n'
         secret_level_line = '  secretnext = MAP31\n'
       elseif map_num == 31 then
-        map_id_next = 16
-        next_level_line = '  next = MAP16'
+        next_level_line = '  next = MAP16\n'
         secret_level_line = '  secretnext = MAP32\n'
       elseif map_num == 32 then
-        map_id_next = 16
+        next_level_line = '  next = MAP16\n'
         secret_level_line = ''
       else
         secret_level_line = ''
