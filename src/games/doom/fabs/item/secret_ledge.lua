@@ -2,12 +2,12 @@
 -- Closet with a secret item visible from outside
 --
 
-PREFABS.Item_secret_ledge =
+PREFABS.Item_secret_ledge_universal =
 {
   file  = "item/secret_ledge.wad"
   where = "seeds"
 
-  prob  = 1000
+  prob  = 500
   env   = "building"
   theme = "!tech"
 
@@ -31,29 +31,44 @@ PREFABS.Item_secret_ledge =
 
 }
 
-PREFABS.Item_secret_ledge2 =
+PREFABS.Item_secret_ledge_tech =
 {
-  template  = "Item_secret_ledge"
+  template  = "Item_secret_ledge_universal"
   theme = "tech"
 
   tex_SUPPORT3 = "DOORSTOP"
 }
 
--- Variant goes down, with lift and platform to lower
-PREFABS.Item_secret_ledge2_down =
+PREFFABS.Item_secret_ledge_universal_flipped =
 {
-  template  = "Item_secret_ledge"
-  map = "MAP03"
-  theme = "!tech"
-  prob = 800
+  template  = "Item_secret_ledge_universal"
 
+  map = "MAP02"
 }
 
-PREFABS.Item_secret_ledge2_down_tech =
+PREFABS.Item_secret_ledge_tech_flipped =
 {
-  template  = "Item_secret_ledge"
-  map = "MAP03"
+  template = "Item_secret_ledge_universal"
   theme = "tech"
-  prob = 800
 
+  map = "MAP02"
+
+  tex_SUPPORT3 = "DOORSTOP"
+}
+
+-- Variant goes down, with lift and platform to lower
+PREFABS.Item_secret_ledge_sunken_universal =
+{
+  template  = "Item_secret_ledge_universal"
+  map = "MAP03"
+  theme = "any"
+  prob = 400
+}
+
+PREFABS.Item_secret_ledge_sunken_universal_flipped =
+{
+  template  = "Item_secret_ledge_universal"
+  map = "MAP04"
+  theme = "any"
+  prob = 400
 }
