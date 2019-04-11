@@ -410,13 +410,13 @@ ZDOOM_STORIES.STORIES =
       The voice fades.]],
 
       -- the fissure
-      [[_RAND_DEMON's body crashes on the floor. The ground begins
+      [[_RAND_DEMON's body crashes to the floor. The ground begins
       to shake and a fissure opens, filling the room with an infernal
       red glow. _RAND_DEMON is absorbed into the fissure, and the cracks
       disappear. A foreboding voice speaks "I will return, mortal.
       The void consumes me but in my place a new demon shall stand."
-      You ignore the threat. You already know hell's bounty on you and
-      continue on.]]
+      You ignore the threat. You already know that hell's bounty is
+      on you and continue on.]]
     }
   }
 
@@ -818,8 +818,8 @@ ZDOOM_STORIES.STORIES =
     {
       -- the vengeful marine
       [[You find a marine slumped against the wall, battered and bloodied.
-      His armor his torn from claws marks but he still alive. "Hey, you.
-      I don't have much time left! That creature _RAND_DEMON did this to me.
+      His armor is torn from claws marks but he is still alive. "Hey, you!
+      I don't have much time left! That creature, _RAND_DEMON did this to me.
       I want you to... to make that demon scum pay." Life escapes the marine's eyes.
       You take his dog tags and swear vengeance upon _RAND_DEMON.]],
 
@@ -830,12 +830,12 @@ ZDOOM_STORIES.STORIES =
       _SPACE
       "Please. Help... please help me... _RAND_DEMON killed everyone..."
       The woman's body is utterly crushed.
-      She uttered her last words and her hand falls to the ground. Hell
+      She utters her last words and her hand falls to the ground. Hell
       will pay tenfold for this.]],
 
       -- don't let them get away with this
-      [[You are interrupted by a scientist. He walks on a limp and his lab coat
-      is strewn with blood. "Hey." he backs to a wall, gripping his arm.
+      [[You are interrupted by a scientist. He walks with a limp and his lab coat
+      is strewn with blood. "Hey." He backs to a wall, gripping his arm.
       "The UAC. They made us work on Project _RAND_DEMON. It was an attempt at
       capturing one of the class 5 entities but it escaped the containment
       field and killed everyone. I was the only one left. You have to take it down!"
@@ -847,7 +847,7 @@ ZDOOM_STORIES.STORIES =
     conclusions =
     {
       -- STFU part 2
-      [[As _RAND_DEMON's body falls upon the floor, you step over its chest.
+      [[As _RAND_DEMON's body falls to the floor, you step over its chest.
       "Mortal! Your transgressions against hell will not be forgo-"
       _SPACE
       You silence the creature by landing a fist right between its eyes.
@@ -860,7 +860,7 @@ ZDOOM_STORIES.STORIES =
       _SPACE
       You stuff a barrel of nukage into its mouth. A shot in the right
       place detonates the barrel, scattering blood and debris around the
-      room. Vengeance has been sought. You escape the area.]],
+      room. Vengeance has been achieved. You escape the area.]],
 
       -- I'm gonna rip your arm off and beat you with it
       [[The weakened _RAND_DEMON tries to limp away. You rush and grip
