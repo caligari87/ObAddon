@@ -42,7 +42,6 @@ UI_MONS.QUANTITIES =
 
 UI_MONS.MIX_QUANTITIES =
 {
-    "none",   _("[0] NONE"),
     "rarest", _("[0.15] Scarce"),
     "rarer",  _("[0.35] Few"),
     "rare",   _("[0.7] Less"),
@@ -57,7 +56,6 @@ UI_MONS.MIX_QUANTITIES =
     "deranged", _("[4.5] Swift Death"),
     "nuts",   _("[5.0] Sunder"),
     "nutser", _("[6.66] Holy Hell"),
-    "mixed",  _("Mix It Up"),
 }
 
 UI_MONS.STRENGTHS =
