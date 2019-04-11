@@ -1181,6 +1181,7 @@ DOOM.THEMES =
       gtd_wall_octagon_insets = 25
       gtd_wall_grated_machines = 25
       gtd_wall_quakish_insets = 25
+      gtd_ribbed_lights = 25
     }
 
     window_groups =
@@ -1437,6 +1438,7 @@ DOOM.THEMES =
       gtd_library = 10
       gtd_wall_grated_machines = 4
       gtd_wall_quakish_insets = 8
+      gtd_ribbed_lights = 4
     }
 
     window_groups =
