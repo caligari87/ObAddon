@@ -603,7 +603,18 @@ namelib.NAMES =
         Deccal=3, Ipos=3, Xezbeth=3, Yeenoghlu=3, Caasimolar=3, Abaddon=3, Soneillon=3, Phenex=2,
         Baal=3, Malthus=3, Beelzebub=3, Moloch=3, Dante=5, Berith=3, Haagenti=3, Caim=2, Seir=3,
         Nybbas=2, Namtar=2, Lamashtu=2, Astaroth=2, Merihem=3, Gressil=3, Barong=2, Iblis=3, Ouroboros=5,
-        Carreau=3, Oeillet=3, Rosier=2, Luvart=2, Cerberus=5, Linguica=1, Bloodshedder=1, Romero=1
+        Carreau=3, Oeillet=3, Rosier=2, Luvart=2, Cerberus=5, Linguica=1, Bloodshedder=1, Romero=1,
+
+        -- Seventh Sanctum demon generated names
+        -- https://www.seventhsanctum.com/generate.php?Genname=adname
+        Bazhon=3, Espiap=3, Barmon=3, Xsosanit=3, Naur=3, Entimas=3, Lelahatn=3, Hlieradael=3, Rodhakta=3,
+        Oksanooh=3, Molsatta=3, Urason=3, Posxael=3, Xnaapesael=3, Upaism=3, Latesiel=3, Psizan=3, Hadat=3,
+        Mrasih=3, Ezachumos=3, Ason=3, Ptapan=3, Xositecon=3, Ibomderau=3, Riar=3, Herariirses=3, Talan=3,
+        Dmurip=3, Ssianazael=3, Adetit=3, Poac=3, Urlhes=3, Pasmusaat=3, Otupsezur=3, Zutbaheor=3, Roxen=3,
+        Knaohadon=3, Amisael=3, Bapsorahiel=3, Sruabilael=3, Optaal=3, Xacasnopiel=3, Ttasapah=3, Seben=3,
+        Sehelhanael=3, Mornael=3, Zihphol=3, Hupasimanael=3, Setramnadon=3, Amaost=3, Pirlonoax=3, Nuxuhan=3,
+        Tranepem=3, Ezznop=3, Adabsiroo=3, Noszanaez=3, Zemah=3, Ranimas=3, Spoepeniel=3, Tukapamariel=3,
+        Resriphahiel=3, Abmehaus=3, Enon=3, Azhesap=3, Hamiel=3, Umesas=3, Tebhecnorael=3, Opedib=3, Naheh=3,
 
         -- ObAddon contributor names
         MsrSgtShooterPerson=3, Glaice=3, Frozsoul=3,
@@ -3698,7 +3709,7 @@ namelib.NAMES =
       ["The Zombie Lord"] = 20
 
       ["Doctor Kruger"] = 10
-
+      
       ["Hans Grosse"] = 5
     }
 
