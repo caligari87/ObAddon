@@ -3,7 +3,7 @@ all: obaddon-build
 
 # Do the actual build
 obaddon-build:
-	mkdir build
+	mkdir -p build
 	cd ../src; zip -vr ../scripts/build/obaddon.pk3 *
 
 # Clean
