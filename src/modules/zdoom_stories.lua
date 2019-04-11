@@ -103,6 +103,7 @@ ZDOOM_STORIES.LIST =
   spaceship_crash = 25
   zero_wing = 2
   the_avenger = 40
+  the_avenger_from_hell = 40
 }
 
 ZDOOM_STORIES.STORIES =
@@ -894,6 +895,59 @@ ZDOOM_STORIES.STORIES =
       Leave, mortal!" With a strong swing of the piece, a crash of flesh
       and metal is met with an explosion of blood and intestines. The demon is
       defeated. You leave the area.]],
+    }
+  }
+
+  the_avenger_from_hell =
+  {
+    hooks =
+    {
+      -- my name is _RAND_DEMON, you killed my father, prepare to die
+      [[You are rudely interrupted and shoved down to the ground.
+      A great demon grips you tightly, salivating on your visor. It growls forth.
+      "You! You killed _RAND_DEMON, our lord! I am sworn to destroy you!"
+      You discharge your suit battery and a shockwave of electricity is released,
+      freeing you and pushing the demon back. "I will return. With your head upon
+      our lord's altar." The demon steps back into a portal which collapses behind it.]],
+
+      -- passing the torch
+      [[A great demon shows itself before you from a ledge above. It makes pronouncement.
+      "By decree of the dark lords and _GOTHIC_LEVEL, I have taken the place of _RAND_DEMON
+      and in our lord's name, I shall grind you to a pulp!" You take aim and land a shot
+      on its chest to minor effect. "Grrr! I will show all hell of your fate." The great
+      demon steps away into the shadows.]],
+
+      -- you'll make a nice doodad
+      [[As you open a door, a swing of metal launches you off your feet and into the wall.
+      A menacing creature stands before you and decrees "Mortal! Your head will make
+      a great ornament upon our Lord _RAND_DEMON's cenotaph!" As it makes its way towards
+      you, the floor beneath you crumbles. You fall and roll down a long slope and find
+      yourself at the bottom. You pick yourself up quickly, but see no sign of the demon.]]
+    }
+
+    conclusions =
+    {
+      -- curb stomp
+      [[You have defeated the great demon! "Nooo! Nooo! _RAND_DEMON must be avenged!"
+      You raise your foot and stomp the creature's head to the curb.
+      The floor is greased with a splatter of blood and metal. You swear to make all
+      hellions reach the same fate at every turn.]],
+
+      -- oh no run away
+      [[The great demon is stricken and crashes down. Wails of agony flood the room
+      as the impish minions run in a panic. "_RAND_DEMON's champion has been defeated
+      by the Doomslayer! Retreat!" You fire shots at the routed pawns and some
+      of them tumble down. You bring one foot over the demon's head, weapon in hand, and survey
+      the area. It seems you have struck fear upon the creatures. All clear now, but they will
+      return surely with greater force.]]
+
+      -- diabolus ex machina
+      [[Before you land your final shot at the demon, a swirl of green mists
+      blanket the room. An eruption of gutteral laughter meets you. "You are indeed the
+      Butcher of _RAND_DEMON, mortal. No matter. This battle was of a small price to weaken
+      your will. Hell will not forget. Hell will not forgive." The mists disperse and
+      the great demon is nowhere in sight. Either it keeps running away from you forever
+      or it will find itself under your boot one day, you think to yourself.]]
     }
   }
 }
