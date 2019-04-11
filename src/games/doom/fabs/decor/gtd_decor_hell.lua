@@ -87,6 +87,8 @@ PREFABS.Decor_hell_gazebo =
   bound_z2 = 160
 
   z_fit  = top
+
+  sink_mode = "never"
 }
 
 PREFABS.Decor_blood_filling_casket =

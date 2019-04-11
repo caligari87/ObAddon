@@ -137,6 +137,8 @@ PREFABS.Decor_server_rack =
   bound_z2 = 160
 
   z_fit = "top"
+
+  sink_mode = "never"
 }
 
 PREFABS.Decor_open_pipe =
