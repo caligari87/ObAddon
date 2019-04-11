@@ -91,7 +91,7 @@ ZDOOM_STORIES.LIST =
   rescue_scientists = 40
   reinforce_marines = 40
   attack = 50
-  i_challenge_you_to_a_duel = 70
+  i_challenge_you_to_a_duel = 80
   deus_ex_machina = 6
   beacon = 50
   aa_guns = 30
@@ -379,6 +379,23 @@ ZDOOM_STORIES.STORIES =
       in a distorted voice. "You are encroaching upon our nest, mortal. My brood
       do not take kindly to you. But I, _RAND_DEMON of _GOTHIC_LEVEL, will
       greet you with glee. Come and enter." The figure dissolves back into the viscera.]],
+
+      -- remember Daisy
+      [[You walk between rows of sticks. Impaled limbs and heads are set upon them.
+      On one you see the head of a rabbit. Immediately, your blood boils.
+      You realize, however, the rabbit isn't Daisy. An ethereal voice whispers to you.
+      "You are a mortal of impulse after all. Still hurt over your little big-ear darling?
+      Show me your fury, mortal. I am _RAND_DEMON the _EVULZ. I grant you the company
+      of your little pet. In HELL." The voice fades, and you steel your fists.
+      _RAND_DEMON will fall hard today.]],
+
+      -- a beat of the drums
+      [[The sickening sound of a distorted trumpet wails, followed by the thumping
+      of war drums. You hear a repeating chant of what sounds like a hundred infernal voices.
+      "_RAND_DEMON! _RAND_DEMON! _RAND_DEMON!" The drumbeat stops and a bolt of fire
+      strikes the floor before you, causing you to fall back. Your HUD finds a
+      recognizable pattern in the scorchmarks. A hell rune translating to "You die."
+      Hell will have to see about that.]],
     }
 
     conclusions =
