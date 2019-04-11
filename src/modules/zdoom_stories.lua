@@ -396,6 +396,15 @@ ZDOOM_STORIES.STORIES =
       strikes the floor before you, causing you to fall back. Your HUD finds a
       recognizable pattern in the scorchmarks. A hell rune translating to "You die."
       Hell will have to see about that.]],
+
+      -- the mirror
+      [[You find a mirror on the wall and there is something strange about its reflection.
+      You look closer and see the image swirl and form something new. In it you
+      see yourself chained against a burning monolith of slate, while imps gleefully dance
+      around you. A ghostly mutter breaks the silence. "Sinners all have a place in hell,
+      mortal. But you. You are special. Let me, _RAND_DEMON the _EVULZ, be your ferryman
+      to the underworld." You smash the mirror with your fists leaving a gaping hole
+      in the wall. You have answered hell's challenge.]]
     }
 
     conclusions =
