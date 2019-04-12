@@ -345,7 +345,7 @@ function ZDOOM_SPECIALS.do_special_stuff()
     end
 
     -- produce endtitle screen end of game
-    if OB_CONFIG.game == "doom2" then
+    if OB_CONFIG.game == "doom2" or OB_CONFIG.game == "tnt" or OB_CONFIG.game == "plutonia" then
       if (map_num + 1 > level_count) or map_num == 30 then
         map_id_next = '"EndGameC"'
       end
