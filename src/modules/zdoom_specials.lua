@@ -314,7 +314,7 @@ function ZDOOM_SPECIALS.do_special_stuff()
     end
 
     -- resolve map MAPINFO linkages
-    if OB_CONFIG.game == "doom2" then
+    if OB_CONFIG.game == "doom2" or OB_CONFIG.game == "tnt" or OB_CONFIG.game == "plutonia" then
       if map_num < 10 then
         map_id = "MAP0" .. map_num
         if map_num < 9 then
@@ -361,7 +361,7 @@ function ZDOOM_SPECIALS.do_special_stuff()
 
     -- establish secret map MAPINFO links
     -- for DOOM2
-    if OB_CONFIG.game == "doom2" then
+    if OB_CONFIG.game == "doom2" or OB_CONFIG.game == "tnt" or OB_CONFIG.game == "plutonia"  then
       if map_num == 15 then
         next_level_line = '  next = MAP16\n'
         secret_level_line = '  secretnext = MAP31\n'
@@ -448,7 +448,7 @@ function ZDOOM_SPECIALS.do_special_stuff()
     local cluster_line = ''
 
     if PARAM.story_generator == "generic" then
-      if OB_CONFIG.game == "doom2" then
+      if OB_CONFIG.game == "doom2" or OB_CONFIG.game == "tnt" or OB_CONFIG.game == "plutonia"  then
         if map_num >= 1 and map_num <= 5 then
           cluster_line = "  Cluster = 5\n"
         elseif map_num > 5 and map_num <= 11 then
@@ -466,7 +466,7 @@ function ZDOOM_SPECIALS.do_special_stuff()
         end
       end
     elseif PARAM.story_generator == "proc" then
-      if OB_CONFIG.game == "doom2" then
+      if OB_CONFIG.game == "doom2" or OB_CONFIG.game == "tnt" or OB_CONFIG.game == "plutonia"  then
         if map_num >= 1 and map_num <= 5 then
           cluster_line = "  Cluster = 1\n"
         elseif map_num > 5 and map_num <= 11 then
@@ -559,7 +559,7 @@ function ZDOOM_SPECIALS.do_special_stuff()
 
     local cluster_music_line = '  music = "' .. PARAM.generic_intermusic .. '"\n'
 
-    if OB_CONFIG.game == "doom2" and PARAM.story_generator == "generic" then
+    if ( OB_CONFIG.game == "doom2" or OB_CONFIG.game == "tnt" or OB_CONFIG.game == "plutonia" ) and PARAM.story_generator == "generic" then
 
 
       clusterdef =
@@ -662,7 +662,7 @@ function ZDOOM_SPECIALS.do_special_stuff()
       }
     end
 
-    if OB_CONFIG.game == "doom2" and PARAM.story_generator == "proc" then
+    if ( OB_CONFIG.game == "doom2" or OB_CONFIG.game == "tnt" or OB_CONFIG.game == "plutonia" ) and PARAM.story_generator == "proc" then
       -- create cluster information
       clusterdef =
       {
@@ -730,7 +730,7 @@ function ZDOOM_SPECIALS.do_special_stuff()
     local episodedef = {''}
     local map_string
 
-    if OB_CONFIG.game == "doom2" then
+    if OB_CONFIG.game == "doom2" or OB_CONFIG.game == "tnt" or OB_CONFIG.game == "plutonia" then
       map_string = map_num
       if map_num < 10 then
         map_string = "0" .. map_num
@@ -795,7 +795,7 @@ function ZDOOM_SPECIALS.do_special_stuff()
 
     -- for Doom2 (yes, there's no Doom2 episode splitting)
     -- but there is from now on
-    if OB_CONFIG.game == "doom2" then
+    if OB_CONFIG.game == "doom2" or OB_CONFIG.game == "tnt" or OB_CONFIG.game == "plutonia" then
       local episode_1_info = add_episodedef(1)
       each line in episode_1_info do
         table.insert(mapinfolump,line)
