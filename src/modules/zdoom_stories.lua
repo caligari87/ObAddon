@@ -1052,9 +1052,10 @@ ZDOOM_STORIES.EVIL_TITLES =
   Beast=5,
   Berserker=5,
   Betrayer=5,
-  ["Bringer of Doom"]=5,
+  ["Black Sun"]=5,
   ["Bone Collector"]=5,
   Breaker=5,
+  ["Bringer of Doom"]=5,
   Brutal=5,
   Brute=5,
   Butcher=5,
@@ -1142,6 +1143,7 @@ ZDOOM_STORIES.EVIL_TITLES =
   Merciless=5,
   ["Messenger of Omens"]=5,
   Miscreated=5,
+  Morningstar=5,
   Mountain=5, -- like Clegane the Mountain
   Necromancer=5,
   Nefarious=5,
@@ -1193,6 +1195,7 @@ ZDOOM_STORIES.EVIL_TITLES =
   Spiteful=5,
   ["Storm-bringer"]=5,
   ["Sword of the Underdark"]=5,
+  ["Sun-blotter"]=5,
   Tainted=5,
   Terror=5,
   Terrible=5,
@@ -1277,4 +1280,9 @@ ZDOOM_STORIES.MCGUFFINS =
     ["a MAPINFO lump"]=5, -- getting meta here, huh?
     ["a coop server"]=5,
   }
+}
+
+ZDOOM_STORIES.QUIT_MESSAGES =
+{
+  
 }
