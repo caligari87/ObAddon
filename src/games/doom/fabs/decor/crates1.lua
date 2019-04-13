@@ -19,6 +19,8 @@ PREFABS.Crate_small_brown =
   size   = 64
 
   bound_z1 = 0
+
+  sink_mode = "never"
 }
 
 
@@ -44,6 +46,8 @@ PREFABS.Crate_small_woodmet =
 
   where  = "point"
   size   = 64
+
+  sink_mode = "never"
 }
 
 PREFABS.Crate_small_wood3 =
@@ -71,6 +75,8 @@ PREFABS.Crate_tall_brown =
   height = 160
 
   bound_z1 = 0
+
+  sink_mode = "never"
 }
 
 
@@ -89,7 +95,6 @@ PREFABS.Crate_tall_computers =
 
   tex_CRATELIT = "SPACEW3"
   flat_CRATOP1 = "CEIL5_1"
-
 }
 
 -- a medium-size crate (96x96)
@@ -109,6 +114,8 @@ PREFABS.Crate_medium_gray =
   size   = 96
 
   bound_z1 = 0
+
+  sink_mode = "never"
 }
 
 
@@ -130,6 +137,8 @@ PREFABS.Crate_group_medium =
   height = 160
 
   bound_z1 = 0
+
+  sink_mode = "never"
 }
 
 -- a large, tall, wooden crate
@@ -147,6 +156,8 @@ PREFABS.Crate_large_wooden =
   where  = "point"
   size   = 128
   height = 160
+
+  sink_mode = "never"
 }
 
 PREFABS.Small_Computer1 =
@@ -162,7 +173,7 @@ PREFABS.Small_Computer1 =
   size   = 80
   height = 128
 
- tex_COMPSTA1 = { COMPSTA1=50, COMPSTA2=50 }
+  tex_COMPSTA1 = { COMPSTA1=50, COMPSTA2=50 }
 }
 
 PREFABS.Small_Computer2 =
@@ -178,5 +189,5 @@ PREFABS.Small_Computer2 =
   size   = 112
   height = 128
 
- tex_COMPSTA1 = { COMPSTA1=50, COMPSTA2=50 }
+  tex_COMPSTA1 = { COMPSTA1=50, COMPSTA2=50 }
 }
