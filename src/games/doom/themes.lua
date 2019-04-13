@@ -2437,7 +2437,15 @@ DOOM.ROOM_THEMES =
 
     walls =
     {
-      BROWN1   = 50
+      BROWN1 = 50
+      SHAWN2 = 50
+      STARTAN3 = 50
+      STARG3 = 50
+      BROWNGRN = 50
+      BROWN96 = 50
+      BRONZE4 = 50
+      METAL7 = 50
+      COMPBLUE = 50
     }
 
     floors =
@@ -2960,7 +2968,15 @@ DOOM.ROOM_THEMES =
 
     walls =
     {
-      BROWN1   = 50
+      BROWN1 = 50
+      BIGDOOR5 = 50
+      WOOD1 = 50
+      MARBLE1 = 50
+      FIREBLU1 = 50
+      METAL = 50
+      BROWNHUG = 50
+      GSTONE1 = 50
+      SP_HOT = 50
     }
 
     floors =
@@ -3418,7 +3434,15 @@ DOOM.ROOM_THEMES =
 
     walls =
     {
-      BROWN1   = 50
+      BROWN1 = 50
+      BIGBRIK1 = 50
+      BIGBRIK2 = 50
+      BIGBRIK3 = 50
+      CEMENT7 = 50
+      CEMENT9 = 50
+      PANCASE1 = 50
+      METAL2 = 50
+      BRONZE1 = 50
     }
 
     floors =

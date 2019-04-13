@@ -726,7 +726,14 @@ ULTDOOM.THEMES =
 
     walls =
     {
-      BROWN1   = 50
+      BROWN1 = 50
+      SHAWN2 = 50
+      STARTAN3 = 50
+      STARG3 = 50
+      BROWNGRN = 50
+      BROWN96 = 50
+      GSTONE1 = 50
+      SP_HOT = 50
     }
 
     floors =
@@ -890,30 +897,6 @@ ULTDOOM.THEMES =
       barrels = { few=10, some=55, heaps=30 }
       ambushes = { few=20, some=95, heaps=30 }
     }
-
-  -- prefab currently does not actually
-  -- have surfaces to recieve a custom skin
-  deimos_metro_Hallway =
-  {
-    env   = "hallway"
-    group = "metro"
-    prob  = 25
-
-    walls =
-    {
-      BROWN1   = 50
-    }
-
-    floors =
-    {
-      FLAT4  = 50
-    }
-
-    ceilings =
-    {
-      CEIL3_5 = 50
-    }
-  }
 
     scenic_fence =
     {
@@ -1177,30 +1160,6 @@ ULTDOOM.THEMES =
       Mastermind = 1.5
     }
 
-  -- prefab currently does not actually
-  -- have surfaces to recieve a custom skin
-  hell_metro_Hallway =
-  {
-    env   = "hallway"
-    group = "metro"
-    prob  = 12
-
-    walls =
-    {
-      BROWN1   = 50
-    }
-
-    floors =
-    {
-      FLAT4  = 50
-    }
-
-    ceilings =
-    {
-      CEIL3_5 = 50
-    }
-  }
-
     scenic_fence =
     {
       MIDBRN1 = 3
@@ -1433,30 +1392,6 @@ ULTDOOM.THEMES =
       caves = { none=60, few=35, some=8, heaps=3 }
       barrels = { none=45, few=15, some=5, heaps=4 }
     }
-
-  -- prefab currently does not actually
-  -- have surfaces to recieve a custom skin
-  flesh_metro_Hallway =
-  {
-    env   = "hallway"
-    group = "metro"
-    prob  = 20
-
-    walls =
-    {
-      BROWN1   = 50
-    }
-
-    floors =
-    {
-      FLAT4  = 50
-    }
-
-    ceilings =
-    {
-      CEIL3_5 = 50
-    }
-  }
 
     ceil_light_prob = 45
 
@@ -2167,11 +2102,20 @@ ULTDOOM.ROOM_THEMES =
   {
     env   = "hallway"
     group = "metro"
-    prob  = 15
+    prob  = 25
 
     walls =
     {
-      BROWN1   = 50
+      BROWN1 = 50
+      SHAWN2 = 50
+      STARTAN3 = 50
+      STARG3 = 50
+      BROWNGRN = 50
+      BROWN96 = 50
+      ICKWALL3 = 50
+      ICKWALL1 = 50
+      BROVINE = 50
+      BROVINE2 = 50
     }
 
     floors =
@@ -2509,11 +2453,17 @@ ULTDOOM.ROOM_THEMES =
   {
     env   = "hallway"
     group = "metro"
-    prob  = 15
+    prob  = 12
 
     walls =
     {
-      BROWN1   = 50
+      BROWN1 = 50
+      WOOD1 = 50
+      MARBLE1 = 50
+      FIREBLU1 = 50
+      ASHWALL = 50
+      METAL = 50
+      BROWNHUG = 50
     }
 
     floors =
@@ -2797,17 +2747,25 @@ ULTDOOM.ROOM_THEMES =
 
     walls =
     {
-      BROWN1   = 50
+      BROWN1 = 50
+      WOOD1 = 50
+      WOOD3 = 50
+      WOOD5 = 50
+      WOODMET1 = 50
+      BIGDOOR5 = 50
     }
 
     floors =
     {
-      FLAT4  = 50
+      FLAT5_1 = 50
+      FLAT5_2 = 50
     }
 
     ceilings =
     {
-      CEIL3_5 = 50
+      FLAT5_1 = 50
+      FLAT5_2 = 50
+      CEIL1_1 = 50
     }
   }
 
