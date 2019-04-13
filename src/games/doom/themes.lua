@@ -2474,7 +2474,23 @@ DOOM.ROOM_THEMES =
 
     ceilings =
     {
+      CEIL3_2 = 50
+      CEIL3_3 = 50
       CEIL3_5 = 50
+      FLAT1 = 50
+      FLAT18 = 50
+      FLAT19 = 50
+      FLAT20 = 50
+      FLAT3 = 50
+      FLOOR3_3 = 50
+      FLOOR4_1 = 50
+      FLOOR4_6 = 50
+      FLOOR4_8 = 50
+      FLOOR5_3 = 50
+      FLOOR5_4 = 50
+      SLIME14 = 50
+      SLIME15 = 50
+      SLIME16 = 50
     }
   }
 
@@ -3018,6 +3034,30 @@ DOOM.ROOM_THEMES =
     ceilings =
     {
       CEIL3_5 = 50
+      RROCK09 = 50
+      RROCK12 = 50
+      RROCK13 = 50
+      RROCK04 = 50
+      RROCK02 = 50
+      RROCK01 = 50
+      LAVA1 = 50
+      GRNROCK = 50
+      FLOOR6_1 = 50
+      FLOOR6_2 = 50
+      FLOOR7_1 = 50
+      FLOOR7_2 = 50
+      FLAT5_3 = 50
+      FLAT5_4 = 50
+      FLAT5_5 = 50
+      FLAT5_6 = 50
+      FLAT5_7 = 50
+      FLAT5_8 = 50
+      FLAT1_1 = 50
+      FLAT1_2 = 50
+      DEM1_5 = 50
+      DEM1_6 = 50
+      CEIL3_2 = 50
+      CEIL3_5 = 50
     }
   }
 
@@ -3499,7 +3539,21 @@ DOOM.ROOM_THEMES =
 
     ceilings =
     {
+      CEIL1_1 = 50
+      CEIL3_1 = 50
+      CEIL3_2 = 50
+      CEIL3_3 = 50
       CEIL3_5 = 50
+      FLAT20 = 50
+      FLAT3 = 50
+      FLAT5_1 = 50
+      FLAT5_2 = 50
+      FLAT5_4 = 50
+      FLAT5_5 = 50
+      FLOOR0_5 = 50
+      FLOOR3_3 = 50
+      FLOOR4_6 = 50
+      FLOOR5_4 = 50
     }
   }
 
