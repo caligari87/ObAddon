@@ -953,7 +953,7 @@ DOOM.THEMES =
     wide_halls =
     {
       deuce = 50
-      metro = 20
+      metro = 37
     }
 
     floor_sinks =
@@ -2427,8 +2427,6 @@ DOOM.ROOM_THEMES =
     }
   }
 
-  -- prefab currently does not actually
-  -- have surfaces to recieve a custom skin
   tech_metro_Hallway =
   {
     env   = "hallway"
@@ -2994,7 +2992,6 @@ DOOM.ROOM_THEMES =
     }
   }
 
-
   hell_metro_Hallway =
   {
     env   = "hallway"
@@ -3495,8 +3492,6 @@ DOOM.ROOM_THEMES =
     }
   }
 
-  -- prefab currently does not actually
-  -- have surfaces to recieve a custom skin
   urban_metro_Hallway =
   {
     env   = "hallway"
