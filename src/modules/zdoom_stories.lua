@@ -1297,29 +1297,29 @@ ZDOOM_STORIES.MCGUFFINS =
 
 ZDOOM_STORIES.QUIT_MESSAGES =
 {
-  ["Let's be serious, are you\nreally exiting out already?";]=5, -- Semicolon is required in LANGUAGE lump
-  ["There's always more where\nthis comes from!\nObAddon never forgets!";]=5,
-  ["You may be leaving but Hell's legions\nwill never rest.\n You'll be back.";]=5,
-  ["ObAddon is always improving.\nStop by our Discord server, talk to the denizens and report bugs\nto us there!";]=5,
-  ["Maybe you should hit Escape before I put\nthis shotgun barrel\nwhere the sun don't shine";]=5,
-  ["Just leave.\nThis is just more monsters and levels here.\nWhat a heap of shit.";]=5, --Loosely based off "Extra" quit message
-  ["Don't quit just yet, we're just\nwasting your time with this quit message!";]=5,
-  ["THIS IS A MESSAGE!\nNot intentionally left blank.";]=5,
-  ["Are you kidding me?\nGet the fuck out already.";]=5,
-  ["Come on already, there's plenty more to\ndo in this generated mapset!";]=5,
-  ["The Randomly Generated Beast\nwill come back for more, namely you.";]=5,
-  ["Bricks, Tech Bases, Hellfire,\nwe have it all!";]=5,
-  ["Why would you ever want\nto exit out of here?";]=5,
-  ["Doomguy loves his coffee like he\nlikes his metal: Black and harsh";]=5,
-  ["A bat? Nah, I'd think a chainsaw\n would fare better nowadays.";]=5 -- Doom's quit message mentioned a bat
-  ["In a perfect world..Oh wait, no\nthere is no perfect world with sunshine\n and unicorn farts.";]=5,
-  ["Subscribe to...no, I am not going\nto do that here too.";]=5,
-  ["Oblige is love, Oblige is life.";]=5,
-  ["Are you sure you want to\nexit out of the game?";]=5,
-  ["Press Y to burn bridges,\npress N to maintain relations.";]=5,
-  ["When you return, a gang of\nImps and Barons are going to take turns\non your ass.";]=5,
-  ["Do you really wish to leave\nthe world at the mercy of Hellspawn?";]=5,
-  ["Catch me if you can, I'm the\nquit message man!";]=5, -- Gingerbread Man reference
-  ["Visit https://caligari87.github.io/ObAddon/\nfor updates!";]=5,
-  ["So, is this a joke? Are you\nstaying or leaving?";]=5,
+  [[Let's be serious, are you really exiting out already?]], -- Semicolon is required in LANGUAGE lump
+  [[There's always more where this comes from! ObAddon never forgets!]],
+  [[You may be leaving but Hell's legions will never rest. You'll be back.]],
+  [[ObAddon is always improving. Stop by our Discord server, talk to the denizens and report bugs to us there!]],
+  [[Maybe you should hit Escape before I put this shotgun barrel where the sun don't shine]],
+  [[Just leave. This is just more monsters and levels here. What a heap of shit.]], --Loosely based off "Extra" quit message
+  [[Don't quit just yet, we're just wasting your time with this quit message!]],
+  [[THIS IS A MESSAGE! Not intentionally left blank.]],
+  [[Are you kidding me? Get the fuck out already.]],
+  [[Come on already, there's plenty more to do in this generated mapset!]],
+  [[The Randomly Generated Beast will come back for more, namely you.]],
+  [[Bricks, Tech Bases, Hellfire, we have it all!]],
+  [[Why would you ever want to exit out of here?]],
+  [[Doomguy loves his coffee like he likes his metal: Black and harsh]],
+  [[A bat? Nah, I'd think a chainsaw would fare better nowadays.]], -- Doom's quit message mentioned a bat
+  [[In a perfect world..Oh wait, no there is no perfect world with sunshine and unicorn farts.]],
+  [[Subscribe to...no, I am not going to do that here too.]],
+  [[Oblige is love, Oblige is life.]],
+  [[Are you sure you want to exit out of the game?]],
+  [[Press Y to burn bridges, press N to maintain relations.]],
+  [[When you return, a gang of Imps and Barons are going to take turns on your ass.]],
+  [[Do you really wish to leave the world at the mercy of Hellspawn?]],
+  [[Catch me if you can, I'm the quit message man!]], -- Gingerbread Man reference
+  [[Visit https://caligari87.github.io/ObAddon/ for updates!]],
+  [[So, is this a joke? Are you staying or leaving?]],
 }
