@@ -4,6 +4,7 @@ PREFABS.Item_tech_window =
   map    = "MAP01"
 
   engine = "zdoom"
+  game   = "doom2"
 
   prob   = 50
   theme  = "!hell"
@@ -21,4 +22,14 @@ PREFABS.Item_tech_window =
 
   y_fit = "top"
   x_fit = "frame"
+}
+
+PREFABS.Item_tech_window_doom1 =
+{
+  template   = "Item_tech_window"
+  map    = "MAP01"
+  game   = "doom"
+
+  tex_BRONZE4 = "BROWN96"
+
 }
