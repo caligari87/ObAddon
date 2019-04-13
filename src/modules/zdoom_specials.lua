@@ -781,6 +781,8 @@ function ZDOOM_SPECIALS.do_special_stuff()
       end
     elseif PARAM.fog_generator == "random" then
       info.fog_color = pick_random_fog_color()
+    else
+      info.fog_color = ""
     end
 
     local mapinfo_lines = add_mapinfo(info)
