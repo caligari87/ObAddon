@@ -13,3 +13,12 @@ PREFABS.Decor_glaice_2x2_terminal =
   bound_z1 = 0
   bound_z2 = 72
 }
+
+PREFABS.Decor_glaice_2x2_terminal_smaller =
+{
+  template = "Decor_glaice_2x2_terminal"
+
+  prob = 5000
+
+  size = 176
+}
