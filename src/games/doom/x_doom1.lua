@@ -1420,6 +1420,8 @@ ULTDOOM.THEMES =
       barrels = { none=45, few=15, some=5, heaps=4 }
     }
 
+    archy_arches = true
+
     ceil_light_prob = 45
 
     scenic_fence =
