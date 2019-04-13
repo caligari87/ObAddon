@@ -1322,4 +1322,9 @@ ZDOOM_STORIES.QUIT_MESSAGES =
   [[Catch me if you can, I'm the quit message man!]], -- Gingerbread Man reference
   [[Visit https://caligari87.github.io/ObAddon/ for updates!]],
   [[So, is this a joke? Are you staying or leaving?]],
+
+  -- hardcore philosophy
+  [[Are you quitting because you realized no matter how much hellspawn you mow down, Oblige will just give you more?]],
+  [[_RAND_CONTRIBUTOR wants to know you're quitting from an Oblige map. :( Unless you just finished it all. :D]],
+  [[The price of freedom is eternal vigilance. The price of Oblige is eternal demonic invasions. And you're giving up?]],
 }
