@@ -1282,6 +1282,44 @@ ZDOOM_STORIES.MCGUFFINS =
   }
 }
 
+-- There is no code for this right now, so all of this is put in from the PK3 I made earlier. Go ahead and
+-- add your own. The \n is where I made page breaks on screen in-game so it doesn't look like crap.
+
+-- However, not only does LANGUAGE lump need to be generated, but information needs to be put into the
+-- MAPINFO lump under a part called "gameinfo" in something like this:
+-- gameinfo
+-- {
+-- quitmessages = "$QUITMSG1", "$QUITMSG2", etc
+-- }
+--
+-- It's easiest to test new quit messages inside that PK3 file because of the ease of testing and changing
+-- content.
+
 ZDOOM_STORIES.QUIT_MESSAGES =
 {
+  ["Let's be serious, are you\nreally exiting out already?";]=5, -- Semicolon is required in LANGUAGE lump
+  ["There's always more where\nthis comes from!\nObAddon never forgets!";]=5,
+  ["You may be leaving but Hell's legions\nwill never rest.\n You'll be back.";]=5,
+  ["ObAddon is always improving.\nStop by our Discord server, talk to the denizens and report bugs\nto us there!";]=5,
+  ["Maybe you should hit Escape before I put\nthis shotgun barrel\nwhere the sun don't shine";]=5,
+  ["Just leave.\nThis is just more monsters and levels here.\nWhat a heap of shit.";]=5, --Loosely based off "Extra" quit message
+  ["Don't quit just yet, we're just\nwasting your time with this quit message!";]=5,
+  ["THIS IS A MESSAGE!\nNot intentionally left blank.";]=5,
+  ["Are you kidding me?\nGet the fuck out already.";]=5,
+  ["Come on already, there's plenty more to\ndo in this generated mapset!";]=5,
+  ["The Randomly Generated Beast\nwill come back for more, namely you.";]=5,
+  ["Bricks, Tech Bases, Hellfire,\nwe have it all!";]=5,
+  ["Why would you ever want\nto exit out of here?";]=5,
+  ["Doomguy loves his coffee like he\nlikes his metal: Black and harsh";]=5,
+  ["A bat? Nah, I'd think a chainsaw\n would fare better nowadays.";]=5 -- Doom's quit message mentioned a bat
+  ["In a perfect world..Oh wait, no\nthere is no perfect world with sunshine\n and unicorn farts.";]=5,
+  ["Subscribe to...no, I am not going\nto do that here too.";]=5,
+  ["Oblige is love, Oblige is life.";]=5,
+  ["Are you sure you want to\nexit out of the game?";]=5,
+  ["Press Y to burn bridges,\npress N to maintain relations.";]=5,
+  ["When you return, a gang of\nImps and Barons are going to take turns\non your ass.";]=5,
+  ["Do you really wish to leave\nthe world at the mercy of Hellspawn?";]=5,
+  ["Catch me if you can, I'm the\nquit message man!";]=5, -- Gingerbread Man reference
+  ["Visit https://caligari87.github.io/ObAddon/\nfor updates!";]=5,
+  ["So, is this a joke? Are you\nstaying or leaving?";]=5,
 }
