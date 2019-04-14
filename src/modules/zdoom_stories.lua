@@ -1322,6 +1322,9 @@ ZDOOM_STORIES.QUIT_MESSAGES =
   [[Catch me if you can, I'm the quit message man!]], -- Gingerbread Man reference
   [[Visit https://caligari87.github.io/ObAddon/ for updates!]],
   [[So, is this a joke? Are you staying or leaving?]],
+  [[Oh, is that all? I guess I'll just throw more monsters at you when you return.]],
+  [[Doom is like a box of crackers, you get to add things to suit your tastes or just have it plain.]],
+  [[The Icon of Sin will always be your source of misery.]],
 
   -- hardcore philosophy
   [[Are you quitting because you realized no matter how much hellspawn you mow down, Oblige will just give you more?]],
