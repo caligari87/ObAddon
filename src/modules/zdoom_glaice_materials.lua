@@ -383,6 +383,7 @@ GLAICE_MATERIALS = {
   MARBFAC5 = { t="MARBFAC5", f="FLOOR7_2" } --Plutonia 2
   MARBFAC6 = { t="MARBFAC6", f="FLOOR7_2" }
   MARBFAC7 = { t="MARBFAC7", f="FLOOR7_2" }
+  MARBFACF = { t="MARBFACF", f="FLOOR7_2" }
   MARBLE = { t="MARBLE", f="FLOOR7_2" }
   MARBLE4 = { t="MARBLE4", f="FLOOR7_2" }
   MARBLE5 = { t="MARBLE5", f="FLOOR7_2" }
@@ -759,6 +760,7 @@ GLAICE_MATERIALS = {
   FIREBLU1 = { t="FIREBLU1", f="FIRELAF1" }
   FIREBLU2 = { t="FIREBLU2", f="FIRELAF2" }
   FIREWALA = { t="FIREWALA", f="FLOOR6_1" }
+  FIRELAV2 = { t="FIRELAV2", f="FLOOR6_1" }
   TEKWALL4 = { t="TEKWALL4", f="TEKFLR4" }
 
   --------------------
