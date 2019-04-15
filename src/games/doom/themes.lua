@@ -3008,7 +3008,7 @@ DOOM.ROOM_THEMES =
       METAL = 50
       BROWNHUG = 50
       GSTONE1 = 50
-      SP_HOT = 50
+      SP_HOT1 = 50
     }
 
     floors =
