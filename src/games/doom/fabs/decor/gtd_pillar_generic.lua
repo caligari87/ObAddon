@@ -67,7 +67,7 @@ PREFABS.Pillar_gtd_generic2_hell =
   tex_SILVER2 =
   {
     FIRELAVA = 20
-    FIREMAG = 20
+    FIREMAG1 = 20
   }
 }
 
