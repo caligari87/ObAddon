@@ -731,11 +731,10 @@ namelib.NAMES =
         Bailey=5, Barbican=5, Well=10,
         Motte=4, Battlements=10, Ward=7,
         Turrets=3, Oubliette=3, Stockades=3,
-        Bartizan=3, Brattice=3, Embrasure=5,
-        Balistraria=2, Castellation=2, Crenels=2,
-        Merlons=2,
+        Bartizan=3, Brattice=3, Postern=3,
+        Cistern=3,
 
-        Postern=3, Cistern=3
+        
 
         -- temples of sorts
         Abbey=10, Monastery=10, Friary=3,
