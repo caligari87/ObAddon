@@ -21,6 +21,8 @@ PREFABS.Wall_raised_comp =
 
   x_fit = "frame"
   z_fit = "top"
+
+  on_liquids = "never"
 }
 
 PREFABS.Wall_grated_thing =
@@ -107,7 +109,7 @@ PREFABS.Wall_vertical_double_light =
   z_fit = "top"
 }
 
-PREFABS.Wall_triple_vertical_outset =
+PREFABS.Wall_raied_computer_2 =
 {
   file   = "wall/gtd_wall.wad"
   map    = "MAP06"
@@ -126,6 +128,8 @@ PREFABS.Wall_triple_vertical_outset =
 
   x_fit = "frame"
   z_fit = "top"
+
+  on_liquids = "never"
 }
 
 PREFABS.Wall_adorned_diag =

@@ -1329,7 +1329,6 @@ ZDOOM_STORIES.QUIT_MESSAGES =
   [[We're still going to be here, just go. It may not be as nice when you come back.]],
   [[There's a special place in Hell for those that quit too soon.]],
   
-
   -- hardcore philosophy
   [[Are you quitting because you realized no matter how much hellspawn you mow down, Oblige will just give you more?]],
   [[_RAND_CONTRIBUTOR wants to know you're quitting from an Oblige map. :( Unless you just finished it all. :D]],
