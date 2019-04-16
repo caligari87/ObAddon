@@ -29,7 +29,7 @@ PREFABS.Pic_glaice_candles =
 PREFABS.Pic_glaice_candles_deimos =
 {
   template   = "Pic_glaice_candles"
-  
+
   env  = "building"
   game = "doom"
   prob   = 8

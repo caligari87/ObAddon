@@ -734,7 +734,7 @@ namelib.NAMES =
         Bartizan=3, Brattice=3, Postern=3,
         Cistern=3,
 
-        
+
 
         -- temples of sorts
         Abbey=10, Monastery=10, Friary=3,
@@ -3708,7 +3708,7 @@ namelib.NAMES =
       ["The Zombie Lord"] = 20
 
       ["Doctor Kruger"] = 10
-      
+
       ["Hans Grosse"] = 5
     }
 
