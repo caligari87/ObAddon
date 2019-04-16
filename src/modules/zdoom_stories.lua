@@ -1317,7 +1317,7 @@ ZDOOM_STORIES.QUIT_MESSAGES =
   [[Oblige is love, Oblige is life.]],
   [[Are you sure you want to exit out of the game?]],
   [[Press Y to burn bridges, press N to maintain relations.]],
-  [[If you don't return, a gang of Imps and Barons are going to take turns putting fire up your ass. You gonna let them do that?]],
+  [[When you return, a gang of Imps and Barons are going to take turns on your ass.]],
   [[Do you really wish to leave the world at the mercy of Hellspawn?]],
   [[Catch me if you can, I'm the quit message man!]], -- Gingerbread Man reference
   [[Visit https://caligari87.github.io/ObAddon/ for updates!]],
@@ -1328,10 +1328,10 @@ ZDOOM_STORIES.QUIT_MESSAGES =
   [[Hold up, are you just going to leave like this?]],
   [[We're still going to be here, just go. It may not be as nice when you come back.]],
   [[There's a special place in Hell for those that quit too soon.]],
+  [[You wouldn't download a car, but you would quit a demonic invasion?]],
 
   -- hardcore philosophy
   [[Are you quitting because you realized no matter how much hellspawn you mow down, Oblige will just give you more?]],
   [[_RAND_CONTRIBUTOR wants to know you're quitting from an Oblige map. :( Unless you just finished it all. :D]],
   [[The price of freedom is eternal vigilance. The price of Oblige is eternal demonic invasions. And you're giving up?]],
-  [[You wouldn't download a car, but you would quit a demonic invasion?]],
 }
