@@ -1297,7 +1297,7 @@ ZDOOM_STORIES.MCGUFFINS =
 
 ZDOOM_STORIES.QUIT_MESSAGES =
 {
-  [[Let's be serious, are you really exiting out already?]], -- Semicolon is required in LANGUAGE lump
+  [[Let's be serious, are you really exiting out already?]],
   [[There's always more where this comes from! ObAddon never forgets!]],
   [[You may be leaving but Hell's legions will never rest. You'll be back.]],
   [[ObAddon is always improving. Stop by our Discord server, talk to the denizens and report bugs to us there!]],
@@ -1312,12 +1312,12 @@ ZDOOM_STORIES.QUIT_MESSAGES =
   [[Why would you ever want to exit out of here?]],
   [[Doomguy loves his coffee like he likes his metal: Black and harsh]],
   [[A bat? Nah, I'd think a chainsaw would fare better nowadays.]], -- Doom's quit message mentioned a bat
-  [[In a perfect world..Oh wait, no there is no perfect world with sunshine and unicorn farts.]],
-  [[Subscribe to...no, I am not going to do that here too.]],
+  [[In a perfect world.. Oh wait, no there is no perfect world with sunshine and unicorn farts.]],
+  [[Subscribe to... no, I am not going to do that here too.]],
   [[Oblige is love, Oblige is life.]],
   [[Are you sure you want to exit out of the game?]],
   [[Press Y to burn bridges, press N to maintain relations.]],
-  [[When you return, a gang of Imps and Barons are going to take turns on your ass.]],
+  [[If you don't return, a gang of Imps and Barons are going to take turns putting fire up your ass. You gonna let them do that?]],
   [[Do you really wish to leave the world at the mercy of Hellspawn?]],
   [[Catch me if you can, I'm the quit message man!]], -- Gingerbread Man reference
   [[Visit https://caligari87.github.io/ObAddon/ for updates!]],

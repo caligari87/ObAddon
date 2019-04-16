@@ -305,7 +305,10 @@ function ZDOOM_SPECIALS.do_special_stuff()
     local quit_msg_line = ""
     quit_msg_line = quit_msg_line .. "quitmessages="
     for _,lines in pairs(ZDOOM_STORIES.QUIT_MESSAGES) do
-      quit_msg_line = quit_msg_line .. ' "$QUITMSG' .. x .. '",'
+      quit_msg_line = quit_msg_line .. '"$QUITMSG' .. x .. '"'
+      if x <= #ZDOOM_STORIES.QUIT_MESSAGES - 1 then
+        quit_msg_line = quit_msg_line .. ', '
+      end
       if x%3 == 0 then
         quit_msg_line = quit_msg_line .. "\n"
       end
