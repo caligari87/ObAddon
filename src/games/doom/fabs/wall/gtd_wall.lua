@@ -109,7 +109,7 @@ PREFABS.Wall_vertical_double_light =
   z_fit = "top"
 }
 
-PREFABS.Wall_raied_computer_2 =
+PREFABS.Wall_raised_computer_2 =
 {
   file   = "wall/gtd_wall.wad"
   map    = "MAP06"
