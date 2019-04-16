@@ -970,7 +970,7 @@ OB_MODULES["zdoom_specials"] =
     }
 
     custom_quit_messages = {
-      label = _("Custom Quit Messages"),
+      label = _("Quit Messages"),
       priority = 4
       choices = ZDOOM_SPECIALS.YES_NO
       default = "yes"
