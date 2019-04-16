@@ -1325,6 +1325,9 @@ ZDOOM_STORIES.QUIT_MESSAGES =
   [[Oh, is that all? I guess I'll just throw more monsters at you when you return.]],
   [[Doom is like a box of crackers, you get to add things to suit your tastes or just have it plain.]],
   [[The Icon of Sin will always be your source of misery.]],
+  [[Hold up, are you just going to leave like this?]],
+  [[We're still going to be here, just go. It may not be as nice when you come back.]],
+  [[There's a special place in Hell for those that quit too soon.]],
 
   -- hardcore philosophy
   [[Are you quitting because you realized no matter how much hellspawn you mow down, Oblige will just give you more?]],
