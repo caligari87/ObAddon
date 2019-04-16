@@ -29,10 +29,12 @@ UI_ARCH.SIZES =
   -- this is a separator (not a usable choice)
   "_",       "_",
 
-  "small",   _("Small"),
-  "regular", _("Average"),
-  "large",   _("Large"),
-  "extreme", _("Extreme"),
+  "small",        _("Tiny"),
+  "subregular",   _("Small"),
+  "regular",      _("Average"),
+  "superregular", _("Large"),
+  "large",        _("Huge"),
+  "extreme",      _("Extreme"),
 }
 
 UI_ARCH.ABSURDITY_CHOICES =

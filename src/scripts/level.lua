@@ -188,7 +188,15 @@ function Level_determine_map_size(LEV)
 
     --Extreme was 68, the BSP build failures might be attributing to this
     --due to the extreme detail the maps have in them. --Glaice, March 3rd, 2019
-    local SIZES = { small=26, regular=36, large=48, extreme=58 }
+    local SIZES =
+    {
+      small=26,
+      subregular=32,
+      regular=36,
+      superregular=42,
+      large=48,
+      extreme=58
+    }
 
     W = SIZES[ob_size]
   end
