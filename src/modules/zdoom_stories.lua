@@ -958,6 +958,9 @@ ZDOOM_STORIES.STORIES =
   }
 }
 
+-- WARNING: absolute endings are supposed to be lines attached to the
+-- story end section of the final chapter. However, story strings
+-- are already generally too long so this feature is not implemented.
 ZDOOM_STORIES.ABSOLUTE_ENDINGS =
 {
   [[While hell's forces continues its assault elsewhere,
@@ -966,9 +969,9 @@ ZDOOM_STORIES.ABSOLUTE_ENDINGS =
   The story will continue!]],
 
   [[You have pushed back the countless demonic armies that you've
-endured so far and put a dent in their efforts.
-_SPACE
-However, this will not be the end of your encounters with them.]]
+  endured so far and put a dent in their efforts.
+  _SPACE
+  However, this will not be the end of your encounters with them.]]
 }
 
 ZDOOM_STORIES.GENERIC_STORIES =
@@ -1292,19 +1295,6 @@ ZDOOM_STORIES.MCGUFFINS =
     ["a coop server"]=5,
   }
 }
-
--- There is no code for this right now, so all of this is put in from the PK3 I made earlier. Go ahead and
--- add your own. The \n is where I made page breaks on screen in-game so it doesn't look like crap.
-
--- However, not only does LANGUAGE lump need to be generated, but information needs to be put into the
--- MAPINFO lump under a part called "gameinfo" in something like this:
--- gameinfo
--- {
--- quitmessages = "$QUITMSG1", "$QUITMSG2", etc
--- }
---
--- It's easiest to test new quit messages inside that PK3 file because of the ease of testing and changing
--- content.
 
 ZDOOM_STORIES.QUIT_MESSAGES =
 {

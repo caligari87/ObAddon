@@ -1591,6 +1591,392 @@ GLAICE_SINK_DEFS =
     trim_dz  = -5
     trim_light = 16
   }
+
+  light_COLLITE1 = -- green
+  {
+    mat = "LITES04"
+    dz = 62
+    light = 32
+
+    trim_mat = "COLLITE1"
+    trim_dz = -2
+    trim_light = 24
+  }
+
+  light_COLLITE2 = -- orange
+  {
+    mat = "LITES03"
+    dz = 62
+    light = 32
+
+    trim_mat = "COLLITE2"
+    trim_dz = -2
+    trim_light = 24
+  }
+
+  light_COLLITE3 = -- blue
+  {
+    mat = "LITES02"
+    dz = 62
+    light = 32
+
+    trim_mat = "COLLITE3"
+    trim_dz = -2
+    trim_light = 24
+  }
+
+  light_RDWAL01 = -- red
+  {
+    mat = "LITES01"
+    dz = 62
+    light = 32
+
+    trim_mat = "RDWAL01"
+    trim_dz = -2
+    trim_light = 24
+  }
+
+  light_protrusion_COMPRED =
+  {
+    mat = "COMPRED"
+    dz = -16
+    light = 32
+
+    trim_mat = "SHINY04"
+    dz = -8
+    light = 16
+  }
+
+  light_protrusion_COMPGREN =
+  {
+    mat = "COMPGREN"
+    dz = -16
+    light = 32
+
+    trim_mat = "SHINY04"
+    dz = -8
+    light = 16
+  }
+
+  light_protrusion_COMPBLUE =
+  {
+    mat = "COMPBLUE"
+    dz = -16
+    light = 32
+
+    trim_mat = "SHINY04"
+    dz = -8
+    light = 16
+  }
+
+  ceiling_sink_TEKWALL8 = -- red
+  {
+    mat = "TEKWALL8"
+    dz = -16
+    light = 32
+
+    trim_mat = "METAL7"
+    dz = -8
+    light = 16
+  }
+
+  ceiling_sink_TEKWALL9 = -- green
+  {
+    mat = "TEKWALL9"
+    dz = -16
+    light = 32
+
+    trim_mat = "METAL7"
+    dz = -8
+    light = 16
+  }
+
+  ceiling_sink_TEKWALLA = -- purple
+  {
+    mat = "TEKWALLA"
+    dz = -16
+    light = 32
+
+    trim_mat = "METAL7"
+    dz = -8
+    light = 16
+  }
+
+  ceiling_sink_TEKWALLB = -- blue
+  {
+    mat = "TEKWALLB"
+    dz = -16
+    light = 32
+
+    trim_mat = "METAL7"
+    dz = -8
+    light = 16
+  }
+
+  ceiling_sink_TEKWALLC = -- pink
+  {
+    mat = "TEKWALLC"
+    dz = -16
+    light = 32
+
+    trim_mat = "METAL7"
+    dz = -8
+    light = 16
+  }
+
+  ceiling_sink_TEKWALLD = -- cyan
+  {
+    mat = "TEKWALLD"
+    dz = -16
+    light = 32
+
+    trim_mat = "METAL7"
+    dz = -8
+    light = 16
+  }
+
+  ceiling_sink_TEKWALLE = -- orange
+  {
+    mat = "TEKWALLE"
+    dz = -16
+    light = 32
+
+    trim_mat = "METAL7"
+    dz = -8
+    light = 16
+  }
+
+  ceiling_sink_SILVER2R = -- silver lights red
+  {
+    mat = "_CEIL"
+    dz = 96
+    light = 32
+
+    trim_mat = "SILVER2R"
+    dz = -16
+    light = 16
+  }
+
+  ceiling_sink_SILVER2O = -- silver lights orange
+  {
+    mat = "_CEIL"
+    dz = 96
+    light = 32
+
+    trim_mat = "SILVER2O"
+    dz = -16
+    light = 16
+  }
+
+  ceiling_sink_SILVER2Y = -- silver lights yellow
+  {
+    mat = "_CEIL"
+    dz = 96
+    light = 32
+
+    trim_mat = "SILVER2Y"
+    dz = -16
+    light = 16
+  }
+
+  ceiling_sink_SILVER2W = -- silver lights white
+  {
+    mat = "_CEIL"
+    dz = 96
+    light = 32
+
+    trim_mat = "SILVER2W"
+    dz = -16
+    light = 16
+  }
+
+  ceiling_sink_SILVER2G = -- silver lights green
+  {
+    mat = "_CEIL"
+    dz = 96
+    light = 32
+
+    trim_mat = "SILVER2G"
+    dz = -16
+    light = 16
+  }
+
+  -- hell cielings
+
+  ceiling_sink_SKINLOW1 =
+  {
+    mat = "_CEIL"
+    dz = 112
+    light = 16
+
+    trim_mat = "SKINLOW1"
+    dz = -16
+    light = 8
+  }
+
+  ceiling_sink_SKINMET3 =
+  {
+    mat = "_CEIL"
+    dz = 112
+    light = 16
+
+    trim_mat = "SKINLOW3"
+    dz = -16
+    light = 8
+  }
+
+  ceiling_sink_SKINLOW4 =
+  {
+    mat = "_CEIL"
+    dz = 112
+    light = 16
+
+    trim_mat = "SKINLOW4"
+    dz = -16
+    light = 8
+  }
+
+  ceiling_sink_SKINLOW5 =
+  {
+    mat = "_CEIL"
+    dz = 112
+    light = 16
+
+    trim_mat = "SKINLOW5"
+    dz = -16
+    light = 8
+  }
+
+  ceiling_sink_SKINLOW6 =
+  {
+    mat = "_CEIL"
+    dz = 112
+    light = 16
+
+    trim_mat = "SKINLOW6"
+    dz = -16
+    light = 8
+  }
+
+  ceiling_sink_SKINLOW7 =
+  {
+    mat = "_CEIL"
+    dz = 112
+    light = 16
+
+    trim_mat = "SKINLOW7"
+    dz = -16
+    light = 8
+  }
+
+  ceiling_sink_GOTH18 = -- metal tiles
+  {
+    mat = "_CEIL"
+    dz = 64
+    light = 16
+
+    trim_mat = "GOTH18"
+    dz = 0
+    light = 8
+  }
+
+  ceiling_sink_GOTH19 = -- tall red cross
+  {
+    mat = "_CEIL"
+    dz = 128
+    light = 16
+
+    trim_mat = "GOTH19"
+    dz = 0
+    light = 8
+  }
+
+  ceiling_sink_GOTH20 = -- small red cross
+  {
+    mat = "_CEIL"
+    dz = 96
+    light = 16
+
+    trim_mat = "GOTH20"
+    dz = 0
+    light = 8
+  }
+
+  ceiling_sink_GOTH21 = -- horizontal red line
+  {
+    mat = "_CEIL"
+    dz = 16
+    light = 16
+
+    trim_mat = "GOTH21"
+    dz = 0
+    light = 8
+  }
+
+  ceiling_sink_GOTH15 = -- double dark trimmed
+  {
+    mat = "_CEIL"
+    dz = 128
+
+    trim_mat = "GOTH15"
+    dz = 0
+  }
+
+  ceiling_sink_GOTH17 = -- wide beam
+  {
+    mat = "_CEIL"
+    dz = 32
+
+    trim_mat = "GOTH17"
+    dz = 0
+  }
+
+  ceiling_sink_GOTH28 = -- scary faces
+  {
+    mat = "_CEIL"
+    dz = 128
+
+    trim_mat = "GOTH28"
+    dz = 0
+  }
+
+  ceiling_sink_GOTH47 = -- small brown skulls
+  {
+    mat = "_CEIL"
+    dz = 48
+
+    trim_mat = "GOTH47"
+    dz = -16
+  }
+
+  ceiling_sink_GOTH48 = -- large brown skulls
+  {
+    mat = "_CEIL"
+    dz = 48
+
+    trim_mat = "GOTH48"
+    dz = -16
+  }
+
+  ceiling_sink_GOTH49 = -- inset brown skulls
+  {
+    mat = "_CEIL"
+    dz = 48
+
+    trim_mat = "GOTH49"
+    dz = -16
+  }
+
+  -- hell floors
+
+  floor_sink_GOTH22 =
+  {
+    mat = "_FLOOR"
+    dz = -16
+
+    trim_mat = "GOTH22"
+    dz = 0
+  }
 }
 
 GLAICE_TECH_CEILING_SINKS =
@@ -1607,6 +1993,29 @@ GLAICE_TECH_CEILING_SINKS =
   light_LIGHTS2 = 7
   light_LIGHTS3 = 7
   light_LIGHTS4 = 7
+
+  light_COLLITE1 = 15
+  light_COLLITE2 = 15
+  light_COLLITE3 = 15
+  light_RDWAL01 = 15
+
+  light_protrusion_COMPBLUE = 15
+  light_protrusion_COMPGREN = 15
+  light_protrusion_COMPRED = 15
+
+  ceiling_sink_TEKWALL8 = 10
+  ceiling_sink_TEKWALL9 = 10
+  ceiling_sink_TEKWALLA = 10
+  ceiling_sink_TEKWALLB = 10
+  ceiling_sink_TEKWALLC = 10
+  ceiling_sink_TEKWALLD = 10
+  ceiling_sink_TEKWALLE = 10
+
+  ceiling_sink_SILVER2R = 5
+  ceiling_sink_SILVER2O = 5
+  ceiling_sink_SILVER2Y = 5
+  ceiling_sink_SILVER2W = 5
+  ceiling_sink_SILVER2G = 5
 }
 
 GLAICE_URBAN_CEILING_SINKS =
@@ -1623,6 +2032,26 @@ GLAICE_URBAN_CEILING_SINKS =
   light_LIGHTS2 = 7
   light_LIGHTS3 = 7
   light_LIGHTS4 = 7
+
+  light_COLLITE1 = 15
+  light_COLLITE2 = 15
+  light_COLLITE3 = 15
+  light_RDWAL01 = 15
+
+  light_protrusion_COMPBLUE = 10
+  light_protrusion_COMPGREN = 10
+  light_protrusion_COMPRED = 10
+
+  ceiling_sink_TEKWALL8 = 5
+  ceiling_sink_TEKWALL9 = 5
+  ceiling_sink_TEKWALLA = 5
+  ceiling_sink_TEKWALLB = 5
+  ceiling_sink_TEKWALLC = 5
+  ceiling_sink_TEKWALLD = 5
+  ceiling_sink_TEKWALLE = 5
+
+  ceiling_sink_GOTH15 = 25
+  ceiling_sink_GOTH17 = 25
 }
 
 GLAICE_HELL_CEILING_SINKS =
@@ -1636,6 +2065,20 @@ GLAICE_HELL_CEILING_SINKS =
   light_GLITE07 = 10
   light_GLITE08 = 10
   light_GLITE09 = 10
+
+  ceiling_sink_SKINLOW1 = 13
+  ceiling_sink_SKINMET3 = 13
+  ceiling_sink_SKINMET4 = 13
+  ceiling_sink_SKINMET5 = 13
+  ceiling_sink_SKINMET6 = 13
+  ceiling_sink_SKINMET7 = 13
+
+  ceiling_sink_GOTH15 = 25
+  ceiling_sink_GOTH17 = 25
+
+  ceiling_sink_GOTH47 = 20
+  ceiling_sink_GOTH48 = 20
+  ceiling_sink_GOTH49 = 20
 }
 
 GLAICE_TECH_FLOOR_SINKS =
@@ -1650,6 +2093,7 @@ GLAICE_URBAN_FLOOR_SINKS =
 
 GLAICE_HELL_FLOOR_SINKS =
 {
+  floor_sink_GOTH22 = 10
 }
 
 -- Natural textures for outdoor parks.
