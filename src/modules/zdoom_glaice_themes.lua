@@ -1748,7 +1748,7 @@ GLAICE_SINK_DEFS =
 
   ceiling_sink_SILVER2R = -- silver lights red
   {
-    mat = "_CEIL"
+    mat = "LIGHTS1"
     dz = 96
     light = 32
 
@@ -1759,7 +1759,7 @@ GLAICE_SINK_DEFS =
 
   ceiling_sink_SILVER2O = -- silver lights orange
   {
-    mat = "_CEIL"
+    mat = "LIGHTS1"
     dz = 96
     light = 32
 
@@ -1770,7 +1770,7 @@ GLAICE_SINK_DEFS =
 
   ceiling_sink_SILVER2Y = -- silver lights yellow
   {
-    mat = "_CEIL"
+    mat = "LIGHTS1"
     dz = 96
     light = 32
 
@@ -1781,7 +1781,7 @@ GLAICE_SINK_DEFS =
 
   ceiling_sink_SILVER2W = -- silver lights white
   {
-    mat = "_CEIL"
+    mat = "LIGHTS3"
     dz = 96
     light = 32
 
@@ -1792,7 +1792,7 @@ GLAICE_SINK_DEFS =
 
   ceiling_sink_SILVER2G = -- silver lights green
   {
-    mat = "_CEIL"
+    mat = "LIGHTS2"
     dz = 96
     light = 32
 
@@ -1805,7 +1805,7 @@ GLAICE_SINK_DEFS =
 
   ceiling_sink_SKINLOW1 =
   {
-    mat = "_CEIL"
+    mat = "SKINFLT1"
     dz = 112
     light = 16
 
@@ -1816,7 +1816,7 @@ GLAICE_SINK_DEFS =
 
   ceiling_sink_SKINMET3 =
   {
-    mat = "_CEIL"
+    mat = "SKINFLT1"
     dz = 112
     light = 16
 
@@ -1827,7 +1827,7 @@ GLAICE_SINK_DEFS =
 
   ceiling_sink_SKINMET4 =
   {
-    mat = "_CEIL"
+    mat = "SKINFLT1"
     dz = 112
     light = 16
 
@@ -1838,7 +1838,7 @@ GLAICE_SINK_DEFS =
 
   ceiling_sink_SKINMET5 =
   {
-    mat = "_CEIL"
+    mat = "SKINFLT1"
     dz = 112
     light = 16
 
@@ -1849,7 +1849,7 @@ GLAICE_SINK_DEFS =
 
   ceiling_sink_SKINMET6 =
   {
-    mat = "_CEIL"
+    mat = "SKINFLT1"
     dz = 112
     light = 16
 
@@ -1860,7 +1860,7 @@ GLAICE_SINK_DEFS =
 
   ceiling_sink_SKINMET7 =
   {
-    mat = "_CEIL"
+    mat = "FLAT5_3"
     dz = 112
     light = 16
 
@@ -1871,7 +1871,7 @@ GLAICE_SINK_DEFS =
 
   ceiling_sink_GOTH18 = -- metal tiles
   {
-    mat = "_CEIL"
+    mat = "DARKF03"
     dz = 64
     light = 16
 
@@ -1882,7 +1882,7 @@ GLAICE_SINK_DEFS =
 
   ceiling_sink_GOTH19 = -- tall red cross
   {
-    mat = "_CEIL"
+    mat = "GLITE04"
     dz = 128
     light = 16
 
@@ -1893,7 +1893,7 @@ GLAICE_SINK_DEFS =
 
   ceiling_sink_GOTH20 = -- small red cross
   {
-    mat = "_CEIL"
+    mat = "GLITE03"
     dz = 96
     light = 16
 
@@ -1904,7 +1904,7 @@ GLAICE_SINK_DEFS =
 
   ceiling_sink_GOTH21 = -- horizontal red line
   {
-    mat = "_CEIL"
+    mat = "GLITE04"
     dz = 16
     light = 16
 
@@ -1915,7 +1915,7 @@ GLAICE_SINK_DEFS =
 
   ceiling_sink_GOTH15 = -- double dark trimmed
   {
-    mat = "_CEIL"
+    mat = "DARKM01"
     dz = 128
 
     trim_mat = "GOTH15"
@@ -1924,7 +1924,7 @@ GLAICE_SINK_DEFS =
 
   ceiling_sink_GOTH17 = -- wide beam
   {
-    mat = "_CEIL"
+    mat = "DARKF03"
     dz = 32
 
     trim_mat = "GOTH17"
@@ -1933,7 +1933,7 @@ GLAICE_SINK_DEFS =
 
   ceiling_sink_GOTH28 = -- scary faces
   {
-    mat = "_CEIL"
+    mat = "G05"
     dz = 128
 
     trim_mat = "GOTH28"
@@ -1942,7 +1942,7 @@ GLAICE_SINK_DEFS =
 
   ceiling_sink_GOTH47 = -- small brown skulls
   {
-    mat = "_CEIL"
+    mat = "G09"
     dz = 48
 
     trim_mat = "GOTH47"
@@ -1951,7 +1951,7 @@ GLAICE_SINK_DEFS =
 
   ceiling_sink_GOTH48 = -- large brown skulls
   {
-    mat = "_CEIL"
+    mat = "GMET02"
     dz = 48
 
     trim_mat = "GOTH48"
@@ -1960,7 +1960,7 @@ GLAICE_SINK_DEFS =
 
   ceiling_sink_GOTH49 = -- inset brown skulls
   {
-    mat = "_CEIL"
+    mat = "G14"
     dz = 48
 
     trim_mat = "GOTH49"
@@ -1971,7 +1971,7 @@ GLAICE_SINK_DEFS =
 
   floor_sink_GOTH22 =
   {
-    mat = "_FLOOR"
+    mat = "GMET04"
     dz = -16
 
     trim_mat = "GOTH22"
