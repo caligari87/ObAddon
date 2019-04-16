@@ -1825,46 +1825,46 @@ GLAICE_SINK_DEFS =
     light = 8
   }
 
-  ceiling_sink_SKINLOW4 =
+  ceiling_sink_SKINMET4 =
   {
     mat = "_CEIL"
     dz = 112
     light = 16
 
-    trim_mat = "SKINLOW4"
+    trim_mat = "SKINMET4"
     dz = -16
     light = 8
   }
 
-  ceiling_sink_SKINLOW5 =
+  ceiling_sink_SKINMET5 =
   {
     mat = "_CEIL"
     dz = 112
     light = 16
 
-    trim_mat = "SKINLOW5"
+    trim_mat = "SKINMET5"
     dz = -16
     light = 8
   }
 
-  ceiling_sink_SKINLOW6 =
+  ceiling_sink_SKINMET6 =
   {
     mat = "_CEIL"
     dz = 112
     light = 16
 
-    trim_mat = "SKINLOW6"
+    trim_mat = "SKINMET6"
     dz = -16
     light = 8
   }
 
-  ceiling_sink_SKINLOW7 =
+  ceiling_sink_SKINMET7 =
   {
     mat = "_CEIL"
     dz = 112
     light = 16
 
-    trim_mat = "SKINLOW7"
+    trim_mat = "SKINMET7"
     dz = -16
     light = 8
   }
