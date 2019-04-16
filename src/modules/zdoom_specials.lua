@@ -295,6 +295,28 @@ function ZDOOM_SPECIALS.do_special_stuff()
   local function add_languagelump()
   end
 
+  local function add_gamedef()
+    gamedef_lines = {
+      "gameinfo\n",
+      "{\n",
+    }
+
+    local x = 1
+    local quit_msg_line = ""
+    quit_msg_line = quit_msg_line .. "quitmessages="
+    for _,lines in pairs(ZDOOM_STORIES.QUIT_MESSAGES) do
+      quit_msg_line = quit_msg_line .. ' "$QUITMSG' .. x .. '",'
+      if x%3 == 0 then
+        quit_msg_line = quit_msg_line .. "\n"
+      end
+      x = x + 1
+    end
+    table.insert(gamedef_lines, quit_msg_line)
+    table.insert(gamedef_lines, "\n}\n")
+
+    return gamedef_lines
+  end
+
   local function add_mapinfo(mapinfo_tab)
 
     -- mapinfo table requires color for fog and map number
@@ -785,6 +807,13 @@ function ZDOOM_SPECIALS.do_special_stuff()
       info.fog_color = ""
     end
 
+    if PARAM.custom_quit_messages == "yes" then
+      local gamedef_lines = add_gamedef()
+      each line in gamedef_lines do
+        table.insert(mapinfolump,line)
+      end
+    end
+
     local mapinfo_lines = add_mapinfo(info)
     each line in mapinfo_lines do
       table.insert(mapinfolump,line)
@@ -937,9 +966,17 @@ OB_MODULES["zdoom_specials"] =
       tooltip = "Adds cluster information with generic or randomized story text into the MAPINFO structure!"
     }
 
+    custom_quit_messages = {
+      label = _("Custom Quit Messages"),
+      priority = 4
+      choices = ZDOOM_SPECIALS.YES_NO
+      default = "yes"
+      tooltip = "Adds custom quit messages into the MAPINFO game definition."
+    }
+
     generic_intermusic = {
       label = _("Intermission Music"),
-      priority = 4
+      priority = 3
       choices = ZDOOM_SPECIALS.INTERPIC_MUSIC
       default = "$MUSIC_READ_M"
       tooltip = "Changes the music playing during intermission screens."
@@ -947,7 +984,7 @@ OB_MODULES["zdoom_specials"] =
 
     episode_selection = {
       label = _("Episode Selection"),
-      priority = 3
+      priority = 2
       choices = ZDOOM_SPECIALS.YES_NO
       default = "no"
       tooltip = "Creates a classic Doom/Ultimate Doom style episode selection."
