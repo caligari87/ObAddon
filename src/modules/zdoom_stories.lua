@@ -550,6 +550,12 @@ ZDOOM_STORIES.STORIES =
       attempting to land in our target area but hostiles have taken control
       of the ground defense system! If you have means to disable it,
       this will allow friendly forces to land and push through!"]],
+
+      [[Pushing yourself through the dull corridors of the overrun facility
+      which bares the marks of battle, both demon and marine. However, you do
+      come across various computer monitors reading "ERROR" or "Rerouting power
+      from AAG" scrolling down the screens but you hear the familiar boom of
+      anti-aircraft guns, which is unusual. Something's wrong.]],
     }
     conclusions =
     {
@@ -958,6 +964,11 @@ ZDOOM_STORIES.ABSOLUTE_ENDINGS =
   your efforts at keeping the demons at bay is rest assured for now!
   _SPACE
   The story will continue!]],
+
+  [[You have pushed back the countless demonic armies that you've
+endured so far and put a dent in their efforts.
+_SPACE
+However, this will not be the end of your encounters with them.]]
 }
 
 ZDOOM_STORIES.GENERIC_STORIES =
@@ -1328,6 +1339,7 @@ ZDOOM_STORIES.QUIT_MESSAGES =
   [[Hold up, are you just going to leave like this?]],
   [[We're still going to be here, just go. It may not be as nice when you come back.]],
   [[There's a special place in Hell for those that quit too soon.]],
+  
 
   -- hardcore philosophy
   [[Are you quitting because you realized no matter how much hellspawn you mow down, Oblige will just give you more?]],
