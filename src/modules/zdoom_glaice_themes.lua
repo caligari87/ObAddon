@@ -1643,7 +1643,7 @@ GLAICE_SINK_DEFS =
     light = 32
 
     trim_mat = "SHINY04"
-    dz = -8
+    trim_dz = -8
     light = 16
   }
 
@@ -1654,7 +1654,7 @@ GLAICE_SINK_DEFS =
     light = 32
 
     trim_mat = "SHINY04"
-    dz = -8
+    trim_dz = -8
     light = 16
   }
 
@@ -1665,7 +1665,7 @@ GLAICE_SINK_DEFS =
     light = 32
 
     trim_mat = "SHINY04"
-    dz = -8
+    trim_dz = -8
     light = 16
   }
 
@@ -1676,7 +1676,7 @@ GLAICE_SINK_DEFS =
     light = 32
 
     trim_mat = "METAL7"
-    dz = -8
+    trim_dz = -8
     light = 16
   }
 
@@ -1687,7 +1687,7 @@ GLAICE_SINK_DEFS =
     light = 32
 
     trim_mat = "METAL7"
-    dz = -8
+    trim_dz = -8
     light = 16
   }
 
@@ -1698,7 +1698,7 @@ GLAICE_SINK_DEFS =
     light = 32
 
     trim_mat = "METAL7"
-    dz = -8
+    trim_dz = -8
     light = 16
   }
 
@@ -1709,7 +1709,7 @@ GLAICE_SINK_DEFS =
     light = 32
 
     trim_mat = "METAL7"
-    dz = -8
+    trim_dz = -8
     light = 16
   }
 
@@ -1720,7 +1720,7 @@ GLAICE_SINK_DEFS =
     light = 32
 
     trim_mat = "METAL7"
-    dz = -8
+    trim_dz = -8
     light = 16
   }
 
@@ -1731,7 +1731,7 @@ GLAICE_SINK_DEFS =
     light = 32
 
     trim_mat = "METAL7"
-    dz = -8
+    trim_dz = -8
     light = 16
   }
 
@@ -1742,7 +1742,7 @@ GLAICE_SINK_DEFS =
     light = 32
 
     trim_mat = "METAL7"
-    dz = -8
+    trim_dz = -8
     light = 16
   }
 
@@ -1753,7 +1753,7 @@ GLAICE_SINK_DEFS =
     light = 32
 
     trim_mat = "SILVER2R"
-    dz = -16
+    trim_dz = -16
     light = 16
   }
 
@@ -1764,7 +1764,7 @@ GLAICE_SINK_DEFS =
     light = 32
 
     trim_mat = "SILVER2O"
-    dz = -16
+    trim_dz = -16
     light = 16
   }
 
@@ -1775,7 +1775,7 @@ GLAICE_SINK_DEFS =
     light = 32
 
     trim_mat = "SILVER2Y"
-    dz = -16
+    trim_dz = -16
     light = 16
   }
 
@@ -1786,7 +1786,7 @@ GLAICE_SINK_DEFS =
     light = 32
 
     trim_mat = "SILVER2W"
-    dz = -16
+    trim_dz = -16
     light = 16
   }
 
@@ -1797,7 +1797,7 @@ GLAICE_SINK_DEFS =
     light = 32
 
     trim_mat = "SILVER2G"
-    dz = -16
+    trim_dz = -16
     light = 16
   }
 
@@ -1810,7 +1810,7 @@ GLAICE_SINK_DEFS =
     light = 16
 
     trim_mat = "SKINLOW1"
-    dz = -16
+    trim_dz = -16
     light = 8
   }
 
@@ -1821,7 +1821,7 @@ GLAICE_SINK_DEFS =
     light = 16
 
     trim_mat = "SKINLOW3"
-    dz = -16
+    trim_dz = -16
     light = 8
   }
 
@@ -1832,7 +1832,7 @@ GLAICE_SINK_DEFS =
     light = 16
 
     trim_mat = "SKINMET4"
-    dz = -16
+    trim_dz = -16
     light = 8
   }
 
@@ -1843,7 +1843,7 @@ GLAICE_SINK_DEFS =
     light = 16
 
     trim_mat = "SKINMET5"
-    dz = -16
+    trim_dz = -16
     light = 8
   }
 
@@ -1854,7 +1854,7 @@ GLAICE_SINK_DEFS =
     light = 16
 
     trim_mat = "SKINMET6"
-    dz = -16
+    trim_dz = -16
     light = 8
   }
 
@@ -1865,7 +1865,7 @@ GLAICE_SINK_DEFS =
     light = 16
 
     trim_mat = "SKINMET7"
-    dz = -16
+    trim_dz = -16
     light = 8
   }
 
@@ -1876,7 +1876,7 @@ GLAICE_SINK_DEFS =
     light = 16
 
     trim_mat = "GOTH18"
-    dz = 0
+    trim_dz = 0
     light = 8
   }
 
@@ -1887,7 +1887,7 @@ GLAICE_SINK_DEFS =
     light = 16
 
     trim_mat = "GOTH19"
-    dz = 0
+    trim_dz = 0
     light = 8
   }
 
@@ -1898,7 +1898,7 @@ GLAICE_SINK_DEFS =
     light = 16
 
     trim_mat = "GOTH20"
-    dz = 0
+    trim_dz = 0
     light = 8
   }
 
@@ -1909,7 +1909,7 @@ GLAICE_SINK_DEFS =
     light = 16
 
     trim_mat = "GOTH21"
-    dz = 0
+    trim_dz = 0
     light = 8
   }
 
@@ -1919,7 +1919,7 @@ GLAICE_SINK_DEFS =
     dz = 128
 
     trim_mat = "GOTH15"
-    dz = 0
+    trim_dz = 0
   }
 
   ceiling_sink_GOTH17 = -- wide beam
@@ -1928,7 +1928,7 @@ GLAICE_SINK_DEFS =
     dz = 32
 
     trim_mat = "GOTH17"
-    dz = 0
+    trim_dz = 0
   }
 
   ceiling_sink_GOTH28 = -- scary faces
@@ -1937,7 +1937,7 @@ GLAICE_SINK_DEFS =
     dz = 128
 
     trim_mat = "GOTH28"
-    dz = 0
+    trim_dz = 0
   }
 
   ceiling_sink_GOTH47 = -- small brown skulls
@@ -1946,7 +1946,7 @@ GLAICE_SINK_DEFS =
     dz = 48
 
     trim_mat = "GOTH47"
-    dz = -16
+    trim_dz = -16
   }
 
   ceiling_sink_GOTH48 = -- large brown skulls
@@ -1955,7 +1955,7 @@ GLAICE_SINK_DEFS =
     dz = 48
 
     trim_mat = "GOTH48"
-    dz = -16
+    trim_dz = -16
   }
 
   ceiling_sink_GOTH49 = -- inset brown skulls
@@ -1964,7 +1964,7 @@ GLAICE_SINK_DEFS =
     dz = 48
 
     trim_mat = "GOTH49"
-    dz = -16
+    trim_dz = -16
   }
 
   -- hell floors
@@ -1975,7 +1975,7 @@ GLAICE_SINK_DEFS =
     dz = -16
 
     trim_mat = "GOTH22"
-    dz = 0
+    trim_dz = 0
   }
 }
 
