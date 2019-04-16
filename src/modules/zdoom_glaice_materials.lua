@@ -638,7 +638,7 @@ GLAICE_MATERIALS = {
 
   -- Auxillary
   COLLITE1 = { t="COLLITE1", f="RROCK20" } --Green version of REDWALL1
-  COLLITE2 = { t="COLLITE2", f="RROCK01" } --Orange version of REDWALL1
+  COLLITE2 = { t="COLLITE2", f="ORANFLOR" } --Orange version of REDWALL1
   COLLITE3 = { t="COLLITE3", f="CEIL4_2" } --Blue version of REDWALL1
   LITE2 = { t="LITE2", f="FLOOR0_1" } -- BROWN1 variant w/ lights. From Doom1
   LITE4 = { t="LITE4", f="FLAT19" } -- LITE5 and bigger light on bottom. From Doom1
@@ -798,7 +798,7 @@ GLAICE_MATERIALS = {
   FLOOR4_7 = { f="FLOOR4_7", t="STARGR1" }
   FLOOR51C = { f="FLOOR51C", t="METAL1" }
   FLOOR7_3 = { f="FLOOR7_3", t="GOTH11" }
-
+  
   -- Egypt
   EG01  = { t="EGYPT03",  f="EG01" }
   EG02  = { t="STONE6",  f="EG02" }
@@ -955,6 +955,7 @@ GLAICE_MATERIALS = {
   CEIL4_4 = { f="CEIL4_4", t="COMPBLUE" }
   GRENFLOR = { f="GRENFLOR",  t="COMPGREN" }
   GRNLITE2 = { f="GRNLITE2", t="TEKGRN01" }
+  ORANFLOR = { f="ORANFLOR", t="COLLITE2" }
   STARBR2F = { t="STARBR2", f="STARBR2F" } -- Unused
   STARG1F = { t="STARG1", f="STARG1F" } -- Unused
   STARGR1F = { t="STARG1", f="STARG1F" } -- Unused
