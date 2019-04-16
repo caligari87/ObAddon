@@ -7,8 +7,7 @@ PREFABS.Item_closet_toilet_room_small =
   file   = "item/gtd_item_closet_toilet_small.wad"
   map    = "MAP01"
 
-  rank   = 2
-  prob   = 150
+  prob   = 20
   theme  = "!hell"
   env    = "!cave"
 
@@ -18,8 +17,6 @@ PREFABS.Item_closet_toilet_room_small =
 
   deep =  16
   over = -16
-
-  item_kind = "key"
 
   x_fit = "frame"
   y_fit = "top"
