@@ -1333,4 +1333,5 @@ ZDOOM_STORIES.QUIT_MESSAGES =
   [[Are you quitting because you realized no matter how much hellspawn you mow down, Oblige will just give you more?]],
   [[_RAND_CONTRIBUTOR wants to know you're quitting from an Oblige map. :( Unless you just finished it all. :D]],
   [[The price of freedom is eternal vigilance. The price of Oblige is eternal demonic invasions. And you're giving up?]],
+  [[You wouldn't download a car, but you would quit a demonic invasion?]],
 }

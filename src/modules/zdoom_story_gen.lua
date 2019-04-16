@@ -87,7 +87,11 @@ function ZStoryGen_format_story_chunk(story_strings, info)
   return story_lines
 end
 
-function ZStoryGen_fetch_story_chunk(lev_info)
+function ZStoryGen_fetch_story_chunk()
+  return rand.key_by_probs(ZDOOM_STORIES.LIST)
+end
+
+function ZStoryGen_create_characters_and_stuff(lev_info)
   local info = { }
 
   if lev_info then
@@ -109,7 +113,7 @@ function ZStoryGen_fetch_story_chunk(lev_info)
   info.hell_mcguffin = rand.key_by_probs(ZDOOM_STORIES.MCGUFFINS.hellish)
   info.tech_mcguffin = rand.key_by_probs(ZDOOM_STORIES.MCGUFFINS.tech)
 
-  return rand.key_by_probs(ZDOOM_STORIES.LIST), info
+  return info
 end
 
 function ZStoryGen_hook_me_with_a_story(story_id, info)
@@ -136,7 +140,8 @@ function ZStoryGen_init()
   local language_lump = {}
 
   while x <= #GAME.episodes do
-    local story_id, info = ZStoryGen_fetch_story_chunk()
+    local story_id = ZStoryGen_fetch_story_chunk()
+    local info = ZStoryGen_create_characters_and_stuff()
     hooks[x] = ZStoryGen_hook_me_with_a_story(story_id, info)
     conclusions[x] = ZStoryGen_conclude_my_story(story_id, info)
     x = x + 1
@@ -186,6 +191,21 @@ function ZStoryGen_init()
   table.insert(language_lump, "SECRET2 =\n")
   for _,line in pairs(secret2) do
     table.insert(language_lump, "  " .. line .. "\n")
+  end
+
+  -- custom quit message creation
+  PARAM.quit_messages = "yes"
+  if PARAM.quit_messages == "yes" then
+    x = 1
+    local info = ZStoryGen_create_characters_and_stuff()
+    for _,line in pairs(ZDOOM_STORIES.QUIT_MESSAGES) do
+      line = ZStoryGen_format_story_chunk(line, info)
+      table.insert(language_lump, "\nQUITMSG" .. x .. " =\n")
+      x = x + 1
+      for _,o_line in pairs(line) do
+        table.insert(language_lump, "  " .. o_line .. "\n")
+      end
+    end
   end
 
   gui.wad_add_text_lump("LANGUAGE",language_lump)
