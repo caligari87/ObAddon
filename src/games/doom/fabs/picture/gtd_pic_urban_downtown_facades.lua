@@ -31,6 +31,9 @@ PREFABS.Pic_urban_downtown_facade1 =
     CITY05 = 50
     CITY06 = 50
     CITY07 = 50
+    CITY08 = 50
+    CITY09 = 50
+    CITY10 = 50
   }
 
   flat_TLITE6_6 =
