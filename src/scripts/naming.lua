@@ -3773,6 +3773,25 @@ namelib.NAMES =
         ["Doomx V"] = 30 -- Aeba - "Kodex V" (album title)
         ["Demonic Rampage"] = 20 -- Afrobomination - "Galatic Rampage" (song)
         ["Hell in Motion"] = 20 --  Against Nature - "All in Motion" (song)
+        ["Show Oneself the STARTAN"] = 15 -- Against Nature - "Show Myself the Door" (song)
+        ["The Divinity of Cyberdemons"] = 20 -- Ahab - The Divinity of Oceans (album title)
+        ["Enraptured by Death"] = 25 -- Akercocke - "Enraptured by Evil" (song)
+        ["Ceremony of Nine Icons"] = 20 -- Akercocke - "The Ceremony of Nine Angels" (song)
+        ["Demon's Lyric"] = 30 -- Akira Yamaoka - "Devil's Lyric" (Silent Hill Soundtrack)
+        ["Blackness that Lurks in our Heart"] = 25 -- Akira Yamaoka - "The Darkness that Lurks in our Mind" (Silent Hill Soundtrack)
+        ["Fear of the Abyss"] = 20 -- Akira Yamaoka - "Fear of the Dark" (Silent Hill Soundtrack)
+        ["Death by the Shotgun"] = 20 -- Alestorm - "Death before the Mast" (song)
+        ["No Secrets Known"] = 20 -- Alice in Chains - All Secrets Known (song)
+        ["Earth Gives Way to Hell"] = 25 -- Alice in Chains - Black Gives Way to Blue (album title)
+        ["Angry Demons"] = 20 -- Alice in Chains - Angry Chair (song)
+        ["Consciousness Beyond Peril"] = 25 -- Alienation Cold - "Dream of an Obscured Consciousness" (song)
+        ["Pursuit of Marines"] = 20 -- Amon Amarth - "The Pursuit of Vikings" (song)
+        ["Ruined Armor and Bloody Rifles"] = 20 -- Amon Amarth - "Tattered Banners and Bloody Flags" (song)
+        ["Maximum Doom"] = 20 -- Annihilator - "Maximum Satan" (song)
+        ["Sometimes They Hear The Fist"] = 25 -- Atomizer - "Sometimes they hear the Bullet" (song)
+        ["Hateful by Nature"] = 20 -- Atrophy - Violent by Nature (album title)
+        -- I'll stop here, because I have over 18,000(!!) tracks to go through and this would make this
+        -- list VERY, VERY LONG. - Glaice
 
         -- Nerdery stuff
         ["d20 Edition"] = 15 -- Also Swedra
