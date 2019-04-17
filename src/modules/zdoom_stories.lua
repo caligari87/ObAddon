@@ -1326,8 +1326,8 @@ ZDOOM_STORIES.QUIT_MESSAGES =
   [[Hold up, are you just going to leave like this?]],
   [[We're still going to be here, just go. It may not be as nice when you come back.]],
   [[There's a special place in Hell for those that quit too soon.]],
-  [[_RAND_DEMON and _RAND_DEMON thought so. They thought you were just as weak as anticipated to quit so soon.]],
-  [[That's too bad, perhaps _RAND_DEMON should make you their bitch for considering quitting?]],
+  [[_RAND_CONTRIBUTOR and _RAND_DEMON the _EVULZ thought so. They thought you were just as weak as anticipated to quit so soon.]],
+  [[That's too bad, perhaps _RAND_DEMON the _EVULZ should make you their bitch for considering quitting?]],
   [[_RAND_CONTRIBUTOR is disappointed in you. Hit N now or face retribution.]],
   [[He who is not bold enough to be stared at from across the abyss is not bold enough to stare into it himself.]], -- Silent Hill 2
  
