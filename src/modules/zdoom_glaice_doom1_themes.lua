@@ -1035,6 +1035,7 @@ GLAICE_DOOM1_THEMES =
       WOOD15 = 50
       WOOD16 = 50
       WOOD17 = 50
+      WOOD18 = 30
     }
 
     floors =
@@ -1084,6 +1085,7 @@ GLAICE_DOOM1_THEMES =
       WOOD15 = 50
       WOOD16 = 50
       WOOD17 = 50
+      WOOD18 = 35
     }
 
     floors =
@@ -1438,6 +1440,7 @@ GLAICE_DOOM1_FLESH_FACADES =
   GSTONE1 = 75
   WOOD16  = 70
   WOOD17  = 70
+  WOOD18  = 40
   WD04    = 65
   SP_HOT1 = 40
 

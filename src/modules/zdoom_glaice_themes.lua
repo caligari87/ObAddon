@@ -1024,6 +1024,7 @@ GLAICE_THEMES =
       WOOD15 = 50
       WOOD16 = 50
       WOOD17 = 50
+      WOOD18 = 30
     }
 
     floors =

@@ -154,6 +154,9 @@ GLAICE_MATERIALS = {
   CITY05 = { t="CITY05", f="FLAT1" } -- Gray bricks and black windows
   CITY06 = { t="CITY06", f="FLOOR0_1" } -- BROWN1 style and black windows
   CITY07 = { t="CITY07", f="FLAT1" } -- Industrial looking
+  CITY08 = { t="CITY08", f="FLAT1" } -- Gray bricks with stone arch window
+  CITY09 = { t="CITY09", f="FLAT1" } -- Small gray bricks with stone arch window
+  CITY10 = { t="CITY10", f="FLOOR7_1" } -- Small brown bricks with stone arch window
 
   URBAN1 = { t="URBAN1", f="RROCK10" }
   URBAN2 = { t="URBAN2", f="FLAT1" }
@@ -671,6 +674,7 @@ GLAICE_MATERIALS = {
   WOOD15 = { t="WOOD15", f="FLAT5_2" }
   WOOD16 = { t="WOOD16", f="FLAT5_2" }
   WOOD17 = { t="WOOD17", f="FLAT5_2" }
+  WOOD18 = { t="WOOD18", f="FLAT5_2" }
   WDMET01 = { t="WDMET01", f="CEIL5_2" } --WOODMET1
   WDMET02 = { t="WDMET02", f="CEIL5_2" } --WOODMET2
   WDMET03 = { t="WDMET03", f="CEIL5_2" }
