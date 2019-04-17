@@ -4784,10 +4784,12 @@ function namelib.generate_unique_noun(m)
 
   local i = 1
 
-  repeat
-    name = name .. make_placelike_syllable(mode)
-    i = i + 1
-  until i > syllable_count
+  if mode != "community_members" then
+    repeat
+      name = name .. make_placelike_syllable(mode)
+      i = i + 1
+    until i > syllable_count
+  end
 
   name = string.gsub(name,"^%l",string.upper)
 
