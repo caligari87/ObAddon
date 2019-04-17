@@ -200,8 +200,7 @@ namelib.NAMES =
         Perverted=5, Doomed=10,
 
         -- ObAddon contributor names
-        MsrSgtShooterPerson=3, Glaice=3, Frozsoul=3,
-        Garrett=3, Caligari87=3, SimonV=3, Beed28 = 3,
+        NOUNMEMBERS = 50
 
         -- special tag for the name generator
         NOUNGENEXOTIC = 400
@@ -617,8 +616,7 @@ namelib.NAMES =
         Resriphahiel=3, Abmehaus=3, Enon=3, Azhesap=3, Hamiel=3, Umesas=3, Tebhecnorael=3, Opedib=3, Naheh=3,
 
         -- ObAddon contributor names
-        MsrSgtShooterPerson=3, Glaice=3, Frozsoul=3,
-        Garrett=3, Caligari87=3, SimonV=3, Beed28 = 3,
+        NOUNMEMBERS = 50
 
         NOUNGENEXOTIC = 150
       }
@@ -1277,8 +1275,7 @@ namelib.NAMES =
         Catastrophic=5, Whispering=10,
 
         -- ObAddon contributor names
-        MsrSgtShooterPerson=3, Glaice=3, Frozsoul=3,
-        Garrett=3, Caligari87=3, SimonV=3, Beed28=3,
+        NOUNMEMBERS = 50
 
         NOUNGENEXOTIC = 150
         NOUNGENANGLICAN = 650
@@ -2682,13 +2679,7 @@ namelib.NAMES =
 
       c = -- oh boy, here we go again...
       {
-        MsrSgtShooterPerson = 5
-        Glaice = 5
-        Garrett = 5
-        Caligari87 = 5
-        Frozsoul = 5
-        SimonV = 5
-        Beed28 = 5
+        NOUNMEMBERS = 10
       }
     }
   }
@@ -3431,13 +3422,7 @@ namelib.NAMES =
 
       c = -- contributor names
       {
-        MsrSgtShooterPerson = 10
-        Glaice = 10
-        Caligari87 = 10
-        Garrett = 10
-        Frozsoul = 10
-        SimonV = 10
-        Beed28 = 10
+        NOUNMEMBERS = 10
       }
     }
   }
@@ -4046,6 +4031,55 @@ namelib.IGNORE_WORDS =
   ["for"]=1, ["in"]=1, ["on"]=1, ["to"]=1,
 }
 
+
+
+namelib.COMMUNITY_MEMBERS =
+{
+  contributors =
+  {
+    "MsrSgtShooterPerson",
+    "Glaice",
+    "Frozsoul",
+    "Caligari87",
+    "Simon-v",
+    "Garrett",
+    "Beed28",
+    "EpicTyphlosion",
+    "Tapwave",
+  }
+
+  -- this is an arbitrary list of regulars at the Unofficial Oblige
+  -- Discord server. If you're a regular and you don't find your name
+  -- here, feel free to add it yourself! (or ask a contributor to do so!)
+  regulars =
+  {
+    "samiam", -- Mr. ObHack!
+    "crowbars82", -- Mr. Octothrop!
+    "Alden",
+    "BigC",
+    "BradManX",
+    "Craneo",
+    "Demios",
+    "DZ",
+    "Elkinda",
+    "HexaDoken",
+    "josh771",
+    "kinker31",
+    "Kinsie",
+    "MagPie",
+    "Roundabout Lout",
+    "Saint",
+    "sanser",
+    "Sharahfluff",
+    "Sharp",
+    "TiZ",
+    "TheDude1",
+    "The Nate",
+    "Thexare",
+    "TTBNC",
+    "Yandere Princess",
+  }
+}
 
 
 namelib.ALPHABET =
@@ -4757,6 +4791,14 @@ function namelib.generate_unique_noun(m)
 
   name = string.gsub(name,"^%l",string.upper)
 
+  if mode == "community_members" then
+    if rand.odds(80) then
+      name = rand.pick(namelib.COMMUNITY_MEMBERS.contributors)
+    else
+      name = rand.pick(namelib.COMMUNITY_MEMBERS.regulars)
+    end
+  end
+
   return name
 end
 
@@ -4785,6 +4827,7 @@ function namelib.fix_up(name)
 
   name = string.gsub(name, "NOUNGENANGLICAN", namelib.generate_unique_noun("anglican"))
   name = string.gsub(name, "NOUNGENEXOTIC", namelib.generate_unique_noun("exotic"))
+  name = string.gsub(name, "NOUNMEMBERS", namelib.generate_unique_noun("community_members"))
   return name
 end
 
