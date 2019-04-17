@@ -787,6 +787,14 @@ function ZDOOM_SPECIALS.do_special_stuff()
 
   -- collect lines for MAPINFO lump
   local mapinfolump = {}
+
+  if PARAM.custom_quit_messages == "yes" then
+    local gamedef_lines = add_gamedef()
+    each line in gamedef_lines do
+      table.insert(mapinfolump,line)
+    end
+  end
+
   for i=1, #GAME.levels do
 
     info.map_num = i
@@ -808,13 +816,6 @@ function ZDOOM_SPECIALS.do_special_stuff()
       info.fog_color = pick_random_fog_color()
     else
       info.fog_color = ""
-    end
-
-    if PARAM.custom_quit_messages == "yes" then
-      local gamedef_lines = add_gamedef()
-      each line in gamedef_lines do
-        table.insert(mapinfolump,line)
-      end
     end
 
     local mapinfo_lines = add_mapinfo(info)
