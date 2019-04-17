@@ -593,16 +593,90 @@ namelib.NAMES =
 
       e =
       {
-        Satan=10, ["The Devil"]=7, Lucifer=7, Helgor=3, Amon=3, Agares=3, Dzoavits=2, Chimera=5,
-        Ceren=2, Mephisto=3, Vuradi=2, Oltion=2, Ktulu=2, Ahazu=2, Boruta=3, Eligos=3, Wendigo=3,
-        Dozod=2, Draco=2, Kalrac=2, Minotaur=5, Pandora=1, Abraxas=2, Botis=2, Lempo=3, Sitri=2,
-        Minos=2, Orgel=2, Nurgle=2, Odin=2, Balrok=2, Mammon=3, Adimarchus=3, Jinn=2, Pithius=3,
-        Orcus=3, Lolth=3, Quenna=3, Saleos=3, Rusalka=3, Haborym=3, Gresil=2, Dagon=3, Raum=2,
-        Erishkigal=3, Jubilex=3, Utukku=3, Vucub=3, Zagan=3, Verrine=3, Kerzit=2, Forcas=3,
-        Deccal=3, Ipos=3, Xezbeth=3, Yeenoghlu=3, Caasimolar=3, Abaddon=3, Soneillon=3, Phenex=2,
-        Baal=3, Malthus=3, Beelzebub=3, Moloch=3, Dante=5, Berith=3, Haagenti=3, Caim=2, Seir=3,
-        Nybbas=2, Namtar=2, Lamashtu=2, Astaroth=2, Merihem=3, Gressil=3, Barong=2, Iblis=3, Ouroboros=5,
-        Carreau=3, Oeillet=3, Rosier=2, Luvart=2, Cerberus=5, Linguica=1, Bloodshedder=1, Romero=1,
+        Romero=1, -- the Icon of Sin
+
+        -- Christian literature evil stuff (includes Ars Goetia)
+        Satan=10, ["The Devil"]=7, Lucifer=7, Amon=3, Agares=3,
+        Malthus=3, Beelzebub=3, Moloch=3, Dante=5,
+        Xezbeth=3, Botis=2, Sitri=2, Mammon=3, Saleos=3,
+        Haborym=3, Raum=2, Zagan=3, Verrine=3, Forcas=3,
+        Ipos=3, Xezbeth=3, Abaddon=3, Phenex=2,
+        Baal=3, Berith=3, -- isn't this like the same guy, just his first and last name?
+        Haagenti=3, Caim=2, Seir=3, Nybbas=2,
+        Astaroth=2, Merihem=3, Carreau=3, Oeillet=3,
+        Rosier=2, Luvart=2,
+
+        -- Native American evil stuff
+        Dzoavits=2, Wendigo=3, Vucub=3,
+
+        -- Greek evil stuff
+        Abraxas=3, Chimera=5, Minotaur=5, Pandora=1, Minos=2,
+        Cerberus=5,
+
+        -- Roman evil stuff
+        Pithius=3,
+
+        -- Nordic evil stuff
+        -- Egyptian evil stuff
+        Orcus=3,
+
+        -- Germanic evil stuff
+        Mephisto=3,
+
+        -- Polish evil stuff
+        Boruta=3,
+
+        -- Finnish evil stuff
+        Lempo=3,
+
+        -- Arabic evil stuff
+        Jinn=2, Deccal=3, Iblis=3,
+
+        -- Slavic evil stuff
+        Rusalka=3,
+
+        -- Indonesian evil stuff
+        Barong=2,
+
+        -- Here come the Lovecraftians!
+        Ktulu=2, Dagon=3,
+
+        -- civilizations that don't even exist anymore
+        -- evil stuff (Sumerians, Akkadians etc.)
+        Erishkigal=3, Utukku=3, Namtar=2, Lamashtu=2,
+
+        -- comics, TV
+        Helgor=3, Eligos=3,
+
+        -- Dungeons and Dragons / Pathfinder
+        -- note: a lot of these names are probably borrowed
+        -- from elsewhere (i.e. real world cultures) so they
+        -- should be sorted into there instead...
+        Ahazu=3, Yeenoghlu=3, Adimarchus=3, Lolth=3,
+        Gresil=2, Jubilex=3, Kerzit=2, Caasimolar=3,
+        Soneillon=3,
+
+        -- Warhammer 40k
+        Nurgle=2, Khorne=2, Tzeentch=2, Slaanesh=2,
+
+        --==| couldn't figure it out |==--
+        --+ totally no clue
+        Ceren=2,  Dozod=2, Kalrac=2, Quenna=3,
+
+        Draco=2, -- it's Latin for dragon but I don't know anything else more specific
+        Ouroboros=5, -- actually sort of a neutral symbol
+
+        -- Doom community people?
+        Linguica=1, Bloodshedder=1,
+
+        -- Hexen?
+        Vuradi=2,
+
+        --+ Are these book authors? They don't seem to be the 'demonic' sort.
+        Oltion=2, Orgel=2,
+
+        --+ Is this supposed to be Balrog from LotR or a variant from other media?
+        Balrok=3,
 
         -- Seventh Sanctum demon generated names
         -- https://www.seventhsanctum.com/generate.php?Genname=adname
