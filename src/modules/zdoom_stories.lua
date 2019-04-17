@@ -1338,9 +1338,14 @@ ZDOOM_STORIES.QUIT_MESSAGES =
   [[You can win Oblige, you just have to defeat a 64-bit permutation of maps and each variation per seed by changed setting to do so.]],
   [[You want demons? We can give you more demons than there are stars in the observarble universe.]],
   [[Don't worry about infinite hellspawn. Do what you love, and you'll never work a day in your life.]], -- I'm actually crediting this to HexaDoken
+  [[A dimensional shambler is, indeed, waiting in your operating system. It was ObAddon all along.]],
+  [[My map generator brings all the linedefs to the yard.]],
+  [["You shouldn't stop playing Doom." definitely said by Voltaire]],
+  [[Are you taking the blue pill?]],
 
   -- helpful // technical
   [[ObAddon is always improving. Stop by our Discord server, talk to the denizens and report bugs to us there!]],
   [[Visit https://caligari87.github.io/ObAddon/ for updates!]],
   [[If you're quitting because something might be broken, please supply screenshots and preferably your LOG file when reporting.]],
+  [[ObAddon is for the adventurous. Are you? Join us and contribute ideas and works! ObAddon is a community project!]],
 }
