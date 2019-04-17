@@ -1301,7 +1301,6 @@ ZDOOM_STORIES.QUIT_MESSAGES =
   [[Let's be serious, are you really exiting out already?]],
   [[There's always more where this comes from! ObAddon never forgets!]],
   [[You may be leaving but Hell's legions will never rest. You'll be back.]],
-  [[ObAddon is always improving. Stop by our Discord server, talk to the denizens and report bugs to us there!]],
   [[Maybe you should hit Escape before I put this shotgun barrel where the sun don't shine]],
   [[Just leave. This is just more monsters and levels here. What a heap of shit.]], --Loosely based off "Extra" quit message
   [[Don't quit just yet, we're just wasting your time with this quit message!]],
@@ -1321,7 +1320,6 @@ ZDOOM_STORIES.QUIT_MESSAGES =
   [[When you return, a gang of Imps and Barons are going to take turns on your ass.]],
   [[Do you really wish to leave the world at the mercy of Hellspawn?]],
   [[Catch me if you can, I'm the quit message man!]], -- Gingerbread Man reference
-  [[Visit https://caligari87.github.io/ObAddon/ for updates!]],
   [[So, is this a joke? Are you staying or leaving?]],
   [[Oh, is that all? I guess I'll just throw more monsters at you when you return.]],
   [[Doom is like a box of crackers, you get to add things to suit your tastes or just have it plain.]],
@@ -1329,11 +1327,18 @@ ZDOOM_STORIES.QUIT_MESSAGES =
   [[Hold up, are you just going to leave like this?]],
   [[We're still going to be here, just go. It may not be as nice when you come back.]],
   [[There's a special place in Hell for those that quit too soon.]],
-  
 
   -- hardcore philosophy
   [[Are you quitting because you realized no matter how much hellspawn you mow down, Oblige will just give you more?]],
   [[_RAND_CONTRIBUTOR wants to know you're quitting from an Oblige map. :( Unless you just finished it all. :D]],
   [[The price of freedom is eternal vigilance. The price of Oblige is eternal demonic invasions. And you're giving up?]],
   [[You wouldn't download a car, but you would quit a demonic invasion?]],
+  [[Never gonna give you up, never gonna let you down, never gonna run and leave you without a fresh new megawad.]],
+  [[At least when the demons slaughter anyone, it's regardless of gender, race, or creed.]],
+  [[You can win Oblige, you just have to defeat a 64-bit permutation of maps and each variation per seed by changed setting to do so.]],
+
+  -- helpful // technical
+  [[ObAddon is always improving. Stop by our Discord server, talk to the denizens and report bugs to us there!]],
+  [[Visit https://caligari87.github.io/ObAddon/ for updates!]],
+  [[If you're quitting because something might be broken, please supply screenshots and preferably your LOG file when reporting.]],
 }
