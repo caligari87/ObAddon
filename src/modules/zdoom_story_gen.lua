@@ -109,7 +109,7 @@ function ZStoryGen_create_characters_and_stuff(lev_info)
 
   info.demon_title = rand.key_by_probs(ZDOOM_STORIES.EVIL_TITLES)
   info.gothic_level = Naming_grab_one("GOTHIC")
-  info.contributor_name = rand.key_by_probs(namelib.NAMES.TITLE.lexicon.c)
+  info.contributor_name = rand.key_by_probs(namelib.COMMUNITY_MEMBERS.contributors)
   info.hell_mcguffin = rand.key_by_probs(ZDOOM_STORIES.MCGUFFINS.hellish)
   info.tech_mcguffin = rand.key_by_probs(ZDOOM_STORIES.MCGUFFINS.tech)
 
