@@ -595,55 +595,97 @@ namelib.NAMES =
       {
         Romero=1, -- the Icon of Sin
 
-        -- Christian literature evil stuff (includes Ars Goetia)
+        -- Judeo-Christian literature evil stuff (includes Ars Goetia)
         Satan=10, ["The Devil"]=7, Lucifer=7, Amon=3, Agares=3,
-        Malthus=3, Beelzebub=3, Moloch=3, Dante=5,
+        Malthus=3, Beelzebub=3, Moloch=3,
         Xezbeth=3, Botis=2, Sitri=2, Mammon=3, Saleos=3,
-        Haborym=3, Raum=2, Zagan=3, Verrine=3, Forcas=3,
+        Haborym=3, Raum=2, Forcas=3,
         Ipos=3, Xezbeth=3, Abaddon=3, Phenex=2,
         Baal=3, Berith=3, -- isn't this like the same guy, just his first and last name?
         Haagenti=3, Caim=2, Seir=3, Nybbas=2,
-        Astaroth=2, Merihem=3, Carreau=3, Oeillet=3,
-        Rosier=2, Luvart=2,
+        Astaroth=2, Leviathan=1,
+        Pithius=3, Lempo=3,
 
-        -- Native American evil stuff
-        Dzoavits=2, Wendigo=3, Vucub=3,
+        -- OMG THEY'RE FRENCH?!
+        Balber=3, Carreau=3, Carnivean=3,
+        Oeillet=3, Rosier=2, Luvart=2,
+        Verrier=2, Olivier=2, Verrine=3,
 
-        -- Greek evil stuff
+        Dante=5,
+
+        Ahazu=3, --Wikipedia
+        Abezithibou=2, Abyzou=2, Agaliarept=2,
+        Asmodeus=3, Azazel=3, Balam=3,
+        Baphomet=3, Barbas=3, Barbatos=3,
+        Belial=3, Beleth=3, Bifrons=1,
+        Corson=2, Crocell=2, Dantalion=3,
+        Demogorgon=3, Eisheth=3, Focalor=3,
+        Forneus=3, Gaap=3, Gaderel=2, Gamigin=2,
+        Gremory=3, Gusion=1, Legion=5, Lilith=5,
+        Malphas=3, Marax=3, Marchosias=3, Merihem=3,
+        Murmur=3, Naamah=3, Naberius=3, Orias=3,
+        Orobas=2, Ose=2, Paimon=3, Penemue=3,
+        Pruflas=3, Rahab=3, Renove=2, Sabnock=3,
+        Samael=3, Soneillon=3,
+        Salpsan=3, Shedim=3, Stolas=3, Surgat=3,
+        Tannin=3, Ukobach=3, Valac=3, Vapula=3,
+        Vepar=3, Zagan=3, Zepar=3, Ziminar=3,
+
+        Titivullus=3, Belphegor=3,
+
+        Korah=3,
+
+        -- Native American stuff
+        Dzoavits=2, Wendigo=3, Vucub=3, Wechuge=2,
+
+        -- Greek stuff
         Abraxas=3, Chimera=5, Minotaur=5, Pandora=1, Minos=2,
-        Cerberus=5,
+        Cerberus=5, Typhon=3, Echidna=3, Arachne=3, Medusa=3,
+        Atropos=3, Thanatos=3, Nyx=2, Sthenno=3,
 
         -- Roman evil stuff
-        Pithius=3,
+        Hades=3, Orcus=3, Mefitis=3, Morta=3,
+        Mors=3, Nox=2, Vediovus=3, Tuchulcha=3,
+        Vanth=3,
 
-        -- Nordic evil stuff
-        -- Egyptian evil stuff
-        Orcus=3,
+        -- Nordic stuff
+        Loki=3, Hel=3, Skadi=3, Aegir=3, Ran=3,
+        Ymir=3, Fenrir=3, Jormungand=3, Nidhogg=3,
+        Skoll=2, Hati=2, Surt=2, Garm=3,
 
-        -- Germanic evil stuff
-        Mephisto=3,
+        -- Egyptian stuff
+        Ammit=3, Apep=3, Kek=2, Set=3, Shezmu=3,
+        Anti=2, Anzus=2,
 
-        -- Polish evil stuff
+        -- Germanic stuff
+        Mephisto=3, Faust=3,
+
+        -- Polish stuff
         Boruta=3,
 
-        -- Finnish evil stuff
-        Lempo=3,
+        -- Arabic stuff
+        Jinn=2, Deccal=3, Iblis=3, Ifrit=3, Dajjal=3,
+        Azar=3, Firawn=3, Haman=3, Jault=3, Samiri=3,
 
-        -- Arabic evil stuff
-        Jinn=2, Deccal=3, Iblis=3,
+        -- Slavic stuff
+        Rusalka=3, Chernevog=3,
 
-        -- Slavic evil stuff
-        Rusalka=3,
-
-        -- Indonesian evil stuff
-        Barong=2,
+        -- Indonesian stuff
+        Barong=2, Pocong=2, Pontianak=2, Rangda=2,
+        Suanggi=2, Toyol=2,
 
         -- Here come the Lovecraftians!
-        Ktulu=2, Dagon=3,
+        Ktulu=2, Dagon=3, Nyarlathotep=2,
 
         -- civilizations that don't even exist anymore
         -- evil stuff (Sumerians, Akkadians etc.)
         Erishkigal=3, Utukku=3, Namtar=2, Lamashtu=2,
+        Ninurta=3,
+
+        -- Diablo games
+        Diablo=7, Andraiel=3, Duriel=3, Belial=3,
+        Azmodan=3, Rakanoth=3, Inarius=3, Izual=3,
+        Adria=1, ["Tal Rasha"]=2,
 
         -- comics, TV
         Helgor=3, Eligos=3,
@@ -652,16 +694,15 @@ namelib.NAMES =
         -- note: a lot of these names are probably borrowed
         -- from elsewhere (i.e. real world cultures) so they
         -- should be sorted into there instead...
-        Ahazu=3, Yeenoghlu=3, Adimarchus=3, Lolth=3,
+        Yeenoghlu=3, Adimarchus=3, Lolth=3,
         Gresil=2, Jubilex=3, Kerzit=2, Caasimolar=3,
-        Soneillon=3,
 
         -- Warhammer 40k
         Nurgle=2, Khorne=2, Tzeentch=2, Slaanesh=2,
 
         --==| couldn't figure it out |==--
         --+ totally no clue
-        Ceren=2,  Dozod=2, Kalrac=2, Quenna=3,
+        Ceren=2, Dozod=2, Kalrac=2, Quenna=3,
 
         Draco=2, -- it's Latin for dragon but I don't know anything else more specific
         Ouroboros=5, -- actually sort of a neutral symbol
@@ -680,19 +721,19 @@ namelib.NAMES =
 
         -- Seventh Sanctum demon generated names
         -- https://www.seventhsanctum.com/generate.php?Genname=adname
-        Bazhon=3, Espiap=3, Barmon=3, Xsosanit=3, Naur=3, Entimas=3, Lelahatn=3, Hlieradael=3, Rodhakta=3,
+        --[[Bazhon=3, Espiap=3, Barmon=3, Xsosanit=3, Naur=3, Entimas=3, Lelahatn=3, Hlieradael=3, Rodhakta=3,
         Oksanooh=3, Molsatta=3, Urason=3, Posxael=3, Xnaapesael=3, Upaism=3, Latesiel=3, Psizan=3, Hadat=3,
         Mrasih=3, Ezachumos=3, Ason=3, Ptapan=3, Xositecon=3, Ibomderau=3, Riar=3, Herariirses=3, Talan=3,
         Dmurip=3, Ssianazael=3, Adetit=3, Poac=3, Urlhes=3, Pasmusaat=3, Otupsezur=3, Zutbaheor=3, Roxen=3,
         Knaohadon=3, Amisael=3, Bapsorahiel=3, Sruabilael=3, Optaal=3, Xacasnopiel=3, Ttasapah=3, Seben=3,
         Sehelhanael=3, Mornael=3, Zihphol=3, Hupasimanael=3, Setramnadon=3, Amaost=3, Pirlonoax=3, Nuxuhan=3,
         Tranepem=3, Ezznop=3, Adabsiroo=3, Noszanaez=3, Zemah=3, Ranimas=3, Spoepeniel=3, Tukapamariel=3,
-        Resriphahiel=3, Abmehaus=3, Enon=3, Azhesap=3, Hamiel=3, Umesas=3, Tebhecnorael=3, Opedib=3, Naheh=3,
+        Resriphahiel=3, Abmehaus=3, Enon=3, Azhesap=3, Hamiel=3, Umesas=3, Tebhecnorael=3, Opedib=3, Naheh=3,]]
 
         -- ObAddon contributor names
         NOUNMEMBERS = 50
 
-        NOUNGENEXOTIC = 150
+        NOUNGENEXOTIC = 200
       }
 
       a =
@@ -805,8 +846,6 @@ namelib.NAMES =
         Turrets=3, Oubliette=3, Stockades=3,
         Bartizan=3, Brattice=3, Postern=3,
         Cistern=3,
-
-
 
         -- temples of sorts
         Abbey=10, Monastery=10, Friary=3,
