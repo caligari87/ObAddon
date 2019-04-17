@@ -2624,6 +2624,37 @@ function Autodetail(level)
 
   print("Total walkable volume: " .. total_walkable_area .. "\n")
 
+  local function set_wall_group_priorities(multiplier)
+
+    -- rather than these being set here, maybe initialize from
+    -- somewhere earlier in the code to keep the original values?
+    if OB_CONFIG.game == "doom2" then
+      local default_prob = 100
+      local tech_prob = 300
+      local urban_prob = 175
+      local hell_prob = 425
+
+      GAME.THEMES.DEFAULTS.wall_groups.PLAIN = default_prob * multiplier
+      GAME.THEMES.tech.wall_groups.PLAIN = tech_prob * multiplier
+      GAME.THEMES.urban.wall_groups.PLAIN = urban_prob * multiplier
+      GAME.THEMES.hell.wall_groups.PLAIN = hell_prob * multiplier
+    end
+
+    if OB_CONFIG.game == "doom1" and OB_CONFIG.game == "doom2" then
+      local default_prob = 100
+      local tech_prob = 200
+      local deimos_prob = 200
+      local hell_prob = 150
+      local flesh_prob = 150
+
+      GAME.THEMES.DEFAULTS.wall_groups.PLAIN = default_prob * multiplier
+      GAME.THEMES.tech.wall_groups.PLAIN = tech_prob * multiplier
+      GAME.THEMES.deimos.wall_groups.PLAIN = urban_prob * multiplier
+      GAME.THEMES.hell.wall_groups.PLAIN = hell_prob * multiplier
+      GAME.THEMES.flesh.wall_groups.PLAIN = urban_prob * multiplier
+    end
+end
+
   local diag_wall_prob
   local plain_wall_prob
 
@@ -2634,18 +2665,22 @@ function Autodetail(level)
     plain_wall_prob = diag_wall_prob_default
     diag_wall_prob = diag_wall_prob_default
     gui.printf("Map is normal. No toning down required.\n")
+    set_wall_group_priorities(1)
   elseif total_walkable_area >= 1800 and total_walkable_area < 2400 then
     plain_wall_prob = 175
     diag_wall_prob = 175
     gui.printf("Map is huge. Toning down wall fabs.\n")
-  elseif total_walkable_area >= 2400 and total_walkable_area < 3600 then
+    set_wall_group_priorities(1.25)
+  elseif total_walkable_area >= 2200 and total_walkable_area < 2600 then
     plain_wall_prob = 250
     diag_wall_prob = 250
     gui.printf("Map is immense! Toning down wall fabs greatly!\n")
-  elseif total_walkable_area >= 3600 then
+    set_wall_group_priorities(1.5)
+  elseif total_walkable_area >= 2600 then
     plain_wall_prob = 500
     diag_wall_prob = 500
     gui.printf("Map is crazy! Toning down wall fabs like there's no tomorrow!\n")
+    set_wall_group_priorities(1.75)
   else
     gui.printf("Could not read map size!!!\n")
   end

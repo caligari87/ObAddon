@@ -716,64 +716,6 @@ ULTDOOM.THEMES =
       skull   = 0.2
     }
 
-  tech_metro_Hallway =
-  {
-    env   = "hallway"
-    group = "metro"
-    prob  = 25
-
-    walls =
-    {
-      BROWN1 = 50
-      SHAWN2 = 50
-      STARTAN3 = 50
-      STARG3 = 50
-      BROWNGRN = 50
-      BROWN96 = 50
-      GSTONE1 = 50
-      SP_HOT = 50
-    }
-
-    floors =
-    {
-      FLAT1 = 50
-      FLAT4 = 50
-      FLAT19 = 50
-      FLAT20 = 50
-      FLAT3 = 50
-      FLAT5 = 50
-      FLOOR0_1 = 50
-      FLOOR0_2 = 50
-      FLOOR0_3 = 50
-      FLOOR1_1 = 50
-      FLOOR1_6 = 50
-      FLOOR3_3 = 50
-      FLOOR4_1 = 50
-      FLOOR4_5 = 50
-      FLOOR4_6 = 50
-      FLOOR4_8 = 50
-      FLOOR5_3 = 50
-    }
-
-    ceilings =
-    {
-      CEIL3_2 = 50
-      CEIL3_3 = 50
-      CEIL3_5 = 50
-      FLAT1 = 50
-      FLAT18 = 50
-      FLAT19 = 50
-      FLAT20 = 50
-      FLAT3 = 50
-      FLOOR3_3 = 50
-      FLOOR4_1 = 50
-      FLOOR4_6 = 50
-      FLOOR4_8 = 50
-      FLOOR5_3 = 50
-      FLOOR5_4 = 50
-    }
-  }
-
   ceil_light_prob = 70
 
   }
@@ -1613,21 +1555,6 @@ ULTDOOM.ROOM_THEMES =
       CEIL4_1 = 15
       CEIL4_2 = 15
     }
-
-    wall_groups =
-    {
-      PLAIN = 90
-      gtd_computers = 35
-      mid_band = 12
-      mid_band2 = 10
-      lite1 = 5
-      lite2 = 15
-      gtd_wall_server_room = 20
-      gtd_wall_tech_windows_topcorner = 15
-      torches6 = 5
-      torches7 = 8
-      torches11 = 5
-    }
   }
 
   tech_Shiny =
@@ -1687,6 +1614,65 @@ ULTDOOM.ROOM_THEMES =
       FLAT4  = 20
       FLAT23 = 10
       FLAT1 = 10
+    }
+  }
+
+
+  tech_metro_Hallway =
+  {
+    env   = "hallway"
+    group = "metro"
+    prob  = 25
+
+    walls =
+    {
+      BROWN1 = 50
+      SHAWN2 = 50
+      STARTAN3 = 50
+      STARG3 = 50
+      BROWNGRN = 50
+      BROWN96 = 50
+      GSTONE1 = 50
+      SP_HOT = 50
+    }
+
+    floors =
+    {
+      FLAT1 = 50
+      FLAT4 = 50
+      FLAT19 = 50
+      FLAT20 = 50
+      FLAT3 = 50
+      FLAT5 = 50
+      FLOOR0_1 = 50
+      FLOOR0_2 = 50
+      FLOOR0_3 = 50
+      FLOOR1_1 = 50
+      FLOOR1_6 = 50
+      FLOOR3_3 = 50
+      FLOOR4_1 = 50
+      FLOOR4_5 = 50
+      FLOOR4_6 = 50
+      FLOOR4_8 = 50
+      FLOOR5_3 = 50
+    }
+
+    ceilings =
+    {
+      CEIL3_2 = 50
+      CEIL3_3 = 50
+      CEIL3_5 = 50
+      FLAT1 = 50
+      FLAT18 = 50
+      FLAT19 = 50
+      FLAT20 = 50
+      FLAT3 = 50
+      FLOOR3_3 = 50
+      FLOOR4_1 = 50
+      FLOOR4_6 = 50
+      FLOOR4_8 = 50
+      FLOOR5_3 = 50
+      FLOOR5_4 = 50
     }
   }
 
