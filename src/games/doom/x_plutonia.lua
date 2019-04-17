@@ -3,6 +3,7 @@
 --------------------------------------------------------------------
 --
 --  Copyright (C) 2006-2016 Andrew Apted
+--  Copyright (C) 2019 Glaice
 --
 --  This program is free software; you can redistribute it and/or
 --  modify it under the terms of the GNU General Public License
@@ -64,11 +65,25 @@ PLUTONIA.MATERIALS =
 
   A_YELLOW = { t="A-YELLOW", f="FLAT23" }
 
-  -- TODO: A-SKINxxx
+  A_ASKIN1 =   { t="A-ASKIN1",   f="FLAT5_6" }
+  A_ASKIN2 =   { t="A-ASKIN2",   f="FLAT5_6" }
+  A_ASKIN3 =   { t="A-ASKIN3",   f="FLAT5_6" }
+  A_ASKIN4 =   { t="A-ASKIN4",   f="FLAT5_6" }
+  A_ASKIN5 =   { t="A-ASKIN5",   f="FLAT5_6" }
+
+  -- Actually named SLIME## but named TSLIME to avoid
+  -- confusion with the flats of the same name
+  TSLIME1 =  { t="SLIME1",  f="FLAT5_2" }
+  TSLIME2 =  { t="SLIME2",  f="MFLR8_2" }
+  TSLIME3 =  { t="SLIME3",  f="SLIME13" }
+  TSLIME4 =  { t="SLIME4",  f="SLIME13" }
+  TSLIME5 =  { t="SLIME5",  f="CEIL5_2" }
+  TSLIME8 =  { t="SLIME8",  f="SLIME13" }
 
   -- this is animated
   AROCK1   = { t="AROCK1",   f="GRNROCK" }
   FIREBLU1 = { t="FIREBLU1", f="GRNROCK" }
+  FIREBLU2 = { t="FIREBLU2", f="GRNROCK" }
 
   JUNGLE1  = { t="MC10", f="RROCK19" }
   JUNGLE2  = { t="MC2",  f="RROCK19" }
@@ -80,14 +95,11 @@ PLUTONIA.MATERIALS =
   WFALL1   = { t="WFALL1", f="FWATER1", sane=1 }
   FWATER1  = { t="WFALL1", f="FWATER1", sane=1 }
 
-
-  -- TODO: Rails
-  --   A_GRATE = { t="A-GRATE", h=129 }
-  --   A_GRATE = { t="A-GRATE", h=129 }
-  --   A_RAIL1 = { t="A-RAIL1", h=32 }
-  --   A_VINE1 = { t="A-VINE1", h=128 }
-  --   A_VINE2 = { t="A-VINE2", h=128 }
-
+  -- Railing / Grates
+  A_GRATE = { t="A-GRATE", rail_h=128 }
+  A_RAIL1 = { t="A-RAIL1", rail_h=32 }
+  A_VINE1 = { t="A-VINE1", rail_h=128 }
+  A_VINE2 = { t="A-VINE2", rail_h=128 }
 
   -- Overrides for existing DOOM materials --
 
@@ -165,4 +177,3 @@ OB_GAMES["plutonia"] =
     PLUTONIA
   }
 }
-
