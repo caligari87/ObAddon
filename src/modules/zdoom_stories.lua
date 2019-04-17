@@ -1336,6 +1336,8 @@ ZDOOM_STORIES.QUIT_MESSAGES =
   [[Never gonna give you up, never gonna let you down, never gonna run and leave you without a fresh new megawad.]],
   [[At least when the demons slaughter anyone, it's regardless of gender, race, or creed.]],
   [[You can win Oblige, you just have to defeat a 64-bit permutation of maps and each variation per seed by changed setting to do so.]],
+  [[You want demons? We can give you more demons than there are stars in the observarble universe.]],
+  [[Don't worry about infinite hellspawn. Do what you love, and you'll never work a day in your life.]], -- I'm actually crediting this to HexaDoken
 
   -- helpful // technical
   [[ObAddon is always improving. Stop by our Discord server, talk to the denizens and report bugs to us there!]],
