@@ -3692,15 +3692,20 @@ namelib.NAMES =
         ["Oblige is Love, Oblige is Life"] = 40
         ["Perfect on Ultra-Violence"] = 30
         ["Ramp it to the MAX!"] = 25
+        ["Road to the World Cup"] = 20 -- By Swedra
         ["Random by Nature"] = 30
         ["Single and Multiplayer!"] = 30
         ["Skilled Players Sign Here"] = 25
         ["The Deadzone"] = 20
         ["The Principles of Doom"] = 30
+        ["The Threads of Life"] = 20
+        ["The Shreds of Humanity"] = 15
+        ["The True Story of Brutal Abuse"] = 20
         ["The World Beyond"] = 25
         ["This WAD Shouldn't Suck"] = 25
         ["Time to Man Up"] = 30
         ["Total Blackout"] = 20
+        ["Totally Worth Your Time"] = 25
         ["Turned Up to 110 Percent!"] = 20
         ["Under Construction"] = 25
         ["Virtuous By Nature"] = 20
@@ -3708,7 +3713,9 @@ namelib.NAMES =
         ["We Have to Start Somewhere"] = 20
         ["What Would Jesus Play?"] = 20
         ["You Guys Have Mods, Right?"] = 30
-
+        ["The New Challengers"] = 20 -- This one by Craneo
+        ["Third Strike"] = 20 -- Also by Craneo
+        
         -- based on popular movie/TV slogans
         ["A Minute in Hell"] = 20
         ["Whoever Wins We Lose"] = 20
@@ -3748,14 +3755,27 @@ namelib.NAMES =
         ["The Next Chapter"] = 20
 
         -- production-related phrases
+        ["11/10 IGN"] = 20
         ["An ObligeFlix Original Series"] = 40
+        ["Day One Edition"] = 20
+        ["Deluxe Edition"] = 25
+        ["Game of the Year Edition"] = 20
+        ["Greatest Hits"] = 20 -- Craneo
+        ["No Microtransactions"] = 20
         ["Subscribe and Hit that Like Button"] = 40
         ["The Official Video Game Tie-in"] = 20
-        ["No Microtransactions"] = 20
         ["The Original Series"] = 20
-        ["Day One Edition"] = 20
-        ["Game of the Year Edition"] = 20
-        ["11/10 IGN"] = 20
+        
+        -- Based on music, be it artists, song titles or album titles
+        ["Doomtanic Hellucinations"] = 20 -- Acid Witch - "Witchtanic Hellucinations" (song)
+        ["Hymns of Destruction"] = 20 -- The Adicts - "Songs of Praise" (album title)
+        ["Ashes of a Burning Earth"] = 25 -- Adversus Semita - "Ashes of a Burning Heaven" (song)
+        ["Doomx V"] = 30 -- Aeba - "Kodex V" (album title)
+        ["Demonic Rampage"] = 20 -- Afrobomination - "Galatic Rampage" (song)
+        ["Hell in Motion"] = 20 --  Against Nature - "All in Motion" (song)
+
+        -- Nerdery stuff
+        ["d20 Edition"] = 15 -- Also Swedra
       }
     }
   }
