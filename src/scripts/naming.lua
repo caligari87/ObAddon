@@ -708,7 +708,8 @@ namelib.NAMES =
         Ouroboros=5, -- actually sort of a neutral symbol
 
         -- Doom community people?
-        Linguica=1, Bloodshedder=1,
+        Linguica=1, -- Doomworld co-founder and administrator
+        Bloodshedder=1, -- Doomworld administrator
 
         -- Hexen?
         Vuradi=2,
