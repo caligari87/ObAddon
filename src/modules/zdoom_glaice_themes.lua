@@ -1821,7 +1821,7 @@ GLAICE_SINK_DEFS =
     dz = 112
     light = 16
 
-    trim_mat = "SKINLOW3"
+    trim_mat = "SKINMET3"
     trim_dz = -16
     light = 8
   }
