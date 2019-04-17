@@ -3543,6 +3543,27 @@ DECORATE_CAGE_ON_LIQUID_CANAL_SIDE =
   }
 }
 
+GROW_CAGE_ROUND_ARENA =
+{
+  prob = 10
+
+  structure =
+  {
+    ".....","11111"
+    ".....","1/C%1"
+    ".....","1CCC1"
+    ".....","1%C/1"
+    ".....","11111"
+    "x111x","x111x"
+  }
+
+  diagonals =
+  {
+    "1C","C1"
+    "1C","C1"
+  }
+}
+
 -- MSSP's elevated catwalks. [CATWALK]
 
 GROW_CATWALK_BIFUNNEL_SINK =
