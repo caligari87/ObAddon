@@ -2664,23 +2664,28 @@ end
   if total_walkable_area < 1800 then
     plain_wall_prob = diag_wall_prob_default
     diag_wall_prob = diag_wall_prob_default
-    gui.printf("Map is normal. No toning down required.\n")
     set_wall_group_priorities(1)
-  elseif total_walkable_area >= 1800 and total_walkable_area < 2400 then
+    gui.printf("Map is normal. No toning down required.\n")
+  elseif total_walkable_area >= 1800 and total_walkable_area < 2200 then
     plain_wall_prob = 175
     diag_wall_prob = 175
-    gui.printf("Map is huge. Toning down wall fabs.\n")
     set_wall_group_priorities(1.25)
+    gui.printf("Map is huge. Toning down wall fabs.\n")
   elseif total_walkable_area >= 2200 and total_walkable_area < 2600 then
     plain_wall_prob = 250
     diag_wall_prob = 250
-    gui.printf("Map is immense! Toning down wall fabs greatly!\n")
     set_wall_group_priorities(1.5)
-  elseif total_walkable_area >= 2600 then
+    gui.printf("Map is immense! Toning down wall fabs greatly!\n")
+  elseif total_walkable_area >= 2600 and total_walkable_area < 3000 then
     plain_wall_prob = 500
     diag_wall_prob = 500
+    set_wall_group_priorities(2)
     gui.printf("Map is crazy! Toning down wall fabs like there's no tomorrow!\n")
-    set_wall_group_priorities(1.75)
+  elseif total_walkable_area >= 3000 then
+    plain_wall_prob = 750
+    diag_wall_prob = 750
+    set_wall_group_priorities(3)
+    gui.printf("This map is way too huge?!\n")
   else
     gui.printf("Could not read map size!!!\n")
   end
