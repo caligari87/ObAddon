@@ -843,6 +843,18 @@ GLAICE_DOOM1_MATERIALS = {
   ZIMMER2  = { t="ZIM2", f="RROCK20" }
   ZIMMER3  = { t="ZIM3", f="FLAT10" }
   ZIMMER4  = { t="ZIM4", f="FLAT10" }
+  ZZWOLF1  = { t="STONE", f="FLAT5_4" }
+  ZZWOLF2  = { t="STONE", f="FLAT5_4" }
+  ZZWOLF3  = { t="MARBFACE", f="FLOOR7_2" }
+  ZZWOLF4  = { t="MARBFAC3", f="FLOOR7_2" }
+  ZZWOLF5  = { t="WOOD1", f="FLAT5_2" }
+  ZZWOLF6  = { t="WOOD4", f="FLAT5_1" }
+  ZZWOLF7  = { t="MARBFACE", f="FLOOR7_2" }
+  ZZWOLF9  = { t="STONE3", f="FLAT1" }
+  ZZWOLF10  = { t="SHAWN2", f="FLAT23" }
+  ZZWOLF11  = { t="ROCKRED1", f="FLOOR6_1" }
+  ZZWOLF12  = { t="MARBFAC2", f="FLOOR7_2" }
+  ZZWOLF13  = { t="TEKWALL4", f="CEIL5_1" }
 
   -- Replacement rails
   MIDBARS1 = { t="FENCE1", rail_h=128 }
