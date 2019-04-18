@@ -361,6 +361,7 @@ namelib.NAMES =
         -- military stuff -MSSP
         Casern=5, ["F.O.B."]=7, ["Fire Base"]=10,
         Garrison=10, Logistics=10, Containment=7,
+        Berths=5,
 
         -- machine/electronic parts -MSSP
         -- and weird science-y buzzwords
@@ -1380,12 +1381,12 @@ namelib.NAMES =
 
       -- Types of roads, useful when Streets Mode
       -- kicks in.
-      ["%a St."] = 10 -- Street
-      ["%a Rd."] = 10 -- Road
-      ["%a Ave."] = 10 -- Avenue
-      ["%a Dr."] = 5 -- Drive
-      ["%a Pl."] = 5 -- Place
-      ["%a Ln."] = 5 -- Lane
+      ["%a St."] = 7 -- Street
+      ["%a Rd."] = 7 -- Road
+      ["%a Ave."] = 7 -- Avenue
+      ["%a Dr."] = 4 -- Drive
+      ["%a Pl."] = 4 -- Place
+      ["%a Ln."] = 4 -- Lane
 
     }
 
@@ -1398,50 +1399,113 @@ namelib.NAMES =
 
       a =
       {
+        -- generics,
+        General=5, Generics=7,
+
         -- size
         Plethoric=7, Sprawling=10, Unending=7,
         Serpentine=10, Hulking=3, Giant=2, Vast=7,
+        Monstrous=3,
 
-        -- location
+        --+ supernatural
         Arcane=5, Hidden=5, Ethereal=5, Nether_=5,
         Northern=10, Southern=10, Eastern=10, Western=10,
+
+        --+ directional
         Upper=5, Lower=10, Central=5, Northeast=5, Northwest=5,
         Inner=5, Innermost=3, Southeast=5, Southwest=5,
         Outer=5, Outermost=3,
-        Furthest=5, Isolated=10,
+        Focal=5,
 
-        -- condition
+        --+ distance/inaccessibility
+        Furthest=5, Isolated=10, Remote=5, Obscure=10,
+        Lost=5,
+        Cordoned=5, Quarantined=5, Sequestered=5,
+        Confined=5, Secluded=5, Sealed=3,
+        Restricted=5, Blocked=3, Segregated=3,
+
+        --+ time
         Old=10, Ancient=20, Eternal=7,
+
+        --+ state of repair/damage
         Decrepid=20, Lost=10, Forgotten=10,
         Ravished=10, Barren=20, Deadly=5,
+        Flooded=5, Bombarded=2, Corrosive=2,
+        Ruined=3, Charred=10, Neglected=5,
+        Deteriorated=5,
+
+        --+ decay
+        Decayed=5,
         Stagnant=10, Rancid=5, Rotten=3,
-        Flooded=5, Sunken=3, Occult=5,
-        Misty=10, Foggy=5, Toxic=2,
-        Windy=10, Hazy=3, Distraught=5, Charred=10,
-        Urban=10, Bombarded=2, Corrosive=2,
+        Sunken=3, Toxic=2, Polluted=10,
+        Infected=10, Infested=10,
+        Contaminated=10,
 
-        -- descriptive
-        Monstrous=3, Monster=15, Wild=5,
-        Demonic=3, Demon=15, Polluted=10,
-        Invaded=5, Overtaken=5, Stolen=3,
-        Haunted=20, Infected=10, Infested=10,
+        --+ weather
+        Windy=10, Hazy=3, Foggy=5, Misty=10,
+        Clouded=5, Gray=5, Brackish=5, Overcast=10,
+        Humid=5, Torrid=5, Tropic=2,
+
+        --+ city
+        Urban=10, Metropolitan=10, Cosmopolitan=3,
+        Civic=3, Communal=5, Municipal=3,
+        Capital=5, Commercial=5, Trading=5,
+        Company=5, Administrative=5,
+
+        --+ supernatural/evil
+        Occult=5, Distraught=5, Malevolent=5,
         Corrupted=15, Corrupt=15, Fateful=5,
-        Besieged=10, Contaminated=10, Malevolent=5,
-
-        Savage=10, Menacing=15, Frightening=10, Creepy=5,
-        Dark=30, Darkest=7, Horrible=10, Exotic=5,
-        Dismal=10, Dreadful=10, Cold=7, Ugly=2,
-        Vacant=15, Empty=7, Lonely=2, Desperate=2,
-        Unknown=5, Unexplored=7, Lupine=2,
-        Crowded=3, Untamed=3,
-
-        Bleak=30, Abandoned=15, Forsaken=10,
+        Monster=15, Demonic=3, Demon=15,
+        Frightening=10, Creepy=5, Ominous=15,
+        Haunted=20, Menacing=15,
         Cursed=20, Wretched=15, Bewitched=5,
-        Forbidden=20, Sinister=10, Hostile=10,
-        Mysterious=10, Obscure=10, Living=3,
-        Ominous=15, Perilous=15,
+        Forbidden=20, Sinister=10, Mysterious=10,
+        Profligate=5, Depraved=5, Incorrigible=3,
+        Wanton=3, Dissolute=3,
+
+        --+ wilderness
+        Wild=5, Savage=10, Untamed=3,
+        Unexplored=7, Teeming=3, Lush=3,
+        Lupine=2,
+
+        --+ military/criminal possession
+        Invaded=5, Besieged=10, Swarmed=5,
+        Overtaken=5, Stolen=3,
+
+        --+ illumination
+        Dark=20, Darkest=7, Dismal=10,
+        Murky=5,
+
+        --+ abandonment
+        Bleak=20, Abandoned=15, Forsaken=10,
+        Deserted=5, Vacated=5, Forgotten=12,
+        Derelict=15, Desolate=5, Forlorn=3,
+        Bereft=3, Stranded=2, Vacant=15, Empty=7,
+        Dead=15,
+
+        --+ aesthetic
+        Horrible=10, Exotic=5, Dreadful=10,
+
+        --+ temperature
+        Cold=7, Bitter=3, Frigid=5,
+        Algid=5, Polar=5, Gelid=3,
+        Boreal=3, Hot=7,
+
+        --+ emotion
+        Lonely=2, Desperate=2, Ugly=2,
+
+        --+ populated congestion
+        Crowded=3, Cramped=3, Congested=5,
+        Huddled=3, Compact=5, Crammed=2,
+
+        --+ level of danger
+        Catastrophic=5, Perilous=15, Hostile=10,
+        Dangerous=10, Precarious=5, Treacherous=5,
+        Formdiable=3, Unsafe=5,
+
+        Unknown=5, Living=3,
         Slaughter=5, Murder=5, Killing=5,
-        Catastrophic=5, Whispering=10,
+        Whispering=10,
 
         -- ObAddon contributor names
         NOUNMEMBERS = 50
@@ -1452,34 +1516,29 @@ namelib.NAMES =
 
       n =
       {
+        -- castle and castle parts
+        Castle=20, Citadel=10,
+        Keep=3, Slough=3, Temple=3,
+        Gate=10, Prison=15, Dens=5,
+        Coliseum=2, Courtyard=10, Court=10,
+
+        -- territories
         City=20, Town=20, Village=10,
-        Condominium=10, Condo=5, Citadel=10,
-        Plaza=10, Square=5, Kingdom=15,
-        Fortress=20, Fort=5, Stronghold=5,
-        Palace=20, Courtyard=10, Court=10,
-        Hallways=20, Halls=5, Corridors=7,
-
-        Castle=20, Mineshaft=5, Embassy=5,
-        House=20, Mansion=10, Manor=10,
-        Refuge=5, Sanctuary=5, Asylum=10,
-        Dwelling=3, Estate=2, Sewers=2,
-        Outpost=5, Keep=3, Slough=3, Temple=3,
-        Gate=10, Prison=15, Dens=5, Slums=5,
-        Coliseum=2, Chateau=2,
-
         World=5, Country=10, Zone=10,
+        Square=5, Kingdom=15,
         District=10, Precinct=10,
         Dominion=10, Domain=3, Trail=10,
         Region=10, Territory=5, Path=5,
-        Neighborhood=3, Environs=2,
-        Barrio=2, Crossing=5,
-        Promenade=5, Trek=5, Venture=5,
-        Voyage=7,
+        Province=10, Jurisdiction=10,
 
-        Camp=3, Campus=2, Compound=3, Venue=1,
+        -- adventure
+        Trek=5, Venture=5,
+        Voyage=7, Odyssey=2,
+
+        -- watery
         Harbor=10, Reserve=3, Ward=3,
         Seabed=5, Embankment=3,
-        Oasis=2, Odyssey=2,
+        Oasis=2, Waterways=5,
 
         -- dirt
         Soil=10, Scum=5,
@@ -1497,8 +1556,13 @@ namelib.NAMES =
         Acreage=2, Block=10, Plots=5,
         Tracts=3,
 
-        -- generic structures
+        -- generic structures/locations
         Towers=10, Quarters=10, Division=3,
+        Hub=5, Polestar=2, Post=5, Complex=15,
+        Campus=5, Compound=10, Venue=2,
+        Annex=5, Hallways=20, Halls=5, Corridors=7,
+        Promenade=5, Cubicles=5, Wing=5,
+        Building=20,
 
         -- pathways
         Alleys=10, Backstreets=5, Lane=5,
@@ -1507,33 +1571,60 @@ namelib.NAMES =
         Crossroads=5, Boulevards=3, Parkway=5,
         Route=5, Thoroughfare=3, Access=5,
         Drive=3, Junction=2, Course=5,
-        Bypass=2,
+        Bypass=2, Gap=5, Concourse=8,
+        Crossing=5, Exchange=5, Channels=5,
 
         -- military
-        Barracks=5, Depot=3,
+        Barracks=5, Depot=3, Outpost=5,
+        Fortress=20, Fort=5, Stronghold=5,
+        Camp=3, Berths=5, Garage=5,
 
         -- weird ones
         Echo=1,
 
         -- industrial
         Mines=10, Quarry=5, Docks=10,
+        Warehouse=10, Port=10, Mineshaft=5,
+        Firm=5, Workrooms=2, Works=3,
+        Factory=10, Forge=3, Foundry=3,
+        Mint=3, Sweatshops=5, Mill=10,
 
         -- commercial -MSSP
-        Mall=5, Strip=5, Market=8,
+        Mall=10, Strip=7, Market=8,
+        Mart=5, Bazaar=10, Bodega=5,
+        Souk=8, Fair=10, Stores=5,
+        Showrooms=5, Emporium=7,
+        Groceries=3, Stadium=5, Shops=5,
+        Agora=1, Marketplace=10, Offices=5,
+        Agency=3, Department=5, Bureau=3,
+        Suites=2, Workstation=7,
 
         -- civic -MSSP
         Hospital=5, Park=5, Commons=10,
-        Gardens=15,
+        Gardens=15, Plaza=10, Embassy=5,
+        Sewers=10, Asylum=10, Forum=5,
+        Assembly=5, Authority=5, Services=3,
 
-        -- residential -MSSP
+        -- residential
+        Condominium=10, Condo=5, Chateau=2,
         Projects=10, Housing=5, Coop=3,
         Hive=5, Cooperative=5, Tenements=5,
         Domicile=3, Habitations=3, Abode=5,
         Settlement=7, Suburbs=10, Residences=5,
         Shelter=10, Board=5, Bunk=3, Habitat=2,
+        Palace=15, Neighborhood=3, Environs=2,
+        Barrio=2, House=20, Mansion=10, Manor=10,
+        Estate=2, Slums=15, Refuge=5, Sanctuary=5,
+        Dwelling=3, Lofts=8,
 
         -- architectural
-        Roofs=10,
+        Roofs=10, Piazza=5, Portico=5, Loggia=3,
+        Galleria=5, Arcade=5,
+
+        -- battleground
+        Battlefront=5, Battlezone=5, Warzone=5,
+        Battlegrounds=7, Front=5,
+        Standoff=5, Deadlock=5, Stalemate=5,
       }
 
       h =
@@ -1560,6 +1651,7 @@ namelib.NAMES =
         Madmen=2, Mortals=10, Martyrs=5,
         Prophets=5, Prey=5, Crows=5, Addicts=3,
         Fools=1, Creeps=3, Demigods=3,
+        Gargoyles=3,
 
         ["the Abandoned"]=5
         ["the Bizarre"]=5
