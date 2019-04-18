@@ -7,7 +7,7 @@ PREFABS.Item_closet_toilet_room_small =
   file   = "item/gtd_item_closet_toilet_small.wad"
   map    = "MAP01"
 
-  prob   = 20
+  prob   = 10
   theme  = "!hell"
   env    = "!cave"
 
