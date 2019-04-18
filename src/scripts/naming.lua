@@ -344,7 +344,12 @@ namelib.NAMES =
         Catalyst=2,
 
         -- MSSP adds
-        Dome=7, Basin=5,
+        -- shapes
+        Dome=7, Quadrangle=3, Rotunda=2,
+        Circle=10, Triangle=3, Ring=5,
+        Oval=2,
+
+        Basin=5,
 
         -- storage-ish words -MSSP
         Armory=10, Yard=7, Depository=8,
@@ -559,6 +564,12 @@ namelib.NAMES =
   {
     patterns =
     {
+      -- lexicon legend:
+      -- %e = Entity
+      -- %a = Adjectives
+      -- %n = Places
+      -- %h = Object/Adjective
+
       ["%a %n"] = 60
       ["%t %a %n"] = 20
 
@@ -829,7 +840,7 @@ namelib.NAMES =
         Spire=10, Arena=3, Swaths=2, Monastery=10,
         Gate=3, Altar=7, Chapel=10, Village=3,
         Tower=3, Mountains=2, Prison=3, Narthex=5,
-        Sanctuary=3, Basillica=3, Morgue=5, Ring=5,
+        Sanctuary=3, Basillica=3, Morgue=5,
 
         -- weird ones
         Communion=5, Monolith=5, Crucible=5,
@@ -912,14 +923,29 @@ namelib.NAMES =
         Monitor=5, Niche=10, Oculus=5,
         Solar=5, Cellars=10, Alcoves=3,
 
+        -- other synonyms for arena
+        Gridiron=3, Hippodrome=3, Pit=3,
+        Grounds=3, Stade=3, Strand=3,
+        Coliseum=3,
+
         -- synyonyms for slaugterhouse
         Abattoir=3, Butchery=3,
 
         -- shapes
         Dome=10, Quadrangle=3, Rotunda=2,
-        Circle=10, Triangle=3,
+        Circle=10, Triangle=3, Ring=5,
+        Oval=2,
 
         Pavillion=5, Monument=10, Garth=3,
+
+        -- nest
+        Nest=10, Aerie=5, Haunt=3,
+
+        -- prison
+        Durance=5, Captivity=3, Confinement=3,
+        Isolation=3, Duress=3, Remand=2, Thralldom=2,
+        Immuration=3, Bastille=2, Brig=3,
+        Sty=3, Antechamber=3, Hold=3,
       }
 
       h =
@@ -1426,7 +1452,7 @@ namelib.NAMES =
 
       n =
       {
-        City=30, Town=20, Village=10,
+        City=20, Town=20, Village=10,
         Condominium=10, Condo=5, Citadel=10,
         Plaza=10, Square=5, Kingdom=15,
         Fortress=20, Fort=5, Stronghold=5,
@@ -1446,41 +1472,68 @@ namelib.NAMES =
         Dominion=10, Domain=3, Trail=10,
         Region=10, Territory=5, Path=5,
         Neighborhood=3, Environs=2,
-        Bypass=2, Barrio=2, Crossing=5,
+        Barrio=2, Crossing=5,
         Promenade=5, Trek=5, Venture=5,
-        Voyage=7, Course=5,
+        Voyage=7,
 
         Camp=3, Campus=2, Compound=3, Venue=1,
         Harbor=10, Reserve=3, Ward=3,
-        Junction=2, Seabed=5, Embankment=3,
-        Oasis=2, Odyssey=2, Habitat=2, Soil=10,
-        Scum=5, Remnants=10, Remains=5, Debris=5,
+        Seabed=5, Embankment=3,
+        Oasis=2, Odyssey=2,
+
+        -- dirt
+        Soil=10, Scum=5,
+        Remnants=10, Remains=5, Debris=5,
         Refuse=5, Dust=5, Dirt=3,
 
+        -- destruction
         Siege=5, Assault=5, Attack=5, Ambush=5,
         Onslaught=5, Stampede=5, Encounter=5,
         Conflict=5,
 
-        -- plurals
-        Lands=20, Fields=20, Footprints=5,
-        Alleys=10, Docks=10,
-        Towers=10, Streets=10, Roads=5,
-        Gardens=15, Warrens=5, Quarry=5,
-        Crossroads=5, Outskirts=10,
-        Suburbs=10, Quarters=10,
-        Mines=20, Barracks=5,
+        -- generic flatlands
+        Lands=10, Fields=10, Footprints=5,
+        Warrens=5, Outskirts=10, Lots=5,
+        Acreage=2, Block=10, Plots=5,
+        Tracts=3,
+
+        -- generic structures
+        Towers=10, Quarters=10, Division=3,
+
+        -- pathways
+        Alleys=10, Backstreets=5, Lane=5,
+        Streets=10, Roads=5, Walk=3,
+        Passage=5, Avenues=3, Outlets=5,
+        Crossroads=5, Boulevards=3, Parkway=5,
+        Route=5, Thoroughfare=3, Access=5,
+        Drive=3, Junction=2, Course=5,
+        Bypass=2,
+
+        -- military
+        Barracks=5, Depot=3,
 
         -- weird ones
         Echo=1,
+
+        -- industrial
+        Mines=10, Quarry=5, Docks=10,
 
         -- commercial -MSSP
         Mall=5, Strip=5, Market=8,
 
         -- civic -MSSP
         Hospital=5, Park=5, Commons=10,
+        Gardens=15,
 
         -- residential -MSSP
-        Projects=10, Housing=5,
+        Projects=10, Housing=5, Coop=3,
+        Hive=5, Cooperative=5, Tenements=5,
+        Domicile=3, Habitations=3, Abode=5,
+        Settlement=7, Suburbs=10, Residences=5,
+        Shelter=10, Board=5, Bunk=3, Habitat=2,
+
+        -- architectural
+        Roofs=10,
       }
 
       h =
