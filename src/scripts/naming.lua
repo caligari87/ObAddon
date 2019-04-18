@@ -683,7 +683,7 @@ namelib.NAMES =
         Ninurta=3,
 
         -- Diablo games
-        Diablo=7, Andraiel=3, Duriel=3, Belial=3,
+        Diablo=7, Andariel=3, Duriel=3, Belial=3,
         Azmodan=3, Rakanoth=3, Inarius=3, Izual=3,
         Adria=1, ["Tal Rasha"]=2,
 
@@ -732,9 +732,9 @@ namelib.NAMES =
         Resriphahiel=3, Abmehaus=3, Enon=3, Azhesap=3, Hamiel=3, Umesas=3, Tebhecnorael=3, Opedib=3, Naheh=3,]]
 
         -- ObAddon contributor names
-        NOUNMEMBERS = 50
+        NOUNMEMBERS = 90
 
-        NOUNGENEXOTIC = 200
+        NOUNGENEXOTIC = 700
       }
 
       a =
@@ -827,7 +827,7 @@ namelib.NAMES =
         Labyrinth=5, Dungeon=10, Shores=5, Cenotaph=5,
         Temple=20, Shrine=10, Vault=10, Sanctum=10,
         Spire=10, Arena=3, Swaths=2, Monastery=10,
-        Gate=3, Circle=10, Altar=7, Chapel=10, Village=3,
+        Gate=3, Altar=7, Chapel=10, Village=3,
         Tower=3, Mountains=2, Prison=3, Narthex=5,
         Sanctuary=3, Basillica=3, Morgue=5, Ring=5,
 
@@ -851,7 +851,45 @@ namelib.NAMES =
         -- temples of sorts
         Abbey=10, Monastery=10, Friary=3,
         Priorate=5, Lamasery=3, Convent=10,
-        Hermitage=5, Ziggurat=10,
+        Hermitage=5, Ziggurat=10, Bethel=3,
+        Parish=3, Sacellum=3,
+
+        --+ parts of temples
+        ---+ (based on Greek architecture)
+        Cella=3, Terastyle=2, Hexastyle=2,
+        Dipteral=3, Anta=3, Tholos=3,
+        Peripteral=3, Hypostyle=2,
+
+        ---+ (based on old Jewish stuff)
+        Soreg=2, Hekhal=2, Debir=1,
+
+        -- modern-ish church bits
+        Baptistery=3, Ciborium=3, Nave=3,
+        Clerestory=3, Transept=5, Scriptorium=7,
+        Synagogue=10, Belfries=2, Pulpitum=3,
+        Dais=3, Feretory=5, Maqsurah=3,
+        Peripteral=3, Chantry=3, Font=2,
+        Sacristy=3,
+
+        Plumbery=2,
+
+        Minaret=3,
+
+        Monstrance=3, Reliquary=10,
+
+        --+ stuff priests own
+        Parsonage=3, Vicarage=3, Rectory=3,
+        Clege=3, Presbytery=3, Benefice=3,
+        Manse=3,
+
+        --+ groups of priests
+        Clergy=1, Cardinalate=2, Conclave=3,
+        Pastorate=2, Rabbinate=2, Canonry=3,
+        Deaconry=3, Order=3,
+
+        --+ districts of church/religious offices
+        Diocese=3, Episcopate=3, Prelacy=3,
+        Bishopric=3, Curacy=3, Chancellery=5
 
         -- deady stuff
         Mausoleum=15, Undercroft=5, Entombment=5,
@@ -866,31 +904,22 @@ namelib.NAMES =
         Oriel=3, Pier=5, Triforium=3,
         Jetty=2, Pylon=5,
 
-        Hypostyle=2,
-
-        -- church bits
-        Baptistery=3, Ciborium=3, Nave=3,
-        Clerestory=3, Transept=5, Scriptorium=7,
-        Synagogue=10, Belfries=2, Pulpitum=3,
-        Dais=3, Feretory=5, Maqsurah=3,
-        Peripteral=3,
-
-        Minaret=3,
-
-        Monstrance=3, Reliquary=10,
-
-        Chancellery=5
-
         -- generic architectural stuff
         Banister=5, Gallery=5,
         Parapet=5, Terraces=5, Banquette=2,
-        Balcony=3, Cusp=3, Dome=10, Portal=5,
+        Balcony=3, Cusp=3, Portal=5,
         Tribune=7, Vestibule=10, Atrium=10,
-        Terastyle=2, Hexastyle=2, Monitor=5,
-        Niche=10, Oculus=5, Solar=5,
-        Rotunda=2, Cellars=10,
+        Monitor=5, Niche=10, Oculus=5,
+        Solar=5, Cellars=10, Alcoves=3,
 
-        Pavillion=5, Monument=10,
+        -- synyonyms for slaugterhouse
+        Abattoir=3, Butchery=3,
+
+        -- shapes
+        Dome=10, Quadrangle=3, Rotunda=2,
+        Circle=10, Triangle=3,
+
+        Pavillion=5, Monument=10, Garth=3,
       }
 
       h =
