@@ -271,21 +271,23 @@ namelib.NAMES =
         Chromium=3, Plasma=10, Ion=8,
         Dilithium=7, Verteron=5, --nerd
         Deuterium=5, Antimatter=5, Isotope=3,
-        Syngas=5,
+        Syngas=5, Flux=10, Rubidium=3, Magmatic=3,
+        Silicone=5,
 
         -- can't get enough weird sci-fi buzzwords -MSSP
         Axioinic=3, Gravimetric=5,
         Graviton=5, Nitrogen=5, Hyperwave=7,
         Magnetic=5, Nanosphere=5, Nanobrane=3,
-        Geodesic=7, Biaxial=5,
-        Phased=5, Metatronic=5, Vacuum=5,
-        Superluminal=5, Rubidium=3, Magmatic=3,
+        Geodesic=7, Biaxial=5, Phased=5,
+        Metatronic=5, Vacuum=5, Superluminal=5,
         Temporal=5, Sonic=5, Optic=3,
-        Damping=5, Hydraulic=7, Flux=10,
+        Damping=5, Hydraulic=7, Spooling=5,
+        Bespoke=2,
 
         -- mechanical processes -MSSP
         Filtration=5, Pneumatic=5, Catalytic=3,
-        Pyrolytic=5,
+        Pyrolytic=5, Construction=5, Fabrication=5,
+        Production=10, Repair=10,
 
         -- mathematical shapes/structures
         Toroidal=5, Solenoid=5, Helical=5,
@@ -309,7 +311,7 @@ namelib.NAMES =
         Generator=12, Plant=15, Base=30,
         Warehouse=10, Depot=10, Storage=5,
         Lab=15, Laboratory=5, Depositry=3,
-        Station=20, Reactor=10, Tower=5,
+        Station=15, Reactor=10, Tower=5,
         Refinery=15, Factory=10, Storehouse=5,
         Gateway=10, Hangar=5, Outpost=10,
         Tunnels=10, Bunker=7, Facility=10, Workshop=7,
@@ -319,9 +321,10 @@ namelib.NAMES =
         Colony=15, Compound=15, Foundry=3,
         Headquarters=2, Observatory=3,
         Shaft=3, Silos=7, Substation=10,
+        Dam=5,
 
         -- general places
-        Complex=20, Center=20,
+        Complex=15, Center=15,
         Facility=10, Works=2,
         Area=15, Site=10, Zone=10,
         Quadrant=5, Sector=5, Adjunct=3,
@@ -349,7 +352,7 @@ namelib.NAMES =
         Circle=10, Triangle=3, Ring=5,
         Oval=2,
 
-        Basin=5,
+        Basin=5, Arm=5,
 
         -- storage-ish words -MSSP
         Armory=10, Yard=7, Depository=8,
@@ -361,7 +364,7 @@ namelib.NAMES =
         -- military stuff -MSSP
         Casern=5, ["F.O.B."]=7, ["Fire Base"]=10,
         Garrison=10, Logistics=10, Containment=7,
-        Berths=5,
+        Berths=5, Housing=5,
 
         -- machine/electronic parts -MSSP
         -- and weird science-y buzzwords
@@ -385,6 +388,10 @@ namelib.NAMES =
         Caliper=3, Rotor=5, Shield=10,
         Synchronizer=5, Conditioner=3, Distillery=5,
         Transistor=3, Diode=3, Boiler=3,
+        Compositor=5, Sorter=5, Cultivator=3,
+        Engine=7, Solderer=3,
+
+        Framework=5, Compartment=5,
       }
 
       s =
@@ -1377,7 +1384,7 @@ namelib.NAMES =
       ["%v %n"]    = 25
       ["%v %a %n"] = 25
 
-      ["%s"] = 18
+      ["%s"] = 15
 
       -- Types of roads, useful when Streets Mode
       -- kicks in.
@@ -1435,11 +1442,11 @@ namelib.NAMES =
         Deteriorated=5,
 
         --+ decay
-        Decayed=5,
+        Decayed=5, Putrid=5, Noxious=5,
         Stagnant=10, Rancid=5, Rotten=3,
         Sunken=3, Toxic=2, Polluted=10,
         Infected=10, Infested=10,
-        Contaminated=10,
+        Contaminated=10, Fetid=5, Festering=5,
 
         --+ weather
         Windy=10, Hazy=3, Foggy=5, Misty=10,
@@ -1562,7 +1569,8 @@ namelib.NAMES =
         Campus=5, Compound=10, Venue=2,
         Annex=5, Hallways=20, Halls=5, Corridors=7,
         Promenade=5, Cubicles=5, Wing=5,
-        Building=20,
+        Building=20, Superstructure=10,
+        Substructure=10, Compartment=5,
 
         -- pathways
         Alleys=10, Backstreets=5, Lane=5,
@@ -1580,7 +1588,7 @@ namelib.NAMES =
         Camp=3, Berths=5, Garage=5,
 
         -- weird ones
-        Echo=1,
+        Echo=1, Dream=1, Nightmare=1,
 
         -- industrial
         Mines=10, Quarry=5, Docks=10,
@@ -1604,6 +1612,7 @@ namelib.NAMES =
         Gardens=15, Plaza=10, Embassy=5,
         Sewers=10, Asylum=10, Forum=5,
         Assembly=5, Authority=5, Services=3,
+        Institution=5,
 
         -- residential
         Condominium=10, Condo=5, Chateau=2,
