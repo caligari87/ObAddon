@@ -2,14 +2,14 @@ PREFABS.Item_closet_toilet_point =
 {
   file  = "item/gtd_item_closet_toilet_point.wad"
 
+  map   = "MAP01"
+
   prob  = 25
   theme = "!hell"
 
   where = "point"
   height = 128
   size  = 96
-
-  z_fit = "top"
 }
 
 PREFABS.Item_closet_toilet_point_key_carrier =
