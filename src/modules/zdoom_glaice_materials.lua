@@ -802,7 +802,7 @@ GLAICE_MATERIALS = {
   FLOOR4_7 = { f="FLOOR4_7", t="STARGR1" }
   FLOOR51C = { f="FLOOR51C", t="METAL1" }
   FLOOR7_3 = { f="FLOOR7_3", t="GOTH11" }
-  
+
   -- Egypt
   EG01  = { t="EGYPT03",  f="EG01" }
   EG02  = { t="STONE6",  f="EG02" }

@@ -1330,7 +1330,7 @@ ZDOOM_STORIES.QUIT_MESSAGES =
   [[That's too bad, perhaps _RAND_DEMON the _EVULZ should make you their bitch for considering quitting?]],
   [[_RAND_CONTRIBUTOR is disappointed in you. Hit N now or face retribution.]],
   [[He who is not bold enough to be stared at from across the abyss is not bold enough to stare into it himself.]], -- Silent Hill 2
- 
+
   -- hardcore philosophy
   [[Are you quitting because you realized no matter how much hellspawn you mow down, Oblige will just give you more?]],
   [[_RAND_CONTRIBUTOR wants to know you're quitting from an Oblige map. :( Unless you just finished it all. :D]],

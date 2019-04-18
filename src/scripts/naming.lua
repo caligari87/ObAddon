@@ -3724,7 +3724,7 @@ namelib.NAMES =
         ["We Have to Start Somewhere"] = 20
         ["What Would Jesus Play?"] = 20
         ["You Guys Have Mods, Right?"] = 30
-                
+
         -- based on popular movie/TV slogans
         ["A Minute in Hell"] = 20
         ["Whoever Wins We Lose"] = 20
@@ -3775,7 +3775,7 @@ namelib.NAMES =
         ["Subscribe and Hit that Like Button"] = 40
         ["The Official Video Game Tie-in"] = 20
         ["The Original Series"] = 20
-        
+
         -- Based on music, be it artists, song titles or album titles
         ["Doomtanic Hellucinations"] = 20 -- Acid Witch - "Witchtanic Hellucinations" (song)
         ["Hymns of Destruction"] = 20 -- The Adicts - "Songs of Praise" (album title)
