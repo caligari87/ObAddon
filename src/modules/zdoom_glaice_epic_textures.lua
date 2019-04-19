@@ -32,14 +32,13 @@ GLAICE_EPIC_TEXTURES.YES_NO =
 }
 
 function GLAICE_EPIC_TEXTURES.setup(self)
-  GLAICE_EPIC_TEXTURES.put_new_materials()
-  PARAM.epic_textures_activated = true
-
   for name,opt in pairs(self.options) do
     local value = self.options[name].value
     PARAM[name] = value
   end
 
+  GLAICE_EPIC_TEXTURES.put_new_materials()
+  PARAM.epic_textures_activated = true
 end
 
 function GLAICE_EPIC_TEXTURES.put_new_materials()
@@ -56,16 +55,18 @@ function GLAICE_EPIC_TEXTURES.put_new_materials()
 
     -- put the custom theme definitions in the themes table!!!
     -- LIQUIDZ
-    for name,prob in pairs(GLAICE_TECH_LIQUIDS) do
-      GAME.THEMES.tech.liquids[name] = prob
-    end
+    if PARAM.custom_liquids != "no" then
+      for name,prob in pairs(GLAICE_TECH_LIQUIDS) do
+        GAME.THEMES.tech.liquids[name] = prob
+      end
 
-    for name,prob in pairs(GLAICE_URBAN_LIQUIDS) do
-      GAME.THEMES.urban.liquids[name] = prob
-    end
+      for name,prob in pairs(GLAICE_URBAN_LIQUIDS) do
+        GAME.THEMES.urban.liquids[name] = prob
+      end
 
-    for name,prob in pairs(GLAICE_HELL_LIQUIDS) do
-      GAME.THEMES.hell.liquids[name] = prob
+      for name,prob in pairs(GLAICE_HELL_LIQUIDS) do
+        GAME.THEMES.hell.liquids[name] = prob
+      end
     end
 
     -- FACADES
@@ -182,17 +183,18 @@ function GLAICE_EPIC_TEXTURES.put_new_materials()
 
     -- put the custom theme definitions in the themes table!!!
     -- LIQUIDZ
-    for name,prob in pairs(GLAICE_DOOM1_TECH_LIQUIDS) do
-      GAME.THEMES.tech.liquids[name] = prob
-    end
+    if PARAM.custom_liquids != "yes" then
+      for name,prob in pairs(GLAICE_DOOM1_TECH_LIQUIDS) do
+        GAME.THEMES.tech.liquids[name] = prob
+      end
 
+      for name,prob in pairs(GLAICE_DOOM1_DEIMOS_LIQUIDS) do
+        GAME.THEMES.deimos.liquids[name] = prob
+      end
 
-    for name,prob in pairs(GLAICE_DOOM1_DEIMOS_LIQUIDS) do
-      GAME.THEMES.deimos.liquids[name] = prob
-    end
-
-    for name,prob in pairs(GLAICE_DOOM1_HELL_LIQUIDS) do
-      GAME.THEMES.hell.liquids[name] = prob
+      for name,prob in pairs(GLAICE_DOOM1_HELL_LIQUIDS) do
+        GAME.THEMES.hell.liquids[name] = prob
+      end
     end
 
     -- FACADES
@@ -365,6 +367,15 @@ OB_MODULES["glaice_epic_textures"] =
         "Allows the trimming down of resulting WAD by not merging the Epic texture WAD.\n\n" ..
         "This will require you to extract and load up the WAD manually in your preferred sourceport installation.\n\n" ..
         "This is the preferrable option for multiplayer situations and server owners and have each client obtain a copy of the texture pack instead.\n"
+    }
+
+    custom_liquids =
+    {
+      name = "custom_liquids"
+      label = _("Custom Liquids")
+      choices = GLAICE_EPIC_TEXTURES.YES_NO
+      default = "yes"
+      tooltip = "Adds new Epic Textures liquid flats."
     }
   }
 }
