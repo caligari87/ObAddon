@@ -2421,7 +2421,7 @@ function Level_make_level(LEV)
     LEV.description = Naming_grab_one("BOSS")
   end
 
-  gui.printf("\nLevel title: %s\n", LEV.description)
+  gui.printf("Level " .. LEV.id .. " title: " .. LEV.description)
 
   -- copy level info, so that all new information added into the LEVEL
   -- object by the generator can be garbage collected once this level is
