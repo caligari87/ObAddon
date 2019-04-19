@@ -47,6 +47,8 @@ PREFABS.Wall_glaice_glass_huge_red =
   prob     = 15
 
   group    = "gtd_tall_glass_epic_red"
+
+  tex_GLASS1 = "GLASS1" -- override
 }
 
 PREFABS.Wall_glaice_glass_huge_red_diag =
@@ -56,6 +58,8 @@ PREFABS.Wall_glaice_glass_huge_red_diag =
   prob     = 15
 
   group    = "gtd_tall_glass_epic_red"
+
+  tex_GLASS1 = "GLASS1" -- override
 }
 
 PREFABS.Wall_glaice_glass_huge_orange =
