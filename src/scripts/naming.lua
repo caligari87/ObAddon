@@ -4710,7 +4710,6 @@ namelib.SYLLABLES =
 
 
 
--- MSSP-TODO
 -- noun generator, creates nouns from syllables
 -- currently two modes:
 -- "Exotic" - syllables come from country names

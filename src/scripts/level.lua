@@ -249,11 +249,11 @@ function Episode_pick_names()
   -- i.e. TITLE, SUB_TITLE, EPISODE, TECH, URBAN, GOTHIC
   -- and so on...
 
-  --[[
+  --
   local i = 1
   gui.printf("\nGenerator Test:\n")
   while i <= 128 do
-    episode_test_name = Naming_grab_one("EPISODE")
+    episode_test_name = Naming_grab_one("URBAN")
     gui.printf(episode_test_name .. " | ")
     if i%4 == 0 then
       gui.printf("\n")
@@ -261,7 +261,7 @@ function Episode_pick_names()
     i = i + 1
   end
   gui.printf("\n")
-  ]]
+
 
   -- game name (for title screen)
   if not GAME.title then

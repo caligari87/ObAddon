@@ -2200,9 +2200,6 @@ function Layout_scenic_vistas()
       Cave_build_a_scenic_vista(A)
     end
   end
-
-  -- MSSP-TODO
-  -- Layout_sync_scenic_vista_heights()
 end
 
 
@@ -2556,4 +2553,3 @@ function Layout_outdoor_shadows()
   end
   end
 end
-
