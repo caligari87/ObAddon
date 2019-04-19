@@ -613,8 +613,8 @@ ZDOOM_STORIES.STORIES =
       You only hear the faint noise of beeps from a computer terminal.
       You find the portable terminal and archives in the system indicate
       humans had been forced to turn into demons through technological means
-      here. You punch right through the monitor, effectively destroying the
-      archive and leave in disgust.]],
+      here. You punch right through the monitor and smash the
+      storage drives on the floor. You leave in disgust.]],
     }
   }
 
