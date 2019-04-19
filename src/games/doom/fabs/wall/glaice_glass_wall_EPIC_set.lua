@@ -39,3 +39,65 @@ PREFABS.Wall_glaice_glass_huge_diag =
 
   tex_GLASS1 = "GLASS9"
 }
+
+PREFABS.Wall_glaice_glass_huge_red =
+{
+  template = "Wall_glaice_glass_huge"
+
+  prob     = 15
+
+  group    = "gtd_tall_glass_epic_red"
+}
+
+PREFABS.Wall_glaice_glass_huge_red_diag =
+{
+  template = "Wall_glaice_glass_huge_diag"
+
+  prob     = 15
+
+  group    = "gtd_tall_glass_epic_red"
+}
+
+PREFABS.Wall_glaice_glass_huge_orange =
+{
+  template = "Wall_glaice_glass_huge"
+
+  prob     = 15
+
+  group    = "gtd_tall_glass_epic_orange"
+
+  tex_GLASS1 = "GLASS6"
+}
+
+PREFABS.Wall_glaice_glass_huge_orange_diag =
+{
+  template = "Wall_glaice_glass_huge_diag"
+
+  prob     = 15
+
+  group    = "gtd_tall_glass_epic_orange"
+
+  tex_GLASS1 = "GLASS6"
+}
+
+PREFABS.Wall_glaice_glass_huge_blue =
+{
+  template = "Wall_glaice_glass_huge"
+
+  prob     = 15
+
+  group    = "gtd_tall_glass_epic_blue"
+
+  tex_GLASS1 = "GLASS2"
+}
+
+PREFABS.Wall_glaice_glass_huge_blue_diag =
+{
+  template = "Wall_glaice_glass_huge_diag"
+
+  prob     = 15
+
+  group    = "gtd_tall_glass_epic_blue"
+
+  tex_GLASS1 = "GLASS2"
+}
