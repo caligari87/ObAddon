@@ -593,12 +593,12 @@ namelib.NAMES =
 
       ["%s"] = 18
 
-      ["Killing for %e"] = 5
-      ["Killing in %e's name"] = 5
-      ["Dying for %e"] = 5
-      ["Dying in %e's name"] = 5
-      ["Unworthy for %e"] = 5
-      ["%e's Bitch"] = 5
+      ["Killing for %e"] = 3
+      ["Killing in %e's name"] = 3
+      ["Dying for %e"] = 3
+      ["Dying in %e's name"] = 3
+      ["Unworthy for %e"] = 3
+      ["%e's Bitch"] = 2
 
     }
 

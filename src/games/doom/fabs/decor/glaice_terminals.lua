@@ -18,6 +18,8 @@ PREFABS.Decor_glaice_2x2_terminal_smaller =
 {
   template = "Decor_glaice_2x2_terminal"
 
+  map  = "MAP02"
+
   prob = 5000
 
   size = 176
