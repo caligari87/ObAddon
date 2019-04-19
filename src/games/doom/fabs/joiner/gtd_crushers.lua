@@ -3,7 +3,7 @@ PREFABS.Joiner_tech_triple_crusher =
   file   = "joiner/gtd_crushers.wad"
   map    = "MAP01"
 
-  prob   = 125
+  prob   = 85
 
   style  = "traps"
 
@@ -27,4 +27,11 @@ PREFABS.Joiner_tech_3x3_crusher =
   template = "Joiner_tech_triple_crusher"
 
   map      = "MAP02"
+}
+
+PREFABS.Joiner_tech_double_mega_crusher =
+{
+  template = "Joiner_tech_triple_crusher"
+
+  map      = "MAP03"
 }
