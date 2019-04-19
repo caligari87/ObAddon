@@ -24,7 +24,6 @@ GLAICE_LIQUIDS =
   hotlava  = { mat="XLAV1", special=5, light_add=56, damage=10 }
   magma  = { mat="MAGMA1",  special=5, light_add=56, damage=10 }
   qlava  = { mat="QLAVA1", special=5, light_add=56, damage=10 }
-  pwater   = { mat="XWATER1", special=7, light_add=16, damage=5 }
   sludge = { mat="OSLIME01", special=0 }
   gwater   = { mat="SLUDGE01", special=0 }
   ice   = { mat="SNOW9", special=0 } --Looks best when outdoor environment is snow only
@@ -694,7 +693,6 @@ GLAICE_MATERIALS = {
   -- Animated liquid walls
   GRYFALL1   = { t="GRYFALL1", f="SLUDGE01", sane=1 }
   MFALL1     = { t="MFALL1", f="MAGMA1", sane=1 }
-  PFALL1     = { t="PFALL1", f="XWATER1", sane=1 }
   PURFAL1     = { t="PURFAL1", f="PURW1", sane=1 }
   SLMFALL1   = { t="SLMFALL1", f="SLIME01", sane=1 }
   OFALL1     = { t="OFALL1", f="OSLIME01", sane=1 }
@@ -1027,7 +1025,6 @@ GLAICE_MATERIALS = {
   -- New liquids --
 
   SLUDGE01  = { t="GRYFALL1", f="SLUDGE01", sane=1 }
-  XWATER1   = { t="PFALL1", f="XWATER1", sane=1 }
   MAGMA1   = { t="MFALL1", f="MAGMA1", sane=1 }
   SNOW9 = { t="ICEFALL",  f="SNOW9", sane=1 } --Ice
   OSLIME01  = { t="OFALL1", f="OSLIME01", sane=1 }
