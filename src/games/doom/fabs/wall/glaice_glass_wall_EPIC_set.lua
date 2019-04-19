@@ -16,6 +16,8 @@ PREFABS.Wall_glaice_glass_huge =
   bound_z2 = 128
 
   z_fit  = "frame"
+
+  tex_GLASS1 = "GLASS9"
 }
 
 PREFABS.Wall_glaice_glass_huge_diag =
@@ -34,4 +36,6 @@ PREFABS.Wall_glaice_glass_huge_diag =
   bound_z2 = 128
 
   z_fit  = "frame"
+
+  tex_GLASS1 = "GLASS9"
 }
