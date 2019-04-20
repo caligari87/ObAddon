@@ -357,6 +357,16 @@ OB_MODULES["glaice_epic_textures"] =
 
   options =
   {
+    custom_liquids =
+    {
+      name = "custom_liquids"
+      label = _("Custom Liquids")
+      choices = GLAICE_EPIC_TEXTURES.YES_NO
+      default = "yes"
+      tooltip = "Adds new Epic Textures liquid flats."
+      priority=2
+    }
+
     include_package =
     {
       name = "include_package"
@@ -367,15 +377,7 @@ OB_MODULES["glaice_epic_textures"] =
         "Allows the trimming down of resulting WAD by not merging the Epic texture WAD.\n\n" ..
         "This will require you to extract and load up the WAD manually in your preferred sourceport installation.\n\n" ..
         "This is the preferrable option for multiplayer situations and server owners and have each client obtain a copy of the texture pack instead.\n"
-    }
-
-    custom_liquids =
-    {
-      name = "custom_liquids"
-      label = _("Custom Liquids")
-      choices = GLAICE_EPIC_TEXTURES.YES_NO
-      default = "yes"
-      tooltip = "Adds new Epic Textures liquid flats."
+      priority=1
     }
   }
 }
