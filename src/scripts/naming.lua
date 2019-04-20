@@ -9,6 +9,7 @@
 --  Copyright (C)      2009 Enhas
 --  Copyright (C) 2010-2019 Chris Pisarczyk
 --  Copyright (C) 2019 MsrSgtShooterPerson
+--  Copyright (C) 2019 EpicTyphlosion
 --
 --  This program is free software; you can redistribute it and/or
 --  modify it under the terms of the GNU General Public License
