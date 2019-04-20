@@ -1492,9 +1492,9 @@ namelib.NAMES =
       ["%t %n of %h"] = 8
       ["%a %n of %h"] = 6
 
-      [   "%n of the %h"] = 15
-      ["%t %n of the %h"] = 8
-      ["%a %n of the %h"] = 6
+      [   "%n of the %o"] = 15
+      ["%t %n of the %o"] = 8
+      ["%a %n of the %o"] = 6
 
       ["%v %n"]    = 25
       ["%v %a %n"] = 25
