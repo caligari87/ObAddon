@@ -440,7 +440,7 @@ namelib.NAMES =
         Synchronizer=5, Conditioner=3, Distillery=5,
         Transistor=3, Diode=3, Boiler=3,
         Compositor=5, Sorter=5, Cultivator=3,
-        Engine=7, Solderer=3, Primer=5r,
+        Engine=7, Solderer=3, Primer=5,
 
         Framework=5, Compartment=5,
       }
