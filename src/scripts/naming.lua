@@ -161,30 +161,45 @@ namelib.NAMES =
         Vast=10, Cramped=5,
 
         -- location
+        --+ generic
         Subterrestrial=10, Sub_terra=5,
         Aethereal=10, Hypogean=5,
+        --+ solar system objects
         Mars=10, Saturn=10, Jupiter=10,
         Europa=5, Ganymede=5, Dione=5, Io=5,
         Callisto=5, Hyperion=5, Vesta=5, Titan=3,
 
-        Covert=20, Occult=10, Preliminary=3, Experimental=3,
-        Northern=3, Southern=3, Eastern=3, Western=3,
-        Upper=10, Lower=10, Central=15, Secondary=7,
-        Inner=10, Outer=10, Innermost=3, Outermost=3,
-        Auxiliary=10, Primary=20, Prime=5, Tertiary=7,
-        Exterior=10, Subsidiary=3, Ultimate=3,
+        Experimental=3, Covert=20,
 
-        -- condition
+        --+ directions
+        Northern=3, Southern=3, Eastern=3, Western=3,
+        Upper=10, Lower=10, Central=15,
+        Inner=10, Outer=10, Innermost=3, Outermost=3,
+        Exterior=10, Subsidiary=3,
+        Interior=5, Internal=10,
+        --+ cardinality
+        Preliminary=3, Ultimate=3,
+        Auxiliary=10, Primary=20,
+        Prime=5, Secondary=7, Tertiary=7,
+        Backup=5, Alternate=5, Ancillary=5,
+        Reserve=5, Support=7,
+
+        -- inert conditions
         Inactive=10, Unsound=10, Eternal=5,
         Advanced=10, Interlock=5, Symbiotic=3,
-        Fantastic=3, Incredible=3, Amazing=3,
-        Wondrous=3, Inert=4, Dormant=10,
+        Inert=4, Dormant=10,
 
+        -- bad conditions
         Destructive=20, Unstable=10, Devastated=3,
         Lost=20, Defective=10, Haggard=15, Failed=10,
         Ravished=10, Inanimate=3, Ruptured=3,
-        Polluted=10, Putrid=5, Faulty=5, Troublesome=10,
-        Obsolete=15, Abandoned=15,
+        Polluted=10, Putrid=5, Faulty=5,
+        Troublesome=10, Obsolete=15, Abandoned=15,
+        Occult=10,
+
+        -- stuff you might say when you see something cool
+        Fantastic=3, Incredible=3, Amazing=3,
+        Wondrous=3,
 
         -- infestation
         Monstrous=10, Fatal=10, Invaded=3, Overtaken=3,
@@ -219,8 +234,8 @@ namelib.NAMES =
         Development=5, Foundation=5,
         Aegis=3, Stockade=3, Refuge=5,
 
-        Munitions=5, Armament=5, Drainage=5,
-        Support=5, Counteraction=3, Holding=5,
+        -- utility
+        Drainage=5, Support=5, Holding=5,
         Testing=5, Quarantine=5, Authorization=5,
         Synthesis=5, Unification=3, Loading=5,
         Disposal=5, Dumping=3, Pumping=4,
@@ -231,41 +246,54 @@ namelib.NAMES =
         Distribution=5, Trafficking=5, Singularity=3,
         Programming=5, Security=5, Staging=5, Comms=5,
 
-        -- descriptive
+        -- descriptive: location
         Main=20, Entrance=10, Provisional=3,
         Planetary=3, Interstellar=7, Lunar=10,
+
+        -- mythical/astronomical
         Atlas=3, Promethus=2, Cronus=3,
         Hyperion=2, Icarus=2, Echo=2,
         Morpheus=2, Eos=2, Orion=2,
         Tiephron=2, Psion=3,
 
+        -- special alphabets
         Alpha=10, Beta=5, Gamma=10,
         Delta=10, Omega=5, Sigma=5,
         Epsilon=3, Zeta=5, Lambda=3,
         Theta=5, Omicron=3, Tau=3,
 
         -- materials / substances
-        Power=20, Energy=15, Cargo=10,
+        Power=20, Energy=15,
         Fuel=5, Rocket=3, Missile=5,
         Blast=15, Oil=3, Nuclear=15,
         Nukage=10, Plutonium=10, Toxin=10,
         Chemical=15, Slige=10, Waste=10, Stibine=3,
+        Steel=5, Fluid=3, Iron=3, Slime=7,
+        Bromine=3, Phosphine=3, Petrochemical=3,
+        Cadmium=3, Halogen=3, Mercury=3,
+        Hydro=3, Steam=5, Carbon=5,
+        Radiation=5, Sludge=3, Particle=3,
+        Composite=15, Synthetic=5,
+
+        -- manufactured products
+        CPU=5, Freight=5, Wares=3,
+        Cargo=10, Weapons=10, Computer=10,
+        Electronics=5, Robotic=5, Laser=5,
+        Munitions=5, Armament=5,
+
+        -- mechanical
         Mining=15, Fusion=15, Thermal=10,
-        Infrared=10, Radiation=5, Hydro=3,
+        Infrared=10, Pressure=5, Counteraction=3,
 
-        Parallax=5, Ultraviolet=5, Slime=7,
-        Steel=5, Fluid=3, Iron=3, Combustion=5,
-        Steam=5, Carbon=5, Pressure=5, Pyrolosis=3,
-        Radioactivity=5, Sludge=3, Particle=3,
-        Cadmium=3, Halogen=3, Toxicity=3, Mercury=3,
-        Data=10, CPU=5, Freight=5, Wares=3, Phosphine=3,
-        Petrochemical=3, Tesla=5, Bromine=3, Quantum=5,
+        -- electronic structures
+        Data=10, Tesla=5, Quantum=5,
 
-        Computer=10, Composite=15, Synthetic=5,
-        Electronics=5, Electrical=5, Diffusion=3,
+        Parallax=5, Ultraviolet=5,
+        Radioactivity=5, Toxicity=3,
+        Electrical=5, Diffusion=3,
         Worm_hole=5, Black_hole=5, Teleport=3,
         Hybrid=5, Cryogenic=5, Cryo_=2,
-        Robotic=5, Laser=5, Photonic=3, Bio_=2,
+        Photonic=3, Bio_=2,
 
         -- some even odder materials! -MSSP
         Chromium=3, Plasma=10, Ion=8,
@@ -287,7 +315,7 @@ namelib.NAMES =
         -- mechanical processes -MSSP
         Filtration=5, Pneumatic=5, Catalytic=3,
         Pyrolytic=5, Construction=5, Fabrication=5,
-        Production=10, Repair=10,
+        Production=10, Repair=10, Pyrolosis=3, Combustion=5,
 
         -- mathematical shapes/structures
         Toroidal=5, Solenoid=5, Helical=5,
@@ -300,48 +328,54 @@ namelib.NAMES =
         Quark=5, Boson=5, Neutrino=5,
         Electron=7,
 
-        Weapons=10,
-
         ["I/O"]=5,
       }
 
       n =
       {
-        -- specific places
-        Generator=12, Plant=15, Base=30,
-        Warehouse=10, Depot=10, Storage=5,
-        Lab=15, Laboratory=5, Depositry=3,
-        Station=15, Reactor=10, Tower=5,
-        Refinery=15, Factory=10, Storehouse=5,
-        Gateway=10, Hangar=5, Outpost=10,
-        Tunnels=10, Bunker=7, Facility=10, Workshop=7,
-        Gateway=5, Point=2, Turbine=3,
+        -- MSSP-TODO: sort these names into better categories!!!
+        -- military places
+        Hangar=5, Outpost=10, Beacon=3,
+        Bunker=7, Facility=10, Pillbox=1,
+        Headquarters=2, Silos=7, Base=30,
 
-        Beacon=3, Satellite=10, Pillbox=1,
-        Colony=15, Compound=15, Foundry=3,
-        Headquarters=2, Observatory=3,
-        Shaft=3, Silos=7, Substation=10,
-        Dam=5,
+        -- utility places
+        Generator=12, Plant=15, Grid=5,
+        Substation=10, Dam=5, Core=5,
+        Reactor=10, Turbine=3,
+
+        -- storage-y places
+        Warehouse=10, Depot=10, Storage=5,
+        Storehouse=5, Gateway=5, Point=2,
+        Depositry=3,
+
+        -- science-y places
+        Lab=15, Laboratory=5, Observatory=3,
+        Station=15, Tower=5, Relay=5,
+        Satellite=10, Colony=15, Project=5,
+        Experiment=3, Network=5, System=15,
+
+        -- industrial places
+        Refinery=15, Factory=10, Foundry=3,
+        Workshop=7, Works=2, Forge=8,
+
+        -- infrastructural places
+        Platform=5, Port=3, Hub=10,
+        Nexus=3, Infrastructure=5,
+        Tributary=5, Channel=5, Tunnels=10, Shaft=3,
 
         -- general places
-        Complex=15, Center=15,
-        Facility=10, Works=2,
+        Compound=15, Dock=3, Bay=3,
+        Complex=15, Center=15, Installation=5,
         Area=15, Site=10, Zone=10,
+        Chamber=5, Quarters=5, Section=3,
+        Post=3, Annex=5, Terminal=10,
         Quadrant=5, Sector=5, Adjunct=3,
-        Platform=5, Port=3, Grid=5,
-        Hub=10, Nexus=3, Core=5,
-        Terminal=10, Installation=5,
-        Project=5, Experiment=3,
-        Infrastructure=5, Annex=5,
-        Dock=3, Bay=3, Tributary=5,
-        Channel=5, Chamber=5, Quarters=5,
-        Relay=5, Section=3, Post=3, Dilemma=3,
-        Situation=2, Crisis=2, Emergency=2,
 
         -- weird ones
-        Device=5, Machine=5, Network=5,
+        Dilemma=3,
+        Situation=2, Crisis=2, Emergency=2,
         Anomaly=10, Portal=7, Apparatus=10,
-        System=15, Project=2, Forge=8,
         Dimension=3, Paradox=3, Vortex=5,
         Enigma=5, Artifact=1, Quagmire=1,
         Catalyst=2,
@@ -369,6 +403,8 @@ namelib.NAMES =
         -- machine/electronic parts -MSSP
         -- and weird science-y buzzwords
         -- and also car parts
+        Device=5, Machine=5,
+
         Oscillator=5, Magnetron=5, Emulsifier=5,
         Alternator=5, Induction=5, Stabilizer=5,
         Processor=10, Suspension=5, Conduit=5,
@@ -389,7 +425,7 @@ namelib.NAMES =
         Synchronizer=5, Conditioner=3, Distillery=5,
         Transistor=3, Diode=3, Boiler=3,
         Compositor=5, Sorter=5, Cultivator=3,
-        Engine=7, Solderer=3,
+        Engine=7, Solderer=3, Primer=5r,
 
         Framework=5, Compartment=5,
       }
@@ -629,6 +665,10 @@ namelib.NAMES =
         Balber=3, Carreau=3, Carnivean=3,
         Oeillet=3, Rosier=2, Luvart=2,
         Verrier=2, Olivier=2, Verrine=3,
+        -- They sound so undemonic you could almost
+        -- believe they're names of beautiful French
+        -- people sitting in a cafe while having
+        -- some cheese and wine
 
         Dante=5,
 
@@ -3991,7 +4031,7 @@ namelib.NAMES =
         ["Hateful by Nature"] = 20 -- Atrophy - Violent by Nature (album title)
         -- I'll stop here, because I have over 18,000(!!) tracks to go through and this would make this
         -- list VERY, VERY LONG. - Glaice
-        
+
         ["Highway to DOOM"] = 20 -- AC/DC - "Highway to Hell" (song)
         ["Rhythm of Blood"] = 20 -- Unknown - "Rhythm of Red" (Tokyo Xtreme Racer Zero soundtrack)
         ["Born too Deadly"] = 20 -- The Crystal Method - "Born too Slow" (song)
