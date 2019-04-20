@@ -3985,6 +3985,12 @@ namelib.NAMES =
         ["Hateful by Nature"] = 20 -- Atrophy - Violent by Nature (album title)
         -- I'll stop here, because I have over 18,000(!!) tracks to go through and this would make this
         -- list VERY, VERY LONG. - Glaice
+        
+        ["Highway to DOOM"] = 20 -- AC/DC - "Highway to Hell" (song)
+        ["Rhythm of Blood"] = 20 -- Unknown - "Rhythm of Red" (Tokyo Xtreme Racer Zero soundtrack)
+        ["Born too Deadly"] = 20 -- The Crystal Method - "Born too Slow" (song)
+        ["Angel and the Devil"] = 20 -- Wolfmother - "Joker and the Thief" (song)
+        ["No Angels Fly"] = 20 -- Sabaton - "No Bullets Fly" (song)
 
         -- Nerdery stuff
         ["d20 Edition"] = 15 -- Also Swedra
