@@ -635,13 +635,13 @@ namelib.NAMES =
       ["%t %a %n"] = 20
 
       ["%n of %h"] = 26
-      ["%a %n of %h"] = 7
-      ["%a %n of the %o"] = 7
+      ["%a %n of %h"] = 10
+      ["%a %n of the %o"] = 10
 
       ["%e's %n"]       = 10
       ["%e's %a %n"]    = 8
-      ["%e's %n of %h"] = 3
-      ["%e's %n of the %o"] = 3
+      ["%e's %n of %h"] = 6
+      ["%e's %n of the %o"] = 6
 
       ["%v %n"]    = 25
       ["%v %a %n"] = 25
@@ -1480,13 +1480,13 @@ namelib.NAMES =
          ["%a %n"] = 60
       ["%t %a %n"] = 15
 
-      [   "%n of %h"] = 10
-      ["%t %n of %h"] = 6
-      ["%a %n of %h"] = 4
+      [   "%n of %h"] = 15
+      ["%t %n of %h"] = 8
+      ["%a %n of %h"] = 6
 
-      [   "%n of the %h"] = 10
-      ["%t %n of the %h"] = 6
-      ["%a %n of the %h"] = 4
+      [   "%n of the %h"] = 15
+      ["%t %n of the %h"] = 8
+      ["%a %n of the %h"] = 6
 
       ["%v %n"]    = 25
       ["%v %a %n"] = 25
@@ -1758,19 +1758,27 @@ namelib.NAMES =
         Danger=10,
 
         -- destruction
-        Ruin=10, Flames=3,
+        --+ states
+        Ruin=10,
+        --+ elemental
+        Flames=3,
 
         -- bodily objects
-        Tears=10, Blood=10,
+        Bone=7, Blood=10, Claws=10,
+        Gore=7, Skulls=10, Tears=10,
 
         -- time
-        Twilight=5, Midnight=5,
+        Dusk=3, Twilight=5, Midnight=5,
 
         -- delusions
-        Dreams=2, Delirium=2,
+        Dreams=2, Delirium=2, Delusion=2,
+        Illusions=2,
 
         -- bad acts
         Sabotage=5, Destruction=5,
+
+        -- material
+        Bronze=5, Iron=5,
 
         -- residents
         --+ ethereal things
@@ -1790,35 +1798,46 @@ namelib.NAMES =
         Crows=5, Prey=5,
         Vermin=5, Vultures=5,
         Spiders=2, Snakes=5,
+
+        -- creepy furniture
+        Mirrors=5,
       }
 
       o = -- implicit descriptors (e.g. "Arena of the Doomed")
       {
         -- abandoned
-        Abandoned=5,
+        Abandoned=5, Doomed=5, Damned=5,
+        Forgotten=5, Forsaken=5, Lost=5,
 
         -- weird
-        Bizarre=5,
+        Bizarre=5, Unreal=5,
 
         -- damage
-        Decayed=5, Diseased=5,
+        Decayed=5,
 
         -- dirt
-        Filthy=5,
+        Filthy=5, Slime=5,
 
-        -- normal creatures
-        Stray=5, Untamed=5,
-        Vermin=5,
-
-        -- paranormal creatures
-        Phantasm=10,
-        Poltergeist=10,
-        Wraith=10,
+        -- creatures
+        --+ wild
+        Stray=5, Vermin=5,
+        --+ paranormal
+        Phantasm=10, Poltergeist=10, Wraith=10,
         Undead=5,
+        --+ people
+        ---+ victimized
+        Afflicted=5, Desperate=5, Diseased=5,
+        Estranged=5, Faceless=5, Homeless=5,
+        Misbegotten=5, Missing=5, Hunted=5,
+        Sick=5, Unwell=5, Quarantined=5,
+        ---+ craycray
+        Deranged=5, Hysteric=5,
+        Insane=5, Mad=7,
+        ---+ pretty much dead
+        Dead=5, Deceased=5, Fallen=5,
 
-        -- people
-        Homeless=5, Insane=5, Mad=7,
-        Sick=5,
+        -- personal qualities
+        Untamed=5, Vicarious=5,
 
         -- time
         Night=10,
