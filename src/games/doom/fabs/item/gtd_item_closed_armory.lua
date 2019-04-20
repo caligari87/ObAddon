@@ -2,13 +2,13 @@
 -- Yes, I am aware I am a bad person.
 --
 
-PREFABS.Item_sealed_armory_room =
+PREFABS.Item_sealed_armory_room_regular =
 {
   file   = "item/gtd_item_closed_armory.wad"
-  map    = "MAP01"
+  map    = "MAP02"
 
-  rank   = 2
-  prob   = 150
+  prob   = 25
+
   theme  = "!hell"
   env    = "!cave"
 
@@ -19,8 +19,17 @@ PREFABS.Item_sealed_armory_room =
   deep =  16
   over = -16
 
-  item_kind = "key"
-
   x_fit = "frame"
   y_fit = "top"
+}
+
+PREFABS.Item_sealed_armory_room_keyed =
+{
+  template = "Item_sealed_armory_room_regular"
+  map      = "MAP01"
+
+  item_kind = "key"
+
+  rank   = 2
+  prob   = 150
 }
