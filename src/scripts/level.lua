@@ -263,9 +263,16 @@ function grab_many_and_test(num,category)
   gui.printf("\n")
 end
 
-grab_many_and_test(32,"TECH")
-grab_many_and_test(32,"URBAN")
-grab_many_and_test(32,"GOTHIC")
+if PARAM.name_gen_test == "32l" then
+  grab_many_and_test(32,"TECH")
+  grab_many_and_test(32,"URBAN")
+  grab_many_and_test(32,"GOTHIC")
+  grab_many_and_test(32,"BOSS")
+elseif PARAM.name_gen_test == "32t" then
+  grab_many_and_test(32,"TITLE")
+  grab_many_and_test(32,"SUB_TITLE")
+  grab_many_and_test(32,"EPISODE")
+end
 
   -- game name (for title screen)
   if not GAME.title then

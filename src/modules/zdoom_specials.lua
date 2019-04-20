@@ -193,7 +193,7 @@ ZDOOM_SPECIALS.INTERPIC_MUSIC =
 ZDOOM_SPECIALS.MUSIC = {}
 
 function ZDOOM_SPECIALS.setup(self)
-  print("ZDoom Special Addons module activated.")
+  gui.printf("\n--== ZDoom Special Addons module active ==--\n\n")
 
   for name,opt in pairs(self.options) do
     local value = self.options[name].value
@@ -332,7 +332,6 @@ function ZDOOM_SPECIALS.do_special_stuff()
     local music_line = ''
 
     if music_list then
-      gui.printf("Music index: " .. map_num .. "\n")
       music_line = '  Music = "' .. music_list[map_num] .. '"\n'
     else
       music_line = ''

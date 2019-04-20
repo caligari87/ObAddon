@@ -751,8 +751,10 @@ function Fab_render(fab)
     fab_map = "object"
   end
 
-  if fab.where == "point" or fab.where == "seeds" then
-    gui.printf(LEVEL.name .. ": Adding " .. fab.name .. " from " .. fab_map .. " in " .. fab.file .. "\n")
+  if PARAM.print_prefab_use != "no" then
+    if fab.where == "point" or fab.where == "seeds" then
+      gui.printf(LEVEL.name .. ": Adding " .. fab.name .. " from " .. fab_map .. " in " .. fab.file .. "\n")
+    end
   end
 
   each B in fab.brushes do
@@ -1532,7 +1534,9 @@ function Fab_load_wad(def)
 
     local filename = assert(def.dir_name) .. "/" .. def.file
 
-    gui.printf("Loading wad-fab %s / %s\n", def.file, def.map or "*")
+    if PARAM.print_prefab_use != "no" then
+      gui.printf("Loading wad-fab %s / %s\n", def.file, def.map or "*")
+    end
 
     -- load the map structures into memory
     -- [ if map is not specified, use "*" to load the first one ]
@@ -2403,4 +2407,3 @@ function Fab_pick(reqs, allow_none)
 
   return assert(PREFABS[name])
 end
-
