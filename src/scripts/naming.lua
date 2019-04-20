@@ -627,8 +627,9 @@ namelib.NAMES =
       -- %e = Entity
       -- %a = Adjectives
       -- %n = Places
-      -- %h = Explicit description (e.g. I am Satan, "Arena of Satan")
-      -- %o = Implicit description (e.g. I am Satanic, "Arena of the Satanic")
+      -- %h = Explicit description (e.g. I am Satan, "Arena of <Satan>")
+      -- %o = Implicit description (e.g. I am Satanic, "Arena of <the Satanic>")
+      -- %v = Prefixed phrase (as per COMMON table e.g. "<Scoruge of the> Arena)
 
       ["%a %n"] = 60
       ["%t %a %n"] = 20
@@ -1468,12 +1469,24 @@ namelib.NAMES =
   {
     patterns =
     {
+      -- lexicon legend:
+      -- %e = Entity
+      -- %a = Adjectives
+      -- %n = Places
+      -- %h = Explicit description (e.g. I am Satan, "Arena of <Satan>")
+      -- %o = Implicit description (e.g. I am Satanic, "Arena of <the Satanic>")
+      -- %v = Prefixed phrase (as per COMMON table e.g. "<Scoruge of the> Arena)
+
          ["%a %n"] = 60
       ["%t %a %n"] = 15
 
-      [   "%n of %h"] = 20
-      ["%t %n of %h"] = 12
-      ["%a %n of %h"] = 7
+      [   "%n of %h"] = 10
+      ["%t %n of %h"] = 6
+      ["%a %n of %h"] = 4
+
+      [   "%n of the %h"] = 10
+      ["%t %n of the %h"] = 6
+      ["%a %n of the %h"] = 4
 
       ["%v %n"]    = 25
       ["%v %a %n"] = 25
@@ -1730,49 +1743,85 @@ namelib.NAMES =
         Standoff=5, Deadlock=5, Stalemate=5,
       }
 
-      h =
+      h = -- explicit descriptors (e.g. "Arena of Doom")
       {
+        -- feels
+        --+ negative
         Doom=20, Gloom=15, Despair=10, Sorrow=15,
         Horror=20, Terror=10, Death=10, Dolor=5,
-        Danger=10, Pain=15, Fear=7, Hate=5,
-        Desolation=3, Reparation=3, Solace=10,
-
-        Ruin=10, Flames=3, Destruction=5,
-        Twilight=5, Midnight=5, Dreams=2,
-        Tears=10, Helplessness=2, Misfortune=5,
+        Pain=15, Fear=7, Hate=5, Desolation=3,
         Misery=10, Turmoil=5, Decay=5,
-        Blood=10, Insanity=5, Delirium=2,
-        Sabotage=5,
+        Insanity=5, Helplessness=2, Misfortune=5,
+        --+ positive
+        Solace=10, Reparation=3,
+        --+ danger
+        Danger=10,
+
+        -- destruction
+        Ruin=10, Flames=3,
+
+        -- bodily objects
+        Tears=10, Blood=10,
+
+        -- time
+        Twilight=5, Midnight=5,
+
+        -- delusions
+        Dreams=2, Delirium=2,
+
+        -- bad acts
+        Sabotage=5, Destruction=5,
 
         -- residents
-        Ghosts=15, Gods=10, Spirits=5,
+        --+ ethereal things
+        Demigods=3, Ghosts=15, Gods=10, Spirits=5,
         Spectres=5, Banshees=5, Phantoms=5,
-        Menace=15, Evil=5, Ghouls=5, Demons=5,
-        Ogres=5, Denizens=7, Souls=5,
-        Murderers=3, Vultures=5, Pirates=3,
-        Spiders=2, Snakes=5, Vermin=5, Vagrants=7,
-        Madmen=2, Mortals=10, Martyrs=5,
-        Prophets=5, Prey=5, Crows=5, Addicts=3,
-        Fools=1, Creeps=3, Demigods=3,
-        Gargoyles=3,
+        Evil=5, Ghouls=5, Demons=5, Souls=5,
+        --+ fantasy creatures
+        Ogres=5, Gargoyles=3,
+        --+ people
+        Addicts=3, Creeps=3, Fools=1,
+        Menace=15, Denizens=7, Murderers=3,
+        Pirates=3, Vagrants=7,
+        Madmen=2, Mortals=10,
+        --+ explicitly religious people
+        Martyrs=5, Prophets=5,
+        --+ animals
+        Crows=5, Prey=5,
+        Vermin=5, Vultures=5,
+        Spiders=2, Snakes=5,
+      }
 
-        ["the Abandoned"]=5
-        ["the Bizarre"]=5
-        ["the Decayed"]=5
-        ["the Diseased"]=5
-        ["the Filthy"]=5
-        ["the Homeless"]=5
-        ["the Insane"]=5
-        ["the Mad"]=7
-        ["the Night"]=10
-        ["the Phantasm"]=10
-        ["the Poltergeist"]=10
-        ["the Sick"]=5
-        ["the Stray"]=5
-        ["the Undead"]=5
-        ["the Untamed"]=5
-        ["the Vermin"]=5
-        ["the Wraith"]=10
+      o = -- implicit descriptors (e.g. "Arena of the Doomed")
+      {
+        -- abandoned
+        Abandoned=5,
+
+        -- weird
+        Bizarre=5,
+
+        -- damage
+        Decayed=5, Diseased=5,
+
+        -- dirt
+        Filthy=5,
+
+        -- normal creatures
+        Stray=5, Untamed=5,
+        Vermin=5,
+
+        -- paranormal creatures
+        Phantasm=10,
+        Poltergeist=10,
+        Wraith=10,
+        Undead=5,
+
+        -- people
+        Homeless=5, Insane=5, Mad=7,
+        Sick=5,
+
+        -- time
+        Night=10,
       }
 
       s =
