@@ -1372,6 +1372,8 @@ GLAICE_DOOM1_HELL_FACADES =
   BLAKMBGY = 20
 
   SP_HOT1 = 20
+  SP_HOT2 = 20
+  SP_HOT3 = 20
   STONE   = 20
   STON4  = 15
   STON6  = 15
@@ -1443,6 +1445,7 @@ GLAICE_DOOM1_FLESH_FACADES =
   WOOD18  = 40
   WD04    = 65
   SP_HOT1 = 40
+  SP_HOT3 = 20
 
   GOTH01 = 25
   GOTH02 = 25
@@ -1781,6 +1784,25 @@ GLAICE_DOOM1_SINK_DEFS =
     trim_dz  = -5
     trim_light = 16
   }
+
+  ceiling_sink_fan =
+  {
+    mat = "FAN1"
+    dz  = 4
+
+    trim_mat = "FLAT23"
+    trim_dz  = -5
+  }
+
+  -- For non-Tech environments
+  ceiling_sink_fan_rusty =
+  {
+    mat = "FAN1"
+    dz  = 4
+
+    trim_mat = "CEIL5_2"
+    trim_dz  = -5
+  }
 }
 
 GLAICE_DOOM1_TECH_CEILING_SINKS =
@@ -1797,6 +1819,7 @@ GLAICE_DOOM1_TECH_CEILING_SINKS =
   light_LIGHTS2 = 7
   light_LIGHTS3 = 7
   light_LIGHTS4 = 7
+  ceiling_sink_fan = 1
 }
 
 GLAICE_DOOM1_DEIMOS_CEILING_SINKS =
@@ -1813,6 +1836,7 @@ GLAICE_DOOM1_DEIMOS_CEILING_SINKS =
   light_LIGHTS2 = 7
   light_LIGHTS3 = 7
   light_LIGHTS4 = 7
+  ceiling_sink_fan = 1
 }
 
 GLAICE_DOOM1_HELL_CEILING_SINKS =
@@ -1826,6 +1850,7 @@ GLAICE_DOOM1_HELL_CEILING_SINKS =
   light_GLITE07 = 10
   light_GLITE08 = 10
   light_GLITE09 = 10
+  ceiling_sink_fan_rusty = 2
 }
 
 GLAICE_DOOM1_FLESH_CEILING_SINKS =
@@ -1839,6 +1864,7 @@ GLAICE_DOOM1_FLESH_CEILING_SINKS =
   light_GLITE07 = 10
   light_GLITE08 = 10
   light_GLITE09 = 10
+  ceiling_sink_fan_rusty = 2
 }
 
 GLAICE_DOOM1_TECH_FLOOR_SINKS =

@@ -592,6 +592,8 @@ GLAICE_MATERIALS = {
   SPDUDE6 = { t="SPDUDE6", f="FLOOR7_2" } --SP_DUDE6
   SPDUDE7 = { t="SPDUDE7", f="FLOOR5_4" } --SP_DUDE7
   SPDUDE8 = { t="SPDUDE8", f="FLOOR5_4" } --SP_DUDE8
+  SP_HOT2 = { t="SP_HOT2", f="RMARB3" }
+  SP_HOT3 = { t="SP_HOT3", f="RMARB3" }
   SPINE01 = { t="SPINE01", f="SFLR6_4" }
 
   --Snow and Ice
@@ -609,6 +611,7 @@ GLAICE_MATERIALS = {
   SNOW12 = { t="SNOW12", f="SNOW6" }
   SNOW13 = { t="SNOW13", f="SNOW2" } -- 256x256, beautiful ice
   SNOW14 = { t="SNOW14", f="SNOW2" } -- 256x256
+  SNOW15 = { t="SNOW15", f="SNOW1" }
 
   SNOWBOX1 = { t="SNOWBOX1", f="SNOW6" }
   SNOWBOX2 = { t="SNOWBOX2", f="SNOW1" }
@@ -655,6 +658,7 @@ GLAICE_MATERIALS = {
   WARNSTEP = { t="WARNSTEP", f="WARN1", sane=1 }
 
   -- Wood / Panel / Urban
+  GUNRACK = { t="GUNRACK", f="RROCK09" } -- Weapons rack by OSJ Clatchford, ZDoom custom texture thread, page 80
   PANBOOK2 = { t="PANBOOK2", f="RROCK09" } -- 128x128
   PANBOOK3 = { t="PANBOOK3", f="RROCK09" } -- 128x128
   PANBOOK4 = { t="PANBOOK4", f="RROCK09" } -- 64x128
@@ -1014,6 +1018,8 @@ GLAICE_MATERIALS = {
   -------------------------
   -- New animated floors --
   -------------------------
+
+  FAN1     = { f="FAN1",   t="METAL"    } -- Ceiling fan
 
   FIRELAF1 = { t="FIREBLU1",  f="FIRELAF1" }
   FIRELAF2 = { t="FIREBLU2",  f="FIRELAF2" }

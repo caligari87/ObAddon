@@ -895,6 +895,7 @@ GLAICE_THEMES =
     SNOW12 = 100
     SNOW13 = 100
     SNOW14 = 100
+    SNOW15 = 100
     }
 
     floors =
@@ -1166,6 +1167,8 @@ GLAICE_HELL_FACADES =
   BLAKMBGY = 20
 
   SP_HOT1 = 20
+  SP_HOT2 = 20
+  SP_HOT3 = 20
   STONE   = 20
   STONE4  = 15
   STONE6  = 15
@@ -1965,6 +1968,25 @@ GLAICE_SINK_DEFS =
     trim_dz = -16
   }
 
+  ceiling_sink_fan =
+  {
+    mat = "FAN1"
+    dz  = 4
+
+    trim_mat = "FLAT23"
+    trim_dz  = -5
+  }
+
+  -- For non-Tech environments
+  ceiling_sink_fan_rusty =
+  {
+    mat = "FAN1"
+    dz  = 4
+
+    trim_mat = "CEIL5_2"
+    trim_dz  = -5
+  }
+
   -- hell floors
 
   floor_sink_GOTH22 =
@@ -2014,6 +2036,7 @@ GLAICE_TECH_CEILING_SINKS =
   ceiling_sink_SILVER2Y = 5
   ceiling_sink_SILVER2W = 5
   ceiling_sink_SILVER2G = 5
+  ceiling_sink_fan = 3
 }
 
 GLAICE_URBAN_CEILING_SINKS =
@@ -2050,6 +2073,7 @@ GLAICE_URBAN_CEILING_SINKS =
 
   ceiling_sink_GOTH15 = 25
   ceiling_sink_GOTH17 = 25
+  ceiling_sink_fan_rusty = 3
 }
 
 GLAICE_HELL_CEILING_SINKS =
@@ -2077,6 +2101,7 @@ GLAICE_HELL_CEILING_SINKS =
   ceiling_sink_GOTH47 = 20
   ceiling_sink_GOTH48 = 20
   ceiling_sink_GOTH49 = 20
+  ceiling_sink_fan_rusty = 4
 }
 
 GLAICE_TECH_FLOOR_SINKS =
