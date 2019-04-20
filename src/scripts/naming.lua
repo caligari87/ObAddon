@@ -55,7 +55,7 @@ namelib.NAMES =
         ["Journey to the"]=10
         ["Assault on the"]=15
         ["Death Awaits in the"]=5
-        ["Oh God not another"]=5
+        ["Oh God Not Another"]=5
         ["Yet Another"]=5
         ["Just Another"]=5
         ["Hell in the"]=5
@@ -74,19 +74,33 @@ namelib.NAMES =
         ["Pain from the"]=10
         ["Death in the"]=10
 
-        ["Oh Dear not another"]=10
+        ["Oh Dear Not Another"]=10
         ["Chaos in the"]=10
 
+        -- these by MSSP
+        ["Battle for the"]=15
+        ["Battle through the"]=10
+        ["Into the"]=10
+        ["Operation:"]=15
+        ["Mission:"]=10
+        ["Objective:"]=10
+        ["Counterattack in the"]=7
+        ["Ambush in the"]=7
+        ["Get to da"]=3 -- CHOPPAH!!!
+
         -- command-like prefixes, some by Dante
---[[
-        ["Attack the"]=20
-        ["Destroy the"]=20
-        ["Shut Down the"]=15
-        ["Patrol the"]=15
-        ["Secure the"]=15
-        ["Clear this"]=5
-        ["Defend this"]=10
---]]
+        ["Attack the"]=10
+        ["Destroy the"]=10
+        --["Shut Down the"]=15
+        --["Patrol the"]=15
+        ["Secure the"]=10
+        --["Clear this"]=5
+        --["Defend this"]=10
+
+        -- ^^^ Some of these sound pretty decent
+        -- so I enabled them. Things like shutting down
+        -- patrolling, defending, etc. are too explicit.
+        -- MSSP
       }
     }
 
@@ -803,7 +817,10 @@ namelib.NAMES =
         Monumental=5, Colossal=10, Sprawling=5, Massive=5,
         Small=3, Endless=10, Gigantic=5, Mighty=5, Enormous=5,
         Giant=3, Great=3, Elephantine=3, Grand=3, Gargantuan=5,
-        Imposing=5, Monstrous=5, Prodigious=3,
+        Imposing=5, Monstrous=5, Prodigious=3, Maximum=5,
+
+        -- generic scales?
+        Raw=2, Sheer=10,
 
         -- location
         Underground=10, Subterranean=5,
@@ -812,62 +829,111 @@ namelib.NAMES =
         Inner=15, Abysmal=10, Deepest=15,
         Concealed=7, Clandestine=5, Outer=5,
 
-        -- condition
+        -- age
         Elder=15, Ancient=15, Eternal=5,
-        Decrepid=3, Desolate=10, Foul=10,
-        Defiled=10, Ruined=5, Forgotten=10,
-        Ravished=5, Barren=5, Deadly=3, Murky=3,
+        Eldritch=7,
+
+        -- dirty
+        Foul=10, Defiled=10, Ravished=5, Murky=3,
         Begrimed=5, Filthy=5, Sloven=5,
         Stagnant=7, Rancid=10, Rotten=15, Festering=5,
-        Burning=20, Burnt=5, Scorching=5, Flimsy=3,
-        Melting=5, Red_Hot=5, Fractured=5, Entombed=5,
-        Vile=15, Revolting=10, Putrid=5, Skinned=3,
-        Vulgar=5, Wretched=3, Caustic=5, Corroded=5,
-        Fallen=10, Stinking=1, Grungy=3, Derelict=5,
-        Smoky=5, Flagrant=20, Aching=5, Eldritch=7,
+        Fractured=5, Entombed=5, Vile=15,
+        Revolting=10, Putrid=5, Skinned=3,
+        Fallen=10, Stinking=1, Grungy=3,
+        Smoky=5, Flagrant=20, Aching=5,
+        Acrid=5,
 
         -- contents
+        --+ guts n stuff
         Blood=20, Bloody=5, Blood_filled=3,
         Blood_stained=2, Blood_soaked=3,
-        Lava=5, Lava_filled=3, Bleeding=3, Acrid=5,
-        Monstrous=15, Monster=5, Zombie=10, Arch_Duke=5,
-        Demonic=15, Demon=5, Ghoulish=5, Princes=5,
-        Wizard=5, Warlock=2, Wiccan=3, Queens=5,
-        Haunted=10, Ghostly=15, Ghastly=5, Dukes=5,
-        Heathen=3, Rat_infested=5, Necromancers=5,
-        Baron=5, Cyberdemon=5, Slime=5, Knights=7,
-        Kings=5, Royal=5, Magma=5, Squire=4,
+        Bleeding=3,
+        --+ fire and brimstone
+        Burning=20, Burnt=5, Scorching=5,
+        Melting=5, Red_Hot=5,
+        Lava=5, Lava_filled=3, Magma=5,
+        Monstrous=15, Monster=5, Zombie=10,
+        Demonic=15, Demon=5, Ghoulish=5,
+        Haunted=10, Ghostly=15, Ghastly=5,
+        Cyberdemon=5, Necromancers=5, Mastermind=5,
+        --+ monarchs
+        Queens=5, Princes=5, Arch_Duke=5,
+        Dukes=5, Kings=5, Royal=5, Squire=4,
+        Baron=5, Knights=7,
+        --+ pagans
+        Wizard=5, Warlock=2, Wiccan=3,
+        Heathen=3,
+        --+ dirty poor guys
+        Rat_infested=5, Downtrodden=3,
+        Slime=5,
 
         -- descriptive
-        Evil=30, Unholy=20, Wicked=15, Cruel=10, Nebulous=5,
-        Godless=5, God_forsaken=7, Ungodly=3, Vexatious=5, Abtruse=3,
-        Perverse=5, Hallowed=5, Oppressive=5, Painful=5, Enigmatic=5,
-        Uncivilised=2, Unsanctified=2, Profane=5, Despoiled=3,
-        Brutal=20, Grisly=15, Gothic=7, Ungodly=10, Arcane=5, Orphic=3,
-        Mystic=7, Mystical=2, Magical=2, Magic=2, Tortuous=10,
-        Poignant=3, Sinful=5, Unblessed=3, Bitter=7, Esoteric=5,
+        Nebulous=5,
+        Oppressive=5,
 
+        Gothic=7, Orphic=3,
+
+        -- scary-wary
         Ominous=20, Terrifying=5, Gruesome=10,
         Gloomy=5, Awful=10, Execrable=10, Uncanny=15,
-        Horrible=10, Horrendous=10,
+        Horrible=10, Horrendous=10, Screaming=3,
         Dismal=10, Dank=5, Frightful=5,
         Dreaded=15, Nightmare=5, Dolor=5,
-        Screaming=3, Silent=5, Sullen=10,
 
+        -- authority
+        Sovereign=7, Triumph=2,
+
+        -- danger/fatalism
+        Brutal=20, Grisly=15, Tortuous=10,
+        Disastrous=2, Ill_fated=10, Frail=3,
+        Fatal=10, Final=5, Terminal=2, Painful=5,
+        Deadly=3,
+
+        -- magical (neutral)
+        Mystic=7, Mystical=2, Magical=2, Magic=2,
+        Arcane=5, Esoteric=5, Abstruse=3,
+
+        -- bad personal qualities
+        Cruel=5, Crass=2, Sullen=10, Bitter=7,
+        Uncivilised=2, Vexatious=5, Perverse=5,
+        Morbid=10, Loathsome=5, Vulgar=5,
+        Wretched=3, Caustic=5,
+
+        -- neutral personal qualities (hey, I'm a quiet guy -MSSP)
+        Silent=5, Enigmatic=5,
+        Godless=5, God_forsaken=7, Ungodly=3, -- does putting this here
+        Sacreligious=5, Unspiritual=2,        -- reveal too much about
+                                              -- my own opinions? -MSSP
+
+        -- good personal qualities (why though?)
+        Poignant=3,
+
+        -- explicitly very evil
+        Evil=30, Unholy=20, Wicked=15,
         Abhorrent=3, Abominable=5, Bestial=5,
-        Detested=5, Direful=2, Disastrous=2,
-        Execrated=2, Ill_fated=10, Maximum=5,
-        Fatal=10, Final=5, Frail=3, Terminal=2,
-        Immoral=5, Immortal=3, Impure=5, Utmost=5,
-        Loathsome=5, Merciless=7, Sovereign=7,
-        Morbid=10, Pestilent=5, Profane=5, Triumph=2,
-        Raw=2, Vicious=10, Violent=10, Sheer=10,
+        Direful=2, Execrated=2,
+        Immoral=5, Impure=5, Utmost=5,
+        Merciless=7, Pestilent=5, Profane=5,
+        Vicious=10, Violent=10,  Desecrated=5,
+        Accursed=5, Malodorous=5, Despicable=2,
+        Heinous=5, Mephitic=2, Peccant=5,
+        Sordid=2, Grievous=2, Ferine=2, Sinful=5,
+        Unblessed=3, Unsanctified=2, Despoiled=3,
+
+        Immortal=3,
+
+        -- abandonment/disrepair/negligence
+        Detested=5, Ruined=5, Barren=5,
+        Flimsy=3, Corroded=5, Derelict=5,
+        Decrepid=3, Desolate=10, Forgotten=10,
+
+        -- holy
         Ceremonial=5, Liturgical=5, Solemn=5, Deistic=5,
-        Divine=5, Devout=5, Sacerdotal=5, Desecrated=5,
-        Sacred=5, Clerical=5, Accursed=5, Malodorous=5,
-        Despicable=2, Heinous=5, Mephitic=2, Peccant=5,
-        Sordid=2, Sacreligious=5, Grievous=2, Fetid=2,
-        Ferine=2, Unspiritual=2, Cruel=5, Crass=2,
+        Divine=5, Devout=5, Sacerdotal=5, Sacred=5,
+        Clerical=5, Hallowed=5,
+
+        -- eww
+        Fetid=2,
       }
 
       n =
@@ -1005,26 +1071,44 @@ namelib.NAMES =
 
       h =
       {
+        -- fire and brimstone
         Hell=10, Fire=10, Flames=10,
-        Horror=10, Terror=10, Death=15,
-        Pain=15, Fear=5, Hate=10, Misery=10,
-        Limbo=3, Souls=10, Doom=15, Tragedy=10,
-        Carnage=10, Gore=5, Shadows=10, Rapine=10,
-        Darkness=10, Destruction=5, Famine=10,
-        Suffering=5, Torment=10, Torture=10, Heresy=10,
-        Iconoclasm=10, Fallacy=10, Defection=10,
-        Blasphemy=10, Infidelity=10, Paganism=10,
-        Schism=10, Secularism=10, Sin=10, Mayhem=10,
-        Sorrow=10, Trauma=10, Agony=10, Anguish=10,
-        Strain=5, Supplication=5, Witchcraft=5,
+        Darkness=10, Limbo=3, Souls=10, Shadows=10,
 
-        Flesh=10, Corpses=10, Bones=10, Chaos=15,
-        Skulls=10, Whispers=5, Tears=3, Viscera=5,
-        Dread=5, Fate=5, Locusts=2, Erebus=5, Lethe=2,
+        -- violence
+        Carnage=10, Gore=5, Rapine=10,
+        Destruction=5, Doom=15,
+        Flesh=10, Corpses=10, Bones=10,
+        Viscera=5, Skulls=10,
+
+        -- disaster
+        Tragedy=10, Famine=10, Chaos=15,
+
+        -- non-sectarian behavior
+        Iconoclasm=10, Defection=10,
+        Blasphemy=10, Paganism=10,
+        Schism=10, Secularism=10, Sin=10, Mayhem=10,
+        Strain=5, Supplication=5, Witchcraft=5,
+        Heresy=10,
+
+        -- definitely bad things
+        Fallacy=10, Deception=10, Infidelity=10,
+        Suffering=5, Torment=10, Torture=10,
         Treachery=5, Lunacy=5, Woe=5,
+
+        -- emotions and physical pain
+        Horror=10, Terror=10, Death=15,
+        Sorrow=10, Hate=10, Misery=10,
+        Pain=15, Fear=5, Trauma=10,
+        Agony=10, Anguish=10,
+
+        Whispers=5, Tears=3,
+        Dread=5, Fate=5, Locusts=2, Erebus=5, Lethe=2,
         Reckoning=5, Minos=3, Hades=7, Acheron=5,
         Leviathan=5, Baphomet=5, Devils=10,
 
+        -- MSSP-TODO: these should probably in a separate
+        -- category instead. (i.e. as implicit objects)
         ["the Abhorrent"]=10
         ["the Absurd"]=10
         ["the Acolyte"]=10
