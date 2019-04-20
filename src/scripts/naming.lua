@@ -843,12 +843,13 @@ namelib.NAMES =
         Palace=5, Cathedral=5, Chamber=10, Citadel=5,
         Hall=7, Rooms=3, Hecatomb=3, Tabernacle=3,
 
-        Labyrinth=5, Dungeon=10, Shores=5, Cenotaph=5,
-        Temple=20, Shrine=10, Vault=10, Sanctum=10,
-        Spire=10, Arena=3, Swaths=2, Monastery=10,
-        Gate=3, Altar=7, Chapel=10, Village=3,
-        Tower=3, Mountains=2, Prison=3, Narthex=5,
-        Sanctuary=3, Basillica=3, Morgue=5,
+        -- terrain
+        Mountains=2, Swaths=2, Crags=3, Shores=5,
+
+        -- generic locations (not necessarily religious
+        -- in nature nor exclusive to hell)
+        Tower=3, Gate=3, Village=3, Sanctuary=3,
+        Prison=3, Sanctum=10, Arena=3, Spire=10,
 
         -- weird ones
         Communion=5, Monolith=5, Crucible=5,
@@ -858,6 +859,7 @@ namelib.NAMES =
         Ache=2, Apocalypse=1, Resurrection=5,
         Absolution=5, Crux=5, Culmination=5,
         Sacrament=5, Plight=5, Liturgy=5,
+        Choir=5,
 
         -- Shadiversity approved castle parts -MSSP
         Ramparts=8, Keep=10, Gatehouse=8,
@@ -868,6 +870,8 @@ namelib.NAMES =
         Cistern=3,
 
         -- temples of sorts
+        Temple=20,
+        Basillica=3, Chapel=10, Monastery=10,
         Abbey=10, Monastery=10, Friary=3,
         Priorate=5, Lamasery=3, Convent=10,
         Hermitage=5, Ziggurat=10, Bethel=3,
@@ -888,11 +892,10 @@ namelib.NAMES =
         Synagogue=10, Belfries=2, Pulpitum=3,
         Dais=3, Feretory=5, Maqsurah=3,
         Peripteral=3, Chantry=3, Font=2,
-        Sacristy=3,
+        Sacristy=3, Narthex=5, Altar=7,
+        Shrine=10,
 
         Plumbery=2,
-
-        Minaret=3,
 
         Monstrance=3, Reliquary=10,
 
@@ -912,6 +915,8 @@ namelib.NAMES =
 
         -- deady stuff
         Mausoleum=15, Undercroft=5, Entombment=5,
+        Morgue=5, Labyrinth=5, Dungeon=10,
+        Cenotaph=5, Vault=10,
 
         Domicile=5,
         Library=15,
@@ -945,6 +950,7 @@ namelib.NAMES =
         Oval=2,
 
         Pavillion=5, Monument=10, Garth=3,
+        Minaret=3,
 
         -- nest
         Nest=10, Aerie=5, Haunt=3,
@@ -1508,7 +1514,7 @@ namelib.NAMES =
         --+ level of danger
         Catastrophic=5, Perilous=15, Hostile=10,
         Dangerous=10, Precarious=5, Treacherous=5,
-        Formdiable=3, Unsafe=5,
+        Formidable=3, Unsafe=5,
 
         Unknown=5, Living=3,
         Slaughter=5, Murder=5, Killing=5,
