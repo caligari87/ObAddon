@@ -627,17 +627,20 @@ namelib.NAMES =
       -- %e = Entity
       -- %a = Adjectives
       -- %n = Places
-      -- %h = Object/Adjective
+      -- %h = Explicit description (e.g. I am Satan, "Arena of Satan")
+      -- %o = Implicit description (e.g. I am Satanic, "Arena of the Satanic")
 
       ["%a %n"] = 60
       ["%t %a %n"] = 20
 
       ["%n of %h"] = 26
-      ["%a %n of %h"] = 14
+      ["%a %n of %h"] = 7
+      ["%a %n of the %o"] = 7
 
       ["%e's %n"]       = 10
       ["%e's %a %n"]    = 8
-      ["%e's %n of %h"] = 6
+      ["%e's %n of %h"] = 3
+      ["%e's %n of the %o"] = 3
 
       ["%v %n"]    = 25
       ["%v %a %n"] = 25
@@ -659,7 +662,6 @@ namelib.NAMES =
       {
         The=50
       }
-
 
       e =
       {
@@ -1069,7 +1071,7 @@ namelib.NAMES =
         Sty=3, Antechamber=3, Hold=3,
       }
 
-      h =
+      h = -- explicit descriptions i.e. "Arena of Death"
       {
         -- fire and brimstone
         Hell=10, Fire=10, Flames=10,
@@ -1106,118 +1108,79 @@ namelib.NAMES =
         Dread=5, Fate=5, Locusts=2, Erebus=5, Lethe=2,
         Reckoning=5, Minos=3, Hades=7, Acheron=5,
         Leviathan=5, Baphomet=5, Devils=10,
+      }
 
-        -- MSSP-TODO: these should probably in a separate
-        -- category instead. (i.e. as implicit objects)
-        ["the Abhorrent"]=10
-        ["the Absurd"]=10
-        ["the Acolyte"]=10
-        ["the Ancient"]=10
-        ["the Angry"]=10
-        ["the Apostates"]=10
-        ["the Barbaric"]=10
-        ["the Beast"]=10
-        ["the Behemoth"]=10
-        ["the Baneful"]=10
-        ["the Belligerent"]=10
-        ["the Betrayers"]=10
-        ["the Blackened"]=10
-        ["the Bleak"]=10
-        ["the Bleeding"]=10
-        ["the Chaotic"]=10
-        ["the Condemned"]=10
-        ["the Corpsegrinder"]=10
-        ["the Corroded"]=10
-        ["the Corrosive"]=10
-        ["the Corrupt"]=10
-        ["the Crooked"]=10
-        ["the Cunning"]=10
-        ["the Damned"]=10
-        ["the Dead"]=10
-        ["the Decayed"]=10
-        ["the Decaying"]=10
-        ["the Deceitful"]=10
-        ["the Deceptive"]=10
-        ["the Defiled"]=10
-        ["the Deformed"]=10
-        ["the Denizens"]=10
-        ["the Deplorable"]=10
-        ["the Depraved"]=10
-        ["the Desolate"]=10
-        ["the Destroyer"]=10
-        ["the Diabolical"]=10
-        ["the Dishonored"]=10
-        ["the Dismal"]=10
-        ["the Disobedient"]=10
-        ["the Dissolute"]=10
-        ["the Dreadful"]=10
-        ["the Dreary"]=10
-        ["the Dying"]=10
-        ["the Emissary"]=10
-        ["the Enraged"]=10
-        ["the Exposed"]=10
-        ["the Failures"]=10
-        ["the Fallen"]=10
-        ["the Forgotten"]=10
-        ["the Foul"]=10
-        ["the Ghastly"]=10
-        ["the Gloomy"]=10
-        ["the Grotesque"]=10
-        ["the Grisly"]=10
-        ["the Gruesome"]=10
-        ["the Gullible"]=10
-        ["the Hazardous"]=10
-        ["the Hateful"]=10
-        ["the Hideous"]=10
-        ["the Forsaken"]=10
-        ["the Impure"]=10
-        ["the Insidious"]=10
-        ["the Infernal"]=10
-        ["the Insane"]=10
-        ["the Knavish"]=10
-        ["the Loathsome"]=10
-        ["the Malevolent"]=10
-        ["the Malicious"]=10
-        ["the Minions"]=10
-        ["the Missionary"]=10
-        ["the Necromancer"]=10
-        ["the Nefarious"]=10
-        ["the Neophyte"]=10
-        ["the Noxious"]=10
-        ["the Obscene"]=10
-        ["the Oracle"]=10
-        ["the Parlous"]=10
-        ["the Perilous"]=10
-        ["the Poisoned"]=10
-        ["the Possessed"]=10
-        ["the Priest"]=10
-        ["the Prophets"]=10
-        ["the Putrid"]=10
-        ["the Repulsive"]=10
-        ["the Rotten"]=10
-        ["the Ruined"]=10
-        ["the Ruthless"]=10
-        ["the Saints"]=10
-        ["the Savage"]=10
-        ["the Seer"]=10
-        ["the Sick"]=10
-        ["the Sinister"]=10
-        ["the Sinner"]=10
-        ["the Spiteful"]=10
-        ["the Tainted"]=10
-        ["the Treacherous"]=10
-        ["the Ugly"]=10
-        ["the Undead"]=10
-        ["the Unheard"]=10
-        ["the Unknown"]=10
-        ["the Unmaker"]=10
-        ["the Vicar"]=10
-        ["the Vicious"]=10
-        ["the Vile"]=10
-        ["the Wicked"]=10
-        ["the Witches"]=10
-        ["the Wretched"]=10
-        ["the Zealots"]=10
+      o = -- implicit objects e.g. "Arena of the Doomed"
+      {
+        -- entities
+        --+ alive people
+        Denizens=10, Emissary=10, Seer=10,
+        Wretched=10, Vicar=10,
+        --+ dead people
+        Dead=10, Fallen=10, Possessed=10,
+        Undead=10,
+        --+ bad folk
+        Betrayers=10, Corpsegrinder=10, Destroyer=10,
+        Necromancer=10, Sinner=10, Wicked=10,
+        Witches=10, Unmaker=10,
+        --+ ir/religious figures
+        Acolyte=10, Apostates=10, Missionary=10,
+        Priest=10, Prophets=10, Neophyte=10, Oracle=10,
+        Saints=10, Zealots=10,
+        --+ creatures
+        Beast=10, Behemoth=10, Minions=10,
+
+        -- personal qualities
+        --+ outright evil
+        Abhorrent=10, Barbaric=10, Deplorable=10,
+        Depraved=10, Diabolical=10, Ghastly=10, Impure=10,
+        Insidious=10, Infernal=10, Malevolent=10,
+        Malicious=10, Nefarious=10, Ruthless=10,
+        Sinister=10,
+        --+ negative
+        Angry=10, Belligerent=10,
+        Baneful=10, Crooked=10, Decayed=10,
+        Deceitful=10, Deceptive=10, Dishonored=10,
+        Disobedient=10, Dreadful=10, Dreary=10,
+        Dying=10, Enraged=10, Gloomy=10,
+        Grotesque=10, Foul=10,
+        Grisly=10, Gruesome=10, Gullible=10,
+        Hateful=10, Hideous=10, Insane=10,
+        Knavish=10, Loathsome=10,
+        Obscene=10, Savage=10, Sick=10,
+        Spiteful=10, Ugly=10, Vicious=10,
+        Vile=10,
+        --+ neutral
+        Cunning=10, Unheard=10, Unknown=10,
+
+        -- weird
+        Absurd=10,
+
+        -- age
+        Ancient=10,
+
+        -- damage states
+        Blackened=10, Bleak=10, Bleeding=10,
+        Corroded=10, Corrosive=10, Deformed=10,
+        Dismal=10, Exposed=10,
+        Ruined=10,
+
+        -- tainted
+        Chaotic=10, Corrupt=10, Defiled=10,
+        Noxious=10, Poisoned=10, Putrid=10,
+        Repulsive=10, Rotten=10, Tainted=10,
+
+        -- abandoned
+        Condemned=10, Damned=10, Decaying=10,
+        Desolate=10, Dissolute=10, Forgotten=10,
+        Forsaken=10,
+
+        -- things that cause anxiety
+        Failures=10,
+
+        -- danger
+        Hazardous=10, Parlous=10, Perilous=10,
+        Treacherous=10,
       }
 
       s =
@@ -3217,8 +3180,6 @@ namelib.NAMES =
       ["Dead Base: The %d"] = 5
       ["%a Sorcery"] = 3
       ["%a Witchcraft"] = 3
-
-
     }
 
     lexicon =
