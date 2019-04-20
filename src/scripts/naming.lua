@@ -836,6 +836,10 @@ namelib.NAMES =
         Elder=15, Ancient=15, Eternal=5,
         Eldritch=7,
 
+        -- color
+        Black=5, Gray=5, Red=5, Crimson=5,
+        Ochre=5,
+
         -- dirty
         Foul=10, Defiled=10, Ravished=5, Murky=3,
         Begrimed=5, Filthy=5, Sloven=5,
@@ -844,7 +848,7 @@ namelib.NAMES =
         Revolting=10, Putrid=5, Skinned=3,
         Fallen=10, Stinking=1, Grungy=3,
         Smoky=5, Flagrant=20, Aching=5,
-        Acrid=5,
+        Acrid=5, Fetid=2,
 
         -- contents
         --+ guts n stuff
@@ -935,8 +939,12 @@ namelib.NAMES =
         Divine=5, Devout=5, Sacerdotal=5, Sacred=5,
         Clerical=5, Hallowed=5,
 
-        -- eww
-        Fetid=2,
+        -- material
+        Adamantine=5, Bronze=5, Copper=5,
+        Rocky=5, Stone=5, Masonic=5,
+        Iron=5, Steel=5, Hellforged=5,
+        Obsidian=5, Mythril=5,
+        Rusted=5, Guilded=5,
       }
 
       n =
@@ -1752,16 +1760,17 @@ namelib.NAMES =
         Pain=15, Fear=7, Hate=5, Desolation=3,
         Misery=10, Turmoil=5, Decay=5,
         Insanity=5, Helplessness=2, Misfortune=5,
+        Voiceless=5,
         --+ positive
         Solace=10, Reparation=3,
-        --+ danger
-        Danger=10,
 
-        -- destruction
-        --+ states
+        -- descriptions of danger
+        Danger=10,
+        --+ elemental danger
+        Acid=5, Flames=5, Lava=3,
+
+        -- states of destruction
         Ruin=10,
-        --+ elemental
-        Flames=3,
 
         -- bodily objects
         Bone=7, Blood=10, Claws=10,
@@ -1772,7 +1781,7 @@ namelib.NAMES =
 
         -- delusions
         Dreams=2, Delirium=2, Delusion=2,
-        Illusions=2,
+        Doubt=5, Illusions=2,
 
         -- bad acts
         Sabotage=5, Destruction=5,
@@ -1800,7 +1809,10 @@ namelib.NAMES =
         Spiders=2, Snakes=5,
 
         -- creepy furniture
-        Mirrors=5,
+        Mirrors=5, Stakes=3,
+
+        -- time
+        Dusk=5, Dawn=5, Midnight=5,
       }
 
       o = -- implicit descriptors (e.g. "Arena of the Doomed")
@@ -1818,29 +1830,46 @@ namelib.NAMES =
         -- dirt
         Filthy=5, Slime=5,
 
-        -- creatures
+        -- illusion
+        Mirage=5,
+
+        -- creatures and people
         --+ wild
-        Stray=5, Vermin=5,
+        Vermin=5,
         --+ paranormal
-        Phantasm=10, Poltergeist=10, Wraith=10,
-        Undead=5,
-        --+ people
+        Ghosts=4, Phantasm=10, Poltergeist=10,
+        Wraith=10, Undead=5, Risen=5,
+        --+ occupational
+        Butcher=5, Executor=5, Fiend=5,
+        Slayer=5,
+
+        -- states of being
         ---+ victimized
         Afflicted=5, Desperate=5, Diseased=5,
         Estranged=5, Faceless=5, Homeless=5,
         Misbegotten=5, Missing=5, Hunted=5,
-        Sick=5, Unwell=5, Quarantined=5,
+        Sick=5, Sightless=5, Unwell=5,
+        Quarantined=5,
         ---+ craycray
-        Deranged=5, Hysteric=5,
+        Deranged=5, Disturbed=3, Hysteric=5,
         Insane=5, Mad=7,
         ---+ pretty much dead
         Dead=5, Deceased=5, Fallen=5,
+        ---+ good
+        Bold=5, Brave=5, Dauntless=5,
+        Interpid=3, Savior=5,
+        ---+ neutral
+        Adamant=5, Feral=5, Untamed=5,
+        Vicarious=5, Wild=5, Stray=5,
+        ---+ evil
+        Lawless=5, Unforgiving=5,
 
-        -- personal qualities
-        Untamed=5, Vicarious=5,
+        -- groups
+        Conclave=5, Sovereign=5,
+        Brotherhood=5, Sisterhood=5,
 
-        -- time
-        Night=10,
+        -- age and time
+        Ancients=5, Eternal=5, Night=10,
       }
 
       s =
