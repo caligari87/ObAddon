@@ -70,6 +70,9 @@ OB_MODULES["debugger"] =
       name = "name_gen_test"
       label=_("Name Generator")
       choices=DEBUG_CONTROL.NAME_GEN_CHOICES
+      tooltip="Prints a demonstration sample of 32 names per category.\n" ..
+              "Level Names = TECH, GOTHIC, URBAN, and BOSS level names\n" ..
+              "Title Names = TITLE, SUB_TITLE, and EPISODE names\n"
       default="none"
       priority=100
     }
@@ -79,6 +82,10 @@ OB_MODULES["debugger"] =
       name = "print_shape_steps"
       label=_("Print Growth Steps")
       choices=DEBUG_CONTROL.GROWTH_STEP_CHOICES
+      tooltip="Displays more information about the shape grammar steps "..
+              "in the LOG. 'Show All Steps' will print all actions " ..
+              "the shape grammar system performs but will greatly " ..
+              "bloat your LOG file. Default is 'Show Succesful Steps Only'."
       default="show"
       priority=99
     }
@@ -88,6 +95,7 @@ OB_MODULES["debugger"] =
       name = "print_prefab_use"
       label=_("Print Prefab Usage")
       choices=DEBUG_CONTROL.YES_NO
+      tooltip="Lists prefabs spawned per map."
       default="yes"
       priority=98
     }
@@ -97,6 +105,8 @@ OB_MODULES["debugger"] =
       name = "print_story_strings"
       label=_("Print ZDoom Strings")
       choices=DEBUG_CONTROL.YES_NO
+      tooltip="Displays the story generator and custom quit message strings "..
+              "added by the ZDoom Special Addons: Story Generator."
       default="yes"
       priority=97
     }
