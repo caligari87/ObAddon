@@ -22,6 +22,8 @@ PREFABS.Decor_3x3_bookshelves_thin =
     PANBLUE  = 50
     PANRED   = 50
   }
+
+  z_fit = "top"
 }
 
 PREFABS.Decor_3x3_bookshelves_thick =
