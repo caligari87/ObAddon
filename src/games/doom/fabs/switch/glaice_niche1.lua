@@ -32,12 +32,31 @@ PREFABS.Switch_glaice_niche1 =
     SW1SLAD = 50
     SW1STRTN = 50
     SW1TEK = 50
+
+    tex_BROWNGRN =
+    {
+    BROWNGRN = 50
+    BROWNHUG = 50
+    COMPBLUE = 50
+    METAL1   = 50
+    SLADWALL = 50
+    STARG1   = 50
+    STARGR1  = 50
+    GRAY1    = 50
+    GRAY4    = 50
+    GRAY5    = 50
+    SHAWN2   = 50
+    CEMENT7  = 50
+    CEMENT9  = 50
+    COMPSPAN = 50
+    }
   }
 }
 
 PREFABS.Switch_glaice_niche1_urban =
 {
   template = "Switch_glaice_niche1"
+  game = "doom2"
 
   theme = "urban"
 
@@ -66,6 +85,33 @@ PREFABS.Switch_glaice_niche1_urban =
     SW1WOOD = 50
     SW1ZIM = 50
   }
+
+  tex_BROWNGRN =
+  {
+  BROWNGRN = 50
+  BROWNHUG = 50
+  METAL1   = 50
+  METAL2   = 50
+  MODWALL1 = 50
+  PANCASE2 = 50
+  PANEL7   = 50
+  PANEL8   = 50
+  PANEL9   = 50
+  PANEL2   = 50
+  PANEL3   = 50
+  STONE4   = 50
+  STONE6   = 50
+  METAL    = 50
+  STUCCO1  = 50
+  STUCCO3  = 50
+  WOODVERT = 50
+  WOOD12   = 50
+  BIGBRIK1 = 50
+  BIGBRIK2 = 50
+  BLAKWAL1 = 50
+  BLAKWAL2 = 50
+  }
+
 }
 
 PREFABS.Switch_glaice_niche1_hell =
@@ -88,11 +134,51 @@ PREFABS.Switch_glaice_niche1_hell =
     SW1WOOD = 50
     SW1ZIM = 50
   }
+
+  tex_BROWNGRN =
+  {
+  BROWNGRN = 50
+  BROWNHUG = 50
+  METAL1   = 50
+  SLADWALL = 50
+  ICKWALL1 = 50
+  ICKWALL3 = 50
+  ASHWALL2 = 50
+  ASHWALL4 = 50
+  BSTONE1  = 50
+  BSTONE2  = 50
+  CRACKLE2 = 50
+  CRACKLE4 = 50
+  MARBGRAY = 50
+  ROCK1    = 50
+  ROCK2    = 50
+  ROCK3    = 50
+  SKSNAKE1 = 50
+  SKSNAKE2 = 50
+  SP_FACE2 = 50
+  STONE4   = 50
+  STONE6   = 50
+  METAL    = 50
+  STUCCO   = 50
+  STUCCO1  = 50
+  STUCCO3  = 50
+  WOOD4    = 50
+  WOOD8    = 50
+  WOOD9    = 50
+  WOOD12   = 50
+  WOODVERT = 50
+  ZIMMER4  = 50
+  ZIMMER5  = 50
+  ZIMMER7  = 50
+  ZIMMER8  = 50
+  }
+
 }
 
 PREFABS.Switch_glaice_niche1_flesh =
 {
   template = "Switch_glaice_niche1"
+  game = "doom"
 
   theme = "flesh"
 
@@ -109,11 +195,27 @@ PREFABS.Switch_glaice_niche1_flesh =
     SW1METAL = 50
     SW1SLAD  = 50
     }
+
+    tex_BROWNGRN =
+    {
+    BROWNGRN = 50
+    BROWNHUG = 50
+    METAL1   = 50
+    SLADWALL = 50
+    WOOD4    = 50
+    GRAY1    = 50
+    GRAY4    = 50
+    ICKWALL1 = 50
+    ICKWALL3 = 50
+    METAL    = 50
+    }
+
 }
 
 PREFABS.Switch_glaice_niche1_deimos =
 {
   template = "Switch_glaice_niche1"
+  game = "doom"
 
   theme = "deimos"
 
@@ -132,5 +234,22 @@ PREFABS.Switch_glaice_niche1_deimos =
     SW1STON1 = 50
     SW1STON2 = 50
     SW1STRTN = 50
+    }
+
+    tex_BROWNGRN =
+    {
+    BROWNGRN = 50
+    BROWNHUG = 50
+    COMPBLUE = 50
+    METAL1   = 50
+    SLADWALL = 50
+    STARG1   = 50
+    STARGR1  = 50
+    METAL    = 50
+    ICKWALL1 = 50
+    ICKWALL3 = 50
+    GRAY1    = 50
+    GRAY4    = 50
+    GRAY5    = 50
     }
 }
