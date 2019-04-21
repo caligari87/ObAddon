@@ -1442,6 +1442,7 @@ DOOM.THEMES =
       gtd_wall_grated_machines = 4
       gtd_wall_quakish_insets = 8
       gtd_ribbed_lights = 4
+      gtd_wall_hell_ossuary = 2
     }
 
     window_groups =
@@ -1751,7 +1752,7 @@ DOOM.THEMES =
 
     wall_groups =
     {
-      PLAIN = 425
+      PLAIN = 450
       torches2 = 30 --red
       torches3 = 30 --blue
       torches1 = 30 --green
@@ -1783,6 +1784,7 @@ DOOM.THEMES =
       gtd_furnace_face = 20
       gtd_wall_marbface = 40
       gtd_wall_quakish_insets = 40
+      gtd_wall_hell_ossuary = 40
     }
 
     window_groups =
