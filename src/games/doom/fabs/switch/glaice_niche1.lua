@@ -32,6 +32,7 @@ PREFABS.Switch_glaice_niche1 =
     SW1SLAD = 50
     SW1STRTN = 50
     SW1TEK = 50
+  }
 
     tex_BROWNGRN =
     {
@@ -51,12 +52,10 @@ PREFABS.Switch_glaice_niche1 =
     COMPSPAN = 50
     }
   }
-}
 
 PREFABS.Switch_glaice_niche1_urban =
 {
   template = "Switch_glaice_niche1"
-  game = "doom2"
 
   theme = "urban"
 
@@ -178,7 +177,6 @@ PREFABS.Switch_glaice_niche1_hell =
 PREFABS.Switch_glaice_niche1_flesh =
 {
   template = "Switch_glaice_niche1"
-  game = "doom"
 
   theme = "flesh"
 
@@ -215,7 +213,6 @@ PREFABS.Switch_glaice_niche1_flesh =
 PREFABS.Switch_glaice_niche1_deimos =
 {
   template = "Switch_glaice_niche1"
-  game = "doom"
 
   theme = "deimos"
 
