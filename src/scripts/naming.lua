@@ -81,12 +81,15 @@ namelib.NAMES =
         ["Battle for the"]=15
         ["Battle through the"]=10
         ["Into the"]=10
-        ["Operation:"]=15
-        ["Mission:"]=10
-        ["Objective:"]=10
+        ["Operation:"]=10
+        ["Mission:"]=7
+        ["Objective:"]=7
         ["Counterattack in the"]=7
         ["Ambush in the"]=7
         ["Get to da"]=3 -- CHOPPAH!!!
+        ["War of the"]=10,
+
+        ["Raze the"]=8,
 
         -- command-like prefixes, some by Dante
         ["Attack the"]=10
@@ -171,9 +174,12 @@ namelib.NAMES =
       a =
       {
         -- size
+        --+ large
         Universal=20, Colossal=20, Prodigious=3,
+        Vast=10, Large=4,
+        --+ small
         Secluded=10, Confined=5, Restricted=3,
-        Vast=10, Cramped=5,
+        Cramped=5, Narrow=5,
 
         -- location
         --+ generic
@@ -192,6 +198,9 @@ namelib.NAMES =
         Inner=10, Outer=10, Innermost=3, Outermost=3,
         Exterior=10, Subsidiary=3,
         Interior=5, Internal=10,
+        --+ relative position
+        Adjacent=5, Adjoining=5, Neighboring=5,
+        Inland=5, Outland=5,
         --+ cardinality
         Preliminary=3, Ultimate=3,
         Auxiliary=10, Primary=20,
@@ -240,26 +249,42 @@ namelib.NAMES =
       b =
       {
         -- purpose
-        Control=10, Research=10,
+        --+ administrative
+        Control=10, Management=5, Foundation=5,
+        --+ science
+        Research=10, Development=5,
+        --+ military
         Military=10, Security=5, Defense=5,
-        Processing=10, Refueling=5, Supply=15,
+        Aegis=3, Stockade=3,
+        --+ manufacturing
         Manufacturing=3, Maintenance=3,
         Industrial=3, Engineering=5,
-        Construction=5, Assembly=5, Management=5,
-        Development=5, Foundation=5,
-        Aegis=3, Stockade=3, Refuge=5,
+        Processing=10, Refueling=5, Supply=15,
+        Construction=5, Assembly=5,
+        --+ residential
+        Refuge=5, Pods=5,
 
         -- utility
-        Drainage=5, Support=5, Holding=5,
-        Testing=5, Quarantine=5, Authorization=5,
-        Synthesis=5, Unification=3, Loading=5,
-        Disposal=5, Dumping=3, Pumping=4,
-        Transfer=3, Mobilization=3, Irrigation=3,
-        Communications=5, Operations=5,
-        Training=5, Treatment=5, Shipment=5,
-        Cooling=5, Coolant=5, Administration=5,
-        Distribution=5, Trafficking=5, Singularity=3,
-        Programming=5, Security=5, Staging=5, Comms=5,
+        --+ storage
+        Support=5, Holding=5, Loading=5,
+        Quarantine=5, Shipment=5, Staging=5,
+        --+ manufacturing
+        Testing=5, Authorization=5, Administration=5,
+        Synthesis=5, Unification=3,
+        --+ waste
+        Drainage=5, Disposal=5, Dumping=3,
+        --+ resources
+        Pumping=4, Irrigation=3,
+        Cooling=5, Coolant=5,
+        --+ infrastructure
+        Mobilization=3, Transfer=3,
+        Distribution=5, Trafficking=5,
+        --+ military
+        Operations=5, Training=5, Treatment=5,
+        Security=5,
+        --+ IT
+        Communications=5, Programming=5, Comms=5,
+        Singularity=3,
 
         -- descriptive: location
         Main=20, Entrance=10, Provisional=3,
@@ -315,7 +340,7 @@ namelib.NAMES =
         Dilithium=7, Verteron=5, --nerd
         Deuterium=5, Antimatter=5, Isotope=3,
         Syngas=5, Flux=10, Rubidium=3, Magmatic=3,
-        Silicone=5,
+        Silicone=5, Hadron=5,
 
         -- can't get enough weird sci-fi buzzwords -MSSP
         Axioinic=3, Gravimetric=5,
@@ -331,6 +356,7 @@ namelib.NAMES =
         Filtration=5, Pneumatic=5, Catalytic=3,
         Pyrolytic=5, Construction=5, Fabrication=5,
         Production=10, Repair=10, Pyrolosis=3, Combustion=5,
+        Sedimentation=5, Drilling=5,
 
         -- mathematical shapes/structures
         Toroidal=5, Solenoid=5, Helical=5,
@@ -343,6 +369,8 @@ namelib.NAMES =
         Quark=5, Boson=5, Neutrino=5,
         Electron=7,
 
+        Baryonic=5, Mesonic=5,
+
         ["I/O"]=5,
       }
 
@@ -353,6 +381,7 @@ namelib.NAMES =
         Hangar=5, Outpost=10, Beacon=3,
         Bunker=7, Facility=10, Pillbox=1,
         Headquarters=2, Silos=7, Base=30,
+        Command=10,
 
         -- utility places
         Generator=12, Plant=15, Grid=5,
@@ -377,7 +406,8 @@ namelib.NAMES =
         -- infrastructural places
         Platform=5, Port=3, Hub=10,
         Nexus=3, Infrastructure=5,
-        Tributary=5, Channel=5, Tunnels=10, Shaft=3,
+        Tributary=5, Channel=5, Tunnels=10,
+        Shaft=3,
 
         -- general places
         Compound=15, Dock=3, Bay=3,
@@ -418,7 +448,7 @@ namelib.NAMES =
         -- machine/electronic parts -MSSP
         -- and weird science-y buzzwords
         -- and also car parts
-        Device=5, Machine=5,
+        Device=5, Machine=5, Couplings=5,
 
         Oscillator=5, Magnetron=5, Emulsifier=5,
         Alternator=5, Induction=5, Stabilizer=5,
@@ -441,8 +471,14 @@ namelib.NAMES =
         Transistor=3, Diode=3, Boiler=3,
         Compositor=5, Sorter=5, Cultivator=3,
         Engine=7, Solderer=3, Primer=5,
+        Conductor=5, Integrator=5,
+        Salvager=5, Recycler=5, Culler=4,
 
         Framework=5, Compartment=5,
+
+        -- IT security objects
+        Firewall=5, Servers=5, Encoder=5,
+        Decrypter=5, Cipher=5, Datacenter=5,
       }
 
       s =
@@ -948,18 +984,27 @@ namelib.NAMES =
       }
 
       n =
-      {
+      { -- MSSP-TODO: this area needs some more sorting (merge categories)
         -- places
-        Crypt=20, Grotto=15, Tomb=15,
-        Chapel=10, Church=7, Mosque=5,
-        Graveyard=10, Cloister=5,
+        --+ burials
+        Crypt=20, Tomb=15, Graveyard=10,
+        Cloister=5, Sepulcher=7, Hecatomb=3,
+        Catacombs=10,
+        --+ neutral undergorund
         Pit=10, Cavern=10, Cave=5, Chasm=5,
-        Wasteland=15, Sepulcher=7, Town=5,
-        Ghetto=2, City=5, Well=5, Realm=10,
-        Lair=15, Den=7, Domain=10, Hive=5, Abode=15,
-        Valley=10, River=5, Catacombs=10, Abyss=5,
-        Palace=5, Cathedral=5, Chamber=10, Citadel=5,
-        Hall=7, Rooms=3, Hecatomb=3, Tabernacle=3,
+        Lair=15, Den=7, Abyss=5,
+        --+ neutral aboveground
+        Wasteland=15, Town=5, Ghetto=2, City=5,
+        Well=5, Realm=10, Domain=10,
+        Hive=5, Abode=15,
+        --+ terrain
+        Valley=10, River=5,
+        --+ temples
+        Grotto=15, Chapel=10, Church=7,
+        Mosque=5, Cathedral=5, Tabernacle=3,
+        Palace=5, Citadel=5,
+        --+ building sections
+        Hall=7, Rooms=3, Chamber=10,
 
         -- terrain
         Mountains=2, Swaths=2, Crags=3, Shores=5,
@@ -1034,7 +1079,7 @@ namelib.NAMES =
         -- deady stuff
         Mausoleum=15, Undercroft=5, Entombment=5,
         Morgue=5, Labyrinth=5, Dungeon=10,
-        Cenotaph=5, Vault=10,
+        Cenotaph=5, Vault=10, Culverts=5,
 
         Domicile=5,
         Library=15,
@@ -1172,7 +1217,7 @@ namelib.NAMES =
         Blackened=10, Bleak=10, Bleeding=10,
         Corroded=10, Corrosive=10, Deformed=10,
         Dismal=10, Exposed=10,
-        Ruined=10,
+        Ruined=10, Collapsed=5,
 
         -- tainted
         Chaotic=10, Corrupt=10, Defiled=10,
@@ -1531,13 +1576,13 @@ namelib.NAMES =
 
         --+ supernatural
         Arcane=5, Hidden=5, Ethereal=5, Nether_=5,
-        Northern=10, Southern=10, Eastern=10, Western=10,
 
         --+ directional
-        Upper=5, Lower=10, Central=5, Northeast=5, Northwest=5,
-        Inner=5, Innermost=3, Southeast=5, Southwest=5,
-        Outer=5, Outermost=3,
-        Focal=5,
+        Upper=5, Lower=10,
+        Northern=10, Southern=10, Eastern=10, Western=10,
+        Northeast=5, Northwest=5, Southeast=5, Southwest=5,
+        Inner=5, Innermost=3, Outer=5, Outermost=3,
+        Focal=5, Central=5,
 
         --+ distance/inaccessibility
         Furthest=5, Isolated=10, Remote=5, Obscure=10,
@@ -1545,6 +1590,8 @@ namelib.NAMES =
         Cordoned=5, Quarantined=5, Sequestered=5,
         Confined=5, Secluded=5, Sealed=3,
         Restricted=5, Blocked=3, Segregated=3,
+        Adjacent=5, Adjoining=5, Neighboring=5,
+        Inland=5, Outland=5,
 
         --+ time
         Old=10, Ancient=20, Eternal=7,
@@ -1835,7 +1882,7 @@ namelib.NAMES =
 
         -- creatures and people
         --+ wild
-        Vermin=5,
+        Pests=5, Vermin=5,
         --+ paranormal
         Ghosts=4, Phantasm=10, Poltergeist=10,
         Wraith=10, Undead=5, Risen=5,
@@ -2474,6 +2521,7 @@ namelib.NAMES =
         ["Nobody Got Time For That"]=10
         ["VGCG"]=10
         ["You Wouldn't Steal a Car"]=10
+        ["Papa Bless"]=10
 
         --literature (or derived/deviated from them)
         ["Brave New World"]=10
