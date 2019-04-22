@@ -8,7 +8,7 @@ PREFABS.Wall_hell_sharp_alcoves_single =
   env = "building"
 
   where  = "edge"
-  deep   = 16
+  deep   = 20
   height = 128
 
   bound_z1 = 0
