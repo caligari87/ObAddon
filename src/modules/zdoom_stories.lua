@@ -481,8 +481,8 @@ ZDOOM_STORIES.STORIES =
       around you down to ashes. _RAND_CONTRIBUTOR waves at you
       and disappears again above the clouds...]],
 
-      [[As you down the final demon, horrifying screams and screaches
-      fill the room! As you turn back, an entire horde of demons
+      [[As you down the final demon, horrifying screams and screams
+      fill the room. As you turn back, an entire horde of demons
       is charging at you! However, the opposite direction comes
       an immense orb of light! The orb shoots beams into the belly of
       each creature turning them into nothing but clouds of dust.
@@ -511,7 +511,7 @@ ZDOOM_STORIES.STORIES =
       [[Your radio picks up on a mysterious signal. Parsing it through
       your tracker, you find a beacon transmitting at a military frequency.
       It likely is a point of interest so you begin your journey towards
-      it accepting the potential risk.]],
+      it, accepting the potential risk.]],
     }
 
     conclusions =
@@ -519,12 +519,12 @@ ZDOOM_STORIES.STORIES =
       [[After destroying the hordes, it seems you have found a cache
       of essential supplies they were attempting to keep from you.
       You help yourself to the newfound munitions. It seems there is no
-      evidence as to who activated the beacon. You shut it off.]],
+      evidence as to who activated the beacon. You shut it down.]],
 
-      [[It was a trap all along! The hell general _RAND_DEMON activated the beacon,
-      expecting you to follow it. They did not, however, expect a thorough
-      defeat despite their machinations. You deactivate the beacon
-      so no marine after you may fall prey to it.]],
+      [[It was a trap all along! The hell general _RAND_DEMON activated
+      the beacon, expecting you to follow it. They did not, however,
+      expect a thorough defeat despite their machinations.
+      You deactivate the beacon so no marine after you may fall prey to it.]],
 
       [[You have found the beacon attached to a badly damaged cargo pod.
       You pry open the doors pocked with bullet holes and claw marks.
@@ -535,9 +535,10 @@ ZDOOM_STORIES.STORIES =
       repay you with anything, but we hope you bring down more of those demons!"
       The civilians leave.]],
 
-      [[After a great battle with the minions of hell, you find a group of fallen
-      marines before you who have made a last stand, their bodies scattered around
-      a crater. One of them still grips an emergency beacon tightly in their bloody hands.
+      [[After a great battle with the minions of hell, you find a group
+      of fallen marines before you who have made a last stand, their
+      bodies scattered around a crater. One of them still grips an
+      emergency beacon tightly in their bloody hands.
       You disable the beacon and take their dog tags.
       Their sacrifices will be remembered.]],
     }
@@ -572,7 +573,7 @@ ZDOOM_STORIES.STORIES =
       the local ground defense system has rebooted. You watch as
       civilian spacecraft rise to the skies and exit the atmosphere safely.]],
 
-      [[The battle with _RAND_DEMON of _GOTHIC_LEVEL was difficult
+      [[The battle with _RAND_DEMON of _GOTHIC_LEVEL was difficult,
       but you came out victorious nonetheless. You smash the
       defense terminal, causing it to power down. You watch as friendly dropships
       safely descend in the distance from the clouds. Hell will fight back
@@ -584,7 +585,7 @@ ZDOOM_STORIES.STORIES =
   {
     hooks =
     {
-      [[This area bares the hallmarks of UAC technology. Energy signatures
+      [[This area bears the marks of UAC technology. Energy signatures
       match your own equipment. It seems a wicked experiment has been left
       behind by the UAC in this area. Whatever it is, time to shut it down.]],
 
