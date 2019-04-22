@@ -139,7 +139,8 @@ ZDOOM_STORIES.STORIES =
 
       [[It was a trap! As the demon's corpse crashes onto the floor,
       a portal to hell turns out to be underneath all along! The platform
-      crumbles and throws you into its maw - you find yourself in a new place...]],
+      crumbles and throws you into its maw - 
+      you find yourself in a new place...]],
     }
   }
 
@@ -160,12 +161,12 @@ ZDOOM_STORIES.STORIES =
     conclusions =
     {
       [[You have found a conduit through which Argent Energy
-      is being transmitted through from hell! With a crash
-      of your fists, the conduit is damaged beyond repair.
-      The power goes out throughout the region -
+      is being transmitted from hell! With a crash of your
+      fists, the conduit is damaged beyond repair.
+      Power supply is eliminated throughout the region -
       but so does the corruption hell has radiated over it.]],
 
-      [[The generator translating hellish energies into
+      [[The generator transforming hellish energies into
       electrical power has allowed the decaying force
       of Argent Energy to mutate this place. You destroy
       the generator but as it falls silent, a well of souls
@@ -192,8 +193,8 @@ ZDOOM_STORIES.STORIES =
       have opportunity to save them...]],
 
       [[Badly hysteric chatter suddenly rings off of your
-      radio. It seems a group of scientists are looking for a way
-      out of this place and hellspawn are on their trail.
+      radio. It seems a group of scientists are looking for
+      a way out of this place and hellspawn are on their trail.
       Unable to respond to them, you attempt to make
       your way towards their position...]],
     }
@@ -217,8 +218,8 @@ ZDOOM_STORIES.STORIES =
       with a fiery glow through its gaps. You suddenly notice
       madness in the scientist's eyes! A burst of energy
       throws you across the floor, killing the scientist instantly!
-      A surge of demonic energies herald the coming of new hellspawn!
-      It looks like your task isn't over yet!]],
+      A surge of demonic energies herald the coming of new hellspawn.
+      It looks like your task isn't over yet...]],
     }
   }
 
@@ -232,14 +233,14 @@ ZDOOM_STORIES.STORIES =
       abruptly cuts off. You hurry to track their last position.]],
 
       [[Your tracker reveals several green dots on the map.
-      They are fleet-footed, as it seems the dots are moving
-      quickly. They are marines and it seems they are in the middle
+      They are clearly hurrying, as it seems the dots are moving
+      quickly. They are marines and likely are in the middle
       of an engagement. They are some distance away, but you
       may still be able to reach them in time...]],
 
       [[As you step across the floor, you come up to a pair of dog tags
-      below your boots. You pick it up and hear the distant thunder
-      of gunfire. It seems a group of marines have gone through
+      below your boots. You pick them up and hear the distant thunder
+      of gunfire. It seems a group of marines have passed through
       here some time ago. It might be a good idea to join them.]],
     }
 
@@ -253,9 +254,9 @@ ZDOOM_STORIES.STORIES =
 
       [[As the final creature falls, it harkens to you.
       "Foolish mortal. Attracted to the sound of despair.
-      Such easy trickey for a famed warrior as you."
+      Such easy trickey for a famed warrior such as you."
       The demon's corpse fades into ashes.
-      There is no sign of the embattled marines anywhere
+      There is no sign of the battling marines anywhere
       but the general of hell still lies defeated.]],
 
       [[The armies of hell are routed by your relentless onslaught.
@@ -270,8 +271,8 @@ ZDOOM_STORIES.STORIES =
     hooks =
     {
       [[A fetid odor fills the air of this place. It seems the
-      forces of hell are amassing ahead in preparation for
-      an assault. It is prime opportunity to throw off their
+      forces of hell are massing ahead in preparation for
+      an assault. It is a prime opportunity to throw off their
       gathering before an attack can begin...]],
 
       [[A hellish infestation seems to be running amuck about
@@ -280,7 +281,7 @@ ZDOOM_STORIES.STORIES =
       on them first before they begin a new assault...]],
 
       [[A strange overgrowth of bloody viscera seems to be
-      overtaking this place. Hell's infestion is interacting
+      overtaking this place. Hell's infestation is interacting
       with reality to accomodate hellspawn over mortals.
       Time to change that.]],
     }
@@ -336,7 +337,7 @@ ZDOOM_STORIES.STORIES =
 
       -- Hannibal totem
       [[The wind blows by with a scent of sulfur. Ahead, you spot
-      something terrifying: an effigy to hell. The monument is of
+      something terrifying: an effigy of hell. The monument is of
       twisted human corpses, sewn together to create a totem. It
       suddenly catches a blue fire and you hear a voice.
       _SPACE
@@ -346,13 +347,13 @@ ZDOOM_STORIES.STORIES =
       -- the bounty hunter
       [["DOOMSLAYER!" a scream echoes through the halls. An
       enormous creature steps from the shadows. "I am _RAND_DEMON the
-      _EVULZ. Hell has a bounty upon you. I shall claim it from your head
+      _EVULZ. Hell has a bounty upon you. I shall claim it with your head
       and all darkness shall know me for my deed."
       Finished with its threat, _RAND_DEMON recedes into the shadows
       and awaits you in its infernal arena.]],
 
       -- it's all in your mind
-      [[A loud scratch startles you. You look around but your tracker
+      [[A loud screech startles you. You look around but your tracker
       hints to no movement. A voice suddenly speaks into your mind.
       "Mortal. You have become our quarry for your intrusions upon hell.
       I, _RAND_DEMON the _EVULZ, have marked you for death. You are hunted."
@@ -368,7 +369,7 @@ ZDOOM_STORIES.STORIES =
       -- eye for an eye
       [["You!" a bellowing voices beckons. You cannot trace the source, but
       its speech continues. "You have scarred me before. You do not remember
-      me but soon you will. I am _RAND_DEMON the _EVULZ. I shall inflict
+      me, but soon you will. I am _RAND_DEMON the _EVULZ. I shall inflict
       pain on you as you had on me. I will tear you limb from limb."
       Your tracker indicates an energy surge some distance away. You know what
       to do.]],
@@ -382,30 +383,37 @@ ZDOOM_STORIES.STORIES =
       greet you with glee. Come and enter." The figure dissolves back into the viscera.]],
 
       -- remember Daisy
-      [[You walk between rows of sticks. Impaled limbs and heads are set upon them.
-      On one you see the head of a rabbit. Immediately, your blood boils.
-      You realize, however, the rabbit isn't Daisy. An ethereal voice whispers to you.
-      "You are a mortal of impulse after all. Still hurt over your little big-ear darling?
-      Show me your fury, mortal. I am _RAND_DEMON the _EVULZ. I grant you the company
-      of your little pet. In HELL." The voice fades, and you steel your fists.
+      [[You walk between rows of sticks. Impaled limbs and heads
+      are set upon them. On one you see the head of a rabbit. 
+      Immediately, your blood boils.
+      You realize, however, the rabbit isn't Daisy. An ethereal voice
+      whispers to you. "You are a mortal of impulse after all.
+      Still hurt over your little big-ear darling?
+      Show me your fury, mortal. I am _RAND_DEMON the _EVULZ. 
+      I grant you the company of your little pet. In HELL." 
+      The voice fades, and you steel your fists.
       _RAND_DEMON will fall hard today.]],
 
       -- a beat of the drums
-      [[The sickening sound of a distorted trumpet wails, followed by the thumping
-      of war drums. You hear a repeating chant of what sounds like a hundred infernal voices.
-      "_RAND_DEMON! _RAND_DEMON! _RAND_DEMON!" The drumbeat stops and a bolt of fire
-      strikes the floor before you, causing you to fall back. Your HUD finds a
-      recognizable pattern in the scorchmarks. A hell rune translating to "You die."
+      [[The sickening sound of a distorted trumpet wails,
+      followed by the thumping of war drums. You hear a
+      repeating chant of what sounds like a hundred infernal voices.
+      "_RAND_DEMON! _RAND_DEMON! _RAND_DEMON!" The drumbeat stops
+      and a bolt of fire strikes the floor before you, causing you
+      to fall back. Your HUD finds a recognizable pattern in the scorchmarks. 
+      A hell rune translating to "You die."
       Hell will have to see about that.]],
 
       -- the mirror
-      [[You find a mirror on the wall and there is something strange about its reflection.
-      You look closer and see the image swirl and form something new. In it you
-      see yourself chained against a burning monolith of slate, while imps gleefully dance
-      around you. A ghostly mutter breaks the silence. "Sinners all have a place in hell,
-      mortal. But you. You are special. Let me, _RAND_DEMON the _EVULZ, be your ferryman
-      to the underworld." You smash the mirror with your fists leaving a gaping hole
-      in the wall. You have answered hell's challenge.]]
+      [[You find a mirror on the wall and there is something
+      strange about its reflection. You look closer and see the
+      image swirl and form something new. In it you see yourself
+      chained against a burning monolith of slate, while imps
+      gleefully dance around you. A ghostly mutter breaks the silence.
+      "Sinners all have a place in hell, mortal. But you are special. 
+      Let me, _RAND_DEMON the _EVULZ, be your ferryman to the
+      underworld." You smash the mirror with your fists, leaving
+      a gaping hole in the wall. You have answered hell's challenge.]]
     }
 
     conclusions =
@@ -426,11 +434,11 @@ ZDOOM_STORIES.STORIES =
       and feast upon your soul!"
       _SPACE
       The creature quickly steps into a newly opened portal behind
-      and dissapates.
+      it, and dissipates.
       _RAND_DEMON escapes your grasp, but it is scarred forever.]],
 
       -- they are watching
-      [[As _RAND_DEMON falls, its body implodes into a cloud of
+      [[As _RAND_DEMON falls, its body explodes into a cloud of
       darkness, and slowly fades. An ethereal voice speaks.
       "You have returned me to the void, mortal. Your strength
       is admirable but remember: the Dark Lords are watching you."
