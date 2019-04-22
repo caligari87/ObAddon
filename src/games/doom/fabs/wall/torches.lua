@@ -20,7 +20,7 @@ PREFABS.Wall_torches1_diag =
 
   z_fit  = "top"
 
-  solid_ents = true
+  solid_ents = false
 }
 
 

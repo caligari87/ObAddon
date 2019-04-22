@@ -27,6 +27,7 @@ function ZStoryGen_format_story_chunk(story_strings, info)
   -- replace special word tags with their proper ones from the name gen
   if info then
     story_strings = string.gsub(story_strings, "_RAND_DEMON", info.demon_name)
+    story_strings = string.gsub(story_strings, "_RAND_ENGLISH_PLACE", info.anglican_name)
     story_strings = string.gsub(story_strings, "_EVULZ", info.demon_title)
     story_strings = string.gsub(story_strings, "_GOTHIC_LEVEL", info.gothic_level)
     story_strings = string.gsub(story_strings, "_RAND_CONTRIBUTOR", info.contributor_name)
@@ -39,7 +40,9 @@ function ZStoryGen_format_story_chunk(story_strings, info)
 
   -- remove the spaces left behind by Lua's square bracket stuff.
   story_strings = string.gsub(story_strings, "  ", "")
-  gui.printf(story_strings .. "\n\n")
+  if PARAM.print_story_strings != "no" then
+    gui.printf(story_strings .. "\n\n")
+  end
   story_strings = string.gsub(story_strings, "\n", " ")
 
   -- ensure words are always within the width of Doom's intermission screens
@@ -58,7 +61,7 @@ function ZStoryGen_format_story_chunk(story_strings, info)
     end
 
     if word == "_SPACE" then
-      word = "\\n"
+      word = "\\n\\n"
     end
 
     manhandled_string_length = manhandled_string_length + word:len()
@@ -69,7 +72,11 @@ function ZStoryGen_format_story_chunk(story_strings, info)
       manhandled_string = ""
       manhandled_string_length = 0
     else
-      manhandled_string = manhandled_string .. word .. " "
+      if word != "\\n\\n" then
+        manhandled_string = manhandled_string .. word .. " "
+      else
+        manhandled_string = manhandled_string .. word
+      end
     end
   end
 
@@ -82,7 +89,11 @@ function ZStoryGen_format_story_chunk(story_strings, info)
   return story_lines
 end
 
-function ZStoryGen_fetch_story_chunk(lev_info)
+function ZStoryGen_fetch_story_chunk()
+  return rand.key_by_probs(ZDOOM_STORIES.LIST)
+end
+
+function ZStoryGen_create_characters_and_stuff(lev_info)
   local info = { }
 
   if lev_info then
@@ -96,13 +107,15 @@ function ZStoryGen_fetch_story_chunk(lev_info)
   demon_name = string.gsub(demon_name, "NOUNGENEXOTIC", namelib.generate_unique_noun("exotic"))
   info.demon_name = demon_name
 
+  info.anglican_name = namelib.generate_unique_noun("anglican")
+
   info.demon_title = rand.key_by_probs(ZDOOM_STORIES.EVIL_TITLES)
   info.gothic_level = Naming_grab_one("GOTHIC")
-  info.contributor_name = rand.key_by_probs(namelib.NAMES.TITLE.lexicon.c)
+  info.contributor_name = rand.pick(namelib.COMMUNITY_MEMBERS.contributors)
   info.hell_mcguffin = rand.key_by_probs(ZDOOM_STORIES.MCGUFFINS.hellish)
   info.tech_mcguffin = rand.key_by_probs(ZDOOM_STORIES.MCGUFFINS.tech)
 
-  return rand.key_by_probs(ZDOOM_STORIES.LIST), info
+  return info
 end
 
 function ZStoryGen_hook_me_with_a_story(story_id, info)
@@ -129,7 +142,8 @@ function ZStoryGen_init()
   local language_lump = {}
 
   while x <= #GAME.episodes do
-    local story_id, info = ZStoryGen_fetch_story_chunk()
+    local story_id = ZStoryGen_fetch_story_chunk()
+    local info = ZStoryGen_create_characters_and_stuff()
     hooks[x] = ZStoryGen_hook_me_with_a_story(story_id, info)
     conclusions[x] = ZStoryGen_conclude_my_story(story_id, info)
     x = x + 1
@@ -168,20 +182,36 @@ function ZStoryGen_init()
   local secret2 = ZStoryGen_format_story_chunk(rand.pick(ZDOOM_STORIES.SECRET_TEXTS.d2_secret2))
   table.insert(language_lump, "SECRETNEARBY =\n")
   for _,line in pairs(secret_entry) do
-    table.insert(language_lump, " " .. line .. "\n")
+    table.insert(language_lump, "  " .. line .. "\n")
   end
   table.insert(language_lump, "\n")
   table.insert(language_lump, "SECRET1 =\n")
   for _,line in pairs(secret1) do
-    table.insert(language_lump, " " .. line .. "\n")
+    table.insert(language_lump, "  " .. line .. "\n")
   end
   table.insert(language_lump, "\n")
   table.insert(language_lump, "SECRET2 =\n")
   for _,line in pairs(secret2) do
-    table.insert(language_lump, " " .. line .. "\n")
+    table.insert(language_lump, "  " .. line .. "\n")
+  end
+
+  -- custom quit message creation
+  PARAM.quit_messages = "yes"
+  if PARAM.quit_messages == "yes" then
+    x = 1
+    local info = ZStoryGen_create_characters_and_stuff()
+    for _,line in pairs(ZDOOM_STORIES.QUIT_MESSAGES) do
+      line = ZStoryGen_format_story_chunk(line, info)
+      table.insert(language_lump, "\nQUITMSG" .. x .. " =\n")
+      x = x + 1
+      for _,o_line in pairs(line) do
+        table.insert(language_lump, "  " .. o_line .. "\n")
+      end
+    end
   end
 
   gui.wad_add_text_lump("LANGUAGE",language_lump)
+  gui.printf("\n~~~~~~ LANGUAGE lump created! ~~~~~~\n")
 end
 
 -- LOOK AT ALL THIS CODE NOW

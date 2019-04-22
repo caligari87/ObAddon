@@ -193,7 +193,7 @@ ZDOOM_SPECIALS.INTERPIC_MUSIC =
 ZDOOM_SPECIALS.MUSIC = {}
 
 function ZDOOM_SPECIALS.setup(self)
-  print("ZDoom Special Addons module activated.")
+  gui.printf("\n--== ZDoom Special Addons module active ==--\n\n")
 
   for name,opt in pairs(self.options) do
     local value = self.options[name].value
@@ -295,6 +295,31 @@ function ZDOOM_SPECIALS.do_special_stuff()
   local function add_languagelump()
   end
 
+  local function add_gamedef()
+    gamedef_lines = {
+      "gameinfo\n",
+      "{\n",
+    }
+
+    local x = 1
+    local quit_msg_line = ""
+    quit_msg_line = quit_msg_line .. "quitmessages = "
+    for _,lines in pairs(ZDOOM_STORIES.QUIT_MESSAGES) do
+      quit_msg_line = quit_msg_line .. '"$QUITMSG' .. x .. '"'
+      if x <= #ZDOOM_STORIES.QUIT_MESSAGES - 1 then
+        quit_msg_line = quit_msg_line .. ', '
+      end
+      if x%3 == 0 then
+        quit_msg_line = quit_msg_line .. "\n  "
+      end
+      x = x + 1
+    end
+    table.insert(gamedef_lines, quit_msg_line)
+    table.insert(gamedef_lines, "\n}\n")
+
+    return gamedef_lines
+  end
+
   local function add_mapinfo(mapinfo_tab)
 
     -- mapinfo table requires color for fog and map number
@@ -307,14 +332,13 @@ function ZDOOM_SPECIALS.do_special_stuff()
     local music_line = ''
 
     if music_list then
-      gui.printf("Music index: " .. map_num .. "\n")
       music_line = '  Music = "' .. music_list[map_num] .. '"\n'
     else
       music_line = ''
     end
 
     -- resolve map MAPINFO linkages
-    if OB_CONFIG.game == "doom2" then
+    if OB_CONFIG.game == "doom2" or OB_CONFIG.game == "tnt" or OB_CONFIG.game == "plutonia" then
       if map_num < 10 then
         map_id = "MAP0" .. map_num
         if map_num < 9 then
@@ -345,7 +369,7 @@ function ZDOOM_SPECIALS.do_special_stuff()
     end
 
     -- produce endtitle screen end of game
-    if OB_CONFIG.game == "doom2" then
+    if OB_CONFIG.game == "doom2" or OB_CONFIG.game == "tnt" or OB_CONFIG.game == "plutonia" then
       if (map_num + 1 > level_count) or map_num == 30 then
         map_id_next = '"EndGameC"'
       end
@@ -361,16 +385,15 @@ function ZDOOM_SPECIALS.do_special_stuff()
 
     -- establish secret map MAPINFO links
     -- for DOOM2
-    if OB_CONFIG.game == "doom2" then
+    if OB_CONFIG.game == "doom2" or OB_CONFIG.game == "tnt" or OB_CONFIG.game == "plutonia"  then
       if map_num == 15 then
-        next_level_line = '  next = MAP16'
+        next_level_line = '  next = MAP16\n'
         secret_level_line = '  secretnext = MAP31\n'
       elseif map_num == 31 then
-        map_id_next = 16
-        next_level_line = '  next = MAP16'
+        next_level_line = '  next = MAP16\n'
         secret_level_line = '  secretnext = MAP32\n'
       elseif map_num == 32 then
-        map_id_next = 16
+        next_level_line = '  next = MAP16\n'
         secret_level_line = ''
       else
         secret_level_line = ''
@@ -448,8 +471,8 @@ function ZDOOM_SPECIALS.do_special_stuff()
     -- add cluster linking for DOOM2
     local cluster_line = ''
 
-    if PARAM.story_generator != "none" then
-      if OB_CONFIG.game == "doom2" then
+    if PARAM.story_generator == "generic" then
+      if OB_CONFIG.game == "doom2" or OB_CONFIG.game == "tnt" or OB_CONFIG.game == "plutonia"  then
         if map_num >= 1 and map_num <= 5 then
           cluster_line = "  Cluster = 5\n"
         elseif map_num > 5 and map_num <= 11 then
@@ -464,6 +487,28 @@ function ZDOOM_SPECIALS.do_special_stuff()
           cluster_line = "  Cluster = 10\n"
         elseif map_num == 32 then
           cluster_line = "  Cluster = 11\n"
+        end
+      end
+    elseif PARAM.story_generator == "proc" then
+      if OB_CONFIG.game == "doom2" or OB_CONFIG.game == "tnt" or OB_CONFIG.game == "plutonia"  then
+        if map_num >= 1 and map_num <= 5 then
+          cluster_line = "  Cluster = 1\n"
+        elseif map_num > 5 and map_num <= 11 then
+          cluster_line = "  Cluster = 2\n"
+        elseif map_num == 12 then
+          cluster_line = "  Cluster = 3\n"
+        elseif map_num > 12 and map_num <= 14 then
+          cluster_line = "  Cluster = 4\n"
+        elseif map_num > 14 and map_num <= 20 then
+          cluster_line = "  Cluster = 5\n"
+        elseif map_num == 21 then
+          cluster_line = "  Cluster = 6\n"
+        elseif map_num > 21 and map_num <= 30 then
+          cluster_line = "  Cluster = 7\n"
+        elseif map_num == 31 then
+          cluster_line = "  Cluster = 8\n"
+        elseif map_num == 32 then
+          cluster_line = "  Cluster = 9\n"
         end
       end
     end
@@ -538,7 +583,7 @@ function ZDOOM_SPECIALS.do_special_stuff()
 
     local cluster_music_line = '  music = "' .. PARAM.generic_intermusic .. '"\n'
 
-    if OB_CONFIG.game == "doom2" and PARAM.story_generator == "generic" then
+    if ( OB_CONFIG.game == "doom2" or OB_CONFIG.game == "tnt" or OB_CONFIG.game == "plutonia" ) and PARAM.story_generator == "generic" then
 
 
       clusterdef =
@@ -641,49 +686,59 @@ function ZDOOM_SPECIALS.do_special_stuff()
       }
     end
 
-    if OB_CONFIG.game == "doom2" and PARAM.story_generator == "proc" then
+    if ( OB_CONFIG.game == "doom2" or OB_CONFIG.game == "tnt" or OB_CONFIG.game == "plutonia" ) and PARAM.story_generator == "proc" then
       -- create cluster information
       clusterdef =
       {
-        'cluster 5\n' -- MAP01-MAP05
+        'cluster 1\n' -- MAP01-MAP05
         '{\n'
         '' .. cluster_music_line .. ''
         '  pic = "' .. interpic .. '"\n'
         '  exittext = lookup, "STORYSTART1"\n'
         '}\n'
-        'cluster 6\n' -- MAP06-MAP11
+        'cluster 2\n' -- MAP06-MAP11
         '{\n'
         '' .. cluster_music_line .. ''
         '  pic = "' .. interpic .. '"\n'
         '  exittext = lookup, "STORYEND1"\n'
         '}\n'
-        'cluster 7\n' -- MAP012-15
+        'cluster 3\n' -- MAP012
         '{\n'
         '' .. cluster_music_line .. ''
         '  pic = "' .. interpic .. '"\n'
-        '  entertext = lookup, "STORYSTART2"\n'
+        '  exittext = lookup, "STORYSTART2"\n'
+        '}\n'
+        'cluster 4\n' -- MAP13-MAP14
+        '{\n'
+        '' .. cluster_music_line .. ''
+        '  pic = "' .. interpic .. '"\n'
         '  exittext = lookup, "SECRETNEARBY"\n'
         '}\n'
-        'cluster 8\n' -- MAP16-20
+        'cluster 5\n' -- MAP15-MAP20
         '{\n'
         '' .. cluster_music_line .. ''
         '  pic = "' .. interpic .. '"\n'
         '  exittext = lookup, "STORYEND2"\n'
         '}\n'
-        'cluster 9\n' -- MAP21-30
+        'cluster 6\n' -- MAP21
         '{\n'
         '' .. cluster_music_line .. ''
         '  pic = "' .. interpic .. '"\n'
-        '  entertext = lookup, "STORYSTART3"\n'
+        '  exittext = lookup, "STORYSTART3"\n'
+        '}\n'
+        'cluster 7\n' -- MAP22-30
+        '{\n'
+        '' .. cluster_music_line .. ''
+        '  pic = "' .. interpic .. '"\n'
         '  exittext = lookup, "STORYEND3"\n'
         '}\n'
-        'cluster 10\n' -- MAP31
+        'cluster 8\n' -- MAP31
         '{\n'
         '' .. cluster_music_line .. ''
         '  pic = "' .. interpic .. '"\n'
         '  entertext = lookup, "SECRET1"\n'
         '}\n'
-        'cluster 11\n' -- MAP32
+        'cluster 9\n' -- MAP32
         '{\n'
         '' .. cluster_music_line .. ''
         '  pic = "' .. interpic .. '"\n'
@@ -699,7 +754,7 @@ function ZDOOM_SPECIALS.do_special_stuff()
     local episodedef = {''}
     local map_string
 
-    if OB_CONFIG.game == "doom2" then
+    if OB_CONFIG.game == "doom2" or OB_CONFIG.game == "tnt" or OB_CONFIG.game == "plutonia" then
       map_string = map_num
       if map_num < 10 then
         map_string = "0" .. map_num
@@ -731,6 +786,14 @@ function ZDOOM_SPECIALS.do_special_stuff()
 
   -- collect lines for MAPINFO lump
   local mapinfolump = {}
+
+  if PARAM.custom_quit_messages == "yes" then
+    local gamedef_lines = add_gamedef()
+    each line in gamedef_lines do
+      table.insert(mapinfolump,line)
+    end
+  end
+
   for i=1, #GAME.levels do
 
     info.map_num = i
@@ -750,6 +813,8 @@ function ZDOOM_SPECIALS.do_special_stuff()
       end
     elseif PARAM.fog_generator == "random" then
       info.fog_color = pick_random_fog_color()
+    else
+      info.fog_color = ""
     end
 
     local mapinfo_lines = add_mapinfo(info)
@@ -764,7 +829,7 @@ function ZDOOM_SPECIALS.do_special_stuff()
 
     -- for Doom2 (yes, there's no Doom2 episode splitting)
     -- but there is from now on
-    if OB_CONFIG.game == "doom2" then
+    if OB_CONFIG.game == "doom2" or OB_CONFIG.game == "tnt" or OB_CONFIG.game == "plutonia" then
       local episode_1_info = add_episodedef(1)
       each line in episode_1_info do
         table.insert(mapinfolump,line)
@@ -904,9 +969,17 @@ OB_MODULES["zdoom_specials"] =
       tooltip = "Adds cluster information with generic or randomized story text into the MAPINFO structure!"
     }
 
+    custom_quit_messages = {
+      label = _("Quit Messages"),
+      priority = 4
+      choices = ZDOOM_SPECIALS.YES_NO
+      default = "yes"
+      tooltip = "Adds custom quit messages into the MAPINFO game definition."
+    }
+
     generic_intermusic = {
       label = _("Intermission Music"),
-      priority = 4
+      priority = 3
       choices = ZDOOM_SPECIALS.INTERPIC_MUSIC
       default = "$MUSIC_READ_M"
       tooltip = "Changes the music playing during intermission screens."
@@ -914,7 +987,7 @@ OB_MODULES["zdoom_specials"] =
 
     episode_selection = {
       label = _("Episode Selection"),
-      priority = 3
+      priority = 2
       choices = ZDOOM_SPECIALS.YES_NO
       default = "no"
       tooltip = "Creates a classic Doom/Ultimate Doom style episode selection."

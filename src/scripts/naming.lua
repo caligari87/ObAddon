@@ -9,6 +9,7 @@
 --  Copyright (C)      2009 Enhas
 --  Copyright (C) 2010-2019 Chris Pisarczyk
 --  Copyright (C) 2019 MsrSgtShooterPerson
+--  Copyright (C) 2019 EpicTyphlosion
 --
 --  This program is free software; you can redistribute it and/or
 --  modify it under the terms of the GNU General Public License
@@ -54,7 +55,7 @@ namelib.NAMES =
         ["Journey to the"]=10
         ["Assault on the"]=15
         ["Death Awaits in the"]=5
-        ["Oh God not another"]=5
+        ["Oh God Not Another"]=5
         ["Yet Another"]=5
         ["Just Another"]=5
         ["Hell in the"]=5
@@ -73,19 +74,36 @@ namelib.NAMES =
         ["Pain from the"]=10
         ["Death in the"]=10
 
-        ["Oh Dear not another"]=10
+        ["Oh Dear Not Another"]=10
         ["Chaos in the"]=10
 
+        -- these by MSSP
+        ["Battle for the"]=15
+        ["Battle through the"]=10
+        ["Into the"]=10
+        ["Operation:"]=10
+        ["Mission:"]=7
+        ["Objective:"]=7
+        ["Counterattack in the"]=7
+        ["Ambush in the"]=7
+        ["Get to da"]=3 -- CHOPPAH!!!
+        ["War of the"]=10,
+
+        ["Raze the"]=8,
+
         -- command-like prefixes, some by Dante
---[[
-        ["Attack the"]=20
-        ["Destroy the"]=20
-        ["Shut Down the"]=15
-        ["Patrol the"]=15
-        ["Secure the"]=15
-        ["Clear this"]=5
-        ["Defend this"]=10
---]]
+        ["Attack the"]=10
+        ["Destroy the"]=10
+        --["Shut Down the"]=15
+        --["Patrol the"]=15
+        ["Secure the"]=10
+        --["Clear this"]=5
+        --["Defend this"]=10
+
+        -- ^^^ Some of these sound pretty decent
+        -- so I enabled them. Things like shutting down
+        -- patrolling, defending, etc. are too explicit.
+        -- MSSP
       }
     }
 
@@ -156,35 +174,56 @@ namelib.NAMES =
       a =
       {
         -- size
+        --+ large
         Universal=20, Colossal=20, Prodigious=3,
+        Vast=10, Large=4,
+        --+ small
         Secluded=10, Confined=5, Restricted=3,
-        Vast=10, Cramped=5,
+        Cramped=5, Narrow=5,
 
         -- location
+        --+ generic
         Subterrestrial=10, Sub_terra=5,
         Aethereal=10, Hypogean=5,
+        --+ solar system objects
         Mars=10, Saturn=10, Jupiter=10,
         Europa=5, Ganymede=5, Dione=5, Io=5,
         Callisto=5, Hyperion=5, Vesta=5, Titan=3,
 
-        Covert=20, Occult=10, Preliminary=3, Experimental=3,
-        Northern=3, Southern=3, Eastern=3, Western=3,
-        Upper=10, Lower=10, Central=15, Secondary=7,
-        Inner=10, Outer=10, Innermost=3, Outermost=3,
-        Auxiliary=10, Primary=20, Prime=5, Tertiary=7,
-        Exterior=10, Subsidiary=3, Ultimate=3,
+        Experimental=3, Covert=20,
 
-        -- condition
+        --+ directions
+        Northern=3, Southern=3, Eastern=3, Western=3,
+        Upper=10, Lower=10, Central=15,
+        Inner=10, Outer=10, Innermost=3, Outermost=3,
+        Exterior=10, Subsidiary=3,
+        Interior=5, Internal=10,
+        --+ relative position
+        Adjacent=5, Adjoining=5, Neighboring=5,
+        Inland=5, Outland=5,
+        --+ cardinality
+        Preliminary=3, Ultimate=3,
+        Auxiliary=10, Primary=20,
+        Prime=5, Secondary=7, Tertiary=7,
+        Backup=5, Alternate=5, Ancillary=5,
+        Reserve=5, Support=7,
+
+        -- inert conditions
         Inactive=10, Unsound=10, Eternal=5,
         Advanced=10, Interlock=5, Symbiotic=3,
-        Fantastic=3, Incredible=3, Amazing=3,
-        Wondrous=3, Inert=4, Dormant=10,
+        Inert=4, Dormant=10,
 
+        -- bad conditions
         Destructive=20, Unstable=10, Devastated=3,
         Lost=20, Defective=10, Haggard=15, Failed=10,
         Ravished=10, Inanimate=3, Ruptured=3,
-        Polluted=10, Putrid=5, Faulty=5, Troublesome=10,
-        Obsolete=15, Abandoned=15,
+        Polluted=10, Putrid=5, Faulty=5,
+        Troublesome=10, Obsolete=15, Abandoned=15,
+        Occult=10,
+
+        -- stuff you might say when you see something cool
+        Fantastic=3, Incredible=3, Amazing=3,
+        Wondrous=3,
 
         -- infestation
         Monstrous=10, Fatal=10, Invaded=3, Overtaken=3,
@@ -200,8 +239,7 @@ namelib.NAMES =
         Perverted=5, Doomed=10,
 
         -- ObAddon contributor names
-        MsrSgtShooterPerson=3, Glaice=3, Frozsoul=3,
-        Garrett=3, Caligari87=3, SimonV=3, Beed28 = 3,
+        NOUNMEMBERS = 50
 
         -- special tag for the name generator
         NOUNGENEXOTIC = 400
@@ -211,82 +249,114 @@ namelib.NAMES =
       b =
       {
         -- purpose
-        Control=10, Research=10,
+        --+ administrative
+        Control=10, Management=5, Foundation=5,
+        --+ science
+        Research=10, Development=5,
+        --+ military
         Military=10, Security=5, Defense=5,
-        Processing=10, Refueling=5, Supply=15,
+        Aegis=3, Stockade=3,
+        --+ manufacturing
         Manufacturing=3, Maintenance=3,
         Industrial=3, Engineering=5,
-        Construction=5, Assembly=5, Management=5,
-        Development=5, Foundation=5,
-        Aegis=3, Stockade=3, Refuge=5,
+        Processing=10, Refueling=5, Supply=15,
+        Construction=5, Assembly=5,
+        --+ residential
+        Refuge=5, Pods=5,
 
-        Munitions=5, Armament=5, Drainage=5,
-        Support=5, Counteraction=3, Holding=5,
-        Testing=5, Quarantine=5, Authorization=5,
-        Synthesis=5, Unification=3, Loading=5,
-        Disposal=5, Dumping=3, Pumping=4,
-        Transfer=3, Mobilization=3, Irrigation=3,
-        Communications=5, Operations=5,
-        Training=5, Treatment=5, Shipment=5,
-        Cooling=5, Coolant=5, Administration=5,
-        Distribution=5, Trafficking=5, Singularity=3,
-        Programming=5, Security=5, Staging=5, Comms=5,
+        -- utility
+        --+ storage
+        Support=5, Holding=5, Loading=5,
+        Quarantine=5, Shipment=5, Staging=5,
+        --+ manufacturing
+        Testing=5, Authorization=5, Administration=5,
+        Synthesis=5, Unification=3,
+        --+ waste
+        Drainage=5, Disposal=5, Dumping=3,
+        --+ resources
+        Pumping=4, Irrigation=3,
+        Cooling=5, Coolant=5,
+        --+ infrastructure
+        Mobilization=3, Transfer=3,
+        Distribution=5, Trafficking=5,
+        --+ military
+        Operations=5, Training=5, Treatment=5,
+        Security=5,
+        --+ IT
+        Communications=5, Programming=5, Comms=5,
+        Singularity=3,
 
-        -- descriptive
+        -- descriptive: location
         Main=20, Entrance=10, Provisional=3,
         Planetary=3, Interstellar=7, Lunar=10,
+
+        -- mythical/astronomical
         Atlas=3, Promethus=2, Cronus=3,
         Hyperion=2, Icarus=2, Echo=2,
         Morpheus=2, Eos=2, Orion=2,
         Tiephron=2, Psion=3,
 
+        -- special alphabets
         Alpha=10, Beta=5, Gamma=10,
         Delta=10, Omega=5, Sigma=5,
         Epsilon=3, Zeta=5, Lambda=3,
         Theta=5, Omicron=3, Tau=3,
 
         -- materials / substances
-        Power=20, Energy=15, Cargo=10,
+        Power=20, Energy=15,
         Fuel=5, Rocket=3, Missile=5,
         Blast=15, Oil=3, Nuclear=15,
         Nukage=10, Plutonium=10, Toxin=10,
         Chemical=15, Slige=10, Waste=10, Stibine=3,
+        Steel=5, Fluid=3, Iron=3, Slime=7,
+        Bromine=3, Phosphine=3, Petrochemical=3,
+        Cadmium=3, Halogen=3, Mercury=3,
+        Hydro=3, Steam=5, Carbon=5,
+        Radiation=5, Sludge=3, Particle=3,
+        Composite=15, Synthetic=5,
+
+        -- manufactured products
+        CPU=5, Freight=5, Wares=3,
+        Cargo=10, Weapons=10, Computer=10,
+        Electronics=5, Robotic=5, Laser=5,
+        Munitions=5, Armament=5,
+
+        -- mechanical
         Mining=15, Fusion=15, Thermal=10,
-        Infrared=10, Radiation=5, Hydro=3,
+        Infrared=10, Pressure=5, Counteraction=3,
 
-        Parallax=5, Ultraviolet=5, Slime=7,
-        Steel=5, Fluid=3, Iron=3, Combustion=5,
-        Steam=5, Carbon=5, Pressure=5, Pyrolosis=3,
-        Radioactivity=5, Sludge=3, Particle=3,
-        Cadmium=3, Halogen=3, Toxicity=3, Mercury=3,
-        Data=10, CPU=5, Freight=5, Wares=3, Phosphine=3,
-        Petrochemical=3, Tesla=5, Bromine=3, Quantum=5,
+        -- electronic structures
+        Data=10, Tesla=5, Quantum=5,
 
-        Computer=10, Composite=15, Synthetic=5,
-        Electronics=5, Electrical=5, Diffusion=3,
+        Parallax=5, Ultraviolet=5,
+        Radioactivity=5, Toxicity=3,
+        Electrical=5, Diffusion=3,
         Worm_hole=5, Black_hole=5, Teleport=3,
         Hybrid=5, Cryogenic=5, Cryo_=2,
-        Robotic=5, Laser=5, Photonic=3, Bio_=2,
+        Photonic=3, Bio_=2,
 
         -- some even odder materials! -MSSP
         Chromium=3, Plasma=10, Ion=8,
         Dilithium=7, Verteron=5, --nerd
         Deuterium=5, Antimatter=5, Isotope=3,
-        Syngas=5,
+        Syngas=5, Flux=10, Rubidium=3, Magmatic=3,
+        Silicone=5, Hadron=5,
 
         -- can't get enough weird sci-fi buzzwords -MSSP
         Axioinic=3, Gravimetric=5,
         Graviton=5, Nitrogen=5, Hyperwave=7,
         Magnetic=5, Nanosphere=5, Nanobrane=3,
-        Geodesic=7, Biaxial=5,
-        Phased=5, Metatronic=5, Vacuum=5,
-        Superluminal=5, Rubidium=3, Magmatic=3,
+        Geodesic=7, Biaxial=5, Phased=5,
+        Metatronic=5, Vacuum=5, Superluminal=5,
         Temporal=5, Sonic=5, Optic=3,
-        Damping=5, Hydraulic=7, Flux=10,
+        Damping=5, Hydraulic=7, Spooling=5,
+        Bespoke=2,
 
         -- mechanical processes -MSSP
         Filtration=5, Pneumatic=5, Catalytic=3,
-        Pyrolytic=5,
+        Pyrolytic=5, Construction=5, Fabrication=5,
+        Production=10, Repair=10, Pyrolosis=3, Combustion=5,
+        Sedimentation=5, Drilling=5,
 
         -- mathematical shapes/structures
         Toroidal=5, Solenoid=5, Helical=5,
@@ -299,53 +369,69 @@ namelib.NAMES =
         Quark=5, Boson=5, Neutrino=5,
         Electron=7,
 
-        Weapons=10,
+        Baryonic=5, Mesonic=5,
 
         ["I/O"]=5,
       }
 
       n =
       {
-        -- specific places
-        Generator=12, Plant=15, Base=30,
-        Warehouse=10, Depot=10, Storage=5,
-        Lab=15, Laboratory=5, Depositry=3,
-        Station=20, Reactor=10, Tower=5,
-        Refinery=15, Factory=10, Storehouse=5,
-        Gateway=10, Hangar=5, Outpost=10,
-        Tunnels=10, Bunker=7, Facility=10, Workshop=7,
-        Gateway=5, Point=2, Turbine=3,
+        -- MSSP-TODO: sort these names into better categories!!!
+        -- military places
+        Hangar=5, Outpost=10, Beacon=3,
+        Bunker=7, Facility=10, Pillbox=1,
+        Headquarters=2, Silos=7, Base=30,
+        Command=10,
 
-        Beacon=3, Satellite=10, Pillbox=1,
-        Colony=15, Compound=15, Foundry=3,
-        Headquarters=2, Observatory=3,
-        Shaft=3, Silos=7, Substation=10,
+        -- utility places
+        Generator=12, Plant=15, Grid=5,
+        Substation=10, Dam=5, Core=5,
+        Reactor=10, Turbine=3,
+
+        -- storage-y places
+        Warehouse=10, Depot=10, Storage=5,
+        Storehouse=5, Gateway=5, Point=2,
+        Depositry=3,
+
+        -- science-y places
+        Lab=15, Laboratory=5, Observatory=3,
+        Station=15, Tower=5, Relay=5,
+        Satellite=10, Colony=15, Project=5,
+        Experiment=3, Network=5, System=15,
+
+        -- industrial places
+        Refinery=15, Factory=10, Foundry=3,
+        Workshop=7, Works=2, Forge=8,
+
+        -- infrastructural places
+        Platform=5, Port=3, Hub=10,
+        Nexus=3, Infrastructure=5,
+        Tributary=5, Channel=5, Tunnels=10,
+        Shaft=3,
 
         -- general places
-        Complex=20, Center=20,
-        Facility=10, Works=2,
+        Compound=15, Dock=3, Bay=3,
+        Complex=15, Center=15, Installation=5,
         Area=15, Site=10, Zone=10,
+        Chamber=5, Quarters=5, Section=3,
+        Post=3, Annex=5, Terminal=10,
         Quadrant=5, Sector=5, Adjunct=3,
-        Platform=5, Port=3, Grid=5,
-        Hub=10, Nexus=3, Core=5,
-        Terminal=10, Installation=5,
-        Project=5, Experiment=3,
-        Infrastructure=5, Annex=5,
-        Dock=3, Bay=3, Tributary=5,
-        Channel=5, Chamber=5, Quarters=5,
-        Relay=5, Section=3, Post=3, Dilemma=3,
-        Situation=2, Crisis=2, Emergency=2,
 
         -- weird ones
-        Device=5, Machine=5, Network=5,
+        Dilemma=3,
+        Situation=2, Crisis=2, Emergency=2,
         Anomaly=10, Portal=7, Apparatus=10,
-        System=15, Project=2, Forge=8,
         Dimension=3, Paradox=3, Vortex=5,
         Enigma=5, Artifact=1, Quagmire=1,
         Catalyst=2,
 
         -- MSSP adds
-        Dome=7, Basin=5,
+        -- shapes
+        Dome=7, Quadrangle=3, Rotunda=2,
+        Circle=10, Triangle=3, Ring=5,
+        Oval=2,
+
+        Basin=5, Arm=5,
 
         -- storage-ish words -MSSP
         Armory=10, Yard=7, Depository=8,
@@ -357,10 +443,13 @@ namelib.NAMES =
         -- military stuff -MSSP
         Casern=5, ["F.O.B."]=7, ["Fire Base"]=10,
         Garrison=10, Logistics=10, Containment=7,
+        Berths=5, Housing=5,
 
         -- machine/electronic parts -MSSP
         -- and weird science-y buzzwords
         -- and also car parts
+        Device=5, Machine=5, Couplings=5,
+
         Oscillator=5, Magnetron=5, Emulsifier=5,
         Alternator=5, Induction=5, Stabilizer=5,
         Processor=10, Suspension=5, Conduit=5,
@@ -380,6 +469,16 @@ namelib.NAMES =
         Caliper=3, Rotor=5, Shield=10,
         Synchronizer=5, Conditioner=3, Distillery=5,
         Transistor=3, Diode=3, Boiler=3,
+        Compositor=5, Sorter=5, Cultivator=3,
+        Engine=7, Solderer=3, Primer=5,
+        Conductor=5, Integrator=5,
+        Salvager=5, Recycler=5, Culler=4,
+
+        Framework=5, Compartment=5,
+
+        -- IT security objects
+        Firewall=5, Servers=5, Encoder=5,
+        Decrypter=5, Cipher=5, Datacenter=5,
       }
 
       s =
@@ -560,27 +659,37 @@ namelib.NAMES =
   {
     patterns =
     {
+      -- lexicon legend:
+      -- %e = Entity
+      -- %a = Adjectives
+      -- %n = Places
+      -- %h = Explicit description (e.g. I am Satan, "Arena of <Satan>")
+      -- %o = Implicit description (e.g. I am Satanic, "Arena of <the Satanic>")
+      -- %v = Prefixed phrase (as per COMMON table e.g. "<Scoruge of the> Arena)
+
       ["%a %n"] = 60
       ["%t %a %n"] = 20
 
       ["%n of %h"] = 26
-      ["%a %n of %h"] = 14
+      ["%a %n of %h"] = 10
+      ["%a %n of the %o"] = 10
 
       ["%e's %n"]       = 10
       ["%e's %a %n"]    = 8
       ["%e's %n of %h"] = 6
+      ["%e's %n of the %o"] = 6
 
       ["%v %n"]    = 25
       ["%v %a %n"] = 25
 
       ["%s"] = 18
 
-      ["Killing for %e"] = 5
-      ["Killing in %e's name"] = 5
-      ["Dying for %e"] = 5
-      ["Dying in %e's name"] = 5
-      ["Unworthy for %e"] = 5
-      ["%e's Bitch"] = 5
+      ["Killing for %e"] = 3
+      ["Killing in %e's name"] = 3
+      ["Dying for %e"] = 3
+      ["Dying in %e's name"] = 3
+      ["Unworthy for %e"] = 3
+      ["%e's Bitch"] = 2
 
     }
 
@@ -591,25 +700,154 @@ namelib.NAMES =
         The=50
       }
 
-
       e =
       {
-        Satan=10, ["The Devil"]=7, Lucifer=7, Helgor=3, Amon=3, Agares=3, Dzoavits=2, Chimera=5,
-        Ceren=2, Mephisto=3, Vuradi=2, Oltion=2, Ktulu=2, Ahazu=2, Boruta=3, Eligos=3, Wendigo=3,
-        Dozod=2, Draco=2, Kalrac=2, Minotaur=5, Pandora=1, Abraxas=2, Botis=2, Lempo=3, Sitri=2,
-        Minos=2, Orgel=2, Nurgle=2, Odin=2, Balrok=2, Mammon=3, Adimarchus=3, Jinn=2, Pithius=3,
-        Orcus=3, Lolth=3, Quenna=3, Saleos=3, Rusalka=3, Haborym=3, Gresil=2, Dagon=3, Raum=2,
-        Erishkigal=3, Jubilex=3, Utukku=3, Vucub=3, Zagan=3, Verrine=3, Kerzit=2, Forcas=3,
-        Deccal=3, Ipos=3, Xezbeth=3, Yeenoghlu=3, Caasimolar=3, Abaddon=3, Soneillon=3, Phenex=2,
-        Baal=3, Malthus=3, Beelzebub=3, Moloch=3, Dante=5, Berith=3, Haagenti=3, Caim=2, Seir=3,
-        Nybbas=2, Namtar=2, Lamashtu=2, Astaroth=2, Merihem=3, Gressil=3, Barong=2, Iblis=3, Ouroboros=5,
-        Carreau=3, Oeillet=3, Rosier=2, Luvart=2, Cerberus=5, Linguica=1, Bloodshedder=1, Romero=1
+        Romero=1, -- the Icon of Sin
+
+        -- Judeo-Christian literature evil stuff (includes Ars Goetia)
+        Satan=10, ["The Devil"]=7, Lucifer=7, Amon=3, Agares=3,
+        Malthus=3, Beelzebub=3, Moloch=3,
+        Xezbeth=3, Botis=2, Sitri=2, Mammon=3, Saleos=3,
+        Haborym=3, Raum=2, Forcas=3,
+        Ipos=3, Xezbeth=3, Abaddon=3, Phenex=2,
+        Baal=3, Berith=3, -- isn't this like the same guy, just his first and last name?
+        Haagenti=3, Caim=2, Seir=3, Nybbas=2,
+        Astaroth=2, Leviathan=1,
+        Pithius=3, Lempo=3,
+
+        -- OMG THEY'RE FRENCH?!
+        Balber=3, Carreau=3, Carnivean=3,
+        Oeillet=3, Rosier=2, Luvart=2,
+        Verrier=2, Olivier=2, Verrine=3,
+        -- They sound so undemonic you could almost
+        -- believe they're names of beautiful French
+        -- people sitting in a cafe while having
+        -- some cheese and wine
+
+        Dante=5,
+
+        Ahazu=3, --Wikipedia
+        Abezithibou=2, Abyzou=2, Agaliarept=2,
+        Asmodeus=3, Azazel=3, Balam=3,
+        Baphomet=3, Barbas=3, Barbatos=3,
+        Belial=3, Beleth=3, Bifrons=1,
+        Caim=2, Corson=2, Crocell=2, Dantalion=3,
+        Demogorgon=3, Eisheth=3, Focalor=3, Foras=3,
+        Forneus=3, Gaap=3, Gaderel=2, Gamigin=2,
+        Gremory=3, Gusion=1, Legion=5, Lilith=5,
+        Malphas=3, Marax=3, Marchosias=3, Merihem=3,
+        Murmur=3, Naamah=3, Naberius=3, Orias=3,
+        Orobas=2, Ose=2, Paimon=3, Penemue=3,
+        Pruflas=3, Rahab=3, Renove=2, Sabnock=3,
+        Samael=3, Sitri=2, Soneillon=3,
+        Salpsan=3, Shedim=3, Stolas=3, Surgat=3,
+        Tannin=3, Ukobach=3, Valac=3, Vapula=3,
+        Valac=2, Vepar=3, Zagan=3, Zepar=3, Ziminar=3,
+
+        Titivullus=3, Belphegor=3,
+
+        Korah=3,
+
+        -- Native American stuff
+        Dzoavits=2, Wendigo=3, Vucub=3, Wechuge=2,
+
+        -- Greek stuff
+        Abraxas=3, Chimera=5, Minotaur=5, Pandora=1, Minos=2,
+        Cerberus=5, Typhon=3, Echidna=3, Arachne=3, Medusa=3,
+        Atropos=3, Thanatos=3, Nyx=2, Sthenno=3,
+
+        -- Roman evil stuff
+        Hades=3, Orcus=3, Mefitis=3, Morta=3,
+        Mors=3, Nox=2, Vediovus=3, Tuchulcha=3,
+        Vanth=3,
+
+        -- Nordic stuff
+        Loki=3, Hel=3, Skadi=3, Aegir=3, Ran=3,
+        Ymir=3, Fenrir=3, Jormungand=3, Nidhogg=3,
+        Skoll=2, Hati=2, Surt=2, Garm=3,
+
+        -- Egyptian stuff
+        Ammit=3, Apep=3, Kek=2, Set=3, Shezmu=3,
+        Anti=2, Anzus=2,
+
+        -- Germanic stuff
+        Mephisto=3, Faust=3,
+
+        -- Polish stuff
+        Boruta=3,
+
+        -- Arabic stuff
+        Jinn=2, Deccal=3, Iblis=3, Ifrit=3, Dajjal=3,
+        Azar=3, Firawn=3, Haman=3, Jault=3, Samiri=3,
+
+        -- Slavic stuff
+        Rusalka=3, Chernevog=3,
+
+        -- Indonesian stuff
+        Barong=2, Pocong=2, Pontianak=2, Rangda=2,
+        Suanggi=2, Toyol=2,
+
+        -- Here come the Lovecraftians!
+        Ktulu=2, Dagon=3, Nyarlathotep=2,
+
+        -- civilizations that don't even exist anymore
+        -- evil stuff (Sumerians, Akkadians etc.)
+        Erishkigal=3, Utukku=3, Namtar=2, Lamashtu=2,
+        Ninurta=3,
+
+        -- Diablo games
+        Diablo=7, Andariel=3, Duriel=3, Belial=3,
+        Azmodan=3, Rakanoth=3, Inarius=3, Izual=3,
+        Adria=1, ["Tal Rasha"]=2,
+
+        -- comics, TV
+        Helgor=3, Eligos=3,
+
+        -- Dungeons and Dragons / Pathfinder
+        -- note: a lot of these names are probably borrowed
+        -- from elsewhere (i.e. real world cultures) so they
+        -- should be sorted into there instead...
+        Yeenoghlu=3, Adimarchus=3, Lolth=3,
+        Gresil=2, Jubilex=3, Kerzit=2, Caasimolar=3,
+
+        -- Warhammer 40k
+        Nurgle=2, Khorne=2, Tzeentch=2, Slaanesh=2,
+
+        --==| couldn't figure it out |==--
+        --+ totally no clue
+        Ceren=2, Dozod=2, Kalrac=2, Quenna=3,
+
+        Draco=2, -- it's Latin for dragon but I don't know anything else more specific
+        Ouroboros=5, -- actually sort of a neutral symbol
+
+        -- Doom community people?
+        Linguica=1, -- Doomworld co-founder and administrator
+        Bloodshedder=1, -- Doomworld administrator
+
+        -- Hexen?
+        Vuradi=2,
+
+        --+ Are these book authors? They don't seem to be the 'demonic' sort.
+        Oltion=2, Orgel=2,
+
+        --+ Is this supposed to be Balrog from LotR or a variant from other media?
+        Balrok=3,
+
+        -- Seventh Sanctum demon generated names
+        -- https://www.seventhsanctum.com/generate.php?Genname=adname
+        --[[Bazhon=3, Espiap=3, Barmon=3, Xsosanit=3, Naur=3, Entimas=3, Lelahatn=3, Hlieradael=3, Rodhakta=3,
+        Oksanooh=3, Molsatta=3, Urason=3, Posxael=3, Xnaapesael=3, Upaism=3, Latesiel=3, Psizan=3, Hadat=3,
+        Mrasih=3, Ezachumos=3, Ason=3, Ptapan=3, Xositecon=3, Ibomderau=3, Riar=3, Herariirses=3, Talan=3,
+        Dmurip=3, Ssianazael=3, Adetit=3, Poac=3, Urlhes=3, Pasmusaat=3, Otupsezur=3, Zutbaheor=3, Roxen=3,
+        Knaohadon=3, Amisael=3, Bapsorahiel=3, Sruabilael=3, Optaal=3, Xacasnopiel=3, Ttasapah=3, Seben=3,
+        Sehelhanael=3, Mornael=3, Zihphol=3, Hupasimanael=3, Setramnadon=3, Amaost=3, Pirlonoax=3, Nuxuhan=3,
+        Tranepem=3, Ezznop=3, Adabsiroo=3, Noszanaez=3, Zemah=3, Ranimas=3, Spoepeniel=3, Tukapamariel=3,
+        Resriphahiel=3, Abmehaus=3, Enon=3, Azhesap=3, Hamiel=3, Umesas=3, Tebhecnorael=3, Opedib=3, Naheh=3,]]
 
         -- ObAddon contributor names
-        MsrSgtShooterPerson=3, Glaice=3, Frozsoul=3,
-        Garrett=3, Caligari87=3, SimonV=3, Beed28 = 3,
+        NOUNMEMBERS = 90
 
-        NOUNGENEXOTIC = 150
+        NOUNGENEXOTIC = 700
       }
 
       a =
@@ -618,7 +856,10 @@ namelib.NAMES =
         Monumental=5, Colossal=10, Sprawling=5, Massive=5,
         Small=3, Endless=10, Gigantic=5, Mighty=5, Enormous=5,
         Giant=3, Great=3, Elephantine=3, Grand=3, Gargantuan=5,
-        Imposing=5, Monstrous=5, Prodigious=3,
+        Imposing=5, Monstrous=5, Prodigious=3, Maximum=5,
+
+        -- generic scales?
+        Raw=2, Sheer=10,
 
         -- location
         Underground=10, Subterranean=5,
@@ -627,84 +868,151 @@ namelib.NAMES =
         Inner=15, Abysmal=10, Deepest=15,
         Concealed=7, Clandestine=5, Outer=5,
 
-        -- condition
+        -- age
         Elder=15, Ancient=15, Eternal=5,
-        Decrepid=3, Desolate=10, Foul=10,
-        Defiled=10, Ruined=5, Forgotten=10,
-        Ravished=5, Barren=5, Deadly=3, Murky=3,
+        Eldritch=7,
+
+        -- color
+        Black=5, Gray=5, Red=5, Crimson=5,
+        Ochre=5,
+
+        -- dirty
+        Foul=10, Defiled=10, Ravished=5, Murky=3,
         Begrimed=5, Filthy=5, Sloven=5,
         Stagnant=7, Rancid=10, Rotten=15, Festering=5,
-        Burning=20, Burnt=5, Scorching=5, Flimsy=3,
-        Melting=5, Red_Hot=5, Fractured=5, Entombed=5,
-        Vile=15, Revolting=10, Putrid=5, Skinned=3,
-        Vulgar=5, Wretched=3, Caustic=5, Corroded=5,
-        Fallen=10, Stinking=1, Grungy=3, Derelict=5,
-        Smoky=5, Flagrant=20, Aching=5, Eldritch=7,
+        Fractured=5, Entombed=5, Vile=15,
+        Revolting=10, Putrid=5, Skinned=3,
+        Fallen=10, Stinking=1, Grungy=3,
+        Smoky=5, Flagrant=20, Aching=5,
+        Acrid=5, Fetid=2,
 
         -- contents
+        --+ guts n stuff
         Blood=20, Bloody=5, Blood_filled=3,
         Blood_stained=2, Blood_soaked=3,
-        Lava=5, Lava_filled=3, Bleeding=3, Acrid=5,
-        Monstrous=15, Monster=5, Zombie=10, Arch_Duke=5,
-        Demonic=15, Demon=5, Ghoulish=5, Princes=5,
-        Wizard=5, Warlock=2, Wiccan=3, Queens=5,
-        Haunted=10, Ghostly=15, Ghastly=5, Dukes=5,
-        Heathen=3, Rat_infested=5, Necromancers=5,
-        Baron=5, Cyberdemon=5, Slime=5, Knights=7,
-        Kings=5, Royal=5, Magma=5, Squire=4,
+        Bleeding=3,
+        --+ fire and brimstone
+        Burning=20, Burnt=5, Scorching=5,
+        Melting=5, Red_Hot=5,
+        Lava=5, Lava_filled=3, Magma=5,
+        Monstrous=15, Monster=5, Zombie=10,
+        Demonic=15, Demon=5, Ghoulish=5,
+        Haunted=10, Ghostly=15, Ghastly=5,
+        Cyberdemon=5, Necromancers=5, Mastermind=5,
+        --+ monarchs
+        Queens=5, Princes=5, Arch_Duke=5,
+        Dukes=5, Kings=5, Royal=5, Squire=4,
+        Baron=5, Knights=7,
+        --+ pagans
+        Wizard=5, Warlock=2, Wiccan=3,
+        Heathen=3,
+        --+ dirty poor guys
+        Rat_infested=5, Downtrodden=3,
+        Slime=5,
 
         -- descriptive
-        Evil=30, Unholy=20, Wicked=15, Cruel=10, Nebulous=5,
-        Godless=5, God_forsaken=7, Ungodly=3, Vexatious=5, Abtruse=3,
-        Perverse=5, Hallowed=5, Oppressive=5, Painful=5, Enigmatic=5,
-        Uncivilised=2, Unsanctified=2, Profane=5, Despoiled=3,
-        Brutal=20, Grisly=15, Gothic=7, Ungodly=10, Arcane=5, Orphic=3,
-        Mystic=7, Mystical=2, Magical=2, Magic=2, Tortuous=10,
-        Poignant=3, Sinful=5, Unblessed=3, Bitter=7, Esoteric=5,
+        Nebulous=5,
+        Oppressive=5,
 
+        Gothic=7, Orphic=3,
+
+        -- scary-wary
         Ominous=20, Terrifying=5, Gruesome=10,
         Gloomy=5, Awful=10, Execrable=10, Uncanny=15,
-        Horrible=10, Horrendous=10,
+        Horrible=10, Horrendous=10, Screaming=3,
         Dismal=10, Dank=5, Frightful=5,
         Dreaded=15, Nightmare=5, Dolor=5,
-        Screaming=3, Silent=5, Sullen=10,
 
+        -- authority
+        Sovereign=7, Triumph=2,
+
+        -- danger/fatalism
+        Brutal=20, Grisly=15, Tortuous=10,
+        Disastrous=2, Ill_fated=10, Frail=3,
+        Fatal=10, Final=5, Terminal=2, Painful=5,
+        Deadly=3,
+
+        -- magical (neutral)
+        Mystic=7, Mystical=2, Magical=2, Magic=2,
+        Arcane=5, Esoteric=5, Abstruse=3,
+
+        -- bad personal qualities
+        Cruel=5, Crass=2, Sullen=10, Bitter=7,
+        Uncivilised=2, Vexatious=5, Perverse=5,
+        Morbid=10, Loathsome=5, Vulgar=5,
+        Wretched=3, Caustic=5,
+
+        -- neutral personal qualities (hey, I'm a quiet guy -MSSP)
+        Silent=5, Enigmatic=5,
+        Godless=5, God_forsaken=7, Ungodly=3, -- does putting this here
+        Sacreligious=5, Unspiritual=2,        -- reveal too much about
+                                              -- my own opinions? -MSSP
+
+        -- good personal qualities (why though?)
+        Poignant=3,
+
+        -- explicitly very evil
+        Evil=30, Unholy=20, Wicked=15,
         Abhorrent=3, Abominable=5, Bestial=5,
-        Detested=5, Direful=2, Disastrous=2,
-        Execrated=2, Ill_fated=10, Maximum=5,
-        Fatal=10, Final=5, Frail=3, Terminal=2,
-        Immoral=5, Immortal=3, Impure=5, Utmost=5,
-        Loathsome=5, Merciless=7, Sovereign=7,
-        Morbid=10, Pestilent=5, Profane=5, Triumph=2,
-        Raw=2, Vicious=10, Violent=10, Sheer=10,
+        Direful=2, Execrated=2,
+        Immoral=5, Impure=5, Utmost=5,
+        Merciless=7, Pestilent=5, Profane=5,
+        Vicious=10, Violent=10,  Desecrated=5,
+        Accursed=5, Malodorous=5, Despicable=2,
+        Heinous=5, Mephitic=2, Peccant=5,
+        Sordid=2, Grievous=2, Ferine=2, Sinful=5,
+        Unblessed=3, Unsanctified=2, Despoiled=3,
+
+        Immortal=3,
+
+        -- abandonment/disrepair/negligence
+        Detested=5, Ruined=5, Barren=5,
+        Flimsy=3, Corroded=5, Derelict=5,
+        Decrepid=3, Desolate=10, Forgotten=10,
+
+        -- holy
         Ceremonial=5, Liturgical=5, Solemn=5, Deistic=5,
-        Divine=5, Devout=5, Sacerdotal=5, Desecrated=5,
-        Sacred=5, Clerical=5, Accursed=5, Malodorous=5,
-        Despicable=2, Heinous=5, Mephitic=2, Peccant=5,
-        Sordid=2, Sacreligious=5, Grievous=2, Fetid=2,
-        Ferine=2, Unspiritual=2, Cruel=5, Crass=2,
+        Divine=5, Devout=5, Sacerdotal=5, Sacred=5,
+        Clerical=5, Hallowed=5,
+
+        -- material
+        Adamantine=5, Bronze=5, Copper=5,
+        Rocky=5, Stone=5, Masonic=5,
+        Iron=5, Steel=5, Hellforged=5,
+        Obsidian=5, Mythril=5,
+        Rusted=5, Guilded=5,
       }
 
       n =
-      {
+      { -- MSSP-TODO: this area needs some more sorting (merge categories)
         -- places
-        Crypt=20, Grotto=15, Tomb=15,
-        Chapel=10, Church=7, Mosque=5,
-        Graveyard=10, Cloister=5,
+        --+ burials
+        Crypt=20, Tomb=15, Graveyard=10,
+        Cloister=5, Sepulcher=7, Hecatomb=3,
+        Catacombs=10,
+        --+ neutral undergorund
         Pit=10, Cavern=10, Cave=5, Chasm=5,
-        Wasteland=15, Sepulcher=7, Town=5,
-        Ghetto=2, City=5, Well=5, Realm=10,
-        Lair=15, Den=7, Domain=10, Hive=5, Abode=15,
-        Valley=10, River=5, Catacombs=10, Abyss=5,
-        Palace=5, Cathedral=5, Chamber=10, Citadel=5,
-        Hall=7, Rooms=3, Hecatomb=3, Tabernacle=3,
+        Lair=15, Den=7, Abyss=5,
+        --+ neutral aboveground
+        Wasteland=15, Town=5, Ghetto=2, City=5,
+        Well=5, Realm=10, Domain=10,
+        Hive=5, Abode=15,
+        --+ terrain
+        Valley=10, River=5,
+        --+ temples
+        Grotto=15, Chapel=10, Church=7,
+        Mosque=5, Cathedral=5, Tabernacle=3,
+        Palace=5, Citadel=5,
+        --+ building sections
+        Hall=7, Rooms=3, Chamber=10,
 
-        Labyrinth=5, Dungeon=10, Shores=5, Cenotaph=5,
-        Temple=20, Shrine=10, Vault=10, Sanctum=10,
-        Spire=10, Arena=3, Swaths=2, Monastery=10,
-        Gate=3, Circle=10, Altar=7, Chapel=10, Village=3,
-        Tower=3, Mountains=2, Prison=3, Narthex=5,
-        Sanctuary=3, Basillica=3, Morgue=5, Ring=5,
+        -- terrain
+        Mountains=2, Swaths=2, Crags=3, Shores=5,
+
+        -- generic locations (not necessarily religious
+        -- in nature nor exclusive to hell)
+        Tower=3, Gate=3, Village=3, Sanctuary=3,
+        Prison=3, Sanctum=10, Arena=3, Spire=10,
 
         -- weird ones
         Communion=5, Monolith=5, Crucible=5,
@@ -714,25 +1022,64 @@ namelib.NAMES =
         Ache=2, Apocalypse=1, Resurrection=5,
         Absolution=5, Crux=5, Culmination=5,
         Sacrament=5, Plight=5, Liturgy=5,
+        Choir=5,
 
         -- Shadiversity approved castle parts -MSSP
         Ramparts=8, Keep=10, Gatehouse=8,
         Bailey=5, Barbican=5, Well=10,
         Motte=4, Battlements=10, Ward=7,
         Turrets=3, Oubliette=3, Stockades=3,
-        Bartizan=3, Brattice=3, Embrasure=5,
-        Balistraria=2, Castellation=2, Crenels=2,
-        Merlons=2,
-
-        Postern=3, Cistern=3
+        Bartizan=3, Brattice=3, Postern=3,
+        Cistern=3,
 
         -- temples of sorts
+        Temple=20,
+        Basillica=3, Chapel=10, Monastery=10,
         Abbey=10, Monastery=10, Friary=3,
         Priorate=5, Lamasery=3, Convent=10,
-        Hermitage=5, Ziggurat=10,
+        Hermitage=5, Ziggurat=10, Bethel=3,
+        Parish=3, Sacellum=3,
+
+        --+ parts of temples
+        ---+ (based on Greek architecture)
+        Cella=3, Terastyle=2, Hexastyle=2,
+        Dipteral=3, Anta=3, Tholos=3,
+        Peripteral=3, Hypostyle=2,
+
+        ---+ (based on old Jewish stuff)
+        Soreg=2, Hekhal=2, Debir=1,
+
+        -- modern-ish church bits
+        Baptistery=3, Ciborium=3, Nave=3,
+        Clerestory=3, Transept=5, Scriptorium=7,
+        Synagogue=10, Belfries=2, Pulpitum=3,
+        Dais=3, Feretory=5, Maqsurah=3,
+        Peripteral=3, Chantry=3, Font=2,
+        Sacristy=3, Narthex=5, Altar=7,
+        Shrine=10,
+
+        Plumbery=2,
+
+        Monstrance=3, Reliquary=10,
+
+        --+ stuff priests own
+        Parsonage=3, Vicarage=3, Rectory=3,
+        Clege=3, Presbytery=3, Benefice=3,
+        Manse=3,
+
+        --+ groups of priests
+        Clergy=1, Cardinalate=2, Conclave=3,
+        Pastorate=2, Rabbinate=2, Canonry=3,
+        Deaconry=3, Order=3,
+
+        --+ districts of church/religious offices
+        Diocese=3, Episcopate=3, Prelacy=3,
+        Bishopric=3, Curacy=3, Chancellery=5
 
         -- deady stuff
         Mausoleum=15, Undercroft=5, Entombment=5,
+        Morgue=5, Labyrinth=5, Dungeon=10,
+        Cenotaph=5, Vault=10, Culverts=5,
 
         Domicile=5,
         Library=15,
@@ -744,164 +1091,150 @@ namelib.NAMES =
         Oriel=3, Pier=5, Triforium=3,
         Jetty=2, Pylon=5,
 
-        Hypostyle=2,
-
-        -- church bits
-        Baptistery=3, Ciborium=3, Nave=3,
-        Clerestory=3, Transept=5, Scriptorium=7,
-        Synagogue=10, Belfries=2, Pulpitum=3,
-        Dais=3, Feretory=5, Maqsurah=3,
-        Peripteral=3,
-
-        Minaret=3,
-
-        Monstrance=3, Reliquary=10,
-
-        Chancellery=5
-
         -- generic architectural stuff
         Banister=5, Gallery=5,
         Parapet=5, Terraces=5, Banquette=2,
-        Balcony=3, Cusp=3, Dome=10, Portal=5,
+        Balcony=3, Cusp=3, Portal=5,
         Tribune=7, Vestibule=10, Atrium=10,
-        Terastyle=2, Hexastyle=2, Monitor=5,
-        Niche=10, Oculus=5, Solar=5,
-        Rotunda=2, Cellars=10,
+        Monitor=5, Niche=10, Oculus=5,
+        Solar=5, Cellars=10, Alcoves=3,
 
-        Pavillion=5, Monument=10,
+        -- other synonyms for arena
+        Gridiron=3, Hippodrome=3, Pit=3,
+        Grounds=3, Stade=3, Strand=3,
+        Coliseum=3,
+
+        -- synyonyms for slaugterhouse
+        Abattoir=3, Butchery=3,
+
+        -- shapes
+        Dome=10, Quadrangle=3, Rotunda=2,
+        Circle=10, Triangle=3, Ring=5,
+        Oval=2,
+
+        Pavillion=5, Monument=10, Garth=3,
+        Minaret=3,
+
+        -- nest
+        Nest=10, Aerie=5, Haunt=3,
+
+        -- prison
+        Durance=5, Captivity=3, Confinement=3,
+        Isolation=3, Duress=3, Remand=2, Thralldom=2,
+        Immuration=3, Bastille=2, Brig=3,
+        Sty=3, Antechamber=3, Hold=3,
       }
 
-      h =
+      h = -- explicit descriptions i.e. "Arena of Death"
       {
+        -- fire and brimstone
         Hell=10, Fire=10, Flames=10,
-        Horror=10, Terror=10, Death=15,
-        Pain=15, Fear=5, Hate=10, Misery=10,
-        Limbo=3, Souls=10, Doom=15, Tragedy=10,
-        Carnage=10, Gore=5, Shadows=10, Rapine=10,
-        Darkness=10, Destruction=5, Famine=10,
-        Suffering=5, Torment=10, Torture=10, Heresy=10,
-        Iconoclasm=10, Fallacy=10, Defection=10,
-        Blasphemy=10, Infidelity=10, Paganism=10,
-        Schism=10, Secularism=10, Sin=10, Mayhem=10,
-        Sorrow=10, Trauma=10, Agony=10, Anguish=10,
-        Strain=5, Supplication=5, Witchcraft=5,
+        Darkness=10, Limbo=3, Souls=10, Shadows=10,
 
-        Flesh=10, Corpses=10, Bones=10, Chaos=15,
-        Skulls=10, Whispers=5, Tears=3, Viscera=5,
-        Dread=5, Fate=5, Locusts=2, Erebus=5, Lethe=2,
+        -- violence
+        Carnage=10, Gore=5, Rapine=10,
+        Destruction=5, Doom=15,
+        Flesh=10, Corpses=10, Bones=10,
+        Viscera=5, Skulls=10,
+
+        -- disaster
+        Tragedy=10, Famine=10, Chaos=15,
+
+        -- non-sectarian behavior
+        Iconoclasm=10, Defection=10,
+        Blasphemy=10, Paganism=10,
+        Schism=10, Secularism=10, Sin=10, Mayhem=10,
+        Strain=5, Supplication=5, Witchcraft=5,
+        Heresy=10,
+
+        -- definitely bad things
+        Fallacy=10, Deception=10, Infidelity=10,
+        Suffering=5, Torment=10, Torture=10,
         Treachery=5, Lunacy=5, Woe=5,
+
+        -- emotions and physical pain
+        Horror=10, Terror=10, Death=15,
+        Sorrow=10, Hate=10, Misery=10,
+        Pain=15, Fear=5, Trauma=10,
+        Agony=10, Anguish=10,
+
+        Whispers=5, Tears=3,
+        Dread=5, Fate=5, Locusts=2, Erebus=5, Lethe=2,
         Reckoning=5, Minos=3, Hades=7, Acheron=5,
         Leviathan=5, Baphomet=5, Devils=10,
+      }
 
-        ["the Abhorrent"]=10
-        ["the Absurd"]=10
-        ["the Acolyte"]=10
-        ["the Ancient"]=10
-        ["the Angry"]=10
-        ["the Apostates"]=10
-        ["the Barbaric"]=10
-        ["the Beast"]=10
-        ["the Behemoth"]=10
-        ["the Baneful"]=10
-        ["the Belligerent"]=10
-        ["the Betrayers"]=10
-        ["the Blackened"]=10
-        ["the Bleak"]=10
-        ["the Bleeding"]=10
-        ["the Chaotic"]=10
-        ["the Condemned"]=10
-        ["the Corpsegrinder"]=10
-        ["the Corroded"]=10
-        ["the Corrosive"]=10
-        ["the Corrupt"]=10
-        ["the Crooked"]=10
-        ["the Cunning"]=10
-        ["the Damned"]=10
-        ["the Dead"]=10
-        ["the Decayed"]=10
-        ["the Decaying"]=10
-        ["the Deceitful"]=10
-        ["the Deceptive"]=10
-        ["the Defiled"]=10
-        ["the Deformed"]=10
-        ["the Denizens"]=10
-        ["the Deplorable"]=10
-        ["the Depraved"]=10
-        ["the Desolate"]=10
-        ["the Destroyer"]=10
-        ["the Diabolical"]=10
-        ["the Dishonored"]=10
-        ["the Dismal"]=10
-        ["the Disobedient"]=10
-        ["the Dissolute"]=10
-        ["the Dreadful"]=10
-        ["the Dreary"]=10
-        ["the Dying"]=10
-        ["the Emissary"]=10
-        ["the Enraged"]=10
-        ["the Exposed"]=10
-        ["the Failures"]=10
-        ["the Fallen"]=10
-        ["the Forgotten"]=10
-        ["the Foul"]=10
-        ["the Ghastly"]=10
-        ["the Gloomy"]=10
-        ["the Grotesque"]=10
-        ["the Grisly"]=10
-        ["the Gruesome"]=10
-        ["the Gullible"]=10
-        ["the Hazardous"]=10
-        ["the Hateful"]=10
-        ["the Hideous"]=10
-        ["the Forsaken"]=10
-        ["the Impure"]=10
-        ["the Insidious"]=10
-        ["the Infernal"]=10
-        ["the Insane"]=10
-        ["the Knavish"]=10
-        ["the Loathsome"]=10
-        ["the Malevolent"]=10
-        ["the Malicious"]=10
-        ["the Minions"]=10
-        ["the Missionary"]=10
-        ["the Necromancer"]=10
-        ["the Nefarious"]=10
-        ["the Neophyte"]=10
-        ["the Noxious"]=10
-        ["the Obscene"]=10
-        ["the Oracle"]=10
-        ["the Parlous"]=10
-        ["the Perilous"]=10
-        ["the Poisoned"]=10
-        ["the Possessed"]=10
-        ["the Priest"]=10
-        ["the Prophets"]=10
-        ["the Putrid"]=10
-        ["the Repulsive"]=10
-        ["the Rotten"]=10
-        ["the Ruined"]=10
-        ["the Ruthless"]=10
-        ["the Saints"]=10
-        ["the Savage"]=10
-        ["the Seer"]=10
-        ["the Sick"]=10
-        ["the Sinister"]=10
-        ["the Sinner"]=10
-        ["the Spiteful"]=10
-        ["the Tainted"]=10
-        ["the Treacherous"]=10
-        ["the Ugly"]=10
-        ["the Undead"]=10
-        ["the Unheard"]=10
-        ["the Unknown"]=10
-        ["the Unmaker"]=10
-        ["the Vicar"]=10
-        ["the Vicious"]=10
-        ["the Vile"]=10
-        ["the Wicked"]=10
-        ["the Witches"]=10
-        ["the Wretched"]=10
-        ["the Zealots"]=10
+      o = -- implicit objects e.g. "Arena of the Doomed"
+      {
+        -- entities
+        --+ alive people
+        Denizens=10, Emissary=10, Seer=10,
+        Wretched=10, Vicar=10,
+        --+ dead people
+        Dead=10, Fallen=10, Possessed=10,
+        Undead=10,
+        --+ bad folk
+        Betrayers=10, Corpsegrinder=10, Destroyer=10,
+        Necromancer=10, Sinner=10, Wicked=10,
+        Witches=10, Unmaker=10,
+        --+ ir/religious figures
+        Acolyte=10, Apostates=10, Missionary=10,
+        Priest=10, Prophets=10, Neophyte=10, Oracle=10,
+        Saints=10, Zealots=10,
+        --+ creatures
+        Beast=10, Behemoth=10, Minions=10,
+
+        -- personal qualities
+        --+ outright evil
+        Abhorrent=10, Barbaric=10, Deplorable=10,
+        Depraved=10, Diabolical=10, Ghastly=10, Impure=10,
+        Insidious=10, Infernal=10, Malevolent=10,
+        Malicious=10, Nefarious=10, Ruthless=10,
+        Sinister=10,
+        --+ negative
+        Angry=10, Belligerent=10,
+        Baneful=10, Crooked=10, Decayed=10,
+        Deceitful=10, Deceptive=10, Dishonored=10,
+        Disobedient=10, Dreadful=10, Dreary=10,
+        Dying=10, Enraged=10, Gloomy=10,
+        Grotesque=10, Foul=10,
+        Grisly=10, Gruesome=10, Gullible=10,
+        Hateful=10, Hideous=10, Insane=10,
+        Knavish=10, Loathsome=10,
+        Obscene=10, Savage=10, Sick=10,
+        Spiteful=10, Ugly=10, Vicious=10,
+        Vile=10,
+        --+ neutral
+        Cunning=10, Unheard=10, Unknown=10,
+
+        -- weird
+        Absurd=10,
+
+        -- age
+        Ancient=10,
+
+        -- damage states
+        Blackened=10, Bleak=10, Bleeding=10,
+        Corroded=10, Corrosive=10, Deformed=10,
+        Dismal=10, Exposed=10,
+        Ruined=10, Collapsed=5,
+
+        -- tainted
+        Chaotic=10, Corrupt=10, Defiled=10,
+        Noxious=10, Poisoned=10, Putrid=10,
+        Repulsive=10, Rotten=10, Tainted=10,
+
+        -- abandoned
+        Condemned=10, Damned=10, Decaying=10,
+        Desolate=10, Dissolute=10, Forgotten=10,
+        Forsaken=10,
+
+        -- things that cause anxiety
+        Failures=10,
+
+        -- danger
+        Hazardous=10, Parlous=10, Perilous=10,
+        Treacherous=10,
       }
 
       s =
@@ -1189,26 +1522,38 @@ namelib.NAMES =
   {
     patterns =
     {
+      -- lexicon legend:
+      -- %e = Entity
+      -- %a = Adjectives
+      -- %n = Places
+      -- %h = Explicit description (e.g. I am Satan, "Arena of <Satan>")
+      -- %o = Implicit description (e.g. I am Satanic, "Arena of <the Satanic>")
+      -- %v = Prefixed phrase (as per COMMON table e.g. "<Scoruge of the> Arena)
+
          ["%a %n"] = 60
       ["%t %a %n"] = 15
 
-      [   "%n of %h"] = 20
-      ["%t %n of %h"] = 12
-      ["%a %n of %h"] = 7
+      [   "%n of %h"] = 15
+      ["%t %n of %h"] = 8
+      ["%a %n of %h"] = 6
+
+      [   "%n of the %o"] = 15
+      ["%t %n of the %o"] = 8
+      ["%a %n of the %o"] = 6
 
       ["%v %n"]    = 25
       ["%v %a %n"] = 25
 
-      ["%s"] = 18
+      ["%s"] = 15
 
       -- Types of roads, useful when Streets Mode
       -- kicks in.
-      ["%a St."] = 10 -- Street
-      ["%a Rd."] = 10 -- Road
-      ["%a Ave."] = 10 -- Avenue
-      ["%a Dr."] = 5 -- Drive
-      ["%a Pl."] = 5 -- Place
-      ["%a Ln."] = 5 -- Lane
+      ["%a St."] = 7 -- Street
+      ["%a Rd."] = 7 -- Road
+      ["%a Ave."] = 7 -- Avenue
+      ["%a Dr."] = 4 -- Drive
+      ["%a Pl."] = 4 -- Place
+      ["%a Ln."] = 4 -- Lane
 
     }
 
@@ -1221,54 +1566,118 @@ namelib.NAMES =
 
       a =
       {
+        -- generics,
+        General=5, Generics=7,
+
         -- size
         Plethoric=7, Sprawling=10, Unending=7,
         Serpentine=10, Hulking=3, Giant=2, Vast=7,
+        Monstrous=3,
 
-        -- location
+        --+ supernatural
         Arcane=5, Hidden=5, Ethereal=5, Nether_=5,
-        Northern=10, Southern=10, Eastern=10, Western=10,
-        Upper=5, Lower=10, Central=5, Northeast=5, Northwest=5,
-        Inner=5, Innermost=3, Southeast=5, Southwest=5,
-        Outer=5, Outermost=3,
-        Furthest=5, Isolated=10,
 
-        -- condition
+        --+ directional
+        Upper=5, Lower=10,
+        Northern=10, Southern=10, Eastern=10, Western=10,
+        Northeast=5, Northwest=5, Southeast=5, Southwest=5,
+        Inner=5, Innermost=3, Outer=5, Outermost=3,
+        Focal=5, Central=5,
+
+        --+ distance/inaccessibility
+        Furthest=5, Isolated=10, Remote=5, Obscure=10,
+        Lost=5,
+        Cordoned=5, Quarantined=5, Sequestered=5,
+        Confined=5, Secluded=5, Sealed=3,
+        Restricted=5, Blocked=3, Segregated=3,
+        Adjacent=5, Adjoining=5, Neighboring=5,
+        Inland=5, Outland=5,
+
+        --+ time
         Old=10, Ancient=20, Eternal=7,
+
+        --+ state of repair/damage
         Decrepid=20, Lost=10, Forgotten=10,
         Ravished=10, Barren=20, Deadly=5,
+        Flooded=5, Bombarded=2, Corrosive=2,
+        Ruined=3, Charred=10, Neglected=5,
+        Deteriorated=5,
+
+        --+ decay
+        Decayed=5, Putrid=5, Noxious=5,
         Stagnant=10, Rancid=5, Rotten=3,
-        Flooded=5, Sunken=3, Occult=5,
-        Misty=10, Foggy=5, Toxic=2,
-        Windy=10, Hazy=3, Distraught=5, Charred=10,
-        Urban=10, Bombarded=2, Corrosive=2,
+        Sunken=3, Toxic=2, Polluted=10,
+        Infected=10, Infested=10,
+        Contaminated=10, Fetid=5, Festering=5,
 
-        -- descriptive
-        Monstrous=3, Monster=15, Wild=5,
-        Demonic=3, Demon=15, Polluted=10,
-        Invaded=5, Overtaken=5, Stolen=3,
-        Haunted=20, Infected=10, Infested=10,
+        --+ weather
+        Windy=10, Hazy=3, Foggy=5, Misty=10,
+        Clouded=5, Gray=5, Brackish=5, Overcast=10,
+        Humid=5, Torrid=5, Tropic=2,
+
+        --+ city
+        Urban=10, Metropolitan=10, Cosmopolitan=3,
+        Civic=3, Communal=5, Municipal=3,
+        Capital=5, Commercial=5, Trading=5,
+        Company=5, Administrative=5,
+
+        --+ supernatural/evil
+        Occult=5, Distraught=5, Malevolent=5,
         Corrupted=15, Corrupt=15, Fateful=5,
-        Besieged=10, Contaminated=10, Malevolent=5,
-
-        Savage=10, Menacing=15, Frightening=10, Creepy=5,
-        Dark=30, Darkest=7, Horrible=10, Exotic=5,
-        Dismal=10, Dreadful=10, Cold=7, Ugly=2,
-        Vacant=15, Empty=7, Lonely=2, Desperate=2,
-        Unknown=5, Unexplored=7, Lupine=2,
-        Crowded=3, Untamed=3,
-
-        Bleak=30, Abandoned=15, Forsaken=10,
+        Monster=15, Demonic=3, Demon=15,
+        Frightening=10, Creepy=5, Ominous=15,
+        Haunted=20, Menacing=15,
         Cursed=20, Wretched=15, Bewitched=5,
-        Forbidden=20, Sinister=10, Hostile=10,
-        Mysterious=10, Obscure=10, Living=3,
-        Ominous=15, Perilous=15,
+        Forbidden=20, Sinister=10, Mysterious=10,
+        Profligate=5, Depraved=5, Incorrigible=3,
+        Wanton=3, Dissolute=3,
+
+        --+ wilderness
+        Wild=5, Savage=10, Untamed=3,
+        Unexplored=7, Teeming=3, Lush=3,
+        Lupine=2,
+
+        --+ military/criminal possession
+        Invaded=5, Besieged=10, Swarmed=5,
+        Overtaken=5, Stolen=3,
+
+        --+ illumination
+        Dark=20, Darkest=7, Dismal=10,
+        Murky=5,
+
+        --+ abandonment
+        Bleak=20, Abandoned=15, Forsaken=10,
+        Deserted=5, Vacated=5, Forgotten=12,
+        Derelict=15, Desolate=5, Forlorn=3,
+        Bereft=3, Stranded=2, Vacant=15, Empty=7,
+        Dead=15,
+
+        --+ aesthetic
+        Horrible=10, Exotic=5, Dreadful=10,
+
+        --+ temperature
+        Cold=7, Bitter=3, Frigid=5,
+        Algid=5, Polar=5, Gelid=3,
+        Boreal=3, Hot=7,
+
+        --+ emotion
+        Lonely=2, Desperate=2, Ugly=2,
+
+        --+ populated congestion
+        Crowded=3, Cramped=3, Congested=5,
+        Huddled=3, Compact=5, Crammed=2,
+
+        --+ level of danger
+        Catastrophic=5, Perilous=15, Hostile=10,
+        Dangerous=10, Precarious=5, Treacherous=5,
+        Formidable=3, Unsafe=5,
+
+        Unknown=5, Living=3,
         Slaughter=5, Murder=5, Killing=5,
-        Catastrophic=5, Whispering=10,
+        Whispering=10,
 
         -- ObAddon contributor names
-        MsrSgtShooterPerson=3, Glaice=3, Frozsoul=3,
-        Garrett=3, Caligari87=3, SimonV=3, Beed28=3,
+        NOUNMEMBERS = 50
 
         NOUNGENEXOTIC = 150
         NOUNGENANGLICAN = 650
@@ -1276,105 +1685,238 @@ namelib.NAMES =
 
       n =
       {
-        City=30, Town=20, Village=10,
-        Condominium=10, Condo=5, Citadel=10,
-        Plaza=10, Square=5, Kingdom=15,
-        Fortress=20, Fort=5, Stronghold=5,
-        Palace=20, Courtyard=10, Court=10,
-        Hallways=20, Halls=5, Corridors=7,
+        -- castle and castle parts
+        Castle=20, Citadel=10,
+        Keep=3, Slough=3, Temple=3,
+        Gate=10, Prison=15, Dens=5,
+        Coliseum=2, Courtyard=10, Court=10,
 
-        Castle=20, Mineshaft=5, Embassy=5,
-        House=20, Mansion=10, Manor=10,
-        Refuge=5, Sanctuary=5, Asylum=10,
-        Dwelling=3, Estate=2, Sewers=2,
-        Outpost=5, Keep=3, Slough=3, Temple=3,
-        Gate=10, Prison=15, Dens=5, Slums=5,
-        Coliseum=2, Chateau=2,
-
+        -- territories
+        City=20, Town=20, Village=10,
         World=5, Country=10, Zone=10,
+        Square=5, Kingdom=15,
         District=10, Precinct=10,
         Dominion=10, Domain=3, Trail=10,
         Region=10, Territory=5, Path=5,
-        Neighborhood=3, Environs=2,
-        Bypass=2, Barrio=2, Crossing=5,
-        Promenade=5, Trek=5, Venture=5,
-        Voyage=7, Course=5,
+        Province=10, Jurisdiction=10,
 
-        Camp=3, Campus=2, Compound=3, Venue=1,
+        -- adventure
+        Trek=5, Venture=5,
+        Voyage=7, Odyssey=2,
+
+        -- watery
         Harbor=10, Reserve=3, Ward=3,
-        Junction=2, Seabed=5, Embankment=3,
-        Oasis=2, Odyssey=2, Habitat=2, Soil=10,
-        Scum=5, Remnants=10, Remains=5, Debris=5,
+        Seabed=5, Embankment=3,
+        Oasis=2, Waterways=5,
+
+        -- dirt
+        Soil=10, Scum=5,
+        Remnants=10, Remains=5, Debris=5,
         Refuse=5, Dust=5, Dirt=3,
 
+        -- destruction
         Siege=5, Assault=5, Attack=5, Ambush=5,
         Onslaught=5, Stampede=5, Encounter=5,
         Conflict=5,
 
-        -- plurals
-        Lands=20, Fields=20, Footprints=5,
-        Alleys=10, Docks=10,
-        Towers=10, Streets=10, Roads=5,
-        Gardens=15, Warrens=5, Quarry=5,
-        Crossroads=5, Outskirts=10,
-        Suburbs=10, Quarters=10,
-        Mines=20, Barracks=5,
+        -- generic flatlands
+        Lands=10, Fields=10, Footprints=5,
+        Warrens=5, Outskirts=10, Lots=5,
+        Acreage=2, Block=10, Plots=5,
+        Tracts=3,
+
+        -- generic structures/locations
+        Towers=10, Quarters=10, Division=3,
+        Hub=5, Polestar=2, Post=5, Complex=15,
+        Campus=5, Compound=10, Venue=2,
+        Annex=5, Hallways=20, Halls=5, Corridors=7,
+        Promenade=5, Cubicles=5, Wing=5,
+        Building=20, Superstructure=10,
+        Substructure=10, Compartment=5,
+
+        -- pathways
+        Alleys=10, Backstreets=5, Lane=5,
+        Streets=10, Roads=5, Walk=3,
+        Passage=5, Avenues=3, Outlets=5,
+        Crossroads=5, Boulevards=3, Parkway=5,
+        Route=5, Thoroughfare=3, Access=5,
+        Drive=3, Junction=2, Course=5,
+        Bypass=2, Gap=5, Concourse=8,
+        Crossing=5, Exchange=5, Channels=5,
+
+        -- military
+        Barracks=5, Depot=3, Outpost=5,
+        Fortress=20, Fort=5, Stronghold=5,
+        Camp=3, Berths=5, Garage=5,
 
         -- weird ones
-        Echo=1,
+        Echo=1, Dream=1, Nightmare=1,
+
+        -- industrial
+        Mines=10, Quarry=5, Docks=10,
+        Warehouse=10, Port=10, Mineshaft=5,
+        Firm=5, Workrooms=2, Works=3,
+        Factory=10, Forge=3, Foundry=3,
+        Mint=3, Sweatshops=5, Mill=10,
 
         -- commercial -MSSP
-        Mall=5, Strip=5, Market=8,
+        Mall=10, Strip=7, Market=8,
+        Mart=5, Bazaar=10, Bodega=5,
+        Souk=8, Fair=10, Stores=5,
+        Showrooms=5, Emporium=7,
+        Groceries=3, Stadium=5, Shops=5,
+        Agora=1, Marketplace=10, Offices=5,
+        Agency=3, Department=5, Bureau=3,
+        Suites=2, Workstation=7,
 
         -- civic -MSSP
         Hospital=5, Park=5, Commons=10,
+        Gardens=15, Plaza=10, Embassy=5,
+        Sewers=10, Asylum=10, Forum=5,
+        Assembly=5, Authority=5, Services=3,
+        Institution=5,
 
-        -- residential -MSSP
-        Projects=10, Housing=5,
+        -- residential
+        Condominium=10, Condo=5, Chateau=2,
+        Projects=10, Housing=5, Coop=3,
+        Hive=5, Cooperative=5, Tenements=5,
+        Domicile=3, Habitations=3, Abode=5,
+        Settlement=7, Suburbs=10, Residences=5,
+        Shelter=10, Board=5, Bunk=3, Habitat=2,
+        Palace=15, Neighborhood=3, Environs=2,
+        Barrio=2, House=20, Mansion=10, Manor=10,
+        Estate=2, Slums=15, Refuge=5, Sanctuary=5,
+        Dwelling=3, Lofts=8,
+
+        -- architectural
+        Roofs=10, Piazza=5, Portico=5, Loggia=3,
+        Galleria=5, Arcade=5,
+
+        -- battleground
+        Battlefront=5, Battlezone=5, Warzone=5,
+        Battlegrounds=7, Front=5,
+        Standoff=5, Deadlock=5, Stalemate=5,
       }
 
-      h =
+      h = -- explicit descriptors (e.g. "Arena of Doom")
       {
+        -- feels
+        --+ negative
         Doom=20, Gloom=15, Despair=10, Sorrow=15,
         Horror=20, Terror=10, Death=10, Dolor=5,
-        Danger=10, Pain=15, Fear=7, Hate=5,
-        Desolation=3, Reparation=3, Solace=10,
-
-        Ruin=10, Flames=3, Destruction=5,
-        Twilight=5, Midnight=5, Dreams=2,
-        Tears=10, Helplessness=2, Misfortune=5,
+        Pain=15, Fear=7, Hate=5, Desolation=3,
         Misery=10, Turmoil=5, Decay=5,
-        Blood=10, Insanity=5, Delirium=2,
-        Sabotage=5,
+        Insanity=5, Helplessness=2, Misfortune=5,
+        Voiceless=5,
+        --+ positive
+        Solace=10, Reparation=3,
+
+        -- descriptions of danger
+        Danger=10,
+        --+ elemental danger
+        Acid=5, Flames=5, Lava=3,
+
+        -- states of destruction
+        Ruin=10,
+
+        -- bodily objects
+        Bone=7, Blood=10, Claws=10,
+        Gore=7, Skulls=10, Tears=10,
+
+        -- time
+        Dusk=3, Twilight=5, Midnight=5,
+
+        -- delusions
+        Dreams=2, Delirium=2, Delusion=2,
+        Doubt=5, Illusions=2,
+
+        -- bad acts
+        Sabotage=5, Destruction=5,
+
+        -- material
+        Bronze=5, Iron=5,
 
         -- residents
-        Ghosts=15, Gods=10, Spirits=5,
+        --+ ethereal things
+        Demigods=3, Ghosts=15, Gods=10, Spirits=5,
         Spectres=5, Banshees=5, Phantoms=5,
-        Menace=15, Evil=5, Ghouls=5, Demons=5,
-        Ogres=5, Denizens=7, Souls=5,
-        Murderers=3, Vultures=5, Pirates=3,
-        Spiders=2, Snakes=5, Vermin=5, Vagrants=7,
-        Madmen=2, Mortals=10, Martyrs=5,
-        Prophets=5, Prey=5, Crows=5, Addicts=3,
-        Fools=1, Creeps=3, Demigods=3,
+        Evil=5, Ghouls=5, Demons=5, Souls=5,
+        --+ fantasy creatures
+        Ogres=5, Gargoyles=3,
+        --+ people
+        Addicts=3, Creeps=3, Fools=1,
+        Menace=15, Denizens=7, Murderers=3,
+        Pirates=3, Vagrants=7,
+        Madmen=2, Mortals=10,
+        --+ explicitly religious people
+        Martyrs=5, Prophets=5,
+        --+ animals
+        Crows=5, Prey=5,
+        Vermin=5, Vultures=5,
+        Spiders=2, Snakes=5,
 
-        ["the Abandoned"]=5
-        ["the Bizarre"]=5
-        ["the Decayed"]=5
-        ["the Diseased"]=5
-        ["the Filthy"]=5
-        ["the Homeless"]=5
-        ["the Insane"]=5
-        ["the Mad"]=7
-        ["the Night"]=10
-        ["the Phantasm"]=10
-        ["the Poltergeist"]=10
-        ["the Sick"]=5
-        ["the Stray"]=5
-        ["the Undead"]=5
-        ["the Untamed"]=5
-        ["the Vermin"]=5
-        ["the Wraith"]=10
+        -- creepy furniture
+        Mirrors=5, Stakes=3,
+
+        -- time
+        Dusk=5, Dawn=5, Midnight=5,
+      }
+
+      o = -- implicit descriptors (e.g. "Arena of the Doomed")
+      {
+        -- abandoned
+        Abandoned=5, Doomed=5, Damned=5,
+        Forgotten=5, Forsaken=5, Lost=5,
+
+        -- weird
+        Bizarre=5, Unreal=5,
+
+        -- damage
+        Decayed=5,
+
+        -- dirt
+        Filthy=5, Slime=5,
+
+        -- illusion
+        Mirage=5,
+
+        -- creatures and people
+        --+ wild
+        Pests=5, Vermin=5,
+        --+ paranormal
+        Ghosts=4, Phantasm=10, Poltergeist=10,
+        Wraith=10, Undead=5, Risen=5,
+        --+ occupational
+        Butcher=5, Executor=5, Fiend=5,
+        Slayer=5,
+
+        -- states of being
+        ---+ victimized
+        Afflicted=5, Desperate=5, Diseased=5,
+        Estranged=5, Faceless=5, Homeless=5,
+        Misbegotten=5, Missing=5, Hunted=5,
+        Sick=5, Sightless=5, Unwell=5,
+        Quarantined=5,
+        ---+ craycray
+        Deranged=5, Disturbed=3, Hysteric=5,
+        Insane=5, Mad=7,
+        ---+ pretty much dead
+        Dead=5, Deceased=5, Fallen=5,
+        ---+ good
+        Bold=5, Brave=5, Dauntless=5,
+        Interpid=3, Savior=5,
+        ---+ neutral
+        Adamant=5, Feral=5, Untamed=5,
+        Vicarious=5, Wild=5, Stray=5,
+        ---+ evil
+        Lawless=5, Unforgiving=5,
+
+        -- groups
+        Conclave=5, Sovereign=5,
+        Brotherhood=5, Sisterhood=5,
+
+        -- age and time
+        Ancients=5, Eternal=5, Night=10,
       }
 
       s =
@@ -1979,6 +2521,7 @@ namelib.NAMES =
         ["Nobody Got Time For That"]=10
         ["VGCG"]=10
         ["You Wouldn't Steal a Car"]=10
+        ["Papa Bless"]=10
 
         --literature (or derived/deviated from them)
         ["Brave New World"]=10
@@ -2672,13 +3215,7 @@ namelib.NAMES =
 
       c = -- oh boy, here we go again...
       {
-        MsrSgtShooterPerson = 5
-        Glaice = 5
-        Garrett = 5
-        Caligari87 = 5
-        Frozsoul = 5
-        SimonV = 5
-        Beed28 = 5
+        NOUNMEMBERS = 10
       }
     }
   }
@@ -2782,14 +3319,12 @@ namelib.NAMES =
       ["The %e Lurks Below"] = 5
       ["Destruction of the %d %p"] = 5 -- Destruction of the [Adjective] [Place]
       ["%a Black Metal"] = 5 -- [Adjective] Black Metal
-      ["Doomguy's Vacation with %c"] = 5 -- Doomguy's Vacation with [Name]
+      ["Doomguys Vacation with %c"] = 5 -- Doomguy's Vacation with [Name]
       ["Sin City: The %a %p"] = 5
       ["Sin City: The %d"] = 5
       ["Dead Base: The %d"] = 5
       ["%a Sorcery"] = 3
       ["%a Witchcraft"] = 3
-
-
     }
 
     lexicon =
@@ -3421,13 +3956,7 @@ namelib.NAMES =
 
       c = -- contributor names
       {
-        MsrSgtShooterPerson = 10
-        Glaice = 10
-        Caligari87 = 10
-        Garrett = 10
-        Frozsoul = 10
-        SimonV = 10
-        Beed28 = 10
+        NOUNMEMBERS = 10
       }
     }
   }
@@ -3557,14 +4086,17 @@ namelib.NAMES =
         -- Glaice adds names
         ["A Masterpiece in Progress"] = 40
         ["A Bloody Good Time"] = 30
+        ["A Fantastic Place!"] = 25
         ["A Withered World"] = 25
         ["Always Being Improved"] = 40
         ["An ObAddon Production"] = 40
+        ["Another New World!"] = 30
         ["Are You Man Enough?"] = 20
         ["As Above, So Below"] = 30
         ["Blasting Away!"] = 20
         ["Bugs Do Exist, Plz Report!"] = 20
         ["Burn It All Down"] = 30
+        ["Burning Bright in the Sky"] = 30
         ["Crimes Against Humanity"] = 25
         ["Cruising for a Bruising"] = 30
         ["Descent Into Madness"] = 30
@@ -3574,7 +4106,9 @@ namelib.NAMES =
         ["Fantastic!"] = 30
         ["High Impact Abuse"] = 35
         ["It's Raw!"] = 30
+        ["Jacked Up Past Safe Levels!"] = 25
         ["Let's Get It On!"] = 30
+        ["Made with Blood, Sweat and Tears"] = 20
         ["Move it up a Notch"] = 25
         ["Not A Walk in the Park!"] = 30
         ["Not Safe For Game Journalists"] = 35
@@ -3582,17 +4116,28 @@ namelib.NAMES =
         ["Now with more Impse"] = 30
         ["Oblige is Love, Oblige is Life"] = 40
         ["Perfect on Ultra-Violence"] = 30
+        ["Potential Bugs May Exist!"] = 20
         ["Ramp it to the MAX!"] = 25
+        ["Road to the World Cup"] = 20 -- By Swedra
         ["Random by Nature"] = 30
+        ["Should be A-OK!"] = 20
         ["Single and Multiplayer!"] = 30
         ["Skilled Players Sign Here"] = 25
+        ["Speedrunners are SOL"] = 25
         ["The Deadzone"] = 20
+        ["The New Challengers"] = 20 -- This one by Craneo
         ["The Principles of Doom"] = 30
+        ["The Threads of Life"] = 20
+        ["The Shreds of Humanity"] = 20
+        ["The True Story of Brutal Abuse"] = 20
         ["The World Beyond"] = 25
+        ["Third Strike"] = 20 -- Also by Craneo
         ["This WAD Shouldn't Suck"] = 25
         ["Time to Man Up"] = 30
         ["Total Blackout"] = 20
+        ["Totally Worth Your Time"] = 25
         ["Turned Up to 110 Percent!"] = 20
+        ["TY for Supporting ObAddon!"] = 30
         ["Under Construction"] = 25
         ["Virtuous By Nature"] = 20
         ["Violation By Shotgun Barrel"] = 25
@@ -3639,390 +4184,57 @@ namelib.NAMES =
         ["The Next Chapter"] = 20
 
         -- production-related phrases
+        ["11/10 IGN"] = 20
         ["An ObligeFlix Original Series"] = 40
+        ["Classic Edition"] = 20
+        ["Day One Edition"] = 20
+        ["Deluxe Edition"] = 25
+        ["Game of the Year Edition"] = 20
+        ["Greatest Hits"] = 20 -- Craneo
+        ["No Microtransactions"] = 20
         ["Subscribe and Hit that Like Button"] = 40
         ["The Official Video Game Tie-in"] = 20
-        ["No Microtransactions"] = 20
         ["The Original Series"] = 20
-        ["Day One Edition"] = 20
-        ["Game of the Year Edition"] = 20
-        ["11/10 IGN"] = 20
+
+        -- Based on music, be it artists, song titles or album titles
+        ["Doomtanic Hellucinations"] = 20 -- Acid Witch - "Witchtanic Hellucinations" (song)
+        ["Hymns of Destruction"] = 20 -- The Adicts - "Songs of Praise" (album title)
+        ["Ashes of a Burning Earth"] = 25 -- Adversus Semita - "Ashes of a Burning Heaven" (song)
+        ["Doomx V"] = 30 -- Aeba - "Kodex V" (album title)
+        ["Demonic Rampage"] = 20 -- Afrobomination - "Galatic Rampage" (song)
+        ["Hell in Motion"] = 20 --  Against Nature - "All in Motion" (song)
+        ["Show Oneself the STARTAN"] = 15 -- Against Nature - "Show Myself the Door" (song)
+        ["The Divinity of Cyberdemons"] = 20 -- Ahab - The Divinity of Oceans (album title)
+        ["Enraptured by Death"] = 25 -- Akercocke - "Enraptured by Evil" (song)
+        ["Ceremony of Nine Icons"] = 20 -- Akercocke - "The Ceremony of Nine Angels" (song)
+        ["Demon's Lyric"] = 30 -- Akira Yamaoka - "Devil's Lyric" (Silent Hill Soundtrack)
+        ["Blackness that Lurks in our Heart"] = 25 -- Akira Yamaoka - "The Darkness that Lurks in our Mind" (Silent Hill Soundtrack)
+        ["Fear of the Abyss"] = 20 -- Akira Yamaoka - "Fear of the Dark" (Silent Hill Soundtrack)
+        ["Death by the Shotgun"] = 20 -- Alestorm - "Death before the Mast" (song)
+        ["No Secrets Known"] = 20 -- Alice in Chains - All Secrets Known (song)
+        ["Earth Gives Way to Hell"] = 25 -- Alice in Chains - Black Gives Way to Blue (album title)
+        ["Angry Demons"] = 20 -- Alice in Chains - Angry Chair (song)
+        ["Consciousness Beyond Peril"] = 25 -- Alienation Cold - "Dream of an Obscured Consciousness" (song)
+        ["Pursuit of Marines"] = 20 -- Amon Amarth - "The Pursuit of Vikings" (song)
+        ["Ruined Armor and Bloody Rifles"] = 20 -- Amon Amarth - "Tattered Banners and Bloody Flags" (song)
+        ["Maximum Doom"] = 20 -- Annihilator - "Maximum Satan" (song)
+        ["Sometimes They Hear The Fist"] = 25 -- Atomizer - "Sometimes they hear the Bullet" (song)
+        ["Hateful by Nature"] = 20 -- Atrophy - Violent by Nature (album title)
+        -- I'll stop here, because I have over 18,000(!!) tracks to go through and this would make this
+        -- list VERY, VERY LONG. - Glaice
+
+        ["Highway to DOOM"] = 20 -- AC/DC - "Highway to Hell" (song)
+        ["Rhythm of Blood"] = 20 -- Unknown - "Rhythm of Red" (Tokyo Xtreme Racer Zero soundtrack)
+        ["Born too Deadly"] = 20 -- The Crystal Method - "Born too Slow" (song)
+        ["Angel and the Devil"] = 20 -- Wolfmother - "Joker and the Thief" (song)
+        ["No Angels Fly"] = 20 -- Sabaton - "No Bullets Fly" (song)
+
+        -- Nerdery stuff
+        ["d20 Edition"] = 15 -- Also Swedra
       }
     }
   }
   -- end of 'TITLE' and 'SUB_TITLE' themes
-
-
-  --------------------------------------------------
-
-  -- name of the mastermind behind all the evil
-  NAME_BOSS =
-  {
-    patterns =
-    {
-      ["The Spider Mastermind"] = 40
-
-      ["The Leader of Hell"] = 20
-      ["The Necromancer"] = 20
-      ["The Demon Queen"] = 20
-      ["The Cyber-Devil"] = 20
-      ["The Shadow Council"] = 20
-      ["The Witch-King"] = 20
-      ["The Alien Faction"] = 20
-      ["The Cruel One"] = 20
-
-      ["Satan"] = 10
-      ["Beelzebub"] = 10
-      ["Baal"] = 10
-      ["Moloch"] = 10
-    }
-
-    lexicon = {}
-  }
-
-
-  -- name of lesser bosses, minions of the mastermind
-  NAME_MINION =
-  {
-    patterns =
-    {
-      ["The Arch-Vile"] = 40
-      ["The Baron of Hell"] = 40
-
-      ["The Demon Prince"] = 20
-      ["The Gatekeeper"] = 20
-      ["The Guardian"] = 20
-      ["The Wicked Acolyte"] = 20
-      ["The Dark Archon"] = 20
-      ["The Evil Beast"] = 20
-      ["The Zombie Lord"] = 20
-
-      ["Doctor Kruger"] = 10
-
-      ["Hans Grosse"] = 5
-    }
-
-    lexicon = {}
-  }
-
-
-  -- name of a powerful thing needed to defeat the big boss
-  NAME_ARTIFACT =
-  {
-    patterns =
-    {
-      ["Khronos Device"] = 10
-      ["Soul-X Agitator"] = 10
-      ["Quantum Disrupter"] = 10
-      ["Gravitronic Amplifier"] = 10
-      ["Ectoplasmic Deflector"] = 10
-
-      ["Sphere of Invincibility"] = 10
-      ["Ring of Power"] = 10
-      ["Crystal Sceptre"] = 10
-      ["Diamond Skull"] = 10
-
-      ["Sword of the Infidel"] = 10
-      ["Staff of Ulysses"] = 10
-      ["Hand of Charon"] = 10
-    }
-
-    lexicon = {}
-  }
-
-
-  -- name of the player's friend, for capture/rescue sub-plots
-  NAME_FRIEND =
-  {
-    patterns =
-    {
-      ["Professor Braun"] = 20
-      ["Doctor Stine"] = 20
-      ["Major Halderman"] = 20
-      ["Sergeant Kelly"] = 20
-      ["Private Swann"] = 20
-
-      ["Christopher"] = 10
-      ["Michael"] = 10
-      ["Jonathon"] = 10
-
-      ["Arlene"] = 40
-      ["Cassandra"] = 20
-      ["Samantha"] = 20
-    }
-
-    lexicon = {}
-  }
-
-
-  -- location for the early action, neutral-ish places
-  NAME_PLACE1 =
-  {
-    patterns =
-    {
-      ["Phobos"] = 20
-      ["Demios Base"] = 20
-      ["UAC Complex"] = 20
-
-      ["Lunar Base"] = 20
-      ["Martian Complex"] = 20
-      ["Jupiter Station"] = 20
-      ["Orbital Station"] = 20
-
-      ["Terran Starport"] = 20
-      ["Egyptian Portal"] = 20
-      ["Mayan Temple"] = 20
-    }
-
-    lexicon = {}
-  }
-
-
-  -- locations for later battles or the finale, hell-ish places
-  NAME_PLACE2 =
-  {
-    patterns =
-    {
-      ["Shores of Hell"] = 20
-      ["Land of the Undead"] = 20
-      ["Crimson Underworld"] = 20
-      ["Dimension of Evil"] = 20
-      ["Kingdom of Fire"] = 20
-      ["Nether-Sphere"] = 20
-      ["Ghostly Realm"] = 20
-    }
-
-    lexicon = {}
-  }
-  -- end of all the 'NAME_XXX' themes
-
-
-  --------------------------------------------------
-
-  TEXT_FACE_MINION =
-  {
-    patterns =
-    {
-      ["Now you must find <minion>, who holds the key "..
-       "to this infernal mystery."
-      ] = 10
-    }
-
-    lexicon = {}
-  }
-
-  TEXT_DEFEAT_MINION =
-  {
-    patterns =
-    {
-      ["With one last blow you finish off <minion>, " ..
-       "its hideous body laying at your feet."
-      ] = 10
-    }
-
-    lexicon = {}
-  }
-
-
-  TEXT_FACE_BOSS =
-  {
-    patterns =
-    {
-      ["Ahead lies the dominion of <boss>, "..
-       "an evil place where even fools fear to tread. "..
-       "Daunted, yet determined, you emerge from the "..
-       "inter-dimensional portal and begin to explore "..
-       "this alien world...."
-      ] = 10
-    }
-
-    lexicon = {}
-  }
-
-  TEXT_DEFEAT_BOSS =
-  {
-    patterns =
-    {
-      ["Your skillful use of the <artifact> was glorious, " ..
-       "defeating <boss> once and for all time."
-       -- FIXME : more stuff...
-      ] = 10
-    }
-
-    lexicon = {}
-  }
-
-
-  TEXT_LEARN_ARTIFACT =
-  {
-    patterns =
-    {
-      ["You have learned of a powerful artifact, "..
-       "the <artifact>.  "..
-       "But is it real, or only a myth or legend? "..
-       "Somehow, you know you are going to find out."
-      ] = 10
-    }
-
-    lexicon = {}
-  }
-
-  TEXT_FOUND_ARTIFACT =
-  {
-    patterns =
-    {
-      ["The <artifact> is yours! "..
-       "But your jubilation soon turns into a grim "..
-       "realization of what this means: it shall be "..
-       "your fate to use it against the "..
-       "most evil entity in the universe."
-       -- to save the entire human race
-      ] = 10
-    }
-
-    lexicon = {}
-  }
-
-
-  TEXT_LEARN_FRIEND =
-  {
-    patterns =
-    {
-      ["You receive communication that your dear friend, "..
-       "<friend>, has been abducted by the army of <minion>!"
-      ] = 10
-    }
-
-    lexicon = {}
-  }
-
-  TEXT_RESCUE_FRIEND =
-  {
-    patterns =
-    {
-      ["In a nearby dungeon cell you discover your friend, "..
-       "<friend>, who is still alive!"..
-       "|Quickly you remove their shackles and free them. "..
-       "Almost too weak to talk, a barely audible \"Thank you\" "..
-       "is followed by some surprising information: "..
-       "the location of the <artifact>!" ..
-       "|Relieved that <friend> is now safe, you set forth to "..
-       "retreive the <artifact> from its secret location."
-      ] = 10
-    }
-
-    lexicon = {}
-  }
-
-  -- gosh, this will cause some tears
-  TEXT_LOSE_FRIEND =
-  {
-    patterns =
-    {
-      ["In the distance you recognize your friend "..
-       "<friend>, waiting for you. "..
-       "You hurry toward them, but all too soon your "..
-       "joy turns to repulsion as you discover they have "..
-       "been turned into a demon!"..
-       "|\"Noooo!\" you scream, "..
-       "and shudder as you realize what you must now do... "..
-       "|Your soul feels ripped apart, the only consolation "..
-       "is that <friend> can finally rest in piece. "..
-       "<boss> will pay for this!"
-      ] = 10
-    }
-
-    lexicon = {}
-  }
-
-
-  TEXT_SECRET =
-  {
-    patterns =
-    {
-      ["%c %f |%p |%m %e"] = 50
-
-      ["%s"] = 10
-    }
-
-    lexicon =
-    {
-      c =
-      {
-        ["Congratulations,"] = 50
-        ["Well done!"] = 50
-        ["Oh yes!"] = 50
-        ["Woohoo!"] = 50
-      }
-
-      f =
-      {
-        ["You found the secret level!"] = 50
-      }
-
-      p =
-      {
-        ["This place looks very weird..."] = 50
-      }
-
-      m =
-      {
-        ["The monsters will kill you!"] = 50
-      }
-
-      e =
-      {
-        ["So, better not stay too long..."] = 50
-      }
-
-      -- complete replacements
-      s =
-      {
-        ["Welcome . . . . . . |. . . . . to the Twilight Zone"] = 10
-      }
-    }
-  }
-
-
-  TEXT_SECRET2 =
-  {
-    patterns =
-    {
-      ["%c %f |%e"] = 50
-
-      ["%s"] = 10
-    }
-
-    lexicon =
-    {
-      c =
-      {
-        ["Congratulations!"] = 20
-        ["Very well done!"] = 50
-        ["Holy shit,"] = 50
-        ["Woah,"] = 50
-        ["This is incredible,"] = 40
-        ["This is almost unbelievable, because"] = 20
-      }
-
-      f =
-      {
-        ["You found the super secret level!"] = 50
-      }
-
-      e =
-      {
-        ["Are you ready for what is ahead?"] = 50
-      }
-
-      -- complete replacements
-      s =
-      {
-        ["Human! |You will be punished for entering our " ..
-         "secret chambers!"] = 10
-      }
-    }
-  }
   -- end of all the 'TEXT_XXX' themes
 }
 
@@ -4036,6 +4248,55 @@ namelib.IGNORE_WORDS =
   ["for"]=1, ["in"]=1, ["on"]=1, ["to"]=1,
 }
 
+
+
+namelib.COMMUNITY_MEMBERS =
+{
+  contributors =
+  {
+    "MsrSgtShooterPerson",
+    "Glaice",
+    "Frozsoul",
+    "Caligari87",
+    "Simon-v",
+    "Garrett",
+    "Beed28",
+    "EpicTyphlosion",
+    "Tapwave",
+  }
+
+  -- this is an arbitrary list of regulars at the Unofficial Oblige
+  -- Discord server. If you're a regular and you don't find your name
+  -- here, feel free to add it yourself! (or ask a contributor to do so!)
+  regulars =
+  {
+    "samiam", -- Mr. ObHack!
+    "crowbars82", -- Mr. Octothrop!
+    "Alden",
+    "BigC",
+    "BradManX",
+    "Craneo",
+    "Demios",
+    "DZ",
+    "Elkinda",
+    "HexaDoken",
+    "josh771",
+    "kinker31",
+    "Kinsie",
+    "MagPie",
+    "Roundabout Lout",
+    "Saint",
+    "sanser",
+    "Sharahfluff",
+    "Sharp",
+    "TiZ",
+    "TheDude1",
+    "The Nate",
+    "Thexare",
+    "TTBNC",
+    "Yandere Princess",
+  }
+}
 
 
 namelib.ALPHABET =
@@ -4692,7 +4953,6 @@ namelib.SYLLABLES =
 
 
 
--- MSSP-TODO
 -- noun generator, creates nouns from syllables
 -- currently two modes:
 -- "Exotic" - syllables come from country names
@@ -4740,12 +5000,22 @@ function namelib.generate_unique_noun(m)
 
   local i = 1
 
-  repeat
-    name = name .. make_placelike_syllable(mode)
-    i = i + 1
-  until i > syllable_count
+  if mode != "community_members" then
+    repeat
+      name = name .. make_placelike_syllable(mode)
+      i = i + 1
+    until i > syllable_count
+  end
 
   name = string.gsub(name,"^%l",string.upper)
+
+  if mode == "community_members" then
+    if rand.odds(80) then
+      name = rand.pick(namelib.COMMUNITY_MEMBERS.contributors)
+    else
+      name = rand.pick(namelib.COMMUNITY_MEMBERS.regulars)
+    end
+  end
 
   return name
 end
@@ -4775,6 +5045,7 @@ function namelib.fix_up(name)
 
   name = string.gsub(name, "NOUNGENANGLICAN", namelib.generate_unique_noun("anglican"))
   name = string.gsub(name, "NOUNGENEXOTIC", namelib.generate_unique_noun("exotic"))
+  name = string.gsub(name, "NOUNMEMBERS", namelib.generate_unique_noun("community_members"))
   return name
 end
 

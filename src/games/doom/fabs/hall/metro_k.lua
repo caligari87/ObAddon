@@ -24,7 +24,7 @@ PREFABS.Hallway_metro_locked_blue =
 {
   template = "Hallway_metro_locked_red"
   key      = "k_blue"
-  line_135 = 133
+  line_33 = 32
 
   tex_DOORRED = "DOORBLU"
 
@@ -35,7 +35,7 @@ PREFABS.Hallway_metro_locked_yellow =
 {
   template = "Hallway_metro_locked_red"
   key      = "k_yellow"
-  line_135 = 137
+  line_33 = 34
 
   tex_DOORRED = "DOORYEL"
 

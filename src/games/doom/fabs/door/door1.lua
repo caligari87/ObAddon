@@ -26,6 +26,16 @@ PREFABS.Door_plain2 =
 
 }
 
+PREFABS.Door_small =
+{
+  template   = "Door_plain2"
+
+  map = "MAP01"
+
+  prob = 1000
+
+}
+
 PREFABS.Door_plain3 =
 {
   template   = "Door_plain2"

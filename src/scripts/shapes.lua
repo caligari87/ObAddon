@@ -3543,6 +3543,27 @@ DECORATE_CAGE_ON_LIQUID_CANAL_SIDE =
   }
 }
 
+GROW_CAGE_ROUND_ARENA =
+{
+  prob = 10
+
+  structure =
+  {
+    ".....","11111"
+    ".....","1/C%1"
+    ".....","1CCC1"
+    ".....","1%C/1"
+    ".....","11111"
+    "x111x","x111x"
+  }
+
+  diagonals =
+  {
+    "1C","C1"
+    "1C","C1"
+  }
+}
+
 -- MSSP's elevated catwalks. [CATWALK]
 
 GROW_CATWALK_BIFUNNEL_SINK =
@@ -4972,8 +4993,9 @@ GROW_WIDE_SPACE_CATWALK_EXTRUDE =
 
   structure =
   {
+    "x11x","x11x"
+    "x11x","x11x"
     "1111","1111"
-    "1111","1221"
     "1111","1221"
     "2222","2222"
   }
@@ -4989,8 +5011,9 @@ GROW_WIDE_SPACE_CATWALK_EXTRUDE_3X =
 
   structure =
   {
+    "xx1xx","xx1xx"
+    "xx1xx","xx1xx"
     "11111","11111"
-    "11111","12221"
     "11111","12221"
     "22222","22222"
   }
@@ -5006,8 +5029,9 @@ GROW_WIDE_SPACE_CATWALK_CURVE =
 
   structure =
   {
+    "xx11xx","xx11xx"
+    "xx11xx","xx11xx"
     "111111","111111"
-    "111111","122221"
     "111111","122221"
     "122xxx","122xxx"
   }
@@ -5021,8 +5045,9 @@ GROW_WIDE_SPACE_CATWALK_STRAIGHT_3X =
 
   structure =
   {
+    "xx1xx","xx1xx"
+    "xx1xx","xx1xx"
     "11111","11111"
-    "11111","12221"
     "11111","12221"
     "1222x","1222x"
   }
@@ -5036,8 +5061,9 @@ GROW_WIDE_SPACE_CATWALK_STRAIGHT_4X =
 
   structure =
   {
+    "xx11xx","xx11xx"
+    "xx11xx","xx11xx"
     "111111","111111"
-    "111111","122221"
     "111111","122221"
     "12222x","12222x"
   }

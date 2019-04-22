@@ -613,6 +613,7 @@ ULTDOOM.THEMES =
       gtd_wall_octagon_insets = 18
       gtd_wall_grated_machines = 15
       gtd_wall_quakish_insets = 20
+      gtd_ribbed_lights = 15
     }
 
     cage_mats =
@@ -714,30 +715,6 @@ ULTDOOM.THEMES =
       baron   = 0.35
       skull   = 0.2
     }
-
-  -- prefab currently does not actually
-  -- have surfaces to recieve a custom skin
-  tech_metro_Hallway =
-  {
-    env   = "hallway"
-    group = "metro"
-    prob  = 25
-
-    walls =
-    {
-      BROWN1   = 50
-    }
-
-    floors =
-    {
-      FLAT4  = 50
-    }
-
-    ceilings =
-    {
-      CEIL3_5 = 50
-    }
-  }
 
   ceil_light_prob = 70
 
@@ -863,6 +840,7 @@ ULTDOOM.THEMES =
       gtd_wall_octagon_insets = 25
       gtd_wall_grated_machines = 20
       gtd_wall_quakish_insets = 25
+      gtd_ribbed_lights = 15
     }
 
   ceil_light_prob = 65
@@ -888,30 +866,6 @@ ULTDOOM.THEMES =
       barrels = { few=10, some=55, heaps=30 }
       ambushes = { few=20, some=95, heaps=30 }
     }
-
-  -- prefab currently does not actually
-  -- have surfaces to recieve a custom skin
-  deimos_metro_Hallway =
-  {
-    env   = "hallway"
-    group = "metro"
-    prob  = 25
-
-    walls =
-    {
-      BROWN1   = 50
-    }
-
-    floors =
-    {
-      FLAT4  = 50
-    }
-
-    ceilings =
-    {
-      CEIL3_5 = 50
-    }
-  }
 
     scenic_fence =
     {
@@ -1068,6 +1022,7 @@ ULTDOOM.THEMES =
       gtd_furnace_face = 20
       gtd_wall_marbface = 40
       gtd_wall_quakish_insets = 40
+      gtd_ribbed_lights = 5
     }
 
     window_groups =
@@ -1173,30 +1128,6 @@ ULTDOOM.THEMES =
       Cyberdemon = 1.25
       Mastermind = 1.5
     }
-
-  -- prefab currently does not actually
-  -- have surfaces to recieve a custom skin
-  hell_metro_Hallway =
-  {
-    env   = "hallway"
-    group = "metro"
-    prob  = 12
-
-    walls =
-    {
-      BROWN1   = 50
-    }
-
-    floors =
-    {
-      FLAT4  = 50
-    }
-
-    ceilings =
-    {
-      CEIL3_5 = 50
-    }
-  }
 
     scenic_fence =
     {
@@ -1351,6 +1282,7 @@ ULTDOOM.THEMES =
       gtd_furnace_face = 20
       gtd_wall_marbface = 30
       gtd_wall_quakish_insets = 25
+      gtd_ribbed_lights = 8
     }
 
     passable_decor =
@@ -1430,29 +1362,7 @@ ULTDOOM.THEMES =
       barrels = { none=45, few=15, some=5, heaps=4 }
     }
 
-  -- prefab currently does not actually
-  -- have surfaces to recieve a custom skin
-  flesh_metro_Hallway =
-  {
-    env   = "hallway"
-    group = "metro"
-    prob  = 20
-
-    walls =
-    {
-      BROWN1   = 50
-    }
-
-    floors =
-    {
-      FLAT4  = 50
-    }
-
-    ceilings =
-    {
-      CEIL3_5 = 50
-    }
-  }
+    archy_arches = true
 
     ceil_light_prob = 45
 
@@ -1645,21 +1555,6 @@ ULTDOOM.ROOM_THEMES =
       CEIL4_1 = 15
       CEIL4_2 = 15
     }
-
-    wall_groups =
-    {
-      PLAIN = 90
-      gtd_computers = 35
-      mid_band = 12
-      mid_band2 = 10
-      lite1 = 5
-      lite2 = 15
-      gtd_wall_server_room = 20
-      gtd_wall_tech_windows_topcorner = 15
-      torches6 = 5
-      torches7 = 8
-      torches11 = 5
-    }
   }
 
   tech_Shiny =
@@ -1719,6 +1614,65 @@ ULTDOOM.ROOM_THEMES =
       FLAT4  = 20
       FLAT23 = 10
       FLAT1 = 10
+    }
+  }
+
+
+  tech_metro_Hallway =
+  {
+    env   = "hallway"
+    group = "metro"
+    prob  = 25
+
+    walls =
+    {
+      BROWN1 = 50
+      SHAWN2 = 50
+      STARTAN3 = 50
+      STARG3 = 50
+      BROWNGRN = 50
+      BROWN96 = 50
+      GSTONE1 = 50
+      SP_HOT = 50
+    }
+
+    floors =
+    {
+      FLAT1 = 50
+      FLAT4 = 50
+      FLAT19 = 50
+      FLAT20 = 50
+      FLAT3 = 50
+      FLAT5 = 50
+      FLOOR0_1 = 50
+      FLOOR0_2 = 50
+      FLOOR0_3 = 50
+      FLOOR1_1 = 50
+      FLOOR1_6 = 50
+      FLOOR3_3 = 50
+      FLOOR4_1 = 50
+      FLOOR4_5 = 50
+      FLOOR4_6 = 50
+      FLOOR4_8 = 50
+      FLOOR5_3 = 50
+    }
+
+    ceilings =
+    {
+      CEIL3_2 = 50
+      CEIL3_3 = 50
+      CEIL3_5 = 50
+      FLAT1 = 50
+      FLAT18 = 50
+      FLAT19 = 50
+      FLAT20 = 50
+      FLAT3 = 50
+      FLOOR3_3 = 50
+      FLOOR4_1 = 50
+      FLOOR4_6 = 50
+      FLOOR4_8 = 50
+      FLOOR5_3 = 50
+      FLOOR5_4 = 50
     }
   }
 
@@ -2157,27 +2111,63 @@ ULTDOOM.ROOM_THEMES =
     }
   }
 
-  -- prefab currently does not actually
-  -- have surfaces to recieve a custom skin
   deimos_metro_Hallway =
   {
     env   = "hallway"
     group = "metro"
-    prob  = 15
+    prob  = 25
 
     walls =
     {
-      BROWN1   = 50
+      BROWN1 = 50
+      SHAWN2 = 50
+      STARTAN3 = 50
+      STARG3 = 50
+      BROWNGRN = 50
+      BROWN96 = 50
+      ICKWALL3 = 50
+      ICKWALL1 = 50
+      BROVINE = 50
+      BROVINE2 = 50
     }
 
     floors =
     {
-      FLAT4  = 50
+      FLAT1 = 50
+      FLAT4 = 50
+      FLAT19 = 50
+      FLAT20 = 50
+      FLAT3 = 50
+      FLAT5 = 50
+      FLOOR0_1 = 50
+      FLOOR0_2 = 50
+      FLOOR0_3 = 50
+      FLOOR1_1 = 50
+      FLOOR1_6 = 50
+      FLOOR3_3 = 50
+      FLOOR4_1 = 50
+      FLOOR4_5 = 50
+      FLOOR4_6 = 50
+      FLOOR4_8 = 50
+      FLOOR5_3 = 50
     }
 
     ceilings =
     {
+      CEIL3_2 = 50
+      CEIL3_3 = 50
       CEIL3_5 = 50
+      FLAT1 = 50
+      FLAT18 = 50
+      FLAT19 = 50
+      FLAT20 = 50
+      FLAT3 = 50
+      FLOOR3_3 = 50
+      FLOOR4_1 = 50
+      FLOOR4_6 = 50
+      FLOOR4_8 = 50
+      FLOOR5_3 = 50
+      FLOOR5_4 = 50
     }
   }
 
@@ -2499,26 +2489,59 @@ ULTDOOM.ROOM_THEMES =
     }
   }
 
-  -- prefab currently does not actually
-  -- have surfaces to recieve a custom skin
   hell_metro_Hallway =
   {
     env   = "hallway"
     group = "metro"
-    prob  = 15
+    prob  = 12
 
     walls =
     {
-      BROWN1   = 50
+      BROWN1 = 50
+      WOOD1 = 50
+      MARBLE1 = 50
+      FIREBLU1 = 50
+      ASHWALL = 50
+      METAL = 50
+      BROWNHUG = 50
     }
 
     floors =
     {
-      FLAT4  = 50
+      FLOOR7_1 = 50
+      FLOOR7_2 = 50
+      FLOOR5_4 = 50
+      MFLR8_1 = 50
+      MFLR8_2 = 50
+      MFLR8_3 = 50
+      MFLR8_4 = 50
+      FLAT5_1 = 50
+      FLAT5_2 = 50
+      FLAT1_1 = 50
+      FLAT1_2 = 50
+      DEM1_5 = 50
+      DEM1_6 = 50
     }
 
     ceilings =
     {
+      CEIL3_5 = 50
+      LAVA1 = 50
+      FLOOR6_1 = 50
+      FLOOR6_2 = 50
+      FLOOR7_1 = 50
+      FLOOR7_2 = 50
+      FLAT5_3 = 50
+      FLAT5_4 = 50
+      FLAT5_5 = 50
+      FLAT5_6 = 50
+      FLAT5_7 = 50
+      FLAT5_8 = 50
+      FLAT1_1 = 50
+      FLAT1_2 = 50
+      DEM1_5 = 50
+      DEM1_6 = 50
+      CEIL3_2 = 50
       CEIL3_5 = 50
     }
   }
@@ -2783,8 +2806,6 @@ ULTDOOM.ROOM_THEMES =
     }
   }
 
-  -- prefab currently does not actually
-  -- have surfaces to recieve a custom skin
   flesh_metro_Hallway =
   {
     env   = "hallway"
@@ -2793,17 +2814,27 @@ ULTDOOM.ROOM_THEMES =
 
     walls =
     {
-      BROWN1   = 50
+      BROWN1 = 50
+      WOOD1 = 50
+      WOOD3 = 50
+      WOOD5 = 50
+      WOODMET1 = 50
+      BIGDOOR5 = 50
     }
 
     floors =
     {
-      FLAT4  = 50
+      FLAT5_1 = 50
+      FLAT5_2 = 50
+      FLOOR7_1 = 50
     }
 
     ceilings =
     {
-      CEIL3_5 = 50
+      FLAT5_1 = 50
+      FLAT5_2 = 50
+      CEIL1_1 = 50
+      FLOOR7_1 = 50
     }
   }
 

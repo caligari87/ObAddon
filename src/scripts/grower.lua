@@ -902,7 +902,9 @@ function Grower_calc_rule_probs()
       not string.match(rule.name,"JOINER") and not string.match(rule.name,"EMERGENCY") and
       not string.match(rule.name,"STREET") and not string.match(rule.name,"SIDEWALK") then
         rule.use_prob = rule.use_prob * 1000000
-        print(rule.name .. " is now ABSURDIFIED! WOOO!!!\n")
+        if PARAM.print_shape_steps != "no" then
+          print(rule.name .. " is now ABSURDIFIED! WOOO!!!\n")
+        end
         shape_is_absurd = false
       end
     end
@@ -1230,7 +1232,9 @@ function Grower_add_room(parent_R, info, trunk)
 
   local R = ROOM_CLASS.new()
 
+  if PARAM.print_shape_steps != "no" then
 gui.printf("new room %s : env = %s : parent = %s\n", R.name, tostring(info.env), tostring(parent_R and parent_R.name))
+  end
 
   if info.force_start then
     R.is_start = true
@@ -1350,7 +1354,9 @@ function Grower_kill_room(R)
 
   local hallway_neighbor
 
-  gui.printf("Killing " .. R.id .. "\n")
+  if PARAM.print_shape_steps != "no" then
+    gui.printf("Killing " .. R.id .. "\n")
+  end
 
   local function turn_joiner_into_closet(R2, chunk)
     chunk.kind = "closet"
@@ -3003,7 +3009,9 @@ end
     -- successful, pick it and apply the substitution.
     --
 
-    --gui.printf("  Trying rule '%s'...\n", cur_rule.name)
+    if PARAM.print_shape_steps == "showmore" then
+      gui.printf("  Trying rule '%s'...\n", cur_rule.name)
+    end
 
     best = { score=-1, areas={} }
 
@@ -3157,7 +3165,9 @@ end
 
     -- SUCCESS --
 
-    gui.printf("APPLIED rule: %s\n", cur_rule.name)
+    if PARAM.print_shape_steps != "no" then
+      gui.printf("APPLIED rule: %s\n", cur_rule.name)
+    end
 
     if PARAM.live_minimap == "step" then
       Seed_draw_minimap()
@@ -3174,7 +3184,9 @@ end
 
   ---| Grower_grammatical_pass |---
 
-  gui.printf("Growing %s with [%s x %d].....\n", R.name, pass, apply_num)
+  if PARAM.print_shape_steps != "no" then
+    gui.printf("Growing %s with [%s x %d].....\n", R.name, pass, apply_num)
+  end
 
   -- we should have a known bbox (unless creating a room)
   if not is_create then
@@ -4314,4 +4326,3 @@ function Grower_create_rooms()
     end
     end
 end
-

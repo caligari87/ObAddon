@@ -164,7 +164,12 @@ function Level_determine_map_size(LEV)
   if ob_size == "mixed" then
     local MIXED_PROBS =
     {
-      small=25, regular=125, large=40, extreme=3
+      small=30,
+      subregular=80,
+      regular=125,
+      superregular=60,
+      large=40,
+      extreme=3
     }
 
     ob_size = rand.key_by_probs(MIXED_PROBS)
@@ -188,7 +193,15 @@ function Level_determine_map_size(LEV)
 
     --Extreme was 68, the BSP build failures might be attributing to this
     --due to the extreme detail the maps have in them. --Glaice, March 3rd, 2019
-    local SIZES = { small=26, regular=36, large=48, extreme=58 }
+    local SIZES =
+    {
+      small=26,
+      subregular=32,
+      regular=36,
+      superregular=42,
+      large=48,
+      extreme=58
+    }
 
     W = SIZES[ob_size]
   end
@@ -225,22 +238,22 @@ end
 
 
 function Episode_pick_names()
+--== Name Generator Test ==-- MSSP
 
-  --== Name Generator Test ==-- MSSP
+-- If you want to add new names into the title generator
+-- and test a mass of outputs without having to generate
+-- entire WAD's just to see names, uncomment
+-- the code block below. You can replace the
+-- parameter in Naming_grab_one with any of the themes
+-- i.e. TITLE, SUB_TITLE, EPISODE, TECH, URBAN, GOTHIC
+-- and so on...
 
-  -- If you want to add new names into the title generator
-  -- and test a mass of outputs without having to generate
-  -- entire WAD's just to see names, uncomment
-  -- the code block below. You can replace the
-  -- parameter in Naming_grab_one with any of the themes
-  -- i.e. TITLE, SUB_TITLE, EPISODE, TECH, URBAN, GOTHIC
-  -- and so on...
-
-  --[[
+--
+function grab_many_and_test(num,category)
   local i = 1
-  gui.printf("\nGenerator Test:\n")
-  while i <= 128 do
-    episode_test_name = Naming_grab_one("EPISODE")
+  gui.printf("\nGenerator Test: (Category: " .. category .. ")\n\n")
+  while i <= num do
+    episode_test_name = Naming_grab_one(category)
     gui.printf(episode_test_name .. " | ")
     if i%4 == 0 then
       gui.printf("\n")
@@ -248,7 +261,18 @@ function Episode_pick_names()
     i = i + 1
   end
   gui.printf("\n")
-  ]]
+end
+
+if PARAM.name_gen_test == "32l" then
+  grab_many_and_test(32,"TECH")
+  grab_many_and_test(32,"URBAN")
+  grab_many_and_test(32,"GOTHIC")
+  grab_many_and_test(32,"BOSS")
+elseif PARAM.name_gen_test == "32t" then
+  grab_many_and_test(32,"TITLE")
+  grab_many_and_test(32,"SUB_TITLE")
+  grab_many_and_test(32,"EPISODE")
+end
 
   -- game name (for title screen)
   if not GAME.title then
@@ -2408,7 +2432,7 @@ function Level_make_level(LEV)
     LEV.description = Naming_grab_one("BOSS")
   end
 
-  gui.printf("\nLevel title: %s\n", LEV.description)
+  gui.printf("Level " .. LEV.id .. " title: " .. LEV.description)
 
   -- copy level info, so that all new information added into the LEVEL
   -- object by the generator can be garbage collected once this level is

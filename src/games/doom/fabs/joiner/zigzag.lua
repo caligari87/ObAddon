@@ -7,7 +7,7 @@ PREFABS.Joiner_zigzag1 =
   file   = "joiner/zigzag.wad"
   map    = "MAP01"
 
-  prob   = 2500
+  prob   = 1750
   style  = "steepness"
 
   env      = "building"
@@ -29,3 +29,11 @@ PREFABS.Joiner_zigzag1 =
   can_flip = true
 }
 
+PREFABS.Joiner_zigzag2 =
+{
+  template = "Joiner_zigzag1"
+  map      = "MAP02"
+
+  seed_w = 3
+  seed_h = 2
+}

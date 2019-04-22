@@ -16,6 +16,8 @@ PREFABS.Wall_glaice_glass_huge =
   bound_z2 = 128
 
   z_fit  = "frame"
+
+  tex_GLASS1 = "GLASS9"
 }
 
 PREFABS.Wall_glaice_glass_huge_diag =
@@ -34,4 +36,72 @@ PREFABS.Wall_glaice_glass_huge_diag =
   bound_z2 = 128
 
   z_fit  = "frame"
+
+  tex_GLASS1 = "GLASS9"
+}
+
+PREFABS.Wall_glaice_glass_huge_red =
+{
+  template = "Wall_glaice_glass_huge"
+
+  prob     = 15
+
+  group    = "gtd_tall_glass_epic_red"
+
+  tex_GLASS1 = "GLASS1" -- override
+}
+
+PREFABS.Wall_glaice_glass_huge_red_diag =
+{
+  template = "Wall_glaice_glass_huge_diag"
+
+  prob     = 15
+
+  group    = "gtd_tall_glass_epic_red"
+
+  tex_GLASS1 = "GLASS1" -- override
+}
+
+PREFABS.Wall_glaice_glass_huge_orange =
+{
+  template = "Wall_glaice_glass_huge"
+
+  prob     = 15
+
+  group    = "gtd_tall_glass_epic_orange"
+
+  tex_GLASS1 = "GLASS6"
+}
+
+PREFABS.Wall_glaice_glass_huge_orange_diag =
+{
+  template = "Wall_glaice_glass_huge_diag"
+
+  prob     = 15
+
+  group    = "gtd_tall_glass_epic_orange"
+
+  tex_GLASS1 = "GLASS6"
+}
+
+PREFABS.Wall_glaice_glass_huge_blue =
+{
+  template = "Wall_glaice_glass_huge"
+
+  prob     = 15
+
+  group    = "gtd_tall_glass_epic_blue"
+
+  tex_GLASS1 = "GLASS2"
+}
+
+PREFABS.Wall_glaice_glass_huge_blue_diag =
+{
+  template = "Wall_glaice_glass_huge_diag"
+
+  prob     = 15
+
+  group    = "gtd_tall_glass_epic_blue"
+
+  tex_GLASS1 = "GLASS2"
 }

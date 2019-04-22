@@ -5,7 +5,7 @@ PREFABS.Decor_tech_point_HVAC_1 =
 
   where  = "point"
 
-  prob   = 5000
+  prob   = 1500
   theme  = "!hell"
 
   size   = 96

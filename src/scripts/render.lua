@@ -2691,7 +2691,7 @@ end
 
 function Render_find_street_markings()
 
-  -- Render street markings -- MSSP-TODO
+  -- Render street markings
   --
   -- This street marking algorithm attempts to scan
   -- seeds that are inside a street area.
@@ -3753,4 +3753,3 @@ function Render_cells(area)
 
   render_all_cells(2)
 end
-

@@ -24,3 +24,14 @@ PREFABS.Pic_glaice_candles =
   x_fit = { 56,72 }
   y_fit = "top"
 }
+
+-- Spooky hellish candles for the Deimos base, not seen as much
+PREFABS.Pic_glaice_candles_deimos =
+{
+  template   = "Pic_glaice_candles"
+
+  env  = "building"
+  game = "doom"
+  prob   = 8
+  theme = "deimos"
+}

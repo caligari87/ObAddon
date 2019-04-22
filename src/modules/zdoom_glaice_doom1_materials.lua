@@ -24,7 +24,6 @@ GLAICE_DOOM1_LIQUIDS =
   hotlava  = { mat="XLAV1", special=5, light_add=56, damage=10 }
   magma  = { mat="MAGMA1",  special=5, light_add=56, damage=10 }
   qlava  = { mat="QLAVA1", special=5, light_add=56, damage=10 }
-  pwater   = { mat="XWATER1", special=7, light_add=16, damage=5 }
   sludge = { mat="OSLIME01", special=0 }
   gwater   = { mat="SLUDGE01", special=0 }
   ice   = { mat="SNOW9", special=0 } --Looks best when outdoor environment is snow only
@@ -154,6 +153,9 @@ GLAICE_DOOM1_MATERIALS = {
   CITY05 = { t="CITY05", f="FLAT1" } -- Gray bricks and black windows
   CITY06 = { t="CITY06", f="FLOOR0_1" } -- BROWN1 style and black windows
   CITY07 = { t="CITY07", f="FLAT1" } -- Industrial looking
+  CITY08 = { t="CITY08", f="FLAT1" } -- Gray bricks with stone arch window
+  CITY09 = { t="CITY09", f="FLAT1" } -- Small gray bricks with stone arch window
+  CITY10 = { t="CITY10", f="FLOOR7_1" } -- Small brown bricks with stone arch window
 
   URBAN1 = { t="URBAN1", f="RROCK10" }
   URBAN2 = { t="URBAN2", f="FLAT1" }
@@ -383,6 +385,7 @@ GLAICE_DOOM1_MATERIALS = {
   MARBFAC5 = { t="MARBFAC5", f="FLOOR7_2" } --Plutonia 2
   MARBFAC6 = { t="MARBFAC6", f="FLOOR7_2" }
   MARBFAC7 = { t="MARBFAC7", f="FLOOR7_2" }
+  MARBFACF = { t="MARBFACF", f="FLOOR7_2" }
   MARBLE = { t="MARBLE", f="FLOOR7_2" }
   MARBLE4 = { t="MARBLE4", f="FLOOR7_2" }
   MARBLE5 = { t="MARBLE5", f="FLOOR7_2" }
@@ -595,6 +598,8 @@ GLAICE_DOOM1_MATERIALS = {
   SPDUDE6 = { t="SPDUDE6", f="FLOOR7_2" } --SP_DUDE6
   SPDUDE7 = { t="SPDUDE7", f="FLOOR5_4" } --SP_DUDE7
   SPDUDE8 = { t="SPDUDE8", f="FLOOR5_4" } --SP_DUDE8
+  SP_HOT2 = { t="SP_HOT2", f="BMARB3" }
+  SP_HOT3 = { t="SP_HOT3", f="RMARB3" }
   SPINE01 = { t="SPINE01", f="SFLR6_4" }
 
   --Snow and Ice
@@ -612,6 +617,7 @@ GLAICE_DOOM1_MATERIALS = {
   SNOW12 = { t="SNOW12", f="SNOW6" }
   SNOW13 = { t="SNOW13", f="SNOW2" } -- 256x256, beautiful ice
   SNOW14 = { t="SNOW14", f="SNOW2" } -- 256x256
+  SNOW15 = { t="SNOW15", f="SNOW1" }
 
   SNOWBOX1 = { t="SNOWBOX1", f="SNOW6" }
   SNOWBOX2 = { t="SNOWBOX2", f="SNOW1" }
@@ -643,7 +649,7 @@ GLAICE_DOOM1_MATERIALS = {
 
   -- Auxillary
   COLLITE1 = { t="COLLITE1", f="RROCK20" } --Green version of REDWALL1
-  COLLITE2 = { t="COLLITE2", f="RROCK01" } --Orange version of REDWALL1
+  COLLITE2 = { t="COLLITE2", f="ORANFLOR" } --Orange version of REDWALL1
   COLLITE3 = { t="COLLITE3", f="CEIL4_2" } --Blue version of REDWALL1
   LITE2 = { t="LITE2", f="FLOOR0_1" } -- BROWN1 variant w/ lights. From Doom1
   LITE4 = { t="LITE4", f="FLAT19" } -- LITE5 and bigger light on bottom. From Doom1
@@ -658,6 +664,7 @@ GLAICE_DOOM1_MATERIALS = {
   WARNSTEP = { t="WARNSTEP", f="WARN1", sane=1 }
 
   -- Wood / Panel / Urban
+  GUNRACK = { t="GUNRACK", f="RROCK09" } -- Weapons rack by OSJ Clatchford, ZDoom custom texture thread, page 80
   PANBOOK2 = { t="PANBOOK2", f="RROCK09" } -- 128x128
   PANBOOK3 = { t="PANBOOK3", f="RROCK09" } -- 128x128
   PANBOOK4 = { t="PANBOOK4", f="RROCK09" } -- 64x128
@@ -676,6 +683,7 @@ GLAICE_DOOM1_MATERIALS = {
   WOOD15 = { t="WOOD15", f="FLAT5_2" }
   WOOD16 = { t="WOOD16", f="FLAT5_2" }
   WOOD17 = { t="WOOD17", f="FLAT5_2" }
+  WOOD18 = { t="WOOD18", f="FLAT5_2" }
   WDMET01 = { t="WDMET01", f="CEIL5_2" } --WOODMET1
   WDMET02 = { t="WDMET02", f="CEIL5_2" } --WOODMET2
   WDMET03 = { t="WDMET03", f="CEIL5_2" }
@@ -695,7 +703,6 @@ GLAICE_DOOM1_MATERIALS = {
   -- Animated liquid walls
   GRYFALL1   = { t="GRYFALL1", f="SLUDGE01", sane=1 }
   MFALL1     = { t="MFALL1", f="MAGMA1", sane=1 }
-  PFALL1     = { t="PFALL1", f="XWATER1", sane=1 }
   PURFAL1     = { t="PURFAL1", f="PURW1", sane=1 }
   SLMFALL1   = { t="SLMFALL1", f="SLIME01", sane=1 }
   OFALL1     = { t="OFALL1", f="OSLIME01", sane=1 }
@@ -784,6 +791,7 @@ GLAICE_DOOM1_MATERIALS = {
   CRACKLE4 = { t="CRAK02", f="RROCK02" }
   FIREBLU1 = { t="FIREBLU1", f="FIRELAF1" }
   FIREBLU2 = { t="FIREBLU2", f="FIRELAF2" }
+  FIRELAV2 = { t="FIRELAV2", f="FLOOR6_1" }
   FIREWALA = { t="FIREWALA", f="FLOOR6_1" }
   MARBFAC4 = { t="MBGRY2", f="DEM1_5" }
   MARBGRAY = { t="MBGRY",  f="FLOOR7_2" }
@@ -837,6 +845,18 @@ GLAICE_DOOM1_MATERIALS = {
   ZIMMER2  = { t="ZIM2", f="RROCK20" }
   ZIMMER3  = { t="ZIM3", f="FLAT10" }
   ZIMMER4  = { t="ZIM4", f="FLAT10" }
+  ZZWOLF1  = { t="STONE", f="FLAT5_4" }
+  ZZWOLF2  = { t="STONE", f="FLAT5_4" }
+  ZZWOLF3  = { t="MARBFACE", f="FLOOR7_2" }
+  ZZWOLF4  = { t="MARBFAC3", f="FLOOR7_2" }
+  ZZWOLF5  = { t="WOOD1", f="FLAT5_2" }
+  ZZWOLF6  = { t="WOOD4", f="FLAT5_1" }
+  ZZWOLF7  = { t="MARBFACE", f="FLOOR7_2" }
+  ZZWOLF9  = { t="STONE3", f="FLAT1" }
+  ZZWOLF10  = { t="SHAWN2", f="FLAT23" }
+  ZZWOLF11  = { t="ROCKRED1", f="FLOOR6_1" }
+  ZZWOLF12  = { t="MARBFAC2", f="FLOOR7_2" }
+  ZZWOLF13  = { t="TEKWALL4", f="CEIL5_1" }
 
   -- Replacement rails
   MIDBARS1 = { t="FENCE1", rail_h=128 }
@@ -1035,6 +1055,7 @@ GLAICE_DOOM1_MATERIALS = {
   CEIL4_4 = { f="CEIL4_4", t="COMPBLUE" }
   GRENFLOR = { f="GRENFLOR",  t="COMPGREN" }
   GRNLITE2 = { f="GRNLITE2", t="TEKGRN01" }
+  ORANFLOR = { f="ORANFLOR", t="COLLITE2" }
   STARBR2F = { t="STARBR2", f="STARBR2F" } -- Unused
   STARG1F = { t="STARG1", f="STARG1F" } -- Unused
   STARGR1F = { t="STARG1", f="STARG1F" } -- Unused
@@ -1121,6 +1142,8 @@ GLAICE_DOOM1_MATERIALS = {
   -- New animated floors --
   -------------------------
 
+  FAN1     = { f="FAN1",   t="METAL"    } -- Ceiling fan
+
   FIRELAF1 = { t="FIREBLU1",  f="FIRELAF1" }
   FIRELAF2 = { t="FIREBLU2",  f="FIRELAF2" }
 
@@ -1131,7 +1154,6 @@ GLAICE_DOOM1_MATERIALS = {
   -- New liquids --
 
   SLUDGE01  = { t="GRYFALL1", f="SLUDGE01", sane=1 }
-  XWATER1   = { t="PFALL1", f="XWATER1", sane=1 }
   MAGMA1   = { t="MFALL1", f="MAGMA1", sane=1 }
   SNOW9 = { t="ICEFALL",  f="SNOW9", sane=1 } --Ice
   OSLIME01  = { t="OFALL1", f="OSLIME01", sane=1 }
