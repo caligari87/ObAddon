@@ -5,7 +5,7 @@ PREFABS.Decor_glaice_basic_computer1 =
 
   uses_epic_textures = true
 
-  prob   = 2500
+  prob   = 3500
   theme  = "!hell"
   env    = "!cave"
 
