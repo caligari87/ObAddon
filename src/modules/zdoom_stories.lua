@@ -1268,6 +1268,9 @@ ZDOOM_STORIES.MCGUFFINS =
     ["a brass bauble"]=5,
     ["a vial of ectoplasm"]=5,
     ["the Mark of Kain"]=5,
+    ["a tarnished, blood stained copy of the Bible"]=5,
+    ["the Necronomicon"]=5,
+    ["a sinister looking ring"]=5,
   }
   tech =
   {
@@ -1330,6 +1333,11 @@ ZDOOM_STORIES.QUIT_MESSAGES =
   [[That's too bad, perhaps _RAND_DEMON the _EVULZ should make you their bitch for considering quitting?]],
   [[_RAND_CONTRIBUTOR is disappointed in you. Hit N now or face retribution.]],
   [[He who is not bold enough to be stared at from across the abyss is not bold enough to stare into it himself.]], -- Silent Hill 2
+  [[Is that a _MCGUFFIN_TECH in your possession? I'm pretty sure that's for Doomguy.. ]],
+  [[That _MCGUFFIN_HELL isn't going to do you any good. It's destined for Doomguy if he finds it.]],
+  [[Maybe you should be dumped off in _GOTHIC_LEVEL, see how you fare.]],
+  [[In the end, there is only death, chaos and more death. And cookies.]],
+  [[Remember, a good demon is a dead one. Make that happen!]],
 
   -- hardcore philosophy
   [[Are you quitting because you realized no matter how much hellspawn you mow down, Oblige will just give you more?]],
