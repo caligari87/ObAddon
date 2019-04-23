@@ -7,7 +7,7 @@ PREFABS.Decor_glaice_basic_computer1 =
 
   prob   = 3500
   theme  = "!hell"
-  env    = "!cave"
+  env    = "building" --!cave
 
   where  = "point"
   size   = 96
