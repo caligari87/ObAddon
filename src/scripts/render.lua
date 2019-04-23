@@ -2639,6 +2639,8 @@ function Render_all_areas()
   if LEVEL.has_streets and PARAM.road_markings == "yes" then
     Render_find_street_markings()
     Render_all_street_markings()
+    --Render_establish_street_lanes()
+    --Render_all_street_traffic()
   end
 
 end
@@ -2689,6 +2691,12 @@ end
 
 
 
+function Render_all_street_traffic()
+  -- MSSP-TODO
+end
+
+
+
 function Render_find_street_markings()
 
   -- Render street markings
@@ -2709,6 +2717,15 @@ function Render_find_street_markings()
   -- The idea being this algorithm should reliably retrieve
   -- all straight markable spots, but ignore curves, junctions
   -- and intersections for now.
+  --
+  -- table road_marking_spots
+  --
+  --   id : unique ID for debug
+  --   x : x-position
+  --   y : y-position
+  --   z : z-position
+  --   dir : direction
+  --   kind : "dead_end" or "segment"
 
   gui.printf("--== Render street markings ==--\n")
 
@@ -2897,6 +2914,64 @@ function Render_find_street_markings()
   gui.printf("Total road tile/seed count: " .. markable_seeds .. "\n")
   check_extents()
   gui.printf("Road mark spots found: " .. #LEVEL.road_marking_spots .. "\n")
+end
+
+
+
+function Render_establish_street_lanes()
+
+  -- MSSP-TODO
+
+  -- Render_establish_street_lanes
+  --
+  -- This next phase of the street building process
+  -- is directed towards properly grouping marked road spots
+  -- into linear street lanes. By having a general distance and positions
+  -- for lanes around the marking spots, it would be possible
+  -- to spawn things like vehicles and other fabs on those lanes.
+  --
+  -- 1. For each road spot that exists, check if there is an
+  --    adjacent road spot. If there is, these spots are
+  --    grouped to be part of a single lane.
+  -- 2. Repeat 1. until all spots have been sorted into lanes.
+  -- 3. Render objects into the lane positions in
+  --    Render_all_street_traffic()
+
+  local remaining_street_spots = LEVEL.road_marking_spots
+  LEVEL.road_lanes = {}
+
+  local lane_id = 1
+
+  local function check_for_adjecant_lanes(spot)
+    local x = spot.x
+    local y = spot.y
+
+    each XSPOT in remaining_street_spots do
+      if (XSPOT.x == spot.x + 128) and (XSPOT.y == spot.y) then
+        return true
+      elseif (XSPOT.x == spot.x - 128) and (XSPOT.y == spot.y) then
+        return true
+      elseif (XSPOT.x == spot.x) and (XSPOT.y == spot.y + 128) then
+        return true
+      elseif (XSPOT.x == spot.x) and (XSPOT.y == spot.y - 128) then
+        return true
+      end
+    end
+    return false
+  end
+
+  each SPOT in remaining_street_spots do
+    print(table.tostr(S))
+    if check_for_adjecant_lanes(SPOT) then
+      local road_lane_type =
+      {
+        id = lane_id
+        spot = SPOT
+      }
+      table.insert(road_lanes,road_lane_type)
+      lane_id = lane_id + 1
+    end
+  end
 end
 
 
