@@ -1354,6 +1354,7 @@ ZDOOM_STORIES.QUIT_MESSAGES =
   [["You shouldn't stop playing Doom." definitely said by Voltaire]],
   [[Are you taking the blue pill?]],
   [[The prophet Nostradamus predicted the dead would rise when there is no more room in hell. He didn't predict Oblige would be generating new rooms.]],
+  [[You probably noticed by now that every time quit messages show up, you're forced to agree with the statement when you quit by choosing 'yes''.]],
 
   -- helpful // technical
   [[ObAddon is always improving. Stop by our Discord server, talk to the denizens and report bugs to us there!]],

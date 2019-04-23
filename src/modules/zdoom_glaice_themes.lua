@@ -2279,6 +2279,7 @@ GLAICE_HELL_WALL_GROUPS =
   gtd_tall_glass_epic_red = 15
   gtd_tall_glass_epic_blue = 15
   glaice_glass_huge = 25
+  glaice_catacomb_wall_set = 40
 }
 
 
