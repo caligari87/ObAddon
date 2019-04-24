@@ -103,10 +103,13 @@ PREFABS.Joiner_gtd_universal_wavy_staircase_hell =
 
   theme = "hell"
 
-  entity_2028 =
+  thing_2028 =
   {
     blue_torch=50
     green_torch=50
     red_torch=50
+    blue_torch_sm=25
+    green_torch_sm=25
+    red_torch_sm=25
   }
 }
