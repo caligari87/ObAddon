@@ -67,6 +67,7 @@ DOOM.MONSTERS =
     replaces = "shooter"
     replace_prob = 20
     give = { {ammo="bullet",count=5} }
+    weap_prefs = { shotty=1.2, chain=1.3 }
     density = 1.5
     room_size = "any" --small
     disloyal = true
@@ -121,14 +122,14 @@ DOOM.MONSTERS =
     id = 3006
     r = 16
     h = 56
-    level = 2
+    level = 4 -- STOP SHOWING UP ON MAP01!!
     prob = 25
     health = 100
     damage = 1.7
     attack = "melee"
     density = 0.5
     float = true
-    weap_prefs = { launch=0.3, super=2.0, shotty=1.5, chain=1.3 }
+    weap_prefs = { super=2.0, shotty=1.5, chain=1.3 }
     room_size = "any" --small
     disloyal = true
     trap_factor = 0.35 --0.2
@@ -141,14 +142,14 @@ DOOM.MONSTERS =
     id = 3002
     r = 30
     h = 56
-    level = 1.75 --2
+    level = 3 --2 --1.75
     prob = 50
     health = 150
     damage = 0.4
     attack = "melee"
     density = 0.85
     weap_min_damage = 40
-    weap_prefs = { launch=0.3, super=3.0, shotty=1.5, chain=1.4 }
+    weap_prefs = { super=3.0, shotty=1.5, chain=1.4, plasma=1.1 }
     room_size = "any"
     infight_damage = 3.5
   }
@@ -158,7 +159,7 @@ DOOM.MONSTERS =
     id = 58
     r = 30
     h = 56
-    level = 1.75 --2.8
+    level = 3 --2.8 --1.75
     replaces = "demon"
     replace_prob = 35
     crazy_prob = 25
@@ -169,7 +170,7 @@ DOOM.MONSTERS =
     invis = true
     outdoor_factor = 3.0
     weap_min_damage = 40
-    weap_prefs = { launch=0.3, super=3.0, shotty=1.5, chain=1.4 }
+    weap_prefs = { super=3.0, shotty=1.5, chain=1.4, plasma=1.1 }
     species = "demon"
     room_size = "any"
     trap_factor = 0.3
@@ -181,7 +182,7 @@ DOOM.MONSTERS =
     id = 3005
     r = 31
     h = 56
-    level = 3.8 --3
+    level = 4 --3 --3.8
     prob = 30
     health = 400
     damage = 4.0
@@ -189,7 +190,7 @@ DOOM.MONSTERS =
     density = 0.6
     weap_min_damage = 40
     float = true
-    weap_prefs = { launch=2.0, super=3.0, chain=1.2, shotty=0.7 }
+    weap_prefs = { launch=2.0, super=3.0, chain=1.2, shotty=0.7, plasma=1.2 }
     replaces = "pain"
     replace_prob = 15
     room_size = "any" --large
@@ -272,7 +273,7 @@ DOOM.MONSTERS =
     id = 65
     r = 20
     h = 56
-    level = 2.6 --3
+    level = 2.3 --3 --2.6
     prob = 60
     health = 70
     damage = 5.5
