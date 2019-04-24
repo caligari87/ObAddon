@@ -714,7 +714,7 @@ ZDOOM_STORIES.STORIES =
       It's _MCGUFFIN_HELL! A relic of this sort is better off in your hands
       than those of hell's. You take it with you.]],
 
-      [[Ahead is an large setup of various portable machines and terminals.
+      [[Ahead is a large setup of various portable machines and terminals.
       Each display shows graphs and readings you cannot interpret. The machines
       are linked to a pedestal carrying _MCGUFFIN_HELL ! You swipe the item
       off its pedestal and the displays lose their readings. UAC experiments
