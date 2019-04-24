@@ -1362,6 +1362,9 @@ ZDOOM_STORIES.QUIT_MESSAGES =
   [[Maybe you should be dumped off in _GOTHIC_LEVEL, see how you fare.]],
   [[In the end, there is only death, chaos and more death. And cookies.]],
   [[Remember, a good demon is a dead one. Make that happen!]],
+  [[Heroes, press N. Wimps, press Y.]], -- Wolfenstein 3D
+  [[Go ahead, leave. Oblige will be back with even more demons...]],
+  [[_RAND_CONTRIBUTOR is not pleased.]],
 
   -- hardcore philosophy
   [[Are you quitting because you realized no matter how much hellspawn you mow down, Oblige will just give you more?]],
