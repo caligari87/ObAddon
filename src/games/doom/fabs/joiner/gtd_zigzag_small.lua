@@ -26,7 +26,7 @@ PREFABS.Joiner_gtd_zigzag_small =
   can_flip = true
 }
 
-PRREFABS.Joiner_gtd_zigzag_small_mirrored =
+PREFABS.Joiner_gtd_zigzag_small_mirrored =
 {
   template = "Joiner_gtd_zigzag_small"
 
