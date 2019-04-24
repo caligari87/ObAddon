@@ -42,7 +42,7 @@ PREFABS.Joiner_gtd_universal_staircase =
   y_fit = "stretch"
 
   delta_h  = 64
-  nearby_h = 128
+  nearby_h = 192
 
   can_flip = true
 }
@@ -67,4 +67,46 @@ PREFABS.Joiner_gtd_universal_funnel =
   y_fit = { 24,28 , 132,140 }
 
   can_flip = true
+}
+
+PREFABS.Joiner_gtd_universal_wavy_staircase =
+{
+  file  = "joiner/gtd_universal_joiners.wad"
+  map   = "MAP04"
+
+  theme = "!hell"
+  prob  = 750
+
+  where = "seeds"
+  shape = "I"
+
+  style = "steepness"
+
+  seed_w = 2
+  seed_h = 1
+
+  deep = 16
+  over = 16
+
+  delta_h  = 48
+  nearby_h = 176
+
+  x_fit = { 24,104 , 152,232 }
+  y_fit = "frame"
+
+  can_flip = true
+}
+
+PREFABS.Joiner_gtd_universal_wavy_staircase_hell =
+{
+  template = "Joiner_gtd_universal_wavy_staircase"
+
+  theme = "hell"
+
+  entity_2028 =
+  {
+    blue_torch=50
+    green_torch=50
+    red_torch=50
+  }
 }
