@@ -3,7 +3,7 @@ PREFABS.Joiner_gtd_zigzag_small =
   file   = "joiner/gtd_zigzag_small.wad"
   map    = "MAP01"
 
-  prob   = 750
+  prob   = 250
   style  = "steepness"
 
   env      = "!cave"
@@ -24,4 +24,11 @@ PREFABS.Joiner_gtd_zigzag_small =
   delta_h  = 64
   nearby_h = 192
   can_flip = true
+}
+
+PRREFABS.Joiner_gtd_zigzag_small_mirrored =
+{
+  template = "Joiner_gtd_zigzag_small"
+
+  map      = "MAP02"
 }

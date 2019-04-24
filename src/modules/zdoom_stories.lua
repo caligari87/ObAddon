@@ -139,7 +139,7 @@ ZDOOM_STORIES.STORIES =
 
       [[It was a trap! As the demon's corpse crashes onto the floor,
       a portal to hell turns out to be underneath all along! The platform
-      crumbles and throws you into its maw - 
+      crumbles and throws you into its maw -
       you find yourself in a new place...]],
     }
   }
@@ -384,13 +384,13 @@ ZDOOM_STORIES.STORIES =
 
       -- remember Daisy
       [[You walk between rows of sticks. Impaled limbs and heads
-      are set upon them. On one you see the head of a rabbit. 
+      are set upon them. On one you see the head of a rabbit.
       Immediately, your blood boils.
       You realize, however, the rabbit isn't Daisy. An ethereal voice
       whispers to you. "You are a mortal of impulse after all.
       Still hurt over your little big-ear darling?
-      Show me your fury, mortal. I am _RAND_DEMON the _EVULZ. 
-      I grant you the company of your little pet. In HELL." 
+      Show me your fury, mortal. I am _RAND_DEMON the _EVULZ.
+      I grant you the company of your little pet. In HELL."
       The voice fades, and you steel your fists.
       _RAND_DEMON will fall hard today.]],
 
@@ -400,7 +400,7 @@ ZDOOM_STORIES.STORIES =
       repeating chant of what sounds like a hundred infernal voices.
       "_RAND_DEMON! _RAND_DEMON! _RAND_DEMON!" The drumbeat stops
       and a bolt of fire strikes the floor before you, causing you
-      to fall back. Your HUD finds a recognizable pattern in the scorchmarks. 
+      to fall back. Your HUD finds a recognizable pattern in the scorchmarks.
       A hell rune translating to "You die."
       Hell will have to see about that.]],
 
@@ -410,7 +410,7 @@ ZDOOM_STORIES.STORIES =
       image swirl and form something new. In it you see yourself
       chained against a burning monolith of slate, while imps
       gleefully dance around you. A ghostly mutter breaks the silence.
-      "Sinners all have a place in hell, mortal. But you are special. 
+      "Sinners all have a place in hell, mortal. But you are special.
       Let me, _RAND_DEMON the _EVULZ, be your ferryman to the
       underworld." You smash the mirror with your fists, leaving
       a gaping hole in the wall. You have answered hell's challenge.]]
@@ -728,7 +728,7 @@ ZDOOM_STORIES.STORIES =
 
     conclusions =
     {
-      [[A great demon shows itself before you. It seems any weapon 
+      [[A great demon shows itself before you. It seems any weapon
       is failing to damage the creature at all.
       "You have no chance against inferno!"
       _SPACE
@@ -757,7 +757,7 @@ ZDOOM_STORIES.STORIES =
       [[Alarms blare out through the area. You find yourself standing
       among rows upon rows of corpses, human and demon alike. It seems
       a huge rampage had occured here but its instigator is unclear. You
-      find a torn armor piece among the debris. The nameplate reads 
+      find a torn armor piece among the debris. The nameplate reads
       "John Stalvern". You wonder what happened and continue on.]],
     }
 
@@ -866,7 +866,7 @@ ZDOOM_STORIES.STORIES =
       [[You find a marine slumped against the wall, battered and bloodied.
       His armor is torn from claws marks but he is still alive. "Hey, you!
       I don't have much time left! That creature, _RAND_DEMON did this to me.
-      I want you to... to make that demon scum pay." 
+      I want you to... to make that demon scum pay."
       Life escapes the marine's eyes.
       You take his dog tags and swear vengeance upon _RAND_DEMON.]],
 
@@ -933,11 +933,11 @@ ZDOOM_STORIES.STORIES =
       The demon steps back into a portal which collapses behind it.]],
 
       -- passing the torch
-      [[A great demon shows itself before you from a ledge above. 
+      [[A great demon shows itself before you from a ledge above.
       It begins a speech:
       "By decree of the dark lords and _GOTHIC_LEVEL, I have taken the place
       of _RAND_DEMON and in our lord's name, I shall grind you to a pulp!"
-      You take aim and land a shot on its chest to minor effect. 
+      You take aim and land a shot on its chest to minor effect.
       "Pathetic! I will show all hell of your fate." The great
       demon steps away into the shadows.]],
 
@@ -947,17 +947,17 @@ ZDOOM_STORIES.STORIES =
       you and decrees "Mortal! Your head will make a great ornament
       upon our Lord _RAND_DEMON's cenotaph!" As it makes its way towards you,
       the floor beneath you crumbles. You fall and roll down a long slope and find
-      yourself at the bottom. 
+      yourself at the bottom.
       You pick yourself up quickly, but see no sign of the demon.]]
     }
 
     conclusions =
     {
       -- curb stomp
-      [[You have defeated the great demon! 
+      [[You have defeated the great demon!
       "Nooo! Nooo! _RAND_DEMON must be avenged!"
       You raise your foot and stomp the creature's head to the curb.
-      The floor is greased with a splatter of blood and metal. 
+      The floor is greased with a splatter of blood and metal.
       You swear to make all hellions reach the same fate at every turn.]],
 
       -- oh no run away
@@ -973,7 +973,7 @@ ZDOOM_STORIES.STORIES =
       [[Before you land your final shot at the demon, a swirl of
       green mists blanket the room. An eruption of guttural laughter
       greets you. "You are indeed the Butcher of _RAND_DEMON, mortal.
-      No matter. This battle was of a small price to weaken your will. 
+      No matter. This battle was of a small price to weaken your will.
       Hell will not forget. Hell will not forgive." The mists disperse and
       the great demon is nowhere in sight. Either it keeps running away,
       or it will find itself under your boot one day, you think to yourself.]]
@@ -1378,7 +1378,7 @@ ZDOOM_STORIES.QUIT_MESSAGES =
   [["You shouldn't stop playing Doom." definitely said by Voltaire.]],
   [[Are you taking the blue pill?]],
   [[The prophet Nostradamus predicted the dead would rise when there is no more room in hell. He didn't predict Oblige would be generating new rooms.]],
-  [[You probably noticed by now that every time quit messages show up, you're forced to agree with the statement when you quit by choosing 'yes''.]],
+  [[You probably noticed by now that every time quit messages show up, you're forced to agree with the statement when you quit by choosing 'yes'.]],
 
   -- helpful // technical
   [[ObAddon is always improving. Stop by our Discord server, talk to the denizens and report bugs to us there!]],
