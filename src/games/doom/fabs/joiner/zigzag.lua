@@ -7,7 +7,7 @@ PREFABS.Joiner_zigzag1 =
   file   = "joiner/zigzag.wad"
   map    = "MAP01"
 
-  prob   = 1750
+  prob   = 850
   style  = "steepness"
 
   env      = "building"
@@ -33,6 +33,21 @@ PREFABS.Joiner_zigzag2 =
 {
   template = "Joiner_zigzag1"
   map      = "MAP02"
+
+  seed_w = 3
+  seed_h = 2
+}
+
+PREFABS.Joiner_zigzag1_mirrored =
+{
+  template = "Joiner_zigzag1"
+  map      = "MAP03"
+}
+
+PREFABS.Joiner_zigzag2_mirrored =
+{
+  template = "Joiner_zigzag1"
+  map      = "MAP04"
 
   seed_w = 3
   seed_h = 2
