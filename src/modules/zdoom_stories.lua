@@ -5,6 +5,8 @@
 --  Copyright (C) 2019 MsrSgtShooterPerson
 --  Copyright (C) 2019 Glaice
 --  Copyright (C) 2019 Tapwave
+--  Copyright (C) 2019 Beed28
+--  Copyright (C) 2019 Simon-v
 --
 --  This program is free software; you can redistribute it and/or
 --  modify it under the terms of the GNU General Public License
