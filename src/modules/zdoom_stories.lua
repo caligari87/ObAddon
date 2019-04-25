@@ -104,6 +104,7 @@ ZDOOM_STORIES.LIST =
   zero_wing = 2
   the_avenger = 40
   the_avenger_from_hell = 40
+  asylum = 2
 }
 
 ZDOOM_STORIES.STORIES =
@@ -977,6 +978,95 @@ ZDOOM_STORIES.STORIES =
       Hell will not forget. Hell will not forgive." The mists disperse and
       the great demon is nowhere in sight. Either it keeps running away,
       or it will find itself under your boot one day, you think to yourself.]]
+    }
+  }
+  asylum = {
+    hooks = {
+      -- doctor's office
+      [[Suddenly, your vision swims. Moments later, you discover yourself
+      strapped to a comfy chair in a doctor's office. "I'm glad you're feeling
+      better," the doctor speaks in a soft, reassuring voice. "You've had an
+      extended psychotic incident, and we had to restrain you for days. But
+      now, your healing can begin, if you only accept it."
+      _SPACE
+      The office and the doctor fade as quickly as they appeared, and you
+      find yourself in the open again. Was it a hallucination? You have no
+      time to try figuring it out. You have a job to do.]],
+
+      -- pacified by a nurse
+      [[The world swirls and twists around you, and you discover, to your
+      horror, that you are strapped to a bed in a room with a metal door and
+      a barred window. You scream in frustration and struggle against your
+      restraints. The door swings open, and a nurse rushes to you and stabs
+      you with a syringe. You grow limp and everything becomes dark, and when
+      your vision clears, you are standing over the corpse of a freshly slain
+      demon.
+      _SPACE
+      Was it real? You question your sanity for a moment, but a neraby
+      growl, snaps you out of your daze. You check your supplies and return
+      to the fray.]],
+
+      -- momentary reality shattering
+      [[You lose your footing for a moment, and when you regain your balance,
+      you find yourself looking out a barred window at a peaceful garden. You
+      reach for your weapons, to find them and your armor gone. "This cannot
+      be," you mutter to yourself, but as you turn around to look behind you,
+      reality breaks into thousands of small pieces.
+      _SPACE
+      You come to your senses slouched against a rock in a barren wasteland.
+      Your weapons and armor are back. What was that? Which of the realities
+      is the real one? You rub your face and concentrate on your mission.]],
+    }
+
+    conclusions = {
+      -- choosing hell (The Darkness 2)
+      [[You regain your composure and find yourself standing on the roof of
+      the asylum, facing the doctor. "I can only help you, if you let me,"
+      the doctor speaks in a soft, comforting voice. "Come, walk through this
+      door together with me, so we can begin your healing." His face saddens.
+      "Or, you can jump down and embrace the never-ending torment of your own
+      personal hell."
+      _SPACE
+      Without a moment of hesitation, you leap over the railing, and the ground
+      opens under you. The fall is unexpectedly short, as you crash into a pile
+      of mutilated corpses. You force yourself upright and throw a long,
+      peering gaze upon the devastated landscape of the only reality you
+      know and accept.]],
+
+      -- all a mind trick
+      [[You snap your eyes open and find yourself restrained to a comfy chair
+      at the doctor's office. "We are trying to help you!" he pleads. "Why
+      won't you let us help you?!" his voice rises in tone and volume until it
+      turns into a hysterical shriek. His face deforms and morphs into that of
+      a demon. With a furious roar, you snap out of your restraints and lunge
+      at the demon. He screams in terror and tries to back away, but you grab
+      his head and rip it off, then stomp the body until it's reduced to a
+      pulp. The asylum's walls flow and crumble, revealing a scorched, barren
+      landscape. "Your mind tricks won't help you!" you growl, as numerous
+      unseen clawed feet scurry away in terror, leaving you alone in a dead,
+      ringing silence.]],
+
+      -- breaking out by will power
+      [[The darkness dissolves and you find yourself strapped to a bed, with a
+      doctor leaning over you. "We are going to cure you," he says. "We are
+      going to cure you, no matter how long it takes!" You struggle against
+      your restraints, but to no avail. "Your family needs you!" the doctor
+      pleads, pulling out a syringe. You clench your teeth and concentrate.
+      This is not real. This is a trick. An illusion. You focus all your
+      willpower on disbelieving the reality your senses provide. And
+      reality gives, flowing and crumbling around you. You fall through
+      a void and find yourself in the killing fields once again.]],
+
+      -- all a dream
+      [[Your vision swims and your sense of self deforms. Your dody,
+      wrapped in a straightjacket is numb. You try to stand, leaning
+      against the padded wall, but slip and fall down. The fall is
+      unexpectedly long, taking many minutes before you finally hit the
+      floor and snap awake.
+      _SPACE
+      Your blood rushes, as you listen to the sounds of in your
+      surroundings, checking your gear as you do. Then, you rise to your
+      feet to face the blood-red dawn.]]
     }
   }
 }
