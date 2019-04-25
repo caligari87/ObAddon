@@ -1988,7 +1988,6 @@ GLAICE_SINK_DEFS =
   }
 
   -- hell floors
-
   floor_sink_GOTH22 =
   {
     mat = "GMET04"

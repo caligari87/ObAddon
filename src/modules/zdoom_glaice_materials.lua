@@ -29,8 +29,6 @@ GLAICE_LIQUIDS =
   ice   = { mat="SNOW9", special=0 } --Looks best when outdoor environment is snow only
   ice2   = { mat="SNOW2", special=0 } --Looks best when outdoor environment is snow only
   purwater   = { mat="PURW1", special=0 }
-
-
 }
 
 GLAICE_MATERIALS = {

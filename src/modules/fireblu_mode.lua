@@ -39,6 +39,4 @@ OB_MODULES["fireblu_mode"] =
     "on the face of the earth. Warning: ticking this waives any " ..
     "liability for potential emotional and physical damage on the " ..
     "part of the user. \n")
-
 }
-
