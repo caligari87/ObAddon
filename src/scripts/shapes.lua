@@ -3087,6 +3087,18 @@ GROW_CAUSEWAY =
   }
 }
 
+GROW_GATED_RAMP =
+{
+  prob = 15
+
+  structure =
+  {
+    "......","AAAAAA"
+    "......","A.^^.A"
+    "xx11xx","xx11xx"
+  }
+}
+
 --MSSP's simple bends. [BEND]
 
 GROW_BEND =
@@ -4305,13 +4317,37 @@ GROW_LIQUID_SLAB_ENTRY =
 
 GROW_LIQUID_SLAB_STRAIGHT =
 {
-  prob = 50
+  prob = 100
 
   structure =
   {
     "...","~1~"
     "...","~~~"
     "~1~","~1~"
+  }
+}
+
+GROW_LIQUID_SLAB_STRAIGHT_4x4 =
+{
+  prob = 60
+
+  structure =
+  {
+    ".....","~1~1~"
+    ".....","~~~~~"
+    "~1~..","~1~1~"
+  }
+}
+
+GROW_LIQUID_SLAB_OUTFUNNEL =
+{
+  prob = 40
+
+  structure =
+  {
+    ".....","~1~1~"
+    ".....","~~~~~"
+    ".~1~.",".~1~."
   }
 }
 
