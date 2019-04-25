@@ -5,8 +5,9 @@
 --  Copyright (C) 2019 MsrSgtShooterPerson
 --  Copyright (C) 2019 Glaice
 --  Copyright (C) 2019 Tapwave
---  Copyright (C) 2019 Beed28
 --  Copyright (C) 2019 Simon-v
+--  Copyright (C) 2019 EpicTyphlosion
+--  Copyright (C) 2019 Beed28
 --
 --  This program is free software; you can redistribute it and/or
 --  modify it under the terms of the GNU General Public License
@@ -982,6 +983,8 @@ ZDOOM_STORIES.STORIES =
       or it will find itself under your boot one day, you think to yourself.]]
     }
   }
+
+  -- TAPWAVE-TODO: plz halp
   asylum = {
     hooks = {
       -- doctor's office
@@ -1072,6 +1075,7 @@ ZDOOM_STORIES.STORIES =
     }
   }
 }
+
 -- WARNING: absolute endings are supposed to be lines attached to the
 -- story end section of the final chapter. However, story strings
 -- are already generally too long so this feature is not implemented.
