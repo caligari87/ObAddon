@@ -415,6 +415,17 @@ function ZDOOM_SPECIALS.do_special_stuff()
         secret_level_line = ''
       end
 
+      -- next maps for secret levels
+      if map_num == 9 then
+        next_level_line = '  next = ' .. ZDOOM_SPECIALS.DOOM1_MAP_NOMENCLATURE[4] .. "\n"
+      elseif map_num == 18 then
+        next_level_line = '  next = ' .. ZDOOM_SPECIALS.DOOM1_MAP_NOMENCLATURE[15] .. "\n"
+      elseif map_num == 27 then
+        next_level_line = '  next = ' .. ZDOOM_SPECIALS.DOOM1_MAP_NOMENCLATURE[25] .. "\n"
+      elseif map_num == 36 then
+        next_level_line = '  next = ' .. ZDOOM_SPECIALS.DOOM1_MAP_NOMENCLATURE[30] .. "\n"
+      end
+
       -- skip for secret levels
       if map_num == 8 then
         next_level_line = '  next = "EndGame1"\n'
