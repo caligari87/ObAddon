@@ -732,6 +732,7 @@ ZDOOM_STORIES.STORIES =
 
     conclusions =
     {
+      -- pwn the boss with the McGuffin
       [[A great demon shows itself before you. It seems any weapon
       is failing to damage the creature at all.
       "You have no chance against inferno!"
@@ -741,16 +742,29 @@ ZDOOM_STORIES.STORIES =
       touching the demonic creature, its body is incinerated and particles
       are sucked into the relic. The relic fades from your hands.]],
 
+      -- close portal with McGuffin
       [[It seems the minions of hell were attempting to stop you from reaching
       this place. Ahead is an ancient portal from which the demons apparently
       spilled through. A receptacle on the center seems to fit _MCGUFFIN_HELL
       precisely. You lodge it into the receptacle and the portal to hell
       collapses. Time to move on.]],
 
+      -- demon threatens you for possession of McGuffin
       [[The final creature falls. A whispering voice rings through the air.
       "You have something that belongs to hell. Know that we will return
       to take it from your dead hands, mortal." The voice fades. It seems
       they were after _MCGUFFIN_HELL. It's better off in your possession.]],
+
+      -- demon takes back the McGuffin *sigh*
+      [[As you land your final hit upon a demon, a surge of energy
+      paints your shadow in front of you. You are hurled across the floor
+      as sparks bounce from your armor. You feel immense pain. You struggle
+      to regain your composure but your sight still blurs. A demonic voice
+      speaks "Mortal. You have _MCGUFFIN_HELL with you. That belongs to hell."
+      _SPACE
+      The bright flashes of light end and the room falls silent.
+      You finally pick yourself up. Unfortunately, it seems your
+      backpack is now a bit lighter...]],
     }
   }
 
