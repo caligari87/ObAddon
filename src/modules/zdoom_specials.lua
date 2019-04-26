@@ -28,7 +28,7 @@ ZDOOM_SPECIALS.YES_NO =
 
 ZDOOM_SPECIALS.MUSIC_SHUFFLER_CHOICES =
 {
-  "per_game", _("Per Game"),
+  "yes", _("Yes"),
   "merge_d1_d2", _("Merge Doom 1 and 2"),
   "no", _("No"),
 }
@@ -92,6 +92,10 @@ ZDOOM_SPECIALS.MUSIC_DOOM =
   [25] = "$MUSIC_E3M7",
   [26] = "$MUSIC_E3M8",
   [27] = "$MUSIC_E3M9",
+}
+
+ZDOOM_SPECIALS.MUSIC_DOOM_THYFLESH =
+{
   [28] = "$MUSIC_E3M4",
   [29] = "$MUSIC_E3M2",
   [30] = "$MUSIC_E3M3",
@@ -100,7 +104,7 @@ ZDOOM_SPECIALS.MUSIC_DOOM =
   [33] = "$MUSIC_E2M4",
   [34] = "$MUSIC_E2M6",
   [35] = "$MUSIC_E2M5",
-  [36] = "$MUSIC_E1M9"
+  [36] = "$MUSIC_E1M9",
 }
 
 ZDOOM_SPECIALS.MUSIC_DOOM2 =
@@ -212,8 +216,15 @@ function ZDOOM_SPECIALS.shuffle_music()
 
   local music_table
 
-  if OB_CONFIG.game == "doom1" or OB_CONFIG.game == "ultdoom" then
+  if OB_CONFIG.game == "doom1" then
     music_table = ZDOOM_SPECIALS.MUSIC_DOOM
+  elseif OB_CONFIG.game == "ultdoom" then
+    music_table = ZDOOM_SPECIALS.MUSIC_DOOM
+    local i = 28
+    while i <= 36 do
+      music_table[i] = ZDOOM_SPECIALS.MUSIC_DOOM_THYFLESH[i]
+      i = i + 1
+    end
   elseif OB_CONFIG.game == "doom2" then
     music_table = ZDOOM_SPECIALS.MUSIC_DOOM2
   end
@@ -227,10 +238,19 @@ function ZDOOM_SPECIALS.shuffle_music()
   end
 
   if PARAM.mapinfo_music_shuffler != "no" then
+    -- extra code for UltDoom music shuffling - replace the
+    -- entries for the last episode with anything else to make sure
+    -- there's no bias in picking songs
+    if OB_CONFIG.game == "ultdoom" then
+      local i = 28
+      while i <= 36 do
+        music_table[i] = rand.pick(ZDOOM_SPECIALS.MUSIC_DOOM)
+        i = i + 1
+      end
+    end
+
     rand.shuffle(music_table)
   end
-
-  gui.printf(table.tostr(music_table))
 
   ZDOOM_SPECIALS.MUSIC = music_table
 
