@@ -4268,7 +4268,7 @@ namelib.COMMUNITY_MEMBERS =
   -- These people helped out OBLIGE and how they contributed.
   oblige_folks =
   {
-    "Andrew Apted" -- THE developer of OBLIGE. ObAddon would not exist without him!
+    "Andrew Apted", -- THE developer of OBLIGE. ObAddon would not exist without him!
     "Dittohead", -- Made some prefabs
     "Doctor Nick", -- The Makefile MacOS file
     "Enhas", -- Lots of stuff. Modules, Psychedelic names, a boss map, feedback, fixes/tweaks
@@ -4276,7 +4276,7 @@ namelib.COMMUNITY_MEMBERS =
     "40oz", -- Tons of work on this very file, Cyberdemon arena map, some Doom prefabs
     "LakiSoft", -- Made a Heretic boss map
     "SylandroProbopas", -- Doom1 boss map
-    "DoomJedi", -- Older V2/V3(?) testing, graphics and listing of Wolfenstein mods
+    "DoomJedi", -- Older V2/V3(?) Wolf3D testing, graphics and listing of Wolfenstein mods
     "esselfortium", -- General encouragement and detailed feedback
     "gggmork", -- Beta testing WIP versions and detailed feedback
     "flyingdeath", -- Lots of feedback and suggestions, namely seen on the forums
