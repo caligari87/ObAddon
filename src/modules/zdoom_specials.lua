@@ -26,6 +26,13 @@ ZDOOM_SPECIALS.YES_NO =
   "no",  _("No"),
 }
 
+ZDOOM_SPECIALS.MUSIC_SHUFFLER_CHOICES =
+{
+  "per_game", _("Per Game"),
+  "merge_d1_d2", _("Merge Doom 1 and 2"),
+  "no", _("No"),
+}
+
 ZDOOM_SPECIALS.FOG_GEN_CHOICES =
 {
   "per_sky_gen",    _("Per Sky Generator"),
@@ -207,13 +214,23 @@ function ZDOOM_SPECIALS.shuffle_music()
 
   if OB_CONFIG.game == "doom1" or OB_CONFIG.game == "ultdoom" then
     music_table = ZDOOM_SPECIALS.MUSIC_DOOM
-  else
+  elseif OB_CONFIG.game == "doom2" then
     music_table = ZDOOM_SPECIALS.MUSIC_DOOM2
   end
 
-  if PARAM.mapinfo_music_shuffler == "yes" then
+  if PARAM.mapinfo_music_shuffler == "merge_d1_d2" then
+    music_table = ZDOOM_SPECIALS.MUSIC_DOOM
+    local j
+    for i,songs in pairs(ZDOOM_SPECIALS.MUSIC_DOOM2) do
+      table.insert(music_table, songs)
+    end
+  end
+
+  if PARAM.mapinfo_music_shuffler != "no" then
     rand.shuffle(music_table)
   end
+
+  gui.printf(table.tostr(music_table))
 
   ZDOOM_SPECIALS.MUSIC = music_table
 
@@ -966,9 +983,12 @@ OB_MODULES["zdoom_specials"] =
     mapinfo_music_shuffler = {
       label = _("Shuffle Music"),
       priority = 6
-      choices = ZDOOM_SPECIALS.YES_NO
+      choices = ZDOOM_SPECIALS.MUSIC_SHUFFLER_CHOICES
       default = "no"
-      tooltip = "Shuffles music in the MAPINFO lump. Oblige's vanilla music shuffler uses a BEX lump and is therefore ignored when the ZDoom Addons module is active."
+      tooltip = "Shuffles music in the MAPINFO lump. Oblige's vanilla music shuffler uses " ..
+                "a BEX lump and is therefore ignored when the ZDoom Addons module is active." ..
+                "\n\nWarning: the 'Merge Doom 1 and 2' option is for music packs that contain both "..
+                "Doom 1 and 2 direct patch replacements. Do not use unless you have such a pack."
     }
 
     story_generator = {
