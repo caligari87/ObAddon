@@ -1,9 +1,9 @@
-PREFABS.Arch_simplest =
+PREFABS.Arch_bare =
 {
-  file   = "door/gtd_simplest_arch.wad"
+  file   = "door/gtd_bare_arch.wad"
   map    = "MAP01"
 
-  prob = 400
+  prob = 700
 
   kind   = "arch"
   where  = "edge"
