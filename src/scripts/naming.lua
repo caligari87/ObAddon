@@ -4265,6 +4265,26 @@ namelib.COMMUNITY_MEMBERS =
     "Tapwave",
   }
 
+  -- These people helped out OBLIGE and how they contributed.
+  oblige_folks =
+  {
+    "Andrew Apted" -- THE developer of OBLIGE. OnAddon would not exist without him!
+    "Dittohead", -- Made some prefabs
+    "Doctor Nick", -- The Makefile MacOS file
+    "Enhas", -- Lots of stuff. Modules, Psychedelic names, a boss map, feedback, fixes/tweaks
+    "blackjar", -- Hexen theming
+    "40oz", -- Tons of work on this very file, Cyberdemon arena map, some Doom prefabs
+    "LakiSoft", -- Made a Heretic boss map
+    "SylandroProbopas", -- Doom1 boss map
+    "DoomJedi", -- Older V2/V3(?) testing, graphics and listing of Wolfenstein mods
+    "esselfortium", -- General encouragement and detailed feedback
+    "gggmork", -- Beta testing WIP versions and detailed feedback
+    "flyingdeath", -- Lots of feedback and suggestions, namely seen on the forums
+    "leilei", -- Base Amulets & Armor definition and general feedback
+    "Maxim Samoylenko", -- General encouragement and testing
+    "thesleeve", -- Monster placement analysis
+  }
+
   -- this is an arbitrary list of regulars at the Unofficial Oblige
   -- Discord server. If you're a regular and you don't find your name
   -- here, feel free to add it yourself! (or ask a contributor to do so!)
