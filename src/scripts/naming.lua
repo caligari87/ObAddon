@@ -4268,7 +4268,7 @@ namelib.COMMUNITY_MEMBERS =
   -- These people helped out OBLIGE and how they contributed.
   oblige_folks =
   {
-    "Andrew Apted" -- THE developer of OBLIGE. OnAddon would not exist without him!
+    "Andrew Apted" -- THE developer of OBLIGE. ObAddon would not exist without him!
     "Dittohead", -- Made some prefabs
     "Doctor Nick", -- The Makefile MacOS file
     "Enhas", -- Lots of stuff. Modules, Psychedelic names, a boss map, feedback, fixes/tweaks
