@@ -4254,14 +4254,14 @@ namelib.COMMUNITY_MEMBERS =
 {
   contributors =
   {
-    "MsrSgtShooterPerson",
+    "Sgt. Shooter", --MsrSgtShooterPerson
     "Glaice",
     "Frozsoul",
-    "Caligari87",
-    "Simon-v",
+    "Caligari", --Caligari87
+    "Simon Vee", --Simon-v
     "Garrett",
-    "Beed28",
-    "EpicTyphlosion",
+    "Beed 28",
+    "Epic Typhlosion",
     "Tapwave",
   }
 
@@ -4290,27 +4290,27 @@ namelib.COMMUNITY_MEMBERS =
   -- here, feel free to add it yourself! (or ask a contributor to do so!)
   regulars =
   {
-    "samiam", -- Mr. ObHack!
-    "crowbars82", -- Mr. Octothrop!
+    "Samiam", -- Mr. ObHack!
+    "Crowbars", -- crowbars82, Mr. Octothrop!
     "Alden",
-    "BigC",
-    "BradManX",
+    "Big C",
+    "Brad Man X",
     "Craneo",
     "Demios",
     "DZ",
     "Elkinda",
-    "HexaDoken",
-    "josh771",
-    "kinker31",
+    "Hexa Doken",
+    "Josh Seven", --josh771
+    "Kinker 31",
     "Kinsie",
-    "MagPie",
+    "Magpie", --MagPie
     "Roundabout Lout",
     "Saint",
-    "sanser",
+    "Sanser",
     "Sharahfluff",
     "Sharp",
     "TiZ",
-    "TheDude1",
+    "The Dude", --TheDude1
     "The Nate",
     "Thexare",
     "TTBNC",
