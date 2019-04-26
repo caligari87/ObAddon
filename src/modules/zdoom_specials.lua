@@ -755,14 +755,13 @@ function ZDOOM_SPECIALS.do_special_stuff()
     local map_string
 
     if OB_CONFIG.game == "doom2" or OB_CONFIG.game == "tnt" or OB_CONFIG.game == "plutonia" then
-      map_string = map_num
       if map_num < 10 then
-        map_string = "0" .. map_num
+        map_string = "MAP0" .. map_num
+      else
+        map_string = "MAP" .. map_num
       end
-
-    end
-    if OB_CONFIG.game == "doom1" or OB_CONFIG.game == "ultdoom" then
-       map_string = ZDOOM_SPECIALS.DOOM1_MAP_NOMENCLATURE[map_num]
+    elseif OB_CONFIG.game == "doom1" or OB_CONFIG.game == "ultdoom" then
+      map_string = ZDOOM_SPECIALS.DOOM1_MAP_NOMENCLATURE[map_num]
     end
 
     if not map_string then
@@ -771,7 +770,7 @@ function ZDOOM_SPECIALS.do_special_stuff()
 
     episodedef =
     {
-      'episode MAP' .. map_string .. '\n'
+      'episode ' .. map_string .. '\n'
       '{\n'
       '  name = "' .. GAME.levels[map_num].episode.description .. '"\n'
       '}\n'
