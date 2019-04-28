@@ -16,7 +16,6 @@ PREFABS.Item_closet_hellish_loo =
   item_kind = "key"
 
   x_fit = "frame"
-  z_fit = { 104,112 }
 }
 
 PREFABS.Item_closet_hellish_loo_shittier =
