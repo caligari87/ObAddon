@@ -1,18 +1,18 @@
 PREFABS.Start_garrett_hell_closet =
 {
-  file  = "start/garrett_hell_start.wad"
-  map = "MAP01"
+  file   = "start/garrett_hell_start.wad"
+  map    = "MAP01"
 
-  prob  = 35
-  theme = "hell"
+  prob   = 250
+  theme  = "hell"
 
-  where = "seeds"
+  where  = "seeds"
 
   seed_h = 2
 
-  deep  =  16
-  over  = -16
+  deep   =  16
+  over   = -16
 
-  x_fit = "frame"
-  y_fit = "bottom"
+  x_fit  = "frame"
+  y_fit  = "bottom"
 }
