@@ -6,7 +6,7 @@ PREFABS.Exit_beed28_tunnel =
 {
   file  = "exit/beed28_exit_tunnel.wad"
 
-  prob  = 500
+  prob  = 250
   theme = "!hell"
 
   where  = "seeds"
