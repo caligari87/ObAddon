@@ -4,9 +4,10 @@
 
 * **MsrSgtShooterPerson** - Repository maintainer, prefabs, shape rules, new modules, documentation.
 * **Glaice** - Original base tweaks to Oblige v7.59, prefabs, new modules.
+* **Beed28** - Prefabs.
 * **Frozsoul** - Prefabs.
 * **Garrett** - Prefabs.
-* **Beed28** - Prefabs.
+* **MogWaltz** - Prefabs.
 * **Craneo** - Replacement candle texture, contributions to naming generator, prefabs
 * **Tapwave** - Contributions to the story generator.
 * **Swedra** - Contributions to naming generator.
