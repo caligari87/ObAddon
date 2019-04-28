@@ -2,7 +2,7 @@ PREFABS.Joiner_craneo_demon_jaw =
 {
   file   = "joiner/craneo_hell_demon_jaw.wad"
 
-  prob   = 150
+  prob   = 200
   theme  = "hell"
 
   where  = "seeds"
