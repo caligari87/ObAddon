@@ -8,10 +8,13 @@ PREFABS.Item_striptease_pole_stage =
 
   map   = "MAP01"
 
-  prob  = 20
+  prob  = 100
   theme = "urban"
-
+  env   = "building"
   where = "point"
+
   height = 128
   size  = 224
+
+  z_fit = "top"
 }
