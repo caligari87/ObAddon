@@ -37,7 +37,7 @@ PREFABS.Start_glaice_start_lift =
   file  = "start/glaice_start1.wad"
   map = "MAP02"
 
-  prob  = 500
+  prob  = 250
   theme = "!hell"
 
   where = "seeds"
@@ -54,7 +54,6 @@ PREFABS.Start_glaice_start_lift =
 PREFABS.Start_glaice_start_lift_hell =
 {
   template  = "Start_glaice_start_lift"
-  prob = 500
   map = "MAP02"
   theme = "hell"
 
@@ -66,5 +65,26 @@ PREFABS.Start_glaice_start_lift_hell =
   tex_COMPSPAN = { STONE2=50, STONE3=50 }
   flat_FLAT4 = "FLAT1"
   flat_CEIL5_1 = "FLOOR7_2"
+}
 
-  }
+PREFABS.Start_glaice_start_lift_downwards =
+{
+  template = "Start_glaice_start_lift"
+  map = "MAP03"
+}
+
+PREFABS.Start_glaice_start_lift_hell_downwards =
+{
+  template = "Start_glaice_start_lift"
+  theme = "hell"
+  map = "MAP03"
+
+  tex_SW1COMM = "SW1DIRT"
+  tex_DOORSTOP = "METAL"
+  tex_SHAWN2 = "METAL"
+  tex_SUPPORT2 = "SUPPORT3"
+  tex_TEKWALL4 = { MARBLE2=50, MARBLE3=50 }
+  tex_COMPSPAN = { STONE2=50, STONE3=50 }
+  flat_FLAT4 = "FLAT1"
+  flat_CEIL5_1 = "FLOOR7_2"
+}
