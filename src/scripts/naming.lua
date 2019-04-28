@@ -4263,6 +4263,7 @@ namelib.COMMUNITY_MEMBERS =
     "Beed 28",
     "Epic Typhlosion",
     "Tapwave",
+    "Craneo",
   }
 
   -- These people helped out OBLIGE and how they contributed.
@@ -4295,7 +4296,6 @@ namelib.COMMUNITY_MEMBERS =
     "Alden",
     "Big C",
     "Brad Man X",
-    "Craneo",
     "Demios",
     "DZ",
     "Elkinda",
@@ -4304,6 +4304,7 @@ namelib.COMMUNITY_MEMBERS =
     "Kinker 31",
     "Kinsie",
     "Magpie", --MagPie
+    "Mog Waltz",
     "Roundabout Lout",
     "Saint",
     "Sanser",
