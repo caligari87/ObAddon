@@ -768,6 +768,9 @@ GLAICE_DOOM1_MATERIALS = {
   OBDNBNR1 = { t="OBDNBNR1", f="CRATOP2" } -- OBLIGE flag, yellow
   OBDNBNR2 = { t="OBDNBNR2", f="SFLR6_4" } -- OBLIGE flag, hellish
 
+  -- Vending machine textures (from vending_machine_textures.wad) --
+  OBVNMCH1 = { t="OBVNMCH1", f="CEIL5_1" }
+
  -- Existing textures with new definitions, especially so some prefabs using Doom 2 textures should
  -- look a bit better with replacements for some of the Doom1 textures included in the Epic texture
  -- set with the included Doom 2 flats.
