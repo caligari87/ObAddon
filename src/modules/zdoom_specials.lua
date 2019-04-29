@@ -50,7 +50,7 @@ ZDOOM_SPECIALS.FOG_DENSITY_CHOICES =
 {
   "clear",  _("Clear"),
   "misty",  _("Misty"),
-  "smokey", _("Smokey"),
+  "smoky",  _("Smoky"),
   "foggy",  _("Foggy"),
   "dense",  _("Dense"),
   "mixed",  _("Mix It Up"),
@@ -487,7 +487,7 @@ function ZDOOM_SPECIALS.do_special_stuff()
       fog_intensity = "16"
     elseif PARAM.fog_intensity == "misty" then
       fog_intensity = "48"
-    elseif PARAM.fog_intensity == "smokey" then
+    elseif PARAM.fog_intensity == "smoky" then
       fog_intensity = "128"
     elseif PARAM.fog_intensity == "foggy" then
       fog_intensity = "255"
