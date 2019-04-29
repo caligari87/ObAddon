@@ -760,6 +760,9 @@ GLAICE_MATERIALS = {
   OBDNBNR1 = { t="OBDNBNR1", f="CRATOP2" } -- OBLIGE flag, yellow
   OBDNBNR2 = { t="OBDNBNR2", f="SFLR6_4" } -- OBLIGE flag, hellish
 
+  -- Vending machine textures (from vending_machine_textures.wad) --
+  OBVNMCH1 = { t="OBVNMCH1", f="CEIL5_1" }
+
  -- Exiting textures with new definitions
   FIREBLU1 = { t="FIREBLU1", f="FIRELAF1" }
   FIREBLU2 = { t="FIREBLU2", f="FIRELAF2" }
@@ -1039,7 +1042,4 @@ GLAICE_MATERIALS = {
 
   -- Warning Strip --
   WARN1 = { t="WARN1", f="WARN2" }
-
-  -- Vending machine textures (from vending_machine_textures.wad) --
-  OBVNMCH1 = { t="OBVNMCH1", f="" }
 }
