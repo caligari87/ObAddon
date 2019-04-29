@@ -341,6 +341,10 @@ function GLAICE_EPIC_TEXTURES.put_the_texture_wad_in()
     -- and HI_END... *sigh*
     gui.wad_add_binary_lump("HI_START",{})
     gui.wad_insert_file("games/doom/data/OBVNMCH1.png", "OBVNMCH1")
+    gui.wad_insert_file("games/doom/data/OBVNMCH2.png", "OBVNMCH2")
+    gui.wad_insert_file("games/doom/data/OBVNMCH3.png", "OBVNMCH3")
+    gui.wad_insert_file("games/doom/data/OBVNMCH4.png", "OBVNMCH4")
+    gui.wad_insert_file("games/doom/data/OBVNMCH5.png", "OBVNMCH5")
     gui.wad_add_binary_lump("HI_END",{})
   end
 end

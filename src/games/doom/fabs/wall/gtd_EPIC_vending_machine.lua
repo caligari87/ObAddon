@@ -19,4 +19,13 @@ PREFABS.Decor_EPIC_vending_machine =
   bound_z2 = 128
 
   z_fit  = "top"
+
+  tex_OBVNMCH1 =
+  {
+    OBVNMCH1 = 50
+    OBVNMCH2 = 50
+    OBVNMCH3 = 50
+    OBVNMCH4 = 50
+    OBVNMCH5 = 50
+  }
 }

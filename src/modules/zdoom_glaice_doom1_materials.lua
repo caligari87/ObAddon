@@ -770,6 +770,10 @@ GLAICE_DOOM1_MATERIALS = {
 
   -- Vending machine textures (from vending_machine_textures.wad) --
   OBVNMCH1 = { t="OBVNMCH1", f="CEIL5_1" }
+  OBVNMCH2 = { t="OBVNMCH2", f="CEIL5_1" }
+  OBVNMCH3 = { t="OBVNMCH3", f="CEIL5_1" }
+  OBVNMCH4 = { t="OBVNMCH4", f="CEIL5_1" }
+  OBVNMCH4 = { t="OBVNMCH5", f="CEIL5_1" }
 
  -- Existing textures with new definitions, especially so some prefabs using Doom 2 textures should
  -- look a bit better with replacements for some of the Doom1 textures included in the Epic texture
