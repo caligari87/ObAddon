@@ -1040,4 +1040,6 @@ GLAICE_MATERIALS = {
   -- Warning Strip --
   WARN1 = { t="WARN1", f="WARN2" }
 
+  -- Vending machine textures (from vending_machine_textures.wad) --
+  OBVNMCH1 = { t="OBVNMCH1", f="" }
 }

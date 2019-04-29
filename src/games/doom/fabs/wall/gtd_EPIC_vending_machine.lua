@@ -19,14 +19,4 @@ PREFABS.Decor_EPIC_vending_machine =
   bound_z2 = 128
 
   z_fit  = "top"
-
-  tex_TEKGRBLU =
-  {
-    TEKGRBLU = 50
-    COMPTIL2 = 50
-    COMPTIL3 = 50
-    COMPTIL4 = 50
-    COMPTIL5 = 50
-    COMPTIL6 = 50
-  }
 }
