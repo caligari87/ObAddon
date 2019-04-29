@@ -38,6 +38,7 @@ UI_MONS.QUANTITIES =
     "nuts",   _("[5.0] Sunder"),
     "nutser", _("[6.66] Holy Hell"),
     "mixed",  _("Mix It Up"),
+    "prog",   _("Progressive"),
 }
 
 UI_MONS.MIX_QUANTITIES =
@@ -132,25 +133,31 @@ OB_MODULES["ui_mons"] =
       name="mons",
       label=_("Quantity"),
       choices=UI_MONS.QUANTITIES,
-      tooltip="For reference: Oblige 7.x's default for normal is 1.0",
+      tooltip="For reference: Oblige 7.x's default for normal is 1.0.\n\n" ..
+              "Mix It Up: randomizes quantities based on the prefered selection " ..
+              "under the Fine Tune options below.\n\n" ..
+              "Progressive: creates a curve of increasing monster population " ..
+              "also based on the Fine Tune options below.\n\n" ..
+              "It does not matter if your Fine Tune selections are reversed. " ..
+              "Progressive will pick the min VS max quantities selected.",
       default="scarce",
       gap = 1
     }
 
     {
       name="mix_it_up_upper_range",
-      label=_("Mixed Upper Range"),
+      label=_("Fine Tune U Range"),
       choices=UI_MONS.MIX_QUANTITIES,
       default="scarce",
-      tooltip="If you have Mix It Up selected, you can define the upper bound here. Otherwise, this option is simply ignored."
+      tooltip="If you have Mix It Up or Progressive selected, you can define the upper bound here. Otherwise, this option is simply ignored."
     }
 
     {
       name="mix_it_up_lower_range",
-      label=_("Mixed Lower Range"),
+      label=_("Fine Tune L Range"),
       choices=UI_MONS.MIX_QUANTITIES,
       default="nuts",
-      tooltip="If you have Mix It Up selected, you can define the lower bound here. Otherwise, this option is simply ignored."
+      tooltip="If you have Mix It Up or Progressive selected, you can define the lower bound here. Otherwise, this option is simply ignored."
       gap = 1
     }
 

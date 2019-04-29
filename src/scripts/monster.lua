@@ -821,9 +821,13 @@ function Monster_fill_room(R)
     base_num = base_num + 1.5 * gui.random() ^ 2
 
     local factor
+    local l_factor = MONSTER_KIND_TAB.few
+    local u_factor = MONSTER_KIND_TAB.heaps
 
     if OB_CONFIG.mons == "mixed" then
-      factor = rand.range(MONSTER_KIND_TAB.few, MONSTER_KIND_TAB.heaps)
+      factor = rand.range(l_factor, u_factor)
+    elseif OB_CONFIG.mons == "prog" then
+      factor = l_factor + (u_factor * LEVEL.game_along)
     else
       factor = MONSTER_KIND_TAB[OB_CONFIG.mons]
       assert(factor)
@@ -864,12 +868,18 @@ function Monster_fill_room(R)
     --
 
     local qty
+    local max_range = MONSTER_QUANTITIES[OB_CONFIG.mix_it_up_upper_range]
+    local min_range = MONSTER_QUANTITIES[OB_CONFIG.mix_it_up_lower_range]
+    local u_range = math.max(min_range, max_range)
+    local l_range = math.min(min_range, max_range)
 
     if OB_CONFIG.mons == "mixed" then
-      if OB_CONFIG.mix_it_up_lower_range == OB_CONFIG.mix_it_up_upper_range then
-        qty = OB_CONFIG.mix_it_up_lower_range
+      if l_range == u_range then
+        qty = l_range
       end
-      qty = rand.range(MONSTER_QUANTITIES[OB_CONFIG.mix_it_up_lower_range], MONSTER_QUANTITIES[OB_CONFIG.mix_it_up_upper_range])
+      qty = rand.range(l_range, u_range)
+    elseif OB_CONFIG.mons == "prog" then
+      qty = l_range + (u_range * LEVEL.game_along)
     else
       qty = MONSTER_QUANTITIES[OB_CONFIG.mons]
       assert(qty)
@@ -2327,4 +2337,3 @@ function Monster_make_battles()
 
   Monster_show_stats()
 end
-
