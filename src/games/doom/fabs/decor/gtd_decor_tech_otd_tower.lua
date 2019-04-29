@@ -9,12 +9,12 @@ PREFABS.Decor_outdoor_freestanding_tower =
 
   where  = "point"
   size   = 112
-  height = 512
+  height = 256
 
   bound_z1 = 0
-  bound_z2 = 512
+  bound_z2 = 256
 
-  z_fit  = { 40,48 }
+  z_fit  = { 96-16,96-8 }
 
   sink_mode = "never"
 }
