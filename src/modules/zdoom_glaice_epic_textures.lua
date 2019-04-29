@@ -336,6 +336,12 @@ function GLAICE_EPIC_TEXTURES.put_the_texture_wad_in()
     gui.wad_merge_sections(wad_file)
     wad_file = "games/doom/data/vending_machine_textures.wad"
     gui.wad_merge_sections(wad_file)
+
+    -- wad_merge_sections currently does not support merging HI_START
+    -- and HI_END... *sigh*
+    gui.wad_add_binary_lump("HI_START",{})
+    gui.wad_insert_file("games/doom/data/OBVNMCH1.png", "OBVNMCH1")
+    gui.wad_add_binary_lump("HI_END",{})
   end
 end
 ----------------------------------------------------------------
