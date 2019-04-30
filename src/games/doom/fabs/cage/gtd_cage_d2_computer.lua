@@ -21,6 +21,8 @@ PREFABS.Cage_wall_d2_computer_tech =
   y_fit = "top"
 
   sector_8  = { [8]=60, [2]=10, [3]=10, [17]=10, [21]=5 }
+
+  tex_SUPPORT3 = "SUPPORT2"
 }
 
 PREFABS.Cage_wall_d2_computer_hell =
@@ -30,6 +32,8 @@ PREFABS.Cage_wall_d2_computer_hell =
   map = "MAP02"
 
   theme = "hell"
+
+  tex_SUPPORT3 = "SUPPORT3"
 }
 
 PREFABS.Cage_wall_d2_computer_tech_flipped =
@@ -37,6 +41,8 @@ PREFABS.Cage_wall_d2_computer_tech_flipped =
   template = "Cage_wall_d2_computer_tech"
 
   map = "MAP03"
+
+  tex_SUPPORT3 = "SUPPORT2"
 }
 
 PREFABS.Cage_wall_d2_computer_hell_flipped =
@@ -46,6 +52,8 @@ PREFABS.Cage_wall_d2_computer_hell_flipped =
   map = "MAP04"
 
   theme = "hell"
+
+  tex_SUPPORT3 = "SUPPORT3"
 }
 
 PREFABS.Cage_freestanding_d2_computer_tech =
