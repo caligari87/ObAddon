@@ -11,13 +11,13 @@ PREFABS.Cage_wall_d2_computer_tech =
   where  = "seeds"
   shape  = "U"
 
-  seed_w = 1
+  seed_w = 2
   seed_h = 1
 
   deep   =  16
   over   = -16
 
-  x_fit = { 48,80 }
+  x_fit = { 112,144 }
   y_fit = "top"
 
   sector_8  = { [8]=60, [2]=10, [3]=10, [17]=10, [21]=5 }
