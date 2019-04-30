@@ -3,7 +3,7 @@ PREFABS.Arch_bare =
   file   = "door/gtd_bare_arch.wad"
   map    = "MAP01"
 
-  prob = 700
+  prob = 800
 
   kind   = "arch"
   where  = "edge"
