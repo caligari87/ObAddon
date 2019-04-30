@@ -29,7 +29,7 @@ PREFABS.Wall_gtd_winglass_wall_edge =
 PREFABS.Wall_gtd_winglass_wall_diag =
 {
   file   = "wall/gtd_wall_winglass_set.wad"
-  map    = "MAP03"
+  map    = "MAP02"
 
   prob   = 50
   group  = "gtd_winglass_wall"
