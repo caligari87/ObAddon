@@ -1,8 +1,4 @@
---
--- Wall Cage
---
-
-PREFABS.Cage_Wall =
+PREFABS.Cage_wall_bunker =
 {
   file   = "cage/gtd_cage_bunker.wad"
 
