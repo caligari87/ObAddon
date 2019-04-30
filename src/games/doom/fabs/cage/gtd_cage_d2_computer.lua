@@ -6,7 +6,7 @@ PREFABS.Cage_wall_d2_computer_tech =
 
   prob  = 150
 
-  theme  = "tech"
+  theme  = "!hell"
 
   where  = "seeds"
   shape  = "U"
@@ -46,4 +46,28 @@ PREFABS.Cage_wall_d2_computer_hell_flipped =
   map = "MAP04"
 
   theme = "hell"
+}
+
+PREFABS.Cage_freestanding_d2_computer_tech =
+{
+  file   = "cage/small_cage.wad"
+
+  map    = "MAP05"
+
+  prob   = 15
+  theme  = "!hell"
+
+  where  = "point"
+
+  size   = 80
+  height = 96
+
+  bound_z1 = 0
+}
+
+PREFABS.Cage_freestanding_d2_computer_hell =
+{
+  template = "Cage_freestanding_d2_computer_tech"
+
+  map = "MAP06"
 }
