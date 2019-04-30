@@ -2083,6 +2083,7 @@ GLAICE_DOOM1_HELL_WALL_GROUPS =
   gtd_tall_glass_epic_red = 15
   gtd_tall_glass_epic_blue = 15
   glaice_glass_huge = 25
+  gtd_winglass_wall = 25
 }
 
 GLAICE_DOOM1_FLESH_WALL_GROUPS =
@@ -2092,6 +2093,7 @@ GLAICE_DOOM1_FLESH_WALL_GROUPS =
   gtd_tall_glass_epic_red = 15
   gtd_tall_glass_epic_blue = 15
   glaice_glass_huge = 25
+  gtd_winglass_wall = 25
 }
 
 

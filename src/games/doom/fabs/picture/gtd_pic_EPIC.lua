@@ -482,6 +482,8 @@ PREFABS.Pic_EPIC_ridiculously_tall =
 
   theme = "!tech"
 
+  height = 224
+
   seed_w = 1
 
   tex_WINGLAS1 =

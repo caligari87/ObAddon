@@ -2269,6 +2269,7 @@ GLAICE_URBAN_WALL_GROUPS =
   gtd_tall_glass_epic_red = 2
   gtd_tall_glass_epic_blue = 2
   glaice_glass_huge = 3
+  gtd_winglass_wall = 4
 }
 
 GLAICE_HELL_WALL_GROUPS =
@@ -2279,6 +2280,7 @@ GLAICE_HELL_WALL_GROUPS =
   gtd_tall_glass_epic_blue = 15
   glaice_glass_huge = 25
   glaice_catacomb_wall_set = 40
+  gtd_winglass_wall = 40
 }
 
 
