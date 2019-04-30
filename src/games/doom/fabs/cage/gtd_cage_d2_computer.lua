@@ -58,7 +58,7 @@ PREFABS.Cage_wall_d2_computer_hell_flipped =
 
 PREFABS.Cage_freestanding_d2_computer_tech =
 {
-  file   = "cage/small_cage.wad"
+  file   = "cage/gtd_cage_d2_computer.wad"
 
   map    = "MAP05"
 
