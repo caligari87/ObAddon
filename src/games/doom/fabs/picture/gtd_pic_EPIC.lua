@@ -470,3 +470,25 @@ PREFABS.Pic_EPIC_superwide_longconsole =
   sector_1  = { [0]=70, [1]=20 }
 
 }
+
+-- 64x192
+PREFABS.Pic_EPIC_ridiculously_tall =
+{
+  template = "Pic_EPIC_box_gothic_big"
+
+  map = "MAP08"
+
+  prob = 25 * 5
+
+  theme = "!tech"
+
+  seed_w = 1
+
+  tex_WINGLAS1 =
+  {
+    WINGLAS1 = 50
+    WINGLAS2 = 50
+    WINGLAS3 = 50
+    WINGLAS4 = 50
+  }
+}
