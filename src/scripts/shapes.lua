@@ -4315,9 +4315,28 @@ GROW_LIQUID_SLAB_ENTRY =
   }
 }
 
+GROW_LIQUID_SLAB_ENTRY_2X =
+{
+  prob = 30
+
+  structure =
+  {
+    ".....","~1~1~"
+    ".....","~~~~~"
+    ".....","~/1%~"
+    ".....","~111~"
+    "x111x","x111x"
+  }
+
+  diagonals =
+  {
+    "~1","1~"
+  }
+}
+
 GROW_LIQUID_SLAB_STRAIGHT =
 {
-  prob = 100
+  prob = 150
 
   structure =
   {
@@ -4329,7 +4348,7 @@ GROW_LIQUID_SLAB_STRAIGHT =
 
 GROW_LIQUID_SLAB_STRAIGHT_4x4 =
 {
-  prob = 60
+  prob = 100
 
   structure =
   {
@@ -4341,7 +4360,7 @@ GROW_LIQUID_SLAB_STRAIGHT_4x4 =
 
 GROW_LIQUID_SLAB_OUTFUNNEL =
 {
-  prob = 40
+  prob = 60
 
   structure =
   {
