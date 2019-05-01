@@ -650,6 +650,7 @@ GLAICE_MATERIALS = {
   LITESTON = { t="LITESTON", f="MFLR8_1" } -- STONE2 variant w/ lights. From Doom1
   RDLITE01 = { t="RDWAL01", f="FLOOR1_6" } --REDLITE
   RDWAL01 = { t="RDWAL01", f="FLOOR1_6" } --REDWALL1
+  SANDBAGS = { t="SANDBAGS", f="RROCK09" }
   SUPPORT4 = { t="SUPPORT4", f="FLAT23" }
 
   -- Steps
