@@ -30,6 +30,8 @@ PREFABS.Locked_huge_red =
 
   -- texture is already "DOORRED"
   -- line special is already #135 (open red door)
+
+  can_flip = true
 }
 
 
@@ -141,4 +143,3 @@ PREFABS.Locked_huge3_yellow =
   tex_DOORRED = "DOORYEL"
   line_33     = 34
 }
-
