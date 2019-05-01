@@ -54,7 +54,7 @@ PREFABS.Wall_generic_gtd_high_gap_hell_straight =
   sector_1 = 0
 }
 
-PREFABs.Wall_generic_gtd_high_gap_hell_diagonal =
+PREFABS.Wall_generic_gtd_high_gap_hell_diagonal =
 {
   template = "Wall_generic_gtd_high_gap_diagonal"
 
@@ -75,7 +75,7 @@ PREFABS.Wall_generic_gtd_high_gap_straight_alt =
   tex_LITE3 = "LITEBLU4"
 }
 
-PREFABs.Wall_generic_gtd_high_gap_diagonal_alt =
+PREFABS.Wall_generic_gtd_high_gap_diagonal_alt =
 {
   template = "Wall_generic_gtd_high_gap_diagonal"
 
@@ -97,7 +97,7 @@ PREFABS.Wall_generic_gtd_high_gap_hell_straight_alt =
   sector_1 = 0
 }
 
-PREFABs.Wall_generic_gtd_high_gap_hell_diagonal_alt =
+PREFABS.Wall_generic_gtd_high_gap_hell_diagonal_alt =
 {
   template = "Wall_generic_gtd_high_gap_diagonal"
 
