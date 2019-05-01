@@ -7,6 +7,8 @@ PREFABS.Cage_wall_brncage =
   where  = "seeds"
   shape  = "U"
 
+  theme  = "!hell"
+
   seed_w = 1
   seed_h = 1
 
@@ -17,4 +19,24 @@ PREFABS.Cage_wall_brncage =
   y_fit = "top"
 
   sector_8  = { [8]=60, [2]=10, [3]=10, [17]=10, [21]=5 }
+
+  tex_BRNSMALC =
+  {
+    BRNSMALC = 50
+    MIDSPACE = 50
+  }
+}
+
+PREFABS.Cage_wall_brncage_hell =
+{
+  template = "Cage_wall_brncage"
+
+  theme    = "hell"
+
+  tex_BRNSMALC =
+  {
+    BRNSMALC = 15
+    MIDSPACE = 25
+    MIDBRN1 = 50
+  }
 }
