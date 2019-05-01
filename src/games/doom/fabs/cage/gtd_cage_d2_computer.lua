@@ -4,7 +4,7 @@ PREFABS.Cage_wall_d2_computer_tech =
 
   map   = "MAP01"
 
-  prob  = 150
+  prob  = 400
 
   theme  = "!hell"
 
