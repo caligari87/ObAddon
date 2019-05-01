@@ -614,6 +614,8 @@ ULTDOOM.THEMES =
       gtd_wall_grated_machines = 15
       gtd_wall_quakish_insets = 20
       gtd_ribbed_lights = 15
+      gtd_wall_high_gap_set = 10
+      gtd_wall_high_gap_alt_set = 10
     }
 
     cage_mats =
@@ -841,6 +843,9 @@ ULTDOOM.THEMES =
       gtd_wall_grated_machines = 20
       gtd_wall_quakish_insets = 25
       gtd_ribbed_lights = 15
+      gtd_wall_high_gap_set = 8
+      gtd_wall_high_gap_alt_set = 8
+
     }
 
   ceil_light_prob = 65
@@ -1023,6 +1028,8 @@ ULTDOOM.THEMES =
       gtd_wall_marbface = 40
       gtd_wall_quakish_insets = 40
       gtd_ribbed_lights = 5
+      gtd_wall_high_gap_set = 20
+      gtd_wall_high_gap_alt_set = 20
     }
 
     window_groups =
@@ -1283,6 +1290,8 @@ ULTDOOM.THEMES =
       gtd_wall_marbface = 30
       gtd_wall_quakish_insets = 25
       gtd_ribbed_lights = 8
+      gtd_wall_high_gap_set = 10
+      gtd_wall_high_gap_alt_set = 10
     }
 
     passable_decor =

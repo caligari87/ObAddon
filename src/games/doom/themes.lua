@@ -1184,6 +1184,8 @@ DOOM.THEMES =
       gtd_wall_grated_machines = 25
       gtd_wall_quakish_insets = 25
       gtd_ribbed_lights = 25
+      gtd_wall_high_gap_set = 12
+      gtd_wall_high_gap_alt_set = 12
     }
 
     window_groups =
@@ -1444,6 +1446,8 @@ DOOM.THEMES =
       gtd_wall_quakish_insets = 8
       gtd_ribbed_lights = 4
       gtd_wall_hell_ossuary = 2
+      gtd_wall_high_gap_set = 5
+      gtd_wall_high_gap_alt_set = 5
     }
 
     window_groups =
@@ -1786,6 +1790,8 @@ DOOM.THEMES =
       gtd_wall_marbface = 40
       gtd_wall_quakish_insets = 40
       gtd_wall_hell_ossuary = 40
+      gtd_wall_high_gap_set = 20
+      gtd_wall_high_gap_alt_set = 20
     }
 
     window_groups =
