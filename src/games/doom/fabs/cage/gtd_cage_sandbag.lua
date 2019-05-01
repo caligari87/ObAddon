@@ -19,3 +19,26 @@ PREFABS.Cage_sandbag_fort_for_two =
 
   size     = 96
 }
+
+PREFABS.Cage_sandbag_fort_EPIC =
+{
+  template   = "Cage_sandbag_fort"
+  map    = "MAP01"
+  prob   = 75
+
+  uses_epic_textures = true
+
+  tex_BRICK12 = "SANDBAGS"
+}
+
+PREFABS.Cage_sandbag_fort_for_two_EPIC =
+{
+  template = "Cage_sandbag_fort"
+  map      = "MAP02"
+  size     = 96
+  prob     = 75
+
+  uses_epic_textures = true
+
+  tex_BRICK12 = "SANDBAGS"
+}
