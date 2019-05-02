@@ -6,7 +6,7 @@ PREFABS.Cage_sandbag_fort =
   prob   = 50
 
   where  = "point"
-  size   = 128
+  size   = 96
 
   bound_z1 = 0
 }
@@ -19,34 +19,45 @@ PREFABS.Cage_sandbag_fort_for_two =
   prob     = 50
 
   where    = "point"
-  size     = 96
+  size     = 128
 
   bound_z1 = 0
 }
 
 PREFABS.Cage_sandbag_fort_EPIC =
 {
-  file   = "Cage_sandbag_fort"
+  file   = "cage/gtd_cage_sandbag.wad"
   map    = "MAP01"
-  prob   = 75
+
+  prob   = 50
+
+  where    = "point"
+  size     = 96
 
   replaces = "Cage_sandbag_fort"
   uses_epic_textures = true
 
   tex_BRICK12 = "SANDBAGS"
+
+  bound_z1 = 0
 }
 
 PREFABS.Cage_sandbag_fort_for_two_EPIC =
 {
-  template = "Cage_sandbag_fort_EPIC"
+  file     = "cage/gtd_cage_sandbag.wad"
   map      = "MAP02"
+
+  prob     = 50
+
+  where    = "point"
   size     = 96
-  prob     = 75
 
   replaces = "Cage_sandbag_fort_for_two"
   uses_epic_textures = true
 
   tex_BRICK12 = "SANDBAGS"
+
+  bound_z1 = 0
 }
 
 PREFABS.Cage_sandbag_inset =
