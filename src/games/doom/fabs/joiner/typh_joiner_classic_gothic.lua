@@ -2,7 +2,7 @@ PREFABS.Joiner_classic_gothic =
 {
   file   = "joiner/typh_joiner_classic_gothic.wad"
 
-  prob   = 200
+  prob   = 200 --200
   theme  = "!tech"
 
   where  = "seeds"
@@ -16,4 +16,7 @@ PREFABS.Joiner_classic_gothic =
 
   x_fit  = "frame"
   y_fit  = "frame"
+
+  delta_h = 0
+  nearby_h = 256
 }
