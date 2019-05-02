@@ -27,7 +27,7 @@ PREFABS.Door_plain2 =
 
 PREFABS.Door_small =
 {
-  file = "Door_plain2"
+  file = "door/door1.wad"
 
   map  = "MAP01"
 
