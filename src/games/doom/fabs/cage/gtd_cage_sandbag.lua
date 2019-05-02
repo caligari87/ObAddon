@@ -13,19 +13,24 @@ PREFABS.Cage_sandbag_fort =
 
 PREFABS.Cage_sandbag_fort_for_two =
 {
-  template = "Cage_sandbag_fort"
-
+  file = "cage/gtd_cage_sandbag.wad"
   map      = "MAP02"
 
+  prob     = 50
+
+  where    = "point"
   size     = 96
+
+  bound_z1 = 0
 }
 
 PREFABS.Cage_sandbag_fort_EPIC =
 {
-  template   = "Cage_sandbag_fort"
+  file   = "Cage_sandbag_fort"
   map    = "MAP01"
   prob   = 75
 
+  replaces = "Cage_sandbag_fort"
   uses_epic_textures = true
 
   tex_BRICK12 = "SANDBAGS"
@@ -33,12 +38,58 @@ PREFABS.Cage_sandbag_fort_EPIC =
 
 PREFABS.Cage_sandbag_fort_for_two_EPIC =
 {
-  template = "Cage_sandbag_fort"
+  template = "Cage_sandbag_fort_EPIC"
   map      = "MAP02"
   size     = 96
   prob     = 75
 
+  replaces = "Cage_sandbag_fort_for_two"
   uses_epic_textures = true
+
+  tex_BRICK12 = "SANDBAGS"
+}
+
+PREFABS.Cage_sandbag_inset =
+{
+  file = "cage/gtd_cage_sandbag.wad"
+  map  = "MAP03"
+
+  prob = 300
+
+  where = "seeds"
+  shape = "U"
+
+  seed_w = 2
+  seed_h = 1
+
+  deep = 16
+  over = 16
+
+  x_fit = { 80,96 160,176 }
+  y_fit = "top"
+}
+
+PREFABS.Cage_sandbag_inset_EPIC =
+{
+  file = "cage/gtd_cage_sandbag.wad"
+  map  = "MAP03"
+
+  prob = 300
+
+  replaces = "Cage_sandbag_inset"
+  uses_epic_textures = true
+
+  where = "seeds"
+  shape = "U"
+
+  seed_w = 2
+  seed_h = 1
+
+  deep = 16
+  over = 16
+
+  x_fit = { 80,96 160,176 }
+  y_fit = "top"
 
   tex_BRICK12 = "SANDBAGS"
 }
