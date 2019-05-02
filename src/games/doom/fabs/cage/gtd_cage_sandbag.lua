@@ -88,7 +88,7 @@ PREFABS.Cage_sandbag_inset_EPIC =
   deep = 16
   over = 16
 
-  x_fit = { 80,96 160,176 }
+  x_fit = { 80,96 , 160,176 }
   y_fit = "top"
 
   tex_BRICK12 = "SANDBAGS"
