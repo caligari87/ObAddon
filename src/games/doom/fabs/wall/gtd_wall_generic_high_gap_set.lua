@@ -5,7 +5,7 @@ PREFABS.Wall_generic_gtd_high_gap_straight =
 
   theme  = "!hell"
 
-  prob   = 50
+  prob   = 10
   group = "gtd_wall_high_gap_set"
 
   where  = "edge"
@@ -21,10 +21,19 @@ PREFABS.Wall_generic_gtd_high_gap_straight =
   sector_1 = { [0]=90, [1]=10 }
 }
 
+PREFABS.Wall_generic_gtd_high_gap_straight_plain =
+{
+  template = "Wall_generic_gtd_high_gap_straight"
+
+  map      = "MAP02"
+
+  prob = 50
+}
+
 PREFABS.Wall_generic_gtd_high_gap_diagonal =
 {
   file   = "wall/gtd_wall_marbface_set.wad"
-  map    = "MAP02"
+  map    = "MAP03"
 
   theme  = "!hell"
 
@@ -54,6 +63,21 @@ PREFABS.Wall_generic_gtd_high_gap_hell_straight =
   sector_1 = 0
 }
 
+PREFABS.Wall_generic_gtd_high_gap_hell_straight_plain =
+{
+  template = "Wall_generic_gtd_high_gap_straight"
+
+  map   = "MAP02"
+
+  prob  = 50
+
+  theme = "hell"
+
+  tex_LITE3 = "FIRELAVA"
+
+  sector_1 = 0
+}
+
 PREFABS.Wall_generic_gtd_high_gap_hell_diagonal =
 {
   template = "Wall_generic_gtd_high_gap_diagonal"
@@ -75,6 +99,20 @@ PREFABS.Wall_generic_gtd_high_gap_straight_alt =
   tex_LITE3 = "LITEBLU4"
 }
 
+PREFABS.Wall_generic_gtd_high_gap_straight_alt_plain =
+{
+  template = "Wall_generic_gtd_high_gap_straight"
+
+  map   = "MAP02"
+
+  prob  = 50
+
+  theme = "!hell"
+  group = "gtd_wall_high_gap_alt_set"
+
+  tex_LITE3 = "LITEBLU4"
+}
+
 PREFABS.Wall_generic_gtd_high_gap_diagonal_alt =
 {
   template = "Wall_generic_gtd_high_gap_diagonal"
@@ -88,6 +126,22 @@ PREFABS.Wall_generic_gtd_high_gap_diagonal_alt =
 PREFABS.Wall_generic_gtd_high_gap_hell_straight_alt =
 {
   template = "Wall_generic_gtd_high_gap_straight"
+
+  theme = "hell"
+  group = "gtd_wall_high_gap_alt_set"
+
+  tex_LITE3 = "FIREBLU1"
+
+  sector_1 = 0
+}
+
+PREFABS.Wall_generic_gtd_high_gap_hell_straight_alt_plain =
+{
+  template = "Wall_generic_gtd_high_gap_straight"
+
+  map   = "MAP02"
+
+  prob  = 50
 
   theme = "hell"
   group = "gtd_wall_high_gap_alt_set"
