@@ -32,7 +32,7 @@ PREFABS.Wall_generic_gtd_high_gap_straight_plain =
 
 PREFABS.Wall_generic_gtd_high_gap_diagonal =
 {
-  file   = "wall/gtd_wall_marbface_set.wad"
+  file   = "wall/gtd_wall_generic_high_gap_set.wad"
   map    = "MAP03"
 
   theme  = "!hell"
