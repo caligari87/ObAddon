@@ -2,7 +2,7 @@ PREFABS.Joiner_double_lift_tech =
 {
   file   = "joiner/gtd_double_lift.wad"
 
-  prob   = 50
+  prob   = 100
   style  = "steepness"
   theme  = "!hell"
 

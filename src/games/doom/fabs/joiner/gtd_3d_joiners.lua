@@ -3,7 +3,7 @@ PREFABS.Joiner_gtd_3D_joiner_center =
   file   = "joiner/gtd_3d_joiners.wad"
   map = "MAP01"
 
-  prob   = 225
+  prob   = 150
   style  = "steepness"
 
   engine   = "zdoom"
@@ -30,7 +30,7 @@ PREFABS.Joiner_gtd_3D_joiner_side_lift_1 =
   template = "Joiner_gtd_3D_joiner_center"
   map      = "MAP02"
 
-  prob = 115
+  prob = 75
 
   x_fit = { 136,144 }
 }
@@ -40,7 +40,7 @@ PREFABS.Joiner_gtd_3D_joiner_side_lift_2 =
   template = "Joiner_gtd_3D_joiner_center"
   map      = "MAP03"
 
-  prob = 115
+  prob = 75
 
   x_fit = { 112,120 }
 }

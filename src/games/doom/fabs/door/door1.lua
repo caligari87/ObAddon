@@ -32,7 +32,7 @@ PREFABS.Door_small =
 
   map = "MAP01"
 
-  prob = 1000
+  prob = 2000
 
 }
 
