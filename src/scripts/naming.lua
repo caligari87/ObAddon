@@ -833,6 +833,10 @@ namelib.NAMES =
         --+ Is this supposed to be Balrog from LotR or a variant from other media?
         Balrok=3,
 
+        -- Chaos Lords
+        -- See: https://en.wikipedia.org/wiki/Law_and_Chaos
+        Arioch=3, Mabelode=3, Urleh=3, Xiombarg=3,
+
         -- Seventh Sanctum demon generated names
         -- https://www.seventhsanctum.com/generate.php?Genname=adname
         --[[Bazhon=3, Espiap=3, Barmon=3, Xsosanit=3, Naur=3, Entimas=3, Lelahatn=3, Hlieradael=3, Rodhakta=3,
