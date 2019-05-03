@@ -2,18 +2,19 @@
 -- Outdoor ponds based on Oblige 0.97
 --
 
-
 PREFABS.Decor_frozsoul_097_water_pond1 =
 {
   file   = "decor/frozsoul_097_ponds.wad"
   map    = "MAP01"
 
-  prob   = 5000    -- high probability is needed to have a reasonable chance of appearing
-  theme  = "!hell"
+  style  = "liquids"
+
+  -- high probability is needed to have a reasonable chance of appearing
+  prob   = 5000
   env    = "outdoor"
 
   where  = "point"
-  size   = 128
+  size   = 96
 
   bound_z1 = 0
 
@@ -24,8 +25,11 @@ PREFABS.Decor_frozsoul_097_water_pond2 =
 {
   template = "Decor_frozsoul_097_water_pond1"
   map      = "MAP02"
+
+  size   = 128
 }
 
+--[[
 PREFABS.Decor_frozsoul_097_nukage_pond1 =
 {
   template = "Decor_frozsoul_097_water_pond1"
@@ -68,4 +72,4 @@ PREFABS.Decor_frozsoul_097_lava_pond2 =
   theme = "hell"
   flat_FWATER1 = "LAVA1"
 }
-
+]]
