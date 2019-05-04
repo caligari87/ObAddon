@@ -6,9 +6,16 @@ PREFABS.Cage_sandbag_fort =
   prob   = 50
 
   where  = "point"
-  size   = 96
+  size   = 104
 
   bound_z1 = 0
+
+  thing_3004 =
+  {
+    zombie = 50
+    shooter = 50
+    gunner = 50
+  }
 }
 
 PREFABS.Cage_sandbag_fort_for_two =
@@ -19,9 +26,16 @@ PREFABS.Cage_sandbag_fort_for_two =
   prob     = 50
 
   where    = "point"
-  size     = 128
+  size     = 136
 
   bound_z1 = 0
+
+  thing_3004 =
+  {
+    zombie = 50
+    shooter = 50
+    gunner = 50
+  }
 }
 
 PREFABS.Cage_sandbag_fort_EPIC =
@@ -32,7 +46,7 @@ PREFABS.Cage_sandbag_fort_EPIC =
   prob   = 50
 
   where    = "point"
-  size     = 96
+  size     = 104
 
   replaces = "Cage_sandbag_fort"
   uses_epic_textures = true
@@ -40,6 +54,13 @@ PREFABS.Cage_sandbag_fort_EPIC =
   tex_BRICK12 = "SANDBAGS"
 
   bound_z1 = 0
+
+  thing_3004 =
+  {
+    zombie = 50
+    shooter = 50
+    gunner = 50
+  }
 }
 
 PREFABS.Cage_sandbag_fort_for_two_EPIC =
@@ -50,7 +71,7 @@ PREFABS.Cage_sandbag_fort_for_two_EPIC =
   prob     = 50
 
   where    = "point"
-  size     = 96
+  size     = 136
 
   replaces = "Cage_sandbag_fort_for_two"
   uses_epic_textures = true
@@ -58,6 +79,13 @@ PREFABS.Cage_sandbag_fort_for_two_EPIC =
   tex_BRICK12 = "SANDBAGS"
 
   bound_z1 = 0
+
+  thing_3004 =
+  {
+    zombie = 50
+    shooter = 50
+    gunner = 50
+  }
 }
 
 PREFABS.Cage_sandbag_inset =
@@ -78,6 +106,13 @@ PREFABS.Cage_sandbag_inset =
 
   x_fit = { 80,96 , 160,176 }
   y_fit = "top"
+
+  thing_3004 =
+  {
+    zombie = 50
+    shooter = 50
+    gunner = 50
+  }
 }
 
 PREFABS.Cage_sandbag_inset_EPIC =
@@ -103,4 +138,11 @@ PREFABS.Cage_sandbag_inset_EPIC =
   y_fit = "top"
 
   tex_BRICK12 = "SANDBAGS"
+
+  thing_3004 =
+  {
+    zombie = 50
+    shooter = 50
+    gunner = 50
+  }
 }
