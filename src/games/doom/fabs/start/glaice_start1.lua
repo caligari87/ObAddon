@@ -27,6 +27,7 @@ PREFABS.Start_glaice_start_center_pillar_hell =
   tex_TEKWALL1 = { SKIN2=50, SKINFACE=50, MARBLE1=50, GSTVINE1=50, GSTVINE2=50, GSTONE1=50, SP_HOT1=50 }
   tex_SHAWN2 = "METAL"
   tex_COMPSPAN = { STONE2=50, STONE3=50 }
+  tex_SUPPORT2 = "SUPPORT3"
   flat_FLAT4 = "FLAT1"
   flat_CEIL5_1 = "FLOOR6_2"
 
