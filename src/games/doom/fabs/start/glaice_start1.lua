@@ -15,6 +15,12 @@ PREFABS.Start_glaice_start_center_pillar =
 
   x_fit = "frame"
   y_fit = "top"
+
+  tex_DOOR3 =
+  {
+    DOOR1=50
+    DOOR3=50
+  }
 }
 
 PREFABS.Start_glaice_start_center_pillar_hell =
@@ -31,6 +37,11 @@ PREFABS.Start_glaice_start_center_pillar_hell =
   flat_FLAT4 = "FLAT1"
   flat_CEIL5_1 = "FLOOR6_2"
 
+  tex_DOOR3 =
+  {
+    WOODMET=50
+    WOOD4=50
+  }
 }
 
 PREFABS.Start_glaice_start_lift =
@@ -50,6 +61,12 @@ PREFABS.Start_glaice_start_lift =
 
   x_fit = "frame"
   y_fit = "top"
+
+  tex_DOOR3 =
+  {
+    DOOR1=50
+    DOOR3=50
+  }
 }
 
 PREFABS.Start_glaice_start_lift_hell =
@@ -66,12 +83,24 @@ PREFABS.Start_glaice_start_lift_hell =
   tex_COMPSPAN = { STONE2=50, STONE3=50 }
   flat_FLAT4 = "FLAT1"
   flat_CEIL5_1 = "FLOOR7_2"
+
+  tex_DOOR3 =
+  {
+    WOODMET=50
+    WOOD4=50
+  }
 }
 
 PREFABS.Start_glaice_start_lift_downwards =
 {
   template = "Start_glaice_start_lift"
   map = "MAP03"
+
+  tex_DOOR3 =
+  {
+    DOOR1=50
+    DOOR3=50
+  }
 }
 
 PREFABS.Start_glaice_start_lift_hell_downwards =
@@ -88,4 +117,10 @@ PREFABS.Start_glaice_start_lift_hell_downwards =
   tex_COMPSPAN = { STONE2=50, STONE3=50 }
   flat_FLAT4 = "FLAT1"
   flat_CEIL5_1 = "FLOOR7_2"
+
+  tex_DOOR3 =
+  {
+    WOODMET=50
+    WOOD4=50
+  }
 }
