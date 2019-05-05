@@ -60,7 +60,7 @@ namelib.NAMES =
         ["Just Another"]=5
         ["Hell in the"]=5
 
-        -- these by Chris
+        -- these by Glaice
         ["Fear the"]=10
         ["Beware the"]=10
         ["Bane of the"]=10
@@ -76,6 +76,16 @@ namelib.NAMES =
 
         ["Oh Dear Not Another"]=10
         ["Chaos in the"]=10
+
+        -- More annoyed types by Glaice
+        ["Just stop with the"]=5
+        ["Fuck off with the"]=5
+        ["No, not another"]=5
+        ["Great, it's another"]=5
+        ["Enough with the"]=5
+        ["Meh, another"]=5
+        ["Come on, another"]=5
+        ["Eh, it's just a"]=5
 
         -- these by MSSP
         ["Battle for the"]=15
