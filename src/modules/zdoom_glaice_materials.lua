@@ -681,6 +681,9 @@ GLAICE_MATERIALS = {
   WDMET02 = { t="WDMET02", f="CEIL5_2" } --WOODMET2
   WDMET03 = { t="WDMET03", f="CEIL5_2" }
 
+  -- Jimmy's custom textures from Jimmytex
+  MOSROK3   = { t="MOSROK3", f="RROCK09" } -- Plutonia MOSROK, but brown
+
   -- Doom 2 Panels
   PANNY01   = { t="PANNY01", f="RROCK09" } --PANEL1
   PANNY02   = { t="PANNY02",   f="RROCK09" } --PANEL2

@@ -1905,6 +1905,7 @@ GLAICE_DOOM1_TECH_NATURALS =
   VINES2 = 10
   VINES3 = 10
   VINES4 = 10
+  MOSROK3 = 10
 }
 
 GLAICE_DOOM1_DEIMOS_NATURALS =
@@ -1926,6 +1927,7 @@ GLAICE_DOOM1_DEIMOS_NATURALS =
   VINES2 = 10
   VINES3 = 10
   VINES4 = 10
+  MOSROK3 = 10
 }
 
 GLAICE_DOOM1_HELL_NATURALS =
@@ -1947,8 +1949,6 @@ GLAICE_DOOM1_HELL_NATURALS =
   VINES4 = 3
 }
 
--- TODO: Change for Flesh theme so it's not same as Hell!
--- Same as other sections of Flesh themes!!
 GLAICE_DOOM1_FLESH_NATURALS =
 {
   ALTASH = 20
@@ -1957,6 +1957,7 @@ GLAICE_DOOM1_FLESH_NATURALS =
   ROK05 = 15
   ROK12 = 10
   ROK21 = 15
+  MOSROK3 = 10
   HELLROK1 = 40
   RDROK1 = 30
   RDROK2 = 35
@@ -2083,7 +2084,6 @@ GLAICE_DOOM1_HELL_WALL_GROUPS =
   gtd_tall_glass_epic_red = 15
   gtd_tall_glass_epic_blue = 15
   glaice_glass_huge = 25
-  gtd_winglass_wall = 25
 }
 
 GLAICE_DOOM1_FLESH_WALL_GROUPS =
@@ -2093,7 +2093,6 @@ GLAICE_DOOM1_FLESH_WALL_GROUPS =
   gtd_tall_glass_epic_red = 15
   gtd_tall_glass_epic_blue = 15
   glaice_glass_huge = 25
-  gtd_winglass_wall = 25
 }
 
 
