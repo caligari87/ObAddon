@@ -7,13 +7,13 @@ PREFABS.Cage_wall_bunker =
   where  = "seeds"
   shape  = "U"
 
-  seed_w = 1
+  seed_w = 2
   seed_h = 1
 
   deep   =  16
   over   = -16
 
-  x_fit = { 48,80 }
+  x_fit = { 120,136 }
   y_fit = "top"
 
   sector_8  = { [8]=60, [2]=10, [3]=10, [17]=10, [21]=5 }
