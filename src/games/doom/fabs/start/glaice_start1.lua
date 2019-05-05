@@ -39,7 +39,7 @@ PREFABS.Start_glaice_start_center_pillar_hell =
 
   tex_DOOR3 =
   {
-    WOODMET=50
+    WOODMET1=50
     WOOD4=50
   }
 }
@@ -86,7 +86,7 @@ PREFABS.Start_glaice_start_lift_hell =
 
   tex_DOOR3 =
   {
-    WOODMET=50
+    WOODMET1=50
     WOOD4=50
   }
 }
@@ -95,12 +95,6 @@ PREFABS.Start_glaice_start_lift_downwards =
 {
   template = "Start_glaice_start_lift"
   map = "MAP03"
-
-  tex_DOOR3 =
-  {
-    DOOR1=50
-    DOOR3=50
-  }
 }
 
 PREFABS.Start_glaice_start_lift_hell_downwards =
@@ -120,7 +114,7 @@ PREFABS.Start_glaice_start_lift_hell_downwards =
 
   tex_DOOR3 =
   {
-    WOODMET=50
+    WOODMET1=50
     WOOD4=50
   }
 }
