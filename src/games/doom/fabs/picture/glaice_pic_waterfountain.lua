@@ -5,7 +5,8 @@ PREFABS.Pic_glaice_waterfountain =
 
   prob   = 25 -- 25
 
-  style  = "liquids"
+  liquid = true
+
   theme  = "!tech"
 
   where  = "seeds"

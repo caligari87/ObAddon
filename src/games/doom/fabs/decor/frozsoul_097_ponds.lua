@@ -7,7 +7,7 @@ PREFABS.Decor_frozsoul_097_water_pond1 =
   file   = "decor/frozsoul_097_ponds.wad"
   map    = "MAP01"
 
-  style  = "liquids"
+  liquid = true
 
   -- high probability is needed to have a reasonable chance of appearing
   prob   = 5000
