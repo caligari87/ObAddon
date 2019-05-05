@@ -70,6 +70,13 @@ SKY_GEN.colormaps =
     2,2,1,1, 79,79,78,77,76,75,74,73,71,69
   }
 
+  GREEN_NEBULA =
+  {
+    0,0,0,0,0, 0,0,0,0,0, 0,0,0,0,0,
+    127, 126, 125, 124, 123, 122, 121,
+    120, 119, 118, 117, 115, 113, 112
+  }
+
   -- cloud colors --
 
   GREY_CLOUDS =
@@ -429,8 +436,9 @@ function SKY_GEN.generate_skies()
     local nebula_tab =
     {
       BLUE_NEBULA  = 90
-       RED_NEBULA  = 60
+      RED_NEBULA  = 60
       BROWN_NEBULA = 30
+      GREEN_NEBULA = 25
     }
 
 
