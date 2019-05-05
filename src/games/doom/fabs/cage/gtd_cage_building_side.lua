@@ -1,6 +1,7 @@
 PREFABS.Cage_wall_building_terrace =
 {
   file   = "cage/gtd_cage_building_side.wad"
+  map   = "MAP01"
 
   prob  = 1500
 
