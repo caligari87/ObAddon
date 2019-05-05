@@ -95,6 +95,19 @@ PREFABS.Pic_urban_downtown_facade1 =
     URBAN6 = 175
     URBAN8 = 175
   }
+
+  tex_STEP4 =
+  {
+    STEP1=50
+    STEP2=50
+    STEP3=50
+    STEP4=50
+    STEP5=50
+    STEP6=50
+    STEPLAD1=50
+    COMPBLUE=50
+    REDWALL=50
+  }
 }
 
 PREFABS.Pic_urban_downtown_facade2 =

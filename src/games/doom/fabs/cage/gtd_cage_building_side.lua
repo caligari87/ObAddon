@@ -7,6 +7,8 @@ PREFABS.Cage_wall_building_terrace =
   theme  = "urban"
   env    = "outdoor"
 
+  uses_epic_textures = true
+
   where  = "seeds"
   shape  = "U"
 
@@ -46,5 +48,31 @@ PREFABS.Cage_wall_building_terrace =
     MODWALL2=50
     MODWALL3=50
     MODWALL4=50
+  }
+
+  tex_STEP3 =
+  {
+    STEP1=50
+    STEP2=50
+    STEP3=50
+    STEP4=50
+    STEP5=50
+    STEP6=50
+    STEPLAD1=50
+    COMPBLUE=50
+    REDWALL=50
+  }
+
+  flat_TLITE6_5 =
+  {
+    TLITE6_5=50
+    TLITE6_6=50
+    TLITE5_2=50
+    TLITE5_3=50
+    TLITE65B=50
+    TLITE65G=50
+    TLITE65O=50
+    TLITE65W=50
+    TLITe65Y=50
   }
 }
