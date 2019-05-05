@@ -2069,11 +2069,19 @@ GLAICE_DOOM1_FLESH_SCENIC_FENCES =
 GLAICE_DOOM1_TECH_WALL_GROUPS =
 {
   gtd_wall_server_room2 = 25
+  gtd_collite_set_green = 7
+  gtd_collite_set_orange = 7
+  gtd_collite_set_blue = 7
+  gtd_collite_set_red = 7
 }
 
 GLAICE_DOOM1_DEIMOS_WALL_GROUPS =
 {
   gtd_wall_server_room2 = 25
+  gtd_collite_set_green = 7
+  gtd_collite_set_orange = 7
+  gtd_collite_set_blue = 7
+  gtd_collite_set_red = 7
 }
 
 GLAICE_DOOM1_HELL_WALL_GROUPS =
@@ -2084,6 +2092,10 @@ GLAICE_DOOM1_HELL_WALL_GROUPS =
   gtd_tall_glass_epic_blue = 15
   glaice_glass_huge = 25
   gtd_winglass_wall = 25
+  gtd_collite_set_green = 7
+  gtd_collite_set_orange = 7
+  gtd_collite_set_blue = 7
+  gtd_collite_set_red = 7
 }
 
 GLAICE_DOOM1_FLESH_WALL_GROUPS =
@@ -2094,6 +2106,10 @@ GLAICE_DOOM1_FLESH_WALL_GROUPS =
   gtd_tall_glass_epic_blue = 15
   glaice_glass_huge = 25
   gtd_winglass_wall = 25
+  gtd_collite_set_green = 7
+  gtd_collite_set_orange = 7
+  gtd_collite_set_blue = 7
+  gtd_collite_set_red = 7
 }
 
 

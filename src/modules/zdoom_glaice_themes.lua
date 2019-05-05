@@ -2260,6 +2260,10 @@ GLAICE_HELL_SCENIC_FENCES =
 GLAICE_TECH_WALL_GROUPS =
 {
   gtd_wall_server_room2 = 25
+  gtd_collite_set_green = 7
+  gtd_collite_set_orange = 7
+  gtd_collite_set_blue = 7
+  gtd_collite_set_red = 7
 }
 
 GLAICE_URBAN_WALL_GROUPS =
@@ -2270,6 +2274,10 @@ GLAICE_URBAN_WALL_GROUPS =
   gtd_tall_glass_epic_blue = 2
   glaice_glass_huge = 3
   gtd_winglass_wall = 4
+  gtd_collite_set_green = 1
+  gtd_collite_set_orange = 1
+  gtd_collite_set_blue = 1
+  gtd_collite_set_red = 1
 }
 
 GLAICE_HELL_WALL_GROUPS =
@@ -2281,6 +2289,10 @@ GLAICE_HELL_WALL_GROUPS =
   glaice_glass_huge = 25
   glaice_catacomb_wall_set = 40
   gtd_winglass_wall = 40
+  gtd_collite_set_green = 6
+  gtd_collite_set_orange = 6
+  gtd_collite_set_blue = 6
+  gtd_collite_set_red = 6
 }
 
 
