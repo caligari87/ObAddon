@@ -61,6 +61,9 @@ PREFABS.Wall_generic_gtd_high_gap_hell_straight =
   tex_LITE3 = "FIRELAVA"
 
   sector_1 = 0
+
+  tex_STEP4 = "STEPTOP"
+  flat_FLAT19 = "CEIL5_2"
 }
 
 PREFABS.Wall_generic_gtd_high_gap_hell_straight_plain =
@@ -76,6 +79,9 @@ PREFABS.Wall_generic_gtd_high_gap_hell_straight_plain =
   tex_LITE3 = "FIRELAVA"
 
   sector_1 = 0
+
+  tex_STEP4 = "STEPTOP"
+  flat_FLAT19 = "CEIL5_2"
 }
 
 PREFABS.Wall_generic_gtd_high_gap_hell_diagonal =
@@ -87,6 +93,9 @@ PREFABS.Wall_generic_gtd_high_gap_hell_diagonal =
   tex_LITE3 = "FIRELAVA"
 
   sector_1 = 0
+
+  tex_STEP4 = "STEPTOP"
+  flat_FLAT19 = "CEIL5_2"
 }
 
 PREFABS.Wall_generic_gtd_high_gap_straight_alt =
@@ -133,6 +142,9 @@ PREFABS.Wall_generic_gtd_high_gap_hell_straight_alt =
   tex_LITE3 = "FIREBLU1"
 
   sector_1 = 0
+
+  tex_STEP4 = "STEPTOP"
+  flat_FLAT19 = "CEIL5_2"
 }
 
 PREFABS.Wall_generic_gtd_high_gap_hell_straight_alt_plain =
@@ -149,6 +161,9 @@ PREFABS.Wall_generic_gtd_high_gap_hell_straight_alt_plain =
   tex_LITE3 = "FIREBLU1"
 
   sector_1 = 0
+
+  tex_STEP4 = "STEPTOP"
+  flat_FLAT19 = "CEIL5_2"
 }
 
 PREFABS.Wall_generic_gtd_high_gap_hell_diagonal_alt =
@@ -161,4 +176,7 @@ PREFABS.Wall_generic_gtd_high_gap_hell_diagonal_alt =
   tex_LITE3 = "FIREBLU1"
 
   sector_1 = 0
+
+  tex_STEP4 = "STEPTOP"
+  flat_FLAT19 = "CEIL5_2"
 }
