@@ -78,4 +78,6 @@ PREFABS.Cage_freestanding_d2_computer_hell =
   template = "Cage_freestanding_d2_computer_tech"
 
   map = "MAP06"
+
+  theme = "hell"
 }
