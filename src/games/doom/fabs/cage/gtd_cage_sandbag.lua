@@ -6,16 +6,9 @@ PREFABS.Cage_sandbag_fort =
   prob   = 50
 
   where  = "point"
-  size   = 104
+  size   = 96
 
   bound_z1 = 0
-
-  thing_3004 =
-  {
-    zombie = 50
-    shooter = 50
-    gunner = 50
-  }
 }
 
 PREFABS.Cage_sandbag_fort_for_two =
@@ -26,16 +19,9 @@ PREFABS.Cage_sandbag_fort_for_two =
   prob     = 50
 
   where    = "point"
-  size     = 136
+  size     = 128
 
   bound_z1 = 0
-
-  thing_3004 =
-  {
-    zombie = 50
-    shooter = 50
-    gunner = 50
-  }
 }
 
 PREFABS.Cage_sandbag_fort_EPIC =
@@ -54,13 +40,6 @@ PREFABS.Cage_sandbag_fort_EPIC =
   tex_BRICK12 = "SANDBAGS"
 
   bound_z1 = 0
-
-  thing_3004 =
-  {
-    zombie = 50
-    shooter = 50
-    gunner = 50
-  }
 }
 
 PREFABS.Cage_sandbag_fort_for_two_EPIC =
@@ -79,13 +58,6 @@ PREFABS.Cage_sandbag_fort_for_two_EPIC =
   tex_BRICK12 = "SANDBAGS"
 
   bound_z1 = 0
-
-  thing_3004 =
-  {
-    zombie = 50
-    shooter = 50
-    gunner = 50
-  }
 }
 
 PREFABS.Cage_sandbag_inset =
