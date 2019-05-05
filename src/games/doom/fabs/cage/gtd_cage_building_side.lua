@@ -19,7 +19,7 @@ PREFABS.Cage_wall_building_terrace =
   deep   =  16
   over   = -16
 
-  x_fit = "stretch"
+  x_fit = { 112,144 }
   y_fit = "top"
 
   tex_CITY01 =
