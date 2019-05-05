@@ -3304,7 +3304,10 @@ function Grower_grammatical_room(R, pass, is_emergency)
     apply_num = 1
 
   elseif pass == "sidewalk" then
-    apply_num = rand.irange(10,30)
+    R.areas[1]:calc_volume()
+    local sidewalk_apply_num = math.ceil(R.areas[1].svolume/4.5)
+    gui.printf("Road volume: " .. R.areas[1].svolume .. "\n")
+    apply_num = sidewalk_apply_num
 
   elseif pass == "street_fixer" then
     apply_num = 15
