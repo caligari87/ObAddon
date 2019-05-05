@@ -92,7 +92,7 @@ PREFABS.Wall_epic_collite_inset_straight_red =
 
   group = "gtd_collite_set_red"
 
-  tex_COLLITE1= "REDWAL01"
+  tex_COLLITE1= "RDWAL01"
 }
 
 PREFABS.Wall_epic_collite_inset_diagonal_red =
@@ -101,5 +101,5 @@ PREFABS.Wall_epic_collite_inset_diagonal_red =
 
   group = "gtd_collite_set_red"
 
-  tex_COLLITE1= "REDWAL01"
+  tex_COLLITE1= "RDWAL01"
 }
