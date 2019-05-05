@@ -39,6 +39,12 @@ PREFABS.Cage_wall_building_terrace =
     MIDWIND6=10
     FENCE2=10
     FENCE3=10
+  }
 
+  tex_MODWALL3 =
+  {
+    MODWALL2=50
+    MODWALL3=50
+    MODWALL4=50
   }
 }
