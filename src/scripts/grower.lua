@@ -850,68 +850,75 @@ function Grower_calc_rule_probs()
 
   ---| Grower_calc_rule_probs |---
 
+  each name,rule in SHAPE_GRAMMAR do
+    rule.use_prob = calc_prob(rule)
+  end
+
   -- Layout Absurdifier
 
-  print("\nAbsurdity Module report:\n")
-  if not OB_CONFIG.layout_absurdity then
-    print("Nothing is absurd and everything is normal. :(\n")
+  if OB_CONFIG.layout_absurdity then
+    gui.printf("\n--== Layout Absurdity Module ==--\n\n")
   end
 
-  local shape_is_absurd = false
-  local level_is_absurd = false
-
-  if OB_CONFIG.layout_absurdity == "all" then
-    level_is_absurd = true
-  elseif OB_CONFIG.layout_absurdity == "75" then
-    if rand.odds(75) then
-      level_is_absurd = true
-    end
-  elseif OB_CONFIG.layout_absurdity == "50" then
-    if rand.odds(50) then
-      level_is_absurd = true
-    end
-  elseif OB_CONFIG.layout_absurdity == "25" then
-    if rand.odds(25) then
-      level_is_absurd = true
+  if not LEVEL.is_procedural_gotcha then
+    if OB_CONFIG.layout_absurdity == "all" then
+      LEVEL.is_absurd = true
+    elseif OB_CONFIG.layout_absurdity == "75" then
+      if rand.odds(75) then
+        LEVEL.is_absurd = true
+      end
+    elseif OB_CONFIG.layout_absurdity == "50" then
+      if rand.odds(50) then
+        LEVEL.is_absurd = true
+      end
+    elseif OB_CONFIG.layout_absurdity == "25" then
+      if rand.odds(25) then
+        LEVEL.is_absurd = true
+      end
     end
   end
 
-  if level_is_absurd == true and not LEVEL.is_procedural_gotcha then
-    print("This level is absurd!\n")
+  if LEVEL.is_absurd then
+    gui.printf("This level is absurd!\n\n")
   else
-    print("This level is not absurd...\n")
+    gui.printf("This level is not absurd...\n\n")
   end
 
-  if LEVEL.is_procedural_gotcha and level_is_absurd == true then
-    print("This level doesn't need to be absurd. GOTCHA!\n")
-  end
+  local function Grower_absurdify()
+    local rules_to_absurdify = rand.pick({1,1,2,2,2,3,3,3,4,4,5,6})
+    gui.printf(rules_to_absurdify .. " rules will be absurd!\n\n")
 
-  local function Grower_absurdify(grammarset)
-    each name,rule in grammarset do
-      rule.use_prob = calc_prob(rule)
+    local grammarset = {}
+    each name,rule in SHAPE_GRAMMAR do
+      table.insert(grammarset, rule.name)
+    end
 
-      if LEVEL.is_procedural_gotcha then continue end
+    while rules_to_absurdify > 0 do
+      local absurded_rule = rand.pick(grammarset)
 
-      if level_is_absurd == true then
-        if rand.odds(1.25) then
-          shape_is_absurd = true
-        end
-      end
+      if not string.match(absurded_rule,"ROOT")
+      and not string.match(absurded_rule,"JOINER")
+      and not string.match(absurded_rule,"EMERGENCY")
+      and not string.match(absurded_rule,"STREET")
+      and not string.match(absurded_rule,"SIDEWALK")
+      and SHAPE_GRAMMAR[absurded_rule].is_absurd != true
+      and SHAPE_GRAMMAR[absurded_rule].use_prob != 0 then
+        SHAPE_GRAMMAR[absurded_rule].use_prob = SHAPE_GRAMMAR[absurded_rule].use_prob * 1000000
+        SHAPE_GRAMMAR[absurded_rule].is_absurd = true
 
-      if shape_is_absurd == true and level_is_absurd == true and
-      not string.match(rule.name,"JOINER") and not string.match(rule.name,"EMERGENCY") and
-      not string.match(rule.name,"STREET") and not string.match(rule.name,"SIDEWALK") then
-        rule.use_prob = rule.use_prob * 1000000
         if PARAM.print_shape_steps != "no" then
-          print(rule.name .. " is now ABSURDIFIED! WOOO!!!\n")
+          gui.printf(absurded_rule .. " is now ABSURDIFIED! WOOO!!!\n")
         end
-        shape_is_absurd = false
+
+        rules_to_absurdify = rules_to_absurdify - 1
       end
     end
   end
 
-  Grower_absurdify(SHAPE_GRAMMAR)
-
+  if LEVEL.is_absurd then
+    Grower_absurdify()
+    gui.printf("\n\n")
+  end
 end
 
 
