@@ -3107,6 +3107,7 @@ GROW_GATED_SIDE_RAMP =
   {
     "........","AAAAAAAA"
     "........","^^.AA.^^"
+    "........","11111111"
     "xxx11xxx","xxx11xxx"
   }
 }
