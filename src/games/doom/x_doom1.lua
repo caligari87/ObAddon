@@ -666,6 +666,7 @@ ULTDOOM.THEMES =
       gtd_window_cage_lowbars = 10
       gtd_window_full_open = 30
       gtd_window_bay = 20
+      gtd_window_absurdly_open = 25
     }
 
     cave_torches =
@@ -1044,6 +1045,7 @@ ULTDOOM.THEMES =
       gtd_window_cage_hell = 50
       gtd_window_arched = 80
       gtd_window_full_open = 60
+      gtd_window_absurdly_open = 40
     }
 
     cave_torches =
@@ -1348,6 +1350,7 @@ ULTDOOM.THEMES =
       gtd_window_cage_hell = 40
       gtd_window_arched = 80
       gtd_window_full_open = 40
+      gtd_window_absurdly_open = 30
     }
 
     style_list =
