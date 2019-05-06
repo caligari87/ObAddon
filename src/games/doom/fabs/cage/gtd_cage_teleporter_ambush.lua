@@ -25,7 +25,6 @@ PREFABS.Cage_teleporter_ambush_tech =
 PREFABS.Cage_teleporter_ambush_hell =
 {
   template = "Cage_teleporter_ambush_tech"
-
   map      = "MAP02"
 
   theme    = "hell"

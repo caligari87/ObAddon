@@ -22,7 +22,6 @@ PREFABS.Cage_Wall =
   y_fit = "top"
 
   sector_8  = { [8]=60, [2]=10, [3]=10, [17]=10, [21]=5 }
-
 }
 
 
