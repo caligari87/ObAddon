@@ -3099,6 +3099,18 @@ GROW_GATED_RAMP =
   }
 }
 
+GROW_GATED_SIDE_RAMP =
+{
+  prob = 15
+
+  structure =
+  {
+    "........","AAAAAAAA"
+    "........","^^.AA.^^"
+    "xxx11xxx","xxx11xxx"
+  }
+}
+
 --MSSP's simple bends. [BEND]
 
 GROW_BEND =
@@ -3557,7 +3569,7 @@ DECORATE_CAGE_ON_LIQUID_CANAL_SIDE =
 
 GROW_CAGE_ROUND_ARENA =
 {
-  prob = 10
+  prob = 15
 
   structure =
   {
@@ -3573,6 +3585,78 @@ GROW_CAGE_ROUND_ARENA =
   {
     "1C","C1"
     "1C","C1"
+  }
+}
+
+GROW_CAGE_SIDEWAYS =
+{
+  prob = 10
+
+  structure =
+  {
+    "11...","11..."
+    ".....","11111"
+    ".....","CCC.1"
+    ".....","11111"
+  }
+}
+
+GROW_CAGE_SIDEWAYS_STAIR =
+{
+  prob = 10
+
+  structure =
+  {
+    "11...","11..."
+    ".....","11111"
+    ".....","CCC.v"
+    ".....","AAAAA"
+  }
+}
+
+GROW_CAGE_ROUND_RAFTERS =
+{
+  prob = 10
+
+  structure =
+  {
+    "..11..","..11.."
+    "......","/C11C%"
+    "......","C/11%C"
+    "......","C%11/C"
+    "......","%C11C/"
+  }
+
+  diagonals =
+  {
+    ".C","C."
+    "C1","1C"
+    "C1","1C"
+    ".C","C."
+  }
+}
+
+GROW_CAGE_ROUND_RAFTERS_INTERSECTION =
+{
+  prob = 10
+
+  structure =
+  {
+    "..11..","..11.."
+    "......","/C11C%"
+    "......","C/11%C"
+    "......","111111"
+    "......","111111"
+    "......","C%11/C"
+    "......","%C11C/"
+  }
+
+  diagonals =
+  {
+    ".C","C."
+    "C1","1C"
+    "C1","1C"
+    ".C","C."
   }
 }
 
@@ -3883,8 +3967,6 @@ GROW_LIQUID_CANAL_STRAIGHT_STAIRCASE =
 {
   prob = 40
 
-
-
   structure =
   {
     "~..","~~~"
@@ -3899,8 +3981,6 @@ GROW_LIQUID_CANAL_STRAIGHT_STAIRCASE =
 GROW_LIQUID_CANAL_STRAIGHT_BULGE =
 {
   prob = 40
-
-
 
   structure =
   {
@@ -3922,8 +4002,6 @@ GROW_LIQUID_CANAL_STRAIGHT_BULGE =
 GROW_LIQUID_CANAL_CURVE =
 {
   prob = 60
-
-
 
   structure =
   {
@@ -3947,8 +4025,6 @@ GROW_LIQUID_CANAL_ENTRY =
 {
   prob = 50
 
-
-
   structure =
   {
     "x...","x./~"
@@ -3969,8 +4045,6 @@ GROW_LIQUID_CANAL_ENTRY =
 GROW_LIQUID_CANAL_ENTRY =
 {
   prob = 50
-
-
 
   structure =
   {
@@ -3993,8 +4067,6 @@ GROW_LIQUID_CANAL_OUT =
 {
   prob = 10
 
-
-
   structure =
   {
     "..~","./~"
@@ -4016,8 +4088,6 @@ GROW_LIQUID_CANAL_OUT_ALT =
 {
   prob = 10
 
-
-
   structure =
   {
     "~.","~A"
@@ -4033,8 +4103,6 @@ GROW_LIQUID_SCANAL_ENTRY =
 {
   prob = 20
 
-
-
   structure =
   {
     "1..","111"
@@ -4048,8 +4116,6 @@ GROW_LIQUID_SCANAL_ENTRY_FORWARD =
 {
   prob = 20
 
-
-
   structure =
   {
     "1....","111~~"
@@ -4062,8 +4128,6 @@ GROW_LIQUID_SCANAL_STRAIGHT =
 
   prob = 60
 
-
-
   structure =
   {
     "1.","11"
@@ -4075,10 +4139,7 @@ GROW_LIQUID_SCANAL_STRAIGHT =
 
 GROW_LIQUID_SCANAL_STRAIGHT_CROSSING =
 {
-
   prob = 30
-
-
 
   engine = "zdoom"
 
@@ -4098,10 +4159,7 @@ GROW_LIQUID_SCANAL_STRAIGHT_CROSSING =
 
 GROW_LIQUID_SCANAL_STAIR =
 {
-
   prob = 40
-
-
 
   structure =
   {
@@ -4114,10 +4172,7 @@ GROW_LIQUID_SCANAL_STAIR =
 
 GROW_LIQUID_SCANAL_OUTER_BEND =
 {
-
   prob = 30
-
-
 
   structure =
   {
@@ -4136,10 +4191,7 @@ GROW_LIQUID_SCANAL_OUTER_BEND =
 
 GROW_LIQUID_SCANAL_INNER_BEND =
 {
-
   prob = 30
-
-
 
   structure =
   {
@@ -4158,8 +4210,6 @@ GROW_LIQUID_SCANAL_INNER_BEND =
 GROW_LIQUID_SCANAL_T_JUNCTION =
 {
   prob = 20
-
-
 
   structure =
   {
@@ -4181,8 +4231,6 @@ GROW_NARROW_CANAL_ENTRY =
 {
   prob = 20
 
-
-
   structure =
   {
     "1..","111"
@@ -4195,8 +4243,6 @@ GROW_NARROW_CANAL_ENTRY_FROMSIDE =
 {
   prob = 20
 
-
-
   structure =
   {
     "1...","111~"
@@ -4207,8 +4253,6 @@ GROW_NARROW_CANAL_ENTRY_FROMSIDE =
 GROW_NARROW_CANAL_STRAIGHT =
 {
   prob = 80
-
-
 
   structure =
   {
@@ -4221,8 +4265,6 @@ GROW_NARROW_CANAL_STRAIGHT =
 GROW_NARROW_CANAL_STRAIGHT_CROSSING =
 {
   prob = 20
-
-
 
   engine = "zdoom"
 
@@ -4243,8 +4285,6 @@ GROW_NARROW_CANAL_STAIRS =
 {
   prob = 60
 
-
-
   structure =
   {
     "1..","1>A"
@@ -4256,8 +4296,6 @@ GROW_NARROW_CANAL_STAIRS =
 GROW_NARROW_CANAL_INNER_CURVE =
 {
   prob = 30
-
-
 
   structure =
   {
@@ -4277,8 +4315,6 @@ GROW_NARROW_CANAL_INNER_CURVE =
 GROW_NARROW_CANAL_OUTER_CURVE =
 {
   prob = 30
-
-
 
   structure =
   {
@@ -7783,6 +7819,26 @@ GROW_TRENCH_ENTRY =
     "1...","1111"
     "1...","1>AA"
     "1...","1111"
+  }
+}
+
+GROW_TRENCH_ENTRY_INWARD_TWO_PRONG =
+{
+  prob = 50
+
+  structure =
+  {
+    "....",".111"
+    "1...","1>%1"
+    "1...","11AA"
+    "1...","1>/1"
+    "....",".111"
+  }
+
+  diagonals =
+  {
+    "A1"
+    "A1"
   }
 }
 
