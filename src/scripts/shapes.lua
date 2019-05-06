@@ -3193,6 +3193,31 @@ GROW_STAIRED_HORSESHOE =
   }
 }
 
+GROW_STAIRED_HORSESHOE_TIGHTER =
+{
+  prob = 50
+
+  aversion = 10
+
+  structure =
+  {
+    "..........","./AAAAAA%."
+    "..........","/AAAAAAAA%"
+    "..........","AA/1^^1%AA"
+    "..........","AA111111AA"
+    "..........","AA111111AA"
+    "..........","AA111111AA"
+    "xxxx11xxxx","xxxx11xxxx"
+  }
+
+  diagonals =
+  {
+    ".A","A."
+    ".A","A."
+    "A1","1A"
+  }
+}
+
 GROW_STAIRED_T =
 {
   prob = 50
