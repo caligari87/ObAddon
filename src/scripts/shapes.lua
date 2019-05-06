@@ -3207,7 +3207,7 @@ GROW_STAIRED_HORSESHOE_TIGHTER =
     "..........","AA111111AA"
     "..........","AA111111AA"
     "..........","AA111111AA"
-    "xxxx11xxxx","xxxx11xxxx"
+    "..xx11xx..","..xx11xx.."
   }
 
   diagonals =
