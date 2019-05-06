@@ -564,11 +564,11 @@ ZDOOM_STORIES.STORIES =
       of the ground defense system! If you have means to disable it,
       this will allow friendly forces to land and push through!"]],
 
-      [[Pushing yourself through the dull corridors of the overrun facility
-      which bares the marks of battle, both demon and marine. However, you do
-      come across various computer monitors reading "ERROR" or "Rerouting power
-      from AAG" scrolling down the screens but you hear the familiar boom of
-      anti-aircraft guns, which is unusual. Something's wrong.]],
+      [[You push yourself through the corridors of the overrun area
+      which bares the marks of battle. You come across various consoles
+      reading "ERROR" and "AAG targeting comprimised" scrolling the screens.
+      You hear the familiar boom of anti-aircraft guns, which is unusual.
+      Something's wrong.]],
     }
     conclusions =
     {
