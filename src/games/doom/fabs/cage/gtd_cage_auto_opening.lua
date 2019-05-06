@@ -34,18 +34,3 @@ PREFABS.Cage_auto_open_smaller =
 
   x_fit  = { 80,96 , 160,176 }
 }
-
-PREFABS.Cage_auto_open_disgusting =
-{
-  template = "Cage_auto_open"
-  map      = "MAP03"
-
-  prob     = 150000000
-
-  theme    = "hell"
-
-  seed_w   = 2
-  seed_h   = 2
-
-  x_fit    = "frame"
-}
