@@ -78,13 +78,6 @@ PREFABS.Cage_sandbag_inset =
 
   x_fit = { 80,96 , 160,176 }
   y_fit = "top"
-
-  thing_3004 =
-  {
-    zombie = 50
-    shooter = 50
-    gunner = 50
-  }
 }
 
 PREFABS.Cage_sandbag_inset_EPIC =
@@ -110,11 +103,4 @@ PREFABS.Cage_sandbag_inset_EPIC =
   y_fit = "top"
 
   tex_BRICK12 = "SANDBAGS"
-
-  thing_3004 =
-  {
-    zombie = 50
-    shooter = 50
-    gunner = 50
-  }
 }

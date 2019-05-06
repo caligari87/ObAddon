@@ -3952,6 +3952,9 @@ function Grower_decorate_rooms()
   each R in room_list do
     if not R.is_hallway and not R.is_street then
       Grower_grammatical_room(R, "decorate")
+      if PARAM["live_minimap"] == "room" then
+        Seed_draw_minimap()
+      end
     end
   end
 end
