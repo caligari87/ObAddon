@@ -3306,11 +3306,13 @@ namelib.NAMES =
       ["The %a %p of %c"] = 3
 
       -- Simply located lexicon location (So you don't need to scroll up and down if you forget)
+      -- If we want to be be more specific, we could just add more lexicons, like I did with %m below.
       -- %a = Adjective
       -- %p = Place
       -- %c = Contributor name
       -- %d = Abstract / Abstract-like
       -- %e = Entities
+      -- %m = Material / Metal alloy
 
       -- Glaice adds more grammar rules
       ["Doomguy VS the %e"] = 10 -- Doomguy VS the [Entity]
@@ -3336,7 +3338,11 @@ namelib.NAMES =
       ["Doomguys Vacation with %c"] = 5 -- Doomguy's Vacation with [Name]
       ["Sin City: The %a %p"] = 5
       ["Sin City: The %d"] = 5
+      ["The %a %p of %m"] = 5
       ["Dead Base: The %d"] = 5
+      ["The %m %p"] = 4
+      ["As The %e Gather"] = 4
+      ["Hell's %a Division: %d"] = 4
       ["%a Sorcery"] = 3
       ["%a Witchcraft"] = 3
     }
@@ -3966,6 +3972,19 @@ namelib.NAMES =
         Hellbringers = 15
         Deathbringers = 10
 
+      }
+
+      -- Materials, namely metal alloys
+      m =
+      {
+        Iron = 30
+        Steel = 15
+        Cobalt = 7
+        Gold = 15
+        Brass = 5
+        Silver = 10
+        Bronze = 5
+        Copper = 7
       }
 
       c = -- contributor names
