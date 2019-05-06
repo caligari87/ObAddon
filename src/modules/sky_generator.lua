@@ -239,6 +239,12 @@ SKY_GEN.colormaps =
   }
 }
 
+-- Some ideas for Doom/Ultimate Doom if going with a theme to make it like "Original" theming:
+-- Phobos: White/Gray/Dark skies, brown/brown-green/ice hills/mountains
+-- Deimos: Red/Orange/Dark skies, brown/black/ice hills/mountains
+-- Hell: Red/Orange/Yellow/Green skies, any hill/mountain type goes
+-- E4: Orange/Yellow/White/Gray/Dark skies, any hill/mountain type goes
+
 
 SKY_GEN.themes =
 {
