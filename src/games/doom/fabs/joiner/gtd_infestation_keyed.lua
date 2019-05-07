@@ -14,7 +14,7 @@ PREFABS.Locked_keyed_infestation_red =
   deep   = 16
   over   = 16
 
-  prob   = 30
+  prob   = 0 --30
 
   y_fit = "frame"
   x_fit = "frame"
