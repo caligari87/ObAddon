@@ -14,7 +14,7 @@ PREFABS.Locked_keyed_infestation_red =
   deep   = 16
   over   = 16
 
-  prob   = 0 --30
+  prob   = 30
 
   y_fit = "frame"
   x_fit = "frame"
@@ -29,7 +29,7 @@ PREFABS.Locked_keyed_infestation_blue =
   key      = "k_blue"
 
   tex_DOORRED = "DOORBLU"
-  line_33     = 32
+  line_135 = 133
 }
 
 PREFABS.Locked_keyed_infestation_yellow =
@@ -39,5 +39,5 @@ PREFABS.Locked_keyed_infestation_yellow =
   key      = "k_yellow"
 
   tex_DOORRED = "DOORYEL"
-  line_33     = 34
+  line_135 = 137
 }
