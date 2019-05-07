@@ -3025,6 +3025,35 @@ DOOM.ROOM_THEMES =
     }
   }
 
+
+  hell_vent_Hallway =
+  {
+    env   = "hallway"
+    group = "vent"
+    prob  = 50
+
+    walls =
+    {
+      WOOD3 = 50
+      WOOD5 = 50
+      WOODMET1 = 50
+    }
+
+    floors =
+    {
+      FLAT5_1 = 50
+      FLAT5_2 = 50
+    }
+
+    ceilings =
+    {
+      CEIL1_1 = 50
+      CEIL3_2 = 50
+      CEIL3_3 = 50
+    }
+  }
+
+
   hell_metro_Hallway =
   {
     env   = "hallway"
