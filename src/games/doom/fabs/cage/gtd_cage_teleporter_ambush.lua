@@ -5,7 +5,7 @@ PREFABS.Cage_teleporter_ambush_tech =
 
   theme  = "!hell"
 
-  prob   = 150
+  prob   = 500
 
   where  = "seeds"
   shape  = "U"

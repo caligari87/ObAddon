@@ -3,7 +3,7 @@ PREFABS.Cage_auto_open =
   file   = "cage/gtd_cage_auto_opening.wad"
   map    = "MAP01"
 
-  prob   = 150
+  prob   = 500
 
   theme  = "!hell"
 
@@ -24,8 +24,6 @@ PREFABS.Cage_auto_open_smaller =
 {
   template = "Cage_auto_open"
   map      = "MAP02"
-
-  prob     = 150
 
   theme    = "!hell"
 
