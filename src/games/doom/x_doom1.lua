@@ -448,7 +448,7 @@ ULTDOOM.THEMES =
     wide_halls =
     {
       deuce = 50
-      --metro = 20 --Currently disabled until everything checks out normally
+      metro = 20
     }
 
     barrels =
