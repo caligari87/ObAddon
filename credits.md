@@ -2,7 +2,7 @@
 
 * **Andrew Apted** - The creator of Oblige.
 
-* **MsrSgtShooterPerson** - Repository maintainer, prefabs, shape rules, new modules, documentation.
+* **MsrSgtShooterPerson** - Repository maintainer, prefabs, shape rules, new modules, documentation, textures.
 * **Glaice** - Original base tweaks to Oblige v7.59, prefabs, new modules.
 * **Simon-v** - Lua normalizer, contributions to story generator.
 * **Beed28** - Prefabs.
