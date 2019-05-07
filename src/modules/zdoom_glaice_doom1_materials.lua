@@ -656,7 +656,7 @@ GLAICE_DOOM1_MATERIALS = {
   LITE96 = { t="LITE96", f="FLOOR7_1" } -- BROWN96 variant w/ lights. From Doom1
   LITEBLU3 = { t="LITEBLU3", f="CEIL5_1" } -- Large blue lights. From Doom1
   LITESTON = { t="LITESTON", f="MFLR8_1" } -- STONE2 variant w/ lights. From Doom1
-  RDLITE01 = { t="RDWAL01", f="FLOOR1_6" } --REDLITE
+  RDLITE01 = { t="RDLITE01", f="FLOOR1_6" } --REDLITE
   RDWAL01 = { t="RDWAL01", f="FLOOR1_6" } --REDWALL1
   SANDBAGS = { t="SANDBAGS", f="RROCK09" }
   SUPPORT4 = { t="SUPPORT4", f="FLAT23" }
