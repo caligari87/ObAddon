@@ -1994,6 +1994,37 @@ DOOM.ROOM_THEMES =
   }
 
 
+  any_metro_Hallway =
+  {
+    env   = "hallway"
+    group = "metro"
+    prob  = 1
+
+    walls =
+    {
+      GRAY1 = 50
+      GRAY5 = 50
+      ICKWALL1 = 30
+      ICKWALL3 = 30
+    }
+
+    floors =
+    {
+      FLAT3 = 30
+      FLOOR0_3 = 10
+      FLAT20  = 15
+      FLAT23 = 20
+    }
+
+    ceilings =
+    {
+      FLAT3 = 30
+      FLAT23 = 15
+      FLAT20 = 20
+      FLAT5_4 = 10
+    }
+  }
+
 -----  TECH BASES  --------------------------------
 
   tech_Startan =
