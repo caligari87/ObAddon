@@ -3640,6 +3640,21 @@ GROW_CAGE_SIDEWAYS_STAIR =
   }
 }
 
+GROW_CAGE_SIDEWAYS_BOTH_SIDES =
+{
+  prob = 10
+
+  structure =
+  {
+    "xx11xx","xx11xx"
+    "......","111111"
+    "......","1#11#1"
+    "......","1C11C1"
+    "......","1C11C1"
+    "......","1C11C1"
+  }
+}
+
 GROW_CAGE_ROUND_RAFTERS =
 {
   prob = 10
