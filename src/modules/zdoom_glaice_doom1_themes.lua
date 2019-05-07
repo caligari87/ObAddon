@@ -2074,6 +2074,9 @@ GLAICE_DOOM1_TECH_WALL_GROUPS =
   gtd_collite_set_orange = 7
   gtd_collite_set_blue = 7
   gtd_collite_set_red = 7
+  gtd_wall_lit_box_blue = 9
+  gtd_wall_lit_box_red = 9
+  gtd_wall_lit_box_white = 9
 }
 
 GLAICE_DOOM1_DEIMOS_WALL_GROUPS =
@@ -2083,6 +2086,9 @@ GLAICE_DOOM1_DEIMOS_WALL_GROUPS =
   gtd_collite_set_orange = 7
   gtd_collite_set_blue = 7
   gtd_collite_set_red = 7
+  gtd_wall_lit_box_blue = 9
+  gtd_wall_lit_box_red = 9
+  gtd_wall_lit_box_white = 9
 }
 
 GLAICE_DOOM1_HELL_WALL_GROUPS =

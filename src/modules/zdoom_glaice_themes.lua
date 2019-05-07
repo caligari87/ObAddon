@@ -2264,6 +2264,9 @@ GLAICE_TECH_WALL_GROUPS =
   gtd_collite_set_orange = 7
   gtd_collite_set_blue = 7
   gtd_collite_set_red = 7
+  gtd_wall_lit_box_blue = 9
+  gtd_wall_lit_box_red = 9
+  gtd_wall_lit_box_white = 9
 }
 
 GLAICE_URBAN_WALL_GROUPS =
@@ -2278,6 +2281,9 @@ GLAICE_URBAN_WALL_GROUPS =
   gtd_collite_set_orange = 1
   gtd_collite_set_blue = 1
   gtd_collite_set_red = 1
+  gtd_wall_lit_box_blue = 3
+  gtd_wall_lit_box_red = 3
+  gtd_wall_lit_box_white = 3
 }
 
 GLAICE_HELL_WALL_GROUPS =
