@@ -103,4 +103,6 @@ PREFABS.Cage_sandbag_inset_EPIC =
   y_fit = "top"
 
   tex_BRICK12 = "SANDBAGS"
+
+  tex_MIDBARS1 = "FENCE2"
 }
