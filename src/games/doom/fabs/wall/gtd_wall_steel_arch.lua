@@ -18,3 +18,13 @@ PREFABS.Wall_hell_thin_vaulted_outdoor =
   x_fit = "stretch"
   z_fit = { 72-32,72-16 }
 }
+
+PREFABS.Wall_hell_thin_vaulted_outdoor_diagonal =
+{
+  template = "Wall_hell_thin_vaulted_outdoor"
+  map  = "MAP02"
+
+  deep = 16
+
+  where = "diagonal"
+}
