@@ -574,23 +574,23 @@ GLAICE_THEMES =
 
     cliff_mats =
     {
-    GRNSTONE = 5
-    HELLROK1 = 10
-    RDROK1 = 15
-    ROK04 = 30
-    ROK05 = 30
-    ROK12 = 30
-    ROK13 = 30
-    ROK14 = 30
-    ROK15 = 30
-    ROK20 = 30
-    ROK21 = 30
-    ROK22 = 30
-    ROK23 = 30
-    SKULLS = 10
-    SKULLS2 = 10
-    BODIESB = 10
-    BODIESC = 10
+      GRNSTONE = 5
+      HELLROK1 = 10
+      RDROK1 = 15
+      ROK04 = 30
+      ROK05 = 30
+      ROK12 = 30
+      ROK13 = 30
+      ROK14 = 30
+      ROK15 = 30
+      ROK20 = 30
+      ROK21 = 30
+      ROK22 = 30
+      ROK23 = 30
+      SKULLS = 10
+      SKULLS2 = 10
+      BODIESB = 10
+      BODIESC = 10
     }
   }
 
@@ -601,11 +601,11 @@ GLAICE_THEMES =
 
     walls =
     {
-      CEM03 = 25
-      CEM04 = 25
-      CEM06 = 110
-      CEM07 = 110
-      CEM09 = 110
+      CEM03 = 20
+      CEM04 = 20
+      CEM06 = 20
+      CEM07 = 20
+      CEM09 = 20
       DRKCMT01 = 10
       DRKCMT02 = 10
       DRKCMT03 = 10
@@ -768,7 +768,6 @@ GLAICE_THEMES =
     }
   }
 
-
   hell_crimson =
   {
     env  = "building"
@@ -801,7 +800,6 @@ GLAICE_THEMES =
     RDROK2 = 50
     }
   }
-
 
   hell_glaicecave =
   {
