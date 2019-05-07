@@ -14,3 +14,32 @@ PREFABS.Hallway_vent_i1 =
   shape  = "I"
 }
 
+PREFABS.Hallway_vent_i_EPIC =
+{
+  template = "Hallway_vent_i1"
+  map = "MAP03"
+
+  prob = 15
+
+  theme = "!hell"
+
+  uses_epic_textures = true
+}
+
+PREFABS.Hallway_vent_i_lights =
+{
+  template = "Hallway_vent_i1"
+  map = "MAP03"
+
+  prob = 15
+
+  tex_FAN1 =
+  {
+    CEIL1_2 = 50
+  }
+
+  tex_WARNSTEP =
+  {
+    STEP3 = 50
+  }
+}
