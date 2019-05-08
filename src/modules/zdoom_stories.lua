@@ -107,7 +107,7 @@ ZDOOM_STORIES.LIST =
   zero_wing = 2
   the_avenger = 40
   the_avenger_from_hell = 40
-  asylum = 2
+  asylum = 10
 }
 
 ZDOOM_STORIES.STORIES =
@@ -720,7 +720,7 @@ ZDOOM_STORIES.STORIES =
 
       [[Ahead is a large setup of various portable machines and terminals.
       Each display shows graphs and readings you cannot interpret. The machines
-      are linked to a pedestal carrying _MCGUFFIN_HELL ! You swipe the item
+      are linked to a pedestal carrying _MCGUFFIN_HELL! You swipe the item
       off its pedestal and the displays lose their readings. UAC experiments
       rarely turn out good, you think to yourself.]],
 
