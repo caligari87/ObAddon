@@ -1937,7 +1937,7 @@ DOOM.ROOM_THEMES =
   {
     env   = "hallway"
     group = "vent"
-    prob  = 50
+    prob  = 1
 
     walls =
     {
