@@ -616,6 +616,7 @@ ULTDOOM.THEMES =
       gtd_ribbed_lights = 15
       gtd_wall_high_gap_set = 10
       gtd_wall_high_gap_alt_set = 10
+      gtd_generic_half_floor = 15
     }
 
     cage_mats =
@@ -846,6 +847,7 @@ ULTDOOM.THEMES =
       gtd_ribbed_lights = 15
       gtd_wall_high_gap_set = 8
       gtd_wall_high_gap_alt_set = 8
+      gtd_generic_half_floor = 15
 
     }
 
@@ -1031,6 +1033,7 @@ ULTDOOM.THEMES =
       gtd_ribbed_lights = 5
       gtd_wall_high_gap_set = 20
       gtd_wall_high_gap_alt_set = 20
+      gtd_generic_half_floor = 20
     }
 
     window_groups =
@@ -1294,6 +1297,7 @@ ULTDOOM.THEMES =
       gtd_ribbed_lights = 8
       gtd_wall_high_gap_set = 10
       gtd_wall_high_gap_alt_set = 10
+      gtd_generic_half_floor = 15
     }
 
     passable_decor =

@@ -1186,6 +1186,7 @@ DOOM.THEMES =
       gtd_ribbed_lights = 25
       gtd_wall_high_gap_set = 12
       gtd_wall_high_gap_alt_set = 12
+      gtd_generic_half_floor = 25
     }
 
     window_groups =
@@ -1449,6 +1450,7 @@ DOOM.THEMES =
       gtd_wall_hell_ossuary = 2
       gtd_wall_high_gap_set = 5
       gtd_wall_high_gap_alt_set = 5
+      gtd_generic_half_floor = 10
     }
 
     window_groups =
@@ -1794,6 +1796,7 @@ DOOM.THEMES =
       gtd_wall_hell_ossuary = 40
       gtd_wall_high_gap_set = 20
       gtd_wall_high_gap_alt_set = 20
+      gtd_generic_half_floor = 30
     }
 
     window_groups =
