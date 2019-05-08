@@ -14,3 +14,10 @@ PREFABS.Exit_immersive_point_exit2 =
 
   map = "MAP02"
 }
+
+PREFABS.Exit_immersive_point_portable_nuke =
+{
+  template = "Exit_immersive_point_exit1"
+
+  map = "MAP03"
+}
