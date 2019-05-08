@@ -14,7 +14,6 @@ PREFABS.Decor_3x3_bookshelves_thin =
   height = 128
 
   bound_z1 = 0
-  bound_z2 = 128
 
   tex_PANBLACK =
   {
@@ -23,7 +22,7 @@ PREFABS.Decor_3x3_bookshelves_thin =
     PANRED   = 50
   }
 
-  z_fit = "top"
+  sink_mode = "never"
 }
 
 PREFABS.Decor_3x3_bookshelves_thick =
