@@ -20,6 +20,4 @@ PREFABS.Exit_immersive_point_portable_nuke =
   template = "Exit_immersive_point_exit1"
 
   map = "MAP03"
-
-  size = 64
 }

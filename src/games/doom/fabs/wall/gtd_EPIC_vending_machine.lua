@@ -12,7 +12,7 @@ PREFABS.Decor_EPIC_vending_machine =
   on_liquids = "never"
 
   where  = "edge"
-  deep   = 52
+  deep   = 48
   height = 128
 
   bound_z1 = 0
@@ -27,13 +27,5 @@ PREFABS.Decor_EPIC_vending_machine =
     OBVNMCH3 = 50
     OBVNMCH4 = 50
     OBVNMCH5 = 50
-  }
-
-  sector_1 =
-  {
-    [0]=90
-    [1]=10
-    [2]=5
-    [3]=5
   }
 }
