@@ -28,7 +28,7 @@ PREFABS.Start_glaice_v5_start1 =
 PREFABS.Start_glaice_v5_start1_urban =
 {
   template = "Start_glaice_v5_start1"
-  map = "MAP02"
+  map = "MAP01"
 
   theme = "urban"
 
@@ -45,7 +45,7 @@ PREFABS.Start_glaice_v5_start1_urban =
 PREFABS.Start_glaice_v5_start1_hell =
 {
   template = "Start_glaice_v5_start1"
-  map = "MAP02"
+  map = "MAP01"
 
   theme = "hell"
 

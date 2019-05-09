@@ -25,4 +25,6 @@ PREFABS.Hallway_metro_i_rise =
   style = "steepness"
 
   delta_h = 64
+
+  can_flip = true
 }
