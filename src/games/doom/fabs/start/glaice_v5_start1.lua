@@ -38,7 +38,7 @@ PREFABS.Start_glaice_v5_start1_urban =
     mercury_lamp = 50
     mercury_small = 50
     candelabra = 50
-    barrel = 50
+    burning_barrel = 50
   }
 }
 
