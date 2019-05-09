@@ -27,3 +27,35 @@ PREFABS.Hallway_deuce_i1_tech =
   tex_METAL = "SHAWN2"
   flat_CEIL5_2 = "FLAT23"
 }
+
+PREFABS.Hallway_deuce_i1_rise =
+{
+  template = "Hallway_deuce_i1"
+  map = "MAP02"
+
+  prob = 15
+
+  style = "steepness"
+
+  delta_h = 32
+
+  can_flip = true
+}
+
+PREFABS.Hallway_deuce_i_rise_tech =
+{
+  template = "Hallway_deuce_i1"
+  map = "MAP02"
+  theme = "tech"
+
+  prob = 15
+
+  style = "steepness"
+
+  delta_h = 32
+
+  tex_METAL = "SHAWN2"
+  flat_CEIL5_2 = "FLAT23"
+
+  can_flip = true
+}
