@@ -1939,7 +1939,15 @@ function Room_prepare_hallways()
             new_h = new_h - delta_h
           end
         else
-          new_h = new_h + delta_h
+          -- MSSP-TODO: attempt to add can_flip support here
+          if piece.prefab_def.can_flip and rand.odds(50) then
+            new_h = new_h - delta_h
+            A.prelim_h = A.prelim_h - delta_h
+            piece.hallway_flip = true
+            piece.hallway_flip_offset = -delta_h
+          else
+            new_h = new_h + delta_h
+          end
         end
 
         flow(R, P, new_h, seen)
