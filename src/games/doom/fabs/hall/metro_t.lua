@@ -12,3 +12,9 @@ PREFABS.Hallway_metro_t =
   seed_w = 2
   seed_h = 2
 }
+
+PREFABS.Hallway_metro_t_plain =
+{
+  template = "Hallway_metro_t"
+  map = "MAP02"
+}
