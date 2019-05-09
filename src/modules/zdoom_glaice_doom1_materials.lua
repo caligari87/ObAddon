@@ -447,10 +447,6 @@ GLAICE_DOOM1_MATERIALS = {
 
   --Memento Mori 2 textures
   HELMET2 = { t="HELMET2", f="CEIL5_2" }
-  MM201 = { t="MM201", f="CEIL5_1" }
-  MM202 = { t="MM202", f="CEIL5_1" }
-  MM203 = { t="MM203", f="CEIL5_1" }
-  MM204 = { t="MM204", f="CEIL5_1" }
   MM205 = { t="MM205", f="MFLR8_4" } --Rock with metal patterns
   MM206 = { t="MM206", f="G20" } --Green rock
   MM207 = { t="MM207", f="G20" } --Green brick
