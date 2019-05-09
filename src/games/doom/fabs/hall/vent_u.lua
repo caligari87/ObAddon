@@ -41,3 +41,9 @@ PREFABS.Hallway_vent_cage1_hell =
   sector_1  = { [8]=50, [1]=15, [2]=5, [3]=5, [17]=10, [12]=7, [13]=7 }
 
 }
+
+PREFABS.Hallway_vent_u_lonely_ronery_grate =
+{
+  template = "Hallway_vent_u1"
+  map      = "MAP03"
+}
