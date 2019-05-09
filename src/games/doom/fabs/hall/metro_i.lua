@@ -14,3 +14,15 @@ PREFABS.Hallway_metro_i =
 
   sector_1  = { [0]=90, [1]=15 }
 }
+
+PREFABS.Hallway_metro_i_rise =
+{
+  template = "Hallway_metro_i"
+  map = "MAP02"
+
+  prob = 15
+
+  style = "steepness"
+
+  delta_h = 64
+}
