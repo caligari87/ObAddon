@@ -1944,7 +1944,6 @@ function Room_prepare_hallways()
             new_h = new_h - delta_h
             A.prelim_h = A.prelim_h - delta_h
             piece.hallway_flip = true
-            piece.hallway_flip_offset = -delta_h
           else
             new_h = new_h + delta_h
           end
