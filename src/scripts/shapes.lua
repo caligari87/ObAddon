@@ -3172,7 +3172,7 @@ GROW_TINY_U =
 
 GROW_STAIRED_HORSESHOE =
 {
-  prob = 50
+  prob = 35
 
   aversion = 10
 
@@ -3196,7 +3196,7 @@ GROW_STAIRED_HORSESHOE =
 
 GROW_STAIRED_HORSESHOE_TIGHTER =
 {
-  prob = 50
+  prob = 35
 
   aversion = 10
 
@@ -3221,7 +3221,7 @@ GROW_STAIRED_HORSESHOE_TIGHTER =
 
 GROW_STAIRED_T =
 {
-  prob = 50
+  prob = 35
 
   aversion = 10
 
@@ -3244,7 +3244,7 @@ GROW_STAIRED_T =
 
 GROW_STAIRED_J =
 {
-  prob = 50
+  prob = 35
 
   aversion = 10
 
@@ -3268,7 +3268,7 @@ GROW_STAIRED_J =
 
 GROW_STAIRED_SPIRAL =
 {
-  prob = 35
+  prob = 20
 
   aversion = 5
 
@@ -3297,7 +3297,9 @@ GROW_STAIRED_SPIRAL =
 
 GROW_STAIRED_L =
 {
-  prob = 75
+  prob = 50
+
+  aversion = 5
 
   structure =
   {
@@ -5651,7 +5653,7 @@ SMOOTHER_CATWALK_EDGES =
 
 GROW_T =
 {
-  prob = 75
+  prob = 35
 
   structure =
   {
@@ -5668,7 +5670,7 @@ GROW_T =
 
 GROW_T_STALK_ENTRY =
 {
-  prob = 65
+  prob = 35
 
   structure =
   {
@@ -5686,7 +5688,7 @@ GROW_T_STALK_ENTRY =
 
 GROW_X =
 {
-  prob = 65
+  prob = 35
 
   structure =
   {
@@ -5721,7 +5723,7 @@ GROW_X =
 
 GROW_H =
 {
-  prob = 65
+  prob = 35
 
   structure =
   {
@@ -5748,7 +5750,7 @@ GROW_H =
 
 GROW_H_STALK_ENTRY_TEST =
 {
-  prob = 65
+  prob = 35
 
   structure =
   {
@@ -5776,7 +5778,7 @@ GROW_H_STALK_ENTRY_TEST =
 
 GROW_Z =
 {
-  prob = 65
+  prob = 35
 
   structure =
   {
@@ -5805,7 +5807,7 @@ GROW_Z =
 
 GROW_Z_ALT =
 {
-  prob = 65
+  prob = 35
 
   structure =
   {
@@ -5834,7 +5836,7 @@ GROW_Z_ALT =
 
 GROW_C =
 {
-  prob = 75
+  prob = 50
 
   structure =
   {
@@ -5911,9 +5913,9 @@ GROW_L =
 
 GROW_ELEVATED_T_STALK_ENTRY =
 {
-  prob = 20
+  prob = 15
 
-  aversion = 10
+  aversion = 5
 
   structure =
   {
@@ -5934,9 +5936,9 @@ GROW_ELEVATED_T_STALK_ENTRY =
 
 GROW_ELEVATED_T_SIDE_ENTRY =
 {
-  prob = 20
+  prob = 15
 
-  aversion = 10
+  aversion = 5
 
   structure =
   {
@@ -5958,9 +5960,9 @@ GROW_ELEVATED_T_SIDE_ENTRY =
 
 GROW_ELEVATED_H_ENTRY =
 {
-  prob = 20
+  prob = 15
 
-  aversion = 10
+  aversion = 5
 
   structure =
   {
@@ -5982,9 +5984,9 @@ GROW_ELEVATED_H_ENTRY =
 
 GROW_ELEVATED_H_ALT =
 {
-  prob = 20
+  prob = 15
 
-  aversion = 10
+  aversion = 5
 
   structure =
   {
@@ -6006,7 +6008,9 @@ GROW_ELEVATED_H_ALT =
 
 GROW_ELEVATED_O =
 {
-  prob = 20
+  prob = 15
+
+  aversion = 5
 
   structure =
   {
@@ -6049,7 +6053,7 @@ GROW_ELEVATED_O =
 
 -- MSSP's huge-arse rooms. [HUGE]
 
-ROOT_WIDE_SPACE_4X2 =
+GROW_WIDE_SPACE_4X2 =
 {
   prob = 100
 
@@ -6062,7 +6066,7 @@ ROOT_WIDE_SPACE_4X2 =
   }
 }
 
-ROOT_WIDE_SPACE_4X8 =
+GROW_WIDE_SPACE_4X8 =
 {
   prob = 100
 
@@ -7197,9 +7201,9 @@ GROW_HUGE_LIQUID_ROOM_SQUARE_L =
 
 GROW_HUGE_LIQUID_ROOM_SQUARE_L_ELEVATED =
 {
-  prob = 75
+  prob = 30
 
-  aversion = 15
+  aversion = 10
 
   structure =
   {
@@ -7350,9 +7354,9 @@ GROW_HUGE_LIQUID_ROOM_STRAIGHT_SIDE =
 
 GROW_HUGE_LIQUID_ROOM_STRAIGHT_SIDE_WIDER =
 {
-  prob = 35
+  prob = 25
 
-  aversion = 15
+  aversion = 10
 
   structure =
   {
@@ -7374,9 +7378,9 @@ GROW_HUGE_LIQUID_ROOM_STRAIGHT_SIDE_WIDER =
 
 GROW_HUGE_LIQUID_ROOM_STRAIGHT_SIDE_WIDER_ELEVATED =
 {
-  prob = 40
+  prob = 20
 
-  aversion = 15
+  aversion = 10
 
   structure =
   {
