@@ -14,6 +14,18 @@ PREFABS.Hallway_vent_i1 =
   shape  = "I"
 }
 
+PREFABS.Hallway_vent_i_rise =
+{
+  template = "Hallway_vent_i1"
+  map = "MAP02"
+
+  prob = 15
+
+  style = "steepness"
+
+  delta_h = 88
+}
+
 PREFABS.Hallway_vent_i_EPIC =
 {
   template = "Hallway_vent_i1"
@@ -33,7 +45,7 @@ PREFABS.Hallway_vent_i_lights =
 
   prob = 15
 
-  tex_FAN1 =
+  flat_FAN1 =
   {
     CEIL1_2 = 50
   }
