@@ -23,7 +23,7 @@ PREFABS.Hallway_vent_i_rise =
 
   style = "steepness"
 
-  delta_h = 80
+  delta_h = 64
 }
 
 PREFABS.Hallway_vent_i_EPIC =
