@@ -294,7 +294,7 @@ namelib.NAMES =
         Security=5,
         --+ IT
         Communications=5, Programming=5, Comms=5,
-        Singularity=3,
+        Singularity=3, Infosec=3,
 
         -- descriptive: location
         Main=20, Entrance=10, Provisional=3,
@@ -2242,47 +2242,70 @@ namelib.NAMES =
         -- MSSP adds names
 
         ["1995"]=10
+        ["Above and Beyond"]=10
         ["Absolute Terror Field"]=10
+        ["Ace of Spades"]=10
         ["Appointment in Samarra"]=10
         ["Armaggeddon"]=10
         ["A Study In Red"]=10
+        ["Back in Black"]=10
+        ["Bad Blood"]=10
         ["Bad News"]=10
         ["Bellum Infinitus"]=10
+        ["Bone Hurting Juice"]=10
         ["Big Guts"]=10
         ["Bloodlust"]=10
         ["Bring It"]=10
+        ["Bring Out Your Dead"]=10
         ["Catch-22"]=10
+        ["Dance with the Devils"]=10
+        ["Darwin Awards"]=10
         ["Damnation"]=10
         ["Danger Zone"]=10
         ["Dead Reckoning"]=10
         ["Diabolus Ex"]=10
         ["Don't Stop Me Now"]=10
         ["Doom Eternal"]=10
+        ["Do Panic"]=10
         ["Do You Want To Live Forever?"]=10
+        ["Endgame"]=10
         ["Exterminatus"]=10
         ["Fear No Evil"]=10
         ["Forlorn Hope"]=10
         ["FUBAR"]=10
         ["Fucking Run"]=10
+        ["Future Imperfect"]=10
         ["Get Psyched!"]=10
+        ["Gotcha!"]=10
         ["Greased"]=10
+        ["Gratuitous Combat Scenario"]=10
         ["Hardboiled"]=10
+        ["Hardcore"]=10
+        ["Heavy Metal Mayhem"]=10
         ["He Comes"]=10
         ["Hellraiser"]=10
         ["Here Comes the Night Train"]=10
+        ["Hold Your Ground"]=10
         ["Highway to Hell"]=10
+        ["High Water"]=10
         ["I Don't Feel So Good"]=10
+        ["I Ii II L"]=10
         ["Judgement"]=10
+        ["Killing Fields"]=10
         ["Max Pain"]=10
-        ["Objective: Survive"]=10
+        ["Meatgrinder"]=10
+        ["No Chance in Hell"]=10
         ["No Rest For The Wicked"]=10
         ["No Man's Land"]=10
         ["No One Escapes"]=10
+        ["No Place for a Hero"]=10
         ["No Surrender"]=10
+        ["Objective: Survive"]=10
         ["One Doomed Marine"]=10
         ["Oof!"]=10
         ["On Your Knees"]=10
         ["Ouch!"]=10
+        ["Ouch Oof Owie"]=10
         ["Owie!"]=10
         ["Painkiller"]=10
         ["Pressure"]=10
@@ -2292,11 +2315,16 @@ namelib.NAMES =
         ["Resistance is Futile"]=10
         ["Run"]=10
         ["Seven Trumpets Sounding"]=10
+        ["Surrounded!"]=10
         ["Standoff"]=10
         ["Stranglehold"]=10
         ["Suicide Mission"]=10
         ["Tears in the Rain"]=10
+        ["Time to Kill"]=10
+        ["Tip of the Spear"]=10
+        ["The Fate of All Things"]=10
         ["The Game Is On"]=10
+        ["The Part Where He Gets You"]=10
         ["The Sentinel's Playground"]=10
         ["The Throne of Skulls"]=10
         ["The Tribute"]=10
@@ -4115,6 +4143,7 @@ namelib.NAMES =
          -- MSSP adds names
         ["People Die When They Are Killed"] = 10
         ["So Sad Alexa Play D RUNNIN"] = 10
+        ["Now With More Sentence Enhancers!"]=10
 
         -- Glaice adds names
         ["A Masterpiece in Progress"] = 40
