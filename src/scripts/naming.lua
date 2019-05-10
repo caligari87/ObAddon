@@ -723,7 +723,7 @@ namelib.NAMES =
         Baal=3, Berith=3, -- isn't this like the same guy, just his first and last name?
         Haagenti=3, Caim=2, Seir=3, Nybbas=2,
         Astaroth=2, Leviathan=1,
-        Pithius=3, Lempo=3,
+        Pithius=3, Lempo=3, Kasdeya=3,
 
         -- OMG THEY'RE FRENCH?!
         Balber=3, Carreau=3, Carnivean=3,
@@ -778,10 +778,10 @@ namelib.NAMES =
 
         -- Egyptian stuff
         Ammit=3, Apep=3, Kek=2, Set=3, Shezmu=3,
-        Anti=2, Anzus=2,
+        Anti=2, Anzus=2, Apophis=3
 
         -- Germanic stuff
-        Mephisto=3, Faust=3,
+        Mephisto=3, Faust=3, Bilwis=2,
 
         -- Polish stuff
         Boruta=3,
@@ -791,11 +791,17 @@ namelib.NAMES =
         Azar=3, Firawn=3, Haman=3, Jault=3, Samiri=3,
 
         -- Slavic stuff
-        Rusalka=3, Chernevog=3,
+        Rusalka=3, Chernevog=3, Jeretik=3, Vila=3,
 
         -- Indonesian stuff
         Barong=2, Pocong=2, Pontianak=2, Rangda=2,
         Suanggi=2, Toyol=2,
+
+        -- Iranian stuff
+        Astovidatu=3, Indra=3, Vaya=3, Zarich=3,
+
+        -- Filipino!
+        Batibat=2, Danag=2,
 
         -- Here come the Lovecraftians!
         Ktulu=2, Dagon=3, Nyarlathotep=2,
@@ -803,7 +809,7 @@ namelib.NAMES =
         -- civilizations that don't even exist anymore
         -- evil stuff (Sumerians, Akkadians etc.)
         Erishkigal=3, Utukku=3, Namtar=2, Lamashtu=2,
-        Ninurta=3,
+        Ninurta=3, ["Ardat Lili"]=2, Asag=2,
 
         -- Diablo games
         Diablo=7, Andariel=3, Duriel=3, Belial=3,
@@ -847,16 +853,12 @@ namelib.NAMES =
         -- See: https://en.wikipedia.org/wiki/Law_and_Chaos
         Arioch=3, Mabelode=3, Urleh=3, Xiombarg=3,
 
-        -- Seventh Sanctum demon generated names
-        -- https://www.seventhsanctum.com/generate.php?Genname=adname
-        --[[Bazhon=3, Espiap=3, Barmon=3, Xsosanit=3, Naur=3, Entimas=3, Lelahatn=3, Hlieradael=3, Rodhakta=3,
-        Oksanooh=3, Molsatta=3, Urason=3, Posxael=3, Xnaapesael=3, Upaism=3, Latesiel=3, Psizan=3, Hadat=3,
-        Mrasih=3, Ezachumos=3, Ason=3, Ptapan=3, Xositecon=3, Ibomderau=3, Riar=3, Herariirses=3, Talan=3,
-        Dmurip=3, Ssianazael=3, Adetit=3, Poac=3, Urlhes=3, Pasmusaat=3, Otupsezur=3, Zutbaheor=3, Roxen=3,
-        Knaohadon=3, Amisael=3, Bapsorahiel=3, Sruabilael=3, Optaal=3, Xacasnopiel=3, Ttasapah=3, Seben=3,
-        Sehelhanael=3, Mornael=3, Zihphol=3, Hupasimanael=3, Setramnadon=3, Amaost=3, Pirlonoax=3, Nuxuhan=3,
-        Tranepem=3, Ezznop=3, Adabsiroo=3, Noszanaez=3, Zemah=3, Ranimas=3, Spoepeniel=3, Tukapamariel=3,
-        Resriphahiel=3, Abmehaus=3, Enon=3, Azhesap=3, Hamiel=3, Umesas=3, Tebhecnorael=3, Opedib=3, Naheh=3,]]
+        -- Demonology A-Z names, see: https://hellhorror.com/demon-names-list-A/
+        Abatu=3, Abdiel=3, Abduxuel=3, Abezethibou=3, Adramelech=3, Angrboda=3, Apollyon=3,
+        Asakku=3, Atazoth=3, Flauros=3, Glasyalabolas=3, Jezebeth=3, Merihim=3, Morax=3,
+        Nicor=3, Nybbas=3, Nysrogh=3, Onoskelis=3, Philatanus=3, Sonneillon=3, Sorath=4,
+        Thamuz=3, Valafar=3, Verdelet=3,
+
 
         -- ObAddon contributor names
         NOUNMEMBERS = 90
