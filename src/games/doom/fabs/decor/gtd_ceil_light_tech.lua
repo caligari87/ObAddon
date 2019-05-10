@@ -3,7 +3,7 @@ PREFABS.Light_gtd_detailed =
   file   = "decor/gtd_ceil_light_tech.wad"
   map    = "MAP01"
 
-  prob   = 200
+  prob   = 100
   theme  = "!hell"
   env    = "building"
 
@@ -71,7 +71,7 @@ PREFABS.Light_gtd_tall_light =
   template = "Light_gtd_detailed"
   map = "MAP04"
 
-  prob = 300
+  prob = 150
 
   bound_z1 = -88
 
