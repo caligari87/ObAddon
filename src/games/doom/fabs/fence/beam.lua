@@ -6,6 +6,7 @@ PREFABS.Beam =
 {
   file   = "fence/beam.wad"
   map    = "MAP01"
+  theme = "!tech"
 
   kind   = "beam"
 
@@ -20,11 +21,19 @@ PREFABS.Beam =
   bound_z1 = 0
 }
 
+PREFABS.Beam_tech =
+{
+  template = "Beam"
+  theme = "tech"
+
+  tex_SUPPORT3 = "SUPPORT2"
+}
 
 PREFABS.Beam_diagonal =
 {
   file   = "fence/beam.wad"
   map    = "MAP02"
+  theme  = "!tech"
 
   kind   = "beam"
 
@@ -37,3 +46,10 @@ PREFABS.Beam_diagonal =
   bound_z1 = 0
 }
 
+PREFABS.Beam_diagonal_tech =
+{
+  template = "Beam_diagonal"
+  theme = "tech"
+
+  tex_SUPPORT3 = "SUPPORT2"
+}
