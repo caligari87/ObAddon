@@ -30,7 +30,6 @@ PREFABS.Light_gtd_detailed_alt =
 PREFABS.Light_gtd_flourescent_lamp =
 {
   template = "Light_gtd_detailed"
-
   map = "MAP02"
 
   bound_z1 = -24
@@ -39,7 +38,6 @@ PREFABS.Light_gtd_flourescent_lamp =
 PREFABS.Light_gtd_flourescent_lamp_alt =
 {
   template = "Light_gtd_detailed"
-
   map = "MAP02"
 
   bound_z1 = -24
@@ -52,7 +50,6 @@ PREFABS.Light_gtd_flourescent_lamp_alt =
 PREFABS.Light_gtd_round =
 {
   template = "Light_gtd_detailed"
-
   map = "MAP03"
 
   bound_z1 = -16
@@ -61,11 +58,22 @@ PREFABS.Light_gtd_round =
 PREFABS.Light_gtd_round_alt =
 {
   template = "Light_gtd_detailed"
-
   map = "MAP03"
 
   bound_z1 = -16
 
   tex_LITE5 = "LITEBLU4"
   flat_FLAT23 = "FLAT22"
+}
+
+PREFABS.Light_gtd_tall_light =
+{
+  template = "Light_gtd_detailed"
+  map = "MAP04"
+
+  prob = 300
+
+  bound_z1 = -88
+
+  height = 184
 }
