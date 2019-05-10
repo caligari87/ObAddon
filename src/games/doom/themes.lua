@@ -2429,6 +2429,7 @@ DOOM.ROOM_THEMES =
 
     walls =
     {
+      TEKGREN1 = 50
       BROWN1   = 50
       GRAY7    = 20
 
