@@ -11,9 +11,10 @@ PREFABS.Decor_3x3_bookshelves_thin =
   env    = "building"
 
   size   = 144
-  height = 128
+  height = 128+32
 
   bound_z1 = 0
+  bound_z2 = 128
 
   tex_PANBLACK =
   {
