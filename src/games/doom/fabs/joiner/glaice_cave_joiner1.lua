@@ -36,3 +36,20 @@ PREFABS.Joiner_glaice_cave_to_cave_joiner_2x1 =
 
   delta_h  = 32
 }
+
+PREFABS.Joiner_glaice_cave_to_cave_joiner_2x1_any_to_cave =
+{
+  template = "Joiner_glaice_cave_to_cave_joiner"
+
+  env = "any"
+  neighbor = "cave"
+
+  rank = 3
+  prob = 50
+
+  map = "MAP03"
+
+  seed_h = 1
+
+  delta_h = 64
+}
