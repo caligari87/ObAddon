@@ -3,7 +3,7 @@ PREFABS.Light_gtd_gothic_chandelier =
   file   = "decor/gtd_ceil_light_gothic.wad"
   map    = "MAP01"
 
-  prob   = 50
+  prob   = 35
   theme  = "!tech"
   env    = "building"
 
