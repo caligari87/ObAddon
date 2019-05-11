@@ -1972,7 +1972,7 @@ function Level_choose_themes()
 
   local function decide_mixins(EPI, main_theme, mixins)
     if not theme_tab[main_theme] then
-      error("Broken code handling mostly_xxx themes")
+      --error("Broken code handling mostly_xxx themes")
     end
 
     local new_tab = table.copy(theme_tab)
