@@ -3,7 +3,7 @@ PREFABS.Light_gtd_detailed =
   file   = "decor/gtd_ceil_light_tech.wad"
   map    = "MAP01"
 
-  prob   = 100
+  prob   = 80
   theme  = "!hell"
   env    = "building"
 
@@ -24,7 +24,9 @@ PREFABS.Light_gtd_detailed_alt =
 {
   template = "Light_gtd_detailed"
 
-  tex_TLITE6_6 = "TLITE6_5"
+  flat_TLITE6_6 = "TLITE6_5"
+  flat_CEIL5_2 = "CEIL5_1"
+  tex_BRONZE1 = "BROWNGRN"
 }
 
 PREFABS.Light_gtd_flourescent_lamp =
@@ -71,9 +73,20 @@ PREFABS.Light_gtd_tall_light =
   template = "Light_gtd_detailed"
   map = "MAP04"
 
-  prob = 150
+  bound_z1 = -88
+
+  height = 184
+}
+
+PREFABS.Light_gtd_tall_light_alt =
+{
+  template = "Light_gtd_detailed"
+  map = "MAP04"
 
   bound_z1 = -88
 
   height = 184
+
+  tex_EXITDOOR = "LITEBLU1"
+  flat_FLAT23 = "FLAT14"
 }
