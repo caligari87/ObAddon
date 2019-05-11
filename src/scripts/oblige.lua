@@ -287,6 +287,14 @@ function ob_match_level_theme(T)
     return result
   end
 
+  -- hack fix for TNT's Egypt theme, sigh
+  if LEVEL.theme_name == "egypt"
+    and (theme == "any"
+    or theme == "hell"
+    or not theme) then
+    return result
+  end
+
   -- normal check
   if ob_match_word_or_table(theme, LEVEL.theme_name) then
     return result
