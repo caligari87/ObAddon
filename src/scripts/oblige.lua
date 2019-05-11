@@ -266,13 +266,24 @@ function ob_match_level_theme(T)
     result = not result
   end
 
-  --hack fix for Deimos theme. It is now to use tech and hell defs altogether.
-  if LEVEL.theme_name == "deimos" and theme != "urban" then
+  -- MSSP-REVIEW: These hack fixes should probably be more generalized elsewhere
+  -- for future-proofing.
+
+  -- hack fix for Deimos theme. It is now to use tech and hell defs altogether.
+  if LEVEL.theme_name == "deimos"
+    and (theme == "tech"
+    or theme == "hell"
+    or theme == "any"
+    or not theme) then
     return result
   end
 
-  --hack fix for Thy Flesh theme too. Basically combine urban and hell fabs.
-  if LEVEL.theme_name == "flesh" and theme !="tech" then
+  -- hack fix for Thy Flesh theme too. Basically combine urban and hell fabs.
+  if LEVEL.theme_name == "flesh"
+    and (theme == "urban"
+    or theme == "hell"
+    or theme == "any"
+    or not theme) then
     return result
   end
 
@@ -1321,4 +1332,3 @@ function ob_build_cool_shit()
 
   return "ok"
 end
-
