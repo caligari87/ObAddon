@@ -159,17 +159,17 @@ function Level_determine_map_size(LEV)
 
   -- Mix It Up --
 
-  -- Adjusted probabilities again, Extreme is very slim probability but
-  -- still possible to show up. -Glaice, April 4th, 2019
+  -- Adjusted probabilities once again, Extreme is still very slim probability
+  -- but still possible to show up. -Glaice, May 11th, 2019
   if ob_size == "mixed" then
     local MIXED_PROBS =
     {
       small=30,
-      subregular=80,
-      regular=125,
-      superregular=60,
-      large=40,
-      extreme=3
+      subregular=85,
+      regular=135,
+      superregular=65,
+      large=45,
+      extreme=4
     }
 
     ob_size = rand.key_by_probs(MIXED_PROBS)
