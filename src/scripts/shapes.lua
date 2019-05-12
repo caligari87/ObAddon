@@ -716,8 +716,8 @@ GROW_DIAG_WING =
 
 GROW_BIG_CAGE =
 {
-  prob = 5
-  skip_prob = 70
+  prob = 8
+  skip_prob = 30
   aversion = 10
 
   structure =
@@ -734,8 +734,8 @@ GROW_BIG_CAGE =
 
 GROW_CAGEPAIR_1 =
 {
-  prob = 1
-  skip_prob = 50
+  prob = 8
+  skip_prob = 30
 
   structure =
   {
@@ -751,7 +751,7 @@ GROW_CAGEPAIR_1 =
 
 GROW_CAGEPAIR_2 =
 {
-  prob = 5
+  prob = 8
   skip_prob = 30
   aversion = 5
 
@@ -860,8 +860,8 @@ GROW_NARROWSTAIR_2 =
 
 GROW_CAGESTAIR_1 =
 {
-  prob = 5
-  skip_prob = 50
+  prob = 8
+  --skip_prob = 50
   aversion = 5
 
   structure =
@@ -877,8 +877,8 @@ GROW_CAGESTAIR_1 =
 
 GROW_CAGESTAIR_2 =
 {
-  prob = 5
-  skip_prob = 70
+  prob = 8
+  --skip_prob = 70
   aversion = 5
 
   structure =
@@ -894,8 +894,8 @@ GROW_CAGESTAIR_2 =
 
 GROW_CAGESTAIR_3 =
 {
-  prob = 5
-  skip_prob = 70
+  prob = 8
+  --skip_prob = 70
   aversion = 5
 
   structure =
@@ -3584,7 +3584,7 @@ GROW_CAGE_DOOM_MAP01_PILLARED =
 
 DECORATE_CAGE_ON_LIQUID_CANAL_SIDE =
 {
-  prob = 5
+  prob = 10
 
   structure =
   {
@@ -3597,7 +3597,7 @@ DECORATE_CAGE_ON_LIQUID_CANAL_SIDE =
 
 GROW_CAGE_ROUND_ARENA =
 {
-  prob = 15
+  prob = 8
 
   structure =
   {
@@ -3618,7 +3618,7 @@ GROW_CAGE_ROUND_ARENA =
 
 GROW_CAGE_SIDEWAYS =
 {
-  prob = 10
+  prob = 6
 
   structure =
   {
@@ -3631,7 +3631,7 @@ GROW_CAGE_SIDEWAYS =
 
 GROW_CAGE_SIDEWAYS_STAIR =
 {
-  prob = 10
+  prob = 106
 
   structure =
   {
@@ -3644,7 +3644,7 @@ GROW_CAGE_SIDEWAYS_STAIR =
 
 GROW_CAGE_SIDEWAYS_BOTH_SIDES =
 {
-  prob = 10
+  prob = 8
 
   structure =
   {
@@ -3659,7 +3659,7 @@ GROW_CAGE_SIDEWAYS_BOTH_SIDES =
 
 GROW_CAGE_ROUND_RAFTERS =
 {
-  prob = 10
+  prob = 8
 
   structure =
   {
@@ -3681,7 +3681,7 @@ GROW_CAGE_ROUND_RAFTERS =
 
 GROW_CAGE_ROUND_RAFTERS_INTERSECTION =
 {
-  prob = 10
+  prob = 6
 
   structure =
   {
@@ -6291,7 +6291,7 @@ GROW_EXTRUSION_SINK =
 
 DECORATE_CAGE_CANALS_STRAIGHT_3X =
 {
-  prob = 50
+  prob = 8
 
   structure =
   {
@@ -6842,7 +6842,7 @@ GROW_CLIFF_CURVED_X4 =
 
 DECORATE_CLIFF_CAGE =
 {
-  prob = 3
+  prob = 8
 
   structure =
   {
@@ -6856,7 +6856,7 @@ DECORATE_CLIFF_CAGE =
 
 DECORATE_CLIFF_CAGE_3X_ROW =
 {
-  prob = 3
+  prob = 8
 
   structure =
   {
