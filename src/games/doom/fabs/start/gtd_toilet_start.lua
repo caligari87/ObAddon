@@ -3,7 +3,7 @@ PREFABS.Start_gtd_toilet =
   file  = "start/gtd_toilet_start.wad"
   map   = "MAP01"
 
-  prob  = 100000 --1500
+  prob  = 100
 
   theme = "!hell"
 
