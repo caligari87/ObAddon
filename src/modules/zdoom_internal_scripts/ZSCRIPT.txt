@@ -1,0 +1,115 @@
+version "3.7"
+
+class FancyObligeTree : BigTree replaces BigTree
+{
+	States
+	{
+		Spawn:
+			TRE2 A 0 NoDelay
+			{
+				StateLabel fstate;
+
+				bool onGrass = false;
+				bool unknownFlat = false;
+
+				Name onflat = TexMan.GetName(floorpic);
+				switch(onflat)
+				{
+					case 'GRASS1':
+					case 'GRASS2':
+					case 'RROCK19':
+					case 'RROCK20':
+						onGrass = true;
+						break;
+					default:
+						unknownFlat = true;
+				}
+
+				if(onGrass)
+				{
+					if(random(1,100) <= 75) //Trees
+					{
+						switch(random(1,3))
+						{
+							case 1:
+								fstate = "OakTree";
+								break;
+							case 2:
+								fstate = "RedwoodTree";
+								break;
+							case 3:
+								fstate = "SomeThinTree";
+								break;
+						}
+					}
+					else //Bushes
+					{
+						switch(random(1,2))
+						{
+							case 1:
+								fstate = "ShrubA";
+								break;
+							case 2:
+								fstate = "ShrubB";
+								break;
+						}
+					}
+				}
+
+				if(unknownFlat)
+				{
+					switch(random(1,2))
+					{
+						case 1:
+							fstate = "VanillaA";
+							break;
+						case 2:
+							fstate = "VanillaB";
+							break;
+					}
+				}
+
+				//add a bit of random scaling jazz
+				double randomscale = frandom(0.8, 1.5);
+				scale.x *= randomscale;
+				scale.y *= randomscale;
+
+				// 50% chance of flippin'
+				scale.x *= randompick(-1,1);
+
+				return ResolveState(fstate);
+			}
+
+		OakTree:
+			OAK1 A 1;
+			Loop;
+
+		RedwoodTree:
+			RED1 A 1;
+			Loop;
+
+		SomeThinTree:
+			THN1 A 1;
+			Loop;
+
+		ShrubA:
+			SHB1 A 1;
+			Loop;
+
+		ShrubB:
+			SHB2 A 1;
+			Loop;
+
+		VanillaA:
+			TRE2 A 1;
+			Loop;
+
+		VanillaB:
+			TRE1 A 1;
+			Loop;
+	}
+}
+
+class FancyObligeTree2 : FancyObligeTree replaces TorchTree
+{
+}
