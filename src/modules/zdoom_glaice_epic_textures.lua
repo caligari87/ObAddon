@@ -347,6 +347,12 @@ function GLAICE_EPIC_TEXTURES.put_the_texture_wad_in()
     gui.wad_insert_file("games/doom/data/OBVNMCH5.png", "OBVNMCH5")
     gui.wad_add_binary_lump("HI_END",{})
   end
+
+  if PARAM.custom_trees != "no" then
+    gui.wad_merge_sections("modules/zdoom_internal_scripts/ObAddon_trees.wad")
+    gui.wad_insert_file("modules/zdoom_internal_scripts/DECORATE.txt", "DECORATE")
+    gui.wad_insert_file("modules/zdoom_internal_scripts/BEHAVIOR.lmp", "BEHAVIOR")
+  end
 end
 ----------------------------------------------------------------
 
@@ -376,7 +382,7 @@ OB_MODULES["glaice_epic_textures"] =
       choices = GLAICE_EPIC_TEXTURES.YES_NO
       default = "yes"
       tooltip = "Adds new Epic Textures liquid flats."
-      priority=2
+      priority=3
     }
 
     include_package =
@@ -389,6 +395,20 @@ OB_MODULES["glaice_epic_textures"] =
         "Allows the trimming down of resulting WAD by not merging the Epic texture WAD.\n\n" ..
         "This will require you to extract and load up the WAD manually in your preferred sourceport installation.\n\n" ..
         "This is the preferrable option for multiplayer situations and server owners and have each client obtain a copy of the texture pack instead.\n"
+      priority=2
+    }
+
+    custom_trees =
+    {
+      name = "custom_trees"
+      label = _("Custom Trees")
+      choices = GLAICE_EPIC_TEXTURES.YES_NO
+      default = "yes"
+      tooltip =
+        "Adds custom flat-depedendent tree sprites into the game. Flat-dependency check itself " ..
+        "currently does not work correctly and all trees are replaced irrespective of theme " ..
+        "with earth-like trees. If you are playing a mod that already does DECORATE trees " ..
+        "it may be better to leave this off."
       priority=1
     }
   }
