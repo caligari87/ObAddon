@@ -839,9 +839,14 @@ namelib.NAMES =
         Draco=2, -- it's Latin for dragon but I don't know anything else more specific
         Ouroboros=5, -- actually sort of a neutral symbol
 
-        -- Doom community people?
-        Linguica=1, -- Doomworld co-founder and administrator
-        Bloodshedder=1, -- Doomworld administrator
+        -- Doom community people, namely the more well known folks
+        Mordeth=2, -- Doomworld co-founder and administrator (See also: https://doomwiki.org/wiki/Mordeth)
+        Linguica=2, -- Doomworld co-founder and administrator
+        Bloodshedder=2, -- Doomworld administrator
+        Mechadon=2, -- Well known Doom level designer (See also: https://doomwiki.org/wiki/Brett_Harrell_(Mechadon))
+        ["Ty Halderman"]=2, -- Former /idgames/ maintainer. Passed away back in July of 2015 at age 69
+        Quasar=2, -- DoomWiki administrator, Doomworld moderator, lead programmer of Team Eternity
+        Fraggle=2, -- Chocolate Doom developer, DoomWiki sysop
 
         -- Hexen?
         Vuradi=2,
