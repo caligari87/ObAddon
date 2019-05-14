@@ -2314,3 +2314,16 @@ GLAICE_HELL_WINDOW_GROUPS =
 {
   gtd_window_gothic_epic = 80
 }
+
+
+-- intercepts for the new environment theme feature
+
+GLAICE_SNOW_OUTDOORS =
+{
+
+}
+
+GLAICE_DESERT_OUTDOORS =
+{
+
+}

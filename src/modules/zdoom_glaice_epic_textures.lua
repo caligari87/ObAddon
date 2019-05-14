@@ -60,7 +60,10 @@ function GLAICE_EPIC_TEXTURES.setup(self)
 end
 
 function GLAICE_EPIC_TEXTURES.create_environment_themes()
-  gui.printf("OH MAN I AM NOT GOOD WITH COMPUTER PLZ TO HALP\n");
+  error(
+    "create_environment_themes()\n" ..
+    "OH MAN I AM NOT GOOD WITH COMPUTER PLZ TO HALP\n"
+    );
 end
 
 function GLAICE_EPIC_TEXTURES.put_new_materials()
@@ -436,6 +439,7 @@ OB_MODULES["glaice_epic_textures"] =
       choices = GLAICE_EPIC_TEXTURES.ENVIRONMENT_THEME_CHOICES
       default = "random"
       tooltip =
+        "// THIS FEATURE IS CURRENTLY UNDER CONSTRUCTION \\\\\n" ..
         "Influences outdoor environments with different climate-based textures such as " ..
         "desert or snow."
       priority=2
