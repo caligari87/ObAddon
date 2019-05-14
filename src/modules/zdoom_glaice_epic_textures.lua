@@ -38,6 +38,17 @@ GLAICE_EPIC_TEXTURES.SOUCEPORT_CHOICES =
   "no",       _("No"),
 }
 
+GLAICE_EPIC_TEXTURES.ENVIRONMENT_THEME_CHOICES =
+{
+  "random",    _("Random"),
+  "mixed",     _("A Bit Mixed"),
+  "snowish",   _("Snow-ish"),
+  "desertish", _("Desert-ish"),
+  "snow",      _("Always Snow"),
+  "desert",    _("Always Desert"),
+  "no",        _("No"),
+}
+
 function GLAICE_EPIC_TEXTURES.setup(self)
   for name,opt in pairs(self.options) do
     local value = self.options[name].value
@@ -46,6 +57,10 @@ function GLAICE_EPIC_TEXTURES.setup(self)
 
   GLAICE_EPIC_TEXTURES.put_new_materials()
   PARAM.epic_textures_activated = true
+end
+
+function GLAICE_EPIC_TEXTURES.create_environment_themes()
+  gui.printf("OH MAN I AM NOT GOOD WITH COMPUTER PLZ TO HALP\n");
 end
 
 function GLAICE_EPIC_TEXTURES.put_new_materials()
@@ -379,6 +394,7 @@ OB_MODULES["glaice_epic_textures"] =
   hooks =
   {
     setup = GLAICE_EPIC_TEXTURES.setup
+    begin_level = GLAICE_EPIC_TEXTURES.create_environment_themes
     all_done = GLAICE_EPIC_TEXTURES.put_the_texture_wad_in
   }
 
@@ -393,20 +409,7 @@ OB_MODULES["glaice_epic_textures"] =
       choices = GLAICE_EPIC_TEXTURES.YES_NO
       default = "yes"
       tooltip = "Adds new Epic Textures liquid flats."
-      priority=3
-    }
-
-    include_package =
-    {
-      name = "include_package"
-      label = _("Texture WAD Merge")
-      choices = GLAICE_EPIC_TEXTURES.YES_NO
-      default = "yes"
-      tooltip =
-        "Allows the trimming down of resulting WAD by not merging the Epic texture WAD.\n\n" ..
-        "This will require you to extract and load up the WAD manually in your preferred sourceport installation.\n\n" ..
-        "This is the preferrable option for multiplayer situations and server owners and have each client obtain a copy of the texture pack instead.\n"
-      priority=2
+      priority=4
     }
 
     custom_trees =
@@ -420,6 +423,32 @@ OB_MODULES["glaice_epic_textures"] =
         "trees on specific grass flats and will be expanded in the future to accomnodate " ..
         "Epic Textures and more. If you are playing a mod that already does its own trees, " ..
         "it may be better to leave this off."
+      priority=3
+    }
+
+    environment_themes =
+    {
+      name = "environment_themes"
+      label = _("Environment Themes")
+      choices = GLAICE_EPIC_TEXTURES.ENVIRONMENT_THEME_CHOICES
+      default = "random"
+      tooltip =
+        "Influences outdoor environments with different climate-based textures such as " ..
+        "desert or snow."
+      priority=2
+      gap=1
+    }
+
+    include_package =
+    {
+      name = "include_package"
+      label = _("Texture WAD Merge")
+      choices = GLAICE_EPIC_TEXTURES.YES_NO
+      default = "yes"
+      tooltip =
+        "Allows the trimming down of resulting WAD by not merging the Epic texture WAD.\n\n" ..
+        "This will require you to extract and load up the WAD manually in your preferred sourceport installation.\n\n" ..
+        "This is the preferrable option for multiplayer situations and server owners and have each client obtain a copy of the texture pack instead.\n"
       priority=1
     }
   }
