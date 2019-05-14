@@ -8,9 +8,14 @@ actor FancyObligeTree replaces BigTree
 	States
 	{
 		Spawn:
-			TRE2 A 0 ACS_NamedExecuteAlways("IsMyAssGrass", 0, 0, 0, 0)
+			TRE2 A 3
+			TRE2 A 0 ACS_NamedExecuteAlways("IsMyAssGrass")
+			Goto Decide
+
+		Decide:
+			TRE2 A 1
 			TRE2 A 0 A_JumpIfInventory("AssIsGrass", 1, "OnGrass")
-			TRE2 A 0 A_JumpIfInventory("AssIsSomething", 1, "Vanilla")
+			TRE2 A 0 A_JumpIfInventory("AssIsUnknown", 1, "Vanilla")
 
 		OnGrass:
 			TRE2 A 0 A_Jump(255, "OakTree", "RedwoodTree", "SomeThinTree")
@@ -34,9 +39,14 @@ actor FancyObligeTreeAndBush : FancyObligeTree replaces TorchTree
 	States
 	{
 		Spawn:
-			TRE1 A 0 ACS_NamedExecuteAlways("IsMyAssGrass", 0, 0, 0, 0)
+			TRE1 A 3
+			TRE1 A 0 ACS_NamedExecuteAlways("IsMyAssGrass")
+			Goto Decide
+
+		Decide:
+			TRE1 A 1
 			TRE1 A 0 A_JumpIfInventory("AssIsGrass", 1, "OnGrass")
-			TRE1 A 0 A_JumpIfInventory("AssIsSomething", 1, "Vanilla")
+			TRE1 A 0 A_JumpIfInventory("AssIsUnknown", 1, "Vanilla")
 
 		OnGrass:
 			TRE1 A 0 A_Jump(127, "Shrub1", "Shrub2")
@@ -61,3 +71,9 @@ actor FancyObligeTreeAndBush : FancyObligeTree replaces TorchTree
 			TRE1 A -1
 	}
 }
+
+actor AssIsGrass : Inventory
+{
+	Inventory.maxAmount 1
+}
+actor AssIsUnknown : AssIsGrass{}

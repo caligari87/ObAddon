@@ -376,7 +376,10 @@ function GLAICE_EPIC_TEXTURES.put_the_texture_wad_in()
       gui.wad_insert_file("modules/zdoom_internal_scripts/ZSCRIPT.txt", "ZSCRIPT")
     elseif PARAM.custom_trees == "decorate" then
       gui.wad_insert_file("modules/zdoom_internal_scripts/DECORATE.txt", "DECORATE")
-      gui.wad_insert_file("modules/zdoom_internal_scripts/BEHAVIOR.lmp", "BEHAVIOR")
+      gui.wad_insert_file("modules/zdoom_internal_scripts/LOADACS.txt", "LOADACS")
+      gui.wad_add_binary_lump("A_START",{})
+      gui.wad_insert_file("modules/zdoom_internal_scripts/ASSGRASS.lmp", "ASSGRASS")
+      gui.wad_add_binary_lump("A_END",{})
     end
   end
 end
