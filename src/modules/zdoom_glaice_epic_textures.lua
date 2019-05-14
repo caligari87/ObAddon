@@ -86,8 +86,7 @@ function GLAICE_EPIC_TEXTURES.decide_environment_themes()
     LEVEL.outdoor_theme = rand.pick({"temperate","snow","desert"})
   end
 
-  -- just like a bit mixed - each succeeding level has a 75% chance
-  -- to inherit the prior level's theme or decide a new one otherwise
+  -- just like a bit mixed - every 2-6 levels, the theme will change
   if PARAM.environment_themes == "mixed" then
     if LEVEL.id == 1 then
       LEVEL.outdoor_theme = rand.pick({"temperate","snow","desert"})
@@ -122,19 +121,62 @@ function GLAICE_EPIC_TEXTURES.decide_environment_themes()
   end
 
   gui.printf("\n--==| Environment Outdoor Themes |==--\n\n")
-  gui.printf("Climate changes in " .. PARAM.outdoor_theme_along .. " levels.\n")
   gui.printf("Outdoor theme: " .. LEVEL.outdoor_theme .. "\n")
 
-  if not LEVEL.outdoor_theme then
-    error(
-      "create_environment_themes()\n" ..
-      "OH MAN I AM NOT GOOD WITH COMPUTER PLZ TO HALP\n"
-      )
-  end
+  local snow_floors = GLAICE_SNOW_OUTDOORS.floors
+  local snow_naturals = GLAICE_SNOW_OUTDOORS.naturals
+  local snow_facades = GLAICE_SNOW_FACADE
+  local sand_floors = GLAICE_DESERT_OUTDOORS.floors
+  local sand_naturals = GLAICE_DESERT_OUTDOORS.naturals
+  local sand_facades = GLAICE_DESERT_FACADE
 
+  if OB_CONFIG.game == "doom2" then
+    if LEVEL.outdoor_theme == "snow" then
+      GAME.ROOM_THEMES.tech_Outdoors_generic.floors = snow_floors
+      GAME.ROOM_THEMES.tech_Outdoors_generic.naturals = snow_naturals
+      GAME.ROOM_THEMES.urban_Outdoors_generic.floors = snow_floors
+      GAME.ROOM_THEMES.urban_Outdoors_generic.naturals = snow_naturals
+      GAME.ROOM_THEMES.hell_Outdoors_generic.floors = snow_floors
+      GAME.ROOM_THEMES.hell_Outdoors_generic.naturals = snow_naturals
+      GAME.THEMES.tech.cliff_mats = snow_naturals
+      GAME.THEMES.urban.cliff_mats = snow_naturals
+      GAME.THEMES.hell.cliff_mats = snow_naturals
+    elseif LEVEL.outdor_theme == "desert" then
+      GAME.ROOM_THEMES.tech_Outdoors_generic.floors = sand_floors
+      GAME.ROOM_THEMES.tech_Outdoors_generic.naturals = sand_naturals
+      GAME.ROOM_THEMES.urban_Outdoors_generic.floors = sand_floors
+      GAME.ROOM_THEMES.urban_Outdoors_generic.naturals = sand_naturals
+      GAME.ROOM_THEMES.hell_Outdoors_generic.floors = sand_floors
+      GAME.ROOM_THEMES.hell_Outdoors_generic.naturals = sand_naturals
+      GAME.THEMES.tech.cliff_mats = sand_naturals
+      GAME.THEMES.urban.cliff_mats = sand_naturals
+      GAME.THEMES.hell.cliff_mats = sand_naturals
+    end
+  elseif OB_CONFIG.game == "doom"
+  or OB_CONFIG.game == "ultdoom" then
+    if LEVEL.outdoor_theme == "snow" then
+      GAME.ROOM_THEMES.tech_Outdoors.floors = snow_floors
+      GAME.ROOM_THEMES.tech_Outdoors.naturals = snow_naturals
+      GAME.ROOM_THEMES.deimos_Outdoors.floors = snow_floors
+      GAME.ROOM_THEMES.deimos_Outdoors.naturals = snow_naturals
+      GAME.ROOM_THEMES.hell_Outdoors.floors = snow_floors
+      GAME.ROOM_THEMES.hell_Outdoors.naturals = snow_naturals
+      GAME.ROOM_THEMES.flesh_Outdoors.floors = snow_floors
+      GAME.ROOM_THEMES.flesh_Outdoors.naturals = snow_naturals
+    elseif LEVEL.outdoor_theme == "desert" then
+      GAME.ROOM_THEMES.tech_Outdoors.floors = sand_floors
+      GAME.ROOM_THEMES.tech_Outdoors.naturals = sand_naturals
+      GAME.ROOM_THEMES.deimos_Outdoors.floors = sand_floors
+      GAME.ROOM_THEMES.deimos_Outdoors.naturals = sand_naturals
+      GAME.ROOM_THEMES.hell_Outdoors.floors = sand_floors
+      GAME.ROOM_THEMES.hell_Outdoors.naturals = sand_naturals
+      GAME.ROOM_THEMES.flesh_Outdoors.floors = sand_floors
+      GAME.ROOM_THEMES.flesh_Outdoors.naturals = sand_naturals
+    end
+  end
 end
 
-function GLAICE_EPIC_TEXTURES.create_environment_themes()
+--[[function GLAICE_EPIC_TEXTURES.create_environment_themes()
 
   gui.printf("\ncreate_environment_themes()\n\n")
 
@@ -173,7 +215,7 @@ function GLAICE_EPIC_TEXTURES.create_environment_themes()
 
     end
   end
-end
+end]]
 
 function GLAICE_EPIC_TEXTURES.put_new_materials()
 

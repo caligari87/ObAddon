@@ -2318,36 +2318,85 @@ GLAICE_HELL_WINDOW_GROUPS =
 
 -- intercepts for the new environment theme feature
 
-GLAICE_SNOW_TEXTURES =
+GLAICE_SNOW_OUTDOORS =
 {
-  SNOW1 = 25,
-  SNOW5 = 25,
-  SNOW6 = 25,
-  SNOW8 = 25,
-  SNOWWAL1 = 10, -- These four use shiny flats, thus lower chance!
-  SNOWWAL2 = 10,
-  SNOWWAL3 = 10,
-  SNOWWAL4 = 10,
-  SNOW01=50,
-  SNOW02=50,
-  SNOW03=50,
-  SNOW04=50,
-  SNOW05=50,
-  SNOW06=50,
-  SNOW07=50,
-  SNOW08=50,
-  SNOW09=50,
-  SNOW10=50,
-  SNOW11=50,
-  SNOW12=50,
-  SNOW13=50,
-  SNOW14=50,
-  SNOW15=50,
+  floors =
+  {
+    SNOW1 = 25
+    SNOW5 = 25
+    SNOW6 = 25
+    SNOW8 = 25
+    SNOWWAL1 = 10 -- These four use shiny flats, thus lower chance!
+    SNOWWAL2 = 10
+    SNOWWAL3 = 10
+    SNOWWAL4 = 10
+    SNOW01=50
+    SNOW02=50
+    SNOW03=50
+    SNOW04=50
+    SNOW05=50
+    SNOW06=50
+    SNOW07=50
+    SNOW08=50
+    SNOW09=50
+    SNOW10=50
+    SNOW11=50
+    SNOW12=50
+    SNOW13=50
+    SNOW14=50
+    SNOW15=50
+  }
+
+  naturals =
+  {
+    SNOW1 = 25
+    SNOW5 = 25
+    SNOW6 = 25
+    SNOW8 = 25
+    SNOW01=50
+    SNOW02=50
+    SNOW03=50
+    SNOW04=50
+    SNOW05=50
+    SNOW06=50
+    SNOW07=50
+    SNOW08=50
+    SNOW09=50
+    SNOW10=50
+    SNOW11=50
+    SNOW12=50
+    SNOW13=50
+    SNOW14=50
+    SNOW15=50
+  }
+}
+
+GLAICE_SNOW_FACADES =
+{
+  SNOW1 = 25
+  SNOW5 = 25
+  SNOW6 = 25
+  SNOW8 = 25
 }
 
 -- Seriously, we need more desert type textures!!
-GLAICE_DESERT_TEXTURES =
+GLAICE_DESERT_OUTDOORS =
 {
-  SAND1 = 50,
-  SAND2 = 50,
+  floors =
+  {
+    SAND1 = 50
+    SAND2 = 50
+  }
+
+  naturals =
+  {
+    SAND1 = 50
+    SAND2 = 50
+  }
+}
+
+GLAICE_DESET_FACADES =
+{
+  SAND1 = 50
+  SAND2 = 50
 }
