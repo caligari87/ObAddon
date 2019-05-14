@@ -34,7 +34,7 @@ class FancyObligeTree : BigTree replaces BigTree
 						onSnow = true;
 						break;
 					case 'SAND1':
-					case 'SAND2":
+					case 'SAND2':
 						onSand = true;
 						break;
 					default:
@@ -130,10 +130,10 @@ class FancyObligeTree : BigTree replaces BigTree
 							fstate = "DesertTreeB";
 							break;
 						case 4:
-							fstate = "ShrubA"
+							fstate = "ShrubA";
 							break;
 						case 5:
-							fstate = "ShrubB"
+							fstate = "ShrubB";
 							break;
 					}
 				}
@@ -176,11 +176,11 @@ class FancyObligeTree : BigTree replaces BigTree
 			Loop;
 
 		TapwaveTreeA:
-			TWTR A 0;
+			TWTR A 1;
 			Loop;
 
 		TapwaveTreeB:
-			TWTR B 0;
+			TWTR B 1;
 			Loop;
 
 		ShrubA:
@@ -230,15 +230,15 @@ class FancyObligeTree : BigTree replaces BigTree
 
 		// desert assets
 		PalmTree:
-			PLMA1 A 0;
+			PLM1 A 1;
 			Loop;
 
 		DesertTreeA:
-			DTR1 A 0;
+			DTR1 A 1;
 			Loop;
 
 		DesertTreeB:
-			DTR2 A 0;
+			DTR2 A 1;
 			Loop;
 
 		// vanilla assets
