@@ -2321,18 +2321,13 @@ GLAICE_HELL_WINDOW_GROUPS =
 GLAICE_SNOW_TEXTURES =
 {
   SNOW1 = 25,
-  SNOW2 = 25,
-  SNOW3 = 25,
-  SNOW4 = 25,
   SNOW5 = 25,
   SNOW6 = 25,
-  SNOW7 = 25,
   SNOW8 = 25,
-  SNOW9 = 25,
-  SNOWWAL1 = 50,
-  SNOWWAL2 = 50,
-  SNOWWAL3 = 50,
-  SNOWWAL4 = 50,
+  SNOWWAL1 = 10, -- These four use shiny flats, thus lower chance!
+  SNOWWAL2 = 10,
+  SNOWWAL3 = 10,
+  SNOWWAL4 = 10,
   SNOW01=50,
   SNOW02=50,
   SNOW03=50,
@@ -2350,6 +2345,7 @@ GLAICE_SNOW_TEXTURES =
   SNOW15=50,
 }
 
+-- Seriously, we need more desert type textures!!
 GLAICE_DESERT_TEXTURES =
 {
   SAND1 = 50,
