@@ -10,6 +10,11 @@ class FancyObligeTree : BigTree replaces BigTree
 				StateLabel fstate;
 
 				bool onGrass = false;
+				bool onRock = false;
+				//snow and sand flats are only available
+				//via Epic Textures module.
+				bool onSnow = false;
+				bool onSand = false;
 				bool unknownFlat = false;
 
 				Name onflat = TexMan.GetName(floorpic);
@@ -20,6 +25,13 @@ class FancyObligeTree : BigTree replaces BigTree
 					case 'RROCK19':
 					case 'RROCK20':
 						onGrass = true;
+						break;
+					case 'SNOW1':
+					case 'SNOW5':
+					case 'SNOW6':
+					case 'SNOW7':
+					case 'SNOW8':
+						onSnow = true;
 						break;
 					default:
 						unknownFlat = true;
@@ -56,6 +68,40 @@ class FancyObligeTree : BigTree replaces BigTree
 					}
 				}
 
+				if(onSnow)
+				{
+					switch(random(1,9))
+					{
+						case 1:
+							fstate = "SnowTreeDeadA";
+							break;
+						case 2:
+							fstate = "SnowTreeKebab";
+							break;
+						case 3:
+							fstate = "SnowTreePloughed";
+							break;
+						case 4:
+							fstate = "SnowTreeDeadB";
+							break;
+						case 5:
+							fstate = "SnowTreeDeadC";
+							break;
+						case 6:
+							fstate = "SnowPineA";
+							break;							
+						case 7:
+							fstate = "SnowPineB";
+							break;							
+						case 8:
+							fstate = "SnowPineSmolA";
+							break;							
+						case 9:
+							fstate = "SnowPineSmolB";
+							break;							
+					}
+				}
+
 				if(unknownFlat)
 				{
 					switch(random(1,2))
@@ -80,6 +126,7 @@ class FancyObligeTree : BigTree replaces BigTree
 				return ResolveState(fstate);
 			}
 
+		// temperate plants
 		OakTree:
 			OAK1 A 1;
 			Loop;
@@ -100,6 +147,44 @@ class FancyObligeTree : BigTree replaces BigTree
 			SHB2 A 1;
 			Loop;
 
+		// snow world plants
+		SnowTreeDeadA:
+			XMAS A 1;
+			Loop;
+
+		SnowTreeKebab:
+			XMAS B 1;
+			Loop;
+
+		SnowTreePloughed:
+			XMAS C 1;
+			Loop;
+
+		SnowTreeDeadB:
+			XMAS D 1;
+			Loop;
+
+		SnowTreeDeadC:
+			XMAS E 1;
+			Loop;
+
+		SnowPineA:
+			XMAS F 1;
+			Loop;
+
+		SnowPineB:
+			XMAS G 1;
+			Loop;
+
+		SnowPineSmolA:
+			XMAS H 1;
+			Loop;
+
+		SnowPineSmolB:
+			XMAS I 1;
+			Loop;
+
+		// vanilla assets
 		VanillaA:
 			TRE2 A 1;
 			Loop;

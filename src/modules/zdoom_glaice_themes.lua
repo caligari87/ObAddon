@@ -2325,6 +2325,7 @@ GLAICE_SNOW_OUTDOORS =
     SNOW1 = 25
     SNOW5 = 25
     SNOW6 = 25
+    SNOW7 = 25
     SNOW8 = 25
     SNOWWAL1 = 10 -- These four use shiny flats, thus lower chance!
     SNOWWAL2 = 10
@@ -2352,22 +2353,8 @@ GLAICE_SNOW_OUTDOORS =
     SNOW1 = 25
     SNOW5 = 25
     SNOW6 = 25
+    SNOW7 = 25
     SNOW8 = 25
-    SNOW01=50
-    SNOW02=50
-    SNOW03=50
-    SNOW04=50
-    SNOW05=50
-    SNOW06=50
-    SNOW07=50
-    SNOW08=50
-    SNOW09=50
-    SNOW10=50
-    SNOW11=50
-    SNOW12=50
-    SNOW13=50
-    SNOW14=50
-    SNOW15=50
   }
 }
 
@@ -2376,6 +2363,7 @@ GLAICE_SNOW_FACADES =
   SNOW1 = 25
   SNOW5 = 25
   SNOW6 = 25
+  SNOW7 = 25
   SNOW8 = 25
 }
 
