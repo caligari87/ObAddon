@@ -56,6 +56,12 @@ class FancyObligeTree : BigTree replaces BigTree
 							case 3:
 								fstate = "SomeThinTree";
 								break;
+							case 4:
+								fstate = "TapwaveTreeA";
+								break;
+							case 5:
+								fstate = "TapwaveTreeB";
+								break;
 						}
 					}
 					else //Bushes
@@ -104,6 +110,10 @@ class FancyObligeTree : BigTree replaces BigTree
 							fstate = "SnowPineSmolB";
 							break;							
 					}
+					// the snow trees are kinda small
+					float extraSize = frandom(1.5,2);
+					scale.x *= extraSize;
+					scale.y *= extraSize;
 				}
 				
 				if(onSand)
@@ -163,6 +173,14 @@ class FancyObligeTree : BigTree replaces BigTree
 
 		SomeThinTree:
 			THN1 A 1;
+			Loop;
+
+		TapwaveTreeA:
+			TWTR A 0;
+			Loop;
+
+		TapwaveTreeB:
+			TWTR B 0;
 			Loop;
 
 		ShrubA:
