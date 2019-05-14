@@ -61,10 +61,60 @@ end
 
 function GLAICE_EPIC_TEXTURES.decide_environment_themes()
 
-  if PARAM.environment_themes == "no" then
-    return
+  --------------------
+  -- Outdoor Themes --
+  --------------------
+  -- Outdoor themes are essentially 'mutator' style inserts
+  -- to replace the flats of outdoor rooms to match a specific
+  -- theme - particularly snow and sand. Currently, there are three
+  -- themes:
+  --
+  -- 1) Snow - emphasis on cold and snow, white textures.
+  -- 2) Desert - emphasis on bright sand.
+  -- 3) Temperate - technically not actually a theme, but a catch-all
+  --                for the default circumstances of using ordinary
+  --                grass, rock, etc. in temperate regions as is the
+  --                norm for vanilla Doom-ish games.
+  --
+  -- Essentially, when "Temperate" is the selected theme, the
+  -- environment theme code simply just doesn't run.
+
+  if PARAM.environment_themes == "no" then return end
+
+  -- pick a random environment
+  if PARAM.environment_themes == "random" then
+    LEVEL.outdoor_theme = rand.pick({"temperate","snow","desert"})
   end
 
+  -- just like a bit mixed - each succeeding level has a 75% chance
+  -- to inherit the prior level's theme or decide a new one otherwise
+  if PARAM.environment_themes == "mixed" then
+    if LEVEL.id == 1 then
+      LEVEL.outdoor_theme = rand.pick({"temperate","snow","desert"})
+      PARAM.previous_theme = LEVEL.outdoor_theme
+      PARAM.outdoor_theme_along = rand.irange(2,6)
+    elseif LEVEL.id > 1 then
+      LEVEL.outdoor_theme = PARAM.previous_theme
+      if PARAM.outdoor_theme_along > 0 then
+        PARAM.outdoor_theme_along = PARAM.outdoor_theme_along - 1
+      elseif PARAM.outdoor_theme_along <= 0 then
+        while LEVEL.outdoor_theme == PARAM.previous_theme do
+          LEVEL.outdoor_theme = rand.pick({"temperate","snow","desert"})
+        end
+        PARAM.previous_theme = LEVEL.outdoor_theme
+        PARAM.outdoor_theme_along = rand.irange(2,6)
+      end
+    end
+  end
+
+  -- -ish environment themes
+  if PARAM.environment_themes == "snowish" then
+    LEVEL.outdoor_theme = rand.pick({"temperate","snow"})
+  elseif PARAM.environment_themes == "desertish" then
+    LEVEL.outdoor_theme = rand.pick({"temperate","desert"})
+  end
+
+  -- absolutes
   if PARAM.environment_themes == "snow" then
     LEVEL.outdoor_theme = "snow"
   elseif PARAM.environment_themes == "desert" then
@@ -72,8 +122,8 @@ function GLAICE_EPIC_TEXTURES.decide_environment_themes()
   end
 
   gui.printf("\n--==| Environment Outdoor Themes |==--\n\n")
-  gui.printf("Environment Theme: Level name: " .. LEVEL.description .. "\n")
-  gui.printf("Environment Theme: Outdoor theme: " .. LEVEL.outdoor_theme .. "\n")
+  gui.printf("Climate changes in " .. PARAM.outdoor_theme_along .. " levels.\n")
+  gui.printf("Outdoor theme: " .. LEVEL.outdoor_theme .. "\n")
 
   if not LEVEL.outdoor_theme then
     error(
@@ -88,7 +138,8 @@ function GLAICE_EPIC_TEXTURES.create_environment_themes()
 
   gui.printf("\ncreate_environment_themes()\n\n")
 
-  if PARAM.environment_themes == "no" then
+  if LEVEL.outdoor_theme == "temperate"
+  or PARAM.environment_themes == "no" then
     return
   end
 
@@ -108,8 +159,18 @@ function GLAICE_EPIC_TEXTURES.create_environment_themes()
             gui.printf(A.floor_mat .. "\n")
           end
         end
-
+      elseif R.is_park then
+        each A in R.areas do
+          each B in A.blobs do
+            if LEVEL.outdoor_theme == "snow" then
+              B.floor_mat = rand.key_by_probs(GLAICE_SNOW_TEXTURES)
+            elseif LEVEL.outdoor_theme == "desert" then
+              B.floor_mat = rand.key_by_probs(GLAICE_DESERT_TEXTURES)
+            end
+          end
+        end
       end
+
     end
   end
 end
