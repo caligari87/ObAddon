@@ -8,17 +8,9 @@ actor FancyObligeTree replaces BigTree
 	States
 	{
 		Spawn:
-			TRE2 A 1
-			{
-				if (ACS_NamedExecuteWithResult("IsMyAssGrass") == 1)
-				{
-					return state("OnGrass");
-				}
-				else
-				{
-					return state("Vanilla");
-				}
-			}
+			TRE2 A 0 ACS_NamedExecuteAlways("IsMyAssGrass", 0, 0, 0, 0)
+			TRE2 A 0 A_JumpIfInventory("AssIsGrass", 1, "OnGrass")
+			TRE2 A 0 A_JumpIfInventory("AssIsSomething", 1, "Vanilla")
 
 		OnGrass:
 			TRE2 A 0 A_Jump(255, "OakTree", "RedwoodTree", "SomeThinTree")
@@ -42,17 +34,9 @@ actor FancyObligeTreeAndBush : FancyObligeTree replaces TorchTree
 	States
 	{
 		Spawn:
-			TRE1 A 0
-			{
-				if (ACS_NamedExecuteWithResult("IsMyAssGrass") == 1)
-				{
-					return state("OnGrass");
-				}
-				else
-				{
-					return state("Vanilla");
-				}
-			}
+			TRE1 A 0 ACS_NamedExecuteAlways("IsMyAssGrass", 0, 0, 0, 0)
+			TRE1 A 0 A_JumpIfInventory("AssIsGrass", 1, "OnGrass")
+			TRE1 A 0 A_JumpIfInventory("AssIsSomething", 1, "Vanilla")
 
 		OnGrass:
 			TRE1 A 0 A_Jump(127, "Shrub1", "Shrub2")

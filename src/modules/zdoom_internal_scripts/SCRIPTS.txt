@@ -18,12 +18,15 @@ Script "IsMyAssGrass" (void)
 		{
 			onGrass = true;
 		}
+		Delay(1);
 	}
 
-	if (onGrass == true)
+	if (onGrass)
 	{
-		SetResultValue(1);
-		terminate;
+		GiveInventory("AssIsGrass", 1);
 	}
-	SetResultValue(0);
+	else
+	{
+		GiveInventory("AssIsSomething",1);
+	}
 }
