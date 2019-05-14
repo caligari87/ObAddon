@@ -31,6 +31,13 @@ GLAICE_EPIC_TEXTURES.YES_NO =
   "no",  _("No"),
 }
 
+GLAICE_EPIC_TEXTURES.SOUCEPORT_CHOICES =
+{
+  "zs",       _("ZScript"),
+  "decorate", _("ACS-Decorate"),
+  "no",       _("No"),
+}
+
 function GLAICE_EPIC_TEXTURES.setup(self)
   for name,opt in pairs(self.options) do
     local value = self.options[name].value
@@ -350,7 +357,12 @@ function GLAICE_EPIC_TEXTURES.put_the_texture_wad_in()
 
   if PARAM.custom_trees != "no" then
     gui.wad_merge_sections("modules/zdoom_internal_scripts/ObAddon_trees.wad")
-    gui.wad_insert_file("modules/zdoom_internal_scripts/ZSCRIPT.txt", "ZSCRIPT")
+    if PARAM.custom_trees == "zs" then
+      gui.wad_insert_file("modules/zdoom_internal_scripts/ZSCRIPT.txt", "ZSCRIPT")
+    elseif PARAM.custom_trees == "decorate" then
+      gui.wad_insert_file("modules/zdoom_internal_scripts/DECORATE.txt", "DECORATE")
+      gui.wad_insert_file("modules/zdoom_internal_scripts/BEHAVIOR.lmp", "BEHAVIOR")
+    end
   end
 end
 ----------------------------------------------------------------
@@ -401,12 +413,12 @@ OB_MODULES["glaice_epic_textures"] =
     {
       name = "custom_trees"
       label = _("Custom Trees")
-      choices = GLAICE_EPIC_TEXTURES.YES_NO
-      default = "yes"
+      choices = GLAICE_EPIC_TEXTURES.SOUCEPORT_CHOICES
+      default = "zs"
       tooltip =
         "Adds custom flat-depedendent tree sprites into the game. Currently only replaces " ..
         "trees on specific grass flats and will be expanded in the future to accomnodate " ..
-        "Epic Textures and more. If you are playing a mod that already does DECORATE/ZScripts its own trees, " ..
+        "Epic Textures and more. If you are playing a mod that already does its own trees, " ..
         "it may be better to leave this off."
       priority=1
     }

@@ -2,3 +2,4 @@ scripts/build
 texture-src
 inspiration
 src/.vscode
+src/modules/zdoom_internal_scripts/tmp
