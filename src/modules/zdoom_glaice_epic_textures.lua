@@ -126,21 +126,41 @@ function GLAICE_EPIC_TEXTURES.decide_environment_themes()
   -- initialize default tables
   if not PARAM.default_environment_themes_init then
     -- Doom 2
-    -- floors
-    PARAM.def_tech_floors = GAME.ROOM_THEMES.tech_Outdoors_generic.floors
-    PARAM.def_urban_floors = GAME.ROOM_THEMES.urban_Outdoors_generic.floors
-    PARAM.def_hell_floors = GAME.ROOM_THEMES.hell_Outdoors_generic.floors
-    -- naturals
-    PARAM.def_tech_naturals = GAME.ROOM_THEMES.tech_Outdoors_generic.naturals
-    PARAM.def_urban_naturals = GAME.ROOM_THEMES.urban_Outdoors_generic.naturals
-    PARAM.def_hell_naturals = GAME.ROOM_THEMES.hell_Outdoors_generic.naturals
-    -- cliff materials
-    PARAM.def_tech_cliff_mats = GAME.THEMES.tech.cliff_mats
-    PARAM.def_urban_cliff_mats = GAME.THEMES.urban.cliff_mats
-    PARAM.def_hell_cliff_mats = GAME.THEMES.hell.cliff_mats
-    PARAM.default_environment_themes_init = true
+    if OB_CONFIG.game == "doom2" then
+      -- floors
+      PARAM.def_tech_floors = GAME.ROOM_THEMES.tech_Outdoors_generic.floors
+      PARAM.def_urban_floors = GAME.ROOM_THEMES.urban_Outdoors_generic.floors
+      PARAM.def_hell_floors = GAME.ROOM_THEMES.hell_Outdoors_generic.floors
+      -- naturals
+      PARAM.def_tech_naturals = GAME.ROOM_THEMES.tech_Outdoors_generic.naturals
+      PARAM.def_urban_naturals = GAME.ROOM_THEMES.urban_Outdoors_generic.naturals
+      PARAM.def_hell_naturals = GAME.ROOM_THEMES.hell_Outdoors_generic.naturals
+      -- cliff materials
+      PARAM.def_tech_cliff_mats = GAME.THEMES.tech.cliff_mats
+      PARAM.def_urban_cliff_mats = GAME.THEMES.urban.cliff_mats
+      PARAM.def_hell_cliff_mats = GAME.THEMES.hell.cliff_mats
 
-    -- Doom 1
+      -- Doom 1
+    elseif OB_CONFIG.game == "doom1"
+    or OB_CONFIG.game == "ultdoom" then
+      -- floors
+      PARAM.def_tech_floors = GAME.ROOM_THEMES.tech_Outdoors.floors
+      PARAM.def_deimos_floors = GAME.ROOM_THEMES.deimos_Outdoors.floors
+      PARAM.def_hell_floors = GAME.ROOM_THEMES.hell_Outdoors.floors
+      PARAM.def_flesh_floors = GAME.ROOM_THEMES.flesh_Outdoors.floors
+      -- naturals
+      PARAM.def_tech_naturals = GAME.ROOM_THEMES.tech_Outdoors.naturals
+      PARAM.def_deimos_naturals = GAME.ROOM_THEMES.deimos_Outdoors.naturals
+      PARAM.def_hell_naturals = GAME.ROOM_THEMES.hell_Outdoors.naturals
+      PARAM.def_flesh_naturals = GAME.ROOM_THEMES.flesh_Outdoors.naturals
+      -- cliff materials
+      PARAM.def_tech_cliff_mats = GAME.THEMES.tech.cliff_mats
+      PARAM.def_deimos_cliff_mats = GAME.THEMES.deimos.cliff_mats
+      PARAM.def_hell_cliff_mats = GAME.THEMES.hell.cliff_mats
+      PARAM.def_flesh_cliff_mats = GAME.THEMES.flesh.cliff_mats
+    end
+
+    PARAM.default_environment_themes_init = true
   end
 
   -- checking in on custom outdoors
@@ -183,6 +203,7 @@ function GLAICE_EPIC_TEXTURES.decide_environment_themes()
       GAME.THEMES.urban.cliff_mats = PARAM.def_urban_cliff_mats
       GAME.THEMES.hell.cliff_mats = PARAM.def_hell_cliff_mats
     end
+  -- MSSP-TODO: check cliff mats for Doom1
   elseif OB_CONFIG.game == "doom1"
   or OB_CONFIG.game == "ultdoom" then
     if LEVEL.outdoor_theme == "snow" then
@@ -203,6 +224,15 @@ function GLAICE_EPIC_TEXTURES.decide_environment_themes()
       GAME.ROOM_THEMES.hell_Outdoors.naturals = sand_naturals
       GAME.ROOM_THEMES.flesh_Outdoors.floors = sand_floors
       GAME.ROOM_THEMES.flesh_Outdoors.naturals = sand_naturals
+    elseif LEVEL.outdoor_theme == "temperate" then
+      GAME.ROOM_THEMES.tech_Outdoors.floors = PARAM.def_tech_floors
+      GAME.ROOM_THEMES.tech_Outdoors.naturals = PARAM.def_tech_naturals
+      GAME.ROOM_THEMES.deimos_Outdoors.floors = PARAM.def_deimos_floors
+      GAME.ROOM_THEMES.deimos_Outdoors.naturals = PARAM.def_deimos_naturals
+      GAME.ROOM_THEMES.hell_Outdoors.floors = PARAM.def_hell_naturals
+      GAME.ROOM_THEMES.hell_Outdoors.naturals = PARAM.def_hell_naturals
+      GAME.ROOM_THEMES.flesh_Outdoors.floors = PARAM.def_flesh_naturals
+      GAME.ROOM_THEMES.flesh_Outdoors.naturals = PARAM.def_flesh_naturals
     end
   end
 end

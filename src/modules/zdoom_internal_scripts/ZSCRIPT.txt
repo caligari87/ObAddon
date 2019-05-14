@@ -33,6 +33,10 @@ class FancyObligeTree : BigTree replaces BigTree
 					case 'SNOW8':
 						onSnow = true;
 						break;
+					case 'SAND1':
+					case 'SAND2":
+						onSand = true;
+						break;
 					default:
 						unknownFlat = true;
 				}
@@ -99,6 +103,28 @@ class FancyObligeTree : BigTree replaces BigTree
 						case 9:
 							fstate = "SnowPineSmolB";
 							break;							
+					}
+				}
+				
+				if(onSand)
+				{
+					switch(random(1,5))
+					{
+						case 1:
+							fstate = "PalmTree";
+							break;
+						case 2:
+							fstate = "DesertTreeA";
+							break;
+						case 3:
+							fstate = "DesertTreeB";
+							break;
+						case 4:
+							fstate = "ShrubA"
+							break;
+						case 5:
+							fstate = "ShrubB"
+							break;
 					}
 				}
 
@@ -182,6 +208,19 @@ class FancyObligeTree : BigTree replaces BigTree
 
 		SnowPineSmolB:
 			XMAS I 1;
+			Loop;
+
+		// desert assets
+		PalmTree:
+			PLMA1 A 0;
+			Loop;
+
+		DesertTreeA:
+			DTR1 A 0;
+			Loop;
+
+		DesertTreeB:
+			DTR2 A 0;
 			Loop;
 
 		// vanilla assets
