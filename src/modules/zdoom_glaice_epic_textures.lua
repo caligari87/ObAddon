@@ -59,11 +59,51 @@ function GLAICE_EPIC_TEXTURES.setup(self)
   PARAM.epic_textures_activated = true
 end
 
+function GLAICE_EPIC_TEXTURES.decide_environment_themes()
+
+  if PARAM.environment_themes == "no" then
+    return
+  end
+
+  if PARAM.environment_themes == "snow" then
+    LEVEL.outdoor_theme = "snow"
+  elseif PARAM.environment_themes == "desert" then
+    LEVEL.outdoor_theme = "desert"
+  end
+
+  gui.printf("\n--==| Environment Outdoor Themes |==--\n\n")
+
+  if not LEVEL.outdoor_theme then
+    error(
+      "create_environment_themes()\n" ..
+      "OH MAN I AM NOT GOOD WITH COMPUTER PLZ TO HALP\n"
+      )
+  end
+
+end
+
 function GLAICE_EPIC_TEXTURES.create_environment_themes()
-  error(
-    "create_environment_themes()\n" ..
-    "OH MAN I AM NOT GOOD WITH COMPUTER PLZ TO HALP\n"
-    );
+
+  if PARAM.environment_themes == "no" then
+    return
+  end
+
+  gui.printf("Level name: " .. LEVEL.description .. "\n")
+  gui.printf("Outdoor theme: " .. LEVEL.outdoor_theme .. "\n")
+
+  if OB_CONFIG.GAME == "doom2" then
+    each R in LEVEL.rooms do
+      if R.is_outdoor then
+        each A in R.areas do
+          if LEVEL.outdoor_theme == "snow" then
+            A.floor_mat = rand_pick(GLAICE_SNOW_TEXTURES)
+          elseif LEVEL.outdoor_theme == "desert" then
+            A.floor_mat = rand_pick(GLAICE_DESERT_TEXTURES)
+          end
+        end
+      end
+    end
+  end
 end
 
 function GLAICE_EPIC_TEXTURES.put_new_materials()
@@ -400,7 +440,8 @@ OB_MODULES["glaice_epic_textures"] =
   hooks =
   {
     setup = GLAICE_EPIC_TEXTURES.setup
-    begin_level = GLAICE_EPIC_TEXTURES.create_environment_themes
+    begin_level = GLAICE_EPIC_TEXTURES.decide_environment_themes
+    level_layout_finished = GLAICE_EPIC_TEXTURES.create_environment_themes
     all_done = GLAICE_EPIC_TEXTURES.put_the_texture_wad_in
   }
 

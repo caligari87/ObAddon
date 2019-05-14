@@ -3290,6 +3290,8 @@ function Room_build_all()
   Layout_handle_corners()
   Layout_outdoor_shadows()
 
+  ob_invoke_hook("level_layout_finished") --MSSP
+
   Render_set_all_properties()
 
   Render_all_chunks()
