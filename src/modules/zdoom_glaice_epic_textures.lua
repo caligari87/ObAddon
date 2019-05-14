@@ -72,6 +72,8 @@ function GLAICE_EPIC_TEXTURES.decide_environment_themes()
   end
 
   gui.printf("\n--==| Environment Outdoor Themes |==--\n\n")
+  gui.printf("Environment Theme: Level name: " .. LEVEL.description .. "\n")
+  gui.printf("Environment Theme: Outdoor theme: " .. LEVEL.outdoor_theme .. "\n")
 
   if not LEVEL.outdoor_theme then
     error(
@@ -84,23 +86,29 @@ end
 
 function GLAICE_EPIC_TEXTURES.create_environment_themes()
 
+  gui.printf("\ncreate_environment_themes()\n\n")
+
   if PARAM.environment_themes == "no" then
     return
   end
 
-  gui.printf("Level name: " .. LEVEL.description .. "\n")
-  gui.printf("Outdoor theme: " .. LEVEL.outdoor_theme .. "\n")
-
-  if OB_CONFIG.GAME == "doom2" then
+  if OB_CONFIG.game == "doom2" then
     each R in LEVEL.rooms do
       if R.is_outdoor then
+        gui.printf("Room: " .. R.id .. "\n")
+
         each A in R.areas do
-          if LEVEL.outdoor_theme == "snow" then
-            A.floor_mat = rand_pick(GLAICE_SNOW_TEXTURES)
-          elseif LEVEL.outdoor_theme == "desert" then
-            A.floor_mat = rand_pick(GLAICE_DESERT_TEXTURES)
+          if A.floor_mat then
+            gui.printf(A.floor_mat .. "\n")
+            if LEVEL.outdoor_theme == "snow" then
+              A.floor_mat = rand.key_by_probs(GLAICE_SNOW_TEXTURES)
+            elseif LEVEL.outdoor_theme == "desert" then
+              A.floor_mat = rand.key_by_probs(GLAICE_DESERT_TEXTURES)
+            end
+            gui.printf(A.floor_mat .. "\n")
           end
         end
+
       end
     end
   end
