@@ -93,12 +93,18 @@ function GLAICE_EPIC_TEXTURES.decide_environment_themes()
       PARAM.previous_theme = LEVEL.outdoor_theme
       PARAM.outdoor_theme_along = rand.irange(2,6)
     elseif LEVEL.id > 1 then
-      LEVEL.outdoor_theme = PARAM.previous_theme
+      -- continue the same theme until the countdown ends
       if PARAM.outdoor_theme_along > 0 then
+        LEVEL.outdoor_theme = PARAM.previous_theme
         PARAM.outdoor_theme_along = PARAM.outdoor_theme_along - 1
+      -- decide a new theme when the countdown ends
+      -- logic goes that deserts cannot go to snow immediately
+      -- and vice versa
       elseif PARAM.outdoor_theme_along <= 0 then
-        while LEVEL.outdoor_theme == PARAM.previous_theme do
-          LEVEL.outdoor_theme = rand.pick({"temperate","snow","desert"})
+        if PARAM.previous_theme == "temperate" then
+          LEVEL.outdoor_theme = rand.pick({"snow","desert"})
+        else
+          LEVEL.outdoor_theme = "temperate"
         end
         PARAM.previous_theme = LEVEL.outdoor_theme
         PARAM.outdoor_theme_along = rand.irange(2,6)
