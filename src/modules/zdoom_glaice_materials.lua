@@ -603,8 +603,8 @@ GLAICE_MATERIALS = {
   SNOW10 = { t="SNOW10", f="SNOW1" }
   SNOW11 = { t="SNOW11", f="SNOW6" }
   SNOW12 = { t="SNOW12", f="SNOW6" }
-  SNOW13 = { t="SNOW13", f="SNOW2" } -- 256x256, beautiful ice
-  SNOW14 = { t="SNOW14", f="SNOW2" } -- 256x256
+  SNOW13 = { t="SNOW13", f="SNOW13F" } -- 256x256, beautiful ice
+  SNOW14 = { t="SNOW14", f="SNOW6" } -- 256x256
   SNOW15 = { t="SNOW15", f="SNOW1" }
 
   SNOWBOX1 = { t="SNOWBOX1", f="SNOW6" }
@@ -614,6 +614,23 @@ GLAICE_MATERIALS = {
   SNOWWAL2 = { t="SNOWWAL2", f="SHINY02" }
   SNOWWAL3 = { t="SNOWWAL3", f="SHINY02" }
   SNOWWAL4 = { t="SNOWWAL4", f="SHINY01" }
+
+  -- Desert textures
+  DESBRIK1 = { t="DESBRIK1", f="RROCK10" } -- Tan brick facade
+  DESBRIK2 = { t="DESBRIK2", f="RROCK10" } -- Tan brick facade
+  DESBRIK3 = { t="DESBRIK3", f="FLOOR7_1" } -- Brown brick facade w/ trim
+  DESBRIK4 = { t="DESBRIK4", f="RROCK10" } -- Tan brick facade
+  DESBRIK5 = { t="DESBRIK5", f="RROCK10" } -- Tan brick facade
+  DESBRIK6 = { t="DESBRIK6", f="RROCK10" } -- Tan brick facade w/ trim
+  DESBRIK7 = { t="DESBRIK7", f="FLOOR7_1" } -- Tan brick facade
+  DESMARB1 = { t="DESMARB1", f="RROCK10" } -- Elegant tan marble
+  DESMARB2 = { t="DESMARB2", f="RROCK10" } -- Elegant tan marble
+  DESROCK1 = { t="DESROCK1", f="RROCK03" } -- Brown rock
+  DESROCK2 = { t="DESROCK2", f="FLAT10" } -- Brown rock
+  DESROCK3 = { t="DESROCK3", f="FLOOR7_1" } -- Brown rock
+  DESROCK4 = { t="DESROCK4", f="RROCK10" } -- Tan rock
+  DESROCK5 = { t="DESROCK5", f="RROCK17" } -- Brown rock
+
 
   -- Tekwall / Startan-types
   STARBR1 = { t="STARBR1", f="FLOOR0_2" }
@@ -819,6 +836,11 @@ GLAICE_MATERIALS = {
   EG06  = { t="BRIKS06",  f="EG06" }
   SAND1  = { t="ESAND1",  f="SAND1" }
   SAND2  = { t="ESAND2",  f="SAND2" }
+  SAND3  = { t="ESAND1",  f="SAND3" }
+  SAND4  = { t="ESAND2",  f="SAND4" }
+  SAND5  = { t="ESAND1",  f="SAND5" }
+  SAND6  = { t="ESAND2",  f="SAND6" }
+  SAND7  = { t="ESAND1",  f="SAND7" }
 
   -- Gothic
   G01 = { t="GOTH34",  f="G01" } --Dark brown BRICK8-9 bricks
@@ -961,6 +983,15 @@ GLAICE_MATERIALS = {
   SNOW7 = { t="SNOW10",  f="SNOW7" } --Snow
   SNOW8 = { t="SNOW10",  f="SNOW8" } --Snow
   SNOW9 = { t="ICEFALL",  f="SNOW9" } --Ice
+  SNOW10F = { t="SNOW10",  f="SNOW10F" }  -- Named like this to avoid texture conflict of the same name
+  SNOW11F = { t="SNOW12",  f="SNOW11F" }
+  SNOW12F = { t="SNOW15",  f="SNOW12F" }
+  SNOW13F = { t="SNOW13",  f="SNOW13F" }
+  SNOW14F = { t="SNOW10",  f="SNOW14F" }
+  SNOWBRIK = { t="SNOW01",  f="SNOWBRIK" }
+  SNOWROCK = { t="SNOW12",  f="SNOWROCK" }
+  SNOWSTON = { t="SNOW14",  f="SNOWSTON" }
+
 
   -- Tech flats
   CEIL4_4 = { f="CEIL4_4", t="COMPBLUE" }

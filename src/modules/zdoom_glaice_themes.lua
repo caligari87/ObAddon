@@ -2327,15 +2327,20 @@ GLAICE_SNOW_OUTDOORS =
     SNOW6 = 25
     SNOW7 = 25
     SNOW8 = 25
+    SNOW10F = 25
+    SNOW11F = 25
+    SNOW12F = 25
+    SNOW13F = 25
+    SNOW14F = 25
+    SNOWBRIK = 15
+    SNOWROCK = 15
+    SNOWSTON = 15
     SNOWWAL1 = 10 -- These four use shiny flats, thus lower chance!
     SNOWWAL2 = 10
     SNOWWAL3 = 10
     SNOWWAL4 = 10
-    SNOW01=50
-    SNOW02=50
     SNOW03=50
     SNOW04=50
-    SNOW05=50
     SNOW06=50
     SNOW07=50
     SNOW08=50
@@ -2350,21 +2355,40 @@ GLAICE_SNOW_OUTDOORS =
 
   naturals =
   {
-    SNOW1 = 25
-    SNOW5 = 25
-    SNOW6 = 25
-    SNOW7 = 25
-    SNOW8 = 25
+   SNOW03 = 50
+   SNOW06 = 50
+   SNOW07 = 50
+   SNOW08 = 50
+   SNOW09 = 50
+   SNOW10 = 50
+   SNOW11 = 50
+   SNOW12 = 50
+   SNOW13 = 30
+   SNOW14 = 30
+   SNOW15 = 50
   }
 }
 
 GLAICE_SNOW_FACADES =
 {
-  SNOW1 = 25
-  SNOW5 = 25
-  SNOW6 = 25
-  SNOW7 = 25
-  SNOW8 = 25
+  SNOW01 = 50
+  SNOW02 = 20
+  SNOW05 = 10
+  SNOWWAL1 = 50
+  SNOWWAL2 = 50
+  SNOWWAL3 = 30
+  SNOWWAL4 = 20
+  STONE2   = 30
+  BIGSTONE = 20
+  BRIKS01   = 30
+  BRIKS11   = 20
+  BRIKS32   = 60
+  BRIKS34   = 35
+  BRIKS36   = 25
+  BRIKS43   = 40
+  BRONZEG3  = 20
+  CEM10     = 30
+  GOTHJ1    = 15
 }
 
 -- Seriously, we need more desert type textures!!
@@ -2372,19 +2396,47 @@ GLAICE_DESERT_OUTDOORS =
 {
   floors =
   {
-    SAND1 = 50
-    SAND2 = 50
+    SAND1 = 100
+    SAND2 = 100
+    SAND3 = 100
+    SAND4 = 100
+    SAND5 = 100
+    SAND6 = 100
+    SAND7 = 100
+    EG06  = 15
+    EG05  = 10
+    EG03  = 15
+    EG02  = 10
+    EG01  = 15
   }
 
   naturals =
   {
-    SAND1 = 50
-    SAND2 = 50
+    ESAND1 = 100
+    ESAND2 = 100
+    DESROCK1 = 20
+    DESROCK2 = 20
+    DESROCK3 = 20
+    DESROCK4 = 25
+    DESROCK5 = 20
   }
 }
 
-GLAICE_DESET_FACADES =
+GLAICE_DESERT_FACADES =
 {
-  SAND1 = 50
-  SAND2 = 50
+  BSTONE1 = 20
+  BSTONE2 = 20
+  STUCCO  = 20
+  DESBRIK1 = 60
+  DESBRIK2 = 60
+  DESBRIK3 = 60
+  DESBRIK4 = 60
+  DESBRIK5 = 60
+  DESBRIK6 = 60
+  DESBRIK7 = 60
+  DESMARB1 = 35
+  DESMARB2 = 35
+  EGYPT04  = 15
+  EGYPT05  = 15
+  EGYPT06  = 15
 }
