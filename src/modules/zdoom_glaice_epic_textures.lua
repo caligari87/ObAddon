@@ -146,7 +146,7 @@ function GLAICE_EPIC_TEXTURES.decide_environment_themes()
       PARAM.def_urban_cliff_mats = GAME.THEMES.urban.cliff_mats
       PARAM.def_hell_cliff_mats = GAME.THEMES.hell.cliff_mats
 
-      -- Doom 1
+    -- Doom 1
     elseif OB_CONFIG.game == "doom1"
     or OB_CONFIG.game == "ultdoom" then
       -- floors
@@ -190,9 +190,9 @@ function GLAICE_EPIC_TEXTURES.decide_environment_themes()
       GAME.ROOM_THEMES.urban_Outdoors_generic.naturals = snow_naturals
       GAME.ROOM_THEMES.hell_Outdoors_generic.floors = snow_floors
       GAME.ROOM_THEMES.hell_Outdoors_generic.naturals = snow_naturals
-      GAME.THEMES.tech.cliff_mats = snow_naturals
-      GAME.THEMES.urban.cliff_mats = snow_naturals
-      GAME.THEMES.hell.cliff_mats = snow_naturals
+      GAME.THEMES.tech.cliff_mats = snow_cliffs
+      GAME.THEMES.urban.cliff_mats = snow_cliffs
+      GAME.THEMES.hell.cliff_mats = snow_cliffs
     elseif LEVEL.outdoor_theme == "desert" then
       GAME.ROOM_THEMES.tech_Outdoors_generic.floors = sand_floors
       GAME.ROOM_THEMES.tech_Outdoors_generic.naturals = sand_naturals
@@ -200,9 +200,9 @@ function GLAICE_EPIC_TEXTURES.decide_environment_themes()
       GAME.ROOM_THEMES.urban_Outdoors_generic.naturals = sand_naturals
       GAME.ROOM_THEMES.hell_Outdoors_generic.floors = sand_floors
       GAME.ROOM_THEMES.hell_Outdoors_generic.naturals = sand_naturals
-      GAME.THEMES.tech.cliff_mats = sand_naturals
-      GAME.THEMES.urban.cliff_mats = sand_naturals
-      GAME.THEMES.hell.cliff_mats = sand_naturals
+      GAME.THEMES.tech.cliff_mats = sand_cliffs
+      GAME.THEMES.urban.cliff_mats = sand_cliffs
+      GAME.THEMES.hell.cliff_mats = sand_cliffs
     elseif LEVEL.outdoor_theme == "temperate" then
       GAME.ROOM_THEMES.tech_Outdoors_generic.floors = PARAM.def_tech_floors
       GAME.ROOM_THEMES.tech_Outdoors_generic.naturals = PARAM.def_tech_naturals
