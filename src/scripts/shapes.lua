@@ -3631,7 +3631,7 @@ GROW_CAGE_SIDEWAYS =
 
 GROW_CAGE_SIDEWAYS_STAIR =
 {
-  prob = 106
+  prob = 6
 
   structure =
   {
