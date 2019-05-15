@@ -10,4 +10,7 @@ PREFABS.Item_dumpster =
   where = "point"
   height = 120
   size  = 112
+
+  bound_z1 = 0
+  bound_z2 = 120
 }
