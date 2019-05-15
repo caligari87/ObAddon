@@ -1,6 +1,6 @@
 PREFABS.Decor_wood_skull_shed =
 {
-  file   = "decor/glaice_wood_skulls.wad"
+  file   = "decor/glaice_wood_skull_shed.wad"
   map    = "MAP01"
 
   prob   = 5000
