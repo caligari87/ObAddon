@@ -4,7 +4,7 @@
 
 Script "IsMyAssGrass" (void)
 {
-	str flatz[4] =
+	str grassFlatz[4] =
 	{
 		"GRASS1",
 		"GRASS2",
@@ -12,19 +12,72 @@ Script "IsMyAssGrass" (void)
 		"RROCK20",
 	};
 
-	bool onGrass = false;
-
-	for ( int flat_index = 1; flat_index <= 4; flat_index++ )
+	str snowFlatz[11] =
 	{
-		if (CheckActorFloorTexture(0, flatz[flat_index]))
+		"SNOW1",
+		"SNOW5",
+		"SNOW6",
+		"SNOW7",
+		"SNOW8",
+		"SNOW10F",
+		"SNOW11F",
+		"SNOW12F",
+		"SNOW13F",
+		"SNOW14F",
+		"SNOW15F",
+	};
+
+	str sandFlatz[7] =
+	{
+		"SAND1",
+		"SAND2",
+		"SAND3",
+		"SAND4",
+		"SAND5",
+		"SAND6",
+		"SAND7",
+	};
+
+	bool onGrass = false;
+	bool onSnow = false;
+	bool onSand = false;
+	int flatIndex;
+
+	for ( flatIndex = 1; flatIndex <= 4; flatIndex++ )
+	{
+		if (CheckActorFloorTexture(0, grassFlatz[flatIndex]))
 		{
 			onGrass = true;
+		}
+	}
+
+	for ( flatIndex = 1; flatIndex <= 11; flatIndex++ )
+	{
+		if (CheckActorFloorTexture(0, snowFlatz[flatIndex]))
+		{
+			onSnow = true;
+		}
+	}
+
+	for ( flatIndex = 1; flatIndex <= 7; flatIndex++ )
+	{
+		if (CheckActorFloorTexture(0, sandFlatz[flatIndex]))
+		{
+			onSand = true;
 		}
 	}
 
 	if (onGrass)
 	{
 		GiveInventory("AssIsGrass", 1);
+	}
+	else if (onSnow)
+	{
+		GiveInventory("AssIsSnow", 1);
+	}
+	else if (onSand)
+	{
+		GiveInventory("AssIsSand", 1);
 	}
 	else
 	{
