@@ -25,11 +25,7 @@ actor FancyObligeTree replaces BigTree
 			"TapwaveTreeA", "TapwaveTreeB")
 
 		OnSnow:
-			TRE2 A 0
-			{
-				float extraScale = frandom(1.5,2)
-				A_SetScale(extraScale, extraScale)
-			}
+			TRE2 A 0 A_SetScale(2, 2)
 			TRE2 A 0 A_Jump(255, "SnowTreeDeadA", "SnowTreeKebab", 
 			"SnowTreePloughed", "SnowTreeDeadB", "SnowTreeDeadC",
 			"SnowPineA", "SnowPineB", "SnowPineSmolA", "SnowPineSmolB")
