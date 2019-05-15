@@ -164,12 +164,17 @@ function GLAICE_EPIC_TEXTURES.decide_environment_themes()
   end
 
   -- checking in on custom outdoors
+  -- snow
   local snow_floors = GLAICE_SNOW_OUTDOORS.floors
   local snow_naturals = GLAICE_SNOW_OUTDOORS.naturals
   local snow_facades = GLAICE_SNOW_FACADE
+  local snow_cliffs = GLAICE_SNOW_CLIFF_MATS
+
+  --sand
   local sand_floors = GLAICE_DESERT_OUTDOORS.floors
   local sand_naturals = GLAICE_DESERT_OUTDOORS.naturals
   local sand_facades = GLAICE_DESERT_FACADE
+  local sand_cliffs = GLAICE_DESERT_CLIFF_MATS
 
   if OB_CONFIG.game == "doom2" then
     if LEVEL.outdoor_theme == "snow" then
