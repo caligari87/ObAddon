@@ -616,19 +616,19 @@ GLAICE_MATERIALS = {
   SNOWWAL4 = { t="SNOWWAL4", f="SHINY01" }
 
   -- Desert textures
-  DESBRIK1 = { t="DESBRIK1", f="RROCK10" } -- Tan brick facade
-  DESBRIK2 = { t="DESBRIK2", f="RROCK10" } -- Tan brick facade
+  DESBRIK1 = { t="DESBRIK1", f="RROCK09" } -- Tan brick facade
+  DESBRIK2 = { t="DESBRIK2", f="RROCK09" } -- Tan brick facade
   DESBRIK3 = { t="DESBRIK3", f="FLOOR7_1" } -- Brown brick facade w/ trim
-  DESBRIK4 = { t="DESBRIK4", f="RROCK10" } -- Tan brick facade
-  DESBRIK5 = { t="DESBRIK5", f="RROCK10" } -- Tan brick facade
-  DESBRIK6 = { t="DESBRIK6", f="RROCK10" } -- Tan brick facade w/ trim
+  DESBRIK4 = { t="DESBRIK4", f="RROCK09" } -- Tan brick facade
+  DESBRIK5 = { t="DESBRIK5", f="RROCK09" } -- Tan brick facade
+  DESBRIK6 = { t="DESBRIK6", f="RROCK09" } -- Tan brick facade w/ trim
   DESBRIK7 = { t="DESBRIK7", f="FLOOR7_1" } -- Tan brick facade
-  DESMARB1 = { t="DESMARB1", f="RROCK10" } -- Elegant tan marble
-  DESMARB2 = { t="DESMARB2", f="RROCK10" } -- Elegant tan marble
+  DESMARB1 = { t="DESMARB1", f="RROCK09" } -- Elegant tan marble
+  DESMARB2 = { t="DESMARB2", f="RROCK09" } -- Elegant tan marble
   DESROCK1 = { t="DESROCK1", f="RROCK03" } -- Brown rock
-  DESROCK2 = { t="DESROCK2", f="FLAT10" } -- Brown rock
+  DESROCK2 = { t="DESROCK2", f="FLAT09" } -- Brown rock
   DESROCK3 = { t="DESROCK3", f="FLOOR7_1" } -- Brown rock
-  DESROCK4 = { t="DESROCK4", f="RROCK10" } -- Tan rock
+  DESROCK4 = { t="DESROCK4", f="RROCK09" } -- Tan rock
   DESROCK5 = { t="DESROCK5", f="RROCK17" } -- Brown rock
 
 
