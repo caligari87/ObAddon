@@ -1,6 +1,6 @@
-PREFABS.Joiner_switched_bridge =
+PREFABS.Joiner_gtd_bridge_action =
 {
-  file   = "joiner/gtd_switched_bridge.wad"
+  file   = "joiner/gtd_bridge_action.wad"
   map    = "MAP01"
 
   prob   = 150
@@ -14,7 +14,7 @@ PREFABS.Joiner_switched_bridge =
   deep = 16
   over = 16
 
-  x_fit = { 56,72 , 184,200}
+  x_fit = { 72,76 , 180,184}
   y_fit = { 64,96 }
 
   can_flip = true
