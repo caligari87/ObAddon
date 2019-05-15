@@ -15,11 +15,33 @@ actor FancyObligeTree replaces BigTree
 		Decide:
 			TRE2 A 1
 			TRE2 A 0 A_JumpIfInventory("AssIsGrass", 1, "OnGrass")
-			TRE2 A 0 A_JumpIfInventory("AssIsUnknown", 1, "Vanilla")
+			TRE2 A 0 A_JumpIfInventory("AssIsSnow", 1, "OnSnow")
+			TRE2 A 0 A_JumpIfInventory("AssIsSand", 1, "OnSand")
+			TRE2 A 0 A_JumpIfInventory("AssIsUnknown", 1, "OnUnknownFlat")
 
 		OnGrass:
-			TRE2 A 0 A_Jump(255, "OakTree", "RedwoodTree", "SomeThinTree")
+			TRE2 A 0 A_Jump(127, "Shrub1", "Shrub2")
+			TRE2 A 0 A_Jump(255, "OakTree", "RedwoodTree", "SomeThinTree",
+			"TapwaveTreeA", "TapwaveTreeB")
 
+		OnSnow:
+			TRE2 A 0
+			{
+				float extraScale = frandom(1.5,2)
+				A_SetScale(extraScale, extraScale)
+			}
+			TRE2 A 0 A_Jump(255, "SnowTreeDeadA", "SnowTreeKebab", 
+			"SnowTreePloughed", "SnowTreeDeadB", "SnowTreeDeadC",
+			"SnowPineA", "SnowPineB", "SnowPineSmolA", "SnowPineSmolB")
+
+		OnSand:
+			TRE2 A 0 A_Jump(255, "PalmTree", "DesertTreeA", "DesertTreeB",
+			"Shrub1", "Shrub2")
+
+		OnUnknownFlat:
+			TRE2 A 0 A_Jump(255, "VanillaA", "VanillaB")
+
+		//temperate trees
 		OakTree:
 			OAK1 A -1
 
@@ -29,37 +51,11 @@ actor FancyObligeTree replaces BigTree
 		SomeThinTree:
 			THN1 A -1
 
-		Vanilla:
-			TRE2 A -1
-	}
-}
+		TapwaveTreeA:
+			TWTR A -1
 
-actor FancyObligeTreeAndBush : FancyObligeTree replaces TorchTree
-{
-	States
-	{
-		Spawn:
-			TRE1 A 3
-			TRE1 A 0 ACS_NamedExecuteAlways("IsMyAssGrass")
-			Goto Decide
-
-		Decide:
-			TRE1 A 1
-			TRE1 A 0 A_JumpIfInventory("AssIsGrass", 1, "OnGrass")
-			TRE1 A 0 A_JumpIfInventory("AssIsUnknown", 1, "Vanilla")
-
-		OnGrass:
-			TRE1 A 0 A_Jump(127, "Shrub1", "Shrub2")
-			TRE1 A 0 A_Jump(255, "OakTree", "RedwoodTree", "SomeThinTree")
-
-		OakTree:
-			OAK1 A -1
-
-		RedwoodTree:
-			RED1 A -1
-
-		SomeThinTree:
-			THN1 A -1
+		TapwaveTreeB:
+			TWTR B -1
 
 		Shrub1:
 			SHB1 A -1
@@ -67,13 +63,59 @@ actor FancyObligeTreeAndBush : FancyObligeTree replaces TorchTree
 		Shrub2:
 			SHB2 A -1
 
-		Vanilla:
+		//snow trees
+		SnowTreeDeadA:
+			XMAS A -1
+
+		SnowTreeKebab:
+			XMAS B -1
+
+		SnowTreePloughed:
+			XMAS C -1
+
+		SnowTreeDeadB:
+			XMAS D -1
+
+		SnowTreeDeadC:
+			XMAS E -1
+
+		SnowPineA:
+			XMAS F -1
+
+		SnowPineB:
+			XMAS G -1
+
+		SnowPineSmolA:
+			XMAS H -1
+
+		SnowPineSmolB:
+			XMAS I -1
+
+		//desert trees
+		PalmTree:
+			PLM1 A -1
+
+		DesertTreeA:
+			DTR1 A -1
+
+		DesertTreeB:
+			DTR2 A -1
+
+		//vanilla assets
+		VanillaA:
+			TRE2 A -1
+
+		VanillaB:
 			TRE1 A -1
 	}
 }
+
+actor FancyObligeTreeAndBush : FancyObligeTree replaces TorchTree{}
 
 actor AssIsGrass : Inventory
 {
 	Inventory.maxAmount 1
 }
+actor AssIsSnow : AssIsGrass{}
+actor AssIsSand : AssIsGrass{}
 actor AssIsUnknown : AssIsGrass{}
