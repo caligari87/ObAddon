@@ -3,7 +3,7 @@ PREFABS.Joiner_gtd_zigzag_small =
   file   = "joiner/gtd_zigzag_small.wad"
   map    = "MAP01"
 
-  prob   = 250
+  prob   = 200
   style  = "steepness"
 
   env      = "!cave"

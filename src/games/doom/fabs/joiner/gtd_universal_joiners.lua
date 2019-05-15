@@ -75,7 +75,7 @@ PREFABS.Joiner_gtd_universal_wavy_staircase =
   map   = "MAP04"
 
   theme = "!hell"
-  prob  = 750
+  prob  = 550
 
   where = "seeds"
   shape = "I"
