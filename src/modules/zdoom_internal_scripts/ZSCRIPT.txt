@@ -22,6 +22,16 @@ class FancyObligeTree : BigTree replaces BigTree
 				{
 					case 'GRASS1':
 					case 'GRASS2':
+					case 'GROUND01':
+					case 'GROUND02':
+					case 'GROUND03':
+					case 'GROUND04':
+					case 'FLAT10':
+					case 'QFLAT07': //I think this is dirt?
+					case 'RROCK09':
+					case 'RROCK16':
+					case 'RROCK17':
+					case 'RROCK18':
 					case 'RROCK19':
 					case 'RROCK20':
 						onGrass = true;
@@ -45,6 +55,7 @@ class FancyObligeTree : BigTree replaces BigTree
 					case 'SAND5':
 					case 'SAND6':
 					case 'SAND7':
+					case 'RROCK09': // Doubles as sand/rock
 						onSand = true;
 						break;
 					default:
