@@ -2590,7 +2590,7 @@ function Render_skybox()
 
   elseif OB_CONFIG.zdoom_skybox == "themed" then
     skyfab_name = rand.key_by_probs(GAME.THEMES[LEVEL.theme_name].skyboxes)
-    skyfab = PREFABS.[skyfab_name]
+    skyfab = PREFABS[skyfab_name]
   elseif OB_CONFIG.zdoom_skybox == "generic" then
     skyfab = PREFABS["Skybox_generic"]
   end

@@ -214,7 +214,7 @@ function Fab_load_all_definitions()
         -- have a probability of 0. This is more prefered as it
         -- is more likely to not break things.
         if def.replace_mode == "soft" then
-          PREFABS.[def.replaces].prob = 0
+          PREFABS[def.replaces].prob = 0
 
           each name,odef in PREFABS do
             if odef.template == def.replaces then
