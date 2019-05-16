@@ -722,7 +722,7 @@ ULTDOOM.THEMES =
 
     skyboxes =
     {
-
+      Skybox_generic = 50
     }
 
   ceil_light_prob = 70
@@ -816,7 +816,8 @@ ULTDOOM.THEMES =
 
     skyboxes =
     {
-
+      Skybox_generic = 50
+      Skybox_garrett_hell = 50
     }
 
    -- This is because of the slow Hellification of the Deimos base, hence a few Hell wall prefabs are here.
@@ -1159,7 +1160,7 @@ ULTDOOM.THEMES =
 
     skyboxes =
     {
-
+      Skybox_garrett_hell = 50
     }
 
     ceil_light_prob = 35
@@ -1400,7 +1401,8 @@ ULTDOOM.THEMES =
 
     skyboxes =
     {
-
+      Skybox_garrett_city = 50
+      Skybox_hellish_city = 50
     }
 
     archy_arches = true

@@ -77,7 +77,7 @@ HERETIC.THEMES =
 
     skyboxes =
     {
-
+      -- Heretic needs a 3D skybox, bois
     }
 
     steps_mat = "FLOOR10"

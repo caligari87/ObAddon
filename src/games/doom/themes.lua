@@ -1272,7 +1272,8 @@ DOOM.THEMES =
 
     skyboxes =
     {
-
+      Skybox_generic
+      Skybox_hellish_city
     }
 
     techy_doors = true
@@ -1565,7 +1566,8 @@ DOOM.THEMES =
 
     skyboxes =
     {
-
+      Skybox_hellish_city = 50
+      Skybox_garrett_city = 50
     }
 
     archy_arches = true
@@ -1934,7 +1936,8 @@ DOOM.THEMES =
 
     skyboxes =
     {
-
+      Skybox_garrett_hell = 50
+      Skybox_hellish_city = 50
     }
 
     ceil_light_prob = 40
