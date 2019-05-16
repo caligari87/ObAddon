@@ -195,13 +195,31 @@ function Fab_load_all_definitions()
     -- support for the new replace field
     if PARAM.epic_textures_activated then
       if def.replaces then
-        PREFABS[def.replaces] = def
-        table.remove(PREFABS[def.name])
 
-        -- remove templates of a replaced fab as well
-        each name,odef in PREFABS do
-          if odef.template == def.replaces then
-            table.remove(PREFABS[odef])
+        -- HARD replace mode causes pre-existing fabs to be removed
+        -- entirely, to be replaced with the replacing fab.
+        if not def.replace_mode or def.replace_mode == "hard" then
+          PREFABS[def.replaces] = def
+          table.remove(PREFABS[def.name])
+
+          -- remove templates of a replaced fab as well
+          each name,odef in PREFABS do
+            if odef.template == def.replaces then
+              table.remove(PREFABS[odef])
+            end
+          end
+        end
+
+        -- SOFT replace mode simply causes pre-existing fabs to
+        -- have a probability of 0. This is more prefered as it
+        -- is more likely to not break things.
+        if def.replace_mode == "soft" then
+          PREFABS.[def.replaces].prob = 0
+
+          each name,odef in PREFABS do
+            if odef.template == def.replaces then
+              PREFABS[odef].prob = 0
+            end
           end
         end
       end

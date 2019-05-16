@@ -2590,10 +2590,14 @@ function Render_skybox()
 
   elseif OB_CONFIG.zdoom_skybox == "themed" then
     skyfab_name = rand.key_by_probs(GAME.THEMES[LEVEL.theme_name].skyboxes)
+    skyfab = PREFABS.[skyfab_name]
   elseif OB_CONFIG.zdoom_skybox == "generic" then
     skyfab = PREFABS["Skybox_generic"]
-    skyfab = PREFABS["Skybox_hellish_city"]
+  end
 
+  if not skyfab then
+    gui.printf("WARNING: Could not find a proper skybox for theme '" .. LEVEL.theme_name .. "'\n")
+    return
   end
 
   if (OB_CONFIG.engine == "zdoom" or OB_CONFIG.engine == "gzdoom") and OB_CONFIG.zdoom_skybox != "disable" then
