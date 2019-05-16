@@ -5,8 +5,6 @@ PREFABS.Skybox_garrett_hell_EPIC =
 
   prob  = 50
 
-  replaces = "Skybox_garrett_hell"
-
   kind  = "skybox"
 
   theme = "hell"

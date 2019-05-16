@@ -5,8 +5,6 @@ PREFABS.Skybox_hellish_city_EPIC =
 
   prob  = 50
 
-  replaces = "Skybox_hellish_city"
-
   kind  = "skybox"
 
   theme = "tech"

@@ -5,8 +5,6 @@ PREFABS.Skybox_garrett_city_EPIC =
 
   prob  = 50
 
-  replaces = "Skybox_garrett_city"
-
   kind  = "skybox"
 
   theme = "urban"

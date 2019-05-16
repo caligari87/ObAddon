@@ -5,8 +5,6 @@ PREFABS.Skybox_generic_EPIC =
 
   prob  = 50
 
-  replaces = "Skybox_generic"
-
   kind  = "skybox"
 
   theme = "tech"
