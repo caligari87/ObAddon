@@ -267,17 +267,14 @@ function GLAICE_EPIC_TEXTURES.put_new_materials()
     -- put the custom theme definitions in the themes table!!!
     -- LIQUIDZ
     if PARAM.custom_liquids != "no" then
-      for name,prob in pairs(GLAICE_TECH_LIQUIDS) do
-        GAME.THEMES.tech.liquids[name] = prob
-      end
+      GLAICE_EPIC_TEXTURES.table_insert(GLAICE_TECH_LIQUIDS,
+        GAME.THEMES.tech.liquids)
 
-      for name,prob in pairs(GLAICE_URBAN_LIQUIDS) do
-        GAME.THEMES.urban.liquids[name] = prob
-      end
+      GLAICE_EPIC_TEXTURES.table_insert(GLAICE_URBAN_LIQUIDS,
+        GAME.THEMES.urban.liquids)
 
-      for name,prob in pairs(GLAICE_HELL_LIQUIDS) do
-        GAME.THEMES.hell.liquids[name] = prob
-      end
+      GLAICE_EPIC_TEXTURES.table_insert(GLAICE_HELL_LIQUIDS,
+        GAME.THEMES.hell.liquids)
     end
 
     -- FACADES
@@ -358,155 +355,99 @@ function GLAICE_EPIC_TEXTURES.put_new_materials()
 
   if OB_CONFIG.game == "doom1" or OB_CONFIG.game == "ultdoom" then
     -- put the custom material definitions in the materials table!!!
-    for skin,defs in pairs(GLAICE_DOOM1_MATERIALS) do
-      GAME.MATERIALS[skin] = defs
-    end
-
-    for skin,defs in pairs(GLAICE_DOOM1_LIQUIDS) do
-      GAME.LIQUIDS[skin] = defs
-    end
+    GLAICE_EPIC_TEXTURES.table_insert(GLAICE_DOOM1_MATERIALS,
+      GAME.MATERIALS)
+    GLAICE_EPIC_TEXTURES.table_insert(GLAICE_DOOM1_LIQUIDS,
+      GAME.LIQUIDS)
 
     -- put the custom theme definitions in the themes table!!!
     -- LIQUIDZ
     if PARAM.custom_liquids != "yes" then
-      for name,prob in pairs(GLAICE_DOOM1_TECH_LIQUIDS) do
-        GAME.THEMES.tech.liquids[name] = prob
-      end
-
-      for name,prob in pairs(GLAICE_DOOM1_DEIMOS_LIQUIDS) do
-        GAME.THEMES.deimos.liquids[name] = prob
-      end
-
-      for name,prob in pairs(GLAICE_DOOM1_HELL_LIQUIDS) do
-        GAME.THEMES.hell.liquids[name] = prob
-      end
+      GLAICE_EPIC_TEXTURES.table_insert(GLAICE_DOOM1_TECH_LIQUIDS,
+        GAME.THEMES.tech.liquids[name])
+      GLAICE_EPIC_TEXTURES.table_insert(GLAICE_DOOM1_DEIMOS_LIQUIDS,
+        GAME.THEMES.deimos.liquids)
+      GLAICE_EPIC_TEXTURES.table_insert(GLAICE_DOOM1_HELL_LIQUIDS,
+        GAME.THEMES.hell.liquids)
     end
 
     -- FACADES
-    for name,prob in pairs(GLAICE_DOOM1_TECH_FACADES) do
-      GAME.THEMES.tech.facades[name] = prob
-    end
+    GLAICE_EPIC_TEXTURES.table_insert(GLAICE_DOOM1_TECH_FACADES,
+      GAME.THEMES.tech.facades)
 
-    for name,prob in pairs(GLAICE_DOOM1_HELL_FACADES) do
-      GAME.THEMES.hell.facades[name] = prob
-    end
+    GLAICE_EPIC_TEXTURES.table_insert(GLAICE_DOOM1_HELL_FACADES,
+      GAME.THEMES.hell.facades)
 
-    for name,prob in pairs(GLAICE_DOOM1_FLESH_FACADES) do
-      GAME.THEMES.flesh.facades[name] = prob
-    end
+    GLAICE_EPIC_TEXTURES.table_insert(GLAICE_DOOM1_FLESH_FACADES,
+      GAME.THEMES.flesh.facades)
 
-    for name,prob in pairs(GLAICE_DOOM1_DEIMOS_FACADES) do
-      GAME.THEMES.deimos.facades[name] = prob
-    end
+    GLAICE_EPIC_TEXTURES.table_insert(GLAICE_DOOM1_DEIMOS_FACADES,
+      GAME.THEMES.deimos.facades)
 
-    for room_theme,defs in pairs(GLAICE_DOOM1_THEMES) do
-      GAME.ROOM_THEMES[room_theme] = defs
-    end
+    GLAICE_EPIC_TEXTURES.table_insert(GLAICE_DOOM1_THEMES,
+      GAME.ROOM_THEMES)
 
     -- NATURALS
-    for name,prob in pairs(GLAICE_DOOM1_TECH_NATURALS) do
-      GAME.ROOM_THEMES.tech_Outdoors.naturals[name] = prob
-    end
-
-    for name,prob in pairs(GLAICE_DOOM1_DEIMOS_NATURALS) do
-      GAME.ROOM_THEMES.deimos_Outdoors.naturals[name] = prob
-    end
-
-    for name,prob in pairs(GLAICE_DOOM1_HELL_NATURALS) do
-      GAME.ROOM_THEMES.hell_Outdoors.naturals[name] = prob
-    end
-
-    for name,prob in pairs(GLAICE_DOOM1_FLESH_NATURALS) do
-      GAME.ROOM_THEMES.flesh_Outdoors.naturals[name] = prob
-    end
+    GLAICE_EPIC_TEXTURES.table_insert(GLAICE_DOOM1_TECH_NATURALS,
+      GAME.ROOM_THEMES.tech_Outdoors.naturals)
+    GLAICE_EPIC_TEXTURES.table_insert(GLAICE_DOOM1_DEIMOS_NATURALS,
+      GAME.ROOM_THEMES.deimos_Outdoors.naturals)
+    GLAICE_EPIC_TEXTURES.table_insert(GLAICE_DOOM1_HELL_NATURALS,
+      GAME.ROOM_THEMES.hell_Outdoors.naturals)
+    GLAICE_EPIC_TEXTURES.table_insert(GLAICE_DOOM1_FLESH_NATURALS,
+      GAME.ROOM_THEMES.flesh_Outdoors.naturals)
 
     -- SINKS
-    for name,def in pairs(GLAICE_DOOM1_SINK_DEFS) do
-      GAME.SINKS[name] = def
-    end
-
-    for name,prob in pairs(GLAICE_DOOM1_TECH_CEILING_SINKS) do
-      GAME.THEMES.tech.ceiling_sinks[name] = prob
-    end
-
-    for name,prob in pairs(GLAICE_DOOM1_DEIMOS_CEILING_SINKS) do
-      GAME.THEMES.deimos.ceiling_sinks[name] = prob
-    end
-
-    for name,prob in pairs(GLAICE_DOOM1_HELL_CEILING_SINKS) do
-      GAME.THEMES.hell.ceiling_sinks[name] = prob
-    end
-
-    for name,prob in pairs(GLAICE_DOOM1_FLESH_CEILING_SINKS) do
-      GAME.THEMES.flesh.ceiling_sinks[name] = prob
-    end
-
-    for name,prob in pairs(GLAICE_DOOM1_TECH_FLOOR_SINKS) do
-      GAME.THEMES.tech.floor_sinks[name] = prob
-    end
-
-    for name,prob in pairs(GLAICE_DOOM1_DEIMOS_FLOOR_SINKS) do
-      GAME.THEMES.deimos.floor_sinks[name] = prob
-    end
-
-    for name,prob in pairs(GLAICE_DOOM1_HELL_FLOOR_SINKS) do
-      GAME.THEMES.hell.floor_sinks[name] = prob
-    end
-
-    for name,prob in pairs(GLAICE_DOOM1_FLESH_FLOOR_SINKS) do
-      GAME.THEMES.flesh.floor_sinks[name] = prob
-    end
+    GLAICE_EPIC_TEXTURES.table_insert(GLAICE_DOOM1_SINK_DEFS,
+      GAME.SINKS)
+    -- ceiling sink tables
+    GLAICE_EPIC_TEXTURES.table_insert(GLAICE_DOOM1_TECH_CEILING_SINKS,
+      GAME.THEMES.tech.ceiling_sinks)
+    GLAICE_EPIC_TEXTURES.table_insert(GLAICE_DOOM1_DEIMOS_CEILING_SINKS,
+      GAME.THEMES.deimos.ceiling_sinks)
+    GLAICE_EPIC_TEXTURES.table_insert(GLAICE_DOOM1_HELL_CEILING_SINKS,
+      GAME.THEMES.hell.ceiling_sinks)
+    GLAICE_EPIC_TEXTURES.table_insert(GLAICE_DOOM1_FLESH_CEILING_SINKS,
+      GAME.THEMES.flesh.ceiling_sinks)
+    -- floor sink tables
+    GLAICE_EPIC_TEXTURES.table_insert(GLAICE_DOOM1_TECH_FLOOR_SINKS,
+      GAME.THEMES.tech.floor_sinks)
+    GLAICE_EPIC_TEXTURES.table_insert(GLAICE_DOOM1_DEIMOS_FLOOR_SINKS,
+      GAME.THEMES.deimos.floor_sinks)
+    GLAICE_EPIC_TEXTURES.table_insert(GLAICE_DOOM1_HELL_FLOOR_SINKS,
+      GAME.THEMES.hell.floor_sinks)
+    GLAICE_EPIC_TEXTURES.table_insert(GLAICE_DOOM1_FLESH_FLOOR_SINKS,
+      GAME.THEMES.flesh.floor_sinks)
 
     --new scenic fences feature
-    for name,prob in pairs(GLAICE_DOOM1_TECH_SCENIC_FENCES) do
-      GAME.THEMES.tech.scenic_fence[name] = prob
-    end
-
-    for name,prob in pairs(GLAICE_DOOM1_DEIMOS_SCENIC_FENCES) do
-      GAME.THEMES.deimos.scenic_fence[name] = prob
-    end
-
-    for name,prob in pairs(GLAICE_DOOM1_HELL_SCENIC_FENCES) do
-      GAME.THEMES.hell.scenic_fence[name] = prob
-    end
-
-    for name,prob in pairs(GLAICE_DOOM1_FLESH_SCENIC_FENCES) do
-      GAME.THEMES.flesh.scenic_fence[name] = prob
-    end
+    GLAICE_EPIC_TEXTURES.table_insert(GLAICE_DOOM1_TECH_SCENIC_FENCES,
+      GAME.THEMES.tech.scenic_fence)
+    GLAICE_EPIC_TEXTURES.table_insert(GLAICE_DOOM1_DEIMOS_SCENIC_FENCES,
+      GAME.THEMES.deimos.scenic_fence)
+    GLAICE_EPIC_TEXTURES.table_insert(GLAICE_DOOM1_HELL_SCENIC_FENCES,
+      GAME.THEMES.hell.scenic_fence)
+    GLAICE_EPIC_TEXTURES.table_insert(GLAICE_DOOM1_FLESH_SCENIC_FENCES,
+      GAME.THEMES.flesh.scenic_fence)
 
     -- inserts for group walls
-    for name,prob in pairs(GLAICE_DOOM1_TECH_WALL_GROUPS) do
-      GAME.THEMES.tech.wall_groups[name] = prob
-    end
-
-    for name,prob in pairs(GLAICE_DOOM1_DEIMOS_WALL_GROUPS) do
-      GAME.THEMES.deimos.wall_groups[name] = prob
-    end
-
-    for name,prob in pairs(GLAICE_DOOM1_HELL_WALL_GROUPS) do
-      GAME.THEMES.hell.wall_groups[name] = prob
-    end
-
-    for name,prob in pairs(GLAICE_DOOM1_FLESH_WALL_GROUPS) do
-      GAME.THEMES.flesh.wall_groups[name] = prob
-    end
+    GLAICE_EPIC_TEXTURES.table_insert(GLAICE_DOOM1_TECH_WALL_GROUPS,
+      GAME.THEMES.tech.wall_groups)
+    GLAICE_EPIC_TEXTURES.table_insert(GLAICE_DOOM1_DEIMOS_WALL_GROUPS,
+      GAME.THEMES.deimos.wall_groups)
+    GLAICE_EPIC_TEXTURES.table_insert(GLAICE_DOOM1_HELL_WALL_GROUPS,
+      GAME.THEMES.hell.wall_groups)
+    GLAICE_EPIC_TEXTURES.table_insert(GLAICE_DOOM1_FLESH_WALL_GROUPS,
+      GAME.THEMES.flesh.wall_groups)
 
     -- inserts for window groups
-    for name,prob in pairs(GLAICE_DOOM1_TECH_WINDOW_GROUPS) do
-      GAME.THEMES.tech.window_groups[name] = prob
-    end
-
-    for name,prob in pairs(GLAICE_DOOM1_DEIMOS_WINDOW_GROUPS) do
-      GAME.THEMES.deimos.window_groups[name] = prob
-    end
-
-    for name,prob in pairs(GLAICE_DOOM1_HELL_WINDOW_GROUPS) do
-      GAME.THEMES.hell.window_groups[name] = prob
-    end
-
-    for name,prob in pairs(GLAICE_DOOM1_FLESH_WINDOW_GROUPS) do
-      GAME.THEMES.flesh.window_groups[name] = prob
-    end
+    GLAICE_EPIC_TEXTURES.table_insert(GLAICE_DOOM1_TECH_WINDOW_GROUPS,
+      GAME.THEMES.tech.window_groups)
+    GLAICE_EPIC_TEXTURES.table_insert(GLAICE_DOOM1_DEIMOS_WINDOW_GROUPS,
+      GAME.THEMES.deimos.window_groups)
+    GLAICE_EPIC_TEXTURES.table_insert(GLAICE_DOOM1_HELL_WINDOW_GROUPS,
+      GAME.THEMES.hell.window_groups)
+    GLAICE_EPIC_TEXTURES.table_insert(GLAICE_DOOM1_FLESH_WINDOW_GROUPS,
+      GAME.THEMES.flesh.window_groups)
 
     --hack for the street textures
     GAME.SINKS.floor_streets.trim_mat = "WARN1"
