@@ -248,58 +248,21 @@ function GLAICE_EPIC_TEXTURES.decide_environment_themes()
   end
 end
 
---[[function GLAICE_EPIC_TEXTURES.create_environment_themes()
-
-  gui.printf("\ncreate_environment_themes()\n\n")
-
-  if LEVEL.outdoor_theme == "temperate"
-  or PARAM.environment_themes == "no" then
-    return
+function GLAICE_EPIC_TEXTURES.table_insert(table1, table2)
+  for x,y in pairs(table1) do
+    table2[x] = y
   end
-
-  if OB_CONFIG.game == "doom2" then
-    each R in LEVEL.rooms do
-      if R.is_outdoor then
-        gui.printf("Room: " .. R.id .. "\n")
-
-        each A in R.areas do
-          if A.floor_mat then
-            gui.printf(A.floor_mat .. "\n")
-            if LEVEL.outdoor_theme == "snow" then
-              A.floor_mat = rand.key_by_probs(GLAICE_SNOW_TEXTURES)
-            elseif LEVEL.outdoor_theme == "desert" then
-              A.floor_mat = rand.key_by_probs(GLAICE_DESERT_TEXTURES)
-            end
-            gui.printf(A.floor_mat .. "\n")
-          end
-        end
-      elseif R.is_park then
-        each A in R.areas do
-          each B in A.blobs do
-            if LEVEL.outdoor_theme == "snow" then
-              B.floor_mat = rand.key_by_probs(GLAICE_SNOW_TEXTURES)
-            elseif LEVEL.outdoor_theme == "desert" then
-              B.floor_mat = rand.key_by_probs(GLAICE_DESERT_TEXTURES)
-            end
-          end
-        end
-      end
-
-    end
-  end
-end]]
+end
 
 function GLAICE_EPIC_TEXTURES.put_new_materials()
 
   if OB_CONFIG.game == "doom2" then
     -- put the custom material definitions in the materials table!!!
-    for skin,defs in pairs(GLAICE_MATERIALS) do
-      GAME.MATERIALS[skin] = defs
-    end
+    GLAICE_EPIC_TEXTURES.table_insert(GLAICE_MATERIALS,
+      GAME.MATERIALS)
 
-    for skin,defs in pairs(GLAICE_LIQUIDS) do
-      GAME.LIQUIDS[skin] = defs
-    end
+    GLAICE_EPIC_TEXTURES.table_insert(GLAICE_LIQUIDS,
+      GAME.LIQUIDS)
 
     -- put the custom theme definitions in the themes table!!!
     -- LIQUIDZ
@@ -318,102 +281,76 @@ function GLAICE_EPIC_TEXTURES.put_new_materials()
     end
 
     -- FACADES
-    for name,prob in pairs(GLAICE_TECH_FACADES) do
-      GAME.THEMES.tech.facades[name] = prob
-    end
+    GLAICE_EPIC_TEXTURES.table_insert(GLAICE_TECH_FACADES,
+      GAME.THEMES.tech.facades)
+    GLAICE_EPIC_TEXTURES.table_insert(GLAICE_HELL_FACADES,
+      GAME.THEMES.hell.facades)
+    GLAICE_EPIC_TEXTURES.table_insert(GLAICE_URBAN_FACADES,
+      GAME.THEMES.urban.facades)
 
-    for name,prob in pairs(GLAICE_HELL_FACADES) do
-      GAME.THEMES.hell.facades[name] = prob
-    end
-
-    for name,prob in pairs(GLAICE_URBAN_FACADES) do
-      GAME.THEMES.urban.facades[name] = prob
-    end
-
-    for room_theme,defs in pairs(GLAICE_THEMES) do
-      GAME.ROOM_THEMES[room_theme] = defs
-    end
+    GLAICE_EPIC_TEXTURES.table_insert(GLAICE_THEMES,
+      GAME.ROOM_THEMES)
 
     -- NATURALS
-    for name,prob in pairs(GLAICE_TECH_NATURALS) do
-      GAME.ROOM_THEMES.tech_Outdoors_generic.naturals[name] = prob
-    end
-
-    for name,prob in pairs(GLAICE_URBAN_NATURALS) do
-      GAME.ROOM_THEMES.urban_Outdoors_generic.naturals[name] = prob
-    end
-
-    for name,prob in pairs(GLAICE_HELL_NATURALS) do
-      GAME.ROOM_THEMES.hell_Outdoors_generic.naturals[name] = prob
-    end
+    GLAICE_EPIC_TEXTURES.table_insert(GLAICE_TECH_NATURALS,
+      GAME.ROOM_THEMES.tech_Outdoors_generic.naturals)
+    GLAICE_EPIC_TEXTURES.table_insert(GLAICE_URBAN_NATURALS,
+      GAME.ROOM_THEMES.urban_Outdoors_generic.naturals)
+    GLAICE_EPIC_TEXTURES.table_insert(GLAICE_HELL_NATURALS,
+     GAME.ROOM_THEMES.hell_Outdoors_generic.naturals)
 
     -- SINKS
-    for name,def in pairs(GLAICE_SINK_DEFS) do
-      GAME.SINKS[name] = def
-    end
+    -- definitions
+    GLAICE_EPIC_TEXTURES.table_insert(GLAICE_SINK_DEFS,
+      GAME.SINKS)
 
-    for name,prob in pairs(GLAICE_TECH_CEILING_SINKS) do
-      GAME.THEMES.tech.ceiling_sinks[name] = prob
-    end
+    -- ceiling sink tables
+    GLAICE_EPIC_TEXTURES.table_insert(GLAICE_TECH_CEILING_SINKS,
+      GAME.THEMES.tech.ceiling_sinks)
+    GLAICE_EPIC_TEXTURES.table_insert(GLAICE_URBAN_CEILING_SINKS,
+      GAME.THEMES.urban.ceiling_sinks)
+    GLAICE_EPIC_TEXTURES.table_insert(GLAICE_HELL_CEILING_SINKS,
+      GAME.THEMES.hell.ceiling_sinks)
 
-    for name,prob in pairs(GLAICE_URBAN_CEILING_SINKS) do
-      GAME.THEMES.urban.ceiling_sinks[name] = prob
-    end
-
-    for name,prob in pairs(GLAICE_HELL_CEILING_SINKS) do
-      GAME.THEMES.hell.ceiling_sinks[name] = prob
-    end
-
-    for name,prob in pairs(GLAICE_TECH_FLOOR_SINKS) do
-      GAME.THEMES.tech.floor_sinks[name] = prob
-    end
-
-    for name,prob in pairs(GLAICE_URBAN_FLOOR_SINKS) do
-      GAME.THEMES.urban.floor_sinks[name] = prob
-    end
-
-    for name,prob in pairs(GLAICE_HELL_FLOOR_SINKS) do
-      GAME.THEMES.hell.floor_sinks[name] = prob
-    end
+    -- floor sink tables
+    GLAICE_EPIC_TEXTURES.table_insert(GLAICE_TECH_FLOOR_SINKS,
+      GAME.THEMES.tech.floor_sinks)
+    GLAICE_EPIC_TEXTURES.table_insert(GLAICE_URBAN_FLOOR_SINKS,
+      GAME.THEMES.urban.floor_sinks)
+    GLAICE_EPIC_TEXTURES.table_insert(GLAICE_HELL_FLOOR_SINKS,
+      GAME.THEMES.hell.floor_sinks)
 
     --new scenic fences feature
-    for name,prob in pairs(GLAICE_TECH_SCENIC_FENCES) do
-      GAME.THEMES.tech.scenic_fence[name] = prob
-    end
-
-    for name,prob in pairs(GLAICE_URBAN_SCENIC_FENCES) do
-      GAME.THEMES.urban.scenic_fence[name] = prob
-    end
-
-    for name,prob in pairs(GLAICE_HELL_SCENIC_FENCES) do
-      GAME.THEMES.hell.scenic_fence[name] = prob
-    end
+    GLAICE_EPIC_TEXTURES.table_insert(GLAICE_TECH_SCENIC_FENCES,
+      GAME.THEMES.tech.scenic_fence)
+    GLAICE_EPIC_TEXTURES.table_insert(GLAICE_URBAN_SCENIC_FENCES,
+      GAME.THEMES.urban.scenic_fence)
+    GLAICE_EPIC_TEXTURES.table_insert(GLAICE_HELL_SCENIC_FENCES,
+      GAME.THEMES.hell.scenic_fence)
 
     -- inserts for group walls
-    for name,prob in pairs(GLAICE_TECH_WALL_GROUPS) do
-      GAME.THEMES.tech.wall_groups[name] = prob
-    end
-
-    for name,prob in pairs(GLAICE_URBAN_WALL_GROUPS) do
-      GAME.THEMES.urban.wall_groups[name] = prob
-    end
-
-    for name,prob in pairs(GLAICE_HELL_WALL_GROUPS) do
-      GAME.THEMES.hell.wall_groups[name] = prob
-    end
+    GLAICE_EPIC_TEXTURES.table_insert(GLAICE_TECH_WALL_GROUPS,
+      GAME.THEMES.tech.wall_groups)
+    GLAICE_EPIC_TEXTURES.table_insert(GLAICE_URBAN_WALL_GROUPS,
+      GAME.THEMES.urban.wall_groups)
+    GLAICE_EPIC_TEXTURES.table_insert(GLAICE_HELL_WALL_GROUPS,
+      GAME.THEMES.hell.wall_groups)
 
     -- inserts for window groups
-    for name,prob in pairs(GLAICE_TECH_WINDOW_GROUPS) do
-      GAME.THEMES.tech.window_groups[name] = prob
-    end
+    GLAICE_EPIC_TEXTURES.table_insert(GLAICE_TECH_WINDOW_GROUPS,
+      GAME.THEMES.tech.window_groups)
+    GLAICE_EPIC_TEXTURES.table_insert(GLAICE_URBAN_WINDOW_GROUPS,
+      GAME.THEMES.urban.window_groups)
+    GLAICE_EPIC_TEXTURES.table_insert(GLAICE_HELL_WINDOW_GROUPS,
+      GAME.THEMES.hell.window_groups)
 
-    for name,prob in pairs(GLAICE_URBAN_WINDOW_GROUPS) do
-      GAME.THEMES.urban.window_groups[name] = prob
-    end
-
-    for name,prob in pairs(GLAICE_HELL_WINDOW_GROUPS) do
-      GAME.THEMES.hell.window_groups[name] = prob
-    end
+    -- inserts for epic skyboxes
+    GLAICE_EPIC_TEXTURES.table_insert(GLAICE_TECH_MATERIALS,
+      GAME.THEMES.tech.skyboxes)
+    GLAICE_EPIC_TEXTURES.table_insert(GLAICE_URBAN_MATERIALS,
+      GAME.THEMES.urban.skyboxes)
+    GLAICE_EPIC_TEXTURES.table_insert(GLAICE_HELL_MATERIALS,
+      GAME.THEMES.hell.skyboxes)
 
     --hack for the street textures
     GAME.SINKS.floor_streets.trim_mat = "WARN1"

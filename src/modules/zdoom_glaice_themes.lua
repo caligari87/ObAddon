@@ -2315,6 +2315,23 @@ GLAICE_HELL_WINDOW_GROUPS =
 }
 
 
+-- tables for the Epic skyboxes
+GLAICE_TECH_SKYBOXES =
+{
+
+}
+
+GLAICE_URBAN_SKYBOXES =
+{
+
+}
+
+GLAICE_HELL_SKYBOXES =
+{
+
+}
+
+
 -- intercepts for the new environment theme feature
 
 GLAICE_SNOW_OUTDOORS =

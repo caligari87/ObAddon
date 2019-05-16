@@ -2136,3 +2136,25 @@ GLAICE_DOOM1_FLESH_WINDOW_GROUPS =
 {
   gtd_window_gothic_epic = 80
 }
+
+
+-- tables for the Epic skyboxes
+GLAICE_TECH_SKYBOXES =
+{
+
+}
+
+GLAICE_DEIMOS_SKYBOXES =
+{
+
+}
+
+GLAICE_HELL_SKYBOXES =
+{
+
+}
+
+GLAICE_DEIMOS_FLESH_SKYBOXES =
+{
+
+}
