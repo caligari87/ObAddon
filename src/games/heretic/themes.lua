@@ -75,6 +75,11 @@ HERETIC.THEMES =
       GATMETL5 = 50
     }
 
+    skyboxes =
+    {
+
+    }
+
     steps_mat = "FLOOR10"
 
     post_mat  = "METL2"

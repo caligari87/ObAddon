@@ -1270,6 +1270,11 @@ DOOM.THEMES =
       BRNSMALC = 2
     }
 
+    skyboxes =
+    {
+
+    }
+
     techy_doors = true
   }
 
@@ -1556,6 +1561,11 @@ DOOM.THEMES =
       MIDSPACE = 8
       MIDBARS1 = 8
       BRNSMALC = 2
+    }
+
+    skyboxes =
+    {
+
     }
 
     archy_arches = true
@@ -1920,6 +1930,11 @@ DOOM.THEMES =
       MIDBRN1 = 3
       MIDGRATE = 10
       MIDBARS3 = 8
+    }
+
+    skyboxes =
+    {
+
     }
 
     ceil_light_prob = 40

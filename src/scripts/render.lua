@@ -2571,10 +2571,11 @@ function Render_skybox()
 
   if OB_CONFIG.zdoom_skybox == "random" then
     local skyfab_list = {}
-    table.insert(skyfab_list, PREFABS["Skybox_generic"])
-    table.insert(skyfab_list, PREFABS["Skybox_garrett_city"])
-    table.insert(skyfab_list, PREFABS["Skybox_garrett_hell"])
-    table.insert(skyfab_list, PREFABS["Skybox_hellish_city"])
+    each def in PREFABS do
+      if def.kind == "skybox" then
+        table.insert(skyfab_list)
+      end
+    end
 
     skyfab = rand.pick(skyfab_list)
 
@@ -2588,27 +2589,7 @@ function Render_skybox()
     skyfab = Fab_pick(reqs)]]
 
   elseif OB_CONFIG.zdoom_skybox == "themed" then
-    if LEVEL.theme_name == "urban" then
-      skyfab_list_urban = {}
-      table.insert(skyfab_list_urban, PREFABS["Skybox_garrett_city"])
-      table.insert(skyfab_list_urban, PREFABS["Skybox_hellish_city"])
-
-      skyfab = rand.pick(skyfab_list_urban)
-
-    elseif LEVEL.theme_name == "tech" then
-      skyfab = PREFABS["Skybox_generic"]
-
-    elseif LEVEL.theme_name == "hell" then
-      skyfab_list_hell = {}
-      table.insert(skyfab_list_hell, PREFABS["Skybox_garrett_hell"])
-      table.insert(skyfab_list_hell, PREFABS["Skybox_hellish_city"])
-
-      skyfab = rand.pick(skyfab_list_hell)
-
-    else
-      skyfab = PREFABS["Skybox_generic"]
-
-    end
+    skyfab_name = rand.key_by_probs(GAME.THEMES[LEVEL.theme_name].skyboxes)
   elseif OB_CONFIG.zdoom_skybox == "generic" then
     skyfab = PREFABS["Skybox_generic"]
     skyfab = PREFABS["Skybox_hellish_city"]

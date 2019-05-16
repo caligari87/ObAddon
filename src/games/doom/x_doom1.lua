@@ -720,6 +720,11 @@ ULTDOOM.THEMES =
       skull   = 0.2
     }
 
+    skyboxes =
+    {
+
+    }
+
   ceil_light_prob = 70
 
   }
@@ -807,6 +812,11 @@ ULTDOOM.THEMES =
       BROVINE2 = 30
       GRAY1    = 20
       ICKWALL3 = 20
+    }
+
+    skyboxes =
+    {
+
     }
 
    -- This is because of the slow Hellification of the Deimos base, hence a few Hell wall prefabs are here.
@@ -1147,6 +1157,11 @@ ULTDOOM.THEMES =
       MIDGRATE = 12
     }
 
+    skyboxes =
+    {
+
+    }
+
     ceil_light_prob = 35
   }
 
@@ -1378,14 +1393,19 @@ ULTDOOM.THEMES =
       barrels = { none=45, few=15, some=5, heaps=4 }
     }
 
-    archy_arches = true
-
-    ceil_light_prob = 45
-
     scenic_fence =
     {
       MIDGRATE = 50
     }
+
+    skyboxes =
+    {
+
+    }
+
+    archy_arches = true
+
+    ceil_light_prob = 45
   }
 }
 
