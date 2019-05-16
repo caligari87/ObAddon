@@ -1270,6 +1270,12 @@ DOOM.THEMES =
       BRNSMALC = 2
     }
 
+    skyboxes =
+    {
+      Skybox_generic = 50
+      Skybox_hellish_city = 50
+    }
+
     techy_doors = true
   }
 
@@ -1556,6 +1562,12 @@ DOOM.THEMES =
       MIDSPACE = 8
       MIDBARS1 = 8
       BRNSMALC = 2
+    }
+
+    skyboxes =
+    {
+      Skybox_hellish_city = 50
+      Skybox_garrett_city = 50
     }
 
     archy_arches = true
@@ -1920,6 +1932,12 @@ DOOM.THEMES =
       MIDBRN1 = 3
       MIDGRATE = 10
       MIDBARS3 = 8
+    }
+
+    skyboxes =
+    {
+      Skybox_garrett_hell = 50
+      Skybox_hellish_city = 50
     }
 
     ceil_light_prob = 40
