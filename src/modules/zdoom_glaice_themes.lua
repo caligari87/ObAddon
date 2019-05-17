@@ -2318,7 +2318,7 @@ GLAICE_HELL_WINDOW_GROUPS =
 -- tables for the Epic skyboxes
 GLAICE_TECH_SKYBOXES =
 {
-  Skybox_hellish_city_EPIC = 50
+  Skybox_tech_ffvii_EPIC = 50
   Skybox_generic_EPIC = 50
 }
 
