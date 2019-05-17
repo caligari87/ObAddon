@@ -991,7 +991,7 @@ OB_MODULES["zdoom_specials"] =
       label = _("Fog Intensity"),
       priority = 8
       choices = ZDOOM_SPECIALS.FOG_DENSITY_CHOICES
-      default = "no"
+      default = "subtle"
       tooltip = "Determines thickness and intensity of fog, if the Fog Generator is enabled. Subtle or Misty is recommended."
     }
 
