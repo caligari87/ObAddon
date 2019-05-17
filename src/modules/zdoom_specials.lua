@@ -48,7 +48,7 @@ ZDOOM_SPECIALS.FOG_ENV_CHOICES =
 
 ZDOOM_SPECIALS.FOG_DENSITY_CHOICES =
 {
-  "clear",  _("Subtle"),
+  "subtle",  _("Subtle"),
   "misty",  _("Misty"),
   "smoky",  _("Smoky"),
   "foggy",  _("Foggy"),
@@ -483,7 +483,7 @@ function ZDOOM_SPECIALS.do_special_stuff()
     local fog_intensity = "48"
 
     -- resolve fog intensity
-    if PARAM.fog_intensity == "clear" then
+    if PARAM.fog_intensity == "subtle" then
       fog_intensity = "16"
     elseif PARAM.fog_intensity == "misty" then
       fog_intensity = "48"
@@ -603,6 +603,10 @@ function ZDOOM_SPECIALS.do_special_stuff()
       else
         special_attributes = ''
       end
+    end
+
+    if PARAM.no_intermission == "yes" then
+      special_attributes = special_attributes .. '  nointermission\n'
     end
 
     local mapinfo =
@@ -1041,6 +1045,16 @@ OB_MODULES["zdoom_specials"] =
       choices = ZDOOM_SPECIALS.YES_NO
       default = "no"
       tooltip = "Creates a classic Doom/Ultimate Doom style episode selection."
+      gap = 1
+    }
+
+    no_intermission = {
+      label = _("Disable Intermissions"),
+      priority = 1
+      choices = ZDOOM_SPECIALS.YES_NO
+      default = "no"
+      tooltip = "Removes intermissions via MAPINFO. WARNING: this renders the Story Generator useless " ..
+                "without intermission screens to display them through."
     }
   }
 }
