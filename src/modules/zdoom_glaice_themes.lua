@@ -2407,7 +2407,14 @@ GLAICE_SNOW_CLIFF_MATS =
   SNOW15 = 50
 }
 
-GLAICE_SNOW_FACADES =
+-- Snowed-in building facades, per map theme type
+
+GLAICE_SNOW_TECH_FACADES =
+{
+
+}
+
+GLAICE_SNOW_URBAN_FACADES =
 {
   SNOW01 = 50
   SNOW02 = 20
@@ -2427,6 +2434,11 @@ GLAICE_SNOW_FACADES =
   BRONZEG3  = 20
   CEM10     = 30
   GOTHJ1    = 15
+}
+
+GLAICE_SNOW_HELL_FACADES =
+{
+
 }
 
 -- Seriously, we need more desert type textures!!
@@ -2471,6 +2483,11 @@ GLAICE_DESERT_CLIFF_MATS =
 
 GLAICE_DESERT_FACADES =
 {
+
+}
+
+GLAICE_DESERT_URBAN_FACADES =
+{
   BSTONE1 = 20
   BSTONE2 = 20
   STUCCO  = 20
@@ -2486,4 +2503,9 @@ GLAICE_DESERT_FACADES =
   EGYPT04  = 15
   EGYPT05  = 15
   EGYPT06  = 15
+}
+
+GLAICE_DESERT_HELL_FACADES =
+{
+
 }
