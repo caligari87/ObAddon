@@ -269,10 +269,8 @@ function GLAICE_EPIC_TEXTURES.put_new_materials()
     if PARAM.custom_liquids != "no" then
       GLAICE_EPIC_TEXTURES.table_insert(GLAICE_TECH_LIQUIDS,
         GAME.THEMES.tech.liquids)
-
       GLAICE_EPIC_TEXTURES.table_insert(GLAICE_URBAN_LIQUIDS,
         GAME.THEMES.urban.liquids)
-
       GLAICE_EPIC_TEXTURES.table_insert(GLAICE_HELL_LIQUIDS,
         GAME.THEMES.hell.liquids)
     end
@@ -343,12 +341,9 @@ function GLAICE_EPIC_TEXTURES.put_new_materials()
       GAME.THEMES.hell.window_groups)
 
     -- inserts for epic skyboxes
-    GLAICE_EPIC_TEXTURES.table_insert(GLAICE_TECH_SKYBOXES,
-      GAME.THEMES.tech.skyboxes)
-    GLAICE_EPIC_TEXTURES.table_insert(GLAICE_URBAN_SKYBOXES,
-      GAME.THEMES.urban.skyboxes)
-    GLAICE_EPIC_TEXTURES.table_insert(GLAICE_HELL_SKYBOXES,
-      GAME.THEMES.hell.skyboxes)
+    GAME.THEMES.tech.skyboxes = GLAICE_TECH_SKYBOXES
+    GAME.THEMES.urban.skyboxes = GLAICE_URBAN_SKYBOXES
+    GAME.THEMES.hell.skyboxes = GLAICE_HELL_SKYBOXES
 
     --hack for the street textures
     GAME.SINKS.floor_streets.trim_mat = "WARN1"
@@ -449,14 +444,10 @@ function GLAICE_EPIC_TEXTURES.put_new_materials()
       GAME.THEMES.flesh.window_groups)
 
     -- inserts for epic skyboxes
-    GLAICE_EPIC_TEXTURES.table_insert(GLAICE_TECH_SKYBOXES,
-      GAME.THEMES.tech.skyboxes)
-    GLAICE_EPIC_TEXTURES.table_insert(GLAICE_DEIMOS_SKYBOXES,
-      GAME.THEMES.deimos.skyboxes)
-    GLAICE_EPIC_TEXTURES.table_insert(GLAICE_HELL_SKYBOXES,
-      GAME.THEMES.hell.skyboxes)
-    GLAICE_EPIC_TEXTURES.table_insert(GLAICE_FLESH_SKYBOXES,
-      GAME.THEMES.flesh.skyboxes)
+    GAME.THEMES.tech.skyboxes = GLAICE_TECH_SKYBOXES
+    GAME.THEMES.deimos.skyboxes = GLAICE_DEIMOS_SKYBOXES
+    GAME.THEMES.hell.skyboxes = GLAICE_HELL_SKYBOXES
+    GAME.THEMES.flesh.skyboxes = GLAICE_FLESH_SKYBOXES
 
     --hack for the street textures
     GAME.SINKS.floor_streets.trim_mat = "WARN1"
