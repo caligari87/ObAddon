@@ -343,11 +343,11 @@ function GLAICE_EPIC_TEXTURES.put_new_materials()
       GAME.THEMES.hell.window_groups)
 
     -- inserts for epic skyboxes
-    GLAICE_EPIC_TEXTURES.table_insert(GLAICE_TECH_MATERIALS,
+    GLAICE_EPIC_TEXTURES.table_insert(GLAICE_TECH_SKYBOXES,
       GAME.THEMES.tech.skyboxes)
-    GLAICE_EPIC_TEXTURES.table_insert(GLAICE_URBAN_MATERIALS,
+    GLAICE_EPIC_TEXTURES.table_insert(GLAICE_URBAN_SKYBOXES,
       GAME.THEMES.urban.skyboxes)
-    GLAICE_EPIC_TEXTURES.table_insert(GLAICE_HELL_MATERIALS,
+    GLAICE_EPIC_TEXTURES.table_insert(GLAICE_HELL_SKYBOXES,
       GAME.THEMES.hell.skyboxes)
 
     --hack for the street textures
@@ -449,13 +449,13 @@ function GLAICE_EPIC_TEXTURES.put_new_materials()
       GAME.THEMES.flesh.window_groups)
 
     -- inserts for epic skyboxes
-    GLAICE_EPIC_TEXTURES.table_insert(GLAICE_TECH_MATERIALS,
+    GLAICE_EPIC_TEXTURES.table_insert(GLAICE_TECH_SKYBOXES,
       GAME.THEMES.tech.skyboxes)
-    GLAICE_EPIC_TEXTURES.table_insert(GLAICE_DEIMOS_MATERIALS,
+    GLAICE_EPIC_TEXTURES.table_insert(GLAICE_DEIMOS_SKYBOXES,
       GAME.THEMES.deimos.skyboxes)
-    GLAICE_EPIC_TEXTURES.table_insert(GLAICE_HELL_MATERIALS,
+    GLAICE_EPIC_TEXTURES.table_insert(GLAICE_HELL_SKYBOXES,
       GAME.THEMES.hell.skyboxes)
-    GLAICE_EPIC_TEXTURES.table_insert(GLAICE_FLESH_MATERIALS,
+    GLAICE_EPIC_TEXTURES.table_insert(GLAICE_FLESH_SKYBOXES,
       GAME.THEMES.flesh.skyboxes)
 
     --hack for the street textures
