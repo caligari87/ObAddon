@@ -198,7 +198,7 @@ function Fab_load_all_definitions()
 
         -- HARD replace mode causes pre-existing fabs to be removed
         -- entirely, to be replaced with the replacing fab.
-        if not def.replace_mode or def.replace_mode == "hard" then
+        if def.replace_mode == "hard" then
           PREFABS[def.replaces] = def
           table.remove(PREFABS[def.name])
 
@@ -213,7 +213,7 @@ function Fab_load_all_definitions()
         -- SOFT replace mode simply causes pre-existing fabs to
         -- have a probability of 0. This is more prefered as it
         -- is more likely to not break things.
-        if def.replace_mode == "soft" then
+        if not def.replace_mode or def.replace_mode == "soft" then
           PREFABS[def.replaces].prob = 0
 
           each name,odef in PREFABS do
