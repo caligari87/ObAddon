@@ -5,7 +5,8 @@ PREFABS.Item_craneo_gravesite =
   map   = "MAP01"
   engine = "zdoom"
 
-  prob  = 40
+  rank  = 2
+  prob  = 300
   theme = "!tech"
   env   = "outdoors"
 
@@ -14,6 +15,8 @@ PREFABS.Item_craneo_gravesite =
 
   seed_w = 2
   seed_h = 2
+
+  item_kind = "key"
 
   x_fit = "frame"
   y_fit = "top"
