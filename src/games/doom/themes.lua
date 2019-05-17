@@ -1272,8 +1272,8 @@ DOOM.THEMES =
 
     skyboxes =
     {
-      Skybox_generic
-      Skybox_hellish_city
+      Skybox_generic = 50
+      Skybox_hellish_city = 50
     }
 
     techy_doors = true
