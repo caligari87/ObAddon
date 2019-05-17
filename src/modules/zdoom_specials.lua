@@ -48,7 +48,7 @@ ZDOOM_SPECIALS.FOG_ENV_CHOICES =
 
 ZDOOM_SPECIALS.FOG_DENSITY_CHOICES =
 {
-  "clear",  _("Clear"),
+  "clear",  _("Subtle"),
   "misty",  _("Misty"),
   "smoky",  _("Smoky"),
   "foggy",  _("Foggy"),
@@ -988,7 +988,7 @@ OB_MODULES["zdoom_specials"] =
       priority = 8
       choices = ZDOOM_SPECIALS.FOG_DENSITY_CHOICES
       default = "no"
-      tooltip = "Determines thickness and intensity of fog, if the Fog Generator is enabled. Clear or Misty is recommended."
+      tooltip = "Determines thickness and intensity of fog, if the Fog Generator is enabled. Subtle or Misty is recommended."
     }
 
     fog_affects_sky = {
