@@ -634,7 +634,7 @@ GLAICE_DOOM1_MATERIALS = {
   DESMARB1 = { t="DESMARB1", f="RROCK09" } -- Elegant tan marble
   DESMARB2 = { t="DESMARB2", f="RROCK09" } -- Elegant tan marble
   DESROCK1 = { t="DESROCK1", f="RROCK03" } -- Brown rock
-  DESROCK2 = { t="DESROCK2", f="FLAT09" } -- Brown rock
+  DESROCK2 = { t="DESROCK2", f="QFLAT07" } -- Brown rock
   DESROCK3 = { t="DESROCK3", f="FLOOR7_1" } -- Brown rock
   DESROCK4 = { t="DESROCK4", f="RROCK09" } -- Tan rock
   DESROCK5 = { t="DESROCK5", f="RROCK17" } -- Brown rock
