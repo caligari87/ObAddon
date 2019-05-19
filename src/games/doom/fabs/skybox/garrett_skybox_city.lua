@@ -7,8 +7,6 @@ PREFABS.Skybox_garrett_city =
 
   kind  = "skybox"
 
-  theme = "urban"
-
   bound_z0 = -256
   bound_z1 = 256
 }

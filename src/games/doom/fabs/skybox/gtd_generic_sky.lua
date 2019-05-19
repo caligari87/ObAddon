@@ -7,8 +7,6 @@ PREFABS.Skybox_generic =
 
   kind  = "skybox"
 
-  theme = "tech"
-
   bound_z0 = -256
   bound_z1 = 256
 }

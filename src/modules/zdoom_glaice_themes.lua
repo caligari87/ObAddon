@@ -2320,12 +2320,14 @@ GLAICE_TECH_SKYBOXES =
 {
   Skybox_tech_ffvii_EPIC = 50
   Skybox_generic_EPIC = 50
+  Skybox_craneo_fishing_village_EPIC = 25
 }
 
 GLAICE_URBAN_SKYBOXES =
 {
   Skybox_hellish_city_EPIC = 50
   Skybox_garrett_city_EPIC = 50
+  Skybox_craneo_fishing_village_EPIC = 50
 }
 
 GLAICE_HELL_SKYBOXES =

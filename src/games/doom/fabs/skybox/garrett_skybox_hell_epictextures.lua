@@ -7,8 +7,6 @@ PREFABS.Skybox_garrett_hell_EPIC =
 
   kind  = "skybox"
 
-  theme = "hell"
-
   bound_z0 = -256
   bound_z1 = 256
 }
