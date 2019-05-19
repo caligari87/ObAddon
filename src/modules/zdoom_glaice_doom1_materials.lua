@@ -725,7 +725,6 @@ GLAICE_DOOM1_MATERIALS = {
   LFAL21     = { t="LFAL21", f="QLAVA1", sane=1 }
   LFALL1     = { t="LFALL1", f="XLAV1", sane=1 }
   ICEFALL    = { t="ICEFALL", f="SNOW9", sane=1 } --Not animated
-  ICEFALL2   = { t="ICEFALL2", f="SNOW2", sane=1 } --Not animated
 
   -- Animated but not fully liquid walls
    SLADRIP1 = { t="SLADRIP1", f="FLOOR7_1" }
@@ -1070,7 +1069,7 @@ GLAICE_DOOM1_MATERIALS = {
 
   -- Snow and Ice
   SNOW1 = { t="SNOW10",  f="SNOW1" } --Snow
-  SNOW2 = { t="ICEFALL2",  f="SNOW2" } --Ice
+  SNOW2 = { t="ICEFALL",  f="SNOW2" } --Ice
   SNOW3 = { t="SNOW05",  f="SNOW3" } --Snowy stone
   SNOW4 = { t="SNOW01",  f="SNOW4" } --Snowy stone
   SNOW5 = { t="SNOW03",  f="SNOW5" } --Snowy wall
