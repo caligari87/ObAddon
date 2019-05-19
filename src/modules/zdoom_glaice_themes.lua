@@ -2321,7 +2321,7 @@ GLAICE_TECH_SKYBOXES =
   Skybox_tech_ffvii_EPIC = 50
   Skybox_generic_EPIC = 50
   Skybox_craneo_fishing_village_EPIC = 25
-  Skybox_garrett_winterfall_EPIC = 25
+  Skybox_garrett_winterfall_EPIC = 12
 }
 
 GLAICE_URBAN_SKYBOXES =
