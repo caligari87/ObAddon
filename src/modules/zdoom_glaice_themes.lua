@@ -2330,13 +2330,15 @@ GLAICE_URBAN_SKYBOXES =
   Skybox_garrett_city_EPIC = 50
   Skybox_craneo_fishing_village_EPIC = 50
   Skybox_garrett_winterfall_EPIC = 25
+  Skybox_craneo_egypt_EPIC = 35
 }
 
 GLAICE_HELL_SKYBOXES =
 {
   Skybox_hellish_city_EPIC = 50
   Skybox_garrett_hell_EPIC = 50
-  Skybox_garrett_winterfall_EPIC = 50
+  Skybox_garrett_winterfall_EPIC = 35
+  Skybox_craneo_egypt_EPIC = 35
 }
 
 
