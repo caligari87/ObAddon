@@ -1059,6 +1059,7 @@ gui.debugf("MonRelease in %s : kind --> %s\n",
     DEPOT.skin.trap_tag = trig.tag
 
     -- MSSP: Stop using chunks right in front of the player for telepoter spots
+    -- MSSP-TODO: Revise the code to sort spots by their distance.
     if #R.triggers > 0 then
 
       --gui.printf(table.tostr(locs) .. "\n")
@@ -1068,6 +1069,7 @@ gui.debugf("MonRelease in %s : kind --> %s\n",
           --gui.printf("heya: " .. table.tostr(R.triggers[n]) .. "\n")
           local o = 1
           while locs[o] do
+            if #locs < 2 then break end
             --gui.printf("heya: " .. locs[o].name .. "\n")
             local spot_dist = get_chunk_distance(R.triggers[n].spot, locs[o])
             --gui.printf("heya: " .. spot_dist .. "\n")
@@ -1077,7 +1079,6 @@ gui.debugf("MonRelease in %s : kind --> %s\n",
             else
               o = o + 1
             end
-            if #locs == 1 then break end
           end
         end
       end
