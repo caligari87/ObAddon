@@ -787,8 +787,8 @@ function Layout_add_traps()
       local locs2 = {}
 
       each chunk in R.floor_chunks do
-         -- MSSP-FIXME: instead of not placing teleporter traps on road areas,
-         -- find a way to keep the sink rendered
+        -- MSSP-FIXME: instead of not placing teleporter traps on road areas,
+        -- find a way to keep the sink rendered
         if not chunk.content and not chunk.area.is_road then
           if chunk.sw >= 2 and chunk.sh >= 2 then
             table.insert(locs, chunk)
@@ -1034,6 +1034,17 @@ gui.debugf("MonRelease in %s : kind --> %s\n",
   end
 
 
+  -- MSSP: distance function just to be used for the teleporter
+  -- trap stuff below.
+  local function get_chunk_distance(chunk1, chunk2)
+    local dist
+
+    dist = geom.dist(chunk1.mx, chunk1.my, chunk2.mx, chunk2.my)
+
+    return dist
+  end
+
+
   local function install_a_teleport_trap(info, trig)
     local R    = info.room
     local locs = info.locs
@@ -1046,6 +1057,36 @@ gui.debugf("MonRelease in %s : kind --> %s\n",
     end
 
     DEPOT.skin.trap_tag = trig.tag
+
+    -- MSSP: Stop using chunks right in front of the player for telepoter spots
+    if #R.triggers > 0 then
+
+      --gui.printf(table.tostr(locs) .. "\n")
+
+      for n = 1, #R.triggers do
+        if R.triggers[n] then
+          --gui.printf("heya: " .. table.tostr(R.triggers[n]) .. "\n")
+          local o = 1
+          while locs[o] do
+            --gui.printf("heya: " .. locs[o].name .. "\n")
+            local spot_dist = get_chunk_distance(R.triggers[n].spot, locs[o])
+            --gui.printf("heya: " .. spot_dist .. "\n")
+            if spot_dist <= 1024 then
+              --gui.printf("REMOVED " .. locs[o].name .. "\n")
+              table.remove(locs, o)
+            else
+              o = o + 1
+            end
+            if #locs == 1 then break end
+          end
+        end
+      end
+
+      --gui.printf("Spot pruning has run.\n")
+      --gui.printf(table.tostr(locs) .. "\n")
+
+    end
+
 
     -- re-use some chunks if there are less than three
     if #locs < 2 then table.insert(locs, locs[1]) end
@@ -1142,6 +1183,7 @@ gui.debugf("MonRelease in %s : kind --> %s\n",
       {
         kind = "edge"
         edges = chunk.edges
+        spot = chunk
       }
     else
       TRIG =
