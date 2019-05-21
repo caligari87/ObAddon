@@ -18,8 +18,6 @@ PREFABS.Joiner_fake_switch_joiner =
 
   x_fit  = "frame"
   y_fit  = { 40,120 }
-
-  thing_2028 = 0
 }
 
 PREFABS.Joiner_fake_switch_joiner_trapped =
