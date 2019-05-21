@@ -974,6 +974,11 @@ function Room_detect_porches(R)
   local function set_as_porch(A)
     A.is_porch = true
 
+    if A.room.is_outdoor then
+      if A.lighting then
+        A.lighting = A.lighting - 32
+      end
+    end
     -- Note : keeping 'is_outdoor' on the area
   end
 
@@ -1447,6 +1452,17 @@ function Room_border_up()
   end
 
 
+  local function can_porch_wall(A1, A2)
+    if (A1.mode == "floor"
+    and A2.mode != "floor")
+    or (A1.mode != "floor"
+    and A2.mode == "floor") then
+      return false
+    end
+    return true
+  end
+
+
   local function can_indoor_fence(A1, A2)
     if not A1.room or not A2.room then
       return false
@@ -1613,13 +1629,30 @@ function Room_border_up()
         end]]
       end
 
-      -- porches and shit --
+
+      -- porches --
+
       if (A1.is_porch and not A2.is_porch)
       or (not A1.is_porch and A2.is_porch) then
         if A1.floor_h == A2.floor_h then
-          Junction_make_beams(junc)
+          if can_beam(A1, A2) then
+            Junction_make_beams(junc)
+          end
         else
-          Room_make_windows(A1, A2)
+          if A1.is_outdoor then
+            Room_make_windows(A1, A2)
+            if can_porch_wall(A1, A2) then
+              Junction_make_wall(junc)
+            end
+          elseif not A1.is_outdoor then
+            if can_porch_wall(A1, A2) then
+              if rand.odds(50) then
+                Junction_make_fence(junc)
+              else
+                Junction_make_wall(junc)
+              end
+            end
+          end
         end
       end
       return
