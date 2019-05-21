@@ -2981,7 +2981,11 @@ function Quest_room_themes()
       R.alt_floor_mat = pick_alternate_tex(R.theme.naturals, R.floor_mat, 3)
 
     elseif R.is_outdoor then
-      R.main_tex = R.zone.facade_mat or R.zone.other_facade
+      if rand.odds(50) then
+        R.main_tex = R.zone.facade_mat
+      else
+        R.main_tex = R.zone.other_facade
+      end
 
     else
       R.main_tex = rand.key_by_probs(R.theme.walls)
