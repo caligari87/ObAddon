@@ -34,12 +34,6 @@ MISC_STUFF.LIGHTINGS =
   "higher",  _("Higher"),
 }
 
-
-MISC_STUFF.variety_tip = _(
-    "Affects how many different monster types can "..
-    "appear in each room.  "..
-    "Setting this to NONE will make each level use a single monster type")
-
 MISC_STUFF.LIGHT_CHOICES =
 {
   "-3",   _("Pitch-black"),
@@ -139,7 +133,6 @@ OB_MODULES["misc"] =
       tooltip = "Creates an extra brightness offset for rooms. Does not change the lighting palette for rooms.",
       default = "none"
     }
-    { name="mon_variety", label=_("Monster Variety"),choices=STYLE_CHOICES, tooltip=MISC_STUFF.variety_tip }
     { name="barrels",     label=_("Barrels"),        choices=STYLE_CHOICES, gap=1 }
 
     { name="doors",       label=_("Doors"),          choices=STYLE_CHOICES }

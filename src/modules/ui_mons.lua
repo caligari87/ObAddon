@@ -146,7 +146,7 @@ OB_MODULES["ui_mons"] =
 
     {
       name="mix_it_up_upper_range",
-      label=_("Fine Tune U Range"),
+      label=_("Upper Bound"),
       choices=UI_MONS.MIX_QUANTITIES,
       default="scarce",
       tooltip="If you have Mix It Up or Progressive selected, you can define the upper bound here. Otherwise, this option is simply ignored."
@@ -154,15 +154,21 @@ OB_MODULES["ui_mons"] =
 
     {
       name="mix_it_up_lower_range",
-      label=_("Fine Tune L Range"),
+      label=_("Lower Bound"),
       choices=UI_MONS.MIX_QUANTITIES,
       default="nuts",
-      tooltip="If you have Mix It Up or Progressive selected, you can define the lower bound here. Otherwise, this option is simply ignored."
+      tooltip="If you have Mix It Up or Progressive selected, you can define the lower bound here. Otherwise, this option is simply ignored.",
       gap = 1
     }
 
     { name="strength",  label=_("Strength"),  choices=UI_MONS.STRENGTHS}
-    { name="ramp_up",   label=_("Ramp Up"),   choices=UI_MONS.RAMPS,  gap=1 }
+    { name="ramp_up",   label=_("Ramp Up"),   choices=UI_MONS.RAMPS}
+    { name="mon_variety", label=_("Monster Variety"),choices=STYLE_CHOICES,
+      tooltip= "Affects how many different monster types can " ..
+               "appear in each room.\n" ..
+               "Setting this to NONE will make each level use a single monster type",
+      gap=1
+    }
 
     { name="bosses",    label=_("Bosses"),    choices=UI_MONS.BOSSES }
     { name="traps",     label=_("Traps"),     choices=STYLE_CHOICES }
