@@ -974,11 +974,6 @@ function Room_detect_porches(R)
   local function set_as_porch(A)
     A.is_porch = true
 
-    if A.room.is_outdoor then
-      if A.lighting then
-        A.lighting = A.lighting - 32
-      end
-    end
     -- Note : keeping 'is_outdoor' on the area
   end
 
@@ -1058,23 +1053,25 @@ function Room_detect_porches(R)
 
 
   local function detect_normal_porch(mode)
-    -- only one per room, so pick best
-    best_A = nil
-    best_score = 0
-
+    -- Andrew: only one per room, so pick best
+    -- MSSP: new behavior. Multiple porches per room, limited
+    -- by the amount of areas within the room. (no more than half
+    -- the room should be porched at least)
     each A in R.areas do
-      local score = eval_porch(A, "indoor")
-
-      if score > best_score then
-        best_A = A
-        best_score = score
-      end
+      A.porch_score = eval_porch(A, "indoor")
     end
 
-    if best_A then
-      set_as_porch(best_A)
+    R.porch_count = 0
+    each A in R.areas do
+      if A.porch_score > 0 and style_sel("porches", 0, 33, 66, 100) then
+        set_as_porch(A)
 
-      gui.debugf("Made %s into a PORCH\n", best_A.name)
+        gui.debugf("Made %s into a PORCH\n", A.name)
+      end
+
+      R.porch_count = R.porch_count + 1
+
+      if R.porch_count > #R.areas/2 then return end
     end
   end
 

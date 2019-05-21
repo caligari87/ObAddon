@@ -3002,6 +3002,11 @@ function Render_properties_for_area(A)
     if A.is_outdoor then
       A.lighting = LEVEL.sky_light
 
+      -- porchy worchy -- MSSP
+      if A.is_porch then
+        A.lighting = A.lighting - 32
+      end
+
     elseif A.room and A.room.is_outdoor then
       -- this for outdoor closets
       A.lighting = LEVEL.sky_light - LEVEL.sky_shadow
