@@ -774,6 +774,11 @@ function Junction_make_fence(junc)
     area = junc.A1
   }
 
+  -- indoor fences use indoor main_tex -- MSSP
+  if not junc.A1.room.is_outdoor then
+    junc.E1.fence_mat = assert(junc.A1.room.main_tex)
+  end
+
   junc.E2 = { kind="nothing", area=junc.A2 }
 
   junc.E1.peer = junc.E2
