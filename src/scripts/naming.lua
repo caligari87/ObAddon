@@ -2131,6 +2131,32 @@ namelib.NAMES =
         ["Today You Die!"]=10
         ["Ups and Downs"]=10
         ["You Don't Belong Here"]=10
+
+        -- Glaice adds more names
+        ["A Destructive Path"]=10
+        ["A Doomsday Scenario"]=10
+        ["Administrative Errors"]=10
+        ["Black Hole"]=10
+        ["Charred To The Bone"]=10
+        ["Chaos Unfolds"]=10
+        ["Crosses and Pikes Abound"]=10
+        ["Deny the Narrative"]=10
+        ["Diamond of Chaos"]=10
+        ["Hell in Your Lap"]=10
+        ["Industrial Architecture"]=10
+        ["Forever Wandering"]=10
+        ["Manor of Glass"]=10
+        ["Multi Paths, Multi Deaths"]=10
+        ["Nothing But A Husk"]=10
+        ["Nuclear Annihilation"]=10
+        ["Null and Void"]=10
+        ["Scrounge"]=10
+        ["Stand Your Ground"]=10
+        ["Steel Scraps"]=10
+        ["The Mysteries of Octothorp"]=10 -- Come on crowbars82, come and finish your mod lol
+        ["The No Go Zone"]=10
+        ["The Twisted Abode"]=10
+        ["Planetary Destruction"]=10
       }
     }
   }
