@@ -1076,8 +1076,6 @@ function Room_detect_porches(R)
 
   ---| Room_detect_porches |---
 
--- FIXME : porches disabled due to blocking pillars
-do return end
 
   local prob = style_sel("porches", 0, 25, 50, 75)
 
@@ -1085,17 +1083,16 @@ do return end
     return
   end
 
----??  if R.is_hallway then
----??    detect_hallway_porch()
+  if R.is_hallway then
+    detect_hallway_porch()
 
-  if R.is_outdoor then
+  elseif R.is_outdoor then
     detect_normal_porch("outdoor")
 
   else
     detect_normal_porch("indoor")
   end
 end
-
 
 
 function Room_make_windows(A1, A2)
@@ -1614,6 +1611,16 @@ function Room_border_up()
             Junction_make_fence(junc)
           end
         end]]
+      end
+
+      -- porches and shit --
+      if (A1.is_porch and not A2.is_porch)
+      or (not A1.is_porch and A2.is_porch) then
+        if A1.floor_h == A2.floor_h then
+          Junction_make_beams(junc)
+        else
+          Room_make_windows(A1, A2)
+        end
       end
       return
     end
@@ -2533,7 +2540,7 @@ function Room_floor_ceil_heights()
       process_park(R)
 
     else
----???  Room_detect_porches(R)
+      Room_detect_porches(R)
 
       process_room(R, entry_area)
       select_floor_mats(R, via_conn)

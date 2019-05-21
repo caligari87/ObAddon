@@ -124,6 +124,9 @@ OB_MODULES["misc"] =
     { name="beams",       label=_("Beams"),          choices=STYLE_CHOICES,
       tooltip = "Allows the appearance of thin pillars to appear between the borders of different elevations.",
     }
+    { name="porches",     label=_("Porches\\Gazebos"),        choices=STYLE_CHOICES,
+      tooltip = "Occasional outdoor areas with a lowered indoor-ish ceiling.",
+    }
     { name="scenics",     label=_("Scenics"),          choices=STYLE_CHOICES,
       tooltip = "Controls the amount of fancy scenics visible at room bordering the maps.",
       gap=1
@@ -177,6 +180,7 @@ OB_MODULES["misc"] =
 
 ---- PLANNED (UNFINISHED) STUFF ----
 
+-- already done: -- MSSP
 --  { name="light_level",  label=_("Lighting"),   choices=MISC_STUFF.LIGHTINGS }
 --  { name="detail_level", label=_("Detail"),     choices=MISC_STUFF.LIGHTINGS, gap=1 }
 
@@ -184,8 +188,6 @@ OB_MODULES["misc"] =
 --  cycles      = { label=_("Multiple Paths"), choices=STYLE_CHOICES }
 --  ex_floors   = { label=_("3D Floors"),      choices=STYLE_CHOICES }
 
---  porches     = { label=_("Porches"),        choices=STYLE_CHOICES }
 --  lakes       = { label=_("Lakes"),          choices=STYLE_CHOICES }
   }
 }
-
