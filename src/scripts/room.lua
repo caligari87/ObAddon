@@ -1634,7 +1634,9 @@ function Room_border_up()
 
       if (A1.is_porch and not A2.is_porch)
       or (not A1.is_porch and A2.is_porch) then
-        if A1.floor_h == A2.floor_h then
+        if (A1.floor_h == A2.floor_h)
+        or (A1.mode == "liquid"
+        or A2.mode == "liquid") then
           if can_beam(A1, A2) then
             Junction_make_beams(junc)
           end
@@ -1645,10 +1647,13 @@ function Room_border_up()
               Junction_make_wall(junc)
             end
           elseif not A1.is_outdoor then
-            if can_porch_wall(A1, A2) then
-              if rand.odds(50) then
+            if rand.odds(50) then
+              if can_porch_wall(A1, A2) then
                 Junction_make_fence(junc)
-              else
+              end
+            else
+              Room_make_windows(A1, A2)
+              if can_porch_wall(A1, A2) then
                 Junction_make_wall(junc)
               end
             end
