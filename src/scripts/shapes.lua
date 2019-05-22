@@ -3620,6 +3620,8 @@ GROW_CAGE_SIDEWAYS =
 {
   prob = 6
 
+  skip_prob = 50
+
   structure =
   {
     "11xxx","11xxx"
@@ -3632,6 +3634,8 @@ GROW_CAGE_SIDEWAYS =
 GROW_CAGE_SIDEWAYS_STAIR =
 {
   prob = 6
+
+  skip_prob = 50
 
   structure =
   {
@@ -3646,6 +3650,8 @@ GROW_CAGE_SIDEWAYS_BOTH_SIDES =
 {
   prob = 8
 
+  skip_prob = 50
+
   structure =
   {
     "xx11xx","xx11xx"
@@ -3659,7 +3665,7 @@ GROW_CAGE_SIDEWAYS_BOTH_SIDES =
 
 GROW_CAGE_ROUND_RAFTERS =
 {
-  prob = 8
+  prob = 6
 
   structure =
   {

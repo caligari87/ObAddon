@@ -3,7 +3,7 @@ PREFABS.Ladder_3d_stair_128 =
   file   = "stairs/gtd_3d_stair_128.wad"
   map    = "MAP01"
 
-  prob   = 75
+  prob   = 45
   style  = "steepness"
   env    = "building"
 
@@ -25,6 +25,8 @@ PREFABS.Ladder_3d_stair_128_2X =
   template = "Ladder_3d_stair_128"
   map      = "MAP02"
 
+  prob     = 60
+
   seed_h   = 2
 }
 
@@ -32,6 +34,8 @@ PREFABS.Ladder_3d_stair_128_3X =
 {
   template = "Ladder_3d_stair_128"
   map      = "MAP03"
+
+  prob     = 75
 
   seed_h   = 3
 }
