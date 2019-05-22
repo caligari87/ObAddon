@@ -1034,6 +1034,9 @@ function Room_detect_porches(R)
 
     if A.mode != "floor" then return -1 end
 
+    -- single outdoor room? weird for it to be a porch --MSSP
+    if #A.room.areas < 2 then return -1 end
+
     -- size check : never too much of room
     if A.svolume > R.svolume / 2 then return -1 end
 
@@ -1578,6 +1581,14 @@ function Room_border_up()
 
     if not A2.room then
       if A1.room.border != A2 or A2.border_type == "no_vista" then
+        Junction_make_wall(junc)
+
+        if A1.is_porch then
+          if A2.border_type != "simple_fence"
+          or A1.border_type != "no_vista"
+          or A2.border_type == nil then
+            Room_make_windows(A1, A2)
+          end
         Junction_make_wall(junc)
 
       elseif not A1.is_outdoor and not A1.is_cave then
