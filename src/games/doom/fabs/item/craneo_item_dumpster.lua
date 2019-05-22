@@ -3,7 +3,7 @@ PREFABS.Item_dumpster =
   file  = "item/craneo_item_dumpster.wad"
   map   = "MAP01"
 
-  prob  = 60
+  prob  = 80
 
   theme = "!hell"
 
