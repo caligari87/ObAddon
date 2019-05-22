@@ -3,7 +3,7 @@ PREFABS.Joiner_gtd_cageish_joiner_bunker =
   file   = "joiner/gtd_cageish_joiner.wad"
   map    = "MAP01"
 
-  prob   = 175
+  prob   = 300
 
   where  = "seeds"
   shape  = "I"
@@ -34,7 +34,7 @@ PREFABS.Joiner_gtd_cageish_joiner_2_standing =
   template = "Joiner_gtd_cageish_joiner_bunker"
   map = "MAP03"
 
-  prob = 110
+  prob = 150
 
   x_fit = "frame"
 }
@@ -44,7 +44,7 @@ PREFABS.Joiner_gtd_cageish_joiner_4_standing =
   template = "Joiner_gtd_cageish_joiner_bunker"
   map = "MAP04"
 
-  prob = 110
+  prob = 150
 
   seed_w = 3
 
