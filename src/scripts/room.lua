@@ -1590,6 +1590,7 @@ function Room_border_up()
             Room_make_windows(A1, A2)
           end
         Junction_make_wall(junc)
+        end
 
       elseif not A1.is_outdoor and not A1.is_cave then
         if A2.border_type != "simple_fence"
