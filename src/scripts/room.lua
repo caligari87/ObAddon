@@ -975,6 +975,10 @@ function Room_detect_porches(R)
     A.is_porch = true
 
     -- Note : keeping 'is_outdoor' on the area
+
+    -- MSSP: Overriden because junction code seems to
+    -- skip out on room->scenics interactions...
+    A.is_outdoor = false
   end
 
 
@@ -1582,15 +1586,6 @@ function Room_border_up()
     if not A2.room then
       if A1.room.border != A2 or A2.border_type == "no_vista" then
         Junction_make_wall(junc)
-
-        if A1.is_porch then
-          if A2.border_type != "simple_fence"
-          or A1.border_type != "no_vista"
-          or A2.border_type == nil then
-            Room_make_windows(A1, A2)
-          end
-        Junction_make_wall(junc)
-        end
 
       elseif not A1.is_outdoor and not A1.is_cave then
         if A2.border_type != "simple_fence"
