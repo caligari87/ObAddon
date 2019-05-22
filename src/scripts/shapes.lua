@@ -8465,7 +8465,7 @@ SIDEWALK_CLOSET_3X1 =
   closet = { from_dir=4 }
 }
 
-SIDEWALK_CLOSET_3X1 =
+SIDEWALK_CLOSET_3X2 =
 {
   prob = 100
 
