@@ -694,6 +694,9 @@ function Junction_calc_wall_tex(A1, A2)
   end
 
   if A1.room then
+    if A1.room.is_outdoor and A1.is_porch then
+      return assert(A1.zone.facade_mat)
+    end
     return assert(A1.room.main_tex)
   else
     return assert(A1.zone.fence_mat)
