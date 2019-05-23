@@ -1937,7 +1937,14 @@ function Room_prepare_hallways()
     table.insert(R.pieces, piece)
 
     local A = piece.area
-    assert(A and A.room == R)
+
+    -- MSSP-TODO: Figure out how to resolve this thing about Oblige
+    -- chopping off hallways between rooms that are already initially connected.
+    if not (A and A.room == R) then
+      error("CONGRATULATIONS! You have encountered a very rare error " ..
+      "that is caused by the shape grammars! Sorry! This is error " ..
+      "is still being looked into!")
+    end
 
     A.prelim_h = h
 
