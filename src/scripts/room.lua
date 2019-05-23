@@ -1070,7 +1070,7 @@ function Room_detect_porches(R)
 
     R.porch_count = 0
     each A in R.areas do
-      if A.porch_score > 0 and style_sel("porches", 0, 33, 66, 100) then
+      if A.porch_score > 0 and style_sel("porches", 0, 30, 60, 90) then
         set_as_porch(A)
 
         gui.debugf("Made %s into a PORCH\n", A.name)
