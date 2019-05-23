@@ -1986,6 +1986,9 @@ function Room_prepare_hallways()
         -- adjust  delta_h for certain "T" pieces (and maybe terminators...)
         if piece.shape == "T" and piece.from_dir != old_dir then
           if dir == piece.from_dir then
+            if delta_h != 0 then
+              A.prelim_h = A.prelim_h - delta_h
+            end
             new_h = new_h - delta_h
           end
         else
