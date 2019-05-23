@@ -107,10 +107,15 @@ OB_MODULES["misc"] =
     {
       name="natural_parks",
       label=_("Natural Cliffs"),
-      tooltip=_("[EXPERIMENTAL FEATURE] Percentage of parks that use completely naturalistic walls.")
+      tooltip=_("Percentage of parks that use completely naturalistic walls.")
       choices=STYLE_CHOICES,
       default="none",
-      gap=1
+    }
+    { name="park_detail",
+      label=_("Park Detail"),
+      tooltip=_("Reduces or increases the probability of park decorations such as trees on park rooms."),
+      choices=STYLE_CHOICES,
+      gap=1,
     }
 
     { name="windows",     label=_("Windows"),        choices=STYLE_CHOICES }

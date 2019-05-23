@@ -3832,7 +3832,7 @@ function Cave_build_a_park(R, entry_h)
 
     tree_locs = {}
 
-    local prob = rand.pick({ 10, 27, 65 })
+    local prob = style_sel("park_detail", 0, 30, 60, 90)
 
     each _,B in blob_map.regions do
       if rand.odds(prob) then
@@ -4824,4 +4824,3 @@ function Cave_join_scenic_borders(junc)
   -- in all other cases, make a wall
   Junction_make_wall(junc)
 end
-
