@@ -137,9 +137,9 @@ OB_MODULES["misc"] =
       tooltip = "Controls the amount of fancy scenics visible at room bordering the maps.",
     }
     { name = "corner_style",
-      label=_("Corner Style"),
+      label=_("Sink Style"),
       choices=MISC_STUFF.SINK_STYLE_CHOICES,
-      tooltip = "Determines the corner style Oblige uses when rendering sunken " ..
+      tooltip = "Determines the style for corners with sunken " ..
                 "ceilings and floors. Default is Curved, where Oblige makes sink " ..
                 "corners soft, while Sharp leaves the corners angular.",
       default = "random",
