@@ -148,3 +148,28 @@ PREFABS.Pic_electronics_store =
   x_fit = "frame"
   y_fit = "top"
 }
+
+PREFABS.Pic_locked_double_door_front =
+{
+  file   = "picture/gtd_pic_urban_commercial_frontages.wad"
+  map    = "MAP07"
+
+  prob   = 25
+  theme = "urban"
+
+  where  = "seeds"
+  height = 128
+  long   = 128
+
+  seed_w = 3
+  seed_h = 1
+
+  bound_z1 = 0
+  bound_z2 = 128
+
+  deep   =  16
+  over   = -16
+
+  x_fit = "frame"
+  y_fit = "top"
+}
