@@ -22,7 +22,7 @@ table.name_up(ZDOOM_STORIES.STORIES)
 
 function ZStoryGen_format_story_chunk(story_strings, info)
 
-  local line_max_length = 35
+  local line_max_length = 38
 
   -- replace special word tags with their proper ones from the name gen
   if info then
@@ -67,15 +67,17 @@ function ZStoryGen_format_story_chunk(story_strings, info)
     manhandled_string_length = manhandled_string_length + word:len()
 
     if manhandled_string_length + word:len() > line_max_length then
-      manhandled_string = manhandled_string .. word .. '\\n"'
+      manhandled_string = manhandled_string .. '\\n"'
       table.insert(story_lines, manhandled_string)
-      manhandled_string = ""
-      manhandled_string_length = 0
+      manhandled_string = '"' .. word .. ' '
+      manhandled_string_length = word:len()
     else
       if word != "\\n\\n" then
         manhandled_string = manhandled_string .. word .. " "
       else
+        -- line breaks aren't words, bruh
         manhandled_string = manhandled_string .. word
+        manhandled_string_length = manhandled_string_length - 4
       end
     end
   end
