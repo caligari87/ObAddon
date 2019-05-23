@@ -537,13 +537,13 @@ OB_MODULES["glaice_epic_textures"] =
     environment_themes =
     {
       name = "environment_themes"
-      label = _("Environment Themes")
+      label = _("Environment Theme")
       choices = GLAICE_EPIC_TEXTURES.ENVIRONMENT_THEME_CHOICES
       default = "random"
       tooltip =
         "// THIS FEATURE IS CURRENTLY UNDER CONSTRUCTION \\\\\n" ..
-        "Influences outdoor environments with different climate-based textures such as " ..
-        "desert or snow."
+        "Influences outdoor environments with different textures such as " ..
+        "desert sand or icey snow."
       priority=2
       gap=1
     }

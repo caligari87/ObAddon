@@ -1598,7 +1598,7 @@ function Layout_decorate_rooms(pass)
     -- if available -MSSP
     if PARAM.environment_themes then
       if A.is_outdoor then
-        reqs.climate_theme = LEVEL.outdoor_theme
+        reqs.outdoor_theme = LEVEL.outdoor_theme
       end
     end
 

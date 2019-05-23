@@ -2302,28 +2302,28 @@ function Fab_find_matches(reqs, match_state)
 
     -- special code for checking on climate-theme fabs based on the Epic
     -- Textures module Environment Themes -MSSP
-    if not reqs.climate_theme then
-      if def.climate_theme then
-        if def.climate_theme != "temperate" then
+    if not reqs.outdoor_theme then
+      if def.outdoor_theme then
+        if def.outdoor_theme != "temperate" then
           return 0
         end
       end
-    elseif reqs.climate_theme then
-      if reqs.climate_theme == "temperate" then
-        if def.climate_theme then
-          if def.climate_theme != "temperate" then
+    elseif reqs.outdoor_theme then
+      if reqs.outdoor_theme == "temperate" then
+        if def.outdoor_theme then
+          if def.outdoor_theme != "temperate" then
             return 0
           end
         end
-      elseif reqs.climate_theme == "snow" then
-        if def.climate_theme then
-          if def.climate_theme != "snow" then
+      elseif reqs.outdoor_theme == "snow" then
+        if def.outdoor_theme then
+          if def.outdoor_theme != "snow" then
             return 0
           end
         end
-      elseif reqs.climate_theme == "desert" then
-        if def.climate_theme then
-          if def.climate_theme != "desert" then
+      elseif reqs.outdoor_theme == "desert" then
+        if def.outdoor_theme then
+          if def.outdoor_theme != "desert" then
             return 0
           end
         end

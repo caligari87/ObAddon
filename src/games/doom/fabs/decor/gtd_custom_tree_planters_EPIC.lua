@@ -5,7 +5,7 @@ PREFABS.Decor_square_planter_grass =
 
   uses_epic_textures = true
 
-  climate_theme = "temperate"
+  outdoor_theme = "temperate"
 
   prob   = 10000
   theme  = "!hell"
@@ -22,7 +22,7 @@ PREFABS.Decor_square_planter_sand =
   template = "Decor_square_planter_grass"
   map      = "MAP02"
 
-  climate_theme = "desert"
+  outdoor_theme = "desert"
 }
 
 PREFABS.Decor_square_planter_snow =
@@ -30,7 +30,7 @@ PREFABS.Decor_square_planter_snow =
   template = "Decor_square_planter_grass"
   map      = "MAP03"
 
-  climate_theme = "snow"
+  outdoor_theme = "snow"
 }
 
 PREFABS.Decor_round_planter_grass =
@@ -44,7 +44,7 @@ PREFABS.Decor_round_planter_grass =
   template = "Decor_square_planter_grass"
   map      = "MAP05"
 
-  climate_theme = "desert"
+  outdoor_theme = "desert"
 }
 
 PREFABS.Decor_round_planter_grass =
@@ -52,5 +52,5 @@ PREFABS.Decor_round_planter_grass =
   template = "Decor_square_planter_grass"
   map      = "MAP06"
 
-  climate_theme = "snow"
+  outdoor_theme = "snow"
 }
