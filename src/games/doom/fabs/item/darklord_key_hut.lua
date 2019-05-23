@@ -27,4 +27,11 @@ PREFABS.Item_darklord_key_hut =
     green_torch = 50
   }
 
+  thing_57 =
+  {
+    red_torch_sm = 50
+    green_torch_sm = 50
+    blue_torch_sm = 50
+  }
+
 }
