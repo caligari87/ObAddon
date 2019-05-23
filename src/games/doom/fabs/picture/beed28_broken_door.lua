@@ -3,7 +3,7 @@ PREFABS.Pic_beed28_broken_door =
   file   = "picture/beed28_broken_door.wad"
   map    = "MAP01"
 
-  prob   = 20
+  prob   = 15
   env   = "building"
   theme = "!hell"
 
@@ -28,4 +28,22 @@ PREFABS.Pic_beed28_broken_door =
     BIGDOOR3 = 50
     BIGDOOR4 = 50
   }
+
+  thing_10 =
+   {
+   gibs = 50
+   gibbed_player = 50
+   dead_player   = 50
+   dead_zombie = 50
+   dead_shooter = 50
+   dead_imp = 50
+   dead_demon = 50
+   }
+}
+
+PREFABS.Pic_beed28_broken_door2 =
+{
+  template = "Pic_beed28_broken_door"
+
+  map = "MAP02"
 }
