@@ -2300,6 +2300,14 @@ function Fab_find_matches(reqs, match_state)
     -- when placed in parks
     if reqs.no_top_fit and def.z_fit == "top" then return 0 end
 
+    -- special control for climate-based fabs based on the Epic Textures
+    -- environment themes
+    if def.climate_theme == "temperate" and not reqs.climate_theme
+    or reqs.climate_theme == "temperate" then
+      return 1 end
+    if reqs.climate_theme != def.climate_theme then
+      return 0 end
+
     return 1
   end
 

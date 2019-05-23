@@ -1594,6 +1594,14 @@ function Layout_decorate_rooms(pass)
       size   = assert(chunk.space)
     }
 
+    -- control check for Epic Textures module environment theme,
+    -- if available -MSSP
+    if PARAM.environment_themes then
+      if A.is_outdoor then
+        reqs.climate_theme = LEVEL.outdoor_theme
+      end
+    end
+
     if is_cave then
       reqs.height = A.room.walkway_height
     else
