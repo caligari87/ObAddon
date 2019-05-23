@@ -138,7 +138,7 @@ OB_MODULES["ui_mons"] =
               "under the Fine Tune options below.\n\n" ..
               "Progressive: creates a curve of increasing monster population " ..
               "also based on the Fine Tune options below.\n\n" ..
-              "It does not matter if your Fine Tune selections are reversed. " ..
+              "It does not matter if your Upper/Lower Bound selections are reversed. " ..
               "Progressive will pick the min VS max quantities selected.",
       default="scarce",
       gap = 1
@@ -148,7 +148,7 @@ OB_MODULES["ui_mons"] =
       name="mix_it_up_upper_range",
       label=_("Upper Bound"),
       choices=UI_MONS.MIX_QUANTITIES,
-      default="scarce",
+      default="nuts",
       tooltip="If you have Mix It Up or Progressive selected, you can define the upper bound here. Otherwise, this option is simply ignored."
     }
 
@@ -156,7 +156,7 @@ OB_MODULES["ui_mons"] =
       name="mix_it_up_lower_range",
       label=_("Lower Bound"),
       choices=UI_MONS.MIX_QUANTITIES,
-      default="nuts",
+      default="scarce",
       tooltip="If you have Mix It Up or Progressive selected, you can define the lower bound here. Otherwise, this option is simply ignored.",
       gap = 1
     }
