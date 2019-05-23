@@ -1612,6 +1612,12 @@ function Layout_decorate_rooms(pass)
       reqs.env = A.room:get_env()
     end
 
+    -- hack for porches, because it's weird to see tree planters
+    -- under them -MSSP
+    if A.is_porch then
+      reqs.env = "building"
+    end
+
     if A.is_road then
       reqs.is_road = true
     end
