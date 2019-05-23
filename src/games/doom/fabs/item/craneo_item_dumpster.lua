@@ -12,5 +12,4 @@ PREFABS.Item_dumpster =
   size  = 112
 
   bound_z1 = 0
-  bound_z2 = 120
 }

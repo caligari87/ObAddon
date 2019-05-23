@@ -1187,6 +1187,7 @@ function Render_sink_part(A, S, where, sink)
 
   local corner_field = where .. "_inner"
 
+  local c_style = assert(A.room.corner_style)
 
   local function check_inner_point(cx, cy)
     local corner = Corner_lookup(cx, cy)
@@ -1305,12 +1306,7 @@ function Render_sink_part(A, S, where, sink)
     local ax3, ay3 = ax * k2 + cx * k1, ay * k2 + cy * k1
     local bx3, by3 = bx * k2 + cx * k1, by * k2 + cy * k1
 
-    -- default value if the corner style module is not used
-    if PARAM["corner_style"] == nil or PARAM["corner_style"] == '' then
-      PARAM["corner_style"] = "sink_style_curved"
-    end
-
-    if PARAM["corner_style"] != "sink_style_sharp" then
+    if c_style == "curved" then
       if curve_mode == "curve" or curve_mode == "outie" then
         -- either B and C are on the diagonal line, otherwise A and C are
 
@@ -1489,7 +1485,7 @@ stderrf("away = %s\n\n", string.bool(away))
 
     -- three corners open
 
-    if PARAM["corner_style"] == "sink_style_sharp" then
+    if c_style == "sharp" then
       if p_val == 14 then do_triangle(7,1,3, "outie")  ; do_whole_triangle(3,9,7)  end
       if p_val == 13 then do_triangle(1,3,9, "outie")  ; do_whole_triangle(7,1,9)  end
 

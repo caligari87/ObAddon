@@ -1104,6 +1104,7 @@ function Room_detect_porches(R)
 end
 
 
+
 function Room_make_windows(A1, A2)
 
   local edge_list = {}
@@ -3084,6 +3085,23 @@ end
 
   each R in LEVEL.rooms do
     calc_min_max_floor(R)
+
+    -- corner style decision -MSSP
+    if not R.is_outdoor then
+      if PARAM.corner_style == "random" then
+        if rand.odds(50) then
+          R.corner_style = "curved"
+        else
+          R.corner_style = "sharp"
+        end
+      elseif PARAM.corner_style == "sharp" then
+        R.corner_style = "sharp"
+      elseif PARAM.corner_style == "curved" then
+        R.corner_style = "curved"
+      end
+    elseif R.is_outdoor then
+      R.corner_style = "sharp"
+    end
 
     if not (R.is_cave or R.is_park) then
       regroup_floors(R)

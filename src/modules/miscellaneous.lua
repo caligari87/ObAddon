@@ -52,6 +52,13 @@ MISC_STUFF.LIVEMAP_CHOICES =
   "none", _("No Live Minimap"),
 }
 
+MISC_STUFF.SINK_STYLE_CHOICES =
+{
+  "curved", _("Curved"),
+  "sharp", _("Sharp"),
+  "random", _("Random"),
+}
+
 function MISC_STUFF.begin_level(self)
   each opt in self.options do
     local name  = assert(opt.name)
@@ -128,7 +135,15 @@ OB_MODULES["misc"] =
     }
     { name="scenics",     label=_("Scenics"),          choices=STYLE_CHOICES,
       tooltip = "Controls the amount of fancy scenics visible at room bordering the maps.",
-      gap=1
+    }
+    { name = "corner_style",
+      label=_("Corner Style"),
+      choices=MISC_STUFF.SINK_STYLE_CHOICES,
+      tooltip = "Determines the corner style Oblige uses when rendering sunken " ..
+                "ceilings and floors. Default is Curved, where Oblige makes sink " ..
+                "corners soft, while Sharp leaves the corners angular.",
+      default = "random",
+      gap = 1
     }
 
     { name="darkness",    label=_("Dark Outdoors"),  choices=STYLE_CHOICES }
