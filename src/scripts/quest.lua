@@ -2566,6 +2566,16 @@ end
 function Quest_make_room_secret(R)
   R.is_secret = true
 
+  -- hack-fix to prevent small outdoor secret rooms
+  -- being porched, and the ceiling line division
+  -- causing the fence gate to be b0rked -MSSP
+  each A in R.areas do
+    A.is_porch = false
+    if R.is_outdoor then
+      A.is_outdoor = true
+    end
+  end
+
   local C = R:secret_entry_conn()
   assert(C)
 
