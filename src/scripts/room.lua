@@ -1041,9 +1041,6 @@ function Room_detect_porches(R)
     -- single outdoor room? weird for it to be a porch --MSSP
     if #A.room.areas < 2 then return -1 end
 
-    -- room is tiny and outdoor? Probably better to not be a porch... --MSSP
-    if A.room.is_outdoor and A.room.svolume < 24 then return -1 end
-
     -- size check : never too much of room
     if A.svolume > R.svolume / 2 then return -1 end
 
