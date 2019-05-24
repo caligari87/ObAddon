@@ -61,7 +61,7 @@ PREFABS.Item_secret_ledge_sunken_universal =
 {
   template  = "Item_secret_ledge_universal"
   map = "MAP03"
-  theme = "any"
+  theme = "!hell"
   prob = 400
 }
 
@@ -69,6 +69,30 @@ PREFABS.Item_secret_ledge_sunken_universal_flipped =
 {
   template  = "Item_secret_ledge_universal"
   map = "MAP04"
-  theme = "any"
+  theme = "!hell"
   prob = 400
+}
+
+PREFABS.Item_secret_ledge_sunken_universal_hell =
+{
+  template  = "Item_secret_ledge_universal"
+  map = "MAP03"
+  theme = "hell"
+  prob = 400
+
+  tex_PLAT1 = "SUPPORT3"
+  tex_BROWNHUG = "WOOD1"
+  flat_FLAT20 = "CEIL5_2"
+}
+
+PREFABS.Item_secret_ledge_sunken_universal_flipped_hell =
+{
+  template  = "Item_secret_ledge_universal"
+  map = "MAP04"
+  theme = "hell"
+  prob = 400
+
+  tex_PLAT1 = "SUPPORT3"
+  tex_BROWNHUG = "WOOD1"
+  flat_FLAT20 = "CEIL5_2"
 }
