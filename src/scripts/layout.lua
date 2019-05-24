@@ -2319,12 +2319,20 @@ function Layout_handle_corners()
   end
 
 
+  -- MSSP check whether how many empty junctions
+  -- this corner has
+  local function corner_openness(corner)
+    if corner.junctions then
+      return #corner.junctions
+    else
+      return 0
+    end
+  end
+
+
   local function check_need_fencepost(corner)
     -- already used?
     if corner.kind then return end
-
-    -- cannot place posts next to a wall
-    if Corner_touches_wall(corner) then return end
 
     -- see if we have multiple railings at different heights, and
     -- if so then determine highest one.
@@ -2335,7 +2343,12 @@ function Layout_handle_corners()
       if junc.A2 == "map_edge" then return end
       if not junc.E1 then continue end
 
+      -- original fenceposts on railings code
+      -- (slightly cleaned up by MSSP) from Andrew
       if junc.E1.kind == "railing" then
+
+        -- cannot place posts next to a wall
+        if Corner_touches_wall(corner) then return end
 
         local cur_z = assert(junc.E1.rail_z)
         cur_z = int(cur_z)
@@ -2359,9 +2372,15 @@ function Layout_handle_corners()
         corner.post_top_h = post_top_z
       end
 
-      if junc.E1.kind == "fence" and junc.E1.area.is_porch then
-        corner.kind = "pillar"
-        corner.mat = assert(junc.E1.area.room.zone.fence_mat or junc.E1.area.room.main_tex)
+      -- create support pillars on the corners of fenceposts
+      if junc.E1.area then
+        if junc.E1.area.is_porch then
+          if (junc.E1.kind == "fence" or junc.E1.kind == "nothing")
+          and corner_openness(corner) == 3 then
+            corner.kind = "pillar"
+            corner.mat = assert(junc.E1.area.zone.fence_mat or junc.E1.area.room.main_tex)
+          end
+        end
       end
     end
   end
