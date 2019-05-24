@@ -3002,9 +3002,10 @@ DOOM.ROOM_THEMES =
       GSTONE1  = 20
       SKINMET1 = 10
       SKINMET2 = 10
-      SW1LION  = 10
-      SW1GARG  = 10
-      SW1SATYR = 10
+
+      GSTGARG = 10
+      GSTLION = 10
+      GSTSATYR = 10
     }
 
     floors =
