@@ -2328,33 +2328,41 @@ function Layout_handle_corners()
 
     -- see if we have multiple railings at different heights, and
     -- if so then determine highest one.
-    local rail_z
+    local post_top_z
     local need_post
 
     each junc in corner.junctions do
       if junc.A2 == "map_edge" then return end
       if not junc.E1 then continue end
 
-      if junc.E1.kind != "railing" then continue end
+      if junc.E1.kind == "railing" then
 
-      local cur_z = assert(junc.E1.rail_z)
-      cur_z = int(cur_z)
+        local cur_z = assert(junc.E1.rail_z)
+        cur_z = int(cur_z)
 
-      if not rail_z then
-        rail_z = cur_z
-        continue
+        if not post_top_z then
+          post_top_z = cur_z
+          continue
+        end
+
+        if cur_z ~= post_top_z then
+          need_post = true
+        end
+
+        post_top_z = math.max(post_top_z, cur_z)
+
+        -- Use the defined heights in the scenic fence
+        -- materials for the post height offset -MSSP
+        post_top_z = post_top_z + (corner.areas[1].room.scenic_fence.rail_h or 72)
+
+        corner.kind = "post"
+        corner.post_top_h = post_top_z
       end
 
-      if cur_z ~= rail_z then
-        need_post = true
+      if junc.E1.kind == "fence" and junc.E1.area.is_porch then
+        corner.kind = "pillar"
+        corner.mat = assert(junc.E1.area.room.zone.fence_mat or junc.E1.area.room.main_tex)
       end
-
-      rail_z = math.max(rail_z, cur_z)
-    end
-
-    if need_post then
-      corner.kind = "post"
-      corner.post_top_h = rail_z + (corner.areas[1].room.scenic_fence.rail_h or 72)
     end
   end
 

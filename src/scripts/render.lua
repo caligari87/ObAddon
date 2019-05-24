@@ -955,7 +955,18 @@ function Render_corner(cx, cy)
 
 
   local function make_pillar()
-    -- TODO
+    -- MSSP-TODO: we need this to get some nicer transitions
+    -- between porch fences and stairs!
+    local mx, my = corner.x, corner.y
+    local mat = corner.mat
+
+    local def = PREFABS.Fence_pillar
+
+    local T = Trans.spot_transform(mx, my, 1024, dir)
+
+    local skin = {wall=mat}
+
+    Fabricate(nil, def, T, {skin})
   end
 
 
