@@ -750,6 +750,14 @@ function Junction_calc_fence_z(A1, A2)
 
   local top_z = math.max(z1, z2)
 
+  -- porch worchy problems: specifically, fence gates straddled between
+  -- areas that involve at least one porch is cut off wrongly by the
+  -- one of the areas' ceiling heights (usually the one with the porch)
+  -- MSSP
+  if A1.is_porch or A2.is_porch then
+    top_z = math.min(z1, z2)
+  end
+
   return top_z + PARAM.jump_height + 8
 end
 
@@ -812,9 +820,7 @@ function Junction_make_railing(junc, rail_mat, block)
 
   if rail_mat == "FENCE_MAT_FROM_THEME" then
     rail_mat = junc.A1.room.scenic_fence.t
-  end
-
-  if not rail_mat then
+  elseif not rail_mat then
     rail_mat = "MIDBARS3"
   end
 
