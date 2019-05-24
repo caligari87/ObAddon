@@ -1643,8 +1643,7 @@ function Room_border_up()
       if (A1.is_porch and not A2.is_porch)
       or (not A1.is_porch and A2.is_porch) then
         if (A1.floor_h == A2.floor_h)
-        or (A1.mode == "liquid"
-        or A2.mode == "liquid") then
+        or A2.mode == "liquid" then
           if can_beam(A1, A2) then
             Junction_make_beams(junc)
           end
@@ -1667,7 +1666,21 @@ function Room_border_up()
             end
           end
         end
+
+        -- special handling for stairs
+        if A2.chunk then
+          if A2.chunk.kind == "stair" then
+            if junc.dir == A2.chunk.dest_dir
+            or junc.dir == A2.chunk.from_dir then
+              -- MSSP-TODO: Add actual function for constructing
+              -- and straddling arch fabs
+              --Junction_make_arch(junc)
+            end
+          end
+        end
+        return
       end
+
       return
     end
 

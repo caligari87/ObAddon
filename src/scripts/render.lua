@@ -512,19 +512,11 @@ function Render_edge(E)
 
 
   local function straddle_beams()
-    assert(E.fence_mat)
-    local skin = { wall=E.fence_mat }
-
-
     local def = E.prefab_def
 
     if not def then
       def = pick_beam_prefab()
     end
-
-    -- this is set in Room_pick_edge_prefab()
-    skin.door_tag = E.door_tag
-
 
     local z = assert(E.beam_z)
 
