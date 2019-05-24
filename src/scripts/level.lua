@@ -2240,7 +2240,6 @@ function Level_do_styles()
   end
 
   if LEVEL.is_procedural_gotcha then
-    STYLE.secrets = "none"
     STYLE.hallways = "none"
     STYLE.doors = "heaps"
     STYLE.switches = "heaps"
