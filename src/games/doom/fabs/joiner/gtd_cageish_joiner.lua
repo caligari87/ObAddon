@@ -37,6 +37,8 @@ PREFABS.Joiner_gtd_cageish_joiner_2_standing =
   prob = 150
 
   x_fit = "frame"
+
+  can_flip = true
 }
 
 PREFABS.Joiner_gtd_cageish_joiner_4_standing =
@@ -47,6 +49,19 @@ PREFABS.Joiner_gtd_cageish_joiner_4_standing =
   prob = 150
 
   seed_w = 3
+
+  x_fit = "frame"
+
+  can_flip = true
+}
+
+PREFABS.Joiner_gtd_cageish_joiner_lowering_pillars =
+{
+  template = "Joiner_gtd_cageish_joiner_bunker"
+  map = "MAP05"
+
+  seed_w = 3
+  seed_h = 2
 
   x_fit = "frame"
 }
