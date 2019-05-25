@@ -3525,12 +3525,11 @@ function Grower_grow_room(R)
   end
 
   if PARAM["linear_start"] == "yes" then
-    each R2 in LEVEL.rooms do
-      if R.grow_parent == R2.grow_parent and R2 != R then
-        if R2.is_start and not R2.is_street then
-          Grower_kill_room(R)
-          return
-        end
+    if R.grow_parent then
+      if R.grow_parent.is_start and R.grow_parent:prelim_conn_num() > 1 then
+        gui.printf("'OH SHIT HERE WE GO AGAIN', says ROOM " .. R.id .. " before " ..
+        "he was violently gunned down by the Ballas...\n")
+        Grower_kill_room(R)
       end
     end
   end
