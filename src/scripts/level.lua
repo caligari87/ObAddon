@@ -2356,6 +2356,12 @@ function Level_build_it()
 
   Seed_init()
 
+  if PARAM.build_levels then
+    if PARAM.build_levels != "all" then
+      if LEVEL.id != tonumber(PARAM.build_levels) then return "nope" end
+    end
+  end
+
   Area_create_rooms()
     if gui.abort() then return "abort" end
 

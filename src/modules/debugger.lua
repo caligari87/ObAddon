@@ -38,6 +38,47 @@ DEBUG_CONTROL.GROWTH_STEP_CHOICES =
   "no",       _("No"),
 }
 
+DEBUG_CONTROL.LEVEL_NUM_CHOICES =
+{
+  "all", _("All"),
+  "1",   _("1 only"),
+  "2",   _("2 only"),
+  "3",   _("3 only"),
+  "4",   _("4 only"),
+  "5",   _("5 only"),
+  "6",   _("6 only"),
+  "7",   _("7 only"),
+  "8",   _("8 only"),
+  "9",   _("9 only"),
+  "10",   _("10 only"),
+  "11",   _("11 only"),
+  "12",   _("12 only"),
+  "13",   _("13 only"),
+  "14",   _("14 only"),
+  "15",   _("15 only"),
+  "16",   _("16 only"),
+  "17",   _("17 only"),
+  "18",   _("18 only"),
+  "19",   _("19 only"),
+  "20",   _("20 only"),
+  "21",   _("21 only"),
+  "22",   _("22 only"),
+  "23",   _("23 only"),
+  "24",   _("24 only"),
+  "25",   _("25 only"),
+  "26",   _("26 only"),
+  "27",   _("27 only"),
+  "28",   _("28 only"),
+  "29",   _("29 only"),
+  "30",   _("30 only"),
+  "31",   _("31 only"),
+  "32",   _("32 only"),
+  "33",   _("33 only"),
+  "34",   _("34 only"),
+  "35",   _("35 only"),
+  "36",   _("36 only"),
+}
+
 function DEBUG_CONTROL.setup(self)
   for name,opt in pairs(self.options) do
     local value = self.options[name].value
@@ -109,6 +150,17 @@ OB_MODULES["debugger"] =
               "added by the ZDoom Special Addons: Story Generator."
       default="yes"
       priority=97
+    }
+
+    build_levels =
+    {
+      name = "build_levels"
+      label = _("Build Level")
+      choices=DEBUG_CONTROL.LEVEL_NUM_CHOICES
+      tooltip="Allows the skipping of level construction along the WAD " ..
+              "for debugging purposes."
+      default="all"
+      priority=96
     }
   }
 }
