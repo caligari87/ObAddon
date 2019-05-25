@@ -2326,6 +2326,22 @@ function Layout_handle_corners()
   end
 
 
+  local function fetch_good_pillar_material(corner)
+    local pillar_is_outdoor = false
+
+    each A in corner.areas do
+      if A.room then
+        if A.room.is_outdoor then
+          return A.room.facade_mat
+        else
+          return A.room.main_tex
+        end
+      end
+    end
+
+    return "_DEFAULT"
+  end
+
   local function check_need_fencepost(corner)
     -- already used?
     if corner.kind then return end
@@ -2382,11 +2398,7 @@ function Layout_handle_corners()
 
           if corner_openness(corner) >= 3 or not corner_openness(corner) then
             corner.kind = "pillar"
-            if junc.E1.area.room then
-              corner.mat = assert(junc.E1.area.room.main_tex)
-            else
-              corner.mat = assert(junc.E1.area.zone.fence_mat)
-            end
+            corner.mat = fetch_good_pillar_material(corner)
             --gui.printf("pillar errected!\n")
           end
 
