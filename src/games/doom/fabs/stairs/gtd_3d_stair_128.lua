@@ -1,4 +1,4 @@
-PREFABS.Ladder_3d_stair_128 =
+--[[PREFABS.Ladder_3d_stair_128 =
 {
   file   = "stairs/gtd_3d_stair_128.wad"
   map    = "MAP01"
@@ -39,3 +39,4 @@ PREFABS.Ladder_3d_stair_128_3X =
 
   seed_h   = 3
 }
+]]

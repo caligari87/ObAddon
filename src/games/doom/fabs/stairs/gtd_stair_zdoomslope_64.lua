@@ -3,7 +3,7 @@ PREFABS.Stair_slope =
   file   = "stairs/gtd_stair_zdoomslope_64.wad"
   map    = "MAP01"
 
-  prob   = 75
+  prob   = 100
   style  = "steepness"
 
   engine = "zdoom"
