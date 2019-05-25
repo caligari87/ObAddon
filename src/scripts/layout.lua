@@ -2375,7 +2375,8 @@ function Layout_handle_corners()
       -- create support pillars on the corners of fenceposts
       if junc.E1.area then
         if junc.E1.area.is_porch then
-          if (junc.E1.kind == "fence" or junc.E1.kind == "nothing")
+          if (junc.E1.kind == "fence" or junc.E1.kind == "nothing"
+          or junc.E1.kind == "wall" or junc.E1.kind == "window")
           and corner_openness(corner) == 3 then
             corner.kind = "pillar"
             corner.mat = assert(junc.E1.area.zone.fence_mat or junc.E1.area.room.main_tex)
