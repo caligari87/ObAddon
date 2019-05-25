@@ -97,6 +97,7 @@
                     -- "window", "fence", "railing"
                     -- "sky_edge"
                     -- [ "steps" ]
+                    -- "beams" -- ObAddon-only feature -MSSP
 
     S : SEED        -- first seed (the "left-most" one when facing the edge)
 
@@ -1466,4 +1467,3 @@ function CHUNK_CLASS.flip(chunk)
 
   chunk.is_flipped = not chunk.is_flipped
 end
-

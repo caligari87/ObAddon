@@ -2322,11 +2322,7 @@ function Layout_handle_corners()
   -- MSSP check whether how many empty junctions
   -- this corner has
   local function corner_openness(corner)
-    if corner.junctions then
-      return #corner.junctions
-    else
-      return 0
-    end
+    return #corner.junctions or 0
   end
 
 
@@ -2373,16 +2369,29 @@ function Layout_handle_corners()
       end
 
       -- create support pillars on the corners of fenceposts
-      if junc.E1.area then
-        if junc.E1.area.is_porch then
-          if (junc.E1.kind == "fence" or junc.E1.kind == "nothing"
-          or junc.E1.kind == "wall" or junc.E1.kind == "window")
-          and corner_openness(corner) == 3 then
+
+      if near_porch(corner) then
+
+        --[[gui.printf("AREA " .. junc.E1.area.id .. ":\n")
+        each CJ in corner.junctions do
+          gui.printf(table.tostr(CJ.E1) .. "\n")
+        end]]
+
+        --gui.printf("corner openness: " .. corner_openness(corner) .. "\n")
+        --gui.printf("(" .. corner.x .. "," .. corner.y .. ")\n")
+
+          if corner_openness(corner) >= 3 or not corner_openness(corner) then
             corner.kind = "pillar"
-            corner.mat = assert(junc.E1.area.zone.fence_mat or junc.E1.area.room.main_tex)
+            if junc.E1.area.room then
+              corner.mat = assert(junc.E1.area.room.main_tex)
+            else
+              corner.mat = assert(junc.E1.area.zone.fence_mat)
+            end
+            --gui.printf("pillar errected!\n")
           end
-        end
+
       end
+
     end
   end
 
