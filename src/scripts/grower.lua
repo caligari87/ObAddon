@@ -3232,7 +3232,7 @@ end
       end
     end
 
-    if PARAM["linear_start"] == "yes" then
+    if PARAM.linear_start == "yes" then
       if pass == "sprout" then
         if not R.is_street and R:prelim_conn_num() >= 1 and R.is_start then
           break;
@@ -3512,19 +3512,16 @@ function Grower_grow_room(R)
 
   -- Linear Mode, kill mirrored sprouts of symmetric rooms
   if LEVEL.is_linear then
-  gui.printf("-- Linear mode culling --\n\n")
-    each R2 in LEVEL.rooms do
-      if R2.grow_parent == R.grow_parent and R2 != R then
-        gui.printf("OUCH OOF OWWIE ROOM_" .. R.id .. " JUST DIED, IT'S HORRIBLE!\n")
-        gui.printf("OH THE HUMANITY!!!!! FORGIVE ROOM_" .. R.id .. "\n")
-        gui.printf("FOR HE WAS STRICKEN, DEVIATING FROM THE LINEAR PATH!!!\n\n")
+  if R.grow_parent then
+    if R.grow_parent:prelim_conn_num() > 2 then
+        gui.printf(R.id .. " culled due to Linear Mode.")
         Grower_kill_room(R)
         return
       end
     end
   end
 
-  if PARAM["linear_start"] == "yes" then
+  if PARAM.linear_start == "yes" then
     if R.grow_parent then
       if R.grow_parent.is_start and R.grow_parent:prelim_conn_num() > 1 then
         gui.printf("'OH SHIT HERE WE GO AGAIN', says ROOM " .. R.id .. " before " ..
