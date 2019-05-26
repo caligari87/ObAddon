@@ -906,8 +906,8 @@ GLAICE_DOOM1_MATERIALS = {
   CARPET4 = { t="WOOD3",  f="CARPET4" }
   CARPET5 = { t="WOOD1",  f="CARPET5" }
   CARPET6 = { t="WOOD1",  f="CARPET6" }
-  CARPET7 = { t="WOODVERT",  f="CARPET7" }
-  CARPET8 = { t="WOODVERT",  f="CARPET8" }
+  CARPET7 = { t="WOOD1",  f="CARPET7" }
+  CARPET8 = { t="WOOD1",  f="CARPET8" }
 
   -- Various Decayed Tech Flooring / etc
   DARKF01 = { t="BROWNGRN",  f="DARKF01" }
