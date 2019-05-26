@@ -1430,9 +1430,9 @@ function Grower_kill_room(R)
     end
 
     -- sanity check
-    each PC in LEVEL.prelim_conns do
+    --[[each PC in LEVEL.prelim_conns do
       assert(not (PC.R1 == R or PC.R2 == R))
-    end
+    end]]
   end
 
 
@@ -3186,6 +3186,11 @@ end
     if cur_rule.auxiliary then
       apply_auxiliary_rules()
     end
+
+    if is_emergency then
+      gui.printf("Emergency in ROOM_" .. R.id .. " is resolved OMG AMAZING!!!!\n")
+      return "yas queen"
+    end
   end
 
 
@@ -3241,7 +3246,7 @@ end
     end
 
     -- stderrf("LOOP %d\n", loop)
-    apply_a_rule(rule_tab)
+    R.emergency_sprouted = apply_a_rule(rule_tab)
 
     -- if we surpass the floor limit, remove rules which add new areas
     if pass == "grow" and not hit_floor_limit and R:num_floors() >= R.floor_limit then
@@ -3514,7 +3519,7 @@ function Grower_grow_room(R)
   if LEVEL.is_linear then
   if R.grow_parent then
     if R.grow_parent:prelim_conn_num() > 2 then
-        gui.printf(R.id .. " culled due to Linear Mode.")
+        gui.printf("ROOM_" .. R.id .. " was SHOT DOWN VIOLENTLY by the Linear Mode thugz.\n")
         Grower_kill_room(R)
         return
       end
@@ -3900,6 +3905,35 @@ gui.debugf("=== Coverage seeds: %d/%d  rooms: %d/%d\n",
   end
 
 
+  local function emergency_teleport_break()
+    local final_R = LEVEL.rooms[#LEVEL.rooms]
+
+    gui.printf("ROOM_" .. final_R.id .. " in critical condition! " ..
+    "GET THE TELEPORNEPHERINE!\n")
+    Grower_add_teleporter_trunk(final_R)
+  end
+
+
+  -- a version of emergency_sprouts() except for the last
+  -- room in the stack only of a linear levle only
+  local function emergency_linear_sprouts()
+    local R = LEVEL.rooms[#LEVEL.rooms]
+    if not reached_coverage() then
+
+      if R.is_hallway then return end
+
+      gui.printf("Oh noes! Attempting emergency sprout in ROOM_" .. R.id .. "!!!\n")
+      Grower_grammatical_room(R, "sprout", "is_emergency")
+    end
+
+    if not R.emergency_sprouted then
+      return "oof"
+    else
+      return "yas queen"
+    end
+  end
+
+
   ---| Grower_grow_all_rooms |---
 
   -- if map is too small, try to sprout some more rooms
@@ -3930,7 +3964,14 @@ gui.debugf("=== Coverage seeds: %d/%d  rooms: %d/%d\n",
 
     expand_limits()
 
-    emergency_sprouts()
+    if LEVEL.is_linear then
+      if emergency_linear_sprouts() == "oof" then
+        emergency_teleport_break()
+      end
+    else
+      emergency_sprouts()
+    end
+
   end
 end
 
