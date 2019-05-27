@@ -4364,17 +4364,6 @@ function Grower_create_rooms()
 --TODO  Grower_flatten_outdoor_fences()
   Grower_split_liquids()
 
-  if LEVEL.is_linear then
-  -- REMOVE_ME_EVENTUALLY
-    each R in LEVEL.rooms do
-      if R.grow_parent then
-        print(R.grow_parent.id .. " -> " .. R.id)
-      else
-        print(R.id)
-      end
-    end
-  end
-
   Seed_squarify()
 
   -- debugging aid

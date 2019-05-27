@@ -317,7 +317,7 @@ function Connect_teleporter_rooms(P)
   local R1 = P.R1
   local R2 = P.R2
 
-  gui.debugf("Teleporter connection: %s --> %s\n", R1.name, R2.name)
+  gui.printf("Teleporter connection: %s --> %s\n", R1.name, R2.name)
 
   local C = CONN_CLASS.new("teleporter", R1, R2)
 
