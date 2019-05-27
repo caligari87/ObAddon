@@ -2544,6 +2544,7 @@ function Level_make_all()
 
   Level_choose_themes()
 
+  ob_invoke_hook("get_levels_after_themes")
 
   gui.rand_seed(OB_CONFIG.seed + 3)
 

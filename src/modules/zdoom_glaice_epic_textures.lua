@@ -60,7 +60,6 @@ function GLAICE_EPIC_TEXTURES.setup(self)
 end
 
 function GLAICE_EPIC_TEXTURES.decide_environment_themes()
-
   --------------------
   -- Outdoor Themes --
   --------------------
@@ -83,51 +82,71 @@ function GLAICE_EPIC_TEXTURES.decide_environment_themes()
 
   -- pick a random environment
   if PARAM.environment_themes == "random" then
-    LEVEL.outdoor_theme = rand.pick({"temperate","snow","desert"})
+    each L in GAME.levels do
+      L.outdoor_theme = rand.pick({"temperate","snow","desert"})
+    end
   end
 
   -- just like a bit mixed - every 2-6 levels, the theme will change
   if PARAM.environment_themes == "mixed" then
-    if LEVEL.id == 1 then
-      LEVEL.outdoor_theme = rand.pick({"temperate","snow","desert"})
-      PARAM.previous_theme = LEVEL.outdoor_theme
-      PARAM.outdoor_theme_along = rand.irange(2,6)
-    elseif LEVEL.id > 1 then
-      -- continue the same theme until the countdown ends
-      if PARAM.outdoor_theme_along > 0 then
-        LEVEL.outdoor_theme = PARAM.previous_theme
-        PARAM.outdoor_theme_along = PARAM.outdoor_theme_along - 1
-      -- decide a new theme when the countdown ends
-      -- logic goes that deserts cannot go to snow immediately
-      -- and vice versa
-      elseif PARAM.outdoor_theme_along <= 0 then
-        if PARAM.previous_theme == "temperate" then
-          LEVEL.outdoor_theme = rand.pick({"snow","desert"})
-        else
-          LEVEL.outdoor_theme = "temperate"
-        end
-        PARAM.previous_theme = LEVEL.outdoor_theme
+    each L in GAME.levels do
+      if L.id == 1 then
+        L.outdoor_theme = rand.pick({"temperate","snow","desert"})
+        PARAM.previous_theme = L.outdoor_theme
         PARAM.outdoor_theme_along = rand.irange(2,6)
+      elseif L.id > 1 then
+        -- continue the same theme until the countdown ends
+        if PARAM.outdoor_theme_along > 0 then
+          L.outdoor_theme = PARAM.previous_theme
+          PARAM.outdoor_theme_along = PARAM.outdoor_theme_along - 1
+        -- decide a new theme when the countdown ends
+        -- logic goes that deserts cannot go to snow immediately
+        -- and vice versa
+        elseif PARAM.outdoor_theme_along <= 0 then
+          if PARAM.previous_theme == "temperate" then
+            L.outdoor_theme = rand.pick({"snow","desert"})
+          else
+            L.outdoor_theme = "temperate"
+          end
+          PARAM.previous_theme = L.outdoor_theme
+          PARAM.outdoor_theme_along = rand.irange(2,6)
+        end
       end
     end
   end
 
   -- -ish environment themes
   if PARAM.environment_themes == "snowish" then
-    LEVEL.outdoor_theme = rand.pick({"temperate","snow"})
+    each L in GAME.levels do
+      L.outdoor_theme = rand.pick({"temperate","snow"})
+    end
   elseif PARAM.environment_themes == "desertish" then
-    LEVEL.outdoor_theme = rand.pick({"temperate","desert"})
+    each L in GAME.levels do
+      L.outdoor_theme = rand.pick({"temperate","desert"})
+    end
   end
 
   -- absolutes
   if PARAM.environment_themes == "snow" then
-    LEVEL.outdoor_theme = "snow"
+    each L in GAME.levels do
+      L.outdoor_theme = "snow"
+    end
   elseif PARAM.environment_themes == "desert" then
-    LEVEL.outdoor_theme = "desert"
+    each L in GAME.levels do
+      L.outdoor_theme = "desert"
+    end
   end
 
   gui.printf("\n--==| Environment Outdoor Themes |==--\n\n")
-  gui.printf("Outdoor theme: " .. LEVEL.outdoor_theme .. "\n")
+  each L in GAME.levels do
+    if L.outdoor_theme then
+      gui.printf("Outdoor theme for " .. L.name .. ": " .. L.outdoor_theme .. "\n")
+    end
+  end
+end
+
+function GLAICE_EPIC_TEXTURES.generate_environment_themes()
+
 
   -- initialize default tables
   if not PARAM.default_environment_themes_init then
@@ -501,7 +520,8 @@ OB_MODULES["glaice_epic_textures"] =
   hooks =
   {
     setup = GLAICE_EPIC_TEXTURES.setup
-    begin_level = GLAICE_EPIC_TEXTURES.decide_environment_themes
+    get_levels_after_themes = GLAICE_EPIC_TEXTURES.decide_environment_themes
+    begin_level = GLAICE_EPIC_TEXTURES.generate_environment_themes
     level_layout_finished = GLAICE_EPIC_TEXTURES.create_environment_themes
     all_done = GLAICE_EPIC_TEXTURES.put_the_texture_wad_in
   }
