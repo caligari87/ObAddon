@@ -8,7 +8,7 @@ PREFABS.Item_closet_confession_booth =
   env    = "!cave"
 
   where  = "seeds"
-  seed_w = 1
+  seed_w = 2
   seed_h = 1
 
   deep = 16
