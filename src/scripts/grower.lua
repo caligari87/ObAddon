@@ -1302,6 +1302,10 @@ gui.printf("new room %s : env = %s : parent = %s\n", R.name, tostring(info.env),
 
   Room_set_kind(R, is_hallway, is_outdoor, is_cave)
 
+  if info.force_no_hallway then
+    R.is_hallway = false
+  end
+
   if R.is_street then
     is_outdoor = true
     is_hallway = false
@@ -1434,6 +1438,10 @@ function Grower_kill_room(R)
     end
 
     -- sanity check
+    each PC in LEVEL.prelim_conns do
+      gui.printf(table.tostr(PC))
+    end
+
     each PC in LEVEL.prelim_conns do
       assert(not (PC.R1 == R or PC.R2 == R))
     end
@@ -3930,7 +3938,7 @@ gui.debugf("=== Coverage seeds: %d/%d  rooms: %d/%d\n",
 
 
   -- a version of emergency_sprouts() except for the last
-  -- room in the stack only of a linear levle only
+  -- room in the stack only of a linear level only
   local function emergency_linear_sprouts()
     local R = LEVEL.rooms[#LEVEL.rooms]
     if not reached_coverage() then
@@ -3943,7 +3951,7 @@ gui.debugf("=== Coverage seeds: %d/%d  rooms: %d/%d\n",
 
     if not R.emergency_sprout_attempts then
       return "oof"
-    elseif R.emergency_sprout_attempts > 3 then
+    elseif R.emergency_sprout_attempts > 1 then
       return "oof"
     end
     return "yas queen"
