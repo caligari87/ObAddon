@@ -3,7 +3,7 @@ PREFABS.Item_closet_confession_booth =
   file   = "item/gtd_item_confession_booth.wad"
   map    = "MAP01"
 
-  prob   = 25
+  prob   = 18
   theme  = "!tech"
   env    = "!cave"
 
