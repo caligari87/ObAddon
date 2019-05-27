@@ -1430,9 +1430,10 @@ function Grower_kill_room(R)
     end
 
     -- sanity check
-    --[[each PC in LEVEL.prelim_conns do
+    each PC in LEVEL.prelim_conns do
+      gui.printf(PC.R1.id .. "->" .. PC.R2.id .. "\n")
       assert(not (PC.R1 == R or PC.R2 == R))
-    end]]
+    end
   end
 
 
@@ -3189,7 +3190,15 @@ end
 
     if is_emergency then
       gui.printf("Emergency in ROOM_" .. R.id .. " is resolved OMG AMAZING!!!!\n")
-      return "yas queen"
+      if not R.emergency_sprout_attempts then
+        R.emergency_sprout_attempts = 1
+      else
+        R.emergency_sprout_attempts = R.emergency_sprout_attempts + 1
+      end
+    end
+
+    if R.emergency_sprout_attempts then
+      gui.printf(R.id .. " Emergency Sprout attempts: " .. R.emergency_sprout_attempts .. "\n")
     end
   end
 
@@ -3246,7 +3255,7 @@ end
     end
 
     -- stderrf("LOOP %d\n", loop)
-    R.emergency_sprouted = apply_a_rule(rule_tab)
+    apply_a_rule(rule_tab)
 
     -- if we surpass the floor limit, remove rules which add new areas
     if pass == "grow" and not hit_floor_limit and R:num_floors() >= R.floor_limit then
@@ -3509,7 +3518,7 @@ function Grower_grow_room(R)
   if not R.is_hallway and is_too_small(R) then
     Grower_grammatical_room(R, "grow")
 
-    if is_too_small(R) then
+    if is_too_small(R) and not LEVEL.is_linear then
       Grower_kill_room(R)
       return
     end
@@ -3926,11 +3935,12 @@ gui.debugf("=== Coverage seeds: %d/%d  rooms: %d/%d\n",
       Grower_grammatical_room(R, "sprout", "is_emergency")
     end
 
-    if not R.emergency_sprouted then
+    if not R.emergency_sprout_attempts then
       return "oof"
-    else
-      return "yas queen"
+    elseif R.emergency_sprout_attempts > 3 then
+      return "oof"
     end
+    return "yas queen"
   end
 
 
