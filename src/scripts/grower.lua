@@ -3526,11 +3526,11 @@ function Grower_grow_room(R)
     end
   end
 
-  if PARAM.linear_start == "yes" then
+  if PARAM.linear_start == "yes" or LEVEL.is_linear then
     if R.grow_parent then
       if R.grow_parent.is_start and R.grow_parent:prelim_conn_num() > 1 then
         gui.printf("'OH SHIT HERE WE GO AGAIN', says ROOM " .. R.id .. " before " ..
-        "he was violently gunned down by the Ballas...\n")
+        "he was violently gunned down by the Linear Mode thugz...\n")
         Grower_kill_room(R)
       end
     end

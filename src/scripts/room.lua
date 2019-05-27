@@ -1064,12 +1064,20 @@ function Room_detect_porches(R)
     -- MSSP: new behavior. Multiple porches per room, limited
     -- by the amount of areas within the room. (no more than half
     -- the room should be porched at least)
+    local porchables = {}
+
     each A in R.areas do
       A.porch_score = eval_porch(A, "indoor")
+      if A.porch_score > 0 then
+        table.insert(porchables, A)
+      end
     end
 
+    table.sort(porchables,
+    function(A, B) return A.porch_score > B.porch_score end)
+
     R.porch_count = 0
-    each A in R.areas do
+    each A in porchables do
       if A.porch_score > 0 and style_sel("porches", 0, 30, 60, 90) then
         set_as_porch(A)
 
