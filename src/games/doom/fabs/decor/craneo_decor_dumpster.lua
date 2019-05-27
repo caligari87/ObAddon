@@ -1,6 +1,6 @@
 PREFABS.Item_decor_dumpster =
 {
-  file  = "item/craneo_decor_dumpster.wad"
+  file  = "decor/craneo_decor_dumpster.wad"
   map   = "MAP01"
 
   prob  = 5000 --80 was the original when it was an item container
