@@ -428,6 +428,9 @@ function Layout_place_importants(R, imp_pass)
     local chunk = Layout_spot_for_wotsit(R, "TELEPORTER", "required")
 
     if not chunk then
+      gui.printf("Ouch oof owiee b0rkity b0rk:\n")
+      gui.printf(R.id .. ": " ..
+      table.tostr(R) .. "\n")
       error("No spot in room for teleporter!")
     end
 

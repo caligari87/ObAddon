@@ -3943,7 +3943,7 @@ gui.debugf("=== Coverage seeds: %d/%d  rooms: %d/%d\n",
 
     if not R.emergency_sprout_attempts then
       return "oof"
-    elseif R.emergency_sprout_attempts > 1 then
+    elseif R.emergency_sprout_attempts > 3 then
       return "oof"
     end
     return "yas queen"
