@@ -1268,6 +1268,10 @@ gui.printf("new room %s : env = %s : parent = %s\n", R.name, tostring(info.env),
     end
   end
 
+  if info.force_no_street then
+    R.is_street = false
+  end
+
   if trunk == nil then
     assert(parent_R)
     trunk = assert(parent_R.trunk)
@@ -1431,7 +1435,6 @@ function Grower_kill_room(R)
 
     -- sanity check
     each PC in LEVEL.prelim_conns do
-      gui.printf(PC.R1.id .. "->" .. PC.R2.id .. "\n")
       assert(not (PC.R1 == R or PC.R2 == R))
     end
   end
@@ -3764,7 +3767,7 @@ end
 
 
 
-function Grower_add_teleporter_trunk(parent_R)
+function Grower_add_teleporter_trunk(parent_R, is_emergency)
 
   local trunk = Grower_add_a_trunk()
   local info  = {}
@@ -3774,6 +3777,9 @@ function Grower_add_teleporter_trunk(parent_R)
     info.env = "cave"
   end
 --]]
+  if is_emergency then
+    info.force_no_street = true
+  end
 
   local R = Grower_create_and_grow_room(trunk, "normal", info)
 
@@ -3919,7 +3925,7 @@ gui.debugf("=== Coverage seeds: %d/%d  rooms: %d/%d\n",
 
     gui.printf("ROOM_" .. final_R.id .. " in critical condition! " ..
     "GET THE TELEPORNEPHERINE!\n")
-    Grower_add_teleporter_trunk(final_R)
+    Grower_add_teleporter_trunk(final_R, true)
   end
 
 
@@ -3937,7 +3943,7 @@ gui.debugf("=== Coverage seeds: %d/%d  rooms: %d/%d\n",
 
     if not R.emergency_sprout_attempts then
       return "oof"
-    elseif R.emergency_sprout_attempts > 3 then
+    elseif R.emergency_sprout_attempts > 1 then
       return "oof"
     end
     return "yas queen"
