@@ -4455,45 +4455,6 @@ namelib.COMMUNITY_MEMBERS =
 }
 
 
-namelib.ALPHABET =
-{
-  v =
-  {
-    'a',
-    'e',
-    'i',
-    'o',
-    'u',
-  }
-
-  c =
-  {
-    'q',
-    'w',
-    'r',
-    't',
-    'y',
-    'p',
-    's',
-    'd',
-    'f',
-    'g',
-    'h',
-    'j',
-    'k',
-    'l',
-    'z',
-    'x',
-    'c',
-    'v',
-    'b',
-    'n',
-    'm',
-  }
-}
-
-
-
 namelib.SYLLABLES =
 {
   e = -- EXOTIC names
@@ -5153,25 +5114,6 @@ namelib.SYLLABLES =
 --              words as syllables
 function namelib.generate_unique_noun(m)
   local mode = m
-
-  local function make_absolutely_random_syllable()
-    local patterns =
-    {  -- 1 for vowels, 2 for consonants
-      '12',
-      '112',
-      '21',
-      '1',
-      '2',
-    }
-
-    local syl_pattern = rand.pick(patterns)
-
-    syl_pattern = string.gsub(syl_pattern, "(1)", rand.pick(namelib.ALPHABET.v))
-
-    syl_pattern = string.gsub(syl_pattern, "(2)", rand.pick(namelib.ALPHABET.c))
-
-    return syl_pattern
-  end
 
   local function make_placelike_syllable(style)
     if style == "anglican" then
