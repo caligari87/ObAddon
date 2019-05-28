@@ -2569,5 +2569,9 @@ function Level_make_all()
 
   ob_invoke_hook("all_done")
 
+  -- MSSP-TODO: Create a new 'oil pan' function to catch
+  -- all lump creation by the different ZDoom-focused modules
+  --zdoom_process_lumps()
+
   return "ok"
 end

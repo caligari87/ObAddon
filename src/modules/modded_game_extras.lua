@@ -12,25 +12,23 @@ MODDED_GAME_EXTRAS.ENABLE_DISABLE =
 
 MODDED_GAME_EXTRAS.SCRIPT_TYPE_CHOICES =
 {
-  "dec",  _("Decorate"),
+  "dec",  _("DECORATE"),
   "none", _("NONE"),
 }
 
 MODDED_GAME_EXTRAS.HELLSCAPE_NAVIGATOR_TEMPLATE =
-[[  actor m8f_hn_AreaNameMarker_NUMNUMNUM : Actor NUMNUMNUM
+[[actor m8f_hn_AreaNameMarker_NUMNUMNUM : Actor NUMNUMNUM
 {
-  Default
-  {
-    Tag "NAMENAMENAME"
-    Health SIZESIZESIZE
+  Tag "NAMENAMENAME"
+  Health SIZESIZESIZE
 
-    +NOBLOCKMAP
-    +NOGRAVITY
-    +DONTSPLASH
-    +NOTONAUTOMAP
-    +DONTTHRUST
-  }
+  +NOBLOCKMAP
+  +NOGRAVITY
+  +DONTSPLASH
+  +NOTONAUTOMAP
+  +DONTTHRUST
 }
+
 ]]
 
 function MODDED_GAME_EXTRAS.setup(self)
@@ -39,7 +37,7 @@ function MODDED_GAME_EXTRAS.setup(self)
     PARAM[name] = value
   end
 
-  if PARAM.hn_markers == "enable" then
+  if PARAM.hn_markers != "none" then
     MODDED_GAME_EXTRAS.init_hn_info()
   end
 end
@@ -51,6 +49,10 @@ function MODDED_GAME_EXTRAS.init_hn_info()
 end
 
 function MODDED_GAME_EXTRAS.create_hn_info()
+
+  if PARAM.hn_markers == "none" or not PARAM.hn_markers then
+    return
+  end
 
   gui.printf("--== Hellscape Navigator Support ==--\n\n")
 
@@ -97,7 +99,7 @@ function MODDED_GAME_EXTRAS.create_hn_info()
     local x_span = (R.sx2 - R.sx1) * SEED_SIZE
     local y_span = (R.sy2 - R.sy1) * SEED_SIZE
 
-    info.radius = math.min(x_span, y_span)
+    info.radius = (x_span + y_span)/2
     info.env = R:get_env()
 
     PARAM.hn_thing_start_offset = PARAM.hn_thing_start_offset + 1
@@ -108,17 +110,17 @@ function MODDED_GAME_EXTRAS.create_hn_info()
       "WHERE MAN?!?! WHGEREREE???!!!!\n")
       return
     end
-    gui.printf(table.tostr(prefered_S) .. "\n")
 
-    gui.printf(table.tostr(info) .. "\n")
     table.insert(HN_INFO_TABLE, info)
 
     hn_marker = {
-      x = info.cx
-      y = info.cy
+      x = prefered_S.mid_x
+      y = prefered_S.mid_y
       z = prefered_S.area.ceil_h
       id = info.editor_num
     }
+
+    gui.printf("ROOM_" .. R.id .. " name: " .. info.name .. "\n")
 
     raw_add_entity(hn_marker)
   end
@@ -128,7 +130,36 @@ function MODDED_GAME_EXTRAS.create_hn_info()
   each R in LEVEL.rooms do
     make_room_info(R)
   end
+end
 
+function MODDED_GAME_EXTRAS.generate_hn_decorate()
+
+  if PARAM.hn_markers == "none" or not PARAM.hn_markers then
+    return
+  end
+
+  local decorate_string = ""
+  local decorate_lines = {}
+
+  -- create decorate file!
+  each I in HN_INFO_TABLE do
+    local name = I.name
+    local editor_num = I.editor_num
+    local radius = I.radius
+
+    local thing_chunk = MODDED_GAME_EXTRAS.HELLSCAPE_NAVIGATOR_TEMPLATE
+    thing_chunk = string.gsub(thing_chunk, "NUMNUMNUM", editor_num)
+    thing_chunk = string.gsub(thing_chunk, "NAMENAMENAME", "Current Area: " .. name)
+    thing_chunk = string.gsub(thing_chunk, "SIZESIZESIZE", radius)
+
+    decorate_string = decorate_string .. thing_chunk
+  end
+
+  for line in decorate_string:gmatch("[^\r\n]+") do
+    table.insert(decorate_lines, line .. "\n")
+  end
+
+  gui.wad_add_text_lump("DECORATE", decorate_lines)
 end
 
 ----------------------------------------------------------------
@@ -146,6 +177,7 @@ OB_MODULES["modded_game_extras"] =
   {
     setup = MODDED_GAME_EXTRAS.setup
     end_level = MODDED_GAME_EXTRAS.create_hn_info
+    all_done = MODDED_GAME_EXTRAS.generate_hn_decorate
   }
 
   tooltip = "Offers extra features and expanded support for various mods."
@@ -168,7 +200,7 @@ OB_MODULES["modded_game_extras"] =
     {
       name = "hn_markers"
       label=_("HN Markers")
-      choices=MODDED_GAME_EXTRAS.ENABLE_DISABLE
+      choices=MODDED_GAME_EXTRAS.SCRIPT_TYPE_CHOICES
       tooltip = "Adds support for m8f's Hellscape Navigator by generating " ..
       "name markers in the map per room."
       default = "none"
