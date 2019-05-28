@@ -164,3 +164,34 @@ PREFABS.Light_tech_blue =
 
 }
 
+-- Fans, ceiling sink does not look very nice so moved it here as a "light".
+PREFABS.Light_fan_tech =
+{
+  template = "Light_basic"
+  map      = "MAP03"
+
+  uses_epic_textures = true
+
+  prob   = 20
+  theme  = "tech"
+
+  flat_TLITE6_1 = "FAN1"
+  flat_CEIL5_2  = "FLAT23"
+  tex_METAL = "SHAWN2"
+}
+
+-- Used everywhere else
+PREFABS.Light_fan_rusty =
+{
+  template = "Light_basic"
+  map      = "MAP03"
+
+  uses_epic_textures = true
+
+  prob   = 20
+  theme  = "!tech"
+
+  flat_TLITE6_1 = "FAN1"
+  flat_CEIL5_2  = "CEIL5_2"
+  tex_METAL = "METAL"
+}
