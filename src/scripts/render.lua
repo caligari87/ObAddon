@@ -1190,7 +1190,7 @@ function Render_sink_part(A, S, where, sink)
 
   local corner_field = where .. "_inner"
 
-  local c_style = assert(A.room.corner_style)
+  local c_style = assert(A.room.corner_style or "curved")
 
   local function check_inner_point(cx, cy)
     local corner = Corner_lookup(cx, cy)
