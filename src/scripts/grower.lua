@@ -1439,10 +1439,6 @@ function Grower_kill_room(R)
 
     -- sanity check
     each PC in LEVEL.prelim_conns do
-      gui.printf(table.tostr(PC))
-    end
-
-    each PC in LEVEL.prelim_conns do
       assert(not (PC.R1 == R or PC.R2 == R))
     end
   end
