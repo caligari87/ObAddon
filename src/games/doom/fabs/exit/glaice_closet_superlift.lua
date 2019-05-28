@@ -3,7 +3,7 @@ PREFABS.Exit_glaice_superlift_up =
   file   = "exit/glaice_closet_superlift.wad"
   map    = "MAP01"
 
-  prob   = 175
+  prob   = 200
 
   theme  = "!hell"
 

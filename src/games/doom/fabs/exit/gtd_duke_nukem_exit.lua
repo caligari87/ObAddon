@@ -3,7 +3,7 @@ PREFABS.Exit_duke_nukem_exit =
   file   = "exit/gtd_duke_nukem_exit.wad"
   map    = "MAP01"
 
-  prob   = 300
+  prob   = 200
 
   where  = "seeds"
 

@@ -3,7 +3,7 @@ PREFABS.Pic_beed28_broken_door =
   file   = "picture/beed28_broken_door.wad"
   map    = "MAP01"
 
-  prob   = 15
+  prob   = 12
   env   = "building"
   theme = "!hell"
 
