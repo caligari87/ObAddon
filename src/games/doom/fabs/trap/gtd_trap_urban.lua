@@ -1,9 +1,8 @@
-PREFABS.Trap_closet_tech =
+PREFABS.Trap_closet_urban =
 {
-  file = "trap/gtd_closet_tech.wad"
-  map = "MAP01"
+  file = "trap/gtd_trap_urban.wad"
 
-  prob   = 25
+  prob = 50
 
   theme = "urban"
   env = "!cave"
@@ -24,11 +23,4 @@ PREFABS.Trap_closet_tech =
   bound_z2 = 128
 
   tag_1 = "?trap_tag"
-}
-
-PREFABS.Trap_closet_tech_2 =
-{
-  template = "Trap_closet_tech"
-
-  map = "MAP02"
 }

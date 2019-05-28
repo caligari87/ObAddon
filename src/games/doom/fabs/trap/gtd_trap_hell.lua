@@ -1,6 +1,6 @@
 PREFABS.Trap_closet_hell =
 {
-  file = "trap/gtd_closet_hell.wad"
+  file = "trap/gtd_trap_hell.wad"
 
   prob = 50
 
