@@ -215,10 +215,12 @@ function Fab_load_all_definitions()
         -- is more likely to not break things.
         if not def.replace_mode or def.replace_mode == "soft" then
           PREFABS[def.replaces].prob = 0
+          PREFABS[def.replaces].use_prob = 0
 
           each name,odef in PREFABS do
             if odef.template == def.replaces then
               PREFABS[odef].prob = 0
+              PREFABS[odef].use_prob = 0
             end
           end
         end

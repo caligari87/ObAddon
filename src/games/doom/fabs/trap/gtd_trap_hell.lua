@@ -7,6 +7,8 @@ PREFABS.Trap_closet_hell =
   theme = "hell"
   env = "!cave"
 
+  kind = "trap"
+
   where  = "seeds"
   shape  = "U"
 

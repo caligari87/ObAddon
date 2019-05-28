@@ -7,6 +7,8 @@ PREFABS.Trap_closet_urban =
   theme = "urban"
   env = "!cave"
 
+  kind = "trap"
+
   where  = "seeds"
   shape  = "U"
 

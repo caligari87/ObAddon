@@ -3,7 +3,9 @@ PREFABS.Trap_closet_tech =
   file = "trap/gtd_trap_tech.wad"
   map = "MAP01"
 
-  prob   = 25
+  kind = "trap"
+
+  prob = 25
 
   theme = "urban"
   env = "building"
