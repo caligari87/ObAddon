@@ -1633,24 +1633,6 @@ GLAICE_SINK_DEFS =
     trim_light = 24
   }
 
-  light_fan = -- normal fan
-  {
-    mat = "FAN1"
-    dz = 62
-
-    trim_mat = "SHAWN2"
-    trim_dz = -2
-  }
-
-  light_fan_rusty = -- non-tech fan
-  {
-    mat = "FAN1"
-    dz = 62
-
-    trim_mat = "METAL"
-    trim_dz = -2
-  }
-
   light_protrusion_COMPRED =
   {
     mat = "COMPRED"
@@ -2012,7 +1994,6 @@ GLAICE_TECH_CEILING_SINKS =
   light_COLLITE2 = 15
   light_COLLITE3 = 15
   light_RDWAL01 = 15
-  light_fan = 6
 
   light_protrusion_COMPBLUE = 15
   light_protrusion_COMPGREN = 15
@@ -2081,7 +2062,6 @@ GLAICE_HELL_CEILING_SINKS =
   light_GLITE07 = 10
   light_GLITE08 = 10
   light_GLITE09 = 10
-  light_fan_rusty = 5
 
   ceiling_sink_SKINLOW1 = 13
   ceiling_sink_SKINMET3 = 13
