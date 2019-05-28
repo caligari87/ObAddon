@@ -1609,6 +1609,11 @@ function Grower_grammatical_pass(R, pass, apply_num, stop_prob,
       if not is_emergency then return 0 end
     end
 
+    -- hallways cannot be used for teleporter breaks in Linear Mode
+    if LEVEL.is_linear and is_emergency then
+      if string.match(rule.name, "hallway") then return 0 end
+    end
+
     if not ob_match_level_theme(rule) then return 0 end
     if not ob_match_feature(rule)     then return 0 end
 
