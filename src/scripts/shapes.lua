@@ -7119,7 +7119,7 @@ GROW_HUGE_LIQUID_ROOM_SQUARE_THIN =
 
 GROW_HUGE_LIQUID_ROOM_SQUARE_ELEVATED =
 {
-  prob = 40
+  prob = 30
 
   aversion = 15
 
@@ -7149,7 +7149,7 @@ GROW_HUGE_LIQUID_ROOM_SQUARE_ELEVATED =
 
 GROW_HUGE_LIQUID_ROOM_SQUARE_THIN_ELEVATED =
 {
-  prob = 35
+  prob = 30
 
   aversion = 15
 
@@ -7178,9 +7178,11 @@ GROW_HUGE_LIQUID_ROOM_SQUARE_THIN_ELEVATED =
 }
 GROW_HUGE_LIQUID_ROOM_SQUARE_L =
 {
-  prob = 35
+  prob = 15
 
-  aversion = 15
+  aversion = 10
+
+  skip_prob = 50
 
   structure =
   {
@@ -7207,9 +7209,11 @@ GROW_HUGE_LIQUID_ROOM_SQUARE_L =
 
 GROW_HUGE_LIQUID_ROOM_SQUARE_L_ELEVATED =
 {
-  prob = 30
+  prob = 15
 
   aversion = 10
+
+  skip_prob = 50
 
   structure =
   {
@@ -7236,9 +7240,11 @@ GROW_HUGE_LIQUID_ROOM_SQUARE_L_ELEVATED =
 
 GROW_HUGE_LIQUID_ROOM_SQUARE_U =
 {
-  prob = 35
+  prob = 15
 
-  aversion = 15
+  aversion = 10
+
+  skip_prob = 50
 
   structure =
   {
@@ -7336,9 +7342,11 @@ GROW_HUGE_LIQUID_ROOM_SQUARE_U_ELEVATED =
 
 GROW_HUGE_LIQUID_ROOM_STRAIGHT_SIDE =
 {
-  prob = 35
+  prob = 25
 
   aversion = 15
+
+  skip_prob = 50
 
   structure =
   {
@@ -7360,9 +7368,11 @@ GROW_HUGE_LIQUID_ROOM_STRAIGHT_SIDE =
 
 GROW_HUGE_LIQUID_ROOM_STRAIGHT_SIDE_WIDER =
 {
-  prob = 25
+  prob = 15
 
   aversion = 10
+
+  skip_prob = 50
 
   structure =
   {
@@ -7384,9 +7394,11 @@ GROW_HUGE_LIQUID_ROOM_STRAIGHT_SIDE_WIDER =
 
 GROW_HUGE_LIQUID_ROOM_STRAIGHT_SIDE_WIDER_ELEVATED =
 {
-  prob = 20
+  prob = 15
 
   aversion = 10
+
+  skip_prob = 50
 
   structure =
   {
@@ -7408,9 +7420,11 @@ GROW_HUGE_LIQUID_ROOM_STRAIGHT_SIDE_WIDER_ELEVATED =
 
 GROW_HUGE_LIQUID_ROOM_STRAIGHT_SIDE_SMALLER =
 {
-  prob = 25
+  prob = 20
 
   aversion = 10
+
+  skip_prob = 35
 
   structure =
   {
