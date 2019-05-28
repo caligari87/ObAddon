@@ -2492,6 +2492,7 @@ namelib.NAMES =
         ["Far Out!"]=10
         ["Fatal Error"]=10
         ["Fishing Expedition"]=10
+        ["Flipping the Linedef"]=10 --retxirT
         ["FOOBAR"]=10
         ["Foobie Bletch"]=10
         ["Froody Hoody Froo"]=10
