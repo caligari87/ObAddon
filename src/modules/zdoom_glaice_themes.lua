@@ -2028,7 +2028,6 @@ GLAICE_URBAN_CEILING_SINKS =
   light_LIGHTS2 = 7
   light_LIGHTS3 = 7
   light_LIGHTS4 = 7
-  light_fan_rusty = 5
 
   light_COLLITE1 = 15
   light_COLLITE2 = 15
