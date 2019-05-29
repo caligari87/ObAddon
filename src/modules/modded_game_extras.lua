@@ -100,74 +100,79 @@ function MODDED_GAME_EXTRAS.create_hn_info()
   -- get name, evaluate rooms in the zone for recoloring
   -- based on the zone goal
   local function generate_name(zone)
-    gui.printf("ZONE_" .. zone.id .. "\n")
+    local name = Naming_grab_one(LEVEL.name_class)
 
-    local zone_objective
+    gui.printf("ZONE_" .. zone.id .. " name: " .. name .. "\n")
 
-    --[[each R in zone.rooms do
-      if R.goals then
-        if R.goals[1] then
-          local goal_info = R.goals[1]
+    zone.hn_name = "Location: " .. Naming_grab_one(LEVEL.name_class)
+  end
 
-          gui.printf("ROOM_" .. R.id .. ":\n" .. table.tostr(goal_info) .. "\n")
-          if goal_info.kind == "KEY" then
+  -- decide goal for room
+  local function fetch_room_goal(R)
+    local goal_string = ""
+    local goal_objective = "none"
 
-            if goal_info.item == "k_yellow" or
-            goal_info.item == "ks_yellow" then
+    if R.goals then
+      if R.goals[1] then
+        local goal_info = R.goals[1]
 
-              zone_objective = "yellow_key"
+        if goal_info.kind == "SWITCH" then
 
-            elseif goal_info.item == "k_blue" or
-            goal_info.item == "ks_blue" then
+          goal_objective = "switch"
+        elseif goal_info.kind == "KEY" then
 
-              zone_objective = "blue_key"
+          if goal_info.item == "k_yellow" or
+          goal_info.item == "ks_yellow" then
 
-            elseif goal_info.item == "k_red" or
-            goal_info.item == "ks_red" then
+            goal_objective = "yellow_key"
 
-              zone_objective = "red_key"
-            else
+          elseif goal_info.item == "k_blue" or
+          goal_info.item == "ks_blue" then
 
-              zone_objective = "none"
-            end
-          elseif goal_info.kind == "SWITCH" then
+            goal_objective = "blue_key"
 
-            zone_objective = "switch"
-          elseif goal_info.kind == "EXIT" then
+          elseif goal_info.item == "k_red" or
+          goal_info.item == "ks_red" then
 
-            zone_objective = "exit"
+            goal_objective = "red_key"
+          else
+
+            goal_objective = "none"
           end
+        elseif goal_info.kind == "EXIT" then
+
+          goal_objective = "exit"
         end
       end
-    end]]
+    end
 
-    zone.hn_name = "Current Zone: " .. Naming_grab_one(LEVEL.name_class)
+    if goal_objective == "yellow_key" then
+      goal_string = " (Yellow Key Nearby)"
+    elseif goal_objective == "blue_key" then
+      goal_string = " (Blue Key Nearby)"
+    elseif goal_objective == "red_key" then
+      goal_string = " (Red Key Nearby)"
+    elseif goal_objective == "switch" then
+      goal_string = " (Switch Nearby)"
+    elseif goal_objective == "exit" then
+      goal_string = " (Exit Nearby)"
+    end
 
-    gui.printf("ROOM_" .. zone.id .. " name: " .. zone.hn_name)
+    if R.is_secret then
+      goal_string = " (Secret Area #" .. PARAM.hn_secret_count .. ")"
+      PARAM.hn_secret_count = PARAM.hn_secret_count + 1
+    end
 
-    --[[if zone_name_color or zone_name_color != "none" then
-      if zone_objective == "yellow_key" then
-        zone.hn_name = zone.hn_name .. " (Collect Yellow Key)"
-      elseif zone_objective == "blue_key" then
-        zone.hn_name = zone.hn_name .. " (Collect Blue Key)"
-      elseif zone_objective == "red_key" then
-        zone.hn_name = zone.hn_name .. " (Collect Red Key)"
-      elseif zone_objective == "switch" then
-        zone.hn_name = zone.hn_name .. " (Locate Switch)"
-      elseif zone_objective == "exit" then
-        zone.hn_name = zone.hn_name .. " (Locate Exit)"
-      end
-    end]]
+    return goal_string
   end
 
   -- generate information for the HN marker
   local function make_room_info(R)
     local info = {}
 
-    info.name = R.zone.hn_name
+    info.name = R.zone.hn_name .. fetch_room_goal(R)
+
     info.editor_num = PARAM.hn_thing_start_offset
-    info.cx = ((R.sx1 + R.sx2) / 2) * SEED_SIZE
-    info.cy = ((R.sy1 + R.sy2) / 2) * SEED_SIZE
 
     local x_span = (R.sx2 - R.sx1) * SEED_SIZE
     local y_span = (R.sy2 - R.sy1) * SEED_SIZE
@@ -201,6 +206,7 @@ function MODDED_GAME_EXTRAS.create_hn_info()
     generate_name(Z)
   end
 
+  PARAM.hn_secret_count = 1
   each R in LEVEL.rooms do
     make_room_info(R)
   end
