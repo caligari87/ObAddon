@@ -1,4 +1,4 @@
-version "3.7"
+version "3.2"
 
 class FancyObligeTree : BigTree replaces BigTree
 {
@@ -15,6 +15,7 @@ class FancyObligeTree : BigTree replaces BigTree
 				//via Epic Textures module.
 				bool onSnow = false;
 				bool onSand = false;
+				bool onHellscape = false;
 				bool unknownFlat = false;
 
 				Name onflat = TexMan.GetName(floorpic);
@@ -57,6 +58,26 @@ class FancyObligeTree : BigTree replaces BigTree
 					case 'SAND7':
 					case 'RROCK09': // Doubles as sand/rock
 						onSand = true;
+						break;
+					case 'ROCKRED1':
+					case 'SP_ROCK1':
+					case 'ALTASH':
+					case 'ASH05':
+					case 'ASHWALL1':
+					case 'ASHWALL2':
+					case 'ASHWALL3':
+					case 'ASHWALL4':
+					case 'ASHWALL6':
+					case 'ASHWALL7':
+					case 'HELLROK1':
+					case 'RDROK1':
+					case 'RDROK2':
+					case 'SKIN2':
+					case 'SKIN3':
+					case 'SKIN4':
+					case 'SKSNAKE1':
+					case 'SKSNAKE2':
+						onHellscape = true;
 						break;
 					default:
 						unknownFlat = true;
@@ -159,15 +180,49 @@ class FancyObligeTree : BigTree replaces BigTree
 					}
 				}
 
+				if(onHellscape)
+				{
+					switch(random(1,6))
+					{
+						case 1:
+							fstate = "CraneoEyeTreeA";
+							break;
+						case 2:
+							fstate = "CraneoEyeTreeB";
+							break;
+						case 3:
+							fstate = "CraneoEyeTreeC";
+							break;
+						case 4:
+							fstate = "CraneoWeirwoodTreeA";
+							break;
+						case 5:
+							fstate = "CraneoWeirwoodTreeB";
+							break;
+						case 6:
+							fstate = "CraneoWeirwoodTreeC";
+							break;
+					}
+				}
+
 				if(unknownFlat)
 				{
-					switch(random(1,2))
+					switch(random(1,5))
 					{
 						case 1:
 							fstate = "VanillaA";
 							break;
 						case 2:
 							fstate = "VanillaB";
+							break;
+						case 3:
+							fstate = "CraneoDeadTreeA";
+							break;
+						case 4:
+							fstate = "CraneoDeadTreeB";
+							break;
+						case 5:
+							fstate = "CraneoDeadTreeC";
 							break;
 					}
 				}
@@ -262,6 +317,33 @@ class FancyObligeTree : BigTree replaces BigTree
 			DTR2 A 1;
 			Loop;
 
+		// hell trees
+		// eyeball trees
+		CraneoEyeTreeA:
+			OBET R 0;
+			Loop;
+
+		CraneoEyeTreeB:
+			OBET R 1;
+			Loop;
+
+		CraneoEyeTreeC:
+			OBET R 2;
+			Loop;
+
+		// weirwood trees
+		CraneoWeirwoodTreeA:
+			OBWW T 0;
+			Loop;
+
+		CraneoWeirwoodTreeB:
+			OBWW T 1;
+			Loop;
+
+		CraneoWeirwoodTreeC:
+			OBWW T 2;
+			Loop;
+
 		// vanilla assets
 		VanillaA:
 			TRE2 A 1;
@@ -269,6 +351,19 @@ class FancyObligeTree : BigTree replaces BigTree
 
 		VanillaB:
 			TRE1 A 1;
+			Loop;
+
+		// sad, sad, sad dead trees very sad
+		CraneoDeadTreeA:
+			OBDD T 0;
+			Loop;
+
+		CraneoDeadTreeB:
+			OBDD T 2;
+			Loop;
+
+		CraneoDeadTreeC:
+			OBDD T 2:
 			Loop;
 	}
 }
