@@ -44,6 +44,7 @@ gui.import("naming")
 gui.import("title_gen")
 gui.import("level")
 
+gui.import("script_manager")
 
 function ob_traceback(msg)
 
