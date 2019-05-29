@@ -35,7 +35,6 @@ gui.import("automata")
 gui.import("cave")
 gui.import("layout")
 gui.import("render")
-gui.import("boss_map")
 gui.import("room")
 
 gui.import("fight")
