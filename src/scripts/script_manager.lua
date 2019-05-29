@@ -62,3 +62,8 @@ end
 function ScriptMan_create_include_lumps()
 -- MSSP-TODO
 end
+
+
+function ScriptMan_init()
+-- MSSP-TODO
+end

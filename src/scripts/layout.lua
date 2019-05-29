@@ -2365,6 +2365,8 @@ function Layout_handle_corners()
         -- cannot place posts next to a wall
         if Corner_touches_wall(corner) then return end
 
+        if corner.posted then return end
+
         local cur_z = assert(junc.E1.rail_z)
         cur_z = int(cur_z)
 
@@ -2385,6 +2387,7 @@ function Layout_handle_corners()
 
         corner.kind = "post"
         corner.post_top_h = post_top_z
+        corner.posted = true
       end
 
       -- create support pillars on the corners of fenceposts
