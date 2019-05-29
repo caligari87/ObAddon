@@ -59,24 +59,20 @@ class FancyObligeTree : BigTree replaces BigTree
 					case 'RROCK09': // Doubles as sand/rock
 						onSand = true;
 						break;
-					case 'ROCKRED1':
-					case 'SP_ROCK1':
-					case 'ALTASH':
-					case 'ASH05':
-					case 'ASHWALL1':
-					case 'ASHWALL2':
-					case 'ASHWALL3':
-					case 'ASHWALL4':
-					case 'ASHWALL6':
-					case 'ASHWALL7':
-					case 'HELLROK1':
-					case 'RDROK1':
-					case 'RDROK2':
-					case 'SKIN2':
-					case 'SKIN3':
-					case 'SKIN4':
-					case 'SKSNAKE1':
-					case 'SKSNAKE2':
+					case 'RROCK01':
+					case 'RROCK02':
+					case 'RROCK05':
+					case 'RROCK06':
+					case 'RROCK07':
+					case 'RROCK08':
+					case 'FLOOR6_1':
+					case 'SFLR6_1':
+					case 'SFLR6_4':
+					case 'SKINFLT1':
+					case 'SLIME09':
+					case 'SLIME10':
+					case 'SLIME11':
+					case 'SLIME12':
 						onHellscape = true;
 						break;
 					default:
