@@ -97,11 +97,74 @@ function MODDED_GAME_EXTRAS.create_hn_info()
     return seed_list[1]
   end
 
+  -- get name, evaluate rooms in the zone for recoloring
+  -- based on the zone goal
+  local function generate_name(zone)
+    gui.printf("ZONE_" .. zone.id .. "\n")
+
+    local zone_objective
+
+    --[[each R in zone.rooms do
+      if R.goals then
+        if R.goals[1] then
+          local goal_info = R.goals[1]
+
+          gui.printf("ROOM_" .. R.id .. ":\n" .. table.tostr(goal_info) .. "\n")
+          if goal_info.kind == "KEY" then
+
+            if goal_info.item == "k_yellow" or
+            goal_info.item == "ks_yellow" then
+
+              zone_objective = "yellow_key"
+
+            elseif goal_info.item == "k_blue" or
+            goal_info.item == "ks_blue" then
+
+              zone_objective = "blue_key"
+
+            elseif goal_info.item == "k_red" or
+            goal_info.item == "ks_red" then
+
+              zone_objective = "red_key"
+            else
+
+              zone_objective = "none"
+            end
+          elseif goal_info.kind == "SWITCH" then
+
+            zone_objective = "switch"
+          elseif goal_info.kind == "EXIT" then
+
+            zone_objective = "exit"
+          end
+        end
+      end
+    end]]
+
+    zone.hn_name = "Current Zone: " .. Naming_grab_one(LEVEL.name_class)
+
+    gui.printf("ROOM_" .. zone.id .. " name: " .. zone.hn_name)
+
+    --[[if zone_name_color or zone_name_color != "none" then
+      if zone_objective == "yellow_key" then
+        zone.hn_name = zone.hn_name .. " (Collect Yellow Key)"
+      elseif zone_objective == "blue_key" then
+        zone.hn_name = zone.hn_name .. " (Collect Blue Key)"
+      elseif zone_objective == "red_key" then
+        zone.hn_name = zone.hn_name .. " (Collect Red Key)"
+      elseif zone_objective == "switch" then
+        zone.hn_name = zone.hn_name .. " (Locate Switch)"
+      elseif zone_objective == "exit" then
+        zone.hn_name = zone.hn_name .. " (Locate Exit)"
+      end
+    end]]
+  end
+
   -- generate information for the HN marker
   local function make_room_info(R)
     local info = {}
 
-    info.name = Naming_grab_one(LEVEL.name_class)
+    info.name = R.zone.hn_name
     info.editor_num = PARAM.hn_thing_start_offset
     info.cx = ((R.sx1 + R.sx2) / 2) * SEED_SIZE
     info.cy = ((R.sy1 + R.sy2) / 2) * SEED_SIZE
@@ -130,15 +193,13 @@ function MODDED_GAME_EXTRAS.create_hn_info()
       id = info.editor_num
     }
 
-    gui.printf("ROOM_" .. R.id .. " name: " .. info.name .. "\n")
-
     raw_add_entity(hn_marker)
   end
 
   --== Hellscape Navigator init ==--
-  --[[each Z in LEVEL.zones do
-    gui.printf(table.tostr(Z) .. "\n")
-  end]]
+  each Z in LEVEL.zones do
+    generate_name(Z)
+  end
 
   each R in LEVEL.rooms do
     make_room_info(R)
@@ -162,7 +223,7 @@ function MODDED_GAME_EXTRAS.generate_hn_decorate()
 
     local thing_chunk = MODDED_GAME_EXTRAS.HELLSCAPE_NAVIGATOR_TEMPLATE.COPIES
     thing_chunk = string.gsub(thing_chunk, "NUMNUMNUM", editor_num)
-    thing_chunk = string.gsub(thing_chunk, "NAMENAMENAME", "Current Area: " .. name)
+    thing_chunk = string.gsub(thing_chunk, "NAMENAMENAME", name)
     thing_chunk = string.gsub(thing_chunk, "SIZESIZESIZE", radius)
 
     decorate_string = decorate_string .. thing_chunk
