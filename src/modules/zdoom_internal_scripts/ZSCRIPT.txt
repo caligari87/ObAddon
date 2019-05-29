@@ -320,28 +320,28 @@ class FancyObligeTree : BigTree replaces BigTree
 		// hell trees
 		// eyeball trees
 		CraneoEyeTreeA:
-			OBET R 0;
+			OBET A 1;
 			Loop;
 
 		CraneoEyeTreeB:
-			OBET R 1;
+			OBET B 1;
 			Loop;
 
 		CraneoEyeTreeC:
-			OBET R 2;
+			OBET C 1;
 			Loop;
 
 		// weirwood trees
 		CraneoWeirwoodTreeA:
-			OBWW T 0;
+			OBWT A 1;
 			Loop;
 
 		CraneoWeirwoodTreeB:
-			OBWW T 1;
+			OBWT B 1;
 			Loop;
 
 		CraneoWeirwoodTreeC:
-			OBWW T 2;
+			OBWT C 1;
 			Loop;
 
 		// vanilla assets
@@ -355,15 +355,15 @@ class FancyObligeTree : BigTree replaces BigTree
 
 		// sad, sad, sad dead trees very sad
 		CraneoDeadTreeA:
-			OBDD T 0;
+			OBDT A 1;
 			Loop;
 
 		CraneoDeadTreeB:
-			OBDD T 2;
+			OBDT B 1;
 			Loop;
 
 		CraneoDeadTreeC:
-			OBDD T 2;
+			OBDT C 1;
 			Loop;
 	}
 }
