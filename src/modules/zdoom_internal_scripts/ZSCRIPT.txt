@@ -363,7 +363,7 @@ class FancyObligeTree : BigTree replaces BigTree
 			Loop;
 
 		CraneoDeadTreeC:
-			OBDD T 2:
+			OBDD T 2;
 			Loop;
 	}
 }
