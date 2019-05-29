@@ -854,6 +854,12 @@ function ZDOOM_SPECIALS.do_special_stuff()
       info.interpic = "OBDNLOAT"
     end
 
+    if not PARAM.episode_sky_color then
+      gui.printf("WARNING: User set fog color to be set by Sky Generator " ..
+      "but Sky Generator is turned off! Behavior will now be Random instead.\n")
+      PARAM.fog_generator == "random"
+    end
+
     if PARAM.fog_generator == "per_sky_gen" then
       if i <= 11 then
         info.fog_color = pick_sky_color_from_skygen_map(PARAM.episode_sky_color,1)
