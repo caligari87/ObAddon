@@ -3346,11 +3346,13 @@ function Grower_grammatical_room(R, pass, is_emergency)
 
   elseif pass == "liquid_platform" then
     local liquid_volume = 0
-    each A in R.areas do
-      if A.mode == "liquid" then
-        A:calc_volume()
+    if R.areas then
+      each A in R.areas do
+        if A.mode == "liquid" then
+          A:calc_volume()
+        end
+        liquid_volume = liquid_volume + A.svolume
       end
-      liquid_volume = liquid_volume + A.svolume
     end
 
     if PARAM.print_shape_steps then
