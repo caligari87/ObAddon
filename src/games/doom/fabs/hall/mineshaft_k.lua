@@ -13,6 +13,9 @@ PREFABS.Hallway_mineshaft_locked_red =
   shape  = "I"
 
   deep   = 16
+
+  seed_w = 1
+  seed_h = 1
 }
 
 PREFABS.Hallway_mineshaft_locked_blue =
@@ -53,4 +56,7 @@ PREFABS.Hallway_mineshaft_barred =
 
   tag_1  = "?door_tag"
   door_action = "S1_LowerFloor"
+
+  seed_w = 1
+  seed_h = 1
 }

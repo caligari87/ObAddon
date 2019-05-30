@@ -9,5 +9,5 @@ PREFABS.Hallway_mineshaft_t1 =
   where  = "seeds"
   shape  = "T"
 
-  mon_height = 64
+  mon_height = 96
 }

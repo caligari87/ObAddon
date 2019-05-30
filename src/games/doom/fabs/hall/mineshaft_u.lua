@@ -8,4 +8,7 @@ PREFABS.Hallway_mineshaft_u =
 
   where  = "seeds"
   shape  = "U"
+
+  seed_h = 1
+  seed_w = 1
 }

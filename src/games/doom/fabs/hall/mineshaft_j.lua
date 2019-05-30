@@ -2,7 +2,6 @@ PREFABS.Hallway_mineshaft_plain =
 {
   file   = "hall/mineshaft_j.wad"
   map    = "MAP01"
-  theme  = "!hell"
 
   kind   = "terminator"
   group  = "mineshaft"
@@ -13,6 +12,9 @@ PREFABS.Hallway_mineshaft_plain =
   shape  = "I"
 
   deep   = 16
+
+  seed_h = 1
+  seed_w = 1
 }
 
 PREFABS.Hallway_mineshaft_secret =

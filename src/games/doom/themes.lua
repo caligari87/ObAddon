@@ -949,6 +949,7 @@ DOOM.THEMES =
     narrow_halls =
     {
       vent = 50
+      mineshaft = 25
     }
 
     wide_halls =
@@ -2046,6 +2047,49 @@ DOOM.ROOM_THEMES =
     }
   }
 
+
+  any_mineshaft_Hallway =
+  {
+    env = "hallway"
+    group = "mineshaft"
+    prob = 1
+
+    walls =
+    {
+      ROCK1 = 50
+      ROCK2 = 50
+      ROCK3 = 50
+      ROCK4 = 50
+      SP_ROCK1 = 50
+      TANROCK5 = 50
+      TANROCK7 = 50
+    }
+
+    floors =
+    {
+      FLAT10 = 50
+      MFLR8_2 = 50
+      MFLR8_3 = 50
+      MFLR8_4 = 50
+      GRNROCK = 50
+      RROCK03 = 50
+      RROCK09 = 50
+      RROCK11 = 50
+      RROCK12 = 50
+      RROCK13 = 50
+      RROCK15 = 50
+      RROCK16 = 50
+      RROCK17 = 50
+      RROCK18 = 50
+    }
+
+    ceilings =
+    {
+      FLAT3 = 50 -- the mineshafts don't actually have
+                 -- separate _CEIL textures
+    }
+  }
+
 -----  TECH BASES  --------------------------------
 
   tech_Startan =
@@ -2482,6 +2526,7 @@ DOOM.ROOM_THEMES =
     }
   }
 
+
   tech_metro_Hallway =
   {
     env   = "hallway"
@@ -2544,6 +2589,54 @@ DOOM.ROOM_THEMES =
       SLIME14 = 50
       SLIME15 = 50
       SLIME16 = 50
+    }
+  }
+
+
+  tech_mineshaft_Hallway =
+  {
+    env = "hallway"
+    group = "mineshaft"
+    prob = 50
+
+    walls =
+    {
+      ROCK1 = 50
+      ROCK2 = 50
+      ROCK3 = 50
+      ROCK4 = 50
+      SP_ROCK1 = 50
+      TANROCK5 = 50
+      TANROCK7 = 50
+      BSTONE1 = 50
+      STONE4 = 50
+      STONE5 = 50
+      STONE6 = 50
+      STONE7 = 50
+    }
+
+    floors =
+    {
+      FLAT10 = 50
+      MFLR8_2 = 50
+      MFLR8_3 = 50
+      MFLR8_4 = 50
+      GRNROCK = 50
+      RROCK03 = 50
+      RROCK09 = 50
+      RROCK11 = 50
+      RROCK12 = 50
+      RROCK13 = 50
+      RROCK15 = 50
+      RROCK16 = 50
+      RROCK17 = 50
+      RROCK18 = 50
+    }
+
+    ceilings =
+    {
+      FLAT3 = 50 -- the mineshafts don't actually have
+                 -- separate _CEIL textures
     }
   }
 
@@ -2621,6 +2714,7 @@ DOOM.ROOM_THEMES =
       MFLR8_4  = 15
     }
   }
+
 
   hell_gstone =
   {
@@ -2831,6 +2925,7 @@ DOOM.ROOM_THEMES =
       FLOOR7_1 = 5
     }
   }
+
 
   hell_Skin =
   {
@@ -3143,6 +3238,60 @@ DOOM.ROOM_THEMES =
     }
   }
 
+
+  hell_mineshaft_Hallway =
+  {
+    env = "hallway"
+    group = "mineshaft"
+    prob = 50
+
+    walls =
+    {
+      ROCK1 = 50
+      ROCK2 = 50
+      ROCK3 = 50
+      ROCK4 = 50
+      SP_ROCK1 = 50
+      TANROCK5 = 50
+      TANROCK7 = 50
+      SKIN2 = 50
+      SKINEDGE = 50
+      SKSNAKE1 = 50
+      SKSNAKE2 = 50
+      SKSPINE2 = 50
+      ZIMMER5 = 50
+      ROCKRED1 = 50
+    }
+
+    floors =
+    {
+      FLAT10 = 50
+      FLAT5_6 = 50
+      FLAT5_7 = 50
+      FLAT5_8 = 50
+      FLOOR6_1 = 50
+      FLOOR6_2 = 50
+      FLOOR7_2 = 50
+      MFLR8_2 = 50
+      MFLR8_3 = 50
+      MFLR8_4 = 50
+      RROCK01 = 50
+      RROCK02 = 50
+      RROCK03 = 50
+      RROCK04 = 50
+      RROCK05 = 50
+      RROCK16 = 50
+      SFLR6_1 = 50
+      SFLR6_4 = 50
+      SLIME09 = 50
+    }
+
+    ceilings =
+    {
+      FLAT3 = 50 -- the mineshafts don't actually have
+                 -- separate _CEIL textures
+    }
+  }
 
 ----  URBAN / CITY / EARTH  -----------------------
 
@@ -3577,6 +3726,7 @@ DOOM.ROOM_THEMES =
     }
   }
 
+
   urban_metro_Hallway =
   {
     env   = "hallway"
@@ -3634,6 +3784,53 @@ DOOM.ROOM_THEMES =
       FLOOR3_3 = 50
       FLOOR4_6 = 50
       FLOOR5_4 = 50
+    }
+  }
+
+
+  urban_mineshaft_Hallway =
+  {
+    env = "hallway"
+    group = "mineshaft"
+    prob = 50
+
+    walls =
+    {
+      ROCK1 = 50
+      ROCK2 = 50
+      ROCK3 = 50
+      ROCK4 = 50
+      SP_ROCK1 = 50
+      TANROCK5 = 50
+      TANROCK7 = 50
+      STONE4 = 50
+      STONE5 = 50
+      STONE6 = 50
+      STONE7 = 50
+    }
+
+    floors =
+    {
+      FLAT10 = 50
+      MFLR8_2 = 50
+      MFLR8_3 = 50
+      MFLR8_4 = 50
+      GRNROCK = 50
+      RROCK03 = 50
+      RROCK09 = 50
+      RROCK11 = 50
+      RROCK12 = 50
+      RROCK13 = 50
+      RROCK15 = 50
+      RROCK16 = 50
+      RROCK17 = 50
+      RROCK18 = 50
+    }
+
+    ceilings =
+    {
+      FLAT3 = 50 -- the mineshafts don't actually have
+                 -- separate _CEIL textures
     }
   }
 
