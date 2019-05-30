@@ -2494,8 +2494,8 @@ GLAICE_DESERT_OUTDOORS =
 
   naturals =
   {
-    ESAND1 = 100
-    ESAND2 = 100
+    ESAND1 = 45
+    ESAND2 = 45
     DESROCK1 = 20
     DESROCK2 = 20
     DESROCK3 = 20

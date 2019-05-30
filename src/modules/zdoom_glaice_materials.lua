@@ -835,11 +835,11 @@ GLAICE_MATERIALS = {
   EG06  = { t="BRIKS06",  f="EG06" }
   SAND1  = { t="ESAND1",  f="SAND1" }
   SAND2  = { t="ESAND2",  f="SAND2" }
-  SAND3  = { t="ESAND1",  f="SAND3" }
-  SAND4  = { t="ESAND2",  f="SAND4" }
-  SAND5  = { t="ESAND1",  f="SAND5" }
-  SAND6  = { t="ESAND2",  f="SAND6" }
-  SAND7  = { t="ESAND1",  f="SAND7" }
+  SAND3  = { t="DESROCK2",  f="SAND3" }
+  SAND4  = { t="DESROCK3",  f="SAND4" }
+  SAND5  = { t="DESROCK4",  f="SAND5" }
+  SAND6  = { t="DESROCK2",  f="SAND6" }
+  SAND7  = { t="DESROCK5",  f="SAND7" }
 
   -- Gothic
   G01 = { t="GOTH34",  f="G01" } --Dark brown BRICK8-9 bricks
