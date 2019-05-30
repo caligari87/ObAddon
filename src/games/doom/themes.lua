@@ -949,7 +949,7 @@ DOOM.THEMES =
     narrow_halls =
     {
       vent = 50
-      mineshaft = 25
+      mineshaft = 37
     }
 
     wide_halls =
