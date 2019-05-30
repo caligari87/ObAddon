@@ -781,7 +781,7 @@ GLAICE_MATERIALS = {
   OBVNMCH2 = { t="OBVNMCH2", f="CEIL5_1" }
   OBVNMCH3 = { t="OBVNMCH3", f="CEIL5_1" }
   OBVNMCH4 = { t="OBVNMCH4", f="CEIL5_1" }
-  OBVNMCH4 = { t="OBVNMCH5", f="CEIL5_1" }
+  OBVNMCH5 = { t="OBVNMCH5", f="CEIL5_1" }
 
  -- Exiting textures with new definitions
   FIREBLU1 = { t="FIREBLU1", f="FIRELAF1" }
