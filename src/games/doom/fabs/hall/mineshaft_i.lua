@@ -26,3 +26,15 @@ PREFABS.Hallway_mineshaft_i3 =
   template = "Hallway_mineshaft_i1"
   map = "MAP03"
 }
+
+PREFABS.Hallway_mineshaft_irise1=
+{
+  template = "Hallway_mineshaft_i1"
+  map = "MAP04"
+
+  style = "steepness"
+
+  delta_h = 32
+
+  can_flip = true
+}
