@@ -66,7 +66,7 @@ PREFABS.Decor_square_planter_grass_hell =
 
   outdoor_theme = "grass"
 
-  env = "hell"
+  theme = "hell"
 
   flat_FLAT19 = "FLOOR7_2"
   tex_STEP4 = "MARBGRAY"
@@ -80,7 +80,7 @@ PREFABS.Decor_square_planter_sand_hell =
 
   outdoor_theme = "desert"
 
-  env = "hell"
+  theme = "hell"
 
   flat_FLAT19 = "FLOOR7_2"
   tex_STEP4 = "MARBGRAY"
@@ -93,7 +93,7 @@ PREFABS.Decor_square_planter_snow_hell =
 
   outdoor_theme = "snow"
 
-  env = "hell"
+  theme = "hell"
 
   flat_FLAT19 = "FLOOR7_2"
   tex_STEP4 = "MARBGRAY"
@@ -104,7 +104,7 @@ PREFABS.Decor_round_planter_grass_hell =
   template = "Decor_square_planter_grass"
   map = "MAP04"
 
-  env = "hell"
+  theme = "hell"
 
   flat_FLAT19 = "FLOOR7_2"
   tex_STEP4 = "MARBGRAY"
@@ -118,7 +118,7 @@ PREFABS.Decor_round_planter_sand_hell =
 
   outdoor_theme = "desert"
 
-  env = "hell"
+  theme = "hell"
 
   flat_FLAT19 = "FLOOR7_2"
   tex_STEP4 = "MARBGRAY"
@@ -131,7 +131,7 @@ PREFABS.Decor_round_planter_snow_hell =
 
   outdoor_theme = "snow"
 
-  env = "hell"
+  theme = "hell"
 
   flat_FLAT19 = "FLOOR7_2"
   tex_STEP4 = "MARBGRAY"
