@@ -97,7 +97,11 @@ function Monster_pacing()
       if R.is_hallway or R.is_secret then
         R.pressure = "low"
         if R.is_secret and OB_CONFIG.secret_monsters == "yesyes" then
-          R.pressure = "high"
+          if rand.odds(75) then
+            R.pressure = "medium"
+          else
+            R.pressure = "high"
+          end
         end
         continue
       end
@@ -154,7 +158,7 @@ function Monster_pacing()
       set_room(R, "low")
       return
     elseif R.is_start and OB_CONFIG.start_room_mons == "none" then
-      set_room(R, "none")
+      R.pressure = "none"
       return
     end
 
