@@ -6,10 +6,13 @@ PREFABS.Pic_craneo_tv_store =
 
   prob   = 25
   theme = "urban"
+  env = "!park"
 
   uses_epic_textures = true
 
   where  = "seeds"
+
+  height = 128
 
   seed_w = 3
   seed_h = 1

@@ -54,3 +54,85 @@ PREFABS.Decor_round_planter_grass =
 
   outdoor_theme = "snow"
 }
+
+-------------------
+-- hell variants --
+-------------------
+
+PREFABS.Decor_square_planter_grass_hell =
+{
+  template = "Decor_square_planter_grass"
+  map      = "MAP02"
+
+  outdoor_theme = "grass"
+
+  env = "hell"
+
+  flat_FLAT19 = "FLOOR7_2"
+  tex_STEP4 = "MARBGRAY"
+  flat_GRASS1 = "FLOOR6_1"
+}
+
+PREFABS.Decor_square_planter_sand_hell =
+{
+  template = "Decor_square_planter_grass"
+  map      = "MAP02"
+
+  outdoor_theme = "desert"
+
+  env = "hell"
+
+  flat_FLAT19 = "FLOOR7_2"
+  tex_STEP4 = "MARBGRAY"
+}
+
+PREFABS.Decor_square_planter_snow_hell =
+{
+  template = "Decor_square_planter_grass"
+  map      = "MAP03"
+
+  outdoor_theme = "snow"
+
+  env = "hell"
+
+  flat_FLAT19 = "FLOOR7_2"
+  tex_STEP4 = "MARBGRAY"
+}
+
+PREFABS.Decor_round_planter_grass_hell =
+{
+  template = "Decor_square_planter_grass"
+  map = "MAP04"
+
+  env = "hell"
+
+  flat_FLAT19 = "FLOOR7_2"
+  tex_STEP4 = "MARBGRAY"
+  flat_GRASS1 = "FLOOR6_1"
+}
+
+PREFABS.Decor_round_planter_sand_hell =
+{
+  template = "Decor_square_planter_grass"
+  map = "MAP05"
+
+  outdoor_theme = "desert"
+
+  env = "hell"
+
+  flat_FLAT19 = "FLOOR7_2"
+  tex_STEP4 = "MARBGRAY"
+}
+
+PREFABS.Decor_round_planter_snow_hell =
+{
+  template = "Decor_square_planter_grass"
+  map = "MAP06"
+
+  outdoor_theme = "snow"
+
+  env = "hell"
+
+  flat_FLAT19 = "FLOOR7_2"
+  tex_STEP4 = "MARBGRAY"
+}
