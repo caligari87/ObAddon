@@ -23,6 +23,12 @@ PREFABS.Cage_wall_d2_computer_tech =
   sector_8  = { [8]=60, [2]=10, [3]=10, [17]=10, [21]=5 }
 
   tex_SUPPORT3 = "SUPPORT2"
+
+  thing_2014 =
+  {
+    [2014] = 50
+    [0] = 50
+  }
 }
 
 PREFABS.Cage_wall_d2_computer_hell =
@@ -71,6 +77,12 @@ PREFABS.Cage_freestanding_d2_computer_tech =
   height = 96
 
   bound_z1 = 0
+
+  thing_2011 =
+  {
+    [2011] = 40
+    [0] = 60
+  }
 }
 
 PREFABS.Cage_freestanding_d2_computer_hell =
