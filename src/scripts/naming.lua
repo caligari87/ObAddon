@@ -2,7 +2,7 @@
 --  Name Generator
 ------------------------------------------------------------------------
 --
---  Oblige Level Maker // ObAdoon
+--  Oblige Level Maker // ObAddon
 --
 --  Copyright (C) 2008-2018 Andrew Apted
 --  Copyright (C) 2008-2009 Jon Vail
