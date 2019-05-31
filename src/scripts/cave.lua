@@ -4605,6 +4605,10 @@ function Cave_build_a_scenic_vista(area)
   end
 
 
+  local function make_cliff_drop()
+  end
+
+
   local function make_watery_drop()
     --
     -- WHAT: large body of liquid with an impassible railing
@@ -4682,7 +4686,11 @@ function Cave_build_a_scenic_vista(area)
         assert(B)
 
         if not B.floor_h then continue end
-        if B.floor_h < CLIFF3.floor_h then continue end
+        if B.floor_h < CLIFF3.floor_h then
+          if FL.is_liquid then
+            continue
+          end
+        end
 
         -- less chance of using a tree on highest cliff
         if rand.odds(30) then continue end
@@ -4712,7 +4720,7 @@ function Cave_build_a_scenic_vista(area)
 
     -- for people who don't like nice views
 
-    FL.floor_h = room.min_floor_h
+    FL.floor_h = room.zone.sky_h
 
     FL.floor_mat = "_SKY"
 
