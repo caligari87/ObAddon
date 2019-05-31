@@ -1059,8 +1059,8 @@ OB_MODULES["zdoom_specials"] =
       priority = 1
       choices = ZDOOM_SPECIALS.YES_NO
       default = "no"
-      tooltip = "Removes intermissions via MAPINFO. WARNING: this renders the Story Generator useless " ..
-                "without intermission screens to display them through."
+      tooltip = "Removes end-level Intermission Screens (containing map completion data) but retains " ..
+                "Text Screens with story."
     }
   }
 }
