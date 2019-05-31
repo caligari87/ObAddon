@@ -4722,10 +4722,10 @@ function Cave_build_a_scenic_vista(area)
     CLIFF.floor_mat = assert(LEVEL.cliff_mat)
 
     CLIFF3.floor_h   = (room.max_floor_h or room.entry_h) - drop_h/2
-    CLIFF3.floor_mat = assert(LEVEL.cliff_mat)
+    CLIFF3.floor_mat = assert(LEVEL.other_cliff_mat)
 
     CLIFF2.floor_h   = (CLIFF.floor_h + CLIFF3.floor_h) * 0.5
-    CLIFF2.floor_mat = assert(LEVEL.cliff_mat)
+    CLIFF2.floor_mat = assert(LEVEL.other_other_cliff_mat)
 
     for cx = 1, area.cw do
     for cy = 1, area.ch do
