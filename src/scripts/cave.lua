@@ -4380,6 +4380,7 @@ function Cave_prepare_scenic_vista(area)
 
   if (OB_CONFIG.engine == "zdoom" or OB_CONFIG.engine == "gzdoom") and OB_CONFIG.zdoom_vista == "enable" then
     table.insert(vista_list, "bottomless_drop")
+    table.insert(vista_list, "cliff_gradient")
   end
 
   table.insert(vista_list, "simple_fence")
@@ -4420,6 +4421,8 @@ function Cave_prepare_scenic_vista(area)
 
   if vista_type == "watery_drop" and not room.has_hills then
     area.border_type = "watery_drop"
+  elseif vista_type == "cliff_gradient" and not room.has_hills then
+    area.border_type = "cliff_gradient"
   elseif vista_type == "bottomless_drop" and not room.has_hills then
     area.border_type = "bottomless_drop"
   elseif vista_type == "ocean" and LEVEL.liquid and not room.has_hills then
@@ -4605,7 +4608,77 @@ function Cave_build_a_scenic_vista(area)
   end
 
 
-  local function make_cliff_drop()
+  local function make_cliff_gradient()
+
+    -- cliffs slowly receding into the distance
+
+    blobify()
+
+    calc_room_dists()
+    calc_mapedge_dists()
+
+    -- initial base room is just a sky, just like bottomless drop
+    local FL = new_blob()
+
+    FL.floor_h = (room.min_floor_h or room.entry_h) - 8192
+    FL.floor_mat = "_SKY"
+
+    temp_install_floor(FL)
+
+    -- make some purteh wurteh cluffs
+
+    local CLIFF = new_blob()
+    local CLIFF2 = new_blob()
+
+    CLIFF.floor_h = (room.min_floor_h or room.entry_h) - 16
+    CLIFF.floor_mat = assert(room.zone.nature_facade)
+
+    CLIFF2.floor_h = (room.min_floor_h or room.entry_h) - 64
+    CLIFF2.floor_mat = assert(room.zone.other_nature_facade)
+
+    for cx = 1, area.cw do
+    for cy = 1, area.ch do
+      local id = blob_map[cx][cy]
+      if not id then continue end
+
+      local reg = blob_map.regions[id]
+
+      if not (reg.room_dist and reg.mapedge_dist) then continue end
+
+      if reg.mapedge_dist * 0.4 >= reg.room_dist  then
+        area.blobs[cx][cy] = CLIFF
+      elseif reg.mapedge_dist * 1.0 >= reg.room_dist  then
+        area.blobs[cx][cy] = CLIFF2
+      end
+    end
+    end
+
+    if THEME.cliff_trees then
+      each id, reg in blob_map.regions do
+        local cx, cy = blob_map:random_blob_cell(id)
+        if not cx then continue end
+
+        local B = area.blobs[cx][cy]
+        assert(B)
+
+        if not B.floor_h then continue end
+        if B.floor_h < CLIFF2.floor_h then continue end
+
+        -- don't place trees too close to the rooms... -MSSP
+        if reg.room_dist < 1 then continue end
+
+        local mx = area.base_x + (cx-1) * 64 + 32
+        local my = area.base_y + (cy-1) * 64 + 32
+
+        local tree = rand.key_by_probs(THEME.cliff_trees)
+
+        Trans.entity(tree, mx, my, B.floor_h)
+      end
+    end
+
+    area.cliff_FLOOR = CLIFF
+    area.floor_h = CLIFF.floor_h
+
   end
 
 
@@ -4696,6 +4769,9 @@ function Cave_build_a_scenic_vista(area)
         if rand.odds(30) then continue end
         if B.floor_h > CLIFF2.floor_h and rand.odds(70) then continue end
 
+        -- don't place trees too close to the rooms... -MSSP
+        if reg.room_dist < 1 then continue end
+
         -- OK --
         local mx = area.base_x + (cx-1) * 64 + 32
         local my = area.base_y + (cy-1) * 64 + 32
@@ -4748,6 +4824,9 @@ function Cave_build_a_scenic_vista(area)
 
   elseif area.border_type == "watery_drop" then
     make_watery_drop()
+
+  elseif area.border_type == "cliff_gradient" then
+    make_cliff_gradient()
 
   elseif area.border_type == "bottomless_drop" then
     make_bottomless_drop()

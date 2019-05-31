@@ -49,6 +49,7 @@
                            -- "watery_drop"
                            -- "bottomless_drop"
                            -- "ocean"
+                           -- "cliff_gradient"
 
     facade_group : FACADE_GROUP   -- used by facade logic (temporarily)
 
