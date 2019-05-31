@@ -17,8 +17,6 @@
 --
 ------------------------------------------------------------------
 
--- TODO: Special settings for snow/sand texture placement?
-
 GLAICE_DOOM1_LIQUIDS =
 {
   hotlava  = { mat="XLAV1", special=5, light_add=56, damage=10 }
