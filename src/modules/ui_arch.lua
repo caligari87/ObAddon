@@ -165,10 +165,10 @@ OB_MODULES["ui_arch"] =
 
     {
       name = "zdoom_vista"
-      label = _("ZDoom Vista")
+      label = _("Bottomless Vistas")
       choices=UI_ARCH.ZDOOM_VISTA_CHOICES
       default="disable"
-      tooltip = "This is an experimental feature. If a ZDoom based engine is selected, one has the option to enable vistas to be bottomless, allowing you to see more of the skybox below the horizon. This does not prevent skybox tiling. If paired with the Sky Generator, simply disable terrain on the parameters to see the sky all the way to the bottom without tiling."
+      tooltip = "This feature allows for vistas that show more of the skybox below the horizon. This does not prevent skybox tiling. If paired with the Sky Generator, simply disable terrain on the parameters to see the sky all the way to the bottom without tiling or more preferably, turn on 3D skyboxes."
     }
     {
       name = "zdoom_skybox"
@@ -179,4 +179,3 @@ OB_MODULES["ui_arch"] =
     }
   }
 }
-
