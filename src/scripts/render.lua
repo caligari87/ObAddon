@@ -2605,11 +2605,11 @@ function Render_skybox()
     match_state = true
 
     if LEVEL.outdoor_theme == "snow" then
-      for k,v in GLAICE_EXCLUDE_DESERT_SKYBOXES do
+      for k,v in pairs(GLAICE_EXCLUDE_DESERT_SKYBOXES) do
         if skyfab.name == v then match_state = false end
       end
     elseif LEVEL.outdoor_theme == "sand" then
-      for k,v in GLAICE_EXCLUDE_SNOW_SKYBOXES do
+      for k,v in pairs(GLAICE_EXCLUDE_SNOW_SKYBOXES) do
         if skyfab.name == v then match_state = false end
       end
     end
