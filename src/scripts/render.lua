@@ -2615,6 +2615,8 @@ function Render_skybox()
     end
 
     if match_state == true then continue end
+    if OB_CONFIG.zdoom_skybox == "random" then continue end
+
     if match_state == false then
       skyfab_name = rand.key_by_probs(GAME.THEMES[LEVEL.theme_name].skyboxes)
       skyfab = PREFABS[skyfab_name]
