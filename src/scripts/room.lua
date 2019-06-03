@@ -2268,6 +2268,9 @@ function Room_floor_ceil_heights()
 
       if ceilings_must_stay_separated(R, A1, A2) then return false end
 
+      -- do not merge ciel groups seperated by porch areas
+      if A1.is_porch or A2.is_porch then return false end
+
       if A1:touches(A2) then do_touch = true end
 
       each IC in R.internal_conns do
