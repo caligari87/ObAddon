@@ -4,6 +4,8 @@
 
 A repository of new features, enhancements, and an extensive library of community-built prefabs for [Oblige 7.70](http://oblige.sourceforge.net/).
 
+New: For Windows x64 users, [**a win64 executable for Oblige 7.70**](https://forum.zdoom.org/viewtopic.php?f=44&t=64879) is now available which addresses memory issues in creating large megawads, boosts performance, and prompts the user in taskbar when map building is complete.  Credit to Sumwunn for this!
+
 ## Community
 Currently, the Oblige community resides on an unofficial Discord server since the official forums were shut down. You may join us at the following link:
 
