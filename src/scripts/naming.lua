@@ -1037,7 +1037,7 @@ namelib.NAMES =
         -- in nature nor exclusive to hell)
         Tower=3, Gate=3, Village=3, Sanctuary=3,
         Prison=3, Sanctum=10, Arena=3, Spire=10,
-        Demesne=5,
+        Demesne=5, Canton=5,
 
         -- weird ones
         Communion=5, Monolith=5, Crucible=5,

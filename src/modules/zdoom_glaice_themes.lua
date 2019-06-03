@@ -2321,6 +2321,17 @@ GLAICE_HELL_SKYBOXES =
 }
 
 
+-- exclude tables for specific environment themes
+GLAICE_EXCLUDE_DESERT_SKYBOXES =
+{
+  "Skybox_craneo_egypt_EPIC"
+}
+
+GLAICE_EXCLUDE_SNOW_SKYBOXES =
+{
+  "Skybox_garrett_winterfall_EPIC"
+}
+
 -- intercepts for the new environment theme feature
 
 GLAICE_SNOW_OUTDOORS =

@@ -2598,6 +2598,30 @@ function Render_skybox()
     skyfab = PREFABS["Skybox_generic"]
   end
 
+  -- check against skyboxes that don't match the current
+  -- environment themes specifically
+  local match_state = false
+  while match_state == false do
+    match_state = true
+
+    if LEVEL.outdoor_theme == "snow" then
+      for k,v in GLAICE_EXCLUDE_DESERT_SKYBOXES do
+        if skyfab.name == v then match_state = false end
+      end
+    elseif LEVEL.outdoor_theme == "sand" then
+      for k,v in GLAICE_EXCLUDE_SNOW_SKYBOXES do
+        if skyfab.name == v then match_state = false end
+      end
+    end
+
+    if match_state == true then continue end
+    if match_state == false then
+      skyfab_name = rand.key_by_probs(GAME.THEMES[LEVEL.theme_name].skyboxes)
+      skyfab = PREFABS[skyfab_name]
+    end
+  end
+
+
   if not skyfab then
     gui.printf("WARNING: Could not find a proper skybox for theme '" .. LEVEL.theme_name .. "'\n")
     return
