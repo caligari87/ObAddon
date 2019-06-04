@@ -64,7 +64,7 @@ Script "IsMyAssGrass" (void)
 	bool onHellscape = false;
 	int flatIndex;
 
-	for ( flatIndex = 0; flatIndex <= 4; flatIndex++ )
+	for ( flatIndex = 0; flatIndex < 4; flatIndex++ )
 	{
 		if (CheckActorFloorTexture(0, grassFlatz[flatIndex]))
 		{
@@ -73,7 +73,7 @@ Script "IsMyAssGrass" (void)
 		Delay (1);
 	}
 
-	for ( flatIndex = 0; flatIndex <= 11; flatIndex++ )
+	for ( flatIndex = 0; flatIndex < 11; flatIndex++ )
 	{
 		if (CheckActorFloorTexture(0, snowFlatz[flatIndex]))
 		{
@@ -82,7 +82,7 @@ Script "IsMyAssGrass" (void)
 		Delay (1);
 	}
 
-	for ( flatIndex = 0; flatIndex <= 7; flatIndex++ )
+	for ( flatIndex = 0; flatIndex < 7; flatIndex++ )
 	{
 		if (CheckActorFloorTexture(0, sandFlatz[flatIndex]))
 		{
@@ -91,7 +91,7 @@ Script "IsMyAssGrass" (void)
 		Delay (1);
 	}
 
-	for ( flatIndex = 0; flatIndex <= 14; flatIndex++)
+	for ( flatIndex = 0; flatIndex < 14; flatIndex++)
 	{
 		if (CheckActorFloorTexture(0, hellFlatz[flatIndex]))
 		{
