@@ -1398,6 +1398,12 @@ function Room_make_windows(A1, A2)
     prob = prob * 0.3
   end
 
+  -- what the heck is a porch that doesn't
+  -- have windows? -MSSP
+  if A1.is_porch or A2.is_porch then
+    prob = 140
+  end
+
   install_windows(group, z, height, prob)
 end
 
