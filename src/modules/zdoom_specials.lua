@@ -218,7 +218,8 @@ function ZDOOM_SPECIALS.shuffle_music()
 
   if OB_CONFIG.game == "doom1" then
     music_table = ZDOOM_SPECIALS.MUSIC_DOOM
-  elseif OB_CONFIG.game == "ultdoom" then
+  elseif OB_CONFIG.game == "ultdoom" or OB_CONFIG.game == "plutonia"
+  or OB_CONFIG.game == "tnt" then
     music_table = ZDOOM_SPECIALS.MUSIC_DOOM
     local i = 28
     while i <= 36 do
@@ -241,7 +242,8 @@ function ZDOOM_SPECIALS.shuffle_music()
     -- extra code for UltDoom music shuffling - replace the
     -- entries for the last episode with anything else to make sure
     -- there's no bias in picking songs
-    if OB_CONFIG.game == "ultdoom" then
+    if OB_CONFIG.game == "ultdoom" or OB_CONFIG.game == "tnt"
+    or OB_CONFIG.game == "plutonia" then
       local i = 28
       while i <= 36 do
         music_table[i] = rand.pick(ZDOOM_SPECIALS.MUSIC_DOOM)

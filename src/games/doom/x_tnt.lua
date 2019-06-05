@@ -249,6 +249,11 @@ TNT.THEMES =
     {
       MIDBARS3 = 50
     }
+
+    skyboxes =
+    {
+      Skybox_generic = 50
+    }
   }
 }
 
@@ -459,4 +464,3 @@ OB_THEMES["egypt"] =
   mixed_prob = 5
   bit_limited = true
 }
-
