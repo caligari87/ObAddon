@@ -4394,26 +4394,6 @@ function Cave_prepare_scenic_vista(area)
 
   vista_type = rand.pick(vista_list)
 
-  -- if steepness = heaps, has a chance to become mostly bottomless pits
-  if (OB_CONFIG.engine == "zdoom" or OB_CONFIG.engine == "gzdoom") and OB_CONFIG.zdoom_vista == "enable" then
-    if style_sel("steepness", 0, 0, 0, 1) == 1 then
-      if rand.odds(50) then
-        vista_type = "bottomless_drop"
-      else
-        vista_type = rand.pick(vista_list)
-      end
-    end
-  end
-
-  -- if liquids = heaps, has a chance to become mostly ocean
-  if style_sel("liquids", 0, 0, 0, 1) == 1 then
-    if rand.odds(50) then
-      vista_type = "ocean"
-    else
-      vista_type = rand.pick(vista_list)
-    end
-  end
-
   local nice_view_prob = style_sel("scenics", 0, 33, 67, 100)
   if rand.odds(math.abs(nice_view_prob-100)) then
     vista_type = "no_vista"
