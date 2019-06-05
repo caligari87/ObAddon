@@ -2159,7 +2159,7 @@ GLAICE_HELL_SKYBOXES =
   Skybox_garrett_hell_EPIC = 50
 }
 
-GLAICE_DEIMOS_FLESH_SKYBOXES =
+GLAICE_FLESH_SKYBOXES =
 {
   Skybox_craneo_fishing_village_EPIC = 50
   Skybox_generic_EPIC = 50
