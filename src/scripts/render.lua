@@ -253,6 +253,19 @@ function Render_edge(E)
         reqs.flat = true
       end
 
+      -- if this wall is in front of a small chunk with
+      -- something important in it (i.e. switches and so on)
+      -- pick a flat wall fab instead as to not cut-up
+      -- potentially important and game-breaking items
+      if E.S.area then
+        if E.S.chunk then
+          if E.S.chunk.content
+          and (E.S.chunk.sw + E.S.chunk.sh <= 4) then
+            reqs.flat = true
+          end
+        end
+      end
+
       -- check for wall pieces that require solid depth behind
       -- i.e. fake doors and windows
       reqs.has_solid_back = true
