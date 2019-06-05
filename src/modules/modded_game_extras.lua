@@ -127,6 +127,7 @@ function MODDED_GAME_EXTRAS.create_hn_info()
 
     -- check for locked gates (keyed or switched doors)
     each C in R.conns do
+      if C.R2 == R then continue end
       if C.lock then
         if C.lock.kind == "quest" then
           each G in C.lock.goals do
@@ -193,11 +194,14 @@ function MODDED_GAME_EXTRAS.create_hn_info()
       if door_type != "all_key" then
         if goal_obstacles.yellow_door then
           goal_string = goal_string .. " (Yellow Door)"
-        elseif goal_obstacles.blue_door then
+        end
+        if goal_obstacles.blue_door then
           goal_string = goal_string .. " (Blue Door)"
-        elseif goal_obstacles.red_door then
+        end
+        if goal_obstacles.red_door then
           goal_string = goal_string .. " (Red Door)"
-        elseif goal_obstacles.barred_door then
+        end
+        if goal_obstacles.barred_door then
           goal_string = goal_string .. " (Barred Door)"
         end
       end
@@ -206,13 +210,17 @@ function MODDED_GAME_EXTRAS.create_hn_info()
     -- generate strings for presence of goal items
     if goal_objective == "yellow_key" then
       goal_string = goal_string .. " (Yellow Key Nearby)"
-    elseif goal_objective == "blue_key" then
+    end
+    if goal_objective == "blue_key" then
       goal_string = goal_string .. " (Blue Key Nearby)"
-    elseif goal_objective == "red_key" then
+    end
+    if goal_objective == "red_key" then
       goal_string = goal_string .. " (Red Key Nearby)"
-    elseif goal_objective == "switch" then
+    end
+    if goal_objective == "switch" then
       goal_string = goal_string .. " (Switch Nearby)"
-    elseif goal_objective == "exit" then
+    end
+    if goal_objective == "exit" then
       goal_string = goal_string .. " (Exit Nearby)"
     end
 
