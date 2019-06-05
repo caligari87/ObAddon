@@ -2141,20 +2141,28 @@ GLAICE_DOOM1_FLESH_WINDOW_GROUPS =
 -- tables for the Epic skyboxes
 GLAICE_TECH_SKYBOXES =
 {
-
+  Skybox_tech_ffvii_EPIC = 50
+  Skybox_generic_EPIC = 50
+  Skybox_hellish_city_EPIC = 50
 }
 
 GLAICE_DEIMOS_SKYBOXES =
 {
-
+  Skybox_tech_ffvii_EPIC = 50
+  Skybox_craneo_fishing_village_EPIC = 50
+  Skybox_hellish_city_EPIC = 50
 }
 
 GLAICE_HELL_SKYBOXES =
 {
-
+  Skybox_hellish_city_EPIC = 50
+  Skybox_garrett_hell_EPIC = 50
 }
 
 GLAICE_DEIMOS_FLESH_SKYBOXES =
 {
-
+  Skybox_craneo_fishing_village_EPIC = 50
+  Skybox_generic_EPIC = 50
+  Skybox_hellish_city_EPIC = 50
+  Skybox_garrett_hell_EPIC = 50
 }
