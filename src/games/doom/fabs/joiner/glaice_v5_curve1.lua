@@ -5,7 +5,7 @@ PREFABS.Joiner_glaice_v5_curve1 =
 
   theme  = "tech"
 
-  prob   = 30
+  prob   = 75
   style  = "steepness"
 
   env      = "!cave"
