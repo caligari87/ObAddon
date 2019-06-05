@@ -5,7 +5,7 @@ PREFABS.Joiner_fake_switch_joiner =
 
   theme  = "!hell"
 
-  prob   = 150
+  prob   = 100
 
   where  = "seeds"
   shape  = "I"
