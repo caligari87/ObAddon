@@ -64,7 +64,7 @@ function MODDED_GAME_EXTRAS.create_hn_info()
     return
   end
 
-  gui.printf("--== Hellscape Navigator Support ==--\n\n")
+  gui.printf("--==| Hellscape Navigator Support |==--\n\n")
 
   -- function to find the best place to put the HN marker on in
   local function find_closest_seed_to_center(R)
@@ -102,9 +102,21 @@ function MODDED_GAME_EXTRAS.create_hn_info()
   local function generate_name(zone)
     local name = Naming_grab_one(LEVEL.name_class)
 
-    gui.printf("ZONE_" .. zone.id .. " name: " .. name .. "\n")
+    if #zone.rooms == 1 and zone.rooms[1].is_exit then
+      if zone.rooms[1].conns then
+        name = zone.rooms[1].conns[1].R1.zone.hn_name
+        zone.single_exit = true
+      end
+    end
 
-    zone.hn_name = "Location: " .. Naming_grab_one(LEVEL.name_class)
+    if not zone.single_exit then
+      gui.printf("ZONE_" .. zone.id .. " name: " .. name .. "\n")
+    else
+      gui.printf("ZONE_" .. zone.id .. " name: " .. name .. " (single exit," ..
+      " borrows prior connecting zone's name)\n")
+    end
+
+    zone.hn_name = name
   end
 
   -- decide goal for room
@@ -216,7 +228,10 @@ function MODDED_GAME_EXTRAS.create_hn_info()
   local function make_room_info(R)
     local info = {}
 
-    info.name = R.zone.hn_name .. fetch_room_goal(R)
+    info.name = R.zone.hn_name
+
+    -- attach goal information
+    info.name = "Location: " .. info.name .. fetch_room_goal(R)
 
     info.editor_num = PARAM.hn_thing_start_offset
 
@@ -231,7 +246,7 @@ function MODDED_GAME_EXTRAS.create_hn_info()
     local prefered_S = find_closest_seed_to_center(R)
     if not prefered_S then
       gui.printf("WTF man where do I put the HN marker here??!?!! " ..
-      "WHERE MAN?!?! WHGEREREE???!!!!\n")
+      "WHERE MAN?!?! WHGEREREE???!!!! OH GOD HELP ME I CAN'T COMPUTER\n")
       return
     end
 
