@@ -111,7 +111,28 @@ function MODDED_GAME_EXTRAS.create_hn_info()
   local function fetch_room_goal(R)
     local goal_string = ""
     local goal_objective = "none"
+    local goal_obstacles = {}
 
+    -- check for locked gates (keyed or switched doors)
+    each C in R.conns do
+      if C.lock then
+        if C.lock.kind == "quest" then
+          each G in C.lock.goals do
+            if G.item == "k_yellow" or G.item == "ks_yellow" then
+              goal_obstacles.yellow_door = true
+            elseif G.item == "k_blue" or G.item == "ks_blue" then
+              goal_obstacles.blue_door = true
+            elseif G.item == "k_red" or G.item == "ks_red" then
+              goal_obstacles.red_door = true
+            elseif G.kind == "SWITCH" then
+              goal_obstacles.barred_door = true
+            end
+          end
+        end
+      end
+    end
+
+    -- check for goal contents (keys or quest switches)
     if R.goals then
       if R.goals[1] then
         local goal_info = R.goals[1]
@@ -146,20 +167,45 @@ function MODDED_GAME_EXTRAS.create_hn_info()
       end
     end
 
+    -- generate strings for presence of doors
+    -- locked by goal items/switches
+    if goal_obstacles then
+
+      local door_type = "none"
+      if goal_obstacles.yellow_door and goal_obstacles.blue_door
+      and goal_obstacles.red_door then
+        goal_string = goal_string .. " (All-Key Door)"
+        door_type = "all_key"
+      end
+
+      if door_type != "all_key" then
+        if goal_obstacles.yellow_door then
+          goal_string = goal_string .. " (Yellow Door)"
+        elseif goal_obstacles.blue_door then
+          goal_string = goal_string .. " (Blue Door)"
+        elseif goal_obstacles.red_door then
+          goal_string = goal_string .. " (Red Door)"
+        elseif goal_obstacles.barred_door then
+          goal_string = goal_string .. " (Barred Door)"
+        end
+      end
+    end
+
+    -- generate strings for presence of goal items
     if goal_objective == "yellow_key" then
-      goal_string = " (Yellow Key Nearby)"
+      goal_string = goal_string .. " (Yellow Key Nearby)"
     elseif goal_objective == "blue_key" then
-      goal_string = " (Blue Key Nearby)"
+      goal_string = goal_string .. " (Blue Key Nearby)"
     elseif goal_objective == "red_key" then
-      goal_string = " (Red Key Nearby)"
+      goal_string = goal_string .. " (Red Key Nearby)"
     elseif goal_objective == "switch" then
-      goal_string = " (Switch Nearby)"
+      goal_string = goal_string .. " (Switch Nearby)"
     elseif goal_objective == "exit" then
-      goal_string = " (Exit Nearby)"
+      goal_string = goal_string .. " (Exit Nearby)"
     end
 
     if R.is_secret then
-      goal_string = " (Secret Area #" .. PARAM.hn_secret_count .. ")"
+      goal_string = goal_string .. " (Secret Area #" .. PARAM.hn_secret_count .. ")"
       PARAM.hn_secret_count = PARAM.hn_secret_count + 1
     end
 
