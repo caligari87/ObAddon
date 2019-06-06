@@ -3967,7 +3967,7 @@ GROW_LIQUID_CANAL_STRAIGHT =
 {
   prob = 60
 
-
+  group = "canal"
 
   structure =
   {
@@ -3984,7 +3984,7 @@ GROW_LIQUID_CANAL_CROSSING =
 {
   prob = 40
 
-
+  group = "canal"
 
   engine = "zdoom"
 
@@ -4003,6 +4003,9 @@ GROW_LIQUID_CANAL_CROSSING =
 GROW_LIQUID_CANAL_STRAIGHT_AREA_TRANSITION =
 {
   prob = 30
+
+  group = "canal"
+
   structure =
   {
     "~.","~~"
@@ -4018,6 +4021,8 @@ GROW_LIQUID_CANAL_STRAIGHT_STAIRCASE =
 {
   prob = 40
 
+  group = "canal"
+
   structure =
   {
     "~..","~~~"
@@ -4032,6 +4037,8 @@ GROW_LIQUID_CANAL_STRAIGHT_STAIRCASE =
 GROW_LIQUID_CANAL_STRAIGHT_BULGE =
 {
   prob = 40
+
+  group = "canal"
 
   structure =
   {
@@ -4053,6 +4060,8 @@ GROW_LIQUID_CANAL_STRAIGHT_BULGE =
 GROW_LIQUID_CANAL_CURVE =
 {
   prob = 60
+
+  group = "canal"
 
   structure =
   {
@@ -4076,6 +4085,8 @@ GROW_LIQUID_CANAL_ENTRY =
 {
   prob = 50
 
+  group = "canal"
+
   structure =
   {
     "x...","x./~"
@@ -4096,6 +4107,8 @@ GROW_LIQUID_CANAL_ENTRY =
 GROW_LIQUID_CANAL_ENTRY =
 {
   prob = 50
+
+  group = "canal"
 
   structure =
   {
@@ -4154,6 +4167,8 @@ GROW_LIQUID_SCANAL_ENTRY =
 {
   prob = 20
 
+  group = "single_canal"
+
   structure =
   {
     "1..","111"
@@ -4167,6 +4182,8 @@ GROW_LIQUID_SCANAL_ENTRY_FORWARD =
 {
   prob = 20
 
+  group = "single_canal"
+
   structure =
   {
     "1....","111~~"
@@ -4178,6 +4195,8 @@ GROW_LIQUID_SCANAL_STRAIGHT =
 {
 
   prob = 60
+
+  group = "single_canal"
 
   structure =
   {
@@ -4193,6 +4212,8 @@ GROW_LIQUID_SCANAL_STRAIGHT_CROSSING =
   prob = 30
 
   engine = "zdoom"
+
+  group = "single_canal"
 
   structure =
   {
@@ -4212,6 +4233,8 @@ GROW_LIQUID_SCANAL_STAIR =
 {
   prob = 40
 
+  group = "single_canal"
+
   structure =
   {
     "1..","1>A"
@@ -4224,6 +4247,8 @@ GROW_LIQUID_SCANAL_STAIR =
 GROW_LIQUID_SCANAL_OUTER_BEND =
 {
   prob = 30
+
+  group = "single_canal"
 
   structure =
   {
@@ -4244,6 +4269,8 @@ GROW_LIQUID_SCANAL_INNER_BEND =
 {
   prob = 30
 
+  group = "single_canal"
+
   structure =
   {
     "1...","11~~"
@@ -4261,6 +4288,8 @@ GROW_LIQUID_SCANAL_INNER_BEND =
 GROW_LIQUID_SCANAL_T_JUNCTION =
 {
   prob = 20
+
+  group = "single_canal"
 
   structure =
   {
@@ -7881,6 +7910,8 @@ GROW_TRENCH_ENTRY =
 {
   prob = 50
 
+  group = "trench"
+
   structure =
   {
     "1...","1111"
@@ -7892,6 +7923,8 @@ GROW_TRENCH_ENTRY =
 GROW_TRENCH_ENTRY_INWARD_TWO_PRONG =
 {
   prob = 50
+
+  group = "trench"
 
   structure =
   {
@@ -7913,6 +7946,8 @@ GROW_TRENCH_STRAIGHT =
 {
   prob = 220
 
+  group = "trench"
+
   structure =
   {
     "1..","111"
@@ -7924,6 +7959,8 @@ GROW_TRENCH_STRAIGHT =
 GROW_TRENCH_CURVED =
 {
   prob = 140
+
+  group = "trench"
 
   structure =
   {
@@ -7952,6 +7989,8 @@ GROW_SEWER_ENTRY =
 {
   prob = 35
 
+  group = "sewer"
+
   structure =
   {
     "1..","111"
@@ -7963,6 +8002,8 @@ GROW_SEWER_ENTRY =
 GROW_SEWER_STRAIGHT =
 {
   prob = 150
+
+  group = "sewer"
 
   structure =
   {
@@ -7976,6 +8017,8 @@ GROW_SEWER_STAIRS =
 {
   prob = 40
 
+  group = "sewer"
+
   structure =
   {
     "1...","1>AA"
@@ -7987,6 +8030,8 @@ GROW_SEWER_STAIRS =
 GROW_SEWER_SWERVE =
 {
   prob = 40
+
+  group = "sewer"
 
   structure =
   {
@@ -8008,6 +8053,8 @@ GROW_SEWER_SWERVE =
 GROW_SEWER_CURVED =
 {
   prob = 65
+
+  group = "sewer"
 
   structure =
   {
