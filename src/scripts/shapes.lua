@@ -1311,6 +1311,8 @@ SPROUT_DIRECT_THIN_EMERGENCY =
 
   prob = 250
 
+  aversion = 65
+
   env = "!cave"
 
   structure =
