@@ -9,6 +9,8 @@ New: For Windows x64 users, [**a win64 executable for Oblige 7.70**](https://for
 ## Community
 Currently, the Oblige community resides on an unofficial Discord server since the official forums were shut down. You may join us at the following link:
 
+If you wish to more directly participate in ObAddon's development, the project is completely open to contributions from simply new prefabs to new script modules!
+
 [**Unofficial Oblige Discord**](https://discord.gg/dfqCt9v)
 
 ## Download
@@ -49,7 +51,7 @@ If you wish to try our "bleeding edge" code, you can build the addon yourself.
 
 ### Prefabs
 
-Adds a HUGE library of prefabricates to decorate maps, a collection spanning months of work including decorative walls, doodads, and functional pieces such as stairs, joiners, teleporters, start rooms, joining pieces, and lifts.
+Adds a HUGE library of prefabricates to decorate maps, a collection spanning **more than a year** of work including decorative walls, doodads, and functional pieces such as stairs, joiners, teleporters, start rooms, joining pieces, and lifts contributed by different authors! **YOU TOO** can contribute!
 
 ### Extensions
 
