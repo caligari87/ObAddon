@@ -93,6 +93,10 @@ Adds a HUGE library of prefabricates to decorate maps, a collection spanning mon
 
 * Glorious 3D multi-sector skyboxes!
 
+* Custom quit messages and intermission pictures!
+
+* Episode selection?! **In my Doom 2 WAD?!**
+
 #### Expanded Fine Tune!
 * Exposed parameters for the Sky Generator such as day/night and mountain settings. Play an entire generated WAD at night mood... for the mood.
 
