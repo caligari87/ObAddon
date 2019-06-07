@@ -60,6 +60,11 @@ end
 
 function MODDED_GAME_EXTRAS.create_hn_info()
 
+  -- skip Hellscape Navigator stuff on prebuilt levels (no info to draw from)
+  -- and procedural gotchas (what the heck are you gonna navigate in two rooms?)
+  if LEVEL.prebuilt then return end
+  if LEVEL.is_procedural_gotcha then return end
+
   if PARAM.hn_markers == "none" or not PARAM.hn_markers then
     return
   end
@@ -67,6 +72,8 @@ function MODDED_GAME_EXTRAS.create_hn_info()
   gui.printf("--==| Hellscape Navigator Support |==--\n\n")
 
   -- function to find the best place to put the HN marker on in
+  -- MSSP-TODO: Marker placement sometimes fails, figure out a way to place them
+  -- on a preferably clean spot
   local function find_closest_seed_to_center(R)
     local cx = (R.sx1 + R.sx2) / 2
     local cy = (R.sy1 + R.sy2) / 2
