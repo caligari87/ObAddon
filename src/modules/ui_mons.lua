@@ -116,8 +116,8 @@ UI_MONS.SECRET_MONSTERS =
 
 UI_MONS.START_ROOM_MON_CHOICES =
 {
-  "default", _("DEFAULT"),
-  "none",    _("NONE"),
+  "no", _("No"),
+  "yes",    _("Yes"),
 }
 
 OB_MODULES["ui_mons"] =
@@ -197,11 +197,12 @@ OB_MODULES["ui_mons"] =
       default="no",
     }
     {
-      name="start_room_mons",
-      label=_("Monsters in Start"),
+      name="quiet_start",
+      label=_("Quiet Start"),
       choices=UI_MONS.START_ROOM_MON_CHOICES,
-      tooltip="I'm in your start rooms, placing some monsters. Note: Oblige normally spawns weak monsters in the start room.",
-      default="default",
+      tooltip="Makes start rooms mostly safe - no enemies and all outlooking windows are removed. " ..
+      "(windows are retained on Procedural Gotchas) Default Oblige behavior is 'no'.",
+      default="no",
     }
   }
 }

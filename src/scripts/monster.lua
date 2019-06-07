@@ -154,11 +154,8 @@ function Monster_pacing()
       return
     end
 
-    if R.is_start and OB_CONFIG.start_room_mons == "default" then
+    if R.is_start and OB_CONFIG.quiet_start == "no" then
       set_room(R, "low")
-      return
-    elseif R.is_start and OB_CONFIG.start_room_mons == "none" then
-      R.pressure = "none"
       return
     end
 
@@ -1157,8 +1154,6 @@ function Monster_fill_room(R)
   local function calc_strength_factor(info)
     -- weaker monsters in secrets
     if R.is_secret and OB_CONFIG.secret_monsters == "yes" then return 1 / info.damage end
-
-    if R.is_start and OB_CONFIG.start_room_mons == "none" then return 0 end
 
     local factor = default_level(info)
 
@@ -2220,7 +2215,7 @@ gui.debugf("FILLING TRAP in %s\n", R.name)
     --if R.no_monsters then return false end
     if R.is_secret and OB_CONFIG.secret_monsters == "no" then return false end
 
-    if R.is_start and OB_CONFIG.start_room_mons == "no" then return false end
+    if R.is_start and OB_CONFIG.quiet_start == "yes" then return false end
 
     return true  -- YES --
   end
