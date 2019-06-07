@@ -1,4 +1,4 @@
-PREFABS.Trap_closet_urban =
+--[[PREFABS.Trap_closet_urban =
 {
   file = "trap/gtd_trap_urban.wad"
 
@@ -25,4 +25,4 @@ PREFABS.Trap_closet_urban =
   bound_z2 = 128
 
   tag_1 = "?trap_tag"
-}
+}]]

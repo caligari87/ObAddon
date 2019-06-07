@@ -1,4 +1,4 @@
-PREFABS.Trap_closet_tech =
+--[[PREFABS.Trap_closet_tech =
 {
   file = "trap/gtd_trap_tech.wad"
   map = "MAP01"
@@ -33,4 +33,4 @@ PREFABS.Trap_closet_tech_2 =
   template = "Trap_closet_tech"
 
   map = "MAP02"
-}
+}]]
