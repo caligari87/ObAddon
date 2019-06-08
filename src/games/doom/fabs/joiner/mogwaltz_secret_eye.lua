@@ -3,7 +3,7 @@ PREFABS.Joiner_secret_secret_shootable_eye =
   file   = "joiner/mogwaltz_secret_eye.wad"
   map    = "MAP01"
 
-  prob   = 75
+  prob   = 37
 
   key    = "secret"
 
@@ -21,4 +21,20 @@ PREFABS.Joiner_secret_secret_shootable_eye =
 
   -- prevent monsters stuck in a barrel
   solid_ents = true
+}
+
+PREFABS.Joiner_secret_secret_shootable_eye_pick_one =
+{
+  template = "Joiner_secret_secret_shootable_eye"
+  map = "MAP02"
+
+  prob = 18
+}
+
+PREFABS.Joiner_secret_secret_shootable_eye_pick_one_b =
+{
+  template = "Joiner_secret_secret_shootable_eye"
+  map = "MAP03"
+
+  prob = 18
 }
