@@ -1,0 +1,79 @@
+IWAD level similarities via OBLIGE 7.70
+
+[[ DOOM2 ]]
+
+MAP01 - subregular
+  Big Rooms, Some Cages, Some Secrets, Few Outdoors
+
+MAP02 - subregular
+  No Big Rooms, Lots of Liquids, Keyed Doors, Indoors, Rather Dark
+
+MAP03 - regular
+
+MAP04 - subregular
+MAP05 - regular
+MAP06 - superregular
+MAP07 - small
+MAP08 - subregular
+MAP09 - regular
+MAP10 - large
+MAP11 - superregular
+MAP12 - regular
+MAP13 - superregular
+MAP14 - regular
+MAP15 - large
+MAP16 - superregular
+MAP17 - regular
+MAP18 - subregular
+MAP19 - large
+MAP20 - extreme
+MAP21 - small
+MAP22 - subregular
+MAP23 - regular
+MAP24 - superregular
+MAP25 - regular
+MAP26 - regular
+MAP27 - superregular
+MAP28 - large
+MAP29 - large
+MAP30 - small
+MAP31 - regular
+MAP32 - subregular
+
+[[ ULTDOOM ]]
+
+E1M1 - subregular
+E1M2 - regular
+E1M3 - regular
+E1M4 - superregular
+E1M5 - regular
+E1M6 - superregular
+E1M7 - large
+E1M8 - subregular
+E1M9 - regular
+E2M1 - subregular
+E2M2 - superregular
+E2M3 - regular
+E2M4 - large
+E2M5 - superregular
+E2M6 - superregular
+E2M7 - large
+E2M8 - subregular
+E3M1 - small
+E3M2 - subregular
+E3M3 - superregular
+E3M4 - regular
+E3M5 - large
+E3M6 - superregular
+E3M7 - large
+E3M8 - small
+E3M9 - subregular
+E4M1 - subregular
+E4M2 - regular
+E4M3 - subregular
+E4M4 - small
+E4M5 - regular
+E4M6 - superregular
+E4M7 - subregular
+E4M8 - regular
+E4M9 - subregular
