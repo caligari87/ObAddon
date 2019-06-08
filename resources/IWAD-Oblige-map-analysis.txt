@@ -9,15 +9,32 @@ MAP02 - subregular
   No Big Rooms, Lots of Liquids, Keyed Doors, Indoors, Rather Dark
 
 MAP03 - regular
+ More Big Rooms, More Liquids, Keyed Doors?
 
 MAP04 - subregular
+ No Big Rooms, Lots of Steepness, Lots of Windows, Keyed Doors?
+
 MAP05 - regular
+  Heaps of darkness, low/some steepness, heaps of porches, few keys, lots of liquids.
+
 MAP06 - superregular
+  More/heaps darkness, heaps of steepness, little outdoors, some traps, few windows.
+
 MAP07 - small
+  Procedural Gotcha, must be weakest available!!
+
 MAP08 - subregular
+  Traps heaps, outdoors few, I dunno. Few windows! Liquids few?
+
 MAP09 - regular
+ Steepness more/heaps, traps some, outdoors less. Some windows?
+
 MAP10 - large
+ Traps some/more, outdoors some, must be tech, steepness less/some, some windows
+
 MAP11 - superregular
+ Liquids more, outdoors more, steepness heaps, porches heaps, traps some/more, more windows
+
 MAP12 - regular
 MAP13 - superregular
 MAP14 - regular
