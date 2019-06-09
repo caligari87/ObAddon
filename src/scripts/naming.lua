@@ -660,7 +660,7 @@ namelib.NAMES =
         ["Transportation H.Q."]=10
         ["Warp Factor 666"]=10
 
-        -- Glaice adds names June 8th, 2019
+        -- Glaice adds new names
         ["Administrative Sub-Section"]=10
         ["Alpha Complex"]=10
         ["Area Ops"]=10
@@ -669,8 +669,10 @@ namelib.NAMES =
         ["Cloud Computing"]=10
         ["Communications Complex"]=10
         ["Communications Tower"]=10
+        ["Control Center"]=10
         ["Crucible Complex"]=10
         ["Dirty Computers"]=10
+        ["Excavation Zone"]=10
         ["Excess Ammunition"]=10
         ["Expended Shells"]=10
         ["Expiration Date"]=10
@@ -679,10 +681,17 @@ namelib.NAMES =
         ["Mindfuck"]=10
         ["Mostly Destructive"]=10
         ["Painkiller"]=10
+        ["Primary Transport Hub"]=10
         ["Progressive Collapse"]=10
         ["Research & Development"]=10
+        ["Secondary Transport Hub"]=10
         ["Suck On This"]=10
+        ["Teleportation Research"]=10
+        ["Titan Central Center"]=10
         ["Technophile"]=10
+        ["Upper Dig Site"]=10
+        ["VEGA Secondary Coupling"]=10
+        ["VEGA Tertiary Coupling"]=10
         ["When Tech Giants Fall"]=10
       }
     }
