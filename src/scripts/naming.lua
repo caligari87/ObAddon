@@ -659,6 +659,31 @@ namelib.NAMES =
         ["The Muon Collective"]=10
         ["Transportation H.Q."]=10
         ["Warp Factor 666"]=10
+
+        -- Glaice adds names June 8th, 2019
+        ["Administrative Sub-Section"]=10
+        ["Alpha Complex"]=10
+        ["Area Ops"]=10
+        ["Artifact Storage"]=10
+        ["Blasted"]=10
+        ["Cloud Computing"]=10
+        ["Communications Complex"]=10
+        ["Communications Tower"]=10
+        ["Crucible Complex"]=10
+        ["Dirty Computers"]=10
+        ["Excess Ammunition"]=10
+        ["Expended Shells"]=10
+        ["Expiration Date"]=10
+        ["Gateway Diabolique"]=10
+        ["Limited Options"]=10
+        ["Mindfuck"]=10
+        ["Mostly Destructive"]=10
+        ["Painkiller"]=10
+        ["Progressive Collapse"]=10
+        ["Research & Development"]=10
+        ["Suck On This"]=10
+        ["Technophile"]=10
+        ["When Tech Giants Fall"]=10
       }
     }
 
