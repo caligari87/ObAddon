@@ -1640,6 +1640,18 @@ function Room_border_up()
     -- the same room --
 
     if A1.room == A2.room then
+
+      -- walls on areas where ceilings and floors meet --
+
+      if not (A1.is_outdoor and A2.is_outdoor) then
+        if (A1.ceil_h > A2.floor_h)
+        or (A1.floor_h > A2.ceil_h) then
+          Junction_make_wall(junc)
+        end
+        return
+      end
+
+
       if not A1.is_outdoor and not A2.is_outdoor then
         --local indoor_border_type = rand.pick({"beams","railing","fence","none"})
 
@@ -1656,6 +1668,7 @@ function Room_border_up()
             Junction_make_fence(junc)
           end
         end]]
+        return
       end
 
 

@@ -3253,7 +3253,10 @@ end
 
     update_aversions(cur_rule)
 
-    update_shape_groupings(cur_rule)
+    if not LEVEL.is_procedural_gotcha
+    or LEVEL.is_absurd
+      update_shape_groupings(cur_rule)
+    end
 
     -- apply any auxiliary rules
     if cur_rule.auxiliary then
