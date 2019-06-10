@@ -16,6 +16,13 @@ PREFABS.Cage_gtd_D2_floor =
 
   x_fit = { 20,88 }
   y_fit = "top"
+
+  tex_MISDPSACE =
+  {
+    MIDSPACE = 50
+    MIDGRATE = 50
+    MIDBARS1 = 50
+  }
 }
 
 PREFABS.Cage_gtd_D2_floor_tech =
@@ -26,4 +33,11 @@ PREFABS.Cage_gtd_D2_floor_tech =
 
   tex_SUPPORT3 = "SHAWN2"
   tex_METAL = "SHAWN2"
+
+  tex_MIDSPACE =
+  {
+    MIDSPACE = 50
+    MIDBARS1 = 50
+    BRNSMALC = 50
+  }
 }
