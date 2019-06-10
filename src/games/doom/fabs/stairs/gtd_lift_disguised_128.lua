@@ -6,7 +6,7 @@ PREFABS.Lift_gtd_disguised_128 =
   file = "stairs/gtd_lift_disguised_128.wad"
   map = "MAP01"
 
-  prob = 15
+  prob = 10
   style = "steepness"
 
   where = "seeds"
