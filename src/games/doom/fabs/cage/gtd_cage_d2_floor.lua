@@ -4,7 +4,7 @@ PREFABS.Cage_gtd_D2_floor =
   map = "MAP01"
 
   prob  = 800
-  theme = "hell"
+  theme = "!tech"
 
   where  = "seeds"
   shape  = "U"
@@ -30,7 +30,7 @@ PREFABS.Cage_gtd_D2_floor_tech =
 {
   template = "Cage_gtd_D2_floor"
 
-  theme = "!hell"
+  theme = "tech"
 
   tex_SUPPORT3 = "SHAWN2"
   tex_METAL = "SHAWN2"
