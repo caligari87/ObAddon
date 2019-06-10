@@ -14,7 +14,7 @@ PREFABS.Cage_gtd_D2_floor =
   deep   =  16
   over   = -16
 
-  x_fit = "stretch"
+  x_fit = { 20,88 }
   y_fit = "top"
 }
 
