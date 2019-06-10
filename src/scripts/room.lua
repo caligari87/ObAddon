@@ -1135,7 +1135,7 @@ function Room_make_windows(A1, A2)
     -- remove windows into safe start rooms... but not on procedural gotchas
     if PARAM.quiet_start == "yes" and not LEVEL.is_procedural_gotcha then
       if A.room.is_start then
-        return
+        return false
       end
     end
 
