@@ -4023,17 +4023,17 @@ DOOM.NAMES =
     {
       a =
       {
-        Deimos=40
-        Phobos=40
-        Ganymede=30
-        Io=30
-        Europa=30
-        Callisto=30
-        Lazarus=20
-        Mimas=20
-        Rhea=20
-        Iapetus=20
-        ["Tei Tenga"]=25
+        Deimos=15
+        Phobos=15
+        Ganymede=10
+        Io=10
+        Europa=10
+        Callisto=10
+        Lazarus=10
+        Mimas=10
+        Rhea=10
+        Iapetus=10
+        ["Tei Tenga"]=15
       }
 
       b =
