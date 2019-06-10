@@ -3131,6 +3131,10 @@ end
   local function update_shape_groupings(rule)
     if not rule.group then return end
 
+    if LEVEL.is_procedural_gotcha then return end
+
+    if LEVEL.is_absurd then return end
+
     if PARAM.cur_shape_group != ""
     and PARAM.print_shape_steps != "no" then
       gui.printf("Shape group: " .. PARAM.cur_shape_group .. "\n")
@@ -3253,10 +3257,7 @@ end
 
     update_aversions(cur_rule)
 
-    if not (LEVEL.is_procedural_gotcha
-    or LEVEL.is_absurd) then
-      update_shape_groupings(cur_rule)
-    end
+    update_shape_groupings(cur_rule)
 
     -- apply any auxiliary rules
     if cur_rule.auxiliary then
