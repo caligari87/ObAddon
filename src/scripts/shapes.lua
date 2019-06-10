@@ -3332,6 +3332,8 @@ GROW_SQUEEZE_ENTRY =
 
   env = "!cave"
 
+  group = "squeeze"
+
   structure =
   {
     ".....","..A.."
@@ -3349,6 +3351,8 @@ GROW_SQUEEZE_IN_STAIRED =
 {
   prob = 15
 
+  group = "squeeze"
+
   structure =
   {
     ".....","..A.."
@@ -3361,6 +3365,8 @@ GROW_SQUEEZE_IN_STAIRED =
 GROW_SQUEEZE_OUT =
 {
   prob = 30
+
+  group = "squeeze"
 
   structure =
   {
@@ -3379,6 +3385,8 @@ GROW_SQUEEZE_STRAIGHT =
 {
   prob = 60
 
+  group = "squeeze"
+
   structure =
   {
     "...",".1."
@@ -3390,6 +3398,9 @@ GROW_SQUEEZE_STRAIGHT =
 GROW_SQUEEZE_STRAIGHT_AREA_TRANSITION =
 {
   prob = 10
+
+  group = "squeeze"
+
   structure =
   {
     "...",".A."
@@ -3401,6 +3412,9 @@ GROW_SQUEEZE_STRAIGHT_AREA_TRANSITION =
 GROW_SQUEEZE_CURVE =
 {
   prob = 60
+
+  group = "squeeze"
+
   structure =
   {
     "...","..."
@@ -3412,6 +3426,9 @@ GROW_SQUEEZE_CURVE =
 GROW_SQUEEZE_CURVE_REVERSED =
 {
   prob = 60
+
+  group = "squeeze"
+
   structure =
   {
     "...","..."
@@ -3423,6 +3440,9 @@ GROW_SQUEEZE_CURVE_REVERSED =
 GROW_SQUEEZE_JUNCTION =
 {
   prob = 60
+
+  group = "squeeze"
+
   structure =
   {
     "...",".#."
@@ -3434,6 +3454,9 @@ GROW_SQUEEZE_JUNCTION =
 GROW_SQUEEZE_STAIRCASE =
 {
   prob = 30
+
+  group = "squeeze"
+
   structure =
   {
     "...",".A."
@@ -3445,6 +3468,9 @@ GROW_SQUEEZE_STAIRCASE =
 GROW_SQUEEZE_EVEN_MORE_STAIRCASE =
 {
   prob = 20
+
+  group = "squeeze"
+
   structure =
   {
     "...",".A."
@@ -3454,6 +3480,8 @@ GROW_SQUEEZE_EVEN_MORE_STAIRCASE =
     ".1.",".1."
   }
 }
+
+-- some more other cages
 
 GROW_CAGE_BETWEEN_PILLAR =
 {
@@ -4087,6 +4115,8 @@ GROW_LIQUID_CANAL_ENTRY =
 
   group = "canal"
 
+  group_pos = "entry"
+
   structure =
   {
     "x...","x./~"
@@ -4104,11 +4134,13 @@ GROW_LIQUID_CANAL_ENTRY =
   }
 }
 
-GROW_LIQUID_CANAL_ENTRY =
+GROW_LIQUID_CANAL_ENTRY_B =
 {
   prob = 50
 
   group = "canal"
+
+  group_pos = "entry"
 
   structure =
   {
@@ -7910,6 +7942,8 @@ GROW_TRENCH_ENTRY =
 {
   prob = 50
 
+  group_pos = "entry"
+
   group = "trench"
 
   structure =
@@ -7923,6 +7957,8 @@ GROW_TRENCH_ENTRY =
 GROW_TRENCH_ENTRY_INWARD_TWO_PRONG =
 {
   prob = 50
+
+  group_pos = "entry"
 
   group = "trench"
 
@@ -7990,6 +8026,8 @@ GROW_SEWER_ENTRY =
   prob = 35
 
   group = "sewer"
+
+  group_pos = "entry"
 
   structure =
   {

@@ -854,6 +854,10 @@ function Grower_calc_rule_probs()
     rule.use_prob = calc_prob(rule)
   end
 
+  -- Shape grouping system
+  PARAM.cur_shape_group = ""
+  PARAM.cur_shape_group_apply_count = 0
+
   -- Layout Absurdifier
 
   if OB_CONFIG.layout_absurdity then
@@ -3123,6 +3127,60 @@ end
   end
 
 
+  -- MSSP: update smart groupings
+  local function update_shape_groupings(rule)
+    if not rule.group then return end
+
+    if PARAM.cur_shape_group != ""
+    and PARAM.print_shape_steps != "no" then
+      gui.printf("Shape group: " .. PARAM.cur_shape_group .. "\n")
+      gui.printf("Shape count: " .. PARAM.cur_shape_group_apply_count .. "\n")
+    end
+
+    -- start it up
+    if (rule.group and PARAM.cur_shape_group == "")
+    and PARAM.cur_shape_group_apply_count == 0 then
+      PARAM.cur_shape_group = rule.group
+
+      each name,cur_def in grammar do
+        if rule.group == cur_def.group
+        and rule.group_pos != "entry" then
+          cur_def.use_prob = cur_def.use_prob * 1000000
+        end
+      end
+
+      PARAM.cur_shape_group_apply_count = rand.irange(8,25)
+    end
+
+    -- behavior for subsequent use of the same rules
+    if (rule.group == PARAM.cur_shape_group) then
+      PARAM.cur_shape_group_apply_count = PARAM.cur_shape_group_apply_count - 1
+
+      -- decrease probability for rules as each rule in the same
+      -- 'smart group' is applied
+      if PARAM.cur_shape_group_apply_count > 0 then
+        each name,cur_def in grammar do
+          if PARAM.cur_shape_group == cur_def.group
+          and rule.group_pos != "entry" then
+            cur_def.use_prob = cur_def.use_prob / 1.2
+          end
+        end
+      -- reset the probabilities of all rules in the smart group
+      -- once the apply count has reached count
+      elseif PARAM.cur_shape_group_apply_count <= 0 then
+        each name,cur_def in grammar do
+          if PARAM.cur_shape_group == cur_def.group
+          and rule.group_pos != "entry" then
+            cur_def.use_prob = cur_def.prob
+          end
+        end
+        PARAM.cur_shape_group = ""
+      end
+
+    end
+  end
+
+
   local function auxiliary_name(index)
     local name = "auxiliary"
 
@@ -3194,6 +3252,8 @@ end
     end
 
     update_aversions(cur_rule)
+
+    update_shape_groupings(cur_rule)
 
     -- apply any auxiliary rules
     if cur_rule.auxiliary then
