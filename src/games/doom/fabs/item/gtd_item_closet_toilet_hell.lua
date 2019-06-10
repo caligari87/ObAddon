@@ -4,7 +4,7 @@ PREFABS.Item_closet_hellish_loo =
   map    = "MAP01"
 
   rank   = 2
-  prob   = 50
+  prob   = 125
   theme  = "hell"
   env    = "outdoor"
   open_to_sky = true
