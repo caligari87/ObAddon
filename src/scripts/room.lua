@@ -1132,13 +1132,6 @@ function Room_make_windows(A1, A2)
     if not A.room then return false end
     if not A.floor_h then return false end
 
-    -- remove windows into safe start rooms... but not on procedural gotchas
-    if PARAM.quiet_start == "yes" and not LEVEL.is_procedural_gotcha then
-      if A.room.is_start then
-        return false
-      end
-    end
-
     -- disable windows into caves [ for now... ]
     if A.room and A.room.is_cave then return false end
 
@@ -1377,6 +1370,21 @@ function Room_make_windows(A1, A2)
 
   if A2.mode == "scenic" then
      A2.floor_h = A1.floor_h
+  end
+
+  -- remove windows into quiet start rooms... but not on procedural gotchas
+  if OB_CONFIG.quiet_start == "yes" and not LEVEL.is_procedural_gotcha then
+    if A1.room then
+      if A1.room.is_start then
+        if A2.room then return end
+      end
+    end
+
+    if A2.room then
+      if A2.room.is_start then
+        if A1.room then return end
+      end
+    end
   end
 
   if A1.border_type == "simple_fence" or A2.border_type == "simple_fence" then return end
