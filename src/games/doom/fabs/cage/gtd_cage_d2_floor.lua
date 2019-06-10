@@ -1,8 +1,9 @@
 PREFABS.Cage_gtd_D2_floor =
 {
   file   = "cage/gtd_cage_d2_floor.wad"
+  map = "MAP01"
 
-  prob  = 100
+  prob  = 800
   theme = "hell"
 
   where  = "seeds"
