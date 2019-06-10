@@ -5104,6 +5104,9 @@ GROW_WIDE_SPACE_CATWALK_FUNNEL =
 
   env = "!cave"
 
+  group = "catwalk"
+  group_pos = "entry"
+
   structure =
   {
     "111111","111111"
@@ -5123,6 +5126,9 @@ GROW_WIDE_SPACE_CATWALK_PLAIN =
 {
   prob = 75
 
+  group = "catwalk"
+  group_pos = "entry"
+
   env = "!cave"
 
   structure =
@@ -5138,6 +5144,9 @@ GROW_WIDE_SPACE_CATWALK_PLAIN =
 GROW_WIDE_SPACE_CATWALK_TALL_PLAIN =
 {
   prob = 75
+
+  group = "catwalk"
+  group_pos = "entry"
 
   env = "!cave"
 
@@ -5155,6 +5164,9 @@ GROW_WIDE_SPACE_CATWALK_TALL_PLAIN =
 GROW_WIDE_SPACE_PLATFORM_TINY =
 {
   prob = 75
+
+  group = "catwalk"
+  group_pos = "entry"
 
   env = "!cave"
 
@@ -5190,7 +5202,9 @@ GROW_WIDE_SPACE_CATWALK_EXTRUDE =
 {
   prob = 4000
 
-  aversion = -1000
+  group = "catwalk"
+
+  aversion = -500
 
   env = "!cave"
 
@@ -5208,7 +5222,9 @@ GROW_WIDE_SPACE_CATWALK_EXTRUDE_3X =
 {
   prob = 4000
 
-  aversion = -1000
+  group = "catwalk"
+
+  aversion = -500
 
   env = "!cave"
 
@@ -5226,7 +5242,9 @@ GROW_WIDE_SPACE_CATWALK_CURVE =
 {
   prob = 2500
 
-  aversion = -1000
+  group = "catwalk"
+
+  aversion = -500
 
   env = "!cave"
 
@@ -5244,6 +5262,8 @@ GROW_WIDE_SPACE_CATWALK_STRAIGHT_3X =
 {
   prob = 3000
 
+  group = "catwalk"
+
   env = "!cave"
 
   structure =
@@ -5259,6 +5279,8 @@ GROW_WIDE_SPACE_CATWALK_STRAIGHT_3X =
 GROW_WIDE_SPACE_CATWALK_STRAIGHT_4X =
 {
   prob = 2000
+
+  group = "catwalk"
 
   env = "!cave"
 
@@ -6388,7 +6410,7 @@ DECORATE_CAGE_CANALS_STRAIGHT_1X =
 
 DECORATE_CAGE_CANALSWIDE_STRAIGHT_3X =
 {
-  prob = 12
+  prob = 8
 
   structure =
   {
@@ -6403,7 +6425,7 @@ DECORATE_CAGE_CANALSWIDE_STRAIGHT_3X =
 
 DECORATE_CAGE_CANALSWIDE_STRAIGHT_1X =
 {
-  prob = 8
+  prob = 5
 
   structure =
   {
@@ -7690,6 +7712,8 @@ DECORATE_LIQUID_POOL_PLACE =
 {
   prob = 35
 
+  group = "liquid_pool"
+
   structure =
   {
     "1111","1111"
@@ -7764,6 +7788,8 @@ DECORATE_LIQUID_POOL_EXTEND_STRAIGHT =
 {
   prob = 100
 
+  group = "liquid_pool"
+
   structure =
   {
     "x111","x111"
@@ -7777,7 +7803,7 @@ DECORATE_LIQUID_POOL_EXTEND_CURVED =
 {
   prob = 75
 
-
+  group = "liquid_pool"
 
   structure =
   {
