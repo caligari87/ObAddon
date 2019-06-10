@@ -4448,6 +4448,9 @@ GROW_LIQUID_SLAB_ENTRY =
 {
   prob = 30
 
+  group = "slab"
+  group_pos = "entry"
+
   structure =
   {
     ".....","~~1~~"
@@ -4466,6 +4469,9 @@ GROW_LIQUID_SLAB_ENTRY =
 GROW_LIQUID_SLAB_ENTRY_2X =
 {
   prob = 30
+
+  group = "slab"
+  group_pos = "entry"
 
   structure =
   {
@@ -4486,6 +4492,8 @@ GROW_LIQUID_SLAB_STRAIGHT =
 {
   prob = 150
 
+  group = "slab"
+
   structure =
   {
     "...","~1~"
@@ -4497,6 +4505,8 @@ GROW_LIQUID_SLAB_STRAIGHT =
 GROW_LIQUID_SLAB_STRAIGHT_4x4 =
 {
   prob = 100
+
+  group = "slab"
 
   structure =
   {
@@ -4510,6 +4520,8 @@ GROW_LIQUID_SLAB_OUTFUNNEL =
 {
   prob = 60
 
+  group = "slab"
+
   structure =
   {
     ".....","~1~1~"
@@ -4521,6 +4533,8 @@ GROW_LIQUID_SLAB_OUTFUNNEL =
 GROW_LIQUID_SLAB_EXIT =
 {
   prob = 15
+
+  group = "slab"
 
   structure =
   {
