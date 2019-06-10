@@ -664,7 +664,7 @@ ZDOOM_STORIES.STORIES =
     {
       [[You stumble upon a safety deposit box marked by the UAC with various
       warning labels. This doesn't look like the kind of thing that should
-      fall into the wrong hands. You pry open crate open and find
+      fall into the wrong hands. You pry the crate open and find
       _MCGUFFIN_TECH. You take it with you.]],
 
       [[Power surges and electrical fluctuations in the area are causing

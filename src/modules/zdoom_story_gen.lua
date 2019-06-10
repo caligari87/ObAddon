@@ -31,8 +31,8 @@ function ZStoryGen_format_story_chunk(story_strings, info)
     story_strings = string.gsub(story_strings, "_EVULZ", info.demon_title)
     story_strings = string.gsub(story_strings, "_GOTHIC_LEVEL", info.gothic_level)
     story_strings = string.gsub(story_strings, "_RAND_CONTRIBUTOR", info.contributor_name)
-    story_strings = string.gsub(story_strings, "_MCGUFFIN_TECH", info.hell_mcguffin)
-    story_strings = string.gsub(story_strings, "_MCGUFFIN_HELL", info.tech_mcguffin)
+    story_strings = string.gsub(story_strings, "_MCGUFFIN_TECH", info.tech_mcguffin)
+    story_strings = string.gsub(story_strings, "_MCGUFFIN_HELL", info.hell_mcguffin)
   end
 
   -- dialogue quotes and apostrphes, man
