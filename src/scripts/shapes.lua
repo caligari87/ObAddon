@@ -7888,6 +7888,8 @@ DECORATE_LIQUID_MOAT_ROW =
 {
   prob = 10
 
+  group = "moat"
+
   structure =
   {
     "11111","11111"
@@ -7899,6 +7901,8 @@ DECORATE_LIQUID_MOAT_ROW =
 DECORATE_LIQUID_MOAT_CORNER_OUTER =
 {
   prob = 10
+
+  group = "moat"
 
   structure =
   {
@@ -7920,6 +7924,8 @@ DECORATE_LIQUID_MOAT_CORNER_INNER =
 {
   prob = 10
 
+  group = "moat"
+
   structure =
   {
 
@@ -7940,11 +7946,32 @@ DECORATE_LIQUID_MOAT_EXTEND =
 {
   prob = 10
 
+  group = "moat"
+
   structure =
   {
     "111","111"
     "~22","~~2"
     "222","222"
+  }
+}
+
+DECORATE_LIQUID_MOAT_EXTEND_FROM_CORNER =
+{
+  prob = 15
+
+  group = "moat"
+
+  structure =
+  {
+    "111","111"
+    "~22","~~2"
+    "/22","/22"
+  }
+
+  diagonals =
+  {
+    "~2","~2"
   }
 }
 
