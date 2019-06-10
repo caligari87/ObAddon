@@ -3253,8 +3253,8 @@ end
 
     update_aversions(cur_rule)
 
-    if not LEVEL.is_procedural_gotcha
-    or LEVEL.is_absurd then
+    if not (LEVEL.is_procedural_gotcha
+    or LEVEL.is_absurd) then
       update_shape_groupings(cur_rule)
     end
 
