@@ -756,7 +756,15 @@ function Junction_calc_fence_z(A1, A2)
   -- one of the areas' ceiling heights (usually the one with the porch)
   -- MSSP
   if A1.is_porch or A2.is_porch then
-    top_z = math.min(z1, z2)
+    if rand.odds(75) then
+      z1 = A1.floor_h
+
+      z2 = A2.floor_h
+
+      top_z = math.max(z1, z2)
+    else
+      top_z = math.max(z1, z2)
+    end
   end
 
   return top_z + PARAM.jump_height + 8
