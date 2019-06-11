@@ -4,7 +4,7 @@ PREFABS.Item_cage_balcony =
   map = "MAP01"
 
   rank = 2
-  prob = 250
+  prob = 180
 
   item_kind = "key"
 
