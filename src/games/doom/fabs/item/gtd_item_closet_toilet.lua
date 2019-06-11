@@ -8,7 +8,7 @@ PREFABS.Item_closet_toilet_room =
   map    = "MAP01"
 
   rank   = 2
-  prob   = 150
+  prob   = 100
   theme  = "!hell"
   env    = "!cave"
 
@@ -29,5 +29,5 @@ PREFABS.Item_closet_toilet_room_filthy =
 {
   template   = "Item_closet_toilet_room"
   map = "MAP02"
-  prob = 120
+  prob = 80
 }

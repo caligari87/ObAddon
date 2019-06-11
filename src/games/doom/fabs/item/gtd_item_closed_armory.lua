@@ -31,5 +31,5 @@ PREFABS.Item_sealed_armory_room_keyed =
   item_kind = "key"
 
   rank   = 2
-  prob   = 150
+  prob   = 100
 }
