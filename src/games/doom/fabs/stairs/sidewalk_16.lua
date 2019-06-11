@@ -31,7 +31,7 @@ PREFABS.Sidewalk_16_stepped_tech =
 
   prob = 30
 
-  tex_METAL = "SHAWN2"
+  tex_METAL = "STEP4"
   flat_CEIL5_2 = "FLAT19"
 }
 
