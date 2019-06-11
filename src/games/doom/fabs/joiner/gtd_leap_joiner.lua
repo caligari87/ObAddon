@@ -17,5 +17,5 @@ PREFABS.Joiner_leap =
   bound_z1 = -64
 
   x_fit = { 112,144 }
-  y_fit = { 16,24 , 136,144 }
+  y_fit = { 24,28 , 132,136 }
 }
