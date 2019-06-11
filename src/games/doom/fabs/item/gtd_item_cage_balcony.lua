@@ -1,6 +1,7 @@
 PREFABS.Item_cage_balcony =
 {
   file = "item/gtd_item_cage_balcony.wad"
+  map = "MAP01"
 
   rank = 2
   prob = 250
@@ -16,4 +17,16 @@ PREFABS.Item_cage_balcony =
 
   x_fit = "frame"
   y_fit = "top"
+}
+
+PREFABS.Item_cage_balcony_2 =
+{
+  template = "Item_cage_balcony"
+  map = "MAP02"
+}
+
+PREFABS.Item_cage_balcony_3 =
+{
+  template = "Item_cage_balcony"
+  map = "MAP03"
 }
