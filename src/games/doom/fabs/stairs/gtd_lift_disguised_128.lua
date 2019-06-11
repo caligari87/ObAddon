@@ -8,6 +8,7 @@ PREFABS.Lift_gtd_disguised_128 =
 
   prob = 10
   style = "steepness"
+  env = "building"
 
   where = "seeds"
   shape = "I"
