@@ -688,6 +688,7 @@ namelib.NAMES =
         ["Data Center Gamma"]=10
         ["Dirty Computers"]=10
         ["Distribution and Shipping"]=10
+        ["Drilling and Killing"]=10
         ["Electric Dreams"]=10 -- This one thought up by MSSP
         ["Emergency Comms Center"]=10
         ["Endothermic Fission Engine"]=10 -- Demios
@@ -700,6 +701,7 @@ namelib.NAMES =
         ["Heavy Equipment Zone"]=10
         ["Hellborne Singularity"]=10
         ["Hellspawn Quarantine Lab"]=10
+        ["Hydroponics"]=10
         ["Limited Options"]=10
         ["Main Solar Array"]=10 -- Demios
         ["Mindfuck"]=10
@@ -718,7 +720,9 @@ namelib.NAMES =
         ["Raw Materials Storage"]=10
         ["Reinforced Storage Vats"]=10 -- Demios
         ["Research & Development"]=10
+        ["Satellite Launch Complex"]=10
         ["Secondary Transport Hub"]=10
+        ["Stars From The Sky"]=10
         ["Suck On This"]=10
         ["Teleportation Research"]=10
         ["Titan Central Center"]=10
@@ -731,10 +735,11 @@ namelib.NAMES =
         ["VEGA Tertiary Coupling"]=10
         ["Warehouse 64"]=10
         ["When Tech Giants Fall"]=10
+        ["Wicked Thy Demon Comes"]=10
 
         -- MSSP adds more names too
         ["2 Imps 1 Shotgun"]=10 -- retxirT
-        ["Engineering Gone Bad"]=10 -- Demios
+        ["Engineering Gone Bad"]=10 -- Demios, also based on Romero's "Tech Gone Bad"
         ["Short-Circuit"]=10 -- Demios
       }
     }
