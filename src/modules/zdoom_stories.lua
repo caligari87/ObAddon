@@ -485,9 +485,9 @@ ZDOOM_STORIES.STORIES =
       around you down to ashes. _RAND_CONTRIBUTOR waves at you
       and disappears again above the clouds...]],
 
-      [[As you down the final demon, horrifying screams and screams
+      [[As you bring down the final demon, horrifying screams
       fill the room. As you turn back, an entire horde of demons
-      is charging at you! However, the opposite direction comes
+      charges at you but from the opposite direction suddenly comes
       an immense orb of light! The orb shoots beams into the belly of
       each creature turning them into nothing but clouds of dust.
       _SPACE
