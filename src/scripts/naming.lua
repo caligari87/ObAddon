@@ -2485,6 +2485,34 @@ namelib.NAMES =
         ["You Are Already Dead"]=10
         ["You'll See"]=10
         ["Zone of Alienation"]=10
+
+        -- Glaice adds names too
+        ["A Friend to Upheaval"]=10
+        ["Burned and Shut In"]=10
+        ["Circumscribed by Hell"]=10
+        ["Destiny"]=10
+        ["Diagnosis Death"]=10
+        ["Disruption of Worlds"]=10
+        ["Doom"]=10 -- Yeah lol, it's a word to use
+        ["From Every Direction"]=10
+        ["Hellish Blockade"]=10
+        ["In a Snag"]=10
+        ["Karma's a Bitch"]=10
+        ["Kill or Be Killed"]=10
+        ["Knocked Down a Peg"]=10
+        ["Mental Collapse"]=10
+        ["Obstruction"]=10
+        ["One Man's Ordeal"]=10
+        ["Only Way Through"]=10
+        ["Sirens Blaring"]=10
+        ["Subjugation"]=10
+        ["Toll Booth From Hell"]=10
+        ["The Kismet of Marines"]=10 -- https://www.dictionary.com/browse/kismet
+        ["The Oppressors"]=10
+        ["The Slow Painful Crush"]=10
+        ["Unwanted Termination"]=10
+        ["Wheel of Misfortune"]=10
+        ["Zero Calm Here"]=10
       }
     }
   }
