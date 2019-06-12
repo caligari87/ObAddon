@@ -108,6 +108,7 @@ ZDOOM_STORIES.LIST =
   the_avenger = 40
   the_avenger_from_hell = 40
   asylum = 10
+  knock_knock_joke = 2
 }
 
 ZDOOM_STORIES.STORIES =
@@ -1086,6 +1087,17 @@ ZDOOM_STORIES.STORIES =
       Your blood rushes, as you listen to the sounds of in your
       surroundings, checking your gear as you do. Then, you rise to your
       feet to face the blood-red dawn.]]
+    }
+  }
+
+  knock_knock_joke =
+  {
+    hooks = {
+      [[Knock knock. Who's there?]]
+    }
+
+    conclusions = {
+      [[ME! ME! ME! ME! ME! ME! HAHAHAHAHAAA!]]
     }
   }
 }

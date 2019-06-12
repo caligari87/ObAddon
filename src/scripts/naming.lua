@@ -1280,7 +1280,9 @@ namelib.NAMES =
         Pain=15, Fear=5, Trauma=10,
         Agony=10, Anguish=10,
 
-        Whispers=5, Tears=3,
+        -- negative emotions made manifest
+        Whispers=5, Tears=3, Screams=5,
+
         Dread=5, Fate=5, Locusts=2, Erebus=5, Lethe=2,
         Reckoning=5, Minos=3, Hades=7, Acheron=5,
         Leviathan=5, Baphomet=5, Devils=10,
@@ -2434,12 +2436,14 @@ namelib.NAMES =
         ["Hold Your Ground"]=10
         ["Highway to Hell"]=10
         ["High Water"]=10
+        ["Iron Maiden"]=10
         ["I Don't Feel So Good"]=10
         ["I Ii II L"]=10
         ["Judgement"]=10
         ["Killing Fields"]=10
         ["Max Pain"]=10
         ["Meatgrinder"]=10
+        ["Nine Inch Nails"]=10
         ["No Chance in Hell"]=10
         ["No Rest For The Wicked"]=10
         ["No Man's Land"]=10
@@ -2460,6 +2464,7 @@ namelib.NAMES =
         ["Red Alert"]=10
         ["Resistance is Futile"]=10
         ["Run"]=10
+        ["Running with Scissors"]=10
         ["Seven Trumpets Sounding"]=10
         ["Surrounded!"]=10
         ["Standoff"]=10
@@ -3442,6 +3447,32 @@ namelib.NAMES =
         ["Swamp Fever"] = 10
         ["Hard Rain"] = 10
         ["The Parish"] = 10
+
+        -- Max Payne
+        ["A Cold Day in Hell"] = 10
+        ["A Bit Closer to Heaven"] = 10
+
+        ["Blood Veins of Phobos"] = 10
+        ["Playing it Bogart"] = 10
+        ["Let Guns do the Talking"] = 10
+        ["Fear That Gives Men Wings"] = 10
+        ["Ragna Rock"] = 10
+        ["Pain and Suffering"] = 10
+        ["Rats and Oily Water"] = 10
+        ["Take me to Cold Steel"] = 10
+        ["The Deep Six"] = 10
+        ["In The Land of the Blind"] = 10
+        ["Hidden Truths"] = 10
+        ["Byzantine Power Game"] = 10
+
+        ["Forget Being Subtle"] = 10
+        ["Stepping on Toes"] = 10
+        ["A Few Bullets Back"] = 10
+        ["In The Crossfire"] = 10
+
+        ["Riding Shotgun"] = 10
+        ["Ice Hard and Slick"] = 10
+        ["Straight from a Bad Dream"] = 10
       }
 
       c = -- oh boy, here we go again...
