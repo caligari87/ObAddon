@@ -2237,7 +2237,7 @@ namelib.NAMES =
         ["Planetary Destruction"]=10
 
         -- MSSP adds more names as well
-        ["Damned Demon Destruction"] -- Demios
+        ["Damned Demon Destruction"]=10 -- Demios
       }
     }
   }
