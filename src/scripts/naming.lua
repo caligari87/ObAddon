@@ -102,6 +102,8 @@ namelib.NAMES =
         ["Get to da"]=3 -- CHOPPAH!!!
         ["War of the"]=10,
 
+        ["Gone Bad"]=8,
+
         ["Raze the"]=8,
 
         -- command-like prefixes, some by Dante
@@ -245,11 +247,14 @@ namelib.NAMES =
         Subverted=15, Corrupted=7, Contaminated=5, Degraded=7,
         Congested=10, Swarming=10, Pestilential=5, Nefarious=10,
 
-        -- descriptive
+        -- descriptive: negative
         Extreme=20, Depraved=10, Unnatural=10, Messianic=3,
         Dark=20, Treacherous=10, Frigid=3,
         Deconditioned=10, Dismal=5, Dreaded=5, Cold=10,
         Perverted=5, Doomed=10,
+
+        -- descriptive: techy
+        Cybernetic=5, Focused=5,
 
         -- ObAddon contributor names
         NOUNMEMBERS = 50
@@ -265,15 +270,15 @@ namelib.NAMES =
         --+ administrative
         Control=10, Management=5, Foundation=5,
         --+ science
-        Research=10, Development=5,
+        Research=10, Development=5, ["Rogue A.I."]=5,
         --+ military
         Military=10, Security=5, Defense=5,
-        Aegis=3, Stockade=3,
+        Aegis=3, Stockade=3, ["Planetary Defense"]=5,
         --+ manufacturing
         Manufacturing=3, Maintenance=3,
         Industrial=3, Engineering=5,
         Processing=10, Refueling=5, Supply=15,
-        Construction=5, Assembly=5,
+        Construction=5, Assembly=5, ["Flaring Towers"]=5,
         --+ residential
         Refuge=5, Pods=5,
 
@@ -285,10 +290,10 @@ namelib.NAMES =
         Testing=5, Authorization=5, Administration=5,
         Synthesis=5, Unification=3,
         --+ waste
-        Drainage=5, Disposal=5, Dumping=3,
+        Drainage=5, Disposal=5, Dumping=3, Disperser=5,
         --+ resources
         Pumping=4, Irrigation=3,
-        Cooling=5, Coolant=5,
+        Cooling=5, Coolant=5, Hydroponics=5,
         --+ infrastructure
         Mobilization=3, Transfer=3,
         Distribution=5, Trafficking=5,
@@ -363,7 +368,7 @@ namelib.NAMES =
         Metatronic=5, Vacuum=5, Superluminal=5,
         Temporal=5, Sonic=5, Optic=3,
         Damping=5, Hydraulic=7, Spooling=5,
-        Bespoke=2,
+        Bespoke=2, Gravwell=5, ["Gravity Field"]=5,
 
         -- mechanical processes -MSSP
         Filtration=5, Pneumatic=5, Catalytic=3,
@@ -423,7 +428,7 @@ namelib.NAMES =
         Shaft=3,
 
         -- general places
-        Compound=15, Dock=3, Bay=3,
+        Compound=15, Dock=3, Bay=5,
         Complex=15, Center=15, Installation=5,
         Area=15, Site=10, Zone=10,
         Chamber=5, Quarters=5, Section=3,
@@ -725,6 +730,11 @@ namelib.NAMES =
         ["VEGA Tertiary Coupling"]=10
         ["Warehouse 64"]=10
         ["When Tech Giants Fall"]=10
+
+        -- MSSP adds more names too
+        ["2 Imps 1 Shotgun"]=10 -- retxirT
+        ["Engineering Gone Bad"]=10 -- Demios
+        ["Short-Circuit"]=10 -- Demios
       }
     }
 
@@ -2224,6 +2234,9 @@ namelib.NAMES =
         ["The No Go Zone"]=10
         ["The Twisted Abode"]=10
         ["Planetary Destruction"]=10
+
+        -- MSSP adds more names as well
+        ["Damned Demon Destruction"] -- Demios
       }
     }
   }
