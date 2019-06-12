@@ -43,6 +43,14 @@ namelib.NAMES =
 
     lexicon =
     {
+      x =
+      {
+        -- a new table... for suffixes! -MSSP
+        ["Gone Bad"]=10
+        ["Redux"]=10
+        ["the Way ObAddon Did"]=10
+      }
+
       v =
       {
         ["Curse of the"]=10
@@ -102,8 +110,6 @@ namelib.NAMES =
         ["Get to da"]=3 -- CHOPPAH!!!
         ["War of the"]=10,
 
-        ["Gone Bad"]=8,
-
         ["Raze the"]=8,
 
         -- command-like prefixes, some by Dante
@@ -134,6 +140,7 @@ namelib.NAMES =
 
       t = 1    -- article: The XX
       v = 20   -- phrase before a noun: Curse of the XX
+      x = 20   -- phrase AFTER a noun: XX the Way ObAddon Did
       r = 40
 
       s = 1000  -- single complete names
@@ -156,6 +163,10 @@ namelib.NAMES =
       ["%t %b %n"]    = 17
       ["%t %a %b %n"] = 5
 
+      ["%a %n %x"]    = 17
+      ["%b %n %x"]    = 17
+      ["%a %b %n %x"] = 5
+
       ["%v %n"]    = 24
       ["%v %a %n"] = 24
       ["%v %b %n"] = 24
@@ -166,7 +177,7 @@ namelib.NAMES =
       ["%r the %b %n"] = 12
 --]]
 
-      ["%s"] = 18
+      ["%s"] = 25
     }
 
     lexicon =
@@ -739,6 +750,7 @@ namelib.NAMES =
 
         -- MSSP adds more names too
         ["2 Imps 1 Shotgun"]=10 -- retxirT
+        ["Bad Optics"]=10 -- retxirT
         ["Engineering Gone Bad"]=10 -- Demios, also based on Romero's "Tech Gone Bad"
         ["Short-Circuit"]=10 -- Demios
       }
@@ -765,6 +777,9 @@ namelib.NAMES =
       ["%a %n"] = 60
       ["%t %a %n"] = 20
 
+      ["%a %n %x"] = 20
+      ["%t %a %n %x"] = 8
+
       ["%n of %h"] = 26
       ["%a %n of %h"] = 10
       ["%a %n of the %o"] = 10
@@ -777,7 +792,7 @@ namelib.NAMES =
       ["%v %n"]    = 25
       ["%v %a %n"] = 25
 
-      ["%s"] = 18
+      ["%s"] = 25
 
       ["Killing for %e"] = 3
       ["Killing in %e's name"] = 3
@@ -1651,7 +1666,12 @@ namelib.NAMES =
       ["%v %n"]    = 25
       ["%v %a %n"] = 25
 
-      ["%s"] = 15
+      ["%a %n %x"] = 20
+      ["%n of the %o %x"] = 3
+      ["%v %n %x"] = 5
+      ["%v %a %n %x"] = 5
+
+      ["%s"] = 25
 
       -- Types of roads, useful when Streets Mode
       -- kicks in.
