@@ -254,7 +254,7 @@ namelib.NAMES =
         Perverted=5, Doomed=10,
 
         -- descriptive: techy
-        Cybernetic=5, Focused=5,
+        Cybernetic=5, Focused=5, Plasmatic=5,
 
         -- ObAddon contributor names
         NOUNMEMBERS = 50
@@ -278,7 +278,7 @@ namelib.NAMES =
         Manufacturing=3, Maintenance=3,
         Industrial=3, Engineering=5,
         Processing=10, Refueling=5, Supply=15,
-        Construction=5, Assembly=5, ["Flaring Towers"]=5,
+        Construction=5, Assembly=5,
         --+ residential
         Refuge=5, Pods=5,
 
@@ -420,6 +420,7 @@ namelib.NAMES =
         -- industrial places
         Refinery=15, Factory=10, Foundry=3,
         Workshop=7, Works=2, Forge=8,
+        ["Flaring Towers"]=5,
 
         -- infrastructural places
         Platform=5, Port=3, Hub=10,
