@@ -7,7 +7,7 @@
 --  Copyright (C) 2008-2018 Andrew Apted
 --  Copyright (C) 2008-2009 Jon Vail
 --  Copyright (C)      2009 Enhas
---  Copyright (C) 2010-2019 Chris Pisarczyk
+--  Copyright (C) 2010-2019 Armaetus
 --  Copyright (C) 2019 MsrSgtShooterPerson
 --  Copyright (C) 2019 EpicTyphlosion
 --
@@ -76,7 +76,7 @@ namelib.NAMES =
         ["Just Another"]=5
         ["Hell in the"]=5
 
-        -- these by Glaice
+        -- these by Armaetus
         ["Fear the"]=10
         ["Beware the"]=10
         ["Bane of the"]=10
@@ -96,7 +96,7 @@ namelib.NAMES =
         ["Adventure to the"]=10
         ["A Jaunt to the"]=10
 
-        -- More annoyed types by Glaice
+        -- More annoyed types by Armaetus
         ["Just stop with the"]=5
         ["Fuck off with the"]=5
         ["No, not another"]=5
@@ -692,7 +692,7 @@ namelib.NAMES =
         ["Transportation H.Q."]=10
         ["Warp Factor 666"]=10
 
-        -- Glaice adds new names
+        -- Armaetus adds new names
         ["Administrative Sub-Section"]=10
         ["Administrative Complex"]=10
         ["Air Defense Systems"]=10
@@ -2254,7 +2254,7 @@ namelib.NAMES =
         ["Ups and Downs"]=10
         ["You Don't Belong Here"]=10
 
-        -- Glaice adds more names
+        -- Armaetus adds more names
         ["A Destructive Path"]=10
         ["A Doomsday Scenario"]=10
         ["Administrative Errors"]=10
@@ -2503,7 +2503,7 @@ namelib.NAMES =
         ["You'll See"]=10
         ["Zone of Alienation"]=10
 
-        -- Glaice adds names too
+        -- Armaetus adds names too
         ["A Friend to Upheaval"]=10
         ["Burned and Shut In"]=10
         ["Circumscribed by Hell"]=10
@@ -2750,7 +2750,7 @@ namelib.NAMES =
         ["Wet Behind the Ears"]=10
         ["What??"]=10
         ["Wheat Field"]=10
-        ["Where is Glaice?"]=10 --I'm right here!!
+        ["Where is Armaetus?"]=10 --I'm right here!!
         ["Where's the Lamb Sauce?"]=10 --Gordon Ramsay
         ["Yet Another Rewrite"]=10
         ["You Are Over The Sidedef Limit!"]=10
@@ -2772,7 +2772,7 @@ namelib.NAMES =
         ["You Have 23 Infections!!!"]=10
         ["Your System Is Below Requirements"]=10
 
-        -- Glaice adds errors too
+        -- Armaetus adds errors too
         ["Access is Denied"]=10 --ERROR_INVALID_ACCESS
         ["Data Error"]=10 --ERROR_CRC
         ["Network Access is Denied"]=10 --ERROR_NETWORK_ACCESS_DENIED
@@ -2867,7 +2867,7 @@ namelib.NAMES =
 
       -- contributors and their shenanigans
 
-      -- Glaice's additions
+      -- Armaetus's additions
       ["%a %q"] = 10
       ["%a %j"] = 10
       ["Dead Base: %a"] = 5
@@ -3607,7 +3607,7 @@ namelib.NAMES =
       -- %e = Entities
       -- %m = Material / Metal alloy
 
-      -- Glaice adds more grammar rules
+      -- Armaetus adds more grammar rules
       ["Doomguy VS the %e"] = 10 -- Doomguy VS the [Entity]
       ["Doomguy and the %e"] = 10 -- Doomguy and the [Entity]
       ["Vacation in the %d %p"] = 10 -- Vacation in the [Description] [Place]
@@ -4259,7 +4259,7 @@ namelib.NAMES =
         Soldiers = 10
         Slayer = 10
 
-        -- Glaice adds things here
+        -- Armaetus adds things here
         ["Sin Bringer"] = 10
         ["The Icon"] = 10
         Hellbringers = 15
@@ -4352,7 +4352,7 @@ namelib.NAMES =
         ["By ObAddon Contribs"] = 35
         ["Carthage Special"] = 20
         ["Simon-v Special"] = 20
-        ["Glaice Approved"] = 20
+        ["Armaetus Approved"] = 20
         ["Caligari Tested"] = 20
         ["Frozsoul Edition"] = 20
         ["Garrett Approves"] = 20
@@ -4410,7 +4410,7 @@ namelib.NAMES =
         ["So Sad Alexa Play D RUNNIN"] = 10
         ["Now With More Sentence Enhancers!"]=10
 
-        -- Glaice adds names
+        -- Armaetus adds names
         ["A Masterpiece in Progress"] = 40
         ["A Bloody Good Time"] = 30
         ["A Fantastic Place!"] = 25
@@ -4572,7 +4572,7 @@ namelib.NAMES =
         ["Sometimes They Hear The Fist"] = 25 -- Atomizer - "Sometimes they hear the Bullet" (song)
         ["Hateful by Nature"] = 20 -- Atrophy - Violent by Nature (album title)
         -- I'll stop here, because I have over 18,000(!!) tracks to go through and this would make this
-        -- list VERY, VERY LONG. - Glaice
+        -- list VERY, VERY LONG. - Armaetus
 
         ["Highway to DOOM"] = 20 -- AC/DC - "Highway to Hell" (song)
         ["Rhythm of Blood"] = 20 -- Unknown - "Rhythm of Red" (Tokyo Xtreme Racer Zero soundtrack)
@@ -4606,7 +4606,7 @@ namelib.COMMUNITY_MEMBERS =
   contributors =
   {
     "Sgt. Shooter", --MsrSgtShooterPerson
-    "Glaice",
+    "Armaetus",
     "Frozsoul",
     "Caligari", --Caligari87
     "Simon Vee", --Simon-v
