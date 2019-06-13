@@ -3,7 +3,7 @@
 ----------------------------------------------------------------
 --
 --  Copyright (C) 2019 MsrSgtShooterPerson
---  Copyright (C) 2019 Glaice
+--  Copyright (C) 2019 Armaetus
 --  Copyright (C) 2019 Tapwave
 --  Copyright (C) 2019 Simon-v
 --  Copyright (C) 2019 EpicTyphlosion
