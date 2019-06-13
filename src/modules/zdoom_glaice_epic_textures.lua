@@ -1,8 +1,8 @@
 ------------------------------------------------------------------------
---  MODULE: Glaice's Epic Textures Mod
+--  MODULE: Armaetus Texture Pack Mod
 ------------------------------------------------------------------------
 --
---  Copyright (C) 2019 Glaice
+--  Copyright (C) 2019 Armaetus
 --  Copyright (C) 2019 MsrSgtShooterPerson
 --
 --  This program is free software; you can redistribute it and/or
@@ -17,6 +17,8 @@
 --
 -------------------------------------------------------------------
 
+-- Armaetus: I'm not renaming all these functions. If you wanna do it MSSP,
+-- you are free to do it lol. Remove these lines when that is done, if done.
 gui.import("zdoom_glaice_materials.lua")
 gui.import("zdoom_glaice_themes.lua")
 
@@ -510,7 +512,7 @@ end
 
 OB_MODULES["glaice_epic_textures"] =
 {
-  label = _("ZDoom: Glaice's Epic Textures")
+  label = _("ZDoom: Armaetus Texture Pack")
 
   side = "left"
   priority = 70
@@ -526,7 +528,7 @@ OB_MODULES["glaice_epic_textures"] =
     all_done = GLAICE_EPIC_TEXTURES.put_the_texture_wad_in
   }
 
-  tooltip = "If enabled, adds textures from Glaice's Epic Textures collection, which also includes a few new Epic-texture exclusive prefabs."
+  tooltip = "If enabled, adds textures from Armaetus's Texture Pack, which also includes a few new custom texture exclusive prefabs."
 
   options =
   {
@@ -536,7 +538,7 @@ OB_MODULES["glaice_epic_textures"] =
       label = _("Custom Liquids")
       choices = GLAICE_EPIC_TEXTURES.YES_NO
       default = "yes"
-      tooltip = "Adds new Epic Textures liquid flats."
+      tooltip = "Adds new custom Textures liquid flats."
       priority=4
     }
 
@@ -549,7 +551,7 @@ OB_MODULES["glaice_epic_textures"] =
       tooltip =
         "Adds custom flat-depedendent tree sprites into the game. Currently only replaces " ..
         "trees on specific grass flats and will be expanded in the future to accomnodate " ..
-        "Epic Textures and more. If you are playing a mod that already does its own trees, " ..
+        "custom Textures and more. If you are playing a mod that already does its own trees, " ..
         "it may be better to leave this off."
       priority=3
     }
@@ -575,7 +577,7 @@ OB_MODULES["glaice_epic_textures"] =
       choices = GLAICE_EPIC_TEXTURES.YES_NO
       default = "yes"
       tooltip =
-        "Allows the trimming down of resulting WAD by not merging the Epic texture WAD.\n\n" ..
+        "Allows the trimming down of resulting WAD by not merging the custom texture WAD.\n\n" ..
         "This will require you to extract and load up the WAD manually in your preferred sourceport installation.\n\n" ..
         "This is the preferrable option for multiplayer situations and server owners and have each client obtain a copy of the texture pack instead.\n"
       priority=1
