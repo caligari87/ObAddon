@@ -4747,7 +4747,7 @@ GROW_PRIMITIVE_DIAMOND_2X =
 SERRATED_EDGE_SMOOTHER =
 {
   pass = "smoother"
-  prob = 1000
+  prob = 35
 
   structure =
   {
@@ -4764,7 +4764,7 @@ SERRATED_EDGE_SMOOTHER =
 SERRATED_EDGE_SMOOTHER2 =
 {
   pass = "smoother"
-  prob = 400
+  prob = 35
 
   structure =
   {
@@ -4780,72 +4780,11 @@ SERRATED_EDGE_SMOOTHER2 =
   }
 }
 
-SERRATED_LIQUID_SMOOTHER =
-{
-  pass = "smoother"
-  prob = 400
-
-
-
-  structure =
-  {
-    "1","1"
-    "/","~"
-    "~","~"
-  }
-
-  diagonals =
-  {
-    ".~"
-  }
-}
-
-SERRATED_LIQUID_SMOOTHER_REVERSED =
-{
-  pass = "smoother"
-  prob = 400
-
-
-
-  structure =
-  {
-    "~","~"
-    "/","1"
-    "1","1"
-  }
-
-  diagonals =
-  {
-    "21"
-  }
-}
-
-SERRATED_LIQUID_SMOOTHER2 =
-{
-  pass = "smoother"
-  prob = 400
-
-
-
-  structure =
-  {
-    "/~1","~~1"
-    "/~1","~~1"
-  }
-
-  diagonals =
-  {
-    ".~"
-    ".~"
-  }
-}
-
 SERRATED_LIQUID_SMOOTHER3 =
 {
   pass = "smoother"
-  prob = 100
 
-
+  prob = 15
 
   structure =
   {
@@ -4856,43 +4795,6 @@ SERRATED_LIQUID_SMOOTHER3 =
   diagonals =
   {
     ".~"
-  }
-}
-
-SERRATED_AREA_TRANSITION_SMOOTHER =
-{
-  pass = "smoother"
-  prob = 10000
-
-  structure =
-  {
-    "2","2"
-    "/","1"
-    "1","1"
-  }
-
-  diagonals =
-  {
-    ".1"
-  }
-}
-
-FAILED_SQUEEZE_ENTRANCE_SMOOTHER =
-{
-  pass = "smoother"
-  prob = 10000
-
-  structure =
-  {
-    "%..","%.."
-    "11.","1.."
-    "/..","/.."
-  }
-
-  diagonals =
-  {
-    "1.","1."
-    "1.","1."
   }
 }
 
@@ -5733,7 +5635,7 @@ GROW_CHAMFER_WIDE_ROOM_CORNER_OUTLET_SOLID =
 
 SMOOTHER_CATWALK_EDGES =
 {
-  prob = 1500
+  prob = 250
   pass = "smoother"
 
   structure =
@@ -7019,175 +6921,6 @@ DECORATE_CLIFF_CAGE_3X_STAGGERED =
   }
 
   cage_mode = "fancy"
-}
-
--- MSSP's huge liquid rooms. [HUGE-LIQUID]
-
-GROW_HUGE_LIQUID_ROOM_ZIGZAG =
-{
-  prob = 15
-
-  aversion = 5
-
-  structure =
-  {
-    "........","~~11~~~~"
-    "........","~~11~~~~"
-    "........","~~%1%~~~"
-    "........","~~~%1%~~"
-    "........","~~~~11~~"
-    "........","~~~~11~~"
-    "xxxx11xx","xxxx11xx"
-  }
-
-  diagonals =
-  {
-    "~1","1~"
-    "~1","1~"
-  }
-}
-
-GROW_HUGE_LIQUID_ROOM_TUMOR =
-{
-  prob = 15
-
-  aversion = 5
-  structure =
-  {
-    "..........","~~~~11~~~~"
-    "..........","~~~~11~~~~"
-    "..........","~~~/11%~~~"
-    "..........","~~~1111~~~"
-    "..........","~~~1111~~~"
-    "..........","~~~%11/~~~"
-    "..........","~~~~11~~~~"
-    "..........","~~~~11~~~~"
-    "xxxx11xxxx","xxxx11xxxx"
-  }
-
-  diagonals =
-  {
-    "~1","1~"
-    "~1","1~"
-  }
-}
-
-GROW_HUGE_LIQUID_ROOM_TUMOR_ELEVATED =
-{
-  prob = 15
-
-  aversion = 5
-  structure =
-  {
-    "..........","~~~~AA~~~~"
-    "..........","~~~~AA~~~~"
-    "..........","~~~/AA%~~~"
-    "..........","~~~AAAA~~~"
-    "..........","~~~AAAA~~~"
-    "..........","~~~%AA/~~~"
-    "..........","~~~~AA~~~~"
-    "..........","~~~~11~~~~"
-    "xxxx11xxxx","xxxx11xxxx"
-  }
-
-  diagonals =
-  {
-    "~A","A~"
-    "~A","A~"
-  }
-}
-
-GROW_HUGE_LIQUID_ROOM_PILLARED_PLATFORM =
-{
-  prob = 10
-
-  aversion = 3
-
-  structure =
-  {
-    "xxxx11xxxx","xxxx11xxxx"
-    "..........","~~~~11~~~~"
-    "..........","~~~~11~~~~"
-    "..........","~~.1111.~~"
-    "..........","~~111111~~"
-    "..........","~~111111~~"
-    "..........","~~111111~~"
-    "..........","~~.1111.~~"
-    "..........","~~~~11~~~~"
-    "..........","~~~~11~~~~"
-  }
-}
-
-GROW_HUGE_LIQUID_ROOM_PILLARED_PLATFORM_STAIRS =
-{
-  prob = 10
-
-  aversion = 3
-
-  structure =
-  {
-    "xxxx11xxxx","xxxx11xxxx"
-    "..........","~~~~11~~~~"
-    "..........","~~~~vv~~~~"
-    "..........","~~.AAAA.~~"
-    "..........","~~AAAAAA~~"
-    "..........","~~AAAAAA~~"
-    "..........","~~AAAAAA~~"
-    "..........","~~.AAAA.~~"
-    "..........","~~~~AA~~~~"
-    "..........","~~~~AA~~~~"
-  }
-}
-
-GROW_HUGE_LIQUID_ROOM_PILLARED_FROM_WALL =
-{
-  prob = 10
-
-  aversion = 3
-
-  structure =
-  {
-    "xxxx11xxxx","xxxx11xxxx"
-    "..........","~~111111~~"
-    "..........","~~111111~~"
-    "..........","~~.1111.~~"
-    "..........","~~~~11~~~~"
-    "..........","~~~~11~~~~"
-  }
-}
-
-GROW_HUGE_LIQUID_ROOM_PILLARED_TO_WALL =
-{
-  prob = 10
-
-  aversion = 3
-
-  structure =
-  {
-    "..........","~~111111~~"
-    "..........","~~111111~~"
-    "..........","~~.1111.~~"
-    "..........","~~~~11~~~~"
-    "..........","~~~~11~~~~"
-    "xxxx11xxxx","xxxx11xxxx"
-  }
-}
-
-GROW_HUGE_LIQUID_ROOM_PILLARED_TO_WALL_STAIRS =
-{
-  prob = 10
-
-  aversion = 3
-
-  structure =
-  {
-    "..........","~~AAAAAA~~"
-    "..........","~~AAAAAA~~"
-    "..........","~~.AAAA.~~"
-    "..........","~~~~^^~~~~"
-    "..........","~~~~11~~~~"
-    "xxxx11xxxx","xxxx11xxxx"
-  }
 }
 
 -- MSSP's liquid placer [LIQUID-CLIFF]
