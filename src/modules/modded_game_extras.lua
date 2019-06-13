@@ -295,7 +295,6 @@ function MODDED_GAME_EXTRAS.generate_hn_decorate()
   end
 
   local decorate_string = MODDED_GAME_EXTRAS.HELLSCAPE_NAVIGATOR_TEMPLATE.BASE
-  local decorate_lines = {}
 
   -- create decorate file!
   each I in HN_INFO_TABLE do
@@ -311,11 +310,7 @@ function MODDED_GAME_EXTRAS.generate_hn_decorate()
     decorate_string = decorate_string .. thing_chunk
   end
 
-  for line in decorate_string:gmatch("[^\r\n]+") do
-    table.insert(decorate_lines, line .. "\n")
-  end
-
-  gui.wad_add_text_lump("DECORATE", decorate_lines)
+  PARAM.hn_marker_decorate_lines = decorate_string
 end
 
 ----------------------------------------------------------------

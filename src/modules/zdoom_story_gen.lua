@@ -215,7 +215,6 @@ function ZStoryGen_init()
   end
 
   gui.wad_add_text_lump("LANGUAGE",language_lump)
-  gui.printf("\n~~~~~~ LANGUAGE lump created! ~~~~~~\n")
 end
 
 -- LOOK AT ALL THIS CODE NOW

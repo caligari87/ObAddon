@@ -201,6 +201,40 @@ ZDOOM_SPECIALS.INTERPIC_MUSIC =
   "$MUSIC_INTER",  _("Doom 1 Vanilla")
 }
 
+ZDOOM_SPECIALS.DYNAMIC_LIGHT_DECORATE =
+[[// ObAddon dynamic light actors
+actor OBLight : PointLight 14999
+{
+  +NOGRAVITY
+  +SPAWNCEILING
+
+  States{
+    Spawn:
+      HDB3 A 1
+      Loop
+}
+}]]
+
+ZDOOM_SPECIALS.DYNAMIC_LIGHT_EDNUMS =
+[[
+
+]]
+
+ZDOOM_SPECIALS.DYNAMIC_LIGHT_GLDEFS =
+[[
+PointLight WhiteLight
+{
+  color 1.0 1.0 1.0
+  size 384
+  attenuate 1
+}
+
+object OBLight
+{
+  frame HDB3A { light WhiteLight }
+}
+]]
+
 ZDOOM_SPECIALS.MUSIC = {}
 
 function ZDOOM_SPECIALS.setup(self)
@@ -323,13 +357,6 @@ function ZDOOM_SPECIALS.do_special_stuff()
     local octet3 = give_random_hex() .. give_random_hex()
     return octet1 .. " " .. octet2 .. " " .. octet3
   end
-
-
-  --[[if PARAM.light_fixtures then
-    for name,def in ipairs(PARAM.light_fixtures) do
-      print("\n" .. table.tostr(def))
-    end
-  end]]
 
   local function add_languagelump()
   end
@@ -981,7 +1008,7 @@ OB_MODULES["zdoom_specials"] =
   {
     fog_generator = {
       label = _("Fog Generator"),
-      priority = 10
+      priority = 11
       choices = ZDOOM_SPECIALS.FOG_GEN_CHOICES
       default = "no"
       tooltip = "Generates fog colors based on the Sky Generator or generate completely randomly."
@@ -989,7 +1016,7 @@ OB_MODULES["zdoom_specials"] =
 
     fog_env = {
       label = _("Fog Environment"),
-      priority = 9
+      priority = 10
       choices = ZDOOM_SPECIALS.FOG_ENV_CHOICES
       default = "all"
       tooltip = "Limits fog to outdoors (sectors with exposed sky ceilings) or allows for all."
@@ -997,7 +1024,7 @@ OB_MODULES["zdoom_specials"] =
 
     fog_intensity = {
       label = _("Fog Intensity"),
-      priority = 8
+      priority = 9
       choices = ZDOOM_SPECIALS.FOG_DENSITY_CHOICES
       default = "subtle"
       tooltip = "Determines thickness and intensity of fog, if the Fog Generator is enabled. Subtle or Misty is recommended."
@@ -1005,15 +1032,24 @@ OB_MODULES["zdoom_specials"] =
 
     fog_affects_sky = {
       label = _("Sky Fog"),
-      priority = 7
+      priority = 8
       choices = ZDOOM_SPECIALS.YES_NO
       default = "yes"
       tooltip = "Tints the sky texture with the fog color, intensity is based on the Fog Intensity selection."
       gap = 1
     }
 
+    dynamic_lights = {
+      label = _("Dynamic Lights")
+      priority = 7
+      choices = ZDOOM_SPECIALS.YES_NO
+      default = "yes"
+      tooltip = "[UNFINISHED] Generates dynamic point lights on ceiling spot lights."
+      gap = 1
+    }
+
     mapinfo_music_shuffler = {
-      label = _("Shuffle Music"),
+      label = _("Shuffle Music")
       priority = 6
       choices = ZDOOM_SPECIALS.MUSIC_SHUFFLER_CHOICES
       default = "no"

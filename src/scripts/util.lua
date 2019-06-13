@@ -1131,7 +1131,19 @@ function geom.bezier_length(S, C, E, divisions)
   return length
 end
 
+-- MSSP: Script utilities
+function script_lines_to_table(string)
+  local table_of_strings = {}
+  for line in string:gmatch("[^\r\n]+") do
+    table.insert(table_of_strings, line .. "\n")
+  end
+  return table_of_strings
+end
 
+
+function add_script_lump(lumpname, string)
+  gui.wad_add_text_lump(lumpname, script_lines_to_table(string))
+end
 
 --------========| A* PATHING ALGORITHM |========--------
 
@@ -1246,4 +1258,3 @@ function astar_find_path(sx, sy, ex, ey, W, H, score_func, data)
     end
   end
 end
-

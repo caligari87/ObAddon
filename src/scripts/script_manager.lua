@@ -34,36 +34,58 @@ file itself.
 ]]
 
 
-function ScriptMan_assemble_acs_lumps()
+function ScriptMan_assemble_acs_lump()
 -- MSSP-TODO
 end
 
 
-function ScriptMan_assemble_mapinfo_lumps()
+function ScriptMan_assemble_mapinfo_lump()
 -- MSSP-TODO
 end
 
 
-function ScriptMan_assemble_zscript_lumps()
+function ScriptMan_assemble_zscript_lump()
 -- MSSP-TODO
 end
 
 
-function ScriptMan_assemble_decorate_lumps()
+function ScriptMan_assemble_decorate_lump()
+  local decorate_script_lines = ""
+  if PARAM.dynamic_lights == "yes" then
+    decorate_script_lines = decorate_script_lines ..
+    ZDOOM_SPECIALS.DYNAMIC_LIGHT_DECORATE
+  end
+  if PARAM.hn_marker_decorate_lines then
+    decorate_script_lines = decorate_script_lines ..
+    PARAM.hn_marker_decorate_lines
+  end
+
+  add_script_lump("DECORATE", decorate_script_lines)
+end
+
+
+function ScriptMan_assemble_gldefs_lump()
+  local gldefs_lines = ""
+  if PARAM.dynamic_lights == "yes" then
+    gldefs_lines = gldefs_lines ..
+    ZDOOM_SPECIALS.DYNAMIC_LIGHT_GLDEFS
+  end
+
+  add_script_lump("GLDEFS", gldefs_lines)
+end
+
+
+function ScriptMan_assemble_acs_lump()
 -- MSSP-TODO
 end
 
 
-function ScriptMan_assemble_acs_lumps()
--- MSSP-TODO
-end
-
-
-function ScriptMan_create_include_lumps()
--- MSSP-TODO
+function ScriptMan_create_include_lump()
 end
 
 
 function ScriptMan_init()
--- MSSP-TODO
+  gui.printf("\n--==| Script Manager |==--\n\n")
+  ScriptMan_assemble_decorate_lump()
+  ScriptMan_assemble_gldefs_lump()
 end
