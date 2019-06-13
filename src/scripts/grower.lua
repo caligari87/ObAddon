@@ -3430,7 +3430,7 @@ function Grower_grammatical_room(R, pass, is_emergency)
       A:calc_volume()
       square_apply_count = square_apply_count + A.svolume
     end
-    apply_num = math.floor(square_apply_count/8)
+    apply_num = math.floor(square_apply_count/4)
 
   elseif pass == "smooth_out" then
     apply_num = rand.irange(2,6)
