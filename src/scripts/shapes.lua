@@ -3699,7 +3699,7 @@ GROW_CAGE_ROUND_RAFTERS =
 
   structure =
   {
-    "..11..","..11.."
+    "xx11xx","xx11xx"
     "......","/C11C%"
     "......","C/11%C"
     "......","C%11/C"
@@ -3721,7 +3721,7 @@ GROW_CAGE_ROUND_RAFTERS_INTERSECTION =
 
   structure =
   {
-    "..11..","..11.."
+    "xx11xx","xx11xx"
     "......","/C11C%"
     "......","C/11%C"
     "......","111111"
@@ -7234,11 +7234,11 @@ GROW_TRENCH_ENTRY_INWARD_TWO_PRONG =
 
   structure =
   {
-    "x....","x1111"
-    "1....","11>%1"
-    "1....","11AAA"
-    "1....","11>/1"
-    "x....","x1111"
+    "x.....","x11111"
+    "1.....","11>A%1"
+    "1.....","11AAAA"
+    "1.....","11>A/1"
+    "x.....","x11111"
   }
 
   diagonals =
@@ -7250,7 +7250,7 @@ GROW_TRENCH_ENTRY_INWARD_TWO_PRONG =
 
 GROW_TRENCH_STRAIGHT =
 {
-  prob = 220
+  prob = 40
 
   group = "trench"
 
@@ -7264,7 +7264,7 @@ GROW_TRENCH_STRAIGHT =
 
 GROW_TRENCH_CURVED =
 {
-  prob = 140
+  prob = 35
 
   group = "trench"
 
@@ -7309,7 +7309,7 @@ GROW_SEWER_ENTRY =
 
 GROW_SEWER_STRAIGHT =
 {
-  prob = 150
+  prob = 35
 
   group = "sewer"
 
@@ -7323,7 +7323,7 @@ GROW_SEWER_STRAIGHT =
 
 GROW_SEWER_STAIRS =
 {
-  prob = 40
+  prob = 15
 
   group = "sewer"
 
@@ -7337,7 +7337,7 @@ GROW_SEWER_STAIRS =
 
 GROW_SEWER_SWERVE =
 {
-  prob = 40
+  prob = 25
 
   group = "sewer"
 
@@ -7360,7 +7360,7 @@ GROW_SEWER_SWERVE =
 
 GROW_SEWER_CURVED =
 {
-  prob = 65
+  prob = 35
 
   group = "sewer"
 
@@ -7381,7 +7381,7 @@ GROW_SEWER_CURVED =
 
 GROW_SEWER_EXIT =
 {
-  prob = 20
+  prob = 25
 
   structure =
   {
