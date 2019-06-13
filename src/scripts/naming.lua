@@ -46,9 +46,17 @@ namelib.NAMES =
       x =
       {
         -- a new table... for suffixes! -MSSP
+        ["Annihilated"]=10
+        ["Avenged"]=10
+        ["Breaks Loose"]=10
+        ["Destroyed"]=10
         ["Gone Bad"]=10
+        ["Reboot"]=10
         ["Redux"]=10
+        ["Revisited"]=10
         ["the Way ObAddon Did"]=10
+        [": The Return"]=10
+        ["is Back"]=10
       }
 
       v =
@@ -108,9 +116,11 @@ namelib.NAMES =
         ["Counterattack in the"]=7
         ["Ambush in the"]=7
         ["Get to da"]=3 -- CHOPPAH!!!
-        ["War of the"]=10,
+        ["War of the"]=10
+        ["Return to"]=10
+        ["Return to the"]=10
 
-        ["Raze the"]=8,
+        ["Raze the"]=8
 
         -- command-like prefixes, some by Dante
         ["Attack the"]=10
