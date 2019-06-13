@@ -109,6 +109,7 @@ ZDOOM_STORIES.LIST =
   the_avenger_from_hell = 40
   asylum = 10
   knock_knock_joke = 2
+  oblige_history = 5
 }
 
 ZDOOM_STORIES.STORIES =
@@ -1087,6 +1088,32 @@ ZDOOM_STORIES.STORIES =
       Your blood rushes, as you listen to the sounds of in your
       surroundings, checking your gear as you do. Then, you rise to your
       feet to face the blood-red dawn.]]
+    }
+  }
+
+  -- Summarized OBLIGE history
+  oblige_history =
+  {
+    hooks = {
+      [[Once upon a time a man named Andrew Apted with a knack for
+      programming developed a basic map generator in 2005, but it
+      was crude and written only in C++. It is 2007 now and V2
+      of OBLIGE was released to the public with positive response
+      from the Doom community.
+      _SPACE
+      V3 proved to be a big step over V2 in 2009, with a huge
+      rewrite of the design, plus many new features over the
+      previous version.]]
+    }
+
+    conclusions = {
+      [[V4 and V5 have proven to be unweildly and experimental
+      designs in 2012 and 2013, prompting V6 which was combined
+      the best parts of V3 and V4 and V5 in 2015. 2016 soon comes
+      and V7 arrives, boasting shape grammars and finally using
+      prefabs from WAD files, opening up near infinite customization.
+      _SPACE
+      We thank you for this program, Andrew! ]]
     }
   }
 
