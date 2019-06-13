@@ -69,7 +69,7 @@ PREFABS.Cage_freestanding_d2_computer_tech =
   map    = "MAP05"
 
   prob   = 15
-  theme  = "!hell"
+  theme  = "tech"
 
   where  = "point"
 
@@ -83,6 +83,16 @@ PREFABS.Cage_freestanding_d2_computer_tech =
     [2011] = 40
     [0] = 60
   }
+}
+
+PREFABS.Cage_freestanding_d2_computer_urban =
+{
+  template = "Cage_freestanding_d2_computer_tech"
+
+  theme = "urban"
+
+  tex_COMPWERD = "WOOD4"
+  flat_CEIL5_1 = "FLAT5_1"
 }
 
 PREFABS.Cage_freestanding_d2_computer_hell =
