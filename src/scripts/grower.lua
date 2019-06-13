@@ -3427,27 +3427,6 @@ function Grower_grammatical_room(R, pass, is_emergency)
   elseif pass == "square_out" then
     apply_num = rand.irange(10,30)
 
-  elseif pass == "liquid_platform" then
-    local liquid_volume = 0
-    if R.areas then
-      each A in R.areas do
-        if A.mode == "liquid" then
-          A:calc_volume()
-        end
-        liquid_volume = liquid_volume + A.svolume
-      end
-    end
-
-    if PARAM.print_shape_steps then
-      gui.printf("ROOM_" .. R.id .. ": Liquid volume -> " .. liquid_volume .. "\n")
-    end
-
-    if liquid_volume > 100 then
-      apply_num = rand.irange(2,10)
-    else
-      return
-    end
-
   elseif pass == "smooth_out" then
     apply_num = rand.irange(2,6)
 
@@ -3660,12 +3639,6 @@ function Grower_grow_room(R)
 
   if PARAM["live_minimap"] == "room" then
     Seed_draw_minimap()
-  end
-
-  -- liquid platform rules
-  if LEVEL.liquid
-  and not R.is_hallway then
-    Grower_grammatical_room(R, "liquid_platform")
   end
 
   R.is_grown = true
