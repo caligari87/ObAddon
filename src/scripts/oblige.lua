@@ -1316,6 +1316,8 @@ function ob_clean_up()
   PREFABS = nil
   SEEDS   = nil
 
+  gui.rand_seed(OB_CONFIG.seed)
+
   collectgarbage("collect")
 end
 
@@ -1348,8 +1350,6 @@ function ob_build_cool_shit()
 
   gui.printf("\n")
   gui.printf("~~~~~~ Finished Making Levels ~~~~~~\n\n")
-
-  gui.rand_seed(OB_CONFIG.seed)
 
   return "ok"
 end
