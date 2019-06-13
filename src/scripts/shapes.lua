@@ -5594,8 +5594,8 @@ GROW_CHAMFER_WIDE_ROOM_CORNER_OUTLET =
   structure =
   {
     "xxxx..","xxxx11"
-    "xxx...","xxx.11"
-    "xx....","x../11"
+    "xxxx..","xxxx11"
+    "xxx...","xxx/11"
     "1.....","111111"
     "1.....","111111"
   }
