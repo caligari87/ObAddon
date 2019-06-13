@@ -3129,11 +3129,37 @@ end
 
   -- MSSP: update smart groupings
   local function update_shape_groupings(rule)
+
+    local function change_group_probs(mode)
+      each name,cur_def in grammar do
+        if rule.group == cur_def.group
+        and rule.group_pos != "entry" then
+          if mode == "highlight" then
+            cur_def.use_prob = cur_def.use_prob * 1000000
+          elseif mode == "reduce" then
+            cur_def.use_prob = cur_def.use_prob / 1.2
+          elseif mode == "reset" then
+            cur_def.use_prob = cur_def.prob
+          end
+        end
+      end
+    end
+
     if not rule.group then return end
 
     if LEVEL.is_procedural_gotcha then return end
 
     if LEVEL.is_absurd then return end
+
+    -- reset when rooms have changed
+    if PARAM.operated_room != R.id and PARAM.cur_shape_group then
+      PARAM.operated_room = R.id
+      change_group_probs("reset")
+      PARAM.cur_shape_groop = ""
+      PARAM.cur_shape_group_apply_count = 0
+    end
+
+    PARAM.operated_room = R.id
 
     if PARAM.cur_shape_group != ""
     and PARAM.print_shape_steps != "no" then
@@ -3146,14 +3172,9 @@ end
     and PARAM.cur_shape_group_apply_count == 0 then
       PARAM.cur_shape_group = rule.group
 
-      each name,cur_def in grammar do
-        if rule.group == cur_def.group
-        and rule.group_pos != "entry" then
-          cur_def.use_prob = cur_def.use_prob * 1000000
-        end
-      end
+      change_group_probs("highlight")
 
-      PARAM.cur_shape_group_apply_count = rand.irange(8,25)
+      PARAM.cur_shape_group_apply_count = rand.irange(6,15)
     end
 
     -- behavior for subsequent use of the same rules
@@ -3163,25 +3184,23 @@ end
       -- decrease probability for rules as each rule in the same
       -- 'smart group' is applied
       if PARAM.cur_shape_group_apply_count > 0 then
-        each name,cur_def in grammar do
-          if PARAM.cur_shape_group == cur_def.group
-          and rule.group_pos != "entry" then
-            cur_def.use_prob = cur_def.use_prob / 1.2
-          end
-        end
+        change_group_probs("reduce")
+
       -- reset the probabilities of all rules in the smart group
       -- once the apply count has reached count
       elseif PARAM.cur_shape_group_apply_count <= 0 then
-        each name,cur_def in grammar do
-          if PARAM.cur_shape_group == cur_def.group
-          and rule.group_pos != "entry" then
-            cur_def.use_prob = cur_def.prob
-          end
-        end
+        change_group_probs("reset")
+
         PARAM.cur_shape_group = ""
       end
 
     end
+
+    -- end of the rine - sometimes the shape group doesn't manifest
+    if PARAM.cur_shape_group_apply_count == 0 then
+      PARAM.cur_shape_group = ""
+    end
+
   end
 
 

@@ -6548,6 +6548,10 @@ GROW_INTO_CLIFF =
 {
   prob = 50
 
+  group = "cliff"
+
+  group_pos = "entry"
+
   structure =
   {
     "....","11AA"
@@ -6561,6 +6565,10 @@ GROW_INTO_CLIFF_TALL =
 {
   prob = 50
 
+  group = "cliff"
+
+  group_pos = "entry"
+
   structure =
   {
     "....","11AA"
@@ -6573,9 +6581,9 @@ GROW_INTO_CLIFF_TALL =
 
 GROW_CLIFF_EXTENSION =
 {
-  prob = 750
+  prob = 75
 
-  aversion = -50
+  group = "cliff"
 
   structure =
   {
@@ -6588,7 +6596,9 @@ GROW_CLIFF_EXTENSION =
 
 GROW_CLIFF_EXTENSION_UP_WE_GO =
 {
-  prob = 100
+  prob = 50
+
+  group = "cliff"
 
   structure =
   {
@@ -6601,7 +6611,9 @@ GROW_CLIFF_EXTENSION_UP_WE_GO =
 
 GROW_CLIFF_EXTENSION_UPPER_WE_GO =
 {
-  prob = 350
+  prob = 35
+
+  group = "cliff"
 
   structure =
   {
@@ -6615,9 +6627,9 @@ GROW_CLIFF_EXTENSION_UPPER_WE_GO =
 
 GROW_CLIFF_EXTENSION_OUTER_CURVE =
 {
-  prob = 500
+  prob = 35
 
-  aversion = -75
+  group = "cliff"
 
   structure =
   {
@@ -6634,9 +6646,9 @@ GROW_CLIFF_EXTENSION_OUTER_CURVE =
 
 GROW_CLIFF_EXTENSION_INNER_CURVE =
 {
-  prob = 500
+  prob = 75
 
-  aversion = -75
+  group = "cliff"
 
   structure =
   {
@@ -6653,7 +6665,9 @@ GROW_CLIFF_EXTENSION_INNER_CURVE =
 
 GROW_CLIFF_EXTENSION_WIDEN =
 {
-  prob = 500
+  prob = 35
+
+  group = "cliff"
 
   structure =
   {
@@ -6674,9 +6688,9 @@ GROW_CLIFF_EXTENSION_WIDEN =
 
 GROW_CLIFF_EXTENSION_X2 =
 {
-  prob = 2500
+  prob = 50
 
-  aversion = -1000
+  group = "cliff"
 
   structure =
   {
@@ -6689,7 +6703,9 @@ GROW_CLIFF_EXTENSION_X2 =
 
 GROW_CLIFF_EXTENSION_X2_UP_WE_GO =
 {
-  prob = 500
+  prob = 35
+
+  group = "cliff"
 
   structure =
   {
@@ -6702,7 +6718,9 @@ GROW_CLIFF_EXTENSION_X2_UP_WE_GO =
 
 GROW_CLIFF_EXTENSION_X2_UPPER_WE_GO =
 {
-  prob = 1000
+  prob = 35
+
+  group = "cliff"
 
   structure =
   {
@@ -6717,9 +6735,9 @@ GROW_CLIFF_EXTENSION_X2_UPPER_WE_GO =
 
 GROW_CLIFF_EXTENSION_OUTER_CURVE_X2 =
 {
-  prob = 2000
+  prob = 75
 
-  aversion = -1000
+  group = "cliff"
 
   structure =
   {
@@ -6737,9 +6755,9 @@ GROW_CLIFF_EXTENSION_OUTER_CURVE_X2 =
 
 GROW_CLIFF_EXTENSION_INNER_CURVE_X2 =
 {
-  prob = 2000
+  prob = 85
 
-  aversion = -1000
+  group = "cliff"
 
   structure =
   {
@@ -6758,7 +6776,9 @@ GROW_CLIFF_EXTENSION_INNER_CURVE_X2 =
 
 GROW_CLIFF_EXTENSON_NEW_AREA =
 {
-  prob = 150
+  prob = 35
+
+  group = "cliff"
 
   structure =
   {
@@ -6771,7 +6791,9 @@ GROW_CLIFF_EXTENSON_NEW_AREA =
 
 GROW_CLIFF_EXTENSON_NEW_AREA_INWARD =
 {
-  prob = 300
+  prob = 35
+
+  group = "cliff"
 
   structure =
   {
@@ -6784,7 +6806,9 @@ GROW_CLIFF_EXTENSON_NEW_AREA_INWARD =
 
 GROW_CLIFF_EXTENSION_NEW_AREA_X2 =
 {
-  prob = 250
+  prob = 35
+
+  group = "cliff"
 
   structure =
   {
@@ -6797,7 +6821,9 @@ GROW_CLIFF_EXTENSION_NEW_AREA_X2 =
 
 GROW_CLIFF_EXTENSION_NEW_AREA_INWARD_X2 =
 {
-  prob = 500
+  prob = 35
+
+  group = "cliff"
 
   structure =
   {
@@ -6816,6 +6842,10 @@ GROW_CLIFF_ENTRY_X4 =
 {
   prob = 150
 
+  group = "cliff_x4"
+
+  group_pos = "entry"
+
   structure =
   {
     "........","1111AAAA"
@@ -6831,6 +6861,10 @@ GROW_CLIFF_ENTRY_SIDEWAYS_X4 =
 {
   prob = 150
 
+  group = "cliff_x4"
+
+  group_pos = "entry"
+
   structure =
   {
     "x11x....","x11x...."
@@ -6843,9 +6877,9 @@ GROW_CLIFF_ENTRY_SIDEWAYS_X4 =
 
 GROW_CLIFF_STRAIGHT_X4 =
 {
-  prob = 7500
+  prob = 150
 
-  aversion = -1000
+  group = "cliff_x4"
 
   structure =
   {
@@ -6857,7 +6891,9 @@ GROW_CLIFF_STRAIGHT_X4 =
 
 GROW_CLIFF_STRAIGHT_X4_STAIR =
 {
-  prob = 3000
+  prob = 85
+
+  group = "cliff_x4"
 
   structure =
   {
@@ -6870,9 +6906,9 @@ GROW_CLIFF_STRAIGHT_X4_STAIR =
 
 GROW_CLIFF_STRAIGHT_X4_LONG =
 {
-  prob = 5000
+  prob = 100
 
-  aversion = -500
+  group = "cliff_x4"
 
   structure =
   {
@@ -6886,7 +6922,9 @@ GROW_CLIFF_STRAIGHT_X4_LONG =
 
 GROW_CLIFF_STRAIGHT_X4_SIDESTAIR =
 {
-  prob = 3000
+  prob = 85
+
+  group = "cliff_x4"
 
   structure =
   {
@@ -6900,9 +6938,9 @@ GROW_CLIFF_STRAIGHT_X4_SIDESTAIR =
 
 GROW_CLIFF_STRAIGHT_X4_BUMP =
 {
-  prob = 3000
+  prob = 50
 
-  aversion = 100
+  group = "cliff_x4"
 
   structure =
   {
@@ -6923,7 +6961,9 @@ GROW_CLIFF_STRAIGHT_X4_BUMP =
 
 GROW_CLIFF_CURVED_X4 =
 {
-  prob = 5000
+  prob = 50
+
+  group = "cliff_x4"
 
   structure =
   {
