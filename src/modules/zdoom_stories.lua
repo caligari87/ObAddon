@@ -1109,7 +1109,7 @@ ZDOOM_STORIES.STORIES =
     conclusions = {
       [[V4 and V5 have proven to be unweildly and experimental
       designs in 2012 and 2013, prompting V6 which was combined
-      the best parts of V3 and V4 and V5 in 2015. 2016 soon comes
+      the best parts of V3, V4 and V5 in 2015. 2016 soon comes
       and V7 arrives, boasting shape grammars and finally using
       prefabs from WAD files, opening up near infinite customization.
       _SPACE
@@ -1121,11 +1121,25 @@ ZDOOM_STORIES.STORIES =
  knock_knock_joke =
   {
     hooks = {
-      [[Knock knock. Who's there?]]
+      [[Knock knock. Who's there?]],
+
+      [[Wanna hear a joke?
+      _SPACE
+      Knock knock. Who's there?]],
     }
 
     conclusions = {
-      [[ME! ME! ME! ME! ME! ME! HAHAHAHAHAAA!]]
+      [[ME! ME! ME! ME! ME! ME! HAHAHAHAHAAA!]],
+
+      [[It's me, motherfuckers! lolololol ]],
+
+      [[It's DOOMGUY, who else would it be? ]],
+
+      [[It's _RAND_CONTRIBUTOR! Hello! ]] ,
+
+      [[It's _RAND_DEMON! Oh noes! ]],
+
+      [[It's...._GOTHIC_LEVEL?? How the fuck is this possible? ]],
     }
   }
 }
@@ -1542,6 +1556,12 @@ ZDOOM_STORIES.QUIT_MESSAGES =
   [[Heroes, press N. Wimps, press Y.]], -- Wolfenstein 3D
   [[Go ahead, leave. Oblige will be back with even more demons...]],
   [[_RAND_CONTRIBUTOR is not pleased.]],
+  [[There's a lot of bullshit going on these days. Don't just add to the pile and quit like this.]],
+  [[Meh, is that it? Am I supposed to appease you with something?]],
+  [[There just isn't anything to keep you from hitting Y, is there?]],
+  [[ObAddon demands the purging of more demons!]],
+  [[The will to survive is as long as you do not quit out of the game.]],
+  [[_RAND_DEMON needs another hobby than to torture your dumb ass from quitting.]],
 
   -- hardcore philosophy
   [[Are you quitting because you realized no matter how much hellspawn you mow down, Oblige will just give you more?]],
