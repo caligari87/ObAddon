@@ -3,7 +3,7 @@ PREFABS.Item_mogwaltz_lowering_pillar =
   file = "item/mogwaltz_item_lowering_pillar_cages.wad"
   map = "MAP01"
 
-  prob = 10
+  prob = 15
 
   theme = "tech"
 
