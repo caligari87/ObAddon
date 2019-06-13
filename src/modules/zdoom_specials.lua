@@ -203,23 +203,29 @@ ZDOOM_SPECIALS.INTERPIC_MUSIC =
 
 ZDOOM_SPECIALS.DYNAMIC_LIGHT_DECORATE =
 [[// ObAddon dynamic light actors
-actor OBLight : PointLight 14999
+actor ObLightWhite : PointLight 14000
 {
+  Height 64
+
   +NOGRAVITY
   +SPAWNCEILING
 
   States{
     Spawn:
-      HDB3 A 1
-      Loop
+      HDB3 A -1
   }
-}]]
+}
+actor ObLightRed : ObLightWhite 14001 {}
+actor ObLightOrange : ObLightWhite 14002 {}
+actor ObLightYellow : ObLightWhite 14003 {}
+actor ObLightBlue : ObLightWhite 14004 {}
+actor ObLightGreen : ObLightWhite 14405 {}
+]]
 
 ZDOOM_SPECIALS.DYNAMIC_LIGHT_EDNUMS =
 [[
 DoomEdNums =
 {
-  14999 = OBLight
 }
 ]]
 
@@ -227,14 +233,74 @@ ZDOOM_SPECIALS.DYNAMIC_LIGHT_GLDEFS =
 [[
 PointLight WhiteLight
 {
-  color 1.0 1.0 1.0
-  size 384
+  color 0.85 0.9 1
+  size 128
   attenuate 1
 }
 
-object OBLight
+PointLight RedLight
 {
-  frame HDB3A { light WhiteLight }
+  color 1 0 0
+  size 128
+  attenuate 1
+}
+
+PointLight YellowLight
+{
+  color 1 0.8 0
+  size 128
+  attenuate 1
+}
+
+PointLight OrangeLight
+{
+  color 1 0.5 0
+  size 128
+  attenuate 1
+}
+
+PointLight BlueLight
+{
+  color 0.1 0.1 1
+  size 128
+  attenuate 1
+}
+
+PointLight GreenLight
+{
+  color 0 1 0
+  size 128
+  attenuate 1
+}
+
+object ObLightWhite
+{
+  frame HDB3 { light WhiteLight }
+}
+
+object ObLightRed
+{
+  frame HDB3 { light RedLight }
+}
+
+object obLightOrange
+{
+  frame HDB3 { light OrangeLight }
+}
+
+object obLightYellow
+{
+  frame HDB3 { light YellowLight }
+}
+
+object obLightBlue
+{
+  frame HDB3 { light BlueLight }
+}
+
+object obLightGreen
+{
+  frame HDB3 { light GreenLight }
 }
 ]]
 
@@ -1047,8 +1113,7 @@ OB_MODULES["zdoom_specials"] =
       priority = 7
       choices = ZDOOM_SPECIALS.YES_NO
       default = "yes"
-      tooltip = "[UNFINISHED] Generates dynamic point lights on ceiling spot lights. "..
-                "Currently only adds raw entities and does not actually light anything up."
+      tooltip = "Generates dynamic point lights on ceiling light prefabs."
       gap = 1
     }
 

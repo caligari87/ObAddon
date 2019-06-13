@@ -18,6 +18,8 @@ PREFABS.Light_basic =
   bound_z1 = -32
   bound_z2 = 0
 
+  light_color = "white"
+
   -- use the occasional-blink FX (fairly rarely)
   sector_1  = { [0]=90, [1]=15 }
 
@@ -38,6 +40,8 @@ PREFABS.Light_urban1 =
   flat_TLITE6_4 = "CEIL1_3"
    tex_METAL    = "WOOD10"
 
+  light_color = "white"
+
   -- use the occasional-blink FX (fairly rarely)
   sector_1  = { [0]=90, [1]=15 }
 }
@@ -50,6 +54,8 @@ PREFABS.Light_urban2 =
 
   prob   = 25
   theme  = "urban"
+
+  light_color = "white"
 
   -- use the occasional-blink FX (fairly rarely)
   sector_1  = { [0]=90, [1]=15 }
@@ -66,6 +72,8 @@ PREFABS.Light_urban3 =
   theme  = "urban"
 
   flat_TLITE6_1 = "FLAT2"
+
+  light_color = "white"
 
   -- use the occasional-blink FX (fairly rarely)
   sector_1  = { [0]=90, [1]=15 }
@@ -88,6 +96,8 @@ PREFABS.Light_tech1 =
   flat_CEIL5_2  = "FLAT23"
   tex_METAL = "SHAWN2"
 
+  light_color = "red"
+
   -- use the occasional-blink FX (fairly rarely)
   sector_1  = { [0]=90, [1]=15 }
 
@@ -105,6 +115,8 @@ PREFABS.Light_tech2 =
   flat_TLITE6_1 = "TLITE6_6"
   flat_CEIL5_2  = "FLAT23"
   tex_METAL = "SHAWN2"
+
+  light_color = "yellow"
 
   -- use the occasional-blink FX (fairly rarely)
   sector_1  = { [0]=90, [1]=15 }
@@ -124,6 +136,8 @@ PREFABS.Light_tech_red =
   flat_CEIL5_2  = "FLAT23"
   tex_METAL = "SHAWN2"
 
+  light_color = "red"
+
   -- use the occasional-blink FX (fairly rarely)
   sector_1  = { [0]=90, [1]=15 }
 
@@ -142,6 +156,8 @@ PREFABS.Light_tech_green =
   flat_CEIL5_2  = "FLAT23"
   tex_METAL = "SHAWN2"
 
+  light_color = "white"
+
   -- use the occasional-blink FX (fairly rarely)
   sector_1  = { [0]=90, [1]=15 }
 
@@ -159,6 +175,8 @@ PREFABS.Light_tech_blue =
   flat_TLITE6_4 = "FLAT22"
    tex_METAL    = "SHAWN2"
 
+  light_color = "blue"
+
   -- use the occasional-blink FX (fairly rarely)
   sector_1  = { [0]=90, [1]=15 }
 
@@ -175,6 +193,8 @@ PREFABS.Light_fan_tech =
   prob   = 20
   theme  = "tech"
 
+  light_color = "none"
+
   flat_TLITE6_1 = "FAN1"
   flat_CEIL5_2  = "FLAT23"
   tex_METAL = "SHAWN2"
@@ -190,6 +210,8 @@ PREFABS.Light_fan_rusty =
 
   prob   = 20
   theme  = "!tech"
+
+  light_color = "none"
 
   flat_TLITE6_1 = "FAN1"
   flat_CEIL5_2  = "CEIL5_2"

@@ -317,12 +317,6 @@ function Render_edge(E)
       end
     end
 
-    if E.area.mode == "void" then
-      if E.peer.area.mode == "void" then
-        def = PREFABS["Wall_plain"]
-      end
-    end
-
     return def
   end
 
@@ -2079,17 +2073,29 @@ chunk.goal.action = "S1_OpenDoor"  -- FIXME IT SHOULD BE SET WHEN JOINER IS REND
     local skin = { ceil=ceil_mat }
     local T = Trans.spot_transform(chunk.mx, chunk.my, ceil_h, chunk.prefab_dir or 2)
 
-    -- parameter pass for ZDoom dynamic lights module
+    -- dynamic light fabrication for ZDoom dynamic lights module
     if PARAM.dynamic_lights == "yes" then
-      if def.kind == "light" then
+      if def.kind == "light" and def.light_color != "none" then
         local light_ent = {
-          map = LEVEL.id
-          prefab = def.name
           x = chunk.mx
           y = chunk.my
           z = ceil_h - def.bound_z1 - 8
-          id = 14999
         }
+
+        if def.light_color == "red" then
+          light_ent.id = 14001
+        elseif def.light_color == "orange" then
+          light_ent.id = 14002
+        elseif def.light_color == "yellow" then
+          light_ent.id = 14003
+        elseif def.light_color == "blue" then
+          light_ent.id = 14004
+        elseif def.light_color == "green" then
+          light_ent.id = 14005
+        elseif def.light_color == "white" then
+          light_ent.id = 14000
+        end
+
         raw_add_entity(light_ent)
       end
     end
