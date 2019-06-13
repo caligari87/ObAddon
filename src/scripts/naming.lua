@@ -5322,6 +5322,41 @@ function namelib.generate_unique_noun(m)
     end
   end
 
+  local function make_random_hashes(a, b)
+    local hash_string = ""
+
+    local number_list =
+    {
+      "0","1","2","3","4","5","6","7","8","9"
+    }
+
+    local alphabet_list =
+    {
+      "A","B","C","D","E","F","G","H","I",
+      "J","K","L","M","N","O","P","Q","R",
+      "S","T","U","V","W","X","Y","Z"
+    }
+
+    local function fetch_a_digit()
+      if rand.odds(75) then
+        return rand.pick(number_list)
+      else
+        return rand.pick(alphabet_list)
+      end
+    end
+
+    if a == 0 then
+      hash_string = fetch_a_digit()
+    else
+      if rand.odds(20) then
+        hash_string = "-"
+      end
+      hash_string = hash_string .. fetch_a_digit()
+    end
+
+    return hash_string
+  end
+
   local name = ""
   local syllable_count
   if mode == "anglican" then
@@ -5332,7 +5367,7 @@ function namelib.generate_unique_noun(m)
 
   local i = 1
 
-  if mode != "community_members" then
+  if mode == "anglican" or mode == "exotic" then
     repeat
       name = name .. make_placelike_syllable(mode)
       i = i + 1
@@ -5347,6 +5382,34 @@ function namelib.generate_unique_noun(m)
     else
       name = rand.pick(namelib.COMMUNITY_MEMBERS.regulars)
     end
+  end
+
+  local x = 0
+  local num_string = ""
+  if mode == "number" then
+    -- pick numbers
+    local num_length = rand.irange(1,6)
+
+    while x <= num_length do
+      -- don't accept 0's for the first one
+      if num_string:len() == 0 then
+        num_string = tostring(rand.irange(1,9))
+      else
+        num_string = num_string .. tostring(rand.irange(0,9))
+      end
+      x = x + 1
+    end
+
+    name = num_string
+  elseif mode == "serial" then
+    local num_length = rand.irange(1,8)
+
+    while x <= num_length do
+      num_string = num_string .. make_random_hashes(x, num_length)
+      x = x + 1
+    end
+
+    name = num_string
   end
 
   return name
@@ -5378,6 +5441,9 @@ function namelib.fix_up(name)
   name = string.gsub(name, "NOUNGENANGLICAN", namelib.generate_unique_noun("anglican"))
   name = string.gsub(name, "NOUNGENEXOTIC", namelib.generate_unique_noun("exotic"))
   name = string.gsub(name, "NOUNMEMBERS", namelib.generate_unique_noun("community_members"))
+
+  name = string.gsub(name, "NOUNNUMBER", namelib.generate_unique_noun("number"))
+  name = string.gsub(name, "NOUNSERIAL", namelib.generate_unique_noun("serial"))
   return name
 end
 
