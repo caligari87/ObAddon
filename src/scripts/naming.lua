@@ -171,6 +171,11 @@ namelib.NAMES =
       ["%v %a %n"] = 24
       ["%v %b %n"] = 24
 
+      -- numericals
+      ["%a %n NOUNSERIAL"] = 26
+      ["%b %n NOUNSERIAL"] = 26
+      ["%a %b %n NOUNSERIAL"] = 18
+
 --[[
       ["%r the %n"] = 12
       ["%r the %a %n"] = 12
@@ -1667,6 +1672,8 @@ namelib.NAMES =
 
       ["%v %n"]    = 25
       ["%v %a %n"] = 25
+
+      ["NOUNNUMBER %a %n"] = 40
 
       ["%a %n %x"] = 20
       ["%n of the %o %x"] = 3
@@ -5388,9 +5395,9 @@ function namelib.generate_unique_noun(m)
   local num_string = ""
   if mode == "number" then
     -- pick numbers
-    local num_length = rand.irange(1,6)
+    local num_length = rand.pick({1,2,3,3,4,4,5,6})
 
-    while x <= num_length do
+    while x < num_length do
       -- don't accept 0's for the first one
       if num_string:len() == 0 then
         num_string = tostring(rand.irange(1,9))
@@ -5402,9 +5409,9 @@ function namelib.generate_unique_noun(m)
 
     name = num_string
   elseif mode == "serial" then
-    local num_length = rand.irange(1,8)
+    local num_length = rand.irange(3,8)
 
-    while x <= num_length do
+    while x < num_length do
       num_string = num_string .. make_random_hashes(x, num_length)
       x = x + 1
     end
