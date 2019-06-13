@@ -212,12 +212,15 @@ actor OBLight : PointLight 14999
     Spawn:
       HDB3 A 1
       Loop
-}
+  }
 }]]
 
 ZDOOM_SPECIALS.DYNAMIC_LIGHT_EDNUMS =
 [[
-
+DoomEdNums =
+{
+  14999 = OBLight
+}
 ]]
 
 ZDOOM_SPECIALS.DYNAMIC_LIGHT_GLDEFS =
@@ -1044,7 +1047,8 @@ OB_MODULES["zdoom_specials"] =
       priority = 7
       choices = ZDOOM_SPECIALS.YES_NO
       default = "yes"
-      tooltip = "[UNFINISHED] Generates dynamic point lights on ceiling spot lights."
+      tooltip = "[UNFINISHED] Generates dynamic point lights on ceiling spot lights. "..
+                "Currently only adds raw entities and does not actually light anything up."
       gap = 1
     }
 
