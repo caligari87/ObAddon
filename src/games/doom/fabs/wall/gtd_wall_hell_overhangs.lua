@@ -28,11 +28,15 @@ PREFABS.Wall_hell_castle_maccicolations_overhang =
   deep = 32
 }
 
-PREFABS.Wall_hell_castle_turret =
+PREFABS.Wall_hell_castle_maccicolations_turret =
 {
   template = "Wall_hell_castle_maccicolations"
 
   map = "MAP03"
 
+  height = 192
+
   deep = 48
+
+  bound_z2 = 192
 }
