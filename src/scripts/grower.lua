@@ -3425,7 +3425,12 @@ function Grower_grammatical_room(R, pass, is_emergency)
     apply_num = rand.irange(5,10)
 
   elseif pass == "square_out" then
-    apply_num = rand.irange(10,30)
+    local square_apply_count = 0
+    each A in R.areas do
+      A:calc_volume()
+      square_apply_count = square_apply_count + A.svolume
+    end
+    apply_num = math.floor(square_apply_count/8)
 
   elseif pass == "smooth_out" then
     apply_num = rand.irange(2,6)
@@ -3651,7 +3656,7 @@ function Grower_sprout_room(R)
 
   Grower_grammatical_room(R, "sprout")
 
-  if rand.odds(75) and not R.is_cave
+  if rand.odds(75) and not R.is_cave and not R.is_park
   and not R.is_hallway and not R.is_street then
     Grower_grammatical_room(R, "square_out")
     R.is_squarified = true
