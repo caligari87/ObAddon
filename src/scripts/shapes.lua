@@ -3165,7 +3165,7 @@ GROW_TINY_U =
 
 GROW_STAIRED_HORSESHOE =
 {
-  prob = 35
+  prob = 25
 
   aversion = 10
 
@@ -3189,7 +3189,7 @@ GROW_STAIRED_HORSESHOE =
 
 GROW_STAIRED_HORSESHOE_TIGHTER =
 {
-  prob = 35
+  prob = 25
 
   aversion = 10
 
