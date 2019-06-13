@@ -1,9 +1,9 @@
 ----------------------------------------------------------------
---  MODULE: Glaice Materials for Doom/Ultimate Doom
+--  MODULE: Armaetus Materials for Doom/Ultimate Doom
 ----------------------------------------------------------------
 --
 --  Copyright (C) 2019 MsrSgtShooterPerson
---  Copyright (C) 2015-2019 Glaice
+--  Copyright (C) 2015-2019 Armaetus
 --
 --  This program is free software; you can redistribute it and/or
 --  modify it under the terms of the GNU General Public License
