@@ -2056,7 +2056,7 @@ function Room_prepare_hallways()
           end
         else
           -- MSSP-TODO: attempt to add can_flip support here
-          if piece.prefab_def.can_flip and rand.odds(50) then
+          if piece.prefab_def.can_flip and R.stair_z_dir == -1 then
             new_h = new_h - delta_h
             A.prelim_h = A.prelim_h - delta_h
             piece.hallway_flip = true
@@ -2072,6 +2072,7 @@ function Room_prepare_hallways()
 
 
   local function visit_hallway(R)
+    R.stair_z_dir = rand.pick({-1,1})
     flow(R, R.first_piece, 0, {})
   end
 
@@ -3138,11 +3139,6 @@ end
 
 
   ---| Room_floor_ceil_heights |---
-
-  -- give each zone a preferred hallway z_dir  [ NOT USED ATM ]
-  each Z in LEVEL.zones do
-    Z.hall_up_prob = rand.sel(70, 80, 20)
-  end
 
   local first = LEVEL.start_room or LEVEL.blue_base or LEVEL.rooms[1]
 
