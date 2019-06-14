@@ -6791,6 +6791,7 @@ DECORATE_CLIFF_CAGE =
 
   structure =
   {
+    "x1x","x1x"
     "111","111"
     "111","1C1"
     "222","222"
@@ -6805,6 +6806,7 @@ DECORATE_CLIFF_CAGE_3X_ROW =
 
   structure =
   {
+    "x111x","x111x"
     "11111","11111"
     "11111","1CCC1"
     "22222","22222"
@@ -6819,6 +6821,7 @@ DECORATE_CLIFF_CAGE_3X_STAGGERED =
 
   structure =
   {
+    "x11111x","x11111x"
     "1111111","1111111"
     "1111111","1C1C1C1"
     "2222222","2222222"
