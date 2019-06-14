@@ -481,7 +481,7 @@ PREFABS.Light_tech_LIGHTS1 =
   flat_CEIL5_2  = "FLAT23"
   tex_METAL = "SHAWN2"
 
-  light_color = "green"
+  light_color = "red"
 
   sector_1  = { [0]=90, [1]=15 }
 }
