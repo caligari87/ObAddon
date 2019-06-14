@@ -163,8 +163,8 @@ OB_MODULES["misc"] =
       name="road_markings",
       label=_("Road Markings"),
       choices=MISC_STUFF.YES_NO,
-      default = "no",
-      tooltip = _("[SUPER ALPHA FEATURE] Adds street markings to roads."),
+      default = "yes",
+      tooltip = _("Adds street markings to roads."),
       gap = 1,
     }
 
@@ -173,6 +173,7 @@ OB_MODULES["misc"] =
       label=_("Exit Signs")
       choices=MISC_STUFF.YES_NO
       tooltip=_("Places exit signs by exiting room")
+      default = "yes"
       gap=1
     }
 
@@ -180,7 +181,10 @@ OB_MODULES["misc"] =
       name="linear_start"
       label=_("Linear Start")
       choices=MISC_STUFF.YES_NO
-      tooltip=_("Stops start rooms from having more than one external room connection. Can help reduce being overwhelmed by attacks from multiple directions when multiple neighboring rooms connect into the start room.")
+      tooltip=_("Stops start rooms from having more than one external room connection. " ..
+      "Can help reduce being overwhelmed by attacks from multiple directions " ..
+      "when multiple neighboring rooms connect into the start room.")
+      default = "no"
       gap=1
     }
 
