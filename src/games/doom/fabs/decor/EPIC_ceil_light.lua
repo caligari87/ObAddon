@@ -234,7 +234,7 @@ PREFABS.Light_urban_TLITE5_2 =
 
   flat_TLITE6_1 = "TLITE5_2"
 
-  light_color = "white"
+  light_color = "beige"
 
   sector_1  = { [0]=90, [1]=15 }
 }

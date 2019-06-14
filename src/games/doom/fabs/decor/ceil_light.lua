@@ -18,7 +18,7 @@ PREFABS.Light_basic =
   bound_z1 = -32
   bound_z2 = 0
 
-  light_color = "white"
+  light_color = "beige"
 
   -- use the occasional-blink FX (fairly rarely)
   sector_1  = { [0]=90, [1]=15 }
@@ -55,7 +55,7 @@ PREFABS.Light_urban2 =
   prob   = 25
   theme  = "urban"
 
-  light_color = "white"
+  light_color = "beige"
 
   -- use the occasional-blink FX (fairly rarely)
   sector_1  = { [0]=90, [1]=15 }
@@ -116,7 +116,7 @@ PREFABS.Light_tech2 =
   flat_CEIL5_2  = "FLAT23"
   tex_METAL = "SHAWN2"
 
-  light_color = "yellow"
+  light_color = "beige"
 
   -- use the occasional-blink FX (fairly rarely)
   sector_1  = { [0]=90, [1]=15 }
