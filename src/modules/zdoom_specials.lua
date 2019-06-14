@@ -270,14 +270,14 @@ PointLight BlueLight
 
 PointLight GreenLight
 {
-  color 0 1 0
+  color 0 0.8 0
   size 128
   offset 0 -48 0
 }
 
 PointLight BeigeLight
 {
-  color 0.8 1 0.5
+  color 1 0.8 0.5
   size 128
   offset 0 -48 0
 }
