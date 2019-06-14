@@ -149,9 +149,9 @@ OB_MODULES["misc"] =
       name = "liquid_sinks"
       label=_("Liquid Sinks"),
       choices=MISC_STUFF.YES_NO,
-      tooltip = "Disables or enables liquid sinks. Liquid sinks are walkable floors that " ..
+      tooltip = "Enables or disables liquid sinks. Liquid sinks are walkable floors that " ..
                 "are often converted into depressions with the level's liquid. " ..
-                "May greatly inconvenience the player.",
+                "May greatly inconvenience the player but default Oblige behavior is 'Yes'.",
       default = "yes",
       gap = 1,
     }
