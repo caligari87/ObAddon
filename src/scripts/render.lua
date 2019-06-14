@@ -2083,17 +2083,19 @@ chunk.goal.action = "S1_OpenDoor"  -- FIXME IT SHOULD BE SET WHEN JOINER IS REND
         }
 
         if def.light_color == "red" then
-          light_ent.id = 14001
+          light_ent.id = 14998
         elseif def.light_color == "orange" then
-          light_ent.id = 14002
+          light_ent.id = 14997
         elseif def.light_color == "yellow" then
-          light_ent.id = 14003
+          light_ent.id = 14996
         elseif def.light_color == "blue" then
-          light_ent.id = 14004
+          light_ent.id = 14995
         elseif def.light_color == "green" then
-          light_ent.id = 14005
+          light_ent.id = 14994
+        elseif def.light_color == "beige" then
+          light_ent.id = 14993
         elseif def.light_color == "white" then
-          light_ent.id = 14000
+          light_ent.id = 14999
         end
 
         raw_add_entity(light_ent)
@@ -2584,6 +2586,8 @@ end
 
 
 
+-- maybe most of this decision code should be placed elsewhere
+-- and only the render code should be here? -MSSP
 function Render_skybox()
 
   local skyfab
@@ -2598,47 +2602,38 @@ function Render_skybox()
 
     skyfab = rand.pick(skyfab_list)
 
-    -- proper skybox picking code doesn't seem to work and
-    -- always returns nil
-
-    --[[local reqs =
-    {
-      kind = "skybox"
-    }
-    skyfab = Fab_pick(reqs)]]
-
   elseif OB_CONFIG.zdoom_skybox == "themed" then
-    skyfab_name = rand.key_by_probs(GAME.THEMES[LEVEL.theme_name].skyboxes)
-    skyfab = PREFABS[skyfab_name]
+
+    -- check against skyboxes that don't match the current
+    -- environment themes specifically
+    local match_state = false
+    while match_state != true do
+      skyfab = PREFABS[rand.key_by_probs(GAME.THEMES[LEVEL.theme_name].skyboxes)]
+
+      if LEVEL.outdoor_theme == "snow" then
+        each v in GLAICE_EXCLUDE_DESERT_SKYBOXES do
+          if skyfab.name == v then
+            match_state = false
+          else
+            match_state = true
+          end
+        end
+      elseif LEVEL.outdoor_theme == "sand" then
+        each v in GLAICE_EXCLUDE_SNOW_SKYBOXES do
+          if skyfab.name == v then
+            match_state = false
+          else
+            match_state = true
+          end
+        end
+      elseif LEVEL.outdoor_theme == "temperate" then
+        match_state = true
+      end
+    end
+
   elseif OB_CONFIG.zdoom_skybox == "generic" then
     skyfab = PREFABS["Skybox_generic"]
   end
-
-  -- check against skyboxes that don't match the current
-  -- environment themes specifically
-  local match_state = false
-  while match_state == false do
-    match_state = true
-
-    if LEVEL.outdoor_theme == "snow" then
-      for k,v in pairs(GLAICE_EXCLUDE_DESERT_SKYBOXES) do
-        if skyfab.name == v then match_state = false end
-      end
-    elseif LEVEL.outdoor_theme == "sand" then
-      for k,v in pairs(GLAICE_EXCLUDE_SNOW_SKYBOXES) do
-        if skyfab.name == v then match_state = false end
-      end
-    end
-
-    if match_state == true then continue end
-    if OB_CONFIG.zdoom_skybox == "random" then continue end
-
-    if match_state == false then
-      skyfab_name = rand.key_by_probs(GAME.THEMES[LEVEL.theme_name].skyboxes)
-      skyfab = PREFABS[skyfab_name]
-    end
-  end
-
 
   if not skyfab then
     gui.printf("WARNING: Could not find a proper skybox for theme '" .. LEVEL.theme_name .. "'\n")

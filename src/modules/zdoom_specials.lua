@@ -203,9 +203,9 @@ ZDOOM_SPECIALS.INTERPIC_MUSIC =
 
 ZDOOM_SPECIALS.DYNAMIC_LIGHT_DECORATE =
 [[// ObAddon dynamic light actors
-actor ObLightWhite : PointLight 14000
+actor ObLightWhite : PointLight 14999
 {
-  Height 64
+  Height 16
 
   +NOGRAVITY
   +SPAWNCEILING
@@ -215,12 +215,12 @@ actor ObLightWhite : PointLight 14000
       HDB3 A -1
   }
 }
-actor ObLightRed : ObLightWhite 14001 {}
-actor ObLightOrange : ObLightWhite 14002 {}
-actor ObLightYellow : ObLightWhite 14003 {}
-actor ObLightBlue : ObLightWhite 14004 {}
-actor ObLightGreen : ObLightWhite 14005 {}
-actor ObLightBeige : ObLightBeige 14006 {}
+actor ObLightRed : ObLightWhite 14998 {}
+actor ObLightOrange : ObLightWhite 14997 {}
+actor ObLightYellow : ObLightWhite 14996 {}
+actor ObLightBlue : ObLightWhite 14995 {}
+actor ObLightGreen : ObLightWhite 14994 {}
+actor ObLightBeige : ObLightWhite 14993 {}
 ]]
 
 ZDOOM_SPECIALS.DYNAMIC_LIGHT_EDNUMS =
@@ -237,6 +237,7 @@ PointLight WhiteLight
   color 0.85 0.9 1
   size 128
   attenuate 1
+  offset 0 -48 0
 }
 
 PointLight RedLight
@@ -244,6 +245,7 @@ PointLight RedLight
   color 1 0 0
   size 128
   attenuate 1
+  offset 0 -48 0
 }
 
 PointLight YellowLight
@@ -251,6 +253,7 @@ PointLight YellowLight
   color 1 0.8 0
   size 128
   attenuate 1
+  offset 0 -48 0
 }
 
 PointLight OrangeLight
@@ -258,6 +261,7 @@ PointLight OrangeLight
   color 1 0.5 0
   size 128
   attenuate 1
+  offset 0 -48 0
 }
 
 PointLight BlueLight
@@ -265,6 +269,7 @@ PointLight BlueLight
   color 0.1 0.1 1
   size 128
   attenuate 1
+  offset 0 -48 0
 }
 
 PointLight GreenLight
@@ -272,6 +277,7 @@ PointLight GreenLight
   color 0 1 0
   size 128
   attenuate 1
+  offset 0 -48 0
 }
 
 PointLight BeigeLight
@@ -279,6 +285,7 @@ PointLight BeigeLight
   color 0.8 1 0.5
   size 128
   attenuate 1
+  offset 0 -48 0
 }
 
 object ObLightWhite
