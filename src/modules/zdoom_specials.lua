@@ -237,7 +237,6 @@ PointLight WhiteLight
 {
   color 0.85 0.9 1
   size 128
-  attenuate 1
   offset 0 -48 0
 }
 
@@ -245,7 +244,6 @@ PointLight RedLight
 {
   color 1 0 0
   size 128
-  attenuate 1
   offset 0 -48 0
 }
 
@@ -253,7 +251,6 @@ PointLight YellowLight
 {
   color 1 0.8 0
   size 128
-  attenuate 1
   offset 0 -48 0
 }
 
@@ -261,7 +258,6 @@ PointLight OrangeLight
 {
   color 1 0.5 0
   size 128
-  attenuate 1
   offset 0 -48 0
 }
 
@@ -269,7 +265,6 @@ PointLight BlueLight
 {
   color 0.1 0.1 1
   size 128
-  attenuate 1
   offset 0 -48 0
 }
 
@@ -277,7 +272,6 @@ PointLight GreenLight
 {
   color 0 1 0
   size 128
-  attenuate 1
   offset 0 -48 0
 }
 
@@ -285,7 +279,6 @@ PointLight BeigeLight
 {
   color 0.8 1 0.5
   size 128
-  attenuate 1
   offset 0 -48 0
 }
 
