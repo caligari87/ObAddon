@@ -203,8 +203,9 @@ ZDOOM_SPECIALS.INTERPIC_MUSIC =
 
 ZDOOM_SPECIALS.DYNAMIC_LIGHT_DECORATE =
 [[// ObAddon dynamic light actors
-actor ObLightWhite : PointLight 14999
+actor ObLightWhite 14999
 {
+  Scale 0 //Should really use a nice corona sprite but whatever
   Height 16
 
   +NOGRAVITY
@@ -212,7 +213,7 @@ actor ObLightWhite : PointLight 14999
 
   States{
     Spawn:
-      HDB3 A -1
+      TNTA A -1
   }
 }
 actor ObLightRed : ObLightWhite 14998 {}
@@ -290,37 +291,37 @@ PointLight BeigeLight
 
 object ObLightWhite
 {
-  frame HDB3 { light WhiteLight }
+  frame TNTA { light WhiteLight }
 }
 
 object ObLightRed
 {
-  frame HDB3 { light RedLight }
+  frame TNTA { light RedLight }
 }
 
 object obLightOrange
 {
-  frame HDB3 { light OrangeLight }
+  frame TNTA { light OrangeLight }
 }
 
 object obLightYellow
 {
-  frame HDB3 { light YellowLight }
+  frame TNTA { light YellowLight }
 }
 
 object obLightBlue
 {
-  frame HDB3 { light BlueLight }
+  frame TNTA { light BlueLight }
 }
 
 object obLightGreen
 {
-  frame HDB3 { light GreenLight }
+  frame TNTA { light GreenLight }
 }
 
 object ObLightBeige
 {
-  frame HDB3 { light BeigeLight }
+  frame TNTA { light BeigeLight }
 }
 ]]
 
