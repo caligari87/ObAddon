@@ -2612,7 +2612,7 @@ function Render_skybox()
 
       if LEVEL.outdoor_theme == "snow" then
         each v in GLAICE_EXCLUDE_DESERT_SKYBOXES do
-          if skyfab.name == v then
+          if skyfab == v then
             match_state = false
           else
             match_state = true
@@ -2620,13 +2620,14 @@ function Render_skybox()
         end
       elseif LEVEL.outdoor_theme == "sand" then
         each v in GLAICE_EXCLUDE_SNOW_SKYBOXES do
-          if skyfab.name == v then
+          if skyfab == v then
             match_state = false
           else
             match_state = true
           end
         end
-      elseif LEVEL.outdoor_theme == "temperate" then
+      elseif LEVEL.outdoor_theme == "temperate"
+      or not LEVEL.outdoor_theme then
         match_state = true
       end
     end
