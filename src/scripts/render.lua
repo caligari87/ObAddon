@@ -2606,11 +2606,12 @@ function Render_skybox()
 
     -- check against skyboxes that don't match the current
     -- environment themes specifically
-    local match_state = false
-    while match_state != true do
+
+    --local match_state = false
+    --while match_state != true do
       skyfab = PREFABS[rand.key_by_probs(GAME.THEMES[LEVEL.theme_name].skyboxes)]
 
-      if LEVEL.outdoor_theme == "snow" then
+    --[[  if LEVEL.outdoor_theme == "snow" then
         each v in GLAICE_EXCLUDE_DESERT_SKYBOXES do
           if skyfab == v then
             match_state = false
@@ -2631,6 +2632,7 @@ function Render_skybox()
         match_state = true
       end
     end
+]]
 
   elseif OB_CONFIG.zdoom_skybox == "generic" then
     skyfab = PREFABS["Skybox_generic"]
