@@ -1973,6 +1973,134 @@ GLAICE_SINK_DEFS =
     trim_mat = "GOTH22"
     trim_dz = 0
   }
+
+  -- urban-ish carpets -MSSP
+  floor_sink_CARPET1 =
+  {
+    mat = "CARPET1"
+    dz = 1
+
+    trim_mat = "ORANFLOR"
+    trim_dz = 1
+  }
+
+  floor_sink_CARPET1 =
+  {
+    mat = "CARPET1"
+    dz = 1
+
+    trim_mat = "ORANFLOR"
+    trim_dz = 1
+  }
+
+  floor_sink_CARPET1 =
+  {
+    mat = "CARPET1"
+    dz = 1
+
+    trim_mat = "ORANFLOR"
+    trim_dz = 1
+  }
+
+  floor_sink_CARPET2 =
+  {
+    mat = "CARPET2"
+    dz = 1
+
+    trim_mat = "ORANFLOR"
+    trim_dz = 1
+  }
+
+  floor_sink_CARPET2 =
+  {
+    mat = "CARPET2"
+    dz = 1
+
+    trim_mat = "CEIL5_1"
+    trim_dz = 1
+  }
+
+  floor_sink_CARPET3 =
+  {
+    mat = "CARPET3"
+    dz = 1
+
+    trim_mat = "ORANFLOR"
+    trim_dz = 1
+  }
+
+  floor_sink_CARPET4 =
+  {
+    mat = "CARPET4"
+    dz = 1
+
+    trim_mat = "CEIL5_1"
+    trim_dz = 1
+  }
+
+  floor_sink_CARPET5 =
+  {
+    mat = "CARPET5"
+    dz = 1
+
+    trim_mat = "CEIL5_1"
+    trim_dz = 1
+  }
+
+  floor_sink_CARPET6 =
+  {
+    mat = "CARPET6"
+    dz = 1
+
+    trim_mat = "CEIL5_1"
+    trim_dz = 1
+  }
+
+  floor_sink_CARPET7 =
+  {
+    mat = "CARPET7"
+    dz = 1
+
+    trim_mat = "ORANFLOR"
+    trim_dz = 1
+  }
+
+  floor_sink_CARPET8 =
+  {
+    mat = "CARPET8"
+    dz = 1
+
+    trim_mat = "FLAT19"
+    trim_dz = 1
+  }
+
+  -- tech carpets
+  floor_sink_carpet_FLAT15 =
+  {
+    mat = "FLAT15"
+    dz = 1
+
+    trim_mat = "FASHBLU"
+    trim_dz = 1
+  }
+
+  floor_sink_carpet_FLOOR1_1 =
+  {
+    mat = "FLOOR1_1"
+    dz = 1
+
+    trim_mat = "FLAT15"
+    trim_dz = 1
+  }
+
+  floor_sink_carpet_FLOOR1_2 =
+  {
+    mat = "FLOOR1_2"
+    dz = 1
+
+    trim_mat = "FASHBLU"
+    trim_dz = 1
+  }
 }
 
 GLAICE_TECH_CEILING_SINKS =
@@ -2080,16 +2208,38 @@ GLAICE_HELL_CEILING_SINKS =
 GLAICE_TECH_FLOOR_SINKS =
 {
   liquid_warning_strip = 10
+
+  floor_sink_carpet_FLAT15 = 10
+  floor_sink_carpet_FLOOR1_1 = 10
+  floor_sink_carpet_FLOOR1_2 = 10
 }
 
 GLAICE_URBAN_FLOOR_SINKS =
 {
   liquid_warning_strip = 10
+
+  floor_sink_CARPET1 = 7
+  floor_sink_CARPET2 = 7
+  floor_sink_CARPET3 = 7
+  floor_sink_CARPET4 = 7
+  floor_sink_CARPET5 = 7
+  floor_sink_CARPET6 = 7
+  floor_sink_CARPET7 = 7
+  floor_sink_CARPET8 = 7
 }
 
 GLAICE_HELL_FLOOR_SINKS =
 {
   floor_sink_GOTH22 = 10
+
+  floor_sink_CARPET1 = 7
+  floor_sink_CARPET2 = 7
+  floor_sink_CARPET3 = 7
+  floor_sink_CARPET4 = 7
+  floor_sink_CARPET5 = 7
+  floor_sink_CARPET6 = 7
+  floor_sink_CARPET7 = 7
+  floor_sink_CARPET8 = 7
 }
 
 -- Natural textures for outdoor parks.
