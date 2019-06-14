@@ -2030,6 +2030,22 @@ stderrf("Cages in %s [%s pressure] --> any_prob=%d  per_prob=%d\n",
   end
 
 
+  local function select_lamp_for_porch(A)
+    local reqs =
+    {
+      kind = "light"
+      where = "point"
+
+      size = 80
+      height = A.ceil_h - A.floor_h
+
+      env = "building"
+    }
+
+    return Fab_pick(reqs, "none_ok")
+  end
+
+
   local function pick_decorative_bling(R)
     local decor_prob
 
@@ -2067,7 +2083,7 @@ stderrf("Cages in %s [%s pressure] --> any_prob=%d  per_prob=%d\n",
 
 
   local function pick_ceiling_lights(R)
-    if R.is_cave or R.is_outdoor then return end
+    if R.is_cave or R.is_park then return end
 
     local groups = {}
 
@@ -2093,6 +2109,33 @@ stderrf("Cages in %s [%s pressure] --> any_prob=%d  per_prob=%d\n",
         end
       end
     end
+
+    -- allow fabrication of ceiling lights in outdoor porches
+    if R.is_outdoor then
+      each A in R.areas do
+        if A.is_porch then
+          if not rand.odds(prob) then continue end
+
+          A.lamp_def = select_lamp_for_porch(A)
+          if not A.lamp_def then continue end
+        end
+      end
+
+      each chunk in R.floor_chunks do
+        if chunk.area.lamp_def then
+          if chunk.content then continue end
+          if chunk.floor_below and chunk.floor_below.content then continue end
+
+          chunk.content = "DECORATION"
+          chunk.kind = "ceil"
+          chunk.prefab_def = chunk.area.lamp_def
+          chunk.prefab_dir = 2
+
+          chunk.area.bump_light = 16
+        end
+      end
+    end
+
   end
 
 
