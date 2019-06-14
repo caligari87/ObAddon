@@ -1145,6 +1145,18 @@ function add_script_lump(lumpname, string)
   gui.wad_add_text_lump(lumpname, script_lines_to_table(string))
 end
 
+
+function link_seed_info_to_areas()
+  each R in LEVEL.rooms do
+    each A in R.areas do
+      each S in A.seeds do
+        SEEDS[S.sx][S.sy] = S
+      end
+    end
+  end
+end
+
+
 --------========| A* PATHING ALGORITHM |========--------
 
 

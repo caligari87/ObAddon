@@ -135,6 +135,7 @@ OB_MODULES["misc"] =
     }
     { name="scenics",     label=_("Scenics"),          choices=STYLE_CHOICES,
       tooltip = "Controls the amount of fancy scenics visible at room bordering the maps.",
+      gap = 1,
     }
     { name = "corner_style",
       label=_("Sink Style"),
@@ -143,7 +144,16 @@ OB_MODULES["misc"] =
                 "ceilings and floors. Default is Curved, where Oblige makes sink " ..
                 "corners soft, while Sharp leaves the corners angular.",
       default = "random",
-      gap = 1
+    }
+    {
+      name = "liquid_sinks"
+      label=_("Liquid Sinks"),
+      choices=MISC_STUFF.YES_NO,
+      tooltip = "Disables or enables liquid sinks. Liquid sinks are walkable floors that " ..
+                "are often converted into depressions with the level's liquid. " ..
+                "May greatly inconvenience the player.",
+      default = "yes",
+      gap = 1,
     }
 
     { name="darkness",    label=_("Dark Outdoors"),  choices=STYLE_CHOICES }
