@@ -213,7 +213,7 @@ actor ObLightWhite 14999
 
   States{
     Spawn:
-      TNTA A -1
+      CAND A -1
   }
 }
 actor ObLightRed : ObLightWhite 14998 {}
@@ -291,37 +291,37 @@ PointLight BeigeLight
 
 object ObLightWhite
 {
-  frame TNTA { light WhiteLight }
+  frame CAND { light WhiteLight }
 }
 
 object ObLightRed
 {
-  frame TNTA { light RedLight }
+  frame CAND { light RedLight }
 }
 
 object obLightOrange
 {
-  frame TNTA { light OrangeLight }
+  frame CAND { light OrangeLight }
 }
 
 object obLightYellow
 {
-  frame TNTA { light YellowLight }
+  frame CAND { light YellowLight }
 }
 
 object obLightBlue
 {
-  frame TNTA { light BlueLight }
+  frame CAND { light BlueLight }
 }
 
 object obLightGreen
 {
-  frame TNTA { light GreenLight }
+  frame CAND { light GreenLight }
 }
 
 object ObLightBeige
 {
-  frame TNTA { light BeigeLight }
+  frame CAND { light BeigeLight }
 }
 ]]
 
