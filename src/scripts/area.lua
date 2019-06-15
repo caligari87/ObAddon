@@ -765,6 +765,14 @@ function Junction_calc_fence_z(A1, A2)
     else
       top_z = math.max(z1, z2)
     end
+
+    if A1.room.is_outdoor or A2.room.is_outdoor then
+      if top_z > A1.ceil_h
+      or top_z > A2.ceil_h then
+        top_z = A1.floor_h
+      end
+    end
+
   end
 
   return top_z + PARAM.jump_height + 8

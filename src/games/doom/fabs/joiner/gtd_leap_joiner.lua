@@ -3,7 +3,7 @@ PREFABS.Joiner_leap =
   file = "joiner/gtd_leap_joiner.wad"
   map = "MAP01"
 
-  prob = 300
+  prob = 225
 
   where = "seeds"
   shape = "I"
