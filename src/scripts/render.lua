@@ -2586,67 +2586,11 @@ end
 
 
 
--- maybe most of this decision code should be placed elsewhere
--- and only the render code should be here? -MSSP
 function Render_skybox()
+  if not LEVEL.skybox then return end
 
-  local skyfab
-
-  if OB_CONFIG.zdoom_skybox == "random" then
-    local skyfab_list = {}
-    each def in PREFABS do
-      if def.kind == "skybox" then
-        table.insert(skyfab_list)
-      end
-    end
-
-    skyfab = rand.pick(skyfab_list)
-
-  elseif OB_CONFIG.zdoom_skybox == "themed" then
-
-    -- check against skyboxes that don't match the current
-    -- environment themes specifically
-
-    --local match_state = false
-    --while match_state != true do
-      skyfab = PREFABS[rand.key_by_probs(GAME.THEMES[LEVEL.theme_name].skyboxes)]
-
-    --[[  if LEVEL.outdoor_theme == "snow" then
-        each v in GLAICE_EXCLUDE_DESERT_SKYBOXES do
-          if skyfab == v then
-            match_state = false
-          else
-            match_state = true
-          end
-        end
-      elseif LEVEL.outdoor_theme == "sand" then
-        each v in GLAICE_EXCLUDE_SNOW_SKYBOXES do
-          if skyfab == v then
-            match_state = false
-          else
-            match_state = true
-          end
-        end
-      elseif LEVEL.outdoor_theme == "temperate"
-      or not LEVEL.outdoor_theme then
-        match_state = true
-      end
-    end
-]]
-
-  elseif OB_CONFIG.zdoom_skybox == "generic" then
-    skyfab = PREFABS["Skybox_generic"]
-  end
-
-  if not skyfab then
-    gui.printf("WARNING: Could not find a proper skybox for theme '" .. LEVEL.theme_name .. "'\n")
-    return
-  end
-
-  if (OB_CONFIG.engine == "zdoom" or OB_CONFIG.engine == "gzdoom") and OB_CONFIG.zdoom_skybox != "disable" then
-    local T = Trans.spot_transform(SEED_H*128, SEED_W*128, 4, 4)
-    Fabricate(nil, skyfab, T, {})
-  end
+  local T = Trans.spot_transform(SEED_H*128, SEED_W*128, 4, 4)
+  Fabricate(nil, LEVEL.skybox, T, {})
 end
 
 
