@@ -1079,15 +1079,16 @@ function Room_detect_porches(R)
 
     R.porch_count = 0
     each A in porchables do
+
       if A.porch_score > 0 and style_sel("porches", 0, 30, 60, 90) then
         set_as_porch(A)
 
         gui.debugf("Made %s into a PORCH\n", A.name)
+        R.porch_count = R.porch_count + 1
       end
 
-      R.porch_count = R.porch_count + 1
+      if R.porch_count >= math.floor(R.floor_limit/2) then return end
 
-      if R.porch_count > #R.areas/2 then return end
     end
   end
 
