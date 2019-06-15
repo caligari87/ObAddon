@@ -3200,7 +3200,7 @@ function Room_add_cage_rails()
       -- don't place railings on higher floors (it looks silly)
       if N.floor_h and N.floor_h > A.floor_h then continue end
 
-      local tex = THEME.cage_rail_mat or "MIDBARS3"
+      local tex = THEME.cage_rail_mat or R.scenic_fence.t
 
       Junction_make_railing(junc, tex, "block")
     end
@@ -3369,18 +3369,6 @@ end
 
 
 
-function Room_do_vista_mats()
-  each R in LEVEL.rooms do
-    if R:has_vista_neighbor() then
-      local scenic_fence_group = {}
-      local mat_name = ''
-      scenic_fence_group = GAME.THEMES[LEVEL.theme_name]
-      mat_name = rand.key_by_probs(scenic_fence_group.scenic_fence)
-      R.scenic_fence = GAME.MATERIALS[mat_name]
-    end
-  end
-end
-
 ------------------------------------------------------------------------
 
 
@@ -3405,8 +3393,6 @@ function Room_build_all()
 
   Room_reckon_doors()
   Room_prepare_hallways()
-
-  Room_do_vista_mats() -- MSSP
 
   Room_floor_ceil_heights()
   Room_set_sky_heights()
