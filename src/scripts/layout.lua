@@ -2408,6 +2408,10 @@ function Layout_handle_corners()
 
         if corner.posted then return end
 
+        each A in corner.areas do
+          if not A.room.is_outdoor then return end
+        end
+
         local cur_z = assert(junc.E1.rail_z)
         cur_z = int(cur_z)
 
