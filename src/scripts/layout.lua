@@ -2409,7 +2409,9 @@ function Layout_handle_corners()
         if corner.posted then return end
 
         each A in corner.areas do
-          if not A.room.is_outdoor then return end
+          if A.room then
+            if not A.room.is_outdoor then return end
+          end
         end
 
         local cur_z = assert(junc.E1.rail_z)

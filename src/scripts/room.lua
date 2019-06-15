@@ -1657,6 +1657,7 @@ function Room_border_up()
         or (A2.floor_h > A1.ceil_h) then
           Junction_make_wall(junc)
         end
+        return
       end
 
 
