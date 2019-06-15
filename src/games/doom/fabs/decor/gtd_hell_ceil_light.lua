@@ -105,7 +105,7 @@ PREFABS.Light_gtd_hell_skylight3 =
 {
   template = "Light_gtd_hell_skylight"
 
-  light_color = "white"
+  light_color = "blue"
 
   flat_FLOOR1_6 = "FLAT14"
 }
