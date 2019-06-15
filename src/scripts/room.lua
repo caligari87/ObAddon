@@ -3325,6 +3325,10 @@ function Room_set_sky_heights()
       do_fence(E)
     end
   end
+
+  -- stairs and cages adjecant to porches should
+  -- probably inherit the porch heights and floors
+  -- MSSP-TODO
 end
 
 

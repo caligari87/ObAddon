@@ -4570,6 +4570,13 @@ function Cave_build_a_scenic_vista(area)
 
   local function make_ocean()
 
+    -- lots of water - lots and lots and lots of water
+
+    blobify()
+
+    calc_room_dists()
+    calc_mapedge_dists()
+
     local FL = new_blob()
 
     FL.floor_h = room.min_floor_h - 16
@@ -4582,6 +4589,33 @@ function Cave_build_a_scenic_vista(area)
 
     area.fence_FLOOR = FL
 
+    -- make some cliffs
+
+    local CLIFF = new_blob()
+    local WATERFALLS = new_blob()
+
+    CLIFF.floor_h = room.max_floor_h + rand.pick({128,144,192,256})
+    CLIFF.floor_mat = assert(LEVEL.cliff_mat)
+
+    WATERFALLS.floor_h = rand.irange(math.floor(FL.floor_h + CLIFF.floor_h)/2 , CLIFF.floor_h)
+    WATERFALLS.floor_mat = LEVEL.liquid.mat
+
+    for cx = 1, area.cw do
+      for cy = 1, area.ch do
+        local id = blob_map[cx][cy]
+        if not id then continue end
+
+        local reg = blob_map.regions[id]
+
+        if not (reg.room_dist and reg.mapedge_dist) then continue end
+
+        if reg.mapedge_dist * 2.4 <= reg.room_dist  then
+          area.blobs[cx][cy] = CLIFF
+        elseif reg.mapedge_dist * 2.3 <= reg.room_dist  then
+          area.blobs[cx][cy] = WATERFALLS
+        end
+      end
+      end
 
     -- TEMP RUBBISH
     area.floor_h = FL.floor_h
