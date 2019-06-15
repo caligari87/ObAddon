@@ -3081,6 +3081,59 @@ function Room_floor_ceil_heights()
   end
 
 
+  local function porch_fixup_neighbors(R)
+
+    local function infect_area(A, N)
+      A.is_outdoor = false
+      A.ceil_h = N.ceil_h
+      A.ceil_mat = N.ceil_mat
+    end
+
+    local function check_neighboring_porches(A)
+      local porch_count = 0
+      each N in A.neighbors do
+
+        if N.is_porch then
+          porch_count = porch_count + 1
+        end
+
+        if porch_count == #A.neighbors then
+          return A, N
+        elseif porch_count > 0
+        and porch_count < #A.neighbors
+        and rand.odds(50) then
+          return A, N
+        end
+      end
+
+    end
+
+    if R.is_outdoor then
+      each A in R.areas do
+
+        local A1
+        local A2
+
+        if A.chunk then
+          if A.chunk.kind == "stair" then
+            A1, A2 = check_neighboring_porches(A)
+          end
+        end
+
+        if A.mode == "liquid" then
+          A1, A2 = check_neighboring_porches(A)
+        end
+
+        if A1 and A2 then
+          infect_area(A1, A2)
+        end
+
+      end
+    end
+
+  end
+
+
   local function do_ceilings(R)
     group_ceilings(R)
 
@@ -3124,6 +3177,10 @@ function Room_floor_ceil_heights()
 
       set_ceil(A, new_h)
     end
+
+    -- MSSP: get certain areas neighboring porches to also adopt
+    -- the porch's ceiling heights and materials
+    porch_fixup_neighbors(R)
 
     -- now pick textures
     select_ceiling_mats(R)
