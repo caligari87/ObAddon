@@ -767,8 +767,7 @@ function Junction_calc_fence_z(A1, A2)
     end
 
     if A1.room.is_outdoor or A2.room.is_outdoor then
-      if top_z > A1.ceil_h
-      or top_z > A2.ceil_h then
+      if A1.floor_h == A2.floor_h then
         top_z = A1.floor_h
       end
     end
