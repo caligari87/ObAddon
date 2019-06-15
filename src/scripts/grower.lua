@@ -4442,8 +4442,6 @@ function Grower_create_rooms()
 
   Grower_decide_extents()
 
-  gui.ticker()
-
   Grower_begin_trunks()
   Grower_grow_all_rooms()
   Grower_cave_stats()

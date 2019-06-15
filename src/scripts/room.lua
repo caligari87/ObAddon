@@ -2821,7 +2821,7 @@ function Room_floor_ceil_heights()
       A.floor_h = math.min(A.floor_h, N.ceil_h - 64)
     end
 
-    A.ceil_h   = A.floor_h + 72
+    A.ceil_h   = math.max(A.floor_h + A.room.scenic_fence.rail_h, A.floor_h + 72)
     A.ceil_mat = N.ceil_mat
 
     if A.is_outdoor then
@@ -2838,6 +2838,7 @@ function Room_floor_ceil_heights()
       table.insert(R.cage_rail_areas, A)
 
       if not R.is_outdoor then
+
         if N.ceil_h and N.ceil_h > A.ceil_h + 72 then
           A.ceil_h = N.ceil_h
         else

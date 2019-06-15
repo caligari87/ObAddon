@@ -2721,6 +2721,7 @@ end
 
 
 function Area_create_rooms()
+  gui.ticker()
 
   gui.printf("\n--==| Creating Rooms |==--\n\n")
 
