@@ -749,7 +749,7 @@ function Layout_add_traps()
   -- Add traps to rooms, especially monster closets.
   --
 
-  local function eval_closet(R, chunk)
+  local function eval_trap_distance(R, chunk)
     -- compute a distance to the room's goal
     local dist = 0
 
@@ -777,7 +777,7 @@ function Layout_add_traps()
     if kind == "closet" then
       each chunk in R.closets do
         if not chunk.content and not chunk:is_slave() then
-          eval_closet(R, chunk)
+          eval_trap_distance(R, chunk)
           table.insert(locs, chunk)
         end
       end
@@ -794,17 +794,19 @@ function Layout_add_traps()
         -- find a way to keep the sink rendered
         if not chunk.content and not chunk.area.is_road then
           if chunk.sw >= 2 and chunk.sh >= 2 then
+            eval_trap_distance(R, chunk)
             table.insert(locs, chunk)
           else
+            eval_trap_distance(R, chunk)
             table.insert(locs2, chunk)
           end
         end
       end
 
       table.sort(locs,
-        function(A, B) return A.sig_dist > B.sig_dist end)
+        function(A, B) return A.trap_dist > B.trap_dist end)
       table.sort(locs2,
-        function(A, B) return A.sig_dist > B.sig_dist end)
+        function(A, B) return A.trap_dist > B.trap_dist end)
 
       table.append(locs, locs2)
 
