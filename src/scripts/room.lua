@@ -2848,6 +2848,11 @@ function Room_floor_ceil_heights()
         add_cage_lighting(R, A)
       end
     end
+
+    if A.ceil_h >= N.ceil_h then
+      N.ceil_h = A.ceil_h
+      A.ceil_mat = N.ceil_mat
+    end
   end
 
 
