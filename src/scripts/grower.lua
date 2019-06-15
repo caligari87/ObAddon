@@ -3577,7 +3577,6 @@ end
 
 
 function Grower_grow_room(R)
-  gui.ticker()
 
   if R.is_street then
     R.is_grown = true

@@ -801,8 +801,10 @@ function Layout_add_traps()
         end
       end
 
-      rand.shuffle(locs)
-      rand.shuffle(locs2)
+      table.sort(locs,
+        function(A, B) return A.sig_dist > B.sig_dist end)
+      table.sort(locs2,
+        function(A, B) return A.sig_dist > B.sig_dist end)
 
       table.append(locs, locs2)
 
@@ -950,7 +952,6 @@ function Layout_add_traps()
       end
 
 
-
       -- break ties
       -- [ but in caves, prefer teleporting in ]
       if closet_locs and telep_locs then
@@ -1065,30 +1066,24 @@ gui.debugf("MonRelease in %s : kind --> %s\n",
     -- MSSP-TODO: Revise the code to sort spots by their distance.
     if #R.triggers > 0 then
 
-      --gui.printf(table.tostr(locs) .. "\n")
-
       for n = 1, #R.triggers do
         if R.triggers[n] then
-          --gui.printf("heya: " .. table.tostr(R.triggers[n]) .. "\n")
           local o = 1
           while locs[o] do
+
             if #locs < 2 then break end
-            --gui.printf("heya: " .. locs[o].name .. "\n")
+
             local spot_dist = get_chunk_distance(R.triggers[n].spot, locs[o])
-            --gui.printf("heya: " .. spot_dist .. "\n")
+
             if spot_dist <= 1024 then
-              --gui.printf("REMOVED " .. locs[o].name .. "\n")
               table.remove(locs, o)
             else
               o = o + 1
             end
+
           end
         end
       end
-
-      --gui.printf("Spot pruning has run.\n")
-      --gui.printf(table.tostr(locs) .. "\n")
-
     end
 
 
