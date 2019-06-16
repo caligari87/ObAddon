@@ -1944,7 +1944,7 @@ function Room_choose_size(R, not_big)
   -- Special instructions for procedural gotcha rooms
   if LEVEL.is_procedural_gotcha and not R.is_start then
     R.size_limit = LEVEL.map_W*30
-    R.floor_limit = 20
+    R.floor_limit = rand.irange(20,80)
     R.is_big = true
   end
 

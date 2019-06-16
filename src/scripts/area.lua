@@ -2728,7 +2728,6 @@ end
 
 
 function Area_create_rooms()
-  gui.ticker()
 
   gui.printf("\n--==| Creating Rooms |==--\n\n")
 
@@ -2760,4 +2759,6 @@ function Area_create_rooms()
   Connect_finalize()
 
   Area_locate_chunks()
+
+  gui.ticker()
 end
