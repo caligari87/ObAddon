@@ -989,6 +989,11 @@ GLAICE_MATERIALS = {
   SNOWROCK = { t="SNOW12",  f="SNOWROCK" }
   SNOWSTON = { t="SNOW14",  f="SNOWSTON" }
 
+  -- Dirt/Ground/Grass
+  GROUND01 = { t="DESROCK2",  f="GROUND01" } -- Deadish looking grass
+  GROUND02 = { t="DESROCK2",  f="GROUND02" } -- Same as GROUND01, but less tile friendly
+  GROUND03 = { t="DESROCK3",  f="GROUND03" } -- Grass
+  GROUND04 = { t="DESROCK5",  f="GROUND04" } -- Less saturated grass
 
   -- Tech flats
   CEIL4_4 = { f="CEIL4_4", t="COMPBLUE" }
