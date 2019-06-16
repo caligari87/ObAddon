@@ -129,7 +129,11 @@ OB_MODULES["ui_arch"] =
       label = _("Linear Mode"),
       choices = UI_ARCH.LINEAR_CHOICES,
       default = "none"
-      tooltip = "Creates linear levels, where rooms are connected along a linear layout from start to exit."
+      tooltip = "Creates linear levels, where rooms are connected along a " ..
+      "linear layout from start to exit. \n\nNote: Due to the nature of linear levels, " ..
+      "you may encounter teleports even if you have teleports off. This is necessary " ..
+      "in order for linear levels not to prematuraly terminate and therefore become stunted " ..
+      "i.e. only have 2-5 rooms."
       gap = 1
     }
 
