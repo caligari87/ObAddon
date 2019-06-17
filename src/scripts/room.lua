@@ -3123,7 +3123,10 @@ function Room_floor_ceil_heights()
 
         if A.chunk then
           if A.chunk.kind == "stair" then
-            A1, A2 = check_neighboring_porches(A)
+            if A.chunk.from_area.is_porch
+            or A.chunk.dest_area.is_porch then
+              A1, A2 = check_neighboring_porches(A)
+            end
           end
         end
 
