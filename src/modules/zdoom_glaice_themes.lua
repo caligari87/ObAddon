@@ -2023,7 +2023,7 @@ GLAICE_SINK_DEFS =
   floor_sink_CARPET3 =
   {
     mat = "CARPET3"
-    dz =
+    dz = 0
 
     trim_mat = "ORANFLOR"
     trim_dz = 0
