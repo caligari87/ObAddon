@@ -3130,16 +3130,89 @@ end
   -- MSSP: update smart groupings
   local function update_shape_groupings(rule)
 
+
+    local function style_factor(rule)
+      if not rule.styles then return 1 end
+
+      local factor = 1.0
+
+      each name in rule.styles do
+        if STYLE[name] == nil then
+          error("Unknown style in grammar rule: " .. tostring(name))
+        end
+
+        factor = factor * style_sel(name, 0, 0.28, 1.0, 3.5)
+      end
+
+      return factor
+    end
+
+
+    local function random_factor(rule)
+      if not rule.prob_skew then return 1 end
+
+      local prob_skew = rule.prob_skew
+      local half_skew = (1.0 + prob_skew) / 2.0
+
+      return rand.pick({ 1 / prob_skew, 1 / half_skew, 1.0, half_skew, prob_skew })
+    end
+
+
+    local function calc_prob(rule, x_prob, mode)
+      -- MSSP: this is a modification of calc_prob function.
+      -- x_prob is used for absurdity and shape groupings,
+      -- such that absurdification still runs through all
+      -- game filters and styles
+
+      if rule.skip_prob then
+        if rand.odds(rule.skip_prob) then return 0 end
+      end
+
+      if not ob_match_game(rule)     then return 0 end
+      if not ob_match_engine(rule)   then return 0 end
+      if not ob_match_playmode(rule) then return 0 end
+
+      if not LEVEL.liquid and rule.styles and
+         table.has_elem(rule.styles, "liquids")
+      then
+        return 0
+      end
+
+      if rule.new_room and rule.new_room.hall_type == "narrow" and
+         table.empty(THEME.narrow_halls or {})
+      then return 0 end
+
+      if rule.new_room and rule.new_room.hall_type == "wide" and
+         table.empty(THEME.wide_halls or {})
+      then return 0 end
+
+      local prob = rule.prob or 0
+
+      prob = prob *  style_factor(rule)
+      prob = prob * random_factor(rule)
+
+      if x_prob then
+        if mode == "multiply" or not mode then
+          prob = prob * x_prob
+        elseif mode == "divide" then
+          prob = prob / x_prob
+        end
+      end
+
+      return prob
+    end
+
+
     local function change_group_probs(mode)
       each name,cur_def in grammar do
         if rule.group == cur_def.group
         and rule.group_pos != "entry" then
           if mode == "highlight" then
-            cur_def.use_prob = cur_def.use_prob * 1000000
+            calc_prob(cur_def, 1000000, "multiply")
           elseif mode == "reduce" then
-            cur_def.use_prob = cur_def.use_prob / 1.2
+            calc_prob(cur_def, 1.2, "divide")
           elseif mode == "reset" then
-            cur_def.use_prob = cur_def.prob
+            calc_prob(cur_def)
           end
         end
       end
