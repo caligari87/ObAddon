@@ -247,7 +247,12 @@ function Render_edge(E)
       -- don't allow anything more than flat walls if
       -- at least one seed ahead is not in the same area
       -- as the current wall
-      local tx, ty = geom.nudge(E.S.x1, E.S.y1, dir, 1)
+      local check_dir
+      if dir == 2 then check_dir = 8 end
+      if dir == 4 then check_dir = 6 end
+      if dir == 6 then check_dir = 4 end
+      if dir == 8 then check_dir = 2 end
+      local tx, ty = geom.nudge(E.S.x1, E.S.y1, check_dir, 1)
       local that_seed = Seed_from_coord(tx, ty)
       if that_seed.area != E.S.area then
         reqs.flat = true
@@ -257,12 +262,10 @@ function Render_edge(E)
       -- something important in it (i.e. switches and so on)
       -- pick a flat wall fab instead as to not cut-up
       -- potentially important and game-breaking items
-      if E.S.area then
-        if E.S.chunk then
-          if E.S.chunk.content
-          and (E.S.chunk.sw + E.S.chunk.sh <= 4) then
-            reqs.flat = true
-          end
+      if E.S.chunk then
+        if E.S.chunk.content
+        and (E.S.chunk.sw + E.S.chunk.sh <= 4) then
+          reqs.flat = true
         end
       end
 
