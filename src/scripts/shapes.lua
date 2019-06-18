@@ -3130,9 +3130,9 @@ GROW_SQUIGGLE =
 
   structure =
   {
-    "....","11.."
-    "....","%1%."
-    "....",".%1%"
+    "..xx","11xx"
+    "...x","%1%x"
+    "x...","x%1%"
     "xx11","xx11"
   }
 
@@ -3151,7 +3151,7 @@ GROW_TINY_U =
   {
     "......","/1111%"
     "......","111111"
-    "......","11..11"
+    "..xx..","11xx11"
     "11xxxx","11xxxx"
   }
 
@@ -3684,49 +3684,24 @@ GROW_CAGE_SIDEWAYS_BOTH_SIDES =
   }
 }
 
-GROW_CAGE_ROUND_RAFTERS =
+
+GROW_CAGE_ROUND_RAFTERS_ONE_SIDE =
 {
-  prob = 6
+  prob = 8
 
   structure =
   {
-    "xx11xx","xx11xx"
-    "......","/C11C%"
-    "......","C/11%C"
-    "......","C%11/C"
-    "......","%C11C/"
+    "xx11xx","xx11"
+    "......","/C11"
+    "......","C/11"
+    "......","1111"
+    "......","1111"
   }
 
   diagonals =
   {
-    ".C","C."
-    "C1","1C"
-    "C1","1C"
-    ".C","C."
-  }
-}
-
-GROW_CAGE_ROUND_RAFTERS_INTERSECTION =
-{
-  prob = 6
-
-  structure =
-  {
-    "xx11xx","xx11xx"
-    "......","/C11C%"
-    "......","C/11%C"
-    "......","111111"
-    "......","111111"
-    "......","C%11/C"
-    "......","%C11C/"
-  }
-
-  diagonals =
-  {
-    ".C","C."
-    "C1","1C"
-    "C1","1C"
-    ".C","C."
+    ".C"
+    "C1"
   }
 }
 
@@ -3824,11 +3799,11 @@ GROW_CATWALK_SIDESTAIRS =
 
   structure =
   {
-    ".....","11111"
-    ".....","A<<1/"
-    ".....","AAAAA"
-    ".....","A<<1%"
-    "x111x","x111x"
+    ".....x","11111x"
+    "......","A<<1/A"
+    "......","AAAAAA"
+    "......","A<<1%A"
+    "x111xx","x111xx"
   }
 
   diagonals =
@@ -6379,6 +6354,24 @@ GROW_INTO_CLIFF_TALL =
   }
 }
 
+GROW_INTO_CLIFF_DOUBLE =
+{
+  prob = 35
+
+  group = "cliff"
+
+  group_pos = "entry"
+
+  structure =
+  {
+    "......","AA11AA"
+    "......","AA11AA"
+    "......","^^11^^"
+    "......","111111"
+    "xx11xx","xx11xx"
+  }
+}
+
 GROW_CLIFF_EXTENSION =
 {
   prob = 75
@@ -6832,20 +6825,6 @@ DECORATE_CLIFF_CAGE_3X_STAGGERED =
 
 -- MSSP's liquid placer [LIQUID-CLIFF]
 
-DECORATE_LIQUID_POOL_PLACE =
-{
-  prob = 35
-
-  group = "liquid_pool"
-
-  structure =
-  {
-    "1111","1111"
-    "1111","1~~1"
-    "1111","1~~1"
-    "1111","1111"
-  }
-}
 
 DECORATE_LIQUID_POOL_PLACE_DIAMOND =
 {
@@ -6908,34 +6887,85 @@ DECORATE_LIQUID_POOL_PLACE_3x6 =
   }
 }
 
-DECORATE_LIQUID_POOL_EXTEND_STRAIGHT =
+GROW_LIQUID_POOL_PLACE =
 {
-  prob = 100
+  prob = 35
 
   group = "liquid_pool"
 
   structure =
   {
-    "x111","x111"
-    "~111","~~~1"
-    "~111","~~~1"
-    "1111","1111"
+    "....","1~~1"
+    "....","1~~1"
+    "....","1~~1"
+    "....","1111"
+    "x11x","x11x"
   }
 }
 
-DECORATE_LIQUID_POOL_EXTEND_CURVED =
+GROW_LIQUID_POOL_EXTEND_STRAIGHT =
 {
-  prob = 75
+  prob = 50
 
   group = "liquid_pool"
 
   structure =
   {
-    "x111","x111"
-    "~111","~~%1"
-    "~111","~~~1"
-    "1111","1~~1"
-    "1111","1111"
+    "x...","x111"
+    "~...","~~~~"
+    "~...","~~~~"
+    "1...","1111"
+  }
+}
+
+GROW_LIQUID_POOL_SWERVE =
+{
+  prob = 35
+
+  group = "liquid_pool"
+
+  structure =
+  {
+    ".....",".1~~1"
+    ".....","/1~/1"
+    ".....","1/~1/"
+    "x~~1x","x~~1x"
+  }
+
+  diagonals =
+  {
+    ".1","~1"
+    "1~","1."
+  }
+}
+
+GROW_LIQUID_POOL_END =
+{
+  prob = 20
+
+  group = "liquid_pool"
+
+  structure =
+  {
+    "....","1111"
+    "....","1~~1"
+    "....","1~~1"
+    "....","x~~1"
+  }
+}
+
+GROW_LIQUID_POOL_EXTEND_CURVED =
+{
+  prob = 50
+
+  group = "liquid_pool"
+
+  structure =
+  {
+    "x...","x111"
+    "~...","~~%1"
+    "~...","~~~1"
+    "1...","1~~1"
   }
 
   diagonals =
