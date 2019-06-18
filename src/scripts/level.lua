@@ -195,8 +195,8 @@ function Level_determine_map_size(LEV)
     --due to the extreme detail the maps have in them. --Glaice, March 3rd, 2019
     local SIZES =
     {
-      small=26,
-      subregular=32,
+      small=22,
+      subregular=30,
       regular=36,
       superregular=42,
       large=48,
