@@ -4910,19 +4910,19 @@ GROW_FEATURES_CENTER_ALTER_RAISED =
 
 GROW_ELEVATED_PILLAR_ROUND =
 {
-  prob = 150
+  prob = 75
 
   env = "!cave"
 
   structure =
   {
-    "1111111","1111111"
-    "1111111","1/AAA%1"
-    "1111111","1AAAAA1"
-    "1111111","1>A.AA1"
-    "1111111","1AAAAA1"
-    "1111111","1%AAA/1"
-    "1111111","1111111"
+    "x......","x111111"
+    "1......","1/AAA%1"
+    "1......","1AAAAA1"
+    "1......","1>A.AA1"
+    "1......","1AAAAA1"
+    "1......","1%AAA/1"
+    "x......","x111111"
   }
 
   diagonals =
@@ -4934,78 +4934,52 @@ GROW_ELEVATED_PILLAR_ROUND =
 
 GROW_ELEVATED_PILLAR_U =
 {
-  prob = 150
+  prob = 50
 
   env = "!cave"
 
   structure =
   {
-    "111111","111111"
-    "111111","1>AAA1"
-    "111111","1>AAA1"
-    "111111","11.AA1"
-    "111111","11AAA1"
-    "111111","11AAA1"
-    "111111","111111"
+    "111xxx","11xxx"
+    "11....","1>AAA"
+    "11....","1>AAA"
+    "xx....","xx.AA"
+    "xx....","xxAAA"
+    "xx....","xxAAA"
   }
 }
 
 GROW_ELEVATED_PILLAR_U_FULL =
 {
-  prob = 150
+  prob = 50
 
   env = "!cave"
 
   structure =
   {
-    "1111111","1111111"
-    "1111111","1>>AAA1"
-    "1111111","1>>AAA1"
-    "1111111","1AA.AA1"
-    "1111111","1AAAAA1"
-    "1111111","1AAAAA1"
-    "1111111","1111111"
+    "111xxx","111xxx"
+    "1.....","1>>AAA"
+    "1.....","1>>AAA"
+    "x.....","xAA.AA"
+    "x.....","xAAAAA"
+    "x.....","xAAAAA"
   }
 }
 
 GROW_WIDE_SPACE_DEPRESSION =
 {
-  prob = 150
+  prob = 50
 
   env = "!cave"
 
   structure =
   {
-    "11111","11111"
-    "11111","1vvv1"
-    "11111","1AAA1"
-    "11111","1AAA1"
-    "11111","1^^^1"
-    "11111","11111"
-  }
-}
-
-GROW_WIDE_SPACE_CATWALK_FUNNEL =
-{
-  prob = 80
-
-  env = "!cave"
-
-  group = "catwalk"
-  group_pos = "entry"
-
-  structure =
-  {
-    "111111","111111"
-    "111111","1AAAA1"
-    "111111","1%AA/1"
-    "111111","11^^11"
-    "x1111x","x1111x"
-  }
-
-  diagonals =
-  {
-    "1A","A1"
+    "...","111"
+    "...","vvv"
+    "...","AAA"
+    "...","AAA"
+    "...","^^^"
+    "111","111"
   }
 }
 
@@ -5020,10 +4994,9 @@ GROW_WIDE_SPACE_CATWALK_PLAIN =
 
   structure =
   {
-    "1111","1111"
-    "1111","1AA1"
-    "1111","1AA1"
-    "1111","1^^1"
+    "....","1AA1"
+    "....","1AA1"
+    "....","1^^1"
     "1111","1111"
   }
 }
@@ -5039,11 +5012,10 @@ GROW_WIDE_SPACE_CATWALK_TALL_PLAIN =
 
   structure =
   {
-    "1111","1111"
-    "1111","1AA1"
-    "1111","1AA1"
-    "1111","1^^1"
-    "1111","1^^1"
+    "....","1AA1"
+    "....","1AA1"
+    "....","1^^1"
+    "....","1^^1"
     "1111","1111"
   }
 }
@@ -5053,37 +5025,35 @@ GROW_WIDE_SPACE_PLATFORM_TINY =
   prob = 75
 
   group = "catwalk"
+
   group_pos = "entry"
 
   env = "!cave"
 
   structure =
   {
-    "1111","1111"
-    "1111","1AA1"
-    "1111","1AA1"
-    "1111","1>A1"
+    "....","1AA1"
+    "....","1AA1"
+    "....","1>A1"
     "1111","1111"
   }
 }
 
---[[GROW_WIDE_SPACE_CATWALK_STRAIGHT =
+GROW_WIDE_SPACE_CATWALK_STRAIGHT =
 {
-  prob = 3500
+  prob = 100
 
-  aversion = -1000
+  group = "catwalk"
 
   env = "!cave"
 
   structure =
   {
-    "xxxx","xxxx"
-    "1111","1111"
-    "1111","1221"
-    "1111","1221"
-    "x22x","x22x"
+    "....","1111"
+    "....","1221"
+    "1221","1221"
   }
-}]]
+}
 
 GROW_WIDE_SPACE_CATWALK_EXTRUDE =
 {
@@ -5095,9 +5065,7 @@ GROW_WIDE_SPACE_CATWALK_EXTRUDE =
 
   structure =
   {
-    "x11x","x11x"
-    "x11x","x11x"
-    "1111","1111"
+    "....","1111"
     "1111","1221"
     "2222","2222"
   }
@@ -5113,9 +5081,7 @@ GROW_WIDE_SPACE_CATWALK_EXTRUDE_3X =
 
   structure =
   {
-    "xx1xx","xx1xx"
-    "xx1xx","xx1xx"
-    "11111","11111"
+    ".....","11111"
     "11111","12221"
     "22222","22222"
   }
@@ -5123,7 +5089,7 @@ GROW_WIDE_SPACE_CATWALK_EXTRUDE_3X =
 
 GROW_WIDE_SPACE_CATWALK_CURVE =
 {
-  prob = 35
+  prob = 45
 
   group = "catwalk"
 
@@ -5131,17 +5097,22 @@ GROW_WIDE_SPACE_CATWALK_CURVE =
 
   structure =
   {
-    "xx11xx","xx11xx"
-    "xx11xx","xx11xx"
-    "111111","111111"
-    "111111","122221"
-    "12211x","12211x"
+    "......","111111"
+    "......","1/2221"
+    "......","122221"
+    "......","122/11"
+    "1221xx","1221xx"
+  }
+
+  diagonals =
+  {
+    "12","21"
   }
 }
 
 GROW_WIDE_SPACE_CATWALK_STRAIGHT_3X =
 {
-  prob = 25
+  prob = 50
 
   group = "catwalk"
 
@@ -5149,17 +5120,15 @@ GROW_WIDE_SPACE_CATWALK_STRAIGHT_3X =
 
   structure =
   {
-    "xx1xx","xx1xx"
-    "xx1xx","xx1xx"
-    "11111","11111"
+    ".....","11111"
     "11111","12221"
-    "1222x","1222x"
+    "12221","12221"
   }
 }
 
 GROW_WIDE_SPACE_CATWALK_STRAIGHT_4X =
 {
-  prob = 15
+  prob = 50
 
   group = "catwalk"
 
@@ -5167,11 +5136,9 @@ GROW_WIDE_SPACE_CATWALK_STRAIGHT_4X =
 
   structure =
   {
-    "xx11xx","xx11xx"
-    "xx11xx","xx11xx"
-    "111111","111111"
+    "......","111111"
     "111111","122221"
-    "12222x","12222x"
+    "122221","122221"
   }
 }
 
@@ -5183,10 +5150,10 @@ GROW_WIDE_SPACE_CATWALK_CAPPER_3X =
 
   structure =
   {
-    "11111","11111"
-    "11111","1/2%1"
+    ".....","11111"
+    ".....","1/2%1"
     "11111","12221"
-    "1222x","1222x"
+    "12221","12221"
   }
 
   diagonals =
@@ -5203,10 +5170,10 @@ GROW_WIDE_SPACE_CATWALK_CAPPER_4X =
 
   structure =
   {
-    "111111","111111"
-    "111111","1/22%1"
+    "......","111111"
+    "......","1/22%1"
     "111111","122221"
-    "12222x","12222x"
+    "122221","122221"
   }
 
   diagonals =
@@ -5214,134 +5181,19 @@ GROW_WIDE_SPACE_CATWALK_CAPPER_4X =
     "12","21"
   }
 }
-
---[[GROW_WIDE_SPACE_CATWALK_STRAIGHT_BY_WALL =
-{
-  prob = 2000
-
-  env = "building"
-
-  aversion = -1000
-
-  structure =
-  {
-    "111!","111!"
-    "111!","122!"
-    "122!","122!"
-  }
-}
-
-GROW_WIDE_SPACE_CATWALK_CAPPER =
-{
-  prob = 250
-
-  env = "building"
-
-  structure =
-  {
-    "1111","1111"
-    "1111","1/%1"
-    "1221","1221"
-  }
-
-  diagonals =
-  {
-    "12","21"
-  }
-}
-
-GROW_WIDE_SPACE_CATWALK_CAPPER_BY_WALL =
-{
-  prob = 750
-
-  env = "building"
-
-  structure =
-  {
-    "111.","111."
-    "111.","1/2."
-    "122x","122x"
-  }
-
-  diagonals =
-  {
-    "12"
-  }
-}
-
-GROW_WIDE_SPACE_CATWALK_CORNER_TURN =
-{
-  prob = 2500
-
-  aversion = -1000
-
-  structure =
-  {
-    "....","...."
-    "111.","122."
-    "122x","122x"
-  }
-}
-
-GROW_WIDE_SPACE_CATWALK_THROUGH_WALL =
-{
-  prob = 1500
-
-  structure =
-  {
-    "....",".22."
-    "....",".22."
-    "122x","122x"
-  }
-}
-
-GROW_WIDE_SPACE_CATWALK_CAPPER_3WIDE =
-{
-  prob = 600
-
-  env = "building"
-
-  structure =
-  {
-    "1111","1111"
-    "1111","1/2%"
-    "1222","1222"
-  }
-
-  diagonals =
-  {
-    "12","21"
-  }
-}
-
-GROW_WIDE_SPACE_CATWALK_STRAIGHT_TO_WALL =
-{
-  prob = 2500
-
-  env = "building"
-
-  structure =
-  {
-    "....","...."
-    "1111","1221"
-    "1221","1221"
-  }
-}]]
 
 GROW_SKILLET =
 {
-  prob = 150
-
-
+  prob = 75
 
   structure =
   {
-    "x111111","x111111"
-    "1111111","11/AA%1"
-    "1111111","1>AAAA1"
-    "1111111","1>AAAA1"
-    "1111111","11%AA/1"
-    "x111111","x111111"
+    "x.....","x11111"
+    "1.....","11/AA%"
+    "1.....","1>AAAA"
+    "1.....","1>AAAA"
+    "1.....","11%AA/"
+    "x.....","x11111"
   }
 
   diagonals =
