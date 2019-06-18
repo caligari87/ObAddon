@@ -32,6 +32,8 @@ PREFABS.Wall_liquid_tank =
   env   = "building"
   theme = "tech"
 
+  liquid = true
+
   where  = "edge"
   height = 128
   long   = 128
@@ -73,6 +75,8 @@ PREFABS.Wall_diag_sewer =
   prob   = 50
   theme = "tech"
   env   = "building"
+
+  liquid = true
 
   where  = "diagonal"
   height = 128
