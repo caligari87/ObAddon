@@ -2437,34 +2437,34 @@ function Layout_handle_corners()
         corner.posted = true
       end
 
-      -- create support pillars on the corners of fenceposts
+    end
+  end
 
+
+  local function check_need_pillar(corner)
+    if corner.kind then return end
+
+    each junc in corner.junctions do
+      if junc.A2 == "map_edge" then return end
+      if not junc.E1 then continue end
+
+      -- create support pillars on the corners of fenceposts
       if near_porch(corner) then
 
-        --[[gui.printf("AREA " .. junc.E1.area.id .. ":\n")
-        each CJ in corner.junctions do
-          gui.printf(table.tostr(CJ.E1) .. "\n")
-        end]]
-
-        --gui.printf("corner openness: " .. corner_openness(corner) .. "\n")
-        --gui.printf("(" .. corner.x .. "," .. corner.y .. ")\n")
-
-          if corner_openness(corner) >= 3 or not corner_openness(corner) then
-            corner.kind = "pillar"
-            corner.mat = fetch_good_pillar_material(corner)
-            --gui.printf("pillar errected!\n")
-          end
-
+        if corner_openness(corner) >= 3 or not corner_openness(corner) then
+          corner.kind = "pillar"
+          corner.mat = fetch_good_pillar_material(corner)
+        end
       end
 
     end
   end
 
-
   local function check_corner(cx, cy)
     local corner = Corner_lookup(cx, cy)
 
     check_need_fencepost(corner)
+    check_need_pillar(corner)
   end
   ---| Layout_handle_corners |---
 

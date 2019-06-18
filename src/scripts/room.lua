@@ -3094,6 +3094,7 @@ function Room_floor_ceil_heights()
       A.is_outdoor = false
       A.ceil_h = N.ceil_h
       A.ceil_mat = N.ceil_mat
+      A.is_porch_neighbor = true
     end
 
     local function check_neighboring_porches(A)
