@@ -1978,128 +1978,128 @@ GLAICE_SINK_DEFS =
   floor_sink_CARPET1 =
   {
     mat = "CARPET1"
-    dz = 1
+    dz = 0
 
     trim_mat = "ORANFLOR"
-    trim_dz = 1
+    trim_dz = 0
   }
 
   floor_sink_CARPET1 =
   {
     mat = "CARPET1"
-    dz = 1
+    dz = 0
 
     trim_mat = "ORANFLOR"
-    trim_dz = 1
+    trim_dz = 0
   }
 
   floor_sink_CARPET1 =
   {
     mat = "CARPET1"
-    dz = 1
+    dz = 0
 
     trim_mat = "ORANFLOR"
-    trim_dz = 1
+    trim_dz = 0
   }
 
   floor_sink_CARPET2 =
   {
     mat = "CARPET2"
-    dz = 1
+    dz = 0
 
     trim_mat = "ORANFLOR"
-    trim_dz = 1
+    trim_dz = 0
   }
 
   floor_sink_CARPET2 =
   {
     mat = "CARPET2"
-    dz = 1
+    dz = 0
 
     trim_mat = "CEIL5_1"
-    trim_dz = 1
+    trim_dz = 0
   }
 
   floor_sink_CARPET3 =
   {
     mat = "CARPET3"
-    dz = 1
+    dz =
 
     trim_mat = "ORANFLOR"
-    trim_dz = 1
+    trim_dz = 0
   }
 
   floor_sink_CARPET4 =
   {
     mat = "CARPET4"
-    dz = 1
+    dz = 0
 
     trim_mat = "CEIL5_1"
-    trim_dz = 1
+    trim_dz = 0
   }
 
   floor_sink_CARPET5 =
   {
     mat = "CARPET5"
-    dz = 1
+    dz = 0
 
     trim_mat = "CEIL5_1"
-    trim_dz = 1
+    trim_dz = 0
   }
 
   floor_sink_CARPET6 =
   {
     mat = "CARPET6"
-    dz = 1
+    dz = 0
 
     trim_mat = "CEIL5_1"
-    trim_dz = 1
+    trim_dz = 0
   }
 
   floor_sink_CARPET7 =
   {
     mat = "CARPET7"
-    dz = 1
+    dz = 0
 
     trim_mat = "ORANFLOR"
-    trim_dz = 1
+    trim_dz = 0
   }
 
   floor_sink_CARPET8 =
   {
     mat = "CARPET8"
-    dz = 1
+    dz = 0
 
     trim_mat = "FLAT19"
-    trim_dz = 1
+    trim_dz = 0
   }
 
   -- tech carpets
   floor_sink_carpet_FLAT15 =
   {
     mat = "FLAT15"
-    dz = 1
+    dz = 0
 
     trim_mat = "FASHBLU"
-    trim_dz = 1
+    trim_dz = 0
   }
 
   floor_sink_carpet_FLOOR1_1 =
   {
     mat = "FLOOR1_1"
-    dz = 1
+    dz = 0
 
     trim_mat = "FLAT15"
-    trim_dz = 1
+    trim_dz = 0
   }
 
   floor_sink_carpet_FLOOR1_2 =
   {
     mat = "FLOOR1_2"
-    dz = 1
+    dz = 0
 
     trim_mat = "FASHBLU"
-    trim_dz = 1
+    trim_dz = 0
   }
 }
 
