@@ -4940,12 +4940,12 @@ GROW_ELEVATED_PILLAR_U =
 
   structure =
   {
-    "111xxx","11xxx"
-    "11....","1>AAA"
-    "11....","1>AAA"
-    "xx....","xx.AA"
-    "xx....","xxAAA"
-    "xx....","xxAAA"
+    "11xxx","11xxx"
+    "1....","1>AAA"
+    "1....","1>AAA"
+    "xx...","xx.AA"
+    "xx...","xxAAA"
+    "xx...","xxAAA"
   }
 }
 
