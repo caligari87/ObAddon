@@ -4968,7 +4968,9 @@ GROW_ELEVATED_PILLAR_U_FULL =
 
 GROW_WIDE_SPACE_DEPRESSION =
 {
-  prob = 50
+  prob = 38
+
+  aversion = 5
 
   env = "!cave"
 
