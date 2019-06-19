@@ -2185,7 +2185,23 @@ stderrf("Cages in %s [%s pressure] --> any_prob=%d  per_prob=%d\n",
   end
 
 
+  local function pick_posts(R)
+    if not R.is_outdoor then return end
+    if R.is_cave then return end
+
+    -- MSSP-TODO: FIX THIS, MAN!!!! USE POST_GROUP IN THEMES.LUA
+    -- oh man i am not good with computer plz to help!!!!!!!!
+    if LEVEL.theme_name == "tech" or
+    LEVEL.theme_name == "urban" then
+      R.post_type = rand.pick({"Post_metal","Post_tech_1","Post_tech_2"})
+    else
+      R.post_type = rand.pick({"Post_metal","Post_gothic_1","Post_gothic_2"})
+    end
+  end
+
+
   local function tizzy_up_normal_room(R)
+    pick_posts(R)
     pick_wall_detail(R)
 
     pick_floor_sinks(R)
@@ -2437,6 +2453,20 @@ function Layout_handle_corners()
         corner.posted = true
       end
 
+      if (junc.E1.kind == "fence" and junc.E1.area.is_outdoor) then
+        if Corner_touches_wall(corner) then return end
+
+        if corner.posted then return end
+
+        if corner_openness(corner) == 3 or not corner_openness(corner) then
+          corner.post_mat = corner.areas[1].zone.fence_mat
+          corner.kind = "post"
+          corner.post_type = corner.areas[1].room.post_type
+          corner.post_top_h = assert(junc.E1.fence_top_z)
+          corner.posted = true
+        end
+      end
+
     end
   end
 
@@ -2459,6 +2489,7 @@ function Layout_handle_corners()
 
     end
   end
+
 
   local function check_corner(cx, cy)
     local corner = Corner_lookup(cx, cy)

@@ -3772,6 +3772,15 @@ function Grower_make_street(R)
     Grower_grammatical_room(R, "building_entrance")
   end]]
 
+  -- sanity check: failed street rooms shall now become just
+  -- regular rooms
+  R.areas[1]:calc_volume()
+  if R.areas[1].svolume < 16 then
+    R.is_street = false
+    R.areas[1].is_road = false
+    return
+  end
+
   each A in R.areas do
     if not A.is_road then
       A.is_sidewalk = true

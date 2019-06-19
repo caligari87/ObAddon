@@ -130,6 +130,9 @@ OB_MODULES["misc"] =
     { name="beams",       label=_("Beams"),          choices=STYLE_CHOICES,
       tooltip = "Allows the appearance of thin pillars to appear between the borders of different elevations.",
     }
+    { name="fences",      label=_("Fences"),         choices=STYLE_CHOICES,
+      tooltip = "Creates thick solid fences and fence posts between areas of varying height for outdoor rooms.",
+    }
     { name="porches",     label=_("Porches\\Gazebos"),        choices=STYLE_CHOICES,
       tooltip = "Occasional outdoor areas with a lowered indoor-ish ceiling.",
     }

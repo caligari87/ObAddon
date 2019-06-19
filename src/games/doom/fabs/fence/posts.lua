@@ -50,3 +50,16 @@ PREFABS.Post_tech_2 =
   bound_z1 = 0
 }
 
+PREFABS.Post_gothic_1 =
+{
+  template = "Post_tech_1"
+
+  thing_86 = 46
+}
+
+PREFABS.Post_gothic_2 =
+{
+  template = "Post_tech_2"
+
+  thing_85 = 57
+}

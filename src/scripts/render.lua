@@ -947,20 +947,32 @@ function Render_corner(cx, cy)
     local mx, my = corner.x, corner.y
     local mat    = corner.post_mat or THEME.post_mat or "METAL"
 
-    local brush  = brushlib.quad(mx - 8, my - 8, mx + 8, my + 8)
+    if not corner.post_type then
+      local brush  = brushlib.quad(mx - 8, my - 8, mx + 8, my + 8)
 
-    each C in brush do
-      C.u1 = 0
-      C.v1 = 0
+      each C in brush do
+        C.u1 = 0
+        C.v1 = 0
+      end
+
+      if corner.post_top_h then
+        brushlib.add_top(brush, corner.post_top_h)
+      end
+
+      brushlib.set_mat(brush, mat, mat)
+
+      Trans.brush(brush)
+    elseif corner.post_type then
+      local T = Trans.spot_transform(mx, my, corner.post_top_h, 2)
+
+      local skins =
+      {
+        wall = mat
+        floor = mat
+      }
+
+      Fabricate(corner.areas[1].room, PREFABS[corner.areas[1].room.post_type], T, {skins})
     end
-
-    if corner.post_top_h then
-      brushlib.add_top(brush, corner.post_top_h)
-    end
-
-    brushlib.set_mat(brush, mat, mat)
-
-    Trans.brush(brush)
   end
 
 
