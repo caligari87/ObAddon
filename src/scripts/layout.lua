@@ -2451,7 +2451,7 @@ function Layout_handle_corners()
       -- create support pillars on the corners of fenceposts
       if near_porch(corner) then
 
-        if corner_openness(corner) >= 3 or not corner_openness(corner) then
+        if corner_openness(corner) == 3 or not corner_openness(corner) then
           corner.kind = "pillar"
           corner.mat = fetch_good_pillar_material(corner)
         end
