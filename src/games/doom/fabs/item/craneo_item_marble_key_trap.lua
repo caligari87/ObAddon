@@ -39,3 +39,22 @@ PREFABS.Item_craneo_marble_key_trap =
     MARBFACF = 50
   }
 }
+
+PREFABS.Item_craneo_marble_key_trap_interior =
+{
+  template = "Item_craneo_marble_key_trap"
+  map = "MAP02"
+
+  prob = 220
+
+  height = 128
+
+  deep = 16
+  over = 16
+
+  env = "building"
+
+  y_fit = "top"
+
+  open_to_sky = false
+}
