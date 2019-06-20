@@ -10,7 +10,7 @@ PREFABS.Decor_glaice_flagpole =
 
   where  = "point"
   height = 264
-  size   = 56
+  size   = 72
 
   bound_z1 = 0
   bound_z2 = 264
