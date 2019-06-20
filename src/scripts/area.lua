@@ -214,6 +214,8 @@
     fences[DIR]  --
 
     inner_point : AREA  -- usually NIL
+
+    seeds : list(SEED) -- MSSP: the seeds around this corner
 --]]
 
 
@@ -927,6 +929,7 @@ function Corner_init()
       edges = {}
       walls = {}
       fences = {}
+      seeds = {} -- MSSP
     }
 
     LEVEL.corners[cx][cy] = CORNER
@@ -944,6 +947,7 @@ function Corner_init()
     local corner = S:get_corner(dir)
 
     table.add_unique(corner.areas, A)
+    table.add_unique(corner.seeds, S)
 
   end  -- A, S, dir
   end

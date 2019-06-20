@@ -2370,17 +2370,25 @@ function Layout_handle_corners()
   end
 
 
-  local function near_porch(corner)
+  local function near_porch(corner, mode)
+
     each A in corner.areas do
-      if A.is_porch then return true end
+
+      if mode == "porch" then
+        if A.is_porch then return true end
+      elseif mode == "porch_neighbor" then
+        if A.is_porch_neighbor then return true end
+      end
+
     end
 
     return false
   end
 
 
-  -- MSSP check whether how many empty junctions
-  -- this corner has
+  -- MSSP check whether how many junctions
+  -- this corner has (three junctions in a porch
+  -- area usually means adjacency to a stair chunk)
   local function corner_openness(corner)
     return #corner.junctions or 0
   end
@@ -2401,6 +2409,7 @@ function Layout_handle_corners()
 
     return "_DEFAULT"
   end
+
 
   local function check_need_fencepost(corner)
     -- already used?
@@ -2471,22 +2480,44 @@ function Layout_handle_corners()
   end
 
 
+  local function add_pillar(corner)
+    corner.kind = "pillar"
+    corner.mat = fetch_good_pillar_material(corner)
+  end
+
+
   local function check_need_pillar(corner)
     if corner.kind then return end
 
     each junc in corner.junctions do
       if junc.A2 == "map_edge" then return end
-      if not junc.E1 then continue end
 
       -- create support pillars on the corners of fenceposts
-      if near_porch(corner) then
+      if near_porch(corner, "porch") then
+        if not junc.E1 then continue end
 
         if corner_openness(corner) == 3 or not corner_openness(corner) then
-          corner.kind = "pillar"
-          corner.mat = fetch_good_pillar_material(corner)
+          add_pillar(corner)
         end
       end
 
+      local pillar_score = 0
+      if near_porch(corner, "porch_neighbor") then
+
+        -- MSSP-TODO: building pillars on the corners of stair chunks
+        -- might need some redesign in the future
+        each S in corner.seeds do
+          if S.chunk then
+            if S.chunk.kind == "stair" then
+              pillar_score = pillar_score + 1
+            end
+          end
+        end
+
+        if pillar_score == 1 then
+          add_pillar(corner)
+        end
+      end
     end
   end
 
@@ -2497,6 +2528,8 @@ function Layout_handle_corners()
     check_need_fencepost(corner)
     check_need_pillar(corner)
   end
+
+
   ---| Layout_handle_corners |---
 
   for cx = 1, SEED_W + 1 do
@@ -2504,6 +2537,7 @@ function Layout_handle_corners()
     check_corner(cx, cy)
   end
   end
+
 end
 
 
