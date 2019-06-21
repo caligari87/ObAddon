@@ -1914,7 +1914,7 @@ function Level_choose_themes()
   local theme_tab = {}
 
   local do_mostly = false
-
+  local do_less = false
 
   local function collect_mixed_themes()
     each name,info in OB_THEMES do
@@ -1970,7 +1970,7 @@ function Level_choose_themes()
   end
 
 
-  local function decide_mixins(EPI, main_theme, mixins)
+  local function decide_mixins(EPI, main_theme, mixins, mode)
     if not theme_tab[main_theme] then
       --error("Broken code handling mostly_xxx themes")
     end
@@ -1981,14 +1981,35 @@ function Level_choose_themes()
 
     if table.empty(new_tab) then return end
 
-    local pos = rand.pick({ 3,4,4,5 })
+    if mode == "mostly" then
+      local pos = rand.pick({ 3,4,4,5 })
 
-    while pos <= #EPI.levels do
-      local LEV = EPI.levels[pos]
+      while pos <= #EPI.levels do
+        local LEV = EPI.levels[pos]
 
-      mixins[LEV.name] = rand.key_by_probs(new_tab)
+        mixins[LEV.name] = rand.key_by_probs(new_tab)
 
-      pos = pos + rand.pick({ 3,4 })
+        pos = pos + rand.pick({ 3,4 })
+      end
+    elseif mode == "less" then
+      local pos = 1
+      local countdown = rand.irange( 0,4 )
+      local prev_theme = rand.key_by_probs(new_tab)
+
+      while pos <= #EPI.levels do
+        local LEV = EPI.levels[pos]
+
+        if countdown > 0 then
+          mixins[LEV.name] = prev_theme
+          countdown = countdown - 1
+        elseif countdown <= 0 then
+          mixins[LEV.name] = main_theme
+          countdown = rand.pick({ 3,4,4,5 })
+          prev_theme = rand.key_by_probs(new_tab)
+        end
+
+        pos = pos + 1
+      end
     end
   end
 
@@ -2046,7 +2067,11 @@ function Level_choose_themes()
     local mixins = {}
 
     if do_mostly then
-      decide_mixins(EPI, name, mixins)
+      decide_mixins(EPI, name, mixins, "mostly")
+    end
+
+    if do_less then
+      decide_mixins(EPI, name, mixins, "less")
     end
 
     each LEV in EPI.levels do
@@ -2147,12 +2172,16 @@ function Level_choose_themes()
 
   local theme = OB_CONFIG.theme
 
-  -- extract the part after the "mostly_" prefix
+  -- extract the part after the "mostly_" or "less_" prefix
   local mostly_theme = string.match(theme, "mostly_(%w+)")
+  local less_theme = string.match(theme, "less_(%w+)")
 
   if mostly_theme then
     do_mostly = true
     theme = mostly_theme
+  elseif less_theme then
+    do_less = true
+    theme = less_theme
   end
 
 

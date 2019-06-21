@@ -4079,7 +4079,7 @@ OB_THEMES["tech"] =
 {
   label = _("Tech")
   game = "doomish"
-  priority = 18
+  priority = 50
   name_class = "TECH"
   mixed_prob = 90
 }
@@ -4089,7 +4089,7 @@ OB_THEMES["urban"] =
 {
   label = _("Urban")
   game = "doom2"
-  priority = 15
+  priority = 30
   name_class = "URBAN"
   mixed_prob = 35
 }
@@ -4099,7 +4099,7 @@ OB_THEMES["hell"] =
 {
   label = _("Hell")
   game = "doomish"
-  priority = 12
+  priority = 20
   name_class = "GOTHIC"
   mixed_prob = 35
 }
@@ -4109,7 +4109,7 @@ OB_THEMES["mostly_tech"] =
 {
   label = _("Tech-ish")
   game = "doomish"
-  priority = 17
+  priority = 49
 }
 
 
@@ -4117,7 +4117,7 @@ OB_THEMES["mostly_urban"] =
 {
   label = _("Urban-ish")
   game = "doom2"
-  priority = 14
+  priority = 29
 }
 
 
@@ -4125,5 +4125,29 @@ OB_THEMES["mostly_hell"] =
 {
   label = _("Hell-ish")
   game = "doomish"
-  priority = 11
+  priority = 19
+}
+
+
+OB_THEMES["less_tech"] =
+{
+  label = _("Un-tech-ish")
+  game = "doomish"
+  priority = 48
+}
+
+
+OB_THEMES["less_urban"] =
+{
+  label = _("Un-urban-ish")
+  game = "doom2"
+  priority = 28
+}
+
+
+OB_THEMES["less_hell"] =
+{
+  label = _("Un-hell-ish")
+  game = "doomish"
+  priority = 18
 }
