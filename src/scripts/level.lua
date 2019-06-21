@@ -2334,6 +2334,11 @@ end
 function Level_choose_skybox()
   local skyfab
 
+  if not GAME.THEMES[LEVEL.theme_name.skyboxes] then
+    gui.printf("WARNING! No skybox table for theme: " .. LEVEL.theme_name .. "\n")
+    return
+  end
+
   if OB_CONFIG.zdoom_skybox == "random" then
     local skyfab_list = {}
     each def in PREFABS do
