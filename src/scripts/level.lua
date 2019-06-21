@@ -2334,7 +2334,7 @@ end
 function Level_choose_skybox()
   local skyfab
 
-  if not GAME.THEMES[LEVEL.theme_name.skyboxes] then
+  if not GAME.THEMES[LEVEL.theme_name].skyboxes then
     gui.printf("WARNING! No skybox table for theme: " .. LEVEL.theme_name .. "\n")
     return
   end
