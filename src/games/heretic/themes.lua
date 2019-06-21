@@ -62,6 +62,11 @@ HERETIC.THEMES =
       tall   = 30
     }
 
+    fence_posts =
+    {
+      Post = 50
+    }
+
     wide_halls =
     {
       deuce = 50

@@ -619,6 +619,13 @@ ULTDOOM.THEMES =
       gtd_generic_half_floor = 15
     }
 
+    fence_posts =
+    {
+      Post_metal = 50
+      Post_tech_1 = 50
+      Post_tech_2 = 50
+    }
+
     cage_mats =
     {
       METAL1   = 60
@@ -862,6 +869,15 @@ ULTDOOM.THEMES =
 
     }
 
+    fence_posts =
+    {
+      Post_metal = 50
+      Post_tech_1 = 25
+      Post_tech_2 = 25
+      Post_gothic_1 = 25
+      Post_gothic_2 = 25
+    }
+
   ceil_light_prob = 65
 
     style_list =
@@ -1045,6 +1061,13 @@ ULTDOOM.THEMES =
       gtd_wall_high_gap_set = 20
       gtd_wall_high_gap_alt_set = 20
       gtd_generic_half_floor = 20
+    }
+
+    fence_posts =
+    {
+      Post_metal = 50
+      Post_gothic_1 = 50
+      Post_gothic_2 = 50
     }
 
     window_groups =
@@ -1314,6 +1337,15 @@ ULTDOOM.THEMES =
       gtd_wall_high_gap_set = 10
       gtd_wall_high_gap_alt_set = 10
       gtd_generic_half_floor = 15
+    }
+
+    fence_posts =
+    {
+      Post_metal = 50
+      Post_tech_1 = 15
+      Post_tech_2 = 15
+      Post_gothic_1 = 35
+      Post_gothic_2 = 35
     }
 
     passable_decor =

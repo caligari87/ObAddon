@@ -2189,14 +2189,13 @@ stderrf("Cages in %s [%s pressure] --> any_prob=%d  per_prob=%d\n",
     if not R.is_outdoor then return end
     if R.is_cave then return end
 
-    -- MSSP-TODO: FIX THIS, MAN!!!! USE POST_GROUP IN THEMES.LUA
-    -- oh man i am not good with computer plz to help!!!!!!!!
-    if LEVEL.theme_name == "tech" or
-    LEVEL.theme_name == "urban" then
-      R.post_type = rand.pick({"Post_metal","Post_tech_1","Post_tech_2"})
-    else
-      R.post_type = rand.pick({"Post_metal","Post_gothic_1","Post_gothic_2"})
+    if not GAME.THEMES[LEVEL.theme_name].fence_posts then
+      gui.printf("WARNING!!! No fence_posts table for theme: " .. LEVEL.theme_name .. "\n")
+      return
     end
+
+    -- oh man i am not good with computer plz to help!!!!!!!!
+    R.post_type = rand.key_by_probs(GAME.THEMES[LEVEL.theme_name].fence_posts)
   end
 
 

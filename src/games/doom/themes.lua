@@ -1204,6 +1204,13 @@ DOOM.THEMES =
       gtd_window_absurdly_open = 25
     }
 
+    fence_posts =
+    {
+      Post_metal = 50
+      Post_tech_1 = 50
+      Post_tech_2 = 50
+    }
+
     cave_torches =
     {
       blue_torch  = 20
@@ -1473,6 +1480,15 @@ DOOM.THEMES =
       gtd_window_full_open = 75
       gtd_window_bay = 30
       gtd_window_absurdly_open = 45
+    }
+
+    fence_posts =
+    {
+      Post_metal = 50
+      Post_tech_1 = 25
+      Post_tech_2 = 25
+      Post_gothic_1 = 25
+      Post_gothic_2 = 25
     }
 
     cave_torches =
@@ -1825,6 +1841,13 @@ DOOM.THEMES =
       gtd_window_arched = 80
       gtd_window_full_open = 60
       gtd_window_absurdly_open = 60
+    }
+
+    fence_posts =
+    {
+      Post_metal = 50
+      Post_gothic_1 = 50
+      Post_gothic_2 = 50
     }
 
     cave_torches =

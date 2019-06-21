@@ -234,6 +234,13 @@ TNT.THEMES =
       candelabra = 20
     }
 
+    fence_posts =
+    {
+      Post_metal = 50
+      Post_gothic_1 = 50
+      Post_gothic_2 = 50
+    }
+
 --Mostly based on what is seen in TNT.WAD MAP31
     monster_prefs =
     {
