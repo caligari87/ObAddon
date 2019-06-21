@@ -82,7 +82,7 @@ Adds a HUGE library of prefabricates to decorate maps, a collection spanning **m
 #### New Cosmetic Features!
 * PsYcHeDeLiC theme. VAYP NAYSH, YA'LL.
 
-* Glaice's Epic Textures mod, now integrated from Oblige 6.x, including new textures such as ObAddon banners and vending machines!
+* Armaetus's Epic Textures mod, now integrated from Oblige 6.x, including new textures such as ObAddon banners and vending machines!
 * * Also includes Enviornment Themes system, allowing levels to be desert-ish or snowy!
 * * Includes Custom Trees, available in ZScript and ACS/Decorate format! (ACS/Decorate version still needs fixing)
 
