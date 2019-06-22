@@ -1,8 +1,9 @@
 ------------------------------------------------------------------------
---  MODULE: sky generator
+--  MODULE: Sky Generator
 ------------------------------------------------------------------------
 --
 --  Copyright (C) 2008-2017 Andrew Apted
+--  Copyright (C) 2018-2019 Armaetus
 --
 --  This program is free software; you can redistribute it and/or
 --  modify it under the terms of the GNU General Public License
