@@ -2621,7 +2621,7 @@ function Layout_indoor_lighting()
     end
   end
 
- -- Very dark here! --Glaice
+ -- Very dark here! --Armaetus
 
   local function visit_room(R, prev_room)
     local tab = { bright=20, normal=45, dark=65, verydark=25 }

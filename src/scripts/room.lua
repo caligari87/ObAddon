@@ -1875,7 +1875,7 @@ function Room_choose_kind(R, last_R)
 end
 
 -- Room size testing
--- Edit by Glaice
+-- Edit by Armaetus
 
 function Room_choose_size(R, not_big)
   -- decides whether room will be "big" or not.

@@ -6,6 +6,7 @@
 --
 --  Copyright (C) 2006-2017 Andrew Apted
 --  Copyright (C) 2019 MsrSgtShooterPerson
+--  Copyright (C) 2019 Armaetus
 --
 --  This program is free software; you can redistribute it and/or
 --  modify it under the terms of the GNU General Public License
@@ -155,7 +156,7 @@ function Level_determine_map_size(LEV)
     end
   end
 
-  -- Glaice --
+  -- Armaetus --
 
   -- Mix It Up --
 
@@ -192,7 +193,7 @@ function Level_determine_map_size(LEV)
     -- Named sizes --
 
     --Extreme was 68, the BSP build failures might be attributing to this
-    --due to the extreme detail the maps have in them. --Glaice, March 3rd, 2019
+    --due to the extreme detail the maps have in them. --Armaetus (formerly Glaice), March 3rd, 2019
     local SIZES =
     {
       small=22,
