@@ -2340,11 +2340,10 @@ function Level_choose_darkness()
     --prob = style_sel("darkness", 0, 10, 30, 90) --Original
   end
 
-  LEVEL.sky_light  = rand.pick({ 136,144,144,152,160,168,176,176,192,192,200,208 })
+  -- Daytime will be varying degrees of bright here, from morning (152) to afternoon (224).
+  LEVEL.sky_light  = rand.pick({ 152,160,168,176,176,192,192,200,208,216,224 })
   LEVEL.sky_shadow = 32
 
-  -- How to get these to be chosen at random? -Armaetus, Apr 4th, 2019
-  -- Commented out extra lines until then.
   local darkness_messages =
   {
     "Darkness falls across the land...\n\n",
@@ -2353,11 +2352,12 @@ function Level_choose_darkness()
     "The Sun has been blotted out...\n\n"
   }
 
+  -- Dark areas will be varying degrees of dark, from dusky (144) to stygian (104).
   if rand.odds(prob) then
     gui.printf(rand.pick(darkness_messages))
 
     LEVEL.is_dark = true
-    LEVEL.sky_light  = rand.pick({ 112,120,128,136,144 })
+    LEVEL.sky_light  = rand.pick({ 104,112,120,128,136,144 })
     LEVEL.sky_shadow = 32
   end
 end
