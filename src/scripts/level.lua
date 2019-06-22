@@ -161,7 +161,7 @@ function Level_determine_map_size(LEV)
   -- Mix It Up --
 
   -- Adjusted probabilities once again, Extreme is still very slim probability
-  -- but still possible to show up. -Glaice, May 11th, 2019
+  -- but still possible to show up. -Armaetus, May 11th, 2019
   if ob_size == "mixed" then
     local MIXED_PROBS =
     {
@@ -2343,7 +2343,7 @@ function Level_choose_darkness()
   LEVEL.sky_light  = rand.pick({ 136,144,144,152,160,168,176,176,192,192,200,208 })
   LEVEL.sky_shadow = rand.pick({ 24,32,40 }) --24
 
-  -- How to get these to be chosen at random? -Glaice, Apr 4th, 2019
+  -- How to get these to be chosen at random? -Armaetus, Apr 4th, 2019
   -- Commented out extra lines until then.
   local darkness_messages =
   {
