@@ -31,6 +31,14 @@ THEME_CONTROL.CHOICES =
 }
 
 
+THEME_CONTROL.MIXIN_CHOICES =
+{
+  "mostly", _("Mostly"),
+  "normal", _("Normal"),
+  "less",   _("Less"),
+}
+
+
 function THEME_CONTROL.set_a_theme(LEV, opt)
   if opt.value == "no_change" then
     return
@@ -45,7 +53,12 @@ end
 
 
 function THEME_CONTROL.get_levels(self)
-  each LEV in GAME.levels do
+  for name,opt in pairs(self.options) do
+    local value = self.options[name].value
+    PARAM[name] = value
+  end
+
+  --[[each LEV in GAME.levels do
     local name
 
     if LEV.is_secret then
@@ -60,11 +73,11 @@ function THEME_CONTROL.get_levels(self)
     if not opt then continue end
 
     THEME_CONTROL.set_a_theme(LEV, opt)
-  end
+  end]]
 end
 
 
-UNFINISHED["theme_ctl_doom2"] =
+--[[UNFINISHED["theme_ctl_doom2"] =
 {
   label = _("Doom 2 Theme Control")
 
@@ -82,13 +95,43 @@ UNFINISHED["theme_ctl_doom2"] =
     episode3  = { label="Episode 3",     choices=THEME_CONTROL.CHOICES }
     secret    = { label="Secret Levels", choices=THEME_CONTROL.CHOICES }
   }
+}]]
+
+
+OB_MODULES["theme_mixins"] =
+{
+  label = _("Theme Mix-ins")
+
+  game = "doomish"
+
+  priority = 103
+
+  hooks =
+  {
+    get_levels = THEME_CONTROL.get_levels
+  }
+
+  options =
+  {
+    mixin_type =
+    {
+      name = "mixin_type"
+      label = _("Mix-in Type")
+      tooltip = "This replaces the -ish theme choices. By selecting mostly, this means " ..
+                "your selected theme is occasionally littered by other themes while setting it to " ..
+                "less means the original selected theme is what's littered in instead. " ..
+                "Default behavior is normal."
+      choices = THEME_CONTROL.MIXIN_CHOICES
+      default = "normal"
+    }
+  }
 }
 
 
 ------------------------------------------------------------------------
 
 
-THEME_CONTROL.DOOM1_CHOICES =
+--[[THEME_CONTROL.DOOM1_CHOICES =
 {
   "no_change", "NO CHANGE"
 
@@ -121,5 +164,4 @@ UNFINISHED["theme_ctl_doom1"] =
     episode4  = { label="Episode 4",     choices=THEME_CONTROL.DOOM1_CHOICES }
     secret    = { label="Secret Levels", choices=THEME_CONTROL.DOOM1_CHOICES }
   }
-}
-
+}]]

@@ -1993,7 +1993,7 @@ function Level_choose_themes()
       end
     elseif mode == "less" then
       local pos = 1
-      local countdown = rand.irange( 0,4 )
+      local countdown = rand.irange( 0,3 )
       local prev_theme = rand.key_by_probs(new_tab)
 
       while pos <= #EPI.levels do
@@ -2004,7 +2004,7 @@ function Level_choose_themes()
           countdown = countdown - 1
         elseif countdown <= 0 then
           mixins[LEV.name] = main_theme
-          countdown = rand.pick({ 3,4,4,5 })
+          countdown = rand.pick({ 2,3,3,4 })
           prev_theme = rand.key_by_probs(new_tab)
         end
 
@@ -2174,16 +2174,18 @@ function Level_choose_themes()
 
   -- extract the part after the "mostly_" or "less_" prefix
   local mostly_theme = string.match(theme, "mostly_(%w+)")
-  local less_theme = string.match(theme, "less_(%w+)")
+
 
   if mostly_theme then
     do_mostly = true
     theme = mostly_theme
-  elseif less_theme then
-    do_less = true
-    theme = less_theme
   end
 
+  if PARAM.mixin_type == "mostly" then
+    do_mostly = true
+  elseif PARAM.mixin_type == "less" then
+    do_less = true
+  end
 
   -- As Original : follow the original game
   if theme == "original" then

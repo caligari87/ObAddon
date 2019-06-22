@@ -3237,35 +3237,3 @@ OB_THEMES["flesh"] =
   name_class = "GOTHIC"
   mixed_prob = 20
 }
-
-
-OB_THEMES["mostly_deimos"] =
-{
-  label = _("Deimos-ish")
-  game = "doom1"
-  priority = 39
-}
-
-
-OB_THEMES["mostly_flesh"] =
-{
-  label = _("Thy Flesh-ish")
-  game = "ultdoom"
-  priority = 9
-}
-
-
-OB_THEMES["less_deimos"] =
-{
-  label = _("Un-Deimos-ish")
-  game = "doom1"
-  priority = 38
-}
-
-
-OB_THEMES["less_flesh"] =
-{
-  label = _("Un-Flesh-ish")
-  game = "ultdoom"
-  priority = 8
-}

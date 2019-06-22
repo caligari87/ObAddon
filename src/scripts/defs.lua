@@ -65,23 +65,11 @@ OB_THEMES["original"] =
   priority = 91
 }
 
-OB_THEMES["mostly_original"] =
-{
-  label = _("Original-ish")
-  priority = 90
-}
-
 
 OB_THEMES["epi"] =
 {
   label = _("Episodic")
   priority = 85,
-}
-
-OB_THEMES["mostly_epi"] =
-{
-  label = _("Episode-ish")
-  priority = 84,
 }
 
 
@@ -91,11 +79,13 @@ OB_THEMES["jumble"] =
   priority = 80
 }
 
+
 OB_THEMES["bit_mixed"] =
 {
   label = _("Bit Mixed")
   priority = 81
 }
+
 
 OB_THEMES["psycho"] =
 {
@@ -361,4 +351,3 @@ GLOBAL_SKIN_DEFAULTS =
   wait = ""
   targetname = ""
 }
-
