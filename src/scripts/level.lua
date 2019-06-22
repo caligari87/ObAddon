@@ -2341,7 +2341,7 @@ function Level_choose_darkness()
   end
 
   LEVEL.sky_light  = rand.pick({ 136,144,144,152,160,168,176,176,192,192,200,208 })
-  LEVEL.sky_shadow = rand.pick({ 24,32,40 }) --24
+  LEVEL.sky_shadow = 32
 
   -- How to get these to be chosen at random? -Armaetus, Apr 4th, 2019
   -- Commented out extra lines until then.
@@ -2357,7 +2357,7 @@ function Level_choose_darkness()
     gui.printf(rand.pick(darkness_messages))
 
     LEVEL.is_dark = true
-    LEVEL.sky_light  = 144
+    LEVEL.sky_light  = rand.pick({ 112,120,128,136,144 })
     LEVEL.sky_shadow = 32
   end
 end
