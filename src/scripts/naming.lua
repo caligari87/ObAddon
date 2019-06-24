@@ -1003,14 +1003,15 @@ namelib.NAMES =
         Occult=10, Surreptious=15,
         Inner=15, Abysmal=10, Deepest=15,
         Concealed=7, Clandestine=5, Outer=5,
+        Outlying=5,
 
         -- age
         Elder=15, Ancient=15, Eternal=5,
-        Eldritch=7,
+        Eldritch=7, Archaic=7,
 
         -- color
         Black=5, Gray=5, Red=5, Crimson=5,
-        Ochre=5,
+        Ochre=5, Ashen=5,
 
         -- dirty
         Foul=10, Defiled=10, Ravished=5, Murky=3,
@@ -1076,10 +1077,10 @@ namelib.NAMES =
         Cruel=5, Crass=2, Sullen=10, Bitter=7,
         Uncivilised=2, Vexatious=5, Perverse=5,
         Morbid=10, Loathsome=5, Vulgar=5,
-        Wretched=3, Caustic=5,
+        Wretched=3, Caustic=5, Shameful=5,
 
         -- neutral personal qualities (hey, I'm a quiet guy -MSSP)
-        Silent=5, Enigmatic=5,
+        Silent=5, Enigmatic=5, Shameless=3,
         Godless=5, God_forsaken=7, Ungodly=3, -- does putting this here
         Sacreligious=5, Unspiritual=2,        -- reveal too much about
                                               -- my own opinions? -MSSP
@@ -1090,10 +1091,10 @@ namelib.NAMES =
         -- explicitly very evil
         Evil=30, Unholy=20, Wicked=15,
         Abhorrent=3, Abominable=5, Bestial=5,
-        Direful=2, Execrated=2,
+        Direful=2, Execrated=2, Hexed=3,
         Immoral=5, Impure=5, Utmost=5,
         Merciless=7, Pestilent=5, Profane=5,
-        Vicious=10, Violent=10,  Desecrated=5,
+        Vicious=10, Violent=10, Desecrated=5,
         Accursed=5, Malodorous=5, Despicable=2,
         Heinous=5, Mephitic=2, Peccant=5,
         Sordid=2, Grievous=2, Ferine=2, Sinful=5,
@@ -1102,21 +1103,23 @@ namelib.NAMES =
         Immortal=3,
 
         -- abandonment/disrepair/negligence
-        Detested=5, Ruined=5, Barren=5,
-        Flimsy=3, Corroded=5, Derelict=5,
-        Decrepid=3, Desolate=10, Forgotten=10,
+        Detested=5, Ruined=5, Barren=5, Feeble=3, Dilapidated=5,
+        Flimsy=3, Corroded=5, Derelict=5, Frail=3, Crumbling=4,
+        Decrepid=3, Desolate=10, Forgotten=10, Rickety=5, Dusty=3,
+        Decaying=3,
 
         -- holy
-        Ceremonial=5, Liturgical=5, Solemn=5, Deistic=5,
-        Divine=5, Devout=5, Sacerdotal=5, Sacred=5,
-        Clerical=5, Hallowed=5,
+        Ceremonial=5, Liturgical=5, Solemn=5, Deistic=5, Sanctified=5,
+        Divine=5, Devout=5, Sacerdotal=5, Sacred=5, Spiritual=5,
+        Clerical=5, Hallowed=5, Cherished=5, Revered=5, Venerable=5,
+        Angelic=5, Consecrated=5, Enshrined=5, Numinous=5,
 
         -- material
         Adamantine=5, Bronze=5, Copper=5,
         Rocky=5, Stone=5, Masonic=5,
         Iron=5, Steel=5, Hellforged=5,
         Obsidian=5, Mythril=5,
-        Rusted=5, Guilded=5,
+        Rusted=5, Guilded=5, God_Forged=3,
       }
 
       n =
@@ -1126,19 +1129,21 @@ namelib.NAMES =
         Crypt=20, Tomb=15, Graveyard=10,
         Cloister=5, Sepulcher=7, Hecatomb=3,
         Catacombs=10,
-        --+ neutral undergorund
-        Pit=10, Cavern=10, Cave=5, Chasm=5,
-        Lair=15, Den=7, Abyss=5,
+        --+ neutral underground
+        Pit=10, Cavern=10, Cave=5, Chasm=5, Ravine=5,
+        Lair=15, Den=7, Abyss=5, Gulch=5, Gorge=5,
         --+ neutral aboveground
         Wasteland=15, Town=5, Ghetto=2, City=5,
-        Well=5, Realm=10, Domain=10,
-        Hive=5, Abode=15,
+        Well=5, Realm=10, Domain=10, Gulf=5,
+        Hive=5, Abode=15, Township=7, Hamlet=7,
+        Municipality=7, Community=5,
         --+ terrain
-        Valley=10, River=5,
+        Valley=10, River=5, Lowland=5, Plain=5, Vale=5,
+        Coulee=5, Gully=5, Channel=5,
         --+ temples
         Grotto=15, Chapel=10, Church=7,
         Mosque=5, Cathedral=5, Tabernacle=3,
-        Palace=5, Citadel=5,
+        Palace=5, Citadel=5, Abbey=5,
         --+ building sections
         Hall=7, Rooms=3, Chamber=10,
 
@@ -1149,7 +1154,8 @@ namelib.NAMES =
         -- in nature nor exclusive to hell)
         Tower=3, Gate=3, Village=3, Sanctuary=3,
         Prison=3, Sanctum=10, Arena=3, Spire=10,
-        Demesne=5, Canton=5,
+        Demesne=5, Canton=5, Settlement=5, Dominion=5,
+        Province=5, Protectorate=5,
 
         -- weird ones
         Communion=5, Monolith=5, Crucible=5,
@@ -1241,7 +1247,7 @@ namelib.NAMES =
         Grounds=3, Stade=3, Strand=3,
         Coliseum=3,
 
-        -- synyonyms for slaugterhouse
+        -- synyonyms for slaughterhouse
         Abattoir=3, Butchery=3,
 
         -- shapes
@@ -1269,13 +1275,13 @@ namelib.NAMES =
         Darkness=10, Limbo=3, Souls=10, Shadows=10,
 
         -- violence
-        Carnage=10, Gore=5, Rapine=10,
-        Destruction=5, Doom=15,
-        Flesh=10, Corpses=10, Bones=10,
-        Viscera=5, Skulls=10,
+        Carnage=10, Gore=5, Rapine=10, Liquidation=7,
+        Destruction=5, Doom=15, Butchery=10,
+        Flesh=10, Corpses=10, Bones=10, Havoc=10,
+        Viscera=5, Skulls=10, Bloodshed=10, Warfare=5,
 
         -- disaster
-        Tragedy=10, Famine=10, Chaos=15,
+        Tragedy=10, Famine=10, Chaos=15, Struggle=10,
 
         -- non-sectarian behavior
         Iconoclasm=10, Defection=10,
@@ -1350,13 +1356,13 @@ namelib.NAMES =
         Absurd=10,
 
         -- age
-        Ancient=10,
+        Ancient=10, Archaic=10,
 
         -- damage states
         Blackened=10, Bleak=10, Bleeding=10,
         Corroded=10, Corrosive=10, Deformed=10,
-        Dismal=10, Exposed=10,
-        Ruined=10, Collapsed=5,
+        Dismal=10, Exposed=10, Gutted=7, Exenterated=5,
+        Ruined=10, Collapsed=5, Decimated=5,
 
         -- tainted
         Chaotic=10, Corrupt=10, Defiled=10,
@@ -1649,6 +1655,10 @@ namelib.NAMES =
         ["Voices in the Blood"]=10
         ["Welcome to the Coalface"]=10
         ["You Can't Handle the Noose"]=10
+
+        -- Armaetus adds new names
+        ["Segmentus Infernus"]=10
+        ["Voidborne"]=10
       }
     }
   }
