@@ -2430,8 +2430,6 @@ function Layout_handle_corners()
         -- cannot place posts next to a wall
         if Corner_touches_wall(corner) then return end
 
-        if corner.posted then return end
-
         each A in corner.areas do
           if A.room then
             if not A.room.is_outdoor then return end
@@ -2458,7 +2456,6 @@ function Layout_handle_corners()
 
         corner.kind = "post"
         corner.post_top_h = post_top_z
-        corner.posted = true
       end
 
       if (junc.E1.kind == "fence" and junc.E1.area.is_outdoor) then
@@ -2471,7 +2468,6 @@ function Layout_handle_corners()
           corner.kind = "post"
           corner.post_type = corner.areas[1].room.post_type
           corner.post_top_h = assert(junc.E1.fence_top_z)
-          corner.posted = true
         end
       end
 

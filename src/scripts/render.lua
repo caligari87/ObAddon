@@ -977,8 +977,6 @@ function Render_corner(cx, cy)
 
 
   local function make_pillar()
-    -- MSSP-TODO: we need this to get some nicer transitions
-    -- between porch fences and stairs!
     local mx, my = corner.x, corner.y
     local mat = corner.mat
 
@@ -2630,8 +2628,8 @@ function Render_all_areas()
   if LEVEL.has_streets and PARAM.road_markings == "yes" then
     Render_find_street_markings()
     Render_all_street_markings()
-    --Render_establish_street_lanes()
-    --Render_all_street_traffic()
+    Render_establish_street_lanes()
+    Render_all_street_traffic()
   end
 
 end
@@ -2642,6 +2640,7 @@ end
 
 function Render_all_street_markings()
 
+  -- MSSP-TODO: should probably be placed in themes.lua along with the sink info
   local road_fab_list =
   {
     Road_lane_marker = 100
@@ -2683,7 +2682,17 @@ end
 
 
 function Render_all_street_traffic()
-  -- MSSP-TODO
+  LEVEL.street_traffic = {}
+
+  gui.printf("Found " .. #LEVEL.road_street_traffic_spots .. " places to park the car.\n")
+  each SPOT in LEVEL.road_street_traffic_spots do
+    local T = Trans.spot_transform(SPOT.x, SPOT.y, SPOT.z, SPOT.dir)
+
+    -- MSSP-TODO: Fab_pick for street items. Remember to check for vehicle size
+    -- and check against their lane_dir after being put up in the LEVEL.street_traffic
+    -- table.
+    --Fabricate(nil, PREFABS["Dir_test"], T, {})
+  end
 end
 
 
@@ -2761,6 +2770,11 @@ function Render_find_street_markings()
     end
   end
 
+  local function seed_from_nudge(seed, direction, distance)
+    x,y = geom.nudge(seed.sx,seed.sy,direction,distance)
+    return SEEDS[x][y]
+  end
+
   local function check_extents()
 
     local function check_road_border(S, dir)
@@ -2773,11 +2787,8 @@ function Render_find_street_markings()
         score = score + 1
       end
 
-      local Tx,Ty
-
       -- check seeds from the pivot seed
-      Tx,Ty = geom.nudge(S.sx,S.sy,dir,-1)
-      local S2 = SEEDS[Tx][Ty]
+      local S2 = seed_from_nudge(S,dir,-1)
 
       if not S2.area.is_road then
         score = score + 1
@@ -2788,8 +2799,7 @@ function Render_find_street_markings()
 
       repeat
 
-        Tx,Ty = geom.nudge(S.sx,S.sy,dir,distance_checked)
-        S2 = SEEDS[Tx][Ty]
+        S2 = seed_from_nudge(S,dir,distance_checked)
 
         if distance_checked < 4
         and S2.area.is_road
@@ -2832,15 +2842,13 @@ function Render_find_street_markings()
         -- for dead ends on horizontal roads
         if dir == 2 then
 
-          Tx,Ty = geom.nudge(S.sx,S.sy,4,1)
-          S2 = SEEDS[Tx][Ty]
+          S2 = seed_from_nudge(S,4,1)
           if not S2.area.is_road or
           S2.area.room != S.area.room then
             mark_kind = "dead_end"
           end
 
-          Tx,Ty = geom.nudge(S.sx,S.sy,6,1)
-          S2 = SEEDS[Tx][Ty]
+          S2 = seed_from_nudge(S,6,1)
           if not S2.area.is_road or
           S2.area.room != S.area.room then
             mark_kind = "dead_end"
@@ -2850,19 +2858,32 @@ function Render_find_street_markings()
         -- for dead ends on vertical roads
         if dir == 6 then
 
-          Tx,Ty = geom.nudge(S.sx,S.sy,8,1)
-          S2 = SEEDS[Tx][Ty]
+          S2 = seed_from_nudge(S,8,1)
           if not S2.area.is_road or
           S2.area.room != S.area.room then
             mark_kind = "dead_end"
           end
 
-          Tx,Ty = geom.nudge(S.sx,S.sy,2,1)
-          S2 = SEEDS[Tx][Ty]
+          S2 = seed_from_nudge(S,2,1)
           if not S2.area.is_road or
           S2.area.room != S.area.room then
             mark_kind = "dead_end"
           end
+        end
+
+        -- mark lane facing directions for street traffic code
+        if dir == 2 then
+          S.lane_dir = 4
+          seed_from_nudge(S,dir,1).lane_dir = 4
+          seed_from_nudge(S,dir,2).lane_dir = 6
+          seed_from_nudge(S,dir,3).lane_dir = 6
+        end
+
+        if dir == 6 then
+          S.lane_dir = 2
+          seed_from_nudge(S,dir,1).lane_dir = 2
+          seed_from_nudge(S,dir,2).lane_dir = 8
+          seed_from_nudge(S,dir,3).lane_dir = 8
         end
 
         local road_pos =
@@ -2921,48 +2942,78 @@ function Render_establish_street_lanes()
   -- for lanes around the marking spots, it would be possible
   -- to spawn things like vehicles and other fabs on those lanes.
   --
-  -- 1. For each road spot that exists, check if there is an
-  --    adjacent road spot. If there is, these spots are
-  --    grouped to be part of a single lane.
-  -- 2. Repeat 1. until all spots have been sorted into lanes.
-  -- 3. Render objects into the lane positions in
-  --    Render_all_street_traffic()
+  -- 1. For each existing seed, check if they have a lane_dir,
+  --    which should already have been establishe in the street
+  --    marking code.
+  -- 2. Get 2x2 bounding boxes of seeds with the same directions
+  --    in the following pattern:
+  --    SS
+  --    XS
+  --    Where X is the pivot, and S are the neighboring seeds to check.
+  -- 3. If all seeds in the box have the same lane_dir, this is a potential spot
+  --    for street objects like vehicles, barricades, whatever. Add it to
+  --    LEVEL.road_street_traffic_spots
 
   local remaining_street_spots = LEVEL.road_marking_spots
-  LEVEL.road_lanes = {}
+  LEVEL.road_street_traffic_spots = {}
 
-  local lane_id = 1
+  local function get_viable_spot(S)
+    local spot = {}
 
-  local function check_for_adjecant_lanes(spot)
-    local x = spot.x
-    local y = spot.y
+    local cur_dir = S.lane_dir
+    local S2 = SEEDS[S.sx + 1][S.sy]
+    local S3 = SEEDS[S.sx][S.sy + 1]
+    local S4 = SEEDS[S.sx + 1][S.sy + 1]
 
-    each XSPOT in remaining_street_spots do
-      if (XSPOT.x == spot.x + 128) and (XSPOT.y == spot.y) then
-        return true
-      elseif (XSPOT.x == spot.x - 128) and (XSPOT.y == spot.y) then
-        return true
-      elseif (XSPOT.x == spot.x) and (XSPOT.y == spot.y + 128) then
-        return true
-      elseif (XSPOT.x == spot.x) and (XSPOT.y == spot.y - 128) then
-        return true
+    if S2.lane_dir != cur_dir then return false end
+    if S3.lane_dir != cur_dir then return false end
+    if S4.lane_dir != cur_dir then return false end
+
+    local off_x = (S.mid_x + S4.mid_x) / 2
+    local off_y = (S.mid_y + S4.mid_y) / 2
+
+    if cur_dir == 4 then
+      off_y = off_y - 32
+    elseif cur_dir == 6 then
+      off_y = off_y + 32
+    elseif cur_dir == 2 then
+      off_x = off_x + 32
+    elseif cur_dir == 8 then
+      off_x = off_x - 32
+    end
+
+    spot =
+    {
+      x = off_x
+      y = off_y
+      z = S.area.floor_h + 2
+      dir = cur_dir
+    }
+
+    return spot
+  end
+
+  local x = 1
+  local y = 1
+  local max_x = SEED_W
+  local max_y = SEED_H
+
+  repeat
+    x = 1
+    repeat
+      S = SEEDS[x][y]
+      if S.area and S.area.is_road
+      and not S.diagonal and S.lane_dir then
+        local SPOT = get_viable_spot(S)
+        if SPOT then
+          table.insert(LEVEL.road_street_traffic_spots, SPOT)
+        end
       end
-    end
-    return false
-  end
+      x = x + 1
+    until x >= max_x
+    y = y + 1
+  until y >= max_y
 
-  each SPOT in remaining_street_spots do
-    print(table.tostr(S))
-    if check_for_adjecant_lanes(SPOT) then
-      local road_lane_type =
-      {
-        id = lane_id
-        spot = SPOT
-      }
-      table.insert(road_lanes,road_lane_type)
-      lane_id = lane_id + 1
-    end
-  end
 end
 
 
