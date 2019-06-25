@@ -6,7 +6,7 @@ PREFABS.Decor_road_clutter_three_cones =
   prob = 3500
   theme = "!hell"
 
-  can_be_on_roads = "only"
+  can_be_on_roads = true
 
   where = "point"
   size = 64
@@ -19,7 +19,7 @@ PREFABS.Decor_road_clutter_three_cones =
 PREFABS.Decor_road_clutter_one_cone =
 {
   template = "Decor_road_clutter_three_cones"
-  map = "MAP01"
+  map = "MAP02"
 
   size = 32
 }

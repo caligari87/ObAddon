@@ -3,7 +3,7 @@ PREFABS.Decor_sedan =
   file   = "decor/gtd_cars.wad"
   map    = "MAP01"
 
-  prob   = 10000
+  prob   = 5000
   theme  = "urban"
 
   can_be_on_roads = true
@@ -45,7 +45,7 @@ PREFABS.Decor_minitruck =
 
   can_be_on_roads = true
 
-  prob   = 10000
+  prob   = 8500
   theme  = "urban"
 
   env = "!building"
@@ -58,4 +58,30 @@ PREFABS.Decor_minitruck =
   bound_z2 = 128
 
   sink_mode = "never"
+}
+
+PREFABS.Decor_hatchback =
+{
+  template = "Decor_sedan"
+  map = "MAP03"
+}
+
+PREFABS.Decor_hatchback_blue =
+{
+  template = "Decor_sedan"
+  map = "MAP03"
+
+  flat_FLAT5_3 = "CEIL4_2"
+
+  tex_REDWALL = "COMPBLUE"
+}
+
+PREFABS.Decor_hatchback_brown =
+{
+  template = "Decor_sedan"
+  map = "MAP03"
+
+  flat_FLAT5_3 = "CEIL5_2"
+
+  tex_REDWALL = "BROWN144"
 }
