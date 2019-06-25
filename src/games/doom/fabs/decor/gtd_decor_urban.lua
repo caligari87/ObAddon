@@ -114,8 +114,6 @@ PREFABS.Decor_street_barrier =
   prob   = 6000
   theme  = "urban"
 
-  can_be_on_roads = true
-
   where  = "point"
   size   = 64
 

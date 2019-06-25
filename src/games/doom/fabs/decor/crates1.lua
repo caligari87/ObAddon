@@ -13,8 +13,6 @@ PREFABS.Crate_small_brown =
   prob   = 2500
   theme  = "tech"
 
-  can_be_on_roads = true
-
   where  = "point"
   size   = 64
 
@@ -42,8 +40,6 @@ PREFABS.Crate_small_woodmet =
   theme  = "!tech"
   prob   = 2500
 
-  can_be_on_roads = true
-
   where  = "point"
   size   = 64
 
@@ -68,8 +64,6 @@ PREFABS.Crate_tall_brown =
   prob   = 2500
   theme  = "tech"
 
-  can_be_on_roads = true
-
   where  = "point"
   size   = 64
   height = 160
@@ -91,8 +85,6 @@ PREFABS.Crate_tall_computers =
   theme  = "tech"
   env    = "building"
 
-  can_be_on_roads = true
-
   tex_CRATELIT = "SPACEW3"
   flat_CRATOP1 = "CEIL5_1"
 }
@@ -107,8 +99,6 @@ PREFABS.Crate_medium_gray =
   prob   = 2500
   theme  = "tech"
   env    = "!cave"
-
-  can_be_on_roads = true
 
   where  = "point"
   size   = 96
@@ -130,8 +120,6 @@ PREFABS.Crate_group_medium =
   env    = "!cave"
   theme  = "tech"
 
-  can_be_on_roads = true
-
   where  = "point"
   size   = 128
   height = 160
@@ -150,8 +138,6 @@ PREFABS.Crate_large_wooden =
 
   theme  = "!tech"
   prob   = 2500
-
-  can_be_on_roads = true
 
   where  = "point"
   size   = 128

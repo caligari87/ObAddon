@@ -11,8 +11,6 @@ PREFABS.Decor_ruins1 =
   theme  = "urban"
   env    = "outdoor"
 
-  can_be_on_roads = true
-
   where  = "point"
   size   = 80
 
