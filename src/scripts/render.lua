@@ -2708,7 +2708,47 @@ function Render_all_street_traffic()
     return smallest_distance
   end
 
+
+  local function distance_to_dead_end(seed,dir)
+
+    local function seed_from_nudge(seed, direction, distance)
+      x,y = geom.nudge(seed.sx, seed.sy, direction, distance)
+      return SEEDS[x][y]
+    end
+
+    local distance = 0
+
+    local cur_area = seed.area
+    local S = {}
+    S.area = cur_area
+
+    local gaining_distance = 1
+
+    while S.area == cur_area and S.area.mode == "floor" do
+      S = seed_from_nudge(seed,dir,gaining_distance)
+      gaining_distance = gaining_distance + 1
+      distance = distance + SEED_SIZE
+    end
+
+    -- compensation for the thickness of the assumed wall ahead
+    distance = distance -16
+
+    -- corrections for the fact that the reference seed is offset
+    -- SS
+    -- XS
+    if dir == 8 or dir == 6 then
+      distance = distance - (SEED_SIZE)
+    end
+
+    return distance
+  end
+
+
   gui.printf("Found " .. #LEVEL.road_street_traffic_spots .. " places to park the car.\n")
+
+
+  rand.shuffle(LEVEL.road_street_traffic_spots)
+
   each SPOT in LEVEL.road_street_traffic_spots do
 
     -- stagger positions a bit
@@ -2729,10 +2769,27 @@ function Render_all_street_traffic()
       height = SPOT.height
     }
 
+    -- check distance to dead end
+    local forward_distance = 9999
+    local back_distance = 9999
+    local initial_size
+
+    if SPOT.dir == 2 then SPOT.back_dir = 8 end
+    if SPOT.dir == 8 then SPOT.back_dir = 2 end
+    if SPOT.dir == 4 then SPOT.back_dir = 6 end
+    if SPOT.dir == 6 then SPOT.back_dir = 4 end
+
+    forward_distance = distance_to_dead_end(SPOT.ref_seed, SPOT.dir)
+    back_distance = distance_to_dead_end(SPOT.ref_seed, SPOT.back_dir)
+    initial_size = math.min(forward_distance, back_distance)
+
     -- check spot size against everything
+    local distance_to_nearest_used_spot = 9999
     if #LEVEL.street_traffic > 0 then
-      reqs.size = get_parking_distance(SPOT)
+      distance_to_nearest_used_spot = get_parking_distance(SPOT)
     end
+
+    reqs.size = math.min(initial_size, distance_to_nearest_used_spot)
 
     local def
     local prob = style_sel("street_traffic", 0, 13, 27, 40)
@@ -2742,7 +2799,6 @@ function Render_all_street_traffic()
     end
 
     if def then
-      gui.printf("Car! " .. def.name .. "\n")
       Fabricate(nil, def, T, {})
 
       local street_traffic_spot =
@@ -2838,7 +2894,7 @@ function Render_find_street_markings()
   end
 
   local function seed_from_nudge(seed, direction, distance)
-    x,y = geom.nudge(seed.sx,seed.sy,direction,distance)
+    x,y = geom.nudge(seed.sx, seed.sy, direction, distance)
     return SEEDS[x][y]
   end
 
@@ -2850,7 +2906,7 @@ function Render_find_street_markings()
       local distance_checked = 1
       local score = 0
 
-      if S.area.is_road then
+      if S.area.is_road and S.area.mode == "floor" then
         score = score + 1
       end
 
@@ -2911,12 +2967,14 @@ function Render_find_street_markings()
 
           S2 = seed_from_nudge(S,4,1)
           if not S2.area.is_road or
+          S2.area.mode != "floor" or
           S2.area.room != S.area.room then
             mark_kind = "dead_end"
           end
 
           S2 = seed_from_nudge(S,6,1)
           if not S2.area.is_road or
+          S2.area.mode != "floor" or
           S2.area.room != S.area.room then
             mark_kind = "dead_end"
           end
@@ -2927,12 +2985,14 @@ function Render_find_street_markings()
 
           S2 = seed_from_nudge(S,8,1)
           if not S2.area.is_road or
+          S2.area.mode != "floor" or
           S2.area.room != S.area.room then
             mark_kind = "dead_end"
           end
 
           S2 = seed_from_nudge(S,2,1)
           if not S2.area.is_road or
+          S2.area.mode != "floor" or
           S2.area.room != S.area.room then
             mark_kind = "dead_end"
           end
@@ -3049,8 +3109,13 @@ function Render_establish_street_lanes()
       off_x = off_x - 32
     end
 
+    if not S.area.ceil_h then
+      return nil
+    end
+
     spot =
     {
+      ref_seed = S
       x = off_x
       y = off_y
       z = S.area.floor_h + 2
