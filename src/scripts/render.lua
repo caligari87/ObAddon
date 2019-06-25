@@ -2735,9 +2735,9 @@ function Render_all_street_traffic()
     end
 
     local def
+    local prob = style_sel("street_traffic", 0, 13, 27, 40)
 
-    local prob = style_sel("street_traffic", 0, 20, 40, 60)
-    if rand.odds(prob) then -- MSSP-TODO: change this to style probability later on
+    if rand.odds(prob) then
       def = Fab_pick(reqs, "is_ok_man")
     end
 

@@ -23,3 +23,36 @@ PREFABS.Decor_road_clutter_one_cone =
 
   size = 32
 }
+
+PREFABS.Decor_road_clutter_boxes =
+{
+  file = "decor/gtd_decor_road_clutter.wad"
+  map = "MAP03"
+
+  prob = 3500
+  theme = "!hell"
+
+  can_be_on_roads = true
+
+  where = "point"
+  size = 80
+  height = 64
+
+  bound_z1 = 0
+  bound_z2 = 64
+
+  flat_CRATOP2 = "CRATOP1"
+}
+
+PREFABS.Decor_road_clutter_boxes_alt =
+{
+  template = "Decor_road_clutter_boxes"
+
+  theme = "!tech"
+
+  flat_CRATOP1 = "FLAT5_2"
+  flat_CRATOP2 = "FLAT5_2"
+
+  tex_CRATE2 = "WOODMET1"
+  tex_CRATINY = "WOOD10"
+}

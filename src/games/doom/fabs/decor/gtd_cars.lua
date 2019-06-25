@@ -45,7 +45,7 @@ PREFABS.Decor_minitruck =
 
   can_be_on_roads = true
 
-  prob   = 8000
+  prob   = 7500
   theme  = "urban"
 
   env = "!building"
