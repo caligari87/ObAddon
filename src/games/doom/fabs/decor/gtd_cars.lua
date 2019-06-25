@@ -45,7 +45,7 @@ PREFABS.Decor_minitruck =
 
   can_be_on_roads = true
 
-  prob   = 8500
+  prob   = 8000
   theme  = "urban"
 
   env = "!building"
@@ -58,6 +58,16 @@ PREFABS.Decor_minitruck =
   bound_z2 = 128
 
   sink_mode = "never"
+}
+
+PREFABS.Decor_minitruck_beige =
+{
+  template = "Decor_minitruck"
+
+  flat_FLAT23 = "CRATOP2"
+
+  tex_SHAWN1 = "STUCCO"
+  tex_SHAWN2 = "STUCCO"
 }
 
 PREFABS.Decor_hatchback =
@@ -84,4 +94,10 @@ PREFABS.Decor_hatchback_brown =
   flat_FLAT5_3 = "CEIL5_2"
 
   tex_REDWALL = "BROWN144"
+}
+
+PREFABS.Decor_minibus =
+{
+  template = "Decor_minitruck"
+  map = "MAP04"
 }
