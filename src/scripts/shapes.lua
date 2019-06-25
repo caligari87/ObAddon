@@ -5186,7 +5186,9 @@ GROW_WIDE_SPACE_CATWALK_CAPPER_4X =
 
 GROW_SKILLET =
 {
-  prob = 75
+  prob = 35
+
+  aversion = 8
 
   structure =
   {
@@ -5196,6 +5198,27 @@ GROW_SKILLET =
     "1.....","1>AAAA"
     "1.....","11%AA/"
     "x.....","x11111"
+  }
+
+  diagonals =
+  {
+    "1A","A1"
+    "1A","A1"
+  }
+}
+
+GROW_SKILLET_BIHANDLED =
+{
+  prob = 35
+
+  structure =
+  {
+    "x.....","x111111"
+    "1.....","11/AA%1"
+    "1.....","1>AAAAA"
+    "1.....","1>AAAAA"
+    "1.....","11%AA/1"
+    "x.....","x111111"
   }
 
   diagonals =
