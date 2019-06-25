@@ -5613,7 +5613,7 @@ GROW_DIAGONAL_STALK =
     "x.......","x./111/."
     ".......x","./111/.x"
     "......xx","/1111.xx"
-    "x11xxxxx","x11xxxxx"
+    "11111xxx","11111xxx"
   }
 
   diagonals =
