@@ -11,7 +11,7 @@ PREFABS.Crate_small_brown =
   map    = "MAP01"
 
   prob   = 2500
-  theme  = "tech"
+  theme  = "!hell"
 
   where  = "point"
   size   = 64
@@ -64,7 +64,7 @@ PREFABS.Crate_tall_brown =
   map    = "MAP02"
 
   prob   = 2500
-  theme  = "tech"
+  theme  = "!hell"
 
   where  = "point"
   size   = 64
@@ -120,7 +120,7 @@ PREFABS.Crate_group_medium =
 
   prob   = 2500
   env    = "!cave"
-  theme  = "tech"
+  theme  = "!hell"
 
   where  = "point"
   size   = 128

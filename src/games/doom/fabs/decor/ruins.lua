@@ -9,7 +9,7 @@ PREFABS.Decor_ruins1 =
 
   can_be_on_roads = true
 
-  prob   = 5000
+  prob   = 3500
   theme  = "urban"
   env    = "outdoor"
 
@@ -44,7 +44,7 @@ PREFABS.Decor_hellruins1 =
   file   = "decor/ruins.wad"
   map    = "MAP01"
 
-  prob   = 50
+  prob   = 3500
   theme  = "hell"
   env    = "outdoor"
 
@@ -78,7 +78,7 @@ PREFABS.Decor_vineruins1 =
   file   = "decor/ruins.wad"
   map    = "MAP01"
 
-  prob   = 50
+  prob   = 3500
   theme  = "hell"
   env    = "outdoor"
 
