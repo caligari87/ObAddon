@@ -111,6 +111,8 @@ PREFABS.Decor_street_barrier =
   file   = "decor/gtd_decor_urban.wad"
   map    = "MAP06"
 
+  can_be_on_roads = true
+
   prob   = 6000
   theme  = "urban"
 

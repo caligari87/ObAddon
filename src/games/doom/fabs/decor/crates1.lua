@@ -37,6 +37,8 @@ PREFABS.Crate_small_woodmet =
   file   = "decor/crates2.wad"
   map    = "MAP11"
 
+  can_be_on_roads = true
+
   theme  = "!tech"
   prob   = 2500
 
@@ -135,6 +137,8 @@ PREFABS.Crate_large_wooden =
 {
   file   = "decor/crates2.wad"
   map    = "MAP12"
+
+  can_be_on_roads = true
 
   theme  = "!tech"
   prob   = 2500

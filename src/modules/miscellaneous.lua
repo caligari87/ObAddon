@@ -178,6 +178,13 @@ OB_MODULES["misc"] =
       choices=MISC_STUFF.YES_NO,
       default = "yes",
       tooltip = _("Adds street markings to roads."),
+    }
+    {
+      name="street_traffic",
+      label=_("Street Traffic"),
+      choices=STYLE_CHOICES,
+      tooltip = _("If Street Mode is enabled, changes the density of prefabs such " ..
+      "as cars, barriers, crates, and relevant items on the roads."),
       gap = 1,
     }
 

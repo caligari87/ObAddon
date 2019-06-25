@@ -6,6 +6,8 @@ PREFABS.Decor_sedan =
   prob   = 10000
   theme  = "urban"
 
+  can_be_on_roads = true
+
   env = "!building"
 
   where  = "point"
@@ -40,6 +42,8 @@ PREFABS.Decor_minitruck =
 {
   file   = "decor/gtd_cars.wad"
   map    = "MAP02"
+
+  can_be_on_roads = true
 
   prob   = 10000
   theme  = "urban"

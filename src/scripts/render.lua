@@ -2684,15 +2684,82 @@ end
 function Render_all_street_traffic()
   LEVEL.street_traffic = {}
 
+  local function get_parking_distance(pos)
+    local smallest_distance = 9999
+
+    local i = 1
+    while i <= #LEVEL.street_traffic do
+
+      local cur_distance = geom.dist(pos.x,pos.y,
+
+      LEVEL.street_traffic[i].x,LEVEL.street_traffic[i].y)
+
+      if LEVEL.street_traffic[i].size then
+        cur_distance = cur_distance - LEVEL.street_traffic[i].size
+      end
+
+      if cur_distance < smallest_distance and pos.dir == LEVEL.street_traffic[i].dir then
+        smallest_distance = cur_distance
+      end
+
+      i = i + 1
+    end
+
+    return smallest_distance
+  end
+
   gui.printf("Found " .. #LEVEL.road_street_traffic_spots .. " places to park the car.\n")
   each SPOT in LEVEL.road_street_traffic_spots do
-    local T = Trans.spot_transform(SPOT.x, SPOT.y, SPOT.z, SPOT.dir)
 
-    -- MSSP-TODO: Fab_pick for street items. Remember to check for vehicle size
-    -- and check against their lane_dir after being put up in the LEVEL.street_traffic
-    -- table.
-    --Fabricate(nil, PREFABS["Dir_test"], T, {})
+    -- stagger positions a bit
+    SPOT.x = SPOT.x + int(rand.range(-32,32))
+    SPOT.y = SPOT.y + int(rand.range(-32,32))
+
+    local T = Trans.spot_transform(SPOT.x, SPOT.y, SPOT.z, SPOT.dir)
+    local reqs = {}
+
+    reqs =
+    {
+      kind = "decor"
+      env = "outdoor"
+
+      is_road = true
+      where = "point"
+      size = 9999
+      height = SPOT.height
+    }
+
+    -- check spot size against everything
+    if #LEVEL.street_traffic > 0 then
+      reqs.size = get_parking_distance(SPOT)
+    end
+
+    local def
+
+    local prob = style_sel("street_traffic", 0, 20, 40, 60)
+    if rand.odds(prob) then -- MSSP-TODO: change this to style probability later on
+      def = Fab_pick(reqs, "is_ok_man")
+    end
+
+    if def then
+      gui.printf("Car! " .. def.name .. "\n")
+      Fabricate(nil, def, T, {})
+
+      local street_traffic_spot =
+      {
+        x = SPOT.x
+        y = SPOT.y
+        dir = SPOT.dir
+        size = def.size
+        def = def.name
+      }
+
+      table.insert(LEVEL.street_traffic, street_traffic_spot)
+    end
   end
+
+  gui.printf(#LEVEL.street_traffic .. " cars parked.\n")
+
 end
 
 
@@ -2987,6 +3054,7 @@ function Render_establish_street_lanes()
       x = off_x
       y = off_y
       z = S.area.floor_h + 2
+      height = S.area.ceil_h - 2
       dir = cur_dir
     }
 

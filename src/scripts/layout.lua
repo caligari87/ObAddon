@@ -1618,9 +1618,7 @@ function Layout_decorate_rooms(pass)
       reqs.env = "building"
     end
 
-    if A.is_road then
-      reqs.is_road = true
-    end
+    if A.is_road then return end
 
     local sinkstat = analyse_chunk_sinkage(chunk, "floor")
 

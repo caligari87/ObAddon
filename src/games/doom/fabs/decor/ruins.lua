@@ -7,6 +7,8 @@ PREFABS.Decor_ruins1 =
   file   = "decor/ruins.wad"
   map    = "MAP01"
 
+  can_be_on_roads = true
+
   prob   = 5000
   theme  = "urban"
   env    = "outdoor"
