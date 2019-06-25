@@ -3,7 +3,7 @@ PREFABS.Decor_sedan =
   file   = "decor/gtd_cars.wad"
   map    = "MAP01"
 
-  prob   = 5000
+  prob   = 6500
   theme  = "urban"
 
   can_be_on_roads = true
@@ -68,6 +68,8 @@ PREFABS.Decor_minitruck_beige =
 
   tex_SHAWN1 = "STUCCO"
   tex_SHAWN2 = "STUCCO"
+
+  tex_SPCDOOR3 = "SPCDOOR4"
 }
 
 PREFABS.Decor_hatchback =
@@ -100,4 +102,13 @@ PREFABS.Decor_minibus =
 {
   template = "Decor_minitruck"
   map = "MAP04"
+}
+
+PREFABS.Decor_minibus_green =
+{
+  template = "Decor_minitruck"
+  map = "MAP04"
+
+  flat_FLAT23 = "GRASS1"
+  tex_SHAWN2 = "BROWNGRN"
 }
