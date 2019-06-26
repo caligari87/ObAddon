@@ -3002,16 +3002,19 @@ function Room_floor_ceil_heights()
       if PARAM.room_heights != "mixed" then
         group.height_style = PARAM.room_heights
       elseif PARAM.room_heights == "mixed" then
-        group.height_style = rand.pick({"short","normal","tall"})
+        group.height_style = rand.pick(
+          {"short","short-ish","normal","tall-ish","taller"})
       end
 
       -- nothing actually happens if the height_style is "normal"
       -- whereas normal is Oblige's default behavior
 
-      if group.height_style == "short" then
-        if add_h > 128 then add_h = 128 end
-      elseif group.height_style == "tall" then
-        add_h = add_h * 2
+      if string.gmatch(group.height_style, "-ish") and rand.odds(50) then
+        if string.gmatch(group.height_style, "short") then
+          if add_h > 128 then add_h = 128 end
+        elseif string.gmatch(group.height_style, "tall") then
+          add_h = add_h * 2
+        end
       end
     end
 

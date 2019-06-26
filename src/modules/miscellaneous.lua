@@ -61,10 +61,12 @@ MISC_STUFF.SINK_STYLE_CHOICES =
 
 MISC_STUFF.HEIGHT_CHOICES =
 {
-  "short" , _("Short"),
-  "normal", _("Normal"),
-  "tall",   _("Tall"),
-  "mixed",  _("Mix It Up"),
+  "short",     _("Mostly Short"),
+  "short-ish", _("Slightly Short"),
+  "normal",    _("Normal"),
+  "tall-ish",  _("Slightly Tall"),
+  "tall",      _("Mostly Tall"),
+  "mixed",     _("Mix It Up"),
 }
 
 function MISC_STUFF.begin_level(self)
