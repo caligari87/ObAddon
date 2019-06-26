@@ -208,6 +208,14 @@ DOOM.MATERIALS =
   WOOD5    = { t="WOOD5",     f="CEIL5_2" }
   WOODGARG = { t="WOODGARG",  f="FLAT5_2" }
 
+  XCEIL5_1 = { t="CEIL5_1", f="CEIL5_1" }
+  XFLAT14 = { t="FLAT14", f="FLAT14" }
+  XFLOOR16 = { t="FLOOR1_6", f="FLOOR1_6" }
+  XMETAL3 = { t="METAL3", f="METAL3" }
+  XMETAL2 = { t="METAL2", f="METAL3" }
+  XSILVER3 = { t="SILVER3", f="SILVER3" }
+  XSHAWN2 = { t="SHAWN2", f="SHAWN2" }
+
 
   -- steps --
 
@@ -667,4 +675,3 @@ DOOM.PREFAB_FIELDS =
 DOOM.SKIN_DEFAULTS =
 {
 }
-
