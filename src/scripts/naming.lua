@@ -1677,7 +1677,7 @@ namelib.NAMES =
       -- %n = Places
       -- %h = Explicit description (e.g. I am Satan, "Arena of <Satan>")
       -- %o = Implicit description (e.g. I am Satanic, "Arena of <the Satanic>")
-      -- %v = Prefixed phrase (as per COMMON table e.g. "<Scoruge of the> Arena)
+      -- %v = Prefixed phrase (as per COMMON table e.g. "<Scourge of the> Arena)
 
          ["%a %n"] = 60
       ["%t %a %n"] = 15
@@ -1728,10 +1728,11 @@ namelib.NAMES =
         -- size
         Plethoric=7, Sprawling=10, Unending=7,
         Serpentine=10, Hulking=3, Giant=2, Vast=7,
-        Monstrous=3,
+        Monstrous=3, Colossal=4, Towering=3,
 
         --+ supernatural
         Arcane=5, Hidden=5, Ethereal=5, Nether_=5,
+        Esoteric=5,
 
         --+ directional
         Upper=5, Lower=10,
@@ -1750,25 +1751,27 @@ namelib.NAMES =
         Inland=5, Outland=5,
 
         --+ time
-        Old=10, Ancient=20, Eternal=7,
+        Old=10, Ancient=20, Eternal=7, Archaic=7, Aged=5,
+        Timeworn=5,
 
         --+ state of repair/damage
-        Decrepid=20, Lost=10, Forgotten=10,
-        Ravished=10, Barren=20, Deadly=5,
-        Flooded=5, Bombarded=2, Corrosive=2,
-        Ruined=3, Charred=10, Neglected=5,
-        Deteriorated=5,
+        Decrepid=20, Lost=10, Forgotten=10, Battered=5,
+        Ravished=10, Barren=20, Deadly=5, Rickety=5,
+        Flooded=5, Bombarded=2, Corrosive=2, Unsteady=3,
+        Ruined=3, Charred=10, Neglected=5, Decaying=5,
+        Deteriorated=5, Dilapidated=10, Frail=3, Flimsy=2,
+        Wrecked=7,
 
         --+ decay
         Decayed=5, Putrid=5, Noxious=5,
         Stagnant=10, Rancid=5, Rotten=3,
-        Sunken=3, Toxic=2, Polluted=10,
-        Infected=10, Infested=10,
+        Sunken=3, Toxic=2, Polluted=10, Mephitic=5,
+        Infected=10, Infested=10, Infective=5,
         Contaminated=10, Fetid=5, Festering=5,
 
         --+ weather
         Windy=10, Hazy=3, Foggy=5, Misty=10,
-        Clouded=5, Gray=5, Brackish=5, Overcast=10,
+        Cloudy=5, Gray=5, Brackish=5, Overcast=10,
         Humid=5, Torrid=5, Tropic=2,
 
         --+ city
@@ -1795,11 +1798,12 @@ namelib.NAMES =
 
         --+ military/criminal possession
         Invaded=5, Besieged=10, Swarmed=5,
-        Overtaken=5, Stolen=3,
+        Overtaken=5, Stolen=3, Blockaded=3,
 
         --+ illumination
-        Dark=20, Darkest=7, Dismal=10,
-        Murky=5,
+        Dark=20, Darkest=7, Dismal=10, Cimmerian=3,
+        Murky=5, Dim=5, Aphotic=5, Caliginous=5,
+        Tenebrous=5, Gloomy=5,
 
         --+ abandonment
         Bleak=20, Abandoned=15, Forsaken=10,
@@ -1812,9 +1816,11 @@ namelib.NAMES =
         Horrible=10, Exotic=5, Dreadful=10,
 
         --+ temperature
-        Cold=7, Bitter=3, Frigid=5,
-        Algid=5, Polar=5, Gelid=3,
-        Boreal=3, Hot=7,
+        Cold=7, Bitter=3, Frigid=5, Icy=3,
+        Algid=5, Polar=5, Gelid=3, Frozen=3,
+        Boreal=3, Hot=7, Chilly=3, Tepid=4,
+        Snowy=3, Wintry=5, Brisk=5, Mild=3,
+        Cool=5,
 
         --+ emotion
         Lonely=2, Desperate=2, Ugly=2,
@@ -1855,6 +1861,7 @@ namelib.NAMES =
         Dominion=10, Domain=3, Trail=10,
         Region=10, Territory=5, Path=5,
         Province=10, Jurisdiction=10,
+        Township=10, Municipality=7, Borough=7,
 
         -- adventure
         Trek=5, Venture=5,
@@ -1906,7 +1913,7 @@ namelib.NAMES =
         Camp=3, Berths=5, Garage=5,
 
         -- weird ones
-        Echo=1, Dream=1, Nightmare=1,
+        Echo=1, Dream=1, Nightmare=1, Bliss=1,
 
         -- industrial
         Mines=10, Quarry=5, Docks=10,
@@ -1950,8 +1957,9 @@ namelib.NAMES =
 
         -- battleground
         Battlefront=5, Battlezone=5, Warzone=5,
-        Battlegrounds=7, Front=5,
+        Battlegrounds=7, Front=5, Impasse=5,
         Standoff=5, Deadlock=5, Stalemate=5,
+        Quandary=5, Quagmire=3, Imbroglio=5,
       }
 
       h = -- explicit descriptors (e.g. "Arena of Doom")
@@ -1965,10 +1973,11 @@ namelib.NAMES =
         Insanity=5, Helplessness=2, Misfortune=5,
         Voiceless=5,
         --+ positive
-        Solace=10, Reparation=3,
+        Solace=10, Reparation=3, Consolation=3,
+        Assuagement=3,
 
         -- descriptions of danger
-        Danger=10,
+        Danger=10, Peril=10,
         --+ elemental danger
         Acid=5, Flames=5, Lava=3,
 
@@ -1980,11 +1989,12 @@ namelib.NAMES =
         Gore=7, Skulls=10, Tears=10,
 
         -- time
-        Dusk=3, Twilight=5, Midnight=5,
+        Dusk=5, Twilight=5, Midnight=5, Dawn=5, Daybreak=5, Sunrise=5,
+        Nightfall=5, Sundown=5, Eventide=5, Sunset=5,
 
         -- delusions
         Dreams=2, Delirium=2, Delusion=2,
-        Doubt=5, Illusions=2,
+        Doubt=5, Illusions=2, Bliss=2,
 
         -- bad acts
         Sabotage=5, Destruction=5,
@@ -2002,10 +2012,11 @@ namelib.NAMES =
         --+ people
         Addicts=3, Creeps=3, Fools=1,
         Menace=15, Denizens=7, Murderers=3,
-        Pirates=3, Vagrants=7,
-        Madmen=2, Mortals=10,
+        Pirates=3, Vagrants=7, Junkies=3,
+        Madmen=2, Mortals=10, Drifters=4,
         --+ explicitly religious people
-        Martyrs=5, Prophets=5,
+        Martyrs=5, Prophets=5, Zealots=3, Fanatics=3,
+        Believers=3, Disciples=3,
         --+ animals
         Crows=5, Prey=5,
         Vermin=5, Vultures=5,
@@ -2014,8 +2025,6 @@ namelib.NAMES =
         -- creepy furniture
         Mirrors=5, Stakes=3,
 
-        -- time
-        Dusk=5, Dawn=5, Midnight=5,
       }
 
       o = -- implicit descriptors (e.g. "Arena of the Doomed")
@@ -2068,8 +2077,9 @@ namelib.NAMES =
         Lawless=5, Unforgiving=5,
 
         -- groups
-        Conclave=5, Sovereign=5,
-        Brotherhood=5, Sisterhood=5,
+        Conclave=5, Sovereign=5, Kinship=5,
+        Brotherhood=5, Sisterhood=5, Guild=5,
+        Union=5, Fellowship=5,
 
         -- age and time
         Ancients=5, Eternal=5, Night=10,
@@ -2972,25 +2982,33 @@ namelib.NAMES =
         Cliffs = 10
         Crater = 10
         Crags = 10
+        Delta = 5
         Desert = 10
         Fens = 7
         Forest = 7
         Fields = 10
         Glaciers = 7
+        Gorge = 7
+        Gulf = 10
         Hills = 10
+        Inlet = 7
         Lake = 7
         Lands = 15
+        Lowland = 10
         Mountains = 10
         Mire = 10
         Moors = 10
         Ocean = 7
         Promontory = 8
+        Ravine = 10
         Rift = 15
         Ridge = 10
         River = 10
         Sea = 7
         Shores = 25
+        Strait = 7
         Wasteland = 20
+        Vale = 10
         Valley = 10
         Veins = 7
 
@@ -3034,6 +3052,7 @@ namelib.NAMES =
         Dawn = 7
         Day = 7
         Dusk = 10
+        Eventide = 5
         Midnight = 10
         Night = 10
 
@@ -3117,16 +3136,20 @@ namelib.NAMES =
         -- huge scales and measures
         Abyssal = 10
         Ancient = 10
+        Archaic = 10
         Bottomless = 10
         Colossal = 10
         Eternal = 10
         Gargantuan = 10
         Giant = 10
+        Prodigious = 10
         Soaring = 10
         Massive = 10
         Towering = 10
         Titanic = 10
+        Transcendent = 10
         Infinite = 10
+        Vast = 10
 
         -- bad personal qualities
         Avaricious = 5
@@ -3201,10 +3224,12 @@ namelib.NAMES =
         Vile = 10
 
         -- abandonment/wrecked
+        Abandoned = 10
         Apocalyptic = 10
         Blasted = 10
         Bleak = 10
         Broken = 10
+        Decrepid = 10
         Derelict = 10
         Deserted = 10
         Desolate = 10
@@ -3212,6 +3237,7 @@ namelib.NAMES =
         Forlorn = 10
         Forsaken = 15
         Isolated = 10
+        Ruined = 7
         Shattered = 10
         Solitary = 8
 
@@ -3283,6 +3309,7 @@ namelib.NAMES =
         Adversity = 10
         Calamity = 10
         Cataclysm = 10
+        Catastrophe = 10
         Tremors = 10
         Tribulation = 10
         Quake = 7
@@ -3315,8 +3342,10 @@ namelib.NAMES =
         Despair = 10
         Doom = 5
         Fear = 10
+        Grief = 5
         Horror = 20
         Madness = 10
+        Misery = 10
         Pain = 10
         Terror = 10
 
