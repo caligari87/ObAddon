@@ -3439,7 +3439,11 @@ function Render_determine_spots()
     local rx1, ry1, rx2, ry2 = A:calc_real_bbox()
 
     -- initialize grid to "ledge"
-    gui.spots_begin(rx1 - 48, ry1 - 48, rx2 + 48, ry2 + 48, A.floor_h, SPOT_LEDGE)
+    local floor_height = A.floor_h
+
+    if A.is_road then floor_height = A.floor_h + 2 end
+
+    gui.spots_begin(rx1 - 48, ry1 - 48, rx2 + 48, ry2 + 48, floor_height, SPOT_LEDGE)
 
     -- clear polygons making up the floor
     each brush in A.floor_brushes do
