@@ -1032,7 +1032,9 @@ function Grower_decide_extents()
 
   LEVEL.min_coverage = int(LEVEL.map_W * LEVEL.map_H * 0.85)
 
-  gui.printf("--==| Streets Mode activated! |==--\n\n")
+  if LEVEL.has_streets then
+    gui.printf("--==| Streets Mode activated! |==--\n\n")
+  end
 
   if LEVEL.is_linear then
     gui.printf("--==| Linear mode activated! |==--\n\n")
