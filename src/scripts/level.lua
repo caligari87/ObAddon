@@ -165,6 +165,7 @@ function Level_determine_map_size(LEV)
   if ob_size == "mixed" then
     local MIXED_PROBS =
     {
+      mini=4,
       small=30,
       subregular=85,
       regular=135,
@@ -196,6 +197,7 @@ function Level_determine_map_size(LEV)
     --due to the extreme detail the maps have in them. --Armaetus (formerly Glaice), March 3rd, 2019
     local SIZES =
     {
+      mini=16,
       small=22,
       subregular=30,
       regular=36,

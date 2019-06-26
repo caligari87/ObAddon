@@ -29,6 +29,7 @@ UI_ARCH.SIZES =
   -- this is a separator (not a usable choice)
   "_",       "_",
 
+  "mini",         _("Miniscule"),
   "small",        _("Tiny"),
   "subregular",   _("Small"),
   "regular",      _("Average"),
