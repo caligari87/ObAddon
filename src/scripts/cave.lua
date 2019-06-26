@@ -4552,7 +4552,7 @@ function Cave_build_a_scenic_vista(area)
 
     local FL = new_blob()
 
-    FL.floor_h = (room.max_floor_h or room.entry_h) -8192 --+ 72
+    FL.floor_h = (room.max_floor_h or room.entry_h) - 8192
 
     FL.floor_mat = assert("_SKY" --[[area.zone.fence_mat]])
 
@@ -4597,25 +4597,48 @@ function Cave_build_a_scenic_vista(area)
     CLIFF.floor_h = room.max_floor_h + rand.pick({128,144,192,256})
     CLIFF.floor_mat = assert(LEVEL.cliff_mat)
 
-    WATERFALLS.floor_h = rand.irange(math.floor(FL.floor_h + CLIFF.floor_h)/2 , CLIFF.floor_h)
+    WATERFALLS.floor_h = rand.irange(math.floor(FL.floor_h + (CLIFF.floor_h - 32))/2 , CLIFF.floor_h - 32)
     WATERFALLS.floor_mat = LEVEL.liquid.mat
 
     for cx = 1, area.cw do
-      for cy = 1, area.ch do
-        local id = blob_map[cx][cy]
-        if not id then continue end
+    for cy = 1, area.ch do
+      local id = blob_map[cx][cy]
+      if not id then continue end
 
-        local reg = blob_map.regions[id]
+      local reg = blob_map.regions[id]
 
-        if not (reg.room_dist and reg.mapedge_dist) then continue end
+      if not (reg.room_dist and reg.mapedge_dist) then continue end
 
-        if reg.mapedge_dist * 2.4 <= reg.room_dist  then
-          area.blobs[cx][cy] = CLIFF
-        elseif reg.mapedge_dist * 2.3 <= reg.room_dist  then
-          area.blobs[cx][cy] = WATERFALLS
-        end
+      if reg.mapedge_dist * 2.4 <= reg.room_dist  then
+        area.blobs[cx][cy] = CLIFF
+      elseif reg.mapedge_dist * 2.2 <= reg.room_dist  then
+        area.blobs[cx][cy] = WATERFALLS
       end
+    end
+    end
+
+    if THEME.cliff_trees then
+      each id, reg in blob_map.regions do
+        local cx, cy = blob_map:random_blob_cell(id)
+        if not cx then continue end
+
+        local B = area.blobs[cx][cy]
+        assert(B)
+
+        if not B.floor_h then continue end
+        if B.floor_h < CLIFF.floor_h then continue end
+
+        -- don't place trees too close to the rooms... -MSSP
+        if reg.room_dist < 1 then continue end
+
+        local mx = area.base_x + (cx-1) * 64 + 32
+        local my = area.base_y + (cy-1) * 64 + 32
+
+        local tree = rand.key_by_probs(THEME.cliff_trees)
+
+        Trans.entity(tree, mx, my, B.floor_h)
       end
+    end
 
     -- TEMP RUBBISH
     area.floor_h = FL.floor_h
