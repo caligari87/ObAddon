@@ -5,6 +5,8 @@ PREFABS.Decor_crackofdoom =
 
   prob   = 1500
 
+  can_be_on_roads = true
+
   where  = "point"
   size   = 64
 
