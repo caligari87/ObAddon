@@ -13,13 +13,11 @@ PREFABS.Decor_basketball_hoop =
   env    = "outdoor"
 
   where  = "point"
-  size   = 97
+  size   = 96
   height = 216
 
   bound_z1 = 0
   bound_z2 = 192
-
-  z_fit = "top"
 
   face_open = true
 }
