@@ -1940,7 +1940,7 @@ function Room_choose_size(R, not_big)
 
   if R.is_street then
     R.size_limit = (LEVEL.map_W*LEVEL.map_H)*1.3
-    R.floor_limit = 500
+    R.floor_limit = 9001
     R.is_big = true
     R.is_outdoor = true
   end

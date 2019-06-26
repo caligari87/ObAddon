@@ -10,7 +10,7 @@ PREFABS.Pic_urban_downtown_facade1 =
 
   uses_epic_textures = true
 
-  seed_w = 1
+  seed_w = 2
   seed_h = 1
 
   where  = "seeds"
@@ -20,7 +20,7 @@ PREFABS.Pic_urban_downtown_facade1 =
   height = 256
 
   y_fit  = "top"
-  x_fit  = { 48,80 }
+  x_fit  = { 124,132 }
 
   tex_CITY01 =
   {

@@ -1025,7 +1025,7 @@ function Grower_decide_extents()
     LEVEL.max_rooms = 2
   end
 
-  gui.printf("Target # of rooms : %d .. %d\n", LEVEL.min_rooms, LEVEL.max_rooms)
+  gui.printf("Target # of rooms : %d .. %d\n\n", LEVEL.min_rooms, LEVEL.max_rooms)
 
 
   -- calculate the coverage target
