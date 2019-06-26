@@ -687,8 +687,6 @@ end
 
 
 function ROOM_CLASS.get_highest_ceiling(R) --MSSP
-  -- should probably include accounting for
-  -- the ceiling sink too but ehhhhh
   local h = -9001
   each A in R.areas do
     if A.ceil_h then
