@@ -2926,7 +2926,8 @@ function Render_find_street_markings()
 
         if distance_checked < 4
         and S2.area.is_road
-        and S2.area.room == S.area.room then
+        and S2.area.room == S.area.room
+        and S2.area.mode == "floor" then
           score = score + 1
         end
 
