@@ -1018,12 +1018,6 @@ function Grower_decide_extents()
   LEVEL.min_rooms = math.max(3, int(base / 3))
   LEVEL.max_rooms = math.max(6, int(base))
 
-  -- add more target rooms for streets mode
-  if LEVEL.has_streets then
-    LEVEL.min_rooms = LEVEL.min_rooms * 3
-    LEVEL.max_rooms = LEVEL.min_rooms * 3
-  end
-
   -- specific instructions for procedural gotcha
 
   if LEVEL.is_procedural_gotcha == true then
@@ -1036,15 +1030,12 @@ function Grower_decide_extents()
 
   -- calculate the coverage target
 
-  if not LEVEL.has_streets then
-    LEVEL.min_coverage = int(LEVEL.map_W * LEVEL.map_H * 0.85)
-  elseif LEVEL.has_streets then
-    gui.printf("-- Streets Mode activated! --\n")
-    LEVEL.min_coverage = int(LEVEL.map_W * LEVEL.map_H * 0.95)
-  end
+  LEVEL.min_coverage = int(LEVEL.map_W * LEVEL.map_H * 0.85)
+
+  gui.printf("--==| Streets Mode activated! |==--\n\n")
 
   if LEVEL.is_linear then
-    gui.printf("-- Linear mode activated! --\n")
+    gui.printf("--==| Linear mode activated! |==--\n\n")
   end
 end
 
