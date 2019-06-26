@@ -1168,19 +1168,6 @@ function Room_make_windows(A1, A2)
     else
       return group2
     end
-
---[[ OLD CRUD
-    if sel(R1.is_outdoor, 1, 0) != sel(R2.is_outdoor, 1, 0) then
-      if R1.is_outdoor then return group2 end
-      if R2.is_outdoor then return group1 end
-    end
-
-    if R1.svolume >= R2.svolume then
-      return group1
-    else
-      return group2
-    end
---]]
   end
 
 
