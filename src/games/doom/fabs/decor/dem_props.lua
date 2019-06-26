@@ -14,10 +14,10 @@ PREFABS.Decor_basketball_hoop =
 
   where  = "point"
   size   = 96
-  height = 216
+  height = 184
 
   bound_z1 = 0
-  bound_z2 = 192
+  bound_z2 = 184
 
   face_open = true
 }
