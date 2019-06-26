@@ -595,6 +595,7 @@ OB_MODULES["sky_generator"] =
     {
       label=_("Day/Night State")
       choices=SKY_GEN.SKY_CHOICES
+      priority = 10
       tooltip = "This forces the sky background (behind the hills and clouds) to either be night or day."
     }
 
@@ -602,6 +603,7 @@ OB_MODULES["sky_generator"] =
     {
       label=_("Terrain Foreground")
       choices=SKY_GEN.HILL_STATE
+      priority = 9
       tooltip = "Influences whether the sky generator should generate terrain in the skybox."
     }
 
@@ -609,7 +611,19 @@ OB_MODULES["sky_generator"] =
     {
       label=_("Terrain Parameters")
       choices=SKY_GEN.HILL_PARAMS
+      priority = 8
       tooltip = "Changes the parameters of generated hills, if there are any. 'Cavernous' causes the terrain to nearly fill up most of the sky, making an impression of being inside a cave or crater."
+      gap = 1
+    }
+
+    influence_map_darkness =
+    {
+      label=_("Sky Gen Lighting")
+      choices=MISC_STUFF.YES_NO
+      priority = 7
+      tooltip = "Overrides (and ignores) Dark Outdoors setting in Miscellaneous tab. If the sky generator " ..
+      "creates night skies for an episode, episode's map outdoors is also dark but bright if day-ish."
+      default = "no"
     }
   }
 }
