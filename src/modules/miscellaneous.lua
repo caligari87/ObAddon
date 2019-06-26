@@ -59,6 +59,14 @@ MISC_STUFF.SINK_STYLE_CHOICES =
   "random", _("Random"),
 }
 
+MISC_STUFF.HEIGHT_CHOICES =
+{
+  "short" , _("Short"),
+  "normal", _("Normal"),
+  "tall",   _("Tall"),
+  "mixed",  _("Mix It Up"),
+}
+
 function MISC_STUFF.begin_level(self)
   each opt in self.options do
     local name  = assert(opt.name)
@@ -110,6 +118,18 @@ OB_MODULES["misc"] =
     }
 
     { name="big_rooms",   label=_("Big Rooms"),      choices=STYLE_CHOICES }
+    {
+      name="room_heights",
+      label=_("Room Heights"),
+      choices=MISC_STUFF.HEIGHT_CHOICES,
+      tooltip=_("Determines if rooms should have a height limit or should exaggerate their height. " ..
+      "Short means room areas strictly have at most 128 units of height, tall means rooms immediately have " ..
+      "doubled heights. Normal is the default Oblige behavior.")
+      default="normal"
+      gap=1
+    }
+
+
     { name="parks",       label=_("Parks"),          choices=STYLE_CHOICES }
     {
       name="natural_parks",

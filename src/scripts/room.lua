@@ -2997,6 +2997,24 @@ function Room_floor_ceil_heights()
     else                       add_h = 256
     end
 
+    if PARAM.room_heights then
+
+      if PARAM.room_heights != "mixed" then
+        group.height_style = PARAM.room_heights
+      elseif PARAM.room_heights == "mixed" then
+        group.height_style = rand.pick({"short","normal","tall"})
+      end
+
+      -- nothing actually happens if the height_style is "normal"
+      -- whereas normal is Oblige's default behavior
+
+      if group.height_style == "short" then
+        if add_h > 128 then add_h = 128 end
+      elseif group.height_style == "tall" then
+        add_h = add_h * 2
+      end
+    end
+
     if add_h > 128 and group.max_floor_h >= group.min_floor_h + 64 then
       add_h = add_h - 32
     end
