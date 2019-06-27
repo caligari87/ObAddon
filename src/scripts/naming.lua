@@ -4671,6 +4671,8 @@ namelib.COMMUNITY_MEMBERS =
     "Epic Typhlosion",
     "Tapwave",
     "Craneo",
+    "Swedra",
+    "Demios",
   }
 
   -- These people helped out OBLIGE and how they contributed.
@@ -4703,7 +4705,6 @@ namelib.COMMUNITY_MEMBERS =
     "Alden",
     "Big C",
     "Brad Man X",
-    "Demios",
     "DZ",
     "Elkinda",
     "Hexa Doken",
@@ -5450,7 +5451,7 @@ function namelib.generate_unique_noun(m)
   name = string.gsub(name,"^%l",string.upper)
 
   if mode == "community_members" then
-    if rand.odds(80) then
+    if rand.odds(66) then
       name = rand.pick(namelib.COMMUNITY_MEMBERS.contributors)
     else
       name = rand.pick(namelib.COMMUNITY_MEMBERS.regulars)
