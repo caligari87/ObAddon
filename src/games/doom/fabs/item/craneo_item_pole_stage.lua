@@ -4,7 +4,7 @@ PREFABS.Item_striptease_pole_stage =
 
   map   = "MAP01"
 
-  prob  = 35
+  prob  = 45
   theme = "urban"
   env   = "building"
 
