@@ -1674,7 +1674,7 @@ function Room_border_up()
         end
 
         if (A1.floor_h == A2.floor_h)
-        or A2.mode == "liquid" then
+        or A1.mode == "liquid" or A2.mode == "liquid" then
           if can_beam(A1, A2) then
             Junction_make_beams(junc)
           end
