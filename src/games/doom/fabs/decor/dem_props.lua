@@ -40,6 +40,8 @@ PREFABS.Decor_trash_bin =
 
   bound_z1 = 0
 
+  sink_mode = "never"
+
   face_open = true
 }
 
@@ -60,6 +62,8 @@ PREFABS.Decor_mailbox =
   height = 56
 
   bound_z1 = 0
+
+  sink_mode = "never"
 
   face_open = true
 }
