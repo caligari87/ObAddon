@@ -3499,7 +3499,7 @@ function Grower_grammatical_room(R, pass, is_emergency)
     apply_num = math.floor(square_apply_count/4)
 
   elseif pass == "smooth_out" then
-    apply_num = rand.irange(2,6)
+    apply_num = rand.irange(4,12)
 
   else
     error("unknown grammar pass: " .. tostring(pass))
