@@ -4718,17 +4718,15 @@ SQUARE_OUT_EXTEND_AREA_BORDER =
   }
 }
 
---MSSP's smooth-out. Makes rooms less... square after square-out.
-
-SMOOTH_OUT =
+SQUARE_OUT_SMOOTH_EDGE =
 {
-  pass = "smooth_out"
+  pass = "square_out"
 
   prob = 50
 
   structure =
   {
-    "11","11"
+    "x1","x1"
     "1.","1/"
   }
 
@@ -4738,16 +4736,17 @@ SMOOTH_OUT =
   }
 }
 
-SMOOTH_OUT_AREA =
+SQUARE_OUT_SMOOTH_PLATFORM =
 {
-  pass = "smooth_out"
+  pass = "square_out"
 
   prob = 35
 
   structure =
   {
-    "11","11"
-    "12","1/"
+    "x1x","x1x"
+    "122","1/2"
+    "x2x","x2x"
   }
 
   diagonals =

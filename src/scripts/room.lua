@@ -2998,23 +2998,25 @@ function Room_floor_ceil_heights()
     else                       add_h = 256
     end
 
-    if PARAM.room_heights then
+    -- MSSP: code for the height style control
+    if not R.height_style then
+      if PARAM.room_heights then
 
-      if PARAM.room_heights != "mixed" then
-        group.height_style = PARAM.room_heights
-      elseif PARAM.room_heights == "mixed" then
-        group.height_style = rand.pick(
-          {"short","short-ish","normal","tall-ish","taller"})
-      end
+        if PARAM.room_heights != "mixed" then
+          R.height_style = PARAM.room_heights
+        elseif PARAM.room_heights == "mixed" then
+          R.height_style = rand.pick({"short","normal","taller"})
+        end
 
-      -- nothing actually happens if the height_style is "normal"
-      -- whereas normal is Oblige's default behavior
+        -- nothing actually happens if the height_style is "normal"
+        -- whereas normal is Oblige's default behavior
 
-      if string.gmatch(group.height_style, "-ish") and rand.odds(50) then
-        if string.gmatch(group.height_style, "short") then
-          if add_h > 128 then add_h = 128 end
-        elseif string.gmatch(group.height_style, "tall") then
-          add_h = add_h * 2
+        if string.gmatch(R.height_style, "-ish") and rand.odds(50) then
+          if string.gmatch(R.height_style, "short") then
+            if add_h > 128 then add_h = 128 end
+          elseif string.gmatch(R.height_style, "tall") then
+            add_h = add_h * 2
+          end
         end
       end
     end

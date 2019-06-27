@@ -95,7 +95,7 @@ function GLAICE_EPIC_TEXTURES.decide_environment_themes()
       if L.id == 1 then
         L.outdoor_theme = rand.pick({"temperate","snow","desert"})
         PARAM.previous_theme = L.outdoor_theme
-        PARAM.outdoor_theme_along = rand.irange(2,6)
+        PARAM.outdoor_theme_along = rand.irange(2,4)
       elseif L.id > 1 then
         -- continue the same theme until the countdown ends
         if PARAM.outdoor_theme_along > 0 then
@@ -111,7 +111,7 @@ function GLAICE_EPIC_TEXTURES.decide_environment_themes()
             L.outdoor_theme = "temperate"
           end
           PARAM.previous_theme = L.outdoor_theme
-          PARAM.outdoor_theme_along = rand.irange(2,6)
+          PARAM.outdoor_theme_along = rand.irange(2,4)
         end
       end
     end

@@ -3491,15 +3491,11 @@ function Grower_grammatical_room(R, pass, is_emergency)
     apply_num = rand.irange(5,10)
 
   elseif pass == "square_out" then
-    local square_apply_count = 0
     each A in R.areas do
       A:calc_volume()
-      square_apply_count = square_apply_count + A.svolume
+      R.svolume = R.svolume + A.svolume
     end
-    apply_num = math.floor(square_apply_count/4)
-
-  elseif pass == "smooth_out" then
-    apply_num = rand.irange(4,12)
+    apply_num = math.floor(R.svolume/rand.irange(3,4))
 
   else
     error("unknown grammar pass: " .. tostring(pass))
@@ -3725,10 +3721,6 @@ function Grower_sprout_room(R)
   and not R.is_hallway and not R.is_street then
     Grower_grammatical_room(R, "square_out")
     R.is_squarified = true
-  end
-
-  if R.is_squarified then
-    Grower_grammatical_room(R, "smooth_out")
   end
 
   -- if hallway did not sprout, try again
