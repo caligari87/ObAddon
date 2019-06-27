@@ -10,7 +10,7 @@ PREFABS.Joiner_living_room =
 
   engine = "zdoom"
 
-  prob   = 350
+  prob   = 750
 
   theme  = "urban"
 
@@ -46,7 +46,7 @@ PREFABS.Joiner_kitchen =
   file = "joiner/dem_urban_joiners.wad"
   map = "MAP02"
 
-  prob = 350
+  prob = 750
 
   theme = "urban"
 
