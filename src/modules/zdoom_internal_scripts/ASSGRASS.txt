@@ -30,18 +30,18 @@ Script "IsMyAssGrass" (void)
   if (CheckActorFloorTexture(0, "SAND6")) GiveInventory("AssIsSand", 1);
   if (CheckActorFloorTexture(0, "SAND7")) GiveInventory("AssIsSand", 1);
 
-  if (CheckActorFloorTexture(0, "RROCK01")) GiveInventory("AssIsSand", 1);
-  if (CheckActorFloorTexture(0, "RROCK02")) GiveInventory("AssIsSand", 1);
-  if (CheckActorFloorTexture(0, "RROCK05")) GiveInventory("AssIsSand", 1);
-  if (CheckActorFloorTexture(0, "RROCK06")) GiveInventory("AssIsSand", 1);
-  if (CheckActorFloorTexture(0, "RROCK07")) GiveInventory("AssIsSand", 1);
-  if (CheckActorFloorTexture(0, "RROCK08")) GiveInventory("AssIsSand", 1);
-  if (CheckActorFloorTexture(0, "FLOOR6_1")) GiveInventory("AssIsSand", 1);
-  if (CheckActorFloorTexture(0, "SFLR6_1")) GiveInventory("AssIsSand", 1);
-  if (CheckActorFloorTexture(0, "SFLR6_4")) GiveInventory("AssIsSand", 1);
-  if (CheckActorFloorTexture(0, "SKINFLT1")) GiveInventory("AssIsSand", 1);
-  if (CheckActorFloorTexture(0, "SLIME09")) GiveInventory("AssIsSand", 1);
-  if (CheckActorFloorTexture(0, "SLIME10")) GiveInventory("AssIsSand", 1);
-  if (CheckActorFloorTexture(0, "SLIME11")) GiveInventory("AssIsSand", 1);
-  if (CheckActorFloorTexture(0, "SLIME12")) GiveInventory("AssIsSand", 1);
+  if (CheckActorFloorTexture(0, "RROCK01")) GiveInventory("AssIsHell", 1);
+  if (CheckActorFloorTexture(0, "RROCK02")) GiveInventory("AssIsHell", 1);
+  if (CheckActorFloorTexture(0, "RROCK05")) GiveInventory("AssIsHell", 1);
+  if (CheckActorFloorTexture(0, "RROCK06")) GiveInventory("AssIsHell", 1);
+  if (CheckActorFloorTexture(0, "RROCK07")) GiveInventory("AssIsHell", 1);
+  if (CheckActorFloorTexture(0, "RROCK08")) GiveInventory("AssIsHell", 1);
+  if (CheckActorFloorTexture(0, "FLOOR6_1")) GiveInventory("AssIsHell", 1);
+  if (CheckActorFloorTexture(0, "SFLR6_1")) GiveInventory("AssIsHell", 1);
+  if (CheckActorFloorTexture(0, "SFLR6_4")) GiveInventory("AssIsHell", 1);
+  if (CheckActorFloorTexture(0, "SKINFLT1")) GiveInventory("AssIsHell", 1);
+  if (CheckActorFloorTexture(0, "SLIME09")) GiveInventory("AssIsHell", 1);
+  if (CheckActorFloorTexture(0, "SLIME10")) GiveInventory("AssIsHell", 1);
+  if (CheckActorFloorTexture(0, "SLIME11")) GiveInventory("AssIsHell", 1);
+  if (CheckActorFloorTexture(0, "SLIME12")) GiveInventory("AssIsHell", 1);
 }
