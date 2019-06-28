@@ -19,7 +19,7 @@ actor FancyObligeTree replaces BigTree
 			TRE2 A 0 A_JumpIfInventory("AssIsSnow", 1, "OnSnow")
 			TRE2 A 0 A_JumpIfInventory("AssIsSand", 1, "OnSand")
 			TRE2 A 0 A_JumpIfInventory("AssIsHell", 1, "OnHellflat")
-			TRE2 A 0 A_JumpIfInventory("AssIsUnknown", 1, "OnUnknownFlat")
+			TRE2 A 0 A_Jump(255, "OnUnknownFlat")
 
 		OnGrass:
 			TRE2 A 0 A_Jump(127, "Shrub1", "Shrub2")
@@ -158,11 +158,6 @@ actor AssIsSnow : Inventory
 }
 
 actor AssIsSand : Inventory
-{
-	Inventory.maxAmount 1
-}
-
-actor AssIsUnknown : Inventory
 {
 	Inventory.maxAmount 1
 }
