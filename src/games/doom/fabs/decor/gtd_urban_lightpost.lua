@@ -7,7 +7,10 @@ PREFABS.Decor_urban_lightpost =
 
   where  = "point"
   theme  = "urban"
-  size   = 64
+
+  env = "!building"
+
+  size = 64
   height = 128
 
   bound_z1 = 0
