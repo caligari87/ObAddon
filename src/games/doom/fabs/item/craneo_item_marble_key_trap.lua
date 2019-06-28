@@ -45,7 +45,8 @@ PREFABS.Item_craneo_marble_key_trap_interior =
   template = "Item_craneo_marble_key_trap"
   map = "MAP02"
 
-  prob = 220
+  rank = 2
+  prob = 250
 
   height = 128
 

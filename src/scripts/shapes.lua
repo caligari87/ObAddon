@@ -4722,7 +4722,7 @@ SQUARE_OUT_SMOOTH_EDGE =
 {
   pass = "square_out"
 
-  prob = 50
+  prob = 35
 
   structure =
   {
@@ -4740,7 +4740,7 @@ SQUARE_OUT_SMOOTH_PLATFORM =
 {
   pass = "square_out"
 
-  prob = 35
+  prob = 50
 
   structure =
   {

@@ -2798,8 +2798,14 @@ function Render_all_street_traffic()
       def = Fab_pick(reqs, "is_ok_man")
     end
 
+    -- capture the material of the road sink, damn it!
+    local skin =
+    {
+      floor = "CEIL5_1"
+    }
+
     if def then
-      Fabricate(nil, def, T, {})
+      Fabricate(nil, def, T, {skin})
 
       local street_traffic_spot =
       {
