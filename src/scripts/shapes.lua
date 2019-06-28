@@ -6915,30 +6915,6 @@ GROW_TRENCH_ENTRY =
   }
 }
 
-GROW_TRENCH_ENTRY_INWARD_TWO_PRONG =
-{
-  prob = 50
-
-  group_pos = "entry"
-
-  group = "trench"
-
-  structure =
-  {
-    "x.....","x11111"
-    "1.....","11>A%1"
-    "1.....","11AAAA"
-    "1.....","11>A/1"
-    "x.....","x11111"
-  }
-
-  diagonals =
-  {
-    "A1"
-    "A1"
-  }
-}
-
 GROW_TRENCH_STRAIGHT =
 {
   prob = 40
