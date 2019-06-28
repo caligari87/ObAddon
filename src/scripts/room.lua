@@ -1083,10 +1083,8 @@ function Room_detect_porches(R)
 
         gui.debugf("Made %s into a PORCH\n", A.name)
         R.porch_volume = R.porch_volume + A.svolume
-        gui.printf("The exmple:" .. R.porch_volume .. "\n")
       end
 
-      gui.printf("Looksee" .. R.svolume .. "\n")
       if R.porch_volume >= R.svolume/3 then return end
 
     end
