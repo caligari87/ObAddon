@@ -10,7 +10,7 @@ PREFABS.Crate_small_brown =
   file   = "decor/crates1.wad"
   map    = "MAP01"
 
-  prob   = 2500
+  prob   = 3500
   theme  = "!hell"
 
   where  = "point"
@@ -40,7 +40,7 @@ PREFABS.Crate_small_woodmet =
   can_be_on_roads = true
 
   theme  = "!tech"
-  prob   = 2500
+  prob   = 3500
 
   where  = "point"
   size   = 64
@@ -63,7 +63,7 @@ PREFABS.Crate_tall_brown =
   file   = "decor/crates1.wad"
   map    = "MAP02"
 
-  prob   = 2500
+  prob   = 3500
   theme  = "!hell"
 
   where  = "point"
@@ -83,7 +83,7 @@ PREFABS.Crate_tall_computers =
   template   = "Crate_tall_brown"
   map    = "MAP02"
 
-  prob   = 2500
+  prob   = 3500
   theme  = "tech"
   env    = "building"
 
@@ -98,7 +98,7 @@ PREFABS.Crate_medium_gray =
   file   = "decor/crates1.wad"
   map    = "MAP03"
 
-  prob   = 2500
+  prob   = 3500
   theme  = "tech"
   env    = "!cave"
 
@@ -118,7 +118,7 @@ PREFABS.Crate_group_medium =
   file   = "decor/crates1.wad"
   map    = "MAP04"
 
-  prob   = 2500
+  prob   = 3500
   env    = "!cave"
   theme  = "!hell"
 
@@ -141,7 +141,7 @@ PREFABS.Crate_large_wooden =
   can_be_on_roads = true
 
   theme  = "!tech"
-  prob   = 2500
+  prob   = 3500
 
   where  = "point"
   size   = 128
@@ -157,7 +157,7 @@ PREFABS.Small_Computer1 =
 
   env    = "building"
   theme  = "tech"
-  prob   = 2500
+  prob   = 3500
 
   where  = "point"
   size   = 80
@@ -173,7 +173,7 @@ PREFABS.Small_Computer2 =
 
   env    = "building"
   theme  = "tech"
-  prob   = 2500
+  prob   = 3500
 
   where  = "point"
   size   = 112

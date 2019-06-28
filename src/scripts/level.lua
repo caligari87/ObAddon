@@ -1998,6 +1998,7 @@ function Level_choose_themes()
       local pos = 1
       local countdown = rand.irange( 0,3 )
       local prev_theme = rand.key_by_probs(new_tab)
+      new_tab[prev_theme] = new_tab[prev_theme] / 10
 
       while pos <= #EPI.levels do
         local LEV = EPI.levels[pos]
@@ -2009,6 +2010,7 @@ function Level_choose_themes()
           mixins[LEV.name] = main_theme
           countdown = rand.pick({ 2,3,3,4 })
           prev_theme = rand.key_by_probs(new_tab)
+          new_tab[prev_theme] = new_tab[prev_theme] / 10
         end
 
         pos = pos + 1
