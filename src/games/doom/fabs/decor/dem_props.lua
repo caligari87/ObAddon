@@ -8,7 +8,7 @@ PREFABS.Decor_basketball_hoop =
   file   = "decor/dem_props.wad"
   map    = "MAP01"
 
-  prob   = 5000
+  prob   = 3500
   theme  = "urban"
   env    = "outdoor"
 
@@ -32,7 +32,7 @@ PREFABS.Decor_trash_bin =
 
   prob   = 3500
   theme  = "!hell"
-  env    = "!cave"
+  env    = "outdoor"
 
   where  = "point"
   size   = 52
