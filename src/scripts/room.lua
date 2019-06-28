@@ -1075,17 +1075,19 @@ function Room_detect_porches(R)
     table.sort(porchables,
     function(A, B) return A.porch_score > B.porch_score end)
 
-    R.porch_count = 0
+    R.porch_volume = 0
     each A in porchables do
 
       if A.porch_score > 0 and style_sel("porches", 0, 30, 60, 90) then
         set_as_porch(A)
 
         gui.debugf("Made %s into a PORCH\n", A.name)
-        R.porch_count = R.porch_count + 1
+        R.porch_volume = R.porch_volume + A.svolume
+        gui.printf("The exmple:" .. R.porch_volume .. "\n")
       end
 
-      if R.porch_count >= math.floor(R.floor_limit/2) then return end
+      gui.printf("Looksee" .. R.svolume .. "\n")
+      if R.porch_volume >= R.svolume/3 then return end
 
     end
   end
