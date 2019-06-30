@@ -2494,6 +2494,21 @@ function Layout_handle_corners()
         end
       end
 
+      -- don't put pillars on walls between different rooms
+      local cur_seed = corner.seeds[1]
+      each S in corner.seeds do
+        if cur_seed.area.room != S.area.room then
+          return
+        end
+        -- don't put pillars adjacent to joiners and closets
+        if S.chunk then
+          if S.chunk.kind == "joiner"
+          or S.chunk.kind == "closet" then
+            return
+          end
+        end
+      end
+
       local pillar_score = 0
       if near_porch(corner, "porch_neighbor") then
 
