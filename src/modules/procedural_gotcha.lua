@@ -21,21 +21,25 @@ PROCEDURAL_GOTCHA_FINE_TUNE = {}
 PROCEDURAL_GOTCHA_FINE_TUNE.GOTCHA_STRENGTH_CHOICES =
 {
   "none",    _("NONE"),
-  "harder",  _("[+2] Harder"),
-  "tougher", _("[+4] Tougher"),
+  "stronger", _("[+2] Stronger"),
+  "harder", _("[+4] Harder"),
+  "tougher", _("[+6] Tougher"),
   "crazier", _("[+8] CRAZIER"),
 }
 
 PROCEDURAL_GOTCHA_FINE_TUNE.GOTCHA_QUANTITY_CHOICES =
 {
-  "rarer", _("[-2] Rarer"),
-  "fewer", _("[-1] Fewer"),
+  "-50", _("-50% Monsters"),
+  "-25", _("-25% Monsters"),
   "none",  _("NONE"),
-  "more",  _("[+1] Even More"),
-  "lots",  _("[+2] Lots More"),
-  "heaps", _("[+4] Heaps More"),
-  "nuts",  _("[+8] Nuts'd"),
+  "25",  _("+25% Monsters"),
+  "50",  _("+50% Monsters"),
+  "100", _("+100% Monsters"),
+  "200",  _("+200% Monsters"),
 }
+
+
+
 function PROCEDURAL_GOTCHA_FINE_TUNE.setup(self)
   for name,opt in pairs(self.options) do
     local value = self.options[name].value

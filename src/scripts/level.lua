@@ -427,10 +427,12 @@ function Episode_plan_monsters()
       if PARAM["gotcha_strength"] then
         if PARAM["gotcha_strength"] == "none" then
           gotcha_strength = 0
-        elseif PARAM["gotcha_strength"] == "harder" then
+        elseif PARAM["gotcha_strength"] == "stronger" then
           gotcha_strength = 2
-        elseif PARAM["gotcha_strength"] == "tougher" then
+        elseif PARAM["gotcha_strength"] == "harder" then
           gotcha_strength = 4
+        elseif PARAM["gotcha_strength"] == "tougher" then
+          gotcha_strength = 6
         elseif PARAM["gotcha_strength"] == "crazier" then
           gotcha_strength = 8
         end

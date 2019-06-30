@@ -892,26 +892,26 @@ function Monster_fill_room(R)
       local gotcha_qty
 
       if PARAM["gotcha_qty"] then
-        if PARAM["gotcha_qty"] == "rarer" then
-          gotcha_qty = -2
-        elseif PARAM["gotcha_qty"] == "fewer" then
-          gotcha_qty = -1
+        if PARAM["gotcha_qty"] == "-50" then
+          gotcha_qty = 0.5
+        elseif PARAM["gotcha_qty"] == "-25" then
+          gotcha_qty = 0.75
         elseif PARAM["gotcha_qty"] == "none" then
-          gotcha_qty = 0
-        elseif PARAM["gotcha_qty"] == "more" then
-          gotcha_qty = 1
-        elseif PARAM["gotcha_qty"] == "lots" then
-          gotcha_qty = 2
-        elseif PARAM["gotcha_qty"] == "heaps" then
-          gotcha_qty = 4
-        elseif PARAM["gotcha_qty"] == "nuts" then
-          gotcha_qty = 8
+          gotcha_qty = 1.0
+        elseif PARAM["gotcha_qty"] == "+25" then
+          gotcha_qty = 1.25
+        elseif PARAM["gotcha_qty"] == "+50" then
+          gotcha_qty = 1.5
+        elseif PARAM["gotcha_qty"] == "+100" then
+          gotcha_qty = 2.0
+        elseif PARAM["gotcha_qty"] == "+200" then
+          gotcha_qty = 3.0
         end
       else
-        gotcha_qty = 2
+        gotcha_qty = 1.25
       end
 
-      qty = qty + gotcha_qty
+      qty = qty * gotcha_qty
 
       if qty < 0.1 then
         qty = 0.1
