@@ -172,7 +172,7 @@ function Level_determine_map_size(LEV)
       regular=145,
       superregular=70,
       large=45,
-      extreme=6,
+      extreme=6
     }
 
     ob_size = rand.key_by_probs(MIXED_PROBS)
@@ -205,7 +205,7 @@ function Level_determine_map_size(LEV)
       regular=36,
       superregular=42,
       large=48,
-      extreme=58,
+      extreme=58
     }
 
     W = SIZES[ob_size]
