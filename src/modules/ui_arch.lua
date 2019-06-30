@@ -3,7 +3,7 @@
 ------------------------------------------------------------------------
 --
 --  Copyright (C) 2016-2017 Andrew Apted
---  Copyright (C) 2019 Glaice
+--  Copyright (C) 2019 Armaetus
 --  Copyright (C) 2019 MsrSgtShooterPerson
 --
 --  This program is free software; you can redistribute it and/or
@@ -29,13 +29,14 @@ UI_ARCH.SIZES =
   -- this is a separator (not a usable choice)
   "_",       "_",
 
+  "micro",         _("Microscopic"),
   "mini",         _("Miniscule"),
   "small",        _("Tiny"),
   "subregular",   _("Small"),
   "regular",      _("Average"),
   "superregular", _("Large"),
   "large",        _("Huge"),
-  "extreme",      _("Extreme"),
+  "extreme",      _("Colossal"),
 }
 
 UI_ARCH.ABSURDITY_CHOICES =
