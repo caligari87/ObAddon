@@ -160,18 +160,19 @@ function Level_determine_map_size(LEV)
 
   -- Mix It Up --
 
-  -- Adjusted probabilities once again, Extreme is still very slim probability
-  -- but still possible to show up. -Armaetus, May 11th, 2019
+  -- Readjusted probabilities once again, added "Micro" size as suggested by activity
+  -- in the Discord server. -Armaetus, June 30th, 2019
   if ob_size == "mixed" then
     local MIXED_PROBS =
     {
-      mini=4,
-      small=30,
-      subregular=85,
-      regular=135,
-      superregular=65,
+      micro=5,
+      mini=6,
+      small=40,
+      subregular=95,
+      regular=145,
+      superregular=70,
       large=45,
-      extreme=4
+      extreme=6,
     }
 
     ob_size = rand.key_by_probs(MIXED_PROBS)
@@ -197,13 +198,14 @@ function Level_determine_map_size(LEV)
     --due to the extreme detail the maps have in them. --Armaetus (formerly Glaice), March 3rd, 2019
     local SIZES =
     {
+      micro=10,
       mini=16,
       small=22,
       subregular=30,
       regular=36,
       superregular=42,
       large=48,
-      extreme=58
+      extreme=58,
     }
 
     W = SIZES[ob_size]
@@ -427,12 +429,10 @@ function Episode_plan_monsters()
       if PARAM["gotcha_strength"] then
         if PARAM["gotcha_strength"] == "none" then
           gotcha_strength = 0
-        elseif PARAM["gotcha_strength"] == "stronger" then
-          gotcha_strength = 2
         elseif PARAM["gotcha_strength"] == "harder" then
-          gotcha_strength = 4
+          gotcha_strength = 2
         elseif PARAM["gotcha_strength"] == "tougher" then
-          gotcha_strength = 6
+          gotcha_strength = 4
         elseif PARAM["gotcha_strength"] == "crazier" then
           gotcha_strength = 8
         end
