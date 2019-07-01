@@ -8,6 +8,8 @@ PREFABS.Cage_wall_d2_computer_tech =
 
   theme  = "!hell"
 
+  height = 128
+
   where  = "seeds"
   shape  = "U"
 

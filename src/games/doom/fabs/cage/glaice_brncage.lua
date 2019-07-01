@@ -9,6 +9,8 @@ PREFABS.Cage_wall_brncage =
 
   theme  = "!hell"
 
+  height = 128
+
   seed_w = 1
   seed_h = 1
 
