@@ -5447,7 +5447,7 @@ GROW_H_STALK_ENTRY_TEST =
   structure =
   {
     "x11xxxxxxxxx","x11xxxxxxxxx"
-    "....xxxx.....","1111xxxx1111"
+    "....xxxx....","1111xxxx1111"
     "....xxxx....","1111xxxx1111"
     "....xxxx....","1111xxxx1111"
     ".....xx.....","1111%xx/1111"
