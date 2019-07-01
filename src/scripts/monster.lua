@@ -889,7 +889,7 @@ function Monster_fill_room(R)
     -- oh the pain
     if LEVEL.is_procedural_gotcha then
 
-      local gotcha_qty
+      local gotcha_qty = 1.25
 
       if PARAM["gotcha_qty"] then
         if PARAM["gotcha_qty"] == "-50" then
@@ -907,8 +907,6 @@ function Monster_fill_room(R)
         elseif PARAM["gotcha_qty"] == "+200" then
           gotcha_qty = 3.0
         end
-      else
-        gotcha_qty = 1.25
       end
 
       qty = qty * gotcha_qty
