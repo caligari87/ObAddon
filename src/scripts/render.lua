@@ -763,6 +763,37 @@ stderrf("dA = (%1.1f %1.1f)  dB = (%1.1f %1.1f)\n", adx, ady, bdx, bdy)
   end
 
 
+  local function set_blocking_line(edge)
+
+    local side_props =
+    {
+      tex = "MIDBARS3" -- dummy texture, not supposed to be visible
+      v1  = 0
+
+      blocked = 1
+    }
+
+    local x1,y1, x2,y2 = Edge_line_coords(edge)
+
+    local z
+    if edge.area.mode == "floor" then
+      z = edge.area.floor_h + 9001
+    elseif edge.area.peer.mode == "floor" then
+      z = edge.area.peer.mode.floor_h + 9001
+    end
+
+    for pass = 1, 2 do
+      local B = brushlib.rail_brush(x1,y1, x2,y2, z, side_props)
+
+      Trans.brush(B)
+
+      x1, x2 = x2, x1
+      y1, y2 = y2, y1
+    end
+
+  end
+
+
   local function straddle_door()
     assert(E.peer)
 
@@ -841,6 +872,19 @@ stderrf("dA = (%1.1f %1.1f)  dB = (%1.1f %1.1f)\n", adx, ady, bdx, bdy)
     Fabricate(A.room, def, T, { skin })
 
     Ambient_pop()
+
+    -- for windows, add impassable lines on certain occasions
+    if def.passable then
+      if PARAM.window_passability == "block_vistas"
+      or not PARAM.window_passability then
+        if (E.area.mode == "floor" and E.peer.area.mode == "scenic") or
+        (E.area.mode == "scenic" and E.peer.area.mode == "floor") then
+          set_blocking_line(E)
+        end
+      elseif PARAM.window_passability == "block_all" then
+        set_blocking_line(E)
+      end
+    end
 
 
     -- maybe add exit signs

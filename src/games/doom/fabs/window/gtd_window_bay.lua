@@ -2,8 +2,11 @@ PREFABS.Window_bay_1 =
 {
   file   = "window/gtd_window_bay.wad"
   map    = "MAP01"
+
   group  = "gtd_window_bay"
   prob   = 50
+
+  passable = true
 
   where  = "edge"
   seed_w = 1

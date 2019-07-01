@@ -69,6 +69,13 @@ MISC_STUFF.HEIGHT_CHOICES =
   "mixed",     _("Mix It Up"),
 }
 
+MISC_STUFF.WINDOW_BLOCKING_CHOICES =
+{
+  "block_vistas", _("Block Vistas Only"),
+  "block_all",    _("Block All"),
+  "none",         _("NONE"),
+}
+
 function MISC_STUFF.begin_level(self)
   each opt in self.options do
     local name  = assert(opt.name)
@@ -210,6 +217,14 @@ OB_MODULES["misc"] =
       gap = 1,
     }
 
+    {
+      name="window_passability"
+      label=_("Window Passability")
+      choices=MISC_STUFF.WINDOW_BLOCKING_CHOICES
+      tooltip=_("Sets the preferences for passability on certain windows. Block Vistas Only means only windows " ..
+                "that look out to vistas/map border scenics have a blocking line.")
+      default="block_vistas"
+    }
     {
       name="exit_signs"
       label=_("Exit Signs")

@@ -2,8 +2,11 @@ PREFABS.Window_open_1 =
 {
   file   = "window/gtd_window_full_open.wad"
   map    = "MAP01"
+
   group  = "gtd_window_full_open"
   prob   = 50
+
+  passable = true
 
   where  = "edge"
   seed_w = 1

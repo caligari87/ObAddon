@@ -2,8 +2,11 @@ PREFABS.Window_arched_1 =
 {
   file   = "window/gtd_window_arch_curved.wad"
   map    = "MAP01"
+
   group  = "gtd_window_arched"
   prob   = 50
+
+  passable = true
 
   where  = "edge"
   seed_w = 1

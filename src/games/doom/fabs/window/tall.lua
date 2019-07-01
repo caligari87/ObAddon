@@ -11,6 +11,8 @@ PREFABS.Window_tall_1 =
   group  = "tall"
   prob   = 50
 
+  passable = true
+
   rank   = 2
   height = 176
 

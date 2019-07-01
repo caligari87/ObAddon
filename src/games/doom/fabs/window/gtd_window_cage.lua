@@ -2,7 +2,9 @@ PREFABS.Window_cage_1 =
 {
   file   = "window/gtd_window_cage.wad"
   map    = "MAP01"
+
   group  = "gtd_window_cage_lowbars"
+
   theme  = "!tech"
   prob   = 50
 

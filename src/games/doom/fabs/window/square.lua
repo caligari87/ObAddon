@@ -10,6 +10,8 @@ PREFABS.Window_square1 =
 
   group  = "square"
 
+  passable = true
+
   prob   = 50
 
   where  = "edge"

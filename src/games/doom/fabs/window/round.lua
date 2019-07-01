@@ -10,6 +10,8 @@ PREFABS.Window_round1 =
 
   group  = "round"
 
+  passable = true
+
   prob   = 50
 
   where  = "edge"
