@@ -5,7 +5,7 @@ PREFABS.Wall_armaetus_fan_general =
 
   uses_epic_textures = true
 
-  prob = 50
+  prob = 20
 
   theme = "!hell"
   env = "building"
@@ -28,5 +28,5 @@ PREFABS.Wall_armaetus_fan_hell =
 
   theme = "hell"
 
-  prob = 8
+  prob = 3
 }
