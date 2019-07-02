@@ -6,8 +6,6 @@ PREFABS.Window_absurdly_open_1 =
   group  = "gtd_window_absurdly_open"
   prob   = 50
 
-  passable = true
-
   where  = "edge"
   seed_w = 1
 

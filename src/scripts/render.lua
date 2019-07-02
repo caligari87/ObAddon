@@ -767,7 +767,7 @@ stderrf("dA = (%1.1f %1.1f)  dB = (%1.1f %1.1f)\n", adx, ady, bdx, bdy)
 
     local side_props =
     {
-      tex = "MIDBARS3" -- dummy texture, not supposed to be visible
+      tex = "STEPTOP" -- dummy texture, not supposed to be visible
       v1  = 0
 
       blocked = 1
@@ -777,9 +777,9 @@ stderrf("dA = (%1.1f %1.1f)  dB = (%1.1f %1.1f)\n", adx, ady, bdx, bdy)
 
     local z
     if edge.area.mode == "floor" then
-      z = edge.area.floor_h + 9001
+      z = edge.area.floor_h - 16
     elseif edge.area.peer.mode == "floor" then
-      z = edge.area.peer.mode.floor_h + 9001
+      z = edge.area.peer.mode.floor_h - 16
     end
 
     for pass = 1, 2 do
