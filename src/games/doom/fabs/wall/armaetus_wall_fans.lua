@@ -23,7 +23,7 @@ PREFABS.Wall_armaetus_fan_general =
 
 PREFABS.Wall_armaetus_fan_hell =
 {
-  template = "Wall_fan_general"
+  template = "Wall_armaetus_fan_general"
   map = "MAP01"
 
   theme = "hell"
