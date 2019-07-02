@@ -9,7 +9,7 @@
 * **Frozsoul** - Prefabs, Psychedelic theme porting.
 * **Garrett** - Prefabs.
 * **MogWaltz** - Prefabs.
-* **Craneo** - Replacement candle texture, contributions to naming generator, prefabs
+* **Craneo** - Replacement candle texture, contributions to naming generator, prefabs, sprites.
 * **Tapwave** - Contributions to the story generator.
 * **Swedra** - Contributions to naming generator.
 * **EpicTyphlosion** - Prefabs, contributions to naming generator.
