@@ -221,21 +221,15 @@ class FancyObligeTree : BigTree replaces BigTree
 
 				if(unknownFlat)
 				{
-					switch(random(1,5))
+					switch(random(1,3))
 					{
 						case 1:
-							fstate = "VanillaA";
-							break;
-						case 2:
-							fstate = "VanillaB";
-							break;
-						case 3:
 							fstate = "CraneoDeadTreeA";
 							break;
-						case 4:
+						case 2:
 							fstate = "CraneoDeadTreeB";
 							break;
-						case 5:
+						case 3:
 							fstate = "CraneoDeadTreeC";
 							break;
 					}
@@ -378,15 +372,6 @@ class FancyObligeTree : BigTree replaces BigTree
 
 		CraneoWeirwoodTreeC:
 			OBWT C 1;
-			Loop;
-
-		// vanilla assets
-		VanillaA:
-			TRE2 A 1;
-			Loop;
-
-		VanillaB:
-			TRE1 A 1;
 			Loop;
 
 		// sad, sad, sad dead trees very sad
