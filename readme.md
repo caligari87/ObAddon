@@ -50,12 +50,12 @@ If you wish to try our "bleeding edge" code, you can build the addon yourself.
 ## Features
 
 ### Prefabs
-
 Adds a HUGE library of prefabricates to decorate maps, a collection spanning **more than a year** of work including decorative walls, doodads, and functional pieces such as stairs, joiners, teleporters, start rooms, joining pieces, and lifts contributed by different authors! **YOU TOO** can contribute!
 
 ### Extensions
 
 #### New Level Layouts!
+
 * Streets mode! Create a map composed of largely outdoor street-like zones from which rooms (buildings!) will sprout from!
 
 * Linear mode! Don't want to get lost navigating through a maze of doors? It's only a walk forward from start to finish without branches!
@@ -67,6 +67,7 @@ Adds a HUGE library of prefabricates to decorate maps, a collection spanning **m
 * LOTS and LOTS of new shape rules such as new steepness shapes, new liquid shapes, new shape of all sorts. Above 200% more shapes than vanilla! (or at least 200% new lines...)
 
 #### New Architectural Elements!
+
 * Beams! Just like Oblige 3.x and 6.x, beams have a chance of appearing between borders of varying ceilings, floors and liquid zones!
 
 * Naturalistic parks! Parks can now have natural-looking cliffs!
@@ -80,6 +81,7 @@ Adds a HUGE library of prefabricates to decorate maps, a collection spanning **m
 * New control to select ceiling and floor sink styles: curved and flowy, or sharp and angular.
 
 #### New Cosmetic Features!
+
 * PsYcHeDeLiC theme. VAYP NAYSH, YA'LL.
 
 * Armaetus's Epic Textures mod, now integrated from Oblige 6.x, including new textures such as ObAddon banners and vending machines!
@@ -89,6 +91,7 @@ Adds a HUGE library of prefabricates to decorate maps, a collection spanning **m
 * Quite literally exploded name generator with lots of new words and combinations!
 
 #### ZDoom Stuff!
+
 * ZDoom Story Generator! Make Doomguy do something different each time you play and give yourself something to read in-between your demon face-blasting!
 
 * ZDoom fog! With the ZDoom Special Addons module, you can now get parametric fog (based on the Sky Generator inputs) within the levels!
@@ -99,7 +102,10 @@ Adds a HUGE library of prefabricates to decorate maps, a collection spanning **m
 
 * Episode selection?! **In my Doom 2 WAD?!**
 
+* Dynamic lights! Now with Doom 64 style colors for that nostalgia!
+
 #### Expanded Fine Tune!
+
 * Exposed parameters for the Sky Generator such as day/night and mountain settings. Play an entire generated WAD at night mood... for the mood.
 
 * Toggle for turning prebuilt levels on or off!
@@ -109,6 +115,7 @@ Adds a HUGE library of prefabricates to decorate maps, a collection spanning **m
 * Change global light setting with Brightness Offset control!
 
 #### Expanded Debug Control
+
 * Live Growth Minimap! Watch Oblige build a level in front of you - just like a Japanese teppanyaki chef!
 
 * Prefab Control module - can control the amount of detail desired for the map, for your visual preference or for stability.
