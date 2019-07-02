@@ -2,49 +2,75 @@ IWAD level similarities via OBLIGE 7.70
 
 [[ DOOM2 ]]
 
-MAP01 - subregular
-  Big Rooms, Some Cages, Some Secrets, Few Outdoors
+MAP01 - small
+  Big Rooms, Some Cages, Some Secrets, Few Outdoors, Few Porches,
+  Few hallways, no teleports. Slightly short rooms, some barrels
 
 MAP02 - subregular
-  No Big Rooms, Lots of Liquids, Keyed Doors, Indoors, Rather Dark
+  No Big Rooms, Lots of Liquids, Keyed Doors, Indoors, Rather Dark.
+  Few secrets, few teleports. Mostly short rooms. More barrels.
 
 MAP03 - regular
- More Big Rooms, More Liquids, Keyed Doors?
+ More Big Rooms, More Liquids, Few keyed doors, some Porches, few secrets,
+ Few teleports. Slightly short rooms.
 
 MAP04 - subregular
- No Big Rooms, Lots of Steepness, Lots of Windows, Keyed Doors?
+ No Big Rooms, Lots of Steepness, Lots of Windows, Less Keyed Doors, Heaps of Darkness,
+ No Porches, Few hallways, few secrets, few teleports. Mostly short rooms.
 
 MAP05 - regular
   Heaps of darkness, low/some steepness, heaps of porches, few keys, lots of liquids.
+  Some hallways, some secrets, rare teleports. Slightly short rooms.
 
 MAP06 - superregular
-  More/heaps darkness, heaps of steepness, little outdoors, some traps, few windows.
+  More/heaps darkness, heaps of steepness, little outdoors, some traps, few windows,
+  some liquids, some teleporters, some secrets. Normal height rooms.
 
 MAP07 - small
-  Procedural Gotcha, must be weakest available!!
+  Procedural Gotcha, must be weakest available!! (-50% monsters)
 
 MAP08 - subregular
-  Traps heaps, outdoors few, I dunno. Few windows! Liquids few?
+  Traps heaps, outdoors few, I dunno. Few windows! Liquids rare, darkness less,
+  Teleporters some. More doors. Slightly tall rooms.
 
 MAP09 - regular
- Steepness more/heaps, traps some, outdoors less. Some windows?
+ Steepness more/heaps, traps some, outdoors less. Some windows? Some doors,
+ some secrets, Less Teleporters. Some porches. Slightly tall rooms.
 
 MAP10 - large
- Traps some/more, outdoors some, must be tech, steepness less/some, some windows
+ Traps some/more, outdoors some, must be tech, steepness less/some, some windows,
+ liquids rare, lots of big rooms, lots of hallways, less secrets, less porches,
+ Mostly tall rooms. Some keys.
 
 MAP11 - superregular
- Liquids more, outdoors more, steepness heaps, porches heaps, traps some/more, more windows
+ Liquids more, outdoors more, steepness more, porches heaps, traps some/more, more windows,
+ some secrets, less darkness, some parks, slightly tall rooms. Some keys.
 
 MAP12 - regular
+Street mode. Heaps of outdoors. Few/Rare street traffic, rare liquids, some secrets, few windows,
+some big rooms, few porches, some steepness. Less keys, some teleporters.
+
 MAP13 - superregular
+Street mode. Heaps of outdoors. More street traffic, mostly tall rooms, no liquids, some traps,
+some secrets, more porches, more keys, some big rooms, some teleporters, heaps of steepness!!
+
 MAP14 - regular
+More outdoors, heaps of porches, some secrets, more darkness, some steepness, some traps, heaps of windows,
+more beams, some big rooms, more symmetry. Slightly tall rooms, few teleporters.
+
 MAP15 - large
+Street mode. More outdoors, some street traffic, some big rooms, heaps of keys, heaps of porches, more liquids,
+more secrets, more darkness, heaps of steepness, mostly tall rooms, more teleporters.
+
 MAP16 - superregular
+More outdoors, some steepness, less liquids, more traps, less darkness, some secrets, heaps of porches, some keys,
+slightly tall rooms.
+
 MAP17 - regular
 MAP18 - subregular
 MAP19 - large
 MAP20 - extreme
-MAP21 - small
+MAP21 - mini
 MAP22 - subregular
 MAP23 - regular
 MAP24 - superregular
@@ -53,7 +79,7 @@ MAP26 - regular
 MAP27 - superregular
 MAP28 - large
 MAP29 - large
-MAP30 - small
+MAP30 - micro
 MAP31 - regular
 MAP32 - subregular
 
