@@ -3431,7 +3431,7 @@ function Grower_grammatical_room(R, pass, is_emergency)
   local apply_num
 
   if pass == "grow" then
-    apply_num = 10
+    apply_num = rand.pick( {10,20,30} )
 
     if R.is_hallway then
       pass = assert(R.grow_pass)
