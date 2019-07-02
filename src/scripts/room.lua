@@ -3112,12 +3112,15 @@ function Room_floor_ceil_heights()
           porch_count = porch_count + 1
         end
 
-        if porch_count == #A.neighbors then
-          return A, N
-        elseif porch_count > 0
-        and porch_count < #A.neighbors
-        and rand.odds(50) then
-          return A, N
+        -- areas to be infected by porches should all be in the same room
+        if A.room == N.room then
+          if porch_count == #A.neighbors then
+            return A, N
+          elseif porch_count > 0
+          and porch_count < #A.neighbors
+          and rand.odds(50) then
+            return A, N
+          end
         end
       end
 
