@@ -776,11 +776,9 @@ stderrf("dA = (%1.1f %1.1f)  dB = (%1.1f %1.1f)\n", adx, ady, bdx, bdy)
     local x1,y1, x2,y2 = Edge_line_coords(edge)
 
     local z
-    if edge.area.mode == "floor" then
-      z = edge.area.floor_h - 16
-    elseif edge.area.peer.mode == "floor" then
-      z = edge.area.peer.mode.floor_h - 16
-    end
+    local z1 = (E.area.floor_h or -9001)
+    local z2 = (E.peer.area.floor_h or -9001)
+    z = math.max(z1,z2) - 16
 
     for pass = 1, 2 do
       local B = brushlib.rail_brush(x1,y1, x2,y2, z, side_props)
@@ -877,8 +875,8 @@ stderrf("dA = (%1.1f %1.1f)  dB = (%1.1f %1.1f)\n", adx, ady, bdx, bdy)
     if def.passable then
       if PARAM.window_passability == "block_vistas"
       or not PARAM.window_passability then
-        if (E.area.mode == "floor" and E.peer.area.mode == "scenic") or
-        (E.area.mode == "scenic" and E.peer.area.mode == "floor") then
+        if E.peer.area.mode == "scenic"
+        or E.area.mode == "scenic" then
           set_blocking_line(E)
         end
       elseif PARAM.window_passability == "block_all" then
