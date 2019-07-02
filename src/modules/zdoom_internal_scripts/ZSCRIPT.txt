@@ -121,7 +121,7 @@ class FancyObligeTree : BigTree replaces BigTree
 
 				if(onSnow)
 				{
-					switch(random(1,9))
+					switch(random(1,14))
 					{
 						case 1:
 							fstate = "SnowTreeDeadA";
@@ -149,6 +149,21 @@ class FancyObligeTree : BigTree replaces BigTree
 							break;
 						case 9:
 							fstate = "SnowPineSmolB";
+							break;
+						case 10:
+							fstate = "CraneoPine1";
+							break;
+						case 11:
+							fstate = "CraneoPine2";
+							break;
+						case 12:
+							fstate = "CraneoPine3";
+							break;
+						case 13:
+							fstate = "CraneoPine4";
+							break;
+						case 14:
+							fstate = "CraneoPine5";
 							break;
 					}
 					// the snow trees are kinda small
@@ -227,6 +242,8 @@ class FancyObligeTree : BigTree replaces BigTree
 				}
 
 				//add a bit of random scaling jazz
+				//CraneoPine# set is already 200ish height and doesn't need
+				//adjustments
 				double randomscale = frandom(0.8, 1.5);
 				scale.x *= randomscale;
 				scale.y *= randomscale;
@@ -301,6 +318,26 @@ class FancyObligeTree : BigTree replaces BigTree
 
 		SnowPineSmolB:
 			XMAS I 1;
+			Loop;
+
+		CraneoPine1:
+			XMAS J -1;
+			Loop;
+
+		CraneoPine2:
+			XMAS K -1;
+			Loop;
+
+		CraneoPine3:
+			XMAS L -1;
+			Loop;
+
+		CraneoPine4:
+			XMAS M -1;
+			Loop;
+
+		CraneoPine5:
+			XMAS N -1;
 			Loop;
 
 		// desert assets

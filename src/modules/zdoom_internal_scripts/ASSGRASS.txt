@@ -9,6 +9,11 @@ Script "IsMyAssGrass" (void)
   if (CheckActorFloorTexture(0, "GRASS2")) GiveInventory("AssIsGrass", 1);
   if (CheckActorFloorTexture(0, "RROCK19")) GiveInventory("AssIsGrass", 1);
   if (CheckActorFloorTexture(0, "RROCK20")) GiveInventory("AssIsGrass", 1);
+  if (CheckActorFloorTexture(0, "GROUND01")) GiveInventory("AssIsGrass", 1);
+  if (CheckActorFloorTexture(0, "GROUND02")) GiveInventory("AssIsGrass", 1);
+  if (CheckActorFloorTexture(0, "GROUND03")) GiveInventory("AssIsGrass", 1);
+  if (CheckActorFloorTexture(0, "GROUND04")) GiveInventory("AssIsGrass", 1);
+  if (CheckActorFloorTexture(0, "QFLAT07")) GiveInventory("AssIsGrass", 1);
 
   if (CheckActorFloorTexture(0, "SNOW1")) GiveInventory("AssIsSnow", 1);
   if (CheckActorFloorTexture(0, "SNOW5")) GiveInventory("AssIsSnow", 1);
@@ -44,4 +49,6 @@ Script "IsMyAssGrass" (void)
   if (CheckActorFloorTexture(0, "SLIME10")) GiveInventory("AssIsHell", 1);
   if (CheckActorFloorTexture(0, "SLIME11")) GiveInventory("AssIsHell", 1);
   if (CheckActorFloorTexture(0, "SLIME12")) GiveInventory("AssIsHell", 1);
+  if (CheckActorFloorTexture(0, "FIRELAF1")) GiveInventory("AssIsHell", 1);
+  if (CheckActorFloorTexture(0, "FIRELAF2")) GiveInventory("AssIsHell", 1);
 }

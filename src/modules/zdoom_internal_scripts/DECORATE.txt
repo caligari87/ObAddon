@@ -30,7 +30,10 @@ actor FancyObligeTree replaces BigTree
 			TRE2 A 0 A_SetScale(2, 2)
 			TRE2 A 0 A_Jump(255, "SnowTreeDeadA", "SnowTreeKebab",
 			"SnowTreePloughed", "SnowTreeDeadB", "SnowTreeDeadC",
-			"SnowPineA", "SnowPineB", "SnowPineSmolA", "SnowPineSmolB")
+			"SnowPineA", "SnowPineB", "SnowPineSmolA", "SnowPineSmolB",
+			"CraneoPine1", "CraneoPine2", "CraneoPine3", "CraneoPine4",
+			"CraneoPine5") //CraneoPine series is already 200ish in height, what can we do about
+			// the resizing issue as other trees use?
 
 		OnSand:
 			TRE2 A 0 A_Jump(255, "PalmTree", "DesertTreeA", "DesertTreeB",
@@ -94,6 +97,21 @@ actor FancyObligeTree replaces BigTree
 
 		SnowPineSmolB:
 			XMAS I -1
+
+		CraneoPine1:
+			XMAS J -1
+
+		CraneoPine2:
+			XMAS K -1
+
+		CraneoPine3:
+			XMAS L -1
+
+		CraneoPine4:
+			XMAS M -1
+
+		CraneoPine5:
+			XMAS N -1
 
 		//desert trees
 		PalmTree:
