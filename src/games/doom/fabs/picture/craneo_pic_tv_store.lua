@@ -21,7 +21,7 @@ PREFABS.Pic_craneo_tv_store =
   bound_z2 = 128
 
   deep = 16
-  over = 16
+  over = -16
 
   x_fit = "frame"
   y_fit = "top"

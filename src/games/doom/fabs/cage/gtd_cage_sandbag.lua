@@ -74,7 +74,7 @@ PREFABS.Cage_sandbag_inset =
   seed_h = 1
 
   deep = 16
-  over = 16
+  over = -16
 
   x_fit = { 84,92 , 164,172 }
   y_fit = "top"
@@ -97,7 +97,7 @@ PREFABS.Cage_sandbag_inset_EPIC =
   seed_h = 1
 
   deep = 16
-  over = 16
+  over = -16
 
   x_fit = { 84,92 , 164,172 }
   y_fit = "top"

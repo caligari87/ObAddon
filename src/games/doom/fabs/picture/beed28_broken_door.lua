@@ -16,8 +16,8 @@ PREFABS.Pic_beed28_broken_door =
   bound_z1 = 0
   bound_z2 = 128
 
-  deep   =  16
-  over   = -16
+  deep = 16
+  over = -16
 
   x_fit = "frame"
   y_fit = "top"
