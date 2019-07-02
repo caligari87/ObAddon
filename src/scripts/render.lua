@@ -767,8 +767,7 @@ stderrf("dA = (%1.1f %1.1f)  dB = (%1.1f %1.1f)\n", adx, ady, bdx, bdy)
 
     local side_props =
     {
-      tex = "STEPTOP" -- dummy texture, not supposed to be visible
-      v1  = 0
+      tex = "ZZWOLF10" -- currently patch-replaced as an invisible wall
 
       blocked = 1
     }
@@ -776,9 +775,9 @@ stderrf("dA = (%1.1f %1.1f)  dB = (%1.1f %1.1f)\n", adx, ady, bdx, bdy)
     local x1,y1, x2,y2 = Edge_line_coords(edge)
 
     local z
-    local z1 = (E.area.floor_h or -9001)
-    local z2 = (E.peer.area.floor_h or -9001)
-    z = math.max(z1,z2) - 16
+    local z1 = (E.area.ceil_h or -9001)
+    local z2 = (E.peer.area.ceil_h or -9001)
+    z = math.max(z1,z2)
 
     for pass = 1, 2 do
       local B = brushlib.rail_brush(x1,y1, x2,y2, z, side_props)
