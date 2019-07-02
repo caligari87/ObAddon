@@ -681,6 +681,11 @@ GLAICE_MATERIALS = {
   WD02 = { t="WD02", f="FLAT5_2" } --WOOD9
   WD03 = { t="WD03", f="FLAT5_2" }
   WD04 = { t="WD04", f="FLAT5_1" }
+  WODCRAT1 = { t="WODCRAT1", f="FLAT5_2" } -- Wooden TNT UAC crate, 64x128
+  WODCRAT2 = { t="WODCRAT2", f="FLAT5_2" } -- Wooden TNT UAC crate, 64x64
+  WODCRAT3 = { t="WODCRAT3", f="FLAT5_2" } -- Wooden TNT UAC crate, 128x64
+  WODCRAT4 = { t="WODCRAT4", f="FLAT5_2" } -- Wooden UAC crate, 64x64
+  WODCRAT5 = { t="WODCRAT5", f="FLAT5_2" } -- Wooden UAC crate, 64x128
   WOODFACE = { t="WOODFACE", f="FLAT5_2" }
   WOODSKUL = { t="WOODSKUL", f="FLAT5_2" } -- Wood with skull on it. From Doom1
   WOOD13 = { t="WOOD13", f="FLAT5_2" }
@@ -747,6 +752,7 @@ GLAICE_MATERIALS = {
   FENCE9 = { t="FENCE9", rail_h=96 } -- Rusty
   FENCEA = { t="FENCEA", rail_h=128 } -- Shiny
   FENCEB = { t="FENCEB", rail_h=128 } -- Rusty
+  FENCEC = { t="FENCEC", rail_h=128 } -- Fencing with vegetation(?) on it, from Evilution
   MIDSPAC2 = { t="MIDSPAC2", f="CEIL5_1", rail_h = 128 } -- Darker
   MIDSPAC3 = { t="MIDSPAC3", f="CEIL5_1", rail_h = 128 } -- A thicker, metallic look
   MIDSPAC4 = { t="MIDSPAC4", f="WARN1", rail_h = 128 } -- Warning stripes
