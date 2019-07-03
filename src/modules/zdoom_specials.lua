@@ -222,6 +222,7 @@ actor ObLightYellow : ObLightWhite 14996 {}
 actor ObLightBlue : ObLightWhite 14995 {}
 actor ObLightGreen : ObLightWhite 14994 {}
 actor ObLightBeige : ObLightWhite 14993 {}
+actor ObLightPurple : ObLightWhite 14992 {}
 ]]
 
 ZDOOM_SPECIALS.DYNAMIC_LIGHT_EDNUMS =
@@ -282,6 +283,13 @@ PointLight BeigeLight
   offset 0 -48 0
 }
 
+PointLight PurpleLight
+{
+  color 0.7 0 0.95
+  size 128
+  offset 0 -48 0
+}
+
 object ObLightWhite
 {
   frame CAND { light WhiteLight }
@@ -315,6 +323,11 @@ object obLightGreen
 object ObLightBeige
 {
   frame CAND { light BeigeLight }
+}
+
+object ObLightPurple
+{
+  frame CAND { light PurpleLight }
 }
 ]]
 

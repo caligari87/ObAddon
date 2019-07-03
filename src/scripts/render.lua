@@ -2148,6 +2148,8 @@ chunk.goal.action = "S1_OpenDoor"  -- FIXME IT SHOULD BE SET WHEN JOINER IS REND
           light_ent.id = 14994
         elseif def.light_color == "beige" then
           light_ent.id = 14993
+        elseif def.light_color == "purple" then
+          light_ent.id = 14992
         elseif def.light_color == "white" then
           light_ent.id = 14999
         end

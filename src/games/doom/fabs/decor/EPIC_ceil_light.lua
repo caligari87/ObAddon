@@ -329,6 +329,21 @@ PREFABS.Light_urban_TLITE65Y =
   sector_1  = { [0]=90, [1]=15 }
 }
 
+PREFABS.Light_urban_TLITE65P =
+{
+  template = "Light_EPIC_basic"
+  map    = "MAP02"
+
+  prob   = 50
+  theme  = "urban"
+
+  flat_TLITE6_1 = "TLITE65P"
+
+  light_color = "purple"
+
+  sector_1  = { [0]=90, [1]=15 }
+}
+
 
 ----------- TECH THEME ------------------------
 
@@ -673,6 +688,23 @@ PREFABS.Light_tech_TLITE65Y =
   sector_1  = { [0]=90, [1]=15 }
 }
 
+PREFABS.Light_tech_TLITE65P =
+{
+  template = "Light_EPIC_basic"
+  map    = "MAP02"
+
+  prob   = 50
+  theme  = "tech"
+
+  flat_TLITE6_1 = "TLITE65P"
+  flat_CEIL5_2  = "FLAT23"
+  tex_METAL = "SHAWN2"
+
+  light_color = "purple"
+
+  sector_1  = { [0]=90, [1]=15 }
+}
+
 
 ----------- HELL THEME ------------------------
 
@@ -810,4 +842,21 @@ PREFABS.Light_hell_GLITE09 =
   flat_TLITE6_4 = "GLITE09"
       tex_GRAY7 = "METAL"
      flat_FLAT19 = "CEIL5_2"
+}
+
+PREFABS.Light_hell_PLITE1 =
+{
+  template = "Light_EPIC_basic"
+  map    = "MAP01"
+
+  prob   = 25
+  theme  = "hell"
+
+  light_color = "blue"
+
+  flat_TLITE6_4 = "PLITE1"
+      tex_GRAY7 = "METAL"
+     flat_FLAT19 = "CEIL5_2"
+
+  light_color = "purple"
 }
