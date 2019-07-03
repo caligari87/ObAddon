@@ -9,6 +9,8 @@ PREFABS.Cage_wall_bunker_tech =
   where  = "seeds"
   shape  = "U"
 
+  height = 112
+
   seed_w = 2
   seed_h = 1
 

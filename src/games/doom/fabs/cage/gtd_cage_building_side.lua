@@ -8,6 +8,8 @@ PREFABS.Cage_wall_building_terrace =
   theme  = "urban"
   env    = "outdoor"
 
+  height = 216
+
   uses_epic_textures = true
 
   where  = "seeds"

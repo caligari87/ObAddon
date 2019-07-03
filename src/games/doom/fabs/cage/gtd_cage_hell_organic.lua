@@ -8,6 +8,8 @@ PREFABS.Cage_hell_disgusting =
 
   theme  = "hell"
 
+  height = 128
+
   where  = "seeds"
   shape  = "U"
 
