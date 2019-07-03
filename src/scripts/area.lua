@@ -2738,6 +2738,4 @@ function Area_create_rooms()
   Connect_finalize()
 
   Area_locate_chunks()
-
-  gui.ticker()
 end
