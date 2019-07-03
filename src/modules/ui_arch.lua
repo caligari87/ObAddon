@@ -29,7 +29,7 @@ UI_ARCH.SIZES =
   -- this is a separator (not a usable choice)
   "_",       "_",
 
-  "micro",         _("Microscopic"),
+  "micro",        _("Microscopic"),
   "mini",         _("Miniscule"),
   "small",        _("Tiny"),
   "subregular",   _("Small"),
@@ -37,6 +37,8 @@ UI_ARCH.SIZES =
   "superregular", _("Large"),
   "large",        _("Huge"),
   "extreme",      _("Colossal"),
+  "extremer",     _("Gargantuan"),
+  "extremest",    _("Transcendent"),
 }
 
 UI_ARCH.ABSURDITY_CHOICES =
@@ -114,8 +116,8 @@ OB_MODULES["ui_arch"] =
   {
     { name="size", label=_("Level Size"), choices=UI_ARCH.SIZES,  default="epi"
       tooltip = "WARNING! If you are planning to play on any choices that involve maps " ..
-      "potentially becoming Large or Extreme-sized, it is preferable to turn on Autodetail " ..
-      "under Prefab Control to prevent BSP issues and breaking side count limits."
+      "at sizes of Huge and above, Autodetail is required on. (on by default if you do not have " ..
+      "Prefab Control module on. The stability of maps with sizes Colossal and beyond is not predictable."
       gap = 1
     }
 

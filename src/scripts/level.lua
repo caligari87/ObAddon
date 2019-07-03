@@ -205,7 +205,9 @@ function Level_determine_map_size(LEV)
       regular=36,
       superregular=42,
       large=48,
-      extreme=58
+      extreme=58,
+      extremer=66,
+      extremest=74
     }
 
     W = SIZES[ob_size]
