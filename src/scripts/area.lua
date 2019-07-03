@@ -2656,8 +2656,6 @@ function Autodetail(level)
     total_walkable_area = total_walkable_area + R.svolume
   end
 
-  print("Total walkable volume: " .. total_walkable_area .. "\n")
-
   local function set_wall_group_priorities(multiplier)
 
     -- rather than these being set here, maybe initialize from
@@ -2687,45 +2685,22 @@ function Autodetail(level)
       GAME.THEMES.hell.wall_groups.PLAIN = hell_prob * multiplier
       GAME.THEMES.flesh.wall_groups.PLAIN = urban_prob * multiplier
     end
+
+    PREFABS["Wall_plain"].use_prob = PREFABS["Wall_plain"].prob * multiplier
+    PREFABS["Wall_plain_diag"].use_prob = PREFABS["Wall_plain"].prob * multiplier
 end
 
-  local diag_wall_prob
-  local plain_wall_prob
+gui.printf("Total walkable volume: " .. total_walkable_area .. "\n")
 
-  local diag_wall_prob_default = PREFABS["Wall_plain_diag"].prob
-  local plain_wall_prob_default = PREFABS["Wall_plain"].prob
+local tone_down_factor = 1
 
-  if total_walkable_area < 1800 then
-    plain_wall_prob = diag_wall_prob_default
-    diag_wall_prob = diag_wall_prob_default
-    set_wall_group_priorities(1)
-    gui.printf("Map is normal. No toning down required.\n")
-  elseif total_walkable_area >= 1800 and total_walkable_area < 2200 then
-    plain_wall_prob = 175
-    diag_wall_prob = 175
-    set_wall_group_priorities(1.25)
-    gui.printf("Map is huge. Toning down wall fabs.\n")
-  elseif total_walkable_area >= 2200 and total_walkable_area < 2600 then
-    plain_wall_prob = 250
-    diag_wall_prob = 250
-    set_wall_group_priorities(1.5)
-    gui.printf("Map is immense! Toning down wall fabs greatly!\n")
-  elseif total_walkable_area >= 2600 and total_walkable_area < 3000 then
-    plain_wall_prob = 500
-    diag_wall_prob = 500
-    set_wall_group_priorities(2)
-    gui.printf("Map is crazy! Toning down wall fabs like there's no tomorrow!\n")
-  elseif total_walkable_area >= 3000 then
-    plain_wall_prob = 750
-    diag_wall_prob = 750
-    set_wall_group_priorities(3)
-    gui.printf("This map is way too huge?!\n")
-  else
-    gui.printf("Could not read map size!!!\n")
-  end
-
-  PREFABS["Wall_plain"].use_prob = plain_wall_prob
-  PREFABS["Wall_plain_diag"].use_prob = diag_wall_prob
+if total_walkable_area >= 1800 then
+  tone_down_factor = ((total_walkable_area/1000) - 0.8) ^ 1.75
+  gui.printf("Tone-down multiplier: " .. tone_down_factor .. "\n\n")
+  set_wall_group_priorities(tone_down_factor)
+else
+  gui.printf("Map is insufficiently large enough to need Autodetail for now...\n\n")
+end
 
 end
 
@@ -2743,7 +2718,7 @@ function Area_create_rooms()
 
   Area_analyse_areas()
 
-  if PARAM["autodetail"] == "on" then
+  if PARAM.autodetail == "on" or not PARAM.autodetail then
     Autodetail(LEVEL)
   end
 
