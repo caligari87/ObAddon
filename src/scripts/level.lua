@@ -167,12 +167,14 @@ function Level_determine_map_size(LEV)
     {
       micro=5,
       mini=6,
-      small=40,
-      subregular=95,
-      regular=145,
-      superregular=70,
-      large=45,
-      extreme=6
+      small=45,
+      subregular=100,
+      regular=150,
+      superregular=75,
+      large=50,
+      extreme=6,
+      extremer=4,
+      extremest=4
     }
 
     ob_size = rand.key_by_probs(MIXED_PROBS)
@@ -207,7 +209,7 @@ function Level_determine_map_size(LEV)
       large=48,
       extreme=58,
       extremer=66,
-      extremest=74
+      extremest=76
     }
 
     W = SIZES[ob_size]
@@ -2675,8 +2677,6 @@ function Level_make_all()
 
   ob_invoke_hook("all_done")
 
-  -- MSSP-TODO: Create a new 'oil pan' function to catch
-  -- all lump creation by the different ZDoom-focused modules
   ScriptMan_init()
 
   return "ok"

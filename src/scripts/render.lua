@@ -2643,7 +2643,12 @@ end
 function Render_skybox()
   if not LEVEL.skybox then return end
 
-  local T = Trans.spot_transform(SEED_H*128, SEED_W*128, 4, 4)
+  gui.printf(table.tostr(LEVEL.skybox))
+
+  local x = SEED_W * SEED_SIZE - 512
+  local y = SEED_H * SEED_SIZE + 1024 -- should probably the actual prefab bbox size
+
+  local T = Trans.spot_transform(x, y, 0, 0)
   Fabricate(nil, LEVEL.skybox, T, {})
 end
 
