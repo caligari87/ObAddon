@@ -852,11 +852,10 @@ PREFABS.Light_hell_PLITE1 =
   prob   = 25
   theme  = "hell"
 
-  light_color = "blue"
+  light_color = "purple"
 
   flat_TLITE6_4 = "PLITE1"
       tex_GRAY7 = "METAL"
      flat_FLAT19 = "CEIL5_2"
 
-  light_color = "purple"
 }
