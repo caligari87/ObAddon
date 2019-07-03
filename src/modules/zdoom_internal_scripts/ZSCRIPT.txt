@@ -121,7 +121,17 @@ class FancyObligeTree : BigTree replaces BigTree
 
 				if(onSnow)
 				{
-					switch(random(1,14))
+          int index = 1;
+
+          if(random(1,4) >= 2)
+          {
+            index = random(10,14);
+          }else
+          {
+            index = random(1,9);
+          }
+
+					switch(index)
 					{
 						case 1:
 							fstate = "SnowTreeDeadA";
@@ -166,10 +176,6 @@ class FancyObligeTree : BigTree replaces BigTree
 							fstate = "CraneoPine5";
 							break;
 					}
-					// the snow trees are kinda small
-					float extraSize = frandom(1.5,2);
-					scale.x *= extraSize;
-					scale.y *= extraSize;
 				}
 
 				if(onSand)
