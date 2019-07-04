@@ -145,6 +145,13 @@ PREFABS.Wall_fake_warehouse_window =
 
   x_fit = "frame"
   z_fit = "bottom"
+
+  tex_LITE3 =
+  {
+    LITE3 = 50
+    LITE5 = 12
+    LITEBLU = 12
+  }
 }
 
 PREFABS.Wall_double_dark_windows =
@@ -165,4 +172,12 @@ PREFABS.Wall_double_dark_windows =
 
   x_fit = "frame"
   z_fit = "bottom"
+
+  tex_MODWALL4 =
+  {
+    MODWALL4 = 50
+    MODWALL3 = 50
+    BLAKWAL1 = 50
+    BLAKWAL2 = 50
+  }
 }
