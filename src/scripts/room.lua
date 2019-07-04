@@ -2200,16 +2200,13 @@ function Room_floor_ceil_heights()
     local group1 = A1.floor_group
     local group2 = A2.floor_group
 
+    if R.is_street then return end
+
     if not (group1 and group2) then return end
 
     if group1 == group2 then return end
 
     if group1.h != group2.h then return end
-
-    if R.is_street then
-      if A1.is_road and not A2.is_road then return end
-      if not A1.is_road and A2.is_road then return end
-    end
 
     if do_floor_groups_touch(R, group1, group2) then
       merge_floor_groups(R, group1, group2)
