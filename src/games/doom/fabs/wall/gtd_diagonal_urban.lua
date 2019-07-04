@@ -22,6 +22,14 @@ PREFABS.Wall_urban_diagonal_window_dark =
   map = "MAP02"
 
   z_fit = { 60,68 }
+
+  tex_MODWALL4 =
+  {
+    MODWALL4=50
+    MODWALL3=50
+    BLAKWAL1=50
+    BLAKWAL2=50
+  }
 }
 
 PREFABS.Wall_urban_diagonal_window_dark_top_fit =
@@ -29,7 +37,17 @@ PREFABS.Wall_urban_diagonal_window_dark_top_fit =
   template = "Wall_urban_diagonal_window_bright"
   map = "MAP02"
 
+  prob = 25
+
   z_fit = "bottom"
+
+  tex_MODWALL4 =
+  {
+    MODWALL4=50
+    MODWALL3=50
+    BLAKWAL1=50
+    BLAKWAL2=50
+  }
 }
 
 PREFABS.Wall_urban_tall_lite5 =
