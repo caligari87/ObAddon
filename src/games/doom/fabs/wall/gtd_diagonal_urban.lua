@@ -21,6 +21,8 @@ PREFABS.Wall_urban_diagonal_window_dark =
   template = "Wall_urban_diagonal_window_bright"
   map = "MAP02"
 
+  prob = 12
+
   z_fit = { 60,68 }
 
   tex_MODWALL4 =

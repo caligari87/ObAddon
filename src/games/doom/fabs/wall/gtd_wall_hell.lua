@@ -140,8 +140,7 @@ PREFABS.Wall_hell_flataccent_outdoor =
   bound_z1 = 0
   bound_z2 = 128
 
-  x_fit = "stretch"
-  z_fit = "stretch"
+  z_fit = { 60,68 }
 }
 
 PREFABS.Wall_hell_thin_vaulted =
