@@ -4713,6 +4713,8 @@ namelib.COMMUNITY_MEMBERS =
     "Kinsie",
     "Magpie", --MagPie
     "Mog Waltz",
+    "Obsidian Plague",
+    "Nisteth",
     "Roundabout Lout",
     "Saint",
     "Sanser",
