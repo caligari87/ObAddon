@@ -71,9 +71,9 @@ MISC_STUFF.HEIGHT_CHOICES =
 
 MISC_STUFF.WINDOW_BLOCKING_CHOICES =
 {
-  "block_vistas", _("Block Vistas Only"),
-  "block_all",    _("Block All"),
-  "none",         _("NONE"),
+  "not_on_vistas", _("Not on Vistas"),
+  "never",         _("Never"),
+  "all",           _("All"),
 }
 
 function MISC_STUFF.begin_level(self)
@@ -155,6 +155,16 @@ OB_MODULES["misc"] =
     }
 
     { name="windows",     label=_("Windows"),        choices=STYLE_CHOICES }
+    {
+      name="passable_windows",
+      label=_("Passable Windows"),
+      choices=MISC_STUFF.WINDOW_BLOCKING_CHOICES,
+      tooltip=_("Sets the preferences for passability on certain windows. On Vistas Only means only windows " ..
+                "that look out to vistas/map border scenics have a blocking line."),
+      default="not_on_vistas",
+      gap=1
+    }
+
     { name="symmetry",    label=_("Symmetry"),       choices=STYLE_CHOICES }
     { name="beams",       label=_("Beams"),          choices=STYLE_CHOICES,
       tooltip = "Allows the appearance of thin pillars to appear between the borders of different elevations.",
@@ -217,14 +227,6 @@ OB_MODULES["misc"] =
       gap = 1,
     }
 
-    {
-      name="window_passability"
-      label=_("Window Passability")
-      choices=MISC_STUFF.WINDOW_BLOCKING_CHOICES
-      tooltip=_("Sets the preferences for passability on certain windows. Block Vistas Only means only windows " ..
-                "that look out to vistas/map border scenics have a blocking line.")
-      default="block_vistas"
-    }
     {
       name="exit_signs"
       label=_("Exit Signs")

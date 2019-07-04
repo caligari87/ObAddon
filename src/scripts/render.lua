@@ -872,13 +872,13 @@ stderrf("dA = (%1.1f %1.1f)  dB = (%1.1f %1.1f)\n", adx, ady, bdx, bdy)
 
     -- for windows, add impassable lines on certain occasions
     if def.passable then
-      if PARAM.window_passability == "block_vistas"
-      or not PARAM.window_passability then
+      if PARAM.passable_windows == "not_on_vistas"
+      or not PARAM.passable_windows then
         if E.peer.area.mode == "scenic"
         or E.area.mode == "scenic" then
           set_blocking_line(E)
         end
-      elseif PARAM.window_passability == "block_all" then
+      elseif PARAM.passable_windows == "never" then
         set_blocking_line(E)
       end
     end
