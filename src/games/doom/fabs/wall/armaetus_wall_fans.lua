@@ -28,5 +28,7 @@ PREFABS.Wall_armaetus_fan_hell =
 
   theme = "hell"
 
+  tex_DOORSTOP = "METAL"
+
   prob = 3
 }
