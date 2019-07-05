@@ -1175,6 +1175,44 @@ function Corner_get_env(corner)
 end
 
 
+
+function Corner_is_at_area_corner(corner)
+  if #corner.areas > 2 then return true end
+
+  -- MSSP-FIXME: This code sux. Make it better next time.
+  if #corner.seeds == 4 then
+
+    if corner.seeds[1].area != corner.seeds[2].area and
+    corner.seeds[1].area != corner.seeds[3].area and
+    corner.seeds[1].area != corner.seeds[4].area then
+      return true
+    end
+
+    if corner.seeds[2].area != corner.seeds[1].area and
+    corner.seeds[2].area != corner.seeds[3].area and
+    corner.seeds[2].area != corner.seeds[4].area then
+      return true
+    end
+
+    if corner.seeds[3].area != corner.seeds[1].area and
+    corner.seeds[3].area != corner.seeds[3].area and
+    corner.seeds[3].area != corner.seeds[4].area then
+      return true
+    end
+
+    if corner.seeds[4].area != corner.seeds[1].area and
+    corner.seeds[4].area != corner.seeds[2].area and
+    corner.seeds[4].area != corner.seeds[3].area then
+      return true
+    end
+
+  end
+
+  return false
+end
+
+
+
 ------------------------------------------------------------------------
 
 

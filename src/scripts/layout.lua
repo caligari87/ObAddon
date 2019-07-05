@@ -2324,41 +2324,6 @@ end
 
 function Layout_handle_corners()
 
-  local function need_fencepost(corner) --OLD
-    --
-    -- need a fence post where :
-    --   1. three or more areas meet (w/ different heights)
-    --   2. all the areas are outdoor
-    --   3. one of the junctions/edges is "rail"
-    --   4. none of the junctions/edges are "wall"
-    --
-
-    if #corner.areas < 3 then return false end
-
-    post_h = nil
-
-    local heights = {}
-
-    each A in corner.areas do
-      if not A.is_outdoor then return false end
-      if not A.floor_h then return false end
-
-      table.add_unique(heights, A.floor_h)
-
-      each B in corner.areas do
-        local junc = Junction_lookup(A, B)
-        if junc then
-          if junc.kind == "wall" then return false end
-          if junc.kind == "rail" then post_h = assert(junc.post_h) end
-        end
-      end
-    end
-
-    if #heights < 3 then return false end
-
-    return (post_h != nil)
-  end
-
 
   local function fencepost_base_z(corner)
     local z
@@ -2387,14 +2352,6 @@ function Layout_handle_corners()
   end
 
 
-  -- MSSP check whether how many junctions
-  -- this corner has (three junctions in a porch
-  -- area usually means adjacency to a stair chunk)
-  local function corner_openness(corner)
-    return #corner.junctions or 0
-  end
-
-
   local function fetch_good_pillar_material(corner)
     local pillar_is_outdoor = false
 
@@ -2416,10 +2373,7 @@ function Layout_handle_corners()
     -- already used?
     if corner.kind then return end
 
-    -- see if we have multiple railings at different heights, and
-    -- if so then determine highest one.
     local post_top_z
-    local need_post
 
     each junc in corner.junctions do
       if junc.A2 == "map_edge" then return end
@@ -2432,37 +2386,37 @@ function Layout_handle_corners()
         -- cannot place posts next to a wall
         if Corner_touches_wall(corner) then return end
 
-        local cur_z = assert(junc.E1.rail_z)
+        if not Corner_is_at_area_corner(corner) then return end
 
-        -- indoor posts should meet the ceiling
         local mostly_env = Corner_get_env(corner)
 
+        -- indoor posts should meet the ceiling
+        local tallest_h = -9001
         if mostly_env == "building" then
-          local tallest_h = -9001
           each A in corner.areas do
             if A.ceil_h > tallest_h then
               tallest_h = A.ceil_h
             end
           end
-          cur_z = tallest_h
+          post_top_z = tallest_h
+        else
+        -- outdoor posts should meet up to the rail height
+          each A in corner.areas do
+            local cur_h = -9001
+
+            if A.room then
+              if A.room.scenic_fence.rail_h then
+                cur_h = A.floor_h + A.room.scenic_fence.rail_h
+              end
+            end
+
+            if cur_h > tallest_h then
+              tallest_h = cur_h
+            end
+
+          end
+          post_top_z = tallest_h
         end
-
-        cur_z = int(cur_z)
-
-        if not post_top_z then
-          post_top_z = cur_z
-          continue
-        end
-
-        if cur_z ~= post_top_z then
-          need_post = true
-        end
-
-        post_top_z = math.max(post_top_z, cur_z)
-
-        -- Use the defined heights in the scenic fence
-        -- materials for the post height offset -MSSP
-        post_top_z = post_top_z + (corner.areas[1].room.scenic_fence.rail_h or 72)
 
         corner.kind = "post"
         corner.post_top_h = post_top_z
@@ -2473,7 +2427,7 @@ function Layout_handle_corners()
 
         if corner.posted then return end
 
-        if corner_openness(corner) == 3 or not corner_openness(corner) then
+        if Corner_is_at_area_corner(corner) then
           corner.post_mat = corner.areas[1].zone.fence_mat
           corner.kind = "post"
           corner.post_type = corner.areas[1].room.post_type
@@ -2501,7 +2455,7 @@ function Layout_handle_corners()
       if near_porch(corner, "porch") then
         if not junc.E1 then continue end
 
-        if corner_openness(corner) == 3 or not corner_openness(corner) then
+        if Corner_is_at_area_corner(corner) then
           add_pillar(corner)
         end
       end

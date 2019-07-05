@@ -428,20 +428,18 @@ function Episode_plan_monsters()
     mon_along = mon_along + 0.7 * (gui.random() ^ 2)
 
     if LEV.is_procedural_gotcha then
-      local gotcha_strength
+      local gotcha_strength = 2
 
-      if PARAM["gotcha_strength"] then
-        if PARAM["gotcha_strength"] == "none" then
+      if PARAM.gotcha_strength then
+        if PARAM.gotcha_strength == "none" then
           gotcha_strength = 0
-        elseif PARAM["gotcha_strength"] == "harder" then
+        elseif PARAM.gotcha_strength == "harder" then
           gotcha_strength = 2
-        elseif PARAM["gotcha_strength"] == "tougher" then
+        elseif PARAM.gotcha_strength == "tougher" then
           gotcha_strength = 4
-        elseif PARAM["gotcha_strength"] == "crazier" then
+        elseif PARAM.gotcha_strength == "crazier" then
           gotcha_strength = 8
         end
-      else
-        gotcha_strength = 2
       end
 
       LEV.monster_level = mon_along + gotcha_strength
