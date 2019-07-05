@@ -3550,10 +3550,10 @@ function Render_determine_spots()
     else
       -- do not place items in damaging liquids
       -- [ we skip monsters too because we can place big items in a mon spot ]
-      if A.mode != "liquid" then
+      --if A.mode != "liquid" then
         table.append(R.item_spots, item_spots)
         table.append(R.mon_spots,  mon_spots)
-      end
+      --end
     end
 
     gui.spots_end()
@@ -3642,6 +3642,13 @@ gui.spots_dump("Cave spot dump")
     gui.spots_get_items(item_spots)
     gui.spots_get_mons(mon_spots)
 
+    if LEVEL.liquid then
+      if FL.floor_mat == LEVEL.liquid.mat and LEVEL.liquid.damage then
+        gui.spots_end()
+        return
+      end
+    end
+
     if not FL.no_items then
       table.append(R.item_spots, item_spots)
     end
@@ -3664,6 +3671,9 @@ gui.spots_dump("Cave spot dump")
   local function spots_in_room(R)
     each A in R.areas do
       if A.mode == "floor" or A.mode == "cage" then
+        spots_in_flat_floor(R, A)
+
+      elseif A.mode == "liquid" and not LEVEL.liquid.damage then
         spots_in_flat_floor(R, A)
 
       elseif A.mode == "nature" then
