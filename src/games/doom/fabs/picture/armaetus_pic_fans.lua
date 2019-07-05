@@ -31,4 +31,6 @@ PREFABS.Pic_armaetus_double_fans_hell =
 
   prob = 5
   theme = "hell"
+
+  tex_DOORSTOP = "METAL"
 }
