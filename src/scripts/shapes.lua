@@ -7403,6 +7403,87 @@ SIDEWALK_SLOPE_ON_RAMP =
   }
 }
 
+SIDEWALK_BUILDING_4x4 =
+{
+  prob = 35
+
+  pass = "sidewalk"
+
+  structure =
+  {
+    "11......","11AAAAAA"
+    "11......","11AAAAAA"
+    "........","AA....AA"
+    "........","AA....AA"
+    "........","AA....AA"
+    "........","AA....AA"
+    "........","AAAAAAAA"
+    "........","AAAAAAAA"
+  }
+}
+
+SIDEWALK_BUILDING_L =
+{
+  prob = 35
+
+  pass = "sidewalk"
+
+  structure =
+  {
+    "11........","11AAAAAAAA"
+    "11........","11AAAAAAAA"
+    "..........","AAAA....AA"
+    "..........","AAAA....AA"
+    "..........","AA......AA"
+    "..........","AA......AA"
+    "..........","AA......AA"
+    "..........","AA......AA"
+    "..........","AAAAAAAAAA"
+    "..........","AAAAAAAAAA"
+  }
+}
+
+SIDEWALK_LIQUID =
+{
+  prob = 50
+
+  pass = "sidewalk"
+
+  structure =
+  {
+    "........","AA~~~~AA"
+    "11111111","11111111"
+  }
+}
+
+SIDEWALK_LIQUID_POOL_LONG =
+{
+  prob = 50
+
+  pass = "sidewalk"
+
+  structure =
+  {
+    "......","AA~~~~"
+    "......","AA~~~~"
+    "11xxxx","11xxxx"
+  }
+}
+
+SIDEWALK_LIQUID_POOL =
+{
+  prob = 50
+
+  pass = "sidewalk"
+
+  structure =
+  {
+    "....","AA~~"
+    "....","AA~~"
+    "11xx","11xx"
+  }
+}
+
 SIDEWALK_CLOSET_2X2 =
 {
   prob = 100
