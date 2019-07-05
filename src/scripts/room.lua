@@ -1715,6 +1715,20 @@ function Room_border_up()
       return
     end
 
+    -- porch neighbors --
+
+    if A1.is_porch_neighbor or A2.is_porch_neighbor then
+      if (A1.mode == "liquid" and A2.mode == "floor")
+      or (A1.mode == "floor" and A2.mode == "liquid") then
+        Junction_make_beams(junc)
+      end
+
+      if (A1.mode == "liquid" and A2.mode == "cage")
+      or (A1.mode == "cage" and A1.mode == "liquid") then
+        Junction_make_railing(junc, "FENCE_MAT_FROM_THEME", "block")
+      end
+      return
+    end
 
     -- fences --
 
@@ -2835,8 +2849,23 @@ function Room_floor_ceil_heights()
 
         add_cage_lighting(R, A)
       end
+
     end
 
+    -- occasionally make floor level cages
+    if rand.odds(50) and N.mode == "floor" then
+      local diff = N.floor_h - A.floor_h
+      A.floor_h = N.floor_h
+
+      if not R.is_outdoor then
+        A.ceil_h = A.floor_h + A.room.scenic_fence.rail_h
+      end
+
+      A.floor_mat = N.floor_mat
+    end
+
+    -- unify cages to their preferred neighbor heights if the
+    -- cage itself is taller
     if A.ceil_h >= N.ceil_h then
       N.ceil_h = A.ceil_h
       A.ceil_mat = N.ceil_mat
