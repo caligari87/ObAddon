@@ -1283,6 +1283,8 @@ DOOM.THEMES =
     }
 
     techy_doors = true
+
+    post_mat = "DOORSTOP"
   }
 
   ------------------------------------

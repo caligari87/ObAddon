@@ -1152,6 +1152,29 @@ function Corner_touches_wall(corner)
 end
 
 
+
+function Corner_get_env(corner)
+  local outdoor_score = 0
+  local building_score = 0
+
+  each A in corner.areas do
+    if A.room then
+      if A.room.is_outdoor then
+        outdoor_score = outdoor_score + 1
+      elseif not A.room.is_outdoor then
+        building_score = building_score + 1
+      end
+    end
+  end
+
+  if outdoor_score > building_score then
+    return "outdoor"
+  else
+    return "building"
+  end
+end
+
+
 ------------------------------------------------------------------------
 
 

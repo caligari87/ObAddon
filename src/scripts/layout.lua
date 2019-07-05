@@ -2432,13 +2432,21 @@ function Layout_handle_corners()
         -- cannot place posts next to a wall
         if Corner_touches_wall(corner) then return end
 
-        each A in corner.areas do
-          if A.room then
-            if not A.room.is_outdoor then return end
+        local cur_z = assert(junc.E1.rail_z)
+
+        -- indoor posts should meet the ceiling
+        local mostly_env = Corner_get_env(corner)
+
+        if mostly_env == "building" then
+          local tallest_h = -9001
+          each A in corner.areas do
+            if A.ceil_h > tallest_h then
+              tallest_h = A.ceil_h
+            end
           end
+          cur_z = tallest_h
         end
 
-        local cur_z = assert(junc.E1.rail_z)
         cur_z = int(cur_z)
 
         if not post_top_z then

@@ -2850,18 +2850,17 @@ function Room_floor_ceil_heights()
         add_cage_lighting(R, A)
       end
 
-    end
+      -- occasionally make floor level cages
+      if rand.odds(50) and N.mode == "floor" then
+        local diff = N.floor_h - A.floor_h
+        A.floor_h = N.floor_h
 
-    -- occasionally make floor level cages
-    if rand.odds(50) and N.mode == "floor" then
-      local diff = N.floor_h - A.floor_h
-      A.floor_h = N.floor_h
+        if not R.is_outdoor then
+          A.ceil_h = A.floor_h + A.room.scenic_fence.rail_h
+        end
 
-      if not R.is_outdoor then
-        A.ceil_h = A.floor_h + A.room.scenic_fence.rail_h
+        A.floor_mat = N.floor_mat
       end
-
-      A.floor_mat = N.floor_mat
     end
 
     -- unify cages to their preferred neighbor heights if the
