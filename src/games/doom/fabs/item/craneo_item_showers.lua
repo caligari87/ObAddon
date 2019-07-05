@@ -8,6 +8,8 @@ PREFABS.Item_public_showers =
   theme = "!hell"
   env   = "!cave"
 
+  uses_epic_textures = true
+
   where = "seeds"
 
   seed_w = 3
