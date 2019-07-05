@@ -149,11 +149,12 @@ PREFABS.Wall_fake_warehouse_window =
   tex_LITE5 =
   {
     LITE5 = 50
-    LITE3 = 12
-    LITEBLU = 12
-    TEKBRON2 = 8
+    LITE3 = 10
+    LITEBLU4 = 10
+    LITEBLU1 = 10
+    TEKBRON2 = 6
     TEKGREN5 = 8
-    TEKLITE2 = 8
+    TEKLITE2 = 6
   }
 }
 

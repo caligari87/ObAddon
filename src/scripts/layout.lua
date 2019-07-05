@@ -786,6 +786,10 @@ function Layout_add_traps()
           function(A, B) return A.trap_dist < B.trap_dist end)
 
     elseif kind == "teleport" then
+
+      -- MSSP: don't place in tiny rooms, not even remotely fair
+      if R.svolume < 24 then return nil end
+
       -- large chunks are better, so place them first in the list
       local locs2 = {}
 
