@@ -980,14 +980,14 @@ GLAICE_THEMES =
       GMET04 = 80
       GMET05 = 80
 
-      CARPET1 = 50
-      CARPET2 = 50
-      CARPET3 = 50
-      CARPET4 = 50
-      CARPET5 = 50
-      CARPET6 = 50
-      CARPET7 = 50
-      CARPET8 = 50
+      CARPET1 = 15
+      CARPET2 = 15
+      CARPET3 = 15
+      CARPET4 = 15
+      CARPET5 = 15
+      CARPET6 = 15
+      CARPET7 = 15
+      CARPET8 = 15
 
       FFLAT01 = 80
     }
@@ -1032,14 +1032,14 @@ GLAICE_THEMES =
       FLAT5_2 = 80
       FLAT5_5 = 50
 
-      CARPET1 = 50
-      CARPET2 = 50
-      CARPET3 = 50
-      CARPET4 = 50
-      CARPET5 = 50
-      CARPET6 = 50
-      CARPET7 = 50
-      CARPET8 = 50
+      CARPET1 = 15
+      CARPET2 = 15
+      CARPET3 = 15
+      CARPET4 = 15
+      CARPET5 = 15
+      CARPET6 = 15
+      CARPET7 = 15
+      CARPET8 = 15
 
       WOODTIL = 30
       WOODTI2 = 30
