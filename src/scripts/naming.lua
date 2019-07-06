@@ -3660,11 +3660,15 @@ namelib.NAMES =
       ["%cs Warzone"] = 3 -- [Name]'s Warzone
       ["%d: the %a %p"] = 7
       ["Death: %a %p"] = 7
+      ["Chaos: %a %p"] = 5
+      ["Treachery: The %d"] = 5
+      ["Is %c By The %a %p?"] = 3
       ["This WAD has %d"] = 5 -- This WAD has Abstract Objects
       ["%cs %a WAD"] = 3 -- [Name]'s [Adjective] WAD
       ["%cs WAD"] = 3
       ["The %e Lurks Within"] = 5 -- The [Entity] Lurks Within
       ["The %e Lurks Below"] = 5
+      ["%e Knows You"] = 4
       ["Destruction of the %d %p"] = 5 -- Destruction of the [Adjective] [Place]
       ["%a Black Metal"] = 5 -- [Adjective] Black Metal
       ["Doomguys Vacation with %c"] = 5 -- Doomguy's Vacation with [Name]
@@ -3677,6 +3681,7 @@ namelib.NAMES =
       ["Hell's %a Division: %d"] = 4
       ["%a Sorcery"] = 3
       ["%a Witchcraft"] = 3
+      ["%d! Oh My Oh My"] = 3
     }
 
     lexicon =
@@ -3692,11 +3697,9 @@ namelib.NAMES =
         Earthen = 10
         Fiery = 10
         Frozen  = 10
-        Lightning = 10
         Poisonous = 10
         Smothering = 10
         Shocking = 10
-        Stony = 10
 
         -- grit
         Festering = 5
@@ -3993,14 +3996,8 @@ namelib.NAMES =
         -- words transfered from places
         -- because these aren't places at all
         -- needs to be categorized
-        Belief = 10
-        Ceremony = 10
-        Cult = 10
-        Deliverance = 10
         Feast = 10
         Harvest = 10
-        Icons = 10
-        Idolatry = 10
         Knowledge = 10
         Labours = 10
         Life = 8
@@ -4008,7 +4005,6 @@ namelib.NAMES =
         March = 10
         Portrait = 10
         Remembrance = 10
-        Ritual = 10
         Watch = 10
 
         -- emotions/feels
@@ -4054,14 +4050,23 @@ namelib.NAMES =
         Withdrawn = 10
 
         -- occult
+        Ceremony = 10
+        Cult = 10
         Hell = 10
         Horror = 10
+        Idolatry = 10
         Magic = 15
+        Ritual = 10 -- Could also be religious
         Souls = 10
         Shadows = 10
 
         Death = 20
         Flames = 20
+
+        -- religious
+        Belief = 10
+        Deliverance = 10
+        Icons = 10 -- as in religious icons
 
         -- states of mind, states in mind
         Dreams = 20
@@ -4150,6 +4155,7 @@ namelib.NAMES =
         -- state crimes
         Collusion = 10
         Conspiracy = 10
+        Heresy = 10 -- In WH 40k it is if you're not Chaos
         Machinations = 10
         Ruse = 10
         Subturfurge = 10
@@ -4395,6 +4401,10 @@ namelib.NAMES =
         ["Caligari Tested"] = 20
         ["Frozsoul Edition"] = 20
         ["Garrett Approves"] = 20
+        ["MogWaltz Plus Plus"] = 20
+        ["Craneo Edition"] = 20
+        ["Tapwave Exclusive"] = 20
+        ["EpicTyphlosion A OK"] = 20
 
         -- describe the place
         ["The Evil Within"] = 20
