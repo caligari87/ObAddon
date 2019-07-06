@@ -1718,14 +1718,21 @@ function Room_border_up()
     -- porch neighbors --
 
     if A1.is_porch_neighbor or A2.is_porch_neighbor then
-      if (A1.mode == "liquid" and A2.mode == "floor")
-      or (A1.mode == "floor" and A2.mode == "liquid") then
+      if ((A1.mode == "liquid" and A2.mode == "floor")
+      or (A1.mode == "floor" and A2.mode == "liquid"))
+      and A1.room == A2.room then
         Junction_make_beams(junc)
       end
 
-      if (A1.mode == "liquid" and A2.mode == "cage")
-      or (A1.mode == "cage" and A1.mode == "liquid") then
+      if ((A1.mode == "liquid" and A2.mode == "cage")
+      or (A1.mode == "cage" and A1.mode == "liquid"))
+      and A1.room == A2.room then
         Junction_make_railing(junc, "FENCE_MAT_FROM_THEME", "block")
+      end
+
+      if A1.room != A2.room then
+        Room_make_windows(A1, A2)
+        Junction_make_wall(junc)
       end
       return
     end
