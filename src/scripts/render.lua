@@ -1021,7 +1021,18 @@ function Render_corner(cx, cy)
     local mx, my = corner.x, corner.y
     local mat = corner.mat
 
-    local def = PREFABS.Fence_pillar
+    -- MSSP-FIXME: fab picking for pillars should eventually be
+    -- done at the same spot when post fab pick code is done (per room)
+    local reqs =
+    {
+      kind = "pillar"
+      where = "point"
+
+      height = 9001
+      size = 128
+    }
+
+    local def = Fab_pick(reqs)
 
     local T = Trans.spot_transform(mx, my, 1024, dir)
 
