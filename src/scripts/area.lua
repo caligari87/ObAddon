@@ -1208,6 +1208,18 @@ function Corner_is_at_area_corner(corner)
       return true
     end
 
+    if corner.seeds[3].area != corner.seeds[1].area and
+    corner.seeds[3].area != corner.seeds[3].area and
+    corner.seeds[3].area != corner.seeds[4].area then
+      return true
+    end
+
+    if corner.seeds[4].area != corner.seeds[1].area and
+    corner.seeds[4].area != corner.seeds[2].area and
+    corner.seeds[4].area != corner.seeds[3].area then
+      return true
+    end
+
   end
 
   return false

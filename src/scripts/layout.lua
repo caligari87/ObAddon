@@ -2353,13 +2353,18 @@ function Layout_handle_corners()
 
 
   local function fetch_good_pillar_material(corner)
-    local pillar_is_outdoor = false
 
-    each A in corner.areas do
-      if A.room then
-        if A.room.is_outdoor then
-          return A.room.facade_mat
-        else
+    local mostly_env = Corner_get_env(corner)
+
+    if mostly_env == "outdoor" then
+      each A in corner.areas do
+        if A.room then
+          return A.room.zone.facade_mat
+        end
+      end
+    elseif mostly_env == "building" then
+      each A in corner.areas do
+        if A.room then
           return A.room.main_tex
         end
       end
