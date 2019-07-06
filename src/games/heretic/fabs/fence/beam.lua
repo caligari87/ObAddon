@@ -36,4 +36,3 @@ PREFABS.Beam_diagonal =
 
   bound_z1 = 0
 }
-
