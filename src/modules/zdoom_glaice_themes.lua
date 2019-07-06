@@ -169,7 +169,7 @@ GLAICE_THEMES =
   -- Multi colors here!
   tech_ComputersMulti =
   {
-    prob = 40
+    prob = 25
     env = "building"
 
     walls =
@@ -208,6 +208,257 @@ GLAICE_THEMES =
       CEIL4_4 = 15
       TEK1    = 7
       TEK2    = 7
+      QFLAT09 = 5
+      GRATE3  = 5
+    }
+  }
+
+  -- single color comp rooms
+  tech_ComputersRed =
+  {
+    prob = 10
+    env = "building"
+
+    walls =
+    {
+      COMPSPAN = 20
+      CMPTILE = 20
+      COMPTIL2 = 20
+      COMPRED  = 10
+      TEKWALL8 = 20
+      GRAYMET9 = 20
+    }
+
+    floors =
+    {
+      FLOOR1_1 = 5
+      FLOOR1_2 = 15
+      FLAT3 = 10
+      FLAT4 = 10
+      FLAT20 = 10
+      CEIL4_1 = 5
+      CEIL4_2 = 5
+      CEIL5_1 = 10
+      CEIL4_4 = 5
+      FLOOR4_8 = 20
+      GRATE1 = 20
+      GRATE2 = 20
+      GRATE5 = 10
+      GRATE6 = 10
+      GRATE7 = 20
+      SHINY01 = 10
+      SHINY03 = 10
+    }
+
+    ceilings =
+    {
+      CEIL5_1 = 20
+      CEIL4_1 = 5
+      CEIL4_2 = 5
+      CEIL4_4 = 5
+      TEK1    = 20
+      QFLAT09 = 5
+      GRATE3  = 5
+    }
+  }
+
+  tech_ComputersBlue =
+  {
+    prob = 10
+    env = "building"
+
+    walls =
+    {
+      CMPTILE = 15
+      CMPOHSO = 15
+      GRAYBLU1 = 20
+      SILVBLU1 = 20
+      TEKGRBLU = 20
+      COMPBLUE = 10
+      TEKWALLB = 20
+      TEKWALLD = 20
+      GRAYMET6 = 15
+      GRAYMETA = 15
+    }
+
+    floors =
+    {
+      FASHBLU = 30
+      FLAT14 = 20
+      FLOOR1_1 = 15
+      FLOOR1_2 = 5
+      FLAT3 = 10
+      FLAT4 = 10
+      FLAT20 = 10
+      CEIL4_1 = 30
+      CEIL4_2 = 30
+      CEIL5_1 = 10
+      CEIL4_4 = 30
+      FLOOR4_8 = 20
+      GRATE1 = 20
+      GRATE2 = 20
+      GRATE5 = 10
+      GRATE6 = 10
+      GRATE7 = 20
+      SHINY01 = 10
+      SHINY03 = 10
+    }
+
+    ceilings =
+    {
+      CEIL5_1 = 50
+      CEIL4_1 = 20
+      CEIL4_2 = 20
+      CEIL4_4 = 15
+      TEK4    = 20
+      TEK6    = 20
+      QFLAT09 = 5
+      GRATE3  = 5
+    }
+  }
+
+  tech_ComputersGreen =
+  {
+    prob = 10
+    env = "building"
+
+    walls =
+    {
+      TEKWALL9 = 20
+      COMPGREN = 20
+      COMPTIL4 = 20
+      GRAYMET8 = 15
+    }
+
+    floors =
+    {
+      FASHGREN = 30
+      FLAT14 = 20
+      FLOOR1_1 = 15
+      FLOOR1_2 = 5
+      FLAT3 = 10
+      FLAT4 = 10
+      FLAT20 = 10
+      CEIL4_1 = 5
+      CEIL4_2 = 5
+      CEIL5_1 = 10
+      CEIL4_4 = 5
+      FLOOR4_8 = 20
+      GRATE1 = 20
+      GRATE2 = 20
+      GRATE5 = 10
+      GRATE6 = 10
+      GRATE7 = 20
+      SHINY01 = 10
+      SHINY03 = 10
+    }
+
+    ceilings =
+    {
+      CEIL5_1 = 20
+      CEIL4_1 = 5
+      CEIL4_2 = 5
+      CEIL4_4 = 5
+      TEK2    = 30
+      QFLAT09 = 5
+      GRATE3  = 5
+    }
+  }
+
+  tech_ComputersYellowish =
+  {
+    prob = 10
+    env = "building"
+
+    walls =
+    {
+      TEKWALLE = 20
+      COMPTIL5 = 20
+      COMPTIL3 = 8
+      COMPBLAK = 8
+      GRAYMETC = 8
+    }
+
+    floors =
+    {
+      FLAT14 = 20
+      FLOOR1_1 = 15
+      FLOOR1_2 = 5
+      FLAT3 = 10
+      FLAT4 = 10
+      FLAT20 = 10
+      CEIL4_1 = 5
+      CEIL4_2 = 5
+      CEIL5_1 = 10
+      CEIL4_4 = 5
+      FLOOR4_8 = 20
+      GRATE1 = 20
+      GRATE2 = 20
+      GRATE5 = 10
+      GRATE6 = 10
+      GRATE7 = 20
+      SHINY01 = 10
+      SHINY03 = 10
+    }
+
+    ceilings =
+    {
+      CEIL5_1 = 20
+      CEIL4_1 = 5
+      CEIL4_2 = 5
+      CEIL4_4 = 5
+      TEK7    = 30
+      QFLAT09 = 5
+      GRATE3  = 5
+    }
+  }
+
+  tech_ComputersParple =
+  {
+    prob = 10
+    env = "building"
+
+    walls =
+    {
+      TEKWALLA = 20
+      TEKWALLC = 20
+      COMPTIL6 = 20
+      COMPTIL3 = 10
+      COMPBLAK = 10
+      GRAYMET7 = 10
+      GRAYMETB = 10
+    }
+
+    floors =
+    {
+      FLAT14 = 20
+      FLOOR1_1 = 15
+      FLOOR1_2 = 5
+      FLAT3 = 10
+      FLAT4 = 10
+      FLAT20 = 10
+      CEIL4_1 = 5
+      CEIL4_2 = 5
+      CEIL5_1 = 10
+      CEIL4_4 = 5
+      FLOOR4_8 = 20
+      GRATE1 = 20
+      GRATE2 = 20
+      GRATE5 = 10
+      GRATE6 = 10
+      GRATE7 = 20
+      SHINY01 = 10
+      SHINY03 = 10
+    }
+
+    ceilings =
+    {
+      CEIL5_1 = 50
+      CEIL4_1 = 5
+      CEIL4_2 = 5
+      CEIL4_4 = 5
+      TEK3    = 20
+      TEK5    = 20
       QFLAT09 = 5
       GRATE3  = 5
     }
