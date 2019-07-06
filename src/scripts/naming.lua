@@ -4454,11 +4454,6 @@ namelib.NAMES =
         ["The Seeds of War"] = 20
         ["The Will To Survive"] = 20
 
-         -- MSSP adds names
-        ["People Die When They Are Killed"] = 10
-        ["So Sad Alexa Play D RUNNIN"] = 10
-        ["Now With More Sentence Enhancers!"]=10
-
         -- Armaetus adds names
         ["A Masterpiece in Progress"] = 40
         ["A Bloody Good Time"] = 30
@@ -4562,6 +4557,9 @@ namelib.NAMES =
         ["You Guys Have Mods, Right?"] = 30
         ["YouTube This and Show Us Videos!"] = 30
 
+        -- MSSP adds names
+        ["Hell is Infinite"] = 50
+
         -- based on popular movie/TV slogans
         ["A Minute in Hell"] = 20
         ["Whoever Wins We Lose"] = 20
@@ -4612,6 +4610,19 @@ namelib.NAMES =
         ["Subscribe and Hit that Like Button"] = 40
         ["The Official Video Game Tie-in"] = 20
         ["The Original Series"] = 20
+
+        -- silly/annoying/occasionally informative
+        ["Always Keep Hydrated"] = 20
+        ["Doesn't Contain Real Cheese"] = 10
+        ["Go Out and Vote"] = 15
+        ["Hate is Unmagic"] = 15
+        ["He Doesn't Afraid of Anything"] = 15
+        ["May Contain Chest-high Walls"] = 20
+        ["Now With More Sentence Enhancers!"] = 10
+        ["ObAdo What You ObAdon't"] = 20
+        ["People Die When They Are Killed"] = 10
+        ["So Sad Alexa Play D RUNNIN"] = 10
+        ["The World isn't Flat"] = 30
 
         -- Based on music, be it artists, song titles or album titles
         ["Doomtanic Hellucinations"] = 20 -- Acid Witch - "Witchtanic Hellucinations" (song)

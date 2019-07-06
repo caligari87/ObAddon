@@ -1270,6 +1270,7 @@ ZDOOM_STORIES.EVIL_TITLES =
   ["Corpse-grinder"]=5,
   Corrupted=5,
   Corruptor=5,
+  Corpulent=5,
   ["Champion of Hell"]=5,
   ["Chant of Death"]=5,
   Crucifier=5,
@@ -1342,6 +1343,7 @@ ZDOOM_STORIES.EVIL_TITLES =
   Kinslayer=5,
   ["King of Skulls"]=5,
   Lacerator=5,
+  Lawbreaker=5,
   Loathsome=5,
   ["Lich-king"]=5,
   ["Lie Weaver"]=5,
@@ -1586,4 +1588,8 @@ ZDOOM_STORIES.QUIT_MESSAGES =
   [[Visit https://caligari87.github.io/ObAddon/ for updates!]],
   [[If you're quitting because something might be broken, please supply screenshots and preferably your LOG file when reporting.]],
   [[ObAddon is for the adventurous. Are you? Join us and contribute ideas and works! ObAddon is a community project!]],
+
+  -- important facts
+  [[In 1998, the Undertaker threw Mankind off Hell in a Cell and plummeted 16ft. through an announcer's table.]],
+  [[By exiting, you are agreeing to subscribe to Cat Facts.]]
 }
