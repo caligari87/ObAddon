@@ -1633,43 +1633,10 @@ GLAICE_SINK_DEFS =
     trim_light = 24
   }
 
-  light_protrusion_COMPRED =
-  {
-    mat = "COMPRED"
-    dz = -16
-    light = 32
-
-    trim_mat = "SHINY04"
-    trim_dz = -8
-    light = 16
-  }
-
-  light_protrusion_COMPGREN =
-  {
-    mat = "COMPGREN"
-    dz = -16
-    light = 32
-
-    trim_mat = "SHINY04"
-    trim_dz = -8
-    light = 16
-  }
-
-  light_protrusion_COMPBLUE =
-  {
-    mat = "COMPBLUE"
-    dz = -16
-    light = 32
-
-    trim_mat = "SHINY04"
-    trim_dz = -8
-    light = 16
-  }
-
   ceiling_sink_TEKWALL8 = -- red
   {
     mat = "TEKWALL8"
-    dz = -16
+    dz = 8
     light = 32
 
     trim_mat = "METAL7"
@@ -1680,7 +1647,7 @@ GLAICE_SINK_DEFS =
   ceiling_sink_TEKWALL9 = -- green
   {
     mat = "TEKWALL9"
-    dz = -16
+    dz = 8
     light = 32
 
     trim_mat = "METAL7"
@@ -1691,7 +1658,7 @@ GLAICE_SINK_DEFS =
   ceiling_sink_TEKWALLA = -- purple
   {
     mat = "TEKWALLA"
-    dz = -16
+    dz = 8
     light = 32
 
     trim_mat = "METAL7"
@@ -1702,7 +1669,7 @@ GLAICE_SINK_DEFS =
   ceiling_sink_TEKWALLB = -- blue
   {
     mat = "TEKWALLB"
-    dz = -16
+    dz = 8
     light = 32
 
     trim_mat = "METAL7"
@@ -1713,7 +1680,7 @@ GLAICE_SINK_DEFS =
   ceiling_sink_TEKWALLC = -- pink
   {
     mat = "TEKWALLC"
-    dz = -16
+    dz = 8
     light = 32
 
     trim_mat = "METAL7"
@@ -1724,7 +1691,7 @@ GLAICE_SINK_DEFS =
   ceiling_sink_TEKWALLD = -- cyan
   {
     mat = "TEKWALLD"
-    dz = -16
+    dz = 8
     light = 32
 
     trim_mat = "METAL7"
@@ -1735,7 +1702,7 @@ GLAICE_SINK_DEFS =
   ceiling_sink_TEKWALLE = -- orange
   {
     mat = "TEKWALLE"
-    dz = -16
+    dz = 8
     light = 32
 
     trim_mat = "METAL7"
@@ -2123,17 +2090,13 @@ GLAICE_TECH_CEILING_SINKS =
   light_COLLITE3 = 15
   light_RDWAL01 = 15
 
-  light_protrusion_COMPBLUE = 15
-  light_protrusion_COMPGREN = 15
-  light_protrusion_COMPRED = 15
-
-  ceiling_sink_TEKWALL8 = 10
-  ceiling_sink_TEKWALL9 = 10
-  ceiling_sink_TEKWALLA = 10
-  ceiling_sink_TEKWALLB = 10
-  ceiling_sink_TEKWALLC = 10
-  ceiling_sink_TEKWALLD = 10
-  ceiling_sink_TEKWALLE = 10
+  ceiling_sink_TEKWALL8 = 8
+  ceiling_sink_TEKWALL9 = 8
+  ceiling_sink_TEKWALLA = 8
+  ceiling_sink_TEKWALLB = 8
+  ceiling_sink_TEKWALLC = 8
+  ceiling_sink_TEKWALLD = 8
+  ceiling_sink_TEKWALLE = 8
 
   ceiling_sink_SILVER2R = 5
   ceiling_sink_SILVER2O = 5
@@ -2162,17 +2125,13 @@ GLAICE_URBAN_CEILING_SINKS =
   light_COLLITE3 = 15
   light_RDWAL01 = 15
 
-  light_protrusion_COMPBLUE = 10
-  light_protrusion_COMPGREN = 10
-  light_protrusion_COMPRED = 10
-
-  ceiling_sink_TEKWALL8 = 5
-  ceiling_sink_TEKWALL9 = 5
-  ceiling_sink_TEKWALLA = 5
-  ceiling_sink_TEKWALLB = 5
-  ceiling_sink_TEKWALLC = 5
-  ceiling_sink_TEKWALLD = 5
-  ceiling_sink_TEKWALLE = 5
+  ceiling_sink_TEKWALL8 = 7
+  ceiling_sink_TEKWALL9 = 7
+  ceiling_sink_TEKWALLA = 7
+  ceiling_sink_TEKWALLB = 7
+  ceiling_sink_TEKWALLC = 7
+  ceiling_sink_TEKWALLD = 7
+  ceiling_sink_TEKWALLE = 7
 
   ceiling_sink_GOTH15 = 25
   ceiling_sink_GOTH17 = 25
