@@ -1177,9 +1177,23 @@ end
 
 
 function Corner_is_at_area_corner(corner)
+
+  -- corner isn't at a corner when along parallel walls
+  local wall_count = 0
+  each junc in corner.junctions do
+    if junc.E1 then
+      if Edge_is_wallish(junc.E1) then
+        wall_count = wall_count + 1
+      end
+    end
+    if wall_count > 2 then return false end
+  end
+
+  -- corner is definitely at a corner if more than two areas meet
   if #corner.areas > 2 then return true end
 
-  -- MSSP-FIXME: This code sux. Make it better next time.
+  -- corner is definitely at a corner if one seed has an area
+  -- that doesn't match all the others
   if #corner.seeds == 4 then
 
     if corner.seeds[1].area != corner.seeds[2].area and
@@ -1191,18 +1205,6 @@ function Corner_is_at_area_corner(corner)
     if corner.seeds[2].area != corner.seeds[1].area and
     corner.seeds[2].area != corner.seeds[3].area and
     corner.seeds[2].area != corner.seeds[4].area then
-      return true
-    end
-
-    if corner.seeds[3].area != corner.seeds[1].area and
-    corner.seeds[3].area != corner.seeds[3].area and
-    corner.seeds[3].area != corner.seeds[4].area then
-      return true
-    end
-
-    if corner.seeds[4].area != corner.seeds[1].area and
-    corner.seeds[4].area != corner.seeds[2].area and
-    corner.seeds[4].area != corner.seeds[3].area then
       return true
     end
 
