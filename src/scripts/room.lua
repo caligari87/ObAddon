@@ -2856,7 +2856,7 @@ function Room_floor_ceil_heights()
         A.floor_h = N.floor_h
 
         if not R.is_outdoor then
-          A.ceil_h = A.floor_h + A.room.scenic_fence.rail_h
+          A.ceil_h = math.max(A.floor_h + A.room.scenic_fence.rail_h, A.floor_h + 72)
         end
 
         A.floor_mat = N.floor_mat

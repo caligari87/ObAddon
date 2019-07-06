@@ -2427,11 +2427,22 @@ function Layout_handle_corners()
 
         if corner.posted then return end
 
+        local tallest_h = -9001
+        each xjunc in corner.junctions do
+          if xjunc.E1 then
+            if xjunc.E1.fence_top_z then
+              if xjunc.E1.fence_top_z > tallest_h then
+                tallest_h = xjunc.E1.fence_top_z
+              end
+            end
+          end
+        end
+
         if Corner_is_at_area_corner(corner) then
           corner.post_mat = corner.areas[1].zone.fence_mat
           corner.kind = "post"
           corner.post_type = corner.areas[1].room.post_type
-          corner.post_top_h = assert(junc.E1.fence_top_z)
+          corner.post_top_h = assert(tallest_h)
         end
       end
 
