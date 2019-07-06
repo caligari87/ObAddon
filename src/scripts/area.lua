@@ -1189,6 +1189,19 @@ function Corner_is_at_area_corner(corner)
     if wall_count > 2 then return false end
   end
 
+  -- no pillars if all junctions are beams
+  local beam_count = 0
+  each junc in corner.junctions do
+    if junc.E1 then
+      if junc.E1.kind == "beams" or Edge_is_wallish(junc.E1) then
+        beam_count = beam_count + 1
+      end
+    end
+    if beam_count == #corner.junctions then
+      return false
+    end
+  end
+
   -- corner is definitely at a corner if more than two areas meet
   if #corner.areas > 2 then return true end
 
