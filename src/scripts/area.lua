@@ -1186,7 +1186,7 @@ function Corner_is_at_area_corner(corner)
         wall_count = wall_count + 1
       end
     end
-    if wall_count > 2 then return false end
+    if wall_count >= 2 then return false end
   end
 
   -- no pillars if all junctions are beams
