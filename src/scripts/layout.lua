@@ -2467,21 +2467,16 @@ function Layout_handle_corners()
     each junc in corner.junctions do
       if junc.A2 == "map_edge" then return end
 
+      if not Corner_is_at_area_corner(corner) then return end
+
       -- create support pillars on the corners of fenceposts
       if near_porch(corner, "porch") then
-        if not junc.E1 then continue end
-
-        if Corner_is_at_area_corner(corner) then
-          add_pillar(corner)
-        end
+        add_pillar(corner)
       end
 
-      -- don't put pillars on walls between different rooms
       local cur_seed = corner.seeds[1]
       each S in corner.seeds do
-        if cur_seed.area.room != S.area.room then
-          return
-        end
+
         -- don't put pillars adjacent to joiners and closets
         if S.chunk then
           if S.chunk.kind == "joiner"
@@ -2491,7 +2486,7 @@ function Layout_handle_corners()
         end
       end
 
-      local pillar_score = 0
+      local pillar_it = false
       if near_porch(corner, "porch_neighbor") then
 
         -- MSSP-TODO: building pillars on the corners of stair chunks
@@ -2499,12 +2494,15 @@ function Layout_handle_corners()
         each S in corner.seeds do
           if S.chunk then
             if S.chunk.kind == "stair" then
-              pillar_score = pillar_score + 1
+              pillar_it = true
             end
           end
-        end
+          if S.area.mode == "liquid" then
+            pillar_it = true
+          end
+      end
 
-        if pillar_score == 1 then
+        if pillar_it then
           add_pillar(corner)
         end
       end

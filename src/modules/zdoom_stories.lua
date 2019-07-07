@@ -1357,6 +1357,7 @@ ZDOOM_STORIES.EVIL_TITLES =
   Malign=5,
   Malignant=5,
   ["Man-eater"]=5,
+  ["Marquis of Snakes"]=5, -- my fiancee and I watched Conjuring lol
   Mastermind=5,
   ["Maw of Hell"]=5,
   ["Master of Discord"]=5,

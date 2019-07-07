@@ -198,7 +198,10 @@
     --
 
     kind : keyword   -- NIL for nothing, otherwise can be:
-                     -- "post" (thin), "pillar" (fat)
+                     -- "post" (type: simple) - exists along rails
+                     -- "post" (type: fancy) - exists along thick, brush fences
+                     -- "pillar" - exists between certain wall junctions
+                                   mostly on the corners of porch/gazebo areas
 
     cx, cy  -- corner coordinate [1..SEED_W+1 / 1..SEED_H+1]
 
