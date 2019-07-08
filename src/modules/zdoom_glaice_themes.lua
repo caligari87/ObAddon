@@ -216,7 +216,7 @@ GLAICE_THEMES =
   -- single color comp rooms
   tech_ComputersRed =
   {
-    prob = 10
+    prob = 7
     env = "building"
 
     walls =
@@ -231,15 +231,22 @@ GLAICE_THEMES =
 
     floors =
     {
+      -- predominantly red
+      FLOOR1_6 = 50
+      FLOOR1_2 = 50
+      FLAT15 = 50
+      STARBR2F = 25
+      STARTANF = 25
+
+      -- everything else
       FLOOR1_1 = 5
-      FLOOR1_2 = 15
       FLAT3 = 10
       FLAT4 = 10
       FLAT20 = 10
-      CEIL4_1 = 5
-      CEIL4_2 = 5
-      CEIL5_1 = 10
-      CEIL4_4 = 5
+      CEIL4_1 = 2
+      CEIL4_2 = 2
+      CEIL5_1 = 5
+      CEIL4_4 = 2
       FLOOR4_8 = 20
       GRATE1 = 20
       GRATE2 = 20
@@ -264,7 +271,7 @@ GLAICE_THEMES =
 
   tech_ComputersBlue =
   {
-    prob = 10
+    prob = 7
     env = "building"
 
     walls =
@@ -283,17 +290,19 @@ GLAICE_THEMES =
 
     floors =
     {
-      FASHBLU = 30
-      FLAT14 = 20
+      -- predominantly blue
+      CEIL4_1 = 30
+      CEIL4_2 = 30
+      CEIL4_4 = 30
+      FLOOR1_1 = 50
+      FLAT14 = 35
+
       FLOOR1_1 = 15
       FLOOR1_2 = 5
       FLAT3 = 10
       FLAT4 = 10
       FLAT20 = 10
-      CEIL4_1 = 30
-      CEIL4_2 = 30
       CEIL5_1 = 10
-      CEIL4_4 = 30
       FLOOR4_8 = 20
       GRATE1 = 20
       GRATE2 = 20
@@ -319,7 +328,7 @@ GLAICE_THEMES =
 
   tech_ComputersGreen =
   {
-    prob = 10
+    prob = 7
     env = "building"
 
     walls =
@@ -332,17 +341,19 @@ GLAICE_THEMES =
 
     floors =
     {
-      FASHGREN = 30
-      FLAT14 = 20
+      -- predominantly green
+      GRENFLOR = 75
+      STARG1F = 50
+
       FLOOR1_1 = 15
       FLOOR1_2 = 5
       FLAT3 = 10
       FLAT4 = 10
       FLAT20 = 10
-      CEIL4_1 = 5
-      CEIL4_2 = 5
+      CEIL4_1 = 2
+      CEIL4_2 = 2
       CEIL5_1 = 10
-      CEIL4_4 = 5
+      CEIL4_4 = 2
       FLOOR4_8 = 20
       GRATE1 = 20
       GRATE2 = 20
@@ -367,7 +378,7 @@ GLAICE_THEMES =
 
   tech_ComputersYellowish =
   {
-    prob = 10
+    prob = 7
     env = "building"
 
     walls =
@@ -381,16 +392,20 @@ GLAICE_THEMES =
 
     floors =
     {
-      FLAT14 = 20
+      -- predominantly yellow or orange shades
+      ORANFLOR = 50
+      STARBR2F = 25
+      STARTANF = 25
+      FLOOR4_1 = 25
+      FLOOR4_5 = 25
+      SLIME16 = 25
+
       FLOOR1_1 = 15
       FLOOR1_2 = 5
       FLAT3 = 10
       FLAT4 = 10
       FLAT20 = 10
-      CEIL4_1 = 5
-      CEIL4_2 = 5
       CEIL5_1 = 10
-      CEIL4_4 = 5
       FLOOR4_8 = 20
       GRATE1 = 20
       GRATE2 = 20
@@ -415,7 +430,7 @@ GLAICE_THEMES =
 
   tech_ComputersParple =
   {
-    prob = 10
+    prob = 7
     env = "building"
 
     walls =
