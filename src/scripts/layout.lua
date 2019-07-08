@@ -1985,17 +1985,6 @@ stderrf("Cages in %s [%s pressure] --> any_prob=%d  per_prob=%d\n",
   end
 
 
-  local function fix_ceiling_group_heights(R)
-    each A in R.areas do
-      if A.ceil_group then
-        if A.ceil_h then
-          A.ceil_h = A.ceil_group.min_floor_h + A.ceil_group.h
-        end
-      end
-    end
-  end
-
-
   local function pick_ceiling_sinks(R)
     if R.is_cave or R.is_outdoor then return end
 
@@ -2217,7 +2206,6 @@ stderrf("Cages in %s [%s pressure] --> any_prob=%d  per_prob=%d\n",
     pick_wall_detail(R)
 
     pick_floor_sinks(R)
-    fix_ceiling_group_heights(R)
     pick_ceiling_sinks(R)
 
     unsink_importants(R)
