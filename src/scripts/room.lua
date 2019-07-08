@@ -1444,7 +1444,7 @@ function Room_border_up()
   end
 
 
-  local function can_beam(A1, A2)
+  local function can_beam(A1, A2, junction)
     if not A1.room or not A2.room then
       return false
     end
@@ -1460,13 +1460,16 @@ function Room_border_up()
       end
     end
 
-    if A1.room and A2.room then
-      if (A1.mode == "floor" or A1.mode == "liquid") and
-         (A2.mode == "floor" or A2.mode == "liquid") then
-        return true
-      else
-        return false
-      end
+    -- beams cannot be on edges between areas of the same height
+    -- and a length of only 1
+    if junction.perimeter == 1 and (A1.floor_h == A2.floor_h) then
+      return false
+    end
+
+    -- beams can be between floors and liquids
+    if (A1.mode == "floor" or A1.mode == "liquid") and
+        (A2.mode == "floor" or A2.mode == "liquid") then
+      return true
     end
 
     return false
@@ -1648,7 +1651,7 @@ function Room_border_up()
       -- beams --
 
       if not A1.is_outdoor and not A2.is_outdoor then
-        if can_beam(A1, A2) and rand.odds(style_sel("beams",0,20,40,60)) then
+        if can_beam(A1, A2, junc) and rand.odds(style_sel("beams",0,20,40,60)) then
           Junction_make_beams(junc)
         end
       end
@@ -1675,7 +1678,7 @@ function Room_border_up()
 
         if (A1.floor_h == A2.floor_h)
         or A1.mode == "liquid" or A2.mode == "liquid" then
-          if can_beam(A1, A2) then
+          if can_beam(A1, A2, junc) then
             Junction_make_beams(junc)
           end
           return
