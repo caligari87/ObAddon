@@ -4700,10 +4700,10 @@ function Cave_build_a_scenic_vista(area)
     local CLIFF = new_blob()
     local CLIFF2 = new_blob()
 
-    CLIFF.floor_h = get_most_extreme_neighbor_floor(area, "lowest") - 16
+    CLIFF.floor_h = FL.floor_h - 16
     CLIFF.floor_mat = assert(room.zone.nature_facade)
 
-    CLIFF2.floor_h = get_most_extreme_neighbor_floor(area, "lowest") - 64
+    CLIFF2.floor_h = FL.floor_h - 64
     CLIFF2.floor_mat = assert(room.zone.other_nature_facade)
 
     for cx = 1, area.cw do
@@ -4791,7 +4791,7 @@ function Cave_build_a_scenic_vista(area)
     CLIFF.floor_h   = get_most_extreme_neighbor_floor(area, "highest") + 96
     CLIFF.floor_mat = assert(LEVEL.cliff_mat)
 
-    CLIFF3.floor_h   = get_most_extreme_neighbor_floor(area, "highest") - drop_h/2
+    CLIFF3.floor_h   = CLIFF.floor_h - drop_h/2
     CLIFF3.floor_mat = assert(LEVEL.other_cliff_mat)
 
     CLIFF2.floor_h   = (CLIFF.floor_h + CLIFF3.floor_h) * 0.5
