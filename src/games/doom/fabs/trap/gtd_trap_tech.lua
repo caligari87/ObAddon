@@ -19,7 +19,6 @@ PREFABS.Trap_closet_tech =
   seed_h = 1
 
   deep = 16
-  over = 16
 
   x_fit = "frame"
   y_fit = "top"
