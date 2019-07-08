@@ -1,4 +1,4 @@
---[[PREFABS.Trap_closet_hell =
+PREFABS.Trap_closet_hell =
 {
   file = "trap/gtd_trap_hell.wad"
 
@@ -6,6 +6,8 @@
 
   theme = "hell"
   env = "!cave"
+
+  height = 128
 
   kind = "trap"
 
@@ -21,8 +23,5 @@
   x_fit = "frame"
   y_fit = "top"
 
-  bound_z1 = 0
-  bound_z2 = 128
-
   tag_1 = "?trap_tag"
-}]]
+}

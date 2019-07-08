@@ -1,4 +1,4 @@
---[[PREFABS.Trap_closet_urban =
+PREFABS.Trap_closet_urban =
 {
   file = "trap/gtd_trap_urban.wad"
 
@@ -11,6 +11,8 @@
 
   where  = "seeds"
   shape  = "U"
+
+  height = 128
 
   seed_w = 2
   seed_h = 1
@@ -25,4 +27,4 @@
   bound_z2 = 128
 
   tag_1 = "?trap_tag"
-}]]
+}

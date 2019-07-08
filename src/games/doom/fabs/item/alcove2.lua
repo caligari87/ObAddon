@@ -37,6 +37,8 @@ PREFABS.Item_alcove_hell =
   template = "Item_alcove_techy"
   theme = "hell"
 
+  prob = 100 -- hell alcoves had a default prob of 200, total 400
+
   tex_METAL2 = "SUPPORT3"
   tex_SHAWN2 = "MARBLE1"
   tex_COMPTALL = "SP_FACE1"
@@ -55,6 +57,8 @@ PREFABS.Item_alcove_hell2 =
 {
   template = "Item_alcove_techy"
   theme = "hell"
+
+  prob = 100
 
   tex_METAL2 = "SUPPORT3"
   tex_SHAWN2 = "MARBLE1"

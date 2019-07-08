@@ -12,6 +12,8 @@ PREFABS.Item_alcove_techy_epic =
   theme  = "tech"
   env    = "!cave"
 
+  replaces = "Item_alcove_techy"
+
   item_kind = "key"
 
   uses_epic_textures = true
@@ -41,6 +43,8 @@ PREFABS.Item_alcove_hell_epic =
   theme = "hell"
   map   = "MAP02"
 
+  replaces = "Item_alcove_hell"
+
    tex_FIREBLU1 = { FIREBLU1=10, FIREBLK1=10, LAVBLAK1=10, LAVBLUE1=60, LAVGREN1=60, FIRELAVA=60, LAVWHIT1=10 }
    tex_GOTH32 = { GOTH32=50, HELMET1=50, HELMET2=50, METAL=20, SUPPORT3=20, GOTH41=20, METL02=20, METL03=20 }
    tex_STONE8 = { STONE8=50, STONE9=50 }
@@ -56,6 +60,8 @@ PREFABS.Item_alcove_urban_epic =
   template = "Item_alcove_techy_epic"
   theme = "urban"
   map = "MAP03"
+
+  replaces = "Item_alcove_urban"
 
   tex_BRIKS16 = { BRIKS16=50, BRIKS24=50 }
   tex_EVILFAC2 = { EVILFAC2=50, EVILFAC4=50, EVILFAC5=50, EVILFAC6=50, EVILFAC7=20, EVILFAC8=20, EVILFAC9=20, EVILFACA=20 }

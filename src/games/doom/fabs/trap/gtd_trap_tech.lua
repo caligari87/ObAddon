@@ -1,4 +1,4 @@
---[[PREFABS.Trap_closet_tech =
+PREFABS.Trap_closet_tech =
 {
   file = "trap/gtd_trap_tech.wad"
   map = "MAP01"
@@ -8,10 +8,12 @@
   prob = 25
 
   theme = "urban"
-  env = "building"
+  env = "!cave"
 
   where  = "seeds"
   shape  = "U"
+
+  height = 128
 
   seed_w = 2
   seed_h = 1
@@ -33,4 +35,4 @@ PREFABS.Trap_closet_tech_2 =
   template = "Trap_closet_tech"
 
   map = "MAP02"
-}]]
+}
