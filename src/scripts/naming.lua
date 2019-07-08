@@ -3575,12 +3575,12 @@ namelib.NAMES =
     patterns =
     {
       -- <adj> <place>  e.g. dark dimension
-      ["%a %p"] = 20
-      ["The %a %p"] = 30
-      ["Into the %a %p"] = 20
+      ["%a %p"] = 50 -- Descriptive Place
+      ["The %a %p"] = 45 -- The Descriptive Place
+      ["Into the %a %p"] = 10 -- Into the Descriptive Place
 
       -- <adj> <thing>  e.g. eternal gore
-      ["%a %d"] = 25 --40
+      ["%a %d"] = 50 -- Descriptive Object
 
       ["%d Forever"]  = 5
       ["%d Always"]  = 5
@@ -3588,15 +3588,19 @@ namelib.NAMES =
       ["%d Revealed"] = 5
 
       -- <place> of <desc>  e.g. city of souls
-      ["%p of %d"] = 25
-      ["%d in the %p"] = 6
-      ["%d at the %p"] = 4
+      ["%p of %d"] = 50 -- Place of Object
+      ["%d in the %p"] = 25 -- Object in the Place
+      ["%d at the %p"] = 25 -- Ojbect at the Place
 
-      ["The %e of %d"] = 3
-      ["%e in the %p"] = 3
+      ["The %e of %d"] = 30 -- The Entity of Object
+      ["%e in the %p"] = 30 -- Entity in the Place
 
       -- <place> of the <entity>  e.g. realm of the devil
-      ["%p of the %e"] = 30
+      ["%p of the %e"] = 50 -- Place of the Entity
+      ["The %p of the %e"] = 30 -- The Place of the Entity
+      ["The %d of the %e"] = 30 -- The Abstract Object of the Entity
+      ["The %a %d of the %a %e"] = 40 -- The Descriptive Object of the Descriptive Entity
+      ["The %a %p of the %a %e"] = 40 -- The Descriptive Place of the Descriptive Entity
 
       -- miscellaneous
       ["Beyond the %p"] = 8
@@ -3616,22 +3620,18 @@ namelib.NAMES =
       ["Attack of the %a %e"] = 8 -- Attack of the Descriptive Entity
       ["Return of the %e"] = 8 -- Return of the Entity
       ["A WAD full of %d"] = 5 -- A WAD Full of Abstract Objects
-      ["The %p of the %e"] = 12 -- The Place of the Entity
-      ["The %d of the %e"] = 12 -- The Abstract Object of the Entity
       ["Return of the %e"] = 8 -- Return of the Entity
       ["Some very %a %p"] = 8 -- Some very Descriptive Place
       ["Zone of %d"] = 8 -- Zone of Asbtract Object
       ["The %e WAD"] = 5 -- The Entity WAD
       ["Showdown with the %e"] = 7
-      ["The %a %d of the %a %e"] = 10
-      ["The %a %p of the %a %e"] = 10
       ["They are %a"] = 7
       ["Call of %d"] = 8
       ["The %e and the %e"] = 10
       ["The %e VS the %e"] = 7
       ["The %d Within"] = 5
       ["%a and %a"] = 8
-      ["Escape from the %a %e"] = 8
+      ["Escape from the %a %e"] = 10
       ["The %e The %e and The %d"] = 8
 
       ["%c did this"] = 3
