@@ -4525,6 +4525,39 @@ function Cave_build_a_scenic_vista(area)
   end
 
 
+  local function get_most_extreme_neighbor_floor(A, mode)
+
+    if mode == "highest" then
+
+      local tallest_h = -9001
+
+      each N in A.neighbors do
+        if N.floor_h and N.mode != "scenic" then
+          if N.floor_h > tallest_h then
+            tallest_h = N.floor_h
+          end
+        end
+      end
+
+      return tallest_h
+
+    elseif mode == "lowest" then
+
+      local lowest_h = 9001
+
+      each N in A.neighbors do
+        if N.floor_h and N.mode != "scenic" then
+          if N.floor_h < lowest_h then
+            lowest_h = N.floor_h
+          end
+        end
+      end
+
+      return lowest_h
+    end
+  end
+
+
   local function make_simple_fence()
     --
     -- WHAT: a basic fence, like in E1M1 or MAP01 of standard DOOM
@@ -4532,7 +4565,7 @@ function Cave_build_a_scenic_vista(area)
 
     local FL = new_blob()
 
-    FL.floor_h = (room.max_floor_h or room.entry_h) + 72
+    FL.floor_h = get_most_extreme_neighbor_floor(area, "highest") + 72
 
     FL.floor_mat = assert(area.zone.fence_mat)
 
@@ -4552,7 +4585,7 @@ function Cave_build_a_scenic_vista(area)
 
     local FL = new_blob()
 
-    FL.floor_h = (room.max_floor_h or room.entry_h) - 8192
+    FL.floor_h = get_most_extreme_neighbor_floor(area, "highest") - 8192
 
     FL.floor_mat = assert("_SKY" --[[area.zone.fence_mat]])
 
@@ -4579,7 +4612,7 @@ function Cave_build_a_scenic_vista(area)
 
     local FL = new_blob()
 
-    FL.floor_h = room.min_floor_h - 16
+    FL.floor_h = get_most_extreme_neighbor_floor(area, "lowest") - 16
 
     FL.floor_mat = assert(LEVEL.liquid.mat)
 
@@ -4594,7 +4627,7 @@ function Cave_build_a_scenic_vista(area)
     local CLIFF = new_blob()
     local WATERFALLS = new_blob()
 
-    CLIFF.floor_h = room.max_floor_h + rand.pick({128,144,192,256})
+    CLIFF.floor_h = get_most_extreme_neighbor_floor(area, "highest") + rand.pick({128,144,192,256})
     CLIFF.floor_mat = assert(LEVEL.cliff_mat)
 
     WATERFALLS.floor_h = rand.irange(math.floor(FL.floor_h + (CLIFF.floor_h - 32))/2 , CLIFF.floor_h - 32)
@@ -4657,7 +4690,7 @@ function Cave_build_a_scenic_vista(area)
     -- initial base room is just a sky, just like bottomless drop
     local FL = new_blob()
 
-    FL.floor_h = (room.min_floor_h or room.entry_h) - 8192
+    FL.floor_h = get_most_extreme_neighbor_floor(area, "lowest") - 8192
     FL.floor_mat = "_SKY"
 
     temp_install_floor(FL)
@@ -4667,10 +4700,10 @@ function Cave_build_a_scenic_vista(area)
     local CLIFF = new_blob()
     local CLIFF2 = new_blob()
 
-    CLIFF.floor_h = (room.min_floor_h or room.entry_h) - 16
+    CLIFF.floor_h = get_most_extreme_neighbor_floor(area, "lowest") - 16
     CLIFF.floor_mat = assert(room.zone.nature_facade)
 
-    CLIFF2.floor_h = (room.min_floor_h or room.entry_h) - 64
+    CLIFF2.floor_h = get_most_extreme_neighbor_floor(area, "lowest") - 64
     CLIFF2.floor_mat = assert(room.zone.other_nature_facade)
 
     for cx = 1, area.cw do
@@ -4737,7 +4770,7 @@ function Cave_build_a_scenic_vista(area)
 
     local FL = new_blob()
 
-    FL.floor_h   = (room.min_floor_h or room.entry_h) - drop_h
+    FL.floor_h   = get_most_extreme_neighbor_floor(area, "lowest") - drop_h
     if LEVEL.liquid then
       FL.is_liquid = true
     else
@@ -4755,10 +4788,10 @@ function Cave_build_a_scenic_vista(area)
     local CLIFF2 = new_blob()
     local CLIFF3 = new_blob()
 
-    CLIFF.floor_h   = (room.max_floor_h or room.entry_h) + 96
+    CLIFF.floor_h   = get_most_extreme_neighbor_floor(area, "highest") + 96
     CLIFF.floor_mat = assert(LEVEL.cliff_mat)
 
-    CLIFF3.floor_h   = (room.max_floor_h or room.entry_h) - drop_h/2
+    CLIFF3.floor_h   = get_most_extreme_neighbor_floor(area, "highest") - drop_h/2
     CLIFF3.floor_mat = assert(LEVEL.other_cliff_mat)
 
     CLIFF2.floor_h   = (CLIFF.floor_h + CLIFF3.floor_h) * 0.5
