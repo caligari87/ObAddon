@@ -1160,6 +1160,7 @@ function Monster_fill_room(R)
 
     if OB_CONFIG.strength == "harder" then return 1.3 ^ factor end
     if OB_CONFIG.strength == "tough"  then return 1.7 ^ factor end
+    if OB_CONFIG.strength == "fierce"  then return 2.5 ^ factor end
 
     return 1.0
   end

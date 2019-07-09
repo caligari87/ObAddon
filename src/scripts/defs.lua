@@ -149,6 +149,7 @@ MONSTER_QUANTITIES =
   insane = 4.0
   deranged = 4.5
   nuts   = 5.0
+  chaotic = 5.5
   nutser = 6.66
 }
 
@@ -178,6 +179,7 @@ RAMP_UP_FACTORS =
   medium = 1.00
   fast   = 1.50
   veryfast = 2.00
+  extfast = 3.00
 }
 
 BOSS_FACTORS =
