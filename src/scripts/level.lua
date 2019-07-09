@@ -165,16 +165,16 @@ function Level_determine_map_size(LEV)
   if ob_size == "mixed" then
     local MIXED_PROBS =
     {
-      micro=5,
-      mini=6,
-      small=45,
-      subregular=100,
-      regular=150,
-      superregular=75,
-      large=50,
-      extreme=6,
-      extremer=4,
-      extremest=4
+      micro=6,
+      mini=7,
+      small=50,
+      subregular=110,
+      regular=165,
+      superregular=80,
+      large=60,
+      extreme=8,
+      extremer=5,
+      extremest=5
     }
 
     ob_size = rand.key_by_probs(MIXED_PROBS)
@@ -196,8 +196,8 @@ function Level_determine_map_size(LEV)
   else
     -- Named sizes --
 
-    --Extreme was 68, the BSP build failures might be attributing to this
-    --due to the extreme detail the maps have in them. --Armaetus (formerly Glaice), March 3rd, 2019
+    -- Since we have other sizes and Auto-Detail, we can have these bigger sizes
+    -- now. -Armaetus, July 9th, 2019
     local SIZES =
     {
       micro=10,
