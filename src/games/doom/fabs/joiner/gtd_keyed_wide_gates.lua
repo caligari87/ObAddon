@@ -7,6 +7,8 @@ PREFABS.Locked_gtd_wide_gates_red =
   where = "seeds"
   shape = "I"
 
+  uses_epic_textures = true
+
   key = "k_red"
 
   seed_w = 3
@@ -17,8 +19,8 @@ PREFABS.Locked_gtd_wide_gates_red =
 
   prob = 250
 
-  y_fit = { 132,140 , 244,252 }
-  x_fit = { 28,52 , 108,132 }
+  x_fit = { 132,140 , 244,252 }
+  y_fit = { 28,52 , 108,132 }
 }
 
 PREFABS.Locked_gtd_wide_gates_red_hell =
