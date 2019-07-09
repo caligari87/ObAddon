@@ -4,7 +4,7 @@ PREFABS.Item_gtd_key_pedestal_tech =
   map = "MAP01"
 
   rank = 2
-  prob = 120
+  prob = 180
   theme = "tech"
 
   item_kind = "key"
@@ -26,6 +26,8 @@ PREFABS.Item_gtd_key_pedestal_hell =
   template = "Item_gtd_key_pedestal_tech"
   map = "MAP03"
 
+  prob = 240
+
   theme = "hell"
 
   size = 24
@@ -36,7 +38,7 @@ PREFABS.Item_gtd_key_oh_he_ded =
   template = "Item_gtd_key_pedestal_tech"
   map = "MAP04"
 
-  prob = 60
+  prob = 100
 
   theme = "any"
 

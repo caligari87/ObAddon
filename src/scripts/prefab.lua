@@ -2302,6 +2302,10 @@ function Fab_find_matches(reqs, match_state)
     -- when placed in parks
     if reqs.no_top_fit and def.z_fit == "top" then return 0 end
 
+    -- fabs that require a plain ceiling are disqualified if
+    -- the ceiling has already content in it
+    if reqs.filled_ceiling and def.plain_ceiling then return 0 end
+
     -- special code for checking on climate-theme fabs based on the Epic
     -- Textures module Environment Themes -MSSP
     if not reqs.outdoor_theme then

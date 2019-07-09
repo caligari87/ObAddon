@@ -1352,6 +1352,8 @@ function Layout_decorate_rooms(pass)
       end
     end
 
+    if chunk.ceil_above then reqs.filled_ceiling = true end
+
     if A.room then
       reqs.env = A.room:get_env()
     end
@@ -1364,12 +1366,20 @@ function Layout_decorate_rooms(pass)
     chunk.content    = "CAGE"
     chunk.prefab_def = prefab_def
 
+    if prefab_def.plain_ceiling then
+      chunk.content.floor_below = true
+    end
+
     -- in symmetrical rooms, handle the peer too
     if chunk.peer and not chunk.peer.content then
       local peer = chunk.peer
 
       peer.content    = chunk.content
       peer.prefab_def = chunk.prefab_def
+
+      if prefab_def.plain_ceiling then
+        peer.content.floor_below = true
+      end
 
       if chunk.kind != "closet" and chunk.prefab_dir then
         local A = chunk.area
@@ -2106,6 +2116,8 @@ stderrf("Cages in %s [%s pressure] --> any_prob=%d  per_prob=%d\n",
           chunk.prefab_dir = 2
 
           chunk.area.bump_light = 16
+
+          chunk.ceil_above = true
         end
       end
     end
@@ -2132,6 +2144,8 @@ stderrf("Cages in %s [%s pressure] --> any_prob=%d  per_prob=%d\n",
           chunk.prefab_dir = 2
 
           chunk.area.bump_light = 16
+
+          chunk.ceil_above = true
         end
       end
     end

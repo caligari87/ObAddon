@@ -85,6 +85,8 @@ PREFABS.Cage_freestanding_d2_computer_tech =
     [2011] = 40
     [0] = 60
   }
+
+  plain_ceiling = true
 }
 
 PREFABS.Cage_freestanding_d2_computer_urban =
@@ -95,6 +97,8 @@ PREFABS.Cage_freestanding_d2_computer_urban =
 
   tex_COMPWERD = "WOOD4"
   flat_CEIL5_1 = "FLAT5_1"
+
+  plain_ceiling = true
 }
 
 PREFABS.Cage_freestanding_d2_computer_hell =
@@ -104,4 +108,6 @@ PREFABS.Cage_freestanding_d2_computer_hell =
   map = "MAP06"
 
   theme = "hell"
+
+  plain_ceiling = true
 }
