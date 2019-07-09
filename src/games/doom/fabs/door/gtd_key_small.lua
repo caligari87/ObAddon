@@ -36,7 +36,7 @@ PREFABS.Locked_small_red_hell =
     WOODMET1 = 50
     WOODGARG = 50
   }
-  flat_TLITE6_6 = "TLITE_6_5"
+  flat_TLITE6_6 = "TLITE6_5"
   tex_DOORRED = "DOORRED2"
 }
 
@@ -54,6 +54,7 @@ PREFABS.Locked_small_blue =
 PREFABS.Locked_small_blue_hell =
 {
   template = "Locked_small_red"
+  theme = "hell"
 
   key = "k_blue"
 
@@ -62,7 +63,7 @@ PREFABS.Locked_small_blue_hell =
     WOODMET1 = 50
     WOODGARG = 50
   }
-  flat_TLITE6_6 = "TLITE_6_5"
+  flat_TLITE6_6 = "TLITE6_5"
   tex_DOORRED = "DOORBLU2"
 
   line_33 = 32
@@ -81,6 +82,7 @@ PREFABS.Locked_small_yellow =
 PREFABS.Locked_small_yellow_hell =
 {
   template = "Locked_small_red"
+  theme = "hell"
 
   key = "k_yellow"
 
@@ -89,7 +91,7 @@ PREFABS.Locked_small_yellow_hell =
     WOODMET1 = 50
     WOODGARG = 50
   }
-  flat_TLITE6_6 = "TLITE_6_5"
+  flat_TLITE6_6 = "TLITE6_5"
   tex_DOORRED = "DOORYEL2"
 
   line_33 = 34

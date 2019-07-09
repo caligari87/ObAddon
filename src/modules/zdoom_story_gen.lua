@@ -33,6 +33,7 @@ function ZStoryGen_format_story_chunk(story_strings, info)
     story_strings = string.gsub(story_strings, "_RAND_CONTRIBUTOR", info.contributor_name)
     story_strings = string.gsub(story_strings, "_MCGUFFIN_TECH", info.tech_mcguffin)
     story_strings = string.gsub(story_strings, "_MCGUFFIN_HELL", info.hell_mcguffin)
+    story_strings = string.gsub(story_strings, "NOUNMEMBERS", info.demon_name)
   end
 
   -- dialogue quotes and apostrphes, man
