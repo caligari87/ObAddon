@@ -4186,19 +4186,24 @@ namelib.NAMES =
 
         -- religion
         Antichrist = 10
+        Archangel = 10
         Beast = 20
         Crusaders = 10
         Demons = 20
+        Denouncer = 10
         Devil = 20
+        Dissenter = 20
         Gods  = 20
         Heretic = 20
         Hellspawn = 20
+        Idolater = 20 -- An idol worshipper
         Infidel = 20
         ["Left Behind"] = 10
         Martyr = 10
         Pagans = 10
         Prophet = 10
         Saint = 10
+        Seraph = 10
         Sinner = 15
         Shaman = 10
         Wicked = 20
@@ -4260,14 +4265,20 @@ namelib.NAMES =
         Wolf = 8
 
         -- general adjectives
+        Abject = 10
+        Corrupt = 20
         Cursed = 15
         Dead = 20
+        Deplorable = 15
+        Dishonorable = 15
         Doomed = 25
         Fearless = 20
+        Hopeless = 20
         Hunted = 20
         Lost = 20
         Risen = 20
         Tormented = 20
+        Worthless = 10
 
         -- war
         Despoiler = 10
@@ -4307,8 +4318,23 @@ namelib.NAMES =
         -- Armaetus adds things here
         ["Sin Bringer"] = 10
         ["The Icon"] = 10
-        Hellbringers = 15
         Deathbringers = 10
+        Hellbringers = 15
+        Voidbringers = 10
+
+        -- filth
+        Afflicted = 10
+        Carious = 15
+        Decaying = 20
+        Fetid = 15
+        Foul = 10
+        Nidorous = 20
+        Putrefied = 20
+        Noxious = 15
+        Rancid = 20
+        Rotting = 25
+        Tainted = 20
+        Withered = 15
 
       }
 
