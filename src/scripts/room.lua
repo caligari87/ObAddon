@@ -2451,68 +2451,6 @@ function Room_floor_ceil_heights()
   end
 
 
---[[  OLD CRUD, REVIEW IF USEFUL....
-
-    local S, S_dir
-    local from_A
-
-    if conn.A1.room == R then
-      S = conn.S1
-      S_dir = 10 - conn.dir
-      from_A = conn.A2
-    else
-      assert(conn.A2.room == R)
-      S = conn.S2
-      S_dir = conn.dir
-      from_A = conn.A1
-    end
-
-    assert(S)
-    assert(S_dir)
-
-    R.hallway.height = 96
-
-    R.hallway.path = {}
-
-    R.hallway.R1 = from_A.room
-    R.hallway.R2 = hallway_other_end(R, from_A.room)
-
-    R.hallway.touch_R1 = 0
-    R.hallway.touch_R2 = 0
-
-
-    local flat_prob = sel(R.is_outdoor, 5, 20)
-
---??  if #R.areas > 1 or rand.odds(flat_prob) then
-    if true then
-      -- our flow logic cannot handle multiple areas [ which is not common ]
-      -- hence these cases become a single flat hallway
-
-      each A in R.areas do
-        A.floor_h = R.entry_h
-
-        if not A.is_outdoor then
-          A.ceil_h = A.floor_h + R.hallway.height
-        end
-      end
-
-      R.hallway.flat = true
-      return
-    end
-
-
-    -- decide vertical direction and steepness
-
-    R.hallway.z_dir  = rand.sel(R.zone.hall_up_prob, 1, -1)
-    R.hallway.z_size = rand.sel(3, "big", "small")
-
-    if R.hallway.z_size == "big" then
-      -- steep stairs need a bit more headroom
-      R.hallway.height = R.hallway.height + 24
-    end
---]]
-
-
   local function process_cave(R)
     Cave_build_a_cave(R, R.entry_h)
   end

@@ -1367,7 +1367,7 @@ function Layout_decorate_rooms(pass)
     chunk.prefab_def = prefab_def
 
     if prefab_def.plain_ceiling then
-      chunk.content.floor_below = true
+      chunk.floor_below = true
     end
 
     -- in symmetrical rooms, handle the peer too
@@ -1378,7 +1378,7 @@ function Layout_decorate_rooms(pass)
       peer.prefab_def = chunk.prefab_def
 
       if prefab_def.plain_ceiling then
-        peer.content.floor_below = true
+        peer.floor_below = true
       end
 
       if chunk.kind != "closet" and chunk.prefab_dir then
