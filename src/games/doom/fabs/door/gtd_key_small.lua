@@ -16,10 +16,10 @@ PREFABS.Locked_small_red =
 
   x_fit  = "frame"
 
-  tex_BIGDOOR1 =
+  tex_DOOR3 =
   {
-    BIGDOOR1 = 50
-    BIGDOOR3 = 50
+    DOOR3 = 50
+    DOOR1 = 50
   }
 
   -- texture is already "DOORRED"
@@ -31,7 +31,7 @@ PREFABS.Locked_small_red_hell =
   template = "Locked_small_red"
   theme = "hell"
 
-  tex_BIGDOOR1 =
+  tex_DOOR3 =
   {
     WOODMET1 = 50
     WOODGARG = 50
@@ -58,7 +58,7 @@ PREFABS.Locked_small_blue_hell =
 
   key = "k_blue"
 
-  tex_BIGDOOR1 =
+  tex_DOOR3 =
   {
     WOODMET1 = 50
     WOODGARG = 50
@@ -86,7 +86,7 @@ PREFABS.Locked_small_yellow_hell =
 
   key = "k_yellow"
 
-  tex_BIGDOOR1 =
+  tex_DOOR3 =
   {
     WOODMET1 = 50
     WOODGARG = 50
