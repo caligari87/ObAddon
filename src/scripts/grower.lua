@@ -1677,6 +1677,8 @@ function Grower_grammatical_pass(R, pass, apply_num, stop_prob,
 
     if R.is_cave then return 0 end
 
+    if R.is_street then return 0 end
+
     if R.is_outdoor then
       return style_sel("symmetry", 0,  5, 15, 50)
     else

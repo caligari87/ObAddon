@@ -2426,9 +2426,11 @@ function Level_choose_skybox()
     skyfab = PREFABS["Skybox_generic"]
   end
 
-  if not skyfab then
+  if not skyfab and OB_CONFIG.zdoom_skybox != "disable" then
     gui.printf("WARNING: Could not find a proper skybox for theme '" .. LEVEL.theme_name .. "'\n")
-  else
+  end
+
+  if skyfab then
     gui.printf("Skybox: " .. skyfab.name .. "\n")
   end
 

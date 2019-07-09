@@ -2875,12 +2875,14 @@ function Room_floor_ceil_heights()
 
     -- unify cages to their preferred neighbor heights if the
     -- cage itself is taller
-    each N2 in A.neighbors do
-      if N2.room then
-        if A.room == N2.room then
-          if N2.ceil_h then
-            if N2.ceil_h < A.ceil_h then
-              N2.ceil_h = A.ceil_h
+    if not A.room.is_outdoor then
+      each N2 in A.neighbors do
+        if N2.room then
+          if A.room == N2.room then
+            if N2.ceil_h then
+              if N2.ceil_h < A.ceil_h then
+                N2.ceil_h = A.ceil_h
+              end
             end
           end
         end
