@@ -36,6 +36,7 @@ UI_MONS.QUANTITIES =
     "insane", _("[4.0] Combat Shock 2"),
     "deranged", _("[4.5] Swift Death"),
     "nuts",   _("[5.0] Sunder"),
+    "chaotic",   _("[5.5] No Chance"),
     "nutser", _("[6.66] Holy Hell"),
     "mixed",  _("Mix It Up"),
     "prog",   _("Progressive"),
@@ -56,6 +57,7 @@ UI_MONS.MIX_QUANTITIES =
     "insane", _("[4.0] Combat Shock 2"),
     "deranged", _("[4.5] Swift Death"),
     "nuts",   _("[5.0] Sunder"),
+    "chaotic", _("[5.5] No Chance"),
     "nutser", _("[6.66] Holy Hell"),
 }
 
@@ -66,6 +68,7 @@ UI_MONS.STRENGTHS =
   "medium", _("[1] Average"),
   "harder", _("[1.3] Harder"),
   "tough",  _("[1.7] Tough"),
+  "fierce",  _("[2.5] Fierce"),
   "crazy",  _("[12] CRAZY"),
 }
 
@@ -84,6 +87,7 @@ UI_MONS.RAMPS =
   "medium",  _("Average"),
   "fast",    _("Fast"),
   "veryfast", _("Very Fast"),
+  "extfast", _("Extremely Fast"),
   "epi",     _("Episodic"),
 }
 
