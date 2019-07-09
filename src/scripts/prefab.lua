@@ -2365,11 +2365,6 @@ function Fab_find_matches(reqs, match_state)
 
 
   local function prob_for_match(def, match_state)
-    if not def.use_prob then
-      print(def)
-      print(table.tostr(def))
-    end
-
     local prob = assert(def.use_prob)
 
     if prob <= 0 then return 0 end

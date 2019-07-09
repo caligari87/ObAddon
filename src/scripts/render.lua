@@ -2656,8 +2656,6 @@ end
 function Render_skybox()
   if not LEVEL.skybox then return end
 
-  gui.printf(table.tostr(LEVEL.skybox))
-
   local x = SEED_W * SEED_SIZE - 512
   local y = SEED_H * SEED_SIZE + 1024 -- should probably the actual prefab bbox size
 

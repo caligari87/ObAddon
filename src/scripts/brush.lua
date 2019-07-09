@@ -1285,4 +1285,3 @@ function Quake3_conversion()
     end
   end
 end
-
