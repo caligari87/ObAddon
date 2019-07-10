@@ -7489,6 +7489,8 @@ SIDEWALK_CAGE =
     "1..","111"
     "1..","111"
   }
+
+  cage_mode = "fancy"
 }
 
 SIDEWALK_CAGE_4X =
@@ -7503,6 +7505,8 @@ SIDEWALK_CAGE_4X =
     "11111","11111"
     "11111","11111"
   }
+
+  cage_mode = "fancy"
 }
 
 SIDEWALK_CAGE_4X4 =
@@ -7518,6 +7522,8 @@ SIDEWALK_CAGE_4X4 =
     "1..","111"
     "1..","111"
   }
+
+  cage_mode = "fancy"
 }
 
 SIDEWALK_CLOSET_2X2 =
