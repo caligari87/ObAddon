@@ -4,47 +4,49 @@ IWAD level similarities via OBLIGE 7.70
 
 MAP01 - tiny
   Big Rooms, Some Cages, Some Secrets, Few Outdoors, Few Porches,
-  Few hallways, no teleports. Slightly short rooms, some barrels
+  Few hallways, no teleports. Slightly short rooms, some barrels,
+  no cages.
 
 MAP02 - small
   No Big Rooms, Lots of Liquids, Keyed Doors, Indoors, Rather Dark.
-  Few secrets, few teleports. Mostly short rooms. More barrels.
+  Few secrets, few teleports. Mostly short rooms. More barrels. No cages.
 
 MAP03 - average
  More Big Rooms, More Liquids, Few keyed doors, some Porches, few secrets,
- Few teleports. Slightly short rooms.
+ Few teleports. Slightly short rooms. No cages.
 
 MAP04 - small
  No Big Rooms, Lots of Steepness, Lots of Windows, Less Keyed Doors, Heaps of Darkness,
- No Porches, Few hallways, few secrets, few teleports. Mostly short rooms.
+ No Porches, Few hallways, few secrets, few teleports. Mostly short rooms. Rare cages.
 
 MAP05 - average
   Heaps of darkness, some steepness, heaps of porches, few keys, lots of liquids.
   Some hallways, some secrets, rare teleports. Slightly short rooms, more windows.
+  Rare cages.
 
 MAP06 - large
   More/heaps darkness, heaps of steepness, little outdoors, some traps, few windows,
-  some liquids, some teleporters, some secrets. Normal height rooms.
+  some liquids, some teleporters, some secrets. Normal height rooms. Few cages.
 
 MAP07 - small
   Procedural Gotcha, must be weakest available!! (-50% monsters)
 
 MAP08 - small
   Traps heaps, outdoors few, I dunno. Few windows! Liquids rare, darkness less,
-  Teleporters some. More doors. Slightly tall rooms. Less porches.
+  Teleporters some. More doors. Slightly tall rooms. Less porches. Rare cages.
 
 MAP09 - average
  Steepness more/heaps, traps some, outdoors less. Some windows? Some doors,
- some secrets, Less Teleporters. Some porches. Slightly tall rooms.
+ some secrets, Less Teleporters. Some porches. Slightly tall rooms. Some cages.
 
 MAP10 - huge
  Traps some, outdoors less, must be tech, steepness less, some windows,
  liquids rare, lots of big rooms, lots of hallways, less secrets, less porches,
- Mostly tall rooms. Some keys, no parks.
+ Mostly tall rooms. Some keys, no parks. Some cages.
 
 MAP11 - large
  Liquids more, outdoors more, steepness more, porches heaps, traps some/more, more windows,
- some secrets, less darkness, some parks, slightly tall rooms. Some keys.
+ some secrets, less darkness, some parks, slightly tall rooms. Some keys. Some cages.
 
 MAP12 - average
 Street mode. Heaps of outdoors. Few/Rare street traffic, rare liquids, some secrets, few windows,
@@ -81,7 +83,7 @@ More liquids, more traps, mostly tall rooms, some windows, heaps of steepness, s
 
 MAP21 - mini
 Few outdoors, less steepness, some traps, less keys, few doors, some porches, few windows, some teleporters, some liquids,
-few switches, slightly short rooms.
+few switches, slightly short rooms, no cages.
 
 MAP22 - small
 Some steepness, few liquids, less doors, few switches, rare teleporters, more traps, some keys, more porches, no parks, more windows,
@@ -92,16 +94,39 @@ BARRELS HEAPS!!! More steepness, more porches, less windows, more traps, some ke
 some darkness, slightly tall rooms.
 
 MAP24 - large
-LIQUIDS HEAPS!!! STEEPNESS HEAPS!!! Traps more, keys heaps, doors some, porches more, windows some, barrels more
+LIQUIDS HEAPS!!! STEEPNESS HEAPS!!! Traps more, keys heaps, doors some, porches more, windows some, barrels more,
+few cages.
 
-MAP25 - huge
+MAP25 - large
+Some liquids, liquid MUST be blood, more steepness, heaps of darkness, some keys, some traps, few windows, few barrels,
+mostly tall rooms, few porches.
+
 MAP26 - huge
+More liquids, more barrels, more windows, heaps of steepness, heaps of keys, some switches, few doors, few secrets,
+some traps, slightly tall rooms, heaps of porches, more beams, some cages.
+
 MAP27 - large
+Rare outdoors, more traps, rare liquids, heaps of darkness, more porches, some steepness, more keys, some beams, few barrels,
+few secrets, more big rooms.
+
 MAP28 - huge
+Less outdoors, more big rooms, some traps, less darkness, few secrets, few doors, rare switches, some keys, harder bosses (specially
+Spidey!)
+
 MAP29 - large
+More liquids, heaps of steepness, less doors, some switches, some keys, heaps of porches, some beams, no barrels, heaps of traps,
+harder bosses (namely a Cyberdemon!), more darkness.
+
 MAP30 - micro
+Procedural Gotcha. BossBrain at the end instead of the usual Cyberdemon.
+
 MAP31 - average
+Few doors, few hallways, few steepness, few secrets, some windows, harder bosses, no teleports, no caves, rare parks, rare liquids,
+more scenics, heaps of beams, heaps of symmetry, heaps of traps, few keys, no cages, rare fences, 1.0 Monster Quantity, Tech
+
 MAP32 - small
+Few doors, few hallways, few steepness, rare secrets, heaps of windows, harder bosses, no teleports, no caves, some parks, rare liquids,
+more scenics, heaps of beams, heaps of symmetry, heaps of traps, more keys, more cages, some fences, 5.5 Monster Quantity, Hell
 
 [[ ULTDOOM ]]
 
@@ -132,7 +157,7 @@ E3M7 - huge
 E3M8 - tiny
 E3M9 - small
 E4M1 - small
-E4M2 - regular
+E4M2 - average
 E4M3 - small
 E4M4 - tiny
 E4M5 - average
