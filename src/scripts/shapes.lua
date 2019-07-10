@@ -725,7 +725,8 @@ GROW_BIG_CAGE =
     "....", "1111"
     "....", "1CC1"
     "....", "1CC1"
-    "1111", "1111"
+    "....", "1111"
+    "x11x", "x11x"
   }
 
   cage_mode = "fancy"
@@ -739,10 +740,10 @@ GROW_CAGEPAIR_1 =
 
   structure =
   {
-    "......", "#AAAA#"
-    "......", "#CAAC#"
-    "......", "#AAAA#"
-    "xx11xx", "xx11xx"
+    "....", "AAAA"
+    "....", "CAAC"
+    "....", "AAAA"
+    "x11x", "x11x"
   }
 
   cage_mode = "fancy"
@@ -757,12 +758,12 @@ GROW_CAGEPAIR_2 =
 
   structure =
   {
-    "......", "#AAAA#"
-    "......", "#CAAC#"
-    "......", "#AAAA#"
-    "......", "#CAAC#"
-    "......", "#AAAA#"
-    ".1111.", ".1111."
+    "....", "AAAA"
+    "....", "CAAC"
+    "....", "AAAA"
+    "....", "CAAC"
+    "....", "AAAA"
+    "x11x", "x11x"
   }
 
   cage_mode = "fancy"
@@ -803,9 +804,9 @@ GROW_STAIR_2 =
 
   structure =
   {
-    "....", ".AA."
-    "x..x", "x^^x"
-    "x11x", "x11x"
+    "..", "AA"
+    "..", "^^"
+    "11", "11"
   }
 }
 
@@ -1817,14 +1818,9 @@ AUX_CAGE_GROW3 =
 
   structure =
   {
-    "...", "C%."
-    "C..", "CC."
-    "11x", "11x"
-  }
-
-  diagonals =
-  {
-    "C."
+    "..", "CC"
+    "C.", "CC"
+    "11", "11"
   }
 }
 
@@ -5166,32 +5162,32 @@ DECORATE_TRIANGULAR_LOW_CEILING =
 
 GROW_PILLAR_2X2 =
 {
-  prob = 3
+  prob = 10
 
   env = "building"
 
   structure =
   {
-    "1111","1111"
-    "1111","1..1"
-    "1111","1..1"
-    "1111","1111"
+    "x....","x1111"
+    "1....","11..1"
+    "1....","11..1"
+    "x....","x1111"
   }
 }
 
-DECORATE_PILLAR_3X3 =
+GROW_PILLAR_3X3 =
 {
-  prob = 3
+  prob = 10
 
   env = "building"
 
   structure =
   {
-    "11111","11111"
-    "11111","1/.%1"
-    "11111","1...1"
-    "11111","1%./1"
-    "11111","11111"
+    "x.....","x11111"
+    "1.....","11/.%1"
+    "1.....","11...1"
+    "1.....","11%./1"
+    "x.....","x11111"
   }
 
   diagonals =
@@ -5201,18 +5197,18 @@ DECORATE_PILLAR_3X3 =
   }
 }
 
-DECORATE_PILLAR_BEAN =
+GROW_PILLAR_BEAN =
 {
-  prob = 3
+  prob = 10
 
   env = "building"
 
   structure =
   {
-    "1111","1111"
-    "1111","1/.1"
-    "1111","1./1"
-    "1111","1111"
+    "1....","11111"
+    "1....","11/.1"
+    "x....","x1./1"
+    "x....","x1111"
   }
 
   diagonals =
@@ -7478,6 +7474,49 @@ SIDEWALK_LIQUID_POOL =
     "....","AA~~"
     "....","AA~~"
     "11xx","11xx"
+  }
+}
+
+SIDEWALK_CAGE =
+{
+  prob = 25
+
+  pass = "sidewalk"
+
+  structure =
+  {
+    "x..","xCC"
+    "1..","111"
+    "1..","111"
+  }
+}
+
+SIDEWALK_CAGE_4X =
+{
+  prob = 20
+
+  pass = "sidewalk"
+
+  structure =
+  {
+    "x....","xCCCC"
+    "11111","11111"
+    "11111","11111"
+  }
+}
+
+SIDEWALK_CAGE_4X4 =
+{
+  prob = 15
+
+  pass = "sidewalk"
+
+  structure =
+  {
+    "x..","xCC"
+    "x..","xCC"
+    "1..","111"
+    "1..","111"
   }
 }
 
