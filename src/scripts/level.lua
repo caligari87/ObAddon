@@ -152,14 +152,14 @@ function Level_determine_map_size(LEV)
   {
     micro=10,
     mini=16,
-    small=22,
-    subregular=30,
-    regular=36,
-    superregular=42,
-    large=48,
-    extreme=58,
-    extremer=66,
-    extremest=76
+    tiny=22,
+    small=30,
+    average=36,
+    large=42,
+    huge=48,
+    colossal=58,
+    gargan=66,
+    trans=76
   }
 
   local ob_size = OB_CONFIG.size
@@ -167,10 +167,10 @@ function Level_determine_map_size(LEV)
   local W, H
 
   -- there is no real "progression" when making a single level.
-  -- hence use the regular size instead.
+  -- hence use the average size instead.
   if OB_CONFIG.length == "single" then
     if ob_size == "prog" or ob_size == "epi" then
-      ob_size = "regular"
+      ob_size = "average"
     end
   end
 
@@ -190,14 +190,14 @@ function Level_determine_map_size(LEV)
     {
       micro=6,
       mini=7,
-      small=50,
-      subregular=110,
-      regular=165,
-      superregular=80,
-      large=60,
-      extreme=8,
-      extremer=5,
-      extremest=5
+      tiny=50,
+      small=110,
+      average=165,
+      large=80,
+      huge=60,
+      colossal=8,
+      gargan=5,
+      trans=5
     }
 
     -- Level Control fine tune for Mix It Up
@@ -216,8 +216,6 @@ function Level_determine_map_size(LEV)
         end
       end
     end
-
-    gui.printf(table.tostr(MIXED_PROBS).."\n")
 
     ob_size = rand.key_by_probs(MIXED_PROBS)
   end
@@ -245,9 +243,6 @@ function Level_determine_map_size(LEV)
 
     -- this basically ramps up
     W = int(def_small + along * def_large)
-
-    gui.printf("size: "..W.."\n")
-
   else
 
     -- Single Size --
