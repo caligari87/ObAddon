@@ -174,7 +174,7 @@ OB_MODULES["level_control"] =
 
     level_size_ramp_factor =
     {
-      name = "ramp_factor"
+      name = "level_size_ramp_factor"
       label = _("Ramp Factor")
       priority = 1
       tooltip = "Determines how fast or slow larger level sizes are reached in Progressive/Episodic mode.\n\n" ..

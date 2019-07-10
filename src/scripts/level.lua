@@ -226,8 +226,8 @@ function Level_determine_map_size(LEV)
 
     local ramp_factor = 0.66
 
-    if PARAM.ramp_factor then
-      ramp_factor = int(PARAM.ramp_factor)
+    if PARAM.level_size_ramp_factor then
+      ramp_factor = tonumber(PARAM.level_size_ramp_factor)
     end
 
     local along = LEV.game_along ^ ramp_factor
@@ -259,6 +259,8 @@ function Level_determine_map_size(LEV)
   if not W then
     error("Unknown size keyword: " .. tostring(ob_size))
   end
+
+  gui.printf("Initial size for " .. LEV.name .. ": " .. W .. "\n")
 
   local H = 1 + int(W * 0.8)
 
