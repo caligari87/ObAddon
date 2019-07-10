@@ -54,6 +54,16 @@ THEME_CONTROL.SIZE_CHOICES =
 }
 
 
+THEME_CONTROL.RAMP_FACTOR =
+{
+  "0.5",  _("Very Fast Curve"),
+  "0.66", _("Fast Curve"),
+  "1",    _("Linear"),
+  "1.5",  _("Slow Curve"),
+  "2",    _("Very Slow Curve"),
+}
+
+
 function THEME_CONTROL.set_a_theme(LEV, opt)
   if opt.value == "no_change" then
     return
@@ -132,7 +142,7 @@ OB_MODULES["level_control"] =
     {
       name = "mixin_type"
       label = _("Mix-in Type")
-      priority = 3
+      priority = 4
       tooltip = "This replaces the -ish theme choices. By selecting mostly, this means " ..
                 "your selected theme is occasionally littered by other themes while setting it to " ..
                 "less means the original selected theme is what's littered in instead. " ..
@@ -146,7 +156,7 @@ OB_MODULES["level_control"] =
     {
       name = "level_upper_bound"
       label = _("Upper Bound")
-      priority = 2
+      priority = 3
       tooltip = "Fine tune upper limit for Level Size Episodic, Progressive and Mixed options."
       choices = THEME_CONTROL.SIZE_CHOICES
       default = "micro"
@@ -155,10 +165,27 @@ OB_MODULES["level_control"] =
     {
       name = "level_lower_bound"
       label = _("Lower Bound")
-      priority = 1
+      priority = 2
       tooltip = "Fine tune lower limit for Level Size Episodic, Progressive and Mixed options."
       choices = THEME_CONTROL.SIZE_CHOICES
       default = "extremest"
+      gap = 1
+    }
+
+    level_size_ramp_factor =
+    {
+      name = "ramp_factor"
+      label = _("Ramp Factor")
+      priority = 1
+      tooltip = "Determines how fast or slow larger level sizes are reached in Progressive/Episodic mode.\n\n" ..
+      "Very Fast Curve: Reach half-size at 1/4th of the game.\n" ..
+      "Fast Curve: Reach half-size at 1/3rds.\n" ..
+      "Linear: Reach half-size at half the game.\n" ..
+      "Slow Curve: Reach half-size at 2/3rds.\n" ..
+      "Very Slow Curve: Reach half-size at 3/4ths.\n\n" ..
+      "Oblige default is Fast Curve."
+      choices = THEME_CONTROL.RAMP_FACTOR
+      default = "0.66"
     }
   }
 }

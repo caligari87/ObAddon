@@ -224,7 +224,13 @@ function Level_determine_map_size(LEV)
 
     -- Progressive --
 
-    local along = LEV.game_along ^ 0.66
+    local ramp_factor = 0.66
+
+    if PARAM.ramp_factor then
+      ramp_factor = int(PARAM.ramp_factor)
+    end
+
+    local along = LEV.game_along ^ ramp_factor
 
     if ob_size == "epi" then along = LEV.ep_along end
 
@@ -255,6 +261,8 @@ function Level_determine_map_size(LEV)
   end
 
   local H = 1 + int(W * 0.8)
+
+  gui.printf("size"..W.."\n")
 
   return W, H
 end
