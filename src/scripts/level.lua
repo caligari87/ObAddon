@@ -262,8 +262,6 @@ function Level_determine_map_size(LEV)
 
   local H = 1 + int(W * 0.8)
 
-  gui.printf("size"..W.."\n")
-
   return W, H
 end
 
