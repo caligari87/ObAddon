@@ -2,121 +2,141 @@ IWAD level similarities via OBLIGE 7.70
 
 [[ DOOM2 ]]
 
-MAP01 - small
+MAP01 - tiny
   Big Rooms, Some Cages, Some Secrets, Few Outdoors, Few Porches,
   Few hallways, no teleports. Slightly short rooms, some barrels
 
-MAP02 - subregular
+MAP02 - small
   No Big Rooms, Lots of Liquids, Keyed Doors, Indoors, Rather Dark.
   Few secrets, few teleports. Mostly short rooms. More barrels.
 
-MAP03 - regular
+MAP03 - average
  More Big Rooms, More Liquids, Few keyed doors, some Porches, few secrets,
  Few teleports. Slightly short rooms.
 
-MAP04 - subregular
+MAP04 - small
  No Big Rooms, Lots of Steepness, Lots of Windows, Less Keyed Doors, Heaps of Darkness,
  No Porches, Few hallways, few secrets, few teleports. Mostly short rooms.
 
-MAP05 - regular
-  Heaps of darkness, low/some steepness, heaps of porches, few keys, lots of liquids.
-  Some hallways, some secrets, rare teleports. Slightly short rooms.
+MAP05 - average
+  Heaps of darkness, some steepness, heaps of porches, few keys, lots of liquids.
+  Some hallways, some secrets, rare teleports. Slightly short rooms, more windows.
 
-MAP06 - superregular
+MAP06 - large
   More/heaps darkness, heaps of steepness, little outdoors, some traps, few windows,
   some liquids, some teleporters, some secrets. Normal height rooms.
 
 MAP07 - small
   Procedural Gotcha, must be weakest available!! (-50% monsters)
 
-MAP08 - subregular
+MAP08 - small
   Traps heaps, outdoors few, I dunno. Few windows! Liquids rare, darkness less,
-  Teleporters some. More doors. Slightly tall rooms.
+  Teleporters some. More doors. Slightly tall rooms. Less porches.
 
-MAP09 - regular
+MAP09 - average
  Steepness more/heaps, traps some, outdoors less. Some windows? Some doors,
  some secrets, Less Teleporters. Some porches. Slightly tall rooms.
 
-MAP10 - large
- Traps some/more, outdoors some, must be tech, steepness less/some, some windows,
+MAP10 - huge
+ Traps some, outdoors less, must be tech, steepness less, some windows,
  liquids rare, lots of big rooms, lots of hallways, less secrets, less porches,
- Mostly tall rooms. Some keys.
+ Mostly tall rooms. Some keys, no parks.
 
-MAP11 - superregular
+MAP11 - large
  Liquids more, outdoors more, steepness more, porches heaps, traps some/more, more windows,
  some secrets, less darkness, some parks, slightly tall rooms. Some keys.
 
-MAP12 - regular
+MAP12 - average
 Street mode. Heaps of outdoors. Few/Rare street traffic, rare liquids, some secrets, few windows,
 some big rooms, few porches, some steepness. Less keys, some teleporters.
 
-MAP13 - superregular
+MAP13 - large
 Street mode. Heaps of outdoors. More street traffic, mostly tall rooms, no liquids, some traps,
 some secrets, more porches, more keys, some big rooms, some teleporters, heaps of steepness!!
 
-MAP14 - regular
+MAP14 - average
 More outdoors, heaps of porches, some secrets, more darkness, some steepness, some traps, heaps of windows,
 more beams, some big rooms, more symmetry. Slightly tall rooms, few teleporters.
 
-MAP15 - large
+MAP15 - huge
 Street mode. More outdoors, some street traffic, some big rooms, heaps of keys, heaps of porches, more liquids,
 more secrets, more darkness, heaps of steepness, mostly tall rooms, more teleporters.
 
-MAP16 - superregular
+MAP16 - large
 More outdoors, some steepness, less liquids, more traps, less darkness, some secrets, heaps of porches, some keys,
 slightly tall rooms.
 
-MAP17 - regular
-MAP18 - subregular
-MAP19 - large
-MAP20 - extreme
+MAP17 - large
+More liquids, more steepness, more traps, some outdoors, some keys, few secrets, more windows.
+
+MAP18 - small
+More outdoors, some traps, some steepness, rare liquids, less secrets, heaps of items, normal height rooms.
+
+MAP19 - huge
+Some liquids, less steepness, more teleporters, more outdoors, heaps of porches, more windows, less secrets,
+slightly taller rooms.
+
+MAP20 - colossal
+More liquids, more traps, mostly tall rooms, some windows, heaps of steepness, stronger bosses, must have a strong boss.
+
 MAP21 - mini
-MAP22 - subregular
-MAP23 - regular
-MAP24 - superregular
-MAP25 - regular
-MAP26 - regular
-MAP27 - superregular
-MAP28 - large
+Few outdoors, less steepness, some traps, less keys, few doors, some porches, few windows, some teleporters, some liquids,
+few switches, slightly short rooms.
+
+MAP22 - small
+Some steepness, few liquids, less doors, few switches, rare teleporters, more traps, some keys, more porches, no parks, more windows,
+rare big rooms, rare hallways. Normal height rooms.
+
+MAP23 - small
+BARRELS HEAPS!!! More steepness, more porches, less windows, more traps, some keys, few doors, rare switches, few liquids,
+some darkness, slightly tall rooms.
+
+MAP24 - large
+LIQUIDS HEAPS!!! STEEPNESS HEAPS!!! Traps more, keys heaps, doors some, porches more, windows some, barrels more
+
+MAP25 - huge
+MAP26 - huge
+MAP27 - large
+MAP28 - huge
 MAP29 - large
 MAP30 - micro
-MAP31 - regular
-MAP32 - subregular
+MAP31 - average
+MAP32 - small
 
 [[ ULTDOOM ]]
 
-E1M1 - subregular
-E1M2 - regular
-E1M3 - regular
-E1M4 - superregular
-E1M5 - regular
-E1M6 - superregular
-E1M7 - large
-E1M8 - subregular
-E1M9 - regular
-E2M1 - subregular
-E2M2 - superregular
-E2M3 - regular
-E2M4 - large
-E2M5 - superregular
-E2M6 - superregular
-E2M7 - large
-E2M8 - subregular
-E3M1 - small
-E3M2 - subregular
-E3M3 - superregular
-E3M4 - regular
-E3M5 - large
-E3M6 - superregular
-E3M7 - large
-E3M8 - small
-E3M9 - subregular
-E4M1 - subregular
+E1M1 - small
+E1M2 - averagw
+E1M3 - average
+E1M4 - large
+E1M5 - average
+E1M6 - large
+E1M7 - huge
+E1M8 - small
+E1M9 - average
+E2M1 - small
+E2M2 - large
+E2M3 - average
+E2M4 - huge
+E2M5 - large
+E2M6 - large
+E2M7 - colossal
+E2M8 - small
+E3M1 - tiny
+E3M2 - small
+E3M3 - large
+E3M4 - average
+E3M5 - huge
+E3M6 - large
+E3M7 - huge
+E3M8 - tiny
+E3M9 - small
+E4M1 - small
 E4M2 - regular
-E4M3 - subregular
-E4M4 - small
-E4M5 - regular
-E4M6 - superregular
-E4M7 - subregular
-E4M8 - regular
-E4M9 - subregular
+E4M3 - small
+E4M4 - tiny
+E4M5 - average
+E4M6 - large
+E4M7 - small
+E4M8 - average
+E4M9 - small
