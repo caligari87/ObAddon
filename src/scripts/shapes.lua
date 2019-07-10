@@ -7479,15 +7479,15 @@ SIDEWALK_LIQUID_POOL =
 
 SIDEWALK_CAGE =
 {
-  prob = 25
+  prob = 100
 
   pass = "sidewalk"
 
   structure =
   {
     "x..","xCC"
-    "1..","111"
-    "1..","111"
+    "1..","1AA"
+    "1..","1AA"
   }
 
   cage_mode = "fancy"
@@ -7495,15 +7495,15 @@ SIDEWALK_CAGE =
 
 SIDEWALK_CAGE_4X =
 {
-  prob = 20
+  prob = 80
 
   pass = "sidewalk"
 
   structure =
   {
     "x....","xCCCC"
-    "11111","11111"
-    "11111","11111"
+    "1....","1AAAA"
+    "1....","1AAAA"
   }
 
   cage_mode = "fancy"
@@ -7511,7 +7511,7 @@ SIDEWALK_CAGE_4X =
 
 SIDEWALK_CAGE_4X4 =
 {
-  prob = 15
+  prob = 65
 
   pass = "sidewalk"
 
@@ -7519,8 +7519,8 @@ SIDEWALK_CAGE_4X4 =
   {
     "x..","xCC"
     "x..","xCC"
-    "1..","111"
-    "1..","111"
+    "1..","1AA"
+    "1..","1AA"
   }
 
   cage_mode = "fancy"
