@@ -144,6 +144,24 @@ function Level_determine_map_size(LEV)
   -- episode or game we are.
   --
 
+  -- Named sizes --
+
+  -- Since we have other sizes and Auto-Detail, we can have these bigger sizes
+  -- now. -Armaetus, July 9th, 2019
+  local SIZES =
+  {
+    micro=10,
+    mini=16,
+    small=22,
+    subregular=30,
+    regular=36,
+    superregular=42,
+    large=48,
+    extreme=58,
+    extremer=66,
+    extremest=76
+  }
+
   local ob_size = OB_CONFIG.size
 
   local W, H
@@ -156,7 +174,12 @@ function Level_determine_map_size(LEV)
     end
   end
 
-  -- Armaetus --
+  -- sanity check for Level Control fine tune
+  if PARAM.level_upper_bound then
+    if SIZES[PARAM.level_upper_bound] < SIZES[PARAM.level_lower_bound] then
+      error("Level Control upper bound and lower bound are reversed.")
+    end
+  end
 
   -- Mix It Up --
 
@@ -177,6 +200,25 @@ function Level_determine_map_size(LEV)
       extremest=5
     }
 
+    -- Level Control fine tune for Mix It Up
+    if PARAM.level_upper_bound then
+      each k,v in MIXED_PROBS do
+        if SIZES[k] > SIZES[PARAM.level_upper_bound] then
+          MIXED_PROBS[k] = 0
+        end
+      end
+    end
+
+    if PARAM.level_lower_bound then
+      each k,v in MIXED_PROBS do
+        if SIZES[k] < SIZES[PARAM.level_lower_bound] then
+          v = 0
+        end
+      end
+    end
+
+    gui.printf(table.tostr(MIXED_PROBS).."\n")
+
     ob_size = rand.key_by_probs(MIXED_PROBS)
   end
 
@@ -190,27 +232,25 @@ function Level_determine_map_size(LEV)
 
     along = math.clamp(0, along, 1)
 
-    -- this basically ramps from "small" --> "large"
-    W = int(22 + along * 24)
+    -- Level Control fine tune for Prog/Epi
+
+    -- default when Level Contro lis off: ramp from "small" --> "large"
+    local def_small = 22
+    local def_large = 24
+
+    if PARAM.level_upper_bound then
+      def_small = SIZES[PARAM.level_lower_bound]
+      def_large = SIZES[PARAM.level_upper_bound] - def_small
+    end
+
+    -- this basically ramps up
+    W = int(def_small + along * def_large)
+
+    gui.printf("size: "..W.."\n")
 
   else
-    -- Named sizes --
 
-    -- Since we have other sizes and Auto-Detail, we can have these bigger sizes
-    -- now. -Armaetus, July 9th, 2019
-    local SIZES =
-    {
-      micro=10,
-      mini=16,
-      small=22,
-      subregular=30,
-      regular=36,
-      superregular=42,
-      large=48,
-      extreme=58,
-      extremer=66,
-      extremest=76
-    }
+    -- Single Size --
 
     W = SIZES[ob_size]
   end

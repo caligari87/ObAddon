@@ -39,6 +39,21 @@ THEME_CONTROL.MIXIN_CHOICES =
 }
 
 
+THEME_CONTROL.SIZE_CHOICES =
+{
+  "micro",        _("Microscopic"),
+  "mini",         _("Miniscule"),
+  "small",        _("Tiny"),
+  "subregular",   _("Small"),
+  "regular",      _("Average"),
+  "superregular", _("Large"),
+  "large",        _("Huge"),
+  "extreme",      _("Colossal"),
+  "extremer",     _("Gargantuan"),
+  "extremest",    _("Transcendent"),
+}
+
+
 function THEME_CONTROL.set_a_theme(LEV, opt)
   if opt.value == "no_change" then
     return
@@ -98,9 +113,9 @@ end
 }]]
 
 
-OB_MODULES["theme_mixins"] =
+OB_MODULES["level_control"] =
 {
-  label = _("Theme Mix-ins")
+  label = _("Level/Theme Control")
 
   game = "doomish"
 
@@ -117,12 +132,33 @@ OB_MODULES["theme_mixins"] =
     {
       name = "mixin_type"
       label = _("Mix-in Type")
+      priority = 3
       tooltip = "This replaces the -ish theme choices. By selecting mostly, this means " ..
                 "your selected theme is occasionally littered by other themes while setting it to " ..
                 "less means the original selected theme is what's littered in instead. " ..
                 "Default behavior is normal."
       choices = THEME_CONTROL.MIXIN_CHOICES
       default = "normal"
+      gap = 1
+    }
+
+    level_upper_bound =
+    {
+      name = "level_upper_bound"
+      label = _("Upper Bound")
+      priority = 2
+      tooltip = "Fine tune upper limit for Level Size Episodic, Progressive and Mixed options."
+      choices = THEME_CONTROL.SIZE_CHOICES
+      default = "micro"
+    }
+    level_lower_bound =
+    {
+      name = "level_lower_bound"
+      label = _("Lower Bound")
+      priority = 1
+      tooltip = "Fine tune lower limit for Level Size Episodic, Progressive and Mixed options."
+      choices = THEME_CONTROL.SIZE_CHOICES
+      default = "extremest"
     }
   }
 }
