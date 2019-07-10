@@ -74,7 +74,7 @@ PREFABS.Locked_small_yellow =
   template = "Locked_small_red"
 
   key = "k_yellow"
-  tex_DOORRED = "DOORYEL2"
+  tex_DOORRED = "DOORYEL"
 
   line_33 = 34
 }
