@@ -1476,6 +1476,52 @@ function Room_border_up()
   end
 
 
+  local function can_fence(A1, A2)
+    if A1.mode != "floor" then
+      return false
+    end
+
+    if A2.mode != "floor" then
+      return false
+    end
+
+    return true
+  end
+
+
+  local function rail_or_fence(A1, A2)
+    if A1.fence_up_type
+    and A2.fence_up_type then
+
+      if A1.fence_up_type == "fence"
+      and A2.fence_up_type == "fence" then
+        return "fence"
+      end
+
+      if A1.fence_up_type == "rail"
+      and A2.fence_up_type == "rail" then
+        return "rail"
+      end
+
+      if A1.fence_up_type != A2.fence_up_type then
+        if A1.floor_h > A2.floor_h then
+          return A1.fence_up_type
+        else
+          return A2.fence_up_type
+        end
+      end
+    end
+
+    if A1.fence_up_type and not A2.fence_up_type then
+      return A1.fence_up_type
+    else
+      return A2.fence_up_type
+    end
+
+    return nil
+  end
+
+
   local function can_porch_wall(A1, A2)
     if (A1.mode == "floor"
     and A2.mode != "floor")
@@ -1660,9 +1706,15 @@ function Room_border_up()
 
       if A1.is_outdoor and A2.is_outdoor then
         if (A1.floor_h != A2.floor_h)
-        and (A1.mode == "floor" and A2.mode == "floor")
-        and rand.odds(style_sel("fences",0,20,40,60)) then
-          Junction_make_fence(junc)
+        and (A1.fence_up or A2.fence_up) then
+          if can_fence(A1, A2) then
+            local fence_up_type = rail_or_fence(A1, A2)
+            if fence_up_type == "fence" then
+              Junction_make_fence(junc)
+            elseif fence_up_type == "rail" then
+              Junction_make_railing(junc, "FENCE_MAT_FROM_THEME", "block")
+            end
+          end
         end
       end
 
@@ -1794,6 +1846,38 @@ function Room_border_up()
   end
 
 
+  local function decide_fenced_rooms()
+
+    local function can_have_fences(A)
+      if not A.room then return false end
+
+      if not A.room.is_outdoor then return false end
+
+      if A.is_porch then return false end
+
+      if A.mode == "floor" then
+        if rand.odds(style_sel("fences",0,30,60,90)) then
+          return true
+        end
+      end
+
+      return false
+    end
+
+    each A in LEVEL.areas do
+      if can_have_fences(A) then
+        A.fence_up = true
+        if rand.odds(50) then
+          A.fence_up_type = "fence"
+        else
+          A.fence_up_type = "rail"
+        end
+      end
+    end
+
+  end
+
+
   local function check_sky_closets()
     each A in LEVEL.areas do
       if A.mode != "chunk" then continue end
@@ -1816,6 +1900,8 @@ function Room_border_up()
 
   assign_window_groups()
   decide_window_boosts()
+
+  decide_fenced_rooms()
 
   check_sky_closets()
 
