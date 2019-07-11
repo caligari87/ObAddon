@@ -3647,25 +3647,35 @@ namelib.NAMES =
       -- %m = Material / Metal alloy
 
       -- Armaetus adds more grammar rules
+      ["Doom: %d on Earth"] = 10
       ["Doomguy VS the %e"] = 10 -- Doomguy VS the [Entity]
       ["Doomguy and the %e"] = 10 -- Doomguy and the [Entity]
       ["Vacation in the %d %p"] = 10 -- Vacation in the [Description] [Place]
+      ["Evil Unleashed: %a %d"] = 10
       ["%cs %d"] = 4 -- [Name]'s Abstract Object
       ["%cs %a %p"] = 4 -- [Name]'s [Adjective] [Place]
       ["%cs %p"] = 4 -- [Name]'s [Place]
       ["Dirty Deeds for the %e"] = 7 -- Dirty Deeds for the [Entity]
       ["The %e Attacks the %d %p"] = 7 -- The [Entity] Attacks the [Adjective] [Place]
       ["Is %c %a?"] = 2 -- Is [Name] Adjective?
+      ["%c Is NOT %a!"] = 2
       ["%cs Playhouse"] = 3 -- [Name]'s Playhouse
       ["%cs Warzone"] = 3 -- [Name]'s Warzone
       ["%d: the %a %p"] = 7
       ["Death: %a %p"] = 7
+      ["The %p: Our %d"] = 7
       ["Chaos: %a %p"] = 5
+      ["Complete %d"] = 5
+      ["Total %d"] = 5
       ["Treachery: The %d"] = 5
+      ["Quietus: Complete %d"] = 4
       ["Is %c By The %a %p?"] = 3
+      ["%a Death and %d"] = 5
       ["This WAD has %d"] = 5 -- This WAD has Abstract Objects
       ["%cs %a WAD"] = 3 -- [Name]'s [Adjective] WAD
       ["%cs WAD"] = 3
+      ["%cs Fun Zone"] = 3
+      ["Did %c Do This?"] = 3
       ["The %e Lurks Within"] = 5 -- The [Entity] Lurks Within
       ["The %e Lurks Below"] = 5
       ["%e Knows You"] = 4
@@ -3674,13 +3684,19 @@ namelib.NAMES =
       ["Doomguys Vacation with %c"] = 5 -- Doomguy's Vacation with [Name]
       ["Sin City: The %a %p"] = 5
       ["Sin City: The %d"] = 5
+      ["Ruination: %a %p"] = 3
       ["The %a %p of %m"] = 5
       ["Dead Base: The %d"] = 5
+      ["Demise of the %e"] = 4
+      ["The %e's Fun %a %p"] = 4
       ["The %m %p"] = 4
       ["As The %e Gather"] = 4
+      ["Insane %a %d"] = 4
+      ["Plenty of %d"] = 3
       ["Hell's %a Division: %d"] = 4
       ["%a Sorcery"] = 3
       ["%a Witchcraft"] = 3
+      ["%a Hellcraft"] = 3
       ["%d! Oh My Oh My"] = 3
     }
 
@@ -3754,13 +3770,16 @@ namelib.NAMES =
         Banished = 10
         Bleak = 10
         Broken = 10
+        Deserted = 10
         Desolate = 15
         Forgotten = 10
         Forsaken = 10
         Lonely = 10
         Lost  = 10
+        Neglected = 10
         Oppressive = 10
         Ravaged = 10
+        Shunned = 10
         Splintered = 10
         Wrecked = 10
 
@@ -3771,25 +3790,32 @@ namelib.NAMES =
         Surreal = 7
 
         -- evilz
-        Demonic = 15
+        Blasphemous = 15
         Corrupt = 15
         Chaotic = 15
         Cursed = 10
+        Demonic = 15
+        Deplorable = 15
+        Disgraceful = 10
         Evil = 15
         Feral = 10
         Ghastly = 10
         Ghoulish  = 10
+        Godless = 10
+        Gruesome = 15
         Haunted = 10
         Hellish = 10
         Malicious = 10
         Malevolent = 10
         Monstrous = 15
         Profane = 15
+        Sacreligious = 15
         Sinful  = 15
         Tortured = 10
         Unholy = 10
         Visceral = 15
         Vile    = 5
+        Violent = 10
         Wicked  = 10
         Wretched = 15
 
@@ -3801,20 +3827,27 @@ namelib.NAMES =
         Macabre = 10
 
         -- holy
-        Righteous = 10
+        Blessed = 7
+        Divine = 10
         Hallowed = 10
+        Righteous = 10
         Sanctimonious = 10
 
         -- asthetic
+        Appalling = 15
         Dark = 20
         Dreadful = 20
         Eerie = 10
-        Lurid = 10
         Hidden = 10
+        Lurid = 10
+        Terrifying = 20
 
         -- celestial
-        Solar = 10
+        Astral = 5
+        Cosmic = 5
         Lunar = 10
+        Solar = 10
+        Stellar = 10
 
         Lit = 8
       }
@@ -3970,6 +4003,7 @@ namelib.NAMES =
         Storms = 15
         Blizzard = 15
         Snow     = 10
+        Ashfall  = 10
         Drought  = 10
         Wildfire = 10
         Sandstorm = 10
