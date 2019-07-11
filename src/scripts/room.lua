@@ -1078,14 +1078,14 @@ function Room_detect_porches(R)
     R.porch_volume = 0
     each A in porchables do
 
+      if R.porch_volume >= R.svolume/3 then return end
+
       if A.porch_score > 0 and style_sel("porches", 0, 30, 60, 90) then
         set_as_porch(A)
 
         gui.debugf("Made %s into a PORCH\n", A.name)
         R.porch_volume = R.porch_volume + A.svolume
       end
-
-      if R.porch_volume >= R.svolume/3 then return end
 
     end
   end
@@ -3507,7 +3507,7 @@ function Room_cleanup_stairs_to_nowhere(R)
   end
 
 
-  local function fixup_neighboring_closets(A)
+  local function fixup_neighbors(A)
     each N in A.neighbors do
       if N.chunk then
         if N.chunk.kind == "closet" then
@@ -3516,6 +3516,24 @@ function Room_cleanup_stairs_to_nowhere(R)
           end
         end
       end
+
+      if N.mode == "liquid" then
+        local initial_height = 9001
+        local best_LN
+        each LN in N.neighbors do
+          if LN.room == N.room then
+            if LN.mode == "floor" and LN.floor_h < initial_height then
+              initial_height = LN.floor_h
+              best_LN = LN
+            end
+          end
+        end
+
+        N.floor_h = best_LN.floor_h - 16
+        N.ceil_h = best_LN.ceil_h
+
+      end
+
     end
   end
 
@@ -3573,7 +3591,7 @@ function Room_cleanup_stairs_to_nowhere(R)
         SA.floor_group = SAS.floor_group
         SA.ceil_group = SAS.ceil_group
 
-        fixup_neighboring_closets(A)
+        fixup_neighbors(A)
       end
     end
   end
