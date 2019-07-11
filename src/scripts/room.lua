@@ -2603,10 +2603,11 @@ function Room_floor_ceil_heights()
       process_park(R)
 
     else
-      Room_detect_porches(R)
-
       process_room(R, entry_area)
+
       select_floor_mats(R, via_conn)
+
+      Room_detect_porches(R)
     end
 
     -- recurse to neighbors
@@ -3100,6 +3101,16 @@ function Room_floor_ceil_heights()
           porch_count = porch_count + 1
         end
 
+        -- a staircase between two porches... porch it all the time
+        if A.chunk then
+          if A.chunk.kind == "stair" then
+            if A.chunk.from_area.is_porch and
+            A.chunk.dest_area.is_porch then
+              return A, N
+            end
+          end
+        end
+
         -- areas to be infected by porches should all be in the same room
         if A.room == N.room then
           if porch_count == #A.neighbors then
@@ -3251,6 +3262,8 @@ end
     do_stairs(R)
 
     do_closets(R)
+
+    Room_cleanup_stairs_to_nowhere(R)
   end
 end
 
@@ -3397,10 +3410,145 @@ function Room_set_sky_heights()
       do_fence(E)
     end
   end
+end
 
-  -- stairs and cages adjecant to porches should
-  -- probably inherit the porch heights and floors
-  -- MSSP-TODO
+
+
+function Room_cleanup_stairs_to_nowhere(R)
+
+  local function area_leads_to_nowhere(A)
+
+    -- style control
+    if rand.odds(style_sel("dead_ends", 0, 33, 66, 100)) then
+      return false
+    end
+
+    -- gotta be a floor obviously
+    if A.mode != "floor"
+    or not A.room
+    or not A.floor_h then return false end
+
+    -- sometimes leave outdoor ones alone
+    --if A.room.is_outdoor and rand.odds(50) then return false end
+
+    -- must have an area lesser than 4 seeds
+    if A.svolume > 4 then return false end
+
+    local same_room_neighbors = 0
+    local stair_neighbors = 0
+    local from_area
+    each N in A.neighbors do
+      if N.room == A.room and N.mode == "floor" then
+
+        same_room_neighbors = same_room_neighbors + 1
+
+        -- must not be connected to other areas with nearly the same floor height
+        local h_diff = math.abs(N.floor_h - A.floor_h)
+        if h_diff <= 16 then
+          return false
+        end
+
+        if N.chunk then
+          if N.chunk.kind == "stair" then
+            -- if this area has stairs that go elsewhere, exclude
+            stair_neighbors = stair_neighbors + 1
+          end
+
+          -- must not have a closet or joiner neighbor (because this means
+          -- this room can have something important)
+          if N.chunk.kind == "closet" or N.chunk.kind == "joiner" then
+            if N.chunk.from_area == A then
+              return false
+            end
+          end
+        end
+
+      end
+
+      -- must have at least a solid wall
+      if same_room_neighbors == #A.neighbors then return false end
+
+      -- must not have multiple stair connections
+      if stair_neighbors > 1 then return false end
+    end
+
+    return true
+  end
+
+
+  local function get_area_entry_stair(A)
+    local source_stair
+    local stair_source
+
+    each N in A.neighbors do
+      if N.chunk then
+
+        if N.chunk.kind == "stair" then
+          if A == N.chunk.dest_area then
+            source_stair = N
+            stair_source = N.chunk.from_area
+          elseif A == N.chunk.from_area then
+            source_stair = N
+            stair_source = N.chunk.dest_area
+          end
+          return source_stair, stair_source
+        end
+      end
+    end
+  end
+
+
+  local SA -- source stair area
+  local SAS -- source stair area's source area. Yes, that's not intuitive
+            -- to think about, is it?
+
+  each A in R.areas do
+    if area_leads_to_nowhere(A, R) then
+      SA, SAS = get_area_entry_stair(A)
+
+      gui.printf("AREA_"..A.id.." leads to nowhere. "..
+      "("..A.seeds[1].x1..", "..A.seeds[1].y1..")".."\n")
+
+      if SAS then
+        -- convert nowhere areas to just normal areas (borrow info from main area)
+        A.floor_h = SAS.floor_h
+        A.ceil_h = SAS.ceil_h
+        A.floor_mat = SAS.floor_mat
+        A.ceil_mat = SAS.ceil_mat
+
+        A.floor_group = SAS.floor_group
+        A.ceil_group = SAS.ceil_group
+
+        A.prelim_h = SAS.prelim_h
+
+        SA.mode = "floor"
+
+        -- MSSP-FIXME: Find a better way - remove the chunk
+        -- instead of giving it a stand-in prefab.
+        SA.chunk.prefab_def = PREFABS["Completely_nothing"]
+        SA.chunk.mode = "floor"
+        SA.chunk.occupy = nil
+        SA.chunk.ignore_stairs = true
+
+        if SA.is_porch_neighbor then
+          SA.is_porch_neighbor = false
+          SA.is_porch = true
+        end
+
+        SA.floor_h = SAS.floor_h
+        SA.ceil_h = SAS.ceil_h
+
+        SA.prelim_h = SAS.prelim_h
+
+        SA.floor_mat = SAS.floor_mat
+        SA.ceil_mat = SAS.ceil_mat
+
+        SA.floor_group = SAS.floor_group
+        SA.ceil_group = SAS.ceil_group
+      end
+    end
+  end
+
 end
 
 
@@ -3472,6 +3620,7 @@ function Room_build_all()
 
   Room_floor_ceil_heights()
   Room_set_sky_heights()
+
 
   -- this does other stuff (crates, free-standing cages, etc..)
   Layout_decorate_rooms(2)

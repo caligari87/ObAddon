@@ -244,7 +244,16 @@ OB_MODULES["misc"] =
       "Can help reduce being overwhelmed by attacks from multiple directions " ..
       "when multiple neighboring rooms connect into the start room.")
       default = "no"
-      gap=1
+    }
+    {
+      name="dead_ends"
+      label=_("Dead Ends")
+      choices=STYLE_CHOICES
+      tooltip=_("Cleans up and removes areas with staircases that lead to nowhere.\n" ..
+      "NONE means all dead ends are removed.\n" ..
+      "Heaps means all dead ends are preserved (Oblige default).")
+      default = "heaps"
+      gap = 1
     }
 
     {
