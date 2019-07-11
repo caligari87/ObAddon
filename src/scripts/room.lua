@@ -3438,17 +3438,23 @@ function Room_cleanup_stairs_to_nowhere(R)
     local stair_neighbors = 0
     local from_area
     each N in A.neighbors do
-      if N.room == A.room and N.mode == "floor" then
 
-        same_room_neighbors = same_room_neighbors + 1
+      if N.room == A.room then
 
-        -- must not be connected to other areas with nearly the same floor height
-        local h_diff = math.abs(N.floor_h - A.floor_h)
-        if h_diff <= 16 then
-          return false
+        if N.mode == "floor" then
+
+          same_room_neighbors = same_room_neighbors + 1
+
+          -- must not be connected to other areas with nearly the same floor height
+          local h_diff = math.abs(N.floor_h - A.floor_h)
+          if h_diff <= 16 then
+            return false
+          end
+
         end
 
         if N.chunk then
+
           if N.chunk.kind == "stair" then
             -- if this area has stairs that go elsewhere, exclude
             stair_neighbors = stair_neighbors + 1
@@ -3456,8 +3462,11 @@ function Room_cleanup_stairs_to_nowhere(R)
 
           -- must not have a closet or joiner neighbor (because this means
           -- this room can have something important)
-          if N.chunk.kind == "closet" or N.chunk.kind == "joiner" then
+          if N.chunk.kind == "joiner" then
             if N.chunk.from_area == A then
+              return false
+            end
+            if N.chunk.dest_area == A then
               return false
             end
           end
@@ -3498,6 +3507,19 @@ function Room_cleanup_stairs_to_nowhere(R)
   end
 
 
+  local function fixup_neighboring_closets(A)
+    each N in A.neighbors do
+      if N.chunk then
+        if N.chunk.kind == "closet" then
+          if A == N.chunk.from_area then
+            N.floor_h = N.chunk.from_area.floor_h
+          end
+        end
+      end
+    end
+  end
+
+
   local SA -- source stair area
   local SAS -- source stair area's source area. Yes, that's not intuitive
             -- to think about, is it?
@@ -3511,8 +3533,11 @@ function Room_cleanup_stairs_to_nowhere(R)
 
       if SAS then
         -- convert nowhere areas to just normal areas (borrow info from main area)
+        if A.floor_h < SAS.floor_h then
+          A.ceil_h = SAS.ceil_h
+        end
         A.floor_h = SAS.floor_h
-        A.ceil_h = SAS.ceil_h
+
         A.floor_mat = SAS.floor_mat
         A.ceil_mat = SAS.ceil_mat
 
@@ -3535,8 +3560,10 @@ function Room_cleanup_stairs_to_nowhere(R)
           SA.is_porch = true
         end
 
+        if SA.floor_h < SAS.floor_h then
+          SA.ceil_h = SAS.ceil_h
+        end
         SA.floor_h = SAS.floor_h
-        SA.ceil_h = SAS.ceil_h
 
         SA.prelim_h = SAS.prelim_h
 
@@ -3545,6 +3572,8 @@ function Room_cleanup_stairs_to_nowhere(R)
 
         SA.floor_group = SAS.floor_group
         SA.ceil_group = SAS.ceil_group
+
+        fixup_neighboring_closets(A)
       end
     end
   end
