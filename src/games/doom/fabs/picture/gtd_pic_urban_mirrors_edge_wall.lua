@@ -5,7 +5,7 @@ PREFABS.Pic_urban_mirrors_edge_wall =
   file   = "picture/gtd_pic_urban_mirrors_edge_wall.wad"
   map    = "MAP01"
 
-  prob   = 100
+  prob   = 200
   theme = "urban"
 
   env = "building"
@@ -37,7 +37,7 @@ PREFABS.Pic_urban_mirrors_edge_wall_EPIC =
   file   = "picture/gtd_pic_urban_mirrors_edge_wall.wad"
   map    = "MAP01"
 
-  prob   = 100
+  prob   = 200
   theme = "urban"
 
   env = "building"

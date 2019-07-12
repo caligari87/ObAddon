@@ -10,7 +10,7 @@ PREFABS.Item_craneo_smasher_tech =
 
   size = 72
 
-  prob = 8
+  prob = 20
 }
 
 PREFABS.Item_craneo_smasher_alt_tech =
