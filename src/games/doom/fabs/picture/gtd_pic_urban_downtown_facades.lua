@@ -1,4 +1,4 @@
-PREFABS.Pic_urban_downtown_facade1 =
+PREFABS.Pic_urban_downtown_facade1_vanilla =
 {
   file   = "picture/gtd_pic_urban_downtown_facades.wad"
   map    = "MAP01"
@@ -7,6 +7,91 @@ PREFABS.Pic_urban_downtown_facade1 =
   theme  = "urban"
 
   env    = "outdoor"
+
+  seed_w = 2
+  seed_h = 1
+
+  where  = "seeds"
+  deep   = 16
+  over   = -16
+
+  height = 256
+
+  y_fit  = "top"
+  x_fit  = { 124,132 }
+
+  tex_CITY01 =
+  {
+    MODWALL2 = 50
+    MODWALL3 = 50
+    MODWALL4 = 50
+    BLAKWAL1 = 50
+    BLAKWAL2 = 50
+  }
+
+  flat_TLITE6_6 =
+  {
+    TLITE6_5 = 25
+    TLITE6_6 = 25
+  }
+
+  -- textures for the top half of the 'door' area
+  tex_MODWALL3 =
+  {
+    MODWALL2 = 50
+    MODWALL3 = 50
+    MODWALL4 = 50
+    BLAKWAL1 = 50
+    BLAKWAL2 = 50
+  }
+
+  -- textures for the bottom half (and all of the 'doors' in facade2)
+  tex_MODWALL4 =
+  {
+    MODWALL2 = 50
+    MODWALL3 = 50
+    MODWALL4 = 50
+    BLAKWAL1 = 50
+    BLAKWAL2 = 50
+    STEP1 = 50
+    STEP2 = 50
+    STEP3 = 50
+    STEP4 = 50
+    STEP5 = 50
+    STEPLAD1 = 50
+  }
+
+  tex_STEP4 =
+  {
+    STEP1=50
+    STEP2=50
+    STEP3=50
+    STEP4=50
+    STEP5=50
+    STEP6=50
+    STEPLAD1=50
+    COMPBLUE=50
+    REDWALL=50
+  }
+}
+
+PREFABS.Pic_urban_downtown_facade2_vanilla =
+{
+  template = "Pic_urban_downtown_facade1_vanilla"
+  map      = "MAP02"
+}
+
+PREFABS.Pic_urban_downtown_facade1_EPIC =
+{
+  file   = "picture/gtd_pic_urban_downtown_facades.wad"
+  map    = "MAP01"
+
+  prob   = 300
+  theme  = "urban"
+
+  env    = "outdoor"
+
+  replaces = "Pic_urban_downtown_facade1_vanilla"
 
   uses_epic_textures = true
 
@@ -24,6 +109,11 @@ PREFABS.Pic_urban_downtown_facade1 =
 
   tex_CITY01 =
   {
+    MODWALL2 = 25
+    MODWALL3 = 25
+    MODWALL4 = 25
+    BLAKWAL1 = 25
+    BLAKWAL2 = 25
     CITY01 = 50
     CITY02 = 50
     CITY03 = 50
@@ -110,8 +200,10 @@ PREFABS.Pic_urban_downtown_facade1 =
   }
 }
 
-PREFABS.Pic_urban_downtown_facade2 =
+PREFABS.Pic_urban_downtown_facade2_EPIC =
 {
-  template = "Pic_urban_downtown_facade1"
+  template = "Pic_urban_downtown_facade1_EPIC"
   map      = "MAP02"
+
+  replaces = "Pic_urban_downtown_facade2_vanilla"
 }
