@@ -1,13 +1,13 @@
 -- Item dropped by dead marine near locked guardpost entrance
 
-PREFABS.Item_ScionoxGuardpostBlocked =
+PREFABS.Item_scionox_guardpost_blocked =
 {
-  file   = "item/ScionoxGuardpostBlocked.wad"
+  file   = "item/scionox_guardpost_blocked.wad"
   map    = "MAP02"
 
   prob   = 100
   theme  = "!hell"
- 
+
   env    = "!building"
 
   where  = "seeds"
@@ -19,7 +19,7 @@ PREFABS.Item_ScionoxGuardpostBlocked =
 
   x_fit  = "frame"
   y_fit  = "frame"
-  
+
   tex_COMPSTA1 = { COMPSTA1=50, COMPSTA2=50 }
   tex_GRAY5 = { GRAY5=50, BIGBRIK2=50, BLAKWAL2=50, MODWALL3=50, METAL2=50, SHAWN2=50 }
   tex_STARGR1 = { STARGR1=50, BIGBRIK1=50, BRICK12=50, BRICK7=50, MODWALL1=50, SLADWALL=50 }
@@ -31,14 +31,14 @@ PREFABS.Item_ScionoxGuardpostBlocked =
 
 -- Secret closet inside destroyed guardpost
 
-PREFABS.Item_ScionoxGuardpostSecret =
+PREFABS.Item_scionox_guardpost_secret =
 {
-  file   = "item/ScionoxGuardpostBlocked.wad"
+  file   = "item/scionox_guardpost_blocked.wad"
   map    = "MAP01"
 
   prob   = 100
   theme  = "!hell"
- 
+
   env    = "building"
 
   where  = "seeds"
@@ -51,7 +51,7 @@ PREFABS.Item_ScionoxGuardpostSecret =
 
   x_fit  = "frame"
   y_fit  = "frame"
-  
+
   tex_GRAY5 = { GRAY5=50, BIGBRIK2=50, BLAKWAL2=50, MODWALL3=50, METAL2=50, SHAWN2=50 }
   flat_FLOOR4_6 = { FLOOR4_6=50, FLOOR1_1=50, FLOOR0_3=50, FLAT5=50 }
   flat_CEIL5_1 = { CEIL5_1=50, CEIL3_3=50, CEIL4_2=50, CEIL5_2=50 }

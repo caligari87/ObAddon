@@ -1,14 +1,14 @@
 -- Joiner Inside-to-outside
 
-PREFABS.Joiner_ScionoxGuardpost =
+PREFABS.Joiner_scionox_guardpost =
 {
-  file   = "joiner/ScionoxGuardpost.wad"
+  file   = "joiner/scionox_guardpost.wad"
   map    = "MAP01"
 
   prob   = 100
   theme  = "!hell"
   style  = "doors"
- 
+
   env    = "building"
   neighbor = "!building"
 
@@ -23,7 +23,7 @@ PREFABS.Joiner_ScionoxGuardpost =
 
   x_fit  = "frame"
   y_fit  = "frame"
-  
+
   tex_COMPSTA1 = { COMPSTA1=50, COMPSTA2=50 }
   tex_GRAY5 = { GRAY5=50, BIGBRIK2=50, BLAKWAL2=50, MODWALL3=50, METAL2=50, SHAWN2=50 }
   flat_FLOOR4_6 = { FLOOR4_6=50, FLOOR1_1=50, FLOOR0_3=50, FLAT5=50 }
@@ -32,32 +32,32 @@ PREFABS.Joiner_ScionoxGuardpost =
 
 -- Joiner Outside-to-inside
 
-PREFABS.Joiner_ScionoxGuardpost2 =
+PREFABS.Joiner_scionox_guard_post2 =
 {
-  template = "Joiner_ScionoxGuardpost"
+  template = "Joiner_scionox_guardpost"
   map    = "MAP02"
- 
+
   env    = "!building"
   neighbor = "building"
 }
 
 -- Joiner Inside-to-outside Blue
 
-PREFABS.Joiner_ScionoxGuardpostBlue =
+PREFABS.Joiner_scionox_guardpost_blue =
 {
-  template = "Joiner_ScionoxGuardpost"
+  template = "Joiner_scionox_guardpost"
   map    = "MAP03"
- 
+
   key    = "k_blue"
 }
 
 -- Joiner Inside-to-outside Red
 
-PREFABS.Joiner_ScionoxGuardpostRed =
+PREFABS.Joiner_scionox_guardpost_red =
 {
-  template = "Joiner_ScionoxGuardpost"
+  template = "Joiner_scionox_guardpost"
   map    = "MAP03"
- 
+
   key    = "k_red"
   tex_DOORBLU = "DOORRED"
   line_133     = 135
@@ -65,11 +65,11 @@ PREFABS.Joiner_ScionoxGuardpostRed =
 
 -- Joiner Inside-to-outside Yellow
 
-PREFABS.Joiner_ScionoxGuardpostYellow =
+PREFABS.Joiner_scionox_guardpost_yellow =
 {
-  template = "Joiner_ScionoxGuardpost"
+  template = "Joiner_scionox_guardpost"
   map    = "MAP03"
- 
+
   key    = "k_yellow"
   tex_DOORBLU = "DOORYEL"
   line_133     = 137
@@ -77,19 +77,19 @@ PREFABS.Joiner_ScionoxGuardpostYellow =
 
 -- Joiner Inside-to-outside All
 
-PREFABS.Joiner_ScionoxGuardpostAll =
+PREFABS.Joiner_scionox_guardpost_all =
 {
-  template = "Joiner_ScionoxGuardpost"
+  template = "Joiner_scionox_guardpost"
   map    = "MAP04"
- 
+
   key    = "k_ALL"
 }
 
 -- Joiner Inside-to-outside Trapped
 
-PREFABS.Joiner_ScionoxGuardpostTrapped =
+PREFABS.Joiner_scionox_guardpost_trapped =
 {
-  template = "Joiner_ScionoxGuardpost"
+  template = "Joiner_scionox_guardpost"
   map    = "MAP05"
   seed_w = 3
 }
