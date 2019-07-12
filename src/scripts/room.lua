@@ -1493,14 +1493,8 @@ function Room_border_up()
     if A1.fence_up_type
     and A2.fence_up_type then
 
-      if A1.fence_up_type == "fence"
-      and A2.fence_up_type == "fence" then
-        return "fence"
-      end
-
-      if A1.fence_up_type == "rail"
-      and A2.fence_up_type == "rail" then
-        return "rail"
+      if A1.fence_up_type == A2.fence_up_type then
+        return A1.fence_up_type
       end
 
       if A1.fence_up_type != A2.fence_up_type then

@@ -169,6 +169,7 @@ MONSTER_KIND_TAB =
   insane = 2.0
   deranged = 2.0
   nuts   = 2.0
+  chaotic = 2.0
   nutser = 2.0
 }
 
