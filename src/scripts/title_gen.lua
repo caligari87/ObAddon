@@ -2142,13 +2142,62 @@ function Title_split_into_lines()
   --       little "of", "in", etc.. to be placed in-between
   --   (c) fourth value can be "The"
   --
+
+  -- MSSP's notes:
+  -- The lines are in the format:
+  --
+  -- top_line
+  -- line1
+  -- mid_line
+  -- line2
+  --
+  -- Actual return pattern:
+  -- line1, line2, mid_line, top_line
+
   local words = {}
 
-  for w in string.gmatch(GAME.title, "%w+") do
+  for w in string.gmatch(GAME.title, "%S+") do
     table.insert(words, w)
   end
 
   local top_line
+
+  -- MSSP-FIXME: kind of broken
+  -- for apostrophes and colons
+  --[[if string.match(GAME.title, "'s")
+  or string.match(GAME.title, ":") then
+    local lf1 = ""
+    local lf2 = ""
+
+    local divider_encountered = false
+    local since_div = 0
+
+    for w in string.gmatch(GAME.title, "%S+") do
+
+      if since_div <= 1 then
+        lf1 = lf1 .. w .. " "
+      end
+
+      if since_div > 1 then
+        lf2 = lf2 .. w .. " "
+      end
+
+      if string.gmatch(w, "'s")
+      or string.gmatch(w, ":") then
+        divider_encountered = true
+      end
+
+      if divider_encountered then
+        since_div = since_div + 1
+      end
+
+    end
+
+    lf1 = lf1:match("^%s*(.-)%s*$")
+    lf2 = lf2:match("^%s*(.-)%s*$")
+
+    return lf1, lf2, nil, nil
+  end]]
 
   if words[1] == "The" or words[1] == "A" or words[1] == "An" then
     top_line = table.remove(words, 1)
@@ -2241,7 +2290,6 @@ function Title_add_title()
   if line2 then line2 = string.upper(line2) end
 
   if mid_line then mid_line = string.upper(mid_line) end
-
 
   -- determine what kind of sub-title we will draw (if any)
   local sub_title
@@ -2610,4 +2658,3 @@ function Title_generate()
   Title_make_interpic()
   Title_make_titlepic()
 end
-

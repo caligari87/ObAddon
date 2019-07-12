@@ -1059,12 +1059,16 @@ function ob_default_filename()
   Naming_init()
 
   OB_CONFIG.title = Naming_grab_one("TITLE")
+  GAME.title = OB_CONFIG.title
 
   -- massage into a usable filename
   local str = string.lower(OB_CONFIG.title)
 
   str = string.gsub(str, "%p", "")
   str = string.gsub(str, " ", "_")
+  str = string.gsub(str, ":", "")
+  str = string.gsub(str, "'", "")
+  str = string.gsub(str, ",", "")
 
   local current_date = os.date("*t")
 
