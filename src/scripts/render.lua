@@ -258,13 +258,10 @@ function Render_edge(E)
         reqs.flat = true
       end
 
-      -- if this wall is in front of a small chunk with
-      -- something important in it (i.e. switches and so on)
-      -- pick a flat wall fab instead as to not cut-up
-      -- potentially important and game-breaking items
+      -- if seed in front of the edge has anything on it
+      -- choose a flat wall fab instead
       if E.S.chunk then
-        if E.S.chunk.content
-        and (E.S.chunk.sw + E.S.chunk.sh <= 4) then
+        if E.S.chunk.content then
           reqs.flat = true
         end
       end
