@@ -1305,7 +1305,6 @@ DOOM.THEMES =
       BIGBRIK1 = 40
       BIGBRIK2 = 30
       MODWALL1 = 30
-      MODWALL3 = 30
       STONE3   = 30
       STONE2   = 30
       BLAKWAL1 = 20
@@ -2115,18 +2114,25 @@ DOOM.ROOM_THEMES =
 
 -----  TECH BASES  --------------------------------
 
-  tech_Startan =
+  -- MSSP: revised to include more STAR textures
+  -- because why ya gotta ba so TAN?
+  tech_Starbase =
   {
     env  = "building"
     prob = 70
 
     walls =
     {
-      STARTAN3 = 60
-      STARG3 = 40
-      STARG2 = 10
-
       STARTAN2 = 50
+      STARTAN3 = 60
+
+      STARG1 = 40
+      STARG2 = 20
+      STARG3 = 40
+
+      STARGR1 = 50
+      STARGR2 = 20
+
       STARBR2  = 40
     }
 
@@ -2220,6 +2226,7 @@ DOOM.ROOM_THEMES =
       METAL2 = 90
       METAL1 = 35
       BRONZE1 = 30
+      BRONZE2 = 15
       BRONZE3 = 30
       METAL4 = 15
       PIPE4 = 10
@@ -3659,7 +3666,10 @@ DOOM.ROOM_THEMES =
   }
 
 
-  urban_Modwall =
+  -- MSSP: MODWALL3 looks pretty weird
+  -- as a regular wall texture now that fabs consistently use them more
+  -- thus, this is now the 'brown' theme instead
+  urban_BrownyMcBrownston =
   {
     env  = "building"
     prob = 10
@@ -3667,7 +3677,11 @@ DOOM.ROOM_THEMES =
     walls =
     {
       MODWALL1 = 60
-      MODWALL3 = 30
+      BROWN1 = 30
+      BROWN144 = 40
+      BROWNHUG = 20
+      BRONZE1 = 20
+      BRONZE3 = 20
     }
 
     floors =
@@ -3697,6 +3711,56 @@ DOOM.ROOM_THEMES =
       RROCK03  = 10
       RROCK10  = 10
       RROCK12  = 5
+    }
+  }
+
+
+  -- MSSP: grey focused stuff, i.e. for the hospital/office look
+  urban_ShadesOfGrey =
+  {
+    env = "building"
+    prob = 15
+
+    walls =
+    {
+      GRAY1 = 50
+      GRAY4 = 30
+      GRAY5 = 50
+      GRAY7 = 50
+      GRAYTALL = 5
+      STONE2 = 20
+
+      ICKWALL1 = 10 -- well, some hospitals and offices
+      ICKWALL2 = 10 -- have probably fallen into disrepair by now
+    }
+
+    floors =
+    {
+      FLAT1 = 35
+      FLAT18 = 20
+      FLAT19 = 20
+      FLAT20 = 50
+      FLAT3 = 50
+      FLAT4 = 30
+      FLOOR0_3 = 50
+      FLOOR0_5 = 50
+
+      FLAT14 = 80 -- nice colored carpet look
+      FLOOR1_6 = 80
+      FLOOR7_1 = 25
+      CEIL3_3 = 25
+    }
+
+    ceilings =
+    {
+      CRATOP1 = 50
+      FLAT18 = 50
+      FLAT19 = 50
+      CEIL5_1 = 10
+      FLAT9 = 20
+      FLOOR0_3 = 20
+      FLOOR0_5 = 20
+      FLAT5_4 = 50
     }
   }
 
