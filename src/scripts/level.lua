@@ -212,7 +212,7 @@ function Level_determine_map_size(LEV)
     if PARAM.level_lower_bound then
       each k,v in MIXED_PROBS do
         if SIZES[k] < SIZES[PARAM.level_lower_bound] then
-          v = 0
+          MIXED_PROBS[k] = 0
         end
       end
     end
