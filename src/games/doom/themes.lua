@@ -3545,6 +3545,7 @@ DOOM.ROOM_THEMES =
     walls =
     {
       CEMENT7 = 50
+      CEMENT9 = 50
     }
 
     floors =

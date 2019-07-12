@@ -1061,9 +1061,75 @@ GLAICE_THEMES =
 
     cliff_mats =
     {
-    FIREBLU1 = 100
-    RDROK1 = 50
-    RDROK2 = 50
+      FIREBLU1 = 100
+      RDROK1 = 50
+      RDROK2 = 50
+    }
+  }
+
+  -- MSSP
+  hell_egyptish =
+  {
+    env = "building"
+    prob = 120
+
+    walls =
+    {
+      BRIKS03 = 15
+      BRIKS06 = 15
+      BRISK12 = 15
+      BRISK14 = 15
+
+      DESBRIK1 = 50
+      DESBRIK2 = 50
+      DESBRIK3 = 50
+      DESBRIK4 = 50
+      DESBRIK5 = 50
+      DESBRIK6 = 50
+      DESBRIK7 = 50
+
+      DESMARB1 = 25
+      DESMARB2 = 50
+
+      EGYPT03 = 50
+      EGYPT04 = 50
+      EGYPT05 = 50
+      EGYPT06 = 50
+    }
+
+    floors =
+    {
+      BRIK01 = 50
+      EG01 = 50
+      EG02 = 50
+      EG03 = 50
+      EG04 = 50
+      EG05 = 15
+      EG06 = 50
+
+      GSTN03 = 50
+      GSTN04 = 50
+      GSTN05 = 50
+
+      FLOOR0_1 = 20
+      FLOOR3_3 = 20
+      RROCK09 = 15
+      RROCK10 = 15
+      RROCK12 = 15
+      RROCK15 = 15
+    }
+
+    ceilings =
+    {
+      EG01 = 50
+      EG03 = 50
+      EG06 = 50
+      FLOOR0_1 = 50
+      FLOOR3_3 = 50
+      RROCK09 = 20
+      RROCK10 = 20
+      RROCK12 = 20
+      RROCK15 = 20
     }
   }
 
@@ -1275,7 +1341,7 @@ GLAICE_THEMES =
   urban_MoreWood =
   {
     env = "building"
-    prob = 100
+    prob = 75
 
     walls =
     {
@@ -1321,6 +1387,61 @@ GLAICE_THEMES =
     SLIME14 = 20
     SLIME15 = 20
 
+    }
+  }
+
+  -- MSSP: anything that vaguely looks like cement
+  urban_Cement =
+  {
+    env = "building"
+    prob = 100
+
+    walls =
+    {
+      CEM01 = 50
+      CEM02 = 50
+      CEM06 = 50
+      CEM07 = 50
+      CEM09 = 50
+      CEM10 = 100
+      CEM11 = 100
+      STON7 = 100
+      STONE10 = 100
+      STONE8 = 100
+      STONE9 = 75
+    }
+
+    floors =
+    {
+      FFLAT01 = 100
+      SHINY01 = 50
+      SHINY02 = 50
+      STARGRF = 50
+      TILES4 = 100
+      TILES5 = 100
+      TILES6 = 100
+      FLOOR4_7 = 100
+
+      FLOOR1_6 = 75
+      FLAT14 = 75
+
+      FLAT3 = 25
+      FLAT4 = 15
+      FLAT18 = 25
+      FLAT19 = 25
+      FLAT20 = 25
+      FLAT1 = 50
+      FLOOR0_5 = 75
+      FLOOR0_3 = 75
+    }
+
+    ceilings =
+    {
+      FLAT1 = 50
+      FLAT18 = 50
+      FLAT19 = 50
+      FLAT3 = 25
+      FLAT5_4 = 50
     }
   }
 
