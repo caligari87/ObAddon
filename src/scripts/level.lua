@@ -2424,14 +2424,16 @@ function Level_choose_skybox()
   end
 
   if OB_CONFIG.zdoom_skybox == "random" then
-    local skyfab_list = {}
-    each def in PREFABS do
-      if def.kind == "skybox" then
-        table.insert(skyfab_list)
-      end
-    end
+    local reqs =
+    {
+      kind = "skybox"
+      where = "point"
+      size = 1
+    }
 
-    skyfab = rand.pick(skyfab_list)
+    local def = Fab_pick(reqs)
+
+    skyfab = assert(def)
 
   elseif OB_CONFIG.zdoom_skybox == "themed" then
 

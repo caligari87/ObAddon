@@ -5,6 +5,8 @@ PREFABS.Skybox_hellish_city =
 
   prob  = 50
 
+  where = "point"
+
   kind  = "skybox"
 
   bound_z0 = -256

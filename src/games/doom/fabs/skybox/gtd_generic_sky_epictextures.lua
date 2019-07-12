@@ -5,6 +5,10 @@ PREFABS.Skybox_generic_EPIC =
 
   prob  = 50
 
+  where = "point"
+
+  uses_epic_textures = true
+
   kind  = "skybox"
 
   bound_z0 = -256

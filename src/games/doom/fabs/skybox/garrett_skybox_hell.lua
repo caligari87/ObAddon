@@ -5,6 +5,8 @@ PREFABS.Skybox_garrett_hell =
 
   prob  = 50
 
+  where = "point"
+
   kind  = "skybox"
 
   bound_z0 = -256

@@ -2,8 +2,16 @@
 
 PREFABS.Fence_pillar =
 {
-  file   = "fence/gtd_pillar.wad"
-  map    = "MAP01"
+  file = "fence/gtd_pillar.wad"
+  map = "MAP01"
 
-  where  = "point"
+  kind = "pillar"
+  where = "point"
+
+  size = 16
+  height = 2
+
+  prob = 50
+
+  bound_z0 = 0
 }
