@@ -3753,7 +3753,6 @@ DOOM.ROOM_THEMES =
 
     ceilings =
     {
-      CRATOP1 = 50
       FLAT18 = 50
       FLAT19 = 50
       CEIL5_1 = 10
