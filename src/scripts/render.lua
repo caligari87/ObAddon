@@ -3680,7 +3680,19 @@ gui.spots_dump("Cave spot dump")
   local function spots_in_room(R)
     each A in R.areas do
       if A.mode == "floor" or A.mode == "cage" then
-        spots_in_flat_floor(R, A)
+        if not A.floor_group then
+          spots_in_flat_floor(R, A)
+        elseif A.floor_group then
+          if A.floor_group.sink then
+            if A.floor_group.sink.mat == "_LIQUID" and not LEVEL.liquid.damage then
+              spots_in_flat_floor(R, A)
+            elseif A.floor_group.sink.mat != "_LIQUID" then
+              spots_in_flat_floor(R, A)
+            end
+          else
+            spots_in_flat_floor(R, A)
+          end
+        end
 
       elseif A.mode == "liquid" and not LEVEL.liquid.damage
       and A.seeds[1] then

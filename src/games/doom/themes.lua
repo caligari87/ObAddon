@@ -3624,7 +3624,7 @@ DOOM.ROOM_THEMES =
   urban_Stucco =
   {
     env  = "building"
-    prob = 15
+    prob = 20
 
     walls =
     {
@@ -3672,7 +3672,7 @@ DOOM.ROOM_THEMES =
   urban_BrownyMcBrownston =
   {
     env  = "building"
-    prob = 10
+    prob = 20
 
     walls =
     {
@@ -3719,7 +3719,7 @@ DOOM.ROOM_THEMES =
   urban_ShadesOfGrey =
   {
     env = "building"
-    prob = 15
+    prob = 40
 
     walls =
     {
