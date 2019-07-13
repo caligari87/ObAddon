@@ -672,7 +672,8 @@ ULTDOOM.THEMES =
       round  = 5
       gtd_window_cage_highbars = 20
       gtd_window_cage_lowbars = 10
-      gtd_window_full_open = 30
+      gtd_window_full_open = 15
+      gtd_window_full_open_tall = 15
       gtd_window_bay = 20
       gtd_window_absurdly_open = 25
     }
@@ -1080,8 +1081,10 @@ ULTDOOM.THEMES =
       gtd_window_cage_highbars = 20
       gtd_window_cage_lowbars = 20
       gtd_window_cage_hell = 50
-      gtd_window_arched = 80
-      gtd_window_full_open = 60
+      gtd_window_arched = 50
+      gtd_window_arched_tall = 50
+      gtd_window_full_open = 30
+      gtd_window_full_open_tall = 30
       gtd_window_absurdly_open = 40
     }
 
@@ -1400,8 +1403,10 @@ ULTDOOM.THEMES =
       gtd_window_cage_highbars = 30
       gtd_window_cage_lowbars = 20
       gtd_window_cage_hell = 40
-      gtd_window_arched = 80
-      gtd_window_full_open = 40
+      gtd_window_arched = 60
+      gtd_window_arched_tall = 60
+      gtd_window_full_open = 30
+      gtd_window_full_open_tall = 30
       gtd_window_absurdly_open = 30
     }
 

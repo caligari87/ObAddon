@@ -280,13 +280,13 @@ function Render_edge(E)
 
           -- override: but if there are height differences
           -- why not allow it?
-          if that_seed.floor_h and E.S.floor_h then
-            if that_seed.floor_h >= E.S.floor_h + 128 then
+          if that_seed.area.floor_h and E.S.area.floor_h then
+            if that_seed.area.floor_h >= E.S.area.floor_h + 128 then
               reqs.has_solid_back = true
             end
           end
-          if that_seed.ceil_h and E.S.ceil_h then
-            if that_seed.ceil_h <= E.S.floor_h then
+          if that_seed.area.ceil_h and E.S.area.ceil_h then
+            if that_seed.area.ceil_h <= E.S.area.floor_h then
               reqs.has_solid_back = true
             end
           end
@@ -857,6 +857,13 @@ stderrf("dA = (%1.1f %1.1f)  dB = (%1.1f %1.1f)\n", adx, ady, bdx, bdy)
     else  -- axis-aligned edge
 
       T = Trans.edge_transform(E, z, 0, 0, def.deep, def.over, flip_it)
+    end
+
+    -- MSSP: allow fitted_z use for doors and windows! Yaay!
+    if def.z_fit then
+      local min_ceil = math.min(E.area.ceil_h, E.peer.area.ceil_h)
+      local max_floor = math.max(E.area.floor_h, E.peer.area.floor_h)
+      Trans.set_fitted_z(T, max_floor, min_ceil)
     end
 
     -- choose lighting to be the minimum of each side

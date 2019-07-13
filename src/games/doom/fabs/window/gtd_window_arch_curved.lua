@@ -38,3 +38,37 @@ PREFABS.Window_arched_3 =
 
   seed_w = 3
 }
+
+PREFABS.Window_arched_1_tall =
+{
+  template = "Window_arched_1"
+  map = "MAP01"
+
+  group = "gtd_window_arched_tall"
+
+  z_fit = { 26,30 }
+}
+
+PREFABS.Window_arched_2_tall =
+{
+  template = "Window_arched_1"
+  map = "MAP02"
+
+  group = "gtd_window_arched_tall"
+
+  seed_w = 2
+
+  z_fit = { 26,30 }
+}
+
+PREFABS.Window_arched_3_tall =
+{
+  template = "Window_arched_1"
+  map = "MAP03"
+
+  group = "gtd_window_arched_tall"
+
+  seed_w = 3
+
+  z_fit = { 26,30 }
+}

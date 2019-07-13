@@ -13,8 +13,10 @@ PREFABS.Window_absurdly_open_1 =
   deep   = 16
   over   = 16
 
+  z_fit = { 16,24 }
+
   bound_z1 = 0
-  bound_z2 = 16
+  bound_z2 = 128
 }
 
 PREFABS.Window_absurdly_open_2 =
