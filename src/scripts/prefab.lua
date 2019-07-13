@@ -2364,13 +2364,13 @@ function Fab_find_matches(reqs, match_state)
   end
 
 
-  local function prob_for_match(def, match_state)
+  local function prob_for_match(def, match_state, theme_override)
     local prob = assert(def.use_prob)
 
     if prob <= 0 then return 0 end
 
-    if not ob_match_level_theme(def) then return 0 end
-    if not ob_match_feature(def)     then return 0 end
+    if not ob_match_level_theme(def, theme_override) then return 0 end
+    if not ob_match_feature(def) then return 0 end
 
     if (def.rank or 0) < match_state.rank then return 0 end
 
@@ -2388,7 +2388,7 @@ function Fab_find_matches(reqs, match_state)
   local tab = {}
 
   each name,def in PREFABS do
-    local prob = prob_for_match(def, match_state)
+    local prob = prob_for_match(def, match_state, reqs.theme_override)
 
     if prob > 0 then
       -- Ok, add it

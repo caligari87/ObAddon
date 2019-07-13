@@ -860,13 +860,17 @@ GLAICE_THEMES =
     }
   }
 
-  hell_Cement =
+  hell_CementCautionlines =
   {
     env = "building"
-    prob = 100
+    prob = 50
+
+    theme_override = "tech"
 
     walls =
     {
+      CEM01 = 20
+      CEM02 = 20
       CEM03 = 20
       CEM04 = 20
       CEM06 = 20
@@ -876,6 +880,8 @@ GLAICE_THEMES =
       DRKCMT02 = 10
       DRKCMT03 = 10
       DRKCMT04 = 10
+      DRKCMT05 = 10
+      DRKCMT06 = 10
       HELLCMT1 = 20
       HELLCMT2 = 20
       HELLCMT3 = 20
@@ -918,25 +924,94 @@ GLAICE_THEMES =
 
     cliff_mats =
     {
-    GRNSTONE = 5
-    HELLROK1 = 10
-    RDROK1 = 15
-    ROK04 = 30
-    ROK05 = 30
-    ROK12 = 30
-    ROK13 = 30
-    ROK14 = 30
-    ROK15 = 30
-    ROK20 = 30
-    ROK21 = 30
-    ROK22 = 30
-    ROK23 = 30
-    SKULLS = 10
-    SKULLS2 = 10
-    BODIESB = 10
-    BODIESC = 10
+      GRNSTONE = 5
+      HELLROK1 = 10
+      RDROK1 = 15
+      ROK04 = 30
+      ROK05 = 30
+      ROK12 = 30
+      ROK13 = 30
+      ROK14 = 30
+      ROK15 = 30
+      ROK20 = 30
+      ROK21 = 30
+      ROK22 = 30
+      ROK23 = 30
+      SKULLS = 10
+      SKULLS2 = 10
+      BODIESB = 10
+      BODIESC = 10
+    }
+  }
+
+  hell_CementCautionless =
+  {
+    env = "building"
+    prob = 50
+
+    walls =
+    {
+      CEM01 = 20
+      CEM02 = 20
+      CEM09 = 20
+      DRKCMT05 = 10
+      DRKCMT06 = 10
+      HELLCMT1 = 20
+      HELLCMT2 = 20
+      HELLCMT7 = 15
+      HELLCMT8 = 15
     }
 
+    floors =
+    {
+      FLAT1 = 50
+      FLAT5_4 = 40
+      FLAT5_2 = 5
+      FLAT5_1 = 5
+      GRATE1  = 10
+      GRATE2  = 10
+      GRATE7  = 10
+      FLOOR4_8 = 10
+      FLOOR5_1 = 10
+      FLOOR51C = 10
+      FLOOR46D = 10
+      FLOOR46E = 10
+      DARKF01 = 10
+      DARKF02 = 10
+    }
+
+    ceilings =
+    {
+      FLAT19 = 50
+      FLAT5_4 = 20
+      MFLR8_1 = 15
+      FLAT5_2 = 5
+      CEIL1_1 = 5
+      FLAT5_2 = 5
+      GRATE4  = 10
+      GRATE8  = 10
+    }
+
+    cliff_mats =
+    {
+      GRNSTONE = 5
+      HELLROK1 = 10
+      RDROK1 = 15
+      ROK04 = 30
+      ROK05 = 30
+      ROK12 = 30
+      ROK13 = 30
+      ROK14 = 30
+      ROK15 = 30
+      ROK20 = 30
+      ROK21 = 30
+      ROK22 = 30
+      ROK23 = 30
+      SKULLS = 10
+      SKULLS2 = 10
+      BODIESB = 10
+      BODIESC = 10
+    }
   }
 
   hell_fleshcraft =

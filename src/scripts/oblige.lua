@@ -253,9 +253,14 @@ function ob_match_playmode(T)
 end
 
 
-function ob_match_level_theme(T)
+function ob_match_level_theme(T, override)
   if not T.theme then return true end
   if T.theme == "any" then return true end
+
+  local level_theme_name = LEVEL.theme_name
+  if override then
+    level_theme_name = override
+  end
 
   local theme  = T.theme
   local result = true
@@ -270,7 +275,7 @@ function ob_match_level_theme(T)
   -- for future-proofing.
 
   -- hack fix for Deimos theme. It is now to use tech and hell defs altogether.
-  if LEVEL.theme_name == "deimos"
+  if level_theme_name == "deimos"
     and (theme == "tech"
     or theme == "hell"
     or theme == "any"
@@ -279,7 +284,7 @@ function ob_match_level_theme(T)
   end
 
   -- hack fix for Thy Flesh theme too. Basically combine urban and hell fabs.
-  if LEVEL.theme_name == "flesh"
+  if level_theme_name == "flesh"
     and (theme == "urban"
     or theme == "hell"
     or theme == "any"
@@ -288,7 +293,7 @@ function ob_match_level_theme(T)
   end
 
   -- hack fix for TNT's Egypt theme, sigh
-  if LEVEL.theme_name == "egypt"
+  if level_theme_name == "egypt"
     and (theme == "any"
     or theme == "hell"
     or not theme) then
@@ -296,7 +301,7 @@ function ob_match_level_theme(T)
   end
 
   -- normal check
-  if ob_match_word_or_table(theme, LEVEL.theme_name) then
+  if ob_match_word_or_table(theme, level_theme_name) then
     return result
   end
 

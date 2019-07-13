@@ -301,6 +301,12 @@ function Render_edge(E)
       end
     end
 
+    if E.S.area.room then
+      if E.S.area.room.theme.theme_override then
+        reqs.theme_override = E.S.area.room.theme.theme_override
+      end
+    end
+
     local def = Fab_pick(reqs, sel(reqs.group, "none_ok", nil))
 
     -- when a wall group is not selected, use the ungrouped walls
