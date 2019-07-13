@@ -76,6 +76,13 @@ MISC_STUFF.WINDOW_BLOCKING_CHOICES =
   "all",           _("All"),
 }
 
+MISC_STUFF.LIQUID_SINK_OPTIONS =
+{
+  "yes",          _("Yes"),
+  "not_damaging", _("No Damaging"),
+  "no",           _("No"),
+}
+
 function MISC_STUFF.begin_level(self)
   each opt in self.options do
     local name  = assert(opt.name)
@@ -190,7 +197,7 @@ OB_MODULES["misc"] =
     {
       name = "liquid_sinks"
       label=_("Liquid Sinks"),
-      choices=MISC_STUFF.YES_NO,
+      choices=MISC_STUFF.LIQUID_SINK_OPTIONS,
       tooltip = "Enables or disables liquid sinks. Liquid sinks are walkable floors that " ..
                 "are often converted into depressions with the level's liquid. " ..
                 "May greatly inconvenience the player but default Oblige behavior is 'Yes'.",

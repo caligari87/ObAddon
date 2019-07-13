@@ -1983,9 +1983,19 @@ stderrf("Cages in %s [%s pressure] --> any_prob=%d  per_prob=%d\n",
         assert(fg.sink)
 
         -- TODO : prune liquid sinks first
-        if fg.sink.mat == "_LIQUID" and (not LEVEL.liquid
-        or PARAM.liquid_sinks != "yes") then
-          fg.sink = nil
+        if fg.sink.mat == "_LIQUID" then
+          if not LEVEL.liquid then
+            fg.sink = nil
+          end
+          if PARAM.liquid_sinks then
+            if PARAM.liquid_sinks == "no" then
+              fg.sink = nil
+            end
+            if LEVEL.liquid.damage
+            and PARAM.liquid_sinks == "not_damaging" then
+              fg.sink = nil
+            end
+          end
         end
       end
 
