@@ -1747,18 +1747,6 @@ function Room_border_up()
             end
           end
         end
-
-        -- special handling for stairs
-        if A2.chunk then
-          if A2.chunk.kind == "stair" then
-            if junc.dir == A2.chunk.dest_dir
-            or junc.dir == A2.chunk.from_dir then
-              -- MSSP-TODO: Add actual function for constructing
-              -- and straddling arch fabs
-              --Junction_make_arch(junc)
-            end
-          end
-        end
       end
 
       return
@@ -2091,6 +2079,8 @@ function Room_prepare_hallways()
 
     -- MSSP-TODO: Figure out how to resolve this thing about Oblige
     -- chopping off hallways between rooms that are already initially connected.
+    -- theory: might possibly be caused by some shape rules overriding the hall
+    -- shape?
     if not (A and A.room == R) then
       error("CONGRATULATIONS! You have encountered a very rare error " ..
       "that is caused by the shape grammars! Sorry! This is error " ..
@@ -2150,7 +2140,6 @@ function Room_prepare_hallways()
             new_h = new_h - delta_h
           end
         else
-          -- MSSP-TODO: attempt to add can_flip support here
           if piece.prefab_def.can_flip and R.stair_z_dir == -1 then
             new_h = new_h - delta_h
             A.prelim_h = A.prelim_h - delta_h

@@ -2503,8 +2503,6 @@ function Layout_handle_corners()
       local pillar_it = false
       if near_porch(corner, "porch_neighbor") then
 
-        -- MSSP-TODO: building pillars on the corners of stair chunks
-        -- might need some redesign in the future
         each S in corner.seeds do
           if S.chunk then
             if S.chunk.kind == "stair" then

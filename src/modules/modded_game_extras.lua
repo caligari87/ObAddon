@@ -80,7 +80,8 @@ function MODDED_GAME_EXTRAS.create_hn_info()
 
     local seed_list = {}
     each A in R.areas do
-      if A.mode != "chunk" then
+      if not A.chunk
+      or (A.chunk and not A.chunk.content) then
         each S in A.seeds do
 
           -- skip this area if it's a closet or a joiner

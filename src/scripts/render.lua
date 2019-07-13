@@ -1201,6 +1201,8 @@ function Render_corner(cx, cy)
     --      gap needs to be filled at the corner.
     --
 
+    -- MSSP-TODO: how about some prefabs-based gap fillers?
+
     if do_fence then
       if table.empty(corner.fences) then return end
 
