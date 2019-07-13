@@ -2869,7 +2869,7 @@ function Room_floor_ceil_heights()
       end
 
       -- occasionally make floor level cages
-      if rand.odds(50) and N.mode == "floor" then
+      if R.cage_floor_level and N.mode == "floor" then
         local diff = N.floor_h - A.floor_h
         A.floor_h = N.floor_h
 
@@ -2918,6 +2918,10 @@ function Room_floor_ceil_heights()
     end
 
     R.cage_rail_areas = {}
+
+    if rand.odds(50) then
+      R.cage_floor_level = true
+    end
 
     each A in R.areas do
       if A.mode == "cage" then
