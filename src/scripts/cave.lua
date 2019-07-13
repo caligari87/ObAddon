@@ -4764,7 +4764,7 @@ function Cave_build_a_scenic_vista(area)
 
     -- create the liquid area --
 
-    local drop_h = rand.pick({ 64,96,128,192 })
+    local drop_h = rand.pick({ 16,16,16,16,64,96,128,192 })
 
     if room.has_hills then drop_h = drop_h / 2 end
 
@@ -4790,6 +4790,10 @@ function Cave_build_a_scenic_vista(area)
 
     CLIFF.floor_h   = get_most_extreme_neighbor_floor(area, "highest") + 96
     CLIFF.floor_mat = assert(LEVEL.cliff_mat)
+
+    if drop_h == 16 then
+      drop_h = 32
+    end
 
     CLIFF3.floor_h   = CLIFF.floor_h - drop_h/2
     CLIFF3.floor_mat = assert(LEVEL.other_cliff_mat)

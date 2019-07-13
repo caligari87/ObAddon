@@ -72,7 +72,7 @@ PREFABS.Pic_urban_mirrors_edge_wall_EPIC =
     RDWAL01 = 35
 
     TEKWALL8 = 20
-    TEKWLAL9 = 20
+    TEKWALL9 = 20
     TEKWALLA = 20
     TEKWALLB = 20
     TEKWALLC = 20
