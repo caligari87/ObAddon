@@ -44,6 +44,25 @@ PREFABS.Wall_lowgap_diag =
 }
 
 
+PREFABS.Wall_lowgap_innerdiag =
+{
+  file = "wall/low_gap.wad"
+  map = "MAP04"
+
+  prob = 50
+  group = "low_gap"
+  theme = "tech"
+
+  where = "inner_diagonal"
+  height = 64
+
+  bound_z1 = 0
+  bound_z2 = 64
+
+  z_fit = "top"
+}
+
+
 PREFABS.Wall_lowgap2 =
 {
   template = "Wall_lowgap"

@@ -9,6 +9,6 @@ PREFABS.Skybox_hellish_city =
 
   kind  = "skybox"
 
-  bound_z0 = -256
-  bound_z1 = 256
+  bound_z1 = -256
+  bound_z2 = 256
 }

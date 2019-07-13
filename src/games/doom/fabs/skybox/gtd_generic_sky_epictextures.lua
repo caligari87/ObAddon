@@ -11,6 +11,6 @@ PREFABS.Skybox_generic_EPIC =
 
   kind  = "skybox"
 
-  bound_z0 = -256
-  bound_z1 = 256
+  bound_z1 = -256
+  bound_z2 = 256
 }

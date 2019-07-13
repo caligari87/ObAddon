@@ -15,8 +15,8 @@ PREFABS.Exit_glaice_superlift_up =
 
   height = 96
 
-  bound_z0 = -1024
-  bound_z1 = 136
+  bound_z1 = -1024
+  bound_z2 = 136
 
   x_fit  = "frame"
   y_fit  = "bottom"
@@ -28,6 +28,6 @@ PREFABS.Exit_glaice_superlift_down =
 
   map = "MAP02"
 
-  bound_z0 = 0
-  bound_z1 = 1032+8
+  bound_z1 = 0
+  bound_z2 = 1032+8
 }

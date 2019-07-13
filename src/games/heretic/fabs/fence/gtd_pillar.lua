@@ -13,5 +13,5 @@ PREFABS.Fence_pillar =
 
   prob = 50
 
-  bound_z0 = 0
+  bound_z1 = 0
 }
