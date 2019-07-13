@@ -4042,67 +4042,68 @@ namelib.NAMES =
         Watch = 10
 
         -- emotions/feels
-        Abused = 10
-        Adrift = 5
+        Abuse = 10 -- "Abused" makes no sense in some aspects
         Apathy = 5
         Anguish = 10
         Agony = 20
-        Bereft = 10
-        Bleak = 5
+        Bereavement = 10
+        Bleakness = 5
         Chaos = 10
         Contempt = 5
         Cruelty = 10
-        Cursed = 10
+        Curse = 10
         Doom = 10
         Defilement = 15
         Despair = 10
         Dismay = 10
         Dread = 15
-        Dreary = 20
+        Dreariness = 20
         Fear = 20
         Fury = 10
         Grief = 5
         Hate = 10
-        Incompetent = 15
-        Inept = 10
-        Livid = 10
+        Incompetence = 15
+        Ineptitude = 10
+        Lividness = 10
         Madness = 10
         Misery = 10
-        Obstinate = 10
+        Obstinance = 10
         Pain = 10
         Rage = 10
         Revulsion = 5
         Scorn = 10
-        Spiteful = 15
+        Spite = 15
         Silence = 20
-        Tactless = 5
+        Tactility = 5
         Terror = 20
         Torment = 15
         Wrath = 10
         Vengeance = 20
-        Violent = 15
-        Withdrawn = 10
+        Violence = 15 -- "Violent" doesn't make sense
+        Withdrawal = 10 -- Most title additions of using "Withdrawn" wouldn't make sense
 
         -- occult
         Ceremony = 10
         Cult = 10
-        Hell = 10
         Horror = 10
         Idolatry = 10
         Magic = 15
+        Magik = 10
         Ritual = 10 -- Could also be religious
-        Souls = 10
         Shadows = 10
 
-        Death = 20
+        Death = 20 -- This really is an all-around word
         Flames = 20
 
         -- religious
         Belief = 10
         Deliverance = 10
+        Hell = 10 -- Fits better here
         Icons = 10 -- as in religious icons
+        Souls = 10 -- Frequently mentioned in religious texts as well, namely Judeo-Christian
 
         -- states of mind, states in mind
+        Bliss = 10
         Dreams = 20
         Chaos = 10
         Nightmares = 20
@@ -4124,6 +4125,7 @@ namelib.NAMES =
         Conception = 10
         Creation = 10
         Destruction = 10
+        Disintegration = 10
         Extinction = 10
         Formation = 10
         Nascency = 10
