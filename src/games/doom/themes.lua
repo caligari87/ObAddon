@@ -3591,6 +3591,8 @@ DOOM.ROOM_THEMES =
     env  = "building"
     prob = 20
 
+    theme_override = "hell"
+
     walls =
     {
       WOOD1 = 50
