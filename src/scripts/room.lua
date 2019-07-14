@@ -3727,6 +3727,8 @@ function Room_build_all()
 
   Layout_indoor_lighting()
 
+  Autodetail_get_level_svolume()
+
   -- this does traps, and may add switches which lock a door / joiner
   Layout_add_traps()
   Layout_decorate_rooms(1)
@@ -3747,6 +3749,9 @@ function Room_build_all()
   Layout_scenic_vistas()
 
   Room_border_up()
+
+  Autodetail_plain_walls()
+  Autodetail_report()
 
   Room_add_cage_rails()
 

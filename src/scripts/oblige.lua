@@ -23,6 +23,7 @@ gui.import("defs")
 gui.import("util")
 gui.import("brush")
 gui.import("prefab")
+gui.import("autodetail")
 
 gui.import("seed")
 gui.import("shapes")

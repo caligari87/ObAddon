@@ -1067,7 +1067,7 @@ function Edge_new(kind, S, dir, long)
     assert(S)
 
     if S.edge[dir] then
-      print("Seed already has an EDGE")
+      print("Seed already has an EDGE @ " .. S.mid_x .. ", ".. S.mid_y)
     end
 
     S.edge[dir] = EDGE

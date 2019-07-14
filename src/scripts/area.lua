@@ -2737,66 +2737,6 @@ end
 
 
 
--- Prefab control auto-detail override
-function Autodetail(level)
-  gui.printf("-- Auto Detail Module Report: --\n")
-  local map_area = level.map_W * level.map_H
-  local total_walkable_area = 0
-
-  each R in level.rooms do
-    total_walkable_area = total_walkable_area + R.svolume
-  end
-
-  local function set_wall_group_priorities(multiplier)
-
-    -- rather than these being set here, maybe initialize from
-    -- somewhere earlier in the code to keep the original values?
-    if OB_CONFIG.game == "doom2" then
-      local default_prob = 100
-      local tech_prob = 300
-      local urban_prob = 175
-      local hell_prob = 425
-
-      GAME.THEMES.DEFAULTS.wall_groups.PLAIN = default_prob * multiplier
-      GAME.THEMES.tech.wall_groups.PLAIN = tech_prob * multiplier
-      GAME.THEMES.urban.wall_groups.PLAIN = urban_prob * multiplier
-      GAME.THEMES.hell.wall_groups.PLAIN = hell_prob * multiplier
-    end
-
-    if OB_CONFIG.game == "doom1" and OB_CONFIG.game == "doom2" then
-      local default_prob = 100
-      local tech_prob = 200
-      local deimos_prob = 200
-      local hell_prob = 150
-      local flesh_prob = 150
-
-      GAME.THEMES.DEFAULTS.wall_groups.PLAIN = default_prob * multiplier
-      GAME.THEMES.tech.wall_groups.PLAIN = tech_prob * multiplier
-      GAME.THEMES.deimos.wall_groups.PLAIN = urban_prob * multiplier
-      GAME.THEMES.hell.wall_groups.PLAIN = hell_prob * multiplier
-      GAME.THEMES.flesh.wall_groups.PLAIN = urban_prob * multiplier
-    end
-
-    PREFABS["Wall_plain"].use_prob = PREFABS["Wall_plain"].prob * multiplier
-    PREFABS["Wall_plain_diag"].use_prob = PREFABS["Wall_plain"].prob * multiplier
-end
-
-gui.printf("Total walkable volume: " .. total_walkable_area .. "\n")
-
-local tone_down_factor = 1
-
-if total_walkable_area >= 1800 then
-  tone_down_factor = ((total_walkable_area/1000) - 0.8) ^ 1.75
-  gui.printf("Tone-down multiplier: " .. tone_down_factor .. "\n\n")
-  set_wall_group_priorities(tone_down_factor)
-else
-  gui.printf("Map is insufficiently large enough to need Autodetail for now...\n\n")
-end
-
-end
-
-
-
 function Area_create_rooms()
 
   gui.printf("\n--==| Creating Rooms |==--\n\n")
@@ -2808,10 +2748,6 @@ function Area_create_rooms()
   Area_divvy_up_borders()
 
   Area_analyse_areas()
-
-  if PARAM.autodetail == "on" or not PARAM.autodetail then
-    Autodetail(LEVEL)
-  end
 
   Junction_init()
     Corner_init()
