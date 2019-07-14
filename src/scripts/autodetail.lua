@@ -59,6 +59,8 @@ function Autodetail_plain_walls()
 end
 
 function Autodetail_report()
+  if PARAM.autodetail == "off" then return end
+
   gui.printf("\n--==| Auto Detail Report |==--\n\n")
   gui.printf("Total walkable volume: " .. LEVEL.total_svolume .. "\n")
   gui.printf("Group walls tone down multiplier: " .. LEVEL.autodetail_group_walls_factor .. "\n")
