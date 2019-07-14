@@ -18,6 +18,27 @@
 --
 ------------------------------------------------------------------------
 
+-- Autodetail constants
+
+-- the volume of a map in seed count
+-- this is the minimum volume required
+-- before Autodetail for grouped walls kicks in
+LEVEL_SVOLUME_KICKIN = 1800
+
+-- added exponent for grouped walls
+-- higher numbers mean grouped walls are even
+-- less likely to show
+GROUPED_WALL_TONE_DOWN_EXP = 2.5
+
+-- the total perimeter of wall-ish junctions required in the map
+-- before Autodetail for ungrouped walls kicks in
+LEVEL_PERIMETER_COUNT_KICKIN = 1200
+
+-- added exponent for ungrouped walls
+-- higher numbers mean plain walls are more likely
+UNGROUPED_WALL_TONE_DOWN_EXP = 3.5
+
+
 function Autodetail_get_level_svolume()
   if PARAM.autodetail == "off" then return end
 
@@ -29,11 +50,14 @@ function Autodetail_get_level_svolume()
 
   LEVEL.total_svolume = total_walkable_area
 
+  LEVEL.autodetail_group_walls_factor = 1
 
-  if LEVEL.total_svolume > 1800 then
-    LEVEL.autodetail_group_walls_factor = (LEVEL.total_svolume / 1800) ^ 2
+  if LEVEL.total_svolume > LEVEL_SVOLUME_KICKIN then
+    LEVEL.autodetail_group_walls_factor = (LEVEL.total_svolume / LEVEL_SVOLUME_KICKIN)
+    ^ GROUPED_WALL_TONE_DOWN_EXP
   end
 end
+
 
 function Autodetail_plain_walls()
   if PARAM.autodetail == "off" then return end
@@ -49,14 +73,17 @@ function Autodetail_plain_walls()
 
   local tone_down_factor = 1
 
-  if total_perimeter >= 1200 then
-    tone_down_factor = ((total_perimeter/1200)) ^ 3.5
+  if total_perimeter >= LEVEL_PERIMETER_COUNT_KICKIN then
+    tone_down_factor = ((total_perimeter/LEVEL_PERIMETER_COUNT_KICKIN))
+    ^ UNGROUPED_WALL_TONE_DOWN_EXP
+
     PREFABS["Wall_plain"].use_prob = PREFABS["Wall_plain"].prob * tone_down_factor
     PREFABS["Wall_plain_diag"].use_prob = PREFABS["Wall_plain"].prob * tone_down_factor
   end
 
   LEVEL.autodetail_plain_walls_factor = tone_down_factor
 end
+
 
 function Autodetail_report()
   if PARAM.autodetail == "off" then return end
