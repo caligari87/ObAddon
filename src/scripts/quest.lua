@@ -3022,6 +3022,22 @@ function Quest_room_themes()
       floor = R.floor_mat  -- can be NIL
       ceil  = R.ceil_mat   -- ditto
     }
+
+    -- pillarz
+    if not R.is_cave or not R.is_park then
+      local reqs =
+      {
+        kind = "pillar"
+        where = "point"
+
+        height = 9001
+        size = 128
+      }
+
+      local def = Fab_pick(reqs)
+
+      R.pillar_def = def
+    end
   end
 
 
