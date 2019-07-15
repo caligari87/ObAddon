@@ -423,6 +423,17 @@ function AREA_CLASS.lowest_neighbor(A)
 end
 
 
+function AREA_CLASS.get_fseed_coord(A)
+  if A.seeds then
+    local string = "(" .. A.seeds[1].mid_x .. ", " ..
+    A.seeds[1].mid_y .. ")"
+    return string
+  end
+
+  return ""
+end
+
+
 ------------------------------------------------------------------------
 
 

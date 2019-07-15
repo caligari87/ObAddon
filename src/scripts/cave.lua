@@ -4690,7 +4690,8 @@ function Cave_build_a_scenic_vista(area)
     -- initial base room is just a sky, just like bottomless drop
     local FL = new_blob()
 
-    FL.floor_h = get_most_extreme_neighbor_floor(area, "lowest") - 8192
+    local main_h = get_most_extreme_neighbor_floor(area, "lowest")
+    FL.floor_h = main_h - 8192
     FL.floor_mat = "_SKY"
 
     temp_install_floor(FL)
@@ -4700,10 +4701,10 @@ function Cave_build_a_scenic_vista(area)
     local CLIFF = new_blob()
     local CLIFF2 = new_blob()
 
-    CLIFF.floor_h = FL.floor_h - 16
+    CLIFF.floor_h = main_h - 16
     CLIFF.floor_mat = assert(room.zone.nature_facade)
 
-    CLIFF2.floor_h = FL.floor_h - 64
+    CLIFF2.floor_h = CLIFF.floor_h - 64
     CLIFF2.floor_mat = assert(room.zone.other_nature_facade)
 
     for cx = 1, area.cw do

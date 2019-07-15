@@ -3510,11 +3510,8 @@ function Room_cleanup_stairs_to_nowhere(R)
     or not A.room
     or not A.floor_h then return false end
 
-    -- sometimes leave outdoor ones alone
-    --if A.room.is_outdoor and rand.odds(50) then return false end
-
-    -- must have an area lesser than 4 seeds
-    if A.svolume > 4 then return false end
+    -- must have an area lesser than 6 seeds
+    if A.svolume > 8 then return false end
 
     local same_room_neighbors = 0
     local stair_neighbors = 0
@@ -3661,20 +3658,20 @@ function Room_cleanup_stairs_to_nowhere(R)
       SA, SAS = get_area_entry_stair(A)
 
       gui.printf("AREA_"..A.id.." leads to nowhere. "..
-      "("..A.seeds[1].x1..", "..A.seeds[1].y1..")".."\n")
+      A:get_fseed_coord() .."\n")
 
       if SAS then
         -- convert nowhere areas to just normal areas (borrow info from main area)
-        if A.floor_h < SAS.floor_h then
-          A.ceil_h = SAS.ceil_h
-        end
+
         A.floor_h = SAS.floor_h
 
         A.floor_mat = SAS.floor_mat
         A.ceil_mat = SAS.ceil_mat
 
-        A.floor_group = SAS.floor_group
-        A.ceil_group = SAS.ceil_group
+        if not A.is_porch then
+          A.floor_group = SAS.floor_group
+          A.ceil_group = SAS.ceil_group
+        end
 
         A.prelim_h = SAS.prelim_h
 
@@ -3692,9 +3689,6 @@ function Room_cleanup_stairs_to_nowhere(R)
           SA.is_porch = true
         end
 
-        if SA.floor_h < SAS.floor_h then
-          SA.ceil_h = SAS.ceil_h
-        end
         SA.floor_h = SAS.floor_h
 
         SA.prelim_h = SAS.prelim_h
@@ -3702,8 +3696,10 @@ function Room_cleanup_stairs_to_nowhere(R)
         SA.floor_mat = SAS.floor_mat
         SA.ceil_mat = SAS.ceil_mat
 
-        SA.floor_group = SAS.floor_group
-        SA.ceil_group = SAS.ceil_group
+        if not SA.is_porch then
+          SA.floor_group = SAS.floor_group
+          SA.ceil_group = SAS.ceil_group
+        end
 
         fixup_neighbors(A)
       end
