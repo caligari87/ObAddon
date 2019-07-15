@@ -1152,8 +1152,8 @@ GLAICE_THEMES =
     {
       BRIKS03 = 15
       BRIKS06 = 15
-      BRISK12 = 15
-      BRISK14 = 15
+      BRIKS12 = 15
+      BRIKS14 = 15
 
       DESBRIK1 = 50
       DESBRIK2 = 50
