@@ -47,6 +47,7 @@ PREFABS.Window_tall_2_tech =
 {
   template = "Window_tall_1"
   map      = "MAP05"
+  theme    = "tech"
   seed_w   = 2
   tex_METAL5 = "DOORSTOP"
   flat_CEIL5_2 = "FLAT20"
