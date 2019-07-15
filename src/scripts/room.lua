@@ -1034,6 +1034,8 @@ function Room_detect_porches(R)
   local function eval_porch(A, mode)
     -- mode is either "indoor" or "outdoor"
 
+    if A.room.floor_areas <= 1 then return -1 end
+
     if A.mode != "floor" then return -1 end
 
     -- single outdoor room? weird for it to be a porch --MSSP
@@ -1065,7 +1067,13 @@ function Room_detect_porches(R)
     -- the room should be porched at least)
     local porchables = {}
 
+    R.floor_areas = 0
     each A in R.areas do
+
+      if A.mode == "floor" then
+        R.floor_areas = R.floor_areas + 1
+      end
+
       A.porch_score = eval_porch(A, "indoor")
       if A.porch_score > 0 then
         table.insert(porchables, A)
@@ -1075,16 +1083,16 @@ function Room_detect_porches(R)
     table.sort(porchables,
     function(A, B) return A.porch_score > B.porch_score end)
 
-    R.porch_volume = 0
+    R.porch_count = 0
     each A in porchables do
 
-      if R.porch_volume >= R.svolume/3 then return end
+      if R.porch_count > math.floor(R.floor_areas/3) then return end
 
       if A.porch_score > 0 and style_sel("porches", 0, 30, 60, 90) then
         set_as_porch(A)
 
         gui.debugf("Made %s into a PORCH\n", A.name)
-        R.porch_volume = R.porch_volume + A.svolume
+        R.porch_count = R.porch_count + 1
       end
 
     end
@@ -1092,13 +1100,6 @@ function Room_detect_porches(R)
 
 
   ---| Room_detect_porches |---
-
-
-  local prob = style_sel("porches", 0, 25, 50, 75)
-
-  if not rand.odds(prob) then
-    return
-  end
 
   if R.is_hallway then
     detect_hallway_porch()
@@ -2582,6 +2583,14 @@ function Room_floor_ceil_heights()
         R.floor_mats[A.floor_h] = rand.key_by_probs(R.theme.floors)
       end
 
+      if R.is_outdoor then
+        if R.theme.porch_floors then
+          A.porch_floor_mat = rand.key_by_probs(R.theme.porch_floors)
+        else
+          gui.printf(LEVEL.theme_name .. " NEEDS A PORCH_FLOORS table BADLY!!!111\n")
+        end
+      end
+
       A.floor_mat = assert(R.floor_mats[A.floor_h])
     end
   end
@@ -3611,6 +3620,38 @@ function Room_cleanup_stairs_to_nowhere(R)
   end
 
 
+  local function select_porch_floor_mats(R)
+
+    local function same_level_to_outdoor_area(A)
+
+      each N in A.neighbors do
+        if N.room then
+          if A.room == N.room
+          and not N.is_porch
+          and not N.is_porch_neighbor
+          and N.mode == "floor"
+          and A.floor_h == N.floor_h then
+            return true
+          end
+        end
+      end
+
+      return false
+    end
+
+    if not R.is_outdoor then return end
+
+    each A in R.areas do
+      if A.is_porch then
+        if not same_level_to_outdoor_area(A) then
+          A.floor_mat = A.porch_floor_mat
+        end
+      end
+    end
+
+  end
+
+
   local SA -- source stair area
   local SAS -- source stair area's source area. Yes, that's not intuitive
             -- to think about, is it?
@@ -3668,6 +3709,8 @@ function Room_cleanup_stairs_to_nowhere(R)
       end
     end
   end
+
+  select_porch_floor_mats(R)
 
 end
 

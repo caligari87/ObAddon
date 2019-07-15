@@ -962,17 +962,17 @@ ULTDOOM.THEMES =
 
     fences =
     {
-    WOOD5 = 50
-    WOOD3 = 50
-    STONE3 = 40
-    STONE2 = 35
-    MARBLE2 = 30
-    GSTONE1 = 30
-    ASHWALL = 20
-    SKIN2   = 20
-    SKINFACE = 20
-    FIREBLU1 = 20
-    ICKWALL3 = 15
+      WOOD5 = 50
+      WOOD3 = 50
+      STONE3 = 40
+      STONE2 = 35
+      MARBLE2 = 30
+      GSTONE1 = 30
+      ASHWALL = 20
+      SKIN2   = 20
+      SKINFACE = 20
+      FIREBLU1 = 20
+      ICKWALL3 = 15
     }
 
     prefab_remap =

@@ -2516,6 +2516,24 @@ DOOM.ROOM_THEMES =
       ZIMMER7  = 10
       ROCK5    = 20
     }
+
+    porch_floors =
+    {
+      FLAT1 = 10
+      FLAT19 = 10
+      FLAT20 = 10
+      FLAT3 = 10
+      FLAT5 = 10
+      FLOOR3_3 = 10
+      FLOOR4_1 = 10
+      FLOOR4_5 = 10
+      FLOOR4_6 = 10
+      FLOOR4_8 = 10
+      FLOOR5_3 = 10
+      SLIME14 = 10
+      SLIME15 = 10
+      SLIME16 = 10
+    }
   }
 
 
@@ -3107,6 +3125,24 @@ DOOM.ROOM_THEMES =
       SKIN2 = 10
       SKSNAKE1 = 30
       SKSNAKE2 = 30
+    }
+
+    porch_floors =
+    {
+      CEIL3_5 = 10
+      DEM1_5 = 35
+      DEM1_6 = 35
+      FLAT1_1 = 10
+      FLAT1_2 = 10
+      FLAT5_1 = 35
+      FLAT5_2 = 35
+      FLOOR4_6 = 10
+      FLOOR5_4 = 10
+      MFLR8_1 = 10
+      RROCK09 = 10
+      RROCK12 = 10
+      RROCK13 = 10
+      RROCK14 = 10
     }
   }
 
@@ -4021,6 +4057,27 @@ DOOM.ROOM_THEMES =
       ROCK1    = 30
       ROCK2    = 20
       ROCK3    = 70
+    }
+
+    porch_floors =
+    {
+      CEIL3_3 = 10
+      CEIL3_5 = 10
+      FLAT1 = 10
+      FLAT1_1 = 10
+      FLAT1_2 = 10
+      FLAT19 = 10
+      FLAT20 = 10
+      FLAT3 = 10
+      FLAT5 = 10
+      FLAT5_1 = 10
+      FLAT5_2 = 10
+      FLAT5_5 = 10
+      FLOOR0_1 = 10
+      FLOOR5_3 = 10
+      FLOOR5_4 = 10
+      MFLR8_1 = 10
+      RROCK14 = 10
     }
   }
 }
