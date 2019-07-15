@@ -3560,6 +3560,14 @@ function Room_cleanup_stairs_to_nowhere(R)
       if stair_neighbors > 1 then return false end
     end
 
+    -- direct connections check
+    each C in R.conns do
+      if C.A1 == A or
+      C.A2 == A then
+        return false
+      end
+    end
+
     return true
   end
 
