@@ -4627,10 +4627,10 @@ function Cave_build_a_scenic_vista(area)
     local CLIFF = new_blob()
     local WATERFALLS = new_blob()
 
-    CLIFF.floor_h = get_most_extreme_neighbor_floor(area, "highest") + rand.pick({128,144,192,256})
+    CLIFF.floor_h = get_most_extreme_neighbor_floor(area, "highest") + rand.pick({56,64,72,96})
     CLIFF.floor_mat = assert(LEVEL.cliff_mat)
 
-    WATERFALLS.floor_h = rand.irange(math.floor(FL.floor_h + (CLIFF.floor_h - 32))/2 , CLIFF.floor_h - 32)
+    WATERFALLS.floor_h = rand.irange(FL.floor_h + 16, CLIFF.floor_h - 16)
     WATERFALLS.floor_mat = LEVEL.liquid.mat
 
     for cx = 1, area.cw do
