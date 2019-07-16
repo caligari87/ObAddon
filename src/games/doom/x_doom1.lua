@@ -1852,6 +1852,18 @@ ULTDOOM.ROOM_THEMES =
       GRAYVINE = 20
       STONE = 30
     }
+
+    porch_floors =
+    {
+      FLAT1 = 10
+      CEIL5_2 = 10
+      FLAT19 = 5
+      FLAT3 = 10
+      FLOOR0_5 = 10
+      FLOOR5_3 = 10
+      FLOOR5_4 = 10
+      FLOOR7_1 = 10
+    }
   }
 
 
@@ -2187,6 +2199,24 @@ ULTDOOM.ROOM_THEMES =
       ASHWALL = 2
       FLAT10 = 3
     }
+
+    porch_floors =
+    {
+      CEIL5_2 = 10
+      FLAT1 = 10
+      FLAT5_3 = 10
+      FLAT5_4 = 10
+      FLAT5_5 = 10
+      FLAT8 = 10
+      FLOOR0_5 = 10
+      FLOOR4_6 = 10
+      DEM1_5 = 20
+      FLOOR7_2 = 20
+      DEM1_6 = 20
+      FLAT1_1 = 5
+      FLAT1_2 = 5
+      MFLR8_1 = 10
+    }
   }
 
   deimos_metro_Hallway =
@@ -2501,6 +2531,23 @@ ULTDOOM.ROOM_THEMES =
       SKSNAKE1 = 10
       SKSNAKE2 = 10
     }
+
+    porch_floors =
+    {
+      CEIL5_2 = 10
+      DEM1_5 = 30
+      DEM1_6 = 30
+      FLAT1_1 = 10
+      FLAT1_2 = 10
+      FLAT5_1 = 20
+      FLAT5_2 = 20
+      FLAT5_3 = 10
+      FLAT5_5 = 10
+      FLOOR0_2 = 10
+      FLOOR4_6 = 10
+      FLOOR7_1 = 10
+      FLOOR7_2 = 30
+    }
   }
 
 
@@ -2533,6 +2580,16 @@ ULTDOOM.ROOM_THEMES =
       SKSNAKE1 = 10
       SKSNAKE2 = 10
       FIREBLU1 = 70
+    }
+
+    porch_floors =
+    {
+      CEIL3_5 = 10
+      CEIL5_2 = 10
+      FLAT1_1 = 10
+      FLAT1_2 = 10
+      FLAT5_3 = 5
+      FLAT5_3 = 10
     }
   }
 
@@ -2881,6 +2938,21 @@ ULTDOOM.ROOM_THEMES =
       BROWNHUG = 20
       SKSNAKE1 = 10
       SKSNAKE2 = 10
+    }
+
+    porch_floors =
+    {
+      CEIL1_1 = 50
+      FLAT5_1 = 50
+      FLAT5_2 = 50
+
+      FLOOR7_1 = 30
+      FLAT8 = 20
+      FLOOR0_2 = 20
+
+      DEM1_5 = 10
+      DEM1_6 = 10
+      FLOOR7_2 = 10
     }
   }
 
