@@ -5585,7 +5585,7 @@ function namelib.generate_unique_noun(m)
 
     name = num_string
   elseif mode == "serial" then
-    local num_length = rand.irange(3,8)
+    local num_length = rand.pick({3,4,4,5,5,5,6,7,8})
 
     while x < num_length do
       num_string = num_string .. make_random_hashes(x, num_length)

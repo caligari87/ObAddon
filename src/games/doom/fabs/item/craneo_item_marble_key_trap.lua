@@ -51,7 +51,6 @@ PREFABS.Item_craneo_marble_key_trap_interior =
   height = 128
 
   deep = 16
-  over = 16
 
   env = "building"
 
