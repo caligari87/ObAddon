@@ -152,6 +152,8 @@ PREFABS.Decor_cafe_table_set =
 
   on_liquids = "never"
 
+  sink_mode = "never"
+
   where  = "point"
   size   = 64
 
