@@ -7,6 +7,7 @@ PREFABS.Cage_scionox_fake_teleport =
 
   prob   = 100
   theme  = "!tech"
+  style  = "traps"
 
   where  = "seeds"
   shape  = "U"
