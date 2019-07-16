@@ -3650,10 +3650,26 @@ function Room_cleanup_stairs_to_nowhere(R)
       if A.is_porch then
         if not same_level_to_outdoor_area(A) then
           A.floor_mat = A.porch_floor_mat
+          A.uses_porch_mat = true
         end
       end
     end
 
+    -- second pass, propgate the porch floor material
+    -- to all porches of the same height (regardless
+    -- if neighboring or not)
+    each A1 in R.areas do
+      if A1.uses_porch_mat then
+        A1.porch_mat_fixed = true
+        each A2 in R.areas do
+          if A2.uses_porch_mat and
+          (A1.floor_h == A2.floor_h) then
+            A2.floor_mat = A1.floor_mat
+            A2.porch_mat_fixed = true
+          end
+        end
+      end
+    end
   end
 
 

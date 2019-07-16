@@ -4070,7 +4070,6 @@ DOOM.ROOM_THEMES =
       FLAT1_1 = 10
       FLAT1_2 = 10
       FLAT19 = 10
-      FLAT20 = 10
       FLAT3 = 10
       FLAT5 = 10
       FLAT5_1 = 20
