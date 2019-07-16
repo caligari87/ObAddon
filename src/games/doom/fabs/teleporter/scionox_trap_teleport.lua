@@ -5,10 +5,11 @@ PREFABS.Teleporter_scionox_trap_teleport =
   file   = "teleporter/scionox_trap_teleport.wad"
   map    = "MAP01"
 
-  prob   = 10
+  prob   = 5
   theme  = "!tech"
 
   where  = "seeds"
+  style  = "traps"
 
   seed_w = 2
   seed_h = 2
