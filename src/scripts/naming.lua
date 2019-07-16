@@ -4809,10 +4809,10 @@ namelib.COMMUNITY_MEMBERS =
   {
     "Samiam", -- Mr. ObHack!
     "Crowbars", -- crowbars82, Mr. Octothrop!
-    "Alden",
     "Big C",
     "Brad Man X",
     "DZ",
+    "E231-500",
     "Elkinda",
     "Hexa Doken",
     "Josh Seven", --josh771
@@ -4834,6 +4834,31 @@ namelib.COMMUNITY_MEMBERS =
     "TTBNC",
     "Yandere Princess",
   }
+
+  -- Occasional posters in the server.
+  semi_regulars =
+  {
+    "AcidicReaver", -- Occasional posts.
+    "Alden", -- Was once a normal posted but has since gone quiet. Moved to semi-regular.
+    "BXN", -- Occasionally does ask questions, inquires on things.
+    "Cryomundus",
+    "DukeWooze", -- Posted in the past, but not too recently.
+    "Scionox", -- Newcomer. Rather enthusiastic on the project.
+    "The Shitman", -- Sometimes controversial on his topics.
+
+  }
+
+  -- People in the server but who have never posted but are assumed
+  -- to be Oblige/Doom enthusiasts.
+  lurkers =
+  {
+    "Alphatonic",  -- Haven't seen post yet.
+    "Cammy", -- No posts yet.
+    "CanineCargo", -- I have never seen him/her post.
+    "NeuralStunner", -- A known Doomer. Posts on the ZDoom forums.
+
+  }
+
 }
 
 
