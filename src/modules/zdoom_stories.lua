@@ -1471,10 +1471,10 @@ ZDOOM_STORIES.MCGUFFINS =
     ["a desecrated totem"]=5,
     ["an adamantium skull"]=5,
     ["a baleful gem"]=5,
-    ["a devil's horn"]=5,
+    ["a bloody hand"]=5,
     ["a cursed talisman"]=5,
     ["a dark crystal shard"]=5,
-    ["a bloody hand"]=5,
+    ["a devil's horn"]=5,
     ["a skeletal torso"]=5,
     ["an unholy chalice"]=5,
     ["an ornate dagger"]=5,
@@ -1486,9 +1486,12 @@ ZDOOM_STORIES.MCGUFFINS =
     ["a brass bauble"]=5,
     ["a vial of ectoplasm"]=5,
     ["the Mark of Kain"]=5,
-    ["a tarnished, blood stained copy of the Bible"]=5,
+    ["a bloody, tarnished Bible"]=5,
     ["the Necronomicon"]=5,
     ["a sinister looking ring"]=5,
+    ["a small, sigil inscripted bust"]=5,
+    ["a crude, Doomguyesque figure"]=5,
+    ["an inscripted bust of Razorfist"]=5, --LMFAO
   }
   tech =
   {
@@ -1513,6 +1516,8 @@ ZDOOM_STORIES.MCGUFFINS =
     ["a quantum disrupter"]=5,
     ["a MAPINFO lump"]=5, -- getting meta here, huh?
     ["a coop server"]=5,
+    ["a gray keycard"]=5,
+    ["a hot-swap hard drive"]=5,
   }
 }
 
@@ -1589,6 +1594,10 @@ ZDOOM_STORIES.QUIT_MESSAGES =
   [[Visit https://caligari87.github.io/ObAddon/ for updates!]],
   [[If you're quitting because something might be broken, please supply screenshots and preferably your LOG file when reporting.]],
   [[ObAddon is for the adventurous. Are you? Join us and contribute ideas and works! ObAddon is a community project!]],
+  [[Was this not big enough? Try jacking up the Max Level Size or Upper Bound in settings to Colossal, Gargantuan or Transcendent.]],
+  [[If you are reporting an error and already closed OBLIGE, do NOT reopen the program as it will wipe the LOGS.TXT file clean! Open it via a text editor.]],
+  [[Map sizes too big? Reduce the Map Size or Upper Bound size if using Mix It Up.]],
+  [[Gargantuan or Transcendent maps looking like Minecraft Far Lands? Please keep Auto Detail on, not much else can be done about that, stupid Doom Engine limits.]],
 
   -- important facts
   [[In 1998, the Undertaker threw Mankind off Hell in a Cell and plummeted 16ft. through an announcer's table.]],
