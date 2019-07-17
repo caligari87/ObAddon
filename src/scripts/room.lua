@@ -3633,7 +3633,6 @@ function Room_cleanup_stairs_to_nowhere(R)
         if N.room then
           if A.room == N.room
           and not N.is_porch
-          and not N.is_porch_neighbor
           and N.mode == "floor"
           and A.floor_h == N.floor_h then
             return true

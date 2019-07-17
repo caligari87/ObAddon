@@ -2562,6 +2562,8 @@ GLAICE_TECH_CEILING_SINKS =
   ceiling_sink_SILVER2Y = 5
   ceiling_sink_SILVER2W = 5
   ceiling_sink_SILVER2G = 5
+
+  ceiling_sink_GOTH21 = 15
 }
 
 GLAICE_URBAN_CEILING_SINKS =
@@ -2592,8 +2594,9 @@ GLAICE_URBAN_CEILING_SINKS =
   ceiling_sink_TEKWALLD = 7
   ceiling_sink_TEKWALLE = 7
 
-  ceiling_sink_GOTH15 = 25
-  ceiling_sink_GOTH17 = 25
+  ceiling_sink_GOTH15 = 20
+  ceiling_sink_GOTH17 = 20
+  ceiling_sink_GOTH21 = 20
 }
 
 GLAICE_HELL_CEILING_SINKS =
@@ -2615,8 +2618,12 @@ GLAICE_HELL_CEILING_SINKS =
   ceiling_sink_SKINMET6 = 13
   ceiling_sink_SKINMET7 = 13
 
-  ceiling_sink_GOTH15 = 25
-  ceiling_sink_GOTH17 = 25
+  ceiling_sink_GOTH15 = 20
+  ceiling_sink_GOTH17 = 20
+  ceiling_sink_GOTH18 = 20
+  ceiling_sink_GOTH19 = 20
+  ceiling_sink_GOTH20 = 20
+  ceiling_sink_GOTH28 = 20
 
   ceiling_sink_GOTH47 = 20
   ceiling_sink_GOTH48 = 20
