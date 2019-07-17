@@ -2293,7 +2293,7 @@ HALL_1_GROW_I1 =
 
   structure =
   {
-    ".", "@"
+    "!", "@"
     "@", "H"
     "1", "1"
   }
@@ -2307,12 +2307,11 @@ HALL_1_GROW_L1 =
 
   structure =
   {
-    "....", "...."
-    "..@.", ".@H."
-    "..1.", "..1."
+    "!@", "@H"
+    ".1", ".1"
   }
 
-  link2_2 = { dest_dir=4 }
+  link1_2 = { dest_dir=4 }
 }
 
 
@@ -2323,15 +2322,14 @@ HALL_1_GROW_T1 =
 
   structure =
   {
-    ".....", "....."
-    "..@..", ".@H@."
-    "..1..", "..1.."
+    "!@!", "@H@"
+    ".1.", ".1."
   }
 
   hallway = { keep_shape_prob=90 }
 
-  link2_2 = { dest_dir=4 }
-  link4_2 = { dest_dir=6 }
+  link1_2 = { dest_dir=4 }
+  link3_2 = { dest_dir=6 }
 }
 
 
@@ -2342,18 +2340,16 @@ HALL_1_GROW_P1 =
 
   structure =
   {
-    ".....", "....."
-    ".....", "....."
-    ".....", "..@.."
-    "..@..", ".@H@."
-    "..1..", "..1.."
+    ".!.", ".@."
+    "!@!", "@H@"
+    ".1.", ".1."
   }
 
   hallway = { keep_shape_prob=50 }
 
-  link2_2 = { dest_dir=4 }
-  link4_2 = { dest_dir=6 }
-  link3_3 = { dest_dir=8 }
+  link1_2 = { dest_dir=4 }
+  link3_2 = { dest_dir=6 }
+  link2_3 = { dest_dir=8 }
 }
 
 
