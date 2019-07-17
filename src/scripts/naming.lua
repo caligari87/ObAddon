@@ -4844,7 +4844,7 @@ namelib.COMMUNITY_MEMBERS =
     "Cryomundus",
     "DukeWooze", -- Posted in the past, but not too recently.
     "Scionox", -- Newcomer. Rather enthusiastic on the project.
-    "The Shitman", -- Sometimes controversial on his topics.
+    "rexirT",
 
   }
 

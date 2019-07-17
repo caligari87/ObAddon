@@ -1806,6 +1806,10 @@ GLAICE_DOOM1_FLESH_LIQUIDS =
   ice2    = 30
 }
 
+-- MSSP-TODO: Could probably use an update with some of the more ceiling sink types
+-- defined from the main Epic themes table. Maybe unify the sink defs
+-- from the Doom2 tables with these ones?
+
 -- Custom sink definitions as well as probability tables.
 GLAICE_DOOM1_SINK_DEFS =
 {
@@ -2050,6 +2054,7 @@ GLAICE_DOOM1_SINK_DEFS =
   }
 
 }
+
 
 GLAICE_DOOM1_TECH_CEILING_SINKS =
 {
@@ -2335,6 +2340,7 @@ GLAICE_DOOM1_DEIMOS_WALL_GROUPS =
   gtd_wall_lit_box_blue = 9
   gtd_wall_lit_box_red = 9
   gtd_wall_lit_box_white = 9
+  gtd_g99 = 15
 }
 
 GLAICE_DOOM1_HELL_WALL_GROUPS =
@@ -2349,6 +2355,7 @@ GLAICE_DOOM1_HELL_WALL_GROUPS =
   gtd_collite_set_orange = 7
   gtd_collite_set_blue = 7
   gtd_collite_set_red = 7
+  gtd_g99 = 25
 }
 
 GLAICE_DOOM1_FLESH_WALL_GROUPS =
@@ -2363,6 +2370,7 @@ GLAICE_DOOM1_FLESH_WALL_GROUPS =
   gtd_collite_set_orange = 7
   gtd_collite_set_blue = 7
   gtd_collite_set_red = 7
+  gtd_g99 = 25
 }
 
 

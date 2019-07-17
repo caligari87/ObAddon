@@ -2853,6 +2853,7 @@ GLAICE_HELL_WALL_GROUPS =
   gtd_collite_set_orange = 6
   gtd_collite_set_blue = 6
   gtd_collite_set_red = 6
+  gtd_g99 = 30
 }
 
 
