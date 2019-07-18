@@ -2172,7 +2172,7 @@ GLAICE_SINK_DEFS =
   ceiling_sink_SILVER2R = -- silver lights red
   {
     mat = "LITES01"
-    dz = 112
+    dz = 58
     light = 32
 
     trim_mat = "SILVER2R"
@@ -2183,7 +2183,7 @@ GLAICE_SINK_DEFS =
   ceiling_sink_SILVER2O = -- silver lights orange
   {
     mat = "LITES03"
-    dz = 112
+    dz = 58
     light = 32
 
     trim_mat = "SILVER2O"
@@ -2194,7 +2194,7 @@ GLAICE_SINK_DEFS =
   ceiling_sink_SILVER2Y = -- silver lights yellow
   {
     mat = "LITES03"
-    dz = 112
+    dz = 58
     light = 32
 
     trim_mat = "SILVER2Y"
@@ -2205,7 +2205,7 @@ GLAICE_SINK_DEFS =
   ceiling_sink_SILVER2W = -- silver lights white
   {
     mat = "LIGHTS3"
-    dz = 112
+    dz = 58
     light = 32
 
     trim_mat = "SILVER2W"
@@ -2216,7 +2216,7 @@ GLAICE_SINK_DEFS =
   ceiling_sink_SILVER2G = -- silver lights green
   {
     mat = "LITES04"
-    dz = 112
+    dz = 58
     light = 32
 
     trim_mat = "SILVER2G"
@@ -2328,7 +2328,7 @@ GLAICE_SINK_DEFS =
   ceiling_sink_GOTH21 = -- horizontal red line
   {
     mat = "GLITE04"
-    dz = 16
+    dz = 32
     light = 16
 
     trim_mat = "GOTH21"

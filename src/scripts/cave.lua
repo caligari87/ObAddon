@@ -4585,7 +4585,7 @@ function Cave_build_a_scenic_vista(area)
 
     local FL = new_blob()
 
-    FL.floor_h = get_most_extreme_neighbor_floor(area, "highest") - 8192
+    FL.floor_h = get_most_extreme_neighbor_floor(area, "lowest") - 8192
 
     FL.floor_mat = assert("_SKY" --[[area.zone.fence_mat]])
 

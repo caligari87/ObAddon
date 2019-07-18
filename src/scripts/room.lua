@@ -1716,7 +1716,9 @@ function Room_border_up()
       -- porches --
 
       if (A1.is_porch and not A2.is_porch)
-      or (not A1.is_porch and A2.is_porch) then
+      or (not A1.is_porch and A2.is_porch)
+      and not A1.dead_end
+      and not A2.dead_end then
 
         if A1.mode == "cage" or A2.mode == "cage" then
           Junction_make_railing(junc, "FENCE_MAT_FROM_THEME", "block")
@@ -3723,6 +3725,9 @@ function Room_cleanup_stairs_to_nowhere(R)
           SA.floor_group = SAS.floor_group
           SA.ceil_group = SAS.ceil_group
         end
+
+        A.dead_end = true
+        SA.dead_end = true
 
         fixup_neighbors(A)
       end
