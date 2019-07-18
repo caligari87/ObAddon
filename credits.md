@@ -11,6 +11,7 @@
 * **MogWaltz** - Prefabs.
 * **Craneo** - Replacement candle texture, contributions to naming generator, prefabs, sprites.
 * **Tapwave** - Contributions to the story generator.
+* **Scionox** - Prefabs.
 * **Swedra** - Contributions to naming generator.
 * **EpicTyphlosion** - Prefabs, contributions to naming generator.
 * **Caligari87** - Repository maintainer, Discord moderation.
