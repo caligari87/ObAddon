@@ -3530,9 +3530,8 @@ function Room_cleanup_stairs_to_nowhere(R)
 
           same_room_neighbors = same_room_neighbors + 1
 
-          -- must not be connected to other areas with nearly the same floor height
-          local h_diff = math.abs(N.floor_h - A.floor_h)
-          if h_diff <= 16 then
+          -- must not be connected to other areas with the same floor height
+          if A.floor_h == N.floor_h then
             return false
           end
 
