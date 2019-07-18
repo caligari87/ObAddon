@@ -260,9 +260,8 @@ GLAICE_THEMES =
     ceilings =
     {
       CEIL5_1 = 20
-      CEIL4_1 = 5
-      CEIL4_2 = 5
-      CEIL4_4 = 5
+      CEIL5_2 = 20
+      FLOOR1_6 = 10
       TEK1    = 20
       QFLAT09 = 5
       GRATE3  = 5
@@ -315,10 +314,11 @@ GLAICE_THEMES =
 
     ceilings =
     {
-      CEIL5_1 = 50
+      CEIL5_1 = 10
+      CEIL5_2 = 10
       CEIL4_1 = 20
       CEIL4_2 = 20
-      CEIL4_4 = 15
+      CEIL4_4 = 20
       TEK4    = 20
       TEK6    = 20
       QFLAT09 = 5
@@ -367,9 +367,7 @@ GLAICE_THEMES =
     ceilings =
     {
       CEIL5_1 = 20
-      CEIL4_1 = 5
-      CEIL4_2 = 5
-      CEIL4_4 = 5
+      CEIL5_2 = 20
       TEK2    = 30
       QFLAT09 = 5
       GRATE3  = 5
@@ -418,10 +416,8 @@ GLAICE_THEMES =
 
     ceilings =
     {
-      CEIL5_1 = 20
-      CEIL4_1 = 5
-      CEIL4_2 = 5
-      CEIL4_4 = 5
+      CEIL5_1 = 15
+      CEIL5_2 = 30
       TEK7    = 30
       QFLAT09 = 5
       GRATE3  = 5
@@ -469,9 +465,7 @@ GLAICE_THEMES =
     ceilings =
     {
       CEIL5_1 = 50
-      CEIL4_1 = 5
-      CEIL4_2 = 5
-      CEIL4_4 = 5
+      CEIL5_2 = 30
       TEK3    = 20
       TEK5    = 20
       QFLAT09 = 5
@@ -523,20 +517,32 @@ GLAICE_THEMES =
 
   tech_Shiny =
   {
-    prob = 40
+    prob = 75
     env = "building"
 
     walls =
     {
+      SHAWGRY4 = 15
+
       SHAWN2 = 60
       SHAWN4 = 40
       SHAWN5 = 40
+
+      SHAWHOSO = 40
+      SHAWN01C = 15
+      SHAWN01D = 15
+      SHAWN01F = 15
+
       TEKSHAW = 25
-      SHAWGRY4 = 10
       HEX01  = 15
-      STARGR1 = 3
-      STARGR2 = 3
-      STARGRY1 = 5
+      STARGR1 = 5
+      STARGR2 = 5
+      STARGRY1 = 8
+
+      SNOWWAL1 = 15
+      SNOWWAL2 = 15
+      SNOWWAL3 = 15
+      SNOWWAL4 = 15
     }
 
     floors =
