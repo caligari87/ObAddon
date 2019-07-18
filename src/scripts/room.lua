@@ -1356,8 +1356,12 @@ function Room_make_windows(A1, A2)
     if not area_can_window(A2) then return end
   end
 
+  -- dummy height for scenic areas are set here so z_fit windows
+  -- can actually go from floor to ceiling among these junctions
   if A2.mode == "scenic" then
-     A2.floor_h = A1.floor_h
+    if not A2.floor_h then
+      A2.floor_h = A2:lowest_neighbor().floor_h
+    end
   end
 
   -- remove windows into quiet start rooms... but not on procedural gotchas
