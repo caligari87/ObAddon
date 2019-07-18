@@ -2268,8 +2268,8 @@ SPROUT_narrow_hallway =
 
   structure =
   {
-    "x.x", "x@x"
-    "x.x", "xHx"
+    "...", ".@."
+    "...", ".H."
     "111", "111"
   }
 
@@ -2308,7 +2308,7 @@ HALL_1_GROW_L1 =
   structure =
   {
     "!@", "@H"
-    "x1", "x1"
+    ".1", ".1"
   }
 
   link1_2 = { dest_dir=4 }
@@ -2323,7 +2323,7 @@ HALL_1_GROW_T1 =
   structure =
   {
     "!@!", "@H@"
-    "x1x", "x1x"
+    ".1.", ".1."
   }
 
   hallway = { keep_shape_prob=90 }
@@ -2340,9 +2340,9 @@ HALL_1_GROW_P1 =
 
   structure =
   {
-    "x!x", "x@x"
+    ".!.", ".@."
     "!@!", "@H@"
-    "x1x", "x1x"
+    ".1.", ".1."
   }
 
   hallway = { keep_shape_prob=50 }
@@ -3056,7 +3056,7 @@ GROW_SIDE_ON_RAMP_TALL =
 
 GROW_CAUSEWAY =
 {
-  prob = 15
+  prob = 10
 
   structure =
   {
@@ -3066,6 +3066,21 @@ GROW_CAUSEWAY =
     "x......","x11AA11"
     "x......","x1>AA<1"
     "x......","x11AA11"
+  }
+}
+
+GROW_CAUSEWAY =
+{
+  prob = 10
+
+  structure =
+  {
+    "1....","111AA"
+    "1....","11>AA"
+    "x....","x11AA"
+    "x....","x11AA"
+    "x....","x1>AA"
+    "x....","x11AA"
   }
 }
 
@@ -6041,24 +6056,6 @@ GROW_INTO_CLIFF_TALL =
     "....","11^^"
     "....","1111"
     "x11x","x11x"
-  }
-}
-
-GROW_INTO_CLIFF_DOUBLE =
-{
-  prob = 35
-
-  group = "cliff"
-
-  group_pos = "entry"
-
-  structure =
-  {
-    "......","AA11AA"
-    "......","AA11AA"
-    "......","^^11^^"
-    "......","111111"
-    "xx11xx","xx11xx"
   }
 }
 
