@@ -2268,8 +2268,8 @@ SPROUT_narrow_hallway =
 
   structure =
   {
-    "...", ".@."
-    "...", ".H."
+    "x.x", "x@x"
+    "x.x", "xHx"
     "111", "111"
   }
 
@@ -2308,7 +2308,7 @@ HALL_1_GROW_L1 =
   structure =
   {
     "!@", "@H"
-    ".1", ".1"
+    "x1", "x1"
   }
 
   link1_2 = { dest_dir=4 }
@@ -2323,7 +2323,7 @@ HALL_1_GROW_T1 =
   structure =
   {
     "!@!", "@H@"
-    ".1.", ".1."
+    "x1x", "x1x"
   }
 
   hallway = { keep_shape_prob=90 }
@@ -2340,9 +2340,9 @@ HALL_1_GROW_P1 =
 
   structure =
   {
-    ".!.", ".@."
+    "x!x", "x@x"
     "!@!", "@H@"
-    ".1.", ".1."
+    "x1x", "x1x"
   }
 
   hallway = { keep_shape_prob=50 }
@@ -7394,7 +7394,7 @@ SIDEWALK_SLOPE_ON_RAMP =
 
 SIDEWALK_BUILDING_4x4 =
 {
-  prob = 35
+  prob = 15
 
   pass = "sidewalk"
 
@@ -7413,7 +7413,7 @@ SIDEWALK_BUILDING_4x4 =
 
 SIDEWALK_BUILDING_L =
 {
-  prob = 35
+  prob = 15
 
   pass = "sidewalk"
 
