@@ -6,10 +6,10 @@ PREFABS.Teleporter_scionox_dual_pad =
   map    = "MAP01"
 
   theme  = "tech"
-  prob   = 50
+  prob   = 75
 
   where  = "point"
-  size   = 108
+  size   = 104
   height = 128
 
   tag_1 = "?out_tag"
@@ -47,10 +47,10 @@ PREFABS.Teleporter_scionox_dual_pad_4 =
   map    = "MAP02"
 
   theme  = "tech"
-  prob   = 40
+  prob   = 60
 
   where  = "point"
-  size   = 108
+  size   = 104
   height = 128
 
   tag_1 = "?out_tag"

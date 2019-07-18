@@ -28,7 +28,7 @@ PREFABS.Teleporter_scionox_small_pillar_teleport_2 =
   tex_SW1BRIK = "SW1CMT"
   tex_SILVER2 = "PANRED"
   tex_GATE4 = "GATE3"
-  thing_2028 = mercury_lamp
+  thing_2028 = "mercury_lamp"
 }
 PREFABS.Teleporter_scionox_small_pillar_teleport_3 =
 {
@@ -40,5 +40,5 @@ PREFABS.Teleporter_scionox_small_pillar_teleport_3 =
   tex_GATE4 = "GATE2"
   tex_LITE5 = "METAL"
   flat_FLAT19 = "CEIL5_2"
-  thing_2028 = candelabra
+  thing_2028 = "candelabra"
 }
