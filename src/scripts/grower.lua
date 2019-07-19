@@ -3493,11 +3493,17 @@ function Grower_grammatical_room(R, pass, is_emergency)
     apply_num = rand.irange(5,10)
 
   elseif pass == "square_out" then
+
     each A in R.areas do
       A:calc_volume()
       R.svolume = R.svolume + A.svolume
     end
+
     apply_num = math.floor(R.svolume/rand.irange(3,4))
+
+    if LEVEL.is_procedural_gotcha then
+      apply_num = math.ceil(apply_num * 0.25)
+    end
 
   else
     error("unknown grammar pass: " .. tostring(pass))
