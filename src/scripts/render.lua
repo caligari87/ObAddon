@@ -348,6 +348,29 @@ function Render_edge(E)
   end
 
 
+  local function pick_beam_prefab()
+    local reqs =
+    {
+      kind = "beam"
+
+      group = assert(E.area.beam_type)
+
+      seed_w = assert(E.long)
+    }
+
+    if geom.is_corner(dir) then
+      reqs.where = "diagonal"
+      reqs.seed_h = reqs.seed_w
+    else
+      reqs.where = "edge"
+    end
+
+    local def = Fab_pick(reqs)
+
+    return def
+  end
+
+
   local function edge_outer_sky()
     assert(E.long == 1)
 
@@ -504,7 +527,7 @@ function Render_edge(E)
 
 
   local function straddle_beams()
-    local def = assert(E.prefab_def)
+    local def = pick_beam_prefab()
 
     local z = assert(E.beam_z)
 

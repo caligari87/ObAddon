@@ -50,6 +50,11 @@ HERETIC.THEMES =
       PLAIN = 50
     }
 
+    beam_groups =
+    {
+      beam_metal = 50
+    }
+
     wall_groups =
     {
       PLAIN = 50

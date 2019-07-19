@@ -1156,6 +1156,12 @@ DOOM.THEMES =
       dead_player = 35
     }
 
+    beam_groups =
+    {
+      beam_shiny = 50
+      beam_quakeish = 50
+    }
+
     wall_groups =
     {
       PLAIN = 300
@@ -1439,6 +1445,12 @@ DOOM.THEMES =
       light_side5 = 70
       light_side6 = 70
 
+    }
+
+    beam_groups =
+    {
+      beam_gothic = 75
+      beam_quakeish = 25
     }
 
     wall_groups =
@@ -1790,6 +1802,12 @@ DOOM.THEMES =
       light_hell_lava = 40
       ceil_redash = 25
       ceil_vdark = 10
+    }
+
+    beam_groups =
+    {
+      beam_gothic = 50
+      beam_quakeish = 50
     }
 
     wall_groups =

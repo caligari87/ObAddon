@@ -234,6 +234,12 @@ TNT.THEMES =
       candelabra = 20
     }
 
+    beam_groups =
+    {
+      beam_gothic = 50
+      beam_quakeish = 50
+    }
+
     fence_posts =
     {
       Post_metal = 50

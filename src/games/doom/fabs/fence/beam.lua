@@ -8,6 +8,8 @@ PREFABS.Beam =
   map    = "MAP01"
   theme = "!tech"
 
+  group  = "beam_gothic"
+
   kind   = "beam"
 
   prob   = 50
@@ -27,6 +29,8 @@ PREFABS.Beam_diagonal =
   map    = "MAP02"
   theme  = "!tech"
 
+  group  = "beam_gothic"
+
   kind   = "beam"
 
   prob   = 50
@@ -43,6 +47,8 @@ PREFABS.Beam_tech =
   template = "Beam"
   theme = "tech"
   map = "MAP03"
+
+  group = "beam_shiny"
 }
 
 PREFABS.Beam_diagonal_tech =
@@ -50,4 +56,6 @@ PREFABS.Beam_diagonal_tech =
   template = "Beam_diagonal"
   theme = "tech"
   map = "MAP04"
+
+  group = "beam_shiny"
 }

@@ -594,6 +594,12 @@ ULTDOOM.THEMES =
       light_side4 = 5
     }
 
+    beam_groups =
+    {
+      beam_shiny = 50
+      beam_quakeish = 50
+    }
+
     wall_groups =
     {
       PLAIN = 200
@@ -830,6 +836,13 @@ ULTDOOM.THEMES =
       Skybox_garrett_hell = 50
     }
 
+    beam_groups =
+    {
+      beam_gothic = 50
+      beam_shiny = 25
+      beam_quakeish = 25
+    }
+
    -- This is because of the slow Hellification of the Deimos base, hence a few Hell wall prefabs are here.
     wall_groups =
     {
@@ -1027,6 +1040,12 @@ ULTDOOM.THEMES =
       sky_hell_11 = 3
       sky_hell_12 = 3
       sky_hell_13 = 3
+    }
+
+    beam_groups =
+    {
+      beam_gothic = 50
+      beam_quakeish = 50
     }
 
     wall_groups =
@@ -1307,6 +1326,12 @@ ULTDOOM.THEMES =
       sky_hell_13 = 3
       sky_hell_14 = 4
       sky_hell_15 = 4
+    }
+
+    beam_groups =
+    {
+      beam_gothic = 50
+      beam_quakeish = 50
     }
 
     wall_groups =

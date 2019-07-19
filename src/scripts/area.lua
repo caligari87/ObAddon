@@ -840,22 +840,8 @@ function Junction_make_beams(junc)
     area = junc.A1
   }
 
-  if not junc.E1.prefab_def then
-    local reqs =
-    {
-      kind = "beam"
-
-      seed_w = 1
-    }
-
-    if geom.is_corner(dir) then
-      reqs.where = "diagonal"
-      reqs.seed_h = reqs.seed_w
-    else
-      reqs.where = "edge"
-    end
-
-    junc.E1.prefab_def = Fab_pick(reqs)
+  if not junc.A1.beam_type then
+    junc.A1.beam_type = rand.key_by_probs(THEME.beam_groups)
   end
 
   junc.E2 = { kind="nothing", area=junc.A2 }

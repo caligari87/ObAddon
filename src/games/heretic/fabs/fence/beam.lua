@@ -7,6 +7,8 @@ PREFABS.Beam =
   file   = "fence/beam.wad"
   map    = "MAP01"
 
+  group  = "beam_metal"
+
   kind   = "beam"
 
   prob   = 50
@@ -25,6 +27,8 @@ PREFABS.Beam_diagonal =
 {
   file   = "fence/beam.wad"
   map    = "MAP02"
+
+  group  = "beam_metal"
 
   kind   = "beam"
 
