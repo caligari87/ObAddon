@@ -1684,6 +1684,15 @@ function Room_border_up()
 
     if A1.room == A2.room then
 
+      -- cages --
+      -- just minor fixes
+
+      if A1.mode == "cage" and A2.mode == "cage"
+      and ((not A1.cage_mode and A2.cage_mode)
+      or (A1.cage_mode and not A2.cage_mode)) then
+        Junction_make_railing(junc, "FENCE_MAT_FROM_THEME", "block")
+      end
+
       -- walls on areas where ceilings and floors meet --
 
       if not (A1.is_outdoor and A2.is_outdoor) then
@@ -1725,7 +1734,11 @@ function Room_border_up()
       and not A2.dead_end then
 
         if A1.mode == "cage" or A2.mode == "cage" then
-          Junction_make_railing(junc, "FENCE_MAT_FROM_THEME", "block")
+          if A1.cage_mode == "fancy" or A2.cage_mode == "fancy" then
+            Junction_make_railing(junc, "FENCE_MAT_FROM_THEME", "block")
+          else
+            Junction_make_empty(junc)
+          end
           return
         end
 
