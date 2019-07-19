@@ -3175,7 +3175,7 @@ GROW_STAIRED_HORSESHOE =
 
   structure =
   {
-    "..........","AAAAAAAAAA"
+    "..........","/AAAAAAAA%"
     "..........","AAAAAAAAAA"
     "..........","AA/1111%AA"
     "..........","AA111111AA"
@@ -3187,6 +3187,7 @@ GROW_STAIRED_HORSESHOE =
 
   diagonals =
   {
+    ".A","A."
     "A1","1A"
   }
 }
@@ -3205,7 +3206,7 @@ GROW_STAIRED_HORSESHOE_TIGHTER =
     "..........","AA111111AA"
     "..........","AA111111AA"
     "..........","AA111111AA"
-    "..xx11xx..","..xx11xx.."
+    "xxxx11xxxx","xxxx11xxxx"
   }
 
   diagonals =
@@ -3239,30 +3240,6 @@ GROW_STAIRED_T =
   }
 }
 
-GROW_STAIRED_J =
-{
-  prob = 25
-
-  aversion = 10
-
-  structure =
-  {
-    "..........","AAAAAAAAAA"
-    "..........","AAAAAAAAAA"
-    "..........","AA/1111%AA"
-    "..........","AA111111AA"
-    "..........","^^111111AA"
-    "..........","1111111111"
-    "..........","1111111111"
-    "xxxxxxxx11","xxxxxxxx11"
-  }
-
-  diagonals =
-  {
-    "A1","1A"
-  }
-}
-
 GROW_STAIRED_L =
 {
   prob = 40
@@ -3290,30 +3267,8 @@ GROW_STAIRED_L =
 
 -- MSSP's squeezed corridors. [SQUEEZE]
 
-GROW_SQUEEZE_ENTRY =
-{
-  prob = 25
-  prob_skew = 10
-  aversion = 25
 
-  env = "!cave"
-
-  group = "squeeze"
-
-  structure =
-  {
-    ".....","..A.."
-    ".....","#/A%#"
-    "x111x","x111x"
-  }
-
-  diagonals =
-  {
-    ".A","A."
-  }
-}
-
-GROW_SQUEEZE_IN_STAIRED =
+GROW_SQUEEZE_STRAIGHT =
 {
   prob = 15
 
@@ -3321,47 +3276,54 @@ GROW_SQUEEZE_IN_STAIRED =
 
   structure =
   {
-    ".....","..A.."
-    ".....","..A.."
-    ".....","1>A<1"
-    "1xxx1","1xxx1"
-  }
-}
-
-GROW_SQUEEZE_OUT =
-{
-  prob = 30
-
-  group = "squeeze"
-
-  structure =
-  {
-    "...","AAA"
-    "...","%A/"
-    ".1.",".1."
-  }
-
-  diagonals =
-  {
-    ".A","A."
-  }
-}
-
-GROW_SQUEEZE_STRAIGHT =
-{
-  prob = 60
-
-  group = "squeeze"
-
-  structure =
-  {
     "...",".1."
     "...",".1."
-    ".1.",".1."
+    "x1x","x1x"
   }
 }
 
 GROW_SQUEEZE_STRAIGHT_AREA_TRANSITION =
+{
+  prob = 8
+
+  group = "squeeze"
+
+  structure =
+  {
+    "...",".A."
+    "...",".A."
+    "x1x","x1x"
+  }
+}
+
+GROW_SQUEEZE_CURVE =
+{
+  prob = 10
+
+  group = "squeeze"
+
+  structure =
+  {
+    "...","..."
+    "...",".11"
+    "x1x","x1x"
+  }
+}
+
+GROW_SQUEEZE_JUNCTION =
+{
+  prob = 10
+
+  group = "squeeze"
+
+  structure =
+  {
+    "...","111"
+    "x1x","x1x"
+  }
+}
+
+GROW_SQUEEZE_STAIRCASE =
 {
   prob = 10
 
@@ -3370,69 +3332,14 @@ GROW_SQUEEZE_STRAIGHT_AREA_TRANSITION =
   structure =
   {
     "...",".A."
-    "...",".A."
-    ".1.",".1."
-  }
-}
-
-GROW_SQUEEZE_CURVE =
-{
-  prob = 60
-
-  group = "squeeze"
-
-  structure =
-  {
-    "...","..."
-    "...",".11"
-    ".1.",".1."
-  }
-}
-
-GROW_SQUEEZE_CURVE_REVERSED =
-{
-  prob = 60
-
-  group = "squeeze"
-
-  structure =
-  {
-    "...","..."
-    "...","11."
-    ".1.",".1."
-  }
-}
-
-GROW_SQUEEZE_JUNCTION =
-{
-  prob = 60
-
-  group = "squeeze"
-
-  structure =
-  {
-    "...","111"
-    ".1.",".1."
-  }
-}
-
-GROW_SQUEEZE_STAIRCASE =
-{
-  prob = 30
-
-  group = "squeeze"
-
-  structure =
-  {
-    "...",".A."
     "...",".^."
-    ".1.",".1."
+    "x1x","x1x"
   }
 }
 
 GROW_SQUEEZE_EVEN_MORE_STAIRCASE =
 {
-  prob = 20
+  prob = 10
 
   group = "squeeze"
 
@@ -3442,7 +3349,7 @@ GROW_SQUEEZE_EVEN_MORE_STAIRCASE =
     "...",".^."
     "...",".^."
     "...",".^."
-    ".1.",".1."
+    "x1x","x1x"
   }
 }
 
@@ -5347,130 +5254,6 @@ SMOOTHER_CATWALK_EDGES =
 
 -- MSSP's rooms shaped like English alphabet letters. [LETTERS]
 
-GROW_T =
-{
-  prob = 35
-
-  structure =
-  {
-    "x............","x111111111111"
-    "1............","1111111111111"
-    "1............","1111111111111"
-    "x............","x111111111111"
-    "xxxxx....xxxx","xxxxx1111xxxx"
-    "xxxxx....xxxx","xxxxx1111xxxx"
-    "xxxxx....xxxx","xxxxx1111xxxx"
-    "xxxxx....xxxx","xxxxx1111xxxx"
-  }
-}
-
-GROW_T_STALK_ENTRY =
-{
-  prob = 35
-
-  structure =
-  {
-    "............","111111111111"
-    "............","111111111111"
-    "............","111111111111"
-    "............","111111111111"
-    "xxxx....xxxx","xxxx1111xxxx"
-    "xxxx....xxxx","xxxx1111xxxx"
-    "xxxx....xxxx","xxxx1111xxxx"
-    "xxxx....xxxx","xxxx1111xxxx"
-    "xxxxx11xxxxx","xxxxx11xxxxx"
-  }
-}
-
-GROW_X =
-{
-  prob = 35
-
-  structure =
-  {
-    "x....xxxx....","x111%xxxx/111"
-    "1.....xx.....","11111%xx/1111"
-    "1............","1111111111111"
-    "x............","x111111111111"
-    "x............","x%1111111111/"
-    "xx..........x","xx%11111111/x"
-    "xxx........xx","xxx11111111xx"
-    "xxx........xx","xxx11111111xx"
-    "xx..........x","xx/11111111%x"
-    "x............","x/1111111111%"
-    "x............","x111111111111"
-    "x............","x111111111111"
-    "x.....xx.....","x1111/xx%1111"
-    "x....xxxx....","x111/xxxx%111"
-  }
-
-  diagonals =
-  {
-    "1.",".1"
-    "1.",".1"
-    ".1","1."
-    ".1","1."
-    ".1","1."
-    ".1","1."
-    "1.",".1"
-    "1.",".1"
-  }
-}
-
-GROW_H =
-{
-  prob = 35
-
-  structure =
-  {
-    "x....xxxx....","x1111xxxx1111"
-    "1....xxxx....","11111xxxx1111"
-    "1....xxxx....","11111xxxx1111"
-    "x.....xx.....","x1111%xx/1111"
-    "x............","x111111111111"
-    "x............","x111111111111"
-    "x............","x111111111111"
-    "x............","x111111111111"
-    "x.....xx.....","x1111/xx%1111"
-    "x....xxxx....","x1111xxxx1111"
-    "x....xxxx....","x1111xxxx1111"
-    "x....xxxx....","x1111xxxx1111"
-  }
-
-  diagonals =
-  {
-    "1.",".1"
-    "1.",".1"
-  }
-}
-
-GROW_H_STALK_ENTRY_TEST =
-{
-  prob = 35
-
-  structure =
-  {
-    "x11xxxxxxxxx","x11xxxxxxxxx"
-    "....xxxx....","1111xxxx1111"
-    "....xxxx....","1111xxxx1111"
-    "....xxxx....","1111xxxx1111"
-    ".....xx.....","1111%xx/1111"
-    "............","111111111111"
-    "............","111111111111"
-    "............","111111111111"
-    "............","111111111111"
-    ".....xx.....","1111/xx%1111"
-    "....xxxx....","1111xxxx1111"
-    "....xxxx....","1111xxxx1111"
-    "....xxxx....","1111xxxx1111"
-  }
-
-    diagonals =
-  {
-    "1.",".1"
-    "1.",".1"
-  }
-}
 
 GROW_DIAGONAL_STALK =
 {
@@ -5495,40 +5278,9 @@ GROW_DIAGONAL_STALK =
   }
 }
 
-GROW_C =
-{
-  prob = 50
-
-  structure =
-  {
-    "x.......x","x/111111x"
-    "........1","/11111111"
-    "........1","111111111"
-    "........x","11111111x"
-    ".....xxxx","1111/xxxx"
-    "....xxxxx","1111xxxxx"
-    "....xxxxx","1111xxxxx"
-    ".....xxxx","1111%xxxx"
-    "........x","11111111x"
-    "........x","11111111x"
-    "........x","%1111111x"
-    "x.......x","x%111111x"
-  }
-
-  diagonals =
-  {
-    ".1"
-    ".1"
-    "1."
-    "1."
-    ".1"
-    ".1"
-  }
-}
-
 GROW_O =
 {
-  prob = 75
+  prob = 40
 
   structure =
   {
@@ -5552,6 +5304,78 @@ GROW_O =
   }
 }
 
+GROW_O_STAIR =
+{
+  prob = 20
+
+  structure =
+  {
+    "x......x","x/AAAA%x"
+    "........","/AAAAAA%"
+    "........","AAAAAAAA"
+    "...xx...","AAAxxAAA"
+    "...xx...","^^^xx^^^"
+    "........","11111111"
+    "........","%111111/"
+    "x......x","x%1111/x"
+    "xxx11xxx","xxx11xxx"
+  }
+
+  diagonals =
+  {
+    ".A","A."
+    ".A","A."
+    ".1","1."
+    ".1","1."
+  }
+}
+
+GROW_HALF_C =
+{
+  prob = 75
+
+  structure =
+  {
+    "x.......x","x/111111x"
+    "........1","/11111111"
+    "........1","111111111"
+    "........x","11111111x"
+    ".....xxxx","1111/xxxx"
+    "....xxxxx","1111xxxxx"
+  }
+
+  diagonals =
+  {
+    ".1"
+    ".1"
+    "1."
+  }
+}
+
+GROW_HALF_C_STAIR =
+{
+  prob = 50
+
+  structure =
+  {
+    "x.......x","x/111111x"
+    "........1","/11111111"
+    "........1","111111111"
+    "........x","11111111x"
+    ".....xxxx","1111/xxxx"
+    "....xxxxx","vvvvxxxxx"
+    "....xxxxx","AAAAxxxxx"
+    "....xxxxx","AAAAxxxxx"
+  }
+
+  diagonals =
+  {
+    ".1"
+    ".1"
+    "1."
+  }
+}
+
 GROW_L =
 {
   prob = 75
@@ -5567,6 +5391,24 @@ GROW_L =
     "........","11111111"
     "........","11111111"
     "........","11111111"
+  }
+}
+
+GROW_L_STAIR =
+{
+  prob = 45
+
+  structure =
+  {
+    "x11xxxxx","x11xxxxx"
+    "....xxxx","1111xxxx"
+    "....xxxx","1111xxxx"
+    "....xxxx","1111xxxx"
+    "....xxxx","1111xxxx"
+    "........","1111>>AA"
+    "........","1111>>AA"
+    "........","1111>>AA"
+    "........","1111>>AA"
   }
 }
 
@@ -5640,92 +5482,20 @@ GROW_ELEVATED_O =
 
 GROW_WIDE_SPACE_4X2 =
 {
-  prob = 100
-
-  structure =
-  {
-    "x........","x11111111"
-    "1........","111111111"
-    "1........","111111111"
-    "x........","x11111111"
-  }
-}
-
-GROW_WIDE_SPACE_4X8 =
-{
-  prob = 100
-
-  structure =
-  {
-    "x........","x11111111"
-    "x........","x11111111"
-    "1........","111111111"
-    "1........","111111111"
-    "1........","111111111"
-    "1........","111111111"
-    "x........","x11111111"
-    "x........","x11111111"
-  }
-}
-
-GROW_WIDE_SPACE_12x12 =
-{
   prob = 75
 
   structure =
   {
-    "1............","1111111111111"
-    "1............","1111111111111"
-    "x............","x111111111111"
-    "x............","x111111111111"
-    "x............","x111111111111"
-    "x............","x111111111111"
-    "x............","x111111111111"
-    "x............","x111111111111"
-    "x............","x111111111111"
-    "x............","x111111111111"
-    "x............","x111111111111"
-    "x............","x111111111111"
-  }
-}
-
-GROW_WIDE_SPACE_8x12 =
-{
-  prob = 100
-
-  structure =
-  {
-    "1............","1111111111111"
-    "1............","1111111111111"
-    "x............","x111111111111"
-    "x............","x111111111111"
-    "x............","x111111111111"
-    "x............","x111111111111"
-    "x............","x111111111111"
-    "x............","x111111111111"
-  }
-}
-
-GROW_WIDE_SPACE_8x8 =
-{
-  prob = 100
-
-  structure =
-  {
+    "x........","x11111111"
     "1........","111111111"
     "1........","111111111"
-    "x........","x11111111"
-    "x........","x11111111"
-    "x........","x11111111"
-    "x........","x11111111"
-    "x........","x11111111"
     "x........","x11111111"
   }
 }
 
 GROW_EXTRUSION_4X6 =
 {
-  prob = 125
+  prob = 65
 
   structure =
   {
@@ -5741,7 +5511,7 @@ GROW_EXTRUSION_4X6 =
 
 GROW_EXTRUSION_4X4 =
 {
-  prob = 150
+  prob = 75
 
   structure =
   {
@@ -5755,7 +5525,7 @@ GROW_EXTRUSION_4X4 =
 
 GROW_EXTRUSION_4X2 =
 {
-  prob = 200
+  prob = 100
 
   structure =
   {
@@ -5767,7 +5537,7 @@ GROW_EXTRUSION_4X2 =
 
 GROW_EXTRUSION_3X2 =
 {
-  prob = 125
+  prob = 80
 
   structure =
   {
@@ -5779,7 +5549,7 @@ GROW_EXTRUSION_3X2 =
 
 GROW_EXTRUSION_3X4 =
 {
-  prob = 200
+  prob = 75
 
   structure =
   {
@@ -6101,26 +5871,7 @@ GROW_CLIFF_EXTENSION_UPPER_WE_GO =
   }
 }
 
-GROW_CLIFF_EXTENSION_OUTER_CURVE =
-{
-  prob = 35
-
-  group = "cliff"
-
-  structure =
-  {
-    "1..","111"
-    "2..","2%1"
-    "x..","x21"
-  }
-
-  diagonals =
-  {
-    "21"
-  }
-}
-
-GROW_CLIFF_EXTENSION_INNER_CURVE =
+GROW_CLIFF_EXTENSION_CURVE =
 {
   prob = 75
 
@@ -6209,27 +5960,7 @@ GROW_CLIFF_EXTENSION_X2_UPPER_WE_GO =
   }
 }
 
-GROW_CLIFF_EXTENSION_OUTER_CURVE_X2 =
-{
-  prob = 75
-
-  group = "cliff"
-
-  structure =
-  {
-    "1....","11111"
-    "1....","11111"
-    "2....","22%11"
-    "2....","22211"
-  }
-
-  diagonals =
-  {
-    "21"
-  }
-}
-
-GROW_CLIFF_EXTENSION_INNER_CURVE_X2 =
+GROW_CLIFF_EXTENSION_CURVE_X2 =
 {
   prob = 85
 

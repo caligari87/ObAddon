@@ -353,7 +353,7 @@ function Render_edge(E)
     {
       kind = "beam"
 
-      group = assert(E.area.beam_type)
+      group = assert(E.area.room.beam_type)
 
       seed_w = assert(E.long)
     }
