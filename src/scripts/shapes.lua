@@ -2961,6 +2961,7 @@ GROW_RAMP_THIN_SINK =
   structure =
   {
     "...","AAA"
+    "...","AAA"
     "...","%A/"
     "...","1^1"
     "...","1^1"
@@ -2980,6 +2981,7 @@ GROW_RAMP_THIN_RISE =
 
   structure =
   {
+    "...","AAA"
     "...","AAA"
     "...","A^A"
     "...","A^A"
@@ -3091,6 +3093,7 @@ GROW_GATED_RAMP =
   structure =
   {
     "......","AAAAAA"
+    "......","AAAAAA"
     "......","A.^^.A"
     "xx11xx","xx11xx"
   }
@@ -3102,6 +3105,7 @@ GROW_GATED_SIDE_RAMP =
 
   structure =
   {
+    "........","AAAAAAAA"
     "........","AAAAAAAA"
     "........","^^.AA.^^"
     "........","11111111"
@@ -4895,32 +4899,9 @@ GROW_WIDE_SPACE_CATWALK_CAPPER_4X =
   }
 }
 
-GROW_SKILLET =
+GROW_HALF_SKILLET =
 {
-  prob = 35
-
-  aversion = 8
-
-  structure =
-  {
-    "x.....","x11111"
-    "1.....","11/AA%"
-    "1.....","1>AAAA"
-    "1.....","1>AAAA"
-    "1.....","11%AA/"
-    "x.....","x11111"
-  }
-
-  diagonals =
-  {
-    "1A","A1"
-    "1A","A1"
-  }
-}
-
-GROW_SKILLET_BIHANDLED =
-{
-  prob = 35
+  prob = 25
 
   structure =
   {
@@ -4928,13 +4909,28 @@ GROW_SKILLET_BIHANDLED =
     "1......","11/AA%1"
     "1......","1>AAAAA"
     "1......","1>AAAAA"
-    "1......","11%AA/1"
-    "x......","x111111"
   }
 
   diagonals =
   {
     "1A","A1"
+  }
+}
+
+GROW_HALF_SKILLET_SPIRAL =
+{
+  prob = 25
+
+  structure =
+  {
+    "11......","11111111"
+    "11......","11/AA%11"
+    "xx......","xxAAAA<1"
+    "xx......","xxAAAA<1"
+  }
+
+  diagonals =
+  {
     "1A","A1"
   }
 }
@@ -5446,7 +5442,7 @@ GROW_ELEVATED_T_STALK_ENTRY =
   }
 }
 
-GROW_ELEVATED_O =
+GROW_ELEVATED_O_QUARTER =
 {
   prob = 15
 
@@ -5454,65 +5450,59 @@ GROW_ELEVATED_O =
 
   structure =
   {
-    "x11xxxxxxxxx","x11xxxxxxxxx"
-    "............","111111111111"
-    "............","111111111111"
-    "............","11/AAAAAA%11"
-    "............","11AAAAAAAA11"
-    "............","11AAAAAAAA11"
-    "............","11>AAAAAA<11"
-    "............","11>AAAAAA<11"
-    "............","11AAAAAAAA11"
-    "............","11AAAAAAAA11"
-    "............","11%AAAAAA/11"
-    "............","111111111111"
-    "............","111111111111"
+    "x11xxx","x11xxx"
+    "......","111111"
+    "......","111111"
+    "......","11/AAA"
+    "......","11AAAA"
+    "......","11AAAA"
+    "......","11>AAA"
+    "......","11>AAA"
   }
 
   diagonals =
   {
-    "1A","A1"
-    "1A","A1"
+    "A1"
   }
 }
 
---[MISC SHAPES]
-
---[[GROW_PILL =
-{
-  prob = 20
-
-  structure =
-  {
-    "111111111111"
-    "111111111111"
-    "1111vvvv1111"
-    "AAAAAAAAAAAA"
-  }
-}]]
-
 -- MSSP's huge-arse rooms. [HUGE]
 
-GROW_WIDE_SPACE_4X2 =
+GROW_EXTRUSION_CORNER_4x4 =
 {
-  prob = 75
+  prob = 40
 
   structure =
   {
-    "x........","x11111111"
-    "1........","111111111"
-    "1........","111111111"
-    "x........","x11111111"
+    "x....","x1111"
+    "x....","x1111"
+    "1....","11111"
+    "1....","11111"
+    "x11xx","x11xx"
+  }
+}
+
+GROW_EXTRUSION_CORNER_4x4_NEW_AREA =
+{
+  prob = 40
+
+  structure =
+  {
+    "x....","xAAAA"
+    "x....","xAAAA"
+    "1....","1AAAA"
+    "1....","1AAAA"
+    "x11xx","x11xx"
   }
 }
 
 GROW_EXTRUSION_4X6 =
 {
-  prob = 65
+  prob = 50
 
   structure =
   {
-    "1111","1111"
+    "x11x","x11x"
     "....","1111"
     "....","1111"
     "....","1111"
@@ -5524,25 +5514,13 @@ GROW_EXTRUSION_4X6 =
 
 GROW_EXTRUSION_4X4 =
 {
-  prob = 75
+  prob = 65
 
   structure =
   {
-    "1111","1111"
+    "x11x","x11x"
     "....","1111"
     "....","1111"
-    "....","1111"
-    "....","1111"
-  }
-}
-
-GROW_EXTRUSION_4X2 =
-{
-  prob = 100
-
-  structure =
-  {
-    "1111","1111"
     "....","1111"
     "....","1111"
   }
@@ -5644,11 +5622,11 @@ GROW_EXTRUSION_STAIRCASE_4x2_SMALL_SIDEWAYS =
 
 GROW_EXTRUSION_SINK =
 {
-  prob = 5
+  prob = 30
 
   structure =
   {
-    "1111","1111"
+    "x11x","x11x"
     "....","1111"
     "....","1vAA"
     "....","1AAA"
@@ -6548,62 +6526,38 @@ SMOOTHER_LIQUID_MOAT_MERGE =
 
 -- MSSP's single-seed trenches. [TRENCHES]
 
-GROW_TRENCH_ENTRY =
-{
-  prob = 50
-
-  group_pos = "entry"
-
-  group = "trench"
-
-  structure =
-  {
-    "1...","1111"
-    "1...","1>AA"
-    "1...","1111"
-  }
-}
-
 GROW_TRENCH_STRAIGHT =
 {
-  prob = 40
-
-  group = "trench"
+  prob = 50
 
   structure =
   {
-    "1..","111"
-    "2..","222"
-    "1..","111"
+    "1......","11111AA"
+    "1......","11>>AAA"
+    "1......","11111AA"
   }
 }
 
-GROW_TRENCH_CURVED =
-{
-  prob = 35
-
-  group = "trench"
-
-  structure =
-  {
-    "1..","111"
-    "2..","221"
-    "1..","121"
-    "1..","121"
-  }
-}
-
---[[GROW_TRENCH_EXIT =
+GROW_TRENCH_CURVE =
 {
   prob = 50
 
   structure =
   {
-    "1..","111"
-    "2..","2>1"
-    "1..","111"
+    "xx...","xxAAA"
+    "xx...","xxAAA"
+    "x....","x11A1"
+    "x....","x1/A1"
+    "11...","11>/1"
+    "11...","11111"
   }
-}]]
+
+  diagonals =
+  {
+    "1A"
+    "A1"
+  }
+}
 
 -- MSSP's sewers [SEWER]
 
@@ -7195,7 +7149,7 @@ SIDEWALK_LIQUID_POOL =
 
 SIDEWALK_CAGE =
 {
-  prob = 100
+  prob = 50
 
   pass = "sidewalk"
 
@@ -7211,7 +7165,7 @@ SIDEWALK_CAGE =
 
 SIDEWALK_CAGE_4X =
 {
-  prob = 80
+  prob = 40
 
   pass = "sidewalk"
 
@@ -7227,7 +7181,7 @@ SIDEWALK_CAGE_4X =
 
 SIDEWALK_CAGE_4X4 =
 {
-  prob = 65
+  prob = 35
 
   pass = "sidewalk"
 
