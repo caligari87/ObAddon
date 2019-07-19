@@ -195,7 +195,7 @@ function Render_edge(E)
     if A.room then
       reqs.env = A.room:get_env()
 
-      if A.is_porch then
+      if A.is_porch or A.is_porch_neighbor then
         reqs.env = "building"
       end
     end
