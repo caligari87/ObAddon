@@ -6543,15 +6543,17 @@ GROW_TRENCH_STRAIGHT =
 GROW_TRENCH_CURVE =
 {
   prob = 50
+  skip_prob = 15
+  averion = 25
 
   structure =
   {
-    "xxx...","xxxAAA"
-    "xxx...","xxxAAA"
-    "x.....","x111A1"
-    "x.....","x11/A1"
-    "11....","11>A/1"
-    "11....","111111"
+    "xxxx...","xxxxAAA"
+    "xxxx...","xxxxAAA"
+    "xxx....","xxx11A1"
+    "xx.....","xx11/A1"
+    "11.....","11>AA/1"
+    "11.....","1111111"
   }
 
   diagonals =
@@ -6573,13 +6575,41 @@ GROW_SEWER_ENTRY =
 
   structure =
   {
-    "1..","111"
-    "1..","1~~"
-    "1..","111"
+    "x....","x1111"
+    "11...","11~~1"
+    "11...","11111"
   }
 }
 
 GROW_SEWER_STRAIGHT =
+{
+  prob = 40
+
+  group = "sewer"
+
+  structure =
+  {
+    "1...","1111"
+    "1...","~~~1"
+    "1...","1111"
+  }
+}
+
+GROW_SEWER_STAIRS =
+{
+  prob = 50
+
+  group = "sewer"
+
+  structure =
+  {
+    "1...","1>AA"
+    "1...","~~~A"
+    "1...","1>AA"
+  }
+}
+
+GROW_SEWER_SWERVE =
 {
   prob = 35
 
@@ -6587,38 +6617,10 @@ GROW_SEWER_STRAIGHT =
 
   structure =
   {
-    "1..","111"
-    "~..","~~~"
-    "1..","111"
-  }
-}
-
-GROW_SEWER_STAIRS =
-{
-  prob = 15
-
-  group = "sewer"
-
-  structure =
-  {
-    "1...","1>AA"
-    "~...","~~~~"
-    "1...","1>AA"
-  }
-}
-
-GROW_SEWER_SWERVE =
-{
-  prob = 25
-
-  group = "sewer"
-
-  structure =
-  {
-     "1...","111%"
-     "~...","~~%1"
-     "1...","11%~"
-     "x...","x%11"
+     "1...x","111%x"
+     "1....","~~%11"
+     "1....","11%~1"
+     "x....","x%111"
   }
 
   diagonals =
@@ -6639,9 +6641,9 @@ GROW_SEWER_CURVED =
   structure =
   {
     "1...","1111"
-    "~...","~~%1"
+    "1...","~~%1"
     "1...","1%~1"
-    "x...","x1~1"
+    "x...","x111"
   }
 
   diagonals =
@@ -6657,20 +6659,21 @@ GROW_SEWER_EXIT =
 
   structure =
   {
-    "1..","111"
-    "~..","~~1"
-    "1..","111"
+    "1...","11AA"
+    "1...","~~AA"
+    "1...","11AA"
   }
 }
 
 GROW_SEWER_STAIRS_SIDE_EXIT_NEW_AREA =
 {
-  prob = 40
+  prob = 25
 
   structure =
   {
+    "xx..xx","xxAAxx"
     "1.....","1>AA11"
-    "~.....","~~~~~1"
+    "1.....","~~~~~1"
     "1.....","111111"
   }
 }
