@@ -4431,49 +4431,6 @@ GROW_PRIMITIVE_CIRCLE_2X =
   }
 }
 
-GROW_PRIMITIVE_HALFTRIANGLE_3X =
-{
-  prob = 18
-
-  structure =
-  {
-    "xx....","xx/111"
-    "x.....","x/1111"
-    "......","/11111"
-    "......","111111"
-    "......","%11111"
-    "xxxx11","xxxx11"
-  }
-
-  diagonals =
-  {
-    ".1"
-    ".1"
-    ".1"
-    ".1"
-  }
-}
-
-GROW_PRIMITIVE_TRIANGLE_2X =
-{
-  prob = 10
-
-  structure =
-  {
-    "x...","x/11"
-    "....","/111"
-    "....","%111"
-    "xx11","xx11"
-  }
-
-  diagonals =
-  {
-    ".1"
-    ".1"
-    ".1"
-  }
-}
-
 -- MSSP's shape tamers. Tries to get rid of strange architectural decisions such as pointy walls. [TAMERS]
 
 SERRATED_EDGE_SMOOTHER =
