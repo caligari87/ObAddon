@@ -5209,8 +5209,64 @@ SMOOTHER_CATWALK_EDGES =
   }
 }
 
--- MSSP's rooms shaped like English alphabet letters. [LETTERS]
+-- MSSP's 3.x/6.x-style rooms [6.x]
+-- supposedly more or less trying to replicate the strange ceiling
+-- layouts found in 3.x/6.x
 
+GROW_36_DOUBLE_AREA =
+{
+  prob = 50
+
+  structure =
+  {
+    "......","AAAA11"
+    "......","AAAA11"
+    "xx....","xx1111"
+    "xx....","xx1111"
+    "xx....","xx1111"
+    "xx....","xx1111"
+    "....11","AAAA11"
+    "....11","AAAA11"
+  }
+}
+
+GROW_36_SINGLE_AREA =
+{
+  prob = 50
+
+  structure =
+  {
+    "x....","x1111"
+    "x....","x1111"
+    ".....","AAA11"
+    ".....","AAA11"
+    ".....","AAA11"
+    ".....","AAA11"
+    "x..11","x1111"
+    "x..11","x1111"
+  }
+}
+
+GROW_36_TRIPLE_AREA =
+{
+  prob = 35
+
+  structure =
+  {
+    "....","AA11"
+    "....","AA11"
+    "x...","x111"
+    "x...","x111"
+    "....","AA11"
+    "....","AA11"
+    "x...","x111"
+    "x...","x111"
+    "..11","AA11"
+    "..11","AA11"
+  }
+}
+
+-- MSSP's rooms shaped like English alphabet letters. [LETTERS]
 
 GROW_DIAGONAL_STALK =
 {
