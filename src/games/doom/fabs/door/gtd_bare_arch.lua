@@ -17,6 +17,7 @@ PREFABS.Arch_bare =
   seed_w = 1
 
   x_fit  = { 60,68 }
+  z_fit  = { 56,72 }
 
   bound_z1 = 0
   bound_z2 = 128

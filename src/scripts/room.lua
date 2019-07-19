@@ -1864,6 +1864,24 @@ function Room_border_up()
       end
     end
 
+    -- second pass, adopt some empty neighbors of the same height
+    -- and give them the the same fency type too
+    each A in LEVEL.areas do
+      if A.fence_up then
+        each N in LEVEL.areas do
+          if N.room then
+            if A.floor_h == N.floor_h
+            and A.room == N.room
+            and N.mode == "floor"
+            and not N.fence_up then
+              N.fence_up = true
+              N.fence_up_type = A.fence_up_type
+            end
+          end
+        end
+      end
+    end
+
   end
 
 
