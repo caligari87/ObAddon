@@ -21,7 +21,7 @@ PREFABS.Beam_lights =
   z_fit = { 56,72 }
 
   bound_z1 = 0
-  bound_z2 = 128
+  bound_z2 = 96
 }
 
 PREFABS.Beam_lights_diagonal =
@@ -40,7 +40,7 @@ PREFABS.Beam_lights_diagonal =
   z_fit = { 56,72 }
 
   bound_z1 = 0
-  bound_z2 = 128
+  bound_z2 = 96
 }
 
 PREFABS.Beam_lights_white =
