@@ -596,9 +596,10 @@ ULTDOOM.THEMES =
 
     beam_groups =
     {
-      beam_shiny = 50
+      beam_shiny = 75
       beam_quakeish = 50
       beam_lights = 50
+      beam_lights_white = 50
     }
 
     wall_groups =
@@ -841,8 +842,9 @@ ULTDOOM.THEMES =
     {
       beam_gothic = 50
       beam_shiny = 25
-      beam_quakeish = 25
+      beam_quakeish = 50
       beam_lights = 25
+      beam_lights_white = 25
     }
 
    -- This is because of the slow Hellification of the Deimos base, hence a few Hell wall prefabs are here.
@@ -1334,7 +1336,7 @@ ULTDOOM.THEMES =
     {
       beam_gothic = 50
       beam_quakeish = 50
-      beam_lights = 25
+      beam_lights_white = 25
     }
 
     wall_groups =

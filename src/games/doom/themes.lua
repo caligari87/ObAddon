@@ -1158,9 +1158,10 @@ DOOM.THEMES =
 
     beam_groups =
     {
-      beam_shiny = 50
+      beam_shiny = 75
       beam_quakeish = 50
       beam_lights = 50
+      beam_lights_white = 50
     }
 
     wall_groups =
@@ -1451,8 +1452,9 @@ DOOM.THEMES =
     beam_groups =
     {
       beam_gothic = 75
-      beam_quakeish = 25
-      beam_lights = 50
+      beam_quakeish = 30
+      beam_lights = 25
+      beam_lights_white = 40
     }
 
     wall_groups =

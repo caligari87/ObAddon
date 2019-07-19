@@ -42,3 +42,19 @@ PREFABS.Beam_lights_diagonal =
   bound_z1 = 0
   bound_z2 = 128
 }
+
+PREFABS.Beam_lights_white =
+{
+  template = "Beam_lights"
+  map = "MAP03"
+
+  group = "beam_lights_white"
+}
+
+PREFABS.Beam_lights_white_diagonal =
+{
+  template = "Beam_lights_diagonal"
+  map = "MAP04"
+
+  group = "beam_lights_white"
+}
