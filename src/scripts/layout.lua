@@ -2444,6 +2444,10 @@ function Layout_handle_corners()
               end
             end
 
+            if A.is_porch or A.is_porch_neighbor then
+              cur_h = A.zone.sky_h + 16
+            end
+
             if cur_h > tallest_h then
               tallest_h = cur_h
             end
