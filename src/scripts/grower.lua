@@ -3499,7 +3499,7 @@ function Grower_grammatical_room(R, pass, is_emergency)
       R.svolume = R.svolume + A.svolume
     end
 
-    apply_num = math.floor(R.svolume/rand.irange(3,4))
+    apply_num = math.floor(R.svolume/rand.irange(4,8))
 
     if LEVEL.is_procedural_gotcha then
       apply_num = math.ceil(apply_num * 0.25)
