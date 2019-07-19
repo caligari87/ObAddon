@@ -17,8 +17,10 @@ PREFABS.Beam_quakeish =
   deep   = 24
   over   = 24
 
-  fence_h  = 128
+  z_fit = {56,72}
+
   bound_z1 = 0
+  bound_z2 = 128
 }
 
 PREFABS.Beam_quakeish_diagonal =
@@ -37,9 +39,10 @@ PREFABS.Beam_quakeish_diagonal =
 
   where  = "diagonal"
 
-  fence_h = 128
+  z_fit = {56,72}
 
   bound_z1 = 0
+  bound_z2 = 128
 }
 
 -- fallbacks for non ZDoom-slope supporting engines
@@ -61,7 +64,6 @@ PREFABS.Beam_quakeish_fallback =
   deep   = 8
   over   = 8
 
-  fence_h  = 128
   bound_z1 = 0
 }
 
@@ -78,8 +80,6 @@ PREFABS.Beam_quakeish_diagonal_fallback =
   prob   = 1
 
   where  = "diagonal"
-
-  fence_h = 128
 
   bound_z1 = 0
 }

@@ -544,6 +544,12 @@ function Render_edge(E)
       T = Trans.edge_transform(E, z, 0, 0, def.deep, def.over)
     end
 
+    if def.z_fit then
+      local min_ceil = math.min(E.area.ceil_h, E.peer.area.ceil_h)
+      local max_floor = math.max(E.area.floor_h, E.peer.area.floor_h)
+      Trans.set_fitted_z(T, max_floor, min_ceil)
+    end
+
     -- choose lighting to be the minimum of each side
     local min_light = math.min(E.area.lighting, E.peer.area.lighting)
     Ambient_push(min_light)

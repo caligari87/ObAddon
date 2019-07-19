@@ -1160,6 +1160,7 @@ DOOM.THEMES =
     {
       beam_shiny = 50
       beam_quakeish = 50
+      beam_lights = 50
     }
 
     wall_groups =
@@ -1451,6 +1452,7 @@ DOOM.THEMES =
     {
       beam_gothic = 75
       beam_quakeish = 25
+      beam_lights = 50
     }
 
     wall_groups =

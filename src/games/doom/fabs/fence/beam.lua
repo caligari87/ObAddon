@@ -19,7 +19,6 @@ PREFABS.Beam =
   deep   = 8
   over   = 8
 
-  fence_h  = 128
   bound_z1 = 0
 }
 
@@ -36,8 +35,6 @@ PREFABS.Beam_diagonal =
   prob   = 50
 
   where  = "diagonal"
-
-  fence_h = 128
 
   bound_z1 = 0
 }
