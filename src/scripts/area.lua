@@ -840,6 +840,24 @@ function Junction_make_beams(junc)
     area = junc.A1
   }
 
+  if not junc.E1.prefab_def then
+    local reqs =
+    {
+      kind = "beam"
+
+      seed_w = 1
+    }
+
+    if geom.is_corner(dir) then
+      reqs.where = "diagonal"
+      reqs.seed_h = reqs.seed_w
+    else
+      reqs.where = "edge"
+    end
+
+    junc.E1.prefab_def = Fab_pick(reqs)
+  end
+
   junc.E2 = { kind="nothing", area=junc.A2 }
 
   junc.E1.peer = junc.E2
