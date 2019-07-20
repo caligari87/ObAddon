@@ -611,7 +611,7 @@ GROW_DIAG_BLOB2 =
     "...", "AA%"
     "%..", "%AA"
     "x%.", "x%A"
-    "x1.", "x1."
+    "x1x", "x1x"
     "x/.", "x/A"
     "/..", "/AA"
     "...", "AA/"
@@ -777,17 +777,16 @@ GROW_LIQUID_CAGE3 =
 
   structure =
   {
-    ".....", "#####"
-    ".....", "#/C~1"
-    ".....", "#C/~1"
-    ".....", "#~~/1"
-    ".....", ".1111"
-    ".1111", ".1111"
+    "....", "/C~1"
+    "....", "C/~1"
+    "....", "~~/1"
+    "....", "1111"
+    "1111", "1111"
   }
 
   diagonals =
   {
-    "#C"
+    ".C"
     "C~"
     "~1"
   }
@@ -1068,7 +1067,6 @@ GROW_STAIR_POOL2 =
     "1....x", "1~~~Ax"
     "1....x", "1~~/Ax"
     "1....x", "1>>A/x"
-    "xxxxxx", "xxxxxx"
   }
 
   diagonals =
@@ -1386,10 +1384,10 @@ SPROUT_DIRECT_FROM_DIAGONAL =
 
   structure =
   {
-    "x...","x.RR"
-    "x...","x.RR"
+    "xx..","xxRR"
+    "xx..","xxRR"
     "x...","x/11"
-    "1%..","11/."
+    "1%.x","11/x"
     "11xx","11xx"
   }
 
@@ -1471,7 +1469,7 @@ SPROUT_CASTLE_2 =
 }
 
 
-SPROUT_DOUBLE_TEST =
+--[[SPROUT_DOUBLE_TEST =
 {
   prob = 0  -- not supported yet
 
@@ -1495,7 +1493,7 @@ SPROUT_DOUBLE_TEST =
 
     symmetry = { x=3, y=3, dir=9 }
   }
-}
+}]]
 
 
 SPROUT_SYMMETRY_3 =
@@ -1900,7 +1898,6 @@ DECORATE_CLOSET_4x2 =
 
   closet = { from_dir=2 }
 }
-
 
 
 ------------------------------------------
@@ -3274,31 +3271,31 @@ GROW_STAIRED_L =
 -- MSSP's squeezed corridors. [SQUEEZE]
 
 
-GROW_SQUEEZE_STRAIGHT =
+GROW_SQUEEZE_STRAIGHT_NEW_AREA =
 {
   prob = 15
 
-  group = "squeeze"
-
   structure =
   {
-    "...",".1."
-    "...",".1."
+    "...","AAA"
+    "...","AAA"
+    "x.x","x1x"
+    "x.x","x1x"
     "x1x","x1x"
   }
 }
 
-GROW_SQUEEZE_STRAIGHT_AREA_TRANSITION =
+GROW_SQUEEZE_CURVE_NEW_AREA =
 {
-  prob = 8
-
-  group = "squeeze"
+  prob = 10
 
   structure =
   {
-    "...",".A."
-    "...",".A."
-    "x1x","x1x"
+    "xxx..","xxxAA"
+    ".....","111AA"
+    ".xx..","1xxAA"
+    ".xxxx","1xxxx"
+    "1xxxx","1xxxx"
   }
 }
 
@@ -3506,6 +3503,8 @@ DECORATE_CAGE_ON_LIQUID_CANAL_SIDE =
 GROW_CAGE_ROUND_ARENA =
 {
   prob = 8
+
+  aversion = 4
 
   structure =
   {
@@ -3817,28 +3816,25 @@ GROW_DIAGONAL_S =
   }
 }
 
---[[ GROW_DIAGONAL_SIDE_BLOB =
+GROW_DIAGONAL_SIDE_BLOB =
 {
   prob = 30
 
   structure =
   {
-    ".....","....."
-    ".....","AAAA%"
-    "..../","AAAA/"
-    ".../x","AAA/x"
-    "../xx",".%/xx"
-    "..1xx","..1xx"
+    "....x","AAAAx"
+    "....x","AAAAx"
+    ".....","%AA/1"
+    "x.111","x%/11"
+    "xx11x","xx11x"
   }
 
   diagonals =
   {
-    "A."
-    ".1", "A1"
-    ".1", "A1"
-    ".1", ".A","A1"
+    ".A","A1"
+    ".A","A1"
   }
--- }]]
+}
 
 -- MSSP's water canals. [CANALS]
 
@@ -4937,7 +4933,7 @@ GROW_HALF_SKILLET_SPIRAL =
   }
 }
 
-DECORATE_WIDE_LOW_CEILING_SIDE =
+GROW_WIDE_LOW_CEILING_SIDE =
 {
   prob = 15
 
@@ -4945,16 +4941,17 @@ DECORATE_WIDE_LOW_CEILING_SIDE =
 
   structure =
   {
-    "1111.","1111."
-    "1111.","1.AA."
-    "1111.","1AAA."
-    "1111.","1AAA."
-    "1111.","1.AA."
-    "1111.","1111."
+    "....","1111"
+    "....","1.AA"
+    "....","1AAA"
+    "....","1AAA"
+    "....","1.AA"
+    "11..","1111"
+    "11xx","11xx"
   }
 }
 
-DECORATE_WIDE_LOW_CEILING_CENTER =
+GROW_WIDE_LOW_CEILING_CENTER =
 {
   prob = 15
 
@@ -4962,16 +4959,17 @@ DECORATE_WIDE_LOW_CEILING_CENTER =
 
   structure =
   {
-    "111111","111111"
-    "111111","1.AA.1"
-    "111111","1AAAA1"
-    "111111","1AAAA1"
-    "111111","1.AA.1"
-    "111111","111111"
+    "......","111111"
+    "......","1.AA.1"
+    "......","1AAAA1"
+    "......","1AAAA1"
+    "......","1.AA.1"
+    "......","111111"
+    "xx11xx","xx11xx"
   }
 }
 
-DECORATE_WIDE_LOW_CEILING_CORNER =
+GROW_WIDE_LOW_CEILING_CORNER =
 {
   prob = 15
 
@@ -4979,12 +4977,11 @@ DECORATE_WIDE_LOW_CEILING_CORNER =
 
   structure =
   {
-    "......","......"
-    ".11111",".AAAA1"
-    ".11111",".AAA.1"
-    ".11111",".AAA/1"
-    ".11111",".A./11"
-    ".11111",".11111"
+    ".....","AAAA1"
+    ".....","AAA#1"
+    ".....","AAA/1"
+    ".....","A#/11"
+    "1111x","1111x"
   }
 
   diagonals =
@@ -4994,7 +4991,7 @@ DECORATE_WIDE_LOW_CEILING_CORNER =
   }
 }
 
-DECORATE_COLLONADE_3_PILLARS =
+GROW_COLLONADE_3_PILLARS =
 {
   prob = 15
 
@@ -5002,15 +4999,14 @@ DECORATE_COLLONADE_3_PILLARS =
 
   structure =
   {
-    "1111111","1111111"
-    "1111111","1.A.A.1"
-    "1111111","1AAAAA1"
-    "1111111","1AAAAA1"
-    ".......","......."
+    "11......","11111111"
+    "11......","11#A#A#1"
+    "x.......","x1AAAAA1"
+    "x.......","x1AAAAA1"
   }
 }
 
-DECORATE_TRIANGULAR_LOW_CEILING =
+GROW_TRIANGULAR_LOW_CEILING =
 {
   prob = 15
 
@@ -5018,11 +5014,12 @@ DECORATE_TRIANGULAR_LOW_CEILING =
 
   structure =
   {
-    "111111111","111111111"
-    "111111111","111/.%111"
-    "111111111","11/AAA%11"
-    "111111111","1/AAAAA%1"
-    ".!.....!.",".!.....!."
+    "xxx111xxx","xxx111xxx"
+    ".........","111111111"
+    ".........","111/.%111"
+    ".........","11/AAA%11"
+    ".........","1/AAAAA%1"
+    "x!xxxxx!x","x!xxxxx!x"
   }
 
   diagonals =
@@ -5091,23 +5088,24 @@ GROW_PILLAR_BEAN =
   }
 }
 
-DECORATE_PILLAR_GATE =
+GROW_PILLAR_GATE =
 {
-  prob = 3
+  prob = 20
 
   env = "building"
 
   structure =
   {
-    "111111","111111"
-    "111111","1.AA.1"
-    "111111","111111"
+    "......","111111"
+    "......","1#AA#1"
+    "11....","111111"
+    "11xxxx","11xxxx"
   }
 }
 
 DECORATE_CATWALK_SUPPORT_PILLAR_OUTER =
 {
-  prob = 5
+  prob = 4
 
   structure =
   {
@@ -5119,7 +5117,7 @@ DECORATE_CATWALK_SUPPORT_PILLAR_OUTER =
 
 DECORATE_CATWALK_SUPPORT_PILLAR_INNER_DOUBLE =
 {
-  prob = 5
+  prob = 7
 
   structure =
   {
@@ -6278,7 +6276,7 @@ GROW_LIQUID_POOL_PLACE =
 
   structure =
   {
-    "....","1~~1"
+    "....","1111"
     "....","1~~1"
     "....","1~~1"
     "....","1111"
@@ -6295,8 +6293,8 @@ GROW_LIQUID_POOL_EXTEND_STRAIGHT =
   structure =
   {
     "1...","1111"
-    "~...","~~~~"
-    "~...","~~~~"
+    "1...","~~~1"
+    "1...","~~~1"
     "1...","1111"
   }
 }
@@ -6309,16 +6307,16 @@ GROW_LIQUID_POOL_SWERVE =
 
   structure =
   {
-    ".....",".1~~1"
-    ".....","/1~/1"
-    ".....","1/~1/"
-    "x~~1x","x~~1x"
+    "x....","x1~~1"
+    ".....","//~~1"
+    ".....","1~~//"
+    "1111x","1111x"
   }
 
   diagonals =
   {
-    ".1","~1"
-    "1~","1."
+    ".1","1~"
+    "~1","1."
   }
 }
 
@@ -6331,9 +6329,10 @@ GROW_LIQUID_POOL_END =
   structure =
   {
     "....","1111"
+    "....","1111"
     "....","1~~1"
     "....","1~~1"
-    "x~~1","x~~1"
+    "1111","1111"
   }
 }
 
@@ -6346,9 +6345,10 @@ GROW_LIQUID_POOL_EXTEND_CURVED =
   structure =
   {
     "1...","1111"
-    "~...","~~%1"
-    "~...","~~~1"
-    "x...","x~~1"
+    "1...","~~%1"
+    "1...","~~~1"
+    "1...","1~~1"
+    "....","1111"
   }
 
   diagonals =
@@ -6357,7 +6357,22 @@ GROW_LIQUID_POOL_EXTEND_CURVED =
   }
 }
 
-DECORATE_LIQUID_PILLAR =
+GROW_LIQUID_PILLAR =
+{
+  prob = 20
+
+  env = "building"
+
+  structure =
+  {
+    "....","11~~"
+    "....","11#~"
+    "....","11~~"
+    "11xx","11xx"
+  }
+}
+
+GROW_LIQUID_PILLAR_INWARD =
 {
   prob = 10
 
@@ -6365,13 +6380,14 @@ DECORATE_LIQUID_PILLAR =
 
   structure =
   {
-    "1~~","1~~"
-    "1~~","1.~"
-    "1~~","1~~"
+    "...","11~"
+    "...","A#~"
+    "...","11~"
+    "11x","11x"
   }
 }
 
-DECORATE_LIQUID_PILLAR_INWARD =
+GROW_LIQUID_PILLAR_INWARD =
 {
   prob = 6
 
@@ -6379,45 +6395,12 @@ DECORATE_LIQUID_PILLAR_INWARD =
 
   structure =
   {
-    ".11~",".11~"
-    ".11~",".A.~"
-    ".11~",".11~"
-  }
-}
-
-DECORATE_LIQUID_PILLAR_INWARD =
-{
-  prob = 6
-
-  env = "building"
-
-  structure =
-  {
-    ".11~",".11~"
-    ".11~",".A.~"
-    ".11~",".11~"
-    ".11~",".A.~"
-    ".11~",".11~"
-    ".11~",".A.~"
-    ".11~",".11~"
-  }
-}
-
-DECORATE_LIQUID_PILLAR_3X =
-{
-  prob = 10
-
-  env = "building"
-
-  structure =
-  {
-    "1~~","1~~"
-    "1~~","1.~"
-    "1~~","1~~"
-    "1~~","1.~"
-    "1~~","1~~"
-    "1~~","1.~"
-    "1~~","1~~"
+    "...","11~"
+    "...","A.~"
+    "...","11~"
+    "...","A.~"
+    "...","11~"
+    "11x","11x"
   }
 }
 
@@ -6437,7 +6420,7 @@ DECORATE_LIQUID_MOAT_ROW =
 
 DECORATE_LIQUID_MOAT_CORNER_OUTER =
 {
-  prob = 10
+  prob = 15
 
   group = "moat"
 
@@ -6454,28 +6437,6 @@ DECORATE_LIQUID_MOAT_CORNER_OUTER =
   {
     "12","1~"
          "~2"
-  }
-}
-
-DECORATE_LIQUID_MOAT_CORNER_INNER =
-{
-  prob = 10
-
-  group = "moat"
-
-  structure =
-  {
-
-    "x112","x112"
-    "1112","1/~2"
-    "11/2","1~/2"
-    "2222","2222"
-  }
-
-  diagonals =
-  {
-    "1~"
-    "12","~2"
   }
 }
 
@@ -6544,7 +6505,7 @@ GROW_TRENCH_CURVE =
 {
   prob = 50
   skip_prob = 15
-  averion = 25
+  aversion = 25
 
   structure =
   {
