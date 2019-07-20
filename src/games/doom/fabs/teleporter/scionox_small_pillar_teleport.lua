@@ -20,21 +20,23 @@ PREFABS.Teleporter_scionox_small_pillar_teleport =
   tag_1 = "?out_tag"
   tag_2 = "?in_tag"
 }
+
 PREFABS.Teleporter_scionox_small_pillar_teleport_2 =
 {
   template = "Teleporter_scionox_small_pillar_teleport"
   theme  = "urban"
-  
+
   tex_SW1BRIK = "SW1CMT"
   tex_SILVER2 = "PANRED"
   tex_GATE4 = "GATE3"
   thing_2028 = "mercury_lamp"
 }
+
 PREFABS.Teleporter_scionox_small_pillar_teleport_3 =
 {
   template = "Teleporter_scionox_small_pillar_teleport"
   theme  = "hell"
-  
+
   tex_SW1BRIK = "SW1WOOD"
   tex_SILVER2 = "MARBFAC4"
   tex_GATE4 = "GATE2"

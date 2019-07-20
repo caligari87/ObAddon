@@ -4845,7 +4845,6 @@ namelib.COMMUNITY_MEMBERS =
     "DukeWooze", -- Posted in the past, but not too recently.
     "Scionox", -- Newcomer. Rather enthusiastic on the project.
     "rexirT",
-
   }
 
   -- People in the server but who have never posted but are assumed
@@ -4856,9 +4855,7 @@ namelib.COMMUNITY_MEMBERS =
     "Cammy", -- No posts yet.
     "CanineCargo", -- I have never seen him/her post.
     "NeuralStunner", -- A known Doomer. Posts on the ZDoom forums.
-
   }
-
 }
 
 

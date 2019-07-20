@@ -23,6 +23,7 @@ PREFABS.Teleporter_scionox_pillar_teleport =
   sector_8  = { [8]=50, [1]=10, [2]=10, [3]=10, [17]=10 }
   tex_SPCDOOR2 = { SPCDOOR1=50, SPCDOOR2=50, SPCDOOR3=50, SPCDOOR4=50 }
 }
+
 PREFABS.Teleporter_scionox_pillar_teleport_2 =
 {
   template = "Teleporter_scionox_pillar_teleport"

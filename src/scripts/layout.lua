@@ -2445,7 +2445,7 @@ function Layout_handle_corners()
             end
 
             if A.is_porch or A.is_porch_neighbor then
-              cur_h = A.zone.sky_h + 16
+              cur_h = A.zone.sky_h
             end
 
             if cur_h > tallest_h then

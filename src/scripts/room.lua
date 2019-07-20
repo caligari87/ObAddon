@@ -3519,7 +3519,7 @@ function Room_set_sky_heights()
 
   each A in LEVEL.areas do
     if A.floor_h and A.zone and A.is_outdoor and not A.is_porch then
-      A.ceil_h = A.zone.sky_h + 16 --MSSP: add slight allowance
+      A.ceil_h = A.zone.sky_h
     end
   end
 
