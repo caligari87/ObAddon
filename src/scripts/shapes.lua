@@ -1816,9 +1816,49 @@ AUX_CAGE_GROW3 =
 
   structure =
   {
-    "..", "CC"
+    "..", "/C"
     "C.", "CC"
     "11", "11"
+  }
+
+  diagonals =
+  {
+    ".C"
+  }
+}
+
+
+AUX_CAGE_GROW4 =
+{
+  pass = "cage_grow"
+
+  prob = 35
+
+  structure =
+  {
+    "C.","CC"
+    "C.","CC"
+    "11","11"
+  }
+}
+
+
+AUX_CAGE_GROW5 =
+{
+  pass = "cage_grow"
+
+  prob = 35
+
+  structure =
+  {
+    "C.","C%"
+    "C.","CC"
+    "11","11"
+  }
+
+  diagonals =
+  {
+    "C."
   }
 }
 
@@ -6501,9 +6541,21 @@ GROW_TRENCH_STRAIGHT =
   }
 }
 
+GROW_TRENCH_STRAIGHT_LONG =
+{
+  prob = 30
+
+  structure =
+  {
+    "1.........","11111111AA"
+    "1.........","11>>AAAAAA"
+    "1.........","11111111AA"
+  }
+}
+
 GROW_TRENCH_CURVE =
 {
-  prob = 50
+  prob = 35
   skip_prob = 15
   aversion = 25
 
