@@ -4636,6 +4636,24 @@ SQUARE_OUT_SMOOTH_PLATFORM =
   }
 }
 
+SQUARE_OUT_REMOVE_TRIANGLE =
+{
+  pass = "square_out"
+
+  prob = 15
+
+  structure =
+  {
+    "1%","11"
+    "x1","x1"
+  }
+
+  diagonals =
+  {
+    "1."
+  }
+}
+
 --MSSP's random negative features [FEATURES] - 'negative' because they attempt to modify an existing room if it has too much clean space.
 
 GROW_FEATURES_CENTER_ALTERED =
