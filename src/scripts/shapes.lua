@@ -6494,16 +6494,17 @@ DECORATE_LIQUID_MOAT_ROW =
   }
 }
 
-DECORATE_LIQUID_MOAT_CORNER_OUTER =
+DECORATE_LIQUID_MOAT_CORNER =
 {
   prob = 15
 
+  group_pos = "entry"
   group = "moat"
 
   structure =
   {
-
     "x122","x122"
+    "x122","x1~2"
     "1/22","1/~2"
     "2222","2~/2"
     "2222","2222"
@@ -6643,11 +6644,11 @@ GROW_TRENCH_CURVE_OUTER_SOLID =
 
   structure =
   {
-    "xxx...","xxxAA"
-    "xxx...","xxxAA"
-    "xx....","xx11A"
-    "1.....","111/A"
-    "1.....","1>AA/"
+    "xxx..","xxxAA"
+    "xxx..","xxxAA"
+    "xx...","xx11A"
+    "1....","111/A"
+    "1....","1>AA/"
   }
 
   diagonals =
