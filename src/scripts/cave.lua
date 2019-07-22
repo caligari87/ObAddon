@@ -4565,7 +4565,7 @@ function Cave_build_a_scenic_vista(area)
 
     local FL = new_blob()
 
-    FL.floor_h = get_most_extreme_neighbor_floor(area, "highest") + 72
+    FL.floor_h = (room.max_floor_h or room.entry_h) + 72
 
     FL.floor_mat = assert(area.zone.fence_mat)
 
@@ -4575,6 +4575,9 @@ function Cave_build_a_scenic_vista(area)
 
     area.fence_FLOOR = FL
 
+    if rand.odds(75) then
+      area.rail_up = true
+    end
 
     -- TEMP RUBBISH
     area.floor_h = FL.floor_h
@@ -4777,7 +4780,8 @@ function Cave_build_a_scenic_vista(area)
 
     local FL = new_blob()
 
-    FL.floor_h   = get_most_extreme_neighbor_floor(area, "lowest") - drop_h
+    local initial_h = get_most_extreme_neighbor_floor(area, "lowest")
+    FL.floor_h   = initial_h - drop_h
     if LEVEL.liquid then
       FL.is_liquid = true
     else
@@ -4862,7 +4866,7 @@ function Cave_build_a_scenic_vista(area)
     end
 
     -- TEMP RUBBISH
-    area.floor_h = CLIFF.floor_h
+    area.floor_h = initial_h
 
 
 

@@ -862,20 +862,8 @@ function Junction_make_railing(junc, rail_mat, block)
 
   -- calculate base Z
   -- TODO : handle "nature" areas better (checks cells along the junction)
-  local z1 = junc.A1.max_floor_h or junc.A1.floor_h
-  local z2 = junc.A2.max_floor_h or junc.A2.floor_h
-
-  if junc.A1.mode == "scenic" then z1 = z2 end
-  if junc.A2.mode == "scenic" then z2 = z1 end
-
-  if not z1 then
-    print(junc.A1)
-    print(table.tostr(junc.A1))
-    print(junc.A1)
-    print(table.tostr(junc.A1))
-    z1 = 0
-    z2 = 0
-  end
+  local z1 = junc.A1.max_floor_h or junc.A1.floor_h or -9001
+  local z2 = junc.A2.max_floor_h or junc.A2.floor_h or -9001
 
   junc.E1.rail_z = math.max(z1, z2)
 

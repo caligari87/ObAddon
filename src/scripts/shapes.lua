@@ -4388,6 +4388,22 @@ GROW_LIQUID_SLAB_STRAIGHT =
   }
 }
 
+GROW_LIQUID_SLAB_CURVE =
+{
+  prob = 50
+
+  group = "slab"
+
+  structure =
+  {
+    "......","~~~~~~"
+    "......","~11~11"
+    "......","~11~11"
+    "......","~~~~~~"
+    "~11~xx","~11~xx"
+  }
+}
+
 GROW_LIQUID_SLAB_STRAIGHT_4x4 =
 {
   prob = 100

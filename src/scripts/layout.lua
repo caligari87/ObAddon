@@ -2426,32 +2426,47 @@ function Layout_handle_corners()
 
         -- indoor posts should meet the ceiling
         local tallest_h = -9001
+        local tallest_scenic_fence_h = -9001
+
         if mostly_env == "building" then
+
           each A in corner.areas do
             if A.ceil_h > tallest_h then
               tallest_h = A.ceil_h
             end
           end
           post_top_z = tallest_h
+
         else
-        -- outdoor posts should meet up to the rail height
+
+          -- outdoor posts should meet up to the rail height
           each A in corner.areas do
             local cur_h = -9001
 
             if A.room then
-              if A.room.scenic_fence.rail_h then
-                cur_h = A.floor_h + A.room.scenic_fence.rail_h
-              end
+              cur_h = A.floor_h
             end
 
             if A.is_porch or A.is_porch_neighbor then
               cur_h = A.zone.sky_h
             end
 
-            if cur_h > tallest_h then
-              tallest_h = cur_h
+            if not A.room then
+              if A.border_type == "simple_fence" then
+                cur_h = A.floor_h + 72
+              end
             end
 
+            -- add to the scenic_fences too
+            if A.room then
+              if A.room.scenic_fence.rail_h > tallest_scenic_fence_h then
+                tallest_scenic_fence_h = A.room.scenic_fence.rail_h
+              end
+            end
+
+            if cur_h > tallest_h then
+              tallest_h = cur_h + tallest_scenic_fence_h
+            end
           end
           post_top_z = tallest_h
         end

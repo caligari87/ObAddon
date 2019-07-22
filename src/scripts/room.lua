@@ -1672,8 +1672,12 @@ function Room_border_up()
       elseif A2.border_type == "ocean" and A1.is_outdoor  then
         Junction_make_railing(junc, "FENCE_MAT_FROM_THEME", "block")
 
+      elseif A2.border_type == "simple_fence" and A2.rail_up and A1.is_outdoor then
+        Junction_make_railing(junc, "FENCE_MAT_FROM_THEME", "block")
+
       else
         Junction_make_empty(junc)
+
       end
 
       return
