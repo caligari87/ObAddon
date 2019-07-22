@@ -3339,6 +3339,20 @@ GROW_SQUEEZE_CURVE_NEW_AREA =
   }
 }
 
+GROW_SQUEEZE_STRAIGHT =
+{
+  prob = 10
+
+  group = "squeeze"
+
+  structure =
+  {
+    "...",".1."
+    "...",".1."
+    "x1x","x1x"
+  }
+}
+
 GROW_SQUEEZE_CURVE =
 {
   prob = 10
@@ -3370,8 +3384,6 @@ GROW_SQUEEZE_STAIRCASE =
 {
   prob = 10
 
-  group = "squeeze"
-
   structure =
   {
     "..x","AAx"
@@ -3384,8 +3396,6 @@ GROW_SQUEEZE_STAIRCASE =
 GROW_SQUEEZE_EVEN_MORE_STAIRCASE =
 {
   prob = 10
-
-  group = "squeeze"
 
   structure =
   {
