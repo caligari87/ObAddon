@@ -5,7 +5,7 @@ PREFABS.Decor_hell_obelisk_EPIC_red =
 
   prob   = 5000
   theme  = "hell"
-  env    = "outdoors"
+  env    = "outdoor"
 
   uses_epic_textures = true
 

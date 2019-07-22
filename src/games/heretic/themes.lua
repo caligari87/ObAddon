@@ -94,9 +94,6 @@ HERETIC.THEMES =
 
     post_mat  = "METL2"
 
-    cage_rail_mat  = "GATMETL4"
-    water_rail_mat = "WDGAT64"
-
     no_switches = true
 
     cage_lights = { 0, 8, 12, 13 }
