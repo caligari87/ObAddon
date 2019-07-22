@@ -3408,9 +3408,7 @@ function Room_add_cage_rails()
       -- don't place railings on higher floors (it looks silly)
       if N.floor_h and N.floor_h > A.floor_h then continue end
 
-      local tex = THEME.cage_rail_mat or R.scenic_fence.t
-
-      Junction_make_railing(junc, tex, "block")
+      Junction_make_railing(junc, "FENCE_MAT_FROM_THEME", "block")
     end
   end
 
