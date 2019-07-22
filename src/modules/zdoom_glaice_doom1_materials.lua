@@ -1213,4 +1213,14 @@ GLAICE_DOOM1_MATERIALS = {
   -- Warning Strip --
   WARN1 = { t="WARN1", f="WARN2" }
 
+  -----------------------------------
+  -- Walls as flats and vice versa --
+  -----------------------------------
+
+  XDARKMET = { t="DARKMET1", f="DARKMET1" }
+  XDFAN1 = { t="DFAN1", f="DFAN1" }
+  XGRATE7 = { t="GRATE7", f="GRATE7" }
+  XGRATE7 = { t="GRATE7", f="GRATE7" }
+  XSILVER3 = { t="SILVER3", f="SILVER3" }
+  XMETAL3 = { t="METAL3", f="METAL3" }
 }

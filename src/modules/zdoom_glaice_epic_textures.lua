@@ -366,7 +366,13 @@ function GLAICE_EPIC_TEXTURES.put_new_materials()
     GAME.THEMES.urban.skyboxes = GLAICE_URBAN_SKYBOXES
     GAME.THEMES.hell.skyboxes = GLAICE_HELL_SKYBOXES
 
-    --hack for the street textures
+    -- inserts for hallways MSSP-TODO: support Doom1 as well
+    GLAICE_EPIC_TEXTURES.table_insert(GLAICE_NARROW_HALLWAYS,
+      GAME.THEMES.DEFAULTS.narrow_halls)
+    GLAICE_EPIC_TEXTURES.table_insert(GLAICE_WIDE_HALLWAYS,
+      GAME.THEMES.DEFAULTS.wide_halls)
+
+    -- hack for the street textures
     GAME.SINKS.floor_streets.trim_mat = "WARN1"
   end
 

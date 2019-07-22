@@ -20,6 +20,37 @@
 -- General room themes are placed here (includes cave rooms)
 GLAICE_DOOM1_THEMES =
 {
+  any_ducts_Hallway =
+  {
+    env   = "hallway"
+    group = "ducts"
+    prob  = 1
+
+    walls =
+    {
+      GRAY1 = 50
+      GRAY5 = 50
+      ICKWALL1 = 30
+      ICKWALL3 = 30
+    }
+
+    floors =
+    {
+      FLAT1 = 30
+      FLOOR0_3 = 20
+      FLAT20 = 15
+      FLAT3 = 10
+    }
+
+    ceilings =
+    {
+      FLAT1 = 30
+      FLAT19 = 20
+      FLAT23 = 20
+      FLAT5_4 = 15
+    }
+  }
+
   tech_GrayMet =
   {
     env = "building"
@@ -2427,4 +2458,13 @@ GLAICE_FLESH_SKYBOXES =
   Skybox_generic_EPIC = 50
   Skybox_hellish_city_EPIC = 50
   Skybox_garrett_hell_EPIC = 50
+}
+
+GLAICE_NARROW_HALLWAYS =
+{
+}
+
+GLAICE_WIDE_HALLWAYS =
+{
+  ducts = 50
 }

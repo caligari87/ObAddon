@@ -2300,7 +2300,7 @@ CAVE_GROW_5x2 =
 
 SPROUT_narrow_hallway =
 {
-  prob = 1100 --900
+  prob = 2500 -- 1100 --900
   skip_prob = 10
 
   structure =
@@ -2416,7 +2416,7 @@ HALL_1_SPROUT_A =
 
 SPROUT_wide_hallway =
 {
-  prob = 1800 --1500
+  prob = 3200 --1800 --1500
   skip_prob = 20
 
   structure =

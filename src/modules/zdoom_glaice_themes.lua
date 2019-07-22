@@ -20,6 +20,37 @@
 -- General room themes are placed here (includes cave rooms)
 GLAICE_THEMES =
 {
+  any_ducts_Hallway =
+  {
+    env   = "hallway"
+    group = "ducts"
+    prob  = 1
+
+    walls =
+    {
+      GRAY1 = 50
+      GRAY5 = 50
+      ICKWALL1 = 30
+      ICKWALL3 = 30
+    }
+
+    floors =
+    {
+      FLAT1 = 30
+      FLOOR0_3 = 20
+      FLAT20 = 15
+      FLAT3 = 10
+    }
+
+    ceilings =
+    {
+      FLAT1 = 30
+      FLAT19 = 20
+      FLAT23 = 20
+      FLAT5_4 = 15
+    }
+  }
+
   tech_GrayMet =
   {
     env = "building"
@@ -3167,4 +3198,13 @@ GLAICE_DESERT_HELL_FACADES =
   EGYPT04  = 35
   EGYPT05  = 35
   EGYPT06  = 35
+}
+
+GLAICE_NARROW_HALLWAYS =
+{
+}
+
+GLAICE_WIDE_HALLWAYS =
+{
+  ducts = 50
 }
