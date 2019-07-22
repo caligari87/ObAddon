@@ -3321,6 +3321,7 @@ GROW_SQUEEZE_STRAIGHT_NEW_AREA =
     "...","AAA"
     "x.x","x1x"
     "x.x","x1x"
+    "x.x","x1x"
     "x1x","x1x"
   }
 }
