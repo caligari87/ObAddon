@@ -3,6 +3,8 @@ PREFABS.Decor_camping_tent_bloo =
   file   = "decor/craneo_decor_camping_tent.wad"
   map    = "MAP01"
 
+  engine = "zdoom"
+
   prob   = 1250
   theme  = "urban"
   env    = "outdoor"
