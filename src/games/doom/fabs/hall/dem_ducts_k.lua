@@ -6,7 +6,6 @@ PREFABS.Hallway_ducts_locked_red1 =
 {
   file   = "hall/dem_ducts_k.wad"
   map    = "MAP05"
-  theme  = "!hell"
 
   kind   = "terminator"
   group  = "ducts"
@@ -49,7 +48,6 @@ PREFABS.Hallway_ducts_locked_red2 =
 {
   file   = "hall/dem_ducts_k.wad"
   map    = "MAP06"
-  theme  = "!hell"
 
   kind   = "terminator"
   group  = "ducts"
@@ -92,7 +90,6 @@ PREFABS.Hallway_ducts_locked_red3 =
 {
   file   = "hall/dem_ducts_k.wad"
   map    = "MAP07"
-  theme  = "!hell"
 
   kind   = "terminator"
   group  = "ducts"
@@ -135,7 +132,6 @@ PREFABS.Hallway_ducts_locked_red4 =
 {
   file   = "hall/dem_ducts_k.wad"
   map    = "MAP08"
-  theme  = "!hell"
 
   kind   = "terminator"
   group  = "ducts"
@@ -182,7 +178,6 @@ PREFABS.Hallway_ducts_barred1 =
 {
   file   = "hall/dem_ducts_k.wad"
   map    = "MAP01"
-  theme  = "!hell"
 
   kind   = "terminator"
   group  = "ducts"
@@ -221,6 +216,3 @@ PREFABS.Hallway_ducts_barred4 =
   map    = "MAP04"
 
 }
-
-
-

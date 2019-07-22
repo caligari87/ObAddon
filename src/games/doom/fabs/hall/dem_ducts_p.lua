@@ -6,7 +6,6 @@ PREFABS.Hallway_ducts_p1 =
 {
   file   = "hall/dem_ducts_p.wad"
   map    = "MAP01"
-  theme = "!hell"
 
   group  = "ducts"
   prob   = 50

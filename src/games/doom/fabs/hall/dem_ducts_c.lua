@@ -6,7 +6,6 @@ PREFABS.Hallway_ducts_c1 =
 {
   file   = "hall/dem_ducts_c.wad"
   map    = "MAP01"
-  theme  = "!hell"
 
   group  = "ducts"
   prob   = 50
@@ -42,4 +41,3 @@ PREFABS.Hallway_ducts_c5 =
   template = "Hallway_ducts_c1"
   map    = "MAP05"
 }
-

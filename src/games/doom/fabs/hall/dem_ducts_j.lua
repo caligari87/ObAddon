@@ -6,7 +6,6 @@ PREFABS.Hallway_ducts_term =
 {
   file   = "hall/dem_ducts_j.wad"
   map    = "MAP01"
-  theme  = "!hell"
 
   kind   = "terminator"
   group  = "ducts"
