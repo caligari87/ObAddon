@@ -87,10 +87,12 @@ UI_ARCH.STREETS_CHOICES =
   "75urban",  _("75% of Urban Maps"),
   "50urban",  _("50% of Urban Maps"),
   "25urban",  _("25% of Urban Maps"),
+  "13urban",  _("13% of Urban Maps"),
   "all",      _("All Levels"),
   "75",       _("75% of All Levels"),
   "50",       _("50% of All Levels"),
   "25",       _("25% of All Levels"),
+  "13",       _("13% of All Levels"),
   "no",       _("NONE"),
 }
 

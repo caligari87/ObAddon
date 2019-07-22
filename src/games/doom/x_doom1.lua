@@ -3237,27 +3237,13 @@ function ULTDOOM.get_levels()
 
       -- handling for street mode
       if not LEV.is_procedural_gotcha or not LEV.prebuilt then
-        if OB_CONFIG.streets_mode == "100urban" then
-          if LEV.theme_name == "urban" then
-            LEV.has_streets = true
-          end
-        elseif OB_CONFIG.streets_mode == "75urban" then
-          if LEV.theme_name == "urban" and rand.odds(75) then
-            LEV.has_streets = true
-          end
-        elseif OB_CONFIG.streets_mode == "50urban" then
-          if LEV.theme_name == "urban" and rand.odds(50) then
-            LEV.has_streets = true
-          end
-        elseif OB_CONFIG.streets_mode == "25urban" then
-          if LEV.theme_name == "urban" and rand.odds(25) then
-            LEV.has_streets = true
-          end
-        elseif OB_CONFIG.streets_mode == "75" and rand.odds(75) then
+        if OB_CONFIG.streets_mode == "75" and rand.odds(75) then
           LEV.has_streets = true
         elseif OB_CONFIG.streets_mode == "50" and rand.odds(50) then
           LEV.has_streets = true
         elseif OB_CONFIG.streets_mode == "25" and rand.odds(25) then
+          LEV.has_streets = true
+        elseif OB_CONFIG.streets_mode == "13" and rand.odds(13) then
           LEV.has_streets = true
         elseif OB_CONFIG.streets_mode == "all" then
           LEV.has_streets = true

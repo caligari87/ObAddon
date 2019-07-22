@@ -245,6 +245,8 @@ function DOOM.get_levels()
         LEV.has_streets = true
       elseif OB_CONFIG.streets_mode == "25" and rand.odds(25) then
         LEV.has_streets = true
+      elseif OB_CONFIG.streets_mode == "13" and rand.odds(13) then
+        LEV.has_streets = true
       elseif OB_CONFIG.streets_mode == "all" then
         LEV.has_streets = true
       end
@@ -290,4 +292,3 @@ function DOOM.get_levels()
     end
   end
 end
-
