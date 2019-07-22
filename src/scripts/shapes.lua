@@ -3383,7 +3383,8 @@ GROW_SQUEEZE_JUNCTION =
 
 GROW_SQUEEZE_STAIRCASE =
 {
-  prob = 10
+  prob = 7
+  skip_prob = 2
 
   structure =
   {
@@ -3396,7 +3397,8 @@ GROW_SQUEEZE_STAIRCASE =
 
 GROW_SQUEEZE_EVEN_MORE_STAIRCASE =
 {
-  prob = 10
+  prob = 7
+  skip_prob = 3
 
   structure =
   {
@@ -6583,9 +6585,9 @@ GROW_TRENCH_STRAIGHT =
 
   structure =
   {
-    "1......","1....AA"
+    "1......","11111AA"
     "1......","11>>AAA"
-    "1......","1....AA"
+    "1......","11111AA"
   }
 }
 
@@ -6595,9 +6597,9 @@ GROW_TRENCH_STRAIGHT_LONG =
 
   structure =
   {
-    "1.........","1.......AA"
+    "1.........","11111111AA"
     "1.........","11>>AAAAAA"
-    "1.........","1.......AA"
+    "1.........","11111111AA"
   }
 }
 
