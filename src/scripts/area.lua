@@ -751,35 +751,27 @@ function Junction_calc_fence_z(A1, A2)
   if A1.podium_h then z1 = z1 + A1.podium_h end
   if A2.podium_h then z2 = z2 + A2.podium_h end
 
-  if not z2 or not A2.room.max_floor_h
-  or not z1 or not A2.room.max_floor_h then
-    print(A1)
-    print(table.tostr(A1))
-    print(A2)
-    print(table.tostr(A2))
-    error("If you are seeing this, it's MsrSgtShooterPerson's fault!!! WAAAAAA!!!" ..
-    "\nSpecifically, tell him that there's a missing junction somewhere in the map.")
-  end
+  assert(z2 or A2.room.max_floor_h)
+  assert(z1 or A2.room.max_floor_h)
 
   if A1.room then z1 = math.max(z1, A1.room.max_floor_h) end
 
   if A2.room then z2 = math.max(z2, A2.room.max_floor_h) end
 
+  -- pick max floor height in the zone (super tall brush fences
+  -- but this is essentially the Oblige default)
   local top_z = math.max(z1, z2)
+
+  -- pick max height between two areas
+  local alt_top_z = math.max(A1.floor_h, A2.floor_h)
 
   -- porch worchy problems: specifically, fence gates straddled between
   -- areas that involve at least one porch is cut off wrongly by the
   -- one of the areas' ceiling heights (usually the one with the porch)
   -- MSSP
   if A1.is_porch or A2.is_porch then
-    if rand.odds(75) then
-      z1 = A1.floor_h
-
-      z2 = A2.floor_h
-
-      top_z = math.max(z1, z2)
-    else
-      top_z = math.max(z1, z2)
+    if not A1.room.is_outdoor or not A2.room.is_outdoor then
+      top_z = alt_top_z
     end
 
     if A1.room.is_outdoor or A2.room.is_outdoor then
