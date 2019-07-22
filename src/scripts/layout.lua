@@ -2440,34 +2440,29 @@ function Layout_handle_corners()
         else
 
           -- outdoor posts should meet up to the rail height
+          local neighbors_simple_fence = false
           each A in corner.areas do
-            local cur_h = -9001
 
-            if A.room then
-              cur_h = A.floor_h
+            if A.border_type then
+              if A.border_type == "simple_fence" then
+                neighbors_simple_fence = true
+              end
             end
 
             if A.is_porch or A.is_porch_neighbor then
-              cur_h = A.zone.sky_h
+              tallest_h = A.zone.sky_h
+              continue
             end
 
-            if not A.room then
-              if A.border_type == "simple_fence" then
-                cur_h = A.floor_h + 72
+            if A.floor_h then
+              if A.floor_h > tallest_h then
+                tallest_h = A.floor_h
               end
-            end
-
-            -- add to the scenic_fences too
-            if A.room then
-              if A.room.scenic_fence.rail_h > tallest_scenic_fence_h then
-                tallest_scenic_fence_h = A.room.scenic_fence.rail_h
-              end
-            end
-
-            if cur_h > tallest_h then
-              tallest_h = cur_h + tallest_scenic_fence_h
             end
           end
+
+          tallest_h = tallest_h + assert(junc.E1.rail_offset)
+
           post_top_z = tallest_h
         end
 

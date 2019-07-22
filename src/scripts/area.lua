@@ -846,16 +846,19 @@ end
 
 function Junction_make_railing(junc, rail_mat, block)
 
+  local offset_h = 0
   if rail_mat == "FENCE_MAT_FROM_THEME" then
     rail_mat = junc.A1.room.scenic_fence.t
+    offset_h = junc.A1.room.scenic_fence.rail_h
   elseif not rail_mat then
     rail_mat = "MIDBARS3"
+    offset_h = 96
   end
 
   junc.E1 =
   {
     kind = "railing"
-    rail_mat = assert(rail_mat)
+    rail_mat = rail_mat
     rail_block = block and 1
     area = junc.A1
   }
@@ -866,6 +869,8 @@ function Junction_make_railing(junc, rail_mat, block)
   local z2 = junc.A2.max_floor_h or junc.A2.floor_h or -9001
 
   junc.E1.rail_z = math.max(z1, z2)
+
+  junc.E1.rail_offset = offset_h
 
   junc.E2 = { kind="nothing", area=junc.A2 }
 
@@ -1157,7 +1162,7 @@ function Corner_get_env(corner)
 
   each A in corner.areas do
     if A.room then
-      if A.room.is_outdoor then
+      if A.room.is_outdoor or not A.room then
         outdoor_score = outdoor_score + 1
       elseif not A.room.is_outdoor then
         building_score = building_score + 1
