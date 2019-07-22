@@ -3374,8 +3374,9 @@ GROW_SQUEEZE_STAIRCASE =
 
   structure =
   {
-    "...",".A."
-    "...",".^."
+    "..x","AAx"
+    "..x","AAx"
+    "x.x","x^x"
     "x1x","x1x"
   }
 }
@@ -3388,10 +3389,11 @@ GROW_SQUEEZE_EVEN_MORE_STAIRCASE =
 
   structure =
   {
-    "...",".A."
-    "...",".^."
-    "...",".^."
-    "...",".^."
+    "..x","AAx"
+    "..x","AAx"
+    "x.x","x^x"
+    "x.x","x^x"
+    "x.x","x^x"
     "x1x","x1x"
   }
 }
@@ -6569,9 +6571,9 @@ GROW_TRENCH_STRAIGHT =
 
   structure =
   {
-    "1......","11111AA"
+    "1......","1....AA"
     "1......","11>>AAA"
-    "1......","11111AA"
+    "1......","1....AA"
   }
 }
 
@@ -6581,32 +6583,77 @@ GROW_TRENCH_STRAIGHT_LONG =
 
   structure =
   {
-    "1.........","11111111AA"
+    "1.........","1.......AA"
     "1.........","11>>AAAAAA"
-    "1.........","11111111AA"
+    "1.........","1.......AA"
   }
 }
 
 GROW_TRENCH_CURVE =
 {
-  prob = 35
-  skip_prob = 15
-  aversion = 25
+  prob = 25
+  skip_prob = 10
+  aversion = 10
 
   structure =
   {
-    "xxxx...","xxxxAAA"
-    "xxxx...","xxxxAAA"
-    "xxx....","xxx11A1"
-    "xx.....","xx11/A1"
-    "11.....","11>AA/1"
-    "11.....","1111111"
+    "xxx...","xxxAAA"
+    "xxx...","xxxAAA"
+    "xx....","xx11A1"
+    "1.....","111/A1"
+    "1.....","1>AA/1"
+    "1.....","111111"
   }
 
   diagonals =
   {
     "1A"
     "A1"
+  }
+}
+
+GROW_TRENCH_CURVE_INNER_SOLID =
+{
+  prob = 15
+  skip_prob = 6
+  aversion = 6
+
+  structure =
+  {
+    "xxxx..","xxxxAA"
+    "xxxx..","xxxxAA"
+    "xxxx..","xxxxA1"
+    "xxx...","xxx/A1"
+    "1.....","1>AA/1"
+    "1.....","111111"
+  }
+
+  diagonals =
+  {
+    ".A"
+    "A1"
+  }
+}
+
+GROW_TRENCH_CURVE_OUTER_SOLID =
+{
+  prob = 15
+  skip_prob = 6
+  aversion = 6
+
+  structure =
+  {
+    "xxx...","xxxAA"
+    "xxx...","xxxAA"
+    "xx....","xx11A"
+    "1.....","111/A"
+    "1.....","1>AA/"
+  }
+
+  diagonals =
+  {
+    "1A"
+    "A."
   }
 }
 
