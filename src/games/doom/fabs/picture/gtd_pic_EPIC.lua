@@ -26,7 +26,7 @@ PREFABS.Pic_EPIC_box_gothic_big =
     GLASS2 = 50
     GLASS3 = 50
     GLASS4 = 50
-    GLASS5 = 20 --Black glass looks poor, reduced prob
+    GLASS5 = 10 --Black glass looks poor, reduced prob
     GLASS6 = 50
     GLASS8 = 50
   }
@@ -99,7 +99,7 @@ PREFABS.Pic_EPIC_box_lavawall =
   template = "Pic_EPIC_box_gothic_big"
   map = "MAP01"
 
-  prob = 25 * 7
+  prob = 25 * 6
 
   theme = "hell"
 
@@ -117,7 +117,7 @@ PREFABS.Pic_EPIC_box_marblefaces =
   template = "Pic_EPIC_box_gothic_big"
   map = "MAP01"
 
-  prob = 30 * 7
+  prob = 32 * 7
 
   theme = "hell"
 
@@ -131,6 +131,7 @@ PREFABS.Pic_EPIC_box_marblefaces =
    MARBFAC5 = 50
    MARBFAC6 = 50
    MARBFAC7 = 50
+   MARBFAC8 = 50
    MARBFACF = 50
   }
 }
@@ -174,9 +175,6 @@ PREFABS.Pic_EPIC_box_doom2bodies =
   }
 }
 
--- Some of these we could probably implement into the bloodgutters prefab as a variant
--- since it has a hanging corpse textures that were used in Doom1 and removed during
--- Doom 2 development.
 PREFABS.Pic_EPIC_box_gothic_hangingbodies =
 {
   template = "Pic_EPIC_box_gothic_big"
@@ -493,4 +491,82 @@ PREFABS.Pic_EPIC_ridiculously_tall =
     WINGLAS3 = 50
     WINGLAS4 = 50
   }
+}
+
+PREFABS.Pic_EPIC_box_whitelion_and_goat =
+{
+  template = "Pic_EPIC_box_gothic_big"
+  map = "MAP01"
+
+  prob = 35 * 8
+
+  theme = "!tech"
+
+  seed_w = 2
+
+  tex_GLASS1 =
+  {
+   LIONMRB1 = 50
+   LIONMRB2 = 50
+   LIONMRB3 = 50
+   GOATMARB = 50
+  }
+}
+
+
+PREFABS.Pic_EPIC_GreekDude =
+{
+  template = "Pic_EPIC_box_gothic_big"
+  map = "MAP06"
+
+  prob = 35 * 6
+
+  height = 128
+
+  theme = "!tech"
+
+  seed_w = 3
+
+  tex_GLASS1 = "MARBLFAC"
+
+  sector_1  = { [0]=70, [1]=10 }
+
+}
+
+PREFABS.Pic_EPIC_Devilish =
+{
+  template = "Pic_EPIC_box_gothic_big"
+  map = "MAP03"
+
+  prob = 35 * 4
+
+  theme = "hell"
+
+  seed_w = 1
+
+  tex_GLASS10 =
+  {
+    DEMSTAT = 60
+    GOTH50  = 30
+    GOTH03  = 15
+  }
+}
+
+PREFABS.Pic_EPIC_WoodenDemon =
+{
+  template = "Pic_EPIC_box_gothic_big"
+  map = "MAP06"
+
+  prob = 35 * 5
+
+  height = 128
+
+  theme = "!tech"
+
+  seed_w = 3
+
+  tex_GLASS1 = "WOODDEM1"
+
+  sector_1  = { [0]=75, [1]=15 }
+
 }
