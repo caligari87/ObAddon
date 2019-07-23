@@ -388,6 +388,9 @@ ARMAETUS_MATERIALS = {
   MARBFAC6 = { t="MARBFAC6", f="FLOOR7_2" }
   MARBFAC7 = { t="MARBFAC7", f="FLOOR7_2" }
   MARBFAC8 = { t="MARBFAC8", f="FLOOR7_2" } -- Craneo's doing
+  MARBFAC9 = { t="MARBFAC9", f="FLOOR7_2" } -- Craneo's doing
+  MARBFACA = { t="MARBFACA", f="FLOOR7_2" } -- Craneo's doing
+  MARBFACB = { t="MARBFACB", f="FLOOR7_2" } -- Craneo's doing
   MARBFACF = { t="MARBFACF", f="FLOOR7_2" }
   MARBLE = { t="MARBLE", f="FLOOR7_2" }
   MARBLE4 = { t="MARBLE4", f="FLOOR7_2" }
