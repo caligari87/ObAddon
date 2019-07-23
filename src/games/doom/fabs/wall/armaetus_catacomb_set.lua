@@ -35,24 +35,28 @@ PREFABS.Wall_armaetus_catacomb_diagonal =
   tex_CATACMB1 = { CATACMB1=50, CATACMB4=50 }
 }
 
--- Versions for Doom1
-PREFABS.Wall_armaetus_catacomb_straight_doom1 =
+-- Brown catacombs
+
+PREFABS.Wall_armaetus_catacomb_brown =
 {
   template = "Wall_armaetus_catacomb_straight"
-  theme = "flesh"
-  game = "doom"
-  map = "MAP01"
-  tex_CATACMB1 = { CATACMB1=50, CATACMB4=50 }
+  theme = "hell"
+  group = "armaetus_catacombs_brown"
+
+  map      = "MAP01"
+
+  tex_CATACMB1 = "CATACMB4"
 }
 
-PREFABS.Wall_armaetus_catacomb_diagonal_doom1 =
+PREFABS.Wall_armaetus_catacomb_brown_diagonal =
 {
   template = "Wall_armaetus_catacomb_straight"
-  theme = "flesh"
-  game = "doom"
+  theme = "hell"
+  group = "armaetus_catacombs_brown"
+
   map      = "MAP02"
 
-  where    = "diagonal"
+  where = "diagonal"
 
-  tex_CATACMB1 = { CATACMB1=50, CATACMB4=50 }
+  tex_CATACMB1 = "CATACMB4"
 }
