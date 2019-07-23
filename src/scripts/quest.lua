@@ -3013,7 +3013,7 @@ function Quest_room_themes()
     end
 
     -- code for determining scenic fences is now here
-    R.scenic_fence = GAME.MATERIALS[rand.key_by_probs(GAME.THEMES[LEVEL.theme_name].scenic_fence)]
+    R.scenic_fence = GAME.MATERIALS[rand.key_by_probs(THEME.scenic_fence)]
 
     -- create a skin (for prefabs)
     R.skin =

@@ -2220,13 +2220,13 @@ stderrf("Cages in %s [%s pressure] --> any_prob=%d  per_prob=%d\n",
     if not R.is_outdoor then return end
     if R.is_cave then return end
 
-    if not GAME.THEMES[LEVEL.theme_name].fence_posts then
+    if not THEME.fence_posts then
       gui.printf("WARNING!!! No fence_posts table for theme: " .. LEVEL.theme_name .. "\n")
       return
     end
 
     -- oh man i am not good with computer plz to help!!!!!!!!
-    R.post_type = rand.key_by_probs(GAME.THEMES[LEVEL.theme_name].fence_posts)
+    R.post_type = rand.key_by_probs(THEME.fence_posts)
   end
 
 

@@ -2418,7 +2418,7 @@ end
 function Level_choose_skybox()
   local skyfab
 
-  if not GAME.THEMES[LEVEL.theme_name].skyboxes then
+  if not THEME.skyboxes then
     gui.printf("WARNING! No skybox table for theme: " .. LEVEL.theme_name .. "\n")
     return
   end
@@ -2442,7 +2442,7 @@ function Level_choose_skybox()
 
     --local match_state = false
     --while match_state != true do
-      skyfab = PREFABS[rand.key_by_probs(GAME.THEMES[LEVEL.theme_name].skyboxes)]
+      skyfab = PREFABS[rand.key_by_probs(THEME.skyboxes)]
 
     --[[  if LEVEL.outdoor_theme == "snow" then
         each v in GLAICE_EXCLUDE_DESERT_SKYBOXES do
