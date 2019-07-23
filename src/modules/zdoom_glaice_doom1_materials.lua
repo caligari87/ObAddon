@@ -154,6 +154,8 @@ GLAICE_DOOM1_MATERIALS = {
   CITY08 = { t="CITY08", f="FLAT1" } -- Gray bricks with stone arch window
   CITY09 = { t="CITY09", f="FLAT1" } -- Small gray bricks with stone arch window
   CITY10 = { t="CITY10", f="FLOOR7_1" } -- Small brown bricks with stone arch window
+  CITY11 = { t="CITY11", f="FLOOR7_1" } -- Tan, derelict bricks with barred up window
+  CITY12 = { t="CITY12", f="FLAT5_3" } -- Red bricks, broken windows
 
   URBAN1 = { t="URBAN1", f="RROCK10" }
   URBAN2 = { t="URBAN2", f="FLAT1" }
@@ -361,6 +363,7 @@ GLAICE_DOOM1_MATERIALS = {
   BLAKFAC3 = { t="BLAKFAC3", f="BMARB3" } -- Black MARBFAC3
   BLAKMBGY = { t="BLAKMBGY", f="BMARB1" } -- Black MARBGRAY
   BLAKMBG2 = { t="BLAKMBG2", f="BMARB1" } -- Black MARBFAC4
+  GOATMARB = { t="GOATMARB", f="FLAT1" } -- Goat/Baphomet relief thing
   GSTONE3 = { t="GSTONE3", f="FLOOR7_2" }
   ICONMRB1 = { t="ICONMRB1", f="FLOOR7_2" }
   KMARBLE1 = { t="KMARBLE1", f="BMARB2" } -- Black MARBLE1
@@ -374,6 +377,9 @@ GLAICE_DOOM1_MATERIALS = {
   KSTGARG = { t="KSTGARG", f="BMARB3" }
   KSTLION = { t="KSTLION", f="BMARB3" }
   KSTSATYR = { t="KSTSATYR", f="BMARB3" }
+  LIONMRB1 = { t="LIONMRB1", f="TILES4" } -- White marble lion
+  LIONMRB2 = { t="LIONMRB2", f="FLAT1" } -- White marble lion (grayer)
+  LIONMRB3 = { t="LIONMRB3", f="TILES4" } -- White marble lion
   MARBF01 = { t="MARBF01", f="FLOOR7_2" }
   MARBF02 = { t="MARBF02", f="FLOOR7_2" }
   MARBF03 = { t="MARBF03", f="FLOOR7_2" }
@@ -383,6 +389,7 @@ GLAICE_DOOM1_MATERIALS = {
   MARBFAC5 = { t="MARBFAC5", f="FLOOR7_2" } --Plutonia 2
   MARBFAC6 = { t="MARBFAC6", f="FLOOR7_2" }
   MARBFAC7 = { t="MARBFAC7", f="FLOOR7_2" }
+  MARBFAC7 = { t="MARBFAC7", f="FLOOR7_2" }
   MARBFACF = { t="MARBFACF", f="FLOOR7_2" }
   MARBLE = { t="MARBLE", f="FLOOR7_2" }
   MARBLE4 = { t="MARBLE4", f="FLOOR7_2" }
@@ -390,6 +397,7 @@ GLAICE_DOOM1_MATERIALS = {
   MARBLE6 = { t="MARBLE6", f="FLOOR7_2" }
   MARBLE7 = { t="MARBLE7", f="FLOOR7_2" }
   MARBLE8 = { t="MARBLE8", f="FLOOR7_2" }
+  MARBLFAC = { t="MARBLFAC", f="TILES4" } -- Greek inspired wall
   MBGRY = { t="MBGRY", f="FLOOR7_2" } --MARBGRAY
   MBGRY2 = { t="MBGRY2", f="FLOOR7_2" } --MARBFAC4
 
@@ -478,6 +486,7 @@ GLAICE_DOOM1_MATERIALS = {
   MURAL14  = { t="MURAL14",  f="RROCK09" }
   MURAL15  = { t="MURAL15",  f="RROCK09" }
   MURAL16  = { t="MURAL16",  f="RROCK09" }
+  MURAL17  = { t="MURAL17",  f="RROCK09" }
 
   -- Rocks / Natural
   CATACMB1 = { t="CATACMB1", f="RROCK03" } -- Dark gray rock, bones
@@ -568,6 +577,7 @@ GLAICE_DOOM1_MATERIALS = {
   DEATH1 = { t="DEATH1", f="FLAT5_4" }
   DEATH2 = { t="DEATH2", f="FLAT5_4" }
   DEATH3 = { t="DEATH3", f="FLAT5_4" }
+  DEMSTAT = { t="DEMSTAT", f="GMET07" } -- Demon statue, Craneo's stuff
   HELMET1 = { t="HELMET1", f="CEIL5_1" }
   HELWAL1 = { t="HELWAL1", f="RROCK03" } --Memento Mori 2
   HELLROK1 = { t="HELLROK1", f="FLOOR6_1" }
@@ -671,6 +681,8 @@ GLAICE_DOOM1_MATERIALS = {
   RDWAL01 = { t="RDWAL01", f="FLOOR1_6" } --REDWALL1
   SANDBAGS = { t="SANDBAGS", f="RROCK09" }
   SUPPORT4 = { t="SUPPORT4", f="FLAT23" }
+  WHEEL1 = { t="WHEEL1", f="CEIL5_1" } -- Truck wheel
+  WHEEL2 = { t="WHEEL2", f="CEIL5_1" } -- Car wheel
 
   -- Steps
   WARNSTEP = { t="WARNSTEP", f="WARN1", sane=1 }
@@ -693,6 +705,7 @@ GLAICE_DOOM1_MATERIALS = {
   WODCRAT3 = { t="WODCRAT3", f="FLAT5_2" } -- Wooden TNT UAC crate, 128x64
   WODCRAT4 = { t="WODCRAT4", f="FLAT5_2" } -- Wooden UAC crate, 64x64
   WODCRAT5 = { t="WODCRAT5", f="FLAT5_2" } -- Wooden UAC crate, 64x128
+  WOODDEM1 = { t="WOODDEM1", f="FLAT5_1" } -- Ugly wooden demon relief
   WOODFACE = { t="WOODFACE", f="FLAT5_2" }
   WOODSKUL = { t="WOODSKUL", f="FLAT5_2" } -- Wood with skull on it. From Doom1
   WOOD13 = { t="WOOD13", f="FLAT5_2" }
@@ -1134,6 +1147,9 @@ GLAICE_DOOM1_MATERIALS = {
   GATE4PU    = { f="GATE4PU", t="METAL" } -- Purple
   GATE4RD    = { f="GATE4RD", t="METAL" } -- Red, just brighter
   GATE4TN    = { f="GATE4TN", t="METAL" } -- Skin-like
+
+  -- Asphalt
+  ROAD1    = { f="ROAD1", t="STONE2" } -- Consult New_Road.wad for its use!
 
 ---------------------------------------------------------------
 -- Overwriting existing flats to use new patches for textures
