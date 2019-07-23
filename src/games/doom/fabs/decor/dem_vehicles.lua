@@ -7,6 +7,8 @@ PREFABS.Decor_apc =
   file   = "decor/dem_vehicles.wad"
   map    = "MAP01"
 
+  engine = "zdoom"
+
   prob   = 4500
   theme  = "urban"
 
