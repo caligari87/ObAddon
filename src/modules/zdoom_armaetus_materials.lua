@@ -757,6 +757,7 @@ ARMAETUS_MATERIALS = {
   SW2QUAK = { t="SW2QUAK", f="CEIL5_2" }
 
   -- Fencing & spacings
+  BARBWIRE = { t="BARBWIRE", rail_h=32 } -- Razor barbwire
   FENCE1 = { t="FENCE1", rail_h=128 }
   FENCE2 = { t="FENCE2", rail_h=128 }
   FENCE3 = { t="FENCE3", rail_h=64 }
