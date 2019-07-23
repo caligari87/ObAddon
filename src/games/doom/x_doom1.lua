@@ -3,7 +3,7 @@
 --------------------------------------------------------------------
 --
 --  Copyright (C) 2006-2017 Andrew Apted
---  Copyright (C) 2011,2019 Chris Pisarczyk / Glaice
+--  Copyright (C) 2011,2019 Chris Pisarczyk / Armaetus
 --  Copyright (C) 2019 MsrSgtShooterPerson
 --
 --  This program is free software; you can redistribute it and/or
@@ -750,7 +750,7 @@ ULTDOOM.THEMES =
 
   ---- Episode 2 ----
 
-  -- Deimos theme by Chris Pisarczyk / Glaice
+  -- Deimos theme by Chris Pisarczyk / Armaetus
 
   deimos =
   {
@@ -1224,7 +1224,7 @@ ULTDOOM.THEMES =
 
   ---- Episode 4 ----
 
-  -- Thy Flesh Consumed by Chris Pisarczyk / Glaice
+  -- Thy Flesh Consumed by Chris Pisarczyk / Armaetus
   -- Basically a modified version of "hell" to match id's E4 better
 
   flesh =

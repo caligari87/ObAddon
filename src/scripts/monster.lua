@@ -917,7 +917,7 @@ function Monster_fill_room(R)
 
     end
 
-  --hallway edits Glaice
+  --hallway edits Armaetus
 
     -- hallways have limited spots
     if R.is_hallway then
@@ -1993,7 +1993,7 @@ gui.debugf("wants =\n%s\n\n", table.tostr(wants))
 
     rand.shuffle(list)
 
-    -- Glaice
+    -- Armaetus
 
     -- Make traps really evil
 

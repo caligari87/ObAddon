@@ -185,7 +185,7 @@ function Fab_load_all_definitions()
       end
     end
 
-    -- attachment for fabs that use Glaice's Epic textures
+    -- attachment for fabs that use Armaetus's Epic textures
     if not PARAM["epic_textures_activated"] then
       if def.uses_epic_textures then
         prob = 0

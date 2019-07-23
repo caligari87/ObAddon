@@ -2445,7 +2445,7 @@ function Level_choose_skybox()
       skyfab = PREFABS[rand.key_by_probs(THEME.skyboxes)]
 
     --[[  if LEVEL.outdoor_theme == "snow" then
-        each v in GLAICE_EXCLUDE_DESERT_SKYBOXES do
+        each v in ARMAETUS_EXCLUDE_DESERT_SKYBOXES do
           if skyfab == v then
             match_state = false
           else
@@ -2453,7 +2453,7 @@ function Level_choose_skybox()
           end
         end
       elseif LEVEL.outdoor_theme == "sand" then
-        each v in GLAICE_EXCLUDE_SNOW_SKYBOXES do
+        each v in ARMAETUS_EXCLUDE_SNOW_SKYBOXES do
           if skyfab == v then
             match_state = false
           else
