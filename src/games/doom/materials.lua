@@ -208,14 +208,6 @@ DOOM.MATERIALS =
   WOOD5    = { t="WOOD5",     f="CEIL5_2" }
   WOODGARG = { t="WOODGARG",  f="FLAT5_2" }
 
-  XCEIL5_1 = { t="CEIL5_1", f="CEIL5_1" }
-  XFLAT14 = { t="FLAT14", f="FLAT14" }
-  XFLOOR16 = { t="FLOOR1_6", f="FLOOR1_6" }
-  XMETAL3 = { t="METAL3", f="METAL3" }
-  XMETAL2 = { t="METAL2", f="METAL3" }
-  XSILVER3 = { t="SILVER3", f="SILVER3" }
-  XSHAWN2 = { t="SHAWN2", f="SHAWN2" }
-
 
   -- steps --
 
@@ -664,6 +656,18 @@ DOOM.MATERIALS =
   KFALL5   = { t="BLODRIP1", f="SLIME05", sane=1 }
   SLIME01  = { t="BLODRIP1", f="SLIME01", sane=1 }
   SLIME05  = { t="BLODRIP1", f="SLIME05", sane=1 }
+
+
+  -- walls as flats --
+  XCEIL5_1 = { t="CEIL5_1", f="CEIL5_1" }
+  XFLAT14 = { t="FLAT14", f="FLAT14" }
+  XFLOOR16 = { t="FLOOR1_6", f="FLOOR1_6" }
+  XMETAL3 = { t="METAL3", f="METAL3" }
+  XMETAL2 = { t="METAL2", f="METAL3" }
+  XSILVER3 = { t="SILVER3", f="SILVER3" }
+  XSHAWN2 = { t="SHAWN2", f="SHAWN2" }
+  XMETAL3 = { t="METAL3", f="METAL3" }
+  XSTEPTOP = { t="STEPTOP", f="STEPTOP" }
 }
 
 

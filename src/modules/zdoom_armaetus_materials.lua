@@ -1117,7 +1117,5 @@ ARMAETUS_MATERIALS = {
   XDARKMET = { t="DARKMET1", f="DARKMET1" }
   XDFAN1 = { t="DFAN1", f="DFAN1" }
   XGRATE7 = { t="GRATE7", f="GRATE7" }
-  XGRATE7 = { t="GRATE7", f="GRATE7" }
-  XSILVER3 = { t="SILVER3", f="SILVER3" }
-  XMETAL3 = { t="METAL3", f="METAL3" }
+  XGREEN01 = { t="GREEN01", f="GREEN01" }
 }
