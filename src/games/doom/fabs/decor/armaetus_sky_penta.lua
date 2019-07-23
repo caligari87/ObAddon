@@ -1,6 +1,6 @@
 PREFABS.Decor_armaedus_sky_penta =
 {
-  file   = "decor/armaedus_sky_penta.wad"
+  file   = "decor/armaetus_sky_penta.wad"
   map    = "MAP01"
 
   prob   = 7500
