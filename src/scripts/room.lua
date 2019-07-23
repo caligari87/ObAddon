@@ -3523,6 +3523,9 @@ function Room_set_sky_heights()
     if A.floor_h and A.zone and A.is_outdoor and not A.is_porch then
       A.ceil_h = A.zone.sky_h
     end
+    if (A.is_porch or A.is_porch_neighbor) and A.ceil_h >= A.zone.sky_h -16 then
+      A.ceil_h = A.ceil_h - 16
+    end
   end
 
   -- handle locked and secret fences
