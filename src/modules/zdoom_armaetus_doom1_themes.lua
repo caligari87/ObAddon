@@ -2393,6 +2393,10 @@ ARMAETUS_DOOM1_HELL_WALL_GROUPS =
   gtd_collite_set_blue = 7
   gtd_collite_set_red = 7
   gtd_g99 = 25
+  armaetus_wallbodies = 8
+  armaetus_wallbodies_bloody = 8
+  armaetus_wallbodies_old = 8
+  armaetus_wallbodies_bones = 8
 }
 
 ARMAETUS_DOOM1_FLESH_WALL_GROUPS =
@@ -2408,6 +2412,10 @@ ARMAETUS_DOOM1_FLESH_WALL_GROUPS =
   gtd_collite_set_blue = 7
   gtd_collite_set_red = 7
   gtd_g99 = 25
+  armaetus_wallbodies = 8
+  armaetus_wallbodies_bloody = 8
+  armaetus_wallbodies_old = 8
+  armaetus_wallbodies_bones = 8
 }
 
 

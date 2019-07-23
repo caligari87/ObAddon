@@ -2891,6 +2891,10 @@ ARMAETUS_HELL_WALL_GROUPS =
   gtd_collite_set_blue = 6
   gtd_collite_set_red = 6
   gtd_g99 = 30
+  armaetus_wallbodies = 8
+  armaetus_wallbodies_bloody = 8
+  armaetus_wallbodies_old = 8
+  armaetus_wallbodies_bones = 8
 }
 
 
