@@ -132,6 +132,9 @@ PREFABS.Pic_EPIC_box_marblefaces =
    MARBFAC6 = 50
    MARBFAC7 = 50
    MARBFAC8 = 50
+   MARBFAC9 = 50
+   MARBFACA = 50
+   MARBFACB = 50
    MARBFACF = 50
   }
 }
