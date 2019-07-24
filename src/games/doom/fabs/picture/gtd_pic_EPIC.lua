@@ -499,9 +499,9 @@ PREFABS.Pic_EPIC_ridiculously_tall =
 PREFABS.Pic_EPIC_box_whitelion_and_goat =
 {
   template = "Pic_EPIC_box_gothic_big"
-  map = "MAP01"
+  map = "MAP10"
 
-  prob = 35 * 8
+  prob = 35 * 4
 
   theme = "!tech"
 
@@ -520,9 +520,9 @@ PREFABS.Pic_EPIC_box_whitelion_and_goat =
 PREFABS.Pic_EPIC_GreekDude =
 {
   template = "Pic_EPIC_box_gothic_big"
-  map = "MAP06"
+  map = "MAP11"
 
-  prob = 35 * 6
+  prob = 35
 
   height = 128
 
@@ -541,7 +541,7 @@ PREFABS.Pic_EPIC_Devilish =
   template = "Pic_EPIC_box_gothic_big"
   map = "MAP03"
 
-  prob = 35 * 4
+  prob = 35 * 3
 
   theme = "hell"
 
@@ -558,9 +558,9 @@ PREFABS.Pic_EPIC_Devilish =
 PREFABS.Pic_EPIC_WoodenDemon =
 {
   template = "Pic_EPIC_box_gothic_big"
-  map = "MAP06"
+  map = "MAP11"
 
-  prob = 35 * 5
+  prob = 35
 
   height = 128
 
