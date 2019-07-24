@@ -3688,7 +3688,8 @@ function Room_cleanup_stairs_to_nowhere(R)
 
     each A in R.areas do
       if A.is_porch then
-        if not same_level_to_outdoor_area(A) then
+        if not same_level_to_outdoor_area(A)
+        and not A.dead_end then
           A.floor_mat = A.porch_floor_mat
           A.uses_porch_mat = true
         end

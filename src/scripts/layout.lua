@@ -2153,6 +2153,9 @@ stderrf("Cages in %s [%s pressure] --> any_prob=%d  per_prob=%d\n",
           if chunk.content then continue end
           if chunk.floor_below and chunk.floor_below.content then continue end
 
+          if chunk.area.lamp_def.height < (chunk.area.ceil_h - chunk.area.floor_h) then
+            continue end
+
           chunk.content = "DECORATION"
           chunk.kind = "ceil"
           chunk.prefab_def = chunk.area.lamp_def
@@ -2507,20 +2510,14 @@ function Layout_handle_corners()
   local function check_need_pillar(corner)
     if corner.kind then return end
 
+    local pillar_it = false
     each junc in corner.junctions do
       if junc.A2 == "map_edge" then return end
 
       if not Corner_is_at_area_corner(corner) then return end
 
-      -- create support pillars on the corners of fenceposts
-      if near_porch(corner, "porch") then
-        add_pillar(corner)
-      end
-
-      local cur_seed = corner.seeds[1]
+      -- don't put pillars adjacent to joiners and closets
       each S in corner.seeds do
-
-        -- don't put pillars adjacent to joiners and closets
         if S.chunk then
           if S.chunk.kind == "joiner"
           or S.chunk.kind == "closet" then
@@ -2529,25 +2526,40 @@ function Layout_handle_corners()
         end
       end
 
-      local pillar_it = false
+      -- don't put pillars on corners adjacent to dead ends
+      each A in corner.areas do
+        if A.room and not A.room.is_outdoor and A.dead_end then
+          return
+        end
+      end
+
+      -- create support pillars on the corners of fenceposts
+      if near_porch(corner, "porch") then
+        pillar_it = true
+      end
+
       if near_porch(corner, "porch_neighbor") then
 
         each S in corner.seeds do
+
           if S.chunk then
             if S.chunk.kind == "stair" then
               pillar_it = true
             end
           end
+
           if S.area.mode == "liquid" then
             pillar_it = true
           end
-      end
-
-        if pillar_it then
-          add_pillar(corner)
         end
+
       end
     end
+
+    if pillar_it then
+      add_pillar(corner)
+    end
+
   end
 
 
