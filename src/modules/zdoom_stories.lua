@@ -1602,5 +1602,5 @@ ZDOOM_STORIES.QUIT_MESSAGES =
   -- important facts
   [[In 1998, the Undertaker threw Mankind off Hell in a Cell and plummeted 16ft. through an announcer's table.]],
   [[By exiting, you are agreeing to subscribe to Cat Facts.]]
-  [[Sewerage is important but HVAC systems are even more important.]]
+  [[Sewerage is important but HVAC systems is importanter.]]
 }
