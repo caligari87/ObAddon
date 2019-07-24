@@ -5,7 +5,7 @@ PREFABS.Joiner_scionox_guardpost =
   file   = "joiner/scionox_guardpost.wad"
   map    = "MAP01"
 
-  prob   = 150
+  prob   = 200
   theme  = "!hell"
   style  = "doors"
 
