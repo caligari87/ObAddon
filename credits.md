@@ -3,13 +3,14 @@
 * **Andrew Apted** - The creator of Oblige.
 
 * **MsrSgtShooterPerson** - Repository maintainer, prefabs, shape rules, new modules, documentation, textures.
-* **Armaetus** - Original base tweaks to Oblige v7.59, prefabs, new modules.
+* **Armaetus** - Original base tweaks to Oblige v7.59, prefabs, new modules, textures.
 * **Simon-v** - Lua normalizer, contributions to story generator.
 * **Beed28** - Prefabs.
 * **Frozsoul** - Prefabs, Psychedelic theme porting.
 * **Garrett** - Prefabs.
 * **MogWaltz** - Prefabs.
 * **Craneo** - Replacement candle texture, contributions to naming generator, prefabs, sprites, textures.
+* **Demios** - Prefabs.
 * **Tapwave** - Contributions to the story generator.
 * **Scionox** - Prefabs.
 * **Swedra** - Contributions to naming generator.
