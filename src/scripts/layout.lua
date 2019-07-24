@@ -2566,6 +2566,9 @@ function Layout_handle_corners()
   local function check_corner(cx, cy)
     local corner = Corner_lookup(cx, cy)
 
+    -- MSSP-TODO: Maybe have a single function
+    -- to choose between fenceposts and pillars
+    -- to reduce amount of loops?
     check_need_fencepost(corner)
     check_need_pillar(corner)
   end

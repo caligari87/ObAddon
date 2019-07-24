@@ -3128,8 +3128,6 @@ end
 
 function Render_establish_street_lanes()
 
-  -- MSSP-TODO
-
   -- Render_establish_street_lanes
   --
   -- This next phase of the street building process
