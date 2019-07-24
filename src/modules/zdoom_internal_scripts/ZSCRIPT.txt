@@ -18,11 +18,13 @@ class FancyObligeTree : BigTree replaces BigTree
 				bool onSand = false;
 				bool onHellscape = false;
 				bool unknownFlat = false;
+				bool indoors = false;
 
 				A_SetSize(10,-1,-1);
 
-				Name onflat = TexMan.GetName(floorpic);
-				switch(onflat)
+				Name onFlat = TexMan.GetName(floorpic);
+				Name onCeil = TexMan.GetName(ceilingpic);
+				switch(onFlat)
 				{
 					case 'GRASS1':
 					case 'GRASS2':
@@ -82,6 +84,21 @@ class FancyObligeTree : BigTree replaces BigTree
 						unknownFlat = true;
 				}
 
+				if(onCeil == 'F_SKY1')
+				{
+					scale.x *= 0.5; //For those occasional indoor planters
+					scale.y *= 0.5; //in urban theme.
+					switch(random(1,2))
+					{
+						case 1:
+							fstate = "ShrubA";
+							break;
+						case 2:
+							fstate = "ShrubB";
+							break;
+					}
+				}
+
 				if(onGrass)
 				{
 					if(random(1,100) <= 75) //Trees
@@ -121,15 +138,15 @@ class FancyObligeTree : BigTree replaces BigTree
 
 				if(onSnow)
 				{
-          int index = 1;
+					int index = 1;
 
-          if(random(1,4) >= 2)
-          {
-            index = random(10,14);
-          }else
-          {
-            index = random(1,9);
-          }
+					if(random(1,4) >= 2)
+					{
+						index = random(10,14);
+					}else
+					{
+						index = random(1,9);
+					}
 
 					switch(index)
 					{
