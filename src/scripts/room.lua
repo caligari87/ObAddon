@@ -3519,10 +3519,7 @@ function Room_set_sky_heights()
 
   each A in LEVEL.areas do
     if A.floor_h and A.zone and A.is_outdoor and not A.is_porch then
-      A.ceil_h = A.zone.sky_h
-    end
-    if (A.is_porch or A.is_porch_neighbor) and A.ceil_h >= A.zone.sky_h -16 then
-      A.zone.sky_h = A.zone.sky_h + 16
+      A.ceil_h = A.zone.sky_h + 16
     end
   end
 
@@ -3728,13 +3725,6 @@ function Room_cleanup_stairs_to_nowhere(R)
         A.floor_mat = SAS.floor_mat
         A.ceil_mat = SAS.ceil_mat
 
-        if not A.is_porch then
-          A.floor_group = SAS.floor_group
-          A.ceil_group = SAS.ceil_group
-        end
-
-        A.prelim_h = SAS.prelim_h
-
         SA.mode = "floor"
 
         -- MSSP-FIXME: Find a better way - remove the chunk
@@ -3751,15 +3741,8 @@ function Room_cleanup_stairs_to_nowhere(R)
 
         SA.floor_h = SAS.floor_h
 
-        SA.prelim_h = SAS.prelim_h
-
         SA.floor_mat = SAS.floor_mat
         SA.ceil_mat = SAS.ceil_mat
-
-        if not SA.is_porch then
-          SA.floor_group = SAS.floor_group
-          SA.ceil_group = SAS.ceil_group
-        end
 
         A.dead_end = true
         SA.dead_end = true
@@ -3767,6 +3750,16 @@ function Room_cleanup_stairs_to_nowhere(R)
         if A.room == "outdoor" then
           A.source_mat = SAS.floor_mat
           SA.source_mat = SAS.floor_mat
+        end
+
+        -- unify heights
+        local h_diff = math.min(A.ceil_h, SA.ceil_h)
+        if A.is_porch then
+          A.ceil_h = h_diff
+        end
+
+        if SA.is_porch_neighbor then
+          SA.ceil_h = h_diff
         end
 
         fixup_neighbors(A)
