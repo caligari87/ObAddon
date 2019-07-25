@@ -1733,9 +1733,7 @@ function Room_border_up()
       -- porches --
 
       if (A1.is_porch and not A2.is_porch)
-      or (not A1.is_porch and A2.is_porch)
-      and not A1.dead_end
-      and not A2.dead_end then
+      or (not A1.is_porch and A2.is_porch)then
 
         if A1.mode == "cage" or A2.mode == "cage" then
           if A1.cage_mode == "fancy" or A2.cage_mode == "fancy" then
@@ -3684,29 +3682,25 @@ function Room_cleanup_stairs_to_nowhere(R)
       return false
     end
 
-    if not R.is_outdoor then return end
+    if R:get_env() != "outdoor" then return end
 
     each A in R.areas do
       if A.is_porch then
-        if not same_level_to_outdoor_area(A)
-        and not A.dead_end then
+        if not same_level_to_outdoor_area(A) then
+          A.uses_porch_floor = true
           A.floor_mat = A.porch_floor_mat
-          A.uses_porch_mat = true
         end
       end
     end
 
-    -- second pass, propgate the porch floor material
-    -- to all porches of the same height (regardless
-    -- if neighboring or not)
+    -- second pass
     each A1 in R.areas do
-      if A1.uses_porch_mat then
-        A1.porch_mat_fixed = true
+      if A1.uses_porch_floor and not A1.porch_floor_infected then
         each A2 in R.areas do
-          if A2.uses_porch_mat and
-          (A1.floor_h == A2.floor_h) then
-            A2.floor_mat = A1.floor_mat
-            A2.porch_mat_fixed = true
+          if A1.floor_h == A2.floor_h
+          and not A2.is_porch then
+            A1.porch_floor_infected = true
+            A1.floor_mat = A2.floor_mat
           end
         end
       end
@@ -3768,6 +3762,11 @@ function Room_cleanup_stairs_to_nowhere(R)
 
         A.dead_end = true
         SA.dead_end = true
+
+        if A.room == "outdoor" then
+          A.source_mat = SAS.floor_mat
+          SA.source_mat = SAS.floor_mat
+        end
 
         fixup_neighbors(A)
       end

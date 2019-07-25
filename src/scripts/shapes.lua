@@ -6816,7 +6816,6 @@ STREETS_ENTRY =
     "11..","1111"
     "....","1111"
     "....","1111"
-    "....","1111"
   }
 }
 
@@ -6831,8 +6830,6 @@ STREETS_ENTRY_OFFSET =
     "....","1111"
     "11..","1111"
     "11..","1111"
-    "xx..","xx11"
-    "xx..","xx11"
     "....","1111"
   }
 }
@@ -7008,6 +7005,21 @@ SIDEWALK_STRAIGHT_INWARD =
   }
 }
 
+SIDEWALK_4X4 =
+{
+  prob = 25
+
+  pass = "sidewalk"
+
+  structure =
+  {
+    "11..","11AA"
+    "11..","11AA"
+    "....","AAAA"
+    "....","AAAA"
+  }
+}
+
 SIDEWALK_STRAIGHT_INWARD_ANGLED =
 {
   prob = 25
@@ -7018,10 +7030,10 @@ SIDEWALK_STRAIGHT_INWARD_ANGLED =
   {
     "1......","1AAAAAA"
     "1......","1AAAAAA"
-    "1......","1....AA"
-    "1......","1....AA"
-    "1......","1....AA"
-    "1......","1....AA"
+    "1xxxx..","1xxxxAA"
+    "1xxxx..","1xxxxAA"
+    "1xxxx..","1xxxxAA"
+    "1xxxx..","1xxxxAA"
   }
 }
 
@@ -7193,6 +7205,22 @@ SIDEWALK_SLOPE_ON_RAMP =
   }
 }
 
+SIDEWALK_PLAIN_STAIR =
+{
+  prob = 10
+
+  pass = "sidewalk"
+
+  structure =
+  {
+    "..","AA"
+    "..","AA"
+    "..","^^"
+    "11","11"
+    "11","11"
+  }
+}
+
 SIDEWALK_BUILDING_4x4 =
 {
   prob = 15
@@ -7230,6 +7258,51 @@ SIDEWALK_BUILDING_L =
     "..........","AA......AA"
     "..........","AAAAAAAAAA"
     "..........","AAAAAAAAAA"
+  }
+}
+
+SIDEWALK_CURVE =
+{
+  prob = 20
+
+  pass = "sidewalk"
+
+  structure =
+  {
+    "1...x","1AA%x"
+    "1....","1AAA%"
+    "xx...","xx%AA"
+    "xxx..","xxxAA"
+  }
+
+  diagonals =
+  {
+    "A."
+      "A."
+    ".A"
+  }
+}
+
+SIDEWALK_ZIGZAG =
+{
+  prob = 20
+
+  pass = "sidewalk"
+
+  structure =
+  {
+    "1...xx","1AA%xx"
+    "1....x","1AAA%x"
+    "xx....","xx%AAA"
+    "xxx...","xxx%AA"
+  }
+
+  diagonals =
+  {
+    "A."
+      "A."
+    ".A"
+      "A."
   }
 }
 

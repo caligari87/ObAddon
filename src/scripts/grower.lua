@@ -1259,10 +1259,7 @@ gui.printf("new room %s : env = %s : parent = %s\n", R.name, tostring(info.env),
     if info.env != "hallway"
     and info.env != "cave"
     and not R.is_park then
-      if R.id == 2 and rand.odds(90) then
-        R.is_street = true
-        R.is_outdoor = true
-      elseif R.id%2 == 0 and rand.odds(70) and R.id > 2 then
+      if R.id%2 == 0 and rand.odds(66) then
         R.is_street = true
         R.is_outdoor = true
       end
