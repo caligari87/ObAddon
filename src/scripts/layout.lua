@@ -2526,13 +2526,6 @@ function Layout_handle_corners()
         end
       end
 
-      -- don't put pillars on corners adjacent to dead ends
-      each A in corner.areas do
-        if A.room and not A.room.is_outdoor and A.dead_end then
-          return
-        end
-      end
-
       -- create support pillars on the corners of fenceposts
       if near_porch(corner, "porch") then
         pillar_it = true
@@ -2551,6 +2544,7 @@ function Layout_handle_corners()
           if S.area.mode == "liquid" then
             pillar_it = true
           end
+
         end
 
       end

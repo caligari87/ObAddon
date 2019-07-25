@@ -5,9 +5,9 @@ PREFABS.Decor_camping_tent_bloo =
 
   engine = "zdoom"
 
-  prob   = 1250
+  prob   = 2500
   theme  = "urban"
-  env    = "outdoor"
+  env    = "park"
 
   where  = "point"
   size   = 104
