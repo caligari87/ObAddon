@@ -1,6 +1,6 @@
 PREFABS.Joiner_simple_one_pillar =
 {
-  file   = "joiner/simple2.wad"
+  file   = "joiner/gtd_simple_one_pillar.wad"
   map    = "MAP01"
   theme  = "tech"
 

@@ -2124,6 +2124,8 @@ stderrf("Cages in %s [%s pressure] --> any_prob=%d  per_prob=%d\n",
         if chunk.area.ceil_group != cg then continue end
         if chunk.content then continue end
         if chunk.floor_below and chunk.floor_below.content then continue end
+        if def.height > (chunk.area.ceil_h - chunk.area.floor_h) then
+          continue end
 
         if true then
           chunk.content = "DECORATION"
@@ -2153,7 +2155,7 @@ stderrf("Cages in %s [%s pressure] --> any_prob=%d  per_prob=%d\n",
           if chunk.content then continue end
           if chunk.floor_below and chunk.floor_below.content then continue end
 
-          if chunk.area.lamp_def.height < (chunk.area.ceil_h - chunk.area.floor_h) then
+          if chunk.area.lamp_def.height > (chunk.area.ceil_h - chunk.area.floor_h) then
             continue end
 
           chunk.content = "DECORATION"

@@ -5711,16 +5711,18 @@ GROW_EXTRUSION_STAIRCASE_4x2_SMALL_SIDEWAYS =
 
 GROW_EXTRUSION_SINK =
 {
-  prob = 30
+  prob = 25
+
+  aversion = 8
 
   structure =
   {
-    "x11x","x11x"
-    "....","1111"
-    "....","1vAA"
-    "....","1AAA"
-    "....","1^AA"
-    "....","1111"
+    "x11xx","x11xx"
+    "...xx","111xx"
+    ".....","1vAAA"
+    ".....","1AAAA"
+    ".....","1^AAA"
+    "...xx","111xx"
   }
 }
 
