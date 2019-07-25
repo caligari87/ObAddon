@@ -3478,7 +3478,9 @@ function Grower_grammatical_room(R, pass, is_emergency)
   elseif pass == "streets" then
     apply_num = rand.irange(5,10)
 
-  elseif pass == "streets_entry" then
+  elseif pass == "streets_entry_4"
+  or pass == "streets_entry_6"
+  or pass == "streets_entry_8" then
     apply_num = 1
 
   elseif pass == "sidewalk" then
@@ -3751,7 +3753,16 @@ end
 function Grower_make_street(R)
   if R.is_streeted then return end
 
-  Grower_grammatical_room(R, "streets_entry")
+  R.areas[1]:calc_volume()
+  R.svolume = R.areas[1].svolume
+  if R.svolume == 4 then
+    Grower_grammatical_room(R, "streets_entry_4")
+  elseif R.svolume == 6 then
+    Grower_grammatical_room(R, "streets_entry_6")
+  elseif R.svolume == 8 then
+    Grower_grammatical_room(R, "streets_entry_8")
+  end
+
   Grower_grammatical_room(R, "streets")
   Grower_grammatical_room(R, "street_fixer")
 
@@ -3769,7 +3780,6 @@ function Grower_make_street(R)
 
   -- sanity check: failed street rooms shall now become just
   -- regular rooms
-  R.areas[1]:calc_volume()
   if R.areas[1].svolume < 16 then
     R.is_street = false
     R.areas[1].is_road = false

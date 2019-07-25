@@ -6804,33 +6804,48 @@ GROW_SEWER_STAIRS_SIDE_EXIT_NEW_AREA =
 -- It works now. Cheer up, buddy. -- March, 2019
 -- MSSP's city streets. ExperiMENTAL. [STREETS]
 
-STREETS_ENTRY =
+STREETS_ENTRY_RSVOL_4 =
 {
-  prob = 500
+  prob = 5
 
-  pass = "streets_entry"
+  pass = "streets_entry_4"
 
   structure =
   {
-    "xx....","xx1111"
-    "11....","111111"
-    "11....","111111"
-    "xx....","xx1111"
+    "11..","1111"
+    "11..","1111"
+    "....","1111"
+    "....","1111"
   }
 }
 
-STREETS_ENTRY_LONG_OFFSET =
+STREETS_ENTRY_RSVOL_6 =
 {
-  prob = 500
+  prob = 5
 
-  pass = "streets_entry"
+  pass = "streets_entry_6"
 
   structure =
   {
-    "xxxx....","xxxx1111"
-    "1111....","11111111"
-    "1111....","11111111"
-    "xxxx....","xxxx1111"
+    "11..","1111"
+    "11..","1111"
+    "11..","1111"
+    "....","1111"
+  }
+}
+
+STREETS_ENTRY_RSVOL_8 =
+{
+  prob = 5
+
+  pass = "streets_entry_8"
+
+  structure =
+  {
+    "11..","1111"
+    "11..","1111"
+    "11..","1111"
+    "11..","1111"
   }
 }
 
