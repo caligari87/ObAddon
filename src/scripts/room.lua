@@ -2624,7 +2624,7 @@ function Room_floor_ceil_heights()
 
       if R.is_outdoor then
         if R.theme.porch_floors then
-          R.porch_floor_mat = rand.key_by_probs(R.theme.porch_floors)
+          A.porch_floor_mat = rand.key_by_probs(R.theme.porch_floors)
         else
           gui.printf(LEVEL.theme_name .. " NEEDS A PORCH_FLOORS table BADLY!!!111\n")
         end
@@ -3668,7 +3668,6 @@ function Room_cleanup_stairs_to_nowhere(R)
       each N in A.neighbors do
         if N.room then
           if A.room == N.room
-          and not N.is_porch
           and N.mode == "floor"
           and A.floor_h == N.floor_h then
             return true
@@ -3683,10 +3682,9 @@ function Room_cleanup_stairs_to_nowhere(R)
 
     each A in R.areas do
       if A.is_porch then
-        if not same_level_to_outdoor_area(A)
-        and not A.dead_end then
+        if not same_level_to_outdoor_area(A) then
           A.uses_porch_floor = true
-          A.floor_mat = A.room.porch_floor_mat
+          A.floor_mat = A.porch_floor_mat
         end
       end
     end
@@ -3696,7 +3694,7 @@ function Room_cleanup_stairs_to_nowhere(R)
       if A1.uses_porch_floor and not A1.porch_floor_infected then
         each A2 in R.areas do
           if A1.floor_h == A2.floor_h
-          and not A2.is_porch then
+          and A2.is_porch then
             A1.porch_floor_infected = true
             A2.floor_mat = A1.floor_mat
           end
