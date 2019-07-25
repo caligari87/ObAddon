@@ -40,6 +40,8 @@ UNGROUPED_WALL_TONE_DOWN_EXP = 3.5
 
 
 function Autodetail_get_level_svolume()
+  LEVEL.autodetail_group_walls_factor = 1
+
   if PARAM.autodetail == "off" then return end
 
   local total_walkable_area = 0
@@ -50,8 +52,6 @@ function Autodetail_get_level_svolume()
 
   LEVEL.total_svolume = total_walkable_area
 
-  LEVEL.autodetail_group_walls_factor = 1
-
   if LEVEL.total_svolume > LEVEL_SVOLUME_KICKIN then
     LEVEL.autodetail_group_walls_factor = (LEVEL.total_svolume / LEVEL_SVOLUME_KICKIN)
     ^ GROUPED_WALL_TONE_DOWN_EXP
@@ -60,6 +60,8 @@ end
 
 
 function Autodetail_plain_walls()
+  LEVEL.autodetail_plain_walls_factor = 1
+
   if PARAM.autodetail == "off" then return end
 
   local total_perimeter = 0

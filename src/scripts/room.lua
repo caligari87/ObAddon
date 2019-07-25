@@ -3522,7 +3522,7 @@ function Room_set_sky_heights()
       A.ceil_h = A.zone.sky_h
     end
     if (A.is_porch or A.is_porch_neighbor) and A.ceil_h >= A.zone.sky_h -16 then
-      A.ceil_h = A.ceil_h - 16
+      A.zone.sky_h = A.zone.sky_h + 16
     end
   end
 

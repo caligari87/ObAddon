@@ -4875,19 +4875,8 @@ function Cave_build_a_scenic_vista(area)
 
 
   local function make_no_vista()
-    --[[local FL = new_blob()
-
     -- for people who don't like nice views
-
-    FL.floor_h = room.zone.sky_h
-
-    FL.floor_mat = "_SKY"
-
-    temp_install_floor(FL)]]
-
     area.mode = "void"
-
-    -- area.floor_h = room.zone.sky_h
   end
 
 
