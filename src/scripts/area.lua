@@ -1997,7 +1997,7 @@ function Area_pick_facing_rooms()
 
   each A in scenics do
     if A.zone then
-      A.ceil_h = A.zone.sky_h
+      A.ceil_h = A.zone.sky_h + 16
       A.ceil_mat = "_SKY"
     end
 

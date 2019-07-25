@@ -2298,41 +2298,6 @@ stderrf("Cages in %s [%s pressure] --> any_prob=%d  per_prob=%d\n",
 end
 
 
-function Layout_sync_scenic_vista_heights()
-  each A in LEVEL.areas do
-    if A.mode == "scenic" then
-      local total_neighbor_height = 0
-
-      each N in A.neighbors do
-        if N.room then
-          if N.ceil_h then
-            if total_neighbor_height < N.ceil_h then
-              total_neighbor_height = N.ceil_h
-            end
-          end
-        end
-      end
-
-      if A.ceil_h then
-        A.ceil_h = total_neighbor_height
-      end
-
-      --[[total_neighbor_height = 0
-      each N in A.neighbors do
-        if N.border_type == A.border_type then
-          if N.ceil_h then
-            if total_neighbor_height < N.ceil_h then
-              total_neighbor_height = N.ceil_h
-            end
-          end
-        end
-      end]]
-
-    end
-  end
-end
-
-
 ------------------------------------------------------------------------
 
 
