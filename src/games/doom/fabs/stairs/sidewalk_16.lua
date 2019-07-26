@@ -2,7 +2,7 @@ PREFABS.Sidewalk_16_tech =
 {
   file   = "stairs/sidewalk_16.wad"
 
-  prob   = 20
+  prob   = 25
   map    = "MAP01"
   theme  = "tech"
 
