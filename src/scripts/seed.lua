@@ -1061,9 +1061,17 @@ function Edge_new(kind, S, dir, long)
   -- add it into each seed
   for i = 1, long do
     if not S then
-      print(table.tostr(R))
-      print(table.tostr(A))
+      gui.printf(kind .. "\n")
+      gui.printf(table.tostr(R .. "\n"))
+      gui.printf(table.tostr(A .. "\n"))
+      -- note: this mostly only happens when a
+      -- room-to-room connection (direct or via joiner)
+      -- does not perfectly meet
+      -- each other on the edge
+      -- check shape rules for misbehaved shapes
+      error("OH GOD I CAN'T COMPUTER PLS TO HELP")
     end
+
     assert(S)
 
     if S.edge[dir] then
