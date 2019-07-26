@@ -3751,14 +3751,9 @@ function Room_cleanup_stairs_to_nowhere(R)
         end
 
         -- unify heights
-        local h_diff = math.min(A.ceil_h, SA.ceil_h)
-        if A.is_porch then
-          A.ceil_h = h_diff
-        end
-
-        if SA.is_porch_neighbor then
-          SA.ceil_h = h_diff
-        end
+        local h_diff = math.max(A.ceil_h, SA.ceil_h)
+        A.ceil_h = h_diff
+        SA.ceil_h = h_diff
 
         fixup_neighbors(A)
       end

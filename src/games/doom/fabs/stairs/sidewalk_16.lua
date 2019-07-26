@@ -1,9 +1,10 @@
-PREFABS.Sidewalk_16 =
+PREFABS.Sidewalk_16_tech =
 {
   file   = "stairs/sidewalk_16.wad"
 
   prob   = 20
   map    = "MAP01"
+  theme  = "tech"
 
   where  = "seeds"
 
@@ -20,27 +21,17 @@ PREFABS.Sidewalk_16 =
   bound_z2 = 16
 
   delta_h = 16
-}
-
-PREFABS.Sidewalk_16_stepped_tech =
-{
-  template = "Sidewalk_16"
-  map = "MAP02"
-
-  theme = "tech"
-
-  prob = 30
 
   tex_METAL = "STEP4"
   flat_CEIL5_2 = "FLAT19"
 }
 
-PREFABS.Sidewalk_16_stepped =
+PREFABS.Sidewalk_16_gothic =
 {
   template = "Sidewalk_16"
-  map = "MAP02"
 
   theme = "!tech"
 
-  prob = 30
+  tex_METAL = "METAL"
+  flat_CEIL5_2 = "CEIL5_2"
 }
