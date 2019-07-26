@@ -28,7 +28,7 @@ PREFABS.Sidewalk_16_tech =
 
 PREFABS.Sidewalk_16_gothic =
 {
-  template = "Sidewalk_16"
+  template = "Sidewalk_16_tech"
 
   theme = "!tech"
 
