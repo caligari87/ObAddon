@@ -159,7 +159,7 @@ OB_MODULES["level_control"] =
       priority = 3
       tooltip = "Fine tune upper limit for Level Size Episodic, Progressive and Mixed options."
       choices = THEME_CONTROL.SIZE_CHOICES
-      default = "micro"
+      default = "trans"
     }
     level_lower_bound =
     {
@@ -168,7 +168,7 @@ OB_MODULES["level_control"] =
       priority = 2
       tooltip = "Fine tune lower limit for Level Size Episodic, Progressive and Mixed options."
       choices = THEME_CONTROL.SIZE_CHOICES
-      default = "extremest"
+      default = "micro"
       gap = 1
     }
 
