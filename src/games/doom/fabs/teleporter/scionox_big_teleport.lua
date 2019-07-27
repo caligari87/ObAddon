@@ -1,4 +1,4 @@
--- 2x2 GATE teleport, tech-only for now
+-- 2x2 GATE teleport
 
 PREFABS.Teleporter_scionox_big_teleport =
 {
@@ -21,4 +21,26 @@ PREFABS.Teleporter_scionox_big_teleport =
   tag_2 = "?in_tag"
 
   sector_8  = { [8]=50, [1]=10, [2]=10, [3]=10, [17]=10 }
+}
+PREFABS.Teleporter_scionox_big_teleport_2 =
+{
+  template = "Teleporter_scionox_big_teleport"
+  map    = "MAP02"
+  theme  = "!hell"
+  
+  tex_LITE5 = { LITE5=50, LITEBLU4=50 }
+}
+PREFABS.Teleporter_scionox_big_teleport_3 =
+{
+  template = "Teleporter_scionox_big_teleport"
+  map    = "MAP04"
+  theme  = "!tech"
+}
+-- uses 3D floor so zdoom
+PREFABS.Teleporter_scionox_big_teleport_4 =
+{
+  template = "Teleporter_scionox_big_teleport"
+  map    = "MAP03"
+  engine = "zdoom"
+  theme  = "hell"
 }
