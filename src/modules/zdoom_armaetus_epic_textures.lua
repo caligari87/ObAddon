@@ -366,11 +366,12 @@ function ARMAETUS_EPIC_TEXTURES.put_new_materials()
     GAME.THEMES.urban.skyboxes = ARMAETUS_URBAN_SKYBOXES
     GAME.THEMES.hell.skyboxes = ARMAETUS_HELL_SKYBOXES
 
-    -- inserts for hallways MSSP-TODO: support Doom1 as well
-    ARMAETUS_EPIC_TEXTURES.table_insert(ARMAETUS_NARROW_HALLWAYS,
-      GAME.THEMES.DEFAULTS.narrow_halls)
-    ARMAETUS_EPIC_TEXTURES.table_insert(ARMAETUS_WIDE_HALLWAYS,
-      GAME.THEMES.DEFAULTS.wide_halls)
+    -- inserts for hallways (should be updated and
+    -- expanded in the future to be more
+    -- generalized should anyone desire
+    -- to add more custom hallway types)
+    GAME.THEMES.tech.wide_halls = ARMAETUS_TECH_WIDE_HALLS
+    GAME.THEMES.urban.wide_halls = ARMAETUS_TECH_WIDE_HALLS
 
     -- hack for the street textures
     GAME.SINKS.floor_streets.trim_mat = "WARN1"
