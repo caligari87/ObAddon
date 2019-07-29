@@ -22,6 +22,8 @@
 -------------------------------------------------------------------
 
 --[[
+
+  _RAND_ENTITY_TECH = name of a computer or AI from the table below
 Some keywords for parsing later on:
 
   _SPACE = creates a linebreak
