@@ -110,6 +110,7 @@ ZDOOM_STORIES.LIST =
   the_avenger = 40
   the_avenger_from_hell = 40
   asylum = 10
+  benevolent_ai = 40
   knock_knock_joke = 2
   oblige_history = 5
 }
@@ -1090,6 +1091,93 @@ ZDOOM_STORIES.STORIES =
       Your blood rushes, as you listen to the sounds of in your
       surroundings, checking your gear as you do. Then, you rise to your
       feet to face the blood-red dawn.]]
+    }
+  }
+
+  -- Doom 2016 Vega storyline variations
+  benevolent_ai =
+  {
+    hooks = {
+      -- hijacked energy grid
+      [[A terminal near you suddenly lights up. "I am _RAND_ENTITY_TECH",
+      a synthetic voice booms. "I am the maintainer of the energy grid that
+      feeds this complex. It has come to my knowledge, that the energy grid
+      has been hijacked to power the demonic portals, used in this invasion.
+      I am ready to sacrifice myself to stop it. Head towards my core, and
+      I will instruct you how."
+      _SPACE
+      You set forth in the indicated direction.]],
+
+      -- weakening security systems
+      [[A display array on the opposite wall suddenly light up, and a
+      strange fractal pattern covers them. "I am _RAND_ENTITY_TECH", a
+      synthetic voice booms. "I am the keeper of the defense grid. The
+      defense grid has fallen to demonic corruption and my control weakens
+      with every minute. You must shut me down. Head towards the security
+      central, and I will instruct you on the procedure."
+      _SPACE
+      You set forth in the indicated direction.]],
+
+      -- you are the chosen one
+      [[The lights flicker and a synthetic voice booms out of the area's
+      loudspeakers. "I am _RAND_ENTITY_TECH" the voice says. "I have been
+      analyzing your performance. You have the capacity to overcome my
+      defensive systems and shut me down before the demonic virus corrupts me
+      and turns me into a weapon against you and mankind. I will guide you
+      to my core. Follow my instructions."
+      _SPACE
+      You frown and set forth in the indicated direction.]]
+    }
+
+    conclusions = {
+      -- meltdown closes portals
+      [[As you switch off the last cooling station, the central AI core
+      starts glowing bright red. "It is done", _RAND_ENTITY_TECH speaks. "Now,
+      the main switch." You reach for the switch and lower it.
+      _SPACE
+      "Thank... You..." _RAND_ENTITY_TECH speaks through the growing roar.
+      Then, an explosion shakes the chamber, and all becomes silent.
+      _RAND_ENTITY_TECH is gone, and with him, the demonic portals.
+      _SPACE
+      You swallow a lump in your throat and leave in silence.]],
+
+      -- meltdown teleports you away
+      [[As you smash the last coolong station to bits, the mainframe that
+      houses the AI starts to glow hot red. "It is done", _RAND_ENTITY_TECH
+      speaks. "Now, the primary switching board." You reach under the
+      mainframe base and tear out a circuit board, then crush it under your
+      heel.
+      _SPACE
+      "Thank... You..." _RAND_ENTITY_TECH speaks through the growing roar.
+      Then, the core implodes, and you are thrown across the chamber.
+      The world twists and distorts around you, and when you come to your
+      senses, you are lying on the ground in an unknown location.
+      _SPACE
+      You slowly get up. It's time to find out where "here" is.]],
+
+      -- meltdown opens new portal
+      [[As you shoot the last cooling station to pieces, the central AI
+      core starts glowing bright red. "It is done", _RAND_ENTITY_TECH speaks.
+      "Now, the override code." You reach to the console and punch in the
+      code. Moments later, the core implodes. The chamber shudders, and you
+      are thrown against the wall, watching in horror as a new portal opens
+      and demons begin pouring in!
+      _SPACE
+      _RAND_ENTITY_TECH was wrong. And you were wrong to trust it. You will
+      have to find another way to close the portals. You stand up and run.]],
+
+      -- more useful alive
+      [[You regard the AI core chamber and hesitate, your hand
+      hovering over the main switch. Suddenly, you come to a decision.
+      You walk across the chamber and turn every cooling station
+      back on. "I do not understand", _RAND_ENTITY_TECH speaks. You walk
+      towards the control station and use it to route all available resources
+      into _RAND_ENTITY_TECH, making it almost all-powerful. Your lips twist
+      into a grin, as you take pleasure in the knowledge that you will have
+      to do it the hard way, just like you prefer.
+      _SPACE
+      The risk is well worth it. With all its shortcomings, _RAND_ENTITY_TECH
+      is more useful to you alive.]],
     }
   }
 
