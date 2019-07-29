@@ -3340,47 +3340,6 @@ GROW_SQUEEZE_CURVE_NEW_AREA =
   }
 }
 
-GROW_SQUEEZE_STRAIGHT =
-{
-  prob = 10
-
-  group = "squeeze"
-
-  structure =
-  {
-    "...",".1."
-    "...",".1."
-    "x1x","x1x"
-  }
-}
-
-GROW_SQUEEZE_CURVE =
-{
-  prob = 10
-
-  group = "squeeze"
-
-  structure =
-  {
-    "...","..."
-    "...",".11"
-    "x1x","x1x"
-  }
-}
-
-GROW_SQUEEZE_JUNCTION =
-{
-  prob = 10
-
-  group = "squeeze"
-
-  structure =
-  {
-    "...","111"
-    "x1x","x1x"
-  }
-}
-
 GROW_SQUEEZE_STAIRCASE =
 {
   prob = 7
@@ -3388,10 +3347,10 @@ GROW_SQUEEZE_STAIRCASE =
 
   structure =
   {
-    "..x","AAx"
-    "..x","AAx"
-    "x.x","x^x"
-    "x1x","x1x"
+    "..","AA"
+    "..","AA"
+    "x.","x^"
+    "x1","x1"
   }
 }
 
@@ -3402,12 +3361,12 @@ GROW_SQUEEZE_EVEN_MORE_STAIRCASE =
 
   structure =
   {
-    "..x","AAx"
-    "..x","AAx"
-    "x.x","x^x"
-    "x.x","x^x"
-    "x.x","x^x"
-    "x1x","x1x"
+    "..","AA"
+    "..","AA"
+    "x.","x^"
+    "x.","x^"
+    "x.","x^"
+    "x1","x1"
   }
 }
 
@@ -3588,7 +3547,9 @@ GROW_CAGE_SIDEWAYS =
   {
     "11xxxx","11xxxx"
     "......","111111"
+    "......","111111"
     "......","CCC#11"
+    "......","111111"
     "......","111111"
   }
 }
@@ -3603,7 +3564,9 @@ GROW_CAGE_SIDEWAYS_STAIR =
   {
     "11xxxx","11xxxx"
     "......","111111"
+    "......","111111"
     "......","CCC#vv"
+    "......","AAAAAA"
     "......","AAAAAA"
   }
 }
