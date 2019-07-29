@@ -5300,7 +5300,7 @@ SMOOTHER_CATWALK_EDGES =
 
 GROW_36_DOUBLE_AREA =
 {
-  prob = 50
+  prob = 35
 
   structure =
   {
@@ -5317,7 +5317,7 @@ GROW_36_DOUBLE_AREA =
 
 GROW_36_SINGLE_AREA =
 {
-  prob = 50
+  prob = 35
 
   structure =
   {
@@ -5334,7 +5334,7 @@ GROW_36_SINGLE_AREA =
 
 GROW_36_TRIPLE_AREA =
 {
-  prob = 35
+  prob = 25
 
   structure =
   {
@@ -5348,6 +5348,54 @@ GROW_36_TRIPLE_AREA =
     "x...","x111"
     "..11","AA11"
     "..11","AA11"
+  }
+}
+
+GROW_36_DOUBLE_FORWARD_AREA =
+{
+  prob = 30
+
+  structure =
+  {
+    "..xxxx..","AAxxxxAA"
+    "........","AA1111AA"
+    "x......x","x111111x"
+    "x......x","x111111x"
+    "x......x","x111111x"
+    "xxx11xxx","xxx11xxx"
+  }
+}
+
+GROW_36_QUAD_FORWARD_AREA =
+{
+  prob = 25
+
+  structure =
+  {
+    "..xxxx..","AAxxxxAA"
+    "........","AA1111AA"
+    "x......x","x111111x"
+    "x......x","x111111x"
+    "x......x","x111111x"
+    "x......x","x111111x"
+    "........","AA1111AA"
+    "........","AA1111AA"
+    "xxx11xxx","xxx11xxx"
+  }
+}
+
+GROW_36_SINGLE_FORWARD_AREA =
+{
+  prob = 35
+
+  structure =
+  {
+    "x....x","xAAAAx"
+    "......","1AAAA1"
+    "......","111111"
+    "......","111111"
+    "......","111111"
+    "xx11xx","xx11xx"
   }
 }
 
