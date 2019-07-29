@@ -88,8 +88,8 @@ PREFABS.Joiner_gtd_universal_wavy_staircase =
   deep = 16
   over = 16
 
-  delta_h  = 48
-  nearby_h = 176
+  delta_h  = 32
+  nearby_h = 160
 
   x_fit = { 24,104 , 152,232 }
   y_fit = "frame"

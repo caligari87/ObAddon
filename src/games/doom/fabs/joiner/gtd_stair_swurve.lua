@@ -18,11 +18,11 @@ PREFABS.Joiner_stairs_swurve_tech =
   deep = 16
   over = 16
 
-  delta_h = 64
+  delta_h = 48
   nearby_h = 128
 
   x_fit = { 136,152 }
-  y_fit = "frame"
+  y_fit = { 12,20 , 268,276 }
 
   can_flip = true
 
