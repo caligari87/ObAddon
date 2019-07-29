@@ -1521,6 +1521,14 @@ ZDOOM_STORIES.MCGUFFINS =
   }
 }
 
+ZDOOM_STORIES.ENTITIES =
+{
+  tech =
+  {
+    CABAL=5,
+  }
+}
+
 ZDOOM_STORIES.QUIT_MESSAGES =
 {
   [[Let's be serious, are you really exiting already?]],
