@@ -567,6 +567,8 @@ DOOM_LINE_FLAGS =
   draw_always = 0x100
 
   pass_thru   = 0x200  -- Boom
+
+  tridee_midtex   = 0x400
 }
 
 

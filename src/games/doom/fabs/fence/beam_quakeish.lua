@@ -51,7 +51,6 @@ PREFABS.Beam_quakeish_fallback =
 {
   file   = "fence/beam.wad"
   map    = "MAP01"
-  theme = "!tech"
 
   group  = "beam_quakeish"
 
@@ -71,7 +70,6 @@ PREFABS.Beam_quakeish_diagonal_fallback =
 {
   file   = "fence/beam.wad"
   map    = "MAP02"
-  theme  = "!tech"
 
   group  = "beam_quakeish"
 
