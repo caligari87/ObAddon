@@ -263,7 +263,7 @@ ZDOOM_STORIES.STORIES =
 
       [[As the final creature falls, it harkens to you.
       "Foolish mortal. Attracted to the sound of despair.
-      Such easy trickey for a famed warrior such as you."
+      Such easy trickery for a famed warrior such as you."
       The demon's corpse fades into ashes.
       There is no sign of the battling marines anywhere
       but the general of hell still lies defeated.]],
@@ -291,7 +291,7 @@ ZDOOM_STORIES.STORIES =
 
       [[A strange overgrowth of bloody viscera seems to be
       overtaking this place. Hell's infestation is interacting
-      with reality to accomodate hellspawn over mortals.
+      with reality to accommodate hellspawn over mortals.
       Time to change that.]],
     }
 
@@ -303,7 +303,7 @@ ZDOOM_STORIES.STORIES =
       this place freed, the taint of hell's energies fades with
       the retreat of the darkness.]],
 
-      [[It was a trap! An entire batallion of hell's banners fall
+      [[It was a trap! An entire battalion of hell's banners fall
       before you. It turns out you were the target all along
       but with your dexterity and wit, you have outmaneuvered
       their forces and crushed them utterly.]],
@@ -779,7 +779,7 @@ ZDOOM_STORIES.STORIES =
     {
       [[Alarms blare out through the area. You find yourself standing
       among rows upon rows of corpses, human and demon alike. It seems
-      a huge rampage had occured here but its instigator is unclear. You
+      a huge rampage had occurred here but its instigator is unclear. You
       find a torn armor piece among the debris. The nameplate reads
       "John Stalvern". You wonder what happened and continue on.]],
     }
@@ -1003,7 +1003,6 @@ ZDOOM_STORIES.STORIES =
     }
   }
 
-  -- TAPWAVE-TODO: plz halp
   asylum = {
     hooks = {
       -- doctor's office
@@ -1026,7 +1025,7 @@ ZDOOM_STORIES.STORIES =
       your vision clears, you are standing over the corpse of a freshly slain
       demon.
       _SPACE
-      Was it real? You question your sanity for a moment, but a neraby
+      Was it real? You question your sanity for a moment, but a nearby
       growl, snaps you out of your daze. You check your supplies and return
       to the fray.]],
 
@@ -1082,7 +1081,7 @@ ZDOOM_STORIES.STORIES =
       a void and find yourself in the killing fields once again.]],
 
       -- all a dream
-      [[Your vision swims and your sense of self deforms. Your dody,
+      [[Your vision swims and your sense of self deforms. Your body,
       wrapped in a straightjacket is numb. You try to stand, leaning
       against the padded wall, but slip and fall down. The fall is
       unexpectedly long, taking many minutes before you finally hit the
@@ -1142,7 +1141,7 @@ ZDOOM_STORIES.STORIES =
       You swallow a lump in your throat and leave in silence.]],
 
       -- meltdown teleports you away
-      [[As you smash the last coolong station to bits, the mainframe that
+      [[As you smash the last cooling station to bits, the mainframe that
       houses the AI starts to glow hot red. "It is done", _RAND_ENTITY_TECH
       speaks. "Now, the primary switching board." You reach under the
       mainframe base and tear out a circuit board, then crush it under your
@@ -1197,7 +1196,7 @@ ZDOOM_STORIES.STORIES =
     }
 
     conclusions = {
-      [[V4 and V5 have proven to be unweildly and experimental
+      [[V4 and V5 have proven to be unwieldy and experimental
       designs in 2012 and 2013, prompting V6 which was combined
       the best parts of V3, V4 and V5 in 2015. 2016 soon comes
       and V7 arrives, boasting shape grammars and finally using
@@ -1268,7 +1267,7 @@ ZDOOM_STORIES.GENERIC_STORIES =
     [[Hell has taken a tight grip upon these lands, corrupting them
     in their wake!
     _SPACE
-    Ahead, their forces gather in strength almost inumerable in count.]]
+    Ahead, their forces gather in strength almost innumerable in count.]]
   }
   d2_MAP11_exit =
   {
@@ -1677,7 +1676,7 @@ ZDOOM_STORIES.QUIT_MESSAGES =
   [[Never gonna give you up, never gonna let you down, never gonna run and leave you without a fresh new megawad.]],
   [[At least when the demons slaughter anyone, it's regardless of gender, race, or creed.]],
   [[You can win Oblige, you just have to defeat a 64-bit permutation of maps and each variation per seed by changed setting to do so.]],
-  [[You want demons? We can give you more demons than there are stars in the observarble universe.]],
+  [[You want demons? We can give you more demons than there are stars in the observable universe.]],
   [[Don't worry about infinite hellspawn. Do what you love, and you'll never work a day in your life.]], -- I'm actually crediting this to HexaDoken
   [[A dimensional shambler is, indeed, waiting in your operating system. It was ObAddon all along.]],
   [[My map generator brings all the linedefs to the yard.]],
