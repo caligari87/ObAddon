@@ -1,4 +1,4 @@
-PREFABS.Cage_wall_brncage =
+PREFABS.Cage_wall_armaetus_bunker =
 {
   file   = "cage/armaetus_bunker.wad"
 
