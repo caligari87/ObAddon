@@ -27,7 +27,7 @@ PREFABS.Teleporter_scionox_big_teleport_2 =
   template = "Teleporter_scionox_big_teleport"
   map    = "MAP02"
   theme  = "!hell"
-  
+
   tex_LITE5 = { LITE5=50, LITEBLU4=50 }
 }
 PREFABS.Teleporter_scionox_big_teleport_3 =
