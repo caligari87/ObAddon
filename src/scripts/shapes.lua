@@ -3370,6 +3370,92 @@ GROW_SQUEEZE_EVEN_MORE_STAIRCASE =
   }
 }
 
+GROW_SQUEEZE_LIQUID_ONE_SIDE =
+{
+  prob = 6
+
+  structure =
+  {
+    "..","AA"
+    "..","AA"
+    "..","^~"
+    "..","^~"
+    "1x","1x"
+  }
+}
+
+GROW_SQUEEZE_LIQUID_BOTH_SIDES =
+{
+  prob = 6
+
+  structure =
+  {
+    "...","AAA"
+    "...","AAA"
+    "...","~^~"
+    "...","~^~"
+    "x1x","x1x"
+  }
+}
+
+GROW_SQUEEZE_CURVE_LIQUID_SIDE =
+{
+  prob = 5
+
+  structure =
+  {
+    "x...","x/AA"
+    "....","/AAA"
+    "....","A/~~"
+    "....","^~~~"
+    "1xxx","1xxx"
+  }
+
+  diagonals =
+  {
+    ".A"
+    ".A"
+    "A~"
+  }
+}
+
+GROW_SQUEEZE_DRAIN =
+{
+  prob = 8
+
+  structure =
+  {
+    "...","111"
+    "...","111"
+    "...","~1~"
+    "...","~1~"
+    "...","~1~"
+    "x1x","x1x"
+  }
+}
+
+GROW_SQUEEZE_DRAIN_CURVE =
+{
+  prob = 8
+
+  structure =
+  {
+    ".......","/~~~~11"
+    ".......","~/11111"
+    ".......","~1/~~11"
+    "....xxx","~1~/xxx"
+    "x1xxxxx","x1xxxxx"
+  }
+
+  diagonals =
+  {
+    ".~"
+    "~1"
+    "1~"
+    "~."
+  }
+}
+
 -- some more other cages
 
 GROW_CAGE_BETWEEN_PILLAR =
@@ -3442,27 +3528,6 @@ GROW_CAGE_SIMPLE_CORNER =
   diagonals =
   {
     ".C"
-  }
-
-  cage_mode = "fancy"
-}
-
-GROW_CAGE_SIMPLE_REVERSED =
-{
-  prob = 6
-
-  skip_prob = 70
-  aversion = 10
-
-  structure =
-  {
-    "....","11C%"
-    "111.","111C"
-  }
-
-  diagonals =
-  {
-    "C."
   }
 
   cage_mode = "fancy"
@@ -4956,14 +5021,9 @@ GROW_HALF_SKILLET =
   structure =
   {
     "x......","x111111"
-    "1......","11/AA%1"
+    "1......","1111111"
     "1......","1>AAAAA"
     "1......","1>AAAAA"
-  }
-
-  diagonals =
-  {
-    "1A","A1"
   }
 }
 
@@ -4974,14 +5034,9 @@ GROW_HALF_SKILLET_SPIRAL =
   structure =
   {
     "11......","11111111"
-    "11......","11/AA%11"
+    "11......","11111111"
     "xx......","xxAAAA<1"
     "xx......","xxAAAA<1"
-  }
-
-  diagonals =
-  {
-    "1A","A1"
   }
 }
 
@@ -5178,6 +5233,23 @@ DECORATE_CATWALK_SUPPORT_PILLAR_INNER_DOUBLE =
     "1122","1122"
     "1122","11.2"
     "1122","1122"
+  }
+}
+
+DECORATE_CATWALK_LUMP =
+{
+  prob = 5
+
+  structure =
+  {
+    "11111","11111"
+    "11111","1/22%"
+    "22222","22222"
+  }
+
+  diagonals =
+  {
+    "12","21"
   }
 }
 
@@ -6374,6 +6446,7 @@ GROW_LIQUID_POOL_PLACE =
 {
   prob = 35
 
+  group_pos = "entry"
   group = "liquid_pool"
 
   structure =
@@ -6395,8 +6468,8 @@ GROW_LIQUID_POOL_EXTEND_STRAIGHT =
   structure =
   {
     "1...","1111"
-    "1...","~~~1"
-    "1...","~~~1"
+    "~...","~~~~"
+    "~...","~~~~"
     "1...","1111"
   }
 }
@@ -6410,9 +6483,10 @@ GROW_LIQUID_POOL_SWERVE =
   structure =
   {
     "x....","x1~~1"
-    ".....","//~~1"
-    ".....","1~~//"
-    "1111x","1111x"
+    ".....","/1~~1"
+    ".....","1/~/1"
+    ".....","1~~1/"
+    "1~~1x","1~~1x"
   }
 
   diagonals =
@@ -6424,7 +6498,7 @@ GROW_LIQUID_POOL_SWERVE =
 
 GROW_LIQUID_POOL_END =
 {
-  prob = 20
+  prob = 15
 
   group = "liquid_pool"
 
@@ -6434,7 +6508,7 @@ GROW_LIQUID_POOL_END =
     "....","1111"
     "....","1~~1"
     "....","1~~1"
-    "1111","1111"
+    "1~~1","1~~1"
   }
 }
 
@@ -6447,10 +6521,9 @@ GROW_LIQUID_POOL_EXTEND_CURVED =
   structure =
   {
     "1...","1111"
-    "1...","~~%1"
-    "1...","~~~1"
+    "~...","~~%1"
+    "~...","~~~1"
     "1...","1~~1"
-    "....","1111"
   }
 
   diagonals =
@@ -6697,7 +6770,9 @@ GROW_SEWER_ENTRY =
   structure =
   {
     "x....","x1111"
-    "11...","11~~~"
+    "x....","x1111"
+    ".....","11~~~"
+    "11...","11111"
     "11...","11111"
   }
 }
@@ -6711,7 +6786,9 @@ GROW_SEWER_STRAIGHT =
   structure =
   {
     "1...","1111"
+    "1...","1111"
     "~...","~~~~"
+    "1...","1111"
     "1...","1111"
   }
 }
@@ -6725,7 +6802,9 @@ GROW_SEWER_STAIRS =
   structure =
   {
     "1...","1>AA"
+    "1...","1>AA"
     "~...","~~~~"
+    "1...","1>AA"
     "1...","1>AA"
   }
 }
@@ -6738,10 +6817,12 @@ GROW_SEWER_SWERVE =
 
   structure =
   {
-     "1...x","111%x"
-     "~....","~~%11"
-     "1....","11%~~"
-     "x....","x%111"
+    "1...x","111%x"
+    "1...x","1111x"
+    "~....","~~%11"
+    "1....","11%~~"
+    "1....","11111"
+    "x....","x%111"
   }
 
   diagonals =
@@ -6761,14 +6842,17 @@ GROW_SEWER_CURVED =
 
   structure =
   {
-    "1...","1111"
-    "~...","~~%1"
-    "1...","1%~1"
-    "x...","x1~1"
+    "1.....","11111%"
+    "1.....","111111"
+    "~.....","~~~%11"
+    "1.....","11%~11"
+    "1.....","111~11"
+    "x.....","x11~11"
   }
 
   diagonals =
   {
+    "1."
     "~1"
     "1~"
   }
@@ -6782,9 +6866,11 @@ GROW_SEWER_CROSSING =
 
   structure =
   {
-    "1..","1~1"
-    "~..","~~~"
-    "1..","1~1"
+    "1....","11~11"
+    "1....","11~11"
+    "~....","~~~~~"
+    "1....","11~11"
+    "1....","11~11"
   }
 }
 
@@ -6795,7 +6881,9 @@ GROW_SEWER_EXIT =
   structure =
   {
     "1...","11AA"
+    "1...","11AA"
     "~...","~~AA"
+    "1...","11AA"
     "1...","11AA"
   }
 }
@@ -6806,10 +6894,12 @@ GROW_SEWER_STAIRS_SIDE_EXIT_NEW_AREA =
 
   structure =
   {
-    "xx..xx","xxAAxx"
-    "1.....","1>AA11"
-    "~.....","~~~~~1"
-    "1.....","111111"
+    "xxx..xx","xxxAAxx"
+    "1......","1>>AA11"
+    "1......","1>>AA11"
+    "~......","~~~~~11"
+    "1......","1111111"
+    "1......","1111111"
   }
 }
 

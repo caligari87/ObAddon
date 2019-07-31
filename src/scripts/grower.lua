@@ -3238,7 +3238,8 @@ end
 
     -- start it up
     if (rule.group and PARAM.cur_shape_group == "")
-    and PARAM.cur_shape_group_apply_count == 0 then
+    and PARAM.cur_shape_group_apply_count == 0
+    and rand.odds(50) then
       PARAM.cur_shape_group = rule.group
 
       change_group_probs("highlight")
