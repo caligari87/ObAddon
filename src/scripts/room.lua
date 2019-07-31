@@ -1732,8 +1732,8 @@ function Room_border_up()
 
       -- porches --
 
-      if (A1.is_porch and not A2.is_porch)
-      or (not A1.is_porch and A2.is_porch)then
+      if (A1.is_porch and not A2.is_porch and not A1.is_dead_end)
+      or (not A1.is_porch and A2.is_porch and not A2.is_dead_end) then
 
         if A1.mode == "cage" or A2.mode == "cage" then
           if A1.cage_mode == "fancy" or A2.cage_mode == "fancy" then
