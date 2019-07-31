@@ -1471,6 +1471,8 @@ function Room_border_up()
       return false
     end
 
+    if A1.dead_end and A2.dead_end then return false end
+
     -- beams can be between floors and liquids
     if (A1.mode == "floor" or A1.mode == "liquid") and
         (A2.mode == "floor" or A2.mode == "liquid") then
@@ -1732,8 +1734,16 @@ function Room_border_up()
 
       -- porches --
 
-      if (A1.is_porch and not A2.is_porch and not A1.is_dead_end)
-      or (not A1.is_porch and A2.is_porch and not A2.is_dead_end) then
+      if (A1.is_porch and not A2.is_porch)
+      or (not A1.is_porch and A2.is_porch) then
+
+        if (A1.dead_end or A2.dead_end) then
+          if A1.room and A1.room:get_env() == "building"
+          or A2.room and A2.room:get_env() == "building" then
+            Junction_make_empty(junc)
+            return
+          end
+        end
 
         if A1.mode == "cage" or A2.mode == "cage" then
           if A1.cage_mode == "fancy" or A2.cage_mode == "fancy" then
@@ -3723,6 +3733,10 @@ function Room_cleanup_stairs_to_nowhere(R)
         A.floor_mat = SAS.floor_mat
         A.ceil_mat = SAS.ceil_mat
 
+        if A.room:get_env() == "building" then
+          A.is_porch = nil
+        end
+
         SA.mode = "floor"
 
         -- MSSP-FIXME: Find a better way - remove the chunk
@@ -3732,9 +3746,11 @@ function Room_cleanup_stairs_to_nowhere(R)
         SA.chunk.occupy = nil
         SA.chunk.ignore_stairs = true
 
-        if SA.is_porch_neighbor then
-          SA.is_porch_neighbor = false
+        if SA.room:get_env() == "outdoor" then
+          SA.is_porch_neighbor = nil
           SA.is_porch = true
+        elseif SA.room:get_env() == "building" then
+          SA.is_porch_neighbor = nil
         end
 
         SA.floor_h = SAS.floor_h

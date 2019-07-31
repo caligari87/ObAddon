@@ -2483,7 +2483,8 @@ function Layout_handle_corners()
 
       if not Corner_is_at_area_corner(corner) then return end
 
-      if junc.A1.dead_end or junc.A2.dead_end then return end
+      if junc.A1.dead_end or junc.A2.dead_end
+      and junc.A1.room:get_env() == "building" then return end
 
       -- don't put pillars adjacent to joiners and closets
       each S in corner.seeds do
