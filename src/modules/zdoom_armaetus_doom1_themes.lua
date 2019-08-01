@@ -2369,6 +2369,7 @@ ARMAETUS_DOOM1_TECH_WALL_GROUPS =
   gtd_wall_lit_box_blue = 9
   gtd_wall_lit_box_red = 9
   gtd_wall_lit_box_white = 9
+  gtd_wall_metal_warning = 15
 }
 
 ARMAETUS_DOOM1_DEIMOS_WALL_GROUPS =
@@ -2382,6 +2383,7 @@ ARMAETUS_DOOM1_DEIMOS_WALL_GROUPS =
   gtd_wall_lit_box_red = 9
   gtd_wall_lit_box_white = 9
   gtd_g99 = 15
+  gtd_wall_metal_warning = 15
 }
 
 ARMAETUS_DOOM1_HELL_WALL_GROUPS =
@@ -2402,6 +2404,7 @@ ARMAETUS_DOOM1_HELL_WALL_GROUPS =
   armaetus_wallbodies_bloody = 8
   armaetus_wallbodies_old = 8
   armaetus_wallbodies_bones = 8
+  gtd_wall_metal_warning = 20
 }
 
 ARMAETUS_DOOM1_FLESH_WALL_GROUPS =

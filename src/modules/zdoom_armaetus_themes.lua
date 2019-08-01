@@ -2861,6 +2861,7 @@ ARMAETUS_TECH_WALL_GROUPS =
   gtd_wall_lit_box_blue = 9
   gtd_wall_lit_box_red = 9
   gtd_wall_lit_box_white = 9
+  gtd_wall_metal_warning = 20
 }
 
 ARMAETUS_URBAN_WALL_GROUPS =
@@ -2878,6 +2879,7 @@ ARMAETUS_URBAN_WALL_GROUPS =
   gtd_wall_lit_box_blue = 3
   gtd_wall_lit_box_red = 3
   gtd_wall_lit_box_white = 3
+  gtd_wall_metal_warning = 8
 }
 
 ARMAETUS_HELL_WALL_GROUPS =
@@ -2899,6 +2901,7 @@ ARMAETUS_HELL_WALL_GROUPS =
   armaetus_wallbodies_bloody = 8
   armaetus_wallbodies_old = 8
   armaetus_wallbodies_bones = 8
+  gtd_wall_metal_warning = 20
 }
 
 
