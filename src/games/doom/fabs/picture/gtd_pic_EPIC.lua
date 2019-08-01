@@ -428,7 +428,7 @@ PREFABS.Pic_EPIC_box_metal_superwide =
 
   prob = 30 * 6
 
-  height = 128
+  height = 160
 
   theme = "tech"
 
