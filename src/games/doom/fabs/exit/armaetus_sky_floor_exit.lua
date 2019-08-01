@@ -1,6 +1,6 @@
-PREFABS.Exit_armaetus_simple_exit3 =
+PREFABS.Exit_armaetus_sky_floor_exit =
 {
-  file   = "exit/armaetus_simple_exit3.wad"
+  file   = "exit/armaetus_sky_floor_exit.wad"
   map    = "MAP01"
 
   prob   = 300

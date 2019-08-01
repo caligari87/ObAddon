@@ -1,6 +1,6 @@
-PREFABS.Exit_armaetus_simple_exit5_fans =
+PREFABS.Exit_armaetus_fans_exit =
 {
-  file   = "exit/armaetus_simple_exit5.wad"
+  file   = "exit/armaetus_fans_exit.wad"
   map    = "MAP01"
 
   prob   = 200
@@ -28,9 +28,9 @@ PREFABS.Exit_armaetus_simple_exit5_fans =
   }
 }
 
-PREFABS.Exit_armaetus_simple_exit5_fans_urban =
+PREFABS.Exit_armaetus_fans_exit_urban =
 {
-  template   = "Exit_armaetus_simple_exit5_fans"
+  template   = "Exit_armaetus_fans_exit"
 
   theme = "urban"
 
@@ -45,9 +45,9 @@ PREFABS.Exit_armaetus_simple_exit5_fans_urban =
   }
 }
 
-PREFABS.Exit_armaetus_simple_exit5_fans_hell =
+PREFABS.Exit_armaetus_fans_exit_hell =
 {
-  template   = "Exit_armaetus_simple_exit5_fans"
+  template   = "Exit_armaetus_fans_exit"
 
   theme = "hell"
 

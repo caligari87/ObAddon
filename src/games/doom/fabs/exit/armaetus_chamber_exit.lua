@@ -1,6 +1,6 @@
-PREFABS.Exit_armaetus_simple_exit4_tech =
+PREFABS.Exit_armaetus_chamber_exit_tech =
 {
-  file   = "exit/armaetus_simple_exit4.wad"
+  file   = "exit/armaetus_chamber_exit.wad"
   map    = "MAP01"
 
   prob   = 150
@@ -18,9 +18,9 @@ PREFABS.Exit_armaetus_simple_exit4_tech =
   y_fit  = "top"
 }
 
-PREFABS.Exit_armaetus_simple_exit4_gothic =
+PREFABS.Exit_armaetus_chamber_exit4_gothic =
 {
-  template = "Exit_armaetus_simple_exit4_tech"
+  template = "Exit_armaetus_chamber_exit_tech"
   map = "MAP02"
 
   theme = "hell"
