@@ -20,14 +20,14 @@ PREFABS.Cage_armaetus_scenic_outdoors1 =
   y_fit = "top"
 }
 
-PREFABS.Cage_scenic_outdoors2 =
+PREFABS.Cage_armaetus_scenic_outdoors2 =
 {
-  template = "Cage_scenic_outdoors1"
+  template = "Cage_armaetus_scenic_outdoors1"
   map = "MAP02"
 }
 
-PREFABS.Cage_scenic_outdoors3 =
+PREFABS.Cage_armaetus_scenic_outdoors3 =
 {
-  template = "Cage_scenic_outdoors1"
+  template = "Cage_armaetus_scenic_outdoors1"
   map = "MAP03"
 }
