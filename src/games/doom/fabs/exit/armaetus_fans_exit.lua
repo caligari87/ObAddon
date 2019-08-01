@@ -3,7 +3,7 @@ PREFABS.Exit_armaetus_fans_exit =
   file   = "exit/armaetus_fans_exit.wad"
   map    = "MAP01"
 
-  prob   = 200
+  prob   = 125
 
   theme = "tech"
 
