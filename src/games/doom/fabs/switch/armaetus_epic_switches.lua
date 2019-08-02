@@ -1,3 +1,6 @@
+-- MSSP-FIXME: seems to be throwing
+-- "line loop is not convex" errors
+
 PREFABS.Switch_armaetus_epic_1 =
 {
   file   = "switch/armaetus_epic_switches.wad"
@@ -6,14 +9,17 @@ PREFABS.Switch_armaetus_epic_1 =
 
   theme = "!tech"
 
-  prob   = 5
+  prob   = 15
 
   where  = "seeds"
+
+  height = 128
 
   seed_w = 1
   seed_h = 1
 
   deep   =  16
+  over   = -16
 
   uses_epic_textures = true
 
@@ -30,6 +36,8 @@ PREFABS.Switch_armaetus_epic_2 =
   template = "Switch_armaetus_epic_1"
 
   map = "MAP02"
+
+  height = 96
 }
 
 PREFABS.Switch_armaetus_epic_3 =
@@ -37,6 +45,8 @@ PREFABS.Switch_armaetus_epic_3 =
   template = "Switch_armaetus_epic_1"
 
   map = "MAP03"
+
+  height = 96
 }
 
 PREFABS.Switch_armaetus_epic_4 =
@@ -44,4 +54,6 @@ PREFABS.Switch_armaetus_epic_4 =
   template = "Switch_armaetus_epic_1"
 
   map = "MAP04"
+
+  height = 96
 }
