@@ -2,7 +2,7 @@ PREFABS.Cage_wall_armaetus_bunker =
 {
   file   = "cage/armaetus_bunker.wad"
 
-  prob  = 250
+  prob  = 300
 
   where  = "seeds"
   shape  = "U"
@@ -12,8 +12,9 @@ PREFABS.Cage_wall_armaetus_bunker =
   seed_w = 2
   seed_h = 1
 
+  uses_epic_textures = true
+
   deep   =  16
-  over   = -16
 
   x_fit = { 112,144 }
   y_fit = "top"
