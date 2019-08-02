@@ -1,6 +1,3 @@
--- MSSP-FIXME: seems to be throwing
--- "line loop is not convex" errors
-
 PREFABS.Switch_armaetus_epic_1 =
 {
   file   = "switch/armaetus_epic_switches.wad"
