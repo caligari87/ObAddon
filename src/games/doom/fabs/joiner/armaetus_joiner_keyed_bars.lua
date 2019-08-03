@@ -32,7 +32,7 @@ PREFABS.Locked_armaetus_bars_blue_tech =
   key      = "k_blue"
 
   tex_DOORRED = "DOORBLU"
-  line_135     = 134
+  line_135     = 133
 }
 
 PREFABS.Locked_armaetus_bars_yel_tech =
@@ -42,7 +42,7 @@ PREFABS.Locked_armaetus_bars_yel_tech =
   key      = "k_yellow"
 
   tex_DOORRED = "DOORYEL"
-  line_135     = 136
+  line_135     = 137
 }
 
 -- hell version
@@ -82,7 +82,7 @@ PREFABS.Locked_armaetus_bars_blue_hell =
   tex_DOORRED = "DOORBLU2"
   tex_DOORSTOP = "METAL"
 
-  line_135     = 134
+  line_135     = 133
 }
 
 PREFABS.Locked_armaetus_bars_yel_hell =
@@ -94,5 +94,5 @@ PREFABS.Locked_armaetus_bars_yel_hell =
   tex_DOORRED = "DOORYEL2"
   tex_DOORSTOP = "METAL"
 
-  line_135     = 136
+  line_135     = 137
 }
