@@ -19,7 +19,6 @@ PREFABS.Hallway_ducts_term =
   seed_h = 1
 
   deep   = 16
-
 }
 
 PREFABS.Hallway_ducts_term2 =

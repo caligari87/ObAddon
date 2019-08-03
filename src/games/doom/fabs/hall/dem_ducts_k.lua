@@ -19,7 +19,6 @@ PREFABS.Hallway_ducts_locked_red1 =
   seed_h = 1
 
   deep   = 16
-
 }
 
 
@@ -61,7 +60,6 @@ PREFABS.Hallway_ducts_locked_red2 =
   seed_h = 1
 
   deep   = 16
-
 }
 
 
@@ -103,7 +101,6 @@ PREFABS.Hallway_ducts_locked_red3 =
   seed_h = 1
 
   deep   = 16
-
 }
 
 
@@ -145,7 +142,6 @@ PREFABS.Hallway_ducts_locked_red4 =
   seed_h = 1
 
   deep   = 16
-
 }
 
 
@@ -200,19 +196,16 @@ PREFABS.Hallway_ducts_barred2 =
 {
   template   = "Hallway_ducts_barred1"
   map    = "MAP02"
-
 }
 
 PREFABS.Hallway_ducts_barred3 =
 {
   template   = "Hallway_ducts_barred1"
   map    = "MAP03"
-
 }
 
 PREFABS.Hallway_ducts_barred4 =
 {
   template   = "Hallway_ducts_barred1"
   map    = "MAP04"
-
 }
