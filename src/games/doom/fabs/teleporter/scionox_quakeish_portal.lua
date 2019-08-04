@@ -71,7 +71,7 @@ PREFABS.Teleporter_scionox_quakeish_portal_6 =
   tex_WARNSTEP = "CRATINY"
   flat_TEK3 = "GRATE8"
   flat_SHINY01 = "GRATE8"
-  flat_WARN2 = "CRATOP1"
+  flat_WARN1 = "CRATOP1"
 }
 
 PREFABS.Teleporter_scionox_quakeish_portal_7 =
@@ -87,7 +87,7 @@ PREFABS.Teleporter_scionox_quakeish_portal_7 =
   tex_WARNSTEP = "REDMARB1"
   flat_TEK3 = "FLOOR1_6"
   flat_SHINY01 = "FLOOR1_6"
-  flat_WARN2 = "RMARB3"
+  flat_WARN1 = "RMARB3"
 
   thing_86 = "candelabra"
 }
@@ -104,7 +104,7 @@ PREFABS.Teleporter_scionox_quakeish_portal_8 =
   tex_WARNSTEP = "REDMARB1"
   flat_TEK3 = "FIRELAF1"
   flat_SHINY01 = "FLOOR1_6"
-  flat_WARN2 = "RMARB3"
+  flat_WARN1 = "RMARB3"
 
   thing_86 = "evil_eye"
 }
