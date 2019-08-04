@@ -1674,7 +1674,7 @@ ZDOOM_STORIES.ENTITIES =
     ["SPHINX-88"]=5,
     NEBULA=5,
     ["ZENITH-1X"]=5,
-    ["FATHER-79"] -- Antonym of ship AI in movie Alien in 1979, which was named "Mother". Homage!
+    ["FATHER-79"]=5, -- Antonym of ship AI in movie Alien in 1979, which was named "Mother". Homage!
     HEXUS=5,
   }
 }
