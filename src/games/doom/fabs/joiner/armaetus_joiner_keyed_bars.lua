@@ -17,7 +17,7 @@ PREFABS.Locked_armaetus_bars_red_tech =
 
   prob   = 150
 
-  y_fit = { 40,64 , 96,120 }
+  y_fit = { 36,44 , 116,124 }
   x_fit = "frame"
 
   tex_METAL = "SHAWN2"
@@ -66,7 +66,7 @@ PREFABS.Locked_armaetus_bars_red_hell =
 
   prob   = 150
 
-  y_fit = { 40,64 , 96,120 }
+  y_fit = { 36,44 , 116,124 }
   x_fit = "frame"
 
   tex_DOORRED = "DOORRED2"
