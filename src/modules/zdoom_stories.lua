@@ -1676,6 +1676,18 @@ ZDOOM_STORIES.ENTITIES =
     ["ZENITH-1X"]=5,
     ["FATHER-79"]=5, -- Antonym of ship AI in movie Alien in 1979, which was named "Mother". Homage!
     HEXUS=5,
+    VEGA=5, -- Doom 2016
+    ICARUS=5, -- Deus Ex
+    DAEDALUS=5, -- Deus Ex
+    MORPHEUS=5, -- Deus Ex
+    HELIOS=5, -- Deus Ex
+    [["HAL-9000"]]=5, -- 2001: A Space Oddyssey
+    FROST=5, -- For a Breath I Tarry
+    SOLCOM=5, -- For a Breath I Tarry
+    DIVCOM=5, -- For a Breath I Tarry
+    CEREBRO=5, -- X-Men
+    COLOSSUS=5,
+    ZERO=5,
   }
 }
 
