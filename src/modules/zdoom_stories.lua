@@ -1654,6 +1654,28 @@ ZDOOM_STORIES.ENTITIES =
     GEO=5,
     ["FALCON-1"]=5,
     AEGIS=5,
+    LYNX=5,
+    ACHERON=5,
+    ENOS=5,
+    SIGIL=5,
+    ["EAGLE-7"]=5,
+    ["SPARROW-2"]=5,
+    ONYX=5,
+    NIMBUS=5,
+    ASPECT=5,
+    TERRA=5,
+    FLUX=5,
+    VALOR=5,
+    ["VIRTUE-10"]=5,
+    ["ODYSSEY-616"]=5,
+    VERTEX=5,
+    PROSPECT=5,
+    ARIES=5,
+    ["SPHINX-88"]=5,
+    NEBULA=5,
+    ["ZENITH-1X"]=5,
+    ["FATHER-79"] -- Antonym of ship AI in movie Alien in 1979, which was named "Mother". Homage!
+    HEXUS=5,
   }
 }
 
