@@ -17,7 +17,7 @@ PREFABS.Joiner_armaetus_stairs_alternating_lights =
   over   = 16
 
   x_fit = "frame"
-  y_fit = { 20,268 }
+  y_fit = { 20,28 , 260,268 }
 
   delta_h  = 56
   nearby_h = 128
