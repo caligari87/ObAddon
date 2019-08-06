@@ -2,7 +2,7 @@ PREFABS.Joiner_armaetus_long_joiner =
 {
   file   = "joiner/armaetus_joiner_stairs1.wad"
 
-  prob   = 40
+  prob   = 500
   style  = "steepness"
 
   env      = "!cave"
