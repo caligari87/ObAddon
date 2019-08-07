@@ -2928,6 +2928,7 @@ ARMAETUS_TECH_SKYBOXES =
   Skybox_generic_EPIC = 50
   Skybox_craneo_fishing_village_EPIC = 25
   Skybox_garrett_winterfall_EPIC = 12
+  Skybox_craneo_space_shuttle_EPIC = 50
 }
 
 ARMAETUS_URBAN_SKYBOXES =
@@ -2937,6 +2938,7 @@ ARMAETUS_URBAN_SKYBOXES =
   Skybox_craneo_fishing_village_EPIC = 50
   Skybox_garrett_winterfall_EPIC = 25
   Skybox_craneo_egypt_EPIC = 35
+  Skybox_craneo_space_shuttle_EPIC = 15
 }
 
 ARMAETUS_HELL_SKYBOXES =
