@@ -22,6 +22,7 @@ PREFABS.Start_scionox_quakeish_portal_start =
   x_fit  = "frame"
   y_fit  = "top"
 }
+
 PREFABS.Start_scionox_quakeish_portal_start_2 =
 {
   template = "Start_scionox_quakeish_portal_start"
@@ -37,17 +38,21 @@ PREFABS.Start_scionox_quakeish_portal_start_2 =
 	skull_rock = 50
   }
 }
+
 PREFABS.Start_scionox_quakeish_portal_start_3 =
 {
   template = "Start_scionox_quakeish_portal_start"
   map    = "MAP02"
-  tex_BIGDOORJ = { BIGDOORJ=50, BIGDOOR2=50, BIGDOOR5=50, BIGDOOR7=50, BIGDOOR8=50, BIGDOORM=50, BIGDOORD=50 }
+  tex_BIGDOORJ = { BIGDOORJ=50, BIGDOOR2=50, BIGDOOR5=50,
+  BIGDOOR7=50, BIGDOOR8=50, BIGDOORM=50, BIGDOORD=50 }
 }
+
 PREFABS.Start_scionox_quakeish_portal_start_4 =
 {
   template = "Start_scionox_quakeish_portal_start"
   map    = "MAP02"
-  tex_BIGDOORJ = { BIGDOORI=50, BIGDOOR5=50, BIGDOOR7=50, BIGDOOR8=50, BIGDOOR9=50, BIGDOORE=50, BIGDOORN=50 }
+  tex_BIGDOORJ = { BIGDOORI=50, BIGDOOR5=50, BIGDOOR7=50,
+  BIGDOOR8=50, BIGDOOR9=50, BIGDOORE=50, BIGDOORN=50 }
   theme = "hell"
   thing_85 =
   {

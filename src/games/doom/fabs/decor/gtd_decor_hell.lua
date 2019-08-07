@@ -44,7 +44,7 @@ PREFABS.Decor_blood_drip_pool =
     hang_twitching = 50
   }
 
-  z_fit  = { 96+8,96+16 }
+  z_fit  = "top"
 }
 
 PREFABS.Decor_cage_n_corpses =
