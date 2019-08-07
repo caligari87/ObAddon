@@ -28,26 +28,39 @@ ARMAETUS_DOOM1_THEMES =
 
     walls =
     {
-      GRAY1 = 50
-      GRAY5 = 50
-      ICKWALL1 = 30
-      ICKWALL3 = 30
+      GRAY5 = 1
     }
 
     floors =
     {
-      FLAT1 = 30
-      FLOOR0_3 = 20
-      FLAT20 = 15
-      FLAT3 = 10
+      FLAT1 = 1
     }
 
     ceilings =
     {
-      FLAT1 = 30
-      FLAT19 = 20
-      FLAT23 = 20
-      FLAT5_4 = 15
+      FLAT1 = 1
+    }
+  }
+
+  any_hellcata_Hallway =
+  {
+    env   = "hallway"
+    group = "hellcata"
+    prob  = 1
+
+    walls =
+    {
+      GRAY5 = 1
+    }
+
+    floors =
+    {
+      FLAT1 = 1
+    }
+
+    ceilings =
+    {
+      FLAT1 = 1
     }
   }
 

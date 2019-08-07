@@ -372,6 +372,7 @@ function ARMAETUS_EPIC_TEXTURES.put_new_materials()
     -- to add more custom hallway types)
     GAME.THEMES.tech.wide_halls = ARMAETUS_TECH_WIDE_HALLS
     GAME.THEMES.urban.wide_halls = ARMAETUS_TECH_WIDE_HALLS
+    GAME.THEMES.hell.wide_halls = ARMAETUS_HELL_WIDE_HALLS
 
     -- hack for the street textures
     GAME.SINKS.floor_streets.trim_mat = "WARN1"
