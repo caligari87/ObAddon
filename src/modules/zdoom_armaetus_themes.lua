@@ -3237,6 +3237,5 @@ ARMAETUS_HELL_WIDE_HALLS =
 {
   deuce = 50
   metro = 50
-  ducts = 50
   hellcata = 50 -- MSSP-TODO: Get liquid style pass to work on this prob
 }
