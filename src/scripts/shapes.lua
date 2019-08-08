@@ -4267,6 +4267,68 @@ GROW_LIQUID_SCANAL_T_JUNCTION =
   }
 }
 
+-- [UNGROUPED CANALS]
+
+GROW_CANAL_DOUBLE_UNG =
+{
+  prob = 25
+
+  structure =
+  {
+    "11..","1111"
+    "11..","1111"
+    "....","~~~~"
+    "....","~~~~"
+  }
+}
+
+GROW_CANAL_DOUBLE_CORNER_UNG =
+{
+  prob = 15
+
+  structure =
+  {
+    "11....","1111~~"
+    "11....","1111~~"
+    "......","~~~~~~"
+    "......","~~~~~/"
+  }
+
+  diagonals =
+  {
+    "~."
+  }
+}
+
+GROW_CANAL_SINGLE_UNG =
+{
+  prob = 25
+
+  structure =
+  {
+    "11..","1111"
+    "11..","1111"
+    "....","~~~~"
+  }
+}
+
+GROW_CANAL_SINGLE_CORNER_UNG =
+{
+  prob = 25
+
+  structure =
+  {
+    "11...","1111~"
+    "11...","1111~"
+    ".....","~~~~/"
+  }
+
+  diagonals =
+  {
+    "~."
+  }
+}
+
 -- [NARROW CANALS : NCANALS]
 
 GROW_NARROW_CANAL_ENTRY =
