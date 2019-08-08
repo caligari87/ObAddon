@@ -17,7 +17,7 @@ PREFABS.Beam_quakeish =
   deep   = 24
   over   = 24
 
-  z_fit = {56,72}
+  z_fit = {32,48}
 
   bound_z1 = 0
   bound_z2 = 96
@@ -39,7 +39,7 @@ PREFABS.Beam_quakeish_diagonal =
 
   where  = "diagonal"
 
-  z_fit = {56,72}
+  z_fit = {32,48}
 
   bound_z1 = 0
   bound_z2 = 96
