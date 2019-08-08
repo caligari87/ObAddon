@@ -2088,6 +2088,8 @@ stderrf("Cages in %s [%s pressure] --> any_prob=%d  per_prob=%d\n",
       decor_prob = 0
     end
 
+    decor_prob = decor_prob / (LEVEL.autodetail_group_walls_factor / 2)
+
     each chunk in R.floor_chunks do
       if chunk.content == nil and not chunk.is_bossy and rand.odds(decor_prob) then
         try_decoration_in_chunk(chunk)
