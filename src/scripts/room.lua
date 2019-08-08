@@ -1732,6 +1732,22 @@ function Room_border_up()
         end
       end
 
+      -- porch neighbors --
+
+      if A1.is_porch_neighbor or A2.is_porch_neighbor then
+        if (A1.mode == "floor" and A2.mode == "liquid")
+        or (A1.mode == "liquid" and A2.mode == "floor")
+        and A1.room.is_outdoor then
+          if A1.is_porch or A2.is_porch then
+            Junction_make_empty(junc)
+            return
+          elseif not A1.is_porch or not A2.is_porch then
+            Junction_make_beams(junc)
+            return
+          end
+        end
+      end
+
       -- porches --
 
       if (A1.is_porch and not A2.is_porch)
