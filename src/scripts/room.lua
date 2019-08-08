@@ -2780,6 +2780,7 @@ function Room_floor_ceil_heights()
     each A in R.areas do
       if A.mode == "liquid" then
         local N = A:lowest_neighbor()
+        local N2 = A:highest_neighbor()
 
         if not N then
 --!!!! FIXME : temp stuff for park-border experiment....
@@ -2790,8 +2791,8 @@ function Room_floor_ceil_heights()
         end
 
         A.floor_h  = N.floor_h - (THEME.pool_depth or 16)
-        A.ceil_h   = N.ceil_h
-        A.ceil_mat = N.ceil_mat
+        A.ceil_h   = N2.ceil_h
+        A.ceil_mat = N2.ceil_mat
       end
     end
   end
