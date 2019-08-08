@@ -36,7 +36,7 @@ LEVEL_PERIMETER_COUNT_KICKIN = 1200
 
 -- added exponent for ungrouped walls
 -- higher numbers mean plain walls are more likely
-UNGROUPED_WALL_TONE_DOWN_EXP = 3.5
+UNGROUPED_WALL_TONE_DOWN_EXP = 3
 
 
 function Autodetail_get_level_svolume()

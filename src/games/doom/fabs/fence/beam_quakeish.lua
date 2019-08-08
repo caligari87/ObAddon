@@ -20,7 +20,7 @@ PREFABS.Beam_quakeish =
   z_fit = {56,72}
 
   bound_z1 = 0
-  bound_z2 = 128
+  bound_z2 = 96
 }
 
 PREFABS.Beam_quakeish_diagonal =
@@ -42,7 +42,7 @@ PREFABS.Beam_quakeish_diagonal =
   z_fit = {56,72}
 
   bound_z1 = 0
-  bound_z2 = 128
+  bound_z2 = 96
 }
 
 -- fallbacks for non ZDoom-slope supporting engines

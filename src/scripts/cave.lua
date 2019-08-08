@@ -4395,6 +4395,8 @@ function Cave_prepare_scenic_vista(area)
   vista_type = rand.pick(vista_list)
 
   local nice_view_prob = style_sel("scenics", 0, 33, 67, 100)
+  nice_view_prob = nice_view_prob / (LEVEL.autodetail_group_walls_factor / 2)
+
   if rand.odds(math.abs(nice_view_prob-100)) then
     vista_type = "no_vista"
   end
