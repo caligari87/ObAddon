@@ -189,15 +189,15 @@ function Level_determine_map_size(LEV)
     local MIXED_PROBS =
     {
       micro=6,
-      mini=7,
+      mini=15,
       tiny=50,
       small=110,
       average=165,
       large=80,
       huge=60,
-      colossal=8,
+      colossal=15,
       gargan=5,
-      trans=5
+      trans=3
     }
 
     -- Level Control fine tune for Mix It Up
