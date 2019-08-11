@@ -872,8 +872,13 @@ stderrf("dA = (%1.1f %1.1f)  dB = (%1.1f %1.1f)\n", adx, ady, bdx, bdy)
     -- MSSP: allow fitted_z use for doors and windows! Yaay!
     if def.z_fit then
       local min_ceil = math.min(E.area.ceil_h, E.peer.area.ceil_h)
-      local max_floor = math.max(E.area.floor_h, E.peer.area.floor_h)
-      Trans.set_fitted_z(T, max_floor, min_ceil)
+      if E.kind == "window" then
+        local max_floor = math.max(E.area.floor_h, E.peer.area.floor_h)
+        Trans.set_fitted_z(T, max_floor, min_ceil)
+      elseif E.kind == "doorway" then
+        local min_floor = math.min(E.area.floor_h, E.peer.area.floor_h)
+        Trans.set_fitted_z(T, min_floor, min_ceil)
+      end
     end
 
     -- choose lighting to be the minimum of each side
