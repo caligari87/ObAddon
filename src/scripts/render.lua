@@ -1031,7 +1031,7 @@ function Render_corner(cx, cy)
         floor = mat
       }
 
-      Fabricate(corner.areas[1].room, PREFABS[corner.areas[1].room.post_type], T, {skins})
+      Fabricate(corner.areas[1].room, PREFABS[corner.post_type], T, {skins})
     end
   end
 

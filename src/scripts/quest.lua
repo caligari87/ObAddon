@@ -2898,6 +2898,8 @@ function Quest_room_themes()
       Z.fence_mat = rand.key_by_probs(THEME.fences)
       Z.cage_mat  = rand.key_by_probs(THEME.cage_mats)
       Z.steps_mat = THEME.steps_mat
+
+      Z.post_type = rand.key_by_probs(THEME.fence_posts)
     end
   end
 

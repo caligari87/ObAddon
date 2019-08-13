@@ -2231,9 +2231,6 @@ stderrf("Cages in %s [%s pressure] --> any_prob=%d  per_prob=%d\n",
       gui.printf("WARNING!!! No fence_posts table for theme: " .. LEVEL.theme_name .. "\n")
       return
     end
-
-    -- oh man i am not good with computer plz to help!!!!!!!!
-    R.post_type = rand.key_by_probs(THEME.fence_posts)
   end
 
 
@@ -2385,9 +2382,33 @@ function Layout_handle_corners()
       if junc.A2 == "map_edge" then return end
       if not junc.E1 then continue end
 
-      -- original fenceposts on railings code
-      -- (slightly cleaned up by MSSP) from Andrew
-      if junc.E1.kind == "railing" then
+      -- code for fancy fenceposts
+      if (junc.E1.kind == "fence" and junc.E1.area.is_outdoor) then
+        if Corner_touches_wall(corner) then return end
+
+        if corner.posted then return end
+
+        local tallest_h = -9001
+        each xjunc in corner.junctions do
+          if xjunc.E1 then
+            if xjunc.E1.fence_top_z then
+              if xjunc.E1.fence_top_z > tallest_h then
+                tallest_h = xjunc.E1.fence_top_z
+              end
+            end
+          end
+        end
+
+        if Corner_is_at_area_corner(corner) then
+          corner.post_mat = corner.areas[1].zone.fence_mat
+          corner.kind = "post"
+          corner.post_type = assert(corner.areas[1].zone.post_type)
+          corner.post_top_h = assert(tallest_h)
+        end
+
+        -- original fenceposts on railings code
+        -- (slightly cleaned up by MSSP) from Andrew
+      elseif junc.E1.kind == "railing" then
 
         -- cannot place posts next to a wall
         if Corner_touches_wall(corner) then return end
@@ -2441,31 +2462,6 @@ function Layout_handle_corners()
         corner.kind = "post"
         corner.post_top_h = post_top_z
       end
-
-      if (junc.E1.kind == "fence" and junc.E1.area.is_outdoor) then
-        if Corner_touches_wall(corner) then return end
-
-        if corner.posted then return end
-
-        local tallest_h = -9001
-        each xjunc in corner.junctions do
-          if xjunc.E1 then
-            if xjunc.E1.fence_top_z then
-              if xjunc.E1.fence_top_z > tallest_h then
-                tallest_h = xjunc.E1.fence_top_z
-              end
-            end
-          end
-        end
-
-        if Corner_is_at_area_corner(corner) then
-          corner.post_mat = corner.areas[1].zone.fence_mat
-          corner.kind = "post"
-          corner.post_type = corner.areas[1].room.post_type
-          corner.post_top_h = assert(tallest_h)
-        end
-      end
-
     end
   end
 
@@ -2532,9 +2528,6 @@ function Layout_handle_corners()
   local function check_corner(cx, cy)
     local corner = Corner_lookup(cx, cy)
 
-    -- MSSP-TODO: Maybe have a single function
-    -- to choose between fenceposts and pillars
-    -- to reduce amount of loops?
     check_need_fencepost(corner)
     check_need_pillar(corner)
   end

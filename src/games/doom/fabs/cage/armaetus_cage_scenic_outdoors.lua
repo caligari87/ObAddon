@@ -3,7 +3,7 @@ PREFABS.Cage_armaetus_scenic_outdoors1 =
   file   = "cage/armaetus_cage_scenic_outdoors.wad"
   map = "MAP01"
 
-  prob  = 50
+  prob  = 100
 
   liquid = true
 

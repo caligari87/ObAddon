@@ -38,7 +38,7 @@ PREFABS.Item_gtd_key_oh_he_ded =
   template = "Item_gtd_key_pedestal_tech"
   map = "MAP04"
 
-  prob = 200
+  prob = 160
 
   theme = "any"
 
