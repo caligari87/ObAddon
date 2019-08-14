@@ -148,7 +148,16 @@ function ARMAETUS_EPIC_TEXTURES.decide_environment_themes()
 end
 
 function ARMAETUS_EPIC_TEXTURES.generate_environment_themes()
+  --------------------------------------
+  -- Style Update for Custom Elements --
+  --------------------------------------
 
+  -- covers hallways only for now
+  -- MSSP-TODO: revise this code to be more generic for future expansion
+  if LEVEL.theme_name == "hell" then
+    THEME.wide_halls.hellcata = 50 * style_sel("liquids", 0.3, 0.7, 1.2, 1.5)
+                                  * style_sel("traps", 0.3, 0.7, 1.2, 1.5)
+  end
 
   -- initialize default tables
   if not PARAM.default_environment_themes_init then

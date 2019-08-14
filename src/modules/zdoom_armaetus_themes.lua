@@ -3237,5 +3237,7 @@ ARMAETUS_HELL_WIDE_HALLS =
 {
   deuce = 50
   metro = 50
-  hellcata = 50 -- MSSP-TODO: Get liquid style pass to work on this prob
+  -- hellcata = 50 -- because this is dependent on styles
+                   -- insertion process is a bit more complicated
+                   -- and initial prob is instead done via style prob bias -MSSP
 }
