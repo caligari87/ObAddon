@@ -34,7 +34,7 @@ HARDER_ENEMY.MONSTERS =
     replaces = "shooter"
     replace_prob = 25
     give = { {ammo="bullet",count=5} }
-    weap_prefs = { shotty=1.2, chain=1.3 }
+    weap_prefs = { shotty=1.2, chain=1.5 }
     density = 1.5
     room_size = "any" --small
     disloyal = true
@@ -54,7 +54,7 @@ HARDER_ENEMY.MONSTERS =
     attack = "hitscan"
     density = 1.0
     give = { {weapon="shotty"}, {ammo="shell",count=4} }
-    weap_prefs = { shotty=1.2, chain=1.3 }
+    weap_prefs = { shotty=1.2, chain=1.5 }
     weap_needed = { shotty=true }
     species = "zombie"
     replaces = "zombie"
@@ -78,7 +78,7 @@ HARDER_ENEMY.MONSTERS =
     density = 1.0
     replaces = "demon"
     replace_prob = 30
-    weap_prefs = { shotty=3.0, chain=2.0, super=1.5 }
+    weap_prefs = { shotty=1.5, chain=1.25, super=1.2 }
     room_size = "any" --small
     trap_factor = 0.5 --0.3
     infight_damage = 4.0
@@ -96,7 +96,7 @@ HARDER_ENEMY.MONSTERS =
     attack = "melee"
     density = 0.5
     float = true
-    weap_prefs = { super=2.0, shotty=1.5, chain=1.3 }
+    weap_prefs = { super=1.5, chain=1.3, launch=0.3 }
     room_size = "any" --small
     disloyal = true
     trap_factor = 0.35 --0.2
@@ -116,7 +116,7 @@ HARDER_ENEMY.MONSTERS =
     attack = "melee"
     density = 0.85
     weap_min_damage = 40
-    weap_prefs = { super=3.0, shotty=1.5, chain=1.4, plasma=1.1 }
+    weap_prefs = { super=1.75, shotty=1.35, chain=1.3, plasma=1.1, launch=0.3 }
     room_size = "any"
     infight_damage = 3.5
   }
@@ -137,7 +137,7 @@ HARDER_ENEMY.MONSTERS =
     invis = true
     outdoor_factor = 3.0
     weap_min_damage = 40
-    weap_prefs = { super=3.0, shotty=1.5, chain=1.4, plasma=1.1 }
+    weap_prefs = { super=1.75, shotty=1.35, chain=1.3, plasma=1.1, launch=0.3 }
     species = "demon"
     room_size = "any"
     trap_factor = 0.3
@@ -157,7 +157,7 @@ HARDER_ENEMY.MONSTERS =
     density = 0.6
     weap_min_damage = 40
     float = true
-    weap_prefs = { launch=2.0, super=3.0, chain=1.2, shotty=0.7, plasma=1.2 }
+    weap_prefs = { launch=1.25, super=1.75, chain=1.2, shotty=0.7, plasma=1.2 }
     replaces = "pain"
     replace_prob = 20
     room_size = "any" --large
@@ -178,7 +178,7 @@ HARDER_ENEMY.MONSTERS =
     boss_prob = 50
     prob = 6.4
     crazy_prob = 20
-    weap_prefs = { launch=3.0, super=2.0, plasma=3.0, bfg=1.5 }
+    weap_prefs = { launch=1.75, super=1.5, plasma=1.75, bfg=1.5 }
     health = 1000
     damage = 7.5
     attack = "missile"
@@ -249,7 +249,7 @@ HARDER_ENEMY.MONSTERS =
     give = { {weapon="chain"}, {ammo="bullet",count=10} }
     weap_needed = { chain=true }
     weap_min_damage = 50
-    weap_prefs = { shotty=1.5, super=2.0, chain=2.0, plasma=1.2, launch=1.1 }
+    weap_prefs = { shotty=1.5, super=1.75, chain=2.0, plasma=1.2, launch=1.1 }
     density = 0.75
     species = "zombie"
     room_size = "any" --large
@@ -272,7 +272,7 @@ HARDER_ENEMY.MONSTERS =
     attack = "missile"
     weap_min_damage = 60
     density = 0.6
-    weap_prefs = { launch=3.0, plasma=2.5, super=2.0 }
+    weap_prefs = { launch=1.75, plasma=1.75, chain=1.5, super=1.25 }
     room_size = "any"
     replaces = "knight"
     replace_prob = 15
@@ -291,7 +291,7 @@ HARDER_ENEMY.MONSTERS =
     damage = 4.0
     attack = "missile"
     weap_min_damage = 50
-    weap_prefs = { launch=3.0, super=2.5, plasma=1.5 }
+    weap_prefs = { launch=1.75, super=1.5, plasma=1.33 }
     density = 0.75
     species = "baron"
     replaces = "mancubus"
@@ -310,7 +310,7 @@ HARDER_ENEMY.MONSTERS =
     health = 600
     damage = 8.0
     attack = "missile"
-    weap_prefs = { launch=3.0, super=2.0, plasma=2.0, chain=1.2 }
+    weap_prefs = { launch=1.5, super=1.5, plasma=1.5, chain=1.2 }
     density = 0.32
     weap_min_damage = 88
     replaces = "arach"
@@ -332,7 +332,7 @@ HARDER_ENEMY.MONSTERS =
     damage = 10.7
     attack = "missile"
     weap_min_damage = 60
-    weap_prefs = { launch=3.0, super=2.0, plasma=2.0, chain=1.2 }
+    weap_prefs = { launch=1.5, super=1.5, plasma=1.5, chain=1.2 }
     replaces = "mancubus"
     replace_prob = 30
     density = 0.5
@@ -357,7 +357,7 @@ HARDER_ENEMY.MONSTERS =
     attack = "hitscan"
     density = 0.17
     room_size = "medium"
-    weap_prefs = { launch=2.0, super=3.0, plasma=2.0, bfg=1.5 }
+    weap_prefs = { launch=2.0, super=1.25, plasma=1.5, bfg=1.5 }
     weap_min_damage = 120
     nasty = true
     infight_damage = 18
@@ -381,7 +381,7 @@ HARDER_ENEMY.MONSTERS =
     density = 0.2
     float = true
     weap_min_damage = 100
-    weap_prefs = { launch=2.0, super=3.0, chain=1.2, shotty=0.7 }
+    weap_prefs = { launch=1.0, super=1.25, chain=1.5, shotty=0.7 }
     room_size = "any" --large
     cage_factor = 0  -- never put in cages
     infight_damage = 4.5 -- guess
