@@ -3790,9 +3790,11 @@ function Room_cleanup_stairs_to_nowhere(R)
         end
 
         -- unify heights
-        local h_diff = math.max(A.ceil_h, SA.ceil_h)
-        A.ceil_h = h_diff
-        SA.ceil_h = h_diff
+        if A.ceil_h - A.floor_h < 96
+        or SA.ceil_h - SA.floor_h < 96 then
+          A.ceil_h = A.floor_h + 96
+          SA.ceil_h = A.ceil_h
+        end
 
         fixup_neighbors(A)
       end
