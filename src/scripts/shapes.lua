@@ -5276,28 +5276,28 @@ GROW_PILLAR_GATE =
   }
 }
 
-DECORATE_CATWALK_SUPPORT_PILLAR_OUTER =
+GROW_CATWALK_SUPPORT_PILLAR_OUTER =
 {
-  prob = 4
+  prob = 35
 
   structure =
   {
-    "1122","1122"
-    "1122","1.22"
+    "....","1122"
+    "....","1.22"
     "1122","1122"
   }
 }
 
-DECORATE_CATWALK_SUPPORT_PILLAR_INNER_DOUBLE =
+GROW_CATWALK_SUPPORT_PILLAR_INNER_DOUBLE =
 {
-  prob = 7
+  prob = 25
 
   structure =
   {
-    "1122","1122"
-    "1122","11.2"
-    "1122","1122"
-    "1122","11.2"
+    "....","1122"
+    "....","11.2"
+    "....","1122"
+    "....","11.2"
     "1122","1122"
   }
 }
