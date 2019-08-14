@@ -21,4 +21,6 @@ PREFABS.Joiner_armaetus_stairs_alternating_lights =
 
   delta_h  = 56
   nearby_h = 128
+
+  can_flip = true
 }
