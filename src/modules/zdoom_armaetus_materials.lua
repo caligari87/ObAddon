@@ -1118,7 +1118,6 @@ ARMAETUS_MATERIALS = {
   -- Warning Strip --
   WARN1 = { t="WARN1", f="WARN2" }
 
-
   -----------------------------------
   -- Walls as flats and vice versa --
   -----------------------------------

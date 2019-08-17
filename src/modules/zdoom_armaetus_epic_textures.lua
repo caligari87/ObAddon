@@ -159,6 +159,7 @@ function ARMAETUS_EPIC_TEXTURES.generate_environment_themes()
                                   * style_sel("traps", 0.3, 0.7, 1.2, 1.5)
   end
 
+
   -- initialize default tables
   if not PARAM.default_environment_themes_init then
     -- Doom 2
@@ -486,6 +487,12 @@ function ARMAETUS_EPIC_TEXTURES.put_new_materials()
     GAME.THEMES.deimos.skyboxes = ARMAETUS_DEIMOS_SKYBOXES
     GAME.THEMES.hell.skyboxes = ARMAETUS_HELL_SKYBOXES
     GAME.THEMES.flesh.skyboxes = ARMAETUS_FLESH_SKYBOXES
+
+    -- inserts for hallways
+    GAME.THEMES.tech.wide_halls = ARMAETUS_TECH_WIDE_HALLS
+    GAME.THEMES.deimos.wide_halls = ARMAETUS_TECH_WIDE_HALLS
+    GAME.THEMES.hell.wide_halls = ARMAETUS_HELL_WIDE_HALLS
+    GAME.THEMES.flesh.wide_halls = ARMAETUS_HELL_WIDE_HALLS
 
     --hack for the street textures
     GAME.SINKS.floor_streets.trim_mat = "WARN1"
