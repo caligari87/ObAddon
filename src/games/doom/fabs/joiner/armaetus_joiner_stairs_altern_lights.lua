@@ -4,7 +4,7 @@ PREFABS.Joiner_armaetus_stairs_alternating_lights =
 {
   file   = "joiner/armaetus_joiner_stairs_altern_lights.wad"
 
-  prob   = 250
+  prob   = 180
   style  = "steepness"
 
   where  = "seeds"
