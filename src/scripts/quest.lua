@@ -932,7 +932,7 @@ function Quest_add_major_quests()
     -- TODO: check that a usable prefab exists
     if not THEME.has_triple_key_door then return false end
 
-    local prob = 35
+    local prob = style_sel("trikeys", 0, 35, 70, 100)
 
     if not rand.odds(prob) then return false end
 
