@@ -238,6 +238,7 @@ GLOBAL_STYLE_LIST =
   windows     = { none=0,  few=20, some=80, heaps=30 }
   switches    = { none=15, few=30, some=50, heaps=15 }
   keys        = { none=5,  few=15, some=40, heaps=60 }
+  trikeys     = { none=5,  few=40, some=30, heaps=20 }
 
   symmetry    = { none=35, few=60, some=20, heaps=10 }
   pictures    = { none=0,  few=10, some=70, heaps=30 }
