@@ -3134,11 +3134,27 @@ function Room_floor_ceil_heights()
   local function calc_a_ceiling_height(R, group)
     local add_h
 
-        if group.vol <  8 then add_h = 96
-    elseif group.vol < 16 then add_h = 128
-    elseif group.vol < 32 then add_h = 160
-    elseif group.vol < 48 then add_h = 192
-    else                       add_h = 256
+    if not R.inverse_heights then
+      if rand.odds(25) then
+        R.inverse_heights = "yes"
+      else
+        R.inverse_heights = "no"
+      end
+    end
+
+    if R.inverse_heights == "no" or not R.inverse_heights then
+          if group.vol <  8 then add_h = 96
+      elseif group.vol < 16 then add_h = 128
+      elseif group.vol < 32 then add_h = 160
+      elseif group.vol < 48 then add_h = 192
+      else                       add_h = 256
+      end
+    elseif R.inverse_heights == "yes" then
+      if group.vol     < 16 then add_h = 256
+      elseif group.vol < 32 then add_h = 192
+      elseif group.vol < 48 then add_h = 160
+      else                       add_h = 128
+      end
     end
 
     -- MSSP: code for the height style control
