@@ -24,7 +24,7 @@ PREFABS.Lift_gtd_pistons_128 =
 
 PREFABS.Lift_gtd_pistons_128_hell =
 {
-  template = "Lift_gtd_disguised_128"
+  template = "Lift_gtd_pistons_128"
   map = "MAP02"
 
   theme = "hell"
