@@ -6,8 +6,6 @@ PREFABS.Window_low_1 =
   group  = "gtd_window_low"
   prob   = 50
 
-  passable = true
-
   where  = "edge"
   seed_w = 1
 

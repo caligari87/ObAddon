@@ -1117,6 +1117,7 @@ ULTDOOM.THEMES =
       gtd_window_absurdly_open = 40
       gtd_window_quakeish = 20
       gtd_window_low = 35
+      gtd_window_arrowslit = 40
     }
 
     cave_torches =
@@ -1448,6 +1449,7 @@ ULTDOOM.THEMES =
       gtd_window_full_open_tall = 30
       gtd_window_absurdly_open = 30
       gtd_window_low = 35
+      gtd_window_arrowslit = 40
     }
 
     style_list =
