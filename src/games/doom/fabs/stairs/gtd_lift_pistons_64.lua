@@ -1,6 +1,6 @@
 PREFABS.Lift_gtd_pistons_128 =
 {
-  file = "stairs/gtd_lift_disguised_128.wad"
+  file = "stairs/gtd_lift_pistons_64.wad"
   map = "MAP01"
 
   theme = "!hell"
