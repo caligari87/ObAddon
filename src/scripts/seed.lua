@@ -1062,8 +1062,8 @@ function Edge_new(kind, S, dir, long)
   for i = 1, long do
     if not S then
       gui.printf(kind .. "\n")
-      gui.printf(table.tostr(EDGE.area .. "\n"))
-      gui.printf(table.tostr(EDGE.area.room .. "\n"))
+      gui.printf(table.tostr(EDGE.area) .. "\n")
+      gui.printf(table.tostr(EDGE.area.room) .. "\n")
       -- note: this mostly only happens when a
       -- room-to-room connection (direct or via joiner)
       -- does not perfectly meet

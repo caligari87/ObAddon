@@ -3337,7 +3337,7 @@ end
     -- SUCCESS --
 
     if PARAM.print_shape_steps != "no" then
-      gui.printf("APPLIED rule: %s\n", cur_rule.name)
+      gui.printf("APPLIED rule: " .. cur_rule.name .. " in ROOM_" .. R.id.. "\n")
     end
 
     if PARAM.live_minimap == "step" then
