@@ -761,6 +761,7 @@ function Seed_dump_rooms()
   local function seed_to_char(S)
     if not S then return "!" end
     if S.free then return "!" end
+    if S.error then return "?" end
 
     local R = S.room or (S.top and S.top.room)
 
@@ -1061,7 +1062,7 @@ function Edge_new(kind, S, dir, long)
   -- add it into each seed
   for i = 1, long do
     if not S then
-      gui.printf(kind .. "\n")
+      gui.printf(table.tostr(EDGE) .. "\n")
       gui.printf(table.tostr(EDGE.area) .. "\n")
       gui.printf(table.tostr(EDGE.area.room) .. "\n")
       -- note: this mostly only happens when a
@@ -1069,6 +1070,8 @@ function Edge_new(kind, S, dir, long)
       -- does not perfectly meet
       -- each other on the edge
       -- check shape rules for misbehaved shapes
+      EDGE.S.error = true
+      Seed_dump_rooms()
       error("OH GOD I CAN'T COMPUTER PLS TO HELP")
     end
 
