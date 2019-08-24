@@ -7,7 +7,7 @@ PREFABS.Trap_closet_tech =
 
   prob = 25
 
-  theme = "urban"
+  theme = "tech"
   env = "!cave"
 
   where  = "seeds"
