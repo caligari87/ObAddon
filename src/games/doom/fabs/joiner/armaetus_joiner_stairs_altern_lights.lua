@@ -1,11 +1,11 @@
--- MSSP: make versions for other themes?
-
 PREFABS.Joiner_armaetus_stairs_alternating_lights =
 {
   file   = "joiner/armaetus_joiner_stairs_altern_lights.wad"
 
   prob   = 180
   style  = "steepness"
+
+  env    = "!hell"
 
   where  = "seeds"
   shape  = "I"
@@ -23,4 +23,16 @@ PREFABS.Joiner_armaetus_stairs_alternating_lights =
   nearby_h = 128
 
   can_flip = true
+}
+
+PREFABS.Joiner_armaetus_stairs_alternating_lights_hell =
+{
+  template = "Joiner_armaetus_stairs_alternating_lights"
+
+  prob = 180
+
+  env = "hell"
+
+  tex_LITE3 = "SP_FACE2"
+  tex_DOORSTOP = "DOORTRAK"
 }

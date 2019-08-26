@@ -318,7 +318,7 @@ function Render_edge(E)
     -- never use anything other than the plain wall on stair chunks
     -- this is to prevent oddities like ZDoom slopes from being cut-off
     if E.S.chunk then
-      if E.S.chunk.kind == "stair" then
+      if E.S.chunk.kind == "stair" and not E.S.area.dead_end then
         def = PREFABS["Wall_plain"]
       end
     end

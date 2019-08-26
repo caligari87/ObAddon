@@ -84,3 +84,13 @@ PREFABS.Pic_computer_charging_grid_thingies =
 
   seed_w = 3
 }
+
+PREFABS.Pic_conveyor_with_boxes =
+{
+  template = "Pic_computer_pull_rack_thingies"
+  map      = "MAP05"
+
+  theme = "!hell"
+
+  seed_w = 3
+}
