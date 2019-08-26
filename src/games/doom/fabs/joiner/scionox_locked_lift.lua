@@ -319,12 +319,15 @@ PREFABS.Joiner_scionox_locked_lift_28 =
   template = "Joiner_scionox_locked_lift_19"
   map    = "MAP09"
   key    = "k_ALL"
+  rank   = 2
 }
 PREFABS.Joiner_scionox_locked_lift_29 =
 {
   template = "Joiner_scionox_locked_lift_19"
   map    = "MAP09"
   key    = "k_ALL"
+  theme  = "urban"
+  rank   = 2
   tex_COMPBLUE = { BIGBRIK1=50, BRICK10=50, BRICK11=50, WOOD12=50, WOOD1=60, PANEL4=50 }
   thing_2028 = "mercury_small"
 }
@@ -333,6 +336,7 @@ PREFABS.Joiner_scionox_locked_lift_30 =
   template = "Joiner_scionox_locked_lift_19"
   key = "k_ALL"
   theme  = "hell"
+  rank   = 2
   tex_DOORRED = "DOORRED2"
   tex_DOORBLU = "DOORBLU2"
   tex_DOORYEL = "DOORYEL2"
