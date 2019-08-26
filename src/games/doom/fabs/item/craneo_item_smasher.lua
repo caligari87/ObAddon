@@ -1,16 +1,19 @@
 PREFABS.Item_craneo_smasher_tech =
 {
   file  = "item/craneo_item_smasher.wad"
-  where = "point"
+  map = "MAP01"
 
+  prob = 10
   theme = "!hell"
 
-  map = "MAP01"
-  env = "building"
+  where = "seeds"
+  seed_w = 1
+  seed_h = 1
 
-  size = 72
+  deep = 16
 
-  prob = 20
+  x_fit = "frame"
+  y_fit = "top"
 }
 
 PREFABS.Item_craneo_smasher_alt_tech =
@@ -27,8 +30,10 @@ PREFABS.Item_craneo_smasher_gothic =
   theme = "hell"
 
   flat_FLAT23 = "CEIL5_2"
-  tex_SHAWN2 = "BIGDOOR5"
-  tex_SUPPORT2 = "GSTONE2"
+  flat_FLOOR1_1 = ""
+  tex_SUPPORT2 = "METAL"
+  tex_CEMENT8 = "GSTGARG"
+  tex_DOORSTOP = "METAL"
 }
 
 PREFABS.Item_craneo_smasher_alt_gothic =
@@ -40,6 +45,7 @@ PREFABS.Item_craneo_smasher_alt_gothic =
   theme = "hell"
 
   flat_FLAT23 = "CEIL5_2"
-  tex_SHAWN2 = "BIGDOOR5"
-  tex_SUPPORT2 = "GSTONE2"
+  tex_SUPPORT2 = "METAL"
+  tex_CEMENT8 = "GSTGARG"
+  tex_DOORSTOP = "METAL"
 }
