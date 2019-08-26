@@ -59,3 +59,28 @@ PREFABS.Hallway_deuce_i_rise_tech =
 
   can_flip = true
 }
+
+PREFABS.Hallway_deuce_i_windowed =
+{
+  template = "Hallway_deuce_i1"
+  map = "MAP03"
+
+  prob = 25
+
+  tex_DOORTRAK = "SUPPORT3"
+  tex_METAL5 = "METAL"
+}
+
+PREFABS.Hallway_deuce_i_windowed_tech =
+{
+  template  = "Hallway_deuce_i1"
+  map    = "MAP01"
+  theme  = "tech"
+
+  prob = 25
+
+  tex_METAL = "SHAWN2"
+  tex_DOORTRAK = "DOORSTOP"
+  tex_METAL5 = "GRAY7"
+  flat_CEIL5_2 = "FLAT23"
+}
