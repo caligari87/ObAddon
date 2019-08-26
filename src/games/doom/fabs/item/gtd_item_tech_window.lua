@@ -38,8 +38,6 @@ PREFABS.Item_tech_window_2 =
   file   = "item/gtd_item_tech_window.wad"
   map    = "MAP02"
 
-  game   = "doom2"
-
   prob   = 50
   theme  = "!hell"
   env    = "building"
