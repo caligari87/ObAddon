@@ -22,7 +22,7 @@ PREFABS.Joiner_scionox_guardpost =
   over   = 16
 
   x_fit  = "frame"
-  y_fit  = "frame"
+  y_fit  = { 72,88 , 168,184 }
 
   tex_COMPSTA1 = { COMPSTA1=50, COMPSTA2=50 }
   tex_GRAY5 = { GRAY5=50, BIGBRIK2=50, BLAKWAL2=50, MODWALL3=50, METAL2=50, SHAWN2=50 }
