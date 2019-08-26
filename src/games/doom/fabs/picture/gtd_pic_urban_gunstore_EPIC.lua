@@ -1,6 +1,6 @@
 PREFABS.Pic_locked_gunstore =
 {
-  file   = "picture/gtd_pic_gunstore.wad"
+  file   = "picture/gtd_pic_urban_gunstore_EPIC.wad"
   map    = "MAP01"
 
   prob   = 25
@@ -8,6 +8,8 @@ PREFABS.Pic_locked_gunstore =
 
   where  = "seeds"
   height = 128
+
+  uses_epic_textures = true
 
   seed_w = 2
   seed_h = 2
