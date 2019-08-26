@@ -72,6 +72,7 @@ PREFABS.Joiner_scionox_guardpost_outdoor_all =
   map    = "MAP03"
 
   key    = "k_ALL"
+  rank   = 2
 }
 
 -- Joiner Outside-to-outside flipped

@@ -83,6 +83,7 @@ PREFABS.Joiner_scionox_guardpost_all =
   map    = "MAP04"
 
   key    = "k_ALL"
+  rank   = 2
 }
 
 -- Joiner Inside-to-outside Trapped
