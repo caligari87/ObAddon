@@ -39,6 +39,8 @@ PREFABS.Joiner_scionox_guard_post2 =
 
   env    = "!building"
   neighbor = "building"
+
+  y_fit  = { 104,120 , 200,216 }
 }
 
 -- Joiner Inside-to-outside Blue
@@ -84,6 +86,8 @@ PREFABS.Joiner_scionox_guardpost_all =
 
   key    = "k_ALL"
   rank   = 2
+
+  y_fit = { 68,76 , 184,188 }
 }
 
 -- Joiner Inside-to-outside Trapped
@@ -92,6 +96,8 @@ PREFABS.Joiner_scionox_guardpost_trapped =
 {
   template = "Joiner_scionox_guardpost"
   map    = "MAP05"
-  seed_w = 3
+
   style  = "traps"
+
+  seed_w = 3
 }
