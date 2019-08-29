@@ -4441,108 +4441,55 @@ GROW_NARROW_CANAL_OUTER_CURVE =
 
 GROW_LIQUID_SLAB_ENTRY =
 {
-  prob = 30
-
-  group = "slab"
-  group_pos = "entry"
+  prob = 20
 
   structure =
   {
-    "....","~11~"
-    "....","~11~"
-    "....","~~~~"
-    "x11x","x11x"
-  }
-
-  diagonals =
-  {
-    "~1","1~"
+    "..","11"
+    "..","11"
+    "..","~~"
+    "..","11"
+    "11","11"
   }
 }
 
-GROW_LIQUID_SLAB_ENTRY_2X =
-{
-  prob = 30
-
-  group = "slab"
-  group_pos = "entry"
-
-  structure =
-  {
-    ".......","~11~11~"
-    ".......","~11~11~"
-    ".......","~~~~~~~"
-    "xx111xx","xx111xx"
-  }
-
-  diagonals =
-  {
-    "~1","1~"
-  }
-}
-
-GROW_LIQUID_SLAB_STRAIGHT =
-{
-  prob = 150
-
-  group = "slab"
-
-  structure =
-  {
-    "....","~11~"
-    "....","~11~"
-    "....","~~~~"
-    "~11~","~11~"
-  }
-}
-
-GROW_LIQUID_SLAB_CURVE =
-{
-  prob = 50
-
-  group = "slab"
-
-  structure =
-  {
-    "......","~~~~~~"
-    "......","~11~11"
-    "......","~11~11"
-    "......","~~~~~~"
-    "~11~xx","~11~xx"
-  }
-}
-
-GROW_LIQUID_SLAB_STRAIGHT_4x4 =
-{
-  prob = 100
-
-  group = "slab"
-
-  structure =
-  {
-    ".......","~11~11~"
-    ".......","~11~11~"
-    ".......","~~~~~~~"
-    "~11~11~","~11~11~"
-  }
-}
-
-GROW_LIQUID_SLAB_EXIT =
+GROW_LIQUID_SLAB_DIAGONAL =
 {
   prob = 15
 
-  group = "slab"
-
   structure =
   {
-    "....","1111"
-    "....","~~~~"
-    "~11~","~11~"
+    "...x","11~x"
+    "....","1//1"
+    "..11","~/11"
+    "xx11","xx11"
   }
 
   diagonals =
   {
-    "~1","1~"
+    "1~","~1"
+    "~1"
+  }
+}
+
+GROW_LIQUID_SLAB_DIAGONAL_REVERSE =
+{
+  prob = 15
+
+  structure =
+  {
+    "....x","1111x"
+    ".....","111/~"
+    ".....","11//1"
+    "...11","1//11"
+    "x..11","x~111"
+  }
+
+  diagonals =
+  {
+    "1~"
+    "1~","~1"
+    "1~","~1"
   }
 }
 
