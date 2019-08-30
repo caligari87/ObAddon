@@ -22,7 +22,7 @@ PREFABS.Joiner_scionox_guardpost_outdoor =
   over   = 16
 
   x_fit  = "frame"
-  y_fit  = "frame"
+  y_fit  = { 152,192 }
 
   tex_SPCDOOR1 = { SPCDOOR1=50, SPCDOOR2=50, SPCDOOR3=50, SPCDOOR4=50 }
   tex_BRONZE1 = { BRONZE1=50, BIGBRIK2=50, BROWNGRN=50, GRAY1=50, MODWALL1=50, SLADWALL=50 }
@@ -81,4 +81,6 @@ PREFABS.Joiner_scionox_guardpost_outdoor_2 =
 {
   template = "Joiner_scionox_guardpost_outdoor"
   map    = "MAP04"
+
+  y_fit = { 96,136 }
 }
