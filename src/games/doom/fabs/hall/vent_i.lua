@@ -82,3 +82,33 @@ PREFABS.Hallway_vent_i_side_door_gothic =
   tex_DOOR3 = "WOODMET1"
   tex_DOORSTOP = "METAL"
 }
+
+PREFABS.Hallway_vent_i_side_window =
+{
+  template = "Hallway_vent_i1"
+  map = "MAP05"
+
+  prob = 10
+}
+
+PREFABS.Hallway_vent_i_side_lights_tech =
+{
+  template = "Hallway_vent_i1"
+  map = "MAP06"
+
+  prob = 10
+
+  theme = "!hell"
+}
+
+PREFABS.Hallway_vent_i_side_lights_gothic =
+{
+  template = "Hallway_vent_i1"
+  map = "MAP06"
+
+  prob = 10
+
+  theme = "hell"
+
+  tex_LITE3 = "ROCKRED1"
+}
