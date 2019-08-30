@@ -436,15 +436,15 @@ PREFABS.Pic_EPIC_box_metal_superwide =
 
   tex_GLASS1 =
   {
-   PLAN1    = 75
-   PLAN2    = 75
-   COMPCT07 = 50
-   CONSOLE3 = 50
-   CONSOLEF = 50
-   CONSOLEG = 50
-   SHAWCOMP = 10
-   METACOMP = 10
-   SILVCOMP = 10
+    PLAN1    = 75
+    PLAN2    = 75
+    COMPCT07 = 50
+    CONSOLE3 = 50
+    CONSOLEF = 50
+    CONSOLEG = 50
+    SHAWCOMP = 10
+    METACOMP = 10
+    SILVCOMP = 10
   }
 
   sector_1  = { [0]=70, [1]=15 }

@@ -157,6 +157,8 @@ function ARMAETUS_EPIC_TEXTURES.generate_environment_themes()
   if LEVEL.theme_name == "hell" then
     THEME.wide_halls.hellcata = 50 * style_sel("liquids", 0.3, 0.7, 1.2, 1.5)
                                   * style_sel("traps", 0.3, 0.7, 1.2, 1.5)
+  elseif LEVEL.theme_name == "tech" or LEVEL.theme_name == "urban" then
+    THEME.wide_halls.sewers = 50 * style_sel("liquids", 0.3, 0.7, 1.2, 1.5)
   end
 
 
