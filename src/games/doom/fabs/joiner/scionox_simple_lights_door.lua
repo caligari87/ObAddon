@@ -24,6 +24,7 @@ PREFABS.Joiner_scionox_simple_lights_door =
   tex_DOOR1 = { DOOR1=50, DOOR3=50, SPCDOOR1=50, SPCDOOR2=50, SPCDOOR3=50, SPCDOOR4=50 }
   flat_FLOOR4_6 = { FLOOR4_6=50, FLAT14=50, FLOOR0_3=50, FLAT5=50, SLIME14=50, SLIME16=50 }
 }
+
 PREFABS.Joiner_scionox_simple_lights_door_2 =
 {
   template = "Joiner_scionox_simple_lights_door"
@@ -31,6 +32,7 @@ PREFABS.Joiner_scionox_simple_lights_door_2 =
   thing_2028 = "mercury_small"
   flat_FLOOR4_6 = { FLAT5_1=50, FLAT19=50, FLAT5_5=50, FLOOR7_1=50, SLIME13=50, RROCK15=50 }
 }
+
 PREFABS.Joiner_scionox_simple_lights_door_3 =
 {
   template = "Joiner_scionox_simple_lights_door"
@@ -38,6 +40,7 @@ PREFABS.Joiner_scionox_simple_lights_door_3 =
   map    = "MAP03"
   flat_FLOOR4_6 = { DEM1_6=50, FLAT1_1=50, FLAT5_3=50, FLOOR7_2=50, RROCK09=50, RROCK11=50 }
 }
+
 PREFABS.Joiner_scionox_simple_lights_door_4 =
 {
   template = "Joiner_scionox_simple_lights_door"
@@ -46,6 +49,7 @@ PREFABS.Joiner_scionox_simple_lights_door_4 =
   tag_1  = "?door_tag"
   door_action = "S1_OpenDoor"
 }
+
 PREFABS.Joiner_scionox_simple_lights_door_5 =
 {
   template = "Joiner_scionox_simple_lights_door"
@@ -57,6 +61,7 @@ PREFABS.Joiner_scionox_simple_lights_door_5 =
   tag_1  = "?door_tag"
   door_action = "S1_OpenDoor"
 }
+
 PREFABS.Joiner_scionox_simple_lights_door_6 =
 {
   template = "Joiner_scionox_simple_lights_door"
@@ -67,12 +72,14 @@ PREFABS.Joiner_scionox_simple_lights_door_6 =
   tag_1  = "?door_tag"
   door_action = "S1_OpenDoor"
 }
+
 PREFABS.Joiner_scionox_simple_lights_door_7 =
 {
   template = "Joiner_scionox_simple_lights_door"
   map    = "MAP05"
   key = "k_red"
 }
+
 PREFABS.Joiner_scionox_simple_lights_door_8 =
 {
   template = "Joiner_scionox_simple_lights_door"
@@ -81,6 +88,7 @@ PREFABS.Joiner_scionox_simple_lights_door_8 =
   tex_DOORRED = "DOORBLU"
   line_33     = 32
 }
+
 PREFABS.Joiner_scionox_simple_lights_door_9 =
 {
   template = "Joiner_scionox_simple_lights_door"
@@ -89,6 +97,7 @@ PREFABS.Joiner_scionox_simple_lights_door_9 =
   tex_DOORRED = "DOORYEL"
   line_33     = 34
 }
+
 PREFABS.Joiner_scionox_simple_lights_door_10 =
 {
   template = "Joiner_scionox_simple_lights_door"
@@ -98,6 +107,7 @@ PREFABS.Joiner_scionox_simple_lights_door_10 =
   thing_2028 = "mercury_small"
   flat_FLOOR4_6 = { FLAT5_1=50, FLAT19=50, FLAT5_5=50, FLOOR7_1=50, SLIME13=50, RROCK15=50 }
 }
+
 PREFABS.Joiner_scionox_simple_lights_door_11 =
 {
   template = "Joiner_scionox_simple_lights_door"
@@ -109,6 +119,7 @@ PREFABS.Joiner_scionox_simple_lights_door_11 =
   thing_2028 = "mercury_small"
   flat_FLOOR4_6 = { FLAT5_1=50, FLAT19=50, FLAT5_5=50, FLOOR7_1=50, SLIME13=50, RROCK15=50 }
 }
+
 PREFABS.Joiner_scionox_simple_lights_door_12 =
 {
   template = "Joiner_scionox_simple_lights_door"
@@ -120,6 +131,7 @@ PREFABS.Joiner_scionox_simple_lights_door_12 =
   thing_2028 = "mercury_small"
   flat_FLOOR4_6 = { FLAT5_1=50, FLAT19=50, FLAT5_5=50, FLOOR7_1=50, SLIME13=50, RROCK15=50 }
 }
+
 PREFABS.Joiner_scionox_simple_lights_door_13 =
 {
   template = "Joiner_scionox_simple_lights_door"
@@ -129,6 +141,7 @@ PREFABS.Joiner_scionox_simple_lights_door_13 =
   flat_FLOOR4_6 = { DEM1_6=50, FLAT1_1=50, FLAT5_3=50, FLOOR7_2=50, RROCK09=50, RROCK11=50 }
   tex_WOODGARG = { WOODGARG=50, WOOD4=50 }
 }
+
 PREFABS.Joiner_scionox_simple_lights_door_14 =
 {
   template = "Joiner_scionox_simple_lights_door"
@@ -140,6 +153,7 @@ PREFABS.Joiner_scionox_simple_lights_door_14 =
   flat_FLOOR4_6 = { DEM1_6=50, FLAT1_1=50, FLAT5_3=50, FLOOR7_2=50, RROCK09=50, RROCK11=50 }
   tex_WOODGARG = { WOODGARG=50, WOOD4=50 }
 }
+
 PREFABS.Joiner_scionox_simple_lights_door_15 =
 {
   template = "Joiner_scionox_simple_lights_door"
@@ -151,6 +165,7 @@ PREFABS.Joiner_scionox_simple_lights_door_15 =
   flat_FLOOR4_6 = { DEM1_6=50, FLAT1_1=50, FLAT5_3=50, FLOOR7_2=50, RROCK09=50, RROCK11=50 }
   tex_WOODGARG = { WOODGARG=50, WOOD4=50 }
 }
+
 PREFABS.Joiner_scionox_simple_lights_door_16 =
 {
   template = "Joiner_scionox_simple_lights_door"
@@ -158,6 +173,7 @@ PREFABS.Joiner_scionox_simple_lights_door_16 =
   key    = "k_ALL"
   rank   = 2
 }
+
 PREFABS.Joiner_scionox_simple_lights_door_17 =
 {
   template = "Joiner_scionox_simple_lights_door"
@@ -168,6 +184,7 @@ PREFABS.Joiner_scionox_simple_lights_door_17 =
   thing_2028 = "mercury_small"
   flat_FLOOR4_6 = { FLAT5_1=50, FLAT19=50, FLAT5_5=50, FLOOR7_1=50, SLIME13=50, RROCK15=50 }
 }
+
 PREFABS.Joiner_scionox_simple_lights_door_18 =
 {
   template = "Joiner_scionox_simple_lights_door"
@@ -203,6 +220,7 @@ PREFABS.Joiner_scionox_simple_lights_door_19 =
   tex_BIGDOOR2 = { BIGDOOR2=50, BIGDOOR3=50, BIGDOOR4=50 }
   flat_FLOOR4_6 = { FLOOR4_6=50, FLAT14=50, FLOOR0_3=50, FLAT5=50, SLIME14=50, SLIME16=50 }
 }
+
 PREFABS.Joiner_scionox_simple_lights_door_20 =
 {
   template = "Joiner_scionox_simple_lights_door_19"
@@ -211,6 +229,7 @@ PREFABS.Joiner_scionox_simple_lights_door_20 =
   tex_SUPPORT2 = "SUPPORT3"
   flat_FLOOR4_6 = { FLAT5_1=50, FLAT19=50, FLAT5_5=50, FLOOR7_1=50, SLIME13=50, RROCK15=50 }
 }
+
 PREFABS.Joiner_scionox_simple_lights_door_21 =
 {
   template = "Joiner_scionox_simple_lights_door_19"
@@ -220,6 +239,7 @@ PREFABS.Joiner_scionox_simple_lights_door_21 =
   tex_BIGDOOR2 = { BIGDOOR5=50, BIGDOOR7=50, WOODGARG=50, WOODMET2=50 }
   flat_FLOOR4_6 = { DEM1_6=50, FLAT1_1=50, FLAT5_3=50, FLOOR7_2=50, RROCK09=50, RROCK11=50 }
 }
+
 PREFABS.Joiner_scionox_simple_lights_door_22 =
 {
   template = "Joiner_scionox_simple_lights_door_19"
@@ -228,6 +248,7 @@ PREFABS.Joiner_scionox_simple_lights_door_22 =
   tag_1  = "?door_tag"
   door_action = "S1_OpenDoor"
 }
+
 PREFABS.Joiner_scionox_simple_lights_door_23 =
 {
   template = "Joiner_scionox_simple_lights_door_19"
@@ -239,6 +260,7 @@ PREFABS.Joiner_scionox_simple_lights_door_23 =
   thing_2028 = "mercury_small"
   flat_FLOOR4_6 = { FLAT5_1=50, FLAT19=50, FLAT5_5=50, FLOOR7_1=50, SLIME13=50, RROCK15=50 }
 }
+
 PREFABS.Joiner_scionox_simple_lights_door_24 =
 {
   template = "Joiner_scionox_simple_lights_door_19"
@@ -252,12 +274,14 @@ PREFABS.Joiner_scionox_simple_lights_door_24 =
   tex_BIGDOOR2 = { BIGDOOR5=50, BIGDOOR7=50, WOODGARG=50, WOODMET2=50 }
   flat_FLOOR4_6 = { DEM1_6=50, FLAT1_1=50, FLAT5_3=50, FLOOR7_2=50, RROCK09=50, RROCK11=50 }
 }
+
 PREFABS.Joiner_scionox_simple_lights_door_25 =
 {
   template = "Joiner_scionox_simple_lights_door_19"
   map    = "MAP11"
   key = "k_red"
 }
+
 PREFABS.Joiner_scionox_simple_lights_door_26 =
 {
   template = "Joiner_scionox_simple_lights_door_19"
@@ -266,6 +290,7 @@ PREFABS.Joiner_scionox_simple_lights_door_26 =
   tex_DOORRED = "DOORBLU"
   line_33     = 32
 }
+
 PREFABS.Joiner_scionox_simple_lights_door_27 =
 {
   template = "Joiner_scionox_simple_lights_door_19"
@@ -274,6 +299,7 @@ PREFABS.Joiner_scionox_simple_lights_door_27 =
   tex_DOORRED = "DOORYEL"
   line_33     = 34
 }
+
 PREFABS.Joiner_scionox_simple_lights_door_28 =
 {
   template = "Joiner_scionox_simple_lights_door_19"
@@ -283,6 +309,7 @@ PREFABS.Joiner_scionox_simple_lights_door_28 =
   thing_2028 = "mercury_small"
   flat_FLOOR4_6 = { FLAT5_1=50, FLAT19=50, FLAT5_5=50, FLOOR7_1=50, SLIME13=50, RROCK15=50 }
 }
+
 PREFABS.Joiner_scionox_simple_lights_door_29 =
 {
   template = "Joiner_scionox_simple_lights_door_19"
@@ -294,6 +321,7 @@ PREFABS.Joiner_scionox_simple_lights_door_29 =
   tex_DOORRED = "DOORBLU"
   line_33     = 32
 }
+
 PREFABS.Joiner_scionox_simple_lights_door_30 =
 {
   template = "Joiner_scionox_simple_lights_door_19"
@@ -305,6 +333,7 @@ PREFABS.Joiner_scionox_simple_lights_door_30 =
   tex_DOORRED = "DOORYEL"
   line_33     = 34
 }
+
 PREFABS.Joiner_scionox_simple_lights_door_31 =
 {
   template = "Joiner_scionox_simple_lights_door_19"
@@ -316,6 +345,7 @@ PREFABS.Joiner_scionox_simple_lights_door_31 =
   flat_FLOOR4_6 = { DEM1_6=50, FLAT1_1=50, FLAT5_3=50, FLOOR7_2=50, RROCK09=50, RROCK11=50 }
   tex_DOORRED = "DOORRED2"
 }
+
 PREFABS.Joiner_scionox_simple_lights_door_32 =
 {
   template = "Joiner_scionox_simple_lights_door_19"
@@ -328,6 +358,7 @@ PREFABS.Joiner_scionox_simple_lights_door_32 =
   tex_DOORRED = "DOORBLU2"
   line_33     = 32
 }
+
 PREFABS.Joiner_scionox_simple_lights_door_33 =
 {
   template = "Joiner_scionox_simple_lights_door_19"
@@ -340,6 +371,7 @@ PREFABS.Joiner_scionox_simple_lights_door_33 =
   tex_DOORRED = "DOORYEL2"
   line_33     = 34
 }
+
 PREFABS.Joiner_scionox_simple_lights_door_34 =
 {
   template = "Joiner_scionox_simple_lights_door_19"
@@ -347,6 +379,7 @@ PREFABS.Joiner_scionox_simple_lights_door_34 =
   key    = "k_ALL"
   rank   = 2
 }
+
 PREFABS.Joiner_scionox_simple_lights_door_35 =
 {
   template = "Joiner_scionox_simple_lights_door_19"
@@ -357,6 +390,7 @@ PREFABS.Joiner_scionox_simple_lights_door_35 =
   thing_2028 = "mercury_small"
   flat_FLOOR4_6 = { FLAT5_1=50, FLAT19=50, FLAT5_5=50, FLOOR7_1=50, SLIME13=50, RROCK15=50 }
 }
+
 PREFABS.Joiner_scionox_simple_lights_door_36 =
 {
   template = "Joiner_scionox_simple_lights_door_19"
@@ -394,6 +428,7 @@ PREFABS.Joiner_scionox_simple_lights_door_37 =
   tex_WOOD1 = { WOOD1=50, WOOD12=50, WOOD3=50, WOOD5=50, WOOD6=50, WOODVERT=50 }
   flat_FLAT5_2 = { FLAT5_2=50, FLAT5_1=50 }
 }
+
 PREFABS.Joiner_scionox_simple_lights_door_38 =
 {
   template = "Joiner_scionox_simple_lights_door_37"
@@ -402,6 +437,7 @@ PREFABS.Joiner_scionox_simple_lights_door_38 =
   thing_57 = "blue_torch_sm"
   line_33     = 32
 }
+
 PREFABS.Joiner_scionox_simple_lights_door_39 =
 {
   template = "Joiner_scionox_simple_lights_door_37"
@@ -410,6 +446,7 @@ PREFABS.Joiner_scionox_simple_lights_door_39 =
   thing_57 = "green_torch_sm"
   line_33     = 34
 }
+
 PREFABS.Joiner_scionox_simple_lights_door_40 =
 {
   template = "Joiner_scionox_simple_lights_door_37"
@@ -436,11 +473,12 @@ PREFABS.Joiner_scionox_simple_lights_door_41 =
   deep   = 16
   over   = 16
 
-  x_fit  = "frame"
+  x_fit  = { 40,88 , 168,216 }
   y_fit  = "frame"
 
   tex_SPCDOOR1 = { SPCDOOR1=50, SPCDOOR2=50, SPCDOOR3=50, SPCDOOR4=50 }
 }
+
 PREFABS.Joiner_scionox_simple_lights_door_42 =
 {
   template = "Joiner_scionox_simple_lights_door_41"
@@ -451,6 +489,7 @@ PREFABS.Joiner_scionox_simple_lights_door_42 =
     burning_barrel = 25
   }
 }
+
 PREFABS.Joiner_scionox_simple_lights_door_43 =
 {
   template = "Joiner_scionox_simple_lights_door_41"
@@ -465,6 +504,7 @@ PREFABS.Joiner_scionox_simple_lights_door_43 =
   tex_SPCDOOR1 = { WOODGARG=50, WOOD4=50, WOODMET2=50, SPCDOOR4=50 }
   tex_LITE3 = { FIREWALA=50, FIREBLU1=50 }
 }
+
 PREFABS.Joiner_scionox_simple_lights_door_44 =
 {
   template = "Joiner_scionox_simple_lights_door_41"
@@ -473,6 +513,7 @@ PREFABS.Joiner_scionox_simple_lights_door_44 =
   tag_1  = "?door_tag"
   door_action = "S1_OpenDoor"
 }
+
 PREFABS.Joiner_scionox_simple_lights_door_45 =
 {
   template = "Joiner_scionox_simple_lights_door_41"
@@ -487,6 +528,7 @@ PREFABS.Joiner_scionox_simple_lights_door_45 =
     burning_barrel = 25
   }
 }
+
 PREFABS.Joiner_scionox_simple_lights_door_46 =
 {
   template = "Joiner_scionox_simple_lights_door_41"
@@ -505,12 +547,14 @@ PREFABS.Joiner_scionox_simple_lights_door_46 =
   tex_SPCDOOR1 = { WOODGARG=50, WOOD4=50, WOODMET2=50, SPCDOOR4=50 }
   tex_TEKLITE = { REDWALL=50, METAL=50, SP_FACE2=50 }
 }
+
 PREFABS.Joiner_scionox_simple_lights_door_47 =
 {
   template = "Joiner_scionox_simple_lights_door_41"
   map    = "MAP17"
   key = "k_red"
 }
+
 PREFABS.Joiner_scionox_simple_lights_door_48 =
 {
   template = "Joiner_scionox_simple_lights_door_41"
@@ -519,6 +563,7 @@ PREFABS.Joiner_scionox_simple_lights_door_48 =
   tex_DOORRED = "DOORBLU"
   line_33     = 32
 }
+
 PREFABS.Joiner_scionox_simple_lights_door_49 =
 {
   template = "Joiner_scionox_simple_lights_door_41"
@@ -527,6 +572,7 @@ PREFABS.Joiner_scionox_simple_lights_door_49 =
   tex_DOORRED = "DOORYEL"
   line_33     = 34
 }
+
 PREFABS.Joiner_scionox_simple_lights_door_50 =
 {
   template = "Joiner_scionox_simple_lights_door_41"
@@ -539,6 +585,7 @@ PREFABS.Joiner_scionox_simple_lights_door_50 =
     burning_barrel = 25
   }
 }
+
 PREFABS.Joiner_scionox_simple_lights_door_51 =
 {
   template = "Joiner_scionox_simple_lights_door_41"
@@ -553,6 +600,7 @@ PREFABS.Joiner_scionox_simple_lights_door_51 =
   tex_DOORRED = "DOORBLU"
   line_33     = 32
 }
+
 PREFABS.Joiner_scionox_simple_lights_door_52 =
 {
   template = "Joiner_scionox_simple_lights_door_41"
@@ -567,6 +615,7 @@ PREFABS.Joiner_scionox_simple_lights_door_52 =
   tex_DOORRED = "DOORYEL"
   line_33     = 34
 }
+
 PREFABS.Joiner_scionox_simple_lights_door_53 =
 {
   template = "Joiner_scionox_simple_lights_door_41"
@@ -583,6 +632,7 @@ PREFABS.Joiner_scionox_simple_lights_door_53 =
   tex_SPCDOOR1 = { WOODGARG=50, WOOD4=50, WOODMET2=50, SPCDOOR4=50 }
   tex_DOORRED = "DOORRED2"
 }
+
 PREFABS.Joiner_scionox_simple_lights_door_54 =
 {
   template = "Joiner_scionox_simple_lights_door_41"
@@ -600,6 +650,7 @@ PREFABS.Joiner_scionox_simple_lights_door_54 =
   tex_DOORRED = "DOORBLU2"
   line_33     = 32
 }
+
 PREFABS.Joiner_scionox_simple_lights_door_55 =
 {
   template = "Joiner_scionox_simple_lights_door_41"
@@ -617,6 +668,7 @@ PREFABS.Joiner_scionox_simple_lights_door_55 =
   tex_DOORRED = "DOORYEL2"
   line_33     = 34
 }
+
 PREFABS.Joiner_scionox_simple_lights_door_56 =
 {
   template = "Joiner_scionox_simple_lights_door_41"
@@ -624,6 +676,7 @@ PREFABS.Joiner_scionox_simple_lights_door_56 =
   key    = "k_ALL"
   rank   = 2
 }
+
 PREFABS.Joiner_scionox_simple_lights_door_57 =
 {
   template = "Joiner_scionox_simple_lights_door_41"
@@ -637,6 +690,7 @@ PREFABS.Joiner_scionox_simple_lights_door_57 =
     burning_barrel = 25
   }
 }
+
 PREFABS.Joiner_scionox_simple_lights_door_58 =
 {
   template = "Joiner_scionox_simple_lights_door_41"
@@ -677,7 +731,7 @@ PREFABS.Joiner_scionox_simple_lights_door_59 =
 
   x_fit  = "frame"
   y_fit  = "frame"
-  
+
   tag_1  = "?door_tag"
   door_action = "S1_OpenDoor"
 }
