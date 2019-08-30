@@ -499,7 +499,7 @@ PREFABS.Joiner_scionox_simple_lights_door_43 =
     evil_eye   = 75
     skull_rock = 25
     skull_cairn = 25
-	candelabra = 25
+    candelabra = 25
   }
   tex_SPCDOOR1 = { WOODGARG=50, WOOD4=50, WOODMET2=50, SPCDOOR4=50 }
   tex_LITE3 = { FIREWALA=50, FIREBLU1=50 }
@@ -542,7 +542,7 @@ PREFABS.Joiner_scionox_simple_lights_door_46 =
     evil_eye   = 75
     skull_rock = 25
     skull_cairn = 25
-	candelabra = 25
+    candelabra = 25
   }
   tex_SPCDOOR1 = { WOODGARG=50, WOOD4=50, WOODMET2=50, SPCDOOR4=50 }
   tex_TEKLITE = { REDWALL=50, METAL=50, SP_FACE2=50 }
@@ -627,7 +627,7 @@ PREFABS.Joiner_scionox_simple_lights_door_53 =
     evil_eye   = 75
     skull_rock = 25
     skull_cairn = 25
-	candelabra = 25
+    candelabra = 25
   }
   tex_SPCDOOR1 = { WOODGARG=50, WOOD4=50, WOODMET2=50, SPCDOOR4=50 }
   tex_DOORRED = "DOORRED2"
@@ -644,7 +644,7 @@ PREFABS.Joiner_scionox_simple_lights_door_54 =
     evil_eye   = 75
     skull_rock = 25
     skull_cairn = 25
-	candelabra = 25
+    candelabra = 25
   }
   tex_SPCDOOR1 = { WOODGARG=50, WOOD4=50, WOODMET2=50, SPCDOOR4=50 }
   tex_DOORRED = "DOORBLU2"
@@ -662,7 +662,7 @@ PREFABS.Joiner_scionox_simple_lights_door_55 =
     evil_eye   = 75
     skull_rock = 25
     skull_cairn = 25
-	candelabra = 25
+    candelabra = 25
   }
   tex_SPCDOOR1 = { WOODGARG=50, WOOD4=50, WOODMET2=50, SPCDOOR4=50 }
   tex_DOORRED = "DOORYEL2"
@@ -703,7 +703,7 @@ PREFABS.Joiner_scionox_simple_lights_door_58 =
     evil_eye   = 75
     skull_rock = 25
     skull_cairn = 25
-	candelabra = 25
+    candelabra = 25
   }
   tex_SPCDOOR1 = { WOODGARG=50, WOOD4=50, WOODMET2=50, SPCDOOR4=50 }
   tex_DOORRED = "DOORRED2"

@@ -34,8 +34,8 @@ PREFABS.Start_scionox_quakeish_portal_start_2 =
     evil_eye   = 50
     impaled_human = 50
     impaled_twitch = 50
-	skull_cairn = 50
-	skull_rock = 50
+    skull_cairn = 50
+    skull_rock = 50
   }
 }
 
@@ -61,7 +61,7 @@ PREFABS.Start_scionox_quakeish_portal_start_4 =
     evil_eye   = 50
     impaled_human = 50
     impaled_twitch = 50
-	skull_cairn = 50
-	skull_rock = 50
+    skull_cairn = 50
+    skull_rock = 50
   }
 }

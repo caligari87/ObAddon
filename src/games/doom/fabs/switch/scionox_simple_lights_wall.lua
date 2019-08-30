@@ -48,7 +48,7 @@ PREFABS.Switch_scionox_simple_lights_wall_5 =
   thing_2028 =
   {
     mercury_lamp = 50
-	mercury_small = 50
+    mercury_small = 50
     burning_barrel = 25
   }
 }
@@ -63,7 +63,7 @@ PREFABS.Switch_scionox_simple_lights_wall_6 =
     blue_torch   = 50
     green_torch = 50
     red_torch = 50
-	blue_torch_sm   = 50
+    blue_torch_sm   = 50
     green_torch_sm = 50
     red_torch_sm = 50
   }
@@ -76,7 +76,7 @@ PREFABS.Switch_scionox_simple_lights_wall_7 =
   thing_2028 =
   {
     lamp = 50
-	tech_column = 50
+    tech_column = 50
   }
 }
 PREFABS.Switch_scionox_simple_lights_wall_8 =
@@ -88,7 +88,7 @@ PREFABS.Switch_scionox_simple_lights_wall_8 =
   thing_2028 =
   {
     mercury_lamp = 50
-	mercury_small = 50
+    mercury_small = 50
     burning_barrel = 25
   }
 }
@@ -121,7 +121,7 @@ PREFABS.Switch_scionox_simple_lights_wall_11 =
   {
     mercury_lamp = 50
     burning_barrel = 50
-	blue_torch   = 25
+    blue_torch   = 25
     green_torch = 25
     red_torch = 25
   }
@@ -137,6 +137,6 @@ PREFABS.Switch_scionox_simple_lights_wall_12 =
     evil_eye   = 75
     skull_rock = 25
     skull_cairn = 25
-	candelabra = 25
+    candelabra = 25
   }
 }

@@ -22,12 +22,12 @@ PREFABS.Joiner_scionox_locked_lift =
 
   delta_h  = 128
   nearby_h = 128
-  
+
   tag_1  = "?door_tag"
   door_action = "S1_OpenDoor"
 
   can_flip = true
-  
+
   tex_COMPBLUE = { COMPBLUE=50, METAL1=50, SHAWN2=50, SILVER1=50, SPACEW4=60, TEKLITE=50 }
 }
 PREFABS.Joiner_scionox_locked_lift_2 =
@@ -91,13 +91,13 @@ PREFABS.Joiner_scionox_locked_lift_7 =
   nearby_h = 128
 
   can_flip = true
-  
+
   tex_COMPBLUE = { COMPBLUE=50, METAL1=50, SHAWN2=50, SILVER1=50, SPACEW4=60, TEKLITE=50 }
 }
 PREFABS.Joiner_scionox_locked_lift_8 =
 {
   template = "Joiner_scionox_locked_lift_7"
-  
+
   key    = "k_blue"
   tex_DOORRED = "DOORBLU"
   line_135     = 133
@@ -105,7 +105,7 @@ PREFABS.Joiner_scionox_locked_lift_8 =
 PREFABS.Joiner_scionox_locked_lift_9 =
 {
   template = "Joiner_scionox_locked_lift_7"
-  
+
   key    = "k_yellow"
   tex_DOORRED = "DOORYEL"
   line_135     = 137
@@ -186,10 +186,10 @@ PREFABS.Joiner_scionox_locked_lift_16 =
 
   delta_h  = 128
   nearby_h = 128
-  
+
   tag_1  = "?door_tag"
   door_action = "S1_OpenDoor"
-  
+
   tex_COMPBLUE = { COMPBLUE=50, METAL1=50, SHAWN2=50, SILVER1=50, SPACEW4=60, TEKLITE=50 }
 }
 PREFABS.Joiner_scionox_locked_lift_17 =
@@ -233,13 +233,13 @@ PREFABS.Joiner_scionox_locked_lift_19 =
 
   delta_h  = 128
   nearby_h = 128
-  
+
   tex_COMPBLUE = { COMPBLUE=50, METAL1=50, SHAWN2=50, SILVER1=50, SPACEW4=60, TEKLITE=50 }
 }
 PREFABS.Joiner_scionox_locked_lift_20 =
 {
   template = "Joiner_scionox_locked_lift_19"
-  
+
   key    = "k_blue"
   tex_DOORRED = "DOORBLU"
   line_135     = 133
@@ -247,7 +247,7 @@ PREFABS.Joiner_scionox_locked_lift_20 =
 PREFABS.Joiner_scionox_locked_lift_21 =
 {
   template = "Joiner_scionox_locked_lift_19"
-  
+
   key    = "k_yellow"
   tex_DOORRED = "DOORYEL"
   line_135     = 137

@@ -33,8 +33,8 @@ PREFABS.Exit_scionox_quakeish_portal_exit_2 =
     evil_eye   = 50
     impaled_human = 50
     impaled_twitch = 50
-	skull_cairn = 50
-	skull_rock = 50
+    skull_cairn = 50
+    skull_rock = 50
   }
 }
 PREFABS.Exit_scionox_quakeish_portal_exit_3 =
@@ -49,8 +49,8 @@ PREFABS.Exit_scionox_quakeish_portal_exit_3 =
     evil_eye   = 50
     impaled_human = 50
     impaled_twitch = 50
-	skull_cairn = 50
-	skull_rock = 50
+    skull_cairn = 50
+    skull_rock = 50
   }
   thing_26 =
   {
@@ -59,8 +59,8 @@ PREFABS.Exit_scionox_quakeish_portal_exit_3 =
     evil_eye   = 50
     impaled_human = 50
     impaled_twitch = 50
-	skull_cairn = 50
-	skull_rock = 50
+    skull_cairn = 50
+    skull_rock = 50
   }
   thing_27 =
   {
@@ -69,8 +69,8 @@ PREFABS.Exit_scionox_quakeish_portal_exit_3 =
     evil_eye   = 50
     impaled_human = 50
     impaled_twitch = 50
-	skull_cairn = 50
-	skull_rock = 50
+    skull_cairn = 50
+    skull_rock = 50
   }
   thing_28 =
   {
@@ -79,7 +79,7 @@ PREFABS.Exit_scionox_quakeish_portal_exit_3 =
     evil_eye   = 50
     impaled_human = 50
     impaled_twitch = 50
-	skull_cairn = 50
-	skull_rock = 50
+    skull_cairn = 50
+    skull_rock = 50
   }
 }

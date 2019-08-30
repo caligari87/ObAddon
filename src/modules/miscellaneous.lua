@@ -216,7 +216,7 @@ OB_MODULES["misc"] =
 
     { name="doors",       label=_("Doors"),          choices=STYLE_CHOICES }
     { name="keys",        label=_("Keyed Doors"),    choices=STYLE_CHOICES }
-	{ name="trikeys",     label=_("Triple-Keyed Doors"),          choices=STYLE_CHOICES,
+    { name="trikeys",     label=_("Triple-Keyed Doors"),          choices=STYLE_CHOICES,
       tooltip = "Controls the chance to get three key door whenever three keys are present.",
     }
     { name="switches",    label=_("Switched Doors"), choices=STYLE_CHOICES, gap=1 }

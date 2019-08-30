@@ -16,7 +16,7 @@ PREFABS.Switch_scionox_simple_lights_2 =
 {
   template = "Switch_scionox_simple_lights"
   theme  = "urban"
-  
+
   tex_SW1TEK = "SW1SLAD"
   tex_TEKGREN2 = "SLADWALL"
   thing_2028 = "mercury_small"
@@ -25,7 +25,7 @@ PREFABS.Switch_scionox_simple_lights_3 =
 {
   template = "Switch_scionox_simple_lights"
   theme  = "hell"
-  
+
   tex_SW1TEK = "SW1PANEL"
   tex_TEKGREN2 = "PANCASE2"
   thing_2028 = "candelabra"

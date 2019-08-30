@@ -13,7 +13,7 @@ PREFABS.Switch_scionox_penta =
   uses_epic_textures = true
 
   tag_1  = "?switch_tag"
-  
+
   thing_25 =
   {
     skull_pole = 50
@@ -21,8 +21,8 @@ PREFABS.Switch_scionox_penta =
     evil_eye   = 50
     impaled_human = 50
     impaled_twitch = 50
-	skull_cairn = 50
-	skull_rock = 50
+    skull_cairn = 50
+    skull_rock = 50
   }
   thing_26 =
   {
@@ -31,8 +31,8 @@ PREFABS.Switch_scionox_penta =
     evil_eye   = 50
     impaled_human = 50
     impaled_twitch = 50
-	skull_cairn = 50
-	skull_rock = 50
+    skull_cairn = 50
+    skull_rock = 50
   }
   thing_27 =
   {
@@ -41,8 +41,8 @@ PREFABS.Switch_scionox_penta =
     evil_eye   = 50
     impaled_human = 50
     impaled_twitch = 50
-	skull_cairn = 50
-	skull_rock = 50
+    skull_cairn = 50
+    skull_rock = 50
   }
   thing_28 =
   {
@@ -51,8 +51,8 @@ PREFABS.Switch_scionox_penta =
     evil_eye   = 50
     impaled_human = 50
     impaled_twitch = 50
-	skull_cairn = 50
-	skull_rock = 50
+    skull_cairn = 50
+    skull_rock = 50
   }
   thing_29 =
   {
@@ -61,7 +61,7 @@ PREFABS.Switch_scionox_penta =
     evil_eye   = 50
     impaled_human = 50
     impaled_twitch = 50
-	skull_cairn = 50
-	skull_rock = 50
+    skull_cairn = 50
+    skull_rock = 50
   }
 }

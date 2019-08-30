@@ -20,7 +20,7 @@ PREFABS.Exit_scionox_quakeish_gate_exit =
 
   x_fit  = "frame"
   y_fit  = "top"
-  
+
   tex_EVILFAC2 = { EVILFAC2=50, EVILFAC4=50, EVILFAC5=50, EVILFAC6=50, EVILFAC7=50, EVILFAC8=50, EVILFAC9=50, EVILFACA=50 }
 }
 PREFABS.Exit_scionox_quakeish_gate_exit_2 =
