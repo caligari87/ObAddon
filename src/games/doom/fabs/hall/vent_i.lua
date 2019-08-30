@@ -57,3 +57,28 @@ PREFABS.Hallway_vent_i_lights =
     STEP3 = 50
   }
 }
+
+-- i-piece with single side door
+
+PREFABS.Hallway_vent_i_side_door_tech =
+{
+  template = "Hallway_vent_i1"
+  map = "MAP04"
+
+  prob = 10
+
+  theme = "!hell"
+}
+
+PREFABS.Hallway_vent_i_side_door_gothic =
+{
+  template = "Hallway_vent_i1"
+  map = "MAP04"
+
+  prob = 10
+
+  theme = "hell"
+
+  tex_DOOR3 = "WOODMET1"
+  tex_DOORSTOP = "METAL"
+}
