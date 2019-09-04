@@ -6,6 +6,8 @@ PREFABS.Item_craneo_smasher_tech =
   prob = 10
   theme = "!hell"
 
+  item_kind = "!key"
+
   where = "seeds"
   seed_w = 1
   seed_h = 1
