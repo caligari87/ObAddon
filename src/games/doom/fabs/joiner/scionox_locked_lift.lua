@@ -334,6 +334,7 @@ PREFABS.Joiner_scionox_locked_lift_29 =
 PREFABS.Joiner_scionox_locked_lift_30 =
 {
   template = "Joiner_scionox_locked_lift_19"
+  map    = "MAP09"
   key = "k_ALL"
   theme  = "hell"
   rank   = 2
