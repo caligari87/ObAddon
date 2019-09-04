@@ -1213,6 +1213,7 @@ DOOM.THEMES =
       gtd_window_absurdly_open = 25
       gtd_window_quakeish = 30
       gtd_window_low = 30
+      gtd_window_weabdows = 15
     }
 
     fence_posts =
@@ -1504,6 +1505,7 @@ DOOM.THEMES =
       gtd_window_quakeish = 20
       gtd_window_low = 55
       gtd_window_arrowslit = 10
+      gtd_window_weabdows = 70
     }
 
     fence_posts =
