@@ -45,7 +45,7 @@ PREFABS.Hallway_vent_i_lights =
   template = "Hallway_vent_i1"
   map = "MAP03"
 
-  prob = 15
+  prob = 20
 
   flat_FAN1 =
   {
@@ -65,7 +65,7 @@ PREFABS.Hallway_vent_i_side_door_tech =
   template = "Hallway_vent_i1"
   map = "MAP04"
 
-  prob = 10
+  prob = 17
 
   theme = "!hell"
 }
@@ -75,7 +75,7 @@ PREFABS.Hallway_vent_i_side_door_gothic =
   template = "Hallway_vent_i1"
   map = "MAP04"
 
-  prob = 10
+  prob = 17
 
   theme = "hell"
 
@@ -88,7 +88,7 @@ PREFABS.Hallway_vent_i_side_window =
   template = "Hallway_vent_i1"
   map = "MAP05"
 
-  prob = 10
+  prob = 17
 }
 
 PREFABS.Hallway_vent_i_side_lights_tech =
@@ -96,7 +96,7 @@ PREFABS.Hallway_vent_i_side_lights_tech =
   template = "Hallway_vent_i1"
   map = "MAP06"
 
-  prob = 10
+  prob = 17
 
   theme = "!hell"
 }
@@ -106,7 +106,7 @@ PREFABS.Hallway_vent_i_side_lights_gothic =
   template = "Hallway_vent_i1"
   map = "MAP06"
 
-  prob = 10
+  prob = 17
 
   theme = "hell"
 

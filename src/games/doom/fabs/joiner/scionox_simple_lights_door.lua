@@ -421,7 +421,7 @@ PREFABS.Joiner_scionox_simple_lights_door_37 =
   deep   = 16
   over   = 16
 
-  x_fit  = "frame"
+  x_fit  = { 132,252 }
   y_fit  = "frame"
 
   tex_BIGDOOR5 = { BIGDOOR5=50, BIGDOOR7=50 }
@@ -433,18 +433,24 @@ PREFABS.Joiner_scionox_simple_lights_door_38 =
 {
   template = "Joiner_scionox_simple_lights_door_37"
   key = "k_blue"
+
   thing_46 = "blue_torch"
   thing_57 = "blue_torch_sm"
   line_33     = 32
+
+  tex_DOORRED2 = "DOORBLU2"
 }
 
 PREFABS.Joiner_scionox_simple_lights_door_39 =
 {
   template = "Joiner_scionox_simple_lights_door_37"
   key = "k_yellow"
+
   thing_46 = "green_torch"
   thing_57 = "green_torch_sm"
   line_33     = 34
+
+  tex_DOORRED2 = "DOORYEL2"
 }
 
 PREFABS.Joiner_scionox_simple_lights_door_40 =

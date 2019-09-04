@@ -15,7 +15,7 @@ PREFABS.Locked_armaetus_bars_red_tech =
   deep   = 16
   over   = 16
 
-  prob   = 150
+  prob   = 125
 
   y_fit = { 36,44 , 116,124 }
   x_fit = "frame"
@@ -64,7 +64,7 @@ PREFABS.Locked_armaetus_bars_red_hell =
   deep   = 16
   over   = 16
 
-  prob   = 150
+  prob   = 125
 
   y_fit = { 36,44 , 116,124 }
   x_fit = "frame"

@@ -65,7 +65,7 @@ PREFABS.Hallway_deuce_i_windowed =
   template = "Hallway_deuce_i1"
   map = "MAP03"
 
-  prob = 12
+  prob = 17
 
   tex_DOORTRAK = "SUPPORT3"
   tex_METAL5 = "METAL"
@@ -77,7 +77,7 @@ PREFABS.Hallway_deuce_i_windowed_tech =
   map    = "MAP03"
   theme  = "tech"
 
-  prob = 12
+  prob = 17
 
   tex_METAL = "SHAWN2"
   tex_DOORTRAK = "DOORSTOP"
@@ -90,7 +90,7 @@ PREFABS.Hallway_deuce_i_side_cage =
   template = "Hallway_deuce_i1"
   map = "MAP04"
 
-  prob = 12
+  prob = 17
 
   tex_DOORTRAK = "SUPPORT3"
   tex_METAL5 = "METAL"
@@ -102,7 +102,7 @@ PREFABS.Hallway_deuce_i_side_cage_tech =
   map    = "MAP04"
   theme  = "tech"
 
-  prob = 12
+  prob = 17
 
   tex_METAL = "SHAWN2"
   tex_DOORTRAK = "DOORSTOP"
@@ -118,7 +118,7 @@ PREFABS.Hallway_deuce_i_stout =
   template = "Hallway_deuce_i1"
   map = "MAP05"
 
-  prob = 12
+  prob = 17
 }
 
 PREFABS.Hallway_deuce_i_stout_tech =
@@ -127,7 +127,7 @@ PREFABS.Hallway_deuce_i_stout_tech =
   map = "MAP05"
   theme  = "tech"
 
-  prob = 12
+  prob = 17
 
   tex_METAL = "SHAWN2"
   flat_CEIL5_2 = "FLAT23"
