@@ -12,7 +12,7 @@ PREFABS.Joiner_hell_alcove_tomb_secret =
   shape  = "I"
 
   seed_w = 2
-  seed_h = 1
+  seed_h = 2
 
   deep = 16
   over = 16
