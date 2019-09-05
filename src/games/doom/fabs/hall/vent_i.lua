@@ -68,6 +68,8 @@ PREFABS.Hallway_vent_i_side_door_tech =
   prob = 17
 
   theme = "!hell"
+
+  can_flip = true
 }
 
 PREFABS.Hallway_vent_i_side_door_gothic =
@@ -81,6 +83,8 @@ PREFABS.Hallway_vent_i_side_door_gothic =
 
   tex_DOOR3 = "WOODMET1"
   tex_DOORSTOP = "METAL"
+
+  can_flip = true
 }
 
 PREFABS.Hallway_vent_i_side_window =
@@ -89,6 +93,8 @@ PREFABS.Hallway_vent_i_side_window =
   map = "MAP05"
 
   prob = 17
+
+  can_flip = true
 }
 
 PREFABS.Hallway_vent_i_side_lights_tech =
@@ -99,6 +105,8 @@ PREFABS.Hallway_vent_i_side_lights_tech =
   prob = 17
 
   theme = "!hell"
+
+  can_flip = true
 }
 
 PREFABS.Hallway_vent_i_side_lights_gothic =
@@ -111,4 +119,6 @@ PREFABS.Hallway_vent_i_side_lights_gothic =
   theme = "hell"
 
   tex_LITE3 = "ROCKRED1"
+
+  can_flip = true
 }

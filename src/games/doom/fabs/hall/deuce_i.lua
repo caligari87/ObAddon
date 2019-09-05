@@ -69,6 +69,8 @@ PREFABS.Hallway_deuce_i_windowed =
 
   tex_DOORTRAK = "SUPPORT3"
   tex_METAL5 = "METAL"
+
+  can_flip = true
 }
 
 PREFABS.Hallway_deuce_i_windowed_tech =
@@ -83,6 +85,8 @@ PREFABS.Hallway_deuce_i_windowed_tech =
   tex_DOORTRAK = "DOORSTOP"
   tex_METAL5 = "GRAY7"
   flat_CEIL5_2 = "FLAT23"
+
+  can_flip = true
 }
 
 PREFABS.Hallway_deuce_i_side_cage =
@@ -94,6 +98,8 @@ PREFABS.Hallway_deuce_i_side_cage =
 
   tex_DOORTRAK = "SUPPORT3"
   tex_METAL5 = "METAL"
+
+  can_flip = true
 }
 
 PREFABS.Hallway_deuce_i_side_cage_tech =
@@ -111,6 +117,8 @@ PREFABS.Hallway_deuce_i_side_cage_tech =
 
   tex_STEP3 = "STEP4"
   flat_CEIL1_3 = "FLAT17"
+
+  can_flip = true
 }
 
 PREFABS.Hallway_deuce_i_stout =
@@ -119,6 +127,8 @@ PREFABS.Hallway_deuce_i_stout =
   map = "MAP05"
 
   prob = 17
+
+  can_flip = true
 }
 
 PREFABS.Hallway_deuce_i_stout_tech =
@@ -134,4 +144,6 @@ PREFABS.Hallway_deuce_i_stout_tech =
 
   tex_CRACKLE2 = "COMPWERD"
   tex_SUPPORT3 = "DOORSTOP"
+
+  can_flip = true
 }
