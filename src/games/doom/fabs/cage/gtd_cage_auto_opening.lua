@@ -28,7 +28,7 @@ PREFABS.Cage_auto_open_smaller =
   theme    = "!hell"
 
   seed_w = 2
-  seed_h = 1
+  seed_h = 2
 
   x_fit  = { 80,96 , 160,176 }
   y_fit  = { 48,80 }

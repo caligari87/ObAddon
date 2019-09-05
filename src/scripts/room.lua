@@ -3768,9 +3768,10 @@ function Room_cleanup_stairs_to_nowhere(R)
         -- convert nowhere areas to just normal areas (borrow info from main area)
 
         A.floor_h = SAS.floor_h
+        A.ceil_h = SA.ceil_h
 
         A.floor_mat = SAS.floor_mat
-        A.ceil_mat = SAS.ceil_mat
+        A.ceil_mat = SA.ceil_mat
 
         if A.room:get_env() == "building" then
           A.is_porch = nil
