@@ -3,7 +3,7 @@ PREFABS.Wall_fake_door =
   file   = "wall/gtd_wall_urban.wad"
   map    = "MAP01"
 
-  prob   = 30
+  prob   = 60
   theme = "urban"
 
   on_liquids = "never"
@@ -22,13 +22,21 @@ PREFABS.Wall_fake_door =
 
   x_fit = "frame"
   z_fit = "top"
+
+  tex_DOOR3 =
+  {
+    DOOR1 = 50
+    DOOR3 = 50
+  }
 }
 
-PREFABS.Wall_fake_door2 =
+PREFABS.Wall_fake_door_tech =
 {
   template = "Wall_fake_door"
 
-  tex_DOOR3 = "DOOR1"
+  theme = "tech"
+
+  prob  = 5
 }
 
 PREFABS.Wall_modern_piping =

@@ -1105,6 +1105,11 @@ function Edge_new_opposite(kind, S, dir, long)
 
   for k = 1, long-1 do
     N = N:neighbor(geom.RIGHT[dir])
+    if not N then
+      S.error = true
+      gui.printf(table.tostr(S) .. "\n")
+      gui.printf(table.tostr(S.area) .. "\n")
+    end
     assert(N)
   end
 
