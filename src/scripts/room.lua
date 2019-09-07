@@ -2196,7 +2196,7 @@ function Room_prepare_hallways()
       -- allow occasional flippage of I pieces
       if piece.prefab_def.can_flip and piece.shape == "I" then
         if rand.odds(50) then
-          piece.hallway_flip = true
+          piece.hallway_mirror = true
         end
       end
 
