@@ -1746,6 +1746,8 @@ ZDOOM_STORIES.QUIT_MESSAGES =
   [[The prophet Nostradamus predicted the dead would rise when there is no more room in hell. He didn't predict Oblige would be generating new rooms.]],
   [[You probably noticed by now that every time quit messages show up, you're forced to agree with the statement when you quit by choosing 'yes'.]],
   [[Thanos needs two fingers to erase half the universe. Oblige builds a whole with only one.]],
+  [[Oblige is the machine. ObAddon is the ghost in the machine.]], -- credits to FrozSoul!
+  [[Oblige can generate more maps than you will ever speak words in your whole life.]],
 
   -- helpful // technical
   [[ObAddon is always improving. Stop by our Discord server, talk to the denizens and report bugs to us there!]],

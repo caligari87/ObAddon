@@ -2192,6 +2192,14 @@ function Room_prepare_hallways()
       Room_pick_joiner_prefab(assert(piece.conn), piece)
     else
       pick_hallway_fab(R, piece)
+
+      -- allow occasional flippage of I pieces
+      if piece.prefab_def.can_flip and piece.shape == "I" then
+        if rand.odds(50) then
+          piece.hallway_flip = true
+        end
+      end
+
     end
 
     local delta_h = piece.prefab_def.delta_h or 0

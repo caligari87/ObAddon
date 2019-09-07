@@ -12,6 +12,7 @@ PREFABS.Switch_scionox_simple_lights =
 
   tag_1  = "?switch_tag"
 }
+
 PREFABS.Switch_scionox_simple_lights_2 =
 {
   template = "Switch_scionox_simple_lights"
@@ -21,6 +22,7 @@ PREFABS.Switch_scionox_simple_lights_2 =
   tex_TEKGREN2 = "SLADWALL"
   thing_2028 = "mercury_small"
 }
+
 PREFABS.Switch_scionox_simple_lights_3 =
 {
   template = "Switch_scionox_simple_lights"
@@ -30,6 +32,7 @@ PREFABS.Switch_scionox_simple_lights_3 =
   tex_TEKGREN2 = "PANCASE2"
   thing_2028 = "candelabra"
 }
+
 PREFABS.Switch_scionox_simple_lights_4 =
 {
   template = "Switch_scionox_simple_lights"
@@ -44,6 +47,7 @@ PREFABS.Switch_scionox_simple_lights_4 =
     red_torch = 15
   }
 }
+
 PREFABS.Switch_scionox_simple_lights_5 =
 {
   template = "Switch_scionox_simple_lights"
@@ -62,6 +66,7 @@ PREFABS.Switch_scionox_simple_lights_5 =
     red_torch_sm = 50
   }
 }
+
 PREFABS.Switch_scionox_simple_lights_6 =
 {
   template = "Switch_scionox_simple_lights"
@@ -75,6 +80,7 @@ PREFABS.Switch_scionox_simple_lights_6 =
     skull_cairn = 50
   }
 }
+
 PREFABS.Switch_scionox_simple_lights_7 =
 {
   template = "Switch_scionox_simple_lights"

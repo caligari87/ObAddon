@@ -2491,6 +2491,9 @@ chunk.goal.action = "S1_OpenDoor"  -- FIXME IT SHOULD BE SET WHEN JOINER IS REND
   -- MSSP: special code for flipped hallway sections, mostly for stairs
   if chunk.hallway_flip then
     T.mirror_y = chunk.sw * SEED_SIZE / 2
+    if chunk.prefab_def.delta_h == 0 or not chunk.prefab_def.delta_h then
+      T.mirror_x = chunk.sw * SEED_SIZE / 2
+    end
   end
 
   Ambient_push(A.lighting)

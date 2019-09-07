@@ -2443,7 +2443,7 @@ SPROUT_wide_hallway =
 HALL_2_GROW_I1 =
 {
   pass = "hall_2"
-  prob = 40 --25
+  prob = 55 --40
 
   structure =
   {
@@ -2459,7 +2459,7 @@ HALL_2_GROW_I1 =
 HALL_2_GROW_L1 =
 {
   pass = "hall_2"
-  prob = 50
+  prob = 35 --50
 
   structure =
   {
