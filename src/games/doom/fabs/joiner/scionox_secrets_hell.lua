@@ -6,6 +6,7 @@ PREFABS.Joiner_hell_alcove_tomb_secret =
 
   prob   = 50
   theme  = "hell"
+  env    = "!cave"
   key    = "secret"
 
   where  = "seeds"
