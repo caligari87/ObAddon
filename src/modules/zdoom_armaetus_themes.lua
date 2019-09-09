@@ -1592,6 +1592,100 @@ ARMAETUS_THEMES =
     }
   }
 
+  -- MSSP: emphasis on a sort of dilapitated, grimy, semi-industrial look
+  urban_darkGrimyIndustrial =
+  {
+    env = "building"
+    prob = 75
+
+    walls =
+    {
+      BRONZEG1 = 30
+      BRONZEG2 = 30
+      BRONZEG3 = 30
+      BROWNGR2 = 18
+      BROWNGR3 = 18
+      BROWNGR4 = 18
+      DRKCMT01 = 20
+      DRKCMT02 = 20
+      DRKCMT03 = 20
+      DRKCMT04 = 20
+      DRKCMT05 = 40
+      DRKCMT06 = 40
+      GOTH15 = 15
+      GOTH17 = 15
+      GOTH18 = 15
+      GOTH31 = 50
+      GOTH36 = 15
+      GOTH37 = 15
+      METAL8 = 20
+      METAL9 = 20
+      METL01 = 10
+      METL02 = 25
+      METL03 = 25
+      RUSTWALL = 60
+      RUSTWAL2 = 60
+    }
+
+    floors =
+    {
+      FLAT1 = 40
+
+      BLACK0 = 25
+      BMARB1 = 25
+      DARKF01 = 50
+      DARKF02 = 50
+      DARKF03 = 50
+      DARKM01 = 50
+      G06 = 50
+      G09 = 50
+      G10 = 50
+      G14 = 25
+      G15 = 50
+      G18 = 50
+      GMET02 = 50
+      GMET04 = 50
+      GMET05 = 50
+      GMET06 = 50
+      FLOOR46D = 50
+      FLOOR46E = 50
+      FLOOR51C = 50
+      GRATE2 = 50
+      GRATE3 = 75
+      GRATE4 = 50
+      GRATE7 = 50
+      GRATE8 = 50
+      MEM01 = 50
+      QFLAT09 = 50
+      QFLAT10 = 50
+      TILES5 = 45
+    }
+
+    ceilings =
+    {
+      CEIL3_5 = 50
+      CEIL5_1 = 50
+
+      BLACK0 = 50
+      BMARB1 = 50
+      DARKF01 = 50
+      DARKF02 = 50
+      DARKF03 = 50
+      DARKM01 = 50
+      G15 = 50
+      GMET01 = 50
+      GMET02 = 20
+      GMET03 = 50
+      GMET04 = 50
+      GMET05 = 50
+      GMET06 = 15
+      GRATE4 = 50
+      MEM01 = 50
+      QFLAT06 = 50
+      QFLAT09 = 50
+    }
+  }
+
   urban_armaetuscave =
   {
     env  = "cave"
