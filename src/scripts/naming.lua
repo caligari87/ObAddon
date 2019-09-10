@@ -1283,10 +1283,10 @@ namelib.NAMES =
         -- disaster
         Tragedy=10, Famine=10, Chaos=15, Struggle=10,
 
-        -- non-sectarian behavior
+        -- religious discord, that kind of fun stuff
         Iconoclasm=10, Defection=10,
         Blasphemy=10, Paganism=10,
-        Schism=10, Secularism=10, Sin=10, Mayhem=10,
+        Schism=10, Sectarianism=10, Sin=10, Mayhem=10,
         Strain=5, Supplication=5, Witchcraft=5,
         Heresy=10,
 
