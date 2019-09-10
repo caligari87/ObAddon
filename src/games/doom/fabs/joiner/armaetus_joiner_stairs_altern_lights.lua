@@ -5,7 +5,7 @@ PREFABS.Joiner_armaetus_stairs_alternating_lights =
   prob   = 180
   style  = "steepness"
 
-  env    = "!hell"
+  theme  = "!hell"
 
   where  = "seeds"
   shape  = "I"
@@ -31,7 +31,7 @@ PREFABS.Joiner_armaetus_stairs_alternating_lights_hell =
 
   prob = 180
 
-  env = "hell"
+  theme = "hell"
 
   tex_LITE3 = "SP_FACE2"
   tex_DOORSTOP = "DOORTRAK"
