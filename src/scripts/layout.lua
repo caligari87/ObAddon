@@ -1624,6 +1624,11 @@ function Layout_decorate_rooms(pass)
 
     if A.room then
       reqs.env = A.room:get_env()
+
+      if A.room.theme_override then
+        reqs.theme_override = A.room.theme_override
+      end
+
     end
 
     -- hack for porches, because it's weird to see tree planters
