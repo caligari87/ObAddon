@@ -2386,7 +2386,7 @@ DOOM.ROOM_THEMES =
   tech_VeryShiny =
   {
     env = "building"
-    prob = 5
+    prob = 8
 
     walls =
     {
@@ -2411,7 +2411,7 @@ DOOM.ROOM_THEMES =
   tech_VeryTekky =
   {
     env  = "building"
-    prob = 5
+    prob = 8
 
     walls =
     {
@@ -2437,7 +2437,7 @@ DOOM.ROOM_THEMES =
   tech_VeryBluey =
   {
     env = "building"
-    prob = 5
+    prob = 8
 
     walls =
     {
@@ -2464,6 +2464,67 @@ DOOM.ROOM_THEMES =
 
       FLOOR4_1 = 10
       FLAT23 = 10
+    }
+  }
+
+
+  -- exactly the same Deimos's hellish room -
+  -- now available for Doom2 Tech, but very rarely!
+  -- note: some Doom1-only textures need to be properly
+  -- substituted to their Doom2 variations, or closest possible
+  tech_deimosRoom =
+  {
+    env = "building"
+    prob = 8
+
+    theme_override = "deimos"
+
+    walls =
+    {
+      MARBLE1 = 15
+      MARBLE2 = 15
+      MARBLE3 = 15
+      BROWNGRN = 15
+      COMPSPAN = 15
+      BROWN1 = 15
+      STARTAN3 = 15
+      STARG3 = 15
+      WOOD1 = 15
+      WOOD3 = 15
+      WOOD5 = 15
+      BROVINE = 15
+      BROVINE2 = 15
+      ICKWALL3 = 15
+      GRAY7 = 15
+    }
+
+    floors =
+    {
+      DEM1_5 = 30
+      DEM1_6 = 50
+      FLAT10 = 5
+      FLOOR7_1 = 5
+      FLOOR7_2 = 50
+      FLOOR4_1 = 30
+      FLOOR4_6 = 20
+      FLOOR4_8 = 50
+      FLOOR5_2 = 35
+      FLAT1 = 40
+      FLAT5 = 30
+      FLAT14 = 10
+    }
+
+    ceilings =
+    {
+      FLOOR7_2 = 50
+      DEM1_5 = 50
+      DEM1_6 = 30
+      FLOOR6_2 = 5
+      CEIL5_1 = 30
+      CEIL3_3 = 50
+      CEIL3_5 = 30
+      CEIL4_1 = 10
+      CEIL4_2 = 10
     }
   }
 
@@ -3657,7 +3718,6 @@ DOOM.ROOM_THEMES =
   }
 
 
-  -- TODO : this is same as hell_Wood, differentiate it...
   urban_Wood =
   {
     env  = "building"

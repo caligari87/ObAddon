@@ -1863,6 +1863,10 @@ stderrf("Cages in %s [%s pressure] --> any_prob=%d  per_prob=%d\n",
       reqs.height = R.walkway_height
     end
 
+    if R.theme.theme_override then
+      reqs.theme_override = R.theme.theme_override
+    end
+
     chunk.prefab_def = Fab_pick(reqs, "none_ok")
 
     if not chunk.prefab_def then
