@@ -32,51 +32,51 @@ PREFABS.Pic_armaetus_hell_cages2 =
   map = "MAP02"
 
   thing_75 =
-   {
-   hang_twitching = 50
-   hang_torso = 50
-   hang_leg   = 50
-   hang_leg_gone = 50
-   gutted_torso1 = 50
-   gutted_torso2 = 50
-   gutted_torso3 = 50
-   gutted_torso4 = 50
-   }
+  {
+    hang_twitching = 50
+    hang_torso = 50
+    hang_leg   = 50
+    hang_leg_gone = 50
+    gutted_torso1 = 50
+    gutted_torso2 = 50
+    gutted_torso3 = 50
+    gutted_torso4 = 50
+  }
 
   thing_60 =
-   {
-   hang_twitching = 50
-   hang_torso = 50
-   hang_leg   = 50
-   hang_leg_gone = 50
-   gutted_torso1 = 50
-   gutted_torso2 = 50
-   gutted_torso3 = 50
-   gutted_torso4 = 50
-   }
+  {
+    hang_twitching = 50
+    hang_torso = 50
+    hang_leg   = 50
+    hang_leg_gone = 50
+    gutted_torso1 = 50
+    gutted_torso2 = 50
+    gutted_torso3 = 50
+    gutted_torso4 = 50
+  }
 
-   thing_76 =
-   {
-   hang_twitching = 50
-   hang_torso = 50
-   hang_leg   = 50
-   hang_leg_gone = 50
-   gutted_torso1 = 50
-   gutted_torso2 = 50
-   gutted_torso3 = 50
-   gutted_torso4 = 50
-   }
+  thing_76 =
+  {
+    hang_twitching = 50
+    hang_torso = 50
+    hang_leg   = 50
+    hang_leg_gone = 50
+    gutted_torso1 = 50
+    gutted_torso2 = 50
+    gutted_torso3 = 50
+    gutted_torso4 = 50
+    }
 
-   thing_63 =
-   {
-   hang_twitching = 50
-   hang_torso = 50
-   hang_leg   = 50
-   hang_leg_gone = 50
-   gutted_torso1 = 50
-   gutted_torso2 = 50
-   gutted_torso3 = 50
-   gutted_torso4 = 50
-   }
+  thing_63 =
+  {
+    hang_twitching = 50
+    hang_torso = 50
+    hang_leg   = 50
+    hang_leg_gone = 50
+    gutted_torso1 = 50
+    gutted_torso2 = 50
+    gutted_torso3 = 50
+    gutted_torso4 = 50
+  }
 
 }

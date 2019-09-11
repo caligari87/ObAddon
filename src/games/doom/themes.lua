@@ -2350,7 +2350,7 @@ DOOM.ROOM_THEMES =
   tech_Sladwall =
   {
     env  = "building"
-    prob = 15
+    prob = 20
 
     walls =
     {
@@ -2386,7 +2386,7 @@ DOOM.ROOM_THEMES =
   tech_VeryShiny =
   {
     env = "building"
-    prob = 8
+    prob = 10
 
     walls =
     {
@@ -2411,7 +2411,7 @@ DOOM.ROOM_THEMES =
   tech_VeryTekky =
   {
     env  = "building"
-    prob = 8
+    prob = 10
 
     walls =
     {
@@ -2437,7 +2437,7 @@ DOOM.ROOM_THEMES =
   tech_VeryBluey =
   {
     env = "building"
-    prob = 8
+    prob = 10
 
     walls =
     {
@@ -2475,7 +2475,7 @@ DOOM.ROOM_THEMES =
   tech_deimosRoom =
   {
     env = "building"
-    prob = 8
+    prob = 25
 
     theme_override = "deimos"
 
