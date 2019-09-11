@@ -31,7 +31,7 @@ PREFABS.Joiner_control_room_secret =
 
 PREFABS.Joiner_control_room_secret_2 =
 {
-  template = "Joiner_hell_control_room_secret"
+  template = "Joiner_control_room_secret"
 
   tex_SILVER3 = "COMPSPAN"
   tex_COMPSTA1 = "SPACEW3"
