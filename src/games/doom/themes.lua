@@ -3723,7 +3723,7 @@ DOOM.ROOM_THEMES =
     env  = "building"
     prob = 20
 
-    theme_override = "hell"
+    theme_override = "flesh"
 
     walls =
     {
