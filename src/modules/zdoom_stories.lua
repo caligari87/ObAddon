@@ -1760,7 +1760,15 @@ ZDOOM_STORIES.QUIT_MESSAGES =
   [[Gargantuan or Transcendent maps looking like Minecraft Far Lands? Please keep Auto Detail on, not much else can be done about that, stupid Doom Engine limits.]],
 
   -- important facts
+  [[By exiting, you are agreeing to subscribe to Cat Facts.]],
+  [[Sewerage is important but HVAC systems is importanter.]],
+
+  -- other important facts, just facts no silly stuff
   [[In 1998, the Undertaker threw Mankind off Hell in a Cell and plummeted 16ft. through an announcer's table.]],
-  [[By exiting, you are agreeing to subscribe to Cat Facts.]]
-  [[Sewerage is important but HVAC systems is importanter.]]
+  [[Did you know Carmack and Hall in Sept 1990, produced a replica of Super Mario Bros 3's first level and using Romero's Dangerous Dave character in place of Mario?]],
+  [[The last of the original id software employees from the OG Doom era as of September 2019 are Kevin Cloud and Donna Jackson.]],
+  [[Many of Tom Hall's ideas for Doom never made it into the game but you can find it all in something called the Doom Bible, floating around online in PDF format.]],
+  [[Despite having the same surname, Adrian and John Carmack are not related.]],
+  [[It is predicted in about 30 to 50 million years, Phobos will crash into Mars due to tidal deceleration. At that point, Mars will probably have many smaller moons or a ring.]],
+  [[Phobos is about 6,000 km (or about 3,700mi) from Mars's surface, compared to our moon's 384,402 km (or 238,856 mi)]],
 }
