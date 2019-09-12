@@ -1212,7 +1212,7 @@ DOOM.THEMES =
       gtd_window_bay = 20
       gtd_window_absurdly_open = 25
       gtd_window_quakeish = 30
-      gtd_window_low = 30
+      gtd_window_low = 20
       gtd_window_weabdows = 15
     }
 
@@ -1503,7 +1503,7 @@ DOOM.THEMES =
       gtd_window_bay = 30
       gtd_window_absurdly_open = 45
       gtd_window_quakeish = 20
-      gtd_window_low = 55
+      gtd_window_low = 35
       gtd_window_arrowslit = 10
       gtd_window_weabdows = 70
     }

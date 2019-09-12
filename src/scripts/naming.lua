@@ -765,6 +765,7 @@ namelib.NAMES =
 
         -- MSSP adds more names too
         ["2 Imps 1 Shotgun"]=10 -- retxirT
+        ["3 Keys 1 Doomguy"]=10 -- there's a '3 guys 1 hammer' thing out there apparently
         ["Bad Optics"]=10 -- retxirT
         ["Engineering Gone Bad"]=10 -- Demios, also based on Romero's "Tech Gone Bad"
         ["Short-Circuit"]=10 -- Demios
