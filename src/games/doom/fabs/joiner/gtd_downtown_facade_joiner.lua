@@ -5,7 +5,8 @@ PREFABS.Joiner_downtown_facade =
 
   prob   = 600
 
-  height = 256
+  delta_h = 0
+  nearby_h = 256
 
   uses_epic_textures = true
 
@@ -82,9 +83,6 @@ PREFABS.Joiner_downtown_facade_flipped =
 {
   template = "Joiner_downtown_facade"
   map = "MAP02"
-
-  height = 128
-  delta_h = 256
 
   env = "building"
   neighbor = "outdoor"
