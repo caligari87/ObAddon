@@ -905,6 +905,7 @@ function Grower_calc_rule_probs()
       and not string.match(absurded_rule,"EMERGENCY")
       and not string.match(absurded_rule,"STREET")
       and not string.match(absurded_rule,"SIDEWALK")
+      and not string.match(absurded_rule,"hallway")
       and SHAPE_GRAMMAR[absurded_rule].is_absurd != true
       and SHAPE_GRAMMAR[absurded_rule].use_prob != 0 then
         SHAPE_GRAMMAR[absurded_rule].use_prob = SHAPE_GRAMMAR[absurded_rule].use_prob * 1000000
