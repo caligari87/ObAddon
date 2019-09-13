@@ -26,6 +26,11 @@ function ZStoryGen_format_story_chunk(story_strings, info)
 
   -- replace special word tags with their proper ones from the name gen
   if info then
+
+    if info.demon_name == "NOUNMEMBERS" then
+      info.demon_name = info.contributor_name
+    end
+
     story_strings = string.gsub(story_strings, "_RAND_DEMON", info.demon_name)
     story_strings = string.gsub(story_strings, "_RAND_ENGLISH_PLACE", info.anglican_name)
     story_strings = string.gsub(story_strings, "_EVULZ", info.demon_title)
@@ -34,8 +39,6 @@ function ZStoryGen_format_story_chunk(story_strings, info)
     story_strings = string.gsub(story_strings, "_MCGUFFIN_TECH", info.tech_mcguffin)
     story_strings = string.gsub(story_strings, "_MCGUFFIN_HELL", info.hell_mcguffin)
     story_strings = string.gsub(story_strings, "_RAND_ENTITY_TECH", info.tech_entity)
-
-    story_strings = string.gsub(story_strings, "NOUNMEMBERS", info.demon_name)
   end
 
   -- dialogue quotes and apostrphes, man
