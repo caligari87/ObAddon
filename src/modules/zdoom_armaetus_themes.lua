@@ -2338,7 +2338,7 @@ ARMAETUS_SINK_DEFS =
   ceiling_sink_SILVER2R = -- silver lights red
   {
     mat = "LITES01"
-    dz = 58
+    dz = 48
     light = 32
 
     trim_mat = "SILVER2R"
@@ -2349,7 +2349,7 @@ ARMAETUS_SINK_DEFS =
   ceiling_sink_SILVER2O = -- silver lights orange
   {
     mat = "LITES03"
-    dz = 58
+    dz = 48
     light = 32
 
     trim_mat = "SILVER2O"
@@ -2360,7 +2360,7 @@ ARMAETUS_SINK_DEFS =
   ceiling_sink_SILVER2Y = -- silver lights yellow
   {
     mat = "LITES03"
-    dz = 58
+    dz = 48
     light = 32
 
     trim_mat = "SILVER2Y"
@@ -2371,7 +2371,7 @@ ARMAETUS_SINK_DEFS =
   ceiling_sink_SILVER2W = -- silver lights white
   {
     mat = "LIGHTS3"
-    dz = 58
+    dz = 48
     light = 32
 
     trim_mat = "SILVER2W"
@@ -2382,7 +2382,7 @@ ARMAETUS_SINK_DEFS =
   ceiling_sink_SILVER2G = -- silver lights green
   {
     mat = "LITES04"
-    dz = 58
+    dz = 48
     light = 32
 
     trim_mat = "SILVER2G"
