@@ -7436,7 +7436,7 @@ SIDEWALK_ZIGZAG =
     "A."
       "A."
     ".A"
-      "A."
+      ".A"
   }
 }
 
