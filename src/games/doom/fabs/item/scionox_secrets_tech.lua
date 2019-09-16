@@ -64,6 +64,7 @@ PREFABS.Item_wallmachines_secret =
   x_fit = "frame"
   y_fit = "top"
 }
+
 PREFABS.Item_wallmachines_secret_2 =
 {
   file   = "item/scionox_secrets_tech.wad"
@@ -85,6 +86,7 @@ PREFABS.Item_wallmachines_secret_2 =
   x_fit = "frame"
   y_fit = "top"
 }
+
 PREFABS.Item_wallmachines_secret_3 =
 {
   template = "Item_wallmachines_secret_2"
@@ -94,6 +96,7 @@ PREFABS.Item_wallmachines_secret_3 =
 
   seed_w = 3
 }
+
 PREFABS.Item_wallmachines_secret_4 =
 {
   template = "Item_wallmachines_secret_2"
@@ -104,12 +107,13 @@ PREFABS.Item_wallmachines_secret_4 =
   seed_w = 4
   seed_h = 1
 }
+
 PREFABS.Item_wallmachines_secret_5 =
 {
   file   = "item/scionox_secrets_tech.wad"
   map    = "MAP06"
 
-  prob   = 25
+  prob   = 15
   theme = "!hell"
 
   where  = "seeds"
@@ -128,6 +132,7 @@ PREFABS.Item_wallmachines_secret_5 =
   x_fit = "frame"
   y_fit = "top"
 }
+
 PREFABS.Item_wallmachines_secret_6 =
 {
   template = "Item_wallmachines_secret_5"

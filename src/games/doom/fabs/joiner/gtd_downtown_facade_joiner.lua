@@ -3,7 +3,7 @@ PREFABS.Joiner_downtown_facade =
   file   = "joiner/gtd_downtown_facade_joiner.wad"
   map    = "MAP01"
 
-  prob   = 600
+  prob   = 1500
 
   delta_h = 0
   nearby_h = 256

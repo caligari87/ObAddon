@@ -37,6 +37,7 @@ PREFABS.Joiner_control_room_secret_2 =
   tex_COMPSTA1 = "SPACEW3"
   tex_COMPSTA2 = "SPACEW3"
 }
+
 --Based on gtd_pic_tech_wallmachines
 PREFABS.Joiner_wallmachines_secret =
 {
@@ -59,13 +60,14 @@ PREFABS.Joiner_wallmachines_secret =
 
   bound_z1 = 0
   bound_z2 = 200
-  
+
   delta_h  = 128
   nearby_h = 128
 
   x_fit = "frame"
   y_fit = { 120,128 }
 }
+
 PREFABS.Joiner_wallmachines_secret_2 =
 {
   template = "Joiner_wallmachines_secret"
@@ -73,6 +75,7 @@ PREFABS.Joiner_wallmachines_secret_2 =
   tex_REDWALL = "COMPBLUE"
   flat_FLAT5_3 = "FLAT14"
 }
+
 PREFABS.Joiner_wallmachines_secret_3 =
 {
   file   = "joiner/scionox_secrets_tech.wad"
