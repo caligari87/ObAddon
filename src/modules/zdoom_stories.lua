@@ -113,6 +113,7 @@ ZDOOM_STORIES.LIST =
   benevolent_ai = 40
   knock_knock_joke = 2
   infernodancer = 2
+  hell_to_pay = 2
   oblige_history = 5
 }
 
@@ -1241,6 +1242,41 @@ ZDOOM_STORIES.STORIES =
       _SPACE
       The blissful silence is almost eery. You bask in it for a
       few minutes, before heading out.]],
+    }
+  }
+
+
+ -- Miracle of Sound's tribute to everybody's favorite omnicidal maniac
+ -- https://miracleofsound.bandcamp.com/track/hell-to-pay
+ -- https://www.youtube.com/watch?v=kjIVkl34Vig
+ hell_to_pay =
+  {
+    hooks = {
+      [[Wake up, I'm a bullet loosed, into the heart of a wretched age!
+      I breathe just to beat and bruise, an evolution of the burnin' rage!
+      _SPACE
+      Gonna get mine, get outta my way, there's gonna be (GONNA BE)
+      Gonna be hell to pay!!
+      _SPACE
+      Berserk, I'm a brutal fist, yeah a lone wolf born and bred!
+      I stand on the bones of titans, and my wrath is burnin' lead!
+      _SPACE
+      Gonna get mine, get outta my way, there's gonna be (GONNA BE)
+      Gonna be hell to pay!!]],
+    }
+
+    conclusions = {
+      [[Click click BOOM BOOM!!
+      _SPACE
+      Keep rushing and a running, running, the drumming of the buckshot pumpin'!
+      Got molten metal in my veins!
+      _SPACE
+      Click click BOOM BOOM!!
+      _SPACE
+      Keep rushing and a running, running, a reckoning of lead is coming!
+      I’m kickin in the gates of hell again!
+      _SPACE
+      Bringer of pain!!]],
     }
   }
 
