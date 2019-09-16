@@ -112,6 +112,8 @@ ZDOOM_STORIES.LIST =
   asylum = 10
   benevolent_ai = 40
   knock_knock_joke = 2
+  infernodancer = 2
+  hell_to_pay = 2
   oblige_history = 5
 }
 
@@ -1207,6 +1209,78 @@ ZDOOM_STORIES.STORIES =
   }
 
 
+ -- Crypt of the Necrodancer reference
+ infernodancer =
+  {
+    hooks = {
+      [[A ghostly tune suddenly appears at the edge of your hearing.
+      You listen intently, but are unable to easily make out the
+      origin. Then, you suddenly notice that the zombies and demons
+      you're fighting twitch rhytmically, as if moving to the beat
+      of the music.
+      _SPACE
+      You breathe shallowly, as you discover that your own heartbeet
+      has synchronized to the beat of the music, and it takes you
+      significant effort to not move in sync.
+      _SPACE
+      Whatever the hell is going on, it better stop. Or, rather, you
+      will have to make it stop. You bite your lip and begin your
+      search.]],
+    }
+
+    conclusions = {
+      [[Several demons come at you, dance-fighting, but you tear them
+      apart within a few beats, then, turn to look at the golden,
+      jeweled music box on the pedestal in the chamber your intuition
+      led you to. Its rhytmic flashes cast lights on everything,
+      creating the impresdion of a disco floor. You growl with fury,
+      and approach the box, overcoming the instinctive urge to move
+      to the beat, then strike the delicate mechanism with your fist.
+      The music box splatters gems and cogwheels, but you keep
+      smashing, until it turns into a mess of twisted metal and broken
+      bone, then throw it to the floor and stomp it with your boot.
+      _SPACE
+      The blissful silence is almost eery. You bask in it for a
+      few minutes, before heading out.]],
+    }
+  }
+
+
+ -- Miracle of Sound's tribute to everybody's favorite omnicidal maniac
+ -- https://miracleofsound.bandcamp.com/track/hell-to-pay
+ -- https://www.youtube.com/watch?v=kjIVkl34Vig
+ hell_to_pay =
+  {
+    hooks = {
+      [[Wake up, I'm a bullet loosed, into the heart of a wretched age!
+      I breathe just to beat and bruise, an evolution of the burnin' rage!
+      _SPACE
+      Gonna get mine, get outta my way, there's gonna be (GONNA BE)
+      Gonna be hell to pay!!
+      _SPACE
+      Berserk, I'm a brutal fist, yeah a lone wolf born and bred!
+      I stand on the bones of titans, and my wrath is burnin' lead!
+      _SPACE
+      Gonna get mine, get outta my way, there's gonna be (GONNA BE)
+      Gonna be hell to pay!!]],
+    }
+
+    conclusions = {
+      [[Click click BOOM BOOM!!
+      _SPACE
+      Keep rushing and a running, running, the drumming of the buckshot pumpin'!
+      Got molten metal in my veins!
+      _SPACE
+      Click click BOOM BOOM!!
+      _SPACE
+      Keep rushing and a running, running, a reckoning of lead is coming!
+      I’m kickin in the gates of hell again!
+      _SPACE
+      Bringer of pain!!]],
+    }
+  }
+
+
  knock_knock_joke =
   {
     hooks = {
@@ -1307,6 +1381,69 @@ ZDOOM_STORIES.SECRET_TEXTS =
     _SPACE
     Your tracker informs you a secret point of interest
     may exist nearby...]],
+
+    [[You blast away another demon and pause to get your bearings.
+    Suddenly, your tracker bleeps, indicating a nearby dimensional
+    anomaly. A portal? Wherever it may lead, it's a trail worth
+    following...]],
+
+    [[Demons flee before you, trying in vain to escape your wrath.
+    You chase them down, leaving nothing but blood and ashes in
+    your wake.
+    _SPACE
+    A torn, half-burned map you come across marks the entrance
+    to a secluded area. Perhaps, it contains something to aid you
+    in your quest...]],
+
+    [[The sound of gunfire draws your attention. You rush towards
+    it, and arrive just in time to join a group of marines, fighting
+    off a small horde of hellspawn.
+    _SPACE
+    With your timely aid, the battle ends quickly and gruesomely.
+    The survivors, relieved and encouraged by your presence, thank
+    you, by giving you their military map, clear and detailed,
+    with every bunker, barricade and stockpile clearly marked.
+    Your attention is drawn to a marking, indicating a secret
+    passageway, right ahead...]],
+
+    [[Unexpectedly, you find a survivor hiding under the rubble.
+    Surprisingly, his speech is coherent, and his thinking is clear.
+    What's more, he is armed with a machine pistol he scavenged off
+    a dead troop. He confirms he had been hiding and fighting for
+    weeks and has established a set of hideouts and observation posts.
+    He informs you he has been watching enemy movements, and noticed
+    them gathering in a specific area, not far ahead. Whether you
+    choose to pursue this trail, is for you to decide.]],
+
+    [[A hand-drawn map on a piece of paper you come across seems to
+    indicate a secret hideout right ahead. You wonder if you'll find
+    supplies there - or survivors...]],
+
+    [[You wipe the sweat off your forehead and grip your weapon
+    more tightly. The battle seems endless, and you begin to wonder
+    if you can finish what you began. Suddenly, you spot a glimmer
+    in the distance, as if a portal opened and immediately closed.
+    _SPACE
+    This looks like it could turn out interesting...]],
+
+    [[You come across the mutilated corpse of a marine. The agony
+    is frozen on his face, and his hand is tightly clutched around
+    a blooded piece of paper. You carefully pry his hand open and
+    straighten the note.
+    _SPACE
+    It looks like a scout's report, detailing the formations and
+    advancement of the demon army. Your attention is drawn to the
+    note of a barricaded area where many of them are gathered.
+    Seems worth looking into...]],
+
+    [[A battered glider with UAC markings suddenly zooms above your
+    head, rattling and tilting, smoke coming from its breached hull.
+    Before you can react, a fireball from the ruins ahead slams
+    into it, setting it ablaze. The glider crashes into the ground
+    and explodes. You take note the origin of the fireball, and
+    head towards the fortifications. If there is a hidden nest there,
+    it might warrant a detour.]],
+
   }
   d2_secret1 =
   {
@@ -1316,12 +1453,104 @@ ZDOOM_STORIES.SECRET_TEXTS =
     with the expectation of safety.
     _SPACE
     You are about to prove them otherwise.]],
+
+    [[A broken computer installation plays a recorded message on
+    repeat:
+    _SPACE
+    "...Force ahead. Ground defense forces eliminated. Aerial backup
+    unavailable. Exercise extreme caution. Large demon force
+    ahead. Ground defense forces..."
+    _SPACE
+    You smirk and head on. The demon force is up for a nasty
+    surprise...]],
+
+    [[You suddenly notice a hidden door. Behind it, you find dimly lit
+    stairs, leading deep below the surface. You point your gun forwards
+    and begin your descent. Several minutes later, you emerge from a
+    tunnel into a vast secret installation. The growls you hear in the
+    distance leave no room for doubt.
+    _SPACE
+    You grin and ready your gun. It's time to clear this place out.]],
+
+    [[You locate the hidden pathway, leading to the demon hideout.
+    A large pile of skulls greets you upon entering. You ready your
+    weapons and prepare to give the demons hell.]],
+
+    [[A large blast door marks the entrance to the hidden bunker you
+    were looking for. You fiddle with the electronic locks for a few
+    minutes, then, losing your patience, rip it out and short-circuit
+    the wires. The blast door opens with a hiss, and you are greeted
+    with a blow of stale air, mixed with the scent of decay.
+    _SPACE
+    The bunker seems much larger on the inside than expected - and you
+    feel that you are not alone.
+    _SPACE
+    Their loss.]],
   }
   d2_secret2 =
   {
     [[It seems this secret trail goes further than expected.
     It is time to finish this once and for all and eradicate
     this hidden pocket of hellish infestation.]],
+
+    [[You have found a disabled teleporter. A few minutes of poking at
+    the controls bring it back in working order. You step through, and
+    find yourself in a dimly lit hall with arcane runes glowing
+    on the walls. It seems you have found the secret hideout of a
+    minor demon lord! It's time to show them the futility of their efforts.]],
+
+    [[You crawl to the edge of a ledge and glance down at the gathering
+    below. The demons seem to be planning their assault. The screams
+    and growls grow and fade, and you hear, to your pleasure,
+    notes of fear in the demons' voices. You chuckle, quietly
+    make your way down and ready your gear. Khe, khe, khe, this is
+    going to be a mess!]],
+
+    [[As you kick the last door down, a pack of demons screech
+    and try rushing past you. You dispatch of them quickly and notice
+    a few others disappearing into a secret passage in the far end
+    of the room. The last of the demons turns to you and hisses.
+    "You will not succeed!" it speaks with a growl. "My master
+    shall destroy you, for He is the great Lieutenant of Hell's
+    Army, the mighty-"
+    _SPACE
+    You express your disagreement by blowing its brains out. Then,
+    you dive into the secret passageway. The time for talking
+    is long over. Now, it's time to kick some ass - and you don't care
+    much for their names.]],
+
+    [[The demons try to flee on your approach, but you chase and
+    hunt them down mercilessly. Once the last of the demons is slain,
+    you stop to get your bearings. The ground is scorched around you,
+    the walls are stained with splatters of dried blood. You are
+    deep in the demon hideout, deep behind enemy lines. And, as
+    much as you enjoy causing mayhem, you still have a job to finish.
+    _SPACE
+    Whatever "here" is, and wherever this place may be, it's time
+    to find the way out of here.]],
+
+    [[The gate screeches open before you, and you step into a courtyard.
+    The banners of a low-tier demon lord decorate the walls, and
+    twisted, deformed trees pierce the barren ground. You pause,
+    looking for signs of the denizens, but all is quiet, as if
+    everything lies in wait.
+    _SPACE
+    That won't help them, anyway. For a long time, you've felt as
+    though your steps are guided by an unseen force. And now,
+    the powers that be have guided you here, to strike against
+    the demon lords on their own turf.
+    _SPACE
+    You don't plan to disappoint. This hideout is not going to stay
+    hidden for long.]],
+
+    [[The ground shudders under your feet, and a distant rumble
+    rolls through the area. So, this is the secret hideout, where
+    Hell's army gathers, to prepare for their next assault? You
+    follow the bloody trail left by the crippled demon you
+    intentionally let loose so that it guides you here. Looks
+    like the demon force is preparing their war machines for a
+    yet another assault. It's good that you found them first;
+    Time to bring them pain.]],
   }
 }
 
@@ -1676,6 +1905,18 @@ ZDOOM_STORIES.ENTITIES =
     ["ZENITH-1X"]=5,
     ["FATHER-79"]=5, -- Antonym of ship AI in movie Alien in 1979, which was named "Mother". Homage!
     HEXUS=5,
+    VEGA=5, -- Doom 2016
+    ICARUS=5, -- Deus Ex
+    DAEDALUS=5, -- Deus Ex
+    MORPHEUS=5, -- Deus Ex
+    HELIOS=5, -- Deus Ex
+    [["HAL-9000"]]=5, -- 2001: A Space Oddyssey
+    FROST=5, -- For a Breath I Tarry
+    SOLCOM=5, -- For a Breath I Tarry
+    DIVCOM=5, -- For a Breath I Tarry
+    CEREBRO=5, -- X-Men
+    COLOSSUS=5,
+    ZERO=5,
   }
 }
 
