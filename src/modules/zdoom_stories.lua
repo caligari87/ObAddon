@@ -112,6 +112,7 @@ ZDOOM_STORIES.LIST =
   asylum = 10
   benevolent_ai = 40
   knock_knock_joke = 2
+  infernodancer = 2
   oblige_history = 5
 }
 
@@ -1203,6 +1204,43 @@ ZDOOM_STORIES.STORIES =
       prefabs from WAD files, opening up near infinite customization.
       _SPACE
       We thank you for this program, Andrew! ]]
+    }
+  }
+
+
+ -- Crypt of the Necrodancer reference
+ infernodancer =
+  {
+    hooks = {
+      [[A ghostly tune suddenly appears at the edge of your hearing.
+      You listen intently, but are unable to easily make out the
+      origin. Then, you suddenly notice that the zombies and demons
+      you're fighting twitch rhytmically, as if moving to the beat
+      of the music.
+      _SPACE
+      You breathe shallowly, as you discover that your own heartbeet
+      has synchronized to the beat of the music, and it takes you
+      significant effort to not move in sync.
+      _SPACE
+      Whatever the hell is going on, it better stop. Or, rather, you
+      will have to make it stop. You bite your lip and begin your
+      search.]],
+    }
+
+    conclusions = {
+      [[Several demons come at you, dance-fighting, but you tear them
+      apart within a few beats, then, turn to look at the golden,
+      jeweled music box on the pedestal in the chamber your intuition
+      led you to. Its rhytmic flashes cast lights on everything,
+      creating the impresdion of a disco floor. You growl with fury,
+      and approach the box, overcoming the instinctive urge to move
+      to the beat, then strike the delicate mechanism with your fist.
+      The music box splatters gems and cogwheels, but you keep
+      smashing, until it turns into a mess of twisted metal and broken
+      bone, then throw it to the floor and stomp it with your boot.
+      _SPACE
+      The blissful silence is almost eery. You bask in it for a
+      few minutes, before heading out.]],
     }
   }
 
