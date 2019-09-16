@@ -2491,7 +2491,6 @@ DOOM.ROOM_THEMES =
       WOOD1 = 15
       WOOD3 = 15
       WOOD5 = 15
-      BROVINE = 15
       BROVINE2 = 15
       ICKWALL3 = 15
       GRAY7 = 15

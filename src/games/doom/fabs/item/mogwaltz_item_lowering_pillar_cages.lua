@@ -3,7 +3,7 @@ PREFABS.Item_mogwaltz_lowering_pillar =
   file = "item/mogwaltz_item_lowering_pillar_cages.wad"
   map = "MAP01"
 
-  prob = 25
+  prob = 18
 
   theme = "tech"
 
@@ -86,4 +86,65 @@ PREFABS.Item_mogwaltz_lowering_pillar_gothic_inactive =
     [45]=50
     [46]=50
   }
+}
+
+-- different version MSSP-TODO: hell variations?
+PREFABS.Item_mogwaltz_lowering_pillar_alt =
+{
+  template = "Item_mogwaltz_lowering_pillar"
+  map = "MAP03"
+
+  prob = 10
+
+  style = "traps"
+
+  theme = "!hell"
+}
+
+PREFABS.Item_mogwaltz_lowering_pillar_alt_fast =
+{
+  template = "Item_mogwaltz_lowering_pillar"
+  map = "MAP03"
+
+  prob = 10
+
+  style = "traps"
+
+  theme = "!hell"
+
+  line_24840 = 24848
+}
+
+PREFABS.Item_mogwaltz_lowering_pillar_alt_caged =
+{
+  template = "Item_mogwaltz_lowering_pillar"
+  map = "MAP04"
+
+  prob = 10
+
+  style = "traps"
+
+  theme = "!hell"
+}
+
+PREFABS.Item_mogwaltz_lowering_pillar_alt_lowering =
+{
+  template = "Item_mogwaltz_lowering_pillar"
+  map = "MAP05"
+
+  prob = 10
+
+  style = "traps"
+
+  theme = "!hell"
+}
+
+PREFABS.Item_mogwaltz_lowering_pillar_joke_is_on_you =
+{
+  template = "Item_mogwaltz_lowering_pillar"
+  map = "MAP06"
+
+  prob = 10
+
+  theme = "!hell"
 }
