@@ -28,7 +28,7 @@ PREFABS.Item_lava_pit_alcove_trap =
   file   = "item/gtd_lava_pit_alcove.wad"
   map    = "MAP03"
 
-  prob   = 80
+  prob   = 25
   theme  = "!hell"
   style  = "traps"
 
