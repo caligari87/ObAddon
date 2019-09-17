@@ -4043,31 +4043,6 @@ GROW_LIQUID_CANAL_CURVE =
   }
 }
 
-GROW_LIQUID_CANAL_ENTRY =
-{
-  prob = 50
-
-  group = "canal"
-
-  group_pos = "entry"
-
-  structure =
-  {
-    "x...","x./~"
-    "xx..","xx~~"
-    "1...","1111"
-    "1...","1111"
-    "xx..","xx~~"
-    "x...","x.%~"
-  }
-
-  diagonals =
-  {
-    ".~"
-    ".~"
-  }
-}
-
 GROW_LIQUID_CANAL_ENTRY_B =
 {
   prob = 50
@@ -4084,27 +4059,6 @@ GROW_LIQUID_CANAL_ENTRY_B =
     "1..","111"
     "x..","x~~"
     "x..","x~~"
-  }
-
-  diagonals =
-  {
-    ".~"
-    ".~"
-  }
-}
-
-GROW_LIQUID_CANAL_OUT =
-{
-  prob = 10
-
-  structure =
-  {
-    "..~","./~"
-    "..~",".~~"
-    "..1","A11"
-    "..1","A11"
-    "..~",".~~"
-    "..~",".%~"
   }
 
   diagonals =
@@ -4281,8 +4235,8 @@ GROW_CANAL_DOUBLE_UNG =
   {
     "11..","1111"
     "11..","1111"
-    "....","~~~~"
-    "....","~~~~"
+    "..xx","~~xx"
+    "..xx","~~xx"
   }
 }
 
@@ -4292,8 +4246,8 @@ GROW_CANAL_DOUBLE_CORNER_UNG =
 
   structure =
   {
-    "11....","1111~~"
-    "11....","1111~~"
+    "11..xx","1111xx"
+    "11..xx","1111xx"
     "......","~~~~~~"
     "......","~~~~~/"
   }
@@ -4312,7 +4266,7 @@ GROW_CANAL_SINGLE_UNG =
   {
     "11..","1111"
     "11..","1111"
-    "....","~~~~"
+    "..xx","~~xx"
   }
 }
 
@@ -4322,8 +4276,8 @@ GROW_CANAL_SINGLE_CORNER_UNG =
 
   structure =
   {
-    "11...","1111~"
-    "11...","1111~"
+    "11..x","1111x"
+    "11..x","1111x"
     ".....","~~~~/"
   }
 
