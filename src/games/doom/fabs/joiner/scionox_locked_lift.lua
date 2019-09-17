@@ -288,6 +288,7 @@ PREFABS.Joiner_scionox_locked_lift_25 =
   tex_COMPBLUE = { REDWALL=50, GSTONE1=50, METAL=50, SP_FACE2=50, SKSNAKE2=60, WOODVERT=50 }
   tex_SW1GRAY1 = "SW1PANEL"
   tex_PLAT1 = "SUPPORT3"
+  tex_SUPPORT2 = "SUPPORT3"
   thing_2028 = "red_torch_sm"
 }
 PREFABS.Joiner_scionox_locked_lift_26 =
@@ -300,6 +301,7 @@ PREFABS.Joiner_scionox_locked_lift_26 =
   tex_COMPBLUE = { REDWALL=50, GSTONE1=50, METAL=50, SP_FACE2=50, SKSNAKE2=60, WOODVERT=50 }
   tex_SW1GRAY1 = "SW1PANEL"
   tex_PLAT1 = "SUPPORT3"
+  tex_SUPPORT2 = "SUPPORT3"
   thing_2028 = "red_torch_sm"
 }
 PREFABS.Joiner_scionox_locked_lift_27 =
@@ -312,6 +314,7 @@ PREFABS.Joiner_scionox_locked_lift_27 =
   tex_COMPBLUE = { REDWALL=50, GSTONE1=50, METAL=50, SP_FACE2=50, SKSNAKE2=60, WOODVERT=50 }
   tex_SW1GRAY1 = "SW1PANEL"
   tex_PLAT1 = "SUPPORT3"
+  tex_SUPPORT2 = "SUPPORT3"
   thing_2028 = "red_torch_sm"
 }
 PREFABS.Joiner_scionox_locked_lift_28 =
@@ -344,5 +347,6 @@ PREFABS.Joiner_scionox_locked_lift_30 =
   tex_COMPBLUE = { REDWALL=50, GSTONE1=50, METAL=50, SP_FACE2=50, SKSNAKE2=60, WOODVERT=50 }
   tex_SW1GRAY = "SW1MARB"
   tex_PLAT1 = "SUPPORT3"
+  tex_SUPPORT2 = "SUPPORT3"
   thing_2028 = "red_torch_sm"
 }
