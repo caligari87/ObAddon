@@ -10,7 +10,7 @@ PREFABS.Cage_dem_garage_ambush1 =
 
   engine = "zdoom"
 
-  prob   = 500
+  prob   = 750
 
   theme  = "urban"
   env    = "outdoor"
@@ -64,7 +64,7 @@ PREFABS.Cage_dem_garage_ambush2 =
 
   engine = "zdoom"
 
-  prob   = 500
+  prob   = 750
 
   theme  = "urban"
   env    = "outdoor"
@@ -102,7 +102,7 @@ PREFABS.Cage_dem__store_ambush =
 
   theme = "urban"
   env   = "outdoor"
-  prob  = 500
+  prob  = 750
 
   where  = "seeds"
   shape  = "U"
