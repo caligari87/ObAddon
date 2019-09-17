@@ -2925,6 +2925,8 @@ function Room_floor_ceil_heights()
       N.cage_floor_h = (N.max_floor_h or N.floor_h) + rand.pick({48,64})
     end
 
+    A.cage_neighbor = N
+
     A.floor_h  = N.cage_floor_h
     if N.ceil_h then
       A.floor_h = math.min(A.floor_h, N.ceil_h - 64)
@@ -3625,6 +3627,12 @@ function Room_cleanup_stairs_to_nowhere(R)
 
         end
 
+        if N.mode == "cage" then
+          if A == N.cage_neighbor then
+            return false
+          end
+        end
+
         if N.chunk then
 
           if N.chunk.kind == "stair" then
@@ -3774,15 +3782,19 @@ function Room_cleanup_stairs_to_nowhere(R)
 
       if SAS then
         -- convert nowhere areas to just normal areas (borrow info from main area)
+        A.dead_end_ceil_h_diff = A.ceil_h - SAS.ceil_h
 
         A.floor_h = SAS.floor_h
-        A.ceil_h = SA.ceil_h
+        A.ceil_h = SAS.ceil_h + (A.dead_end_ceil_h_diff / 3)
 
         A.floor_mat = SAS.floor_mat
-        A.ceil_mat = SA.ceil_mat
+
+        A.floor_group = SAS.floor_group
+        A.ceil_group = SAS.ceil_group
 
         if A.room:get_env() == "building" then
           A.is_porch = nil
+          A.ceil_mat = SAS.ceil_mat
         end
 
         SA.mode = "floor"
@@ -3795,21 +3807,27 @@ function Room_cleanup_stairs_to_nowhere(R)
         SA.chunk.ignore_stairs = true
 
         if SA.room:get_env() == "outdoor" then
-          SA.is_porch_neighbor = nil
-          SA.is_porch = true
+          if SA.is_porch_neighbor then
+            SA.is_porch = true
+            SA.is_porch_neighbor = nil
+          end
         elseif SA.room:get_env() == "building" then
           SA.is_porch_neighbor = nil
+          SA.ceil_mat = SAS.ceil_mat
         end
 
         SA.floor_h = SAS.floor_h
+        SA.ceil_h = SAS.ceil_h + (A.dead_end_ceil_h_diff / 3)
 
         SA.floor_mat = SAS.floor_mat
-        SA.ceil_mat = SAS.ceil_mat
+
+        SA.floor_group = SAS.floor_group
+        SA.ceil_group = SAS.ceil_group
 
         A.dead_end = true
         SA.dead_end = true
 
-        if A.room == "outdoor" then
+        if A.room:get_env() == "outdoor" then
           A.source_mat = SAS.floor_mat
           SA.source_mat = SAS.floor_mat
         end
