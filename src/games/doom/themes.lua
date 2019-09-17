@@ -2474,7 +2474,7 @@ DOOM.ROOM_THEMES =
   tech_deimosRoom =
   {
     env = "building"
-    prob = 25
+    prob = 40
 
     theme_override = "deimos"
 
