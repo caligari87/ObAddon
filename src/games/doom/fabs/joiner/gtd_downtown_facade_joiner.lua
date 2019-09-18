@@ -25,8 +25,8 @@ PREFABS.Joiner_downtown_facade =
 
   bound_z1 = 0
 
-  x_fit  = { 124,132 }
-  y_fit = "top"
+  x_fit = { 72,184 }
+  y_fit = { 96,136 }
 
   tex_CITY01 =
   {
@@ -87,5 +87,5 @@ PREFABS.Joiner_downtown_facade_flipped =
   env = "building"
   neighbor = "outdoor"
 
-  y_fit = "bottom"
+  y_fit = { 24,64 }
 }
