@@ -3721,7 +3721,38 @@ function Room_cleanup_stairs_to_nowhere(R)
         N.ceil_h = best_LN.ceil_h
 
       end
+    end
+  end
 
+
+  local function fixup_cages()
+    each A in LEVEL.areas do
+      if A.mode == "cage" and A.floor_h then
+        local tallest_ceiling = -9001
+        local lowest_floor = 9001
+
+        each N in A.neighbors do
+          if A.room == N.room and (N.mode == "floor" or N.mode == "liquid") then
+            if N.ceil_h > tallest_ceiling then
+              tallest_ceiling = N.ceil_h
+            end
+            if N.floor_h < lowest_floor then
+              lowest_floor = N.floor_h
+            end
+          end
+        end
+
+        if A.floor_h < lowest_floor then
+          local diff = lowest_floor - A.floor_h
+          A.floor_h = lowest_floor + 32
+          A.ceil_h = A.ceil_h + diff
+        elseif A.ceil_h > tallest_ceiling then
+          local diff = lowest_floor + A.ceil_h
+          A.floor_h = A.floor_h + diff
+          A.ceil_h = tallest_ceiling
+        end
+
+      end
     end
   end
 
@@ -3782,6 +3813,7 @@ function Room_cleanup_stairs_to_nowhere(R)
 
       if SAS then
         -- convert nowhere areas to just normal areas (borrow info from main area)
+        A.dead_end_floor_h_diff = A.floor_h - SAS.floor_h
         A.dead_end_ceil_h_diff = A.ceil_h - SAS.ceil_h
 
         A.floor_h = SAS.floor_h
@@ -3817,7 +3849,7 @@ function Room_cleanup_stairs_to_nowhere(R)
         end
 
         SA.floor_h = SAS.floor_h
-        SA.ceil_h = SAS.ceil_h + (A.dead_end_ceil_h_diff / 3)
+        SA.ceil_h = SAS.ceil_h
 
         SA.floor_mat = SAS.floor_mat
 
@@ -3845,6 +3877,7 @@ function Room_cleanup_stairs_to_nowhere(R)
   end
 
   select_porch_floor_mats(R)
+  fixup_cages()
 
 end
 
