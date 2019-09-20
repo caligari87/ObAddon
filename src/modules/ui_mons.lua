@@ -44,21 +44,22 @@ UI_MONS.QUANTITIES =
 
 UI_MONS.MIX_QUANTITIES =
 {
-    "rarest", _("[0.15] Scarce"),
-    "rarer",  _("[0.35] Few"),
+    "rarest", _("[0.15] Minimal"),
+    "rarer",  _("[0.35] Sporadic"),
     "rare",   _("[0.7] Less"),
     "scarce", _("[1.0] id software"),
-    "few",    _("[1.3] Evilution"),
-    "less",   _("[1.5] Plutonia"),
-    "normal", _("[2.0] Valiant"),
-    "more",   _("[2.5] Ancient Aliens"),
-    "heaps",  _("[3.0] Hell Revealed 2"),
-    "legions",_("[3.5] Sunlust"),
-    "insane", _("[4.0] Combat Shock 2"),
-    "deranged", _("[4.5] Swift Death"),
-    "nuts",   _("[5.0] Sunder"),
-    "chaotic", _("[5.5] No Chance"),
-    "nutser", _("[6.66] Holy Hell"),
+    "few",    _("[1.3] Sigil"),
+    "less",   _("[1.5] Evilution"),
+    "normal", _("[2.0] Plutonia"),
+    "more",   _("[2.5] Valiant"),
+    "heaps",  _("[3.0] Ancient Aliens"),
+    "legions",_("[3.5] Hell Revealed 2"),
+    "insane", _("[4.0] Sunlust"),
+    "deranged", _("[4.5] Combat Shock 2"),
+    "nuts",   _("[5.0] Swift Death"),
+    "chaotic", _("[5.5] Sunder"),
+    "unhinged", _("[6.0] No Chance"),
+    "ludicrous", _("[6.66] Holy Hell"),
 }
 
 UI_MONS.STRENGTHS =
