@@ -150,7 +150,8 @@ MONSTER_QUANTITIES =
   deranged = 4.5
   nuts   = 5.0
   chaotic = 5.5
-  nutser = 6.66
+  unhinged = 6.0
+  ludicrous = 6.66
 }
 
 MONSTER_KIND_TAB =
@@ -170,7 +171,8 @@ MONSTER_KIND_TAB =
   deranged = 2.0
   nuts   = 2.0
   chaotic = 2.0
-  nutser = 2.0
+  unhinged = 2.0
+  ludicrous = 2.0
 }
 
 RAMP_UP_FACTORS =
