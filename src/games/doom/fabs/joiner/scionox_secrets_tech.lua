@@ -46,6 +46,7 @@ PREFABS.Joiner_wallmachines_secret =
 
   prob   = 25
   theme = "!hell"
+  env = "!cave"
   style  = "steepness"
 
   where  = "seeds"

@@ -115,6 +115,7 @@ PREFABS.Item_wallmachines_secret_5 =
 
   prob   = 15
   theme = "!hell"
+  env = "!cave"
 
   where  = "seeds"
   key    = "secret"
