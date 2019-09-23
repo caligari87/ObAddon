@@ -3746,11 +3746,11 @@ function Room_cleanup_stairs_to_nowhere(R)
           end
         end
 
-        if A.floor_h < lowest_floor then
+        if A.floor_h < lowest_floor and R:get_env() != "park" then
           local diff = lowest_floor - A.floor_h
           A.floor_h = lowest_floor + 32
           A.ceil_h = A.ceil_h + diff
-        elseif A.ceil_h > tallest_ceiling then
+        elseif A.ceil_h > tallest_ceiling and R:get_env() != "park" then
           local diff = lowest_floor + A.ceil_h
           A.floor_h = A.floor_h + diff
           A.ceil_h = tallest_ceiling
