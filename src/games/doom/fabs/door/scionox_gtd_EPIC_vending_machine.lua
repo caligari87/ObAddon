@@ -4,7 +4,7 @@ PREFABS.Door_EPIC_vending_machine_secret =
   file   = "door/scionox_gtd_EPIC_vending_machine.wad"
   map    = "MAP01"
 
-  prob   = 10
+  prob   = 15
   theme  = "!hell"
   env    = "!outdoor"
 
