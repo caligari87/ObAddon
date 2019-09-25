@@ -1336,6 +1336,7 @@ ZDOOM_STORIES.GENERIC_STORIES =
     Good luck out there and blast those hellspawn back
     to which they came!]]
   }
+
   d2_MAP05_exit =
   {
     [[Hell has taken a tight grip upon these lands, corrupting them
@@ -1343,6 +1344,7 @@ ZDOOM_STORIES.GENERIC_STORIES =
     _SPACE
     Ahead, their forces gather in strength almost innumerable in count.]]
   }
+
   d2_MAP11_exit =
   {
     [[A lieutenant of hell falls but otherworldly shrieks echo
@@ -1351,6 +1353,7 @@ ZDOOM_STORIES.GENERIC_STORIES =
     _SPACE
     The battle rages on!]]
   }
+
   d2_MAP20_exit=
   {
     [[Hell's forces attempt to push back but your relentless assault
@@ -1359,6 +1362,7 @@ ZDOOM_STORIES.GENERIC_STORIES =
     More of their overlords have fallen and the opportunity for
     their defeat draws ever closer...]]
   }
+
   d2_MAP30_exit =
   {
     [[You have loosened hell's grip upon
@@ -1372,6 +1376,8 @@ ZDOOM_STORIES.GENERIC_STORIES =
   }
 }
 
+-- TapWave-TODO:
+-- Plz help proof-read! -MSSP
 ZDOOM_STORIES.SECRET_TEXTS =
 {
   d2_secretnearby =
@@ -1445,6 +1451,7 @@ ZDOOM_STORIES.SECRET_TEXTS =
     it might warrant a detour.]],
 
   }
+
   d2_secret1 =
   {
     [[You have found a secret zone!
@@ -1487,6 +1494,7 @@ ZDOOM_STORIES.SECRET_TEXTS =
     _SPACE
     Their loss.]],
   }
+
   d2_secret2 =
   {
     [[It seems this secret trail goes further than expected.
