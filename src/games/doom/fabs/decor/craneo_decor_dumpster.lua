@@ -1,4 +1,4 @@
-PREFABS.Item_decor_dumpster =
+PREFABS.Decor_craneo_dumpster =
 {
   file  = "decor/craneo_decor_dumpster.wad"
   map   = "MAP01"
