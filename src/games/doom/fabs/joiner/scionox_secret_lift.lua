@@ -17,16 +17,16 @@ PREFABS.Joiner_scionox_secret_lift =
 
   deep = 16
   over = 16
-  
+
   delta_h  = 120
   nearby_h = 128
-  
+
   bound_z1 = 0
   bound_z2 = 192
 
   x_fit  = "frame"
   y_fit  = { 92,94 }
-  
+
   tex_PIPES = { PIPES=50, BLAKWAL1=50, COMPBLUE=50, GRAY5=50, PIPEWAL2=50, SILVER3=50, TEKLITE2=50 }
 }
 PREFABS.Joiner_scionox_secret_lift_2 =
@@ -59,10 +59,10 @@ PREFABS.Joiner_scionox_secret_lift_4 =
 
   deep = 16
   over = 16
-  
+
   delta_h  = 120
   nearby_h = 128
-  
+
   bound_z1 = 0
   bound_z2 = 192
 
@@ -75,7 +75,7 @@ PREFABS.Joiner_scionox_secret_lift_4 =
     gibs = 10
     gibbed_player = 10
     pool_brains = 10
-	candle = 10
+    candle = 10
   }
   tex_PIPES = { PIPES=50, BLAKWAL1=50, COMPBLUE=50, GRAY5=50, PIPEWAL2=50, SILVER3=50, TEKLITE2=50 }
 }

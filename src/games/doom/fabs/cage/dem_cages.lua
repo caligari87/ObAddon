@@ -10,7 +10,7 @@ PREFABS.Cage_dem_garage_ambush1 =
 
   engine = "zdoom"
 
-  prob   = 1000
+  prob   = 700
 
   theme  = "urban"
   env    = "outdoor"
@@ -64,7 +64,7 @@ PREFABS.Cage_dem_garage_ambush2 =
 
   engine = "zdoom"
 
-  prob   = 1000
+  prob   = 700
 
   theme  = "urban"
   env    = "outdoor"
@@ -93,7 +93,7 @@ PREFABS.Cage_dem_garage_ambush2 =
 }
 
 --a grocery store with a horde of enemies inside
-PREFABS.Cage_dem__store_ambush =
+PREFABS.Cage_dem_store_ambush =
 {
   file  = "cage/dem_cages.wad"
   map   = "MAP03"
@@ -117,7 +117,14 @@ PREFABS.Cage_dem__store_ambush =
 
   can_flip = true
 
-  tex_BRICK9 = { BRICK1=50, BRICK10=50, BRICK11=50, BRICK2=50, BRICK3=50, BRICK4=50, BRICK6=50, BRICK7=50, BRICK8=50, STONE2=50, STUCCO=50, STUCCO1=50, STUCCO3=50, TANROCK2=50, TANROCK3=50, SHAWN2=50}
+  tex_BRICK9 = {
+    BRICK1=50, BRICK10=50, BRICK11=50,
+    BRICK2=50, BRICK3=50, BRICK4=50,
+    BRICK6=50, BRICK7=50, BRICK8=50,
+    STONE2=50, STUCCO=50, STUCCO1=50,
+    STUCCO3=50, TANROCK2=50, TANROCK3=50,
+    SHAWN2=50
+  }
 
   thing_59 =
   {
