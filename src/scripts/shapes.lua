@@ -2701,8 +2701,10 @@ GROW_LIQUID_POOL_1X1 =
   structure =
   {
     "...","111"
+    "...","111"
     "...","1~1"
-    "111","111"
+    "...","111"
+    "x1x","x1x"
   }
 }
 
@@ -2714,9 +2716,11 @@ GROW_LIQUID_POOL_2X2 =
   structure =
   {
     "....","1111"
+    "....","1111"
     "....","1~~1"
     "....","1~~1"
-    "1111","1111"
+    "....","1111"
+    "x11x","x11x"
   }
 }
 
@@ -2728,10 +2732,12 @@ GROW_LIQUID_POOL_3X1 =
   structure =
   {
     "...","111"
+    "...","111"
     "...","1~1"
     "...","1~1"
     "...","1~1"
-    "111","111"
+    "...","111"
+    "x1x","x1x"
   }
 }
 
@@ -2741,6 +2747,7 @@ GROW_LIQUID_PILLAR_CENTER =
 
   structure =
   {
+    ".....","11111"
     ".....","11111"
     ".....","1/~%1"
     ".....","1~.~1"
@@ -2762,6 +2769,7 @@ GROW_LIQUID_PILLAR_CENTER_LONG =
 
   structure =
   {
+    ".....","11111"
     ".....","11111"
     ".....","1/~%1"
     ".....","1~.~1"
@@ -2787,7 +2795,8 @@ GROW_LIQUID_SIDE_POOL_THICC =
   {
     "....","/~~%"
     "....","%~~/"
-    "1111","1111"
+    "....","1111"
+    "x11x","x11x"
   }
 
   diagonals =
@@ -2804,7 +2813,7 @@ GROW_LIQUID_SIDE_POOL_THIN =
   structure =
   {
     "....","/~~%"
-    "1111","1111"
+    "....","1111"
     "x11x","x11x"
   }
 
@@ -2821,6 +2830,7 @@ GROW_LIQUID_FIGURE_CORRIDOR =
   structure =
   {
     "....","1111"
+    "....","1111"
     "....","~11~"
     "....","1111"
     "....","~11~"
@@ -2831,15 +2841,16 @@ GROW_LIQUID_FIGURE_CORRIDOR =
 
 GROW_LIQUID_BRIDGE_CORRIDOR =
 {
-  prob = 15
+  prob = 8
 
   structure =
   {
     "...","111"
+    "...","111"
     "...","%1/"
     "...","~1~"
     "...","/1%"
-    "111","111"
+    "x1x","x1x"
   }
 
   diagonals =
@@ -2851,15 +2862,17 @@ GROW_LIQUID_BRIDGE_CORRIDOR =
 
 GROW_LIQUID_BRIDGE_CORRIDOR_CROSSING =
 {
-  prob = 15
+  prob = 8
 
   structure =
   {
     "...","111"
+    "...","111"
     "...","%1/"
     "...","~~~"
     "...","/1%"
-    "111","111"
+    "...","111"
+    "x1x","x1x"
   }
 
   diagonals =
@@ -2905,12 +2918,12 @@ GROW_LIQUID_U =
   prob = 5
   structure =
   {
-    ".....","1~~~1"
-    ".....","1~~~1"
-    ".....","1~~~1"
-    ".....","1%~/1"
-    ".....","11111"
-    "x111x","x111x"
+    ".......","11~~~11"
+    ".......","11~~~11"
+    ".......","11~~~11"
+    ".......","11%~/11"
+    ".......","1111111"
+    "xx111xx","xx111xx"
   }
 
   diagonals =
@@ -2919,16 +2932,16 @@ GROW_LIQUID_U =
   }
 }
 
-GROW_LIQUID_U =
+GROW_LIQUID_U_ALT =
 {
   prob = 5
   structure =
   {
-    "1.....","11~~~1"
-    "1.....","11~~~1"
-    "x.....","x1~~~1"
-    "x.....","x1%~/1"
-    "x.....","x11111"
+    "1......","11~~~11"
+    "1......","11~~~11"
+    "x......","x1~~~11"
+    "x......","x1%~/11"
+    "x......","x111111"
   }
 
   diagonals =
@@ -3376,11 +3389,11 @@ GROW_SQUEEZE_LIQUID_ONE_SIDE =
 
   structure =
   {
-    "..","AA"
-    "..","AA"
-    "..","^~"
-    "..","^~"
-    "1x","1x"
+    "..x","AAx"
+    "..x","AAx"
+    "...","^~~"
+    "...","^~~"
+    "1xx","1xx"
   }
 }
 
@@ -3390,11 +3403,11 @@ GROW_SQUEEZE_LIQUID_BOTH_SIDES =
 
   structure =
   {
-    "...","AAA"
-    "...","AAA"
-    "...","~^~"
-    "...","~^~"
-    "x1x","x1x"
+    "x...x","xAAAx"
+    "x...x","xAAAx"
+    ".....","~~^~~"
+    ".....","~~^~~"
+    "xx1xx","xx1xx"
   }
 }
 
@@ -3444,6 +3457,7 @@ GROW_SQUEEZE_DRAIN_CURVE =
     ".......","~/11111"
     ".......","~1/~~11"
     "....xxx","~1~/xxx"
+    "...xxxx","~1~xxxx"
     "x1xxxxx","x1xxxxx"
   }
 
@@ -3588,6 +3602,7 @@ GROW_CAGE_ROUND_ARENA =
   structure =
   {
     ".....","11111"
+    ".....","11111"
     ".....","1/C%1"
     ".....","1CCC1"
     ".....","1%C/1"
@@ -3678,7 +3693,7 @@ GROW_CAGE_ROUND_RAFTERS_ONE_SIDE =
 
 GROW_CATWALK_BIFUNNEL_SINK =
 {
-  prob = 10
+  prob = 7
   structure =
   {
     "xx...xx","xx111xx"
@@ -3698,7 +3713,7 @@ GROW_CATWALK_BIFUNNEL_SINK =
 
 GROW_CATWALK_BIFUNNEL_RISE =
 {
-  prob = 10
+  prob = 7
 
   structure =
   {
@@ -3814,11 +3829,12 @@ GROW_DIAGONAL_L =
 
   structure =
   {
-    "xx...","xx/11"
-    "x....","x/111"
-    ".....","/1111"
-    "....x","111/x"
-    "111xx","111xx"
+    "xx....","xx/111"
+    "x.....","x/1111"
+    "......","/11111"
+    "....xx","111/xx"
+    "...xxx","111xxx"
+    "111xxx","111xxx"
   }
 
   diagonals =
@@ -3836,13 +3852,14 @@ GROW_DIAGONAL_L_CATWALK =
 
   structure =
   {
-    "xx....","xx/A<1"
-    "x.....","x/AA<1"
-    "......","/AA/11"
-    "......","AA/111"
-    ".....x","^^11/x"
-    "....xx","1111xx"
-    "xx11xx","xx11xx"
+    "xx.....","xx/A<11"
+    "x......","x/AA<11"
+    ".......","/AA/111"
+    ".......","AA/1111"
+    ".....xx","^^11/xx"
+    "....xxx","1111xxx"
+    "....xxx","1111xxx"
+    "xx11xxx","xx11xxx"
   }
 
   diagonals =
@@ -3861,13 +3878,14 @@ GROW_DIAGONAL_L_CATWALK_CONTINUE =
 
   structure =
   {
-    "xx....","xx/AAA"
-    "x.....","x/AAAA"
-    "......","/AA/11"
-    "......","AA/111"
-    ".....x","^^11/x"
-    "....xx","1111xx"
-    "xx11xx","xx11xx"
+    "xx.....","xx/AAAA"
+    "x......","x/AAAAA"
+    ".......","/AA/111"
+    ".......","AA/1111"
+    ".....xx","^^11/xx"
+    "....xxx","1111xxx"
+    "....xxx","1111xxx"
+    "xx11xxx","xx11xxx"
   }
 
   diagonals =
@@ -3887,10 +3905,12 @@ GROW_DIAGONAL_S =
   structure =
   {
     "xxx...","xxx111"
+    "xxx...","xxx111"
     "xx....","xx/111"
     "x.....","x/111/"
     ".....x","/111/x"
     "....xx","111/xx"
+    "...xxx","111xxx"
     "111xxx","111xxx"
   }
 
@@ -3905,19 +3925,67 @@ GROW_DIAGONAL_S =
 
 GROW_DIAGONAL_SIDE_BLOB =
 {
-  prob = 30
+  prob = 15
 
   structure =
   {
     "....x","AAAAx"
     "....x","AAAAx"
     ".....","%AA/1"
-    "x.111","x%/11"
+    "x....","x%/11"
     "xx11x","xx11x"
   }
 
   diagonals =
   {
+    ".A","A1"
+    ".A","A1"
+  }
+}
+
+GROW_DIAGONAL_SIDE_BLOB_ALT =
+{
+  prob = 15
+
+  structure =
+  {
+    "..xxx","AAxxx"
+    "..xxx","AAxxx"
+    "...xx","AA%xx"
+    "....x","AAA%x"
+    ".....","%AA/1"
+    "x....","x%/11"
+    "xx11x","xx11x"
+  }
+
+  diagonals =
+  {
+    "A."
+    "A."
+    ".A","A1"
+    ".A","A1"
+  }
+}
+
+GROW_DIAGONAL_SIDE_BLOB_ALT =
+{
+  prob = 15
+
+  structure =
+  {
+    "x..xxx","x11xxx"
+    "...xxx","111xxx"
+    "....xx","11/%xx"
+    "x....x","x/AA%x"
+    "x.....","x%AA/1"
+    "xx....","xx%/11"
+    "xxx11x","xxx11x"
+  }
+
+  diagonals =
+  {
+    "1A","A."
+    "1A","A."
     ".A","A1"
     ".A","A1"
   }
@@ -4400,11 +4468,11 @@ GROW_LIQUID_SLAB_ENTRY =
 
   structure =
   {
-    "..","11"
-    "..","11"
-    "..","~~"
-    "..","11"
-    "11","11"
+    "....","1111"
+    "....","1111"
+    "....","~~~~"
+    "....","1111"
+    "11..","1111"
   }
 }
 
