@@ -91,30 +91,34 @@ ZDOOM_STORIES = { }
 
 ZDOOM_STORIES.LIST =
 {
+  -- common stories
   portal_to_hell = 40
   fuck_argent_energy = 20
   rescue_scientists = 40
   reinforce_marines = 40
   attack = 50
   i_challenge_you_to_a_duel = 100
-  deus_ex_machina = 6
   beacon = 50
   aa_guns = 40
   destroy_the_evil_experiment = 40
   found_this_weird_tech_mcguffin = 60
   found_this_weird_hell_mcguffin = 60
-  weab = 2
-  repercussions_of_evil = 2
-  spaceship_crash = 25
-  zero_wing = 2
   the_avenger = 40
   the_avenger_from_hell = 40
-  asylum = 10
   benevolent_ai = 40
+  spaceship_crash = 25
+
+  -- rare stories
+  deus_ex_machina = 6
+  weab = 2
+  repercussions_of_evil = 2
+  zero_wing = 2
+  asylum = 10
   knock_knock_joke = 2
   infernodancer = 2
   hell_to_pay = 2
   oblige_history = 5
+  bouncy_castle = 8
 }
 
 ZDOOM_STORIES.STORIES =
@@ -1209,8 +1213,8 @@ ZDOOM_STORIES.STORIES =
   }
 
 
- -- Crypt of the Necrodancer reference
- infernodancer =
+  -- Crypt of the Necrodancer reference
+  infernodancer =
   {
     hooks = {
       [[A ghostly tune suddenly appears at the edge of your hearing.
@@ -1246,10 +1250,10 @@ ZDOOM_STORIES.STORIES =
   }
 
 
- -- Miracle of Sound's tribute to everybody's favorite omnicidal maniac
- -- https://miracleofsound.bandcamp.com/track/hell-to-pay
- -- https://www.youtube.com/watch?v=kjIVkl34Vig
- hell_to_pay =
+  -- Miracle of Sound's tribute to everybody's favorite omnicidal maniac
+  -- https://miracleofsound.bandcamp.com/track/hell-to-pay
+  -- https://www.youtube.com/watch?v=kjIVkl34Vig
+  hell_to_pay =
   {
     hooks = {
       [[Wake up, I'm a bullet loosed, into the heart of a wretched age!
@@ -1280,8 +1284,72 @@ ZDOOM_STORIES.STORIES =
     }
   }
 
+  -- Tapwave-TODO: Halp pls proof-read! -MSSP
+  bouncy_castle =
+  {
+    hooks = {
+      [[You come across a tiny gash in a wall. As you investigate closer,
+      you hear the whistling of air. As you lean to push on the wall,
+      it begins to wobble slightly. You notice the floor beneath your
+      feet sagging as well.
+      _SPACE
+      Suddenly, you realise something about this is off and jump.
+      As you jump, the whole room ripples and jiggles. As you
+      look out of a window, you see the landscape also briefly wobbling.
+      _SPACE
+      What kind of place is this?!]],
 
- knock_knock_joke =
+      [[As you approach the next area, you see a group of demons over in a
+      field happily playing. As one begins to jump around, you suddenly
+      feel a jolt in the ground beneath you.
+      _SPACE
+      As they begin hopping around, the whole world around you begins to
+      dramatically wobble and jiggle. You try to keep your balance, only to
+      lose your footing. Eventually, the demons travel on to a different
+      area, allowing the ground beneath you to stabilise once more.
+      _SPACE
+      Luckily, they haven't noticed you, at least not yet. You jump to
+      your feet and continue on.]]
+
+      [[As you proceed to the next area, something has been feeling off,
+      lately. The ground beneath your feet has been feeling strange to walk
+      on. With each step you take, it briefly sags underneath your weight
+      like rubber.
+      _SPACE
+      As you look around, the whole world around you seems to gently sway
+      with a gentle bobbing as the hellspawn within manoeuvre.
+      _SPACE
+      Where are you, and what is going on with this place?]],
+    }
+
+    conclusions = {
+      [[After a long search, you eventually come across a large,
+      air-blowing machine. Believing this to be the source of all the
+      pecularities, you proceed to shut it down. Suddenly, the
+      entire area begins to collapse, sagging and crumpling flat,
+      confirming your previous suspicions. As the buildings and
+      landscape sink, any remaining demons not lucky enough to
+      escape in time are crushed, trapped, or suffocated in the chaos.
+      _SPACE
+      You breathe a sigh of relief at the feeling of solid ground
+      beneath your feet once.]],
+
+      [[After a long while, you eventually come across a large cap
+      attached to a wall. As you pop it open, a large gust of air starts
+      to blows right through to you. Suddenly, you feel the ground beneath your feet
+      beginning to sink. As you look around, the entire world around you
+      is beginning to dramatically sag and crumple. With adrenaline pumping
+      through your veins, you rush ahead, desperately searching for an
+      escape route.
+      _SPACE
+      Luckily, you find a portal nearby, but to where? You don't question
+      it. You leap head-first through, before the world behind you
+      completely collapses onto itself.]],
+    }
+  }
+
+
+  knock_knock_joke =
   {
     hooks = {
       [[Knock knock. Who's there?]],
@@ -1452,6 +1520,8 @@ ZDOOM_STORIES.SECRET_TEXTS =
 
   }
 
+-- TapWave-TODO:
+-- Plz help proof-read! -MSSP
   d2_secret1 =
   {
     [[You have found a secret zone!
@@ -1495,6 +1565,8 @@ ZDOOM_STORIES.SECRET_TEXTS =
     Their loss.]],
   }
 
+  -- TapWave-TODO:
+  -- Plz help proof-read! -MSSP
   d2_secret2 =
   {
     [[It seems this secret trail goes further than expected.
