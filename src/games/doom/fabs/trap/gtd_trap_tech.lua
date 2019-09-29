@@ -20,8 +20,8 @@ PREFABS.Trap_closet_tech =
 
   deep = 16
 
-  x_fit = "frame"
-  y_fit = "top"
+  x_fit = { 56,72 , 184,200 }
+  y_fit = { 24,120 }
 
   bound_z1 = 0
   bound_z2 = 128
@@ -34,4 +34,6 @@ PREFABS.Trap_closet_tech_2 =
   template = "Trap_closet_tech"
 
   map = "MAP02"
+
+  x_fit = { 40,56 , 200,216 }
 }
