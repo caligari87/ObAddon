@@ -5387,7 +5387,7 @@ GROW_36_DOUBLE_AREA =
 
 GROW_36_SINGLE_AREA =
 {
-  prob = 35
+  prob = 30
 
   structure =
   {
@@ -5404,7 +5404,7 @@ GROW_36_SINGLE_AREA =
 
 GROW_36_TRIPLE_AREA =
 {
-  prob = 25
+  prob = 20
 
   structure =
   {
@@ -5423,7 +5423,7 @@ GROW_36_TRIPLE_AREA =
 
 GROW_36_DOUBLE_FORWARD_AREA =
 {
-  prob = 30
+  prob = 25
 
   structure =
   {
@@ -5438,7 +5438,7 @@ GROW_36_DOUBLE_FORWARD_AREA =
 
 GROW_36_QUAD_FORWARD_AREA =
 {
-  prob = 25
+  prob = 20
 
   structure =
   {
@@ -5468,6 +5468,108 @@ GROW_36_SINGLE_FORWARD_AREA =
     "xx11xx","xx11xx"
   }
 }
+
+GROW_ROUND_NEW_AREA =
+{
+  prob = 25
+
+  structure =
+  {
+    "xx....xx","xx1111xx"
+    "x......x","x/1111%x"
+    "........","11/AA%11"
+    "........","11AAAA11"
+    "........","11AAAA11"
+    "........","11%AA/11"
+    "x......x","x%1111/x"
+    "xxx11xxx","xxx11xxx"
+  }
+
+  diagonals =
+  {
+    ".1","1."
+    "1A","A1"
+    "1A","A1"
+    ".1","1."
+  }
+}
+
+GROW_CROSS_NEW_AREA =
+{
+  prob = 25
+
+  structure =
+  {
+    "xx....xx","xx1111xx"
+    "xx....xx","xx1111xx"
+    "........","11AAAA11"
+    "........","11AAAA11"
+    "........","11AAAA11"
+    "........","11AAAA11"
+    "xx....xx","xx1111xx"
+    "xxx11xxx","xxx11xxx"
+  }
+}
+
+GROW_ATARI_LOGO_NEW_AREA =
+{
+  prob = 25
+
+  structure =
+  {
+    "......","AA11AA"
+    "......","AA11AA"
+    "......","AA11AA"
+    "......","AA11AA"
+    "......","A/11%A"
+    "......","111111"
+    "......","111111"
+    "xx11xx","xx11xx"
+  }
+
+  diagonals =
+  {
+    "A1","1A"
+  }
+}
+
+GROW_RIBBED_WALLS_NEW_AREA_DOUBLE =
+{
+  prob = 15
+
+  structure =
+  {
+    "xx....","xxAAAA"
+    "xx....","xxAAAA"
+    "......","11AAAA"
+    "......","11AAAA"
+    "xx....","xxAAAA"
+    "xx....","xxAAAA"
+    "......","11AAAA"
+    "......","11AAAA"
+    "xx....","xxAAAA"
+    "xx....","xxAAAA"
+    "xxx11x","xxx11x"
+  }
+}
+
+GROW_RIBBED_WALLS_NEW_AREA_SINGLE =
+{
+  prob = 15
+
+  structure =
+  {
+    "x....","xAAAA"
+    ".....","1AAAA"
+    "x....","xAAAA"
+    ".....","1AAAA"
+    "x....","xAAAA"
+    ".....","1AAAA"
+    "x....","xAAAA"
+    "xx11x","xx11x"
+  }
+}
+
 
 -- MSSP's rooms shaped like English alphabet letters. [LETTERS]
 
