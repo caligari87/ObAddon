@@ -17,6 +17,8 @@ PREFABS.Stairs_stack_o_boxes_128 =
   bound_z1 = 0
 
   delta_h = 128
+
+  x_fit = "frame"
 }
 
 PREFABS.Stairs_stack_o_boxes_128_2 =
