@@ -5533,6 +5533,28 @@ GROW_ATARI_LOGO_NEW_AREA =
   }
 }
 
+GROW_INVERSE_ATARI_LOGO_NEW_AREA =
+{
+  prob = 25
+
+  structure =
+  {
+    "........","11AAAA11"
+    "........","11AAAA11"
+    "........","11AAAA11"
+    "........","11AAAA11"
+    "........","11%AA/11"
+    "........","11111111"
+    "........","11111111"
+    "xxx11xxx","xxx11xxx"
+  }
+
+  diagonals =
+  {
+    "1A","A1"
+  }
+}
+
 GROW_RIBBED_WALLS_NEW_AREA_DOUBLE =
 {
   prob = 15
