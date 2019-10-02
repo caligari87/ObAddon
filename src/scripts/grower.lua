@@ -889,7 +889,7 @@ function Grower_calc_rule_probs()
   end
 
   local function Grower_absurdify()
-    local rules_to_absurdify = rand.pick({1,1,2,2,2,3,3,3,4,4,5,6})
+    local rules_to_absurdify = rand.pick({1,2,2,2,3,3,3,4,4,5,6,7,8})
     gui.printf(rules_to_absurdify .. " rules will be absurd!\n\n")
 
     local grammarset = {}
@@ -905,14 +905,25 @@ function Grower_calc_rule_probs()
       and not string.match(absurded_rule,"EMERGENCY")
       and not string.match(absurded_rule,"STREET")
       and not string.match(absurded_rule,"SIDEWALK")
-      and not string.match(absurded_rule,"hallway")
+      and not string.match(absurded_rule,"hall")
+      and not string.match(absurded_rule,"HALL")
       and SHAPE_GRAMMAR[absurded_rule].is_absurd != true
       and SHAPE_GRAMMAR[absurded_rule].use_prob != 0 then
-        SHAPE_GRAMMAR[absurded_rule].use_prob = SHAPE_GRAMMAR[absurded_rule].use_prob * 1000000
+
+        local ab_factor = 0
+        if rand.odds(50) then
+          ab_factor = rand.range( 100,1000000 )
+          SHAPE_GRAMMAR[absurded_rule].use_prob = SHAPE_GRAMMAR[absurded_rule].use_prob * ab_factor
+        else
+          ab_factor = rand.range( 0.01,0.75 )
+          SHAPE_GRAMMAR[absurded_rule].use_prob = SHAPE_GRAMMAR[absurded_rule].use_prob * ab_factor
+        end
+
         SHAPE_GRAMMAR[absurded_rule].is_absurd = true
 
         if PARAM.print_shape_steps != "no" then
           gui.printf(absurded_rule .. " is now ABSURDIFIED! WOOO!!!\n")
+          gui.printf("Factor: x" .. ab_factor .. "\n")
         end
 
         rules_to_absurdify = rules_to_absurdify - 1
