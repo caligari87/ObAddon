@@ -36,6 +36,15 @@ PROCEDURAL_GOTCHA_FINE_TUNE.GOTCHA_QUANTITY_CHOICES =
   "50",  _("+50% Monsters"),
   "100", _("+100% Monsters"),
   "200",  _("+200% Monsters"),
+  "400", _("+400% Monters"),
+}
+
+PROCEDURAL_GOTCHA_FINE_TUNE.GOTCHA_MAP_SIZES =
+{
+  "large", _("Large"),
+  "regular", _("Regular"),
+  "small", _("Small"),
+  "tiny", _("Tiny"),
 }
 
 
@@ -80,6 +89,15 @@ OB_MODULES["procedural_gotcha"] =
       choices=PROCEDURAL_GOTCHA_FINE_TUNE.GOTCHA_STRENGTH_CHOICES,
       default = "harder",
       tooltip = "Offset monster quantity from your default strength of choice plus the increasing level ramp.",
+    }
+
+    gotcha_map_size =
+    {
+      name="gotcha_map_size",
+      label=_("Map Size"),
+      choices=PROCEDURAL_GOTCHA_FINE_TUNE.GOTCHA_MAP_SIZES,
+      default = "small",
+      tooltip = "Size of the procedural gotcha. Start and arena room sizes are relative to map size as well."
     }
 
   }

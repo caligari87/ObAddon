@@ -274,8 +274,21 @@ function Episode_determine_map_sizes()
     local W, H = Level_determine_map_size(LEV)
 
     if LEV.is_procedural_gotcha == true then
-      W = 30
-      H = 30
+      if PARAM.gotcha_map_size then
+        if PARAM.gotcha_map_size == "large" then
+          W = 30
+        elseif PARAM.gotcha_map_size == "regular" then
+          W = 26
+        elseif PARAM.gotcha_map_size == "small" then
+          W = 22
+        elseif PARAM.gotcha_map_size == "tiny" then
+          W = 16
+        end
+      else
+        W = 26
+      end
+
+      H = W
     end
 
     assert(W + 4 <= SEED_W)

@@ -898,14 +898,16 @@ function Monster_fill_room(R)
           gotcha_qty = 0.75
         elseif PARAM["gotcha_qty"] == "none" then
           gotcha_qty = 1.0
-        elseif PARAM["gotcha_qty"] == "+25" then
+        elseif PARAM["gotcha_qty"] == "25" then
           gotcha_qty = 1.25
-        elseif PARAM["gotcha_qty"] == "+50" then
+        elseif PARAM["gotcha_qty"] == "50" then
           gotcha_qty = 1.5
-        elseif PARAM["gotcha_qty"] == "+100" then
+        elseif PARAM["gotcha_qty"] == "100" then
           gotcha_qty = 2.0
-        elseif PARAM["gotcha_qty"] == "+200" then
-          gotcha_qty = 3.0
+        elseif PARAM["gotcha_qty"] == "200" then
+          gotcha_qty = 4.0
+        elseif PARAM["gotcha_qty"] == "400" then
+          gotcha_qty = 8.0
         end
       end
 

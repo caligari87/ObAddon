@@ -2097,7 +2097,7 @@ function Room_choose_size(R, not_big)
   end
 
   if LEVEL.is_procedural_gotcha and R.is_start then
-    R.size_limit = R.size_limit * 4
+    R.size_limit = LEVEL.map_W * 5
     R.floor_limit = R.floor_limit * 2
   end
 
