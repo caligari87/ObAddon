@@ -12,6 +12,8 @@ PREFABS.Hallway_ducts_i_slope =
   group  = "ducts"
   prob   = 50
 
+  style = "steepness"
+
   where  = "seeds"
   shape  = "I"
 
