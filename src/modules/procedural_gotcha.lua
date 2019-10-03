@@ -36,7 +36,7 @@ PROCEDURAL_GOTCHA_FINE_TUNE.GOTCHA_QUANTITY_CHOICES =
   "50",  _("+50% Monsters"),
   "100", _("+100% Monsters"),
   "200",  _("+200% Monsters"),
-  "400", _("+400% Monters"),
+  "400", _("+400% Monsters"),
 }
 
 PROCEDURAL_GOTCHA_FINE_TUNE.GOTCHA_MAP_SIZES =
