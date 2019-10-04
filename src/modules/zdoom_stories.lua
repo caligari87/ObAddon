@@ -2083,9 +2083,11 @@ ZDOOM_STORIES.QUIT_MESSAGES =
   -- important facts
   [[By exiting, you are agreeing to subscribe to Cat Facts.]],
   [[Sewerage is important but HVAC systems is importanter.]],
+  [[In 1998, the Undertaker threw Mankind off Hell in a Cell and plummeted 16ft. through an announcer's table.]],
+  [[ObAddon enhances your problem-solving skills! Contribute now!]],
+  [[Set the Y offset, again of both front and back side, to the negative of the subtraction of the ceiling height of the sector the pit and the floor height of the planes, or y-offset = -(pitceilingheight-planefloorheight). So, the ceiling height is 256 in both platforms and the pit and the platform's floor height is 0, so the sidedefs' Y-offsets must be -(256-0) = -256.]],
 
   -- other important facts, just facts no silly stuff
-  [[In 1998, the Undertaker threw Mankind off Hell in a Cell and plummeted 16ft. through an announcer's table.]],
   [[Did you know Carmack and Hall in Sept 1990, produced a replica of Super Mario Bros 3's first level and using Romero's Dangerous Dave character in place of Mario?]],
   [[The last of the original id software employees from the OG Doom era as of September 2019 are Kevin Cloud and Donna Jackson.]],
   [[Many of Tom Hall's ideas for Doom never made it into the game but you can find it all in something called the Doom Bible, floating around online in PDF format.]],
