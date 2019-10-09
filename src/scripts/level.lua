@@ -174,13 +174,6 @@ function Level_determine_map_size(LEV)
     end
   end
 
-  -- sanity check for Level Control fine tune
-  if PARAM.level_upper_bound then
-    if SIZES[PARAM.level_upper_bound] < SIZES[PARAM.level_lower_bound] then
-      error("Level Control upper bound and lower bound are reversed.")
-    end
-  end
-
   -- Mix It Up --
 
   -- Readjusted probabilities once again, added "Micro" size as suggested by activity
