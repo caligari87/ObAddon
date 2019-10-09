@@ -2841,7 +2841,6 @@ function Room_floor_ceil_heights()
       if N3.room == A.room and N3.mode == "nature" then return N3 end
     end
 
-    A.mode = "void"
     -- error("failed to find cage neighbor")
   end
 
@@ -2920,6 +2919,11 @@ function Room_floor_ceil_heights()
     end
 
     local N = get_cage_neighbor(A)
+
+    if not N then
+      A.mode = "void"
+      return
+    end
 
     if not N.cage_floor_h then
       N.cage_floor_h = (N.max_floor_h or N.floor_h) + rand.pick({48,64})
