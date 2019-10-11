@@ -3,7 +3,7 @@ PREFABS.Item_craneo_smasher_tech =
   file  = "item/craneo_item_smasher.wad"
   map = "MAP01"
 
-  prob = 10
+  prob = 7
   theme = "!hell"
 
   style = "traps"
