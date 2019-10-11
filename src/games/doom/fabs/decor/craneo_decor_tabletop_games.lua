@@ -19,6 +19,8 @@ PREFABS.Decor_craneo_arcade_machine =
   template = "Decor_craneo_billiards_table"
   map  = "MAP02"
 
+  prob = 1100
+
   size = 64
 
   face_open = true

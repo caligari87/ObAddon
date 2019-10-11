@@ -935,7 +935,7 @@ ARMAETUS_THEMES =
   hell_CementCautionlines =
   {
     env = "building"
-    prob = 35
+    prob = 20
 
     theme_override = "tech"
 
@@ -1019,7 +1019,7 @@ ARMAETUS_THEMES =
   hell_CementCautionless =
   {
     env = "building"
-    prob = 35
+    prob = 20
 
     walls =
     {
@@ -1218,7 +1218,7 @@ ARMAETUS_THEMES =
   hell_egyptish =
   {
     env = "building"
-    prob = 80
+    prob = 60
 
     walls =
     {

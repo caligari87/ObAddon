@@ -3,7 +3,7 @@ PREFABS.Decor_craneo_chemical_experiments_table =
   file  = "decor/craneo_necro_alchemy_table.wad"
   map   = "MAP01"
 
-  prob  = (5000 / 3)
+  prob  = (3500 / 3)
 
   theme = "!tech"
   env   = "building"
