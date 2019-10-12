@@ -7,8 +7,7 @@ PREFABS.Decor_mogwaltz_blob_lamp_candalebra =
   file   = "decor/mogwaltz_blob_lamp.wad"
   map    = "MAP01"
 
-  prob   = 1400 --originally 5000 (against vanilla), 700 (mog's setting)
-  skip_prob = 75
+  prob   = 1000 --originally 5000 (against vanilla), 700 (mog's setting)
 
   theme  = "!tech"
   env    = "outdoor"

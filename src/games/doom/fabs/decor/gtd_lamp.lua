@@ -3,7 +3,7 @@ PREFABS.Decor_gtd_lamp_1 =
   file   = "decor/gtd_lamp.wad"
   map    = "MAP01"
 
-  prob   = 1400
+  prob   = 1500
   theme  = "!hell"
   env    = "outdoor"
 
