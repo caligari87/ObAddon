@@ -156,6 +156,13 @@ CTL_DOOM.WEAPON_PREFS =
   loveit = 170
 }
 
+CTL_DOOM.WEAPON_PREF_CHOICES =
+{
+  "normal",  _("Normal"),
+  "vanilla", _("Vanilla"),
+  "none",    _("NONE"),
+}
+
 
 function CTL_DOOM.weapon_setup(self)
   for name,opt in pairs(self.options) do
@@ -169,6 +176,50 @@ function CTL_DOOM.weapon_setup(self)
       W.level = 1
     end
   end -- for opt
+
+  -- specific instructions for the weapon_pref choices
+  PARAM.weapon_prefs = self.options.weapon_prefs.value
+
+  if PARAM.weapon_prefs == "vanilla" then
+    GAME.MONSTERS["Cyberdemon"].weap_prefs = { bfg = 10.0 }
+    GAME.MONSTERS["Spiderdemon"].weap_prefs = { bfg = 10.0 }
+    GAME.MONSTERS["arach"].weap_prefs = nil
+    GAME.MONSTERS["baron"].weap_prefs = nil
+    GAME.MONSTERS["caco"].weap_prefs = nil
+    GAME.MONSTERS["demon"].weap_prefs = { launch = 0.3 }
+    GAME.MONSTERS["gunner"].weap_prefs = nil
+    GAME.MONSTERS["imp"].weap_prefs = nil
+    GAME.MONSTERS["knight"].weap_prefs = nil
+    GAME.MONSTERS["mancubus"].weap_prefs = nil
+    GAME.MONSTERS["pain"].weap_prefs = { launch = 0.1 }
+    GAME.MONSTERS["revenant"].weap_prefs = nil
+    GAME.MONSTERS["shooter"].weap_prefs = nil
+    GAME.MONSTERS["skull"].weap_prefs = { launch = 0.1 }
+    GAME.MONSTERS["spectre"].weap_prefs = { launch = 0.3 }
+    GAME.MONSTERS["ss_nazi"].weap_prefs = nil
+    GAME.MONSTERS["vile"].weap_prefs = nil
+    GAME.MONSTERS["zombie"].weap_prefs = nil
+  elseif PARAM.weapon_prefs == "none" then
+    GAME.MONSTERS["Cyberdemon"].weap_prefs = nil
+    GAME.MONSTERS["Spiderdemon"].weap_prefs = nil
+    GAME.MONSTERS["arach"].weap_prefs = nil
+    GAME.MONSTERS["baron"].weap_prefs = nil
+    GAME.MONSTERS["caco"].weap_prefs = nil
+    GAME.MONSTERS["demon"].weap_prefs = nil
+    GAME.MONSTERS["gunner"].weap_prefs = nil
+    GAME.MONSTERS["imp"].weap_prefs = nil
+    GAME.MONSTERS["knight"].weap_prefs = nil
+    GAME.MONSTERS["mancubus"].weap_prefs = nil
+    GAME.MONSTERS["pain"].weap_prefs = nil
+    GAME.MONSTERS["revenant"].weap_prefs = nil
+    GAME.MONSTERS["shooter"].weap_prefs = nil
+    GAME.MONSTERS["skull"].weap_prefs = nil
+    GAME.MONSTERS["spectre"].weap_prefs = nil
+    GAME.MONSTERS["ss_nazi"].weap_prefs = nil
+    GAME.MONSTERS["vile"].weap_prefs = nil
+    GAME.MONSTERS["zombie"].weap_prefs = nil
+  end
+
 end
 
 
@@ -186,11 +237,23 @@ OB_MODULES["doom_weapon_control"] =
   options =
   {
     shotty   = { label=_("Shotgun"),         choices=CTL_DOOM.WEAPON_CHOICES }
-    super    = { label=_("Super Shotgun"),   choices=CTL_DOOM.WEAPON_CHOICES }
+    super    = { label=_("Super Shotgun"),   choices=CTL_DOOM.WEAPON_CHOICES, gap = 1 }
     chain    = { label=_("Chaingun"),        choices=CTL_DOOM.WEAPON_CHOICES }
     launch   = { label=_("Rocket Launcher"), choices=CTL_DOOM.WEAPON_CHOICES }
     plasma   = { label=_("Plasma Rifle"),    choices=CTL_DOOM.WEAPON_CHOICES }
     bfg      = { label=_("BFG"),             choices=CTL_DOOM.WEAPON_CHOICES }
+
+    weapon_prefs =
+    {
+      name="weapon_prefs",
+      label=_("Weapon Preferences"),
+      choices=CTL_DOOM.WEAPON_PREF_CHOICES,
+      tooltip="Alters selection of weapons that are prefered to show up depending on enemy palette for a chosen map.\n\n" ..
+      "Normal: Monsters have weapon preferences. Stronger weapons and ammo are more likely to appear directly with stronger enemies.\n\n" ..
+      "Vanilla: Vanilla Oblige-style preferences. Reduces rocket launchers if the map has more pain elementals, lost souls, demons/specters" ..
+      "while increases BFG's for cyberdemons and spider masterminds. No other weapon preferences.\n\n" ..
+      "NONE: No preferences at all. For those who like to live life dangerously with lost souls and only rockets.",
+      default="normal",
+    }
   }
 }
-

@@ -122,8 +122,8 @@ UI_MONS.SECRET_MONSTERS =
 
 UI_MONS.START_ROOM_MON_CHOICES =
 {
-  "no", _("No"),
-  "yes",    _("Yes"),
+  "no",  _("No"),
+  "yes", _("Yes"),
 }
 
 OB_MODULES["ui_mons"] =
