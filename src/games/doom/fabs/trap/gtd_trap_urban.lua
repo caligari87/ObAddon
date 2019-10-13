@@ -19,8 +19,8 @@ PREFABS.Trap_closet_urban =
 
   deep = 16
 
-  x_fit = "frame"
-  y_fit = "top"
+  x_fit = { 120,136 }
+  y_fit = { 56,72 }
 
   bound_z1 = 0
   bound_z2 = 128
