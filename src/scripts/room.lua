@@ -1088,7 +1088,7 @@ function Room_detect_porches(R)
 
       if R.porch_count > math.floor(R.floor_areas/3) then return end
 
-      local porch_prob = style_sel("porches", 0, 30, 60, 90)
+      local porch_prob = style_sel("porches", 0, 25, 50, 75)
       porch_prob = porch_prob / (LEVEL.autodetail_group_walls_factor / 2)
 
       if A.porch_score > 0 and rand.odds(porch_prob) then
@@ -1714,7 +1714,7 @@ function Room_border_up()
       -- beams --
 
       if not A1.is_outdoor and not A2.is_outdoor then
-        local beam_prob = style_sel("beams",0,20,40,60)
+        local beam_prob = style_sel("beams",0,15,30,45)
           / (LEVEL.autodetail_group_walls_factor/3)
         if can_beam(A1, A2, junc) and rand.odds(beam_prob) then
           Junction_make_beams(junc)
