@@ -250,7 +250,7 @@ OB_MODULES["doom_weapon_control"] =
       choices=CTL_DOOM.WEAPON_PREF_CHOICES,
       tooltip="Alters selection of weapons that are prefered to show up depending on enemy palette for a chosen map.\n\n" ..
       "Normal: Monsters have weapon preferences. Stronger weapons and ammo are more likely to appear directly with stronger enemies.\n\n" ..
-      "Vanilla: Vanilla Oblige-style preferences. Reduces rocket launchers if the map has more pain elementals, lost souls, demons/specters" ..
+      "Vanilla: Vanilla Oblige-style preferences. Reduces rocket launchers if the map has more pain elementals, lost souls, demons/specters " ..
       "while increases BFG's for cyberdemons and spider masterminds. No other weapon preferences.\n\n" ..
       "NONE: No preferences at all. For those who like to live life dangerously with lost souls and only rockets.",
       default="normal",
