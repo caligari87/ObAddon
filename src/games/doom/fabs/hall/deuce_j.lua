@@ -29,7 +29,25 @@ PREFABS.Hallway_deuce_term_tech =
 
   tex_METAL = "SHAWN2"
   flat_CEIL5_2 = "FLAT23"
+}
 
+-- doorz -MSSP
+PREFABS.Hallway_deuce_term_door =
+{
+  template = "Hallway_deuce_term"
+  style = "doors"
+}
+
+PREFABS.Hallway_deuce_term_door_tech =
+{
+  template = "Hallway_deuce_term"
+  style = "doors"
+
+  theme = "tech"
+
+  tex_BIGDOOR6 = "BIGDOOR1"
+  tex_METAL = "SHAWN2"
+  flat_CEIL5_2 = "FLAT23"
 }
 
 
@@ -54,4 +72,3 @@ PREFABS.Hallway_deuce_secret_tech =
   flat_CEIL5_2 = "FLAT23"
 
 }
-
