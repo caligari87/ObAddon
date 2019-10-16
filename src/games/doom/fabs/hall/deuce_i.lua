@@ -147,3 +147,24 @@ PREFABS.Hallway_deuce_i_stout_tech =
 
   can_flip = true
 }
+
+PREFABS.Hallway_deuce_i_light_box =
+{
+  template = "Hallway_deuce_i1"
+  map = "MAP06"
+
+  prob = 35
+}
+
+PREFABS.Hallway_deuce_i_light_box_tech =
+{
+  template = "Hallway_deuce_i1"
+  map = "MAP06"
+  theme  = "tech"
+
+  prob = 35
+
+  ceil_CEIL1_3 = "FLAT17"
+  tex_METAL = "SHAWN2"
+  flat_CEIL5_2 = "FLAT23"
+}
