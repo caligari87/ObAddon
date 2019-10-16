@@ -212,7 +212,7 @@ PREFABS.Pic_urban_downtown_facade2_EPIC =
 
 
 ---------------------------------------------------------------------------------
--- Facade3/4 are buildings that are half different window textures on either side
+-- Facade3 are buildings that don't have sort of window shop entrances
 ---------------------------------------------------------------------------------
 
 PREFABS.Pic_urban_downtown_facade3_vanilla =
@@ -220,7 +220,7 @@ PREFABS.Pic_urban_downtown_facade3_vanilla =
   file   = "picture/gtd_pic_urban_downtown_facades.wad"
   map    = "MAP01"
 
-  prob   = 100
+  prob   = 250
   theme  = "urban"
 
   env    = "outdoor"
@@ -238,15 +238,6 @@ PREFABS.Pic_urban_downtown_facade3_vanilla =
   x_fit  = { 168,216 }
 
   tex_CITY01 =
-  {
-    MODWALL2 = 50
-    MODWALL3 = 50
-    MODWALL4 = 50
-    BLAKWAL1 = 50
-    BLAKWAL2 = 50
-  }
-
-  tex_CITY02 =
   {
     MODWALL2 = 50
     MODWALL3 = 50
@@ -306,7 +297,7 @@ PREFABS.Pic_urban_downtown_facade3_EPIC =
   file   = "picture/gtd_pic_urban_downtown_facades.wad"
   map    = "MAP03"
 
-  prob   = 100
+  prob   = 250
   theme  = "urban"
 
   env    = "outdoor"
@@ -328,25 +319,6 @@ PREFABS.Pic_urban_downtown_facade3_EPIC =
   x_fit  = { 168,216 }
 
   tex_CITY01 =
-  {
-    MODWALL2 = 25
-    MODWALL3 = 25
-    MODWALL4 = 25
-    BLAKWAL1 = 25
-    BLAKWAL2 = 25
-    CITY01 = 50
-    CITY02 = 50
-    CITY03 = 50
-    CITY04 = 50
-    CITY05 = 50
-    CITY06 = 50
-    CITY07 = 50
-    CITY08 = 50
-    CITY09 = 50
-    CITY10 = 50
-  }
-
-  tex_CITY02 =
   {
     MODWALL2 = 25
     MODWALL3 = 25
@@ -438,25 +410,3 @@ PREFABS.Pic_urban_downtown_facade3_EPIC =
     REDWALL=50
   }
 }
-
-PREFABS.Pic_urban_downtown_facade4_vanilla =
-{
-  template = "Pic_urban_downtown_facade3_vanilla"
-
-  map      = "MAP04"
-
-  x_fit    = { 40,88 }
-}
-
-PREFABS.Pic_urban_downtown_facade4_EPIC =
-{
-  template = "Pic_urban_downtown_facade3_EPIC"
-
-  map      = "MAP04"
-
-  replaces = "Pic_urban_downtown_facade4_vanilla"
-
-  x_fit    = { 40,88 }
-}
-
--- MSSP-TODO: alt versions of facade3/4 where both sides stretch

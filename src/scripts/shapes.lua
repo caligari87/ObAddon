@@ -5595,7 +5595,7 @@ GROW_ROUND_NEW_AREA =
 GROW_CROSS_NEW_AREA =
 {
   prob = 25
-  skip_prob = 8
+  skip_prob = 80
 
   structure =
   {
