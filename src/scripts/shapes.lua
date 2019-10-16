@@ -2562,6 +2562,7 @@ GROW_COLONNADE_1 =
 {
   prob = 3
   prob_skew = 5
+  skip_prob = 80
 
   structure =
   {
@@ -2578,6 +2579,7 @@ GROW_COLONNADE_2 =
 {
   prob = 3
   prob_skew = 5
+  skip_prob = 60
 
   structure =
   {
@@ -2595,6 +2597,7 @@ GROW_COLONNADE_2 =
 GROW_COLONNADE_TINY =
 {
   prob = 5
+  skip_prob = 60
 
   structure =
   {
@@ -2610,6 +2613,7 @@ GROW_COLONNADE_PARTHENON =
 {
   prob = 3
   prob_skew = 3
+  skip_prob = 50
 
   structure =
   {
@@ -2626,6 +2630,7 @@ GROW_COLONNADE_PARTHENON_3P =
 {
   prob = 3
   prob_skew = 3
+  skip_prob = 50
 
   structure =
   {
@@ -2644,6 +2649,7 @@ GROW_COLONNADE_PARTHENON_LAKE =
   prob = 5
   prob_skew = 3
   aversion = 5
+  skip_prob = 75
 
   structure =
   {
@@ -2666,6 +2672,7 @@ GROW_COLONNADE_PARTHENON_LAKE =
 GROW_LIQUID_GUTTER_SIDE =
 {
   prob = 30
+  skip_prob = 40
 
   structure =
   {
@@ -2679,6 +2686,7 @@ GROW_LIQUID_GUTTER_SIDE =
 GROW_LIQUID_GUTTER_CORNER =
 {
   prob = 30
+  skip_prob = 40
 
   structure =
   {
@@ -2697,6 +2705,7 @@ GROW_LIQUID_POOL_1X1 =
 {
   prob = 5
   prob_skew = 2
+  skip_prob = 35
 
   structure =
   {
@@ -2712,6 +2721,7 @@ GROW_LIQUID_POOL_2X2 =
 {
   prob = 15
   prob_skew = 5
+  skip_prob = 35
 
   structure =
   {
@@ -2728,6 +2738,7 @@ GROW_LIQUID_POOL_3X1 =
 {
   prob = 15
   prob_skew = 5
+  skip_prob = 35
 
   structure =
   {
@@ -2744,6 +2755,7 @@ GROW_LIQUID_POOL_3X1 =
 GROW_LIQUID_PILLAR_CENTER =
 {
   prob = 10
+  skip_prob = 50
 
   structure =
   {
@@ -2766,6 +2778,7 @@ GROW_LIQUID_PILLAR_CENTER =
 GROW_LIQUID_PILLAR_CENTER_LONG =
 {
   prob = 10
+  skip_prob = 50
 
   structure =
   {
@@ -2790,6 +2803,7 @@ GROW_LIQUID_PILLAR_CENTER_LONG =
 GROW_LIQUID_SIDE_POOL_THICC =
 {
   prob = 15
+  skip_prob = 65
 
   structure =
   {
@@ -2809,6 +2823,7 @@ GROW_LIQUID_SIDE_POOL_THICC =
 GROW_LIQUID_SIDE_POOL_THIN =
 {
   prob = 15
+  skip_prob = 65
 
   structure =
   {
@@ -2826,6 +2841,7 @@ GROW_LIQUID_SIDE_POOL_THIN =
 GROW_LIQUID_FIGURE_CORRIDOR =
 {
   prob = 7
+  skip_prob = 80
 
   structure =
   {
@@ -2842,6 +2858,7 @@ GROW_LIQUID_FIGURE_CORRIDOR =
 GROW_LIQUID_BRIDGE_CORRIDOR =
 {
   prob = 8
+  skip_prob = 80
 
   structure =
   {
@@ -2863,6 +2880,7 @@ GROW_LIQUID_BRIDGE_CORRIDOR =
 GROW_LIQUID_BRIDGE_CORRIDOR_CROSSING =
 {
   prob = 8
+  skip_prob = 80
 
   structure =
   {
@@ -2885,6 +2903,7 @@ GROW_LIQUID_BRIDGE_CORRIDOR_CROSSING =
 GROW_LIQUID_PLATFORM_FUNNEL =
 {
   prob = 15
+  skip_prob = 80
 
   structure =
   {
@@ -2904,6 +2923,7 @@ GROW_LIQUID_PLATFORM_FUNNEL =
 GROW_LIQUID_WATERFALL_SIDES =
 {
   prob = 20
+  skip_prob = 50
 
   structure =
   {
@@ -2916,6 +2936,8 @@ GROW_LIQUID_WATERFALL_SIDES =
 GROW_LIQUID_U =
 {
   prob = 5
+  skip_prob = 75
+
   structure =
   {
     ".......","11~~~11"
@@ -2935,6 +2957,8 @@ GROW_LIQUID_U =
 GROW_LIQUID_U_ALT =
 {
   prob = 5
+  skip_prob = 75
+
   structure =
   {
     "1......","11~~~11"
@@ -2953,7 +2977,7 @@ GROW_LIQUID_U_ALT =
 GROW_LIQUID_INTERSECTION =
 {
   prob = 15
-  skip_prob = 2
+  skip_prob = 80
 
   structure =
   {
@@ -2980,6 +3004,7 @@ GROW_LIQUID_INTERSECTION =
 GROW_LIQUID_OVAL_SPLIT =
 {
   prob = 15
+  skip_prob = 80
 
   structure =
   {
@@ -3009,6 +3034,7 @@ GROW_RAMP_THIN_SINK =
 {
   prob = 20
   aversion = 5
+  skip_prob = 75
 
   structure =
   {
@@ -3030,6 +3056,7 @@ GROW_RAMP_THIN_RISE =
 {
   prob = 20
   aversion = 5
+  skip_prob = 75
 
   structure =
   {
@@ -3053,6 +3080,7 @@ GROW_REVERSE_FUNNEL =
 {
   prob = 20
   aversion = 3
+  skip_prob = 60
 
   structure =
   {
@@ -3075,6 +3103,8 @@ GROW_REVERSE_FUNNEL =
 GROW_SIDE_ON_RAMP =
 {
   prob = 25
+  skip_prob = 10
+
   structure =
   {
     "x..","xAA"
@@ -3093,6 +3123,8 @@ GROW_SIDE_ON_RAMP =
 GROW_SIDE_ON_RAMP_TALL =
 {
   prob = 25
+  skip_prob = 10
+
   structure =
   {
     "x..","xAA"
@@ -3112,6 +3144,7 @@ GROW_SIDE_ON_RAMP_TALL =
 GROW_CAUSEWAY =
 {
   prob = 10
+  skip_prob = 75
 
   structure =
   {
@@ -3127,6 +3160,7 @@ GROW_CAUSEWAY =
 GROW_CAUSEWAY =
 {
   prob = 10
+  skip_prob = 75
 
   structure =
   {
@@ -3142,6 +3176,7 @@ GROW_CAUSEWAY =
 GROW_GATED_RAMP =
 {
   prob = 15
+  skip_prob = 50
 
   structure =
   {
@@ -3155,6 +3190,7 @@ GROW_GATED_RAMP =
 GROW_GATED_SIDE_RAMP =
 {
   prob = 15
+  skip_prob = 50
 
   structure =
   {
@@ -3188,6 +3224,7 @@ GROW_BEND =
 GROW_SQUIGGLE =
 {
   prob = 15
+  skip_prob = 60
 
   structure =
   {
@@ -3207,6 +3244,7 @@ GROW_SQUIGGLE =
 GROW_TINY_U =
 {
   prob = 13
+  skip_prob = 60
 
   structure =
   {
@@ -3227,6 +3265,7 @@ GROW_TINY_U =
 GROW_STAIRED_HORSESHOE =
 {
   prob = 20
+  skip_prob = 80
 
   aversion = 10
 
@@ -3252,6 +3291,7 @@ GROW_STAIRED_HORSESHOE =
 GROW_STAIRED_HORSESHOE_TIGHTER =
 {
   prob = 20
+  skip_prob = 80
 
   aversion = 10
 
@@ -3276,6 +3316,7 @@ GROW_STAIRED_HORSESHOE_TIGHTER =
 GROW_STAIRED_T =
 {
   prob = 25
+  skip_prob = 50
 
   aversion = 10
 
@@ -3299,6 +3340,7 @@ GROW_STAIRED_T =
 GROW_STAIRED_L =
 {
   prob = 40
+  skip_prob = 50
 
   aversion = 5
 
@@ -3327,6 +3369,7 @@ GROW_STAIRED_L =
 GROW_SQUEEZE_STRAIGHT_NEW_AREA =
 {
   prob = 15
+  skip_prob = 70
 
   structure =
   {
@@ -3342,6 +3385,7 @@ GROW_SQUEEZE_STRAIGHT_NEW_AREA =
 GROW_SQUEEZE_CURVE_NEW_AREA =
 {
   prob = 10
+  skip_prob = 70
 
   structure =
   {
@@ -3356,7 +3400,7 @@ GROW_SQUEEZE_CURVE_NEW_AREA =
 GROW_SQUEEZE_STAIRCASE =
 {
   prob = 7
-  skip_prob = 2
+  skip_prob = 70
 
   structure =
   {
@@ -3370,7 +3414,7 @@ GROW_SQUEEZE_STAIRCASE =
 GROW_SQUEEZE_EVEN_MORE_STAIRCASE =
 {
   prob = 7
-  skip_prob = 3
+  skip_prob = 76
 
   structure =
   {
@@ -3386,6 +3430,7 @@ GROW_SQUEEZE_EVEN_MORE_STAIRCASE =
 GROW_SQUEEZE_LIQUID_ONE_SIDE =
 {
   prob = 6
+  skip_prob = 70
 
   structure =
   {
@@ -3400,6 +3445,7 @@ GROW_SQUEEZE_LIQUID_ONE_SIDE =
 GROW_SQUEEZE_LIQUID_BOTH_SIDES =
 {
   prob = 6
+  skip_prob = 65
 
   structure =
   {
@@ -3414,6 +3460,7 @@ GROW_SQUEEZE_LIQUID_BOTH_SIDES =
 GROW_SQUEEZE_CURVE_LIQUID_SIDE =
 {
   prob = 5
+  skip_prob = 60
 
   structure =
   {
@@ -3435,6 +3482,7 @@ GROW_SQUEEZE_CURVE_LIQUID_SIDE =
 GROW_SQUEEZE_DRAIN =
 {
   prob = 8
+  skip_prob = 60
 
   structure =
   {
@@ -3450,6 +3498,7 @@ GROW_SQUEEZE_DRAIN =
 GROW_SQUEEZE_DRAIN_CURVE =
 {
   prob = 8
+  skip_prob = 60
 
   structure =
   {
@@ -3475,8 +3524,8 @@ GROW_SQUEEZE_DRAIN_CURVE =
 GROW_CAGE_BETWEEN_PILLAR =
 {
   prob = 10
-
   skip_prob = 70
+
   aversion = 10
 
   structure =
@@ -3493,6 +3542,8 @@ GROW_CAGE_BETWEEN_PILLAR =
 GROW_CAGE_AROUND_PILLAR =
 {
   prob = 25
+  skip_prob = 65
+
   structure =
   {
     ".....","11111"
@@ -3509,8 +3560,8 @@ GROW_CAGE_AROUND_PILLAR =
 GROW_CAGE_Z =
 {
   prob = 10
-
   skip_prob = 70
+
   aversion = 5
 
   structure =
@@ -3529,8 +3580,8 @@ GROW_CAGE_Z =
 GROW_CAGE_SIMPLE_CORNER =
 {
   prob = 6
-
   skip_prob = 70
+
   aversion = 10
 
   structure =
@@ -3550,6 +3601,7 @@ GROW_CAGE_SIMPLE_CORNER =
 GROW_CAGE_DOOM_MAP01 =
 {
   prob = 15
+  skip_prob = 75
 
   structure =
   {
@@ -3566,6 +3618,7 @@ GROW_CAGE_DOOM_MAP01 =
 GROW_CAGE_DOOM_MAP01_PILLARED =
 {
   prob = 15
+  skip_prob = 75
 
   structure =
   {
@@ -3596,6 +3649,7 @@ DECORATE_CAGE_ON_LIQUID_CANAL_SIDE =
 GROW_CAGE_ROUND_ARENA =
 {
   prob = 8
+  skip_prob = 80
 
   aversion = 4
 
@@ -3620,8 +3674,7 @@ GROW_CAGE_ROUND_ARENA =
 GROW_CAGE_SIDEWAYS =
 {
   prob = 6
-
-  skip_prob = 50
+  skip_prob = 80
 
   structure =
   {
@@ -3637,8 +3690,7 @@ GROW_CAGE_SIDEWAYS =
 GROW_CAGE_SIDEWAYS_STAIR =
 {
   prob = 6
-
-  skip_prob = 50
+  skip_prob = 80
 
   structure =
   {
@@ -3654,8 +3706,7 @@ GROW_CAGE_SIDEWAYS_STAIR =
 GROW_CAGE_SIDEWAYS_BOTH_SIDES =
 {
   prob = 8
-
-  skip_prob = 50
+  skip_prob = 80
 
   structure =
   {
@@ -3672,6 +3723,7 @@ GROW_CAGE_SIDEWAYS_BOTH_SIDES =
 GROW_CAGE_ROUND_RAFTERS_ONE_SIDE =
 {
   prob = 8
+  skip_prob = 75
 
   structure =
   {
@@ -3694,6 +3746,8 @@ GROW_CAGE_ROUND_RAFTERS_ONE_SIDE =
 GROW_CATWALK_BIFUNNEL_SINK =
 {
   prob = 7
+  skip_prob = 80
+
   structure =
   {
     "xx...xx","xx111xx"
@@ -3714,6 +3768,7 @@ GROW_CATWALK_BIFUNNEL_SINK =
 GROW_CATWALK_BIFUNNEL_RISE =
 {
   prob = 7
+  skip_prob = 80
 
   structure =
   {
@@ -3735,6 +3790,7 @@ GROW_CATWALK_BIFUNNEL_RISE =
 GROW_CATWALK_BIFUNNEL_SINK_TALL =
 {
   prob = 7
+  skip_prob = 80
 
   structure =
   {
@@ -3757,6 +3813,7 @@ GROW_CATWALK_BIFUNNEL_SINK_TALL =
 GROW_CATWALK_BIFUNNEL_RISE_TALL =
 {
   prob = 7
+  skip_prob = 80
 
   structure =
   {
@@ -3780,6 +3837,7 @@ GROW_CATWALK_BIFUNNEL_RISE_TALL =
 GROW_CATWALK_SIDESTAIRS =
 {
   prob = 10
+  skip_prob = 80
 
   structure =
   {
@@ -3799,6 +3857,7 @@ GROW_CATWALK_SIDESTAIRS =
 GROW_CATWALK_U =
 {
   prob = 15
+  skip_prob = 80
 
   structure =
   {
@@ -3826,6 +3885,7 @@ GROW_CATWALK_U =
 GROW_DIAGONAL_L =
 {
   prob = 20
+  skip_prob = 50
 
   structure =
   {
@@ -3849,6 +3909,7 @@ GROW_DIAGONAL_L =
 GROW_DIAGONAL_L_CATWALK =
 {
   prob = 20
+  skip_prob = 50
 
   structure =
   {
@@ -3875,6 +3936,7 @@ GROW_DIAGONAL_L_CATWALK =
 GROW_DIAGONAL_L_CATWALK_CONTINUE =
 {
   prob = 20
+  skip_prob = 50
 
   structure =
   {
@@ -3901,6 +3963,7 @@ GROW_DIAGONAL_L_CATWALK_CONTINUE =
 GROW_DIAGONAL_S =
 {
   prob = 15
+  skip_prob = 65
 
   structure =
   {
@@ -3926,6 +3989,7 @@ GROW_DIAGONAL_S =
 GROW_DIAGONAL_SIDE_BLOB =
 {
   prob = 15
+  skip_prob = 75
 
   structure =
   {
@@ -3946,6 +4010,7 @@ GROW_DIAGONAL_SIDE_BLOB =
 GROW_DIAGONAL_SIDE_BLOB_ALT =
 {
   prob = 15
+  skip_prob = 75
 
   structure =
   {
@@ -3970,6 +4035,7 @@ GROW_DIAGONAL_SIDE_BLOB_ALT =
 GROW_DIAGONAL_SIDE_BLOB_ALT =
 {
   prob = 15
+  skip_prob = 75
 
   structure =
   {
@@ -4465,6 +4531,7 @@ GROW_NARROW_CANAL_OUTER_CURVE =
 GROW_LIQUID_SLAB_ENTRY =
 {
   prob = 20
+  skip_prob = 50
 
   structure =
   {
@@ -4479,6 +4546,7 @@ GROW_LIQUID_SLAB_ENTRY =
 GROW_LIQUID_SLAB_DIAGONAL =
 {
   prob = 15
+  skip_prob = 50
 
   structure =
   {
@@ -4498,6 +4566,7 @@ GROW_LIQUID_SLAB_DIAGONAL =
 GROW_LIQUID_SLAB_DIAGONAL_REVERSE =
 {
   prob = 15
+  skip_prob = 50
 
   structure =
   {
@@ -4521,6 +4590,7 @@ GROW_LIQUID_SLAB_DIAGONAL_REVERSE =
 GROW_PRIMITIVE_CIRCLE_3X =
 {
   prob = 35
+  skip_prob = 25
 
   structure =
   {
@@ -4546,6 +4616,7 @@ GROW_PRIMITIVE_CIRCLE_3X =
 GROW_PRIMITIVE_CIRCLE_2X =
 {
   prob = 20
+  skip_prob = 25
 
   structure =
   {
@@ -4753,7 +4824,7 @@ SQUARE_OUT_REMOVE_TRIANGLE =
 GROW_FEATURES_CENTER_ALTERED =
 {
   prob = 150
-  skip_prob = 5
+  skip_prob = 25
 
   env = "building"
 
@@ -4776,6 +4847,7 @@ GROW_FEATURES_CENTER_ALTERED =
 GROW_ELEVATED_PILLAR_ROUND =
 {
   prob = 75
+  skip_prob = 40
 
   env = "!cave"
 
@@ -4800,6 +4872,7 @@ GROW_ELEVATED_PILLAR_ROUND =
 GROW_ELEVATED_PILLAR_U =
 {
   prob = 50
+  skip_prob = 50
 
   env = "!cave"
 
@@ -4817,6 +4890,7 @@ GROW_ELEVATED_PILLAR_U =
 GROW_ELEVATED_PILLAR_U_FULL =
 {
   prob = 50
+  skip_prob = 50
 
   env = "!cave"
 
@@ -4834,6 +4908,7 @@ GROW_ELEVATED_PILLAR_U_FULL =
 GROW_WIDE_SPACE_DEPRESSION =
 {
   prob = 38
+  skip_prob = 70
 
   aversion = 5
 
@@ -4853,6 +4928,7 @@ GROW_WIDE_SPACE_DEPRESSION =
 GROW_WIDE_SPACE_CATWALK_PLAIN =
 {
   prob = 75
+  skip_prob = 10
 
   group = "catwalk"
   group_pos = "entry"
@@ -4871,6 +4947,7 @@ GROW_WIDE_SPACE_CATWALK_PLAIN =
 GROW_WIDE_SPACE_CATWALK_TALL_PLAIN =
 {
   prob = 75
+  skip_prob = 10
 
   group = "catwalk"
   group_pos = "entry"
@@ -4890,6 +4967,7 @@ GROW_WIDE_SPACE_CATWALK_TALL_PLAIN =
 GROW_WIDE_SPACE_PLATFORM_TINY =
 {
   prob = 75
+  skip_prob = 10
 
   group = "catwalk"
 
@@ -5052,6 +5130,7 @@ GROW_WIDE_SPACE_CATWALK_CAPPER_4X =
 GROW_HALF_SKILLET =
 {
   prob = 25
+  skip_prob = 25
 
   structure =
   {
@@ -5065,6 +5144,7 @@ GROW_HALF_SKILLET =
 GROW_HALF_SKILLET_SPIRAL =
 {
   prob = 25
+  skip_prob = 25
 
   structure =
   {
@@ -5078,6 +5158,7 @@ GROW_HALF_SKILLET_SPIRAL =
 GROW_WIDE_LOW_CEILING_SIDE =
 {
   prob = 15
+  skip_prob = 40
 
   env = "building"
 
@@ -5096,6 +5177,7 @@ GROW_WIDE_LOW_CEILING_SIDE =
 GROW_WIDE_LOW_CEILING_CENTER =
 {
   prob = 15
+  skip_prob = 40
 
   env = "building"
 
@@ -5114,6 +5196,7 @@ GROW_WIDE_LOW_CEILING_CENTER =
 GROW_WIDE_LOW_CEILING_CORNER =
 {
   prob = 15
+  skip_prob = 40
 
   env = "building"
 
@@ -5136,6 +5219,7 @@ GROW_WIDE_LOW_CEILING_CORNER =
 GROW_COLLONADE_3_PILLARS =
 {
   prob = 15
+  skip_prob = 40
 
   env = "building"
 
@@ -5151,6 +5235,7 @@ GROW_COLLONADE_3_PILLARS =
 GROW_TRIANGULAR_LOW_CEILING =
 {
   prob = 15
+  skip_prob = 40
 
   env = "building"
 
@@ -5233,6 +5318,7 @@ GROW_PILLAR_BEAN =
 GROW_PILLAR_GATE =
 {
   prob = 20
+  skip_prob = 25
 
   env = "building"
 
@@ -5248,6 +5334,7 @@ GROW_PILLAR_GATE =
 GROW_CATWALK_SUPPORT_PILLAR_OUTER =
 {
   prob = 35
+  skip_prob = 25
 
   structure =
   {
@@ -5260,6 +5347,7 @@ GROW_CATWALK_SUPPORT_PILLAR_OUTER =
 GROW_CATWALK_SUPPORT_PILLAR_INNER_DOUBLE =
 {
   prob = 25
+  skip_prob = 25
 
   structure =
   {
@@ -5291,6 +5379,7 @@ DECORATE_CATWALK_LUMP =
 GROW_CHAMFER_WIDE_ROOM_CORNER =
 {
   prob = 5
+  skip_prob = 30
 
   structure =
   {
@@ -5313,6 +5402,7 @@ GROW_CHAMFER_WIDE_ROOM_CORNER =
 GROW_CHAMFER_WIDE_ROOM_CORNER_OUTLET =
 {
   prob = 5
+  skip_prob = 30
 
   structure =
   {
@@ -5332,6 +5422,7 @@ GROW_CHAMFER_WIDE_ROOM_CORNER_OUTLET =
 GROW_CHAMFER_WIDE_ROOM_CORNER_OUTLET_SOLID =
 {
   prob = 5
+  skip_prob = 30
 
   structure =
   {
@@ -5371,6 +5462,7 @@ SMOOTHER_CATWALK_EDGES =
 GROW_36_DOUBLE_AREA =
 {
   prob = 35
+  skip_prob = 80
 
   structure =
   {
@@ -5388,6 +5480,7 @@ GROW_36_DOUBLE_AREA =
 GROW_36_SINGLE_AREA =
 {
   prob = 30
+  skip_prob = 80
 
   structure =
   {
@@ -5405,6 +5498,7 @@ GROW_36_SINGLE_AREA =
 GROW_36_TRIPLE_AREA =
 {
   prob = 20
+  skip_prob = 80
 
   structure =
   {
@@ -5424,6 +5518,7 @@ GROW_36_TRIPLE_AREA =
 GROW_36_DOUBLE_FORWARD_AREA =
 {
   prob = 25
+  skip_prob = 80
 
   structure =
   {
@@ -5439,6 +5534,7 @@ GROW_36_DOUBLE_FORWARD_AREA =
 GROW_36_QUAD_FORWARD_AREA =
 {
   prob = 20
+  skip_prob = 80
 
   structure =
   {
@@ -5457,6 +5553,7 @@ GROW_36_QUAD_FORWARD_AREA =
 GROW_36_SINGLE_FORWARD_AREA =
 {
   prob = 35
+  skip_prob = 80
 
   structure =
   {
@@ -5472,6 +5569,7 @@ GROW_36_SINGLE_FORWARD_AREA =
 GROW_ROUND_NEW_AREA =
 {
   prob = 25
+  skip_prob = 80
 
   structure =
   {
@@ -5497,6 +5595,7 @@ GROW_ROUND_NEW_AREA =
 GROW_CROSS_NEW_AREA =
 {
   prob = 25
+  skip_prob = 8
 
   structure =
   {
@@ -5514,6 +5613,7 @@ GROW_CROSS_NEW_AREA =
 GROW_ATARI_LOGO_NEW_AREA =
 {
   prob = 25
+  skip_prob = 80
 
   structure =
   {
@@ -5536,6 +5636,7 @@ GROW_ATARI_LOGO_NEW_AREA =
 GROW_INVERSE_ATARI_LOGO_NEW_AREA =
 {
   prob = 25
+  skip_prob = 80
 
   structure =
   {
@@ -5558,6 +5659,7 @@ GROW_INVERSE_ATARI_LOGO_NEW_AREA =
 GROW_RIBBED_WALLS_NEW_AREA_DOUBLE =
 {
   prob = 15
+  skip_prob = 80
 
   structure =
   {
@@ -5578,6 +5680,7 @@ GROW_RIBBED_WALLS_NEW_AREA_DOUBLE =
 GROW_RIBBED_WALLS_NEW_AREA_SINGLE =
 {
   prob = 15
+  skip_prob = 80
 
   structure =
   {
@@ -5597,7 +5700,8 @@ GROW_RIBBED_WALLS_NEW_AREA_SINGLE =
 
 GROW_3x_A =
 {
-  prob = 15
+  prob = 7
+  skip_prob = 75
 
   structure =
   {
@@ -5622,6 +5726,7 @@ GROW_3x_A =
 GROW_3x_A_STAIRS =
 {
   prob = 10
+  skip_prob = 75
 
   structure =
   {
@@ -5646,6 +5751,7 @@ GROW_3x_A_STAIRS =
 GROW_3x_A_LIQUID =
 {
   prob = 10
+  skip_prob = 75
 
   structure =
   {
@@ -5669,7 +5775,8 @@ GROW_3x_A_LIQUID =
 
 GROW_3x_B =
 {
-  prob = 15
+  prob = 7
+  skip_prob = 75
 
   structure =
   {
@@ -5696,6 +5803,7 @@ GROW_3x_B =
 GROW_3x_B_STAIRS =
 {
   prob = 10
+  skip_prob = 75
 
   structure =
   {
@@ -5722,6 +5830,7 @@ GROW_3x_B_STAIRS =
 GROW_3x_B_LIQUID =
 {
   prob = 10
+  skip_prob = 75
 
   structure =
   {
@@ -5747,7 +5856,8 @@ GROW_3x_B_LIQUID =
 
 GROW_3x_C =
 {
-  prob = 15
+  prob = 7
+  skip_prob = 75
 
   structure =
   {
@@ -5772,6 +5882,7 @@ GROW_3x_C =
 GROW_3x_C_STAIRS =
 {
   prob = 10
+  skip_prob = 75
 
   structure =
   {
@@ -5796,6 +5907,7 @@ GROW_3x_C_STAIRS =
 GROW_3x_C_LIQUID =
 {
   prob = 10
+  skip_prob = 75
 
   structure =
   {
@@ -5819,7 +5931,8 @@ GROW_3x_C_LIQUID =
 
 GROW_3x_D =
 {
-  prob = 15
+  prob = 7
+  skip_prob = 75
 
   structure =
   {
@@ -5843,6 +5956,7 @@ GROW_3x_D =
 GROW_3x_D_STAIRS =
 {
   prob = 10
+  skip_prob = 75
 
   structure =
   {
@@ -5866,6 +5980,7 @@ GROW_3x_D_STAIRS =
 GROW_3x_D_LIQUID_STAIRS =
 {
   prob = 10
+  skip_prob = 75
 
   structure =
   {
@@ -5888,7 +6003,8 @@ GROW_3x_D_LIQUID_STAIRS =
 
 GROW_3x_E =
 {
-  prob = 15
+  prob = 7
+  skip_prob = 75
 
   structure =
   {
@@ -5906,6 +6022,7 @@ GROW_3x_E =
 GROW_3x_E_STAIRS =
 {
   prob = 10
+  skip_prob = 75
 
   structure =
   {
@@ -5923,6 +6040,7 @@ GROW_3x_E_STAIRS =
 GROW_3x_E_LIQUID =
 {
   prob = 10
+  skip_prob = 75
 
   structure =
   {
@@ -5939,7 +6057,8 @@ GROW_3x_E_LIQUID =
 
 GROW_3x_E_LIQUID_STAIRS =
 {
-  prob = 7
+  prob = 10
+  skip_prob = 75
 
   structure =
   {
@@ -5956,7 +6075,8 @@ GROW_3x_E_LIQUID_STAIRS =
 
 GROW_3x_F =
 {
-  prob = 15
+  prob = 7
+  skip_prob = 75
 
   structure =
   {
@@ -5975,6 +6095,7 @@ GROW_3x_F =
 GROW_3x_F_STAIRS =
 {
   prob = 10
+  skip_prob = 75
 
   structure =
   {
@@ -5993,6 +6114,7 @@ GROW_3x_F_STAIRS =
 GROW_3x_F_LIQUID =
 {
   prob = 10
+  skip_prob = 75
 
   structure =
   {
@@ -6010,7 +6132,8 @@ GROW_3x_F_LIQUID =
 
 GROW_3x_G =
 {
-  prob = 15
+  prob = 7
+  skip_prob = 75
 
   structure =
   {
@@ -6034,6 +6157,7 @@ GROW_3x_G =
 GROW_3x_G_STAIRS =
 {
   prob = 10
+  skip_prob = 75
 
   structure =
   {
@@ -6057,6 +6181,7 @@ GROW_3x_G_STAIRS =
 GROW_3x_G_LIQUID =
 {
   prob = 10
+  skip_prob = 75
 
   structure =
   {
@@ -6079,7 +6204,8 @@ GROW_3x_G_LIQUID =
 
 GROW_3x_H =
 {
-  prob = 15
+  prob = 7
+  skip_prob = 75
 
   structure =
   {
@@ -6098,6 +6224,7 @@ GROW_3x_H =
 GROW_3x_H_STAIRS =
 {
   prob = 10
+  skip_prob = 75
 
   structure =
   {
@@ -6116,6 +6243,7 @@ GROW_3x_H_STAIRS =
 GROW_3x_H_LIQUID =
 {
   prob = 10
+  skip_prob = 75
 
   structure =
   {
@@ -6133,7 +6261,8 @@ GROW_3x_H_LIQUID =
 
 GROW_3x_LIQUID_STAIRS =
 {
-  prob = 7
+  prob = 10
+  skip_prob = 75
 
   structure =
   {
@@ -6151,7 +6280,8 @@ GROW_3x_LIQUID_STAIRS =
 
 GROW_3x_I =
 {
-  prob = 15
+  prob = 7
+  skip_prob = 75
 
   structure =
   {
@@ -6170,6 +6300,7 @@ GROW_3x_I =
 GROW_3x_I_STAIRS =
 {
   prob = 10
+  skip_prob = 75
 
   structure =
   {
@@ -6188,6 +6319,7 @@ GROW_3x_I_STAIRS =
 GROW_3x_I_LIQUID =
 {
   prob = 10
+  skip_prob = 75
 
   structure =
   {
@@ -6205,7 +6337,8 @@ GROW_3x_I_LIQUID =
 
 GROW_3x_J =
 {
-  prob = 15
+  prob = 7
+  skip_prob = 75
 
   structure =
   {
@@ -6229,6 +6362,7 @@ GROW_3x_J =
 GROW_3x_J_LIQUID =
 {
   prob = 10
+  skip_prob = 75
 
   structure =
   {
@@ -6252,6 +6386,7 @@ GROW_3x_J_LIQUID =
 GROW_3x_K =
 {
   prob = 15
+  skip_prob = 75
 
   structure =
   {
@@ -6279,6 +6414,7 @@ GROW_3x_K =
 GROW_3x_K_STAIRS =
 {
   prob = 10
+  skip_prob = 75
 
   structure =
   {
@@ -6306,6 +6442,7 @@ GROW_3x_K_STAIRS =
 GROW_3x_K_LIQUID =
 {
   prob = 10
+  skip_prob = 75
 
   structure =
   {
@@ -6332,7 +6469,8 @@ GROW_3x_K_LIQUID =
 
 GROW_3x_L =
 {
-  prob = 15
+  prob = 7
+  skip_prob = 75
 
   structure =
   {
@@ -6351,6 +6489,7 @@ GROW_3x_L =
 GROW_3x_L_LIQUID =
 {
   prob = 10
+  skip_prob = 75
 
   structure =
   {
@@ -6374,7 +6513,8 @@ GROW_3x_L_LIQUID =
 
 GROW_3x_M =
 {
-  prob = 15
+  prob = 7
+  skip_prob = 75
 
   structure =
   {
@@ -6399,7 +6539,8 @@ GROW_3x_M =
 
 GROW_3x_N =
 {
-  prob = 15
+  prob = 7
+  skip_prob = 75
 
   structure =
   {
@@ -6426,6 +6567,7 @@ GROW_3x_N =
 GROW_3x_N_LIQUID =
 {
   prob = 10
+  skip_prob = 75
 
   structure =
   {
@@ -6452,6 +6594,7 @@ GROW_3x_N_LIQUID =
 GROW_3x_O =
 {
   prob = 15
+  skip_prob = 75
 
   structure =
   {
@@ -6476,6 +6619,7 @@ GROW_3x_O =
 GROW_3x_O_LIQUID =
 {
   prob = 10
+  skip_prob = 75
 
   structure =
   {
@@ -6499,7 +6643,8 @@ GROW_3x_O_LIQUID =
 
 GROW_3x_P =
 {
-  prob = 15
+  prob = 7
+  skip_prob = 75
 
   structure =
   {
@@ -6524,6 +6669,7 @@ GROW_3x_P =
 GROW_3x_P_STAIRS =
 {
   prob = 10
+  skip_prob = 75
 
   structure =
   {
@@ -6548,6 +6694,7 @@ GROW_3x_P_STAIRS =
 GROW_3x_P_LIQUID =
 {
   prob = 10
+  skip_prob = 75
 
   structure =
   {
@@ -6571,7 +6718,8 @@ GROW_3x_P_LIQUID =
 
 GROW_3x_P_LIQUID_STAIRS =
 {
-  prob = 7
+  prob = 10
+  skip_prob = 75
 
   structure =
   {
@@ -6597,7 +6745,8 @@ GROW_3x_P_LIQUID_STAIRS =
 
 GROW_3x_R =
 {
-  prob = 15
+  prob = 7
+  skip_prob = 75
 
   structure =
   {
@@ -6623,6 +6772,7 @@ GROW_3x_R =
 GROW_3x_R_LIQUID =
 {
   prob = 10
+  skip_prob = 75
 
   structure =
   {
@@ -6647,7 +6797,8 @@ GROW_3x_R_LIQUID =
 
 GROW_3x_S =
 {
-  prob = 15
+  prob = 7
+  skip_prob = 75
 
   structure =
   {
@@ -6673,6 +6824,7 @@ GROW_3x_S =
 GROW_3x_S_LIQUID =
 {
   prob = 10
+  skip_prob = 75
 
   structure =
   {
@@ -6698,6 +6850,7 @@ GROW_3x_S_LIQUID =
 GROW_3x_S_STAIRS =
 {
   prob = 10
+  skip_prob = 75
 
   structure =
   {
@@ -6723,6 +6876,7 @@ GROW_3x_S_STAIRS =
 GROW_3x_S_STAIRS_LIQUID =
 {
   prob = 7
+  skip_prob = 75
 
   structure =
   {
@@ -6747,7 +6901,8 @@ GROW_3x_S_STAIRS_LIQUID =
 
 GROW_3x_T =
 {
-  prob = 15
+  prob = 7
+  skip_prob = 75
 
   structure =
   {
@@ -6766,6 +6921,7 @@ GROW_3x_T =
 GROW_3x_T_LIQUID =
 {
   prob = 10
+  skip_prob = 75
 
   structure =
   {
@@ -6783,7 +6939,8 @@ GROW_3x_T_LIQUID =
 
 GROW_3x_U =
 {
-  prob = 15
+  prob = 7
+  skip_prob = 75
 
   structure =
   {
@@ -6807,6 +6964,7 @@ GROW_3x_U =
 GROW_3x_U_LIQUID =
 {
   prob = 10
+  skip_prob = 75
 
   structure =
   {
@@ -6833,7 +6991,8 @@ GROW_3x_U_LIQUID =
 
 GROW_3x_X =
 {
-  prob = 15
+  prob = 7
+  skip_prob = 80
 
   structure =
   {
@@ -6859,7 +7018,8 @@ GROW_3x_X =
 
 GROW_3x_Y =
 {
-  prob = 15
+  prob = 7
+  skip_prob = 75
 
   structure =
   {
@@ -6885,6 +7045,7 @@ GROW_3x_Y =
 GROW_3x_Y_STAIRS =
 {
   prob = 10
+  skip_prob = 75
 
   structure =
   {
@@ -6911,6 +7072,7 @@ GROW_3x_Y_STAIRS =
 GROW_3x_Y_LIQUID =
 {
   prob = 10
+  skip_prob = 75
 
   structure =
   {
@@ -6940,6 +7102,7 @@ GROW_3x_Y_LIQUID =
 GROW_DIAGONAL_STALK =
 {
   prob = 75
+  skip_prob = 50
 
   structure =
   {
@@ -6963,6 +7126,7 @@ GROW_DIAGONAL_STALK =
 GROW_O =
 {
   prob = 40
+  skip_prob = 20
 
   structure =
   {
@@ -6989,6 +7153,7 @@ GROW_O =
 GROW_O_STAIR =
 {
   prob = 20
+  skip_prob = 20
 
   structure =
   {
@@ -7015,6 +7180,7 @@ GROW_O_STAIR =
 GROW_HALF_C =
 {
   prob = 75
+  skip_prob = 15
 
   structure =
   {
@@ -7037,6 +7203,7 @@ GROW_HALF_C =
 GROW_HALF_C_STAIR =
 {
   prob = 50
+  skip_prob = 15
 
   structure =
   {
@@ -7061,6 +7228,7 @@ GROW_HALF_C_STAIR =
 GROW_L =
 {
   prob = 75
+  skip_prob = 15
 
   structure =
   {
@@ -7079,6 +7247,7 @@ GROW_L =
 GROW_L_STAIR =
 {
   prob = 45
+  skip_prob = 15
 
   structure =
   {
@@ -7099,6 +7268,7 @@ GROW_L_STAIR =
 GROW_ELEVATED_T_STALK_ENTRY =
 {
   prob = 15
+  skip_prob = 20
 
   aversion = 5
 
@@ -7118,6 +7288,7 @@ GROW_ELEVATED_T_STALK_ENTRY =
 GROW_ELEVATED_O_QUARTER =
 {
   prob = 15
+  skip_prob = 20
 
   aversion = 5
 
@@ -7144,6 +7315,7 @@ GROW_ELEVATED_O_QUARTER =
 GROW_EXTRUSION_CORNER_4x4 =
 {
   prob = 40
+  skip_prob = 10
 
   structure =
   {
@@ -7158,6 +7330,7 @@ GROW_EXTRUSION_CORNER_4x4 =
 GROW_EXTRUSION_CORNER_4x4_NEW_AREA =
 {
   prob = 40
+  skip_prob = 10
 
   structure =
   {
@@ -7172,6 +7345,7 @@ GROW_EXTRUSION_CORNER_4x4_NEW_AREA =
 GROW_EXTRUSION_4X6 =
 {
   prob = 50
+  skip_prob = 10
 
   structure =
   {
@@ -7188,6 +7362,7 @@ GROW_EXTRUSION_4X6 =
 GROW_EXTRUSION_4X4 =
 {
   prob = 65
+  skip_prob = 10
 
   structure =
   {
@@ -7202,6 +7377,7 @@ GROW_EXTRUSION_4X4 =
 GROW_EXTRUSION_3X2 =
 {
   prob = 80
+  skip_prob = 10
 
   structure =
   {
@@ -7214,6 +7390,7 @@ GROW_EXTRUSION_3X2 =
 GROW_EXTRUSION_3X4 =
 {
   prob = 75
+  skip_prob = 10
 
   structure =
   {
@@ -7228,6 +7405,7 @@ GROW_EXTRUSION_3X4 =
 GROW_EXTRUSION_NEW_AREA_4x2 =
 {
   prob = 80
+  skip_prob = 10
 
   structure =
   {
@@ -7240,6 +7418,7 @@ GROW_EXTRUSION_NEW_AREA_4x2 =
 GROW_EXTRUSION_STAIRCASE_4x2 =
 {
   prob = 80
+  skip_prob = 10
 
   structure =
   {
@@ -7254,6 +7433,7 @@ GROW_EXTRUSION_STAIRCASE_4x2 =
 GROW_EXTRUSION_STAIRCASE_4x2_SIDEWAYS =
 {
   prob = 80
+  skip_prob = 10
 
   structure =
   {
@@ -7268,6 +7448,7 @@ GROW_EXTRUSION_STAIRCASE_4x2_SIDEWAYS =
 GROW_EXTRUSION_STAIRCASE_4x2_SMALL =
 {
   prob = 80
+  skip_prob = 10
 
   structure =
   {
@@ -7282,6 +7463,7 @@ GROW_EXTRUSION_STAIRCASE_4x2_SMALL =
 GROW_EXTRUSION_STAIRCASE_4x2_SMALL_SIDEWAYS =
 {
   prob = 80
+  skip_prob = 10
 
   structure =
   {
@@ -7296,6 +7478,7 @@ GROW_EXTRUSION_STAIRCASE_4x2_SMALL_SIDEWAYS =
 GROW_EXTRUSION_SINK =
 {
   prob = 25
+  skip_prob = 10
 
   aversion = 8
 
@@ -7372,6 +7555,7 @@ GROW_WIDE_SPACE_2X12 =
 {
   prob = 2
   prob_skew = 1
+  skip_prob = 40
 
   structure =
   {
@@ -7384,6 +7568,8 @@ GROW_WIDE_SPACE_2X12_SIDEWAYS =
 {
   prob = 2
   prob_skew = 1
+  skip_prob = 40
+
 
   structure =
   {
@@ -7397,6 +7583,7 @@ GROW_WIDE_SPACE_2X8 =
 {
   prob = 2
   prob_skew = 1
+  skip_prob = 25
 
   structure =
   {
@@ -7409,6 +7596,7 @@ GROW_WIDE_SPACE_2X8_SIDEWAYS =
 {
   prob = 2
   prob_skew = 1
+  skip_prob = 25
 
   structure =
   {
@@ -7422,6 +7610,7 @@ GROW_ROUNDED_CAP =
 {
   prob = 20
   prob_skew = 10
+  skip_prob = 15
 
   structure =
   {
@@ -7442,6 +7631,7 @@ GROW_BLADED_CAP =
 {
   prob = 20
   prob_skew = 10
+  skip_prob = 25
 
   structure =
   {
@@ -7463,6 +7653,7 @@ GROW_BLADED_CAP =
 GROW_INTO_CLIFF =
 {
   prob = 50
+  skip_prob = 15
 
   group = "cliff"
 
@@ -7480,6 +7671,7 @@ GROW_INTO_CLIFF =
 GROW_INTO_CLIFF_TALL =
 {
   prob = 50
+  skip_prob = 15
 
   group = "cliff"
 
@@ -7498,6 +7690,7 @@ GROW_INTO_CLIFF_TALL =
 GROW_CLIFF_EXTENSION =
 {
   prob = 75
+  skip_prob = 10
 
   group = "cliff"
 
@@ -7511,6 +7704,7 @@ GROW_CLIFF_EXTENSION =
 GROW_CLIFF_EXTENSION_UP_WE_GO =
 {
   prob = 50
+  skip_prob = 10
 
   group = "cliff"
 
@@ -7524,6 +7718,7 @@ GROW_CLIFF_EXTENSION_UP_WE_GO =
 GROW_CLIFF_EXTENSION_UPPER_WE_GO =
 {
   prob = 35
+  skip_prob = 10
 
   group = "cliff"
 
@@ -7540,6 +7735,7 @@ GROW_CLIFF_EXTENSION_UPPER_WE_GO =
 GROW_CLIFF_EXTENSION_CURVE =
 {
   prob = 75
+  skip_prob = 10
 
   group = "cliff"
 
@@ -7559,6 +7755,7 @@ GROW_CLIFF_EXTENSION_CURVE =
 GROW_CLIFF_EXTENSION_WIDEN =
 {
   prob = 35
+  skip_prob = 10
 
   group = "cliff"
 
@@ -7582,6 +7779,7 @@ GROW_CLIFF_EXTENSION_WIDEN =
 GROW_CLIFF_EXTENSION_X2 =
 {
   prob = 50
+  skip_prob = 10
 
   group = "cliff"
 
@@ -7597,6 +7795,7 @@ GROW_CLIFF_EXTENSION_X2 =
 GROW_CLIFF_EXTENSION_X2_UP_WE_GO =
 {
   prob = 35
+  skip_prob = 10
 
   group = "cliff"
 
@@ -7612,6 +7811,7 @@ GROW_CLIFF_EXTENSION_X2_UP_WE_GO =
 GROW_CLIFF_EXTENSION_X2_UPPER_WE_GO =
 {
   prob = 35
+  skip_prob = 10
 
   group = "cliff"
 
@@ -7629,6 +7829,7 @@ GROW_CLIFF_EXTENSION_X2_UPPER_WE_GO =
 GROW_CLIFF_EXTENSION_CURVE_X2 =
 {
   prob = 85
+  skip_prob = 10
 
   group = "cliff"
 
@@ -7650,6 +7851,7 @@ GROW_CLIFF_EXTENSION_CURVE_X2 =
 GROW_CLIFF_EXTENSON_NEW_AREA =
 {
   prob = 35
+  skip_prob = 10
 
   group = "cliff"
 
@@ -7663,6 +7865,7 @@ GROW_CLIFF_EXTENSON_NEW_AREA =
 GROW_CLIFF_EXTENSON_NEW_AREA_INWARD =
 {
   prob = 35
+  skip_prob = 10
 
   group = "cliff"
 
@@ -7677,6 +7880,7 @@ GROW_CLIFF_EXTENSON_NEW_AREA_INWARD =
 GROW_CLIFF_EXTENSION_NEW_AREA_X2 =
 {
   prob = 35
+  skip_prob = 10
 
   group = "cliff"
 
@@ -7692,6 +7896,7 @@ GROW_CLIFF_EXTENSION_NEW_AREA_X2 =
 GROW_CLIFF_EXTENSION_NEW_AREA_INWARD_X2 =
 {
   prob = 35
+  skip_prob = 10
 
   group = "cliff"
 
@@ -7711,6 +7916,7 @@ GROW_CLIFF_EXTENSION_NEW_AREA_INWARD_X2 =
 GROW_CLIFF_ENTRY_X4 =
 {
   prob = 150
+  skip_prob = 15
 
   group = "cliff_x4"
 
@@ -7730,6 +7936,7 @@ GROW_CLIFF_ENTRY_X4 =
 GROW_CLIFF_ENTRY_SIDEWAYS_X4 =
 {
   prob = 150
+  skip_prob = 15
 
   group = "cliff_x4"
 
@@ -7748,6 +7955,7 @@ GROW_CLIFF_ENTRY_SIDEWAYS_X4 =
 GROW_CLIFF_STRAIGHT_X4 =
 {
   prob = 150
+  skip_prob = 15
 
   group = "cliff_x4"
 
@@ -7762,6 +7970,7 @@ GROW_CLIFF_STRAIGHT_X4 =
 GROW_CLIFF_STRAIGHT_X4_STAIR =
 {
   prob = 85
+  skip_prob = 15
 
   group = "cliff_x4"
 
@@ -7777,6 +7986,7 @@ GROW_CLIFF_STRAIGHT_X4_STAIR =
 GROW_CLIFF_STRAIGHT_X4_LONG =
 {
   prob = 100
+  skip_prob = 15
 
   group = "cliff_x4"
 
@@ -7793,6 +8003,7 @@ GROW_CLIFF_STRAIGHT_X4_LONG =
 GROW_CLIFF_STRAIGHT_X4_SIDESTAIR =
 {
   prob = 85
+  skip_prob = 15
 
   group = "cliff_x4"
 
@@ -7809,6 +8020,7 @@ GROW_CLIFF_STRAIGHT_X4_SIDESTAIR =
 GROW_CLIFF_STRAIGHT_X4_BUMP =
 {
   prob = 50
+  skip_prob = 15
 
   group = "cliff_x4"
 
@@ -7832,6 +8044,7 @@ GROW_CLIFF_STRAIGHT_X4_BUMP =
 GROW_CLIFF_CURVED_X4 =
 {
   prob = 50
+  skip_prob = 15
 
   group = "cliff_x4"
 
@@ -7946,6 +8159,7 @@ DECORATE_LIQUID_POOL_PLACE_3x6 =
 GROW_LIQUID_POOL_PLACE =
 {
   prob = 35
+  skip_prob = 5
 
   group_pos = "entry"
   group = "liquid_pool"
@@ -7963,6 +8177,7 @@ GROW_LIQUID_POOL_PLACE =
 GROW_LIQUID_POOL_EXTEND_STRAIGHT =
 {
   prob = 50
+  skip_prob = 10
 
   group = "liquid_pool"
 
@@ -7978,6 +8193,7 @@ GROW_LIQUID_POOL_EXTEND_STRAIGHT =
 GROW_LIQUID_POOL_SWERVE =
 {
   prob = 35
+  skip_prob = 10
 
   group = "liquid_pool"
 
@@ -8000,6 +8216,7 @@ GROW_LIQUID_POOL_SWERVE =
 GROW_LIQUID_POOL_END =
 {
   prob = 15
+  skip_prob = 10
 
   group = "liquid_pool"
 
@@ -8016,6 +8233,7 @@ GROW_LIQUID_POOL_END =
 GROW_LIQUID_POOL_EXTEND_CURVED =
 {
   prob = 50
+  skip_prob = 10
 
   group = "liquid_pool"
 
@@ -8036,6 +8254,7 @@ GROW_LIQUID_POOL_EXTEND_CURVED =
 GROW_LIQUID_PILLAR =
 {
   prob = 20
+  skip_prob = 10
 
   env = "building"
 
@@ -8051,6 +8270,7 @@ GROW_LIQUID_PILLAR =
 GROW_LIQUID_PILLAR_INWARD =
 {
   prob = 10
+  skip_prob = 10
 
   env = "building"
 
@@ -8066,6 +8286,7 @@ GROW_LIQUID_PILLAR_INWARD =
 GROW_LIQUID_PILLAR_INWARD =
 {
   prob = 6
+  skip_prob = 10
 
   env = "building"
 
@@ -8083,6 +8304,7 @@ GROW_LIQUID_PILLAR_INWARD =
 DECORATE_LIQUID_MOAT_ROW =
 {
   prob = 10
+  skip_prob = 25
 
   group = "moat"
 
@@ -8097,6 +8319,7 @@ DECORATE_LIQUID_MOAT_ROW =
 DECORATE_LIQUID_MOAT_CORNER =
 {
   prob = 15
+  skip_prob = 25
 
   group_pos = "entry"
   group = "moat"
@@ -8169,6 +8392,7 @@ SMOOTHER_LIQUID_MOAT_MERGE =
 GROW_TRENCH_STRAIGHT =
 {
   prob = 50
+  skip_prob = 40
 
   structure =
   {
@@ -8181,6 +8405,7 @@ GROW_TRENCH_STRAIGHT =
 GROW_TRENCH_STRAIGHT_LONG =
 {
   prob = 30
+  skip_prob = 40
 
   structure =
   {
@@ -8193,7 +8418,8 @@ GROW_TRENCH_STRAIGHT_LONG =
 GROW_TRENCH_CURVE =
 {
   prob = 25
-  skip_prob = 10
+  skip_prob = 35
+
   aversion = 10
 
   structure =
@@ -8216,7 +8442,8 @@ GROW_TRENCH_CURVE =
 GROW_TRENCH_CURVE_INNER_SOLID =
 {
   prob = 15
-  skip_prob = 6
+  skip_prob = 35
+
   aversion = 6
 
   structure =
@@ -8239,7 +8466,8 @@ GROW_TRENCH_CURVE_INNER_SOLID =
 GROW_TRENCH_CURVE_OUTER_SOLID =
 {
   prob = 15
-  skip_prob = 6
+  skip_prob = 35
+
   aversion = 6
 
   structure =
@@ -8263,6 +8491,7 @@ GROW_TRENCH_CURVE_OUTER_SOLID =
 GROW_SEWER_ENTRY =
 {
   prob = 35
+  skip_prob = 10
 
   group = "sewer"
 
@@ -8281,6 +8510,7 @@ GROW_SEWER_ENTRY =
 GROW_SEWER_STRAIGHT =
 {
   prob = 40
+  skip_prob = 10
 
   group = "sewer"
 
@@ -8297,6 +8527,7 @@ GROW_SEWER_STRAIGHT =
 GROW_SEWER_STAIRS =
 {
   prob = 50
+  skip_prob = 10
 
   group = "sewer"
 
@@ -8313,6 +8544,7 @@ GROW_SEWER_STAIRS =
 GROW_SEWER_SWERVE =
 {
   prob = 35
+  skip_prob = 10
 
   group = "sewer"
 
@@ -8338,6 +8570,7 @@ GROW_SEWER_SWERVE =
 GROW_SEWER_CURVED =
 {
   prob = 35
+  skip_prob = 10
 
   group = "sewer"
 
@@ -8362,6 +8595,7 @@ GROW_SEWER_CURVED =
 GROW_SEWER_CROSSING =
 {
   prob = 35
+  skip_prob = 10
 
   group = "sewer"
 
@@ -8378,6 +8612,7 @@ GROW_SEWER_CROSSING =
 GROW_SEWER_EXIT =
 {
   prob = 25
+  skip_prob = 10
 
   structure =
   {
@@ -8392,6 +8627,7 @@ GROW_SEWER_EXIT =
 GROW_SEWER_STAIRS_SIDE_EXIT_NEW_AREA =
 {
   prob = 25
+  skip_prob = 10
 
   structure =
   {

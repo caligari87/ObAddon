@@ -718,7 +718,7 @@ function Grower_preprocess_grammar()
 
       gui.printf("Grower_preprocess_grammar...\n")
 
-      local dcount = 0
+      PARAM.shape_rule_count = 0
 
       table.name_up(grammar)
 
@@ -726,7 +726,7 @@ function Grower_preprocess_grammar()
 
       each name,cur_def in grammar do
 
-        dcount = dcount + 1 -- debug counter for amount of shape rules read
+        PARAM.shape_rule_count = PARAM.shape_rule_count + 1 -- debug counter for amount of shape rules read
 
         if cur_def.is_processed then continue end
         cur_def.is_processed = true
@@ -766,7 +766,7 @@ function Grower_preprocess_grammar()
         if string.match(name, "^PARK_") then cur_def.env = "park" end
       end
 
-      gui.printf("\n" .. dcount .. " rules loaded!\n")
+      gui.printf("\n" .. PARAM.shape_rule_count .. " rules loaded!\n")
 
   end
 
@@ -812,7 +812,10 @@ function Grower_calc_rule_probs()
 
   local function calc_prob(rule)
     if rule.skip_prob then
-      if rand.odds(rule.skip_prob) then return 0 end
+      if rand.odds(rule.skip_prob) then
+        PARAM.skipped_rules = PARAM.skipped_rules + 1
+        return 0
+      end
     end
 
     -- check against current game, engine, theme (etc).
@@ -850,9 +853,14 @@ function Grower_calc_rule_probs()
 
   ---| Grower_calc_rule_probs |---
 
+  PARAM.skipped_rules = 0
+
   each name,rule in SHAPE_GRAMMAR do
     rule.use_prob = calc_prob(rule)
   end
+
+  gui.printf("Shape rules skipped for this level: " .. PARAM.skipped_rules ..
+  " / " .. PARAM.shape_rule_count .. "\n")
 
   -- Shape grouping system
   PARAM.cur_shape_group = ""
