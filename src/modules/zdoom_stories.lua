@@ -2069,6 +2069,7 @@ ZDOOM_STORIES.QUIT_MESSAGES =
   [[Thanos needs two fingers to erase half the universe. Oblige builds a whole with only one.]],
   [[Oblige is the machine. ObAddon is the ghost in the machine.]], -- credits to FrozSoul!
   [[Oblige can generate more maps than you will ever speak words in your whole life.]],
+  [[Poor you. Demons don't have a housing crisis. Oblige provides free real estate for all of them.]],
 
   -- helpful // technical
   [[ObAddon is always improving. Stop by our Discord server, talk to the denizens and report bugs to us there!]],
@@ -2086,6 +2087,7 @@ ZDOOM_STORIES.QUIT_MESSAGES =
   [[In 1998, the Undertaker threw Mankind off Hell in a Cell and plummeted 16ft. through an announcer's table.]],
   [[ObAddon enhances your problem-solving skills! Contribute now!]],
   [[Set the Y offset, again of both front and back side, to the negative of the subtraction of the ceiling height of the sector the pit and the floor height of the planes, or y-offset = -(pitceilingheight-planefloorheight). So, the ceiling height is 256 in both platforms and the pit and the platform's floor height is 0, so the sidedefs' Y-offsets must be -(256-0) = -256.]],
+  [[Cacos are red, their insides are blue. They wish to make a meal out of you.]],
 
   -- other important facts, just facts no silly stuff
   [[Did you know Carmack and Hall in Sept 1990, produced a replica of Super Mario Bros 3's first level and using Romero's Dangerous Dave character in place of Mario?]],
