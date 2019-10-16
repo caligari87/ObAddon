@@ -812,10 +812,7 @@ function Grower_calc_rule_probs()
 
   local function calc_prob(rule)
     if rule.skip_prob then
-      if rand.odds(rule.skip_prob) then
-        PARAM.skipped_rules = PARAM.skipped_rules + 1
-        return 0
-      end
+      if rand.odds(rule.skip_prob) then return 0 end
     end
 
     -- check against current game, engine, theme (etc).
@@ -826,19 +823,23 @@ function Grower_calc_rule_probs()
 
     -- liquid check
     if not LEVEL.liquid and rule.styles and
-       table.has_elem(rule.styles, "liquids")
+      table.has_elem(rule.styles, "liquids")
     then
       return 0
     end
 
     -- check hallway types
     if rule.new_room and rule.new_room.hall_type == "narrow" and
-       table.empty(THEME.narrow_halls or {})
-    then return 0 end
+      table.empty(THEME.narrow_halls or {})
+    then
+      return 0
+    end
 
     if rule.new_room and rule.new_room.hall_type == "wide" and
-       table.empty(THEME.wide_halls or {})
-    then return 0 end
+      table.empty(THEME.wide_halls or {})
+    then
+      return 0
+    end
 
     -- normal logic --
 
@@ -857,10 +858,14 @@ function Grower_calc_rule_probs()
 
   each name,rule in SHAPE_GRAMMAR do
     rule.use_prob = calc_prob(rule)
+    if rule.use_prob == 0 then
+      PARAM.skipped_rules = PARAM.skipped_rules + 1
+    end
   end
 
   gui.printf("Shape rules skipped for this level: " .. PARAM.skipped_rules ..
   " / " .. PARAM.shape_rule_count .. "\n")
+  gui.printf("Rules can be disabled via skip probability or level styles.\n")
 
   -- Shape grouping system
   PARAM.cur_shape_group = ""
