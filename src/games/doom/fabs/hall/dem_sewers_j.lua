@@ -80,3 +80,13 @@ PREFABS.Hallway_sewers_secret =
   map    = "MAP09"
   key    = "secret"
 }
+
+-- MSSP makes everything worse
+PREFABS.Hallway_sewers_toilet_term =
+{
+  template = "Hallway_sewers_term"
+
+  prob     = 50
+
+  map      = "MAP10"
+}
