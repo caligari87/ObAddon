@@ -20,6 +20,8 @@ PREFABS.Beam_vertical_lights_tech =
 
   bound_z1 = 0
   bound_z2 = 96
+
+  z_fit = { 24,78 }
 }
 
 PREFABS.Beam_vertical_lights_diagonal_tech =
@@ -37,6 +39,8 @@ PREFABS.Beam_vertical_lights_diagonal_tech =
 
   bound_z1 = 0
   bound_z2 = 96
+
+  z_fit = { 24,78 }
 }
 
 PREFABS.Beam_vertical_lights_hell =

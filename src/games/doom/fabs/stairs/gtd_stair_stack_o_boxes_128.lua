@@ -5,7 +5,7 @@ PREFABS.Stairs_stack_o_boxes_128 =
 
   theme  = "!hell"
 
-  prob   = 7
+  prob   = 4
   style  = "steepness"
 
   where  = "seeds"
