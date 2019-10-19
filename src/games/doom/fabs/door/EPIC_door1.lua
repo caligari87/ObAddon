@@ -5,7 +5,10 @@ PREFABS.Door_EPIC_plain_tech =
 
   uses_epic_textures = true
 
-  prob   = 1000 * 8
+  prob   = 20
+  rank   = 1
+
+  style  = "doors"
 
   where  = "edge"
   seed_w = 2
