@@ -1686,6 +1686,118 @@ ARMAETUS_THEMES =
     }
   }
 
+  -- MSSP: inspired by Return to Castle Wolfenstein!
+  -- Emphasis on grey/dark bricks and wood floors/ceilings
+  urban_returnToCastleWolf =
+  {
+    env = "building"
+    prob = 50
+
+    walls =
+    {
+      -- black/grey
+      ROCK1 = 25
+      ROCK3 = 25
+
+      BRIKS01 = 35
+      BRIKS02 = 20
+      BRIKS04 = 25
+      BRIKS05 = 25
+      BRIKS07 = 20
+      BRIKS09 = 25
+      BRIKS10 = 50
+      BRIKS11 = 50
+      BRIKS13 = 50
+      BRIKS18 = 75
+      BRIKS21 = 50
+      BRIKS23 = 50
+      BRIKS26 = 25
+      BRIKS27 = 25
+      BRIKS29 = 75
+      BRIKS30 = 75
+      BRIKS32 = 25
+      BRIKS33 = 50
+      BRIKS35 = 50
+      BRIKS36 = 50
+      BRIKS39 = 50
+      BRIKS43 = 50
+      BRONZEG1 = 50
+      BRONZEG2 = 50
+      BRONZEG3 = 50
+      BROWN2 = 25
+      BROWN3 = 25
+      CATACMB3 = 50
+      KSTONE1 = 50
+      ROK03 = 50
+      ROK17 = 50
+      ROK18 = 50
+    }
+
+    floors =
+    {
+      CEIL1_1 = 50
+      FLAT5_1 = 50
+      FLAT5_2 = 50
+      G02 = 50
+      G03 = 50
+      GWOD01 = 50
+      GWOD02 = 50
+      GWOD03 = 50
+      GWOD04 = 50
+      WOODTI2 = 50
+      WOODTIL = 50
+
+      -- deliberately no stone floors
+    }
+
+    ceilings =
+    {
+      -- woods (same as floors)
+      CEIL1_1 = 50
+      FLAT5_1 = 50
+      FLAT5_2 = 50
+      G02 = 50
+      G03 = 50
+      GWOD01 = 50
+      GWOD02 = 50
+      GWOD03 = 50
+      GWOD04 = 50
+      WOODTI2 = 50
+      WOODTIL = 50
+
+      -- stone (dark also)
+      FLAT5 = 50
+      FLAT5_7 = 25
+      FLAT5_8 = 25
+
+      BMARB1 = 15
+      BMARB2 = 25
+      BMARB3 = 15
+      RROCK13 = 25
+      BLACK0 = 25
+      DARKF03 = 25
+      FFLAT01 = 25
+      G04 = 15
+      G05 = 15
+      G06 = 15
+      G07 = 15
+      G08 = 15
+      G11 = 15
+      G12 = 50
+      G19 = 50
+      GMET02 = 10
+      GMET03 = 10
+      GMET04 = 10
+      GMET05 = 10
+      GMET06 = 10
+      GSTN02 = 25
+      MEM01 = 50
+      QFLAT10 = 50
+      RROCK13 = 25
+      TILES5 = 25
+    }
+  }
+
   urban_armaetuscave =
   {
     env  = "cave"
