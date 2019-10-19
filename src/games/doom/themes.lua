@@ -1483,6 +1483,7 @@ DOOM.THEMES =
       gtd_wall_high_gap_set = 5
       gtd_wall_high_gap_alt_set = 5
       gtd_generic_half_floor = 10
+      gtd_woodframe = 10
     }
 
     window_groups =
@@ -1857,6 +1858,7 @@ DOOM.THEMES =
       gtd_wall_high_gap_set = 20
       gtd_wall_high_gap_alt_set = 20
       gtd_generic_half_floor = 30
+      gtd_woodframe = 40
     }
 
     window_groups =

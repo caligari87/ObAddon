@@ -1056,6 +1056,7 @@ ULTDOOM.THEMES =
       beam_gothic = 50
       beam_quakeish = 50
       beam_lights_vertical_hell = 50
+      beam_wood = 50
     }
 
     wall_groups =
@@ -1347,6 +1348,7 @@ ULTDOOM.THEMES =
       beam_lights_white = 25
       beam_lights_vertical_tech = 25
       beam_lights_vertical_hell = 50
+      beam_wood = 80
     }
 
     wall_groups =
@@ -1386,6 +1388,7 @@ ULTDOOM.THEMES =
       gtd_wall_high_gap_set = 10
       gtd_wall_high_gap_alt_set = 10
       gtd_generic_half_floor = 15
+      gtd_woodframe = 30
     }
 
     fence_posts =
