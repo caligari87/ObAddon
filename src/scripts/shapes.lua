@@ -2667,6 +2667,65 @@ GROW_COLONNADE_PARTHENON_LAKE =
   }
 }
 
+GROW_COLONNADE_MOAT_1X =
+{
+  prob = 5
+  skip_prob = 80
+
+  structure =
+  {
+    "x......","x11>>AA"
+    "1......","111~~AA"
+    "1......","111~#AA"
+    "1......","111~~AA"
+    "x......","x11>>AA"
+  }
+}
+
+GROW_COLONNADE_MOAT_2X =
+{
+  prob = 5
+  skip_prob = 80
+
+  structure =
+  {
+    "x......","x11>>AA"
+    "x......","x11~~AA"
+    "x......","x11~#AA"
+    "1......","111~~AA"
+    "1......","111>>AA"
+    "1......","111~~AA"
+    "x......","x11~#AA"
+    "x......","x11~~AA"
+    "x......","x11>>AA"
+  }
+}
+
+GROW_COLLONADE_CORNER =
+{
+  prob = 6
+  skip_prob = 75
+
+  structure =
+  {
+    "11.....","111>>A%"
+    "11.....","111>>AA"
+    ".......","11/~~AA"
+    ".......","vv~~~#A"
+    ".......","vv~~/AA"
+    ".......","AAA#AAA"
+    ".......","%AAAAAA"
+  }
+
+  diagonals =
+  {
+    "A."
+    "1~"
+    "~A"
+    ".A"
+  }
+}
+
 -- MSSP's liquid tiles. [MSSPLIQUID]
 
 GROW_LIQUID_GUTTER_SIDE =
