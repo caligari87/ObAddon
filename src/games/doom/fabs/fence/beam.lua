@@ -52,3 +52,47 @@ PREFABS.Beam_diagonal_tech =
 
   group = "beam_shiny"
 }
+
+PREFABS.Beam_wall_textured =
+{
+  template = "Beam_diagonal"
+  map = "MAP05"
+
+  theme = "!tech"
+
+  group = "beam_textured"
+}
+
+PREFABS.Beam_wall_textured_diagonal =
+{
+  template = "Beam_diagonal"
+  map = "MAP06"
+
+  theme = "!tech"
+
+  group = "beam_textured"
+}
+
+PREFABS.Beam_wall_textured_tech =
+{
+  template = "Beam_diagonal"
+  map = "MAP05"
+
+  theme = "tech"
+
+  group = "beam_textured"
+
+  tex_METAL = "SHAWN2"
+}
+
+PREFABS.Beam_wall_textured_diagonal_tech =
+{
+  template = "Beam_diagonal"
+  map = "MAP06"
+
+  theme = "tech"
+
+  group = "beam_textured"
+
+  tex_METAL = "SHAWN2"
+}
