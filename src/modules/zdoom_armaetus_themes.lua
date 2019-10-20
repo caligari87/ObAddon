@@ -3127,6 +3127,7 @@ ARMAETUS_URBAN_WALL_GROUPS =
   gtd_wall_vertical_light_1 = 2
   gtd_wall_vertical_light_2 = 2
   gtd_wall_vertical_light_3 = 2
+  gtd_epic_craneo_paintings = 10
 }
 
 ARMAETUS_HELL_WALL_GROUPS =
