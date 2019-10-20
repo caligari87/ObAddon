@@ -55,7 +55,7 @@ PREFABS.Beam_diagonal_tech =
 
 PREFABS.Beam_wall_textured =
 {
-  template = "Beam_diagonal"
+  template = "Beam"
   map = "MAP05"
 
   theme = "!tech"
@@ -75,7 +75,7 @@ PREFABS.Beam_wall_textured_diagonal =
 
 PREFABS.Beam_wall_textured_tech =
 {
-  template = "Beam_diagonal"
+  template = "Beam"
   map = "MAP05"
 
   theme = "tech"
