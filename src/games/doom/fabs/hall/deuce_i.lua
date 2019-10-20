@@ -164,7 +164,7 @@ PREFABS.Hallway_deuce_i_light_box_tech =
 
   prob = 35
 
-  ceil_CEIL1_3 = "FLAT17"
   tex_METAL = "SHAWN2"
+  flat_CEIL1_3 = "FLAT17"
   flat_CEIL5_2 = "FLAT23"
 }
