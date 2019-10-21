@@ -734,6 +734,8 @@ function ZDOOM_SPECIALS.do_special_stuff()
       special_attributes = special_attributes .. '  nointermission\n'
     end
 
+    special_attributes = special_attributes .. '  ClipMidTextures\n'
+
     local mapinfo =
     {
       'map ' .. map_id .. ' lookup HUSTR_'.. name_string_map_id ..'\n'
