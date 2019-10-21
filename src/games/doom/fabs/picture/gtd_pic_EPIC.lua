@@ -573,3 +573,59 @@ PREFABS.Pic_EPIC_WoodenDemon =
   sector_1  = { [0]=75, [1]=15 }
 
 }
+
+
+-- Modified to have Static Sounds
+
+PREFABS.Pic_EPIC_box_static_sounds =
+{
+  template = "Pic_EPIC_box_gothic_big"
+  map = "MAP12"
+
+  prob = 25 * 10
+
+  height = 128
+
+  theme = "tech"
+
+  seed_w = 1
+
+  tex_COMPSA1 =
+  {
+   NOISE2A = 50
+   NOISE3A = 50
+   TVSNOW01 = 50
+   COMPFUZ1 = 50
+  }
+}
+
+PREFABS.Pic_EPIC_box_metal_small_sounds =
+{
+  template = "Pic_EPIC_box_gothic_big"
+  map = "MAP12"
+
+  prob = 40 * 10
+
+  height = 128
+
+  theme = "tech"
+
+  seed_w = 1
+
+  tex_COMPSA1 =
+  {
+    COMPSA1 = 50
+    --COMPSC1 = 50
+    COMPSD1 = 50
+    --COMPY1 = 50
+    COMPFUZ1 = 30
+    --COMPU1 = 50
+    --COMPU2 = 50
+    --COMPU3 = 50
+    --COMPVENT = 50
+    --COMPVEN2 = 50
+    --NMONIA1 = 50
+    DECMP04A = 50
+  }
+}
+
