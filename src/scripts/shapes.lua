@@ -7185,7 +7185,7 @@ GROW_DIAGONAL_STALK =
 GROW_O =
 {
   prob = 40
-  skip_prob = 20
+  skip_prob = 75
 
   structure =
   {
@@ -7212,7 +7212,7 @@ GROW_O =
 GROW_O_STAIR =
 {
   prob = 20
-  skip_prob = 20
+  skip_prob = 75
 
   structure =
   {

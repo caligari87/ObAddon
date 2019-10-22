@@ -58,6 +58,10 @@ WADFAB_ENTITIES =
 
   [8181] = { kind="light" }
 
+  -- souuuuund
+
+  [8185] = { kind="sound" }
+
   -- miscellaneous
 
   [8199] = { kind="secret" }
@@ -1418,6 +1422,9 @@ function Fab_load_wad(def)
 
 
   local function handle_entity(fab, E)
+
+    gui.printf(table.tostr(fab))
+
     local spot_info = WADFAB_ENTITIES[E.id]
 
     if not spot_info then
@@ -1438,6 +1445,13 @@ function Fab_load_wad(def)
 
       table.insert(fab.entities, E)
       return
+    end
+
+    -- sound control logic
+    if spot_info.kind == "sound" then
+      E.id = "sound"
+
+      E.flags = nil
     end
 
     if spot_info.kind == "secret" then
