@@ -1089,7 +1089,7 @@ OB_MODULES["zdoom_specials"] =
 
   side = "left"
 
-  priority = 69
+  priority = 68
 
   engine = { zdoom=1, gzdoom=1, skulltag=1 }
 

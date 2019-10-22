@@ -1422,9 +1422,6 @@ function Fab_load_wad(def)
 
 
   local function handle_entity(fab, E)
-
-    gui.printf(table.tostr(fab))
-
     local spot_info = WADFAB_ENTITIES[E.id]
 
     if not spot_info then
@@ -1449,9 +1446,26 @@ function Fab_load_wad(def)
 
     -- sound control logic
     if spot_info.kind == "sound" then
-      E.id = "sound"
+      if PARAM.ambient_sounds then
+        if not fab.sound then
+          error(fab.name .. " has a sound thing without a sound def.\n" ..
+          "Y U DO THIS?!?!?! Y HUH Y???!?!")
+        end
 
-      E.flags = nil
+        local picked_sound = 0
+
+        if type(fab.sound) == "table" then
+          picked_sound = rand.key_by_probs(fab.sound)
+        elseif type(fab.sound) == "string" then
+          picked_sound = fab.sound
+        end
+
+        E.id = ZDOOM_SOUND.SOUND_IDS[picked_sound]
+
+        E.flags = nil
+        table.insert(fab.entities, E)
+      end
+      return
     end
 
     if spot_info.kind == "secret" then

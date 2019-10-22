@@ -25,6 +25,7 @@ PREFABS.Pic_control_room =
 
   sector_1  = { [0]=70, [1]=20, [2]=5, [3]=5, [8]=10 }
 
+  sound = "Computer_Station"
 }
 
 PREFABS.Pic_control_room_small_monitors =
