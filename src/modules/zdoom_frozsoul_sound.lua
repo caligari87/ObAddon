@@ -55,6 +55,9 @@ function ZDOOM_SOUND.build_lumps()
   table.name_up(sndtable)
 
   for _,sound in pairs(sndtable) do
+
+    ZDOOM_SOUND_DEFS[_].id = offset_count
+
     -- build DECORATE chunk
     local dec_chunk = ZDOOM_SOUND.TEMPLATES.DEC
 
@@ -72,6 +75,8 @@ function ZDOOM_SOUND.build_lumps()
 
     offset_count = offset_count + 1
   end
+
+  gui.printf(table.tostr(ZDOOM_SOUND_DEFS, 5))
 end
 
 function ZDOOM_SOUND.setup(self)

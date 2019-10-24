@@ -1460,7 +1460,7 @@ function Fab_load_wad(def)
           picked_sound = fab.sound
         end
 
-        E.id = ZDOOM_SOUND.SOUND_IDS[picked_sound]
+        E.id = ZDOOM_SOUND_DEFS[picked_sound].id
 
         E.flags = nil
         table.insert(fab.entities, E)
