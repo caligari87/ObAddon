@@ -59,8 +59,23 @@ function ScriptMan_assemble_decorate_lump()
     decorate_script_lines = decorate_script_lines ..
     PARAM.hn_marker_decorate_lines
   end
+  if PARAM.ambient_sounds then
+    decorate_script_lines = decorate_script_lines ..
+    PARAM.SOUND_DEC
+  end
 
   add_script_lump("DECORATE", decorate_script_lines)
+end
+
+
+function ScriptMan_assemble_sndinfo_lump()
+  local sndinfo_lines = ""
+  if PARAM.ambient_sounds then
+    sndinfo_lines = sndinfo_lines ..
+    PARAM.SNDINFO
+  end
+
+  add_script_lump("SNDINFO", sndinfo_lines)
 end
 
 
@@ -88,4 +103,5 @@ function ScriptMan_init()
   gui.printf("\n--==| Script Manager |==--\n\n")
   ScriptMan_assemble_decorate_lump()
   ScriptMan_assemble_gldefs_lump()
+  ScriptMan_assemble_sndinfo_lump()
 end

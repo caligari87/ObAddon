@@ -17,16 +17,16 @@
 --
 -------------------------------------------------------------------
 
+gui.import("zdoom_sounds.lua")
+
 ZDOOM_SOUND = {}
 
-ZDOOM_SOUND.SOUND_IDS =
-{
-  ["Computer_Station"] = 16000
-}
+ZDOOM_SOUND.ACTOR_ID_OFFSET = 20000
 
-ZDOOM_SOUND.DECORATE_TEMPLATE =
+ZDOOM_SOUND.TEMPLATES =
 {
-[[Actor NAMENAMENAME IDIDID : AmbientSound
+  DEC =
+[[actor ACTORNAME IDNUM : AmbientSound
 {
   +THRUACTORS
   Radius 4
@@ -35,7 +35,7 @@ ZDOOM_SOUND.DECORATE_TEMPLATE =
   {
     Spawn:
       TNT1 A 0
-      TNT1 A 0 A_PlaySoundEx("SOUNDSOUNDSOUND", "Auto", 1)
+      TNT1 A 0 A_PlaySoundEx("SOUNDNAME", "Auto", 1)
       Goto Live
 
     Live:
@@ -46,13 +46,33 @@ ZDOOM_SOUND.DECORATE_TEMPLATE =
 ]]
 }
 
-ZDOOM_SOUND.SNDINFO_TEMPLATE =
-{
-[[SNDLUMP SNDLUMP
-$ambient 1 SNDLUMP point continuous 1.0
-$limit
-]]
-}
+function ZDOOM_SOUND.build_lumps()
+  local offset_count = ZDOOM_SOUND.ACTOR_ID_OFFSET
+  local sndtable = table.deep_copy(ZDOOM_SOUND_DEFS)
+  PARAM.SOUND_DEC = ""
+  PARAM.SNDINFO = ""
+
+  table.name_up(sndtable)
+
+  for _,sound in pairs(sndtable) do
+    -- build DECORATE chunk
+    local dec_chunk = ZDOOM_SOUND.TEMPLATES.DEC
+
+    dec_chunk = string.gsub(dec_chunk, "ACTORNAME", sound.name)
+    dec_chunk = string.gsub(dec_chunk, "IDNUM", offset_count)
+    dec_chunk = string.gsub(dec_chunk, "SOUNDNAME", sound.lump)
+
+    PARAM.SOUND_DEC = PARAM.SOUND_DEC .. dec_chunk .. "\n\n"
+
+    -- build SNDINFO chunk
+    local sndinfo_chunk = sound.lump .. " " .. sound.lump .. "\n" ..
+    sound.flags
+
+    PARAM.SNDINFO = PARAM.SNDINFO .. sndinfo_chunk .. "\n"
+
+    offset_count = offset_count + 1
+  end
+end
 
 function ZDOOM_SOUND.setup(self)
   gui.printf("\n--== Ambient Sound Addons module active ==--\n\n")
@@ -63,6 +83,7 @@ function ZDOOM_SOUND.setup(self)
   end]]
 
   PARAM.ambient_sounds = true
+  ZDOOM_SOUND.build_lumps()
 end
 
 OB_MODULES["zdoom_ambient_sound"] =
