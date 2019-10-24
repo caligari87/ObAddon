@@ -23,13 +23,13 @@ ZDOOM_SOUND_DEFS =
 Computer_Station =
 {
   lump = "COMPY1"
-  flags = "$ambient 6 COMPY1 point continious 8.0"
+  flags = "$ambient 6 COMPY1 point continuous 8.0"
 }
 
 Ambience_Urban_Outdoors =
 {
   lump = "RAINAMB"
-  flags = "$ambient 2 RAINAMB point continious 0.6 $limit RAINAMB 1"
+  flags = "$ambient 2 RAINAMB point continuous 0.6 $limit RAINAMB 1"
 }
 
 }
