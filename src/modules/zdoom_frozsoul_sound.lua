@@ -56,7 +56,7 @@ ZDOOM_SOUND.ACTOR_ID_OFFSET = 20000
 ZDOOM_SOUND.TEMPLATES =
 {
   DEC =
-[[actor ACTORNAME IDNUM : AmbientSound
+[[actor ACTORNAME : AmbientSound IDNUM
 {
   +THRUACTORS
   Radius 4
