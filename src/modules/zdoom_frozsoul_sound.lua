@@ -108,5 +108,6 @@ OB_MODULES["zdoom_ambient_sound"] =
     setup = ZDOOM_SOUND.setup
   }
 
-  tooltip = "Adds ambient sound to maps."
+  tooltip = "Adds ambient sound to maps, based on fabs and room themes." ..
+  "THIS MODULE IS NOT YET READY FOR USE."
 }
