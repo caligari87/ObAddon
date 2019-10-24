@@ -20,16 +20,123 @@
 ZDOOM_SOUND_DEFS =
 {
 
+Outdoors_Tech =
+{
+  lump = "TECHAMB"
+  flags =
+[[$limit TECHAMB 1
+]]
+}
+
+Outdoors_Urban_Rainforest =
+{
+  lump = "RAINAMB"
+  flags =
+[[$limit RAINAMB 1
+]]
+}
+
+Outdoors_Arctic_Wind =
+{
+  lump = "ARCTIC"
+  flags =
+[[$limit ARCTIC 1
+]]
+}
+
+Outdoors_Desert_Wind =
+{
+  lump = "DESERT"
+  flags =
+[[$limit DESERT 1
+]]
+}
+
+Outdoors_Street =
+{
+  lump = "STREETAM"
+  flags =
+[[$limit STREETAM 1
+]]
+}
+
+Hell =
+{
+  lump = "HELLAMB"
+  flags =
+[[$limit HELLAMB 1
+]]
+}
+
+
+Bathroom_Fan =
+{
+  lump = "BATHFAN"
+}
+
 Computer_Station =
 {
   lump = "COMPY1"
-  flags = "$ambient 6 COMPY1 point continuous 8.0"
 }
 
-Ambience_Urban_Outdoors =
+Indoor_Fan =
 {
-  lump = "RAINAMB"
-  flags = "$ambient 2 RAINAMB point continuous 0.6 $limit RAINAMB 1"
+  lump = "FANSND"
+}
+
+Machine_Air =
+{
+  lump = "MACHNAIR"
+}
+
+Machine_Ventilation =
+{
+  lump = "MACHVENT"
+}
+
+Demonic_Teleporter =
+{
+  lump = "SKLLCHNT"
+}
+
+Electric_Sparks =
+{
+  lump = "SPARKING"
+}
+
+Static_Monitor =
+{
+  lump = "STATIC"
+}
+
+Toilet_Running =
+{
+  lump = "TOILETRN"
+}
+
+Vending_Machine_Hum =
+{
+  lump = "VENDHUM"
+}
+
+Water_Draining =
+{
+  lump = "WATDRAIN"
+}
+
+Water_Streaming =
+{
+  lump = "WATSTRM"
+}
+
+Water_Tank =
+{
+  lump = "WATTANK"
+}
+
+Waterfall_Rush =
+{
+  lump = "WATFALL"
 }
 
 }

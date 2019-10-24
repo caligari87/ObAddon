@@ -56,20 +56,19 @@ ZDOOM_SOUND.ACTOR_ID_OFFSET = 20000
 ZDOOM_SOUND.TEMPLATES =
 {
   DEC =
-[[actor ACTORNAME : AmbientSound IDNUM
+[[actor ACTORNAME IDNUM
 {
   +THRUACTORS
+  +NOBLOCKMAP
+  +NOSECTOR
+  +DONTSPLASH
+  Scale 0
   Radius 4
   Height 4
   States
   {
     Spawn:
-      TNT1 A 0
-      TNT1 A 0 A_PlaySoundEx("SOUNDNAME", "Auto", 1)
-      Goto Live
-
-    Live:
-      TNT1 A 24
+      CAND A 1 A_PlaySound("SOUNDNAME", CHAN_AUTO, 1, true, ATTN_STATIC)
       Loop
   }
 }
@@ -98,8 +97,11 @@ function ZDOOM_SOUND.build_lumps()
     PARAM.SOUND_DEC = PARAM.SOUND_DEC .. dec_chunk .. "\n\n"
 
     -- build SNDINFO chunk
-    local sndinfo_chunk = sound.lump .. " " .. sound.lump .. "\n" ..
-    sound.flags
+    local sndinfo_chunk = sound.lump .. " " .. sound.lump .. "\n"
+
+    if sound.flags then
+      sndinfo_chunk = sndinfo_chunk .. " " .. sound.flags .. "\n"
+    end
 
     PARAM.SNDINFO = PARAM.SNDINFO .. sndinfo_chunk .. "\n"
 
