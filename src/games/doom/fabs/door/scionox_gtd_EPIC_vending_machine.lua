@@ -23,6 +23,8 @@ PREFABS.Door_EPIC_vending_machine_secret =
   x_fit  = "frame"
   z_fit  = "top"
 
+  sound = "Vending_Machine_Hum"
+
   tex_OBVNMCH1 =
   {
     OBVNMCH1 = 50
