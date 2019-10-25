@@ -73,9 +73,8 @@ function ScriptMan_assemble_sndinfo_lump()
   if PARAM.ambient_sounds then
     sndinfo_lines = sndinfo_lines ..
     PARAM.SNDINFO
+    add_script_lump("SNDINFO", sndinfo_lines)
   end
-
-  add_script_lump("SNDINFO", sndinfo_lines)
 end
 
 
