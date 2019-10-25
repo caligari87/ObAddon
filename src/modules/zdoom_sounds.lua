@@ -76,7 +76,7 @@ Bathroom_Fan =
 
 Computer_Station =
 {
-  lump = "COMPY1"
+  lump = "COMPSTN"
 }
 
 Indoor_Fan =
