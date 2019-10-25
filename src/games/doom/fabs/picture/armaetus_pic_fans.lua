@@ -23,6 +23,8 @@ PREFABS.Pic_armaetus_double_fans =
 
   x_fit = "frame"
   y_fit = "top"
+
+  sound = "Indoor_Fan"
 }
 
 PREFABS.Pic_armaetus_double_fans_hell =

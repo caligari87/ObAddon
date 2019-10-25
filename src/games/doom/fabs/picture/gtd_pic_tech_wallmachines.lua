@@ -26,6 +26,8 @@ PREFABS.Pic_techy_vats =
     COMPBLUE = 50
     REDWALL = 50
   }
+  
+  sound = "Machine_Air"
 }
 
 PREFABS.Pic_pipagery =
@@ -51,6 +53,8 @@ PREFABS.Pic_pipagery =
 
   x_fit = "frame"
   y_fit = "top"
+
+  sound = "Machine_Air"  
 }
 
 PREFABS.Pic_computer_pull_rack_thingies =
