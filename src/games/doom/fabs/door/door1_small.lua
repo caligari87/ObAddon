@@ -4,11 +4,11 @@ PREFABS.Door_small_vanilla =
 
   map  = "MAP01"
 
-  prob = 20
-  rank = 1
+  prob = 200
 
   style = "doors"
 
+  kind  = "arch"
   where = "edge"
   seed_w = 2
 

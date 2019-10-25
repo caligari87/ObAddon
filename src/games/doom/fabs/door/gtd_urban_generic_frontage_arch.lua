@@ -4,7 +4,6 @@ PREFABS.Arch_generic_urban_frontage =
   map    = "MAP01"
 
   prob   = 400
-  rank   = 1
 
   theme  = "urban"
 
