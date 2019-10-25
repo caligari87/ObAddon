@@ -1392,7 +1392,8 @@ ULTDOOM.THEMES =
       gtd_wall_high_gap_set = 10
       gtd_wall_high_gap_alt_set = 10
       gtd_generic_half_floor = 15
-      gtd_woodframe = 30
+      gtd_woodframe = 15
+      gtd_woodframe_green = 15
     }
 
     fence_posts =

@@ -1,9 +1,11 @@
+-- fake door
+
 PREFABS.Wall_fake_door =
 {
   file   = "wall/gtd_wall_urban.wad"
   map    = "MAP01"
 
-  prob   = 60
+  prob   = 20
   theme = "urban"
 
   on_liquids = "never"
@@ -36,8 +38,30 @@ PREFABS.Wall_fake_door_tech =
 
   theme = "tech"
 
-  prob  = 5
+  prob  = 2
 }
+
+-- braceless fake door
+
+PREFABS.Wall_fake_door_braceless =
+{
+  template = "Wall_fake_door"
+  map      = "MAP06"
+
+  prob     = 40
+}
+
+PREFABS.Wall_fake_door_tech_braceless =
+{
+  template = "Wall_fake_door"
+  map      = "MAP06"
+
+  theme    = "tech"
+
+  prob     = 3
+}
+
+--
 
 PREFABS.Wall_modern_piping =
 {
@@ -60,12 +84,14 @@ PREFABS.Wall_modern_piping =
   z_fit = "top"
 }
 
+-- shutters
+
 PREFABS.Wall_modern_shutter =
 {
   file   = "wall/gtd_wall_urban.wad"
   map    = "MAP03"
 
-  prob   = 60
+  prob   = 20
   theme = "urban"
 
   on_liquids = "never"
@@ -100,7 +126,7 @@ PREFABS.Wall_modern_shutter_EPIC =
   file   = "wall/gtd_wall_urban.wad"
   map    = "MAP03"
 
-  prob   = 60
+  prob   = 20
   theme = "urban"
 
   uses_epic_textures = true
@@ -133,6 +159,22 @@ PREFABS.Wall_modern_shutter_EPIC =
     URBAN6 = 150
     URBAN8 = 150
   }
+}
+
+PREFABS.Wall_modern_shutter_braceless =
+{
+  template = "Wall_modern_shutter"
+  map      = "MAP07"
+
+  prob     = 40
+}
+
+PREFABS.Wall_modern_shutter_EPIC_braceless =
+{
+  template = "Wall_modern_shutter_EPIC"
+  map      = "MAP07"
+
+  prob     = 40
 }
 
 PREFABS.Wall_fake_warehouse_window =

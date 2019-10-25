@@ -37,3 +37,21 @@ PREFABS.Wall_gtd_wood_frame_diag =
 
   z_fit = { 48,96 }
 }
+
+PREFABS.Wall_gtd_wood_frame_edge_green =
+{
+  template = "Wall_gtd_wood_frame_edge"
+
+  group    = "gtd_woodframe_green"
+
+  tex_PANEL2 = PANEL3
+}
+
+PREFABS.Wall_gtd_wood_frame_diag_green =
+{
+  template = "Wall_gtd_wood_frame_diag"
+
+  group    = "gtd_woodframe_green"
+
+  tex_PANEL2 = PANEL3
+}

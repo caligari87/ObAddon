@@ -5438,7 +5438,7 @@ DECORATE_CATWALK_LUMP =
 GROW_CHAMFER_WIDE_ROOM_CORNER =
 {
   prob = 5
-  skip_prob = 30
+  skip_prob = 75
 
   structure =
   {
@@ -5461,7 +5461,7 @@ GROW_CHAMFER_WIDE_ROOM_CORNER =
 GROW_CHAMFER_WIDE_ROOM_CORNER_OUTLET =
 {
   prob = 5
-  skip_prob = 30
+  skip_prob = 75
 
   structure =
   {
@@ -5470,25 +5470,6 @@ GROW_CHAMFER_WIDE_ROOM_CORNER_OUTLET =
     "xxx...","xxx/11"
     "1.....","111111"
     "1.....","111111"
-  }
-
-  diagonals =
-  {
-    ".1"
-  }
-}
-
-GROW_CHAMFER_WIDE_ROOM_CORNER_OUTLET_SOLID =
-{
-  prob = 5
-  skip_prob = 30
-
-  structure =
-  {
-    "xxx..","xxx11"
-    "xxx..","xxx11"
-    "1....","11111"
-    "1....","11111"
   }
 
   diagonals =
@@ -5751,6 +5732,32 @@ GROW_RIBBED_WALLS_NEW_AREA_SINGLE =
     ".....","1AAAA"
     "x....","xAAAA"
     "xx11x","xx11x"
+  }
+}
+
+GROW_PEANUT_NEW_AREA =
+{
+  prob = 15
+  skip_prob = 80
+
+  structure =
+  {
+    "xxx....xx","xxxAAAAxx"
+    "x........","x11AAAA11"
+    "x........","x11AAAA11"
+    "x........","x11%AA/11"
+    "1........","1111AA111"
+    "1........","1111AA111"
+    "x........","x11/AA%11"
+    "x........","x11AAAA11"
+    "x........","x11AAAA11"
+    "xxx....xx","xxxAAAAxx"
+  }
+
+  diagonals =
+  {
+    "1A","A1"
+    "1A","A1"
   }
 }
 
@@ -7239,7 +7246,7 @@ GROW_O_STAIR =
 GROW_HALF_C =
 {
   prob = 75
-  skip_prob = 15
+  skip_prob = 25
 
   structure =
   {
@@ -7262,7 +7269,7 @@ GROW_HALF_C =
 GROW_HALF_C_STAIR =
 {
   prob = 50
-  skip_prob = 15
+  skip_prob = 25
 
   structure =
   {
@@ -7287,7 +7294,7 @@ GROW_HALF_C_STAIR =
 GROW_L =
 {
   prob = 75
-  skip_prob = 15
+  skip_prob = 25
 
   structure =
   {
@@ -7306,7 +7313,7 @@ GROW_L =
 GROW_L_STAIR =
 {
   prob = 45
-  skip_prob = 15
+  skip_prob = 25
 
   structure =
   {
@@ -7433,34 +7440,6 @@ GROW_EXTRUSION_4X4 =
   }
 }
 
-GROW_EXTRUSION_3X2 =
-{
-  prob = 80
-  skip_prob = 10
-
-  structure =
-  {
-    "111","111"
-    "...","111"
-    "...","111"
-  }
-}
-
-GROW_EXTRUSION_3X4 =
-{
-  prob = 75
-  skip_prob = 10
-
-  structure =
-  {
-    "111","111"
-    "...","111"
-    "...","111"
-    "...","111"
-    "...","111"
-  }
-}
-
 GROW_EXTRUSION_NEW_AREA_4x2 =
 {
   prob = 80
@@ -7477,7 +7456,7 @@ GROW_EXTRUSION_NEW_AREA_4x2 =
 GROW_EXTRUSION_STAIRCASE_4x2 =
 {
   prob = 80
-  skip_prob = 10
+  skip_prob = 25
 
   structure =
   {
@@ -7492,7 +7471,7 @@ GROW_EXTRUSION_STAIRCASE_4x2 =
 GROW_EXTRUSION_STAIRCASE_4x2_SIDEWAYS =
 {
   prob = 80
-  skip_prob = 10
+  skip_prob = 25
 
   structure =
   {
@@ -7507,7 +7486,7 @@ GROW_EXTRUSION_STAIRCASE_4x2_SIDEWAYS =
 GROW_EXTRUSION_STAIRCASE_4x2_SMALL =
 {
   prob = 80
-  skip_prob = 10
+  skip_prob = 25
 
   structure =
   {
@@ -7522,7 +7501,7 @@ GROW_EXTRUSION_STAIRCASE_4x2_SMALL =
 GROW_EXTRUSION_STAIRCASE_4x2_SMALL_SIDEWAYS =
 {
   prob = 80
-  skip_prob = 10
+  skip_prob = 25
 
   structure =
   {
@@ -7537,7 +7516,7 @@ GROW_EXTRUSION_STAIRCASE_4x2_SMALL_SIDEWAYS =
 GROW_EXTRUSION_SINK =
 {
   prob = 25
-  skip_prob = 10
+  skip_prob = 25
 
   aversion = 8
 
