@@ -58,6 +58,8 @@ PREFABS.Hallway_vent_i_lights =
   {
     STEP3 = 50
   }
+  
+  sound = "Indoor_Fan"
 }
 
 -- i-piece with single side door
