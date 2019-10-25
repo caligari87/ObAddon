@@ -20,53 +20,15 @@
 ZDOOM_SOUND_DEFS =
 {
 
-Outdoors_Tech =
-{
-  lump = "TECHAMB"
-  flags =
-[[$limit TECHAMB 1
-]]
-}
+-- Ambient sounds for outdoors
+Outdoors_Tech =             { lump = "TECHAMB",   flags = "$limit TECHAMB 1"  }
+Outdoors_Urban_Rainforest = { lump = "RAINAMB",   flags ="$limit RAINAMB 1"   }
+Outdoors_Arctic_Wind =      { lump = "ARCTIC",    flags = "$limit ARCTIC 1"   }
+Outdoors_Desert_Wind =      { lump = "DESERT",    flags = "$limit DESERT 1"   }
+Outdoors_Street =           { lump = "STREETAM",  flags = "$limit STREETAM 1" }
 
-Outdoors_Urban_Rainforest =
-{
-  lump = "RAINAMB"
-  flags =
-[[$limit RAINAMB 1
-]]
-}
-
-Outdoors_Arctic_Wind =
-{
-  lump = "ARCTIC"
-  flags =
-[[$limit ARCTIC 1
-]]
-}
-
-Outdoors_Desert_Wind =
-{
-  lump = "DESERT"
-  flags =
-[[$limit DESERT 1
-]]
-}
-
-Outdoors_Street =
-{
-  lump = "STREETAM"
-  flags =
-[[$limit STREETAM 1
-]]
-}
-
-Hell =
-{
-  lump = "HELLAMB"
-  flags =
-[[$limit HELLAMB 1
-]]
-}
+-- Ambient sound for Theme
+Hell =                      { lump = "HELLAMB",   flags = "$limit HELLAMB 1"  }
 
 -- Ambient sounds for specific prefabs
 Bathroom_Fan =        {  lump = "BATHFAN"   }
