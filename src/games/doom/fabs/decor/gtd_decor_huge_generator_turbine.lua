@@ -17,4 +17,6 @@ PREFABS.Huge_generator_turbine =
   z_fit  = "top"
 
   sink_mode = "never"
+  
+  sound = "Machine_Ventilation"
 }
