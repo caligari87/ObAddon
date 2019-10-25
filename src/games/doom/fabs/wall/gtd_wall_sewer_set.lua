@@ -35,6 +35,8 @@ PREFABS.Wall_sewer_sludgefall =
   deep = 32
 
   prob = 15
+  
+  sound = "Water_Streaming"
 }
 
 PREFABS.Wall_sewer_horizontal_pipes =

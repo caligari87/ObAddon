@@ -19,6 +19,8 @@ PREFABS.Wall_armaetus_fan_general =
 
   x_fit = "frame"
   z_fit = "top"
+  
+  sound = "Indoor_Fan"
 }
 
 PREFABS.Wall_armaetus_fan_hell =
