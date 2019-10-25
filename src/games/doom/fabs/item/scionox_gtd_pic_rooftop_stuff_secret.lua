@@ -22,18 +22,26 @@ PREFABS.Item_rooftop_secret =
 
   x_fit = "frame"
   y_fit = "top"
+  
+  sound = "Water_Tank"
 }
+
 PREFABS.Item_rooftop_secret_2 =
 {
   template = "Item_rooftop_secret"
   map      = "MAP01"
   engine   = "zdoom"
   seed_h = 1
+  
+  sound = "Machine_Ventilation"
 }
+
 PREFABS.Item_rooftop_secret_3 =
 {
   template = "Item_rooftop_secret"
   map      = "MAP03"
   seed_w = 3
   seed_h = 1
+  
+  sound = "Machine_Air"
 }

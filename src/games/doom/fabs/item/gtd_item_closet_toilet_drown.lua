@@ -28,4 +28,6 @@ PREFABS.Item_closet_toilet_drown =
 
   x_fit = "frame"
   y_fit = "top"
+  
+  sound = "Bathroom_Fan"
 }

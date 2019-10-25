@@ -22,6 +22,8 @@ PREFABS.Item_tech_window =
 
   y_fit = "top"
   x_fit = "frame"
+  
+  sound = "Outdoors_Tech"
 }
 
 PREFABS.Item_tech_window_doom1 =
@@ -53,4 +55,6 @@ PREFABS.Item_tech_window_2 =
 
   y_fit = "top"
   x_fit = "frame"
+  
+  sound = "Outdoors_Tech"  
 }
