@@ -1,4 +1,4 @@
-PREFABS.Item_craneo_smasher_tech =
+--[[PREFABS.Item_craneo_smasher_tech =
 {
   file  = "item/craneo_item_smasher.wad"
   map = "MAP01"
@@ -51,3 +51,4 @@ PREFABS.Item_craneo_smasher_alt_gothic =
   tex_CEMENT8 = "GSTGARG"
   tex_DOORSTOP = "METAL"
 }
+]]
