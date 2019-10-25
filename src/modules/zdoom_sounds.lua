@@ -68,75 +68,18 @@ Hell =
 ]]
 }
 
-
-Bathroom_Fan =
-{
-  lump = "BATHFAN"
-}
-
-Computer_Station =
-{
-  lump = "COMPSTN"
-}
-
-Indoor_Fan =
-{
-  lump = "FANSND"
-}
-
-Machine_Air =
-{
-  lump = "MACHNAIR"
-}
-
-Machine_Ventilation =
-{
-  lump = "MACHVENT"
-}
-
-Demonic_Teleporter =
-{
-  lump = "SKLLCHNT"
-}
-
-Electric_Sparks =
-{
-  lump = "SPARKING"
-}
-
-Static_Monitor =
-{
-  lump = "STATIC"
-}
-
-Toilet_Running =
-{
-  lump = "TOILETRN"
-}
-
-Vending_Machine_Hum =
-{
-  lump = "VENDHUM"
-}
-
-Water_Draining =
-{
-  lump = "WATDRAIN"
-}
-
-Water_Streaming =
-{
-  lump = "WATSTRM"
-}
-
-Water_Tank =
-{
-  lump = "WATTANK"
-}
-
-Waterfall_Rush =
-{
-  lump = "WATFALL"
-}
-
-}
+-- Ambient sounds for specific prefabs
+Bathroom_Fan =        {  lump = "BATHFAN"   }
+Computer_Station =    {  lump = "COMPSTN"   }
+Indoor_Fan =          {  lump = "FANSND"    }
+Machine_Air =         {  lump = "MACHNAIR"  }
+Machine_Ventilation = {  lump = "MACHVENT"  }
+Demonic_Teleporter =  {  lump = "SKLLCHNT"  }
+Electric_Sparks =     {  lump = "SPARKING"  }
+Static_Monitor =      {  lump = "STATIC"    }
+Toilet_Running =      {  lump = "TOILETRN"  }
+Vending_Machine_Hum = {  lump = "VENDHUM"   }
+Water_Draining =      {  lump = "WATDRAIN"  }
+Water_Streaming =     {  lump = "WATSTRM"   }
+Water_Tank =          {  lump = "WATTANK"   }
+Waterfall_Rush =      {  lump = "WATFALL"   }
