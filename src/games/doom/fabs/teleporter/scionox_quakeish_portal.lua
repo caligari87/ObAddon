@@ -24,6 +24,8 @@ PREFABS.Teleporter_scionox_quakeish_portal =
   tag_2 = "?in_tag"
 
   tex_CGCANI00 = { CGCANI00=50, COMPWERD=50, SPACEW3=50, COMPCT01=50, COMPCT02=50, COMPCT03=50, CONSOLE6=50, CONSOLE7=50, CONSOLE8=50, NOISE1=50 }
+  
+  sound = "Demonic_Teleporter"
 }
 PREFABS.Teleporter_scionox_quakeish_portal_2 =
 {

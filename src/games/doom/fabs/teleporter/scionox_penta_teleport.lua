@@ -21,6 +21,8 @@ PREFABS.Teleporter_scionox_penta_teleport =
   tag_2 = "?in_tag"
 
   tex_COMPSTA1 = { COMPSTA1=50, COMPSTA2=50, COMPWERD=50, SPACEW3=50, SILVER2=50, SILVER3=50 }
+  
+  sound = "Demonic_Teleporter"
 }
 
 PREFABS.Teleporter_scionox_penta_teleport_2 =
@@ -114,4 +116,6 @@ PREFABS.Teleporter_scionox_penta_teleport_4 =
   tag_2 = "?in_tag"
 
   face_open = true
+  
+  sound = "Demonic_Teleporter"
 }

@@ -19,4 +19,6 @@ PREFABS.Hell_garrett_portal =
 
   tag_1 = "?out_tag"
   tag_2 = "?in_tag"
+  
+  sound = "Demonic_Teleporter"
 }
