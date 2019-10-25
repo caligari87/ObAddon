@@ -132,6 +132,8 @@ PREFABS.Item_wallmachines_secret_5 =
 
   x_fit = "frame"
   y_fit = "top"
+  
+  sound = "Machine_Air"
 }
 
 PREFABS.Item_wallmachines_secret_6 =
