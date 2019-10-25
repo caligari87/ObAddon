@@ -16,6 +16,8 @@ PREFABS.Hallway_deuce_i1 =
 
   seed_w = 2
   seed_h = 2
+  
+  sound = "Outdoors_Street"
 }
 
 PREFABS.Hallway_deuce_i1_tech =

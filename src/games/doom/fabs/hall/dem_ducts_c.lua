@@ -16,6 +16,8 @@ PREFABS.Hallway_ducts_c1 =
   seed_w = 2
   seed_h = 2
 
+  sound = "Indoor_Fan"
+
 }
 
 PREFABS.Hallway_ducts_c2 =

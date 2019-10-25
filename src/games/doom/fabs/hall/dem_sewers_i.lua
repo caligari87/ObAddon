@@ -19,6 +19,7 @@ PREFABS.Hallway_sewers_i1 =
   engine = "zdoom"
   can_flip = true
 
+  sound = "Water_Draining"
 }
 
 PREFABS.Hallway_sewers_i2 =
