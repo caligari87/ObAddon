@@ -17,6 +17,8 @@
 --
 -------------------------------------------------------------------
 
+--  Special thanks to Scionox for assisting with the preliminary build!
+
 ---------------------------------
 -- How to add your own sounds: --
 ---------------------------------
