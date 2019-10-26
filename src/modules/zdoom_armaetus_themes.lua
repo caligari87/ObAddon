@@ -3491,7 +3491,6 @@ ARMAETUS_TECH_WIDE_HALLS =
   deuce = 50
   metro = 50
   ducts = 50
-  organs = 50
 }
 
 ARMAETUS_HELL_WIDE_HALLS =
