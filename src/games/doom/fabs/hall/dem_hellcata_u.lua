@@ -124,7 +124,7 @@ PREFABS.Hallway_hellcata_u9 =
 {
   template = "Hallway_hellcata_u1"
   prob   = 1
-  key   = "secret"
+  style = "secret"
   map    = "MAP09"
 }
 
