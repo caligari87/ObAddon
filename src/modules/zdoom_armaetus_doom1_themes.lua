@@ -86,6 +86,28 @@ ARMAETUS_DOOM1_THEMES =
     }
   }
 
+  any_organs_Hallway =
+  {
+    env   = "hallway"
+    group = "organs"
+    prob  = 1
+
+    walls =
+    {
+      GRAY5 = 1
+    }
+
+    floors =
+    {
+      FLAT1 = 1
+    }
+
+    ceilings =
+    {
+      FLAT1 = 1
+    }
+  }
+
   tech_GrayMet =
   {
     env = "building"
