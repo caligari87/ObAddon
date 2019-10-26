@@ -55,6 +55,8 @@ ZDOOM_SOUND = {}
 
 ZDOOM_SOUND.ACTOR_ID_OFFSET = 20000
 
+ZDOOM_SOUND.SOUND_ACTOR_DENSITY = 5
+
 ZDOOM_SOUND.TEMPLATES =
 {
   DEC =
@@ -109,8 +111,44 @@ function ZDOOM_SOUND.build_lumps()
 
     offset_count = offset_count + 1
   end
+end
 
-  gui.printf(table.tostr(ZDOOM_SOUND_DEFS, 5))
+function ZDOOM_SOUND.populate_level_ambience()
+
+  if not PARAM.ambient_sounds then
+    return
+  end
+
+  each R in LEVEL.rooms do
+    if R.theme.sounds then
+      each A in R.areas do
+        if A.mode == "floor" or A.mode == "liquid" then
+          each S in A.seeds do
+
+            local pick_sound
+
+            if R.theme.sounds then
+              pick_sound = rand.key_by_probs(R.theme.sounds)
+            end
+
+            gui.printf("bruh\n")
+
+            if rand.odds(5) then
+
+              local E = {
+                x = S.mid_x
+                y = S.mid_y
+                z = S.area.floor_h + 8
+                id = ZDOOM_SOUND_DEFS[pick_sound].id
+              }
+
+              raw_add_entity(E)
+            end
+          end
+        end
+      end
+    end
+  end
 end
 
 function ZDOOM_SOUND.setup(self)
@@ -140,6 +178,7 @@ OB_MODULES["zdoom_ambient_sound"] =
   hooks =
   {
     setup = ZDOOM_SOUND.setup
+    end_level = ZDOOM_SOUND.populate_level_ambience
   }
 
   tooltip = "Adds ambient sound to maps, based on fabs and room themes." ..
