@@ -26,7 +26,8 @@ PREFABS.Item_control_room_secret =
   y_fit = "top"
 
   sector_1  = { [0]=70, [1]=20, [2]=5, [3]=5, [8]=10 }
-
+  
+  sound = "Computer_Station"
 }
 
 PREFABS.Item_control_room_secret_2 =
@@ -63,6 +64,8 @@ PREFABS.Item_wallmachines_secret =
 
   x_fit = "frame"
   y_fit = "top"
+  
+  sound = "Machine_Air"
 }
 
 PREFABS.Item_wallmachines_secret_2 =
@@ -95,6 +98,8 @@ PREFABS.Item_wallmachines_secret_3 =
   theme  = "!hell"
 
   seed_w = 3
+  
+  sound = "Computer_Station"  
 }
 
 PREFABS.Item_wallmachines_secret_4 =
