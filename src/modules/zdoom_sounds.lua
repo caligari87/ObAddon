@@ -55,15 +55,24 @@ ZDOOM_SOUNDSCAPES =
     building = {
     }
     outdoor = {
-      Outdoors_Tech = 50
+      temperate = { Outdoors_Tech = 50 }
+      snow      = {}
+      desert    = {}
     }
     cave = {
+      temperate = {}
+      snow      = {}
+      desert    = {}
     }
     park = {
-      Outdoors_Urban_Rainforest = 50      
+      temperate = { Outdoors_Urban_Rainforest = 50 }
+      snow      = {}
+      desert    = {}
     }
     street = {
-      Outdoors_Street = 50
+      temperate = { Outdoors_Street = 50 }
+      snow      = {}
+      desert    = {}
     }
   }
 
@@ -72,15 +81,24 @@ ZDOOM_SOUNDSCAPES =
     building = {
     }
     outdoor = {
-      Outdoors_Urban_Rainforest = 50
+      temperate = { Outdoors_Urban_Rainforest = 50 }
+      snow      = {}
+      desert    = {}
     }
     caves = {
+      temperate = {}
+      snow      = {}
+      desert    = {}
     }
     park = {
-      Outdoors_Urban_Rainforest = 50      
+      temperate = { Outdoors_Urban_Rainforest = 50 }
+      snow      = {}
+      desert    = {}
     }
     street = {
-      Outdoors_Street = 50
+      temperate = { Outdoors_Street = 50 }
+      snow      = {}
+      desert    = {}
     }
   }
 
@@ -90,17 +108,25 @@ ZDOOM_SOUNDSCAPES =
       Hell = 50
     }
     outdoor = {
-      Hell = 50      
+      temperate = { Hell = 50 }
+      snow      = {}
+      desert    = {}
     }
     cave = {
-      Hell = 50      
+      temperate = { Hell = 50 }
+      snow      = {}
+      desert    = {}
     }
     park = {
-      Hell = 50      
+      temperate = { Hell = 50 }
+      snow      = {}
+      desert    = {}
     }
     street = {
-      Hell = 50      
+      temperate = { Hell = 50 }
+      snow      = {}
+      desert    = {}
     }
   }
-  
+
 }

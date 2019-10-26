@@ -127,7 +127,12 @@ function ZDOOM_SOUND.populate_level_ambience()
     return
   end
 
-  local cur_sound_table = ZDOOM_SOUNDSCAPES[LEVEL.theme_name]
+  local level_sound_table = ZDOOM_SOUNDSCAPES[LEVEL.theme_name]
+
+  if not level_sound_table then
+    gui.printf("WARNING: No sounds at all for theme " .. LEVEL.theme_name .. ".\n")
+    return
+  end
 
   each R in LEVEL.rooms do
 
@@ -141,27 +146,51 @@ function ZDOOM_SOUND.populate_level_ambience()
       room_env = "street"
     end
 
-    if not table.empty(cur_sound_table[room_env]) then
-      each A in R.areas do
-        if A.mode == "floor" or A.mode == "liquid" then
-          each S in A.seeds do
+    each A in R.areas do
+      if A.mode == "floor" or A.mode == "liquid" then
+        each S in A.seeds do
 
-            local pick_sound
+          local pick_sound
+
+          local sound_table = level_sound_table[room_env]
+
+          local outdoor_theme
+
+          if rand.odds(5) then
 
             -- then pick the sound
-            pick_sound = rand.key_by_probs(cur_sound_table[room_env])
+            if room_env == "building" then
+              if not table.empty(sound_table) then
+                pick_sound = rand.key_by_probs(sound_table)
+              else
+                gui.printf("WARNING: No sound for " .. LEVEL.theme_name .. " indoor.\n")
+                continue
+              end
 
-            if rand.odds(5) then
+            else
+            -- special treatment for outdoor and outdoor-ish rooms
+            -- as they may be controlled by the Epic environment themes
+              outdoor_theme = LEVEL.outdoor_theme
 
-              local E = {
-                x = S.mid_x
-                y = S.mid_y
-                z = S.area.floor_h + 8
-                id = ZDOOM_SOUND_DEFS[pick_sound].id
-              }
+              if not outdoor_theme then outdoor_theme = "temperate" end
 
-              raw_add_entity(E)
+              if not table.empty(sound_table[outdoor_theme]) then
+                pick_sound = rand.key_by_probs(sound_table[outdoor_theme])
+              else
+                gui.printf("WARNING: No sound for " .. LEVEL.theme_name .. " " ..
+                outdoor_theme .. " " .. room_env .. ".\n")
+                continue
+              end
             end
+
+            local E = {
+              x = S.mid_x
+              y = S.mid_y
+              z = S.area.floor_h + 8
+              id = ZDOOM_SOUND_DEFS[pick_sound].id
+            }
+
+            raw_add_entity(E)
           end
         end
       end
