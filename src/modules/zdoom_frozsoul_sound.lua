@@ -127,19 +127,29 @@ function ZDOOM_SOUND.populate_level_ambience()
     return
   end
 
+  local cur_sound_table = ZDOOM_SOUNDSCAPES[LEVEL.theme_name]
+
   each R in LEVEL.rooms do
-    if R.theme.sounds then
+
+    local room_env = ""
+
+    -- resolve room environment
+    -- parks, caves, and steets will override
+    -- the contents of building and outdoors
+    room_env = R:get_env()
+    if R.is_street then
+      room_env = "street"
+    end
+
+    if not table.empty(cur_sound_table[room_env]) then
       each A in R.areas do
         if A.mode == "floor" or A.mode == "liquid" then
           each S in A.seeds do
 
             local pick_sound
 
-            if R.theme.sounds then
-              pick_sound = rand.key_by_probs(R.theme.sounds)
-            end
-
-            gui.printf("bruh\n")
+            -- then pick the sound
+            pick_sound = rand.key_by_probs(cur_sound_table[room_env])
 
             if rand.odds(5) then
 

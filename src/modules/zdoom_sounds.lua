@@ -45,5 +45,51 @@ Water_Draining =      {  lump = "WATDRAIN"  }
 Water_Streaming =     {  lump = "WATSTRM"   }
 Water_Tank =          {  lump = "WATTANK"   }
 Waterfall_Rush =      {  lump = "WATFALL"   }
-  
+
+}
+
+ZDOOM_SOUNDSCAPES =
+{
+  tech =
+  {
+    building = {
+    }
+    outdoor = {
+      Outdoors_Tech = 50
+    }
+    cave = {
+    }
+    park = {
+    }
+    street = {
+    }
+  }
+
+  hell =
+  {
+    building = {
+    }
+    outdoor = {
+    }
+    cave = {
+    }
+    park = {
+    }
+    street = {
+    }
+  }
+
+  urban =
+  {
+    building = {
+    }
+    outdoor = {
+    }
+    caves = {
+    }
+    park = {
+    }
+    street = {
+    }
+  }
 }

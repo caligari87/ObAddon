@@ -2635,11 +2635,6 @@ DOOM.ROOM_THEMES =
       SLIME15 = 10
       SLIME16 = 10
     }
-
-    sounds =
-    {
-      Outdoors_Tech = 50
-    }
   }
 
 
