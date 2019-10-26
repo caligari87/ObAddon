@@ -27,6 +27,9 @@ Outdoors_Arctic_Wind =      { lump = "ARCTIC",    flags = "$limit ARCTIC 1"   }
 Outdoors_Desert_Wind =      { lump = "DESERT",    flags = "$limit DESERT 1"   }
 Outdoors_Street =           { lump = "STREETAM",  flags = "$limit STREETAM 1" }
 
+-- Ambient sound for Caves
+Cave_Ambient =              { lump = "CAVEAMB",  flags = "$limit STREETAM 1"  }
+  
 -- Ambient sound for Theme
 Hell =                      { lump = "HELLAMB",   flags = "$limit HELLAMB 1"  }
 
@@ -56,23 +59,23 @@ ZDOOM_SOUNDSCAPES =
     }
     outdoor = {
       temperate = { Outdoors_Tech = 50 }
-      snow      = {}
-      desert    = {}
+      snow      = { Outdoors_Arctic_Wind = 50 }
+      desert    = { Outdoors_Desert_Wind = 50 }
     }
     cave = {
-      temperate = {}
-      snow      = {}
-      desert    = {}
+      temperate = { Cave_Ambient = 50 }
+      snow      = { Cave_Ambient = 50 }
+      desert    = { Cave_Ambient = 50 }
     }
     park = {
       temperate = { Outdoors_Urban_Rainforest = 50 }
-      snow      = {}
-      desert    = {}
+      snow      = { Outdoors_Arctic_Wind = 50 }
+      desert    = { Outdoors_Desert_Wind = 50 }
     }
     street = {
       temperate = { Outdoors_Street = 50 }
-      snow      = {}
-      desert    = {}
+      snow      = { Outdoors_Arctic_Wind = 50 }
+      desert    = { Outdoors_Desert_Wind = 50 }
     }
   }
 
@@ -82,23 +85,23 @@ ZDOOM_SOUNDSCAPES =
     }
     outdoor = {
       temperate = { Outdoors_Urban_Rainforest = 50 }
-      snow      = {}
-      desert    = {}
+      snow      = { Outdoors_Arctic_Wind = 50 }
+      desert    = { Outdoors_Desert_Wind = 50 }
     }
     caves = {
-      temperate = {}
-      snow      = {}
-      desert    = {}
+      temperate = { Cave_Ambient = 50 }
+      snow      = { Cave_Ambient = 50 }
+      desert    = { Cave_Ambient = 50 }
     }
     park = {
       temperate = { Outdoors_Urban_Rainforest = 50 }
-      snow      = {}
-      desert    = {}
+      snow      = { Outdoors_Arctic_Wind = 50 }
+      desert    = { Outdoors_Desert_Wind = 50 }
     }
     street = {
       temperate = { Outdoors_Street = 50 }
-      snow      = {}
-      desert    = {}
+      snow      = { Outdoors_Arctic_Wind = 50 }
+      desert    = { Outdoors_Desert_Wind = 50 }
     }
   }
 
@@ -109,23 +112,23 @@ ZDOOM_SOUNDSCAPES =
     }
     outdoor = {
       temperate = { Hell = 50 }
-      snow      = {}
-      desert    = {}
+      snow      = { Outdoors_Arctic_Wind = 50 }
+      desert    = { Outdoors_Desert_Wind = 50 }
     }
     cave = {
-      temperate = { Hell = 50 }
-      snow      = {}
-      desert    = {}
+      temperate = { Cave_Ambient = 50 }
+      snow      = { Cave_Ambient = 50 }
+      desert    = { Cave_Ambient = 50 }
     }
     park = {
       temperate = { Hell = 50 }
-      snow      = {}
-      desert    = {}
+      snow      = { Outdoors_Arctic_Wind = 50 }
+      desert    = { Outdoors_Desert_Wind = 50 }
     }
     street = {
       temperate = { Hell = 50 }
-      snow      = {}
-      desert    = {}
+      snow      = { Outdoors_Arctic_Wind = 50 }
+      desert    = { Outdoors_Desert_Wind = 50 }
     }
   }
 
