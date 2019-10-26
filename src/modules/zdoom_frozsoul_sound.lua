@@ -212,7 +212,7 @@ end
 
 OB_MODULES["zdoom_ambient_sound"] =
 {
-  label = _("ZDoom: Frozsoul's Ambient Sound")
+  label = _("ZDoom: Ambient Sounds")
 
   game = "doomish"
 
@@ -228,6 +228,6 @@ OB_MODULES["zdoom_ambient_sound"] =
     end_level = ZDOOM_SOUND.populate_level_ambience
   }
 
-  tooltip = "Adds ambient sound to maps, based on fabs and room themes." ..
-  "THIS MODULE IS NOT YET READY FOR USE."
+  tooltip = "Adds ambient sound things to fabs, room themes, and environments (WIP)." ..
+  "Needs an accompanying sound pack containing corresponding sound files to be included with your Doom launcher."
 }
