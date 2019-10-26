@@ -60,22 +60,10 @@ ZDOOM_SOUNDSCAPES =
     cave = {
     }
     park = {
+      Outdoors_Urban_Rainforest = 50      
     }
     street = {
-    }
-  }
-
-  hell =
-  {
-    building = {
-    }
-    outdoor = {
-    }
-    cave = {
-    }
-    park = {
-    }
-    street = {
+      Outdoors_Street = 50
     }
   }
 
@@ -84,12 +72,35 @@ ZDOOM_SOUNDSCAPES =
     building = {
     }
     outdoor = {
+      Outdoors_Urban_Rainforest = 50
     }
     caves = {
     }
     park = {
+      Outdoors_Urban_Rainforest = 50      
     }
     street = {
+      Outdoors_Street = 50
     }
   }
+
+  hell =
+  {
+    building = {
+      Hell = 50
+    }
+    outdoor = {
+      Hell = 50      
+    }
+    cave = {
+      Hell = 50      
+    }
+    park = {
+      Hell = 50      
+    }
+    street = {
+      Hell = 50      
+    }
+  }
+  
 }
