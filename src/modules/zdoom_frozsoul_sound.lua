@@ -57,6 +57,8 @@ ZDOOM_SOUND.ACTOR_ID_OFFSET = 20000
 
 ZDOOM_SOUND.SOUND_ACTOR_DENSITY = 5
 
+ZDOOM_SOUND.DEFAULT_A_PLAYSOUND_ARGS = "CHAN_AUTO, 1, true"
+
 ZDOOM_SOUND.TEMPLATES =
 {
   DEC =
@@ -72,7 +74,7 @@ ZDOOM_SOUND.TEMPLATES =
   States
   {
     Spawn:
-      CAND A 1 A_PlaySound("SOUNDNAME", CHAN_AUTO, 1, true, ATTN_STATIC)
+      CAND A 1 A_PlaySound("SOUNDNAME", ARGHS)
       Loop
   }
 }
@@ -97,6 +99,12 @@ function ZDOOM_SOUND.build_lumps()
     dec_chunk = string.gsub(dec_chunk, "ACTORNAME", sound.name)
     dec_chunk = string.gsub(dec_chunk, "IDNUM", offset_count)
     dec_chunk = string.gsub(dec_chunk, "SOUNDNAME", sound.lump)
+
+    if sound.args then
+      dec_chunk = string.gsub(dec_chunk, "ARGHS", sound.args)
+    else
+      dec_chunk = string.gsub(dec_chunk, "ARGHS", ZDOOM_SOUND.DEFAULT_A_PLAYSOUND_ARGS)
+    end
 
     PARAM.SOUND_DEC = PARAM.SOUND_DEC .. dec_chunk .. "\n\n"
 
