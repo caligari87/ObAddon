@@ -112,8 +112,7 @@ OB_MODULES["procedural_gotcha"] =
       label=_("Force Boss Fight"),
       choices=PROCEDURAL_GOTCHA_FINE_TUNE.FORCE_BOSS_FIGHT_CHOICES,
       default = "yes",
-      tooltip = "Forces procedural gotchas to have boss fights, regardless of whether a boss has already been assigned " ..
-      "to a prior or succeeding map.",
+      tooltip = "EXPERIMENTAL: Forces procedural gotchas to have guaranteed boss fights.",
     }
 
   }
