@@ -856,12 +856,6 @@ function Episode_plan_monsters()
 
 --  stderrf("  count %1.2f for '%s'\n", count, mon)
 
-    if LEV.is_procedural_gotcha then
-      if count < 1 then
-        count = count + 1
-      end
-    end
-
     local FIGHT =
     {
       mon = mon
@@ -943,6 +937,21 @@ function Episode_plan_monsters()
       if OB_CONFIG.bosses   == "none"  then continue end
 
       pick_boss_quotas(LEV)
+
+      -- hax for procedural gotchas
+      if LEV.is_procedural_gotcha and PARAM.gotcha_boss_fight == "yes" then
+        if LEV.game_along <= 0.33 then
+          if LEV.boss_quotas.minor < 1 then LEV.boss_quotas.minor = 1 end
+        elseif LEV.game_along > 0.33 and LEV.game_along <= 0.66 then
+          if LEV.boss_quotas.nasty < 1 then LEV.boss_quotas.nasty = 1 end
+        elseif LEV.game_along > 0.66 then
+          if LEV.boss_quotas.tough < 1 then LEV.boss_quotas.tough = 1 end
+        end
+
+        if LEV.boss_quotas.guard < 2 then
+          LEV.boss_quotas.guard = rand.int(2, 4)
+        end
+      end
 
       for i = 1, LEV.boss_quotas.tough do create_fight(LEV, "tough", i) end
       for i = 1, LEV.boss_quotas.nasty do create_fight(LEV, "nasty", i) end

@@ -47,6 +47,12 @@ PROCEDURAL_GOTCHA_FINE_TUNE.GOTCHA_MAP_SIZES =
   "tiny", _("Tiny"),
 }
 
+PROCEDURAL_GOTCHA_FINE_TUNE.FORCE_BOSS_FIGHT_CHOICES =
+{
+  "yes", _("Yes"),
+  "no",  _("No"),
+}
+
 
 
 function PROCEDURAL_GOTCHA_FINE_TUNE.setup(self)
@@ -98,6 +104,16 @@ OB_MODULES["procedural_gotcha"] =
       choices=PROCEDURAL_GOTCHA_FINE_TUNE.GOTCHA_MAP_SIZES,
       default = "small",
       tooltip = "Size of the procedural gotcha. Start and arena room sizes are relative to map size as well."
+    }
+
+    gotcha_boss_fight =
+    {
+      name = "gotcha_boss_fight",
+      label=_("Force Boss Fight"),
+      choices=PROCEDURAL_GOTCHA_FINE_TUNE.FORCE_BOSS_FIGHT_CHOICES,
+      default = "yes",
+      tooltip = "Forces procedural gotchas to have boss fights, regardless of whether a boss has already been assigned " ..
+      "to a prior or succeeding map.",
     }
 
   }
