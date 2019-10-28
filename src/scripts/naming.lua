@@ -57,6 +57,10 @@ namelib.NAMES =
         ["the Way ObAddon Did"]=10
         [": The Return"]=10
         ["is Back"]=10
+
+        -- these from Frozsoul
+        [": The Next Generation"]=10  
+        
       }
 
       v =
@@ -122,6 +126,9 @@ namelib.NAMES =
 
         ["Raze the"]=8
 
+        -- these by Frozsoul        
+        ["Revenge of the"]=10
+        
         -- command-like prefixes, some by Dante
         ["Attack the"]=10
         ["Destroy the"]=10
@@ -769,6 +776,15 @@ namelib.NAMES =
         ["Bad Optics"]=10 -- retxirT
         ["Engineering Gone Bad"]=10 -- Demios, also based on Romero's "Tech Gone Bad"
         ["Short-Circuit"]=10 -- Demios
+        
+        -- Frozsoul
+        ["As the Doomworld Turns"]=10        
+        ["Come Get Some!"]=10
+        ["I'm All Out of Bubble Gum"]=10
+        ["It's A Doomworld After All"]=10        
+        ["Locked and Loaded"]=10        
+        ["Much Obliged"]=10 
+        ["Taking It To The Next Level"]=10   
       }
     }
 
