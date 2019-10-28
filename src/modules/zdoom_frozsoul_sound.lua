@@ -127,6 +127,10 @@ function ZDOOM_SOUND.populate_level_ambience()
     return
   end
 
+  if LEVEL.prebuilt then
+    return
+  end
+
   local level_sound_table = ZDOOM_SOUNDSCAPES[LEVEL.theme_name]
 
   if not level_sound_table then
