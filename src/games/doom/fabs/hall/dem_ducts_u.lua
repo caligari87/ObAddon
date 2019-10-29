@@ -48,6 +48,8 @@ PREFABS.Hallway_ducts_u6 =
 {
   template = "Hallway_ducts_u1"
   map    = "MAP06"
+ 
+  sound = "Indoor_Fan"
 }
 
 PREFABS.Hallway_ducts_u7 =
@@ -55,10 +57,14 @@ PREFABS.Hallway_ducts_u7 =
   template = "Hallway_ducts_u1"
   map    = "MAP07"
   style  = "cages"
+  
+  sound = "Indoor_Fan"  
 }
 
 PREFABS.Hallway_ducts_u8 =
 {
   template = "Hallway_ducts_u1"
   map    = "MAP08"
+  
+  sound = "Indoor_Fan"  
 }
