@@ -44,7 +44,7 @@ PREFABS.Wall_gtd_wood_frame_edge_green =
 
   group    = "gtd_woodframe_green"
 
-  tex_PANEL2 = PANEL3
+  tex_PANEL2 = "PANEL3"
 }
 
 PREFABS.Wall_gtd_wood_frame_diag_green =
@@ -53,5 +53,5 @@ PREFABS.Wall_gtd_wood_frame_diag_green =
 
   group    = "gtd_woodframe_green"
 
-  tex_PANEL2 = PANEL3
+  tex_PANEL2 = "PANEL3"
 }
