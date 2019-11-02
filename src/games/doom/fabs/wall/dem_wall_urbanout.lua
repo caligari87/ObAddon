@@ -1,5 +1,4 @@
 
-
 PREFABS.Wall_trash1 =
 {
   file   = "wall/dem_wall_urbanout.wad"
@@ -8,6 +7,8 @@ PREFABS.Wall_trash1 =
   prob   = 20
   theme = "urban"
   env    = "outdoor"
+
+  uses_epic_textures = true
 
   on_liquids = "never"
 
@@ -25,6 +26,14 @@ PREFABS.Wall_trash1 =
 
   x_fit = "frame"
   z_fit = "top"
+
+  tex_FLAT5_8 =
+  {
+    FLAT5_8 = 50
+    SLIME05 = 50
+    BODIESF2 = 50
+    BODIESFL = 50
+  }
 
 }
 
@@ -37,6 +46,8 @@ PREFABS.Wall_trash2 =
   theme = "urban"
   env    = "outdoor"
 
+  uses_epic_textures = true
+
   on_liquids = "never"
 
   on_scenics = "never"
@@ -53,6 +64,14 @@ PREFABS.Wall_trash2 =
 
   x_fit = "frame"
   z_fit = "top"
+
+  tex_FLAT5_8 =
+  {
+    FLAT5_8 = 50
+    SLIME05 = 50
+    BODIESF2 = 50
+    BODIESFL = 50
+  }
 
 }
 
@@ -65,6 +84,8 @@ PREFABS.Wall_trash3 =
   theme = "urban"
   env    = "outdoor"
 
+  uses_epic_textures = true
+
   on_liquids = "never"
 
   on_scenics = "never"
@@ -81,6 +102,14 @@ PREFABS.Wall_trash3 =
 
   x_fit = "frame"
   z_fit = "top"
+
+  tex_FLAT5_8 =
+  {
+    FLAT5_8 = 50
+    SLIME05 = 50
+    BODIESF2 = 50
+    BODIESFL = 50
+  }
 
 }
 
@@ -213,7 +242,7 @@ PREFABS.Wall_boombox =
   file   = "wall/dem_wall_urbanout.wad"
   map    = "MAP08"
 
-  prob   = 20
+  prob   = 15
   theme = "urban"
   env    = "outdoor"
 
