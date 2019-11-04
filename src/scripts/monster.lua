@@ -153,6 +153,11 @@ function Monster_pacing()
       set_room(R, "high")
       return
     end
+	
+	if LEVEL.is_procedural_gotcha and PARAM.boss_gen then
+	  set_room(R, "high")
+      return
+    end
 
     if R.is_start and OB_CONFIG.quiet_start == "no" then
       set_room(R, "low")
@@ -313,6 +318,8 @@ function Monster_assign_bosses()
 
     -- already has one?
     if R.boss_fight then return -1 end
+	
+	if LEVEL.is_procedural_gotcha and PARAM.boss_gen then return 1 end
 
     -- require a goal (e.g. a KEY)
     if #R.goals == 0 then return -1 end
@@ -1412,12 +1419,19 @@ function Monster_fill_room(R)
       if away then
         ang = geom.angle_add(ang, 180)
       end
-
-      return ang
+      if LEVEL.is_procedural_gotcha and PARAM.boss_gen and spot.bossgen then
+	    return ang+LEVEL.id
+	  else
+        return ang
+	  end
     end
 
     -- fallback : purely random angle
-    return rand.irange(0,7) * 45
+	if LEVEL.is_procedural_gotcha and PARAM.boss_gen and spot.bossgen then
+	  return (rand.irange(0,7) * 45)+LEVEL.id
+	else
+      return rand.irange(0,7) * 45
+	end
   end
 
 
@@ -1526,7 +1540,6 @@ function Monster_fill_room(R)
     return w * h
   end
 
-
   local function place_in_spot(mon, spot, all_skills)
     local info = GAME.MONSTERS[mon]
 
@@ -1603,7 +1616,13 @@ function Monster_fill_room(R)
     local total = 0
 
     each spot in R.mon_spots do
-      local fit_num = mon_fits(mon, spot)
+	  local fit_num
+	  if reqs.specialrad then
+	    fit_num = mon_fits("Spiderdemon", spot)
+      else
+        fit_num = mon_fits(mon, spot)
+	  end
+	  
 
       if fit_num <= 0 then
         spot.find_score = -1
@@ -2061,6 +2080,10 @@ gui.debugf("   doing spot : Mon=%s\n", tostring(mon))
     if not bf then return end
 
     local reqs = {}
+	
+	if LEVEL.is_procedural_gotcha and PARAM.boss_gen then
+	  reqs.specialrad = true
+	end
 
     -- TODO : support bosses in special places (prefabs)
 
@@ -2068,6 +2091,11 @@ gui.debugf("   doing spot : Mon=%s\n", tostring(mon))
       local mon = bf.mon
 
       local spot = grab_monster_spot(mon, R.guard_chunk, reqs)
+	  
+	  if not spot and LEVEL.is_procedural_gotcha and PARAM.boss_gen then
+		local last_spot
+		local spot = grab_monster_spot(mon, last_spot, reqs)
+	  end
 
       -- if it did not fit (e.g. too large), try a backup
       if not spot then
@@ -2092,9 +2120,19 @@ gui.debugf("   doing spot : Mon=%s\n", tostring(mon))
       end
 
       if not spot then
-        warning("Cannot place boss monster: %s\n", bf.mon)
+	    if LEVEL.is_procedural_gotcha and PARAM.boss_gen then
+		  error("Cannot place generated boss")
+		else
+          warning("Cannot place boss monster: %s\n", bf.mon)
+		end
         break;
       end
+	  
+	  if LEVEL.is_procedural_gotcha and PARAM.boss_gen then
+	    local info = GAME.MONSTERS[mon]
+	    spot.bossgen = true
+		table.insert(PARAM.boss_types, info.attack)
+	  end
 
       -- look toward the important spot
 ---???   if guard_spot and rand.odds(80) then
@@ -2212,6 +2250,8 @@ gui.debugf("FILLING TRAP in %s\n", R.name)
     if OB_CONFIG.mons == "none" then
       return false
     end
+	
+	if LEVEL.is_procedural_gotcha and PARAM.boss_gen then return true end
 
     --if R.no_monsters then return false end
     if R.is_secret and OB_CONFIG.secret_monsters == "no" then return false end

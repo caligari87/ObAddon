@@ -1932,6 +1932,9 @@ function Render_chunk(chunk)
 
 
   local function content_exit(chunk, secret_exit)
+  
+    if LEVEL.is_procedural_gotcha and PARAM.boss_gen then return -1 end
+  
     local dir = player_face_dir(chunk)
 
     local reqs =

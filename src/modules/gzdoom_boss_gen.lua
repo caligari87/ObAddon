@@ -15,6 +15,7 @@ BOSS_GEN_TUNE.BOSS_HEALTH_CHOICES =
   "default",  _("Default"),
   "more",  _("Increased by 50%"),
   "muchmore",  _("Increased by 100%"),
+  "demiosmode",  _("Increased by 200%"),
 }
 
 BOSS_GEN_TUNE.BOSS_HEALTH_BAR =
@@ -33,13 +34,15 @@ BOSS_GEN_TUNE.BOSS_MUSIC =
 
 
 function BOSS_GEN_TUNE.setup(self)
+  PARAM.boss_gen = true
+  PARAM.boss_types = {}
   for name,opt in pairs(self.options) do
     local value = self.options[name].value
     PARAM[name] = value
   end
 end
 
---[[OB_MODULES["gzdoom_boss_gen"] =
+OB_MODULES["gzdoom_boss_gen"] =
 {
   label = _("GZDoom Boss Generator")
 
@@ -86,13 +89,11 @@ end
     boss_gen_music =
     {
       name = "boss_gen_music",
-      label=_("Force Boss Fight"),
+      label=_("Enable Boss Music"),
       choices=BOSS_GEN_TUNE.BOSS_MUSIC,
       default = "yes",
       tooltip = "If enabled, encountering a boss will start boss theme music.",
     }
 
   }
-
 }
-]]

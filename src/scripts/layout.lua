@@ -229,7 +229,9 @@ function Layout_spot_for_wotsit(R, kind, required)
   local function eval_spot(chunk)
     -- already used?
     if chunk.content then return -1 end
-
+	
+	if LEVEL.is_procedural_gotcha == true and PARAM.boss_gen and chunk.kind == "closet" then return -1 end
+	
     if kind == "LOCAL_SWITCH" then
       if chunk.kind != "closet" then return -1 end
     end
@@ -418,7 +420,11 @@ function Layout_place_importants(R, imp_pass)
         mx, my = point_in_front_of_closet(chunk, 96)
       end
 
-      R:add_exclusion("keep_empty", mx, my,  640)
+      if LEVEL.is_procedural_gotcha and PARAM.boss_gen then
+	    R:add_exclusion("keep_empty", mx, my,  100)
+	  else
+        R:add_exclusion("keep_empty", mx, my,  640)
+	  end
       R:add_exclusion("non_facing", mx, my, 1280)
     end
   end

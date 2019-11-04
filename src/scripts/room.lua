@@ -2101,6 +2101,13 @@ function Room_choose_size(R, not_big)
     R.floor_limit = R.floor_limit * 2
   end
 
+  if LEVEL.is_procedural_gotcha and PARAM.boss_gen then
+    R.size_limit = LEVEL.map_W*10
+    R.floor_limit = R.floor_limit * 8
+    R.is_big = true
+  end
+  
+
   if R.is_street then
     R.size_limit = (LEVEL.map_W*LEVEL.map_H)*1.3
     R.floor_limit = 9001
