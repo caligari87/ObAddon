@@ -674,6 +674,14 @@ function Episode_plan_monsters()
 		if info.level > hilevel then
 		  bprob = bprob/(info.level-hilevel+1)
 		end
+		if info.attack == "hitscan" then
+		  local hitred = PARAM.boss_gen_hitscan
+		  if hitred == "less" then
+		    bprob = bprob/2
+		  elseif hitred == "muchless" then
+		    bprob = bprob/5
+		  end
+		end
 		tab[name] = bprob
 	  else
         if info.boss_type == what and is_boss_usable(LEV, name, info) then

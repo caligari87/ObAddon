@@ -45,7 +45,11 @@ end
 
 
 function ScriptMan_assemble_zscript_lump()
--- MSSP-TODO
+  local zscript_lines = ""
+  if PARAM.boss_gen then
+    zscript_lines = zscript_lines .. PARAM.BOSSSCRIPT
+  end
+  add_script_lump("ZSCRIPT", zscript_lines)
 end
 
 
@@ -100,6 +104,7 @@ end
 
 function ScriptMan_init()
   gui.printf("\n--==| Script Manager |==--\n\n")
+  ScriptMan_assemble_zscript_lump()
   ScriptMan_assemble_decorate_lump()
   ScriptMan_assemble_gldefs_lump()
   ScriptMan_assemble_sndinfo_lump()
