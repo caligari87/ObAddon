@@ -2131,7 +2131,10 @@ gui.debugf("   doing spot : Mon=%s\n", tostring(mon))
 	  if LEVEL.is_procedural_gotcha and PARAM.boss_gen then
 	    local info = GAME.MONSTERS[mon]
 	    spot.bossgen = true
-		table.insert(PARAM.boss_types, info.attack)
+		local btype = {}
+		btype.attack = info.attack
+		btype.health = info.health
+		table.insert(PARAM.boss_types, btype)
 	  end
 
       -- look toward the important spot
