@@ -585,7 +585,7 @@ class bossabilitygiver_bounce : bossabilitygiver { }
 			{
 				barsx.AppendFormat("I");
 			}
-			string bosshp = string.format("%s %s %s", Stringtable.Localize(string.format("%s%i","$BOSS_NAME",currentboss)), ":", barsx);
+			string bosshp = string.format("%%s %%s %%s", Stringtable.Localize(string.format("%%s%%i","$BOSS_NAME",currentboss)), ":", barsx);
 			screen.DrawText(BigFont, Font.CR_RED, 32, -32, bosshp, DTA_Clean, true);
 			}
 		}
@@ -597,7 +597,7 @@ class bossabilitygiver_bounce : bossabilitygiver { }
 			currentboss = NUM;
 		}
 ]]
-  MUS = [[S_ChangeMusic(string.format("%s%i","d_boss",level), 0, true, false);]]
+  MUS = [[S_ChangeMusic(string.format("%%s%%i","d_boss",level), 0, true, false);]]
   GINFO = [[gameinfo
 {
 	addeventhandlers = "BossGenerator_Handler"
