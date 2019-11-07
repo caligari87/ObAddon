@@ -113,6 +113,17 @@ function ScriptMan_assemble_gldefs_lump()
   add_script_lump("GLDEFS", gldefs_lines)
 end
 
+function ScriptMan_assemble_language_lump()
+  local language_lines = {
+      "[enu default]\n",
+  }
+  if PARAM.language_lump != nil then
+    each line in PARAM.language_lump do
+      table.insert(language_lines,line)
+    end
+  end
+  gui.wad_add_text_lump("LANGUAGE", language_lines)
+end
 
 function ScriptMan_assemble_acs_lump()
 -- MSSP-TODO
@@ -130,4 +141,5 @@ function ScriptMan_init()
   ScriptMan_assemble_gldefs_lump()
   ScriptMan_assemble_sndinfo_lump()
   ScriptMan_assemble_mapinfo_lump()
+  ScriptMan_assemble_language_lump()
 end

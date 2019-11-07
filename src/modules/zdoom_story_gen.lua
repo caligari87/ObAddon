@@ -150,7 +150,7 @@ function ZStoryGen_init()
   local hooks = {}
   local conclusions = {}
   local x = 1
-  local language_lump = {}
+  PARAM.language_lump = {}
 
   while x <= #GAME.episodes do
     local story_id = ZStoryGen_fetch_story_chunk()
@@ -162,27 +162,26 @@ function ZStoryGen_init()
 
 
   -- create language lump
-  table.insert(language_lump, "[enu default]\n")
-  table.insert(language_lump, "// The following stories are brought to you by\n")
-  table.insert(language_lump, "// the ObAddon Story Generator!\n")
-  table.insert(language_lump, "\n")
+  table.insert(PARAM.language_lump, "// The following stories are brought to you by\n")
+  table.insert(PARAM.language_lump, "// the ObAddon Story Generator!\n")
+  table.insert(PARAM.language_lump, "\n")
   x = 1
   local y
   while x <= #GAME.episodes do
 
     -- insert story start sequence
-    table.insert(language_lump, "STORYSTART" .. x .. " =\n")
+    table.insert(PARAM.language_lump, "STORYSTART" .. x .. " =\n")
     for _,line in pairs(hooks[x]) do
-      table.insert(language_lump, "  " .. line .. "\n")
+      table.insert(PARAM.language_lump, "  " .. line .. "\n")
     end
-    table.insert(language_lump, "\n")
+    table.insert(PARAM.language_lump, "\n")
 
     -- insert story end sequences
-    table.insert(language_lump, "STORYEND" .. x .. " =\n")
+    table.insert(PARAM.language_lump, "STORYEND" .. x .. " =\n")
     for _,line in pairs(conclusions[x]) do
-      table.insert(language_lump, "  " .. line .. "\n")
+      table.insert(PARAM.language_lump, "  " .. line .. "\n")
     end
-    table.insert(language_lump, "\n")
+    table.insert(PARAM.language_lump, "\n")
     x = x + 1
   end
 
@@ -191,19 +190,19 @@ function ZStoryGen_init()
   local secret_entry = ZStoryGen_format_story_chunk(rand.pick(ZDOOM_STORIES.SECRET_TEXTS.d2_secretnearby))
   local secret1 = ZStoryGen_format_story_chunk(rand.pick(ZDOOM_STORIES.SECRET_TEXTS.d2_secret1))
   local secret2 = ZStoryGen_format_story_chunk(rand.pick(ZDOOM_STORIES.SECRET_TEXTS.d2_secret2))
-  table.insert(language_lump, "SECRETNEARBY =\n")
+  table.insert(PARAM.language_lump, "SECRETNEARBY =\n")
   for _,line in pairs(secret_entry) do
-    table.insert(language_lump, "  " .. line .. "\n")
+    table.insert(PARAM.language_lump, "  " .. line .. "\n")
   end
-  table.insert(language_lump, "\n")
-  table.insert(language_lump, "SECRET1 =\n")
+  table.insert(PARAM.language_lump, "\n")
+  table.insert(PARAM.language_lump, "SECRET1 =\n")
   for _,line in pairs(secret1) do
-    table.insert(language_lump, "  " .. line .. "\n")
+    table.insert(PARAM.language_lump, "  " .. line .. "\n")
   end
-  table.insert(language_lump, "\n")
-  table.insert(language_lump, "SECRET2 =\n")
+  table.insert(PARAM.language_lump, "\n")
+  table.insert(PARAM.language_lump, "SECRET2 =\n")
   for _,line in pairs(secret2) do
-    table.insert(language_lump, "  " .. line .. "\n")
+    table.insert(PARAM.language_lump, "  " .. line .. "\n")
   end
 
   -- custom quit message creation
@@ -213,15 +212,14 @@ function ZStoryGen_init()
     local info = ZStoryGen_create_characters_and_stuff()
     for _,line in pairs(ZDOOM_STORIES.QUIT_MESSAGES) do
       line = ZStoryGen_format_story_chunk(line, info)
-      table.insert(language_lump, "\nQUITMSG" .. x .. " =\n")
+      table.insert(PARAM.language_lump, "\nQUITMSG" .. x .. " =\n")
       x = x + 1
       for _,o_line in pairs(line) do
-        table.insert(language_lump, "  " .. o_line .. "\n")
+        table.insert(PARAM.language_lump, "  " .. o_line .. "\n")
       end
     end
   end
 
-  gui.wad_add_text_lump("LANGUAGE",language_lump)
 end
 
 -- LOOK AT ALL THIS CODE NOW
