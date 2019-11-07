@@ -793,6 +793,9 @@ function BOSS_GEN_TUNE.all_done()
   local bhealth = ""
   local bsummon = ""
   local btype = ""
+  if PARAM.boss_count == 1 then
+    error("Boss generator requires procedural gotchas enabled to work!")
+  end
   scripty = string.gsub(scripty, "LEVELCODE", PARAM.lvlstr)
   if PARAM.boss_gen_hpbar == "yes" then
     scripty = string.gsub(scripty, "BOSSHPBAR", BOSS_GEN_TUNE.TEMPLATES.BAR)
