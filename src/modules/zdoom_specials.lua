@@ -458,10 +458,7 @@ function ZDOOM_SPECIALS.do_special_stuff()
   end
 
   local function add_gamedef()
-    gamedef_lines = {
-      "gameinfo\n",
-      "{\n",
-    }
+    gamedef_lines = {}
 
     local x = 1
     local quit_msg_line = ""
@@ -477,7 +474,6 @@ function ZDOOM_SPECIALS.do_special_stuff()
       x = x + 1
     end
     table.insert(gamedef_lines, quit_msg_line)
-    table.insert(gamedef_lines, "\n}\n")
 
     return gamedef_lines
   end
@@ -963,12 +959,13 @@ function ZDOOM_SPECIALS.do_special_stuff()
   local ipic = rand.key_by_probs(ZDOOM_SPECIALS.INTERPICS)
 
   -- collect lines for MAPINFO lump
-  local mapinfolump = {}
+  PARAM.mapinfolump = {}
+  PARAM.gameinfolump = {}
 
   if PARAM.custom_quit_messages == "yes" then
     local gamedef_lines = add_gamedef()
     each line in gamedef_lines do
-      table.insert(mapinfolump,line)
+      table.insert(PARAM.gameinfolump,line)
     end
   end
 
@@ -1003,7 +1000,7 @@ function ZDOOM_SPECIALS.do_special_stuff()
 
     local mapinfo_lines = add_mapinfo(info)
     each line in mapinfo_lines do
-      table.insert(mapinfolump,line)
+      table.insert(PARAM.mapinfolump,line)
     end
 
   end
@@ -1016,17 +1013,17 @@ function ZDOOM_SPECIALS.do_special_stuff()
     if OB_CONFIG.game == "doom2" or OB_CONFIG.game == "tnt" or OB_CONFIG.game == "plutonia" then
       local episode_1_info = add_episodedef(1)
       each line in episode_1_info do
-        table.insert(mapinfolump,line)
+        table.insert(PARAM.mapinfolump,line)
       end
 
       if #GAME.levels > 11 then
         local episode_2_info = add_episodedef(12)
         local episode_3_info = add_episodedef(21)
         each line in episode_2_info do
-          table.insert(mapinfolump,line)
+          table.insert(PARAM.mapinfolump,line)
         end
         each line in episode_3_info do
-          table.insert(mapinfolump,line)
+          table.insert(PARAM.mapinfolump,line)
         end
       end
     end
@@ -1034,24 +1031,24 @@ function ZDOOM_SPECIALS.do_special_stuff()
     if OB_CONFIG.game == "doom1" or OB_CONFIG.game == "ultdoom" then
       local episode_info = add_episodedef(1)
       each line in episode_info do
-        table.insert(mapinfolump,line)
+        table.insert(PARAM.mapinfolump,line)
       end
 
       if #GAME.levels > 9 then
         episode_info = add_episodedef(10)
         each line in episode_info do
-          table.insert(mapinfolump,line)
+          table.insert(PARAM.mapinfolump,line)
         end
         episode_info = add_episodedef(19)
         each line in episode_info do
-          table.insert(mapinfolump,line)
+          table.insert(PARAM.mapinfolump,line)
         end
       end
 
       if #GAME.levels > 27 then
         episode_info = add_episodedef(28)
         each line in episode_info do
-          table.insert(mapinfolump,line)
+          table.insert(PARAM.mapinfolump,line)
         end
       end
     end
@@ -1061,7 +1058,7 @@ function ZDOOM_SPECIALS.do_special_stuff()
   local clusterinfo_lines = add_clusterdef(ipic)
   if clusterinfo_lines then
     each line in clusterinfo_lines do
-      table.insert(mapinfolump,line)
+      table.insert(PARAM.mapinfolump,line)
     end
   end
 
@@ -1077,7 +1074,6 @@ function ZDOOM_SPECIALS.do_special_stuff()
     end
   end
 
-  gui.wad_add_text_lump("MAPINFO", mapinfolump)
   gui.wad_merge_sections("data/loading/loading_screens.wad")
 end
 

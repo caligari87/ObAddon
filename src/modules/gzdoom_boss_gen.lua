@@ -598,10 +598,6 @@ class bossabilitygiver_bounce : bossabilitygiver { }
 		}
 ]]
   MUS = [[S_ChangeMusic(string.format("%%s%%i","d_boss",level), 0, true, false);]]
-  GINFO = [[gameinfo
-{
-	addeventhandlers = "BossGenerator_Handler"
-}]]
 }
 BOSS_GEN_TUNE.TRAITS =
 {
@@ -809,8 +805,6 @@ function BOSS_GEN_TUNE.all_done()
   scripty = string.gsub(scripty, "BSUMMON", bsummon)
   scripty = string.gsub(scripty, "BTYPE", btype)
   PARAM.BOSSSCRIPT = PARAM.BOSSSCRIPT .. scripty
-  local temp_est = BOSS_GEN_TUNE.TEMPLATES.GINFO
-  add_script_lump("ZMAPINFO", temp_est)
 end
 
 
@@ -829,7 +823,7 @@ OB_MODULES["gzdoom_boss_gen"] =
   }
 
   tooltip=_(
-    "[WIP/Experimental]This module replaces procedural gotchas with boss fight arenas. Currently conflicts with ZDoom special addons and ZScript trees.")
+    "[WIP/Experimental]This module replaces procedural gotchas with boss fight arenas. Currently conflicts with ZScript trees.")
 
   options =
   {

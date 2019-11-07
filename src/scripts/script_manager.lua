@@ -40,7 +40,25 @@ end
 
 
 function ScriptMan_assemble_mapinfo_lump()
--- MSSP-TODO
+  local mapinfo_lines = {
+      "gameinfo\n",
+      "{\n",
+  }
+  if PARAM.boss_gen then
+    table.insert(mapinfo_lines, 'addeventhandlers = "BossGenerator_Handler"\n')
+  end
+  if PARAM.custom_quit_messages == "yes" then
+    each line in PARAM.gameinfolump do
+      table.insert(mapinfo_lines,line)
+    end
+  end
+  table.insert(mapinfo_lines, "\n}\n")
+  if PARAM.mapinfolump != nil then
+    each line in PARAM.mapinfolump do
+      table.insert(mapinfo_lines,line)
+    end
+  end
+  gui.wad_add_text_lump("MAPINFO", mapinfo_lines)
 end
 
 
@@ -108,4 +126,5 @@ function ScriptMan_init()
   ScriptMan_assemble_decorate_lump()
   ScriptMan_assemble_gldefs_lump()
   ScriptMan_assemble_sndinfo_lump()
+  ScriptMan_assemble_mapinfo_lump()
 end
