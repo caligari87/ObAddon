@@ -63,9 +63,12 @@ end
 
 
 function ScriptMan_assemble_zscript_lump()
-  local zscript_lines = ""
+  local zscript_lines = 'version "3.3"\n'
   if PARAM.boss_gen then
     zscript_lines = zscript_lines .. PARAM.BOSSSCRIPT
+  end
+  if PARAM.custom_trees == "zs" then
+    zscript_lines = zscript_lines .. PARAM.ztrees
   end
   add_script_lump("ZSCRIPT", zscript_lines)
 end

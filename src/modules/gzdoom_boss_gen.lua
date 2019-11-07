@@ -40,8 +40,7 @@ BOSS_GEN_TUNE.BOSS_LESS_HITSCAN =
 BOSS_GEN_TUNE.TEMPLATES =
 {
   ZSC =
-[[version "3.3"
-
+[[
 class BossGenerator_Handler : EventHandler
 {
 	bool bossEnabled;
@@ -823,7 +822,7 @@ OB_MODULES["gzdoom_boss_gen"] =
   }
 
   tooltip=_(
-    "[WIP/Experimental]This module replaces procedural gotchas with boss fight arenas. Currently conflicts with ZScript trees.")
+    "[WIP/Experimental]This module replaces procedural gotchas with boss fight arenas.")
 
   options =
   {
