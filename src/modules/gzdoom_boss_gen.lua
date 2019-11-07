@@ -285,6 +285,18 @@ class bossController : thinker
 	override void Tick()
 	{
 		super.Tick();
+		if(bossdead)
+		{
+			ending++;
+		}
+		if(ending>50)
+		{
+			Thing_Destroy(0);
+		}
+		if(ending>350)
+		{
+			Exit_Normal(0);
+		}
 		if(boss)
 		{
 			if(boss.target && !bossactive)
@@ -333,10 +345,6 @@ class bossController : thinker
 					}
 				}
 			}
-			if(bossdead)
-			{
-				ending++;
-			}
 			if(summoncd > 0)
 			{
 				summoncd--;
@@ -348,14 +356,6 @@ class bossController : thinker
 			if(pcirclecd > 0)
 			{
 				pcirclecd--;
-			}
-			if(ending>50)
-			{
-				Thing_Destroy(0);
-			}
-			if(ending>350)
-			{
-				Exit_Normal(0);
 			}
 			if(boss.health > 0 && boss.target && teleportcd == 0 && boss.CountInv("bossabilitygiver_teleport"))
 			{
@@ -577,7 +577,7 @@ class bossabilitygiver_bounce : bossabilitygiver { }
 		bossController mo;
 		while (mo = bossController(BossFinder.Next()))
 		{
-			if(mo.bossactive)
+			if(mo.bossactive && !mo.bossdead)
 			{
 			int bars = (mo.boss.health * 20) / mo.boss.starthealth;
 			string barsx;
@@ -594,7 +594,7 @@ class bossabilitygiver_bounce : bossabilitygiver { }
   LVL = [[if(level.LevelNum == NUM)
 		{
 			bossEnabled = true;
-			currentboss = NUM;
+			currentboss = CNT;
 		}
 ]]
   MUS = [[S_ChangeMusic(string.format("%%s%%i","d_boss",level), 0, true, false);]]
@@ -705,6 +705,7 @@ function BOSS_GEN_TUNE.setup(self)
   PARAM.boss_types = {}
   PARAM.lvlstr = ""
   PARAM.BOSSSCRIPT = ""
+  PARAM.boss_count = 1
   for name,opt in pairs(self.options) do
     local value = self.options[name].value
     PARAM[name] = value
@@ -737,6 +738,8 @@ function BOSS_GEN_TUNE.end_lvl()
   if LEVEL.is_procedural_gotcha then
     local scripty = BOSS_GEN_TUNE.TEMPLATES.LVL
 	scripty = string.gsub(scripty, "NUM", LEVEL.id)
+	scripty = string.gsub(scripty, "CNT", PARAM.boss_count)
+	PARAM.boss_count = PARAM.boss_count + 1
 	PARAM.lvlstr = PARAM.lvlstr .. scripty .. "\n"
   end
 end
