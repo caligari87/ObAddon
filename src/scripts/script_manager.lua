@@ -117,6 +117,11 @@ function ScriptMan_assemble_language_lump()
   local language_lines = {
       "[enu default]\n",
   }
+  if PARAM.boss_gen then
+    each line in PARAM.BOSSLANG do
+	  table.insert(language_lines,line)
+	end
+  end
   if PARAM.language_lump != nil then
     each line in PARAM.language_lump do
       table.insert(language_lines,line)

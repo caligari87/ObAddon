@@ -598,6 +598,34 @@ class bossabilitygiver_bounce : bossabilitygiver { }
 ]]
   MUS = [[S_ChangeMusic(string.format("%%s%%i","d_boss",level), 0, true, false);]]
 }
+BOSS_GEN_TUNE.TAUNTS =
+{
+	infinite =
+	{
+		prob = 50
+		str = "YOU CANNOT HANDLE THE POWER OF THE INFINITE HELL"
+	}
+	doomed =
+	{
+		prob = 50
+		str = "YOU ARE DOOMED!"
+	}
+}
+
+BOSS_GEN_TUNE.DEATHS =
+{
+	shallreturn =
+	{
+		prob = 50
+		str = "NOOOO, I SHALL RETURN!!!"
+	}
+	noooo =
+	{
+		prob = 50
+		str = "NOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO!"
+	}
+}
+
 BOSS_GEN_TUNE.TRAITS =
 {
 	SPEED =
@@ -664,6 +692,24 @@ BOSS_GEN_TUNE.TRAITS =
 		mislfact = 1.2
 	}
 }
+
+function BOSS_GEN_TUNE.grab_random_taunt()
+  local tauntlist = {}
+  each name,info in BOSS_GEN_TUNE.TAUNTS do
+    tauntlist[name] = info.prob
+  end
+  local taunt = rand.key_by_probs(tauntlist)
+  return BOSS_GEN_TUNE.TAUNTS[taunt].str
+end
+
+function BOSS_GEN_TUNE.grab_random_death()
+  local deathlist = {}
+  each name,info in BOSS_GEN_TUNE.DEATHS do
+    deathlist[name] = info.prob
+  end
+  local death = rand.key_by_probs(deathlist)
+  return BOSS_GEN_TUNE.DEATHS[death].str
+end
 
 function BOSS_GEN_TUNE.grab_random_trait(btype)
   local traits = {}
@@ -804,6 +850,20 @@ function BOSS_GEN_TUNE.all_done()
   scripty = string.gsub(scripty, "BSUMMON", bsummon)
   scripty = string.gsub(scripty, "BTYPE", btype)
   PARAM.BOSSSCRIPT = PARAM.BOSSSCRIPT .. scripty
+  PARAM.BOSSLANG = {}
+  PARAM.boss_count = PARAM.boss_count - 1
+  for i = 1,PARAM.boss_count,1 do
+    local demon_name = rand.key_by_probs(namelib.NAMES.GOTHIC.lexicon.e)
+    demon_name = string.gsub(demon_name, "NOUNGENEXOTIC", namelib.generate_unique_noun("exotic"))
+	local line = "BOSS_NAME" .. i .. ' = "' .. demon_name .. '";\n'
+	table.insert(PARAM.BOSSLANG, line)
+	local taunt = BOSS_GEN_TUNE.grab_random_taunt()
+	line = "BOSS_TAUNT" .. i .. ' = "' .. demon_name .. ": " .. taunt .. '";\n'
+	table.insert(PARAM.BOSSLANG, line)
+	local dead = BOSS_GEN_TUNE.grab_random_death()
+	line = "BOSS_DEATH" .. i .. ' = "' .. demon_name .. ": " .. dead .. '";\n'
+	table.insert(PARAM.BOSSLANG, line)
+  end
 end
 
 
