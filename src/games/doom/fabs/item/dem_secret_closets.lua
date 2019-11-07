@@ -100,3 +100,34 @@ PREFABS.Item_secret_store_closet =
   }
 
 }
+
+--a secret shrine to Nine inch nails  where you need to be quick and open the 3 doors on the proper order to acess it.
+PREFABS.Item_secret_NIN_closet =
+{
+  file  = "item/dem_secret_closets.wad"
+  map   = "MAP03"
+
+  env   = "building"
+
+  prob  = 100
+  
+  key   = "secret"
+
+  where  = "seeds"
+  seed_w = 3
+  seed_h = 2
+
+  deep = 16
+  over = -16
+
+  x_fit = "frame"
+  y_fit  = "frame"
+
+  thing_2018 =
+  {
+    green_armor = 50
+    blue_armor = 50
+  }
+
+  can_flip = true
+}
