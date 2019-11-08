@@ -127,6 +127,11 @@ function ScriptMan_assemble_language_lump()
       table.insert(language_lines,line)
     end
   end
+  if PARAM.quit_messages == "yes" then
+    each line in PARAM.quit_messagelump do
+      table.insert(language_lines,line)
+    end
+  end
   gui.wad_add_text_lump("LANGUAGE", language_lines)
 end
 

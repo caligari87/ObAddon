@@ -205,6 +205,12 @@ function ZStoryGen_init()
     table.insert(PARAM.language_lump, "  " .. line .. "\n")
   end
 
+end
+
+function ZStoryGen_quitmessages()
+  PARAM.quit_messagelump = {
+  "\n",
+  }
   -- custom quit message creation
   PARAM.quit_messages = "yes"
   if PARAM.quit_messages == "yes" then
@@ -212,14 +218,13 @@ function ZStoryGen_init()
     local info = ZStoryGen_create_characters_and_stuff()
     for _,line in pairs(ZDOOM_STORIES.QUIT_MESSAGES) do
       line = ZStoryGen_format_story_chunk(line, info)
-      table.insert(PARAM.language_lump, "\nQUITMSG" .. x .. " =\n")
+      table.insert(PARAM.quit_messagelump, "\nQUITMSG" .. x .. " =\n")
       x = x + 1
       for _,o_line in pairs(line) do
-        table.insert(PARAM.language_lump, "  " .. o_line .. "\n")
+        table.insert(PARAM.quit_messagelump, "  " .. o_line .. "\n")
       end
     end
   end
-
 end
 
 -- LOOK AT ALL THIS CODE NOW

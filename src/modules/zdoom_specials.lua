@@ -967,6 +967,7 @@ function ZDOOM_SPECIALS.do_special_stuff()
     each line in gamedef_lines do
       table.insert(PARAM.gameinfolump,line)
     end
+	ZStoryGen_quitmessages()
   end
 
   for i=1, #GAME.levels do
