@@ -2090,9 +2090,9 @@ function Room_choose_size(R, not_big)
   end
 
   -- Special instructions for procedural gotcha rooms
-  if LEVEL.is_procedural_gotcha and not R.is_start then
+  if LEVEL.is_procedural_gotcha then
 
-    if not R.is_start then -- main arena
+    if not R.is_start then -- main arena size
 
       R.size_limit = LEVEL.map_W*20
       R.floor_limit = rand.irange(20,80)
@@ -2106,7 +2106,7 @@ function Room_choose_size(R, not_big)
 
       -- extra code for single-room gotchas
       if PARAM.boss_gen then
-        R.size_limit = LEVEL.map_W * 10
+        R.size_limit = LEVEL.map_W * 20
       end
     end
 

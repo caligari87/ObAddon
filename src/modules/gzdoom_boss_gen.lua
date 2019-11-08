@@ -747,10 +747,12 @@ function BOSS_GEN_TUNE.setup(self)
   PARAM.lvlstr = ""
   PARAM.BOSSSCRIPT = ""
   PARAM.boss_count = 1
+
   for name,opt in pairs(self.options) do
     local value = self.options[name].value
     PARAM[name] = value
   end
+
   if PARAM.boss_gen_health == "muchless" then
     PARAM.boss_gen_mult = 0.5
   elseif PARAM.boss_gen_health == "less" then
@@ -764,6 +766,7 @@ function BOSS_GEN_TUNE.setup(self)
   elseif PARAM.boss_gen_health == "demiosmode" then
     PARAM.boss_gen_mult = 3.0
   end
+
   if PARAM.boss_gen_diff == "easier" then
     PARAM.boss_gen_dmult = -1.0
   elseif PARAM.boss_gen_diff == "default" then
@@ -883,6 +886,11 @@ function BOSS_GEN_TUNE.all_done()
 
     local demon_name = rand.key_by_probs(namelib.NAMES.GOTHIC.lexicon.e)
     demon_name = string.gsub(demon_name, "NOUNGENEXOTIC", namelib.generate_unique_noun("exotic"))
+
+    -- sometimes add an evil title to add to the boss's evilness
+    if rand.odds(75) then
+      demon_name = demon_name .. " the " .. rand.key_by_probs(ZDOOM_STORIES.EVIL_TITLES)
+    end
 
     local line = "BOSS_NAME" .. i .. ' = "' .. demon_name .. '";\n'
 	  table.insert(PARAM.BOSSLANG, line)
