@@ -600,30 +600,14 @@ class bossabilitygiver_bounce : bossabilitygiver { }
 }
 BOSS_GEN_TUNE.TAUNTS =
 {
-	infinite =
-	{
-		prob = 50
-		str = "YOU CANNOT HANDLE THE POWER OF THE INFINITE HELL"
-	}
-	doomed =
-	{
-		prob = 50
-		str = "YOU ARE DOOMED!"
-	}
+	["YOU CANNOT HANDLE THE POWER OF THE INFINITE HELL"] = 50
+	["YOU ARE DOOMED!"] = 50
 }
 
 BOSS_GEN_TUNE.DEATHS =
 {
-	shallreturn =
-	{
-		prob = 50
-		str = "NOOOO, I SHALL RETURN!!!"
-	}
-	noooo =
-	{
-		prob = 50
-		str = "NOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO!"
-	}
+  ["NOOOO, I SHALL RETURN!!!"] = 50
+  ["NOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO!"] = 50
 }
 
 BOSS_GEN_TUNE.TRAITS =
@@ -694,21 +678,11 @@ BOSS_GEN_TUNE.TRAITS =
 }
 
 function BOSS_GEN_TUNE.grab_random_taunt()
-  local tauntlist = {}
-  each name,info in BOSS_GEN_TUNE.TAUNTS do
-    tauntlist[name] = info.prob
-  end
-  local taunt = rand.key_by_probs(tauntlist)
-  return BOSS_GEN_TUNE.TAUNTS[taunt].str
+  return rand.key_by_probs(BOSS_GEN_TUNE.TAUNTS)
 end
 
 function BOSS_GEN_TUNE.grab_random_death()
-  local deathlist = {}
-  each name,info in BOSS_GEN_TUNE.DEATHS do
-    deathlist[name] = info.prob
-  end
-  local death = rand.key_by_probs(deathlist)
-  return BOSS_GEN_TUNE.DEATHS[death].str
+  return rand.key_by_probs(BOSS_GEN_TUNE.DEATHS)
 end
 
 function BOSS_GEN_TUNE.grab_random_trait(btype)
