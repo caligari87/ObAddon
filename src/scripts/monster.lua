@@ -1526,9 +1526,17 @@ function Monster_fill_room(R)
   end
 
 
-  local function mon_fits(mon, spot)
+  local function mon_fits(mon, spot, fat)
     local info  = GAME.MONSTERS[mon] or
                   GAME.ENTITIES[mon]
+
+    if fat then
+      if info.r < 48 then
+        info.r = info.r * 2
+      else
+        info.r = info.r * 1.5
+      end
+    end
 
     if info.h >= (spot.z2 - spot.z1) then return 0 end
 
@@ -1616,13 +1624,13 @@ function Monster_fill_room(R)
     local total = 0
 
     each spot in R.mon_spots do
-	  local fit_num
-	  if reqs.specialrad then
-	    fit_num = mon_fits("Spiderdemon", spot)
+
+      local fit_num
+      if reqs.specialrad then
+        fit_num = mon_fits(mon, spot, true)
       else
         fit_num = mon_fits(mon, spot)
-	  end
-
+      end
 
       if fit_num <= 0 then
         spot.find_score = -1
@@ -2119,29 +2127,34 @@ gui.debugf("   doing spot : Mon=%s\n", tostring(mon))
         end
       end
 
+      -- if it still doesn't fit... just grab a random spot, damn it
+      if not spot then
+        spot = grab_monster_spot(mon, rand.pick(R.areas), reqs)
+      end
+
+      gui.printf(table.tostr(spot))
+
       if not spot then
         if LEVEL.is_procedural_gotcha and PARAM.boss_gen then
-        --error("Cannot place generated boss")
-          error("WARNING!! Cannot place boss monster: \n" ..
-          bf.mon .. "\n")
+          error("Cannot place generated boss")
         else
-          gui.printf("WARNING!! Cannot place boss monster: \n")
-          gui.printf(bf.mon .. "\n")
+          gui.printf("WARNING!! Cannot place boss monster: \n" ..
+          bf.mon .. "\n")
         end
         break;
       end
 
-        if LEVEL.is_procedural_gotcha and PARAM.boss_gen then
-          local info = GAME.MONSTERS[mon]
-          spot.bossgen = true
+      if LEVEL.is_procedural_gotcha and PARAM.boss_gen then
+        local info = GAME.MONSTERS[mon]
+        spot.bossgen = true
 
-          local btype = {}
+        local btype = {}
 
-          btype.attack = info.attack
-          btype.health = info.health
+        btype.attack = info.attack
+        btype.health = info.health
 
-          table.insert(PARAM.boss_types, btype)
-        end
+        table.insert(PARAM.boss_types, btype)
+      end
 
       -- look toward the important spot
 ---???   if guard_spot and rand.odds(80) then
