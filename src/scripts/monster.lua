@@ -153,7 +153,7 @@ function Monster_pacing()
       set_room(R, "high")
       return
     end
-	
+
 	if LEVEL.is_procedural_gotcha and PARAM.boss_gen then
 	  set_room(R, "high")
       return
@@ -318,7 +318,7 @@ function Monster_assign_bosses()
 
     -- already has one?
     if R.boss_fight then return -1 end
-	
+
 	if LEVEL.is_procedural_gotcha and PARAM.boss_gen then return 1 end
 
     -- require a goal (e.g. a KEY)
@@ -1622,7 +1622,7 @@ function Monster_fill_room(R)
       else
         fit_num = mon_fits(mon, spot)
 	  end
-	  
+
 
       if fit_num <= 0 then
         spot.find_score = -1
@@ -2080,10 +2080,10 @@ gui.debugf("   doing spot : Mon=%s\n", tostring(mon))
     if not bf then return end
 
     local reqs = {}
-	
-	if LEVEL.is_procedural_gotcha and PARAM.boss_gen then
-	  reqs.specialrad = true
-	end
+
+    if LEVEL.is_procedural_gotcha and PARAM.boss_gen then
+      reqs.specialrad = true
+    end
 
     -- TODO : support bosses in special places (prefabs)
 
@@ -2091,11 +2091,11 @@ gui.debugf("   doing spot : Mon=%s\n", tostring(mon))
       local mon = bf.mon
 
       local spot = grab_monster_spot(mon, R.guard_chunk, reqs)
-	  
-	  if not spot and LEVEL.is_procedural_gotcha and PARAM.boss_gen then
-		local last_spot
-		local spot = grab_monster_spot(mon, last_spot, reqs)
-	  end
+
+      if not spot and LEVEL.is_procedural_gotcha and PARAM.boss_gen then
+        local last_spot
+        local spot = grab_monster_spot(mon, last_spot, reqs)
+      end
 
       -- if it did not fit (e.g. too large), try a backup
       if not spot then
@@ -2120,22 +2120,28 @@ gui.debugf("   doing spot : Mon=%s\n", tostring(mon))
       end
 
       if not spot then
-	    if LEVEL.is_procedural_gotcha and PARAM.boss_gen then
-		  error("Cannot place generated boss")
-		else
-          warning("Cannot place boss monster: %s\n", bf.mon)
-		end
+        if LEVEL.is_procedural_gotcha and PARAM.boss_gen then
+        --error("Cannot place generated boss")
+          gui.printf("WARNING!! Cannot place boss monster: \n")
+          gui.printf(bf.mon .. "\n")
+        else
+          gui.printf("WARNING!! Cannot place boss monster: \n")
+          gui.printf(bf.mon .. "\n")
+        end
         break;
       end
-	  
-	  if LEVEL.is_procedural_gotcha and PARAM.boss_gen then
-	    local info = GAME.MONSTERS[mon]
-	    spot.bossgen = true
-		local btype = {}
-		btype.attack = info.attack
-		btype.health = info.health
-		table.insert(PARAM.boss_types, btype)
-	  end
+
+        if LEVEL.is_procedural_gotcha and PARAM.boss_gen then
+          local info = GAME.MONSTERS[mon]
+          spot.bossgen = true
+
+          local btype = {}
+
+          btype.attack = info.attack
+          btype.health = info.health
+
+          table.insert(PARAM.boss_types, btype)
+        end
 
       -- look toward the important spot
 ---???   if guard_spot and rand.odds(80) then
@@ -2253,13 +2259,17 @@ gui.debugf("FILLING TRAP in %s\n", R.name)
     if OB_CONFIG.mons == "none" then
       return false
     end
-	
-	if LEVEL.is_procedural_gotcha and PARAM.boss_gen then return true end
 
     --if R.no_monsters then return false end
     if R.is_secret and OB_CONFIG.secret_monsters == "no" then return false end
 
-    if R.is_start and OB_CONFIG.quiet_start == "yes" then return false end
+    if R.is_start and OB_CONFIG.quiet_start == "yes" then
+      if LEVEL.is_procedural_gotcha and PARAM.boss_gen then
+        -- your face is a tree
+      else
+        return false
+      end
+    end
 
     return true  -- YES --
   end

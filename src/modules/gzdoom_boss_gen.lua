@@ -778,10 +778,12 @@ end
 function BOSS_GEN_TUNE.end_lvl()
   if LEVEL.is_procedural_gotcha then
     local scripty = BOSS_GEN_TUNE.TEMPLATES.LVL
-	scripty = string.gsub(scripty, "NUM", LEVEL.id)
-	scripty = string.gsub(scripty, "CNT", PARAM.boss_count)
-	PARAM.boss_count = PARAM.boss_count + 1
-	PARAM.lvlstr = PARAM.lvlstr .. scripty .. "\n"
+
+    scripty = string.gsub(scripty, "NUM", LEVEL.id)
+    scripty = string.gsub(scripty, "CNT", PARAM.boss_count)
+
+    PARAM.boss_count = PARAM.boss_count + 1
+    PARAM.lvlstr = PARAM.lvlstr .. scripty .. "\n"
   end
 end
 
@@ -796,8 +798,7 @@ function BOSS_GEN_TUNE.all_done()
   local btype = ""
 
   if PARAM.boss_count == 1 then
-    error("Boss gene
-    rator requires procedural gotchas enabled to work!")
+    error("Boss generator requires procedural gotchas enabled to work!")
   end
 
   scripty = string.gsub(scripty, "LEVELCODE", PARAM.lvlstr)
