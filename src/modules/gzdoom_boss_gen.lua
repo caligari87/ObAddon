@@ -374,7 +374,7 @@ class bossController : thinker
 			int maxstep = random(50,50*2);
 			boss.A_SpawnItemEx("TeleportFog");
 			boss.bJUMPDOWN = true;
-			boss.bTHRUACTORS = true; 
+			boss.bTHRUACTORS = true;
 			boss.MaxDropOffHeight = 512;
 			boss.MaxStepHeight = 512;
 			boss.A_SetAngle(boss.angle+randompick(-90,-45,0,+45,+90));
@@ -384,7 +384,7 @@ class bossController : thinker
 				boss.A_SpawnItemEx("TeleportFog",random(-32,32),random(-32,32),random(0,64));
 				}
 			boss.bJUMPDOWN = boss.default.bJUMPDOWN;
-			boss.bTHRUACTORS = boss.default.bTHRUACTORS; 
+			boss.bTHRUACTORS = boss.default.bTHRUACTORS;
 			boss.MaxDropOffHeight = boss.default.MaxDropOffHeight;
 			boss.MaxStepHeight = boss.Default.MaxStepHeight;
 			boss.A_SpawnItemEx("TeleportFog");
@@ -786,6 +786,7 @@ function BOSS_GEN_TUNE.end_lvl()
 end
 
 function BOSS_GEN_TUNE.all_done()
+
   local scripty = BOSS_GEN_TUNE.TEMPLATES.ZSC
   local btrait = ""
   local btrait2 = ""
@@ -793,79 +794,105 @@ function BOSS_GEN_TUNE.all_done()
   local bhealth = ""
   local bsummon = ""
   local btype = ""
+
   if PARAM.boss_count == 1 then
-    error("Boss generator requires procedural gotchas enabled to work!")
+    error("Boss gene
+    rator requires procedural gotchas enabled to work!")
   end
+
   scripty = string.gsub(scripty, "LEVELCODE", PARAM.lvlstr)
+
   if PARAM.boss_gen_hpbar == "yes" then
     scripty = string.gsub(scripty, "BOSSHPBAR", BOSS_GEN_TUNE.TEMPLATES.BAR)
   else
     scripty = string.gsub(scripty, "BOSSHPBAR", "")
   end
+
   if PARAM.boss_gen_music == "yes" then
     scripty = string.gsub(scripty, "MUSIC", BOSS_GEN_TUNE.TEMPLATES.MUS)
   else
     scripty = string.gsub(scripty, "MUSIC", "")
   end
+
   for name,info in pairs(PARAM.boss_types) do
     local bhp = info.health
-	local batk = info.attack
-	btrait = BOSS_GEN_TUNE.syntaxize(btrait,BOSS_GEN_TUNE.grab_random_trait(batk))
-	btrait = BOSS_GEN_TUNE.syntaxize(btrait,BOSS_GEN_TUNE.grab_random_trait(batk))
-	btrait = BOSS_GEN_TUNE.syntaxize(btrait,BOSS_GEN_TUNE.grab_random_trait(batk))
-	if(bhp<2000) then
+	  local batk = info.attack
+    btrait = BOSS_GEN_TUNE.syntaxize(btrait,BOSS_GEN_TUNE.grab_random_trait(batk))
+    btrait = BOSS_GEN_TUNE.syntaxize(btrait,BOSS_GEN_TUNE.grab_random_trait(batk))
+    btrait = BOSS_GEN_TUNE.syntaxize(btrait,BOSS_GEN_TUNE.grab_random_trait(batk))
+
+  if(bhp<2000) then
 	  btrait2 = BOSS_GEN_TUNE.syntaxize(btrait2,BOSS_GEN_TUNE.grab_random_trait(batk))
 	else
 	  btrait2 = BOSS_GEN_TUNE.syntaxize(btrait2,'"bossabilitygiver_nothing"')
 	end
-	if(bhp<300) then
+
+  if(bhp<300) then
 	  btrait3 = BOSS_GEN_TUNE.syntaxize(btrait3,BOSS_GEN_TUNE.grab_random_trait(batk))
 	else
 	  btrait3 = BOSS_GEN_TUNE.syntaxize(btrait3,'"bossabilitygiver_nothing"')
 	end
-	local batkx = "\"" .. batk .. "\""
-	btype = BOSS_GEN_TUNE.syntaxize(btype,batkx)
-	local mult
+
+  local batkx = "\"" .. batk .. "\""
+
+  btype = BOSS_GEN_TUNE.syntaxize(btype,batkx)
+
+  local mult
 	local hpcalc
-	if bhp<300 then mult=1.5
+
+  if bhp<300 then mult=1.5
 	elseif bhp<1000 then mult=1.3
 	elseif bhp<2000 then mult=1.1
 	else mult=1.0 end
-	hpcalc = rand.pick({5000,5200,5400,5600,5800,6000})*mult*PARAM.boss_gen_mult
-	if batk == "hitscan" then
+
+  hpcalc = rand.pick({5000,5200,5400,5600,5800,6000})*mult*PARAM.boss_gen_mult
+
+  if batk == "hitscan" then
 	  hpcalc = hpcalc*0.75
 	end
-	bhealth = BOSS_GEN_TUNE.syntaxize(bhealth,hpcalc)
-	local sumcalc
+
+  bhealth = BOSS_GEN_TUNE.syntaxize(bhealth,hpcalc)
+
+  local sumcalc
 	local dmult
-	if PARAM.boss_gen_dmult < 0 then
+
+  if PARAM.boss_gen_dmult < 0 then
 	  dmult = 1.5
 	else
 	  dmult = 1.0 - (0.25*(PARAM.boss_gen_dmult-1))
-	end
-	sumcalc = rand.pick({400,450,500,550,600})*dmult
-	bsummon = BOSS_GEN_TUNE.syntaxize(bsummon,sumcalc)
   end
+
+	sumcalc = rand.pick({400,450,500,550,600})*dmult
+  bsummon = BOSS_GEN_TUNE.syntaxize(bsummon,sumcalc)
+
+  end
+
   scripty = string.gsub(scripty, "TRAITS", btrait)
   scripty = string.gsub(scripty, "TRAITX", btrait2)
   scripty = string.gsub(scripty, "TRAITZ", btrait3)
   scripty = string.gsub(scripty, "BHEALTH", bhealth)
   scripty = string.gsub(scripty, "BSUMMON", bsummon)
   scripty = string.gsub(scripty, "BTYPE", btype)
+
   PARAM.BOSSSCRIPT = PARAM.BOSSSCRIPT .. scripty
   PARAM.BOSSLANG = {}
   PARAM.boss_count = PARAM.boss_count - 1
+
   for i = 1,PARAM.boss_count,1 do
+
     local demon_name = rand.key_by_probs(namelib.NAMES.GOTHIC.lexicon.e)
     demon_name = string.gsub(demon_name, "NOUNGENEXOTIC", namelib.generate_unique_noun("exotic"))
-	local line = "BOSS_NAME" .. i .. ' = "' .. demon_name .. '";\n'
-	table.insert(PARAM.BOSSLANG, line)
-	local taunt = BOSS_GEN_TUNE.grab_random_taunt()
-	line = "BOSS_TAUNT" .. i .. ' = "' .. demon_name .. ": " .. taunt .. '";\n'
-	table.insert(PARAM.BOSSLANG, line)
-	local dead = BOSS_GEN_TUNE.grab_random_death()
-	line = "BOSS_DEATH" .. i .. ' = "' .. demon_name .. ": " .. dead .. '";\n'
-	table.insert(PARAM.BOSSLANG, line)
+
+    local line = "BOSS_NAME" .. i .. ' = "' .. demon_name .. '";\n'
+	  table.insert(PARAM.BOSSLANG, line)
+
+    local taunt = BOSS_GEN_TUNE.grab_random_taunt()
+	  line = "BOSS_TAUNT" .. i .. ' = "' .. demon_name .. ": " .. taunt .. '";\n'
+	  table.insert(PARAM.BOSSLANG, line)
+
+    local dead = BOSS_GEN_TUNE.grab_random_death()
+	  line = "BOSS_DEATH" .. i .. ' = "' .. demon_name .. ": " .. dead .. '";\n'
+	  table.insert(PARAM.BOSSLANG, line)
   end
 end
 
@@ -906,7 +933,7 @@ OB_MODULES["gzdoom_boss_gen"] =
       default = "default",
       tooltip = "Makes boss health higher or lower than default, useful when playing with mods that have different average power level of weapons",
     }
-	
+
 	boss_gen_hitscan =
     {
       name="boss_gen_hitscan",
