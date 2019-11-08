@@ -598,10 +598,18 @@ class bossabilitygiver_bounce : bossabilitygiver { }
 ]]
   MUS = [[S_ChangeMusic(string.format("%%s%%i","d_boss",level), 0, true, false);]]
 }
+
 BOSS_GEN_TUNE.TAUNTS =
 {
 	["YOU CANNOT HANDLE THE POWER OF THE INFINITE HELL"] = 50
-	["YOU ARE DOOMED!"] = 50
+  ["YOU ARE DOOMED!"] = 50
+  ["YOUR SOUL WILL BE MINE"] = 50
+  ["FRESH. MEAT."] = 50
+  ["HELL IS INFINITE"] = 50
+  ["WE ARE LEGION"] = 50
+  ["SHED THE BLOOD OF THE INNOCENTS"] = 50
+  ["DARKNESS REIGNS"] = 50
+  ["YOUR HEAD MAKES A FINE TROPHY"] = 50
 }
 
 BOSS_GEN_TUNE.DEATHS =
