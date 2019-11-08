@@ -287,8 +287,14 @@ class bossController : thinker
 		if(bossactive && !bossdead && !boss)
 		{
 			bossdead = true;
-			boss.A_PrintBold(Stringtable.Localize(string.format("%s%i","$BOSS_DEATH",level)));
-			boss.A_Quake(6,150,0,2048);
+			ThinkerIterator Fixer = ThinkerIterator.Create("Actor");
+		    Actor fixthefix;
+			while (fixthefix = Actor(Fixer.Next()))
+			{
+				fixthefix.A_PrintBold(Stringtable.Localize(string.format("%s%i","$BOSS_DEATH",level)));
+				fixthefix.A_Quake(6,150,0,2048);
+				break;
+			}
 		}
 		if(bossdead)
 		{
