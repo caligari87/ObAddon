@@ -1404,7 +1404,7 @@ function Monster_fill_room(R)
       focus = spot.face
     end
 
-    if R.force_mon_angle and not spot.face then
+    if R.force_mon_angle and not spot.face and not spot.bossgen then
       return R.force_mon_angle
     end
 
