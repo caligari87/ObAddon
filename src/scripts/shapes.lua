@@ -753,7 +753,7 @@ GROW_CAGEPAIR_1 =
 GROW_CAGEPAIR_2 =
 {
   prob = 8
-  skip_prob = 30
+  skip_prob = 75 --30
   aversion = 5
 
   structure =
@@ -861,7 +861,7 @@ GROW_NARROWSTAIR_2 =
 GROW_CAGESTAIR_1 =
 {
   prob = 8
-  --skip_prob = 50
+  skip_prob = 50
   aversion = 5
 
   structure =
@@ -878,7 +878,7 @@ GROW_CAGESTAIR_1 =
 GROW_CAGESTAIR_2 =
 {
   prob = 8
-  --skip_prob = 70
+  skip_prob = 70
   aversion = 5
 
   structure =
@@ -895,7 +895,7 @@ GROW_CAGESTAIR_2 =
 GROW_CAGESTAIR_3 =
 {
   prob = 8
-  --skip_prob = 70
+  skip_prob = 70
   aversion = 5
 
   structure =
@@ -4642,6 +4642,222 @@ GROW_LIQUID_SLAB_DIAGONAL_REVERSE =
     "1~","~1"
     "1~","~1"
   }
+}
+
+-- Lake shapes - very large bodies of water. [LAKE]
+
+GROW_LAKE_BIG_O_NEW_AREA =
+{
+  prob = 25
+  skip_prob = 75
+
+  structure =
+  {
+    "xxxxx11xxxxx","xxxxx11xxxxx"
+    "............","/1111111111%"
+    "............","111111111111"
+    "............","111111111111"
+    "............","111/~~~~%111"
+    "............","111~~~~~~111"
+    "............","111~~~~~~111"
+    "............","111~~~~~~111"
+    "............","vvv~~~~~~vvv"
+    "............","vvv~~~~~~vvv"
+    "............","AAA~~~~~~AAA"
+    "............","AAA~~~~~~AAA"
+    "............","AAA~~~~~~AAA"
+    "............","AAA%~~~~/AAA"
+    "............","AAAAAAAAAAAA"
+    "............","AAAAAAAAAAAA"
+    "............","%AAAAAAAAAA/"
+  }
+
+  diagonals =
+  {
+    ".1","1."
+    "1~","~1"
+    "A~","~A"
+    ".A","A."
+  }
+}
+
+GROW_LAKE_BIG_O_WIDE_NEW_AREA =
+{
+  prob = 25
+  skip_prob = 80
+
+  structure =
+  {
+    "xxxxxxx11xxxxxxx","xxxxxxx11xxxxxxx"
+    "................","AAAAAA<11>AAAAAA"
+    "................","AAAAAA<11>AAAAAA"
+    "................","AAAAAA<11>AAAAAA"
+    "................","AAA/~~~~~~~~%AAA"
+    "................","AAA~~~~~~~~~~AAA"
+    "................","AAA~~~~~~~~~~AAA"
+    "................","AAA~~~~~~~~~~AAA"
+    "................","AAA~~~~~~~~~~AAA"
+    "................","AAA~~~~~~~~~~AAA"
+    "................","AAA~~~~~~~~~~AAA"
+    "................","AAA~~~~~~~~~~AAA"
+    "................","AAA~~~~~~~~~~AAA"
+    "................","AAA%~~~~~~~~/AAA"
+    "................","AAAAAAAAAAAAAAAA"
+    "................","AAAAAAAAAAAAAAAA"
+    "................","AAAAAAAAAAAAAAAA"
+  }
+
+  diagonals =
+  {
+    "A~","~A"
+    "A~","~A"
+  }
+}
+
+GROW_LAKE_BIG_L_NEW_AREA =
+{
+  prob = 25
+  skip_prob = 75
+
+  structure =
+  {
+    "xxxxx11xxxxxxxxxxxxx","xxxxx11xxxxxxxxxxxxx"
+    "............xxxxxxxx","/1111111111%xxxxxxxx"
+    "............xxxxxxxx","111111111111xxxxxxxx"
+    "............xxxxxxxx","111111111111xxxxxxxx"
+    "............xxxxxxxx","111/~~~~%111xxxxxxxx"
+    "............xxxxxxxx","111~~~~~~111xxxxxxxx"
+    "............xxxxxxxx","111~~~~~~111xxxxxxxx"
+    "............xxxxxxxx","vvv~~~~~~vvvxxxxxxxx"
+    "............xxxxxxxx","AAA~~~~~~AAAxxxxxxxx"
+    "....................","AAA~~~~~~AAAAAAAAAA%"
+    "....................","AAA~~~~~~AAAAAAAAAAA"
+    "....................","AAA~~~~~~%AAAAAAAAAA"
+    "....................","AAA~~~~~~~~~~~~~%AAA"
+    "....................","AAA~~~~~~~~~~~~~~AAA"
+    "....................","AAA~~~~~~~~~~~~~~AAA"
+    "....................","AAA%~~~~~~~~~~~~/AAA"
+    "....................","AAAAAAAAAAAAAAAAAAAA"
+    "....................","AAAAAAAAAAAAAAAAAAAA"
+    "....................","%AAAAAAAAAAAAAAAAAA/"
+  }
+
+  diagonals =
+  {
+    ".1","1."
+    "1~","~1"
+         "A."
+    "~A"
+         "~A"
+    "A~","~A"
+    ".A","A."
+  }
+}
+
+GROW_LAKE_BIG_J_NEW_AREA =
+{
+  prob = 25
+  skip_prob = 75
+
+  structure =
+  {
+    "x11xxxxxxxxx","x11xxxxxxxxx"
+    ".........xxx","111~~~~~~xxx"
+    ".........xxx","111~~~~~~xxx"
+    ".........xxx","111~~~~~~xxx"
+    ".........xxx","111~~~~~~xxx"
+    ".........xxx","111~~~~~~xxx"
+    ".........xxx","111~~~~~~xxx"
+    ".........xxx","111~~~~~~xxx"
+    ".........xxx","vvv~~~~~~xxx"
+    ".........xxx","vvv~~~~~~xxx"
+    "............","AAA~~~~~~AAA"
+    "............","AAA~~~~~~AAA"
+    "............","AAA~~~~~~AAA"
+    "............","AAA%~~~~/AAA"
+    "............","AAAAAAAAAAAA"
+    "............","AAAAAAAAAAAA"
+    "............","%AAAAAAAAAA/"
+  }
+
+  diagonals =
+  {
+    "A~","~A"
+    ".A","A."
+  }
+}
+
+GROW_LAKE_CROSS_NEW_AREA =
+{
+  prob = 25
+  skip_prob = 75
+
+  structure =
+  {
+    "xxxxxxx11xxxxxxx","xxxxxxx11xxxxxxx"
+    "................","~~~~~~1111~~~~~~"
+    "................","~~~~~~1111~~~~~~"
+    "................","~~~~~~vvvv~~~~~~"
+    "................","~~~~~~vvvv~~~~~~"
+    "................","~~~~~~AAAA~~~~~~"
+    "................","~~~~~/AAAA%~~~~~"
+    "xxx..........xxx","xxxAAAAAAAAAAxxx"
+    "xxx..........xxx","xxxAAAAAAAAAAxxx"
+    "xxx..........xxx","xxxAAAAAAAAAAxxx"
+    "xxx..........xxx","xxxAAAAAAAAAAxxx"
+    "................","~~~~~%AAAA/~~~~~"
+    "................","~~~~~~AAAA~~~~~~"
+    "................","~~~~~~AAAA~~~~~~"
+    "......xxxx......","~~~~~~xxxx~~~~~~"
+    "......xxxx......","~~~~~~xxxx~~~~~~"
+    "......xxxx......","~~~~~~xxxx~~~~~~"
+  }
+
+  diagonals =
+  {
+    "~A","A~"
+    "~A","A~"
+  }
+}
+
+GROW_LAKE_BIG_X_NEW_AREA =
+{
+  prob = 25
+  skip_prob = 75
+
+  structure =
+  {
+    "xxxxx........xxxxx","xxxxx~~~~~~~~xxxxx"
+    "1................x","11111%~~~~~~/1111x"
+    "1................x","111111%~~~~/11111x"
+    "x................x","x111111%~~/111111x"
+    "..................","~%111111%/111111/~"
+    "..................","~~%111111111111/~~"
+    "..................","~~~%1111111111/~~~"
+    "..................","~~~/1111111111%~~~"
+    "..................","~~/111111111111%~~"
+    "..................","~/111111/%111111%~"
+    "x................x","x111111/~~%111111x"
+    "x................x","x11111/~~~~%11111x"
+    "x................x","x1111/~~~~~~%1111x"
+    "xxxxx........xxxxx","xxxxx~~~~~~~~xxxxx"
+  }
+
+  diagonals =
+  {
+         "1~","~1"
+         "1~","~1"
+         "1~","~1"
+    "~1","1~","~1","1~"
+    "~1"     ,     "1~"
+    "~1"     ,     "1~"
+    "~1"     ,     "1~"
+    "~1"     ,     "1~"
+    "~1","1~","~1","1~"
+         "1~","~1"
+         "1~","~1"
+         "1~","~1"
+}
 }
 
 -- MSSP's shape primitives [PRIMITIVES]
