@@ -284,6 +284,12 @@ class bossController : thinker
 	override void Tick()
 	{
 		super.Tick();
+		if(bossactive && !bossdead && !boss)
+		{
+			bossdead = true;
+			boss.A_PrintBold(Stringtable.Localize(string.format("%s%i","$BOSS_DEATH",level)));
+			boss.A_Quake(6,150,0,2048);
+		}
 		if(bossdead)
 		{
 			ending++;
@@ -576,7 +582,7 @@ class bossabilitygiver_bounce : bossabilitygiver { }
 		bossController mo;
 		while (mo = bossController(BossFinder.Next()))
 		{
-			if(mo.bossactive && !mo.bossdead)
+			if(mo.boss && mo.bossactive && !mo.bossdead)
 			{
 			int bars = (mo.boss.health * 20) / mo.boss.starthealth;
 			string barsx;
