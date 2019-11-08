@@ -2043,7 +2043,7 @@ function Room_choose_size(R, not_big)
     prob = style_sel("big_rooms", 0, 35, 65, 90)
   else
 -- prob = style_sel("big_rooms", 0, 20, 40, 80) --Original
-  prob = style_sel("big_rooms", 0, 35, 65, 90)
+    prob = style_sel("big_rooms", 0, 35, 65, 90)
   end
 
   if rand.odds(prob) then
@@ -2099,14 +2099,15 @@ function Room_choose_size(R, not_big)
   if LEVEL.is_procedural_gotcha and R.is_start then
     R.size_limit = LEVEL.map_W * 5
     R.floor_limit = R.floor_limit * 2
+
+    -- for single room gotchas
+    if PARAM.boss_gen then
+      R.size_limit = LEVEL.map_W*25
+      R.floor_limit = R.floor_limit * rand.irange(1, R.size_limit / 3)
+      R.is_big = true
+    end
   end
 
-  if LEVEL.is_procedural_gotcha and PARAM.boss_gen then
-    R.size_limit = LEVEL.map_W*10
-    R.floor_limit = R.floor_limit * 8
-    R.is_big = true
-  end
-  
 
   if R.is_street then
     R.size_limit = (LEVEL.map_W*LEVEL.map_H)*1.3

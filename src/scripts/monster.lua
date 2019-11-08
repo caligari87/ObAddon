@@ -2122,8 +2122,8 @@ gui.debugf("   doing spot : Mon=%s\n", tostring(mon))
       if not spot then
         if LEVEL.is_procedural_gotcha and PARAM.boss_gen then
         --error("Cannot place generated boss")
-          gui.printf("WARNING!! Cannot place boss monster: \n")
-          gui.printf(bf.mon .. "\n")
+          error("WARNING!! Cannot place boss monster: \n" ..
+          bf.mon .. "\n")
         else
           gui.printf("WARNING!! Cannot place boss monster: \n")
           gui.printf(bf.mon .. "\n")
