@@ -20,7 +20,7 @@ PREFABS.Pic_HVAC_unit =
 
   x_fit = "frame"
   y_fit = "top"
-  
+
   sound = "Machine_Ventilation"
 }
 
@@ -39,7 +39,7 @@ PREFABS.Pic_septic_tank =
 {
   template = "Pic_HVAC_unit"
   map = "MAP02"
-  
+
   sound = "Water_Tank"
 }
 
@@ -47,6 +47,6 @@ PREFABS.Pic_air_filter =
 {
   template = "Pic_HVAC_unit"
   map = "MAP03"
-  
+
   sound = "Machine_Ventilation"
 }

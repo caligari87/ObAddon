@@ -23,7 +23,7 @@ PREFABS.Item_closet_toilet_room =
 
   x_fit = "frame"
   y_fit = "top"
-  
+
   sound = "Bathroom_Fan"
 }
 

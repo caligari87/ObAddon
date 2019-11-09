@@ -154,8 +154,8 @@ function Monster_pacing()
       return
     end
 
-	if LEVEL.is_procedural_gotcha and PARAM.boss_gen then
-	  set_room(R, "high")
+    if LEVEL.is_procedural_gotcha and PARAM.boss_gen then
+      set_room(R, "high")
       return
     end
 
@@ -319,7 +319,7 @@ function Monster_assign_bosses()
     -- already has one?
     if R.boss_fight then return -1 end
 
-	if LEVEL.is_procedural_gotcha and PARAM.boss_gen then return 1 end
+    if LEVEL.is_procedural_gotcha and PARAM.boss_gen then return 1 end
 
     -- require a goal (e.g. a KEY)
     if #R.goals == 0 then return -1 end
@@ -1420,18 +1420,18 @@ function Monster_fill_room(R)
         ang = geom.angle_add(ang, 180)
       end
       if LEVEL.is_procedural_gotcha and PARAM.boss_gen and spot.bossgen then
-	    return ang+LEVEL.id
-	  else
+        return ang+LEVEL.id
+      else
         return ang
-	  end
+      end
     end
 
     -- fallback : purely random angle
-	if LEVEL.is_procedural_gotcha and PARAM.boss_gen and spot.bossgen then
-	  return (rand.irange(0,7) * 45)+LEVEL.id
-	else
+    if LEVEL.is_procedural_gotcha and PARAM.boss_gen and spot.bossgen then
+      return (rand.irange(0,7) * 45)+LEVEL.id
+    else
       return rand.irange(0,7) * 45
-	end
+    end
   end
 
 

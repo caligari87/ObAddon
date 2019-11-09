@@ -38,7 +38,7 @@ PREFABS.Hallway_vent_i_EPIC =
   theme = "!hell"
 
   uses_epic_textures = true
-  
+
   sound = "Indoor_Fan"
 }
 
@@ -58,7 +58,7 @@ PREFABS.Hallway_vent_i_lights =
   {
     STEP3 = 50
   }
-  
+
   sound = "Indoor_Fan"
 }
 

@@ -41,6 +41,6 @@ PREFABS.Hallway_ducts_t5 =
   template = "Hallway_ducts_t1"
   map    = "MAP05"
   engine = "zdoom"
-  
+
   sound = "Indoor_Fan"
 }

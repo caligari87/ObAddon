@@ -23,6 +23,6 @@ PREFABS.Pic_armaetus_waterfountain =
 
   x_fit = "frame"
   y_fit = "top"
-  
-  sound = "Water_Streaming"  
+
+  sound = "Water_Streaming"
 }

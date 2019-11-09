@@ -17,7 +17,7 @@ PREFABS.Wall_generic_direct_waterfall =
   z_fit = "bottom"
 
   on_liquids = "only"
-  
+
   sound = "Water_Streaming"
 }
 
@@ -40,7 +40,7 @@ PREFABS.Wall_generic_ceiling_sleuce =
   z_fit = "top"
 
   on_liquids = "only"
-  
+
   sound = "Waterfall_Rush"
 }
 
@@ -63,6 +63,6 @@ PREFABS.Wall_generic_side_sleuce =
   z_fit = "top"
 
   on_liquids = "only"
-  
+
   sound = "Water_Streaming"
 }

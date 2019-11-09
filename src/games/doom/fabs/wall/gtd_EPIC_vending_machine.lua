@@ -28,6 +28,6 @@ PREFABS.Decor_EPIC_vending_machine =
     OBVNMCH4 = 50
     OBVNMCH5 = 50
   }
-  
+
   sound = "Vending_Machine_Hum"
 }

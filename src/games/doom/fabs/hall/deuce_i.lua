@@ -16,7 +16,7 @@ PREFABS.Hallway_deuce_i1 =
 
   seed_w = 2
   seed_h = 2
-  
+
   sound = "Outdoors_Street"
 }
 
@@ -73,7 +73,7 @@ PREFABS.Hallway_deuce_i_windowed =
   tex_METAL5 = "METAL"
 
   can_flip = true
-  
+
   sound = "Outdoors_Street"
 }
 
@@ -91,8 +91,8 @@ PREFABS.Hallway_deuce_i_windowed_tech =
   flat_CEIL5_2 = "FLAT23"
 
   can_flip = true
-  
-  sound = "Outdoors_Street"  
+
+  sound = "Outdoors_Street"
 }
 
 PREFABS.Hallway_deuce_i_side_cage =

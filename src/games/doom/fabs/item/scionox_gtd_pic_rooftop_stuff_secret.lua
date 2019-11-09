@@ -22,7 +22,7 @@ PREFABS.Item_rooftop_secret =
 
   x_fit = "frame"
   y_fit = "top"
-  
+
   sound = "Water_Tank"
 }
 
@@ -32,7 +32,7 @@ PREFABS.Item_rooftop_secret_2 =
   map      = "MAP01"
   engine   = "zdoom"
   seed_h = 1
-  
+
   sound = "Machine_Ventilation"
 }
 
@@ -42,6 +42,6 @@ PREFABS.Item_rooftop_secret_3 =
   map      = "MAP03"
   seed_w = 3
   seed_h = 1
-  
+
   sound = "Machine_Air"
 }

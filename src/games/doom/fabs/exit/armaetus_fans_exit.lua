@@ -26,7 +26,7 @@ PREFABS.Exit_armaetus_fans_exit =
     SW1STRTN=50, SW1SLAD=30, SW1GRAY=50,
     SW1GRAY1=50
   }
-  
+
   sound = "Indoor_Fan"
 }
 

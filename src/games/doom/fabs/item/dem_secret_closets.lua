@@ -110,7 +110,7 @@ PREFABS.Item_secret_NIN_closet =
   env   = "building"
 
   prob  = 100
-  
+
   key   = "secret"
 
   where  = "seeds"

@@ -32,6 +32,6 @@ PREFABS.Item_sealed_armory_room_keyed =
 
   rank   = 2
   prob   = 100
-  
+
   sound = "Toilet_Running"
 }

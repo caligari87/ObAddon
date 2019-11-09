@@ -20,6 +20,6 @@ PREFABS.Item_closet_toilet_room_small =
 
   x_fit = "frame"
   y_fit = "top"
-  
+
   sound = "Toilet_Running"
 }

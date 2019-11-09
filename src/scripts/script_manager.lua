@@ -119,8 +119,8 @@ function ScriptMan_assemble_language_lump()
   }
   if PARAM.boss_count > 1 then
     each line in PARAM.BOSSLANG do
-	  table.insert(language_lines,line)
-	end
+      table.insert(language_lines,line)
+    end
   end
   if PARAM.language_lump != nil then
     each line in PARAM.language_lump do

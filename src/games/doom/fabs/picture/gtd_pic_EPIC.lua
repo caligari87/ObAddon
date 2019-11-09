@@ -597,7 +597,7 @@ PREFABS.Pic_EPIC_box_static_sounds =
    TVSNOW01 = 50
    COMPFUZ1 = 50
   }
-  
+
   sound = "Static_Monitor"
 }
 
@@ -629,7 +629,7 @@ PREFABS.Pic_EPIC_box_metal_small_sounds =
     --NMONIA1 = 50
     DECMP04A = 50
   }
-  
+
   sound = "Static_Monitor"
 }
 

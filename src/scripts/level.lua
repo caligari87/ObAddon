@@ -637,58 +637,58 @@ function Episode_plan_monsters()
     assert(what)
 
     local tab = {}
-	
-	each name,info in GAME.MONSTERS do
-	  if LEV.is_procedural_gotcha and PARAM.boss_gen then
-	    local boss_diff = PARAM.boss_gen_diff
-		local lolevel
-		local hilevel
-		if boss_diff == "easier" then
-		  lolevel = 1
-		  hilevel = 4
-		elseif boss_diff == "default" then
-		  lolevel = 2
-		  hilevel = 6
-		elseif boss_diff == "harder" then
-		  lolevel = 3
-		  hilevel = 8
-		elseif boss_diff == "nightmare" then
-		  lolevel = 7
-		  hilevel = 9
-		end
-		if OB_CONFIG.length == "game" then
-		  if LEV.game_along < 0.4 then
-		    lolevel = math.max(1,lolevel-2)
-			hilevel = hilevel-2
-		  elseif LEV.game_along < 0.7 then
-			hilevel = hilevel-1
-		  else
-		    lolevel = math.min(9,lolevel+4)
-			hilevel = math.min(9,hilevel+1)
-		  end
-		end
-		local bprob = 80
-		if info.level < lolevel then
-		  bprob = bprob/(lolevel-info.level+1)
-		end
-		if info.level > hilevel then
-		  bprob = bprob/(info.level-hilevel+1)
-		end
-		if info.attack == "hitscan" then
-		  local hitred = PARAM.boss_gen_hitscan
-		  if hitred == "less" then
-		    bprob = bprob/2
-		  elseif hitred == "muchless" then
-		    bprob = bprob/5
-		  end
-		end
-		tab[name] = bprob
-	  else
+
+    each name,info in GAME.MONSTERS do
+      if LEV.is_procedural_gotcha and PARAM.boss_gen then
+        local boss_diff = PARAM.boss_gen_diff
+        local lolevel
+        local hilevel
+        if boss_diff == "easier" then
+          lolevel = 1
+          hilevel = 4
+        elseif boss_diff == "default" then
+          lolevel = 2
+          hilevel = 6
+        elseif boss_diff == "harder" then
+          lolevel = 3
+          hilevel = 8
+        elseif boss_diff == "nightmare" then
+          lolevel = 7
+          hilevel = 9
+        end
+        if OB_CONFIG.length == "game" then
+          if LEV.game_along < 0.4 then
+            lolevel = math.max(1,lolevel-2)
+            hilevel = hilevel-2
+          elseif LEV.game_along < 0.7 then
+            hilevel = hilevel-1
+          else
+            lolevel = math.min(9,lolevel+4)
+            hilevel = math.min(9,hilevel+1)
+          end
+        end
+        local bprob = 80
+        if info.level < lolevel then
+          bprob = bprob/(lolevel-info.level+1)
+        end
+        if info.level > hilevel then
+          bprob = bprob/(info.level-hilevel+1)
+        end
+        if info.attack == "hitscan" then
+          local hitred = PARAM.boss_gen_hitscan
+          if hitred == "less" then
+            bprob = bprob/2
+          elseif hitred == "muchless" then
+            bprob = bprob/5
+          end
+        end
+        tab[name] = bprob
+      else
         if info.boss_type == what and is_boss_usable(LEV, name, info) then
           tab[name] = info.boss_prob or 50
         end
       end
-	end
+    end
 
     return tab
   end
@@ -899,10 +899,10 @@ function Episode_plan_monsters()
 
     -- ensure first encounter with a boss only uses a single one
     count = math.min(count, 1 + (used_bosses[mon] or 0))
-	
-	if LEV.is_procedural_gotcha and PARAM.boss_gen then
-	  count = 1
-	end
+
+    if LEV.is_procedural_gotcha and PARAM.boss_gen then
+      count = 1
+    end
 
 --  stderrf("  count %1.2f for '%s'\n", count, mon)
 
@@ -2398,9 +2398,9 @@ function Level_do_styles()
     STYLE.parks = "none"
     STYLE.symmetry = "more"
     STYLE.teleporters = "none"
-	if PARAM.boss_gen then
-		STYLE.steepness = "none"
-	end
+    if PARAM.boss_gen then
+        STYLE.steepness = "none"
+    end
   end
 
 end

@@ -6,7 +6,7 @@ PREFABS.Item_generic_frontage_secret =
 
   prob   = 25
   theme = "urban"
-  
+
   env = "!cave"
 
   where  = "seeds"
@@ -47,9 +47,9 @@ PREFABS.Item_generic_frontage_secret_2 =
 
   prob   = 15
   theme = "urban"
-  
+
   engine = "zdoom"
-  
+
   env = "!cave"
 
   where  = "seeds"
@@ -75,7 +75,7 @@ PREFABS.Item_generic_frontage_secret_3 =
 
   prob   = 25
   theme = "urban"
-  
+
   env = "!cave"
 
   where  = "seeds"
@@ -103,7 +103,7 @@ PREFABS.Item_commercial_frontage_secret =
 
   prob   = 15
   theme = "urban"
-  
+
   env = "!cave"
 
   where  = "seeds"

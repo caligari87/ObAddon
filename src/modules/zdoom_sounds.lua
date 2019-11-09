@@ -29,25 +29,25 @@ Outdoors_Street =           { lump = "STREETAM",  flags = "$limit STREETAM 1" }
 
 -- Ambient sound for Caves
 Cave_Ambient =              { lump = "CAVEAMB",  flags = "$limit STREETAM 1"  }
-  
+
 -- Ambient sound for Theme
 Hell =                      { lump = "HELLAMB",   flags = "$limit HELLAMB 1"  }
 
 -- Ambient sounds for specific prefabs
-Bathroom_Fan =        {  lump = "BATHFAN"   								            }
-Computer_Station =    {  lump = "COMPSTN"   								            }
-Indoor_Fan =          {  lump = "FANSND"    								            }
-Machine_Air =         {  lump = "MACHNAIR"  								            }
-Machine_Ventilation = {  lump = "MACHVENT"  								            }
-Demonic_Teleporter =  {  lump = "SKLLCHNT"  								            }
-Electric_Sparks =     {  lump = "SPARKING"  								            }
-Static_Monitor =      {  lump = "STATIC",	args = "CHAN_AUTO, 0.5, true"	}
-Toilet_Running =      {  lump = "TOILETRN"  								            }
-Vending_Machine_Hum = {  lump = "VENDHUM"   								            }
-Water_Draining =      {  lump = "WATDRAIN"  								            }
-Water_Streaming =     {  lump = "WATSTRM"   								            }
-Water_Tank =          {  lump = "WATTANK"   								            }
-Waterfall_Rush =      {  lump = "WATFALL"   								            }
+Bathroom_Fan =        {  lump = "BATHFAN"                                               }
+Computer_Station =    {  lump = "COMPSTN"                                               }
+Indoor_Fan =          {  lump = "FANSND"                                                }
+Machine_Air =         {  lump = "MACHNAIR"                                              }
+Machine_Ventilation = {  lump = "MACHVENT"                                              }
+Demonic_Teleporter =  {  lump = "SKLLCHNT"                                              }
+Electric_Sparks =     {  lump = "SPARKING"                                              }
+Static_Monitor =      {  lump = "STATIC",    args = "CHAN_AUTO, 0.5, true"    }
+Toilet_Running =      {  lump = "TOILETRN"                                              }
+Vending_Machine_Hum = {  lump = "VENDHUM"                                               }
+Water_Draining =      {  lump = "WATDRAIN"                                              }
+Water_Streaming =     {  lump = "WATSTRM"                                               }
+Water_Tank =          {  lump = "WATTANK"                                               }
+Waterfall_Rush =      {  lump = "WATFALL"                                               }
 
 }
 

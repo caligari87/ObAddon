@@ -39,7 +39,7 @@ PREFABS.Pic_beed28_broken_door =
    dead_imp = 50
    dead_demon = 50
    }
-   
+
    sound = "Electric_Sparks"
 }
 

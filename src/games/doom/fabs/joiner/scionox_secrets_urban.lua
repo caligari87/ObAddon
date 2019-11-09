@@ -6,7 +6,7 @@ PREFABS.Joiner_generic_frontage_secret =
 
   prob   = 25
   theme = "urban"
-  
+
   env = "!cave"
 
   where  = "seeds"
@@ -48,7 +48,7 @@ PREFABS.Joiner_generic_frontage_secret_2 =
 
   prob   = 25
   theme = "urban"
-  
+
   env = "!cave"
 
   where  = "seeds"
@@ -77,7 +77,7 @@ PREFABS.Joiner_commercial_frontage_secret =
 
   prob   = 25
   theme = "urban"
-  
+
   env = "!cave"
 
   where  = "seeds"
@@ -105,7 +105,7 @@ PREFABS.Joiner_commercial_frontage_secret_2 =
   prob   = 25
   theme = "urban"
   engine = "zdoom"
-  
+
   env = "!cave"
 
   where  = "seeds"

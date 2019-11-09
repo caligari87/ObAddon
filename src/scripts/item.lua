@@ -467,11 +467,11 @@ function Item_simulate_battle(R)
 
     heal_mul = heal_mul * (PARAM.health_factor or 1)
     ammo_mul = ammo_mul * (PARAM.ammo_factor or 1)
-	
-	if LEVEL.is_procedural_gotcha and PARAM.boss_gen then
-	  ammo_mul = ammo_mul * (3 * PARAM.boss_gen_mult)
-	  heal_mul = heal_mul * 3
-	end
+
+    if LEVEL.is_procedural_gotcha and PARAM.boss_gen then
+      ammo_mul = ammo_mul * (3 * PARAM.boss_gen_mult)
+      heal_mul = heal_mul * 3
+    end
 
     -- give less ammo in later maps (to counter the build-up over an episode)
     if not PARAM.pistol_starts then
