@@ -157,11 +157,33 @@ class BossGenerator_Handler : EventHandler
     override void WorldTick()
     {
         if(!bossEnabled) return;
+		if(!bossfound && level.time > 1 && level.time < 3)
+		{
+			console.PrintF("Trying fallback method to detect boss thing");
+			ThinkerIterator Fallback = ThinkerIterator.Create("Actor");
+			Actor findme;
+			while (findme = Actor(Fallback.Next()))
+			{
+				if( findme && findme.bISMONSTER && IsBoss(findme) )
+				{
+					bossFound = true;
+					let bossy = bossController(new("bossController"));
+					if(bossy)
+					{
+						bossy.boss = findme;
+						bossy.level = currentboss;
+					}
+					console.PrintF("Fallback detection successful");
+					Break;
+				}
+			}
+			if(!bossfound) { console.PrintF("Fallback detection failed..."); }
+		}
     }
     override void RenderOverlay(RenderEvent event)
     {
         if(!bossEnabled) return;
-        if (level.time == 2 && !bossfound)
+        if (level.time == 3 && !bossfound)
         {
             console.PrintF("There has been a problem spawning a boss!");
         }
