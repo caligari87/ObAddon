@@ -2103,10 +2103,11 @@ gui.debugf("   doing spot : Mon=%s\n", tostring(mon))
       if not spot and LEVEL.is_procedural_gotcha and PARAM.boss_gen then
         local last_spot
         local spot = grab_monster_spot(mon, last_spot, reqs)
-		-- if it still doesn't fit... just grab a random spot, damn it
-		if not spot then
-			spot = grab_monster_spot(mon, rand.pick(R.areas), reqs)
-		end
+
+        -- if it still doesn't fit... just grab a random spot, damn it
+        if not spot then
+          spot = grab_monster_spot(mon, rand.pick(R.areas), reqs)
+        end
       end
 
       -- if it did not fit (e.g. too large), try a backup
@@ -2130,8 +2131,6 @@ gui.debugf("   doing spot : Mon=%s\n", tostring(mon))
           spot = grab_monster_spot(mon, R.guard_chunk, reqs)
         end
       end
-
-      gui.printf(table.tostr(spot))
 
       if not spot then
         if LEVEL.is_procedural_gotcha and PARAM.boss_gen then

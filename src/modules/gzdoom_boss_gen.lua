@@ -613,8 +613,11 @@ class bossabilitygiver_bounce : bossabilitygiver { }
 
 BOSS_GEN_TUNE.TAUNTS =
 {
+  -- Scionox
 	["YOU CANNOT HANDLE THE POWER OF THE INFINITE HELL"] = 50
   ["YOU ARE DOOMED!"] = 50
+
+  -- MSSP
   ["YOUR SOUL WILL BE MINE"] = 50
   ["AH. FRESH MEAT"] = 50
   ["HELL IS INFINITE"] = 50
@@ -655,19 +658,63 @@ BOSS_GEN_TUNE.TAUNTS =
   ["I HUNGER."] = 50
   ["I THIRST FOR MORTAL FLESH AND BLOOD"] = 50
 
-  ["I wasn't supposed to be here today"] = 10
-  ["You wanna go, bro? You wanna go?"] = 10
+  ["I wasn't supposed to be here today"] = 10 -- rare
+  ["You wanna go, bro? You wanna go?"] = 10 -- rare
+
+  -- Beed28
+  ["A MAN LIKE YOU IS NOTHING BUT A MISERABLE PILE OF SECRETS"] = 50
+  ["WELCOME... TO DIE!"] = 50
+
+  -- Craneo
+  ["SMASH. TIME TO SMASH!"] = 50
+  ["GREETINGS, MORTAL. ARE YOU READY TO DIE?"] = 50
+  ["WE HAVE SUCH SIGHTS TO SHOW YOU"] = 50
+  ["WE WILL TEAR YOUR SOUL APART"] = 50
+  ["YOUR SUFFERING WILL BE LEGENDARY, EVEN IN HELL!"] = 50
+  ["IT WAS ME WHO RUINED THE TOILETS!!!"] = 10 -- rare
+
+  ["PAIN HAS A FACE. I WILL SHOW IT TO YOU."] = 50
+  ["WELCOME TO YOUR DEATH, MORTAL!"] = 50
+  ["DID YOU HOPE TO ACCOMPLISH ANYTHING BY COMING HERE?"] = 50
+  ["ONLY SUFFERING AND PAIN AWAITS YOU FURTHER ON"] = 50
+  ["YOUR JOURNEY IS FUTILE. YOU WILL DIE AND YOU SOUL WILL BE MINE."] = 50
+
+  ["THERE IS NO ESCAPE"] = 50
+  ["DEATH IS NOT YOUR END. YOUR SOUL WILL BURN IN HELL FOREVER."] = 50
+  ["EVERY STEP TAKEN BRINGS YOUR SOUL CLOSER TO ME"] = 50
+
+  -- Tapwave
+  ["YOU WILL NEVER FIND WHAT YOU SEEK. IT IS TRAPPED IN HELL FOREVER."] = 50
+
+  -- Demios
+  ["YOU? HERE?! ARGH! INCOMPETENTS ALL OF THEM!"] = 50
+  ["WHEN I'M DONE WITH YOU, I WILL SEE TO YOUR ETERNAL SUFFERING"] = 50
+  ["YOU DARE INTERFERE, MORTAL?"] = 50
+  ["YOU WILL RELIVE THIS NIGHTMARE FOREVER"] = 50
+
+  -- EpicTyph
+  ["YOUR KIND ARE OVER"] = 50
+
+  -- Mogwaltz
+  ["HOW MANY OF YOUR MISBEGOTTEN KIND I MUST SQUASH?"] = 50
+
+  -- Frozsoul
+  ["ALL YOUR BASE ARE BELONG TO US"] = 10 -- rare
 }
 
 BOSS_GEN_TUNE.DEATHS =
 {
-  ["GRAAAAAHHH!!"] = 50
-  ["GRRRRHHHHH!"] = 50
+  -- Scionox
   ["NOOOO, I SHALL RETURN!!!"] = 50
   ["NOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO!"] = 50
+
+  -- MSSP
+  ["GRAAAAAHHH!!"] = 50
+  ["GRRRRHHHHH!"] = 50
   ["THIS IS NOT THE END, MORTAL"] = 50
   ["THIS IS NOT OVER, MORTAL"] = 50
   ["HELL WILL NOT FORGIVE"] = 50
+
   ["HELL'S CHAMPIONS SHALL RISE WHERE I FALL"] = 50
   ["DESTROYING ME DOES NOT DESTROY HELL"] = 50
   ["HELL STILL REIGNS ETERNAL"] = 50
@@ -675,6 +722,11 @@ BOSS_GEN_TUNE.DEATHS =
 
   ["And I thought I was retiring tomorrow"] = 5
   ["MY LUNCH!"] = 5
+
+  -- Craneo
+  ["CURSE YOU AND YOUR DESCENDANTS!"] = 50
+  ["NOT EVEN THE PITS OF HELL WILL CONTAIN MY REVENGE"] = 50
+  ["YOU ARE NOW WORTHY OF FIGHTING MY MASTER"] = 50
 }
 
 BOSS_GEN_TUNE.TRAITS =
@@ -754,21 +806,27 @@ end
 
 function BOSS_GEN_TUNE.grab_random_trait(btype)
   local traits = {}
+
   each name,info in BOSS_GEN_TUNE.TRAITS do
     local tprob
     if btype == "melee" and info.probmele > 0 then
-	  tprob = info.probmele
-	  tprob = tprob * ((info.difffact-1.0 * PARAM.boss_gen_dmult)+1)
-	elseif btype == "hitscan" and info.probscan > 0 then
-	  tprob = info.probscan
-	  tprob = tprob * ((info.difffact-1.0 * PARAM.boss_gen_dmult)+1)
-	elseif btype == "missile" and info.probmisl > 0 then
-	  tprob = info.probmisl
-	  tprob = tprob * ((info.mislfact-1.0 * PARAM.boss_gen_dmult)+1)
-	end
-	traits[info.name] = tprob
+      tprob = info.probmele
+      tprob = tprob * ((info.difffact-1.0 * PARAM.boss_gen_dmult)+1)
+    elseif btype == "hitscan" and info.probscan > 0 then
+      tprob = info.probscan
+      tprob = tprob * ((info.difffact-1.0 * PARAM.boss_gen_dmult)+1)
+    elseif btype == "missile" and info.probmisl > 0 then
+      tprob = info.probmisl
+      tprob = tprob * ((info.mislfact-1.0 * PARAM.boss_gen_dmult)+1)
+    end
+
+    traits[info.name] = tprob
+
+
   end
+
   local trait = rand.key_by_probs(traits)
+
   return trait
 end
 
@@ -780,6 +838,13 @@ function BOSS_GEN_TUNE.syntaxize(str, str2)
     final = str .. ",\n" .. str2
   end
   return final
+end
+
+function BOSS_GEN_TUNE.check_gotchas_enabled()
+  if PARAM.is_procedural_gotcha == "none"
+  and PARAM.boss_gen then
+    error("Procedural gotchas must be enabled for boss generator!")
+  end
 end
 
 function BOSS_GEN_TUNE.setup(self)
@@ -841,8 +906,9 @@ function BOSS_GEN_TUNE.all_done()
   local bsummon = ""
   local btype = ""
 
-  if PARAM.boss_count == 1 then
-    error("Boss generator requires procedural gotchas enabled to work!")
+  if PARAM.boss_count <= 1 then
+    -- nothing happens and everyone is just sad
+    return
   end
 
   scripty = string.gsub(scripty, "LEVELCODE", PARAM.lvlstr)
@@ -957,6 +1023,7 @@ OB_MODULES["gzdoom_boss_gen"] =
   hooks =
   {
     setup = BOSS_GEN_TUNE.setup
+    begin_level = BOSS_GEN_TUNE.check_gotchas_enabled
 	  end_level = BOSS_GEN_TUNE.end_lvl
 	  all_done = BOSS_GEN_TUNE.all_done
   }
