@@ -1529,21 +1529,21 @@ function Monster_fill_room(R)
   local function mon_fits(mon, spot, fat)
     local info  = GAME.MONSTERS[mon] or
                   GAME.ENTITIES[mon]
-
-    if fat then
+	local rr = info.r
+    if fat and info.health < 2000 then
       if info.r < 48 then
-        info.r = info.r * 2
+        rr = info.r * 2
       else
-        info.r = info.r * 1.5
+        rr = info.r * 1.5
       end
     end
-
+	
     if info.h >= (spot.z2 - spot.z1) then return 0 end
 
     local w, h = geom.box_size(spot.x1, spot.y1, spot.x2, spot.y2)
 
-    w = int(w / info.r / 2)
-    h = int(h / info.r / 2)
+    w = int(w / rr / 2)
+    h = int(h / rr / 2)
 
     return w * h
   end
@@ -1682,7 +1682,7 @@ function Monster_fill_room(R)
 
     -- pick the best and remove it from the list
     local spot = table.pick_best(R.mon_spots, spot_compare, "remove")
-
+	
     if not near_to then
       R.last_spot_section = spot.section
     end
@@ -2134,7 +2134,7 @@ gui.debugf("   doing spot : Mon=%s\n", tostring(mon))
 
       if not spot then
         if LEVEL.is_procedural_gotcha and PARAM.boss_gen then
-          error("Cannot place generated boss")
+          error("Cannot place generated boss based on " .. bf.mon .. "\n")
         else
           gui.printf("WARNING!! Cannot place boss monster: \n" ..
           bf.mon .. "\n")
