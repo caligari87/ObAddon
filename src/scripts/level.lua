@@ -280,7 +280,9 @@ function Episode_determine_map_sizes()
       else
         W = 26
       end
-
+      if LEV.is_procedural_gotcha == true and PARAM.boss_gen then
+	    W = 16
+	  end
       H = W
     end
 
