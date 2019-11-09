@@ -909,6 +909,8 @@ function BOSS_GEN_TUNE.all_done()
 
   if PARAM.boss_count <= 1 then
     -- nothing happens and everyone is just sad
+	warning("No procedural gotchas found by boss generator")
+	PARAM.boss_count = -1
     return
   end
 
