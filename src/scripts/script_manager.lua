@@ -44,7 +44,7 @@ function ScriptMan_assemble_mapinfo_lump()
       "gameinfo\n",
       "{\n",
   }
-  if PARAM.boss_gen then
+  if PARAM.boss_count > 1 then
     table.insert(mapinfo_lines, 'addeventhandlers = "BossGenerator_Handler"\n')
   end
   if PARAM.custom_quit_messages == "yes" then
@@ -64,7 +64,7 @@ end
 
 function ScriptMan_assemble_zscript_lump()
   local zscript_lines = 'version "3.3"\n'
-  if PARAM.boss_gen then
+  if PARAM.boss_count > 1 then
     zscript_lines = zscript_lines .. PARAM.BOSSSCRIPT
   end
   if PARAM.custom_trees == "zs" then

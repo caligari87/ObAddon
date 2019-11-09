@@ -842,7 +842,7 @@ function BOSS_GEN_TUNE.syntaxize(str, str2)
 end
 
 function BOSS_GEN_TUNE.check_gotchas_enabled()
-  if PARAM.is_procedural_gotcha == "none"
+  if OB_CONFIG.procedural_gotchas == "none"
   and PARAM.boss_gen then
     error("Procedural gotchas must be enabled for boss generator!")
   end
