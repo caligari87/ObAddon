@@ -636,7 +636,7 @@ class bossabilitygiver_bounce : bossabilitygiver { }
 BOSS_GEN_TUNE.TAUNTS =
 {
   -- Scionox
-    ["YOU CANNOT HANDLE THE POWER OF THE INFINITE HELL"] = 50
+  ["YOU CANNOT HANDLE THE POWER OF THE INFINITE HELL"] = 50
   ["YOU ARE DOOMED!"] = 50
 
   -- MSSP
@@ -679,9 +679,25 @@ BOSS_GEN_TUNE.TAUNTS =
   ["I CANNOT WAIT TO WEAR YOU FLESH, DOOMSLAYER!"] = 50
   ["I HUNGER."] = 50
   ["I THIRST FOR MORTAL FLESH AND BLOOD"] = 50
+  ["THE DEATH OF ALL THINGS IS NIGH"] = 50
+
+  ["YOU ARE BUT A MORTAL IN THE WRONG PLACE. I WILL SHOW YOU WHY."] = 50
+  ["THIS IS NO PLACE FOR A HERO"] = 50
+  ["NO GODS OR KINGS. ONLY HELL AND BEYOND."] = 50
+  ["THE WORLD FEARS ITS INEVITABLE DEMISE. AND ME."] = 50
+  ["THERE IS NO SALVATION FOR THE WICKED. YOU AND ME."] = 50
+
+  ["LONG WILL BE YOUR SUFFERING. JOYOUS WILL BE YOUR PAIN."] = 50
+  ["I AM THE DESTROYER OF WORLDS."] = 50
+  ["I WILL ANOINT MY BLADES WITH YOUR BLOOD"] = 50
+  ["A LITTLE FLEA. I AM INCLINED TO SCRATCH."] = 50
+  ["FOOLISH CUR. THE DARKNESS SURROUNDS YOU."] = 50
+
+  ["THE WORLD BURNS AND YOU WILL BE AMONG THE ASHES"] = 50
 
   ["I wasn't supposed to be here today"] = 10 -- rare
   ["You wanna go, bro? You wanna go?"] = 10 -- rare
+  ["Never gonna give you up, never gonna let you down"] = 10 --rare
 
   -- Beed28
   ["A MAN LIKE YOU IS NOTHING BUT A MISERABLE PILE OF SECRETS"] = 50
@@ -723,6 +739,10 @@ BOSS_GEN_TUNE.TAUNTS =
 
   -- Frozsoul
   ["ALL YOUR BASE ARE BELONG TO US"] = 10 -- rare
+
+  -- retxirT
+  ["WHY MUST I DO EVERYTHING MYSELF?"] = 50
+  ["YOUR STAY OF EXECUTION IS OVER. I HAVE COME TO DELIVER."] = 50
 }
 
 BOSS_GEN_TUNE.DEATHS =
@@ -831,7 +851,9 @@ function BOSS_GEN_TUNE.grab_random_trait(btype)
   local traits = {}
 
   each name,info in BOSS_GEN_TUNE.TRAITS do
+
     local tprob
+
     if btype == "melee" and info.probmele > 0 then
       tprob = info.probmele
       tprob = tprob * ((info.difffact-1.0 * PARAM.boss_gen_dmult)+1)
@@ -844,7 +866,6 @@ function BOSS_GEN_TUNE.grab_random_trait(btype)
     end
 
     traits[info.name] = tprob
-
 
   end
 
@@ -952,54 +973,52 @@ function BOSS_GEN_TUNE.all_done()
 
   for name,info in pairs(PARAM.boss_types) do
     local bhp = info.health
-      local batk = info.attack
+    local batk = info.attack
     btrait = BOSS_GEN_TUNE.syntaxize(btrait,BOSS_GEN_TUNE.grab_random_trait(batk))
     btrait = BOSS_GEN_TUNE.syntaxize(btrait,BOSS_GEN_TUNE.grab_random_trait(batk))
     btrait = BOSS_GEN_TUNE.syntaxize(btrait,BOSS_GEN_TUNE.grab_random_trait(batk))
 
-  if(bhp<2000) then
+    if(bhp<2000) then
       btrait2 = BOSS_GEN_TUNE.syntaxize(btrait2,BOSS_GEN_TUNE.grab_random_trait(batk))
     else
       btrait2 = BOSS_GEN_TUNE.syntaxize(btrait2,'"bossabilitygiver_nothing"')
     end
 
-  if(bhp<300) then
+    if(bhp<300) then
       btrait3 = BOSS_GEN_TUNE.syntaxize(btrait3,BOSS_GEN_TUNE.grab_random_trait(batk))
     else
       btrait3 = BOSS_GEN_TUNE.syntaxize(btrait3,'"bossabilitygiver_nothing"')
     end
 
-  local batkx = "\"" .. batk .. "\""
+    local batkx = "\"" .. batk .. "\""
 
-  btype = BOSS_GEN_TUNE.syntaxize(btype,batkx)
+    btype = BOSS_GEN_TUNE.syntaxize(btype,batkx)
 
-  local mult
+    local mult
     local hpcalc
 
-  if bhp<300 then mult=1.5
+    if bhp<300 then mult=1.5
     elseif bhp<1000 then mult=1.3
     elseif bhp<2000 then mult=1.1
     else mult=1.0 end
 
-  hpcalc = rand.pick({5000,5200,5400,5600,5800,6000})*mult*PARAM.boss_gen_mult
+    hpcalc = rand.pick({5000,5200,5400,5600,5800,6000})*mult*PARAM.boss_gen_mult
 
-  if batk == "hitscan" then
-      hpcalc = hpcalc*0.75
-    end
+    if batk == "hitscan" then hpcalc = hpcalc*0.75 end
 
-  bhealth = BOSS_GEN_TUNE.syntaxize(bhealth,hpcalc)
+    bhealth = BOSS_GEN_TUNE.syntaxize(bhealth,hpcalc)
 
-  local sumcalc
+    local sumcalc
     local dmult
 
-  if PARAM.boss_gen_dmult < 0 then
+    if PARAM.boss_gen_dmult < 0 then
       dmult = 1.5
     else
       dmult = 1.0 - (0.25*(PARAM.boss_gen_dmult-1))
-  end
+    end
 
     sumcalc = rand.pick({400,450,500,550,600})*dmult
-  bsummon = BOSS_GEN_TUNE.syntaxize(bsummon,sumcalc)
+    bsummon = BOSS_GEN_TUNE.syntaxize(bsummon,sumcalc)
 
   end
 
@@ -1025,15 +1044,15 @@ function BOSS_GEN_TUNE.all_done()
     end
 
     local line = "BOSS_NAME" .. i .. ' = "' .. demon_name .. '";\n'
-      table.insert(PARAM.BOSSLANG, line)
+    table.insert(PARAM.BOSSLANG, line)
 
     local taunt = BOSS_GEN_TUNE.grab_random_taunt()
-      line = "BOSS_TAUNT" .. i .. ' = "' .. demon_name .. ": " .. taunt .. '";\n'
-      table.insert(PARAM.BOSSLANG, line)
+    line = "BOSS_TAUNT" .. i .. ' = "' .. demon_name .. ": " .. taunt .. '";\n'
+    table.insert(PARAM.BOSSLANG, line)
 
     local dead = BOSS_GEN_TUNE.grab_random_death()
-      line = "BOSS_DEATH" .. i .. ' = "' .. demon_name .. ": " .. dead .. '";\n'
-      table.insert(PARAM.BOSSLANG, line)
+    line = "BOSS_DEATH" .. i .. ' = "' .. demon_name .. ": " .. dead .. '";\n'
+    table.insert(PARAM.BOSSLANG, line)
   end
 end
 
@@ -1049,8 +1068,8 @@ OB_MODULES["gzdoom_boss_gen"] =
   {
     setup = BOSS_GEN_TUNE.setup
     begin_level = BOSS_GEN_TUNE.check_gotchas_enabled
-      end_level = BOSS_GEN_TUNE.end_lvl
-      all_done = BOSS_GEN_TUNE.all_done
+    end_level = BOSS_GEN_TUNE.end_lvl
+    all_done = BOSS_GEN_TUNE.all_done
   }
 
   tooltip=_(
@@ -1102,6 +1121,5 @@ OB_MODULES["gzdoom_boss_gen"] =
       default = "yes",
       tooltip = "If enabled, encountering a boss will start boss theme music.",
     }
-
   }
 }
