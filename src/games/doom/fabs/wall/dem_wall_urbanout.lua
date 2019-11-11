@@ -27,7 +27,7 @@ PREFABS.Wall_trash1 =
   x_fit = "frame"
   z_fit = "top"
 
-  tex_FLAT5_8 =
+  flat_FLAT5_8 =
   {
     FLAT5_8 = 50
     SLIME05 = 50
@@ -65,7 +65,7 @@ PREFABS.Wall_trash2 =
   x_fit = "frame"
   z_fit = "top"
 
-  tex_FLAT5_8 =
+  flat_FLAT5_8 =
   {
     FLAT5_8 = 50
     SLIME05 = 50
@@ -103,7 +103,7 @@ PREFABS.Wall_trash3 =
   x_fit = "frame"
   z_fit = "top"
 
-  tex_FLAT5_8 =
+  flat_FLAT5_8 =
   {
     FLAT5_8 = 50
     SLIME05 = 50
@@ -195,7 +195,7 @@ PREFABS.Wall_doorstopstep =
   x_fit = "frame"
   z_fit = "top"
 
-  tex_DOOR3 =
+  flat_DOOR3 =
   {
     DOOR1 = 50
     DOOR3 = 50
@@ -229,7 +229,7 @@ PREFABS.Wall_doorstep =
   x_fit = "frame"
   z_fit = "top"
 
-  tex_DOOR3 =
+  flat_DOOR3 =
   {
     DOOR1 = 50
     DOOR3 = 50
