@@ -5202,8 +5202,8 @@ GROW_WIDE_SPACE_DEPRESSION =
 
 GROW_WIDE_SPACE_CATWALK_PLAIN =
 {
-  prob = 75
-  skip_prob = 10
+  prob = 50
+  skip_prob = 35
 
   group = "catwalk"
   group_pos = "entry"
@@ -5215,14 +5215,15 @@ GROW_WIDE_SPACE_CATWALK_PLAIN =
     "....","1AA1"
     "....","1AA1"
     "....","1^^1"
-    "1111","1111"
+    "....","1111"
+    "x11x","x11x"
   }
 }
 
 GROW_WIDE_SPACE_CATWALK_TALL_PLAIN =
 {
-  prob = 75
-  skip_prob = 10
+  prob = 50
+  skip_prob = 35
 
   group = "catwalk"
   group_pos = "entry"
@@ -5235,14 +5236,15 @@ GROW_WIDE_SPACE_CATWALK_TALL_PLAIN =
     "....","1AA1"
     "....","1^^1"
     "....","1^^1"
-    "1111","1111"
+    "....","1111"
+    "x11x","x11x"
   }
 }
 
 GROW_WIDE_SPACE_PLATFORM_TINY =
 {
-  prob = 75
-  skip_prob = 10
+  prob = 50
+  skip_prob = 35
 
   group = "catwalk"
 
@@ -5255,13 +5257,14 @@ GROW_WIDE_SPACE_PLATFORM_TINY =
     "....","1AA1"
     "....","1AA1"
     "....","1>A1"
-    "1111","1111"
+    "....","1111"
+    "x11x","x11x"
   }
 }
 
 GROW_WIDE_SPACE_CATWALK_STRAIGHT =
 {
-  prob = 100
+  prob = 60
 
   group = "catwalk"
 
@@ -5309,7 +5312,7 @@ GROW_WIDE_SPACE_CATWALK_EXTRUDE_3X =
 
 GROW_WIDE_SPACE_CATWALK_CURVE =
 {
-  prob = 45
+  prob = 25
 
   group = "catwalk"
 
@@ -5332,7 +5335,7 @@ GROW_WIDE_SPACE_CATWALK_CURVE =
 
 GROW_WIDE_SPACE_CATWALK_STRAIGHT_3X =
 {
-  prob = 50
+  prob = 20
 
   group = "catwalk"
 
@@ -5348,7 +5351,7 @@ GROW_WIDE_SPACE_CATWALK_STRAIGHT_3X =
 
 GROW_WIDE_SPACE_CATWALK_STRAIGHT_4X =
 {
-  prob = 50
+  prob = 20
 
   group = "catwalk"
 
@@ -5364,7 +5367,7 @@ GROW_WIDE_SPACE_CATWALK_STRAIGHT_4X =
 
 GROW_WIDE_SPACE_CATWALK_CAPPER_3X =
 {
-  prob = 25
+  prob = 15
 
   env = "!cave"
 
@@ -5384,7 +5387,7 @@ GROW_WIDE_SPACE_CATWALK_CAPPER_3X =
 
 GROW_WIDE_SPACE_CATWALK_CAPPER_4X =
 {
-  prob = 25
+  prob = 10
 
   env = "!cave"
 
@@ -8082,7 +8085,7 @@ GROW_CLIFF_EXTENSION_X2_UPPER_WE_GO =
 
 GROW_CLIFF_EXTENSION_CURVE_X2 =
 {
-  prob = 85
+  prob = 40
   skip_prob = 10
 
   group = "cliff"
@@ -8169,7 +8172,7 @@ GROW_CLIFF_EXTENSION_NEW_AREA_INWARD_X2 =
 
 GROW_CLIFF_ENTRY_X4 =
 {
-  prob = 150
+  prob = 80
   skip_prob = 15
 
   group = "cliff_x4"
@@ -8189,7 +8192,7 @@ GROW_CLIFF_ENTRY_X4 =
 
 GROW_CLIFF_ENTRY_SIDEWAYS_X4 =
 {
-  prob = 150
+  prob = 80
   skip_prob = 15
 
   group = "cliff_x4"
@@ -8208,7 +8211,7 @@ GROW_CLIFF_ENTRY_SIDEWAYS_X4 =
 
 GROW_CLIFF_STRAIGHT_X4 =
 {
-  prob = 150
+  prob = 50
   skip_prob = 15
 
   group = "cliff_x4"
@@ -8223,7 +8226,7 @@ GROW_CLIFF_STRAIGHT_X4 =
 
 GROW_CLIFF_STRAIGHT_X4_STAIR =
 {
-  prob = 85
+  prob = 40
   skip_prob = 15
 
   group = "cliff_x4"
@@ -8239,7 +8242,7 @@ GROW_CLIFF_STRAIGHT_X4_STAIR =
 
 GROW_CLIFF_STRAIGHT_X4_LONG =
 {
-  prob = 100
+  prob = 50
   skip_prob = 15
 
   group = "cliff_x4"

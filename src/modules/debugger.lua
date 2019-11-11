@@ -162,5 +162,15 @@ OB_MODULES["debugger"] =
       default="all"
       priority=96
     }
+
+    shape_rule_stats =
+    {
+      name = "shape_rule_stats"
+      label = _("Shape Rule Stats")
+      choices=DEBUG_CONTROL.YES_NO
+      tooltip = "Displays usage statistics for shape grammar rules."
+      default = "no"
+      priority=95
+    }
   }
 }

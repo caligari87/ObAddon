@@ -19,6 +19,7 @@
 --
 ------------------------------------------------------------------------
 
+GROWER_DEBUG_INFO = {} -- MSSP: table for containing details about growth statistics
 
 function Grower_preprocess_grammar()
 
@@ -726,10 +727,18 @@ function Grower_preprocess_grammar()
 
       each name,cur_def in grammar do
 
-        PARAM.shape_rule_count = PARAM.shape_rule_count + 1 -- debug counter for amount of shape rules read
-
         if cur_def.is_processed then continue end
         cur_def.is_processed = true
+
+        PARAM.shape_rule_count = PARAM.shape_rule_count + 1 -- debug counter for amount of shape rules read
+
+        -- instantiate debug stats for growth
+        GROWER_DEBUG_INFO[cur_def.name] =
+        {
+          name = cur_def.name
+          applied = 0
+          trials = 0
+        }
 
         gui.debugf("processing: %s\n", name)
 
@@ -3063,6 +3072,8 @@ end
       gui.printf("  Trying rule '%s'...\n", cur_rule.name)
     end
 
+    GROWER_DEBUG_INFO[cur_rule.name].trials = GROWER_DEBUG_INFO[cur_rule.name].trials + 1
+
     best = { score=-1, areas={} }
 
     -- no need to mirror a symmetrical pattern
@@ -3369,6 +3380,9 @@ end
     if PARAM.print_shape_steps != "no" then
       gui.printf("APPLIED rule: " .. cur_rule.name .. " in ROOM_" .. R.id.. "\n")
     end
+
+    -- debug statistics
+    GROWER_DEBUG_INFO[cur_rule.name].applied = GROWER_DEBUG_INFO[cur_rule.name].applied + 1
 
     if PARAM.live_minimap == "step" then
       Seed_draw_minimap()
@@ -4574,6 +4588,37 @@ function Grower_create_rooms()
   -- debugging aid
   if OB_CONFIG.svg then
     Seed_save_svg_image("grow_" .. OB_CONFIG.seed .. "_" .. LEVEL.name .. ".svg")
+  end
+
+  if PARAM.shape_rule_stats == "yes" then
+    table.sort(GROWER_DEBUG_INFO, function(A,B)
+    return (A.trials > B.trials) end)
+
+    gui.printf("\n--==| Shape Rule Statistics |==--\n" ..
+    "NAME: APPLY COUNT / TRIAL COUNT : USE PROBABILITY\n")
+    each rule, info in GROWER_DEBUG_INFO do
+
+      local cur_prob = SHAPE_GRAMMAR[info.name].use_prob
+
+      gui.printf(info.name .. ": ")
+      if info.trials > 0 then
+        gui.printf(info.applied .. " / " .. info.trials)
+        gui.printf(" : " .. cur_prob)
+      elseif info.trials == 0 then
+        gui.printf(cur_prob .. " ***UNUSED***")
+      end
+
+
+      if SHAPE_GRAMMAR[info.name].is_absurd then
+        gui.printf(" (ABSURD)")
+      end
+
+      if info.trials > 0 and info.applied == 0 then
+        gui.printf(" (!!!)")
+      end
+
+      gui.printf("\n")
+    end
   end
 
   Seed_draw_minimap()
