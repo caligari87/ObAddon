@@ -71,7 +71,7 @@ class BossGenerator_Handler : EventHandler
     Override void WorldThingSpawned(WorldEvent e)
     {
         if(!bossEnabled) return;
-        if( e.Thing && e.Thing.bMISSILE && e.Thing.GetMissileDamage(7,1)>0 && e.Thing.Target && e.Thing.Target.CountInv("bossabilitygiver_boss") )
+        if( e.Thing && e.Thing.bMISSILE && e.Thing.GetMissileDamage(7,1)>0 && e.Thing.Target && e.Thing.Target.CountInv("bossabilitygiver_boss") && e.Thing.GetClassname() != "BossSpook" )
         {
             ThinkerIterator BossFinder = ThinkerIterator.Create("bossController");
             bossController mo;
@@ -124,6 +124,17 @@ class BossGenerator_Handler : EventHandler
                 misl.power = e.Thing.Target.CountInv("bossabilitygiver_pyro");
             }
         }
+		if( e.Thing && e.Thing.bMISSILE && e.Thing.Target && e.Thing.Target.Target && e.Thing.Target.CountInv("bossabilitygiver_homing") )
+		{
+			e.Thing.bSEEKERMISSILE = true;
+			let misl2 = BossHomingThinker(new("BossHomingThinker"));
+			if(misl2)
+			{
+				misl2.missile = e.Thing;
+				e.Thing.tracer = e.Thing.Target.Target;
+				misl2.power = e.Thing.Target.CountInv("bossabilitygiver_homing");
+			}
+		}
         if(level.time > 1) return;
         if( e.Thing && e.Thing.bISMONSTER && IsBoss(e.Thing) )
         {
@@ -154,6 +165,35 @@ class BossGenerator_Handler : EventHandler
             e.Thing.Destroy();
         }
     }
+	Override void WorldThingDamaged(WorldEvent e)
+	{
+		if(!bossEnabled) return;
+		if(e.thing && e.thing.bISMONSTER && e.thing.CountInv("bossabilitygiver_deflection") && e.DamageSource && e.Inflictor && !e.Inflictor.bMISSILE)
+		{
+			ThinkerIterator BossFinder = ThinkerIterator.Create("bossController");
+			bossController mo;
+			int ang;
+			while(mo = bossController(BossFinder.Next()))
+			{
+				ang=mo.boss.AngleTo(e.DamageSource);
+				if(e.thing.CountInv("bossabilitygiver_deflection")==3)
+				{
+					ang=ang+random(-10,10);
+				}
+				else if(e.thing.CountInv("bossabilitygiver_deflection")==2)
+				{
+					ang=ang+random(-45,45);
+				}
+				else if(e.thing.CountInv("bossabilitygiver_deflection")==1)
+				{
+					ang=ang+random(-60,60);
+					if(ang > -5 && ang < 0) {ang=-5;}
+					if(ang < 5 && ang > 0) {ang=5;}
+				}
+				mo.SpawnMarkedProjectile("BossBDeflect",ang);
+			}
+		}
+	}
     override void WorldTick()
     {
         if(!bossEnabled) return;
@@ -207,6 +247,8 @@ class bossController : thinker
     string FProj;
     string LProj;
     int prevhealth;
+	int reflect;
+	bool spooky;
     static const class<inventory> abil[] =
     {
         TRAITS
@@ -332,6 +374,30 @@ class bossController : thinker
         }
         if(boss)
         {
+			if(boss.CountInv("bossabilitygiver_spook") && !spooky && bossactive)
+			{
+				spooky = true;
+				SpawnMarkedProjectile("BossSpook",0);
+			}
+			if(boss.CountInv("bossabilitygiver_deflection"))
+			{
+				if(boss.CountInv("bossabilitygiver_deflection") == 1 && reflect < 1)
+				{
+					boss.bREFLECTIVE = true;
+					reflect++;
+				}
+				if(boss.CountInv("bossabilitygiver_deflection") == 2 && reflect < 2)
+				{
+					boss.bMIRRORREFLECT = true;
+					reflect++;
+				}
+				if(boss.CountInv("bossabilitygiver_deflection") == 3 && reflect < 3)
+				{
+					boss.bMIRRORREFLECT = false;
+					boss.bAIMREFLECT = true;
+					reflect++;
+				}
+			}
             if(boss.target && !bossactive)
             {
                 bossactive = true;
@@ -472,12 +538,12 @@ class bossController : thinker
 }
 
 class BossPyroThinker : Thinker
-    {
+{
     actor missile;
     int power;
     int fx;
     override void Tick()
-        {
+    {
         super.Tick();
         if(fx>0)
         {
@@ -489,7 +555,7 @@ class BossPyroThinker : Thinker
             fx=5;
         }
         if(missile && missile.InStateSequence(missile.CurState, missile.ResolveState("Death")))
-            {
+        {
             actor fire;
             BossPyroSpreadFire truefire;
             bool fireb;
@@ -503,13 +569,41 @@ class BossPyroThinker : Thinker
             missile.A_Explode(missile.GetMissileDamage(7,1)/2,128);
             missile.A_PlaySound("weapons/rocklx");
             self.Destroy();
-            }
+        }
         if(!missile)
         {
             self.Destroy();
         }
-        }
     }
+}
+
+class BossHomingThinker : Thinker
+{
+	actor missile;
+	int power;
+	int fx;
+	override void Tick()
+	{
+		super.Tick();
+		if(fx>0)
+		{
+			fx--;
+		}
+		if(missile && fx==0)
+		{
+			missile.A_SpawnItemEx("BulletPuff", flags:SXF_NOCHECKPOSITION);
+			fx=2;
+			if(missile && !missile.InStateSequence(missile.CurState, missile.ResolveState("Death")))
+			{
+				missile.A_SeekerMissile(1,3*power);
+			}
+		}
+		if(!missile)
+		{
+			self.Destroy();
+		}
+	}
+}
 
 class BossPyroFire : Actor
 {
@@ -556,6 +650,75 @@ class BossPyroSpreadFire : BossPyroFire
     }
 }
 
+class BossBDeflect : Actor
+{
+	Default
+	{
+		Radius 6;
+		Height 8;
+		Speed 20;
+		Damage 3;
+		Projectile;
+		RenderStyle "Add";
+		Alpha 1;
+	}
+	States
+	{
+	Spawn:
+		PUFF A 4 BRIGHT;
+		Loop;
+	Death:
+		PUFF BCDE 6 BRIGHT;
+		Stop;
+	}
+}
+
+class BossSpook : Actor
+{
+	int power;
+	Default
+	{
+		+NOBLOCKMAP +NOGRAVITY +DROPOFF +NOCLIP +SEEKERMISSILE
+		Radius 6;
+		Height 8;
+		Speed 5;
+		Damage 3;
+		Projectile;
+		RenderStyle "Add";
+		Alpha 0.5;
+		Scale 1.5;
+	}
+	States
+	{
+	Spawn:
+		SKUL CD 4 BRIGHT;
+		Loop;
+	Death:
+		SKUL FGHIJK 6 BRIGHT;
+		Stop;
+	}
+	override void Tick()
+	{
+		super.Tick();
+		if(target && target.health > 0)
+		{
+			power = target.CountInv("bossabilitygiver_spook");
+			tracer = target.target;
+			A_Explode(1,32,0,0,32);
+			A_SeekerMissile(1,3*power);
+			Speed=8+(3*(power-1));
+		}
+		else
+		{
+			if(power < 4)
+			{
+				SetState(FindState("Death",true));
+				power = 4;
+			}
+		}
+	}
+}
+
 class bossabilitygiver : Inventory
 {
     default
@@ -596,6 +759,8 @@ class bossabilitygiver_boss : bossabilitygiver { }
 //passive
 class bossabilitygiver_speed : bossabilitygiver { }
 class bossabilitygiver_dmgshot : bossabilitygiver { }
+class bossabilitygiver_deflection : bossabilitygiver { }
+class bossabilitygiver_spook : bossabilitygiver { }
 //major cooldown
 class bossabilitygiver_teleport : bossabilitygiver { }
 class bossabilitygiver_pcircle : bossabilitygiver { }
@@ -603,6 +768,7 @@ class bossabilitygiver_pcircle : bossabilitygiver { }
 class bossabilitygiver_spread : bossabilitygiver { }
 class bossabilitygiver_pyro : bossabilitygiver { }
 class bossabilitygiver_bounce : bossabilitygiver { }
+class bossabilitygiver_homing : bossabilitygiver { }
 ]]
   BAR = [[if(bossFound)
         {
@@ -782,6 +948,7 @@ BOSS_GEN_TUNE.TRAITS =
         probmele = 90
         difffact = 1.1
         mislfact = 1.1
+		mindiff = -1
     }
     DMGSHOT =
     {
@@ -791,6 +958,7 @@ BOSS_GEN_TUNE.TRAITS =
         probmele = 50
         difffact = 1.2
         mislfact = 1.3
+		mindiff = 1
     }
     TELEPORT =
     {
@@ -800,6 +968,7 @@ BOSS_GEN_TUNE.TRAITS =
         probmele = 80
         difffact = 1.1
         mislfact = 1.1
+		mindiff = -1
     }
     PCIRCLE =
     {
@@ -809,15 +978,17 @@ BOSS_GEN_TUNE.TRAITS =
         probmele = 60
         difffact = 1.1
         mislfact = 1.3
+		mindiff = -1
     }
     SPREAD =
     {
         name = '"bossabilitygiver_spread"'
-        probmisl = 40
+        probmisl = 30
         probscan = 0
         probmele = 0
         difffact = 1.0
-        mislfact = 1.5
+        mislfact = 1.6
+		mindiff = -1
     }
     PYRO =
     {
@@ -827,15 +998,47 @@ BOSS_GEN_TUNE.TRAITS =
         probmele = 0
         difffact = 1.0
         mislfact = 1.3
+		mindiff = -1
     }
     BOUNCE =
     {
         name = '"bossabilitygiver_bounce"'
-        probmisl = 60
+        probmisl = 40
         probscan = 0
         probmele = 0
         difffact = 1.0
+        mislfact = 1.4
+		mindiff = 1
+    }
+    HOMING =
+    {
+        name = '"bossabilitygiver_homing"'
+        probmisl = 50
+        probscan = 0
+        probmele = 0
+        difffact = 1.0
+        mislfact = 1.4
+		mindiff = -1
+    }
+    DEFLECTION =
+    {
+        name = '"bossabilitygiver_deflection"'
+        probmisl = 20
+        probscan = 30
+        probmele = 40
+        difffact = 1.3
+        mislfact = 1.1
+		mindiff = 1
+    }
+	SPOOK =
+    {
+        name = '"bossabilitygiver_spook"'
+        probmisl = 40
+        probscan = 40
+        probmele = 30
+        difffact = 1.2
         mislfact = 1.2
+		mindiff = -1
     }
 }
 
@@ -847,24 +1050,45 @@ function BOSS_GEN_TUNE.grab_random_death()
   return rand.key_by_probs(BOSS_GEN_TUNE.DEATHS)
 end
 
-function BOSS_GEN_TUNE.grab_random_trait(btype)
+function BOSS_GEN_TUNE.grab_random_trait(btype, etraits)
   local traits = {}
 
   each name,info in BOSS_GEN_TUNE.TRAITS do
 
     local tprob
+	local stack = 0
 
     if btype == "melee" and info.probmele > 0 then
       tprob = info.probmele
-      tprob = tprob * ((info.difffact-1.0 * PARAM.boss_gen_dmult)+1)
+      tprob = tprob * (((info.difffact-1.0) * PARAM.boss_gen_dmult)+1)
     elseif btype == "hitscan" and info.probscan > 0 then
       tprob = info.probscan
-      tprob = tprob * ((info.difffact-1.0 * PARAM.boss_gen_dmult)+1)
+      tprob = tprob * (((info.difffact-1.0) * PARAM.boss_gen_dmult)+1)
     elseif btype == "missile" and info.probmisl > 0 then
       tprob = info.probmisl
-      tprob = tprob * ((info.mislfact-1.0 * PARAM.boss_gen_dmult)+1)
+      tprob = tprob * (((info.mislfact-1.0) * PARAM.boss_gen_dmult)+1)
     end
-
+	if(info.mindiff>PARAM.boss_gen_dmult) then
+	  tprob = 0
+	end
+	if etraits != nil then
+      each etrait,einfo in etraits do
+	    if einfo == info.name then
+		  stack = stack + 1
+		  if PARAM.boss_gen_dmult < 0 then
+		    tprob = int(tprob * 0.25)
+		  elseif PARAM.boss_gen_dmult > 1 then
+	        tprob = tprob * 2
+		  end
+	    end
+	  end
+	  if stack == 3 then
+	    tprob = 0
+	  end
+	end
+	if tprob == nil then
+	  tprob = 0
+	end
     traits[info.name] = tprob
 
   end
@@ -974,21 +1198,28 @@ function BOSS_GEN_TUNE.all_done()
   for name,info in pairs(PARAM.boss_types) do
     local bhp = info.health
     local batk = info.attack
-    btrait = BOSS_GEN_TUNE.syntaxize(btrait,BOSS_GEN_TUNE.grab_random_trait(batk))
-    btrait = BOSS_GEN_TUNE.syntaxize(btrait,BOSS_GEN_TUNE.grab_random_trait(batk))
-    btrait = BOSS_GEN_TUNE.syntaxize(btrait,BOSS_GEN_TUNE.grab_random_trait(batk))
-
-    if(bhp<2000) then
-      btrait2 = BOSS_GEN_TUNE.syntaxize(btrait2,BOSS_GEN_TUNE.grab_random_trait(batk))
+	local traitstack = {}
+	local ttrait
+	if(bhp<2000) then
+	  ttrait = BOSS_GEN_TUNE.grab_random_trait(batk,traitstack)
+	  table.insert(traitstack, ttrait)
+      btrait2 = BOSS_GEN_TUNE.syntaxize(btrait2,ttrait)
     else
       btrait2 = BOSS_GEN_TUNE.syntaxize(btrait2,'"bossabilitygiver_nothing"')
     end
 
     if(bhp<300) then
-      btrait3 = BOSS_GEN_TUNE.syntaxize(btrait3,BOSS_GEN_TUNE.grab_random_trait(batk))
+      ttrait = BOSS_GEN_TUNE.grab_random_trait(batk,traitstack)
+	  table.insert(traitstack, ttrait)
+      btrait3 = BOSS_GEN_TUNE.syntaxize(btrait3,ttrait)
     else
       btrait3 = BOSS_GEN_TUNE.syntaxize(btrait3,'"bossabilitygiver_nothing"')
     end
+	for i = 0,2,1 do
+	  ttrait = BOSS_GEN_TUNE.grab_random_trait(batk,traitstack)
+	  table.insert(traitstack, ttrait)
+	  btrait = BOSS_GEN_TUNE.syntaxize(btrait,ttrait)
+	end
 
     local batkx = "\"" .. batk .. "\""
 
