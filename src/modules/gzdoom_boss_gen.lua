@@ -1002,7 +1002,7 @@ function BOSS_GEN_TUNE.all_done()
     elseif bhp<2000 then mult=1.1
     else mult=1.0 end
 
-    hpcalc = rand.pick({5000,5200,5400,5600,5800,6000})*mult*PARAM.boss_gen_mult
+    hpcalc = int(rand.pick({5000,5200,5400,5600,5800,6000})*mult*PARAM.boss_gen_mult)
 
     if batk == "hitscan" then hpcalc = hpcalc*0.75 end
 
@@ -1017,7 +1017,7 @@ function BOSS_GEN_TUNE.all_done()
       dmult = 1.0 - (0.25*(PARAM.boss_gen_dmult-1))
     end
 
-    sumcalc = rand.pick({400,450,500,550,600})*dmult
+    sumcalc = int(rand.pick({400,450,500,550,600})*dmult)
     bsummon = BOSS_GEN_TUNE.syntaxize(bsummon,sumcalc)
 
   end
