@@ -8370,17 +8370,17 @@ DECORATE_CLIFF_CAGE_3X_STAGGERED =
 -- MSSP's liquid placer [LIQUID-CLIFF]
 
 
-DECORATE_LIQUID_POOL_PLACE_3x3 =
+GROW_LIQUID_POOL_PLACE_3x3 =
 {
   prob = 35
 
   structure =
   {
-    "11111","11111"
-    "11111","1/~%1"
-    "11111","1~~~1"
-    "11111","1%~/1"
-    "11111","11111"
+    "x.....","x11111"
+    "1.....","11/~%1"
+    "1.....","11~~~1"
+    "x.....","x1%~/1"
+    "x.....","x11111"
   }
 
   diagonals =
@@ -8390,17 +8390,17 @@ DECORATE_LIQUID_POOL_PLACE_3x3 =
   }
 }
 
-DECORATE_LIQUID_POOL_PLACE_3x6 =
+GROW_LIQUID_POOL_PLACE_3x6 =
 {
   prob = 40
 
   structure =
   {
-    "1111111","1111111"
-    "1111111","1/~~~%1"
-    "1111111","1~~~~~1"
-    "1111111","1%~~~/1"
-    "1111111","1111111"
+    "x.......","x1111111"
+    "1.......","11/~~~%1"
+    "1.......","11~~~~~1"
+    "x.......","x1%~~~/1"
+    "x.......","x1111111"
   }
 
   diagonals =
