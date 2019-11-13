@@ -170,6 +170,29 @@ function Render_edge(E)
 
 
   local function pick_wall_prefab()
+
+    local function check_area_state(seed, other_seed, mode)
+
+      if mode == "narrow_area" then
+        if seed.area != other_seed.area then
+          return true
+        end
+      end
+
+      if mode == "chunk_or_joiner" then
+        if seed.area then
+          if seed.area.chunk then
+            if seed.area.chunk.kind == "closet"
+            or seed.area.chunk.kind == "joiner" then
+              return true
+            end
+          end
+        end
+      end
+
+      return false
+    end
+
     local reqs =
     {
       kind = "wall"
@@ -252,20 +275,21 @@ function Render_edge(E)
       if dir == 4 then check_dir = 6 end
       if dir == 6 then check_dir = 4 end
       if dir == 8 then check_dir = 2 end
+
       local tx, ty = geom.nudge(E.S.x1, E.S.y1, check_dir, 1)
       local that_seed = Seed_from_coord(tx, ty)
-      if that_seed.area != E.S.area then
+
+      if check_area_state(E.S, that_seed, "narrow_area") == true then
         reqs.flat = true
       end
 
       -- use only flat walls if an neighboring seed is
       -- a closet chunk or a joiner chunk
-      local tx, ty = geom.nudge(E.S.x1, E.S.y1, 2, 1)
-      that_seed = Seed_from_coord(tx, ty)
-      if that_seed.area then
-        if that_seed.area.chunk then
-          if that_seed.area.chunk.kind == "closet"
-          or that_seed.area.chunk.kind == "joiner" then
+      for dirs = 2, 8 do
+        if dirs % 2 == 0 then
+          tx, ty = geom.nudge(E.S.x1, E.S.y1, dirs, 1)
+          that_seed = Seed_from_coord(tx, ty)
+          if check_area_state(E.S, other_seed, "closet_or_joiner") == true then
             reqs.flat = true
           end
         end
