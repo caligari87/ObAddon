@@ -258,6 +258,19 @@ function Render_edge(E)
         reqs.flat = true
       end
 
+      -- use only flat walls if an neighboring seed is
+      -- a closet chunk or a joiner chunk
+      local tx, ty = geom.nudge(E.S.x1, E.S.y1, 2, 1)
+      that_seed = Seed_from_coord(tx, ty)
+      if that_seed.area then
+        if that_seed.area.chunk then
+          if that_seed.area.chunk.kind == "closet"
+          or that_seed.area.chunk.kind == "joiner" then
+            reqs.flat = true
+          end
+        end
+      end
+
       -- if seed in front of the edge has anything on it
       -- choose a flat wall fab instead
       if E.S.chunk then
