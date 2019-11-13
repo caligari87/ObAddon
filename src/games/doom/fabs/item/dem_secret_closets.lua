@@ -118,10 +118,9 @@ PREFABS.Item_secret_NIN_closet =
   seed_h = 2
 
   deep = 16
-  over = -16
 
   x_fit = "frame"
-  y_fit  = "frame"
+  y_fit = "top"
 
   thing_2018 =
   {
