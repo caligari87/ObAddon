@@ -1556,9 +1556,16 @@ function Monster_fill_room(R)
 
     local z = spot.z1
 
+    local dx
+	local dy
     -- move monster to random place within the box
-    local dx = w / 2 - info.r
-    local dy = h / 2 - info.r
+	if(spot.bossgen) then
+	  dx = 0
+	  dy = 0
+	else
+      dx = w / 2 - info.r
+      dy = h / 2 - info.r
+	end
 
     if dx > 0 then
       x = x + rand.range(-dx, dx)
