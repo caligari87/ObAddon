@@ -195,7 +195,7 @@ PREFABS.Wall_doorstopstep =
   x_fit = "frame"
   z_fit = "top"
 
-  flat_DOOR3 =
+  tex_DOOR3 =
   {
     DOOR1 = 50
     DOOR3 = 50
@@ -229,7 +229,7 @@ PREFABS.Wall_doorstep =
   x_fit = "frame"
   z_fit = "top"
 
-  flat_DOOR3 =
+  tex_DOOR3 =
   {
     DOOR1 = 50
     DOOR3 = 50
