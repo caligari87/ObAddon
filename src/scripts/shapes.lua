@@ -4033,7 +4033,8 @@ GROW_DIAGONAL_S =
     ".....x","/111/x"
     "....xx","111/xx"
     "...xxx","111xxx"
-    "111xxx","111xxx"
+    "...xxx","111xxx"
+    "x11xxx","x11xxx"
   }
 
   diagonals =
@@ -4932,25 +4933,6 @@ SERRATED_EDGE_SMOOTHER =
   }
 }
 
-SERRATED_EDGE_SMOOTHER2 =
-{
-  pass = "smoother"
-  prob = 35
-
-  structure =
-  {
-    "/","/"
-    "/","1"
-    "1","1"
-  }
-
-  diagonals =
-  {
-    ".1",".1"
-    ".1"
-  }
-}
-
 SERRATED_LIQUID_SMOOTHER3 =
 {
   pass = "smoother"
@@ -5697,23 +5679,6 @@ GROW_CHAMFER_WIDE_ROOM_CORNER_OUTLET =
   }
 }
 
-SMOOTHER_CATWALK_EDGES =
-{
-  prob = 250
-  pass = "smoother"
-
-  structure =
-  {
-    "11","11"
-    "21","%1"
-  }
-
-  diagonals =
-  {
-    "21"
-  }
-}
-
 -- MSSP's 3.x/6.x-style rooms [6.x]
 -- supposedly more or less trying to replicate the strange ceiling
 -- layouts found in 3.x/6.x
@@ -6224,11 +6189,11 @@ GROW_3x_D =
     "x......","x11111%"
     "x......","x111111"
     "x..xx..","x11xx11"
-    "1..xx..","111xx11"
-    "1..xx..","111xx11"
     "x..xx..","x11xx11"
-    "x......","x111111"
-    "x......","x11111/"
+    "x..xx..","x11xx11"
+    "x..xx..","x11xx11"
+    "1......","1111111"
+    "1......","111111/"
   }
 
   diagonals =
@@ -6248,11 +6213,11 @@ GROW_3x_D_STAIRS =
     "x......","xAAAAA%"
     "x......","xAAAAAA"
     "x..xx..","x11xxAA"
-    "1..xx..","111xxAA"
-    "1..xx..","111xx^^"
+    "x..xx..","x11xxAA"
+    "x..xx..","x11xx^^"
     "x..xx..","x11xx11"
-    "x......","x111111"
-    "x......","x11111/"
+    "1......","1111111"
+    "1......","111111/"
   }
 
   diagonals =
@@ -6272,11 +6237,11 @@ GROW_3x_D_LIQUID_STAIRS =
     "x......","x11>AA%"
     "x......","x11>AAA"
     "x......","x11~~AA"
-    "1......","111~~AA"
-    "1......","111~~AA"
     "x......","x11~~AA"
-    "x......","x11>AAA"
-    "x......","x11>AA/"
+    "x......","x11~~AA"
+    "x......","x11~~AA"
+    "1......","111>AAA"
+    "1......","111>AA/"
   }
 
   diagonals =
@@ -8298,31 +8263,6 @@ GROW_CLIFF_STRAIGHT_X4_BUMP =
   }
 }
 
-GROW_CLIFF_CURVED_X4 =
-{
-  prob = 50
-  skip_prob = 15
-
-  group = "cliff_x4"
-
-  structure =
-  {
-    "1.......","11112222"
-    "1.......","11112222"
-    "1.......","11112222"
-    "1.......","111/2222"
-    "2.......","22222222"
-    "2.......","22222222"
-    "2.......","22222222"
-    "2.......","22222222"
-  }
-
-  diagonals =
-  {
-    "12"
-  }
-}
-
 -- cliff-side/area-to-area cages
 
 DECORATE_CLIFF_CAGE =
@@ -8630,20 +8570,6 @@ DECORATE_LIQUID_MOAT_EXTEND_FROM_CORNER =
   }
 }
 
-SMOOTHER_LIQUID_MOAT_MERGE =
-{
-  pass = "smoother"
-
-  prob = 50
-
-  structure =
-  {
-    "111","111"
-    "~2~","~~~"
-    "222","222"
-  }
-}
-
 -- MSSP's single-seed trenches. [TRENCHES]
 
 GROW_TRENCH_STRAIGHT =
@@ -8863,21 +8789,6 @@ GROW_SEWER_CROSSING =
     "~....","~~~~~"
     "1....","11~11"
     "1....","11~11"
-  }
-}
-
-GROW_SEWER_EXIT =
-{
-  prob = 25
-  skip_prob = 10
-
-  structure =
-  {
-    "1...","11AA"
-    "1...","11AA"
-    "~...","~~AA"
-    "1...","11AA"
-    "1...","11AA"
   }
 }
 
