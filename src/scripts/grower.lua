@@ -4613,8 +4613,8 @@ function Grower_create_rooms()
         gui.printf(" (ABSURD)")
       end
 
-      if info.trials > 0 and info.applied == 0 then
-        gui.printf(" (!!!)")
+      if info.trials > 0 then
+        gui.printf(" (Rate: " .. math.round(info.applied / info.trials, 2) .. "% )")
       end
 
       gui.printf("\n")

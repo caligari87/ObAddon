@@ -1270,9 +1270,11 @@ function BOSS_GEN_TUNE.all_done()
     local demon_name = rand.key_by_probs(namelib.NAMES.GOTHIC.lexicon.e)
     demon_name = string.gsub(demon_name, "NOUNGENEXOTIC", namelib.generate_unique_noun("exotic"))
 
-    -- sometimes add an evil title to add to the boss's evilness
-    if rand.odds(75) then
+    -- sometimes add an honorific to add to the boss's evilness
+    if rand.odds(50) then -- title
       demon_name = demon_name .. " the " .. rand.key_by_probs(ZDOOM_STORIES.EVIL_TITLES)
+    elseif rand.odds(25) then -- places
+      demon_name = demon_name .. " of " .. Naming_grab_one("GOTHIC")
     end
 
     local line = "BOSS_NAME" .. i .. ' = "' .. demon_name .. '";\n'
