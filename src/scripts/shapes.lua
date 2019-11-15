@@ -5187,9 +5187,6 @@ GROW_WIDE_SPACE_CATWALK_PLAIN =
   prob = 50
   skip_prob = 35
 
-  group = "catwalk"
-  group_pos = "entry"
-
   env = "!cave"
 
   structure =
@@ -5206,9 +5203,6 @@ GROW_WIDE_SPACE_CATWALK_TALL_PLAIN =
 {
   prob = 50
   skip_prob = 35
-
-  group = "catwalk"
-  group_pos = "entry"
 
   env = "!cave"
 
@@ -5228,10 +5222,6 @@ GROW_WIDE_SPACE_PLATFORM_TINY =
   prob = 50
   skip_prob = 35
 
-  group = "catwalk"
-
-  group_pos = "entry"
-
   env = "!cave"
 
   structure =
@@ -5241,149 +5231,6 @@ GROW_WIDE_SPACE_PLATFORM_TINY =
     "....","1>A1"
     "....","1111"
     "x11x","x11x"
-  }
-}
-
-GROW_WIDE_SPACE_CATWALK_STRAIGHT =
-{
-  prob = 60
-
-  group = "catwalk"
-
-  env = "!cave"
-
-  structure =
-  {
-    "....","1111"
-    "....","1221"
-    "1221","1221"
-  }
-}
-
-GROW_WIDE_SPACE_CATWALK_EXTRUDE =
-{
-  prob = 50
-
-  group = "catwalk"
-
-  env = "!cave"
-
-  structure =
-  {
-    "....","1111"
-    "1111","1221"
-    "2222","2222"
-  }
-}
-
-GROW_WIDE_SPACE_CATWALK_EXTRUDE_3X =
-{
-  prob = 50
-
-  group = "catwalk"
-
-  env = "!cave"
-
-  structure =
-  {
-    ".....","11111"
-    "11111","12221"
-    "22222","22222"
-  }
-}
-
-GROW_WIDE_SPACE_CATWALK_CURVE =
-{
-  prob = 25
-
-  group = "catwalk"
-
-  env = "!cave"
-
-  structure =
-  {
-    "......","111111"
-    "......","1/2221"
-    "......","122221"
-    "......","122/11"
-    "1221xx","1221xx"
-  }
-
-  diagonals =
-  {
-    "12","21"
-  }
-}
-
-GROW_WIDE_SPACE_CATWALK_STRAIGHT_3X =
-{
-  prob = 20
-
-  group = "catwalk"
-
-  env = "!cave"
-
-  structure =
-  {
-    ".....","11111"
-    "11111","12221"
-    "12221","12221"
-  }
-}
-
-GROW_WIDE_SPACE_CATWALK_STRAIGHT_4X =
-{
-  prob = 20
-
-  group = "catwalk"
-
-  env = "!cave"
-
-  structure =
-  {
-    "......","111111"
-    "111111","122221"
-    "122221","122221"
-  }
-}
-
-GROW_WIDE_SPACE_CATWALK_CAPPER_3X =
-{
-  prob = 15
-
-  env = "!cave"
-
-  structure =
-  {
-    ".....","11111"
-    ".....","1/2%1"
-    "11111","12221"
-    "12221","12221"
-  }
-
-  diagonals =
-  {
-    "12","21"
-  }
-}
-
-GROW_WIDE_SPACE_CATWALK_CAPPER_4X =
-{
-  prob = 10
-
-  env = "!cave"
-
-  structure =
-  {
-    "......","111111"
-    "......","1/22%1"
-    "111111","122221"
-    "122221","122221"
-  }
-
-  diagonals =
-  {
-    "12","21"
   }
 }
 
@@ -6640,14 +6487,15 @@ GROW_3x_K =
 
   structure =
   {
-    "x..xx..","x11xx11"
-    "x..x...","x11x/11"
-    "x......","x11/11/"
-    "1.....x","11111/x"
-    "1.....x","11111%x"
-    "x......","x11%11%"
-    "x..x...","x11x%11"
-    "x..xx..","x11xx11"
+    "..xx..","11xx11"
+    "..x...","11x/11"
+    "......","11/11/"
+    ".....x","1111/x"
+    ".....x","1111%x"
+    "......","11%11%"
+    "..x...","11x%11"
+    "..xx..","11xx11"
+    "11xxxx","11xxxx"
   }
 
   diagonals =
@@ -6668,14 +6516,15 @@ GROW_3x_K_STAIRS =
 
   structure =
   {
-    "x..xx..","x11xxAA"
-    "x..x...","x11x/AA"
-    "x......","x11/AA/"
-    "1.....x","111>A/x"
-    "1.....x","111>A%x"
-    "x......","x11%AA%"
-    "x..x...","x11x%AA"
-    "x..xx..","x11xxAA"
+    "..xx..","11xxAA"
+    "..x...","11x/AA"
+    "......","11/AA/"
+    ".....x","11>A/x"
+    ".....x","11>A%x"
+    "......","11%AA%"
+    "..x...","11x%AA"
+    "..xx..","11xxAA"
+    "11xxxx","11xxxx"
   }
 
   diagonals =
@@ -6696,14 +6545,15 @@ GROW_3x_K_LIQUID =
 
   structure =
   {
-    "x......","x11~~11"
-    "x......","x11~/11"
-    "x......","x11/11/"
-    "1......","11111/~"
-    "1......","11111%~"
-    "x......","x11%11%"
-    "x......","x11~%11"
-    "x......","x11~~11"
+    "......","11~~11"
+    "......","11~/11"
+    "......","11/11/"
+    "......","1111/~"
+    "......","1111%~"
+    "......","11%11%"
+    "......","11~%11"
+    "......","11~~11"
+    "11xxxx","11xxxx"
   }
 
   diagonals =
@@ -7877,389 +7727,172 @@ GROW_INTO_CLIFF =
   prob = 50
   skip_prob = 15
 
-  group = "cliff"
-
-  group_pos = "entry"
-
   structure =
   {
     "....","11AA"
+    "....","11AA"
+    "....","11AA"
+    "....","11AA"
     "....","11^^"
     "....","1111"
-    "x11x","x11x"
+    "11xx","11xx"
   }
 }
 
-GROW_INTO_CLIFF_TALL =
+GROW_INTO_CLIFF_LONG =
 {
   prob = 50
   skip_prob = 15
 
-  group = "cliff"
-
-  group_pos = "entry"
-
   structure =
   {
+    "....","11AA"
+    "....","11AA"
+    "....","11AA"
+    "....","11AA"
+    "....","11AA"
+    "....","11AA"
     "....","11AA"
     "....","11AA"
     "....","11^^"
     "....","1111"
-    "x11x","x11x"
+    "11xx","11xx"
   }
 }
 
-GROW_CLIFF_EXTENSION =
-{
-  prob = 75
-  skip_prob = 10
-
-  group = "cliff"
-
-  structure =
-  {
-    "1..","111"
-    "2..","222"
-  }
-}
-
-GROW_CLIFF_EXTENSION_UP_WE_GO =
-{
-  prob = 50
-  skip_prob = 10
-
-  group = "cliff"
-
-  structure =
-  {
-    "1...","1>AA"
-    "2...","2222"
-  }
-}
-
-GROW_CLIFF_EXTENSION_UPPER_WE_GO =
+GROW_INTO_CLIFF_CURVE =
 {
   prob = 35
-  skip_prob = 10
-
-  group = "cliff"
+  skip_prob = 15
 
   structure =
   {
-    "x...","xAAA"
-    "x...","xA^^"
-    "1...","1111"
-    "2...","2222"
-    "xxxx","xxxx"
-  }
-}
-
-GROW_CLIFF_EXTENSION_CURVE =
-{
-  prob = 75
-  skip_prob = 10
-
-  group = "cliff"
-
-  structure =
-  {
-    "x...","x112"
-    "1...","11/2"
-    "2...","2222"
+    "......","/11111"
+    "......","111111"
+    "......","11/AAA"
+    "......","11AAAA"
+    "......","11AAxx"
+    "......","11AAxx"
+    "......","11^^xx"
+    "......","1111xx"
+    "11xxxx","11xxxx"
   }
 
   diagonals =
   {
-    "12"
+    ".1","1A"
   }
 }
 
-GROW_CLIFF_EXTENSION_WIDEN =
+GROW_INTO_CLIFF_CURVE =
 {
   prob = 35
-  skip_prob = 10
-
-  group = "cliff"
+  skip_prob = 15
 
   structure =
   {
-    "x....","x/111"
-    "1....","11111"
-    "2....","22222"
-    "x....","x%222"
+    "......","AAAAA%"
+    "......","AAAAAA"
+    "......","111%AA"
+    "......","1111AA"
+    "......","1111^^"
+    "......","111111"
+    "xxxx11","xxxx11"
   }
 
   diagonals =
   {
-    ".1"
-    ".2"
+    "A.","1A"
   }
 }
 
--- 2x2 cliffs
-
-GROW_CLIFF_EXTENSION_X2 =
-{
-  prob = 50
-  skip_prob = 10
-
-  group = "cliff"
-
-  structure =
-  {
-    "1..","111"
-    "1..","111"
-    "2..","222"
-    "2..","222"
-  }
-}
-
-GROW_CLIFF_EXTENSION_X2_UP_WE_GO =
-{
-  prob = 35
-  skip_prob = 10
-
-  group = "cliff"
-
-  structure =
-  {
-    "1...","1>AA"
-    "1...","1>AA"
-    "2...","2222"
-    "2...","2222"
-  }
-}
-
-GROW_CLIFF_EXTENSION_X2_UPPER_WE_GO =
-{
-  prob = 35
-  skip_prob = 10
-
-  group = "cliff"
-
-  structure =
-  {
-    "....","AAAA"
-    "....","AAAA"
-    "1...","1^^1"
-    "1...","1111"
-    "2...","2222"
-    "2...","2222"
-  }
-}
-
-GROW_CLIFF_EXTENSION_CURVE_X2 =
-{
-  prob = 40
-  skip_prob = 10
-
-  group = "cliff"
-
-  structure =
-  {
-    "x....","x1122"
-    "1....","11122"
-    "1....","11/22"
-    "2....","22222"
-    "2....","22222"
-  }
-
-  diagonals =
-  {
-    "12"
-  }
-}
-
-GROW_CLIFF_EXTENSON_NEW_AREA =
-{
-  prob = 35
-  skip_prob = 10
-
-  group = "cliff"
-
-  structure =
-  {
-    "1..","1AA"
-    "2..","222"
-  }
-}
-
-GROW_CLIFF_EXTENSON_NEW_AREA_INWARD =
-{
-  prob = 35
-  skip_prob = 10
-
-  group = "cliff"
-
-  structure =
-  {
-    "x..","xAA"
-    "1..","111"
-    "2..","222"
-  }
-}
-
-GROW_CLIFF_EXTENSION_NEW_AREA_X2 =
-{
-  prob = 35
-  skip_prob = 10
-
-  group = "cliff"
-
-  structure =
-  {
-    "1..","1AA"
-    "1..","1AA"
-    "2..","222"
-    "2..","222"
-  }
-}
-
-GROW_CLIFF_EXTENSION_NEW_AREA_INWARD_X2 =
-{
-  prob = 35
-  skip_prob = 10
-
-  group = "cliff"
-
-  structure =
-  {
-    "x..","xAA"
-    "x..","xAA"
-    "1..","111"
-    "1..","111"
-    "2..","222"
-    "2..","222"
-  }
-}
-
--- 4x cliffs
+-- x4
 
 GROW_CLIFF_ENTRY_X4 =
 {
   prob = 80
   skip_prob = 15
 
-  group = "cliff_x4"
-
-  group_pos = "entry"
-
   structure =
   {
     "........","1111AAAA"
     "........","1111AAAA"
     "........","11111^^1"
-    "........","11111111"
-    "........","11111111"
-    "x11xxxxx","x11xxxxx"
+    "11......","11111111"
+    "11......","11111111"
   }
 }
 
-GROW_CLIFF_ENTRY_SIDEWAYS_X4 =
+GROW_CLIFF_ENTRY_X4_LONG =
 {
   prob = 80
   skip_prob = 15
 
-  group = "cliff_x4"
-
-  group_pos = "entry"
-
-  structure =
-  {
-    "x11xxxxx","x11xxxxx"
-    "........","1111AAAA"
-    "........","111>AAAA"
-    "........","111>AAAA"
-    "........","1111AAAA"
-  }
-}
-
-GROW_CLIFF_STRAIGHT_X4 =
-{
-  prob = 50
-  skip_prob = 15
-
-  group = "cliff_x4"
-
-  structure =
-  {
-    "........","11112222"
-    "........","11112222"
-    "11112222","11112222"
-  }
-}
-
-GROW_CLIFF_STRAIGHT_X4_STAIR =
-{
-  prob = 40
-  skip_prob = 15
-
-  group = "cliff_x4"
-
   structure =
   {
     "........","1111AAAA"
     "........","1111AAAA"
-    "........","11112^^2"
-    "11112222","11112222"
+    "........","1111AAAA"
+    "........","1111AAAA"
+    "........","1111AAAA"
+    "........","1111AAAA"
+    "........","1111AAAA"
+    "........","1111AAAA"
+    "........","11111^^1"
+    "11......","11111111"
+    "11......","11111111"
   }
 }
 
-GROW_CLIFF_STRAIGHT_X4_LONG =
+GROW_CLIFF_ENTRY_X4_CURVE =
 {
-  prob = 50
+  prob = 60
   skip_prob = 15
-
-  group = "cliff_x4"
 
   structure =
   {
-    "........","11112222"
-    "........","11112222"
-    "........","11112222"
-    "........","11112222"
-    "11112222","11112222"
-  }
-}
-
-GROW_CLIFF_STRAIGHT_X4_SIDESTAIR =
-{
-  prob = 85
-  skip_prob = 15
-
-  group = "cliff_x4"
-
-  structure =
-  {
-    "............","1111222>AAAA"
-    "............","1111222>AAAA"
-    "............","1111222>AAAA"
-    "............","1111222>AAAA"
-    "11112222xxxx","11112222xxxx"
-  }
-}
-
-GROW_CLIFF_STRAIGHT_X4_BUMP =
-{
-  prob = 50
-  skip_prob = 15
-
-  group = "cliff_x4"
-
-  structure =
-  {
-    "........","11112222"
-    "........","1111%222"
-    "........","11111222"
-    "........","11111222"
-    "........","1111/222"
-    "11112222","11112222"
+    "..........","/111111111"
+    "..........","1111111111"
+    "..........","1111111111"
+    "..........","1111111111"
+    "..........","1111/AAAAA"
+    "..........","1111AAAAAA"
+    "..........","1111AAAAAA"
+    "..........","1111AAAAAA"
+    "........xx","1111AAAAxx"
+    "........xx","1111AAAAxx"
+    "........xx","11111^^1xx"
+    "11......xx","11111111xx"
+    "11......xx","11111111xx"
   }
 
   diagonals =
   {
-    "12"
-    "12"
+    ".1","1A"
+  }
+}
+
+GROW_CLIFF_ENTRY_X4_CURVE_REVERSE =
+{
+  prob = 60
+  skip_prob = 15
+
+  structure =
+  {
+    "........","AAAAAAA%"
+    "........","AAAAAAAA"
+    "........","AAAAAAAA"
+    "........","AAAAAAAA"
+    "........","111%AAAA"
+    "........","1111AAAA"
+    "........","11111^^1"
+    "......11","11111111"
+    "......11","11111111"
+  }
+
+  diagonals =
+  {
+    "A.","1A"
   }
 }
 
