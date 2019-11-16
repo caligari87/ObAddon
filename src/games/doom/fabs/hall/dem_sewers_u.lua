@@ -57,6 +57,15 @@ PREFABS.Hallway_sewers_u7 =
 {
   template = "Hallway_sewers_u1"
   map    = "MAP07"
+
+  thing_2014 =
+  {
+    stimpack = 50
+    bullet_box = 50
+    shell_box = 50
+    green_armor = 50
+  }
+
 }
 
 PREFABS.Hallway_sewers_u8 =
