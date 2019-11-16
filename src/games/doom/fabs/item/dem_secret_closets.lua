@@ -130,3 +130,63 @@ PREFABS.Item_secret_NIN_closet =
 
   can_flip = true
 }
+
+--The hell item shrine with a really crummy item, teach this cheeky gargoyle a lesson to reveal your prize.
+PREFABS.Item_secret_hellgargoyle_closet =
+{
+  file  = "item/dem_secret_closets.wad"
+  map   = "MAP04"
+
+  theme = "hell"
+
+  prob  = 100
+
+  key   = "secret"
+
+  where  = "seeds"
+  seed_w = 1
+  seed_h = 1
+
+  deep = 16
+
+  x_fit = "frame"
+  y_fit = "top"
+
+  thing_2014 =
+  {
+    potion = 50
+    helmet = 50
+  }
+
+  can_flip = true
+}
+
+--To the one who sit upon this throne, secrets should be bestowed upon thee.
+PREFABS.Item_secret_hellthrone_closet =
+{
+  file  = "item/dem_secret_closets.wad"
+  map   = "MAP05"
+
+  theme = "hell"
+
+  prob  = 100
+
+  key   = "secret"
+
+  where  = "seeds"
+  seed_w = 3
+  seed_h = 2
+
+  deep = 16
+
+  x_fit = "frame"
+  y_fit = "top"
+
+  thing_2014 =
+  {
+    potion = 50
+    helmet = 50
+  }
+
+  can_flip = true
+}
