@@ -32,7 +32,7 @@ PREFABS.Joiner_zigzag_lift =
   file   = "joiner/gtd_zigzag_lift.wad"
   map = "MAP02"
 
-  prob   = 50 --500
+  prob   = 100
   style  = "steepness"
   theme  = "!hell"
 
@@ -62,7 +62,7 @@ PREFABS.Joiner_zigzag_lift_mirrored =
   file   = "joiner/gtd_zigzag_lift.wad"
   map = "MAP04"
 
-  prob   = 50 --500
+  prob   = 100
   style  = "steepness"
   theme  = "!hell"
 
