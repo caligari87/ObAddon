@@ -86,6 +86,8 @@ PREFABS.Joiner_bedroom =
 
   theme = "urban"
 
+  engine = "zdoom"
+
   env      = "outdoor"
   neighbor = "outdoor"
 
@@ -123,6 +125,8 @@ PREFABS.Joiner_bedroom2 =
   prob = 1250
 
   theme = "urban"
+
+  engine = "zdoom"
 
   env      = "outdoor"
   neighbor = "outdoor"
@@ -169,6 +173,8 @@ PREFABS.Joiner_stairwell =
   prob = 3000
 
   theme = "urban"
+
+  engine = "zdoom"
 
   env      = "outdoor"
   neighbor = "outdoor"
