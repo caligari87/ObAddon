@@ -391,6 +391,10 @@ class bossController : thinker
         }
         if(boss)
         {
+			if(boss.starthealth < boss.health)
+			{
+				boss.starthealth == boss.health;
+			}
 			if(boss.CountInv("bossabilitygiver_spook") && !spooky && bossactive)
 			{
 				spooky = true;
