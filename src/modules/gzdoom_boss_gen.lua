@@ -71,6 +71,11 @@ class BossGenerator_Handler : EventHandler
     Override void WorldThingSpawned(WorldEvent e)
     {
         if(!bossEnabled) return;
+		if( e.Thing && e.Thing.bMISSILE && e.Thing.Health && e.Thing.Target && e.Thing.Target.CountInv("bossabilitygiver_boss") )
+		{
+			e.Thing.bTHRUSPECIES = true;
+			e.Thing.bNORADIUSDMG = true;
+		}
         if( e.Thing && e.Thing.bMISSILE && e.Thing.GetMissileDamage(7,1)>0 && e.Thing.Target && e.Thing.Target.CountInv("bossabilitygiver_boss") && e.Thing.GetClassname() != "BossSpook" )
         {
             ThinkerIterator BossFinder = ThinkerIterator.Create("bossController");
@@ -168,6 +173,17 @@ class BossGenerator_Handler : EventHandler
 	Override void WorldThingDamaged(WorldEvent e)
 	{
 		if(!bossEnabled) return;
+		if(e.thing && e.thing.bISMONSTER && e.thing.bSKULLFLY && e.thing.CountInv("bossabilitygiver_boss"))
+		{
+			if(random(0,5) == 0)
+			{
+				e.thing.A_SkullAttack();
+			}
+			else
+			{
+				e.thing.VelFromAngle(20);
+			}
+		}
 		if(e.thing && e.thing.bISMONSTER && e.thing.CountInv("bossabilitygiver_deflection") && e.DamageSource && e.Inflictor && !e.Inflictor.bMISSILE)
 		{
 			ThinkerIterator BossFinder = ThinkerIterator.Create("bossController");
@@ -339,6 +355,7 @@ class bossController : thinker
             boss.bNOINFIGHTING = true;
             boss.bLOOKALLAROUND = true;
             boss.bTHRUSPECIES = true;
+			boss.bQUICKTORETALIATE = true;
             boss.Species = "IAmTheBoss";
             boss.SetTag(Stringtable.Localize(string.format("%s%i","$BOSS_NAME",level)));
             boss.PainChance*=0.5;
@@ -591,7 +608,7 @@ class BossHomingThinker : Thinker
 		}
 		if(missile && fx==0)
 		{
-			missile.A_SpawnItemEx("BulletPuff", flags:SXF_NOCHECKPOSITION);
+			missile.A_SpawnItemEx("RevenantTracerSmoke", zvel:1, flags:SXF_NOCHECKPOSITION);
 			fx=2;
 			if(missile && !missile.InStateSequence(missile.CurState, missile.ResolveState("Death")))
 			{
