@@ -981,6 +981,11 @@ function Episode_plan_monsters()
       LEV.seen_guards = {}
 
       LEV.boss_quotas = { minor=0, nasty=0, tough=0 }
+	  
+	  if LEV.is_procedural_gotcha and PARAM.boss_gen then
+	    create_fight(LEV, "tough", 1)
+		continue
+	  end
 
       if LEV.prebuilt  then continue end
       if LEV.is_secret then continue end
