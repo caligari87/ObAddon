@@ -108,6 +108,15 @@ class BossGenerator_Handler : EventHandler
             e.Thing.bouncefactor = 0.99;
             e.Thing.WallBounceFactor = 0.99;
             e.Thing.bouncecount = 3;
+			if( e.Thing.CheckClass("FastProjectile",match_superclass:true))
+			{
+				let misl0 = BossRicochetThinker(new("BossRicochetThinker"));
+				if(misl0)
+				{
+					misl0.missile = e.Thing;
+					misl0.power = e.Thing.Target.CountInv("bossabilitygiver_bounce");
+				}
+			}
             if( e.Thing.Target.CountInv("bossabilitygiver_bounce")>1 )
             {
                 e.Thing.WallBounceFactor = 1.1;
@@ -626,6 +635,45 @@ class BossHomingThinker : Thinker
 	}
 }
 
+class BossRicochetThinker : Thinker
+{
+	actor missile;
+	int power;
+	override void Tick()
+	{
+		super.Tick();
+		if(missile && missile.target && missile.InStateSequence(missile.CurState, missile.ResolveState("Death")))
+		{
+			let proj = missile.SpawnMissileAngleZ(missile.z, "BossBDeflect", -missile.angle+random(-45,45), 0);
+			if(proj) 
+			{ 
+				proj.A_GiveInventory("bossabilitygiver_boss"); 
+				proj.target = missile.target; 
+				proj.bBOUNCEONWALLS = true;
+				proj.bBOUNCEONFLOORS = true;
+				proj.bouncefactor = 0.99;
+				proj.WallBounceFactor = 0.99;
+				proj.bouncecount = 2;
+				if( power == 2 )
+				{
+					proj.WallBounceFactor = 1.1;
+					proj.bouncecount = 8;
+				}
+				else if( power == 3 )
+				{
+					proj.WallBounceFactor = 1.2;
+					proj.bouncecount = 19;
+				}
+			}
+			self.Destroy();
+		}
+		if(!missile)
+		{
+			self.Destroy();
+		}
+	}
+}
+
 class BossPyroFire : Actor
 {
     Default
@@ -805,7 +853,7 @@ class bossabilitygiver_homing : bossabilitygiver { }
             {
                 barsx.AppendFormat("I");
             }
-            string bosshp = string.format("%%s %%s %%s", Stringtable.Localize(string.format("%%s%%i","$BOSS_NAME",currentboss)), ":", barsx);
+            string bosshp = string.format("%%s %%s %%s", Stringtable.Localize(string.format("%%s%%i","$BOSS_NAME",currentboss)), "\n", barsx);
             screen.DrawText(BigFont, Font.CR_RED, 32, -32, bosshp, DTA_Clean, true);
             }
         }
