@@ -1191,6 +1191,8 @@ function BOSS_GEN_TUNE.setup(self)
   PARAM.lvlstr = ""
   PARAM.BOSSSCRIPT = ""
   PARAM.boss_count = 1
+  PARAM.epi_bosses = {}
+  PARAM.epi_names = {}
 
   for name,opt in pairs(self.options) do
     local value = self.options[name].value
@@ -1229,8 +1231,21 @@ function BOSS_GEN_TUNE.end_lvl()
     scripty = string.gsub(scripty, "NUM", LEVEL.id)
     scripty = string.gsub(scripty, "CNT", PARAM.boss_count)
 
-    PARAM.boss_count = PARAM.boss_count + 1
     PARAM.lvlstr = PARAM.lvlstr .. scripty .. "\n"
+	
+	if PARAM.story_generator == "proc" then
+	  if OB_CONFIG.length == "single" then
+          if LEVEL.id == 1 then table.insert(PARAM.epi_bosses,PARAM.boss_count) end
+      elseif OB_CONFIG.length == "few" then
+          if LEVEL.id == 4 then table.insert(PARAM.epi_bosses,PARAM.boss_count) end
+      elseif OB_CONFIG.length == "episode" then
+          if LEVEL.id == 11 then table.insert(PARAM.epi_bosses,PARAM.boss_count) end
+      elseif OB_CONFIG.length == "game" then
+          if LEVEL.id == 11 or LEVEL.id == 20 or LEVEL.id == 30 then table.insert(PARAM.epi_bosses,PARAM.boss_count) end
+      end
+	end
+	
+	PARAM.boss_count = PARAM.boss_count + 1
   end
 end
 
@@ -1298,14 +1313,17 @@ function BOSS_GEN_TUNE.all_done()
     local mult
     local hpcalc
 
-    if bhp<300 then mult=1.5
-    elseif bhp<1000 then mult=1.3
-    elseif bhp<2000 then mult=1.1
-    else mult=1.0 end
-
+    if PARAM.boss_gen_diff == "nightmare" then
+	  mult=1.5
+	else
+      if bhp<300 then mult=1.5
+      elseif bhp<1000 then mult=1.3
+      elseif bhp<2000 then mult=1.1
+      else mult=1.0 end
+    end
     hpcalc = int(rand.pick({5000,5200,5400,5600,5800,6000})*mult*PARAM.boss_gen_mult)
 
-    if batk == "hitscan" then hpcalc = hpcalc*0.75 end
+    if batk == "hitscan" and PARAM.boss_gen_dmult<3.0 then hpcalc = hpcalc*0.75 end
 
     bhealth = BOSS_GEN_TUNE.syntaxize(bhealth,hpcalc)
 
@@ -1333,18 +1351,32 @@ function BOSS_GEN_TUNE.all_done()
   PARAM.BOSSSCRIPT = PARAM.BOSSSCRIPT .. scripty
   PARAM.BOSSLANG = {}
   PARAM.boss_count = PARAM.boss_count - 1
+  
+  local cnt = 1
 
   for i = 1,PARAM.boss_count,1 do
 
-    local demon_name = rand.key_by_probs(namelib.NAMES.GOTHIC.lexicon.e)
-    demon_name = string.gsub(demon_name, "NOUNGENEXOTIC", namelib.generate_unique_noun("exotic"))
+    local demon_name
+	if PARAM.story_generator == "proc" then
+      each epiboss in PARAM.epi_bosses do
+	    if i == epiboss then
+	      demon_name = PARAM.epi_names[cnt]
+		  cnt = cnt + 1
+	    end
+	  end
+	end
+	
+	if demon_name == nil then
+      demon_name = rand.key_by_probs(namelib.NAMES.GOTHIC.lexicon.e)
+      demon_name = string.gsub(demon_name, "NOUNGENEXOTIC", namelib.generate_unique_noun("exotic"))
 
-    -- sometimes add an honorific to add to the boss's evilness
-    if rand.odds(50) then -- title
-      demon_name = demon_name .. " the " .. rand.key_by_probs(ZDOOM_STORIES.EVIL_TITLES)
-    elseif rand.odds(25) then -- places
-      demon_name = demon_name .. " of " .. Naming_grab_one("GOTHIC")
-    end
+      -- sometimes add an honorific to add to the boss's evilness
+      if rand.odds(50) then -- title
+        demon_name = demon_name .. " the " .. rand.key_by_probs(ZDOOM_STORIES.EVIL_TITLES)
+      elseif rand.odds(25) then -- places
+        demon_name = demon_name .. " of " .. Naming_grab_one("GOTHIC")
+      end
+	end
 
     local line = "BOSS_NAME" .. i .. ' = "' .. demon_name .. '";\n'
     table.insert(PARAM.BOSSLANG, line)

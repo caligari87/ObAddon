@@ -20,7 +20,7 @@ gui.import("zdoom_stories.lua")
 
 table.name_up(ZDOOM_STORIES.STORIES)
 
-function ZStoryGen_format_story_chunk(story_strings, info)
+function ZStoryGen_format_story_chunk(story_strings, info, store)
 
   local line_max_length = 38
 
@@ -30,6 +30,21 @@ function ZStoryGen_format_story_chunk(story_strings, info)
     if info.demon_name == "NOUNMEMBERS" then
       info.demon_name = info.contributor_name
     end
+	
+	if store and PARAM.boss_gen then
+	  local mcevil
+	  if string.find(story_strings, "_RAND_DEMON") then
+	    mcevil = info.demon_name
+		if string.find(story_strings, "_EVULZ") then
+		  mcevil = mcevil .. " the " .. info.demon_title
+		elseif string.find(story_strings, "_GOTHIC_LEVEL") then
+          mcevil = mcevil .. " of " .. info.gothic_level
+		end
+		if PARAM.epi_names[store] == nil then
+		  PARAM.epi_names[store] = mcevil
+		end
+	  end
+	end
 
     story_strings = string.gsub(story_strings, "_RAND_DEMON", info.demon_name)
     story_strings = string.gsub(story_strings, "_RAND_ENGLISH_PLACE", info.anglican_name)
@@ -129,17 +144,17 @@ function ZStoryGen_create_characters_and_stuff(lev_info)
   return info
 end
 
-function ZStoryGen_hook_me_with_a_story(story_id, info)
+function ZStoryGen_hook_me_with_a_story(story_id, info, epi)
   local story_chunk = ZDOOM_STORIES.STORIES[story_id]
   local story_string = rand.pick(story_chunk.hooks)
-  local story_table = ZStoryGen_format_story_chunk(story_string, info)
+  local story_table = ZStoryGen_format_story_chunk(story_string, info, epi)
   return story_table
 end
 
-function ZStoryGen_conclude_my_story(story_id, info)
+function ZStoryGen_conclude_my_story(story_id, info, epi)
   local story_chunk = ZDOOM_STORIES.STORIES[story_id]
   local story_string = rand.pick(story_chunk.conclusions)
-  local story_table = ZStoryGen_format_story_chunk(story_string, info)
+  local story_table = ZStoryGen_format_story_chunk(story_string, info, epi)
   return story_table
 end
 
@@ -155,8 +170,8 @@ function ZStoryGen_init()
   while x <= #GAME.episodes do
     local story_id = ZStoryGen_fetch_story_chunk()
     local info = ZStoryGen_create_characters_and_stuff()
-    hooks[x] = ZStoryGen_hook_me_with_a_story(story_id, info)
-    conclusions[x] = ZStoryGen_conclude_my_story(story_id, info)
+    hooks[x] = ZStoryGen_hook_me_with_a_story(story_id, info, x)
+    conclusions[x] = ZStoryGen_conclude_my_story(story_id, info, x)
     x = x + 1
   end
 
