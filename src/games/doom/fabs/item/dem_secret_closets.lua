@@ -28,7 +28,7 @@ PREFABS.Item_secret_garage_closet =
 
   tex_BRICK9 = {
     BRICK1=50, BRICK10=50, BRICK11=50,
-    BRICK2=50, BRICK3=50, BRICK4=50,
+    BRICK2=50, BRICK4=50,
     BRICK6=50, BRICK7=50, BRICK8=50,
     BIGBRIK1=50, BIGBRIK2=50, STONE2=50,
     STONE3=50, BRICK12=50, BRICK5=50,
@@ -68,7 +68,7 @@ PREFABS.Item_secret_store_closet =
 
   tex_BRICK9 = {
     BRICK1=50, BRICK10=50, BRICK11=50,
-    BRICK2=50, BRICK3=50, BRICK4=50,
+    BRICK2=50, BRICK4=50,
     BRICK6=50, BRICK7=50, BRICK8=50,
     STONE2=50, STUCCO=50, STUCCO1=50,
     STUCCO3=50, TANROCK2=50, TANROCK3=50,
@@ -161,7 +161,7 @@ PREFABS.Item_secret_hellgargoyle_closet =
   can_flip = true
 }
 
---To the one who sit upon this throne, secrets should be bestowed upon thee.
+--To the one who sit upon this throne, secrets should be bestowed upon him.
 PREFABS.Item_secret_hellthrone_closet =
 {
   file  = "item/dem_secret_closets.wad"
