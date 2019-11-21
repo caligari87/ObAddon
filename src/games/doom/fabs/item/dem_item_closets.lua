@@ -85,29 +85,29 @@ PREFABS.Item_rift_closet =
 
   thing_28 =
   {
-	skull_pole = 50
-	skull_kebab = 50
-	skull_cairn = 50
-	impaled_human = 50
-	impaled_twitch = 50
-	evil_eye = 50
-	skull_rock = 50
-	big_tree = 50
-	burnt_tree = 50
+    skull_pole = 50
+    skull_kebab = 50
+    skull_cairn = 50
+    impaled_human = 50
+    impaled_twitch = 50
+    evil_eye = 50
+    skull_rock = 50
+    big_tree = 50
+    burnt_tree = 50
 
   }
 
   thing_25 =
   {
-	skull_pole = 50
-	skull_kebab = 50
-	skull_cairn = 50
-	impaled_human = 50
-	impaled_twitch = 50
-	evil_eye = 50
-	skull_rock = 50
-	big_tree = 50
-	burnt_tree = 50
+    skull_pole = 50
+    skull_kebab = 50
+    skull_cairn = 50
+    impaled_human = 50
+    impaled_twitch = 50
+    evil_eye = 50
+    skull_rock = 50
+    big_tree = 50
+    burnt_tree = 50
 
   }
 

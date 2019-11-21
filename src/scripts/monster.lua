@@ -1529,7 +1529,7 @@ function Monster_fill_room(R)
   local function mon_fits(mon, spot, fat)
     local info  = GAME.MONSTERS[mon] or
                   GAME.ENTITIES[mon]
-	local rr = info.r
+    local rr = info.r
     if fat and info.health < 2000 then
       if info.r < 48 then
         rr = info.r * 2
@@ -1537,7 +1537,7 @@ function Monster_fill_room(R)
         rr = info.r * 1.5
       end
     end
-	
+
     if info.h >= (spot.z2 - spot.z1) then return 0 end
 
     local w, h = geom.box_size(spot.x1, spot.y1, spot.x2, spot.y2)
@@ -1557,15 +1557,15 @@ function Monster_fill_room(R)
     local z = spot.z1
 
     local dx
-	local dy
+    local dy
     -- move monster to random place within the box
-	if(spot.bossgen) then
-	  dx = 0
-	  dy = 0
-	else
+    if(spot.bossgen) then
+      dx = 0
+      dy = 0
+    else
       dx = w / 2 - info.r
       dy = h / 2 - info.r
-	end
+    end
 
     if dx > 0 then
       x = x + rand.range(-dx, dx)
@@ -1689,7 +1689,7 @@ function Monster_fill_room(R)
 
     -- pick the best and remove it from the list
     local spot = table.pick_best(R.mon_spots, spot_compare, "remove")
-	
+
     if not near_to then
       R.last_spot_section = spot.section
     end

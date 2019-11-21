@@ -2013,9 +2013,9 @@ stderrf("Cages in %s [%s pressure] --> any_prob=%d  per_prob=%d\n",
               and PARAM.liquid_sinks == "not_damaging" then
                 fg.sink = nil
               end
-			  if LEVEL.liquid.damage and LEVEL.is_procedural_gotcha then
-			    fg.sink = nil
-			  end
+              if LEVEL.liquid.damage and LEVEL.is_procedural_gotcha then
+                fg.sink = nil
+              end
             end
           end
         end

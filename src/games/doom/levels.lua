@@ -213,17 +213,17 @@ function DOOM.get_levels()
           LEV.is_procedural_gotcha = true
         end
       end
-	  if OB_CONFIG.procedural_gotchas == "2epi" then
+      if OB_CONFIG.procedural_gotchas == "2epi" then
         if map == 5 or map == 11 or map == 16 or map == 20 or map == 25 or map == 30 then
           LEV.is_procedural_gotcha = true
         end
       end
-	  if OB_CONFIG.procedural_gotchas == "3epi" then
+      if OB_CONFIG.procedural_gotchas == "3epi" then
         if map == 3 or map == 7 or map == 11 or map == 14 or map == 17 or map == 20 or map == 23 or map == 27 or map == 30 then
           LEV.is_procedural_gotcha = true
         end
       end
-	  if OB_CONFIG.procedural_gotchas == "4epi" then
+      if OB_CONFIG.procedural_gotchas == "4epi" then
         if map == 3 or map == 6 or map == 9 or map == 11 or map == 14 or map == 16 or map == 18 or map == 20 or map == 23 or map == 26 or map == 28 or map == 30 then
           LEV.is_procedural_gotcha = true
         end

@@ -30,21 +30,21 @@ function ZStoryGen_format_story_chunk(story_strings, info, store)
     if info.demon_name == "NOUNMEMBERS" then
       info.demon_name = info.contributor_name
     end
-	
-	if store and PARAM.boss_gen then
-	  local mcevil
-	  if string.find(story_strings, "_RAND_DEMON") then
-	    mcevil = info.demon_name
-		if string.find(story_strings, "_EVULZ") then
-		  mcevil = mcevil .. " the " .. info.demon_title
-		elseif string.find(story_strings, "_GOTHIC_LEVEL") then
+
+    if store and PARAM.boss_gen then
+      local mcevil
+      if string.find(story_strings, "_RAND_DEMON") then
+        mcevil = info.demon_name
+        if string.find(story_strings, "_EVULZ") then
+          mcevil = mcevil .. " the " .. info.demon_title
+        elseif string.find(story_strings, "_GOTHIC_LEVEL") then
           mcevil = mcevil .. " of " .. info.gothic_level
-		end
-		if PARAM.epi_names[store] == nil then
-		  PARAM.epi_names[store] = mcevil
-		end
-	  end
-	end
+        end
+        if PARAM.epi_names[store] == nil then
+          PARAM.epi_names[store] = mcevil
+        end
+      end
+    end
 
     story_strings = string.gsub(story_strings, "_RAND_DEMON", info.demon_name)
     story_strings = string.gsub(story_strings, "_RAND_ENGLISH_PLACE", info.anglican_name)
