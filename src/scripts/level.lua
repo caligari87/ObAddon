@@ -281,8 +281,8 @@ function Episode_determine_map_sizes()
         W = 26
       end
       if LEV.is_procedural_gotcha == true and PARAM.boss_gen then
-	    W = 16
-	  end
+        W = 16
+      end
       H = W
     end
 
@@ -981,11 +981,11 @@ function Episode_plan_monsters()
       LEV.seen_guards = {}
 
       LEV.boss_quotas = { minor=0, nasty=0, tough=0 }
-	  
-	  if LEV.is_procedural_gotcha and PARAM.boss_gen then
-	    create_fight(LEV, "tough", 1)
-		continue
-	  end
+
+      if LEV.is_procedural_gotcha and PARAM.boss_gen then
+        create_fight(LEV, "tough", 1)
+        continue
+      end
 
       if LEV.prebuilt  then continue end
       if LEV.is_secret then continue end
@@ -2405,13 +2405,29 @@ function Level_do_styles()
     STYLE.parks = "none"
     STYLE.symmetry = "more"
     STYLE.teleporters = "none"
+
     if PARAM.boss_gen then
-        STYLE.steepness = "none"
+      if PARAM.boss_gen_steepness then
+
+        if PARAM.boss_gen_steepness == "mixed" then
+          STYLE.steepness = rand.key_by_probs(
+            {
+              none = 5
+              rare = 5
+              few = 4
+              less = 3
+              some = 2
+            }
+          )
+        else
+          STYLE.steepness = PARAM.boss_gen_steepness
+        end
+
+      end
     end
   end
 
 end
-
 
 
 function Level_choose_liquid()
