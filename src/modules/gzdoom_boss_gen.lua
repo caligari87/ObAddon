@@ -160,7 +160,7 @@ class BossGenerator_Handler : EventHandler
             }
         }
         if(level.time > 1) return;
-        if( e.Thing && e.Thing.bISMONSTER && IsBoss(e.Thing) )
+        if( e.Thing && e.Thing.bISMONSTER && IsBoss(e.Thing) && e.Thing.Health > 0 )
         {
             if(!bossFound)
             {
