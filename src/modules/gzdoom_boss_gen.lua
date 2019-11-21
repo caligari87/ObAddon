@@ -178,7 +178,7 @@ class BossGenerator_Handler : EventHandler
                 e.Thing.Destroy();
             }
         }
-        else if( e.Thing && e.Thing.bISMONSTER )
+        else if( e.Thing && e.Thing.bISMONSTER && e.Thing.Radius > 0 )
         {
             if(e.Thing.Health < 1000)
             {
