@@ -32,9 +32,10 @@ BOSS_GEN_TUNE.BOSS_MUSIC =
 
 BOSS_GEN_TUNE.BOSS_LESS_HITSCAN =
 {
-  "default",  _("No"),
+  "default",  _("Default"),
   "less",     _("50% less"),
   "muchless", _("80% less"),
+  "none", _("100% less"),
 }
 
 BOSS_GEN_TUNE.ARENA_STEEPNESS =
@@ -45,6 +46,22 @@ BOSS_GEN_TUNE.ARENA_STEEPNESS =
   "less",  _("Less"),
   "some",  _("Some"),
   "mixed", _("Mix It Up"),
+}
+
+BOSS_GEN_TUNE.REINFORCE =
+{
+  "none",  _("NONE"),
+  "weaker",  _("Weaker"),
+  "default",   _("Default"),
+  "harder",  _("Harder"),
+  "tougher",  _("Much Harder"),
+  "nightmare", _("Nightmare"),
+}
+
+BOSS_GEN_TUNE.BOSS_TYPES =
+{
+  "yes", _("Yes"),
+  "no",  _("No"),
 }
 
 BOSS_GEN_TUNE.TEMPLATES =
@@ -180,7 +197,7 @@ class BossGenerator_Handler : EventHandler
         }
         else if( e.Thing && e.Thing.bISMONSTER && e.Thing.Radius > 0 )
         {
-            if(e.Thing.Health < 1000)
+            if(e.Thing.Health < SMAXHEALTH)
             {
             BossSummonSpot mpos = BossSummonSpot(Actor.Spawn('BossSummonSpot', e.Thing.pos));
             mpos.MonsterClass = e.Thing.getClassName();
@@ -445,16 +462,7 @@ class bossController : thinker
                 boss.A_Quake(6,60,0,2048);
                 MUSIC
             }
-            if(boss.health > 0 && boss.health < boss.starthealth*0.75 && summoncd == 0)
-            {
-                summoncd = self.bosssummon[level-1];
-                int count = 5;
-                int leftover = ActivateSpawners(count,512);
-                if(leftover>0)
-                {
-                    ActivateSpawners(leftover,1024);
-                }
-            }
+            SUMCODE
             if(boss.health > 0 && boss.health < boss.starthealth*(0.3*(3-phase)))
             {
                 boss.A_PlaySound(boss.SeeSound,CHAN_AUTO,1.0,false,ATTN_NONE);
@@ -876,6 +884,17 @@ class bossabilitygiver_homing : bossabilitygiver { }
         }
 ]]
   MUS = [[S_ChangeMusic(string.format("%%s%%i","d_boss",level), 0, true, false);]]
+  SUM = [[if(boss.health > 0 && boss.health < boss.starthealth*0.75 && summoncd == 0)
+            {
+                summoncd = self.bosssummon[level-1];
+                int count = 5;
+                int leftover = ActivateSpawners(count,512);
+                if(leftover>0)
+                {
+                    ActivateSpawners(leftover,1024);
+                }
+            }
+]]
 }
 
 BOSS_GEN_TUNE.TAUNTS =
@@ -1300,6 +1319,18 @@ function BOSS_GEN_TUNE.all_done()
   else
     scripty = string.gsub(scripty, "MUSIC", "")
   end
+  
+  if PARAM.boss_gen_reinforce != "none" then
+    scripty = string.gsub(scripty, "SUMCODE", BOSS_GEN_TUNE.TEMPLATES.SUM)
+  else
+    scripty = string.gsub(scripty, "SUMCODE", "")
+  end
+  
+  if PARAM.boss_gen_reinforce == "nightmare" then
+    scripty = string.gsub(scripty, "SMAXHEALTH", "10000")
+  else
+    scripty = string.gsub(scripty, "SMAXHEALTH", "1000")
+  end
 
   for name,info in pairs(PARAM.boss_types) do
     local bhp = info.health
@@ -1485,7 +1516,8 @@ OB_MODULES["gzdoom_boss_gen"] =
       priority = 95,
       choices=BOSS_GEN_TUNE.BOSS_MUSIC,
       default = "yes",
-      tooltip = "If enabled, encountering a boss will start boss theme music.",
+      tooltip = "If enabled, encountering a boss will start boss theme music." ..
+	  "(For now you have to have your own music files with lumps named D_BOSSx where x is boss number)",
       gap = 1,
     }
 
@@ -1498,6 +1530,26 @@ OB_MODULES["gzdoom_boss_gen"] =
       default = "none",
       tooltip = "Influences steepness settings for boss arenas. " ..
       "Boss arena steepness is capped to be less intrusive to boss movement.",
+    }
+	
+	boss_gen_reinforce =
+	{
+      name = "boss_gen_reinforce",
+      label = _("Reinforcement Strength"),
+      priority = 93,
+      choices = BOSS_GEN_TUNE.REINFORCE,
+      default = "default",
+      tooltip = "Influences the strength of reinforcements summoned by bosses",
+    }
+	
+    boss_gen_types =
+    {
+      name = "boss_gen_types",
+      label = _("Respect zero prob"),
+      priority = 92,
+      choices = BOSS_GEN_TUNE.BOSS_TYPES,
+      default = "no",
+      tooltip = "If enabled, monsters disabled in monster control module cant be chosen as a boss."
     }
   }
 }

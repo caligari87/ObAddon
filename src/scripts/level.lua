@@ -480,8 +480,20 @@ function Episode_plan_monsters()
 
     if LEV.is_procedural_gotcha then
       local gotcha_strength = 2
-
-      if PARAM.gotcha_strength then
+	  
+	  if PARAM.boss_gen then
+	    if PARAM.boss_gen_reinforce == "weaker" then
+          gotcha_strength = math.max(8, mon_along * 0.9) * -1
+		elseif PARAM.boss_gen_reinforce == "default" then
+          gotcha_strength = math.max(4, mon_along * 0.75) * -1
+		elseif PARAM.boss_gen_reinforce == "harder" then
+          gotcha_strength = math.max(2, mon_along * 0.5) * -1
+		elseif PARAM.boss_gen_reinforce == "tougher" then
+          gotcha_strength = 2
+		elseif PARAM.boss_gen_reinforce == "nightmare" then
+          gotcha_strength = 16
+		end
+      elseif PARAM.gotcha_strength then
         if PARAM.gotcha_strength == "none" then
           gotcha_strength = 0
         elseif PARAM.gotcha_strength == "harder" then
@@ -494,6 +506,9 @@ function Episode_plan_monsters()
       end
 
       LEV.monster_level = mon_along + gotcha_strength
+	  if LEV.monster_level < 1 then
+	    LEV.monster_level = 1
+      end
 
     else
 
@@ -682,8 +697,13 @@ function Episode_plan_monsters()
             bprob = bprob/2
           elseif hitred == "muchless" then
             bprob = bprob/5
+		  elseif hitred == "none" then
+            bprob = 0
           end
         end
+		if PARAM.boss_gen_types == "yes" and info.prob == 0 then
+		  bprob = 0
+		end
         tab[name] = bprob
       else
         if info.boss_type == what and is_boss_usable(LEV, name, info) then
