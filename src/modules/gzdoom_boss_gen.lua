@@ -662,7 +662,7 @@ class BossRicochetThinker : Thinker
         super.Tick();
         if(missile && missile.target && missile.InStateSequence(missile.CurState, missile.ResolveState("Death")))
         {
-            let proj = missile.SpawnMissileAngleZ(missile.z, "BossBDeflect", -missile.angle+random(-45,45), 0);
+            let proj = missile.SpawnMissileAngleZ(missile.pos.z, "BossBDeflect", -missile.angle+random(-45,45), 0);
             if(proj)
             {
                 proj.A_GiveInventory("bossabilitygiver_boss");
