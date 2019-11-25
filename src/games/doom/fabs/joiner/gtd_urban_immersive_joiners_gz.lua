@@ -1,9 +1,9 @@
-PREFABS.Joiner_public_toilet_room =
+PREFABS.Joiner_public_toilet_room_gz =
 {
-  file   = "joiner/gtd_urban_immersive_joiners.wad"
+  file   = "joiner/gtd_urban_immersive_joiners_gz.wad"
   map    = "MAP01"
 
-  engine = "!zdoom"
+  engine = "zdoom"
 
   prob   = 650
 
