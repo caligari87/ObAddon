@@ -871,8 +871,23 @@ class bossabilitygiver_homing : bossabilitygiver { }
             {
                 barsx.AppendFormat("I");
             }
-            string bosshp = string.format("%%s %%s %%s", Stringtable.Localize(string.format("%%s%%i","$BOSS_NAME",currentboss)), "\n", barsx);
-            screen.DrawText(BigFont, Font.CR_RED, 32, -32, bosshp, DTA_Clean, true);
+            string name = Stringtable.Localize(string.format("%%s%%i","$BOSS_NAME",currentboss));
+			string bosshp = string.format("%%s %%s %%s", name, "\n", barsx);
+			if(name.length()>32)
+			{
+				if(name.length()>41)
+				{
+					screen.DrawText(SmallFont, Font.CR_RED, -92, -32, bosshp, DTA_Clean, true);
+				}
+				else
+				{
+					screen.DrawText(BigFont, Font.CR_RED, -92, -32, bosshp, DTA_Clean, true);
+				}
+			}
+			else
+			{
+				screen.DrawText(BigFont, Font.CR_RED, 32, -32, bosshp, DTA_Clean, true);
+			}
             }
         }
         }
