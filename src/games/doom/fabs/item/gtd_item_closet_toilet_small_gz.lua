@@ -2,12 +2,12 @@
 -- Yes, I am aware I am a bad person.
 --
 
-PREFABS.Item_closet_toilet_room_small =
+PREFABS.Item_closet_toilet_room_small_gz =
 {
-  file   = "item/gtd_item_closet_toilet_small.wad"
+  file   = "item/gtd_item_closet_toilet_small_gz.wad"
   map    = "MAP01"
 
-  engine = "!zdoom"
+  engine = "zdoom"
 
   prob   = 10
   theme  = "!hell"

@@ -2,12 +2,12 @@
 -- Yes, I am aware I am a bad person.
 --
 
-PREFABS.Item_closet_toilet_room =
+PREFABS.Item_closet_toilet_room_gz =
 {
-  file   = "item/gtd_item_closet_toilet.wad"
+  file   = "item/gtd_item_closet_toilet_gz.wad"
   map    = "MAP01"
 
-  engine = "!zdoom"
+  engine = "zdoom"
 
   rank   = 2
   prob   = 100
@@ -29,9 +29,9 @@ PREFABS.Item_closet_toilet_room =
   sound = "Bathroom_Fan"
 }
 
-PREFABS.Item_closet_toilet_room_filthy =
+PREFABS.Item_closet_toilet_room_filthy_gz =
 {
-  template   = "Item_closet_toilet_room"
+  template   = "Item_closet_toilet_room_gz"
   map = "MAP02"
   prob = 80
 }
