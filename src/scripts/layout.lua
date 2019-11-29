@@ -231,6 +231,18 @@ function Layout_spot_for_wotsit(R, kind, required)
     if chunk.content then return -1 end
 
     if LEVEL.is_procedural_gotcha == true and PARAM.boss_gen and chunk.kind == "closet" then return -1 end
+	
+	if LEVEL.is_procedural_gotcha == true and PARAM.boss_gen and kind == "WEAPON" then
+	  if PARAM.boss_gen_weap == "close" then
+	    each goal in R.goals do
+	      if goal.chunk and goal.kind == "START" then
+		    if geom.dist(chunk.mx,chunk.my,goal.chunk.mx,goal.chunk.my) > 726 then
+		      return -1
+		    end
+		  end
+	    end
+	  end
+	end
 
     if kind == "LOCAL_SWITCH" then
       if chunk.kind != "closet" then return -1 end

@@ -64,6 +64,12 @@ BOSS_GEN_TUNE.BOSS_TYPES =
   "no",  _("No"),
 }
 
+BOSS_GEN_TUNE.BOSS_WEAP =
+{
+  "scatter", _("Scatter around arena"),
+  "close",  _("Close to player start"),
+}
+
 BOSS_GEN_TUNE.TEMPLATES =
 {
   ZSC =
@@ -1572,6 +1578,16 @@ OB_MODULES["gzdoom_boss_gen"] =
       choices = BOSS_GEN_TUNE.BOSS_TYPES,
       default = "no",
       tooltip = "If enabled, monsters disabled in monster control module cant be chosen as a boss."
+    }
+	
+	boss_gen_weap =
+    {
+      name = "boss_gen_weap",
+      label = _("Weapon placement"),
+      priority = 91,
+      choices = BOSS_GEN_TUNE.BOSS_WEAP,
+      default = "scatter",
+      tooltip = "Influences weapon placement in boss arena."
     }
   }
 }
