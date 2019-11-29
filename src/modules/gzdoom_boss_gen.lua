@@ -392,10 +392,13 @@ class bossController : thinker
             boss.bLOOKALLAROUND = true;
             boss.bTHRUSPECIES = true;
             boss.bQUICKTORETALIATE = true;
+			boss.bAMBUSH = true;
             boss.Species = "IAmTheBoss";
             boss.SetTag(Stringtable.Localize(string.format("%s%i","$BOSS_NAME",level)));
             boss.PainChance*=0.5;
             boss.A_GiveInventory("bossabilitygiver_boss");
+			pcirclecd = 400;
+			teleportcd = 400;
         }
     }
     override void Tick()
@@ -457,10 +460,14 @@ class bossController : thinker
             }
             if(boss.target && !bossactive)
             {
-                bossactive = true;
-                boss.A_PrintBold(Stringtable.Localize(string.format("%s%i","$BOSS_TAUNT",level)));
-                boss.A_Quake(6,60,0,2048);
-                MUSIC
+				if(!boss.CheckIfSeen() || boss.health < boss.starthealth)
+				{
+					boss.bAMBUSH = false;
+					bossactive = true;
+					boss.A_PrintBold(Stringtable.Localize(string.format("%s%i","$BOSS_TAUNT",level)));
+					boss.A_Quake(6,60,0,2048);
+					MUSIC
+				}
             }
             SUMCODE
             if(boss.health > 0 && boss.health < boss.starthealth*(0.3*(3-phase)))
