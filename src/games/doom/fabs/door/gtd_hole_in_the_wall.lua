@@ -3,7 +3,7 @@ PREFABS.Arch_hole_in_the_wall_1x =
   file   = "door/gtd_hole_in_the_wall.wad"
   map    = "MAP01"
 
-  prob = 180
+  prob = 280
 
   kind   = "arch"
   where  = "edge"
@@ -23,7 +23,7 @@ PREFABS.Arch_hole_in_the_wall_2x =
 {
   template = "Arch_hole_in_the_wall_1x"
 
-  prob = 240
+  prob = 280
 
   seed_w = 2
 
@@ -34,7 +34,7 @@ PREFABS.Arch_hole_in_the_wall_3x =
 {
   template = "Arch_hole_in_the_wall_1x"
 
-  prob = 360
+  prob = 280
 
   seed_w = 3
 

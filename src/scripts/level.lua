@@ -480,7 +480,7 @@ function Episode_plan_monsters()
 
     if LEV.is_procedural_gotcha then
       local gotcha_strength = 2
-	  
+
 	  if PARAM.boss_gen then
 	    if PARAM.boss_gen_reinforce == "weaker" then
           gotcha_strength = math.max(8, mon_along * 0.9) * -1
@@ -2526,6 +2526,11 @@ function Level_choose_darkness()
 end
 
 
+function Level_choose_squareishness()
+  LEVEL.squareishness = rand.pick({ 0,25,50,75,90 })
+end
+
+
 function Level_choose_skybox()
   local skyfab
 
@@ -2608,6 +2613,7 @@ function Level_init()
 
   Level_choose_liquid()
   Level_choose_darkness()
+  Level_choose_squareishness()
 
   Level_choose_skybox()
 

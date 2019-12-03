@@ -3774,7 +3774,7 @@ function Grower_sprout_room(R)
 
   Grower_grammatical_room(R, "sprout")
 
-  if rand.odds(75) and not R.is_cave and not R.is_park
+  if rand.odds(LEVEL.squareishness) and not R.is_cave and not R.is_park
   and not R.is_hallway and not R.is_street then
     Grower_grammatical_room(R, "square_out")
     R.is_squarified = true
