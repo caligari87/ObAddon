@@ -398,13 +398,13 @@ class bossController : thinker
             boss.bLOOKALLAROUND = true;
             boss.bTHRUSPECIES = true;
             boss.bQUICKTORETALIATE = true;
-			boss.bAMBUSH = true;
+            boss.bAMBUSH = true;
             boss.Species = "IAmTheBoss";
             boss.SetTag(Stringtable.Localize(string.format("%s%i","$BOSS_NAME",level)));
             boss.PainChance*=0.5;
             boss.A_GiveInventory("bossabilitygiver_boss");
-			pcirclecd = 400;
-			teleportcd = 400;
+            pcirclecd = 400;
+            teleportcd = 400;
         }
     }
     override void Tick()
@@ -466,14 +466,14 @@ class bossController : thinker
             }
             if(boss.target && !bossactive)
             {
-				if(!boss.CheckIfSeen() || boss.health < boss.starthealth)
-				{
-					boss.bAMBUSH = false;
-					bossactive = true;
-					boss.A_PrintBold(Stringtable.Localize(string.format("%s%i","$BOSS_TAUNT",level)));
-					boss.A_Quake(6,60,0,2048);
-					MUSIC
-				}
+                if(!boss.CheckIfSeen() || boss.health < boss.starthealth)
+                {
+                    boss.bAMBUSH = false;
+                    bossactive = true;
+                    boss.A_PrintBold(Stringtable.Localize(string.format("%s%i","$BOSS_TAUNT",level)));
+                    boss.A_Quake(6,60,0,2048);
+                    MUSIC
+                }
             }
             SUMCODE
             if(boss.health > 0 && boss.health < boss.starthealth*(0.3*(3-phase)))
@@ -885,22 +885,22 @@ class bossabilitygiver_homing : bossabilitygiver { }
                 barsx.AppendFormat("I");
             }
             string name = Stringtable.Localize(string.format("%%s%%i","$BOSS_NAME",currentboss));
-			string bosshp = string.format("%%s %%s %%s", name, "\n", barsx);
-			if(name.length()>32)
-			{
-				if(name.length()>41)
-				{
-					screen.DrawText(SmallFont, Font.CR_RED, -92, -32, bosshp, DTA_Clean, true);
-				}
-				else
-				{
-					screen.DrawText(BigFont, Font.CR_RED, -92, -32, bosshp, DTA_Clean, true);
-				}
-			}
-			else
-			{
-				screen.DrawText(BigFont, Font.CR_RED, 32, -32, bosshp, DTA_Clean, true);
-			}
+            string bosshp = string.format("%%s %%s %%s", name, "\n", barsx);
+            if(name.length()>32)
+            {
+                if(name.length()>41)
+                {
+                    screen.DrawText(SmallFont, Font.CR_RED, -92, -32, bosshp, DTA_Clean, true);
+                }
+                else
+                {
+                    screen.DrawText(BigFont, Font.CR_RED, -92, -32, bosshp, DTA_Clean, true);
+                }
+            }
+            else
+            {
+                screen.DrawText(BigFont, Font.CR_RED, 32, -32, bosshp, DTA_Clean, true);
+            }
             }
         }
         }
@@ -1347,13 +1347,13 @@ function BOSS_GEN_TUNE.all_done()
   else
     scripty = string.gsub(scripty, "MUSIC", "")
   end
-  
+
   if PARAM.boss_gen_reinforce != "none" then
     scripty = string.gsub(scripty, "SUMCODE", BOSS_GEN_TUNE.TEMPLATES.SUM)
   else
     scripty = string.gsub(scripty, "SUMCODE", "")
   end
-  
+
   if PARAM.boss_gen_reinforce == "nightmare" then
     scripty = string.gsub(scripty, "SMAXHEALTH", "10000")
   else
@@ -1545,7 +1545,7 @@ OB_MODULES["gzdoom_boss_gen"] =
       choices=BOSS_GEN_TUNE.BOSS_MUSIC,
       default = "yes",
       tooltip = "If enabled, encountering a boss will start boss theme music." ..
-	  "(For now you have to have your own music files with lumps named D_BOSSx where x is boss number)",
+      "(For now you have to have your own music files with lumps named D_BOSSx where x is boss number)",
       gap = 1,
     }
 
@@ -1559,9 +1559,9 @@ OB_MODULES["gzdoom_boss_gen"] =
       tooltip = "Influences steepness settings for boss arenas. " ..
       "Boss arena steepness is capped to be less intrusive to boss movement.",
     }
-	
-	boss_gen_reinforce =
-	{
+
+    boss_gen_reinforce =
+    {
       name = "boss_gen_reinforce",
       label = _("Reinforcement Strength"),
       priority = 93,
@@ -1569,7 +1569,7 @@ OB_MODULES["gzdoom_boss_gen"] =
       default = "default",
       tooltip = "Influences the strength of reinforcements summoned by bosses",
     }
-	
+
     boss_gen_types =
     {
       name = "boss_gen_types",
@@ -1579,8 +1579,8 @@ OB_MODULES["gzdoom_boss_gen"] =
       default = "no",
       tooltip = "If enabled, monsters disabled in monster control module cant be chosen as a boss."
     }
-	
-	boss_gen_weap =
+
+    boss_gen_weap =
     {
       name = "boss_gen_weap",
       label = _("Weapon placement"),

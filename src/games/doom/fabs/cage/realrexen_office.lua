@@ -19,27 +19,27 @@ PREFABS.Cage_realrexen_office =
 
   x_fit  = "frame"
   y_fit  = "frame"
-  
+
   engine = "gzdoom"
 
    thing_2007 =
     {
  --   pistol = 50
-	shotty = 50
+    shotty = 50
     super = 50
-	chain = 50
---	bfg = 50
-	launch = 50
-	plasma = 50
-	saw = 50
+    chain = 50
+--    bfg = 50
+    launch = 50
+    plasma = 50
+    saw = 50
    }
-    
+
   thing_10 =
    {
     dead_imp = 25
-	dead_player = 25
-	dead_zombie = 25
-	dead_shooter = 25
+    dead_player = 25
+    dead_zombie = 25
+    dead_shooter = 25
   }
-  
+
 }

@@ -1226,14 +1226,14 @@ function Monster_fill_room(R)
 
     if PARAM.boss_gen and LEVEL.is_procedural_gotcha then
       local max_level = LEVEL.monster_level
-	  if info.level > max_level then
+      if info.level > max_level then
         prob = prob / 40
       end
-	  if PARAM.boss_gen_reinforce == "nightmare" then
-	    if info.level < 5 * LEVEL.game_along then
-		  prob = prob / 40
-		end
-	  end
+      if PARAM.boss_gen_reinforce == "nightmare" then
+        if info.level < 5 * LEVEL.game_along then
+          prob = prob / 40
+        end
+      end
     elseif not (#R.goals > 0 or R.is_exit or spot_kind == "trap") then
       local max_level = LEVEL.monster_level * (0.5 + R.lev_along / 2)
       if max_level < 2 then max_level = 2 end
@@ -1540,17 +1540,17 @@ function Monster_fill_room(R)
     local info  = GAME.MONSTERS[mon] or
                   GAME.ENTITIES[mon]
     local rr = info.r
-	if fat then
+    if fat then
       if fat == 1 and info.health < 2000 then
         if info.r < 48 then
           rr = info.r * 2
         else
           rr = info.r * 1.5
         end
-	  elseif fat > 1 then
-	    rr = 64 * fat
+      elseif fat > 1 then
+        rr = 64 * fat
       end
-	end
+    end
 
     if info.h >= (spot.z2 - spot.z1) then return 0 end
 
@@ -2114,24 +2114,24 @@ gui.debugf("   doing spot : Mon=%s\n", tostring(mon))
 
     for i = 1, bf.count do
       local mon = bf.mon
-	  local spot 
+      local spot
 
       if LEVEL.is_procedural_gotcha and PARAM.boss_gen then
-	    reqs.fatness = 4
-		while reqs.fatness > 0
-		do
-	      spot = grab_monster_spot(mon, R.guard_chunk, reqs)
-		  if spot then break end
-		  reqs.fatness = reqs.fatness - 1
-		end
+        reqs.fatness = 4
+        while reqs.fatness > 0
+        do
+          spot = grab_monster_spot(mon, R.guard_chunk, reqs)
+          if spot then break end
+          reqs.fatness = reqs.fatness - 1
+        end
 
         -- if it still doesn't fit... just grab a random spot, damn it
         if not spot then
-		  reqs.fatness = 1
+          reqs.fatness = 1
           spot = grab_monster_spot(mon, rand.pick(R.areas), reqs)
         end
       else
-	    spot = grab_monster_spot(mon, R.guard_chunk, reqs)
+        spot = grab_monster_spot(mon, R.guard_chunk, reqs)
       end
 
       -- if it did not fit (e.g. too large), try a backup
