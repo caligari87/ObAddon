@@ -136,6 +136,7 @@ OB_MODULES["misc"] =
     }
 
     { name="big_rooms",   label=_("Big Rooms"),      choices=STYLE_CHOICES }
+    { name="big_outdoor_rooms", label=_("Big Outdoors"), choices=STYLE_CHOICES }
     {
       name="room_heights",
       label=_("Room Heights"),
