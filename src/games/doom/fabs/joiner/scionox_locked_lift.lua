@@ -18,7 +18,7 @@ PREFABS.Joiner_scionox_locked_lift_barred =
   over   = 16
 
   x_fit = "frame"
-  y_fit = "frame"
+  y_fit = { 56,104 }
 
   delta_h  = 128
   nearby_h = 128
@@ -197,7 +197,7 @@ PREFABS.Joiner_scionox_locked_lift_gated_switch =
   over   = 16
 
   x_fit = "frame"
-  y_fit = "frame"
+  y_fit = {52,60 , 92,108}
 
   delta_h  = 128
   nearby_h = 128
@@ -247,7 +247,7 @@ PREFABS.Joiner_scionox_locked_lift_lockgate_switch =
   over   = 16
 
   x_fit = "frame"
-  y_fit = "frame"
+  y_fit = {44,52 , 108,116}
 
   delta_h  = 128
   nearby_h = 128
