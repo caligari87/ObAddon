@@ -44,6 +44,7 @@ function ScriptMan_assemble_mapinfo_lump()
       "gameinfo\n",
       "{\n",
   }
+
   if PARAM.boss_gen and PARAM.boss_count != -1 then
     table.insert(mapinfo_lines, 'addeventhandlers = "BossGenerator_Handler"\n')
   end
@@ -58,19 +59,26 @@ function ScriptMan_assemble_mapinfo_lump()
       table.insert(mapinfo_lines,line)
     end
   end
-  gui.wad_add_text_lump("MAPINFO", mapinfo_lines)
+
+  if #mapinfo_lines > 2 then
+    gui.wad_add_text_lump("MAPINFO", mapinfo_lines)
+  end
 end
 
 
 function ScriptMan_assemble_zscript_lump()
-  local zscript_lines = 'version "3.3"\n'
+  local zscript_lines = ""
   if PARAM.boss_gen and PARAM.boss_count != -1 then
     zscript_lines = zscript_lines .. PARAM.BOSSSCRIPT
   end
   if PARAM.custom_trees == "zs" then
     zscript_lines = zscript_lines .. PARAM.ztrees
   end
-  add_script_lump("ZSCRIPT", zscript_lines)
+
+  if zscript_lines != "" then
+    zscript_lines = 'version "3.3"\n' .. zscript_lines
+    add_script_lump("ZSCRIPT", zscript_lines)
+  end
 end
 
 
@@ -89,7 +97,9 @@ function ScriptMan_assemble_decorate_lump()
     PARAM.SOUND_DEC
   end
 
-  add_script_lump("DECORATE", decorate_script_lines)
+  if decorate_script_lines != "" then
+    add_script_lump("DECORATE", decorate_script_lines)
+  end
 end
 
 
@@ -105,18 +115,22 @@ end
 
 function ScriptMan_assemble_gldefs_lump()
   local gldefs_lines = ""
+
   if PARAM.dynamic_lights == "yes" then
     gldefs_lines = gldefs_lines ..
     ZDOOM_SPECIALS.DYNAMIC_LIGHT_GLDEFS
   end
 
-  add_script_lump("GLDEFS", gldefs_lines)
+  if gldefs_lines != "" then
+    add_script_lump("GLDEFS", gldefs_lines)
+  end
 end
 
 function ScriptMan_assemble_language_lump()
   local language_lines = {
       "[enu default]\n",
   }
+
   if PARAM.boss_gen and PARAM.boss_count != -1 then
     each line in PARAM.BOSSLANG do
       table.insert(language_lines,line)
@@ -132,7 +146,11 @@ function ScriptMan_assemble_language_lump()
       table.insert(language_lines,line)
     end
   end
-  gui.wad_add_text_lump("LANGUAGE", language_lines)
+
+  if #language_lines > 2 then
+    gui.wad_add_text_lump("LANGUAGE", language_lines)
+  end
+
 end
 
 function ScriptMan_assemble_acs_lump()
