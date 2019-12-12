@@ -2987,6 +2987,7 @@ GROW_LIQUID_WATERFALL_SIDES =
   structure =
   {
     "...","AAA"
+    "...","AAA"
     "...","~^~"
     "111","111"
   }
