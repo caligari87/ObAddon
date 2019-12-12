@@ -36,3 +36,16 @@ PREFABS.Pic_heatant_coolant_2 =
   x_fit = {36,84 , 172,220}
   y_fit = "top"
 }
+
+PREFABS.Pic_wire_spools =
+{
+  template = "Pic_heatant_coolant_1"
+  map = "MAP03"
+
+  engine = "zdoom"
+
+  prob = 25
+
+  x_fit = {32,36}
+  y_fit = "top"
+}
