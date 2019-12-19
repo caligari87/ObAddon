@@ -20,7 +20,7 @@ PREFABS.Pic_heatant_coolant_1 =
   bound_z1 = 0
   bound_z2 = 128
 
-  x_fit = {72,104}
+  x_fit = {68,72 , 84,92 , 104,108}
   y_fit = "top"
 }
 
