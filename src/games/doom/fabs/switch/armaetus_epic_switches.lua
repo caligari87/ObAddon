@@ -28,7 +28,7 @@ PREFABS.Switch_armaetus_epic_1 =
   tag_1 = "?switch_tag"
 }
 
-PREFABS.Switch_armaetus_epic_2 =
+PREFABS.Switch_armaetus_huge_skull =
 {
   template = "Switch_armaetus_epic_1"
 
@@ -37,16 +37,16 @@ PREFABS.Switch_armaetus_epic_2 =
   height = 96
 }
 
-PREFABS.Switch_armaetus_epic_3 =
+PREFABS.Switch_armaetus_pentagram =
 {
   template = "Switch_armaetus_epic_1"
 
   map = "MAP03"
 
-  height = 96
+  height = 112
 }
 
-PREFABS.Switch_armaetus_epic_4 =
+PREFABS.Switch_armaetus_mouth_ring_lever =
 {
   template = "Switch_armaetus_epic_1"
 
