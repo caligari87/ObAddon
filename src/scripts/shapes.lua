@@ -3283,6 +3283,24 @@ GROW_CAUSEWAY_CORNER_SINGLE =
   }
 }
 
+GROW_CAUSEWAY_TIP =
+{
+  prob = 10
+  skip_prob = 75
+
+  structure =
+  {
+    "x........","111111111"
+    "x........","111111111"
+    "x........","x11AAAA11"
+    "x........","x11AAAA11"
+    "x........","x11>AA<11"
+    "x........","x11>AA<11"
+    "xxx....xx","xxxAAAAxx"
+    "xxx....xx","xxxAAAAxx"
+  }
+}
+
 GROW_GATED_RAMP =
 {
   prob = 15
