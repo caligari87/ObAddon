@@ -67,6 +67,11 @@ HERETIC.THEMES =
       tall   = 30
     }
 
+    fence_groups =
+    {
+      PLAIN = 50
+    }
+
     fence_posts =
     {
       Post = 50

@@ -832,10 +832,6 @@ function Junction_make_beams(junc)
     area = junc.A1
   }
 
-  if not junc.A1.room.beam_type then
-    junc.A1.room.beam_type = rand.key_by_probs(THEME.beam_groups)
-  end
-
   junc.E2 = { kind="nothing", area=junc.A2 }
 
   junc.E1.peer = junc.E2

@@ -1,15 +1,11 @@
---
--- Plain fence
---
-
-PREFABS.Fence_plain =
+PREFABS.Fence_gappy =
 {
-  file   = "fence/fence_16.wad"
+  file   = "fence/gappy.wad"
   map    = "MAP01"
 
   prob   = 50
 
-  group  = "PLAIN"
+  group  = "gappy"
 
   where  = "edge"
 
@@ -21,14 +17,14 @@ PREFABS.Fence_plain =
 }
 
 
-PREFABS.Fence_plain_diag =
+PREFABS.Fence_gappy_diag =
 {
-  file   = "fence/fence_16.wad"
+  file   = "fence/gappy.wad"
   map    = "MAP02"
 
   prob   = 50
 
-  group  = "PLAIN"
+  group  = "gappy"
 
   where  = "diagonal"
 

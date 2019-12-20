@@ -1218,6 +1218,12 @@ DOOM.THEMES =
       gtd_window_metal_frames = 30
     }
 
+    fence_groups =
+    {
+      PLAIN = 50
+      gappy = 50
+    }
+
     fence_posts =
     {
       Post_metal = 50
@@ -1512,6 +1518,13 @@ DOOM.THEMES =
       gtd_window_weabdows = 70
       gtd_window_metal_frames = 70
       gtd_window_pencil_holes = 35
+    }
+
+    fence_groups =
+    {
+      PLAIN = 50
+      gappy = 50
+      crenels = 12
     }
 
     fence_posts =
@@ -1889,6 +1902,13 @@ DOOM.THEMES =
       gtd_window_arrowslit = 60
       gtd_window_metal_frames = 60
       gtd_window_pencil_holes = 60
+    }
+
+    fence_groups =
+    {
+      PLAIN = 50
+      gappy = 50
+      crenels = 50000
     }
 
     fence_posts =

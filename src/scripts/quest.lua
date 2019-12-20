@@ -2875,6 +2875,9 @@ function Quest_room_themes()
         elseif R.is_outdoor then
           R.theme = Z.outdoor_theme
         end
+
+        R.fence_type = rand.key_by_probs(THEME.fence_groups)
+        R.beam_type = rand.key_by_probs(THEME.beam_groups)
       end
     end
   end

@@ -629,6 +629,12 @@ ULTDOOM.THEMES =
       gtd_generic_half_floor = 15
     }
 
+    fence_groups =
+    {
+      PLAIN = 50
+      gappy = 50
+    }
+
     fence_posts =
     {
       Post_metal = 50
@@ -896,6 +902,13 @@ ULTDOOM.THEMES =
 
     }
 
+    fence_groups =
+    {
+      PLAIN = 50
+      crenels = 50
+      gappy = 50
+    }
+
     fence_posts =
     {
       Post_metal = 50
@@ -1099,6 +1112,13 @@ ULTDOOM.THEMES =
       gtd_wall_high_gap_set = 20
       gtd_wall_high_gap_alt_set = 20
       gtd_generic_half_floor = 20
+    }
+
+    fence_groups =
+    {
+      PLAIN = 50
+      crenels = 50
+      gappy = 25
     }
 
     fence_posts =
@@ -1394,6 +1414,12 @@ ULTDOOM.THEMES =
       gtd_generic_half_floor = 15
       gtd_woodframe = 15
       gtd_woodframe_green = 15
+    }
+
+    fence_groups =
+    {
+      PLAIN = 50
+      crenels = 50
     }
 
     fence_posts =

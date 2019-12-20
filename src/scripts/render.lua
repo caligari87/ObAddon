@@ -369,6 +369,8 @@ function Render_edge(E)
     {
       kind = "fence"
 
+      group = assert(E.area.room.fence_type)
+
       seed_w = assert(E.long)
     }
 

@@ -240,6 +240,13 @@ TNT.THEMES =
       beam_quakeish = 50
     }
 
+    fence_groups =
+    {
+      PLAIN = 50
+      crenels = 50
+      gappy = 50
+    }
+
     fence_posts =
     {
       Post_metal = 50
