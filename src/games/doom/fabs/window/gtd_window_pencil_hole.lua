@@ -11,7 +11,7 @@ PREFABS.Window_pencil_hole_1 =
   where  = "edge"
   seed_w = 1
 
-  height = 96
+  height = 128
   deep   = 16
   over   = 16
 
