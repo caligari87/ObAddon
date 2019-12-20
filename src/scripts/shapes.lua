@@ -5451,10 +5451,10 @@ GROW_PILLAR_2X2 =
 
   structure =
   {
-    "x....","x1111"
-    "1....","11..1"
-    "1....","11..1"
-    "x....","x1111"
+    "1.....","111111"
+    "1.....","11..11"
+    "x.....","x1..11"
+    "x.....","x11111"
   }
 }
 
@@ -5466,11 +5466,11 @@ GROW_PILLAR_3X3 =
 
   structure =
   {
-    "x.....","x11111"
-    "1.....","11/#%1"
-    "1.....","11###1"
-    "1.....","11%#/1"
-    "x.....","x11111"
+    "1......","1111111"
+    "1......","11/#%11"
+    "x......","x1###11"
+    "x......","x1%#/11"
+    "x......","x111111"
   }
 
   diagonals =
@@ -5488,10 +5488,10 @@ GROW_PILLAR_BEAN =
 
   structure =
   {
-    "1....","11111"
-    "1....","11/#1"
-    "x....","x1#/1"
-    "x....","x1111"
+    "1.....","111111"
+    "1.....","11/#11"
+    "x.....","x1#/11"
+    "x.....","x11111"
   }
 
   diagonals =
@@ -5511,16 +5511,17 @@ GROW_PILLAR_GATE =
   structure =
   {
     "......","111111"
+    "......","111111"
     "......","1#AA#1"
     "11....","111111"
     "11xxxx","11xxxx"
   }
 }
 
-GROW_CATWALK_SUPPORT_PILLAR_OUTER =
+DECORATE_CATWALK_SUPPORT_PILLAR_OUTER =
 {
-  prob = 35
-  skip_prob = 25
+  prob = 3
+  skip_prob = 80
 
   structure =
   {
@@ -5530,10 +5531,10 @@ GROW_CATWALK_SUPPORT_PILLAR_OUTER =
   }
 }
 
-GROW_CATWALK_SUPPORT_PILLAR_INNER_DOUBLE =
+DECORATE_CATWALK_SUPPORT_PILLAR_INNER_DOUBLE =
 {
-  prob = 25
-  skip_prob = 25
+  prob = 3
+  skip_prob = 80
 
   structure =
   {
