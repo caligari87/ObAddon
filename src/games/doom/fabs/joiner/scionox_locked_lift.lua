@@ -29,6 +29,8 @@ PREFABS.Joiner_scionox_locked_lift_barred =
   can_flip = true
 
   tex_COMPBLUE = { COMPBLUE=50, METAL1=50, SHAWN2=50, SILVER1=50, SPACEW4=60, TEKLITE=50 }
+
+  x_fit = {20,28 , 36,44 , 52,60 , 68,76 , 84,92 , 100,108}
 }
 
 PREFABS.Joiner_scionox_locked_lift_barred_urban =
@@ -60,6 +62,8 @@ PREFABS.Joiner_scionox_locked_lift_thicc_barred_hell =
   map    = "MAP04"
   theme  = "hell"
   tex_COMPBLUE = { REDWALL=50, GSTONE1=50, METAL=50, SP_FACE2=50, SKSNAKE2=60, WOODVERT=50 }
+
+  x_fit = {28,36 , 60,68 , 92,100}
 }
 
 PREFABS.Joiner_scionox_locked_lift_thicc_barred_hell_2 =
@@ -69,6 +73,8 @@ PREFABS.Joiner_scionox_locked_lift_thicc_barred_hell_2 =
   theme  = "hell"
   tex_COMPBLUE = { REDWALL=50, GSTONE1=50, METAL=50, SP_FACE2=50, SKSNAKE2=60, WOODVERT=50 }
   delta_h  = 72
+
+  x_fit = {28,36 , 60,68 , 92,100}
 }
 
 PREFABS.Joiner_scionox_locked_lift_keyed_bars_tech_red =
@@ -99,6 +105,8 @@ PREFABS.Joiner_scionox_locked_lift_keyed_bars_tech_red =
   can_flip = true
 
   tex_COMPBLUE = { COMPBLUE=50, METAL1=50, SHAWN2=50, SILVER1=50, SPACEW4=60, TEKLITE=50 }
+
+  x_fit = {20,28 , 36,44 , 52,60 , 68,76 , 84,92 , 100,108}
 }
 
 PREFABS.Joiner_scionox_locked_lift_keyed_bars_tech_blue =
@@ -153,6 +161,8 @@ PREFABS.Joiner_scionox_locked_lift_keyed_bars_hell_red =
   key = "ks_red"
   theme  = "hell"
   tex_COMPBLUE = { REDWALL=50, GSTONE1=50, METAL=50, SP_FACE2=50, SKSNAKE2=60, WOODVERT=50 }
+
+  x_fit = {28,36 , 60,68 , 92,100}
 }
 
 PREFABS.Joiner_scionox_locked_lift_keyed_bars_hell_blue =
@@ -164,6 +174,8 @@ PREFABS.Joiner_scionox_locked_lift_keyed_bars_hell_blue =
   line_135     = 133
   theme  = "hell"
   tex_COMPBLUE = { REDWALL=50, GSTONE1=50, METAL=50, SP_FACE2=50, SKSNAKE2=60, WOODVERT=50 }
+
+  x_fit = {28,36 , 60,68 , 92,100}
 }
 
 PREFABS.Joiner_scionox_locked_lift_keyed_bars_hell_yellow =
@@ -175,6 +187,8 @@ PREFABS.Joiner_scionox_locked_lift_keyed_bars_hell_yellow =
   line_135     = 137
   theme  = "hell"
   tex_COMPBLUE = { REDWALL=50, GSTONE1=50, METAL=50, SP_FACE2=50, SKSNAKE2=60, WOODVERT=50 }
+
+  x_fit = {28,36 , 60,68 , 92,100}
 }
 
 PREFABS.Joiner_scionox_locked_lift_gated_switch =
