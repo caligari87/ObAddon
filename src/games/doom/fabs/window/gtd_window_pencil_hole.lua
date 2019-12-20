@@ -16,7 +16,7 @@ PREFABS.Window_pencil_hole_1 =
   over   = 16
 
   bound_z1 = 0
-  bound_z2 = 96
+  bound_z2 = 128
 
   z_fit = {28,48}
 }
