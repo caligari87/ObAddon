@@ -2014,6 +2014,39 @@ gui.debugf("wants =\n%s\n\n", table.tostr(wants))
 
 
   local function fill_cage_area(mon, what, spot)
+
+    local function handle_minimum(mode, spot_total)
+      local min_val = 1
+
+      local choice
+
+      if what == "cage" then
+        choice = OB_CONFIG.cage_qty
+      elseif what == "trap" then
+        choice = OB_CONFIG.trap_qty
+      end
+
+      if choice == "weaker" then
+        min_val = 0
+      elseif choice == "easier" then
+        if rand.odds(50) then
+          min_val = 0
+        else
+          min_val = 1
+        end
+      elseif choice == "default" then
+        min_val = 1
+      elseif choice == "harder" then
+        min_val = int(spot_total * 0.33)
+      elseif choice == "fortified" then
+        min_val = int(spot_total * 0.66)
+      elseif choice == "crazy" then
+        min_val = spot_total
+      end
+
+      return min_val
+    end
+
     local info = assert(GAME.MONSTERS[mon])
 
     -- determine maximum number that will fit
@@ -2053,23 +2086,11 @@ gui.debugf("wants =\n%s\n\n", table.tostr(wants))
       want = want * spot.use_factor
     end
 
-    local min
-
-    if OB_CONFIG.trap_qty == "weaker" and what == "trap" then
-      min = 0
-    else
-      min = 1
-    end
-
-    if OB_CONFIG.cage_qty == "weaker" and what == "cage" then
-      min = 0
-    else
-      min = 1
-    end
+    local min = handle_minimum(what, #list)
 
     want = math.clamp(min, rand.int(want), total)
 
-    gui.debugf("monsters_in_cage: %d (of %d) qty=%1.1f\n", want, total, qty)
+    gui.printf("monsters_in_cage: %d (of %d) qty=%1.1f\n", want, total, qty)
 
     for i = 1, want do
       -- ensure first monster in present in all skills

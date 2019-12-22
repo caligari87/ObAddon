@@ -106,8 +106,12 @@ UI_MONS.TRAP_STYLE =
 
 UI_MONS.CAGE_STRENGTH =
 {
-  "default", _("DEFAULT"),
-  "weaker",  _("Weaker"),
+  "weaker",    _("Weaker"),
+  "easier",    _("Easier"),
+  "default",   _("DEFAULT"),
+  "harder",    _("Harder"),
+  "fortified", _("Fierce"),
+  "crazy",     _("CRAZY"),
 }
 
 UI_MONS.SECRET_MONSTERS =
