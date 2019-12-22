@@ -1216,7 +1216,7 @@ DOOM.THEMES =
       gtd_window_low = 20
       gtd_window_weabdows = 15
       gtd_window_metal_frames = 30
-      gtd_window_construction_frames = 15000
+      gtd_window_construction_frames = 15
     }
 
     fence_groups =
