@@ -7,6 +7,8 @@ PREFABS.Window_gtd_construction_frames_1_1 =
 
   prob   = 50
 
+  passable = true
+
   where  = "edge"
   seed_w = 1
 
