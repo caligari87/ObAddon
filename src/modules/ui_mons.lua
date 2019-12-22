@@ -104,13 +104,10 @@ UI_MONS.TRAP_STYLE =
   "80",        _("80% Closets - 20% Teleports"),
 }
 
-UI_MONS.TRAP_STRENGTH =
+UI_MONS.CAGE_STRENGTH =
 {
-  "weaker",   _("Weaker"),
-  "easier",   _("Easier"),
-  "normal",   _("Average"),
-  "stronger", _("Stronger"),
-  "mixed",    _("Mix It Up"),
+  "default", _("DEFAULT"),
+  "weaker",  _("Weaker"),
 }
 
 UI_MONS.SECRET_MONSTERS =
@@ -184,13 +181,21 @@ OB_MODULES["ui_mons"] =
       choices=UI_MONS.TRAP_STYLE,
       default="default",
       tooltip="This option selects between using only teleport or closet traps. DEFAULT means both are used.",
+      gap = 1,
     }
     {
-      name="trap_strength",
+      name="trap_qty",
       label=_("Trap Monsters"),
-      choices=UI_MONS.TRAP_STRENGTH,
-      default="normal",
+      choices=UI_MONS.CAGE_STRENGTH,
+      default="default",
       tooltip="Changes the quantity of ambushing monsters from traps.",
+    }
+    {
+      name="cage_qty",
+      label=_("Cage Monsters"),
+      choices=UI_MONS.CAGE_STRENGTH,
+      default="default",
+      tooltip="Changes the quantity of monsters in cages.",
       gap=1
     }
     { name="cages",     label=_("Cages"),     choices=STYLE_CHOICES,  gap=1 }

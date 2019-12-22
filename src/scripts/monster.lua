@@ -2043,36 +2043,31 @@ gui.debugf("wants =\n%s\n\n", table.tostr(wants))
 
     rand.shuffle(list)
 
-    -- Armaetus
-
-    -- Make traps really evil
-
     -- determine quantity, applying user settings
     local qty = calc_quantity() + 30
     local f   = gui.random()
 
-    local trap_weaken_factor
-
-    if OB_CONFIG.trap_strength == "stronger" then
-      trap_weaken_factor = rand.range(100,180)
-    elseif OB_CONFIG.trap_strength == "normal" then
-      trap_weaken_factor = rand.range(180,360)
-    elseif OB_CONFIG.trap_strength == "easier" then
-      trap_weaken_factor = rand.range(360,500)
-    elseif OB_CONFIG.trap_strength == "weaker" then
-      trap_weaken_factor = rand.range(500,800)
-    elseif OB_CONFIG.trap_strength == "mixed" then
-      trap_weaken_factor = rand.range(100,800)
-    end
-
-    local want = total * qty / trap_weaken_factor + f * f --qty is 250
-    --local want = total * qty / 130 + f * f --qty is 250 --Original edit
+    local want = total * qty / 250 + f * f * 0
 
     if spot.use_factor then
       want = want * spot.use_factor
     end
 
-    want = math.clamp(1, rand.int(want), total)
+    local min
+
+    if OB_CONFIG.trap_qty == "weaker" and what == "trap" then
+      min = 0
+    else
+      min = 1
+    end
+
+    if OB_CONFIG.cage_qty == "weaker" and what == "cage" then
+      min = 0
+    else
+      min = 1
+    end
+
+    want = math.clamp(min, rand.int(want), total)
 
     gui.debugf("monsters_in_cage: %d (of %d) qty=%1.1f\n", want, total, qty)
 
