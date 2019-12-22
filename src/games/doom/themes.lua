@@ -1216,6 +1216,7 @@ DOOM.THEMES =
       gtd_window_low = 20
       gtd_window_weabdows = 15
       gtd_window_metal_frames = 30
+      gtd_window_construction_frames = 15000
     }
 
     fence_groups =
@@ -1518,6 +1519,7 @@ DOOM.THEMES =
       gtd_window_weabdows = 70
       gtd_window_metal_frames = 70
       gtd_window_pencil_holes = 35
+      gtd_window_construction_frames = 65
     }
 
     fence_groups =
@@ -1902,6 +1904,7 @@ DOOM.THEMES =
       gtd_window_arrowslit = 60
       gtd_window_metal_frames = 60
       gtd_window_pencil_holes = 60
+      gtd_window_construction_frames = 60
     }
 
     fence_groups =

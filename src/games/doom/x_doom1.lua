@@ -696,6 +696,8 @@ ULTDOOM.THEMES =
       gtd_window_quakeish = 20
       gtd_window_low = 10
       gtd_window_weabdows = 20
+      gtd_window_metal_frames = 20
+      gtd_window_construction_frames = 20
     }
 
     cave_torches =
@@ -1147,6 +1149,8 @@ ULTDOOM.THEMES =
       gtd_window_quakeish = 20
       gtd_window_low = 25
       gtd_window_arrowslit = 40
+      gtd_window_metal_frames = 40
+      gtd_window_construction_frames = 35
     }
 
     cave_torches =
@@ -1492,6 +1496,8 @@ ULTDOOM.THEMES =
       gtd_window_low = 20
       gtd_window_arrowslit = 40
       gtd_window_weabdows = 15
+      gtd_window_metal_frames = 30
+      gtd_window_construction_frames = 30
     }
 
     style_list =
