@@ -529,7 +529,7 @@ EXIT3_DECOR =
 
 GROW_2 =
 {
-  prob = 100 --Non-MSSP default: 100
+  prob = 200 --Non-MSSP default: 100
   prob_skew = 2
 
   structure =
@@ -542,7 +542,7 @@ GROW_2 =
 
 GROW_3 =
 {
-  prob = 50 --Non-MSSP default: 50
+  prob = 125 --Non-MSSP default: 50
   prob_skew = 2
 
   structure =
@@ -555,7 +555,7 @@ GROW_3 =
 
 GROW_4 =
 {
-  prob = 50 --Non-MSSP default: 50
+  prob = 125 --Non-MSSP default: 50
   prob_skew = 2
   skip_prob = 25 --50
 
@@ -569,7 +569,7 @@ GROW_4 =
 
 GROW_BLOB_1 =
 {
-  prob = 25 --Non-MSSP default: 25
+  prob = 80 --Non-MSSP default: 25
 
   structure =
   {
@@ -1062,11 +1062,11 @@ GROW_STAIR_POOL2 =
 
   structure =
   {
-    "x....x", "xAAA%x"
-    "1....x", "1/~%Ax"
-    "1....x", "1~~~Ax"
-    "1....x", "1~~/Ax"
-    "1....x", "1>>A/x"
+    "x....", "xAAA%"
+    "1....", "1/~%A"
+    "1....", "1~~~A"
+    "1....", "1~~/A"
+    "1....", "1>>A/"
   }
 
   diagonals =
@@ -1089,10 +1089,11 @@ GROW_STAIR_SIDE2 =
 
   structure =
   {
-    "...", "AAA"
-    ".1x", "^1x"
-    ".1x", "^1x"
-    ".1x", "11x"
+    "...","AAA"
+    "...","AAA"
+    ".1x","^1x"
+    ".1x","^1x"
+    ".1x","11x"
   }
 }
 
@@ -1106,12 +1107,12 @@ GROW_STAIR_SIDE3 =
 
   structure =
   {
-    "..", "AA"
-    "..", "AA"
-    ".1", "^1"
-    ".1", "^1"
-    ".1", "^1"
-    ".1", "11"
+    "..","AA"
+    "..","AA"
+    ".1","^1"
+    ".1","^1"
+    ".1","^1"
+    ".1","11"
   }
 }
 
@@ -1124,6 +1125,7 @@ GROW_STAIR_HUGE =
 
   structure =
   {
+    "x....x", "xAAAAx"
     "x....x", "xAAAAx"
     "......", "/~^^~%"
     "......", "~~^^~~"
@@ -7808,7 +7810,7 @@ GROW_BLADED_CAP =
 
 GROW_INTO_CLIFF =
 {
-  prob = 50
+  prob = 25
   skip_prob = 15
 
   structure =
@@ -7823,9 +7825,27 @@ GROW_INTO_CLIFF =
   }
 }
 
+
+GROW_INTO_CLIFF_INVERSE =
+{
+  prob = 25
+  skip_prob = 15
+
+  structure =
+  {
+    "....","1111"
+    "....","1111"
+    "....","11vv"
+    "....","11AA"
+    "....","11AA"
+    "....","11AA"
+    "11xx","11xx"
+  }
+}
+
 GROW_INTO_CLIFF_LONG =
 {
-  prob = 50
+  prob = 25
   skip_prob = 15
 
   structure =
@@ -7840,6 +7860,27 @@ GROW_INTO_CLIFF_LONG =
     "....","11AA"
     "....","11^^"
     "....","1111"
+    "11xx","11xx"
+  }
+}
+
+GROW_INTO_CLIFF_LONG_INVERSE =
+{
+  prob = 25
+  skip_prob = 15
+
+  structure =
+  {
+    "....","1111"
+    "....","1111"
+    "....","11vv"
+    "....","11AA"
+    "....","11AA"
+    "....","11AA"
+    "....","11AA"
+    "....","11AA"
+    "....","11AA"
+    "....","11AA"
     "11xx","11xx"
   }
 }

@@ -216,6 +216,8 @@ PREFABS.Joiner_scionox_locked_lift_gated_switch =
   delta_h  = 128
   nearby_h = 128
 
+  can_flip = true
+
   tag_1  = "?door_tag"
   door_action = "S1_OpenDoor"
 
@@ -237,6 +239,7 @@ PREFABS.Joiner_scionox_locked_lift_gated_switch_hell =
   tex_COMPBLUE = { REDWALL=50, GSTONE1=50, METAL=50, SP_FACE2=50, SKSNAKE2=60, WOODVERT=50 }
   tex_SUPPORT2 = "SUPPORT3"
   tex_SW1GRAY1 = "SW1PANEL"
+  tex_SHAWN1 = "SKSPINE1"
   tex_PLAT1 = "SUPPORT3"
   thing_2028 = "red_torch_sm"
 }
@@ -262,6 +265,8 @@ PREFABS.Joiner_scionox_locked_lift_lockgate_switch =
 
   x_fit = "frame"
   y_fit = {44,52 , 108,116}
+
+  can_flip = true
 
   delta_h  = 128
   nearby_h = 128
@@ -327,6 +332,7 @@ PREFABS.Joiner_scionox_locked_lift_lockgate_switch_hell_red =
   tex_SW1GRAY1 = "SW1PANEL"
   tex_PLAT1 = "SUPPORT3"
   tex_SUPPORT2 = "SUPPORT3"
+  tex_SHAWN1 = "SKSPINE1"
   thing_2028 = "red_torch_sm"
 }
 
@@ -341,6 +347,7 @@ PREFABS.Joiner_scionox_locked_lift_lockgate_switch_hell_blue =
   tex_SW1GRAY1 = "SW1PANEL"
   tex_PLAT1 = "SUPPORT3"
   tex_SUPPORT2 = "SUPPORT3"
+  tex_SHAWN1 = "SKSPINE1"
   thing_2028 = "red_torch_sm"
 }
 
@@ -355,25 +362,32 @@ PREFABS.Joiner_scionox_locked_lift_lockgate_switch_hell_yellow =
   tex_SW1GRAY1 = "SW1PANEL"
   tex_PLAT1 = "SUPPORT3"
   tex_SUPPORT2 = "SUPPORT3"
+  tex_SHAWN1 = "SKSPINE1"
   thing_2028 = "red_torch_sm"
 }
 
 PREFABS.Joiner_scionox_locked_lift_trikey_lockgate_switch =
 {
   template = "Joiner_scionox_locked_lift_lockgate_switch"
+
   map    = "MAP09"
   key    = "k_ALL"
+
   rank   = 2
 }
 
 PREFABS.Joiner_scionox_locked_lift_trikey_lockgate_switch_urban =
 {
   template = "Joiner_scionox_locked_lift_lockgate_switch"
+
   map    = "MAP09"
+
   key    = "k_ALL"
   theme  = "urban"
   rank   = 2
+
   tex_COMPBLUE = { BIGBRIK1=50, BRICK10=50, BRICK11=50, WOOD12=50, WOOD1=60, PANEL4=50 }
+
   thing_2028 = "mercury_small"
 }
 
@@ -384,6 +398,7 @@ PREFABS.Joiner_scionox_locked_lift_trikey_lockgate_switch_urban =
   key = "k_ALL"
   theme  = "hell"
   rank   = 2
+
   tex_DOORRED = "DOORRED2"
   tex_DOORBLU = "DOORBLU2"
   tex_DOORYEL = "DOORYEL2"
@@ -391,5 +406,7 @@ PREFABS.Joiner_scionox_locked_lift_trikey_lockgate_switch_urban =
   tex_SW1GRAY = "SW1MARB"
   tex_PLAT1 = "SUPPORT3"
   tex_SUPPORT2 = "SUPPORT3"
+  tex_BIGDOOR1 = "MARBFAC3"
+
   thing_2028 = "red_torch_sm"
 }
