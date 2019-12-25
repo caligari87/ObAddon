@@ -794,7 +794,7 @@ function Room_pick_joiner_prefab(C, chunk)
       flip_it = true
     end
 
-    if chunk.prefab_def.can_flip and rand.odds(35) then
+    if chunk.prefab_def.can_flip and rand.odds(50) then
       flip_it = not flip_it
     end
 
@@ -2735,7 +2735,7 @@ function Room_floor_ceil_heights()
 
     if chunk.prefab_def.delta_h then
       if chunk.prefab_def.delta_h < 0 then
-        joiner_h = entry_h
+        joiner_h = entry_h + delta_h
       end
     end
 

@@ -1078,22 +1078,22 @@ function ob_default_filename()
 
   local current_date = os.date("*t")
 
-  str = current_date.year .. "-" .. current_date.month .. "-" .. current_date.day .. "-" ..
-  str .. "-"
+  local date_str = current_date.year .. "-" .. current_date.month .. "-" .. current_date.day .. "-"
+  local time_str
 
   if current_date.hour < 10 then
-    str = str .. "0" .. current_date.hour
+    time_str = "0" .. current_date.hour
   else
-    str = str .. current_date.hour
+    time_str = current_date.hour
   end
 
   if current_date.min < 10 then
-    str = str .. "0" .. current_date.min
+    time_str = time_str .. "0" .. current_date.min
   else
-    str = str .. current_date.min
+    time_str = time_str .. current_date.min
   end
 
-  return str
+  return date_str .. time_str .. "_" .. str
 end
 
 
