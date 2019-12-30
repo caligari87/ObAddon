@@ -2733,12 +2733,6 @@ function Room_floor_ceil_heights()
 
     local joiner_h = math.min(entry_h, entry_h + delta_h)
 
-    if chunk.prefab_def.delta_h then
-      if chunk.prefab_def.delta_h < 0 then
-        joiner_h = entry_h + delta_h
-      end
-    end
-
     set_floor(chunk.area, joiner_h)
 
 -- stderrf("  setting joiner in %s to %d\n", C.joiner_chunk.area.name, C.joiner_chunk.area.floor_h)
