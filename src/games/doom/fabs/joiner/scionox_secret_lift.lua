@@ -120,13 +120,14 @@ PREFABS.Joiner_scionox_secret_lift_down =
   deep = 16
   over = 16
 
-  delta_h = -128
+  delta_h = -64
+  nearby_h = 128
 
   bound_z1 = 0
   bound_z2 = 128
 
   x_fit  = "frame"
-  y_fit  = {72,152}
+  y_fit  = {84,156}
 
   tex_PIPES = { PIPES=50, BLAKWAL1=50, COMPBLUE=50, GRAY5=50, PIPEWAL2=50, SILVER3=50, TEKLITE2=50 }
 }
@@ -165,12 +166,13 @@ PREFABS.Joiner_scionox_secret_lift_down_corpse_hint =
   over = 16
 
   delta_h = -128
+  nearby_h = 128
 
-  bound_z1 = -128
+  bound_z1 = 0
   bound_z2 = 128
 
   x_fit  = "frame"
-  y_fit  = {72,152}
+  y_fit  = {84,156}
 
   thing_15 =
   {
