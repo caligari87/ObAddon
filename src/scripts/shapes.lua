@@ -6729,8 +6729,8 @@ GROW_3x_L_UP_DOWN =
     "..xxxx","AAxxxx"
     "..xxxx","AAxxxx"
     "..xxxx","AAxxxx"
-    "......","AAA>11"
-    "......","AAA>11"
+    "......","AAA<11"
+    "......","AAA<11"
   }
 
   diagonals =
