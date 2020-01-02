@@ -120,7 +120,7 @@ PREFABS.Joiner_scionox_secret_lift_down =
   deep = 16
   over = 16
 
-  delta_h = -64
+  delta_h = -128
   nearby_h = 128
 
   bound_z1 = 0
