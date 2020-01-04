@@ -1223,6 +1223,7 @@ DOOM.THEMES =
     {
       PLAIN = 50
       gappy = 50
+      fence_tech_lit = 50
     }
 
     fence_posts =
@@ -1527,6 +1528,8 @@ DOOM.THEMES =
       PLAIN = 50
       gappy = 50
       crenels = 12
+      fence_tech_lit = 50
+      fence_gothic = 25
     }
 
     fence_posts =
@@ -1911,7 +1914,8 @@ DOOM.THEMES =
     {
       PLAIN = 50
       gappy = 50
-      crenels = 50000
+      crenels = 50
+      fence_gothic = 50
     }
 
     fence_posts =

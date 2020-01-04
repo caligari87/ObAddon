@@ -633,6 +633,7 @@ ULTDOOM.THEMES =
     {
       PLAIN = 50
       gappy = 50
+      fence_tech_lit = 50
     }
 
     fence_posts =
@@ -909,6 +910,8 @@ ULTDOOM.THEMES =
       PLAIN = 50
       crenels = 50
       gappy = 50
+      fence_tech_lit = 50
+      fence_gothic = 50
     }
 
     fence_posts =
@@ -1121,6 +1124,7 @@ ULTDOOM.THEMES =
       PLAIN = 50
       crenels = 50
       gappy = 25
+      fence_gothic = 50
     }
 
     fence_posts =
@@ -1424,6 +1428,7 @@ ULTDOOM.THEMES =
     {
       PLAIN = 50
       crenels = 50
+      fence_gothic = 50
     }
 
     fence_posts =

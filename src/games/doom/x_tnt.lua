@@ -245,6 +245,7 @@ TNT.THEMES =
       PLAIN = 50
       crenels = 50
       gappy = 50
+      fence_gothic = 50
     }
 
     fence_posts =
