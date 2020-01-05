@@ -3224,6 +3224,24 @@ GROW_CAUSEWAY =
   }
 }
 
+GROW_CAUSEWAY_WATERBOUND =
+{
+  prob = 10
+  skip_prob = 75
+
+  structure =
+  {
+    "x..........","x11~~AA~~11"
+    "x..........","x11~~AA~~11"
+    "x..........","x11>>AA<<11"
+    "x..........","x11~~AA~~11"
+    "x..........","x11~~AA~~11"
+    "x..........","x11>>AA<<11"
+    "1..........","111~~AA~~11"
+    "1..........","111~~AA~~11"
+  }
+}
+
 GROW_CAUSEWAY_SINGLE =
 {
   prob = 10
@@ -3242,8 +3260,8 @@ GROW_CAUSEWAY_SINGLE =
 
 GROW_CAUSEWAY_CORNER =
 {
-  prob = 10
-  skip_prob = 75
+  prob = 15
+  skip_prob = 60
 
   structure =
   {
@@ -3265,8 +3283,8 @@ GROW_CAUSEWAY_CORNER =
 
 GROW_CAUSEWAY_CORNER_SINGLE =
 {
-  prob = 10
-  skip_prob = 75
+  prob = 15
+  skip_prob = 60
 
   structure =
   {
@@ -3997,7 +4015,7 @@ GROW_CATWALK_SIDESTAIRS =
 GROW_CATWALK_U =
 {
   prob = 15
-  skip_prob = 80
+  skip_prob = 75
 
   structure =
   {
@@ -6540,7 +6558,7 @@ GROW_3x_I_LIQUID =
 GROW_3x_J =
 {
   prob = 7
-  skip_prob = 75
+  skip_prob = 80
 
   structure =
   {
@@ -6564,7 +6582,7 @@ GROW_3x_J =
 GROW_3x_J_LIQUID =
 {
   prob = 10
-  skip_prob = 75
+  skip_prob = 80
 
   structure =
   {
@@ -6588,7 +6606,7 @@ GROW_3x_J_LIQUID =
 GROW_3x_K =
 {
   prob = 15
-  skip_prob = 75
+  skip_prob = 82
 
   structure =
   {
@@ -6617,7 +6635,7 @@ GROW_3x_K =
 GROW_3x_K_STAIRS =
 {
   prob = 10
-  skip_prob = 75
+  skip_prob = 82
 
   structure =
   {
@@ -7896,8 +7914,8 @@ GROW_BLADED_CAP =
 
 GROW_INTO_CLIFF =
 {
-  prob = 25
-  skip_prob = 15
+  prob = 20
+  skip_prob = 25
 
   structure =
   {
@@ -7914,8 +7932,8 @@ GROW_INTO_CLIFF =
 
 GROW_INTO_CLIFF_INVERSE =
 {
-  prob = 25
-  skip_prob = 15
+  prob = 20
+  skip_prob = 25
 
   structure =
   {
@@ -7931,8 +7949,8 @@ GROW_INTO_CLIFF_INVERSE =
 
 GROW_INTO_CLIFF_LONG =
 {
-  prob = 25
-  skip_prob = 15
+  prob = 20
+  skip_prob = 25
 
   structure =
   {
@@ -7952,8 +7970,8 @@ GROW_INTO_CLIFF_LONG =
 
 GROW_INTO_CLIFF_LONG_INVERSE =
 {
-  prob = 25
-  skip_prob = 15
+  prob = 20
+  skip_prob = 25
 
   structure =
   {
@@ -8021,8 +8039,8 @@ GROW_INTO_CLIFF_CURVE =
 
 GROW_CLIFF_ENTRY_X4 =
 {
-  prob = 80
-  skip_prob = 15
+  prob = 50
+  skip_prob = 25
 
   structure =
   {
@@ -8036,8 +8054,8 @@ GROW_CLIFF_ENTRY_X4 =
 
 GROW_CLIFF_ENTRY_X4_LONG =
 {
-  prob = 80
-  skip_prob = 15
+  prob = 50
+  skip_prob = 25
 
   structure =
   {
@@ -8057,7 +8075,7 @@ GROW_CLIFF_ENTRY_X4_LONG =
 
 GROW_CLIFF_ENTRY_X4_CURVE =
 {
-  prob = 60
+  prob = 50
   skip_prob = 15
 
   structure =
@@ -8085,7 +8103,7 @@ GROW_CLIFF_ENTRY_X4_CURVE =
 
 GROW_CLIFF_ENTRY_X4_CURVE_REVERSE =
 {
-  prob = 60
+  prob = 50
   skip_prob = 15
 
   structure =
