@@ -2735,14 +2735,18 @@ stderrf("prelim_conn %s --> %s : S=%s dir=%d\n", c_out.R1.name, c_out.R2.name, S
 
           local h = assert(stair_prefab.delta_h)
 
-          if R.trunk.stair_z_dir > 0 then
-            new_area.prelim_h = from_area.prelim_h + h
-          else
-            new_area.prelim_h = from_area.prelim_h - h
+          if R.trunk.stair_z_dir < 0 then
+            h = h * -1
           end
+
+          if rand.odds(R.trunk.stair_z_dir_fudge_prob) then
+            h = h * -1
+          end
+
+          new_area.prelim_h = from_area.prelim_h + h
         end
 
-        if R.trunk.stair_z_dir < 0 then
+        if new_area.prelim_h < from_area.prelim_h then
           chunk.area.prelim_h = chunk.area.prelim_h - stair_prefab.delta_h
           chunk:flip()
         end
@@ -3899,6 +3903,7 @@ function Grower_add_a_trunk()
   trunk.name = string.format("TRUNK_%d", trunk.id)
 
   trunk.stair_z_dir = rand.sel(50, 1, -1)
+  trunk.stair_z_dir_fudge_prob = rand.pick({0,0,13,25,33,50})
 
   table.insert(LEVEL.trunks, trunk)
 
