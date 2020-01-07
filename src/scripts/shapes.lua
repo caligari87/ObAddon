@@ -152,7 +152,7 @@ ROOT_T2 =
 
 ROOT_LIQUID_1A =
 {
-  prob = 7 --5
+  prob = 4 --7 --5
 
   structure =
   {
@@ -529,7 +529,7 @@ EXIT3_DECOR =
 
 GROW_2 =
 {
-  prob = 200 --Non-MSSP default: 100
+  prob = 400 --Non-MSSP default: 100
   prob_skew = 2
 
   structure =
@@ -542,7 +542,7 @@ GROW_2 =
 
 GROW_3 =
 {
-  prob = 125 --Non-MSSP default: 50
+  prob = 250 --Non-MSSP default: 50
   prob_skew = 2
 
   structure =
@@ -555,7 +555,7 @@ GROW_3 =
 
 GROW_4 =
 {
-  prob = 125 --Non-MSSP default: 50
+  prob = 250 --Non-MSSP default: 50
   prob_skew = 2
   skip_prob = 25 --50
 
@@ -569,7 +569,7 @@ GROW_4 =
 
 GROW_BLOB_1 =
 {
-  prob = 80 --Non-MSSP default: 25
+  prob = 200 --Non-MSSP default: 25
 
   structure =
   {
@@ -666,7 +666,7 @@ GROW_CURVE_1 =
 
 GROW_AREA_1 =
 {
-  prob = 60 --40
+  prob = 200 --40
 
   structure =
   {
@@ -678,7 +678,7 @@ GROW_AREA_1 =
 
 GROW_AREA_2 =
 {
-  prob = 20 --6
+  prob = 50 --6
   skip_prob = 30 --50
 
   structure =

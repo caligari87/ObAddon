@@ -3903,7 +3903,7 @@ function Grower_add_a_trunk()
   trunk.name = string.format("TRUNK_%d", trunk.id)
 
   trunk.stair_z_dir = rand.sel(50, 1, -1)
-  trunk.stair_z_dir_fudge_prob = rand.pick({0,0,13,25,33,50})
+  trunk.stair_z_dir_fudge_prob = rand.pick({0,13,25,33,50})
 
   table.insert(LEVEL.trunks, trunk)
 
