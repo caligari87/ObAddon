@@ -283,6 +283,21 @@ function DOOM.get_levels()
         LEV.is_linear = true
       end
 
+      -- linear start code
+      if PARAM.linear_start then
+        if PARAM.linear_start == "all" then
+          LEV.has_linear_start = true
+        elseif PARAM.linear_start == "75" and rand.odds(75) then
+          LEV.has_linear_start = true
+        elseif PARAM.linear_start == "50" and rand.odds(50) then
+          LEV.has_linear_start = true
+        elseif PARAM.linear_start == "25" and rand.odds(25) then
+          LEV.has_linear_start = true
+        elseif PARAM.linear_start == "12" and rand.odds(12) then
+          LEV.has_linear_start = true
+        end
+      end
+
       -- ensure secret map entrances aren't linear moded
       -- when the option is not "all"
       if OB_CONFIG.linear_mode != "all" then

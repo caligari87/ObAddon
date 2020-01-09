@@ -3459,7 +3459,7 @@ end
       end
     end
 
-    if PARAM.linear_start == "yes" then
+    if LEVEL.has_linear_start then
       if pass == "sprout" then
         if not R.is_street and R:prelim_conn_num() >= 1 and R.is_start then
           break;
@@ -3754,7 +3754,7 @@ function Grower_grow_room(R)
     end
   end
 
-  if PARAM.linear_start == "yes" or LEVEL.is_linear then
+  if LEVEL.has_linear_start or LEVEL.is_linear then
     if R.grow_parent then
       if R.grow_parent.is_start and R.grow_parent:prelim_conn_num() > 1 then
         gui.printf("'OH SHIT HERE WE GO AGAIN', says ROOM " .. R.id .. " before " ..

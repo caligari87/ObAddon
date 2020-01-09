@@ -83,6 +83,16 @@ MISC_STUFF.LIQUID_SINK_OPTIONS =
   "no",           _("No"),
 }
 
+MISC_STUFF.LINEAR_START_CHOICES =
+{
+  "all",     _("All"),
+  "75",      _("75% of All Levels"),
+  "50",      _("50% of All Levels"),
+  "25",      _("25% of All Levels"),
+  "12",      _("12% of All Levels"),
+  "default", _("DEFAULT"),
+}
+
 function MISC_STUFF.begin_level(self)
   each opt in self.options do
     local name  = assert(opt.name)
@@ -252,11 +262,13 @@ OB_MODULES["misc"] =
     {
       name="linear_start"
       label=_("Linear Start")
-      choices=MISC_STUFF.YES_NO
+      choices=MISC_STUFF.LINEAR_START_CHOICES
       tooltip=_("Stops start rooms from having more than one external room connection. " ..
       "Can help reduce being overwhelmed by attacks from multiple directions " ..
-      "when multiple neighboring rooms connect into the start room.")
-      default = "no"
+      "when multiple neighboring rooms connect into the start room. Default means " ..
+      "no control, and levels can have linear starts at random based on shape grammars as " ..
+      "per original Oblige 7.7 behavior.")
+      default = "default"
     }
     {
       name="dead_ends"

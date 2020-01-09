@@ -3308,6 +3308,21 @@ function ULTDOOM.get_levels()
         end
       end
 
+      -- linear start code
+      if PARAM.linear_start then
+        if PARAM.linear_start == "all" then
+          LEV.has_linear_start = true
+        elseif PARAM.linear_start == "75" and rand.odds(75) then
+          LEV.has_linear_start = true
+        elseif PARAM.linear_start == "50" and rand.odds(50) then
+          LEV.has_linear_start = true
+        elseif PARAM.linear_start == "25" and rand.odds(25) then
+          LEV.has_linear_start = true
+        elseif PARAM.linear_start == "12" and rand.odds(12) then
+          LEV.has_linear_start = true
+        end
+      end
+
       if MAP_NUM == 1 or map == 3 then
         LEV.demo_lump = string.format("DEMO%d", ep_index)
       end
