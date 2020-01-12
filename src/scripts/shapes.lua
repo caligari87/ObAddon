@@ -5182,8 +5182,6 @@ GROW_FEATURES_CENTER_ALTERED =
   prob = 150
   skip_prob = 25
 
-  env = "building"
-
   structure =
   {
     "1......","1111111"
@@ -5368,8 +5366,6 @@ GROW_WIDE_LOW_CEILING_SIDE =
   prob = 15
   skip_prob = 40
 
-  env = "building"
-
   structure =
   {
     "....","1111"
@@ -5388,8 +5384,6 @@ GROW_WIDE_LOW_CEILING_CENTER =
   prob = 15
   skip_prob = 40
 
-  env = "building"
-
   structure =
   {
     "......","111111"
@@ -5407,8 +5401,6 @@ GROW_WIDE_LOW_CEILING_CORNER =
 {
   prob = 15
   skip_prob = 40
-
-  env = "building"
 
   structure =
   {
@@ -5431,8 +5423,6 @@ GROW_COLLONADE_3_PILLARS =
   prob = 15
   skip_prob = 40
 
-  env = "building"
-
   structure =
   {
     "11.......","111111111"
@@ -5446,8 +5436,6 @@ GROW_TRIANGULAR_LOW_CEILING =
 {
   prob = 15
   skip_prob = 40
-
-  env = "building"
 
   structure =
   {
@@ -5471,8 +5459,6 @@ GROW_PILLAR_2X2 =
 {
   prob = 10
 
-  env = "building"
-
   structure =
   {
     "1.....","111111"
@@ -5485,8 +5471,6 @@ GROW_PILLAR_2X2 =
 GROW_PILLAR_3X3 =
 {
   prob = 10
-
-  env = "building"
 
   structure =
   {
@@ -5508,8 +5492,6 @@ GROW_PILLAR_BEAN =
 {
   prob = 10
 
-  env = "building"
-
   structure =
   {
     "1.....","111111"
@@ -5529,8 +5511,6 @@ GROW_PILLAR_GATE =
 {
   prob = 20
   skip_prob = 25
-
-  env = "building"
 
   structure =
   {
@@ -5896,6 +5876,44 @@ GROW_PEANUT_NEW_AREA =
   }
 }
 
+GROW_4PILLAR_ARCHS_NEW_AREA =
+{
+  prob = 15
+  skip_prob = 75
+
+  structure =
+  {
+    "x......x","x111111x"
+    "x......x","x111111x"
+    "........","AA#AA#AA"
+    "........","AAAAAAAA"
+    "........","AAAAAAAA"
+    "........","AA#AA#AA"
+    "x......x","x111111x"
+    "x......x","x111111x"
+    "xxx11xxx","xxx11xxx"
+  }
+}
+
+
+GROW_4PILLAR_OPEN_ROOF_GAZEBO_NEW_AREA =
+{
+  prob = 10
+  skip_prob = 75
+
+  structure =
+  {
+    "........","11111111"
+    "........","11111111"
+    "........","11#AA#11"
+    "........","11A11A11"
+    "........","11A11A11"
+    "........","11#AA#11"
+    "........","11111111"
+    "........","11111111"
+    "xxx11xxx","xxx11xxx"
+  }
+}
 
 -- [4x3_ALPHABET]
 
@@ -8315,8 +8333,6 @@ GROW_LIQUID_PILLAR =
   prob = 20
   skip_prob = 10
 
-  env = "building"
-
   structure =
   {
     "....","11~~"
@@ -8332,8 +8348,6 @@ GROW_LIQUID_PILLAR_INWARD =
   prob = 10
   skip_prob = 10
 
-  env = "building"
-
   structure =
   {
     "....","11~~"
@@ -8348,8 +8362,6 @@ GROW_LIQUID_PILLAR_INWARD =
 {
   prob = 6
   skip_prob = 10
-
-  env = "building"
 
   structure =
   {
