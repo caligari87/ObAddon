@@ -7517,8 +7517,8 @@ GROW_L =
 
 GROW_L_STAIR =
 {
-  prob = 38
-  skip_prob = 35
+  prob = 35
+  skip_prob = 50
 
   structure =
   {
@@ -7536,8 +7536,8 @@ GROW_L_STAIR =
 
 GROW_L_STAIR_ALT =
 {
-  prob = 38
-  skip_prob = 35
+  prob = 20
+  skip_prob = 75
 
   structure =
   {
