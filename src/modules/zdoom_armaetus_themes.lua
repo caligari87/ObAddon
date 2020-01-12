@@ -3502,3 +3502,19 @@ ARMAETUS_HELL_WIDE_HALLS =
                    -- insertion process is a bit more complicated
                    -- and initial prob is instead done via style prob bias -MSSP
 }
+
+ARMAETUS_TECH_FENCE_GROUPS =
+{
+  fence_firestorm_red = 25
+  fence_fierstorm_blue = 25
+}
+
+ARMAETUS_URBAN_FENCE_GROUPS =
+{
+
+}
+
+ARMAETUS_HELL_FENCE_GROUPS =
+{
+
+}

@@ -805,6 +805,14 @@ function ARMAETUS_EPIC_TEXTURES.put_new_materials()
     GAME.THEMES.urban.wide_halls = ARMAETUS_TECH_WIDE_HALLS
     GAME.THEMES.hell.wide_halls = ARMAETUS_HELL_WIDE_HALLS
 
+    -- inserts for fences TODO: UltDoom support
+    ARMAETUS_EPIC_TEXTURES.table_insert(ARMAETUS_TECH_FENCE_GROUPS,
+      GAME.THEMES.tech.fence_groups)
+    ARMAETUS_EPIC_TEXTURES.table_insert(ARMAETUS_URBAN_FENCE_GROUPS,
+      GAME.THEMES.urban.fence_groups)
+    ARMAETUS_EPIC_TEXTURES.table_insert(ARMAETUS_HELL_FENCE_GROUPS,
+      GAME.THEMES.hell.fence_groups)
+
     -- hack for the street textures
     GAME.SINKS.floor_streets.trim_mat = "WARN1"
   end
