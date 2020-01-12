@@ -3506,7 +3506,7 @@ ARMAETUS_HELL_WIDE_HALLS =
 ARMAETUS_TECH_FENCE_GROUPS =
 {
   fence_firestorm_red = 25
-  fence_fierstorm_blue = 25
+  fence_firestorm_blue = 25
 }
 
 ARMAETUS_URBAN_FENCE_GROUPS =
