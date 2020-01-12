@@ -142,8 +142,8 @@ PREFABS.Item_commercial_frontage_secret_4 =
 {
   template = "Item_commercial_frontage_secret"
   map    = "MAP07"
-  seed_w = 3
-  seed_h = 1
+  seed_w = 2
+  seed_h = 2
   prob   = 20
 }
 
