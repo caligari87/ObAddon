@@ -21,24 +21,24 @@ SKY_GEN = { }
 
 SKY_GEN.SKY_CHOICES =
 {
-  "sky_default",    _("Random"),
-  "sky_night", _("Night"),
-  "sky_day",    _("Day"),
+  "sky_default", _("Random"),
+  "sky_night",   _("Night"),
+  "sky_day",     _("Day"),
 }
 
 SKY_GEN.HILL_STATE =
 {
   "hs_random", _("Random"),
-  "hs_none", _("Never"),
+  "hs_none",   _("Never"),
   "hs_always", _("Always"),
 }
 
 SKY_GEN.HILL_PARAMS =
 {
-  "hp_random", _("Random"),
-  "hp_hilly", _("Hills"),
+  "hp_random",      _("Random"),
+  "hp_hilly",       _("Hills"),
   "hp_mountainous", _("Mountainous"),
-  "hp_cavernous", _("Cavernous"),
+  "hp_cavernous",   _("Cavernous"),
 }
 
 SKY_GEN.colormaps =

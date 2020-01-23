@@ -5177,9 +5177,9 @@ SQUARE_OUT_REMOVE_TRIANGLE =
 
 --MSSP's random negative features [FEATURES] - 'negative' because they attempt to modify an existing room if it has too much clean space.
 
-GROW_FEATURES_CENTER_ALTERED =
+GROW_FEATURES_CENTER =
 {
-  prob = 150
+  prob = 30
   skip_prob = 25
 
   structure =
@@ -5188,6 +5188,27 @@ GROW_FEATURES_CENTER_ALTERED =
     "1......","11/A%11"
     "x......","x1AAA11"
     "x......","x1%A/11"
+    "x......","x111111"
+  }
+
+  diagonals =
+  {
+    "1.",".1"
+    "1.",".1"
+  }
+}
+
+GROW_FEATURES_CENTER_RAISED =
+{
+  prob = 25
+  skip_prob = 25
+
+  structure =
+  {
+    "1......","1111111"
+    "1......","11/v%11"
+    "x......","x1>A<11"
+    "x......","x1%^/11"
     "x......","x111111"
   }
 
