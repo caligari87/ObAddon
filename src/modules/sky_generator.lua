@@ -556,6 +556,8 @@ function SKY_GEN.generate_skies()
         info.min_h = info.min_h + 0.3
       end
 
+      EPI.has_mountains = true
+
 
       gui.set_colormap(2, colormap)
       gui.fsky_add_hills(info)

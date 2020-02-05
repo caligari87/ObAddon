@@ -52,8 +52,9 @@ UI_ARCH.ABSURDITY_CHOICES =
 
 UI_ARCH.ZDOOM_VISTA_CHOICES =
 {
-  "enable",  _("Enable"),
-  "disable", _("Disable"),
+  "enable",        _("Enable"),
+  "sky_gen_smart", _("Sky-gen Smart"),
+  "disable",       _("Disable"),
 }
 
 UI_ARCH.ZDOOM_SKYBOX_CHOICES =
@@ -190,8 +191,10 @@ OB_MODULES["ui_arch"] =
       choices=UI_ARCH.ZDOOM_VISTA_CHOICES
       default="disable"
       tooltip = "This feature allows for vistas that show more of the skybox below the horizon. " ..
-      "This does not prevent skybox tiling. If paired with the Sky Generator, simply disable terrain " ..
-      "on the parameters to see the sky all the way to the bottom without tiling or more preferably, turn on 3D skyboxes."
+      "This does not prevent skybox tiling.\n" ..
+      "Enable - Bottomless vistas can always show. Pick this choice when using 3D Skyboxes.\n" ..
+      "Sky-gen Smart - Bottomless vistas appear only on episodes with no mountain backdrop based on the Sky Generator.\n" ..
+      "Disable - Old Oblige behavior - no bottomless vistas."
     }
     {
       name = "zdoom_skybox"

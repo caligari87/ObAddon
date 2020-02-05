@@ -4378,9 +4378,12 @@ function Cave_prepare_scenic_vista(area)
   local vista_type
   local vista_list = {}
 
-  if (OB_CONFIG.engine == "zdoom" or OB_CONFIG.engine == "gzdoom") and OB_CONFIG.zdoom_vista == "enable" then
-    table.insert(vista_list, "bottomless_drop")
-    table.insert(vista_list, "cliff_gradient")
+  if (OB_CONFIG.engine == "zdoom" or OB_CONFIG.engine == "gzdoom") then
+    if OB_CONFIG.zdoom_vista == "enable"
+    or (OB_CONFIG.zdoom_vista == "sky_gen_smart" and not EPISODE.has_mountains) then
+      table.insert(vista_list, "bottomless_drop")
+      table.insert(vista_list, "cliff_gradient")
+    end
   end
 
   table.insert(vista_list, "simple_fence")
