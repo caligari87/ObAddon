@@ -112,7 +112,7 @@ PREFABS.Joiner_commercial_frontage_secret_2 =
   key    = "secret"
   shape  = "I"
 
-  seed_w = 3
+  seed_w = 2
   seed_h = 1
 
   bound_z1 = 0
@@ -122,5 +122,5 @@ PREFABS.Joiner_commercial_frontage_secret_2 =
   over   =  16
 
   x_fit = "frame"
-  y_fit = { 144,160 }
+  y_fit = { 136,152 }
 }

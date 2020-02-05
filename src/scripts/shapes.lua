@@ -5179,8 +5179,8 @@ SQUARE_OUT_REMOVE_TRIANGLE =
 
 GROW_FEATURES_CENTER =
 {
-  prob = 30
-  skip_prob = 25
+  prob = 20
+  skip_prob = 30
 
   structure =
   {
@@ -5200,8 +5200,8 @@ GROW_FEATURES_CENTER =
 
 GROW_FEATURES_CENTER_RAISED =
 {
-  prob = 25
-  skip_prob = 25
+  prob = 18
+  skip_prob = 30
 
   structure =
   {
@@ -8571,8 +8571,8 @@ GROW_TRENCH_CURVE_OUTER_SOLID =
 
 GROW_SEWER_ENTRY =
 {
-  prob = 35
-  skip_prob = 10
+  prob = 25
+  skip_prob = 20
 
   group = "sewer"
 
@@ -8588,8 +8588,8 @@ GROW_SEWER_ENTRY =
 
 GROW_SEWER_STAIRS =
 {
-  prob = 50
-  skip_prob = 10
+  prob = 30
+  skip_prob = 20
 
   group = "sewer"
 
@@ -8657,7 +8657,7 @@ GROW_SEWER_CURVED =
 GROW_SEWER_CROSSING =
 {
   prob = 30
-  skip_prob = 20
+  skip_prob = 40
 
   group = "sewer"
 
@@ -8673,8 +8673,8 @@ GROW_SEWER_CROSSING =
 
 GROW_SEWER_STAIRS_SIDE_EXIT_NEW_AREA =
 {
-  prob = 25
-  skip_prob = 10
+  prob = 35
+  skip_prob = 20
 
   structure =
   {
