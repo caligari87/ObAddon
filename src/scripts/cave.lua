@@ -1824,7 +1824,7 @@ function Cave_floor_heights(R, entry_h)
 
 --TODO : only needed for caves with varying floor heights
 --       [ currently caves are always flat ]
---  transfer_heights()
+  -- transfer_heights()
 
   update_min_max_floor()
   update_walk_ways()
@@ -2599,10 +2599,19 @@ function Cave_decide_properties(R, area)
   --     prefab) is going to better results.
   --
 
+  -- Attempting to restore steppy caves... -MSSP, February 6, 2020
 
   -- step mode --
 
   area.step_mode = "walkway"
+
+  --[[if rand.odds(style_sel("steepness", 0, 33, 66, 100) ) then
+    if rand.odds(50) then
+      area.step_mode = "up"
+    else
+      area.step_mode = "down"
+    end
+  end]]
 
   -- liquid mode --
 
