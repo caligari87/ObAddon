@@ -41,16 +41,35 @@ PREFABS.Decor_generic_sunk_roof_yuge =
 {
   template = "Decor_generic_sunk_roof"
 
-  map    = "MAP02"
+  map      = "MAP02"
 
-  size   = 128
+  size     = 128
 }
 
 PREFABS.Decor_generic_sunk_roof_octagon =
 {
   template = "Decor_generic_sunk_roof"
 
-  map = "MAP03"
+  map      = "MAP03"
 
-  size   = 128
+  size     = 128
+}
+
+PREFABS.Decor_generic_sunk_roof_X =
+{
+  template = "Decor_generic_sunk_roof"
+
+  map      = "MAP04"
+
+  size     = 128
+
+  z_fit = { 48,56 }
+
+  tex_LITE5 =
+  {
+    LITE5 = 50
+    LITEBLU1 = 50
+    LITEBLU4 = 50
+    TEKLITE = 50
+  }
 }
