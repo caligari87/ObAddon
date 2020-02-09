@@ -3,10 +3,7 @@ PREFABS.Arch_bare =
   file   = "door/gtd_bare_arch.wad"
   map    = "MAP01"
 
-  prob = 600
-
-  env = "outdoor"
-  neighbor = "!outdoor"
+  prob = 200
 
   kind   = "arch"
   where  = "edge"
@@ -23,10 +20,22 @@ PREFABS.Arch_bare =
   bound_z2 = 128
 }
 
-PREFABS.Arch_bare_flipped =
+PREFABS.Arch_bare_columned =
 {
   template = "Arch_bare"
+  map      = "MAP02"
 
-  env = "!outdoor"
-  neighbor = "outdoor"
+  seed_w   = 2
+
+  x_fit    = { 24,104 , 152,232 }
+}
+
+PREFABS.Arch_bare_columned_2X =
+{
+  template = "Arch_bare"
+  map      = "MAP02"
+
+  seed_w   = 3
+
+  x_fit    = { 24,104 , 152,232 , 280,360 }
 }
