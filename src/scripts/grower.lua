@@ -933,7 +933,7 @@ function Grower_calc_rule_probs()
       and SHAPE_GRAMMAR[absurded_rule].use_prob != 0 then
 
         local ab_factor = 0
-        if rand.odds(50) then
+        if rand.odds(75) then
           ab_factor = rand.range( 100,1000000 )
           SHAPE_GRAMMAR[absurded_rule].use_prob = SHAPE_GRAMMAR[absurded_rule].use_prob * ab_factor
         else
