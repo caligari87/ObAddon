@@ -2433,7 +2433,7 @@ function Layout_handle_corners()
           corner.post_mat = corner.areas[1].zone.fence_mat
           corner.kind = "post"
           corner.post_type = assert(corner.areas[1].zone.post_type)
-          corner.post_top_h = assert(tallest_h)
+          corner.post_top_h = assert(tallest_h) + 32
         end
 
         -- original fenceposts on railings code
