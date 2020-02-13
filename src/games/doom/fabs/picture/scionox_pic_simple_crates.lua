@@ -3,7 +3,7 @@ PREFABS.Pic_simple_crates_1 =
   file   = "picture/scionox_pic_simple_crates.wad"
   map    = "MAP01"
 
-  prob   = 25
+  prob   = 50
   theme = "!hell"
 
   where  = "seeds"
