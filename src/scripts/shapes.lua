@@ -6414,7 +6414,7 @@ GROW_3x_F_STAIRS =
     "....xx","AAAAxx"
     "....xx","AAAAxx"
     "..xxxx","^^xxxx"
-    "..xxxx","^^xxxx"
+    "..xxxx","11xxxx"
     "..xxxx","11xxxx"
     "11xxxx","11xxxx"
   }
