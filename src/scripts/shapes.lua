@@ -9199,6 +9199,8 @@ SIDEWALK_STAIR_Y_IN =
 {
   prob = 8
 
+  pass = "sidewalk"
+
   structure =
   {
     ".....","..AAA"
@@ -9217,6 +9219,8 @@ SIDEWALK_STAIR_Y_IN =
 SIDEWALK_STAIR_Y_OUT =
 {
   prob = 8
+
+  pass = "sidewalk"
 
   structure =
   {
