@@ -9195,6 +9195,40 @@ SIDEWALK_PLAIN_STAIR =
   }
 }
 
+SIDEWALK_STAIR_Y_IN =
+{
+  prob = 8
+
+  structure =
+  {
+    ".....","..AAA"
+    ".....","1>AAA"
+    ".....","11%AA"
+    "11...","111^."
+    "11...","1111."
+  }
+
+  diagonals =
+  {
+    "1A"
+  }
+}
+
+SIDEWALK_STAIR_Y_OUT =
+{
+  prob = 8
+
+  structure =
+  {
+    "......","AAAAAA"
+    "......","AAAAAA"
+    "......","11>>AA"
+    "......","1111AA"
+    "11....","1111AA"
+    "11....","1111AA"
+  }
+}
+
 SIDEWALK_BUILDING_4x4 =
 {
   prob = 15
