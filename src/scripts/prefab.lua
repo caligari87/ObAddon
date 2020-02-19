@@ -295,6 +295,20 @@ end
 
 
 
+function Fab_update_skip_prob()
+  each name,def in PREFABS do
+    if def.skip_prob then
+      if rand.odds(def.skip_prob) then
+        def.use_prob = 0
+      else
+        def.use_prob = def.prob
+      end
+    end
+  end
+end
+
+
+
 function Fab_expansion_groups(list, axis_name, fit_size, pf_size, fabinfo)
   local extra = fit_size - pf_size
 

@@ -2647,6 +2647,9 @@ function Level_build_it()
   Item_add_pickups()
     if gui.abort() then return "abort" end
 
+  -- skip_probs for fabs are now evaluated on a per-level basis.
+  Fab_update_skip_prob()
+
   return "ok"
 end
 
