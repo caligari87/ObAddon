@@ -606,7 +606,7 @@ ULTDOOM.THEMES =
 
     wall_groups =
     {
-      PLAIN = 200
+      PLAIN = 145
       low_gap = 2
       mid_band = 3
       lite2 = 10
@@ -626,7 +626,7 @@ ULTDOOM.THEMES =
       gtd_ribbed_lights = 15
       gtd_wall_high_gap_set = 10
       gtd_wall_high_gap_alt_set = 10
-      gtd_generic_half_floor = 15
+      gtd_generic_half_floor = 15 -- current non-plain prob sum: 277
     }
 
     fence_groups =
@@ -901,7 +901,7 @@ ULTDOOM.THEMES =
       gtd_ribbed_lights = 15
       gtd_wall_high_gap_set = 8
       gtd_wall_high_gap_alt_set = 8
-      gtd_generic_half_floor = 15
+      gtd_generic_half_floor = 15 -- current non-plain prob sum: 395
 
     }
 
@@ -1082,7 +1082,7 @@ ULTDOOM.THEMES =
 
     wall_groups =
     {
-      PLAIN = 150
+      PLAIN = 300
       torches2 = 30 --red
       torches3 = 30 --blue
       torches1 = 30 --green
@@ -1116,7 +1116,7 @@ ULTDOOM.THEMES =
       gtd_ribbed_lights = 5
       gtd_wall_high_gap_set = 20
       gtd_wall_high_gap_alt_set = 20
-      gtd_generic_half_floor = 20
+      gtd_generic_half_floor = 20 -- current non-plain prob sum: 623
     }
 
     fence_groups =
@@ -1385,7 +1385,7 @@ ULTDOOM.THEMES =
 
     wall_groups =
     {
-      PLAIN = 150
+      PLAIN = 275
       torches2 = 30 --red
       torches3 = 30 --blue
       torches1 = 30 --green
@@ -1421,7 +1421,7 @@ ULTDOOM.THEMES =
       gtd_wall_high_gap_alt_set = 10
       gtd_generic_half_floor = 15
       gtd_woodframe = 15
-      gtd_woodframe_green = 15
+      gtd_woodframe_green = 15 -- current non-plain prob sum: 574
     }
 
     fence_groups =

@@ -3127,7 +3127,7 @@ ARMAETUS_TECH_WALL_GROUPS =
   gtd_wall_metal_warning = 20
   gtd_wall_vertical_light_1 = 8
   gtd_wall_vertical_light_2 = 8
-  gtd_wall_vertical_light_3 = 8
+  gtd_wall_vertical_light_3 = 8 -- 124
 }
 
 ARMAETUS_URBAN_WALL_GROUPS =
@@ -3149,7 +3149,7 @@ ARMAETUS_URBAN_WALL_GROUPS =
   gtd_wall_vertical_light_1 = 2
   gtd_wall_vertical_light_2 = 2
   gtd_wall_vertical_light_3 = 2
-  gtd_epic_craneo_paintings = 10
+  gtd_epic_craneo_paintings = 10 --52
 }
 
 ARMAETUS_HELL_WALL_GROUPS =
@@ -3174,7 +3174,7 @@ ARMAETUS_HELL_WALL_GROUPS =
   gtd_wall_metal_warning = 20
   gtd_wall_vertical_light_2 = 9
   gtd_wall_vertical_light_2 = 9
-  gtd_wall_vertical_light_3 = 9
+  gtd_wall_vertical_light_3 = 9 --338
 }
 
 

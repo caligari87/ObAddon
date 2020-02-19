@@ -9121,6 +9121,7 @@ SIDEWALK_FILL_2X =
 SIDEWALK_SLOPE_SIDE_SMOL =
 {
   prob = 15
+  skip_prob = 40
 
   pass = "sidewalk"
 
@@ -9136,6 +9137,7 @@ SIDEWALK_SLOPE_SIDE_SMOL =
 SIDEWALK_SLOPE_SIDE_NEAR =
 {
   prob = 15
+  skip_prob = 40
 
   pass = "sidewalk"
 
@@ -9151,6 +9153,7 @@ SIDEWALK_SLOPE_SIDE_NEAR =
 SIDEWALK_SLOPE_SIDE_FAR =
 {
   prob = 10
+  skip_prob = 40
 
   pass = "sidewalk"
 
@@ -9180,6 +9183,25 @@ SIDEWALK_SLOPE_ON_RAMP =
   }
 }
 
+SIDEWALK_SLOPE_ON_RAMP_DOUBLE =
+{
+  prob = 10
+
+  pass = "sidewalk"
+
+  structure =
+  {
+    "11x..","11xAA"
+    "11...","11>AA"
+    "11...","11>AA"
+    "111..","111AA"
+    "111..","111AA"
+    "11...","11>AA"
+    "11...","11>AA"
+    "11x..","11xAA"
+  }
+}
+
 SIDEWALK_PLAIN_STAIR =
 {
   prob = 10
@@ -9198,7 +9220,7 @@ SIDEWALK_PLAIN_STAIR =
 
 SIDEWALK_STAIR_Y_IN =
 {
-  prob = 8
+  prob = 10
 
   pass = "sidewalk"
 
@@ -9219,7 +9241,7 @@ SIDEWALK_STAIR_Y_IN =
 
 SIDEWALK_STAIR_Y_OUT =
 {
-  prob = 8
+  prob = 15
 
   pass = "sidewalk"
 
