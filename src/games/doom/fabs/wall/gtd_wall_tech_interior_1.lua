@@ -4,7 +4,7 @@
 
 PREFABS.Wall_raised_comp =
 {
-  file   = "wall/gtd_wall.wad"
+  file   = "wall/gtd_wall_tech_interior_1.wad"
   map    = "MAP01"
 
   prob   = 15
@@ -27,7 +27,7 @@ PREFABS.Wall_raised_comp =
 
 PREFABS.Wall_grated_thing =
 {
-  file   = "wall/gtd_wall.wad"
+  file   = "wall/gtd_wall_tech_interior_1.wad"
   map    = "MAP02"
 
   prob   = 15
@@ -48,7 +48,7 @@ PREFABS.Wall_grated_thing =
 
 PREFABS.Wall_inset =
 {
-  file   = "wall/gtd_wall.wad"
+  file   = "wall/gtd_wall_tech_interior_1.wad"
   map    = "MAP03"
 
   prob   = 15
@@ -69,7 +69,7 @@ PREFABS.Wall_inset =
 
 PREFABS.Wall_vertical_light =
 {
-  file   = "wall/gtd_wall.wad"
+  file   = "wall/gtd_wall_tech_interior_1.wad"
   map    = "MAP04"
 
   prob   = 15
@@ -90,7 +90,7 @@ PREFABS.Wall_vertical_light =
 
 PREFABS.Wall_vertical_double_light =
 {
-  file   = "wall/gtd_wall.wad"
+  file   = "wall/gtd_wall_tech_interior_1.wad"
   map    = "MAP05"
 
   prob   = 15
@@ -111,7 +111,7 @@ PREFABS.Wall_vertical_double_light =
 
 PREFABS.Wall_raised_computer_2 =
 {
-  file   = "wall/gtd_wall.wad"
+  file   = "wall/gtd_wall_tech_interior_1.wad"
   map    = "MAP06"
 
   prob   = 15
@@ -134,7 +134,7 @@ PREFABS.Wall_raised_computer_2 =
 
 PREFABS.Wall_adorned_diag =
 {
-  file   = "wall/gtd_wall.wad"
+  file   = "wall/gtd_wall_tech_interior_1.wad"
   map    = "MAP07"
 
   prob   = 50
@@ -152,7 +152,7 @@ PREFABS.Wall_adorned_diag =
 
 PREFABS.Wall_flat_accent =
 {
-  file   = "wall/gtd_wall.wad"
+  file   = "wall/gtd_wall_tech_interior_1.wad"
   map    = "MAP08"
 
   prob   = 15
@@ -173,7 +173,7 @@ PREFABS.Wall_flat_accent =
 
   PREFABS.Wall_caged_pipes =
 {
-  file   = "wall/gtd_wall.wad"
+  file   = "wall/gtd_wall_tech_interior_1.wad"
   map    = "MAP09"
 
   prob   = 15
