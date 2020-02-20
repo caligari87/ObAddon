@@ -41,7 +41,7 @@ PREFABS.Hallway_metro_i_boxy =
 
   engine = "any"
 
-  prob = 6
+  prob = 4
 
   can_flip = true
 }
@@ -67,7 +67,7 @@ PREFABS.Hallway_metro_i_boxy_train_crossing =
 
   engine = "any"
 
-  prob = 3
+  prob = 2
 
   can_flip = true
 }
@@ -81,7 +81,7 @@ PREFABS.Hallway_metro_i_boxy_ticketing_office =
 
   engine = "any"
 
-  prob = 3
+  prob = 2
 
   can_flip = true
 }

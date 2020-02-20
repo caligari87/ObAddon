@@ -32,3 +32,24 @@ PREFABS.Hallway_metro_t_boxy =
 
   prob = 20
 }
+
+PREFABS.Hallway_metro_t_boxy_vending_machine =
+{
+  template = "Hallway_metro_t"
+  map = "MAP11"
+
+  engine = "zdoom"
+
+  uses_epic_textures = true
+
+  prob = 15
+
+  tex_OBVNMCH1 =
+  {
+    OBVNMCH1 = 50
+    OBVNMCH2 = 50
+    OBVNMCH3 = 50
+    OBVNMCH4 = 50
+    OBVNMCH5 = 50
+  }
+}
