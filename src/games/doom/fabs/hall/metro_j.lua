@@ -4,6 +4,8 @@ PREFABS.Hallway_metro_term =
   map    = "MAP01"
   kind   = "terminator"
 
+  engine = "zdoom"
+
   group  = "metro"
   prob   = 50
 
@@ -15,7 +17,7 @@ PREFABS.Hallway_metro_term =
 
   deep   = 16
 
- sector_1  = { [0]=90, [1]=15 }
+  sector_1  = { [0]=90, [1]=15 }
 }
 
 PREFABS.Hallway_metro_secret =
@@ -26,4 +28,29 @@ PREFABS.Hallway_metro_secret =
   key  = "secret"
 
   sector_1  = { [0]=90, [1]=15 }
+}
+
+-- slopeless engine fallbacks
+
+PREFABS.Hallway_metro_term_boxy =
+{
+  template = "Hallway_metro_term"
+
+  engine = "any"
+
+  map = "MAP10"
+
+  prob = 10
+}
+
+PREFABS.Hallway_metro_secret_boxy =
+{
+  template = "Hallway_metro_term"
+
+  engine = "any"
+
+  map = "MAP11"
+  key = "secret"
+
+  prob = 10
 }
