@@ -28,13 +28,29 @@ PREFABS.Joiner_secret_secret_shootable_eye_pick_one =
   template = "Joiner_secret_secret_shootable_eye"
   map = "MAP02"
 
-  prob = 18
+  prob = 0 --previously 18
 }
 
 PREFABS.Joiner_secret_secret_shootable_eye_pick_one_b =
 {
   template = "Joiner_secret_secret_shootable_eye"
   map = "MAP03"
+
+  prob = 0 --previously 18
+}
+
+PREFABS.Joiner_secret_secret_shootable_eye_nodickmove =
+{
+  template = "Joiner_secret_secret_shootable_eye"
+  map = "MAP04"
+
+  prob = 18
+}
+
+PREFABS.Joiner_secret_secret_shootable_eye_nodickmove_b =
+{
+  template = "Joiner_secret_secret_shootable_eye"
+  map = "MAP05"
 
   prob = 18
 }
