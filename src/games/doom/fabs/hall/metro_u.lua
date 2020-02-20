@@ -3,6 +3,8 @@ PREFABS.Hallway_metro_u =
   file   = "hall/metro_u.wad"
   map    = "MAP01"
 
+  engine = "zdoom"
+
   group  = "metro"
   prob   = 50
 
@@ -36,4 +38,16 @@ PREFABS.Hallway_metro_u_deadend2 =
   prob     = 50
 
   sector_1  = { [0]=90, [1]=15 }
+}
+
+-- slopeless engine fallback
+
+PREFABS.Hallway_metro_u_boxy =
+{
+  template = "Hallway_metro_u"
+  map = "MAP10"
+
+  engine = "any"
+
+  prob = 20
 }
