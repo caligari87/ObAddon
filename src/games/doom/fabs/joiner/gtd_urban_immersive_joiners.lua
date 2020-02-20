@@ -22,3 +22,31 @@ PREFABS.Joiner_public_toilet_room =
 
   can_flip = true
 }
+
+PREFABS.Joiner_gtd_stairwell_up =
+{
+  template = "Joiner_public_toilet_room"
+  map = "MAP02"
+
+  style = "steepness"
+
+  engine = "any"
+
+  prob = 850
+
+  delta_h = 128
+
+  seed_w = 3
+}
+
+PREFABS.Joiner_gtd_stairwell_flat =
+{
+  template = "Joiner_public_toilet_room"
+  map = "MAP03"
+
+  engine = "any"
+
+  prob = 1000
+
+  seed_w = 3
+}
