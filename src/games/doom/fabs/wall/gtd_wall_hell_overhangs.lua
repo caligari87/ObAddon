@@ -7,6 +7,8 @@ PREFABS.Wall_hell_castle_maccicolations =
   env   = "!building"
   theme = "hell"
 
+  skip_prob = 83.33
+
   where  = "edge"
   height = 128
   long   = 128

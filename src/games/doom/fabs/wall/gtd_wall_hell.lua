@@ -86,43 +86,6 @@ PREFABS.Wall_hell_fake_window =
   z_fit = { 32,32+8 }
 }
 
-PREFABS.Wall_hell_fake_window_outdoor =
-{
-  template = "Wall_hell_fake_window"
-
-  env = "outdoor"
-}
-
-PREFABS.Wall_hell_fake_window_outdoor_topstretch =
-{
-  template = "Wall_hell_fake_window"
-
-  env = "outdoor"
-
-  z_fit = "bottom"
-}
-
-PREFABS.Wall_hell_fake_window_outdoor2 =
-{
-  template = "Wall_hell_fake_window"
-
-  group = "hell_fake_window_fireblu"
-  env = "outdoor"
-
-  tex_ROCKRED1 = "FIREBLU1"
-}
-
-PREFABS.Wall_hell_fake_window_outdoor_topstretch2 =
-{
-  template = "Wall_hell_fake_window"
-
-  group = "hell_fake_window_fireblu"
-  env = "outdoor"
-
-  tex_ROCKRED1 = "FIREBLU1"
-  z_fit = "bottom"
-}
-
 PREFABS.Wall_hell_flataccent_outdoor =
 {
   file   = "wall/gtd_wall_hell.wad"
@@ -183,24 +146,4 @@ PREFABS.Wall_hell_fake_window_small =
 
   x_fit = "stretch"
   z_fit = { 16-8,16+8 }
-}
-
-PREFABS.Wall_hell_fake_window_small_outdoor =
-{
-  template = "Wall_hell_fake_window_small"
-
-  env = "outdoor"
-
-  x_fit = "stretch"
-  z_fit = { 16-8,16+8 }
-}
-
-PREFABS.Wall_hell_fake_window_small_outdoor_stretchy =
-{
-  template = "Wall_hell_fake_window_small"
-
-  env = "outdoor"
-
-  x_fit = "stretch"
-  z_fit = { 48,56 }
 }
