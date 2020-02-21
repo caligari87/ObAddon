@@ -37,6 +37,17 @@ PREFABS.Joiner_gtd_stairwell_up =
   delta_h = 128
 
   seed_w = 3
+
+  tex_BROWNGRN =
+  {
+    BIGBRIK1 = 25
+    BIGBRIK2 = 25
+    BROWNGRN = 50
+    BRICK7 = 50
+    BRICK12 = 50
+    BRONZE1 = 50
+    STUCCO1 = 50
+  }
 }
 
 PREFABS.Joiner_gtd_stairwell_flat =
@@ -49,4 +60,15 @@ PREFABS.Joiner_gtd_stairwell_flat =
   prob = 1000
 
   seed_w = 3
+
+  tex_BROWNGRN =
+  {
+    BIGBRIK1 = 25
+    BIGBRIK2 = 25
+    BROWNGRN = 50
+    BRICK7 = 50
+    BRICK12 = 50
+    BRONZE1 = 50
+    STUCCO1 = 50
+  }
 }
