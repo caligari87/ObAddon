@@ -2647,9 +2647,6 @@ function Level_build_it()
   Item_add_pickups()
     if gui.abort() then return "abort" end
 
-  -- skip_probs for fabs are now evaluated on a per-level basis.
-  Fab_update_skip_prob()
-
   return "ok"
 end
 
@@ -2758,6 +2755,9 @@ function Level_make_level(LEV)
 
   Level_do_styles()
 
+  -- skip_probs for fabs are now evaluated on a per-level basis.
+  Fab_update_skip_prob()
+
   ob_invoke_hook("begin_level")
 
   gui.printf("\nStyles = \n%s\n\n", table.tostr(STYLE, 1))
@@ -2779,7 +2779,6 @@ function Level_make_level(LEV)
   if res != "ok" then
     return res
   end
-
 
   ob_invoke_hook("end_level")
 

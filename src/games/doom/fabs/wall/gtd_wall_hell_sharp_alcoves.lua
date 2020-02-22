@@ -4,6 +4,8 @@ PREFABS.Wall_hell_sharp_alcoves_single =
   map    = "MAP01"
 
   prob   = 50
+  skip_prob = 66
+
   theme  = "hell"
   env = "building"
 
