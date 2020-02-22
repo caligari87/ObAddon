@@ -7,7 +7,7 @@ PREFABS.Wall_hell_stone_brace = --#
   theme = "hell"
   env = "outdoor"
 
-  skip_prob = 85.71
+  skip_prob = 88.88
 
   where  = "edge"
   height = 128
@@ -118,6 +118,14 @@ PREFABS.Wall_hell_outdoor_rising_spfaces = --#
   engine = "zdoom"
 
   z_fit = "top"
+}
+
+PREFABS.Wall_hell_outdoor_lava_falls = --#
+{
+  template = "Wall_hell_stone_brace"
+  map = "MAP06"
+
+  z_fit = { 48,72 }
 }
 
 -- references to some older fabs [2]

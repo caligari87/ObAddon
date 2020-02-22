@@ -1,4 +1,4 @@
-PREFABS.Wall_tech_outdoor_caution_strip =
+PREFABS.Wall_tech_outdoor_caution_strip = --#
 {
   file   = "wall/gtd_wall_tech_exterior_skip_prob.wad"
   map    = "MAP01"
@@ -20,7 +20,7 @@ PREFABS.Wall_tech_outdoor_caution_strip =
   z_fit = {24,32}
 }
 
-PREFABS.Wall_tech_outdoor_orange_light_stack =
+PREFABS.Wall_tech_outdoor_orange_light_stack = --#
 {
   template = "Wall_tech_outdoor_caution_strip"
 
@@ -31,7 +31,7 @@ PREFABS.Wall_tech_outdoor_orange_light_stack =
 
 -- LITE strips
 
-PREFABS.Wall_tech_outdoor_lite_strip_white =
+PREFABS.Wall_tech_outdoor_lite_strip_white = --#
 {
   template = "Wall_tech_outdoor_caution_strip"
 
@@ -40,7 +40,7 @@ PREFABS.Wall_tech_outdoor_lite_strip_white =
   z_fit = "bottom"
 }
 
-PREFABS.Wall_tech_outdoor_lite_strip_blue =
+PREFABS.Wall_tech_outdoor_lite_strip_blue = --#
 {
   template = "Wall_tech_outdoor_caution_strip"
 
@@ -53,7 +53,7 @@ PREFABS.Wall_tech_outdoor_lite_strip_blue =
 
 -- teklite inset
 
-PREFABS.Wall_tech_outdoor_inset_teklite =
+PREFABS.Wall_tech_outdoor_inset_teklite = --#
 {
   template = "Wall_tech_outdoor_caution_strip"
 
@@ -62,7 +62,7 @@ PREFABS.Wall_tech_outdoor_inset_teklite =
   z_fit    = "top"
 }
 
-PREFABS.Wall_tech_outdoor_inset_teklite2 =
+PREFABS.Wall_tech_outdoor_inset_teklite2 = --#
 {
   template = "Wall_tech_outdoor_caution_strip"
 
@@ -75,7 +75,7 @@ PREFABS.Wall_tech_outdoor_inset_teklite2 =
 
 -- green light
 
-PREFABS.Wall_tech_outdoor_halfbase_green_light =
+PREFABS.Wall_tech_outdoor_halfbase_green_light = --#
 {
   template = "Wall_tech_outdoor_caution_strip"
 
@@ -84,7 +84,7 @@ PREFABS.Wall_tech_outdoor_halfbase_green_light =
   z_fit    = {40,56}
 }
 
-PREFABS.Wall_tech_outdoor_halfbase_blue_triangle =
+PREFABS.Wall_tech_outdoor_halfbase_blue_triangle = --#
 {
   template = "Wall_tech_outdoor_caution_strip"
 
@@ -97,7 +97,7 @@ PREFABS.Wall_tech_outdoor_halfbase_blue_triangle =
 
 -- because you need to be constantly reminded how the UAC screwed everything up
 
-PREFABS.Wall_tech_outdoor_giant_UAC_sign =
+PREFABS.Wall_tech_outdoor_giant_UAC_sign = --#
 {
   template = "Wall_tech_outdoor_caution_strip"
 
@@ -110,7 +110,7 @@ PREFABS.Wall_tech_outdoor_giant_UAC_sign =
 
 -- vents
 
-PREFABS.Wall_tech_outdoor_double_hanging_vents =
+PREFABS.Wall_tech_outdoor_double_hanging_vents = --#
 {
   template = "Wall_tech_outdoor_caution_strip"
 
