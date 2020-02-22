@@ -24,7 +24,7 @@ PREFABS.Cage_wall_windowed_rooms_square =
 
 PREFABS.Cage_wall_windowed_rooms_square_hell =
 {
-  template = "Cage_wall_windowed_rooms_1"
+  template = "Cage_wall_windowed_rooms_square"
 
   theme    = "hell"
 
