@@ -7,7 +7,7 @@ PREFABS.Wall_hell_stone_brace =
   theme = "hell"
   env = "outdoor"
 
-  skip_prob = 83.33
+  skip_prob = 85.71
 
   where  = "edge"
   height = 128
@@ -30,9 +30,9 @@ PREFABS.Wall_hell_wood_brace =
 PREFABS.Wall_hell_metal_framed_skin =
 {
   template = "Wall_hell_stone_brace"
+  map = "MAP02"
 
   prob = 750
-  map = "MAP02"
 
   tex_SKINEDGE =
   {
@@ -46,8 +46,71 @@ PREFABS.Wall_hell_metal_framed_skin =
   z_fit = "stretch"
 }
 
--- references to some older fabs
+PREFABS.Wall_hell_caged_up_corpses =
+{
+  template = "Wall_hell_stone_brace"
+  map = "MAP03"
 
+  prob = 750
+
+  tex_SLOPPY1 =
+  {
+    SLOPPY1 = 50
+    SLOPPY2 = 50
+  }
+  tex_WOODMET4 =
+  {
+    WOODMET3 = 50
+    WOODMET4 = 50
+  }
+
+  z_fit = "top"
+}
+
+PREFABS.Wall_hell_giant_stone_faces =
+{
+  template = "Wall_hell_stone_brace"
+  map = "MAP04"
+
+  height = 192
+
+  tex_MARBFAC2 =
+  {
+    MARBFAC2 = 50
+    MARBFAC3 = 50
+  }
+
+  z_fit = { 8,56 }
+
+  bound_z2 = 192
+}
+
+PREFABS.Wall_hell_giant_stone_faces_EPIC =
+{
+  template = "Wall_hell_stone_brace"
+  map = "MAP04"
+
+  height = 192
+
+  uses_epic_textures = true
+
+  replaces = "Wall_hell_giant_stone_faces"
+
+  tex_MARBFAC2 =
+  {
+    MARBFAC2 = 50
+    MARBFAC3 = 50
+    MARBFAC6 = 50
+    MARBFAC7 = 50
+    MARBFACF = 50
+  }
+
+  z_fit = { 8,56 }
+
+  bound_z2 = 192
+}
+
+-- references to some older fabs [2]
 PREFABS.Wall_hell_fake_window_outdoor =
 {
   template = "Wall_hell_fake_window"
