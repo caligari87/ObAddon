@@ -4,6 +4,8 @@ PREFABS.Wall_garrett_hell_bloody_fountain =
   map    = "MAP01"
 
   prob   = 15
+  skip_prob = 75
+
   theme  = "hell"
   env = "building"
 
