@@ -24,7 +24,7 @@ PREFABS.Cage_secret_trap_shootable_eye =
 
 PREFABS.Cage_secret_trap_shootable_eye_pair =
 {
-  template = "Joiner_secret_trap_shootable_eye"
+  template = "Cage_secret_trap_shootable_eye"
   map = "MAP02"
 
   prob = 37
