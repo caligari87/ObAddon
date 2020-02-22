@@ -4,7 +4,7 @@ PREFABS.Wall_tech_outdoor_caution_strip =
   map    = "MAP01"
 
   prob   = 200
-  skip_prob = 87.5
+  skip_prob = 90
 
   env   = "!building"
   theme = "tech"
@@ -93,4 +93,34 @@ PREFABS.Wall_tech_outdoor_halfbase_blue_triangle =
   tex_TEKGREN5 = "TEKGREN3"
 
   z_fit     = "top"
+}
+
+-- because you need to be constantly reminded how the UAC screwed everything up
+
+PREFABS.Wall_tech_outdoor_giant_UAC_sign =
+{
+  template = "Wall_tech_outdoor_caution_strip"
+
+  map = "MAP06"
+
+  z_fit = "bottom"
+
+  sector_1 = { [0]=80, [1]=15 }
+}
+
+-- vents
+
+PREFABS.Wall_tech_outdoor_double_hanging_vents =
+{
+  template = "Wall_tech_outdoor_caution_strip"
+
+  map = "MAP07"
+
+  tex_METAL2 =
+  {
+    METAL5 = 50
+    METAL3 = 10
+  }
+
+  z_fit = "bottom"
 }

@@ -1,11 +1,11 @@
-PREFABS.Joiner_secret_trap_shootable_eye =
+PREFABS.Cage_secret_trap_shootable_eye =
 {
   file   = "joiner/mogwaltz_trap_eye.wad"
   map    = "MAP01"
 
   prob   = 37
 
-  style  = "trap"
+  style  = "traps"
 
   where  = "seeds"
   shape  = "U"
@@ -22,7 +22,7 @@ PREFABS.Joiner_secret_trap_shootable_eye =
   solid_ents = true
 }
 
-PREFABS.Joiner_secret_trap_shootable_eye_pair =
+PREFABS.Cage_secret_trap_shootable_eye_pair =
 {
   template = "Joiner_secret_trap_shootable_eye"
   map = "MAP02"

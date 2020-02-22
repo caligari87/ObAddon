@@ -1,4 +1,4 @@
-PREFABS.Wall_hell_stone_brace =
+PREFABS.Wall_hell_stone_brace = --#
 {
   file   = "wall/gtd_wall_hell_exterior_skip_prob.wad"
   map    = "MAP01"
@@ -20,14 +20,14 @@ PREFABS.Wall_hell_stone_brace =
   z_fit = "bottom"
 }
 
-PREFABS.Wall_hell_wood_brace =
+PREFABS.Wall_hell_wood_brace = --#
 {
   template = "Wall_hell_stone_brace"
 
   tex_STONE2 = "WOODMET2"
 }
 
-PREFABS.Wall_hell_metal_framed_skin =
+PREFABS.Wall_hell_metal_framed_skin = --#
 {
   template = "Wall_hell_stone_brace"
   map = "MAP02"
@@ -46,7 +46,7 @@ PREFABS.Wall_hell_metal_framed_skin =
   z_fit = "stretch"
 }
 
-PREFABS.Wall_hell_caged_up_corpses =
+PREFABS.Wall_hell_caged_up_corpses = --#
 {
   template = "Wall_hell_stone_brace"
   map = "MAP03"
@@ -67,7 +67,7 @@ PREFABS.Wall_hell_caged_up_corpses =
   z_fit = "top"
 }
 
-PREFABS.Wall_hell_giant_stone_faces =
+PREFABS.Wall_hell_giant_stone_faces = --#
 {
   template = "Wall_hell_stone_brace"
   map = "MAP04"
@@ -110,8 +110,19 @@ PREFABS.Wall_hell_giant_stone_faces_EPIC =
   bound_z2 = 192
 }
 
+PREFABS.Wall_hell_outdoor_rising_spfaces = --#
+{
+  template = "Wall_hell_stone_brace"
+  map = "MAP05"
+
+  engine = "zdoom"
+
+  z_fit = "top"
+}
+
 -- references to some older fabs [2]
-PREFABS.Wall_hell_fake_window_outdoor =
+
+PREFABS.Wall_hell_fake_window_outdoor = --#
 {
   template = "Wall_hell_fake_window"
 
@@ -130,7 +141,7 @@ PREFABS.Wall_hell_fake_window_outdoor_topstretch =
   z_fit = "bottom"
 }
 
-PREFABS.Wall_hell_fake_window_small_outdoor =
+PREFABS.Wall_hell_fake_window_small_outdoor = --#
 {
   template = "Wall_hell_fake_window_small"
 
