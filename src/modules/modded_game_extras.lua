@@ -16,6 +16,12 @@ MODDED_GAME_EXTRAS.SCRIPT_TYPE_CHOICES =
   "none", _("NONE"),
 }
 
+MODDED_GAME_EXTRAS.BOSS_NAME_GEN_CHOICES =
+{
+  "zs", _("ZScript [BROKEN]"),
+  "none", _("NONE"),
+}
+
 MODDED_GAME_EXTRAS.HELLSCAPE_NAVIGATOR_TEMPLATE =
 {
   BASE =
@@ -49,6 +55,10 @@ function MODDED_GAME_EXTRAS.setup(self)
 
   if PARAM.hn_markers != "none" then
     MODDED_GAME_EXTRAS.init_hn_info()
+  end
+
+  if PARAM.boss_names == "zs" then
+    MODDED_GAME_EXTRAS.generate_boss_names()
   end
 end
 
@@ -314,6 +324,135 @@ function MODDED_GAME_EXTRAS.generate_hn_decorate()
   PARAM.hn_marker_decorate_lines = decorate_string
 end
 
+
+
+MODDED_GAME_EXTRAS.BOSS_NAME_SCRIPT =
+[[/* Content of this list is pulled directly from ObAddon's names libraries. */
+
+class bossNameHandler : EventHandler
+{
+  string exoticSyllables[SYL_NUM + 1];
+  string demonTitles[TITLE_NUM + 1];
+  string mon_name;
+  actor bossman;
+
+  void nameGenInit()
+  {
+    SYLLABLE_LIST
+    EVIL_TITLE_LIST
+  }
+
+  string getExoticSyls()
+  {
+    return exoticSyllables[Random(0,SYL_NUM)];
+  }
+
+  string getExoticName()
+  {
+    string tmp;
+
+    switch(Random(1,6))
+    {
+      case 1:
+      case 2:
+      case 3:
+      case 4:
+      case 5:
+        tmp = getExoticSyls() .. getExoticSyls();
+        break;
+      case 6:
+        tmp = getExoticSyls() .. getExoticSyls() .. getExoticSyls();
+        break;
+    }
+
+    return tmp;
+  }
+
+  string getDemonTitles()
+  {
+    return demonTitles[Random(0,TITLE_NUM)];
+  }
+
+  string getFancyDemonTag()
+  {
+    return getExoticName() .. " the " .. getDemonTitles();
+  }
+
+  string getNormalDemonTag()
+  {
+    return getExoticName();
+  }
+
+  string assembleName()
+  {
+    string currentName;
+    string firstLetter;
+
+    switch(Random(1,2))
+    {
+      case 1:
+        currentName = getFancyDemonTag();
+        break;
+      case 2:
+        currentName = getNormalDemonTag();
+        break;
+    }
+
+    firstLetter = currentName.Left(1);
+    firstLetter.toUpper();
+    currentName.Remove(0,1);
+    currentName = firstLetter .. currentName;
+
+    return currentName;
+  }
+
+  override void WorldLoaded(WorldEvent e)
+  {
+    nameGenInit();
+  }
+
+  override void WorldThingSpawned(WorldEvent e)
+  {
+    if (e.Thing && e.Thing.bBoss && e.Thing.Species != "IAmTheBoss")
+    {
+      e.Thing.SetTag(assembleName());
+    }
+  }
+}
+]]
+
+function MODDED_GAME_EXTRAS.generate_boss_names()
+  local boss_name_script = ""
+
+  local syl_list = "\n"
+  local title_list = "\n"
+
+  local title_num = 0
+  local syl_num = 0
+
+  boss_name_script = boss_name_script .. MODDED_GAME_EXTRAS.BOSS_NAME_SCRIPT
+
+  each name,prob in namelib.SYLLABLES.e do
+    syl_list = syl_list .. '    exoticSyllables[' .. syl_num .. ']="' .. name .. '";\n'
+    syl_num = syl_num + 1
+  end
+
+  each name,prob in ZDOOM_STORIES.EVIL_TITLES do
+    title_list = title_list .. '    demonTitles[' .. title_num .. ']="' .. name .. '";\n'
+    title_num = title_num + 1
+  end
+
+  boss_name_script = string.gsub( boss_name_script, "SYLLABLE_LIST", syl_list )
+  boss_name_script = string.gsub( boss_name_script, "EVIL_TITLE_LIST", title_list )
+
+  boss_name_script = string.gsub( boss_name_script, "SYL_NUM", syl_num - 1 )
+  boss_name_script = string.gsub( boss_name_script, "TITLE_NUM", title_num - 1 )
+
+  gui.printf(boss_name_script .. "\n")
+
+  PARAM.boss_name_script = boss_name_script
+end
+
 ----------------------------------------------------------------
 
 OB_MODULES["modded_game_extras"] =
@@ -355,6 +494,17 @@ OB_MODULES["modded_game_extras"] =
       choices=MODDED_GAME_EXTRAS.SCRIPT_TYPE_CHOICES
       tooltip = "Adds support for m8f's Hellscape Navigator by generating " ..
       "name markers in the map per room."
+      default = "none"
+    }
+
+    boss_names =
+    {
+      name = "boss_names"
+      label=_("Custom Boss Names")
+      choices=MODDED_GAME_EXTRAS.BOSS_NAME_GEN_CHOICES
+      tooltip = "Renames tags of boss actors with more or less actually demonic names. " ..
+      "Best used with TargetSpy or other healthbar mods to see the name as well as " ..
+      "mods like Champions or LegenDoom that marks more creatures as bosses."
       default = "none"
     }
   }

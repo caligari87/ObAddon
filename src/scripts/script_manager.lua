@@ -69,10 +69,13 @@ end
 function ScriptMan_assemble_zscript_lump()
   local zscript_lines = ""
   if PARAM.boss_gen and PARAM.boss_count != -1 then
-    zscript_lines = zscript_lines .. PARAM.BOSSSCRIPT
+    zscript_lines = zscript_lines .. PARAM.BOSSSCRIPT .. "\n"
   end
   if PARAM.custom_trees == "zs" then
-    zscript_lines = zscript_lines .. PARAM.ztrees
+    zscript_lines = zscript_lines .. PARAM.ztrees .. "\n"
+  end
+  if PARAM.boss_names == "zs" then
+    zscript_lines = zscript_lines .. PARAM.boss_name_script .. "\n"
   end
 
   if zscript_lines != "" then
