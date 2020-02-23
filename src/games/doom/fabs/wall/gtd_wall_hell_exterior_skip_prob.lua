@@ -3,11 +3,11 @@ PREFABS.Wall_hell_stone_brace = --#
   file   = "wall/gtd_wall_hell_exterior_skip_prob.wad"
   map    = "MAP01"
 
-  prob   = 450
+  prob   = 750
   theme = "hell"
   env = "outdoor"
 
-  skip_prob = 88.88
+  skip_prob = 90
 
   where  = "edge"
   height = 128
@@ -32,8 +32,6 @@ PREFABS.Wall_hell_metal_framed_skin = --#
   template = "Wall_hell_stone_brace"
   map = "MAP02"
 
-  prob = 750
-
   tex_SKINEDGE =
   {
     SKINEDGE = 50
@@ -50,8 +48,6 @@ PREFABS.Wall_hell_caged_up_corpses = --#
 {
   template = "Wall_hell_stone_brace"
   map = "MAP03"
-
-  prob = 750
 
   tex_SLOPPY1 =
   {
@@ -126,6 +122,14 @@ PREFABS.Wall_hell_outdoor_lava_falls = --#
   map = "MAP06"
 
   z_fit = { 48,72 }
+}
+
+PREFABS.Wall_hell_outdoor_huge_overhang = --#
+{
+  template = "Wall_hell_stone_brace"
+  map = "MAP07"
+
+  z_fit = "stretch"
 }
 
 -- references to some older fabs [2]
