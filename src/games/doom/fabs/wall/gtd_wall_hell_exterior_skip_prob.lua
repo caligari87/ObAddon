@@ -134,6 +134,16 @@ PREFABS.Wall_hell_outdoor_huge_overhang = --#
   z_fit = "stretch"
 }
 
+PREFABS.Wall_hell_outdoor_spiny_overhang = --#
+{
+  template = "Wall_hell_stone_brace"
+  map = "MAP08"
+
+  deep = 64
+
+  z_fit = { 32,96 }
+}
+
 -- references to some older fabs [2]
 
 PREFABS.Wall_hell_fake_window_outdoor = --#
