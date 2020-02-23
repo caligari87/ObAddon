@@ -129,6 +129,8 @@ PREFABS.Wall_hell_outdoor_huge_overhang = --#
   template = "Wall_hell_stone_brace"
   map = "MAP07"
 
+  deep = 48
+
   z_fit = "stretch"
 }
 
