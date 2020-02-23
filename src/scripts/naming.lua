@@ -1695,9 +1695,12 @@ namelib.NAMES =
       -- %h = Explicit description (e.g. I am Satan, "Arena of <Satan>")
       -- %o = Implicit description (e.g. I am Satanic, "Arena of <the Satanic>")
       -- %v = Prefixed phrase (as per COMMON table e.g. "<Scourge of the> Arena)
+      -- %r = Road suffix (St., Street, Road, Rd., etc.)
 
          ["%a %n"] = 60
       ["%t %a %n"] = 15
+      ["%t NOUNGENANGLICAN %n"] = 20
+      ["%t NOUNGENEXOTIC %n"] = 7
 
       [   "%n of %h"] = 15
       ["%t %n of %h"] = 8
@@ -1710,8 +1713,6 @@ namelib.NAMES =
       ["%v %n"]    = 25
       ["%v %a %n"] = 25
 
-      ["NOUNNUMBER %a %n"] = 40
-
       ["%a %n %x"] = 20
       ["%n of the %o %x"] = 3
       ["%v %n %x"] = 5
@@ -1721,13 +1722,17 @@ namelib.NAMES =
 
       -- Types of roads, useful when Streets Mode
       -- kicks in.
-      ["%a St."] = 7 -- Street
-      ["%a Rd."] = 7 -- Road
-      ["%a Ave."] = 7 -- Avenue
-      ["%a Dr."] = 4 -- Drive
-      ["%a Pl."] = 4 -- Place
-      ["%a Ln."] = 4 -- Lane
+      ["NOUNGENANGLICAN %r"] = 25
+      ["NOUNNUMBER NOUNGENANGLICAN %r"] = 40
 
+      ["NOUNGENEXOTIC %r"] = 13
+      ["NOUNNUMBER NOUNGENEXOTIC %r"] = 20
+
+      -- ObAddon contributor names
+      ["NOUNMEMBERS %n"] = 5
+
+      ["NOUNGENANGLICAN %n"] = 35
+      ["NOUNGENEXOTIC %n"] = 10
     }
 
     lexicon =
@@ -1735,6 +1740,22 @@ namelib.NAMES =
       t =
       {
         The=50
+      }
+
+      r =
+      {
+        ["St."] = 7,
+        ["Rd."] = 7,
+        ["Ave."] = 7,
+        ["Dr."] = 4,
+        ["Pl."] = 4,
+        ["Ln."] = 4,
+        Street = 3,
+        Road = 3,
+        Avenue = 3,
+        Drive = 2,
+        Place = 2,
+        Lane = 2,
       }
 
       a =
@@ -1854,12 +1875,6 @@ namelib.NAMES =
         Unknown=5, Living=3,
         Slaughter=5, Murder=5, Killing=5,
         Whispering=10,
-
-        -- ObAddon contributor names
-        NOUNMEMBERS = 50
-
-        NOUNGENEXOTIC = 150
-        NOUNGENANGLICAN = 650
       }
 
       n =
