@@ -543,6 +543,7 @@ MODDED_GAME_EXTRAS.PB_HUMAN_CHECK =
   if (a is "Labguy") return true;
   if (a is "ShotgunGuy1") return true;
   if (a is "ChaingunGuy1") return true;
+  if (a is "Marine1Pathfinder") return true;
 ]]
 
 MODDED_GAME_EXTRAS.PB_LESSER_DEMONS_CHECK =
