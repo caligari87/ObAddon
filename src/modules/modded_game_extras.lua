@@ -358,6 +358,8 @@ class bossNameHandler : EventHandler
     if (a is "PainElemental") return true;
     if (a is "HellKnight") return true;
 
+    GDEMONS_COMPAT_CHECKS
+
     return false;
   }
 
@@ -368,6 +370,8 @@ class bossNameHandler : EventHandler
     if (a is "Revenant") return true;
     if (a is "Arachnotron") return true;
 
+    SDEMONS_COMPAT_CHECKS
+
     return false;
   }
 
@@ -376,6 +380,8 @@ class bossNameHandler : EventHandler
     if (a is "DoomImp") return true;
     if (a is "Demon") return true;
     if (a is "Spectre") return true;
+
+    LDEMONS_COMPAT_CHECKS
 
     return false;
   }
@@ -527,11 +533,51 @@ class ObAddonNameToken : Inventory
 ]]
 
 MODDED_GAME_EXTRAS.PB_HUMAN_CHECK =
+[[    if (a is "PB_Zombieman") return true;
+  if (a is "PB_CarbineZombieman") return true;
+  if (a is "PB_HelmetZombieman") return true;
+  if (a is "PB_PistolZombieman2") return true;
+  if (a is "PB_PistolZombieman1") return true;
+  if (a is "PB_ZombieScientist") return true;
+  if (a is "Zombie_Man") return true;
+  if (a is "Labguy") return true;
+  if (a is "ShotgunGuy1") return true;
+  if (a is "ChaingunGuy1") return true;
+]]
 
-[[    if (a is "Zombie_Man") return true;
-    if (a is "ShotgunGuy1") return true;
-    if (a is "ChaingunGuy1") return true;
-    if (a is "QuadShotgunZombie") return true;]]
+MODDED_GAME_EXTRAS.PB_LESSER_DEMONS_CHECK =
+[[
+  if (a is "NamiDarkImp") return true;
+  if (a is "NetherDarkImp") return true;
+  if (a is "STDarkImp") return true;
+  if (a is "VoidDarkImp") return true;
+  if (a is "Imp") return true;
+  if (a is "BullDemon") return true;
+]]
+
+MODDED_GAME_EXTRAS.PB_STANDARD_DEMONS_CHECK =
+[[
+  if (a is "Arachnophyte") return true;
+  if (a is "Aracnorb") return true;
+  if (a is "Daedabus") return true;
+  if (a is "Afrit") return true;
+  if (a is "Watcher") return true;
+  if (a is "Revenant1") return true;
+]]
+
+MODDED_GAME_EXTRAS.PB_GREATER_DEMONS_CHECK =
+[[
+  if (a is "OverLord") return true;
+  if (a is "Cyberbaron") return true;
+  if (a is "FleshWizard") return true;
+  if (a is "Hellion") return true;
+  if (a is "ICEVILE") return true;
+
+  if (a is "BossBrainBase") return true;
+  if (a is "TheSpiderMastermind") return true;
+  if (a is "Motherdemon") return true;
+  if (a is "Juggernaut") return true;
+]]
 
 function MODDED_GAME_EXTRAS.generate_boss_names(mode)
   local boss_name_script = ""
@@ -599,8 +645,14 @@ function MODDED_GAME_EXTRAS.generate_boss_names(mode)
   if mode == "zs_pb" then
     gui.printf("brush!!!")
     boss_name_script = string.gsub( boss_name_script, "HUMAN_COMPAT_CHECKS", "\n" .. MODDED_GAME_EXTRAS.PB_HUMAN_CHECK)
+    boss_name_script = string.gsub( boss_name_script, "LDEMONS_COMPAT_CHECKS", "\n" .. MODDED_GAME_EXTRAS.PB_LESSER_DEMONS_CHECK)
+    boss_name_script = string.gsub( boss_name_script, "SDEMONS_COMPAT_CHECKS", "\n" .. MODDED_GAME_EXTRAS.PB_STANDARD_DEMONS_CHECK)
+    boss_name_script = string.gsub( boss_name_script, "GDEMONS_COMPAT_CHECKS", "\n" .. MODDED_GAME_EXTRAS.PB_GREATER_DEMONS_CHECK)
   elseif mode == "zs" then
     boss_name_script = string.gsub( boss_name_script, "HUMAN_COMPAT_CHECKS", " ")
+    boss_name_script = string.gsub( boss_name_script, "LDEMONS_COMPAT_CHECKS", " ")
+    boss_name_script = string.gsub( boss_name_script, "SDEMONS_COMPAT_CHECKS", " ")
+    boss_name_script = string.gsub( boss_name_script, "GDEMONS_COMPAT_CHECKS", " ")
   end
 
   PARAM.boss_name_script = boss_name_script
@@ -653,7 +705,7 @@ OB_MODULES["modded_game_extras"] =
     boss_names =
     {
       name = "boss_names"
-      label=_("Custom Boss Names")
+      label=_("Custom Actor Names") --MSSP-TODO: It's not "boss_names" anymore at this point.
       choices=MODDED_GAME_EXTRAS.BOSS_NAME_GEN_CHOICES
       tooltip = "Renames tags of boss actors with more or less actually demonic names. " ..
       "Best used with TargetSpy or other healthbar mods to see the name. " ..

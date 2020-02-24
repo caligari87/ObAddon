@@ -1267,9 +1267,9 @@ function ob_transfer_ui_options()
      OB_CONFIG.theme = "epi"
   end
 
-  if OB_CONFIG.size == "tiny" then
+  --[[ if OB_CONFIG.size == "tiny" then
      OB_CONFIG.size = "small"
-  end
+  end]]
 end
 
 
