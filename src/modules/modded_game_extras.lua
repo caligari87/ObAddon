@@ -341,11 +341,11 @@ class bossNameHandler : EventHandler
     if (a.bBoss){return true;}
 
     /* Check for Champions-morphed things */
-    Inventory token;
+    /* Inventory token;
     token = a.FindInventory("champion_TitanToken", true);
     token = a.FindInventory("champion_SplitterToken", true);
     token = a.FindInventory("champion_HeartToken", true);
-    if(token) return true;
+    if(token) return true; */
 
     /* Vanilla Oblige sets these up as "bosses" so might as well. */
     if (a is "BaronOfHell"){return true;}
