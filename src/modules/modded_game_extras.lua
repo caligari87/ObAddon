@@ -458,7 +458,7 @@ class bossNameHandler : EventHandler
       case 3:
         tmp = humanFirstNames[Random(0, F_NUM)] .. ' ' .. humanLastNames[Random(0, L_NUM)];
         break;
-      case 2:
+      case 4:
         tmp = humanFirstNames[Random(0, F_NUM)] .. ' "' .. humanNicknames[Random(0, NICK_NUM)] .. '" ' .. humanLastNames[Random(0, L_NUM)];
         break;
     }
