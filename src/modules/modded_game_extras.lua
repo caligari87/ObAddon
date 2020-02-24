@@ -18,8 +18,9 @@ MODDED_GAME_EXTRAS.SCRIPT_TYPE_CHOICES =
 
 MODDED_GAME_EXTRAS.BOSS_NAME_GEN_CHOICES =
 {
-  "zs", _("ZScript"),
-  "none", _("NONE"),
+  "zs",    _("ZScript"),
+  "zs_pb", _("ZScript - Project Brutality"),
+  "none",  _("NONE"),
 }
 
 MODDED_GAME_EXTRAS.HELLSCAPE_NAVIGATOR_TEMPLATE =
@@ -57,8 +58,8 @@ function MODDED_GAME_EXTRAS.setup(self)
     MODDED_GAME_EXTRAS.init_hn_info()
   end
 
-  if PARAM.boss_names == "zs" then
-    MODDED_GAME_EXTRAS.generate_boss_names()
+  if PARAM.boss_names != "none" then
+    MODDED_GAME_EXTRAS.generate_boss_names(PARAM.boss_names)
   end
 end
 
@@ -333,12 +334,16 @@ class bossNameHandler : EventHandler
 {
   string exoticSyllables[SYL_NUM + 1];
   string demonTitles[TITLE_NUM + 1];
+  string humanFirstNames[F_NUM + 1];
+  string humanLastNames[L_NUM + 1];
+  string humanNicknames[NICK_NUM + 1];
+
   string mon_name;
 
-  bool isBoss(Actor a)
+  bool isRankedDemon(Actor a)
   {
-    if (a.Species == "IAmTheBoss"){return false;}
-    if (a.bBoss){return true;}
+    if (a.Species == "IAmTheBoss") return false;
+    if (a.bBoss) return true;
 
     /* Check for Champions-morphed things */
     /* Inventory token;
@@ -348,9 +353,41 @@ class bossNameHandler : EventHandler
     if(token) return true; */
 
     /* Vanilla Oblige sets these up as "bosses" so might as well. */
-    if (a is "BaronOfHell"){return true;}
-    if (a is "Archvile"){return true;}
-    if (a is "PainElemental"){return true;}
+    if (a is "BaronOfHell") return true;
+    if (a is "Archvile") return true;
+    if (a is "PainElemental") return true;
+    if (a is "HellKnight") return true;
+
+    return false;
+  }
+
+  bool isSemiRankedDemon(Actor a)
+  {
+    if (a is "Cacodemon") return true;
+    if (a is "Fatso") return true;
+    if (a is "Revenant") return true;
+    if (a is "Arachnotron") return true;
+
+    return false;
+  }
+
+  bool isRanklessDemon(Actor a)
+  {
+    if (a is "DoomImp") return true;
+    if (a is "Demon") return true;
+    if (a is "Spectre") return true;
+
+    return false;
+  }
+
+  bool isHuman(Actor a)
+  {
+    if (a is "ZombieMan") return true;
+    if (a is "ShotgunGuy") return true;
+    if (a is "ChaingunGuy") return true;
+    if (a is "ScriptedMarine") return true;
+
+    HUMAN_COMPAT_CHECKS
 
     return false;
   }
@@ -359,6 +396,9 @@ class bossNameHandler : EventHandler
   {
     SYLLABLE_LIST
     EVIL_TITLE_LIST
+    FIRST_NAMES_LIST
+    LAST_NAMES_LIST
+    HUMAN_TITLES_LIST
   }
 
   string getExoticSyls()
@@ -402,20 +442,34 @@ class bossNameHandler : EventHandler
     return getExoticName();
   }
 
-  string assembleName()
+  string getHumanTag()
   {
-    string currentName;
+    string tmp;
+    switch(Random(1,4))
+    {
+      case 1:
+      case 2:
+      case 3:
+        tmp = humanFirstNames[Random(0, F_NUM)] .. ' ' .. humanLastNames[Random(0, L_NUM)];
+        break;
+      case 2:
+        tmp = humanFirstNames[Random(0, F_NUM)] .. ' "' .. humanNicknames[Random(0, NICK_NUM)] .. '" ' .. humanLastNames[Random(0, L_NUM)];
+        break;
+    }
+
+    return tmp;
+  }
+
+  string bootifyName(string inputName)
+  {
     string firstLetter;
 
-    currentName = getFancyDemonTag();
-    /* getNormalDemonTag currently not used */
-
-    firstLetter = currentName.Left(1);
+    firstLetter = inputName.Left(1);
     firstLetter.toUpper();
-    currentName.Remove(0,1);
-    currentName = firstLetter .. currentName;
+    inputName.Remove(0,1);
+    inputName = firstLetter .. inputName;
 
-    return currentName;
+    return inputName;
   }
 
   override void WorldLoaded(WorldEvent e)
@@ -425,16 +479,61 @@ class bossNameHandler : EventHandler
 
   override void WorldThingSpawned(WorldEvent e)
   {
-    if (e.Thing && isBoss(e.Thing))
+    if (e.Thing)
     {
-      mon_name = assembleName();
-      e.Thing.SetTag(mon_name);
+      mon_name = "";
+
+      if (isRanklessDemon(e.Thing))
+      {
+        mon_name = getNormalDemonTag();
+      }
+
+      if (isSemiRankedDemon(e.Thing))
+      {
+        switch(Random(1,2))
+        {
+          case 1:
+            mon_name = getFancyDemonTag();
+            break;
+          case 2:
+            mon_name = getNormalDemonTag();
+            break;
+        }
+      }
+
+      if (isRankedDemon(e.Thing))
+      {
+        mon_name = getFancyDemonTag();
+      }
+
+      if (isHuman(e.Thing))
+      {
+        mon_name = getHumanTag();
+      }
+
+      if (mon_name != "")
+      {
+        mon_name = bootifyName(mon_name);
+        e.Thing.SetTag(mon_name);
+        e.Thing.giveInventory("ObAddonNameToken", 1);
+      }
     }
   }
 }
+
+class ObAddonNameToken : Inventory
+{
+}
 ]]
 
-function MODDED_GAME_EXTRAS.generate_boss_names()
+MODDED_GAME_EXTRAS.PB_HUMAN_CHECK =
+
+[[    if (a is "Zombie_Man") return true;
+    if (a is "ShotgunGuy1") return true;
+    if (a is "ChaingunGuy1") return true;
+    if (a is "QuadShotgunZombie") return true;]]
+
+function MODDED_GAME_EXTRAS.generate_boss_names(mode)
   local boss_name_script = ""
 
   local syl_list = "\n"
@@ -442,6 +541,14 @@ function MODDED_GAME_EXTRAS.generate_boss_names()
 
   local title_num = 0
   local syl_num = 0
+
+  local first_name_list = "\n"
+  local last_name_list = "\n"
+  local human_titles_list = "\n"
+
+  local f_num = 0
+  local l_num = 0
+  local t_num = 0
 
   boss_name_script = boss_name_script .. MODDED_GAME_EXTRAS.BOSS_NAME_SCRIPT
 
@@ -455,13 +562,46 @@ function MODDED_GAME_EXTRAS.generate_boss_names()
     title_num = title_num + 1
   end
 
+  each name,prob in namelib.HUMAN_NAMES.f do
+    local dupe_count = prob
+    while(dupe_count > 0) do
+      first_name_list = first_name_list .. '    humanFirstNames[' .. f_num .. ']="' .. name .. '";\n'
+      dupe_count = dupe_count - 1
+      f_num = f_num + 1
+    end
+  end
+
+  each name,prob in namelib.HUMAN_NAMES.l do
+    last_name_list = last_name_list .. '    humanLastNames[' .. l_num .. ']="' .. name .. '";\n'
+    l_num = l_num + 1
+  end
+
+  each name,prob in namelib.HUMAN_NAMES.t do
+    human_titles_list = human_titles_list .. '    humanNicknames[' .. t_num .. ']="' .. name .. '";\n'
+    t_num = t_num + 1
+  end
+
+
   boss_name_script = string.gsub( boss_name_script, "SYLLABLE_LIST", syl_list )
   boss_name_script = string.gsub( boss_name_script, "EVIL_TITLE_LIST", title_list )
 
   boss_name_script = string.gsub( boss_name_script, "SYL_NUM", syl_num - 1 )
   boss_name_script = string.gsub( boss_name_script, "TITLE_NUM", title_num - 1 )
 
-  gui.printf(boss_name_script .. "\n")
+  boss_name_script = string.gsub( boss_name_script, "FIRST_NAMES_LIST", first_name_list)
+  boss_name_script = string.gsub( boss_name_script, "LAST_NAMES_LIST", last_name_list)
+  boss_name_script = string.gsub( boss_name_script, "HUMAN_TITLES_LIST", human_titles_list)
+
+  boss_name_script = string.gsub( boss_name_script, "F_NUM", f_num)
+  boss_name_script = string.gsub( boss_name_script, "L_NUM", l_num)
+  boss_name_script = string.gsub( boss_name_script, "NICK_NUM", t_num)
+
+  if mode == "zs_pb" then
+    gui.printf("brush!!!")
+    boss_name_script = string.gsub( boss_name_script, "HUMAN_COMPAT_CHECKS", "\n" .. MODDED_GAME_EXTRAS.PB_HUMAN_CHECK)
+  elseif mode == "zs" then
+    boss_name_script = string.gsub( boss_name_script, "HUMAN_COMPAT_CHECKS", " ")
+  end
 
   PARAM.boss_name_script = boss_name_script
 end
@@ -517,7 +657,8 @@ OB_MODULES["modded_game_extras"] =
       choices=MODDED_GAME_EXTRAS.BOSS_NAME_GEN_CHOICES
       tooltip = "Renames tags of boss actors with more or less actually demonic names. " ..
       "Best used with TargetSpy or other healthbar mods to see the name. " ..
-      "For now, only works with actors flagged as bosses by default, rather than morphed to be bosses."
+      "For now, only works with actors flagged as bosses by default, rather than morphed to be bosses.\n\n" ..
+      "Some choices attach names to some custom actors that don't have direct inheritances."
       default = "none"
     }
   }
