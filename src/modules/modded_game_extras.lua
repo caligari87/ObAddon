@@ -18,7 +18,7 @@ MODDED_GAME_EXTRAS.SCRIPT_TYPE_CHOICES =
 
 MODDED_GAME_EXTRAS.BOSS_NAME_GEN_CHOICES =
 {
-  "zs", _("ZScript [BROKEN]"),
+  "zs", _("ZScript"),
   "none", _("NONE"),
 }
 
@@ -334,7 +334,26 @@ class bossNameHandler : EventHandler
   string exoticSyllables[SYL_NUM + 1];
   string demonTitles[TITLE_NUM + 1];
   string mon_name;
-  actor bossman;
+
+  bool isBoss(Actor a)
+  {
+    if (a.Species == "IAmTheBoss"){return false;}
+    if (a.bBoss){return true;}
+
+    /* Check for Champions-morphed things */
+    Inventory token;
+    token = a.FindInventory("champion_TitanToken", true);
+    token = a.FindInventory("champion_SplitterToken", true);
+    token = a.FindInventory("champion_HeartToken", true);
+    if(token) return true;
+
+    /* Vanilla Oblige sets these up as "bosses" so might as well. */
+    if (a is "BaronOfHell"){return true;}
+    if (a is "Archvile"){return true;}
+    if (a is "PainElemental"){return true;}
+
+    return false;
+  }
 
   void nameGenInit()
   {
@@ -388,15 +407,8 @@ class bossNameHandler : EventHandler
     string currentName;
     string firstLetter;
 
-    switch(Random(1,2))
-    {
-      case 1:
-        currentName = getFancyDemonTag();
-        break;
-      case 2:
-        currentName = getNormalDemonTag();
-        break;
-    }
+    currentName = getFancyDemonTag();
+    /* getNormalDemonTag currently not used */
 
     firstLetter = currentName.Left(1);
     firstLetter.toUpper();
@@ -413,9 +425,10 @@ class bossNameHandler : EventHandler
 
   override void WorldThingSpawned(WorldEvent e)
   {
-    if (e.Thing && e.Thing.bBoss && e.Thing.Species != "IAmTheBoss")
+    if (e.Thing && isBoss(e.Thing))
     {
-      e.Thing.SetTag(assembleName());
+      mon_name = assembleName();
+      e.Thing.SetTag(mon_name);
     }
   }
 }
@@ -503,8 +516,8 @@ OB_MODULES["modded_game_extras"] =
       label=_("Custom Boss Names")
       choices=MODDED_GAME_EXTRAS.BOSS_NAME_GEN_CHOICES
       tooltip = "Renames tags of boss actors with more or less actually demonic names. " ..
-      "Best used with TargetSpy or other healthbar mods to see the name as well as " ..
-      "mods like Champions or LegenDoom that marks more creatures as bosses."
+      "Best used with TargetSpy or other healthbar mods to see the name. " ..
+      "For now, only works with actors flagged as bosses by default, rather than morphed to be bosses."
       default = "none"
     }
   }

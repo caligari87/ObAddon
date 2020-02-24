@@ -18,7 +18,7 @@ PREFABS.Cage_realrexen_office =
   over   = 16
 
   x_fit  = "frame"
-  y_fit  = "frame"
+  y_fit  = "top"
 
   engine = "gzdoom"
 

@@ -40,14 +40,30 @@ end
 
 
 function ScriptMan_assemble_mapinfo_lump()
+
+
+  -- GAMEINFO stuff
   local mapinfo_lines = {
       "gameinfo\n",
       "{\n",
   }
 
+  local eventhandler_lines = "addeventhandlers = "
   if PARAM.boss_gen and PARAM.boss_count != -1 then
-    table.insert(mapinfo_lines, 'addeventhandlers = "BossGenerator_Handler"\n')
+    eventhandler_lines = eventhandler_lines .. '"BossGenerator_Handler"'
   end
+  if PARAM.boss_gen and PARAM.boss_count != -1 and PARAM.boss_names == "zs" then
+    eventhandler_lines = eventhandler_lines .. ", "
+  end
+  if PARAM.boss_names == "zs" then
+    eventhandler_lines = eventhandler_lines .. '"bossNameHandler"'
+  end
+  if PARAM.boss_gen and PARAM.bosS_count != -1 and PARAM.boss_names == "zs" then
+    eventhandler_lines = eventhandler_lines .. "\n"
+    table.insert(mapinfo_lines, eventhandler_lines)
+  end
+
+  -- MAPINFO extras
   if PARAM.custom_quit_messages == "yes" then
     each line in PARAM.gameinfolump do
       table.insert(mapinfo_lines,line)
