@@ -149,6 +149,8 @@ PREFABS.Wall_hell_outdoor_red_glass_tall = --#
   template = "Wall_hell_stone_brace"
   map = "MAP09"
 
+  height = 192
+
   tex_GOTH19 = "METAL2"
   tex_GOTH20 = "METAL2"
   tex_GOTH21 = "BRONZE1"
@@ -162,6 +164,8 @@ PREFABS.Wall_hell_outdoor_red_glass_tall_EPIC =
 {
   template = "Wall_hell_stone_brace"
   map = "MAP09"
+
+  height = 192
 
   replaces = "Wall_hell_outdoor_red_glass_tall"
 

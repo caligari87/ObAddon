@@ -4,7 +4,7 @@ PREFABS.Wall_tech_outdoor_caution_strip = --#
   map    = "MAP01"
 
   prob   = 200
-  skip_prob = 89.91
+  skip_prob = 92.58
 
   env   = "!building"
   theme = "tech"
@@ -136,4 +136,15 @@ PREFABS.Wall_tech_outdoor_overhanging_braced_vent = --#
   deep = 48
 
   z_fit = { 48,56 }
+}
+
+PREFABS.Wall_tech_outdoor_overhanging_lite_platform = --#
+{
+  template = "Wall_tech_outdoor_caution_strip"
+
+  map = "MAP09"
+
+  deep = 64
+
+  z_fit = "bottom"
 }
