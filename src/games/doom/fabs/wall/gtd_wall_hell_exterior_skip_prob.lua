@@ -7,7 +7,7 @@ PREFABS.Wall_hell_stone_brace = --#
   theme = "hell"
   env = "outdoor"
 
-  skip_prob = 90
+  skip_prob = 92.58
 
   where  = "edge"
   height = 128
@@ -144,13 +144,37 @@ PREFABS.Wall_hell_outdoor_spiny_overhang = --#
   z_fit = { 32,96 }
 }
 
+PREFABS.Wall_hell_outdoor_red_glass_tall = --#
+{
+  template = "Wall_hell_stone_brace"
+  map = "MAP09"
+
+  tex_GOTH19 = "METAL2"
+  tex_GOTH20 = "METAL2"
+  tex_GOTH21 = "BRONZE1"
+  tex_GOTH36 = "BRONZE1"
+  tex_GLASS13 = "REDWALL"
+
+  z_fit = { 40,120 }
+}
+
+PREFABS.Wall_hell_outdoor_red_glass_tall_EPIC =
+{
+  template = "Wall_hell_stone_brace"
+  map = "MAP09"
+
+  replaces = "Wall_hell_outdoor_red_glass_tall"
+
+  z_fit = { 40,120 }
+}
+
 -- references to some older fabs [2]
 
 PREFABS.Wall_hell_fake_window_outdoor = --#
 {
   template = "Wall_hell_fake_window"
 
-  prob = 100
+  prob = 75
 
   env = "outdoor"
 }
@@ -160,7 +184,7 @@ PREFABS.Wall_hell_fake_window_outdoor_topstretch =
   template = "Wall_hell_fake_window"
 
   env = "outdoor"
-  prob = 100
+  prob = 75
 
   z_fit = "bottom"
 }
@@ -170,7 +194,7 @@ PREFABS.Wall_hell_fake_window_small_outdoor = --#
   template = "Wall_hell_fake_window_small"
 
   env = "outdoor"
-  prob = 100
+  prob = 75
 
   x_fit = "stretch"
   z_fit = { 16-8,16+8 }
@@ -181,7 +205,7 @@ PREFABS.Wall_hell_fake_window_small_outdoor_stretchy =
   template = "Wall_hell_fake_window_small"
 
   env = "outdoor"
-  prob = 100
+  prob = 75
 
   x_fit = "stretch"
   z_fit = { 48,56 }
