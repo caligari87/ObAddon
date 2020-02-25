@@ -6428,6 +6428,10 @@ namelib.HUMAN_NAMES =
     ["Vanilla Ice"] = 1
     ["War Horse"] = 1
     ["White Death"] = 1
+
+    ["Hear no Evil"] = 1
+    ["See no Evil"] = 1
+    ["Do no Evil"] = 1
   }
 }
 

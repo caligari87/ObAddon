@@ -90,7 +90,7 @@ function ScriptMan_assemble_zscript_lump()
   if PARAM.custom_trees == "zs" then
     zscript_lines = zscript_lines .. PARAM.ztrees .. "\n"
   end
-  if PARAM.boss_names != "none" then
+  if PARAM.boss_name_script then
     zscript_lines = zscript_lines .. PARAM.boss_name_script .. "\n"
   end
 
