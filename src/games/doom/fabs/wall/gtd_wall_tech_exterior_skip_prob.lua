@@ -133,9 +133,12 @@ PREFABS.Wall_tech_outdoor_overhanging_braced_vent = --#
 
   map = "MAP08"
 
+  height = 192
   deep = 48
 
   z_fit = { 48,56 }
+
+  bound_z2 = 192
 }
 
 PREFABS.Wall_tech_outdoor_overhanging_lite_platform = --#
