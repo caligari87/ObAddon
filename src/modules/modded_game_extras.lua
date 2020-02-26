@@ -534,50 +534,56 @@ class ObAddonNameToken : Inventory
 
 MODDED_GAME_EXTRAS.PB_HUMAN_CHECK =
 [[    if (a is "PB_Zombieman") return true;
-  if (a is "PB_CarbineZombieman") return true;
-  if (a is "PB_HelmetZombieman") return true;
-  if (a is "PB_PistolZombieman2") return true;
-  if (a is "PB_PistolZombieman1") return true;
-  if (a is "PB_ZombieScientist") return true;
-  if (a is "Zombie_Man") return true;
-  if (a is "Labguy") return true;
-  if (a is "ShotgunGuy1") return true;
-  if (a is "ChaingunGuy1") return true;
-  if (a is "Marine1Pathfinder") return true;
+    if (a is "PB_CarbineZombieman") return true;
+    if (a is "PB_HelmetZombieman") return true;
+    if (a is "PB_PistolZombieman2") return true;
+    if (a is "PB_PistolZombieman1") return true;
+    if (a is "PB_ZombieScientist") return true;
+    if (a is "Zombie_Man") return true;
+    if (a is "Labguy") return true;
+    if (a is "ShotgunGuy1") return true;
+    if (a is "ChaingunGuy1") return true;
+    if (a is "HellTrooper") return true;
+
+    if (a is "Marine_Rifle") return true;
+
+    if (a is "ImpaledMarineAlive1") return true;
+    if (a is "ImpaledMarineAlive2") return true;
 ]]
 
 MODDED_GAME_EXTRAS.PB_LESSER_DEMONS_CHECK =
 [[
-  if (a is "NamiDarkImp") return true;
-  if (a is "NetherDarkImp") return true;
-  if (a is "STDarkImp") return true;
-  if (a is "VoidDarkImp") return true;
-  if (a is "Imp") return true;
-  if (a is "BullDemon") return true;
+    if (a is "NamiDarkImp") return true;
+    if (a is "NetherDarkImp") return true;
+    if (a is "STDarkImp") return true;
+    if (a is "VoidDarkImp") return true;
+    if (a is "Imp") return true;
+    if (a is "BullDemon") return true;
 ]]
 
 MODDED_GAME_EXTRAS.PB_STANDARD_DEMONS_CHECK =
 [[
-  if (a is "Arachnophyte") return true;
-  if (a is "Aracnorb") return true;
-  if (a is "Daedabus") return true;
-  if (a is "Afrit") return true;
-  if (a is "Watcher") return true;
-  if (a is "Revenant1") return true;
+    if (a is "Arachnophyte") return true;
+    if (a is "Aracnorb") return true;
+    if (a is "Daedabus") return true;
+    if (a is "Afrit") return true;
+    if (a is "Watcher") return true;
+    if (a is "Revenant1") return true;
 ]]
 
 MODDED_GAME_EXTRAS.PB_GREATER_DEMONS_CHECK =
 [[
-  if (a is "OverLord") return true;
-  if (a is "Cyberbaron") return true;
-  if (a is "FleshWizard") return true;
-  if (a is "Hellion") return true;
-  if (a is "ICEVILE") return true;
+    if (a is "OverLord") return true;
+    if (a is "Cyberbaron") return true;
+    if (a is "FleshWizard") return true;
+    if (a is "Hellion") return true;
+    if (a is "CyberPaladin") return true;
+    if (a is "ICEVILE") return true;
 
-  if (a is "BossBrainBase") return true;
-  if (a is "TheSpiderMastermind") return true;
-  if (a is "Motherdemon") return true;
-  if (a is "Juggernaut") return true;
+    if (a is "BossBrainBase") return true;
+    if (a is "TheSpiderMastermind") return true;
+    if (a is "Motherdemon") return true;
+    if (a is "Juggernaut") return true;
 ]]
 
 function MODDED_GAME_EXTRAS.generate_boss_names(mode)

@@ -4,7 +4,7 @@ PREFABS.Wall_tech_outdoor_caution_strip = --#
   map    = "MAP01"
 
   prob   = 200
-  skip_prob = 92.58
+  skip_prob = 93.23
 
   env   = "!building"
   theme = "tech"
@@ -150,4 +150,26 @@ PREFABS.Wall_tech_outdoor_overhanging_lite_platform = --#
   deep = 64
 
   z_fit = "bottom"
+}
+
+PREFABS.Wall_tech_outdoor_pipe_junctions = --#
+{
+  template = "Wall_tech_outdoor_caution_strip"
+
+  map = "MAP10"
+
+  prob = 100000
+  skip_prob = 1
+
+  height = 192
+
+  tex_PIPES =
+  {
+    PIPES = 15
+    TEKWALL6 = 50
+  }
+
+  z_fit = { 32,96 }
+
+  bound_z2 = 192
 }
