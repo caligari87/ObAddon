@@ -158,9 +158,6 @@ PREFABS.Wall_tech_outdoor_pipe_junctions = --#
 
   map = "MAP10"
 
-  prob = 100000
-  skip_prob = 1
-
   height = 192
 
   tex_PIPES =
