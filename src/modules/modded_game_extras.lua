@@ -334,9 +334,9 @@ class bossNameHandler : EventHandler
 {
   string exoticSyllables[SYL_NUM + 1];
   string demonTitles[TITLE_NUM + 1];
-  string humanFirstNames[F_NUM + 1];
-  string humanLastNames[L_NUM + 1];
-  string humanNicknames[NICK_NUM + 1];
+  string humanFirstNames[F_NUM];
+  string humanLastNames[L_NUM];
+  string humanNicknames[NICK_NUM];
 
   string mon_name;
 
@@ -456,10 +456,10 @@ class bossNameHandler : EventHandler
       case 1:
       case 2:
       case 3:
-        tmp = humanFirstNames[Random(0, F_NUM)] .. ' ' .. humanLastNames[Random(0, L_NUM)];
+        tmp = humanFirstNames[Random(0, F_NUM - 1)] .. ' ' .. humanLastNames[Random(0, L_NUM - 1)];
         break;
       case 4:
-        tmp = humanFirstNames[Random(0, F_NUM)] .. ' "' .. humanNicknames[Random(0, NICK_NUM)] .. '" ' .. humanLastNames[Random(0, L_NUM)];
+        tmp = humanFirstNames[Random(0, F_NUM - 1)] .. ' "' .. humanNicknames[Random(0, NICK_NUM - 1)] .. '" ' .. humanLastNames[Random(0, L_NUM - 1)];
         break;
     }
 
