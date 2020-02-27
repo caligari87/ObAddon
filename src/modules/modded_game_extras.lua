@@ -16,7 +16,7 @@ MODDED_GAME_EXTRAS.SCRIPT_TYPE_CHOICES =
   "none", _("NONE"),
 }
 
-MODDED_GAME_EXTRAS.BOSS_NAME_GEN_CHOICES =
+MODDED_GAME_EXTRAS.ACTOR_NAME_GEN_CHOICES =
 {
   "zs",    _("ZScript"),
   "zs_pb", _("ZScript - Project Brutality"),
@@ -58,8 +58,8 @@ function MODDED_GAME_EXTRAS.setup(self)
     MODDED_GAME_EXTRAS.init_hn_info()
   end
 
-  if PARAM.boss_names != "none" then
-    MODDED_GAME_EXTRAS.generate_boss_names(PARAM.boss_names)
+  if PARAM.custom_actor_names != "none" then
+    MODDED_GAME_EXTRAS.generate_custom_actor_names(PARAM.custom_actor_names)
   end
 end
 
@@ -327,7 +327,7 @@ end
 
 
 
-MODDED_GAME_EXTRAS.BOSS_NAME_SCRIPT =
+MODDED_GAME_EXTRAS.ACTOR_NAME_SCRIPT =
 [[/* Content of this list is pulled directly from ObAddon's names libraries. */
 
 class bossNameHandler : EventHandler
@@ -586,8 +586,8 @@ MODDED_GAME_EXTRAS.PB_GREATER_DEMONS_CHECK =
     if (a is "Juggernaut") return true;
 ]]
 
-function MODDED_GAME_EXTRAS.generate_boss_names(mode)
-  local boss_name_script = ""
+function MODDED_GAME_EXTRAS.generate_custom_actor_names(mode)
+  local actor_name_script = ""
 
   local syl_list = "\n"
   local title_list = "\n"
@@ -603,7 +603,7 @@ function MODDED_GAME_EXTRAS.generate_boss_names(mode)
   local l_num = 0
   local t_num = 0
 
-  boss_name_script = boss_name_script .. MODDED_GAME_EXTRAS.BOSS_NAME_SCRIPT
+  actor_name_script = actor_name_script .. MODDED_GAME_EXTRAS.ACTOR_NAME_SCRIPT
 
   each name,prob in namelib.SYLLABLES.e do
     syl_list = syl_list .. '    exoticSyllables[' .. syl_num .. ']="' .. name .. '";\n'
@@ -635,34 +635,34 @@ function MODDED_GAME_EXTRAS.generate_boss_names(mode)
   end
 
 
-  boss_name_script = string.gsub( boss_name_script, "SYLLABLE_LIST", syl_list )
-  boss_name_script = string.gsub( boss_name_script, "EVIL_TITLE_LIST", title_list )
+  actor_name_script = string.gsub( actor_name_script, "SYLLABLE_LIST", syl_list )
+  actor_name_script = string.gsub( actor_name_script, "EVIL_TITLE_LIST", title_list )
 
-  boss_name_script = string.gsub( boss_name_script, "SYL_NUM", syl_num - 1 )
-  boss_name_script = string.gsub( boss_name_script, "TITLE_NUM", title_num - 1 )
+  actor_name_script = string.gsub( actor_name_script, "SYL_NUM", syl_num - 1 )
+  actor_name_script = string.gsub( actor_name_script, "TITLE_NUM", title_num - 1 )
 
-  boss_name_script = string.gsub( boss_name_script, "FIRST_NAMES_LIST", first_name_list)
-  boss_name_script = string.gsub( boss_name_script, "LAST_NAMES_LIST", last_name_list)
-  boss_name_script = string.gsub( boss_name_script, "HUMAN_TITLES_LIST", human_titles_list)
+  actor_name_script = string.gsub( actor_name_script, "FIRST_NAMES_LIST", first_name_list)
+  actor_name_script = string.gsub( actor_name_script, "LAST_NAMES_LIST", last_name_list)
+  actor_name_script = string.gsub( actor_name_script, "HUMAN_TITLES_LIST", human_titles_list)
 
-  boss_name_script = string.gsub( boss_name_script, "F_NUM", f_num)
-  boss_name_script = string.gsub( boss_name_script, "L_NUM", l_num)
-  boss_name_script = string.gsub( boss_name_script, "NICK_NUM", t_num)
+  actor_name_script = string.gsub( actor_name_script, "F_NUM", f_num)
+  actor_name_script = string.gsub( actor_name_script, "L_NUM", l_num)
+  actor_name_script = string.gsub( actor_name_script, "NICK_NUM", t_num)
 
   if mode == "zs_pb" then
     gui.printf("brush!!!")
-    boss_name_script = string.gsub( boss_name_script, "HUMAN_COMPAT_CHECKS", "\n" .. MODDED_GAME_EXTRAS.PB_HUMAN_CHECK)
-    boss_name_script = string.gsub( boss_name_script, "LDEMONS_COMPAT_CHECKS", "\n" .. MODDED_GAME_EXTRAS.PB_LESSER_DEMONS_CHECK)
-    boss_name_script = string.gsub( boss_name_script, "SDEMONS_COMPAT_CHECKS", "\n" .. MODDED_GAME_EXTRAS.PB_STANDARD_DEMONS_CHECK)
-    boss_name_script = string.gsub( boss_name_script, "GDEMONS_COMPAT_CHECKS", "\n" .. MODDED_GAME_EXTRAS.PB_GREATER_DEMONS_CHECK)
+    actor_name_script = string.gsub( actor_name_script, "HUMAN_COMPAT_CHECKS", "\n" .. MODDED_GAME_EXTRAS.PB_HUMAN_CHECK)
+    actor_name_script = string.gsub( actor_name_script, "LDEMONS_COMPAT_CHECKS", "\n" .. MODDED_GAME_EXTRAS.PB_LESSER_DEMONS_CHECK)
+    actor_name_script = string.gsub( actor_name_script, "SDEMONS_COMPAT_CHECKS", "\n" .. MODDED_GAME_EXTRAS.PB_STANDARD_DEMONS_CHECK)
+    actor_name_script = string.gsub( actor_name_script, "GDEMONS_COMPAT_CHECKS", "\n" .. MODDED_GAME_EXTRAS.PB_GREATER_DEMONS_CHECK)
   elseif mode == "zs" then
-    boss_name_script = string.gsub( boss_name_script, "HUMAN_COMPAT_CHECKS", " ")
-    boss_name_script = string.gsub( boss_name_script, "LDEMONS_COMPAT_CHECKS", " ")
-    boss_name_script = string.gsub( boss_name_script, "SDEMONS_COMPAT_CHECKS", " ")
-    boss_name_script = string.gsub( boss_name_script, "GDEMONS_COMPAT_CHECKS", " ")
+    actor_name_script = string.gsub( actor_name_script, "HUMAN_COMPAT_CHECKS", " ")
+    actor_name_script = string.gsub( actor_name_script, "LDEMONS_COMPAT_CHECKS", " ")
+    actor_name_script = string.gsub( actor_name_script, "SDEMONS_COMPAT_CHECKS", " ")
+    actor_name_script = string.gsub( actor_name_script, "GDEMONS_COMPAT_CHECKS", " ")
   end
 
-  PARAM.boss_name_script = boss_name_script
+  PARAM.actor_name_script = actor_name_script
 end
 
 ----------------------------------------------------------------
@@ -709,15 +709,16 @@ OB_MODULES["modded_game_extras"] =
       default = "none"
     }
 
-    boss_names =
+    custom_actor_names =
     {
-      name = "boss_names"
-      label=_("Custom Actor Names") --MSSP-TODO: It's not "boss_names" anymore at this point.
-      choices=MODDED_GAME_EXTRAS.BOSS_NAME_GEN_CHOICES
-      tooltip = "Renames tags of boss actors with more or less actually demonic names. " ..
-      "Best used with TargetSpy or other healthbar mods to see the name. " ..
-      "For now, only works with actors flagged as bosses by default, rather than morphed to be bosses.\n\n" ..
-      "Some choices attach names to some custom actors that don't have direct inheritances."
+      name = "custom_actor_names"
+      label=_("Custom Actor Names")
+      choices=MODDED_GAME_EXTRAS.ACTOR_NAME_GEN_CHOICES
+      tooltip = "Renames tags of monsters with generated names. Humans recieve human names, " ..
+      "demons recieve exotic names.\n" ..
+      "Best used with TargetSpy or other healthbar mods to see the name." ..
+      "Uses class inheritance, so custom monsters inheriting from the base classes also recieve "..
+      "custom names. Use compatibility options only when necessary."
       default = "none"
     }
   }

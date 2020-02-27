@@ -7,7 +7,7 @@ PREFABS.Wall_hell_stone_brace = --#
   theme = "hell"
   env = "outdoor"
 
-  skip_prob = 92.58
+  skip_prob = 90.75
 
   where  = "edge"
   height = 128

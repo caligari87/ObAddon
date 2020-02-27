@@ -52,13 +52,13 @@ function ScriptMan_assemble_mapinfo_lump()
   if PARAM.boss_gen and PARAM.boss_count != -1 then
     eventhandler_lines = eventhandler_lines .. '"BossGenerator_Handler"'
   end
-  if PARAM.boss_gen and PARAM.boss_count != -1 and PARAM.boss_names != "none" then
+  if PARAM.boss_gen and PARAM.boss_count != -1 and PARAM.custom_actor_names != "none" then
     eventhandler_lines = eventhandler_lines .. ", "
   end
-  if PARAM.boss_names != "none" then
+  if PARAM.custom_actor_names != "none" then
     eventhandler_lines = eventhandler_lines .. '"bossNameHandler"'
   end
-  if (PARAM.boss_gen and PARAM.boss_count != -1) or (PARAM.boss_names != "none") then
+  if (PARAM.boss_gen and PARAM.boss_count != -1) or (PARAM.custom_actor_names != "none") then
     eventhandler_lines = eventhandler_lines .. "\n"
     table.insert(mapinfo_lines, eventhandler_lines)
   end
@@ -90,8 +90,8 @@ function ScriptMan_assemble_zscript_lump()
   if PARAM.custom_trees == "zs" then
     zscript_lines = zscript_lines .. PARAM.ztrees .. "\n"
   end
-  if PARAM.boss_name_script then
-    zscript_lines = zscript_lines .. PARAM.boss_name_script .. "\n"
+  if PARAM.actor_name_script then
+    zscript_lines = zscript_lines .. PARAM.actor_name_script .. "\n"
   end
 
   if zscript_lines != "" then
