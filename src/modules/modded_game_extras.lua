@@ -650,7 +650,6 @@ function MODDED_GAME_EXTRAS.generate_custom_actor_names(mode)
   actor_name_script = string.gsub( actor_name_script, "NICK_NUM", t_num)
 
   if mode == "zs_pb" then
-    gui.printf("brush!!!")
     actor_name_script = string.gsub( actor_name_script, "HUMAN_COMPAT_CHECKS", "\n" .. MODDED_GAME_EXTRAS.PB_HUMAN_CHECK)
     actor_name_script = string.gsub( actor_name_script, "LDEMONS_COMPAT_CHECKS", "\n" .. MODDED_GAME_EXTRAS.PB_LESSER_DEMONS_CHECK)
     actor_name_script = string.gsub( actor_name_script, "SDEMONS_COMPAT_CHECKS", "\n" .. MODDED_GAME_EXTRAS.PB_STANDARD_DEMONS_CHECK)

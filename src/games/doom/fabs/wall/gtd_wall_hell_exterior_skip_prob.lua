@@ -7,7 +7,7 @@ PREFABS.Wall_hell_stone_brace = --#
   theme = "hell"
   env = "outdoor"
 
-  skip_prob = 90.75
+  skip_prob = 91.39
 
   where  = "edge"
   height = 128
@@ -164,6 +164,8 @@ PREFABS.Wall_hell_outdoor_red_glass_tall = --#
   tex_GLASS13 = "REDWALL"
 
   z_fit = { 40,120 }
+
+  bound_z2 = 192
 }
 
 PREFABS.Wall_hell_outdoor_red_glass_tall_EPIC =
@@ -176,6 +178,44 @@ PREFABS.Wall_hell_outdoor_red_glass_tall_EPIC =
   replaces = "Wall_hell_outdoor_red_glass_tall"
 
   z_fit = { 40,120 }
+
+  bound_z2 = 192
+}
+
+PREFABS.Wall_hell_outdoor_rising_energy = --#
+{
+  template = "Wall_hell_stone_brace"
+  map = "MAP10"
+
+  height = 192
+
+  z_fit = { 136,186 }
+
+  bound_z2 = 192
+}
+
+PREFABS.Wall_hell_outdoor_rising_energy_EPIC =
+{
+  template = "Wall_hell_stone_brace"
+  map = "MAP10"
+
+  uses_epic_textures = true
+
+  height = 192
+
+  replaces = "Wall_hell_outdoor_rising_energy"
+
+  tex_FIREBLU1 = "RDWAL01"
+  tex_MARBFAC4 =
+  {
+    MARBF01 = 50
+    MARBF02 = 50
+    MARBF03 = 50
+  }
+
+  z_fit = { 136,186 }
+
+  bound_z2 = 192
 }
 
 -- references to some older fabs [2]
