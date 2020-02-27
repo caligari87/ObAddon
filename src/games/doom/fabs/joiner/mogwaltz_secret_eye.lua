@@ -45,6 +45,8 @@ PREFABS.Joiner_secret_secret_shootable_eye_nodickmove =
   map = "MAP04"
 
   prob = 18
+
+  y_fit = { 128,140 }
 }
 
 PREFABS.Joiner_secret_secret_shootable_eye_nodickmove_b =
@@ -53,4 +55,6 @@ PREFABS.Joiner_secret_secret_shootable_eye_nodickmove_b =
   map = "MAP05"
 
   prob = 18
+
+  y_fit = { 128,140 }
 }
