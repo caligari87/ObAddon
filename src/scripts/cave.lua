@@ -4341,6 +4341,45 @@ stderrf("  picked chain from blob %d --> %d\n", B.id, C.id)
   end
 
 
+  -- MSSP-TODO: My weird solution to the bland, empty parks. Once I figure it out that is.
+  local function make_some_plains()
+    if not area.entry_walk then return end
+
+    local ecx = area.entry_walk.cx1
+    local ecy = area.entry_walk.cy1
+
+    R.has_hills = true
+
+    for cx = 1, area.cw do
+      for cy = 1, area.ch do
+        local id = blob_map[cx][cy]
+        if not id then continue end
+
+        local reg = blob_map.regions[id]
+
+        local info = {}
+        info.floor_h = entry_h
+        info.floor_mat = R.floor_mat
+
+        area.blobs[cx][cy] = info
+      end
+    end
+
+    if not THEME.park_decor then return end
+
+    -- put some trees in there at least
+    tree_locs = {}
+
+    local prob = style_sel("park_detail", 0, 30, 60, 90)
+
+    each _,B in blob_map.regions do
+      if rand.odds(prob) then
+        try_add_decor_item(B)
+      end
+    end
+  end
+
+
   ---| Cave_build_a_park |---
 
 gui.debugf("BUILD PARK IN %s\n", R.name)
@@ -4367,10 +4406,18 @@ gui.debugf("BUILD PARK IN %s\n", R.name)
 
   do_parky_stuff()
 
-  if rand.odds(75) then
+  if LEVEL.liquid and rand.odds(style_sel("liquids", 0, 16.67, 33.33, 50)) then
+    R.park_type = "river"
+  else
+    R.park_type = "hills"
+  end
+
+  if R.park_type == "hills" then
     make_a_hillside()
-  elseif LEVEL.liquid and rand.odds(50) then
+  elseif R.park_type == "river" then
     make_a_river()
+  elseif R.park_type == "plains" then
+    make_some_plains()
   end
 
   update_chunk_textures()
