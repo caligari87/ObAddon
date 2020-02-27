@@ -235,3 +235,47 @@ PREFABS.Wall_double_dark_windows =
     BLAKWAL2 = 50
   }
 }
+
+PREFABS.Wall_wide_dark_windows =
+{
+  template = "Wall_double_dark_windows"
+  map = "MAP08"
+
+  z_fit = "top"
+
+  tex_MODWALL4 = "MODWALL4"
+  tex_MODWALL3 =
+  {
+    MODWALL3 = 50
+    MODWALL4 = 25
+    STEP1 = 3
+    STEP2 = 3
+    STEP3 = 3
+    STEP4 = 3
+    STEP5 = 3
+  }
+}
+
+PREFABS.Wall_wide_dark_windows_with_door =
+{
+  template = "Wall_double_dark_windows"
+  map = "MAP09"
+
+  prob = 40
+
+  z_fit = "top"
+
+  tex_MODWALL4 = "MODWALL4"
+  tex_MODWALL3 =
+  {
+    MODWALL3 = 50
+    STEP1 = 50
+    STEP2 = 50
+    STEP3 = 50
+    STEP4 = 50
+    STEP5 = 50
+    STEPLAD1 = 50
+    SPCDOOR1 = 25
+    SPCDOOR2 = 25
+  }
+}
