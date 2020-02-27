@@ -4408,7 +4408,9 @@ gui.debugf("BUILD PARK IN %s\n", R.name)
 
   if LEVEL.liquid and rand.odds(style_sel("liquids", 0, 16.67, 33.33, 50)) then
     R.park_type = "river"
-  else
+  end
+
+  if not R.park_type then
     R.park_type = "hills"
   end
 
