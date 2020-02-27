@@ -121,6 +121,12 @@ PREFABS.Wall_hell_outdoor_lava_falls = --#
   template = "Wall_hell_stone_brace"
   map = "MAP06"
 
+  tex_FIREMAG1 =
+  {
+    FIREMAG1 = 10
+    SLADWALL = 50
+  }
+
   z_fit = { 48,72 }
 }
 
