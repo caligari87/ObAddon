@@ -177,9 +177,6 @@ PREFABS.Wall_tech_hadleys_hope_sort_of_wall = --#
 
   map = "MAP11"
 
-  prob = 10000
-  skip_prob = 0
-
   height = 192
 
   deep = 64
