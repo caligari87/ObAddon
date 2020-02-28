@@ -265,6 +265,8 @@ PREFABS.Wall_wide_dark_windows_with_door =
 
   on_liquids = "never"
 
+  on_scenics = "never"
+
   z_fit = "top"
 
   tex_MODWALL4 = "MODWALL4"
