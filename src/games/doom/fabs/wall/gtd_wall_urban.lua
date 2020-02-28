@@ -263,6 +263,8 @@ PREFABS.Wall_wide_dark_windows_with_door =
 
   prob = 40
 
+  on_liquids = "never"
+
   z_fit = "top"
 
   tex_MODWALL4 = "MODWALL4"

@@ -9,7 +9,7 @@ PREFABS.Locked_joiner_round_3key_modern =
   theme  = "!hell"
 
   key    = "k_ALL"
-  prob   = 150
+  prob   = 300
 
   seed_w = 2
   seed_h = 1
