@@ -175,6 +175,8 @@ PREFABS.Wall_hell_outdoor_red_glass_tall_EPIC =
 
   height = 192
 
+  uses_epic_textures = true
+
   replaces = "Wall_hell_outdoor_red_glass_tall"
 
   z_fit = { 40,120 }
