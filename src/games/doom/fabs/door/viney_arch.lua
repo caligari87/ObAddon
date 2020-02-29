@@ -24,6 +24,12 @@ PREFABS.Arch_viney1 =
 
   bound_z1 = 0
   bound_z2 = 132
+
+  tex_MIDVINE2 =
+  {
+    MIDVINE2 = 1
+    ZZWOLF10 = 10 -- invisibility tex
+  }
 }
 
 
@@ -73,6 +79,12 @@ PREFABS.Joiner_viney1 =
   y_fit  = { 32,144 }
 
   force_flip = false
+
+  tex_MIDVINE2 =
+  {
+    MIDVINE2 = 1
+    ZZWOLF10 = 10 -- invisibility tex
+  }
 }
 
 
@@ -98,4 +110,3 @@ PREFABS.Joiner_viney1_CC =
 
   rank   = 4
 }
-

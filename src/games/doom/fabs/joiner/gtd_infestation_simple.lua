@@ -22,6 +22,12 @@ PREFABS.Joiner_infestation_caveout =
   y_fit = "frame"
 
   solid_ents = false
+
+  tex_MIDVINE2 =
+  {
+    MIDVINE2 = 1
+    ZZWOLF10 = 10 -- invisibility tex
+  }
 }
 
 PREFABS.Joiner_natural_caveout =
@@ -44,4 +50,10 @@ PREFABS.Joiner_natural_caveout =
   thing_63 = 0
   thing_77 = 0
   thing_78 = 0
+
+  tex_MIDVINE2 =
+  {
+    MIDVINE2 = 1
+    ZZWOLF10 = 10 -- invisibility tex
+  }
 }
