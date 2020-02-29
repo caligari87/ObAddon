@@ -7,7 +7,7 @@ PREFABS.Wall_hell_stone_brace = --#
   theme = "hell"
   env = "outdoor"
 
-  skip_prob = 91.39
+  skip_prob = 91.92
 
   where  = "edge"
   height = 128
@@ -218,6 +218,37 @@ PREFABS.Wall_hell_outdoor_rising_energy_EPIC =
   z_fit = { 136,186 }
 
   bound_z2 = 192
+}
+
+PREFABS.Wall_hell_wooden_palisades = --#
+{
+  template = "Wall_hell_stone_brace"
+  map = "MAP11"
+
+  tex_WOODMET3 =
+  {
+    WOODMET1 = 50
+    WOODMET3 = 10
+    WOODMET4 = 10
+  }
+  tex_WOOD6 =
+  {
+    WOOD5 = 5
+    WOOD6 = 5
+    WOOD7 = 5
+    WOOD8 = 5
+    WOOD9 = 5
+  }
+  tex_WOOD7 =
+  {
+    WOOD5 = 5
+    WOOD6 = 5
+    WOOD7 = 5
+    WOOD8 = 5
+    WOOD9 = 5
+  }
+
+  z_fit = "top"
 }
 
 -- references to some older fabs [2]
