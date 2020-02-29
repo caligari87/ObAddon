@@ -672,7 +672,6 @@ MODDED_GAME_EXTRAS.QCDE_STANDARD_DEMONS_CHECK =
     //Classic Doom
     if (a is "QCArachnotron") return true;
     if (a is "QCCacodemon") return true;
-    if (a is "QCDoomImp") return true;
     if (a is "QCFatso") return true;
     if (a is "QCRevenant") return true;
 

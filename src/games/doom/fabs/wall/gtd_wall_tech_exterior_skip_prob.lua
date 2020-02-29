@@ -149,7 +149,7 @@ PREFABS.Wall_tech_outdoor_overhanging_lite_platform = --#
 
   deep = 64
 
-  z_fit = "bottom"
+  z_fit = { 12,20 }
 }
 
 PREFABS.Wall_tech_outdoor_pipe_junctions = --#
