@@ -687,6 +687,7 @@ MODDED_GAME_EXTRAS.QCDE_STANDARD_DEMONS_CHECK =
     if (a is "QScrag") return true;
     if (a is "QShambler") return true;
     if (a is "QRocketOgre") return true;
+    if (a is "QVore") return true;
 ]]
 
 MODDED_GAME_EXTRAS.QCDE_GREATER_DEMONS_CHECK =
