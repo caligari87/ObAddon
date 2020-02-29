@@ -55,10 +55,10 @@ function ScriptMan_assemble_mapinfo_lump()
   if PARAM.boss_gen and PARAM.boss_count != -1 and PARAM.custom_actor_names != "none" then
     eventhandler_lines = eventhandler_lines .. ", "
   end
-  if PARAM.custom_actor_names != "none" then
+  if PARAM.actor_name_script then
     eventhandler_lines = eventhandler_lines .. '"bossNameHandler"'
   end
-  if (PARAM.boss_gen and PARAM.boss_count != -1) or (PARAM.custom_actor_names != "none") then
+  if (PARAM.boss_gen and PARAM.boss_count != -1) or PARAM.actor_name_script then
     eventhandler_lines = eventhandler_lines .. "\n"
     table.insert(mapinfo_lines, eventhandler_lines)
   end
