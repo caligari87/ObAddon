@@ -18,9 +18,10 @@ MODDED_GAME_EXTRAS.SCRIPT_TYPE_CHOICES =
 
 MODDED_GAME_EXTRAS.ACTOR_NAME_GEN_CHOICES =
 {
-  "zs",    _("ZScript"),
-  "zs_pb", _("ZScript - Project Brutality"),
-  "none",  _("NONE"),
+  "zs",      _("ZScript"),
+  "zs_pb",   _("ZScript - Project Brutality"),
+  "zs_qcde", _("ZScript - Quake Champions: Doom Edition"),
+  "none",    _("NONE"),
 }
 
 MODDED_GAME_EXTRAS.HELLSCAPE_NAVIGATOR_TEMPLATE =
@@ -586,6 +587,151 @@ MODDED_GAME_EXTRAS.PB_GREATER_DEMONS_CHECK =
     if (a is "Juggernaut") return true;
 ]]
 
+MODDED_GAME_EXTRAS.QCDE_HUMAN_CHECK =
+[[
+    //Classic Doom
+    if (a is "QCChaingunGuy") return true;
+    if (a is "QCShotgunGuy") return true;
+    if (a is "QCZombieman") return true;
+
+    // Doom 4
+    if (a is "D4HellRazer") return true;
+    if (a is "D4PossessedSecurity") return true;
+    if (a is "D4ShotgunGuy") return true;
+    if (a is "D4Zombieman") return true;
+
+    // Quake 1
+    if (a is "QZombie") return true;
+    if (a is "QNailEnforcer") return true;
+    if (a is "QGrunt") return true;
+    if (a is "QEnforcer") return true;
+
+    // Quake 2 - poor guys
+    if (a is "Q2Berserker") return true;
+    if (a is "Q2Brains") return true;
+    if (a is "Q2Flyer") return true;
+    if (a is "Q2Gladiator") return true;
+    if (a is "Q2Gunner") return true;
+    if (a is "Q2Hornet") return true;
+    if (a is "Q2Hover") return true;
+    if (a is "Q2Infantry") return true;
+    if (a is "QEnforcer") return true;
+    if (a is "Q2IronMaiden") return true;
+    if (a is "Q2LightGuard") return true;
+    if (a is "Q2MachinegunGuard") return true;
+    if (a is "Q2Medic") return true;
+    if (a is "Q2Parasite") return true;
+    if (a is "Q2ShieldHover") return true;
+    if (a is "Q2ShotgunGuard") return true;
+
+    // Quake 4
+    if (a is "Q4Berserker") return true;
+    if (a is "Q4FailedTransfer") return true;
+    if (a is "Q4Gladiator") return true;
+    if (a is "Q4Grunt") return true;
+    if (a is "Q4Gunner") return true;
+    if (a is "Q4Harvester") return true;
+    if (a is "Q4HoverTank") return true;
+    if (a is "Q4LightTank") return true;
+    if (a is "Q4HyperBlasterTactical") return true;
+    if (a is "Q4IronMaiden") return true;
+    if (a is "Q4HyperBlasterTactical") return true;
+    if (a is "Q4LightGuard") return true;
+    if (a is "Q4MachinegunGuard") return true;
+    if (a is "Q4HyperBlasterTactical") return true;
+    if (a is "Q4RailgunTactical") return true;
+    if (a is "Q4RepairBot") return true;
+    if (a is "Q4Scientist") return true;
+    if (a is "Q4ShotgunGuard") return true;
+    if (a is "Q4SlimyTransfer") return true;
+    if (a is "Q4Scientist") return true;
+    if (a is "Q4Sentry") return true;
+    if (a is "Q4StroggHover") return true;
+    if (a is "Q4TeleportDropper") return true;
+    if (a is "Q4Voss") return true;
+]]
+
+MODDED_GAME_EXTRAS.QCDE_LESSER_DEMONS_CHECK =
+[[
+    //Classic Doom
+    if (a is "QCDemon") return true;
+    if (a is "QCDoomImp") return true;
+
+    //Doom 4
+    if (a is "D4Demon") return true;
+    if (a is "D4DoomImp") return true;
+    if (a is "D4Harvester") return true;
+    if (a is "D4Prowler") return true;
+
+    //Quake 1
+    if (a is "QFiend") return true;
+]]
+
+MODDED_GAME_EXTRAS.QCDE_STANDARD_DEMONS_CHECK =
+[[
+    //Classic Doom
+    if (a is "QCArachnotron") return true;
+    if (a is "QCCacodemon") return true;
+    if (a is "QCDoomImp") return true;
+    if (a is "QCFatso") return true;
+    if (a is "QCRevenant") return true;
+
+    //Doom 4
+    if (a is "D4Arachnotron") return true;
+    if (a is "D4Cacodemon") return true;
+    if (a is "D4FatsoTech") return true;
+    if (a is "D4Revenant") return true;
+
+    //Quake 1
+    if (a is "QOgre") return true;
+    if (a is "QRocketOgre") return true;
+    if (a is "QScrag") return true;
+    if (a is "QShambler") return true;
+    if (a is "QRocketOgre") return true;
+]]
+
+MODDED_GAME_EXTRAS.QCDE_GREATER_DEMONS_CHECK =
+[[
+    //Classic Doom
+    if (a is "QCArchvile") return true;
+    if (a is "QCBaronOfHell") return true;
+    if (a is "QCCyberdemon") return true;
+    if (a is "QCHellKnight") return true;
+    if (a is "QCPainElemental") return true;
+    if (a is "QCSpiderMastermind") return true;
+
+    //Doom 4
+    if (a is "D4BaronOfHell") return true;
+    if (a is "D4Cyberdemon") return true;
+    if (a is "D4Harvester") return true;
+    if (a is "D4HellKnight") return true;
+    if (a is "D4PainElemental") return true;
+    if (a is "D4SpiderMastermind") return true;
+
+    //Quake 1
+    if (a is "QDeathKnight") return true;
+    if (a is "QKnight") return true;
+    if (a is "QIaldagorth") return true;
+    if (a is "QNgyrKorath") return true;
+    if (a is "QSilverKnight") return true;
+    if (a is "QWrath") return true;
+
+    //Quake 2
+    if (a is "Q2JorgMakron") return true;
+    if (a is "Q2PrototypeContainer") return true;
+    if (a is "Q2Tank") return true;
+    if (a is "Q2TankBoss") return true;
+    if (a is "Q2TankCommander") return true;
+
+    //Quake 4
+    if (a is "Q4Harvester") return true;
+    if (a is "Q4NetworkGuardian") return true;
+    if (a is "Q4StreamProtector") return true;
+    if (a is "Q4StroggHover") return true;
+    if (a is "Q4StreamProtector") return true;
+]]
+
+
 function MODDED_GAME_EXTRAS.generate_custom_actor_names(mode)
   local actor_name_script = ""
 
@@ -654,6 +800,11 @@ function MODDED_GAME_EXTRAS.generate_custom_actor_names(mode)
     actor_name_script = string.gsub( actor_name_script, "LDEMONS_COMPAT_CHECKS", "\n" .. MODDED_GAME_EXTRAS.PB_LESSER_DEMONS_CHECK)
     actor_name_script = string.gsub( actor_name_script, "SDEMONS_COMPAT_CHECKS", "\n" .. MODDED_GAME_EXTRAS.PB_STANDARD_DEMONS_CHECK)
     actor_name_script = string.gsub( actor_name_script, "GDEMONS_COMPAT_CHECKS", "\n" .. MODDED_GAME_EXTRAS.PB_GREATER_DEMONS_CHECK)
+  elseif mode == "zs_qcde" then
+    actor_name_script = string.gsub( actor_name_script, "HUMAN_COMPAT_CHECKS", "\n" .. MODDED_GAME_EXTRAS.QCDE_HUMAN_CHECK)
+    actor_name_script = string.gsub( actor_name_script, "LDEMONS_COMPAT_CHECKS", "\n" .. MODDED_GAME_EXTRAS.QCDE_LESSER_DEMONS_CHECK)
+    actor_name_script = string.gsub( actor_name_script, "SDEMONS_COMPAT_CHECKS", "\n" .. MODDED_GAME_EXTRAS.QCDE_STANDARD_DEMONS_CHECK)
+    actor_name_script = string.gsub( actor_name_script, "GDEMONS_COMPAT_CHECKS", "\n" .. MODDED_GAME_EXTRAS.QCDE_GREATER_DEMONS_CHECK)
   elseif mode == "zs" then
     actor_name_script = string.gsub( actor_name_script, "HUMAN_COMPAT_CHECKS", " ")
     actor_name_script = string.gsub( actor_name_script, "LDEMONS_COMPAT_CHECKS", " ")
