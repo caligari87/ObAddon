@@ -283,3 +283,28 @@ PREFABS.Wall_wide_dark_windows_with_door =
     SPCDOOR2 = 25
   }
 }
+
+PREFABS.Wall_holo_marquee =
+{
+  template = "Wall_double_dark_windows"
+  map = "MAP10"
+
+  engine = "zdoom"
+
+  uses_epic_textures = true
+
+  prob = 10
+
+  on_scenics = "never"
+
+  deep = 48
+
+  z_fit = "top"
+
+  tex_COMPBLUE =
+  {
+    COMPBLUE = 50
+    COMPGREN = 50
+    COMPRED = 50
+  }
+}
