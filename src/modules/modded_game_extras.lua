@@ -21,6 +21,7 @@ MODDED_GAME_EXTRAS.ACTOR_NAME_GEN_CHOICES =
   "zs",      _("ZScript"),
   "zs_pb",   _("ZScript - Project Brutality"),
   "zs_qcde", _("ZScript - Quake Champions: Doom Edition"),
+  "zs_d4t",  _("ZScript - Death Foretold"),
   "none",    _("NONE"),
 }
 
@@ -823,6 +824,42 @@ MODDED_GAME_EXTRAS.QCDE_GREATER_DEMONS_CHECK =
     if (a is "HrtcWraith") return true;
 ]]
 
+-- D4T addons
+
+MODDED_GAME_EXTRAS.D4T_HUMAN_CHECK =
+[[
+  if (a is "D4Zombieman") return true;
+  if (a is "D4Unwilling") return true;
+  if (a is "D4ShotgunGuy") return true;
+  if (a is "D4PossessedSecurity") return true;
+  if (a is "D4HellRazer") return true;
+]]
+
+MODDED_GAME_EXTRAS.D4T_LESSER_DEMONS_CHECK =
+[[
+  if (a is "D4DoomImp") return true;
+  if (a is "D4Demon") return true;
+]]
+
+MODDED_GAME_EXTRAS.D4T_STANDARD_DEMONS_CHECK =
+[[
+  if (a is "D4Arachnotron") return true;
+  if (a is "D4Cacodemon") return true;
+  if (a is "D4FatsoTech") return true;
+  if (a is "D4Prowler") return true;
+  if (a is "D4Revenant") return true;
+]]
+
+MODDED_GAME_EXTRAS.D4T_GREATER_DEMONS_CHECK =
+[[
+  if (a is "D4SpiderMastermind") return true;
+  if (a is "D4Cyberdemon") return true;
+  if (a is "D4Archvile") return true;
+  if (a is "D4HellKnight") return true;
+  if (a is "D4BaronOfHell") return true;
+  if (a is "D4Harvester") return true;
+]]
+
 
 function MODDED_GAME_EXTRAS.generate_custom_actor_names(mode)
   local actor_name_script = ""
@@ -897,6 +934,11 @@ function MODDED_GAME_EXTRAS.generate_custom_actor_names(mode)
     actor_name_script = string.gsub( actor_name_script, "LDEMONS_COMPAT_CHECKS", "\n" .. MODDED_GAME_EXTRAS.QCDE_LESSER_DEMONS_CHECK)
     actor_name_script = string.gsub( actor_name_script, "SDEMONS_COMPAT_CHECKS", "\n" .. MODDED_GAME_EXTRAS.QCDE_STANDARD_DEMONS_CHECK)
     actor_name_script = string.gsub( actor_name_script, "GDEMONS_COMPAT_CHECKS", "\n" .. MODDED_GAME_EXTRAS.QCDE_GREATER_DEMONS_CHECK)
+  elseif mode == "zs_d4t" then
+    actor_name_script = string.gsub( actor_name_script, "HUMAN_COMPAT_CHECKS", "\n" .. MODDED_GAME_EXTRAS.D4T_HUMAN_CHECK)
+    actor_name_script = string.gsub( actor_name_script, "LDEMONS_COMPAT_CHECKS", "\n" .. MODDED_GAME_EXTRAS.D4T_LESSER_DEMONS_CHECK)
+    actor_name_script = string.gsub( actor_name_script, "SDEMONS_COMPAT_CHECKS", "\n" .. MODDED_GAME_EXTRAS.D4T_STANDARD_DEMONS_CHECK)
+    actor_name_script = string.gsub( actor_name_script, "GDEMONS_COMPAT_CHECKS", "\n" .. MODDED_GAME_EXTRAS.D4T_GREATER_DEMONS_CHECK)
   elseif mode == "zs" then
     actor_name_script = string.gsub( actor_name_script, "HUMAN_COMPAT_CHECKS", " ")
     actor_name_script = string.gsub( actor_name_script, "LDEMONS_COMPAT_CHECKS", " ")
