@@ -4,7 +4,7 @@ PREFABS.Wall_tech_outdoor_caution_strip = --#
   map    = "MAP01"
 
   prob   = 200
-  skip_prob = 91.92
+  skip_prob = 92.39
 
   env   = "!building"
   theme = "tech"
@@ -186,4 +186,17 @@ PREFABS.Wall_tech_hadleys_hope_sort_of_wall = --#
   z_fit = "bottom"
 
   bound_z2 = 192
+}
+
+PREFABS.Wall_tech_overhanging_lights = --#
+{
+  template = "Wall_tech_outdoor_caution_strip"
+
+  map = "MAP12"
+
+  deep = 64
+
+  engine = "zdoom"
+
+  z_fit = "top"
 }
