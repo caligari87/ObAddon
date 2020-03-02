@@ -7,7 +7,7 @@ PREFABS.Wall_hell_stone_brace = --#
   theme = "hell"
   env = "outdoor"
 
-  skip_prob = 91.92
+  skip_prob = 92.39
 
   where  = "edge"
   height = 128
@@ -247,6 +247,33 @@ PREFABS.Wall_hell_wooden_palisades = --#
     WOOD8 = 5
     WOOD9 = 5
   }
+
+  z_fit = "top"
+}
+
+PREFABS.Wall_gothic_flying_alcoves = --#
+{
+  template = "Wall_hell_stone_brace"
+  map = "MAP12"
+
+  deep = 64
+
+  z_fit = "top"
+}
+
+
+PREFABS.Wall_gothic_flying_alcoves_EPIC =
+{
+  template = "Wall_hell_stone_brace"
+  map = "MAP12"
+
+  deep = 64
+
+  replaces = "Wall_gothic_flying_alcoves"
+
+  uses_epic_textures = true
+
+  tex_MIDBRN1 ="MIDWIND7"
 
   z_fit = "top"
 }
