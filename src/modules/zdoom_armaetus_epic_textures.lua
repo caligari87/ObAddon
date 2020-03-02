@@ -968,6 +968,8 @@ OB_MODULES["armaetus_epic_textures"] =
   side = "left"
   priority = 70
 
+  engine = { zdoom=1, gzdoom=1, skulltag=1 }
+
   game = "doomish"
 
   hooks =
