@@ -4,7 +4,7 @@ PREFABS.Wall_tech_outdoor_caution_strip = --#
   map    = "MAP01"
 
   prob   = 200
-  skip_prob = 92.39
+  skip_prob = 92.81
 
   env   = "!building"
   theme = "tech"
@@ -199,4 +199,54 @@ PREFABS.Wall_tech_overhanging_lights = --#
   engine = "zdoom"
 
   z_fit = "top"
+}
+
+PREFABS.Wall_outdoor_shiny_silver_overhang = --#
+{
+  template = "Wall_tech_outdoor_caution_strip"
+
+  map = "MAP13"
+
+  height = 160
+  deep = 80
+
+  tex_GRAYMET4 = "GRAY7"
+  tex_GRAYMET3 = "METAL2"
+  tex_SHAWN5 = "GRAY5"
+  tex_MIDSPAC5 = "MIDSPACE"
+  tex_COLLITE3 = "LITEBLU4"
+
+  z_fit = "bottom"
+
+  bound_z2 = 160
+}
+
+PREFABS.Wall_outdoor_shiny_silver_overhang_EPIC =
+{
+  template = "Wall_tech_outdoor_caution_strip"
+
+  map = "MAP13"
+
+  uses_epic_textures = true
+  replaces = "Wall_outdoor_shiny_silver_overhang"
+
+  skip_prob = 0
+  prob = 1000000
+
+  height = 160
+  deep = 80
+
+  tex_GRAYMET4 =
+  {
+    GRAYMET4 = 50
+    GRAYMET2 = 8
+  }
+  tex_GRAYMET3 = "GRAYMET3"
+  tex_SHAWN5 = "SHAWN5"
+  tex_MIDSPAC5 = "MIDSPAC5"
+  tex_COLLITE3 = "COLLITE3"
+
+  z_fit = "bottom"
+
+  bound_z2 = 160
 }
