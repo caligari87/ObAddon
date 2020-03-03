@@ -303,6 +303,15 @@ function Render_edge(E)
         end
       end
 
+      -- never use anything other than the plain wall on stair chunks
+      -- this is to prevent oddities like ZDoom slopes from being cut-off
+      if E.S.chunk then
+        if E.S.chunk.kind == "stair" and not E.S.area.dead_end then
+          reqs.flat = true
+          reqs.scenic = true
+        end
+      end
+
       -- check for wall pieces that require solid depth behind
       -- i.e. fake doors and windows
       reqs.has_solid_back = true
@@ -350,14 +359,6 @@ function Render_edge(E)
     if not def then
       reqs.group = nil
       def = Fab_pick(reqs)
-    end
-
-    -- never use anything other than the plain wall on stair chunks
-    -- this is to prevent oddities like ZDoom slopes from being cut-off
-    if E.S.chunk then
-      if E.S.chunk.kind == "stair" and not E.S.area.dead_end then
-        def = PREFABS["Wall_plain"]
-      end
     end
 
     return def
@@ -492,7 +493,14 @@ function Render_edge(E)
       T = Trans.edge_transform(E, z, 0, 0, def.deep, 0, false)
     end
 
-    Trans.set_fitted_z(T, A.floor_h, A.ceil_h)
+    local f_floor_h = A.floor_h
+    if A.chunk then
+      if A.chunk.kind == "stair" then
+        f_floor_h = A.chunk.dest_area.floor_h
+      end
+    end
+
+    Trans.set_fitted_z(T, f_floor_h, A.ceil_h)
 
     Fabricate(A.room, def, T, { skin })
   end
