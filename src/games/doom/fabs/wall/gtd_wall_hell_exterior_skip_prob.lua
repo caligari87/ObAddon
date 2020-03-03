@@ -7,7 +7,7 @@ PREFABS.Wall_hell_stone_brace = --#
   theme = "hell"
   env = "outdoor"
 
-  skip_prob = 92.39
+  skip_prob = 92.81
 
   where  = "edge"
   height = 128
@@ -269,6 +269,32 @@ PREFABS.Wall_gothic_flying_alcoves_EPIC =
   tex_MIDBRN1 ="MIDWIND7"
 
   z_fit = "top"
+}
+
+PREFABS.Wall_torch_fenced = --#
+{
+  template = "Wall_hell_stone_brace"
+  map = "MAP13"
+
+  z_fit = { 28,32 }
+
+  tex_FENCE4 = "ZZWOLF10"
+  tex_METL02 = "METAL"
+}
+
+PREFABS.Wall_torch_fenced_EPIC =
+{
+  template = "Wall_hell_stone_brace"
+  map = "MAP13"
+
+  replaces = "Wall_torch_fenced"
+
+  uses_epic_textures = true
+
+  tex_FENCE4 = "FENCE4"
+  tex_METL02 = "METL02"
+
+  z_fit = { 28,32 }
 }
 
 -- references to some older fabs [2]

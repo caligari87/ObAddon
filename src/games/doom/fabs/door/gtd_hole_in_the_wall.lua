@@ -48,6 +48,8 @@ PREFABS.Arch_hole_in_the_wall_red_key =
   file = "door/gtd_hole_in_the_wall.wad"
   map = "MAP04"
 
+  theme = "!hell"
+
   prob = 35
   where = "edge"
 
