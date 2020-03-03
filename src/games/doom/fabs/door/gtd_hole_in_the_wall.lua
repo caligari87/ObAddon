@@ -40,3 +40,56 @@ PREFABS.Arch_hole_in_the_wall_3x =
 
   map = "MAP03"
 }
+
+-- key-locked version with a sort of portable force field
+
+PREFABS.Arch_hole_in_the_wall_red_key =
+{
+  file = "door/gtd_hole_in_the_wall.wad"
+  map = "MAP04"
+
+  prob = 35
+  where = "edge"
+
+  engine = "zdoom"
+
+  uses_epic_textures = true
+
+  key = "k_red"
+
+  seed_w = 2
+
+  deep = 32
+  over = 32
+
+  x_fit = "frame"
+
+  bound_z1 = 0
+  bound_z2 = 128
+}
+
+PREFABS.Arch_hole_in_the_wall_blue_key =
+{
+  template = "Arch_hole_in_the_wall_red_key"
+
+  key = "k_blue"
+
+  tex_DOORRED = "DOORBLU"
+  tex_RDWAL01 = "COLLITE3"
+  flat_FLOOR1_6 = "FLAT14"
+
+  line_33 = 32
+}
+
+PREFABS.Arch_hole_in_the_wall_yellow_key =
+{
+  template = "Arch_hole_in_the_wall_red_key"
+
+  key = "k_yel"
+
+  tex_DOORRED = "DOORYEL"
+  tex_RDWAL01 = "COLLITE2"
+  flat_FLOOR1_6 = "ORANFLOR"
+
+  line_33 = 34
+}
