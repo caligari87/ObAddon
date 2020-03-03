@@ -231,21 +231,14 @@ PREFABS.Wall_hell_wooden_palisades = --#
     WOODMET3 = 10
     WOODMET4 = 10
   }
-  tex_WOOD6 =
+  tex_WOOD10 =
   {
     WOOD5 = 5
     WOOD6 = 5
     WOOD7 = 5
     WOOD8 = 5
     WOOD9 = 5
-  }
-  tex_WOOD7 =
-  {
-    WOOD5 = 5
-    WOOD6 = 5
-    WOOD7 = 5
-    WOOD8 = 5
-    WOOD9 = 5
+    WOOD10 = 5
   }
 
   z_fit = "top"
