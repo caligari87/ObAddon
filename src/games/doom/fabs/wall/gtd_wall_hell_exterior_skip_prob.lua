@@ -7,7 +7,7 @@ PREFABS.Wall_hell_stone_brace = --#
   theme = "hell"
   env = "outdoor"
 
-  skip_prob = 92.81
+  skip_prob = 93.17
 
   where  = "edge"
   height = 128
@@ -295,6 +295,53 @@ PREFABS.Wall_torch_fenced_EPIC =
   tex_METL02 = "METL02"
 
   z_fit = { 28,32 }
+}
+
+PREFABS.Wall_hell_outdoor_dark_banners = --#
+{
+  template = "Wall_hell_stone_brace"
+  map = "MAP14"
+
+  height = 160
+  deep = 56
+
+  z_fit = { 16,24 }
+
+  tex_METL03 = "METAL"
+  tex_EVILFAC3 =
+  {
+    GSTGARG = 1
+    GSTLION = 1
+    GSTSATYR = 1
+  }
+
+  bound_z2 = 160
+}
+
+PREFABS.Wall_hell_outdoor_dark_banners_EPIC =
+{
+  template = "Wall_hell_stone_brace"
+  map = "MAP14"
+
+  replaces = "Wall_hell_outdoor_dark_banners"
+  uses_epic_textures = true
+
+  height = 160
+  deep = 56
+
+  tex_METL03 = "METL03"
+  tex_EVILFAC3 =
+  {
+    EVILFAC3 = 1
+    GOTH50 = 1
+    RUSTWAL3 = 1
+    RUSTWAL4 = 1
+    SW1QUAK = 1
+  }
+
+  z_fit = { 16,24 }
+
+  bound_z2 = 160
 }
 
 -- references to some older fabs [2]

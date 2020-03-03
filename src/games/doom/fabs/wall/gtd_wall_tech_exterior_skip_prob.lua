@@ -105,6 +105,12 @@ PREFABS.Wall_tech_outdoor_giant_UAC_sign = --#
 
   z_fit = "bottom"
 
+  tex_SHAWN1 =
+  {
+    SHAWN1 = 1
+    SHAWN2 = 3
+  }
+
   sector_1 = { [0]=80, [1]=15 }
 }
 
