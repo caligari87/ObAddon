@@ -230,9 +230,6 @@ PREFABS.Wall_outdoor_shiny_silver_overhang_EPIC =
   uses_epic_textures = true
   replaces = "Wall_outdoor_shiny_silver_overhang"
 
-  skip_prob = 0
-  prob = 1000000
-
   height = 160
   deep = 80
 
