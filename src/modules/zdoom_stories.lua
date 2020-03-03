@@ -2,12 +2,12 @@
 --  MODULE: ZDoom Story Tables
 ----------------------------------------------------------------
 --
---  Copyright (C) 2019 MsrSgtShooterPerson
---  Copyright (C) 2019 Armaetus
---  Copyright (C) 2019 Tapwave
---  Copyright (C) 2019 Simon-v
---  Copyright (C) 2019 EpicTyphlosion
---  Copyright (C) 2019 Beed28
+--  Copyright (C) 2020 MsrSgtShooterPerson
+--  Copyright (C) 2020 Armaetus
+--  Copyright (C) 2020 Tapwave
+--  Copyright (C) 2020 Simon-v
+--  Copyright (C) 2020 EpicTyphlosion
+--  Copyright (C) 2020 Beed28
 --
 --  This program is free software; you can redistribute it and/or
 --  modify it under the terms of the GNU General Public License
@@ -1658,8 +1658,10 @@ ZDOOM_STORIES.EVIL_TITLES =
   Atrocious=5,
   Auger=5,
   Avaricious=5,
+  Avulsor=5, -- See definition: "Avulsion"
   Axe=5,
   Baleful=5,
+  Bandit=5,
   Banished=5, --
   Banisher=5, -- Don't ever let these two guys in a room
   Bannerlord=5,
@@ -1681,6 +1683,7 @@ ZDOOM_STORIES.EVIL_TITLES =
   Breaker=5,
   Brutal=5,
   Brute=5,
+  Burned=5,
   Butcher=5,
   Caged=5,
   Calamity=5,
@@ -1719,6 +1722,7 @@ ZDOOM_STORIES.EVIL_TITLES =
   Deceiver=5,
   Defiler=5,
   Depraved=5,
+  Desanticified=5,
   Descendent=5,
   Despicable=5,
   Despoiler=5,
@@ -1743,6 +1747,7 @@ ZDOOM_STORIES.EVIL_TITLES =
   Dreadful=5,
   Earthshatterer=5,
   Elder=5,
+  Eldritch=5,
   Empyrean=5,
   Enslaver=5,
   Eternal=5,
@@ -1873,10 +1878,12 @@ ZDOOM_STORIES.EVIL_TITLES =
   Overlord=5,
   Overseer=5,
   Panderer=5,
+  Perceptive=5,
   Perfidious=5,
   Perilous=5,
   Perjurer=5,
   Persecutor=5,
+  Perverse=5,
   Pervert=5,
   Pestilent=5,
   Pillager=5,
@@ -1897,6 +1904,7 @@ ZDOOM_STORIES.EVIL_TITLES =
   Rash=5,
   Ravager=5,
   Raver=5,
+  Ravenous=5,
   Reaper=5,
   Reaver=5,
   Recreant=5,
@@ -1964,6 +1972,7 @@ ZDOOM_STORIES.EVIL_TITLES =
   Thaumaturgist=5,
   Therianthropist=5,
   Theurgist=5,
+  Thirsty=5,
   Thrall=5,
   Thunderhead=5,
   Tormentor=5,
@@ -2028,15 +2037,18 @@ ZDOOM_STORIES.EVIL_TITLES =
   ["Champion of Hell"]=5,
   ["Chant of Death"]=5,
   ["Chosen of Death"]=5,
+  ["Clawhammer"]=5, -- Silent Hill reference
   ["Conqueror of the Planes"]=5,
   ["Corpse-eater"]=5,
   ["Corpse-grinder"]=5,
   ["Dark Templar"]=5,
   ["Dark Wanderer"]=5,
+  ["Dark Sacrifice"]=5,
+  ["Demon Tamer"]=5,
   ["Descendant of Cerberon"]=5, --it's a reference to the Quake ][ song, not Cerberus
   ["Destroyer of Worlds"]=5,
   ["Dictator of Edicts"]=5,
-  ["Dooting Skeltal"]=5,
+  ["Dooting Skeletal"]=5,
   ["Dungeon Keeper"]=5,
   ["Dungeon Master"]=5,
   ["Eater of Souls"]=5,
@@ -2052,6 +2064,7 @@ ZDOOM_STORIES.EVIL_TITLES =
   ["Grand Vizier"]=5,
   ["Gremlin Keeper"]=5,
   ["Hand of Darkness"]=5,
+  ["Harvester of Souls"]=5,
   ["Head-Chopper"]=5,
   ["Hell's Armourer"]=5,
   ["Hell's Ascended"]=5,
@@ -2077,6 +2090,7 @@ ZDOOM_STORIES.EVIL_TITLES =
   ["Master of Discord"]=5,
   ["Maw of Hell"]=5,
   ["Messenger of Omens"]=5,
+  ["Mind Number"]=5,
   ["Monk of Depravity"]=5,
   ["Night's Reaper"]=5,
   ["Old Guard"]=5,
@@ -2093,6 +2107,7 @@ ZDOOM_STORIES.EVIL_TITLES =
   ["Shadow-Blade"]=5,
   ["Shield of the Beast"]=5,
   ["Sigil of Midnight"]=5,
+  ["Sinful Appeaser"]=5,
   ["Siren of War"]=5,
   ["Spear of the Infernals"]=5,
   ["Spine-ripper"]=5,
@@ -2100,8 +2115,10 @@ ZDOOM_STORIES.EVIL_TITLES =
   ["Sun-blotter"]=5,
   ["Sword of the Underdark"]=5,
   ["Throne Defender"]=5,
+  ["Twister of Souls"]=5,
   ["Vizier of Chaos"]=5,
   ["Whore of Babylon"]=5,
+  ["World Ender"]=5,
   ["Woe to Man"]=5,
 }
 
@@ -2297,6 +2314,10 @@ ZDOOM_STORIES.QUIT_MESSAGES =
   [[ObAddon demands the purging of more demons!]],
   [[The will to survive is as long as you do not quit out of the game.]],
   [[_RAND_DEMON needs another hobby than to torture your dumb ass from quitting.]],
+  [[Hey dipshit, we're not done hunting hellspawn! Turn your attention back to the game!]],
+  [[Is this really what it has come to?]],
+  [[That's right, abandon your fellow marines in a time of need...]],
+  [[RAND_CONTRIBUTOR has decided you are unworthy of your skills here.]],
 
   -- hardcore philosophy
   [[Are you quitting because you realized no matter how much hellspawn you mow down, Oblige will just give you more?]],
@@ -2328,6 +2349,7 @@ ZDOOM_STORIES.QUIT_MESSAGES =
   [[If you are reporting an error and already closed OBLIGE, do NOT reopen the program as it will wipe the LOGS.TXT file clean! Open it via a text editor.]],
   [[Map sizes too big? Reduce the Map Size or Upper Bound size if using Mix It Up.]],
   [[Gargantuan or Transcendent maps looking like Minecraft Far Lands? Please keep Auto Detail on, not much else can be done about that, stupid Doom Engine limits.]],
+  [[Too hard? Turn down Quantity and/or Strength. Same applies to too easy: Turn Quantity up.]],
 
   -- important facts
   [[By exiting, you are agreeing to subscribe to Cat Facts.]],
@@ -2338,6 +2360,7 @@ ZDOOM_STORIES.QUIT_MESSAGES =
   [[Cacos are red, their insides are blue. They wish to make a meal out of you.]],
   [[Having a boyfriend or girlfriend is important, but killings demons is importanter.]], -- E231
   [[To not die, keep your health points above zero.]], --E231
+  [[Having trouble with some of the maps of mapset as a whole? Git gud.]],
 
   -- other important facts, just facts no silly stuff
   [[Did you know Carmack and Hall in Sept 1990, produced a replica of Super Mario Bros 3's first level and using Romero's Dangerous Dave character in place of Mario?]],
