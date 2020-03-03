@@ -597,7 +597,7 @@ MODDED_GAME_EXTRAS.QCDE_HUMAN_CHECK =
     if (a is "QCShotgunGuy") return true;
     if (a is "QCZombieman") return true;
 
-    // Doom 3
+    /* Doom 3
     if (a is "D3ZSecPistol") return true;
     if (a is "D3ZSecShotgunner") return true;
     if (a is "D3ZSecSMG") return true;
@@ -606,7 +606,7 @@ MODDED_GAME_EXTRAS.QCDE_HUMAN_CHECK =
     if (a is "D3ZSpecOpsMachinegunner") return true;
     if (a is "D3ZSpecOpsShotgunner") return true;
     if (a is "D3ZSpecOpsRiotShield") return true;
-    if (a is "D3ChainsawZombie") return true;
+    if (a is "D3ChainsawZombie") return true;*/
 
     // Doom 4
     if (a is "D4HellRazer") return true;
@@ -664,14 +664,14 @@ MODDED_GAME_EXTRAS.QCDE_HUMAN_CHECK =
     if (a is "Q4TeleportDropper") return true;
     if (a is "Q4Voss") return true;
 
-    //Half-Life
+    /*Half-Life
     if (a is "HLBarney") return true;
     if (a is "HLZombie") return true;
     if (a is "HLZombieMoan") return true;
     if (a is "HLGonome") return true;
     if (a is "HLGruntM16") return true;
 
-    //Half-life 2
+    Half-life 2
     if (a is "HL2Barney") return true;
     if (a is "HL2Combine") return true;
     if (a is "HL2FastZombie") return true;
@@ -679,7 +679,7 @@ MODDED_GAME_EXTRAS.QCDE_HUMAN_CHECK =
     if (a is "HL2PoisonZombie") return true;
     if (a is "HL2CombineElite") return true;
     if (a is "HL2Zombie") return true;
-    if (a is "HL2Zombine") return true;
+    if (a is "HL2Zombine") return true;*/
 ]]
 
 MODDED_GAME_EXTRAS.QCDE_LESSER_DEMONS_CHECK =
@@ -688,11 +688,11 @@ MODDED_GAME_EXTRAS.QCDE_LESSER_DEMONS_CHECK =
     if (a is "QCDemon") return true;
     if (a is "QCDoomImp") return true;
 
-    //Doom 3
+    /* Doom 3
     if (a is "D3Wraith") return true;
     if (a is "D3DoomImp") return true;
     if (a is "D3DoomImp") return true;
-    if (a is "D3Vulgar") return true;
+    if (a is "D3Vulgar") return true;*/
 
     //Doom 4
     if (a is "D4Demon") return true;
@@ -703,12 +703,14 @@ MODDED_GAME_EXTRAS.QCDE_LESSER_DEMONS_CHECK =
     //Quake 1
     if (a is "QFiend") return true;
 
-    //Half-life
+    /* Half-life
     if (a is "HLPitDrone") return true;
 
-    //Heretic
+    Heretic
     if (a is "HrtcWelph") return true;
-    if (a is "HrtcImp") return true;
+    if (a is "HrtcImp") return true;*/
+
+    if (a is "QCDE_MonsterSmall") return true;
 ]]
 
 MODDED_GAME_EXTRAS.QCDE_STANDARD_DEMONS_CHECK =
@@ -719,10 +721,10 @@ MODDED_GAME_EXTRAS.QCDE_STANDARD_DEMONS_CHECK =
     if (a is "QCFatso") return true;
     if (a is "QCRevenant") return true;
 
-    //Doom 3
+    /*Doom 3
     if (a is "D3Revenant") return true;
     if (a is "D3Mancubus") return true;
-    if (a is "D3Cacodemon") return true;
+    if (a is "D3Cacodemon") return true;*/
 
     //Doom 4
     if (a is "D4Arachnotron") return true;
@@ -738,14 +740,16 @@ MODDED_GAME_EXTRAS.QCDE_STANDARD_DEMONS_CHECK =
     if (a is "QRocketOgre") return true;
     if (a is "QVore") return true;
 
-    //Half-Life
+    /*Half-Life
     if (a is "HLStrooper") return true;
     if (a is "HLHornetGrunt") return true;
 
-    //Heretic
+    Heretic
     if (a is "HrtcClink") return true;
     if (a is "HrtcMummy") return true;
-    if (a is "HrtcSnake") return true;
+    if (a is "HrtcSnake") return true;*/
+
+    if (a is "QCDE_MonsterMedium") return true;
 ]]
 
 MODDED_GAME_EXTRAS.QCDE_GREATER_DEMONS_CHECK =
@@ -758,7 +762,7 @@ MODDED_GAME_EXTRAS.QCDE_GREATER_DEMONS_CHECK =
     if (a is "QCPainElemental") return true;
     if (a is "QCSpiderMastermind") return true;
 
-    //Doom 3
+    /*Doom 3
     if (a is "D3HellKnight") return true;
     if (a is "D3Bruiser") return true;
     if (a is "D3PainElemental") return true;
@@ -767,7 +771,7 @@ MODDED_GAME_EXTRAS.QCDE_GREATER_DEMONS_CHECK =
     if (a is "D3CyberDemon") return true;
     if (a is "D3SpiderMastermind") return true;
     if (a is "D3HellTimeHunter") return true;
-    if (a is "D3Sabaoth") return true;
+    if (a is "D3Sabaoth") return true;*/
 
     //Doom 4
     if (a is "D4BaronOfHell") return true;
@@ -799,7 +803,7 @@ MODDED_GAME_EXTRAS.QCDE_GREATER_DEMONS_CHECK =
     if (a is "Q4StroggHover") return true;
     if (a is "Q4StreamProtector") return true;
 
-    //Half-life
+    /*Half-life
     if (a is "HLController") return true;
     if (a is "HLVoltigore") return true;
     if (a is "HLGargantua") return true;
@@ -809,7 +813,7 @@ MODDED_GAME_EXTRAS.QCDE_GREATER_DEMONS_CHECK =
     if (a is "HLGonarch") return true;
     if (a is "HLNihilant") return true;
 
-    //Heretic
+    Heretic
     if (a is "HrtcBeast") return true;
     if (a is "HrtcDSparil") return true;
     if (a is "HrtcSorcerer2") return true;
@@ -821,7 +825,9 @@ MODDED_GAME_EXTRAS.QCDE_GREATER_DEMONS_CHECK =
     if (a is "HrtcKnightGhost") return true;
     if (a is "HrtcImpLeader") return true;
     if (a is "HrtcWizard") return true;
-    if (a is "HrtcWraith") return true;
+    if (a is "HrtcWraith") return true;*/
+
+    if (a is "QCDE_MonsterBig") return true;
 ]]
 
 -- D4T addons
@@ -846,6 +852,7 @@ MODDED_GAME_EXTRAS.D4T_STANDARD_DEMONS_CHECK =
   if (a is "D4Arachnotron") return true;
   if (a is "D4Cacodemon") return true;
   if (a is "D4FatsoTech") return true;
+  if (a is "D4FatsoHell") return true;
   if (a is "D4Prowler") return true;
   if (a is "D4Revenant") return true;
 ]]
