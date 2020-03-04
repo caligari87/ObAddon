@@ -4,7 +4,7 @@
 --
 --  Copyright (C) 2016-2017 Andrew Apted
 --  Copyright (C) 2019 Armaetus
---  Copyright (C) 2019 MsrSgtShooterPerson
+--  Copyright (C) 2019-2020 MsrSgtShooterPerson
 --
 --  This program is free software; you can redistribute it and/or
 --  modify it under the terms of the GNU General Public License
@@ -22,44 +22,44 @@ UI_MONS = { }
 
 UI_MONS.QUANTITIES =
 {
-    "none",   _("[0] NONE"),
-    "rarest", _("[0.15] Minimal"),
-    "rarer",  _("[0.35] Sporadic"),
-    "rare",   _("[0.7] Less"),
-    "scarce", _("[1.0] id software"),
-    "few",    _("[1.3] Sigil"),
-    "less",   _("[1.5] Evilution"),
-    "normal", _("[2.0] Plutonia"),
-    "more",   _("[2.5] Valiant"),
-    "heaps",  _("[3.0] Ancient Aliens"),
-    "legions",_("[3.5] Hell Revealed 2"),
-    "insane", _("[4.0] Sunlust"),
-    "deranged", _("[4.5] Combat Shock 2"),
-    "nuts",   _("[5.0] Swift Death"),
-    "chaotic", _("[5.5] Sunder"),
-    "unhinged", _("[6.0] No Chance"),
+    "none",      _("[0] NONE"),
+    "rarest",    _("[0.15] Minimal"),
+    "rarer",     _("[0.35] Sporadic"),
+    "rare",      _("[0.7] Less"),
+    "scarce",    _("[1.0] id software"),
+    "few",       _("[1.3] Sigil"),
+    "less",      _("[1.5] Evilution"),
+    "normal",    _("[2.0] Plutonia"),
+    "more",      _("[2.5] Valiant"),
+    "heaps",     _("[3.0] Ancient Aliens"),
+    "legions",   _("[3.5] Hell Revealed 2"),
+    "insane",    _("[4.0] Sunlust"),
+    "deranged",  _("[4.5] Combat Shock 2"),
+    "nuts",      _("[5.0] Swift Death"),
+    "chaotic",   _("[5.5] Sunder"),
+    "unhinged",  _("[6.0] No Chance"),
     "ludicrous", _("[6.66] Holy Hell"),
-    "mixed",  _("Mix It Up"),
-    "prog",   _("Progressive"),
+    "mixed",     _("Mix It Up"),
+    "prog",      _("Progressive"),
 }
 
 UI_MONS.MIX_QUANTITIES =
 {
-    "rarest", _("[0.15] Minimal"),
-    "rarer",  _("[0.35] Sporadic"),
-    "rare",   _("[0.7] Less"),
-    "scarce", _("[1.0] id software"),
-    "few",    _("[1.3] Sigil"),
-    "less",   _("[1.5] Evilution"),
-    "normal", _("[2.0] Plutonia"),
-    "more",   _("[2.5] Valiant"),
-    "heaps",  _("[3.0] Ancient Aliens"),
-    "legions",_("[3.5] Hell Revealed 2"),
-    "insane", _("[4.0] Sunlust"),
-    "deranged", _("[4.5] Combat Shock 2"),
-    "nuts",   _("[5.0] Swift Death"),
-    "chaotic", _("[5.5] Sunder"),
-    "unhinged", _("[6.0] No Chance"),
+    "rarest",    _("[0.15] Minimal"),
+    "rarer",     _("[0.35] Sporadic"),
+    "rare",      _("[0.7] Less"),
+    "scarce",    _("[1.0] id software"),
+    "few",       _("[1.3] Sigil"),
+    "less",      _("[1.5] Evilution"),
+    "normal",    _("[2.0] Plutonia"),
+    "more",      _("[2.5] Valiant"),
+    "heaps",     _("[3.0] Ancient Aliens"),
+    "legions",   _("[3.5] Hell Revealed 2"),
+    "insane",    _("[4.0] Sunlust"),
+    "deranged",  _("[4.5] Combat Shock 2"),
+    "nuts",      _("[5.0] Swift Death"),
+    "chaotic",   _("[5.5] Sunder"),
+    "unhinged",  _("[6.0] No Chance"),
     "ludicrous", _("[6.66] Holy Hell"),
 }
 
@@ -70,7 +70,7 @@ UI_MONS.STRENGTHS =
   "medium", _("[1] Average"),
   "harder", _("[1.3] Harder"),
   "tough",  _("[1.7] Tough"),
-  "fierce",  _("[2.5] Fierce"),
+  "fierce", _("[2.5] Fierce"),
   "crazy",  _("[12] CRAZY"),
 }
 
@@ -85,12 +85,12 @@ UI_MONS.BOSSES =
 UI_MONS.RAMPS =
 {
   "veryslow", _("Very Slow"),
-  "slow",    _("Slow"),
-  "medium",  _("Average"),
-  "fast",    _("Fast"),
+  "slow",     _("Slow"),
+  "medium",   _("Average"),
+  "fast",     _("Fast"),
   "veryfast", _("Very Fast"),
-  "extfast", _("Extremely Fast"),
-  "epi",     _("Episodic"),
+  "extfast",  _("Extremely Fast"),
+  "epi",      _("Episodic"),
 }
 
 UI_MONS.TRAP_STYLE =
@@ -117,8 +117,8 @@ UI_MONS.CAGE_STRENGTH =
 UI_MONS.SECRET_MONSTERS =
 {
   "yesyes", _("Yes - Full Strength"),
-  "yes", _("Yes - Weak"),
-  "no",  _("No"),
+  "yes",    _("Yes - Weak"),
+  "no",     _("No"),
 }
 
 UI_MONS.START_ROOM_MON_CHOICES =
