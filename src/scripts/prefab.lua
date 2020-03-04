@@ -186,6 +186,7 @@ function Fab_load_all_definitions()
     if PARAM["hd_cover_walls"] != "enable" then
       if def.is_hideous_destructor_fab == true then
         prob = 0
+        def.skip_prob = 100
       end
     end
 
@@ -193,6 +194,7 @@ function Fab_load_all_definitions()
     if not PARAM["epic_textures_activated"] then
       if def.uses_epic_textures then
         prob = 0
+        def.skip_prob = 100
       end
     end
 
