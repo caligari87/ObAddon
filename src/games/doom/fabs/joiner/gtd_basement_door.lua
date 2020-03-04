@@ -72,5 +72,20 @@ PREFABS.Joiner_gtd_basement_arched =
 
   prob = 150
 
+  tex_GSTSATYR =
+  {
+    GSTSATYR = 50
+    GSTLION = 50
+    GSTGARG = 50
+    MARBFAC4 = 50
+  }
+
+  thing_57 = -- lamp color change
+  {
+    [57]=50
+    [56]=50
+    [55]=50
+  }
+
   y_fit = { 16,56 , 136,168 }
 }
