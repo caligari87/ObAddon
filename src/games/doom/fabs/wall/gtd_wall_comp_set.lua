@@ -55,3 +55,83 @@ PREFABS.Wall_gtd_computer_diag_2 =
   template = "Wall_gtd_computer_diag_1"
   map      = "MAP05"
 }
+
+-- EPIC version using silver computers
+
+PREFABS.Wall_gtd_computer_silver_1 =
+{
+  template = "Wall_gtd_computer_wall_1"
+  map = "MAP02"
+
+  group = "gtd_computers_shawn"
+
+  tex_COMPTALL =
+  {
+    SHAWCOMP = 50
+    SILVCOMP = 50
+    CONSOLE4 = 50
+  }
+}
+
+PREFABS.Wall_gtd_computer_silver_diag_1 =
+{
+  template = "Wall_gtd_computer_diag_1"
+  map = "MAP04"
+
+  group = "gtd_computers_shawn"
+
+  tex_COMPTALL = "SHAWCOMP"
+}
+
+PREFABS.Wall_gtd_computer_silver_diag_2 =
+{
+  template = "Wall_gtd_computer_diag_1"
+  map = "MAP05"
+
+  group = "gtd_computers_shawn"
+
+  tex_COMPTALL = "SHAWCOMP"
+}
+
+-- EPIC versions using compstation textures
+
+PREFABS.Wall_gtd_computer_compsta_1 =
+{
+  template = "Wall_gtd_computer_wall_1"
+  map = "MAP02"
+
+  group = "gtd_computers_compsta"
+
+  tex_COMPTALL =
+  {
+    COMPSTA3 = 1
+    COMPSTA4 = 1
+    COMPSTA5 = 1
+    COMPSTA6 = 1
+    COMPSTA7 = 1
+    COMPSTA8 = 1
+    COMPSTA9 = 1
+    COMPSTAA = 1
+    COMPSTAB = 1
+  }
+}
+
+PREFABS.Wall_gtd_computer_compsta_diag_1 =
+{
+  template = "Wall_gtd_computer_diag_1"
+  map = "MAP04"
+
+  group = "gtd_computers_compsta"
+
+  tex_COMPTALL = "SHAWCOMP"
+}
+
+PREFABS.Wall_gtd_computer_compsta_diag_2 =
+{
+  template = "Wall_gtd_computer_diag_1"
+  map = "MAP05"
+
+  group = "gtd_computers_compsta"
+
+  tex_COMPTALL = "SHAWCOMP"
+}

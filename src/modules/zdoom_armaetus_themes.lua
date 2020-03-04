@@ -3129,6 +3129,8 @@ ARMAETUS_TECH_WALL_GROUPS =
   gtd_wall_vertical_light_2 = 8
   gtd_wall_vertical_light_3 = 8 -- 124
   gtd_wall_hydroponics = 15
+  gtd_computers_shawn = 15000
+  gtd_computers_compsta = 15000
 }
 
 ARMAETUS_URBAN_WALL_GROUPS =
@@ -3151,6 +3153,8 @@ ARMAETUS_URBAN_WALL_GROUPS =
   gtd_wall_vertical_light_2 = 2
   gtd_wall_vertical_light_3 = 2
   gtd_epic_craneo_paintings = 10 --63
+  gtd_computers_shawn = 2
+  gtd_computers_compsta = 2
 }
 
 ARMAETUS_HELL_WALL_GROUPS =

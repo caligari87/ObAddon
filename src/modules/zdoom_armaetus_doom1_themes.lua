@@ -2431,6 +2431,8 @@ ARMAETUS_DOOM1_TECH_WALL_GROUPS =
   gtd_wall_vertical_light_2 = 8
   gtd_wall_vertical_light_3 = 8
   gtd_wall_hydroponics = 15
+  gtd_computers_shawn = 10
+  gtd_computers_compsta = 10
 }
 
 ARMAETUS_DOOM1_DEIMOS_WALL_GROUPS =
@@ -2449,6 +2451,8 @@ ARMAETUS_DOOM1_DEIMOS_WALL_GROUPS =
   gtd_wall_vertical_light_1 = 8
   gtd_wall_vertical_light_2 = 8
   gtd_wall_vertical_light_3 = 8
+  gtd_computers_shawn = 10
+  gtd_computers_compsta = 10
 }
 
 ARMAETUS_DOOM1_HELL_WALL_GROUPS =
