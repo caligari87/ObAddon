@@ -3136,7 +3136,7 @@ ARMAETUS_URBAN_WALL_GROUPS =
   gtd_tall_glass_epic_orange = 2
   gtd_tall_glass_epic_red = 2
   gtd_tall_glass_epic_blue = 2
-  armaetus_glass_huge = 3
+  gtd_wall_churchy_glass = 1
   gtd_winglass_wall = 4
   gtd_collite_set_green = 1
   gtd_collite_set_orange = 1
@@ -3149,7 +3149,7 @@ ARMAETUS_URBAN_WALL_GROUPS =
   gtd_wall_vertical_light_1 = 2
   gtd_wall_vertical_light_2 = 2
   gtd_wall_vertical_light_3 = 2
-  gtd_epic_craneo_paintings = 10 --52
+  gtd_epic_craneo_paintings = 10 --63
 }
 
 ARMAETUS_HELL_WALL_GROUPS =
@@ -3158,7 +3158,7 @@ ARMAETUS_HELL_WALL_GROUPS =
   gtd_tall_glass_epic_orange = 15
   gtd_tall_glass_epic_red = 15
   gtd_tall_glass_epic_blue = 15
-  armaetus_glass_huge = 25
+  gtd_wall_churchy_glass = 30
   armaetus_catacomb_wall_set = 40
   armaetus_catacombs_brown = 40
   gtd_winglass_wall = 40

@@ -1,4 +1,4 @@
-PREFABS.Wall_armaetus_glass_huge =
+PREFABS.Wall_armaetus_glass_huge_red =
 {
   file   = "wall/armaetus_glass_wall_EPIC_set.wad"
   map    = "MAP01"
@@ -6,7 +6,7 @@ PREFABS.Wall_armaetus_glass_huge =
   prob   = 50
   env = "building"
 
-  group = "armaetus_glass_huge"
+  group = "gtd_tall_glass_epic_red"
 
   where  = "edge"
   deep   = 16
@@ -20,13 +20,13 @@ PREFABS.Wall_armaetus_glass_huge =
   tex_GLASS1 = "GLASS9"
 }
 
-PREFABS.Wall_armaetus_glass_huge_diag =
+PREFABS.Wall_armaetus_glass_huge_red_diag =
 {
   file   = "wall/armaetus_glass_wall_EPIC_set.wad"
   map    = "MAP02"
 
   prob   = 50
-  group = "armaetus_glass_huge"
+  group = "gtd_tall_glass_epic_red"
 
   where  = "diagonal"
 
@@ -40,31 +40,9 @@ PREFABS.Wall_armaetus_glass_huge_diag =
   tex_GLASS1 = "GLASS9"
 }
 
-PREFABS.Wall_armaetus_glass_huge_red =
-{
-  template = "Wall_armaetus_glass_huge"
-
-  prob     = 15
-
-  group    = "gtd_tall_glass_epic_red"
-
-  tex_GLASS1 = "GLASS1" -- override
-}
-
-PREFABS.Wall_armaetus_glass_huge_red_diag =
-{
-  template = "Wall_armaetus_glass_huge_diag"
-
-  prob     = 15
-
-  group    = "gtd_tall_glass_epic_red"
-
-  tex_GLASS1 = "GLASS1" -- override
-}
-
 PREFABS.Wall_armaetus_glass_huge_orange =
 {
-  template = "Wall_armaetus_glass_huge"
+  template = "Wall_armaetus_glass_huge_red"
 
   prob     = 15
 
@@ -75,7 +53,7 @@ PREFABS.Wall_armaetus_glass_huge_orange =
 
 PREFABS.Wall_armaetus_glass_huge_orange_diag =
 {
-  template = "Wall_armaetus_glass_huge_diag"
+  template = "Wall_armaetus_glass_huge_red_diag"
 
   prob     = 15
 
@@ -86,7 +64,7 @@ PREFABS.Wall_armaetus_glass_huge_orange_diag =
 
 PREFABS.Wall_armaetus_glass_huge_blue =
 {
-  template = "Wall_armaetus_glass_huge"
+  template = "Wall_armaetus_glass_huge_red"
 
   prob     = 15
 
@@ -97,7 +75,7 @@ PREFABS.Wall_armaetus_glass_huge_blue =
 
 PREFABS.Wall_armaetus_glass_huge_blue_diag =
 {
-  template = "Wall_armaetus_glass_huge_diag"
+  template = "Wall_armaetus_glass_huge_red_diag"
 
   prob     = 15
 
