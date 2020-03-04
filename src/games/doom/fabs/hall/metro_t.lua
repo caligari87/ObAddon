@@ -38,11 +38,13 @@ PREFABS.Hallway_metro_t_boxy_vending_machine =
   template = "Hallway_metro_t"
   map = "MAP11"
 
+  theme = "!hell"
+
   engine = "zdoom"
 
   uses_epic_textures = true
 
-  prob = 15
+  prob = 25
 
   tex_OBVNMCH1 =
   {
