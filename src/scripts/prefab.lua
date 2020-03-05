@@ -169,23 +169,9 @@ function Fab_load_all_definitions()
 
   local function calc_prob(def)
 
-    if def.skip_prob then
-      if rand.odds(def.skip_prob) then return 0 end
-    end
-
-    -- check against current game, engine, theme (etc...)
-    if not ob_match_game(def)     then return 0 end
-    if not ob_match_engine(def)   then return 0 end
-    if not ob_match_playmode(def) then return 0 end
-
-    -- normal logic --
-
-    local prob = def.prob or 0
-
     -- attachment for the Hideous Destructor cover walls
     if PARAM["hd_cover_walls"] != "enable" then
       if def.is_hideous_destructor_fab == true then
-        prob = 0
         def.skip_prob = 100
       end
     end
@@ -193,7 +179,6 @@ function Fab_load_all_definitions()
     -- attachment for fabs that use Armaetus's Epic textures
     if not PARAM["epic_textures_activated"] then
       if def.uses_epic_textures then
-        prob = 0
         def.skip_prob = 100
       end
     end
@@ -234,6 +219,21 @@ function Fab_load_all_definitions()
         end
       end
     end
+
+
+
+    if def.skip_prob then
+      if rand.odds(def.skip_prob) then return 0 end
+    end
+
+    -- check against current game, engine, theme (etc...)
+    if not ob_match_game(def)     then return 0 end
+    if not ob_match_engine(def)   then return 0 end
+    if not ob_match_playmode(def) then return 0 end
+
+    -- normal logic --
+
+    local prob = def.prob or 0
 
     prob = prob * random_factor(def)
 
