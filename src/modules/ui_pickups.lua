@@ -81,6 +81,7 @@ OB_MODULES["ui_pickups"] =
       label=_("Secrets Bonus"),
       choices=UI_PICKUPS.SECRET_ROOM_BONUS,
       tooltip="Adds extra content to secret rooms. Larger rooms offer more content. Default is NONE.",
+      default="none",
     }
   }
 }
