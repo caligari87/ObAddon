@@ -944,10 +944,6 @@ function Item_pickups_for_class(CL)
       bonus = bonus + R.hazard_health * HEALTH_FACTORS[OB_CONFIG.health]
     end
 
-    if R.is_secret then
-      bonus = bonus + (bonus * R.svolume * SECRET_BONUS_FACTORS[OB_CONFIG.secrets_bonus])
-    end
-
     return bonus
   end
 
@@ -1019,10 +1015,26 @@ function Item_pickups_for_class(CL)
     local stats = R.item_stats[CL]
     local item_list = {}
 
+    -- at least have health inside
+    -- while ammo for undiscovered
+    -- weapons is unavailable
+    if R.is_secret then
+      if not stats.health then
+        stats.health = 1
+      end
+    end
+
     each stat,qty in stats do
+
+      -- this secret room is a treasure trove, baby!
+      if R.is_secret then
+        qty = R.svolume * SECRET_BONUS_FACTORS[OB_CONFIG.secrets_bonus]
+      end
+
       select_pickups(R, item_list, stat, qty)
 
-      gui.debugf("Item list for %s:%1.1f [%s] @ %s\n", stat,qty, CL, R.name)
+      if R.is_secret then gui.printf('sikrit') end
+      gui.printf("Item list for %s:%1.1f [%s] @ %s\n", stat,qty, CL, R.name)
 
       each pair in item_list do
         local item = pair.item

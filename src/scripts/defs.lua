@@ -216,13 +216,13 @@ AMMO_FACTORS =
   heaps    = 1.6
 }
 
-SECRET_BONUS_FACTORS = -- this is a DIVIDER
+SECRET_BONUS_FACTORS =
 {
   none     = 0
-  more     = 0.1
-  heaps    = 0.2
-  heapser  = 0.5
-  heapsest = 1
+  more     = 0.5
+  heaps    = 1
+  heapser  = 2
+  heapsest = 4
 }
 
 
