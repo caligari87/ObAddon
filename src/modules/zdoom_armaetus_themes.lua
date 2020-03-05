@@ -3488,7 +3488,7 @@ ARMAETUS_DESERT_OUTDOORS =
       QFLAT05 = 2
       QFLAT09 = 2
       STARTANF = 2
-      MEME01 = 2
+      MEM01 = 2
       SLIME16 = 1
     }
   }
