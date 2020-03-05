@@ -626,6 +626,16 @@ ARMAETUS_MATERIALS = {
   SNOWWAL3 = { t="SNOWWAL3", f="SHINY02" }
   SNOWWAL4 = { t="SNOWWAL4", f="SHINY01" }
 
+  -- Snow + Tech
+  SNWTF1 =  { t="SNOWWAL4", f="SNWTF1" }
+  SNWTF2 =  { t="STONE10", f="SNWTF2" }
+  SNWTF3 =  { t="STARGRY1", f="SNWTF3" }
+  SNWTF4 =  { t="SNOWWAL2", f="SNWTF4" }
+  SNWTF5 =  { t="SNOWWAL3", f="SNWTF5" }
+  SNWTF6 =  { t="SNOWWAL2", f="SNWTF6" }
+  SNWTF7 =  { t="SNOWWAL1", f="SNWTF7" }
+  SNWTF8 =  { t="TEKSHAW", f="SNWTF8" }
+
   -- Desert textures
   DESBRIK1 = { t="DESBRIK1", f="RROCK09" } -- Tan brick facade
   DESBRIK2 = { t="DESBRIK2", f="RROCK09" } -- Tan brick facade

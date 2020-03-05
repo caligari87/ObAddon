@@ -623,34 +623,40 @@ function ARMAETUS_EPIC_TEXTURES.generate_environment_themes()
 
   -- checking in on custom outdoors
   -- snow
-  local snow_floors = ARMAETUS_SNOW_OUTDOORS.floors
+  local snow_tech_floors = ARMAETUS_SNOW_OUTDOORS.tech.floors
+  local snow_urban_floors = ARMAETUS_SNOW_OUTDOORS.urban.floors
+  local snow_hell_floors = ARMAETUS_SNOW_OUTDOORS.hell.floors
+
   local snow_naturals = ARMAETUS_SNOW_OUTDOORS.naturals
   local snow_facades = ARMAETUS_SNOW_FACADE
   local snow_cliffs = ARMAETUS_SNOW_CLIFF_MATS
 
   --sand
-  local sand_floors = ARMAETUS_DESERT_OUTDOORS.floors
+  local sand_tech_floors = ARMAETUS_DESERT_OUTDOORS.tech.floors
+  local sand_urban_floors = ARMAETUS_DESERT_OUTDOORS.urban.floors
+  local sand_hell_floors = ARMAETUS_DESERT_OUTDOORS.hell.floors
+
   local sand_naturals = ARMAETUS_DESERT_OUTDOORS.naturals
   local sand_facades = ARMAETUS_DESERT_FACADE
   local sand_cliffs = ARMAETUS_DESERT_CLIFF_MATS
 
   if OB_CONFIG.game == "doom2" then
     if LEVEL.outdoor_theme == "snow" then
-      GAME.ROOM_THEMES.tech_Outdoors_generic.floors = snow_floors
+      GAME.ROOM_THEMES.tech_Outdoors_generic.floors = snow_tech_floors
       GAME.ROOM_THEMES.tech_Outdoors_generic.naturals = snow_naturals
-      GAME.ROOM_THEMES.urban_Outdoors_generic.floors = snow_floors
+      GAME.ROOM_THEMES.urban_Outdoors_generic.floors = snow_urban_floors
       GAME.ROOM_THEMES.urban_Outdoors_generic.naturals = snow_naturals
-      GAME.ROOM_THEMES.hell_Outdoors_generic.floors = snow_floors
+      GAME.ROOM_THEMES.hell_Outdoors_generic.floors = snow_hell_floors
       GAME.ROOM_THEMES.hell_Outdoors_generic.naturals = snow_naturals
       GAME.THEMES.tech.cliff_mats = snow_cliffs
       GAME.THEMES.urban.cliff_mats = snow_cliffs
       GAME.THEMES.hell.cliff_mats = snow_cliffs
     elseif LEVEL.outdoor_theme == "desert" then
-      GAME.ROOM_THEMES.tech_Outdoors_generic.floors = sand_floors
+      GAME.ROOM_THEMES.tech_Outdoors_generic.floors = sand_tech_floors
       GAME.ROOM_THEMES.tech_Outdoors_generic.naturals = sand_naturals
-      GAME.ROOM_THEMES.urban_Outdoors_generic.floors = sand_floors
+      GAME.ROOM_THEMES.urban_Outdoors_generic.floors = sand_urban_floors
       GAME.ROOM_THEMES.urban_Outdoors_generic.naturals = sand_naturals
-      GAME.ROOM_THEMES.hell_Outdoors_generic.floors = sand_floors
+      GAME.ROOM_THEMES.hell_Outdoors_generic.floors = sand_hell_floors
       GAME.ROOM_THEMES.hell_Outdoors_generic.naturals = sand_naturals
       GAME.THEMES.tech.cliff_mats = sand_cliffs
       GAME.THEMES.urban.cliff_mats = sand_cliffs

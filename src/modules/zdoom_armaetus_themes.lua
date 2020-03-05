@@ -3243,37 +3243,110 @@ ARMAETUS_EXCLUDE_SNOW_SKYBOXES =
 
 ARMAETUS_SNOW_OUTDOORS =
 {
+  tech =
+  {
+    floors =
+    {
+      SNOW1 = 2
+      SNOW5 = 2
+      SNOW6 = 2
+      SNOW7 = 2
+      SNOW8 = 2
+      SNOW10F = 2
+      SNOW11F = 2
+      SNOW12F = 2
+      SNOW13F = 2
+      SNOW14F = 2
+      SNOW03 = 2
+      SNOW04 = 2
+      SNOW06 = 2
+      SNOW07 = 2
+      SNOW08 = 2
+      SNOW09 = 2
+      SNOW10 = 2
+      SNOW11 = 2
+      SNOW12 = 2
+      SNOW13 = 2
+      SNOW14 = 2
+      SNOW15 = 2
+      SNWTF1 = 8
+      SNWTF2 = 8
+      SNWTF3 = 8
+      SNWTF4 = 8
+      SNWTF5 = 8
+      SNWTF6 = 8
+      SNWTF7 = 8
+      SNWTF8 = 8
+    }
+  }
+
+  urban =
+  {
+    floors =
+    {
+      SNOW1 = 2
+      SNOW5 = 2
+      SNOW6 = 2
+      SNOW7 = 2
+      SNOW8 = 2
+      SNOW10F = 2
+      SNOW11F = 2
+      SNOW12F = 2
+      SNOW13F = 2
+      SNOW14F = 2
+      SNOWBRIK = 10
+      SNOWROCK = 10
+      SNOWSTON = 10
+      SNOW03 = 2
+      SNOW04 = 2
+      SNOW06 = 2
+      SNOW07 = 2
+      SNOW08 = 2
+      SNOW09 = 2
+      SNOW10 = 2
+      SNOW11 = 2
+      SNOW12 = 2
+      SNOW13 = 2
+      SNOW14 = 2
+      SNOW15 = 2
+    }
+  }
+
+  hell =
+  {
+    floors =
+    {
+      SNOW1 = 2
+      SNOW5 = 2
+      SNOW6 = 2
+      SNOW7 = 2
+      SNOW8 = 2
+      SNOW10F = 5
+      SNOW11F = 5
+      SNOW12F = 5
+      SNOW13F = 5
+      SNOW14F = 5
+      SNOWBRIK = 10
+      SNOWROCK = 10
+      SNOWSTON = 10
+      SNOW03 = 2
+      SNOW04 = 2
+      SNOW06 = 2
+      SNOW07 = 2
+      SNOW08 = 2
+      SNOW09 = 2
+      SNOW10 = 2
+      SNOW11 = 2
+      SNOW12 = 2
+      SNOW13 = 2
+      SNOW14 = 2
+      SNOW15 = 2
+    }
+  }
+
   floors =
   {
-    SNOW1 = 25
-    SNOW5 = 25
-    SNOW6 = 25
-    SNOW7 = 25
-    SNOW8 = 25
-    SNOW10F = 25
-    SNOW11F = 25
-    SNOW12F = 25
-    SNOW13F = 25
-    SNOW14F = 25
-    SNOWBRIK = 15
-    SNOWROCK = 15
-    SNOWSTON = 15
-    SNOWWAL1 = 10 -- These four use shiny flats, thus lower chance!
-    SNOWWAL2 = 10
-    SNOWWAL3 = 10
-    SNOWWAL4 = 10
-    SNOW03=50
-    SNOW04=50
-    SNOW06=50
-    SNOW07=50
-    SNOW08=50
-    SNOW09=50
-    SNOW10=50
-    SNOW11=50
-    SNOW12=50
-    SNOW13=50
-    SNOW14=50
-    SNOW15=50
+
   }
 
   naturals =
@@ -3313,7 +3386,7 @@ ARMAETUS_SNOW_CLIFF_MATS =
 
 -- Snowed-in building facades, per map theme type
 
-ARMAETUS_SNOW_TECH_FACADES =
+--[[ARMAETUS_SNOW_TECH_FACADES =
 {
   SNOWWAL1 = 50
   SNOWWAL2 = 50
@@ -3390,24 +3463,65 @@ ARMAETUS_SNOW_HELL_FACADES =
   SNOW02    = 20
   SNOW05    = 20
   STONE10   = 15
-}
+}]]
 
 ARMAETUS_DESERT_OUTDOORS =
 {
-  floors =
+  tech =
   {
-    SAND1 = 100
-    SAND2 = 100
-    SAND3 = 100
-    SAND4 = 100
-    SAND5 = 100
-    SAND6 = 100
-    SAND7 = 100
-    EG06  = 15
-    EG05  = 10
-    EG03  = 15
-    EG02  = 10
-    EG01  = 15
+    floors =
+    {
+      SAND1 = 100
+      SAND2 = 100
+      SAND3 = 100
+      SAND4 = 100
+      SAND5 = 100
+      SAND6 = 100
+      SAND7 = 100
+      EG06  = 15
+      EG05  = 10
+      EG03  = 15
+      EG02  = 10
+      EG01  = 15
+    }
+  }
+
+  urban =
+  {
+    floors =
+    {
+      SAND1 = 100
+      SAND2 = 100
+      SAND3 = 100
+      SAND4 = 100
+      SAND5 = 100
+      SAND6 = 100
+      SAND7 = 100
+      EG06  = 15
+      EG05  = 10
+      EG03  = 15
+      EG02  = 10
+      EG01  = 15
+    }
+  }
+
+  hell =
+  {
+    floors =
+    {
+      SAND1 = 100
+      SAND2 = 100
+      SAND3 = 100
+      SAND4 = 100
+      SAND5 = 100
+      SAND6 = 100
+      SAND7 = 100
+      EG06  = 15
+      EG05  = 10
+      EG03  = 15
+      EG02  = 10
+      EG01  = 15
+    }
   }
 
   naturals =
@@ -3431,7 +3545,7 @@ ARMAETUS_DESERT_CLIFF_MATS =
   DESROCK5 = 20
 }
 
-ARMAETUS_DESERT_FACADES =
+--[[ARMAETUS_DESERT_FACADES =
 {
   BSTONE1 = 15
   BSTONE2 = 15
@@ -3489,7 +3603,7 @@ ARMAETUS_DESERT_HELL_FACADES =
   EGYPT04  = 35
   EGYPT05  = 35
   EGYPT06  = 35
-}
+}]]
 
 ARMAETUS_TECH_WIDE_HALLS =
 {
