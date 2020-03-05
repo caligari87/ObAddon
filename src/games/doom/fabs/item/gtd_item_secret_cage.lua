@@ -5,6 +5,8 @@ PREFABS.Item_gtd_secret_cage =
   file  = "item/gtd_item_secret_cage.wad"
   where = "seeds"
 
+  engine = "zdoom"
+
   prob  = 100
   env   = "building"
   theme = "!hell"
