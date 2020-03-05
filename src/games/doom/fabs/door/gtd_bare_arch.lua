@@ -27,7 +27,7 @@ PREFABS.Arch_bare_columned =
 
   seed_w   = 2
 
-  x_fit    = { 24,104 , 152,232 }
+  x_fit    = { 32,96 , 160,224 }
 }
 
 PREFABS.Arch_bare_columned_2X =
