@@ -944,6 +944,10 @@ function Item_pickups_for_class(CL)
       bonus = bonus + R.hazard_health * HEALTH_FACTORS[OB_CONFIG.health]
     end
 
+    if R.is_secret then
+      bonus = bonus + (bonus * R.svolume * SECRET_BONUS_FACTORS[OB_CONFIG.secrets_bonus])
+    end
+
     return bonus
   end
 
@@ -1070,4 +1074,3 @@ function Item_add_pickups()
     Item_pickups_for_class(CL)
   end
 end
-
