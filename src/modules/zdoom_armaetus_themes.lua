@@ -3351,37 +3351,37 @@ ARMAETUS_SNOW_OUTDOORS =
 
   naturals =
   {
-   SNOW03 = 50
-   SNOW06 = 50
-   SNOW07 = 50
-   SNOW08 = 50
-   SNOW09 = 50
-   SNOW10 = 50
-   SNOW11 = 50
-   SNOW12 = 50
-   SNOW13 = 30
-   SNOW14 = 30
-   SNOW15 = 50
+   SNOW03 = 5
+   SNOW06 = 5
+   SNOW07 = 5
+   SNOW08 = 5
+   SNOW09 = 5
+   SNOW10 = 5
+   SNOW11 = 5
+   SNOW12 = 5
+   SNOW13 = 3
+   SNOW14 = 3
+   SNOW15 = 5
   }
 }
 
 ARMAETUS_SNOW_CLIFF_MATS =
 {
-  SNOWROCK = 50
-  SNOWSTON = 50
-  SNOW03 = 50
-  SNOW04 = 50
-  SNOW05 = 15
-  SNOW06 = 50
-  SNOW07 = 50
-  SNOW08 = 50
-  SNOW09 = 50
-  SNOW10 = 50
-  SNOW11 = 50
-  SNOW12 = 50
-  SNOW13 = 30
-  SNOW14 = 30
-  SNOW15 = 50
+  SNOWROCK = 5
+  SNOWSTON = 5
+  SNOW03 = 5
+  SNOW04 = 5
+  SNOW05 = 2
+  SNOW06 = 5
+  SNOW07 = 5
+  SNOW08 = 5
+  SNOW09 = 5
+  SNOW10 = 5
+  SNOW11 = 5
+  SNOW12 = 5
+  SNOW13 = 3
+  SNOW14 = 3
+  SNOW15 = 5
 }
 
 -- Snowed-in building facades, per map theme type
@@ -3469,20 +3469,27 @@ ARMAETUS_DESERT_OUTDOORS =
 {
   tech =
   {
-    floors =
+    floors = --MSSP-TODO: Make some unique sanded-in tech flats!
     {
-      SAND1 = 100
-      SAND2 = 100
-      SAND3 = 100
-      SAND4 = 100
-      SAND5 = 100
-      SAND6 = 100
-      SAND7 = 100
-      EG06  = 15
-      EG05  = 10
-      EG03  = 15
-      EG02  = 10
-      EG01  = 15
+      SAND1 = 3
+      SAND2 = 3
+      SAND3 = 3
+      SAND4 = 3
+      SAND5 = 3
+      SAND6 = 3
+      SAND7 = 3
+      DARKF01 = 2
+      DARKF03 = 2
+      GRATE2 = 2
+      GRATE3 = 2
+      GRATE5 = 2
+      GRATE7 = 2
+      GRATE8 = 2
+      QFLAT05 = 2
+      QFLAT09 = 2
+      STARTANF = 2
+      MEME01 = 2
+      SLIME16 = 1
     }
   }
 
