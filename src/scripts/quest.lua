@@ -2880,6 +2880,11 @@ function Quest_room_themes()
         R.beam_type = rand.key_by_probs(THEME.beam_groups)
       end
     end
+
+    if THEME.outdoor_wall_groups then -- MSSP-TODO: No need for this check
+                                      -- once all themes have outdoor_wall_groups?
+      LEVEL.outdoor_wall_group = rand.key_by_probs(THEME.outdoor_wall_groups)
+    end
   end
 
 

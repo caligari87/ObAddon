@@ -231,6 +231,13 @@ function Render_edge(E)
       reqs.group = E.area.floor_group.wall_group
     end
 
+    if A.is_outdoor then
+      reqs.group = LEVEL.outdoor_wall_group
+      if reqs.group == "PLAIN" or rand.odds(10) then
+        reqs.group = nil
+      end
+    end
+
     if E.area.room then
       if E.area.room.is_natural_park then
         reqs.group = "natural_walls"

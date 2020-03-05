@@ -1201,6 +1201,28 @@ DOOM.THEMES =
       -- total sum: 605
     }
 
+    outdoor_wall_groups =
+    {
+      PLAIN = 1
+      tech_o_caution_strip = 1
+      tech_o_orange_light_stack = 1
+      tech_o_lite_strip_white = 1
+      tech_o_lite_strip_blue = 1
+      tech_o_inset_teklite = 1
+      tech_o_inset_teklite2 = 1
+      tech_o_inset_teklite2 = 1
+      tech_o_halfbase_green_light = 1
+      tech_o_halfbase_blue_triangle = 1
+      tech_o_giant_UAC_sign = 1
+      tech_o_double_hanging_vents = 1
+      tech_o_overhanging_braced_vent = 1
+      tech_o_overhanging_lite_platform = 1
+      tech_o_pipe_junctions = 1
+      tech_o_hadleys_hope = 1
+      tech_o_overhanging_lights = 1
+      tech_o_shiny_silver_overhang = 1
+    }
+
     window_groups =
     {
       square = 70
@@ -1894,6 +1916,11 @@ DOOM.THEMES =
       gtd_round_inset = 30
       -- current non-plain prob sum: 733
       -- 338
+    }
+
+    outdoor_wall_groups =
+    {
+
     }
 
     window_groups =

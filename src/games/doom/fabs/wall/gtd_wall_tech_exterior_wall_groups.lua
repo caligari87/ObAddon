@@ -1,10 +1,11 @@
 PREFABS.Wall_tech_outdoor_caution_strip = --#
 {
-  file   = "wall/gtd_wall_tech_exterior_skip_prob.wad"
+  file   = "wall/gtd_wall_tech_exterior_wall_groups.wad"
   map    = "MAP01"
 
   prob   = 200
-  skip_prob = 92.81
+
+  group = "tech_o_caution_strip"
 
   env   = "!building"
   theme = "tech"
@@ -26,6 +27,8 @@ PREFABS.Wall_tech_outdoor_orange_light_stack = --#
 
   map      = "MAP02"
 
+  group = "tech_o_orange_light_stack"
+
   z_fit    = "stretch"
 }
 
@@ -37,6 +40,8 @@ PREFABS.Wall_tech_outdoor_lite_strip_white = --#
 
   map    = "MAP03"
 
+  group = "tech_o_lite_strip_white"
+
   z_fit = "bottom"
 }
 
@@ -45,6 +50,8 @@ PREFABS.Wall_tech_outdoor_lite_strip_blue = --#
   template = "Wall_tech_outdoor_caution_strip"
 
   map    = "MAP03"
+
+  group = "tech_o_lite_strip_blue"
 
   z_fit = "bottom"
 
@@ -59,6 +66,8 @@ PREFABS.Wall_tech_outdoor_inset_teklite = --#
 
   map      = "MAP04"
 
+  group = "tech_o_inset_teklite"
+
   z_fit    = "top"
 }
 
@@ -67,6 +76,8 @@ PREFABS.Wall_tech_outdoor_inset_teklite2 = --#
   template = "Wall_tech_outdoor_caution_strip"
 
   map      = "MAP04"
+
+  group = "tech_o_inset_teklite2"
 
   tex_TEKLITE = "TEKLITE2"
 
@@ -81,6 +92,8 @@ PREFABS.Wall_tech_outdoor_halfbase_green_light = --#
 
   map      = "MAP05"
 
+  group = "tech_o_halfbase_green_light"
+
   z_fit    = {40,56}
 }
 
@@ -89,6 +102,8 @@ PREFABS.Wall_tech_outdoor_halfbase_blue_triangle = --#
   template = "Wall_tech_outdoor_caution_strip"
 
   map      = "MAP05"
+
+  group = "tech_o_halfbase_blue_triangle"
 
   tex_TEKGREN5 = "TEKGREN3"
 
@@ -102,6 +117,8 @@ PREFABS.Wall_tech_outdoor_giant_UAC_sign = --#
   template = "Wall_tech_outdoor_caution_strip"
 
   map = "MAP06"
+
+  group = "tech_o_giant_UAC_sign"
 
   z_fit = "bottom"
 
@@ -122,6 +139,8 @@ PREFABS.Wall_tech_outdoor_double_hanging_vents = --#
 
   map = "MAP07"
 
+  group = "tech_o_double_hanging_vents"
+
   tex_METAL2 =
   {
     METAL5 = 50
@@ -139,6 +158,8 @@ PREFABS.Wall_tech_outdoor_overhanging_braced_vent = --#
 
   map = "MAP08"
 
+  group = "tech_o_overhanging_braced_vent"
+
   height = 192
   deep = 48
 
@@ -153,6 +174,8 @@ PREFABS.Wall_tech_outdoor_overhanging_lite_platform = --#
 
   map = "MAP09"
 
+  group = "tech_o_overhanging_lite_platform"
+
   deep = 64
 
   z_fit = { 12,20 }
@@ -163,6 +186,8 @@ PREFABS.Wall_tech_outdoor_pipe_junctions = --#
   template = "Wall_tech_outdoor_caution_strip"
 
   map = "MAP10"
+
+  group = "tech_o_pipe_junctions"
 
   height = 192
 
@@ -183,6 +208,8 @@ PREFABS.Wall_tech_hadleys_hope_sort_of_wall = --#
 
   map = "MAP11"
 
+  group = "tech_o_hadleys_hope"
+
   height = 192
 
   deep = 64
@@ -200,6 +227,8 @@ PREFABS.Wall_tech_overhanging_lights = --#
 
   map = "MAP12"
 
+  group = "tech_o_overhanging_lights"
+
   deep = 64
 
   engine = "zdoom"
@@ -212,6 +241,8 @@ PREFABS.Wall_outdoor_shiny_silver_overhang = --#
   template = "Wall_tech_outdoor_caution_strip"
 
   map = "MAP13"
+
+  group = "tech_o_shiny_silver_overhang"
 
   height = 160
   deep = 80
@@ -235,6 +266,8 @@ PREFABS.Wall_outdoor_shiny_silver_overhang_EPIC =
 
   uses_epic_textures = true
   replaces = "Wall_outdoor_shiny_silver_overhang"
+
+  group = "tech_o_shiny_silver_overhang"
 
   height = 160
   deep = 80
