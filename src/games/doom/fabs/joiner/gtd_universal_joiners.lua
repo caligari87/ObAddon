@@ -94,6 +94,20 @@ PREFABS.Joiner_gtd_universal_wavy_staircase =
   x_fit = { 24,104 , 152,232 }
   y_fit = "frame"
 
+  tex_FLOOR5_2 =
+  {
+    FLAT1 = 5
+    FLAT3 = 5
+    FLAT19 = 5
+    FLOOR0_1 = 5
+    FLOOR5_2 = 5
+    FLOOR4_8 = 5
+    FLOOR0_5 = 5
+    FLOOR7_1 = 5
+    MFLR8_1 = 5
+    SLIME14 = 5
+  }
+
   can_flip = true
 }
 
@@ -102,6 +116,20 @@ PREFABS.Joiner_gtd_universal_wavy_staircase_hell =
   template = "Joiner_gtd_universal_wavy_staircase"
 
   theme = "hell"
+
+  tex_FLOOR5_2 =
+  {
+    DEM1_5 = 2
+    DEM1_6 = 2
+    FLAT5_3 = 1
+    FLAT5_4 = 4
+    FLAT5_5 = 4
+    FLOOR7_1 = 5
+    FLOOR7_2 = 5
+    FLAT5_7 = 5
+    RROCK14 = 5
+    SLIME16 = 5
+  }
 
   thing_2028 =
   {
