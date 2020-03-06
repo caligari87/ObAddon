@@ -1,6 +1,6 @@
 PREFABS.Decor_light_pillar_helix =
 {
-  file   = "decor/gtd_decor_tech_tech.wad"
+  file   = "decor/gtd_decor_tech.wad"
   map    = "MAP01"
 
   prob   = 5000
