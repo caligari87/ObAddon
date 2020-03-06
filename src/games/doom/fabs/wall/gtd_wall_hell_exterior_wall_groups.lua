@@ -3,7 +3,7 @@ PREFABS.Wall_hell_stone_brace = --#
   file   = "wall/gtd_wall_hell_exterior_wall_groups.wad"
   map    = "MAP01"
 
-  prob   = 25
+  prob   = 15
   theme = "hell"
   env = "outdoor"
 
@@ -380,6 +380,43 @@ PREFABS.Wall_hell_outdoor_dark_banners_EPIC =
   z_fit = { 16,24 }
 
   bound_z2 = 160
+}
+
+PREFABS.Wall_hell_dark_cathedral_windows =
+{
+  template = "Wall_hell_stone_brace"
+  map = "MAP15"
+
+  group = "hell_o_dark_cathedral_windows"
+
+  height = 256
+
+  z_fit = "bottom"
+
+  tex_CITY08 = "BLAKWAL1"
+  tex_BRIKS43 = "BRONZE1"
+  tex_BRIKS11 = "METAL2"
+  tex_KSTGARG = "SUPPORT3"
+  flat_CEIL5_1 = "CEIL5_2"
+
+  bound_z2 = 256
+}
+
+PREFABS.Wall_hell_dark_cathedral_windows_EPIC = --#
+{
+  template = "Wall_hell_stone_brace"
+  map = "MAP15"
+
+  replaces = "Wall_hell_dark_cathedral_windows"
+  uses_epic_textures = true
+
+  group = "hell_o_dark_cathedral_windows"
+
+  height = 256
+
+  z_fit = "bottom"
+
+  bound_z2 = 256
 }
 
 -- references to some older fabs [2]

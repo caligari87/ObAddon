@@ -1642,9 +1642,8 @@ function Layout_decorate_rooms(pass)
           pt_pick = rand.key_by_probs(tab[wg].point_fabs)
           o_def = PREFABS[pt_pick]
           if not o_def then
-            local error_msg = pt_pick .. " not found!\n" ..
-              "Check " .. wg .. ", you punk-ass beach!"
-            error(error_msg)
+            error(pt_pick .. " not found!\n" ..
+            "Check " .. wg .. " entries, you punk-ass beach!")
           end
 
           -- MSSP-TODO: check if the force-picked fab even fits the damn
