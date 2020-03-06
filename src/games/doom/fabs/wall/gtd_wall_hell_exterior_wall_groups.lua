@@ -1,13 +1,13 @@
 PREFABS.Wall_hell_stone_brace = --#
 {
-  file   = "wall/gtd_wall_hell_exterior_skip_prob.wad"
+  file   = "wall/gtd_wall_hell_exterior_wall_groups.wad"
   map    = "MAP01"
 
   prob   = 750
   theme = "hell"
   env = "outdoor"
 
-  skip_prob = 93.17
+  groups = "hell_o_stone_brace"
 
   where  = "edge"
   height = 128
@@ -24,6 +24,8 @@ PREFABS.Wall_hell_wood_brace = --#
 {
   template = "Wall_hell_stone_brace"
 
+  groups = "hell_o_wood_brace"
+
   tex_STONE2 = "WOODMET2"
 }
 
@@ -31,6 +33,8 @@ PREFABS.Wall_hell_metal_framed_skin = --#
 {
   template = "Wall_hell_stone_brace"
   map = "MAP02"
+
+  group = "hell_o_metal_framed_skin"
 
   tex_SKINEDGE =
   {
@@ -48,6 +52,8 @@ PREFABS.Wall_hell_caged_up_corpses = --#
 {
   template = "Wall_hell_stone_brace"
   map = "MAP03"
+
+  group = "hell_o_caged_up_corpses"
 
   tex_SLOPPY1 =
   {
@@ -70,6 +76,8 @@ PREFABS.Wall_hell_giant_stone_faces = --#
 
   height = 192
 
+  group = "hell_o_giant_stone_faces"
+
   tex_MARBFAC2 =
   {
     MARBFAC2 = 50
@@ -87,6 +95,8 @@ PREFABS.Wall_hell_giant_stone_faces_EPIC =
   map = "MAP04"
 
   height = 192
+
+  group = "hell_o_giant_stone_faces"
 
   uses_epic_textures = true
 
@@ -113,6 +123,8 @@ PREFABS.Wall_hell_outdoor_rising_spfaces = --#
 
   engine = "zdoom"
 
+  group = "hell_o_rising_spfaces"
+
   z_fit = "top"
 }
 
@@ -120,6 +132,8 @@ PREFABS.Wall_hell_outdoor_lava_falls = --#
 {
   template = "Wall_hell_stone_brace"
   map = "MAP06"
+
+  group = "hell_o_lava_falls"
 
   tex_FIREMAG1 =
   {
@@ -135,6 +149,8 @@ PREFABS.Wall_hell_outdoor_huge_overhang = --#
   template = "Wall_hell_stone_brace"
   map = "MAP07"
 
+  group = "hell_o_huge_overhang"
+
   deep = 48
 
   z_fit = "stretch"
@@ -144,6 +160,8 @@ PREFABS.Wall_hell_outdoor_spiny_overhang = --#
 {
   template = "Wall_hell_stone_brace"
   map = "MAP08"
+
+  group = "hell_o_spiny_overhang"
 
   deep = 64
 
@@ -156,6 +174,8 @@ PREFABS.Wall_hell_outdoor_red_glass_tall = --#
   map = "MAP09"
 
   height = 192
+
+  group = "hell_o_red_glass_tall"
 
   tex_GOTH19 = "METAL2"
   tex_GOTH20 = "METAL2"
@@ -175,6 +195,8 @@ PREFABS.Wall_hell_outdoor_red_glass_tall_EPIC =
 
   height = 192
 
+  group = "hell_o_red_glass_tall"
+
   uses_epic_textures = true
 
   replaces = "Wall_hell_outdoor_red_glass_tall"
@@ -191,6 +213,8 @@ PREFABS.Wall_hell_outdoor_rising_energy = --#
 
   height = 192
 
+  group = "hell_o_rising_energy"
+
   z_fit = { 136,186 }
 
   bound_z2 = 192
@@ -204,6 +228,8 @@ PREFABS.Wall_hell_outdoor_rising_energy_EPIC =
   uses_epic_textures = true
 
   height = 192
+
+  group = "hell_o_rising_energy"
 
   replaces = "Wall_hell_outdoor_rising_energy"
 
@@ -224,6 +250,8 @@ PREFABS.Wall_hell_wooden_palisades = --#
 {
   template = "Wall_hell_stone_brace"
   map = "MAP11"
+
+  group = "hell_o_wooden_palisades"
 
   tex_WOODMET3 =
   {
@@ -249,6 +277,8 @@ PREFABS.Wall_gothic_flying_alcoves = --#
   template = "Wall_hell_stone_brace"
   map = "MAP12"
 
+  group = "hell_o_flying_alcoves"
+
   deep = 64
 
   z_fit = "top"
@@ -260,21 +290,24 @@ PREFABS.Wall_gothic_flying_alcoves_EPIC =
   template = "Wall_hell_stone_brace"
   map = "MAP12"
 
-  deep = 64
+  group = "hell_o_flying_alcoves"
 
   replaces = "Wall_gothic_flying_alcoves"
-
   uses_epic_textures = true
+
+  deep = 64
 
   tex_MIDBRN1 ="MIDWIND7"
 
   z_fit = "top"
 }
 
-PREFABS.Wall_torch_fenced = --#
+PREFABS.Wall_hell_outdoor_torch_fenced = --#
 {
   template = "Wall_hell_stone_brace"
   map = "MAP13"
+
+  group = "hell_o_torch_fenced"
 
   z_fit = { 28,32 }
 
@@ -282,14 +315,15 @@ PREFABS.Wall_torch_fenced = --#
   tex_METL02 = "METAL"
 }
 
-PREFABS.Wall_torch_fenced_EPIC =
+PREFABS.Wall_hell_outdoor_torch_fenced_EPIC =
 {
   template = "Wall_hell_stone_brace"
   map = "MAP13"
 
   replaces = "Wall_torch_fenced"
-
   uses_epic_textures = true
+
+  group = "hell_o_torch_fenced"
 
   tex_FENCE4 = "FENCE4"
   tex_METL02 = "METL02"
@@ -304,6 +338,8 @@ PREFABS.Wall_hell_outdoor_dark_banners = --#
 
   height = 160
   deep = 56
+
+  group = "hell_o_dark_banners"
 
   z_fit = { 16,24 }
 
@@ -325,6 +361,8 @@ PREFABS.Wall_hell_outdoor_dark_banners_EPIC =
 
   replaces = "Wall_hell_outdoor_dark_banners"
   uses_epic_textures = true
+
+  group = "hell_o_dark_banners"
 
   height = 160
   deep = 56
@@ -350,6 +388,8 @@ PREFABS.Wall_hell_fake_window_outdoor = --#
 {
   template = "Wall_hell_fake_window"
 
+  group = "hell_o_cathedral_glass_red"
+
   prob = 75
 
   env = "outdoor"
@@ -358,6 +398,8 @@ PREFABS.Wall_hell_fake_window_outdoor = --#
 PREFABS.Wall_hell_fake_window_outdoor_topstretch =
 {
   template = "Wall_hell_fake_window"
+
+  group = "hell_o_cathedral_glass_red"
 
   env = "outdoor"
   prob = 75
@@ -369,6 +411,8 @@ PREFABS.Wall_hell_fake_window_small_outdoor = --#
 {
   template = "Wall_hell_fake_window_small"
 
+  group = "hell_o_cathedral_glass_red"
+
   env = "outdoor"
   prob = 75
 
@@ -379,6 +423,8 @@ PREFABS.Wall_hell_fake_window_small_outdoor = --#
 PREFABS.Wall_hell_fake_window_small_outdoor_stretchy =
 {
   template = "Wall_hell_fake_window_small"
+
+  group = "hell_o_cathedral_glass_red"
 
   env = "outdoor"
   prob = 75

@@ -4,7 +4,7 @@
 --
 --  Copyright (C) 2006-2017 Andrew Apted
 --  Copyright (C) 2011,2019 Chris Pisarczyk / Armaetus
---  Copyright (C) 2019 MsrSgtShooterPerson
+--  Copyright (C) 2019-2020 MsrSgtShooterPerson
 --
 --  This program is free software; you can redistribute it and/or
 --  modify it under the terms of the GNU General Public License
@@ -1920,7 +1920,23 @@ DOOM.THEMES =
 
     outdoor_wall_groups =
     {
-
+      PLAIN = 1
+      hell_o_stone_brace = 1
+      hell_o_wood_brace = 1
+      hell_o_metal_framed_skin = 1
+      hell_o_caged_up_corpses = 1
+      hell_o_giant_stone_faces = 1
+      hell_o_rising_spfaces = 1
+      hell_o_lava_falls = 1
+      hell_o_huge_overhang = 1
+      hell_o_spiny_overhang = 1
+      hell_o_red_glass_tall = 1
+      hell_o_rising_energy = 1
+      hell_o_wooden_palisades = 1
+      hell_o_flying_alcoves = 1
+      hell_o_torch_fenced = 1
+      hell_o_dark_banners = 1
+      hell_o_cathedral_glass_red = 1
     }
 
     window_groups =
