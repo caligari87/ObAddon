@@ -11,7 +11,6 @@ PREFABS.Wall_epic_obaddon_banner =
 
   where  = "edge"
   height = 256
-  long   = 128
   deep   = 40
 
   bound_z1 = 0
@@ -21,14 +20,33 @@ PREFABS.Wall_epic_obaddon_banner =
   z_fit = "bottom"
 }
 
-PREFABS.Wall_epic_obaddon_banner2 =
+PREFABS.Wall_epic_obaddon_banner_hell =
 {
   template = "Wall_epic_obaddon_banner"
 
   theme = "hell"
 
-  tex_OBDNBNR1 =
-  {
-    OBDNBNR2 = 100
-  }
+  tex_OBDNBNR1 = "OBDNBNR2"
+}
+
+PREFABS.Wall_epic_obaddon_banner_diagonal =
+{
+  template = "Wall_epic_obaddon_banner"
+  map    = "MAP02"
+
+  prob   = 25
+
+  where  = "diagonal"
+}
+
+PREFABS.Wall_epic_obaddon_banner_diagonal_hell =
+{
+  template = "Wall_epic_obaddon_banner"
+  map    = "MAP02"
+
+  prob   = 25
+
+  where  = "diagonal"
+
+  tex_OBDNBNR1 = "OBDNBNR2"
 }
