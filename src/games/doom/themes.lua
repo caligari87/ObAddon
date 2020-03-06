@@ -4414,6 +4414,8 @@ DOOM.WALL_GROUP_DECOR =
       Crate_medium_gray = 1
       Crate_group_medium = 1
       Decor_tech_storage_elevator = 1
+      Decor_sealed_storage = 1
+      Decor_sealed_storage_large = 1
     }
 
     -- MSSP-TODO: support closets, it's not yet supported

@@ -2115,7 +2115,8 @@ function Fabricate(room, def, T, skins)
   -- room can be NIL
 
   if not def.file then
-    error("Old-style prefab skin used")
+    error("Expecting prefab def table, not string!:\n"
+    .. def)
   end
 
   gui.debugf("=========  FABRICATE %s\n", def.file)

@@ -1628,26 +1628,54 @@ function Layout_decorate_rooms(pass)
       local wg
 
       if A.floor_group and A.floor_group.wall_group then
-        wg = A.floor_group
+        wg = A.floor_group.wall_group
       end
 
       local tab = GAME.WALL_GROUP_DECOR
-      local o_def
 
       -- if ungrouped, pick a point fab in the wall group decor list
       if wg_mode == "UNGROUPED" then
         if tab[wg] then
-          local pt_pick
+          local fab_name
+          local score = 0
+          local tries = 0
 
-          pt_pick = rand.key_by_probs(tab[wg].point_fabs)
-          o_def = PREFABS[pt_pick]
-          if not o_def then
-            error(pt_pick .. " not found!\n" ..
-            "Check " .. wg .. " entries, you punk-ass beach!")
+          while (not best_pick and tries <= 5) do
+            fab_name = rand.key_by_probs(tab[wg].point_fabs)
+            best_pick = PREFABS[fab_name]
+
+            -- fab should exist in the first place
+            if not best_pick then
+              error(fab_name .. " not found!\n" ..
+              "Check " .. wg .. " entries, you punk-ass beach!")
+            end
+
+            -- height check
+            if not best_pick.height then
+              score = score + 1
+            end
+
+            if best_pick.height and best_pick.height <= reqs.height then
+              score = score + 1
+            end
+
+            -- size check
+            if best_pick.size <= reqs.size then
+              score = score + 1
+            end
+
+            if score >= 2 then
+              o_def = best_pick
+              gui.printf("Good things happen\n")
+            else
+              tries = tries + 1
+            end
           end
 
-          -- MSSP-TODO: check if the force-picked fab even fits the damn
-          -- height or radius! 5 tries else return none.
+          -- failed
+          if tries >= 5 then
+            o_def = Fab_pick(reqs, "none_ok")
+          end
 
         else
           o_def = Fab_pick(reqs, "none_ok")

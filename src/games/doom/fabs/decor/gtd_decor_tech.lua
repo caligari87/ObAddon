@@ -1,6 +1,6 @@
 PREFABS.Decor_light_pillar_helix =
 {
-  file   = "decor/gtd_decor.wad"
+  file   = "decor/gtd_decor_tech_tech.wad"
   map    = "MAP01"
 
   prob   = 5000
@@ -28,7 +28,7 @@ PREFABS.Decor_light_pillar_helix_outdoor =
 
 PREFABS.Decor_light_pillar_core =
 {
-  file   = "decor/gtd_decor.wad"
+  file   = "decor/gtd_decor_tech.wad"
   map    = "MAP02"
 
   prob   = 5000
@@ -56,7 +56,7 @@ PREFABS.Decor_light_pillar_core_outdoor =
 
 PREFABS.Decor_light_pillar_core2 =
 {
-  file   = "decor/gtd_decor.wad"
+  file   = "decor/gtd_decor_tech.wad"
   map    = "MAP03"
 
   prob   = 5000
@@ -84,7 +84,7 @@ PREFABS.Decor_light_pillar_core2_outdoor =
 
 PREFABS.Decor_data_pillar =
 {
-  file   = "decor/gtd_decor.wad"
+  file   = "decor/gtd_decor_tech.wad"
   map    = "MAP04"
 
   prob   = 5000
@@ -103,7 +103,7 @@ PREFABS.Decor_data_pillar =
 
 PREFABS.Decor_computer_tall =
 {
-  file   = "decor/gtd_decor.wad"
+  file   = "decor/gtd_decor_tech.wad"
   map    = "MAP05"
 
   prob   = 5000
@@ -122,7 +122,7 @@ PREFABS.Decor_computer_tall =
 
 PREFABS.Decor_server_rack =
 {
-  file   = "decor/gtd_decor.wad"
+  file   = "decor/gtd_decor_tech.wad"
   map    = "MAP06"
 
   prob   = 5000
@@ -143,7 +143,7 @@ PREFABS.Decor_server_rack =
 
 PREFABS.Decor_open_pipe =
 {
-  file   = "decor/gtd_decor.wad"
+  file   = "decor/gtd_decor_tech.wad"
   map    = "MAP07"
 
   prob   = 5000
@@ -162,7 +162,7 @@ PREFABS.Decor_open_pipe =
 
 PREFABS.Decor_floor_decal_stripes =
 {
-  file   = "decor/gtd_decor.wad"
+  file   = "decor/gtd_decor_tech.wad"
   map    = "MAP08"
 
   prob   = 5000
@@ -181,7 +181,7 @@ PREFABS.Decor_floor_decal_stripes =
 
 PREFABS.Decor_sealed_storage =
 {
-  file   = "decor/gtd_decor.wad"
+  file   = "decor/gtd_decor_tech.wad"
   map    = "MAP09"
 
   prob   = 5000
@@ -207,7 +207,7 @@ PREFABS.Decor_sealed_storage_outdoor =
 
 PREFABS.Decor_sealed_storage_large =
 {
-  file   = "decor/gtd_decor.wad"
+  file   = "decor/gtd_decor_tech.wad"
   map    = "MAP10"
 
   prob   = 5000
@@ -233,7 +233,7 @@ PREFABS.Decor_sealed_storage_large_outdoor =
 
 PREFABS.Decor_fuel_rods =
 {
-  file   = "decor/gtd_decor.wad"
+  file   = "decor/gtd_decor_tech.wad"
   map    = "MAP11"
 
   prob   = 5000
