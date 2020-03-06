@@ -180,50 +180,46 @@ function CTL_DOOM.weapon_setup(self)
   -- specific instructions for the weapon_pref choices
   PARAM.weapon_prefs = self.options.weapon_prefs.value
 
-  if PARAM.weapon_prefs == "vanilla" then
-    GAME.MONSTERS["Cyberdemon"].weap_prefs = { bfg = 10.0 }
-    GAME.MONSTERS["Spiderdemon"].weap_prefs = { bfg = 10.0 }
-    -- MSSP-TODO: Separate Doom 1 and Doom 2 monsters damn it!
-    if not GAME.MONSTERS["arach"] then return
-      error("MSSP didn't fix weapon preferences for Doom 1. " ..
-      "But did you know in 1998, the Undertaker threw Mankind off " ..
-      "Hell In A Cell, and plummeted 16 ft. through an announcer's table?")
+  if OB_CONFIG.game == "doom2" then
+    if PARAM.weapon_prefs == "vanilla" then
+      GAME.MONSTERS["Cyberdemon"].weap_prefs = { bfg = 10.0 }
+      GAME.MONSTERS["Spiderdemon"].weap_prefs = { bfg = 10.0 }
+      GAME.MONSTERS["arach"].weap_prefs = nil
+      GAME.MONSTERS["baron"].weap_prefs = nil
+      GAME.MONSTERS["caco"].weap_prefs = nil
+      GAME.MONSTERS["demon"].weap_prefs = { launch = 0.3 }
+      GAME.MONSTERS["gunner"].weap_prefs = nil
+      GAME.MONSTERS["imp"].weap_prefs = nil
+      GAME.MONSTERS["knight"].weap_prefs = nil
+      GAME.MONSTERS["mancubus"].weap_prefs = nil
+      GAME.MONSTERS["pain"].weap_prefs = { launch = 0.1 }
+      GAME.MONSTERS["revenant"].weap_prefs = nil
+      GAME.MONSTERS["shooter"].weap_prefs = nil
+      GAME.MONSTERS["skull"].weap_prefs = { launch = 0.1 }
+      GAME.MONSTERS["spectre"].weap_prefs = { launch = 0.3 }
+      GAME.MONSTERS["ss_nazi"].weap_prefs = nil
+      GAME.MONSTERS["vile"].weap_prefs = nil
+      GAME.MONSTERS["zombie"].weap_prefs = nil
+    elseif PARAM.weapon_prefs == "none" then
+      GAME.MONSTERS["Cyberdemon"].weap_prefs = nil
+      GAME.MONSTERS["Spiderdemon"].weap_prefs = nil
+      GAME.MONSTERS["arach"].weap_prefs = nil
+      GAME.MONSTERS["baron"].weap_prefs = nil
+      GAME.MONSTERS["caco"].weap_prefs = nil
+      GAME.MONSTERS["demon"].weap_prefs = nil
+      GAME.MONSTERS["gunner"].weap_prefs = nil
+      GAME.MONSTERS["imp"].weap_prefs = nil
+      GAME.MONSTERS["knight"].weap_prefs = nil
+      GAME.MONSTERS["mancubus"].weap_prefs = nil
+      GAME.MONSTERS["pain"].weap_prefs = nil
+      GAME.MONSTERS["revenant"].weap_prefs = nil
+      GAME.MONSTERS["shooter"].weap_prefs = nil
+      GAME.MONSTERS["skull"].weap_prefs = nil
+      GAME.MONSTERS["spectre"].weap_prefs = nil
+      GAME.MONSTERS["ss_nazi"].weap_prefs = nil
+      GAME.MONSTERS["vile"].weap_prefs = nil
+      GAME.MONSTERS["zombie"].weap_prefs = nil
     end
-    GAME.MONSTERS["arach"].weap_prefs = nil
-    GAME.MONSTERS["baron"].weap_prefs = nil
-    GAME.MONSTERS["caco"].weap_prefs = nil
-    GAME.MONSTERS["demon"].weap_prefs = { launch = 0.3 }
-    GAME.MONSTERS["gunner"].weap_prefs = nil
-    GAME.MONSTERS["imp"].weap_prefs = nil
-    GAME.MONSTERS["knight"].weap_prefs = nil
-    GAME.MONSTERS["mancubus"].weap_prefs = nil
-    GAME.MONSTERS["pain"].weap_prefs = { launch = 0.1 }
-    GAME.MONSTERS["revenant"].weap_prefs = nil
-    GAME.MONSTERS["shooter"].weap_prefs = nil
-    GAME.MONSTERS["skull"].weap_prefs = { launch = 0.1 }
-    GAME.MONSTERS["spectre"].weap_prefs = { launch = 0.3 }
-    GAME.MONSTERS["ss_nazi"].weap_prefs = nil
-    GAME.MONSTERS["vile"].weap_prefs = nil
-    GAME.MONSTERS["zombie"].weap_prefs = nil
-  elseif PARAM.weapon_prefs == "none" then
-    GAME.MONSTERS["Cyberdemon"].weap_prefs = nil
-    GAME.MONSTERS["Spiderdemon"].weap_prefs = nil
-    GAME.MONSTERS["arach"].weap_prefs = nil
-    GAME.MONSTERS["baron"].weap_prefs = nil
-    GAME.MONSTERS["caco"].weap_prefs = nil
-    GAME.MONSTERS["demon"].weap_prefs = nil
-    GAME.MONSTERS["gunner"].weap_prefs = nil
-    GAME.MONSTERS["imp"].weap_prefs = nil
-    GAME.MONSTERS["knight"].weap_prefs = nil
-    GAME.MONSTERS["mancubus"].weap_prefs = nil
-    GAME.MONSTERS["pain"].weap_prefs = nil
-    GAME.MONSTERS["revenant"].weap_prefs = nil
-    GAME.MONSTERS["shooter"].weap_prefs = nil
-    GAME.MONSTERS["skull"].weap_prefs = nil
-    GAME.MONSTERS["spectre"].weap_prefs = nil
-    GAME.MONSTERS["ss_nazi"].weap_prefs = nil
-    GAME.MONSTERS["vile"].weap_prefs = nil
-    GAME.MONSTERS["zombie"].weap_prefs = nil
   end
 
 end
