@@ -1625,7 +1625,12 @@ function Layout_decorate_rooms(pass)
     end
 
     local function try_wg_point_fab(A, wg_mode, reqs)
-      local wg = A.floor_group.wall_group
+      local wg
+
+      if A.floor_group and A.floor_group.wall_group then
+        wg = A.floor_group
+      end
+
       local tab = GAME.WALL_GROUP_DECOR
       local o_def
 

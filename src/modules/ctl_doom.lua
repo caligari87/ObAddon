@@ -180,8 +180,6 @@ function CTL_DOOM.weapon_setup(self)
   -- specific instructions for the weapon_pref choices
   PARAM.weapon_prefs = self.options.weapon_prefs.value
 
-  gui.printf(table.tostr(GAME.MONSTERS))
-
   if PARAM.weapon_prefs == "vanilla"
   or PARAM.weapon_prefs == "none" then
     each mon in GAME.MONSTERS do
