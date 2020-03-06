@@ -183,6 +183,12 @@ function CTL_DOOM.weapon_setup(self)
   if PARAM.weapon_prefs == "vanilla" then
     GAME.MONSTERS["Cyberdemon"].weap_prefs = { bfg = 10.0 }
     GAME.MONSTERS["Spiderdemon"].weap_prefs = { bfg = 10.0 }
+    -- MSSP-TODO: Separate Doom 1 and Doom 2 monsters damn it!
+    if not GAME.MONSTERS["arach"] then return
+      error("MSSP didn't fix weapon preferences for Doom 1. " ..
+      "But did you know in 1998, the Undertaker threw Mankind off " ..
+      "Hell In A Cell, and plummeted 16 ft. through an announcer's table?")
+    end
     GAME.MONSTERS["arach"].weap_prefs = nil
     GAME.MONSTERS["baron"].weap_prefs = nil
     GAME.MONSTERS["caco"].weap_prefs = nil
