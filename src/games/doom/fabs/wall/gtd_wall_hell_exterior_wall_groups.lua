@@ -320,7 +320,7 @@ PREFABS.Wall_hell_outdoor_torch_fenced_EPIC =
   template = "Wall_hell_stone_brace"
   map = "MAP13"
 
-  replaces = "Wall_torch_fenced"
+  replaces = "Wall_hell_outdoor_torch_fenced"
   uses_epic_textures = true
 
   group = "hell_o_torch_fenced"
