@@ -1624,7 +1624,7 @@ function Layout_decorate_rooms(pass)
 
     end
 
-    local function try_wg_point_fab(A, wg_mode)
+    local function try_wg_point_fab(A, wg_mode, reqs)
       local wg = A.floor_group.wall_group
       local tab = GAME.WALL_GROUP_DECOR
       local o_def
@@ -1732,7 +1732,7 @@ function Layout_decorate_rooms(pass)
 
     -- check for wall group to decor assocation
     local wg_choice = try_wg_point_group(A)
-    local def = try_wg_point_fab(A, wg_choice)
+    local def = try_wg_point_fab(A, wg_choice, reqs)
 
     if not def then return end
 

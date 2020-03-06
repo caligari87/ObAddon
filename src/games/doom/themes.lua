@@ -4415,6 +4415,7 @@ DOOM.WALL_GROUP_DECOR =
       Decor_tech_storage_elevator = 1
     }
 
+    -- MSSP-TODO: support closets, it's not yet supported
     closet_groups =
     {
       UNGROUPED = 1
@@ -4425,7 +4426,6 @@ DOOM.WALL_GROUP_DECOR =
     {
 
     }
-
   }
 }
 
