@@ -16,8 +16,6 @@ PREFABS.Wall_armaetus_glass_huge_red =
   bound_z2 = 128
 
   z_fit  = "frame"
-
-  tex_GLASS1 = "GLASS9"
 }
 
 PREFABS.Wall_armaetus_glass_huge_red_diag =
@@ -36,8 +34,6 @@ PREFABS.Wall_armaetus_glass_huge_red_diag =
   bound_z2 = 128
 
   z_fit  = "frame"
-
-  tex_GLASS1 = "GLASS9"
 }
 
 PREFABS.Wall_armaetus_glass_huge_orange =

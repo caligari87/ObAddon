@@ -3,7 +3,7 @@ PREFABS.Wall_hell_stone_brace = --#
   file   = "wall/gtd_wall_hell_exterior_wall_groups.wad"
   map    = "MAP01"
 
-  prob   = 750
+  prob   = 25
   theme = "hell"
   env = "outdoor"
 

@@ -3,7 +3,7 @@ PREFABS.Wall_tech_outdoor_caution_strip = --#
   file   = "wall/gtd_wall_tech_exterior_wall_groups.wad"
   map    = "MAP01"
 
-  prob   = 200
+  prob   = 15
 
   group = "tech_o_caution_strip"
 
