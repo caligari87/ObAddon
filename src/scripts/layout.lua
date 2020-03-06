@@ -1606,6 +1606,62 @@ function Layout_decorate_rooms(pass)
 
 
   local function try_decoration_in_chunk(chunk, is_cave)
+
+    local function try_wg_point_group(A)
+
+      if A.floor_group and A.floor_group.wall_group then
+        local wg = A.floor_group.wall_group
+        local tab = GAME.WALL_GROUP_DECOR
+        local pick
+
+        -- if associated decor doesn't exist for this wall group
+        -- just pick any random theme-qualifying decor
+        if not tab[wg] then return "RAND" end
+
+        pick = rand.key_by_probs(tab[wg].point_groups)
+        return pick
+      end
+
+    end
+
+    local function try_wg_point_fab(A, wg_mode)
+      local wg = A.floor_group.wall_group
+      local tab = GAME.WALL_GROUP_DECOR
+      local o_def
+
+      -- if ungrouped, pick a point fab in the wall group decor list
+      if wg_mode == "UNGROUPED" then
+        if tab[wg] then
+          local pt_pick
+
+          pt_pick = rand.key_by_probs(tab[wg].point_fabs)
+          o_def = PREFABS[pt_pick]
+          if not o_def then
+            local error_msg = pt_pick .. " not found!\n" ..
+              "Check " .. wg .. ", you punk-ass beach!"
+            error(error_msg)
+          end
+
+          -- MSSP-TODO: check if the force-picked fab even fits the damn
+          -- height or radius! 5 tries else return none.
+
+        else
+          o_def = Fab_pick(reqs, "none_ok")
+        end
+
+      -- if rand, just pick any random decor as normal
+      elseif wg_mode == "RAND" then
+        o_def = Fab_pick(reqs, "none_ok")
+      -- pick a fab based on an existing group if specified
+
+      else
+        reqs.group = wg_mode
+        o_def = Fab_pick(reqs, "none_ok")
+      end
+
+      return o_def
+    end
+
     if chunk.sw < 2 then return end
     if chunk.sh < 2 then return end
 
@@ -1674,7 +1730,10 @@ function Layout_decorate_rooms(pass)
       end
     end
 
-    local def = Fab_pick(reqs, "none_ok")
+    -- check for wall group to decor assocation
+    local wg_choice = try_wg_point_group(A)
+    local def = try_wg_point_fab(A, wg_choice)
+
     if not def then return end
 
     -- don't create pillars under ceiling sinks

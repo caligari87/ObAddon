@@ -1203,7 +1203,7 @@ DOOM.THEMES =
 
     outdoor_wall_groups =
     {
-      PLAIN = 1
+      PLAIN = 2
       tech_o_caution_strip = 1
       tech_o_orange_light_stack = 1
       tech_o_lite_strip_white = 1
@@ -1920,7 +1920,7 @@ DOOM.THEMES =
 
     outdoor_wall_groups =
     {
-      PLAIN = 1
+      PLAIN = 2
       hell_o_stone_brace = 1
       hell_o_wood_brace = 1
       hell_o_metal_framed_skin = 1
@@ -4387,6 +4387,45 @@ DOOM.NAMES =
         ["UAC Crisis"]=30
       }
     }
+  }
+}
+
+--------------------------------------------------------------------
+-- Group wall and decor fab linking
+--------------------------------------------------------------------
+
+DOOM.WALL_GROUP_DECOR =
+{
+  gtd_wall_urban_storage =
+  {
+    point_groups =
+    {
+      UNGROUPED = 1 --if this is picked, pick from the fabs table below
+      RAND = 1 --if this is picked... standard rule of whatever qualifies
+               --for that theme
+    }
+
+    point_fabs =
+    {
+      Crate_small_brown = 1
+      Crate_small_gray = 1
+      Crate_tall_brown = 1
+      Crate_medium_gray = 1
+      Crate_group_medium = 1
+      Decor_tech_storage_elevator = 1
+    }
+
+    closet_groups =
+    {
+      UNGROUPED = 1
+      RAND = 1
+    }
+
+    closet_fabs =
+    {
+
+    }
+
   }
 }
 
