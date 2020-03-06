@@ -1033,8 +1033,7 @@ function Item_pickups_for_class(CL)
 
       select_pickups(R, item_list, stat, qty)
 
-      if R.is_secret then gui.printf('sikrit') end
-      gui.printf("Item list for %s:%1.1f [%s] @ %s\n", stat,qty, CL, R.name)
+      gui.debugf("Item list for %s:%1.1f [%s] @ %s\n", stat,qty, CL, R.name)
 
       each pair in item_list do
         local item = pair.item
