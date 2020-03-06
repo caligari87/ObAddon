@@ -44,6 +44,8 @@ PREFABS.Wall_epic_obaddon_banner_diagonal_hell =
   template = "Wall_epic_obaddon_banner"
   map    = "MAP02"
 
+  theme = "hell"
+
   prob   = 25
 
   where  = "diagonal"
