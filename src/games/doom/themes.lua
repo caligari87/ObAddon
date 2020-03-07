@@ -1221,6 +1221,7 @@ DOOM.THEMES =
       tech_o_hadleys_hope = 1
       tech_o_overhanging_lights = 1
       tech_o_shiny_silver_overhang = 1
+      tech_o_silver_scaffolding = 1
     }
 
     window_groups =

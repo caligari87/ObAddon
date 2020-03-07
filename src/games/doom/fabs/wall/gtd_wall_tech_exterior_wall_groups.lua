@@ -286,3 +286,33 @@ PREFABS.Wall_outdoor_shiny_silver_overhang_EPIC =
 
   bound_z2 = 160
 }
+
+PREFABS.Wall_tech_caution_bracket_silver_scaffolding =
+{
+  template = "Wall_tech_outdoor_caution_strip"
+
+  map = "MAP14"
+
+  group = "tech_o_silver_scaffolding"
+
+  z_fit = { 36,44 }
+
+  tex_SHAWVEN2 = "SILVER2"
+  tex_SHAWN4 = "SHAWN2"
+  tex_WARNSTEP = "METAL"
+  flat_WARN2 = "CEIL5_2"
+}
+
+PREFABS.Wall_tech_caution_bracket_silver_scaffolding_EPIC =
+{
+  template = "Wall_tech_outdoor_caution_strip"
+
+  map = "MAP14"
+
+  group = "tech_o_silver_scaffolding"
+
+  replaces = "Wall_tech_caution_bracket_silver_scaffolding"
+  uses_epic_textures = true
+
+  z_fit = { 36,44 }
+}
