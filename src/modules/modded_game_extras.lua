@@ -32,7 +32,7 @@ MODDED_GAME_EXTRAS.SCRIPT_TYPE_CHOICES =
 
 MODDED_GAME_EXTRAS.ACTOR_NAME_GEN_CHOICES =
 {
-  "zs",      _("ZScript"),
+  "zs",      _("ZScript - Generic"),
   "zs_pb",   _("ZScript - Project Brutality"),
   "zs_qcde", _("ZScript - Quake Champions: Doom Edition"),
   "zs_d4t",  _("ZScript - Death Foretold"),
@@ -531,6 +531,21 @@ class bossNameHandler : EventHandler
       if (isHuman(e.Thing))
       {
         mon_name = getHumanTag();
+      }
+
+      // universal check if all other checks failed
+      if (e.Thing.bIsMonster && e.Thing.bCountKill
+      && mon_name == "")
+      {
+        switch(Random(1,2))
+        {
+          case 1:
+            mon_name = getFancyDemonTag();
+            break;
+          case 2:
+            mon_name = getNormalDemonTag();
+            break;
+        }
       }
 
       if (mon_name != "")
