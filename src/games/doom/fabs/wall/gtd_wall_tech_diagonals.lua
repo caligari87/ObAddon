@@ -1,4 +1,4 @@
-PREFABS.Wall_diag_outcrop =
+PREFABS.Wall_tech_diag_outcrop =
 {
   file   = "wall/gtd_wall_tech_diagonals.wad"
   map    = "MAP01"
@@ -16,23 +16,33 @@ PREFABS.Wall_diag_outcrop =
   z_fit  = { 32,40 }
 }
 
-PREFABS.Wall_diag_outcrop_outdoor =
+PREFABS.Wall_tech_diag_outcrop_outdoor =
 {
-  template = "Wall_diag_outcrop"
+  template = "Wall_tech_diag_outcrop"
 
   env = "outdoor"
 }
 
-PREFABS.Wall_diag_triple_braced =
+PREFABS.Wall_tech_diag_triple_braced =
 {
-  template = "Wall_diag_outcrop"
+  template = "Wall_tech_diag_outcrop"
   map      = "MAP02"
 }
 
-PREFABS.Wall_diag_triple_braced_outdoor =
+PREFABS.Wall_tech_diag_triple_braced_outdoor =
 {
-  template = "Wall_diag_outcrop"
+  template = "Wall_tech_diag_outcrop"
   map      = "MAP02"
 
   env = "outdoor"
+}
+
+PREFABS.Wall_tech_diag_overhead_roof =
+{
+  template = "Wall_tech_diag_outcrop"
+  map = "MAP03"
+
+  env    = "outdoor"
+
+  z_fit  = { 32,40 }
 }

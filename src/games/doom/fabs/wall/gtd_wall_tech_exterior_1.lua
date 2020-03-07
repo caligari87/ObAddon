@@ -7,7 +7,7 @@ PREFABS.Wall_tech_outdoor_accent_flat_plain =
   file   = "wall/gtd_wall_tech_exterior_1.wad"
   map    = "MAP01"
 
-  prob   = 50
+  prob   = 35
   env   = "!building"
   theme = "tech"
 
@@ -26,30 +26,113 @@ PREFABS.Wall_tech_outdoor_accent_flat_piped =
 {
   template = "Wall_tech_outdoor_accent_flat_plain"
   map      = "MAP02"
+
+  prob = 10
+
+  tex_METAL4 =
+  {
+    METAL1 = 1
+    METAL3 = 4
+    METAL4 = 4
+    METAL5 = 4
+  }
+
+  z_fit = { 24,88 }
 }
 
-PREFABS.Wall_tech_vertical_long_windows =
+PREFABS.Wall_tech_top_electric_board_thing =
 {
   template = "Wall_tech_outdoor_accent_flat_plain"
   map    = "MAP03"
 
-  z_fit = { 64-8,64+8 }
+  prob = 5
+
+  z_fit = "bottom"
+
+  tex_COMPTALL =
+  {
+    METAL3 = 1
+    COMPTALL = 1
+    COMPSPAN = 3
+  }
 }
 
-PREFABS.Wall_tech_plain_diag = --MSSP-TODO: transfer this to tech diagonals *.wad
+PREFABS.Wall_tech_top_vanilla_vents =
 {
-  file   = "wall/gtd_wall_tech_exterior_1.wad"
-  map    = "MAP05"
+  template = "Wall_tech_outdoor_accent_flat_plain"
+  map    = "MAP04"
 
-  prob   = 50
-  theme  = "tech"
-  env    = "outdoor"
+  prob = 5
 
-  where  = "diagonal"
-  height = 128
+  z_fit = "bottom"
 
-  bound_z1 = 0
-  bound_z2 = 128
+  tex_METAL5 =
+  {
+    METAL5 = 4
+    BLAKWAL2 = 1
+  }
+}
 
-  z_fit  = { 32,40 }
+PREFABS.Wall_tech_bottom_vent =
+{
+  template = "Wall_tech_outdoor_accent_flat_piped"
+  map = "MAP05"
+
+  prob = 10
+
+  z_fit = "top"
+
+  tex_COMPTALL =
+  {
+    COMPTALL = 1
+    COMPWERD = 1
+    METAL5 = 2
+  }
+}
+
+PREFABS.Wall_tech_single_brace =
+{
+  template = "Wall_tech_outdoor_accent_flat_plain"
+  map    = "MAP06"
+
+  prob = 35
+
+  z_fit = "frame"
+
+  can_flip = true
+}
+
+PREFABS.Wall_tech_top_metal =
+{
+  template = "Wall_tech_outdoor_accent_flat_plain"
+  map = "MAP07"
+
+  prob = 20
+
+  z_fit = "bottom"
+
+  tex_METAL2 =
+  {
+    METAL2 = 5
+    METAL3 = 1
+    METAL5 = 2
+  }
+}
+
+PREFABS.Wall_tech_bottom_metal_half =
+{
+  template = "Wall_tech_outdoor_accent_flat_plain"
+  map = "MAP08"
+
+  prob = 8
+
+  z_fit = "top"
+
+  tex_METAL2 =
+  {
+    METAL2 = 4
+    METAL3 = 1
+    METAL5 = 1
+    COMPWERD = 1
+  }
 }
