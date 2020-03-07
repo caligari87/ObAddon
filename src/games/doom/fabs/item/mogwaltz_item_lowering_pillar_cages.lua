@@ -11,7 +11,7 @@ PREFABS.Item_mogwaltz_lowering_pillar =
   seed_w = 3
   seed_h = 2
 
-  over = 16
+  over = -16
   deep = 16
 
   x_fit = "frame"

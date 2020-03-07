@@ -19,8 +19,6 @@ PREFABS.Locked_joiner_round_3key_modern =
 
   x_fit  = "frame"
   y_fit  = { 132,136 }
-
-  nearby_h = 128
 }
 
 PREFABS.Locked_joiner_round_3key_hell =
