@@ -420,6 +420,16 @@ PREFABS.Wall_hell_dark_cathedral_windows_EPIC = --#
   bound_z2 = 256
 }
 
+PREFABS.Wall_hell_extruded_arch = --#
+{
+  template = "Wall_hell_stone_brace"
+  map = "MAP16"
+
+  group = "hell_o_extruded_arch"
+
+  z_fit = { 40,48 }
+}
+
 -- references to some older fabs [2]
 
 PREFABS.Wall_hell_fake_window_outdoor = --#

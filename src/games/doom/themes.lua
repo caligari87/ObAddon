@@ -1940,6 +1940,7 @@ DOOM.THEMES =
       hell_o_dark_banners = 1
       hell_o_cathedral_glass_red = 1
       hell_o_dark_cathedral_windows = 1
+      hell_o_extruded_arch = 1
     }
 
     window_groups =
