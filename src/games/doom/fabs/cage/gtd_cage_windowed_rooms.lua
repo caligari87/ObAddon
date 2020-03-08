@@ -5,7 +5,7 @@ PREFABS.Cage_wall_windowed_rooms_square =
   file   = "cage/gtd_cage_windowed_rooms.wad"
   map   = "MAP01"
 
-  prob  = 500
+  prob  = 1000
   skip_prob = 66
 
   theme  = "tech"

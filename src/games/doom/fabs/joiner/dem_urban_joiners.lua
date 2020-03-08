@@ -10,7 +10,7 @@ PREFABS.Joiner_living_room =
 
   engine = "zdoom"
 
-  prob   = 1250
+  prob   = 2000
 
   theme  = "urban"
 
@@ -46,7 +46,7 @@ PREFABS.Joiner_kitchen =
   file = "joiner/dem_urban_joiners.wad"
   map = "MAP02"
 
-  prob = 1250
+  prob = 2000
 
   theme = "urban"
 
@@ -82,7 +82,7 @@ PREFABS.Joiner_bedroom =
   file = "joiner/dem_urban_joiners.wad"
   map = "MAP03"
 
-  prob = 1250
+  prob = 2000
 
   theme = "urban"
 
@@ -122,7 +122,7 @@ PREFABS.Joiner_bedroom2 =
   file = "joiner/dem_urban_joiners.wad"
   map = "MAP04"
 
-  prob = 1250
+  prob = 2000
 
   theme = "urban"
 
@@ -170,7 +170,7 @@ PREFABS.Joiner_stairwell =
   file = "joiner/dem_urban_joiners.wad"
   map = "MAP05"
 
-  prob = 3000
+  prob = 4500
 
   theme = "urban"
 
@@ -215,7 +215,7 @@ PREFABS.Joiner_bar =
 
   engine = "zdoom"
 
-  prob   = 1250
+  prob   = 2000
 
   theme  = "urban"
 
@@ -257,7 +257,7 @@ PREFABS.Joiner_waiting_room =
 
   engine = "zdoom"
 
-  prob   = 1250
+  prob   = 2000
 
   theme  = "urban"
 
@@ -304,7 +304,7 @@ PREFABS.Joiner_electronic_store =
 
   engine = "zdoom"
 
-  prob   = 1250
+  prob   = 2000
 
   theme  = "urban"
 
@@ -348,7 +348,7 @@ PREFABS.Joiner_cornerstore =
 
   engine = "zdoom"
 
-  prob   = 1250
+  prob   = 2000
 
   theme  = "urban"
 
@@ -392,7 +392,7 @@ PREFABS.Joiner_bookstore =
 
   engine = "zdoom"
 
-  prob   = 1250
+  prob   = 2000
 
   theme  = "urban"
 
