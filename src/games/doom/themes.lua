@@ -1251,6 +1251,7 @@ DOOM.THEMES =
       PLAIN = 50
       gappy = 50
       fence_tech_lit = 50
+      fence_corrugated_steel = 50
     }
 
     fence_posts =
@@ -1561,6 +1562,7 @@ DOOM.THEMES =
       crenels = 12
       fence_tech_lit = 50
       fence_gothic = 25
+      fence_corrugated_steel = 50
     }
 
     fence_posts =
