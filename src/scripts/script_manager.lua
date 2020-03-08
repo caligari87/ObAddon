@@ -52,7 +52,7 @@ function ScriptMan_assemble_mapinfo_lump()
   if PARAM.boss_gen and PARAM.boss_count != -1 then
     eventhandler_lines = eventhandler_lines .. '"BossGenerator_Handler"'
   end
-  if PARAM.boss_gen and PARAM.boss_count != -1 and PARAM.custom_actor_names != "none" then
+  if PARAM.boss_gen and PARAM.boss_count != -1 and PARAM.actor_name_script then
     eventhandler_lines = eventhandler_lines .. ", "
   end
   if PARAM.actor_name_script then
