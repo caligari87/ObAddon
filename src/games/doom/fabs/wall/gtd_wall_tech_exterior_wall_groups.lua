@@ -327,5 +327,5 @@ PREFABS.Wall_tech_outdoor_concrete_brace = --#
 
   group = "tech_o_concrete_base"
 
-  z_fit = { 48,56 }
+  z_fit = { 0,32 , 48,56 }
 }
