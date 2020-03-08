@@ -27,6 +27,7 @@ PREFABS.Wall_hell_wood_brace = --#
   groups = "hell_o_wood_brace"
 
   tex_STONE2 = "WOODMET2"
+  flat_FLAT1 = "CEIL5_1"
 }
 
 PREFABS.Wall_hell_metal_framed_skin = --#
