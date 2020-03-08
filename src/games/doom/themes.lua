@@ -4435,6 +4435,19 @@ DOOM.WALL_GROUP_DECOR =
 
     }
   }
+
+  gtd_wall_server_room =
+  {
+    point_groups =
+    {
+      RAND = 1
+      gtd_wall_server_room = 10
+    }
+
+    point_fabs =
+    {
+    }
+  }
 }
 
 
