@@ -2383,8 +2383,8 @@ ZDOOM_STORIES.QUIT_MESSAGES =
   [[ObAddon enhances your problem-solving skills! Contribute now!]],
   [[Set the Y offset, again of both front and back side, to the negative of the subtraction of the ceiling height of the sector the pit and the floor height of the planes, or y-offset = -(pitceilingheight-planefloorheight). So, the ceiling height is 256 in both platforms and the pit and the platform's floor height is 0, so the sidedefs' Y-offsets must be -(256-0) = -256.]],
   [[Cacos are red, their insides are blue. They wish to make a meal out of you.]],
-  [[Having a boyfriend or girlfriend is important, but killings demons is importanter.]], -- E231
-  [[To not die, keep your health points above zero.]], --E231
+  [[Having a boyfriend or girlfriend is important, but killings demons is importanter.]], -- Monika
+  [[To not die, keep your health points above zero.]], --Monika
   [[Having trouble with some of the maps of mapset as a whole? Git gud.]],
 
   -- other important facts, just facts no silly stuff

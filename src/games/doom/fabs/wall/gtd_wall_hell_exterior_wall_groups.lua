@@ -136,10 +136,13 @@ PREFABS.Wall_hell_outdoor_lava_falls = --#
 
   group = "hell_o_lava_falls"
 
+  on_scenics = "never"
+
   tex_FIREMAG1 =
   {
-    FIREMAG1 = 10
+    FIREMAG1 = 15
     SLADWALL = 50
+    SLADSKULL = 15
   }
 
   z_fit = { 48,72 }
