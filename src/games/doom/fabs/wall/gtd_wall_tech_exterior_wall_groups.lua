@@ -357,4 +357,10 @@ PREFABS.Wall_tech_fence_lights_uac_thing_EPIC =
   group = "tech_o_fence_lights_uac_thing"
 
   z_fit = { 10,14 }
+
+  tex_TEKGRDR =
+  {
+    TEKGRDR = 1
+    TEKGRBLU = 5
+  }
 }
