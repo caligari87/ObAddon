@@ -1047,6 +1047,9 @@ DOOM.THEMES =
       CEMENT9  = 10
       BRICK10  = 10
       METAL1   = 10
+
+      GRAY5 = 50
+      GRAY7 = 50
     }
 
     cliff_mats =
@@ -1386,7 +1389,7 @@ DOOM.THEMES =
       WOOD5    = 60
       BSTONE1  = 40
       STONE4   = 30
-      STONE6   = 30
+
       CEMENT9  = 30
       BRICK12  = 20
       METAL2   = 20
@@ -1394,6 +1397,9 @@ DOOM.THEMES =
       BRICK11  = 10
       STUCCO   = 10
       STUCCO3  = 10
+
+      GRAY5 = 50
+      GRAY7 = 50
     }
 
     cliff_mats =
