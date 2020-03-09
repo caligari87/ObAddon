@@ -25,6 +25,12 @@ PREFABS.Pic_simple_crates_2 =
 {
   template = "Pic_simple_crates_1"
   map      = "MAP02"
+
+  thing_15 =
+  {
+    [0] = 1
+    [15] = 1
+  }
 }
 
 PREFABS.Pic_simple_crates_3 =
