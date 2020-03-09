@@ -3,7 +3,7 @@ PREFABS.Item_closet_guts =
   file   = "item/gtd_item_closet_hell.wad"
   map    = "MAP01"
 
-  prob   = 100
+  prob   = 35
   theme  = "hell"
   env    = "!cave"
 
@@ -30,4 +30,24 @@ PREFABS.Item_closet_hellish_furnace =
 {
   template = "Item_closet_guts"
   map      = "MAP03"
+}
+
+--
+
+PREFABS.Item_closet_guts_big =
+{
+  template = "Item_closet_guts"
+  map = "MAP04"
+}
+
+PREFABS.Item_closet_hellish_alcove_big =
+{
+  template = "Item_closet_guts"
+  map = "MAP05"
+}
+
+PREFABS.Item_closet_hellish_furnace_big =
+{
+  template = "Item_closet_guts"
+  map = "MAP06"
 }
