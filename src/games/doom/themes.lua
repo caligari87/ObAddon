@@ -1042,7 +1042,6 @@ DOOM.THEMES =
       STONE4   = 30
       METAL2   = 30
       BRONZE1  = 30
-      STONE6   = 30
       SLADWALL = 30
 
       CEMENT9  = 10
@@ -1252,6 +1251,7 @@ DOOM.THEMES =
       gappy = 50
       fence_tech_lit = 50
       fence_corrugated_steel = 50
+      fence_tech_hl_bars = 50
     }
 
     fence_posts =
@@ -1563,6 +1563,7 @@ DOOM.THEMES =
       fence_tech_lit = 50
       fence_gothic = 25
       fence_corrugated_steel = 50
+      fence_tech_hl_bars = 12
     }
 
     fence_posts =
@@ -1753,7 +1754,6 @@ DOOM.THEMES =
       SKSNAKE2 = 20
       SKIN2    = 20
       CRACKLE2 = 20
-      FIREBLU2 = 20
       ROCK5    = 10
       SKINFACE = 10
       SP_FACE2 = 10
