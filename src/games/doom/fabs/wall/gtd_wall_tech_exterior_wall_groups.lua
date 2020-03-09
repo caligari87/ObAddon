@@ -329,3 +329,32 @@ PREFABS.Wall_tech_outdoor_concrete_brace = --#
 
   z_fit = { 0,32 , 48,56 }
 }
+
+PREFABS.Wall_tech_fence_lights_uac_thing = --#
+{
+  template = "Wall_tech_outdoor_caution_strip"
+  map = "MAP16"
+
+  uses_epic_textures = true
+
+  group = "tech_o_fence_lights_uac_thing"
+
+  z_fit = { 10,14 }
+
+  tex_TEKGRDR = "TEKGREN2"
+  tex_BROWN2 = "GRAY7"
+  tex_FENCE2 = "MIDBARS1"
+}
+
+PREFABS.Wall_tech_fence_lights_uac_thing_EPIC =
+{
+  template = "Wall_tech_outdoor_caution_strip"
+  map = "MAP16"
+
+  replaces = "Wall_tech_fence_lights_uac_thing"
+  uses_epic_textures = true
+
+  group = "tech_o_fence_lights_uac_thing"
+
+  z_fit = { 10,14 }
+}
