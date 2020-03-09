@@ -4414,13 +4414,18 @@ DOOM.WALL_GROUP_DECOR =
     point_fabs =
     {
       Crate_small_brown = 1
-      Crate_small_gray = 1
-      Crate_tall_brown = 1
-      Crate_medium_gray = 1
-      Crate_group_medium = 1
-      Decor_tech_storage_elevator = 1
-      Decor_sealed_storage = 1
-      Decor_sealed_storage_large = 1
+      Crate_small_gray = 2
+      Crate_tall_brown = 2
+      Crate_medium_gray = 2
+      Crate_group_medium = 2
+      Decor_tech_storage_elevator = 4
+      Decor_sealed_storage = 2
+      Decor_sealed_storage_large = 4
+      Decor_forklift1T = 1
+      Decor_forklift2T = 2
+      Decor_forklift3T = 2
+      Decor_forklift4T = 2
+      Decor_forklift5T = 1
     }
 
     -- MSSP-TODO: support closets, it's not yet supported
