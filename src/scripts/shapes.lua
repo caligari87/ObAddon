@@ -5811,7 +5811,7 @@ GROW_36_SINGLE_FORWARD_AREA =
   }
 }
 
-GROW_ROUND_NEW_AREA =
+GROW_36_ROUND_NEW_AREA =
 {
   prob = 25
   skip_prob = 75
@@ -5837,7 +5837,7 @@ GROW_ROUND_NEW_AREA =
   }
 }
 
-GROW_CROSS_NEW_AREA =
+GROW_36_CROSS_NEW_AREA =
 {
   prob = 25
   skip_prob = 75
@@ -5855,7 +5855,7 @@ GROW_CROSS_NEW_AREA =
   }
 }
 
-GROW_ATARI_LOGO_NEW_AREA =
+GROW_36_ATARI_LOGO_NEW_AREA =
 {
   prob = 25
   skip_prob = 75
@@ -5878,7 +5878,7 @@ GROW_ATARI_LOGO_NEW_AREA =
   }
 }
 
-GROW_INVERSE_ATARI_LOGO_NEW_AREA =
+GROW_36_INVERSE_ATARI_LOGO_NEW_AREA =
 {
   prob = 25
   skip_prob = 75
@@ -5901,7 +5901,7 @@ GROW_INVERSE_ATARI_LOGO_NEW_AREA =
   }
 }
 
-GROW_RIBBED_WALLS_NEW_AREA_DOUBLE =
+GROW_36_RIBBED_WALLS_NEW_AREA_DOUBLE =
 {
   prob = 15
   skip_prob = 80
@@ -5922,7 +5922,7 @@ GROW_RIBBED_WALLS_NEW_AREA_DOUBLE =
   }
 }
 
-GROW_RIBBED_WALLS_NEW_AREA_SINGLE =
+GROW_36_RIBBED_WALLS_NEW_AREA_SINGLE =
 {
   prob = 15
   skip_prob = 80
@@ -5940,7 +5940,7 @@ GROW_RIBBED_WALLS_NEW_AREA_SINGLE =
   }
 }
 
-GROW_PEANUT_NEW_AREA =
+GROW_36_PEANUT_NEW_AREA =
 {
   prob = 15
   skip_prob = 80
@@ -5966,7 +5966,7 @@ GROW_PEANUT_NEW_AREA =
   }
 }
 
-GROW_4PILLAR_ARCHS_NEW_AREA =
+GROW_36_4PILLAR_ARCHS_NEW_AREA =
 {
   prob = 15
   skip_prob = 75
@@ -5986,7 +5986,7 @@ GROW_4PILLAR_ARCHS_NEW_AREA =
 }
 
 
-GROW_4PILLAR_OPEN_ROOF_GAZEBO_NEW_AREA =
+GROW_36_4PILLAR_OPEN_ROOF_GAZEBO_NEW_AREA =
 {
   prob = 20
   skip_prob = 75
@@ -6002,6 +6002,59 @@ GROW_4PILLAR_OPEN_ROOF_GAZEBO_NEW_AREA =
     "........","11111111"
     "........","11111111"
     "xxx11xxx","xxx11xxx"
+  }
+}
+
+GROW_36_CANDY =
+{
+  prob = 20
+  skip_prob = 75
+
+  structure =
+  {
+    "........","11111111"
+    "........","11111111"
+    "........","11/AA%11"
+    "........","AAAAAAAA"
+    "........","AAA..AAA"
+    "........","AAA..AAA"
+    "........","AAAAAAAA"
+    "........","11%AA/11"
+    "........","11111111"
+    "........","11111111"
+    "xxx11xxx","xxx11xxx"
+  }
+
+  diagonals =
+  {
+    "1A","A1"
+    "1A","A1"
+  }
+}
+
+GROW_36_CENTER_PILLAR_CROSSED =
+{
+  prob = 20
+
+  skip_prob = 80
+
+  structure =
+  {
+    "........","/11AA11%"
+    "........","111AA111"
+    "........","111AA111"
+    "........","AAAAAAAA"
+    "........","AAAAAAAA"
+    "........","111AA111"
+    "........","111AA111"
+    "........","%11AA11/"
+    "xxx11xxx","xxx11xxx"
+  }
+
+  diagonals =
+  {
+    ".1","1."
+    ".1","1."
   }
 }
 
