@@ -7,7 +7,7 @@ PREFABS.Item_scionox_simple_crates =
 
   env  = "!park"
 
-  prob = 40
+  prob = 65
 
   theme = "!hell"
 
