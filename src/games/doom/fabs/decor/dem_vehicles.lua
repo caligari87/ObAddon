@@ -35,7 +35,7 @@ PREFABS.Decor_forklift1T =
 
   engine = "zdoom"
 
-  prob   = 4500
+  prob   = 2000
   theme  = "tech"
 
   uses_epic_textures = true
@@ -59,7 +59,7 @@ PREFABS.Decor_forklift2T =
 
   engine = "zdoom"
 
-  prob   = 4500
+  prob   = 2000
   theme  = "tech"
 
   uses_epic_textures = true
@@ -83,7 +83,7 @@ PREFABS.Decor_forklift3T =
 
   engine = "zdoom"
 
-  prob   = 4500
+  prob   = 2000
   theme  = "tech"
 
   uses_epic_textures = true
@@ -107,7 +107,7 @@ PREFABS.Decor_forklift4T =
 
   engine = "zdoom"
 
-  prob   = 4500
+  prob   = 2000
   theme  = "tech"
 
   uses_epic_textures = true
@@ -131,7 +131,7 @@ PREFABS.Decor_forklift5T =
 
   engine = "zdoom"
 
-  prob   = 4500
+  prob   = 2000
   theme  = "tech"
 
   uses_epic_textures = true
@@ -168,7 +168,7 @@ PREFABS.Decor_forklift1U =
 
   engine = "zdoom"
 
-  prob   = 4500
+  prob   = 2000
   theme  = "urban"
 
   uses_epic_textures = true
@@ -190,7 +190,7 @@ PREFABS.Decor_forklift2U =
 
   engine = "zdoom"
 
-  prob   = 4500
+  prob   = 2000
   theme  = "urban"
 
   uses_epic_textures = true
@@ -214,7 +214,7 @@ PREFABS.Decor_forklift3U =
 
   engine = "zdoom"
 
-  prob   = 4500
+  prob   = 2000
   theme  = "urban"
 
   uses_epic_textures = true
@@ -238,7 +238,7 @@ PREFABS.Decor_forklift4U =
 
   engine = "zdoom"
 
-  prob   = 4500
+  prob   = 2000
   theme  = "urban"
 
   uses_epic_textures = true
@@ -262,7 +262,7 @@ PREFABS.Decor_forklift5U =
 
   engine = "zdoom"
 
-  prob   = 4500
+  prob   = 2000
   theme  = "urban"
 
   uses_epic_textures = true

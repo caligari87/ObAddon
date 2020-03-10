@@ -40,12 +40,16 @@ PREFABS.Item_closet_complex1 =
 {
   template = "Item_closet_simple1"
   map    = "MAP04"
+
+  prob = 33
 }
 
 PREFABS.Item_closet_complex2 =
 {
   template = "Item_closet_simple1"
   map    = "MAP05"
+
+  prob = 33
 
   sector_1 = { [0]=1 }
 }
@@ -54,4 +58,6 @@ PREFABS.Item_closet_complex3 =
 {
   template = "Item_closet_simple1"
   map    = "MAP06"
+
+  prob = 33
 }
