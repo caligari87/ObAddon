@@ -25,7 +25,7 @@ PREFABS.Item_gtd_alcove2 =
   tex_COMPTALL =
   {
     COMPTALL = 1, COMPBLUE = 1, LITEBLU1 = 1,
-    TEKGREN1 = 1, TEKBRON = 1, TEKWALL1 = 1,
+    TEKGREN1 = 1, TEKBRON2 = 1, TEKWALL1 = 1,
     TEKWALL4 = 1, SLADWALL = 1,
   }
 
