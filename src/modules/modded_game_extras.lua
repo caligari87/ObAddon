@@ -77,6 +77,10 @@ function MODDED_GAME_EXTRAS.setup(self)
   if PARAM.custom_actor_names != "none" then
     MODDED_GAME_EXTRAS.generate_custom_actor_names(PARAM.custom_actor_names)
   end
+
+  if PARAM.qcde_lootboxes == "enable" then
+    MODDED_GAME_EXTRAS.add_qcde_lootboxes()
+  end
 end
 
 function MODDED_GAME_EXTRAS.init_hn_info()
@@ -985,6 +989,54 @@ function MODDED_GAME_EXTRAS.generate_custom_actor_names(mode)
   PARAM.actor_name_script = actor_name_script
 end
 
+
+
+MODDED_GAME_EXTRAS.QCDE_LOOTBOX_NICE_ITEMS =
+{
+  lb_backpack =
+  {
+    id = 15514
+    kind = "powerup"
+    add_prob = 5
+    start_prob = 40
+    closet_prob = 5
+    secret_prob = 35
+  }
+
+  lb_chest =
+  {
+    id = 15515
+    kind = "powerup"
+    add_prob = 5
+    start_prob = 30
+    closet_prob = 5
+    secret_prob = 35
+  }
+
+  lb_reliquary =
+  {
+    id = 15516
+    kind = "powerup"
+    add_prob = 4
+    start_prob = 20
+    closet_prob = 5
+    secret_prob = 35
+  }
+}
+
+
+
+function MODDED_GAME_EXTRAS.add_qcde_lootboxes()
+
+  each item, property in MODDED_GAME_EXTRAS.QCDE_LOOTBOX_NICE_ITEMS do
+    GAME.NICE_ITEMS[item] = property
+  end
+
+  gui.printf(table.tostr(GAME.NICE_ITEMS))
+
+end
+
+
 ----------------------------------------------------------------
 
 OB_MODULES["modded_game_extras"] =
@@ -1027,6 +1079,7 @@ OB_MODULES["modded_game_extras"] =
       tooltip = "Adds support for m8f's Hellscape Navigator by generating " ..
       "name markers in the map per room."
       default = "none"
+      gap = 1
     }
 
     custom_actor_names =
@@ -1040,6 +1093,16 @@ OB_MODULES["modded_game_extras"] =
       "Uses class inheritance, so custom monsters inheriting from the base classes also recieve "..
       "custom names. Use compatibility options only when necessary."
       default = "none"
+      gap = 1
+    }
+
+    qcde_lootboxes =
+    {
+      name = "qcde_lootboxes"
+      label = _("QC:DE Lootboxes")
+      choices = MODDED_GAME_EXTRAS.ENABLE_DISABLE
+      tooltip = "Adds Quake Champions: Doom Edition Lootboxes as nice item pickups."
+      default = "disable"
     }
   }
 }
