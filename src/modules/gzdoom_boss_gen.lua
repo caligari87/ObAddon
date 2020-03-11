@@ -70,6 +70,12 @@ BOSS_GEN_TUNE.BOSS_WEAP =
   "close",  _("Close to player start"),
 }
 
+BOSS_GEN_TUNE.BOSS_EXIT =
+{
+  "default", _("Exit after 10 seconds"),
+  "item",  _("Spawn pickup that exits the level"),
+}
+
 BOSS_GEN_TUNE.TEMPLATES =
 {
   ZSC =
@@ -430,10 +436,7 @@ class bossController : thinker
         {
             Thing_Destroy(0);
         }
-        if(ending>350)
-        {
-            Exit_Normal(0);
-        }
+        BEXIT
         if(boss)
         {
             if(boss.starthealth < boss.health)
@@ -853,6 +856,47 @@ class BossSummonSpot : Actor
     }
 }
 
+class BossExiter : CustomInventory
+{
+	Default
+	{
+	Translation "168:191=250:254", "32:48=250:254", "192:207=32:47", "240:247=47:47";
+	Scale 2;
+	}
+	States
+	{
+	Spawn:
+		PINS ABCD 4 BRIGHT A_SpawnItemEx("BossExiterGlow");
+		Loop;
+	Pickup:
+		TNT1 A 1 Exit_Normal(0);
+		Stop;
+	}
+}
+class BossExiterGlow : Actor
+{
+	Default
+	{
+	Translation "168:191=250:254", "32:48=250:254", "192:207=32:47", "240:247=47:47";
+	Scale 2;
+	+NOGRAVITY;
+	+NOINTERACTION;
+	}
+	States
+	{
+	Spawn:
+		PINS ABCD 4 BRIGHT;
+		Loop;
+	}
+	override void Tick()
+	{
+		super.Tick();
+		A_Fadeout(0.02);
+		scale *= 0.99;
+		SetZ(pos.z+2);
+	}
+}
+
 //special
 class bossabilitygiver_nothing : bossabilitygiver { }
 class bossabilitygiver_boss : bossabilitygiver { }
@@ -922,6 +966,31 @@ class bossabilitygiver_homing : bossabilitygiver { }
                     ActivateSpawners(leftover,1024);
                 }
             }
+]]
+  EXNORMAL = [[if(ending>350)
+        {
+            Exit_Normal(0);
+        }
+]]
+  EXITEM = [[if(ending==100)
+			{
+				if(boss)
+				{
+					boss.A_SpawnItemEx("TeleportFog", flags:SXF_NOCHECKPOSITION);
+					boss.A_SpawnItemEx("BossExiter", flags:SXF_NOCHECKPOSITION);
+				}
+				else
+				{
+					ThinkerIterator Exiter = ThinkerIterator.Create("BossSummonSpot");
+					BossSummonSpot fixexit;
+					while (fixexit = BossSummonSpot(Exiter.Next()))
+					{
+						fixexit.A_SpawnItemEx("TeleportFog", flags:SXF_NOCHECKPOSITION);
+						fixexit.A_SpawnItemEx("BossExiter", flags:SXF_NOCHECKPOSITION);
+						break;
+					}
+				}
+			}
 ]]
 }
 
@@ -1359,6 +1428,12 @@ function BOSS_GEN_TUNE.all_done()
   else
     scripty = string.gsub(scripty, "SMAXHEALTH", "1000")
   end
+ 
+  if PARAM.boss_gen_exit == "item" then
+    scripty = string.gsub(scripty, "BEXIT", BOSS_GEN_TUNE.TEMPLATES.EXITEM)
+  else
+    scripty = string.gsub(scripty, "BEXIT", BOSS_GEN_TUNE.TEMPLATES.EXNORMAL)
+  end
 
   for name,info in pairs(PARAM.boss_types) do
     local bhp = info.health
@@ -1589,5 +1664,15 @@ OB_MODULES["gzdoom_boss_gen"] =
       default = "scatter",
       tooltip = "Influences weapon placement in boss arena."
     }
+	
+	boss_gen_exit =
+	{
+	  name = "boss_gen_exit",
+      label = _("Exit type"),
+      priority = 90,
+      choices = BOSS_GEN_TUNE.BOSS_EXIT,
+      default = "default",
+      tooltip = "Changes exit type after boss has been destroyed."
+	}
   }
 }
