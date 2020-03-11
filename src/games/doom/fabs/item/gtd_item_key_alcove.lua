@@ -43,6 +43,7 @@ PREFABS.Item_gtd_alcove2_urban =
     CEMENT9 = 4, BRICK11 = 1, BRICK12 = 1, BRICK7,
     REDWALL = 1, SLADWALL = 1, WOODGARG = 1,
   }
+  tex_METAL5 = "BRICKLIT"
   flat_CEIL4_3 = "FLAT5_2"
 }
 
@@ -54,8 +55,9 @@ PREFABS.Item_gtd_alcove2_hell =
 
   tex_COMPTALL =
   {
-    FIRELAVA = 1, FIREBLU1 = 1, FIREWALA = 1, FIREMAG = 1,
+    FIRELAVA = 1, FIREBLU1 = 1, FIREMAG = 1,
     CRACKLE2 = 1, CRACKLE4 = 1, SLADWALL = 1, WOODGARG = 1,
   }
+  tex_METAL5 = "WOOD4"
   flat_CEIL4_3 = "DEM1_6"
 }
