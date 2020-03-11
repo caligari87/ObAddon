@@ -6,7 +6,7 @@ PREFABS.Item_hell_alcove_tomb_secret =
 
   prob   = 50
   theme  = "hell"
-  env    = "!cave"
+  env    = "!nature"
 
   where  = "seeds"
   key    = "secret"

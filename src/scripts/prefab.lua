@@ -2244,6 +2244,11 @@ function Fab_find_matches(reqs, match_state)
       if match_environment(req_k, "courtyard") then return true end
     end
 
+    if req_k == "cave" or req_k == "park" then
+      if def_k == "nature" then return true end
+      if def_k == "!nature" then return false end
+    end
+
 
     -- negated check?
     if string.sub(def_k, 1, 1) == '!' then
