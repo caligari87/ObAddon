@@ -468,9 +468,27 @@ class bossNameHandler : EventHandler
     return getExoticName();
   }
 
+  string getRandomDemonTag()
+  {
+    string tmp;
+
+    switch(Random(1,2))
+    {
+      case 1:
+        tmp = getFancyDemonTag();
+        break;
+      case 2:
+        tmp = getNormalDemonTag();
+        break;
+    }
+
+    return tmp;
+  }
+
   string getHumanTag()
   {
     string tmp;
+
     switch(Random(1,4))
     {
       case 1:
@@ -516,15 +534,7 @@ class bossNameHandler : EventHandler
 
       if (isSemiRankedDemon(e.Thing))
       {
-        switch(Random(1,2))
-        {
-          case 1:
-            mon_name = getFancyDemonTag();
-            break;
-          case 2:
-            mon_name = getNormalDemonTag();
-            break;
-        }
+        mon_name = getRandomDemonTag();
       }
 
       if (isRankedDemon(e.Thing))
@@ -541,14 +551,19 @@ class bossNameHandler : EventHandler
       if (e.Thing.bIsMonster && e.Thing.bCountKill
       && mon_name == "")
       {
-        switch(Random(1,2))
+        if( e.Thing.Health)
         {
-          case 1:
-            mon_name = getFancyDemonTag();
-            break;
-          case 2:
+          int mon_hp = e.Thing.Health;
+          if (mon_hp > 0 && mon_hp <= 100)
+          {
             mon_name = getNormalDemonTag();
-            break;
+          }else if(mon_hp > 100 && mon_hp < 300)
+          {
+            mon_name = getRandomDemonTag();
+          }else if(mon_hp >= 300)
+          {
+            mon_name = getFancyDemonTag();
+          }
         }
       }
 
