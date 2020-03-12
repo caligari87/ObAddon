@@ -37,7 +37,7 @@ PREFABS.Item_closet_urban_steal_stuff_right_off_windows_you_bad_person_you =
     FLAT20 = 1, FLAT3 = 1, FLAT5 = 1,
     FLAT5_1 = 1, FLAT5_2 = 1, FLAT8 = 1,
     FLOOR0_1 = 1, FLOOR0_2 = 1, FLOOR0_3 = 1,
-    FLOOR0_5, = 1, FLOOR4_6 = 1,
+    FLOOR0_5 = 1, FLOOR4_6 = 1,
   }
   tex_BRICK12 =
   {
