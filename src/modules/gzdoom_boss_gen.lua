@@ -191,21 +191,25 @@ class BossGenerator_Handler : EventHandler
         if(level.time > 1) return;
         if( e.Thing && e.Thing.bISMONSTER && IsBoss(e.Thing) && e.Thing.Health > 0 && e.Thing.Radius > 0 )
         {
-            if(!bossFound)
-            {
-                bossFound = true;
-                let bossy = bossController(new("bossController"));
-                if(bossy)
-                {
-                    bossy.boss = e.Thing;
-                    bossy.level = currentboss;
-                }
-            }
-            else
-            {
-                e.Thing.ClearCounters();
-                e.Thing.Destroy();
-            }
+			if( e.Thing.speed == 0 && e.Thing.health == 1000 && e.Thing.height == 16 && e.Thing.radius == 20) {}
+			else
+			{
+				if(!bossFound)
+				{
+					bossFound = true;
+					let bossy = bossController(new("bossController"));
+					if(bossy)
+					{
+						bossy.boss = e.Thing;
+						bossy.level = currentboss;
+					}
+				}
+				else
+				{
+					e.Thing.ClearCounters();
+					e.Thing.Destroy();
+				}
+			}
         }
         else if( e.Thing && e.Thing.bISMONSTER && e.Thing.Radius > 0 )
         {
