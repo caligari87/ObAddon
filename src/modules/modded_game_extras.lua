@@ -1030,13 +1030,11 @@ MODDED_GAME_EXTRAS.QCDE_LOOTBOX_NICE_ITEMS =
 
 
 function MODDED_GAME_EXTRAS.add_qcde_lootboxes()
+  table.name_up(MODDED_GAME_EXTRAS.QCDE_LOOTBOX_NICE_ITEMS)
 
   each item, property in MODDED_GAME_EXTRAS.QCDE_LOOTBOX_NICE_ITEMS do
     GAME.NICE_ITEMS[item] = property
   end
-
-  gui.printf(table.tostr(GAME.NICE_ITEMS))
-
 end
 
 
