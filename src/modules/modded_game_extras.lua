@@ -999,8 +999,9 @@ MODDED_GAME_EXTRAS.QCDE_LOOTBOX_NICE_ITEMS =
     kind = "powerup"
     add_prob = 5
     start_prob = 40
-    closet_prob = 5
+    closet_prob = 10
     secret_prob = 35
+    storage_prob = 80
   }
 
   lb_chest =
@@ -1009,8 +1010,9 @@ MODDED_GAME_EXTRAS.QCDE_LOOTBOX_NICE_ITEMS =
     kind = "powerup"
     add_prob = 5
     start_prob = 30
-    closet_prob = 5
+    closet_prob = 8
     secret_prob = 35
+    storage_prob = 60
   }
 
   lb_reliquary =
@@ -1019,8 +1021,9 @@ MODDED_GAME_EXTRAS.QCDE_LOOTBOX_NICE_ITEMS =
     kind = "powerup"
     add_prob = 4
     start_prob = 20
-    closet_prob = 5
+    closet_prob = 8
     secret_prob = 35
+    storage_prob = 40
   }
 }
 
