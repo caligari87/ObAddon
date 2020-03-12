@@ -359,6 +359,7 @@ class bossNameHandler : EventHandler
   string humanNicknames[NICK_NUM];
 
   string mon_name;
+  string obit;
 
   bool isRankedDemon(Actor a)
   {
@@ -554,6 +555,7 @@ class bossNameHandler : EventHandler
         if( e.Thing.Health)
         {
           int mon_hp = e.Thing.Health;
+
           if (mon_hp > 0 && mon_hp <= 100)
           {
             mon_name = getNormalDemonTag();
@@ -563,6 +565,26 @@ class bossNameHandler : EventHandler
           }else if(mon_hp >= 300)
           {
             mon_name = getFancyDemonTag();
+          }
+
+          // human-ish check
+          obit = e.Thing.Obituary;
+
+          if(obit)
+          {
+            obit = Stringtable.localize(obit);
+            obit = obit.MakeLower();
+
+            if(obit.IndexOf("human", 0) > -1
+            || obit.IndexOf("zombie", 0) > -1
+            || obit.IndexOf("former", 0) > -1
+            || obit.IndexOf("human", 0) > -1
+            || obit.IndexOf("scientist", 0) > -1
+            || obit.IndexOf("chaingunner", 0) > -1
+            || obit.IndexOf("z-spec", 0) > -1)
+            {
+              mon_name = getHumanTag();
+            }
           }
         }
       }
