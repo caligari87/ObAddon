@@ -4,7 +4,7 @@ PREFABS.Item_closet_simple1 =
   map    = "MAP01"
 
   prob   = 75
-  theme  = "!hell"
+  theme  = "tech"
   env    = "!cave"
 
   where  = "seeds"
