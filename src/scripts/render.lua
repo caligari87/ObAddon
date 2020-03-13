@@ -179,14 +179,27 @@ function Render_edge(E)
         end
       end
 
-      if mode == "chunk_or_joiner" then
-        if seed.area then
-          if seed.area.chunk then
-            if seed.area.chunk.kind == "closet"
-            or seed.area.chunk.kind == "joiner" then
-              return true
-            end
+      if mode == "potentially_obstructing" then
+        if not other_seed.area then
+          return true
+        end
+
+        if other_seed.area.mode == "scenic" or other_seed.area.mode == "void" then
+          return true
+        end
+
+        if seed.area.room and other_seed.area.room then
+          if seed.area.room != other_seed.area.room then
+            return true
           end
+
+          if other_seed.area.chunk and other_seed.area.chunk.kind == "closet" then
+            return true
+          end
+          if other_seed.area.chunk and other_seed.area.chunk.kind == "joiner" then
+            return true
+          end
+
         end
       end
 
@@ -286,17 +299,16 @@ function Render_edge(E)
       local tx, ty = geom.nudge(E.S.x1, E.S.y1, check_dir, 1)
       local that_seed = Seed_from_coord(tx, ty)
 
-      if check_area_state(E.S, that_seed, "narrow_area") == true then
+      if check_area_state(E.S, that_seed, "narrow_area") then
         reqs.flat = true
       end
 
-      -- use only flat walls if an neighboring seed is
-      -- a closet chunk or a joiner chunk
+      -- use only flat walls if in a corner
       for dirs = 2, 8 do
         if dirs % 2 == 0 then
           tx, ty = geom.nudge(E.S.x1, E.S.y1, dirs, 1)
           that_seed = Seed_from_coord(tx, ty)
-          if check_area_state(E.S, other_seed, "closet_or_joiner") == true then
+          if check_area_state(E.S, that_seed, "potentially_obstructing") then
             reqs.flat = true
           end
         end
