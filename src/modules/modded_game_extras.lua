@@ -581,7 +581,7 @@ class bossNameHandler : EventHandler
             if(obit.IndexOf("human", 0) > -1
             || obit.IndexOf("zombie", 0) > -1
             || obit.IndexOf("former", 0) > -1
-            || obit.IndexOf("human", 0) > -1
+            || obit.IndexOf("sarge", 0) > -1
             || obit.IndexOf("scientist", 0) > -1
             || obit.IndexOf("chaingunner", 0) > -1
             || obit.IndexOf("z-spec", 0) > -1)
@@ -782,8 +782,6 @@ MODDED_GAME_EXTRAS.QCDE_LESSER_DEMONS_CHECK =
     Heretic
     if (a is "HrtcWelph") return true;
     if (a is "HrtcImp") return true;*/
-
-    if (a is "QCDE_MonsterSmall") return true;
 ]]
 
 MODDED_GAME_EXTRAS.QCDE_STANDARD_DEMONS_CHECK =
@@ -821,8 +819,6 @@ MODDED_GAME_EXTRAS.QCDE_STANDARD_DEMONS_CHECK =
     if (a is "HrtcClink") return true;
     if (a is "HrtcMummy") return true;
     if (a is "HrtcSnake") return true;*/
-
-    if (a is "QCDE_MonsterMedium") return true;
 ]]
 
 MODDED_GAME_EXTRAS.QCDE_GREATER_DEMONS_CHECK =
@@ -899,8 +895,6 @@ MODDED_GAME_EXTRAS.QCDE_GREATER_DEMONS_CHECK =
     if (a is "HrtcImpLeader") return true;
     if (a is "HrtcWizard") return true;
     if (a is "HrtcWraith") return true;*/
-
-    if (a is "QCDE_MonsterBig") return true;
 ]]
 
 -- D4T addons

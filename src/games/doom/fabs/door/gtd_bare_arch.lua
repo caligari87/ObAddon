@@ -33,7 +33,7 @@ PREFABS.Arch_bare_columned =
 PREFABS.Arch_bare_columned_2X =
 {
   template = "Arch_bare"
-  map      = "MAP02"
+  map      = "MAP03"
 
   seed_w   = 3
 
