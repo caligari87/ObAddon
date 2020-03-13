@@ -310,7 +310,7 @@ function Render_edge(E)
         end
       end
 
-      -- never use anything other than the plain wall on stair chunks
+      -- never use anything other than the flat walls on stair chunks
       -- this is to prevent oddities like ZDoom slopes from being cut-off
       if E.S.chunk then
         if E.S.chunk.kind == "stair" and not E.S.area.dead_end then
