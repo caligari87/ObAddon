@@ -295,7 +295,7 @@ PREFABS.Wall_tech_caution_bracket_silver_scaffolding = --#
 
   group = "tech_o_silver_scaffolding"
 
-  z_fit = { 36,44 }
+  z_fit = { 56,72 }
 
   tex_SHAWVEN2 = "SILVER2"
   tex_SHAWN4 = "SHAWN2"
@@ -314,7 +314,7 @@ PREFABS.Wall_tech_caution_bracket_silver_scaffolding_EPIC =
   replaces = "Wall_tech_caution_bracket_silver_scaffolding"
   uses_epic_textures = true
 
-  z_fit = { 36,44 }
+  z_fit = { 56,72 }
 }
 
 PREFABS.Wall_tech_outdoor_concrete_brace = --#
