@@ -453,7 +453,7 @@ PREFABS.Wall_hell_fake_window_outdoor_topstretch =
   group = "hell_o_cathedral_glass_red"
 
   env = "outdoor"
-  prob = 75
+  prob = 25
 
   z_fit = "bottom"
 }
@@ -478,7 +478,7 @@ PREFABS.Wall_hell_fake_window_small_outdoor_stretchy =
   group = "hell_o_cathedral_glass_red"
 
   env = "outdoor"
-  prob = 75
+  prob = 25
 
   x_fit = "stretch"
   z_fit = { 48,56 }

@@ -572,7 +572,10 @@ class bossNameHandler : EventHandler
 
           if(obit)
           {
-            obit = Stringtable.localize(obit);
+            if(obit.IndexOf("$", 0) > -1)
+            {
+              obit = Stringtable.localize(obit);
+            }
             obit = obit.MakeLower();
 
             if(obit.IndexOf("human", 0) > -1
