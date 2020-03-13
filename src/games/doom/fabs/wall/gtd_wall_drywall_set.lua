@@ -57,7 +57,7 @@ PREFABS.Wall_gtd_drywall_3_bars =
 PREFABS.Wall_gtd_drywall_hole_in_wall =
 {
   template = "Wall_gtd_drywall_1"
-  map = "MAP04"
+  map = "MAP05"
 
   prob = 15
 
