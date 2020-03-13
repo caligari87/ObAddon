@@ -1226,6 +1226,7 @@ DOOM.THEMES =
       tech_o_silver_scaffolding = 1
       tech_o_concrete_base = 1
       tech_o_fence_lights_uac_thing = 1
+      tech_o_hex_inset = 1
     }
 
     window_groups =
