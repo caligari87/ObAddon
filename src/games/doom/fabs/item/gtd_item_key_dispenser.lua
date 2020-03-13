@@ -12,7 +12,7 @@ PREFABS.Item_gtd_key_dispenser =
 
   where  = "seeds"
   seed_w = 2
-  seed_h = 2
+  seed_h = 1
 
   deep =  16
   over = -16
