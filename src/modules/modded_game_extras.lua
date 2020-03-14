@@ -581,9 +581,10 @@ class bossNameHandler : EventHandler
             if(obit.IndexOf("human", 0) > -1
             || obit.IndexOf("zombie", 0) > -1
             || obit.IndexOf("former", 0) > -1
-            || obit.IndexOf("sarge", 0) > -1
+            || obit.IndexOf("sergeant", 0) > -1
             || obit.IndexOf("scientist", 0) > -1
-            || obit.IndexOf("chaingunner", 0) > -1
+            || obit.IndexOf("gunner", 0) > -1
+            || obit.IndexOf("dude", 0) > -1
             || obit.IndexOf("z-spec", 0) > -1)
             {
               mon_name = getHumanTag();
