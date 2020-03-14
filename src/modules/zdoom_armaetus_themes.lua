@@ -2827,6 +2827,53 @@ ARMAETUS_SINK_DEFS =
     trim_mat = "FASHBLU"
     trim_dz = 0
   }
+
+  -- more weird ceiling liquids for hell
+
+  ceil_purple_water =
+  {
+    mat = "PURW1"
+    dz    = 64
+
+    trim_mat = "BROWN2"
+    trim_dz  = -8
+  }
+
+  ceil_emagma =
+  {
+    mat = "MAGMA1"
+    dz    = 64
+
+    trim_mat = "BRIKS39"
+    trim_dz  = -8
+  }
+
+  ceil_qlava2 =
+  {
+    mat = "QLAVA1"
+    dz    = 64
+
+    trim_mat = "BRIKS40"
+    trim_dz  = -8
+  }
+
+  ceil_esludge =
+  {
+    mat = "SLUDGE01"
+    dz    = 64
+
+    trim_mat = "DRKCMT05"
+    trim_dz  = -8
+  }
+
+  ceil_liquid_snow =
+  {
+    mat = "SNOW9"
+    dz    = 64
+
+    trim_mat = "URBAN3"
+    trim_dz  = -8
+  }
 }
 
 ARMAETUS_TECH_CEILING_SINKS =
@@ -2928,6 +2975,12 @@ ARMAETUS_HELL_CEILING_SINKS =
   ceiling_sink_GOTH47 = 20
   ceiling_sink_GOTH48 = 20
   ceiling_sink_GOTH49 = 20
+
+  ceil_purple_water = 25
+  ceil_emagma = 25
+  ceil_qlava2 = 25
+  ceil_esludge = 25
+  ceil_liquid_snow = 25
 }
 
 ARMAETUS_TECH_FLOOR_SINKS =
