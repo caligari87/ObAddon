@@ -2762,7 +2762,9 @@ function Quest_room_themes()
     end
 
     if table.empty(tab) then
-      error("No rooms themes for env: " .. env)
+      error("No rooms themes found for...\n" ..
+      "env: " .. env .. "\n" ..
+      "group: " .. group)
     end
 
     return tab

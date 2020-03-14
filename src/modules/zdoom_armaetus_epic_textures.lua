@@ -714,7 +714,8 @@ end
 
 function ARMAETUS_EPIC_TEXTURES.put_new_materials()
 
-  if OB_CONFIG.game == "doom2" then
+  if OB_CONFIG.game == "doom2" or OB_CONFIG.game == "plutonia"
+  or OB_CONFIG.game == "tnt" then
     -- put the custom material definitions in the materials table!!!
     ARMAETUS_EPIC_TEXTURES.table_insert(ARMAETUS_MATERIALS,
       GAME.MATERIALS)
