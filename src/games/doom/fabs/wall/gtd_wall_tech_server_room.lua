@@ -1,4 +1,4 @@
-PREFABS.Wall_tech_plain =
+PREFABS.Wall_tech_server_wall =
 {
   file   = "wall/gtd_wall_tech_server_room.wad"
   map    = "MAP01"
@@ -19,7 +19,7 @@ PREFABS.Wall_tech_plain =
   z_fit  = "top"
 }
 
-PREFABS.Wall_urban_storage_diag =
+PREFABS.Wall_tech_server_wall_diag =
 {
   file   = "wall/gtd_wall_tech_server_room.wad"
   map    = "MAP02"
@@ -38,7 +38,36 @@ PREFABS.Wall_urban_storage_diag =
   z_fit  = "top"
 }
 
-PREFABS.Wall_urban_storage_diag_EPIC =
+PREFABS.Wall_tech_server_wall1 =
+{
+  template = "Wall_tech_server_wall"
+
+  prob = 50
+
+  map = "MAP03"
+}
+
+PREFABS.Wall_tech_server_wall2 =
+{
+  template = "Wall_tech_server_wall"
+
+  prob = 50
+
+  map = "MAP04"
+}
+
+PREFABS.Wall_tech_server_wall3 =
+{
+  template = "Wall_tech_server_wall"
+
+  prob = 50
+
+  map = "MAP05"
+}
+
+-- Epic versions:
+
+PREFABS.Wall_tech_server_room_diag_EPIC =
 {
   file   = "wall/gtd_wall_tech_server_room.wad"
   map    = "MAP07"
@@ -46,8 +75,6 @@ PREFABS.Wall_urban_storage_diag_EPIC =
   prob   = 50
   theme = "tech"
   group = "gtd_wall_server_room2"
-
-  uses_epic_textures = true
 
   where  = "diagonal"
 
@@ -59,44 +86,26 @@ PREFABS.Wall_urban_storage_diag_EPIC =
   z_fit  = "top"
 }
 
-PREFABS.Wall_tech_server1 =
+PREFABS.Wall_tech_server_room1_EPIC =
 {
-  template = "Wall_tech_plain"
+  template = "Wall_tech_server_wall"
 
-  prob = 50
-
-  map = "MAP03"
-}
-
-PREFABS.Wall_tech_server1_EPIC =
-{
-  template = "Wall_tech_plain"
-  replaces = "Wall_tech_server1"
-
-  uses_epic_textures = true
+  group = "gtd_wall_server_room2"
 
   prob = 50
 
   map = "MAP06"
 
   tex_COMPSD1 = { COMPSD1=50, COMPFUZ1=50, COMPY1=50, COMPCT07=20 }
-
 }
 
-PREFABS.Wall_tech_server2 =
+PREFABS.Wall_tech_server_room2_EPIC =
 {
-  template = "Wall_tech_plain"
+  template = "Wall_tech_server_wall"
 
-  prob = 50
+  group = "gtd_wall_server_room2"
 
-  map = "MAP04"
-}
+  prob = 200
 
-PREFABS.Wall_tech_server3 =
-{
-  template = "Wall_tech_plain"
-
-  prob = 50
-
-  map = "MAP05"
+  map = "MAP08"
 }
