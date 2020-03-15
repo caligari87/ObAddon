@@ -1,9 +1,9 @@
-PREFABS.Pic_EPIC_box_gothic_big =
+PREFABS.Pic_EPIC_box_template = -- this is now a base template and is disabled.
 {
   file   = "picture/gtd_pic_EPIC.wad"
   map    = "MAP01"
 
-  prob  = 40 * 7
+  prob  = 0
   env   = "building"
   theme = "!tech"
 
@@ -20,17 +20,6 @@ PREFABS.Pic_EPIC_box_gothic_big =
   x_fit = "frame"
   y_fit = "top"
 
-  tex_GLASS1 =
-  {
-    GLASS1 = 50
-    GLASS2 = 50
-    GLASS3 = 50
-    GLASS4 = 50
-    GLASS5 = 10 --Black glass looks poor, reduced prob
-    GLASS6 = 50
-    GLASS8 = 50
-  }
-
   sector_1 = 0
   line_2   = 0
 
@@ -38,9 +27,9 @@ PREFABS.Pic_EPIC_box_gothic_big =
   offset_2 = 0
 }
 
-PREFABS.Pic_EPIC_box_gothic_tall =
+--[[PREFABS.Pic_EPIC_box_gothic_tall =
 {
-  template = "Pic_EPIC_box_gothic_big"
+  template = "Pic_EPIC_box_template"
   map = "MAP02"
 
   prob = 40 * 5
@@ -59,7 +48,7 @@ PREFABS.Pic_EPIC_box_gothic_tall =
 
 PREFABS.Pic_EPIC_box_gothic_semibig =
 {
-  template = "Pic_EPIC_box_gothic_big"
+  template = "Pic_EPIC_box_template"
   map = "MAP03"
 
   prob = 40 * 2
@@ -71,11 +60,11 @@ PREFABS.Pic_EPIC_box_gothic_semibig =
     GLASS10 = 50
     GLASS7 = 50
   }
-}
+}]]
 
 PREFABS.Pic_EPIC_box_skeletons =
 {
-  template = "Pic_EPIC_box_gothic_big"
+  template = "Pic_EPIC_box_template"
   map = "MAP01"
 
   prob = 35 * 8
@@ -96,7 +85,7 @@ PREFABS.Pic_EPIC_box_skeletons =
 
 PREFABS.Pic_EPIC_box_lavawall =
 {
-  template = "Pic_EPIC_box_gothic_big"
+  template = "Pic_EPIC_box_template"
   map = "MAP01"
 
   prob = 25 * 6
@@ -114,7 +103,7 @@ PREFABS.Pic_EPIC_box_lavawall =
 
 PREFABS.Pic_EPIC_box_marblefaces =
 {
-  template = "Pic_EPIC_box_gothic_big"
+  template = "Pic_EPIC_box_template"
   map = "MAP01"
 
   prob = 32 * 7
@@ -141,7 +130,7 @@ PREFABS.Pic_EPIC_box_marblefaces =
 
 PREFABS.Pic_EPIC_box_wallofskulls =
 {
-  template = "Pic_EPIC_box_gothic_big"
+  template = "Pic_EPIC_box_template"
   map = "MAP01"
 
   prob = 35 * 8
@@ -162,7 +151,7 @@ PREFABS.Pic_EPIC_box_wallofskulls =
 
 PREFABS.Pic_EPIC_box_doom2bodies =
 {
-  template = "Pic_EPIC_box_gothic_big"
+  template = "Pic_EPIC_box_template"
   map = "MAP01"
 
   prob = 30 * 8
@@ -180,7 +169,7 @@ PREFABS.Pic_EPIC_box_doom2bodies =
 
 PREFABS.Pic_EPIC_box_gothic_hangingbodies =
 {
-  template = "Pic_EPIC_box_gothic_big"
+  template = "Pic_EPIC_box_template"
   map = "MAP03"
 
   prob = 30 * 2
@@ -200,7 +189,7 @@ PREFABS.Pic_EPIC_box_gothic_hangingbodies =
 
 PREFABS.Pic_EPIC_box_small_facesofevil =
 {
-  template = "Pic_EPIC_box_gothic_big"
+  template = "Pic_EPIC_box_template"
   map = "MAP04"
 
   prob = 40 * 9
@@ -223,7 +212,7 @@ PREFABS.Pic_EPIC_box_small_facesofevil =
 
 PREFABS.Pic_EPIC_box_metal_big =
 {
-  template = "Pic_EPIC_box_gothic_big"
+  template = "Pic_EPIC_box_template"
   map = "MAP01"
 
   prob = 40 * 8
@@ -248,7 +237,7 @@ PREFABS.Pic_EPIC_box_metal_big =
 
 PREFABS.Pic_EPIC_box_bishop =
 {
-  template = "Pic_EPIC_box_gothic_big"
+  template = "Pic_EPIC_box_template"
   map = "MAP01"
 
   prob = 30 * 8
@@ -266,7 +255,7 @@ PREFABS.Pic_EPIC_box_bishop =
 
 PREFABS.Pic_EPIC_box_metal_big =
 {
-  template = "Pic_EPIC_box_gothic_big"
+  template = "Pic_EPIC_box_template"
   map = "MAP01"
 
   prob = 40 * 8
@@ -291,7 +280,7 @@ PREFABS.Pic_EPIC_box_metal_big =
 
 PREFABS.Pic_EPIC_box_metal_big_bunchacomputers =
 {
-  template = "Pic_EPIC_box_gothic_big"
+  template = "Pic_EPIC_box_template"
   map = "MAP01"
 
   prob = 40 * 8
@@ -319,7 +308,7 @@ PREFABS.Pic_EPIC_box_metal_big_bunchacomputers =
 
 PREFABS.Pic_EPIC_box_static =
 {
-  template = "Pic_EPIC_box_gothic_big"
+  template = "Pic_EPIC_box_template"
   map = "MAP04"
 
   prob = 25 * 10
@@ -341,7 +330,7 @@ PREFABS.Pic_EPIC_box_static =
 
 PREFABS.Pic_EPIC_box_metal_small =
 {
-  template = "Pic_EPIC_box_gothic_big"
+  template = "Pic_EPIC_box_template"
   map = "MAP04"
 
   prob = 40 * 10
@@ -371,7 +360,7 @@ PREFABS.Pic_EPIC_box_metal_small =
 
 PREFABS.Pic_EPIC_box_metal_wide =
 {
-  template = "Pic_EPIC_box_gothic_big"
+  template = "Pic_EPIC_box_template"
   map = "MAP05"
 
   prob = 40 * 9
@@ -400,7 +389,7 @@ PREFABS.Pic_EPIC_box_metal_wide =
 
 PREFABS.Pic_EPIC_box_silverwall =
 {
-  template = "Pic_EPIC_box_gothic_big"
+  template = "Pic_EPIC_box_template"
   map = "MAP01"
 
   prob = 25 * 7
@@ -423,7 +412,7 @@ PREFABS.Pic_EPIC_box_silverwall =
 -- 3 seeds wide!!
 PREFABS.Pic_EPIC_box_metal_superwide =
 {
-  template = "Pic_EPIC_box_gothic_big"
+  template = "Pic_EPIC_box_template"
   map = "MAP06"
 
   prob = 30 * 6
@@ -454,7 +443,7 @@ PREFABS.Pic_EPIC_box_metal_superwide =
 -- This is 256x56
 PREFABS.Pic_EPIC_superwide_longconsole =
 {
-  template = "Pic_EPIC_box_gothic_big"
+  template = "Pic_EPIC_box_template"
   map = "MAP07"
 
   prob = 25 * 5
@@ -475,7 +464,7 @@ PREFABS.Pic_EPIC_superwide_longconsole =
 -- 64x192
 PREFABS.Pic_EPIC_ridiculously_tall =
 {
-  template = "Pic_EPIC_box_gothic_big"
+  template = "Pic_EPIC_box_template"
 
   map = "MAP08"
 
@@ -498,7 +487,7 @@ PREFABS.Pic_EPIC_ridiculously_tall =
 
 PREFABS.Pic_EPIC_box_whitelion_and_goat =
 {
-  template = "Pic_EPIC_box_gothic_big"
+  template = "Pic_EPIC_box_template"
   map = "MAP10"
 
   prob = 35 * 4
@@ -519,7 +508,7 @@ PREFABS.Pic_EPIC_box_whitelion_and_goat =
 
 PREFABS.Pic_EPIC_GreekDude =
 {
-  template = "Pic_EPIC_box_gothic_big"
+  template = "Pic_EPIC_box_template"
   map = "MAP11"
 
   prob = 35
@@ -538,7 +527,7 @@ PREFABS.Pic_EPIC_GreekDude =
 
 PREFABS.Pic_EPIC_Devilish =
 {
-  template = "Pic_EPIC_box_gothic_big"
+  template = "Pic_EPIC_box_template"
   map = "MAP03"
 
   prob = 35 * 3
@@ -557,7 +546,7 @@ PREFABS.Pic_EPIC_Devilish =
 
 PREFABS.Pic_EPIC_WoodenDemon =
 {
-  template = "Pic_EPIC_box_gothic_big"
+  template = "Pic_EPIC_box_template"
   map = "MAP11"
 
   prob = 35
@@ -579,7 +568,7 @@ PREFABS.Pic_EPIC_WoodenDemon =
 
 PREFABS.Pic_EPIC_box_static_sounds =
 {
-  template = "Pic_EPIC_box_gothic_big"
+  template = "Pic_EPIC_box_template"
   map = "MAP12"
 
   prob = 25 * 10
@@ -603,7 +592,7 @@ PREFABS.Pic_EPIC_box_static_sounds =
 
 PREFABS.Pic_EPIC_box_metal_small_sounds =
 {
-  template = "Pic_EPIC_box_gothic_big"
+  template = "Pic_EPIC_box_template"
   map = "MAP12"
 
   prob = 40 * 10
@@ -632,4 +621,3 @@ PREFABS.Pic_EPIC_box_metal_small_sounds =
 
   sound = "Static_Monitor"
 }
-
