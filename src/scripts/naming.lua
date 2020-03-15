@@ -2552,6 +2552,7 @@ namelib.NAMES =
         ["Trauma Conga Line"]=10
         ["Wild Hunt"]=10
         ["You Are Already Dead"]=10
+        ["You'll Float Too"]=10
         ["You'll See"]=10
         ["Zone of Alienation"]=10
 
