@@ -7,7 +7,7 @@ PREFABS.Wall_hell_stone_brace = --#
   theme = "hell"
   env = "outdoor"
 
-  groups = "hell_o_stone_brace"
+  group = "hell_o_stone_brace"
 
   where  = "edge"
   height = 128
@@ -18,15 +18,18 @@ PREFABS.Wall_hell_stone_brace = --#
   bound_z2 = 128
 
   z_fit = "bottom"
+
+  tex_STONE3 = "STONE2"
 }
 
 PREFABS.Wall_hell_wood_brace = --#
 {
   template = "Wall_hell_stone_brace"
 
-  groups = "hell_o_wood_brace"
+  group = "hell_o_wood_brace"
 
   tex_STONE2 = "WOODMET2"
+  tex_STONE3 = "WOODMET1"
   flat_FLAT1 = "CEIL5_1"
 }
 
