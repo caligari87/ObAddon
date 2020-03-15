@@ -25,7 +25,7 @@ PREFABS.Wall_hell_sharp_alcoves_single_red = --#
 
 PREFABS.Wall_hell_sharp_alcoves_double_red = --#
 {
-  template = "Wall_hell_sharp_alcoves_single"
+  template = "Wall_hell_sharp_alcoves_single_red"
   map      = "MAP02"
 }
 
