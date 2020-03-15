@@ -55,7 +55,7 @@ PREFABS.Item_gtd_alcove2_hell =
 
   tex_COMPTALL =
   {
-    FIRELAVA = 1, FIREBLU1 = 1, FIREMAG = 1,
+    FIRELAVA = 1, FIREBLU1 = 1, FIREMAG1 = 1,
     CRACKLE2 = 1, CRACKLE4 = 1, SLADWALL = 1, WOODGARG = 1,
   }
   tex_METAL5 = "WOOD4"
