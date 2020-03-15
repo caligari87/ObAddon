@@ -1532,13 +1532,8 @@ function Quest_start_room()
 
     local set1, set2
 
-    if rand.odds(50) then
-      set1 = { "player1", "player3" }
-      set2 = { "player2", "player4" }
-    else
-      set1 = { "player2", "player3" }
-      set2 = { "player1", "player4" }
-    end
+    set1 = { "player1", "player3" }
+    set2 = { "player2", "player4" }
 
     LEVEL.start_room.player_set = set1
     LEVEL.alt_start .player_set = set2
