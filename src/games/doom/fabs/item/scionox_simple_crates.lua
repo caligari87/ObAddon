@@ -98,6 +98,8 @@ PREFABS.Item_scionox_simple_crates_10 =
   file   = "item/scionox_simple_crates.wad"
   map    = "MAP06"
 
+  height = 128
+
   prob   = 50
   theme  = "!hell"
   env    = "!cave"
