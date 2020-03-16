@@ -211,7 +211,7 @@ class BossGenerator_Handler : EventHandler
 				}
 			}
         }
-        else if( e.Thing && e.Thing.bISMONSTER && e.Thing.Radius > 0 )
+        else if( e.Thing && e.Thing.bISMONSTER && e.Thing.Radius > 0 && !e.Thing.bFRIENDLY)
         {
             if(e.Thing.Health < SMAXHEALTH)
             {
