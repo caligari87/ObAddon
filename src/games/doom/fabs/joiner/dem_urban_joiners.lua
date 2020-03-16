@@ -426,3 +426,97 @@ PREFABS.Joiner_bookstore =
   }
 
 }
+
+--an elevator shaft 
+PREFABS.Joiner_elevatorshaft =
+{
+  file   = "joiner/dem_urban_joiners.wad"
+  map    = "MAP11"
+
+  engine = "zdoom"
+
+  prob   = 1000
+
+
+  theme  = "!hell"
+
+  env      = "building"
+  neighbor = "building"
+
+  where  = "seeds"
+  shape  = "I"
+
+  seed_w = 2
+  seed_h = 2
+
+  deep = 16
+  over = 16
+
+  x_fit = "frame"
+  y_fit  = "frame"
+
+  delta_h = 256
+  nearby_h = 328
+
+  uses_epic_textures = true
+
+  can_flip = true
+
+  tex_BROWN1 = {
+	GRAY1=50, GRAY4=50, GRAY5=50, GRAY6=50,
+	GRAY7=50, GRAY8=50, GRAY9=50, CEMENT3=50,
+	CEMENT5=50, CEMENT6=50, CEMENT7=50,
+	CEM01=50, CEM07=50, CEM09=50, PIPE2=50,
+	PIPE4=50, SLADWALL=50, TEKLITE=50, BROWN3=50,
+	MET2=50, MET6=50, MET7=50, PIPEDRK1=50,
+	SHAWGRY4=50, SHAWN01C=50, SHAWN01F=50,
+	SHAWVEN2=50, SHAWVENT=50
+  }
+}
+
+--a corrupted elevator shaft 
+PREFABS.Joiner_elevatorshaftcorr =
+{
+  file   = "joiner/dem_urban_joiners.wad"
+  map    = "MAP12"
+
+  engine = "zdoom"
+
+  prob   = 1000
+
+
+  theme  = "!hell"
+
+  env      = "building"
+  neighbor = "building"
+
+  where  = "seeds"
+  shape  = "I"
+
+  seed_w = 2
+  seed_h = 2
+
+  deep = 16
+  over = 16
+
+  x_fit = "frame"
+  y_fit  = "frame"
+
+  delta_h = 256
+  nearby_h = 328
+
+  uses_epic_textures = true
+
+  can_flip = true
+
+  tex_BROWN1 = {
+	GRAY1=50, GRAY4=50, GRAY5=50, GRAY6=50,
+	GRAY7=50, GRAY8=50, GRAY9=50, CEMENT3=50,
+	CEMENT5=50, CEMENT6=50, CEMENT7=50,
+	CEM01=50, CEM07=50, CEM09=50, PIPE2=50,
+	PIPE4=50, SLADWALL=50, TEKLITE=50, BROWN3=50,
+	MET2=50, MET6=50, MET7=50, PIPEDRK1=50,
+	SHAWGRY4=50, SHAWN01C=50, SHAWN01F=50,
+	SHAWVEN2=50, SHAWVENT=50
+  }
+}
