@@ -295,10 +295,6 @@ function Render_edge(E)
       end
 
       -- use only flat walls if in a corner
-      if E.S.area.room and E.S.area.room.is_outdoor then
-        gui.printf("--\nChecking from: " .. table.tostr(E.S) .. "\n")
-      end
-
       tx, ty = geom.nudge(E.S.mid_x, E.S.mid_y, geom.LEFT[dir], 128)
       that_seed = Seed_from_coord(tx, ty)
       if check_area_state(E.S, that_seed, "potentially_obstructing") then
