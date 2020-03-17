@@ -262,7 +262,7 @@ PREFABS.Item_living_room_closet =
   over = -16
 
   x_fit = "frame"
-  y_fit  = "frame"
+  y_fit = "frame"
 
   tex_BRICK9 = {
     BRICK1=50, BRICK10=50, BRICK11=50,
@@ -291,7 +291,6 @@ PREFABS.Item_kitchen_closet =
   seed_h = 3
 
   deep = 16
-  over = -16
 
   x_fit = "frame"
   y_fit  = "frame"
@@ -325,7 +324,6 @@ PREFABS.Item_bedroom_closet =
   seed_h = 2
 
   deep = 16
-  over = -16
 
   x_fit = "frame"
   y_fit  = "frame"
@@ -362,7 +360,6 @@ PREFABS.Item_stairwell_closet =
   seed_h = 3
 
   deep = 16
-  over = -16
 
   x_fit = "frame"
   y_fit  = "frame"
@@ -394,7 +391,6 @@ PREFABS.Item_bar_closets =
   seed_h = 2
 
   deep = 16
-  over = -16
 
   x_fit = "frame"
   y_fit  = "frame"
@@ -432,7 +428,6 @@ PREFABS.Item_waiting_room_closets =
   seed_h = 2
 
   deep = 16
-  over = -16
 
   x_fit = "frame"
   y_fit  = "frame"
@@ -472,7 +467,6 @@ PREFABS.Item_electronic_store_closets =
   seed_h = 2
 
   deep = 16
-  over = -16
 
   x_fit = "frame"
   y_fit  = "frame"
@@ -511,7 +505,6 @@ PREFABS.Item_cornerstore_closets =
   seed_h = 3
 
   deep = 16
-  over = -16
 
   x_fit = "frame"
   y_fit  = "frame"
@@ -551,7 +544,6 @@ PREFABS.Item_bookstore_closets =
   seed_h = 3
 
   deep = 16
-  over = -16
 
   x_fit = "frame"
   y_fit  = "frame"
