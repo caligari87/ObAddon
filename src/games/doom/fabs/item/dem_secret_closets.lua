@@ -118,6 +118,7 @@ PREFABS.Item_secret_NIN_closet =
   seed_h = 2
 
   deep = 16
+  over = -16
 
   x_fit = "frame"
   y_fit = "top"
@@ -148,6 +149,7 @@ PREFABS.Item_secret_hellgargoyle_closet =
   seed_h = 1
 
   deep = 16
+  over = -16
 
   x_fit = "frame"
   y_fit = "top"
@@ -178,6 +180,7 @@ PREFABS.Item_secret_hellthrone_closet =
   seed_h = 2
 
   deep = 16
+  over = -16
 
   x_fit = "frame"
   y_fit = "top"

@@ -18,7 +18,7 @@ PREFABS.Item_mirrormaze_closet =
   seed_h = 2
 
   deep = 16
-  over = 16
+  over = -16
 
   x_fit = "frame"
   y_fit  = "frame"
@@ -42,7 +42,7 @@ PREFABS.Item_mirrormaze2_closet =
   seed_h = 3
 
   deep = 16
-  over = 16
+  over = -16
 
   x_fit = "frame"
   y_fit  = "frame"
@@ -66,7 +66,7 @@ PREFABS.Item_rift_closet =
   seed_h = 2
 
   deep = 16
-  over = 16
+  over = -16
 
   x_fit = "frame"
   y_fit  = "frame"
@@ -194,7 +194,7 @@ PREFABS.Item_elevatorshaft_closet =
   seed_h = 2
 
   deep = 16
-  over = 16
+  over = -16
 
   x_fit = "frame"
   y_fit  = "frame"
@@ -235,7 +235,7 @@ PREFABS.Item_elevatorshaftcorr_closet =
   seed_h = 2
 
   deep = 16
-  over = 16
+  over = -16
 
   x_fit = "frame"
   y_fit  = "frame"
@@ -275,7 +275,7 @@ PREFABS.Item_living_room_closet =
   seed_h = 2
 
   deep = 16
-  over = 16
+  over = -16
 
   x_fit = "frame"
   y_fit  = "frame"
@@ -309,7 +309,7 @@ PREFABS.Item_kitchen_closet =
   seed_h = 3
 
   deep = 16
-  over = 16
+  over = -16
 
   x_fit = "frame"
   y_fit  = "frame"
@@ -345,7 +345,7 @@ PREFABS.Item_bedroom_closet =
   seed_h = 2
 
   deep = 16
-  over = 16
+  over = -16
 
   x_fit = "frame"
   y_fit  = "frame"
@@ -384,7 +384,7 @@ PREFABS.Item_stairwell_closet =
   seed_h = 3
 
   deep = 16
-  over = 16
+  over = -16
 
   x_fit = "frame"
   y_fit  = "frame"
@@ -423,7 +423,7 @@ PREFABS.Item_bar_closets =
   seed_h = 2
 
   deep = 16
-  over = 16
+  over = -16
 
   x_fit = "frame"
   y_fit  = "frame"
@@ -463,7 +463,7 @@ PREFABS.Item_waiting_room_closets =
   seed_h = 2
 
   deep = 16
-  over = 16
+  over = -16
 
   x_fit = "frame"
   y_fit  = "frame"
@@ -508,7 +508,7 @@ PREFABS.Item_electronic_store_closets =
   seed_h = 2
 
   deep = 16
-  over = 16
+  over = -16
 
   x_fit = "frame"
   y_fit  = "frame"
@@ -549,7 +549,7 @@ PREFABS.Item_cornerstore_closets =
   seed_h = 3
 
   deep = 16
-  over = 16
+  over = -16
 
   x_fit = "frame"
   y_fit  = "frame"
@@ -591,7 +591,7 @@ PREFABS.Item_bookstore_closets =
   seed_h = 3
 
   deep = 16
-  over = 16
+  over = -16
 
   x_fit = "frame"
   y_fit  = "frame"
@@ -611,4 +611,3 @@ PREFABS.Item_bookstore_closets =
   }
 
 }
-
