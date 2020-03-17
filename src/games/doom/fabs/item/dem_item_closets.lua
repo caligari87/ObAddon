@@ -22,8 +22,6 @@ PREFABS.Item_mirrormaze_closet =
 
   x_fit = "frame"
   y_fit  = "frame"
-
-  can_flip = true
 }
 
 --a item in a maze of mirrors2 in hell
@@ -46,8 +44,6 @@ PREFABS.Item_mirrormaze2_closet =
 
   x_fit = "frame"
   y_fit  = "frame"
-
-  can_flip = true
 }
 
 --a item on a shrine in a rift in hell
@@ -70,8 +66,6 @@ PREFABS.Item_rift_closet =
 
   x_fit = "frame"
   y_fit  = "frame"
-
-  can_flip = true
 
   uses_epic_textures = true
 
@@ -137,8 +131,6 @@ PREFABS.Item_grocerystore_closet =
   x_fit = "frame"
   y_fit  = "frame"
 
-  can_flip = true
-
   tex_BRICK9 = {
     BRICK1=50, BRICK10=50, BRICK11=50,
     BRICK2=50, BRICK4=50,
@@ -184,7 +176,6 @@ PREFABS.Item_elevatorshaft_closet =
 
   prob   = 50
 
-
   theme  = "!hell"
 
   env      = "building"
@@ -200,8 +191,6 @@ PREFABS.Item_elevatorshaft_closet =
   y_fit  = "frame"
 
   uses_epic_textures = true
-
-  can_flip = true
 
   tex_BROWN1 = {
 	GRAY1=50, GRAY4=50, GRAY5=50, GRAY6=50,
@@ -222,15 +211,12 @@ PREFABS.Item_elevatorshaftcorr_closet =
   map    = "MAP06"
 
   engine = "zdoom"
-
   prob   = 50
 
-
   theme  = "!hell"
-
-  env      = "building"
-
+  env    = "building"
   where  = "seeds"
+
   seed_w = 2
   seed_h = 2
 
@@ -238,21 +224,19 @@ PREFABS.Item_elevatorshaftcorr_closet =
   over = -16
 
   x_fit = "frame"
-  y_fit  = "frame"
+  y_fit = "top"
 
   uses_epic_textures = true
 
-  can_flip = true
-
   tex_BROWN1 = {
-	GRAY1=50, GRAY4=50, GRAY5=50, GRAY6=50,
-	GRAY7=50, GRAY8=50, GRAY9=50, CEMENT3=50,
-	CEMENT5=50, CEMENT6=50, CEMENT7=50,
-	CEM01=50, CEM07=50, CEM09=50, PIPE2=50,
-	PIPE4=50, SLADWALL=50, TEKLITE=50, BROWN3=50,
-	MET2=50, MET6=50, MET7=50, PIPEDRK1=50,
-	SHAWGRY4=50, SHAWN01C=50, SHAWN01F=50,
-	SHAWVEN2=50, SHAWVENT=50
+    GRAY1=50, GRAY4=50, GRAY5=50, GRAY6=50,
+    GRAY7=50, GRAY8=50, GRAY9=50, CEMENT3=50,
+    CEMENT5=50, CEMENT6=50, CEMENT7=50,
+    CEM01=50, CEM07=50, CEM09=50, PIPE2=50,
+    PIPE4=50, SLADWALL=50, TEKLITE=50, BROWN3=50,
+    MET2=50, MET6=50, MET7=50, PIPEDRK1=50,
+    SHAWGRY4=50, SHAWN01C=50, SHAWN01F=50,
+    SHAWVEN2=50, SHAWVENT=50
   }
 }
 
@@ -279,8 +263,6 @@ PREFABS.Item_living_room_closet =
 
   x_fit = "frame"
   y_fit  = "frame"
-
-  can_flip = true
 
   tex_BRICK9 = {
     BRICK1=50, BRICK10=50, BRICK11=50,
@@ -313,8 +295,6 @@ PREFABS.Item_kitchen_closet =
 
   x_fit = "frame"
   y_fit  = "frame"
-
-  can_flip = true
 
   tex_BRICK9 = {
     BRICK1=50, BRICK10=50, BRICK11=50,
@@ -352,8 +332,6 @@ PREFABS.Item_bedroom_closet =
 
   uses_epic_textures = true
 
-  can_flip = true
-
   tex_BRICK9 = {
     BRICK1=50, BRICK10=50, BRICK11=50,
     BRICK2=50, BRICK4=50,
@@ -389,9 +367,6 @@ PREFABS.Item_stairwell_closet =
   x_fit = "frame"
   y_fit  = "frame"
 
-
-  can_flip = true
-
   tex_BRICK9 = {
     BRICK1=50, BRICK10=50, BRICK11=50,
     BRICK2=50, BRICK4=50,
@@ -412,12 +387,8 @@ PREFABS.Item_bar_closets =
   prob   = 2000
 
   theme  = "urban"
-
   env      = "outdoor"
-
-
   where  = "seeds"
-
 
   seed_w = 3
   seed_h = 2
@@ -429,8 +400,6 @@ PREFABS.Item_bar_closets =
   y_fit  = "frame"
 
   uses_epic_textures = true
-
-  can_flip = true
 
   tex_STARTAN1 = {
     BRICK1=50, BRICK12=50, BRICK11=50,
@@ -470,8 +439,6 @@ PREFABS.Item_waiting_room_closets =
 
   uses_epic_textures = true
 
-  can_flip = true
-
   tex_STARTAN1 = {
     BRICK1=50, BRICK12=50, BRICK11=50,
     BRICK2=50, BRICK4=50,
@@ -497,11 +464,8 @@ PREFABS.Item_electronic_store_closets =
   engine = "zdoom"
 
   prob   = 2000
-
   theme  = "urban"
-
   env      = "outdoor"
-
   where  = "seeds"
 
   seed_w = 3
@@ -514,8 +478,6 @@ PREFABS.Item_electronic_store_closets =
   y_fit  = "frame"
 
   uses_epic_textures = true
-
-  can_flip = true
 
   tex_STARTAN1 = {
     BRICK1=50, BRICK12=50, BRICK11=50,
@@ -556,8 +518,6 @@ PREFABS.Item_cornerstore_closets =
 
   uses_epic_textures = true
 
-  can_flip = true
-
   tex_STARTAN1 = {
     BRICK1=50, BRICK12=50, BRICK11=50,
     BRICK2=50, BRICK4=50,
@@ -597,8 +557,6 @@ PREFABS.Item_bookstore_closets =
   y_fit  = "frame"
 
   uses_epic_textures = true
-
-  can_flip = true
 
   tex_STARTAN1 = {
     BRICK1=50, BRICK12=50,
