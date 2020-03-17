@@ -257,7 +257,6 @@ PREFABS.Item_living_room_closet =
   seed_h = 2
 
   deep = 16
-  over = -16
 
   x_fit = "frame"
   y_fit = "frame"
