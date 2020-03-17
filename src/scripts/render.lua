@@ -180,11 +180,8 @@ function Render_edge(E)
       end
 
       if mode == "potentially_obstructing" then
-        if not other_seed.area then
-          return true
-        end
 
-        if other_seed.area.mode == "scenic" or other_seed.area.mode == "void" then
+        if not other_seed.area then
           return true
         end
 
@@ -290,13 +287,7 @@ function Render_edge(E)
       -- don't allow anything more than flat walls if
       -- at least one seed ahead is not in the same area
       -- as the current wall
-      local check_dir
-      if dir == 2 then check_dir = 8 end
-      if dir == 4 then check_dir = 6 end
-      if dir == 6 then check_dir = 4 end
-      if dir == 8 then check_dir = 2 end
-
-      local tx, ty = geom.nudge(E.S.x1, E.S.y1, check_dir, 1)
+      local tx, ty = geom.nudge(E.S.mid_x, E.S.mid_y, 10-dir, 128)
       local that_seed = Seed_from_coord(tx, ty)
 
       if check_area_state(E.S, that_seed, "narrow_area") then
@@ -304,20 +295,25 @@ function Render_edge(E)
       end
 
       -- use only flat walls if in a corner
-      for dirs = 2, 8 do
-        if dirs % 2 == 0 then
-          tx, ty = geom.nudge(E.S.x1, E.S.y1, dirs, 1)
-          that_seed = Seed_from_coord(tx, ty)
-          if check_area_state(E.S, that_seed, "potentially_obstructing") then
-            reqs.flat = true
-          end
-        end
+      if E.S.area.room and E.S.area.room.is_outdoor then
+        gui.printf("--\nChecking from: " .. table.tostr(E.S) .. "\n")
+      end
+
+      tx, ty = geom.nudge(E.S.mid_x, E.S.mid_y, geom.LEFT[dir], 128)
+      that_seed = Seed_from_coord(tx, ty)
+      if check_area_state(E.S, that_seed, "potentially_obstructing") then
+        reqs.flat = true
+      end
+      tx, ty = geom.nudge(E.S.mid_x, E.S.mid_y, geom.RIGHT[dir], 128)
+      that_seed = Seed_from_coord(tx, ty)
+      if check_area_state(E.S, that_seed, "potentially_obstructing") then
+        reqs.flat = true
       end
 
       -- if seed in front of the edge has anything on it
       -- choose a flat wall fab instead
       if E.S.chunk then
-        if E.S.chunk.content then
+        if E.S.chunk.content and E.S.chunk.content != "MON_TELEPORT" then
           reqs.flat = true
         end
       end
@@ -334,7 +330,7 @@ function Render_edge(E)
       -- check for wall pieces that require solid depth behind
       -- i.e. fake doors and windows
       reqs.has_solid_back = true
-      tx, ty = geom.nudge(E.S.x1, E.S.y1, dir, -1)
+      tx, ty = geom.nudge(E.S.mid_x, E.S.mid_y, dir, -128)
       that_seed = Seed_from_coord(tx, ty)
 
       -- if seeds on either side don't belong to the same room
