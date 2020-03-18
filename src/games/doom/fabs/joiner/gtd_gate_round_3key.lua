@@ -1,15 +1,17 @@
 PREFABS.Locked_joiner_round_3key_modern =
 {
   file   = "joiner/gtd_gate_round_3key.wad"
+  map    = "MAP01"
+
   where  = "seeds"
   shape  = "I"
-
-  map    = "MAP01"
 
   theme  = "!hell"
 
   key    = "k_ALL"
   prob   = 300
+
+  height = 128
 
   seed_w = 2
   seed_h = 1
