@@ -427,7 +427,7 @@ PREFABS.Joiner_bookstore =
 
 }
 
---an elevator shaft 
+--an elevator shaft
 PREFABS.Joiner_elevatorshaft =
 {
   file   = "joiner/dem_urban_joiners.wad"
@@ -437,7 +437,6 @@ PREFABS.Joiner_elevatorshaft =
 
   prob   = 1000
 
-
   theme  = "!hell"
 
   env      = "building"
@@ -463,18 +462,18 @@ PREFABS.Joiner_elevatorshaft =
   can_flip = true
 
   tex_BROWN1 = {
-	GRAY1=50, GRAY4=50, GRAY5=50, GRAY6=50,
-	GRAY7=50, GRAY8=50, GRAY9=50, CEMENT3=50,
-	CEMENT5=50, CEMENT6=50, CEMENT7=50,
-	CEM01=50, CEM07=50, CEM09=50, PIPE2=50,
-	PIPE4=50, SLADWALL=50, TEKLITE=50, BROWN3=50,
-	MET2=50, MET6=50, MET7=50, PIPEDRK1=50,
-	SHAWGRY4=50, SHAWN01C=50, SHAWN01F=50,
-	SHAWVEN2=50, SHAWVENT=50
+    GRAY1=50, GRAY4=50, GRAY5=50, GRAY6=50,
+    GRAY7=50, GRAY8=50, GRAY9=50, CEMENT3=50,
+    CEMENT7=50,
+    CEM01=50, CEM07=50, CEM09=50, PIPE2=50,
+    PIPE4=50, SLADWALL=50, TEKLITE=50, BROWN3=50,
+    MET2=50, MET6=50, MET7=50, PIPEDRK1=50,
+    SHAWGRY4=50, SHAWN01C=50, SHAWN01F=50,
+    SHAWVEN2=50, SHAWVENT=50
   }
 }
 
---a corrupted elevator shaft 
+--a corrupted elevator shaft
 PREFABS.Joiner_elevatorshaftcorr =
 {
   file   = "joiner/dem_urban_joiners.wad"
@@ -484,7 +483,6 @@ PREFABS.Joiner_elevatorshaftcorr =
 
   prob   = 1000
 
-
   theme  = "!hell"
 
   env      = "building"
@@ -510,13 +508,13 @@ PREFABS.Joiner_elevatorshaftcorr =
   can_flip = true
 
   tex_BROWN1 = {
-	GRAY1=50, GRAY4=50, GRAY5=50, GRAY6=50,
-	GRAY7=50, GRAY8=50, GRAY9=50, CEMENT3=50,
-	CEMENT5=50, CEMENT6=50, CEMENT7=50,
-	CEM01=50, CEM07=50, CEM09=50, PIPE2=50,
-	PIPE4=50, SLADWALL=50, TEKLITE=50, BROWN3=50,
-	MET2=50, MET6=50, MET7=50, PIPEDRK1=50,
-	SHAWGRY4=50, SHAWN01C=50, SHAWN01F=50,
-	SHAWVEN2=50, SHAWVENT=50
+    GRAY1=50, GRAY4=50, GRAY5=50, GRAY6=50,
+    GRAY7=50, GRAY8=50, GRAY9=50, CEMENT3=50,
+    CEMENT7=50,
+    CEM01=50, CEM07=50, CEM09=50, PIPE2=50,
+    PIPE4=50, SLADWALL=50, TEKLITE=50, BROWN3=50,
+    MET2=50, MET6=50, MET7=50, PIPEDRK1=50,
+    SHAWGRY4=50, SHAWN01C=50, SHAWN01F=50,
+    SHAWVEN2=50, SHAWVENT=50
   }
 }
