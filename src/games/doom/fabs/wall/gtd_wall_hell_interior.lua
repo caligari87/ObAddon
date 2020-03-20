@@ -29,16 +29,12 @@ PREFABS.Wall_hell_churchy_window_big_inside =
 {
   template = "Wall_hell_braced_arch"
   map = "MAP03"
-
-  z_fit = "top"
 }
 
 PREFABS.Wall_hell_churchy_window_small_inside =
 {
   template = "Wall_hell_braced_arch"
   map    = "MAP04"
-
-  z_fit = "top"
 }
 
 -- outside versions of the windows
