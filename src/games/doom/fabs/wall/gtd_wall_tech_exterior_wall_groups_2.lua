@@ -21,3 +21,17 @@ PREFABS.Wall_tech_outdoor_hex_inset = --#
 
   z_fit = "top"
 }
+
+PREFABS.Wall_tech_outdoor_grated_greenwall = --#
+{
+  template = "Wall_tech_outdoor_hex_inset"
+  map = "MAP02"
+
+  group = "tech_o_grated_greenwall"
+
+  tex_PIPEWAL1 =
+  {
+    PIPEWAL1 = 1
+    PIPEWAL2 = 5
+  }
+}
