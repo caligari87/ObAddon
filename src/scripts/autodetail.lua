@@ -78,9 +78,6 @@ function Autodetail_plain_walls()
   if total_perimeter >= LEVEL_PERIMETER_COUNT_KICKIN then
     tone_down_factor = ((total_perimeter/LEVEL_PERIMETER_COUNT_KICKIN))
     ^ UNGROUPED_WALL_TONE_DOWN_EXP
-
-    PREFABS["Wall_plain"].use_prob = PREFABS["Wall_plain"].prob * tone_down_factor
-    PREFABS["Wall_plain_diag"].use_prob = PREFABS["Wall_plain"].prob * tone_down_factor
   end
 
   LEVEL.autodetail_plain_walls_factor = tone_down_factor

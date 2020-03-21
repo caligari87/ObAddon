@@ -366,6 +366,17 @@ function Render_edge(E)
 
     local def = Fab_pick(reqs, sel(reqs.group, "none_ok", nil))
 
+    -- autodetail override
+    if LEVEL.autodetail_plain_walls_factor then
+      if rand.odds(math.clamp(0, LEVEL.autodetail_plain_walls_factor * 1.25, 100)) then
+        if reqs.where == "edge" then
+          def = PREFABS["Wall_plain"]
+        elseif reqs.where == "diagonal" then
+          def = PREFABS["Wall_plain_diag"]
+        end
+      end
+    end
+
     -- when a wall group is not selected, use the ungrouped walls
     if not def then
       reqs.group = nil
