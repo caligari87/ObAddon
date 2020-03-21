@@ -46,7 +46,7 @@ PREFABS.Arch_bare_columned_2X =
 PREFABS.Arch_bare_hell =
 {
   template = "Arch_bare"
-  map = "MAP02"
+  map = "MAP01"
 
   theme = "hell"
 
@@ -72,7 +72,7 @@ PREFABS.Arch_bare_columned_hell =
 PREFABS.Arch_bare_columned_2X_hell =
 {
   template = "Arch_bare"
-  map = "MAP02"
+  map = "MAP03"
 
   theme = "hell"
 
