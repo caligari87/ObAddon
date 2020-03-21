@@ -23,6 +23,8 @@ PREFABS.Wall_hell_braced_arch_candle_lit =
 {
   template = "Wall_hell_braced_arch"
   map = "MAP02"
+
+  z_fit = { 36,44 }
 }
 
 PREFABS.Wall_hell_churchy_window_big_inside =
