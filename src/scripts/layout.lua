@@ -2035,7 +2035,7 @@ stderrf("Cages in %s [%s pressure] --> any_prob=%d  per_prob=%d\n",
 
     local autodetail_odds = 25
     if LEVEL.autodetail_group_walls_factor then
-      autodetail_odds = autodetail_odds + math.clamp(0,LEVEL.autodetail_group_walls_factor,75)
+      autodetail_odds = autodetail_odds - math.clamp(0,LEVEL.autodetail_group_walls_factor,25)
     end
 
     each fg in R.floor_groups do
