@@ -2033,17 +2033,17 @@ stderrf("Cages in %s [%s pressure] --> any_prob=%d  per_prob=%d\n",
 
     if not tab then return end
 
-    if tab["PLAIN"] then
-      tab["PLAIN"] = tab["PLAIN"] * LEVEL.autodetail_group_walls_factor
+    local autodetail_odds = 25
+    if LEVEL.autodetail_group_walls_factor then
+      autodetail_odds = autodetail_odds + math.clamp(0,LEVEL.autodetail_group_walls_factor,75)
     end
 
     each fg in R.floor_groups do
-      local what = rand.key_by_probs(tab)
-
-      if what != "PLAIN" then
-        fg.wall_group = what
+      if rand.odds(autodetail_odds) then
+        fg.wall_group = rand.key_by_probs(tab)
       end
     end
+
   end
 
 

@@ -3208,6 +3208,7 @@ ARMAETUS_URBAN_WALL_GROUPS =
   gtd_epic_craneo_paintings = 10 --63
   gtd_computers_shawn = 2
   gtd_computers_compsta = 2
+  gtd_wall_hell_bottom_glass = 15
 }
 
 ARMAETUS_HELL_WALL_GROUPS =
@@ -3233,6 +3234,7 @@ ARMAETUS_HELL_WALL_GROUPS =
   gtd_wall_vertical_light_2 = 9
   gtd_wall_vertical_light_2 = 9
   gtd_wall_vertical_light_3 = 9 --338
+  gtd_wall_hell_bottom_glass = 20
 }
 
 

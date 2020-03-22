@@ -606,7 +606,7 @@ ULTDOOM.THEMES =
 
     wall_groups =
     {
-      PLAIN = 145
+      -- PLAIN = 145
       low_gap = 2
       mid_band = 3
       lite2 = 10
@@ -866,7 +866,7 @@ ULTDOOM.THEMES =
    -- This is because of the slow Hellification of the Deimos base, hence a few Hell wall prefabs are here.
     wall_groups =
     {
-      PLAIN = 200
+      -- PLAIN = 200
       low_gap = 7
       mid_band = 5
       lite2 = 5
@@ -1082,7 +1082,7 @@ ULTDOOM.THEMES =
 
     wall_groups =
     {
-      PLAIN = 300
+      -- PLAIN = 300
       torches2 = 30 --red
       torches3 = 30 --blue
       torches1 = 30 --green
@@ -1385,7 +1385,7 @@ ULTDOOM.THEMES =
 
     wall_groups =
     {
-      PLAIN = 275
+      -- PLAIN = 275
       torches2 = 30 --red
       torches3 = 30 --blue
       torches1 = 30 --green
