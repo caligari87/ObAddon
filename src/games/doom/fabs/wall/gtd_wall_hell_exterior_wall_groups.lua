@@ -160,7 +160,7 @@ PREFABS.Wall_hell_outdoor_huge_overhang = --#
 
   deep = 48
 
-  z_fit = "stretch"
+  z_fit = { 20,52 }
 }
 
 PREFABS.Wall_hell_outdoor_spiny_overhang = --#
