@@ -54,5 +54,7 @@ PREFABS.Wall_tech_outdoor_sewer_hatches = --#
     NUKESLAD = 5
   }
 
+  on_scenics = "never"
+
   z_fit = "top"
 }
