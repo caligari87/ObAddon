@@ -2,8 +2,9 @@ PREFABS.Wall_hell_exterior_wg2_template =
 {
   file   = "wall/gtd_wall_hell_exterior_wall_groups_2.wad"
 
-  prob   = 15
+  prob   = 0
   theme = "hell"
+  env = "outdoor"
 
   where  = "edge"
 
@@ -23,6 +24,8 @@ PREFABS.Wall_hell_egyptish_triwindows = --#
   template = "Wall_hell_exterior_wg2_template"
   map = "MAP01"
 
+  prob = 15
+
   uses_epic_textures = true
 
   group = "hell_o_egyptish_triwindows"
@@ -32,6 +35,8 @@ PREFABS.Wall_hell_destroyed_city_facade = --#
 {
   template = "Wall_hell_exterior_wg2_template"
   map = "MAP02"
+
+  prob = 15
 
   group = "hell_o_destroyed_city_facade"
 
@@ -47,6 +52,8 @@ PREFABS.Wall_hell_destroyed_city_facade_2 =
   template = "Wall_hell_exterior_wg2_template"
   map = "MAP03"
 
+  prob = 15
+
   group = "hell_o_destroyed_city_facade"
 
   tex_WOOD5 =
@@ -60,6 +67,8 @@ PREFABS.Wall_hell_destroyed_city_facade_3 =
 {
   template = "Wall_hell_exterior_wg2_template"
   map = "MAP04"
+
+  prob = 15
 
   group = "hell_o_destroyed_city_facade"
 
