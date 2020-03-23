@@ -1951,6 +1951,7 @@ DOOM.THEMES =
       hell_o_dark_cathedral_windows = 1
       hell_o_extruded_arch = 1
       hell_o_egyptish_triwindows = 1
+      hell_o_destroyed_city_facade = 1
     }
 
     window_groups =
