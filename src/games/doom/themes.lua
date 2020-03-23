@@ -1212,7 +1212,6 @@ DOOM.THEMES =
       tech_o_lite_strip_blue = 1
       tech_o_inset_teklite = 1
       tech_o_inset_teklite2 = 1
-      tech_o_inset_teklite2 = 1
       tech_o_halfbase_green_light = 1
       tech_o_halfbase_blue_triangle = 1
       tech_o_giant_UAC_sign = 1
@@ -1228,6 +1227,7 @@ DOOM.THEMES =
       tech_o_fence_lights_uac_thing = 1
       tech_o_hex_inset = 1
       tech_o_grated_greenwall = 1
+      tech_o_everyone_likes_sewers = 1
     }
 
     window_groups =

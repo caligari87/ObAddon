@@ -8,7 +8,6 @@ PREFABS.Wall_tech_outdoor_hex_inset = --#
   group = "tech_o_hex_inset"
   engine = "zdoom"
 
-  env   = "!building"
   theme = "tech"
 
   where  = "edge"
@@ -27,6 +26,8 @@ PREFABS.Wall_tech_outdoor_grated_greenwall = --#
   template = "Wall_tech_outdoor_hex_inset"
   map = "MAP02"
 
+  engine = "any"
+
   group = "tech_o_grated_greenwall"
 
   tex_PIPEWAL1 =
@@ -34,4 +35,24 @@ PREFABS.Wall_tech_outdoor_grated_greenwall = --#
     PIPEWAL1 = 1
     PIPEWAL2 = 5
   }
+}
+
+PREFABS.Wall_tech_outdoor_sewer_hatches = --#
+{
+  template = "Wall_tech_outdoor_hex_inset"
+  map = "MAP03"
+
+  engine = "any"
+
+  group = "tech_o_everyone_likes_sewers"
+
+  uses_epic_textures = true
+
+  tex_SLADRIP1 =
+  {
+    SLADRIP1 = 1
+    NUKESLAD = 5
+  }
+
+  z_fit = "top"
 }
