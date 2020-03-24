@@ -1,4 +1,6 @@
-PREFABS.Decor_camping_tent_bloo =
+-- disabled for now - the slope sectors don't work well with outdoor shadowing effects.
+
+--[[PREFABS.Decor_camping_tent_bloo =
 {
   file   = "decor/craneo_decor_camping_tent.wad"
   map    = "MAP01"
@@ -32,4 +34,4 @@ PREFABS.Decor_camping_tent_beige =
 
   tex_COMPBLUE = "STUCCO"
   flat_FLAT14 = "FLAT5_5"
-}
+}]]
