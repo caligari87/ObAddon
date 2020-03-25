@@ -88,7 +88,7 @@ ZDOOM_SOUNDSCAPES =
       snow      = { Outdoors_Arctic_Wind = 50 }
       desert    = { Outdoors_Desert_Wind = 50 }
     }
-    caves = {
+    cave = {
       temperate = { Cave_Ambient = 50 }
       snow      = { Cave_Ambient = 50 }
       desert    = { Cave_Ambient = 50 }

@@ -151,12 +151,14 @@ function ZDOOM_SOUND.populate_level_ambience()
     end
 
     each A in R.areas do
-      if A.mode == "floor" or A.mode == "liquid" then
+      if (A.mode == "floor" or A.mode == "liquid")
+      or (R.is_park or R.is_cave) then
         each S in A.seeds do
 
           local pick_sound
 
           local sound_table = level_sound_table[room_env]
+          local no_sound = false
 
           local outdoor_theme
 
@@ -168,7 +170,7 @@ function ZDOOM_SOUND.populate_level_ambience()
                 pick_sound = rand.key_by_probs(sound_table)
               else
                 gui.printf("WARNING: No sound for " .. LEVEL.theme_name .. " indoor.\n")
-                continue
+                no_sound = true
               end
 
             else
@@ -183,18 +185,31 @@ function ZDOOM_SOUND.populate_level_ambience()
               else
                 gui.printf("WARNING: No sound for " .. LEVEL.theme_name .. " " ..
                 outdoor_theme .. " " .. room_env .. ".\n")
-                continue
+                no_sound = true
               end
             end
 
-            local E = {
-              x = S.mid_x
-              y = S.mid_y
-              z = S.area.floor_h + 8
-              id = ZDOOM_SOUND_DEFS[pick_sound].id
-            }
+            local final_z
+            if S.area then
+              if S.area.ceil_h then
+                final_z = S.area.ceil_h
+              elseif S.area.zone.sky_h then
+                final_z = S.area.zone.sky_h
+              else
+                final_z = 0
+              end
+            end
 
-            raw_add_entity(E)
+            if not no_sound then
+              local E = {
+                x = S.mid_x
+                y = S.mid_y
+                z = final_z - 8
+                id = ZDOOM_SOUND_DEFS[pick_sound].id
+              }
+              raw_add_entity(E)
+            end
+
           end
         end
       end
