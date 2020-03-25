@@ -26,6 +26,8 @@ PREFABS.Item_gtd_key_dispenser_hell =
   template = "Item_gtd_key_dispenser"
   map = "MAP02"
 
+  uses_epic_textures = true
+
   prob = 50
 
   over = 0
