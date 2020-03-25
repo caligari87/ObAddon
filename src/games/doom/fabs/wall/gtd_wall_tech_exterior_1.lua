@@ -82,7 +82,7 @@ PREFABS.Wall_tech_bottom_vent =
 
   z_fit = "top"
 
-  tex_COMPTALL =
+  tex_COMPWERD =
   {
     COMPTALL = 1
     COMPWERD = 1
