@@ -2885,6 +2885,16 @@ stderrf("Link pieces: %s dir:%d <--> %s dir:%d\n",
 
     if cur_rule.teleporter then
       R.need_teleports = R.need_teleports + 1
+
+      -- linear start/linear level check
+      if LEVEL.has_linear_start
+      and R.id == 1 then
+        R.need_teleports = math.clamp(0, R.need_teleports, 1)
+      end
+
+      if LEVEL.is_linear then
+        R.need_teleports = math.clamp(0, R.need_teleports, 2)
+      end
     end
 
     if new_room then
