@@ -2552,39 +2552,15 @@ function Level_choose_skybox()
     skyfab = assert(def)
 
   elseif OB_CONFIG.zdoom_skybox == "themed" then
-
-    -- check against skyboxes that don't match the current
-    -- environment themes specifically
-
-    --local match_state = false
-    --while match_state != true do
-      skyfab = PREFABS[rand.key_by_probs(THEME.skyboxes)]
-
-    --[[  if LEVEL.outdoor_theme == "snow" then
-        each v in ARMAETUS_EXCLUDE_DESERT_SKYBOXES do
-          if skyfab == v then
-            match_state = false
-          else
-            match_state = true
-          end
-        end
-      elseif LEVEL.outdoor_theme == "sand" then
-        each v in ARMAETUS_EXCLUDE_SNOW_SKYBOXES do
-          if skyfab == v then
-            match_state = false
-          else
-            match_state = true
-          end
-        end
-      elseif LEVEL.outdoor_theme == "temperate"
-      or not LEVEL.outdoor_theme then
-        match_state = true
-      end
-    end
-]]
+    skyfab = PREFABS[rand.key_by_probs(THEME.skyboxes)]
 
   elseif OB_CONFIG.zdoom_skybox == "generic" then
-    skyfab = PREFABS["Skybox_generic"]
+    if PARAM.epic_textures_activated then
+      skyfab = PREFABS["Skybox_hellish_city_EPIC"]
+    else
+      skyfab = PREFABS["Skybox_hellish_city"]
+    end
+
   end
 
   if not skyfab and OB_CONFIG.zdoom_skybox != "disable" then
