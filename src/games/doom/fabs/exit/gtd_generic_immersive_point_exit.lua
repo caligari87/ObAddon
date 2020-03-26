@@ -21,5 +21,7 @@ PREFABS.Exit_immersive_point_portable_nuke =
 
   map = "MAP03"
 
+  height = 136
+
   size = 64
 }
