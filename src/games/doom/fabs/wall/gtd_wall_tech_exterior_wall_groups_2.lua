@@ -55,6 +55,18 @@ PREFABS.Wall_tech_outdoor_sewer_hatches = --#
   }
 
   on_scenics = "never"
+}
 
-  z_fit = "top"
+PREFABS.Wall_tech_outdoor_red_wall = --#
+{
+  template = "Wall_tech_outdoor_hex_inset"
+  map = "MAP04"
+
+  group = "tech_o_red_wall"
+
+  tex_SHAWN3 =
+  {
+    SHAWN3 = 1
+    EXITDOOR = 3
+  }
 }
