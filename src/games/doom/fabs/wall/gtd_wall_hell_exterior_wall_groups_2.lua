@@ -86,7 +86,7 @@ PREFABS.Wall_hell_alt_cathedral_windows = --#
 
   prob = 15
 
-  group = "tech_o_alt_cathedral_windows"
+  group = "hell_o_alt_cathedral_windows"
 
   z_fit = { 48,96 }
 }

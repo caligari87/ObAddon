@@ -1229,7 +1229,6 @@ DOOM.THEMES =
       tech_o_grated_greenwall = 1
       tech_o_everyone_likes_sewers = 1
       tech_o_red_wall = 1
-      tech_o_alt_cathedral_windows = 1
     }
 
     window_groups =
@@ -1954,6 +1953,7 @@ DOOM.THEMES =
       hell_o_extruded_arch = 1
       hell_o_egyptish_triwindows = 1
       hell_o_destroyed_city_facade = 1
+      hell_o_alt_cathedral_windows = 1
     }
 
     window_groups =
