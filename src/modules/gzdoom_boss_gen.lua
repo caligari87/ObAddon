@@ -1323,6 +1323,9 @@ function BOSS_GEN_TUNE.check_gotchas_enabled()
   and PARAM.boss_gen then
     error("Procedural gotchas must be enabled for boss generator!")
   end
+  if OB_CONFIG.mons == "none" then
+    error("Monsters must be enabled for boss generator!")
+  end
 end
 
 function BOSS_GEN_TUNE.setup(self)
@@ -1403,6 +1406,13 @@ function BOSS_GEN_TUNE.all_done()
   if PARAM.boss_count <= 1 then
     -- nothing happens and everyone is just sad
     warning("No procedural gotchas found by boss generator")
+    PARAM.boss_count = -1
+    return
+  end
+  
+  if OB_CONFIG.mons == "none" then
+    -- no monsters, no boss, duh
+    warning("No monsters found by boss generator")
     PARAM.boss_count = -1
     return
   end
