@@ -78,3 +78,15 @@ PREFABS.Wall_hell_destroyed_city_facade_3 =
     BRWINDOW = 5
   }
 }
+
+PREFABS.Wall_hell_alt_cathedral_windows = --#
+{
+  template = "Wall_hell_exterior_wg2_template"
+  map = "MAP05"
+
+  prob = 15
+
+  group = "tech_o_alt_cathedral_windows"
+
+  z_fit = { 48,96 }
+}
