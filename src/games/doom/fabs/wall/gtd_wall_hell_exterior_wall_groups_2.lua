@@ -88,5 +88,7 @@ PREFABS.Wall_hell_alt_cathedral_windows = --#
 
   group = "hell_o_alt_cathedral_windows"
 
+  uses_epic_textures = true
+
   z_fit = { 48,96 }
 }
