@@ -4,14 +4,12 @@ PREFABS.Locked_joiner_round_3key_modern =
   map    = "MAP01"
 
   where  = "seeds"
-  shape  = "I"
+  shape = "I"
 
   theme  = "!hell"
 
   key    = "k_ALL"
   prob   = 300
-
-  height = 128
 
   seed_w = 2
   seed_h = 1

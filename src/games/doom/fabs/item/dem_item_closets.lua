@@ -174,7 +174,8 @@ PREFABS.Item_elevatorshaft_closet =
 
   engine = "zdoom"
 
-  prob   = 50
+  prob = 50
+  skip_prob = 50
 
   theme  = "!hell"
 
@@ -210,7 +211,9 @@ PREFABS.Item_elevatorshaftcorr_closet =
   map    = "MAP06"
 
   engine = "zdoom"
+
   prob   = 50
+  skip_prob = 50
 
   theme  = "!hell"
   env    = "building"

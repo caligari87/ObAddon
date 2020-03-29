@@ -436,6 +436,7 @@ PREFABS.Joiner_elevatorshaft =
   engine = "zdoom"
 
   prob   = 1000
+  skip_prob = 50
 
   theme  = "!hell"
 
@@ -482,6 +483,7 @@ PREFABS.Joiner_elevatorshaftcorr =
   engine = "zdoom"
 
   prob   = 1000
+  skip_prob = 50
 
   theme  = "!hell"
 

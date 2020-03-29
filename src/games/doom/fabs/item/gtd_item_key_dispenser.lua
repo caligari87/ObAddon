@@ -4,7 +4,9 @@ PREFABS.Item_gtd_key_dispenser =
   map = "MAP01"
 
   rank = 2
-  prob = 50
+  prob = 30
+  skip_prob = 50
+
   theme = "!hell"
   env = "!cave"
 
