@@ -372,8 +372,6 @@ PREFABS.Joiner_scionox_locked_lift_trikey_lockgate_switch =
 
   map    = "MAP09"
   key    = "k_ALL"
-
-  rank   = 2
 }
 
 PREFABS.Joiner_scionox_locked_lift_trikey_lockgate_switch_urban =
@@ -384,7 +382,6 @@ PREFABS.Joiner_scionox_locked_lift_trikey_lockgate_switch_urban =
 
   key    = "k_ALL"
   theme  = "urban"
-  rank   = 2
 
   tex_COMPBLUE = { BIGBRIK1=50, BRICK10=50, BRICK11=50, WOOD12=50, WOOD1=60, PANEL4=50 }
 
@@ -397,7 +394,6 @@ PREFABS.Joiner_scionox_locked_lift_trikey_lockgate_switch_urban =
   map    = "MAP09"
   key = "k_ALL"
   theme  = "hell"
-  rank   = 2
 
   tex_DOORRED = "DOORRED2"
   tex_DOORBLU = "DOORBLU2"

@@ -1,32 +1,33 @@
 PREFABS.Locked_joiner_round_3key_modern =
 {
-  file   = "joiner/gtd_gate_round_3key.wad"
-  map    = "MAP01"
+  file = "joiner/gtd_gate_round_3key.wad"
+  map = "MAP01"
 
   where  = "seeds"
   shape = "I"
 
   theme  = "!hell"
 
-  key    = "k_ALL"
-  prob   = 300
+  key = "k_ALL"
+
+  prob = 25
 
   seed_w = 2
   seed_h = 1
 
-  deep   = 16
-  over   = 16
+  deep = 16
+  over = 16
 
-  x_fit  = "frame"
-  y_fit  = { 132,136 }
+  x_fit = "frame"
+  y_fit = { 132,136 }
 }
 
 PREFABS.Locked_joiner_round_3key_hell =
 {
   template = "Locked_joiner_round_3key_modern"
-  map      = "MAP02"
+  map = "MAP02"
 
-  theme    = "hell"
+  theme = "hell"
 
   tex_EXITDOOR = "FIRELAVA"
 

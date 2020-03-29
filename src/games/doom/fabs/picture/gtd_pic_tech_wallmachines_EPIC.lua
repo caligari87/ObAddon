@@ -3,7 +3,7 @@ PREFABS.Pic_gtd_tech_core_thing =
   file   = "picture/gtd_pic_tech_wallmachines_EPIC.wad"
   map    = "MAP01"
 
-  prob   = 25
+  prob   = 10
   theme = "!hell"
 
   uses_epic_textures = true

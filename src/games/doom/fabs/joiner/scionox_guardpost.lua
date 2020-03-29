@@ -85,7 +85,6 @@ PREFABS.Joiner_scionox_guardpost_all =
   map    = "MAP04"
 
   key    = "k_ALL"
-  rank   = 2
 
   y_fit = { 68,76 , 184,188 }
 }

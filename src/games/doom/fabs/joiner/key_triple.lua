@@ -54,8 +54,6 @@ PREFABS.Locked_joiner_triple_boom =
 
   engine = "boom"
 
-  rank = 2
-
   sector_1  = { [0]=70, [1]=15, [2]=5, [3]=5, [8]=10, [12]=7, [13]=7 }
 
 }
@@ -67,8 +65,6 @@ PREFABS.Locked_joiner_triple_boom2 =
   map = "MAP02"
 
   engine = "boom"
-
-  rank = 2
 
   tex_BIGDOOR4 = "BIGDOOR3"
   flat_FLOOR7_1 = "BIGDOOR3"
@@ -85,8 +81,6 @@ PREFABS.Locked_joiner_triple_boom3 =
 
   engine = "boom"
 
-  rank = 2
-
   tex_BIGDOOR4 = "BIGDOOR2"
   flat_FLOOR7_1 = "BIGDOOR2"
 
@@ -102,8 +96,6 @@ PREFABS.Locked_joiner_triple_boom_hell1 =
   theme = "hell"
 
   engine = "boom"
-
-  rank = 2
 
   tex_BIGDOOR4 = { BIGDOOR5=50, BIGDOOR7=50, WOODMET2=50 }
   tex_GRAY5 = "MARBLE1"
@@ -123,8 +115,6 @@ PREFABS.Locked_joiner_triple_boom_hell2 =
 
   engine = "boom"
 
-  rank = 2
-
   tex_BIGDOOR4 = { MARBFACE=50, MARBFAC3=50, MARBFAC2=20 }
   tex_GRAY5 = "MARBLE1"
   flat_FLOOR7_1 = "FLOOR7_2"
@@ -142,8 +132,6 @@ PREFABS.Locked_joiner_triple_boom_urban1 =
   theme = "urban"
 
   engine = "boom"
-
-  rank = 2
 
   tex_BIGDOOR4 = { BIGDOOR5=50, BIGDOOR7=50, WOODMET2=50 }
   tex_GRAY5 = "WOOD1"

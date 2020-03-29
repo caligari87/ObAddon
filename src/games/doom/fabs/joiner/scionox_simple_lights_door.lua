@@ -170,17 +170,19 @@ PREFABS.Joiner_scionox_simple_lights_door_16 =
 {
   template = "Joiner_scionox_simple_lights_door"
   map    = "MAP07"
+
   key    = "k_ALL"
-  rank   = 2
 }
 
 PREFABS.Joiner_scionox_simple_lights_door_17 =
 {
   template = "Joiner_scionox_simple_lights_door"
   map    = "MAP07"
+
   key    = "k_ALL"
-  rank   = 2
+
   theme  = "urban"
+
   thing_2028 = "mercury_small"
   flat_FLOOR4_6 = { FLAT5_1=50, FLAT19=50, FLAT5_5=50, FLOOR7_1=50, SLIME13=50, RROCK15=50 }
 }
@@ -189,9 +191,11 @@ PREFABS.Joiner_scionox_simple_lights_door_18 =
 {
   template = "Joiner_scionox_simple_lights_door"
   map    = "MAP08"
+
   key    = "k_ALL"
-  rank   = 2
+
   theme  = "hell"
+
   flat_FLOOR4_6 = { DEM1_6=50, FLAT1_1=50, FLAT5_3=50, FLOOR7_2=50, RROCK09=50, RROCK11=50 }
   tex_WOODGARG = { WOODGARG=50, WOOD4=50 }
 }
@@ -376,17 +380,19 @@ PREFABS.Joiner_scionox_simple_lights_door_34 =
 {
   template = "Joiner_scionox_simple_lights_door_19"
   map    = "MAP12"
+
   key    = "k_ALL"
-  rank   = 2
 }
 
 PREFABS.Joiner_scionox_simple_lights_door_35 =
 {
   template = "Joiner_scionox_simple_lights_door_19"
   map    = "MAP12"
+
   key    = "k_ALL"
-  rank   = 2
+
   theme  = "urban"
+
   thing_2028 = "mercury_small"
   flat_FLOOR4_6 = { FLAT5_1=50, FLAT19=50, FLAT5_5=50, FLOOR7_1=50, SLIME13=50, RROCK15=50 }
 }
@@ -395,10 +401,13 @@ PREFABS.Joiner_scionox_simple_lights_door_36 =
 {
   template = "Joiner_scionox_simple_lights_door_19"
   map    = "MAP12"
+
   key    = "k_ALL"
-  rank   = 2
+
   theme  = "hell"
+
   thing_2028 = "candelabra"
+
   flat_FLOOR4_6 = { DEM1_6=50, FLAT1_1=50, FLAT5_3=50, FLOOR7_2=50, RROCK09=50, RROCK11=50 }
   tex_BIGDOOR2 = { BIGDOOR5=50, BIGDOOR7=50, WOODGARG=50, WOODMET2=50 }
 }
@@ -456,9 +465,9 @@ PREFABS.Joiner_scionox_simple_lights_door_39 =
 PREFABS.Joiner_scionox_simple_lights_door_40 =
 {
   template = "Joiner_scionox_simple_lights_door_37"
-  key    = "k_ALL"
-  rank   = 2
   map    = "MAP14"
+
+  key    = "k_ALL"
 }
 
 PREFABS.Joiner_scionox_simple_lights_door_41 =
@@ -679,17 +688,18 @@ PREFABS.Joiner_scionox_simple_lights_door_56 =
 {
   template = "Joiner_scionox_simple_lights_door_41"
   map    = "MAP18"
+
   key    = "k_ALL"
-  rank   = 2
 }
 
 PREFABS.Joiner_scionox_simple_lights_door_57 =
 {
   template = "Joiner_scionox_simple_lights_door_41"
   map    = "MAP18"
+
   theme  = "urban"
   key    = "k_ALL"
-  rank   = 2
+
   thing_48 =
   {
     mercury_lamp = 50
@@ -701,9 +711,10 @@ PREFABS.Joiner_scionox_simple_lights_door_58 =
 {
   template = "Joiner_scionox_simple_lights_door_41"
   map    = "MAP18"
+
   theme  = "hell"
   key    = "k_ALL"
-  rank   = 2
+
   thing_48 =
   {
     evil_eye   = 75
@@ -711,6 +722,7 @@ PREFABS.Joiner_scionox_simple_lights_door_58 =
     skull_cairn = 25
     candelabra = 25
   }
+
   tex_SPCDOOR1 = { WOODGARG=50, WOOD4=50, WOODMET2=50, SPCDOOR4=50 }
   tex_DOORRED = "DOORRED2"
   tex_DOORBLU = "DOORBLU2"
