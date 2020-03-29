@@ -147,3 +147,33 @@ PREFABS.Fence_gappy_fallback_diag =
 
   bound_z1 = 0
 }
+
+--
+
+PREFABS.Fence_tech_sloped_silver =
+{
+  file   = "fence/gtd_fence_tech_lit.wad"
+  map    = "MAP05"
+
+  prob   = 50
+
+  group = "fence_sloped_silver"
+
+  where  = "edge"
+
+  deep   = 16
+  over   = 16
+
+  fence_h  = 32
+  bound_z1 = 0
+}
+
+PREFABS.Fence_tech_sloped_silver_diag =
+{
+  template = "Fence_tech_hl_bars"
+  map = "MAP06"
+
+  group = "fence_sloped_silver"
+
+  where = "diagonal"
+}
