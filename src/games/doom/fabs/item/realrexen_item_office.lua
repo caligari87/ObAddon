@@ -1,9 +1,9 @@
-PREFABS.Cage_realrexen_office =
+PREFABS.Item_realrexen_office =
 {
-  file   = "cage/realrexen_office.wad"
+  file   = "item/realrexen_item_office.wad"
   map    = "MAP01"
 
-  prob   = 400
+  prob   = 50
   theme  = "!hell"
 
   env    = "building"
@@ -20,19 +20,7 @@ PREFABS.Cage_realrexen_office =
   x_fit  = "frame"
   y_fit  = "top"
 
-  engine = "gzdoom"
-
-   thing_2007 =
-    {
- --   pistol = 50
-    shotty = 50
-    super = 50
-    chain = 50
---    bfg = 50
-    launch = 50
-    plasma = 50
-    saw = 50
-   }
+  engine = "zdoom"
 
   thing_10 =
    {
@@ -41,5 +29,4 @@ PREFABS.Cage_realrexen_office =
     dead_zombie = 25
     dead_shooter = 25
   }
-
 }
