@@ -25,7 +25,6 @@ PREFABS.Locked_joiner_round_3key_modern =
 PREFABS.Locked_joiner_round_3key_hell =
 {
   template = "Locked_joiner_round_3key_modern"
-  map = "MAP02"
 
   theme = "hell"
 
