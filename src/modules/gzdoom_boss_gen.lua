@@ -1247,7 +1247,7 @@ BOSS_GEN_TUNE.TRAITS =
     probmele = 30
     difffact = 1.2
     mislfact = 1.2
-    mindiff = -1
+    mindiff = 2
   }
 }
 
