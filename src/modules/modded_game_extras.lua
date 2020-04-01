@@ -105,10 +105,11 @@ MODDED_GAME_EXTRAS.D4T_THINGS =
   d4t_drone =
   {
     id = 13611
-    kind = "powerup"
-    closet_prob = 4
-    secret_prob = 15
-    storage_prob = 20
+    kind = "other"
+    start_prob = 20
+    closet_prob = 10
+    secret_prob = 25
+    storage_prob = 50
   }
 }
 
@@ -117,17 +118,29 @@ MODDED_GAME_EXTRAS.D4T_MONS =
   d4t_gore_nest =
   {
     id = 13511
-    r = 2
+    r = 48
     h = 5
     level = 1
     boss_type = "minor"
     boss_prob = 50
     prob = 8
-    health = 1000
+    health = 500
     damage = 25
     attack = "hitscan"
-    density = 0.3
-    weap_min_damage = 25
+    density = 0.2
+  }
+
+  d4t_gore_nest_rank_n_file =
+  {
+    id = 13511
+    r = 48
+    h = 5
+    level = 3
+    prob = 20
+    health = 500
+    damage = 25
+    attack = "hitscan"
+    density = 0.2
   }
 }
 
