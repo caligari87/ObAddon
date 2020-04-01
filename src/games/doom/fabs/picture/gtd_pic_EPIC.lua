@@ -83,24 +83,6 @@ PREFABS.Pic_EPIC_box_skeletons =
   }
 }
 
-PREFABS.Pic_EPIC_box_lavawall =
-{
-  template = "Pic_EPIC_box_template"
-  map = "MAP01"
-
-  prob = 25 * 6
-
-  theme = "hell"
-
-  seed_w = 2
-
-  tex_GLASS1 =
-  {
-   LFAL21 = 50
-   LFALL1 = 50
-  }
-}
-
 PREFABS.Pic_EPIC_box_marblefaces =
 {
   template = "Pic_EPIC_box_template"
@@ -540,7 +522,7 @@ PREFABS.Pic_EPIC_Devilish =
   {
     DEMSTAT = 60
     GOTH50  = 30
-    GOTH03  = 15
+    GOTH04  = 15
   }
 }
 

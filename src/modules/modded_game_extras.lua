@@ -64,6 +64,73 @@ MODDED_GAME_EXTRAS.HELLSCAPE_NAVIGATOR_TEMPLATE =
 
 }
 
+MODDED_GAME_EXTRAS.QCDE_LOOTBOX_NICE_ITEMS =
+{
+  lb_backpack =
+  {
+    id = 15514
+    kind = "powerup"
+    add_prob = 5
+    start_prob = 40
+    closet_prob = 10
+    secret_prob = 35
+    storage_prob = 80
+  }
+
+  lb_chest =
+  {
+    id = 15515
+    kind = "powerup"
+    add_prob = 5
+    start_prob = 30
+    closet_prob = 8
+    secret_prob = 35
+    storage_prob = 60
+  }
+
+  lb_reliquary =
+  {
+    id = 15516
+    kind = "powerup"
+    add_prob = 4
+    start_prob = 20
+    closet_prob = 8
+    secret_prob = 35
+    storage_prob = 40
+  }
+}
+
+MODDED_GAME_EXTRAS.D4T_THINGS =
+{
+  d4t_drone =
+  {
+    id = 13611
+    kind = "powerup"
+    closet_prob = 4
+    secret_prob = 15
+    storage_prob = 20
+  }
+}
+
+MODDED_GAME_EXTRAS.D4T_MONS =
+{
+  d4t_gore_nest =
+  {
+    id = 13511
+    r = 2
+    h = 5
+    level = 1
+    boss_type = "minor"
+    boss_prob = 50
+    prob = 8
+    health = 1000
+    damage = 25
+    attack = "hitscan"
+    density = 0.3
+    weap_min_damage = 25
+  }
+}
+
 function MODDED_GAME_EXTRAS.setup(self)
   for name,opt in pairs(self.options) do
     local value = self.options[name].value
@@ -80,6 +147,10 @@ function MODDED_GAME_EXTRAS.setup(self)
 
   if PARAM.qcde_lootboxes == "enable" then
     MODDED_GAME_EXTRAS.add_qcde_lootboxes()
+  end
+
+  if PARAM.d4t_ents == "enable" then
+    MODDED_GAME_EXTRAS.add_d4t_ents()
   end
 end
 
@@ -1026,44 +1097,6 @@ end
 
 
 
-MODDED_GAME_EXTRAS.QCDE_LOOTBOX_NICE_ITEMS =
-{
-  lb_backpack =
-  {
-    id = 15514
-    kind = "powerup"
-    add_prob = 5
-    start_prob = 40
-    closet_prob = 10
-    secret_prob = 35
-    storage_prob = 80
-  }
-
-  lb_chest =
-  {
-    id = 15515
-    kind = "powerup"
-    add_prob = 5
-    start_prob = 30
-    closet_prob = 8
-    secret_prob = 35
-    storage_prob = 60
-  }
-
-  lb_reliquary =
-  {
-    id = 15516
-    kind = "powerup"
-    add_prob = 4
-    start_prob = 20
-    closet_prob = 8
-    secret_prob = 35
-    storage_prob = 40
-  }
-}
-
-
-
 function MODDED_GAME_EXTRAS.add_qcde_lootboxes()
   table.name_up(MODDED_GAME_EXTRAS.QCDE_LOOTBOX_NICE_ITEMS)
 
@@ -1071,6 +1104,21 @@ function MODDED_GAME_EXTRAS.add_qcde_lootboxes()
     GAME.NICE_ITEMS[item] = property
   end
 end
+
+
+
+function MODDED_GAME_EXTRAS.add_d4t_ents()
+  table.name_up(MODDED_GAME_EXTRAS.D4T_THINGS)
+
+  each item, property in MODDED_GAME_EXTRAS.D4T_THINGS do
+    GAME.NICE_ITEMS[item] = property
+  end
+
+  each mon, property in MODDED_GAME_EXTRAS.D4T_MONS do
+    GAME.MONSTERS[mon] = property
+  end
+end
+
 
 
 ----------------------------------------------------------------
@@ -1095,18 +1143,6 @@ OB_MODULES["modded_game_extras"] =
 
   options =
   {
-    hd_cover_walls =
-    {
-      name = "hd_cover_walls"
-      label=_("HD Cover Walls")
-      choices=MODDED_GAME_EXTRAS.ENABLE_DISABLE
-      tooltip = "Adds some Hideous Destructor-specific fabs such as walls with" ..
-      "cover to serve Hideous Destructor gameplay better. " ..
-      "It is recommended to keep this disabled if you are not " ..
-      "playing Hideous Destructor as these fabs will interfere with non-HD gameplay."
-      default = "disable"
-    }
-
     hn_markers =
     {
       name = "hn_markers"
@@ -1115,6 +1151,7 @@ OB_MODULES["modded_game_extras"] =
       tooltip = "Adds support for m8f's Hellscape Navigator by generating " ..
       "name markers in the map per room."
       default = "none"
+      priority = 5
       gap = 1
     }
 
@@ -1129,7 +1166,21 @@ OB_MODULES["modded_game_extras"] =
       "Uses class inheritance, so custom monsters inheriting from the base classes also recieve "..
       "custom names. Use compatibility options only when necessary."
       default = "none"
+      priority = 4
       gap = 1
+    }
+
+    hd_cover_walls =
+    {
+      name = "hd_cover_walls"
+      label=_("HD Cover Walls")
+      choices=MODDED_GAME_EXTRAS.ENABLE_DISABLE
+      tooltip = "Adds some Hideous Destructor-specific fabs such as walls with" ..
+      "cover to serve Hideous Destructor gameplay better. " ..
+      "It is recommended to keep this disabled if you are not " ..
+      "playing Hideous Destructor as these fabs will interfere with non-HD gameplay."
+      default = "disable"
+      priority = 3
     }
 
     qcde_lootboxes =
@@ -1139,6 +1190,18 @@ OB_MODULES["modded_game_extras"] =
       choices = MODDED_GAME_EXTRAS.ENABLE_DISABLE
       tooltip = "Adds Quake Champions: Doom Edition Lootboxes as nice item pickups."
       default = "disable"
+      priority = 2
+    }
+
+    d4t_ents =
+    {
+      name = "d4t_ents"
+      label = _("D4T Entities")
+      choices = MODDED_GAME_EXTRAS.ENABLE_DISABLE
+      tooltip = "Adds Death Foretold field drones into items table and " ..
+                "gore nests as potential minor boss monsters."
+      default = "disable"
+      priority = 1
     }
   }
 }
