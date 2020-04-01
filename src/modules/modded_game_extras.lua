@@ -128,6 +128,8 @@ MODDED_GAME_EXTRAS.D4T_MONS =
     damage = 25
     attack = "hitscan"
     density = 0.2
+    cage_factor = 0
+    trap_factor = 0
   }
 
   d4t_gore_nest_rank_n_file =
@@ -141,6 +143,8 @@ MODDED_GAME_EXTRAS.D4T_MONS =
     damage = 25
     attack = "hitscan"
     density = 0.2
+    cage_factor = 0
+    trap_factor = 0
   }
 }
 
