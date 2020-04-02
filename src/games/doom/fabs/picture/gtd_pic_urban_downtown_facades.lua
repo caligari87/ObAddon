@@ -124,6 +124,8 @@ PREFABS.Pic_urban_downtown_facade1_EPIC =
     CITY08 = 50
     CITY09 = 50
     CITY10 = 50
+    CITY11 = 25
+    CITY12 = 25
   }
 
   flat_TLITE6_6 =
@@ -335,6 +337,8 @@ PREFABS.Pic_urban_downtown_facade3_EPIC =
     CITY08 = 50
     CITY09 = 50
     CITY10 = 50
+    CITY11 = 25
+    CITY12 = 25
   }
 
   flat_TLITE6_6 =
@@ -409,4 +413,19 @@ PREFABS.Pic_urban_downtown_facade3_EPIC =
     COMPBLUE=50
     REDWALL=50
   }
+}
+
+PREFABS.Pic_urban_downtown_facade_EPIC_destroyed =
+{
+  template = "Pic_urban_downtown_facade3_EPIC"
+  map = "MAP04"
+
+  replaces = nil
+
+  skip_prob = 50
+  prob = 100
+
+  over = 0
+
+  x_fit = "frame"
 }
