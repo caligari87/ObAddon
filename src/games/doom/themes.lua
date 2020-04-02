@@ -1229,6 +1229,7 @@ DOOM.THEMES =
       tech_o_grated_greenwall = 1
       tech_o_everyone_likes_sewers = 1
       tech_o_red_wall = 1
+      tech_o_lots_of_cement = 1
     }
 
     window_groups =

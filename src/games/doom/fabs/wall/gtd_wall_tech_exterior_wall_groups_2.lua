@@ -70,3 +70,13 @@ PREFABS.Wall_tech_outdoor_red_wall = --#
     EXITDOOR = 3
   }
 }
+
+PREFABS.Wall_tech_outdoor_lots_of_cement = --#
+{
+  template = "Wall_tech_outdoor_hex_inset"
+  map = "MAP05"
+
+  engine = "any"
+
+  group = "tech_o_lots_of_cement"
+}
