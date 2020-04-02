@@ -161,6 +161,8 @@ JOKEWAD_MODULE.TISSUES =
 
 function JOKEWAD_MODULE.add_tissues()
 
+  if PARAM.pandemic_mode == "disable" then return end
+
   each A in LEVEL.areas do
     if (A.mode and A.mode == "floor") then
       each S in A.seeds do
@@ -200,6 +202,8 @@ function JOKEWAD_MODULE.add_tissues()
 end
 
 function JOKEWAD_MODULE.all_done()
+  if PARAM.pandemic_mode == "disable" then return end
+
   PARAM.tissue_dec = JOKEWAD_MODULE.SUPER_DEC
 
   local dir = "games/doom/data/"

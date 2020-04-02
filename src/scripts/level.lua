@@ -2758,8 +2758,7 @@ function Level_make_level(LEV)
 
   ob_invoke_hook("end_level")
 
-  if PARAM.pandemic_mode != "disable" and
-  OB_CONFIG.engine == "zdoom" or OB_CONFIG.engine == "gzdoom" then
+  if OB_CONFIG.engine == "zdoom" or OB_CONFIG.engine == "gzdoom" then
     JOKEWAD_MODULE.add_tissues() -- REMOVE-ME
   end
 
@@ -2822,8 +2821,7 @@ function Level_make_all()
 
   ob_invoke_hook("all_done")
 
-  if PARAM.pandemic_mode != "disable"
-  and OB_CONFIG.engine == "zdoom" or OB_CONFIG.engine == "gzdoom"then
+  if OB_CONFIG.engine == "zdoom" or OB_CONFIG.engine == "gzdoom" then
     JOKEWAD_MODULE.all_done() -- REMOVE-ME
   end
 
