@@ -162,11 +162,12 @@ JOKEWAD_MODULE.TISSUES =
 function JOKEWAD_MODULE.add_tissues()
 
   each A in LEVEL.areas do
-    if (A.mode and A.mode == "floor")
-    and not A.chunk then
+    if (A.mode and A.mode == "floor") then
       each S in A.seeds do
 
-        if rand.odds(2.5) then
+        if A.chunk and A.chunk.content then continue end
+
+        if rand.odds(4) then
 
           local item_tab = {ob_2roll = 40, ob_5roll = 20, ob_handsanitizer = 10}
           local choice = rand.key_by_probs(item_tab)
