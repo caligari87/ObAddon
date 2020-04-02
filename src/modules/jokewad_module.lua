@@ -163,6 +163,10 @@ function JOKEWAD_MODULE.add_tissues()
 
   if PARAM.pandemic_mode == "disable" then return end
 
+  if LEVEL.is_procedural_gotcha then return end
+
+  if LEVEL.prebuilt then return end
+
   each A in LEVEL.areas do
     if (A.mode and A.mode == "floor") then
       each S in A.seeds do
