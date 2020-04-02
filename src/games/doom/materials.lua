@@ -671,6 +671,7 @@ DOOM.MATERIALS =
   XCRATOP1 = { t="CRATOP1", f="CRATOP1" }
   XDOORTRA = { t="DOORTRAK", f="DOORTRAK" }
   XEMPTY = { t="-", f="-" }
+  XTEKGREN = { t="TEKGREN2", f="TEKGREN2" }
 }
 
 

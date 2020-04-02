@@ -108,6 +108,28 @@ ARMAETUS_THEMES =
     }
   }
 
+  any_conveyor_Hallway =
+  {
+    env   = "hallway"
+    group = "conveyor"
+    prob  = 1
+
+    walls =
+    {
+      GRAY5 = 1
+    }
+
+    floors =
+    {
+      FLAT1 = 1
+    }
+
+    ceilings =
+    {
+      FLAT1 = 1
+    }
+  }
+
   tech_GrayMet =
   {
     env = "building"
@@ -3668,6 +3690,14 @@ ARMAETUS_DESERT_HELL_FACADES =
 }]]
 
 ARMAETUS_TECH_WIDE_HALLS =
+{
+  deuce = 50
+  metro = 50
+  ducts = 50
+  conveyor = 50
+}
+
+ARMAETUS_URBAN_WIDE_HALLS =
 {
   deuce = 50
   metro = 50

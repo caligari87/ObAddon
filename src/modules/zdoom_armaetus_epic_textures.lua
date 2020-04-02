@@ -809,7 +809,7 @@ function ARMAETUS_EPIC_TEXTURES.put_new_materials()
     -- generalized should anyone desire
     -- to add more custom hallway types)
     GAME.THEMES.tech.wide_halls = ARMAETUS_TECH_WIDE_HALLS
-    GAME.THEMES.urban.wide_halls = ARMAETUS_TECH_WIDE_HALLS
+    GAME.THEMES.urban.wide_halls = ARMAETUS_URBAN_WIDE_HALLS
     GAME.THEMES.hell.wide_halls = ARMAETUS_HELL_WIDE_HALLS
 
     -- inserts for fences TODO: UltDoom support
