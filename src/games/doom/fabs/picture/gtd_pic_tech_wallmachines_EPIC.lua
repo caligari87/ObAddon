@@ -4,7 +4,7 @@ PREFABS.Pic_gtd_tech_core_thing =
   map = "MAP01"
 
   prob   = 15
-  theme = "!hell"
+  theme = "tech"
 
   uses_epic_textures = true
 
