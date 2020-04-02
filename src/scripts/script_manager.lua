@@ -115,6 +115,10 @@ function ScriptMan_assemble_decorate_lump()
     decorate_script_lines = decorate_script_lines ..
     PARAM.SOUND_DEC
   end
+  if PARAM.tissue_dec then
+    decorate_script_lines = decorate_script_lines ..
+    PARAM.tissue_dec
+  end
 
   if decorate_script_lines != "" then
     add_script_lump("DECORATE", decorate_script_lines)

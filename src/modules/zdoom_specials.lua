@@ -522,7 +522,7 @@ function ZDOOM_SPECIALS.do_special_stuff()
       sky_tex = "SKY3"
     end
 
-    if PARAM.fireblu_mode then
+    if PARAM.fireblu_mode == "enable" then
       sky_tex = "FIREBLU1"
     end
 
@@ -975,7 +975,7 @@ function ZDOOM_SPECIALS.do_special_stuff()
     info.map_num = i
     info.interpic = ipic
 
-    if PARAM.fireblu_mode then
+    if PARAM.fireblu_mode == "enable" then
       info.interpic = "OBDNLOAT"
     end
 

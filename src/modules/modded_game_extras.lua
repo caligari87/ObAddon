@@ -110,7 +110,6 @@ MODDED_GAME_EXTRAS.D4T_THINGS =
     start_prob = 40
     closet_prob = 30
     secret_prob = 60
-    storage_prob = 200
   }
 }
 
