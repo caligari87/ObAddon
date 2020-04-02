@@ -34,3 +34,9 @@ PREFABS.Pic_gtd_green_liquid_tank =
   template = "Pic_gtd_tech_core_thing"
   map = "MAP03"
 }
+
+PREFABS.Pic_gtd_smelter_and_she_was_real_nice_this_is_not_creepy_at_all =
+{
+  template = "Pic_gtd_tech_core_thing"
+  map = "MAP04"
+}
