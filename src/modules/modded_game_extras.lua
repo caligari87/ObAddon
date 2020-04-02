@@ -32,7 +32,7 @@ MODDED_GAME_EXTRAS.SCRIPT_TYPE_CHOICES =
 
 MODDED_GAME_EXTRAS.ACTOR_NAME_GEN_CHOICES =
 {
-  "zs",      _("ZScript - Generic"),
+  "zs",      _("ZScript - Universal"),
   "zs_pb",   _("ZScript - Project Brutality"),
   "zs_qcde", _("ZScript - Quake Champions: Doom Edition"),
   "zs_d4t",  _("ZScript - Death Foretold"),
@@ -1180,9 +1180,9 @@ OB_MODULES["modded_game_extras"] =
       choices=MODDED_GAME_EXTRAS.ACTOR_NAME_GEN_CHOICES
       tooltip = "Renames tags of monsters with generated names. Humans recieve human names, " ..
       "demons recieve exotic names.\n" ..
-      "Best used with TargetSpy or other healthbar mods to see the name." ..
-      "Uses class inheritance, so custom monsters inheriting from the base classes also recieve "..
-      "custom names. Use compatibility options only when necessary."
+      "Best used with TargetSpy or other healthbar mods to see the name.\n" ..
+      "Uses class inheritance and string comparisons to determine monster species (human or demon). "..
+      "Use compatibility options only when necessary, preferably use Universal option instead."
       default = "none"
       priority = 4
       gap = 1
