@@ -53,7 +53,8 @@ ARMAETUS_EPIC_TEXTURES.ENVIRONMENT_THEME_CHOICES =
 
 ARMAETUS_EPIC_TEXTURES.TEMPLATES =
 {
-   ZTREES = [[class FancyObligeTree : BigTree replaces BigTree
+   ZS_TREES =
+[[class FancyObligeTree : BigTree replaces BigTree
 {
 
     States
@@ -468,6 +469,188 @@ ARMAETUS_EPIC_TEXTURES.TEMPLATES =
 class FancyObligeTree2 : FancyObligeTree replaces TorchTree
 {
 }]]
+
+  DEC_TREES =
+[[
+  actor FancyObligeTree replaces BigTree
+{
+	Radius 16
+	Height 128
+	ProjectilePassHeight -16
+	+SOLID
+
+	States
+	{
+		Spawn:
+      TRE2 A 0
+      TRE2 A 0 ACS_NamedExecuteAlways("IsMyAssGrass")
+      TRE2 A 5
+      Goto Decide
+
+		Decide:
+      TRE2 A 1
+      TRE2 A 0 A_JumpIfInventory("AssIsGrass", 1, "OnGrass")
+      TRE2 A 0 A_JumpIfInventory("AssIsSnow", 1, "OnSnow")
+      TRE2 A 0 A_JumpIfInventory("AssIsSand", 1, "OnSand")
+      TRE2 A 0 A_JumpIfInventory("AssIsHell", 1, "OnHellflat")
+      TRE2 A 0 A_Jump(255, "OnUnknownFlat")
+
+		OnGrass:
+      TRE2 A 0 A_Jump(127, "Shrub1", "Shrub2")
+      TRE2 A 0 A_Jump(255, "OakTree", "RedwoodTree", "SomeThinTree",
+      "TapwaveTreeA", "TapwaveTreeB")
+
+		OnSnow:
+      TRE2 A 0 A_Jump(64, "SnowTreeDeadA", "SnowTreeKebab",
+      "SnowTreePloughed", "SnowTreeDeadB", "SnowTreeDeadC",
+      "SnowPineA", "SnowPineB", "SnowPineSmolA", "SnowPineSmolB")
+      TRE2 A 0 A_Jump(255, "CraneoPine1", "CraneoPine2",
+      "CraneoPine3", "CraneoPine4", "CraneoPine5")
+      // Only Craneo's pine trees now get a height boost
+
+		OnSand:
+      TRE2 A 0 A_Jump(255, "PalmTree", "DesertTreeA", "DesertTreeB",
+      "Shrub1", "Shrub2")
+
+		OnHellflat:
+      TRE2 A 0 A_Jump(255, "CraneoEyeTreeA", "CraneoEyeTreeB",
+      "CraneoEyeTreeC", "CraneoWeirwoodTreeA", "CraneoWeirwoodTreeB",
+      "CraneoWeirwoodTreeC")
+
+		OnUnknownFlat:
+      TRE2 A 0 A_Jump(255, "CraneoDeadTreeA",
+      "CraneoDeadTreeB", "CraneoDeadTreeC")
+
+		//temperate trees
+		OakTree:
+      OAK1 A -1
+
+		RedwoodTree:
+      RED1 A -1
+
+		SomeThinTree:
+      THN1 A -1
+
+		TapwaveTreeA:
+      TWTR A -1
+
+		TapwaveTreeB:
+      TWTR B -1
+
+		Shrub1:
+      SHB1 A -1
+
+		Shrub2:
+      SHB2 A -1
+
+		//snow trees
+		SnowTreeDeadA:
+      XMAS A -1
+
+		SnowTreeKebab:
+      XMAS B -1
+
+		SnowTreePloughed:
+      XMAS C -1
+
+		SnowTreeDeadB:
+      XMAS D -1
+
+		SnowTreeDeadC:
+      XMAS E -1
+
+		SnowPineA:
+      XMAS F -1
+
+		SnowPineB:
+      XMAS G -1
+
+		SnowPineSmolA:
+      XMAS H -1
+
+		SnowPineSmolB:
+      XMAS I -1
+
+		CraneoPine1:
+      XMAS J -1
+
+		CraneoPine2:
+      XMAS K -1
+
+		CraneoPine3:
+      XMAS L -1
+
+		CraneoPine4:
+      XMAS M -1
+
+		CraneoPine5:
+      XMAS N -1
+
+		//desert trees
+		PalmTree:
+      PLM1 A -1
+
+		DesertTreeA:
+      DTR1 A -1
+
+		DesertTreeB:
+      DTR2 A -1
+
+		// hell trees
+		// eyeball trees
+		CraneoEyeTreeA:
+      OBET A -1
+
+		CraneoEyeTreeB:
+      OBET B -1
+
+		CraneoEyeTreeC:
+      OBET C -1
+
+		// weirwood trees
+		CraneoWeirwoodTreeA:
+      OBWT A -1
+
+		CraneoWeirwoodTreeB:
+      OBWT B -1
+
+		CraneoWeirwoodTreeC:
+      OBWT C -1
+
+		// sad, sad, sad dead trees very sad
+		CraneoDeadTreeA:
+      OBDT A -1
+
+		CraneoDeadTreeB:
+      OBDT B -1
+
+		CraneoDeadTreeC:
+      OBDT C -1
+	}
+}
+
+actor FancyObligeTreeAndBush : FancyObligeTree replaces TorchTree{}
+
+actor AssIsGrass : Inventory
+{
+	Inventory.maxAmount 1
+}
+
+actor AssIsSnow : Inventory
+{
+	Inventory.maxAmount 1
+}
+
+actor AssIsSand : Inventory
+{
+	Inventory.maxAmount 1
+}
+
+actor AssIsHell : Inventory
+{
+	Inventory.maxAmount 1
+}
+]]
 }
 
 function ARMAETUS_EPIC_TEXTURES.setup(self)
@@ -955,15 +1138,6 @@ function ARMAETUS_EPIC_TEXTURES.put_the_texture_wad_in()
 
   if PARAM.custom_trees != "no" then
     gui.wad_merge_sections("modules/zdoom_internal_scripts/ObAddon_trees.wad")
-    if PARAM.custom_trees == "zs" then
-      PARAM.ztrees = ARMAETUS_EPIC_TEXTURES.TEMPLATES.ZTREES
-    elseif PARAM.custom_trees == "decorate" then
-      gui.wad_insert_file("modules/zdoom_internal_scripts/DECORATE.txt", "DECORATE")
-      gui.wad_insert_file("modules/zdoom_internal_scripts/LOADACS.txt", "LOADACS")
-      gui.wad_add_binary_lump("A_START",{})
-      gui.wad_insert_file("modules/zdoom_internal_scripts/ASSGRASS.lmp", "ASSGRASS")
-      gui.wad_add_binary_lump("A_END",{})
-    end
   end
 end
 ----------------------------------------------------------------

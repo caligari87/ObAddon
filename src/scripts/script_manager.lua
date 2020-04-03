@@ -84,11 +84,13 @@ end
 
 function ScriptMan_assemble_zscript_lump()
   local zscript_lines = ""
+
   if PARAM.boss_gen and PARAM.boss_count != -1 then
     zscript_lines = zscript_lines .. PARAM.BOSSSCRIPT .. "\n"
   end
   if PARAM.custom_trees == "zs" then
-    zscript_lines = zscript_lines .. PARAM.ztrees .. "\n"
+    zscript_lines = zscript_lines ..
+    ARMAETUS_EPIC_TEXTURES.TEMPLATES.ZS_TREES .. "\n"
   end
   if PARAM.actor_name_script then
     zscript_lines = zscript_lines .. PARAM.actor_name_script .. "\n"
@@ -103,21 +105,26 @@ end
 
 function ScriptMan_assemble_decorate_lump()
   local decorate_script_lines = ""
+
+  if PARAM.custom_trees == "decorate" then
+    decorate_script_lines = decorate_script_lines ..
+    ARMAETUS_EPIC_TEXTURES.TEMPLATES.DEC_TREES .. "\n"
+  end
   if PARAM.dynamic_lights == "yes" then
     decorate_script_lines = decorate_script_lines ..
-    ZDOOM_SPECIALS.DYNAMIC_LIGHT_DECORATE
+    ZDOOM_SPECIALS.DYNAMIC_LIGHT_DECORATE .. "\n"
   end
   if PARAM.hn_marker_decorate_lines then
     decorate_script_lines = decorate_script_lines ..
-    PARAM.hn_marker_decorate_lines
+    PARAM.hn_marker_decorate_lines .. "\n"
   end
   if PARAM.ambient_sounds then
     decorate_script_lines = decorate_script_lines ..
-    PARAM.SOUND_DEC
+    PARAM.SOUND_DEC .. "\n"
   end
   if PARAM.tissue_dec then
     decorate_script_lines = decorate_script_lines ..
-    PARAM.tissue_dec
+    PARAM.tissue_dec .. "\n"
   end
 
   if decorate_script_lines != "" then
@@ -176,8 +183,30 @@ function ScriptMan_assemble_language_lump()
 
 end
 
-function ScriptMan_assemble_acs_lump()
--- MSSP-TODO
+function ScriptMan_assemble_acs_loader_lump()
+  local acs_loader_lines = {}
+
+  if PARAM.custom_trees == "decorate" then
+    table.insert(acs_loader_lines, "ASSGRASS\n")
+  end
+  if PARAM.tissue_dec then
+    table.insert(acs_loader_lines, "COUNTTIS\n")
+  end
+
+  gui.wad_add_text_lump("LOADACS", acs_loader_lines)
+end
+
+function ScriptMan_merge_acs_lumps()
+  gui.wad_add_binary_lump("A_START",{})
+
+  if PARAM.custom_trees == "decorate" then
+    gui.wad_insert_file("modules/zdoom_internal_scripts/ASSGRASS.lmp", "ASSGRASS")
+  end
+  if PARAM.tissue_dec then
+    gui.wad_insert_file("modules/zdoom_internal_scripts/COUNTTIS.lmp", "COUNTTIS")
+  end
+
+  gui.wad_add_binary_lump("A_END",{})
 end
 
 
@@ -193,4 +222,6 @@ function ScriptMan_init()
   ScriptMan_assemble_sndinfo_lump()
   ScriptMan_assemble_mapinfo_lump()
   ScriptMan_assemble_language_lump()
+  ScriptMan_assemble_acs_loader_lump()
+  ScriptMan_merge_acs_lumps()
 end

@@ -54,7 +54,7 @@ Actor ObE_LootValue : CustomInventory
       Stop
 
     Use:
-      TNT1 B 0 A_Print("It is foretold, the Slayer will make hell pay for hoarding toiletries.")
+      TNT1 B 0 ACS_NamedExecute("CountTissues", 0)
       TNT1 B 0 A_GiveInventory("ObE_LootValue", 1)
       Stop
   }
@@ -186,11 +186,16 @@ function JOKEWAD_MODULE.add_tissues()
           end
 
           for i = 1, count do
-            local event_thing = {
-              z = S.area.ceil_h
-              id = JOKEWAD_MODULE.TISSUES[choice].id
-            }
+            local event_thing = {}
 
+            local final_z = A.ceil_h
+
+            if A.room and not A.room.is_park then
+              final_z = A.floor_h + 2
+            end
+
+            event_thing.id = JOKEWAD_MODULE.TISSUES[choice].id
+            event_thing.z = final_z
             event_thing.x = rand.irange(S.mid_x + 48, S.mid_x - 48)
             event_thing.y = rand.irange(S.mid_y + 48, S.mid_y - 48)
 
