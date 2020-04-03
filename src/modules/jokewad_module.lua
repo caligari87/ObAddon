@@ -35,7 +35,7 @@ JOKEWAD_MODULE.SUPER_DEC =
 [[
 Actor ObE_LootValue : CustomInventory
 {
-  Height 8
+  Height 16
   Radius 16
   Scale 0.5
 
@@ -61,6 +61,34 @@ Actor ObE_LootValue : CustomInventory
   }
 }
 
+Actor ObE_OneRoll : ObE_LootValue 14949
+{
+  Tag "Tissue Rolls"
+
+  Scale 0.25
+
+  Inventory.PickupMessage "Found a 2-ply tissue roll! Every square stolen, a demon pays the price."
+  -INVENTORY.INVBAR
+
+  States
+  {
+    Spawn:
+      OBTT F 20
+      OBTT F 5 Bright
+      GoTo Animate
+
+    Animate:
+      OBTT F 20
+      OBTT F 5 Bright
+      Loop
+
+    Pickup:
+      TNT1 F -1
+      TNT1 F 0 A_GiveInventory("ObE_LootValue", 1)
+      Stop
+  }
+}
+
 Actor ObE_TwoRolls : ObE_LootValue 14950
 {
   Tag "Two Tissue Rolls"
@@ -82,7 +110,7 @@ Actor ObE_TwoRolls : ObE_LootValue 14950
 
     Pickup:
       TNT1 B -1
-      TNT1 C 0 A_GiveInventory("ObE_LootValue", 2)
+      TNT1 B 0 A_GiveInventory("ObE_LootValue", 2)
       Stop
   }
 }
@@ -168,22 +196,26 @@ Actor ObE_RespiratorMask : ObE_LootValue 14953
 
 JOKEWAD_MODULE.TISSUES =
 {
+  ob_1roll =
+  {
+    id = 14949
+    cluster = 5
+  }
+
   ob_2roll =
   {
     id = 14950
-    cluster = 5
+    cluster = 3
   }
 
   ob_5roll =
   {
     id = 14951
-    cluster = 2
   }
 
   ob_handsanitizer =
   {
     id = 14952
-    cluster = 2
   }
 
   ob_mask =
@@ -204,11 +236,26 @@ function JOKEWAD_MODULE.add_tissues()
     if (A.mode and A.mode == "floor") then
       each S in A.seeds do
 
-        if A.chunk and A.chunk.content then continue end
+        -- not on chunks with something on it
+        if S.chunk and S.chunk.content then continue end
 
-        if rand.odds(4) then
+        -- not on diagonals
+        if S.top then continue end
 
-          local item_tab = {ob_2roll = 40, ob_5roll = 20, ob_handsanitizer = 10, ob_mask = 7}
+        -- not on areas with liquid sinks
+        if A.floor_group and A.floor_group.sink
+        and A.floor_group.sink.mat == "_LIQUID" then continue end
+
+        if rand.odds(5) then
+
+          local item_tab = {
+            ob_1roll = 2
+            ob_2roll = 1
+            ob_5roll = 1
+            ob_handsanitizer = 1
+            ob_mask = 1
+          }
+
           local choice = rand.key_by_probs(item_tab)
           local item = JOKEWAD_MODULE.TISSUES[choice]
           local cluster
