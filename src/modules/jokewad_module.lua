@@ -46,6 +46,7 @@ Actor ObE_LootValue : CustomInventory
 
   +INVENTORY.INVBAR
   +INVENTORY.ALWAYSPICKUP
+  +INVENTORY.UNDROPPABLE
   +COUNTITEM
 
   States
