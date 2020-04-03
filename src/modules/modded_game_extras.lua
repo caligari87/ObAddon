@@ -127,7 +127,7 @@ MODDED_GAME_EXTRAS.D4T_MONS =
     health = 500
     damage = 25
     attack = "hitscan"
-    density = 0.2
+    density = 0.15
     cage_factor = 0
     trap_factor = 0
   }
@@ -138,11 +138,11 @@ MODDED_GAME_EXTRAS.D4T_MONS =
     r = 48
     h = 5
     level = 3
-    prob = 20
+    prob = 17
     health = 500
     damage = 25
     attack = "hitscan"
-    density = 0.2
+    density = 0.15
     cage_factor = 0
     trap_factor = 0
   }
