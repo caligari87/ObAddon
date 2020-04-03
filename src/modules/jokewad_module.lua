@@ -240,13 +240,13 @@ function JOKEWAD_MODULE.add_tissues()
         if S.chunk and S.chunk.content then continue end
 
         -- not on diagonals
-        if S.top then continue end
+        if S.diagonal then continue end
 
         -- not on areas with liquid sinks
         if A.floor_group and A.floor_group.sink
         and A.floor_group.sink.mat == "_LIQUID" then continue end
 
-        if rand.odds(5) then
+        if rand.odds(7) then
 
           local item_tab = {
             ob_1roll = 2
