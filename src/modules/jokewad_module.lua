@@ -207,7 +207,7 @@ function JOKEWAD_MODULE.add_tissues()
 
         if rand.odds(4) then
 
-          local item_tab = {ob_2roll = 40, ob_5roll = 20, ob_handsanitizer = 10, ob_mask = 6}
+          local item_tab = {ob_2roll = 40, ob_5roll = 20, ob_handsanitizer = 10, ob_mask = 7}
           local choice = rand.key_by_probs(item_tab)
           local item = JOKEWAD_MODULE.TISSUES[choice]
           local cluster
