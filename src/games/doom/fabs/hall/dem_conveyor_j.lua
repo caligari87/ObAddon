@@ -22,12 +22,6 @@ PREFABS.Hallway_conveyor_term1 =
 
   uses_epic_textures = true
 
- thing_2035 =
-  {
-    barrel = 60
-    nothing = 40
-  }
-
   deep   = 16
 }
 

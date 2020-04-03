@@ -26,12 +26,6 @@ PREFABS.Hallway_conveyor_locked_red1 =
 
   uses_epic_textures = true
 
- thing_2035 =
-  {
-    barrel = 60
-    nothing = 40
-  }
-
 }
 
 PREFABS.Hallway_conveyor_locked_blue1 =
