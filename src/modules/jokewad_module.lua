@@ -133,7 +133,33 @@ Actor ObE_HandSanitizer : ObE_LootValue 14952
 
     Pickup:
       TNT1 A -1
-      TNT1 A 0 A_GiveInventory("ObE_LootValue", 10)
+      TNT1 A 0 A_GiveInventory("ObE_LootValue", 7)
+      Stop
+  }
+}
+
+Actor ObE_RespiratorMask : ObE_LootValue 14953
+{
+  Tag "Respirator Mask"
+
+  Inventory.PickupMessage "Picked up a respirator mask! This will greatly help those in the frontlines!"
+  -INVENTORY.INVBAR
+
+  States
+  {
+    Spawn:
+      OBTT D 20
+      OBTT D 5 Bright
+      GoTo Animate
+
+    Animate:
+      OBTT D 20
+      OBTT D 5 Bright
+      Loop
+
+    Pickup:
+      TNT1 D -1
+      TNT1 D 0 A_GiveInventory("ObE_LootValue", 10)
       Stop
   }
 }
@@ -156,6 +182,12 @@ JOKEWAD_MODULE.TISSUES =
   ob_handsanitizer =
   {
     id = 14952
+    cluster = 2
+  }
+
+  ob_mask =
+  {
+    id = 14953
   }
 }
 
@@ -175,7 +207,7 @@ function JOKEWAD_MODULE.add_tissues()
 
         if rand.odds(4) then
 
-          local item_tab = {ob_2roll = 40, ob_5roll = 20, ob_handsanitizer = 10}
+          local item_tab = {ob_2roll = 40, ob_5roll = 20, ob_handsanitizer = 10, ob_mask = 6}
           local choice = rand.key_by_probs(item_tab)
           local item = JOKEWAD_MODULE.TISSUES[choice]
           local cluster
