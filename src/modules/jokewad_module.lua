@@ -39,9 +39,10 @@ Actor ObE_LootValue : CustomInventory
   Radius 16
   Scale 0.5
 
-  Inventory.Icon "OBTTA1"
-  Inventory.AltHUDIcon "OBTTA1"
-  Inventory.MaxAmount 1000000
+  Inventory.Icon "OBTTE0"
+  Inventory.AltHUDIcon "OBTTE0"
+  Inventory.MaxAmount 9000001
+  Inventory.InterHubAmount 9000001
 
   +INVENTORY.INVBAR
   +INVENTORY.ALWAYSPICKUP
