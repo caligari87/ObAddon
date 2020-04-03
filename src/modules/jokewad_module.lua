@@ -63,7 +63,7 @@ Actor ObE_LootValue : CustomInventory
 
 Actor ObE_OneRoll : ObE_LootValue 14949
 {
-  Tag "Tissue Rolls"
+  Tag "Tissue Roll"
 
   Scale 0.25
 
