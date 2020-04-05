@@ -1957,6 +1957,7 @@ DOOM.THEMES =
       hell_o_egyptish_triwindows = 1
       hell_o_destroyed_city_facade = 1
       hell_o_alt_cathedral_windows = 1
+      hell_o_wood_panel_red_banners = 1
     }
 
     window_groups =

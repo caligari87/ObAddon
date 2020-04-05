@@ -92,3 +92,15 @@ PREFABS.Wall_hell_alt_cathedral_windows = --#
 
   z_fit = { 48,96 }
 }
+
+PREFABS.Wall_hell_wood_panel_red_banners = --#
+{
+  template = "Wall_hell_exterior_wg2_template"
+  map = "MAP06"
+
+  prob = 15
+
+  group = "hell_o_wood_panel_red_banners"
+
+  z_fit = "bottom"
+}
