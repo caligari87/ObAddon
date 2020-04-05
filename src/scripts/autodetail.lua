@@ -73,7 +73,7 @@ function Autodetail_plain_walls()
 
   LEVEL.total_perimeter = total_perimeter
 
-  local tone_down_factor = 1
+  local tone_down_factor = 0
 
   if total_perimeter >= LEVEL_PERIMETER_COUNT_KICKIN then
     tone_down_factor = (1 - (LEVEL_PERIMETER_COUNT_KICKIN / total_perimeter)) * 100
