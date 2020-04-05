@@ -644,7 +644,7 @@ function ob_read_all_config(need_full, log_only)
      need_full = false
   end
 
-  do_line("-- ObAddon (C) 2018-2019")
+  do_line("-- ObAddon (C) 2018-2020")
   do_line("-- MsrSgtShooterPerson")
   do_line("-- Armaetus")
   do_line("-- Garrett")
@@ -822,7 +822,7 @@ function ob_init()
   end
 
   gui.printf("***************************\n")
-  gui.printf("** ObAddon (C) 2018-2019 **\n")
+  gui.printf("** ObAddon (C) 2018-2020 **\n")
   gui.printf("***************************\n")
   gui.printf("|    A Creation of the    |\n")
   gui.printf("|        Community        |\n")
@@ -1354,6 +1354,7 @@ function ob_build_cool_shit()
 
   gui.printf("\n\n")
   gui.printf("~~~~~~~ Making Levels ~~~~~~~\n\n")
+  gui.printf("-- CONFIG FILE : OBLIGE 7.70\n\n")
 
   ob_read_all_config(false, "log_only")
 
