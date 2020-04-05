@@ -80,7 +80,7 @@ function Autodetail_plain_walls()
     ^ UNGROUPED_WALL_TONE_DOWN_EXP
   end
 
-  LEVEL.autodetail_plain_walls_factor = tone_down_factor * 3
+  LEVEL.autodetail_plain_walls_factor = tone_down_factor * 4
 end
 
 
