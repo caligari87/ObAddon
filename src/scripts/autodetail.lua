@@ -32,11 +32,11 @@ GROUPED_WALL_TONE_DOWN_EXP = 2.5
 
 -- the total perimeter of wall-ish junctions required in the map
 -- before Autodetail for ungrouped walls kicks in
-LEVEL_PERIMETER_COUNT_KICKIN = 1200
+LEVEL_PERIMETER_COUNT_KICKIN = 1000
 
 -- added exponent for ungrouped walls
 -- higher numbers mean plain walls are more likely
-UNGROUPED_WALL_TONE_DOWN_EXP = 3.5
+UNGROUPED_WALL_TONE_DOWN_EXP = 2
 
 
 function Autodetail_get_level_svolume()
@@ -76,11 +76,11 @@ function Autodetail_plain_walls()
   local tone_down_factor = 1
 
   if total_perimeter >= LEVEL_PERIMETER_COUNT_KICKIN then
-    tone_down_factor = ((total_perimeter/LEVEL_PERIMETER_COUNT_KICKIN))
-    ^ UNGROUPED_WALL_TONE_DOWN_EXP
+    tone_down_factor = (1 - (LEVEL_PERIMETER_COUNT_KICKIN / total_perimeter)) * 100
+    tone_down_factor = tone_down_factor * UNGROUPED_WALL_TONE_DOWN_EXP
   end
 
-  LEVEL.autodetail_plain_walls_factor = tone_down_factor * 4
+  LEVEL.autodetail_plain_walls_factor = math.clamp(0, tone_down_factor, 100)
 end
 
 
