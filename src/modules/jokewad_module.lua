@@ -94,6 +94,8 @@ Actor ObE_TwoRolls : ObE_LootValue 14950
 {
   Tag "Two Tissue Rolls"
 
+  Scale 0.4
+
   Inventory.PickupMessage "Found two tissue rolls! A victory against hell, two rolls at a time!"
   -INVENTORY.INVBAR
 
@@ -171,6 +173,8 @@ Actor ObE_HandSanitizer : ObE_LootValue 14952
 Actor ObE_RespiratorMask : ObE_LootValue 14953
 {
   Tag "Respirator Mask"
+
+  Scale 0.3
 
   Inventory.PickupMessage "Picked up a respirator mask! This will greatly help those in the frontlines!"
   -INVENTORY.INVBAR

@@ -106,9 +106,9 @@ MODDED_GAME_EXTRAS.D4T_THINGS =
   {
     id = 13611
     kind = "other"
-    add_prob = 3
+    add_prob = 8
     start_prob = 40
-    closet_prob = 30
+    closet_prob = 8
     secret_prob = 60
   }
 }
