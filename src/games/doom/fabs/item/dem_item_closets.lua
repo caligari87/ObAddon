@@ -561,3 +561,47 @@ PREFABS.Item_bookstore_closets =
   }
 
 }
+
+--a item in a scrying room in hell
+PREFABS.Item_scrying1_closet =
+{
+  file  = "item/dem_item_closets.wad"
+  map   = "MAP16"
+
+  engine = "zdoom"
+
+  theme = "hell"
+  prob  = 100
+rank=1
+
+  where  = "seeds"
+  seed_w = 2
+  seed_h = 3
+
+  deep = 16
+  over = -16
+
+  x_fit = "frame"
+  y_fit  = "frame"
+}
+
+--a item in a scrying room in hell
+PREFABS.Item_scrying2_closet =
+{
+  file  = "item/dem_item_closets.wad"
+  map   = "MAP17"
+
+  engine = "zdoom"
+
+  theme = "hell"
+  prob  = 100
+
+  where  = "seeds"
+  seed_w = 3
+  seed_h = 2
+
+  deep = 16
+
+  x_fit = "frame"
+  y_fit  = "frame"
+}
