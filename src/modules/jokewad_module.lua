@@ -229,9 +229,41 @@ JOKEWAD_MODULE.TISSUES =
   }
 }
 
-function JOKEWAD_MODULE.add_tissues()
+function JOKEWAD_MODULE.get_levels()
 
-  if PARAM.pandemic_mode == "disable" then return end
+  if PARAM.fireblu_mode == "enable" then
+    JOKEWAD_MODULE.go_fireblue()
+  end
+
+end
+
+function JOKEWAD_MODULE.end_level()
+
+  if PARAM.pandemic_mode == "enable" then
+    JOKEWAD_MODULE.add_tissues()
+  end
+
+end
+
+
+
+function JOKEWAD_MODULE.go_fireblue()
+
+  each m,def in GAME.MATERIALS do
+    if not string.match(m, "_SKY") then
+      def.t = "GRAYTALL"
+      def.f = "FIREBLU1"
+    end
+    if string.match(m, "DOOR") or
+    string.match (m, "SW1") then
+      def.t = "DOORTRAK"
+      def.f = "FIREBLU1"
+    end
+  end
+
+end
+
+function JOKEWAD_MODULE.add_tissues()
 
   if LEVEL.is_procedural_gotcha then return end
 
@@ -296,13 +328,15 @@ function JOKEWAD_MODULE.add_tissues()
 end
 
 function JOKEWAD_MODULE.all_done()
-  if PARAM.pandemic_mode == "disable" then return end
 
-  PARAM.tissue_dec = JOKEWAD_MODULE.SUPER_DEC
+  if PARAM.pandemic_mode == "enable" then
 
-  local dir = "games/doom/data/"
+    PARAM.tissue_dec = JOKEWAD_MODULE.SUPER_DEC
+    local dir = "games/doom/data/"
+    gui.wad_merge_sections(dir .. "events.wad")
 
-  gui.wad_merge_sections(dir .. "events.wad")
+  end
+
 end
 
 OB_MODULES["jokewad_module"] =
@@ -315,8 +349,9 @@ OB_MODULES["jokewad_module"] =
   hooks =
   {
     setup = JOKEWAD_MODULE.setup
-    --[[end_level = JOKEWAD_MODULE.add_tissues
-    all_done = JOKEWAD_MODULE.all_done]]
+    get_levels = JOKEWAD_MODULE.get_levels
+    end_level = JOKEWAD_MODULE.end_level
+    all_done = JOKEWAD_MODULE.all_done
   }
 
   options =
