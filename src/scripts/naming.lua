@@ -105,10 +105,13 @@ namelib.NAMES =
         ["Fuck off with the"]=5
         ["No, not another"]=5
         ["Great, it's another"]=5
+        ["Great, another"]=5
         ["Enough with the"]=5
         ["Meh, another"]=5
         ["Come on, another"]=5
         ["Eh, it's just a"]=5
+        ["Oh, it's another"]=5
+        ["Why another"]=5
 
         -- these by MSSP
         ["Battle for the"]=15
@@ -2039,6 +2042,9 @@ namelib.NAMES =
         Demigods=3, Ghosts=15, Gods=10, Spirits=5,
         Spectres=5, Banshees=5, Phantoms=5,
         Evil=5, Ghouls=5, Demons=5, Souls=5,
+
+        ["Hell Priests"]=3, -- Doom Eternal
+
         --+ fantasy creatures
         Ogres=5, Gargoyles=3,
         --+ people
@@ -2334,6 +2340,12 @@ namelib.NAMES =
 
         -- MSSP adds more names as well
         ["Damned Demon Destruction"]=10 -- Demios
+
+        -- Doom Eternal stuff. Would these be better under Hell?
+        ["Ardur"]=10
+        ["Kher Lodur"]=10
+        ["Neras"]=10
+        ["Taras Nabad"]=10
       }
     }
   }
@@ -2583,6 +2595,8 @@ namelib.NAMES =
         ["Unwanted Termination"]=10
         ["Wheel of Misfortune"]=10
         ["Zero Calm Here"]=10
+
+        ["Sentinel Prime"]=10 -- Doom Eternal
       }
     }
   }
@@ -2870,6 +2884,11 @@ namelib.NAMES =
         ["Good Times Bad Times"]=10
         ["White Rabbit"]=10
         ["Tame Impala"]=10
+
+        -- Doom Eternal
+        ["Doomslayer's House of Doom"]=10
+        ["Hell Priests Come to Town"]=10
+        ["VEGA Says Hello"]=10
       }
     }
   }
@@ -4258,14 +4277,15 @@ namelib.NAMES =
       e = -- entities
       {
         -- DOOOOM!!!
-        Cyberdemon = 15
-        Marine = 15
-        Mastermind = 15
-        ["Hell Noble"] = 7 -- Also known as a Baron, I guess
         ["Arch-Vile"] = 7
-        ["Lost Souls"] = 7
+        Cyberdemon = 15
         Doomhunter = 5 -- Doom Eternal
         ["Doom Slayer"] = 3 -- DOOM/Doom Eternal
+        ["Hell Noble"] = 7 -- Also known as a Baron, I guess
+        ["Hell Priest"]=7 -- Doom Eternal
+        ["Lost Souls"] = 7
+        Marine = 15
+        Mastermind = 15
 
         -- religion
         Adept = 10
@@ -4618,8 +4638,10 @@ namelib.NAMES =
         ["Can It Be Any Harder?"] = 25
         ["Check Us On The Discord!"] = 35
         ["Cleansed By Fire"] = 25
+        ["Complete Destruction"]=20
         ["Constantly Being Improved!"] = 30
         ["Continued Destruction"] = 20
+        ["Corruption Abound"]=20
         ["Corruption Unfettered"] = 20
         ["Crash and Burn!"] = 20
         ["Crimes Against Humanity"] = 25
@@ -4920,6 +4942,7 @@ namelib.COMMUNITY_MEMBERS =
     "Kinsie",
     "Magpie", --MagPie
     "Mog Waltz",
+    "Monika",
     "Obsidian Plague",
     "Nisteth",
     "Roundabout Lout",
