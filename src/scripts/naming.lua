@@ -4934,7 +4934,6 @@ namelib.COMMUNITY_MEMBERS =
     "Big C",
     "Brad Man X",
     "DZ",
-    "Monika",
     "Elkinda",
     "Hexa Doken",
     "Josh Seven", --josh771
