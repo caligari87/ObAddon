@@ -10,7 +10,7 @@ PREFABS.Locked_joiner_round_3key_modern =
 
   key = "k_ALL"
 
-  prob = 25
+  prob = 100
 
   seed_w = 2
   seed_h = 1
