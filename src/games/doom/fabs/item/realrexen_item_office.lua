@@ -4,12 +4,12 @@ PREFABS.Item_realrexen_office =
   map    = "MAP01"
 
   prob   = 50
-  theme  = "!hell"
+  skip_prob = 50
 
+  theme  = "!hell"
   env    = "building"
 
   where  = "seeds"
-  shape  = "U"
 
   seed_w = 2
   seed_h = 2
