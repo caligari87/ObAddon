@@ -77,6 +77,8 @@ PREFABS.Fence_tech_lit_diag_EPIC =
 }
 
 --
+-- HL Bars
+--
 
 PREFABS.Fence_tech_hl_bars =
 {
@@ -149,8 +151,10 @@ PREFABS.Fence_gappy_fallback_diag =
 }
 
 --
+-- Tech sloped silver
+--
 
-PREFABS.Fence_tech_sloped_silver =
+PREFABS.Fence_tech_sloped_silver = --#
 {
   file   = "fence/gtd_fence_tech_lit.wad"
   map    = "MAP05"
@@ -158,6 +162,8 @@ PREFABS.Fence_tech_sloped_silver =
   prob   = 50
 
   group = "fence_sloped_silver"
+
+  engine = "zdoom"
 
   where  = "edge"
 
@@ -173,7 +179,49 @@ PREFABS.Fence_tech_sloped_silver_diag =
   template = "Fence_tech_hl_bars"
   map = "MAP06"
 
+  engine = "zdoom"
+
   group = "fence_sloped_silver"
 
   where = "diagonal"
+}
+
+-- fallback
+
+PREFABS.Fence_sloped_silver_fallback =
+{
+  file   = "fence/gappy.wad"
+  map    = "MAP01"
+
+  prob   = 50
+
+  engine = "!zdoom"
+
+  group  = "fence_sloped_silver"
+
+  where  = "edge"
+
+  deep   = 16
+  over   = 16
+
+  fence_h  = 32
+  bound_z1 = 0
+}
+
+PREFABS.Fence_sloped_silver_fallback_diag =
+{
+  file   = "fence/gappy.wad"
+  map    = "MAP02"
+
+  prob   = 50
+
+  engine = "!zdoom"
+
+  group  = "fence_sloped_silver"
+
+  where  = "diagonal"
+
+  fence_h = 32
+
+  bound_z1 = 0
 }
