@@ -151,6 +151,11 @@ function ScriptMan_assemble_gldefs_lump()
     ZDOOM_SPECIALS.DYNAMIC_LIGHT_GLDEFS
   end
 
+  if PARAM.glowing_flats == "yes" then
+    gldefs_lines = gldefs_lines ..
+    ZDOOM_SPECIALS.GLOWING_FLATS_GLDEFS
+  end
+
   if gldefs_lines != "" then
     add_script_lump("GLDEFS", gldefs_lines)
   end

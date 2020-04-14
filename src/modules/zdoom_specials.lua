@@ -331,6 +331,144 @@ object ObLightPurple
 }
 ]]
 
+ZDOOM_SPECIALS.GLOWING_FLATS_GLDEFS =
+[[
+Glow
+{
+  Flats
+  {
+    // vanilla ceiling lights
+    CEIL1_2
+    CEIL1_3
+    CEIL3_4
+    CEIL3_6
+    CEIL4_1
+    CEIL4_2
+    CEIL4_3
+    FLAT17
+    FLAT2
+    FLAT22
+    FLOOR1_7
+    TLITE6_1
+    TLITE6_4
+    TLITE6_5
+    TLITE6_6
+    GATE1
+    GATE2
+    GATE3
+    GATE4
+    GRNLITE1
+
+    // vanilla liquids
+    BLOOD1
+    BLOOD2
+    BLOOD3
+    LAVA1
+    LAVA2
+    LAVA3
+    LAVA4
+    NUKAGE1
+    NUKAGE2
+    NUKAGE3
+    SLIME01
+    SLIME02
+    SLIME03
+    SLIME04
+    SLIME05
+    SLIME06
+    SLIME07
+    SLIME08
+
+    // epic textures liquids
+    SLUDGE01
+    SLUDGE02
+    SLUDGE03
+    SLUDGE04
+    QLAVA1
+    QLAVA2
+    QLAVA3
+    QLAVA4
+    MAGMA1
+    MAGMA2
+    MAGMA3
+    MAGMA4
+    MAGMA5
+    PURW1
+    PURW2
+    XLAV1
+    XLAV2
+    SNOW2
+    SNOW9 // it's a liquid, trust me
+
+    // epic textures lights
+    LIGHTS1
+    LIGHTS2
+    LIGHTS3
+    LIGHTS4
+    TLITE5_1
+    TLITE5_2
+    TLITE5_3
+    TLITE65B
+    TLITE65G
+    TLITE65O
+    TLITE65W
+    TLITE65Y
+    LITE4F1
+    LITE4F2
+    LITES01
+    LITES02
+    LITES03
+    LITES04
+    LITBL3F1
+    LITBL3F2
+    GLITE01
+    GLITE02
+    GLITE03
+    GLITE04
+    GLITE05
+    GLITE06
+    GLITE07
+    GLITE08
+    GLITE09
+    PLITE1
+    RROCK01
+    RROCK02
+    GGLAS01
+    GGLAS02
+    FASHBLAK
+    FASHBLU
+    FASHGREN
+    FASHWITE
+    TEK1
+    TEK2
+    TEK3
+    TEK4
+    TEK5
+    TEK6
+    TEK7
+
+    //teleporter gate textures
+    GATE1
+    GATE2
+    GATE3
+    GATE4
+    GATE3TN
+    GATE4BL
+    GATE4MG
+    GATE4OR
+    GATE4PU
+    GATE4RD
+    GATE4YL
+  }
+
+  Texture "FWATER1", 0a0ac4, 128
+  Texture "FWATER2", 0a0ac4, 128
+  Texture "FWATER3", 0a0ac4, 128
+  Texture "FWATER4", 0a0ac4, 128
+  Texture "F_SKY1", 808080, 128
+}
+]]
+
 ZDOOM_SPECIALS.MUSIC = {}
 
 function ZDOOM_SPECIALS.setup(self)
@@ -1103,7 +1241,7 @@ OB_MODULES["zdoom_specials"] =
   {
     fog_generator = {
       label = _("Fog Generator"),
-      priority = 11
+      priority = 12
       choices = ZDOOM_SPECIALS.FOG_GEN_CHOICES
       default = "no"
       tooltip = "Generates fog colors based on the Sky Generator or generate completely randomly."
@@ -1111,7 +1249,7 @@ OB_MODULES["zdoom_specials"] =
 
     fog_env = {
       label = _("Fog Environment"),
-      priority = 10
+      priority = 11
       choices = ZDOOM_SPECIALS.FOG_ENV_CHOICES
       default = "all"
       tooltip = "Limits fog to outdoors (sectors with exposed sky ceilings) or allows for all."
@@ -1119,7 +1257,7 @@ OB_MODULES["zdoom_specials"] =
 
     fog_intensity = {
       label = _("Fog Intensity"),
-      priority = 9
+      priority = 10
       choices = ZDOOM_SPECIALS.FOG_DENSITY_CHOICES
       default = "subtle"
       tooltip = "Determines thickness and intensity of fog, if the Fog Generator is enabled. Subtle or Misty is recommended."
@@ -1127,7 +1265,7 @@ OB_MODULES["zdoom_specials"] =
 
     fog_affects_sky = {
       label = _("Sky Fog"),
-      priority = 8
+      priority = 9
       choices = ZDOOM_SPECIALS.YES_NO
       default = "yes"
       tooltip = "Tints the sky texture with the fog color, intensity is based on the Fog Intensity selection."
@@ -1136,10 +1274,19 @@ OB_MODULES["zdoom_specials"] =
 
     dynamic_lights = {
       label = _("Dynamic Lights")
-      priority = 7
+      priority = 8
       choices = ZDOOM_SPECIALS.YES_NO
       default = "yes"
       tooltip = "Generates dynamic point lights on ceiling light prefabs."
+    }
+
+    glowing_flats = {
+      label = _("Glowing Flats")
+      priority = 7
+      choices = ZDOOM_SPECIALS.YES_NO
+      default = "yes"
+      tooltip = "Adds Doom-64 style lighting/glowing flats via GLDEFS lump. " ..
+                "Visible on Zandronum ports as well."
       gap = 1
     }
 
