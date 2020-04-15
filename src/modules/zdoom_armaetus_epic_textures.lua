@@ -1,5 +1,5 @@
 ------------------------------------------------------------------------
---  MODULE: Armaetus Texture Pack Mod
+--  MODULE: Epic Textures Pack Mod
 ------------------------------------------------------------------------
 --
 --  Copyright (C) 2019 Armaetus
@@ -24,6 +24,8 @@ gui.import("zdoom_armaetus_themes.lua")
 
 gui.import("zdoom_armaetus_doom1_materials.lua")
 gui.import("zdoom_armaetus_doom1_themes.lua")
+
+gui.import("zdoom_armaetus_epic_texturex_lump.lua")
 
 ARMAETUS_EPIC_TEXTURES = { }
 

@@ -459,6 +459,12 @@ Glow
     GATE4PU
     GATE4RD
     GATE4YL
+
+    //composite flats
+    T_GHFLY
+    T_GHFLG
+    T_GHFLB
+    T_GHFLP
   }
 
   Texture "FWATER1", 0a0ac4, 128

@@ -1140,4 +1140,31 @@ ARMAETUS_MATERIALS = {
   XSKIN4 = { t="SKIN4", f="SKIN4" }
   XHELLCMT  = { t="HELLCMT7", f="HELLCMT7" }
   XQFLAT07 = { t="QFLAT07", f="QFLAT07" }
+
+  ------------------------
+  -- Composite textures --
+  ------------------------
+
+  -- Tech --
+
+  -- Horizontal lights, based on the light bar found in
+  -- the Doom2 exit door texture
+  T_HLITE1 = { t="T_HLITE1", f="FLAT23" }
+  T_HLITEY = { t="T_HLITEY", f="FLAT23" }
+  T_HLITEG = { t="T_HLITEG", f="FLAT23" }
+  T_HLITEB = { t="T_HLITEB", f="FLAT23" }
+
+  -- Gothic --
+
+  -- Light trims
+  T_GTHLY = { t="T_GTHLY", f="G04" }
+  T_GTHLG = { t="T_GTHLG", f="G04" }
+  T_GTHLB = { t="T_GTHLB", f="G04" }
+  T_GTHLP = { t="T_GTHLP", f="G04" }
+
+  -- Quad lights
+  T_GHFLY = { t="G16", f="T_GHFLY" }
+  T_GHFLB = { t="G16", f="T_GHFLB" }
+  T_GHFLG = { t="G16", f="T_GHFLG" }
+  T_GHFLP = { t="G16", f="T_GHFLP" }
 }

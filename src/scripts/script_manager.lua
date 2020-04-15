@@ -214,6 +214,15 @@ function ScriptMan_merge_acs_lumps()
   gui.wad_add_binary_lump("A_END",{})
 end
 
+function ScriptMan_assemble_textures_lump()
+  local textures_lump_lines = {}
+
+  if PARAM.epic_textures_activated then
+    table.insert(textures_lump_lines, EPIC_TEXTUREX_LUMP)
+    gui.wad_add_text_lump("TEXTURES", textures_lump_lines)
+  end
+end
+
 
 function ScriptMan_create_include_lump()
 end
@@ -228,5 +237,6 @@ function ScriptMan_init()
   ScriptMan_assemble_mapinfo_lump()
   ScriptMan_assemble_language_lump()
   ScriptMan_assemble_acs_loader_lump()
+  ScriptMan_assemble_textures_lump()
   ScriptMan_merge_acs_lumps()
 end

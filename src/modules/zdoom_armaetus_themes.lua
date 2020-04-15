@@ -2658,6 +2658,51 @@ ARMAETUS_SINK_DEFS =
     light = 8
   }
 
+  -- based on composite textures from GOTH21
+  ceiling_sink_GOTH21Y =
+  {
+    mat = "T_GHFLY"
+    dz = 32
+    light = 16
+
+    trim_mat = "T_GTHLY"
+    trim_dz = 0
+    light = 8
+  }
+
+  ceiling_sink_GOTH21G =
+  {
+    mat = "T_GHFLG"
+    dz = 32
+    light = 16
+
+    trim_mat = "T_GTHLG"
+    trim_dz = 0
+    light = 8
+  }
+
+  ceiling_sink_GOTH21B =
+  {
+    mat = "T_GHFLB"
+    dz = 32
+    light = 16
+
+    trim_mat = "T_GTHLB"
+    trim_dz = 0
+    light = 8
+  }
+
+  ceiling_sink_GOTH21P =
+  {
+    mat = "T_GHFLP"
+    dz = 32
+    light = 16
+
+    trim_mat = "T_GTHLP"
+    trim_dz = 0
+    light = 8
+  }
+
   ceiling_sink_GOTH15 = -- double dark trimmed
   {
     mat = "DARKM01"
@@ -2932,7 +2977,11 @@ ARMAETUS_TECH_CEILING_SINKS =
   ceiling_sink_SILVER2W = 5
   ceiling_sink_SILVER2G = 5
 
-  ceiling_sink_GOTH21 = 15
+  ceiling_sink_GOTH21 = 5
+  ceiling_sink_GOTH21Y = 5
+  ceiling_sink_GOTH21G = 5
+  ceiling_sink_GOTH21B = 5
+  ceiling_sink_GOTH21P = 5
 }
 
 ARMAETUS_URBAN_CEILING_SINKS =
@@ -2965,7 +3014,12 @@ ARMAETUS_URBAN_CEILING_SINKS =
 
   ceiling_sink_GOTH15 = 20
   ceiling_sink_GOTH17 = 20
-  ceiling_sink_GOTH21 = 20
+
+  ceiling_sink_GOTH21 = 5
+  ceiling_sink_GOTH21Y = 5
+  ceiling_sink_GOTH21G = 5
+  ceiling_sink_GOTH21B = 5
+  ceiling_sink_GOTH21P = 5
 }
 
 ARMAETUS_HELL_CEILING_SINKS =
