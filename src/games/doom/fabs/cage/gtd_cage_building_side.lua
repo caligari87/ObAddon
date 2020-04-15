@@ -19,7 +19,6 @@ PREFABS.Cage_wall_building_terrace =
   seed_h = 1
 
   deep = 16
-  over = 16
 
   x_fit = { 112,144 }
   y_fit = "top"
