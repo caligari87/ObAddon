@@ -1141,9 +1141,11 @@ ARMAETUS_MATERIALS = {
   XHELLCMT  = { t="HELLCMT7", f="HELLCMT7" }
   XQFLAT07 = { t="QFLAT07", f="QFLAT07" }
 
+
   ------------------------
   -- Composite textures --
   ------------------------
+
 
   -- Tech --
 
@@ -1153,6 +1155,13 @@ ARMAETUS_MATERIALS = {
   T_HLITEY = { t="T_HLITEY", f="FLAT23" }
   T_HLITEG = { t="T_HLITEG", f="FLAT23" }
   T_HLITEB = { t="T_HLITEB", f="FLAT23" }
+
+  -- Recolored CEIL4_3 flats
+  T_CL43R = { t="COMPRED" , f="T_CL43R" }
+  T_CL43Y = { t="SHAWN2" , f="T_CL43Y" } -- needs yellow variant of COMPBLUE
+  T_CL43G = { t="COMPGREN" , f="T_CL43G" }
+  T_CL43P = { t="SHAWN2" , f="T_CL43P" } -- needs purple variant of COMPBLUE
+
 
   -- Gothic --
 

@@ -2895,6 +2895,31 @@ ARMAETUS_SINK_DEFS =
     trim_dz = 0
   }
 
+  -- generic sinks based from CEIL4_3, recolored composites
+  floor_c43_red =
+  {
+    mat = "T_CL43R"
+    dz  = -8
+  }
+
+  floor_c43_yellow =
+  {
+    mat = "T_CL43Y"
+    dz  = -8
+  }
+
+  floor_c43_green =
+  {
+    mat = "T_CL43G"
+    dz  = -8
+  }
+
+  floor_c43_purple =
+  {
+    mat = "T_CL43P"
+    dz  = -8
+  }
+
   -- more weird ceiling liquids for hell
 
   ceil_purple_water =
@@ -3061,11 +3086,16 @@ ARMAETUS_HELL_CEILING_SINKS =
 
 ARMAETUS_TECH_FLOOR_SINKS =
 {
-  liquid_warning_strip = 10
+  liquid_warning_strip = 40
 
   floor_sink_carpet_FLAT15 = 10
   floor_sink_carpet_FLOOR1_1 = 10
   floor_sink_carpet_FLOOR1_2 = 10
+
+  floor_c43_red = 15
+  floor_c43_yellow = 15
+  floor_c43_green = 15
+  floor_c43_purple = 5
 }
 
 ARMAETUS_URBAN_FLOOR_SINKS =

@@ -465,6 +465,11 @@ Glow
     T_GHFLG
     T_GHFLB
     T_GHFLP
+
+    T_CL43R
+    T_CL43Y
+    T_CL43G
+    T_CL43P
   }
 
   Texture "FWATER1", 0a0ac4, 128
