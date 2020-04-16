@@ -2920,6 +2920,46 @@ ARMAETUS_SINK_DEFS =
     dz  = -8
   }
 
+  light_side1_red =
+  {
+    mat = "T_CL43R"
+    dz  = 16
+    light = 32
+
+    trim_mat = "LITE5"
+    trim_dz  = 0
+  }
+
+  light_side1_yellow =
+  {
+    mat = "T_CL43Y"
+    dz  = 16
+    light = 32
+
+    trim_mat = "LITE5"
+    trim_dz  = 0
+  }
+
+  light_side1_green =
+  {
+    mat = "T_CL43G"
+    dz  = 16
+    light = 32
+
+    trim_mat = "LITE5"
+    trim_dz  = 0
+  }
+
+  light_side1_purple =
+  {
+    mat = "T_CL43P"
+    dz  = 16
+    light = 32
+
+    trim_mat = "LITE5"
+    trim_dz  = 0
+  }
+
   -- more weird ceiling liquids for hell
 
   ceil_purple_water =
@@ -2988,6 +3028,11 @@ ARMAETUS_TECH_CEILING_SINKS =
   light_COLLITE3 = 15
   light_RDWAL01 = 15
 
+  light_side1_red = 15
+  light_side1_yellow = 15
+  light_side1_green = 15
+  light_side1_pruple = 15
+
   ceiling_sink_TEKWALL8 = 8
   ceiling_sink_TEKWALL9 = 8
   ceiling_sink_TEKWALLA = 8
@@ -3028,6 +3073,11 @@ ARMAETUS_URBAN_CEILING_SINKS =
   light_COLLITE2 = 15
   light_COLLITE3 = 15
   light_RDWAL01 = 15
+
+  light_side1_red = 15
+  light_side1_yellow = 15
+  light_side1_green = 15
+  light_side1_pruple = 15
 
   ceiling_sink_TEKWALL8 = 7
   ceiling_sink_TEKWALL9 = 7
@@ -3092,10 +3142,10 @@ ARMAETUS_TECH_FLOOR_SINKS =
   floor_sink_carpet_FLOOR1_1 = 10
   floor_sink_carpet_FLOOR1_2 = 10
 
-  floor_c43_red = 15
-  floor_c43_yellow = 15
-  floor_c43_green = 15
-  floor_c43_purple = 5
+  floor_c43_red = 10
+  floor_c43_yellow = 10
+  floor_c43_green = 10
+  floor_c43_purple = 2
 }
 
 ARMAETUS_URBAN_FLOOR_SINKS =
