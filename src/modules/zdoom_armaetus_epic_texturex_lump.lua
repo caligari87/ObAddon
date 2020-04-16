@@ -193,6 +193,81 @@ WallTexture "T_GTHLP", 64, 128
   }
 }
 
+Texture "TP_LIT5C", 14, 6
+{
+  Patch "LITE4", -1, 0
+}
+
+Texture "TP_LIL5C", 10, 64
+{
+  Patch "LITE4", -3, -59
+}
+
+Texture "T_VLITER", 16, 128
+{
+  Patch "LITE4", 0, 0
+  Patch "LITEBLU4", 0, -72
+  {
+    Translation "201:207=172:191"
+  }
+  Patch "TP_LIL5C", 3, 59
+  {
+    Translation "80:95=169:191", "96:111=191:191"
+  }
+}
+
+Texture "T_VLITEO", 16, 128
+{
+  Patch "LITE4", 0, 0
+  Patch "LITEBLU4", 0, -72
+  {
+    Translation "201:207=211:223"
+  }
+  Patch "TP_LIL5C", 3, 59
+  {
+    Translation "80:95=211:223", "96:111=223:223"
+  }
+}
+
+Texture "T_VLITEY", 16, 128
+{
+  Patch "LITE4", 0, 0
+  Patch "LITEBLU4", 0, -72
+  {
+    Translation "201:207=160:167"
+  }
+  Patch "TP_LIL5C", 3, 59
+  {
+    Translation "80:95=160:167", "96:111=167:167"
+  }
+}
+
+Texture "T_VLITEG", 16, 128
+{
+  Patch "LITE4", 0, 0
+  Patch "LITEBLU4", 0, -72
+  {
+    Translation "201:207=112:127"
+  }
+  Patch "TP_LIL5C", 3, 59
+  {
+    Translation "80:95=112:127", "96:111=127:127"
+  }
+}
+
+Texture "T_VLITEP", 16, 128
+{
+  Patch "LITE4", 0, 0
+  Patch "LITEBLU4", 0, -72
+  {
+    Translation "201:207=250:254"
+  }
+  Patch "TP_LIL5C", 3, 59
+  {
+    Translation "80:95=250:254", "96:111=254:254"
+  }
+}
+
 Flat "T_GHFLY", 64, 64
 {
   Patch "GLITE04", 0, 0

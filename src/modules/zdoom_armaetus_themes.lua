@@ -2960,6 +2960,56 @@ ARMAETUS_SINK_DEFS =
     trim_dz  = 0
   }
 
+  light_lite5_red =
+  {
+    mat = "CEIL5_1"
+    dz  = 16
+    light = 32
+
+    trim_mat = "T_VLITER"
+    trim_dz  = 0
+  }
+
+  light_lite5_orange =
+  {
+    mat = "CEIL5_1"
+    dz  = 16
+    light = 32
+
+    trim_mat = "T_VLITEO"
+    trim_dz  = 0
+  }
+
+  light_lite5_yellow =
+  {
+    mat = "CEIL5_1"
+    dz  = 16
+    light = 32
+
+    trim_mat = "T_VLITEY"
+    trim_dz  = 0
+  }
+
+  light_lite5_green =
+  {
+    mat = "FLAT23"
+    dz  = 16
+    light = 32
+
+    trim_mat = "T_VLITEG"
+    trim_dz  = 0
+  }
+
+  light_lite5_purple =
+  {
+    mat = "FLAT23"
+    dz  = 16
+    light = 32
+
+    trim_mat = "T_VLITEP"
+    trim_dz  = 0
+  }
+
   -- more weird ceiling liquids for hell
 
   ceil_purple_water =
@@ -3031,7 +3081,13 @@ ARMAETUS_TECH_CEILING_SINKS =
   light_side1_red = 15
   light_side1_yellow = 15
   light_side1_green = 15
-  light_side1_purple = 15
+  light_side1_purple = 5
+
+  light_lite5_red = 15
+  light_lite5_orange = 15
+  light_lite5_yellow = 15
+  light_lite5_green = 15
+  light_lite5_purple = 5
 
   ceiling_sink_TEKWALL8 = 8
   ceiling_sink_TEKWALL9 = 8
@@ -3077,7 +3133,13 @@ ARMAETUS_URBAN_CEILING_SINKS =
   light_side1_red = 15
   light_side1_yellow = 15
   light_side1_green = 15
-  light_side1_purple = 15
+  light_side1_purple = 5
+
+  light_lite5_red = 15
+  light_lite5_orange = 15
+  light_lite5_yellow = 15
+  light_lite5_green = 15
+  light_lite5_purple = 5
 
   ceiling_sink_TEKWALL8 = 7
   ceiling_sink_TEKWALL9 = 7
