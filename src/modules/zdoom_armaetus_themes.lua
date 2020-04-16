@@ -3031,7 +3031,7 @@ ARMAETUS_TECH_CEILING_SINKS =
   light_side1_red = 15
   light_side1_yellow = 15
   light_side1_green = 15
-  light_side1_pruple = 15
+  light_side1_purple = 15
 
   ceiling_sink_TEKWALL8 = 8
   ceiling_sink_TEKWALL9 = 8
@@ -3077,7 +3077,7 @@ ARMAETUS_URBAN_CEILING_SINKS =
   light_side1_red = 15
   light_side1_yellow = 15
   light_side1_green = 15
-  light_side1_pruple = 15
+  light_side1_purple = 15
 
   ceiling_sink_TEKWALL8 = 7
   ceiling_sink_TEKWALL9 = 7
