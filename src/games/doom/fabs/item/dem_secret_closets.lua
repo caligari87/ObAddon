@@ -101,7 +101,7 @@ PREFABS.Item_secret_store_closet =
 
 }
 
---a secret shrine to Nine inch nails  where you need to be quick and open the 3 doors on the proper order to acess it.
+--a secret shrine to Nine inch nails where you need to be quick and open the 3 doors on the proper order to acess it.
 PREFABS.Item_secret_NIN_closet =
 {
   file  = "item/dem_secret_closets.wad"
@@ -192,4 +192,153 @@ PREFABS.Item_secret_hellthrone_closet =
   }
 
   can_flip = true
+}
+
+--To the one preaching spin yourself and shoot evil in its eye.
+PREFABS.Item_secret_lectern_closet =
+{
+  file  = "item/dem_secret_closets.wad"
+  map   = "MAP06"
+
+  theme = "hell"
+
+  prob  = 100
+rank=1
+
+  key   = "secret"
+
+  where  = "seeds"
+  seed_w = 3
+  seed_h = 2
+
+  deep = 16
+  over = -16
+
+  x_fit = "frame"
+  y_fit = "top"
+
+  thing_2014 =
+  {
+    potion = 50
+    helmet = 50
+  }
+
+  can_flip = true
+}
+
+--Stretch your arm under the hatch to open the machine V1 
+PREFABS.Item_secret_hellmachine1V1_closet =
+{
+  file  = "item/dem_secret_closets.wad"
+  map   = "MAP07"
+  engine = "zdoom"
+
+  theme = "hell"
+
+  prob  = 50
+
+  key   = "secret"
+
+  where  = "seeds"
+  seed_w = 2
+  seed_h = 1
+
+  deep = 16
+  over = -16
+
+  x_fit = "frame"
+  y_fit = "top"
+
+  can_flip = true
+
+  uses_epic_textures = true
+
+}
+
+--Stretch your arm under the hatch to open the machine V2 
+PREFABS.Item_secret_hellmachine1V2_closet =
+{
+  file  = "item/dem_secret_closets.wad"
+  map   = "MAP08"
+  engine = "zdoom"
+
+  theme = "hell"
+
+  prob  = 50
+
+  key   = "secret"
+
+  where  = "seeds"
+  seed_w = 2
+  seed_h = 1
+
+  deep = 16
+  over = -16
+
+  x_fit = "frame"
+  y_fit = "top"
+
+  can_flip = true
+
+  uses_epic_textures = true
+
+
+}
+
+--One of the cup chip is defective, shoot it to open the core! V1 
+PREFABS.Item_secret_techmachine1V1_closet =
+{
+  file  = "item/dem_secret_closets.wad"
+  map   = "MAP09"
+  engine = "zdoom"
+
+  theme = "tech"
+
+  prob  = 50
+
+  key   = "secret"
+
+  where  = "seeds"
+  seed_w = 2
+  seed_h = 1
+
+  deep = 16
+  over = -16
+
+  x_fit = "frame"
+  y_fit = "top"
+
+  can_flip = true
+
+  uses_epic_textures = true
+
+}
+
+--One of the cup chip is defective, shoot it to open the core! V2 
+PREFABS.Item_secret_techmachine1V2_closet =
+{
+  file  = "item/dem_secret_closets.wad"
+  map   = "MAP10"
+  engine = "zdoom"
+
+  theme = "tech"
+
+  prob  = 50
+
+  key   = "secret"
+
+  where  = "seeds"
+  seed_w = 2
+  seed_h = 1
+
+  deep = 16
+  over = -16
+
+  x_fit = "frame"
+  y_fit = "top"
+
+  can_flip = true
+
+  uses_epic_textures = true
+
 }

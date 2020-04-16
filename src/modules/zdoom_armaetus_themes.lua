@@ -130,6 +130,28 @@ ARMAETUS_THEMES =
     }
   }
 
+  any_conveyorh_Hallway =
+  {
+    env   = "hallway"
+    group = "conveyorh"
+    prob  = 1
+
+    walls =
+    {
+      GRAY5 = 1
+    }
+
+    floors =
+    {
+      FLAT1 = 1
+    }
+
+    ceilings =
+    {
+      FLAT1 = 1
+    }
+  }
+
   tech_GrayMet =
   {
     env = "building"
@@ -3905,6 +3927,7 @@ ARMAETUS_HELL_WIDE_HALLS =
   deuce = 50
   metro = 50
   organs = 50
+  conveyorh = 50
   -- hellcata = 50 -- because this is dependent on styles
                    -- insertion process is a bit more complicated
                    -- and initial prob is instead done via style prob bias -MSSP
