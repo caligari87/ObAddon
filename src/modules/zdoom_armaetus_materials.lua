@@ -1162,12 +1162,19 @@ ARMAETUS_MATERIALS = {
   T_CL43G = { t="COMPGREN" , f="T_CL43G" }
   T_CL43P = { t="SHAWN2" , f="T_CL43P" } -- needs purple variant of COMPBLUE
 
-  -- Recolored LITE5's
+  -- Recolored LITE5 + Exit door light
   T_VLITER = { t="T_VLITER", f = "FLAT23"}
   T_VLITEO = { t="T_VLITEO", f = "FLAT23"}
   T_VLITEY = { t="T_VLITEY", f = "FLAT23"}
   T_VLITEG = { t="T_VLITEG", f = "FLAT23"}
   T_VLITEP = { t="T_VLITEP", f = "FLAT23"}
+
+  -- Recolored LITE5's
+  T_VSLTER = { t="T_VSLTER", f = "FLAT23"}
+  T_VSLTEO = { t="T_VSLTEO", f = "FLAT23"}
+  T_VSLTEY = { t="T_VSLTEY", f = "FLAT23"}
+  T_VSLTEG = { t="T_VSLTEG", f = "FLAT23"}
+  T_VSLTEP = { t="T_VSLTEP", f = "FLAT23"}
 
 
   -- Gothic --

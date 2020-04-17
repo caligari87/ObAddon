@@ -268,6 +268,31 @@ Texture "T_VLITEP", 16, 128
   }
 }
 
+Texture "T_VSLTER", 16, 8
+{
+  Patch "T_VLITER", 0, 0
+}
+
+Texture "T_VSLTEO", 16, 8
+{
+  Patch "T_VLITEO", 0, 0
+}
+
+Texture "T_VSLTEY", 16, 8
+{
+  Patch "T_VLITEY", 0, 0
+}
+
+Texture "T_VSLTEG", 16, 8
+{
+  Patch "T_VLITEG", 0, 0
+}
+
+Texture "T_VSLTEP", 16, 8
+{
+  Patch "T_VLITEP", 0, 0
+}
+
 Flat "T_GHFLY", 64, 64
 {
   Patch "GLITE04", 0, 0

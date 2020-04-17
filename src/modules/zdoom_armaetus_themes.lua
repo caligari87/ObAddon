@@ -2988,7 +2988,7 @@ ARMAETUS_SINK_DEFS =
     dz  = 16
     light = 32
 
-    trim_mat = "T_VLITER"
+    trim_mat = "T_VSLTER"
     trim_dz  = 0
   }
 
@@ -2998,7 +2998,7 @@ ARMAETUS_SINK_DEFS =
     dz  = 16
     light = 32
 
-    trim_mat = "T_VLITEO"
+    trim_mat = "T_VSLTEO"
     trim_dz  = 0
   }
 
@@ -3008,7 +3008,7 @@ ARMAETUS_SINK_DEFS =
     dz  = 16
     light = 32
 
-    trim_mat = "T_VLITEY"
+    trim_mat = "T_VSLTEY"
     trim_dz  = 0
   }
 
@@ -3018,7 +3018,7 @@ ARMAETUS_SINK_DEFS =
     dz  = 16
     light = 32
 
-    trim_mat = "T_VLITEG"
+    trim_mat = "T_VSLTEG"
     trim_dz  = 0
   }
 
@@ -3028,7 +3028,7 @@ ARMAETUS_SINK_DEFS =
     dz  = 16
     light = 32
 
-    trim_mat = "T_VLITEP"
+    trim_mat = "T_VSLTEP"
     trim_dz  = 0
   }
 
