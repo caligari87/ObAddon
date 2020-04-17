@@ -104,3 +104,29 @@ PREFABS.Wall_hell_wood_panel_red_banners = --#
 
   z_fit = "bottom"
 }
+
+PREFABS.Wall_hell_pencil_arch = --#
+{
+  template = "Wall_hell_exterior_wg2_template"
+  map = "MAP07"
+
+  prob = 15
+
+  group = "hell_o_pencil_arch"
+
+  uses_epic_textures = true
+
+  z_fit = { 66,70 }
+
+  tex_EVILFAC4 =
+  {
+    EVILFAC2 = 1
+    EVILFAC4 = 1
+    EVILFAC5 = 1
+    EVILFAC6 = 1
+    EVILFAC7 = 1
+    EVILFAC8 = 1
+    EVILFAC9 = 1
+    EVILFACA = 1
+  }
+}
