@@ -3011,7 +3011,6 @@ function Room_floor_ceil_heights()
     if A.ceil_h == N.ceil_h then
       A.ceil_mat = N.ceil_mat
     end
-
   end
 
 
@@ -3767,7 +3766,6 @@ function Room_cleanup_stairs_to_nowhere(R)
           A.ceil_h = A.ceil_h + diff
         elseif A.ceil_h > tallest_ceiling and tallest_ceiling > -9001 then
           local diff = lowest_floor + A.ceil_h
-          A.floor_h = A.floor_h + diff
           A.ceil_h = tallest_ceiling
         end
 
@@ -3898,7 +3896,10 @@ function Room_cleanup_stairs_to_nowhere(R)
   end
 
   select_porch_floor_mats(R)
-  fixup_cages()
+
+  if not R.is_park then
+    fixup_cages()
+  end
 
 end
 
