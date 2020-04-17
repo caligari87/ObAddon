@@ -9,7 +9,7 @@ PREFABS.Wall_hell_braced_arch =
 
   where  = "edge"
   height = 128
-  long   = 128
+
   deep   = 16
 
   bound_z1 = 0
@@ -91,4 +91,45 @@ PREFABS.Wall_hell_churchy_window_small_stretch =
   on_scenics = "never"
 
   z_fit = { 48,104 }
+}
+
+-- interior versions of walls based on hell_exterior, with brightness properly adjusted
+PREFABS.Wall_hell_square_brace_interior =
+{
+  template = "Wall_hell_braced_arch"
+  map = "MAP05"
+
+  theme = "!tech"
+
+  prob = 50
+
+  env = "building"
+
+  z_fit = { 24,88 }
+}
+
+PREFABS.Wall_hell_square_brace_double_interior =
+{
+  template = "Wall_hell_braced_arch"
+  map = "MAP06"
+
+  theme = "!tech"
+
+  prob = 50
+
+  env = "building"
+}
+
+PREFABS.Wall_hell_square_brace_arched_interior =
+{
+  template = "Wall_hell_square_brace"
+  map = "MAP07"
+
+  theme = "!tech"
+
+  prob = 50
+
+  env = "building"
+
+  z_fit = { 8,64 }
 }

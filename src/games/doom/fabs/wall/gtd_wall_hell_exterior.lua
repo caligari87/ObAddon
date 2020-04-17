@@ -6,9 +6,11 @@ PREFABS.Wall_hell_square_brace =
   prob   = 50
   theme = "!tech"
 
+  env = "outdoor"
+
   where  = "edge"
   height = 128
-  long   = 128
+
   deep   = 16
 
   bound_z1 = 0

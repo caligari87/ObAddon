@@ -2989,7 +2989,7 @@ function Room_floor_ceil_heights()
 
     -- unify cages to their preferred neighbor heights if the
     -- cage itself is taller
-    if R:get_env("building") then
+    if R:get_env() == "building" then
       each N2 in A.neighbors do
         if N2.room then
           if A.room == N2.room then
