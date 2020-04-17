@@ -122,7 +122,7 @@ PREFABS.Wall_hell_square_brace_double_interior =
 
 PREFABS.Wall_hell_square_brace_arched_interior =
 {
-  template = "Wall_hell_square_brace"
+  template = "Wall_hell_braced_arch"
   map = "MAP07"
 
   theme = "!tech"
