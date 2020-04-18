@@ -2553,6 +2553,10 @@ chunk.goal.action = "S1_OpenDoor"  -- FIXME IT SHOULD BE SET WHEN JOINER IS REND
 
   local T = Trans.box_transform(x1, y1, x2, y2, z1, dir)
 
+  if def.z_fit then
+    Trans.set_fitted_z(T, z1, z2)
+  end
+
   if (chunk.kind == "stair" or chunk.kind == "joiner" or chunk.kind == "hallway") and
      chunk.shape == "L" and
      chunk.dest_dir == geom.LEFT[chunk.from_dir]
