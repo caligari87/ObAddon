@@ -1713,10 +1713,10 @@ OB_MODULES["gzdoom_boss_gen"] =
       priority = 90,
       choices = BOSS_GEN_TUNE.BOSS_LIMITS,
       default = "softlimit",
-      tooltip = "Influences how boss difficulty and megawad progression affects the monster type of boss." ..
-	  "hard limit: doesnt allow monster types outside of range to ever spawn" ..
-	  "soft limit: reduces the probability of spawning of monster types outside of range" ..
-	  "no limit: difficulty doesnt have effect on monster type selection",
+      tooltip = "Influences how boss difficulty and megawad progression affects the monster type of boss.\n\n" ..
+	  "hard limit: doesnt allow monster types outside of range to ever spawn.\n\n" ..
+	  "soft limit: reduces the probability of spawning of monster types outside of range.\n\n" ..
+	  "no limit: difficulty doesnt have effect on monster type selection.",
     }
 
     boss_gen_weap =
