@@ -58,6 +58,17 @@ BOSS_GEN_TUNE.REINFORCE =
   "nightmare", _("Nightmare"),
 }
 
+BOSS_GEN_TUNE.REINFORCER =
+{
+  "weakester",  _("Extremely slow"),
+  "weakest",  _("Very slow"),
+  "weaker",  _("Slow"),
+  "default",   _("Default"),
+  "harder",  _("Fast"),
+  "tougher",  _("Faster"),
+  "serious", _("Nightmare"),
+}
+
 BOSS_GEN_TUNE.BOSS_TYPES =
 {
   "yes", _("Yes"),
@@ -74,6 +85,13 @@ BOSS_GEN_TUNE.BOSS_EXIT =
 {
   "default", _("Exit after 10 seconds"),
   "item",  _("Spawn pickup that exits the level"),
+}
+
+BOSS_GEN_TUNE.BOSS_LIMITS =
+{
+  "hardlimit",  _("Hard Limit"),
+  "softlimit",     _("Soft Limit"),
+  "nolimit", _("No Limit"),
 }
 
 BOSS_GEN_TUNE.TEMPLATES =
@@ -1365,6 +1383,22 @@ function BOSS_GEN_TUNE.setup(self)
   elseif PARAM.boss_gen_diff == "nightmare" then
     PARAM.boss_gen_dmult = 3.0
   end
+  
+  if PARAM.boss_gen_reinforcerate == "weakester" then
+    PARAM.boss_gen_rmult = 4.0
+  elseif PARAM.boss_gen_reinforcerate == "weakest" then
+    PARAM.boss_gen_rmult = 2.0
+  elseif PARAM.boss_gen_reinforcerate == "weaker" then
+    PARAM.boss_gen_rmult = 1.5
+  elseif PARAM.boss_gen_reinforcerate == "default" then
+    PARAM.boss_gen_rmult = 1.0
+  elseif PARAM.boss_gen_reinforcerate == "harder" then
+    PARAM.boss_gen_rmult = 0.75
+  elseif PARAM.boss_gen_reinforcerate == "tougher" then
+    PARAM.boss_gen_rmult = 0.5
+  elseif PARAM.boss_gen_reinforcerate == "serious" then
+    PARAM.boss_gen_rmult = 0.25
+  end
 end
 
 function BOSS_GEN_TUNE.end_lvl()
@@ -1500,15 +1534,8 @@ function BOSS_GEN_TUNE.all_done()
     bhealth = BOSS_GEN_TUNE.syntaxize(bhealth,hpcalc)
 
     local sumcalc
-    local dmult
 
-    if PARAM.boss_gen_dmult < 0 then
-      dmult = 1.5
-    else
-      dmult = 1.0 - (0.25*(PARAM.boss_gen_dmult-1))
-    end
-
-    sumcalc = int(rand.pick({400,450,500,550,600})*dmult)
+    sumcalc = int(rand.pick({400,450,500,550,600})*PARAM.boss_gen_rmult)
     bsummon = BOSS_GEN_TUNE.syntaxize(bsummon,sumcalc)
 
   end
@@ -1658,22 +1685,45 @@ OB_MODULES["gzdoom_boss_gen"] =
       default = "default",
       tooltip = "Influences the strength of reinforcements summoned by bosses",
     }
+	
+	boss_gen_reinforcerate =
+    {
+      name = "boss_gen_reinforcerate",
+      label = _("Reinforcement Rate"),
+      priority = 92,
+      choices = BOSS_GEN_TUNE.REINFORCER,
+      default = "default",
+      tooltip = "Influences the spawn rate of reinforcements summoned by bosses",
+    }
 
     boss_gen_types =
     {
       name = "boss_gen_types",
       label = _("Respect zero prob"),
-      priority = 92,
+      priority = 91,
       choices = BOSS_GEN_TUNE.BOSS_TYPES,
       default = "no",
       tooltip = "If enabled, monsters disabled in monster control module cant be chosen as a boss."
+    }
+	
+	boss_gen_typelimit =
+    {
+      name = "boss_gen_typelimit",
+      label = _("Monster limit type"),
+      priority = 90,
+      choices = BOSS_GEN_TUNE.BOSS_LIMITS,
+      default = "softlimit",
+      tooltip = "Influences how boss difficulty and megawad progression affects the monster type of boss." ..
+	  "hard limit: doesnt allow monster types outside of range to ever spawn" ..
+	  "soft limit: reduces the probability of spawning of monster types outside of range" ..
+	  "no limit: difficulty doesnt have effect on monster type selection",
     }
 
     boss_gen_weap =
     {
       name = "boss_gen_weap",
       label = _("Weapon placement"),
-      priority = 91,
+      priority = 89,
       choices = BOSS_GEN_TUNE.BOSS_WEAP,
       default = "scatter",
       tooltip = "Influences weapon placement in boss arena."
@@ -1683,7 +1733,7 @@ OB_MODULES["gzdoom_boss_gen"] =
 	{
 	  name = "boss_gen_exit",
       label = _("Exit type"),
-      priority = 90,
+      priority = 88,
       choices = BOSS_GEN_TUNE.BOSS_EXIT,
       default = "default",
       tooltip = "Changes exit type after boss has been destroyed."

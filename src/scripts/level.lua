@@ -657,40 +657,51 @@ function Episode_plan_monsters()
 
     each name,info in GAME.MONSTERS do
       if LEV.is_procedural_gotcha and PARAM.boss_gen then
-        local boss_diff = PARAM.boss_gen_diff
-        local lolevel
-        local hilevel
-        if boss_diff == "easier" then
-          lolevel = 1
-          hilevel = 4
-        elseif boss_diff == "default" then
-          lolevel = 2
-          hilevel = 6
-        elseif boss_diff == "harder" then
-          lolevel = 3
-          hilevel = 8
-        elseif boss_diff == "nightmare" then
-          lolevel = 7
-          hilevel = 9
-        end
-        if OB_CONFIG.length == "game" then
-          if LEV.game_along < 0.4 then
-            lolevel = math.max(1,lolevel-2)
-            hilevel = hilevel-2
-          elseif LEV.game_along < 0.7 then
-            hilevel = hilevel-1
-          else
-            lolevel = math.min(9,lolevel+4)
-            hilevel = math.min(9,hilevel+1)
+	    local bprob = 80
+	    if PARAM.boss_gen_typelimit != "nolimit" then
+          local boss_diff = PARAM.boss_gen_diff
+          local lolevel
+          local hilevel
+          if boss_diff == "easier" then
+            lolevel = 1
+            hilevel = 4
+          elseif boss_diff == "default" then
+            lolevel = 2
+            hilevel = 6
+          elseif boss_diff == "harder" then
+            lolevel = 3
+            hilevel = 8
+          elseif boss_diff == "nightmare" then
+            lolevel = 7
+            hilevel = 9
           end
-        end
-        local bprob = 80
-        if info.level < lolevel then
-          bprob = bprob/(lolevel-info.level+1)
-        end
-        if info.level > hilevel then
-          bprob = bprob/(info.level-hilevel+1)
-        end
+          if OB_CONFIG.length == "game" then
+            if LEV.game_along < 0.4 then
+              lolevel = math.max(1,lolevel-2)
+              hilevel = hilevel-2
+            elseif LEV.game_along < 0.7 then
+              hilevel = hilevel-1
+            else
+              lolevel = math.min(9,lolevel+4)
+              hilevel = math.min(9,hilevel+1)
+            end
+          end
+		  if PARAM.boss_gen_typelimit == "softlimit" then
+            if info.level < lolevel then
+              bprob = bprob/(lolevel-info.level+1)
+            end
+            if info.level > hilevel then
+              bprob = bprob/(info.level-hilevel+1)
+            end
+	  	  elseif PARAM.boss_gen_typelimit == "hardlimit" then
+		    if info.level < lolevel then
+              bprob = 0
+            end
+            if info.level > hilevel then
+              bprob = 0
+            end
+		  end
+		end
         if info.attack == "hitscan" then
           local hitred = PARAM.boss_gen_hitscan
           if hitred == "less" then
