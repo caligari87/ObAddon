@@ -356,4 +356,78 @@ Flat "T_CL43P", 64, 64
     Translation "240:247=252:255", "192:207=252:252"
   }
 }
+
+Flat "T_SDTCH1", 64, 64
+{
+  Patch "SAND3", 0, 0
+  Patch "SHINY03", 0, 0
+  {
+    Alpha 0.40
+    Style Translucent
+  }
+}
+
+Flat "T_SDTCH2", 64, 64
+{
+  Patch "GRATE7", 0, 0
+  Patch "SAND4", 0, 0
+  {
+    Alpha 0.60
+    Style Translucent
+  }
+  Patch "SAND4", 0, 0
+  {
+    Alpha 0.40
+    Style Add
+  }
+}
+
+Flat "T_SDTCH3", 64, 64
+{
+  Patch "GRATE1", 0, 0
+  Patch "SAND4", 0, 0
+  {
+    Alpha 0.60
+    Style Translucent
+  }
+  Patch "SAND4", 0, 0
+  {
+    Alpha 0.20
+    Style Add
+  }
+}
+
+Flat "T_SDTCH4", 64, 64
+{
+  Patch "FLAT3", 0, 0
+  Patch "FLAT3", 0, 0
+  {
+    Style Add
+  }
+  Patch "SAND3", 0, 0
+  {
+    Alpha 0.60
+    Style Translucent
+  }
+}
+
+Flat "T_SDTCH5", 64, 64
+{
+  Patch "DARKM01", 0, 0
+  Patch "DARKM01", 0, 0
+  {
+    Alpha 0.90
+    Style Add
+  }
+  Patch "DARKM01", 0, 0
+  {
+    Alpha 0.90
+    Style Add
+  }
+  Patch "SAND2", 0, 0
+  {
+    Alpha 0.70
+    Style Translucent
+  }
+}
 ]]

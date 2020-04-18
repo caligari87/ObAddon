@@ -3773,18 +3773,16 @@ ARMAETUS_DESERT_OUTDOORS =
       SAND5 = 3
       SAND6 = 3
       SAND7 = 3
-      DARKF01 = 2
-      DARKF03 = 2
-      GRATE2 = 2
       GRATE3 = 2
-      GRATE5 = 2
-      GRATE7 = 2
       GRATE8 = 2
-      QFLAT05 = 2
-      QFLAT09 = 2
       STARTANF = 2
       MEM01 = 2
       SLIME16 = 1
+      T_SDTCH1 = 5
+      T_SDTCH2 = 5
+      T_SDTCH3 = 5
+      T_SDTCH4 = 5
+      T_SDTCH5 = 5
     }
   }
 
