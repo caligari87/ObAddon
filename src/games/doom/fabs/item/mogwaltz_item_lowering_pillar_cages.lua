@@ -7,6 +7,8 @@ PREFABS.Item_mogwaltz_lowering_pillar =
 
   theme = "tech"
 
+  style = "traps"
+
   where = "seeds"
   seed_w = 3
   seed_h = 2
