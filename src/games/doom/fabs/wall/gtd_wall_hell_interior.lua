@@ -118,6 +118,8 @@ PREFABS.Wall_hell_square_brace_double_interior =
   prob = 50
 
   env = "building"
+
+  z_fit = { 24,88 }
 }
 
 PREFABS.Wall_hell_square_brace_arched_interior =
