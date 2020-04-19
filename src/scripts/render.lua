@@ -2554,7 +2554,14 @@ chunk.goal.action = "S1_OpenDoor"  -- FIXME IT SHOULD BE SET WHEN JOINER IS REND
   local T = Trans.box_transform(x1, y1, x2, y2, z1, dir)
 
   if def.z_fit then
-    Trans.set_fitted_z(T, z1, z2)
+    if z2 then
+      Trans.set_fitted_z(T, z1, z2)
+    else
+      gui.printf("Boof\n")
+      gui.printf(table.tostr(chunk) .. "\n")
+      gui.printf(table.tostr(chunk.from_area) .. "\n")
+      gui.printf(table.tostr(chunk.from_area.room) .. "\n")
+    end
   end
 
   if (chunk.kind == "stair" or chunk.kind == "joiner" or chunk.kind == "hallway") and
