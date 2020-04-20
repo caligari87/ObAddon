@@ -1972,9 +1972,13 @@ stderrf("Cages in %s [%s pressure] --> any_prob=%d  per_prob=%d\n",
     reqs.env = R:get_env()
 
     if R.is_cave then
-      -- reqs.kind = "decor"
-      -- reqs.shape = "U"   -- TODO: chunk.shape,  FIXME: use for pictures too
       reqs.height = R.walkway_height
+    end
+
+    if R.is_park then
+      if R.zone.sky_h then
+        reqs.height = R.zone.sky_h
+      end
     end
 
     if R.theme.theme_override then
@@ -1982,13 +1986,6 @@ stderrf("Cages in %s [%s pressure] --> any_prob=%d  per_prob=%d\n",
     end
 
     chunk.prefab_def = Fab_pick(reqs, "none_ok")
-
-    -- MSSP-TODO: Park closets are missing park heights.
-    --[[if R.is_park then
-      gui.printf("WARM\n")
-      gui.printf(table.tostr(R) .. "\n")
-      gui.printf(table.tostr(chunk) .. "\n")
-    end]]
 
     if not chunk.prefab_def then
       return
