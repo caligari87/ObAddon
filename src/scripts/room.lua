@@ -3840,9 +3840,6 @@ function Room_cleanup_stairs_to_nowhere(R)
 
         A.floor_mat = SAS.floor_mat
 
-        A.floor_group = SAS.floor_group
-        A.ceil_group = SAS.ceil_group
-
         if A.room:get_env() == "building" then
           A.is_porch = nil
           A.ceil_mat = SAS.ceil_mat
