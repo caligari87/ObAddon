@@ -3,10 +3,10 @@ PREFABS.Pic_park_test =
   file = "picture/gtd_pic_park_test.wad"
   map = "MAP01"
 
-  rank = 2
+  rank = 1
 
   prob = 5
-  env = "park"
+  env = "nature"
 
   where  = "seeds"
 

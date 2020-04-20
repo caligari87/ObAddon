@@ -8,7 +8,7 @@ PREFABS.Pic_dem_cavein1 =
   prob   = 100
   theme = "!hell"
   env = "cave"
-rank =1
+  rank = 2
 
   where  = "seeds"
   height = 128
@@ -22,24 +22,18 @@ rank =1
   bound_z1 = 0
   bound_z2 = 128
 
-  x_fit = "frame"
+  x_fit = "stretch"
   z_fit = { 56,64 }
-
-
 }
 
 PREFABS.Pic_dem_cavein2 =
 {
   template  = "Pic_dem_cavein1"
   map    = "MAP02"
-
-
 }
 
 PREFABS.Pic_dem_cavein3 =
 {
   template  = "Pic_dem_cavein1"
   map    = "MAP03"
-
-
 }
