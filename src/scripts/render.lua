@@ -2564,8 +2564,8 @@ chunk.goal.action = "S1_OpenDoor"  -- FIXME IT SHOULD BE SET WHEN JOINER IS REND
     else
       gui.printf("Boof\n")
       gui.printf(table.tostr(chunk) .. "\n")
-      gui.printf(table.tostr(chunk.from_area) .. "\n")
-      gui.printf(table.tostr(chunk.from_area.room) .. "\n")
+      gui.printf(table.tostr(chunk.from_area, 1) .. "\n")
+      gui.printf(table.tostr(chunk.from_area.room, 1) .. "\n")
     end
   end
 
