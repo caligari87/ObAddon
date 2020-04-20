@@ -26,4 +26,11 @@ PREFABS.Switch_scionox_console_4 =
 {
   template = "Switch_scionox_console"
   map    = "MAP04"
+
+  where = "seeds"
+
+  seed_h = 1
+  seed_w = 2
+
+  deep = 16
 }
