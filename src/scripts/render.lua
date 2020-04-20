@@ -2554,6 +2554,11 @@ chunk.goal.action = "S1_OpenDoor"  -- FIXME IT SHOULD BE SET WHEN JOINER IS REND
   local T = Trans.box_transform(x1, y1, x2, y2, z1, dir)
 
   if def.z_fit then
+
+    if not z2 and chunk.from_area.ceil_h then
+      z2 = chunk.from_area.ceil_h
+    end
+
     if z2 then
       Trans.set_fitted_z(T, z1, z2)
     else
