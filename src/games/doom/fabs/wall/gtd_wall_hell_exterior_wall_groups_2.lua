@@ -130,3 +130,17 @@ PREFABS.Wall_hell_pencil_arch = --#
     EVILFACA = 1
   }
 }
+
+PREFABS.Wall_hell_hereticish_arch = --#
+{
+  template = "Wall_hell_exterior_wg2_template"
+  map = "MAP08"
+
+  prob = 15
+
+  group = "hell_o_hereticish_arch"
+
+  uses_epic_textures = true
+
+  z_fit = { 56,88 }
+}
