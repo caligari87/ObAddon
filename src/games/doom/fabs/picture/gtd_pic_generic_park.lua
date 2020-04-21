@@ -74,6 +74,8 @@ PREFABS.Pic_park_generic_1_liquid =
 {
   template = "Pic_park_generic_1"
 
+  prob = 15
+
   liquid = true
 
   map = "MAP10"
@@ -81,13 +83,28 @@ PREFABS.Pic_park_generic_1_liquid =
   z_fit = { 40,120 }
 }
 
-PREFABS.Pic_park_generic_1_liquid =
+PREFABS.Pic_park_generic_2_liquid =
 {
   template = "Pic_park_generic_1"
+
+  prob = 15
 
   liquid = true
 
   map = "MAP11"
+
+  z_fit = { 40,120 }
+}
+
+PREFABS.Pic_park_generic_3_liquid =
+{
+  template = "Pic_park_generic_1"
+
+  prob = 15
+
+  liquid = true
+
+  map = "MAP12"
 
   z_fit = { 40,120 }
 }
