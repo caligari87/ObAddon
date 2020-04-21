@@ -152,8 +152,10 @@ ARMAETUS_MATERIALS = {
   CITY08 = { t="CITY08", f="FLAT1" } -- Gray bricks with stone arch window
   CITY09 = { t="CITY09", f="FLAT1" } -- Small gray bricks with stone arch window
   CITY10 = { t="CITY10", f="FLOOR7_1" } -- Small brown bricks with stone arch window
-  CITY11 = { t="CITY11", f="FLOOR7_1" } -- Tan, derelict bricks with barred up window
-  CITY12 = { t="CITY12", f="FLAT5_3" } -- Red bricks, broken windows
+  CITY11 = { t="CITY11", f="FLOOR7_1" }
+  CITY12 = { t="CITY12", f="FLAT5_5" }
+  CITY13 = { t="CITY13", f="FLOOR7_1" }
+  CITY14 = { t="CITY14", f="CEIL5_2"}
 
   URBAN1 = { t="URBAN1", f="RROCK10" }
   URBAN2 = { t="URBAN2", f="FLAT1" }

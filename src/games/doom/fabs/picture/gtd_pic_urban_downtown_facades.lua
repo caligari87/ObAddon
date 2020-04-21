@@ -121,11 +121,10 @@ PREFABS.Pic_urban_downtown_facade1_EPIC =
     CITY05 = 50
     CITY06 = 50
     CITY07 = 50
-    CITY08 = 50
-    CITY09 = 50
-    CITY10 = 50
     CITY11 = 25
     CITY12 = 25
+    CITY13 = 25
+    CITY14 = 25
   }
 
   flat_TLITE6_6 =
@@ -334,11 +333,10 @@ PREFABS.Pic_urban_downtown_facade3_EPIC =
     CITY05 = 50
     CITY06 = 50
     CITY07 = 50
-    CITY08 = 50
-    CITY09 = 50
-    CITY10 = 50
     CITY11 = 25
     CITY12 = 25
+    CITY13 = 25
+    CITY14 = 25
   }
 
   flat_TLITE6_6 =
