@@ -2578,6 +2578,10 @@ chunk.goal.action = "S1_OpenDoor"  -- FIXME IT SHOULD BE SET WHEN JOINER IS REND
     T.mirror_x = chunk.sw * SEED_SIZE / 2
   end
 
+  if def.mirror_x and rand.odds(50) then
+    T.mirror_x = chunk.sw * SEED_SIZE / 2
+  end
+
   Ambient_push(A.lighting)
 
   Fabricate(A.room, def, T, { skin })

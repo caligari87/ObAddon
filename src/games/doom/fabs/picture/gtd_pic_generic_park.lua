@@ -22,7 +22,7 @@ PREFABS.Pic_park_generic_1 =
   bound_z2 = 128
 
   x_fit = "stretch"
-  y_fit = "top"
+  y_fit = { 16,128 }
   z_fit = "stretch"
 
   thing_43 =
@@ -37,4 +37,33 @@ PREFABS.Pic_park_generic_1 =
     [43] = 25
     [0] = 50
   }
+}
+
+PREFABS.Pic_park_generic_2 =
+{
+  template = "Pic_park_generic_1"
+  map = "MAP02"
+}
+
+PREFABS.Pic_park_generic_3 =
+{
+  template = "Pic_park_generic_1"
+  map = "MAP03"
+}
+
+PREFABS.Pick_park_generic_4 =
+{
+  template = "Pic_park_generic_1"
+  map = "MAP04"
+
+  z_fit = { 0,56 }
+}
+
+PREFABS.Pic_park_generic_5 =
+{
+  template = "Pic_park_generic_1"
+
+  map = "MAP05"
+
+  z_fit = { 40,120 }
 }
