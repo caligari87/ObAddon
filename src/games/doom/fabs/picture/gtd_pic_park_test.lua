@@ -1,11 +1,11 @@
+-- MSSP-REMOVE-ME
+
 PREFABS.Pic_park_test =
 {
   file = "picture/gtd_pic_park_test.wad"
   map = "MAP01"
 
-  rank = 1
-
-  prob = 5
+  prob = 0
   env = "nature"
 
   where  = "seeds"

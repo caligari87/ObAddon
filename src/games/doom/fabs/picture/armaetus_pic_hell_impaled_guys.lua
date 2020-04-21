@@ -8,7 +8,6 @@ PREFABS.Pic_armaetus_hell_impaled_guys =
 
   where  = "seeds"
   height = 144
-  long   = 128
 
   seed_w = 3
   seed_h = 1

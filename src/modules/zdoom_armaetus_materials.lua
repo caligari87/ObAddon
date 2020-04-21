@@ -1143,6 +1143,10 @@ ARMAETUS_MATERIALS = {
   XHELLCMT  = { t="HELLCMT7", f="HELLCMT7" }
   XQFLAT07 = { t="QFLAT07", f="QFLAT07" }
 
+  -- liquids
+
+  XMFALL1 = { t="MFALL1", f="MFALL1" }
+
 
   ------------------------
   -- Composite textures --

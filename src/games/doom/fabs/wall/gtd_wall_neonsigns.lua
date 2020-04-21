@@ -9,7 +9,6 @@ PREFABS.Wall_urban_neon_sign =
 
   where  = "edge"
   height = 128
-  long   = 128
   deep   = 144
 
   bound_z1 = 0

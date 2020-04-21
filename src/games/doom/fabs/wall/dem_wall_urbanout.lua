@@ -18,7 +18,6 @@ PREFABS.Wall_trash1 =
 
   where  = "edge"
   height = 128
-  long   = 128
   deep   = 80
 
   bound_z1 = 0
@@ -56,7 +55,6 @@ PREFABS.Wall_trash2 =
 
   where  = "edge"
   height = 128
-  long   = 128
   deep   = 80
 
   bound_z1 = 0
@@ -94,7 +92,6 @@ PREFABS.Wall_trash3 =
 
   where  = "edge"
   height = 128
-  long   = 128
   deep   = 80
 
   bound_z1 = 0
@@ -130,7 +127,6 @@ PREFABS.Wall_dumpsteropen =
 
   where  = "edge"
   height = 128
-  long   = 128
   deep   = 64
 
   bound_z1 = 0
@@ -158,7 +154,6 @@ PREFABS.Wall_dumpsterclosed =
 
   where  = "edge"
   height = 128
-  long   = 128
   deep   = 64
 
   bound_z1 = 0
@@ -186,7 +181,6 @@ PREFABS.Wall_doorstopstep =
 
   where  = "edge"
   height = 128
-  long   = 160
   deep   = 56
 
   bound_z1 = 0
@@ -220,7 +214,6 @@ PREFABS.Wall_doorstep =
 
   where  = "edge"
   height = 128
-  long   = 160
   deep   = 56
 
   bound_z1 = 0
@@ -256,7 +249,6 @@ PREFABS.Wall_boombox =
 
   where  = "edge"
   height = 128
-  long   = 160
   deep   = 48
 
   bound_z1 = 0

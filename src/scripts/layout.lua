@@ -1971,18 +1971,20 @@ stderrf("Cages in %s [%s pressure] --> any_prob=%d  per_prob=%d\n",
 
     reqs.env = R:get_env()
 
+    if R.theme.theme_override then
+      reqs.theme_override = R.theme.theme_override
+    end
+
     if R.is_cave then
       reqs.height = R.walkway_height
     end
 
     if R.is_park then
-      if R.zone.sky_h then
-        reqs.height = R.zone.sky_h
-      end
-    end
+      reqs.height = 9001 --MSSP-TODO: FIX-ME!!
 
-    if R.theme.theme_override then
-      reqs.theme_override = R.theme.theme_override
+      if R.is_natural_park then
+        reqs.group = "natural_walls"
+      end
     end
 
     chunk.prefab_def = Fab_pick(reqs, "none_ok")

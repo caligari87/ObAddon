@@ -7,7 +7,6 @@ PREFABS.Wall_generic_direct_waterfall =
 
   where  = "edge"
   height = 128
-  long   = 128
   deep   = 16
 
   bound_z1 = 0
@@ -30,7 +29,6 @@ PREFABS.Wall_generic_ceiling_sleuce =
 
   where  = "edge"
   height = 128
-  long   = 128
   deep   = 32
 
   bound_z1 = 0
@@ -53,7 +51,6 @@ PREFABS.Wall_generic_side_sleuce =
 
   where  = "edge"
   height = 128
-  long   = 128
   deep   = 48
 
   bound_z1 = 0

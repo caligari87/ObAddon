@@ -8,7 +8,6 @@ PREFABS.Pic_armaetus_hell_cages =
 
   where  = "seeds"
   height = 128
-  long   = 128
 
   seed_w = 2
   seed_h = 1

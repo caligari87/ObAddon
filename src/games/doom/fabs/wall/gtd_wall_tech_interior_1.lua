@@ -13,7 +13,6 @@ PREFABS.Wall_raised_comp =
 
   where  = "edge"
   height = 128
-  long   = 128
   deep   = 16
 
   bound_z1 = 0
@@ -36,7 +35,6 @@ PREFABS.Wall_grated_thing =
 
   where  = "edge"
   height = 128
-  long   = 128
   deep   = 16
 
   bound_z1 = 0
@@ -57,7 +55,6 @@ PREFABS.Wall_inset =
 
   where  = "edge"
   height = 128
-  long   = 128
   deep   = 16
 
   bound_z1 = 0
@@ -78,7 +75,6 @@ PREFABS.Wall_vertical_light =
 
   where  = "edge"
   height = 128
-  long   = 128
   deep   = 16
 
   bound_z1 = 0
@@ -99,7 +95,6 @@ PREFABS.Wall_vertical_double_light =
 
   where  = "edge"
   height = 128
-  long   = 128
   deep   = 16
 
   bound_z1 = 0
@@ -120,7 +115,6 @@ PREFABS.Wall_raised_computer_2 =
 
   where  = "edge"
   height = 128
-  long   = 128
   deep   = 16
 
   bound_z1 = 0
@@ -161,7 +155,6 @@ PREFABS.Wall_flat_accent =
 
   where  = "edge"
   height = 128
-  long   = 128
   deep   = 16
 
   bound_z1 = 0
@@ -182,7 +175,6 @@ PREFABS.Wall_flat_accent =
 
   where  = "edge"
   height = 128
-  long   = 128
   deep   = 16
 
   bound_z1 = 0

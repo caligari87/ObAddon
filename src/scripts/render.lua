@@ -248,14 +248,10 @@ function Render_edge(E)
       end
     end
 
-    if E.area.room then
-      if E.area.room.is_natural_park then
-        reqs.group = "natural_walls"
-        if E.peer then
-          if not E.peer.area.room.is_outdoor then
-            reqs.group = nil
-          end
-        end
+    if E.area.room and E.area.room.is_natural_park then
+      reqs.group = "natural_walls"
+      if E.peer and not E.peer.area.room.is_outdoor then
+        reqs.group = nil
       end
     end
 
@@ -2229,22 +2225,20 @@ chunk.goal.action = "S1_OpenDoor"  -- FIXME IT SHOULD BE SET WHEN JOINER IS REND
           z = ceil_h - def.bound_z1 - 8
         }
 
-        if def.light_color == "red" then
-          light_ent.id = 14998
-        elseif def.light_color == "orange" then
-          light_ent.id = 14997
-        elseif def.light_color == "yellow" then
-          light_ent.id = 14996
-        elseif def.light_color == "blue" then
-          light_ent.id = 14995
-        elseif def.light_color == "green" then
-          light_ent.id = 14994
-        elseif def.light_color == "beige" then
-          light_ent.id = 14993
-        elseif def.light_color == "purple" then
-          light_ent.id = 14992
-        elseif def.light_color == "white" then
-          light_ent.id = 14999
+        local light_id_table =
+        {
+          red = 14998
+          orange = 14997
+          yellow = 14996
+          blue = 14995
+          green = 14994
+          beige = 14993
+          purple = 14992
+          white = 14999
+        }
+
+        if def.light_color then
+          light_ent.id = light_id_table[def.light_color]
         end
 
         raw_add_entity(light_ent)

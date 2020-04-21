@@ -11,7 +11,6 @@ PREFABS.Wall_hell_castle_maccicolations =
 
   where  = "edge"
   height = 128
-  long   = 128
   deep   = 16
 
   bound_z1 = 0

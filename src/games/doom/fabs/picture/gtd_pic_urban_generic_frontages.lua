@@ -8,7 +8,6 @@ PREFABS.Pic_storefront_3x =
 
   where  = "seeds"
   height = 128
-  long   = 128
 
   seed_w = 3
   seed_h = 1
@@ -58,7 +57,6 @@ PREFABS.Pic_apartment_row_3x =
 
   where  = "seeds"
   height = 128
-  long   = 128
 
   seed_w = 3
   seed_h = 1

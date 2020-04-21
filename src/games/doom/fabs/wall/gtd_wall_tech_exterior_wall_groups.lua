@@ -12,7 +12,6 @@ PREFABS.Wall_tech_outdoor_caution_strip = --#
 
   where  = "edge"
   height = 128
-  long   = 128
   deep   = 16
 
   bound_z1 = 0

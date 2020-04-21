@@ -9,7 +9,6 @@ PREFABS.Pic_bookstore =
 
   where  = "seeds"
   height = 128
-  long   = 128
 
   seed_w = 2
   seed_h = 1
@@ -34,7 +33,6 @@ PREFABS.Pic_lounge =
 
   where  = "seeds"
   height = 128
-  long   = 128
 
   seed_w = 3
   seed_h = 1
@@ -59,7 +57,6 @@ PREFABS.Pic_fresh_produce_grocery =
 
   where  = "seeds"
   height = 128
-  long   = 128
 
   seed_w = 3
   seed_h = 1
@@ -84,7 +81,6 @@ PREFABS.Pic_bank =
 
   where  = "seeds"
   height = 128
-  long   = 128
 
   seed_w = 2
   seed_h = 1
@@ -109,7 +105,6 @@ PREFABS.Pic_some_sort_of_thing_people_do_in_the_future =
 
   where  = "seeds"
   height = 128
-  long   = 128
 
   seed_w = 3
   seed_h = 1
@@ -134,7 +129,6 @@ PREFABS.Pic_electronics_store =
 
   where  = "seeds"
   height = 128
-  long   = 128
 
   seed_w = 3
   seed_h = 1
@@ -159,7 +153,6 @@ PREFABS.Pic_locked_double_door_front =
 
   where  = "seeds"
   height = 128
-  long   = 128
 
   seed_w = 3
   seed_h = 1

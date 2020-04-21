@@ -9,7 +9,6 @@ PREFABS.Wall_hell_thin_vaulted_outdoor =
 
   where  = "edge"
   height = 128
-  long   = 128
   deep   = 20
 
   bound_z1 = 0

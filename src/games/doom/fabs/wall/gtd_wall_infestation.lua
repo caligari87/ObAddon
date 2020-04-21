@@ -15,7 +15,6 @@ PREFABS.Wall_infestation_guts_on_wall =
 
   where  = "edge"
   height = 128
-  long   = 128
   deep   = 48
 
   bound_z1 = 0
@@ -45,7 +44,6 @@ PREFABS.Wall_infestation_guts_flowing_down_wall =
 
   where  = "edge"
   height = 128
-  long   = 128
   deep   = 48
 
   bound_z1 = 0
@@ -74,7 +72,6 @@ PREFABS.Wall_infestation_evil_shrine_eye =
 
   where  = "edge"
   height = 128
-  long   = 128
   deep   = 64
   seed_w = 1
 
@@ -97,7 +94,6 @@ PREFABS.Wall_infestation_evil_shrine_rune =
 
   where  = "edge"
   height = 128
-  long   = 128
   deep   = 64
   seed_w = 1
 
