@@ -3,6 +3,8 @@ PREFABS.Joiner_leap =
   file = "joiner/gtd_leap_joiner.wad"
   map = "MAP01"
 
+  liquid = true
+
   prob = 225
 
   where = "seeds"
@@ -17,5 +19,5 @@ PREFABS.Joiner_leap =
   bound_z1 = -64
 
   x_fit = { 112,144 }
-  y_fit = { 24,28 , 132,136 }
+  y_fit = { 48,112 }
 }
