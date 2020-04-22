@@ -176,7 +176,7 @@ PREFABS.Fence_tech_sloped_silver = --#
 
 PREFABS.Fence_tech_sloped_silver_diag =
 {
-  template = "Fence_tech_hl_bars"
+  template = "Fence_tech_sloped_silver"
   map = "MAP06"
 
   engine = "zdoom"
@@ -222,6 +222,5 @@ PREFABS.Fence_sloped_silver_fallback_diag =
   where  = "diagonal"
 
   fence_h = 32
-
   bound_z1 = 0
 }
