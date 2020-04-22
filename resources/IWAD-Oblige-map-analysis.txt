@@ -1,134 +1,171 @@
-IWAD level similarities via OBLIGE 7.70
+// IDEA FOR CLASSIC IWAD MAPS MODULE FOR OBADDON //
+
+- Can give a similar experience to the original maps created
+- by id software.
+
+*** IMPORTANT ***
+
+- Options not listed must default to user choice and module
+- must override all map architecture, miscellaneous themes,
+- monsters, special addons and Jokewad modules listed below.
+
+- Mandatory options: As Original theme, no Mix-In choice, no episode selection,
+- no intermission disabling, no glowing flats, no fog, no custom trees, no environment
+- theme choice, no Jokewad option.
+
+** END IMPORTANT **
 
 [[ DOOM2 ]]
 
-MAP01 - tiny
-  Big Rooms, Some Cages, Some Secrets, Few Outdoors, Few Porches,
-  Few hallways, no teleports. Slightly short rooms, some barrels,
-  no cages.
+MAP01 - small
+Some Big Rooms, Some Cages, Some Secrets, Few Outdoors, Few Porches,
+Few hallways, no teleports. Slightly short rooms, some barrels,
+no cages. Few scenics, some natural cliffs, no fences, few gazebos,
+curved sink style, few doors, no triple key doors, rare switched doors,
+linear. Normal brightness, some windows, less steepness, no fences,
+weaker traps.
 
 MAP02 - small
-  No Big Rooms, Lots of Liquids, Keyed Doors, Indoors, Rather Dark.
-  Few secrets, few teleports. Mostly short rooms. More barrels. No cages.
-
+No Big Rooms, Lots of Liquids, some Keyed Doors, Indoors, Brightness offset gloomy,
+Few secrets, few teleports. Mostly short rooms. More barrels. No cages, sharp sinks,
+no windows, few steepness, no fences, weaker traps.
+  
 MAP03 - average
- More Big Rooms, More Liquids, Few keyed doors, some Porches, few secrets,
- Few teleports. Slightly short rooms. No cages.
+More Big Rooms, More Liquids, Few keyed doors, some Porches, few secrets,
+Few teleports. Normal sized room height. No cages, more steepness, few switches,
+some windows, sharp sinks, weaker traps.
 
 MAP04 - small
- No Big Rooms, Lots of Steepness, Lots of Windows, Less Keyed Doors, Heaps of Darkness,
- No Porches, Few hallways, few secrets, few teleports. Mostly short rooms. Rare cages.
+No Big Rooms, Less Steepness, Some Windows, Less Keyed Doors, Brightness offset gloomy,
+No Porches, Few hallways, few secrets, few teleports. Mostly short rooms. Rare cages,
+rare switched doors, less triple key doors, weaker traps.
 
 MAP05 - average
-  Heaps of darkness, some steepness, heaps of porches, few keys, lots of liquids.
-  Some hallways, some secrets, rare teleports. Slightly short rooms, more windows.
-  Rare cages.
+Brightness offset darker, some steepness, heaps of porches, few keys, some liquids.
+Some hallways, some secrets, rare teleports. Slightly short rooms, more windows.
+Rare cages, some outdoors, rare parks, no parks.
 
 MAP06 - large
-  More/heaps darkness, heaps of steepness, little outdoors, some traps, few windows,
-  some liquids, some teleporters, some secrets. Normal height rooms. Few cages.
+Brightness offser gloomy, heaps of steepness, Few outdoors, some traps, few windows,
+some liquids, some teleporters, some secrets. Slightly taller height rooms. Few cages.
+No parks, no fences
 
 MAP07 - small
-  Procedural Gotcha, must be weakest available!! (-50% monsters)
+Procedural Gotcha, must be weakest available!! (-50% monsters)
 
 MAP08 - small
-  Traps heaps, outdoors few, I dunno. Few windows! Liquids rare, darkness less,
-  Teleporters some. More doors. Slightly tall rooms. Less porches. Rare cages.
+Traps heaps, rare outdoors. Few windows! Liquids rare, Brightness offset darker.
+Teleporters some. More doors. Slightly tall rooms. Less porches. Rare cages.
+More symmetry, 
 
 MAP09 - average
- Steepness more/heaps, traps some, outdoors less. Some windows? Some doors,
- some secrets, Less Teleporters. Some porches. Slightly tall rooms. Some cages.
+Steepness more/heaps, traps some, outdoors less. Some windows? Some doors,
+some secrets, Less Teleporters. Some porches. Slightly tall rooms. Some cages.
 
 MAP10 - huge
- Traps some, outdoors less, must be tech, steepness less, some windows,
- liquids rare, lots of big rooms, lots of hallways, less secrets, less porches,
- Mostly tall rooms. Some keys, no parks. Some cages.
-
+Traps some, rare outdoors, tech theme, steepness less, few windows, more symmetry,
+liquids rare, lots of big rooms, lots of hallways, less secrets, less porches,
+Mostly tall rooms. Some keys, no parks. Some cages. Few switched doors, sharp sinks,
+brightness offset brighter.
+ 
 MAP11 - large
- Liquids more, outdoors more, steepness more, porches heaps, traps some/more, more windows,
- some secrets, less darkness, some parks, slightly tall rooms. Some keys. Some cages.
+Liquids more, outdoors more, steepness more, porches heaps, traps more, more windows,
+some secrets, less darkness, some parks, slightly tall rooms. Some keys. Some cages,
+heaps of scenics, curved sinks, few triple key doors, more switched doors.
 
 MAP12 - average
-Street mode. Heaps of outdoors. Few/Rare street traffic, rare liquids, some secrets, few windows,
-some big rooms, few porches, some steepness. Less keys, some teleporters.
+Street mode. Heaps of outdoors. Few/Rare street traffic, no liquids, some secrets, few windows,
+some big rooms, few porches, some steepness. Less keys, some teleporters, brightness offset brighter,
+some switched doors, no triple key doors, few fences.
 
 MAP13 - large
-Street mode. Heaps of outdoors. More street traffic, mostly tall rooms, no liquids, some traps,
-some secrets, more porches, more keys, some big rooms, some teleporters, heaps of steepness!!
+Street mode. Heaps of outdoors. More street traffic, mostly tall rooms, no liquids, some traps (teleports),
+some secrets, more porches, more keys, some big rooms, some teleporters, heaps of steepness, no beams, heaps symmetry,
+brightness offset darker, no parks, more triple key doors, some switched doors.
 
 MAP14 - average
 More outdoors, heaps of porches, some secrets, more darkness, some steepness, some traps, heaps of windows,
-more beams, some big rooms, more symmetry. Slightly tall rooms, few teleporters.
+more beams, some big rooms, heaps symmetry. Slightly tall rooms, few teleporters. Some switched doors, few triple
+key doors.
 
 MAP15 - huge
 Street mode. More outdoors, some street traffic, some big rooms, heaps of keys, heaps of porches, more liquids,
-more secrets, more darkness, heaps of steepness, mostly tall rooms, more teleporters.
+more secrets, no darkness, heaps of steepness, mostly tall rooms, more teleporters, brightness offset brighter,
+some switched doors, few parks, heaps big outdoors, some beams
 
 MAP16 - large
-More outdoors, some steepness, less liquids, more traps, less darkness, some secrets, heaps of porches, some keys,
-slightly tall rooms.
+More outdoors, some steepness, less liquids, more traps, less darkness, some secrets, heaps of porches,
+slightly tall rooms, some switched doors, some keyed doors, some triple keyed doors, brightness offset darker.
 
 MAP17 - large
-More liquids, more steepness, more traps, some outdoors, some keys, few secrets, more windows.
+More liquids, more steepness, more traps, some outdoors, some keyed doors, few secrets, more windows, some porches,
+some triple keyed doors, few switched doors, few parks, few big outdoors, more beams, less symmetry, sharp sinks,
+brightness offset gloomy.
 
 MAP18 - small
-More outdoors, some traps, some steepness, rare liquids, less secrets, heaps of items, normal height rooms.
+More outdoors, some traps, some steepness, rare liquids, less secrets, heaps of items, normal height rooms,
+no beams, less symmetry, few keyed doors, no triple keyed doors, few switched doors, teleport traps, fierce traps.
 
 MAP19 - huge
 Some liquids, less steepness, more teleporters, more outdoors, heaps of porches, more windows, less secrets,
-slightly taller rooms.
+slightly taller rooms, brightness offset darker, heaps darkness, some beams
 
 MAP20 - colossal
-More liquids, more traps, mostly tall rooms, some windows, heaps of steepness, stronger bosses, must have a strong boss.
+More liquids, more traps, mostly tall rooms, some windows, heaps of steepness, stronger bosses, must have a strong boss,
+fierce traps, brightness offset brighter, no beams, no parks, sharp sinks, less symmetry
 
 MAP21 - mini
 Few outdoors, less steepness, some traps, less keys, few doors, some porches, few windows, some teleporters, some liquids,
-few switches, slightly short rooms, no cages.
+few switches, slightly short rooms, no cages, predominantly teleport traps (80/20), no symmetry, brightness offset darker.
 
 MAP22 - small
 Some steepness, few liquids, less doors, few switches, rare teleporters, more traps, some keys, more porches, no parks, more windows,
-rare big rooms, rare hallways. Normal height rooms.
+no big rooms, no big outdoors, rare hallways. Normal height rooms, few beams, few switched doors, brightness offset gloomy.
 
 MAP23 - small
-BARRELS HEAPS!!! More steepness, more porches, less windows, more traps, some keys, few doors, rare switches, few liquids,
-some darkness, slightly tall rooms.
+BARRELS HEAPS!!! More steepness, more porches, less windows, more traps, some keyed doors, few doors, rare switches, few liquids,
+some darkness, slightly tall rooms, brightness offset gloomy, no triple key doors.
 
 MAP24 - large
-LIQUIDS HEAPS!!! STEEPNESS HEAPS!!! Traps more, keys heaps, doors some, porches more, windows some, barrels more,
-few cages.
+LIQUIDS HEAPS!!! STEEPNESS HEAPS!!! HEAPS BIG ROOMS!!! Traps more, more keyed doors, doors some, porches more, windows few, barrels more,
+few cages, no outdoors, no parks, brightness offset darker, sharp sinks.
 
 MAP25 - large
-Some liquids, liquid MUST be blood, more steepness, heaps of darkness, some keys, some traps, few windows, few barrels,
-mostly tall rooms, few porches.
+Some liquids, liquid MUST be blood, more steepness, heaps of darkness, some keyed doors, some traps, few windows, few barrels,
+mostly tall rooms, few porches, few switched doors, rare  triple keyed doors. Linear, brightness offset darker, heaps darkness.
 
 MAP26 - huge
-More liquids, more barrels, more windows, heaps of steepness, heaps of keys, some switches, few doors, few secrets,
-some traps, slightly tall rooms, heaps of porches, more beams, some cages.
+More liquids, more barrels, more windows, heaps of steepness, heaps of keyed doors, some switched doors, few doors, few secrets,
+some traps, mostly tall rooms, heaps of porches, more beams, some cages. brightness offset darker.
 
 MAP27 - large
-Rare outdoors, more traps, rare liquids, heaps of darkness, more porches, some steepness, more keys, some beams, few barrels,
-few secrets, more big rooms.
+Few outdoors, more traps, rare liquids, heaps of darkness, more porches, some steepness, more keys, some beams, few barrels,
+few secrets, more big rooms, no big outdoors, no parks, brightness offset gloomy, some traps, fierce traps.
 
 MAP28 - huge
-Less outdoors, more big rooms, some traps, less darkness, few secrets, few doors, rare switches, some keys, harder bosses (specially
-Spidey!)
+No outdoors, heaps big rooms, some traps, less darkness, few secrets, few doors, rare switched doors, some keys, harder bosses
+(Especially Spidey!), more triple keyed doors.
 
 MAP29 - large
-More liquids, heaps of steepness, less doors, some switches, some keys, heaps of porches, some beams, no barrels, heaps of traps,
-harder bosses (namely a Cyberdemon!), more darkness.
+More liquids, heaps of steepness, less doors, some switched doors, some keyed doors, heaps of porches, some beams, no barrels,
+heaps of traps, harder bosses (namely a Cyberdemon!), more darkness, brightness offset darker,
 
 MAP30 - micro
 Procedural Gotcha. BossBrain at the end instead of the usual Cyberdemon.
 
 MAP31 - average
 Few doors, few hallways, few steepness, few secrets, some windows, harder bosses, no teleports, no caves, rare parks, rare liquids,
-more scenics, heaps of beams, heaps of symmetry, heaps of traps, few keys, no cages, rare fences, 1.0 Monster Quantity, Tech
+more scenics, heaps of beams, heaps of symmetry, heaps of traps, few keyed soors, no cages, rare fences, 1.0 Monster Quantity, Hell theme,
+brightness offset vivid
 
 MAP32 - small
-Few doors, few hallways, few steepness, rare secrets, heaps of windows, harder bosses, no teleports, no caves, some parks, rare liquids,
-more scenics, heaps of beams, heaps of symmetry, heaps of traps, more keys, more cages, some fences, 5.5 Monster Quantity, Hell
+Few doors, few hallways, few steepness, rare secrets, heaps of windows, harder bosses, no teleports, no caves, rare parks, no liquids,
+more scenics, heaps of beams, heaps of symmetry, heaps of traps, rare keyed doors, more cages, some fences, 3.5 Monster Quantity, Hell themed,
+brightness offset vivid, no triple keyed doors, some switched doors, rare outdoors, no big outdoors.
 
 [[ ULTDOOM ]]
+
+** TODO **
 
 E1M1 - small
 E1M2 - averagw
