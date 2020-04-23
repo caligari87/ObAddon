@@ -167,6 +167,8 @@ PREFABS.Fence_tech_sloped_silver = --#
 
   where  = "edge"
 
+  passable = true
+
   deep   = 16
   over   = 16
 
@@ -180,6 +182,8 @@ PREFABS.Fence_tech_sloped_silver_diag =
   map = "MAP06"
 
   engine = "zdoom"
+
+  passable = true
 
   group = "fence_sloped_silver"
 

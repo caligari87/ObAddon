@@ -585,6 +585,19 @@ function Render_edge(E)
     local min_light = math.min(E.area.lighting, E.peer.area.lighting)
     Ambient_push(min_light)
 
+    -- for windows, add impassable lines on certain occasions
+    if def.passable then
+      if PARAM.passable_windows == "not_on_vistas"
+      or not PARAM.passable_windows then
+        if E.peer.area.mode == "scenic"
+        or E.area.mode == "scenic" then
+          set_blocking_line(E)
+        end
+      elseif PARAM.passable_windows == "never" then
+        set_blocking_line(E)
+      end
+    end
+
     Fabricate(A.room, def, T, { skin })
 
     Ambient_pop()

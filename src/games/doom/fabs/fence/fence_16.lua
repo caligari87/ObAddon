@@ -13,6 +13,8 @@ PREFABS.Fence_plain =
 
   where  = "edge"
 
+  passable = true
+
   deep   = 16
   over   = 16
 
@@ -29,6 +31,8 @@ PREFABS.Fence_plain_diag =
   prob   = 50
 
   group  = "PLAIN"
+
+  passable = true
 
   where  = "diagonal"
 
