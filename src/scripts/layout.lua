@@ -1365,6 +1365,8 @@ function Layout_decorate_rooms(pass)
       -- FIXME : hack for caves
       if A.room.is_cave then
         reqs.height = A.room.walkway_height
+      elseif A.room.is_park then
+        reqs.height = A.zone.sky_h
       else
         reqs.height = A.ceil_h - A.floor_h
       end
@@ -1895,9 +1897,6 @@ stderrf("Cages in %s [%s pressure] --> any_prob=%d  per_prob=%d\n",
     -- never have cages in a start room, or secrets
     if R.is_start  then return end
     if R.is_secret then return end
-
-    -- FIXME
-    if R.is_park then return end
 
     -- collect usable chunks
     local locs = {}
