@@ -466,6 +466,34 @@ function Render_edge(E)
   end
 
 
+  local function set_blocking_line(edge)
+
+    local side_props =
+    {
+      tex = "ZZWOLF10" -- currently patch-replaced as an invisible wall
+
+      blocked = 1
+    }
+
+    local x1,y1, x2,y2 = Edge_line_coords(edge)
+
+    local z
+    local z1 = (E.area.ceil_h or -9001)
+    local z2 = (E.peer.area.ceil_h or -9001)
+    z = math.max(z1,z2)
+
+    for pass = 1, 2 do
+      local B = brushlib.rail_brush(x1,y1, x2,y2, z, side_props)
+
+      Trans.brush(B)
+
+      x1, x2 = x2, x1
+      y1, y2 = y2, y1
+    end
+
+  end
+
+
   local function edge_wall()
 
     -- TODO : pictures
@@ -585,7 +613,7 @@ function Render_edge(E)
     local min_light = math.min(E.area.lighting, E.peer.area.lighting)
     Ambient_push(min_light)
 
-    -- for windows, add impassable lines on certain occasions
+    -- for fences, add impassable lines on certain occasions
     if def.passable then
       if PARAM.passable_windows == "not_on_vistas"
       or not PARAM.passable_windows then
@@ -845,34 +873,6 @@ stderrf("dA = (%1.1f %1.1f)  dB = (%1.1f %1.1f)\n", adx, ady, bdx, bdy)
 
       Trans.brush(brush)
     end
-  end
-
-
-  local function set_blocking_line(edge)
-
-    local side_props =
-    {
-      tex = "ZZWOLF10" -- currently patch-replaced as an invisible wall
-
-      blocked = 1
-    }
-
-    local x1,y1, x2,y2 = Edge_line_coords(edge)
-
-    local z
-    local z1 = (E.area.ceil_h or -9001)
-    local z2 = (E.peer.area.ceil_h or -9001)
-    z = math.max(z1,z2)
-
-    for pass = 1, 2 do
-      local B = brushlib.rail_brush(x1,y1, x2,y2, z, side_props)
-
-      Trans.brush(B)
-
-      x1, x2 = x2, x1
-      y1, y2 = y2, y1
-    end
-
   end
 
 

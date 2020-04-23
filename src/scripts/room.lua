@@ -1671,7 +1671,11 @@ function Room_border_up()
         or A2.border_type == "bottomless_drop"
         or A2.border_type == "ocean"
         or (A2.border_type == "simple_fence" and A2.rail_up) then
-          Junction_make_railing(junc, "FENCE_MAT_FROM_THEME", "block")
+          if rand.odds(50) then
+            Junction_make_fence(junc)
+          else
+            Junction_make_railing(junc, "FENCE_MAT_FROM_THEME", "block")
+          end
         end
 
       else
