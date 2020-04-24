@@ -2560,10 +2560,12 @@ chunk.goal.action = "S1_OpenDoor"  -- FIXME IT SHOULD BE SET WHEN JOINER IS REND
     end
   end
 
-  if def.group == "natural_walls" then
-    skin.wall = A.zone.nature_facade
-  else
-    skin.wall = A.zone.facade_mat
+  if A.room and A.room.is_park then
+    if def.group == "natural_walls" then
+      skin.wall = A.zone.nature_facade
+    else
+      skin.wall = A.zone.facade_mat
+    end
   end
 
 
