@@ -19,7 +19,7 @@ PREFABS.Beam_vertical_lights_tech =
   over   = 8
 
   bound_z1 = 0
-  bound_z2 = 96
+  bound_z2 = 128
 
   z_fit = { 24,78 }
 }
@@ -38,7 +38,7 @@ PREFABS.Beam_vertical_lights_diagonal_tech =
   where  = "diagonal"
 
   bound_z1 = 0
-  bound_z2 = 96
+  bound_z2 = 128
 
   z_fit = { 24,78 }
 }
