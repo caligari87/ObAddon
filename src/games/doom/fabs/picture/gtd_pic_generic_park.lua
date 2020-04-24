@@ -3,8 +3,6 @@ PREFABS.Pic_park_generic_1 =
   file = "picture/gtd_pic_generic_park.wad"
   map = "MAP01"
 
-  rank = 2
-
   prob = 50
   env = "nature"
 
