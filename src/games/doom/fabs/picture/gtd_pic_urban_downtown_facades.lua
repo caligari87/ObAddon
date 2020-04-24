@@ -390,3 +390,29 @@ PREFABS.Pic_urban_downtown_facade_alley =
   y_fit = { 32,40 }
   z_fit = { 72,80 }
 }
+
+PREFABS.Pic_urban_downtown_facade_sunk_roof =
+{
+  template = "Pic_urban_downtown_facade3_EPIC"
+  map = "MAP07"
+
+  prob = 150
+
+  z_fit = { 254,255 }
+
+  bound_z1 = 0
+  bound_z2 = 256
+}
+
+PREFABS.Pic_urban_downtown_facade_sunk_roof_lower =
+{
+  template = "Pic_urban_downtown_facade3_EPIC"
+  map = "MAP07"
+
+  prob = 150
+
+  z_fit = { 144,156 }
+
+  bound_z1 = 0
+  bound_z2 = 256
+}
