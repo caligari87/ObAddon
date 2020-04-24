@@ -898,6 +898,13 @@ stderrf("dA = (%1.1f %1.1f)  dB = (%1.1f %1.1f)\n", adx, ady, bdx, bdy)
     local inner_mat = assert(E.wall_mat)
     local outer_mat = assert(E.peer.wall_mat)
 
+    -- park hack
+    if E.area.room and E.area.room.is_park then
+      inner_mat = E.area.zone.facade_mat
+    elseif E.peer.area.room and E.peer.area.room.is_park then
+      outer_mat = E.peer.area.zone.facade_mat
+    end
+
     local floor1_mat = E.area.floor_mat
     local floor2_mat = E.peer.area.floor_mat
 
@@ -2551,6 +2558,12 @@ chunk.goal.action = "S1_OpenDoor"  -- FIXME IT SHOULD BE SET WHEN JOINER IS REND
     each N in A.neighbors do
       Junction_make_empty(Junction_lookup(A, N))
     end
+  end
+
+  if def.group == "natural_walls" then
+    skin.wall = A.zone.nature_facade
+  else
+    skin.wall = A.zone.facade_mat
   end
 
 
