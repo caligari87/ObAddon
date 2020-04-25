@@ -4336,7 +4336,23 @@ stderrf("  picked chain from blob %d --> %d\n", B.id, C.id)
       if WC.kind == "floor" or WC.kind == "decor" or WC.kind == "closet" then
         WC.chunk.floor_h   = assert(blob.floor_h)
         WC.chunk.floor_mat = assert(blob.floor_mat)
+
+        -- distribute cell floor height info to seeds
+        -- MSSP-TODO: Distribution of cell heights doesn't seem to work perfectly
+        -- figure this out
+        local x = WC.chunk.sx1
+        local y = WC.chunk.sy1
+
+        while x <= WC.chunk.sx2 do
+        while y <= WC.chunk.sy2 do
+          SEEDS[x][y].floor_h = blob.floor_h
+          SEEDS[x][y].floor_mat = blob.floor_mat
+          y = y + 1
+        end
+          x = x + 1
+        end
       end
+
     end
   end
 

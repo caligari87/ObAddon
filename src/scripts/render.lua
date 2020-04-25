@@ -257,9 +257,8 @@ function Render_edge(E)
 
     -- REMOVE-ME
     -- Don't get prefabs with a z_fit other than "top" for parks.
-    if E.area.room then
-      if E.area.room.is_park and
-      not E.area.room.is_natural_park then
+    if E.area.room and E.area.room.is_park then
+      if not E.S.floor_h then
         reqs.no_top_fit = true
       end
     end
@@ -354,10 +353,9 @@ function Render_edge(E)
       end
     end
 
-    if E.S.area.room then
-      if E.S.area.room.theme.theme_override then
-        reqs.theme_override = E.S.area.room.theme.theme_override
-      end
+    -- theme override
+    if E.S.area.room and E.S.area.room.theme.theme_override then
+      reqs.theme_override = E.S.area.room.theme.theme_override
     end
 
     local def = Fab_pick(reqs, sel(reqs.group, "none_ok", nil))
@@ -508,12 +506,6 @@ function Render_edge(E)
       skin.floor = assert (E.area.floor_mat)
     end
 
-    -- just throw them Oblige's default minimum room height
-    -- if the generated vista is too low
-    if (A.ceil_h - A.floor_h) <= 2 then
-      A.ceil_h = A.floor_h + 2
-    end
-
     local def = pick_wall_prefab()
 
     E.deep = def.deep
@@ -524,7 +516,19 @@ function Render_edge(E)
 
     table.insert(E.S.walls, E)
 
-    local z = A.floor_h
+    local z1 = A.floor_h
+    local z2 = A.ceil_h
+
+    if A.room and A.room.is_park then
+      if E.S.floor_h then
+        z1 = E.S.floor_h
+      end
+      skin.floor = E.S.floor_mat
+    end
+
+    if A.chunk and A.chunk.kind == "stair" then
+      z1 = A.chunk.dest_area.floor_h
+    end
 
     local T
 
@@ -532,21 +536,18 @@ function Render_edge(E)
       local dir2 = DIAG_DIR_MAP[dir]
       local S = E.S
 
-      T = Trans.box_transform(S.x1, S.y1, S.x2, S.y2, z, dir2)
+      if not def then def = PREFABS[Wall_plain_diag] end
+
+      T = Trans.box_transform(S.x1, S.y1, S.x2, S.y2, z1, dir2)
 
     else  -- axis-aligned edge
 
-      T = Trans.edge_transform(E, z, 0, 0, def.deep, 0, false)
+      if not def then def = PREFABS[Wall_plain] end
+
+      T = Trans.edge_transform(E, z1, 0, 0, def.deep, 0, false)
     end
 
-    local f_floor_h = A.floor_h
-    if A.chunk then
-      if A.chunk.kind == "stair" then
-        f_floor_h = A.chunk.dest_area.floor_h
-      end
-    end
-
-    Trans.set_fitted_z(T, f_floor_h, A.ceil_h)
+    Trans.set_fitted_z(T, z1, z2)
 
     Fabricate(A.room, def, T, { skin })
   end
@@ -957,12 +958,9 @@ stderrf("dA = (%1.1f %1.1f)  dB = (%1.1f %1.1f)\n", adx, ady, bdx, bdy)
     -- MSSP: allow fitted_z use for doors and windows! Yaay!
     if def.z_fit then
       local min_ceil = math.min(E.area.ceil_h, E.peer.area.ceil_h)
-      if E.kind == "window" then
+      if E.kind == "window" or E.kind == "doorway" then
         local max_floor = math.max(E.area.floor_h, E.peer.area.floor_h)
         Trans.set_fitted_z(T, max_floor, min_ceil)
-      elseif E.kind == "doorway" then
-        local min_floor = math.min(E.area.floor_h, E.peer.area.floor_h)
-        Trans.set_fitted_z(T, min_floor, min_ceil)
       end
     end
 
