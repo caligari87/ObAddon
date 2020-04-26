@@ -13,7 +13,7 @@ PREFABS.Lift_gtd_teleporter_128 =
   seed_w = 1
 
   x_fit = "frame"
-  y_fit = { 0,4 , 124,128 }
+  y_fit = { 4,8 , 120,124 }
 
   bound_z1 = 0
 
