@@ -2504,6 +2504,8 @@ function Layout_handle_corners()
 
     local post_top_z
 
+    corner.post_top_h = -9001
+
     each junc in corner.junctions do
       if junc.A2 == "map_edge" then return end
       if not junc.E1 then continue end
@@ -2516,11 +2518,9 @@ function Layout_handle_corners()
 
         local tallest_h = -9001
         each xjunc in corner.junctions do
-          if xjunc.E1 then
-            if xjunc.E1.fence_top_z then
-              if xjunc.E1.fence_top_z > tallest_h then
-                tallest_h = xjunc.E1.fence_top_z
-              end
+          if xjunc.E1 and xjunc.E1.fence_top_z then
+            if xjunc.E1.fence_top_z > tallest_h then
+              tallest_h = xjunc.E1.fence_top_z
             end
           end
         end
@@ -2529,7 +2529,9 @@ function Layout_handle_corners()
           corner.post_mat = corner.areas[1].zone.fence_mat
           corner.kind = "post"
           corner.post_type = assert(corner.areas[1].zone.post_type)
-          corner.post_top_h = assert(tallest_h) + 32
+          if corner.post_top_h < tallest_h then
+            corner.post_top_h = tallest_h + 32
+          end
         end
 
         -- original fenceposts on railings code
@@ -2586,7 +2588,9 @@ function Layout_handle_corners()
         end
 
         corner.kind = "post"
-        corner.post_top_h = post_top_z
+        if corner.post_top_h < post_top_z then
+          corner.post_top_h = post_top_z
+        end
       end
     end
   end

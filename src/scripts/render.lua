@@ -1105,6 +1105,7 @@ function Render_corner(cx, cy)
       brushlib.set_mat(brush, mat, mat)
 
       Trans.brush(brush)
+
     elseif corner.post_type then
       local T = Trans.spot_transform(mx, my, corner.post_top_h, 2)
 
