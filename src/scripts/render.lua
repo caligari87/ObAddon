@@ -237,8 +237,8 @@ function Render_edge(E)
       reqs.scenic = true
     end
 
-    if E.area.floor_group and E.area.floor_group.wall_group then
-      reqs.group = E.area.floor_group.wall_group
+    if A.floor_group and A.floor_group.wall_group then
+      reqs.group = A.floor_group.wall_group
     end
 
     if A.is_outdoor then
@@ -248,16 +248,13 @@ function Render_edge(E)
       end
     end
 
-    if E.area.room and E.area.room.is_natural_park then
+    if A.room and A.room.is_natural_park then
       reqs.group = "natural_walls"
-      if E.peer and not E.peer.area.room.is_outdoor then
-        reqs.group = nil
-      end
     end
 
     -- REMOVE-ME
     -- Don't get prefabs with a z_fit other than "top" for parks.
-    if E.area.room and E.area.room.is_park then
+    if A.room and A.room.is_park then
       if not E.S.floor_h then
         reqs.no_top_fit = true
       end
@@ -354,8 +351,8 @@ function Render_edge(E)
     end
 
     -- theme override
-    if E.S.area.room and E.S.area.room.theme.theme_override then
-      reqs.theme_override = E.S.area.room.theme.theme_override
+    if A.room and A.room.theme.theme_override then
+      reqs.theme_override = A.room.theme.theme_override
     end
 
     local def = Fab_pick(reqs, sel(reqs.group, "none_ok", nil))
