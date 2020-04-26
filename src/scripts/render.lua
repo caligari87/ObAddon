@@ -2448,6 +2448,10 @@ chunk.goal.action = "S1_OpenDoor"  -- FIXME IT SHOULD BE SET WHEN JOINER IS REND
     if A.room.is_outdoor then
       z2 = A.zone.sky_h
     end
+
+    if A.room.is_natural_park then
+      reqs.group = "natural_walls"
+    end
   end
 
   if z2 then
@@ -2509,7 +2513,12 @@ chunk.goal.action = "S1_OpenDoor"  -- FIXME IT SHOULD BE SET WHEN JOINER IS REND
 
   --- pick the prefab ---
 
-  local def = chunk.prefab_def or Fab_pick(reqs)
+  local def = chunk.prefab_def or Fab_pick(reqs, "none_ok")
+
+  if not def then
+    reqs.group = nil
+    def = Fab_pick(reqs)
+  end
 
 
   -- texturing --
