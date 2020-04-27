@@ -142,12 +142,16 @@ PREFABS.Decor_dem_stala1 =
 
   z_fit = "stretch"
 
+  liquid = true
+
 }
 
 PREFABS.Decor_dem_stala2 =
 {
   template  = "Decor_dem_stala1"
   map    = "MAP12"
+
+  liquid = false
 
 
 }
@@ -157,6 +161,8 @@ PREFABS.Decor_dem_stala3 =
   template  = "Decor_dem_stala1"
   map    = "MAP13"
 
+  liquid = true
+
 
 }
 
@@ -164,6 +170,8 @@ PREFABS.Decor_dem_stala4 =
 {
   template  = "Decor_dem_stala1"
   map    = "MAP14"
+
+  liquid = true
 
 
 }
@@ -173,6 +181,8 @@ PREFABS.Decor_dem_stala5 =
   template  = "Decor_dem_stala1"
   map    = "MAP15"
 
+  liquid = true
+
 
 }
 
@@ -180,6 +190,8 @@ PREFABS.Decor_dem_stala6 =
 {
   template  = "Decor_dem_stala1"
   map    = "MAP16"
+
+  liquid = false
 
 
 }
@@ -189,6 +201,8 @@ PREFABS.Decor_dem_stala7 =
   template  = "Decor_dem_stala1"
   map    = "MAP17"
 
+  liquid = false
+
 }
 
 PREFABS.Decor_dem_stala8 =
@@ -196,12 +210,16 @@ PREFABS.Decor_dem_stala8 =
   template  = "Decor_dem_stala1"
   map    = "MAP18"
 
+  liquid = true
+
 }
 
 PREFABS.Decor_dem_stala9 =
 {
   template  = "Decor_dem_stala1"
   map    = "MAP19"
+
+  liquid = false
 
 }
 
@@ -231,12 +249,16 @@ PREFABS.Decor_dem_stalav1 =
 
 uses_epic_textures = true
 
+  liquid = true
+
 }
 
 PREFABS.Decor_dem_stalav2 =
 {
   template  = "Decor_dem_stalav1"
   map    = "MAP21"
+
+  liquid = false
 
 }
 
@@ -245,6 +267,8 @@ PREFABS.Decor_dem_stalav3 =
   template  = "Decor_dem_stalav1"
   map    = "MAP22"
 
+  liquid = true
+
 }
 
 PREFABS.Decor_dem_stalav4 =
@@ -252,12 +276,16 @@ PREFABS.Decor_dem_stalav4 =
   template  = "Decor_dem_stalav1"
   map    = "MAP23"
 
+  liquid = true
+
 }
 
 PREFABS.Decor_dem_stalav5 =
 {
   template  = "Decor_dem_stalav1"
   map    = "MAP24"
+
+  liquid = false
 
 }
 
