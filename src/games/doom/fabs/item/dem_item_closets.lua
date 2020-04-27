@@ -3,7 +3,7 @@
 --
 
 --a item in a maze of mirrors1 in hell
-PREFABS.Item_mirrormaze_closet =
+PREFABS.Item_dem_mirrormaze_closet =
 {
   file  = "item/dem_item_closets.wad"
   map   = "MAP01"
@@ -25,7 +25,7 @@ PREFABS.Item_mirrormaze_closet =
 }
 
 --a item in a maze of mirrors2 in hell
-PREFABS.Item_mirrormaze2_closet =
+PREFABS.Item_dem_mirrormaze2_closet =
 {
   file  = "item/dem_item_closets.wad"
   map   = "MAP02"
@@ -47,7 +47,7 @@ PREFABS.Item_mirrormaze2_closet =
 }
 
 --a item on a shrine in a rift in hell
-PREFABS.Item_rift_closet =
+PREFABS.Item_dem_rift_closet =
 {
   file  = "item/dem_item_closets.wad"
   map   = "MAP03"
@@ -108,7 +108,7 @@ PREFABS.Item_rift_closet =
 }
 
 --an item forgotten in a grocery store
-PREFABS.Item_grocerystore_closet =
+PREFABS.Item_dem_grocerystore_closet =
 {
   file  = "item/dem_item_closets.wad"
   map   = "MAP04"
@@ -167,7 +167,7 @@ PREFABS.Item_grocerystore_closet =
 }
 
 --an elevator shaft with an item
-PREFABS.Item_elevatorshaft_closet =
+PREFABS.Item_dem_elevatorshaft_closet =
 {
   file   = "item/dem_item_closets.wad"
   map    = "MAP05"
@@ -205,7 +205,7 @@ PREFABS.Item_elevatorshaft_closet =
 }
 
 --a corrupted elevator shaft with an item
-PREFABS.Item_elevatorshaftcorr_closet =
+PREFABS.Item_dem_elevatorshaftcorr_closet =
 {
   file   = "item/dem_item_closets.wad"
   map    = "MAP06"
@@ -242,7 +242,7 @@ PREFABS.Item_elevatorshaftcorr_closet =
 }
 
 --a living room with an item
-PREFABS.Item_living_room_closet =
+PREFABS.Item_dem_living_room_closet =
 {
   file   = "item/dem_item_closets.wad"
   map    = "MAP07"
@@ -274,7 +274,7 @@ PREFABS.Item_living_room_closet =
 }
 
 --a kitchen with an item hidden behind the table
-PREFABS.Item_kitchen_closet =
+PREFABS.Item_dem_kitchen_closet =
 {
   file = "item/dem_item_closets.wad"
   map = "MAP08"
@@ -305,7 +305,7 @@ PREFABS.Item_kitchen_closet =
 }
 
 --a bedroom with an hidden item
-PREFABS.Item_bedroom_closet =
+PREFABS.Item_dem_bedroom_closet =
 {
   file = "item/dem_item_closets.wad"
   map = "MAP09"
@@ -341,7 +341,7 @@ PREFABS.Item_bedroom_closet =
 
 
 --an appartment stairwell with a ritual and an item
-PREFABS.Item_stairwell_closet =
+PREFABS.Item_dem_stairwell_closet =
 {
   file = "item/dem_item_closets.wad"
   map = "MAP10"
@@ -374,7 +374,7 @@ PREFABS.Item_stairwell_closet =
 }
 
 --a bar with an item hidden behind of it
-PREFABS.Item_bar_closets =
+PREFABS.Item_dem_bar_closets =
 {
   file = "item/dem_item_closets.wad"
   map    = "MAP11"
@@ -409,7 +409,7 @@ PREFABS.Item_bar_closets =
 }
 
 --a waiting room with an item on the desk
-PREFABS.Item_waiting_room_closets =
+PREFABS.Item_dem_waiting_room_closets =
 {
   file = "item/dem_item_closets.wad"
   map    = "MAP12"
@@ -451,7 +451,7 @@ PREFABS.Item_waiting_room_closets =
 }
 
 --a raided electronic store with an item
-PREFABS.Item_electronic_store_closets =
+PREFABS.Item_dem_electronic_store_closets =
 {
   file = "item/dem_item_closets.wad"
   map    = "MAP13"
@@ -486,7 +486,7 @@ PREFABS.Item_electronic_store_closets =
 }
 
 --a raided cornerstore with only one item remaining
-PREFABS.Item_cornerstore_closets =
+PREFABS.Item_dem_cornerstore_closets =
 {
   file = "item/dem_item_closets.wad"
   map    = "MAP14"
@@ -525,7 +525,7 @@ PREFABS.Item_cornerstore_closets =
 }
 
 --a fairly intact bookstore with an item inside
-PREFABS.Item_bookstore_closets =
+PREFABS.Item_dem_bookstore_closets =
 {
   file = "item/dem_item_closets.wad"
   map    = "MAP15"
@@ -563,7 +563,7 @@ PREFABS.Item_bookstore_closets =
 }
 
 --a item in a scrying room in hell
-PREFABS.Item_scrying1_closet =
+PREFABS.Item_dem_scrying1_closet =
 {
   file  = "item/dem_item_closets.wad"
   map   = "MAP16"
@@ -572,7 +572,6 @@ PREFABS.Item_scrying1_closet =
 
   theme = "hell"
   prob  = 100
-rank=1
 
   where  = "seeds"
   seed_w = 2
@@ -586,7 +585,7 @@ rank=1
 }
 
 --a item in a scrying room in hell
-PREFABS.Item_scrying2_closet =
+PREFABS.Item_dem_scrying2_closet =
 {
   file  = "item/dem_item_closets.wad"
   map   = "MAP17"
@@ -604,4 +603,205 @@ PREFABS.Item_scrying2_closet =
 
   x_fit = "frame"
   y_fit  = "frame"
+}
+
+---- natural shrine getting corrupted by demon with an item ----
+
+PREFABS.Item_dem_shrine_closetC =
+{
+  file   = "item/dem_item_closets.wad"
+  map    = "MAP18"
+
+  engine = "zdoom"
+
+  prob   = 100
+
+  env = "cave"
+
+  theme  = "!hell"
+
+  where  = "seeds"
+
+
+  seed_w = 3
+  seed_h = 2
+
+  deep   = 16
+  over   = -16
+
+  bound_z1 = 0
+  bound_z2 = 128
+
+  z_fit = { 56,64 }
+
+  uses_epic_textures = true
+
+}
+
+PREFABS.Item_dem_shrine_closetN =
+{
+  template = "Item_dem_shrine_closetC"
+
+  map = "MAP19"
+  env = "nature"
+  group = "natural_walls"
+
+
+}
+
+
+----Natural corner with old cabin that have enemies inside and an item----
+
+PREFABS.Item_dem_cabin_closet =
+{
+  file   = "item/dem_item_closets.wad"
+  map    = "MAP20"
+
+  engine = "zdoom"
+
+  theme = "!hell"
+
+  prob   = 100
+
+  env = "nature"
+
+  group = "natural_walls"
+
+  where  = "seeds"
+
+
+  seed_w = 3
+  seed_h = 2
+
+  deep = 16
+  over = -16
+
+  bound_z1 = 0
+  bound_z2 = 128
+
+  z_fit = { 99,104 }
+
+  uses_epic_textures = true
+
+  thing_10 =
+  {
+    gibs = 50
+    gibbed_player = 50
+    pool_brains = 50
+    dead_player = 50
+    dead_zombie = 50
+    dead_shooter = 50
+    dead_imp = 50
+  }
+
+}
+
+----Natural corner with campsite that have an item----
+
+PREFABS.Item_dem_campsiteC_closet =
+{
+  file   = "item/dem_item_closets.wad"
+  map    = "MAP21"
+
+  theme = "!hell"
+
+  prob   = 100
+  env = "cave"
+
+  where  = "seeds"
+
+  seed_w = 3
+  seed_h = 2
+
+  deep = 16
+  over = -16
+
+  bound_z1 = 0
+  bound_z2 = 128
+
+  z_fit = { 64,72 }
+
+  uses_epic_textures = true
+
+}
+
+PREFABS.Item_dem_campsiteN_closet =
+{
+  template  = "Item_dem_campsiteC_closet"
+  map    = "MAP22"
+  env = "nature"
+
+  group = "natural_walls"
+}
+
+PREFABS.Item_dem_campsiteP_closet =
+{
+  template  = "Item_dem_campsiteC_closet"
+  map    = "MAP23"
+  env = "park"
+}
+
+----a concrete bunker with an item inside ----
+
+PREFABS.Item_dem_bunker_closetP =
+{
+  file   = "item/dem_item_closets.wad"
+  map    = "MAP24"
+
+  engine = "zdoom"
+
+  game = "doom2"
+
+  prob   = 100
+
+  theme  = "!hell"
+
+  env = "park"
+
+  where  = "seeds"
+
+  seed_w = 3
+  seed_h = 2
+
+  deep   = 16
+  over   = -16
+
+  bound_z1 = 0
+  bound_z2 = 128
+
+  x_fit = "frame"
+  y_fit  = "frame"
+  z_fit = { 56,64 }
+
+  uses_epic_textures = true
+
+
+  thing_3004 =
+  {
+    nothing = 20
+    zombie = 50
+    shooter = 30
+    imp = 50
+    gunner = 20
+  }
+
+}
+
+
+
+PREFABS.Item_dem_bunker_closetC =
+{
+  template = "Item_dem_bunker_closetP"
+
+  map = "MAP25"
+  env    = "cave"
+}
+
+PREFABS.Item_dem_bunker_closetN =
+{
+  template = "Item_dem_bunker_closetP"
+
+  map = "MAP26"
+  env = "nature"
+  group = "natural_walls"
 }

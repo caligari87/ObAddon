@@ -32,6 +32,66 @@ PREFABS.Hallway_conveyorh_term2 =
 
   map  = "MAP02"
 
+  thing_20 =
+  {
+    gibs = 50
+    gibbed_player = 50
+    pool_blood_1  = 50
+    pool_brains = 50
+    dead_player = 50
+    dead_zombie = 50
+    dead_shooter = 50
+    dead_imp = 50
+  }
+
+  thing_10 =
+  {
+    gibs = 50
+    gibbed_player = 50
+    pool_blood_1  = 50
+    pool_brains = 50
+    dead_player = 50
+    dead_zombie = 50
+    dead_shooter = 50
+    dead_imp = 50
+  }
+
+  thing_79 =
+  {
+    gibs = 50
+    gibbed_player = 50
+    pool_blood_1  = 50
+    pool_brains = 50
+    dead_player = 50
+    dead_zombie = 50
+    dead_shooter = 50
+    dead_imp = 50
+  }
+
+  thing_15 =
+  {
+    gibs = 50
+    gibbed_player = 50
+    pool_blood_1  = 50
+    pool_brains = 50
+    dead_player = 50
+    dead_zombie = 50
+    dead_shooter = 50
+    dead_imp = 50
+  }
+
+  thing_81 =
+  {
+    gibs = 50
+    gibbed_player = 50
+    pool_blood_1  = 50
+    pool_brains = 50
+    dead_player = 50
+    dead_zombie = 50
+    dead_shooter = 50
+    dead_imp = 50
+  }
+
 }
 
 PREFABS.Hallway_conveyorh_term3 =
@@ -57,6 +117,66 @@ PREFABS.Hallway_conveyorh_term5 =
 
   map  = "MAP05"
   style = "doors"
+
+  thing_20 =
+  {
+    gibs = 50
+    gibbed_player = 50
+    pool_blood_1  = 50
+    pool_brains = 50
+    dead_player = 50
+    dead_zombie = 50
+    dead_shooter = 50
+    dead_imp = 50
+  }
+
+  thing_10 =
+  {
+    gibs = 50
+    gibbed_player = 50
+    pool_blood_1  = 50
+    pool_brains = 50
+    dead_player = 50
+    dead_zombie = 50
+    dead_shooter = 50
+    dead_imp = 50
+  }
+
+  thing_79 =
+  {
+    gibs = 50
+    gibbed_player = 50
+    pool_blood_1  = 50
+    pool_brains = 50
+    dead_player = 50
+    dead_zombie = 50
+    dead_shooter = 50
+    dead_imp = 50
+  }
+
+  thing_15 =
+  {
+    gibs = 50
+    gibbed_player = 50
+    pool_blood_1  = 50
+    pool_brains = 50
+    dead_player = 50
+    dead_zombie = 50
+    dead_shooter = 50
+    dead_imp = 50
+  }
+
+  thing_81 =
+  {
+    gibs = 50
+    gibbed_player = 50
+    pool_blood_1  = 50
+    pool_brains = 50
+    dead_player = 50
+    dead_zombie = 50
+    dead_shooter = 50
+    dead_imp = 50
+  }
 
 }
 

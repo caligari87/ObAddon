@@ -150,3 +150,296 @@ PREFABS.Cage_dem_store_ambush =
   hang_leg_gone = 50
   }
 }
+
+--
+--Cages for outdoor
+--
+
+--a concrete bunker
+PREFABS.Cage_dem_bunker_ambush1 =
+{
+  file   = "cage/dem_cages.wad"
+  map    = "MAP04"
+
+  engine = "zdoom"
+
+  game = "doom2"
+
+  prob   = 700
+
+  theme  = "!hell"
+
+  env = "park"
+
+  where  = "seeds"
+  shape  = "U"
+
+  seed_w = 3
+  seed_h = 2
+
+  deep   = 16
+  over   = -16
+
+  bound_z1 = 0
+  bound_z2 = 128
+
+  x_fit = "frame"
+  y_fit  = "frame"
+  z_fit = { 56,64 }
+
+  uses_epic_textures = true
+
+
+  thing_3004 =
+  {
+    nothing = 20
+    zombie = 50
+    shooter = 30
+    imp = 50
+    gunner = 20
+  }
+
+}
+
+
+
+PREFABS.Cage_dem_bunker_ambush2 =
+{
+  template = "Cage_dem_bunker_ambush1"
+
+  map = "MAP05"
+  env    = "cave"
+}
+
+PREFABS.Cage_dem_bunker_ambush3 =
+{
+  template = "Cage_dem_bunker_ambush1"
+
+  map = "MAP06"
+  env = "nature"
+  group = "natural_walls"
+}
+
+----upper ledge ambush----
+
+
+PREFABS.Cage_dem_ledge_ambush1 =
+{
+  file   = "cage/dem_cages.wad"
+  map    = "MAP07"
+
+  prob   = 700
+
+  theme  = "!hell"
+
+  env = "park"
+
+  where  = "seeds"
+  shape  = "U"
+
+  seed_w = 3
+  seed_h = 1
+
+  deep   = 16
+  over   = -16
+
+  bound_z1 = 0
+  bound_z2 = 128
+
+  x_fit = "frame"
+  z_fit = { 18,26 }
+
+}
+
+PREFABS.Cage_dem_ledge_ambush2 =
+{
+  template = "Cage_dem_ledge_ambush1"
+
+  map = "MAP08"
+  env    = "cave"
+
+  z_fit = { 16,24 }
+
+}
+
+PREFABS.Cage_dem_ledge_ambush3 =
+{
+  template = "Cage_dem_ledge_ambush1"
+
+  map = "MAP09"
+  env = "nature"
+  group = "natural_walls"
+}
+
+
+---- natural shrine getting corrupted by demon ----
+
+PREFABS.Cage_dem_shrineC =
+{
+  file   = "cage/dem_cages.wad"
+  map    = "MAP10"
+
+  engine = "zdoom"
+
+  prob   = 700
+
+  theme  = "!hell"
+
+  env = "cave"
+
+  where  = "seeds"
+  shape  = "U"
+
+  seed_w = 3
+  seed_h = 2
+
+  deep   = 16
+  over   = -16
+
+  bound_z1 = 0
+  bound_z2 = 128
+
+  z_fit = { 56,64 }
+
+  uses_epic_textures = true
+
+}
+
+PREFABS.Cage_dem_shrineN =
+{
+  template = "Cage_dem_shrineC"
+
+  map = "MAP11"
+  env = "nature"
+  group = "natural_walls"
+
+
+}
+
+---- Ruins with enemies hidden inside ----
+
+PREFABS.Cage_dem_ruinsN1amb =
+{
+  file   = "cage/dem_cages.wad"
+  map    = "MAP12"
+
+  engine = "zdoom"
+
+  prob   = 100
+
+  env = "nature"
+
+  group = "natural_walls"
+
+  where  = "seeds"
+  shape  = "U"
+
+  seed_w = 3
+  seed_h = 2
+
+  deep = 16
+  over = -16
+
+  bound_z1 = 0
+  bound_z2 = 152
+
+  x_fit = "stretch"
+  z_fit = { 84,92 }
+
+  uses_epic_textures = true
+
+}
+
+PREFABS.Cage_dem_ruinsN2amb =
+{
+  template  = "Cage_dem_ruinsN1amb"
+  map    = "MAP13"
+}
+
+PREFABS.Cage_dem_ruinsC1amb =
+{
+  file   = "cage/dem_cages.wad"
+  map    = "MAP14"
+
+  engine = "zdoom"
+
+  prob   = 100
+
+  env = "cave"
+
+  where  = "seeds"
+  shape  = "U"
+
+  seed_w = 3
+  seed_h = 2
+
+  deep = 16
+  over = -16
+
+  bound_z1 = 0
+  bound_z2 = 128
+
+  x_fit = "stretch"
+  z_fit = { 84,92 }
+
+  uses_epic_textures = true
+
+}
+
+PREFABS.Cage_dem_ruinsC2amd =
+{
+  template  = "Cage_dem_ruinsC1amb"
+  map    = "MAP15"
+}
+
+
+----Natural corner with old cabin that have enemies inside----
+
+PREFABS.Cage_dem_cabinamb =
+{
+  file   = "cage/dem_cages.wad"
+  map    = "MAP16"
+
+  engine = "zdoom"
+
+  theme = "!hell"
+
+  prob   = 100
+
+  env = "nature"
+
+  group = "natural_walls"
+
+  where  = "seeds"
+  shape  = "U"
+
+  seed_w = 3
+  seed_h = 2
+
+  deep = 16
+  over = -16
+
+  bound_z1 = 0
+  bound_z2 = 128
+
+  z_fit = { 99,104 }
+
+  uses_epic_textures = true
+
+  thing_10 =
+  {
+    gibs = 50
+    gibbed_player = 50
+    pool_brains = 50
+    dead_player = 50
+    dead_zombie = 50
+    dead_shooter = 50
+    dead_imp = 50
+  }
+
+}
+
+
+
+
+

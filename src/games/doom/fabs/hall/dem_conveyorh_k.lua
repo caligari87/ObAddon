@@ -56,6 +56,66 @@ PREFABS.Hallway_conveyorh_locked_red2 =
   map    = "MAP02"
   key    = "k_red"
 
+  thing_20 =
+  {
+    gibs = 50
+    gibbed_player = 50
+    pool_blood_1  = 50
+    pool_brains = 50
+    dead_player = 50
+    dead_zombie = 50
+    dead_shooter = 50
+    dead_imp = 50
+  }
+
+  thing_10 =
+  {
+    gibs = 50
+    gibbed_player = 50
+    pool_blood_1  = 50
+    pool_brains = 50
+    dead_player = 50
+    dead_zombie = 50
+    dead_shooter = 50
+    dead_imp = 50
+  }
+
+  thing_79 =
+  {
+    gibs = 50
+    gibbed_player = 50
+    pool_blood_1  = 50
+    pool_brains = 50
+    dead_player = 50
+    dead_zombie = 50
+    dead_shooter = 50
+    dead_imp = 50
+  }
+
+  thing_15 =
+  {
+    gibs = 50
+    gibbed_player = 50
+    pool_blood_1  = 50
+    pool_brains = 50
+    dead_player = 50
+    dead_zombie = 50
+    dead_shooter = 50
+    dead_imp = 50
+  }
+
+  thing_81 =
+  {
+    gibs = 50
+    gibbed_player = 50
+    pool_blood_1  = 50
+    pool_brains = 50
+    dead_player = 50
+    dead_zombie = 50
+    dead_shooter = 50
+    dead_imp = 50
+  }
+
 }
 
 PREFABS.Hallway_conveyorh_locked_blue2 =
@@ -142,6 +202,66 @@ PREFABS.Hallway_conveyorh_barred2 =
 {
   template  = "Hallway_conveyorh_barred1"
   map    = "MAP05"
+
+  thing_20 =
+  {
+    gibs = 50
+    gibbed_player = 50
+    pool_blood_1  = 50
+    pool_brains = 50
+    dead_player = 50
+    dead_zombie = 50
+    dead_shooter = 50
+    dead_imp = 50
+  }
+
+  thing_10 =
+  {
+    gibs = 50
+    gibbed_player = 50
+    pool_blood_1  = 50
+    pool_brains = 50
+    dead_player = 50
+    dead_zombie = 50
+    dead_shooter = 50
+    dead_imp = 50
+  }
+
+  thing_79 =
+  {
+    gibs = 50
+    gibbed_player = 50
+    pool_blood_1  = 50
+    pool_brains = 50
+    dead_player = 50
+    dead_zombie = 50
+    dead_shooter = 50
+    dead_imp = 50
+  }
+
+  thing_15 =
+  {
+    gibs = 50
+    gibbed_player = 50
+    pool_blood_1  = 50
+    pool_brains = 50
+    dead_player = 50
+    dead_zombie = 50
+    dead_shooter = 50
+    dead_imp = 50
+  }
+
+  thing_81 =
+  {
+    gibs = 50
+    gibbed_player = 50
+    pool_blood_1  = 50
+    pool_brains = 50
+    dead_player = 50
+    dead_zombie = 50
+    dead_shooter = 50
+    dead_imp = 50
+  }
 
 }
 

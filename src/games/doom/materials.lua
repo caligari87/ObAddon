@@ -658,7 +658,7 @@ DOOM.MATERIALS =
   SLIME05  = { t="BLODRIP1", f="SLIME05", sane=1 }
 
 
-  -- walls as flats --
+  -- walls as flats and vice versa --
   XCEIL5_1 = { t="CEIL5_1", f="CEIL5_1" }
   XFLAT14 = { t="FLAT14", f="FLAT14" }
   XFLOOR16 = { t="FLOOR1_6", f="FLOOR1_6" }
@@ -672,6 +672,8 @@ DOOM.MATERIALS =
   XDOORTRA = { t="DOORTRAK", f="DOORTRAK" }
   XEMPTY = { t="-", f="-" }
   XTEKGREN = { t="TEKGREN2", f="TEKGREN2" }
+  XCEIL3_3 = { t="CEIL3_3", f="CEIL3_3" }
+  XMIDVINE  = { t="MIDVINE1", f="MIDVINE1" }
 }
 
 

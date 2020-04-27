@@ -182,6 +182,7 @@ PREFABS.Pic_dem_cavein15 =
 {
   template  = "Pic_dem_cavein13"
   map    = "MAP15"
+  z_fit = { 56,64 }
 }
 
 ---- cave-in with deco ----
@@ -328,7 +329,6 @@ PREFABS.Pic_dem_caveind10 =
 
   prob   = 100
   env = "cave"
-  rank = 2
 
   where  = "seeds"
   height = 128
@@ -357,6 +357,7 @@ PREFABS.Pic_dem_caveind11 =
 {
   template  = "Pic_dem_caveind10"
   map    = "MAP26"
+  z_fit = { 88,96 }
 }
 
 PREFABS.Pic_dem_caveind12 =
@@ -620,6 +621,7 @@ PREFABS.Pic_dem_nookd2 =
   map    = "MAP41"
   theme = "any"
   liquid = true
+
 }
 
 PREFABS.Pic_dem_nookd3 =
@@ -627,6 +629,8 @@ PREFABS.Pic_dem_nookd3 =
   template  = "Pic_dem_nookd1"
   map    = "MAP42"
   theme = "!hell"
+  uses_epic_textures = true
+
 }
 
 PREFABS.Pic_dem_nookd4 =
@@ -743,9 +747,6 @@ PREFABS.Pic_dem_nookd10 =
   file   = "picture/dem_pic_nature.wad"
   map    = "MAP49"
 
-
-rank = 3
-
   prob   = 100
   env = "nature"
 
@@ -786,6 +787,8 @@ PREFABS.Pic_dem_nookd11 =
   map    = "MAP50"
   theme = "!hell"
   z_fit = { 56,64 }
+
+  uses_epic_textures = true
 }
 
 PREFABS.Pic_dem_nookd12 =
@@ -793,5 +796,412 @@ PREFABS.Pic_dem_nookd12 =
   template  = "Pic_dem_nookd10"
   map    = "MAP51"
   liquid = true
+}
+
+----Natural corner with campsite----
+
+PREFABS.Pic_dem_campsiteC =
+{
+  file   = "picture/dem_pic_nature.wad"
+  map    = "MAP52"
+
+  engine = "zdoom"
+
+  theme = "!hell"
+
+  prob   = 100
+  env = "cave"
+
+  where  = "seeds"
+
+  seed_w = 3
+  seed_h = 2
+
+  deep = 16
+  over = -16
+
+  bound_z1 = 0
+  bound_z2 = 128
+
+  z_fit = { 64,72 }
+
+  uses_epic_textures = true
+
+}
+
+PREFABS.Pic_dem_campsiteN =
+{
+  template  = "Pic_dem_campsiteC"
+  map    = "MAP53"
+  env = "nature"
+
+  group = "natural_walls"
+}
+
+PREFABS.Pic_dem_campsiteP =
+{
+  template  = "Pic_dem_campsiteC"
+  map    = "MAP54"
+  env = "park"
+}
+
+----Natural corner with old cabin----
+
+PREFABS.Pic_dem_cabin =
+{
+  file   = "picture/dem_pic_nature.wad"
+  map    = "MAP55"
+
+  engine = "zdoom"
+
+  theme = "!hell"
+
+  prob   = 100
+  env = "nature"
+
+  group = "natural_walls"
+
+  where  = "seeds"
+
+  seed_w = 3
+  seed_h = 2
+
+  deep = 16
+  over = -16
+
+  bound_z1 = 0
+  bound_z2 = 128
+
+  z_fit = { 99,104 }
+
+  uses_epic_textures = true
+
+  thing_10 =
+  {
+    gibs = 50
+    gibbed_player = 50
+    pool_brains = 50
+    dead_player = 50
+    dead_zombie = 50
+    dead_shooter = 50
+    dead_imp = 50
+  }
+
+}
+
+----Natural corner with waterfall or lake----
+
+PREFABS.Pic_dem_waterfallC1 =
+{
+  file   = "picture/dem_pic_nature.wad"
+  map    = "MAP56"
+
+  engine = "zdoom"
+
+  theme = "!hell"
+
+  prob   = 100
+  env = "cave"
+
+  where  = "seeds"
+
+  seed_w = 3
+  seed_h = 2
+
+  deep = 16
+  over = -16
+
+  bound_z1 = 0
+  bound_z2 = 128
+
+  x_fit = "stretch"
+  z_fit = { 16,32 }
+
+  uses_epic_textures = true
+
+}
+
+PREFABS.Pic_dem_lakeC1 =
+{
+  template  = "Pic_dem_waterfallC1"
+  map    = "MAP57"
+}
+
+
+PREFABS.Pic_dem_waterfallN1 =
+{
+  file   = "picture/dem_pic_nature.wad"
+  map    = "MAP58"
+
+  engine = "zdoom"
+
+
+  theme = "!hell"
+
+  prob   = 100
+
+  env = "nature"
+
+  group = "natural_walls"
+
+  where  = "seeds"
+
+  seed_w = 3
+  seed_h = 2
+
+  deep = 16
+  over = -16
+
+  bound_z1 = 0
+  bound_z2 = 128
+
+  x_fit = "stretch"
+  z_fit = { 24,40 }
+
+  uses_epic_textures = true
+
+}
+
+PREFABS.Pic_dem_lakeN1 =
+{
+  template  = "Pic_dem_waterfallN1"
+  map    = "MAP59"
+}
+
+PREFABS.Pic_dem_waterfallC2 =
+{
+  file   = "picture/dem_pic_nature.wad"
+  map    = "MAP60"
+
+  engine = "zdoom"
+
+
+  theme = "!hell"
+
+  prob   = 100
+  env = "cave"
+
+  where  = "seeds"
+
+  seed_w = 3
+  seed_h = 2
+
+  deep = 16
+  over = -16
+
+  bound_z1 = 0
+  bound_z2 = 128
+
+  x_fit = "stretch"
+  z_fit = { 16,32 }
+
+  liquid = "harmful" 
+
+  uses_epic_textures = true
+
+}
+
+PREFABS.Pic_dem_lakeC2 =
+{
+  template  = "Pic_dem_waterfallC2"
+  map    = "MAP61"
+}
+
+
+PREFABS.Pic_dem_waterfallN2 =
+{
+  file   = "picture/dem_pic_nature.wad"
+  map    = "MAP62"
+
+  engine = "zdoom"
+
+  theme = "!hell"
+
+  prob   = 100
+
+  env = "nature"
+
+  group = "natural_walls"
+
+  where  = "seeds"
+
+  seed_w = 3
+  seed_h = 2
+
+  deep = 16
+  over = -16
+
+  bound_z1 = 0
+  bound_z2 = 128
+
+  x_fit = "stretch"
+  z_fit = { 24,40 }
+
+  liquid = "harmful" 
+
+  uses_epic_textures = true
+
+}
+
+PREFABS.Pic_dem_lakeN2 =
+{
+  template  = "Pic_dem_waterfallN2"
+  map    = "MAP63"
+}
+
+PREFABS.Pic_dem_waterfallC3 =
+{
+  file   = "picture/dem_pic_nature.wad"
+  map    = "MAP64"
+
+  engine = "zdoom"
+
+
+  theme = "hell"
+
+  prob   = 100
+  env = "cave"
+
+  where  = "seeds"
+
+  seed_w = 3
+  seed_h = 2
+
+  deep = 16
+  over = -16
+
+  bound_z1 = 0
+  bound_z2 = 128
+
+  x_fit = "stretch"
+  z_fit = { 16,32 }
+
+  liquid = "harmful" 
+
+  uses_epic_textures = true
+
+}
+
+PREFABS.Pic_dem_lakeC3 =
+{
+  template  = "Pic_dem_waterfallC3"
+  map    = "MAP65"
+}
+
+
+PREFABS.Pic_dem_waterfallN3 =
+{
+  file   = "picture/dem_pic_nature.wad"
+  map    = "MAP66"
+
+  engine = "zdoom"
+
+  theme = "hell"
+
+  prob   = 100
+
+  env = "nature"
+
+  group = "natural_walls"
+
+  where  = "seeds"
+
+  seed_w = 3
+  seed_h = 2
+
+  deep = 16
+  over = -16
+
+  bound_z1 = 0
+  bound_z2 = 128
+
+  x_fit = "stretch"
+  z_fit = { 24,40 }
+
+  liquid = "harmful" 
+
+  uses_epic_textures = true
+
+}
+
+PREFABS.Pic_dem_lakeN3 =
+{
+  template  = "Pic_dem_waterfallN3"
+  map    = "MAP67"
+}
+
+
+---- Ruins and old temples ----
+
+PREFABS.Pic_dem_ruinsN1 =
+{
+  file   = "picture/dem_pic_nature.wad"
+  map    = "MAP68"
+
+  engine = "zdoom"
+
+  prob   = 100
+
+  env = "nature"
+
+  group = "natural_walls"
+
+  where  = "seeds"
+
+  seed_w = 3
+  seed_h = 2
+
+  deep = 16
+  over = -16
+
+  bound_z1 = 0
+  bound_z2 = 152
+
+  x_fit = "stretch"
+  z_fit = { 84,92 }
+
+  uses_epic_textures = true
+
+}
+
+PREFABS.Pic_dem_ruinsN2 =
+{
+  template  = "Pic_dem_ruinsN1"
+  map    = "MAP69"
+}
+
+PREFABS.Pic_dem_ruinsC1 =
+{
+  file   = "picture/dem_pic_nature.wad"
+  map    = "MAP70"
+
+  engine = "zdoom"
+
+  prob   = 100
+  env = "cave"
+
+  where  = "seeds"
+  height = 128
+
+  seed_w = 3
+  seed_h = 2
+
+  deep = 16
+  over = -16
+
+  bound_z1 = 0
+  bound_z2 = 128
+
+  x_fit = "stretch"
+  z_fit = { 84,92 }
+
+  uses_epic_textures = true
+
+}
+
+PREFABS.Pic_dem_ruinsC2 =
+{
+  template  = "Pic_dem_ruinsC1"
+  map    = "MAP71"
 }
 
