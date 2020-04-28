@@ -108,6 +108,50 @@ ARMAETUS_DOOM1_THEMES =
     }
   }
 
+  any_conveyor_Hallway =
+  {
+    env   = "hallway"
+    group = "conveyor"
+    prob  = 1
+
+    walls =
+    {
+      GRAY5 = 1
+    }
+
+    floors =
+    {
+      FLAT1 = 1
+    }
+
+    ceilings =
+    {
+      FLAT1 = 1
+    }
+  }
+
+  any_conveyorh_Hallway =
+  {
+    env   = "hallway"
+    group = "conveyorh"
+    prob  = 1
+
+    walls =
+    {
+      GRAY5 = 1
+    }
+
+    floors =
+    {
+      FLAT1 = 1
+    }
+
+    ceilings =
+    {
+      FLAT1 = 1
+    }
+  }
+
   tech_GrayMet =
   {
     env = "building"
