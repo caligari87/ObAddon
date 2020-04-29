@@ -139,6 +139,7 @@ PREFABS.Item_secret_hellgargoyle_closet =
   map   = "MAP04"
 
   theme = "hell"
+  env = "!nature"
 
   prob  = 100
 
@@ -170,6 +171,7 @@ PREFABS.Item_secret_hellthrone_closet =
   map   = "MAP05"
 
   theme = "hell"
+  env = "!nature"
 
   prob  = 100
 
@@ -201,6 +203,7 @@ PREFABS.Item_secret_lectern_closet =
   map   = "MAP06"
 
   theme = "hell"
+  env = "!nature"
 
   prob  = 100
 
@@ -225,7 +228,7 @@ PREFABS.Item_secret_lectern_closet =
   can_flip = true
 }
 
---Stretch your arm under the hatch to open the machine V1 
+--Stretch your arm under the hatch to open the machine V1
 PREFABS.Item_secret_hellmachine1V1_closet =
 {
   file  = "item/dem_secret_closets.wad"
@@ -233,6 +236,7 @@ PREFABS.Item_secret_hellmachine1V1_closet =
   engine = "zdoom"
 
   theme = "hell"
+  env = "!nature"
 
   prob  = 50
 
@@ -254,7 +258,7 @@ PREFABS.Item_secret_hellmachine1V1_closet =
 
 }
 
---Stretch your arm under the hatch to open the machine V2 
+--Stretch your arm under the hatch to open the machine V2
 PREFABS.Item_secret_hellmachine1V2_closet =
 {
   file  = "item/dem_secret_closets.wad"
@@ -262,6 +266,7 @@ PREFABS.Item_secret_hellmachine1V2_closet =
   engine = "zdoom"
 
   theme = "hell"
+  env = "!nature"
 
   prob  = 50
 
@@ -284,7 +289,7 @@ PREFABS.Item_secret_hellmachine1V2_closet =
 
 }
 
---One of the cpu chip is defective, shoot it to open the core! V1 
+--One of the cpu chip is defective, shoot it to open the core! V1
 PREFABS.Item_secret_techmachine1V1_closet =
 {
   file  = "item/dem_secret_closets.wad"
@@ -292,8 +297,9 @@ PREFABS.Item_secret_techmachine1V1_closet =
   engine = "zdoom"
 
   theme = "tech"
+  env = "!nature"
 
-  prob  = 50
+  prob  = 35
 
   key   = "secret"
 
@@ -313,7 +319,7 @@ PREFABS.Item_secret_techmachine1V1_closet =
 
 }
 
---One of the cpu chip is defective, shoot it to open the core! V2 
+--One of the cpu chip is defective, shoot it to open the core! V2
 PREFABS.Item_secret_techmachine1V2_closet =
 {
   file  = "item/dem_secret_closets.wad"
@@ -321,8 +327,9 @@ PREFABS.Item_secret_techmachine1V2_closet =
   engine = "zdoom"
 
   theme = "tech"
+  env = "!nature"
 
-  prob  = 50
+  prob  = 35
 
   key   = "secret"
 
@@ -704,4 +711,3 @@ PREFABS.Pic_dem_jumpy2_secretcloset =
   template  = "Pic_dem_jumpy1_secretcloset"
   map    = "MAP23"
 }
-
