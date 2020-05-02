@@ -449,6 +449,19 @@ class bossNameHandler : EventHandler
   string mon_name;
   string obit;
 
+  bool randOdds(int x)
+  {
+    if (x >= Random(1,100))
+    {
+      return true;
+    }
+    else
+    {
+      return false;
+    }
+
+  }
+
   bool isRankedDemon(Actor a)
   {
     if (a.Species == "IAmTheBoss") return false;
@@ -640,19 +653,18 @@ class bossNameHandler : EventHandler
       if (e.Thing.bIsMonster && e.Thing.bCountKill
       && mon_name == "")
       {
-        if( e.Thing.Health)
+        if(e.Thing.Health)
         {
           int mon_hp = e.Thing.Health;
 
-          if (mon_hp > 0 && mon_hp <= 100)
-          {
-            mon_name = getNormalDemonTag();
-          }else if(mon_hp > 100 && mon_hp < 300)
-          {
-            mon_name = getRandomDemonTag();
-          }else if(mon_hp >= 300)
+          mon_hp = Floor((mon_hp-100) / 2);
+
+          if(randOdds(mon_hp))
           {
             mon_name = getFancyDemonTag();
+          }else
+          {
+            mon_name = getNormalDemonTag();
           }
 
           // human-ish check
