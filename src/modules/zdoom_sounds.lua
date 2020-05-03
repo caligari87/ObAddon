@@ -36,12 +36,14 @@ Hell =                      { lump = "HELLAMB",   flags = "$limit HELLAMB 1"  }
 -- Ambient sounds for specific prefabs
 Bathroom_Fan =        {  lump = "BATHFAN"                                               }
 Computer_Station =    {  lump = "COMPSTN"                                               }
+Conveyor_Flesh =      {  lump = "CONVFLSH",  flags = "$limit CONVFLSH 1"                }
+Conveyor_Mech =       {  lump = "CONVMECH",  flags = "$limit CONVMECH 1"                }
 Indoor_Fan =          {  lump = "FANSND"                                                }
 Machine_Air =         {  lump = "MACHNAIR"                                              }
 Machine_Ventilation = {  lump = "MACHVENT"                                              }
 Demonic_Teleporter =  {  lump = "SKLLCHNT"                                              }
 Electric_Sparks =     {  lump = "SPARKING"                                              }
-Static_Monitor =      {  lump = "STATIC",    args = "CHAN_AUTO, 0.5, true"    }
+Static_Monitor =      {  lump = "STATIC",    args = "CHAN_AUTO, 0.3, true"              }
 Toilet_Running =      {  lump = "TOILETRN"                                              }
 Vending_Machine_Hum = {  lump = "VENDHUM"                                               }
 Water_Draining =      {  lump = "WATDRAIN"                                              }
