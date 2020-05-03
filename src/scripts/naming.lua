@@ -6869,6 +6869,36 @@ namelib.SYLLABLES =
     oort = 50, -- oort
   }
 
+  -- MYTHIC
+  m =
+  {
+    p = --prefixes
+    {
+      ach = 1, aeth = 1, aion = 1, chro = 1, an = 1, anan = 1,
+      cha = 1, ere = 1, er = 1, eb = 1,
+      pha = 1, gai = 1, he = 1, me = 1, ou = 1, pont = 1, tha = 1, lass = 1,
+      tar = 1, ta = 1, at = 1, ro = 1, clo = 1, lach = 1, es = 1,
+
+      coe = 1, cri = 1, cro = 1, hy = 1, per = 1, ia = 1, pe = 1,
+      dio = 1, mne = 1, no = 1,
+      phoe = 1, rhea = 1, teth = 1, the = 1, them = 1,
+      eos = 1, hel = 1, sel = 1,
+      as = 1, ter = 1, pal = 1, per = 1,
+      at = 1, epi = 1, meth = 1, me = 1, no = 1, pro = 1,
+    }
+    s = --suffixes
+    {
+      lys = 1, er = 2, on = 2, nos = 1, us = 3, nes = 1, ra = 2, rea = 2,
+      a = 5, nyx = 1, rus = 1, nus = 4, pos = 1, tho = 1, is = 2,
+
+      ion = 2, tus = 1,
+      ne = 1, syne = 1, be = 1, thys = 1, ia = 3,
+      ios = 1,
+      las = 2, ses = 1,
+      eus = 1, theus = 1,
+    }
+  }
+
   a = --ANGLICAN names
   {
     ["lower"] = 50
