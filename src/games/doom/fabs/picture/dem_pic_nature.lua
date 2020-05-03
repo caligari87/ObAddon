@@ -217,6 +217,8 @@ PREFABS.Pic_dem_caveind1 =
 
 uses_epic_textures = true
 
+sound = "Water_Streaming"
+
 }
 
 PREFABS.Pic_dem_caveind2 =
@@ -231,6 +233,7 @@ PREFABS.Pic_dem_caveind3 =
   template  = "Pic_dem_caveind1"
   map    = "MAP18"
   liquid = true
+  sound = "Water_Streaming"
 }
 
 PREFABS.Pic_dem_caveind4 =
@@ -275,6 +278,7 @@ PREFABS.Pic_dem_caveind6 =
   template  = "Pic_dem_caveind4"
   map    = "MAP21"
   liquid = true
+  sound = "Water_Streaming"
 }
 
 PREFABS.Pic_dem_caveind7 =
@@ -313,6 +317,7 @@ PREFABS.Pic_dem_caveind8 =
   template  = "Pic_dem_caveind7"
   map    = "MAP23"
   liquid = true
+  sound = "Water_Streaming"
 }
 
 PREFABS.Pic_dem_caveind9 =
@@ -351,6 +356,8 @@ PREFABS.Pic_dem_caveind10 =
 
 uses_epic_textures = true
 
+sound = "Water_Streaming"
+
 }
 
 PREFABS.Pic_dem_caveind11 =
@@ -358,12 +365,14 @@ PREFABS.Pic_dem_caveind11 =
   template  = "Pic_dem_caveind10"
   map    = "MAP26"
   z_fit = { 88,96 }
+  sound = "Water_Streaming"
 }
 
 PREFABS.Pic_dem_caveind12 =
 {
   template  = "Pic_dem_caveind10"
   map    = "MAP27"
+  sound = "Water_Streaming"
 }
 
 ---- outdoor nooks ----
@@ -621,7 +630,7 @@ PREFABS.Pic_dem_nookd2 =
   map    = "MAP41"
   theme = "any"
   liquid = true
-
+  sound = "Water_Streaming"
 }
 
 PREFABS.Pic_dem_nookd3 =
@@ -683,6 +692,7 @@ PREFABS.Pic_dem_nookd6 =
   map    = "MAP45"
   z_fit = { 56,62 }
   liquid = true
+  sound = "Water_Streaming"
 }
 
 PREFABS.Pic_dem_nookd7 =
@@ -732,6 +742,7 @@ PREFABS.Pic_dem_nookd8 =
   z_fit = "stretch"
   theme = "any"
   liquid = true
+  sound = "Water_Streaming"
 }
 
 PREFABS.Pic_dem_nookd9 =
@@ -918,7 +929,7 @@ PREFABS.Pic_dem_waterfallC1 =
   z_fit = { 16,32 }
 
   uses_epic_textures = true
-
+  sound = "Water_Streaming"
 }
 
 PREFABS.Pic_dem_lakeC1 =
@@ -959,7 +970,7 @@ PREFABS.Pic_dem_waterfallN1 =
   z_fit = { 24,40 }
 
   uses_epic_textures = true
-
+  sound = "Water_Streaming"
 }
 
 PREFABS.Pic_dem_lakeN1 =
@@ -999,6 +1010,7 @@ PREFABS.Pic_dem_waterfallC2 =
 
   uses_epic_textures = true
 
+  sound = "Water_Streaming"
 }
 
 PREFABS.Pic_dem_lakeC2 =
