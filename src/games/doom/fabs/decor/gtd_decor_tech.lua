@@ -158,6 +158,7 @@ PREFABS.Decor_open_pipe =
   bound_z2 = 160
 
   z_fit  = "top"
+  sound = "Water_Tank"
 }
 
 PREFABS.Decor_floor_decal_stripes =
