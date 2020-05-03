@@ -26,6 +26,7 @@ PREFABS.Hallway_conveyor_locked_red1 =
 
   uses_epic_textures = true
 
+  sound = "Conveyor_Mech"
 }
 
 PREFABS.Hallway_conveyor_locked_blue1 =
@@ -84,5 +85,7 @@ PREFABS.Hallway_conveyor_barred1 =
 
   tag_1  = "?door_tag"
   door_action = "S1_LowerFloor"
+
+  sound = "Conveyor_Mech"
 }
 

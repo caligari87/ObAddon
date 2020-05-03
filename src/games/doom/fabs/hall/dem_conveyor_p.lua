@@ -1,5 +1,5 @@
 --
--- 2-seed-wide hallway : + peice
+-- 2-seed-wide hallway : + piece
 --
 
 PREFABS.Hallway_conveyor_p1 =
@@ -27,5 +27,6 @@ PREFABS.Hallway_conveyor_p1 =
     nothing = 40
   }
 
+  sound = "Conveyor_Mech"
 }
 

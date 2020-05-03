@@ -27,6 +27,7 @@ PREFABS.Hallway_conveyor_c1 =
     nothing = 40
   }
 
+  sound = "Conveyor_Mech"
 }
 
 PREFABS.Hallway_conveyor_c2 =

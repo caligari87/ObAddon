@@ -23,6 +23,8 @@ PREFABS.Hallway_conveyor_term1 =
   uses_epic_textures = true
 
   deep   = 16
+
+  sound = "Conveyor_Mech"
 }
 
 PREFABS.Hallway_conveyor_term2 =

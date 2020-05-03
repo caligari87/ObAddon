@@ -1,5 +1,5 @@
 --
--- 2-seed-wide hallway : U peice
+-- 2-seed-wide hallway : U piece
 --
 
 PREFABS.Hallway_conveyor_u1 =
@@ -33,6 +33,7 @@ PREFABS.Hallway_conveyor_u1 =
     blue_armor = 50
   }
 
+  sound = "Conveyor_Mech"
 }
 
 PREFABS.Hallway_conveyor_u2 =
