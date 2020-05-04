@@ -2345,7 +2345,9 @@ function Fab_find_matches(reqs, match_state)
     if reqs.scenic and def.on_scenics == "never" then return 0 end
 
     -- wall fabs that need to be flat, to specific walls from intersecting
-    if reqs.flat and def.deep > 16 then return 0 end
+    if reqs.deep and def.deep then
+      if def.deep > reqs.deep then return 0 end
+    end
 
     -- for fabs that need the illusion of depth
     if not reqs.has_solid_back and def.need_solid_back then return 0 end

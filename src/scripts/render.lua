@@ -270,7 +270,7 @@ function Render_edge(E)
         each W in E.S.walls do
           if W.deep then
             if W.deep > 16 then
-              reqs.flat = true
+              reqs.deep = 16
             end
           end
         end
@@ -283,34 +283,37 @@ function Render_edge(E)
       local that_seed = Seed_from_coord(tx, ty)
 
       if check_area_state(E.S, that_seed, "narrow_area") then
-        reqs.flat = true
+        reqs.deep = 16
       end
 
       -- use only flat walls if in a corner
       tx, ty = geom.nudge(E.S.mid_x, E.S.mid_y, geom.LEFT[dir], 128)
       that_seed = Seed_from_coord(tx, ty)
       if check_area_state(E.S, that_seed, "potentially_obstructing") then
-        reqs.flat = true
+        reqs.deep = 16
       end
       tx, ty = geom.nudge(E.S.mid_x, E.S.mid_y, geom.RIGHT[dir], 128)
       that_seed = Seed_from_coord(tx, ty)
       if check_area_state(E.S, that_seed, "potentially_obstructing") then
-        reqs.flat = true
+        reqs.deep = 16
       end
 
-      -- if seed in front of the edge has anything on it
-      -- choose a flat wall fab instead
+      local chunk
       if E.S.chunk then
-        if E.S.chunk.content and E.S.chunk.content != "MON_TELEPORT" then
-          reqs.flat = true
+        chunk = E.S.chunk
+
+        -- if seed in front of the edge has anything on it
+        -- choose a flat wall fab instead
+        if chunk.content and chunk.content != "MON_TELEPORT" then
+          if chunk.prefab_def and chunk.prefab_def.size then
+            reqs.deep = math.clamp(16, chunk.space - chunk.prefab_def.size, 9999)
+          end
         end
-      end
 
-      -- never use anything other than the flat walls on stair chunks
-      -- this is to prevent oddities like ZDoom slopes from being cut-off
-      if E.S.chunk then
-        if E.S.chunk.kind == "stair" and not E.S.area.dead_end then
-          reqs.flat = true
+        -- never use anything other than the flat walls on stair chunks
+        -- this is to prevent oddities like ZDoom slopes from being cut-off
+        if chunk.kind == "stair" and not A.dead_end then
+          reqs.deep = 16
           reqs.scenic = true
         end
       end
