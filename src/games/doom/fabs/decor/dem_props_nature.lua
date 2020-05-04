@@ -327,7 +327,7 @@ PREFABS.Decor_dem_ruinsjs1 =
 
   theme = "!hell"
 
-  prob   = 1000
+  prob   = 800
 
   style = "secrets"
 
