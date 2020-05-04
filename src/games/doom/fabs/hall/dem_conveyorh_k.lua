@@ -6,7 +6,7 @@ PREFABS.Hallway_conveyorh_locked_red1 =
 {
   file   = "hall/dem_conveyorh_k.wad"
   map    = "MAP01"
-  engine = "zdoom"
+  engine = "gzdoom"
 
   theme  = "hell"
 
@@ -31,6 +31,7 @@ PREFABS.Hallway_conveyorh_locked_blue1 =
 {
   template = "Hallway_conveyorh_locked_red1"
   map    = "MAP01"
+  engine = "gzdoom"
 
   key    = "k_blue"
 
@@ -43,6 +44,7 @@ PREFABS.Hallway_conveyorh_locked_yellow1 =
 {
   template = "Hallway_conveyorh_locked_red1"
   map    = "MAP01"
+  engine = "gzdoom"
 
   key    = "k_yellow"
 
@@ -54,7 +56,10 @@ PREFABS.Hallway_conveyorh_locked_red2 =
 {
   template = "Hallway_conveyorh_locked_red1"
   map    = "MAP02"
+  engine = "zdoom"
   key    = "k_red"
+
+  engine = "zdoom"
 
   thing_20 =
   {
@@ -122,6 +127,7 @@ PREFABS.Hallway_conveyorh_locked_blue2 =
 {
   template = "Hallway_conveyorh_locked_red1"
   map    = "MAP02"
+  engine = "zdoom"
   key    = "k_blue"
 
   tex_DOORRED2 = "DOORBLU2"
@@ -133,6 +139,7 @@ PREFABS.Hallway_conveyorh_locked_yellow2 =
 {
   template = "Hallway_conveyorh_locked_red1"
   map    = "MAP02"
+  engine = "zdoom"
   key    = "k_yellow"
 
   tex_DOORRED2 = "DOORYEL2"
@@ -143,6 +150,7 @@ PREFABS.Hallway_conveyorh_locked_red3 =
 {
   template = "Hallway_conveyorh_locked_red1"
   map    = "MAP03"
+  engine = "zdoom"
   key    = "k_red"
 
 }
@@ -151,6 +159,7 @@ PREFABS.Hallway_conveyorh_locked_blue3 =
 {
   template = "Hallway_conveyorh_locked_red1"
   map    = "MAP03"
+  engine = "zdoom"
   key    = "k_blue"
 
   tex_DOORRED2 = "DOORBLU2"
@@ -162,6 +171,7 @@ PREFABS.Hallway_conveyorh_locked_yellow3 =
 {
   template = "Hallway_conveyorh_locked_red1"
   map    = "MAP03"
+  engine = "zdoom"
   key    = "k_yellow"
 
   tex_DOORRED2 = "DOORYEL2"
@@ -176,7 +186,7 @@ PREFABS.Hallway_conveyorh_barred1 =
 {
   file   = "hall/dem_conveyorh_k.wad"
   map    = "MAP04"
-  engine = "zdoom"
+  engine = "gzdoom"
 
   kind   = "terminator"
   group  = "conveyorh"
@@ -202,6 +212,7 @@ PREFABS.Hallway_conveyorh_barred2 =
 {
   template  = "Hallway_conveyorh_barred1"
   map    = "MAP05"
+  engine = "zdoom"
 
   thing_20 =
   {
@@ -269,6 +280,7 @@ PREFABS.Hallway_conveyorh_barred3 =
 {
   template  = "Hallway_conveyorh_barred1"
   map    = "MAP06"
+  engine = "zdoom"
 
 }
 

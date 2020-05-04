@@ -6,7 +6,7 @@ PREFABS.Hallway_conveyorh_term1 =
 {
   file   = "hall/dem_conveyorh_j.wad"
   map    = "MAP01"
-  engine = "zdoom"
+  engine = "gzdoom"
 
   kind   = "terminator"
   theme  = "hell"
@@ -31,6 +31,8 @@ PREFABS.Hallway_conveyorh_term2 =
   template = "Hallway_conveyorh_term1"
 
   map  = "MAP02"
+
+  engine = "zdoom"
 
   thing_20 =
   {
@@ -100,6 +102,8 @@ PREFABS.Hallway_conveyorh_term3 =
 
   map  = "MAP03"
 
+  engine = "zdoom"
+
 }
 
 PREFABS.Hallway_conveyorh_term4 =
@@ -107,6 +111,9 @@ PREFABS.Hallway_conveyorh_term4 =
   template = "Hallway_conveyorh_term1"
 
   map  = "MAP04"
+
+  engine = "gzdoom"
+
   style = "doors"
 
 }
@@ -116,6 +123,9 @@ PREFABS.Hallway_conveyorh_term5 =
   template = "Hallway_conveyorh_term1"
 
   map  = "MAP05"
+
+  engine = "zdoom"
+
   style = "doors"
 
   thing_20 =
@@ -187,6 +197,8 @@ PREFABS.Hallway_conveyorh_term6 =
   map  = "MAP06"
   style = "doors"
 
+  engine = "zdoom"
+
 }
 
 
@@ -198,4 +210,6 @@ PREFABS.Hallway_conveyorh_secret =
 
   map  = "MAP07"
   key  = "secret"
+
+  engine = "zdoom"
 }
