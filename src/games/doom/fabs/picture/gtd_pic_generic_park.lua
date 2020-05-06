@@ -79,6 +79,8 @@ PREFABS.Pic_park_generic_1_liquid =
   map = "MAP10"
 
   z_fit = { 40,120 }
+
+  sound = "Water_Streaming"
 }
 
 PREFABS.Pic_park_generic_2_liquid =
@@ -92,6 +94,7 @@ PREFABS.Pic_park_generic_2_liquid =
   map = "MAP11"
 
   z_fit = { 40,120 }
+  sound = "Water_Streaming"
 }
 
 PREFABS.Pic_park_generic_3_liquid =
