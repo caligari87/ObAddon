@@ -118,8 +118,8 @@ ZDOOM_STORIES.LIST =
   knock_knock_joke = 2
   infernodancer = 2
   hell_to_pay = 2
-  oblige_history = 5
-  bouncy_castle = 8
+  oblige_history = 2
+  bouncy_castle = 2
 }
 
 ZDOOM_STORIES.STORIES =
