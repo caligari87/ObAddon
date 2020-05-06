@@ -3296,12 +3296,10 @@ function Room_floor_ceil_heights()
         end
 
         -- a staircase between two porches... porch it all the time
-        if A.chunk then
-          if A.chunk.kind == "stair" then
-            if A.chunk.from_area.is_porch and
-            A.chunk.dest_area.is_porch then
-              return A, N
-            end
+        if A.chunk and A.chunk.kind == "stair" then
+          if A.chunk.from_area.is_porch and
+          A.chunk.dest_area.is_porch then
+            return A, N
           end
         end
 
