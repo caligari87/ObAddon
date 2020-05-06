@@ -126,6 +126,10 @@ function ScriptMan_assemble_decorate_lump()
     decorate_script_lines = decorate_script_lines ..
     PARAM.tissue_dec .. "\n"
   end
+  if PARAM.fauna_dec then
+    decorate_script_lines = decorate_script_lines ..
+    PARAM.fauna_dec .. "\n"
+  end
 
   if decorate_script_lines != "" then
     add_script_lump("DECORATE", decorate_script_lines)
@@ -135,11 +139,19 @@ end
 
 function ScriptMan_assemble_sndinfo_lump()
   local sndinfo_lines = ""
+  
   if PARAM.ambient_sounds then
     sndinfo_lines = sndinfo_lines ..
-    PARAM.SNDINFO
-    add_script_lump("SNDINFO", sndinfo_lines)
+    PARAM.SNDINFO .. "\n"
   end
+  if PARAM.fauna_SNDINFO then
+    sndinfo_lines = sndinfo_lines ..
+    PARAM.fauna_SNDINFO .. "\n"
+  end  
+  
+  if sndinfo_lines != "" then
+    add_script_lump("SNDINFO", sndinfo_lines)
+  end   
 end
 
 
