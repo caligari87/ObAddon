@@ -1250,7 +1250,7 @@ ZDOOM_STORIES.STORIES =
       apart within a few beats, then, turn to look at the golden,
       jeweled music box on the pedestal in the chamber your intuition
       led you to. Its rhytmic flashes cast lights on everything,
-      creating the impresdion of a disco floor. You growl with fury,
+      creating the impression of a disco floor. You growl with fury,
       and approach the box, overcoming the instinctive urge to move
       to the beat, then strike the delicate mechanism with your fist.
       The music box splatters gems and cogwheels, but you keep
