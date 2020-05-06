@@ -34,8 +34,31 @@ end
 
 FAUNA_MODULE.DEC =
 [[
-// Source: https://realm667.com/index.php/en/prop-stop-mainmenu-163-64831/friendlies-fauna#info-3
-ACTOR Fly 30000
+ACTOR Fauna 
+{
+  +CANNOTPUSH
+  -CANPUSHWALLS
+  -CANUSEWALLS
+  -ACTIVATEMCROSS
+  -COUNTKILL
+  +NOTELESTOMP
+  +NEVERRESPAWN  
+}
+
+ACTOR Insect: Fauna
+{
+  +NEVERTARGET
+}
+
+ACTOR FlyingInsect: Insect
+{
+  +BOUNCEONWALLS
+  +FLOAT
+  +NOGRAVITY
+}
+
+// Original Source: https://realm667.com/index.php/en/prop-stop-mainmenu-163-64831/friendlies-fauna#info-3
+ACTOR Fly: FlyingInsect 30000
 
 {
   Radius 3
@@ -44,9 +67,6 @@ ACTOR Fly 30000
   Mass 10
   Scale 0.25
   ActiveSound "Flying/Fly"
-  +BOUNCEONWALLS
-  +FLOAT
-  +NOGRAVITY
   States
   {
   Spawn:
@@ -81,26 +101,25 @@ ACTOR Fly 30000
   }
 }
 
-// Source: https://realm667.com/index.php/en/prop-stop-mainmenu-163-64831/friendlies-fauna#info-3
+// Original Source: https://realm667.com/index.php/en/prop-stop-mainmenu-163-64831/friendlies-fauna#info-3
 actor ScurryRat 30005
 {
   radius 8
   height 8
   mass 50
   speed 16
-  scale 0.5
+  scale 0.3
   health 1
-  seesound 	"rat/squeek"
+  seesound 	"rat/active"
   activesound	"rat/active"
   deathsound	"rat/death"
   +FLOORCLIP
   +FRIGHTENED
   +LOOKALLAROUND
-  +NEVERRESPAWN
   +STANDSTILL
   +AMBUSH
   +VULNERABLE
-  +TOUCHY
+  +SHOOTABLE
   states
   {
   Spawn:
@@ -140,8 +159,10 @@ FAUNA_MODULE.SNDINFO =
 [[
 Flying/Fly FLYBUZZ
 
-Rat/Squeek	DSRAT
-Rat/Active	DSRATIDL
+DSRATIDL DSRATIDL
+DSRAT DSRAT
+$random Rat/Active { DSRATIDL DSRAT }
+
 DSRATDI1	DSRATDI1
 DSRATDI2	DSRATDI2
 $random Rat/Death	{ DSRATDI1 DSRATDI2 }
@@ -328,7 +349,10 @@ function FAUNA_MODULE.all_done()
   if PARAM.rats == "enable" then
     local dir = "games/doom/data/"
     gui.wad_merge_sections(dir .. "Rats.wad")
+	gui.wad_insert_file("data/sounds/DSRAT.ogg", "DSRAT")
 	gui.wad_insert_file("data/sounds/DSRATIDL.ogg", "DSRATIDL")
+	gui.wad_insert_file("data/sounds/DSRATDI1.ogg", "DSRATDI1")
+	gui.wad_insert_file("data/sounds/DSRATDI2.ogg", "DSRATDI2")
   end
 
 end
