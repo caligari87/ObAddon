@@ -102,7 +102,7 @@ ACTOR Fly: FlyingInsect 30000
 }
 
 // Original Source: https://realm667.com/index.php/en/prop-stop-mainmenu-163-64831/friendlies-fauna#info-3
-actor ScurryRat 30005
+actor ScurryRat: Fauna 30005
 {
   radius 8
   height 8
