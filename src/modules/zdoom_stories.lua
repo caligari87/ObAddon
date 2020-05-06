@@ -107,6 +107,7 @@ ZDOOM_STORIES.LIST =
   the_avenger_from_hell = 40
   benevolent_ai = 40
   spaceship_crash = 25
+  fusion_cannon = 25
 
   -- rare stories
   deus_ex_machina = 6
@@ -1262,6 +1263,61 @@ ZDOOM_STORIES.STORIES =
     }
   }
 
+
+  -- Shoot a hole in Mars^W a mountain (Doom Eternal reference)
+  fusion_cannon =
+  {
+    hooks = {
+      [[You frown as you glare at the hell fortress embedded deep
+      into the mountain. The defenders rain upon the area an endless
+      barrage of fire and plasma. Somewhere deep behind the
+      fortifications must be a tunnel leading into the heart of the
+      fortress. Given enough time, you could locate and breach it.
+      _SPACE
+      Time is precisely what you don't have. You turn around, looking
+      for something - anything - you could use, and your gaze falls
+      upon the experimental fusion cannon, towering above the area.
+      The realization comes immediately.
+      _SPACE
+      You have no choice. You will have to shoot a hole into the
+      mountain.]],
+    }
+
+    conclusions = {
+      [[You reach the fusion cannon control chamber and activate the
+      targeting system. Less than a minute of fiddling with the
+      controls and the targeting reticle is primed at the center
+      of the mountain. Then, you squeeze the trigger. An enormous
+      explosion rolls, and when the smoke and debris is clear,
+      there is a giant hole in the side of the mountain, a new
+      tunnel, leading stright into heart of the fortress. You
+      slide down the ladder and start running towards it.]],
+
+      [[You reach the fusion cannon control chamber and switch the
+      targeting system to manual mode. The cannon begins to turn
+      slowly, until it is primed straight at the center of the
+      mountain. Then, you squeeze the trigger. A safety alarm blares
+      and red lights start flashing. You curse under your breath,
+      flick the safeties off, then squeeze the trigger again.
+      A blinding flash and a deafening roar roll across the landscape,
+      and when the smoke clears, a freshly made access tunnel, right
+      into the heart of the mountain fortress it revealed. You slide
+      down the ladder and start running towards it.]],
+
+      [[You reach the fusion cannon control chamber and find it
+      powered down. You flip the power back on and grab the controls.
+      The cannon begins to turn slowly, until it is primed at the
+      center of the mountain. Then, you squeeze the trigger.
+      _SPACE
+      Nothing happens. You curse under your breath, tear the panel
+      off and short-circuit the controls. A blinding flash and
+      a deafening roar roll across the landscape. Without waiting
+      for the smoke to clear, you slide down the ladder and start
+      running towards the mountain, knowing that when the smoke clears,
+      there will be a freshly made access tunnel straight into the
+      heart of the mountain waiting for you.]],
+    }
+  }
 
   -- Miracle of Sound's tribute to everybody's favorite omnicidal maniac
   -- https://miracleofsound.bandcamp.com/track/hell-to-pay
