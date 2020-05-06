@@ -448,6 +448,7 @@ class bossNameHandler : EventHandler
 
   string mon_name;
   string obit;
+  string tag_string;
 
   bool randOdds(int x)
   {
@@ -686,6 +687,29 @@ class bossNameHandler : EventHandler
             || obit.IndexOf("gunner", 0) > -1
             || obit.IndexOf("dude", 0) > -1
             || obit.IndexOf("z-spec", 0) > -1)
+            {
+              mon_name = getHumanTag();
+            }
+          }
+
+          tag_string = e.Thing.GetTag();
+
+          if(tag_string)
+          {
+            if(tag_string.IndexOf("$", 0) > -1)
+            {
+              tag_string = Stringtable.localize(tag_string);
+            }
+            tag_string = tag_string.MakeLower();
+
+            if(tag_string.IndexOf("human", 0) > -1
+            || tag_string.IndexOf("zombie", 0) > -1
+            || tag_string.IndexOf("former", 0) > -1
+            || tag_string.IndexOf("sergeant", 0) > -1
+            || tag_string.IndexOf("scientist", 0) > -1
+            || tag_string.IndexOf("gunner", 0) > -1
+            || tag_string.IndexOf("dude", 0) > -1
+            || tag_string.IndexOf("z-spec", 0) > -1)
             {
               mon_name = getHumanTag();
             }

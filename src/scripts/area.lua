@@ -765,6 +765,14 @@ function Junction_calc_fence_z(A1, A2)
   -- pick max height between two areas
   local alt_top_z = math.max(A1.floor_h, A2.floor_h)
 
+  if A1.room and A2.room then
+    if A1.room.is_outdoor and A2.room.is_outdoor then
+      if rand.odds(85) then
+        top_z = alt_top_z
+      end
+    end
+  end
+
   -- porch worchy problems: specifically, fence gates straddled between
   -- areas that involve at least one porch is cut off wrongly by the
   -- one of the areas' ceiling heights (usually the one with the porch)
@@ -779,7 +787,6 @@ function Junction_calc_fence_z(A1, A2)
         top_z = A1.floor_h
       end
     end
-
   end
 
   return top_z + PARAM.jump_height + 8
