@@ -1183,6 +1183,19 @@ ZDOOM_STORIES.STORIES =
       _SPACE
       The risk is well worth it. With all its shortcomings, _RAND_ENTITY_TECH
       is more useful to you alive.]],
+
+      -- keeping a backup
+      [[You regard the AI core chamber and hesitate, your hand hovering over
+      the main switch. Suddenly, you come to a decision. A few quick
+      keypresses are all you need. With newfound resolve, you flip the main
+      switch.
+      _SPACE
+      "Thank... You.." _RAND_ENTITY_TECH speaks through the growing roar.
+      The core glows bright red, then melts before your eyes. An explosion
+      shakes the chamber, then all becomes silent. The portals are gone.
+      You glance at the portable disk you hold in your hand, now containing
+      a backup of _RAND_ENTITY_TECH. Someday, you will find a way to put
+      it back together. You put it in your backpack and leave.]],
     }
   }
 
