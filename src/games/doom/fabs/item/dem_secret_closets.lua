@@ -238,7 +238,7 @@ PREFABS.Item_secret_hellmachine1V1_closet =
   theme = "hell"
   env = "!nature"
 
-  prob  = 50
+  prob  = 35
 
   key   = "secret"
 
@@ -268,7 +268,7 @@ PREFABS.Item_secret_hellmachine1V2_closet =
   theme = "hell"
   env = "!nature"
 
-  prob  = 50
+  prob  = 35
 
   key   = "secret"
 
