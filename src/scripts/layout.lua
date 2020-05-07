@@ -2142,9 +2142,9 @@ stderrf("Cages in %s [%s pressure] --> any_prob=%d  per_prob=%d\n",
       fab_none = 0
     }
 
-    if PARAM.point_prob == "fab_default" or not PARAM["point_prob"] then
-      decor_prob = rand.pick({ 20, 55, 90 })
-    else
+    decor_prob = rand.pick({ 20, 55, 90 })
+
+    if PARAM.point_prob and PARAM.point_prob != "fab_default" then
       decor_prob = decor_prob_tab[PARAM.point_prob]
     end
 
