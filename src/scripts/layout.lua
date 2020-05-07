@@ -1897,6 +1897,11 @@ stderrf("Cages in %s [%s pressure] --> any_prob=%d  per_prob=%d\n",
       reqs.theme_override = R.theme.theme_override
     end
 
+    -- wall group association assocation
+    if chunk.from_area.floor_group and chunk.from_area.floor_group.wall_group then
+      reqs.group = chunk.from_area.floor_group.wall_group
+    end
+
     if R.is_cave then
       reqs.height = R.walkway_height
     end
@@ -1910,6 +1915,11 @@ stderrf("Cages in %s [%s pressure] --> any_prob=%d  per_prob=%d\n",
     end
 
     chunk.prefab_def = Fab_pick(reqs, "none_ok")
+
+    if not chunk.prefab_def then
+      reqs.group = nil
+      chunk.prefab_def = Fab_pick(reqs, "none_ok")
+    end
 
     if not chunk.prefab_def then
       return

@@ -2459,10 +2459,13 @@ chunk.goal.action = "S1_OpenDoor"  -- FIXME IT SHOULD BE SET WHEN JOINER IS REND
 
     if A.room.is_natural_park then
       reqs.group = "natural_walls"
-    elseif A.floor_group and A.floor_group.wall_group then
-      reqs.group = A.floor_group.wall_group
     end
+  end
 
+  -- wall group association
+  if A.floor_group and A.floor_group.wall_group then
+    reqs.group = A.floor_group.wall_group
+    gui.printf("HEY\n")
   end
 
   if z2 then
