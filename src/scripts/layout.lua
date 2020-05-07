@@ -1678,7 +1678,7 @@ function Layout_decorate_rooms(pass)
     end
 
     -- check for wall group to decor assocation
-    if A.floor_group.wall_group then
+    if A.floor_group and A.floor_group.wall_group then
       reqs.group = A.floor_group.wall_group
     end
 
