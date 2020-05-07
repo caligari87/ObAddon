@@ -1609,93 +1609,6 @@ function Layout_decorate_rooms(pass)
 
   local function try_decoration_in_chunk(chunk, is_cave)
 
-    local function try_wg_point_group(A)
-
-      if A.floor_group and A.floor_group.wall_group then
-        local wg = A.floor_group.wall_group
-        local tab = GAME.WALL_GROUP_DECOR
-        local pick
-
-        -- if associated decor doesn't exist for this wall group
-        -- just pick any random theme-qualifying decor
-        if not tab[wg] then return "RAND" end
-
-        pick = rand.key_by_probs(tab[wg].point_groups)
-        return pick
-      end
-
-    end
-
-    local function try_wg_point_fab(A, wg_mode, reqs)
-      local wg
-
-      if A.floor_group and A.floor_group.wall_group then
-        wg = A.floor_group.wall_group
-      end
-
-      local tab = GAME.WALL_GROUP_DECOR
-
-      -- if ungrouped, pick a point fab in the wall group decor list
-      if wg_mode == "UNGROUPED" then
-        if tab[wg] then
-          local fab_name
-          local score = 0
-          local tries = 0
-
-          while (not best_pick and tries <= 5) do
-            fab_name = rand.key_by_probs(tab[wg].point_fabs)
-            best_pick = PREFABS[fab_name]
-
-            -- fab should exist in the first place
-            if not best_pick then
-              error(fab_name .. " not found!\n" ..
-              "Check " .. wg .. " entries, you punk-ass beach!")
-            end
-
-            -- height check
-            if not best_pick.height then
-              score = score + 1
-            end
-
-            if best_pick.height and best_pick.height <= reqs.height then
-              score = score + 1
-            end
-
-            -- size check
-            if best_pick.size <= reqs.size then
-              score = score + 1
-            end
-
-            if score >= 2 then
-              o_def = best_pick
-              gui.printf("Good things happen\n")
-            else
-              tries = tries + 1
-            end
-          end
-
-          -- failed
-          if tries >= 5 then
-            o_def = Fab_pick(reqs, "none_ok")
-          end
-
-        else
-          o_def = Fab_pick(reqs, "none_ok")
-        end
-
-      -- if rand, just pick any random decor as normal
-      elseif wg_mode == "RAND" then
-        o_def = Fab_pick(reqs, "none_ok")
-      -- pick a fab based on an existing group if specified
-
-      else
-        reqs.group = wg_mode
-        o_def = Fab_pick(reqs, "none_ok")
-      end
-
-      return o_def
-    end
-
     if chunk.sw < 2 then return end
     if chunk.sh < 2 then return end
 
@@ -1765,9 +1678,19 @@ function Layout_decorate_rooms(pass)
     end
 
     -- check for wall group to decor assocation
-    local wg_choice = try_wg_point_group(A)
-    local def = try_wg_point_fab(A, wg_choice, reqs)
+    if A.floor_group.wall_group then
+      reqs.group = A.floor_group.wall_group
+    end
 
+    local def = Fab_pick(reqs, "none_ok")
+
+    -- remove group requirement if no fab was found and try again
+    if not def then
+      reqs.group = nil
+      def = Fab_pick(reqs, "none_ok")
+    end
+
+    -- GIVE IT UP, MAN, JUST GIVE THE F UP!
     if not def then return end
 
     -- don't create pillars under ceiling sinks
