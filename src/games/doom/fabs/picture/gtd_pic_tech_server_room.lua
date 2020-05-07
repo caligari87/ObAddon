@@ -20,5 +20,5 @@ PREFABS.Pic_gtd_tech_server_1 =
 
   x_fit = "frame"
   y_fit = "top"
-  z_fit = "top"
+  z_fit = { 112,120 }
 }
