@@ -18,7 +18,7 @@ PREFABS.Pic_sewer_set_sewer_hole =
   bound_z1 = 0
   bound_z2 = 128
 
-  x_fit = "frame"
+  x_fit = { 44,48 , 200,208 }
   y_fit = "top"
 }
 
@@ -29,4 +29,6 @@ PREFABS.Pic_sewer_set_plain =
   map = "MAP02"
 
   prob = 10000
+
+  x_fit = "frame"
 }
