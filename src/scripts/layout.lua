@@ -2133,21 +2133,22 @@ stderrf("Cages in %s [%s pressure] --> any_prob=%d  per_prob=%d\n",
   local function pick_decorative_bling(R)
     local decor_prob
 
-    if PARAM["point_prob"] == "fab_default" or not PARAM["point_prob"] then
+    local decor_prob_tab =
+    {
+      fab_heaps = 90
+      fab_more = 75
+      fab_few = 35
+      fab_rare = 15
+      fab_none = 0
+    }
+
+    if PARAM.point_prob == "fab_default" or not PARAM["point_prob"] then
       decor_prob = rand.pick({ 20, 55, 90 })
-    elseif PARAM["point_prob"] == "fab_heaps" then
-      decor_prob = int(rand.range(72,90))
-    elseif PARAM["point_prob"] == "fab_more" then
-      decor_prob = int(rand.range(55,72))
-    elseif PARAM["point_prob"] == "fab_few" then
-      decor_prob = int(rand.range(38,55))
-    elseif PARAM["point_prob"] == "fab_rare" then
-      decor_prob = int(rand.range(20,38))
-    elseif PARAM["point_prob"] == "fab_none" then
-      decor_prob = 0
+    else
+      decor_prob = decor_prob_tab[PARAM.point_prob]
     end
 
-    decor_prob = decor_prob / (LEVEL.autodetail_group_walls_factor / 2)
+    decor_prob = math.clamp(0, decor_prob / (LEVEL.autodetail_group_walls_factor / 2), 100)
 
     each chunk in R.floor_chunks do
       if chunk.content == nil and not chunk.is_bossy and rand.odds(decor_prob) then
