@@ -37,6 +37,8 @@ Some keywords for parsing later on:
   _EVULZ = a rank title for a demonic entity based
            on the evil titles table below.
 
+  _INSTALLATION = a facility corrupted by Hell's forces
+
   _RAND_CONTRIBUTOR = name of a random contributor
                       (actually based on the specific
                       contributors table under TITLE)
@@ -108,6 +110,7 @@ ZDOOM_STORIES.LIST =
   benevolent_ai = 40
   spaceship_crash = 25
   fusion_cannon = 25
+  demolition_man = 40
 
   -- rare stories
   deus_ex_machina = 6
@@ -1319,6 +1322,68 @@ ZDOOM_STORIES.STORIES =
     }
   }
 
+  demolition_man =
+  {
+    hooks = {
+      [[An enormous _INSTALLATION is towering above the district, dominating
+      the area. Blood-red lights flash from the windows and ghastly
+      sounds echo across the landscape, clearly audible even at such great
+      distance. You glare at the _INSTALLATION grimly, knowing that
+      it doesn't matter who erected it and for what purpose; It is now
+      used by Hell's forces, meaning that it has existed for too long.
+      There is no doubt about it: the _INSTALLATION must be destroyed.
+      _SPACE
+      You will need powerful explosives, to do the job. No matter. You
+      know where to find them.]],
+    }
+
+    conclusions = {
+      [[You place the final explosive at the last structural point and
+      pause to admire your work. A detonation of all the explosives at
+      once will bring the _INSTALLATION down in a blaze. You arm the
+      timer, turn back and start running.
+      _SPACE
+      You make it outside and cover some impressive distance when the
+      timer runs out. A series of powerful explosions shakes the
+      _INSTLLATION and it folds into itself like a house of cards in
+      a cloud of smoke and dust.]],
+
+      [[You place the final explosive at the last structural point and
+      pause to admire your work. A detonation of all the explosives at
+      once will bring the _INSTALLATION down in a blaze. You arm the
+      timer, turn back and start running.
+      _SPACE
+      You barely make it outside when the timer runs out. The powerful
+      explosion throws you to the ground like a rag doll. You flip over
+      and force yourself upright, just in time to see the _INSTALLATION
+      shudder and collapse on itself, leaving nothing but a pile of dust
+      and rubble.]],
+
+      [[You place the final explosive at the last structural point and
+      pause to admire your work. A detonation of all the explosives at
+      once will bring the _INSTALLATION down in a blaze. You switch the
+      receiver on, turn back and make your way to the exit.
+      _SPACE
+      You manage to sneak out without incident and take a vantage point
+      at a safe distance. Then, you transmit the signal. A series of
+      powerful explosions shakes the _INSTALLATION and it topples and
+      crashes to the ground with an almost organic groan.]],
+
+      [[You place the final explosive at the last structural point and
+      pause to admire your work. A detonation of all the explosives at
+      once will bring the _INSTALLATION down in a blaze. You switch the
+      receiver on and turn back. It's time to fight your way out.
+      _SPACE
+      You make it, and hurry to cover some distance, before the more
+      intelligent minions of Hell figure out it's not you they should
+      be focusing on. Then, you flip the switch and press the detonator
+      button. A series of powerful explosions shakes the _INSTALLATION
+      and it slowly collapses, burying the hopes of the demons, along
+      with themselves, under the rubble.]],
+    }
+  }
+
+
   -- Miracle of Sound's tribute to everybody's favorite omnicidal maniac
   -- https://miracleofsound.bandcamp.com/track/hell-to-pay
   -- https://www.youtube.com/watch?v=kjIVkl34Vig
@@ -2357,6 +2422,17 @@ ZDOOM_STORIES.ENTITIES =
     COLOSSUS=5,
     ZERO=5,
   }
+}
+
+ZDOOM_STORIES.INSTALLATIONS =
+{
+  ["power plant"] = 5,
+  ["arachnotron factory"] = 5,
+  ["command control"] = 5,
+  ["communications center"] = 5,
+  ["research laboratory"] = 5,
+  ["weapons storage facility"] = 5,
+  nest = 5,
 }
 
 ZDOOM_STORIES.QUIT_MESSAGES =
