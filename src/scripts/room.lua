@@ -2048,44 +2048,100 @@ function Room_choose_size(R, not_big)
     R.is_big = true
   end
 
-  -- Edits here too
-  --local sum = LEVEL.map_W * 2/3 + 30 -- Original
-
-  local sum = LEVEL.map_W * 2/3 + rand.pick({10,12,14,16,18,20,20,20,20,21,22,23,24,25,26,27,28,29,30,30,31,32,33,34,35,36,37,38,39,40,40,41,42,43,44,45,45,50,50 })
-  R.floor_limit = rand.pick({ 1,1,1,2,2,2,2,3,3,3,3,3,4,4,5 })
-  R.size_limit  = sum * rand.pick({ 0.75, 0.85, 0.85, 0.9, 0.9, 0.95, 1, 1, 1, 1.05, 1.1, 1.15, 1.2, 1.2, 1.25, 1.3, 1.35, 1.4, 1.45, 1.5 })
-
---  local sum = LEVEL.map_W * 2/3 + rand.pick({14,14,15,15,16,16,17,17,18,18,19,20,20,20,21,22,23,24,25,26,27,28,29,30,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,45,46,46,47,47,48,48,49,49,50,50,50 })
---  R.size_limit  = sum * rand.pick({ 0.85, 0.9, 0.95, 1, 1, 1, 1.05, 1.1, 1.15, 1.2, 1.25, 1.3, 1.35, 1.4, 1.45, 1.5 })
+  local sum = LEVEL.map_W * 2/3 + rand.range( 10,50 )
+  R.floor_limit = rand.key_by_probs(
+    {
+      [1]=3
+      [2]=4
+      [3]=5
+      [4]=2
+      [5]=1
+    }
+  )
+  R.size_limit = sum * rand.range( 0.75,1.5 )
+  assert(R.floor_limit)
 
   if R.is_cave then
-    R.size_limit  = sum * rand.pick({ 1.7, 1.8, 1.9, 2, 2.1, 2.2, 2.3, 2.4, 2.5, 2.6, 2.7, 2.8, 2.9, 3 })
-    --R.size_limit  = sum * rand.pick({ 1.7, 2.2, 2.7 })
-    R.floor_limit = rand.pick({ 6,6,6,7,7,8,8,9,10 })
-    --R.floor_limit = 8 --Original
+    R.size_limit  = sum * rand.range( 1.7,3 )
+    R.floor_limit = rand.key_by_probs(
+      {
+        [6]=3
+        [7]=2
+        [8]=2
+        [9]=1
+        [10]=1
+      }
+    )
 
   --Make secret rooms smaller
   elseif R.is_secret then
-    R. size_limit = sum * rand.pick({ 0.6, 0.65, 0.7, 0.75, 0.8, 0.85, 0.9, 0.95, 1, 1.05, 1.1, 1.15, 1.2, 1.25 })
-    R.floor_limit = rand.pick({ 1,1,1,2,2,2,2,2,3,3,3 })
+    R. size_limit = sum * rand.range( 0.6,1.25 )
+    R.floor_limit = rand.key_by_probs(
+      {
+        [1]=3
+        [2]=2
+        [3]=1
+      }
+    )
 
   elseif R.is_big then
-    --R. size_limit = sum * 2.3
-    R. size_limit = sum * rand.pick({ 2, 2.05, 2.1, 2.15, 2.2, 2.25, 2.3, 2.35, 2.4, 2.45, 2.5, 2.6, 2.7 })
-    R.floor_limit = rand.pick({ 6,6,7,7,7,8,8,8,9,9,9,9,9,10,10,11,12,12,13,14,15 })
-    --R.floor_limit = rand.pick({ 10,11,12,13,14,15,16,17,18,19,20 })
+    R. size_limit = sum * rand.range( 2,2.7 )
+    R.floor_limit = math.round(R.floor_limit * rand.key_by_probs(
+                                      {
+                                        [1]=1
+                                        [1.5]=2
+                                        [2]=3
+                                        [2.5]=4
+                                        [3]=2
+                                        [4]=2
+                                        [5]=1
+                                        [6]=1
+                                        [8]=1
+                                        [10]=1
+                                        [14]=1
+                                        [18]=1
+                                      }
+                                    )
+                                )
+
+    --Trying a different formula for is_big rooms
+                    --[[rand.key_by_probs(
+      {
+        [6]=2
+        [7]=3
+        [8]=3
+        [9]=5
+        [10]=3
+        [11]=2
+        [12]=2
+        [13]=1
+        [14]=1
+        [15]=1
+      }
+    )]]
 
   --Make parks bigger
   elseif R.is_park then
-    R. size_limit = sum * rand.pick({ 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 2.0, 2.1, 2.2, 2.3, 2.4, 2.5, 2.6, 2.7, 2.8, 2.9, 3.0 })
-    R.floor_limit = rand.pick({ 5,5,6,7,7,8,9,10,10,11,12,13,14,15 })
+    R. size_limit = sum * rand.range( 2,3 )
+    R.floor_limit = rand.key_by_probs(
+      {
+        [5]=1
+        [6]=1
+        [7]=1
+        [8]=2
+        [9]=2
+        [10]=3
+        [11]=3
+        [13]=3
+        [14]=2
+        [15]=1
+      }
+    )
 
-  else
-    R. size_limit = sum
-      R.floor_limit = rand.pick({ 1,1,1,1,2,2,2,2,2,2,3,3,3,3,3,4,4,4,5,5,5 })
-    --R.floor_limit = rand.pick({ 2,2,2,2,3,3,3,3,3,4,4,4,5,5 })
-    --R.floor_limit = rand.pick({ 4,5,5,6,6,7 }) --Original
   end
+
+  gui.printf(table.tostr(R).."\n")
+  assert(R.floor_limit)
 
   -- Special instructions for procedural gotcha rooms
   if LEVEL.is_procedural_gotcha then

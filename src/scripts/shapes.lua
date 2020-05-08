@@ -8240,7 +8240,21 @@ GROW_CLIFF_ENTRY_X4 =
   }
 }
 
-GROW_CLIFF_ENTRY_X4_LONG =
+GROW_CLIFF_STRAIGHT_X4 =
+{
+  prob = 50
+  skip_prob = 25
+
+  structure =
+  {
+    "....","AAAA"
+    "....","AAAA"
+    "....","^^^^"
+    "1111","1111"
+  }
+}
+
+--[[GROW_CLIFF_ENTRY_X4_LONG =
 {
   prob = 50
   skip_prob = 25
@@ -8311,7 +8325,7 @@ GROW_CLIFF_ENTRY_X4_CURVE_REVERSE =
   {
     "A.","1A"
   }
-}
+}]]
 
 -- cliff-side/area-to-area cages
 
