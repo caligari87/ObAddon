@@ -54,6 +54,7 @@ function ZStoryGen_format_story_chunk(story_strings, info, store)
     story_strings = string.gsub(story_strings, "_MCGUFFIN_TECH", info.tech_mcguffin)
     story_strings = string.gsub(story_strings, "_MCGUFFIN_HELL", info.hell_mcguffin)
     story_strings = string.gsub(story_strings, "_RAND_ENTITY_TECH", info.tech_entity)
+    story_strings = string.gsub(story_strings, "_INSTALLATION", info.installation)
   end
 
   -- dialogue quotes and apostrphes, man
@@ -140,6 +141,7 @@ function ZStoryGen_create_characters_and_stuff(lev_info)
   info.hell_mcguffin = rand.key_by_probs(ZDOOM_STORIES.MCGUFFINS.hellish)
   info.tech_mcguffin = rand.key_by_probs(ZDOOM_STORIES.MCGUFFINS.tech)
   info.tech_entity = rand.key_by_probs(ZDOOM_STORIES.ENTITIES.tech)
+  info.installation = rand.key_by_probs(ZDOOM_STORIES.INSTALLATIONS)
 
   return info
 end
