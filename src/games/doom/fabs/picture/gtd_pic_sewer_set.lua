@@ -22,11 +22,21 @@ PREFABS.Pic_sewer_set_sewer_hole =
   y_fit = "top"
 }
 
+PREFABS.Pic_sewer_machine_grates =
+{
+  template = "Pic_sewer_set_sewer_hole"
+  map = "MAP02"
+
+  prob = 5000
+
+  x_fit = "frame"
+}
+
 -- MSSP-TODO: replace with something nicer?
 PREFABS.Pic_sewer_set_plain =
 {
   template = "Pic_sewer_set_sewer_hole"
-  map = "MAP02"
+  map = "MAP03"
 
   prob = 10000
 
