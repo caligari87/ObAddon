@@ -1,0 +1,164 @@
+// CUSTOM TEXTURES USABLE FOR HERETIC //
+//
+// This lists all the custom textures usable
+// for Heretic prefabs.
+
+// These are Armaetus's personal opinions on what
+// textures from the Epic Texture Pack would work.
+
+// May 8th, 2020
+
+// Awesome
+ CANDLE# animation
+ DEATH# series
+ GLASS# series
+ MIDWIND# series
+ WINGLAS# series
+
+// Great
+ BISHOP
+ BRIKS10
+ BRIKS11
+ BRIKS12
+ BRIKS29
+ FENCE4
+ FENCE5
+ GOTH50
+ GOTH51
+ MARBLFAC
+ OBSK### sky background overlays
+
+// Good
+ BIGDOORN
+ BONES# series (1-3)
+ BRIKS06
+ BRIKS14
+ BRIKS16
+ BRIKS30
+ BRIKS39
+ BRIKS40
+ BRIKS41
+ CATACMB# series
+ CITY08 through CITY10
+ CP##### picture series
+ DEMSTAT
+ EGYPT# series
+ EGDOOR1
+ ESAND# series
+ GOATMARB
+ GOTH15
+ GOTH29
+ GOTH30
+ GOTH33
+ LIONMRB# series
+ MIDSPAC2
+ ROK13
+ ROK22
+ Most of SNOW#  series
+ SW#PENT switch
+ SW#SKUL1 switch
+ THATCH# series
+ 
+// OK
+ ALTASH
+ BIGDOORN
+ BODIESB, BODIESC, BODIES1
+ BRIKS13
+ BRIKS15
+ BRIKS17
+ BRIKS21
+ BRIKS22
+ BRIKS28
+ BRIKS33
+ EXITSIG2
+ GOTH09
+ GOTH10
+ GOTH14
+ GOTH28
+ GOTH31
+ GOTH32
+ HELMET# series
+ LFALL# animation
+ LFAL2# animation
+ MIDSPAC6
+ MIDSPAC7
+ MURAL# series
+ PENTA1
+ ROK03
+ ROK06
+ ROK07
+ ROK12
+ ROK21
+ ROK23
+ SKULLS3
+ SKULLS4
+ WOODDEM1
+
+// Meh
+ BRIKS26
+ BRIKS27
+ BRIKS34
+ BRIKS35
+ BRIKS36
+ BRIKS43
+ CRAK## series
+ CRACKRD# series
+ EVILFAC# series
+ GREEN# series
+ GUY1
+ HELLCMT# series
+ MIDSPAC8
+ MIDVINE# series
+ PANBOOK# series
+ PANNY# series
+ ROK26
+ Some WOOD# series (WOOD15 through WOOD17)
+ ZIM# series
+
+// Bad
+ BRIKS25
+ BRIKS31
+ BRIKS32
+ BRIKS37
+ BRIKS38
+ BRONZE# series
+ BROWN# series
+ BROWNGR# series
+ CEM# series
+ CITY# series (except CITY08 through CITY10)
+ COLLITE# series
+ DFAN# animation
+ DRKCMT# series
+ MARBFAC# series
+ PIPESV# series
+ RAIL1
+ RUSTWAL# series
+ URBAN# series
+
+// Terrible / Do Not Use / Unfitting
+ CGCANI# animation
+ CMPOHSO / COMPOHSO
+ COMPCT## series
+ COMPSA# animation
+ COMPSC# animation
+ COMPY# animation
+ COMP# series
+ COMPSTA# series
+ COMPTIL## series
+ COMPU# series
+ CONSOLE# series
+ DECMP# animation
+ DOORHI
+ GRAYMET# series
+ LITE# series
+ MET# series
+ NMONIA# animation
+ NOISE## animation series
+ OBVNMCH# series
+ PLAN# series
+ SHAWN# series
+ SILVER# series
+ STARTAN# series
+ STARG# series
+ TEK#### series
+ TVSNOW# animation
