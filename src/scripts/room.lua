@@ -2140,9 +2140,6 @@ function Room_choose_size(R, not_big)
 
   end
 
-  gui.printf(table.tostr(R).."\n")
-  assert(R.floor_limit)
-
   -- Special instructions for procedural gotcha rooms
   if LEVEL.is_procedural_gotcha then
 
