@@ -13,7 +13,7 @@ PREFABS.Item_scionox_nature_simple =
 PREFABS.Item_scionox_nature_simple_2 =
 {
   template = "Item_scionox_nature_simple"
-  
+
   env  = "nature"
 
   size = 80
@@ -35,7 +35,7 @@ PREFABS.Item_scionox_nature_simple_3 =
 PREFABS.Item_scionox_nature_simple_4 =
 {
   template = "Item_scionox_nature_simple"
-  
+
   env  = "nature"
 
   size = 72

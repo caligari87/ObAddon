@@ -209,25 +209,25 @@ class BossGenerator_Handler : EventHandler
         if(level.time > 1) return;
         if( e.Thing && e.Thing.bISMONSTER && IsBoss(e.Thing) && e.Thing.Health > 0 && e.Thing.Radius > 0 )
         {
-			if( e.Thing.speed == 0 && e.Thing.health == 1000 && e.Thing.height == 16 && e.Thing.radius == 20) {}
-			else
-			{
-				if(!bossFound)
-				{
-					bossFound = true;
-					let bossy = bossController(new("bossController"));
-					if(bossy)
-					{
-						bossy.boss = e.Thing;
-						bossy.level = currentboss;
-					}
-				}
-				else
-				{
-					e.Thing.ClearCounters();
-					e.Thing.Destroy();
-				}
-			}
+            if( e.Thing.speed == 0 && e.Thing.health == 1000 && e.Thing.height == 16 && e.Thing.radius == 20) {}
+            else
+            {
+                if(!bossFound)
+                {
+                    bossFound = true;
+                    let bossy = bossController(new("bossController"));
+                    if(bossy)
+                    {
+                        bossy.boss = e.Thing;
+                        bossy.level = currentboss;
+                    }
+                }
+                else
+                {
+                    e.Thing.ClearCounters();
+                    e.Thing.Destroy();
+                }
+            }
         }
         else if( e.Thing && e.Thing.bISMONSTER && e.Thing.Radius > 0 && !e.Thing.bFRIENDLY)
         {
@@ -880,43 +880,43 @@ class BossSummonSpot : Actor
 
 class BossExiter : CustomInventory
 {
-	Default
-	{
-	Translation "168:191=250:254", "32:48=250:254", "192:207=32:47", "240:247=47:47";
-	Scale 2;
-	}
-	States
-	{
-	Spawn:
-		PINS ABCD 4 BRIGHT A_SpawnItemEx("BossExiterGlow");
-		Loop;
-	Pickup:
-		TNT1 A 1 Exit_Normal(0);
-		Stop;
-	}
+    Default
+    {
+    Translation "168:191=250:254", "32:48=250:254", "192:207=32:47", "240:247=47:47";
+    Scale 2;
+    }
+    States
+    {
+    Spawn:
+        PINS ABCD 4 BRIGHT A_SpawnItemEx("BossExiterGlow");
+        Loop;
+    Pickup:
+        TNT1 A 1 Exit_Normal(0);
+        Stop;
+    }
 }
 class BossExiterGlow : Actor
 {
-	Default
-	{
-	Translation "168:191=250:254", "32:48=250:254", "192:207=32:47", "240:247=47:47";
-	Scale 2;
-	+NOGRAVITY;
-	+NOINTERACTION;
-	}
-	States
-	{
-	Spawn:
-		PINS ABCD 4 BRIGHT;
-		Loop;
-	}
-	override void Tick()
-	{
-		super.Tick();
-		A_Fadeout(0.02);
-		scale *= 0.99;
-		SetZ(pos.z+2);
-	}
+    Default
+    {
+    Translation "168:191=250:254", "32:48=250:254", "192:207=32:47", "240:247=47:47";
+    Scale 2;
+    +NOGRAVITY;
+    +NOINTERACTION;
+    }
+    States
+    {
+    Spawn:
+        PINS ABCD 4 BRIGHT;
+        Loop;
+    }
+    override void Tick()
+    {
+        super.Tick();
+        A_Fadeout(0.02);
+        scale *= 0.99;
+        SetZ(pos.z+2);
+    }
 }
 
 //special
@@ -995,24 +995,24 @@ class bossabilitygiver_homing : bossabilitygiver { }
         }
 ]]
   EXITEM = [[if(ending==100)
-			{
-				if(boss)
-				{
-					boss.A_SpawnItemEx("TeleportFog", flags:SXF_NOCHECKPOSITION);
-					boss.A_SpawnItemEx("BossExiter", flags:SXF_NOCHECKPOSITION);
-				}
-				else
-				{
-					ThinkerIterator Exiter = ThinkerIterator.Create("BossSummonSpot");
-					BossSummonSpot fixexit;
-					while (fixexit = BossSummonSpot(Exiter.Next()))
-					{
-						fixexit.A_SpawnItemEx("TeleportFog", flags:SXF_NOCHECKPOSITION);
-						fixexit.A_SpawnItemEx("BossExiter", flags:SXF_NOCHECKPOSITION);
-						break;
-					}
-				}
-			}
+            {
+                if(boss)
+                {
+                    boss.A_SpawnItemEx("TeleportFog", flags:SXF_NOCHECKPOSITION);
+                    boss.A_SpawnItemEx("BossExiter", flags:SXF_NOCHECKPOSITION);
+                }
+                else
+                {
+                    ThinkerIterator Exiter = ThinkerIterator.Create("BossSummonSpot");
+                    BossSummonSpot fixexit;
+                    while (fixexit = BossSummonSpot(Exiter.Next()))
+                    {
+                        fixexit.A_SpawnItemEx("TeleportFog", flags:SXF_NOCHECKPOSITION);
+                        fixexit.A_SpawnItemEx("BossExiter", flags:SXF_NOCHECKPOSITION);
+                        break;
+                    }
+                }
+            }
 ]]
 }
 
@@ -1383,7 +1383,7 @@ function BOSS_GEN_TUNE.setup(self)
   elseif PARAM.boss_gen_diff == "nightmare" then
     PARAM.boss_gen_dmult = 3.0
   end
-  
+
   if PARAM.boss_gen_reinforcerate == "weakester" then
     PARAM.boss_gen_rmult = 4.0
   elseif PARAM.boss_gen_reinforcerate == "weakest" then
@@ -1443,7 +1443,7 @@ function BOSS_GEN_TUNE.all_done()
     PARAM.boss_count = -1
     return
   end
-  
+
   if OB_CONFIG.mons == "none" then
     -- no monsters, no boss, duh
     warning("No monsters found by boss generator")
@@ -1476,7 +1476,7 @@ function BOSS_GEN_TUNE.all_done()
   else
     scripty = string.gsub(scripty, "SMAXHEALTH", "1000")
   end
- 
+
   if PARAM.boss_gen_exit == "item" then
     scripty = string.gsub(scripty, "BEXIT", BOSS_GEN_TUNE.TEMPLATES.EXITEM)
   else
@@ -1685,8 +1685,8 @@ OB_MODULES["gzdoom_boss_gen"] =
       default = "default",
       tooltip = "Influences the strength of reinforcements summoned by bosses",
     }
-	
-	boss_gen_reinforcerate =
+
+    boss_gen_reinforcerate =
     {
       name = "boss_gen_reinforcerate",
       label = _("Reinforcement Rate"),
@@ -1705,8 +1705,8 @@ OB_MODULES["gzdoom_boss_gen"] =
       default = "no",
       tooltip = "If enabled, monsters disabled in monster control module cant be chosen as a boss."
     }
-	
-	boss_gen_typelimit =
+
+    boss_gen_typelimit =
     {
       name = "boss_gen_typelimit",
       label = _("Monster limit type"),
@@ -1714,9 +1714,9 @@ OB_MODULES["gzdoom_boss_gen"] =
       choices = BOSS_GEN_TUNE.BOSS_LIMITS,
       default = "softlimit",
       tooltip = "Influences how boss difficulty and megawad progression affects the monster type of boss.\n\n" ..
-	  "hard limit: doesnt allow monster types outside of range to ever spawn.\n\n" ..
-	  "soft limit: reduces the probability of spawning of monster types outside of range.\n\n" ..
-	  "no limit: difficulty doesnt have effect on monster type selection.",
+      "hard limit: doesnt allow monster types outside of range to ever spawn.\n\n" ..
+      "soft limit: reduces the probability of spawning of monster types outside of range.\n\n" ..
+      "no limit: difficulty doesnt have effect on monster type selection.",
     }
 
     boss_gen_weap =
@@ -1728,15 +1728,15 @@ OB_MODULES["gzdoom_boss_gen"] =
       default = "scatter",
       tooltip = "Influences weapon placement in boss arena."
     }
-	
-	boss_gen_exit =
-	{
-	  name = "boss_gen_exit",
+
+    boss_gen_exit =
+    {
+      name = "boss_gen_exit",
       label = _("Exit type"),
       priority = 88,
       choices = BOSS_GEN_TUNE.BOSS_EXIT,
       default = "default",
       tooltip = "Changes exit type after boss has been destroyed."
-	}
+    }
   }
 }

@@ -1003,7 +1003,7 @@ PREFABS.Pic_dem_waterfallC2 =
   x_fit = "stretch"
   z_fit = { 16,32 }
 
-  liquid = "harmful" 
+  liquid = "harmful"
 
   uses_epic_textures = true
   sound = "Water_Streaming"
@@ -1045,7 +1045,7 @@ PREFABS.Pic_dem_waterfallN2 =
   x_fit = "stretch"
   z_fit = { 24,40 }
 
-  liquid = "harmful" 
+  liquid = "harmful"
 
   uses_epic_textures = true
 
@@ -1084,7 +1084,7 @@ PREFABS.Pic_dem_waterfallC3 =
   x_fit = "stretch"
   z_fit = { 16,32 }
 
-  liquid = "harmful" 
+  liquid = "harmful"
 
   uses_epic_textures = true
 
@@ -1126,7 +1126,7 @@ PREFABS.Pic_dem_waterfallN3 =
   x_fit = "stretch"
   z_fit = { 24,40 }
 
-  liquid = "harmful" 
+  liquid = "harmful"
 
   uses_epic_textures = true
 

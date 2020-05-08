@@ -139,7 +139,7 @@ end
 
 function ScriptMan_assemble_sndinfo_lump()
   local sndinfo_lines = ""
-  
+
   if PARAM.ambient_sounds then
     sndinfo_lines = sndinfo_lines ..
     PARAM.SNDINFO .. "\n"
@@ -147,11 +147,11 @@ function ScriptMan_assemble_sndinfo_lump()
   if PARAM.fauna_SNDINFO then
     sndinfo_lines = sndinfo_lines ..
     PARAM.fauna_SNDINFO .. "\n"
-  end  
-  
+  end
+
   if sndinfo_lines != "" then
     add_script_lump("SNDINFO", sndinfo_lines)
-  end   
+  end
 end
 
 

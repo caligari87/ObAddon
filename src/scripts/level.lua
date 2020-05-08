@@ -657,8 +657,8 @@ function Episode_plan_monsters()
 
     each name,info in GAME.MONSTERS do
       if LEV.is_procedural_gotcha and PARAM.boss_gen then
-	    local bprob = 80
-	    if PARAM.boss_gen_typelimit != "nolimit" then
+        local bprob = 80
+        if PARAM.boss_gen_typelimit != "nolimit" then
           local boss_diff = PARAM.boss_gen_diff
           local lolevel
           local hilevel
@@ -686,22 +686,22 @@ function Episode_plan_monsters()
               hilevel = math.min(9,hilevel+1)
             end
           end
-		  if PARAM.boss_gen_typelimit == "softlimit" then
+          if PARAM.boss_gen_typelimit == "softlimit" then
             if info.level < lolevel then
               bprob = bprob/(lolevel-info.level+1)
             end
             if info.level > hilevel then
               bprob = bprob/(info.level-hilevel+1)
             end
-	  	  elseif PARAM.boss_gen_typelimit == "hardlimit" then
-		    if info.level < lolevel then
+            elseif PARAM.boss_gen_typelimit == "hardlimit" then
+            if info.level < lolevel then
               bprob = 0
             end
             if info.level > hilevel then
               bprob = 0
             end
-		  end
-		end
+          end
+        end
         if info.attack == "hitscan" then
           local hitred = PARAM.boss_gen_hitscan
           if hitred == "less" then
