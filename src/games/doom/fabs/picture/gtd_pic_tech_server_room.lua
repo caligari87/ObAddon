@@ -1,9 +1,9 @@
-PREFABS.Pic_gtd_tech_server_1 =
+PREFABS.Pic_gtd_tech_server_console =
 {
   file   = "picture/gtd_pic_tech_server_room.wad"
   map    = "MAP01"
 
-  prob   = 1000000
+  prob   = 50
 
   group = "gtd_wall_server_room"
 
@@ -21,4 +21,33 @@ PREFABS.Pic_gtd_tech_server_1 =
   x_fit = "frame"
   y_fit = "top"
   z_fit = { 112,120 }
+}
+
+PREFABS.Pic_gtd_tech_server_big_monitor =
+{
+  template = "Pic_gtd_tech_server_console"
+  map = "MAP02"
+
+  uses_epic_textures = true
+
+  COMPCT01 =
+  {
+    COMPCT02 = 1
+    COMPCT03 = 1
+    COMPCT04 = 1
+    COMPCT05 = 1
+    COMPCT06 = 1
+  }
+
+  z_fit = "top"
+}
+
+PREFABS.Pic_gtd_tech_server_CPU_banks =
+{
+  template = "Pic_gtd_tech_server_console"
+  map = "MAP03"
+
+  uses_epic_textures = true
+
+  z_fit = "top"
 }
