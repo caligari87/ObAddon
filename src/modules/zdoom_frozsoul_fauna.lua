@@ -34,7 +34,7 @@ end
 
 FAUNA_MODULE.DEC =
 [[
-ACTOR Fauna
+ACTOR Fauna 
 {
   +CANNOTPUSH
   -CANPUSHWALLS
@@ -57,129 +57,147 @@ ACTOR FlyingInsect: Insect
   +NOGRAVITY
 }
 
+ACTOR Rodent: Fauna
+{
+  damagefactor "Trample", 0
+  damagefactor "Stomp", 0
+}
+
 // Original Source: https://realm667.com/index.php/en/prop-stop-mainmenu-163-64831/friendlies-fauna#info-3
 ACTOR Fly: FlyingInsect 30000
 
 {
   Radius 3
   Height 3
-  Speed 3
+  Speed 4
   Mass 10
-  Scale 0.25
-  ActiveSound "Flying/Fly"
+  Scale 0.15
+  ActiveSound "Fly/Buzz"
   States
   {
   Spawn:
     FLYA AAABBB 1 A_Wander
-    TNT1 A 0
-    {
-        A_Look;
-
-        if (Random(0, 255) < 50)
-        {
-            A_SetSpeed(RandomPick(1, 3, 5));
-        }
-    }
-    loop
+	TNT1 A 0
+	{
+		A_Look;
+		
+		if (Random(0, 255) < 50)
+		{
+			A_SetSpeed(RandomPick(3, 4, 5));
+		}
+	}
+	loop
   See:
-    FLYA AAABBB 1 A_Wander
-    TNT1 A 0 A_JumpIf(IsPointerEqual(AAPTR_TARGET, AAPTR_NULL), "Spawn")
-    TNT1 A 0 A_JumpIfCloser(156,"Follow")
-    TNT1 A 0
-    {
-        if (Random(0, 255) < 50)
-        {
-            A_SetSpeed(RandomPick(1, 3, 5));
-        }
-    }
-    loop
+	FLYA AAABBB 1 A_Wander
+	TNT1 A 0 A_JumpIf(IsPointerEqual(AAPTR_TARGET, AAPTR_NULL), "Spawn")
+	TNT1 A 0 A_JumpIfCloser(156,"Follow")
+	TNT1 A 0
+	{
+		if (Random(0, 255) < 50)
+		{
+			A_SetSpeed(RandomPick(3, 4, 5));
+		}	
+	}
+	loop
   Follow:
-    FLYA AAABBBAAABBB 1 A_Chase
-    TNT1 A 0 A_Jump(80,"Spawn")
-    TNT1 A 0 A_JumpIfCloser(156,"Follow")
-    Goto Spawn
+	FLYA AAABBBAAABBB 1 A_Chase
+	TNT1 A 0 A_Jump(80,"Spawn")
+	TNT1 A 0 A_JumpIfCloser(156,"Follow")
+	Goto Spawn
   }
 }
 
 // Original Source: https://realm667.com/index.php/en/prop-stop-mainmenu-163-64831/friendlies-fauna#info-3
-actor ScurryRat: Fauna 30005
+actor ScurryRat: Rodent 30020
 {
   radius 8
   height 8
   mass 50
-  speed 16
-  scale 0.3
+  speed 15
+  scale 0.25
   health 1
-  seesound     "rat/active"
-  activesound    "rat/active"
-  deathsound    "rat/death"
+  seesound 	"rat/active"
+  activesound	"rat/active"
+  deathsound	"rat/death"
   +FLOORCLIP
   +FRIGHTENED
   +LOOKALLAROUND
   +STANDSTILL
   +AMBUSH
-  +VULNERABLE
   +SHOOTABLE
   states
   {
   Spawn:
-    RATS A 10 A_Look
-    loop
+  LookAround:
+	RATS A 10 A_Look
+	RATS B 10 A_Look
+	RATS C 10 A_Look
+	RATS D 10 A_Look
+	TNT1 A 0 A_Jump(32,"See")
+	loop
   See:
     RATS A 2 A_Chase
-    // RATS A 0 A_CheckSight ("Vanish")
-    RATS A 2 A_Chase
-    // RATS A 0 A_CheckSight ("Vanish")
-    RATS B 2 A_Chase
-    // RATS A 0 A_CheckSight ("Vanish")
-    RATS B 2 A_Chase
-    // RATS A 0 A_CheckSight ("Vanish")
-    RATS C 2 A_Chase
-    // RATS A 0 A_CheckSight ("Vanish")
-    RATS C 2 A_Chase
-    // RATS A 0 A_CheckSight ("Vanish")
-    RATS D 2 A_Chase
-    // RATS A 0 A_CheckSight ("Vanish")
-    RATS D 2 A_Chase
-    // RATS A 0 A_CheckSight ("Vanish")
-    loop
-  Vanish:
-    TNT1 A 1
-    stop
+	TNT1 A 0 A_PlaySound("rat/scurry", 4, 0.6, 1)
+	RATS A 2 A_Chase
+	RATS B 2 A_Chase
+	RATS B 2 A_Chase
+	RATS C 2 A_Chase
+	RATS C 2 A_Chase
+	RATS D 2 A_Chase
+	RATS D 2 A_Chase
+	TNT1 A 0 A_Jumpifcloser(20,"Bolt")
+	TNT1 A 0 A_Jump(128,"LookAround")
+	loop
+  Bolt:
+	RATS C 2 ThrustThing(0,30,0,1)
+	TNT1 A 0
+	{
+		if (Random(0, 255) < 50)
+		{
+			A_SetSpeed(RandomPick(15, 16, 17));
+		}
+	}
+	Goto See
   Death:
-    RATS I 3 A_ScreamAndUnblock
-    RATS JKL 3
-    RATS L -1
-    stop
+    TNT1 A 0 A_StopSound(4)
+	RATS I 3 A_ScreamAndUnblock	
+	RATS JKL 3
+	RATS L -1
+	stop
   }
 }
 ]]
 
-FAUNA_MODULE.SNDINFO =
+FAUNA_MODULE.SNDINFO = 
 [[
-Flying/Fly FLYBUZZ
+Fly/Buzz FLYBUZZ
 
 DSRATIDL DSRATIDL
 DSRAT DSRAT
-$random Rat/Active { DSRATIDL DSRAT }
 
-DSRATDI1    DSRATDI1
-DSRATDI2    DSRATDI2
-$random Rat/Death    { DSRATDI1 DSRATDI2 }
+// Includes NULLs to reduce frequency of noise
+$random rat/active { DSRATIDL DSRAT DSRAT DSRAT DSRAT NULL NULL NULL NULL NULL NULL NULL NULL}
+
+DSRATDI1	DSRATDI1
+DSRATDI2	DSRATDI2
+$random rat/death	{ DSRATDI1 DSRATDI2 }
+
+// Sound modified from https://freesound.org/people/krnash/sounds/389794/
+rat/scurry	RATCRAWL
 ]]
 
 FAUNA_MODULE.ACTORS =
 {
-  fly =
+  fly = 
   {
     id = 30000
-    cluster = 2
+	cluster = 2
   }
-
+  
   rat =
   {
-    id = 30005
-    cluster = 1
+	id = 30020
+	cluster = 1
   }
 }
 
@@ -205,14 +223,14 @@ function FAUNA_MODULE.add_insects()
   if LEVEL.prebuilt then return end
 
   each A in LEVEL.areas do
-
-    -- No spawning in outdoor snow areas
-    if (A.is_outdoor and LEVEL.outdoor_theme == "snow") then end
-
-    if (A.mode and A.mode == "floor") then
+    
+	-- No spawning in outdoor snow areas
+	if (A.is_outdoor and LEVEL.outdoor_theme == "snow") then end
+	
+	if (A.mode and A.mode == "floor") then
       each S in A.seeds do
 
-        --[[
+		--[[
         -- not on chunks with something on it
         if S.chunk and S.chunk.content then continue end
 
@@ -222,8 +240,8 @@ function FAUNA_MODULE.add_insects()
         -- not on areas with liquid sinks
         if A.floor_group and A.floor_group.sink
         and A.floor_group.sink.mat == "_LIQUID" then continue end
-        --]]
-
+		--]]
+		
         if rand.odds(7) then
 
           local item_tab = {
@@ -276,10 +294,10 @@ function FAUNA_MODULE.add_rats()
     if (A.mode and A.mode == "floor") then
       each S in A.seeds do
 
-        -- No spawning in outdoor snow areas
-        if (A.is_outdoor and LEVEL.outdoor_theme == "snow") then end
-
-        --[[
+		-- No spawning in outdoor snow areas
+		if (A.is_outdoor and LEVEL.outdoor_theme == "snow") then end
+	
+		--[[
         -- not on chunks with something on it
         if S.chunk and S.chunk.content then continue end
 
@@ -289,8 +307,8 @@ function FAUNA_MODULE.add_rats()
         -- not on areas with liquid sinks
         if A.floor_group and A.floor_group.sink
         and A.floor_group.sink.mat == "_LIQUID" then continue end
-        --]]
-
+		--]]
+		
         if rand.odds(7) then
 
           local item_tab = {
@@ -337,22 +355,23 @@ function FAUNA_MODULE.all_done()
 
   if (PARAM.insects == "enable" or PARAM.rats == "enable") then
     PARAM.fauna_dec = FAUNA_MODULE.DEC
-    PARAM.fauna_SNDINFO = FAUNA_MODULE.SNDINFO
+	PARAM.fauna_SNDINFO = FAUNA_MODULE.SNDINFO
   end
 
   if PARAM.insects == "enable" then
     local dir = "games/doom/data/"
     gui.wad_merge_sections(dir .. "Fly.wad")
-    gui.wad_insert_file("data/sounds/FLYING.ogg", "FLYBUZZ")
+	gui.wad_insert_file("data/sounds/FLYBUZZ.ogg", "FLYBUZZ")
   end
 
   if PARAM.rats == "enable" then
     local dir = "games/doom/data/"
     gui.wad_merge_sections(dir .. "Rats.wad")
-    gui.wad_insert_file("data/sounds/DSRAT.ogg", "DSRAT")
-    gui.wad_insert_file("data/sounds/DSRATIDL.ogg", "DSRATIDL")
-    gui.wad_insert_file("data/sounds/DSRATDI1.ogg", "DSRATDI1")
-    gui.wad_insert_file("data/sounds/DSRATDI2.ogg", "DSRATDI2")
+	gui.wad_insert_file("data/sounds/DSRAT.ogg", "DSRAT")
+	gui.wad_insert_file("data/sounds/DSRATIDL.ogg", "DSRATIDL")
+	gui.wad_insert_file("data/sounds/DSRATDI1.ogg", "DSRATDI1")
+	gui.wad_insert_file("data/sounds/DSRATDI2.ogg", "DSRATDI2")
+	gui.wad_insert_file("data/sounds/RATCRAWL.ogg", "RATCRAWL")
   end
 
 end
