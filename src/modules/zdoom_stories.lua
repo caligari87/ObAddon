@@ -1237,7 +1237,7 @@ ZDOOM_STORIES.STORIES =
       [[A ghostly tune suddenly appears at the edge of your hearing.
       You listen intently, but are unable to easily make out the
       origin. Then, you suddenly notice that the zombies and demons
-      you're fighting twitch rhytmically, as if moving to the beat
+      you're fighting twitch rhythmically, as if moving to the beat
       of the music.
       _SPACE
       You breathe shallowly, as you discover that your own heartbeet
@@ -1253,7 +1253,7 @@ ZDOOM_STORIES.STORIES =
       [[Several demons come at you, dance-fighting, but you tear them
       apart within a few beats, then, turn to look at the golden,
       jeweled music box on the pedestal in the chamber your intuition
-      led you to. Its rhytmic flashes cast lights on everything,
+      led you to. Its rhythmic flashes cast lights on everything,
       creating the impression of a disco floor. You growl with fury,
       and approach the box, overcoming the instinctive urge to move
       to the beat, then strike the delicate mechanism with your fist.
