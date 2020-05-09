@@ -674,6 +674,10 @@ DOOM.MATERIALS =
   XTEKGREN = { t="TEKGREN2", f="TEKGREN2" }
   XCEIL3_3 = { t="CEIL3_3", f="CEIL3_3" }
   XMIDVINE  = { t="MIDVINE1", f="MIDVINE1" }
+    
+  -- Allows compatibility with Egypt theme prefabs (if Prefabs are set to not match Theme)
+  MURAL2   = { t="MARBFAC3",   f="FLAT1_1" }
+  BIGMURAL = { t="STARTAN3",   f="FLAT1_1" }
 }
 
 
