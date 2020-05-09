@@ -95,5 +95,14 @@ OB_MODULES["prefab_control"] =
       tooltip = "Forces Walls to be 'Less' if a map is Extreme-sized, in order to reduce linedef overflow and BSP leakage."
       default = "on"
     }
+
+    match_theme =
+    {
+      name = "match_theme"
+      label=("Match Theme")
+      choices=PREFAB_CONTROL.DETAIL_CHOICES
+      tooltip = "Ensures that prefabs selected match their intended Theme."
+      default = "on"
+    }
   }
 }
