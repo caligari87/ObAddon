@@ -396,7 +396,7 @@ PREFABS.Pic_urban_downtown_facade_sunk_roof =
   template = "Pic_urban_downtown_facade3_EPIC"
   map = "MAP07"
 
-  prob = 150
+  prob = 125
 
   z_fit = { 254,255 }
 
@@ -409,9 +409,22 @@ PREFABS.Pic_urban_downtown_facade_sunk_roof_lower =
   template = "Pic_urban_downtown_facade3_EPIC"
   map = "MAP07"
 
-  prob = 150
+  prob = 125
 
-  z_fit = { 144,156 }
+  z_fit = { 243,256 }
+
+  bound_z1 = 0
+  bound_z2 = 256
+}
+
+PREFABS.Pic_urban_downtown_facade_sunk_roof_lower_2 =
+{
+  template = "Pic_urban_downtown_facade3_EPIC"
+  map = "MAP07"
+
+  prob = 125
+
+  z_fit = { 242,256 }
 
   bound_z1 = 0
   bound_z2 = 256
