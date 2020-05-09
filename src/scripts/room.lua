@@ -2007,14 +2007,15 @@ function Room_choose_kind(R, last_R)
   --    few   is about 15%
   --    some  is about 35%
   --    heaps is about 75%
+  -- MSSP: attempting new numbers
   local out_prob
 
-  if not last_R then
-    out_prob = style_sel("outdoors", 0, 15, 30, 75)
-  elseif last_R.is_outdoor then
-    out_prob = style_sel("outdoors", 0,  7, 20, 70)
-  else
-    out_prob = style_sel("outdoors", 0, 20, 40, 90)
+  if not last_R then -- chances for first room or trunk(?)
+    out_prob = style_sel("outdoors", 0, 30, 60, 90)
+  elseif last_R.is_outdoor then -- chance if previous room was outdoor
+    out_prob = style_sel("outdoors", 0, 20, 45, 70)
+  else -- chance if previous room was anything else
+    out_prob = style_sel("outdoors", 0, 30, 60, 90)
   end
 
   local is_outdoor = rand.odds(out_prob)
