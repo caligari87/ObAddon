@@ -2426,11 +2426,19 @@ ZDOOM_STORIES.ENTITIES =
 
 ZDOOM_STORIES.INSTALLATIONS =
 {
-  ["power plant"] = 5,
+  ["administrative center"] = 5,
   ["arachnotron factory"] = 5,
+  barracks = 5,
   ["command control"] = 5,
   ["communications center"] = 5,
+  ["experimental weapons center"] = 5,
+  ["foundry"] = 5, -- Doom 2016
+  ["high security laboratory"] = 5,
+  hydroponics = 5, -- System Shock 2
+  ["power plant"] = 5,
   ["research laboratory"] = 5,
+  ["testing facility"] = 5,
+  ["waste processing plant"]
   ["weapons storage facility"] = 5,
   nest = 5,
 }
