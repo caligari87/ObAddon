@@ -67,7 +67,7 @@ ACTOR Rodent: Fauna
 // Decorate: Captain Toenail	(with modifications by Frozsoul)
 // Sprites: Operation Bodycount
 // Sounds: FindSounds.com
-actor ScurryRat: Rodent
+actor ScurryRat: Rodent 30100
 {
   radius 8
   height 8
@@ -318,7 +318,6 @@ FAUNA_MODULE.DOOMEDNUMS =
 {
 [[
 	30000 = SpringyFly
-	30100 = ScurryRat
 ]]
 }
 
@@ -473,11 +472,11 @@ function FAUNA_MODULE.all_done()
 
   if (PARAM.flies == "enable" or PARAM.rats == "enable") then
 	PARAM.fauna_SNDINFO = FAUNA_MODULE.SNDINFO
-	PARAM.fauna_mapinfo = FAUNA_MODULE.DOOMEDNUMS
   end
 
   if PARAM.flies == "enable" then
     PARAM.fauna_zsc = FAUNA_MODULE.ZSC
+	PARAM.fauna_mapinfo = FAUNA_MODULE.DOOMEDNUMS
 	local dir = "games/doom/data/"
     gui.wad_merge_sections(dir .. "Fly.wad")
 	gui.wad_insert_file("data/sounds/FLYBUZZ.ogg", "FLYBUZZ")
