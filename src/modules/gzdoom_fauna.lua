@@ -282,6 +282,7 @@ class SpringyFly : Actor
 FAUNA_MODULE.SNDINFO = 
 [[
 Fly/Buzz FLYBUZZ
+$attenuation Fly/Buzz 2
 
 DSRATIDL DSRATIDL
 DSRAT DSRAT
