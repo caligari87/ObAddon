@@ -69,7 +69,17 @@ function ScriptMan_assemble_mapinfo_lump()
       table.insert(mapinfo_lines,line)
     end
   end
+
   table.insert(mapinfo_lines, "\n}\n")
+  if PARAM.fauna_mapinfo then
+	table.insert(mapinfo_lines, "DoomedNums\n")
+	table.insert(mapinfo_lines, "{\n")
+    each line in PARAM.fauna_mapinfo do
+      table.insert(mapinfo_lines,line)
+	end
+  end
+  
+  table.insert(mapinfo_lines, "}\n")
   if PARAM.mapinfolump != nil then
     each line in PARAM.mapinfolump do
       table.insert(mapinfo_lines,line)
@@ -96,8 +106,12 @@ function ScriptMan_assemble_zscript_lump()
     zscript_lines = zscript_lines .. PARAM.actor_name_script .. "\n"
   end
 
+  if PARAM.fauna_zsc then
+    zscript_lines = zscript_lines .. PARAM.fauna_zsc .. "\n"
+  end
+
   if zscript_lines != "" then
-    zscript_lines = 'version "3.3"\n' .. zscript_lines
+    zscript_lines = 'version "4.3"\n' .. zscript_lines
     add_script_lump("ZSCRIPT", zscript_lines)
   end
 end
