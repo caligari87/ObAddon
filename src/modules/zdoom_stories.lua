@@ -2438,7 +2438,7 @@ ZDOOM_STORIES.INSTALLATIONS =
   ["power plant"] = 5,
   ["research laboratory"] = 5,
   ["testing facility"] = 5,
-  ["waste processing plant"]
+  ["waste processing plant"] = 5,
   ["weapons storage facility"] = 5,
   nest = 5,
 }
