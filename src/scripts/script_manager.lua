@@ -77,9 +77,9 @@ function ScriptMan_assemble_mapinfo_lump()
     each line in PARAM.fauna_mapinfo do
       table.insert(mapinfo_lines,line)
 	end
+      table.insert(mapinfo_lines, "}\n")
   end
-  
-  table.insert(mapinfo_lines, "}\n")
+
   if PARAM.mapinfolump != nil then
     each line in PARAM.mapinfolump do
       table.insert(mapinfo_lines,line)
