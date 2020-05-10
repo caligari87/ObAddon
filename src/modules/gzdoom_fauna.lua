@@ -136,7 +136,7 @@ FAUNA_MODULE.ZSC =
 [[
 class SpringyFly : Actor
 {
-	FLineTraceData fltData;
+	transient FLineTraceData fltData;
 	Vector3 dest;
 	double chase;
 	double ignore;
