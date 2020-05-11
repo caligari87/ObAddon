@@ -4902,6 +4902,8 @@ namelib.COMMUNITY_MEMBERS =
     "Craneo",
     "Swedra",
     "Demios",
+    "Scionox",
+    "Josh Seven", --josh771
   }
 
   -- These people helped out OBLIGE and how they contributed.
@@ -4936,7 +4938,6 @@ namelib.COMMUNITY_MEMBERS =
     "DZ",
     "Elkinda",
     "Hexa Doken",
-    "Josh Seven", --josh771
     "Kinker 31",
     "Kinsie",
     "Magpie", --MagPie
@@ -4965,7 +4966,6 @@ namelib.COMMUNITY_MEMBERS =
     "BXN", -- Occasionally does ask questions, inquires on things.
     "Cryomundus",
     "DukeWooze", -- Posted in the past, but not too recently.
-    "Scionox", -- Newcomer. Rather enthusiastic on the project.
     "rexirT",
   }
 
