@@ -69,6 +69,17 @@ OB_MODULES["prefab_control"] =
 
   options =
   {
+    autodetail =
+    {
+      name = "autodetail"
+      label=("Auto Detailing")
+      choices=PREFAB_CONTROL.DETAIL_CHOICES
+      tooltip = "Forces Walls to be 'Less' if a map is Extreme-sized, in order to reduce linedef overflow and BSP leakage."
+      default = "on"
+      priority = 4
+      gap = 1
+    }
+
     point_prob =
     {
       name = "point_prob"
@@ -76,6 +87,7 @@ OB_MODULES["prefab_control"] =
       choices=PREFAB_CONTROL.POINT_CHOICES
       tooltip = "Decor prefabs are prefabs placed along the floors such as crates, pillars, and other decorative elements which aren't tied to walls. This directly modifies probabilities on a per-room basis, not the density for decor prefabs in any given room.\n\nNote: DEFAULT actually behaves like Mix-It-Up."
       default = "fab_default"
+      priority = 3
     }
 
     wall_prob =
@@ -85,15 +97,8 @@ OB_MODULES["prefab_control"] =
       choices=PREFAB_CONTROL.CHOICES
       tooltip = "Determines the amount plain wall prefabs. What it actually does is greatly increase the probability of Oblige's basic plain wall prefab, rather than reduce the probability of all the prefabs in the library."
       default = "fab_default"
-    }
-
-    autodetail =
-    {
-      name = "autodetail"
-      label=("Auto Detailing")
-      choices=PREFAB_CONTROL.DETAIL_CHOICES
-      tooltip = "Forces Walls to be 'Less' if a map is Extreme-sized, in order to reduce linedef overflow and BSP leakage."
-      default = "on"
+      priority = 2
+      gap = 1
     }
 
     match_theme =
@@ -103,6 +108,7 @@ OB_MODULES["prefab_control"] =
       choices=PREFAB_CONTROL.DETAIL_CHOICES
       tooltip = "Ensures that prefabs selected match their intended Theme."
       default = "on"
+      priority = 1
     }
   }
 }
