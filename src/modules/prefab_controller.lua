@@ -90,7 +90,7 @@ OB_MODULES["prefab_control"] =
       priority = 3
     }
 
-    wall_prob =
+    wall_prob = -- code for this option is currently under revision
     {
       name = "wall_prob"
       label=_("Walls")

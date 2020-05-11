@@ -717,7 +717,7 @@ function Grower_preprocess_grammar()
 
   local function process_some_cool_grammars(grammar)
 
-      gui.printf("Grower_preprocess_grammar...\n")
+      gui.printf("Preprocess shape grammars...\n")
 
       PARAM.shape_rule_count = 0
 
@@ -775,7 +775,7 @@ function Grower_preprocess_grammar()
         if string.match(name, "^PARK_") then cur_def.env = "park" end
       end
 
-      gui.printf("\n" .. PARAM.shape_rule_count .. " rules loaded!\n")
+      gui.printf(PARAM.shape_rule_count .. " rules loaded!\n")
 
   end
 
