@@ -42,6 +42,52 @@ SKY_GEN.HILL_PARAMS =
   "hp_cavernous",   _("Cavernous"),
 }
 
+SKY_GEN.CLOUD_COLOR_CHOICES =
+{
+  "default", _("DEFAULT"),
+  "SKY_CLOUDS", _("Blue + White Clouds"),
+  "GREY_CLOUDS", _("Grey"),
+  "DARK_CLOUDS", _("Dark Grey"),
+  "BLUE_CLOUDS", _("Dark Blue"),
+  "HELL_CLOUDS", _("Red"),
+  "ORANGE_CLOUDS", _("Orange"),
+  "HELLISH_CLOUDS", _("Red-ish"),
+  "BROWN_CLOUDS", _("Brown"),
+  "BROWNISH_CLOUDS", _("Brown-ish"),
+  "YELLOW_CLOUDS", _("Yellow"),
+  "GREEN_CLOUDS", _("Green"),
+  "JADE_CLOUDS", _("Jade"),
+  "DARKRED_CLOUDS", _("Dark Red"),
+  "PEACH_CLOUDS", _("Peach"),
+  "WHITE_CLOUDS", _("White"),
+  "PURPLE_CLOUDS", _("Purple"),
+  "RAINBOW_CLOUDS", _("Rainbow"),
+}
+
+SKY_GEN.TERRAIN_COLOR_CHOICES =
+{
+  "default", _("DEFAULT"),
+  "BLACK_HILLS", _("Black"),
+  "BROWN_HILLS", _("Brown"),
+  "TAN_HILLS", _("Tan"),
+  "GREEN_HILLS", _("Green"),
+  "DARKGREEN_HILLS", _("Dark Green"),
+  "HELL_HILLS", _("Red"),
+  "DARKBROWN_HILLS", _("Dark Brown"),
+  "GREENISH_HILLS", _("Green-ish"),
+  "ICE_HILLS", _("Ice"),
+}
+
+SKY_GEN.NEBULA_COLOR_CHOICES =
+{
+  "default", _("DEFAULT"),
+  "none", _("None"),
+  "BLUE_NEBULA", _("Blue"),
+  "RED_NEBULA", _("Red"),
+  "BROWN_NEBULA", _("Brown"),
+  "GREEN_NEBULA", _("Green"),
+}
+
 SKY_GEN.colormaps =
 {
   -- star colors --
@@ -417,6 +463,10 @@ function SKY_GEN.generate_skies()
 
     local is_nebula = is_starry and rand.odds(60)
 
+    if PARAM.nebula_color == "none" then
+      is_nebula = false
+    end
+
     -- only rarely combine stars + nebula + hills
     local is_hilly  = rand.odds(sel(is_nebula, 25, 90))
 
@@ -464,10 +514,17 @@ function SKY_GEN.generate_skies()
         -- don't use same one again
         nebula_tab[name] = nebula_tab[name] / 1000
 
+        if PARAM.nebula_color != "defualt" then
+          name = PARAM.nebula_color
+        end
       else
         name = rand.key_by_probs(cloud_tab)
         -- don't use same one again
         cloud_tab[name] = cloud_tab[name] / 1000
+
+        if PARAM.cloud_color != "default" then
+          name = PARAM.cloud_color
+        end
       end
 
       local colormap = SKY_GEN.colormaps[name]
@@ -522,6 +579,10 @@ function SKY_GEN.generate_skies()
       local name = rand.key_by_probs(hill_tab)
       -- don't use same one again
       hill_tab[name] = hill_tab[name] / 1000
+
+      if PARAM.terrain_color != "default" then
+        name = PARAM.terrain_color
+      end
 
       local colormap = SKY_GEN.colormaps[name]
       if not colormap then
@@ -619,11 +680,39 @@ OB_MODULES["sky_generator"] =
       gap = 1
     }
 
+    cloud_color =
+    {
+      label = _("Day Sky Color")
+      choices = SKY_GEN.CLOUD_COLOR_CHOICES
+      priority= 7
+      tooltip = "Picks the color of the sky if day."
+      defualt = "defualt"
+    }
+
+    terrain_color =
+    {
+      label = _("Terrain Color")
+      choices = SKY_GEN.TERRAIN_COLOR_CHOICES
+      priority = 6
+      tooltip = "Picks the color of the terrain in the sky if available."
+      default = "default"
+    }
+
+    nebula_color =
+    {
+      label = _("Nebula Color")
+      choices = SKY_GEN.NEBULA_COLOR_CHOICES
+      priority = 5
+      tooltip = "Picks the color of nebula if sky is night. 'None' means just a plain starry night sky."
+      defualt = "default"
+      gap = 1
+    }
+
     influence_map_darkness =
     {
       label=_("Sky Gen Lighting")
       choices=MISC_STUFF.YES_NO
-      priority = 7
+      priority = 4
       tooltip = "Overrides (and ignores) Dark Outdoors setting in Miscellaneous tab. If the sky generator " ..
       "creates night skies for an episode, episode's map outdoors is also dark but bright if day-ish."
       default = "no"
