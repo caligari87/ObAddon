@@ -443,10 +443,10 @@ function SKY_GEN.generate_skies()
 
     local nebula_tab =
     {
-      BLUE_NEBULA  = 90
-      RED_NEBULA  = 60
-      BROWN_NEBULA = 30
-      GREEN_NEBULA = 25
+      BLUE_NEBULA  = 6
+      RED_NEBULA  = 6
+      BROWN_NEBULA = 4
+      GREEN_NEBULA = 3
     }
 
 
@@ -596,7 +596,7 @@ OB_MODULES["sky_generator"] =
   {
     force_sky =
     {
-      label=_("Day/Night State")
+      label=_("Time of Day")
       choices=SKY_GEN.SKY_CHOICES
       priority = 10
       tooltip = "This forces the sky background (behind the hills and clouds) to either be night or day."
