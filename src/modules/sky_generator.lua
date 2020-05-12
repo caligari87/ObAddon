@@ -514,7 +514,7 @@ function SKY_GEN.generate_skies()
         -- don't use same one again
         nebula_tab[name] = nebula_tab[name] / 1000
 
-        if PARAM.nebula_color != "defualt" then
+        if PARAM.nebula_color != "default" then
           name = PARAM.nebula_color
         end
       else
@@ -686,7 +686,7 @@ OB_MODULES["sky_generator"] =
       choices = SKY_GEN.CLOUD_COLOR_CHOICES
       priority= 7
       tooltip = "Picks the color of the sky if day."
-      defualt = "defualt"
+      default = "default"
     }
 
     terrain_color =
@@ -704,7 +704,7 @@ OB_MODULES["sky_generator"] =
       choices = SKY_GEN.NEBULA_COLOR_CHOICES
       priority = 5
       tooltip = "Picks the color of nebula if sky is night. 'None' means just a plain starry night sky."
-      defualt = "default"
+      default = "default"
       gap = 1
     }
 
