@@ -26,7 +26,7 @@ THEME_CONTROL.CHOICES =
   "tech",   "Tech"
   "urban",  "Urban"
   "hell",   "Hell"
-  "wolf",   "Wolfenstein"
+  --[["wolf",   "Wolfenstein"]] --Sorry, boyos, this theme doesn't even exist at the moment.
   "egypt",  "Egypt (TNT)"
   "psycho", "Psychedelic"
 }
@@ -84,7 +84,7 @@ function THEME_CONTROL.get_levels(self)
     PARAM[name] = value
   end
 
-  --[[each LEV in GAME.levels do
+  each LEV in GAME.levels do
     local name
 
     if LEV.is_secret then
@@ -99,13 +99,13 @@ function THEME_CONTROL.get_levels(self)
     if not opt then continue end
 
     THEME_CONTROL.set_a_theme(LEV, opt)
-  end]]
+  end
 end
 
 
---[[UNFINISHED["theme_ctl_doom2"] =
+OB_MODULES["theme_ctl_doom2"] =
 {
-  label = _("Doom 2 Theme Control")
+  label = _("[Exp] Doom 2 Theme Control")
 
   game = "doom2"
 
@@ -121,7 +121,9 @@ end
     episode3  = { label="Episode 3",     choices=THEME_CONTROL.CHOICES }
     secret    = { label="Secret Levels", choices=THEME_CONTROL.CHOICES }
   }
-}]]
+
+  tooltip = "Warning: Mix-ins are for now completely overriden when picking a choice with change."
+}
 
 
 OB_MODULES["level_control"] =
@@ -143,7 +145,7 @@ OB_MODULES["level_control"] =
     {
       name = "mixin_type"
       label = _("Mix-in Type")
-      priority = 4
+      priority = 7
       tooltip = "This replaces the -ish theme choices. By selecting mostly, this means " ..
                 "your selected theme is occasionally littered by other themes while setting it to " ..
                 "less means the original selected theme is what's littered in instead. " ..
@@ -157,16 +159,17 @@ OB_MODULES["level_control"] =
     {
       name = "level_upper_bound"
       label = _("Upper Bound")
-      priority = 3
+      priority = 6
       tooltip = "Fine tune upper limit for Level Size Episodic, Progressive and Mixed options."
       choices = THEME_CONTROL.SIZE_CHOICES
       default = "trans"
     }
+
     level_lower_bound =
     {
       name = "level_lower_bound"
       label = _("Lower Bound")
-      priority = 2
+      priority = 5
       tooltip = "Fine tune lower limit for Level Size Episodic, Progressive and Mixed options."
       choices = THEME_CONTROL.SIZE_CHOICES
       default = "micro"
@@ -177,7 +180,7 @@ OB_MODULES["level_control"] =
     {
       name = "level_size_ramp_factor"
       label = _("Ramp Factor")
-      priority = 1
+      priority = 4
       tooltip = "Determines how fast or slow larger level sizes are reached in Progressive/Episodic mode.\n\n" ..
       "Very Fast Curve: Reach half-size at 1/4th of the game.\n" ..
       "Fast Curve: Reach half-size at 1/3rds.\n" ..
@@ -187,6 +190,7 @@ OB_MODULES["level_control"] =
       "Oblige default is Fast Curve."
       choices = THEME_CONTROL.RAMP_FACTOR
       default = "0.66"
+      gap = 1
     }
   }
 }
@@ -195,7 +199,7 @@ OB_MODULES["level_control"] =
 ------------------------------------------------------------------------
 
 
---[[THEME_CONTROL.DOOM1_CHOICES =
+THEME_CONTROL.DOOM1_CHOICES =
 {
   "no_change", "NO CHANGE"
 
@@ -208,9 +212,9 @@ OB_MODULES["level_control"] =
 }
 
 
-UNFINISHED["theme_ctl_doom1"] =
+OB_MODULES["theme_ctl_doom1"] =
 {
-  label = _("Doom 1 Theme Control")
+  label = _("[Exp] Doom 1 Theme Control")
 
   game = "doom1"
 
@@ -228,4 +232,6 @@ UNFINISHED["theme_ctl_doom1"] =
     episode4  = { label="Episode 4",     choices=THEME_CONTROL.DOOM1_CHOICES }
     secret    = { label="Secret Levels", choices=THEME_CONTROL.DOOM1_CHOICES }
   }
-}]]
+
+  tooltip = "Warning: Mix-ins are for now completely overriden when picking a choice with change."
+}
