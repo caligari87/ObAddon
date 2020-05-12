@@ -676,7 +676,9 @@ OB_MODULES["sky_generator"] =
       label=_("Terrain Parameters")
       choices=SKY_GEN.HILL_PARAMS
       priority = 8
-      tooltip = "Changes the parameters of generated hills, if there are any. 'Cavernous' causes the terrain to nearly fill up most of the sky, making an impression of being inside a cave or crater."
+      tooltip = "Changes the parameters of generated hills, if there are any. " ..
+                "'Cavernous' causes the terrain to nearly fill up most of the sky," ..
+                "making an impression of being inside a cave or crater."
       gap = 1
     }
 
@@ -685,7 +687,7 @@ OB_MODULES["sky_generator"] =
       label = _("Day Sky Color")
       choices = SKY_GEN.CLOUD_COLOR_CHOICES
       priority= 7
-      tooltip = "Picks the color of the sky if day."
+      tooltip = "Picks the color of the sky if day. Default means random and theme-ish."
       default = "default"
     }
 
@@ -694,7 +696,7 @@ OB_MODULES["sky_generator"] =
       label = _("Terrain Color")
       choices = SKY_GEN.TERRAIN_COLOR_CHOICES
       priority = 6
-      tooltip = "Picks the color of the terrain in the sky if available."
+      tooltip = "Picks the color of the terrain in the sky if available. Default means random and theme-ish."
       default = "default"
     }
 
@@ -703,7 +705,8 @@ OB_MODULES["sky_generator"] =
       label = _("Nebula Color")
       choices = SKY_GEN.NEBULA_COLOR_CHOICES
       priority = 5
-      tooltip = "Picks the color of nebula if sky is night. 'None' means just a plain starry night sky."
+      tooltip = "Picks the color of nebula if sky is night. 'None' means just a plain starry night sky. " ..
+                "Default means random and theme-ish."
       default = "default"
       gap = 1
     }
