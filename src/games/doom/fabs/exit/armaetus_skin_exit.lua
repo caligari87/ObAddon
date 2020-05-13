@@ -8,6 +8,4 @@ PREFABS.Exit_hell_skin_exit =
   where  = "point"
 
   prob = 1000
-
-  size = 48
 }
