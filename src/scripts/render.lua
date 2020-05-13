@@ -305,8 +305,15 @@ function Render_edge(E)
         -- if seed in front of the edge has anything on it
         -- choose a flat wall fab instead
         if chunk.content and chunk.content != "MON_TELEPORT" then
-          if chunk.prefab_def and chunk.prefab_def.size then
-            reqs.deep = math.clamp(16, chunk.space - chunk.prefab_def.size, 9999)
+          if chunk.prefab_def then
+            if chunk.prefab_def.size then
+              reqs.deep = math.clamp(16, chunk.space - chunk.prefab_def.size, 9999)
+
+            -- prefabs without a size definition are assumed to occupy the whole chunk
+            -- mostly for exit fabs
+            else
+              reqs.deep = 16
+            end
           end
         end
 
