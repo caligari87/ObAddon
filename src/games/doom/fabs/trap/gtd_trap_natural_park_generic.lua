@@ -12,10 +12,10 @@ PREFABS.Trap_naturalistic_park_generic =
   seed_w = 2
   seed_h = 1
 
-  over   = -16
+  deep = 16
 
   x_fit = "stretch"
-  y_fit = top
+  y_fit = { 20,108 }
 
   bound_z1 = 0
   bound_z2 = 160
