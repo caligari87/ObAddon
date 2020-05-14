@@ -9,7 +9,7 @@ PREFABS.Switch_military_radio =
   key = "sw_metal"
   where  = "point"
 
-  size   = 96
+  size   = 88
   height = 64
   uses_epic_textures = true
 

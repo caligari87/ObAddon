@@ -2148,6 +2148,11 @@ stderrf("Cages in %s [%s pressure] --> any_prob=%d  per_prob=%d\n",
       decor_prob = decor_prob_tab[PARAM.point_prob]
     end
 
+    -- give a small boost if it's a big room
+    if R.is_big then
+      decor_prob = math.clamp(0, decor_prob * 1.5, 100)
+    end
+
     decor_prob = math.clamp(0, decor_prob / (LEVEL.autodetail_group_walls_factor / 2), 100)
 
     each chunk in R.floor_chunks do
