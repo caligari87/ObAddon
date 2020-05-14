@@ -17,6 +17,7 @@ PREFABS.Pic_gtd_g99_1 =
   height = 160
   deep   =  16
 
-  x_fit = "frame"
+  x_fit = { 32,64 , 192,224 }
   y_fit = "top"
+  z_fit = "top"
 }
