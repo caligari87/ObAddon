@@ -3336,9 +3336,23 @@ function Room_floor_ceil_heights()
 
     local function infect_area(A, N)
       A.is_outdoor = false
-      A.ceil_h = N.ceil_h
       A.ceil_mat = N.ceil_mat
       A.is_porch_neighbor = true
+
+      if A.mode == "cage" then
+        A.ceil_h = N.ceil_h
+        A.floor_h = N.floor_h + 24
+
+        local h_diff
+        h_diff = A.ceil_h - A.floor_h
+        if h_diff < 96 then
+          A.floor_h = A.ceil_h - 96
+        end
+        A.cage_mode = "fancy"
+      else
+        A.ceil_h = N.ceil_h
+      end
+
     end
 
     local function check_neighboring_porches(A)
@@ -3386,7 +3400,7 @@ function Room_floor_ceil_heights()
           end
         end
 
-        if A.mode == "liquid" then
+        if A.mode == "liquid" or A.mode == "cage" then
           A1, A2 = check_neighboring_porches(A)
         end
 
