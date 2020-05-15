@@ -4595,9 +4595,9 @@ GROW_CANAL_SINGLE_CORNER_UNG =
 
   structure =
   {
-    "11..x","1111x"
-    "11..x","1111x"
-    ".....","~~~~/"
+    "11..","1111"
+    "11..","1111"
+    "....","~~~~"
   }
 
   diagonals =
@@ -4610,7 +4610,7 @@ GROW_CANAL_SINGLE_CORNER_UNG =
 
 GROW_NARROW_CANAL_ENTRY =
 {
-  prob = 20
+  prob = 5
 
   structure =
   {
@@ -4622,7 +4622,7 @@ GROW_NARROW_CANAL_ENTRY =
 
 GROW_NARROW_CANAL_ENTRY_FROMSIDE =
 {
-  prob = 20
+  prob = 5
 
   structure =
   {
@@ -4633,7 +4633,7 @@ GROW_NARROW_CANAL_ENTRY_FROMSIDE =
 
 GROW_NARROW_CANAL_STRAIGHT =
 {
-  prob = 80
+  prob = 10
 
   structure =
   {
@@ -4645,7 +4645,7 @@ GROW_NARROW_CANAL_STRAIGHT =
 
 GROW_NARROW_CANAL_STRAIGHT_CROSSING =
 {
-  prob = 20
+  prob = 5
 
   engine = "zdoom"
 
@@ -4664,7 +4664,7 @@ GROW_NARROW_CANAL_STRAIGHT_CROSSING =
 
 GROW_NARROW_CANAL_STAIRS =
 {
-  prob = 60
+  prob = 10
 
   structure =
   {
@@ -4676,7 +4676,7 @@ GROW_NARROW_CANAL_STAIRS =
 
 GROW_NARROW_CANAL_INNER_CURVE =
 {
-  prob = 30
+  prob = 5
 
   structure =
   {
@@ -4695,7 +4695,7 @@ GROW_NARROW_CANAL_INNER_CURVE =
 
 GROW_NARROW_CANAL_OUTER_CURVE =
 {
-  prob = 30
+  prob = 5
 
   structure =
   {
@@ -5198,6 +5198,146 @@ SQUARE_OUT_REMOVE_TRIANGLE =
   diagonals =
   {
     "1."
+  }
+}
+
+--[LIQUEFY] - the liquid pool shapes is a pass that attempts to create more dynamic
+--and organic liquid areas for non-park, non-cave rooms
+
+LIQUEFY_SQ_CREATE =
+{
+  pass = "liquefy"
+
+  prob = 5
+
+  structure =
+  {
+    "1111","1111"
+    "1111","1~~1"
+    "1111","1~~1"
+    "1111","1111"
+  }
+}
+
+LIQUEFY_EG_CREATE =
+{
+  pass = "liquefy"
+
+  prob = 3
+
+  structure =
+  {
+    "1111","1111"
+    "1111","1~%1"
+    "1111","1~~1"
+    "1111","1111"
+  }
+
+  diagonals =
+  {
+    "~1"
+  }
+}
+
+LIQUEFY_MULTIAREA_CREATE =
+{
+  pass = "liquefy"
+
+  prob = 2
+
+  structure =
+  {
+    "1122","1122"
+    "1122","1~~2"
+    "1122","1~~2"
+    "1122","1122"
+  }
+}
+
+LIQUEFY_WALL_CREATE =
+{
+  pass = "liquefy"
+
+  prob = 5
+
+  structure =
+  {
+    "111#","111#"
+    "111#","1~~#"
+    "111#","1~~#"
+    "111#","111#"
+  }
+}
+
+LIQUEFY_FL_CREATE =
+{
+  pass = "liquefy"
+
+  prob = 10
+
+  structure =
+  {
+    "1111","1111"
+    "1111","1~~1"
+    "1111","1111"
+  }
+}
+
+LIQUEFY_FLW_CREATE =
+{
+  pass = "liquefy"
+
+  prob = 10
+
+  structure =
+  {
+    "1111","1111"
+    "1111","1~~1"
+    "####","####"
+  }
+}
+
+LIQUEFY_SQ_EXTEND =
+{
+  pass = "liquefy"
+
+  prob = 25
+
+  structure =
+  {
+    "x11","x11"
+    "~11","~~1"
+    "~11","~~1"
+    "x11","x11"
+  }
+}
+
+LIQUEFY_FL_EXTEND =
+{
+  pass = "liquefy"
+
+  prob = 10
+
+  structure =
+  {
+    "x11","x11"
+    "~11","~~1"
+    "x11","x11"
+  }
+}
+
+LIQUEFY_SQ_CORNER =
+{
+  pass = "liquefy"
+
+  prob = 15
+
+  structure =
+  {
+    "~~~x","~~~x"
+    "~111","~~~1"
+    "~111","~~~1"
+    "1111","1111"
   }
 }
 
@@ -8379,7 +8519,8 @@ DECORATE_CLIFF_CAGE_3X_STAGGERED =
 
 GROW_LIQUID_POOL_PLACE_3x3 =
 {
-  prob = 35
+  prob = 15
+  skip_prob = 25
 
   structure =
   {
@@ -8399,7 +8540,8 @@ GROW_LIQUID_POOL_PLACE_3x3 =
 
 GROW_LIQUID_POOL_PLACE_3x6 =
 {
-  prob = 40
+  prob = 15
+  skip_prob = 25
 
   structure =
   {
@@ -8419,7 +8561,7 @@ GROW_LIQUID_POOL_PLACE_3x6 =
 
 GROW_LIQUID_POOL_PLACE =
 {
-  prob = 35
+  prob = 25
   skip_prob = 30
 
   group_pos = "entry"
@@ -8437,7 +8579,7 @@ GROW_LIQUID_POOL_PLACE =
 
 GROW_LIQUID_POOL_EXTEND_STRAIGHT =
 {
-  prob = 50
+  prob = 25
   skip_prob = 30
 
   group = "liquid_pool"
@@ -8453,7 +8595,7 @@ GROW_LIQUID_POOL_EXTEND_STRAIGHT =
 
 GROW_LIQUID_POOL_SWERVE =
 {
-  prob = 35
+  prob = 20
   skip_prob = 30
 
   group = "liquid_pool"
@@ -8493,7 +8635,7 @@ GROW_LIQUID_POOL_END =
 
 GROW_LIQUID_POOL_EXTEND_CURVED =
 {
-  prob = 50
+  prob = 15
   skip_prob = 30
 
   group = "liquid_pool"
@@ -8735,7 +8877,7 @@ GROW_TRENCH_CURVE_OUTER_SOLID =
 GROW_SEWER_ENTRY =
 {
   prob = 25
-  skip_prob = 20
+  skip_prob = 25
 
   group = "sewer"
 
@@ -8752,7 +8894,7 @@ GROW_SEWER_ENTRY =
 GROW_SEWER_STAIRS =
 {
   prob = 30
-  skip_prob = 20
+  skip_prob = 25
 
   group = "sewer"
 
@@ -8794,7 +8936,7 @@ GROW_SEWER_SWERVE =
 
 GROW_SEWER_CURVED =
 {
-  prob = 35
+  prob = 20
   skip_prob = 10
 
   group = "sewer"

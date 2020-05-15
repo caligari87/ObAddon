@@ -3557,6 +3557,10 @@ function Grower_grammatical_room(R, pass, is_emergency)
       apply_num = math.ceil(apply_num * 0.25)
     end
 
+  elseif pass == "liquefy" then
+
+    apply_num = math.round(style_sel("liquids", 4, 6, 8, 10))
+
   else
     error("unknown grammar pass: " .. tostring(pass))
   end
@@ -3780,8 +3784,19 @@ function Grower_sprout_room(R)
 
   if rand.odds(LEVEL.squareishness) and not R.is_cave and not R.is_park
   and not R.is_hallway and not R.is_street then
+
+    -- square_out pass - makes rooms a bit more buff and square
+    -- to distort the layout a bit more
     Grower_grammatical_room(R, "square_out")
     R.is_squarified = true
+
+    -- liquefy pass - adds more liquid elements to rooms
+    -- in an attemp to break away from preset liquid chunks
+    -- set by shape rules
+    if LEVEL.liquid and rand.odds(style_sel("liquids", 20, 40, 60, 80)) then
+      Grower_grammatical_room(R, "liquefy")
+      R.is_liquid_pooled = true
+    end
   end
 
   -- if hallway did not sprout, try again
@@ -4590,7 +4605,7 @@ function Grower_create_rooms()
 
   Grower_decorate_rooms()
   Grower_expand_parks()
---TODO  Grower_flatten_outdoor_fences()
+
   Grower_split_liquids()
 
   Seed_squarify()
