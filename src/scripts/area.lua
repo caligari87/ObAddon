@@ -767,8 +767,10 @@ function Junction_calc_fence_z(A1, A2)
 
   if A1.room and A2.room then
     if A1.room.is_outdoor and A2.room.is_outdoor then
-      if rand.odds(85) then
-        top_z = alt_top_z
+      if not A1.room.is_park and not A2.room.is_park then
+        if rand.odds(85) then
+          top_z = alt_top_z
+        end
       end
     end
   end
