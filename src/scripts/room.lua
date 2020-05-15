@@ -3335,13 +3335,15 @@ function Room_floor_ceil_heights()
   local function porch_fixup_neighbors(R)
 
     local function infect_area(A, N)
+      if not N.floor_h then return end
+
       A.is_outdoor = false
       A.ceil_mat = N.ceil_mat
       A.is_porch_neighbor = true
 
       if A.mode == "cage" then
         A.ceil_h = N.ceil_h
-        A.floor_h = N.floor_h + 24
+        A.floor_h = (N.floor_h or N.chunk.floor_h) + 24
 
         local h_diff
         h_diff = A.ceil_h - A.floor_h
