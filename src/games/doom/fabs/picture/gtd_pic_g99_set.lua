@@ -28,5 +28,5 @@ PREFABS.Pic_gtd_g99_candles =
   map = "MAP02"
 
   x_fit = { 72,92 , 164,180 }
-  z_fit = { 88,80 }
+  z_fit = { 80,88 }
 }
