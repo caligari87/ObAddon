@@ -14,10 +14,19 @@ PREFABS.Pic_gtd_g99_1 =
   seed_w = 2
   seed_h = 1
 
-  height = 160
-  deep   =  16
+  height = 128
+  deep   = 16
 
   x_fit = { 32,64 , 192,224 }
   y_fit = "top"
   z_fit = "top"
+}
+
+PREFABS.Pic_gtd_g99_candles =
+{
+  template = "Pic_gtd_g99_1"
+  map = "MAP02"
+
+  x_fit = { 72,92 , 164,180 }
+  z_fit = { 88,80 }
 }
