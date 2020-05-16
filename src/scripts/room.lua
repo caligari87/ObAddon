@@ -1671,7 +1671,7 @@ function Room_border_up()
         or A2.border_type == "bottomless_drop"
         or A2.border_type == "ocean"
         or (A2.border_type == "simple_fence" and A2.rail_up) then
-          if rand.odds(50) then
+          if A2.fence_type == "fancy" then
             Junction_make_fence(junc)
           else
             Junction_make_railing(junc, "FENCE_MAT_FROM_THEME", "block")
@@ -1829,8 +1829,9 @@ function Room_border_up()
 
     if A1.is_outdoor and A2.is_outdoor then
       -- occasionally omit it when big height difference
+      -- MSSP: New behavior, make a railing instead
       if can_omit_fence(A1, A2) and rand.odds(omit_fence_prob) then
-        Junction_make_empty(junc)
+        Junction_make_railing(junc)
       else
         Junction_make_fence(junc)
       end

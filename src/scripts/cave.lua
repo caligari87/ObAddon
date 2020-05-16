@@ -4963,6 +4963,10 @@ function Cave_build_a_scenic_vista(area)
 
   assert(area.mode == "scenic")
 
+  if rand.odds(50) then
+    area.fence_type = "fancy"
+  end
+
   Cave_setup_stuff(area)
 
   area.external_sky = true
