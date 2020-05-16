@@ -224,6 +224,7 @@ PREFABS.Pic_dem_caveind2 =
 {
   template  = "Pic_dem_caveind1"
   map    = "MAP17"
+uses_epic_textures = false
   liquid = false
 }
 
@@ -315,6 +316,7 @@ PREFABS.Pic_dem_caveind8 =
 {
   template  = "Pic_dem_caveind7"
   map    = "MAP23"
+uses_epic_textures = true
   liquid = true
   sound = "Water_Streaming"
 }
@@ -323,6 +325,7 @@ PREFABS.Pic_dem_caveind9 =
 {
   template  = "Pic_dem_caveind7"
   map    = "MAP24"
+uses_epic_textures = false
   liquid = false
 }
 
@@ -362,12 +365,14 @@ PREFABS.Pic_dem_caveind11 =
   template  = "Pic_dem_caveind10"
   map    = "MAP26"
   z_fit = { 88,96 }
+uses_epic_textures = true
 }
 
 PREFABS.Pic_dem_caveind12 =
 {
   template  = "Pic_dem_caveind10"
   map    = "MAP27"
+uses_epic_textures = true
 }
 
 ---- outdoor nooks ----
@@ -415,6 +420,7 @@ PREFABS.Pic_dem_nook2 =
 {
   template  = "Pic_dem_nook1"
   map    = "MAP29"
+uses_epic_textures = false
 }
 
 PREFABS.Pic_dem_nook3 =
