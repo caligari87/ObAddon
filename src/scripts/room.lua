@@ -1187,6 +1187,14 @@ function Room_make_windows(A1, A2)
     local f1 = A1.max_floor_h or A1.floor_h
     local f2 = A2.max_floor_h or A2.floor_h
 
+    if A1.room and A1.room.is_park then
+      f1 = A1.max_floor_h
+    end
+
+    if A2.room and A2.room.is_park then
+      f2 = A2.max_floor_h
+    end
+
     local max_f = math.max(f1, f2)
     local min_c = math.min(c1, c2)
 
