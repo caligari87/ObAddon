@@ -176,6 +176,7 @@ class SpringyFly : Actor
 		ignore = 35;
 		pause = 0;
 		scale *= frandom(0.1,0.2);
+        A_StartSound("fly/buzz", CHAN_BODY, CHANF_LOOP);
 	}
 		
 	override void Tick()
@@ -212,7 +213,7 @@ class SpringyFly : Actor
 		
 		if (!ignore)
 		{
-			LineTrace(angle, vel.length() * 4, pitch, 0, 4, 4, data:fltData);
+			LineTrace(angle, vel.length() * 4, pitch, TRF_ALLACTORS, 4, 4, data:fltData);
 		
 			if (fltData.TRACE_HitActor && !target)
 			{
@@ -270,8 +271,7 @@ class SpringyFly : Actor
 	States
 	{
 	Spawn:
-		FLYA ABABABABABABABABABABABA random(1,2);
-		FLYA B random(1,2) A_ActiveSound();
+		FLYA AB 1;
 		Loop;
 	}
 }
@@ -282,7 +282,7 @@ class SpringyFly : Actor
 FAUNA_MODULE.SNDINFO = 
 [[
 Fly/Buzz FLYBUZZ
-$attenuation Fly/Buzz 2
+$attenuation Fly/Buzz 3
 
 DSRATIDL DSRATIDL
 DSRAT DSRAT
