@@ -4345,8 +4345,15 @@ stderrf("  picked chain from blob %d --> %d\n", B.id, C.id)
 
         while x <= WC.chunk.sx2 do
         while y <= WC.chunk.sy2 do
-          SEEDS[x][y].floor_h = blob.floor_h
-          SEEDS[x][y].floor_mat = blob.floor_mat
+          if not SEEDS[x][y].floor_h then
+            SEEDS[x][y].floor_h = blob.floor_h
+            SEEDS[x][y].floor_mat = blob.floor_mat
+          else
+            if SEEDS[x][y].floor_h < blob.floor_h then
+              SEEDS[x][y].floor_h = blob.floor_h
+              SEEDS[x][y].floor_mat = blob.floor_mat
+            end
+          end
           y = y + 1
         end
           x = x + 1
