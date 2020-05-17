@@ -4329,35 +4329,38 @@ stderrf("  picked chain from blob %d --> %d\n", B.id, C.id)
       local blob = area.blobs[WC.cx1][WC.cy1]
       assert(blob)
 
+
       if WC.kind == "conn" and WC.conn.kind != "teleporter" then
         WC.conn.conn_h = assert(blob.floor_h)
       end
 
-      if WC.kind == "floor" or WC.kind == "decor" or WC.kind == "closet" then
+      --if WC.kind == "floor" or WC.kind == "decor" or WC.kind == "closet" then
+      if WC.chunk then
+        gui.printf(table.tostr(WC.chunk).."\n")
+      end
+
+      if WC.chunk then
         WC.chunk.floor_h   = assert(blob.floor_h)
         WC.chunk.floor_mat = assert(blob.floor_mat)
 
         -- distribute cell floor height info to seeds
-        -- MSSP-TODO: Distribution of cell heights doesn't seem to work perfectly
-        -- figure this out
+        -- MSSP-TODO: Distribution of cell heights and textures unfortunately works imperfectly
         local x = WC.chunk.sx1
-        local y = WC.chunk.sy1
+        local y
 
         while x <= WC.chunk.sx2 do
-        while y <= WC.chunk.sy2 do
-          if not SEEDS[x][y].floor_h then
-            SEEDS[x][y].floor_h = blob.floor_h
-            SEEDS[x][y].floor_mat = blob.floor_mat
-          else
-            if SEEDS[x][y].floor_h < blob.floor_h then
-              SEEDS[x][y].floor_h = blob.floor_h
-              SEEDS[x][y].floor_mat = blob.floor_mat
-            end
+
+          y = WC.chunk.sy1
+          while y <= WC.chunk.sy2 do
+
+            SEEDS[x][y].floor_h = WC.chunk.floor_h
+            SEEDS[x][y].floor_mat = WC.chunk.floor_mat
+
+            y = y + 1
           end
-          y = y + 1
-        end
           x = x + 1
         end
+
       end
 
     end
