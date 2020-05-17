@@ -1157,6 +1157,24 @@ function link_seed_info_to_areas()
 end
 
 
+-- safe area printing function
+function print_area(area)
+  if not area.printed then
+    gui.printf("AREA_" .. area.id .. " = {\n")
+    each k,v in area do
+      if type(v) == "table" then
+        gui.printf("  " .. k .. " = " .. (v.name or v.id or "<table>") .. "\n")
+      elseif type(v) == "boolean" then
+        gui.printf("  " .. k .. "\n")
+      else
+        gui.printf("  " .. k .. " = " .. v .. "\n")
+      end
+    end
+    gui.printf("}\n")
+  end
+end
+
+
 --------========| A* PATHING ALGORITHM |========--------
 
 

@@ -760,6 +760,7 @@ end
 function Seed_dump_rooms()
   local function seed_to_char(S)
     if not S then return "!" end
+    if S.custom then return S.custom end
     if S.free then return "!" end
     if S.error then return "?" end
 

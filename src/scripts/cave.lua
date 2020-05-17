@@ -137,6 +137,9 @@ function Cave_setup_stuff(area)
   area.base_sx = sx1
   area.base_sy = sy1
 
+  area.bound_sx = sx2
+  area.bound_sy = sy2
+
   area.base_x = SEEDS[sx1][sy1].x1
   area.base_y = SEEDS[sx1][sy1].y1
 
@@ -4325,6 +4328,46 @@ stderrf("  picked chain from blob %d --> %d\n", B.id, C.id)
     -- closets too
     -- [ FIXME : use this logic for normal CAVES too ]
 
+    -- MSSP-TODO
+    --print_area(area)
+    --[[each B in area.blobs do
+      each cell in B do
+        local bx = area.base_sx
+        local by = area.base_sy
+
+        if cell.cx1 then
+          local x = math.round(cell.cx1 / 2)
+          local y = math.round(cell.cy1 / 2)
+
+          while x <= cell.cx2 do
+            y = math.round(cell.cy1 / 2)
+            while y <= cell.cy2 do
+              local nx = bx + math.round(x / 2) - 1
+              local ny = by + math.round(y / 2) - 1
+
+              if not SEEDS[nx][ny].floor_h then
+                SEEDS[nx][ny].floor_h = cell.floor_h
+
+              elseif SEEDS[nx][ny].floor_h then
+
+                local h = SEEDS[nx][ny].floor_h
+                local nh = cell.floor_h
+
+                SEEDS[nx][ny].floor_h = math.max(h,nh)
+              end
+
+              SEEDS[nx][ny].floor_mat = cell.floor_mat
+
+              y = y + 1
+            end
+
+            x = x + 1
+          end
+        end
+
+      end
+    end]]
+
     each WC in area.walk_rects do
       local blob = area.blobs[WC.cx1][WC.cy1]
       assert(blob)
@@ -4334,17 +4377,11 @@ stderrf("  picked chain from blob %d --> %d\n", B.id, C.id)
         WC.conn.conn_h = assert(blob.floor_h)
       end
 
-      --if WC.kind == "floor" or WC.kind == "decor" or WC.kind == "closet" then
-      if WC.chunk then
-        gui.printf(table.tostr(WC.chunk).."\n")
-      end
-
       if WC.chunk then
         WC.chunk.floor_h   = assert(blob.floor_h)
         WC.chunk.floor_mat = assert(blob.floor_mat)
 
         -- distribute cell floor height info to seeds
-        -- MSSP-TODO: Distribution of cell heights and textures unfortunately works imperfectly
         local x = WC.chunk.sx1
         local y
 
@@ -4355,6 +4392,7 @@ stderrf("  picked chain from blob %d --> %d\n", B.id, C.id)
 
             SEEDS[x][y].floor_h = WC.chunk.floor_h
             SEEDS[x][y].floor_mat = WC.chunk.floor_mat
+            --SEEDS[x][y].free = true
 
             y = y + 1
           end
@@ -4449,6 +4487,8 @@ gui.debugf("BUILD PARK IN %s\n", R.name)
   end
 
   update_chunk_textures()
+
+  Seed_dump_rooms()
 end
 
 
