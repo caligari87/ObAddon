@@ -2851,6 +2851,8 @@ function Render_all_areas()
     Render_all_street_traffic()
   end
 
+  Render_scenic_fabs()
+
 end
 
 
@@ -3372,6 +3374,24 @@ function Render_establish_street_lanes()
   until y >= max_y
 
 end
+
+
+
+function Render_scenic_fabs()
+  each info in LEVEL.scenic_fabs do
+    local T = Trans.spot_transform(info.x, info.y, info.z1, rand.pick({2,4,6,8}))
+
+    local def = info.prefab_def
+    local skin = info.skin
+
+    if def.z_fit then
+      Trans.set_fitted_z(T, info.z1, info.z2)
+    end
+
+    Fabricate(nil, def, T, {skin})
+  end
+end
+
 
 
 ------------------------------------------------------------------------

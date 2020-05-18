@@ -5074,14 +5074,20 @@ function Cave_build_a_scenic_vista(area)
       local def = Fab_pick(reqs, "none_ok")
 
       if def then
-        local fx = ((x * SEED_SIZE) + (bb_max_x * SEED_SIZE)) / 2
-        local fy = ((y * SEED_SIZE) + (bb_max_x * SEED_SIZE)) / 2
-        local T = Trans.spot_transform(fx, fy, area.floor_h, rand.pick({2,4,6,8}))
-        if def.z_fit then
-          Trans.set_fitted_z(T, area.floor_h, area.ceil_h)
-        end
+        local fx = int((x * SEED_SIZE) + (cell_size / 2 * SEED_SIZE))
+        local fy = int((y * SEED_SIZE) + (cell_size / 2 * SEED_SIZE))
 
-        Fabricate(nil, def, T, {skin})
+        local fab =
+        {
+          prefab_def = def
+          x = fx
+          y = fy
+          z1 = area.floor_h
+          z2 = area.ceil_h
+          prefab_skin = skin
+        }
+
+        table.insert(LEVEL.scenic_fabs, fab)
       end
     end
 
