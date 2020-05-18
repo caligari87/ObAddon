@@ -676,6 +676,14 @@ end
 
 function Junction_calc_wall_tex(A1, A2)
 
+  if A1 == "map_edge" or A2 == "map_edge" then
+    if A1.zone then
+      return A1.zone.facade_mat
+    elseif A2.zone then
+      return A2.zone.facade_mat
+    end
+  end
+
   if A1.zone != A2.zone then
 
     if A1.room and not A1.is_outdoor then
@@ -683,13 +691,11 @@ function Junction_calc_wall_tex(A1, A2)
     end
 
     if A1.is_boundary and A1.touches_edge and A2.is_boundary then
-      return LEVEL.cliff_mat
+      return A1.zone.facade_mat
     end
 
-    if A1.room then
-      if A1.room.is_natural_park then
+    if A1.room and A1.room.is_natural_park then
         return assert(A1.room.main_tex)
-      end
     end
 
     return assert(A1.zone.facade_mat)
@@ -697,10 +703,8 @@ function Junction_calc_wall_tex(A1, A2)
 
   if A1.is_outdoor and A2:is_indoor() then
 
-    if A1.room then
-      if A1.room.is_natural_park then
-        return assert(A1.room.main_tex)
-      end
+    if A1.room and A1.room.is_natural_park then
+      return assert(A1.room.main_tex)
     end
 
     if A2.facade_crap then
@@ -726,7 +730,7 @@ function Junction_make_wall(junc)
     local A1 = sel(pass == 1, junc.A1, junc.A2)
     local A2 = sel(pass == 1, junc.A2, junc.A1)
 
-    assert(A2 != "map_edge")
+    --assert(A2 != "map_edge")
 
     -- do not need walls inside a void area
     if A1.mode == "void" then continue end

@@ -4487,8 +4487,6 @@ gui.debugf("BUILD PARK IN %s\n", R.name)
   end
 
   update_chunk_textures()
-
-  Seed_dump_rooms()
 end
 
 
@@ -4505,21 +4503,24 @@ function Cave_prepare_scenic_vista(area)
   if (OB_CONFIG.engine == "zdoom" or OB_CONFIG.engine == "gzdoom") then
     if OB_CONFIG.zdoom_vista == "enable"
     or (OB_CONFIG.zdoom_vista == "sky_gen_smart" and not EPISODE.has_mountains) then
-      table.insert(vista_list, "bottomless_drop")
-      table.insert(vista_list, "cliff_gradient")
+      vista_list =
+      {
+        bottomless_drop = 6
+        cliff_gradient = 5
+      }
     end
   end
 
-  table.insert(vista_list, "simple_fence")
-  table.insert(vista_list, "watery_drop")
+  vista_list.simple_fence = 3
+  vista_list.watery_drop = 3
 
   if LEVEL.liquid then
-    table.insert(vista_list, "ocean")
+    vista_list.ocean = 4
   end
 
-  table.insert(vista_list, "no_vista")
+  vista_list.fake_room = 4
 
-  vista_type = rand.pick(vista_list)
+  vista_type = rand.key_by_probs(vista_list)
 
   local nice_view_prob = style_sel("scenics", 0, 33, 67, 100)
   nice_view_prob = math.clamp(0, nice_view_prob - (LEVEL.autodetail_group_walls_factor * 4) + 1, 100)
@@ -4534,6 +4535,8 @@ function Cave_prepare_scenic_vista(area)
     area.border_type = "cliff_gradient"
   elseif vista_type == "bottomless_drop" and not room.has_hills then
     area.border_type = "bottomless_drop"
+  elseif vista_type == "fake_room" and not room.has_hills then
+    area.border_type = "fake_room"
   elseif vista_type == "ocean" and LEVEL.liquid and not room.has_hills then
     area.border_type = "ocean"
   elseif vista_type == "no_vista" then
@@ -4684,6 +4687,19 @@ function Cave_build_a_scenic_vista(area)
 
       return lowest_h
     end
+  end
+
+
+  local function get_random_area(room)
+    local tab = {}
+
+    each A in room.areas do
+      if A.mode == "floor" and A.floor_h then
+        table.insert(tab, A)
+      end
+    end
+
+    return rand.pick(tab)
   end
 
 
@@ -5003,6 +5019,91 @@ function Cave_build_a_scenic_vista(area)
   end
 
 
+  local function make_fake_room()
+
+    local function try_decor_here(area)
+      local reqs =
+      {
+        height = area.ceil_h - area.floor_h
+        env = "outdoor"
+        kind = "decor"
+        where = "point"
+      }
+
+      local skin =
+      {
+        floor = area.floor_mat
+        wall = area.main_tex
+        ceil = "_SKY"
+      }
+
+      local pick = rand.pick(area.seeds)
+      x = pick.sx
+      y = pick.sy
+
+      local cell_size = rand.key_by_probs({[1] = 9, [2] = 5, [4] = 1})
+      reqs.size = cell_size * SEED_SIZE
+
+      --check if this fab doesn't crossover others
+      local bb_max_x = cell_size
+      local bb_max_y = bb_max_x
+
+      local bb_x = 0
+      local bb_y = 0
+      while bb_x < bb_max_x do
+        bb_y = 0
+        while bb_y < bb_max_y do
+          local S = SEEDS[x + bb_x - cell_size][y + bb_y - cell_size]
+
+          if not S then return end
+          if not S.area then return end
+          if S.area and S.area != area then return end
+          if S.walls then return end
+          if S.diagonal then return end
+          if S.occupied then return end
+          S.occupied = true
+
+          bb_y = bb_y + 1
+        end
+        bb_x = bb_x + 1
+      end
+
+      local def = Fab_pick(reqs, "none_ok")
+
+      if def then
+        local T = Trans.spot_transform((x * SEED_SIZE) + 64, (y * SEED_SIZE) + 64, area.floor_h, rand.pick({2,4,6,8}))
+        if def.z_fit then
+          Trans.set_fitted_z(T, area.floor_h, area.ceil_h)
+        end
+
+        Fabricate(nil, def, T, {skin})
+      end
+    end
+
+    local FL = new_blob()
+
+    local src_area = get_random_area(room)
+
+    area.map_edge_type = "wall"
+
+    FL.floor_h = src_area.floor_h
+    FL.floor_mat = src_area.floor_mat
+    FL.floor_y_offset = 0
+
+    temp_install_floor(FL)
+
+    area.floor_h = FL.floor_h
+
+    area.fence_FLOOR = src_area.fence_mat
+    area.floor_mat = FL.floor_mat
+    area.main_tex = room.main_tex
+
+    for i = 1, int(area.svolume/32) do
+      try_decor_here(area, FL)
+    end
+  end
+
+
   local function make_no_vista()
     -- for people who don't like nice views
     area.mode = "void"
@@ -5013,9 +5114,22 @@ function Cave_build_a_scenic_vista(area)
 
   assert(area.mode == "scenic")
 
-  if rand.odds(50) then
-    area.fence_type = "fancy"
-  end
+  -- decide border junction
+  area.fence_type = rand.key_by_probs(
+    {
+      fence = 4
+      railing = 4
+      wall = 2
+    }
+  )
+
+  -- decide map edge junction type
+  area.map_edge_type = rand.key_by_probs(
+    {
+      wall = 1
+      edge = 9
+    }
+  )
 
   Cave_setup_stuff(area)
 
@@ -5037,6 +5151,9 @@ function Cave_build_a_scenic_vista(area)
 
   elseif area.border_type == "ocean" then
     make_ocean()
+
+  elseif area.border_type == "fake_room" then
+    make_fake_room()
 
   elseif area.border_type == "no_vista" then
     make_no_vista()

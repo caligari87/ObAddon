@@ -1579,7 +1579,11 @@ function Room_border_up()
     -- [ normal rooms should not touch the edge ]
 
     if A2 == "map_edge" then
-      Junction_make_map_edge(junc)
+      if A1.map_edge_type == "edge" then
+        Junction_make_map_edge(junc)
+      elseif A1.map_edge_type == "wall" then
+        Junction_make_wall(junc)
+      end
       return
     end
 
@@ -1674,15 +1678,15 @@ function Room_border_up()
         Junction_make_wall(junc)
 
       elseif A1.is_outdoor then
-        if A2.border_type == "cliff_gradient"
-        or A2.border_type == "watery_drop"
-        or A2.border_type == "bottomless_drop"
-        or A2.border_type == "ocean"
+        if A2.border_type != "no_vista"
         or (A2.border_type == "simple_fence" and A2.rail_up) then
-          if A2.fence_type == "fancy" then
+          if A2.fence_type == "fence" then
             Junction_make_fence(junc)
-          else
+          elseif A2.fence_type == "railing" then
             Junction_make_railing(junc, "FENCE_MAT_FROM_THEME", "block")
+          elseif A2.fence_type == "wall" then
+            Room_make_windows(A1, A2)
+            Junction_make_wall(junc)
           end
         end
 
