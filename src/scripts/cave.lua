@@ -4535,7 +4535,7 @@ function Cave_prepare_scenic_vista(area)
     area.border_type = "cliff_gradient"
   elseif vista_type == "bottomless_drop" and not room.has_hills then
     area.border_type = "bottomless_drop"
-  elseif vista_type == "fake_room" and not room.has_hills then
+  elseif vista_type == "fake_room" and not room.has_hills and not room.is_cave then
     area.border_type = "fake_room"
   elseif vista_type == "ocean" and LEVEL.liquid and not room.has_hills then
     area.border_type = "ocean"
@@ -4545,7 +4545,7 @@ function Cave_prepare_scenic_vista(area)
     area.border_type = "simple_fence"
   end
 
-  if room.is_natural_park then
+  if room.is_natural_park or not area.border_type then
     area.border_type = "no_vista"
   end
 end
@@ -5046,6 +5046,9 @@ function Cave_build_a_scenic_vista(area)
 
       --check if this fab doesn't crossover others
       local bb_max_x = cell_size
+      if cell_size == 1 then
+        bb_max_x = 2
+      end
       local bb_max_y = bb_max_x
 
       local bb_x = 0
@@ -5053,7 +5056,7 @@ function Cave_build_a_scenic_vista(area)
       while bb_x < bb_max_x do
         bb_y = 0
         while bb_y < bb_max_y do
-          local S = SEEDS[x + bb_x - cell_size][y + bb_y - cell_size]
+          local S = SEEDS[x + bb_x - cell_size + 1][y + bb_y - cell_size + 1]
 
           if not S then return end
           if not S.area then return end
@@ -5071,7 +5074,9 @@ function Cave_build_a_scenic_vista(area)
       local def = Fab_pick(reqs, "none_ok")
 
       if def then
-        local T = Trans.spot_transform((x * SEED_SIZE) + 64, (y * SEED_SIZE) + 64, area.floor_h, rand.pick({2,4,6,8}))
+        local fx = ((x * SEED_SIZE) + (bb_max_x * SEED_SIZE)) / 2
+        local fy = ((y * SEED_SIZE) + (bb_max_x * SEED_SIZE)) / 2
+        local T = Trans.spot_transform(fx, fy, area.floor_h, rand.pick({2,4,6,8}))
         if def.z_fit then
           Trans.set_fitted_z(T, area.floor_h, area.ceil_h)
         end
@@ -5101,6 +5106,7 @@ function Cave_build_a_scenic_vista(area)
     for i = 1, int(area.svolume/32) do
       try_decor_here(area, FL)
     end
+
   end
 
 
