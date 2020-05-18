@@ -5341,6 +5341,25 @@ LIQUEFY_SQ_CORNER =
   }
 }
 
+LIQEUFY_SHAVE =
+{
+  pass = "liquefy"
+
+  prob = 20
+
+  structure =
+  {
+    "111","111"
+    "1~~","1/~"
+    "~~~","~~~"
+  }
+
+  diagonals =
+  {
+    "1~"
+  }
+}
+
 --MSSP's random negative features [FEATURES] - 'negative' because they attempt to modify an existing room if it has too much clean space.
 
 GROW_FEATURES_CENTER =
