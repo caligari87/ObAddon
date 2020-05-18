@@ -3348,7 +3348,7 @@ function Room_floor_ceil_heights()
   local function porch_fixup_neighbors(R)
 
     local function infect_area(A, N)
-      if not N.floor_h then return end
+      if not N.floor_h or not N.ceil_h then return end
 
       A.is_outdoor = false
       A.ceil_mat = N.ceil_mat
