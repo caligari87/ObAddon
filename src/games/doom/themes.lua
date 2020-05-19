@@ -1261,7 +1261,7 @@ DOOM.THEMES =
       fence_corrugated_steel = 50
       fence_tech_hl_bars = 50
       fence_sloped_silver = 50
-      fence_highway_bars = 20
+      fence_highway_bars = 10
     }
 
     fence_posts =
@@ -1578,7 +1578,7 @@ DOOM.THEMES =
       fence_corrugated_steel = 50
       fence_tech_hl_bars = 12
       fence_sloped_silver = 12
-      fence_highway_bars = 50
+      fence_highway_bars = 25
     }
 
     fence_posts =

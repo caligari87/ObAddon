@@ -3936,11 +3936,13 @@ ARMAETUS_TECH_FENCE_GROUPS =
   fence_firestorm_red = 25
   fence_firestorm_blue = 25
   fence_construction = 20
+  fence_highway_bars_warnstep = 20
 }
 
 ARMAETUS_URBAN_FENCE_GROUPS =
 {
   fence_construction = 50
+  fence_highway_bars_warnstep = 25
 }
 
 ARMAETUS_HELL_FENCE_GROUPS =

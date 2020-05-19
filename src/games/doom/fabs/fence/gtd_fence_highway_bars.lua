@@ -32,3 +32,28 @@ PREFABS.Fence_highway_bars_diag =
 
   bound_z1 = 0
 }
+
+--
+
+PREFABS.Fence_highway_bars_warnstep =
+{
+  template = "Fence_highway_bars"
+
+  group = "fence_highway_bars_warnstep"
+
+  uses_epic_textures = true
+
+  tex_STEP4 = "WARNSTEP"
+}
+
+
+PREFABS.Fence_highway_bars_diag_warnstep =
+{
+  template = "Fence_highway_bars_diag"
+
+  group = "fence_highway_bars_warnstep"
+
+  uses_epic_textures = true
+
+  tex_STEP4 = "WARNSTEP"
+}
