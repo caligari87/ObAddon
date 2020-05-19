@@ -4533,8 +4533,6 @@ function Cave_prepare_scenic_vista(area)
     vista_type = "no_vista"
   end
 
-  vista_type = "fake_room"
-
   if vista_type == "watery_drop" and not room.has_hills then
     area.border_type = "watery_drop"
   elseif vista_type == "cliff_gradient" and not room.has_hills then
