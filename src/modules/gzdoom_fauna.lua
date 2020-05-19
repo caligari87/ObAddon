@@ -34,7 +34,7 @@ end
 
 FAUNA_MODULE.DEC =
 [[
-ACTOR Fauna 
+ACTOR Fauna
 {
   +CANNOTPUSH
   -CANPUSHWALLS
@@ -64,7 +64,7 @@ ACTOR Rodent: Fauna
 }
 
 // Credits:
-// Decorate: Captain Toenail	(with modifications by Frozsoul)
+// Decorate: Captain Toenail    (with modifications by Frozsoul)
 // Sprites: Operation Bodycount
 // Sounds: FindSounds.com
 actor ScurryRat: Rodent 30100
@@ -75,9 +75,9 @@ actor ScurryRat: Rodent 30100
   speed 15
   scale 0.25
   health 1
-  seesound 	"rat/active"
-  activesound	"rat/active"
-  deathsound	"rat/death"
+  seesound     "rat/active"
+  activesound    "rat/active"
+  deathsound    "rat/death"
   +FLOORCLIP
   +FRIGHTENED
   +LOOKALLAROUND
@@ -88,41 +88,41 @@ actor ScurryRat: Rodent 30100
   {
   Spawn:
   LookAround:
-	RATS A 10 A_Look
-	RATS B 10 A_Look
-	RATS C 10 A_Look
-	RATS D 10 A_Look
-	TNT1 A 0 A_Jump(32,"See")
-	loop
+    RATS A 10 A_Look
+    RATS B 10 A_Look
+    RATS C 10 A_Look
+    RATS D 10 A_Look
+    TNT1 A 0 A_Jump(32,"See")
+    loop
   See:
     RATS A 2 A_Chase
-	TNT1 A 0 A_PlaySound("rat/scurry", 4, 0.6, 1)
-	RATS A 2 A_Chase
-	RATS B 2 A_Chase
-	RATS B 2 A_Chase
-	RATS C 2 A_Chase
-	RATS C 2 A_Chase
-	RATS D 2 A_Chase
-	RATS D 2 A_Chase
-	TNT1 A 0 A_Jumpifcloser(20,"Bolt")
-	TNT1 A 0 A_Jump(128,"LookAround")
-	loop
+    TNT1 A 0 A_PlaySound("rat/scurry", 4, 0.6, 1)
+    RATS A 2 A_Chase
+    RATS B 2 A_Chase
+    RATS B 2 A_Chase
+    RATS C 2 A_Chase
+    RATS C 2 A_Chase
+    RATS D 2 A_Chase
+    RATS D 2 A_Chase
+    TNT1 A 0 A_Jumpifcloser(20,"Bolt")
+    TNT1 A 0 A_Jump(128,"LookAround")
+    loop
   Bolt:
-	RATS C 2 ThrustThing(0,30,0,1)
-	TNT1 A 0
-	{
-		if (Random(0, 255) < 50)
-		{
-			A_SetSpeed(RandomPick(15, 16, 17));
-		}
-	}
-	Goto See
+    RATS C 2 ThrustThing(0,30,0,1)
+    TNT1 A 0
+    {
+        if (Random(0, 255) < 50)
+        {
+            A_SetSpeed(RandomPick(15, 16, 17));
+        }
+    }
+    Goto See
   Death:
     TNT1 A 0 A_StopSound(4)
-	RATS I 3 A_ScreamAndUnblock	
-	RATS JKL 3
-	RATS L -1
-	stop
+    RATS I 3 A_ScreamAndUnblock
+    RATS JKL 3
+    RATS L -1
+    stop
   }
 }
 ]]
@@ -136,150 +136,150 @@ FAUNA_MODULE.ZSC =
 [[
 class SpringyFly : Actor
 {
-	transient FLineTraceData fltData;
-	Vector3 dest;
-	double chase;
-	double ignore;
-	int pause;
-	
-	Vector3 spring(Vector3 p, Vector3 r, Vector3 v, double k, double d)
-	{
-		//p == current position
-		//r == rest position
-		//v == current velocity
-		//k == spring coefficient
-		//d == damping coefficient
-		//simple damped spring formula
-		return -(d * v) - (k * (p - r));
-	}
-	
-	void getNewDest()
-	{
-		LineTrace(
-			frandom(0,360),
-			frandompick(8,16,32,64,128,256,512,1024),
-			frandom(-90,90),
-			TRF_THRUACTORS | TRF_ABSPOSITION,
-			dest.z,
-			dest.x,
-			dest.y,
-			fltData);
-		dest = (dest + fltData.HitLocation) * 0.5;
-	}
-	
-	override void PostBeginPlay() 
-	{
-		SetOrigin((pos.xy, frandom(floorz + 8, ceilingz - 8)), false);
-		dest = pos;
-		getNewDest();
-		chase = 0;
-		ignore = 35;
-		pause = 0;
-		scale *= frandom(0.1,0.2);
+    transient FLineTraceData fltData;
+    Vector3 dest;
+    double chase;
+    double ignore;
+    int pause;
+
+    Vector3 spring(Vector3 p, Vector3 r, Vector3 v, double k, double d)
+    {
+        //p == current position
+        //r == rest position
+        //v == current velocity
+        //k == spring coefficient
+        //d == damping coefficient
+        //simple damped spring formula
+        return -(d * v) - (k * (p - r));
+    }
+
+    void getNewDest()
+    {
+        LineTrace(
+            frandom(0,360),
+            frandompick(8,16,32,64,128,256,512,1024),
+            frandom(-90,90),
+            TRF_THRUACTORS | TRF_ABSPOSITION,
+            dest.z,
+            dest.x,
+            dest.y,
+            fltData);
+        dest = (dest + fltData.HitLocation) * 0.5;
+    }
+
+    override void PostBeginPlay()
+    {
+        SetOrigin((pos.xy, frandom(floorz + 8, ceilingz - 8)), false);
+        dest = pos;
+        getNewDest();
+        chase = 0;
+        ignore = 35;
+        pause = 0;
+        scale *= frandom(0.1,0.2);
         A_StartSound("fly/buzz", CHAN_BODY, CHANF_LOOP);
-	}
-		
-	override void Tick()
-	{
-	
+    }
+
+    override void Tick()
+    {
+
         if (isFrozen())
             return;
-			
+
         UpdateWaterLevel();
-		
+
         //This block manually advances states. Ripped straight from FastProjectile class:
         if (tics != -1)
-		{
+        {
             if (tics > 0)
                 tics--;
             while (!tics)
-			{
+            {
                 if (!SetState (CurState.NextState)) // mobj was removed
                     return;
             }
         }
-		
-		if (pause)
-		{
-			vel *= 0.8;
-			pause--;
-		}
-		else
-		{
-			vel += spring(pos, dest, vel, 0.01, 0.01);
-		}
-		
-		A_FaceMovementDirection();
-		
-		if (!ignore)
-		{
-			LineTrace(angle, vel.length() * 4, pitch, TRF_ALLACTORS, 4, 4, data:fltData);
-		
-			if (fltData.TRACE_HitActor && !target)
-			{
-				target = fltData.HitActor;
-				chase = random(18, 525);
-			}
-		}
-		else
-			ignore--;
-			
-		LineTrace(angle, vel.length() * 4, pitch, TRF_THRUACTORS, 4, 4, data:fltData);
-		
-		if (fltData.HitType != TRACE_HitNone)
-		{
-			vel *= 0.8;
-		}
-		
-		else
-		{
-			if (!target && !random(0,34))
-			{
-				getNewDest();
-			}
-		}
-		
-		SetOrigin(pos + vel, true);
 
-		if (target)
-		{
-			dest = (target.x + frandom(-target.radius , target.radius),
-					target.y + frandom(-target.radius , target.radius),
-					target.z + target.height);
-			if (!chase)
-			{
-				A_ClearTarget();
-				ignore = random(18, 105);
-			}
-			else
-				chase--;
-		}
-		
-		if (!pause && !random(0,104))
-			pause = random(1,35);
+        if (pause)
+        {
+            vel *= 0.8;
+            pause--;
+        }
+        else
+        {
+            vel += spring(pos, dest, vel, 0.01, 0.01);
+        }
+
+        A_FaceMovementDirection();
+
+        if (!ignore)
+        {
+            LineTrace(angle, vel.length() * 4, pitch, TRF_ALLACTORS, 4, 4, data:fltData);
+
+            if (fltData.TRACE_HitActor && !target)
+            {
+                target = fltData.HitActor;
+                chase = random(18, 525);
+            }
+        }
+        else
+            ignore--;
+
+        LineTrace(angle, vel.length() * 4, pitch, TRF_THRUACTORS, 4, 4, data:fltData);
+
+        if (fltData.HitType != TRACE_HitNone)
+        {
+            vel *= 0.8;
+        }
+
+        else
+        {
+            if (!target && !random(0,34))
+            {
+                getNewDest();
+            }
+        }
+
+        SetOrigin(pos + vel, true);
+
+        if (target)
+        {
+            dest = (target.x + frandom(-target.radius , target.radius),
+                    target.y + frandom(-target.radius , target.radius),
+                    target.z + target.height);
+            if (!chase)
+            {
+                A_ClearTarget();
+                ignore = random(18, 105);
+            }
+            else
+                chase--;
+        }
+
+        if (!pause && !random(0,104))
+            pause = random(1,35);
     }
-	
-	Default
-	{
-		ActiveSound "Fly/Buzz";
-		Height 8;
-		Radius 4;
-		+FORCEXYBILLBOARD;
-		+NOGRAVITY;
-	}
 
-	States
-	{
-	Spawn:
-		FLYA AB 1;
-		Loop;
-	}
+    Default
+    {
+        ActiveSound "Fly/Buzz";
+        Height 8;
+        Radius 4;
+        +FORCEXYBILLBOARD;
+        +NOGRAVITY;
+    }
+
+    States
+    {
+    Spawn:
+        FLYA AB 1;
+        Loop;
+    }
 }
 ]]
 
 -- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ SNDINFO ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-FAUNA_MODULE.SNDINFO = 
+FAUNA_MODULE.SNDINFO =
 [[
 Fly/Buzz FLYBUZZ
 $attenuation Fly/Buzz 3
@@ -290,35 +290,35 @@ DSRAT DSRAT
 // Includes NULLs to reduce frequency of noise
 $random rat/active { DSRATIDL DSRAT DSRAT DSRAT DSRAT NULL NULL NULL NULL NULL NULL NULL NULL}
 
-DSRATDI1	DSRATDI1
-DSRATDI2	DSRATDI2
-$random rat/death	{ DSRATDI1 DSRATDI2 }
+DSRATDI1    DSRATDI1
+DSRATDI2    DSRATDI2
+$random rat/death    { DSRATDI1 DSRATDI2 }
 
 // Sound modified from https://freesound.org/people/krnash/sounds/389794/
-rat/scurry	RATCRAWL
+rat/scurry    RATCRAWL
 ]]
 
 -- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ DEFINITIONS ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 FAUNA_MODULE.ACTORS =
 {
-  SpringyFly = 
+  SpringyFly =
   {
     id = 30000
-	cluster = 2
+    cluster = 2
   }
-  
+
   rat =
   {
-	id = 30100
-	cluster = 1
+    id = 30100
+    cluster = 1
   }
 }
 
 FAUNA_MODULE.DOOMEDNUMS =
 {
 [[
-	30000 = SpringyFly
+    30000 = SpringyFly
 ]]
 }
 
@@ -342,14 +342,14 @@ function FAUNA_MODULE.add_flies()
   if LEVEL.prebuilt then return end
 
   each A in LEVEL.areas do
-    
-	-- No spawning in outdoor snow areas
-	if (A.is_outdoor and LEVEL.outdoor_theme == "snow") then end
-	
-	if (A.mode and A.mode == "floor") then
+
+    -- No spawning in outdoor snow areas
+    if (A.is_outdoor and LEVEL.outdoor_theme == "snow") then end
+
+    if (A.mode and A.mode == "floor") then
       each S in A.seeds do
 
-		--[[
+        --[[
         -- not on chunks with something on it
         if S.chunk and S.chunk.content then continue end
 
@@ -359,12 +359,12 @@ function FAUNA_MODULE.add_flies()
         -- not on areas with liquid sinks
         if A.floor_group and A.floor_group.sink
         and A.floor_group.sink.mat == "_LIQUID" then continue end
-		--]]
-		
+        --]]
+
         if rand.odds(7) then
 
           local item_tab = {
-			--fly = 5
+            --fly = 5
             SpringyFly = 5
           }
 
@@ -412,10 +412,10 @@ function FAUNA_MODULE.add_rats()
     if (A.mode and A.mode == "floor") then
       each S in A.seeds do
 
-		-- No spawning in outdoor snow areas
-		if (A.is_outdoor and LEVEL.outdoor_theme == "snow") then end
-	
-		--[[
+        -- No spawning in outdoor snow areas
+        if (A.is_outdoor and LEVEL.outdoor_theme == "snow") then end
+
+        --[[
         -- not on chunks with something on it
         if S.chunk and S.chunk.content then continue end
 
@@ -425,8 +425,8 @@ function FAUNA_MODULE.add_rats()
         -- not on areas with liquid sinks
         if A.floor_group and A.floor_group.sink
         and A.floor_group.sink.mat == "_LIQUID" then continue end
-		--]]
-		
+        --]]
+
         if rand.odds(7) then
 
           local item_tab = {
@@ -472,26 +472,26 @@ end
 function FAUNA_MODULE.all_done()
 
   if (PARAM.flies == "enable" or PARAM.rats == "enable") then
-	PARAM.fauna_SNDINFO = FAUNA_MODULE.SNDINFO
+    PARAM.fauna_SNDINFO = FAUNA_MODULE.SNDINFO
   end
 
   if PARAM.flies == "enable" then
     PARAM.fauna_zsc = FAUNA_MODULE.ZSC
-	PARAM.fauna_mapinfo = FAUNA_MODULE.DOOMEDNUMS
-	local dir = "games/doom/data/"
+    PARAM.fauna_mapinfo = FAUNA_MODULE.DOOMEDNUMS
+    local dir = "games/doom/data/"
     gui.wad_merge_sections(dir .. "Fly.wad")
-	gui.wad_insert_file("data/sounds/FLYBUZZ.ogg", "FLYBUZZ")
+    gui.wad_insert_file("data/sounds/FLYBUZZ.ogg", "FLYBUZZ")
   end
 
   if PARAM.rats == "enable" then
     PARAM.fauna_dec = FAUNA_MODULE.DEC
     local dir = "games/doom/data/"
     gui.wad_merge_sections(dir .. "Rats.wad")
-	gui.wad_insert_file("data/sounds/DSRAT.ogg", "DSRAT")
-	gui.wad_insert_file("data/sounds/DSRATIDL.ogg", "DSRATIDL")
-	gui.wad_insert_file("data/sounds/DSRATDI1.ogg", "DSRATDI1")
-	gui.wad_insert_file("data/sounds/DSRATDI2.ogg", "DSRATDI2")
-	gui.wad_insert_file("data/sounds/RATCRAWL.ogg", "RATCRAWL")
+    gui.wad_insert_file("data/sounds/DSRAT.ogg", "DSRAT")
+    gui.wad_insert_file("data/sounds/DSRATIDL.ogg", "DSRATIDL")
+    gui.wad_insert_file("data/sounds/DSRATDI1.ogg", "DSRATDI1")
+    gui.wad_insert_file("data/sounds/DSRATDI2.ogg", "DSRATDI2")
+    gui.wad_insert_file("data/sounds/RATCRAWL.ogg", "RATCRAWL")
   end
 
 end

@@ -72,11 +72,11 @@ function ScriptMan_assemble_mapinfo_lump()
 
   table.insert(mapinfo_lines, "\n}\n")
   if PARAM.fauna_mapinfo then
-	table.insert(mapinfo_lines, "DoomedNums\n")
-	table.insert(mapinfo_lines, "{\n")
+    table.insert(mapinfo_lines, "DoomedNums\n")
+    table.insert(mapinfo_lines, "{\n")
     each line in PARAM.fauna_mapinfo do
       table.insert(mapinfo_lines,line)
-	end
+    end
       table.insert(mapinfo_lines, "}\n")
   end
 
