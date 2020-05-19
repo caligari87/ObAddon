@@ -27,3 +27,9 @@ PREFABS.Decor_road_vehicle_dump_truck =
 
   height = 96
 }
+
+PREFABS.Decor_road_vehicle_dozer =
+{
+  template = "Decor_road_vehicle_tractor_thing"
+  map = "MAP03"
+}
