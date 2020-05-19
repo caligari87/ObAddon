@@ -171,6 +171,17 @@ OB_MODULES["debugger"] =
       tooltip = "Displays usage statistics for shape grammar rules."
       default = "no"
       priority=95
+      gap = 1
+    }
+
+    fake_room_vista =
+    {
+      name = "fake_room_vista"
+      label = _("Fake Room Vista")
+      choices = DEBUG_CONTROL.YES_NO
+      tooltip = "Disables or enables fake room vistas."
+      default = "yes"
+      priority = 94
     }
   }
 }

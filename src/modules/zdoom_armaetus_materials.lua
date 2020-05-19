@@ -432,6 +432,12 @@ ARMAETUS_MATERIALS = {
   GRAYMETA = { t="GRAYMETA", f="SHINY04" } -- Cyan
   GRAYMETB = { t="GRAYMETB", f="SHINY04" } -- Purple-ish
   GRAYMETC = { t="GRAYMETC", f="SHINY04" } -- Orange
+  MET2  = { t="MET2", f="CEIL5_2" } -- METAL2
+  MET3  = { t="MET3", f="CEIL5_2" } -- METAL3
+  MET4  = { t="MET4", f="CEIL5_2" } -- METAL4
+  MET5  = { t="MET5", f="CEIL5_2" } -- METAL5
+  MET6  = { t="MET6", f="CEIL5_2" } -- METAL6
+  MET7  = { t="MET7", f="CEIL5_2" } -- METAL7
   METACOMP  = { t="METACOMP", f="CEIL5_2" }
   METAL8  = { t="METAL8", f="CEIL5_2" }
   METAL9  = { t="METAL9", f="CEIL5_2" }
@@ -1154,6 +1160,9 @@ ARMAETUS_MATERIALS = {
 
 
   -- Tech --
+
+  -- special rails
+  GDRAIL1 = { t="GDRAIL1", f="CEIL5_1", rail_h=32} -- is intended for fabs only
 
   -- Horizontal lights, based on the light bar found in
   -- the Doom2 exit door texture

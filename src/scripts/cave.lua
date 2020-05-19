@@ -4518,7 +4518,11 @@ function Cave_prepare_scenic_vista(area)
     vista_list.ocean = 4
   end
 
-  vista_list.fake_room = 4
+  -- MSSP-TODO: remove parameter control eventually
+  if not PARAM.fake_room_vista or
+  (PARAM.fake_room_vista and PARAM.fake_room_vista == "yes") then
+    vista_list.fake_room = 4
+  end
 
   vista_type = rand.key_by_probs(vista_list)
 
@@ -5062,6 +5066,7 @@ function Cave_build_a_scenic_vista(area)
 
           if not S then return end
           if not S.area then return end
+          if S.area.room then return end
           if S.area and S.area != area then return end
           if S.walls then return end
           if S.diagonal then return end
