@@ -3382,7 +3382,7 @@ function Render_scenic_fabs()
     local T = Trans.spot_transform(info.x, info.y, info.z1, rand.pick({2,4,6,8}))
 
     local def = info.prefab_def
-    local skin = info.skin
+    local skin = info.prefab_skin
 
     if def.z_fit then
       Trans.set_fitted_z(T, info.z1, info.z2)

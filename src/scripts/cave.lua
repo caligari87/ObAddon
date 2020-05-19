@@ -4529,6 +4529,8 @@ function Cave_prepare_scenic_vista(area)
     vista_type = "no_vista"
   end
 
+  vista_type = "fake_room"
+
   if vista_type == "watery_drop" and not room.has_hills then
     area.border_type = "watery_drop"
   elseif vista_type == "cliff_gradient" and not room.has_hills then
@@ -5033,7 +5035,7 @@ function Cave_build_a_scenic_vista(area)
       local skin =
       {
         floor = area.floor_mat
-        wall = area.main_tex
+        wall = area.zone.facade_mat
         ceil = "_SKY"
       }
 
