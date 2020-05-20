@@ -849,7 +849,7 @@ function Monster_fill_room(R)
     factor = factor * (0.8 + LEVEL.game_along * 0.4)
 
     -- apply the room "pressure" type
-    if R.pressure == "none" then factor = -9001 end
+    if R.pressure == "none" then factor = -EXTREME_H end
     if R.pressure == "low"  then factor = factor / 2.1 end
     if R.pressure == "high" then factor = factor * 1.4 end
 
@@ -950,7 +950,7 @@ function Monster_fill_room(R)
     qty = qty * (THEME.monster_factor or 1)
 
     -- apply the room "pressure" type
-    if R.pressure == "none" then qty = -9001 end
+    if R.pressure == "none" then qty = -EXTREME_H end
     if R.pressure == "low"  then qty = qty / 2.5 end
     if R.pressure == "high" then qty = qty * 1.5 end
 

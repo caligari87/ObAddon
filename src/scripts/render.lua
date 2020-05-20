@@ -483,8 +483,8 @@ function Render_edge(E)
     local x1,y1, x2,y2 = Edge_line_coords(edge)
 
     local z
-    local z1 = (E.area.ceil_h or -9001)
-    local z2 = (E.peer.area.ceil_h or -9001)
+    local z1 = (E.area.ceil_h or -EXTREME_H)
+    local z2 = (E.peer.area.ceil_h or -EXTREME_H)
     z = math.max(z1,z2)
 
     for pass = 1, 2 do

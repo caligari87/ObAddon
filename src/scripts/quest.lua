@@ -3037,7 +3037,7 @@ function Quest_room_themes()
         kind = "pillar"
         where = "point"
 
-        height = 9001
+        height = EXTREME_H
         size = 128
       }
 

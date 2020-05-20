@@ -1907,7 +1907,7 @@ stderrf("Cages in %s [%s pressure] --> any_prob=%d  per_prob=%d\n",
     end
 
     if R.is_park then
-      reqs.height = 9001 --MSSP-TODO: FIX-ME!!
+      reqs.height = EXTREME_H --MSSP-TODO: FIX-ME!!
 
       if R.is_natural_park then
         reqs.group = "natural_walls"
@@ -2445,7 +2445,7 @@ function Layout_handle_corners()
 
     local post_top_z
 
-    corner.post_top_h = -9001
+    corner.post_top_h = -EXTREME_H
 
     each junc in corner.junctions do
       if junc.A2 == "map_edge" then return end
@@ -2457,7 +2457,7 @@ function Layout_handle_corners()
 
         if corner.posted then return end
 
-        local tallest_h = -9001
+        local tallest_h = -EXTREME_H
         each xjunc in corner.junctions do
           if xjunc.E1 and xjunc.E1.fence_top_z then
             if xjunc.E1.fence_top_z > tallest_h then
@@ -2487,8 +2487,8 @@ function Layout_handle_corners()
         local mostly_env = Corner_get_env(corner)
 
         -- indoor posts should meet the ceiling
-        local tallest_h = -9001
-        local tallest_scenic_fence_h = -9001
+        local tallest_h = -EXTREME_H
+        local tallest_scenic_fence_h = -EXTREME_H
 
         if mostly_env == "building" then
 

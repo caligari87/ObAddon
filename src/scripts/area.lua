@@ -759,7 +759,6 @@ function Junction_calc_fence_z(A1, A2)
   assert(z1 or A2.room.max_floor_h)
 
   if A1.room then z1 = math.max(z1, A1.room.max_floor_h) end
-
   if A2.room then z2 = math.max(z2, A2.room.max_floor_h) end
 
   -- pick max floor height in the zone (super tall brush fences
@@ -874,8 +873,8 @@ function Junction_make_railing(junc, rail_mat, block)
 
   -- calculate base Z
   -- TODO : handle "nature" areas better (checks cells along the junction)
-  local z1 = junc.A1.max_floor_h or junc.A1.floor_h or -9001
-  local z2 = junc.A2.max_floor_h or junc.A2.floor_h or -9001
+  local z1 = junc.A1.max_floor_h or junc.A1.floor_h or -EXTREME_H
+  local z2 = junc.A2.max_floor_h or junc.A2.floor_h or -EXTREME_H
 
   junc.E1.rail_z = math.max(z1, z2)
 

@@ -4667,7 +4667,7 @@ function Cave_build_a_scenic_vista(area)
 
     if mode == "highest" then
 
-      local tallest_h = -9001
+      local tallest_h = -EXTREME_H
 
       each N in A.neighbors do
         if N.floor_h and N.room then
@@ -4681,7 +4681,7 @@ function Cave_build_a_scenic_vista(area)
 
     elseif mode == "lowest" then
 
-      local lowest_h = 9001
+      local lowest_h = EXTREME_H
 
       each N in A.neighbors do
         if N.floor_h and N.room then

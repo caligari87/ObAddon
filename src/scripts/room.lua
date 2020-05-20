@@ -687,7 +687,7 @@ end
 
 
 function ROOM_CLASS.get_highest_ceiling(R) --MSSP
-  local h = -9001
+  local h = -EXTREME_H
   each A in R.areas do
     if A.ceil_h then
       if A.ceil_h > h then
@@ -1724,7 +1724,7 @@ function Room_border_up()
       -- beams --
 
       if not A1.is_outdoor and not A2.is_outdoor then
-        local beam_prob = style_sel("beams",0,15,30,45)
+        local beam_prob = style_sel("beams",0,10,20,30)
           / (LEVEL.autodetail_group_walls_factor/3)
         if can_beam(A1, A2, junc) and rand.odds(beam_prob) then
           Junction_make_beams(junc)
@@ -2179,7 +2179,7 @@ function Room_choose_size(R, not_big)
 
   if R.is_street then
     R.size_limit = (LEVEL.map_W*LEVEL.map_H)*1.3
-    R.floor_limit = 9001
+    R.floor_limit = EXTREME_H
     R.is_big = true
     R.is_outdoor = true
   end
@@ -3610,7 +3610,7 @@ function Room_set_sky_heights()
   -- be taller than any indoor room in the same
   -- zone
   each Z in LEVEL.zones do
-    Z.sky_h = -9001
+    Z.sky_h = -EXTREME_H
     each A in Z.areas do
       if A.ceil_h then
         if A.ceil_h > Z.sky_h then
@@ -3804,7 +3804,7 @@ function Room_cleanup_stairs_to_nowhere(R)
       end
 
       if N.mode == "liquid" then
-        local initial_height = 9001
+        local initial_height = EXTREME_H
         local best_LN
         each LN in N.neighbors do
           if LN.room == N.room then
@@ -3826,8 +3826,8 @@ function Room_cleanup_stairs_to_nowhere(R)
   local function fixup_cages()
     each A in LEVEL.areas do
       if A.mode == "cage" and A.floor_h then
-        local tallest_ceiling = -9001
-        local lowest_floor = 9001
+        local tallest_ceiling = -EXTREME_H
+        local lowest_floor = EXTREME_H
 
         each N in A.neighbors do
           if A.room == N.room and (N.mode == "floor" or N.mode == "liquid") then
@@ -3840,11 +3840,11 @@ function Room_cleanup_stairs_to_nowhere(R)
           end
         end
 
-        if A.floor_h < lowest_floor and lowest_floor < 9001 then
+        if A.floor_h < lowest_floor and lowest_floor < EXTREME_H then
           local diff = lowest_floor - A.floor_h
           A.floor_h = lowest_floor + 32
           A.ceil_h = A.ceil_h + diff
-        elseif A.ceil_h > tallest_ceiling and tallest_ceiling > -9001 then
+        elseif A.ceil_h > tallest_ceiling and tallest_ceiling > -EXTREME_H then
           local diff = lowest_floor + A.ceil_h
           A.ceil_h = tallest_ceiling
         end
