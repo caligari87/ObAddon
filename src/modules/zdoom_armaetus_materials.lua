@@ -1055,7 +1055,7 @@ ARMAETUS_MATERIALS = {
   ORANFLOR = { f="ORANFLOR", t="COLLITE2" }
   STARBR2F = { t="STARBR2", f="STARBR2F" } -- Unused
   STARG1F = { t="STARG1", f="STARG1F" } -- Unused
-  STARGR1F = { t="STARG1", f="STARG1F" } -- Unused
+  STARGRF = { t="STARG1", f="STARGRF" } -- Unused
   STARTANF = { t="STARTAN2", f="STARTANF" } -- Currently unused
   TEK1 = { t="TEKWALL8",  f="TEK1" }
   TEK2 = { t="TEKWALL9",  f="TEK2" }
