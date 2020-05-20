@@ -86,17 +86,27 @@ actor ScurryRat: Rodent 30100
   +SHOOTABLE
   states
   {
-  Spawn:
   LookAround:
-    RATS A 10 A_Look
-    RATS B 10 A_Look
-    RATS C 10 A_Look
-    RATS D 10 A_Look
-    TNT1 A 0 A_Jump(32,"See")
+	RATS A 1 A_Jump(256,"LookAround1","LookAround2")
+	stop
+  
+  LookAround1:
+    RATS A 40 A_Look  
+    TNT1 A 0 A_Jump(25,"LookAround2")
+	TNT1 A 0 A_Jump(5,"See")
     loop
+  
+  LookAround2:
+    RATS B 40 A_Look
+    TNT1 A 0 A_Jump(25,"LookAround1")
+    TNT1 A 0 A_Jump(5,"See")
+    loop
+
+  Spawn:
   See:
     RATS A 2 A_Chase
-    TNT1 A 0 A_PlaySound("rat/scurry", 4, 0.6, 1)
+	TNT1 A 0 A_SetSpeed(15)
+    TNT1 A 0 A_PlaySound("rat/scurry", 4, 0.8, 1)
     RATS A 2 A_Chase
     RATS B 2 A_Chase
     RATS B 2 A_Chase
@@ -108,12 +118,12 @@ actor ScurryRat: Rodent 30100
     TNT1 A 0 A_Jump(128,"LookAround")
     loop
   Bolt:
-    RATS C 2 ThrustThing(0,30,0,1)
+    RATS C 2 ThrustThing(angle * 256 / 360 + 128,30,0,1)
     TNT1 A 0
     {
         if (Random(0, 255) < 50)
         {
-            A_SetSpeed(RandomPick(15, 16, 17));
+            A_SetSpeed(RandomPick(18, 20, 22));
         }
     }
     Goto See
@@ -339,32 +349,30 @@ end
 
 function FAUNA_MODULE.add_flies()
 
-  if LEVEL.prebuilt then return end
-
   each A in LEVEL.areas do
-
-    -- No spawning in outdoor snow areas
-    if (A.is_outdoor and LEVEL.outdoor_theme == "snow") then end
 
     if (A.mode and A.mode == "floor") then
       each S in A.seeds do
 
-        --[[
-        -- not on chunks with something on it
-        if S.chunk and S.chunk.content then continue end
+        -- No spawning in outdoor snow areas
+        if (A.is_outdoor and LEVEL.outdoor_theme == "snow") then end
 
-        -- not on diagonals
-        if S.diagonal then continue end
+        -- Default spawning odds
+        local spawn_odds = 10
+		
+        -- Lower spawning probability if indoors
+        if (A.is_indoor) then
+		  spawn_odds = 5
+		end
 
-        -- not on areas with liquid sinks
-        if A.floor_group and A.floor_group.sink
-        and A.floor_group.sink.mat == "_LIQUID" then continue end
-        --]]
+		-- Greater spawning probability if outdoors and temperate
+		if (A.is_outdoor and LEVEL.outdoor_theme == "temperate") then 
+		  spawn_odds = 15
+		end
 
-        if rand.odds(7) then
+        if rand.odds(spawn_odds) then
 
           local item_tab = {
-            --fly = 5
             SpringyFly = 5
           }
 
@@ -393,20 +401,13 @@ function FAUNA_MODULE.add_flies()
 
             raw_add_entity(event_thing)
           end
-
         end
-
       end
     end
   end
 end
 
 function FAUNA_MODULE.add_rats()
-
-  if LEVEL.prebuilt then return end
-
-  -- No rats in snow theme
-  if LEVEL.outdoor_theme == "snow" then return end
 
   each A in LEVEL.areas do
     if (A.mode and A.mode == "floor") then
@@ -415,19 +416,15 @@ function FAUNA_MODULE.add_rats()
         -- No spawning in outdoor snow areas
         if (A.is_outdoor and LEVEL.outdoor_theme == "snow") then end
 
-        --[[
-        -- not on chunks with something on it
-        if S.chunk and S.chunk.content then continue end
+        -- Default spawning odds
+        local spawn_odds = 1
+		
+        -- Greater spawning probability if indoors
+        if (A.is_indoor) then
+		  spawn_odds = 3
+		end
 
-        -- not on diagonals
-        if S.diagonal then continue end
-
-        -- not on areas with liquid sinks
-        if A.floor_group and A.floor_group.sink
-        and A.floor_group.sink.mat == "_LIQUID" then continue end
-        --]]
-
-        if rand.odds(7) then
+        if rand.odds(spawn_odds) then
 
           local item_tab = {
             rat = 5
@@ -458,13 +455,10 @@ function FAUNA_MODULE.add_rats()
 
             raw_add_entity(event_thing)
           end
-
         end
-
       end
     end
   end
-
 end
 
 
