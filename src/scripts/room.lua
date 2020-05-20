@@ -3012,9 +3012,7 @@ function Room_floor_ceil_heights()
       A.floor_h = math.min(A.floor_h, N.ceil_h - 64)
     end
 
-    -- MSSP-TODO: restore this code but apply it to all areas in the same floor group
-    -- and accomodate the max floor heights as well
-    -- A.ceil_h   = math.max(A.floor_h + A.room.scenic_fence.rail_h, A.floor_h + 72)
+    A.ceil_h   = math.max(A.floor_h + A.room.scenic_fence.rail_h, A.floor_h + 72)
     A.ceil_mat = N.ceil_mat
 
     if A.is_outdoor then
@@ -3054,9 +3052,12 @@ function Room_floor_ceil_heights()
       end
     end
 
+    -- MSSP-TODO: restore this code but apply it to all areas in the same floor group
+    -- and accomodate the max floor heights as well
+
     -- unify cages to their preferred neighbor heights if the
     -- cage itself is taller
-    if R:get_env() == "building" then
+    --[[if R:get_env() == "building" then
       each N2 in A.neighbors do
         if N2.room then
           if A.room == N2.room then
@@ -3072,7 +3073,7 @@ function Room_floor_ceil_heights()
           end
         end
       end
-    end
+    end]]
 
     -- adopt room ceiling texture if cage ceiling is at neighbor's height
     if A.ceil_h == N.ceil_h then
