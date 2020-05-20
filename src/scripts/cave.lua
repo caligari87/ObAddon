@@ -5047,25 +5047,23 @@ function Cave_build_a_scenic_vista(area)
       x = pick.sx
       y = pick.sy
 
-      local cell_size = rand.key_by_probs({[1] = 9, [2] = 5, [4] = 1})
+      local cell_size = rand.key_by_probs({[2] = 9, [4] = 2})
+      if x + cell_size > LEVEL.map_w then return end
+      if y + cell_size > LEVEL.map_h then return end
+
       reqs.size = cell_size * SEED_SIZE
 
       --check if this fab doesn't crossover others
-      local bb_max_x = cell_size
-      if cell_size == 1 then
-        bb_max_x = 2
-      end
-      local bb_max_y = bb_max_x
-
       local bb_x = 0
       local bb_y = 0
-      while bb_x < bb_max_x do
+      while bb_x < cell_size do
         bb_y = 0
-        while bb_y < bb_max_y do
-          local S = SEEDS[x + bb_x - cell_size + 1][y + bb_y - cell_size + 1]
+        while bb_y < cell_size do
+          local new_x = x + bb_x
+          local new_y = y + bb_y
 
-          if not S then return end
-          if not S.area then return end
+          local S = SEEDS[new_x][new_y]
+
           if S.area.room then return end
           if S.area and S.area != area then return end
           if S.walls then return end
@@ -5081,8 +5079,8 @@ function Cave_build_a_scenic_vista(area)
       local def = Fab_pick(reqs, "none_ok")
 
       if def then
-        local fx = int((x * SEED_SIZE) + (cell_size / 2 * SEED_SIZE))
-        local fy = int((y * SEED_SIZE) + (cell_size / 2 * SEED_SIZE))
+        local fx = (x + (cell_size / 2)) * SEED_SIZE + 64
+        local fy = (y + (cell_size / 2)) * SEED_SIZE + 64
 
         local fab =
         {

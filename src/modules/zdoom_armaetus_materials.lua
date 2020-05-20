@@ -1192,7 +1192,7 @@ ARMAETUS_MATERIALS = {
   T_VSLTEP = { t="T_VSLTEP", f="FLAT23"}
 
   -- Sandy Tech floors
-  T_SDTCH1 = { t="SARTAN1", f = "T_SDTCH1"}
+  T_SDTCH1 = { t="STARTAN1", f = "T_SDTCH1"}
   T_SDTCH2 = { t="METL04", f = "T_SDTCH2"}
   T_SDTCH3 = { t="BRONZE5", f = "T_SDTCH3"}
   T_SDTCH4 = { t="CEM11", f = "T_SDTCH4"}
