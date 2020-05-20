@@ -586,12 +586,12 @@ function ZDOOM_SPECIALS.do_special_stuff()
       color = "00 00 00"
     end
 
-    if color then
-      return color
-    else
+    if not color then
       gui.printf("\nCould not resolve skybox generator color.\n")
       return "00 00 00"
     end
+
+    return color
   end
 
 
