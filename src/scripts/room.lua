@@ -1843,7 +1843,7 @@ function Room_border_up()
       -- occasionally omit it when big height difference
       -- MSSP: New behavior, make a railing instead
       if can_omit_fence(A1, A2) and rand.odds(omit_fence_prob) then
-        Junction_make_railing(junc)
+        Junction_make_railing(junc, "FENCE_MAT_FROM_THEME", "block")
       else
         Junction_make_fence(junc)
       end
