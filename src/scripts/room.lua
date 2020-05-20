@@ -3012,7 +3012,9 @@ function Room_floor_ceil_heights()
       A.floor_h = math.min(A.floor_h, N.ceil_h - 64)
     end
 
-    A.ceil_h   = math.max(A.floor_h + A.room.scenic_fence.rail_h, A.floor_h + 72)
+    -- MSSP-TODO: restore this code but apply it to all areas in the same floor group
+    -- and accomodate the max floor heights as well
+    -- A.ceil_h   = math.max(A.floor_h + A.room.scenic_fence.rail_h, A.floor_h + 72)
     A.ceil_mat = N.ceil_mat
 
     if A.is_outdoor then
