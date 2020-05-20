@@ -5048,8 +5048,8 @@ function Cave_build_a_scenic_vista(area)
       y = pick.sy
 
       local cell_size = rand.key_by_probs({[2] = 9, [4] = 2})
-      if x + cell_size > LEVEL.map_w then return end
-      if y + cell_size > LEVEL.map_h then return end
+      if x + cell_size > LEV.map_w then return end
+      if y + cell_size > LEV.map_h then return end
 
       reqs.size = cell_size * SEED_SIZE
 
