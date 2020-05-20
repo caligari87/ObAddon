@@ -3542,6 +3542,7 @@ end
     do_closets(R)
 
     Room_cleanup_stairs_to_nowhere(R)
+    calc_min_max_floor(R)
   end
 end
 
