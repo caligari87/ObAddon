@@ -578,6 +578,8 @@ function ZDOOM_SPECIALS.do_special_stuff()
       color = "d8 27 13"
     elseif skyname == "HELL_CLOUDS" then
       color = "d8 27 13"
+    elseif skyname == "PURPLE_CLOUDS" or skyname == "RAINBOW_CLOUDS" then
+      color = "ff 00 ff"
     elseif skyname == "STARS" then
       color = "00 00 00"
     else
