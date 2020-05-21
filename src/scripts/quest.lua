@@ -3068,8 +3068,6 @@ function Quest_room_themes()
     if next_theme == LEVEL.theme_name then return end
     if env == "park" then env = "outdoor" end
 
-    gui.printf(table.tostr(exit_room))
-
     tab = collect_usable_themes(env, nil, next_theme)
 
     exit_room.theme = GAME.ROOM_THEMES[rand.key_by_probs(tab)]
