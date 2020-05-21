@@ -1279,7 +1279,7 @@ function Grower_add_room(parent_R, info, trunk)
 
   local R = ROOM_CLASS.new()
 
-  if  PARAM.print_shape_steps andPARAM.print_shape_steps != "no" then
+  if PARAM.print_shape_steps and PARAM.print_shape_steps != "no" then
 gui.printf("new room %s : env = %s : parent = %s\n", R.name, tostring(info.env), tostring(parent_R and parent_R.name))
   end
 
@@ -3276,8 +3276,8 @@ end
     PARAM.operated_room = R.id
 
     if PARAM.cur_shape_group != ""
-    and PARAM.print_shape_steps != "no"
-    PARAM.print_shape_steps and then
+    and PARAM.print_shape_steps
+    and PARAM.print_shape_steps != "no" then
       gui.printf("Shape group: " .. PARAM.cur_shape_group .. "\n")
       gui.printf("Shape count: " .. PARAM.cur_shape_group_apply_count .. "\n")
     end
