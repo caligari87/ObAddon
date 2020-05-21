@@ -299,16 +299,19 @@ FAUNA_MODULE.SNDINFO =
 Fly/Buzz FLYBUZZ
 $attenuation Fly/Buzz 3
 
+// Scurry rat active (squeaking) sounds
+// Includes NULLs to reduce frequency of squeaking noise
 DSRATIDL DSRATIDL
 DSRAT DSRAT
-
-// Includes NULLs to reduce frequency of noise
+$attenuation DSRATIDL 3
+$attenuation DSRAT 3
 $random rat/active { DSRATIDL DSRAT DSRAT DSRAT DSRAT NULL NULL NULL NULL NULL NULL NULL NULL NULL NULL NULL NULL }
+
+// Scurry rat death sounds
 DSRATDI1    DSRATDI1
 DSRATDI2    DSRATDI2
 $attenuation DSRATDI1 3
 $attenuation DSRATDI2 3
-
 $random rat/death    { DSRATDI1 DSRATDI2 }
 
 // Sound modified from https://freesound.org/people/krnash/sounds/389794/
