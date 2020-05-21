@@ -1,4 +1,4 @@
-PREFABS.Item_scionox_nature_simple =
+PREFABS.Item_scionox_nature_simple_debris =
 {
   file  = "item/scionox_nature_simple.wad"
   where = "point"
@@ -10,7 +10,7 @@ PREFABS.Item_scionox_nature_simple =
   prob = 75
 }
 
-PREFABS.Item_scionox_nature_simple_2 =
+PREFABS.Item_scionox_nature_simple_boulder =
 {
   template = "Item_scionox_nature_simple"
 
@@ -22,7 +22,7 @@ PREFABS.Item_scionox_nature_simple_2 =
   map = "MAP02"
 }
 
-PREFABS.Item_scionox_nature_simple_3 =
+PREFABS.Item_scionox_nature_simple_stalagmites =
 {
   template = "Item_scionox_nature_simple"
 
@@ -32,7 +32,7 @@ PREFABS.Item_scionox_nature_simple_3 =
   map = "MAP03"
 }
 
-PREFABS.Item_scionox_nature_simple_4 =
+PREFABS.Item_scionox_nature_simple_pool =
 {
   template = "Item_scionox_nature_simple"
 
