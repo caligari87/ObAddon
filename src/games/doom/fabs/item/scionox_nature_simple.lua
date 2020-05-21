@@ -12,7 +12,7 @@ PREFABS.Item_scionox_nature_simple_debris =
 
 PREFABS.Item_scionox_nature_simple_boulder =
 {
-  template = "Item_scionox_nature_simple"
+  template = "Item_scionox_nature_simple_debris"
 
   env  = "nature"
 
@@ -24,7 +24,7 @@ PREFABS.Item_scionox_nature_simple_boulder =
 
 PREFABS.Item_scionox_nature_simple_stalagmites =
 {
-  template = "Item_scionox_nature_simple"
+  template = "Item_scionox_nature_simple_debris"
 
   size = 80
   height = 128
@@ -34,7 +34,7 @@ PREFABS.Item_scionox_nature_simple_stalagmites =
 
 PREFABS.Item_scionox_nature_simple_pool =
 {
-  template = "Item_scionox_nature_simple"
+  template = "Item_scionox_nature_simple_debris"
 
   env  = "nature"
 
