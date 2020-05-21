@@ -5047,9 +5047,9 @@ function Cave_build_a_scenic_vista(area)
       x = pick.sx
       y = pick.sy
 
-      local cell_size = rand.key_by_probs({[2] = 9, [4] = 2})
-      if x + cell_size > LEVEL.map_W then return end
-      if y + cell_size > LEVEL.map_H then return end
+      local cell_size = 2
+      if x + cell_size > SEED_W then return end
+      if y + cell_size > SEED_H then return end
 
       reqs.size = cell_size * SEED_SIZE
 
@@ -5064,7 +5064,7 @@ function Cave_build_a_scenic_vista(area)
 
           local S = SEEDS[new_x][new_y]
 
-          if S.area.room then return end
+          if not S.area then return end
           if S.area and S.area != area then return end
           if S.walls then return end
           if S.diagonal then return end
@@ -5079,8 +5079,8 @@ function Cave_build_a_scenic_vista(area)
       local def = Fab_pick(reqs, "none_ok")
 
       if def then
-        local fx = (x + (cell_size / 2)) * SEED_SIZE + 64
-        local fy = (y + (cell_size / 2)) * SEED_SIZE + 64
+        local fx = x * SEED_SIZE
+        local fy = y * SEED_SIZE
 
         local fab =
         {
