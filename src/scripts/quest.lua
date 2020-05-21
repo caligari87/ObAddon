@@ -3057,6 +3057,7 @@ function Quest_room_themes()
 
   local function choose_exit_theme()
     local exit_room = LEVEL.exit_room
+    local env = exit_room:get_env()
     local next_theme
     local tab = {}
 
@@ -3065,10 +3066,14 @@ function Quest_room_themes()
     end
 
     if next_theme == LEVEL.theme_name then return end
+    if env == "park" then env = "outdoor" end
 
-    tab = collect_usable_themes(exit_room:get_env(), nil, next_theme)
+    gui.printf(table.tostr(exit_room))
+
+    tab = collect_usable_themes(env, nil, next_theme)
 
     exit_room.theme = GAME.ROOM_THEMES[rand.key_by_probs(tab)]
+
     if not exit_room.theme.theme_override then
       exit_room.theme.theme_override = next_theme
     end
