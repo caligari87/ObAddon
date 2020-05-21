@@ -1,4 +1,4 @@
-PREFABS.Item_scionox_simple_crates =
+PREFABS.Item_scionox_simple_crates_pile_on_top =
 {
   file = "item/scionox_simple_crates.wad"
   map = "MAP01"
@@ -12,17 +12,17 @@ PREFABS.Item_scionox_simple_crates =
   size = 64
 }
 
-PREFABS.Item_scionox_simple_crates_2 =
+PREFABS.Item_scionox_simple_crates_pile_on_top_2 =
 {
-  template = "Item_scionox_simple_crates"
+  template = "Item_scionox_simple_crates_pile_on_top"
 
   flat_CRATOP2 = "CRATOP1"
   tex_CRATE1 = "CRATE2"
 }
 
-PREFABS.Item_scionox_simple_crates_3 =
+PREFABS.Item_scionox_simple_crates_pile_on_side =
 {
-  template = "Item_scionox_simple_crates"
+  template = "Item_scionox_simple_crates_pile_on_top"
 
   map = "MAP02"
 
@@ -30,9 +30,9 @@ PREFABS.Item_scionox_simple_crates_3 =
   size  = 96
 }
 
-PREFABS.Item_scionox_simple_crates_4 =
+PREFABS.Item_scionox_simple_crates_pile_on_side_2 =
 {
-  template = "Item_scionox_simple_crates"
+  template = "Item_scionox_simple_crates_pile_on_top"
 
   map = "MAP02"
 
@@ -43,9 +43,9 @@ PREFABS.Item_scionox_simple_crates_4 =
   tex_CRATE1 = "CRATE2"
 }
 
-PREFABS.Item_scionox_simple_crates_5 =
+PREFABS.Item_scionox_simple_crates_small_pile =
 {
-  template = "Item_scionox_simple_crates"
+  template = "Item_scionox_simple_crates_pile_on_top"
   map = "MAP03"
 
   height = 64
@@ -53,18 +53,18 @@ PREFABS.Item_scionox_simple_crates_5 =
   size  = 48
 }
 
-PREFABS.Item_scionox_simple_crates_6 =
+PREFABS.Item_scionox_simple_crates_big_pile =
 {
-  template = "Item_scionox_simple_crates"
+  template = "Item_scionox_simple_crates_pile_on_top"
 
   map = "MAP04"
 
   size  = 96
 }
 
-PREFABS.Item_scionox_simple_crates_7 =
+PREFABS.Item_scionox_simple_crates_big_pile_2 =
 {
-  template = "Item_scionox_simple_crates"
+  template = "Item_scionox_simple_crates_pile_on_top"
 
   map = "MAP04"
 
@@ -74,15 +74,15 @@ PREFABS.Item_scionox_simple_crates_7 =
   tex_CRATE1 = "CRATE2"
 }
 
-PREFABS.Item_scionox_simple_crates_8 =
+PREFABS.Item_scionox_simple_crates_single_pile =
 {
-  template = "Item_scionox_simple_crates"
+  template = "Item_scionox_simple_crates_pile_on_top"
   map = "MAP05"
 }
 
-PREFABS.Item_scionox_simple_crates_9 =
+PREFABS.Item_scionox_simple_crates_single_pile_2 =
 {
-  template = "Item_scionox_simple_crates"
+  template = "Item_scionox_simple_crates_pile_on_top"
 
   map = "MAP05"
 
@@ -90,7 +90,7 @@ PREFABS.Item_scionox_simple_crates_9 =
   tex_CRATE1 = "CRATE2"
 }
 
-PREFABS.Item_scionox_simple_crates_10 =
+PREFABS.Item_scionox_simple_crates_closet_tall =
 {
   file   = "item/scionox_simple_crates.wad"
   map    = "MAP06"
@@ -112,24 +112,24 @@ PREFABS.Item_scionox_simple_crates_10 =
   y_fit = "top"
 }
 
-PREFABS.Item_scionox_simple_crates_11 =
+PREFABS.Item_scionox_simple_crates_closet_tall_2 =
 {
-  template = "Item_scionox_simple_crates_10"
+  template = "Item_scionox_simple_crates_closet_tall"
 
   flat_CRATOP2 = "CRATOP1"
   tex_CRATE1 = "CRATE2"
 }
 
-PREFABS.Item_scionox_simple_crates_12 =
+PREFABS.Item_scionox_simple_crates_closet_side =
 {
-  template = "Item_scionox_simple_crates_10"
+  template = "Item_scionox_simple_crates_closet_tall"
 
   map = "MAP07"
 }
 
-PREFABS.Item_scionox_simple_crates_13 =
+PREFABS.Item_scionox_simple_crates_closet_side_2 =
 {
-  template = "Item_scionox_simple_crates_10"
+  template = "Item_scionox_simple_crates_closet_tall"
 
   map = "MAP07"
 
@@ -137,9 +137,9 @@ PREFABS.Item_scionox_simple_crates_13 =
   tex_CRATE1 = "CRATE2"
 }
 
-PREFABS.Item_scionox_simple_crates_14 =
+PREFABS.Item_scionox_simple_crates_cluster =
 {
-  template = "Item_scionox_simple_crates_10"
+  template = "Item_scionox_simple_crates_closet_tall"
 
   map = "MAP08"
 }
