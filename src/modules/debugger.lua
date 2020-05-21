@@ -183,5 +183,15 @@ OB_MODULES["debugger"] =
       default = "yes"
       priority = 94
     }
+
+    exit_room_theme =
+    {
+      name = "exit_room_theme"
+      label = _("Foreshadowing Exit")
+      choices = DEBUG_CONTROL.YES_NO
+      tooltip = "Gets exit room theme to follow the theme of the next level, if different."
+      default = "no"
+      priority = 93
+    }
   }
 }

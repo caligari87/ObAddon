@@ -2713,9 +2713,16 @@ function Quest_room_themes()
   -- various textures (e.g. the fence material for each zone).
   --
 
-  local function match_level_theme(name)
+  local function match_level_theme(name, override)
+    local keyword
+    if not override then
+      keyword = LEVEL.theme_name
+    else
+      keyword = override
+    end
+
     if string.match(name, "^any_") or
-       string.match(name, "^" .. LEVEL.theme_name .. "_")
+       string.match(name, "^" .. keyword .. "_")
     then
       return true
     end
@@ -2739,7 +2746,7 @@ function Quest_room_themes()
   end
 
 
-  local function collect_usable_themes(env, group)
+  local function collect_usable_themes(env, group, override)
     local tab = {}
 
     each name,info in GAME.ROOM_THEMES do
@@ -2750,7 +2757,7 @@ function Quest_room_themes()
       if info.prob and
          info.env == env and
          info.group == group and
-         match_level_theme(name)
+         match_level_theme(name, override)
       then
         tab[name] = info.prob
       end
@@ -3048,6 +3055,26 @@ function Quest_room_themes()
   end
 
 
+  local function choose_exit_theme()
+    local exit_room = LEVEL.exit_room
+    local next_theme
+    local tab = {}
+
+    if GAME.levels[LEVEL.id + 1] then
+      next_theme = GAME.levels[LEVEL.id + 1].theme_name
+    end
+
+    if next_theme == LEVEL.theme_name then return end
+
+    tab = collect_usable_themes(exit_room:get_env(), nil, next_theme)
+
+    exit_room.theme = GAME.ROOM_THEMES[rand.key_by_probs(tab)]
+    if not exit_room.theme.theme_override then
+      exit_room.theme.theme_override = next_theme
+    end
+  end
+
+
   local function room_textures()
     each R in LEVEL.rooms do
       setup_room_theme(R)
@@ -3075,6 +3102,10 @@ function Quest_room_themes()
   choose_building_themes()
   choose_hallway_themes()
   choose_other_themes()
+
+  if PARAM.exit_room_theme and PARAM.exit_room_theme == "yes" then
+    choose_exit_theme()
+  end
 
     misc_textures()
   facade_textures()
