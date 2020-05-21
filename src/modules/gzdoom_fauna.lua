@@ -303,10 +303,12 @@ DSRATIDL DSRATIDL
 DSRAT DSRAT
 
 // Includes NULLs to reduce frequency of noise
-$random rat/active { DSRATIDL DSRAT DSRAT DSRAT DSRAT NULL NULL NULL NULL NULL NULL NULL NULL}
-
+$random rat/active { DSRATIDL DSRAT DSRAT DSRAT DSRAT NULL NULL NULL NULL NULL NULL NULL NULL NULL NULL NULL NULL }
 DSRATDI1    DSRATDI1
 DSRATDI2    DSRATDI2
+$attenuation DSRATDI1 3
+$attenuation DSRATDI2 3
+
 $random rat/death    { DSRATDI1 DSRATDI2 }
 
 // Sound modified from https://freesound.org/people/krnash/sounds/389794/
