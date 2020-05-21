@@ -1,18 +1,15 @@
 PREFABS.Item_scionox_simple_crates =
 {
-  file  = "item/scionox_simple_crates.wad"
-  where = "point"
-
-  map  = "MAP01"
-
-  env  = "!park"
-
-  prob = 65
+  file = "item/scionox_simple_crates.wad"
+  map = "MAP01"
 
   theme = "!hell"
 
+  prob = 65
+  where = "point"
+
   height = 128
-  size  = 64
+  size = 64
 }
 
 PREFABS.Item_scionox_simple_crates_2 =

@@ -768,12 +768,6 @@ function Fab_render(fab)
     fab_map = "object"
   end
 
-  if PARAM.print_prefab_use != "no" then
-    if fab.where == "point" or fab.where == "seeds" then
-      gui.printf(LEVEL.name .. ": Adding " .. fab.name .. " from " .. fab_map .. " in " .. fab.file .. "\n")
-    end
-  end
-
   each B in fab.brushes do
     if B[1].m != "spot" then
       raw_add_brush(B)
@@ -1575,9 +1569,7 @@ function Fab_load_wad(def)
 
     local filename = assert(def.dir_name) .. "/" .. def.file
 
-    if PARAM.print_prefab_use != "no" then
-      gui.printf("Loading wad-fab %s / %s\n", def.file, def.map or "*")
-    end
+    gui.debugf("Loading wad-fab %s / %s\n", def.file, def.map or "*")
 
     -- load the map structures into memory
     -- [ if map is not specified, use "*" to load the first one ]
@@ -2109,6 +2101,12 @@ function Fabricate(room, def, T, skins)
 
   fab.state = "skinned"
 
+  if PARAM.print_prefab_use != "no" then
+    if fab.where == "point" or fab.where == "seeds" then
+      gui.printf(LEVEL.name .. ": Adding " .. fab.name .. " ")
+    end
+  end
+
   Fab_transform_XY(fab, T)
   Fab_transform_Z (fab, T)
 
@@ -2117,6 +2115,13 @@ function Fabricate(room, def, T, skins)
 
   Fab_solid_entities(fab, room)
   Fab_process_spots(fab, room)
+
+  if PARAM.print_prefab_use != "no" then
+    if fab.where == "point" or fab.where == "seeds" then
+      gui.printf("{" .. T.add_x .. "," .. T.add_y .. "}")
+      gui.printf("\n")
+    end
+  end
 end
 
 
@@ -2206,24 +2211,17 @@ function Fab_find_matches(reqs, match_state)
     -- for this, the prefab definition says the *required* thing
     if def_k == nil or def_k == "any" then return true end
 
-    -- allow outdoor and !building prefabs to spawn on scenics,
-    -- which are actually non-rooms
-    if def_k == "outdoor" or def_k == "!building" then
-      if req_k == nil then return true end
-    end
-
     if req_k == nil then return false end
-
-    if def_k == "outdoor" then
-      if match_environment(req_k, "park")      then return true end
-      if match_environment(req_k, "courtyard") then return true end
-    end
 
     if req_k == "cave" or req_k == "park" then
       if def_k == "nature" then return true end
       if def_k == "!nature" then return false end
     end
 
+    if def_k == "outdoor" then
+      if match_environment(req_k, "park")      then return true end
+      if match_environment(req_k, "courtyard") then return true end
+    end
 
     -- negated check?
     if string.sub(def_k, 1, 1) == '!' then

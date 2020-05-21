@@ -234,6 +234,7 @@ function Render_edge(E)
     end
 
     if A.mode == "scenic" then
+      reqs.env = "outdoor"
       reqs.scenic = true
     end
 
