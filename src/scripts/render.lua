@@ -1958,6 +1958,9 @@ function Render_chunk(chunk)
       height = z2 - z1
     }
 
+    local A = assert(chunk.area)
+    reqs.env = A.room:get_env()
+
     local skin = { object=item }
 
     if chunk.goal and chunk.goal.kind == "KEY" then
