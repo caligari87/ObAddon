@@ -943,7 +943,7 @@ function Grower_calc_rule_probs()
 
         SHAPE_GRAMMAR[absurded_rule].is_absurd = true
 
-        if PARAM.print_shape_steps != "no" then
+        if  PARAM.print_shape_steps and PARAM.print_shape_steps != "no" then
           gui.printf(absurded_rule .. " is now ABSURDIFIED! WOOO!!!\n")
           gui.printf("Factor: x" .. ab_factor .. "\n")
         end
@@ -1279,7 +1279,7 @@ function Grower_add_room(parent_R, info, trunk)
 
   local R = ROOM_CLASS.new()
 
-  if PARAM.print_shape_steps != "no" then
+  if  PARAM.print_shape_steps andPARAM.print_shape_steps != "no" then
 gui.printf("new room %s : env = %s : parent = %s\n", R.name, tostring(info.env), tostring(parent_R and parent_R.name))
   end
 
@@ -1406,7 +1406,7 @@ function Grower_kill_room(R)
 
   local hallway_neighbor
 
-  if PARAM.print_shape_steps != "no" then
+  if PARAM.print_shape_steps and PARAM.print_shape_steps != "no" then
     gui.printf("Killing " .. R.id .. "\n")
   end
 
@@ -3072,7 +3072,7 @@ end
     -- successful, pick it and apply the substitution.
     --
 
-    if PARAM.print_shape_steps == "showmore" then
+    if PARAM.print_shape_steps and PARAM.print_shape_steps == "showmore" then
       gui.printf("  Trying rule '%s'...\n", cur_rule.name)
     end
 
@@ -3276,7 +3276,8 @@ end
     PARAM.operated_room = R.id
 
     if PARAM.cur_shape_group != ""
-    and PARAM.print_shape_steps != "no" then
+    and PARAM.print_shape_steps != "no"
+    PARAM.print_shape_steps and then
       gui.printf("Shape group: " .. PARAM.cur_shape_group .. "\n")
       gui.printf("Shape count: " .. PARAM.cur_shape_group_apply_count .. "\n")
     end
@@ -3381,7 +3382,7 @@ end
 
     -- SUCCESS --
 
-    if PARAM.print_shape_steps != "no" then
+    if PARAM.print_shape_steps and PARAM.print_shape_steps != "no" then
       gui.printf("APPLIED rule: " .. cur_rule.name .. " in ROOM_" .. R.id.. "\n")
     end
 
@@ -3418,7 +3419,7 @@ end
 
   ---| Grower_grammatical_pass |---
 
-  if PARAM.print_shape_steps != "no" then
+  if PARAM.print_shape_steps and PARAM.print_shape_steps != "no" then
     gui.printf("Growing %s with [%s x %d].....\n", R.name, pass, apply_num)
   end
 
