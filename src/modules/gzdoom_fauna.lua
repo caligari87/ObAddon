@@ -75,9 +75,9 @@ actor ScurryRat: Rodent 30100
   speed 15
   scale 0.25
   health 1
-  seesound     "rat/active"
-  activesound    "rat/active"
-  deathsound    "rat/death"
+  seesound    "rat/active"
+  activesound "rat/active"
+  deathsound  "rat/death"
   +FLOORCLIP
   +FRIGHTENED
   +LOOKALLAROUND
@@ -87,26 +87,29 @@ actor ScurryRat: Rodent 30100
   states
   {
   LookAround:
-	RATS A 1 A_Jump(256,"LookAround1","LookAround2")
-	stop
+    TNT1 A 0 A_StopSound(4)
+    RATS A 1 A_Jump(256,"LookAround1","LookAround2")
+    stop
   
   LookAround1:
-    RATS A 40 A_Look  
-    TNT1 A 0 A_Jump(25,"LookAround2")
-	TNT1 A 0 A_Jump(5,"See")
+    RATS A 40 A_Look
+    RATS B 50 A_Look
+    TNT1 A 0 A_Jump(30,"LookAround2")
+    TNT1 A 0 A_Jump(5,"See")
     loop
   
   LookAround2:
-    RATS B 40 A_Look
-    TNT1 A 0 A_Jump(25,"LookAround1")
+    RATS B 50 A_Look
+    RATS A 70 A_Look
+    TNT1 A 0 A_Jump(30,"LookAround1")
     TNT1 A 0 A_Jump(5,"See")
     loop
 
   Spawn:
   See:
     RATS A 2 A_Chase
-	TNT1 A 0 A_SetSpeed(15)
-    TNT1 A 0 A_PlaySound("rat/scurry", 4, 0.8, 1)
+    TNT1 A 0 A_SetSpeed(15)
+    TNT1 A 0 A_PlaySound("rat/scurry", 4, 0.8, 1, 3)
     RATS A 2 A_Chase
     RATS B 2 A_Chase
     RATS B 2 A_Chase
@@ -118,7 +121,9 @@ actor ScurryRat: Rodent 30100
     TNT1 A 0 A_Jump(128,"LookAround")
     loop
   Bolt:
-    RATS C 2 ThrustThing(angle * 256 / 360 + 128,30,0,1)
+    RATS C 2 ThrustThing(angle * 256 / 360 + 128,40,1,0)
+    RATS C 2 ThrustThingZ(0,15,0,1)
+    TNT1 A 0 A_PlaySound("rat/scurry", 4, 0.8, 1, 3)
     TNT1 A 0
     {
         if (Random(0, 255) < 50)
