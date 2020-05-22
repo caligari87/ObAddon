@@ -3061,6 +3061,9 @@ function Quest_room_themes()
     local next_theme
     local tab = {}
 
+    if exit_room.is_street then return end
+    if LEVEL.is_procedural_gotcha then return end
+
     if GAME.levels[LEVEL.id + 1] then
       next_theme = GAME.levels[LEVEL.id + 1].theme_name
     end
@@ -3106,7 +3109,7 @@ function Quest_room_themes()
   choose_hallway_themes()
   choose_other_themes()
 
-  if PARAM.exit_room_theme and PARAM.exit_room_theme == "yes" then
+  if PARAM.foreshadowing_exit and PARAM.foreshadowing_exit == "yes" then
     choose_exit_theme()
   end
 

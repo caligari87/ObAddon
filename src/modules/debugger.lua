@@ -184,9 +184,9 @@ OB_MODULES["debugger"] =
       priority = 94
     }
 
-    exit_room_theme =
+    foreshadowing_exit =
     {
-      name = "exit_room_theme"
+      name = "foreshadowing_exit"
       label = _("Foreshadowing Exit")
       choices = DEBUG_CONTROL.YES_NO
       tooltip = "Gets exit room theme to follow the theme of the next level, if different."
