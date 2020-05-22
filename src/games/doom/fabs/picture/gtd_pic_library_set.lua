@@ -9,6 +9,8 @@ PREFABS.Pic_gtd_library_big_shelves_EPIC =
 
   replaces = "Pic_gtd_library_big_shelves"
 
+  group = "gtd_library"
+
   where  = "seeds"
   height = 128
 
@@ -44,6 +46,8 @@ PREFABS.Pic_gtd_library_big_shelves =
   where  = "seeds"
   height = 128
 
+  group = "gtd_library"
+
   seed_w = 2
   seed_h = 1
 
@@ -58,6 +62,6 @@ PREFABS.Pic_gtd_library_big_shelves =
 
 PREFABS.Pic_gtd_library_caged_shelves =
 {
-  template = "Pic_gtd_library_caged_shelves"
+  template = "Pic_gtd_library_big_shelves"
   map = "MAP02"
 }
