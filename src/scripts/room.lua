@@ -1788,7 +1788,11 @@ function Room_border_up()
         if (A1.floor_h == A2.floor_h)
         or A1.mode == "liquid" or A2.mode == "liquid" then
           if can_beam(A1, A2, junc) then
-            Junction_make_beams(junc)
+            if A1.room.is_outdoor then
+              Junction_make_beams(junc)
+            elseif not A1.room.is_outdoor and rand.odds(style_sel("beams",0,5,10,15)) then
+              Junction_make_beams(junc)
+            end
           end
           return
         else
