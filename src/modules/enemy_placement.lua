@@ -1,8 +1,9 @@
 ----------------------------------------------------------------
 --  MODULE: Harder Enemy Placement
 ----------------------------------------------------------------
---
---  Copyright (C) 2019 Armaetus
+--  Copyright (C) 2006-2017 Andrew Apted
+--  Copyright (C) 2011, 2020 Armaetus
+--  Copyright (C) 2020 MsrShooterPerson
 --
 --  This program is free software; you can redistribute it and/or
 --  modify it under the terms of the GNU General Public License
@@ -16,11 +17,15 @@
 --
 ----------------------------------------------------------------
 
+-- Comments under each entry explains difference between stock
+-- enemy placement in ObAddon/Oblige. -Armaetus
+
 HARDER_ENEMY = { }
 
 HARDER_ENEMY.MONSTERS =
 {
 
+-- Slight increase of replacing Former Sergeant.
   zombie =
   {
     id = 3004
@@ -42,6 +47,8 @@ HARDER_ENEMY.MONSTERS =
     infight_damage = 1.9
   }
 
+-- Shows up sooner in maps and increased chance for
+-- replacing Former Human.
   shooter =
   {
     id = 9
@@ -65,6 +72,7 @@ HARDER_ENEMY.MONSTERS =
     infight_damage = 6.1
   }
 
+-- Increased chance to replace Demon.
   imp =
   {
     id = 3001
@@ -104,6 +112,7 @@ HARDER_ENEMY.MONSTERS =
     infight_damage = 2.1
   }
 
+-- Shows up a little sooner.
   demon =
   {
     id = 3002
@@ -121,6 +130,7 @@ HARDER_ENEMY.MONSTERS =
     infight_damage = 3.5
   }
 
+-- Same as Demon.
   spectre =
   {
     id = 58
@@ -144,6 +154,8 @@ HARDER_ENEMY.MONSTERS =
     infight_damage = 2.5
   }
 
+-- Shows up sooner and increased chance to replace
+-- the Pain Elemental.
   caco =
   {
     id = 3005
@@ -168,6 +180,7 @@ HARDER_ENEMY.MONSTERS =
 
   ---| BOSSES |---
 
+-- Shows up sooner.
   baron =
   {
     id = 3003
@@ -188,6 +201,7 @@ HARDER_ENEMY.MONSTERS =
     infight_damage = 40
   }
 
+-- Shows up sooner.
   Cyberdemon =
   {
     id = 16
@@ -210,6 +224,9 @@ HARDER_ENEMY.MONSTERS =
     boss_replacement = "baron"
   }
 
+-- Shows up sooner and increased chance to be used
+-- in maps. Added cage_factor to prevent any chance
+-- of placement in cages.
   Spiderdemon =
   {
     id = 7
@@ -236,6 +253,8 @@ HARDER_ENEMY.MONSTERS =
 
   ---== Doom II only ==---
 
+-- Shows up sooner and increased chance to replace
+-- Former Sergeants.
   gunner =
   {
     id = 65
@@ -260,6 +279,9 @@ HARDER_ENEMY.MONSTERS =
     infight_damage = 25
   }
 
+-- Shows up sooner, marginal probability decrease and
+-- increased damage. They *can* knock out up to 80
+-- health at maximum.
   revenant =
   {
     id = 66
@@ -280,6 +302,8 @@ HARDER_ENEMY.MONSTERS =
     infight_damage = 20
   }
 
+-- Shows up sooner, increased chance to replace
+-- Mancubus and can be placed in  any sized room.
   knight =
   {
     id = 69
@@ -300,6 +324,8 @@ HARDER_ENEMY.MONSTERS =
     infight_damage = 36
   }
 
+-- Shows up sooner, increased replacement for Arachnotron
+-- and can show up outside more.
   mancubus =
   {
     id = 67
@@ -321,6 +347,8 @@ HARDER_ENEMY.MONSTERS =
     boss_replacement = "baron"
   }
 
+-- Shows up sooner and increased chance to replace
+-- Mancubus.
   arach =
   {
     id = 68
@@ -341,6 +369,9 @@ HARDER_ENEMY.MONSTERS =
     boss_replacement = "revenant"
   }
 
+-- Shows up sooner and increased number that can be
+-- placed in one room. Can replace boss monster for
+-- the Baron.
   vile =
   {
     id = 64
@@ -364,6 +395,8 @@ HARDER_ENEMY.MONSTERS =
     boss_replacement = "baron"
   }
 
+-- Shows up sooner, increased total number placed in one
+-- room to 4 and density slightly increased.
   pain =
   {
     id = 71
