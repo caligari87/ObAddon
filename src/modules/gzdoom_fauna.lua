@@ -90,14 +90,14 @@ actor ScurryRat: Rodent 30100
     TNT1 A 0 A_StopSound(4)
     RATS A 1 A_Jump(256,"LookAround1","LookAround2")
     stop
-  
+
   LookAround1:
     RATS A 40 A_Look
     RATS B 50 A_Look
     TNT1 A 0 A_Jump(30,"LookAround2")
     TNT1 A 0 A_Jump(5,"See")
     loop
-  
+
   LookAround2:
     RATS B 50 A_Look
     RATS A 70 A_Look
@@ -369,16 +369,16 @@ function FAUNA_MODULE.add_flies()
 
         -- Default spawning odds
         local spawn_odds = 10
-		
+
         -- Lower spawning probability if indoors
         if (A.is_indoor) then
-		  spawn_odds = 5
-		end
+          spawn_odds = 5
+        end
 
-		-- Greater spawning probability if outdoors and temperate
-		if (A.is_outdoor and LEVEL.outdoor_theme == "temperate") then 
-		  spawn_odds = 15
-		end
+        -- Greater spawning probability if outdoors and temperate
+        if (A.is_outdoor and LEVEL.outdoor_theme == "temperate") then
+          spawn_odds = 15
+        end
 
         if rand.odds(spawn_odds) then
 
@@ -428,11 +428,11 @@ function FAUNA_MODULE.add_rats()
 
         -- Default spawning odds
         local spawn_odds = 1
-		
+
         -- Greater spawning probability if indoors
         if (A.is_indoor) then
-		  spawn_odds = 3
-		end
+          spawn_odds = 3
+        end
 
         if rand.odds(spawn_odds) then
 
