@@ -615,7 +615,17 @@ function Episode_plan_monsters()
       local info = GAME.MONSTERS[name]
       if not info.boss_type or OB_CONFIG.strength == "crazy" or LEV.is_procedural_gotcha then
         LEV.global_pal[name] = 1
-      end
+	  elseif info.boss_type and OB_CONFIG.bossesnormal != "no" then
+	    if info.boss_type == "minor" then
+		  LEV.global_pal[name] = 1
+		elseif info.boss_type == "nasty" then
+		  if OB_CONFIG.bossesnormal == "nasty" or OB_CONFIG.bossesnormal == "all" then
+		    LEV.global_pal[name] = 1
+		  end
+		elseif info.boss_type == "tough" and OB_CONFIG.bossesnormal == "all" then
+		  LEV.global_pal[name] = 1
+		end
+	  end
     end
 
     -- actually skip some monsters (esp. when # is high)
@@ -770,7 +780,11 @@ function Episode_plan_monsters()
 
     each name,info in GAME.MONSTERS do
       -- skip the real boss monsters
-      if info.boss_type then continue end
+      if info.boss_type then
+	    if OB_CONFIG.bossesnormal == "no" then continue
+		elseif info.boss_type == "nasty" and OB_CONFIG.bossesnormal == "minor" then continue
+		elseif info.boss_type == "tough" and OB_CONFIG.bossesnormal != "all" then continue end
+	  end
 
       local prob = prob_for_guard(LEV, info)
 

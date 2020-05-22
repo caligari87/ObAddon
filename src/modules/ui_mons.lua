@@ -127,6 +127,14 @@ UI_MONS.START_ROOM_MON_CHOICES =
   "yes", _("Yes"),
 }
 
+UI_MONS.BOSSREGULARS =
+{
+  "no",  _("Disabled"),
+  "minor", _("Minor Bosses Only"),
+  "nasty", _("Minor and Nasty Bosses Only"),
+  "all", _("All Bosses"),
+}
+
 OB_MODULES["ui_mons"] =
 {
   label = _("Monsters")
@@ -178,6 +186,13 @@ OB_MODULES["ui_mons"] =
     }
 
     { name="bosses",    label=_("Bosses"),    choices=UI_MONS.BOSSES }
+    {
+      name="bossesnormal",
+      label=_("Bosses As Regulars"),
+      choices=UI_MONS.BOSSREGULARS,
+      default="no",
+      tooltip="Normally Archviles/Barons/Cyberdemons and other big monsters are excluded from normal monster pool and only can appear as guard for important objective e.g. key. With this option enabled they are allowed to(rarely) spawn as a regular monster. \n\n WARNING: This CAN make maps much more difficult than normal."
+    }
     { name="traps",     label=_("Traps"),     choices=STYLE_CHOICES }
     {
       name="trap_style",
