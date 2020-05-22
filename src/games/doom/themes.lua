@@ -1198,6 +1198,7 @@ DOOM.THEMES =
       gtd_wall_high_gap_set = 12
       gtd_wall_high_gap_alt_set = 12
       gtd_generic_half_floor = 25
+      gtd_wall_urban_cement_frame = 10
       -- current non-plain prob sum: 481
       -- GZD non-plain prob sum: 124
       -- total sum: 605
@@ -1538,6 +1539,7 @@ DOOM.THEMES =
       gtd_woodframe = 5
       gtd_woodframe_green = 5
       gtd_round_inset = 5
+      gtd_wall_urban_cement_frame = 7
       -- current non-plain prob sum: 221
       -- GZD non-plain prob sum: 52
       -- total prob: 273
