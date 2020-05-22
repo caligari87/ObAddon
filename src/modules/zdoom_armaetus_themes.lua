@@ -3760,7 +3760,7 @@ ARMAETUS_DESERT_OUTDOORS =
 {
   tech =
   {
-    floors = --MSSP-TODO: Make some unique sanded-in tech flats!
+    floors =
     {
       SAND1 = 3
       SAND2 = 3

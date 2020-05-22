@@ -676,6 +676,17 @@ end
 
 function Junction_calc_wall_tex(A1, A2)
 
+  -- foreshadowing exit override
+  if A1.room then
+    if A1.room.exit_facade then
+      if rand.odds(80) then
+        return A1.room.exit_facade
+      else
+        return A1.room.alt_exit_facade
+      end
+    end
+  end
+
   if A1 == "map_edge" or A2 == "map_edge" then
     if A1.zone then
       return A1.zone.facade_mat
@@ -694,8 +705,10 @@ function Junction_calc_wall_tex(A1, A2)
       return A1.zone.facade_mat
     end
 
-    if A1.room and A1.room.is_natural_park then
+    if A1.room then
+      if A1.room.is_natural_park then
         return assert(A1.room.main_tex)
+      end
     end
 
     return assert(A1.zone.facade_mat)

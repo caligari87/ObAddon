@@ -2932,6 +2932,7 @@ function Quest_room_themes()
 
       -- less likely to use it again
       tab[mat] = tab[mat] / 20
+      nature_theme.naturals[nature_mat] = nature_theme.naturals[nature_mat] / 20
 
       if pass == 1 then
         Z.facade_mat = mat
@@ -3077,6 +3078,15 @@ function Quest_room_themes()
 
     if not exit_room.theme.theme_override then
       exit_room.theme.theme_override = next_theme
+    end
+
+    local f_tab = GAME.THEMES[next_theme].facades
+
+    if exit_room.is_outdoor and not exit_room.is_park then
+      exit_room.exit_facade = rand.key_by_probs(f_tab)
+      f_tab[exit_room.exit_facade] = f_tab[exit_room.exit_facade] / 10
+      exit_room.alt_exit_facade = rand.key_by_probs(f_tab)
+      f_tab[exit_room.exit_facade] = f_tab[exit_room.exit_facade] / 10
     end
   end
 
