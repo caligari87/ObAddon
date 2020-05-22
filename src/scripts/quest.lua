@@ -3070,6 +3070,7 @@ function Quest_room_themes()
     end
 
     if next_theme == LEVEL.theme_name then return end
+    if not next_theme then return end
     if env == "park" then env = "outdoor" end
 
     tab = collect_usable_themes(env, nil, next_theme)
