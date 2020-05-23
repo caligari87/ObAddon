@@ -3014,6 +3014,10 @@ function Quest_room_themes()
         R.main_tex = R.zone.other_facade
       end
 
+      if R.exit_facade then
+        R.main_tex = R.exit_facade
+      end
+
     else
       R.main_tex = rand.key_by_probs(R.theme.walls)
     end
