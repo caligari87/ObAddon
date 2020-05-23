@@ -193,5 +193,15 @@ OB_MODULES["debugger"] =
       default = "no"
       priority = 93
     }
+
+    steppy_caves =
+    {
+      name = "steppy_caves"
+      label = _("Steppy Caves")
+      choices = DEBUG_CONTROL.YES_NO
+      tooltip = "Activates the old steppy caves code."
+      defualt = "no"
+      priority = 92
+    }
   }
 }

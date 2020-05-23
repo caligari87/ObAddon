@@ -1228,6 +1228,9 @@ step:dump("Step:")
           neighbors = {}
         }
 
+        AREA.floor_mat = area.room.floor_mat
+        AREA.ceil_mat = area.room.ceil_mat
+
         table.insert(area.walk_floors, AREA)
 
         install_blob(AREA, step, 1)
@@ -1556,6 +1559,34 @@ function Cave_floor_heights(R, entry_h)
   end
 
 
+  local function blobify()
+    local src = area.walk_map:copy()
+
+    for x = 1, area.cw do
+    for y = 1, area.ch do
+      if src[x][y] then src[x][y] = 1 end
+    end
+    end
+
+    blob_map = src:create_blobs(3, 2)
+
+    -- ensure walk-rects are fully contained in a single blob
+    blob_map:walkify_blobs(area.walk_rects)
+
+    -- ensure half-cells are merged with the blob touching the
+    -- corner away from the diagonal, otherwise the gap which
+    -- could exist there may be too narrow for players to pass
+    blob_map:merge_diagonal_blobs(area.diagonals)
+
+    blob_map:merge_small_blobs(4)
+
+    blob_map:extent_of_blobs()
+    blob_map:neighbors_of_blobs()
+
+    blob_map:dump_blobs()
+  end
+
+
   local function floor_for_river(bunch_B, h)
     assert(not bunch_B.floor_h)
 
@@ -1654,16 +1685,25 @@ function Cave_floor_heights(R, entry_h)
 
 
   local function find_entry_area()
---[[ FIXME
-    each imp in R.cave_imps do
-      assert(imp.area)
-      if imp.conn and imp.conn.conn_h then
-        return imp.area
+    local e_blob = area.entry_walk
+
+    local cx = (e_blob.cx1 + e_blob.cx2) / 2
+    local cy = (e_blob.cy1 + e_blob.cy2) / 2
+    local nearest_dist = EXTREME_H
+
+    each WF in area.walk_floors do
+      local cx_c = (WF.cx1 + WF.cx2) / 2
+      local cy_c = (WF.cy1 + WF.cy2) / 2
+
+      WF.dist_to_entry = geom.dist(cx,cy,cx_c,cy_c)
+      nearest_dist = math.min(nearest_dist, WF.dist_to_entry)
+    end
+
+    each WF in area.walk_floors do
+      if WF.dist_to_entry == nearest_dist then
+        return WF
       end
     end
---]]
-
-    return rand.pick(area.walk_floors)
   end
 
 
@@ -1822,6 +1862,9 @@ function Cave_floor_heights(R, entry_h)
   area.ceil_h  = entry_h + R.walkway_height
 
   local entry_area = find_entry_area()
+  assert(entry_area)
+
+  blobify()
 
   visit_area(entry_area, z_dir, entry_h)
 
@@ -2608,13 +2651,16 @@ function Cave_decide_properties(R, area)
 
   area.step_mode = "walkway"
 
-  --[[if rand.odds(style_sel("steepness", 0, 33, 66, 100) ) then
-    if rand.odds(50) then
-      area.step_mode = "up"
-    else
-      area.step_mode = "down"
+  -- MSSP-TODO: Let's get caves going again, baby!
+  if PARAM.steppy_caves and PARAM.steppy_caves == "yes" then
+    if rand.odds(style_sel("steepness", 0, 25, 50, 75)) then
+      if rand.odds(50) then
+        area.step_mode = "up"
+      else
+        area.step_mode = "down"
+      end
     end
-  end]]
+  end
 
   -- liquid mode --
 
@@ -2691,19 +2737,54 @@ function Cave_build_a_cave(R, entry_h)
 
   Cave_generate_cave(R, area)
 
----  Cave_lake_fences(R)
----  Cave_fill_lakes(R)
+  Cave_lake_fences(R)
+  Cave_fill_lakes(R)
 
   Cave_create_areas(R, area)
 
----  Cave_bunch_areas(R, "liquid")
----  Cave_bunch_areas(R, "sky")
+  Cave_bunch_areas(R, "liquid")
+  Cave_bunch_areas(R, "sky")
 
   Cave_floor_heights(R, entry_h)
 
----  Cave_make_waterfalls(R)
+  Cave_make_waterfalls(R)
 
   Cave_decorations(R)
+
+  each WC in area.walk_rects do
+    local blob = area.blobs[WC.cx1][WC.cy1]
+    assert(blob)
+
+
+    if WC.kind == "conn" and WC.conn.kind != "teleporter" then
+      WC.conn.conn_h = assert(blob.floor_h)
+    end
+
+    if WC.chunk then
+      WC.chunk.floor_h   = assert(blob.floor_h)
+      WC.chunk.ceil_h    = assert(blob.ceil_h)
+      WC.chunk.floor_mat = assert(blob.floor_mat)
+
+      -- distribute cell floor height info to seeds
+      local x = WC.chunk.sx1
+      local y
+
+      while x <= WC.chunk.sx2 do
+
+        y = WC.chunk.sy1
+        while y <= WC.chunk.sy2 do
+
+          SEEDS[x][y].floor_h = WC.chunk.floor_h
+          SEEDS[x][y].ceil_h = WC.chunk.ceil_h
+          SEEDS[x][y].floor_mat = WC.chunk.floor_mat
+
+          y = y + 1
+        end
+        x = x + 1
+      end
+    end
+  end
+
 end
 
 
@@ -4671,9 +4752,7 @@ function Cave_build_a_scenic_vista(area)
 
       each N in A.neighbors do
         if N.floor_h and N.room then
-          if N.floor_h > tallest_h then
-            tallest_h = N.floor_h
-          end
+          tallest_h = math.max(tallest_h, N.floor_h)
         end
       end
 
@@ -4685,9 +4764,7 @@ function Cave_build_a_scenic_vista(area)
 
       each N in A.neighbors do
         if N.floor_h and N.room then
-          if N.floor_h < lowest_h then
-            lowest_h = N.floor_h
-          end
+          lowest_h = math.min(lowest_h, N.floor_h)
         end
       end
 

@@ -4167,9 +4167,9 @@ function Render_cells(area)
     if B.is_liquid then
       f_mat = "_LIQUID"
     elseif f_h then
-      f_mat = assert(B.floor_mat)
+      f_mat = assert(B.floor_mat or "_ERROR")
     else
-      f_mat = assert(B.wall_mat)
+      f_mat = assert(B.wall_mat or "_ERROR")
     end
 
     -- disable liquid lighting in outdoor rooms
@@ -4206,7 +4206,7 @@ function Render_cells(area)
         bottom.light_add = 32
       end
     else
-      c_mat = assert(B.ceil_mat)
+      c_mat = B.ceil_mat or "_ERROR"
     end
 
     brushlib.set_mat(c_brush, c_mat, c_mat)
