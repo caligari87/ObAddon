@@ -2472,8 +2472,8 @@ chunk.goal.action = "S1_OpenDoor"  -- FIXME IT SHOULD BE SET WHEN JOINER IS REND
       reqs.group = "natural_walls"
     end
 
-    if A.room.theme_override then
-      reqs.theme_override = A.room.theme_override
+    if A.room.theme.theme_override then
+      reqs.theme_override = A.room.theme.theme_override
     end
   end
 
