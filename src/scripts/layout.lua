@@ -1641,6 +1641,15 @@ function Layout_decorate_rooms(pass)
       reqs.height = A.room.walkway_height
     else
       reqs.height = A.ceil_h - A.floor_h
+
+      if A.ceil_group and A.ceil_group.sink then
+        local sink = A.ceil_group.sink
+        local diff = math.min(sink.dz or 0, sink.trim_dz or 0)
+
+        if diff > 0 then diff = 1 end
+
+        reqs.height = reqs.height - math.abs(diff) - 1
+      end
     end
 
     if A.room then

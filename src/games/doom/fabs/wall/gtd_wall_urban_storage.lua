@@ -33,28 +33,6 @@ PREFABS.Wall_urban_storage3 =
   map = "MAP03"
 }
 
-PREFABS.Decor_urban_storage =
-{
-  file = "wall/gtd_wall_urban_storage"
-  map = "MAP04"
-
-  prob = 5000
-  theme = "!hell"
-  env = "building"
-
-  where = "point"
-  size = 64
-
-  height = 128
-
-  bound_z1 = 0
-  bound_z2 = 128
-
-  tex_CRATE3 = { CRATE3=50, CRATE2=50, CRATE1=50, CRATELIT=50 }
-
-  z_fit = { 64-4,64+4 }
-}
-
 PREFABS.Wall_urban_storage_diag =
 {
   file   = "wall/gtd_wall_urban_storage.wad"
