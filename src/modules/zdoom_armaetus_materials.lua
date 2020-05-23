@@ -668,6 +668,7 @@ ARMAETUS_MATERIALS = {
   TEKGRDR = { t="TEKGRDR", f="CEIL5_2" } -- Usable as a door
   TEKGRN01 = { t="TEKGRN01", f="RROCK20" } --RROCK20
   TEKGRY01 = { t="TEKGRY01", f="RROCK21" }
+  TEKGRY02 = { t="TEKGRY02", f="RROCK21" }
   TEKSHAW = { t="TEKSHAW", f="SHINY02" }
   TKWALL2 = { t="TKWALL2", f="CEIL5_1" }
   TEKWALL2 = { t="TEKWALL2", f="CEIL5_1" }
@@ -1135,6 +1136,7 @@ ARMAETUS_MATERIALS = {
 
   -- Warning Strip --
   WARN1 = { t="WARN1", f="WARN2" }
+  WARN2 = { t="WARN2", f="WARN1" }
 
   -----------------------------------
   -- Walls as flats and vice versa --
