@@ -2130,8 +2130,8 @@ stderrf("Cages in %s [%s pressure] --> any_prob=%d  per_prob=%d\n",
       env = "building"
     }
 
-    if R.theme.theme_override then
-      reqs.theme = R.theme.theme_override
+    if A.room.theme.theme_override then
+      reqs.theme = A.room.theme.theme_override
     end
 
     return Fab_pick(reqs, "none_ok")
