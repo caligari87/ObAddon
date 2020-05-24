@@ -101,9 +101,9 @@ OB_MODULES["prefab_control"] =
       gap = 1
     }
 
-    match_theme =
+    fab_match_theme =
     {
-      name = "match_theme"
+      name = "fab_match_theme"
       label=("Match Theme")
       choices=PREFAB_CONTROL.DETAIL_CHOICES
       tooltip = "Ensures that prefabs selected match their intended Theme."

@@ -258,6 +258,8 @@ function ob_match_level_theme(T, override)
   if not T.theme then return true end
   if T.theme == "any" then return true end
 
+  if PARAM.fab_match_theme == "on" then return true end
+
   local level_theme_name = LEVEL.theme_name
   if override then
     level_theme_name = override
