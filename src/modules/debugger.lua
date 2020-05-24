@@ -90,14 +90,13 @@ end
 
 OB_MODULES["debugger"] =
 {
-  label = _("Debug LOG Control")
+  label = _("Debug Control")
 
   side = "left"
   priority = 50
 
-  tooltip = "Prints more debug information into the log.\n" ..
-            "Debug Messages under Options currently does not work" ..
-            " when an addon package is loaded."
+  tooltip = "Provides options for printing out more verbose log information. " ..
+            "Advanced, highly experimental features can also be found here."
 
   hooks =
   {
