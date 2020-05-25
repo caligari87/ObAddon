@@ -347,6 +347,8 @@ end
 
 function FAUNA_MODULE.end_level()
 
+  if LEVEL.prebuilt then return end
+
   if PARAM.flies == "enable" then
     FAUNA_MODULE.add_flies()
   end
