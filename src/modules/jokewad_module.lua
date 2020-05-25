@@ -276,8 +276,8 @@ function JOKEWAD_MODULE.add_tissues()
         -- not on chunks with something on it
         if S.chunk and S.chunk.content then continue end
 
-        -- not on diagonals
-        if S.diagonal then continue end
+        -- not by walls and diagonals
+        if S.walls or S.diagonal then continue end
 
         -- not on areas with liquid sinks
         if A.floor_group and A.floor_group.sink
