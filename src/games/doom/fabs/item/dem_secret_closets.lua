@@ -238,7 +238,7 @@ PREFABS.Item_secret_hellmachine1V1_closet =
   theme = "hell"
   env = "!nature"
 
-  prob  = 35
+  prob  = 15
 
   key   = "secret"
 
@@ -268,7 +268,7 @@ PREFABS.Item_secret_hellmachine1V2_closet =
   theme = "hell"
   env = "!nature"
 
-  prob  = 35
+  prob  = 15
 
   key   = "secret"
 
@@ -299,7 +299,7 @@ PREFABS.Item_secret_techmachine1V1_closet =
   theme = "tech"
   env = "!nature"
 
-  prob  = 35
+  prob  = 15
 
   key   = "secret"
 
@@ -329,7 +329,7 @@ PREFABS.Item_secret_techmachine1V2_closet =
   theme = "tech"
   env = "!nature"
 
-  prob  = 35
+  prob  = 15
 
   key   = "secret"
 

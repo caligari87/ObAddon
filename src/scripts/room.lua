@@ -3917,11 +3917,8 @@ function Room_cleanup_stairs_to_nowhere(R)
 
       if SAS then
         -- convert nowhere areas to just normal areas (borrow info from main area)
-        A.dead_end_floor_h_diff = A.floor_h - SAS.floor_h
-        A.dead_end_ceil_h_diff = A.ceil_h - SAS.ceil_h
-
         A.floor_h = SAS.floor_h
-        A.ceil_h = SAS.ceil_h + (A.dead_end_ceil_h_diff / 3)
+        A.ceil_h = SAS.ceil_h
 
         A.floor_mat = SAS.floor_mat
 
