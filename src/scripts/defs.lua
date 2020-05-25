@@ -258,7 +258,7 @@ GLOBAL_STYLE_LIST =
   barrels     = { none=10, few=50, some=35, heaps=10 }
 
   beams       = { none=20, few=20, some=10, heaps=5  }
-  porches     = { none=0,  few=10, some=60, heaps=10 }
+  porches     = { none=0,  few=10, some=60, heaps=30 }
   fences      = { none=30, few=30, some=10, heaps=10 }
 
   scenics     = { none=20, few=40, some=30, heaps=10 }
