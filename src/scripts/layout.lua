@@ -1998,11 +1998,16 @@ stderrf("Cages in %s [%s pressure] --> any_prob=%d  per_prob=%d\n",
     -- skip sinks whose texture(s) clash with the room or area
 
     local tab
+    local theme = LEVEL.theme_name
+
+    if R.theme.theme_override then
+      theme = ob_resolve_keyword(R.theme.theme_override)
+    end
 
     if where == "floor" then
-      tab = R.theme.floor_sinks or THEME.floor_sinks
+      tab = R.theme.floor_sinks or GAME.THEMES[theme].floor_sinks
     else
-      tab = R.theme.ceiling_sinks or THEME.ceiling_sinks
+      tab = R.theme.ceiling_sinks or GAME.THEMES[theme].ceiling_sinks
     end
 
     assert(tab["PLAIN"])

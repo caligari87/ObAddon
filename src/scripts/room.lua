@@ -1790,7 +1790,7 @@ function Room_border_up()
           if can_beam(A1, A2, junc) then
             if A1.room.is_outdoor then
               Junction_make_beams(junc)
-            elseif not A1.room.is_outdoor and rand.odds(style_sel("beams",0,5,10,15)) then
+            elseif not A1.room.is_outdoor and rand.odds(style_sel("beams",0,25,50,75)) then
               Junction_make_beams(junc)
             end
           end

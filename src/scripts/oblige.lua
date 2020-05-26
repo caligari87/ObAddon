@@ -375,6 +375,38 @@ end
 
 
 
+function ob_resolve_keyword(T)
+  local keys =
+  {
+    deimos =
+    {
+      tech,
+      hell,
+    }
+
+    industrial =
+    {
+      tech,
+      urban,
+    }
+
+    gothic =
+    {
+      hell,
+      urban,
+    }
+  }
+
+  if keys[T] then
+    return rand.pick(keys[T])
+  else
+    return T
+  end
+end
+
+
+
+
 function ob_update_engines()
   local need_new = false
 

@@ -2751,6 +2751,7 @@ function Cave_build_a_cave(R, entry_h)
 
   Cave_decorations(R)
 
+  -- distribute info for importants
   each WC in area.walk_rects do
     local blob = area.blobs[WC.cx1][WC.cy1]
     assert(blob)
@@ -2784,6 +2785,47 @@ function Cave_build_a_cave(R, entry_h)
       end
     end
   end
+
+  -- sync heights of blobs near to walk rects
+  each WC in area.walk_rects do
+    each BOT in area.blobs do
+      each B in BOT do
+        if B.is_wall then continue end
+
+        local cx = (WC.cx1 + WC.cx2) / 2
+        local cy = (WC.cy1 + WC.cy2) / 2
+
+        local dist
+        local points =
+        {
+          [1] = {x=B.cx1, y=B.cy1}
+          [2] = {x=B.cx1, y=B.cy2}
+          [3] = {x=B.cx2, y=B.cy2}
+          [4] = {x=B.cx2, y=B.cy1}
+        }
+        local yas_queen = false
+
+        each P in points do
+          dist = geom.dist(cx, cy, P.x, P.y)
+          if dist <= 2 then
+            yas_queen = true
+            continue
+          end
+        end
+
+        if yas_queen then
+          if WC.floor_h then
+            B.floor_h = WC.chunk.floor_h
+            B.ceil_h = WC.chunk.ceil_h
+          elseif WC.conn and WC.conn.conn_h then
+            B.floor_h = WC.conn.conn_h
+          end
+        end
+
+      end
+    end
+  end
+  --
 
 end
 
