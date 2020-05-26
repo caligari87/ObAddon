@@ -363,3 +363,29 @@ PREFABS.Wall_tech_fence_lights_uac_thing_EPIC =
     TEKGRBLU = 5
   }
 }
+
+PREFABS.Wall_tech_outdoor_tekgren_grates_thing = --#
+{
+  template = "Wall_tech_outdoor_caution_strip"
+  map = "MAP17"
+
+  group = "tech_o_tekgren_grates_thing"
+
+  z_fit = "top"
+
+  tex_FENCE3 = "MIDBARS3"
+}
+
+PREFABS.Wall_tech_outdoor_tekgren_grates_thing_EPIC =
+{
+  template = "Wall_tech_outdoor_caution_strip"
+  map = "MAP17"
+
+  group = "tech_o_tekgren_grates_thing"
+
+  replaces = "Wall_tech_outdoor_tekgren_grates_thing_EPIC"
+
+  uses_epic_textures = true
+
+  z_fit = "top"
+}
