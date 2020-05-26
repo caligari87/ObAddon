@@ -375,33 +375,33 @@ end
 
 
 
-function ob_resolve_keyword(T)
+function ob_resolve_theme_keyword(T)
   local keys =
   {
     deimos =
     {
-      tech,
-      hell,
+      "tech"
+      "hell"
     }
 
     industrial =
     {
-      tech,
-      urban,
+      "tech"
+      "urban"
     }
 
-    gothic =
+    flesh =
     {
-      hell,
-      urban,
+      "hell"
+      "urban"
     }
   }
 
   if keys[T] then
     return rand.pick(keys[T])
-  else
-    return T
   end
+
+  return T
 end
 
 

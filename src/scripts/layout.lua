@@ -2001,7 +2001,7 @@ stderrf("Cages in %s [%s pressure] --> any_prob=%d  per_prob=%d\n",
     local theme = LEVEL.theme_name
 
     if R.theme.theme_override then
-      theme = ob_resolve_keyword(R.theme.theme_override)
+      theme = ob_resolve_theme_keyword(R.theme.theme_override)
     end
 
     if where == "floor" then
