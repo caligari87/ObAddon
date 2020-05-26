@@ -190,10 +190,7 @@ function Render_edge(E)
             return true
           end
 
-          if other_seed.area.chunk and other_seed.area.chunk.kind == "closet" then
-            return true
-          end
-          if other_seed.area.chunk and other_seed.area.chunk.kind == "joiner" then
+          if other_seed.area.chunk then
             return true
           end
 
@@ -281,21 +278,21 @@ function Render_edge(E)
       -- at least one seed ahead is not in the same area
       -- as the current wall
       local tx, ty = geom.nudge(E.S.mid_x, E.S.mid_y, 10-dir, 128)
-      local that_seed = Seed_from_coord(tx, ty)
+      local o_s = Seed_from_coord(tx, ty)
 
-      if check_area_state(E.S, that_seed, "narrow_area") then
+      if check_area_state(E.S, o_s, "narrow_area") then
         reqs.deep = 16
       end
 
       -- use only flat walls if in a corner
       tx, ty = geom.nudge(E.S.mid_x, E.S.mid_y, geom.LEFT[dir], 128)
-      that_seed = Seed_from_coord(tx, ty)
-      if check_area_state(E.S, that_seed, "potentially_obstructing") then
+      o_s = Seed_from_coord(tx, ty)
+      if check_area_state(E.S, o_s, "potentially_obstructing") then
         reqs.deep = 16
       end
       tx, ty = geom.nudge(E.S.mid_x, E.S.mid_y, geom.RIGHT[dir], 128)
-      that_seed = Seed_from_coord(tx, ty)
-      if check_area_state(E.S, that_seed, "potentially_obstructing") then
+      o_s = Seed_from_coord(tx, ty)
+      if check_area_state(E.S, o_s, "potentially_obstructing") then
         reqs.deep = 16
       end
 
@@ -306,15 +303,13 @@ function Render_edge(E)
         -- if seed in front of the edge has anything on it
         -- choose a flat wall fab instead
         if chunk.content and chunk.content != "MON_TELEPORT" then
-          if chunk.prefab_def then
-            if chunk.prefab_def.size then
-              reqs.deep = math.clamp(16, chunk.space - chunk.prefab_def.size, 9999)
+          if chunk.prefab_def and chunk.prefab_def.size then
+            reqs.deep = math.clamp(16, chunk.space - chunk.prefab_def.size, 9999)
 
-            -- prefabs without a size definition are assumed to occupy the whole chunk
-            -- mostly for exit fabs
-            else
-              reqs.deep = 16
-            end
+          -- prefabs without a size definition are assumed to occupy the whole chunk
+          -- mostly for exit fabs
+          else
+            reqs.deep = 16
           end
         end
 
@@ -329,34 +324,37 @@ function Render_edge(E)
       -- check for wall pieces that require solid depth behind
       -- i.e. fake doors and windows
       reqs.has_solid_back = true
-      tx, ty = geom.nudge(E.S.mid_x, E.S.mid_y, dir, -128)
-      that_seed = Seed_from_coord(tx, ty)
+      tx, ty = geom.nudge(E.S.mid_x, E.S.mid_y, 10-dir, -128)
+      o_s = Seed_from_coord(tx, ty)
 
       -- if seeds on either side don't belong to the same room
       -- then it's not solid
-      if that_seed.area then
-        if that_seed.area.room != E.S.area.room then
+      if o_s.area then
+        reqs.has_solid_back = false
+
+        if o_s.area.mode == "liquid" then
           reqs.has_solid_back = false
+        end
 
-          -- override: but if there are height differences
-          -- why not allow it?
-          if that_seed.area.floor_h and E.S.area.floor_h then
-            if that_seed.area.floor_h >= E.S.area.floor_h + 128 then
-              reqs.has_solid_back = true
-            end
+        -- override: but if there are height differences
+        -- why not allow it?
+        if o_s.area.floor_h and E.S.area.floor_h then
+          if o_s.area.floor_h >= E.S.area.floor_h + 128 then
+            reqs.has_solid_back = true
           end
-          if that_seed.area.ceil_h and E.S.area.ceil_h then
-            if that_seed.area.ceil_h <= E.S.area.floor_h then
-              reqs.has_solid_back = true
-            end
+        end
+        if o_s.area.ceil_h and E.S.area.ceil_h then
+          if o_s.area.ceil_h <= E.S.area.floor_h then
+            reqs.has_solid_back = true
           end
+        end
 
-          -- if the other side is a chunk (like a cage or closet)
-          -- or a liquid then disallow it again...
-          if that_seed.area.chunk == "closet"
-          or that_seed.area.mode == "liquid" then
-            reqs.has_solid_back = false
-          end
+        if o_s.area.chunk then
+          reqs.has_solid_back = false
+        end
+
+        if o_s.area.mode == "void" then
+          reqs.has_solid_back = true
         end
       end
     end
