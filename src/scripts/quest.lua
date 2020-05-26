@@ -2879,15 +2879,26 @@ function Quest_room_themes()
         elseif R.is_outdoor then
           R.theme = Z.outdoor_theme
         end
-
-        R.fence_type = rand.key_by_probs(THEME.fence_groups)
-        R.beam_type = rand.key_by_probs(THEME.beam_groups)
       end
     end
 
     if THEME.outdoor_wall_groups then -- MSSP-TODO: No need for this check
                                       -- once all themes have outdoor_wall_groups?
       LEVEL.outdoor_wall_group = rand.key_by_probs(THEME.outdoor_wall_groups)
+    end
+  end
+
+
+  local function misc_fabs()
+    local theme = LEVEL.theme_name
+
+    each R in LEVEL.rooms do
+      if R.theme.theme_override then
+        theme = ob_resolve_theme_keyword(R.theme.theme_override)
+      end
+
+      R.fence_type = rand.key_by_probs(GAME.THEMES[theme].fence_groups)
+      R.beam_type = rand.key_by_probs(GAME.THEMES[theme].beam_groups)
     end
   end
 
@@ -3127,6 +3138,8 @@ function Quest_room_themes()
   if PARAM.foreshadowing_exit and PARAM.foreshadowing_exit == "yes" then
     choose_exit_theme()
   end
+
+        misc_fabs()
 
     misc_textures()
   facade_textures()

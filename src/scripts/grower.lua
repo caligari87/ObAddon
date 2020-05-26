@@ -2597,6 +2597,10 @@ stderrf("prelim_conn %s --> %s : S=%s dir=%d\n", c_out.R1.name, c_out.R2.name, S
 
     if A.room then
       reqs.env = A.room:get_env()
+
+      if A.room.theme and A.room.theme.theme_override then
+        reqs.theme = A.room.theme.theme_override
+      end
     end
 
     -- prevent small areas connected with a lift
