@@ -1559,6 +1559,7 @@ function Cave_floor_heights(R, entry_h)
   end
 
 
+  -- makes things worse -MSSP
   local function blobify()
     local src = area.walk_map:copy()
 
@@ -1576,9 +1577,9 @@ function Cave_floor_heights(R, entry_h)
     -- ensure half-cells are merged with the blob touching the
     -- corner away from the diagonal, otherwise the gap which
     -- could exist there may be too narrow for players to pass
-    blob_map:merge_diagonal_blobs(area.diagonals)
+    --blob_map:merge_diagonal_blobs(area.diagonals)
 
-    blob_map:merge_small_blobs(4)
+    --blob_map:merge_small_blobs(4)
 
     blob_map:extent_of_blobs()
     blob_map:neighbors_of_blobs()
