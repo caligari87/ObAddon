@@ -4,7 +4,7 @@ PREFABS.Cage_wall_bunker_tech =
 
   prob  = 800
 
-  theme  = "!hell"
+  theme  = "tech"
 
   where  = "seeds"
   shape  = "U"

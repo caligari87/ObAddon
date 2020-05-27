@@ -7,7 +7,7 @@ PREFABS.Decor_water_tower =
   theme  = "!hell"
   env = "outdoor"
 
-  height = 192
+  height = { 192,512 }
 
   where  = "point"
   size   = 96

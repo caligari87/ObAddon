@@ -21,6 +21,8 @@ PREFABS.Decor_light_pillar_helix_outdoor =
 {
   template = "Decor_light_pillar_helix"
 
+  height = {160,512}
+
   env    = "outdoor"
 
   z_fit  = "top"
@@ -51,6 +53,8 @@ PREFABS.Decor_light_pillar_core_outdoor =
 
   env    = "outdoor"
 
+  height = {160,320}
+
   z_fit  = "top"
 }
 
@@ -78,6 +82,8 @@ PREFABS.Decor_light_pillar_core2_outdoor =
   template = "Decor_light_pillar_core2"
 
   env    = "outdoor"
+
+  height = {160,320}
 
   z_fit  = "top"
 }
@@ -203,6 +209,8 @@ PREFABS.Decor_sealed_storage_outdoor =
 {
   template = "Decor_sealed_storage"
 
+  height = {128, 368}
+
   env    = "outdoor"
 }
 
@@ -228,6 +236,8 @@ PREFABS.Decor_sealed_storage_large =
 PREFABS.Decor_sealed_storage_large_outdoor =
 {
   template = "Decor_sealed_storage_large"
+
+  height = {128, 368}
 
   env    = "outdoor"
 }
