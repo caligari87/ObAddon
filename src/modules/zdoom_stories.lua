@@ -115,6 +115,7 @@ ZDOOM_STORIES.LIST =
   -- rare stories
   deus_ex_machina = 6
   weab = 2
+  weab2 = 2
   repercussions_of_evil = 2
   zero_wing = 2
   asylum = 10
@@ -670,6 +671,36 @@ ZDOOM_STORIES.STORIES =
       _SPACE
       The vision dissipates. Your HUD indicates no presence of hallucinogens
       in the area.]],
+    }
+  }
+
+  weab2 =
+  {
+    hooks =
+    {
+      [[You have always fought the legions of hell but something
+      feels amiss this time. It seems as though the visages of the demons stutter
+      and shake with their movement somehow jerky. The faces of zombies seem to
+      phase-in and out but stay the way they are, red and bloodied as always,
+      the longer you look. Hell seems to be playing a trick - the only way is through.
+      _SPACE
+      You continue on.]],
+    }
+
+    conclusions =
+    {
+      [[The demon<Doom Engine error:$_STORY_STRING_NOT_FOUND>
+      _SPACE
+      $$-.You suddenly find yourself motionless. The room around you has collapsed into a white void.
+      The silhouette of a lady with wavy hair appears before you.
+      She is shaded almost entirely hidden from the blinding light. She cheerfully speaks.
+      _SPACE
+      'I put you here to keep you safe from everyone else. For me. I'm sorry I made
+      you do... a bit of the work. You've... deleted them all.'
+      _SPACE
+      You pressure your arms to aim and fire, yet you shoot in the wrong direction. That
+      seemed to be enough however... you find yourself the previous room, the hellish dead
+      piled around the corners. The strange illusion seems to have faded.]],
     }
   }
 
