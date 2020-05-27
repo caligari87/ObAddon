@@ -1348,6 +1348,7 @@ step:dump("Step:")
     if #group_list > 0 then
       gui.printf("WARNING:\nCave steps failed to cover all important chunks " ..
       "in ROOM" .. area.room.id .. "\n")
+      gui.printf(table.tostr(group_list,2) .. "\n")
     end
   end
 
