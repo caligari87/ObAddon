@@ -3161,9 +3161,11 @@ function Room_floor_ceil_heights()
   end
 
 
-  local function calc_min_max_floor(R)
+  local function calc_min_max_h(R, with_ceil)
     R.max_floor_h = -EXTREME_H
     R.min_floor_h =  EXTREME_H
+    R.max_ceil_h  = -EXTREME_H
+    R.min_ceil_h  =  EXTREME_H
 
     each A in R.areas do
       if A.floor_h then
@@ -3172,9 +3174,18 @@ function Room_floor_ceil_heights()
 
         if A.floor_group then A.floor_group.h = A.floor_h end
       end
+
+      if with_ceil and A.ceil_h and not R.is_hallway then
+        R.max_ceil_h = math.max(R.max_ceil_h, A.max_ceil_h or A.ceil_h)
+        R.min_ceil_h = math.min(R.min_ceil_h, A.min_ceil_h or A.ceil_h)
+      end
+
     end
 
     assert(R.max_floor_h >= R.min_floor_h)
+    if with_ceil and not R.is_hallway then
+      assert( R.max_ceil_h >= R.min_ceil_h )
+    end
   end
 
 
@@ -3361,7 +3372,7 @@ function Room_floor_ceil_heights()
       A.ceil_mat = N.ceil_mat
       A.is_porch_neighbor = true
 
-      if A.mode == "cage" then
+      if A.room.is_outdoor and A.mode == "cage" then
         A.ceil_h = N.ceil_h
         A.floor_h = (N.floor_h or N.chunk.floor_h) + 24
 
@@ -3514,7 +3525,7 @@ end
   sanity_check()
 
   each R in LEVEL.rooms do
-    calc_min_max_floor(R)
+    calc_min_max_h(R)
 
     -- corner style decision -MSSP
     if not R.is_outdoor then
@@ -3546,7 +3557,7 @@ end
     do_closets(R)
 
     Room_cleanup_stairs_to_nowhere(R)
-    calc_min_max_floor(R)
+    calc_min_max_h(R, "ceilz_with_feelz")
   end
 end
 
