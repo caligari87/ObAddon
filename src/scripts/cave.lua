@@ -1346,7 +1346,8 @@ step:dump("Step:")
     grow_step_areas()
 
     if #group_list > 0 then
-      error("Cave steps failed to cover all important chunks\n")
+      gui.printf("WARNING:\nCave steps failed to cover all important chunks " ..
+      "in ROOM" .. area.room.id .. "\n")
     end
   end
 
@@ -2787,7 +2788,6 @@ function Cave_build_a_cave(R, entry_h)
 
   --[[ sync heights of blobs near to walk rects
   each WC in area.walk_rects do
-    print(table.tostr(WC))
     each BOT in area.blobs do
       each B in BOT do
         if B.is_wall then continue end
@@ -2828,7 +2828,6 @@ function Cave_build_a_cave(R, entry_h)
             B.ceil_h = WC.chunk.ceil_h
           elseif WC.conn then
             local diff = math.abs(B.floor_h - WC.conn.conn_h)
-            print(table.tostr(B))
             if diff < 24 then
               B.floor_h = WC.conn.conn_h
             end
