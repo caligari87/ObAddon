@@ -3627,11 +3627,9 @@ function Room_set_sky_heights()
   -- zone
   each Z in LEVEL.zones do
     Z.sky_h = -EXTREME_H
-    each A in Z.areas do
-      if A.ceil_h then
-        if A.ceil_h > Z.sky_h then
-          Z.sky_h = A.ceil_h
-        end
+    each R in Z.rooms do
+      if R.max_ceil_h then
+        Z.sky_h = math.max(Z.sky_h, R.max_ceil_h)
       end
     end
   end
