@@ -27,7 +27,7 @@ PREFABS.Decor_outdoor_billboard_UAC_sheet =
 
   height = 160
 
-  bound_z2 = 160
+  bound_z2 = nil
 
   z_fit = nil
 }
