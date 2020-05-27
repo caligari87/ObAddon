@@ -383,7 +383,7 @@ PREFABS.Wall_tech_outdoor_tekgren_grates_thing_EPIC =
 
   group = "tech_o_tekgren_grates_thing"
 
-  replaces = "Wall_tech_outdoor_tekgren_grates_thing_EPIC"
+  replaces = "Wall_tech_outdoor_tekgren_grates_thing"
 
   uses_epic_textures = true
 
