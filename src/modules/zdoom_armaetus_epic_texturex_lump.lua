@@ -433,7 +433,7 @@ Flat "T_SDTCH5", 64, 64
 
 Texture "T_SHAWCR", 128, 64
 {
-	Patch "SHAWN1", 6, -3
-	Patch "SHAWN1", -122, -3
+    Patch "SHAWN1", 6, -3
+    Patch "SHAWN1", -122, -3
 }
 ]]

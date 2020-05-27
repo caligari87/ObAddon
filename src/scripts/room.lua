@@ -924,7 +924,6 @@ function Room_pick_edge_prefab(C)
       -- TODO : reqs.kind = "door"
 
       C.is_door = true
-      C.fresh_floor = rand.odds(30)
     end
   end
 

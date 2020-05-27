@@ -1058,9 +1058,9 @@ function Cave_create_areas(R, area)
 
     group_map = GRID_CLASS.blank_copy(area.cave_map)
 
----##  each G in R.cave_imps do
----##    add_group_to_map(G)
----##  end
+    each WC in area.walk_rects do
+      add_group_to_map(WC)
+    end
   end
 
 
@@ -1202,7 +1202,7 @@ function Cave_create_areas(R, area)
       -- set initial point
       grow_add(cx, cy)
 
-      local count = rand.pick { 3, 4, 5 }
+      local count = rand.pick { 1, 2, 3 }
 
       grow_it(100)
 
@@ -1218,11 +1218,11 @@ function Cave_create_areas(R, area)
 step:dump("Step:")
 
       -- when the step is too small, merge it into previous area
-      if size < 4 and prev_B then
+      --if size < 4 and prev_B then
 
-        install_blob(prev_B, step, 1)
+        --install_blob(prev_B, step, 1)
 
-      else
+      --else
         local AREA =
         {
           neighbors = {}
@@ -1236,7 +1236,7 @@ step:dump("Step:")
         install_blob(AREA, step, 1)
 
         prev_B = AREA
-      end
+      --end
 
 
       -- remember area of covered groups (e.g. for outgoing heights)
@@ -1559,7 +1559,6 @@ function Cave_floor_heights(R, entry_h)
   end
 
 
-  -- makes things worse -MSSP
   local function blobify()
     local src = area.walk_map:copy()
 
@@ -1569,7 +1568,7 @@ function Cave_floor_heights(R, entry_h)
     end
     end
 
-    blob_map = src:create_blobs(3, 2)
+    blob_map = src:create_blobs(4, 3)
 
     -- ensure walk-rects are fully contained in a single blob
     blob_map:walkify_blobs(area.walk_rects)
@@ -1869,9 +1868,8 @@ function Cave_floor_heights(R, entry_h)
 
   visit_area(entry_area, z_dir, entry_h)
 
---TODO : only needed for caves with varying floor heights
---       [ currently caves are always flat ]
   -- transfer_heights()
+-- Heights already transfered after all cave operations.
 
   update_min_max_floor()
   update_walk_ways()
@@ -2787,17 +2785,25 @@ function Cave_build_a_cave(R, entry_h)
     end
   end
 
-  -- sync heights of blobs near to walk rects
+  --[[ sync heights of blobs near to walk rects
   each WC in area.walk_rects do
+    print(table.tostr(WC))
     each BOT in area.blobs do
       each B in BOT do
         if B.is_wall then continue end
 
-        local cx = (WC.cx1 + WC.cx2) / 2
-        local cy = (WC.cy1 + WC.cy2) / 2
-
         local dist
+        local dist_to_check = 1
+
         local points =
+        {
+          [1] = {x=WC.cx1, y=WC.cy1}
+          [2] = {x=WC.cx1, y=WC.cy2}
+          [3] = {x=WC.cx2, y=WC.cy1}
+          [4] = {x=WC.cx2, y=WC.cy2}
+        }
+
+        local points_to_compare =
         {
           [1] = {x=B.cx1, y=B.cy1}
           [2] = {x=B.cx1, y=B.cy2}
@@ -2807,25 +2813,31 @@ function Cave_build_a_cave(R, entry_h)
         local yas_queen = false
 
         each P in points do
-          dist = geom.dist(cx, cy, P.x, P.y)
-          if dist <= 2 then
-            yas_queen = true
-            continue
+          each CP in points_to_compare do
+            dist = geom.dist(P.x, P.y, CP.x, CP.y)
+            if dist <= dist_to_check then
+              yas_queen = true
+              continue
+            end
           end
         end
 
         if yas_queen then
-          if WC.floor_h then
+          if WC.chunk then
             B.floor_h = WC.chunk.floor_h
             B.ceil_h = WC.chunk.ceil_h
-          elseif WC.conn and WC.conn.conn_h then
-            B.floor_h = WC.conn.conn_h
+          elseif WC.conn then
+            local diff = math.abs(B.floor_h - WC.conn.conn_h)
+            print(table.tostr(B))
+            if diff < 24 then
+              B.floor_h = WC.conn.conn_h
+            end
           end
         end
 
       end
     end
-  end
+  end]]
   --
 
 end
