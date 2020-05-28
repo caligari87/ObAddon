@@ -1349,6 +1349,12 @@ step:dump("Step:")
       gui.printf("WARNING:\nCave steps failed to cover all important chunks " ..
       "in ROOM" .. area.room.id .. "\n")
       gui.printf(table.tostr(group_list,2) .. "\n")
+      each G in group_list do
+        if G.kind and G.kind == "conn" then
+          gui.printf(table.tostr(G.conn),2)
+          gui.printf(table.tostr(G.conn.joiner_chunk),2)
+        end
+      end
     end
   end
 

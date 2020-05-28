@@ -38,6 +38,8 @@ PREFABS.Item_scionox_nature_simple_pool =
 
   env  = "nature"
 
+  liquid = true
+
   size = 72
 
   map = "MAP04"

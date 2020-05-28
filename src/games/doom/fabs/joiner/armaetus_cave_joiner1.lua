@@ -5,6 +5,8 @@ PREFABS.Joiner_armaetus_cave_to_cave_joiner =
 
   prob   = 750
 
+  style = "steepness"
+
   env      = "cave"
   neighbor = "cave"
 
