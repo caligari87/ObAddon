@@ -232,8 +232,8 @@ SECRET_BONUS_FACTORS =
 GLOBAL_STYLE_LIST =
 {
   outdoors    = { none=5,  few=60, some=40, heaps=20 }
-  caves       = { none=75, few=20, some=10, heaps=3 }
-  parks       = { none=75, few=20, some=10, heaps=5 }
+  caves       = { none=35, few=20, some=10, heaps=3 }
+  parks       = { none=35, few=20, some=10, heaps=5 }
   liquids     = { none=0,  few=20, some=25, heaps=50 }
 
   hallways    = { none=0,  few=60, some=30, heaps=10 }
@@ -259,7 +259,7 @@ GLOBAL_STYLE_LIST =
 
   beams       = { none=10, few=10, some=20, heaps=5  }
   porches     = { none=0,  few=10, some=60, heaps=30 }
-  fences      = { none=30, few=30, some=10, heaps=10 }
+  fences      = { none=10, few=20, some=30, heaps=15 }
 
   scenics     = { none=20, few=40, some=30, heaps=10 }
 
