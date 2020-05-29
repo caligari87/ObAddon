@@ -24,6 +24,8 @@ PREFABS.Item_locker_gut_crusher =
 {
   template = "Item_locker_cross_lowering"
   map = "MAP02"
+
+  height = { 128,384 }
 }
 
 PREFABS.Item_locker_gut_crusher_keyed =
@@ -32,12 +34,16 @@ PREFABS.Item_locker_gut_crusher_keyed =
   map = "MAP02"
 
   item_kind = "key"
+
+  height = { 128,384 }
 }
 
 PREFABS.Item_locker_cage =
 {
   template = "Item_locker_cross_lowering"
   map = "MAP03"
+
+  height = { 128,384 }
 
   size = 96
 }
@@ -48,6 +54,8 @@ PREFABS.Item_locker_cage_keyed =
   map = "MAP03"
 
   item_kind = "key"
+
+  height = { 128,384 }
 
   size = 96
 }

@@ -2012,6 +2012,9 @@ function Room_set_kind(R, is_hallway, is_outdoor, is_cave)
 
     if rand.odds(nature_park_prob) then
       R.is_natural_park = true
+      each A in R.areas do
+        A.is_natural_park = true
+      end
     end
   end
 

@@ -4,7 +4,6 @@ PREFABS.Wall_natural_diag =
   map    = "MAP01"
 
   prob   = 150
-  env    = "park"
 
   group  = "natural_walls"
 

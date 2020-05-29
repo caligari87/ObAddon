@@ -4677,17 +4677,21 @@ function Cave_prepare_scenic_vista(area)
     vista_type = "no_vista"
   end
 
-  if vista_type == "watery_drop" and not room.has_hills then
+  if room.is_natural_park then
+    area.is_natural_park = true
+    print_area(area)
+  end
+
+  if vista_type == "watery_drop" then
     area.border_type = "watery_drop"
-  elseif vista_type == "cliff_gradient" and not room.has_hills then
+  elseif vista_type == "cliff_gradient" then
     area.border_type = "cliff_gradient"
-  elseif vista_type == "bottomless_drop" and not room.has_hills then
+  elseif vista_type == "bottomless_drop" then
     area.border_type = "bottomless_drop"
   elseif vista_type == "fake_room"
-  and not room.is_park
-  and not room.is_cave then
+  and not room.is_park then
     area.border_type = "fake_room"
-  elseif vista_type == "ocean" and LEVEL.liquid and not room.has_hills then
+  elseif vista_type == "ocean" and LEVEL.liquid then
     area.border_type = "ocean"
   elseif vista_type == "no_vista" then
     area.border_type = "no_vista"
@@ -4695,7 +4699,7 @@ function Cave_prepare_scenic_vista(area)
     area.border_type = "simple_fence"
   end
 
-  if room.is_natural_park or not area.border_type then
+  if not area.border_type or room.is_cave then
     area.border_type = "no_vista"
   end
 end
@@ -5271,22 +5275,26 @@ function Cave_build_a_scenic_vista(area)
 
   assert(area.mode == "scenic")
 
+  local fence_tab =
+  {
+    fence = 4
+    railing = 4
+    wall = 2
+  }
+
+  local edge_tab =
+  {
+    wall = 1
+    edge = 9
+  }
+
+  if area.is_natural_park then fence_tab.railing = 0 end
+
   -- decide border junction
-  area.fence_type = rand.key_by_probs(
-    {
-      fence = 4
-      railing = 4
-      wall = 2
-    }
-  )
+  area.fence_type = rand.key_by_probs(fence_tab)
 
   -- decide map edge junction type
-  area.map_edge_type = rand.key_by_probs(
-    {
-      wall = 1
-      edge = 9
-    }
-  )
+  area.map_edge_type = rand.key_by_probs(edge_tab)
 
   Cave_setup_stuff(area)
 

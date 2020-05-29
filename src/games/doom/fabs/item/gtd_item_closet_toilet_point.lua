@@ -8,7 +8,8 @@ PREFABS.Item_closet_toilet_point =
   theme = "!hell"
 
   where = "point"
-  height = 128
+
+  height = { 128,368 }
   size  = 96
 }
 

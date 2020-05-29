@@ -687,6 +687,9 @@ function Junction_calc_wall_tex(A1, A2)
     end
   end
 
+  if A1.is_natural_park then return A1.zone.nature_facade end
+  if A2.is_natural_park then return A2.zone.nature_facade end
+
   if A1 == "map_edge" or A2 == "map_edge" then
     if A1.zone then
       return A1.zone.facade_mat

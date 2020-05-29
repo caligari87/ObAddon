@@ -7,7 +7,8 @@ PREFABS.Item_locker_bin =
   theme = "!hell"
 
   where = "point"
-  height = 128
+
+  height = { 128,384 }
   size = 56
 
   bound_z1 = 0
