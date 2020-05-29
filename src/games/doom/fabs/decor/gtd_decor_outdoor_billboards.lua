@@ -25,9 +25,9 @@ PREFABS.Decor_outdoor_billboard_UAC_sheet =
 
   uses_epic_textures = true
 
-  height = 160
+  height = 161
 
-  bound_z2 = nil
+  bound_z2 = 161
 
   z_fit = nil
 }
