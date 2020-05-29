@@ -2591,13 +2591,6 @@ chunk.goal.action = "S1_OpenDoor"  -- FIXME IT SHOULD BE SET WHEN JOINER IS REND
     end
   end
 
-  if A.room and (A.room.is_park or A.room.is_cave) then
-    skin.floor = chunk.floor_mat
-    if A.room.is_cave then
-      skin.ceil = chunk.ceil_mat
-    end
-  end
-
   if A.room and A.room.is_natural_park then
     if def.group == "natural_walls" or reqs.key == "secret" then
       if chunk.kind == "joiner" then

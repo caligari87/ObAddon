@@ -1089,6 +1089,8 @@ function Cave_create_areas(R, area)
 
     local touched_groups
 
+    area.floor_mat = area.room.floor_mat
+    area.ceil_mat = area.room.ceil_mat
 
     -- mark free areas with zero instead of negative
     for fx = 1, cw do
