@@ -251,8 +251,7 @@ function DOOM.get_levels()
 
     -- handling for street mode
     -- actual handling for urban percentages are done
-    -- in grower.lua because level theme is not yet
-    -- established at this point
+    -- MSSP-TODO: Clean this up! Down with cascading elseif statements!
     if not LEV.is_procedural_gotcha or not LEV.prebuilt then
       if OB_CONFIG.streets_mode == "75" and rand.odds(75) then
         LEV.has_streets = true
@@ -271,40 +270,34 @@ function DOOM.get_levels()
     if not LEV.prebuilt then
       if OB_CONFIG.linear_mode == "all" then
         LEV.is_linear = true
-      elseif OB_CONFIG.linear_mode == "75" and rand.odds(75) then
-        LEV.is_linear = true
-      elseif OB_CONFIG.linear_mode == "50" and rand.odds(50) then
-        LEV.is_linear = true
-      elseif OB_CONFIG.linear_mode == "25" and rand.odds(25) then
-        LEV.is_linear = true
-      elseif OB_CONFIG.linear_mode == "10" and rand.odds(10) then
-        LEV.is_linear = true
-      elseif OB_CONFIG.linear_mode == "5" and rand.odds(5) then
-        LEV.is_linear = true
+      elseif OB_CONFIG.linear_mode != "none" then
+        if rand.odds(int(OB_CONFIG.linear_mode)) then
+          LEV.is_linear = true
+        end
       end
 
       -- linear start code
       if PARAM.linear_start then
         if PARAM.linear_start == "all" then
           LEV.has_linear_start = true
-        elseif PARAM.linear_start == "75" and rand.odds(75) then
-          LEV.has_linear_start = true
-        elseif PARAM.linear_start == "50" and rand.odds(50) then
-          LEV.has_linear_start = true
-        elseif PARAM.linear_start == "25" and rand.odds(25) then
-          LEV.has_linear_start = true
-        elseif PARAM.linear_start == "12" and rand.odds(12) then
-          LEV.has_linear_start = true
+        elseif PARAM.linear_start != "default" then
+          if rand.odds(int(PARAM.linear_start)) then
+            LEV.has_linear_start = true
+          end
         end
       end
 
-      -- ensure secret map entrances aren't linear moded
-      -- when the option is not "all"
-      if OB_CONFIG.linear_mode != "all" then
-        if map == 15 or map == 31 then
-          LEV.is_linear = false
+      -- nature mode
+      if PARAM.nature_mode and not LEV.has_streets then
+        if PARAM.nature_mode == "all" then
+          LEV.is_nature = true
+        elseif PARAM.nature_mode != "default" then
+          if rand.odds(int(PARAM.nature_mode)) then
+            LEV.is_nature = true
+          end
         end
       end
+
     end
 
     if MAP_NUM == 1 or (map % 10) == 3 then

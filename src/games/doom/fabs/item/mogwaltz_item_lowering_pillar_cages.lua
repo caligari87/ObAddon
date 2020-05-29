@@ -90,7 +90,6 @@ PREFABS.Item_mogwaltz_lowering_pillar_gothic_inactive =
   }
 }
 
--- different version MSSP-TODO: hell variations?
 PREFABS.Item_mogwaltz_lowering_pillar_alt =
 {
   template = "Item_mogwaltz_lowering_pillar"

@@ -968,6 +968,7 @@ function Grower_decide_extents()
 
   -- urban streets code, because level theme is not yet
   -- determined if it was done from games/[game]/level.lua
+  -- MSSP-TODO: Clean this up, boi!
   if LEVEL.theme_name == "urban" then
     if OB_CONFIG.streets_mode == "100urban" then
       LEVEL.has_streets = true
@@ -988,6 +989,11 @@ function Grower_decide_extents()
         LEVEL.has_streets = true
       end
     end
+  end
+
+  -- let nature mode take precedence over streets mode
+  if LEVEL.is_nature then
+    LEVEL.has_streets = false
   end
 
   if LEVEL.has_streets and LEVEL.is_procedural_gotcha then

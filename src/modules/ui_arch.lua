@@ -100,7 +100,7 @@ UI_ARCH.STREETS_CHOICES =
   "no",       _("NONE"),
 }
 
-UI_ARCH.LINEAR_CHOICES =
+UI_ARCH.LEVEL_PERCENTAGE_CHOICES =
 {
   "all",  _("All Levels"),
   "75",   _("75% of All Levels"),
@@ -137,7 +137,7 @@ OB_MODULES["ui_arch"] =
     {
       name = "linear_mode"
       label = _("Linear Mode"),
-      choices = UI_ARCH.LINEAR_CHOICES,
+      choices = UI_ARCH.LEVEL_PERCENTAGE_CHOICES,
       default = "none"
       tooltip = "Creates linear levels, where rooms are connected along a " ..
       "linear layout from start to exit. \n\nNote: Due to the nature of linear levels, " ..

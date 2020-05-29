@@ -3308,19 +3308,38 @@ function ULTDOOM.get_levels()
         end
       end
 
-      -- linear start code
-      if PARAM.linear_start then
-        if PARAM.linear_start == "all" then
-          LEV.has_linear_start = true
-        elseif PARAM.linear_start == "75" and rand.odds(75) then
-          LEV.has_linear_start = true
-        elseif PARAM.linear_start == "50" and rand.odds(50) then
-          LEV.has_linear_start = true
-        elseif PARAM.linear_start == "25" and rand.odds(25) then
-          LEV.has_linear_start = true
-        elseif PARAM.linear_start == "12" and rand.odds(12) then
-          LEV.has_linear_start = true
+      -- handling for linear mode chance choices
+      if not LEV.prebuilt then
+        if OB_CONFIG.linear_mode == "all" then
+          LEV.is_linear = true
+        elseif OB_CONFIG.linear_mode != "none" then
+          if rand.odds(int(OB_CONFIG.linear_mode)) then
+            LEV.is_linear = true
+          end
         end
+
+        -- linear start code
+        if PARAM.linear_start then
+          if PARAM.linear_start == "all" then
+            LEV.has_linear_start = true
+          elseif PARAM.linear_start != "default" then
+            if rand.odds(int(PARAM.linear_start)) then
+              LEV.has_linear_start = true
+            end
+          end
+        end
+
+        -- nature mode
+        if PARAM.nature_mode and not LEV.has_streets then
+          if PARAM.nature_mode == "all" then
+            LEV.is_nature = true
+          elseif PARAM.nature_mode != "default" then
+            if rand.odds(int(PARAM.nature_mode)) then
+              LEV.is_nature = true
+            end
+          end
+        end
+
       end
 
       if MAP_NUM == 1 or map == 3 then

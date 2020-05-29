@@ -57,6 +57,7 @@
 
     is_procedural_gotcha -- true if this level is a special Procedural Gotcha arena
     is_linear   -- true if this level is linear, as in no branching rooms
+    is_nature   -- true if this level is entirely parks and caves
 
     has_streets -- true if this level contains Street Mode streets
 

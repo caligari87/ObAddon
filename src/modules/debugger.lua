@@ -79,6 +79,17 @@ DEBUG_CONTROL.LEVEL_NUM_CHOICES =
   "36",   _("36 only"),
 }
 
+DEBUG_CONTROL.LEVEL_PERCENTAGE_CHOICES =
+{
+  "all",  _("All Levels"),
+  "75",   _("75% of All Levels"),
+  "50",   _("50% of All Levels"),
+  "25",   _("25% of All Levels"),
+  "10",   _("10% of All Levels"),
+  "5",    _("5% of All Levels"),
+  "none", _("NONE"),
+}
+
 function DEBUG_CONTROL.setup(self)
   for name,opt in pairs(self.options) do
     local value = self.options[name].value
@@ -199,8 +210,19 @@ OB_MODULES["debugger"] =
       label = _("Steppy Caves")
       choices = DEBUG_CONTROL.YES_NO
       tooltip = "Activates the old steppy caves code."
-      defualt = "no"
+      default = "no"
       priority = 92
+    }
+
+    nature_mode =
+    {
+      name = "nature_mode"
+      label = _("Nature Mode")
+      choices = DEBUG_CONTROL.LEVEL_PERCENTAGE_CHOICES
+      tooltip = "Forces most of the map to be composed of naturalistic areas (parks and caves). " ..
+      "The ratio is decided by Outdoors style setting while competing styles are ignored."
+      default = "10"
+      priority = 91
     }
   }
 }

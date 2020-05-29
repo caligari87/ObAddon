@@ -1999,6 +1999,7 @@ function Room_set_kind(R, is_hallway, is_outdoor, is_cave)
      R.id != 1
   then
     local park_prob = style_sel("parks", 0, 22, 45, 90)
+    if LEVEL.is_nature then park_prob = 100 end
 
     if rand.odds(park_prob) then
       R.is_park = true
@@ -2006,9 +2007,16 @@ function Room_set_kind(R, is_hallway, is_outdoor, is_cave)
   end
 
   if R.is_park then
-    if rand.odds(style_sel("natural_parks", 0, 33, 66, 90)) then
+    local nature_park_prob = style_sel("natural_parks", 0, 33, 66, 90)
+    if LEVEL.is_nature then nature_park_prob = 100 end
+
+    if rand.odds(nature_park_prob) then
       R.is_natural_park = true
     end
+  end
+
+  if LEVEL.is_nature and not R.is_outdoor and not is_hallway then
+    R.is_cave = true
   end
 
   each A in R.areas do
@@ -2035,6 +2043,10 @@ function Room_choose_kind(R, last_R)
   end
 
   local is_outdoor = rand.odds(out_prob)
+
+  if LEVEL.is_nature then
+    if is_outdoor then R.is_park = true end
+  end
 
   return is_outdoor, false  -- is_cave
 end
