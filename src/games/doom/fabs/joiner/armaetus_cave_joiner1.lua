@@ -37,8 +37,6 @@ PREFABS.Joiner_armaetus_cave_to_cave_joiner_2x1 =
   seed_h   = 1
 
   delta_h  = 32
-
-  can_flip = nil
 }
 
 PREFABS.Joiner_armaetus_cave_to_cave_joiner_2x1_any_to_cave =
@@ -56,6 +54,4 @@ PREFABS.Joiner_armaetus_cave_to_cave_joiner_2x1_any_to_cave =
   seed_h = 1
 
   delta_h = 64
-
-  can_flip = nil
 }
