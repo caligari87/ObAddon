@@ -1088,6 +1088,10 @@ function Grower_decide_extents()
   if LEVEL.is_linear then
     gui.printf("--==| Linear mode activated! |==--\n\n")
   end
+
+  if LEVEL.is_nature then
+    gui.printf("--==| Nature mode activated! Take a walk! |==--\n\n")
+  end
 end
 
 
