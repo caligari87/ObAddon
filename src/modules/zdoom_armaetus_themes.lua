@@ -296,6 +296,8 @@ ARMAETUS_THEMES =
       QFLAT09 = 5
       GRATE3  = 5
     }
+
+    keep_prob = 10
   }
 
   -- Multi colors here!
@@ -343,6 +345,8 @@ ARMAETUS_THEMES =
       QFLAT09 = 5
       GRATE3  = 5
     }
+
+    keep_prob = 10
   }
 
   -- single color comp rooms
@@ -398,6 +402,8 @@ ARMAETUS_THEMES =
       QFLAT09 = 5
       GRATE3  = 5
     }
+
+    keep_prob = 10
   }
 
   tech_ComputersBlue =
@@ -456,6 +462,8 @@ ARMAETUS_THEMES =
       QFLAT09 = 5
       GRATE3  = 5
     }
+
+    keep_prob = 10
   }
 
   tech_ComputersGreen =
@@ -504,6 +512,8 @@ ARMAETUS_THEMES =
       QFLAT09 = 5
       GRATE3  = 5
     }
+
+    keep_prob = 10
   }
 
   tech_ComputersYellowish =
@@ -554,6 +564,8 @@ ARMAETUS_THEMES =
       QFLAT09 = 5
       GRATE3  = 5
     }
+
+    keep_prob = 10
   }
 
   tech_ComputersParple =
@@ -603,6 +615,8 @@ ARMAETUS_THEMES =
       QFLAT09 = 5
       GRATE3  = 5
     }
+
+    keep_prob = 10
   }
 
   -- Hooray, CEMENT textures!
@@ -1080,6 +1094,8 @@ ARMAETUS_THEMES =
       BODIESB = 10
       BODIESC = 10
     }
+
+    keep_prob = 10
   }
 
   hell_CementCautionless =
@@ -1150,6 +1166,8 @@ ARMAETUS_THEMES =
       BODIESB = 10
       BODIESC = 10
     }
+
+    keep_prob = 20
   }
 
   hell_fleshcraft =
