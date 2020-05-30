@@ -1207,6 +1207,7 @@ DOOM.THEMES =
       tech_o_red_wall = 1
       tech_o_lots_of_cement = 1
       tech_o_tekgren_grates_thing = 1
+      tech_o_black_mesa_overlook = 1
     }
 
     window_groups =

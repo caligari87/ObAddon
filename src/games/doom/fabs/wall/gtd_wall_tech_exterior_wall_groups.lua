@@ -389,3 +389,42 @@ PREFABS.Wall_tech_outdoor_tekgren_grates_thing_EPIC =
 
   z_fit = "top"
 }
+
+PREFABS.Wall_tech_outdoor_black_mesa_overlook = -- #
+{
+  template = "Wall_tech_outdoor_caution_strip"
+  map = "MAP18"
+
+  engine = "zdoom"
+
+  height = 192
+
+  deep = 64
+
+  group = "tech_o_black_mesa_overlook"
+
+  z_fit = { 120,164 }
+
+  bound_z2 = 192
+}
+
+PREFABS.Wall_tech_outdoor_black_mesa_overlook_EPIC =
+{
+  template = "Wall_tech_outdoor_caution_strip"
+  map = "MAP18"
+
+  engine = "zdoom"
+  replaces = "Wall_tech_outdoor_black_mesa_overlook"
+
+  height = 192
+
+  deep = 64
+
+  group = "tech_o_black_mesa_overlook"
+
+  tex_COMPBLUE = "COLLITE3"
+
+  z_fit = { 120,164 }
+
+  bound_z2 = 192
+}
