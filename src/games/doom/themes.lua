@@ -982,11 +982,6 @@ DOOM.THEMES =
 
     steps_mat = "GRAY7"
 
-    cliff_mats =
-    {
-      GRAYVINE = 60
-    }
-
     cage_mats =
     {
       METAL1   = 60
@@ -1050,26 +1045,6 @@ DOOM.THEMES =
 
       GRAY5 = 50
       GRAY7 = 50
-    }
-
-    cliff_mats =
-    {
-      ASHWALL2 = 60
-      ASHWALL3 = 60
-      ASHWALL4 = 60
-      ASHWALL7 = 40
-      ZIMMER1  = 40
-      ZIMMER2  = 40
-      ZIMMER3  = 40
-      ZIMMER4  = 40
-      ZIMMER5  = 40
-      SP_ROCK1 = 40
-      STONE4   = 40
-      STONE5   = 40
-      STONE6   = 40
-      STONE7   = 40
-      ZIMMER7  = 30
-      ZIMMER8  = 30
     }
 
     cage_mats =
@@ -1411,29 +1386,6 @@ DOOM.THEMES =
       GRAY7 = 50
     }
 
-    cliff_mats =
-    {
-      ROCK1    = 60
-      ROCK2    = 60
-      ROCK3    = 60
-      ASHWALL6 = 40
-      TANROCK8 = 40
-      TANROCK5 = 40
-      TANROCK4 = 40
-      ZIMMER1  = 40
-      ZIMMER5  = 40
-      ZIMMER7  = 40
-      SP_ROCK1 = 30
-      ASHWALL7 = 30
-      ZIMMER8  = 25
-      ZIMMER3  = 25
-      ASHWALL2 = 25
-      ASHWALL3 = 25
-      ASHWALL4 = 25
-      BSTONE2  = 20
-      ROCK5    = 20
-    }
-
     cage_mats =
     {
 
@@ -1758,23 +1710,6 @@ DOOM.THEMES =
       BRICK10  = 10
       SKINCUT  = 10
       STUCCO3  = 10
-    }
-
-    cliff_mats =
-    {
-      ROCKRED1 = 80
-      SP_ROCK1 = 40
-      ASHWALL2 = 40
-      ROCK3    = 40
-      CRACKLE4 = 40
-      ASHWALL4 = 20
-      SKSNAKE1 = 20
-      SKSNAKE2 = 20
-      SKIN2    = 20
-      CRACKLE2 = 20
-      ROCK5    = 10
-      SKINFACE = 10
-      SP_FACE2 = 10
     }
 
     cage_mats =

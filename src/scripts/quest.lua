@@ -2912,9 +2912,6 @@ function Quest_room_themes()
     gui.debugf("outdoor_volume : %d\n", outdoor_volume)
     gui.debugf("cave_volume : %d\n", cave_volume)
 --]]
-    LEVEL.cliff_mat = rand.key_by_probs(THEME.cliff_mats)
-    LEVEL.other_cliff_mat = rand.key_by_probs(THEME.cliff_mats)
-    LEVEL.other_other_cliff_mat = rand.key_by_probs(THEME.cliff_mats)
 
     each Z in LEVEL.zones do
       assert(THEME.fences)

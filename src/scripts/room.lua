@@ -5,7 +5,7 @@
 --  Oblige Level Maker // ObAddon
 --
 --  Copyright (C) 2006-2017 Andrew Apted
---  Copyright (C) 2019 MsrSgtShooterPerson
+--  Copyright (C) 2019-2020 MsrSgtShooterPerson
 --
 --  This program is free software; you can redistribute it and/or
 --  modify it under the terms of the GNU General Public License
@@ -3030,11 +3030,11 @@ function Room_floor_ceil_heights()
       A.floor_h = math.min(A.floor_h, N.ceil_h - 64)
     end
 
-    A.ceil_h   = math.max(A.floor_h + A.room.scenic_fence.rail_h, A.floor_h + 72)
+    A.ceil_h   = math.max(A.floor_h + A.room.scenic_fence.rail_h, A.floor_h + 96)
     A.ceil_mat = N.ceil_mat
 
     if A.is_outdoor then
-      A.floor_mat = LEVEL.cliff_mat
+      A.floor_mat = A.zone.cage_mat
     else
       A.floor_mat = A.zone.cage_mat
     end

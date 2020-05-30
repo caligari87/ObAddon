@@ -778,10 +778,6 @@ function ARMAETUS_EPIC_TEXTURES.generate_environment_themes()
       PARAM.def_tech_naturals = GAME.ROOM_THEMES.tech_Outdoors_generic.naturals
       PARAM.def_urban_naturals = GAME.ROOM_THEMES.urban_Outdoors_generic.naturals
       PARAM.def_hell_naturals = GAME.ROOM_THEMES.hell_Outdoors_generic.naturals
-      -- cliff materials
-      PARAM.def_tech_cliff_mats = GAME.THEMES.tech.cliff_mats
-      PARAM.def_urban_cliff_mats = GAME.THEMES.urban.cliff_mats
-      PARAM.def_hell_cliff_mats = GAME.THEMES.hell.cliff_mats
 
     -- Doom 1
     elseif OB_CONFIG.game == "doom1"
@@ -796,11 +792,6 @@ function ARMAETUS_EPIC_TEXTURES.generate_environment_themes()
       PARAM.def_deimos_naturals = GAME.ROOM_THEMES.deimos_Outdoors.naturals
       PARAM.def_hell_naturals = GAME.ROOM_THEMES.hell_Outdoors.naturals
       PARAM.def_flesh_naturals = GAME.ROOM_THEMES.flesh_Outdoors.naturals
-      -- cliff materials
-      PARAM.def_tech_cliff_mats = GAME.THEMES.tech.cliff_mats
-      PARAM.def_deimos_cliff_mats = GAME.THEMES.deimos.cliff_mats
-      PARAM.def_hell_cliff_mats = GAME.THEMES.hell.cliff_mats
-      PARAM.def_flesh_cliff_mats = GAME.THEMES.flesh.cliff_mats
     end
 
     PARAM.default_environment_themes_init = true
@@ -814,7 +805,6 @@ function ARMAETUS_EPIC_TEXTURES.generate_environment_themes()
 
   local snow_naturals = ARMAETUS_SNOW_OUTDOORS.naturals
   local snow_facades = ARMAETUS_SNOW_FACADE
-  local snow_cliffs = ARMAETUS_SNOW_CLIFF_MATS
 
   --sand
   local sand_tech_floors = ARMAETUS_DESERT_OUTDOORS.tech.floors
@@ -823,7 +813,6 @@ function ARMAETUS_EPIC_TEXTURES.generate_environment_themes()
 
   local sand_naturals = ARMAETUS_DESERT_OUTDOORS.naturals
   local sand_facades = ARMAETUS_DESERT_FACADE
-  local sand_cliffs = ARMAETUS_DESERT_CLIFF_MATS
 
   if OB_CONFIG.game == "doom2" then
     if LEVEL.outdoor_theme == "snow" then
@@ -833,9 +822,6 @@ function ARMAETUS_EPIC_TEXTURES.generate_environment_themes()
       GAME.ROOM_THEMES.urban_Outdoors_generic.naturals = snow_naturals
       GAME.ROOM_THEMES.hell_Outdoors_generic.floors = snow_hell_floors
       GAME.ROOM_THEMES.hell_Outdoors_generic.naturals = snow_naturals
-      GAME.THEMES.tech.cliff_mats = snow_cliffs
-      GAME.THEMES.urban.cliff_mats = snow_cliffs
-      GAME.THEMES.hell.cliff_mats = snow_cliffs
     elseif LEVEL.outdoor_theme == "desert" then
       GAME.ROOM_THEMES.tech_Outdoors_generic.floors = sand_tech_floors
       GAME.ROOM_THEMES.tech_Outdoors_generic.naturals = sand_naturals
@@ -843,9 +829,6 @@ function ARMAETUS_EPIC_TEXTURES.generate_environment_themes()
       GAME.ROOM_THEMES.urban_Outdoors_generic.naturals = sand_naturals
       GAME.ROOM_THEMES.hell_Outdoors_generic.floors = sand_hell_floors
       GAME.ROOM_THEMES.hell_Outdoors_generic.naturals = sand_naturals
-      GAME.THEMES.tech.cliff_mats = sand_cliffs
-      GAME.THEMES.urban.cliff_mats = sand_cliffs
-      GAME.THEMES.hell.cliff_mats = sand_cliffs
     elseif LEVEL.outdoor_theme == "temperate" then
       GAME.ROOM_THEMES.tech_Outdoors_generic.floors = PARAM.def_tech_floors
       GAME.ROOM_THEMES.tech_Outdoors_generic.naturals = PARAM.def_tech_naturals
@@ -853,9 +836,6 @@ function ARMAETUS_EPIC_TEXTURES.generate_environment_themes()
       GAME.ROOM_THEMES.urban_Outdoors_generic.naturals = PARAM.def_urban_naturals
       GAME.ROOM_THEMES.hell_Outdoors_generic.floors = PARAM.def_hell_floors
       GAME.ROOM_THEMES.hell_Outdoors_generic.naturals = PARAM.def_hell_naturals
-      GAME.THEMES.tech.cliff_mats = PARAM.def_tech_cliff_mats
-      GAME.THEMES.urban.cliff_mats = PARAM.def_urban_cliff_mats
-      GAME.THEMES.hell.cliff_mats = PARAM.def_hell_cliff_mats
     end
   -- MSSP-TODO: check cliff mats for Doom1
   elseif OB_CONFIG.game == "doom1"

@@ -503,11 +503,6 @@ ULTDOOM.THEMES =
       SP_ROCK1 =  5
     }
 
-    cliff_mats =
-    {
-      GRAYVINE = 60
-    }
-
     cage_mats =
     {
       METAL1   = 60
@@ -556,13 +551,6 @@ ULTDOOM.THEMES =
       STARG3 = 20
       BROVINE2 = 5
       BROVINE  = 5
-    }
-
-    cliff_mats =
-    {
-      SP_ROCK1 = 50
-      BROWNHUG = 30
-      ASHWALL  = 20
     }
 
     prefab_remap =
@@ -788,14 +776,6 @@ ULTDOOM.THEMES =
       STONE    = 15
     }
 
-    cliff_mats =
-    {
-      ROCKRED1 = 60
-      ASHWALL  = 40
-      SP_ROCK1 = 40
-      BROWNHUG = 20
-    }
-
     prefab_remap =
     {
     }
@@ -994,15 +974,6 @@ ULTDOOM.THEMES =
       SKINTEK1 = 10
       SKINTEK2 = 10
       STONE = 5
-    }
-
-    cliff_mats =
-    {
-      ROCKRED1 = 60
-      ASHWALL  = 40
-      SP_ROCK1 = 40
-      FIREBLU1 = 20
-      SP_ROCK2 = 15
     }
 
     fences =
@@ -1297,14 +1268,6 @@ ULTDOOM.THEMES =
       SP_HOT1 = 5
       SKINMET1 = 10
       SKINMET2 = 10
-    }
-
-    cliff_mats =
-    {
-      ROCKRED1 = 60
-      ASHWALL  = 40
-      SP_ROCK1 = 40
-      BROWNHUG = 20
     }
 
     fences =

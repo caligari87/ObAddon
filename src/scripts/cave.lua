@@ -4926,7 +4926,7 @@ function Cave_build_a_scenic_vista(area)
     local WATERFALLS = new_blob()
 
     CLIFF.floor_h = get_most_extreme_neighbor_floor(area, "highest") + rand.pick({56,64,72,96})
-    CLIFF.floor_mat = assert(LEVEL.cliff_mat)
+    CLIFF.floor_mat = assert(room.zone.nature_facade)
 
     WATERFALLS.floor_h = rand.irange(FL.floor_h + 16, CLIFF.floor_h - 16)
     WATERFALLS.floor_mat = LEVEL.liquid.mat
@@ -5080,7 +5080,7 @@ function Cave_build_a_scenic_vista(area)
     if LEVEL.liquid then
       FL.is_liquid = true
     else
-      FL.floor_mat = assert(LEVEL.cliff_mat)
+      FL.floor_mat = assert(room.zone.other_nature_facade)
     end
 
     temp_install_floor(FL)
@@ -5095,15 +5095,15 @@ function Cave_build_a_scenic_vista(area)
     local CLIFF3 = new_blob()
 
     CLIFF.floor_h   = get_most_extreme_neighbor_floor(area, "highest") + 96
-    CLIFF.floor_mat = assert(LEVEL.cliff_mat)
+    CLIFF.floor_mat = assert(room.zone.nature_facade)
 
     local drop_diff = CLIFF.floor_h - FL.floor_h
 
     CLIFF3.floor_h   = FL.floor_h + math.ceil(drop_diff * 0.33)
-    CLIFF3.floor_mat = assert(LEVEL.other_cliff_mat)
+    CLIFF3.floor_mat = assert(room.zone.other_nature_facade)
 
     CLIFF2.floor_h   = FL.floor_h + math.ceil(drop_diff * 0.66)
-    CLIFF2.floor_mat = assert(LEVEL.other_other_cliff_mat)
+    CLIFF2.floor_mat = assert(room.zone.nature_facade)
 
     for cx = 1, area.cw do
     for cy = 1, area.ch do

@@ -30,11 +30,6 @@ HERETIC.THEMES =
       BRWNRCKS = 20
     }
 
-    cliff_mats =
-    {
-      ROOTWALL = 50
-    }
-
     cage_mats =
     {
       WOODWL = 60

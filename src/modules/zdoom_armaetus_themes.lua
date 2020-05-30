@@ -989,27 +989,6 @@ ARMAETUS_THEMES =
       FLOOR6_2 = 20
       MFLR8_4  = 15
     }
-
-    cliff_mats =
-    {
-      GRNSTONE = 5
-      HELLROK1 = 10
-      RDROK1 = 15
-      ROK04 = 30
-      ROK05 = 30
-      ROK12 = 30
-      ROK13 = 30
-      ROK14 = 30
-      ROK15 = 30
-      ROK20 = 30
-      ROK21 = 30
-      ROK22 = 30
-      ROK23 = 30
-      SKULLS = 10
-      SKULLS2 = 10
-      BODIESB = 10
-      BODIESC = 10
-    }
   }
 
   hell_CementCautionlines =
@@ -1074,27 +1053,6 @@ ARMAETUS_THEMES =
       GRATE8  = 10
     }
 
-    cliff_mats =
-    {
-      GRNSTONE = 5
-      HELLROK1 = 10
-      RDROK1 = 15
-      ROK04 = 30
-      ROK05 = 30
-      ROK12 = 30
-      ROK13 = 30
-      ROK14 = 30
-      ROK15 = 30
-      ROK20 = 30
-      ROK21 = 30
-      ROK22 = 30
-      ROK23 = 30
-      SKULLS = 10
-      SKULLS2 = 10
-      BODIESB = 10
-      BODIESC = 10
-    }
-
     keep_prob = 10
   }
 
@@ -1146,27 +1104,6 @@ ARMAETUS_THEMES =
       GRATE8  = 10
     }
 
-    cliff_mats =
-    {
-      GRNSTONE = 5
-      HELLROK1 = 10
-      RDROK1 = 15
-      ROK04 = 30
-      ROK05 = 30
-      ROK12 = 30
-      ROK13 = 30
-      ROK14 = 30
-      ROK15 = 30
-      ROK20 = 30
-      ROK21 = 30
-      ROK22 = 30
-      ROK23 = 30
-      SKULLS = 10
-      SKULLS2 = 10
-      BODIESB = 10
-      BODIESC = 10
-    }
-
     keep_prob = 20
   }
 
@@ -1177,53 +1114,41 @@ ARMAETUS_THEMES =
 
     walls =
     {
-     SKIN2 = 10
-     SKIN3 = 10
-     SKIN4 = 10
-     SKINMET1 = 30
-     SKINMET2 = 30
-     SKINLOW1 = 30
-     SKINMET3 = 20
-     SKINMET4 = 20
-     SKINMET5 = 30
-     SKINMET6 = 10
-     SKINMET7 = 10
-     SKTEK01 = 15
-     SKTEK02 = 15
+      SKIN2 = 10
+      SKIN3 = 10
+      SKIN4 = 10
+      SKINMET1 = 30
+      SKINMET2 = 30
+      SKINLOW1 = 30
+      SKINMET3 = 20
+      SKINMET4 = 20
+      SKINMET5 = 30
+      SKINMET6 = 10
+      SKINMET7 = 10
+      SKTEK01 = 15
+      SKTEK02 = 15
     }
 
     floors =
     {
-     FLAT5_1 = 50
-     FLAT5_2 = 50
-     FLAT5 = 30
-     WOODTIL = 30
-     WOODTI2 = 30
-     FLOOR46D = 30
-     FLOOR46E = 30
-     G13 = 20
+      FLAT5_1 = 50
+      FLAT5_2 = 50
+      FLAT5 = 30
+      WOODTIL = 30
+      WOODTI2 = 30
+      FLOOR46D = 30
+      FLOOR46E = 30
+      G13 = 20
     }
 
     ceilings =
     {
-     CEIL1_1 = 50
-     FLAT5_2 = 50
-     G02 = 30
-     G03 = 30
-     FLOOR7_2 = 15
-     FLOOR7_3 = 15
-    }
-
-    cliff_mats =
-    {
-    SKSNAKE1 = 50
-    SKSNAKE2 = 50
-    SKINFACE = 50
-    SKIN2    = 50
-    SKIN4    = 50
-    BODIESB   = 30
-    BODIESC   = 20
-    SKULLS2  = 50
+      CEIL1_1 = 50
+      FLAT5_2 = 50
+      G02 = 30
+      G03 = 30
+      FLOOR7_2 = 15
+      FLOOR7_3 = 15
     }
   }
 
@@ -1234,34 +1159,23 @@ ARMAETUS_THEMES =
 
     walls =
     {
-     KSTONE1 = 50
-     KMARBLE2 = 50
-     KMARBLE3 = 50
-     KMARBLE1 = 20
+      KSTONE1 = 50
+      KMARBLE2 = 50
+      KMARBLE3 = 50
+      KMARBLE1 = 20
     }
 
     floors =
     {
-     BMARB1 = 50
-     BMARB2 = 50
-     BMARB3 = 20
+      BMARB1 = 50
+      BMARB2 = 50
+      BMARB3 = 20
     }
 
     ceilings =
     {
-     BMARB3 = 100
-     BMARB1 = 30
-    }
-
-    cliff_mats =
-    {
-    FIREBLK1 = 80
-    BONES2  = 40
-    BODIESC   = 20
-    ESAND1 = 20
-    ESAND2 = 20
-    ASHWALL1 = 10
-    ASH05 = 5
+      BMARB3 = 100
+      BMARB1 = 30
     }
   }
 
@@ -1272,29 +1186,22 @@ ARMAETUS_THEMES =
 
     walls =
     {
-     REDMARB1 = 20
-     REDMARB2 = 60
-     REDMARB3 = 60
+      REDMARB1 = 20
+      REDMARB2 = 60
+      REDMARB3 = 60
     }
 
     floors =
     {
-     RMARB1 = 50
-     RMARB2 = 50
-     RMARB3 = 20
+      RMARB1 = 50
+      RMARB2 = 50
+      RMARB3 = 20
     }
 
     ceilings =
     {
-     RMARB3 = 100
-     RMARB1 = 30
-    }
-
-    cliff_mats =
-    {
-      FIREBLU1 = 100
-      RDROK1 = 50
-      RDROK2 = 50
+      RMARB3 = 100
+      RMARB1 = 30
     }
   }
 
@@ -3674,25 +3581,6 @@ ARMAETUS_SNOW_OUTDOORS =
   }
 }
 
-ARMAETUS_SNOW_CLIFF_MATS =
-{
-  SNOWROCK = 5
-  SNOWSTON = 5
-  SNOW03 = 5
-  SNOW04 = 5
-  SNOW05 = 2
-  SNOW06 = 5
-  SNOW07 = 5
-  SNOW08 = 5
-  SNOW09 = 5
-  SNOW10 = 5
-  SNOW11 = 5
-  SNOW12 = 5
-  SNOW13 = 3
-  SNOW14 = 3
-  SNOW15 = 5
-}
-
 -- Snowed-in building facades, per map theme type
 
 --[[ARMAETUS_SNOW_TECH_FACADES =
@@ -3848,15 +3736,6 @@ ARMAETUS_DESERT_OUTDOORS =
     DESROCK4 = 25
     DESROCK5 = 20
   }
-}
-
-ARMAETUS_DESERT_CLIFF_MATS =
-{
-  DESROCK1 = 20
-  DESROCK2 = 20
-  DESROCK3 = 20
-  DESROCK4 = 25
-  DESROCK5 = 20
 }
 
 --[[ARMAETUS_DESERT_FACADES =
