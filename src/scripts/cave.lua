@@ -4679,7 +4679,6 @@ function Cave_prepare_scenic_vista(area)
 
   if room.is_natural_park then
     area.is_natural_park = true
-    print_area(area)
   end
 
   if vista_type == "watery_drop" then
@@ -4702,6 +4701,27 @@ function Cave_prepare_scenic_vista(area)
   if not area.border_type or room.is_cave then
     area.border_type = "no_vista"
   end
+
+  local fence_tab =
+  {
+    fence = 4
+    railing = 4
+    wall = 2
+  }
+
+  local edge_tab =
+  {
+    wall = 1
+    edge = 9
+  }
+
+  if room.is_park then fence_tab.railing = 0 end
+
+  -- decide border junction
+  area.fence_type = rand.key_by_probs(fence_tab)
+
+  -- decide map edge junction type
+  area.map_edge_type = rand.key_by_probs(edge_tab)
 end
 
 
@@ -5274,27 +5294,6 @@ function Cave_build_a_scenic_vista(area)
   ---| Cave_build_a_scenic_vista |---
 
   assert(area.mode == "scenic")
-
-  local fence_tab =
-  {
-    fence = 4
-    railing = 4
-    wall = 2
-  }
-
-  local edge_tab =
-  {
-    wall = 1
-    edge = 9
-  }
-
-  if area.is_natural_park then fence_tab.railing = 0 end
-
-  -- decide border junction
-  area.fence_type = rand.key_by_probs(fence_tab)
-
-  -- decide map edge junction type
-  area.map_edge_type = rand.key_by_probs(edge_tab)
 
   Cave_setup_stuff(area)
 
