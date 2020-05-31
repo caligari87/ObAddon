@@ -2,10 +2,10 @@ PREFABS.Decor_outdoor_billboard_UAC =
 {
   file   = "decor/gtd_decor_outdoor_billboards.wad"
   map    = "MAP01"
-
+0
   where  = "point"
 
-  prob   = 3500
+  prob   = 1250
   theme  = "!hell"
   env    = "outdoor"
 
@@ -25,9 +25,12 @@ PREFABS.Decor_outdoor_billboard_UAC_sheet =
 
   uses_epic_textures = true
 
-  height = 161
+  where  = "point"
 
-  bound_z2 = 161
+  prob   = 1250
+  theme  = "!hell"
+  env    = "outdoor"
 
-  z_fit = nil
+  size   = 104
+  height = 160
 }
