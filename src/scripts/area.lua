@@ -810,6 +810,18 @@ function Junction_calc_fence_z(A1, A2)
     end
   end
 
+  -- accomodating fences along stair chunks
+  if A1.chunk and A1.chunk.kind == "stair" then
+    local tmp_z
+    tmp_z = math.max(A1.chunk.from_area.floor_h, A1.chunk.dest_area.floor_h)
+    top_z = math.max(tmp_z, top_z)
+  end
+  if A2.chunk and A2.chunk.kind == "stair" then
+    local tmp_z
+    tmp_z = math.max(A2.chunk.from_area.floor_h, A2.chunk.dest_area.floor_h)
+    top_z = math.max(tmp_z, top_z)
+  end
+
   return top_z + PARAM.jump_height + 8
 end
 
