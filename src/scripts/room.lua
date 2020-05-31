@@ -2038,11 +2038,11 @@ function Room_choose_kind(R, last_R)
   local out_prob
 
   if not last_R then -- chances for first room or trunk(?)
-    out_prob = style_sel("outdoors", 0, 30, 60, 90)
+    out_prob = style_sel("outdoors", 0, 30, 60, 100)
   elseif last_R.is_outdoor then -- chance if previous room was outdoor
-    out_prob = style_sel("outdoors", 0, 20, 45, 70)
+    out_prob = style_sel("outdoors", 0, 20, 45, 90)
   else -- chance if previous room was anything else
-    out_prob = style_sel("outdoors", 0, 30, 60, 90)
+    out_prob = style_sel("outdoors", 0, 30, 60, 100)
   end
 
   local is_outdoor = rand.odds(out_prob)
