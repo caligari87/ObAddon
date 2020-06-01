@@ -1376,16 +1376,12 @@ function Room_make_windows(A1, A2)
 
   -- remove windows into quiet start rooms... but not on procedural gotchas
   if OB_CONFIG.quiet_start == "yes" and not LEVEL.is_procedural_gotcha then
-    if A1.room then
-      if A1.room.is_start then
-        if A2.room then return end
-      end
+    if A1.room and A1.room.is_start then
+      if A2.room then return end
     end
 
-    if A2.room then
-      if A2.room.is_start then
-        if A1.room then return end
-      end
+    if A2.room and A2.room.is_start then
+      if A1.room then return end
     end
   end
 
@@ -1466,11 +1462,9 @@ function Room_border_up()
 
     -- stop beams from going up in an area the same sky sinks because it looks silly
     if A1.ceil_group and A2.ceil_group then
-      if A1.ceil_group.sink and A2.ceil_group.sink then
-        if A1.ceil_group == A2.ceil_group then
-          if A1.ceil_group.sink.mat == "_SKY" and A2.ceil_group.sink.mat == "_SKY" then
-            return false
-          end
+      if A1.ceil_group == A2.ceil_group then
+        if A1.ceil_group.sink and A1.ceil_group.sink.mat == "_SKY" then
+          return false
         end
       end
     end
@@ -3048,7 +3042,7 @@ function Room_floor_ceil_heights()
 
       if not R.is_outdoor then
 
-        if N.ceil_h and N.ceil_h > A.ceil_h + 72 then
+        if N.ceil_h and N.ceil_h > A.ceil_h + 96 then
           A.ceil_h = N.ceil_h
         else
           A.ceil_mat = A.floor_mat
@@ -3063,7 +3057,7 @@ function Room_floor_ceil_heights()
         A.floor_h = N.floor_h
 
         if not R.is_outdoor then
-          A.ceil_h = math.max(A.floor_h + A.room.scenic_fence.rail_h, A.floor_h + 72)
+          A.ceil_h = math.max(A.floor_h + A.room.scenic_fence.rail_h, A.floor_h + 96)
         end
 
         A.floor_mat = N.floor_mat

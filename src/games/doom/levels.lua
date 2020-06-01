@@ -291,7 +291,7 @@ function DOOM.get_levels()
       if PARAM.nature_mode and not LEV.has_streets then
         if PARAM.nature_mode == "all" then
           LEV.is_nature = true
-        elseif PARAM.nature_mode != "default" then
+        elseif PARAM.nature_mode != "none" then
           if rand.odds(int(PARAM.nature_mode)) then
             LEV.is_nature = true
           end
