@@ -2037,9 +2037,9 @@ gui.debugf("wants =\n%s\n\n", table.tostr(wants))
       elseif choice == "default" then
         min_val = 1
       elseif choice == "harder" then
-        min_val = int(spot_total * 0.33)
+        min_val = int(min_val + (spot_total * 0.33))
       elseif choice == "fortified" then
-        min_val = int(spot_total * 0.66)
+        min_val = int(min_val + (spot_total * 0.66))
       elseif choice == "crazy" then
         min_val = spot_total
       end
