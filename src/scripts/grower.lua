@@ -3530,8 +3530,11 @@ function Grower_grammatical_room(R, pass, is_emergency)
 
   elseif pass == "decorate" then
     -- TODO: review this (and stop_prob), see what works best
-    apply_num = sel(R.is_big, 10, 6)
-    if R.is_outdoor or R.is_cave then apply_num = apply_num / 2 end
+    local tmp_num = sel(R.is_big, 10, 6)
+    if R.is_outdoor or R.is_cave then apply_num = tmp_num / 2 end
+    if R.is_natural_park then apply_num = tmp_num * 2 end
+
+    apply_num = tmp_num
 
   elseif pass == "filler" then
     apply_num = 30
