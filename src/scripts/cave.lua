@@ -4895,8 +4895,11 @@ function Cave_build_a_scenic_vista(area)
 
     area.fence_FLOOR = FL
 
-    if rand.odds(75) then
-      area.rail_up = true
+    if rand.odds(75)
+    and (FL.floor_h - area.zone.sky_h) >= assert(room.scenic_fence.rail_h) then
+      area.fence_type = "railing"
+    else
+      area.fence_type = false
     end
 
     -- TEMP RUBBISH

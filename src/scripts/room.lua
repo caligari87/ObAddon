@@ -1671,8 +1671,7 @@ function Room_border_up()
         Junction_make_wall(junc)
 
       elseif A1.is_outdoor then
-        if A2.border_type != "no_vista"
-        or (A2.border_type == "simple_fence" and A2.rail_up) then
+        if A2.border_type != "no_vista" then
           if A2.fence_type == "fence" then
             Junction_make_fence(junc)
           elseif A2.fence_type == "railing" then
@@ -3014,25 +3013,20 @@ function Room_floor_ceil_heights()
     end
 
     if not N.cage_floor_h then
-      N.cage_floor_h = (N.max_floor_h or N.floor_h) + rand.pick({48,64})
+      N.cage_floor_h = (N.floor_h or N.room.max_floor_h) + rand.pick({32,48})
     end
+    A.floor_h = N.cage_floor_h
 
     A.cage_neighbor = N
 
-    A.floor_h  = N.cage_floor_h
     if N.ceil_h then
-      A.floor_h = math.min(A.floor_h, N.ceil_h - 64)
+      A.floor_h = math.min(A.floor_h, N.ceil_h - 96)
     end
 
     A.ceil_h   = math.max(A.floor_h + A.room.scenic_fence.rail_h, A.floor_h + 96)
-    A.ceil_mat = N.ceil_mat
 
-    if A.is_outdoor then
-      A.floor_mat = A.zone.cage_mat
-    else
-      A.floor_mat = A.zone.cage_mat
-    end
-    assert(A.floor_mat)
+    A.floor_mat = assert(A.zone.cage_mat)
+    A.ceil_mat = assert(A.zone.cage_mat)
 
     -- fancy cages
     if A.cage_mode or (#A.seeds >= 4 and rand.odds(50)) then
