@@ -263,8 +263,6 @@ GLOBAL_STYLE_LIST =
   porches     = { none=0,  few=10, some=60, heaps=30 }
   fences      = { none=10, few=20, some=30, heaps=15 }
 
-  scenics     = { none=20, few=40, some=30, heaps=10 }
-
   -- PLANNED or UNFINISHED stuff --
 
   --[[

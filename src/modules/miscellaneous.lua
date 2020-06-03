@@ -136,12 +136,18 @@ OB_MODULES["misc"] =
       choices=MISC_STUFF.YES_NO
       tooltip=_("Ensure every map can be completed from a pistol start (ignore weapons obtained from earlier maps)")
     }
-
     {
       name="alt_starts"
       label=_("Alt-start Rooms")
       choices=MISC_STUFF.YES_NO
       tooltip=_("For Co-operative games, sometimes have players start in different rooms")
+    }
+    {
+      name = "foreshadowing_exit"
+      label = _("Foreshadowing Exit")
+      choices = MISC_STUFF.YES_NO
+      tooltip = "Gets exit room theme to follow the theme of the next level, if different."
+      default = "yes"
       gap=1
     }
 

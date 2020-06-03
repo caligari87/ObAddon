@@ -3293,11 +3293,11 @@ function ULTDOOM.get_levels()
         end
 
         -- nature mode
-        if PARAM.nature_mode and not LEV.has_streets then
-          if PARAM.nature_mode == "all" then
+        if OB_CONFIG.nature_mode and not LEV.has_streets then
+          if OB_CONFIG.nature_mode == "all" then
             LEV.is_nature = true
-          elseif PARAM.nature_mode != "none" then
-            if rand.odds(int(PARAM.nature_mode)) then
+          elseif OB_CONFIG.nature_mode != "none" then
+            if rand.odds(int(OB_CONFIG.nature_mode)) then
               LEV.is_nature = true
             end
           end

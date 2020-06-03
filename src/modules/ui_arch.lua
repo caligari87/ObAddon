@@ -128,22 +128,30 @@ OB_MODULES["ui_arch"] =
     }
 
     {
-      name = "streets_mode",
-      label = _("Streets Mode"),
-      choices = UI_ARCH.STREETS_CHOICES,
+      name = "streets_mode"
+      label = _("Streets Mode")
+      choices = UI_ARCH.STREETS_CHOICES
       default = "no"
       tooltip = "Allows Oblige to create large street-like outdoor rooms."
     }
     {
       name = "linear_mode"
-      label = _("Linear Mode"),
-      choices = UI_ARCH.LEVEL_PERCENTAGE_CHOICES,
+      label = _("Linear Mode")
+      choices = UI_ARCH.LEVEL_PERCENTAGE_CHOICES
       default = "none"
       tooltip = "Creates linear levels, where rooms are connected along a " ..
       "linear layout from start to exit. \n\nNote: Due to the nature of linear levels, " ..
       "you may encounter teleports even if you have teleports off. This is necessary " ..
       "in order for linear levels not to prematuraly terminate and therefore become stunted " ..
       "i.e. only have 2-5 rooms."
+    }
+    {
+      name = "nature_mode"
+      label = _("Nature Mode")
+      choices = UI_ARCH.LEVEL_PERCENTAGE_CHOICES
+      tooltip = "Forces most of the map to be composed of naturalistic areas (parks and caves). " ..
+      "The ratio is decided by Outdoors style setting while competing styles are ignored."
+      default = "10"
       gap = 1
     }
 

@@ -3383,18 +3383,103 @@ end
 
 
 function Render_scenic_fabs()
-  each info in LEVEL.scenic_fabs do
-    local T = Trans.spot_transform(info.x, info.y, info.z1, rand.pick({2,4,6,8}))
 
-    local def = info.prefab_def
-    local skin = info.prefab_skin
+  local function place_scenic_fabs(area)
+    local function try_decor_here(area)
+      local reqs =
+      {
+        height = area.ceil_h - area.floor_h
+        env = "outdoor"
+        kind = "decor"
+        where = "point"
+      }
 
-    if def.z_fit then
-      Trans.set_fitted_z(T, info.z1, info.z2)
+      local skin =
+      {
+        floor = area.floor_mat
+        wall = area.zone.facade_mat
+        ceil = "_SKY"
+      }
+
+      local pick = rand.pick(area.seeds)
+      x = pick.sx
+      y = pick.sy
+
+      local cell_size = 2
+      if x + cell_size > SEED_W then return end
+      if y + cell_size > SEED_H then return end
+
+      reqs.size = cell_size * SEED_SIZE
+
+      --check if this fab doesn't crossover others
+      local bb_x = 0
+      local bb_y = 0
+      while bb_x < cell_size do
+        bb_y = 0
+        while bb_y < cell_size do
+          local new_x = x + bb_x
+          local new_y = y + bb_y
+
+          local S = SEEDS[new_x][new_y]
+
+          if not S.area then return end
+          if S.area and S.area != area then return end
+          if S.walls then return end
+          if S.diagonal then return end
+          if S.occupied then return end
+          S.occupied = true
+
+          bb_y = bb_y + 1
+        end
+        bb_x = bb_x + 1
+      end
+
+      local def = Fab_pick(reqs, "none_ok")
+
+      if def then
+        local fx = x * SEED_SIZE
+        local fy = y * SEED_SIZE
+
+        local fab =
+        {
+          prefab_def = def
+          x = fx
+          y = fy
+          z1 = area.floor_h
+          z2 = area.ceil_h
+          prefab_skin = skin
+        }
+
+        table.insert(LEVEL.scenic_fabs, fab)
+      end
     end
 
-    Fabricate(nil, def, T, {skin})
+    for i = 1, int(area.svolume/32) do
+      try_decor_here(area)
+    end
   end
+
+  local function render_the_fabs()
+    each info in LEVEL.scenic_fabs do
+      local T = Trans.spot_transform(info.x, info.y, info.z1, rand.pick({2,4,6,8}))
+
+      local def = info.prefab_def
+      local skin = info.prefab_skin
+
+      if def.z_fit then
+        Trans.set_fitted_z(T, info.z1, info.z2)
+      end
+
+      Fabricate(nil, def, T, {skin})
+    end
+  end
+
+  each A in LEVEL.areas do
+    if A.border_type == "fake_room" then
+      place_scenic_fabs(A)
+    end
+  end
+  render_the_fabs()
 end
 
 

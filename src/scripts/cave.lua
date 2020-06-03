@@ -2661,13 +2661,11 @@ function Cave_decide_properties(R, area)
   area.step_mode = "walkway"
 
   -- MSSP: Steppy caves are back, baby!
-  if PARAM.steppy_caves and PARAM.steppy_caves == "yes" then
-    if rand.odds(style_sel("steepness", 0, 25, 50, 75)) then
-      if rand.odds(50) then
-        area.step_mode = "up"
-      else
-        area.step_mode = "down"
-      end
+  if rand.odds(style_sel("steepness", 0, 25, 50, 75)) then
+    if rand.odds(50) then
+      area.step_mode = "up"
+    else
+      area.step_mode = "down"
     end
   end
 
@@ -4667,11 +4665,7 @@ function Cave_prepare_scenic_vista(area)
     vista_list.ocean = 4
   end
 
-  -- MSSP-TODO: remove parameter control eventually
-  if not PARAM.fake_room_vista or
-  (PARAM.fake_room_vista and PARAM.fake_room_vista == "yes") then
-    vista_list.fake_room = 4
-  end
+  vista_list.fake_room = 4
 
   vista_type = rand.key_by_probs(vista_list)
 
@@ -4692,8 +4686,9 @@ function Cave_prepare_scenic_vista(area)
     area.border_type = "cliff_gradient"
   elseif vista_type == "bottomless_drop" then
     area.border_type = "bottomless_drop"
+  -- MSSP-TODO: find a better way to mix it up with interior facing rooms
   elseif vista_type == "fake_room"
-  and not room.is_park then
+  and not room.is_park and not room:get_env() == "building" then
     area.border_type = "fake_room"
   elseif vista_type == "ocean" and LEVEL.liquid then
     area.border_type = "ocean"
@@ -5199,75 +5194,6 @@ function Cave_build_a_scenic_vista(area)
 
   local function make_fake_room()
 
-    local function try_decor_here(area)
-      local reqs =
-      {
-        height = area.ceil_h - area.floor_h
-        env = "outdoor"
-        kind = "decor"
-        where = "point"
-      }
-
-      local skin =
-      {
-        floor = area.floor_mat
-        wall = area.zone.facade_mat
-        ceil = "_SKY"
-      }
-
-      local pick = rand.pick(area.seeds)
-      x = pick.sx
-      y = pick.sy
-
-      local cell_size = 2
-      if x + cell_size > SEED_W then return end
-      if y + cell_size > SEED_H then return end
-
-      reqs.size = cell_size * SEED_SIZE
-
-      --check if this fab doesn't crossover others
-      local bb_x = 0
-      local bb_y = 0
-      while bb_x < cell_size do
-        bb_y = 0
-        while bb_y < cell_size do
-          local new_x = x + bb_x
-          local new_y = y + bb_y
-
-          local S = SEEDS[new_x][new_y]
-
-          if not S.area then return end
-          if S.area and S.area != area then return end
-          if S.walls then return end
-          if S.diagonal then return end
-          if S.occupied then return end
-          S.occupied = true
-
-          bb_y = bb_y + 1
-        end
-        bb_x = bb_x + 1
-      end
-
-      local def = Fab_pick(reqs, "none_ok")
-
-      if def then
-        local fx = x * SEED_SIZE
-        local fy = y * SEED_SIZE
-
-        local fab =
-        {
-          prefab_def = def
-          x = fx
-          y = fy
-          z1 = area.floor_h
-          z2 = area.ceil_h
-          prefab_skin = skin
-        }
-
-        table.insert(LEVEL.scenic_fabs, fab)
-      end
-    end
-
     local FL = new_blob()
 
     local src_area = get_random_area(room)
@@ -5285,10 +5211,6 @@ function Cave_build_a_scenic_vista(area)
     area.fence_FLOOR = src_area.fence_mat
     area.floor_mat = FL.floor_mat
     area.main_tex = room.main_tex
-
-    for i = 1, int(area.svolume/32) do
-      try_decor_here(area, FL)
-    end
 
   end
 
