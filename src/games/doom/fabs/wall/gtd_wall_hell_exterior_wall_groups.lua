@@ -434,3 +434,45 @@ PREFABS.Wall_hell_extruded_arch = --#
 
   z_fit = { 40,48 }
 }
+
+PREFABS.Wall_hell_gothic_skin_red_EPIC = --#
+{
+  template = "Wall_hell_stone_brace"
+  map = "MAP17"
+
+  uses_epic_textures = true
+
+  group = "hell_o_gothic_skin_red"
+
+  z_fit = { 36,60 }
+}
+
+PREFABS.Wall_hell_marb_icon_bfalls_EPIC = --#
+{
+  template = "Wall_hell_stone_brace"
+  map = "MAP18"
+
+  uses_epic_textures = true
+
+  group = "hell_o_marb_icon_bfalls"
+
+  z_fit = { 54,58 }
+}
+
+PREFABS.Wall_hell_marb_icon_bfalls_EPIC_alt = --#
+{
+  template = "Wall_hell_stone_brace"
+  map = "MAP18"
+
+  prob = 25
+
+  uses_epic_textures = true
+
+  group = "hell_o_marb_icon_bfalls"
+
+  z_fit = { 54,58 }
+
+  tex_ICONMRB1 = "MARBLE4"
+  tex_BFALL1 = "MARBLE"
+  flat_BLOOD1 = "FLOOR7_2"
+}
