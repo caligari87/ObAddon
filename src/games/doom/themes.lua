@@ -1110,7 +1110,7 @@ DOOM.THEMES =
     floor_sinks =
     {
       PLAIN = 400
-      liquid_plain = 10000000
+      liquid_plain = 10
       liquid_shiny = 5
       liquid_metal2 = 5
       floor_blue2 = 25
