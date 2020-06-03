@@ -1411,7 +1411,16 @@ function Render_sink_part(A, S, where, sink)
 
       T.light_add = sink.trim_light
 
-      brushlib.set_mat(brush, sink.trim_mat, sink.trim_mat)
+      local trim_mat
+      if sink.trim_mat == "_FLOOR" then
+        trim_mat = A.floor_mat
+      elseif sink.trim_mat == "_WALL" then
+        trim_mat = A.room.main_tex
+      elseif sink.trim_mat == "_CEIL" then
+        trim_mat = A.ceil_mat
+      else trim_mat = sink.trim_mat end
+
+      brushlib.set_mat(brush, trim_mat, trim_mat)
 
       -- ensure trim is unpeg (especially for trims like COMPTALL)
       if where == "ceil" then
@@ -1425,7 +1434,16 @@ function Render_sink_part(A, S, where, sink)
       T.light_add = sink.light
       T.special   = sink.special
 
-      brushlib.set_mat(brush, sink.mat, sink.mat)
+      local sink_mat
+      if sink.mat == "_FLOOR" then
+        sink_mat = A.floor_mat
+      elseif sink.mat == "_WALL" then
+        sink_mat = A.room.main_tex
+      elseif sink.mat == "_CEIL" then
+        sink_mat = A.ceil_mat
+      else sink_mat = sink.mat end
+
+      brushlib.set_mat(brush, sink_mat, sink_mat)
     end
 
     Trans.brush(brush)

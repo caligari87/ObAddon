@@ -2023,7 +2023,25 @@ stderrf("Cages in %s [%s pressure] --> any_prob=%d  per_prob=%d\n",
         error("Unknown sink: " .. name)
       end
 
-      -- TODO : check floor/ceiling material
+      if sink.mat == "_LIQUID" or sink.trim_mat == "_LIQUID" then
+        if not LEVEL.liquid then
+          tab[name] = 0
+        end
+        if PARAM.liquid_sinks then
+          if PARAM.liquid_sinks == "no" then
+            tab[name] = 0
+          end
+          if LEVEL.liquid then
+            if LEVEL.liquid.damage
+            and PARAM.liquid_sinks == "not_damaging" then
+              tab[name] = 0
+            end
+            if LEVEL.liquid.damage and LEVEL.is_procedural_gotcha then
+              tab[name] = 0
+            end
+          end
+        end
+      end
 
       if (sink.trim_mat and sink.trim_mat == R.main_tex)
       then
@@ -2053,27 +2071,6 @@ stderrf("Cages in %s [%s pressure] --> any_prob=%d  per_prob=%d\n",
       if name != "PLAIN" then
         fg.sink = GAME.SINKS[name]
         assert(fg.sink)
-
-        -- TODO : prune liquid sinks first
-        if fg.sink.mat == "_LIQUID" then
-          if not LEVEL.liquid then
-            fg.sink = nil
-          end
-          if PARAM.liquid_sinks then
-            if PARAM.liquid_sinks == "no" then
-              fg.sink = nil
-            end
-            if LEVEL.liquid then
-              if LEVEL.liquid.damage
-              and PARAM.liquid_sinks == "not_damaging" then
-                fg.sink = nil
-              end
-              if LEVEL.liquid.damage and LEVEL.is_procedural_gotcha then
-                fg.sink = nil
-              end
-            end
-          end
-        end
       end
 
       if R.is_street and R.svolume > 16 then

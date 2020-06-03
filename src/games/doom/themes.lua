@@ -151,7 +151,7 @@ DOOM.SINKS =
     trim_dz  = 0
   }
 
--- New stuff
+-- sky ceilings
 
   sky_hell_4 =
   {
@@ -455,8 +455,6 @@ DOOM.SINKS =
     trim_dz  = 0
   }
 
--- End new
-
   -- liquid floor --
 
   liquid_plain =
@@ -489,8 +487,6 @@ DOOM.SINKS =
     trim_mat = "METAL"
     trim_dz  = 0
   }
-
--- New stuff here --
 
   liquid_marble =
   {
@@ -546,9 +542,6 @@ DOOM.SINKS =
     trim_mat = "BSTONE2"
     trim_dz  = 2
   }
-
--- End new --
-
 
   -- ceiling lights --
 
@@ -729,8 +722,6 @@ DOOM.SINKS =
     dz  = -8
   }
 
--- New stuff
-
   floor_glowingrock2 =
   {
     mat = "SLIME09"
@@ -874,6 +865,43 @@ DOOM.SINKS =
 
     trim_mat = "SP_ROCK1"
     trim_dz  = -8
+  }
+
+  -- fantastic floors
+  floor_sky =
+  {
+    mat = "_SKY"
+    dz = -16
+    light = 32
+
+    trim_mat = "FLOOR7_2"
+    trim_dz = -8
+  }
+
+  floor_trim_sky =
+  {
+    mat = "_FLOOR"
+
+    trim_mat = "_SKY"
+    trim_dz = -8
+  }
+
+  floor_trim_liquid =
+  {
+    mat = "_FLOOR"
+    dz = -4
+
+    trim_mat = "_LIQUID"
+    trim_dz = -8
+  }
+
+  floor_mixup =
+  {
+    mat = "_CEIL"
+    dz = -8
+
+    trim_mat = "_WALL"
+    trim_dz = -4
   }
 
   floor_streets = --MSSP: Hi! This shouldn't be used anywhere
@@ -1082,11 +1110,13 @@ DOOM.THEMES =
     floor_sinks =
     {
       PLAIN = 400
-      liquid_plain = 10
+      liquid_plain = 10000000
       liquid_shiny = 5
       liquid_metal2 = 5
       floor_blue2 = 25
       floor_blue3 = 25
+      floor_trim_liquid = 5
+      floor_mixup = 25
     }
 
     ceiling_sinks =
@@ -1424,6 +1454,8 @@ DOOM.THEMES =
       liquid_bstone = 5
       liquid_bstone2 = 5
       liquid_ash = 3
+      floor_trim_liquid = 10
+      floor_mixup = 20
     }
 
     ceiling_sinks =
@@ -1774,6 +1806,10 @@ DOOM.THEMES =
       liquid_bstone = 5
       liquid_bstone2 = 5
       liquid_marble = 5
+      floor_sky = 5
+      floor_trim_sky = 7
+      floor_trim_liquid = 8
+      floor_mixup = 20
     }
 
     ceiling_sinks =
