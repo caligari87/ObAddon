@@ -904,6 +904,42 @@ DOOM.SINKS =
     trim_dz = -4
   }
 
+  floor_shawn_wall =
+  {
+    mat = "_WALL"
+    dz = -8
+
+    trim_mat = "SHAWN2"
+    trim_dz = -4
+  }
+
+  floor_metal_wall =
+  {
+    mat = "_WALL"
+    dz = -8
+
+    trim_mat = "METAL"
+    trim_dz = -4
+  }
+
+  floor_shawn_c =
+  {
+    mat = "_CEIL"
+    dz = -8
+
+    trim_mat = "SHAWN2"
+    trim_dz = -4
+  }
+
+  floor_metal_c =
+  {
+    mat = "_CEIL"
+    dz = -8
+
+    trim_mat = "METAL"
+    trim_dz = -4
+  }
+
   floor_streets = --MSSP: Hi! This shouldn't be used anywhere
   {               --except on streets
     mat = "CEIL5_1"
@@ -1117,6 +1153,8 @@ DOOM.THEMES =
       floor_blue3 = 25
       floor_trim_liquid = 5
       floor_mixup = 25
+      floor_shawn_wall = 25
+      floor_shawn_c = 25
     }
 
     ceiling_sinks =
@@ -1455,7 +1493,11 @@ DOOM.THEMES =
       liquid_bstone2 = 5
       liquid_ash = 3
       floor_trim_liquid = 10
-      floor_mixup = 20
+      floor_mixup = 30
+      floor_shawn_wall = 8
+      floor_metal_wall = 15
+      floor_shawn_c = 8
+      floor_metal_c = 15
     }
 
     ceiling_sinks =
@@ -1809,7 +1851,9 @@ DOOM.THEMES =
       floor_sky = 5
       floor_trim_sky = 7
       floor_trim_liquid = 8
-      floor_mixup = 20
+      floor_mixup = 17
+      floor_metal_wall = 17
+      floor_metal_c = 17
     }
 
     ceiling_sinks =
