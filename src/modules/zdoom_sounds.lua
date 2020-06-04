@@ -22,13 +22,14 @@ ZDOOM_SOUND_DEFS =
 
 -- Ambient sounds for outdoors
 Outdoors_Tech =             { lump = "TECHAMB",   flags = "$limit TECHAMB 1"  }
+Outdoors_Temperate_Park   = { lump = "TEMPPARK",  flags = "$limit TEMPPARK 1" }
 Outdoors_Urban_Rainforest = { lump = "RAINAMB",   flags = "$limit RAINAMB 1"  }
 Outdoors_Arctic_Wind =      { lump = "ARCTIC",    flags = "$limit ARCTIC 1"   }
 Outdoors_Desert_Wind =      { lump = "DESERT",    flags = "$limit DESERT 1"   }
 Outdoors_Street =           { lump = "STREETAM",  flags = "$limit STREETAM 1" }
 
 -- Ambient sound for Caves
-Cave_Ambient =              { lump = "CAVEAMB",  flags = "$limit STREETAM 1"  }
+Cave_Ambient =              { lump = "CAVEAMB",  flags = "$limit CAVEAMB 1"  }
 
 -- Ambient sound for Theme
 Hell =                      { lump = "HELLAMB",   flags = "$limit HELLAMB 1"  }
@@ -70,7 +71,7 @@ ZDOOM_SOUNDSCAPES =
       desert    = { Cave_Ambient = 50 }
     }
     park = {
-      temperate = { Outdoors_Urban_Rainforest = 50 }
+      temperate = { Outdoors_Temperate_Park = 50 }
       snow      = { Outdoors_Arctic_Wind = 50 }
       desert    = { Outdoors_Desert_Wind = 50 }
     }
@@ -86,7 +87,7 @@ ZDOOM_SOUNDSCAPES =
     building = {
     }
     outdoor = {
-      temperate = { Outdoors_Urban_Rainforest = 50 }
+      temperate = { Outdoors_Temperate_Park = 50 }
       snow      = { Outdoors_Arctic_Wind = 50 }
       desert    = { Outdoors_Desert_Wind = 50 }
     }
@@ -96,7 +97,7 @@ ZDOOM_SOUNDSCAPES =
       desert    = { Cave_Ambient = 50 }
     }
     park = {
-      temperate = { Outdoors_Urban_Rainforest = 50 }
+      temperate = { Outdoors_Temperate_Park = 50 }
       snow      = { Outdoors_Arctic_Wind = 50 }
       desert    = { Outdoors_Desert_Wind = 50 }
     }
