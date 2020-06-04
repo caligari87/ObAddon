@@ -22,7 +22,8 @@ SKY_GEN = { }
 
 SKY_GEN.SKY_CHOICES =
 {
-  "sky_default", _("Random"),
+  "sky_default", _("Default"),
+  "50",          _("Random"),
   "sky_night",   _("Night"),
   "sky_day",     _("Day"),
 }
@@ -455,7 +456,8 @@ function SKY_GEN.generate_skies()
 
     if PARAM.force_sky == "sky_day" then
       is_starry = false
-    elseif PARAM.force_sky == "sky_night" then
+    elseif PARAM.force_sky == "sky_night"
+    or (PARAM.force_sky == "50" and rand.odds(50)) then
       is_starry = true
     end
 
@@ -660,7 +662,10 @@ OB_MODULES["sky_generator"] =
       label=_("Time of Day")
       choices=SKY_GEN.SKY_CHOICES
       priority = 10
-      tooltip = "This forces the sky background (behind the hills and clouds) to either be night or day."
+      tooltip = "This forces the sky background (behind the hills and clouds) to either be night or day. " ..
+      "Default means vanilla Oblige behavior of picking one epsiode to be night. Random means 50% chance of " ..
+      "night or day to be picked per episode."
+      default = "sky_default"
     }
 
     force_hills =
@@ -669,6 +674,7 @@ OB_MODULES["sky_generator"] =
       choices=SKY_GEN.HILL_STATE
       priority = 9
       tooltip = "Influences whether the sky generator should generate terrain in the skybox."
+      default = "hs_random"
     }
 
     force_hill_params =
@@ -679,6 +685,7 @@ OB_MODULES["sky_generator"] =
       tooltip = "Changes the parameters of generated hills, if there are any. " ..
                 "'Cavernous' causes the terrain to nearly fill up most of the sky," ..
                 "making an impression of being inside a cave or crater."
+      default = "hp_random"
       gap = 1
     }
 
