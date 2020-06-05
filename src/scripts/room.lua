@@ -1186,13 +1186,13 @@ function Room_make_windows(A1, A2)
     local f1 = A1.max_floor_h or A1.floor_h
     local f2 = A2.max_floor_h or A2.floor_h
 
-    if A1.room and A1.room.is_park then
+    --[[if A1.room and A1.room.is_park then
       f1 = A1.room.max_floor_h
     end
 
     if A2.room and A2.room.is_park then
       f2 = A2.room.max_floor_h
-    end
+    end]]
 
     local max_f = math.max(f1, f2)
     local min_c = math.min(c1, c2)
@@ -3013,7 +3013,9 @@ function Room_floor_ceil_heights()
     end
 
     if not N.cage_floor_h then
-      N.cage_floor_h = (N.floor_h or N.room.max_floor_h) + rand.pick({32,48})
+      local offset = rand.pick({32,48})
+      N.cage_floor_h = (N.floor_h or N.max_floor_h) + offset
+      if N.mode == "nature" then N.cage_floor_h = N.max_floor_h + offset end
     end
     A.floor_h = N.cage_floor_h
 
@@ -3057,29 +3059,6 @@ function Room_floor_ceil_heights()
         A.floor_mat = N.floor_mat
       end
     end
-
-    -- MSSP-TODO: restore this code but apply it to all areas in the same floor group
-    -- and accomodate the max floor heights as well
-
-    -- unify cages to their preferred neighbor heights if the
-    -- cage itself is taller
-    --[[if R:get_env() == "building" then
-      each N2 in A.neighbors do
-        if N2.room then
-          if A.room == N2.room then
-            if N2.ceil_h then
-              if N2.ceil_h < A.ceil_h then
-                each N3 in R.areas do
-                  if N3.ceil_h == N2.ceil_h then
-                    N3.ceil_h = A.ceil_h
-                  end
-                end
-              end
-            end
-          end
-        end
-      end
-    end]]
 
     -- adopt room ceiling texture if cage ceiling is at neighbor's height
     if A.ceil_h == N.ceil_h then
