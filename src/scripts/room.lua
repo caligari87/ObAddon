@@ -3102,7 +3102,7 @@ function Room_floor_ceil_heights()
 
     R.cage_rail_areas = {}
 
-    if rand.odds(50) then
+    if rand.odds(50) and not R.is_park then
       R.cage_floor_level = true
     end
 
