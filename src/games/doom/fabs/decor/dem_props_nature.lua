@@ -260,6 +260,7 @@ PREFABS.Decor_dem_stalav2 =
 
   liquid = false
 
+  z_fit = { 12,128 }
 }
 
 PREFABS.Decor_dem_stalav3 =
@@ -269,6 +270,7 @@ PREFABS.Decor_dem_stalav3 =
 
   liquid = true
 
+  z_fit = { 12,128 }
 }
 
 PREFABS.Decor_dem_stalav4 =
@@ -278,6 +280,7 @@ PREFABS.Decor_dem_stalav4 =
 
   liquid = true
 
+  z_fit = { 12,128 }
 }
 
 PREFABS.Decor_dem_stalav5 =
@@ -286,7 +289,6 @@ PREFABS.Decor_dem_stalav5 =
   map    = "MAP24"
 
   liquid = false
-
 }
 
 ---- outdoors and cave ruins ----
