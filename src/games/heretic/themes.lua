@@ -37,12 +37,12 @@ HERETIC.THEMES =
 
     floor_sinks =
     {
-      PLAIN = 50
+      PLAIN = 0.1
     }
 
     ceiling_sinks =
     {
-      PLAIN = 50
+      PLAIN = 0.1
     }
 
     beam_groups =

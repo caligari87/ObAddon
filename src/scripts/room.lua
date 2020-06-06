@@ -3067,6 +3067,37 @@ function Room_floor_ceil_heights()
   end
 
 
+  local function do_sink_mats(R)
+    local picked_ceil_mat
+    local picked_floor_mat
+
+    -- MSSP-TODO: pick the material from the largest area in the room instead (via svolume)
+    while not picked_floor_mat do
+      each A in R.areas do
+        if A.floor_mat then
+          picked_floor_mat = A.floor_mat
+        end
+      end
+      if not picked_floor_mat then picked_floor_mat = R.main_tex end
+    end
+
+    R.floor_sink_mat = picked_floor_mat
+
+    if R.is_outdoor then return end
+
+    while not picked_ceil_mat do
+      each A in R.areas do
+        if A.ceil_mat then
+          picked_ceil_mat = A.ceil_mat
+        end
+      end
+      if not picked_ceil_mat then picked_ceil_mat = R.main_tex end
+    end
+    R.ceil_sink_mat = picked_ceil_mat
+
+  end
+
+
   local function do_cage_areas(R)
     if R.is_start then
       --kill_start_cages(R)
@@ -3530,6 +3561,8 @@ end
 
       do_ceilings(R)
       do_liquid_areas(R)
+
+      do_sink_mats(R)
     end
 
     do_cage_areas(R)

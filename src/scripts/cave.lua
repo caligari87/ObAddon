@@ -2949,6 +2949,42 @@ function Cave_build_a_park(R, entry_h)
   end
 
 
+  local function do_install_floor_blob(B, base_h)
+    local BLOB =
+    {
+      floor_h   = B.prelim_h + base_h
+      floor_mat = B.floor_mat
+    }
+
+    assert(BLOB.floor_h)
+    assert(BLOB.floor_mat)
+
+    temp_install_blob(BLOB, B)
+
+    table.insert(area.walk_floors, BLOB)
+
+    area.min_floor_h = math.min(area.min_floor_h, BLOB.floor_h)
+    area.max_floor_h = math.max(area.max_floor_h, BLOB.floor_h)
+
+    if B.decor then
+      local mx = area.base_x + (B.decor.cx - 1) * 64 + 32
+      local my = area.base_y + (B.decor.cy - 1) * 64 + 32
+
+      Trans.entity(B.decor.ent, mx, my, BLOB.floor_h, B.decor.props)
+
+      R:add_solid_ent(B.decor.ent, mx, my, BLOB.floor_h)
+    end
+
+    -- inhibit pickup items in damaging liquid
+    if BLOB.floor_mat == "_LIQUID" and LEVEL.liquid.damage then
+      BLOB.no_items = true
+    end
+  end
+
+
+  ----===========  RIVER STUFF  ===========----
+
+
   local function check_river_point(cx, cy)
     -- returns -1 if hit/touching a walk chunk
     -- returns  0 if hit another room
@@ -3303,6 +3339,50 @@ function Cave_build_a_park(R, entry_h)
   end
 
 
+  local function can_make_river_tower(B)
+    if B.is_walk then return end
+
+    -- check whether the blob is completely surrounded by
+    -- cells at the same height.
+
+    for cx = B.cx1, B.cx2 do
+    for cy = B.cy1, B.cy2 do
+      if blob_map[cx][cy] != B.id then continue end
+
+      each dir in geom.ALL_DIRS do
+        local nx, ny = geom.nudge(cx, cy, dir)
+        if not blob_map:valid(nx, ny) then return false end
+
+        local n_id = blob_map[nx][ny]
+        if not n_id then return false end
+        if n_id == B.id then continue end
+
+        local N = blob_map.regions[n_id]
+        assert(N)
+
+        if N.floor_id != B.floor_id then return false end
+
+        if N.is_tower then return false end
+      end
+    end
+    end
+
+    return true
+  end
+
+
+  local function river_add_towers()
+    local prob = rand.pick({ 10, 30, 90 })
+
+    each _,B in blob_map.regions do
+      if rand.odds(prob) and can_make_river_tower(B) then
+        B.is_tower = true
+        B.prelim_h = B.prelim_h + 64
+      end
+    end
+  end
+
+
   local function make_a_river()
     local RIVER =
     {
@@ -3330,6 +3410,20 @@ function Cave_build_a_park(R, entry_h)
     if best then
       install_river(best, RIVER)
     end
+
+    --[[each _,B in RIVER do
+      B.prelim_h = entry_h
+      B.floor_mat = area.room.floor_mat
+    end
+
+    river_add_towers(blob_map)
+
+    -- render em
+    each _,reg in RIVER do
+      if reg.is_tower then
+        do_install_floor_blob(reg, 0)
+      end
+    end]]
   end
 
 
@@ -4124,39 +4218,6 @@ function Cave_build_a_park(R, entry_h)
 
     -- nothing worked :(
     return false
-  end
-
-
-  local function do_install_floor_blob(B, base_h)
-    local BLOB =
-    {
-      floor_h   = B.prelim_h + base_h
-      floor_mat = B.floor_mat
-    }
-
-    assert(BLOB.floor_h)
-    assert(BLOB.floor_mat)
-
-    temp_install_blob(BLOB, B)
-
-    table.insert(area.walk_floors, BLOB)
-
-    area.min_floor_h = math.min(area.min_floor_h, BLOB.floor_h)
-    area.max_floor_h = math.max(area.max_floor_h, BLOB.floor_h)
-
-    if B.decor then
-      local mx = area.base_x + (B.decor.cx - 1) * 64 + 32
-      local my = area.base_y + (B.decor.cy - 1) * 64 + 32
-
-      Trans.entity(B.decor.ent, mx, my, BLOB.floor_h, B.decor.props)
-
-      R:add_solid_ent(B.decor.ent, mx, my, BLOB.floor_h)
-    end
-
-    -- inhibit pickup items in damaging liquid
-    if BLOB.floor_mat == "_LIQUID" and LEVEL.liquid.damage then
-      BLOB.no_items = true
-    end
   end
 
 

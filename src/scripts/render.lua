@@ -1413,11 +1413,11 @@ function Render_sink_part(A, S, where, sink)
 
       local trim_mat
       if sink.trim_mat == "_FLOOR" then
-        trim_mat = A.floor_mat
+        trim_mat = assert(A.room.floor_sink_mat or "_ERROR")
       elseif sink.trim_mat == "_WALL" then
         trim_mat = A.room.main_tex
       elseif sink.trim_mat == "_CEIL" then
-        trim_mat = A.ceil_mat
+        trim_mat = assert(A.room.ceil_sink_mat or "_ERROR")
       else trim_mat = sink.trim_mat end
 
       brushlib.set_mat(brush, trim_mat, trim_mat)
@@ -1436,11 +1436,11 @@ function Render_sink_part(A, S, where, sink)
 
       local sink_mat
       if sink.mat == "_FLOOR" then
-        sink_mat = A.floor_mat
+        sink_mat = assert(A.room.floor_sink_mat or "_ERROR")
       elseif sink.mat == "_WALL" then
         sink_mat = A.room.main_tex
       elseif sink.mat == "_CEIL" then
-        sink_mat = A.ceil_mat
+        sink_mat = assert(A.room.ceil_sink_mat or "_ERROR")
       else sink_mat = sink.mat end
 
       brushlib.set_mat(brush, sink_mat, sink_mat)

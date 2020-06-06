@@ -1022,17 +1022,17 @@ DOOM.THEMES =
 
     floor_sinks =
     {
-      PLAIN = 100
+      PLAIN = 0.01
     }
 
     ceiling_sinks =
     {
-      PLAIN = 100
+      PLAIN = 0.01
     }
 
     wall_groups =
     {
-      PLAIN = 100
+      PLAIN = 0.01
     }
 
     window_groups =
@@ -1145,7 +1145,6 @@ DOOM.THEMES =
 
     floor_sinks =
     {
-      PLAIN = 400
       liquid_plain = 10
       liquid_shiny = 5
       liquid_metal2 = 5
@@ -1159,7 +1158,6 @@ DOOM.THEMES =
 
     ceiling_sinks =
     {
-      PLAIN = 400
       sky_shiny = 20
       sky_metal2 = 20
       sky_stone_1 = 5
@@ -1481,7 +1479,6 @@ DOOM.THEMES =
 
     floor_sinks =
     {
-      PLAIN = 400
       liquid_plain = 20
       liquid_metal = 10
       floor_red = 40
@@ -1502,7 +1499,6 @@ DOOM.THEMES =
 
     ceiling_sinks =
     {
-      PLAIN = 400
       sky_metal = 25
       sky_plain = 10
       sky_modwall = 7
@@ -1832,7 +1828,6 @@ DOOM.THEMES =
 
     floor_sinks =
     {
-      PLAIN = 300
       liquid_plain = 10
       liquid_blood = 10
       floor_skulls = 20
@@ -1858,8 +1853,6 @@ DOOM.THEMES =
 
     ceiling_sinks =
     {
-      PLAIN = 400
-
       sky_plain = 20
       sky_metal = 20
       sky_stone_1 = 10

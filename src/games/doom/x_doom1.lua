@@ -559,7 +559,6 @@ ULTDOOM.THEMES =
 
     floor_sinks =
     {
-      PLAIN = 200
       liquid_plain = 10
       liquid_shiny = 5
       liquid_metal = 5
@@ -569,7 +568,6 @@ ULTDOOM.THEMES =
 
     ceiling_sinks =
     {
-      PLAIN = 120
       sky_shiny = 20
       sky_metal = 10
       sky_tech3 = 2
@@ -782,7 +780,6 @@ ULTDOOM.THEMES =
 
     floor_sinks =
     {
-      PLAIN = 200
       liquid_plain = 10
       liquid_shiny = 5
       liquid_metal = 5
@@ -794,7 +791,6 @@ ULTDOOM.THEMES =
 
     ceiling_sinks =
     {
-      PLAIN = 120
       sky_shiny = 20
       sky_metal = 10
       light_red_shiny = 20
@@ -1009,7 +1005,6 @@ ULTDOOM.THEMES =
 
     floor_sinks =
     {
-      PLAIN = 120
       liquid_plain = 10
       liquid_blood = 10
       floor_skulls = 20
@@ -1023,7 +1018,6 @@ ULTDOOM.THEMES =
 
     ceiling_sinks =
     {
-      PLAIN = 170
       sky_metal = 20
       sky_plain = 20
       light_diamond = 10
@@ -1301,7 +1295,6 @@ ULTDOOM.THEMES =
 
     floor_sinks =
     {
-      PLAIN = 120
       liquid_plain = 10
       liquid_blood = 10
       floor_skulls = 15
@@ -1313,7 +1306,6 @@ ULTDOOM.THEMES =
 
     ceiling_sinks =
     {
-      PLAIN = 120
       sky_metal = 20
       sky_plain = 20
       light_diamond = 10

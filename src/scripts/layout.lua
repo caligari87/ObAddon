@@ -2010,7 +2010,8 @@ stderrf("Cages in %s [%s pressure] --> any_prob=%d  per_prob=%d\n",
       tab = R.theme.ceiling_sinks or GAME.THEMES[theme].ceiling_sinks
     end
 
-    assert(tab["PLAIN"])
+    -- PLAIN setting is now ignored for a universal prob, see individual code below
+    -- assert(tab["PLAIN"])
 
     tab = table.copy(tab)
 
@@ -2068,6 +2069,10 @@ stderrf("Cages in %s [%s pressure] --> any_prob=%d  per_prob=%d\n",
 
       local name = rand.key_by_probs(tab)
 
+      -- PLAIN keyword for sinks should now be ignored in
+      -- favor of this direct prob
+      if rand.odds(75) then name = "PLAIN" end
+
       if name != "PLAIN" then
         fg.sink = GAME.SINKS[name]
         assert(fg.sink)
@@ -2093,6 +2098,10 @@ stderrf("Cages in %s [%s pressure] --> any_prob=%d  per_prob=%d\n",
       if tab == nil then return end
 
       local name = rand.key_by_probs(tab)
+
+      -- PLAIN keyword for sinks should now be ignored in
+      -- favor of this direct prob
+      if rand.odds(75) then name = "PLAIN" end
 
       if name != "PLAIN" then
         cg.sink = GAME.SINKS[name]
