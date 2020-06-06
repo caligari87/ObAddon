@@ -2936,7 +2936,7 @@ function Cave_build_a_park(R, entry_h)
       floor_mat = assert(R.floor_mat)
 
       -- TEMP RUBBISH
-      floor_h   = entry_h
+      floor_h = entry_h
     }
 
     area.floor_blob = FLOOR
@@ -3892,7 +3892,10 @@ function Cave_build_a_park(R, entry_h)
     if not LEVEL.liquid then return end
     if not rand.odds(room_prob) then return end
 
-    if rand.odds(all_prob) then prob = 95 end
+    if rand.odds(all_prob) then
+      prob = 95
+      if R.is_plain then prob = 45 end
+    end
 
     -- visit each blob and see if we can make a pool
     -- [ update prelim_h in a second pass, to two or more neighboring
@@ -4555,6 +4558,7 @@ stderrf("  picked chain from blob %d --> %d\n", B.id, C.id)
     local ecy = area.entry_walk.cy1
 
     R.has_hills = true
+    R.is_plain = true
 
     for cx = 1, area.cw do
       for cy = 1, area.ch do
@@ -4571,18 +4575,23 @@ stderrf("  picked chain from blob %d --> %d\n", B.id, C.id)
       end
     end
 
-    if not THEME.park_decor then return end
-
-    -- put some trees in there at least
-    tree_locs = {}
-
-    local prob = style_sel("park_detail", 0, 30, 60, 90)
-
+    --
     each _,B in blob_map.regions do
-      if rand.odds(prob) then
-        try_add_decor_item(B)
+      B.prelim_h = entry_h
+      B.floor_mat = R.floor_mat
+    end
+
+    hill_add_towers(blob_map)
+    hill_add_pools(blob_map)
+    hill_add_decor(blob_map)
+
+    -- render em
+    each _,reg in blob_map.regions do
+      if reg.prelim_h then
+        do_install_floor_blob(reg, entry_h)
       end
     end
+
   end
 
 
