@@ -1186,14 +1186,6 @@ function Room_make_windows(A1, A2)
     local f1 = A1.max_floor_h or A1.floor_h
     local f2 = A2.max_floor_h or A2.floor_h
 
-    --[[if A1.room and A1.room.is_park then
-      f1 = A1.room.max_floor_h
-    end
-
-    if A2.room and A2.room.is_park then
-      f2 = A2.room.max_floor_h
-    end]]
-
     local max_f = math.max(f1, f2)
     local min_c = math.min(c1, c2)
 
@@ -1367,12 +1359,12 @@ function Room_make_windows(A1, A2)
   end
 
   -- dummy height for scenic areas are set here so z_fit windows
-  -- can actually go from floor to ceiling among these junctions
+  --[[ can actually go from floor to ceiling among these junctions
   if A2.mode == "scenic" then
     if not A2.floor_h then
       A2.floor_h = A2:lowest_neighbor().floor_h
     end
-  end
+  end]]
 
   -- remove windows into quiet start rooms... but not on procedural gotchas
   if OB_CONFIG.quiet_start == "yes" and not LEVEL.is_procedural_gotcha then

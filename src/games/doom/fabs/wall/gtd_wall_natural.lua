@@ -41,7 +41,7 @@ PREFABS.Wall_natural4 =
   template = "Wall_natural1"
   map      = "MAP04"
 
-  deep  = 40
+  deep  = 28
 }
 
 PREFABS.Wall_natural5 =
@@ -57,7 +57,7 @@ PREFABS.Wall_natural6 =
   template = "Wall_natural1"
   map      = "MAP06"
 
-  deep  = 24
+  deep  = 16
 }
 
 PREFABS.Wall_natural7 =
@@ -65,7 +65,7 @@ PREFABS.Wall_natural7 =
   template = "Wall_natural1"
   map      = "MAP07"
 
-  deep  = 24
+  deep  = 16
 }
 
 PREFABS.Wall_natural8 =
