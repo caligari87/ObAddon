@@ -254,6 +254,7 @@ GLOBAL_STYLE_LIST =
   trikeys     = { none=5,  few=40, some=30, heaps=20 }
 
   scenics     = { none=10, few=20, some=50, heaps=20}
+  park_detail = { none=0,  few=5,  some=15, heaps=30}
 
   symmetry    = { none=35, few=60, some=20, heaps=10 }
   pictures    = { none=0,  few=10, some=70, heaps=30 }
@@ -262,7 +263,6 @@ GLOBAL_STYLE_LIST =
   beams       = { none=10, few=10, some=20, heaps=5  }
   porches     = { none=0,  few=10, some=60, heaps=30 }
   fences      = { none=10, few=20, some=30, heaps=15 }
-
   -- PLANNED or UNFINISHED stuff --
 
   --[[
