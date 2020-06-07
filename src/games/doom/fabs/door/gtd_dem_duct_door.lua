@@ -11,8 +11,8 @@ PREFABS.Arch_duct_room_to_room_door =
   kind = "arch"
   where = "edge"
 
-  deep = 18
-  over = 18
+  deep = 24
+  over = 24
 
   seed_w = 2
 
