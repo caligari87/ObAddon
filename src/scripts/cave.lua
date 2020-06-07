@@ -4948,6 +4948,13 @@ function Cave_build_a_scenic_vista(area)
     -- WHAT: a basic fence, like in E1M1 or MAP01 of standard DOOM
     --
 
+    local function can_rail()
+      local rail_top = area.floor_h + room.scenic_fence.rail_h
+      if rail_top <= area.zone.sky_h then return true end
+
+      return false
+    end
+
     local FL = new_blob()
 
     FL.floor_h = (room.max_floor_h or room.entry_h) + 72
@@ -4960,15 +4967,13 @@ function Cave_build_a_scenic_vista(area)
 
     area.fence_FLOOR = FL
 
-    if rand.odds(75)
-    and (FL.floor_h - area.zone.sky_h) >= assert(room.scenic_fence.rail_h) then
+    area.floor_h = FL.floor_h
+
+    if rand.odds(75) and can_rail() then
       area.fence_type = "railing"
     else
       area.fence_type = false
     end
-
-    -- TEMP RUBBISH
-    area.floor_h = FL.floor_h
   end
 
 
