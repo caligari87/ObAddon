@@ -24,7 +24,7 @@ MODDED_GAME_EXTRAS.ENABLE_DISABLE =
   "disable", _("Disable"),
 }
 
-MODDED_GAME_EXTRAS.SCRIPT_TYPE_CHOICES =
+MODDED_GAME_EXTRAS.HN_CHOICES =
 {
   "dec",  _("DECORATE"),
   "none", _("NONE"),
@@ -34,8 +34,6 @@ MODDED_GAME_EXTRAS.ACTOR_NAME_GEN_CHOICES =
 {
   "zs",      _("ZScript - Universal"),
   "zs_pb",   _("ZScript - Project Brutality"),
-  "zs_qcde", _("ZScript - Quake Champions: Doom Edition"),
-  "zs_d4t",  _("ZScript - Death Foretold"),
   "none",    _("NONE"),
 }
 
@@ -354,6 +352,10 @@ function MODDED_GAME_EXTRAS.create_hn_info()
     if R.is_secret then
       goal_string = goal_string .. " (Secret Area #" .. PARAM.hn_secret_count .. ")"
       PARAM.hn_secret_count = PARAM.hn_secret_count + 1
+    end
+
+    if R.lev_along then
+      goal_string = goal_string .. " " .. int(R.lev_along) .. "%"
     end
 
     return goal_string
@@ -683,10 +685,15 @@ class bossNameHandler : EventHandler
             || obit.IndexOf("zombie", 0) > -1
             || obit.IndexOf("former", 0) > -1
             || obit.IndexOf("sergeant", 0) > -1
+            || obit.IndexOf("guy", 0) > -1
             || obit.IndexOf("scientist", 0) > -1
             || obit.IndexOf("gunner", 0) > -1
             || obit.IndexOf("dude", 0) > -1
-            || obit.IndexOf("z-spec", 0) > -1)
+            || obit.IndexOf("girl", 0) > -1
+            || obit.IndexOf("female", 0) > -1
+            || obit.IndexOf("security", 0) > -1
+            || obit.IndexOf("zsec", 0) > -1
+            || obit.IndexOf("razer", 0) > -1)
             {
               mon_name = getHumanTag();
             }
@@ -706,10 +713,15 @@ class bossNameHandler : EventHandler
             || tag_string.IndexOf("zombie", 0) > -1
             || tag_string.IndexOf("former", 0) > -1
             || tag_string.IndexOf("sergeant", 0) > -1
+            || tag_string.IndexOf("guy", 0) > -1
             || tag_string.IndexOf("scientist", 0) > -1
             || tag_string.IndexOf("gunner", 0) > -1
             || tag_string.IndexOf("dude", 0) > -1
-            || tag_string.IndexOf("z-spec", 0) > -1)
+            || tag_string.IndexOf("girl", 0) > -1
+            || tag_string.IndexOf("female", 0) > -1
+            || tag_string.IndexOf("security", 0) > -1
+            || tag_string.IndexOf("zsec", 0) > -1
+            || tag_string.IndexOf("razer", 0) > -1)
             {
               mon_name = getHumanTag();
             }
@@ -786,280 +798,6 @@ MODDED_GAME_EXTRAS.PB_GREATER_DEMONS_CHECK =
     if (a is "Juggernaut") return true;
 ]]
 
--- Quake Champions: Doom Edition + addons
-
-MODDED_GAME_EXTRAS.QCDE_HUMAN_CHECK =
-[[
-    //Classic Doom
-    if (a is "QCChaingunGuy") return true;
-    if (a is "QCShotgunGuy") return true;
-    if (a is "QCZombieman") return true;
-
-    /* Doom 3
-    if (a is "D3ZSecPistol") return true;
-    if (a is "D3ZSecShotgunner") return true;
-    if (a is "D3ZSecSMG") return true;
-    if (a is "D3CommandoChaingunner") return true;
-    if (a is "D3ZSpecOpsRailgunner") return true;
-    if (a is "D3ZSpecOpsMachinegunner") return true;
-    if (a is "D3ZSpecOpsShotgunner") return true;
-    if (a is "D3ZSpecOpsRiotShield") return true;
-    if (a is "D3ChainsawZombie") return true;*/
-
-    // Doom 4
-    if (a is "D4HellRazer") return true;
-    if (a is "D4PossessedSecurity") return true;
-    if (a is "D4ShotgunGuy") return true;
-    if (a is "D4Zombieman") return true;
-
-    // Quake 1
-    if (a is "QZombie") return true;
-    if (a is "QNailEnforcer") return true;
-    if (a is "QGrunt") return true;
-    if (a is "QEnforcer") return true;
-
-    // Quake 2 - poor guys
-    if (a is "Q2Berserker") return true;
-    if (a is "Q2Brains") return true;
-    if (a is "Q2Flyer") return true;
-    if (a is "Q2Gladiator") return true;
-    if (a is "Q2Gunner") return true;
-    if (a is "Q2Hornet") return true;
-    if (a is "Q2Hover") return true;
-    if (a is "Q2Infantry") return true;
-    if (a is "QEnforcer") return true;
-    if (a is "Q2IronMaiden") return true;
-    if (a is "Q2LightGuard") return true;
-    if (a is "Q2MachinegunGuard") return true;
-    if (a is "Q2Medic") return true;
-    if (a is "Q2Parasite") return true;
-    if (a is "Q2ShieldHover") return true;
-    if (a is "Q2ShotgunGuard") return true;
-
-    // Quake 4
-    if (a is "Q4Berserker") return true;
-    if (a is "Q4FailedTransfer") return true;
-    if (a is "Q4Gladiator") return true;
-    if (a is "Q4Grunt") return true;
-    if (a is "Q4Gunner") return true;
-    if (a is "Q4Harvester") return true;
-    if (a is "Q4HoverTank") return true;
-    if (a is "Q4LightTank") return true;
-    if (a is "Q4HyperBlasterTactical") return true;
-    if (a is "Q4IronMaiden") return true;
-    if (a is "Q4HyperBlasterTactical") return true;
-    if (a is "Q4LightGuard") return true;
-    if (a is "Q4MachinegunGuard") return true;
-    if (a is "Q4HyperBlasterTactical") return true;
-    if (a is "Q4RailgunTactical") return true;
-    if (a is "Q4RepairBot") return true;
-    if (a is "Q4Scientist") return true;
-    if (a is "Q4ShotgunGuard") return true;
-    if (a is "Q4SlimyTransfer") return true;
-    if (a is "Q4Scientist") return true;
-    if (a is "Q4Sentry") return true;
-    if (a is "Q4StroggHover") return true;
-    if (a is "Q4TeleportDropper") return true;
-    if (a is "Q4Voss") return true;
-
-    /*Half-Life
-    if (a is "HLBarney") return true;
-    if (a is "HLZombie") return true;
-    if (a is "HLZombieMoan") return true;
-    if (a is "HLGonome") return true;
-    if (a is "HLGruntM16") return true;
-
-    Half-life 2
-    if (a is "HL2Barney") return true;
-    if (a is "HL2Combine") return true;
-    if (a is "HL2FastZombie") return true;
-    if (a is "HL2MetroCop") return true;
-    if (a is "HL2PoisonZombie") return true;
-    if (a is "HL2CombineElite") return true;
-    if (a is "HL2Zombie") return true;
-    if (a is "HL2Zombine") return true;*/
-]]
-
-MODDED_GAME_EXTRAS.QCDE_LESSER_DEMONS_CHECK =
-[[
-    //Classic Doom
-    if (a is "QCDemon") return true;
-    if (a is "QCDoomImp") return true;
-
-    /* Doom 3
-    if (a is "D3Wraith") return true;
-    if (a is "D3DoomImp") return true;
-    if (a is "D3DoomImp") return true;
-    if (a is "D3Vulgar") return true;*/
-
-    //Doom 4
-    if (a is "D4Demon") return true;
-    if (a is "D4DoomImp") return true;
-    if (a is "D4Harvester") return true;
-    if (a is "D4Prowler") return true;
-
-    //Quake 1
-    if (a is "QFiend") return true;
-
-    /* Half-life
-    if (a is "HLPitDrone") return true;
-
-    Heretic
-    if (a is "HrtcWelph") return true;
-    if (a is "HrtcImp") return true;*/
-]]
-
-MODDED_GAME_EXTRAS.QCDE_STANDARD_DEMONS_CHECK =
-[[
-    //Classic Doom
-    if (a is "QCArachnotron") return true;
-    if (a is "QCCacodemon") return true;
-    if (a is "QCFatso") return true;
-    if (a is "QCRevenant") return true;
-
-    /*Doom 3
-    if (a is "D3Revenant") return true;
-    if (a is "D3Mancubus") return true;
-    if (a is "D3Cacodemon") return true;*/
-
-    //Doom 4
-    if (a is "D4Arachnotron") return true;
-    if (a is "D4Cacodemon") return true;
-    if (a is "D4FatsoTech") return true;
-    if (a is "D4Revenant") return true;
-
-    //Quake 1
-    if (a is "QOgre") return true;
-    if (a is "QRocketOgre") return true;
-    if (a is "QScrag") return true;
-    if (a is "QShambler") return true;
-    if (a is "QRocketOgre") return true;
-    if (a is "QVore") return true;
-
-    /*Half-Life
-    if (a is "HLStrooper") return true;
-    if (a is "HLHornetGrunt") return true;
-
-    Heretic
-    if (a is "HrtcClink") return true;
-    if (a is "HrtcMummy") return true;
-    if (a is "HrtcSnake") return true;*/
-]]
-
-MODDED_GAME_EXTRAS.QCDE_GREATER_DEMONS_CHECK =
-[[
-    //Classic Doom
-    if (a is "QCArchvile") return true;
-    if (a is "QCBaronOfHell") return true;
-    if (a is "QCCyberdemon") return true;
-    if (a is "QCHellKnight") return true;
-    if (a is "QCPainElemental") return true;
-    if (a is "QCSpiderMastermind") return true;
-
-    /*Doom 3
-    if (a is "D3HellKnight") return true;
-    if (a is "D3Bruiser") return true;
-    if (a is "D3PainElemental") return true;
-    if (a is "D3Archvile") return true;
-    if (a is "D3SpiderMastermind") return true;
-    if (a is "D3CyberDemon") return true;
-    if (a is "D3SpiderMastermind") return true;
-    if (a is "D3HellTimeHunter") return true;
-    if (a is "D3Sabaoth") return true;*/
-
-    //Doom 4
-    if (a is "D4BaronOfHell") return true;
-    if (a is "D4Cyberdemon") return true;
-    if (a is "D4Harvester") return true;
-    if (a is "D4HellKnight") return true;
-    if (a is "D4PainElemental") return true;
-    if (a is "D4SpiderMastermind") return true;
-
-    //Quake 1
-    if (a is "QDeathKnight") return true;
-    if (a is "QKnight") return true;
-    if (a is "QIaldagorth") return true;
-    if (a is "QNgyrKorath") return true;
-    if (a is "QSilverKnight") return true;
-    if (a is "QWrath") return true;
-
-    //Quake 2
-    if (a is "Q2JorgMakron") return true;
-    if (a is "Q2PrototypeContainer") return true;
-    if (a is "Q2Tank") return true;
-    if (a is "Q2TankBoss") return true;
-    if (a is "Q2TankCommander") return true;
-
-    //Quake 4
-    if (a is "Q4Harvester") return true;
-    if (a is "Q4NetworkGuardian") return true;
-    if (a is "Q4StreamProtector") return true;
-    if (a is "Q4StroggHover") return true;
-    if (a is "Q4StreamProtector") return true;
-
-    /*Half-life
-    if (a is "HLController") return true;
-    if (a is "HLVoltigore") return true;
-    if (a is "HLGargantua") return true;
-    if (a is "MiniGarg") return true;
-    if (a is "MiniGarg2") return true;
-    if (a is "HLVoltigore") return true;
-    if (a is "HLGonarch") return true;
-    if (a is "HLNihilant") return true;
-
-    Heretic
-    if (a is "HrtcBeast") return true;
-    if (a is "HrtcDSparil") return true;
-    if (a is "HrtcSorcerer2") return true;
-    if (a is "HrtcMinotaur") return true;
-    if (a is "HrtcSorcerer2") return true;
-    if (a is "HrtcImpLeader") return true;
-    if (a is "HrtcIronlich") return true;
-    if (a is "HrtcKnight") return true;
-    if (a is "HrtcKnightGhost") return true;
-    if (a is "HrtcImpLeader") return true;
-    if (a is "HrtcWizard") return true;
-    if (a is "HrtcWraith") return true;*/
-]]
-
--- D4T addons
-
-MODDED_GAME_EXTRAS.D4T_HUMAN_CHECK =
-[[
-  if (a is "D4Zombieman") return true;
-  if (a is "D4Unwilling") return true;
-  if (a is "D4ShotgunGuy") return true;
-  if (a is "D4PossessedSecurity") return true;
-  if (a is "D4HellRazer") return true;
-]]
-
-MODDED_GAME_EXTRAS.D4T_LESSER_DEMONS_CHECK =
-[[
-  if (a is "D4DoomImp") return true;
-  if (a is "D4Demon") return true;
-]]
-
-MODDED_GAME_EXTRAS.D4T_STANDARD_DEMONS_CHECK =
-[[
-  if (a is "D4Arachnotron") return true;
-  if (a is "D4Cacodemon") return true;
-  if (a is "D4FatsoTech") return true;
-  if (a is "D4FatsoHell") return true;
-  if (a is "D4Prowler") return true;
-  if (a is "D4Revenant") return true;
-]]
-
-MODDED_GAME_EXTRAS.D4T_GREATER_DEMONS_CHECK =
-[[
-  if (a is "D4SpiderMastermind") return true;
-  if (a is "D4Cyberdemon") return true;
-  if (a is "D4Archvile") return true;
-  if (a is "D4HellKnight") return true;
-  if (a is "D4BaronOfHell") return true;
-  if (a is "D4Harvester") return true;
-]]
-
-
 function MODDED_GAME_EXTRAS.generate_custom_actor_names(mode)
   local actor_name_script = ""
 
@@ -1128,16 +866,6 @@ function MODDED_GAME_EXTRAS.generate_custom_actor_names(mode)
     actor_name_script = string.gsub( actor_name_script, "LDEMONS_COMPAT_CHECKS", "\n" .. MODDED_GAME_EXTRAS.PB_LESSER_DEMONS_CHECK)
     actor_name_script = string.gsub( actor_name_script, "SDEMONS_COMPAT_CHECKS", "\n" .. MODDED_GAME_EXTRAS.PB_STANDARD_DEMONS_CHECK)
     actor_name_script = string.gsub( actor_name_script, "GDEMONS_COMPAT_CHECKS", "\n" .. MODDED_GAME_EXTRAS.PB_GREATER_DEMONS_CHECK)
-  elseif mode == "zs_qcde" then
-    actor_name_script = string.gsub( actor_name_script, "HUMAN_COMPAT_CHECKS", "\n" .. MODDED_GAME_EXTRAS.QCDE_HUMAN_CHECK)
-    actor_name_script = string.gsub( actor_name_script, "LDEMONS_COMPAT_CHECKS", "\n" .. MODDED_GAME_EXTRAS.QCDE_LESSER_DEMONS_CHECK)
-    actor_name_script = string.gsub( actor_name_script, "SDEMONS_COMPAT_CHECKS", "\n" .. MODDED_GAME_EXTRAS.QCDE_STANDARD_DEMONS_CHECK)
-    actor_name_script = string.gsub( actor_name_script, "GDEMONS_COMPAT_CHECKS", "\n" .. MODDED_GAME_EXTRAS.QCDE_GREATER_DEMONS_CHECK)
-  elseif mode == "zs_d4t" then
-    actor_name_script = string.gsub( actor_name_script, "HUMAN_COMPAT_CHECKS", "\n" .. MODDED_GAME_EXTRAS.D4T_HUMAN_CHECK)
-    actor_name_script = string.gsub( actor_name_script, "LDEMONS_COMPAT_CHECKS", "\n" .. MODDED_GAME_EXTRAS.D4T_LESSER_DEMONS_CHECK)
-    actor_name_script = string.gsub( actor_name_script, "SDEMONS_COMPAT_CHECKS", "\n" .. MODDED_GAME_EXTRAS.D4T_STANDARD_DEMONS_CHECK)
-    actor_name_script = string.gsub( actor_name_script, "GDEMONS_COMPAT_CHECKS", "\n" .. MODDED_GAME_EXTRAS.D4T_GREATER_DEMONS_CHECK)
   elseif mode == "zs" then
     actor_name_script = string.gsub( actor_name_script, "HUMAN_COMPAT_CHECKS", " ")
     actor_name_script = string.gsub( actor_name_script, "LDEMONS_COMPAT_CHECKS", " ")
@@ -1200,7 +928,7 @@ OB_MODULES["modded_game_extras"] =
     {
       name = "hn_markers"
       label=_("HN Markers")
-      choices=MODDED_GAME_EXTRAS.SCRIPT_TYPE_CHOICES
+      choices=MODDED_GAME_EXTRAS.HN_CHOICES
       tooltip = "Adds support for m8f's Hellscape Navigator by generating " ..
       "name markers in the map per room."
       default = "none"

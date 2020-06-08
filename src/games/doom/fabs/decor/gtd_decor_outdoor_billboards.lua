@@ -2,7 +2,7 @@ PREFABS.Decor_outdoor_billboard_UAC =
 {
   file   = "decor/gtd_decor_outdoor_billboards.wad"
   map    = "MAP01"
-0
+
   where  = "point"
 
   prob   = 1250
@@ -33,4 +33,7 @@ PREFABS.Decor_outdoor_billboard_UAC_sheet =
 
   size   = 104
   height = 160
+
+  bound_z1 = 0
+  bound_z2 = 160
 }

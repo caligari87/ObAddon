@@ -3004,8 +3004,11 @@ function Room_floor_ceil_heights()
       return
     end
 
+    -- set a base height for the cage neighbor so cages
+    -- along this area look consistent
     if not N.cage_floor_h then
       local offset = rand.pick({32,48})
+
       N.cage_floor_h = (N.floor_h or N.max_floor_h) + offset
       if N.mode == "nature" then N.cage_floor_h = N.max_floor_h + offset end
     end
@@ -3013,11 +3016,10 @@ function Room_floor_ceil_heights()
 
     A.cage_neighbor = N
 
+    -- set ceiling for cage (basically if indoors)
     if N.ceil_h then
-      A.floor_h = math.min(A.floor_h, N.ceil_h - 96)
+      A.ceil_h = math.max(A.floor_h + A.room.scenic_fence.rail_h, A.floor_h + 96, N.ceil_h)
     end
-
-    A.ceil_h   = math.max(A.floor_h + A.room.scenic_fence.rail_h, A.floor_h + 96)
 
     A.floor_mat = assert(A.zone.cage_mat)
     A.ceil_mat = assert(A.zone.cage_mat)
@@ -3047,14 +3049,16 @@ function Room_floor_ceil_heights()
         if not R.is_outdoor then
           A.ceil_h = math.max(A.floor_h + A.room.scenic_fence.rail_h, A.floor_h + 96)
         end
-
-        A.floor_mat = N.floor_mat
       end
     end
 
-    -- adopt room ceiling texture if cage ceiling is at neighbor's height
+    -- adopt room textures on cases where flats have same
+    -- heights to the neighbor
     if A.ceil_h == N.ceil_h then
       A.ceil_mat = N.ceil_mat
+    end
+    if A.floor_h == N.floor_h then
+      A.floor_mat = N.floor_mat
     end
   end
 

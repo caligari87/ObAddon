@@ -240,7 +240,7 @@ GLOBAL_STYLE_LIST =
   big_rooms   = { none=15, few=40, some=30, heaps=20 }
   big_outdoor_rooms = { none=15, few=20, some=50, heaps=35}
   teleporters = { none=35, few=50, some=20, heaps=10 }
-  steepness   = { none=0,  few=10, some=70, heaps=25 }
+  steepness   = { none=0,  few=10, some=70, heaps=40 }
 
   traps       = { none=0,  few=25, some=65, heaps=20 }
   cages       = { none=10, few=20, some=40, heaps=10 }
