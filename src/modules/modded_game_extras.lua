@@ -354,8 +354,8 @@ function MODDED_GAME_EXTRAS.create_hn_info()
       PARAM.hn_secret_count = PARAM.hn_secret_count + 1
     end
 
-    if R.lev_along then
-      goal_string = goal_string .. " " .. int(R.lev_along) .. "%"
+    if R.lev_along and not R.is_start and #LEVEL.rooms > 2 then
+      goal_string = goal_string .. " (" .. int(R.lev_along * 100) .. "%%)"
     end
 
     return goal_string
