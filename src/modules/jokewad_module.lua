@@ -263,11 +263,33 @@ function JOKEWAD_MODULE.go_fireblue()
 
 end
 
-function JOKEWAD_MODULE.add_tissues()
+function JOKEWAD_MODULE.populate_level(stuff)
 
-  if LEVEL.is_procedural_gotcha then return end
+  local function render_items(h, x, y, offset)
+    if not rand.odds(stuff.odds) then return end
 
-  if LEVEL.prebuilt then return end
+    local choice = rand.key_by_probs(stuff.items)
+    local item = stuff.templates[choice]
+    local cluster
+    local count = 1
+
+    if item.cluster then
+      count = rand.irange(1, item.cluster)
+    end
+
+    for i = 1, count do
+      local thing = {}
+
+      local final_z = h
+
+      thing.id = stuff.templates[choice].id
+      thing.z = final_z
+      thing.x = rand.irange(x + offset, x - offset)
+      thing.y = rand.irange(y + offset, y - offset)
+
+      raw_add_entity(thing)
+    end
+  end
 
   each A in LEVEL.areas do
     if (A.mode and A.mode == "floor") then
@@ -283,48 +305,63 @@ function JOKEWAD_MODULE.add_tissues()
         if A.floor_group and A.floor_group.sink
         and A.floor_group.sink.mat == "_LIQUID" then continue end
 
-        if rand.odds(7) then
+        render_items(A.ceil_h, S.mid_x, S.mid_y, 48)
 
-          local item_tab = {
-            ob_1roll = 2
-            ob_2roll = 1
-            ob_5roll = 1
-            ob_handsanitizer = 1
-            ob_mask = 1
-          }
+      end
+    elseif A.mode == "nature" then
+      each WC in A.walk_rects do
+        if WC.chunk and WC.chunk.kind == "floor" then
 
-          local choice = rand.key_by_probs(item_tab)
-          local item = JOKEWAD_MODULE.TISSUES[choice]
-          local cluster
-          local count = 1
+          local i_x = WC.chunk.sx1
+          local i_y = WC.chunk.sy1
 
-          if item.cluster then
-            count = rand.irange(1, item.cluster)
-          end
+          while i_x <= WC.chunk.sx2 do
+          while i_y <= WC.chunk.sy2 do
+            local pos_x = (i_x * SEED_SIZE) - 32
+            local pos_y = (i_y * SEED_SIZE) - 32
 
-          for i = 1, count do
-            local event_thing = {}
+            local S = SEEDS[i_x][i_y]
 
-            local final_z = A.ceil_h
-
-            if A.room and not A.room.is_park then
-              final_z = A.floor_h + 2
+            if not S.walls then
+              render_items(WC.chunk.floor_h + 2, pos_x, pos_y, 32)
             end
 
-            event_thing.id = JOKEWAD_MODULE.TISSUES[choice].id
-            event_thing.z = final_z
-            event_thing.x = rand.irange(S.mid_x + 48, S.mid_x - 48)
-            event_thing.y = rand.irange(S.mid_y + 48, S.mid_y - 48)
-
-            raw_add_entity(event_thing)
+            i_y = i_y + 1
+          end
+          i_x = i_x + 1
+          i_y = WC.chunk.sy1
           end
 
         end
-
       end
     end
   end
 
+end
+
+function JOKEWAD_MODULE.add_tissues()
+
+  if LEVEL.is_procedural_gotcha then return end
+
+  if LEVEL.prebuilt then return end
+
+  local item_params = {}
+
+  item_params =
+  {
+    odds = 7
+    items =
+    {
+      ob_1roll = 2
+      ob_2roll = 1
+      ob_5roll = 1
+      ob_handsanitizer = 1
+      ob_mask = 1
+    }
+    templates = JOKEWAD_MODULE.TISSUES
+  }
+
+  JOKEWAD_MODULE.populate_level(item_params)
 end
 
 function JOKEWAD_MODULE.all_done()
