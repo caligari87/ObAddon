@@ -791,12 +791,11 @@ namelib.NAMES =
         ["Locked and Loaded"]=10
         ["Much Obliged"]=10
         ["Taking It To The Next Level"]=10
-        
+
         -- E.T.
         ["To the Limit"]=10
         ["Munitions Warehouse"]=10
         ["Demonic Starport"]=10
-        ["
       }
     }
   }
@@ -989,8 +988,8 @@ namelib.NAMES =
         Fraggle=2, -- Chocolate Doom developer, DoomWiki sysop
         Deathz0r=2, -- One of the reviewers for the /newstuff chronicles, co-host of Unidoom
         ["4ShockBlast"]=2 -- Well known Doom speedrunner
-        Zero-Master=2 -- Owner of DooMed Speed Demos Archive, also a speedrunner
-        Stx-Vile=2 -- Another Doom speedrunner
+        ["Zero-Master"]=2 -- Owner of DooMed Speed Demos Archive, also a speedrunner
+        ["Stx-Vile"]=2 -- Another Doom speedrunner
         ["Erik Alm"]=2 -- Another well known Doom level designer
 
         -- Hexen?
@@ -2990,7 +2989,7 @@ namelib.NAMES =
       ["%p of %c"] = 2
       ["%c is Missing"] = 2
       ["%c did What?"] = 2
-      
+
       -- E.T.'s additions
       ["%p of the %a %j"]=4
       ["%p of %a %j"]=4
