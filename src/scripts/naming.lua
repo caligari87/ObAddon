@@ -379,7 +379,7 @@ namelib.NAMES =
         -- mechanical
         Mining=15, Fusion=15, Thermal=10,
         Infrared=10, Pressure=5, Counteraction=3,
-        Penumatic=3,
+        Pneumatic=3,
 
         -- electronic structures
         Data=10, Tesla=5, Quantum=5,
