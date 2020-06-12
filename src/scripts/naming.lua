@@ -796,7 +796,6 @@ namelib.NAMES =
         ["To the Limit"]=10
         ["Munitions Warehouse"]=10
         ["Demonic Starport"]=10
-        ["
       }
     }
   }
