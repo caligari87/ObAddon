@@ -227,19 +227,20 @@ namelib.NAMES =
         -- size
         --+ large
         Universal=20, Colossal=20, Prodigious=3,
-        Vast=10, Large=4,
+        Vast=10, Large=4, Massive=7, Gigantic=10,
         --+ small
         Secluded=10, Confined=5, Restricted=3,
-        Cramped=5, Narrow=5,
+        Cramped=5, Narrow=5, Tiny=5, Microscopic=3,
 
         -- location
         --+ generic
         Subterrestrial=10, Sub_terra=5,
         Aethereal=10, Hypogean=5,
         --+ solar system objects
-        Mars=10, Saturn=10, Jupiter=10,
+        Mars=10, Saturn=10, Jupiter=10, Venus=10,
         Europa=5, Ganymede=5, Dione=5, Io=5,
-        Callisto=5, Hyperion=5, Vesta=5, Titan=3,
+        Callisto=5, Hyperion=5, Vesta=5, Pluto=5,
+        Titan=3, Ceres=3, Eris=3, Charon=3,
 
         Experimental=3, Covert=20,
 
@@ -274,7 +275,7 @@ namelib.NAMES =
 
         -- stuff you might say when you see something cool
         Fantastic=3, Incredible=3, Amazing=3,
-        Wondrous=3,
+        Wondrous=3, Awesome=3,
 
         -- infestation
         Monstrous=10, Fatal=10, Invaded=3, Overtaken=3,
@@ -348,7 +349,7 @@ namelib.NAMES =
         Atlas=3, Promethus=2, Cronus=3,
         Hyperion=2, Icarus=2, Echo=2,
         Morpheus=2, Eos=2, Orion=2,
-        Tiephron=2, Psion=3,
+        Tiephron=2, Psion=3, Titan=3,
 
         -- special alphabets
         Alpha=10, Beta=5, Gamma=10,
@@ -378,6 +379,7 @@ namelib.NAMES =
         -- mechanical
         Mining=15, Fusion=15, Thermal=10,
         Infrared=10, Pressure=5, Counteraction=3,
+        Penumatic=3,
 
         -- electronic structures
         Data=10, Tesla=5, Quantum=5,
@@ -570,6 +572,7 @@ namelib.NAMES =
         ["Clawhammer"]=10
         ["Close Quarters"]=10
         ["Close Call"]=10
+        ["Code Black"]=10
         ["Code Blue"]=10
         ["Code Orange"]=10
         ["Code Red"]=10
@@ -788,9 +791,14 @@ namelib.NAMES =
         ["Locked and Loaded"]=10
         ["Much Obliged"]=10
         ["Taking It To The Next Level"]=10
+        
+        -- E.T.
+        ["To the Limit"]=10
+        ["Munitions Warehouse"]=10
+        ["Demonic Starport"]=10
+        ["
       }
     }
-
   }
   -- end of 'TECH' theme
 
@@ -979,6 +987,11 @@ namelib.NAMES =
         ["Ty Halderman"]=2, -- Former /idgames/ maintainer. Passed away back in July of 2015 at age 69
         Quasar=2, -- DoomWiki administrator, Doomworld moderator, lead programmer of Team Eternity
         Fraggle=2, -- Chocolate Doom developer, DoomWiki sysop
+        Deathz0r=2, -- One of the reviewers for the /newstuff chronicles, co-host of Unidoom
+        ["4ShockBlast"]=2 -- Well known Doom speedrunner
+        Zero-Master=2 -- Owner of DooMed Speed Demos Archive, also a speedrunner
+        Stx-Vile=2 -- Another Doom speedrunner
+        ["Erik Alm"]=2 -- Another well known Doom level designer
 
         -- Hexen?
         Vuradi=2,
@@ -2035,7 +2048,8 @@ namelib.NAMES =
         Sabotage=5, Destruction=5,
 
         -- material
-        Bronze=5, Iron=5,
+        Bronze=5, Iron=5, Steel=7,
+        Titanium=3, Aluminum=3,
 
         -- residents
         --+ ethereal things
@@ -2072,7 +2086,7 @@ namelib.NAMES =
         Forgotten=5, Forsaken=5, Lost=5,
 
         -- weird
-        Bizarre=5, Unreal=5,
+        Bizarre=5, Unreal=5, Strange=5,
 
         -- damage
         Decayed=5,
@@ -2681,6 +2695,7 @@ namelib.NAMES =
         ["Binary Blob World Order"]=10
         ["Bitch Lasanga"]=10 --lol Pewdiepie
         ["Blimey Teddy"]=10
+        ["BOHICA"]=10 --Military slang acronym "Bend over, here it comes again"
         ["Bork Bork Bork"]=10
         ["Cats Rule Here"]=10
         ["Catapult!"]=10
@@ -2701,6 +2716,7 @@ namelib.NAMES =
         ["Don't Feed the Demons"]=10
         ["Doomworld's Memo"]=10
         ["Dancing Letters"]=10
+        ["Demonitized"]=10
         ["Dregs"]=10
         ["Dragon Rainbow"]=10
         ["Drawing Arrows"]=10 --Against Nature song
@@ -2795,6 +2811,7 @@ namelib.NAMES =
         ["Shenanigans"]=10
         ["Shonky Parts"]=10
         ["Silly Hall"]=10
+        ["SNAFU"]=10
         ["Soylent Green"]=10
         ["Snakes and Ladders"]=10 --A well known children's tabletop game
         ["Stash that Trash!"]=10
@@ -2812,6 +2829,7 @@ namelib.NAMES =
         ["This is Not a Hangar Remake"]=10
         ["Touch Me Not"]=10
         ["Twitty Twatty Twee"]=10 --Twitter?
+        ["No more visplanes!"]=10
         ["Wolfgang Blues"]=10
         ["Welcome to 7-11"]=10
         ["Wet Behind the Ears"]=10
@@ -2865,6 +2883,7 @@ namelib.NAMES =
         ["Drink More Water"]=10
         ["EA Sports. It's In The Game"]=10
         ["Hey Sup Beautiful Bastards"]=10 --if we're really doing popular YouTubers
+        ["It's Just a Prank, Bro!"]=10 --had to
         ["It's Just a Social Experiment"]=10
         ["Nobody Got Time For That"]=10
         ["VGCG"]=10
@@ -2971,6 +2990,11 @@ namelib.NAMES =
       ["%p of %c"] = 2
       ["%c is Missing"] = 2
       ["%c did What?"] = 2
+      
+      -- E.T.'s additions
+      ["%p of the %a %j"]=4
+      ["%p of %a %j"]=4
+      ["%p of %j"]=4
 
     }
 
@@ -2996,7 +3020,11 @@ namelib.NAMES =
         ["City-state"] = 3
         Dominion = 10
         Duchy = 5
+        Emirate = 3
+        Empire = 5
+        ["Free State"] = 3
         Kingdom = 7
+        Principality = 3
         Hegemony = 10
 
         -- medieval
@@ -3016,6 +3044,7 @@ namelib.NAMES =
         House = 5
         Metropolis = 10
         Road = 8
+        Town = 8
         Trail = 8
 
         -- huge locations
@@ -3029,9 +3058,14 @@ namelib.NAMES =
         Territory = 5
 
         -- terrain
+        Atoll = 7
         Badlands = 10
         Barrens = 10
+        Bay = 10
+        Cape = 7
+        Channel = 7
         Cliffs = 10
+        Coast = 10
         Crater = 10
         Crags = 10
         Delta = 5
@@ -3041,9 +3075,12 @@ namelib.NAMES =
         Fields = 10
         Glaciers = 7
         Gorge = 7
+        Grassland = 7
         Gulf = 10
         Hills = 10
         Inlet = 7
+        Isthmus = 7
+        Lagoon = 7
         Lake = 7
         Lands = 15
         Lowland = 10
@@ -3056,9 +3093,14 @@ namelib.NAMES =
         Rift = 15
         Ridge = 10
         River = 10
+        Peninsula = 10
+        Plains = 10
+        Plateau = 7
         Sea = 7
         Shores = 25
+        Steppe = 7
         Strait = 7
+        Tundra = 10
         Wasteland = 20
         Vale = 10
         Valley = 10
@@ -4897,7 +4939,7 @@ namelib.COMMUNITY_MEMBERS =
     "Simon Vee", --Simon-v
     "Garrett",
     "Beed 28",
-    "Epic Typhlosion",
+    "EpicTyphlosion",
     "Tapwave",
     "Craneo",
     "Swedra",
