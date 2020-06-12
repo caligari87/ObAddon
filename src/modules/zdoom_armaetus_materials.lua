@@ -319,12 +319,12 @@ ARMAETUS_MATERIALS = {
   GOTH13 = { t="GOTH13", f="FLAT5_4" } --Grayscale BRICK3
   GOTH14 = { t="GOTH14", f="GWOD01" } --Vertical wood
   GOTH15 = { t="GOTH15", f="GMET05" } --Dark metallic wall
-  GOTH16 = { t="GOTH16", f="G04" } --Riveted metal wall
-  GOTH17 = { t="GOTH17", f="G16" } --Horizontal metal wall
-  GOTH18 = { t="GOTH18", f="G17" } --Block design version of GOTH16
-  GOTH19 = { t="GOTH19", f="G17" } --Inverted cross version of GOTH18
-  GOTH20 = { t="GOTH20", f="G17" } --Smaller cross version of GOTH19
-  GOTH21 = { t="GOTH21", f="G16" } --Red line version of GOTH17
+  GOTH16 = { t="GOTH16", f="G15" } --Riveted metal wall
+  GOTH17 = { t="GOTH17", f="G15" } --Horizontal metal wall
+  GOTH18 = { t="GOTH18", f="G15" } --Block design version of GOTH16
+  GOTH19 = { t="GOTH19", f="G18" } --Inverted cross version of GOTH18
+  GOTH20 = { t="GOTH20", f="G18" } --Smaller cross version of GOTH19
+  GOTH21 = { t="GOTH21", f="G18" } --Red line version of GOTH17
   GOTH22 = { t="GOTH22", f="GMET05" } --Horizontal dark metallic wall with rivets
   GOTH23 = { t="GOTH23", f="G06" } --Black metallic wall
   GOTH24 = { t="GOTH24", f="G15" } --Slightly different version of GOTH23
