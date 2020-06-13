@@ -978,20 +978,6 @@ namelib.NAMES =
         Draco=2, -- it's Latin for dragon but I don't know anything else more specific
         Ouroboros=5, -- actually sort of a neutral symbol
 
-        -- Doom community people, namely the more well known folks
-        Mordeth=2, -- Doomworld co-founder and administrator (See also: https://doomwiki.org/wiki/Mordeth)
-        Linguica=2, -- Doomworld co-founder and administrator
-        Bloodshedder=2, -- Doomworld administrator
-        Mechadon=2, -- Well known Doom level designer (See also: https://doomwiki.org/wiki/Brett_Harrell_(Mechadon))
-        ["Ty Halderman"]=2, -- Former /idgames/ maintainer. Passed away back in July of 2015 at age 69
-        Quasar=2, -- DoomWiki administrator, Doomworld moderator, lead programmer of Team Eternity
-        Fraggle=2, -- Chocolate Doom developer, DoomWiki sysop
-        Deathz0r=2, -- One of the reviewers for the /newstuff chronicles, co-host of Unidoom
-        ["4ShockBlast"]=2 -- Well known Doom speedrunner
-        ["Zero-Master"]=2 -- Owner of DooMed Speed Demos Archive, also a speedrunner
-        ["Stx-Vile"]=2 -- Another Doom speedrunner
-        ["Erik Alm"]=2 -- Another well known Doom level designer
-
         -- Hexen?
         Vuradi=2,
 
@@ -4998,27 +4984,6 @@ namelib.COMMUNITY_MEMBERS =
     "TTBNC",
     "Yandere Princess",
   }
-
-  -- Occasional posters in the server.
-  semi_regulars =
-  {
-    "AcidicReaver", -- Occasional posts.
-    "Alden", -- Was once a normal posted but has since gone quiet. Moved to semi-regular.
-    "BXN", -- Occasionally does ask questions, inquires on things.
-    "Cryomundus",
-    "DukeWooze", -- Posted in the past, but not too recently.
-    "rexirT",
-  }
-
-  -- People in the server but who have never posted but are assumed
-  -- to be Oblige/Doom enthusiasts.
-  lurkers =
-  {
-    "Alphatonic",  -- Haven't seen post yet.
-    "Cammy", -- No posts yet.
-    "CanineCargo", -- I have never seen him/her post.
-    "NeuralStunner", -- A known Doomer. Posts on the ZDoom forums.
-  }
 }
 
 
@@ -7274,10 +7239,13 @@ function namelib.generate_unique_noun(m)
   name = string.gsub(name,"^%l",string.upper)
 
   if mode == "community_members" then
-    if rand.odds(66) then
+    local choice = rand.key_by_probs({c=6, r=2, o=2})
+    if choice == "c" then
       name = rand.pick(namelib.COMMUNITY_MEMBERS.contributors)
-    else
+    elseif choice == "r" then
       name = rand.pick(namelib.COMMUNITY_MEMBERS.regulars)
+    elseif choice == "o" then
+      name = rand.pick(namelib.COMMUNITY_MEMBERS.oblige_folks)
     end
   end
 
