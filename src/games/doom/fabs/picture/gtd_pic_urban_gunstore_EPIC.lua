@@ -6,6 +6,8 @@ PREFABS.Pic_locked_gunstore =
   prob   = 25
   theme = "urban"
 
+  env    = "!cave"
+
   where  = "seeds"
   height = 128
 

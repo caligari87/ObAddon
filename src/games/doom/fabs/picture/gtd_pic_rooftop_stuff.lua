@@ -6,6 +6,8 @@ PREFABS.Pic_HVAC_unit =
   prob   = 25 --35
   theme = "!hell"
 
+  env   = "!cave"
+
   where  = "seeds"
   height = 128
 

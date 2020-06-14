@@ -6,7 +6,7 @@ PREFABS.Pic_craneo_tv_store =
 
   prob   = 25
   theme = "urban"
-  env = "!park"
+  env = "!cave"
 
   uses_epic_textures = true
 
