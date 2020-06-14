@@ -20,6 +20,9 @@
 ZDOOM_SOUND_DEFS =
 {
 
+-- Ambient sounds for indoors
+Indoors_Tech =             { lump = "TECHIND",   flags = "$limit TECHIND 1", args = "CHAN_AUTO, 0.5, true"  }
+
 -- Ambient sounds for outdoors
 Outdoors_Tech =             { lump = "TECHAMB",   flags = "$limit TECHAMB 1"  }
 Outdoors_Temperate_Park   = { lump = "TEMPPARK",  flags = "$limit TEMPPARK 1" }
@@ -59,6 +62,7 @@ ZDOOM_SOUNDSCAPES =
   tech =
   {
     building = {
+      Indoors_Tech = 50
     }
     outdoor = {
       temperate = { Outdoors_Tech = 50 }

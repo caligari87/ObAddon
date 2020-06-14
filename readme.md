@@ -60,6 +60,8 @@ Adds a HUGE library of prefabricates to decorate maps, a collection spanning **m
 
 * Linear mode! Don't want to get lost navigating through a maze of doors? It's only a walk forward from start to finish without branches!
 
+* Nature mode! Return to nature with some fresh air in the parks or go treasure hunting in caves!
+
 * Procedural Gotchas! Massive procedurally generated arenas with increased challenge (and bosses), with customizable difficulty.
 
 * Layout Absurdification! A module that attempts to create more interesting maps by forcing certain shape rules in the grammar set to be much more prominent!
@@ -71,6 +73,8 @@ Adds a HUGE library of prefabricates to decorate maps, a collection spanning **m
 * Beams! Just like Oblige 3.x and 6.x, beams have a chance of appearing between borders of varying ceilings, floors and liquid zones!
 
 * Naturalistic parks! Parks can now have natural-looking cliffs!
+
+* Steppy caves! Making a triumphant return from earlier Oblige versions, spelunking has never felt more satisfying!
 
 * Porches/gazebos! Be careful, one might be out to get you!
 
@@ -95,6 +99,8 @@ Adds a HUGE library of prefabricates to decorate maps, a collection spanning **m
 * ZDoom Story Generator! Make Doomguy do something different each time you play and give yourself something to read in-between your demon face-blasting!
 
 * ZDoom fog! With the ZDoom Special Addons module, you can now get parametric fog (based on the Sky Generator inputs) within the levels!
+
+* Fauna mode - add some creepy crawlies to your maps to further enhance the atmosphere!
 
 * Glorious 3D multi-sector skyboxes!
 
