@@ -253,8 +253,8 @@ GLOBAL_STYLE_LIST =
   keys        = { none=5,  few=15, some=40, heaps=60 }
   trikeys     = { none=5,  few=40, some=30, heaps=20 }
 
-  scenics     = { none=10, few=20, some=50, heaps=20}
-  park_detail = { none=0,  few=5,  some=15, heaps=30}
+  scenics     = { none=5,  few=10, some=40, heaps=40}
+  park_detail = { none=0,  few=5,  some=10, heaps=30}
 
   symmetry    = { none=35, few=60, some=20, heaps=10 }
   pictures    = { none=0,  few=10, some=70, heaps=30 }

@@ -6,6 +6,8 @@ PREFABS.Pic_techy_vats =
   prob   = 25
   theme = "!hell"
 
+  env = "!cave"
+
   where  = "seeds"
   height = 128
 
@@ -32,51 +34,19 @@ PREFABS.Pic_techy_vats =
 
 PREFABS.Pic_pipagery =
 {
-  file   = "picture/gtd_pic_tech_wallmachines.wad"
+  template = "Pic_techy_vats"
   map    = "MAP02"
-
-  prob   = 25
-  theme = "!hell"
-  env = "building"
-
-  where  = "seeds"
-  height = 128
-
-  seed_w = 2
-  seed_h = 1
-
-  deep = 16
-  over = -16
 
   bound_z1 = -128
   bound_z2 = 256
-
-  x_fit = "frame"
-  y_fit = "top"
 
   sound = "Machine_Air"
 }
 
 PREFABS.Pic_computer_pull_rack_thingies =
 {
-  file   = "picture/gtd_pic_tech_wallmachines.wad"
+  template = "Pic_techy_vats"
   map    = "MAP03"
-
-  prob   = 25
-  theme = "tech"
-  env = "building"
-
-  where  = "seeds"
-  height = 128
-
-  seed_w = 2
-  seed_h = 1
-
-  deep = 16
-  over = -16
-
-  x_fit = "frame"
-  y_fit = "top"
 }
 
 PREFABS.Pic_computer_charging_grid_thingies =

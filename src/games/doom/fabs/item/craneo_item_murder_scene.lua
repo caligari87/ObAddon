@@ -5,6 +5,8 @@ PREFABS.Item_craneo_murder_scene =
   map   = "MAP01"
   prob  = 25
 
+  size  = 64
+
   height = 80
   where = "point"
 

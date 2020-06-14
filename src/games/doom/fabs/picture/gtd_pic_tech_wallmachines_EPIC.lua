@@ -6,6 +6,8 @@ PREFABS.Pic_gtd_tech_core_thing =
   prob   = 15
   theme = "tech"
 
+  env = "!cave"
+
   uses_epic_textures = true
 
   where  = "seeds"
