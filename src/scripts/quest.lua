@@ -3006,6 +3006,10 @@ function Quest_room_themes()
 
   local function setup_room_theme(R)
     assert(R.theme)
+    local theme = LEVEL.theme_name
+    if R.theme.theme_override then
+      theme = ob_resolve_theme_keyword(R.theme.theme_override)
+    end
 
     if R.is_cave then
       setup_cave_theme(R)
@@ -3041,7 +3045,7 @@ function Quest_room_themes()
     end
 
     -- code for determining scenic fences is now here
-    R.scenic_fence = GAME.MATERIALS[rand.key_by_probs(THEME.scenic_fence)]
+    R.scenic_fence = GAME.MATERIALS[rand.key_by_probs(GAME.THEMES[theme].scenic_fence)]
 
     -- create a skin (for prefabs)
     R.skin =

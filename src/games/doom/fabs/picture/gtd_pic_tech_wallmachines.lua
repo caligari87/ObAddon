@@ -37,9 +37,6 @@ PREFABS.Pic_pipagery =
   template = "Pic_techy_vats"
   map    = "MAP02"
 
-  bound_z1 = -128
-  bound_z2 = 128
-
   sound = "Machine_Air"
 
   z_fit = {96,104}
