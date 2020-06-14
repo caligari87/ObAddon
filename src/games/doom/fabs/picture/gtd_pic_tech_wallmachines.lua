@@ -38,9 +38,11 @@ PREFABS.Pic_pipagery =
   map    = "MAP02"
 
   bound_z1 = -128
-  bound_z2 = 256
+  bound_z2 = 128
 
   sound = "Machine_Air"
+
+  z_fit = {96,104}
 }
 
 PREFABS.Pic_computer_pull_rack_thingies =
