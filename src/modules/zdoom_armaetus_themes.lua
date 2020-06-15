@@ -3402,11 +3402,13 @@ ARMAETUS_HELL_WALL_GROUPS =
 -- Adds new window groups using Epic textures
 ARMAETUS_TECH_WINDOW_GROUPS =
 {
+  gtd_window_chainlinks = 40
 }
 
 ARMAETUS_URBAN_WINDOW_GROUPS =
 {
   gtd_window_gothic_epic = 30
+  gtd_window_chainlinks = 60
 }
 
 ARMAETUS_HELL_WINDOW_GROUPS =
