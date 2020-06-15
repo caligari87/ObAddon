@@ -278,12 +278,9 @@ function DOOM.get_levels()
 
       -- linear start code
       if PARAM.linear_start then
-        if PARAM.linear_start == "all" then
+        if PARAM.linear_start != "default"
+        and rand.odds(int(PARAM.linear_start)) then
           LEV.has_linear_start = true
-        elseif PARAM.linear_start != "default" then
-          if rand.odds(int(PARAM.linear_start)) then
-            LEV.has_linear_start = true
-          end
         end
       end
 

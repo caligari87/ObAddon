@@ -1271,6 +1271,194 @@ ARMAETUS_THEMES =
     }
   }
 
+  hell_metal =
+  {
+    env = "building"
+    prob = 50
+
+    walls =
+    {
+      BRONZE1 = 5
+      BRONZE2 = 5
+      BRONZE3 = 5
+      BROWN144 = 5
+      BROWN96 = 5
+
+      METAL2 = 5
+      SPACEW4 = 5
+
+      BRONZE5 = 5
+      BRONZE6 = 5
+      BRONZEG1 = 5
+      BRONZEG2 = 5
+      BRONZEG3 = 5
+      BROWN2 = 5
+      BROWN3 = 5
+
+      BRIKS35 = 2
+      BRIKS36 = 2
+
+      DRKCMT05 = 4
+      DRKCMT06 = 4
+
+      GOTH15 = 5
+      GOTH16 = 5
+      GOTH18 = 5
+      GOTH23 = 5
+      GOTH24 = 5
+      GOTH25 = 5
+      GOTH26 = 5
+      GOTH27 = 5
+      GOTH31 = 5
+      GOTH32 = 5
+      GOTH36 = 5
+      GOTH37 = 5
+      GOTH38 = 5
+      GOTH39 = 5
+      GOTH40 = 5
+      GOTH41 = 5
+      GOTH42 = 5
+      GOTH43 = 5
+      GOTH44 = 5
+
+      HELMET1 = 5
+      HELMET2 = 5
+      MET2 = 5
+      METAL10 = 2
+      METAL8 = 2
+      METAL9 = 2
+      METL02 = 5
+      METL03 = 5
+
+      MM205 = 5
+      PIPEDRK1 = 5
+      RUSTWALL = 5
+
+    }
+
+    floors =
+    {
+      FLOOR0_1 = 5
+      FLOOR4_3 = 5
+      FLOOR4_1 = 5
+      FLOOR4_5 = 5
+      FLOOR4_6 = 5
+      FLOOR5_3 = 2
+      FLOOR5_4 = 4
+      FLOOR7_2 = 8
+
+      SLIME14 = 5
+      SLIME15 = 5
+
+      BMARB1 = 5
+      BMARB2 = 5
+      BMARB3 = 5
+
+      FLOOR46D = 5
+      FLOOR46E = 5
+      FLOOR51C = 5
+      FLOOR7_3 = 5
+
+      DARKF01 = 5
+      DARKF02 = 5
+      DARKF03 = 5
+      DARKM01 = 5
+
+      G04 = 5
+      G05 = 5
+      G06 = 5
+      G07 = 5
+      G08 = 5
+      G09 = 5
+      G10 = 5
+      G14 = 5
+      G15 = 5
+      G18 = 5
+      G19 = 5
+      G21 = 5
+
+      GMET01 = 5
+      GMET02 = 5
+      GMET03 = 5
+      GMET04 = 5
+      GMET05 = 5
+      GMET06 = 5
+      GMET07 = 5
+
+      GRATE1 = 8
+      GRATE2 = 8
+      GRATE3 = 8
+      GRATE4 = 8
+      GRATE5 = 8
+      GRATE6 = 8
+      GRATE7 = 8
+      GRATE8 = 8
+
+      GRATE3 = 5
+      GRATE4 = 5
+
+      QFLAT05 = 5
+      QFLAT06 = 5
+      QFLAT09 = 5
+
+      TILES4 = 5
+      TILES5 = 5
+      TILES6 = 5
+    }
+
+    ceilings =
+    {
+      CEIL3_2 = 5
+      CEIL3_3 = 5
+      CEIL3_5 = 5
+      CEIL5_1 = 5
+      CEIL5_2 = 5
+      SLIME14 = 5
+      SLIME15 = 5
+      FLOOR7_2 = 8
+
+      BMARB1 = 5
+      BMARB2 = 5
+      BMARB3 = 5
+      DARKF01 = 5
+      DARKF02 = 5
+      DARKF03 = 5
+      DARKM01 = 5
+
+      G04 = 5
+      G05 = 5
+      G06 = 5
+      G07 = 5
+      G08 = 5
+      G09 = 5
+      G10 = 5
+      G14 = 5
+      G15 = 5
+      G18 = 5
+      G19 = 5
+      G21 = 5
+
+      GMET01 = 5
+      GMET02 = 5
+      GMET03 = 5
+      GMET04 = 5
+      GMET05 = 5
+      GMET06 = 5
+      GMET07 = 5
+
+      GRATE3 = 5
+      GRATE4 = 5
+
+      QFLAT05 = 5
+      QFLAT06 = 5
+      QFLAT10 = 5
+
+      TILES4 = 5
+      TILES5 = 5
+      TILES6 = 5
+    }
+  }
+
   hell_armaetuscave =
   {
     env  = "cave"

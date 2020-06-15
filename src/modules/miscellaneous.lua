@@ -85,7 +85,7 @@ MISC_STUFF.LIQUID_SINK_OPTIONS =
 
 MISC_STUFF.LINEAR_START_CHOICES =
 {
-  "all",     _("All"),
+  "100",     _("All"),
   "75",      _("75% of All Levels"),
   "50",      _("50% of All Levels"),
   "25",      _("25% of All Levels"),
