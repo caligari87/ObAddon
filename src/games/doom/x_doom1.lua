@@ -592,7 +592,6 @@ ULTDOOM.THEMES =
 
     wall_groups =
     {
-      -- PLAIN = 145
       low_gap = 2
       mid_band = 3
       lite2 = 10
@@ -612,7 +611,9 @@ ULTDOOM.THEMES =
       gtd_ribbed_lights = 15
       gtd_wall_high_gap_set = 10
       gtd_wall_high_gap_alt_set = 10
-      gtd_generic_half_floor = 15 -- current non-plain prob sum: 277
+      gtd_generic_half_floor = 15
+      gtd_wall_urban_cement_frame = 10
+      gtd_generic_ceilwall = 25
     }
 
     fence_groups =
@@ -842,7 +843,6 @@ ULTDOOM.THEMES =
    -- This is because of the slow Hellification of the Deimos base, hence a few Hell wall prefabs are here.
     wall_groups =
     {
-      -- PLAIN = 200
       low_gap = 7
       mid_band = 5
       lite2 = 5
@@ -877,8 +877,9 @@ ULTDOOM.THEMES =
       gtd_ribbed_lights = 15
       gtd_wall_high_gap_set = 8
       gtd_wall_high_gap_alt_set = 8
-      gtd_generic_half_floor = 15 -- current non-plain prob sum: 395
-
+      gtd_generic_half_floor = 15
+      gtd_wall_urban_cement_frame = 10
+      gtd_generic_ceilwall = 25
     }
 
     fence_groups =
@@ -1047,7 +1048,6 @@ ULTDOOM.THEMES =
 
     wall_groups =
     {
-      -- PLAIN = 300
       torches2 = 30 --red
       torches3 = 30 --blue
       torches1 = 30 --green
@@ -1081,7 +1081,9 @@ ULTDOOM.THEMES =
       gtd_ribbed_lights = 5
       gtd_wall_high_gap_set = 20
       gtd_wall_high_gap_alt_set = 20
-      gtd_generic_half_floor = 20 -- current non-plain prob sum: 623
+      gtd_generic_half_floor = 20
+      gtd_wall_urban_cement_frame = 10
+      gtd_generic_ceilwall = 25
     }
 
     fence_groups =
@@ -1340,7 +1342,6 @@ ULTDOOM.THEMES =
 
     wall_groups =
     {
-      -- PLAIN = 275
       torches2 = 30 --red
       torches3 = 30 --blue
       torches1 = 30 --green
@@ -1376,7 +1377,8 @@ ULTDOOM.THEMES =
       gtd_wall_high_gap_alt_set = 10
       gtd_generic_half_floor = 15
       gtd_woodframe = 15
-      gtd_woodframe_green = 15 -- current non-plain prob sum: 574
+      gtd_woodframe_green = 15
+      gtd_generic_ceilwall = 20
     }
 
     fence_groups =

@@ -1211,7 +1211,6 @@ DOOM.THEMES =
 
     wall_groups =
     {
-      -- PLAIN = 300
       low_gap = 2
       low_gap2 = 2
       low_gap3 = 3
@@ -1240,9 +1239,7 @@ DOOM.THEMES =
       gtd_wall_high_gap_alt_set = 12
       gtd_generic_half_floor = 25
       gtd_wall_urban_cement_frame = 10
-      -- current non-plain prob sum: 481
-      -- GZD non-plain prob sum: 124
-      -- total sum: 605
+      gtd_generic_ceilwall = 25
     }
 
     outdoor_wall_groups =
@@ -1539,7 +1536,6 @@ DOOM.THEMES =
 
     wall_groups =
     {
-      -- PLAIN = 145
       torches2 = 25 --red
       torches3 = 25 --blue
       torches1 = 25 --green
@@ -1564,9 +1560,7 @@ DOOM.THEMES =
       gtd_woodframe_green = 5
       gtd_round_inset = 5
       gtd_wall_urban_cement_frame = 7
-      -- current non-plain prob sum: 221
-      -- GZD non-plain prob sum: 52
-      -- total prob: 273
+      gtd_generic_ceilwall = 10
     }
 
     window_groups =
@@ -1905,7 +1899,6 @@ DOOM.THEMES =
 
     wall_groups =
     {
-      -- PLAIN = 500
       torches2 = 30 --red
       torches3 = 30 --blue
       torches1 = 30 --green
@@ -1944,8 +1937,7 @@ DOOM.THEMES =
       gtd_woodframe = 15
       gtd_woodframe_green = 15
       gtd_round_inset = 30
-      -- current non-plain prob sum: 733
-      -- 338
+      gtd_generic_ceilwall = 30
     }
 
     outdoor_wall_groups =
