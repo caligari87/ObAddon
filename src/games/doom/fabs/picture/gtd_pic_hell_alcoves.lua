@@ -67,6 +67,8 @@ PREFABS.Pic_hell_alcove_window =
 {
   template = "Pic_hell_alcove_tomb"
   map      = "MAP03"
+
+  env = "!cave"
 }
 
 PREFABS.Pic_hell_alcove_tomb_2x =
