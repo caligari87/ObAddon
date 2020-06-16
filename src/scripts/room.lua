@@ -1993,7 +1993,9 @@ function Room_set_kind(R, is_hallway, is_outdoor, is_cave)
 
   if R.is_park then
     local nature_park_prob = style_sel("natural_parks", 0, 33, 66, 90)
-    if LEVEL.is_nature then nature_park_prob = 100 end
+    if LEVEL.is_nature then
+      nature_park_prob = math.clamp(50, nature_park_prob * 2, 100)
+    end
 
     if rand.odds(nature_park_prob) then
       R.is_natural_park = true

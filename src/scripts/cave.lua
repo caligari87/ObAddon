@@ -4502,6 +4502,7 @@ stderrf("  picked chain from blob %d --> %d\n", B.id, C.id)
     local ecy = area.entry_walk.cy1
 
     if not hill_grow_with_stairs() then
+      area.room.cannot_into_hills = true
       return
     end
 
@@ -4695,6 +4696,13 @@ gui.debugf("BUILD PARK IN %s\n", R.name)
   elseif R.park_type == "river" then
     make_a_river()
   elseif R.park_type == "plains" then
+    make_some_plains()
+  end
+
+  -- fallback if in case hillside function
+  -- doesn't fetch valid profiles
+  if R.cannot_into_hills then
+    R.park_type = "plains"
     make_some_plains()
   end
 
