@@ -83,3 +83,24 @@ PREFABS.Pic_conveyor_with_boxes =
 
   seed_w = 3
 }
+
+PREFABS.Pic_pipagery_2 =
+{
+  template = "Pic_techy_vats"
+  map    = "MAP06"
+
+  sound = "Machine_Air"
+
+  z_fit = {96,104}
+}
+
+PREFABS.Pic_pipagery_3 =
+{
+  template = "Pic_techy_vats"
+  map = "MAP07"
+
+  sound = "Machine_Air"
+
+  x_fit = { 176,208 }
+  z_fit = { 104,112 }
+}
