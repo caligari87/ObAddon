@@ -16,7 +16,6 @@ PREFABS.Wall_fake_door =
 
   where  = "edge"
   height = 128
-  long   = 128
   deep   = 16
 
   bound_z1 = 0
@@ -74,7 +73,6 @@ PREFABS.Wall_modern_piping =
 
   where  = "edge"
   height = 128
-  long   = 128
   deep   = 16
 
   bound_z1 = 0
@@ -102,7 +100,6 @@ PREFABS.Wall_modern_shutter =
 
   where  = "edge"
   height = 128
-  long   = 128
   deep   = 16
 
   bound_z1 = 0
@@ -140,7 +137,6 @@ PREFABS.Wall_modern_shutter_EPIC =
 
   where  = "edge"
   height = 128
-  long   = 128
   deep   = 16
 
   bound_z1 = 0
@@ -187,7 +183,6 @@ PREFABS.Wall_fake_warehouse_window =
 
   where  = "edge"
   height = 128
-  long   = 128
   deep   = 16
 
   bound_z1 = 0
@@ -218,7 +213,6 @@ PREFABS.Wall_double_dark_windows =
 
   where  = "edge"
   height = 128
-  long   = 128
   deep   = 16
 
   bound_z1 = 0
