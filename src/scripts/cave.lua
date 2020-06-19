@@ -4692,7 +4692,7 @@ gui.debugf("BUILD PARK IN %s\n", R.name)
     R.park_type = "river"
   end
 
-  if not R.park_type then
+  if rand.odds(style_sel("steepness", 0, 33, 66,100)) then
     R.park_type = "hills"
   end
 
@@ -4700,13 +4700,11 @@ gui.debugf("BUILD PARK IN %s\n", R.name)
     make_a_hillside()
   elseif R.park_type == "river" then
     make_a_river()
-  elseif R.park_type == "plains" then
-    make_some_plains()
   end
 
   -- fallback if in case hillside function
   -- doesn't fetch valid profiles
-  if R.cannot_into_hills then
+  if R.cannot_into_hills or not R.park_type then
     R.park_type = "plains"
 
     make_some_plains()
