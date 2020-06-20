@@ -3275,17 +3275,6 @@ function ULTDOOM.get_levels()
           end
         end
 
-      -- linear start code
-      if PARAM.linear_start then
-        if PARAM.linear_start != "default" then
-          if PARAM.linear_start == "all" then
-            LEV.has_linear_start = true
-          elseif rand.odds(int(PARAM.linear_start)) then
-            LEV.has_linear_start = true
-          end
-        end
-      end
-
         -- nature mode
         if OB_CONFIG.nature_mode and not LEV.has_streets then
           if OB_CONFIG.nature_mode == "all" then

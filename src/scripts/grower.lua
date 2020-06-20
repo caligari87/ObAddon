@@ -1093,8 +1093,19 @@ function Grower_decide_extents()
     gui.printf("--==| Nature mode activated! Take a walk! |==--\n\n")
   end
 
+  -- linear start code
+  if PARAM.linear_start then
+    if PARAM.linear_start != "default" then
+      if PARAM.linear_start == "all" then
+        LEVEL.has_linear_start = true
+      elseif rand.odds(int(PARAM.linear_start)) then
+        LEVEL.has_linear_start = true
+      end
+    end
+  end
+
   if LEVEL.has_linear_start then
-    gui.printf("--==| Linear Start activated! |==--")
+    gui.printf("--==| Linear Start activated! |==--\n\n")
   end
 end
 
