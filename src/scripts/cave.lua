@@ -4647,15 +4647,10 @@ stderrf("  picked chain from blob %d --> %d\n", B.id, C.id)
     hill_add_pools(blob_map)
     hill_add_decor(blob_map)
 
-    offset = entry_h
-    if R.cannot_into_hills then
-      offset = 0
-    end
-
     -- render em
     each _,reg in blob_map.regions do
       if reg.prelim_h then
-        do_install_floor_blob(reg, offset)
+        do_install_floor_blob(reg, 0)
       end
     end
 

@@ -159,7 +159,7 @@ function Monster_pacing()
       return
     end
 
-    if R.is_start and OB_CONFIG.quiet_start == "no" then
+    if R.is_start then
       set_room(R, "low")
       return
     end
