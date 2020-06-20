@@ -119,6 +119,16 @@ HERETIC.THEMES =
       GRNBLOK1 = 30
     }
 
+    fence_groups =
+    {
+      PLAIN = 1
+    }
+
+    beam_groups =
+    {
+      beam_metal = 10
+    }
+
     scenic_fence =
     {
       GATMETL2 = 50

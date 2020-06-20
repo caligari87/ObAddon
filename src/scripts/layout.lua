@@ -2080,6 +2080,10 @@ stderrf("Cages in %s [%s pressure] --> any_prob=%d  per_prob=%d\n",
 
       -- for streets
       if R.is_street and R.svolume > 16 then
+        if not GAME.THEMES.street_sinks then
+          gui.printf("WARNING! No street sinks for theme " .. LEVEL.theme_name .. ".\n")
+          return
+        end
         fg.sink = GAME.SINKS[rand.key_by_probs(GAME.THEMES[LEVEL.theme_name].street_sinks)]
       end
     end

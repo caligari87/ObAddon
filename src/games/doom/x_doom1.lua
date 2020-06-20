@@ -580,6 +580,11 @@ ULTDOOM.THEMES =
       light_side4 = 5
     }
 
+    street_sinks =
+    {
+      floor_default_streets = 1
+    }
+
     beam_groups =
     {
       beam_shiny = 75
@@ -802,6 +807,11 @@ ULTDOOM.THEMES =
       light_side1 = 4
       light_side2 = 4
       light_side3 = 4
+    }
+
+    street_sinks =
+    {
+      floor_default_streets = 1
     }
 
     park_decor =
@@ -1035,6 +1045,11 @@ ULTDOOM.THEMES =
       sky_hell_11 = 3
       sky_hell_12 = 3
       sky_hell_13 = 3
+    }
+
+    street_sinks =
+    {
+      floor_default_streets = 1
     }
 
     beam_groups =
@@ -1327,6 +1342,11 @@ ULTDOOM.THEMES =
       sky_hell_13 = 3
       sky_hell_14 = 4
       sky_hell_15 = 4
+    }
+
+    street_sinks =
+    {
+      floor_default_streets = 1
     }
 
     beam_groups =
