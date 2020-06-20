@@ -1086,7 +1086,10 @@ ARMAETUS_MATERIALS = {
   GATE4TN    = { f="GATE4TN", t="METAL" } -- Skin-like
 
   -- Asphalt
-  ROAD1    = { f="ROAD1", t="STONE2" } -- Consult New_Road.wad for its use!
+  ROAD1 = { f="ROAD1", t="STONE2" } -- Consult New_Road.wad for its use!
+  ROAD2 = { f="ROAD2", t="BRIKS04" }
+  ROAD3 = { f="ROAD3", t="BIGSTONE" }
+  ROAD4 = { f="ROAD4", t="BRIKS05" }
 
 ---------------------------------------------------------------
 -- Overwriting existing flats to use new patches for textures

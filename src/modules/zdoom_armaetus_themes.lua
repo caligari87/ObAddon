@@ -2263,7 +2263,7 @@ ARMAETUS_HELL_LIQUIDS =
 }
 
 -- Custom sink definitions as well as probability tables.
-ARMAETUS_SINK_DEFS =
+EPIC_SINK_DEFS =
 {
   liquid_warning_strip =
   {
@@ -3191,186 +3191,262 @@ ARMAETUS_SINK_DEFS =
     trim_mat = "URBAN3"
     trim_dz  = -8
   }
+
+  floor_warn_streets =
+  {
+    mat = "CEIL5_1"
+    dz = 2
+
+    trim_mat = "WARN1"
+    trim_dz = 2
+  }
+
+  floor_asphalt_streets =
+  {
+    mat = "ROAD1"
+    dz = 2
+
+    trim_mat = "WARN1"
+    trim_dz = 2
+  }
+
+  floor_cobble1_streets =
+  {
+    mat = "ROAD2"
+    dz = 2
+
+    trim_mat = "FLAT1"
+    trim_dz = 2
+  }
+
+  floor_cobble2_streets =
+  {
+    mat = "ROAD3"
+    dz = 2
+
+    trim_mat = "FLAT5_4"
+    trim_dz = 2
+  }
+
+  floor_cobble3_streets =
+  {
+    mat = "ROAD4"
+    dz = 2
+
+    trim_mat = "FLAT5_5"
+    trim_dz = 2
+  }
 }
 
-ARMAETUS_TECH_CEILING_SINKS =
+EPIC_SINKS =
 {
-  light_TLITE5_1 = 7
-  light_TLITE5_2 = 7
-  light_TLITE5_3 = 7
-  light_TLITE65B = 7
-  light_TLITE65G = 7
-  light_TLITE65O = 7
-  light_TLITE65W = 7
-  light_TLITE65Y = 7
-  light_LIGHTS1 = 7
-  light_LIGHTS2 = 7
-  light_LIGHTS3 = 7
-  light_LIGHTS4 = 7
+  tech =
+  {
+    street_sinks =
+    {
+      floor_asphalt_streets = 10
+      floor_warn_streets = 10
+    }
 
-  light_COLLITE1 = 15
-  light_COLLITE2 = 15
-  light_COLLITE3 = 15
-  light_RDWAL01 = 15
+    ceiling_sinks =
+    {
+      light_TLITE5_1 = 7
+      light_TLITE5_2 = 7
+      light_TLITE5_3 = 7
+      light_TLITE65B = 7
+      light_TLITE65G = 7
+      light_TLITE65O = 7
+      light_TLITE65W = 7
+      light_TLITE65Y = 7
+      light_LIGHTS1 = 7
+      light_LIGHTS2 = 7
+      light_LIGHTS3 = 7
+      light_LIGHTS4 = 7
 
-  light_side1_red = 15
-  light_side1_yellow = 15
-  light_side1_green = 15
-  light_side1_purple = 5
+      light_COLLITE1 = 15
+      light_COLLITE2 = 15
+      light_COLLITE3 = 15
+      light_RDWAL01 = 15
 
-  light_lite5_red = 15
-  light_lite5_orange = 15
-  light_lite5_yellow = 15
-  light_lite5_green = 15
-  light_lite5_purple = 5
+      light_side1_red = 15
+      light_side1_yellow = 15
+      light_side1_green = 15
+      light_side1_purple = 5
 
-  ceiling_sink_TEKWALL8 = 8
-  ceiling_sink_TEKWALL9 = 8
-  ceiling_sink_TEKWALLA = 8
-  ceiling_sink_TEKWALLB = 8
-  ceiling_sink_TEKWALLC = 8
-  ceiling_sink_TEKWALLD = 8
-  ceiling_sink_TEKWALLE = 8
+      light_lite5_red = 15
+      light_lite5_orange = 15
+      light_lite5_yellow = 15
+      light_lite5_green = 15
+      light_lite5_purple = 5
 
-  ceiling_sink_SILVER2R = 5
-  ceiling_sink_SILVER2O = 5
-  ceiling_sink_SILVER2Y = 5
-  ceiling_sink_SILVER2W = 5
-  ceiling_sink_SILVER2G = 5
+      ceiling_sink_TEKWALL8 = 8
+      ceiling_sink_TEKWALL9 = 8
+      ceiling_sink_TEKWALLA = 8
+      ceiling_sink_TEKWALLB = 8
+      ceiling_sink_TEKWALLC = 8
+      ceiling_sink_TEKWALLD = 8
+      ceiling_sink_TEKWALLE = 8
 
-  ceiling_sink_GOTH21 = 5
-  ceiling_sink_GOTH21Y = 5
-  ceiling_sink_GOTH21G = 5
-  ceiling_sink_GOTH21B = 5
-  ceiling_sink_GOTH21P = 5
-}
+      ceiling_sink_SILVER2R = 5
+      ceiling_sink_SILVER2O = 5
+      ceiling_sink_SILVER2Y = 5
+      ceiling_sink_SILVER2W = 5
+      ceiling_sink_SILVER2G = 5
 
-ARMAETUS_URBAN_CEILING_SINKS =
-{
-  light_TLITE5_1 = 7
-  light_TLITE5_2 = 7
-  light_TLITE5_3 = 7
-  light_TLITE65B = 7
-  light_TLITE65G = 7
-  light_TLITE65O = 7
-  light_TLITE65W = 7
-  light_TLITE65Y = 7
-  light_LIGHTS1 = 7
-  light_LIGHTS2 = 7
-  light_LIGHTS3 = 7
-  light_LIGHTS4 = 7
+      ceiling_sink_GOTH21 = 5
+      ceiling_sink_GOTH21Y = 5
+      ceiling_sink_GOTH21G = 5
+      ceiling_sink_GOTH21B = 5
+      ceiling_sink_GOTH21P = 5
+    }
 
-  light_COLLITE1 = 15
-  light_COLLITE2 = 15
-  light_COLLITE3 = 15
-  light_RDWAL01 = 15
+    floor_sinks =
+    {
+      liquid_warning_strip = 40
 
-  light_side1_red = 15
-  light_side1_yellow = 15
-  light_side1_green = 15
-  light_side1_purple = 5
+      floor_sink_carpet_FLAT15 = 10
+      floor_sink_carpet_FLOOR1_1 = 10
+      floor_sink_carpet_FLOOR1_2 = 10
 
-  light_lite5_red = 15
-  light_lite5_orange = 15
-  light_lite5_yellow = 15
-  light_lite5_green = 15
-  light_lite5_purple = 5
+      floor_c43_red = 10
+      floor_c43_yellow = 10
+      floor_c43_green = 10
+      floor_c43_purple = 2
+    }
+  }
 
-  ceiling_sink_TEKWALL8 = 7
-  ceiling_sink_TEKWALL9 = 7
-  ceiling_sink_TEKWALLA = 7
-  ceiling_sink_TEKWALLB = 7
-  ceiling_sink_TEKWALLC = 7
-  ceiling_sink_TEKWALLD = 7
-  ceiling_sink_TEKWALLE = 7
+  urban =
+  {
+    street_sinks =
+    {
+      floor_asphalt_streets = 10
+      floor_warn_streets = 10
+    }
 
-  ceiling_sink_GOTH15 = 20
-  ceiling_sink_GOTH17 = 20
+    ceiling_sinks =
+    {
+      light_TLITE5_1 = 7
+      light_TLITE5_2 = 7
+      light_TLITE5_3 = 7
+      light_TLITE65B = 7
+      light_TLITE65G = 7
+      light_TLITE65O = 7
+      light_TLITE65W = 7
+      light_TLITE65Y = 7
+      light_LIGHTS1 = 7
+      light_LIGHTS2 = 7
+      light_LIGHTS3 = 7
+      light_LIGHTS4 = 7
 
-  ceiling_sink_GOTH21 = 5
-  ceiling_sink_GOTH21Y = 5
-  ceiling_sink_GOTH21G = 5
-  ceiling_sink_GOTH21B = 5
-  ceiling_sink_GOTH21P = 5
-}
+      light_COLLITE1 = 15
+      light_COLLITE2 = 15
+      light_COLLITE3 = 15
+      light_RDWAL01 = 15
 
-ARMAETUS_HELL_CEILING_SINKS =
-{
-  light_GLITE01 = 10
-  light_GLITE02 = 10
-  light_GLITE03 = 10
-  light_GLITE04 = 10
-  light_GLITE05 = 10
-  light_GLITE06 = 10
-  light_GLITE07 = 10
-  light_GLITE08 = 10
-  light_GLITE09 = 10
+      light_side1_red = 15
+      light_side1_yellow = 15
+      light_side1_green = 15
+      light_side1_purple = 5
 
-  ceiling_sink_SKINLOW1 = 13
-  ceiling_sink_SKINMET3 = 13
-  ceiling_sink_SKINMET4 = 13
-  ceiling_sink_SKINMET5 = 13
-  ceiling_sink_SKINMET6 = 13
-  ceiling_sink_SKINMET7 = 13
+      light_lite5_red = 15
+      light_lite5_orange = 15
+      light_lite5_yellow = 15
+      light_lite5_green = 15
+      light_lite5_purple = 5
 
-  ceiling_sink_GOTH15 = 20
-  ceiling_sink_GOTH17 = 20
-  ceiling_sink_GOTH18 = 20
-  ceiling_sink_GOTH19 = 20
-  ceiling_sink_GOTH20 = 20
-  ceiling_sink_GOTH28 = 20
+      ceiling_sink_TEKWALL8 = 7
+      ceiling_sink_TEKWALL9 = 7
+      ceiling_sink_TEKWALLA = 7
+      ceiling_sink_TEKWALLB = 7
+      ceiling_sink_TEKWALLC = 7
+      ceiling_sink_TEKWALLD = 7
+      ceiling_sink_TEKWALLE = 7
 
-  ceiling_sink_GOTH47 = 20
-  ceiling_sink_GOTH48 = 20
-  ceiling_sink_GOTH49 = 20
+      ceiling_sink_GOTH15 = 20
+      ceiling_sink_GOTH17 = 20
 
-  ceil_purple_water = 25
-  ceil_emagma = 25
-  ceil_qlava2 = 25
-  ceil_esludge = 25
-  ceil_liquid_snow = 25
-}
+      ceiling_sink_GOTH21 = 5
+      ceiling_sink_GOTH21Y = 5
+      ceiling_sink_GOTH21G = 5
+      ceiling_sink_GOTH21B = 5
+      ceiling_sink_GOTH21P = 5
+    }
 
-ARMAETUS_TECH_FLOOR_SINKS =
-{
-  liquid_warning_strip = 40
+    floor_sinks =
+    {
+      liquid_warning_strip = 10
 
-  floor_sink_carpet_FLAT15 = 10
-  floor_sink_carpet_FLOOR1_1 = 10
-  floor_sink_carpet_FLOOR1_2 = 10
+      floor_sink_CARPET1 = 7
+      floor_sink_CARPET2 = 7
+      floor_sink_CARPET3 = 7
+      floor_sink_CARPET4 = 7
+      floor_sink_CARPET5 = 7
+      floor_sink_CARPET6 = 7
+      floor_sink_CARPET7 = 7
+      floor_sink_CARPET8 = 7
+    }
+  }
 
-  floor_c43_red = 10
-  floor_c43_yellow = 10
-  floor_c43_green = 10
-  floor_c43_purple = 2
-}
+  hell =
+  {
+    street_sinks =
+    {
+      floor_cobble1_streets = 10
+      floor_cobble2_streets = 10
+      floor_cobble3_streets = 10
+    }
 
-ARMAETUS_URBAN_FLOOR_SINKS =
-{
-  liquid_warning_strip = 10
+    ceiling_sinks =
+    {
+      light_GLITE01 = 10
+      light_GLITE02 = 10
+      light_GLITE03 = 10
+      light_GLITE04 = 10
+      light_GLITE05 = 10
+      light_GLITE06 = 10
+      light_GLITE07 = 10
+      light_GLITE08 = 10
+      light_GLITE09 = 10
 
-  floor_sink_CARPET1 = 7
-  floor_sink_CARPET2 = 7
-  floor_sink_CARPET3 = 7
-  floor_sink_CARPET4 = 7
-  floor_sink_CARPET5 = 7
-  floor_sink_CARPET6 = 7
-  floor_sink_CARPET7 = 7
-  floor_sink_CARPET8 = 7
-}
+      ceiling_sink_SKINLOW1 = 13
+      ceiling_sink_SKINMET3 = 13
+      ceiling_sink_SKINMET4 = 13
+      ceiling_sink_SKINMET5 = 13
+      ceiling_sink_SKINMET6 = 13
+      ceiling_sink_SKINMET7 = 13
 
-ARMAETUS_HELL_FLOOR_SINKS =
-{
-  floor_sink_GOTH22 = 10
+      ceiling_sink_GOTH15 = 20
+      ceiling_sink_GOTH17 = 20
+      ceiling_sink_GOTH18 = 20
+      ceiling_sink_GOTH19 = 20
+      ceiling_sink_GOTH20 = 20
+      ceiling_sink_GOTH28 = 20
 
-  floor_sink_CARPET1 = 7
-  floor_sink_CARPET2 = 7
-  floor_sink_CARPET3 = 7
-  floor_sink_CARPET4 = 7
-  floor_sink_CARPET5 = 7
-  floor_sink_CARPET6 = 7
-  floor_sink_CARPET7 = 7
-  floor_sink_CARPET8 = 7
+      ceiling_sink_GOTH47 = 20
+      ceiling_sink_GOTH48 = 20
+      ceiling_sink_GOTH49 = 20
+
+      ceil_purple_water = 25
+      ceil_emagma = 25
+      ceil_qlava2 = 25
+      ceil_esludge = 25
+      ceil_liquid_snow = 25
+    }
+
+    floor_sinks =
+    {
+      floor_sink_GOTH22 = 10
+
+      floor_sink_CARPET1 = 7
+      floor_sink_CARPET2 = 7
+      floor_sink_CARPET3 = 7
+      floor_sink_CARPET4 = 7
+      floor_sink_CARPET5 = 7
+      floor_sink_CARPET6 = 7
+      floor_sink_CARPET7 = 7
+      floor_sink_CARPET8 = 7
+    }
+  }
 }
 
 -- Natural textures for outdoor parks.

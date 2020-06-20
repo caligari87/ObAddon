@@ -940,8 +940,9 @@ DOOM.SINKS =
     trim_dz = -4
   }
 
-  floor_streets = --MSSP: Hi! This shouldn't be used anywhere
-  {               --except on streets
+  -- street sink def, do not use for anything else
+  floor_default_streets =
+  {
     mat = "CEIL5_1"
     dz = 2
 
@@ -1141,6 +1142,11 @@ DOOM.THEMES =
     entity_remap =
     {
       green_torch = "mercury_lamp"
+    }
+
+    street_sinks =
+    {
+      floor_default_streets = 1
     }
 
     floor_sinks =
@@ -1473,6 +1479,10 @@ DOOM.THEMES =
       SW1COMP  = "SW1PANEL"
     }
 
+    street_sinks =
+    {
+      floor_default_streets = 1
+    }
 
     floor_sinks =
     {
@@ -1818,6 +1828,11 @@ DOOM.THEMES =
 
       SW1COMP  = "SW1LION"
       SW1PIPE  = "SW1BROWN"
+    }
+
+    street_sinks =
+    {
+      floor_default_streets = 1
     }
 
     floor_sinks =

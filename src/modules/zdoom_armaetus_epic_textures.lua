@@ -878,6 +878,7 @@ function ARMAETUS_EPIC_TEXTURES.table_insert(table1, table2)
 end
 
 function ARMAETUS_EPIC_TEXTURES.put_new_materials()
+  -- MSSP-TODO - redo all this code to just use a single deep merge table operation
 
   if OB_CONFIG.game == "doom2" or OB_CONFIG.game == "plutonia"
   or OB_CONFIG.game == "tnt" then
@@ -921,24 +922,8 @@ function ARMAETUS_EPIC_TEXTURES.put_new_materials()
 
     -- SINKS
     -- definitions
-    ARMAETUS_EPIC_TEXTURES.table_insert(ARMAETUS_SINK_DEFS,
-      GAME.SINKS)
-
-    -- ceiling sink tables
-    ARMAETUS_EPIC_TEXTURES.table_insert(ARMAETUS_TECH_CEILING_SINKS,
-      GAME.THEMES.tech.ceiling_sinks)
-    ARMAETUS_EPIC_TEXTURES.table_insert(ARMAETUS_URBAN_CEILING_SINKS,
-      GAME.THEMES.urban.ceiling_sinks)
-    ARMAETUS_EPIC_TEXTURES.table_insert(ARMAETUS_HELL_CEILING_SINKS,
-      GAME.THEMES.hell.ceiling_sinks)
-
-    -- floor sink tables
-    ARMAETUS_EPIC_TEXTURES.table_insert(ARMAETUS_TECH_FLOOR_SINKS,
-      GAME.THEMES.tech.floor_sinks)
-    ARMAETUS_EPIC_TEXTURES.table_insert(ARMAETUS_URBAN_FLOOR_SINKS,
-      GAME.THEMES.urban.floor_sinks)
-    ARMAETUS_EPIC_TEXTURES.table_insert(ARMAETUS_HELL_FLOOR_SINKS,
-      GAME.THEMES.hell.floor_sinks)
+    GAME.SINKS = table.deep_merge(GAME.SINKS, EPIC_SINK_DEFS, 2)
+    GAME.THEMES = table.deep_merge(GAME.THEMES, EPIC_SINKS, 2)
 
     --new scenic fences feature
     ARMAETUS_EPIC_TEXTURES.table_insert(ARMAETUS_TECH_SCENIC_FENCES,
@@ -984,9 +969,6 @@ function ARMAETUS_EPIC_TEXTURES.put_new_materials()
       GAME.THEMES.urban.fence_groups)
     ARMAETUS_EPIC_TEXTURES.table_insert(ARMAETUS_HELL_FENCE_GROUPS,
       GAME.THEMES.hell.fence_groups)
-
-    -- hack for the street textures
-    GAME.SINKS.floor_streets.trim_mat = "WARN1"
   end
 
   if OB_CONFIG.game == "doom1" or OB_CONFIG.game == "ultdoom" then
@@ -1094,9 +1076,6 @@ function ARMAETUS_EPIC_TEXTURES.put_new_materials()
     GAME.THEMES.deimos.wide_halls = ARMAETUS_TECH_WIDE_HALLS
     GAME.THEMES.hell.wide_halls = ARMAETUS_HELL_WIDE_HALLS
     GAME.THEMES.flesh.wide_halls = ARMAETUS_HELL_WIDE_HALLS
-
-    --hack for the street textures
-    GAME.SINKS.floor_streets.trim_mat = "WARN1"
   end
 end
 
@@ -1107,14 +1086,19 @@ function ARMAETUS_EPIC_TEXTURES.put_the_texture_wad_in()
     gui.wad_transfer_lump(wad_file, "CREDITS", "CREDITS")
     gui.wad_merge_sections(wad_file)
 
+    local dir = "games/doom/data/"
     -- wad_merge_sections currently does not support merging HI_START
     -- and HI_END... *sigh*
     gui.wad_add_binary_lump("HI_START",{})
-    gui.wad_insert_file("games/doom/data/OBVNMCH1.png", "OBVNMCH1")
-    gui.wad_insert_file("games/doom/data/OBVNMCH2.png", "OBVNMCH2")
-    gui.wad_insert_file("games/doom/data/OBVNMCH3.png", "OBVNMCH3")
-    gui.wad_insert_file("games/doom/data/OBVNMCH4.png", "OBVNMCH4")
-    gui.wad_insert_file("games/doom/data/OBVNMCH5.png", "OBVNMCH5")
+    gui.wad_insert_file(dir .. "OBVNMCH1.png", "OBVNMCH1")
+    gui.wad_insert_file(dir .. "OBVNMCH2.png", "OBVNMCH2")
+    gui.wad_insert_file(dir .. "OBVNMCH3.png", "OBVNMCH3")
+    gui.wad_insert_file(dir .. "OBVNMCH4.png", "OBVNMCH4")
+    gui.wad_insert_file(dir .. "OBVNMCH5.png", "OBVNMCH5")
+    gui.wad_insert_file(dir .. "ROAD1.png", "ROAD1")
+    gui.wad_insert_file(dir .. "ROAD2.png", "ROAD2")
+    gui.wad_insert_file(dir .. "ROAD3.png", "ROAD3")
+    gui.wad_insert_file(dir .. "ROAD4.png", "ROAD4")
     gui.wad_add_binary_lump("HI_END",{})
   end
 

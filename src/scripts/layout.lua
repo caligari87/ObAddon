@@ -2078,8 +2078,9 @@ stderrf("Cages in %s [%s pressure] --> any_prob=%d  per_prob=%d\n",
         assert(fg.sink)
       end
 
+      -- for streets
       if R.is_street and R.svolume > 16 then
-        fg.sink = GAME.SINKS["floor_streets"]
+        fg.sink = GAME.SINKS[rand.key_by_probs(GAME.THEMES[LEVEL.theme_name].street_sinks)]
       end
     end
   end
