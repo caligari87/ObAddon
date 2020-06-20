@@ -84,8 +84,8 @@ ZDOOM_SOUND.TEMPLATES =
 function ZDOOM_SOUND.build_lumps()
   local offset_count = ZDOOM_SOUND.ACTOR_ID_OFFSET
   local sndtable = table.deep_copy(ZDOOM_SOUND_DEFS)
-  PARAM.SOUND_DEC = ""
-  PARAM.SNDINFO = ""
+  SCRIPTS.SOUND_DEC = ""
+  SCRIPTS.SNDINFO = ""
 
   table.name_up(sndtable)
 
@@ -106,7 +106,7 @@ function ZDOOM_SOUND.build_lumps()
       dec_chunk = string.gsub(dec_chunk, "ARGHS", ZDOOM_SOUND.DEFAULT_A_PLAYSOUND_ARGS)
     end
 
-    PARAM.SOUND_DEC = PARAM.SOUND_DEC .. dec_chunk .. "\n\n"
+    SCRIPTS.SOUND_DEC = SCRIPTS.SOUND_DEC .. dec_chunk .. "\n\n"
 
     -- build SNDINFO chunk
     local sndinfo_chunk = sound.lump .. " " .. sound.lump .. "\n"
@@ -115,7 +115,7 @@ function ZDOOM_SOUND.build_lumps()
       sndinfo_chunk = sndinfo_chunk .. " " .. sound.flags .. "\n"
     end
 
-    PARAM.SNDINFO = PARAM.SNDINFO .. sndinfo_chunk .. "\n"
+    SCRIPTS.SNDINFO = SCRIPTS.SNDINFO .. sndinfo_chunk .. "\n"
 
     offset_count = offset_count + 1
   end

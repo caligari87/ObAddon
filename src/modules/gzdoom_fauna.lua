@@ -490,7 +490,7 @@ function FAUNA_MODULE.all_done()
   end
 
   if PARAM.rats == "enable" then
-    PARAM.fauna_dec = FAUNA_MODULE.DEC
+    SCRIPTS.fauna_dec = FAUNA_MODULE.DEC
     local dir = "games/doom/data/"
     gui.wad_merge_sections(dir .. "Rats.wad")
     gui.wad_insert_file("data/sounds/DSRAT.ogg", "DSRAT")

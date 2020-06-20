@@ -102,15 +102,8 @@ function MISC_STUFF.begin_level(self)
       if value != "mixed" then
         STYLE[name] = value
       end
-
     else
-      -- pistol_starts, or other YES/NO stuff
-      if opt.name == "liquid_sinks" then
-        PARAM[name] = value
-      end
-      if value != "no" then
-        PARAM[name] = value
-      end
+      PARAM[name] = value
     end
   end
 end

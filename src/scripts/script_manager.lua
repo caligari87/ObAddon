@@ -52,13 +52,13 @@ function ScriptMan_assemble_mapinfo_lump()
   if PARAM.boss_gen and PARAM.boss_count != -1 then
     eventhandler_lines = eventhandler_lines .. '"BossGenerator_Handler"'
   end
-  if PARAM.boss_gen and PARAM.boss_count != -1 and PARAM.actor_name_script then
+  if PARAM.boss_gen and PARAM.boss_count != -1 and SCRIPTS.actor_name_script then
     eventhandler_lines = eventhandler_lines .. ", "
   end
-  if PARAM.actor_name_script then
+  if SCRIPTS.actor_name_script then
     eventhandler_lines = eventhandler_lines .. '"bossNameHandler"'
   end
-  if (PARAM.boss_gen and PARAM.boss_count != -1) or PARAM.actor_name_script then
+  if (PARAM.boss_gen and PARAM.boss_count != -1) or SCRIPTS.actor_name_script then
     eventhandler_lines = eventhandler_lines .. "\n"
     table.insert(mapinfo_lines, eventhandler_lines)
   end
@@ -102,8 +102,8 @@ function ScriptMan_assemble_zscript_lump()
     zscript_lines = zscript_lines ..
     ARMAETUS_EPIC_TEXTURES.TEMPLATES.ZS_TREES .. "\n"
   end
-  if PARAM.actor_name_script then
-    zscript_lines = zscript_lines .. PARAM.actor_name_script .. "\n"
+  if SCRIPTS.actor_name_script then
+    zscript_lines = zscript_lines .. SCRIPTS.actor_name_script .. "\n"
   end
 
   if PARAM.fauna_zsc then
@@ -128,21 +128,21 @@ function ScriptMan_assemble_decorate_lump()
     decorate_script_lines = decorate_script_lines ..
     ZDOOM_SPECIALS.DYNAMIC_LIGHT_DECORATE .. "\n"
   end
-  if PARAM.hn_marker_decorate_lines then
+  if SCRIPTS.hn_marker_decorate_lines then
     decorate_script_lines = decorate_script_lines ..
-    PARAM.hn_marker_decorate_lines .. "\n"
+    SCRIPTS.hn_marker_decorate_lines .. "\n"
   end
   if PARAM.ambient_sounds then
     decorate_script_lines = decorate_script_lines ..
-    PARAM.SOUND_DEC .. "\n"
+    SCRIPTS.SOUND_DEC .. "\n"
   end
-  if PARAM.tissue_dec then
+  if SCRIPTS.tissue_doc then
     decorate_script_lines = decorate_script_lines ..
-    PARAM.tissue_dec .. "\n"
+    SCRIPTS.tissue_doc .. "\n"
   end
-  if PARAM.fauna_dec then
+  if SCRIPTS.fauna_dec then
     decorate_script_lines = decorate_script_lines ..
-    PARAM.fauna_dec .. "\n"
+    SCRIPTS.fauna_dec .. "\n"
   end
 
   if decorate_script_lines != "" then
@@ -156,7 +156,7 @@ function ScriptMan_assemble_sndinfo_lump()
 
   if PARAM.ambient_sounds then
     sndinfo_lines = sndinfo_lines ..
-    PARAM.SNDINFO .. "\n"
+    SCRIPTS.SNDINFO .. "\n"
   end
   if PARAM.fauna_SNDINFO then
     sndinfo_lines = sndinfo_lines ..
@@ -220,7 +220,7 @@ function ScriptMan_assemble_acs_loader_lump()
   if PARAM.custom_trees == "decorate" then
     table.insert(acs_loader_lines, "ASSGRASS\n")
   end
-  if PARAM.tissue_dec then
+  if SCRIPTS.tissue_doc then
     table.insert(acs_loader_lines, "COUNTTIS\n")
   end
 
@@ -233,7 +233,7 @@ function ScriptMan_merge_acs_lumps()
   if PARAM.custom_trees == "decorate" then
     gui.wad_insert_file("modules/zdoom_internal_scripts/ASSGRASS.lmp", "ASSGRASS")
   end
-  if PARAM.tissue_dec then
+  if SCRIPTS.tissue_doc then
     gui.wad_insert_file("modules/zdoom_internal_scripts/COUNTTIS.lmp", "COUNTTIS")
   end
 

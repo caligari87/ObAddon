@@ -28,6 +28,8 @@ LEVEL  = {}
 THEME  = {}
 SEEDS  = {}
 
+SCRIPTS = {}
+
 EPISODE = {}
 PREFABS = {}
 GROUPS  = {}

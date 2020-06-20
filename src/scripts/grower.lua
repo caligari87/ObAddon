@@ -1066,11 +1066,11 @@ function Grower_decide_extents()
 
   if LEVEL.is_procedural_gotcha == true then
     if PARAM.boss_gen == true then
-        LEVEL.min_rooms = 1
-        LEVEL.max_rooms = 1
+      LEVEL.min_rooms = 1
+      LEVEL.max_rooms = 1
     else
-        LEVEL.min_rooms = 2
-        LEVEL.max_rooms = 2
+      LEVEL.min_rooms = 2
+      LEVEL.max_rooms = 2
     end
   end
 
@@ -1091,6 +1091,10 @@ function Grower_decide_extents()
 
   if LEVEL.is_nature then
     gui.printf("--==| Nature mode activated! Take a walk! |==--\n\n")
+  end
+
+  if LEVEL.has_linear_start then
+    gui.printf("--==| Linear Start activated! |==--")
   end
 end
 

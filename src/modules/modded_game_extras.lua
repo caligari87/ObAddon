@@ -432,7 +432,7 @@ function MODDED_GAME_EXTRAS.generate_hn_decorate()
     decorate_string = decorate_string .. thing_chunk
   end
 
-  PARAM.hn_marker_decorate_lines = decorate_string
+  SCRIPTS.hn_marker_decorate_lines = decorate_string
 end
 
 
@@ -873,7 +873,7 @@ function MODDED_GAME_EXTRAS.generate_custom_actor_names(mode)
     actor_name_script = string.gsub( actor_name_script, "GDEMONS_COMPAT_CHECKS", " ")
   end
 
-  PARAM.actor_name_script = actor_name_script
+  SCRIPTS.actor_name_script = actor_name_script
 end
 
 
