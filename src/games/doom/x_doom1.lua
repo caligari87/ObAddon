@@ -1514,8 +1514,6 @@ ULTDOOM.THEMES =
       Skybox_hellish_city = 50
     }
 
-    archy_arches = true
-
     ceil_light_prob = 45
   }
 }

@@ -263,8 +263,6 @@ TNT.THEMES =
       demon   = 1.5
     }
 
-    archy_arches = true
-
 --Any rocky/stonelike/metal doors (IE METALDR) would do great for this theme -Chris
     scenic_fence =
     {
