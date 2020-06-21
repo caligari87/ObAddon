@@ -26,6 +26,8 @@ PREFABS.Wall_urban_fire_exit_low =
   template = "Wall_urban_tall_vent"
   map = "MAP02"
 
+  need_solid_back = true
+
   height = 200
   deep = 48
 
@@ -36,6 +38,8 @@ PREFABS.Wall_urban_fire_exit_high =
 {
   template = "Wall_urban_tall_vent"
   map = "MAP03"
+
+  need_solid_back = true
 
   height = 384
   deep = 48

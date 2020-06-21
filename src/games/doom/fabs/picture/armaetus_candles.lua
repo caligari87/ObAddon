@@ -25,6 +25,26 @@ PREFABS.Pic_armaetus_candles =
   y_fit = "top"
 }
 
+PREFABS.Pic_gtd_arm_candles_2 =
+{
+  template = "Pic_armaetus_candles"
+  map = "MAP02"
+
+  seed_w = 2
+
+  x_fit = { 120,136 }
+}
+
+PREFABS.Pic_gtd_arm_candles_3 =
+{
+  template = "Pic_armaetus_candles"
+  map = "MAP03"
+
+  seed_w = 2
+
+  x_fit = { 80,88 , 168,176 }
+}
+
 -- Spooky hellish candles for the Deimos base, not seen as much
 PREFABS.Pic_armaetus_candles_deimos =
 {
