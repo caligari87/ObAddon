@@ -1347,7 +1347,7 @@ step:dump("Step:")
 
     grow_step_areas()
 
-    if #group_list > 0 then
+    --[[if #group_list > 0 then
       gui.printf("WARNING:\nCave steps failed to cover all important chunks " ..
       "in ROOM" .. area.room.id .. "\n")
       gui.printf(table.tostr(group_list,2) .. "\n")
@@ -1357,7 +1357,7 @@ step:dump("Step:")
           gui.printf(table.tostr(G.conn.joiner_chunk),2)
         end
       end
-    end
+    end]]
   end
 
   determine_touching_areas()

@@ -968,9 +968,11 @@ stderrf("dA = (%1.1f %1.1f)  dB = (%1.1f %1.1f)\n", adx, ady, bdx, bdy)
 
       if E.kind == "window" then
         max_floor = math.max(E.area.floor_h, E.peer.area.floor_h)
+        if E.area.mode and E.area.mode == "nature" then max_floor = E.area.max_floor_h end
       elseif E.kind == "doorway" then
         max_floor = z
       end
+
       Trans.set_fitted_z(T, max_floor, min_ceil)
 
     end

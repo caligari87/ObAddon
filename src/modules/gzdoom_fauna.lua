@@ -338,7 +338,7 @@ FAUNA_MODULE.ACTORS =
 FAUNA_MODULE.DOOMEDNUMS =
 {
 [[
-    30000 = SpringyFly
+  30000 = SpringyFly
 ]]
 }
 
