@@ -71,10 +71,10 @@ function ScriptMan_assemble_mapinfo_lump()
   end
 
   table.insert(mapinfo_lines, "\n}\n")
-  if PARAM.fauna_mapinfo then
+  if SCRIPTS.fauna_mapinfo then
     table.insert(mapinfo_lines, "DoomedNums\n")
     table.insert(mapinfo_lines, "{\n")
-    each line in PARAM.fauna_mapinfo do
+    each line in SCRIPTS.fauna_mapinfo do
       table.insert(mapinfo_lines,line)
     end
       table.insert(mapinfo_lines, "}\n")
@@ -106,8 +106,8 @@ function ScriptMan_assemble_zscript_lump()
     zscript_lines = zscript_lines .. SCRIPTS.actor_name_script .. "\n"
   end
 
-  if PARAM.fauna_zsc then
-    zscript_lines = zscript_lines .. PARAM.fauna_zsc .. "\n"
+  if SCRIPTS.fauna_zsc then
+    zscript_lines = zscript_lines .. SCRIPTS.fauna_zsc .. "\n"
   end
 
   if zscript_lines != "" then
@@ -158,9 +158,9 @@ function ScriptMan_assemble_sndinfo_lump()
     sndinfo_lines = sndinfo_lines ..
     SCRIPTS.SNDINFO .. "\n"
   end
-  if PARAM.fauna_SNDINFO then
+  if SCRIPTS.fauna_SNDINFO then
     sndinfo_lines = sndinfo_lines ..
-    PARAM.fauna_SNDINFO .. "\n"
+    SCRIPTS.fauna_SNDINFO .. "\n"
   end
 
   if sndinfo_lines != "" then

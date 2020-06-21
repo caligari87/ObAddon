@@ -478,12 +478,12 @@ end
 function FAUNA_MODULE.all_done()
 
   if (PARAM.flies == "enable" or PARAM.rats == "enable") then
-    PARAM.fauna_SNDINFO = FAUNA_MODULE.SNDINFO
+    SCRIPTS.fauna_SNDINFO = FAUNA_MODULE.SNDINFO
   end
 
   if PARAM.flies == "enable" then
-    PARAM.fauna_zsc = FAUNA_MODULE.ZSC
-    PARAM.fauna_mapinfo = FAUNA_MODULE.DOOMEDNUMS
+    SCRIPTS.fauna_zsc = FAUNA_MODULE.ZSC
+    SCRIPTS.fauna_mapinfo = FAUNA_MODULE.DOOMEDNUMS
     local dir = "games/doom/data/"
     gui.wad_merge_sections(dir .. "Fly.wad")
     gui.wad_insert_file("data/sounds/FLYBUZZ.ogg", "FLYBUZZ")
