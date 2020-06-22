@@ -1,10 +1,10 @@
 PREFABS.Pic_armaetus_candles =
 {
-  file   = "picture/armaetus_candles.wad"
-  map    = "MAP01"
+  file = "picture/armaetus_candles.wad"
+  map = "MAP01"
 
-  prob   = 20
-  env   = "building"
+  prob = 20
+  env = "building"
   theme = "hell"
 
   uses_epic_textures = true
@@ -18,8 +18,8 @@ PREFABS.Pic_armaetus_candles =
   bound_z1 = 0
   bound_z2 = 128
 
-  deep   =  16
-  over   = -16
+  deep =  16
+  over = -16
 
   x_fit = { 56,72 }
   y_fit = "top"
@@ -39,6 +39,10 @@ PREFABS.Pic_gtd_arm_candles_3 =
 {
   template = "Pic_armaetus_candles"
   map = "MAP03"
+
+  prob = 35
+
+  height = 144
 
   seed_w = 2
 
