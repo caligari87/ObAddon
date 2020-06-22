@@ -28,10 +28,10 @@ PREFABS.Wall_urban_fire_exit_low =
 
   need_solid_back = true
 
-  height = 200
+  height = 208
   deep = 48
 
-  bound_z2 = 200
+  bound_z2 = 208
 }
 
 PREFABS.Wall_urban_fire_exit_high =
@@ -41,8 +41,8 @@ PREFABS.Wall_urban_fire_exit_high =
 
   need_solid_back = true
 
-  height = 384
+  height = 336
   deep = 48
 
-  bound_z2 = 384
+  bound_z2 = 336
 }

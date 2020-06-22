@@ -1261,4 +1261,10 @@ ARMAETUS_DOOM1_MATERIALS = {
   XSKIN4 = { t="SKIN4", f="SKIN4" }
   XHELLCMT  = { t="HELLCMT7", f="HELLCMT7" }
   XQFLAT07 = { t="QFLAT07", f="QFLAT07" }
+
+  ----------------------
+  -- Special Textures --
+  ----------------------
+
+  FINVSBLE = { t="FINVSBLE", f="FINVSBLE"}
 }

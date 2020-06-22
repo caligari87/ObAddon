@@ -1217,4 +1217,10 @@ ARMAETUS_MATERIALS = {
   T_GHFLB = { t="G16", f="T_GHFLB" }
   T_GHFLG = { t="G16", f="T_GHFLG" }
   T_GHFLP = { t="G16", f="T_GHFLP" }
+
+  ----------------------
+  -- Special Textures --
+  ----------------------
+
+  FINVSBLE = { t="FINVSBLE", f="FINVSBLE"}
 }
