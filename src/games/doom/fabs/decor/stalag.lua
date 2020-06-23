@@ -23,7 +23,7 @@ PREFABS.Decor_stalag1 =
   z_fit  = "stretch"
 }
 
-PREFABS.Decor_stalag1_alt1 =
+--[[PREFABS.Decor_stalag1_alt1 =
 {
   template  = "Decor_stalag1"
   map    = "MAP15"
@@ -82,7 +82,7 @@ PREFABS.Decor_stalag1_big_alt3 =
   prob   = 5000
 
   z_fit  = "top"
-}
+}]]
 
 ---- jutting down from ceiling ----
 
@@ -96,7 +96,7 @@ PREFABS.Decor_stalag2 =
   z_fit  = "stretch"
 }
 
-PREFABS.Decor_stalag2_alt1 =
+--[[PREFABS.Decor_stalag2_alt1 =
 {
   template = "Decor_stalag1"
   map      = "MAP21"
@@ -114,7 +114,7 @@ PREFABS.Decor_stalag2_alt2 =
   prob   = 5000
 
   z_fit  = "stretch"
-}
+}]]
 
 PREFABS.Decor_stalag2_big =
 {
@@ -126,7 +126,7 @@ PREFABS.Decor_stalag2_big =
   z_fit  = "bottom"
 }
 
-PREFABS.Decor_stalag2_big_alt1 =
+--[[PREFABS.Decor_stalag2_big_alt1 =
 {
   template = "Decor_stalag1"
   map      = "MAP23"
@@ -144,7 +144,7 @@ PREFABS.Decor_stalag2_big_alt2 =
   prob   = 5000
 
   z_fit  = "bottom"
-}
+}]]
 
 ---- both floor and ceiling ----
 
@@ -158,7 +158,7 @@ PREFABS.Decor_stalag3 =
   z_fit  = "stretch"
 }
 
-PREFABS.Decor_stalag3_alt1 =
+--[[PREFABS.Decor_stalag3_alt1 =
 {
   template = "Decor_stalag1"
   map      = "MAP25"
@@ -186,7 +186,7 @@ PREFABS.Decor_stalag3_alt3 =
   prob   = 5000
 
   z_fit  = "stretch"
-}
+}]]
 
 PREFABS.Decor_stalag3_big =
 {
@@ -198,7 +198,7 @@ PREFABS.Decor_stalag3_big =
   z_fit  = "stretch"
 }
 
-PREFABS.Decor_stalag3_big_alt1 =
+--[[PREFABS.Decor_stalag3_big_alt1 =
 {
   template = "Decor_stalag1"
   map      = "MAP28"
@@ -226,4 +226,4 @@ PREFABS.Decor_stalag3_big_alt3 =
   prob   = 5000
 
   z_fit  = "stretch"
-}
+}]]
