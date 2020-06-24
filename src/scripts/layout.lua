@@ -1916,7 +1916,7 @@ stderrf("Cages in %s [%s pressure] --> any_prob=%d  per_prob=%d\n",
     end
 
     if R.is_park then
-      reqs.height = EXTREME_H --MSSP-TODO: FIX-ME!!
+      reqs.height = R.zone.sky_h
 
       if R.is_natural_park then
         reqs.group = "natural_walls"
