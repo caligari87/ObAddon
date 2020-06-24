@@ -111,6 +111,8 @@ PREFABS.Decor_dem_campfireC =
 
   env    = "nature"
 
+  sink_mode = "never"
+
   where  = "point"
   size   = 104
 
