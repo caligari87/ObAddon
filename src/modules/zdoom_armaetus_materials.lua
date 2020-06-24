@@ -701,6 +701,7 @@ ARMAETUS_MATERIALS = {
   SUPPORT4 = { t="SUPPORT4", f="FLAT23" }
   WHEEL1 = { t="WHEEL1", f="CEIL5_1" } -- Truck wheel
   WHEEL2 = { t="WHEEL2", f="CEIL5_1" } -- Car wheel
+  WHEEL3 = { t="WHEEL3", f="CEIL5_1" } -- Compact car wheel
 
   -- Steps
   WARNSTEP = { t="WARNSTEP", f="WARN1", sane=1 }
