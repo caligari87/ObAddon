@@ -27,6 +27,7 @@ PREFABS.Wall_urban_fire_exit_low =
   map = "MAP02"
 
   need_solid_back = true
+  on_scenics = "never"
 
   height = 208
   deep = 48
@@ -40,6 +41,7 @@ PREFABS.Wall_urban_fire_exit_high =
   map = "MAP03"
 
   need_solid_back = true
+  on_scenics = "never"
 
   height = 336
   deep = 48
