@@ -1978,6 +1978,10 @@ stderrf("Cages in %s [%s pressure] --> any_prob=%d  per_prob=%d\n",
 
     local tab = R.theme.wall_groups or THEME.wall_groups
 
+    if not R.theme.wall_groups and R.theme.theme_override then
+      tab = GAME.THEMES[ob_resolve_theme_keyword(R.theme.theme_override)].wall_groups
+    end
+
     if not tab then return end
 
     local autodetail_odds = 25

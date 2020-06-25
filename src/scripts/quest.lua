@@ -3100,6 +3100,8 @@ function Quest_room_themes()
 
     local f_tab = GAME.THEMES[next_theme].facades
 
+    LEVEL.alt_outdoor_wall_group = rand.key_by_probs(GAME.THEMES[next_theme].outdoor_wall_groups)
+
     if exit_room.is_outdoor and not exit_room.is_park then
       exit_room.exit_facade = rand.key_by_probs(f_tab)
       f_tab[exit_room.exit_facade] = f_tab[exit_room.exit_facade] / 10
