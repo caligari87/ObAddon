@@ -44,7 +44,7 @@ PREFABS.Decor_sedan_brown_EPIC =
 
 PREFABS.Decor_minitruck_EPIC =
 {
-  file   = "decor/gtd_cars.wad"
+  file   = "decor/gtd_cars_EPIC.wad"
   map    = "MAP02"
 
   can_be_on_roads = true
