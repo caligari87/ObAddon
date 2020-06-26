@@ -2728,6 +2728,40 @@ GROW_COLLONADE_CORNER =
   }
 }
 
+GROW_COLLONADE_510_STAIRS_STRAIGHT =
+{
+  prob = 25
+  skip_prob = 75
+
+  structure =
+  {
+    ".........","AAAAAAAAA"
+    ".........","AAAAAAAAA"
+    ".........","AA#^^^#AA"
+    ".........","AAA111AAA"
+    ".........","AAA111AAA"
+    "xxx111xxx","xxx111xxx"
+  }
+}
+
+GROW_COLLONADE_510_STAIRS_TRI =
+{
+  prob = 25
+  skip_prob = 75
+
+  structure =
+  {
+    "..........","AAAAAAAAAA"
+    "..........","AAAAAAAAAA"
+    "..........","AA#^^^^#AA"
+    "..........","AA<1111>AA"
+    "..........","AA<1111>AA"
+    "..........","AA<1111>AA"
+    "..........","AA<1111>AA"
+    "xxx1111xxx","xxx1111xxx"
+  }
+}
+
 -- MSSP's liquid tiles. [MSSPLIQUID]
 
 GROW_LIQUID_GUTTER_SIDE =
