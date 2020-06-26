@@ -825,9 +825,11 @@ ARMAETUS_DOOM1_MATERIALS = {
   OBVNMCH4 = { t="OBVNMCH4", f="CEIL5_1" }
   OBVNMCH5 = { t="OBVNMCH5", f="CEIL5_1" }
 
- -- Existing textures with new definitions, especially so some prefabs using Doom 2 textures should
- -- look a bit better with replacements for some of the Doom1 textures included in the Epic texture
- -- set with the included Doom 2 flats.
+  CRATJOKE = { t="CRATJOKE", f="CRATOP2"}
+
+  -- Existing textures with new definitions, especially so some prefabs using Doom 2 textures should
+  -- look a bit better with replacements for some of the Doom1 textures included in the Epic texture
+  -- set with the included Doom 2 flats.
 
   ASHWALL2 = { t="ASH01",  f="FLOOR6_2" }
   ASHWALL3 = { t="ASH02", f="RROCK03" }

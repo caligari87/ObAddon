@@ -834,6 +834,8 @@ ARMAETUS_MATERIALS = {
   OBVNMCH4 = { t="OBVNMCH4", f="CEIL5_1" }
   OBVNMCH5 = { t="OBVNMCH5", f="CEIL5_1" }
 
+  CRATJOKE = { t="CRATJOKE", f="CRATOP2"}
+
  -- Exiting textures with new definitions
   FIREBLU1 = { t="FIREBLU1", f="FIRELAF1" }
   FIREBLU2 = { t="FIREBLU2", f="FIRELAF2" }

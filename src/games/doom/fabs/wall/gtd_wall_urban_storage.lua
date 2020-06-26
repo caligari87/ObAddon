@@ -26,6 +26,17 @@ PREFABS.Wall_urban_storage2 =
   map = "MAP02"
 }
 
+PREFABS.Wall_urban_storage2_expensive_shit =
+{
+  template = "Wall_urban_storage1"
+
+  prob = 25
+
+  map = "MAP02"
+
+  tex_CRATE1 = "CRATJOKE"
+}
+
 PREFABS.Wall_urban_storage3 =
 {
   template = "Wall_urban_storage1"
