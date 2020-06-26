@@ -964,7 +964,7 @@ stderrf("dA = (%1.1f %1.1f)  dB = (%1.1f %1.1f)\n", adx, ady, bdx, bdy)
       T = Trans.edge_transform(E, z, 0, 0, def.deep, def.over, flip_it)
     end
 
-    -- MSSP-TODO: Remove
+    -- MSSP-TODO: Remove extra unnecessary stuff here if things absolutely work
     if def.z_fit then
       local min_ceil = math.min(E.area.ceil_h, E.peer.area.ceil_h)
       --local max_floor = z

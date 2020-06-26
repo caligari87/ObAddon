@@ -6532,7 +6532,6 @@ namelib.SYLLABLES =
     ce = 50,
     cent = 50,
     cez = 50,
-    --chelles = 50,
     ci = 50,
     cia = 50,
     chad = 50,
@@ -6678,7 +6677,6 @@ namelib.SYLLABLES =
     pe = 50,
     po = 50,
     por = 50,
-    pines = 50,
     phi = 50,
     prin = 50,
     prus = 50,
@@ -6834,7 +6832,8 @@ namelib.SYLLABLES =
 
     thys = 50, -- tethys
 
-    dione = 50,
+    di = 50,
+    one = 50,
 
     rhea = 50,
 
