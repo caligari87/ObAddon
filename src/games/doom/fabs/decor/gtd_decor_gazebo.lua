@@ -7,7 +7,7 @@ PREFABS.Decor_gtd_gazebo_x =
 
   theme  = "!hell"
   env    = "outdoor"
-  height = 128
+  height = { 128,256 }
 
   where  = "point"
   size   = 128
