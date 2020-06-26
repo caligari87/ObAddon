@@ -30,17 +30,18 @@ PREFABS.Pic_beed28_broken_door =
   }
 
   thing_10 =
-   {
-   gibs = 50
-   gibbed_player = 50
-   dead_player   = 50
-   dead_zombie = 50
-   dead_shooter = 50
-   dead_imp = 50
-   dead_demon = 50
-   }
+  {
+    gibs = 1
+    gibbed_player = 1
+    dead_player   = 1
+    dead_zombie = 1
+    dead_shooter = 1
+    dead_imp = 1
+    dead_demon = 1
+    [0] = 5
+  }
 
-   sound = "Electric_Sparks"
+  sound = "Electric_Sparks"
 }
 
 PREFABS.Pic_beed28_broken_door2 =
