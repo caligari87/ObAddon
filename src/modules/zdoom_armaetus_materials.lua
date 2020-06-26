@@ -17,7 +17,7 @@
 --
 ------------------------------------------------------------------
 
-ARMAETUS_LIQUIDS =
+ARMAETUS_LIQUID_DEFS =
 {
   hotlava  = { mat="XLAV1", special=5, light_add=56, damage=10 }
   magma  = { mat="MAGMA1",  special=5, light_add=56, damage=10 }

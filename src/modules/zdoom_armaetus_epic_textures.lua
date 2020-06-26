@@ -886,89 +886,24 @@ function ARMAETUS_EPIC_TEXTURES.put_new_materials()
     ARMAETUS_EPIC_TEXTURES.table_insert(ARMAETUS_MATERIALS,
       GAME.MATERIALS)
 
-    ARMAETUS_EPIC_TEXTURES.table_insert(ARMAETUS_LIQUIDS,
+    ARMAETUS_EPIC_TEXTURES.table_insert(ARMAETUS_LIQUID_DEFS,
       GAME.LIQUIDS)
 
     -- put the custom theme definitions in the themes table!!!
     -- LIQUIDZ
     if PARAM.custom_liquids != "no" then
-      ARMAETUS_EPIC_TEXTURES.table_insert(ARMAETUS_TECH_LIQUIDS,
-        GAME.THEMES.tech.liquids)
-      ARMAETUS_EPIC_TEXTURES.table_insert(ARMAETUS_URBAN_LIQUIDS,
-        GAME.THEMES.urban.liquids)
-      ARMAETUS_EPIC_TEXTURES.table_insert(ARMAETUS_HELL_LIQUIDS,
-        GAME.THEMES.hell.liquids)
+      GAME.THEMES = table.deep_merge(GAME.THEMES, ARMAETUS_LIQUIDS, 2)
     end
 
-    -- FACADES
-    ARMAETUS_EPIC_TEXTURES.table_insert(ARMAETUS_TECH_FACADES,
-      GAME.THEMES.tech.facades)
-    ARMAETUS_EPIC_TEXTURES.table_insert(ARMAETUS_HELL_FACADES,
-      GAME.THEMES.hell.facades)
-    ARMAETUS_EPIC_TEXTURES.table_insert(ARMAETUS_URBAN_FACADES,
-      GAME.THEMES.urban.facades)
-
     -- ROOM THEMES
-    ARMAETUS_EPIC_TEXTURES.table_insert(ARMAETUS_THEMES,
-      GAME.ROOM_THEMES)
+    GAME.ROOM_THEMES = table.deep_merge(GAME.ROOM_THEMES, ARMAETUS_ROOM_THEMES, 2)
 
     -- NATURALS
-    ARMAETUS_EPIC_TEXTURES.table_insert(ARMAETUS_TECH_NATURALS,
-      GAME.ROOM_THEMES.tech_Outdoors_generic.naturals)
-    ARMAETUS_EPIC_TEXTURES.table_insert(ARMAETUS_URBAN_NATURALS,
-      GAME.ROOM_THEMES.urban_Outdoors_generic.naturals)
-    ARMAETUS_EPIC_TEXTURES.table_insert(ARMAETUS_HELL_NATURALS,
-     GAME.ROOM_THEMES.hell_Outdoors_generic.naturals)
+    GAME.ROOM_THEMES = table.deep_merge(GAME.ROOM_THEMES, ARMAETUS_NATURALS, 2)
 
-    -- SINKS
     -- definitions
-    GAME.SINKS = table.deep_merge(GAME.SINKS, EPIC_SINK_DEFS, 2)
-    GAME.THEMES = table.deep_merge(GAME.THEMES, EPIC_SINKS, 2)
-
-    --new scenic fences feature
-    ARMAETUS_EPIC_TEXTURES.table_insert(ARMAETUS_TECH_SCENIC_FENCES,
-      GAME.THEMES.tech.scenic_fence)
-    ARMAETUS_EPIC_TEXTURES.table_insert(ARMAETUS_URBAN_SCENIC_FENCES,
-      GAME.THEMES.urban.scenic_fence)
-    ARMAETUS_EPIC_TEXTURES.table_insert(ARMAETUS_HELL_SCENIC_FENCES,
-      GAME.THEMES.hell.scenic_fence)
-
-    -- inserts for group walls
-    ARMAETUS_EPIC_TEXTURES.table_insert(ARMAETUS_TECH_WALL_GROUPS,
-      GAME.THEMES.tech.wall_groups)
-    ARMAETUS_EPIC_TEXTURES.table_insert(ARMAETUS_URBAN_WALL_GROUPS,
-      GAME.THEMES.urban.wall_groups)
-    ARMAETUS_EPIC_TEXTURES.table_insert(ARMAETUS_HELL_WALL_GROUPS,
-      GAME.THEMES.hell.wall_groups)
-
-    -- inserts for window groups
-    ARMAETUS_EPIC_TEXTURES.table_insert(ARMAETUS_TECH_WINDOW_GROUPS,
-      GAME.THEMES.tech.window_groups)
-    ARMAETUS_EPIC_TEXTURES.table_insert(ARMAETUS_URBAN_WINDOW_GROUPS,
-      GAME.THEMES.urban.window_groups)
-    ARMAETUS_EPIC_TEXTURES.table_insert(ARMAETUS_HELL_WINDOW_GROUPS,
-      GAME.THEMES.hell.window_groups)
-
-    -- inserts for epic skyboxes
-    GAME.THEMES.tech.skyboxes = ARMAETUS_TECH_SKYBOXES
-    GAME.THEMES.urban.skyboxes = ARMAETUS_URBAN_SKYBOXES
-    GAME.THEMES.hell.skyboxes = ARMAETUS_HELL_SKYBOXES
-
-    -- inserts for hallways (should be updated and
-    -- expanded in the future to be more
-    -- generalized should anyone desire
-    -- to add more custom hallway types)
-    GAME.THEMES.tech.wide_halls = ARMAETUS_TECH_WIDE_HALLS
-    GAME.THEMES.urban.wide_halls = ARMAETUS_URBAN_WIDE_HALLS
-    GAME.THEMES.hell.wide_halls = ARMAETUS_HELL_WIDE_HALLS
-
-    -- inserts for fences TODO: UltDoom support
-    ARMAETUS_EPIC_TEXTURES.table_insert(ARMAETUS_TECH_FENCE_GROUPS,
-      GAME.THEMES.tech.fence_groups)
-    ARMAETUS_EPIC_TEXTURES.table_insert(ARMAETUS_URBAN_FENCE_GROUPS,
-      GAME.THEMES.urban.fence_groups)
-    ARMAETUS_EPIC_TEXTURES.table_insert(ARMAETUS_HELL_FENCE_GROUPS,
-      GAME.THEMES.hell.fence_groups)
+    GAME.SINKS = table.deep_merge(GAME.SINKS, ARMAETUS_SINK_DEFS, 2)
+    GAME.THEMES = table.deep_merge(GAME.THEMES, ARMAETUS_THEMES, 2)
   end
 
   if OB_CONFIG.game == "doom1" or OB_CONFIG.game == "ultdoom" then

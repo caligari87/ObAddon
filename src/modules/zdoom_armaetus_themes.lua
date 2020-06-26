@@ -18,7 +18,7 @@
 ------------------------------------------------------------------
 
 -- General room themes are placed here (includes cave rooms)
-ARMAETUS_THEMES =
+ARMAETUS_ROOM_THEMES =
 {
   any_ducts_Hallway =
   {
@@ -2019,251 +2019,54 @@ ARMAETUS_THEMES =
 
 }
 
--- Adds new facade texture inserts (outdoor building textures)
-ARMAETUS_TECH_FACADES =
-{
-
-  STARTAN3 = 50
-  STARG3 = 50
-  BRONZE1 = 25
-  BRONZE3 = 25
-  BRONZE5 = 15
-  BRONZE6 = 10
-  BRONZEG3 = 10
-
-  GRAY6 = 25
-  GRAY8 = 25
-  GRAY9 = 25
-
-  STONE  = 20
-  STONE2 = 20
-  STONE3 = 20
-
-  BROWN1 = 20
-  BROWNGRN = 20
-  BRVINE = 20
-  BROVINE2 = 20
-  BROWNGR2 = 10
-  BROWNGR3 = 10
-  BROWNGR4 = 10
-  GRAYVINE = 10
-
-  TEKGREN2 = 15
-  TEKSHAW  = 15
-  TEKGRY01 = 15
-  TEKGRY02 = 10
-
-  GRAYMET2 = 10
-  GRAYMET3 = 10
-  GRAYMET4 = 10
-  GRAYMET5 = 10
-  BROWN2   = 10
-  BROWN3   = 10
-
-
-  METAL8 = 12
-  METAL9 = 12
-  METAL10 = 12
-
-  SHAWN4 = 15
-  SHAWN5 = 15
-  HEX01 = 15
-}
-
-ARMAETUS_HELL_FACADES =
-{
-  GSTONE1 = 50
-  WOOD5   = 50
-  WOOD3   = 50
-
-  MARBLE  = 25
-  MARBLE1 = 25
-  MARBLE2 = 25
-  MARBLE3 = 25
-  MARBGRAY = 25
-  BLAKMBGY = 20
-
-  SP_HOT1 = 20
-  SP_HOT2 = 20
-  SP_HOT3 = 20
-  STONE   = 20
-  STONE4  = 15
-  STONE6  = 15
-  STONE8  = 5
-  STONE9  = 5
-
-  GOTH08 = 20
-  GOTH09 = 20
-  GOTH10 = 20
-  GOTH11 = 20
-  GOTH28 = 10
-  GOTH29 = 20
-  GOTH30 = 20
-  GOTH31 = 20
-  BRIKS35 = 15
-  BRIKS36 = 15
-  GSTONE3 = 10
-
-  MARBLE4 = 15
-  MARBLE5 = 15
-  MARBLE6 = 15
-  MARBLE7 = 10
-  MARBLE8 = 10
-  MM205   = 15
-  MM206   = 10
-  MM207   = 10
-  MM208   = 3
-
-  HELMET1 = 20
-  HELMET2 = 20
-  CATACMB3 = 10
-  CATACMB6 = 10
-
-  HELLCMT1 = 15
-  HELLCMT8 = 15
-  SKTEK01 = 15
-  SKTEK02 = 15
-  KSTONE1 = 10
-  KMARBLE2 = 5
-  KMARBLE3 = 5
-  KMARBLE1 = 5
-
-  SKINMET3 = 15
-  SKINMET4 = 15
-  SKINMET5 = 15
-  SKINMET6 = 5
-  SKINMET7 = 5
-  VINES1   = 5
-  VINES2   = 5
-  VINES3   = 5
-  VINES4   = 5
-  WDMET03  = 5
-
-  BROWN1   = 5
-  BRVINE   = 10
-
-}
-
-ARMAETUS_URBAN_FACADES =
-{
-
-  BIGBRIK1 = 50
-  BIGBRIK2 = 50
-  STUCCO   = 50
-  STUCCO1  = 20
-  STUCCO3  = 20
-
-  BSTONE1 = 25
-  BSTONE2 = 25
-
-  BRICK1 = 25
-  BRICK10 = 25
-  BRICK11 = 25
-  BRICK12 = 25
-  BRICK5  = 25
-  BRICK6  = 25
-  BRICK7  = 25
-  BRICK8  = 25
-  BRICK9  = 25
-
-  STONE    = 25
-  BIGSTONE = 25
-  BIGSTON2 = 25
-  BIGSTON3 = 25
-  BIGSTON4 = 25
-  STONE2   = 15
-  STONE3   = 15
-
-  BRIKS01 = 20
-  BRIKS02 = 20
-  BRIKS04 = 20
-  BRIKS05 = 20
-  BRIKS06 = 20
-  BRIKS10 = 20
-  BRIKS12 = 20
-  BRIKS13 = 20
-  BRIKS14 = 20
-  BRIKS15 = 20
-  BRIKS16 = 20
-  BRIKS17 = 20
-  BRIKS21 = 20
-  BRIKS22 = 20
-  BRIKS23 = 20
-  BRIKS24 = 20
-  BRIKS25 = 10
-  BRIKS26 = 20
-  BRIKS27 = 20
-  BRIKS28 = 10
-  BRIKS29 = 15
-  BRIKS30 = 10
-  BRIKS31 = 10
-  BRIKS32 = 10
-  BRIKS33 = 15
-  BRIKS34 = 20
-  BRIKS35 = 15
-  BRIKS36 = 15
-  BRIKS37 = 10
-  BRIKS38 = 10
-  BRIKS39 = 15
-  BRIKS40 = 10
-  BRIKS41 = 10
-  BRIKS42 = 15
-  BRIKS43 = 20
-  GOTH45  = 20
-  ROK17   = 20
-  ROK18   = 20
-  ROK19   = 15
-
-  URBAN1 = 20
-  URBAN2 = 20
-  URBAN3 = 20
-  URBAN4 = 20
-
-  METAL2 = 15
-  BRONZE1 = 10
-  BRONZE3 = 10
-
-}
-
 -- Custom liquids
-ARMAETUS_TECH_LIQUIDS =
+ARMAETUS_LIQUIDS =
 {
-  hotlava = 3
-  magma   = 3
-  qlava   = 3
-  purwater = 15
-  sludge  = 40
-  gwater  = 50
-  ice     = 20
-  ice2    = 20
-}
+  tech =
+  {
+    liquids =
+    {
+      hotlava = 3
+      magma   = 3
+      qlava   = 3
+      purwater = 15
+      sludge  = 40
+      gwater  = 50
+      ice     = 20
+      ice2    = 20
+    }
+  }
 
-ARMAETUS_URBAN_LIQUIDS =
-{
-  hotlava = 5
-  magma   = 5
-  qlava   = 5
-  purwater = 20
-  sludge  = 60
-  gwater  = 60
-  ice     = 20
-  ice2    = 20
-}
+  urban =
+  {
+    liquids =
+    {
+      hotlava = 5
+      magma   = 5
+      qlava   = 5
+      purwater = 20
+      sludge  = 60
+      gwater  = 60
+      ice     = 20
+      ice2    = 20
+    }
+  }
 
-ARMAETUS_HELL_LIQUIDS =
-{
-  hotlava = 80
-  magma   = 80
-  qlava   = 80
-  purwater = 5
-  sludge  = 20
-  gwater  = 25
-  ice     = 40
-  ice2    = 40
+  hell =
+  {
+    hotlava = 80
+    magma   = 80
+    qlava   = 80
+    purwater = 5
+    sludge  = 20
+    gwater  = 25
+    ice     = 40
+    ice2    = 40
+  }
 }
 
 -- Custom sink definitions as well as probability tables.
-EPIC_SINK_DEFS =
+ARMAETUS_SINK_DEFS =
 {
   liquid_warning_strip =
   {
@@ -3238,10 +3041,99 @@ EPIC_SINK_DEFS =
   }
 }
 
-EPIC_SINKS =
+ARMAETUS_THEMES =
 {
   tech =
   {
+    wide_halls =
+    {
+      deuce = 50
+      metro = 50
+      ducts = 50
+      conveyor = 50
+    }
+
+    facades =
+    {
+      STARTAN3 = 50
+      STARG3 = 50
+      BRONZE1 = 25
+      BRONZE3 = 25
+      BRONZE5 = 15
+      BRONZE6 = 10
+      BRONZEG3 = 10
+
+      GRAY6 = 25
+      GRAY8 = 25
+      GRAY9 = 25
+
+      STONE  = 20
+      STONE2 = 20
+      STONE3 = 20
+
+      BROWN1 = 20
+      BROWNGRN = 20
+      BRVINE = 20
+      BROVINE2 = 20
+      BROWNGR2 = 10
+      BROWNGR3 = 10
+      BROWNGR4 = 10
+      GRAYVINE = 10
+
+      TEKGREN2 = 15
+      TEKSHAW  = 15
+      TEKGRY01 = 15
+      TEKGRY02 = 10
+
+      GRAYMET2 = 10
+      GRAYMET3 = 10
+      GRAYMET4 = 10
+      GRAYMET5 = 10
+      BROWN2   = 10
+      BROWN3   = 10
+
+
+      METAL8 = 12
+      METAL9 = 12
+      METAL10 = 12
+
+      SHAWN4 = 15
+      SHAWN5 = 15
+      HEX01 = 15
+    }
+
+    fence_groups =
+    {
+      fence_firestorm_red = 25
+      fence_firestorm_blue = 25
+      fence_construction = 20
+      fence_highway_bars_warnstep = 20
+    }
+
+    wall_groups =
+    {
+      gtd_wall_server_room2 = 25
+      gtd_collite_set_green = 7
+      gtd_collite_set_orange = 7
+      gtd_collite_set_blue = 7
+      gtd_collite_set_red = 7
+      gtd_wall_lit_box_blue = 9
+      gtd_wall_lit_box_red = 9
+      gtd_wall_lit_box_white = 9
+      gtd_wall_metal_warning = 20
+      gtd_wall_vertical_light_1 = 8
+      gtd_wall_vertical_light_2 = 8
+      gtd_wall_vertical_light_3 = 8
+      gtd_wall_hydroponics = 15
+      gtd_computers_shawn = 15
+      gtd_computers_compsta = 15
+    }
+
+    window_groups =
+    {
+      gtd_window_chainlinks = 40
+    }
+
     street_sinks =
     {
       floor_asphalt_streets = 10
@@ -3313,10 +3205,162 @@ EPIC_SINKS =
       floor_c43_green = 10
       floor_c43_purple = 2
     }
+
+    scenic_fences =
+    {
+      FENCE1 = 10
+      FENCE2 = 10
+      FENCE3 = 7
+      FENCE6 = 5
+      FENCE7 = 5
+      FENCEC = 2
+      RAIL1 = 10
+      BARBWIRE = 3
+      MIDWIND4 = 3
+      MIDWIND6 = 3
+      MIDSPAC2 = 2
+      MIDSPAC4 = 5
+      MIDSPAC5 = 5
+      MIDSPAC8 = 3
+      MIDVINE1 = 1
+      MIDVINE2 = 1
+    }
+
+    skyboxes =
+    {
+      Skybox_tech_ffvii_EPIC = 50
+      Skybox_generic_EPIC = 50
+      Skybox_craneo_fishing_village_EPIC = 25
+      Skybox_garrett_winterfall_EPIC = 12
+      Skybox_craneo_space_shuttle_EPIC = 50
+    }
   }
 
   urban =
   {
+    wide_halls =
+    {
+      deuce = 50
+      metro = 50
+      ducts = 50
+    }
+
+    facades =
+    {
+      BIGBRIK1 = 50
+      BIGBRIK2 = 50
+      STUCCO   = 50
+      STUCCO1  = 20
+      STUCCO3  = 20
+
+      BSTONE1 = 25
+      BSTONE2 = 25
+
+      BRICK1 = 25
+      BRICK10 = 25
+      BRICK11 = 25
+      BRICK12 = 25
+      BRICK5  = 25
+      BRICK6  = 25
+      BRICK7  = 25
+      BRICK8  = 25
+      BRICK9  = 25
+
+      STONE    = 25
+      BIGSTONE = 25
+      BIGSTON2 = 25
+      BIGSTON3 = 25
+      BIGSTON4 = 25
+      STONE2   = 15
+      STONE3   = 15
+
+      BRIKS01 = 20
+      BRIKS02 = 20
+      BRIKS04 = 20
+      BRIKS05 = 20
+      BRIKS06 = 20
+      BRIKS10 = 20
+      BRIKS12 = 20
+      BRIKS13 = 20
+      BRIKS14 = 20
+      BRIKS15 = 20
+      BRIKS16 = 20
+      BRIKS17 = 20
+      BRIKS21 = 20
+      BRIKS22 = 20
+      BRIKS23 = 20
+      BRIKS24 = 20
+      BRIKS25 = 10
+      BRIKS26 = 20
+      BRIKS27 = 20
+      BRIKS28 = 10
+      BRIKS29 = 15
+      BRIKS30 = 10
+      BRIKS31 = 10
+      BRIKS32 = 10
+      BRIKS33 = 15
+      BRIKS34 = 20
+      BRIKS35 = 15
+      BRIKS36 = 15
+      BRIKS37 = 10
+      BRIKS38 = 10
+      BRIKS39 = 15
+      BRIKS40 = 10
+      BRIKS41 = 10
+      BRIKS42 = 15
+      BRIKS43 = 20
+      GOTH45  = 20
+      ROK17   = 20
+      ROK18   = 20
+      ROK19   = 15
+
+      URBAN1 = 20
+      URBAN2 = 20
+      URBAN3 = 20
+      URBAN4 = 20
+
+      METAL2 = 15
+      BRONZE1 = 10
+      BRONZE3 = 10
+    }
+
+    fence_groups =
+    {
+      fence_construction = 50
+      fence_highway_bars_warnstep = 25
+    }
+
+    wall_groups =
+    {
+      gtd_tall_glass_epic_yellow = 2
+      gtd_tall_glass_epic_orange = 2
+      gtd_tall_glass_epic_red = 2
+      gtd_tall_glass_epic_blue = 2
+      gtd_wall_churchy_glass = 1
+      gtd_winglass_wall = 4
+      gtd_collite_set_green = 1
+      gtd_collite_set_orange = 1
+      gtd_collite_set_blue = 1
+      gtd_collite_set_red = 1
+      gtd_wall_lit_box_blue = 3
+      gtd_wall_lit_box_red = 3
+      gtd_wall_lit_box_white = 3
+      gtd_wall_metal_warning = 8
+      gtd_wall_vertical_light_1 = 2
+      gtd_wall_vertical_light_2 = 2
+      gtd_wall_vertical_light_3 = 2
+      gtd_epic_craneo_paintings = 10
+      gtd_computers_shawn = 2
+      gtd_computers_compsta = 2
+      gtd_wall_hell_bottom_glass = 15
+    }
+
+    window_groups =
+    {
+      gtd_window_gothic_epic = 30
+      gtd_window_chainlinks = 60
+    }
+
     street_sinks =
     {
       floor_asphalt_streets = 10
@@ -3385,10 +3429,164 @@ EPIC_SINKS =
       floor_sink_CARPET7 = 7
       floor_sink_CARPET8 = 7
     }
+
+    scenic_fences =
+    {
+      FENCE1 = 2
+      FENCE2 = 2
+      FENCE3 = 5
+      FENCE6 = 10
+      FENCE7 = 10
+      FENCE8 = 4
+      FENCE9 = 4
+      FENCEA = 4
+      FENCEB = 4
+      FENCEC = 5
+      RAIL1 = 10
+      BARBWIRE = 3
+      MIDSPAC2 = 4
+      MIDSPAC3 = 1
+      MIDSPAC5 = 2
+      MIDSPAC8 = 3
+      MIDWIND1 = 10
+      MIDWIND2 = 2
+      MIDWIND3 = 2
+      MIDWIND4 = 10
+      MIDWIND5 = 2
+      MIDWIND6 = 10
+      MIDWIND7 = 2
+      MIDVINE1 = 3
+      MIDVINE2 = 3
+    }
+
+    skyboxes =
+    {
+      Skybox_hellish_city_EPIC = 50
+      Skybox_garrett_city_EPIC = 50
+      Skybox_craneo_fishing_village_EPIC = 50
+      Skybox_garrett_winterfall_EPIC = 25
+      Skybox_craneo_egypt_EPIC = 35
+      Skybox_craneo_space_shuttle_EPIC = 15
+    }
   }
 
   hell =
   {
+    wide_halls =
+    {
+      deuce = 50
+      metro = 50
+      organs = 50
+      conveyorh = 50
+      -- hellcata = 50 -- because this is dependent on styles
+                       -- insertion process is a bit more complicated
+                       -- and initial prob is instead done via style prob bias -MSSP
+    }
+
+    facades =
+    {
+      GSTONE1 = 50
+      WOOD5   = 50
+      WOOD3   = 50
+
+      MARBLE  = 25
+      MARBLE1 = 25
+      MARBLE2 = 25
+      MARBLE3 = 25
+      MARBGRAY = 25
+      BLAKMBGY = 20
+
+      SP_HOT1 = 20
+      SP_HOT2 = 20
+      SP_HOT3 = 20
+      STONE   = 20
+      STONE4  = 15
+      STONE6  = 15
+      STONE8  = 5
+      STONE9  = 5
+
+      GOTH08 = 20
+      GOTH09 = 20
+      GOTH10 = 20
+      GOTH11 = 20
+      GOTH28 = 10
+      GOTH29 = 20
+      GOTH30 = 20
+      GOTH31 = 20
+      BRIKS35 = 15
+      BRIKS36 = 15
+      GSTONE3 = 10
+
+      MARBLE4 = 15
+      MARBLE5 = 15
+      MARBLE6 = 15
+      MARBLE7 = 10
+      MARBLE8 = 10
+      MM205   = 15
+      MM206   = 10
+      MM207   = 10
+      MM208   = 3
+
+      HELMET1 = 20
+      HELMET2 = 20
+      CATACMB3 = 10
+      CATACMB6 = 10
+
+      HELLCMT1 = 15
+      HELLCMT8 = 15
+      SKTEK01 = 15
+      SKTEK02 = 15
+      KSTONE1 = 10
+      KMARBLE2 = 5
+      KMARBLE3 = 5
+      KMARBLE1 = 5
+
+      SKINMET3 = 15
+      SKINMET4 = 15
+      SKINMET5 = 15
+      SKINMET6 = 5
+      SKINMET7 = 5
+      VINES1   = 5
+      VINES2   = 5
+      VINES3   = 5
+      VINES4   = 5
+      WDMET03  = 5
+
+      BROWN1   = 5
+      BRVINE   = 10
+    }
+
+    wall_groups =
+    {
+      gtd_tall_glass_epic_yellow = 15
+      gtd_tall_glass_epic_orange = 15
+      gtd_tall_glass_epic_red = 15
+      gtd_tall_glass_epic_blue = 15
+      gtd_wall_churchy_glass = 30
+      armaetus_catacomb_wall_set = 40
+      armaetus_catacombs_brown = 40
+      gtd_winglass_wall = 40
+      gtd_collite_set_green = 6
+      gtd_collite_set_orange = 6
+      gtd_collite_set_blue = 6
+      gtd_collite_set_red = 6
+      gtd_g99 = 30
+      armaetus_wallbodies = 8
+      armaetus_wallbodies_bloody = 8
+      armaetus_wallbodies_old = 8
+      armaetus_wallbodies_bones = 8
+      gtd_wall_metal_warning = 20
+      gtd_wall_vertical_light_2 = 9
+      gtd_wall_vertical_light_2 = 9
+      gtd_wall_vertical_light_3 = 9
+      gtd_wall_hell_bottom_glass = 20
+    }
+
+    window_groups =
+    {
+      gtd_window_gothic_epic = 80
+    }
+
     street_sinks =
     {
       floor_cobble1_streets = 10
@@ -3446,269 +3644,120 @@ EPIC_SINKS =
       floor_sink_CARPET7 = 7
       floor_sink_CARPET8 = 7
     }
+
+    scenic_fences =
+    {
+      FENCE2 = 5
+      FENCE4 = 10
+      FENCE5 = 10
+      FENCE8 = 2
+      FENCE9 = 4
+      FENCEA = 2
+      FENCEB = 4
+      FENCEC = 3
+      RAIL1 = 4
+      BARBWIRE = 2
+      MIDVINE1 = 4
+      MIDVINE2 = 4
+      MIDWIND1 = 7
+      MIDWIND2 = 10
+      MIDWIND3 = 7
+      MIDWIND4 = 4
+      MIDWIND5 = 8
+      MIDWIND6 = 5
+      MIDWIND7 = 7
+      MIDSPAC2 = 5
+      MIDSPAC3 = 5
+      MIDSPAC6 = 5
+      MIDSPAC7 = 2
+      MIDSPAC8 = 4
+    }
+
+    skyboxes =
+    {
+      Skybox_hellish_city_EPIC = 50
+      Skybox_garrett_hell_EPIC = 50
+      Skybox_garrett_winterfall_EPIC = 35
+      Skybox_craneo_egypt_EPIC = 35
+    }
   }
 }
 
 -- Natural textures for outdoor parks.
-ARMAETUS_TECH_NATURALS =
+ARMAETUS_NATURALS =
 {
-  ALTASH = 20
-  ASH05 = 20
-  ROK04 = 30
-  ROK05 = 10
-  ROK06 = 30
-  ROK12 = 50
-  ROK13 = 30
-  ROK14 = 30
-  ROK15 = 30
-  ROK20 = 20
-  ROK21 = 50
-  ROK22 = 30
-  ROK23 = 20
-  VINES1 = 10
-  VINES2 = 10
-  VINES3 = 10
-  VINES4 = 10
-  MOSROK3 = 10
+  tech =
+  {
+    naturals =
+    {
+      ALTASH = 20
+      ASH05 = 20
+      ROK04 = 30
+      ROK05 = 10
+      ROK06 = 30
+      ROK12 = 50
+      ROK13 = 30
+      ROK14 = 30
+      ROK15 = 30
+      ROK20 = 20
+      ROK21 = 50
+      ROK22 = 30
+      ROK23 = 20
+      VINES1 = 10
+      VINES2 = 10
+      VINES3 = 10
+      VINES4 = 10
+      MOSROK3 = 10
+    }
+  }
+
+  urban =
+  {
+    naturals =
+    {
+      ALTASH = 15
+      ROK03 = 20
+      ROK04 = 30
+      ROK05 = 20
+      ROK06 = 40
+      ROK12 = 60
+      ROK13 = 40
+      ROK14 = 35
+      ROK15 = 50
+      ROK20 = 40
+      ROK21 = 35
+      ROK22 = 30
+      ROK23 = 20
+      VINES1 = 20
+      VINES2 = 20
+      VINES3 = 20
+      VINES4 = 20
+      MOSROK3 = 20
+    }
+  }
+
+  hell =
+  {
+    naturals =
+    {
+      ALTASH = 20
+      ASH05 = 40
+      ASHWALL1 = 10
+      ROK05 = 15
+      ROK12 = 10
+      ROK21 = 15
+      HELLROK1 = 40
+      RDROK1 = 30
+      RDROK2 = 35
+      SKIN3 = 6
+      SKIN4 = 6
+      VINES1 = 3
+      VINES2 = 3
+      VINES3 = 3
+      VINES4 = 3
+    }
+  }
 }
-
-ARMAETUS_URBAN_NATURALS =
-{
-  ALTASH = 15
-  ROK03 = 20
-  ROK04 = 30
-  ROK05 = 20
-  ROK06 = 40
-  ROK12 = 60
-  ROK13 = 40
-  ROK14 = 35
-  ROK15 = 50
-  ROK20 = 40
-  ROK21 = 35
-  ROK22 = 30
-  ROK23 = 20
-  VINES1 = 20
-  VINES2 = 20
-  VINES3 = 20
-  VINES4 = 20
-  MOSROK3 = 20
-}
-
-ARMAETUS_HELL_NATURALS =
-{
-  ALTASH = 20
-  ASH05 = 40
-  ASHWALL1 = 10
-  ROK05 = 15
-  ROK12 = 10
-  ROK21 = 15
-  HELLROK1 = 40
-  RDROK1 = 30
-  RDROK2 = 35
-  SKIN3 = 6
-  SKIN4 = 6
-  VINES1 = 3
-  VINES2 = 3
-  VINES3 = 3
-  VINES4 = 3
-}
-
--- Adds custom ObAddon scenic fence textures to the set
-ARMAETUS_TECH_SCENIC_FENCES =
-{
-  FENCE1 = 10
-  FENCE2 = 10
-  FENCE3 = 7
-  FENCE6 = 5
-  FENCE7 = 5
-  FENCEC = 2
-  RAIL1 = 10
-  BARBWIRE = 3
-  MIDWIND4 = 3
-  MIDWIND6 = 3
-  MIDSPAC2 = 2
-  MIDSPAC4 = 5
-  MIDSPAC5 = 5
-  MIDSPAC8 = 3
-  MIDVINE1 = 1
-  MIDVINE2 = 1
-}
-
-ARMAETUS_URBAN_SCENIC_FENCES =
-{
-  FENCE1 = 2
-  FENCE2 = 2
-  FENCE3 = 5
-  FENCE6 = 10
-  FENCE7 = 10
-  FENCE8 = 4
-  FENCE9 = 4
-  FENCEA = 4
-  FENCEB = 4
-  FENCEC = 5
-  RAIL1 = 10
-  BARBWIRE = 3
-  MIDSPAC2 = 4
-  MIDSPAC3 = 1
-  MIDSPAC5 = 2
-  MIDSPAC8 = 3
-  MIDWIND1 = 10
-  MIDWIND2 = 2
-  MIDWIND3 = 2
-  MIDWIND4 = 10
-  MIDWIND5 = 2
-  MIDWIND6 = 10
-  MIDWIND7 = 2
-  MIDVINE1 = 3
-  MIDVINE2 = 3
-}
-
-ARMAETUS_HELL_SCENIC_FENCES =
-{
-  FENCE2 = 5
-  FENCE4 = 10
-  FENCE5 = 10
-  FENCE8 = 2
-  FENCE9 = 4
-  FENCEA = 2
-  FENCEB = 4
-  FENCEC = 3
-  RAIL1 = 4
-  BARBWIRE = 2
-  MIDVINE1 = 4
-  MIDVINE2 = 4
-  MIDWIND1 = 7
-  MIDWIND2 = 10
-  MIDWIND3 = 7
-  MIDWIND4 = 4
-  MIDWIND5 = 8
-  MIDWIND6 = 5
-  MIDWIND7 = 7
-  MIDSPAC2 = 5
-  MIDSPAC3 = 5
-  MIDSPAC6 = 5
-  MIDSPAC7 = 2
-  MIDSPAC8 = 4
-}
-
--- Adds group wall sets using Epic textures
-ARMAETUS_TECH_WALL_GROUPS =
-{
-  gtd_wall_server_room2 = 25
-  gtd_collite_set_green = 7
-  gtd_collite_set_orange = 7
-  gtd_collite_set_blue = 7
-  gtd_collite_set_red = 7
-  gtd_wall_lit_box_blue = 9
-  gtd_wall_lit_box_red = 9
-  gtd_wall_lit_box_white = 9
-  gtd_wall_metal_warning = 20
-  gtd_wall_vertical_light_1 = 8
-  gtd_wall_vertical_light_2 = 8
-  gtd_wall_vertical_light_3 = 8 -- 124
-  gtd_wall_hydroponics = 15
-  gtd_computers_shawn = 15
-  gtd_computers_compsta = 15
-}
-
-ARMAETUS_URBAN_WALL_GROUPS =
-{
-  gtd_tall_glass_epic_yellow = 2
-  gtd_tall_glass_epic_orange = 2
-  gtd_tall_glass_epic_red = 2
-  gtd_tall_glass_epic_blue = 2
-  gtd_wall_churchy_glass = 1
-  gtd_winglass_wall = 4
-  gtd_collite_set_green = 1
-  gtd_collite_set_orange = 1
-  gtd_collite_set_blue = 1
-  gtd_collite_set_red = 1
-  gtd_wall_lit_box_blue = 3
-  gtd_wall_lit_box_red = 3
-  gtd_wall_lit_box_white = 3
-  gtd_wall_metal_warning = 8
-  gtd_wall_vertical_light_1 = 2
-  gtd_wall_vertical_light_2 = 2
-  gtd_wall_vertical_light_3 = 2
-  gtd_epic_craneo_paintings = 10 --63
-  gtd_computers_shawn = 2
-  gtd_computers_compsta = 2
-  gtd_wall_hell_bottom_glass = 15
-}
-
-ARMAETUS_HELL_WALL_GROUPS =
-{
-  gtd_tall_glass_epic_yellow = 15
-  gtd_tall_glass_epic_orange = 15
-  gtd_tall_glass_epic_red = 15
-  gtd_tall_glass_epic_blue = 15
-  gtd_wall_churchy_glass = 30
-  armaetus_catacomb_wall_set = 40
-  armaetus_catacombs_brown = 40
-  gtd_winglass_wall = 40
-  gtd_collite_set_green = 6
-  gtd_collite_set_orange = 6
-  gtd_collite_set_blue = 6
-  gtd_collite_set_red = 6
-  gtd_g99 = 30
-  armaetus_wallbodies = 8
-  armaetus_wallbodies_bloody = 8
-  armaetus_wallbodies_old = 8
-  armaetus_wallbodies_bones = 8
-  gtd_wall_metal_warning = 20
-  gtd_wall_vertical_light_2 = 9
-  gtd_wall_vertical_light_2 = 9
-  gtd_wall_vertical_light_3 = 9 --338
-  gtd_wall_hell_bottom_glass = 20
-}
-
-
--- Adds new window groups using Epic textures
-ARMAETUS_TECH_WINDOW_GROUPS =
-{
-  gtd_window_chainlinks = 40
-}
-
-ARMAETUS_URBAN_WINDOW_GROUPS =
-{
-  gtd_window_gothic_epic = 30
-  gtd_window_chainlinks = 60
-}
-
-ARMAETUS_HELL_WINDOW_GROUPS =
-{
-  gtd_window_gothic_epic = 80
-}
-
-
--- tables for the Epic skyboxes
-ARMAETUS_TECH_SKYBOXES =
-{
-  Skybox_tech_ffvii_EPIC = 50
-  Skybox_generic_EPIC = 50
-  Skybox_craneo_fishing_village_EPIC = 25
-  Skybox_garrett_winterfall_EPIC = 12
-  Skybox_craneo_space_shuttle_EPIC = 50
-}
-
-ARMAETUS_URBAN_SKYBOXES =
-{
-  Skybox_hellish_city_EPIC = 50
-  Skybox_garrett_city_EPIC = 50
-  Skybox_craneo_fishing_village_EPIC = 50
-  Skybox_garrett_winterfall_EPIC = 25
-  Skybox_craneo_egypt_EPIC = 35
-  Skybox_craneo_space_shuttle_EPIC = 15
-}
-
-ARMAETUS_HELL_SKYBOXES =
-{
-  Skybox_hellish_city_EPIC = 50
-  Skybox_garrett_hell_EPIC = 50
-  Skybox_garrett_winterfall_EPIC = 35
-  Skybox_craneo_egypt_EPIC = 35
-}
-
 
 -- exclude tables for specific environment themes
 ARMAETUS_EXCLUDE_DESERT_SKYBOXES =
@@ -4063,48 +4112,3 @@ ARMAETUS_DESERT_HELL_FACADES =
   EGYPT05  = 35
   EGYPT06  = 35
 }]]
-
-ARMAETUS_TECH_WIDE_HALLS =
-{
-  deuce = 50
-  metro = 50
-  ducts = 50
-  conveyor = 50
-}
-
-ARMAETUS_URBAN_WIDE_HALLS =
-{
-  deuce = 50
-  metro = 50
-  ducts = 50
-}
-
-ARMAETUS_HELL_WIDE_HALLS =
-{
-  deuce = 50
-  metro = 50
-  organs = 50
-  conveyorh = 50
-  -- hellcata = 50 -- because this is dependent on styles
-                   -- insertion process is a bit more complicated
-                   -- and initial prob is instead done via style prob bias -MSSP
-}
-
-ARMAETUS_TECH_FENCE_GROUPS =
-{
-  fence_firestorm_red = 25
-  fence_firestorm_blue = 25
-  fence_construction = 20
-  fence_highway_bars_warnstep = 20
-}
-
-ARMAETUS_URBAN_FENCE_GROUPS =
-{
-  fence_construction = 50
-  fence_highway_bars_warnstep = 25
-}
-
-ARMAETUS_HELL_FENCE_GROUPS =
-{
-
-}
