@@ -46,7 +46,7 @@ PREFABS.Joiner_kitchen =
   file = "joiner/dem_urban_joiners.wad"
   map = "MAP02"
 
-  prob = 3500
+  prob = 4500
 
   theme = "urban"
 
@@ -170,7 +170,7 @@ PREFABS.Joiner_stairwell =
   file = "joiner/dem_urban_joiners.wad"
   map = "MAP05"
 
-  prob = 5500
+  prob = 5000
 
   theme = "urban"
 
@@ -348,7 +348,7 @@ PREFABS.Joiner_cornerstore =
 
   engine = "zdoom"
 
-  prob   = 3500
+  prob   = 4500
 
   theme  = "urban"
 
@@ -392,7 +392,7 @@ PREFABS.Joiner_bookstore =
 
   engine = "zdoom"
 
-  prob   = 3500
+  prob   = 4500
 
   theme  = "urban"
 
