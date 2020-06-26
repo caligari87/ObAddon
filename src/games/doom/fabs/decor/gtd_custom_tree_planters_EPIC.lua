@@ -7,12 +7,12 @@ PREFABS.Decor_square_planter_grass =
 
   outdoor_theme = "temperate"
 
-  prob   = 10000
+  prob   = 5000
   theme  = "!hell"
   env    = "outdoor"
 
   where  = "point"
-  size   = 48
+  size   = 128
 
   bound_z1 = 0
 }
