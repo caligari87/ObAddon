@@ -9,7 +9,7 @@ PREFABS.Item_secret_niche1 =
   map   = "MAP01"
 
   theme = "tech"
-  prob  = 100
+  prob  = 25
   key   = "secret"
 
   where  = "seeds"

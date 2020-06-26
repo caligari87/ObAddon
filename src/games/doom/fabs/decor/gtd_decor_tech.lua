@@ -4,7 +4,7 @@ PREFABS.Decor_light_pillar_helix =
   map    = "MAP01"
 
   prob   = 5000
-  theme  = "!hell"
+  theme  = "tech"
   env    = "building"
 
   where  = "point"
@@ -34,7 +34,7 @@ PREFABS.Decor_light_pillar_core =
   map    = "MAP02"
 
   prob   = 5000
-  theme  = "!hell"
+  theme  = "tech"
   env    = "building"
 
   where  = "point"
@@ -64,7 +64,7 @@ PREFABS.Decor_light_pillar_core2 =
   map    = "MAP03"
 
   prob   = 5000
-  theme  = "!hell"
+  theme  = "tech"
   env    = "building"
 
   where  = "point"
@@ -132,7 +132,7 @@ PREFABS.Decor_server_rack =
   map    = "MAP06"
 
   prob   = 5000
-  theme  = "!hell"
+  theme  = "tech"
   env    = "building"
 
   where  = "point"
@@ -153,7 +153,7 @@ PREFABS.Decor_open_pipe =
   map    = "MAP07"
 
   prob   = 5000
-  theme  = "!hell"
+  theme  = "tech"
   env    = "building"
 
   where  = "point"
@@ -192,7 +192,7 @@ PREFABS.Decor_sealed_storage =
   map    = "MAP09"
 
   prob   = 5000
-  theme  = "!hell"
+  theme  = "tech"
   env    = "building"
 
   where  = "point"
@@ -220,7 +220,7 @@ PREFABS.Decor_sealed_storage_large =
   map    = "MAP10"
 
   prob   = 5000
-  theme  = "!hell"
+  theme  = "tech"
   env    = "building"
 
   where  = "point"
