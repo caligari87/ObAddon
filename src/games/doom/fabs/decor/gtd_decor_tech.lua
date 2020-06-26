@@ -39,12 +39,12 @@ PREFABS.Decor_light_pillar_core =
 
   where  = "point"
   size   = 64
-  height = 160
+  height = 128
 
   bound_z1 = 0
-  bound_z2 = 160
+  bound_z2 = 128
 
-  z_fit  = { 40+16,40+32}
+  z_fit  = { 44,76 }
 }
 
 PREFABS.Decor_light_pillar_core_outdoor =
@@ -53,7 +53,7 @@ PREFABS.Decor_light_pillar_core_outdoor =
 
   env    = "outdoor"
 
-  height = {160,320}
+  height = { 128,256 }
 
   z_fit  = "top"
 }
@@ -69,12 +69,12 @@ PREFABS.Decor_light_pillar_core2 =
 
   where  = "point"
   size   = 64
-  height = 160
+  height = 128
 
   bound_z1 = 0
-  bound_z2 = 160
+  bound_z2 = 128
 
-  z_fit  = { 40+16,40+32 }
+  z_fit  = { 44,84 }
 }
 
 PREFABS.Decor_light_pillar_core2_outdoor =
@@ -83,7 +83,7 @@ PREFABS.Decor_light_pillar_core2_outdoor =
 
   env    = "outdoor"
 
-  height = {160,320}
+  height = {128,256}
 
   z_fit  = "top"
 }
@@ -99,10 +99,10 @@ PREFABS.Decor_data_pillar =
 
   where  = "point"
   size   = 64
-  height = 160
+  height = 112
 
   bound_z1 = 0
-  bound_z2 = 160
+  bound_z2 = 112
 
   z_fit  = "top"
 }
@@ -118,10 +118,10 @@ PREFABS.Decor_computer_tall =
 
   where  = "point"
   size   = 64
-  height = 160
+  height = 128
 
   bound_z1 = 0
-  bound_z2 = 160
+  bound_z2 = 128
 
   z_fit  = "top"
 }
@@ -137,10 +137,10 @@ PREFABS.Decor_server_rack =
 
   where  = "point"
   size   = 64
-  height = 160
+  height = 96
 
   bound_z1 = 0
-  bound_z2 = 160
+  bound_z2 = 96
 
   z_fit = "top"
 
@@ -156,14 +156,17 @@ PREFABS.Decor_open_pipe =
   theme  = "tech"
   env    = "building"
 
+  liquid = true
+
   where  = "point"
   size   = 64
-  height = 160
+  height = 128
 
   bound_z1 = 0
-  bound_z2 = 160
+  bound_z2 = 128
 
-  z_fit  = "top"
+  z_fit  = { 32,88 }
+
   sound = "Water_Tank"
 }
 
@@ -178,10 +181,10 @@ PREFABS.Decor_floor_decal_stripes =
 
   where  = "point"
   size   = 64
-  height = 160
+  height = 32
 
   bound_z1 = 0
-  bound_z1 = 2
+  bound_z1 = 32
 
   sink_mode = "never"
 }
@@ -197,21 +200,12 @@ PREFABS.Decor_sealed_storage =
 
   where  = "point"
   size   = 64
-  height = 160
+  height = 128
 
   bound_z1 = 0
-  bound_z2 = 160
+  bound_z2 = 128
 
   z_fit = "top"
-}
-
-PREFABS.Decor_sealed_storage_outdoor =
-{
-  template = "Decor_sealed_storage"
-
-  height = {128, 368}
-
-  env    = "outdoor"
 }
 
 PREFABS.Decor_sealed_storage_large =
@@ -225,21 +219,12 @@ PREFABS.Decor_sealed_storage_large =
 
   where  = "point"
   size   = 128
-  height = 160
+  height = 128
 
   bound_z1 = 0
-  bound_z2 = 160
+  bound_z2 = 128
 
   z_fit = "top"
-}
-
-PREFABS.Decor_sealed_storage_large_outdoor =
-{
-  template = "Decor_sealed_storage_large"
-
-  height = {128, 368}
-
-  env    = "outdoor"
 }
 
 PREFABS.Decor_fuel_rods =
@@ -253,10 +238,10 @@ PREFABS.Decor_fuel_rods =
 
   where  = "point"
   size   = 64
-  height = 160
+  height = 128
 
   bound_z1 = 0
-  bound_z2 = 160
+  bound_z2 = 128
 
-  z_fit = { 56+8,56+16 }
+  z_fit = { 60,90 }
 }
