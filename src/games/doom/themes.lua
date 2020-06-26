@@ -1285,7 +1285,7 @@ DOOM.THEMES =
       tall   = 80
       grate  = 45
       barred = 5
-      round  = 5
+      --round  = 5
       supertall = 60
       gtd_window_cage_highbars = 20
       gtd_window_cage_lowbars = 10
@@ -1577,7 +1577,7 @@ DOOM.THEMES =
     {
       barred = 30
       tall   = 95
-      round  = 30
+      --round  = 30
       square = 20
       grate  = 40
       supertall = 50
