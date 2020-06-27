@@ -111,7 +111,7 @@ PREFABS.Decor_floor_decal_stripes =
   size   = 64
   height = 32
 
-  bound_z1 = 32
+  bound_z2 = 32
 
   sink_mode = "never"
 }
