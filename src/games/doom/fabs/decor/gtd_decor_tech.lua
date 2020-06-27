@@ -19,18 +19,12 @@ PREFABS.Decor_light_pillar_helix =
 
 PREFABS.Decor_light_pillar_core =
 {
-  file   = "decor/gtd_decor_tech.wad"
+  template = "Decor_light_pillar_helix"
   map    = "MAP02"
 
-  prob   = 5000
-  theme  = "tech"
-  env    = "building"
-
-  where  = "point"
   size   = 64
   height = 128
 
-  bound_z1 = 0
   bound_z2 = 128
 
   z_fit  = { 44,76 }
@@ -38,48 +32,25 @@ PREFABS.Decor_light_pillar_core =
 
 PREFABS.Decor_light_pillar_core2 =
 {
-  file   = "decor/gtd_decor_tech.wad"
+  template = "Decor_light_pillar_helix"
   map    = "MAP03"
 
-  prob   = 5000
-  theme  = "tech"
-  env    = "building"
-
-  where  = "point"
   size   = 64
   height = 128
 
-  bound_z1 = 0
   bound_z2 = 128
 
   z_fit  = { 44,84 }
 }
 
-PREFABS.Decor_light_pillar_core2_outdoor =
-{
-  template = "Decor_light_pillar_core2"
-
-  env    = "outdoor"
-
-  height = {128,256}
-
-  z_fit  = "top"
-}
-
 PREFABS.Decor_data_pillar =
 {
-  file   = "decor/gtd_decor_tech.wad"
+  template = "Decor_light_pillar_helix"
   map    = "MAP04"
 
-  prob   = 5000
-  theme  = "tech"
-  env    = "building"
-
-  where  = "point"
   size   = 64
   height = 112
 
-  bound_z1 = 0
   bound_z2 = 112
 
   z_fit  = "top"
@@ -87,18 +58,12 @@ PREFABS.Decor_data_pillar =
 
 PREFABS.Decor_computer_tall =
 {
-  file   = "decor/gtd_decor_tech.wad"
+  template = "Decor_light_pillar_helix"
   map    = "MAP05"
 
-  prob   = 5000
-  theme  = "tech"
-  env    = "building"
-
-  where  = "point"
   size   = 64
   height = 128
 
-  bound_z1 = 0
   bound_z2 = 128
 
   z_fit  = "top"
@@ -106,18 +71,12 @@ PREFABS.Decor_computer_tall =
 
 PREFABS.Decor_server_rack =
 {
-  file   = "decor/gtd_decor_tech.wad"
+  template = "Decor_light_pillar_helix"
   map    = "MAP06"
 
-  prob   = 5000
-  theme  = "tech"
-  env    = "building"
-
-  where  = "point"
   size   = 64
   height = 96
 
-  bound_z1 = 0
   bound_z2 = 96
 
   z_fit = "top"
@@ -127,20 +86,14 @@ PREFABS.Decor_server_rack =
 
 PREFABS.Decor_open_pipe =
 {
-  file   = "decor/gtd_decor_tech.wad"
+  template = "Decor_light_pillar_helix"
   map    = "MAP07"
-
-  prob   = 5000
-  theme  = "tech"
-  env    = "building"
 
   liquid = true
 
-  where  = "point"
   size   = 64
   height = 128
 
-  bound_z1 = 0
   bound_z2 = 128
 
   z_fit  = { 32,88 }
@@ -150,18 +103,14 @@ PREFABS.Decor_open_pipe =
 
 PREFABS.Decor_floor_decal_stripes =
 {
-  file   = "decor/gtd_decor_tech.wad"
+  template = "Decor_light_pillar_helix"
   map    = "MAP08"
 
-  prob   = 5000
   theme  = "!hell"
-  env    = "building"
 
-  where  = "point"
   size   = 64
   height = 32
 
-  bound_z1 = 0
   bound_z1 = 32
 
   sink_mode = "never"
@@ -169,18 +118,12 @@ PREFABS.Decor_floor_decal_stripes =
 
 PREFABS.Decor_sealed_storage =
 {
-  file   = "decor/gtd_decor_tech.wad"
+  template = "Decor_light_pillar_helix"
   map    = "MAP09"
 
-  prob   = 5000
-  theme  = "tech"
-  env    = "building"
-
-  where  = "point"
   size   = 64
   height = 128
 
-  bound_z1 = 0
   bound_z2 = 128
 
   z_fit = "top"
@@ -188,18 +131,12 @@ PREFABS.Decor_sealed_storage =
 
 PREFABS.Decor_sealed_storage_large =
 {
-  file   = "decor/gtd_decor_tech.wad"
+  template = "Decor_light_pillar_helix"
   map    = "MAP10"
 
-  prob   = 5000
-  theme  = "tech"
-  env    = "building"
-
   where  = "point"
-  size   = 128
   height = 128
 
-  bound_z1 = 0
   bound_z2 = 128
 
   z_fit = "top"
@@ -207,19 +144,29 @@ PREFABS.Decor_sealed_storage_large =
 
 PREFABS.Decor_fuel_rods =
 {
-  file   = "decor/gtd_decor_tech.wad"
+  template = "Decor_light_pillar_helix"
   map    = "MAP11"
 
-  prob   = 5000
-  theme  = "tech"
-  env    = "building"
-
-  where  = "point"
   size   = 64
   height = 128
 
-  bound_z1 = 0
   bound_z2 = 128
 
   z_fit = { 60,90 }
+}
+
+PREFABS.Decor_beacon_thing =
+{
+  template = "Decor_light_pillar_helix"
+  map = "MAP16"
+
+  env = "outdoor"
+
+  size = 96
+  height = 112
+
+  z_fit = "top"
+
+  bound_z1 = 0
+  bound_z2 = 128
 }
