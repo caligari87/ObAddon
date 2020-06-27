@@ -4,7 +4,8 @@ PREFABS.Pic_simple_crates_1 =
   map    = "MAP01"
 
   prob   = 10
-  theme = "!hell"
+  theme = "tech"
+  env = "!cave"
 
   where  = "seeds"
   height = 128
@@ -37,4 +38,42 @@ PREFABS.Pic_simple_crates_3 =
 {
   template = "Pic_simple_crates_1"
   map      = "MAP03"
+}
+
+-- urban variants only appear inside buildings
+
+PREFABS.Pic_simple_crates_1_u =
+{
+  template = "Pic_simple_crates_1"
+  map = "MAP01"
+
+  theme = "urban"
+
+  env = "building"
+}
+
+PREFABS.Pic_simple_crates_2_u =
+{
+  template = "Pic_simple_crates_1"
+  map = "MAP02"
+
+  theme = "urban"
+
+  env = "building"
+
+  thing_15 =
+  {
+    [0] = 1
+    [15] = 1
+  }
+}
+
+PREFABS.Pic_simple_crates_3_u =
+{
+  template = "Pic_simple_crates_1"
+  map = "MAP03"
+
+  theme = "urban"
+
+  env = "building"
 }
