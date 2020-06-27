@@ -17,17 +17,6 @@ PREFABS.Decor_light_pillar_helix =
   z_fit  = { 120+16,120+32 }
 }
 
-PREFABS.Decor_light_pillar_helix_outdoor =
-{
-  template = "Decor_light_pillar_helix"
-
-  height = {160,512}
-
-  env    = "outdoor"
-
-  z_fit  = "top"
-}
-
 PREFABS.Decor_light_pillar_core =
 {
   file   = "decor/gtd_decor_tech.wad"
@@ -45,17 +34,6 @@ PREFABS.Decor_light_pillar_core =
   bound_z2 = 128
 
   z_fit  = { 44,76 }
-}
-
-PREFABS.Decor_light_pillar_core_outdoor =
-{
-  template = "Decor_light_pillar_core"
-
-  env    = "outdoor"
-
-  height = { 128,256 }
-
-  z_fit  = "top"
 }
 
 PREFABS.Decor_light_pillar_core2 =
