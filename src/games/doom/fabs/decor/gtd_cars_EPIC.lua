@@ -10,7 +10,7 @@ PREFABS.Decor_sedan_EPIC =
 
   uses_epic_textures = true
 
-  replaces = "Decor_sedan_EPIC"
+  replaces = "Decor_sedan"
 
   env = "!building"
 
