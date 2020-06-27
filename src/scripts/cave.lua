@@ -2771,7 +2771,7 @@ function Cave_build_a_cave(R, entry_h)
     if WC.chunk then
       WC.chunk.floor_h   = assert(blob.floor_h)
       WC.chunk.ceil_h    = assert(blob.ceil_h)
-      WC.chunk.floor_mat = assert(blob.floor_mat)
+      WC.chunk.floor_mat = assert(blob.floor_mat or area.room.floor_mat)
 
       -- distribute cell floor height info to seeds
       local x = WC.chunk.sx1
