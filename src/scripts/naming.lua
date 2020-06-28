@@ -2893,6 +2893,39 @@ namelib.NAMES =
         ["Doomslayer's House of Doom"]=10
         ["Hell Priests Come to Town"]=10
         ["VEGA Says Hello"]=10
+
+        -- Some really weird shit
+        -- (See https://www.doomworld.com/forum/topic/62633-doom-human-body-allegory/ )
+        ["Agonize Echo Muladhara"]=10
+        ["Animating Force"]=10
+        ["Ankar Left Hand Path Cat"]=10
+        ["Base Tail Bone Chakra"]=10
+        ["Blue Heap Monster Corpse"]=10
+        ["Blue Light Begin Glow"]=10
+        ["Break Mutter"]=10
+        ["Bury Cloth"]=10
+        ["Brain Spring Leak"]=10
+        ["Climb Dog Head Eskimo"]=10
+        ["Cyber Daemon Iron Shoe"]=10
+        ["Daemon Annunaki Messenger"]=10
+        ["Deck Chair Nose Buy"]=10
+        ["Dragon Perfect Prana"]=10
+        ["Heart Chakra"]=10
+        ["Human Body Allegory"]=10
+        ["Infinite Chakra"]=10
+        ["Jumbo Jet Bury Cloth"]=10
+        ["Magnum Opus Allegory"]=10
+        ["Peace Flow Water Quaint"]=10
+        ["Reptoid Hiss Game Wrong"]=10
+        ["Rat Right Hand Path"]=10
+        ["Ruin Daemon Spit Skull"]=10
+        ["Skin Live Learn Speak"]=10
+        ["Step Transport Hear"]=10
+        ["Time Lie Quiet Town"]=10
+        ["Time Vacation Burst"]=10
+        ["Universe Vibration"]=10
+        ["Vertabre Kundalini Enlightenment"]=10
+        ["Vibrate Spirit"]=10
       }
     }
   }
