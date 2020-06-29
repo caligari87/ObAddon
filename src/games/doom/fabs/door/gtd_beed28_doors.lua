@@ -22,7 +22,7 @@ PREFABS.Arch_gtd_beed28_door_crouch =
   z_fit = "top"
 
   bound_z1 = 0
-  bound_z2 = 128
+  bound_z2 = 130
 
   tex_BIGDOOR2 =
   {
