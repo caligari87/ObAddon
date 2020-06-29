@@ -2333,6 +2333,8 @@ function Fab_find_matches(reqs, match_state)
     -- the ceiling has already content in it
     if reqs.filled_ceiling and def.plain_ceiling then return 0 end
 
+    if reqs.is_porch and def.in_porches == "never" then return 0 end
+
     -- special code for checking on climate-theme fabs based on the Epic
     -- Textures module Environment Themes -MSSP
     if not reqs.outdoor_theme then

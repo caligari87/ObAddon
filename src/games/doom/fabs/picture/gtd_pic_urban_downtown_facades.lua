@@ -383,6 +383,8 @@ PREFABS.Pic_urban_downtown_facade_alley =
 
   height = 160
 
+  in_porches = "never"
+
   seed_h = 2
 
   prob = 200
@@ -398,6 +400,8 @@ PREFABS.Pic_urban_downtown_facade_sunk_roof =
 
   prob = 125
 
+  in_porches = "never"
+
   z_fit = { 254,255 }
 
   bound_z1 = 0
@@ -411,6 +415,8 @@ PREFABS.Pic_urban_downtown_facade_sunk_roof_lower =
 
   prob = 125
 
+  in_porches = "never"
+
   z_fit = { 243,256 }
 
   bound_z1 = 0
@@ -423,6 +429,8 @@ PREFABS.Pic_urban_downtown_facade_sunk_roof_lower_2 =
   map = "MAP07"
 
   prob = 125
+
+  in_porches = "never"
 
   z_fit = { 242,256 }
 
