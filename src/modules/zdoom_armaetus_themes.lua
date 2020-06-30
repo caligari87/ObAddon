@@ -3133,6 +3133,7 @@ ARMAETUS_THEMES =
     {
       gtd_window_chainlinks = 40
       gtd_window_bulletproof_glass = 40
+      gtd_window_tall_and_glassy = 10
     }
 
     street_sinks =
@@ -3359,8 +3360,9 @@ ARMAETUS_THEMES =
     window_groups =
     {
       gtd_window_gothic_epic = 30
-      gtd_window_chainlinks = 60
-      gtd_window_bulletproof_glass = 60
+      gtd_window_chainlinks = 50
+      gtd_window_bulletproof_glass = 30
+      gtd_window_tall_and_glassy = 60
     }
 
     street_sinks =

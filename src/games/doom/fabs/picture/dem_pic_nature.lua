@@ -858,7 +858,11 @@ PREFABS.Pic_dem_campsiteP =
 {
   template  = "Pic_dem_campsiteC"
   map    = "MAP54"
+
   env = "park"
+
+  prob = 20
+  skip_prob = 50
 }
 
 ----Natural corner with old cabin----
@@ -1222,4 +1226,3 @@ PREFABS.Pic_dem_ruinsC2 =
   template  = "Pic_dem_ruinsC1"
   map    = "MAP71"
 }
-
