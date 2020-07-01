@@ -3132,7 +3132,9 @@ ARMAETUS_THEMES =
     window_groups =
     {
       gtd_window_chainlinks = 40
-      gtd_window_bulletproof_glass = 40
+      gtd_window_bulletproof_glass = 15
+      gtd_window_bulletproof_glass_green = 15
+      gtd_window_bulletproof_glass_orange = 15
       gtd_window_tall_and_glassy = 10
     }
 
@@ -3361,7 +3363,9 @@ ARMAETUS_THEMES =
     {
       gtd_window_gothic_epic = 30
       gtd_window_chainlinks = 50
-      gtd_window_bulletproof_glass = 30
+      gtd_window_bulletproof_glass = 10
+      gtd_window_bulletproof_glass_green = 10
+      gtd_window_bulletproof_glass_orange = 10
       gtd_window_tall_and_glassy = 60
     }
 
