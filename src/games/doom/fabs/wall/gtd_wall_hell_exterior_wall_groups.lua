@@ -4,7 +4,6 @@ PREFABS.Wall_hell_stone_brace = --#
   map    = "MAP01"
 
   prob   = 15
-  theme = "hell"
   env = "outdoor"
 
   group = "hell_o_stone_brace"
@@ -475,4 +474,38 @@ PREFABS.Wall_hell_marb_icon_bfalls_EPIC_alt = --#
   tex_ICONMRB1 = "MARBLE4"
   tex_BFALL1 = "MARBLE"
   flat_BLOOD1 = "FLOOR7_2"
+}
+
+PREFABS.Wall_hell_egyptish_EPIC = --#
+{
+  template = "Wall_hell_stone_brace"
+  map = "MAP19"
+
+  uses_epic_textures = true
+
+  replaces = "Wall_hell_egyptish"
+
+  group = "hell_o_egyptish"
+
+  tex_MURAL12 =
+  {
+    MURAL12 = 5
+    DESBRIK6 = 1
+  }
+
+  z_fit = "top"
+}
+
+PREFABS.Wall_hell_egyptish =
+{
+  template = "Wall_hell_stone_brace"
+  map = "MAP19"
+
+  group = "hell_o_egyptish"
+
+  tex_DESBRIK3 = "BSTONE2"
+  tex_DESMARB2 = "BSTONE2"
+  tex_MURAL12 = "BSTONE2"
+
+  z_fit = "top"
 }

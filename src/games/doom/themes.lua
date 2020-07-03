@@ -1984,6 +1984,7 @@ DOOM.THEMES =
       hell_o_hereticish_arch = 1
       hell_o_gothic_skin_red = 1
       hell_o_marb_icon_bfalls = 1
+      hell_o_egyptish = 1
     }
 
     window_groups =
