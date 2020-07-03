@@ -1233,6 +1233,15 @@ ARMAETUS_DOOM1_MATERIALS = {
   FIRELAF1 = { t="FIREBLU1",  f="FIRELAF1" }
   FIRELAF2 = { t="FIREBLU2",  f="FIRELAF2" }
 
+  ------------------
+  -- Craneo Stuff --
+  ------------------
+
+  BANKDOOR = { t="BANKDOOR", f="FLAT23"}
+  MONYFRON = { t="MONYFRON", f="MONYFLAT"}
+  MONYSIDE = { t="MONYSIDE", f="MONYFLAT"}
+  MONYFLAT = { t="MONYFRON", f="MONYFLAT"}
+
   ----------------------------------------
   -- End new animated non-liquid floors --
   ----------------------------------------

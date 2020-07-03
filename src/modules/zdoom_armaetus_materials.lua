@@ -1161,11 +1161,18 @@ ARMAETUS_MATERIALS = {
 
   XMFALL1 = { t="MFALL1", f="MFALL1" }
 
+  ------------------
+  -- Craneo Stuff --
+  ------------------
+
+  BANKDOOR = { t="BANKDOOR", f="FLAT23"}
+  MONYFRON = { t="MONYFRON", f="MONYFLAT"}
+  MONYSIDE = { t="MONYSIDE", f="MONYFLAT"}
+  MONYFLAT = { t="MONYFRON", f="MONYFLAT"}
 
   ------------------------
   -- Composite textures --
   ------------------------
-
 
   -- Tech --
 
@@ -1205,7 +1212,6 @@ ARMAETUS_MATERIALS = {
   T_SDTCH3 = { t="BRONZE5", f = "T_SDTCH3"}
   T_SDTCH4 = { t="CEM11", f = "T_SDTCH4"}
   T_SDTCH5 = { t="BROWN1", f = "T_SDTCH5"}
-
 
   -- Gothic --
 

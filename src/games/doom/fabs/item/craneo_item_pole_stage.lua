@@ -6,7 +6,8 @@ PREFABS.Item_striptease_pole_stage =
 
   uses_epic_textures = true
 
-  prob  = 45
+  prob  = 100
+
   theme = "urban"
   env   = "building"
 
