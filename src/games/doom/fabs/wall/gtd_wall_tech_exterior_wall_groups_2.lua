@@ -8,8 +8,6 @@ PREFABS.Wall_tech_outdoor_hex_inset = --#
   group = "tech_o_hex_inset"
   engine = "zdoom"
 
-  theme = "tech"
-
   where  = "edge"
   height = 128
   deep   = 16

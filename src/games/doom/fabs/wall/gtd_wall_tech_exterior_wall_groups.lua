@@ -8,7 +8,6 @@ PREFABS.Wall_tech_outdoor_caution_strip = --#
   group = "tech_o_caution_strip"
 
   env   = "!building"
-  theme = "tech"
 
   where  = "edge"
   height = 128
@@ -427,4 +426,30 @@ PREFABS.Wall_tech_outdoor_black_mesa_overlook_EPIC =
   z_fit = { 120,164 }
 
   bound_z2 = 192
+}
+
+PREFABS.Wall_tech_outdoor_compblue_tall_EPIC = --#
+{
+  template = "Wall_tech_outdoor_caution_strip"
+  map = "MAP19"
+
+  replaces = "Wall_tech_outdoor_compblue_tall"
+
+  uses_epic_textures = true
+
+  group = "tech_o_compblue_tall"
+
+  z_fit = { 28,60 }
+}
+
+PREFABS.Wall_tech_outdoor_compblue_tall =
+{
+  template = "Wall_tech_outdoor_caution_strip"
+  map = "MAP19"
+
+  group = "tech_o_compblue_tall"
+
+  tex_SILVBLU1 = "SHAWN2"
+
+  z_fit = { 28,60 }
 }
