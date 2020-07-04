@@ -41,6 +41,8 @@ PREFABS.Window_chainlink_3_machine =
   template = "Window_chainlink_1"
   map    = "MAP04"
 
+  theme = "!hell"
+
   prob = 30
 
   seed_w = 3

@@ -3592,7 +3592,8 @@ ARMAETUS_THEMES =
 
     window_groups =
     {
-      gtd_window_gothic_epic = 80
+      gtd_window_gothic_epic = 60
+      gtd_window_chainlinks = 60
     }
 
     street_sinks =
