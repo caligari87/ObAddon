@@ -453,3 +453,35 @@ PREFABS.Wall_tech_outdoor_compblue_tall =
 
   z_fit = { 28,60 }
 }
+
+PREFABS.Wall_tech_outdoor_grey_metal_sloped_EPIC = --#
+{
+  template = "Wall_tech_outdoor_caution_strip"
+  map = "MAP20"
+
+  engine = "zdoom"
+
+  uses_epic_textures = true
+
+  replaces = "Wall_tech_outdoor_grey_metal_sloped"
+
+  group = "tech_o_grey_metal_sloped"
+
+  z_fit = { 20,68 }
+}
+
+PREFABS.Wall_tech_outdoor_grey_metal_sloped =
+{
+  template = "Wall_tech_outdoor_caution_strip"
+  map = "MAP20"
+
+  engine = "zdoom"
+
+  group = "tech_o_grey_metal_sloped"
+
+  z_fit = { 20,68 }
+
+  tex_URBAN8 = "SHAWN2"
+  tex_GRAYMET4 = "GRAY7"
+  tex_BIGDOORC = "DOORSTOP"
+}
