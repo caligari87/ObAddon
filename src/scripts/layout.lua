@@ -1911,7 +1911,7 @@ stderrf("Cages in %s [%s pressure] --> any_prob=%d  per_prob=%d\n",
       reqs.group = chunk.from_area.floor_group.wall_group
     end
 
-    if chunk.from_area.is_porch then
+    if chunk.from_area.is_porch or chunk.from_area.is_porch_neighbor then
       reqs.porch = true
     end
 
