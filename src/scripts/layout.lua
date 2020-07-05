@@ -2023,6 +2023,11 @@ stderrf("Cages in %s [%s pressure] --> any_prob=%d  per_prob=%d\n",
 
     tab = table.copy(tab)
 
+    if not tab then
+      gui.printf("WARNING!! " .. LEVEL.theme_name .. " has no usable sinks!")
+      return
+    end
+
     each name in table.keys(tab) do
       if name == "PLAIN" then continue end
 
