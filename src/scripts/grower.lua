@@ -3826,7 +3826,10 @@ function Grower_sprout_room(R)
     -- liquefy pass - adds more liquid elements to rooms
     -- in an attemp to break away from preset liquid chunks
     -- set by shape rules
-    if LEVEL.liquid and rand.odds(style_sel("liquids", 20, 40, 60, 80)) then
+    -- MSSP-TODO: skip specific rules instead of skipping the pass entirely
+    -- for symmetric rooms
+    if LEVEL.liquid and rand.odds(style_sel("liquids", 20, 40, 60, 80))
+    and not R.symmetry then
       Grower_grammatical_room(R, "liquefy")
       R.is_liquid_pooled = true
     end
