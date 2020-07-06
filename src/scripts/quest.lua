@@ -2891,9 +2891,11 @@ function Quest_room_themes()
 
 
   local function misc_fabs()
-    local theme = LEVEL.theme_name
+    local theme
 
     each R in LEVEL.rooms do
+      theme = LEVEL.theme_name
+
       if R.theme.theme_override then
         theme = ob_resolve_theme_keyword(R.theme.theme_override)
       end
