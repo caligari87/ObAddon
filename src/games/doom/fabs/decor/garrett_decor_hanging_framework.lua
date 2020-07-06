@@ -1,6 +1,7 @@
 PREFABS.Decor_garrett_hanging_framework =
 {
   file   = "decor/garrett_decor_hanging_framework.wad"
+  map = "MAP01"
 
   prob   = 5000
   theme  = "tech"
@@ -15,4 +16,15 @@ PREFABS.Decor_garrett_hanging_framework =
   bound_z2 = 164
 
   z_fit = {0, 2}
+}
+
+PREFABS.Decor_gtd_hanging_framework_2 =
+{
+  template = "Decor_garrett_hanging_framework"
+  map = "MAP02"
+
+  height = 192
+  size = 64
+
+  bound_z2 = 192
 }
