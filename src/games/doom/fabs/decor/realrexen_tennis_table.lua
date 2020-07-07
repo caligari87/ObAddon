@@ -1,6 +1,6 @@
-PREFABS.Decor_realrexen_tennis =
+PREFABS.Decor_realrexen_tennis_table =
 {
-  file  = "decor/realrexen_tennis.wad"
+  file  = "decor/realrexen_tennis_table.wad"
   map   = "MAP01"
 
   prob  = 2500
