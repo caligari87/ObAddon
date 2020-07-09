@@ -2566,6 +2566,12 @@ function Level_choose_skybox()
   elseif OB_CONFIG.zdoom_skybox == "themed" then
     skyfab = PREFABS[rand.key_by_probs(THEME.skyboxes)]
 
+  elseif OB_CONFIG.zdoom_skybox == "episodic" then
+    if not LEVEL.episode.skybox then
+      LEVEL.episode.skybox = PREFABS[rand.key_by_probs(THEME.skyboxes)]
+    end
+    skyfab = LEVEL.episode.skybox
+
   elseif OB_CONFIG.zdoom_skybox == "generic" then
     if PARAM.epic_textures_activated then
       skyfab = PREFABS["Skybox_hellish_city_EPIC"]

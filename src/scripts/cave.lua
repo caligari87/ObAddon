@@ -4765,7 +4765,7 @@ function Cave_prepare_scenic_vista(area)
     area.border_type = "bottomless_drop"
   -- MSSP-TODO: find a better way to mix it up with interior facing rooms
   elseif vista_type == "fake_room"
-  and not room.is_park and not room:get_env() == "building" then
+  and not room.is_park and room.is_outdoor then
     area.border_type = "fake_room"
   elseif vista_type == "ocean" and LEVEL.liquid then
     area.border_type = "ocean"

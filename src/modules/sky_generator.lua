@@ -541,7 +541,7 @@ function SKY_GEN.generate_skies()
 
       EPI.dark_prob = 10
 
-      table.insert(PARAM.episode_sky_color, name)
+      PARAM.episode_sky_color[EPI.ep_index] = name
     end
 
 

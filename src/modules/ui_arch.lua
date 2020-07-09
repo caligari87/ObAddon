@@ -59,10 +59,11 @@ UI_ARCH.ZDOOM_VISTA_CHOICES =
 
 UI_ARCH.ZDOOM_SKYBOX_CHOICES =
 {
-  "themed",  _("Per Theme"),
-  "random",  _("Random"),
-  "generic", _("Generic"),
-  "disable", _("Disable"),
+  "themed",   _("Per Theme"),
+  "episodic", _("Episodic"),
+  "random",   _("Random"),
+  "generic",  _("Generic"),
+  "disable",  _("Disable"),
 }
 
 UI_ARCH.YES_NO =

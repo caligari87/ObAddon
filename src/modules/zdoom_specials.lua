@@ -543,10 +543,10 @@ function ZDOOM_SPECIALS.do_special_stuff()
 
   local level_count = #GAME.levels
 
-  local function pick_sky_color_from_skygen_map(skytable, cur_level)
+  local function pick_sky_color_from_skygen_map(epi_num)
     local color
 
-    local skyname = skytable[cur_level]
+    local skyname = PARAM.episode_sky_color[epi_num]
 
     if skyname == "SKY_CLOUDS" then
       color = "a7 c3 ef"
@@ -1138,11 +1138,11 @@ function ZDOOM_SPECIALS.do_special_stuff()
 
     if PARAM.fog_generator == "per_sky_gen" then
       if i <= 11 then
-        info.fog_color = pick_sky_color_from_skygen_map(PARAM.episode_sky_color,1)
+        info.fog_color = pick_sky_color_from_skygen_map(1)
       elseif i > 11 and i <= 20 then
-        info.fog_color = pick_sky_color_from_skygen_map(PARAM.episode_sky_color,2)
+        info.fog_color = pick_sky_color_from_skygen_map(2)
       elseif i > 20 then
-        info.fog_color = pick_sky_color_from_skygen_map(PARAM.episode_sky_color,3)
+        info.fog_color = pick_sky_color_from_skygen_map(3)
       end
     elseif PARAM.fog_generator == "random" then
       info.fog_color = pick_random_fog_color()
