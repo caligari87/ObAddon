@@ -1279,6 +1279,7 @@ DOOM.THEMES =
       tech_o_black_mesa_overlook = 1
       tech_o_compblue_tall = 1
       tech_o_grey_metal_sloped = 1
+      tech_o_tall_light = 1
     }
 
     window_groups =
@@ -1986,6 +1987,7 @@ DOOM.THEMES =
       hell_o_gothic_skin_red = 1
       hell_o_marb_icon_bfalls = 1
       hell_o_egyptish = 1
+      hell_o_blood_ocatgon = 1
     }
 
     window_groups =

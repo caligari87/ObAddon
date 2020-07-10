@@ -485,3 +485,13 @@ PREFABS.Wall_tech_outdoor_grey_metal_sloped =
   tex_GRAYMET4 = "GRAY7"
   tex_BIGDOORC = "DOORSTOP"
 }
+
+PREFABS.Wall_tech_outdoor_tall_light = --#
+{
+  template = "Wall_tech_outdoor_caution_strip"
+  map = "MAP21"
+
+  group = "tech_o_tall_light"
+
+  z_fit = "top"
+}

@@ -509,3 +509,13 @@ PREFABS.Wall_hell_egyptish =
 
   z_fit = "top"
 }
+
+PREFABS.Wall_hell_blood_ocatgon = --#
+{
+  template = "Wall_hell_stone_brace"
+  map = "MAP20"
+
+  group = "hell_o_blood_ocatgon"
+
+  z_fit = "top"
+}
