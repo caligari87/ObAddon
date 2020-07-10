@@ -6048,6 +6048,52 @@ GROW_36_CROSS_NEW_AREA =
   }
 }
 
+GROW_36_TEE_NEW_AREA =
+{
+  prob = 25
+  skip_prob = 75
+
+  structure =
+  {
+    "........","11AAAA11"
+    "........","11AAAA11"
+    "........","11AAAA11"
+    "........","11AAAA11"
+    "xx....xx","xx1111xx"
+    "xxx11xxx","xxx11xxx"
+  }
+}
+
+GROW_36_CROSS_NEW_AREA_SMALL =
+{
+  prob = 25
+  skip_prob = 75
+
+  structure =
+  {
+    "xx..xx","xx11xx"
+    "xx..xx","xx11xx"
+    "......","11AA11"
+    "......","11AA11"
+    "xx..xx","xx11xx"
+    "xx11xx","xx11xx"
+  }
+}
+
+GROW_36_TEE_NEW_AREA_SMALL =
+{
+  prob = 25
+  skip_prob = 75
+
+  structure =
+  {
+    "......","11AA11"
+    "......","11AA11"
+    "xx..xx","xx11xx"
+    "xx11xx","xx11xx"
+  }
+}
+
 GROW_36_ATARI_LOGO_NEW_AREA =
 {
   prob = 25
@@ -7930,6 +7976,25 @@ GROW_L_STAIR_ALT =
     "........","AAAA<<11"
     "........","AAAA<<11"
     "........","AAAA<<11"
+  }
+}
+
+GROW_T_STAIR =
+{
+  prob = 20
+  skip_prob = 75
+
+  structure =
+  {
+    "xxxxx11xxxxx","xxxxx11xxxxx"
+    "xxxx....xxxx","xxxx1111xxxx"
+    "xxxx....xxxx","xxxx1111xxxx"
+    "xxxx....xxxx","xxxxvvvvxxxx"
+    "xxxx....xxxx","xxxxvvvvxxxx"
+    "............","11>>AAAA<<11"
+    "............","11>>AAAA<<11"
+    "............","11>>AAAA<<11"
+    "............","11>>AAAA<<11"
   }
 }
 
