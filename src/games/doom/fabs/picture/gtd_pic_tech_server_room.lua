@@ -30,7 +30,7 @@ PREFABS.Pic_gtd_tech_server_big_monitor =
 
   uses_epic_textures = true
 
-  COMPCT01 =
+  tex_COMPCT01 =
   {
     COMPCT02 = 1
     COMPCT03 = 1
