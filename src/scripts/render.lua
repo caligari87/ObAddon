@@ -654,7 +654,6 @@ function Render_edge(E)
       if E.count then E.count = E.count + 1 end
       if beam_density == "sparse-even" and E.count%2 == 0 then return end
       if beam_density == "sparse-odd" and E.count%2 != 0 then return end
-      end
     end
 
     local T
