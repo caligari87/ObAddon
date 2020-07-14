@@ -3047,8 +3047,8 @@ ARMAETUS_THEMES =
   {
     wide_halls =
     {
-      deuce = 20
-      metro = 20
+      deuce = 50
+      metro = 25
       ducts = 50
       conveyor = 50
     }
@@ -3244,8 +3244,8 @@ ARMAETUS_THEMES =
   {
     wide_halls =
     {
-      deuce = 20
-      metro = 20
+      deuce = 50
+      metro = 50
       ducts = 50
     }
 
@@ -3482,8 +3482,8 @@ ARMAETUS_THEMES =
   {
     wide_halls =
     {
-      deuce = 20
-      metro = 20
+      deuce = 50
+      --metro = 20
       organs = 50
       conveyorh = 50
       -- hellcata = 50 -- because this is dependent on styles

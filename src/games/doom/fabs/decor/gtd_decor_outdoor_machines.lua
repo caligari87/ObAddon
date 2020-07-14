@@ -8,7 +8,7 @@ PREFABS.Decor_tech_point_HVAC_1 =
   prob   = 1500
   theme  = "!hell"
 
-  size   = 128
+  size   = 96
   height = 104
 
   bound_z1 = 0

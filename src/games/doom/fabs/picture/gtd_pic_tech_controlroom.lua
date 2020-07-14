@@ -36,3 +36,19 @@ PREFABS.Pic_control_room_small_monitors =
   tex_COMPSTA1 = "SPACEW3"
   tex_COMPSTA2 = "SPACEW3"
 }
+
+PREFABS.Pic_control_room_sideways_double =
+{
+  template = "Pic_control_room"
+  map = "MAP02"
+}
+
+PREFABS.Pic_control_room_sideways_single =
+{
+  template = "Pic_control_room"
+  map = "MAP03"
+
+  prob = 25
+
+  seed_w = 2
+}
