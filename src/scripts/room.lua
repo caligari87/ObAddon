@@ -1879,6 +1879,19 @@ function Room_border_up()
     end
   end
 
+  local function assign_beam_density()
+    each R in LEVEL.rooms do
+      if rand.odds(75) then
+        if rand.odds(50) then
+          R.beam_density = "sparse-even"
+        else
+          R.beam_density = "sparse-odd"
+        end
+      else
+        R.beam_density = "dense"
+      end
+    end
+  end
 
   local function decide_fenced_rooms()
 
@@ -1955,6 +1968,8 @@ function Room_border_up()
   decide_window_boosts()
 
   decide_fenced_rooms()
+
+  assign_beam_density()
 
   check_sky_closets()
 
