@@ -4794,6 +4794,11 @@ function Cave_prepare_scenic_vista(area)
 
   if room.is_park then fence_tab.railing = 0 end
 
+  if area.border_type == "bottomless_drop"
+  or area.border_type == "cliff_gradient" then
+    edge_tab.wall = 0
+  end
+
   -- decide border junction
   area.fence_type = rand.key_by_probs(fence_tab)
 
