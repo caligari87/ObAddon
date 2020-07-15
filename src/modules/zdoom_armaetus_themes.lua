@@ -3357,6 +3357,7 @@ ARMAETUS_THEMES =
       gtd_computers_shawn = 2
       gtd_computers_compsta = 2
       gtd_wall_hell_bottom_glass = 15
+      gtd_wall_arcade = 15
     }
 
     window_groups =

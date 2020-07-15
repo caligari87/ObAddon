@@ -1232,4 +1232,16 @@ ARMAETUS_MATERIALS = {
   ----------------------
 
   FINVSBLE = { t="FINVSBLE", f="FINVSBLE"}
+
+  -- Craneo's arcade machine screens
+  ARCD2 = { t="ARCD2", f="CEIL4_3"}
+  ARCD3 = { t="ARCD3", f="CEIL4_3"}
+  ARCD4 = { t="ARCD4", f="CEIL4_3"}
+  ARCD5 = { t="ARCD5", f="CEIL4_3"}
+  ARCD6 = { t="ARCD6", f="CEIL4_3"}
+  ARCD7 = { t="ARCD7", f="CEIL4_3"}
+  ARCD8 = { t="ARCD8", f="CEIL4_3"}
+  ARCD9 = { t="ARCD9", f="CEIL4_3"}
+  ARCD10 = { t="ARCD10", f="CEIL4_3"}
+  ARCD11 = { t="ARCD11", f="CEIL4_3"}
 }
