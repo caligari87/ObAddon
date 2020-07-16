@@ -663,7 +663,7 @@ OB_MODULES["sky_generator"] =
       choices=SKY_GEN.SKY_CHOICES
       priority = 10
       tooltip = "This forces the sky background (behind the hills and clouds) to either be night or day. " ..
-      "Default means vanilla Oblige behavior of picking one epsiode to be night. Random means 50% chance of " ..
+      "Default means vanilla Oblige behavior of picking one episode to be night. Random means 50% chance of " ..
       "night or day to be picked per episode."
       default = "sky_default"
     }
