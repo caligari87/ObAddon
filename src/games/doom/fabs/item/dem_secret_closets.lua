@@ -493,6 +493,8 @@ PREFABS.Item_dem_nook_secretcloset =
   file   = "item/dem_secret_closets.wad"
   map    = "MAP16"
 
+  engine = "zdoom"
+
   theme = "!hell"
 
   prob   = 100
