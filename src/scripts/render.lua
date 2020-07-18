@@ -2498,7 +2498,7 @@ chunk.goal.action = "S1_OpenDoor"  -- FIXME IT SHOULD BE SET WHEN JOINER IS REND
       z2 = A.zone.sky_h
     end
 
-    if A.is_natural_park then
+    if A.room.is_natural_park then
       reqs.group = "natural_walls"
     end
 
@@ -2570,6 +2570,10 @@ chunk.goal.action = "S1_OpenDoor"  -- FIXME IT SHOULD BE SET WHEN JOINER IS REND
 
 
   --- pick the prefab ---
+
+  if reqs.env == "park" and reqs.key == "secret" then
+    gui.printf("Reqs: " .. table.tostr(reqs) .. "\n")
+  end
 
   local def = chunk.prefab_def or Fab_pick(reqs, "none_ok")
 
