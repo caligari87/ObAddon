@@ -21,6 +21,7 @@ PREFABS.Joiner_gtd_basic_keyed_curve_blue =
   key = "k_blue"
 
   line_33 = 32
+  thing_95 = 94
 }
 
 PREFABS.Joiner_gtd_basic_keyed_curve_yell =
@@ -30,4 +31,5 @@ PREFABS.Joiner_gtd_basic_keyed_curve_yell =
   key = "k_yellow"
 
   line_33 = 34
+  thing_95 = 96
 }
