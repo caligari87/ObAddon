@@ -2793,6 +2793,22 @@ function Level_make_all()
   GAME.levels   = {}
   GAME.episodes = {}
 
+  -- semi-supported games warning
+  if OB_CONFIG.game != "doom2" then
+    if not PARAM.extra_games or PARAM.extra_games != "yes" then
+      error("Warning: ObAddon development is mostly focused " ..
+    "on creating content for the Doom 2 game setting.\n\n" ..
+    "As a consequence, other games available on the list are " ..
+    "lagging behind in features. These games' " ..
+    "content and feature set are currently " ..
+    "only updated for compatibility being legacy choices " ..
+    "provided by vanilla Oblige. To ignore this warning " ..
+    "and continue generation for these games, set " ..
+    "Extra Games under Debug Control Module to 'Yes'.\n\n" ..
+    "This message will change should development scope expand.")
+    end
+  end
+
 
   gui.rand_seed(OB_CONFIG.seed + 1)
 

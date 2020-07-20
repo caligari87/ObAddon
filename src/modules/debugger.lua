@@ -172,5 +172,15 @@ OB_MODULES["debugger"] =
       priority=95
       gap = 1
     }
+
+    extra_games =
+    {
+      name = "extra_games"
+      label = _("Extra Games")
+      choices = DEBUG_CONTROL.YES_NO
+      tooltip = "Enables games other than Doom 2 in Game Settings list."
+      default = "no"
+      priority = 94
+    }
   }
 }
