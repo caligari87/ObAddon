@@ -2,7 +2,7 @@ PREFABS.Sidewalk_16_tech =
 {
   file   = "stairs/sidewalk_16.wad"
 
-  prob   = 25
+  prob   = 12
   map    = "MAP01"
   theme  = "tech"
 
@@ -34,4 +34,24 @@ PREFABS.Sidewalk_16_gothic =
 
   tex_METAL = "METAL"
   flat_CEIL5_2 = "CEIL5_2"
+}
+
+-- with lights
+
+PREFABS.Sidewalk_16_lit =
+{
+  template = "Sidewalk_16_tech"
+  map = "MAP02"
+
+  prob = 6
+}
+
+PREFABS.Sidewalk_16_lit_blue =
+{
+  template = "Sidewalk_16_tech"
+  map = "MAP02"
+
+  prob = 6
+
+  tex_LITE5 = "LITEBLU4"
 }

@@ -31,4 +31,11 @@ PREFABS.Wall_gtd_arcade_machine_wall =
     ARCD10 = 1
     ARCD11 = 1
   }
+
+  sector_1 = {
+    [0] = 8
+    [1] = 1
+    [2] = 1
+    [21] = 1
+  }
 }
