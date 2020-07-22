@@ -35,7 +35,7 @@ PREFABS.Decor_forklift1T =
 
   engine = "zdoom"
 
-  prob   = 2000
+  prob   = 1500
   theme  = "tech"
 
   uses_epic_textures = true
@@ -59,7 +59,7 @@ PREFABS.Decor_forklift2T =
 
   engine = "zdoom"
 
-  prob   = 2000
+  prob   = 1500
   theme  = "tech"
 
   uses_epic_textures = true
@@ -83,7 +83,7 @@ PREFABS.Decor_forklift3T =
 
   engine = "zdoom"
 
-  prob   = 2000
+  prob   = 1500
   theme  = "tech"
 
   uses_epic_textures = true
@@ -107,7 +107,7 @@ PREFABS.Decor_forklift4T =
 
   engine = "zdoom"
 
-  prob   = 2000
+  prob   = 1500
   theme  = "tech"
 
   uses_epic_textures = true
@@ -131,7 +131,7 @@ PREFABS.Decor_forklift5T =
 
   engine = "zdoom"
 
-  prob   = 2000
+  prob   = 1500
   theme  = "tech"
 
   uses_epic_textures = true
