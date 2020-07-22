@@ -45,6 +45,7 @@ ARMAETUS_EPIC_TEXTURES.SOUCEPORT_CHOICES =
 ARMAETUS_EPIC_TEXTURES.ENVIRONMENT_THEME_CHOICES =
 {
   "random",    _("Random"),
+  "episodic",  _("Episodic"),
   "mixed",     _("A Bit Mixed"),
   "snowish",   _("Snow-ish"),
   "desertish", _("Desert-ish"),
@@ -695,27 +696,30 @@ function ARMAETUS_EPIC_TEXTURES.decide_environment_themes()
 
   -- just like a bit mixed - every 2-6 levels, the theme will change
   if PARAM.environment_themes == "mixed" then
+    local previous_theme
+    local outdoor_theme_along
+
     each L in GAME.levels do
       if L.id == 1 then
         L.outdoor_theme = rand.pick({"temperate","snow","desert"})
-        PARAM.previous_theme = L.outdoor_theme
-        PARAM.outdoor_theme_along = rand.irange(2,4)
+        previous_theme = L.outdoor_theme
+        outdoor_theme_along = rand.irange(2,4)
       elseif L.id > 1 then
         -- continue the same theme until the countdown ends
-        if PARAM.outdoor_theme_along > 0 then
-          L.outdoor_theme = PARAM.previous_theme
-          PARAM.outdoor_theme_along = PARAM.outdoor_theme_along - 1
+        if outdoor_theme_along > 0 then
+          L.outdoor_theme = previous_theme
+          outdoor_theme_along = outdoor_theme_along - 1
         -- decide a new theme when the countdown ends
         -- logic goes that deserts cannot go to snow immediately
         -- and vice versa
-        elseif PARAM.outdoor_theme_along <= 0 then
-          if PARAM.previous_theme == "temperate" then
+        elseif outdoor_theme_along <= 0 then
+          if previous_theme == "temperate" then
             L.outdoor_theme = rand.pick({"snow","desert"})
           else
             L.outdoor_theme = "temperate"
           end
-          PARAM.previous_theme = L.outdoor_theme
-          PARAM.outdoor_theme_along = rand.irange(2,4)
+          previous_theme = L.outdoor_theme
+          outdoor_theme_along = rand.irange(2,4)
         end
       end
     end
@@ -740,6 +744,29 @@ function ARMAETUS_EPIC_TEXTURES.decide_environment_themes()
   elseif PARAM.environment_themes == "desert" then
     each L in GAME.levels do
       L.outdoor_theme = "desert"
+    end
+  end
+
+  if PARAM.environment_themes == "episodic" then
+    local prev_theme
+
+    each E in GAME.episodes do
+      if not prev_theme then
+        E.outdoor_theme = rand.pick({"temperate","desert","snow"})
+        prev_theme = E.outdoor_theme
+      else
+        if prev_theme != "temperate" then
+          E.outdoor_theme = "temperate"
+          prev_theme = E.outdoor_theme
+        else
+          E.outdoor_theme = rand.pick({"snow","desert"})
+          prev_theme = E.outdoor_theme
+        end
+      end
+    end
+
+    each L in GAME.levels do
+      L.outdoor_theme = L.episode.outdoor_theme
     end
   end
 
