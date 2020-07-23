@@ -2150,14 +2150,14 @@ function Level_choose_themes()
     if table.empty(new_tab) then return end
 
     if mode == "mostly" then
-      local pos = rand.pick({ 3,4,4,5 })
+      local pos = rand.pick({ 3,4,4,5,5,6 })
 
       while pos <= #EPI.levels do
         local LEV = EPI.levels[pos]
 
         mixins[LEV.name] = rand.key_by_probs(new_tab)
 
-        pos = pos + rand.pick({ 3,4 })
+        pos = pos + rand.pick({ 3,4,4,5,5 })
       end
     elseif mode == "less" then
       local pos = 1
@@ -2173,7 +2173,7 @@ function Level_choose_themes()
           countdown = countdown - 1
         elseif countdown <= 0 then
           mixins[LEV.name] = main_theme
-          countdown = rand.pick({ 2,3,3,4 })
+          countdown = rand.pick({ 2,3,3,4,4,5 })
           prev_theme = rand.key_by_probs(new_tab)
           new_tab[prev_theme] = new_tab[prev_theme] / 10
         end
