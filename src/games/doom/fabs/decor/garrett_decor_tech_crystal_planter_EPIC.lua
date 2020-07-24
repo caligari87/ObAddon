@@ -38,6 +38,8 @@ PREFABS.Decor_gtd_hell_crystal_analyser_thing_3_EPIC =
   template = "Decor_garrett_hell_crystal_analyser_thing_EPIC"
   map = "MAP03"
 
+  prob = 8000
+
   height = 128
   size = 112
 
