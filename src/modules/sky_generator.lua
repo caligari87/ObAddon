@@ -424,22 +424,6 @@ function SKY_GEN.generate_skies()
     starry_ep = -7
   end
 
-  -- determine themes for each episode
-  local theme_list = { "urban", "urban", "hell", "hell" }
-
-  -- when user has picked a specific theme, honor it
-  if OB_CONFIG.theme == "hell" then
-    theme_list[1] = "hell"
-    theme_list[2] = "hell"
-  elseif OB_CONFIG.theme == "urban" then
-    theme_list[3] = "urban"
-    theme_list[4] = "urban"
-  elseif OB_CONFIG.theme == "tech" then
-    theme_list[3] = "urban"
-  end
-
-  rand.shuffle(theme_list)
-
   -- copy all theme tables [so we can safely modify them]
   local all_themes = table.deep_copy(SKY_GEN.themes)
 
@@ -447,8 +431,10 @@ function SKY_GEN.generate_skies()
   gui.printf("\nSky generator:\n");
 
   each EPI in GAME.episodes do
+
+    if not EPI.levels[1] then return end -- empty game episode?
+
     assert(EPI.sky_patch)
-    assert(_index <= #theme_list)
 
     local seed = int(gui.random() * 1000000)
 
@@ -472,19 +458,17 @@ function SKY_GEN.generate_skies()
     -- only rarely combine stars + nebula + hills
     local is_hilly  = rand.odds(sel(is_nebula, 25, 90))
 
+    -- MSSP-SUGGESTS: add sky themes for other level theme types?
+    local theme_name = rand.pick{"urban", "hell"}
 
-    local theme_name = theme_list[_index]
-
-    if OB_CONFIG.theme == "original" then
-      if EPI.theme == "hell" or EPI.theme == "flesh" then
-        theme_name = "hell"
-      else
-        theme_name = "urban"
-      end
-
-    elseif OB_CONFIG.theme == "psycho" then
+    if OB_CONFIG.theme == "psycho" then
       theme_name = "psycho"
+    end
 
+    if EPI.levels[1].theme_name == "tech" then
+      theme_name = "urban"
+    elseif EPI.levels[1].theme_name == "hell" then
+      theme_name = "hell"
     end
 
     local theme = all_themes[theme_name]
@@ -534,6 +518,7 @@ function SKY_GEN.generate_skies()
         error("SKY_GEN: unknown colormap: " .. tostring(name))
       end
 
+      gui.printf("Sky theme: " .. theme_name .. "\n")
       gui.printf("  %d = %s\n", _index, name)
 
       gui.set_colormap(1, colormap)
@@ -652,7 +637,7 @@ OB_MODULES["sky_generator"] =
   hooks =
   {
     setup = SKY_GEN.setup
-    get_levels = SKY_GEN.generate_skies
+    get_levels_after_themes = SKY_GEN.generate_skies
   }
 
   options =
