@@ -24,6 +24,14 @@ PREFABS.Decor_craneo_arcade_machine =
   size = 64
 
   face_open = true
+
+  sector_13 = {
+    [0] = 5
+    [1] = 5
+    [2] = 5
+    [13] = 5
+    [21] = 5
+  }
 }
 
 --
@@ -53,6 +61,14 @@ PREFABS.Decor_craneo_arcade_machine_EPIC =
     ARCD9 = 1
     ARCD10 = 1
     ARCD11 = 1
+  }
+
+  sector_13 = {
+    [0] = 5
+    [1] = 5
+    [2] = 5
+    [13] = 5
+    [21] = 5
   }
 }
 
@@ -93,6 +109,14 @@ PREFABS.Decor_craneo_arcade_machine_doublet_EPIC =
     ARCD9 = 1
     ARCD10 = 1
     ARCD11 = 1
+  }
+
+  sector_13 = {
+    [0] = 5
+    [1] = 5
+    [2] = 5
+    [13] = 5
+    [21] = 5
   }
 }
 
@@ -139,6 +163,14 @@ PREFABS.Decor_craneo_arcade_machine_grouped =
     ARCD10 = 1
     ARCD11 = 1
   }
+
+  sector_13 = {
+    [0] = 5
+    [1] = 5
+    [2] = 5
+    [13] = 5
+    [21] = 5
+  }
 }
 
 PREFABS.Decor_craneo_arcade_machine_doublet_grouped =
@@ -178,5 +210,13 @@ PREFABS.Decor_craneo_arcade_machine_doublet_grouped =
     ARCD9 = 1
     ARCD10 = 1
     ARCD11 = 1
+  }
+
+  sector_13 = {
+    [0] = 5
+    [1] = 5
+    [2] = 5
+    [13] = 5
+    [21] = 5
   }
 }
