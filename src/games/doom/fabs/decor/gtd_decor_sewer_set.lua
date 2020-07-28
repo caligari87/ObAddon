@@ -16,6 +16,9 @@ PREFABS.Decor_open_pipe_sewer_group =
   bound_z1 = 0
   bound_z2 = 160
 
+  tex__LIQUID = "SFALL1"
+  flat__LIQUID = "NUKAGE1"
+
   z_fit  = "top"
   sound = "Water_Tank"
 }
