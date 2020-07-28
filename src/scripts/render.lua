@@ -253,10 +253,9 @@ function Render_edge(E)
       reqs.group = "natural_walls"
     end
 
-    -- REMOVE-ME
     -- Don't get prefabs with a z_fit other than "top" for parks.
     if A.room and A.room.is_park then
-      if not E.S.floor_h then
+      if not E.S.floor_h and A.room.park_type == "hills" then
         reqs.no_top_fit = true
       end
     end
