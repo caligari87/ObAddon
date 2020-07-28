@@ -394,7 +394,7 @@ function Render_edge(E)
     {
       kind = "fence"
 
-      group = assert(E.area.room.fence_type)
+      group = assert(E.area.room.fence_group)
 
       seed_w = assert(E.long)
     }
@@ -417,7 +417,7 @@ function Render_edge(E)
     {
       kind = "beam"
 
-      group = assert(E.area.room.beam_type)
+      group = assert(E.area.room.beam_group)
 
       seed_w = assert(E.long)
     }

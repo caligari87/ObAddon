@@ -976,6 +976,16 @@ function Room_detect_porches(R)
     -- MSSP: Overriden because junction code seems to
     -- skip out on room->scenics interactions...
     A.is_outdoor = false
+
+    if not A.room.porch_fence_type then
+      A.room.porch_fence_type = rand.key_by_probs(
+        {
+          fence = 5
+          railing = 3
+          wall = 5
+        }
+      )
+    end
   end
 
 
@@ -1786,13 +1796,13 @@ function Room_border_up()
               Junction_make_wall(junc)
             end
           elseif not A1.is_outdoor then
-            if rand.odds(50) then
-              if can_porch_wall(A1, A2) then
+            if can_porch_wall(A1, A2) then
+              if A1.room.porch_fence_type == "fence" then
                 Junction_make_fence(junc)
-              end
-            else
-              Room_make_windows(A1, A2)
-              if can_porch_wall(A1, A2) then
+              elseif A1.room.porch_fence_type == "railing" then
+                Junction_make_railing(junc, "FENCE_MAT_FROM_THEME", "block")
+              elseif A1.room.porch_fence_type == "wall" then
+                Room_make_windows(A1, A2)
                 Junction_make_wall(junc)
               end
             end

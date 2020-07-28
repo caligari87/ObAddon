@@ -2900,8 +2900,8 @@ function Quest_room_themes()
         theme = ob_resolve_theme_keyword(R.theme.theme_override)
       end
 
-      R.fence_type = rand.key_by_probs(GAME.THEMES[theme].fence_groups)
-      R.beam_type = rand.key_by_probs(GAME.THEMES[theme].beam_groups)
+      R.fence_group = rand.key_by_probs(GAME.THEMES[theme].fence_groups)
+      R.beam_group = rand.key_by_probs(GAME.THEMES[theme].beam_groups)
     end
   end
 
