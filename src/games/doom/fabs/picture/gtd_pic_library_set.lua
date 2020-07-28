@@ -58,10 +58,14 @@ PREFABS.Pic_gtd_library_big_shelves =
 
   x_fit = { 120,136 }
   y_fit = "top"
+
+  tex_PANBOOK2 = "PANBOOK"
 }
 
 PREFABS.Pic_gtd_library_caged_shelves =
 {
   template = "Pic_gtd_library_big_shelves"
   map = "MAP02"
+
+  tex_PANBOOK4 = "PANBOOK"
 }
