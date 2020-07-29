@@ -583,8 +583,9 @@ ZDOOM_STORIES.STORIES =
       [[You push yourself through the corridors of the overrun area
       which bares the marks of battle. You come across various consoles
       reading "ERROR" and "AAG targeting comprimised" scrolling the screens.
-      You hear the familiar boom of anti-aircraft guns, which is unusual.
-      Something's wrong.]],
+      You hear the boom of anti-aircraft guns - unusual, as no UAC operators
+      are in the area. Something is wrong. Something else is in control of the
+      system.]],
     }
     conclusions =
     {
@@ -1638,7 +1639,7 @@ ZDOOM_STORIES.SECRET_TEXTS =
     it, and arrive just in time to join a group of marines, fighting
     off a small horde of hellspawn.
     _SPACE
-    With your timely aid, the battle ends quickly and gruesomely.
+    With your timely aid, the battle ends almost instantaneously.
     The survivors, relieved and encouraged by your presence, thank
     you, by giving you their military map, clear and detailed,
     with every bunker, barricade and stockpile clearly marked.
@@ -1646,7 +1647,7 @@ ZDOOM_STORIES.SECRET_TEXTS =
     passageway, right ahead...]],
 
     [[Unexpectedly, you find a survivor hiding under the rubble.
-    Surprisingly, his speech is coherent, and his thinking is clear.
+    Surprisingly, his speech is coherent and his thinking is clear.
     What's more, he is armed with a machine pistol he scavenged off
     a dead troop. He confirms he had been hiding and fighting for
     weeks and has established a set of hideouts and observation posts.
