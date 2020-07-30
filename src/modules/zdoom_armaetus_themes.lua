@@ -3237,7 +3237,7 @@ ARMAETUS_THEMES =
       Skybox_craneo_fishing_village_EPIC = 25
       Skybox_garrett_winterfall_EPIC = 12
       Skybox_craneo_space_shuttle_EPIC = 50
-      Skybox_city_bridge_EPIC = 25
+      Skybox_city_bridge_EPIC = 35
     }
   }
 
