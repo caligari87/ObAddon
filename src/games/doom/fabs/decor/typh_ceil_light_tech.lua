@@ -24,7 +24,7 @@ PREFABS.Light_typh_flourescent_lamp =
 -- blue lights, same shell
 PREFABS.Light_typh_flourescent_lamp_alt =
 {
-  template = "Light_gtd_detailed"
+  template = "Light_typh_flourescent_lamp"
 
   light_color = "blue"
 
@@ -35,7 +35,7 @@ PREFABS.Light_typh_flourescent_lamp_alt =
 -- red lights, same shell
 PREFABS.Light_typh_flourescent_lamp_alt2 =
 {
-  template = "Light_gtd_detailed"
+  template = "Light_typh_flourescent_lamp"
 
   light_color = "red"
 
