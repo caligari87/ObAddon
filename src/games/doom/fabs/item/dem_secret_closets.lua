@@ -713,3 +713,117 @@ PREFABS.Pic_dem_jumpy2_secretcloset =
   template  = "Pic_dem_jumpy1_secretcloset"
   map    = "MAP23"
 }
+
+---Garrett blood fountain with a secret---
+PREFABS.Item_dem_garrett_fountain1 =
+{
+  file   = "item/dem_secret_closets.wad"
+  map    = "MAP24"
+
+  theme  = "hell"
+  env 	 = "building"
+  prob   = 30
+
+  key   = "secret"
+
+  where  = "seeds"
+  seed_w = 1
+  seed_h = 1
+
+  deep = 48
+
+  height = 128
+
+  bound_z1 = 0
+  bound_z2 = 128
+
+  x_fit = "frame"
+  y_fit  = "top"
+  z_fit  = "top"
+
+  can_flip = true
+
+}
+
+PREFABS.Item_dem_garrett_fountain2 =
+{
+  template  = "Item_dem_garrett_fountain1"
+  map    = "MAP25"
+}
+
+PREFABS.Item_dem_garrett_fountain3 =
+{
+  template  = "Item_dem_garrett_fountain1"
+  map    = "MAP26"
+}
+
+---Garrett overturned cross with a secret---
+PREFABS.Item_dem_garrett_cross =
+{
+  file   = "item/dem_secret_closets.wad"
+  map    = "MAP27"
+
+  theme  = "hell"
+  env 	 = "building"
+  prob   = 100
+
+  where  = "seeds"
+  seed_w = 1
+  seed_h = 1
+
+  deep = 48
+
+  height = 128
+
+  bound_z1 = 0
+  bound_z2 = 128
+
+
+  x_fit = "frame"
+  y_fit  = "top"
+  z_fit  = "top"
+
+  thing_2014 =
+  {
+    potion = 50
+    helmet = 50
+  }
+
+}
+
+---Sgt sharp alcoves with a secret---
+PREFABS.Item_dem_gtd_alcove_secret =
+{
+  file   = "item/dem_secret_closets.wad"
+  map    = "MAP28"
+
+  theme  = "hell"
+  env 	 = "building"
+  prob   = 100
+
+  key   = "secret"
+
+
+  where  = "seeds"
+  seed_w = 2
+  seed_h = 1
+
+  deep = 48
+
+  height = 128
+
+  bound_z1 = 0
+  bound_z2 = 128
+
+
+  x_fit = "frame"
+  y_fit  = "top"
+  z_fit  = "top"
+
+  thing_2014 =
+  {
+    potion = 50
+    helmet = 50
+  }
+
+}
