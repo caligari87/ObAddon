@@ -909,10 +909,15 @@ function ARMAETUS_EPIC_TEXTURES.put_new_materials()
 
   if OB_CONFIG.game == "doom2" or OB_CONFIG.game == "plutonia"
   or OB_CONFIG.game == "tnt" then
-    -- put the custom material definitions in the materials table!!!
+
+    -- remove old skybox tables
+    GAME.THEMES["tech"].skyboxes = nil
+    GAME.THEMES["urban"].skyboxes = nil
+    GAME.THEMES["hell"].skyboxes = nil
+
+    -- material definitions
     ARMAETUS_EPIC_TEXTURES.table_insert(ARMAETUS_MATERIALS,
       GAME.MATERIALS)
-
     ARMAETUS_EPIC_TEXTURES.table_insert(ARMAETUS_LIQUID_DEFS,
       GAME.LIQUIDS)
 
@@ -934,36 +939,23 @@ function ARMAETUS_EPIC_TEXTURES.put_new_materials()
   end
 
   if OB_CONFIG.game == "doom1" or OB_CONFIG.game == "ultdoom" then
-    -- put the custom material definitions in the materials table!!!
+    -- material definitions
     ARMAETUS_EPIC_TEXTURES.table_insert(ARMAETUS_DOOM1_MATERIALS,
       GAME.MATERIALS)
-    ARMAETUS_EPIC_TEXTURES.table_insert(ARMAETUS_DOOM1_LIQUIDS,
+    ARMAETUS_EPIC_TEXTURES.table_insert(ARMAETUS_DOOM1_LIQUID_MATS,
       GAME.LIQUIDS)
 
     -- put the custom theme definitions in the themes table!!!
     -- LIQUIDZ
-    if PARAM.custom_liquids != "yes" then
-      ARMAETUS_EPIC_TEXTURES.table_insert(ARMAETUS_DOOM1_TECH_LIQUIDS,
-        GAME.THEMES.tech.liquids[name])
-      ARMAETUS_EPIC_TEXTURES.table_insert(ARMAETUS_DOOM1_DEIMOS_LIQUIDS,
-        GAME.THEMES.deimos.liquids)
-      ARMAETUS_EPIC_TEXTURES.table_insert(ARMAETUS_DOOM1_HELL_LIQUIDS,
-        GAME.THEMES.hell.liquids)
+    if PARAM.custom_liquids != "no" then
+      GAME.THEMES = table.deep_merge(GAME.THEMES, ARMAETUS_DOOM1_LIQUIDS, 2)
     end
 
-    -- FACADES
-    ARMAETUS_EPIC_TEXTURES.table_insert(ARMAETUS_DOOM1_TECH_FACADES,
-      GAME.THEMES.tech.facades)
-    ARMAETUS_EPIC_TEXTURES.table_insert(ARMAETUS_DOOM1_HELL_FACADES,
-      GAME.THEMES.hell.facades)
-    ARMAETUS_EPIC_TEXTURES.table_insert(ARMAETUS_DOOM1_FLESH_FACADES,
-      GAME.THEMES.flesh.facades)
-    ARMAETUS_EPIC_TEXTURES.table_insert(ARMAETUS_DOOM1_DEIMOS_FACADES,
-      GAME.THEMES.deimos.facades)
+    GAME.THEMES = table.deep_merge(GAME.THEMES, ARMAETUS_DOOM1_THEMES, 2)
 
     -- ROOM THEMES
-    ARMAETUS_EPIC_TEXTURES.table_insert(ARMAETUS_DOOM1_THEMES,
-      GAME.ROOM_THEMES)
+    GAME.ROOM_THEMES = table.deep_merge(GAME.ROOM_THEMES,
+      ARMAETUS_DOOM1_ROOM_THEMES, 2)
 
     -- NATURALS
     ARMAETUS_EPIC_TEXTURES.table_insert(ARMAETUS_DOOM1_TECH_NATURALS,
@@ -978,60 +970,6 @@ function ARMAETUS_EPIC_TEXTURES.put_new_materials()
     -- SINKS
     ARMAETUS_EPIC_TEXTURES.table_insert(ARMAETUS_DOOM1_SINK_DEFS,
       GAME.SINKS)
-    -- ceiling sink tables
-    ARMAETUS_EPIC_TEXTURES.table_insert(ARMAETUS_DOOM1_TECH_CEILING_SINKS,
-      GAME.THEMES.tech.ceiling_sinks)
-    ARMAETUS_EPIC_TEXTURES.table_insert(ARMAETUS_DOOM1_DEIMOS_CEILING_SINKS,
-      GAME.THEMES.deimos.ceiling_sinks)
-    ARMAETUS_EPIC_TEXTURES.table_insert(ARMAETUS_DOOM1_HELL_CEILING_SINKS,
-      GAME.THEMES.hell.ceiling_sinks)
-    ARMAETUS_EPIC_TEXTURES.table_insert(ARMAETUS_DOOM1_FLESH_CEILING_SINKS,
-      GAME.THEMES.flesh.ceiling_sinks)
-    -- floor sink tables
-    ARMAETUS_EPIC_TEXTURES.table_insert(ARMAETUS_DOOM1_TECH_FLOOR_SINKS,
-      GAME.THEMES.tech.floor_sinks)
-    ARMAETUS_EPIC_TEXTURES.table_insert(ARMAETUS_DOOM1_DEIMOS_FLOOR_SINKS,
-      GAME.THEMES.deimos.floor_sinks)
-    ARMAETUS_EPIC_TEXTURES.table_insert(ARMAETUS_DOOM1_HELL_FLOOR_SINKS,
-      GAME.THEMES.hell.floor_sinks)
-    ARMAETUS_EPIC_TEXTURES.table_insert(ARMAETUS_DOOM1_FLESH_FLOOR_SINKS,
-      GAME.THEMES.flesh.floor_sinks)
-
-    --new scenic fences feature
-    ARMAETUS_EPIC_TEXTURES.table_insert(ARMAETUS_DOOM1_TECH_SCENIC_FENCES,
-      GAME.THEMES.tech.scenic_fence)
-    ARMAETUS_EPIC_TEXTURES.table_insert(ARMAETUS_DOOM1_DEIMOS_SCENIC_FENCES,
-      GAME.THEMES.deimos.scenic_fence)
-    ARMAETUS_EPIC_TEXTURES.table_insert(ARMAETUS_DOOM1_HELL_SCENIC_FENCES,
-      GAME.THEMES.hell.scenic_fence)
-    ARMAETUS_EPIC_TEXTURES.table_insert(ARMAETUS_DOOM1_FLESH_SCENIC_FENCES,
-      GAME.THEMES.flesh.scenic_fence)
-
-    -- inserts for group walls
-    ARMAETUS_EPIC_TEXTURES.table_insert(ARMAETUS_DOOM1_TECH_WALL_GROUPS,
-      GAME.THEMES.tech.wall_groups)
-    ARMAETUS_EPIC_TEXTURES.table_insert(ARMAETUS_DOOM1_DEIMOS_WALL_GROUPS,
-      GAME.THEMES.deimos.wall_groups)
-    ARMAETUS_EPIC_TEXTURES.table_insert(ARMAETUS_DOOM1_HELL_WALL_GROUPS,
-      GAME.THEMES.hell.wall_groups)
-    ARMAETUS_EPIC_TEXTURES.table_insert(ARMAETUS_DOOM1_FLESH_WALL_GROUPS,
-      GAME.THEMES.flesh.wall_groups)
-
-    -- inserts for window groups
-    ARMAETUS_EPIC_TEXTURES.table_insert(ARMAETUS_DOOM1_TECH_WINDOW_GROUPS,
-      GAME.THEMES.tech.window_groups)
-    ARMAETUS_EPIC_TEXTURES.table_insert(ARMAETUS_DOOM1_DEIMOS_WINDOW_GROUPS,
-      GAME.THEMES.deimos.window_groups)
-    ARMAETUS_EPIC_TEXTURES.table_insert(ARMAETUS_DOOM1_HELL_WINDOW_GROUPS,
-      GAME.THEMES.hell.window_groups)
-    ARMAETUS_EPIC_TEXTURES.table_insert(ARMAETUS_DOOM1_FLESH_WINDOW_GROUPS,
-      GAME.THEMES.flesh.window_groups)
-
-    -- inserts for epic skyboxes
-    GAME.THEMES.tech.skyboxes = ARMAETUS_TECH_SKYBOXES
-    GAME.THEMES.deimos.skyboxes = ARMAETUS_DEIMOS_SKYBOXES
-    GAME.THEMES.hell.skyboxes = ARMAETUS_HELL_SKYBOXES
-    GAME.THEMES.flesh.skyboxes = ARMAETUS_FLESH_SKYBOXES
 
     -- inserts for hallways
     GAME.THEMES.tech.wide_halls = ARMAETUS_TECH_WIDE_HALLS
