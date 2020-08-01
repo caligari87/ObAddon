@@ -26,13 +26,13 @@ PREFABS.Item_dem_gamble_closet1 =
   thing_2007 =
   {
     bullet_box = 5
-    berserk = 1
+    saw = 2
   }
 
   thing_2008 =
   {
     shell_box = 5
-    googles = 1
+    radsuit = 2
   }
 
   thing_2010 =
@@ -71,10 +71,10 @@ PREFABS.Item_dem_gamble_closet2 =
 
   thing_2007 =
   {
-   stimpack = 5
-   medikit = 5
    berserk = 1
-   invis = 2
+   invis = 5
+   allmap = 2
+   googles = 5
   }
 
   thing_2008 =
@@ -87,10 +87,10 @@ PREFABS.Item_dem_gamble_closet2 =
 
   thing_2010 =
   {
-   green_armor = 5
-   backpack = 5
-   allmap = 1
-   googles = 2
+   green_armor = 2
+   backpack = 1
+   stimpack = 5
+   medikit = 5
   }
 
 }
