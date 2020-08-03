@@ -50,7 +50,7 @@ end
 
 function raw_add_entity(ent)
   -- skip unknown entities (from wad-fab loader)
-  if not ent.id then return end
+  if not ent.id or (ent.id and ent.id == 0) then return end
 
   if GAME.format == "quake" then
     ent.mangle = ent.angles ; ent.angles = nil
