@@ -8,6 +8,8 @@ PREFABS.Item_secret_cage =
   where = "seeds"
 
   prob  = 200
+  skip_prob = 75
+
   env   = "building"
   theme = "tech"
 
@@ -15,12 +17,13 @@ PREFABS.Item_secret_cage =
 
   seed_w = 2
   seed_h = 2
-  height = 120
+  height = 168
 
   deep =  16
   over = -16
 
   x_fit = "frame"
+  z_fit = { 136, 160 }
 
   tex_COMPBLUE = { COMPBLUE=50, METAL1=50, BROWNGRN=50, BROWN144=50, BROWN96=50, ICKWALL1=50, ICKWALL2=50, ICKWALL3=50, GRAY1=50, GRAY5=50,
                    GRAYBIG=50, GRAYTALL=50, TEKWALL6=50, METAL2=50 }

@@ -4,6 +4,8 @@ PREFABS.Door_small_vanilla =
 
   map  = "MAP01"
 
+  theme = "!hell"
+
   prob = 200
 
   style = "doors"
@@ -28,5 +30,27 @@ PREFABS.Door_small_vanilla =
   {
     DOOR3 = 50
     DOOR1 = 50
+  }
+}
+
+PREFABS.Door_small_vanilla_gothic =
+{
+  template = "Door_small_vanilla"
+
+  theme = "hell"
+
+  flat_FLAT23 = "CEIL5_2"
+
+  tex_DOOR3 =
+  {
+    WOODGARG = 1
+    WOODMET1 = 1
+    WOODMET2 = 1
+    DOOR3 = 1
+    SW1PANEL = 1
+    SW1GARG = 0.3
+    SW1LION = 0.3
+    SW1SATYR = 0.3
+    SW1WOOD = 0.3
   }
 }

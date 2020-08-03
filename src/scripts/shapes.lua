@@ -1743,6 +1743,7 @@ SPROUT_TELEPORTER_2x2 =
 DECORATE_CAGE_1 =
 {
   prob = 4
+  skip_prob = 75
   env  = "!cave"
 
   structure =
@@ -8215,13 +8216,13 @@ DECORATE_CAGE_CANALS_STRAIGHT_3X =
   cage_mode = "fancy"
 }
 
-DECORATE_CAGE_CANALS_STRAIGHT_1X =
+DECORATE_CAGE_CANALS_STRAIGHT_2X =
 {
   prob = 8
 
   structure =
   {
-    "..","C."
+    "..","CC"
     "~~","~~"
     "11","11"
   }
@@ -8231,7 +8232,7 @@ DECORATE_CAGE_CANALS_STRAIGHT_1X =
 
 DECORATE_CAGE_CANALSWIDE_STRAIGHT_3X =
 {
-  prob = 8
+  prob = 10
 
   structure =
   {
@@ -8244,16 +8245,29 @@ DECORATE_CAGE_CANALSWIDE_STRAIGHT_3X =
   cage_mode = "fancy"
 }
 
-DECORATE_CAGE_CANALSWIDE_STRAIGHT_1X =
+DECORATE_CAGE_CANALSWIDE_STRAIGHT_2X =
 {
   prob = 5
 
   structure =
   {
-    "..","C."
+    "..","CC"
     "~~","~~"
     "~~","~~"
     "11","11"
+  }
+}
+
+DECORATE_CAGE_CANALSWIDE_STRAIGHT_3X =
+{
+  prob = 7
+
+  structure =
+  {
+    "...","CCC"
+    "~~~","~~~"
+    "~~~","~~~"
+    "111","111"
   }
 
   cage_mode = "fancy"
