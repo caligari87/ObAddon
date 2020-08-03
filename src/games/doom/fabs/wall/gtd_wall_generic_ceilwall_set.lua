@@ -26,15 +26,41 @@ PREFABS.Wall_generic_ceilwall_diag =
   where  = "diagonal"
 }
 
+-- urban
+
+PREFABS.Wall_generic_ceilwall_urban =
+{
+  template = "Wall_generic_ceilwall"
+
+  theme = "urban"
+
+  tex_COMPBLUE = "LITE3"
+  tex_BRNSMALC = "MIDBARS3"
+}
+
+PREFABS.Wall_generic_ceilwall_diag_urban =
+{
+  template = "Wall_generic_ceilwall"
+  map = "MAP02"
+
+  where = "diagonal"
+
+  theme = "urban"
+
+  tex_COMPBLUE = "LITE3"
+  tex_BRNSMALC = "MIDBARS3"
+}
+
+-- hell
+
 PREFABS.Wall_generic_ceilwall_hell =
 {
   template = "Wall_generic_ceilwall"
-  map = "MAP01"
 
   theme = "hell"
 
-  tex_LITE3 = "ROCKRED1"
-  tex_BRNSMALC = "MIDBARS3"
+  tex_COMPBLUE = "ROCKRED1"
+  tex_BRNSMALC = "MIDGRATE"
 }
 
 PREFABS.Wall_generic_ceilwall_diag_hell =
@@ -46,6 +72,6 @@ PREFABS.Wall_generic_ceilwall_diag_hell =
 
   theme = "hell"
 
-  tex_LITE3 = "ROCKRED1"
-  tex_BRNSMALC = "MIDBARS3"
+  tex_COMPBLUE = "ROCKRED1"
+  tex_BRNSMALC = "MIDGRATE"
 }
