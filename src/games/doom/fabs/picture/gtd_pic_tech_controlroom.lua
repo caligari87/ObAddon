@@ -3,7 +3,7 @@ PREFABS.Pic_control_room =
   file   = "picture/gtd_pic_tech_controlroom.wad"
   map    = "MAP01"
 
-  prob   = 50 --35
+  prob   = 75
   theme = "tech"
 
   env = "building"
@@ -51,4 +51,14 @@ PREFABS.Pic_control_room_sideways_single =
   prob = 25
 
   seed_w = 2
+}
+
+PREFABS.Pic_control_room_infested =
+{
+  template = "Pic_control_room"
+  map = "MAP04"
+
+  skip_prob = 65
+
+  sector_1 = 1
 }
