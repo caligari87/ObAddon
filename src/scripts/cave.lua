@@ -4722,8 +4722,8 @@ function Cave_prepare_scenic_vista(area)
   if OB_CONFIG.zdoom_vista == "enable" then
     vista_list =
     {
-      bottomless_drop = 6
-      cliff_gradient = 5
+      bottomless_drop = 3
+      cliff_gradient = 7
     }
   end
 
@@ -4731,7 +4731,7 @@ function Cave_prepare_scenic_vista(area)
     vista_list =
     {
       bottomless_drop = 2
-      cliff_gradient = 2
+      cliff_gradient = 8
     }
   end
 
