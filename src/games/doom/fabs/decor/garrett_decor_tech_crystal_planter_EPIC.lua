@@ -28,6 +28,8 @@ PREFABS.Decor_gtd_hell_crystal_analyser_thing_2_EPIC =
   height = 128
   size = 104
 
+  face_open = true
+
   bound_z2 = 128
 
   z_fit = "top"
@@ -42,6 +44,8 @@ PREFABS.Decor_gtd_hell_crystal_analyser_thing_3_EPIC =
 
   height = 128
   size = 112
+
+  face_open = true
 
   bound_z2 = 128
 
