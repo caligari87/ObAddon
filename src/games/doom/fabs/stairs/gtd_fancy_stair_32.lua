@@ -3,7 +3,7 @@ PREFABS.Stair_fancy_32_brown =
   file   = "stairs/gtd_fancy_stair_32.wad"
   map    = "MAP01"
 
-  prob   = 5
+  prob   = 10
   style  = "steepness"
 
   where  = "seeds"
@@ -13,6 +13,7 @@ PREFABS.Stair_fancy_32_brown =
   seed_h = 1
 
   x_fit  = { 24,104 , 152,232 }
+  y_fit  = { 12,116 }
 
   bound_z1 = 0
 
@@ -24,7 +25,7 @@ PREFABS.Stair_fancy_32_green =
   template = "Stair_fancy_32_brown"
 
   flat_CEIL5_2 = "RROCK20"
-  tex_BRONZE5 = "BROWNGRN"
+  tex_BRONZE1 = "BROWNGRN"
 }
 
 PREFABS.Stair_fancy_32_grey =
@@ -32,40 +33,7 @@ PREFABS.Stair_fancy_32_grey =
   template = "Stair_fancy_32_brown"
 
   flat_CEIL5_2 = "FLAT1"
-  tex_BRONZE5 = "GRAY1"
-}
-
-PREFABS.Stair_fancy_32_brown_2X =
-{
-  template = "Stair_fancy_32_brown"
-
-  map = "MAP02"
-
-  seed_h = 2
-}
-
-PREFABS.Stair_fancy_32_green_2X =
-{
-  template = "Stair_fancy_32_brown"
-
-  map = "MAP02"
-
-  seed_h = 2
-
-  flat_CEIL5_2 = "RROCK20"
-  tex_BRONZE5 = "BROWNGRN"
-}
-
-PREFABS.Stair_fancy_32_grey_2X =
-{
-  template = "Stair_fancy_32_brown"
-
-  map = "MAP02"
-
-  seed_h = 2
-
-  flat_CEIL5_2 = "FLAT1"
-  tex_BRONZE5 = "GRAY1"
+  tex_BRONZE1 = "GRAY1"
 }
 
 -----
