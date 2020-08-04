@@ -7,7 +7,8 @@ PREFABS.Item_dem_gamble_closet1 =
 
   engine = "zdoom"
 
-  prob  = 100
+  prob  = 80
+
 
   key   = "secret"
 
