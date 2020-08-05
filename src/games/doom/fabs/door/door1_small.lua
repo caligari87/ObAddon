@@ -30,6 +30,10 @@ PREFABS.Door_small_vanilla =
   {
     DOOR3 = 50
     DOOR1 = 50
+    SPCDOOR1 = 25
+    SPCDOOR2 = 25
+    SPCDOOR3 = 50
+    SPCDOOR4 = 25
   }
 }
 
