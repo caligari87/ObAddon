@@ -2,7 +2,7 @@ PREFABS.Sidewalk_8 =
 {
   file   = "stairs/sidewalk_8.wad"
 
-  prob   = 50
+  prob   = 20
   map    = "MAP01"
 
   where  = "seeds"

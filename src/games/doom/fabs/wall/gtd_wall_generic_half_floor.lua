@@ -35,3 +35,39 @@ PREFABS.Wall_generic_half_floor_diag =
 
   z_fit = "top"
 }
+
+--
+
+PREFABS.Wall_generic_half_floor_no_trim =
+{
+  template = "Wall_generic_half_floor"
+  map = "MAP03"
+
+  group = "gtd_generic_half_floor_no_trim"
+}
+
+PREFABS.Wall_generic_half_floor_no_trim_diag =
+{
+  template = "Wall_generic_half_floor_diag"
+  map = "MAP04"
+
+  group = "gtd_generic_half_floor_no_trim"
+}
+
+--
+
+PREFABS.Wall_generic_half_floor_inverted_braced =
+{
+  template = "Wall_generic_half_floor"
+  map = "MAP05"
+
+  group = "gtd_generic_half_floor_inverted_braced"
+}
+
+PREFABS.Wall_generic_half_floor_inverted_braced_diag =
+{
+  template = "Wall_generic_half_floor_diag"
+  map = "MAP06"
+
+  group = "gtd_generic_half_floor_inverted_braced"
+}
