@@ -1383,7 +1383,7 @@ DOOM.THEMES =
       ambushes = { few=30, some=75, heaps=20 }
     }
 
-    scenic_fence =
+    scenic_fences =
     {
       MIDBARS3 = 10
       MIDSPACE = 5
@@ -1711,7 +1711,7 @@ DOOM.THEMES =
 
     ceil_light_prob = 65
 
-    scenic_fence =
+    scenic_fences =
     {
       MIDBARS3 = 8
       MIDSPACE = 8
@@ -2136,7 +2136,7 @@ DOOM.THEMES =
       Mastermind = 1.5
     }
 
-    scenic_fence =
+    scenic_fences =
     {
       MIDBRN1 = 3
       MIDGRATE = 10

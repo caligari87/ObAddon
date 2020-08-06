@@ -4961,7 +4961,7 @@ function Cave_build_a_scenic_vista(area)
     --
 
     local function can_rail()
-      local rail_top = area.floor_h + room.scenic_fence.rail_h
+      local rail_top = area.floor_h + room.scenic_fences.rail_h
       if rail_top <= area.zone.sky_h then return true end
 
       return false

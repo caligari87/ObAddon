@@ -264,7 +264,7 @@ TNT.THEMES =
     }
 
 --Any rocky/stonelike/metal doors (IE METALDR) would do great for this theme -Chris
-    scenic_fence =
+    scenic_fences =
     {
       MIDBARS3 = 50
     }

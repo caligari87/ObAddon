@@ -881,23 +881,17 @@ end
 function MODDED_GAME_EXTRAS.add_qcde_lootboxes()
   table.name_up(MODDED_GAME_EXTRAS.QCDE_LOOTBOX_NICE_ITEMS)
 
-  each item, property in MODDED_GAME_EXTRAS.QCDE_LOOTBOX_NICE_ITEMS do
-    GAME.NICE_ITEMS[item] = property
-  end
+  GAME.NICE_ITEMS = table.deep_merge(GAME.NICE_ITEMS, MODDED_GAME_EXTRAS.QCDE_LOOTBOX_NICE_ITEMS, 2)
 end
 
 
 
 function MODDED_GAME_EXTRAS.add_d4t_ents()
   table.name_up(MODDED_GAME_EXTRAS.D4T_THINGS)
+  table.name_up(MODDED_GAME_EXTRAS.D4T_MONS)
 
-  each item, property in MODDED_GAME_EXTRAS.D4T_THINGS do
-    GAME.NICE_ITEMS[item] = property
-  end
-
-  each mon, property in MODDED_GAME_EXTRAS.D4T_MONS do
-    GAME.MONSTERS[mon] = property
-  end
+  GAME.NICE_ITEMS = table.deep_merge(GAME.NICE_ITEMS, MODDED_GAME_EXTRAS.D4T_THINGS, 2)
+  GAME.MONSTERS = table.deep_merge(GAME.MONSTERS, MODDED_GAME_EXTRAS.D4T_MONS, 2)
 end
 
 

@@ -77,7 +77,7 @@ HERETIC.THEMES =
       deuce = 50
     }
 
-    scenic_fence =
+    scenic_fences =
     {
       GATMETL2 = 50
       GATMETL3 = 50
@@ -129,7 +129,7 @@ HERETIC.THEMES =
       beam_metal = 10
     }
 
-    scenic_fence =
+    scenic_fences =
     {
       GATMETL2 = 50
       GATMETL3 = 50

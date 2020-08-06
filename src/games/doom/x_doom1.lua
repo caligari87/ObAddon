@@ -727,7 +727,7 @@ ULTDOOM.THEMES =
       ambushes = { few=35, some=65, heaps=20 }
     }
 
-    scenic_fence =
+    scenic_fences =
     {
       MIDGRATE = 50
     }
@@ -936,7 +936,7 @@ ULTDOOM.THEMES =
       ambushes = { few=20, some=95, heaps=30 }
     }
 
-    scenic_fence =
+    scenic_fences =
     {
       MIDGRATE = 50
       MIDBRN1  = 10
@@ -1229,7 +1229,7 @@ ULTDOOM.THEMES =
       Mastermind = 1.5
     }
 
-    scenic_fence =
+    scenic_fences =
     {
       MIDBRN1 = 3
       MIDGRATE = 12
@@ -1503,7 +1503,7 @@ ULTDOOM.THEMES =
       barrels = { none=45, few=15, some=5, heaps=4 }
     }
 
-    scenic_fence =
+    scenic_fences =
     {
       MIDGRATE = 50
     }

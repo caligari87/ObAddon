@@ -82,7 +82,7 @@
 
     aversions : table[name] -> factor
 
-    scenic_fence : table[name] -- specific fence material if this room looks at a vista
+    scenic_fences : table[name] -- specific fence material if this room looks at a vista
 --]]
 
 
@@ -179,7 +179,7 @@ function ROOM_CLASS.new()
 
     hazard_health = 0
 
-    scenic_fence = {}
+    scenic_fences = {}
   }
 
   table.set_class(R, ROOM_CLASS)
@@ -3045,7 +3045,7 @@ function Room_floor_ceil_heights()
 
     -- set ceiling for cage (basically if indoors)
     if N.ceil_h then
-      A.ceil_h = math.max(A.floor_h + A.room.scenic_fence.rail_h, A.floor_h + 96, N.ceil_h)
+      A.ceil_h = math.max(A.floor_h + A.room.scenic_fences.rail_h, A.floor_h + 96, N.ceil_h)
     end
 
     A.floor_mat = assert(A.zone.cage_mat)
@@ -3074,7 +3074,7 @@ function Room_floor_ceil_heights()
         A.floor_h = N.floor_h
 
         if not R.is_outdoor then
-          A.ceil_h = math.max(A.floor_h + A.room.scenic_fence.rail_h, A.floor_h + 96)
+          A.ceil_h = math.max(A.floor_h + A.room.scenic_fences.rail_h, A.floor_h + 96)
         end
       end
     end

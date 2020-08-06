@@ -884,8 +884,8 @@ function Junction_make_railing(junc, rail_mat, block)
 
   local offset_h = 0
   if rail_mat == "FENCE_MAT_FROM_THEME" then
-    rail_mat = junc.A1.room.scenic_fence.t
-    offset_h = junc.A1.room.scenic_fence.rail_h
+    rail_mat = junc.A1.room.scenic_fences.t
+    offset_h = junc.A1.room.scenic_fences.rail_h
   elseif not rail_mat then
     rail_mat = "MIDBARS3"
     offset_h = 96

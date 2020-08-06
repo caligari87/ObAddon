@@ -2534,7 +2534,7 @@ function Layout_handle_corners()
 
         -- indoor posts should meet the ceiling
         local tallest_h = -EXTREME_H
-        local tallest_scenic_fence_h = -EXTREME_H
+        local tallest_scenic_fences_h = -EXTREME_H
 
         if mostly_env == "building" then
 
