@@ -1282,6 +1282,7 @@ DOOM.THEMES =
       tech_o_compblue_tall = 1
       tech_o_grey_metal_sloped = 1
       tech_o_tall_light = 1
+      tech_o_hexagon_uac_spotlights = 1
     }
 
     window_groups =

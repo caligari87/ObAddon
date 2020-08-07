@@ -495,3 +495,15 @@ PREFABS.Wall_tech_outdoor_tall_light = --#
 
   z_fit = "top"
 }
+
+PREFABS.Wall_hexagon_uac_spotlights = --#
+{
+  template = "Wall_tech_outdoor_caution_strip"
+  map = "MAP22"
+
+  uses_epic_textures = true
+
+  group = "tech_o_hexagon_uac_spotlights"
+
+  z_fit = { 64,72  }
+}
