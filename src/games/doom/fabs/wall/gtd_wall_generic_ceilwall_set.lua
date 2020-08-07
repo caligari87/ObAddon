@@ -4,7 +4,7 @@ PREFABS.Wall_generic_ceilwall =
   map    = "MAP01"
 
   prob   = 50
-  theme  = "!hell"
+  theme  = "tech"
 
   group  = "gtd_generic_ceilwall"
 
