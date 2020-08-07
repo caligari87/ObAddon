@@ -8,7 +8,7 @@ PREFABS.Item_secret_cage =
   where = "seeds"
 
   prob  = 200
-  skip_prob = 75
+  skip_prob = 50
 
   env   = "building"
   theme = "tech"
