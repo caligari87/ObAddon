@@ -3127,6 +3127,9 @@ ARMAETUS_THEMES =
       gtd_wall_hydroponics = 15
       gtd_computers_shawn = 15
       gtd_computers_compsta = 15
+      gtd_wall_teklitecomp_red = 7
+      gtd_wall_teklitecomp_orange = 7
+      gtd_wall_teklitecomp_blue = 7
     }
 
     window_groups =
@@ -3359,6 +3362,9 @@ ARMAETUS_THEMES =
       gtd_computers_compsta = 2
       gtd_wall_hell_bottom_glass = 15
       gtd_wall_arcade = 15
+      gtd_wall_teklitecomp_red = 1
+      gtd_wall_teklitecomp_orange = 1
+      gtd_wall_teklitecomp_blue = 1
     }
 
     window_groups =
