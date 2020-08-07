@@ -1,4 +1,4 @@
-PREFABS.Cage_wall_brncage =
+PREFABS.Cage_wall_brncage_tech =
 {
   file   = "cage/armaetus_brncage.wad"
 
@@ -7,7 +7,7 @@ PREFABS.Cage_wall_brncage =
   where  = "seeds"
   shape  = "U"
 
-  theme  = "!hell"
+  theme  = "tech"
 
   height = 128
 
@@ -29,9 +29,19 @@ PREFABS.Cage_wall_brncage =
   }
 }
 
+PREFABS.Cage_wall_brncage_urban =
+{
+  template = "Cage_wall_brncage_tech"
+
+  theme = "urban"
+
+  tex_LITEBLU4 = "LITE5"
+  tex_COMPBLUE = "BRICKLIT"
+}
+
 PREFABS.Cage_wall_brncage_hell =
 {
-  template = "Cage_wall_brncage"
+  template = "Cage_wall_brncage_tech"
 
   theme    = "hell"
 
@@ -41,4 +51,8 @@ PREFABS.Cage_wall_brncage_hell =
     MIDSPACE = 25
     MIDBRN1 = 50
   }
+  tex_LITEBLU4 = "CRACKLE4"
+  tex_COMPBLUE = "FIRELAVA"
+
+  flat_FLAT23 = "RROCK02"
 }
