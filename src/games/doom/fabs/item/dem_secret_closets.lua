@@ -767,6 +767,8 @@ PREFABS.Item_dem_garrett_cross =
   env 	 = "building"
   prob   = 100
 
+  key = "secret"
+
   where  = "seeds"
   seed_w = 1
   seed_h = 1
