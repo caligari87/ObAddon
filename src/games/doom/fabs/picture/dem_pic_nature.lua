@@ -861,7 +861,7 @@ PREFABS.Pic_dem_campsiteP =
 
   env = "park"
 
-  prob = 20
+  prob = 5
   skip_prob = 50
 }
 

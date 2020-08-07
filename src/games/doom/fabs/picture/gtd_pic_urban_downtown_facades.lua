@@ -393,47 +393,37 @@ PREFABS.Pic_urban_downtown_facade_alley =
   z_fit = { 72,80 }
 }
 
-PREFABS.Pic_urban_downtown_facade_sunk_roof =
+PREFABS.Pic_urban_downtown_facade_fenced_roof =
 {
   template = "Pic_urban_downtown_facade3_EPIC"
   map = "MAP07"
 
-  prob = 125
+  height = 304
+
+  prob = 300
 
   in_porches = "never"
 
-  z_fit = { 254,255 }
+  y_fit = { 16,122 }
+  z_fit = { 144,156 }
 
   bound_z1 = 0
-  bound_z2 = 256
-}
+  bound_z2 = 304
 
-PREFABS.Pic_urban_downtown_facade_sunk_roof_lower =
-{
-  template = "Pic_urban_downtown_facade3_EPIC"
-  map = "MAP07"
-
-  prob = 125
-
-  in_porches = "never"
-
-  z_fit = { 243,256 }
-
-  bound_z1 = 0
-  bound_z2 = 256
-}
-
-PREFABS.Pic_urban_downtown_facade_sunk_roof_lower_2 =
-{
-  template = "Pic_urban_downtown_facade3_EPIC"
-  map = "MAP07"
-
-  prob = 125
-
-  in_porches = "never"
-
-  z_fit = { 242,256 }
-
-  bound_z1 = 0
-  bound_z2 = 256
+  tex_MIDBARS3 =
+  {
+    MIDBARS3 = 1
+    MIDSPACE = 1
+    MIDSPAC2 = 1
+    MIDSPAC3 = 1
+    MIDSPAC4 = 1
+    MIDSPAC5 = 1
+    MIDWIND1 = 1
+    MIDWIND6 = 1
+    FENCE1 = 1
+    FENCE2 = 1
+    FENCE3 = 1
+    FENCE6 = 1
+    FENCE7 = 1
+  }
 }
