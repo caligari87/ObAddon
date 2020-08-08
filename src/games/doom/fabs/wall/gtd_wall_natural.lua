@@ -91,3 +91,43 @@ PREFABS.Wall_natural10 =
 
   deep  = 64
 }
+
+PREFABS.Wall_natural11_half =
+{
+  template = "Wall_natural1"
+  map = "MAP11"
+
+  deep = 16
+}
+
+PREFABS.Wall_natural12_half =
+{
+  template = "Wall_natural1"
+  map = "MAP12"
+
+  deep = 16
+}
+
+PREFABS.Wall_natural13_half =
+{
+  template = "Wall_natural1"
+  map = "MAP13"
+
+  deep = 16
+}
+
+PREFABS.Wall_natural14_half =
+{
+  template = "Wall_natural1"
+  map = "MAP14"
+
+  deep = 16
+}
+
+PREFABS.Wall_natural15_half =
+{
+  template = "Wall_natural1"
+  map = "MAP15"
+
+  deep = 16
+}

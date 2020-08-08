@@ -36,3 +36,27 @@ PREFABS.Pic_armaetus_double_fans_hell =
 
   tex_DOORSTOP = "METAL"
 }
+
+--
+
+PREFABS.Pic_arm_gtd_vented_fan =
+{
+  template = "Pic_armaetus_double_fans"
+  map = "MAP02"
+
+  env = "!cave"
+
+  x_fit = { 52,56 }
+  z_fit = { 36,52 }
+}
+
+PREFABS.Pic_arm_gtd_vented_fan_double =
+{
+  template = "Pic_armaetus_double_fans"
+  map = "MAP03"
+
+  env = "!cave"
+
+  x_fit = { 100,108 , 140,148 }
+  z_fit = { 114,118 }
+}
