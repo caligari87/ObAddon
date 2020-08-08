@@ -20,7 +20,7 @@ PREFABS.Pic_storefront_3x =
   deep   =  16
   over   = -16
 
-  x_fit = "frame"
+  x_fit = { 72,80 , 304,312 }
   y_fit = "top"
 
   tex_COMPBLUE =
@@ -47,6 +47,8 @@ PREFABS.Pic_storefront_2x =
   prob = 80
 
   seed_w = 2
+
+  x_fit = { 60,68 }
 }
 
 PREFABS.Pic_apartment_row_3x =
