@@ -28,3 +28,16 @@ PREFABS.Decor_gtd_hanging_framework_2 =
 
   bound_z2 = 192
 }
+
+PREFABS.Decor_gtd_hanging_framework_3 =
+{
+  template = "Decor_garrett_hanging_framework"
+  map = "MAP03"
+
+  height = 172
+  size = 80
+
+  bound_z2 = 172
+
+  z_fit = { 128,156 }
+}
