@@ -44,6 +44,8 @@ PREFABS.Pic_arm_gtd_vented_fan =
   template = "Pic_armaetus_double_fans"
   map = "MAP02"
 
+  prob = 15
+
   env = "!cave"
 
   x_fit = { 52,56 }
@@ -54,6 +56,8 @@ PREFABS.Pic_arm_gtd_vented_fan_double =
 {
   template = "Pic_armaetus_double_fans"
   map = "MAP03"
+
+  prob = 15
 
   env = "!cave"
 

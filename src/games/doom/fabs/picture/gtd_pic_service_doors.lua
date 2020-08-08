@@ -3,7 +3,7 @@ PREFABS.Pic_service_gate_1 =
   file = "picture/gtd_pic_service_doors.wad"
   map = "MAP01"
 
-  prob = 50
+  prob = 15
   theme = "!hell"
 
   env = "outdoor"
