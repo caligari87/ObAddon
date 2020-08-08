@@ -21,6 +21,7 @@ PREFABS.Pic_gtd_teklite_red =
 
   x_fit = { 100,156 }
   y_fit = "top"
+  z_fit = { 68,84 }
 }
 
 -- orange
