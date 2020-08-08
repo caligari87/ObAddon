@@ -6,7 +6,7 @@ PREFABS.Pic_service_gate_1 =
   prob = 50
   theme = "!hell"
 
-  env = "!cave"
+  env = "outdoor"
 
   where = "seeds"
   height = 128
@@ -38,6 +38,6 @@ PREFABS.Pic_service_gate_1 =
 
 PREFABS.Pic_service_gate_2 =
 {
-  template = "Pic_service_gate_2"
+  template = "Pic_service_gate_1"
   map = "MAP02"
 }
