@@ -233,7 +233,7 @@ SECRET_BONUS_FACTORS =
 --
 GLOBAL_STYLE_LIST =
 {
-  outdoors    = { none=20, few=40, some=30, heaps=10 }
+  outdoors    = { none=20, few=40, some=30, heaps=7 }
   caves       = { none=25, few=15, some=15, heaps=5 }
   parks       = { none=35, few=20, some=10, heaps=5 }
   liquids     = { none=0,  few=20, some=25, heaps=50 }
