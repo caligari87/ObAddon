@@ -13,16 +13,15 @@ PREFABS.Pic_service_gate_1 =
 
   uses_epic_textures = true
 
+  deep = 16
+
   seed_w = 2
   seed_h = 1
-
-  deep = 16
-  over = -16
 
   bound_z1 = 0
   bound_z2 = 128
 
-  x_fit = { 124,132 }
+  x_fit = "frame"
   y_fit = "top"
 
   tex_BIGDOORF =
@@ -40,4 +39,6 @@ PREFABS.Pic_service_gate_2 =
 {
   template = "Pic_service_gate_1"
   map = "MAP02"
+
+  x_fit = { 124,132 }
 }
