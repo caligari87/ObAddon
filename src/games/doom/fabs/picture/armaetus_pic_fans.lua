@@ -62,5 +62,5 @@ PREFABS.Pic_arm_gtd_vented_fan_double =
   env = "!cave"
 
   x_fit = { 104,120 }
-  z_fit = { 112,120 , 120,128 }
+  z_fit = { 112,118 , 122,128 }
 }

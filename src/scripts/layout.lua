@@ -1913,6 +1913,7 @@ stderrf("Cages in %s [%s pressure] --> any_prob=%d  per_prob=%d\n",
 
     if chunk.from_area.is_porch or chunk.from_area.is_porch_neighbor then
       reqs.porch = true
+      reqs.height = chunk.from_area.ceil_h - chunk.from_area.floor_h
     end
 
     if R.is_cave then
