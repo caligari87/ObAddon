@@ -519,3 +519,31 @@ PREFABS.Wall_hell_blood_ocatgon = --#
 
   z_fit = "top"
 }
+
+PREFABS.Wall_hell_catamet = --#
+{
+  template = "Wall_hell_stone_brace"
+  map = "MAP21"
+
+  uses_epic_textures = true
+  replaces = "Wall_hell_catamet_vanilla"
+
+  group = "hell_o_catamet"
+
+  z_fit = { 40,48 }
+}
+
+PREFABS.Wall_hell_catamet_vanilla =
+{
+  template = "Wall_hell_stone_brace"
+
+  map = "MAP21"
+
+  group = "hell_o_catamet"
+
+  tex_BRIKS41 = "BRICK7"
+  tex_METAL03 = "SUPPORT3"
+  tex_CATACMB5 = "BRWINDOW"
+
+  z_fit = { 40,48 }
+}

@@ -1995,6 +1995,7 @@ DOOM.THEMES =
       hell_o_marb_icon_bfalls = 1
       hell_o_egyptish = 1
       hell_o_blood_ocatgon = 1
+      hell_o_catamet = 1
     }
 
     window_groups =
