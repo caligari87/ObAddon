@@ -548,36 +548,32 @@ function ZDOOM_SPECIALS.do_special_stuff()
 
     local skyname = PARAM.episode_sky_color[epi_num]
 
-    if skyname == "SKY_CLOUDS" then
-      color = "a7 c3 ef"
-    elseif skyname == "BLUE_CLOUDS" then
-      color = "17 4f a8"
+    if skyname == "SKY_CLOUDS" or skyname == "BLUE_CLOUDS" then
+      color = "00 00 ff"
     elseif skyname == "WHITE_CLOUDS" then
-      color = "f2 f4 f7"
+      color = "ff ff ff"
     elseif skyname == "GREY_CLOUDS" then
-      color = "9d 9e a0"
+      color = "bf bf bf"
     elseif skyname == "DARK_CLOUDS" then
-      color = "4f 50 51"
+      color = "8a 8a 8a"
     elseif skyname == "BROWN_CLOUDS" then
-      color = "ba 68 1b"
+      color = "ff a8 5c"
     elseif skyname == "BROWNISH_CLOUDS" then
-      color = "ba 85 53"
+      color = "ff d2 a6"
     elseif skyname == "PEACH_CLOUDS" then
-      color = "d3 b1 bb"
+      color = "ff a4 63"
     elseif skyname == "YELLOW_CLOUDS" then
-      color = "db dd 44"
+      color = "ff cb 3d"
     elseif skyname == "ORANGE_CLOUDS" then
-      color = "d3 95 5b"
+      color = "ff 6b 08"
     elseif skyname == "GREEN_CLOUDS" then
-      color = "43 93 37"
+      color = "7a ff 5c"
     elseif skyname == "JADE_CLOUDS" then
-      color = "53 57 3b"
+      color = "df ff 9e"
     elseif skyname == "DARKRED_CLOUDS" then
-      color = "6b 0f 0f"
-    elseif skyname == "HELLISH_CLOUDS" then
-      color = "d8 27 13"
-    elseif skyname == "HELL_CLOUDS" then
-      color = "d8 27 13"
+      color = "ff 4c 4c"
+    elseif skyname == "HELLISH_CLOUDS" or skyname == "HELL_CLOUDS" then
+      color = "ff 00 00"
     elseif skyname == "PURPLE_CLOUDS" or skyname == "RAINBOW_CLOUDS" then
       color = "ff 00 ff"
     elseif skyname == "STARS" then
