@@ -98,6 +98,9 @@ function ScriptMan_assemble_zscript_lump()
   if PARAM.boss_gen and PARAM.boss_count != -1 then
     zscript_lines = zscript_lines .. PARAM.BOSSSCRIPT .. "\n"
   end
+  if PARAM.marine_gen then
+    zscript_lines = zscript_lines .. PARAM.MARINESCRIPT .. "\n"
+  end
   if PARAM.custom_trees == "zs" then
     zscript_lines = zscript_lines ..
     ARMAETUS_EPIC_TEXTURES.TEMPLATES.ZS_TREES .. "\n"
