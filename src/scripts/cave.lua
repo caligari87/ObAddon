@@ -4742,7 +4742,9 @@ function Cave_prepare_scenic_vista(area)
     vista_list.ocean = 4
   end
 
-  vista_list.fake_room = 4
+  if not room.is_exit then
+    vista_list.fake_room = 4
+  end
 
   vista_type = rand.key_by_probs(vista_list)
 

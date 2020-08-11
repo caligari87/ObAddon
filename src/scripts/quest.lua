@@ -2923,6 +2923,12 @@ function Quest_room_themes()
       Z.steps_mat = THEME.steps_mat
 
       Z.post_type = rand.key_by_probs(THEME.fence_posts)
+
+      Z.scenic_fences = GAME.MATERIALS[rand.key_by_probs(THEME.scenic_fences)]
+    end
+
+    each R in LEVEL.rooms do
+      R.scenic_fences = R.zone.scenic_fences
     end
   end
 
@@ -3045,9 +3051,6 @@ function Quest_room_themes()
     if R.is_natural_park then
       R.main_tex = R.zone.nature_facade
     end
-
-    -- code for determining scenic fences is now here
-    R.scenic_fences = GAME.MATERIALS[rand.key_by_probs(GAME.THEMES[theme].scenic_fences)]
 
     -- create a skin (for prefabs)
     R.skin =
