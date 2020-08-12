@@ -16,5 +16,5 @@ PREFABS.Decor_urban_newsstand =
 
   z_fit = "top"
 
-  sink_mode = "never"
+  sink_mode = "never_liquids"
 }

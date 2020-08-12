@@ -15,6 +15,4 @@ PREFABS.Decor_obhack_streetlight =
   bound_z2 = 264
 
   z_fit = { 12,232 }
-
-  sink_mode = "never"
 }

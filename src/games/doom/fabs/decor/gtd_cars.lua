@@ -16,8 +16,6 @@ PREFABS.Decor_sedan =
 
   bound_z1 = 0
   bound_z2 = 128
-
-  sink_mode = "never"
 }
 
 PREFABS.Decor_sedan_blue =
@@ -56,8 +54,6 @@ PREFABS.Decor_minitruck =
 
   bound_z1 = 0
   bound_z2 = 128
-
-  sink_mode = "never"
 }
 
 PREFABS.Decor_minitruck_beige =

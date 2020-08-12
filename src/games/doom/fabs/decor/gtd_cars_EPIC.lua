@@ -20,8 +20,6 @@ PREFABS.Decor_sedan_EPIC =
 
   bound_z1 = 0
   bound_z2 = 128
-
-  sink_mode = "never"
 }
 
 PREFABS.Decor_sedan_blue_EPIC =
@@ -68,8 +66,6 @@ PREFABS.Decor_minitruck_EPIC =
 
   bound_z1 = 0
   bound_z2 = 128
-
-  sink_mode = "never"
 }
 
 PREFABS.Decor_minitruck_beige_EPIC =

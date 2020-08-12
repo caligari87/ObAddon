@@ -20,8 +20,6 @@ PREFABS.Pillar_tech3 =
   bound_z2 = 192
 
   z_fit  = { 80,112 }
-
-  sink_mode = "never"
 }
 
 PREFABS.Pillar3_tech2 =

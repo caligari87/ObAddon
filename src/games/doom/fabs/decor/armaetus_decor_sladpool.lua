@@ -16,5 +16,5 @@ PREFABS.Decor_armaetus_slad_pool =
   bound_z1 = 0
   bound_z2 = 104
 
-  sink_mode = "never"
+  sink_mode = "never_liquids"
 }

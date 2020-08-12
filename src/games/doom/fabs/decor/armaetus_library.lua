@@ -23,7 +23,7 @@ PREFABS.Decor_3x3_bookshelves_thin =
     PANRED   = 50
   }
 
-  sink_mode = "never"
+  sink_mode = "never_liquids"
 }
 
 PREFABS.Decor_3x3_bookshelves_thick =

@@ -19,8 +19,6 @@ PREFABS.Pillar_tech2_A =
 
   bound_z1 = 0
   bound_z2 = 136
-
-  sink_mode = "never"
 }
 
 
@@ -95,8 +93,6 @@ PREFABS.Pillar_tech3_A =
 
   z_fit  = "top"
 
-  sink_mode = "never"
-
   tex_COMPWERD = "LITE3"
 
 }
@@ -133,8 +129,6 @@ PREFABS.Pillar_bodies1_A =
   bound_z2 = 136
 
   z_fit  = "top"
-
-  sink_mode = "never"
 
   tex_COMPWERD = { SP_DUDE4=50, SP_DUDE5=50, SP_FACE2=10 }
   tex_COMPSPAN = { MARBLE2=50, MARBLE3=50 }
@@ -174,8 +168,6 @@ PREFABS.Pillar_fire1_A =
   bound_z2 = 136
 
   z_fit  = "top"
-
-  sink_mode = "never"
 
   tex_COMPWERD = { FIREBLU1=50, FIREBLU2=50 }
   tex_COMPSPAN = "SP_HOT1"

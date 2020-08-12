@@ -1678,7 +1678,19 @@ function Layout_decorate_rooms(pass)
       -- ignore very small sinks (limited to just this chunk)
       if string.sub(sinkstat, 1, 1) == "0" then return end
 
-      reqs.is_sink = true
+      reqs.is_sink = "plain"
+
+      -- check if the sink is a liquid material
+      if A.floor_group and A.floor_group.sink then
+        if A.floor_group.sink.mat == "_LIQUID" then
+          reqs.is_sink = "liquid"
+        end
+        each liquid in GAME.LIQUIDS do
+          if A.floor_group.sink.mat == liquid.mat then
+            reqs.is_sink = "liquid"
+          end
+        end
+      end
 
       -- reduce maximum size unless *whole* chunk is in the sink
       if sinkstat != "222" then

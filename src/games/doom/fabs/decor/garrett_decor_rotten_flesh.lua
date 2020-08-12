@@ -17,5 +17,5 @@ PREFABS.Decor_garrett_rotten_flesh =
 
   z_fit  = { 16,72 }
 
-  sink_mode = "never"
+  sink_mode = "never_liquids"
 }

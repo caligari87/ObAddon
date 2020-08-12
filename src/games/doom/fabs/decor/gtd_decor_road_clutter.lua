@@ -15,8 +15,6 @@ PREFABS.Decor_road_clutter_three_cones =
 
   bound_z1 = 0
   bound_z2 = 94
-
-  sink_mode = "never"
 }
 
 PREFABS.Decor_road_clutter_one_cone =
@@ -44,7 +42,7 @@ PREFABS.Decor_road_clutter_boxes =
   bound_z1 = 0
   bound_z2 = 64
 
-  sink_mode = "never"
+  sink_mode = "never_liquids"
 
   flat_CRATOP2 = "CRATOP1"
 }

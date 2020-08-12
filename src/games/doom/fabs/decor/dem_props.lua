@@ -40,7 +40,7 @@ PREFABS.Decor_trash_bin =
 
   bound_z1 = 0
 
-  sink_mode = "never"
+  sink_mode = "never_liquids"
 
   face_open = true
 }
@@ -61,7 +61,7 @@ PREFABS.Decor_mailbox =
 
   bound_z1 = 0
 
-  sink_mode = "never"
+  sink_mode = "never_liquids"
 
   face_open = true
 }

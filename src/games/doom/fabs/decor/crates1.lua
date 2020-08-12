@@ -18,7 +18,7 @@ PREFABS.Crate_small_brown =
 
   bound_z1 = 0
 
-  sink_mode = "never"
+  sink_mode = "never_liquids"
 }
 
 
@@ -45,7 +45,7 @@ PREFABS.Crate_small_woodmet =
   where  = "point"
   size   = 64
 
-  sink_mode = "never"
+  sink_mode = "never_liquids"
 }
 
 PREFABS.Crate_small_wood3 =
@@ -72,7 +72,7 @@ PREFABS.Crate_tall_brown =
 
   bound_z1 = 0
 
-  sink_mode = "never"
+  sink_mode = "never_liquids"
 }
 
 
@@ -107,7 +107,7 @@ PREFABS.Crate_medium_gray =
 
   bound_z1 = 0
 
-  sink_mode = "never"
+  sink_mode = "never_liquids"
 }
 
 
@@ -128,7 +128,7 @@ PREFABS.Crate_group_medium =
 
   bound_z1 = 0
 
-  sink_mode = "never"
+  sink_mode = "never_liquids"
 }
 
 -- a large, tall, wooden crate
@@ -147,7 +147,7 @@ PREFABS.Crate_large_wooden =
   size   = 128
   height = 160
 
-  sink_mode = "never"
+  sink_mode = "never_liquids"
 }
 
 PREFABS.Small_Computer1 =

@@ -13,7 +13,7 @@ PREFABS.Decor_bench_n_trashcan =
 
   bound_z1 = 0
 
-  sink_mode = "never"
+  sink_mode = "never_liquids"
 }
 
 PREFABS.Decor_round_planter =
@@ -29,7 +29,7 @@ PREFABS.Decor_round_planter =
 
   bound_z1 = 0
 
-  sink_mode = "never"
+  sink_mode = "never_liquids"
 }
 
 PREFABS.Decor_guardhouse =
@@ -50,7 +50,7 @@ PREFABS.Decor_guardhouse =
 
   z_fit = "top"
 
-  sink_mode = "never"
+  sink_mode = "never_liquids"
 }
 
 PREFABS.Decor_marquee_sign =
@@ -71,7 +71,7 @@ PREFABS.Decor_marquee_sign =
 
   z_fit = "top"
 
-  sink_mode = "never"
+  sink_mode = "never_liquids"
 
   tex_SHAWN1 =
   {
@@ -152,7 +152,7 @@ PREFABS.Decor_cafe_table_set =
 
   on_liquids = "never"
 
-  sink_mode = "never"
+  sink_mode = "never_liquids"
 
   where  = "point"
   size   = 64
