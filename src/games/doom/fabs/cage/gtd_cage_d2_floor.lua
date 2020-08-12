@@ -28,7 +28,7 @@ PREFABS.Cage_gtd_D2_floor_urban =
 
 PREFABS.Cage_gtd_D2_floor_tech =
 {
-  template = "Cage_gtd_D2_floor"
+  template = "Cage_gtd_D2_floor_urban"
 
   theme = "tech"
 
@@ -48,7 +48,7 @@ PREFABS.Cage_gtd_D2_floor_tech =
 
 PREFABS.Cage_gtd_D2_floor_hell =
 {
-  template = "Cage_gtd_D2_floor"
+  template = "Cage_gtd_D2_floor_urban"
 
   theme = "hell"
 
