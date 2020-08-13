@@ -1,19 +1,19 @@
 PREFABS.Stair_fancy_32_brown =
 {
-  file   = "stairs/gtd_fancy_stair_32.wad"
-  map    = "MAP01"
+  file = "stairs/gtd_fancy_stair_32.wad"
+  map = "MAP01"
 
-  prob   = 10
-  style  = "steepness"
+  prob = 10
+  style = "steepness"
 
-  where  = "seeds"
-  shape  = "I"
+  where = "seeds"
+  shape = "I"
 
   seed_w = 2
   seed_h = 1
 
-  x_fit  = { 24,104 , 152,232 }
-  y_fit  = { 12,116 }
+  x_fit = { 24,104 , 152,232 }
+  y_fit = { 12,116 }
 
   bound_z1 = 0
 
@@ -42,19 +42,20 @@ PREFABS.Stair_fancy_32_grey =
 
 PREFABS.Stair_fancy_diagonal_edged_32_1X =
 {
-  file   = "stairs/gtd_fancy_stair_32.wad"
-  map    = "MAP03"
+  file = "stairs/gtd_fancy_stair_32.wad"
+  map = "MAP03"
 
-  prob   = 20
-  style  = "steepness"
+  theme = "!hell"
+  prob = 20
+  style = "steepness"
 
-  where  = "seeds"
-  shape  = "I"
+  where = "seeds"
+  shape = "I"
 
   seed_w = 1
   seed_h = 1
 
-  x_fit  = "stretch"
+  x_fit = "stretch"
 
   bound_z1 = 0
 
@@ -64,7 +65,20 @@ PREFABS.Stair_fancy_diagonal_edged_32_1X =
 PREFABS.Stair_fancy_diagonal_edged_32_2X =
 {
   template = "Stair_fancy_diagonal_edged_32_1X"
-  map      = "MAP04"
+  map = "MAP04"
 
-  seed_h   = 2
+  seed_h = 2
+}
+
+-- hell version
+
+PREFABS.Stair_fancy_diagonal_carpetted =
+{
+  template = "Stair_fancy_diagonal_edged_32_1X"
+  map = "MAP05"
+
+  theme = "hell"
+
+  y_fit = { 28,36 , 60,68 , 92,100 }
+  x_fit = { 60,68 }
 }
