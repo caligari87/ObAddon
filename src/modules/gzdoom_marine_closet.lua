@@ -586,12 +586,28 @@ MARINE_CLOSET_TUNE.MAPINFO =
 ]]
 }
 
+MARINE_CLOSET_TUNE.TECHWPN =
+{
+[1] = { "AIMarinePistol" }
+[2] = { "AIMarineShotgun", "AIMarinePistol", "AIMarinePistol", "AIMarinePistol", "AIMarinePistol", "AIMarinePistol", "AIMarinePistol", "AIMarinePistol" }
+[3] = { "AIMarineShotgun", "AIMarineChaingun", "AIMarinePistol", "AIMarinePistol", "AIMarinePistol", "AIMarinePistol", "AIMarinePistol", "AIMarinePistol" }
+[4] = { "AIMarineShotgun", "AIMarineChaingun", "AIMarinePistol", "AIMarinePistol" }
+[5] = { "AIMarineShotgun", "AIMarineChaingun", "AIMarinePistol", "AIMarineShotgun", "AIMarineChaingun", "AIMarinePistol", "AIMarineShotgun", "AIMarineChaingun", "AIMarinePistol", "AIMarineSupershotgun" }
+[6] = { "AIMarineShotgun", "AIMarineChaingun", "AIMarinePistol", "AIMarineShotgun", "AIMarineChaingun", "AIMarinePlasma", "AIMarineShotgun", "AIMarineChaingun", "AIMarineRocket", "AIMarineSupershotgun" }
+[7] = { "AIMarineShotgun", "AIMarineChaingun", "AIMarinePistol", "AIMarineSupershotgun", "AIMarineChaingun", "AIMarinePlasma", "AIMarineRocket", "AIMarineSupershotgun" }
+[8] = { "AIMarineSupershotgun", "AIMarineSupershotgun", "AIMarineChaingun", "AIMarineSupershotgun", "AIMarinePlasma", "AIMarinePlasma", "AIMarineRocket" }
+[9] = { "AIMarinePlasma", "AIMarinePlasma", "AIMarinePlasma", "AIMarinePlasma", "AIMarineRocket", "AIMarineRocket", "AIMarineRocket", "AIMarineSupershotgun", "AIMarineBFG" }
+[10] = { "AIMarinePlasma", "AIMarineRocket", "AIMarineBFG" }
+[99] = { "AIMarinePistol", "AIMarinePistol", "AIMarinePistol", "AIMarineShotgun", "AIMarineShotgun", "AIMarineShotgun" ,"AIMarineChaingun" ,"AIMarineChaingun" ,"AIMarineChaingun", "AIMarineSupershotgun", "AIMarineSupershotgun", "AIMarinePlasma", "AIMarinePlasma", "AIMarineRocket", "AIMarineRocket", "AIMarineBFG" }
+}
+
 function MARINE_CLOSET_TUNE.setup(self)
   PARAM.marine_gen = true
   PARAM.marine_skip = false
   PARAM.MARINESCRIPT = ""
   PARAM.marine_closets = 0
   PARAM.marine_marines = 0
+  PARAM.marine_tech = 1
 
   for name,opt in pairs(self.options) do
     local value = self.options[name].value
@@ -618,9 +634,28 @@ function MARINE_CLOSET_TUNE.calc_closets()
 	  rngmin = tonumber(PARAM.m_c_m_max)
 	end
 	PARAM.marine_marines = rand.irange(rngmin,rngmax)
+	if PARAM.m_c_tech == "low" then
+		PARAM.marine_tech = rand.irange(1,3)
+	elseif PARAM.m_c_tech == "mid" then
+		PARAM.marine_tech = rand.irange(5,7)
+	elseif PARAM.m_c_tech == "high" then
+		PARAM.marine_tech = rand.irange(8,9)
+	elseif PARAM.m_c_tech == "rng" then
+		PARAM.marine_tech = 99
+	elseif PARAM.m_c_tech == "prog" then
+		if LEVEL.game_along < 1.0 then
+			PARAM.marine_tech = math.ceil(LEVEL.game_along * 10)
+		else
+			PARAM.marine_tech = 10
+		end
+	end
   else
     PARAM.marine_skip = true
   end
+end
+
+function MARINE_CLOSET_TUNE.grab_type()
+   return rand.pick(MARINE_CLOSET_TUNE.TECHWPN[PARAM.marine_tech])
 end
 
 function MARINE_CLOSET_TUNE.all_done()
@@ -804,5 +839,4 @@ OB_MODULES["gzdoom_marine_closets"] =
       tooltip = "Influences strength of monsters in rooms with a marine closet.",
     }
   }
-}
-]]
+}]]
