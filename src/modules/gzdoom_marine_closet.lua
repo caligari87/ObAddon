@@ -572,6 +572,20 @@ class AIMarineBFG : AIMarine
   ]]
 }
 
+MARINE_CLOSET_TUNE.MAPINFO =
+{
+[[
+  31000 = AIMarineWaker
+  31001 = AIMarinePistol
+  31002 = AIMarineChaingun
+  31003 = AIMarineShotgun
+  31004 = AIMarineSupershotgun
+  31005 = AIMarinePlasma
+  31006 = AIMarineRocket
+  31007 = AIMarineBFG
+]]
+}
+
 function MARINE_CLOSET_TUNE.setup(self)
   PARAM.marine_gen = true
   PARAM.marine_skip = false
@@ -638,6 +652,7 @@ function MARINE_CLOSET_TUNE.all_done()
   end
   
   PARAM.MARINESCRIPT = PARAM.MARINESCRIPT .. scripty
+  PARAM.MARINEMAPINFO = MARINE_CLOSET_TUNE.MAPINFO
 end
 --[[
 OB_MODULES["gzdoom_marine_closets"] =
@@ -789,4 +804,5 @@ OB_MODULES["gzdoom_marine_closets"] =
       tooltip = "Influences strength of monsters in rooms with a marine closet.",
     }
   }
-}]]
+}
+]]

@@ -71,13 +71,26 @@ function ScriptMan_assemble_mapinfo_lump()
   end
 
   table.insert(mapinfo_lines, "\n}\n")
+  
+  local doomednum_lines = {
+	  "DoomedNums\n",
+      "{\n",
+  }
   if SCRIPTS.fauna_mapinfo then
-    table.insert(mapinfo_lines, "DoomedNums\n")
-    table.insert(mapinfo_lines, "{\n")
     each line in SCRIPTS.fauna_mapinfo do
+      table.insert(doomednum_lines,line)
+    end
+  end
+  if PARAM.marine_gen then
+    each line in PARAM.MARINEMAPINFO do
+      table.insert(doomednum_lines,line)
+    end
+  end
+  if #doomednum_lines > 2 then
+    table.insert(doomednum_lines, "}\n")
+	each line in doomednum_lines do
       table.insert(mapinfo_lines,line)
     end
-      table.insert(mapinfo_lines, "}\n")
   end
 
   if PARAM.mapinfolump != nil then
