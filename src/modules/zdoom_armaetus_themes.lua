@@ -1339,7 +1339,8 @@ ARMAETUS_ROOM_THEMES =
     floors =
     {
       FLOOR0_1 = 5
-      FLOOR4_3 = 5
+      FLOOR0_3 = 5
+      FLOOR0_5 = 5
       FLOOR4_1 = 5
       FLOOR4_5 = 5
       FLOOR4_6 = 5
