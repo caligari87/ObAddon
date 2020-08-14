@@ -1306,7 +1306,7 @@ SPROUT_DIRECT_2_EMERGENCY =
 }
 
 
-SPROUT_DIRECT_THIN_EMERGENCY =
+--[[SPROUT_DIRECT_THIN_EMERGENCY =
 {
   emergency = true
 
@@ -1328,7 +1328,7 @@ SPROUT_DIRECT_THIN_EMERGENCY =
   {
     conn = { x=1, y=2, w=2, dir=8 }
   }
-}
+}]]
 
 
 SPROUT_DIRECT_THROUGH_2X_LIQUID =
