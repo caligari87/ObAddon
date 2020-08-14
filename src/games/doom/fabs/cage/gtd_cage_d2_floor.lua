@@ -18,6 +18,14 @@ PREFABS.Cage_gtd_D2_floor_urban =
   x_fit = { 20,88 }
   y_fit = "top"
 
+  sector_1 = {
+    [0] = 8
+    [1] = 1
+    [2] = 0.5
+    [3] = 0.5
+    [21] = 1
+  }
+
   tex_MISDPSACE =
   {
     MIDSPACE = 1
