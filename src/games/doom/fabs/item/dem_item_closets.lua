@@ -571,7 +571,7 @@ PREFABS.Item_dem_scrying1_closet =
   engine = "zdoom"
 
   theme = "hell"
-  prob  = 100
+  prob  = 250
 
   where  = "seeds"
   seed_w = 2
@@ -581,7 +581,7 @@ PREFABS.Item_dem_scrying1_closet =
   over = -16
 
   x_fit = "frame"
-  y_fit  = "frame"
+  y_fit = "frame"
 }
 
 --a item in a scrying room in hell
