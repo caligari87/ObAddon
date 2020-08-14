@@ -24,6 +24,8 @@ PREFABS.Wall_tech_teklitecomp_red_console =
 
   prob = 10
 
+  deep = 24
+
   tex_COMPSTA3 =
   {
     COMPSTA3 = 1

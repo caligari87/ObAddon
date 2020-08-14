@@ -2519,6 +2519,7 @@ function Quest_nice_items()
 
   local function assign_secondary_importants()
     if not GAME.SECONDARY_IMPORTANTS then return end
+    if table.empty(GAME.SECONDARY_IMPORTANTS) then return end
 
     local simp_tab = GAME.SECONDARY_IMPORTANTS
     rand.shuffle(simp_tab)
