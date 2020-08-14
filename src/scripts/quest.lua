@@ -2517,6 +2517,40 @@ function Quest_nice_items()
   end
 
 
+  local function assign_secondary_importants()
+    if not GAME.SECONDARY_IMPORTANTS then return end
+
+    local simp_tab = GAME.SECONDARY_IMPORTANTS
+    rand.shuffle(simp_tab)
+
+    local room_tab = {}
+    local chosen_room
+
+    local function pick_room_for_si()
+      each R in LEVEL.rooms do
+        if R.closets and #R.closets > 2
+        and not chosen_room.secondary_important then
+          table.insert(room_tab, R)
+        end
+      end
+
+      for count = 1, SI.max_count do
+        if table.empty(room_tab) then continue end
+
+        chosen_room = rand.pick(room_tab)
+        chosen_room.secondary_important =
+        {
+          kind = SI.kind
+        }
+      end
+    end
+
+    each SI in simp_tab do
+      if SI.prob then pick_room_for_si() end
+    end
+  end
+
+
   ---| Quest_nice_items |---
 
   max_level = 1 + LEVEL.ep_along * 9
@@ -2554,6 +2588,8 @@ function Quest_nice_items()
 
   -- mark all remaining unused leafs as STORAGE rooms
   find_storage_rooms()
+
+  assign_secondary_importants()
 end
 
 

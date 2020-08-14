@@ -1988,6 +1988,31 @@ stderrf("Cages in %s [%s pressure] --> any_prob=%d  per_prob=%d\n",
   end
 
 
+  local function try_secondary_importants(R)
+    if not R.secondary_important then return end
+
+    local usable_chunks = {}
+    local preferred_chunk
+    local
+
+    each chunk in R.closets do
+      if (not chunk.content or chunk.content == "DECORATION")
+      and not chunk:is_slave() then
+        table.insert(usable_chunks, chunk)
+      end
+    end
+
+    preferred_chunk = rand.pick(usable_chunks)
+
+    reqs = preferred_chunk:base_reqs(preferred_chunk.from_dir)
+
+    reqs.group = R.secondary_important.kind
+
+    def = Fab_pick(reqs, "allow_none")
+
+    if def then preferred_chunk.prefab_def = def end
+  end
+
 
   local function pick_wall_detail(R)
     if R.is_cave    then return end
@@ -2381,6 +2406,8 @@ stderrf("Cages in %s [%s pressure] --> any_prob=%d  per_prob=%d\n",
     try_extra_cages(R)
 
     try_decor_closets(R)
+
+    try_secondary_importants(R)
 
     -- kill any unused closets
     each CL in R.closets do
