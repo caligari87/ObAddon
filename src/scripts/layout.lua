@@ -1993,7 +1993,7 @@ stderrf("Cages in %s [%s pressure] --> any_prob=%d  per_prob=%d\n",
 
     local usable_chunks = {}
     local preferred_chunk
-    local
+    local def
 
     each chunk in R.closets do
       if (not chunk.content or chunk.content == "DECORATION")
