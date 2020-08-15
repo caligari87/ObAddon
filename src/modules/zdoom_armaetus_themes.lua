@@ -3485,6 +3485,7 @@ ARMAETUS_THEMES =
       Skybox_craneo_egypt_EPIC = 35
       Skybox_craneo_space_shuttle_EPIC = 15
       Skybox_city_bridge_EPIC = 50
+      Skybox_g99_hell_tower_EPIC = 15
     }
   }
 
@@ -3699,6 +3700,7 @@ ARMAETUS_THEMES =
       Skybox_garrett_winterfall_EPIC = 35
       Skybox_craneo_egypt_EPIC = 35
       Skybox_city_bridge_EPIC = 15
+      Skybox_g99_hell_tower_EPIC = 50
     }
   }
 }
