@@ -78,6 +78,16 @@ MARINE_CLOSET_TUNE.STRENGTH =
   "horde",    _("Crazier"),
 }
 
+MARINE_CLOSET_TUNE.SCALING =
+{
+  "default",    _("Random"),
+  "prog",    _("Progressive"),
+  "reg",    _("Regressive"),
+  "epi",    _("Episodic"),
+  "epi2",    _("Regressive Episodic"),
+}
+
+
 MARINE_CLOSET_TUNE.TEMPLATES =
 {
   ZSC =
@@ -617,23 +627,43 @@ end
 
 function MARINE_CLOSET_TUNE.calc_closets()
   if rand.odds(tonumber(PARAM.m_c_chance)) then
-    PARAM.marine_skip = false
-	local rngmin
+    local rngmin
     local rngmax
-    rngmin = tonumber(PARAM.m_c_min)
+    PARAM.marine_skip = false
+	rngmin = tonumber(PARAM.m_c_min)
 	rngmax = tonumber(PARAM.m_c_max)
 	if rngmin > rngmax then
 	  rngmax = tonumber(PARAM.m_c_min)
 	  rngmin = tonumber(PARAM.m_c_max)
+    end
+	if PARAM.m_c_type == "default" then
+	  PARAM.marine_closets = rand.irange(rngmin,rngmax)
+	elseif PARAM.m_c_type == "prog" then
+	  PARAM.marine_closets = rngmin + math.round((rngmax - rngmin) * LEVEL.game_along)
+	elseif PARAM.m_c_type == "reg" then
+	  PARAM.marine_closets = rngmax - math.round((rngmax - rngmin) * LEVEL.game_along)
+	elseif PARAM.m_c_type == "epi" then
+	  PARAM.marine_closets = rngmin + math.round((rngmax - rngmin) * LEVEL.ep_along)
+	elseif PARAM.m_c_type == "epi2" then
+	  PARAM.marine_closets = rngmax - math.round((rngmax - rngmin) * LEVEL.ep_along)
 	end
-	PARAM.marine_closets = rand.irange(rngmin,rngmax)
 	rngmin = tonumber(PARAM.m_c_m_min)
 	rngmax = tonumber(PARAM.m_c_m_max)
 	if rngmin > rngmax then
 	  rngmax = tonumber(PARAM.m_c_m_min)
 	  rngmin = tonumber(PARAM.m_c_m_max)
 	end
-	PARAM.marine_marines = rand.irange(rngmin,rngmax)
+	if PARAM.m_c_m_type == "default" then
+	  PARAM.marine_marines = rand.irange(rngmin,rngmax)
+	elseif PARAM.m_c_m_type == "prog" then
+	  PARAM.marine_marines = rngmin + math.round((rngmax - rngmin) * LEVEL.game_along)
+	elseif PARAM.m_c_m_type == "reg" then
+	  PARAM.marine_marines = rngmax - math.round((rngmax - rngmin) * LEVEL.game_along)
+	elseif PARAM.m_c_m_type == "epi" then
+	  PARAM.marine_marines = rngmin + math.round((rngmax - rngmin) * LEVEL.ep_along)
+	elseif PARAM.m_c_m_type == "epi2" then
+	  PARAM.marine_marines = rngmax - math.round((rngmax - rngmin) * LEVEL.ep_along)
+	end
 	if PARAM.m_c_tech == "low" then
 		PARAM.marine_tech = rand.irange(1,3)
 	elseif PARAM.m_c_tech == "mid" then
@@ -739,11 +769,25 @@ OB_MODULES["gzdoom_marine_closets"] =
       tooltip = "Sets most amount of closets that can spawn per map.",
     }
 
+    m_c_type =
+    {
+      name = "m_c_type",
+      label = _("Closet scaling type"),
+      priority = 96,
+      choices = MARINE_CLOSET_TUNE.SCALING,
+      default = "default",
+      tooltip = "Affects how min and max work for closet count:" ..
+	  "Random: Random range" ..
+	  "Progressive: Goes from min to max through entire game" ..
+	  "Episodic: Goes from min to max through episode" ..
+	  "Regressive/Regressive episodic: Goes from max to min through game or episode" ,
+    }
+
     m_c_m_min =
     {
       name = "m_c_m_min",
       label = _("Minimum marines"),
-      priority = 96,
+      priority = 95,
       choices = MARINE_CLOSET_TUNE.COUNT,
       default = "1",
       tooltip = "Sets least amount of marines that can spawn per closet.",
@@ -753,17 +797,31 @@ OB_MODULES["gzdoom_marine_closets"] =
     {
       name = "m_c_m_max",
       label = _("Maximum marines"),
-      priority = 95,
+      priority = 94,
       choices = MARINE_CLOSET_TUNE.COUNT,
       default = "5",
       tooltip = "Sets most amount of marines that can spawn per closet.",
+    }
+	
+    m_c_m_type =
+    {
+      name = "m_c_m_type",
+      label = _("Marine scaling type"),
+      priority = 93,
+      choices = MARINE_CLOSET_TUNE.SCALING,
+      default = "default",
+      tooltip = "Affects how min and max work for marine count:" ..
+	  "Random: Random range" ..
+	  "Progressive: Goes from min to max through entire game" ..
+	  "Episodic: Goes from min to max through episode" ..
+	  "Regressive/Regressive episodic: Goes from max to min through game or episode" ,
     }
 
     m_c_tech =
     {
       name = "m_c_ttech",
       label = _("Weapon tech level"),
-      priority = 94,
+      priority = 92,
       choices = MARINE_CLOSET_TUNE.TECH,
       default = "mid",
       tooltip = "Influences weapons that marines spawn with " ..
@@ -778,7 +836,7 @@ OB_MODULES["gzdoom_marine_closets"] =
     {
       name = "m_c_power",
       label = _("Strong Marines"),
-      priority = 93,
+      priority = 91,
       choices = MARINE_CLOSET_TUNE.YN,
       default = "yes",
       tooltip = "Influences whether marines are as accurate and rapid firing as player, or are weaker.",
@@ -788,7 +846,7 @@ OB_MODULES["gzdoom_marine_closets"] =
     {
       name = "m_c_follow",
       label = _("Followers"),
-      priority = 92,
+      priority = 90,
       choices = MARINE_CLOSET_TUNE.YN,
       default = "no",
       tooltip = "By default marines try to follow the player if they have nothing else to do but would otherwise prioritize chasing enemies, and are also unable to follow player through rough terrain." ..
@@ -799,7 +857,7 @@ OB_MODULES["gzdoom_marine_closets"] =
     {
       name = "m_c_health",
       label = _("Marine Health"),
-      priority = 91,
+      priority = 89,
       choices = MARINE_CLOSET_TUNE.HEALTH,
       default = "100",
       tooltip = "Influences how much damage marines can take before dying.",
@@ -809,7 +867,7 @@ OB_MODULES["gzdoom_marine_closets"] =
 	{
 	  name = "m_c_waker",
       label = _("Trigger Type"),
-      priority = 90,
+      priority = 88,
       choices = MARINE_CLOSET_TUNE.WAKER,
       default = "default",
       tooltip = "Influences the trigger that activates marines." ..
@@ -823,7 +881,7 @@ OB_MODULES["gzdoom_marine_closets"] =
     {
       name = "m_c_quantity",
       label = _("Monster Quantity Multiplier"),
-      priority = 89,
+      priority = 87,
       choices = MARINE_CLOSET_TUNE.QUANTITY,
       default = "default",
       tooltip = "Influences amount of monsters in rooms with a marine closet.",
@@ -833,7 +891,7 @@ OB_MODULES["gzdoom_marine_closets"] =
     {
       name = "m_c_strength",
       label = _("Monster Strength Multiplier"),
-      priority = 88,
+      priority = 86,
       choices = MARINE_CLOSET_TUNE.STRENGTH,
       default = "default",
       tooltip = "Influences strength of monsters in rooms with a marine closet.",
