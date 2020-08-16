@@ -24,4 +24,11 @@ PREFABS.Decor_gtd_armae_big_computer_2 =
 
   size = 144
   height = 200
+
+  sector_12 =
+  {
+    [0] = 3
+    [12] = 4
+    [13] = 4
+  }
 }
