@@ -72,10 +72,10 @@ MARINE_CLOSET_TUNE.QUANTITY =
 
 MARINE_CLOSET_TUNE.STRENGTH =
 {
-  "default",    _("Normal"),
-  "more",    _("Stronger"),
-  "lot",    _("Tougher"),
-  "horde",    _("Crazier"),
+  "default",    _("Unmodified"),
+  "harder",    _("Harder"),
+  "tough",    _("Tough"),
+  "fierce",    _("Fierce"),
 }
 
 MARINE_CLOSET_TUNE.SCALING =
@@ -776,10 +776,10 @@ OB_MODULES["gzdoom_marine_closets"] =
       priority = 96,
       choices = MARINE_CLOSET_TUNE.SCALING,
       default = "default",
-      tooltip = "Affects how min and max work for closet count:" ..
-	  "Random: Random range" ..
-	  "Progressive: Goes from min to max through entire game" ..
-	  "Episodic: Goes from min to max through episode" ..
+      tooltip = "Affects how min and max work for closet count:\n\n" ..
+	  "Random: Random range\n" ..
+	  "Progressive: Goes from min to max through entire game\n" ..
+	  "Episodic: Goes from min to max through episode\n" ..
 	  "Regressive/Regressive episodic: Goes from max to min through game or episode" ,
     }
 
@@ -810,10 +810,10 @@ OB_MODULES["gzdoom_marine_closets"] =
       priority = 93,
       choices = MARINE_CLOSET_TUNE.SCALING,
       default = "default",
-      tooltip = "Affects how min and max work for marine count:" ..
-	  "Random: Random range" ..
-	  "Progressive: Goes from min to max through entire game" ..
-	  "Episodic: Goes from min to max through episode" ..
+      tooltip = "Affects how min and max work for marine count:\n\n" ..
+	  "Random: Random range\n" ..
+	  "Progressive: Goes from min to max through entire game\n" ..
+	  "Episodic: Goes from min to max through episode\n" ..
 	  "Regressive/Regressive episodic: Goes from max to min through game or episode" ,
     }
 
@@ -824,11 +824,11 @@ OB_MODULES["gzdoom_marine_closets"] =
       priority = 92,
       choices = MARINE_CLOSET_TUNE.TECH,
       default = "mid",
-      tooltip = "Influences weapons that marines spawn with " ..
-      "Low tech: Pistols, with some rare chainguns and shotguns" ..
-	  "Mid tech: Shotguns/Chainguns with some rare pistols, super shotguns, rocket launchers and plasma rifles" ..
-	  "High tech: Rocket launchers/Plasma rifles with some rare BFGs and super shotguns" ..
-	  "Mix it up: Any weapon goes" ..
+      tooltip = "Influences weapons that marines spawn with:\n\n" ..
+      "Low tech: Pistols, with some rare chainguns and shotguns\n" ..
+	  "Mid tech: Shotguns/Chainguns with some rare pistols, super shotguns, rocket launchers and plasma rifles\n" ..
+	  "High tech: Rocket launchers/Plasma rifles with some rare BFGs and super shotguns\n" ..
+	  "Mix it up: Any weapon goes\n" ..
 	  "Progressive: Marines start with pistols and get more powerful through episode/megawad",
     }
 
@@ -849,7 +849,7 @@ OB_MODULES["gzdoom_marine_closets"] =
       priority = 90,
       choices = MARINE_CLOSET_TUNE.YN,
       default = "no",
-      tooltip = "By default marines try to follow the player if they have nothing else to do but would otherwise prioritize chasing enemies, and are also unable to follow player through rough terrain." ..
+      tooltip = "By default marines try to follow the player if they have nothing else to do but would otherwise prioritize chasing enemies, and are also unable to follow player through rough terrain.\n" ..
 	  "If this is enabled marines will much harder prioritize following player and will teleport if they are too far away.",
     }
 
@@ -870,10 +870,10 @@ OB_MODULES["gzdoom_marine_closets"] =
       priority = 88,
       choices = MARINE_CLOSET_TUNE.WAKER,
       default = "default",
-      tooltip = "Influences the trigger that activates marines." ..
-	  "Sight: Marine closet activates once it can 'see' the player." ..
-	  "Range: Closet activates when player is close enough, even if behind wall." ..
-	  "Close Range: same as range except requires player to be really really close." ..
+      tooltip = "Influences the trigger that activates marines.\n\n" ..
+	  "Sight: Marine closet activates once it can 'see' the player.\n" ..
+	  "Range: Closet activates when player is close enough, even if behind wall.\n" ..
+	  "Close Range: same as range except requires player to be really really close.\n" ..
 	  "Map Start: Closets are active on map start.",
 	}
 	
@@ -890,11 +890,11 @@ OB_MODULES["gzdoom_marine_closets"] =
     m_c_strength =
     {
       name = "m_c_strength",
-      label = _("Monster Strength Multiplier"),
+      label = _("Monster Strength Modifier"),
       priority = 86,
       choices = MARINE_CLOSET_TUNE.STRENGTH,
       default = "default",
-      tooltip = "Influences strength of monsters in rooms with a marine closet.",
+      tooltip = "If set, this strength setting is used in the room with marine closet instead of normal one.",
     }
   }
 }]]
