@@ -950,7 +950,7 @@ OB_MODULES["modded_game_extras"] =
       name = "hd_cover_walls"
       label=_("HD Cover Walls")
       choices=MODDED_GAME_EXTRAS.ENABLE_DISABLE
-      tooltip = "Adds some Hideous Destructor-specific fabs such as walls with" ..
+      tooltip = "Adds some Hideous Destructor-specific fabs such as walls with " ..
       "cover to serve Hideous Destructor gameplay better. " ..
       "It is recommended to keep this disabled if you are not " ..
       "playing Hideous Destructor as these fabs will interfere with non-HD gameplay."
