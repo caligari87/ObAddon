@@ -2098,6 +2098,24 @@ function Fabricate(room, def, T, skins)
 
   Fab_substitutions(fab, SKIN)
   Fab_replacements (fab)
+  
+  if PARAM.marine_gen and not PARAM.marine_skip and room and fab.group == "marine_closet" then
+    if room.secondary_important and room.secondary_important.kind == "marine_closet" then
+      MARINE_CLOSET_TUNE.randomize_count()
+      local marines = PARAM.marine_marines
+      each E in fab.entities do
+	    if E.id and E.id >= 8001 and E.id <= 8010 then
+		  if marines > 0 then
+	        E.id = MARINE_CLOSET_TUNE.grab_type()
+			marines = marines - 1
+		  else
+		    E.id = 0
+     	  end
+	    end
+	  end
+	  if marines > 0 then warning("Failed to spawn marine") end
+	end
+  end
 
   fab.state = "skinned"
 

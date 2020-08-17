@@ -598,17 +598,17 @@ MARINE_CLOSET_TUNE.MAPINFO =
 
 MARINE_CLOSET_TUNE.TECHWPN =
 {
-[1] = { "AIMarinePistol" }
-[2] = { "AIMarineShotgun", "AIMarinePistol", "AIMarinePistol", "AIMarinePistol", "AIMarinePistol", "AIMarinePistol", "AIMarinePistol", "AIMarinePistol" }
-[3] = { "AIMarineShotgun", "AIMarineChaingun", "AIMarinePistol", "AIMarinePistol", "AIMarinePistol", "AIMarinePistol", "AIMarinePistol", "AIMarinePistol" }
-[4] = { "AIMarineShotgun", "AIMarineChaingun", "AIMarinePistol", "AIMarinePistol" }
-[5] = { "AIMarineShotgun", "AIMarineChaingun", "AIMarinePistol", "AIMarineShotgun", "AIMarineChaingun", "AIMarinePistol", "AIMarineShotgun", "AIMarineChaingun", "AIMarinePistol", "AIMarineSupershotgun" }
-[6] = { "AIMarineShotgun", "AIMarineChaingun", "AIMarinePistol", "AIMarineShotgun", "AIMarineChaingun", "AIMarinePlasma", "AIMarineShotgun", "AIMarineChaingun", "AIMarineRocket", "AIMarineSupershotgun" }
-[7] = { "AIMarineShotgun", "AIMarineChaingun", "AIMarinePistol", "AIMarineSupershotgun", "AIMarineChaingun", "AIMarinePlasma", "AIMarineRocket", "AIMarineSupershotgun" }
-[8] = { "AIMarineSupershotgun", "AIMarineSupershotgun", "AIMarineChaingun", "AIMarineSupershotgun", "AIMarinePlasma", "AIMarinePlasma", "AIMarineRocket" }
-[9] = { "AIMarinePlasma", "AIMarinePlasma", "AIMarinePlasma", "AIMarinePlasma", "AIMarineRocket", "AIMarineRocket", "AIMarineRocket", "AIMarineSupershotgun", "AIMarineBFG" }
-[10] = { "AIMarinePlasma", "AIMarineRocket", "AIMarineBFG" }
-[99] = { "AIMarinePistol", "AIMarinePistol", "AIMarinePistol", "AIMarineShotgun", "AIMarineShotgun", "AIMarineShotgun" ,"AIMarineChaingun" ,"AIMarineChaingun" ,"AIMarineChaingun", "AIMarineSupershotgun", "AIMarineSupershotgun", "AIMarinePlasma", "AIMarinePlasma", "AIMarineRocket", "AIMarineRocket", "AIMarineBFG" }
+[1] = { 31001 }
+[2] = { 31003, 31001, 31001, 31001, 31001, 31001, 31001, 31001 }
+[3] = { 31003, 31002, 31001, 31001, 31001, 31001, 31001, 31001 }
+[4] = { 31003, 31002, 31001, 31001 }
+[5] = { 31003, 31002, 31001, 31003, 31002, 31001, 31003, 31002, 31001, 31004 }
+[6] = { 31003, 31002, 31001, 31003, 31002, 31005, 31003, 31002, 31006, 31004 }
+[7] = { 31003, 31002, 31001, 31004, 31002, 31005, 31006, 31004 }
+[8] = { 31004, 31004, 31002, 31004, 31005, 31005, 31006 }
+[9] = { 31005, 31005, 31005, 31005, 31006, 31006, 31006, 31004, 31007 }
+[10] = { 31005, 31006, 31007 }
+[99] = { 31001, 31001, 31001, 31003, 31003, 31003 ,31002 ,31002 ,31002, 31004, 31004, 31005, 31005, 31006, 31006, 31007 }
 }
 
 function MARINE_CLOSET_TUNE.setup(self)
@@ -630,12 +630,8 @@ function MARINE_CLOSET_TUNE.calc_closets()
     local rngmin
     local rngmax
     PARAM.marine_skip = false
-	rngmin = tonumber(PARAM.m_c_min)
-	rngmax = tonumber(PARAM.m_c_max)
-	if rngmin > rngmax then
-	  rngmax = tonumber(PARAM.m_c_min)
-	  rngmin = tonumber(PARAM.m_c_max)
-    end
+	rngmin = math.min(tonumber(PARAM.m_c_min),tonumber(PARAM.m_c_max))
+	rngmax = math.max(tonumber(PARAM.m_c_min),tonumber(PARAM.m_c_max))
 	if PARAM.m_c_type == "default" then
 	  PARAM.marine_closets = rand.irange(rngmin,rngmax)
 	elseif PARAM.m_c_type == "prog" then
@@ -647,12 +643,8 @@ function MARINE_CLOSET_TUNE.calc_closets()
 	elseif PARAM.m_c_type == "epi2" then
 	  PARAM.marine_closets = rngmax - math.round((rngmax - rngmin) * LEVEL.ep_along)
 	end
-	rngmin = tonumber(PARAM.m_c_m_min)
-	rngmax = tonumber(PARAM.m_c_m_max)
-	if rngmin > rngmax then
-	  rngmax = tonumber(PARAM.m_c_m_min)
-	  rngmin = tonumber(PARAM.m_c_m_max)
-	end
+	rngmin = math.min(tonumber(PARAM.m_c_m_min),tonumber(PARAM.m_c_m_max))
+	rngmax = math.max(tonumber(PARAM.m_c_m_min),tonumber(PARAM.m_c_m_max))
 	if PARAM.m_c_m_type == "default" then
 	  PARAM.marine_marines = rand.irange(rngmin,rngmax)
 	elseif PARAM.m_c_m_type == "prog" then
@@ -686,6 +678,13 @@ end
 
 function MARINE_CLOSET_TUNE.grab_type()
    return rand.pick(MARINE_CLOSET_TUNE.TECHWPN[PARAM.marine_tech])
+end
+
+function MARINE_CLOSET_TUNE.randomize_count()
+   if PARAM.m_c_m_type != "default" then return end
+   local rngmin = math.min(tonumber(PARAM.m_c_m_min),tonumber(PARAM.m_c_m_max))
+   local rngmax = math.max(tonumber(PARAM.m_c_m_min),tonumber(PARAM.m_c_m_max))
+   PARAM.marine_marines = rand.irange(rngmin,rngmax)
 end
 
 function MARINE_CLOSET_TUNE.all_done()
