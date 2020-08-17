@@ -4783,9 +4783,9 @@ function Cave_prepare_scenic_vista(area)
 
   local fence_tab =
   {
-    fence = 2
-    railing = 4
-    wall = 2
+    fence = 3
+    railing = 5.5
+    wall = 1.5
   }
 
   local edge_tab =
