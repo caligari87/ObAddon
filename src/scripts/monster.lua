@@ -925,7 +925,7 @@ function Monster_fill_room(R)
       end
 
     end
-	
+
 	if PARAM.marine_gen and not PARAM.marine_skip and R.secondary_important.kind == "marine_closet" then
 	  if PARAM.m_c_quantity == "more" then
 	    qty = qty * 1.5
@@ -1173,10 +1173,10 @@ function Monster_fill_room(R)
     if R.is_secret and OB_CONFIG.secret_monsters == "yes" then return 1 / info.damage end
 
     local factor = default_level(info)
-	
+
 	if PARAM.marine_gen and not PARAM.marine_skip and R.secondary_important.kind == "marine_closet" then
 	  if PARAM.m_c_strength == "harder" then
-	    return 1.3 ^ factor 
+	    return 1.3 ^ factor
 	  elseif PARAM.m_c_strength == "tough" then
 	    return 1.7 ^ factor
 	  elseif PARAM.m_c_strength == "fierce" then
@@ -2056,10 +2056,16 @@ gui.debugf("wants =\n%s\n\n", table.tostr(wants))
         end
       elseif choice == "default" then
         min_val = 1
-      elseif choice == "harder" then
-        min_val = int(min_val + (spot_total * 0.33))
-      elseif choice == "fortified" then
+      elseif choice == "tricky" then
+        min_val = int(min_val + (spot_total * 0.15))
+      elseif choice == "treacherous" then
+        min_val = int(min_val + (spot_total * 0.25))
+      elseif choice == "dangerous" then
+        min_val = int(min_val + (spot_total * 0.50))
+      elseif choice == "deadly" then
         min_val = int(min_val + (spot_total * 0.66))
+        elseif choice == "lethal" then
+        min_val = int(min_val + (spot_total * 0.85))
       elseif choice == "crazy" then
         min_val = spot_total
       end
