@@ -108,9 +108,12 @@ UI_MONS.CAGE_STRENGTH =
 {
   "weaker",    _("Weaker"),
   "easier",    _("Easier"),
-  "default",   _("DEFAULT"),
-  "harder",    _("Harder"),
-  "fortified", _("Fierce"),
+  "default",   _("Average"),
+  "tricky",    _("Tricky"),
+  "treacherous", _("Treacherous"),
+  "dangerous", _("Dangerous"),
+  "deadly",    _("Deadly"),
+  "lethal",    _("Lethal"),
   "crazy",     _("CRAZY"),
 }
 
