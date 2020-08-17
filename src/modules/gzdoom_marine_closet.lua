@@ -154,7 +154,7 @@ class AIMarine : Actor
 	override void Tick()
 	{
 		super.Tick();
-		if(health > 0 && !self.bDormant)
+		if(health > 0 && !self.bDormant && self.bFriendly)
 		{
 		if(strafecd>0)
 		{
@@ -272,7 +272,7 @@ class AIMarine : Actor
 	}
 	override int DoSpecialDamage(Actor target, int damage, name damagetype)
 	{
-		if(target && (target is "PlayerPawn"||target is "AIMarine"))
+		if(target && (target is "PlayerPawn"||target is "AIMarine") && self.bFriendly)
 		{
 			return 0;
 		}
@@ -284,7 +284,7 @@ class PlasmaBallAIMarine : PlasmaBall
 {
 	override int DoSpecialDamage(Actor target, int damage, name damagetype)
 	{
-		if(target && (target is "PlayerPawn"||target is "AIMarine"))
+		if(target && (target is "PlayerPawn"||target is "AIMarine") && self.target && self.target.bFriendly)
 		{
 			return 0;
 		}
@@ -295,7 +295,7 @@ class RocketAIMarine : Rocket
 {
 	override int DoSpecialDamage(Actor target, int damage, name damagetype)
 	{
-		if(target && (target is "PlayerPawn"||target is "AIMarine"))
+		if(target && (target is "PlayerPawn"||target is "AIMarine") && self.target && self.target.bFriendly)
 		{
 			return 0;
 		}
@@ -306,7 +306,7 @@ class BFGBallAIMarine : BFGBall
 {
 	override int DoSpecialDamage(Actor target, int damage, name damagetype)
 	{
-		if(target && (target is "PlayerPawn"||target is "AIMarine"))
+		if(target && (target is "PlayerPawn"||target is "AIMarine") && self.target && self.target.bFriendly)
 		{
 			return 0;
 		}
@@ -357,7 +357,7 @@ class AIMarineWaker : Actor
 	{
 	Missile:
 		PLAY E 4 A_FaceTarget;
-		PLAY E 0 A_PlaySound("weapons/pistol");
+		PLAY E 0 A_StartSound("weapons/pistol");
 		PLAY F 6 BRIGHT A_CustomBulletAttack(9.6,0,1,5);
 		PLAY A 9 A_FaceTarget;
 		PLAY A 0 A_CposRefire;
@@ -370,9 +370,9 @@ class AIMarineChaingun : AIMarine
 	{
 	Missile:
 		PLAY E 4 A_FaceTarget;
-		PLAY E 0 A_PlaySound("weapons/pistol");
+		PLAY E 0 A_StartSound("weapons/pistol");
 		PLAY F 4 BRIGHT A_CustomBulletAttack(13.6,0,1,5);
-		PLAY E 0 A_PlaySound("weapons/pistol");
+		PLAY E 0 A_StartSound("weapons/pistol");
 		PLAY F 4 BRIGHT A_CustomBulletAttack(13.6,0,1,5);
 		PLAY A 0 A_CposRefire;
 		Goto Missile+1;
@@ -384,7 +384,7 @@ class AIMarineShotgun : AIMarine
 	{
 	Missile:
 		PLAY E 3 A_FaceTarget;
-		PLAY E 0 A_PlaySound("weapons/shotgf");
+		PLAY E 0 A_StartSound("weapons/shotgf");
 		PLAY F 7 BRIGHT A_CustomBulletAttack(5.6,0,7,5);
 		PLAY BCDABCDABCDABCD 4 A_Chase(null,null);
 		Goto See;
@@ -396,14 +396,14 @@ class AIMarineSuperShotgun : AIMarine
 	{
 	Missile:
 		PLAY E 3 A_FaceTarget;
-		PLAY E 0 A_PlaySound("weapons/sshotf");
+		PLAY E 0 A_StartSound("weapons/sshotf");
 		PLAY F 7 Bright A_CustomBulletAttack(11.2,7.1,20,5);
 		PLAY ABC 4 A_Chase(null,null);
-		PLAY A 0 A_PlaySound ("weapons/sshoto");
+		PLAY A 0 A_StartSound ("weapons/sshoto");
 		PLAY DABC 4 A_Chase(null,null);
-		PLAY A 0 A_PlaySound ("weapons/sshotl");
+		PLAY A 0 A_StartSound ("weapons/sshotl");
 		PLAY DAB 4 A_Chase(null,null);
-		PLAY A 0 A_PlaySound ("weapons/sshotc");
+		PLAY A 0 A_StartSound ("weapons/sshotc");
 		PLAY CDABCDABCDABCD 4 A_Chase(null,null);
 		Goto See;
 	}
@@ -438,7 +438,7 @@ class AIMarineBFG : AIMarine
 	States
 	{
 	Missile:
-		PLAY E 5 A_PlaySound("weapons/bfgf");
+		PLAY E 5 A_StartSound("weapons/bfgf");
 		PLAY EEEEE 5 A_FaceTarget;
 		PLAY F 6 Bright A_SpawnProjectile("BFGBallAIMarine");
 		PLAY E 4 A_FaceTarget;
@@ -454,7 +454,7 @@ class AIMarineBFG : AIMarine
 	{
 	Missile:
 		PLAY E 4 A_FaceTarget;
-		PLAY E 0 A_PlaySound("weapons/pistol");
+		PLAY E 0 A_StartSound("weapons/pistol");
 		PLAY F 6 BRIGHT A_CustomBulletAttack(5.6,0,1,5);
 		PLAY A 4 A_FaceTarget;
 		PLAY A 0 A_CposRefire;
@@ -467,9 +467,9 @@ class AIMarineChaingun : AIMarine
 	{
 	Missile:
 		PLAY E 4 A_FaceTarget;
-		PLAY E 0 A_PlaySound("weapons/pistol");
+		PLAY E 0 A_StartSound("weapons/pistol");
 		PLAY F 4 BRIGHT A_CustomBulletAttack(5.6,0,1,5);
-		PLAY E 0 A_PlaySound("weapons/pistol");
+		PLAY E 0 A_StartSound("weapons/pistol");
 		PLAY F 4 BRIGHT A_CustomBulletAttack(5.6,0,1,5);
 		PLAY A 0 A_CposRefire;
 		Goto Missile+1;
@@ -481,7 +481,7 @@ class AIMarineShotgun : AIMarine
 	{
 	Missile:
 		PLAY E 3 A_FaceTarget;
-		PLAY E 0 A_PlaySound("weapons/shotgf");
+		PLAY E 0 A_StartSound("weapons/shotgf");
 		PLAY F 7 BRIGHT A_CustomBulletAttack(5.6,0,7,5);
 		PLAY BCDABCD 4 A_Chase(null,null);
 		Goto See;
@@ -493,14 +493,14 @@ class AIMarineSuperShotgun : AIMarine
 	{
 	Missile:
 		PLAY E 3 A_FaceTarget;
-		PLAY E 0 A_PlaySound("weapons/sshotf");
+		PLAY E 0 A_StartSound("weapons/sshotf");
 		PLAY F 7 Bright A_CustomBulletAttack(11.2,7.1,20,5);
 		PLAY ABC 4 A_Chase(null,null);
-		PLAY A 0 A_PlaySound ("weapons/sshoto");
+		PLAY A 0 A_StartSound ("weapons/sshoto");
 		PLAY DABC 4 A_Chase(null,null);
-		PLAY A 0 A_PlaySound ("weapons/sshotl");
+		PLAY A 0 A_StartSound ("weapons/sshotl");
 		PLAY DAB 4 A_Chase(null,null);
-		PLAY A 0 A_PlaySound ("weapons/sshotc");
+		PLAY A 0 A_StartSound ("weapons/sshotc");
 		PLAY CD 4 A_Chase(null,null);
 		Goto See;
 	}
@@ -537,7 +537,7 @@ class AIMarineBFG : AIMarine
 	{
 	Missile:
 		PLAY E 0 {self.bNOPAIN=1;}
-		PLAY E 5 A_PlaySound("weapons/bfgf");
+		PLAY E 5 A_StartSound("weapons/bfgf");
 		PLAY EEEEE 5 A_FaceTarget;
 		PLAY F 6 Bright A_SpawnProjectile("BFGBallAIMarine");
 		PLAY F 0 {self.bNOPAIN=0;}
