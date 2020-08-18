@@ -100,6 +100,7 @@ class AIMarine : Actor
 	int backcd;
 	int scancd;
 	int followcd;
+	int forgetcd;
 	bool seenplayer;
 	Default
 	{
@@ -172,6 +173,14 @@ class AIMarine : Actor
 		{
 			followcd--;
 		}
+		if(forgetcd>0)
+		{
+			forgetcd--;
+		}
+		if(forgetcd==0)
+		{
+			A_ClearTarget();
+		}
 		if(scancd==0)
 		{
 			ThinkerIterator picker = ThinkerIterator.Create("Actor");
@@ -191,6 +200,7 @@ class AIMarine : Actor
 		}
 		if(self.target && CheckSight(self.target))
 		{
+			forgetcd = 1000;
 			if(self.Distance2D(target)<200 && backcd==0)
 			{
 				A_ChangeVelocity(-20,0,0,1);
@@ -211,7 +221,7 @@ class AIMarine : Actor
 					strafecd = random(20,50);
 				}
 			}
-			if((self.target.target && !self.target.CheckSight(self.target.target))||!self.target.target)
+			if((self.target.target && !self.target.CheckSight(self.target.target))||!self.target.target||(self.target.target && ((self.target.Distance2D(self)-self.target.Distance2D(self.target.target)) < -100)))
 			{
 				self.target.target = self;
 				ThinkerIterator Aggro = ThinkerIterator.Create("Actor");
@@ -220,7 +230,7 @@ class AIMarine : Actor
 				{
 					if(allattack && self.Distance2D(allattack) < 2048 && CheckSight(allattack) && allattack.bIsMonster && !allattack.bFriendly && allattack.health > 0)
 					{
-						if(!allattack.target || (allattack.target&&!allattack.CheckSight(allattack.target)))
+						if(!allattack.target || (allattack.target&&!allattack.CheckSight(allattack.target)) || (allattack.target && ((allattack.Distance2D(self)-allattack.Distance2D(allattack.target)) < -100)))
 						{
 							allattack.target = self;
 							if(allattack.inStateSequence(allattack.CurState,allattack.ResolveState("Spawn")))
