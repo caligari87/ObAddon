@@ -27,11 +27,13 @@ MARINE_CLOSET_TUNE.COUNT =
 
 MARINE_CLOSET_TUNE.TECH =
 {
+  "vlow",    _("Very Low Tech"),
   "low",    _("Low Tech"),
   "mid",    _("Mid Tech"),
   "high",    _("High Tech"),
   "rng",    _("Mix It Up"),
   "prog",    _("Progressive"),
+  "bfg",    _("BFG Fiesta"),
 }
 
 MARINE_CLOSET_TUNE.YN =
@@ -187,7 +189,7 @@ class AIMarine : Actor
 			Actor newtarget;
 			while(newtarget = Actor(picker.Next()))
 			{
-				if(newtarget && self.Distance2D(newtarget) < 2048 && CheckSight(newtarget) && newtarget.bIsMonster && !newtarget.bFriendly && newtarget.health > 0)
+				if(newtarget && self.Distance2D(newtarget) < 2048 && CheckSight(newtarget) && newtarget.bIsMonster && !newtarget.bFriendly && newtarget.health > 0 && newtarget.bShootable)
 				{
 					if(!self.target || (self.target && ((self.Distance2D(newtarget)-self.Distance2D(self.target)) < -100)))
 					{
@@ -198,7 +200,7 @@ class AIMarine : Actor
 			}
 			scancd = 35;
 		}
-		if(self.target && CheckSight(self.target))
+		if(self.target && CheckSight(self.target) && self.target.health > 0 && self.target.bShootable)
 		{
 			forgetcd = 1000;
 			if(self.Distance2D(target)<200 && backcd==0)
@@ -349,7 +351,7 @@ class AIMarineWaker : Actor
 				Actor targetthis;
 				while(targetthis = Actor(Enemies.Next()))
 				{
-					if(targetthis && targetthis.bISMONSTER && !targetthis.bFriendly && targetthis.health > 0 && self.Distance2D(targetthis) < 2000 && self.CheckSight(targetthis))
+					if(targetthis && targetthis.bISMONSTER && !targetthis.bFriendly && targetthis.health > 0 && self.Distance2D(targetthis) < 2000 && self.CheckSight(targetthis) && targetthis.bShootable)
 					{
 						chosenone.target = targetthis;
 						break;
@@ -618,6 +620,7 @@ MARINE_CLOSET_TUNE.TECHWPN =
 [8] = { 31004, 31004, 31002, 31004, 31005, 31005, 31006 }
 [9] = { 31005, 31005, 31005, 31005, 31006, 31006, 31006, 31004, 31007 }
 [10] = { 31005, 31006, 31007 }
+[66] = { 31007 }
 [99] = { 31001, 31001, 31001, 31003, 31003, 31003 ,31002 ,31002 ,31002, 31004, 31004, 31005, 31005, 31006, 31006, 31007 }
 }
 
@@ -666,7 +669,9 @@ function MARINE_CLOSET_TUNE.calc_closets()
 	elseif PARAM.m_c_m_type == "epi2" then
 	  PARAM.marine_marines = rngmax - math.round((rngmax - rngmin) * LEVEL.ep_along)
 	end
-	if PARAM.m_c_tech == "low" then
+	if PARAM.m_c_tech == "vlow" then
+		PARAM.marine_tech = 1
+	elseif PARAM.m_c_tech == "low" then
 		PARAM.marine_tech = rand.irange(1,3)
 	elseif PARAM.m_c_tech == "mid" then
 		PARAM.marine_tech = rand.irange(5,7)
@@ -674,6 +679,8 @@ function MARINE_CLOSET_TUNE.calc_closets()
 		PARAM.marine_tech = rand.irange(8,9)
 	elseif PARAM.m_c_tech == "rng" then
 		PARAM.marine_tech = 99
+	elseif PARAM.m_c_tech == "bfg" then
+		PARAM.marine_tech = 66
 	elseif PARAM.m_c_tech == "prog" then
 		if LEVEL.game_along < 1.0 then
 			PARAM.marine_tech = math.ceil(LEVEL.game_along * 10)
@@ -834,11 +841,13 @@ OB_MODULES["gzdoom_marine_closets"] =
       choices = MARINE_CLOSET_TUNE.TECH,
       default = "mid",
       tooltip = "Influences weapons that marines spawn with:\n\n" ..
+	  "Very Low tech: Clearing demonic invasion with nothing but pistols and harsh language\n" ..
       "Low tech: Pistols, with some rare chainguns and shotguns\n" ..
 	  "Mid tech: Shotguns/Chainguns with some rare pistols, super shotguns, rocket launchers and plasma rifles\n" ..
 	  "High tech: Rocket launchers/Plasma rifles with some rare BFGs and super shotguns\n" ..
-	  "Mix it up: Any weapon goes\n" ..
-	  "Progressive: Marines start with pistols and get more powerful through episode/megawad",
+	  "Mix it up: Any weapon goes, let the dice decide!\n" ..
+	  "BFG Fiesta: BFG only, cyberdemons beware!\n" ..
+	  "Progressive: Marines start with pistols and get more powerful weapons through episode/megawad",
     }
 
     m_c_power =
@@ -878,7 +887,7 @@ OB_MODULES["gzdoom_marine_closets"] =
       label = _("Trigger Type"),
       priority = 88,
       choices = MARINE_CLOSET_TUNE.WAKER,
-      default = "default",
+      default = "sight",
       tooltip = "Influences the trigger that activates marines.\n\n" ..
 	  "Sight: Marine closet activates once it can 'see' the player.\n" ..
 	  "Range: Closet activates when player is close enough, even if behind wall.\n" ..
