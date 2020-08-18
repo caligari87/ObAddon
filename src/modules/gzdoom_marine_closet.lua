@@ -340,7 +340,7 @@ class AIMarineWaker : Actor
 		AIMarine chosenone;
 		while(chosenone = AIMarine(Marines.Next()))
 		{
-			if(chosenone && self.Distance2D(chosenone) < 512)
+			if(chosenone && chosenone.health > 0 && chosenone.bFriendly && self.Distance2D(chosenone) < 512)
 			{
 				chosenone.Activate(self);
 				chosenone.followcd=1000;
