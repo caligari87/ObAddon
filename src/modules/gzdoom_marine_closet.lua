@@ -157,7 +157,7 @@ class AIMarine : Actor
 	override void Tick()
 	{
 		super.Tick();
-		if(health > 0 && !self.bDormant && self.bFriendly)
+		if(health > 0 && !self.bDormant)
 		{
 		if(strafecd>0)
 		{
@@ -167,6 +167,8 @@ class AIMarine : Actor
 		{
 			backcd--;
 		}
+		if(self.bFriendly)
+		{
 		if(scancd>0)
 		{
 			scancd--;
@@ -199,50 +201,6 @@ class AIMarine : Actor
 				}
 			}
 			scancd = 35;
-		}
-		if(self.target && CheckSight(self.target) && self.target.health > 0 && self.target.bShootable)
-		{
-			forgetcd = 1000;
-			if(self.Distance2D(target)<200 && backcd==0)
-			{
-				A_ChangeVelocity(-20,0,0,1);
-				backcd = random(10,30);
-			}
-			if(strafecd==0)
-			{
-				if(InStateSequence(Curstate,ResolveState("See"))||InStateSequence(Curstate,ResolveState("Missile")))
-				{
-					if(random(0,1))
-					{
-						A_ChangeVelocity(0,20,0,1);
-					}
-					else
-					{
-						A_ChangeVelocity(0,-20,0,1);
-					}
-					strafecd = random(20,50);
-				}
-			}
-			if((self.target.target && !self.target.CheckSight(self.target.target))||!self.target.target||(self.target.target && ((self.target.Distance2D(self)-self.target.Distance2D(self.target.target)) < -100)))
-			{
-				self.target.target = self;
-				ThinkerIterator Aggro = ThinkerIterator.Create("Actor");
-				Actor allattack;
-				while(allattack = Actor(Aggro.Next()))
-				{
-					if(allattack && self.Distance2D(allattack) < 2048 && CheckSight(allattack) && allattack.bIsMonster && !allattack.bFriendly && allattack.health > 0)
-					{
-						if(!allattack.target || (allattack.target&&!allattack.CheckSight(allattack.target)) || (allattack.target && ((allattack.Distance2D(self)-allattack.Distance2D(allattack.target)) < -100)))
-						{
-							allattack.target = self;
-							if(allattack.inStateSequence(allattack.CurState,allattack.ResolveState("Spawn")))
-							{
-								allattack.setStateLabel("See");
-							}
-						}
-					}
-				}
-			}
 		}
 		if(follower)
 		{
@@ -281,50 +239,73 @@ class AIMarine : Actor
 			}
 		}
 		}
+		if(self.target && CheckSight(self.target) && self.target.health > 0 && self.target.bShootable)
+		{
+			if(self.Distance2D(target)<200 && backcd==0)
+			{
+				A_ChangeVelocity(-20,0,0,1);
+				backcd = random(10,30);
+			}
+			if(strafecd==0)
+			{
+				if(InStateSequence(Curstate,ResolveState("See"))||InStateSequence(Curstate,ResolveState("Missile")))
+				{
+					if(random(0,1))
+					{
+						A_ChangeVelocity(0,20,0,1);
+					}
+					else
+					{
+						A_ChangeVelocity(0,-20,0,1);
+					}
+					strafecd = random(20,50);
+				}
+			}
+			if(self.bFriendly)
+			{
+			forgetcd = 1000;
+			if((self.target.target && !self.target.CheckSight(self.target.target))||!self.target.target||(self.target.target && ((self.target.Distance2D(self)-self.target.Distance2D(self.target.target)) < -100)))
+			{
+				self.target.target = self;
+				ThinkerIterator Aggro = ThinkerIterator.Create("Actor");
+				Actor allattack;
+				while(allattack = Actor(Aggro.Next()))
+				{
+					if(allattack && self.Distance2D(allattack) < 2048 && CheckSight(allattack) && allattack.bIsMonster && !allattack.bFriendly && allattack.health > 0)
+					{
+						if(!allattack.target || (allattack.target&&!allattack.CheckSight(allattack.target)) || (allattack.target && ((allattack.Distance2D(self)-allattack.Distance2D(allattack.target)) < -100)))
+						{
+							allattack.target = self;
+							if(allattack.inStateSequence(allattack.CurState,allattack.ResolveState("Spawn")))
+							{
+								allattack.setStateLabel("See");
+							}
+						}
+					}
+				}
+			}
+			}
+		}
+		}
 	}
 	override int DoSpecialDamage(Actor target, int damage, name damagetype)
 	{
-		if(target && (target is "PlayerPawn"||target is "AIMarine") && self.bFriendly)
+		if(target && target is "PlayerPawn" && self.bFriendly)
 		{
 			return 0;
 		}
 		return super.DoSpecialDamage(target,damage,damagetype);
+	}
+	override int TakeSpecialDamage(Actor inflictor, Actor source, int damage, Name damagetype)
+	{
+		if(source && source is "AIMarine" && source.bFriendly && self.bFriendly)
+		{
+			return 0;
+		}
+		return super.TakeSpecialDamage(inflictor,source,damage,damagetype);
 	}
 }
 
-class PlasmaBallAIMarine : PlasmaBall
-{
-	override int DoSpecialDamage(Actor target, int damage, name damagetype)
-	{
-		if(target && (target is "PlayerPawn"||target is "AIMarine") && self.target && self.target.bFriendly)
-		{
-			return 0;
-		}
-		return super.DoSpecialDamage(target,damage,damagetype);
-	}
-}
-class RocketAIMarine : Rocket
-{
-	override int DoSpecialDamage(Actor target, int damage, name damagetype)
-	{
-		if(target && (target is "PlayerPawn"||target is "AIMarine") && self.target && self.target.bFriendly)
-		{
-			return 0;
-		}
-		return super.DoSpecialDamage(target,damage,damagetype);
-	}
-}
-class BFGBallAIMarine : BFGBall
-{
-	override int DoSpecialDamage(Actor target, int damage, name damagetype)
-	{
-		if(target && (target is "PlayerPawn"||target is "AIMarine") && self.target && self.target.bFriendly)
-		{
-			return 0;
-		}
-		return super.DoSpecialDamage(target,damage,damagetype);
-	}
-}
 class AIMarineWaker : Actor
 {
 	Default
@@ -370,7 +351,7 @@ class AIMarineWaker : Actor
 	Missile:
 		PLAY E 4 A_FaceTarget;
 		PLAY E 0 A_StartSound("weapons/pistol");
-		PLAY F 6 BRIGHT A_CustomBulletAttack(9.6,0,1,5);
+		PLAY F 6 BRIGHT A_CustomBulletAttack(9.6,0,1,5,"BulletPuff");
 		PLAY A 9 A_FaceTarget;
 		PLAY A 0 A_CposRefire;
 		Goto Missile;
@@ -383,9 +364,9 @@ class AIMarineChaingun : AIMarine
 	Missile:
 		PLAY E 4 A_FaceTarget;
 		PLAY E 0 A_StartSound("weapons/pistol");
-		PLAY F 4 BRIGHT A_CustomBulletAttack(13.6,0,1,5);
+		PLAY F 4 BRIGHT A_CustomBulletAttack(13.6,0,1,5,"BulletPuff");
 		PLAY E 0 A_StartSound("weapons/pistol");
-		PLAY F 4 BRIGHT A_CustomBulletAttack(13.6,0,1,5);
+		PLAY F 4 BRIGHT A_CustomBulletAttack(13.6,0,1,5,"BulletPuff");
 		PLAY A 0 A_CposRefire;
 		Goto Missile+1;
 	}
@@ -397,7 +378,7 @@ class AIMarineShotgun : AIMarine
 	Missile:
 		PLAY E 3 A_FaceTarget;
 		PLAY E 0 A_StartSound("weapons/shotgf");
-		PLAY F 7 BRIGHT A_CustomBulletAttack(5.6,0,7,5);
+		PLAY F 7 BRIGHT A_CustomBulletAttack(5.6,0,7,5,"BulletPuff");
 		PLAY BCDABCDABCDABCD 4 A_Chase(null,null);
 		Goto See;
 	}
@@ -409,7 +390,7 @@ class AIMarineSuperShotgun : AIMarine
 	Missile:
 		PLAY E 3 A_FaceTarget;
 		PLAY E 0 A_StartSound("weapons/sshotf");
-		PLAY F 7 Bright A_CustomBulletAttack(11.2,7.1,20,5);
+		PLAY F 7 Bright A_CustomBulletAttack(11.2,7.1,20,5,"BulletPuff");
 		PLAY ABC 4 A_Chase(null,null);
 		PLAY A 0 A_StartSound ("weapons/sshoto");
 		PLAY DABC 4 A_Chase(null,null);
@@ -426,7 +407,7 @@ class AIMarinePlasma : AIMarine
 	{
 	Missile:
 		PLAY E 2 A_FaceTarget;
-		PLAY F 6 Bright A_SpawnProjectile("PlasmaBallAIMarine");
+		PLAY F 6 Bright A_SpawnProjectile("PlasmaBall");
 		PLAY E 0 A_MonsterRefire(40,"MissileOver");
 		Goto Missile+1;
 	MissileOver:
@@ -440,7 +421,7 @@ class AIMarineRocket : AIMarine
 	{
 	Missile:
 		PLAY E 8 A_FaceTarget;
-		PLAY F 6 Bright A_SpawnProjectile("RocketAIMarine");
+		PLAY F 6 Bright A_SpawnProjectile("Rocket");
 		PLAY E 6;
 		Goto See;
 	}
@@ -452,7 +433,7 @@ class AIMarineBFG : AIMarine
 	Missile:
 		PLAY E 5 A_StartSound("weapons/bfgf");
 		PLAY EEEEE 5 A_FaceTarget;
-		PLAY F 6 Bright A_SpawnProjectile("BFGBallAIMarine");
+		PLAY F 6 Bright A_SpawnProjectile("BFGBall");
 		PLAY E 4 A_FaceTarget;
 		PLAY CDABCDABCDABCD 4 A_Chase(null,null);
 		Goto See;
@@ -467,7 +448,7 @@ class AIMarineBFG : AIMarine
 	Missile:
 		PLAY E 4 A_FaceTarget;
 		PLAY E 0 A_StartSound("weapons/pistol");
-		PLAY F 6 BRIGHT A_CustomBulletAttack(5.6,0,1,5);
+		PLAY F 6 BRIGHT A_CustomBulletAttack(5.6,0,1,5,"BulletPuff");
 		PLAY A 4 A_FaceTarget;
 		PLAY A 0 A_CposRefire;
 		Goto Missile;
@@ -480,9 +461,9 @@ class AIMarineChaingun : AIMarine
 	Missile:
 		PLAY E 4 A_FaceTarget;
 		PLAY E 0 A_StartSound("weapons/pistol");
-		PLAY F 4 BRIGHT A_CustomBulletAttack(5.6,0,1,5);
+		PLAY F 4 BRIGHT A_CustomBulletAttack(5.6,0,1,5,"BulletPuff");
 		PLAY E 0 A_StartSound("weapons/pistol");
-		PLAY F 4 BRIGHT A_CustomBulletAttack(5.6,0,1,5);
+		PLAY F 4 BRIGHT A_CustomBulletAttack(5.6,0,1,5,"BulletPuff");
 		PLAY A 0 A_CposRefire;
 		Goto Missile+1;
 	}
@@ -494,7 +475,7 @@ class AIMarineShotgun : AIMarine
 	Missile:
 		PLAY E 3 A_FaceTarget;
 		PLAY E 0 A_StartSound("weapons/shotgf");
-		PLAY F 7 BRIGHT A_CustomBulletAttack(5.6,0,7,5);
+		PLAY F 7 BRIGHT A_CustomBulletAttack(5.6,0,7,5,"BulletPuff");
 		PLAY BCDABCD 4 A_Chase(null,null);
 		Goto See;
 	}
@@ -506,7 +487,7 @@ class AIMarineSuperShotgun : AIMarine
 	Missile:
 		PLAY E 3 A_FaceTarget;
 		PLAY E 0 A_StartSound("weapons/sshotf");
-		PLAY F 7 Bright A_CustomBulletAttack(11.2,7.1,20,5);
+		PLAY F 7 Bright A_CustomBulletAttack(11.2,7.1,20,5,"BulletPuff");
 		PLAY ABC 4 A_Chase(null,null);
 		PLAY A 0 A_StartSound ("weapons/sshoto");
 		PLAY DABC 4 A_Chase(null,null);
@@ -523,7 +504,7 @@ class AIMarinePlasma : AIMarine
 	{
 	Missile:
 		PLAY E 2 A_FaceTarget;
-		PLAY F 3 Bright A_SpawnProjectile("PlasmaBallAIMarine");
+		PLAY F 3 Bright A_SpawnProjectile("PlasmaBall");
 		PLAY E 0 A_MonsterRefire(40,"MissileOver");
 		Goto Missile+1;
 	MissileOver:
@@ -537,7 +518,7 @@ class AIMarineRocket : AIMarine
 	{
 	Missile:
 		PLAY E 8 A_FaceTarget;
-		PLAY F 6 Bright A_SpawnProjectile("RocketAIMarine");
+		PLAY F 6 Bright A_SpawnProjectile("Rocket");
 		PLAY E 6;
 		PLAY E 0 A_CposRefire;
 		Goto Missile;
@@ -551,7 +532,7 @@ class AIMarineBFG : AIMarine
 		PLAY E 0 {self.bNOPAIN=1;}
 		PLAY E 5 A_StartSound("weapons/bfgf");
 		PLAY EEEEE 5 A_FaceTarget;
-		PLAY F 6 Bright A_SpawnProjectile("BFGBallAIMarine");
+		PLAY F 6 Bright A_SpawnProjectile("BFGBall");
 		PLAY F 0 {self.bNOPAIN=0;}
 		PLAY E 4 A_FaceTarget;
 		PLAY E 0 A_MonsterRefire(40,"MissileOver");
@@ -592,6 +573,56 @@ class AIMarineBFG : AIMarine
 		TNT1 A 4;
 		Stop;
   ]]
+  PROJREP = [[class BulletPuffAIMarine : BulletPuff
+{
+	Default
+	{
+		+PUFFGETSOWNER
+	}
+	override int DoSpecialDamage(Actor target, int damage, name damagetype)
+	{
+		if(target && target is "PlayerPawn" && self.target && self.target.bFriendly)
+		{
+			return 0;
+		}
+		return super.DoSpecialDamage(target,damage,damagetype);
+	}
+}
+
+class PlasmaBallAIMarine : PlasmaBall
+{
+	override int DoSpecialDamage(Actor target, int damage, name damagetype)
+	{
+		if(target && target is "PlayerPawn" && self.target && self.target.bFriendly)
+		{
+			return 0;
+		}
+		return super.DoSpecialDamage(target,damage,damagetype);
+	}
+}
+class RocketAIMarine : Rocket
+{
+	override int DoSpecialDamage(Actor target, int damage, name damagetype)
+	{
+		if(target && target is "PlayerPawn" && self.target && self.target.bFriendly)
+		{
+			return 0;
+		}
+		return super.DoSpecialDamage(target,damage,damagetype);
+	}
+}
+class BFGBallAIMarine : BFGBall
+{
+	override int DoSpecialDamage(Actor target, int damage, name damagetype)
+	{
+		if(target && (target is "PlayerPawn"||target is "AIMarine") && self.target && self.target.bFriendly)
+		{
+			return 0;
+		}
+		return super.DoSpecialDamage(target,damage,damagetype);
+	}
+}
+]]
 }
 
 MARINE_CLOSET_TUNE.MAPINFO =
@@ -730,6 +761,14 @@ function MARINE_CLOSET_TUNE.all_done()
     scripty = string.gsub(scripty, "WSTATE", MARINE_CLOSET_TUNE.TEMPLATES.WAKER3)
   else
     scripty = string.gsub(scripty, "WSTATE", MARINE_CLOSET_TUNE.TEMPLATES.WAKER4)
+  end
+  
+  if PARAM.m_c_ff == "no" then
+    scripty = scripty .. MARINE_CLOSET_TUNE.TEMPLATES.PROJREP
+	scripty = string.gsub(scripty, "\"BulletPuff\"", "\"BulletPuffAIMarine\"")
+	scripty = string.gsub(scripty, "\"PlasmaBall\"", "\"PlasmaBallAIMarine\"")
+	scripty = string.gsub(scripty, "\"Rocket\"", "\"RocketAIMarine\"")
+	scripty = string.gsub(scripty, "\"BFGBall\"", "\"BFGBallAIMarine\"")
   end
   
   PARAM.MARINESCRIPT = PARAM.MARINESCRIPT .. scripty
@@ -913,6 +952,16 @@ OB_MODULES["gzdoom_marine_closets"] =
       choices = MARINE_CLOSET_TUNE.STRENGTH,
       default = "default",
       tooltip = "If set, this strength setting is used in the room with marine closet instead of normal one.",
+    }
+    m_c_ff =
+    {
+      name = "m_c_ff",
+      label = _("Friendly Fire"),
+      priority = 85,
+      choices = MARINE_CLOSET_TUNE.YN,
+      default = "no",
+      tooltip = "By default marines do no damage to player. However that means their use their own version of puffs and projectiles.\n" ..
+	  "If this is enabled marines can damage player and original puffs and projectiles are used making them affected by mods that replace those.",
     }
   }
 }]]
