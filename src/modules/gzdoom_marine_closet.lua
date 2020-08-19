@@ -157,6 +157,10 @@ class AIMarine : Actor
 	override void Tick()
 	{
 		super.Tick();
+		if(inStateSequence(CurState,ResolveState("See"))&&self.bDormant)
+		{
+			self.bDormant = false;
+		}
 		if(health > 0 && !self.bDormant)
 		{
 		if(strafecd>0)
