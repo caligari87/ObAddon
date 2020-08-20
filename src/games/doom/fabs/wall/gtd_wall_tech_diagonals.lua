@@ -3,7 +3,7 @@ PREFABS.Wall_tech_diag_outcrop =
   file   = "wall/gtd_wall_tech_diagonals.wad"
   map    = "MAP01"
 
-  prob   = 50
+  prob   = 25
   theme = "tech"
   env   = "building"
 
@@ -45,4 +45,31 @@ PREFABS.Wall_tech_diag_overhead_roof =
   env    = "outdoor"
 
   z_fit  = { 32,40 }
+}
+
+PREFABS.Wall_diag_generic_top_band =
+{
+  template = "Wall_tech_diag_outcrop"
+  map = "MAP04"
+
+  prob = 50
+
+  env = "any"
+
+  tex_METAL5 =
+  {
+    METAL2 = 2
+    METAL3 = 1
+    METAL5 = 1
+  }
+}
+
+PREFABS.Wall_diag_generic_side_band =
+{
+  template = "Wall_tech_diag_outcrop"
+  map = "MAP05"
+
+  prob = 50
+
+  env = "any"
 }
