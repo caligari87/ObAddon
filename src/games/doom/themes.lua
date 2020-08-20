@@ -1392,6 +1392,12 @@ DOOM.THEMES =
       BRNSMALC = 2
     }
 
+    sink_style =
+    {
+      sharp = 1
+      curved = 0.1
+    }
+
     skyboxes =
     {
       Skybox_generic = 50
@@ -1718,6 +1724,12 @@ DOOM.THEMES =
       MIDSPACE = 8
       MIDBARS1 = 8
       BRNSMALC = 2
+    }
+
+    sink_style =
+    {
+      sharp = 1
+      curved = 1
     }
 
     skyboxes =
@@ -2143,6 +2155,12 @@ DOOM.THEMES =
       MIDBRN1 = 3
       MIDGRATE = 10
       MIDBARS3 = 8
+    }
+
+    sink_style =
+    {
+      sharp = 0.1
+      curved = 1
     }
 
     skyboxes =

@@ -54,6 +54,7 @@ MISC_STUFF.LIVEMAP_CHOICES =
 
 MISC_STUFF.SINK_STYLE_CHOICES =
 {
+  "themed", _("Per Theme"),
   "curved", _("Curved"),
   "sharp", _("Sharp"),
   "random", _("Random"),
@@ -209,9 +210,11 @@ OB_MODULES["misc"] =
       label=_("Sink Style"),
       choices=MISC_STUFF.SINK_STYLE_CHOICES,
       tooltip = "Determines the style for corners with sunken " ..
-                "ceilings and floors. Default is Curved, where Oblige makes sink " ..
-                "corners soft, while Sharp leaves the corners angular.",
-      default = "random",
+                "ceilings and floors. Curved makes sink " ..
+                "corners soft, while Sharp leaves the corners angular. " ..
+                "Per Theme means choice is controlled by theme profile instead. " ..
+                "Tech-ish maps favor sharp corners while hell-ish favor curved.",
+      default = "themed",
     }
     {
       name = "liquid_sinks"

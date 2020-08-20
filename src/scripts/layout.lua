@@ -1376,6 +1376,10 @@ function Layout_decorate_rooms(pass)
 
     if A.room then
       reqs.env = A.room:get_env()
+
+      if A.room.theme.theme_override then
+        reqs.theme_override = A.room.theme.theme_override
+      end
     end
 
     local prefab_def = Fab_pick(reqs, "allow_none")

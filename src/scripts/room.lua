@@ -3569,15 +3569,11 @@ end
     -- corner style decision -MSSP
     if not R.is_outdoor then
       if PARAM.corner_style == "random" then
-        if rand.odds(50) then
-          R.corner_style = "curved"
-        else
-          R.corner_style = "sharp"
-        end
-      elseif PARAM.corner_style == "sharp" then
-        R.corner_style = "sharp"
-      elseif PARAM.corner_style == "curved" then
-        R.corner_style = "curved"
+        R.corner_style = rand.pick({"sharp","curved"})
+      elseif PARAM.corner_style == "themed" then
+        R.corner_style = rand.key_by_probs(THEME.sink_style)
+      else
+        R.corner_style = PARAM.corner_style
       end
     elseif R.is_outdoor then
       R.corner_style = "sharp"

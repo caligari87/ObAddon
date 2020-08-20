@@ -743,6 +743,12 @@ ULTDOOM.THEMES =
       skull   = 0.2
     }
 
+    sink_style =
+    {
+      sharp = 1
+      curved = 0.1
+    }
+
     skyboxes =
     {
       Skybox_generic = 50
@@ -830,6 +836,12 @@ ULTDOOM.THEMES =
       BROVINE2 = 30
       GRAY1    = 20
       ICKWALL3 = 20
+    }
+
+    sink_style =
+    {
+      curved = 1
+      sharp = 1
     }
 
     skyboxes =
@@ -1235,6 +1247,12 @@ ULTDOOM.THEMES =
       MIDGRATE = 12
     }
 
+    sink_style =
+    {
+      sharp = 0.1
+      curved = 1
+    }
+
     skyboxes =
     {
       Skybox_garrett_hell = 50
@@ -1506,6 +1524,12 @@ ULTDOOM.THEMES =
     scenic_fences =
     {
       MIDGRATE = 50
+    }
+
+    sink_style =
+    {
+      sharp = 1
+      curved = 1
     }
 
     skyboxes =
