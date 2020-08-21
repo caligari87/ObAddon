@@ -439,15 +439,15 @@ Texture "T_SHAWCR", 128, 64
 
 Texture "T_RAILST", 64, 192
 {
-	Patch "RAIL1", 0, 0
-	Patch "RAIL1", 0, 64
+    Patch "RAIL1", 0, 0
+    Patch "RAIL1", 0, 64
 }
 
 Texture "T_RAILS2", 64, 320
 {
-	Patch "RAIL1", 0, 0
-	Patch "RAIL1", 0, 64
-	Patch "RAIL1", 0, 128
-	Patch "RAIL1", 0, 192
+    Patch "RAIL1", 0, 0
+    Patch "RAIL1", 0, 64
+    Patch "RAIL1", 0, 128
+    Patch "RAIL1", 0, 192
 }
 ]]

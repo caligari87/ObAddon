@@ -71,9 +71,9 @@ function ScriptMan_assemble_mapinfo_lump()
   end
 
   table.insert(mapinfo_lines, "\n}\n")
-  
+
   local doomednum_lines = {
-	  "DoomedNums\n",
+      "DoomedNums\n",
       "{\n",
   }
   if SCRIPTS.fauna_mapinfo then
@@ -88,7 +88,7 @@ function ScriptMan_assemble_mapinfo_lump()
   end
   if #doomednum_lines > 2 then
     table.insert(doomednum_lines, "}\n")
-	each line in doomednum_lines do
+    each line in doomednum_lines do
       table.insert(mapinfo_lines,line)
     end
   end

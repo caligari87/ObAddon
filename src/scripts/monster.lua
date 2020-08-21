@@ -926,15 +926,15 @@ function Monster_fill_room(R)
 
     end
 
-	if PARAM.marine_gen and not PARAM.marine_skip and R.secondary_important and R.secondary_important.kind == "marine_closet" then
-	  if PARAM.m_c_quantity == "more" then
-	    qty = qty * 1.5
-	  elseif PARAM.m_c_quantity == "lot" then
-	    qty = qty * 2.0
-	  elseif PARAM.m_c_quantity == "horde" then
-	    qty = qty * 3.0
-	  end
-	end
+    if PARAM.marine_gen and not PARAM.marine_skip and R.secondary_important and R.secondary_important.kind == "marine_closet" then
+      if PARAM.m_c_quantity == "more" then
+        qty = qty * 1.5
+      elseif PARAM.m_c_quantity == "lot" then
+        qty = qty * 2.0
+      elseif PARAM.m_c_quantity == "horde" then
+        qty = qty * 3.0
+      end
+    end
 
   --hallway edits Armaetus
 
@@ -1174,15 +1174,15 @@ function Monster_fill_room(R)
 
     local factor = default_level(info)
 
-	if PARAM.marine_gen and not PARAM.marine_skip and R.secondary_important and R.secondary_important.kind == "marine_closet" then
-	  if PARAM.m_c_strength == "harder" then
-	    return 1.3 ^ factor
-	  elseif PARAM.m_c_strength == "tough" then
-	    return 1.7 ^ factor
-	  elseif PARAM.m_c_strength == "fierce" then
-	    return 2.5 ^ factor
-	  end
-	end
+    if PARAM.marine_gen and not PARAM.marine_skip and R.secondary_important and R.secondary_important.kind == "marine_closet" then
+      if PARAM.m_c_strength == "harder" then
+        return 1.3 ^ factor
+      elseif PARAM.m_c_strength == "tough" then
+        return 1.7 ^ factor
+      elseif PARAM.m_c_strength == "fierce" then
+        return 2.5 ^ factor
+      end
+    end
 
     if OB_CONFIG.strength == "weak"   then return 1 / (1.7 ^ factor) end
     if OB_CONFIG.strength == "easier" then return 1 / (1.3 ^ factor) end

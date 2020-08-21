@@ -721,7 +721,7 @@ PREFABS.Item_dem_garrett_fountain1 =
   map    = "MAP24"
 
   theme  = "hell"
-  env 	 = "building"
+  env      = "building"
   prob   = 30
 
   key   = "secret"
@@ -764,7 +764,7 @@ PREFABS.Item_dem_garrett_cross =
   map    = "MAP27"
 
   theme  = "hell"
-  env 	 = "building"
+  env      = "building"
   prob   = 100
 
   key = "secret"
@@ -800,7 +800,7 @@ PREFABS.Item_dem_gtd_alcove_secret =
   map    = "MAP28"
 
   theme  = "hell"
-  env 	 = "building"
+  env      = "building"
   prob   = 100
 
   key   = "secret"
