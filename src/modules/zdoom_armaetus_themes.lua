@@ -263,7 +263,7 @@ ARMAETUS_ROOM_THEMES =
 
   tech_Computers =
   {
-    prob = 50
+    prob = 25
     env = "building"
 
     walls =
@@ -303,7 +303,7 @@ ARMAETUS_ROOM_THEMES =
   -- Multi colors here!
   tech_ComputersMulti =
   {
-    prob = 25
+    prob = 15
     env = "building"
 
     walls =
@@ -352,7 +352,7 @@ ARMAETUS_ROOM_THEMES =
   -- single color comp rooms
   tech_ComputersRed =
   {
-    prob = 7
+    prob = 4
     env = "building"
 
     walls =
@@ -408,7 +408,7 @@ ARMAETUS_ROOM_THEMES =
 
   tech_ComputersBlue =
   {
-    prob = 7
+    prob = 4
     env = "building"
 
     walls =
@@ -468,7 +468,7 @@ ARMAETUS_ROOM_THEMES =
 
   tech_ComputersGreen =
   {
-    prob = 7
+    prob = 4
     env = "building"
 
     walls =
@@ -518,7 +518,7 @@ ARMAETUS_ROOM_THEMES =
 
   tech_ComputersYellowish =
   {
-    prob = 7
+    prob = 4
     env = "building"
 
     walls =
@@ -570,7 +570,7 @@ ARMAETUS_ROOM_THEMES =
 
   tech_ComputersParple =
   {
-    prob = 7
+    prob = 4
     env = "building"
 
     walls =
@@ -623,7 +623,7 @@ ARMAETUS_ROOM_THEMES =
   tech_Cement =
   {
     env = "building"
-    prob = 100
+    prob = 50
 
     walls =
     {
@@ -663,7 +663,7 @@ ARMAETUS_ROOM_THEMES =
 
   tech_Shiny =
   {
-    prob = 75
+    prob = 100
     env = "building"
 
     walls =
@@ -791,7 +791,7 @@ ARMAETUS_ROOM_THEMES =
   tech_VeryGray =
   {
     env = "building"
-    prob = 85
+    prob = 100
 
     walls =
     {
@@ -3131,6 +3131,7 @@ ARMAETUS_THEMES =
       gtd_wall_teklitecomp_red = 7
       gtd_wall_teklitecomp_orange = 7
       gtd_wall_teklitecomp_blue = 7
+      gtd_wall_grated_machines_epic = 20
     }
 
     window_groups =
@@ -3366,6 +3367,7 @@ ARMAETUS_THEMES =
       gtd_wall_teklitecomp_red = 1
       gtd_wall_teklitecomp_orange = 1
       gtd_wall_teklitecomp_blue = 1
+      gtd_wall_grated_machines_epic = 4
     }
 
     window_groups =
