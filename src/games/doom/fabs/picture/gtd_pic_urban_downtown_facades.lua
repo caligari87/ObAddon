@@ -358,7 +358,7 @@ PREFABS.Pic_urban_downtown_facade_EPIC_destroyed =
   replaces = nil
 
   skip_prob = 50
-  prob = 100
+  prob = 50
 
   over = 0
 
@@ -435,7 +435,8 @@ PREFABS.Pic_urban_downtown_facade_destroyed_roof =
 
   height = 248
 
-  prob = 150
+  skip_prob = 50
+  prob = 50
 
   in_porches = "never"
 
