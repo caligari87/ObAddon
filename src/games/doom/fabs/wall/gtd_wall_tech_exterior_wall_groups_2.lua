@@ -68,6 +68,21 @@ PREFABS.Wall_tech_outdoor_red_wall = --#
   }
 }
 
+PREFABS.Wall_tech_outdoor_blue_wall = --#
+{
+  template = "Wall_tech_outdoor_red_wall"
+  map = "MAP04"
+
+  group = "tech_o_blue_wall"
+
+  tex_SHAWN3 =
+  {
+    SHAWN3 = 1
+    EXITDOOR = 3
+  }
+  tex_REDWALL = "COMPBLUE"
+}
+
 PREFABS.Wall_tech_outdoor_lots_of_cement = --#
 {
   template = "Wall_tech_outdoor_hex_inset"
