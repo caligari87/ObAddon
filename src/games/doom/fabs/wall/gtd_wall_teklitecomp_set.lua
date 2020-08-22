@@ -69,6 +69,8 @@ PREFABS.Wall_tech_teklitecomp_orange_console =
 
   group = "gtd_wall_teklitecomp_orange"
 
+  deep = 24
+
   tex_RDWAL01 = "COLLITE2"
   tex_TEKWALL8 = "TEKWALLE"
   flat_TEK1 = "TEK7"
@@ -121,6 +123,8 @@ PREFABS.Wall_tech_teklitecomp_blue_console =
   prob = 10
 
   group = "gtd_wall_teklitecomp_blue"
+
+  deep = 24
 
   tex_RDWAL01 = "COLLITE3"
   tex_TEKWALL8 = "TEKWALLB"
