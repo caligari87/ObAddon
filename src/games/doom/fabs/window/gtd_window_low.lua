@@ -32,3 +32,16 @@ PREFABS.Window_low_3 =
 
   seed_w   = 3
 }
+
+PREFABS.Window_low_2_with_opening =
+{
+  template = "Window_low_1"
+  map = "MAP04"
+
+  prob = 15
+
+  seed_w = 2
+
+  height = 112
+  bound_z2 = 112
+}
