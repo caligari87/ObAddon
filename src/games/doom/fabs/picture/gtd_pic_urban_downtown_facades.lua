@@ -400,7 +400,7 @@ PREFABS.Pic_urban_downtown_facade_fenced_roof =
 
   height = 304
 
-  prob = 300
+  prob = 150
 
   in_porches = "never"
 
@@ -426,4 +426,23 @@ PREFABS.Pic_urban_downtown_facade_fenced_roof =
     FENCE6 = 1
     FENCE7 = 1
   }
+}
+
+PREFABS.Pic_urban_downtown_facade_destroyed_roof =
+{
+  template = "Pic_urban_downtown_facade3_EPIC"
+  map = "MAP08"
+
+  height = 248
+
+  prob = 150
+
+  in_porches = "never"
+
+  x_fit = { 36,220 }
+  y_fit = "top"
+  z_fit = { 88,96 }
+
+  bound_z1 = 0
+  bound_z2 = 248
 }
