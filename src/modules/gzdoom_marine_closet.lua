@@ -236,7 +236,7 @@ class AIMarine : Actor
             }
             else
             {
-                if(followtarget && self.CheckSight(followtarget))
+                if(followtarget && self.CheckSight(followtarget) && self.Distance2D(followtarget) < 128)
                 {
                     seenplayer = true;
                 }
