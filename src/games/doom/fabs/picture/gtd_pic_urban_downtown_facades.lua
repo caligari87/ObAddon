@@ -442,7 +442,7 @@ PREFABS.Pic_urban_downtown_facade_destroyed_roof =
 
   in_porches = "never"
 
-  x_fit = { 36,220 }
+  x_fit = { 16,240 }
   y_fit = "top"
   z_fit = { 88,104 , 216,236 }
 
