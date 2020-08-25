@@ -2527,15 +2527,43 @@ function Quest_nice_items()
     local room_tab = {}
     local chosen_room
 
+    -- secondary importants table attributes:
+
+    -- level_prob: probability for this SI to appear in map
+    -- min_count: minimum number the SI fab should appear in map
+    -- max_count: maximum number
+    -- not_start: if true, start rooms are excluded from room pick
+    -- not_exit: if true, exit rooms are excluded
+    -- min_prog: 0-1 value; how far along in the level should
+    --   SI fab start spawning
+    -- max_prog: 0-1 value; how far along in the level should
+    --   SI fab stop spawning
+
     local function pick_room_for_si()
       each R in LEVEL.rooms do
         if R.closets and #R.closets > 2
         and not chosen_room.secondary_important then
-          table.insert(room_tab, R)
+          local do_it = false
+
+          if SI.min_prog and SI.max_prog then
+            if R.lev_along >= SI.min_prog and
+            R.lev_along <= SI.max_prog then
+              do_it = true
+            end
+          end
+
+          if (not_start and R.is_start) or
+          (not_exit and R.is_exit) then
+            do_it = false
+          end
+
+          if do_it then
+            table.insert(room_tab, R)
+          end
         end
       end
 
-      for count = 1, SI.max_count do
+      for count = SI.min_count or 1, SI.max_count do
         if table.empty(room_tab) then continue end
 
         chosen_room = rand.pick(room_tab)
@@ -2547,7 +2575,7 @@ function Quest_nice_items()
     end
 
     each SI in simp_tab do
-      if SI.prob then pick_room_for_si() end
+      if SI.level_prob then pick_room_for_si() end
     end
   end
 
