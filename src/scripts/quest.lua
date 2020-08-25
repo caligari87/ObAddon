@@ -2869,7 +2869,7 @@ function Quest_room_themes()
       assert(conn)
 
       -- IDEA : make this depend on combined size of both rooms
-      local keep_prob = 35
+      local keep_prob = 65
       if last_theme.keep_prob then keep_prob = last_theme.keep_prob end
 
       -- force theme change over zone boundaries or teleporters

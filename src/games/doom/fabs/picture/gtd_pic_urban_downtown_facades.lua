@@ -433,17 +433,19 @@ PREFABS.Pic_urban_downtown_facade_destroyed_roof =
   template = "Pic_urban_downtown_facade3_EPIC"
   map = "MAP08"
 
-  height = 248
+  height = 240
 
   skip_prob = 50
   prob = 80
+
+  deep = 0
 
   in_porches = "never"
 
   x_fit = { 36,220 }
   y_fit = "top"
-  z_fit = { 88,96 }
+  z_fit = { 88,104 , 216,236 }
 
   bound_z1 = 0
-  bound_z2 = 248
+  bound_z2 = 240
 }
