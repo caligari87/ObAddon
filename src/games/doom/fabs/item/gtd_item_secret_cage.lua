@@ -1,11 +1,9 @@
--- This is supposed to be a shoot-triggered, stretchable version of the original cage fab.
+-- This is supposed to be a secret-hiding, stretchable version of the original cage fab.
 
 PREFABS.Item_gtd_secret_cage =
 {
   file  = "item/gtd_item_secret_cage.wad"
   where = "seeds"
-
-  engine = "zdoom"
 
   prob  = 100
   env   = "building"
