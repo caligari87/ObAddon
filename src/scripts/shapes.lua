@@ -3202,6 +3202,55 @@ GROW_RAMP_THIN_RISE =
   }
 }
 
+GROW_RAMP_THIN_HALF_SINK =
+{
+  prob = 20
+  skip_prob = 75
+
+  structure =
+  {
+    "...","AAA"
+    "...","AAA"
+    "...","AA^"
+    "...","AA^"
+    "...","AA1"
+    "...","AA1"
+    "...","A/1"
+    "x11","x11"
+    "x11","x11"
+  }
+
+  diagonals =
+  {
+    "A1"
+  }
+}
+
+GROW_RAMP_THIN_HALF_RISE =
+{
+  prob = 20
+  skip_prob = 75
+
+  structure =
+  {
+    "...","AAA"
+    "...","AAA"
+    "...","1%A"
+    "...","11^"
+    "...","11^"
+    "...","111"
+    "...","111"
+    "...","111"
+    "x11","x11"
+    "x11","x11"
+  }
+
+  diagonals =
+  {
+    "1A"
+  }
+}
+
 GROW_REVERSE_FUNNEL =
 {
   prob = 20
@@ -3269,7 +3318,7 @@ GROW_SIDE_ON_RAMP_TALL =
 
 GROW_CAUSEWAY =
 {
-  prob = 10
+  prob = 15
   skip_prob = 75
 
   structure =
@@ -3287,7 +3336,7 @@ GROW_CAUSEWAY =
 
 GROW_CAUSEWAY_WATERBOUND =
 {
-  prob = 10
+  prob = 20
   skip_prob = 75
 
   structure =
@@ -3319,10 +3368,26 @@ GROW_CAUSEWAY_SINGLE =
   }
 }
 
+GROW_CAUSEWAY_SINGLE_WATERBOUND =
+{
+  prob = 20
+  skip_prob = 75
+
+  structure =
+  {
+    "1......","111~~AA"
+    "1......","111>>AA"
+    "x......","x11~~AA"
+    "x......","x11~~AA"
+    "x......","x11>>AA"
+    "x......","x11~~AA"
+  }
+}
+
 GROW_CAUSEWAY_CORNER =
 {
-  prob = 15
-  skip_prob = 60
+  prob = 10
+  skip_prob = 70
 
   structure =
   {
@@ -3344,7 +3409,7 @@ GROW_CAUSEWAY_CORNER =
 
 GROW_CAUSEWAY_CORNER_SINGLE =
 {
-  prob = 15
+  prob = 20
   skip_prob = 60
 
   structure =
@@ -3366,7 +3431,7 @@ GROW_CAUSEWAY_CORNER_SINGLE =
 
 GROW_CAUSEWAY_TIP =
 {
-  prob = 10
+  prob = 25
   skip_prob = 75
 
   structure =
@@ -3384,28 +3449,28 @@ GROW_CAUSEWAY_TIP =
 
 GROW_GATED_RAMP =
 {
-  prob = 15
+  prob = 20
   skip_prob = 50
 
   structure =
   {
     "......","AAAAAA"
     "......","AAAAAA"
-    "......","A.^^.A"
+    "......","A#^^#A"
     "xx11xx","xx11xx"
   }
 }
 
 GROW_GATED_SIDE_RAMP =
 {
-  prob = 15
+  prob = 20
   skip_prob = 50
 
   structure =
   {
     "........","AAAAAAAA"
     "........","AAAAAAAA"
-    "........","^^.AA.^^"
+    "........","^^#AA#^^"
     "........","11111111"
     "xxx11xxx","xxx11xxx"
   }
@@ -9093,8 +9158,8 @@ GROW_SEWER_CURVED =
 
 GROW_SEWER_CROSSING =
 {
-  prob = 30
-  skip_prob = 40
+  prob = 25
+  skip_prob = 75
 
   group = "sewer"
 
