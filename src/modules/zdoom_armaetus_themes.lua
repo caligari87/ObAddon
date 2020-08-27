@@ -180,6 +180,12 @@ ARMAETUS_ROOM_THEMES =
       METAL10 = 25
       METAL11 = 25
 
+      SHAWGRY4 = 25
+      SHAWN01C = 25
+      SHAWN01E = 25
+      SHAWN01F = 25
+      SHAWSH04 = 25
+
       SHAWN4 = 33
       SHAWN5 = 33
       HEX01 = 33
@@ -1707,13 +1713,12 @@ ARMAETUS_ROOM_THEMES =
 
     ceilings =
     {
-    CEIL1_1 = 70
-    FLAT5_2 = 50
-    GSTN01  = 30
-    GSTN02  = 30
-    SLIME14 = 20
-    SLIME15 = 20
-
+      CEIL1_1 = 70
+      FLAT5_2 = 50
+      GSTN01  = 30
+      GSTN02  = 30
+      SLIME14 = 20
+      SLIME15 = 20
     }
   }
 
@@ -1725,17 +1730,33 @@ ARMAETUS_ROOM_THEMES =
 
     walls =
     {
-      CEM01 = 50
-      CEM02 = 50
-      CEM06 = 50
-      CEM07 = 50
-      CEM09 = 50
-      CEM10 = 100
-      CEM11 = 100
-      STON7 = 100
-      STONE10 = 100
-      STONE8 = 100
-      STONE9 = 75
+      CEM01 = 5
+      CEM02 = 5
+      CEM06 = 5
+      CEM07 = 5
+      CEM09 = 5
+      CEM10 = 10
+      CEM11 = 10
+      STON7 = 10
+      STONE10 = 10
+      STONE8 = 10
+      STONE9 = 7.5
+
+      BRONZEG1 = 5
+      BRONZEG2 = 5
+      BRONZEG3 = 5
+      BROWN2 = 5
+      BROWN3 = 5
+
+      GRAY6 = 5
+      GRAY8 = 5
+      GRAY9 = 5
+      SHAWN01C = 5
+      SHAWN01D = 5
+      SHAWN01E = 5
+      SHAWN01F = 5
+      SHAWN4 = 2.5
+      SHAWN5 = 5
     }
 
     floors =
