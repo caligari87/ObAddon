@@ -266,9 +266,10 @@ PREFABS.Wall_flat_accent =
   x_fit = "frame"
   z_fit = "top"
 
-  tex_PIPEWAL2 =
+  tex_PIPEWAL1 =
   {
     PIPEWAL1 = 1
+    PIPEWAL2 = 1
     PIPES = 1
     PIPEWAL2 = 1
     LITEBLU1 = 0.25
