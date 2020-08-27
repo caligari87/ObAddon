@@ -18,6 +18,7 @@ PREFABS.Quest_marine_teleporter_ambush_tech =
   bound_z1 = 0
   
   kind = "marine"
+  mmax = 10
 
   x_fit = { 92,100 , 156,164 }
   y_fit = "top"
