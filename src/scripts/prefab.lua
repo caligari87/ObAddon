@@ -2103,7 +2103,7 @@ function Fabricate(room, def, T, skins)
     MARINE_CLOSET_TUNE.randomize_count()
     local marines = PARAM.marine_marines
     each E in fab.entities do
-      if E.id and E.id >= 8001 and E.id <= 8010 then
+      if E.id and E.id == 8001 then
         if marines > 0 then
           E.id = MARINE_CLOSET_TUNE.grab_type()
           marines = marines - 1
