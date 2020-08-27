@@ -496,6 +496,19 @@ PREFABS.Wall_tech_outdoor_tall_light = --#
   z_fit = "top"
 }
 
+PREFABS.Wall_tech_outdoor_tall_light_alt_color = --#
+{
+  template = "Wall_tech_outdoor_caution_strip"
+  map = "MAP21"
+
+  group = "tech_o_tall_light_alt"
+
+  tex_COMPBLUE = "REDWALL"
+  tex_CEIL4_3 = "FLOOR1_6"
+
+  z_fit = "top"
+}
+
 PREFABS.Wall_hexagon_uac_spotlights = --#
 {
   template = "Wall_tech_outdoor_caution_strip"
