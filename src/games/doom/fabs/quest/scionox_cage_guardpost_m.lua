@@ -18,6 +18,7 @@ PREFABS.Quest_marine_scionox_guardpost_destroyed =
   over   = 16
   
   kind = "marine"
+  mmin = 1
   mmax = 10
 
   x_fit  = "frame"

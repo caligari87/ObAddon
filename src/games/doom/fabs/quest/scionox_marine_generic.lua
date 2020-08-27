@@ -15,6 +15,7 @@ PREFABS.Quest_scionox_marine_generic =
   over   = -16
   
   kind = "marine"
+  mmin = 1
   mmax = 10
 
   x_fit = "frame"

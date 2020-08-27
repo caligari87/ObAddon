@@ -17,6 +17,7 @@ PREFABS.Quest_Marine_auto_open =
   over   = -16
   
   kind = "marine"
+  mmin = 1
   mmax = 10
 
   x_fit = "frame"
