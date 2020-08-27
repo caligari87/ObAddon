@@ -899,6 +899,13 @@ function Junction_make_railing(junc, rail_mat, block)
     area = junc.A1
   }
 
+  -- 3D midtex blocking support for rails
+  if junc.A1.room and junc.A2.room
+  and not (junc.A1.mode == "cage" or junc.A2.mode == "cage") then
+    junc.E1.rail_3dmidtex = 1
+    junc.E1.rail_block = nil
+  end
+
   -- calculate base Z
   -- TODO : handle "nature" areas better (checks cells along the junction)
   local z1 = junc.A1.max_floor_h or junc.A1.floor_h or -EXTREME_H

@@ -571,6 +571,7 @@ function Render_edge(E)
       v1  = 0
 
       blocked = E.rail_block
+      tridee_midtex = E.rail_3dmidtex
     }
 
     local x1,y1, x2,y2 = Edge_line_coords(E)
