@@ -2099,7 +2099,7 @@ function Fabricate(room, def, T, skins)
   Fab_substitutions(fab, SKIN)
   Fab_replacements (fab)
 
-  if PARAM.marine_gen and not PARAM.marine_skip and fab.group == "marine_closet" then
+  if PARAM.marine_gen and not PARAM.marine_skip and fab.kind == "marine" then
     MARINE_CLOSET_TUNE.randomize_count()
     local marines = PARAM.marine_marines
     each E in fab.entities do
