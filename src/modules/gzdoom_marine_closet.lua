@@ -125,6 +125,7 @@ class AIMarine : Actor
         -COUNTKILL
         +FRIENDLY
         +DORMANT
+		+NOBLOCKMONST
         DeathSound "*death";
         PainSound "*pain50";
         AIMarine.follower MFOLLOW;
