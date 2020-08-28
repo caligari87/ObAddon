@@ -1307,9 +1307,8 @@ ZDOOM_STORIES.STORIES =
       into the mountain. The defenders rain upon the area an endless
       barrage of fire and plasma. Somewhere deep behind the
       fortifications must be a tunnel leading into the heart of the
-      fortress. Given enough time, you could locate and breach it.
-      _SPACE
-      Time is precisely what you don't have. You turn around, looking
+      fortress. Given enough time, you could locate and breach it -
+      and time is precisely what you don't have. You turn around, looking
       for something - anything - you could use, and your gaze falls
       upon the experimental fusion cannon, towering above the area.
       The realization comes immediately.
