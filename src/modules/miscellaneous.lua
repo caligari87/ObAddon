@@ -77,6 +77,13 @@ MISC_STUFF.WINDOW_BLOCKING_CHOICES =
   "all",           _("All"),
 }
 
+MISC_STUFF.RAIL_BLOCKING_CHOICES =
+{
+  "never",       _("Never"),
+  "on_occasion", _("Occasional"),
+  "all",         _("All"),
+}
+
 MISC_STUFF.LIQUID_SINK_OPTIONS =
 {
   "yes",          _("Yes"),
@@ -189,7 +196,17 @@ OB_MODULES["misc"] =
       tooltip=_("Sets the preferences for passability on certain windows. On Vistas Only means only windows " ..
                 "that look out to vistas/map border scenics have a blocking line."),
       default="not_on_vistas",
-      gap=1
+    }
+    {
+      name="passable_railings",
+      label=_("Passable Railings"),
+      choices=MISC_STUFF.RAIL_BLOCKING_CHOICES,
+      tooltip=_("Sets the passability of railing junctions between full impassability or the 3D midtex flag. " ..
+            "Occasional means 3D midtex is only used on railings between areas the player is supposed to " ..
+            "circumvent. Always means the inclusion of cages and scenic rails, allowing flying monsters to " ..
+            "potentially escape.\n\nNote: 3D midtex lines currently *block* projectiles as well."),
+      default="never",
+      gap=1,
     }
 
     { name="symmetry",    label=_("Symmetry"),       choices=STYLE_CHOICES }

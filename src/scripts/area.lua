@@ -900,10 +900,17 @@ function Junction_make_railing(junc, rail_mat, block)
   }
 
   -- 3D midtex blocking support for rails
-  if junc.A1.room and junc.A2.room
-  and not (junc.A1.mode == "cage" or junc.A2.mode == "cage") then
-    junc.E1.rail_3dmidtex = 1
-    junc.E1.rail_block = nil
+  if PARAM.passable_railings then
+    if PARAM.passable_railings == "on_occasion" then
+      if junc.A1.room and junc.A2.room
+      and not (junc.A1.mode == "cage" or junc.A2.mode == "cage") then
+        junc.E1.rail_3dmidtex = 1
+        junc.E1.rail_block = nil
+      end
+    elseif PARAM.passable_railings == "always" then
+      junc.E1.rail_3dmidtex = 1
+      junc.E1.rail_block = nil
+    end
   end
 
   -- calculate base Z
