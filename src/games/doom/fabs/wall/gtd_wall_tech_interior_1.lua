@@ -276,4 +276,18 @@ PREFABS.Wall_flat_accent =
     SHAWN1 = 1
     TEKLITE = 1
   }
+
+  tex_MIDBARS3 =
+  {
+    MIDBARS3 = 2
+    MIDSPACE = 1
+  }
+
+  tex_BROWN96 =
+  {
+    BROWN96 = 2
+    GRAY5 = 1
+    GRAY7 = 1
+    SHAWN2 = 1
+  }
 }
