@@ -3100,8 +3100,8 @@ GROW_LIQUID_U_ALT =
 
 GROW_LIQUID_INTERSECTION =
 {
-  prob = 15
-  skip_prob = 80
+  prob = 20
+  skip_prob = 75
 
   structure =
   {
@@ -3432,7 +3432,7 @@ GROW_CAUSEWAY_CORNER_SINGLE =
 GROW_CAUSEWAY_TIP =
 {
   prob = 25
-  skip_prob = 75
+  skip_prob = 70
 
   structure =
   {
@@ -4049,8 +4049,8 @@ GROW_CATWALK_BIFUNNEL_SINK =
 
 GROW_CATWALK_BIFUNNEL_RISE =
 {
-  prob = 15
-  skip_prob = 80
+  prob = 20
+  skip_prob = 75
 
   structure =
   {
@@ -5464,7 +5464,7 @@ LIQEUFY_SHAVE =
 
 GROW_FEATURES_CENTER =
 {
-  prob = 12
+  prob = 25
   skip_prob = 30
 
   structure =
@@ -5485,8 +5485,8 @@ GROW_FEATURES_CENTER =
 
 GROW_FEATURES_CENTER_RAISED =
 {
-  prob = 12
-  skip_prob = 30
+  prob = 10
+  skip_prob = 50
 
   structure =
   {
@@ -6440,6 +6440,49 @@ GROW_36_LONG_DIAMOND =
   {
     ".A","A."
     "1A","A1"
+  }
+}
+
+GROW_36_LONG_DIMAOND_STAIRS =
+{
+  prob = 25
+  skip_prob = 75
+
+  structure =
+  {
+    "xx......xx","xx/AAAA%xx"
+    "..........","11%AAAA/11"
+    "..........","1111^^1111"
+    "....11....","1111111111"
+    "xxxx11xxxx","xxxx11xxxx"
+  }
+
+  diagonals =
+  {
+    ".A","A."
+    "1A","A1"
+  }
+}
+
+GROW_36_CORNER_DIAMOND =
+{
+  prob = 25
+  skip_prob = 70
+
+  structure =
+  {
+    "x..xx","x/Axx"
+    ".....","/A%11"
+    ".....","A%111"
+    "x..11","x1111"
+    "x..11","x1111"
+  }
+
+  diagonals =
+  {
+         ".A"
+    ".A","A1"
+    "A1"
   }
 }
 
@@ -9080,8 +9123,8 @@ GROW_TRENCH_STRAIGHT_LONG =
 
 GROW_TRENCH_CURVE =
 {
-  prob = 20
-  skip_prob = 65
+  prob = 15
+  skip_prob = 70
 
   aversion = 10
 
@@ -9105,7 +9148,7 @@ GROW_TRENCH_CURVE =
 GROW_TRENCH_CURVE_INNER_SOLID =
 {
   prob = 15
-  skip_prob = 65
+  skip_prob = 70
 
   aversion = 6
 
@@ -9129,7 +9172,7 @@ GROW_TRENCH_CURVE_INNER_SOLID =
 GROW_TRENCH_CURVE_OUTER_SOLID =
 {
   prob = 15
-  skip_prob = 65
+  skip_prob = 70
 
   aversion = 6
 
