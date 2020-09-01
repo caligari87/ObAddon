@@ -3162,6 +3162,7 @@ ARMAETUS_THEMES =
       gtd_window_bulletproof_glass_green = 15
       gtd_window_bulletproof_glass_orange = 15
       gtd_window_tall_and_glassy = 10
+      gtd_window_goffik = 5
     }
 
     street_sinks =
@@ -3394,11 +3395,12 @@ ARMAETUS_THEMES =
     window_groups =
     {
       gtd_window_gothic_epic = 30
-      gtd_window_chainlinks = 50
+      gtd_window_chainlinks = 40
       gtd_window_bulletproof_glass = 10
       gtd_window_bulletproof_glass_green = 10
       gtd_window_bulletproof_glass_orange = 10
       gtd_window_tall_and_glassy = 60
+      gtd_window_goffik = 5
     }
 
     street_sinks =
@@ -3626,8 +3628,9 @@ ARMAETUS_THEMES =
 
     window_groups =
     {
-      gtd_window_gothic_epic = 60
-      gtd_window_chainlinks = 60
+      gtd_window_gothic_epic = 50
+      gtd_window_chainlinks = 30
+      gtd_window_goffik = 50
     }
 
     street_sinks =
