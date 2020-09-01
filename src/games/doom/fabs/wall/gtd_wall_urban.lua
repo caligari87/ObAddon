@@ -80,6 +80,22 @@ PREFABS.Wall_modern_piping =
 
   x_fit = "frame"
   z_fit = "top"
+
+  tex_METAL5 =
+  {
+    METAL5 = 1
+    METAL3 = 1
+    METAL4 = 1
+    TEKLITE = 1
+    LITE3 = 0.5
+    LITE5 = 0.5
+    LITEBLU1 = 0.5
+    LITEBLU4 = 1
+    TEKGREN4 = 1
+    TEKWALL1 = 0.5
+    TEKWALL4 = 0.5
+    TEKWALL6 = 0.5
+  }
 }
 
 -- shutters

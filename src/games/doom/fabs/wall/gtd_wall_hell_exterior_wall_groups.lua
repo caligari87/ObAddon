@@ -547,3 +547,13 @@ PREFABS.Wall_hell_catamet_vanilla =
 
   z_fit = { 40,48 }
 }
+
+PREFABS.Wall_hell_crematorium_windows = --#
+{
+  template = "Wall_hell_stone_brace"
+  map = "MAP22"
+
+  group = "hell_o_crematorium_windows"
+
+  z_fit = "bottom"
+}
