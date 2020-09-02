@@ -3,6 +3,7 @@
 ----------------------------------------------------------------
 --
 --  Copyright (C) 2009-2010 Andrew Apted
+--  Copyright (C) 2020 MsrSgtShooterPerson
 --
 --  This program is free software; you can redistribute it and/or
 --  modify it under the terms of the GNU General Public License
@@ -234,5 +235,64 @@ OB_MODULES["doom_weapon_control"] =
       "NONE: No preferences at all. For those who like to live life dangerously with lost souls and only rockets.",
       default="normal",
     }
+  }
+}
+
+
+--
+
+function CTL_DOOM.item_setup(self)
+
+  local function change_probz(name, info)
+    if self.options[name] and self.options[name].value != "default" then
+      local mult = (CTL_DOOM.WEAPON_PROBS[self.options[name].value] * 0.01)
+
+      if info.add_prob then info.add_prob = info.add_prob * mult end
+      if info.start_prob then info.start_prob = info.start_prob * mult end
+      if info.crazy_prob then info.crazy_prob = info.crazy_prob * mult end
+      if info.closet_prob then info.closet_prob = info.closet_prob * mult end
+      if info.secret_prob then info.secret_prob = info.secret_prob * mult end
+      if info.storage_prob then info.storage_prob = info.storage_prob * mult end
+    end
+  end
+
+  each name, info in GAME.PICKUPS do
+    change_probz(name, info)
+  end
+
+  each name, info in GAME.NICE_ITEMS do
+    change_probz(name, info)
+  end
+end
+
+OB_MODULES["doom_item_control"] =
+{
+  label = _("Doom Item Control")
+
+  game = "doomish"
+
+  hooks =
+  {
+    get_levels = CTL_DOOM.item_setup
+  }
+
+  options =
+  {
+    potion = { label=_("Health Bonus"), choices=CTL_DOOM.WEAPON_CHOICES, priority = 100 }
+    stimpak = { label=_("Stimpak"), choices=CTL_DOOM.WEAPON_CHOICES, priority = 99 }
+    medikit = { label=_("Medikit"), choices=CTL_DOOM.WEAPON_CHOICES, priority = 98 }
+    helmet = { label=_("Armor Bonus"), choices=CTL_DOOM.WEAPON_CHOICES, priority = 97, gap = 1 }
+    -- nice items
+    green_armor = { label=_("Green Armor"), choices=CTL_DOOM.WEAPON_CHOICES }
+    blue_armor = { label=_("Blue Armor"), choices=CTL_DOOM.WEAPON_CHOICES }
+    soul = { label=_("Soulsphere"), choices=CTL_DOOM.WEAPON_CHOICES }
+    backpack = { label=_("Backpack"), choices=CTL_DOOM.WEAPON_CHOICES }
+    berserk = { label=_("Berserk Pack"), choices=CTL_DOOM.WEAPON_CHOICES }
+    invis = { label=_("Invisibility"), choices=CTL_DOOM.WEAPON_CHOICES }
+    invul = { label=_("Invulnerability"), choices=CTL_DOOM.WEAPON_CHOICES }
+    allmap = { label=_("Map Computer"), choices=CTL_DOOM.WEAPON_CHOICES }
+    goggles = { label=_("Light Goggles"), choices=CTL_DOOM.WEAPON_CHOICES }
+    radsuit = { label=_("Radiation Suit"), choices=CTL_DOOM.WEAPON_CHOICES }
+    mega = { label=_("Megasphere"), choices=CTL_DOOM.WEAPON_CHOICES }
   }
 }
