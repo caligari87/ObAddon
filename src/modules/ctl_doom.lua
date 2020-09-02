@@ -283,16 +283,26 @@ OB_MODULES["doom_item_control"] =
     medikit = { label=_("Medikit"), choices=CTL_DOOM.WEAPON_CHOICES, priority = 98 }
     helmet = { label=_("Armor Bonus"), choices=CTL_DOOM.WEAPON_CHOICES, priority = 97, gap = 1 }
     -- nice items
-    green_armor = { label=_("Green Armor"), choices=CTL_DOOM.WEAPON_CHOICES }
-    blue_armor = { label=_("Blue Armor"), choices=CTL_DOOM.WEAPON_CHOICES }
-    soul = { label=_("Soulsphere"), choices=CTL_DOOM.WEAPON_CHOICES }
-    backpack = { label=_("Backpack"), choices=CTL_DOOM.WEAPON_CHOICES }
-    berserk = { label=_("Berserk Pack"), choices=CTL_DOOM.WEAPON_CHOICES }
-    invis = { label=_("Invisibility"), choices=CTL_DOOM.WEAPON_CHOICES }
-    invul = { label=_("Invulnerability"), choices=CTL_DOOM.WEAPON_CHOICES }
-    allmap = { label=_("Map Computer"), choices=CTL_DOOM.WEAPON_CHOICES }
-    goggles = { label=_("Light Goggles"), choices=CTL_DOOM.WEAPON_CHOICES }
-    radsuit = { label=_("Radiation Suit"), choices=CTL_DOOM.WEAPON_CHOICES }
-    mega = { label=_("Megasphere"), choices=CTL_DOOM.WEAPON_CHOICES }
+    green_armor = { label=_("Green Armor"), choices=CTL_DOOM.WEAPON_CHOICES, priority = 96 }
+    blue_armor = { label=_("Blue Armor"), choices=CTL_DOOM.WEAPON_CHOICES, priority = 95 }
+    soul = { label=_("Soulsphere"), choices=CTL_DOOM.WEAPON_CHOICES, priority = 94 }
+    backpack = { label=_("Backpack"), choices=CTL_DOOM.WEAPON_CHOICES, priority = 93 }
+    berserk = { label=_("Berserk Pack"), choices=CTL_DOOM.WEAPON_CHOICES, priority = 92 }
+    invis = { label=_("Invisibility"), choices=CTL_DOOM.WEAPON_CHOICES, priority = 91 }
+    invul = { label=_("Invulnerability"), choices=CTL_DOOM.WEAPON_CHOICES, priority = 90 }
+    allmap = { label=_("Map Computer"), choices=CTL_DOOM.WEAPON_CHOICES, priority = 89 }
+    goggles = { label=_("Light Goggles"), choices=CTL_DOOM.WEAPON_CHOICES, priority = 88 }
+    radsuit = { label=_("Radiation Suit"), choices=CTL_DOOM.WEAPON_CHOICES, priority = 87 }
+    mega = { label=_("Megasphere"), choices=CTL_DOOM.WEAPON_CHOICES, priority = 86, gap = 1 }
+    -- ammo
+    bullets = { label=_("Clips"), choices=CTL_DOOM.WEAPON_CHOICES, priority = 85,
+      tooltip = "Yes, it's supposed to be called 'Magazine', get over it." }
+    bullet_box = { label=_("Bullet Box"), choices=CTL_DOOM.WEAPON_CHOICES, priority = 84 }
+    shells = { label=_("Shells"), choices=CTL_DOOM.WEAPON_CHOICES, priority = 83 }
+    shell_box = { label=_("Shell Box"), choices=CTL_DOOM.WEAPON_CHOICES, priority = 82 }
+    rocket = { label=_("Rocket"), choices=CTL_DOOM.WEAPON_CHOICES, priority = 81 }
+    rocket_box = { label=_("Rocket Box"), choices=CTL_DOOM.WEAPON_CHOICES, priority = 80 }
+    cells = { label=_("Cell"), choices=CTL_DOOM.WEAPON_CHOICES, priority = 79 }
+    cell_pack = { label=_("Cell Pack"), choices=CTL_DOOM.WEAPON_CHOICES, priority = 78 }
   }
 }
