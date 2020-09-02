@@ -1248,6 +1248,7 @@ DOOM.THEMES =
       gtd_generic_half_floor_inverted_braced = 20
       gtd_wall_urban_cement_frame = 10
       gtd_generic_ceilwall = 25
+      gtd_generic_glow_wall = 25
     }
 
     outdoor_wall_groups =
@@ -1588,6 +1589,7 @@ DOOM.THEMES =
       gtd_round_inset = 5
       gtd_wall_urban_cement_frame = 7
       gtd_generic_ceilwall = 10
+      gtd_generic_glow_wall = 15
     }
 
     window_groups =
@@ -1977,6 +1979,7 @@ DOOM.THEMES =
       gtd_woodframe_green = 15
       gtd_round_inset = 30
       gtd_generic_ceilwall = 30
+      gtd_generic_glow_wall = 40
     }
 
     outdoor_wall_groups =
