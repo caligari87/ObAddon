@@ -279,7 +279,7 @@ OB_MODULES["doom_item_control"] =
   options =
   {
     potion = { label=_("Health Bonus"), choices=CTL_DOOM.WEAPON_CHOICES, priority = 100 }
-    stimpak = { label=_("Stimpak"), choices=CTL_DOOM.WEAPON_CHOICES, priority = 99 }
+    stimpack = { label=_("Stimpack"), choices=CTL_DOOM.WEAPON_CHOICES, priority = 99 }
     medikit = { label=_("Medikit"), choices=CTL_DOOM.WEAPON_CHOICES, priority = 98 }
     helmet = { label=_("Armor Bonus"), choices=CTL_DOOM.WEAPON_CHOICES, priority = 97, gap = 1 }
     -- nice items
