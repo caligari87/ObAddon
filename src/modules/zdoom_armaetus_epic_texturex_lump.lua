@@ -433,21 +433,33 @@ Flat "T_SDTCH5", 64, 64
 
 Texture "T_SHAWCR", 128, 64
 {
-    Patch "SHAWN1", 6, -3
-    Patch "SHAWN1", -122, -3
+  Patch "SHAWN1", 6, -3
+  Patch "SHAWN1", -122, -3
 }
 
 Texture "T_RAILST", 64, 192
 {
-    Patch "RAIL1", 0, 0
-    Patch "RAIL1", 0, 64
+  Patch "RAIL1", 0, 0
+  Patch "RAIL1", 0, 64
 }
 
 Texture "T_RAILS2", 64, 320
 {
-    Patch "RAIL1", 0, 0
-    Patch "RAIL1", 0, 64
-    Patch "RAIL1", 0, 128
-    Patch "RAIL1", 0, 192
+  Patch "RAIL1", 0, 0
+  Patch "RAIL1", 0, 64
+  Patch "RAIL1", 0, 128
+  Patch "RAIL1", 0, 192
+}
+
+Texture "COMPYELL", 64, 128
+{
+  Patch "COMP03_1", 0, 0
+  {
+    Translation "192:207=160:163", "240:247=164:167"
+  }
+  Patch "COMP03_2", 0, 64
+  {
+    Translation "192:207=160:163", "240:247=164:167"
+  }
 }
 ]]

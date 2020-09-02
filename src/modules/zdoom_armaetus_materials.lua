@@ -1214,6 +1214,9 @@ ARMAETUS_MATERIALS = {
   T_SDTCH4 = { t="CEM11", f = "T_SDTCH4"}
   T_SDTCH5 = { t="BROWN1", f = "T_SDTCH5"}
 
+  -- COMPBLUE recolors
+  COMPYELL = { t="COMPYELL", f = "ORANFLOR"} -- comp yellow, why more would you wallow!?
+
   -- Gothic --
 
   -- Light trims
