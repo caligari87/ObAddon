@@ -176,7 +176,7 @@ OB_MODULES["prefab_control"] =
     pf_crushers =
     {
       name="pf_crushers", label=_("Crushers"), choices=PREFAB_CONTROL.ON_OFF
-      tooltip="Enables or disables fabs with crusing sectors. Default is on."
+      tooltip="Enables or disables fabs with crushing sectors. Default is on."
       default="on"
       priority = 49
     }

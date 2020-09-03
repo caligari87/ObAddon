@@ -30,10 +30,7 @@
 -- chunk as well as decorate code for each entry.
 
 -- Thing ID's are dynamically assigned based on the
--- ACTOR_ID_OFFSET constant declared below. This constant
--- can be changed at any time so Oblige will use other numbers
--- forward from that constant if there are any issues with
--- thing ID incompatibilities.
+-- PARAM.snd_start_id selected on the module.
 
 -- The module also handles the actual replacement of sound spot
 -- specials (thing 8185) in prefab WAD's with the appropriate
@@ -53,7 +50,15 @@ gui.import("zdoom_sounds.lua")
 
 ZDOOM_SOUND = {}
 
-ZDOOM_SOUND.ACTOR_ID_OFFSET = 20000
+ZDOOM_SOUND.ACTOR_ID_OFFSET_CHOICES =
+{
+  "20000", _("20000"),
+  "22000", _("22000"),
+  "24000", _("24000"),
+  "26000", _("26000"),
+  "28000", _("28000"),
+  "30000", _("30000"),
+}
 
 ZDOOM_SOUND.SOUND_ACTOR_DENSITY = 5
 
@@ -82,7 +87,7 @@ ZDOOM_SOUND.TEMPLATES =
 }
 
 function ZDOOM_SOUND.build_lumps()
-  local offset_count = ZDOOM_SOUND.ACTOR_ID_OFFSET
+  local offset_count = tonumber(PARAM.snd_start_id)
   local sndtable = table.deep_copy(ZDOOM_SOUND_DEFS)
   SCRIPTS.SOUND_DEC = ""
   SCRIPTS.SNDINFO = ""
@@ -220,10 +225,10 @@ end
 function ZDOOM_SOUND.setup(self)
   gui.printf("\n--== Ambient Sound Addons module active ==--\n\n")
 
-  --[[for name,opt in pairs(self.options) do
+  for name,opt in pairs(self.options) do
     local value = self.options[name].value
     PARAM[name] = value
-  end]]
+  end
 
   PARAM.ambient_sounds = true
   ZDOOM_SOUND.build_lumps()
@@ -245,6 +250,20 @@ OB_MODULES["zdoom_ambient_sound"] =
   {
     setup = ZDOOM_SOUND.setup
     end_level = ZDOOM_SOUND.populate_level_ambience
+  }
+
+  options =
+  {
+    snd_start_id =
+    {
+      name = "snd_start_id"
+      label=("DoomEdNum Offset")
+      choices=ZDOOM_SOUND.ACTOR_ID_OFFSET_CHOICES
+      tooltip = "Selects the starting thing ID for generating ambient sound actors. Use only if " ..
+      "you are playing a mod using conflicting Editor Numbers. If you don't know what this is " ..
+      "this setting is best left as-is."
+      default = "20000"
+    }
   }
 
   tooltip = "Adds ambient sound things to fabs, room themes, and environments (WIP)." ..
