@@ -201,7 +201,7 @@ ARMAETUS_ROOM_THEMES =
       TEKGRY01 = 30
       TEKSHAW = 30
 
-      TKWALL2 = 15
+      TEKWALL2 = 15
       TEKWALL7 = 15
       TEKWALL8 = 15
       TEKWALL9 = 15

@@ -661,7 +661,6 @@ ARMAETUS_MATERIALS = {
   DESROCK4 = { t="DESROCK4", f="RROCK09" } -- Tan rock
   DESROCK5 = { t="DESROCK5", f="RROCK17" } -- Brown rock
 
-
   -- Tekwall / Startan-types
   STARBR1 = { t="STARBR1", f="FLOOR0_2" }
   STARGRY1 = { t="STARGRY1", f="SHINY01" }
@@ -671,7 +670,7 @@ ARMAETUS_MATERIALS = {
   TEKGRY01 = { t="TEKGRY01", f="RROCK21" }
   TEKGRY02 = { t="TEKGRY02", f="RROCK21" }
   TEKSHAW = { t="TEKSHAW", f="SHINY02" }
-  TKWALL2 = { t="TKWALL2", f="CEIL5_1" }
+  TEKWALL2 = { t="TEKWALL2", f="CEIL5_1" }
   TEKWALL2 = { t="TEKWALL2", f="CEIL5_1" }
   TEKWALL7 = { t="TEKWALL7", f="FLOOR7_1" }
   TEKWALL8 = { t="TEKWALL8", f="TEK1" } -- Red
