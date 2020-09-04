@@ -1074,16 +1074,18 @@ DOOM.THEMES =
     facades =
     {
       BROWN1   = 80
-      STARTAN3 = 50
-      STARG3   = 40
       BROWNGRN = 40
+      STARGR1  = 30
+      STARG1   = 30
+      STARG3   = 40
+      STARTAN3 = 50
       STONE    = 30
       STONE2   = 30
       STONE3   = 30
       TEKGREN2 = 25
-      BROVINE2 = 15
+      BROVINE2 = 5
       GRAY7    = 15
-      GRAYVINE = 10
+      GRAYVINE = 5
 
       BROWN96  = 20
       METAL2   = 15
@@ -1091,6 +1093,10 @@ DOOM.THEMES =
       BRONZE3  = 15
       METAL1   = 10
       SLADWALL = 20
+
+      GRAY1 = 40
+      GRAY4 = 40
+      GRAY5 = 40
     }
 
     fences =
