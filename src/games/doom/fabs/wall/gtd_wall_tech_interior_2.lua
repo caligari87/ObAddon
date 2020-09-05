@@ -66,7 +66,7 @@ PREFABS.Wall_liquid_tank =
     PIPES = 3
     SHAWN2 = 1
     TEKGREN1 = 3
-    TEKLITE1 = 1
+    TEKLITE = 1
     TEKLITE2 = 1
   }
 }
