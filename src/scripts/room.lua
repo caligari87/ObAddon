@@ -3221,6 +3221,11 @@ function Room_floor_ceil_heights()
     if with_ceil and not R.is_hallway then
       assert( R.max_ceil_h >= R.min_ceil_h )
     end
+
+    -- hack
+    if R.is_park and R.park_type == "plains" then
+      R.max_floor_h = R.entry_h
+    end
   end
 
 
