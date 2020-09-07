@@ -88,9 +88,9 @@ Adds a HUGE library of prefabricates to decorate maps, a collection spanning **m
 
 * PsYcHeDeLiC theme. VAYP NAYSH, YA'LL.
 
-* Armaetus's Epic Textures mod, now integrated from Oblige 6.x, including new textures such as ObAddon banners and vending machines!
-* * Also includes Enviornment Themes system, allowing levels to be desert-ish or snowy!
-* * Includes Custom Trees, available in ZScript and ACS/Decorate format! (ACS/Decorate version still needs fixing)
+* Armaetus's Epic Textures pack, now integrated from Oblige 6.x, now with awesome new textures used for ObAddon banners and vending machines!
+  * Includes an Environment Themes system, enabling outdoor sections to be either desert-ish or snowy!
+  * Also includes Custom Trees, available in either ZScript or ACS/Decorate formats! (ACS/Decorate format still in-progress)
 
 * Quite literally exploded name generator with lots of new words and combinations!
 
