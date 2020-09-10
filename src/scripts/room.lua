@@ -1822,8 +1822,7 @@ function Room_border_up()
         Junction_make_beams(junc)
       end
 
-      if ((A1.mode == "liquid" and A2.mode == "cage")
-      or (A1.mode == "cage" and A1.mode == "liquid"))
+      if A1.mode == "cage" or A2.mode == "cage"
       and A1.room == A2.room then
         Junction_make_railing(junc, "FENCE_MAT_FROM_THEME", "block")
       end

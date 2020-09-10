@@ -971,6 +971,26 @@ function Monster_fill_room(R)
     gui.debugf("raw quantity in %s --> %1.2f\n", R.name, qty)
 --]]
 
+    -- MSSP: experiment; more monsters in big rooms with multiple platforms
+    -- even larger numbers if it has floor areas of a significant height
+    -- and distance from the initial entry point
+    if R.is_big then
+      local total_extra = 0
+      each A in R.areas do
+        if A.mode == "floor" then
+          local area_score = int(A.svolume / 4)
+          local height_score = math.abs(A.floor_h - R.entry_h) / 128 * 1.25
+          -- local distance_score
+
+          local extra = int(area_score * height_score)
+          qty = qty + extra
+
+          total_extra = total_extra + extra
+        end
+      end
+      gui.printf("ROOM_" .. R.id .. ": " .. total_extra .. "\n")
+    end
+
     -- a small random adjustment
     qty = qty * rand.range(0.9, 1.1)
 
