@@ -2578,4 +2578,6 @@ ZDOOM_STORIES.QUIT_MESSAGES =
   [[Despite having the same surname, Adrian and John Carmack are not related.]],
   [[It is predicted in about 30 to 50 million years, Phobos will crash into Mars due to tidal deceleration. At that point, Mars will probably have many smaller moons or a ring.]],
   [[Phobos is about 6,000 km (or about 3,700mi) from Mars's surface, compared to our moon's 384,402 km (or 238,856 mi)]],
+
+  [[This is an actual line of code in Oblige:\n `if not is_big(mon) then has_small = true end`]],
 }

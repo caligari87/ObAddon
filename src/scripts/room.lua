@@ -971,6 +971,10 @@ function Room_detect_porches(R)
   local function set_as_porch(A)
     A.is_porch = true
 
+    if A.peer then -- apply porchness to symmetry too, of course
+      A.peer.is_porch = true
+    end
+
     -- Note : keeping 'is_outdoor' on the area
 
     -- MSSP: Overriden because junction code seems to
@@ -3414,6 +3418,10 @@ function Room_floor_ceil_heights()
       A.is_outdoor = false
       A.ceil_mat = N.ceil_mat
       A.is_porch_neighbor = true
+
+      if A.peer then
+        A.peer.is_porch_neighbor = true
+      end
 
       if A.room.is_outdoor and A.mode == "cage" then
         A.ceil_h = N.ceil_h
