@@ -14,6 +14,8 @@ PREFABS.Hell_garrett_closet_exit =
   deep  =  16
   over  = -16
 
+  start_fab_peer = "Start_garrett_hell_closet"
+
   x_fit = "frame"
   y_fit = "bottom"
 }

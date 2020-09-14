@@ -18,6 +18,8 @@ PREFABS.Exit_beed28_tunnel =
 
   x_fit = "frame"
 
+  start_fab_peer = "Start_beed28_tunnel"
+
   thing_45 =
   {
    mercury_lamp = 50
@@ -33,6 +35,8 @@ PREFABS.Exit_beed28_tunnel_hell =
   map = "MAP02"
 
   theme = "hell"
+
+  start_fab_peer = "Start_beed28_tunnel_hell"
 
   thing_45 =
   {

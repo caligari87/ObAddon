@@ -19,13 +19,20 @@ PREFABS.Exit_scionox_quakeish_portal_exit =
 
   deep   = 16
 
+  start_fab_peer = "Start_scionox_quakeish_portal_start"
+
   x_fit  = "frame"
   y_fit  = "top"
 }
+
 PREFABS.Exit_scionox_quakeish_portal_exit_2 =
 {
   template = "Exit_scionox_quakeish_portal_exit"
+
   theme = "hell"
+
+  start_fab_peer = "Start_scionox_quakeish_portal_start_2"
+
   thing_85 =
   {
     skull_pole = 50
@@ -37,11 +44,16 @@ PREFABS.Exit_scionox_quakeish_portal_exit_2 =
     skull_rock = 50
   }
 }
+
 PREFABS.Exit_scionox_quakeish_portal_exit_3 =
 {
   template = "Exit_scionox_quakeish_portal_exit"
-  theme = "hell"
   map    = "MAP02"
+
+  theme = "hell"
+
+  start_fab_peer = "Start_scionox_quakeish_portal_start_3"
+
   thing_25 =
   {
     skull_pole = 50

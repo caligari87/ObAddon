@@ -2450,6 +2450,37 @@ chunk.goal.action = "S1_OpenDoor"  -- FIXME IT SHOULD BE SET WHEN JOINER IS REND
     return x1,y1, x2,y2
   end
 
+  -- code for peered exits
+  local function check_peered_exits(def, chunk)
+    if def.kind == "start" then
+      local p_start_fab = {}
+
+      if SCRIPTS.start_fab_peer then
+        p_start_fab = PREFABS[SCRIPTS.start_fab_peer]
+
+        SCRIPTS.start_fab_peer = nil
+
+        -- check chunk sizes
+        if p_start_fab.seed_h <= chunk.sh
+        and p_start_fab.seed_w <= chunk.sw then
+          return p_start_fab
+        else
+          return nil
+        end
+      end
+    end
+
+    if def.kind == "exit" then
+      if def.start_fab_peer then
+        if type(def.start_fab_peer) == "table" then
+          SCRIPTS.start_fab_peer = rand.pick(def.start_fab_peer)
+        else
+          SCRIPTS.start_fab_peer = def.start_fab_peer
+        end
+      end
+    end
+  end
+
 
   ---| Render_chunk |---
 
@@ -2672,6 +2703,11 @@ chunk.goal.action = "S1_OpenDoor"  -- FIXME IT SHOULD BE SET WHEN JOINER IS REND
   end
 
   Ambient_push(A.lighting)
+
+  local start_fab_override = check_peered_exits(def, chunk)
+  if start_fab_override then
+    def = start_fab_override
+  end
 
   Fabricate(A.room, def, T, { skin })
 

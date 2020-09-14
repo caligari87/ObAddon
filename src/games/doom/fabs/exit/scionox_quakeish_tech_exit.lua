@@ -18,6 +18,11 @@ PREFABS.Exit_scionox_quakeish_tech_exit =
 
   deep   = 16
 
+  start_fab_peer = {
+    "Start_scionox_quakeish_tech_start"
+    "Start_scionox_quakeish_tech_start_2"
+  }
+
   x_fit  = "frame"
   y_fit  = "top"
 }
