@@ -1255,6 +1255,9 @@ DOOM.THEMES =
       gtd_wall_urban_cement_frame = 10
       gtd_generic_ceilwall = 25
       gtd_generic_glow_wall = 25
+      gtd_generic_artsy_bedazzled = 2
+      gtd_generic_alt_colors = 25
+      gtd_generic_mid_band = 25
     }
 
     outdoor_wall_groups =
@@ -1596,6 +1599,9 @@ DOOM.THEMES =
       gtd_wall_urban_cement_frame = 7
       gtd_generic_ceilwall = 10
       gtd_generic_glow_wall = 15
+      gtd_generic_artsy_bedazzled = 15
+      gtd_generic_alt_colors = 15
+      gtd_generic_mid_band = 10
     }
 
     window_groups =
@@ -1986,6 +1992,9 @@ DOOM.THEMES =
       gtd_round_inset = 30
       gtd_generic_ceilwall = 30
       gtd_generic_glow_wall = 40
+      gtd_generic_artsy_bedazzled = 40
+      gtd_generic_alt_colors = 40
+      gtd_generic_mid_band = 10
     }
 
     outdoor_wall_groups =
