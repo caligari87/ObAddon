@@ -2461,6 +2461,7 @@ chunk.goal.action = "S1_OpenDoor"  -- FIXME IT SHOULD BE SET WHEN JOINER IS REND
         SCRIPTS.start_fab_peer = nil
 
         -- check chunk sizes
+        gui.printf("Buddy: "..table.tostr(chunk).."\n")
         if p_start_fab.seed_h <= chunk.sh
         and p_start_fab.seed_w <= chunk.sw then
           return p_start_fab
@@ -2704,9 +2705,11 @@ chunk.goal.action = "S1_OpenDoor"  -- FIXME IT SHOULD BE SET WHEN JOINER IS REND
 
   Ambient_push(A.lighting)
 
-  local start_fab_override = check_peered_exits(def, chunk)
-  if start_fab_override then
-    def = start_fab_override
+  if PARAM.peered_exits and PARAM.peered_exits == "yes" then
+    local start_fab_override = check_peered_exits(def, chunk)
+    if start_fab_override then
+      def = start_fab_override
+    end
   end
 
   Fabricate(A.room, def, T, { skin })

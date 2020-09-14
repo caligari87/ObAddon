@@ -182,5 +182,14 @@ OB_MODULES["debugger"] =
       default = "no"
       priority = 94
     }
+
+    peered_exits =
+    {
+      name = "peered_exits"
+      label = _("Peered Starts/Exits")
+      choices = DEBUG_CONTROL.YES_NO
+      default = "no"
+      priority = 93
+    }
   }
 }
