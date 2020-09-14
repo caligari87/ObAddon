@@ -30,7 +30,7 @@ PREFABS.Wall_generic_alternating_colors =
 
 PREFABS.Wall_generic_mid_band =
 {
-  template = "Wall_generic_mid_band"
+  template = "Wall_generic_artsy_bedazzled"
   map = "MAP03"
 
   group = "gtd_generic_mid_band"
