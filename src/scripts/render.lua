@@ -2461,6 +2461,7 @@ chunk.goal.action = "S1_OpenDoor"  -- FIXME IT SHOULD BE SET WHEN JOINER IS REND
         SCRIPTS.start_fab_peer = nil
 
         -- check chunk sizes
+        gui.printf("Buddy: "..table.tostr(p_start_fab).."\n")
         gui.printf("Buddy: "..table.tostr(chunk).."\n")
         if p_start_fab.seed_h <= chunk.sh
         and p_start_fab.seed_w <= chunk.sw then

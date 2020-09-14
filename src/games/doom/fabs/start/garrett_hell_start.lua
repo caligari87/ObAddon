@@ -9,6 +9,7 @@ PREFABS.Start_garrett_hell_closet =
   where  = "seeds"
 
   seed_h = 2
+  seed_w = 2
 
   deep   =  16
   over   = -16
