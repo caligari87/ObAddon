@@ -974,11 +974,13 @@ function Monster_fill_room(R)
     -- MSSP: experiment; more monsters in big rooms with multiple platforms
     -- even larger numbers if it has floor areas of a significant height
     -- and distance from the initial entry point
-    if R.is_big then
+
+    -- R.trunk flag ensures ganking is unlikely on teleporter-entry rooms
+    if R.is_big and (R.grow_parent and not R.grow_parent:has_teleporter()) then
       local total_extra = 0
       each A in R.areas do
         if A.mode == "floor" then
-          local area_score = int(A.svolume / 4)
+          local area_score = int(A.svolume / 8)
           local height_score = math.abs(A.floor_h - R.entry_h) / 128 * 1.25
           -- local distance_score
 
@@ -993,6 +995,11 @@ function Monster_fill_room(R)
 
     -- a small random adjustment
     qty = qty * rand.range(0.9, 1.1)
+
+    -- nerf teleporter trunk quantities a bit
+    if R.grow_parent and not R.grow_parent:has_teleporter() then
+      qty = qty * rand.range(0.5, 0.8)
+    end
 
     gui.debugf("Quantity = %1.1f%%\n", qty)
     return qty
