@@ -5837,6 +5837,39 @@ GROW_PILLAR_3X3 =
   }
 }
 
+GROW_PILLAR_3x3_TOP_SLOPE =
+{
+  prob = 10
+
+  structure =
+  {
+    "1......","1111111"
+    "1......","11/A%11"
+    "x......","x1A#A11"
+    "x......","x1%A/11"
+    "x......","x111111"
+  }
+
+  diagonals =
+  {
+    "1A","A1"
+    "1A","A1"
+  }
+}
+
+GROW_PILLAR_TORII =
+{
+  prob = 10
+
+  structure =
+  {
+    ".......","1111111"
+    ".......","1#A1A#1"
+    ".......","1111111"
+    "xx111xx","xx111xx"
+  }
+}
+
 GROW_PILLAR_BEAN =
 {
   prob = 10

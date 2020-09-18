@@ -37,3 +37,17 @@ PREFABS.Wall_generic_mid_band =
 
   z_fit = "top"
 }
+
+-- diagonals
+
+PREFABS.Wall_generic_mid_band_diag =
+{
+  template = "Wall_generic_artsy_bedazzled"
+  map = "MAP13"
+
+  group = "gtd_generic_mid_band"
+
+  where = "diagonal"
+
+  z_fit = "top"
+}
