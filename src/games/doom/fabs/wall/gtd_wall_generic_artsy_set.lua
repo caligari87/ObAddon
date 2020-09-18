@@ -38,6 +38,16 @@ PREFABS.Wall_generic_mid_band =
   z_fit = "top"
 }
 
+PREFABS.Wall_generic_double_banded_ceil =
+{
+  template = "Wall_generic_artsy_bedazzled"
+  map = "MAP04"
+
+  group = "gtd_generic_double_banded_ceil"
+
+  z_fit = {60,68}
+}
+
 -- diagonals
 
 PREFABS.Wall_generic_mid_band_diag =
@@ -50,4 +60,14 @@ PREFABS.Wall_generic_mid_band_diag =
   where = "diagonal"
 
   z_fit = "top"
+}
+
+PREFABS.Wall_generic_double_banded_ceil_diag =
+{
+  template = "Wall_generic_artsy_bedazzled"
+  map = "MAP14"
+
+  group = "gtd_generic_double_banded_ceil"
+
+  z_fit = {60,68}
 }

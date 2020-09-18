@@ -1258,6 +1258,7 @@ DOOM.THEMES =
       gtd_generic_artsy_bedazzled = 2
       gtd_generic_alt_colors = 25
       gtd_generic_mid_band = 25
+      gtd_generic_double_banded_ceil = 25
     }
 
     outdoor_wall_groups =
@@ -1602,6 +1603,7 @@ DOOM.THEMES =
       gtd_generic_artsy_bedazzled = 15
       gtd_generic_alt_colors = 15
       gtd_generic_mid_band = 10
+      gtd_generic_double_banded_ceil = 15
     }
 
     window_groups =
@@ -1995,6 +1997,7 @@ DOOM.THEMES =
       gtd_generic_artsy_bedazzled = 40
       gtd_generic_alt_colors = 40
       gtd_generic_mid_band = 10
+      gtd_generic_double_banded_ceil = 40
     }
 
     outdoor_wall_groups =
