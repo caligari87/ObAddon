@@ -633,6 +633,7 @@ ULTDOOM.THEMES =
       Post_metal = 50
       Post_tech_1 = 50
       Post_tech_2 = 50
+      Post_tech_simple = 50
     }
 
     cage_mats =
@@ -916,10 +917,14 @@ ULTDOOM.THEMES =
     fence_posts =
     {
       Post_metal = 50
-      Post_tech_1 = 25
-      Post_tech_2 = 25
-      Post_gothic_1 = 25
-      Post_gothic_2 = 25
+      Post_tech_1 = 40
+      Post_tech_2 = 40
+      Post_gothic_blue = 10
+      Post_gothic_green = 10
+      Post_gothic_red = 10
+      Post_gothic_blue_2 = 10
+      Post_gothic_green_2 = 10
+      Post_gothic_red_2 = 10
     }
 
     -- Deimos doesn't have a window groups table!!! -MSSP-FIXME
@@ -1123,9 +1128,13 @@ ULTDOOM.THEMES =
 
     fence_posts =
     {
-      Post_metal = 50
-      Post_gothic_1 = 50
-      Post_gothic_2 = 50
+      Post_metal = 25
+      Post_gothic_blue = 10
+      Post_gothic_green = 10
+      Post_gothic_red = 15
+      Post_gothic_blue_2 = 10
+      Post_gothic_green_2 = 10
+      Post_gothic_red_2 = 15
     }
 
     window_groups =
@@ -1429,10 +1438,14 @@ ULTDOOM.THEMES =
     fence_posts =
     {
       Post_metal = 50
-      Post_tech_1 = 15
-      Post_tech_2 = 15
-      Post_gothic_1 = 35
-      Post_gothic_2 = 35
+      Post_tech_1 = 20
+      Post_tech_2 = 20
+      Post_gothic_blue = 20
+      Post_gothic_green = 20
+      Post_gothic_red = 20
+      Post_gothic_blue_2 = 20
+      Post_gothic_green_2 = 20
+      Post_gothic_red_2 = 20
     }
 
     passable_decor =

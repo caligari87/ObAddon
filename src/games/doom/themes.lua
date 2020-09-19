@@ -1336,6 +1336,7 @@ DOOM.THEMES =
       Post_metal = 50
       Post_tech_1 = 50
       Post_tech_2 = 50
+      Post_tech_simple = 50
     }
 
     cave_torches =
@@ -1650,8 +1651,12 @@ DOOM.THEMES =
       Post_metal = 50
       Post_tech_1 = 25
       Post_tech_2 = 25
-      Post_gothic_1 = 25
-      Post_gothic_2 = 25
+      Post_gothic_blue = 10
+      Post_gothic_green = 10
+      Post_gothic_red = 10
+      Post_gothic_blue_2 = 10
+      Post_gothic_green_2 = 10
+      Post_gothic_red_2 = 10
     }
 
     cave_torches =
@@ -2068,9 +2073,13 @@ DOOM.THEMES =
 
     fence_posts =
     {
-      Post_metal = 50
-      Post_gothic_1 = 50
-      Post_gothic_2 = 50
+      Post_metal = 25
+      Post_gothic_blue = 10
+      Post_gothic_green = 10
+      Post_gothic_red = 15
+      Post_gothic_blue_2 = 10
+      Post_gothic_green_2 = 10
+      Post_gothic_red_2 = 15
     }
 
     cave_torches =
