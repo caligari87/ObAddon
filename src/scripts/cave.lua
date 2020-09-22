@@ -2661,12 +2661,16 @@ function Cave_decide_properties(R, area)
   area.step_mode = "walkway"
 
   -- MSSP: Steppy caves are back, baby!
-  if rand.odds(style_sel("steepness", 0, 25, 50, 75)) then
+  if rand.odds(style_sel("steepness", 0, 25, 50, 75)) or (PARAM.steppy_caves and PARAM.steppy_caves == "always") then
     if rand.odds(50) then
       area.step_mode = "up"
     else
       area.step_mode = "down"
     end
+  end
+
+  if PARAM.steppy_caves and PARAM.steppy_caves == "no" then
+    area.step_mode = "walkway"
   end
 
   -- liquid mode --

@@ -69,5 +69,7 @@ PREFABS.Wall_generic_double_banded_ceil_diag =
 
   group = "gtd_generic_double_banded_ceil"
 
+  where = "diagonal"
+
   z_fit = {60,68}
 }

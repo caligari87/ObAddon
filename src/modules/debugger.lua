@@ -181,6 +181,7 @@ OB_MODULES["debugger"] =
       tooltip = "Enables games other than Doom 2 in Game Settings list."
       default = "no"
       priority = 94
+      gap = 1
     }
 
     peered_exits =
@@ -190,6 +191,21 @@ OB_MODULES["debugger"] =
       choices = DEBUG_CONTROL.YES_NO
       default = "no"
       priority = 93
+    }
+
+    steppy_caves =
+    {
+      name = "steppy_caves"
+      label = _("Steppy Caves")
+      choices =
+      {
+        "always", _("Always"),
+        "yes", _("Yes"),
+        "no", _("No"),
+      }
+      tooltip = "Disables or enables caves with height variations."
+      default = "yes"
+      priority = 92
     }
   }
 }
