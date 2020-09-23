@@ -997,7 +997,7 @@ function Monster_fill_room(R)
     qty = qty * rand.range(0.9, 1.1)
 
     -- nerf teleporter trunk quantities a bit
-    if R.grow_parent and not R.grow_parent:has_teleporter() then
+    if R.grow_parent and R.grow_parent:has_teleporter() then
       qty = qty * rand.range(0.5, 0.8)
     end
 
