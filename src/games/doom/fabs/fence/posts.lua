@@ -41,7 +41,7 @@ PREFABS.Post_tech_2 =
 PREFABS.Post_gothic_blue =
 {
   template = "Post_metal"
-  map = "MAP04"
+  map = "MAP03"
 
   thing_86 = 55
 }
@@ -49,7 +49,7 @@ PREFABS.Post_gothic_blue =
 PREFABS.Post_gothic_green =
 {
   template = "Post_metal"
-  map = "MAP04"
+  map = "MAP03"
 
   thing_86 = 56
 }
@@ -57,7 +57,7 @@ PREFABS.Post_gothic_green =
 PREFABS.Post_gothic_red =
 {
   template = "Post_metal"
-  map = "MAP04"
+  map = "MAP03"
 
   thing_86 = 57
 }
