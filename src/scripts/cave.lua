@@ -1695,6 +1695,7 @@ function Cave_floor_heights(R, entry_h)
 
 
   local function find_entry_area()
+
     local e_blob = area.entry_walk
 
     local cx = (e_blob.cx1 + e_blob.cx2) / 2
@@ -1702,18 +1703,29 @@ function Cave_floor_heights(R, entry_h)
     local nearest_dist = EXTREME_H
 
     each WF in area.walk_floors do
-      local cx_c = (WF.cx1 + WF.cx2) / 2
+      --[[local cx_c = (WF.cx1 + WF.cx2) / 2
       local cy_c = (WF.cy1 + WF.cy2) / 2
 
+      -- distance check
       WF.dist_to_entry = geom.dist(cx,cy,cx_c,cy_c)
-      nearest_dist = math.min(nearest_dist, WF.dist_to_entry)
+      nearest_dist = math.min(nearest_dist, WF.dist_to_entry)]]
+
+      -- touching check
+      WF.dist_to_entry = geom.box_dist(
+        e_blob.cx1, e_blob.cy1, e_blob.cx2, e_blob.cy2,
+        WF.cx1, WF.cy1, WF.cx2, WF.cy2
+      )
     end
 
     each WF in area.walk_floors do
-      if WF.dist_to_entry == nearest_dist then
+      if WF.dist_to_entry == 0 then
         return WF
       end
     end
+
+    error("No entry walk floor found!!! Life is meaningless meow\n" ..
+    "Everything is terrible and food doesn't taste the same " ..
+    "and the bottle is running low on pills")
   end
 
 

@@ -773,7 +773,6 @@ function geom.intersect_lines(ax1,ay1, ax2,ay2,  bx1,by1,bx2,by2)
   return ix, iy
 end
 
-
 function geom.delta(dir)
   if dir == 1 then return -1, -1 end
   if dir == 2 then return  0, -1 end
