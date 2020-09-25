@@ -42,3 +42,30 @@ PREFABS.Light_typh_flourescent_lamp_alt2 =
   flat_FLAT23 = "FLAT5_3"
   tex_LITE3 = "REDWALL"
 }
+
+-- white lights, rusty inside shell
+PREFABS.Light_typh_flourescent_lamp_alt3 =
+{
+  template = "Light_typh_flourescent_lamp"
+  
+  flat_CEIL5_1 = "CEIL5_2"
+  tex_COMPSPAN = "SW1GARG"
+}
+
+-- blue lights, rusty inside shell
+PREFABS.Light_typh_flourescent_lamp_alt4 =
+{
+  template = "Light_typh_flourescent_lamp_alt"
+  
+  flat_CEIL5_1 = "CEIL5_2"
+  tex_COMPSPAN = "SW1GARG"
+}
+
+-- red lights, rusty inside shell
+PREFABS.Light_typh_flourescent_lamp_alt5 =
+{
+  template = "Light_typh_flourescent_lamp_alt2"
+  
+  flat_CEIL5_1 = "CEIL5_2"
+  tex_COMPSPAN = "SW1GARG"
+}
