@@ -18,7 +18,7 @@ PREFABS.Wall_generic_glow_wall =
   bound_z1 = 0
   bound_z2 = 128
 
-  z_fit = "stretch"
+  z_fit = { 60,68 }
 }
 
 PREFABS.Wall_generic_glow_wall_diag =
@@ -49,7 +49,7 @@ PREFABS.Wall_generic_glow_wall_tech_no_liq =
   bound_z1 = 0
   bound_z2 = 128
 
-  z_fit = "stretch"
+  z_fit = { 60,68 }
 
   flat__LIQUID = "CEIL4_2"
 }
