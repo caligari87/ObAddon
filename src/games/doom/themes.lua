@@ -1955,6 +1955,8 @@ DOOM.THEMES =
       beam_textured = 50
     }
 
+    wall_group_prob = 65
+
     wall_groups =
     {
       torches2 = 30 --red
