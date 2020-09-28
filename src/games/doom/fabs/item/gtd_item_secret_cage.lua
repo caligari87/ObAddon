@@ -13,12 +13,13 @@ PREFABS.Item_gtd_secret_cage =
 
   seed_w = 2
   seed_h = 2
-  height = 120
+  height = 128
 
   deep =  16
   over = -16
 
   x_fit = { 68,76 , 180,188 }
+  z_fit = { 96,100 }
 }
 
 PREFABS.Item_gtd_secret_cage_hell =
