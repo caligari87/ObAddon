@@ -46,10 +46,86 @@ PREFABS.Light_typh_tech_alt2 =
   tex_BRONZE1 = "GRAY7"
 }
 
-PREFABS.Light_typh_sticks =
+PREFABS.Light_typh_flourescent_lamp =
 {
   template = "Light_typh_tech"
   map = "MAP02"
+  prob = 80
+
+  light_color = "white"
+}
+
+-- blue lights, same shell
+PREFABS.Light_typh_flourescent_lamp_alt =
+{
+  template = "Light_typh_tech"
+  map = "MAP02"
+  prob = 80
+
+  light_color = "blue"
+
+  flat_FLAT23 = "FLAT14"
+  tex_LITE3 = "LITEBLU4"
+}
+
+-- red lights, same shell
+PREFABS.Light_typh_flourescent_lamp_alt2 =
+{
+  template = "Light_typh_tech"
+  map = "MAP02"
+  prob = 80
+
+  light_color = "red"
+
+  flat_FLAT23 = "FLAT5_3"
+  tex_LITE3 = "REDWALL"
+}
+
+-- white lights, rusty inside shell
+PREFABS.Light_typh_flourescent_lamp_alt3 =
+{
+  template = "Light_typh_tech"
+  map = "MAP02"
+  prob = 80
+  
+  flat_CEIL5_1 = "CEIL5_2"
+  tex_COMPSPAN = "SW1GARG"
+}
+
+-- blue lights, rusty inside shell
+PREFABS.Light_typh_flourescent_lamp_alt4 =
+{
+  template = "Light_typh_tech"
+  map = "MAP02"
+  prob = 80
+  
+  light_color = "blue"
+
+  flat_CEIL5_1 = "CEIL5_2"
+  flat_FLAT23 = "FLAT14"
+  tex_COMPSPAN = "SW1GARG"
+  tex_LITE3 = "LITEBLU4"
+}
+
+-- red lights, rusty inside shell
+PREFABS.Light_typh_flourescent_lamp_alt5 =
+{
+  template = "Light_typh_tech"
+  map = "MAP02"
+  prob = 80
+  
+  light_color = "red"
+
+  flat_CEIL5_1 = "CEIL5_2"
+  flat_FLAT23 = "FLAT5_3"
+  tex_COMPSPAN = "SW1GARG"
+  tex_LITE3 = "REDWALL"
+}
+
+PREFABS.Light_typh_sticks =
+{
+  template = "Light_typh_tech"
+  map = "MAP03"
   prob = 80
 
   light_color = "white"
@@ -60,7 +136,7 @@ PREFABS.Light_typh_sticks =
 PREFABS.Light_typh_sticks_alt =
 {
   template = "Light_typh_tech"
-  map = "MAP02"
+  map = "MAP03"
   prob = 80
 
   bound_z1 = -16
@@ -73,7 +149,7 @@ PREFABS.Light_typh_sticks_alt =
 PREFABS.Light_typh_sticks_alt2 =
 {
   template = "Light_typh_tech"
-  map = "MAP02"
+  map = "MAP03"
   prob = 80
 
   bound_z1 = -16
@@ -87,7 +163,7 @@ PREFABS.Light_typh_sticks_alt2 =
 PREFABS.Light_typh_short =
 {
   template = "Light_typh_tech"
-  map = "MAP03"
+  map = "MAP04"
   prob = 80
 
   bound_z1 = -88
@@ -100,7 +176,7 @@ PREFABS.Light_typh_short =
 PREFABS.Light_typh_short_alt =
 {
   template = "Light_typh_tech"
-  map = "MAP03"
+  map = "MAP04"
   prob = 80
 
   bound_z1 = -88
@@ -115,7 +191,7 @@ PREFABS.Light_typh_short_alt =
 PREFABS.Light_typh_short_alt2 =
 {
   template = "Light_typh_tech"
-  map = "MAP03"
+  map = "MAP04"
   prob = 80
 
   bound_z1 = -88
