@@ -1,22 +1,21 @@
 PREFABS.Wall_hell_vaults_plain =
 {
-  file   = "wall/gtd_wall_hell_vaults.wad"
-  map    = "MAP01"
+  file = "wall/gtd_wall_hell_vaults.wad"
+  map = "MAP01"
 
-  prob   = 50
-  theme  = "hell"
+  prob = 50
   env = "building"
 
   group = "gtd_wall_hell_vaults"
 
-  where  = "edge"
-  deep   = 16
+  where = "edge"
+  deep = 16
   height = 128
 
   bound_z1 = 0
   bound_z2 = 128
 
-  z_fit  = "bottom"
+  z_fit = "bottom"
 }
 
 PREFABS.Wall_hell_vaults_windowed =
@@ -30,19 +29,29 @@ PREFABS.Wall_hell_vaults_windowed =
 
 PREFABS.Wall_hell_vaults_diag =
 {
-  file   = "wall/gtd_wall_hell_vaults.wad"
-  map    = "MAP03"
+  template = "Wall_hell_vaults_plain"
+  map = "MAP03"
 
-  prob   = 50
-  theme = "hell"
-  group = "gtd_wall_hell_vaults"
+  prob = 50
+  where = "diagonal"
+}
 
-  where  = "diagonal"
+--
 
-  height = 128
+PREFABS.Wall_hell_vaults_floor_tex =
+{
+  template = "Wall_hell_vaults_plain"
+  map = "MAP10"
 
-  bound_z1 = 0
-  bound_z2 = 128
+  group = "gtd_wall_hell_vaults_ftex"
+}
 
-  z_fit  = "bottom"
+PREFABS.Wall_hell_vaults_floor_tex_diag =
+{
+  template = "Wall_hell_vaults_plain"
+  map = "MAP11"
+
+  where = "diagonal"
+
+  group = "gtd_wall_hell_vaults_ftex"
 }

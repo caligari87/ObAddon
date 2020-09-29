@@ -1605,6 +1605,7 @@ DOOM.THEMES =
       gtd_generic_alt_colors = 15
       gtd_generic_mid_band = 10
       gtd_generic_double_banded_ceil = 15
+      gtd_wall_hell_vaults_ftex = 15
     }
 
     window_groups =
@@ -2005,6 +2006,7 @@ DOOM.THEMES =
       gtd_generic_alt_colors = 40
       gtd_generic_mid_band = 10
       gtd_generic_double_banded_ceil = 40
+      gtd_wall_hell_vaults_ftex = 40
     }
 
     outdoor_wall_groups =
