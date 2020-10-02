@@ -44,29 +44,20 @@ PREFAB_CONTROL.ON_OFF =
   "off", _("Off"),
 }
 
+PREFAB_CONTROL.FINE_TUNE_MULT_FACTORS =
+{
+  "0", _("NONE"),
+  "0.33", _("Rare"),
+  "0.5",  _("Few"),
+  "0.75", _("Less"),
+  "1", _("Default"),
+  "2", _("More"),
+  "4", _("Heaps"),
+  "8", _("I LOVE IT"),
+}
+
 PREFAB_CONTROL.FINE_TUNE_FABS =
 {
-  crushers =
-  {
-    "Joiner_tech_triple_crusher",
-    "Joiner_tech_3x3_crusher",
-    "Joiner_tech_double_mega_crusher",
-    "Hallway_conveyorh_c6",
-    "Hallway_hellcata_i8",
-  }
-
-  gambling =
-  {
-    "Item_dem_gamble_closet1",
-    "Item_dem_gamble_closet2",
-  }
-
-  dexterity =
-  {
-    "Joiner_scionox_minichasm",
-    "Joiner_scionox_minichasm_2",
-  }
-
   sight_ambushes =
   {
     "Cage_auto_open",
@@ -89,26 +80,45 @@ function PREFAB_CONTROL.setup(self)
 end
 
 function PREFAB_CONTROL.fine_tune_filters()
-  local tab_remove_fabs = {}
+  each name,fab in PREFABS do
+    if fab.filter == "gamble" then
+      fab.prob = fab.prob * tonumber(PARAM.pf_gamble)
+      fab.use_prob = fab.use_prob * tonumber(PARAM.pf_gamble)
 
-  if PARAM.pf_crushers and PARAM.pf_crushers == "off" then
-    table.append(tab_remove_fabs, PREFAB_CONTROL.FINE_TUNE_FABS["crushers"])
-  end
+      if fab.skip_prob then
+        fab.skip_prob = math.clamp(0,fab.skip_prob / tonumber(PARAM.pf_gamble),100)
+      end
 
-  if PARAM.pf_gamble and PARAM.pf_gamble == "off" then
-    table.append(tab_remove_fabs, PREFAB_CONTROL.FINE_TUNE_FABS["gambling"])
-  end
+      gui.printf("Divorce:\n")
+      gui.printf(table.tostr(fab))
+    end
 
-  if PARAM.pf_dexterity and PARAM.pf_dexterity == "off" then
-    table.append(tab_remove_fabs, PREFAB_CONTROL.FINE_TUNE_FABS["dexterity"])
-  end
+    if fab.filter == "crushers" then
+      fab.prob = fab.prob * tonumber(PARAM.pf_crushers)
+      fab.use_prob = fab.use_prob * tonumber(PARAM.pf_crushers)
 
-  if PARAM.pf_sight_ambushes and PARAM.pf_sight_ambushes == "off" then
-    table.append(tab_remove_fabs, PREFAB_CONTROL.FINE_TUNE_FABS["sight_ambushes"])
-  end
+      if fab.skip_prob then
+        fab.skip_prob = math.clamp(0,fab.skip_prob / tonumber(PARAM.pf_crushers),100)
+      end
+    end
 
-  each fab in tab_remove_fabs do
-    PREFABS[fab] = nil
+    if fab.filter == "dexterity" then
+      fab.prob = fab.prob * tonumber(PARAM.pf_dexterity)
+      fab.use_prob = fab.use_prob * tonumber(PARAM.pf_dexterity)
+
+      if fab.skip_prob then
+        fab.skip_prob = math.clamp(0,fab.skip_prob / tonumber(PARAM.pf_dexterity),100)
+      end
+    end
+
+    if fab.filter == "mirror_maze" then
+      fab.prob = fab.prob * tonumber(PARAM.pf_mirror_mazes)
+      fab.use_prob = fab.use_prob * tonumber(PARAM.pf_mirror_mazes)
+
+      if fab.skip_prob then
+        fab.skip_prob = math.clamp(0,fab.skip_prob / tonumber(PARAM.pf_mirror_mazes),100)
+      end
+    end
   end
 end
 
@@ -165,52 +175,44 @@ OB_MODULES["prefab_control"] =
 
     --
 
-    --[[pf_lifts =
-    {
-      name="pf_lifts", label=_("Lifts"), choices=PREFAB_CONTROL.ON_OFF
-      tooltip="Enables or disables lift fabs. Default is on."
-      default="on"
-      priority = 50
-    }]]
-
     pf_crushers =
     {
-      name="pf_crushers", label=_("Crushers"), choices=PREFAB_CONTROL.ON_OFF
-      tooltip="Enables or disables fabs with crushing sectors. Default is on."
-      default="on"
+      name="pf_crushers", label=_("Crushers"), choices=PREFAB_CONTROL.FINE_TUNE_MULT_FACTORS
+      tooltip="Changes probabilities for fabs with crushing sectors. Default is on."
+      default="1"
       priority = 49
     }
 
     pf_dexterity =
     {
-      name="pf_dexterity", label=_("Dexterity Fabs"), choices=PREFAB_CONTROL.ON_OFF
-      tooltip="Enables or disables fabs featuring Chasm-ish navigation. Default is on."
-      default="on"
+      name="pf_dexterity", label=_("Dexterity Fabs"), choices=PREFAB_CONTROL.FINE_TUNE_MULT_FACTORS
+      tooltip="Changes probabilities for fabs featuring Chasm-ish navigation. Default is on."
+      default="1"
       priority = 48
     }
 
-    --[[pf_jump =
-    {
-      name="pf_jump", label=_("Jumps"), choices=PREFAB_CONTROL.ON_OFF
-      tooltip="Enables or disables fabs absolutely requiring jumping to traverse. Default is on."
-      default="on"
-      priority = 47
-    }]]
-
     pf_gamble =
     {
-      name="pf_dexterity", label=_("Gambling Fabs"), choices=PREFAB_CONTROL.ON_OFF
-      tooltip="Enables or disables fabs that may lockout a player on items. Default is on."
-      default="on"
-      priority = 46
+      name="pf_dexterity", label=_("Gambling Fabs"), choices=PREFAB_CONTROL.FINE_TUNE_MULT_FACTORS
+      tooltip="Changes probabilities for fabs that may lockout a player on items. Default is on."
+      default="1"
+      priority = 47
     }
 
     pf_sight_ambushes =
     {
-      name="pf_sight_ambushes", label=_("Sight Ambush Cages"), choices=PREFAB_CONTROL.ON_OFF
-      tooltip="Enables or disables cages that unleash its monsters when player is in sight. " ..
+      name="pf_sight_ambushes", label=_("Sight Ambush Cages"), choices=PREFAB_CONTROL.FINE_TUNE_MULT_FACTORS
+      tooltip="Changes probabilities for cages that unleash its monsters when player is in sight. " ..
       "Default is on."
-      default="on"
+      default="1"
+      priority = 46
+    }
+
+    pf_mirror_mazes =
+    {
+      name = "pf_mirror_mazes", label=_("Mirror Mazes"), choices=PREFAB_CONTROL.FINE_TUNE_MULT_FACTORS
+      tooltip="Changes probabilities for hell mirror maze closets and joiners."
+      default="1"
       priority = 45
       gap = 1
     }

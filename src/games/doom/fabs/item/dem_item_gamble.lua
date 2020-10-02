@@ -9,6 +9,7 @@ PREFABS.Item_dem_gamble_closet1 =
 
   prob  = 80
 
+  filter = "gamble"
 
   key   = "secret"
 
@@ -59,9 +60,7 @@ PREFABS.Item_dem_gamble_closet1 =
     invis = 5
     allmap = 2
   }
-
 }
-
 
 ---Choose one of 3, the others will get crushed
 
@@ -93,5 +92,4 @@ PREFABS.Item_dem_gamble_closet2 =
    stimpack = 5
    medikit = 5
   }
-
 }

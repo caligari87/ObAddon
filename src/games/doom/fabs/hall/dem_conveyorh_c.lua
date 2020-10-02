@@ -59,4 +59,5 @@ PREFABS.Hallway_conveyorh_c6 =
   style  = "traps"
   prob   = 100
 
+  filter = "crushers"
 }

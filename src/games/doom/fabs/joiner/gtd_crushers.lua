@@ -5,6 +5,8 @@ PREFABS.Joiner_tech_triple_crusher =
 
   prob   = 85
 
+  filter = "crushers"
+
   style  = "traps"
 
   where  = "seeds"

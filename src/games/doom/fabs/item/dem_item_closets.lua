@@ -10,6 +10,8 @@ PREFABS.Item_dem_mirrormaze_closet =
 
   engine = "zdoom"
 
+  filter = "mirror_maze"
+
   theme = "hell"
   prob  = 100
 
@@ -27,23 +29,11 @@ PREFABS.Item_dem_mirrormaze_closet =
 --a item in a maze of mirrors2 in hell
 PREFABS.Item_dem_mirrormaze2_closet =
 {
-  file  = "item/dem_item_closets.wad"
+  template = "Item_dem_mirrormaze_closet"
   map   = "MAP02"
 
-  engine = "zdoom"
-
-  theme = "hell"
-  prob  = 100
-
-  where  = "seeds"
   seed_w = 2
   seed_h = 3
-
-  deep = 16
-  over = -16
-
-  x_fit = "frame"
-  y_fit  = "frame"
 }
 
 --a item on a shrine in a rift in hell

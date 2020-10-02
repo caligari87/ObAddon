@@ -7,7 +7,10 @@ PREFABS.Joiner_scionox_minichasm =
 
   prob   = 180
   theme  = "hell"
+
   style  = "traps"
+
+  filter = "dexterity"
 
   where  = "seeds"
   shape  = "I"
