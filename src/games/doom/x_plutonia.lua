@@ -3,7 +3,7 @@
 --------------------------------------------------------------------
 --
 --  Copyright (C) 2006-2016 Andrew Apted
---  Copyright (C) 2019 Armaetus
+--  Copyright (C) 2019-2020 Armaetus
 --
 --  This program is free software; you can redistribute it and/or
 --  modify it under the terms of the GNU General Public License
@@ -158,6 +158,182 @@ PLUTONIA.EPISODES =
     sky_patch2 = "SKY3B"
     dark_prob = 40
     bex_end_name = "P4TEXT"
+  }
+}
+
+-- WORK IN PROGRESS --
+-- TEMPORARY SHIT, DO NOT REENABLE JUST YET! --
+-- -Armaetus, October 2nd, 2020
+
+-- More tables and other crap are needed so
+-- Plutonia has some exclusive themes added,
+-- though not too many. If Evilution has some,
+-- so should Plutonia.
+
+-- Some thoughts:
+-- Plutonia is generally harder and really seems to
+-- like using chaingunners and revenants more, possibly
+-- other monsters so would suggest monster_prefs be
+-- anywhere from 1.25 to 1.5, depending on placement
+-- and lethality.
+
+
+-- Copied from x_tnt.lua as a placeholder, mostly.
+UNFINISHED.THEMES =
+{
+
+jungle =
+  {
+    liquids =
+    {
+      slime = 60
+      blood = 30
+      water = 20
+      lava  = 10
+    }
+
+    entity_remap =
+    {
+      k_red    = "ks_red"
+      k_blue   = "ks_blue"
+      k_yellow = "ks_yellow"
+    }
+
+    facades =
+    {
+      SMSTONE6 = 30
+      STONEW1  = 20
+      STWALL   = 20
+      CAVERN1  = 10
+
+      BIGBRIK1 = 30
+      BSTONE2  = 20
+      BRICK4   = 10
+    }
+
+    prefab_remap =
+    {
+      DOORBLU  = "DOORBLU2"
+      DOORRED  = "DOORRED2"
+      DOORYEL  = "DOORYEL2"
+
+      SILVER3  = "MURAL1"
+      GATE3    = "FLAT22"
+      GATE4    = "FLAT22"
+      REDWALL  = "DOKGRIR"
+      SW1COMP  = "SW1CMT"
+    }
+
+    window_groups =
+    {
+      round  = 90
+      barred = 60
+      grate  = 30
+    }
+
+    outdoor_torches =
+    {
+      blue_torch = 50
+      green_torch = 50
+      red_torch = 50
+      candelabra = 20
+    }
+
+    beam_groups =
+    {
+      beam_gothic = 50
+      beam_quakeish = 50
+    }
+
+    fence_groups =
+    {
+      PLAIN = 50
+      crenels = 50
+      gappy = 50
+      fence_gothic = 50
+    }
+
+    fence_posts =
+    {
+      Post_metal = 25
+      Post_gothic_blue = 10
+      Post_gothic_green = 10
+      Post_gothic_red = 15
+      Post_gothic_blue_2 = 10
+      Post_gothic_green_2 = 10
+      Post_gothic_red_2 = 15
+    }
+
+-- Based on Plutonia's FUCK YOU to the player..
+    monster_prefs =
+    {
+      gunner = 1.5
+      mancubus = 1.2
+      revenant = 1.3
+      demon   = 1.33
+      vile = 1.1
+    }
+
+--Any rocky/stonelike/metal doors (IE METALDR) would do great for this theme -Chris
+    scenic_fences =
+    {
+      MIDBARS3 = 50
+    }
+
+    skyboxes =
+    {
+      Skybox_generic = 50
+    }
+  }
+}
+
+UNFINISHED.ROOM_THEMES =
+{
+
+-- JUNGLE BULLSHIT --
+-- TEMP TEMP TEMP! --
+
+  jungle_placeholder =
+  {
+    env  = "building"
+    prob = 25
+
+    walls =
+    {
+      STARTAN2 = 50
+      STARTAN3 = 60
+
+      STARG1 = 40
+      STARG2 = 20
+      STARG3 = 40
+
+      STARGR1 = 50
+      STARGR2 = 20
+
+      STARBR2  = 40
+    }
+
+    floors =
+    {
+      FLOOR4_8 = 50
+      FLOOR5_1 = 50
+      FLOOR5_3 = 30
+      FLOOR0_3 = 30
+      FLOOR5_1 = 25
+      FLOOR3_3 = 20
+      FLOOR0_2 = 20
+      FLOOR0_1 = 20
+      FLOOR4_6 = 15
+      FLOOR7_1 = 15
+      FLAT4 = 15
+      FLAT14 = 10
+      SLIME15 = 10
+      SLIME16 = 10
+      FLOOR1_6 = 6
+      FLOOR1_1 = 8
+      FLOOR0_5 = 5
+      FLAT5 = 5
+    }
   }
 }
 
