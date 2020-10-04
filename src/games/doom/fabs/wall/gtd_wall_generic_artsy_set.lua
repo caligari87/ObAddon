@@ -48,6 +48,47 @@ PREFABS.Wall_generic_double_banded_ceil =
   z_fit = {60,68}
 }
 
+PREFABS.Wall_frame_light_band =
+{
+  template = "Wall_generic_artsy_bedazzled"
+  map = "MAP05"
+
+  group = "gtd_generic_frame_light_band"
+
+  theme = "!hell"
+
+  z_fit = "top"
+}
+
+--
+PREFABS.Wall_generic_artsy_frame_metal =
+{
+  template = "Wall_generic_artsy_bedazzled"
+  map = "MAP06"
+
+  group = "gtd_generic_frame_metal"
+
+  theme = "!hell"
+
+  z_fit = "top"
+}
+
+PREFABS.Wall_generic_artsy_frame_metal_hell =
+{
+  template = "Wall_generic_artsy_bedazzled"
+  map = "MAP06"
+
+  group = "gtd_generic_frame_metal"
+
+  theme = "hell"
+
+  tex_STEP4 = "METAL"
+  tex_DOORSTOP = "METAL"
+  flat_FLAT19 = "CEIL5_2"
+
+  z_fit = "top"
+}
+
 -- diagonals
 
 PREFABS.Wall_generic_mid_band_diag =
