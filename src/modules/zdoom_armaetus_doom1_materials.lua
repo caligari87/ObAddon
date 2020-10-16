@@ -1242,6 +1242,23 @@ ARMAETUS_DOOM1_MATERIALS = {
   MONYSIDE = { t="MONYSIDE", f="MONYFLAT"}
   MONYFLAT = { t="MONYFRON", f="MONYFLAT"}
 
+  CREYEWLL = { t="CREYEWLL", f="FLAT15"} -- red skin wall with eyes
+  CRFSHWLL = { t="CRFSHWLL", f="FLAT15"} -- red flesh wall
+  CRGRSWLL = { t="CRGRSWLL", f="FLAT5_5"} -- brown flesh wall with lacerations
+  CRHRTWLL = { t="CRHRTWLL", f="FLAT15"} -- red flesh wall with lacerations
+
+  -- Craneo's arcade machine screens
+  ARCD2 = { t="ARCD2", f="CEIL4_3"}
+  ARCD3 = { t="ARCD3", f="CEIL4_3"}
+  ARCD4 = { t="ARCD4", f="CEIL4_3"}
+  ARCD5 = { t="ARCD5", f="CEIL4_3"}
+  ARCD6 = { t="ARCD6", f="CEIL4_3"}
+  ARCD7 = { t="ARCD7", f="CEIL4_3"}
+  ARCD8 = { t="ARCD8", f="CEIL4_3"}
+  ARCD9 = { t="ARCD9", f="CEIL4_3"}
+  ARCD10 = { t="ARCD10", f="CEIL4_3"}
+  ARCD11 = { t="ARCD11", f="CEIL4_3"}
+
   ----------------------------------------
   -- End new animated non-liquid floors --
   ----------------------------------------

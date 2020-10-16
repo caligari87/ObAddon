@@ -1133,6 +1133,11 @@ ARMAETUS_ROOM_THEMES =
       SKINMET7 = 10
       SKTEK01 = 15
       SKTEK02 = 15
+
+      CREYEWLL = 30
+      CRFSHWLL = 30
+      CRGRSWLL = 30
+      CRHRTWLL = 30
     }
 
     floors =
@@ -1145,6 +1150,11 @@ ARMAETUS_ROOM_THEMES =
       FLOOR46D = 30
       FLOOR46E = 30
       G13 = 20
+
+      CREYEWLL = 10
+      CRFSHWLL = 10
+      CRGRSWLL = 10
+      CRHRTWLL = 10
     }
 
     ceilings =
@@ -1155,6 +1165,11 @@ ARMAETUS_ROOM_THEMES =
       G03 = 30
       FLOOR7_2 = 15
       FLOOR7_3 = 15
+
+      CREYEWLL = 7
+      CRFSHWLL = 7
+      CRGRSWLL = 7
+      CRHRTWLL = 7
     }
   }
 
@@ -3600,6 +3615,11 @@ ARMAETUS_THEMES =
 
       BROWN1   = 5
       BRVINE   = 10
+
+      CREYEWLL = 7
+      CRFSHWLL = 7
+      CRGRSWLL = 7
+      CRHRTWLL = 7
     }
 
     wall_groups =
@@ -3759,6 +3779,11 @@ ARMAETUS_NATURALS =
       VINES3 = 10
       VINES4 = 10
       MOSROK3 = 10
+
+      GRNSTONE = 20
+      GREEN01 = 20
+      GREEN02 = 20
+      GREEN03 = 20
     }
   }
 
@@ -3784,6 +3809,11 @@ ARMAETUS_NATURALS =
       VINES3 = 20
       VINES4 = 20
       MOSROK3 = 20
+
+      GRNSTONE = 20
+      GREEN01 = 20
+      GREEN02 = 20
+      GREEN03 = 20
     }
   }
 
@@ -3806,6 +3836,13 @@ ARMAETUS_NATURALS =
       VINES2 = 3
       VINES3 = 3
       VINES4 = 3
+
+      GRNSTONE = 20
+
+      CREYEWLL = 5
+      CRFSHWLL = 5
+      CRGRSWLL = 5
+      CRHRTWLL = 5
     }
   }
 }
