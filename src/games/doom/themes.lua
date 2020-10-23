@@ -1063,6 +1063,13 @@ DOOM.THEMES =
 
   tech =
   {
+    narrow_halls =
+    {
+      vent = 50
+      mineshaft = 50
+      access = 50
+    }
+
     liquids =
     {
       nukage = 70
@@ -1429,6 +1436,13 @@ DOOM.THEMES =
 
   urban =
   {
+    narrow_halls =
+    {
+      vent = 50
+      mineshaft = 50
+      access = 25
+    }
+
     liquids =
     {
       water = 60
@@ -2250,6 +2264,29 @@ DOOM.ROOM_THEMES =
       FLAT19 = 20
       FLAT23 = 20
       FLAT5_4 = 15
+    }
+  }
+
+
+  any_access_Hallway =
+  {
+    env   = "hallway"
+    group = "access"
+    prob  = 1
+
+    walls =
+    {
+      GRAY1 = 50
+    }
+
+    floors =
+    {
+      FLAT1 = 30
+    }
+
+    ceilings =
+    {
+      FLAT1 = 30
     }
   }
 
