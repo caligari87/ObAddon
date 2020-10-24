@@ -14,6 +14,14 @@ PREFABS.Hallway_access_open_joiner =
   deep   = 16
 }
 
+PREFABS.Hallway_access_door_panel =
+{
+  template = "Hallway_access_open_joiner"
+  map = "MAP20"
+}
+
+--
+
 PREFABS.Hallway_access_door =
 {
   template = "Hallway_access_open_joiner"

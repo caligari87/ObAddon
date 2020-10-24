@@ -8,6 +8,8 @@ PREFABS.Hallway_access_plain =
 
   where  = "seeds"
   shape  = "I"
+
+  can_flip = true
 }
 
 PREFABS.Hallway_access_vent =
@@ -16,8 +18,6 @@ PREFABS.Hallway_access_vent =
   map = "MAP02"
 
   prob = 15
-
-  can_flip = true
 }
 
 PREFABS.Hallway_access_one_side =
@@ -26,8 +26,6 @@ PREFABS.Hallway_access_one_side =
   map = "MAP03"
 
   prob = 15
-
-  can_flip = true
 }
 
 PREFABS.Hallway_access_comp_side =
@@ -36,8 +34,6 @@ PREFABS.Hallway_access_comp_side =
   map = "MAP04"
 
   prob = 15
-
-  can_flip = true
 }
 
 PREFABS.Hallway_access_crate =
@@ -46,8 +42,6 @@ PREFABS.Hallway_access_crate =
   map = "MAP05"
 
   prob = 15
-
-  can_flip = true
 }
 
 PREFABS.Hallway_access_low_ceiling =
@@ -56,8 +50,30 @@ PREFABS.Hallway_access_low_ceiling =
   map = "MAP06"
 
   prob = 15
+}
 
-  can_flip = true
+PREFABS.Hallway_access_hi_step =
+{
+  template = "Hallway_access_plain"
+  map = "MAP07"
+
+  prob = 15
+}
+
+PREFABS.Hallway_access_pillar =
+{
+  template = "Hallway_access_plain"
+  map = "MAP08"
+
+  prob = 15
+}
+
+PREFABS.Hallway_access_panel =
+{
+  template = "Hallway_access_plain"
+  map = "MAP09"
+
+  prob = 15
 }
 
 --
