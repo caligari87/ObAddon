@@ -4,7 +4,7 @@ PREFABS.Hallway_access_plain =
   map    = "MAP01"
 
   group  = "access"
-  prob   = 50
+  prob   = 75
 
   where  = "seeds"
   shape  = "I"
