@@ -435,10 +435,6 @@ Glow
     RROCK02
     GGLAS01
     GGLAS02
-    FASHBLAK
-    FASHBLU
-    FASHGREN
-    FASHWITE
     TEK1
     TEK2
     TEK3
