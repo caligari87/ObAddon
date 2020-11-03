@@ -990,7 +990,6 @@ function Monster_fill_room(R)
           total_extra = total_extra + extra
         end
       end
-      gui.printf("ROOM_" .. R.id .. ": " .. total_extra .. "\n")
     end
 
     -- a small random adjustment

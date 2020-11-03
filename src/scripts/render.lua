@@ -2336,6 +2336,23 @@ chunk.goal.action = "S1_OpenDoor"  -- FIXME IT SHOULD BE SET WHEN JOINER IS REND
   local function do_decoration()
     -- prefab already chosen
     assert(chunk.prefab_def)
+
+    -- hack for normal parks - no height info
+    -- is available when the fab is initially
+    -- picked, so pick a new one if the height
+    -- has a mismatch
+    if R.is_park and not R.is_natural_park then
+      local h_diff = R.zone.sky_h - chunk.floor_h
+
+      if chunk.prefab_def.height and
+      chunk.prefab_def.height > h_diff then
+        chunk.prefab_def = nil
+        reqs.kind = "picture"
+        reqs.height = h_diff
+
+        gui.printf("SHIT HAPPENED!\n")
+      end 
+    end
   end
 
   local function do_teleporter()

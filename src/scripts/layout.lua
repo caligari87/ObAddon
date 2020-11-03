@@ -1938,6 +1938,7 @@ stderrf("Cages in %s [%s pressure] --> any_prob=%d  per_prob=%d\n",
 
     if R.is_park then
       -- no actual height information at this stage apparently
+      -- re-decided in render_chunk instead if required
       reqs.height = EXTREME_H
 
       if R.is_natural_park then
