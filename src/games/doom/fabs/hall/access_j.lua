@@ -30,6 +30,14 @@ PREFABS.Hallway_access_door =
   style    = "doors"
 }
 
+PREFABS.Hallway_access_door_switch =
+{
+  template = "Hallway_access_open_joiner"
+  map = "MAP03"
+
+  style = "doors"
+}
+
 PREFABS.Hallway_access_secret =
 {
   template = "Hallway_access_open_joiner"
