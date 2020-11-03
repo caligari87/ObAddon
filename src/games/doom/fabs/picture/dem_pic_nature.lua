@@ -861,8 +861,7 @@ PREFABS.Pic_dem_campsiteP =
 
   env = "park"
 
-  prob = 5
-  skip_prob = 50
+  prob = 100
 }
 
 ----Natural corner with old cabin----

@@ -88,9 +88,6 @@ function PREFAB_CONTROL.fine_tune_filters()
       if fab.skip_prob then
         fab.skip_prob = math.clamp(0,fab.skip_prob / tonumber(PARAM.pf_gamble),100)
       end
-
-      gui.printf("Divorce:\n")
-      gui.printf(table.tostr(fab))
     end
 
     if fab.filter == "crushers" then

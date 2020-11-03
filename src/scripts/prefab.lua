@@ -2229,9 +2229,9 @@ function Fab_find_matches(reqs, match_state)
 
     if req_k == nil then return false end
 
-    if req_k == "cave" or req_k == "park" then
-      if def_k == "nature" then return true end
-      if def_k == "!nature" then return false end
+    if def_k == "nature" then
+      if match_environment(req_k, "park") then return true end
+      if match_environment(req_k, "cave") then return true end
     end
 
     if def_k == "outdoor" then
