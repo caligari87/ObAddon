@@ -1573,7 +1573,6 @@ DOOM.THEMES =
       light_side4 = 70
       light_side5 = 70
       light_side6 = 70
-
     }
 
     beam_groups =

@@ -2065,6 +2065,14 @@ gui.debugf("wants =\n%s\n\n", table.tostr(wants))
       local min_val = 1
 
       local choice
+      local tab =
+      {
+        tricky = 0.15
+        treacherous = 0.25
+        dangerous = 0.50
+        deadly = 0.66
+        lethal = 0.85
+      }
 
       if what == "cage" then
         choice = OB_CONFIG.cage_qty
@@ -2082,18 +2090,10 @@ gui.debugf("wants =\n%s\n\n", table.tostr(wants))
         end
       elseif choice == "default" then
         min_val = 1
-      elseif choice == "tricky" then
-        min_val = int(min_val + (spot_total * 0.15))
-      elseif choice == "treacherous" then
-        min_val = int(min_val + (spot_total * 0.25))
-      elseif choice == "dangerous" then
-        min_val = int(min_val + (spot_total * 0.50))
-      elseif choice == "deadly" then
-        min_val = int(min_val + (spot_total * 0.66))
-        elseif choice == "lethal" then
-        min_val = int(min_val + (spot_total * 0.85))
       elseif choice == "crazy" then
         min_val = spot_total
+      else
+        min_val = int(min_val + (spot_total * tab[choice]))
       end
 
       return min_val

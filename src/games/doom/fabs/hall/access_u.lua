@@ -9,3 +9,9 @@ PREFABS.Hallway_access_dead_end =
   where  = "seeds"
   shape  = "U"
 }
+
+PREFABS.Hallway_access_dead_end_2 =
+{
+  template = "Hallway_access_dead_end"
+  map = "MAP02"
+}
