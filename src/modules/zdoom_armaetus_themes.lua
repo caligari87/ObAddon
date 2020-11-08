@@ -42,6 +42,28 @@ ARMAETUS_ROOM_THEMES =
     }
   }
 
+  any_pipeline_Hallway =
+  {
+    env   = "hallway"
+    group = "pipeline"
+    prob  = 1
+
+    walls =
+    {
+      GRAY5 = 1
+    }
+
+    floors =
+    {
+      FLAT1 = 1
+    }
+
+    ceilings =
+    {
+      FLAT1 = 1
+    }
+  }
+
   any_hellcata_Hallway =
   {
     env   = "hallway"
@@ -3088,6 +3110,7 @@ ARMAETUS_THEMES =
       metro = 25
       ducts = 50
       conveyor = 50
+      pipeline = 50
     }
 
     facades =
