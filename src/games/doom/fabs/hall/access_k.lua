@@ -22,7 +22,7 @@ PREFABS.Hallway_access_door_locked_blue =
   key = "k_blue"
 
   tex_DOORRED = "DOORBLU"
-  line_33 = 32
+  line_135 = 133
 }
 
 PREFABS.Hallway_access_door_locked_yellow =
@@ -32,7 +32,7 @@ PREFABS.Hallway_access_door_locked_yellow =
   key = "k_yellow"
 
   tex_DOORRED = "DOORYEL"
-  line_33 = 34
+  line_135 = 137
 }
 
 --
