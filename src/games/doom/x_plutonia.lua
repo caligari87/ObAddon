@@ -265,13 +265,19 @@ jungle =
     }
 
 -- Based on Plutonia's FUCK YOU to the player..
+
+-- November 14th, 2020
+-- WIP: Further analysis of plutonia.wad's monster placement.
+-- monster_prefs are subject to change.
     monster_prefs =
     {
       gunner = 1.5
       mancubus = 1.2
       revenant = 1.3
-      demon   = 1.33
+      demon   = 0.8
       vile = 1.1
+      shooter = 0.75
+      zombie = 0.5
     }
 
 --Any rocky/stonelike/metal doors (IE METALDR) would do great for this theme -Chris
