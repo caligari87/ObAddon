@@ -25,6 +25,7 @@ PROCEDURAL_GOTCHA_FINE_TUNE.GOTCHA_STRENGTH_CHOICES =
   "harder", _("[+4] Harder"),
   "tougher", _("[+6] Tougher"),
   "crazier", _("[+8] CRAZIER"),
+  "nightmarish", _("[+16] NIGHTMARISH"),
 }
 
 PROCEDURAL_GOTCHA_FINE_TUNE.GOTCHA_QUANTITY_CHOICES =

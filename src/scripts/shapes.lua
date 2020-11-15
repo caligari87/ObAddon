@@ -5490,20 +5490,6 @@ LIQUEFY_SQ_EXTEND =
   }
 }
 
-LIQUEFY_FL_EXTEND =
-{
-  pass = "liquefy"
-
-  prob = 10
-
-  structure =
-  {
-    "x11","x11"
-    "~11","~~1"
-    "x11","x11"
-  }
-}
-
 LIQUEFY_SQ_CORNER =
 {
   pass = "liquefy"

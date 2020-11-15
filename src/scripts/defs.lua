@@ -227,6 +227,29 @@ SECRET_BONUS_FACTORS =
   heapsest = 4
 }
 
+PROC_GOTCHA_STRENGTH_LEVEL =
+{
+  none        = 0
+  harder      = 2
+  tougher     = 4
+  crazier     = 8
+  nightmarish = 16
+}
+
+PROC_GOTCHA_QUANTITY_MULTIPLIER =
+{
+  ["-75"] = 0.25
+  ["-50"] = 0.5
+  ["-25"] = 0.75
+  none    = 1
+  ["25"]  = 1.25
+  ["50"]  = 1.5
+  ["100"] = 2
+  ["200"] = 4
+  ["400"] = 8
+}
+
+
 
 --
 -- styles control quantities of things in each level

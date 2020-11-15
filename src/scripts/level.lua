@@ -495,15 +495,7 @@ function Episode_plan_monsters()
           gotcha_strength = 16
         end
       elseif PARAM.gotcha_strength then
-        if PARAM.gotcha_strength == "none" then
-          gotcha_strength = 0
-        elseif PARAM.gotcha_strength == "harder" then
-          gotcha_strength = 2
-        elseif PARAM.gotcha_strength == "tougher" then
-          gotcha_strength = 4
-        elseif PARAM.gotcha_strength == "crazier" then
-          gotcha_strength = 8
-        end
+        gotcha_strength = PROC_GOTCHA_STRENGTH_LEVEL[PARAM.gotcha_strength]
       end
 
       LEV.monster_level = mon_along + gotcha_strength
