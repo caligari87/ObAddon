@@ -16,7 +16,10 @@ PREFABS.Quest_Marine_auto_open =
   deep   = 16
   over   = -16
 
-  kind = "marine"
+  kind = "sec_quest"
+
+  group = "marine_closet"
+
   mmin = 1
   mmax = 10
 

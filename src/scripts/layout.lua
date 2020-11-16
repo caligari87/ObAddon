@@ -2012,9 +2012,11 @@ stderrf("Cages in %s [%s pressure] --> any_prob=%d  per_prob=%d\n",
 
     reqs = preferred_chunk:base_reqs(preferred_chunk.from_dir)
 
+    reqs.kind = "sec_quest"
     reqs.group = R.secondary_important.kind
+    reqs.shape = "U"
 
-    def = Fab_pick(reqs, "allow_none")
+    def = Fab_pick(reqs)
 
     if def then preferred_chunk.prefab_def = def end
   end

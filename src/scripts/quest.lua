@@ -2518,10 +2518,10 @@ function Quest_nice_items()
 
 
   local function assign_secondary_importants()
-    if not GAME.SECONDARY_IMPORTANTS then return end
-    if table.empty(GAME.SECONDARY_IMPORTANTS) then return end
+    if not LEVEL.secondary_importants then return end
+    if table.empty(LEVEL.secondary_importants) then return end
 
-    local simp_tab = GAME.SECONDARY_IMPORTANTS
+    local simp_tab = LEVEL.secondary_importants
     rand.shuffle(simp_tab)
 
     local room_tab = {}
@@ -2539,15 +2539,15 @@ function Quest_nice_items()
     -- max_prog: 0-1 value; how far along in the level should
     --   SI fab stop spawning
 
-    local function pick_room_for_si()
+    local function pick_room_for_si(info)
       each R in LEVEL.rooms do
         if R.closets and #R.closets > 2
-        and not chosen_room.secondary_important then
+        and not R.secondary_important then
           local do_it = false
 
-          if SI.min_prog and SI.max_prog then
-            if R.lev_along >= SI.min_prog and
-            R.lev_along <= SI.max_prog then
+          if info.min_prog and info.max_prog then
+            if R.lev_along >= info.min_prog and
+            R.lev_along <= info.max_prog then
               do_it = true
             end
           end
@@ -2563,19 +2563,20 @@ function Quest_nice_items()
         end
       end
 
-      for count = SI.min_count or 1, SI.max_count do
+      for count = info.min_count or 1, info.max_count do
         if table.empty(room_tab) then continue end
 
         chosen_room = rand.pick(room_tab)
         chosen_room.secondary_important =
         {
-          kind = SI.kind
+          kind = info.kind
         }
+
       end
     end
 
     each SI in simp_tab do
-      if SI.level_prob then pick_room_for_si() end
+      if rand.odds(SI.level_prob) then pick_room_for_si(SI) end
     end
   end
 

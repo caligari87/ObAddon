@@ -17,7 +17,10 @@ PREFABS.Quest_marine_teleporter_ambush_tech =
 
   bound_z1 = 0
 
-  kind = "marine"
+  kind = "sec_quest"
+
+  group = "marine_closet"
+
   mmin = 1
   mmax = 10
 

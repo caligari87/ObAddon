@@ -1252,7 +1252,6 @@ MARINE_CLOSET_TUNE.TECHWPN =
 
 function MARINE_CLOSET_TUNE.setup(self)
   PARAM.marine_gen = true
-  PARAM.marine_skip = false
   PARAM.MARINESCRIPT = ""
   PARAM.marine_closets = 0
   PARAM.marine_marines = 0
@@ -1265,12 +1264,16 @@ function MARINE_CLOSET_TUNE.setup(self)
 end
 
 function MARINE_CLOSET_TUNE.calc_closets()
-  if rand.odds(tonumber(PARAM.m_c_chance)) then
+  if rand.odds(tonumber(PARAM.m_c_chance)) 
+  and not LEVEL.prebuilt then
     local rngmin
     local rngmax
-    PARAM.marine_skip = false
+
+    PARAM.level_has_marine_closets = true
+
     rngmin = math.min(tonumber(PARAM.m_c_min),tonumber(PARAM.m_c_max))
     rngmax = math.max(tonumber(PARAM.m_c_min),tonumber(PARAM.m_c_max))
+
     if PARAM.m_c_type == "default" then
       PARAM.marine_closets = rand.irange(rngmin,rngmax)
     elseif PARAM.m_c_type == "prog" then
@@ -1284,6 +1287,7 @@ function MARINE_CLOSET_TUNE.calc_closets()
     end
     rngmin = math.min(tonumber(PARAM.m_c_m_min),tonumber(PARAM.m_c_m_max))
     rngmax = math.max(tonumber(PARAM.m_c_m_min),tonumber(PARAM.m_c_m_max))
+
     if PARAM.m_c_m_type == "default" then
       PARAM.marine_marines = rand.irange(rngmin,rngmax)
     elseif PARAM.m_c_m_type == "prog" then
@@ -1295,28 +1299,46 @@ function MARINE_CLOSET_TUNE.calc_closets()
     elseif PARAM.m_c_m_type == "epi2" then
       PARAM.marine_marines = rngmax - math.round((rngmax - rngmin) * LEVEL.ep_along)
     end
+
     if PARAM.m_c_tech == "vlow" then
-        PARAM.marine_tech = 1
+      PARAM.marine_tech = 1
     elseif PARAM.m_c_tech == "low" then
-        PARAM.marine_tech = rand.irange(1,3)
+      PARAM.marine_tech = rand.irange(1,3)
     elseif PARAM.m_c_tech == "mid" then
-        PARAM.marine_tech = rand.irange(5,7)
+      PARAM.marine_tech = rand.irange(5,7)
     elseif PARAM.m_c_tech == "high" then
-        PARAM.marine_tech = rand.irange(8,9)
+      PARAM.marine_tech = rand.irange(8,9)
     elseif PARAM.m_c_tech == "rng" then
-        PARAM.marine_tech = 99
+      PARAM.marine_tech = 99
     elseif PARAM.m_c_tech == "bfg" then
-        PARAM.marine_tech = 66
+      PARAM.marine_tech = 66
     elseif PARAM.m_c_tech == "prog" then
-        if LEVEL.game_along < 1.0 then
-            PARAM.marine_tech = math.ceil(LEVEL.game_along * 10)
-        else
-            PARAM.marine_tech = 10
-        end
+      if LEVEL.game_along < 1.0 then
+        PARAM.marine_tech = math.ceil(LEVEL.game_along * 10)
+      else
+        PARAM.marine_tech = 10
+      end
     end
+
   else
-    PARAM.marine_skip = true
+    PARAM.level_has_marine_closets = false
   end
+
+  local info =
+  {
+    kind = "marine_closet"
+    min_count = 1
+    max_count = PARAM.marine_closets
+    not_start = true
+    min_prog = 0
+    max_prog = 1
+  }
+
+  if PARAM.level_has_marine_closets then
+    info.level_prob = 100
+  end
+
+  table.insert(LEVEL.secondary_importants, info)
 end
 
 function MARINE_CLOSET_TUNE.grab_type()
@@ -1381,7 +1403,7 @@ function MARINE_CLOSET_TUNE.all_done()
   PARAM.MARINESCRIPT = PARAM.MARINESCRIPT .. scripty
   PARAM.MARINEMAPINFO = MARINE_CLOSET_TUNE.MAPINFO
 end
---[[
+
 OB_MODULES["gzdoom_marine_closets"] =
 {
   label = _("[Exp]GZDoom Marine Closets")
@@ -1582,4 +1604,4 @@ OB_MODULES["gzdoom_marine_closets"] =
       "With merge option sprites will be merged into oblige wad, otherwise they need to be loaded separately.",
     }
   }
-}]]
+}

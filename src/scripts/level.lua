@@ -2734,6 +2734,8 @@ function Level_make_level(LEV)
   end
 
 
+  LEVEL.secondary_importants = {}
+
   gui.begin_level()
   gui.property("level_name", LEVEL.name);
 

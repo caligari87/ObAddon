@@ -17,7 +17,10 @@ PREFABS.Quest_marine_scionox_guardpost_destroyed =
   deep   = 16
   over   = 16
 
-  kind = "marine"
+  kind = "sec_quest"
+
+  group = "marine_closet"
+
   mmin = 1
   mmax = 10
 
