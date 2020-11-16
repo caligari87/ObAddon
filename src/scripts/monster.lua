@@ -910,7 +910,7 @@ function Monster_fill_room(R)
 
     end
 
-    if PARAM.marine_gen and not PARAM.marine_skip and R.secondary_important and R.secondary_important.kind == "marine_closet" then
+    if PARAM.marine_gen and not PARAM.level_has_marine_closets and R.secondary_important and R.secondary_important.kind == "marine_closet" then
       if PARAM.m_c_quantity == "more" then
         qty = qty * 1.5
       elseif PARAM.m_c_quantity == "lot" then
@@ -1184,7 +1184,7 @@ function Monster_fill_room(R)
 
     local factor = default_level(info)
 
-    if PARAM.marine_gen and not PARAM.marine_skip and R.secondary_important and R.secondary_important.kind == "marine_closet" then
+    if PARAM.marine_gen and not PARAM.level_has_marine_closets and R.secondary_important and R.secondary_important.kind == "marine_closet" then
       if PARAM.m_c_strength == "harder" then
         return 1.3 ^ factor
       elseif PARAM.m_c_strength == "tough" then
