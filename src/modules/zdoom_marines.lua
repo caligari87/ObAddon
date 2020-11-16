@@ -287,6 +287,16 @@ function ZDOOM_MARINE.control_setup(self)
 end
 
 
+function ZDOOM_MARINE.quest_add_marines(self)
+  local info = {
+    level_prob = 100
+    kind = "marine"
+  }
+
+  table.insert(GAME.SECONDARY_IMPORTANTS, info)
+end
+
+
 OB_MODULES["zdoom_marine_control"] =
 {
   label = _("ZDoom Marines : Control")
@@ -296,6 +306,7 @@ OB_MODULES["zdoom_marine_control"] =
   hooks =
   {
     setup = ZDOOM_MARINE.control_setup
+    begin_level = ZDOOM_MARINE.quest_add_marines
   }
 
   options =

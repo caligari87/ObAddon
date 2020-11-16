@@ -16,7 +16,7 @@ PREFABS.Quest_marine_teleporter_ambush_tech =
   seed_h = 2
 
   bound_z1 = 0
-  
+
   kind = "marine"
   mmin = 1
   mmax = 10

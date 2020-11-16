@@ -2351,7 +2351,7 @@ chunk.goal.action = "S1_OpenDoor"  -- FIXME IT SHOULD BE SET WHEN JOINER IS REND
         reqs.height = h_diff
 
         gui.printf("SHIT HAPPENED!\n")
-      end 
+      end
     end
   end
 

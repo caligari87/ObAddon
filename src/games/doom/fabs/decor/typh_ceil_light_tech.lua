@@ -87,7 +87,7 @@ PREFABS.Light_typh_flourescent_lamp_alt3 =
   template = "Light_typh_tech"
   map = "MAP02"
   prob = 80
-  
+
   flat_CEIL5_1 = "CEIL5_2"
   tex_COMPSPAN = "SW1GARG"
 }
@@ -98,7 +98,7 @@ PREFABS.Light_typh_flourescent_lamp_alt4 =
   template = "Light_typh_tech"
   map = "MAP02"
   prob = 80
-  
+
   light_color = "blue"
 
   flat_CEIL5_1 = "CEIL5_2"
@@ -113,7 +113,7 @@ PREFABS.Light_typh_flourescent_lamp_alt5 =
   template = "Light_typh_tech"
   map = "MAP02"
   prob = 80
-  
+
   light_color = "red"
 
   flat_CEIL5_1 = "CEIL5_2"

@@ -13,7 +13,7 @@ PREFABS.Quest_scionox_marine_generic =
 
   deep   = 16
   over   = -16
-  
+
   kind = "marine"
   mmin = 1
   mmax = 10
@@ -26,7 +26,7 @@ PREFABS.Quest_scionox_marine_generic_2 =
 {
   template = "Quest_scionox_marine_generic"
   map      = "MAP02"
-  
+
   seed_w = 2
   seed_h = 2
 }
@@ -35,7 +35,7 @@ PREFABS.Quest_scionox_marine_generic_3 =
 {
   template = "Quest_scionox_marine_generic"
   map      = "MAP03"
-  
+
   seed_w = 1
   seed_h = 2
 }

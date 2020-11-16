@@ -125,7 +125,7 @@ class AIMarine : Actor
         -COUNTKILL
         +FRIENDLY
         +DORMANT
-		+NOBLOCKMONST
+        +NOBLOCKMONST
         DeathSound "*death";
         PainSound "*pain50";
         AIMarine.follower MFOLLOW;
@@ -436,7 +436,7 @@ class AIMarineRocket : AIMarine
         PLAY E 8 A_FaceTarget;
         PLAY F 6 Bright A_SpawnProjectile("Rocket");
         PLAY E 6;
-		PLAY DABCD 4 A_Chase(null,null);
+        PLAY DABCD 4 A_Chase(null,null);
         Goto See;
     }
 }
@@ -570,7 +570,7 @@ class AIMarineBFG : AIMarine
     Loop;
   Missile:
     ALY2 E 4 A_FaceTarget;
-	ALY2 E 0 A_StartSound("weapons/pistol");
+    ALY2 E 0 A_StartSound("weapons/pistol");
     ALY2 F 6 Bright A_CustomBulletAttack(5.6,0,1,5,"BulletPuff");
     ALY2 E 4 A_FaceTarget;
     ALY2 E 0 A_CposRefire;
@@ -610,9 +610,9 @@ class AIMarineChaingun : AIMarine
     Loop;
   Missile:
     ALY4 X 4 A_FaceTarget;
-	ALY4 E 0 A_StartSound("weapons/pistol");
+    ALY4 E 0 A_StartSound("weapons/pistol");
     ALY4 E 4 Bright A_CustomBulletAttack(5.6,0,1,5,"BulletPuff");
-	ALY4 F 0 A_StartSound("weapons/pistol");
+    ALY4 F 0 A_StartSound("weapons/pistol");
     ALY4 F 4 Bright A_CustomBulletAttack(5.6,0,1,5,"BulletPuff");
     ALY4 E 0 A_CposRefire;
     Goto Missile+1;
@@ -651,7 +651,7 @@ class AIMarineShotgun : AIMarine
     Loop;
   Missile:
     ALY5 E 3 A_FaceTarget;
-	ALY5 E 0 A_StartSound("weapons/shotgf");
+    ALY5 E 0 A_StartSound("weapons/shotgf");
     ALY5 F 7 Bright A_CustomBulletAttack(5.6,0,7,5,"BulletPuff");
     ALY5 BCDABCD 4 A_Chase(null,null);
     Goto See;
@@ -691,15 +691,15 @@ class AIMarineSuperShotgun : AIMarine
     Loop;
   Missile:
     AL11 E 3 A_FaceTarget;
-	AL11 E 0 A_StartSound("weapons/sshotf");
+    AL11 E 0 A_StartSound("weapons/sshotf");
     AL11 F 7 Bright A_CustomBulletAttack(11.2,7.1,20,5,"BulletPuff");
     AL11 ABC 4 A_Chase(null,null);
-	AL11 A 0 A_StartSound ("weapons/sshoto");
-	AL11 DABC 4 A_Chase(null,null);
-	AL11 A 0 A_StartSound ("weapons/sshotl");
-	AL11 DAB 4 A_Chase(null,null);
-	AL11 A 0 A_StartSound ("weapons/sshotc");
-	AL11 CD 4 A_Chase(null,null);
+    AL11 A 0 A_StartSound ("weapons/sshoto");
+    AL11 DABC 4 A_Chase(null,null);
+    AL11 A 0 A_StartSound ("weapons/sshotl");
+    AL11 DAB 4 A_Chase(null,null);
+    AL11 A 0 A_StartSound ("weapons/sshotc");
+    AL11 CD 4 A_Chase(null,null);
     Goto See;
   Pain:
     AL11 G 4;
@@ -741,7 +741,7 @@ class AIMarinePlasma : AIMarine
     Goto Missile+1;
   MissileOver:
     ALY8 DABCD 4 A_Chase(null,null);
-	Goto See;
+    Goto See;
   Pain:
     ALY8 G 4;
     ALY8 G 4 A_Pain;
@@ -778,8 +778,8 @@ class AIMarineRocket : AIMarine
   Missile:
     ALY9 E 8 A_FaceTarget;
     ALY9 F 6 Bright A_SpawnProjectile("Rocket");
-	ALY9 E 6;
-	ALY9 E 0 A_CposRefire;
+    ALY9 E 6;
+    ALY9 E 0 A_CposRefire;
     Goto Missile;
   Pain:
     ALY9 G 4;
@@ -817,14 +817,14 @@ class AIMarineBFG : AIMarine
   Missile:
     AL10 E 0 {self.bNOPAIN=1;}
     AL10 E 5 A_StartSound("weapons/bfgf");
-	AL10 EEEEE 5 A_FaceTarget;
+    AL10 EEEEE 5 A_FaceTarget;
     AL10 F 6 Bright A_SpawnProjectile("BFGBall");
-	AL10 F 0 {self.bNOPAIN=0;}
-	AL10 E 4 A_FaceTarget;
-	AL10 E 0 A_MonsterRefire(40,"MissileOver");
-	Goto Missile;
+    AL10 F 0 {self.bNOPAIN=0;}
+    AL10 E 4 A_FaceTarget;
+    AL10 E 0 A_MonsterRefire(40,"MissileOver");
+    Goto Missile;
   MissileOver:
-	AL10 CDABCD 4 A_Chase(null,null);
+    AL10 CDABCD 4 A_Chase(null,null);
     Goto See;
   Pain:
     AL10 G 4;
@@ -863,7 +863,7 @@ class AIMarineBFG : AIMarine
     Loop;
   Missile:
     ALY2 E 4 A_FaceTarget;
-	ALY2 E 0 A_StartSound("weapons/pistol");
+    ALY2 E 0 A_StartSound("weapons/pistol");
     ALY2 F 6 Bright A_CustomBulletAttack(9.6,0,1,5,"BulletPuff");
     ALY2 E 9 A_FaceTarget;
     ALY2 E 0 A_CposRefire;
@@ -903,9 +903,9 @@ class AIMarineChaingun : AIMarine
     Loop;
   Missile:
     ALY4 X 4 A_FaceTarget;
-	ALY4 E 0 A_StartSound("weapons/pistol");
+    ALY4 E 0 A_StartSound("weapons/pistol");
     ALY4 E 4 Bright A_CustomBulletAttack(13.6,0,1,5,"BulletPuff");
-	ALY4 F 0 A_StartSound("weapons/pistol");
+    ALY4 F 0 A_StartSound("weapons/pistol");
     ALY4 F 4 Bright A_CustomBulletAttack(13.6,0,1,5,"BulletPuff");
     ALY4 E 0 A_CposRefire;
     Goto Missile+1;
@@ -944,7 +944,7 @@ class AIMarineShotgun : AIMarine
     Loop;
   Missile:
     ALY5 E 3 A_FaceTarget;
-	ALY5 E 0 A_StartSound("weapons/shotgf");
+    ALY5 E 0 A_StartSound("weapons/shotgf");
     ALY5 F 7 Bright A_CustomBulletAttack(5.6,0,7,5,"BulletPuff");
     ALY5 BCDABCDABCDABCD 4 A_Chase(null,null);
     Goto See;
@@ -984,15 +984,15 @@ class AIMarineSuperShotgun : AIMarine
     Loop;
   Missile:
     AL11 E 3 A_FaceTarget;
-	AL11 E 0 A_StartSound("weapons/sshotf");
+    AL11 E 0 A_StartSound("weapons/sshotf");
     AL11 F 7 Bright A_CustomBulletAttack(11.2,7.1,20,5,"BulletPuff");
     AL11 ABC 4 A_Chase(null,null);
-	AL11 A 0 A_StartSound ("weapons/sshoto");
-	AL11 DABC 4 A_Chase(null,null);
-	AL11 A 0 A_StartSound ("weapons/sshotl");
-	AL11 DAB 4 A_Chase(null,null);
-	AL11 A 0 A_StartSound ("weapons/sshotc");
-	AL11 CDABCDABCDABCD 4 A_Chase(null,null);
+    AL11 A 0 A_StartSound ("weapons/sshoto");
+    AL11 DABC 4 A_Chase(null,null);
+    AL11 A 0 A_StartSound ("weapons/sshotl");
+    AL11 DAB 4 A_Chase(null,null);
+    AL11 A 0 A_StartSound ("weapons/sshotc");
+    AL11 CDABCDABCDABCD 4 A_Chase(null,null);
     Goto See;
   Pain:
     AL11 G 4;
@@ -1034,7 +1034,7 @@ class AIMarinePlasma : AIMarine
     Goto Missile+1;
   MissileOver:
     ALY8 DABCD 4 A_Chase(null,null);
-	Goto See;
+    Goto See;
   Pain:
     ALY8 G 4;
     ALY8 G 4 A_Pain;
@@ -1071,8 +1071,8 @@ class AIMarineRocket : AIMarine
   Missile:
     ALY9 E 8 A_FaceTarget;
     ALY9 F 6 Bright A_SpawnProjectile("Rocket");
-	ALY9 E 6;
-	ALY9 DABCD 4 A_Chase(null,null);
+    ALY9 E 6;
+    ALY9 DABCD 4 A_Chase(null,null);
     Goto See;
   Pain:
     ALY9 G 4;
@@ -1109,11 +1109,11 @@ class AIMarineBFG : AIMarine
     Loop;
   Missile:
     AL10 E 5 A_StartSound("weapons/bfgf");
-	AL10 EEEEE 5 A_FaceTarget;
+    AL10 EEEEE 5 A_FaceTarget;
     AL10 F 6 Bright A_SpawnProjectile("BFGBall");
-	AL10 E 4 A_FaceTarget;
-	AL10 CDABCDABCDABCD 4 A_Chase(null,null);
-	Goto See;
+    AL10 E 4 A_FaceTarget;
+    AL10 CDABCDABCDABCD 4 A_Chase(null,null);
+    Goto See;
   Pain:
     AL10 G 4;
     AL10 G 4 A_Pain;
@@ -1337,15 +1337,15 @@ function MARINE_CLOSET_TUNE.all_done()
   if PARAM.m_c_power == "yes" then
     if PARAM.m_c_sprites == "no" then
       scripty = scripty .. MARINE_CLOSET_TUNE.TEMPLATES.MSTRN
-	else
-	  scripty = scripty .. MARINE_CLOSET_TUNE.TEMPLATES.MGSTRN
-	end
+    else
+      scripty = scripty .. MARINE_CLOSET_TUNE.TEMPLATES.MGSTRN
+    end
   else
     if PARAM.m_c_sprites == "no" then
       scripty = scripty .. MARINE_CLOSET_TUNE.TEMPLATES.MWEAK
-	else
-	  scripty = scripty .. MARINE_CLOSET_TUNE.TEMPLATES.MGWEAK
-	end
+    else
+      scripty = scripty .. MARINE_CLOSET_TUNE.TEMPLATES.MGWEAK
+    end
   end
 
   scripty = string.gsub(scripty, "MHEALTH", PARAM.m_c_health)
@@ -1373,7 +1373,7 @@ function MARINE_CLOSET_TUNE.all_done()
     scripty = string.gsub(scripty, "\"Rocket\"", "\"RocketAIMarine\"")
     scripty = string.gsub(scripty, "\"BFGBall\"", "\"BFGBallAIMarine\"")
   end
-  
+
   if PARAM.m_c_sprites == "yes1" then
     gui.wad_merge_sections("modules/zdoom_internal_scripts/AISprite.wad")
   end
@@ -1579,7 +1579,7 @@ OB_MODULES["gzdoom_marine_closets"] =
       default = "no",
       tooltip = "By default marines use default player sprite.\n" ..
       "If this is enabled, marines will use special sprites according to weapon they carry.\n" ..
-	  "With merge option sprites will be merged into oblige wad, otherwise they need to be loaded separately.",
+      "With merge option sprites will be merged into oblige wad, otherwise they need to be loaded separately.",
     }
   }
 }]]
