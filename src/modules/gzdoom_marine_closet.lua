@@ -1332,13 +1332,12 @@ function MARINE_CLOSET_TUNE.calc_closets()
     not_start = true
     min_prog = 0
     max_prog = 1
+    level_prob = 100
   }
 
   if PARAM.level_has_marine_closets then
-    info.level_prob = 100
+    table.insert(LEVEL.secondary_importants, info)
   end
-
-  table.insert(LEVEL.secondary_importants, info)
 end
 
 function MARINE_CLOSET_TUNE.grab_type()
