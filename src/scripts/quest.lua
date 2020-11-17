@@ -2542,7 +2542,8 @@ function Quest_nice_items()
     local function pick_room_for_si(info)
       each R in LEVEL.rooms do
         if R.closets and #R.closets > 2
-        and not R.secondary_important then
+        and not R.secondary_important 
+        and not R.is_hallway then
           local do_it = false
 
           if info.min_prog and info.max_prog then

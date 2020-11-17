@@ -1996,7 +1996,7 @@ stderrf("Cages in %s [%s pressure] --> any_prob=%d  per_prob=%d\n",
 
   local function try_secondary_importants(R)
     if not R.secondary_important then return end
-
+  
     local usable_chunks = {}
     local preferred_chunk
     local def
@@ -2008,7 +2008,11 @@ stderrf("Cages in %s [%s pressure] --> any_prob=%d  per_prob=%d\n",
       end
     end
 
+    -- no chunks to place important in for some reason...
+    if table.empty(usable_chunks) then return end
+
     preferred_chunk = rand.pick(usable_chunks)
+    gui.printf(table.tostr(usable_chunks,2))
 
     reqs = preferred_chunk:base_reqs(preferred_chunk.from_dir)
 
