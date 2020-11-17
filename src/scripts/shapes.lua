@@ -1388,6 +1388,7 @@ SPROUT_DIRECT_FROM_DIAGONAL =
   {
     "xx..","xxRR"
     "xx..","xxRR"
+    "xx..","xx11"
     "x...","x/11"
     "1%.x","11/x"
     "11xx","11xx"
