@@ -38,7 +38,7 @@ PREFABS.Hallway_pipeline_locked_blue1 =
 
   key    = "k_blue"
 
-  tex_DOORRED2 = "DOORBLU"
+  tex_DOORRED = "DOORBLU"
   line_135     = 133
 }
 
@@ -49,7 +49,7 @@ PREFABS.Hallway_pipeline_locked_yellow1 =
 
   key    = "k_yellow"
 
-  tex_DOORRED2 = "DOORYEL"
+  tex_DOORRED = "DOORYEL"
   line_135     = 137
 }
 
@@ -80,7 +80,7 @@ PREFABS.Hallway_pipeline_locked_blue2 =
 
   key    = "k_blue"
 
-  tex_DOORRED2 = "DOORBLU2"
+  tex_DOORRED = "DOORBLU"
   line_135     = 133
 }
 
@@ -91,7 +91,7 @@ PREFABS.Hallway_pipeline_locked_yellow2 =
 
   key    = "k_yellow"
 
-  tex_DOORRED2 = "DOORYEL2"
+  tex_DOORRED = "DOORYEL"
   line_135     = 137
 }
 
