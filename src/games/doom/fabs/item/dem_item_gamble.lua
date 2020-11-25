@@ -74,7 +74,7 @@ PREFABS.Item_dem_gamble_closet2 =
    berserk = 1
    invis = 5
    allmap = 2
-   googles = 5
+   goggles = 5
   }
 
   thing_2008 =
