@@ -964,8 +964,8 @@ function Monster_fill_room(R)
       local total_extra = 0
       each A in R.areas do
         if A.mode == "floor" then
-          local area_score = int(A.svolume / 8)
-          local height_score = math.abs(A.floor_h - R.entry_h) / 128 * 1.25
+          local area_score = int(A.svolume / 6)
+          local height_score = math.abs(A.floor_h - R.entry_h) / 128 * 1.5
           -- local distance_score
 
           local extra = int(area_score * height_score)
