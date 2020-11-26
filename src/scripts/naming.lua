@@ -1620,13 +1620,13 @@ namelib.NAMES =
         ["Slow Death"]=10
         ["Soulburn"]=10
         ["Soul Scars"]=10
-        ["Spheres of Madness"]=10
+        ["Spheres of Madness"]=10 -- Song by Decapitated, a Polish death metal band
         ["Spiritual Madness"]=10
         ["Stained Tombs"]=10
         ["Stripped of Flesh"]=10
         ["Stygiophobia"]=10
         ["Sympathy Denied"]=10
-        ["The Bleeding"]=10
+        ["The Bleeding"]=10 -- Doom 64
         ["The Heretic's Touch"]=10
         ["The Rotted Foul"]=10
         ["Time and Dust"]=10
@@ -1677,6 +1677,29 @@ namelib.NAMES =
         -- Armaetus adds new names
         ["Segmentus Infernus"]=10
         ["Voidborne"]=10
+
+        -- Armaetus adds even more names, 2020 Edition
+        ["Apocalyptic Prophecy"]=10
+        ["Artwork of Affliction"]=10
+        ["Blood Red Sunshine"]=10
+        ["Chaotic Malfeasance"]=10
+        ["Compulsive Psychosis"]=10 -- Hypocrisy song, melodic death metal
+        ["Death and Dreaming"]=10
+        ["Dessicated and Devoured"]=10
+        ["Hellsower"]=10
+        ["Hellwave Catalyst"]=10
+        ["Human Cattle"]=10
+        ["Human Hunting Grounds"]=10
+        ["Left Limbless"]=10
+        ["Musings of a Demon"]=10
+        ["Nocturnal Devotion"]=10
+        ["Obelisk of Timelessness"]=10
+        ["Only Death Matters Here"]=10
+        ["Processed and Discarded"]=10
+        ["Sanguine Plataeu"]=10
+        ["Shattered Reality"]=10
+        ["Tribute to the Dark Ones"]=10
+        ["Wretched Mortal Form"]=10
       }
     }
   }
