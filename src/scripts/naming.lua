@@ -112,6 +112,9 @@ namelib.NAMES =
         ["Eh, it's just a"]=5
         ["Oh, it's another"]=5
         ["Why another"]=5
+        ["Piss off with the"]=5
+        ["Wait, why another"]=5
+        ["Good lord, another"]=5
 
         -- these by MSSP
         ["Battle for the"]=15
@@ -568,7 +571,7 @@ namelib.NAMES =
         ["Capture and Kill"]=10
         ["Carnage Command"]=10
         ["Catch The Bullet"]=10
-        ["Cathode Ray Sunshine"]=10
+        ["Cathode Ray Sunshine"]=10 --Dark Tranquility song
         ["Clawhammer"]=10
         ["Close Quarters"]=10
         ["Close Call"]=10
@@ -796,6 +799,13 @@ namelib.NAMES =
         ["To the Limit"]=10
         ["Munitions Warehouse"]=10
         ["Demonic Starport"]=10
+
+        -- Armaetus adds even more names, 2020 edition
+        ["Ammunition Dump"]=10
+        ["Compromised UAC Fortification"]=10
+        ["Fragmented Forces"]=10
+        ["Turning Point"]=10
+
       }
     }
   }
@@ -1684,10 +1694,13 @@ namelib.NAMES =
         ["Blood Red Sunshine"]=10
         ["Chaotic Malfeasance"]=10
         ["Compulsive Psychosis"]=10 -- Hypocrisy song, melodic death metal
+        ["Crushed Will"]=10
         ["Death and Dreaming"]=10
         ["Dessicated and Devoured"]=10
+        ["Destruction of Free Will"]=10
         ["Hellsower"]=10
         ["Hellwave Catalyst"]=10
+        ["Honor of the Demons"]=10
         ["Human Cattle"]=10
         ["Human Hunting Grounds"]=10
         ["Left Limbless"]=10
@@ -1695,10 +1708,14 @@ namelib.NAMES =
         ["Nocturnal Devotion"]=10
         ["Obelisk of Timelessness"]=10
         ["Only Death Matters Here"]=10
+        ["Oscuridad y Muerte"]=10 -- Darkness and Death. Please fix if incorrect.
+        ["Profundis Inferni Convivae"]=10 -- Depths of Hell. Please confirm.
         ["Processed and Discarded"]=10
+        ["Pure Blasphemy"]=10
         ["Sanguine Plataeu"]=10
         ["Shattered Reality"]=10
         ["Tribute to the Dark Ones"]=10
+        ["Unto the Unhallowed Abyss"]=10
         ["Wretched Mortal Form"]=10
       }
     }
@@ -2368,6 +2385,16 @@ namelib.NAMES =
         ["Kher Lodur"]=10
         ["Neras"]=10
         ["Taras Nabad"]=10
+
+        -- Armaetus adds more names, 2020 edition
+        ["A Hobo's Paradise"]=10
+        ["Bombardment"]=10
+        ["Everlasting Ashstorm"]=10
+        ["Expenditure of Munitions"]=10
+        ["Fixation on Survival"]=10
+        ["Howling Corridors"]=10
+        ["The Smell of Plasma"]=10
+        ["Vertical Drop"]=10
       }
     }
   }
@@ -2949,6 +2976,14 @@ namelib.NAMES =
         ["Universe Vibration"]=10
         ["Vertabre Kundalini Enlightenment"]=10
         ["Vibrate Spirit"]=10
+
+        -- Armaetus adds even more, 2020 edition
+        ["123 WAD Street"]=10
+        ["Goatwave Hornstorm"]=10
+        ["Hallowed Chipmunks"]=10
+        ["K"]=10
+        ["Locust Masqurade"]=10
+        ["Super Shotgun Smoothie"]=10
       }
     }
   }
@@ -3757,7 +3792,7 @@ namelib.NAMES =
       ["A WAD full of %d"] = 5 -- A WAD Full of Abstract Objects
       ["Return of the %e"] = 8 -- Return of the Entity
       ["Some very %a %p"] = 8 -- Some very Descriptive Place
-      ["Zone of %d"] = 8 -- Zone of Asbtract Object
+      ["Zone of %d"] = 8 -- Zone of Abstract Object
       ["The %e WAD"] = 5 -- The Entity WAD
       ["Showdown with the %e"] = 7
       ["They are %a"] = 7
@@ -3803,6 +3838,7 @@ namelib.NAMES =
       ["Complete %d"] = 5
       ["Total %d"] = 5
       ["Treachery: The %d"] = 5
+      ["Reborn: The %d"]=5
       ["Quietus: Complete %d"] = 4
       ["Is %c By The %a %p?"] = 3
       ["%a Death and %d"] = 5
@@ -3816,6 +3852,7 @@ namelib.NAMES =
       ["%e Knows You"] = 4
       ["Destruction of the %d %p"] = 5 -- Destruction of the [Adjective] [Place]
       ["%a Black Metal"] = 5 -- [Adjective] Black Metal
+      ["%a Doom Metal"] = 5 -- [Adjective] Doom Metal
       ["Doomguy's Vacation with %c"] = 5 -- Doomguy's Vacation with [Name]
       ["Sin City: The %a %p"] = 5
       ["Sin City: The %d"] = 5
@@ -3823,17 +3860,19 @@ namelib.NAMES =
       ["The %a %p of %m"] = 5
       ["Dead Base: The %d"] = 5
       ["Demise of the %e"] = 4
+      ["%m and %c"]=4
       ["The %e's Fun %a %p"] = 4
       ["The %m %p"] = 4
       ["As The %e Gather"] = 4
       ["Insane %a %d"] = 4
-      ["Plenty of %d"] = 3
+      ["Plenty of %d"] = 4
       ["Hell's %a Division: %d"] = 4
       ["%a Sorcery"] = 3
       ["%a Witchcraft"] = 3
       ["%a Hellcraft"] = 3
       ["%d! Oh My Oh My"] = 3
       ["%c and Doomguy in the Same Room"] = 3
+      ["Is %c %a?"]=3
     }
 
     lexicon =
@@ -4719,6 +4758,7 @@ namelib.NAMES =
         ["Burning Bright in the Sky"] = 30
         ["Burnt, Shot, Crushed, Blasted!"] = 20
         ["Can It Be Any Harder?"] = 25
+        ["Carnal Desires"]=20
         ["Check Us On The Discord!"] = 35
         ["Cleansed By Fire"] = 25
         ["Complete Destruction"]=20
@@ -4737,6 +4777,7 @@ namelib.NAMES =
         ["Die a Million Deaths"] = 25
         ["Die and Die Once More"] = 20
         ["Division by Blood"] = 20
+        ["Do Draconian Quantity!"]=15
         ["Doomguy's Vacation"] = 25
         ["Emblem of Destruction"] = 25
         ["Embrace Your Doom"] = 30
@@ -4748,16 +4789,18 @@ namelib.NAMES =
         ["Explosions Galore"] = 20
         ["Existing To Bleed"] = 25
         ["Face Smashed In"] = 20
+        ["Fairness Not Guaranteed"]=20
         ["Fantastic!"] = 30
         ["Feel the Pain!"] = 25
         ["For The Emperor!"] = 30 -- Warhammer 40K
         ["Game Journos Need Not Apply!"] = 20
-        ["Get Psyched!"] = 30 -- Wolfestein 3D
+        ["Get Psyched!"] = 30 -- Wolfenstein 3D
         ["Get Scorched"] = 30
         ["Getting a Bit Spicy"] = 20
         ["High Impact Abuse"] = 35
         ["Hold On To Your Butts"] = 25 -- From Arnold in Jurassic Park, 1993
         ["Hold Your Ground"] = 30
+        ["Is It Too Hard?"]=15
         ["If it Moves, Shoot It"] = 30
         ["It's a Disaster!"] = 20
         ["It's Hard, Is it Not?"] = 25
@@ -4772,11 +4815,13 @@ namelib.NAMES =
         ["Made with Blood, Sweat and Tears"] = 20
         ["Make it Dark, Make it Evil"] = 30
         ["Make it Like Silent Hill!"] = 25
+        ["Max out Trap Difficulty!"]=15
         ["Masochism For Imps!"] = 30
         ["Mods Usually Make Things Better!"] = 20
         ["Move it up a Notch"] = 25
         ["More Maps to Kill Things On!"] = 35
         ["Nailed Via Obsidian Spikes"] = 20
+        ["Nappies Required to Play"]=15
         ["Nearly Unlimited Variety!"] = 30
         ["Not A Walk in the Park!"] = 30
         ["Not Safe For Game Journalists"] = 35
@@ -4794,14 +4839,18 @@ namelib.NAMES =
         ["Ramp it to the MAX!"] = 25
         ["Road to the World Cup"] = 20 -- By Swedra
         ["Random by Nature"] = 30
+        ["Recreate id's Aesthetics!"]=10
         ["Reign of Destruction"] = 25
+        ["Set the World Alight"]=15
         ["Shining Bright!"] = 30
         ["Should be A-OK!"] = 20
         ["Single and Multiplayer!"] = 30
         ["Skilled Players Sign Here"] = 25
         ["Speedrunners are SOL"] = 25
         ["Surviving By A Thread"] = 30
+        ["Symphony No 666 in Hell Minor"]=20
         ["Tacticality Optional"] = 30
+        ["Take it Seriously"]=25
         ["Tell Us What You Think"] = 40
         ["Tell Your Friends!"] = 30
         ["The Chaosbringer"] = 20
@@ -4809,6 +4858,7 @@ namelib.NAMES =
         ["The Corridors of Contempt"] = 25
         ["The Deadzone"] = 20
         ["The Devil's Playground"] = 30
+        ["The Hellweaver"]=20
         ["The More, The Merrier"] = 25
         ["The New Challengers"] = 20 -- This one by Craneo
         ["The Principles of Doom"] = 30
@@ -4825,6 +4875,7 @@ namelib.NAMES =
         ["This WAD Shouldn't Suck"] = 25
         ["Thrashed Up for Seconds"] = 30
         ["Time to Man Up"] = 30
+        ["Too Hard? Too Bad!"]=20
         ["Total Blackout"] = 20
         ["Totally Worth Your Time"] = 25
         ["Trust in Thy Firearms"] = 20
@@ -4971,10 +5022,12 @@ namelib.IGNORE_WORDS =
 
 namelib.COMMUNITY_MEMBERS =
 {
+
+  -- Core ObAddon or regular(ish) contributors.
   contributors =
   {
     "Sgt. Shooter", --MsrSgtShooterPerson
-    "Armaetus",
+    "Armaetus", -- Used to be known as Glaice
     "Frozsoul",
     "Caligari", --Caligari87
     "Simon Vee", --Simon-v
