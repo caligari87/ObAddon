@@ -1010,6 +1010,7 @@ function ARMAETUS_EPIC_TEXTURES.put_the_texture_wad_in()
     gui.wad_insert_file(dir .. "ROAD3.png", "ROAD3")
     gui.wad_insert_file(dir .. "ROAD4.png", "ROAD4")
     gui.wad_insert_file(dir .. "CRATJOKE.png", "CRATJOKE")
+    gui.wad_insert_file(dir .. "DTNJOKEX.png", "DTNJOKEX")
     gui.wad_add_binary_lump("HI_END",{})
   end
 
