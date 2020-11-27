@@ -299,7 +299,7 @@ function JOKEWAD_MODULE.populate_level(stuff)
         if S.chunk and S.chunk.content then continue end
 
         -- not by walls and diagonals
-        if S.walls or S.diagonal then continue end
+        if S.wall_depth or S.diagonal then continue end
 
         -- not on areas with liquid sinks
         if A.floor_group and A.floor_group.sink
@@ -322,7 +322,7 @@ function JOKEWAD_MODULE.populate_level(stuff)
 
             local S = SEEDS[i_x][i_y]
 
-            if not S.walls then
+            if not S.wall_depth then
               render_items(WC.chunk.floor_h + 2, pos_x, pos_y, 32)
             end
 

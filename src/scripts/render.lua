@@ -266,14 +266,8 @@ function Render_edge(E)
 
       -- don't allow more than one wall that's not flat enough
       -- on the same seed
-      if E.S.walls then
-        each W in E.S.walls do
-          if W.deep then
-            if W.deep > 16 then
-              reqs.deep = 16
-            end
-          end
-        end
+      if E.wall_depth and E.wall_depth >= 16 then
+        reqs.deep = 16
       end
 
       -- don't allow anything more than flat walls if
@@ -518,11 +512,7 @@ function Render_edge(E)
 
     E.deep = def.deep
 
-    if not E.S.walls then
-      E.S.walls = {}
-    end
-
-    table.insert(E.S.walls, E)
+    E.S.wall_depth = math.max(E.deep or 0, E.S.wall_depth or 0)
 
     local z1 = A.floor_h
     local z2 = A.ceil_h
