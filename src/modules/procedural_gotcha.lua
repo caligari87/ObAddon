@@ -85,7 +85,7 @@ OB_MODULES["procedural_gotcha"] =
       name="gotcha_qty",
       label=_("Extra Quantity"),
       choices=PROCEDURAL_GOTCHA_FINE_TUNE.GOTCHA_QUANTITY_CHOICES,
-      default="lots",
+      default="25",
       tooltip = "Offset monster strength from your default quantity of choice plus the increasing level ramp. If your quantity choice is to reduce the monsters, the monster quantity will cap at a minimum of 0.1 (Scarce quantity setting).",
     }
 
