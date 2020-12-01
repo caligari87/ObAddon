@@ -1,9 +1,9 @@
-PREFABS.Door_plain_tech_stretchy =
+PREFABS.Door_plain_tech_stretchy_silver =
 {
   file   = "door/gtd_door1_stretchy.wad"
   map    = "MAP01"
 
-  prob   = 150
+  prob   = 75
 
   theme = "!hell"
 
@@ -26,20 +26,35 @@ PREFABS.Door_plain_tech_stretchy =
   {
     BIGDOOR1 = 1
     BIGDOOR2 = 1
-    BIGDOOR3 = 1
-    BIGDOOR4 = 1
-    SPCDOOR1 = 1
+  }
+  tex_SPCDOOR3 =
+  {
     SPCDOOR2 = 1
     SPCDOOR3 = 1
-    SPCDOOR4 = 1
   }
 
   sector_1  = { [0]=75, [1]=15, [2]=5, [3]=5, [8]=10, [12]=5, [13]=5 }
 }
 
+PREFABS.Door_plain_tech_stretchy_brown =
+{
+  template = "Door_plain_hell_stretchy_silver"
+
+  tex_BIGDOOR1 = 
+  {
+    BIGDOOR3 = 1
+    BIGDOOR4 = 1
+  }
+  tex_SPCDOOR3 =
+  {
+    SPCDOOR1 = 1
+    SPCDOOR4 = 1
+  }
+}
+
 PREFABS.Door_plain_hell_stretchy =
 {
-  template = "Door_plain_tech_stretchy"
+  template = "Door_plain_hell_stretchy_silver"
 
   theme = "hell"
 
@@ -49,5 +64,5 @@ PREFABS.Door_plain_hell_stretchy =
     BIGDOOR6 = 1
     BIGDOOR7 = 1
   }
-  tex_SUPPORT2 = "SUPPORT3"
+  tex_SPCDOOR3 = "BIGDOOR5"
 }
