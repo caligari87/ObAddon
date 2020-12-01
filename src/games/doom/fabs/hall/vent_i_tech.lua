@@ -1,4 +1,4 @@
-PREFABS.Hallway_vent_tech_i1 =
+PREFABS.Hallway_vent_tech_comp1 =
 {
   file   = "hall/vent_i_tech.wad"
   map    = "MAP01"
@@ -15,20 +15,26 @@ PREFABS.Hallway_vent_tech_i1 =
   can_flip = true
 }
 
-PREFABS.Hallway_vent_tech_i2 =
+PREFABS.Hallway_vent_tech_comp2 =
 {
-  template = "Hallway_vent_tech_i1"
+  template = "Hallway_vent_tech_comp1"
   map = "MAP02"
 }
 
-PREFABS.Hallway_vent_tech_i3 =
+PREFABS.Hallway_vent_tech_tek_grates =
 {
-  template = "Hallway_vent_tech_i1"
+  template = "Hallway_vent_tech_comp1"
   map = "MAP03"
 }
 
-PREFABS.Hallway_vent_tech_i4 =
+PREFABS.Hallway_vent_tech_bump =
 {
-  template = "Hallway_vent_tech_i1"
+  template = "Hallway_vent_tech_comp1"
   map = "MAP04"
+}
+
+PREFABS.Hallway_vent_tech_dip =
+{
+  template = "Hallway_vent_tech_comp1"
+  map = "MAP05"
 }

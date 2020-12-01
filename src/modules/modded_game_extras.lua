@@ -116,16 +116,16 @@ MODDED_GAME_EXTRAS.D4T_MONS =
   d4t_gore_nest =
   {
     id = 13511
-    r = 48
+    r = 112
     h = 5
     level = 1
-    boss_type = "minor"
+    boss_type = "tough"
     boss_prob = 50
     prob = 8
-    health = 500
+    health = 2500
     damage = 25
     attack = "hitscan"
-    density = 0.15
+    density = 0.1
     cage_factor = 0
     trap_factor = 0
   }
@@ -133,14 +133,14 @@ MODDED_GAME_EXTRAS.D4T_MONS =
   d4t_gore_nest_rank_n_file =
   {
     id = 13511
-    r = 48
+    r = 112
     h = 5
     level = 3
     prob = 17
-    health = 500
+    health = 2500
     damage = 25
     attack = "hitscan"
-    density = 0.15
+    density = 0.05
     cage_factor = 0
     trap_factor = 0
   }
