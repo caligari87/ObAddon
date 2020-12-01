@@ -38,7 +38,7 @@ PREFABS.Door_plain_tech_stretchy_silver =
 
 PREFABS.Door_plain_tech_stretchy_brown =
 {
-  template = "Door_plain_hell_stretchy_silver"
+  template = "Door_plain_tech_stretchy_silver"
 
   tex_BIGDOOR1 = 
   {
@@ -54,7 +54,7 @@ PREFABS.Door_plain_tech_stretchy_brown =
 
 PREFABS.Door_plain_hell_stretchy =
 {
-  template = "Door_plain_hell_stretchy_silver"
+  template = "Door_plain_tech_stretchy_silver"
 
   theme = "hell"
 
