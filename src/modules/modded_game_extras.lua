@@ -109,6 +109,84 @@ MODDED_GAME_EXTRAS.D4T_THINGS =
     closet_prob = 8
     secret_prob = 60
   }
+  
+  d4t_spectre_rune =
+  {
+    id = 13679, kind = "powerup", level = 4,
+    add_prob = 1.5, secret_prob = 3
+  }
+
+  d4t_prowler_rune =
+  {
+    id = 13680, kind = "powerup", level = 4,
+    add_prob = 1.5, secret_prob = 3
+  }
+
+  d4t_fatso_rune =
+  {
+    id = 13675, kind = "powerup", level = 6,
+    add_prob = 1, secret_prob = 2
+  }
+
+  d4t_revenant_rune =
+  {
+    id = 13677, kind = "powerup", level = 6,
+    add_prob = 1, secret_prob = 2
+  }
+
+  d4t_cacodemon_rune =
+  {
+    id = 13673, kind = "powerup", level = 6,
+    add_prob = 1, secret_prob = 2
+  }
+
+  d4t_arach_rune =
+  {
+    id = 13670, kind = "powerup", level = 6,
+    add_prob = 0.7, secret_prob = 1.4
+  }
+
+  d4t_hellknight_rune =
+  {
+    id = 13682, kind = "powerup", level = 6,
+    add_prob = 0.7, secret_prob = 1.4
+  }
+
+  d4t_painelemental_rune =
+  {
+    id = 13676, kind = "powerup", level = 8,
+    add_prob = 0.7, secret_prob = 1.4
+  }
+
+  d4t_baron_rune =
+  {
+    id = 13672, kind = "powerup", level = 8,
+    add_prob = 0.5, secret_prob = 1
+  }
+
+  d4t_harvester_rune =
+  {
+    id = 13681, kind = "powerup", level = 8,
+    add_prob = 0.5, secret_prob = 1
+  }
+
+  d4t_summoner_rune =
+  {
+    id = 13671, kind = "powerup", level = 8,
+    add_prob = 0.5, secret_prob = 1
+  }
+
+  d4t_cyberdemon_rune =
+  {
+    id = 13674, kind = "powerup", level = 10,
+    add_prob = 0.35, secret_prob = 0.7
+  }
+
+  d4t_mastermind_rune =
+  {
+    id = 13678, kind = "powerup", level = 10,
+    add_prob = 0.35, secret_prob = 0.7
+  }
 }
 
 MODDED_GAME_EXTRAS.D4T_MONS =

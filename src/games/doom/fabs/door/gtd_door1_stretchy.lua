@@ -27,7 +27,7 @@ PREFABS.Door_plain_tech_stretchy_silver =
     BIGDOOR1 = 1
     BIGDOOR2 = 1
   }
-  tex_SPCDOOR3 =
+  tex_COMPSTA1 =
   {
     SPCDOOR2 = 1
     SPCDOOR3 = 1
@@ -45,7 +45,7 @@ PREFABS.Door_plain_tech_stretchy_brown =
     BIGDOOR3 = 1
     BIGDOOR4 = 1
   }
-  tex_SPCDOOR3 =
+  tex_COMPSTA1 =
   {
     SPCDOOR1 = 1
     SPCDOOR4 = 1
@@ -64,5 +64,5 @@ PREFABS.Door_plain_hell_stretchy =
     BIGDOOR6 = 1
     BIGDOOR7 = 1
   }
-  tex_SPCDOOR3 = "BIGDOOR5"
+  tex_COMPSTA1 = "BIGDOOR5"
 }
