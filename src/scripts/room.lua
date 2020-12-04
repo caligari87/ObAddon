@@ -1494,11 +1494,13 @@ function Room_border_up()
 
 
   local function can_fence(A1, A2)
-    if A1.mode != "floor" then
+    if A1.chunk and A1.chunk.kind == "stair" 
+    and (A1.chunk.dest_area == A2 or A1.chunk.from_area == A2) then
       return false
     end
 
-    if A2.mode != "floor" then
+    if A2.chunk and A2.chunk.kind == "stair" 
+    and (A2.chunk.dest_area == A1 or A2.chunk.from_area == A1) then
       return false
     end
 
