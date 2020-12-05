@@ -45,6 +45,7 @@ Conveyor_Mech =       {  lump = "CONVMECH",  flags = "$limit CONVMECH 1"        
 Indoor_Fan =          {  lump = "FANSND"                                                }
 Machine_Air =         {  lump = "MACHNAIR"                                              }
 Machine_Ventilation = {  lump = "MACHVENT"                                              }
+Pipeline =            {  lump = "PIPELINE"                                              }
 Demonic_Teleporter =  {  lump = "SKLLCHNT"                                              }
 Electric_Sparks =     {  lump = "SPARKING"                                              }
 Static_Monitor =      {  lump = "STATIC",    args = "CHAN_AUTO, 0.3, true"              }
