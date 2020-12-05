@@ -19,6 +19,8 @@ PREFABS.Hallway_pipeline_c1 =
 
   engine = "gzdoom"
 
+  sound = "Pipeline"
+
   uses_epic_textures = true
 
 }

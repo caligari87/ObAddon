@@ -20,6 +20,8 @@ PREFABS.Hallway_pipeline_i1 =
   engine = "gzdoom"
   can_flip = true
 
+  sound = "Pipeline"
+
   uses_epic_textures = true
 
 }
