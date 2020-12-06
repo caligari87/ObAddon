@@ -1504,6 +1504,10 @@ function Room_border_up()
       return false
     end
 
+    if A1.mode == "liquid" or A2.mode == "liquid" then
+      return false
+    end
+
     return true
   end
 
