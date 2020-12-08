@@ -1504,7 +1504,8 @@ function Room_border_up()
       return false
     end
 
-    if A1.mode == "liquid" or A2.mode == "liquid" then
+    if A1.mode == "liquid" or A2.mode == "liquid"
+    or A1.mode == "cage" or A2.mode == "cage" then
       return false
     end
 
