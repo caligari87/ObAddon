@@ -1,4 +1,5 @@
 // IDEA FOR CLASSIC IWAD MAPS MODULE FOR OBADDON //
+// UPDATED DECEMBER 4th, 2020 //
 
 - Can give a similar experience to the original maps created
 - by id software.
@@ -12,6 +13,9 @@
 - Mandatory options: As Original theme, no Mix-In choice, no episode selection,
 - no intermission disabling, no glowing flats, no fog, no custom trees, no environment
 - theme choice, no Jokewad option.
+
+-- If coiossal size probes to problematic in generation, use huge
+-- size.
 
 ** END IMPORTANT **
 
