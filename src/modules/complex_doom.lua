@@ -71,7 +71,7 @@ UNFINISHED.MONSTERS =
     attack = "missile" -- None of these are instant hit except railgunner's slug, so changed here.
     replaces = "shooter"
     replace_prob = 20
-    give = { {ammo="bullet",count=5} }
+    give = { {ammo="bullet",count=5}, {ammo="grenade", count=1}, {ammo="mine", count=1}, {health="health_flask", count=5}, {ammo="ammo_pack", count=1}, {ammo="cells", count=20} }
     weap_prefs = { pistol=0.7, shotty=1.2, chain=1.5 } -- Pistol is actually useful on these guys!
     density = 1.5
     room_size = "any" --small
@@ -96,7 +96,7 @@ UNFINISHED.MONSTERS =
     damage = 8.0
     attack = "hitscan"
     density = 1.0
-    give = { {weapon="shotty"}, {ammo="shell",count=4} }
+    give = { {weapon="shotty"}, {ammo="shell",count=4}, {ammo="bullet",count=5}, {ammo="grenade", count=1}, {ammo="mine", count=1}, {health="health_flask", count=5}, {ammo="ammo_pack", count=1} }
     weap_prefs = { shotty=1.2, chain=1.5, plasma=1.2 }
     weap_needed = { shotty=true }
     species = "zombie"
@@ -124,6 +124,7 @@ UNFINISHED.MONSTERS =
     damage = 5.0
     attack = "missile"
     density = 1.0
+    give = { {health="health_flask", count=5}, {ammo="armor_shard", count=1} }
     replaces = "demon"
     replace_prob = 25
     weap_prefs = { shotty=1.5, chain=1.25, super=1.2, plasma=1.2 }
@@ -235,6 +236,7 @@ UNFINISHED.MONSTERS =
     boss_prob = 50
     prob = 6.4
     crazy_prob = 20
+    weap_needed = { launch=true }
     weap_prefs = { launch=1.75, super=1.5, plasma=1.75, bfg=1.5 }
     health = 1000
     damage = 15.0
@@ -260,6 +262,7 @@ UNFINISHED.MONSTERS =
     damage = 150
     attack = "missile"
     density = 0.1
+    weap_needed = { bfg=true }
     weap_min_damage = 150
     weap_prefs = { bfg=10.0 }
     room_size = "large" --medium
@@ -287,6 +290,7 @@ UNFINISHED.MONSTERS =
     attack = "hitscan"
     density = 0.1
     cage_factor = 0
+    weap_needed = { bfg=true }
     weap_min_damage = 200
     weap_prefs = { bfg=10.0 }
     room_size = "large"
@@ -312,7 +316,7 @@ UNFINISHED.MONSTERS =
     health = 80
     damage = 12.0
     attack = "hitscan"
-    give = { {weapon="chain"}, {ammo="bullet",count=10} }
+    give = { {weapon="chain"}, {ammo="bullet",count=10}, {ammo="bullet",count=5}, {ammo="grenade", count=1}, {ammo="mine", count=1}, {ammo="health_flask", count=5}, {ammo="ammo_pack", count=1} }
     weap_needed = { chain=true }
     weap_min_damage = 50
     weap_prefs = { shotty=1.5, super=1.75, chain=2.0, plasma=1.3, launch=1.1 }
@@ -435,6 +439,7 @@ UNFINISHED.MONSTERS =
     attack = "hitscan"
     density = 0.12
     room_size = "medium"
+    weap_needed = { super=true }
     weap_prefs = { launch=3.0, super=1.5, plasma=2.0, bfg=2.5 }
     weap_min_damage = 120
     nasty = true
@@ -449,7 +454,7 @@ UNFINISHED.MONSTERS =
     id = 71
     r = 31
     h = 56
-    level = 4
+    level = 5
     boss_type = "nasty"
     boss_prob = 15
     boss_limit = 2
@@ -464,7 +469,7 @@ UNFINISHED.MONSTERS =
     weap_prefs = { launch=1.5, super=1.5, chain=1.5, shotty=0.7, plasma=1.7 }
     room_size = "any" --large
     cage_factor = 0  -- never put in cages
-    infight_damage = 40 -- Pain Elemental replacements have direct damage now
+    infight_damage = 50 -- Pain Elemental replacements have direct damage now
   }
 
   -- Possible replacements:
@@ -487,7 +492,7 @@ UNFINISHED.MONSTERS =
     attack = "hitscan"
     give = { {ammo="bullet",count=5} }
     density = 1.5
-    infight_damage = 18
+    infight_damage = 25
   }
 }
 
@@ -570,7 +575,7 @@ COMPLEX_DOOM.WEAPONS =
     id = 2003
     level = 4
     pref = 30
-    add_prob = 65
+    add_prob = 45
     hide_prob = 10
     attack = "missile"
     rate = 1.7
@@ -591,7 +596,7 @@ COMPLEX_DOOM.WEAPONS =
     add_prob = 50
     attack = "missile"
     rate = 11
-    accuracy = 70
+    accuracy = 80
     damage = 22
     ammo = "cell"
     per = 1
@@ -617,6 +622,266 @@ COMPLEX_DOOM.WEAPONS =
     give = { {ammo="cell",count=40} }
     bonus_ammo = 40
   }
+}
+
+-- Need some changes here too!
+COMPLEX_DOOM.PICKUPS =
+{
+  -- HEALTH --
+
+  potion =
+  {
+    id = 2014
+    kind = "health"
+    add_prob = 20
+    cluster = { 3,7 }
+    give = { {health=2} }
+  }
+
+  stimpack =
+  {
+    id = 2011
+    kind = "health"
+    add_prob = 60
+    cluster = { 2,5 }
+    give = { {health=10} }
+  }
+
+  medikit =
+  {
+    id = 2012
+    kind = "health"
+    rank = 2
+    add_prob = 120
+    closet_prob = 20
+    secret_prob = 5
+    storage_prob = 80
+    storage_qty  = 2
+    give = { {health=25} }
+  }
+
+  -- ARMOR --
+
+  helmet =
+  {
+    id = 2015
+    kind = "armor"
+    add_prob = 10
+    cluster = { 3,7 }
+    give = { {health=2} }
+  }
+
+  -- AMMO --
+
+  bullets =
+  {
+    id = 2007
+    kind = "ammo"
+    add_prob = 10
+    cluster = { 2,5 }
+    give = { {ammo="bullet",count=10} }
+  }
+
+  bullet_box =
+  {
+    id = 2048
+    kind = "ammo"
+    rank = 2
+    add_prob = 35
+    give = { {ammo="bullet",count=50} }
+  }
+
+  shells =
+  {
+    id = 2008
+    kind = "ammo"
+    add_prob = 20
+    cluster = { 2,5 }
+    give = { {ammo="shell",count=4} }
+  }
+
+  shell_box =
+  {
+    id = 2049
+    kind = "ammo"
+    rank = 2
+    add_prob = 40
+    give = { {ammo="shell",count=20} }
+  }
+
+  rocket =
+  {
+    id = 2010
+    kind = "ammo"
+    add_prob = 6
+    cluster = { 4,7 }
+    give = { {ammo="rocket",count=1} }
+  }
+
+  rocket_box =
+  {
+    id = 2046
+    kind = "ammo"
+    rank = 2
+    add_prob = 25
+    closet_prob = 20
+    secret_prob = 5
+    storage_prob = 20
+    storage_qty  = 3
+    give = { {ammo="rocket",count=5} }
+  }
+
+  cells =
+  {
+    id = 2047
+    kind = "ammo"
+    add_prob = 20
+    closet_prob = 20
+    cluster = { 2,5 }
+    give = { {ammo="cell",count=20} }
+  }
+
+  cell_pack =
+  {
+    id = 17
+    kind = "ammo"
+    rank = 2
+    add_prob = 30
+    secret_prob = 5
+    storage_prob = 40
+    storage_qty  = 2
+    give = { {ammo="cell",count=100} }
+  }
+
+ -- Complex Doom items, never placed but used for letting Oblige know
+ -- that monsters can drop more than one kind of item.
+
+  health_flask =
+  {
+    kind = "health"
+    give = { {health=5} }
+  }
+
+    healthkit =
+  {
+    kind = "health"
+    give = { {health=25} }
+  }
+
+    rejuv_kit =
+  {
+    kind = "health"
+    give = { {health=100} }
+  }
+
+   ammo_pack =
+  {
+    kind = "ammo"
+    give = { {ammo="bullet",count=10 }, {ammo="shell", count=4 },
+             {ammo="cell",  count=20 }, {ammo="rocket",count=1 } }
+  }
+
+  armor_shard =
+  {
+  kind="armor"
+  give = { { health=5 } }
+  }
+
+  mine =
+  {
+    kind = "ammo"
+    give { {ammo="rocket" count=1} } -- Not a rocket but its damage is equal or higher tham
+                                    -- a rocket.
+  }
+
+  grenade =
+  {
+    kind = "ammo"
+    give { {ammo="rocket" count=1} }  -- Again, hackery to tell Oblige it's ammo.
+  }
+
+  --
+  -- NOTES:
+  --
+  -- Armor (all types) is modelled as health, because it merely
+  -- saves the player's health when you are hit with damage.
+  -- For example, the BLUE jacket saves 50% of damage, hence
+  -- it is roughly equivalent to 100 units of health.
+  --
+}
+
+
+--------------------------------------------------------------------
+
+
+COMPLEX_DOOM.NICE_ITEMS =
+{
+  -- HEALTH / ARMOR --
+
+  green_armor =
+  {
+    id = 2018
+    kind = "armor"
+    add_prob = 50
+    start_prob = 60
+    crazy_prob = 5
+    closet_prob = 10
+    give = { {health=30} }
+  }
+
+  blue_armor =
+  {
+    id = 2019
+    kind = "armor"
+    add_prob = 5
+    start_prob = 10
+    secret_prob = 60
+    give = { {health=80} }
+  }
+
+  soul =
+  {
+    id = 2013
+    kind = "health"
+    add_prob = 5
+    start_prob = 0
+    closet_prob = 2
+    secret_prob = 40
+    give = { {health=150} }
+  }
+ }
+  -- WEAPONS --
+
+  saw =
+  {
+    id = 2005
+    kind = "other"  -- really a weapon
+    add_prob = 7
+    secret_prob = 10
+    once_only = true
+  }
+
+  -- POWERUP --
+
+  invis =
+  {
+    id = 2024
+    kind = "powerup"
+    add_prob = 79
+    start_prob = 5
+    closet_prob = 15
+    time_limit = 100
+  }
+
+  --
+  -- NOTES:
+  --
+  -- The All-map is for secrets only, hence has no add_prob.
+  --
+  -- Radiation suit has no probs (and hence is never added) since it
+  -- needs special logic, e.g. when creating areas of nukage or lava
+  -- which the player is forced to cross.
+  --
 }
 
 
