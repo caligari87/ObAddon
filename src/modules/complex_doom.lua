@@ -56,7 +56,7 @@ UNFINISHED.MONSTERS =
 
 -- Possible replacements:
 -- Plasma zombie (Weakest but plasma bursts hurt)
--- Railgun zombie (Has to aim before shooting, and not a Skulltag level damage weapon)
+-- Railgun zombie (Has to aim before shooting, and not Skulltag level damage)
 -- DemonTech zombie (Unique weapon used, still hurts)
 -- Rocket zombie (Uses a rocket launcher, heavy if not lethal damage!)
   zombie =
@@ -67,7 +67,7 @@ UNFINISHED.MONSTERS =
     level = 1
     prob = 50
     health = 45 -- Average health. All replacement health divided by 4.
-    damage = 4 -- Need some sort of average damage due to the replacements.
+    damage = 5.0 -- Need some sort of average damage due to the replacements.
     attack = "missile" -- None of these are instant hit except railgunner's slug, so changed here.
     replaces = "shooter"
     replace_prob = 20
@@ -77,7 +77,7 @@ UNFINISHED.MONSTERS =
     room_size = "any" --small
     disloyal = true
     trap_factor = 0.05
-    infight_damage = 5.0 -- Due to the projectile damage done
+    infight_damage = 6.0 -- Due to the projectile damage done
   }
 
   -- Possible replacements:
@@ -93,7 +93,7 @@ UNFINISHED.MONSTERS =
     level = 1
     prob = 75
     health = 50
-    damage = 8
+    damage = 8.0
     attack = "hitscan"
     density = 1.0
     give = { {weapon="shotty"}, {ammo="shell",count=4} }
@@ -105,7 +105,7 @@ UNFINISHED.MONSTERS =
     room_size = "any" --small
     disloyal = true
     trap_factor = 2.0
-    infight_damage = 9.0
+    infight_damage = 10.0
   }
 
   -- Possible replacements:
@@ -121,7 +121,7 @@ UNFINISHED.MONSTERS =
     level = 1
     prob = 140
     health = 85
-    damage = 1.3
+    damage = 5.0
     attack = "missile"
     density = 1.0
     replaces = "demon"
@@ -129,7 +129,7 @@ UNFINISHED.MONSTERS =
     weap_prefs = { shotty=1.5, chain=1.25, super=1.2, plasma=1.2 }
     room_size = "any" --small
     trap_factor = 0.5 --0.3
-    infight_damage = 8.0
+    infight_damage = 10.0
   }
 
   skull =
@@ -137,7 +137,7 @@ UNFINISHED.MONSTERS =
     id = 3006
     r = 16
     h = 56
-    level = 4 -- STOP SHOWING UP ON MAP01!!
+    level = 4
     prob = 25
     health = 100
     damage = 1.7
@@ -152,22 +152,26 @@ UNFINISHED.MONSTERS =
     infight_damage = 2.1
   }
 
--- Shows up a little sooner.
+  -- Possible replacements:
+  -- Bull Demon (Stock demon, can also lunge to close distance and harm player)
+  -- Cyber Fiend (Cyberneticized version, stronger)
+  -- Magma Demon (Fire based, has projectile attack)
+  -- D-Tech Fiend (Sturdier, has projectile attack?)
   demon =
   {
     id = 3002
     r = 30
     h = 56
-    level = 2.4
+    level = 3
     prob = 50
-    health = 150
-    damage = 0.4
+    health = 260
+    damage = 7.0
     attack = "melee"
     density = 0.85
     weap_min_damage = 40
-    weap_prefs = { super=1.75, shotty=1.35, chain=1.3, plasma=1.1, launch=0.3 }
+    weap_prefs = { super=1.75, shotty=1.35, chain=1.5, plasma=1.2, launch=0.3 }
     room_size = "any"
-    infight_damage = 3.5
+    infight_damage = 15
   }
 
 -- Same as Demon.
@@ -176,22 +180,22 @@ UNFINISHED.MONSTERS =
     id = 58
     r = 30
     h = 56
-    level = 2.4
+    level = 3
     replaces = "demon"
     replace_prob = 35
     crazy_prob = 25
-    health = 150
-    damage = 1.0
+    health = 220
+    damage = 7.0
     attack = "melee"
     density = 0.5
     invis = true
     outdoor_factor = 3.0
     weap_min_damage = 40
-    weap_prefs = { super=1.75, shotty=1.35, chain=1.3, plasma=1.1, launch=0.3 }
+    weap_prefs = { super=1.75, shotty=1.35, chain=1.5, plasma=1.2, launch=0.3 }
     species = "demon"
     room_size = "any"
     trap_factor = 0.3
-    infight_damage = 2.5
+    infight_damage = 15
   }
 
 -- Shows up sooner and increased chance to replace
@@ -204,7 +208,7 @@ UNFINISHED.MONSTERS =
     level = 3
     prob = 30
     health = 400
-    damage = 4.0
+    damage = 8.0
     attack = "missile"
     density = 0.6
     weap_min_damage = 40
@@ -214,7 +218,7 @@ UNFINISHED.MONSTERS =
     replace_prob = 20
     room_size = "any" --large
     trap_factor = 0.5
-    infight_damage = 21
+    infight_damage = 40
   }
 
 
@@ -233,12 +237,12 @@ UNFINISHED.MONSTERS =
     crazy_prob = 20
     weap_prefs = { launch=1.75, super=1.5, plasma=1.75, bfg=1.5 }
     health = 1000
-    damage = 7.5
+    damage = 15.0
     attack = "missile"
     density = 0.3
     weap_min_damage = 88
     room_size = "any" --medium
-    infight_damage = 40
+    infight_damage = 70
   }
 
 -- Shows up sooner.
@@ -253,7 +257,7 @@ UNFINISHED.MONSTERS =
     prob = 1.6
     crazy_prob = 10
     health = 4000
-    damage = 125
+    damage = 150
     attack = "missile"
     density = 0.1
     weap_min_damage = 150
@@ -279,7 +283,7 @@ UNFINISHED.MONSTERS =
     prob = 2.0
     crazy_prob = 10
     health = 3000
-    damage = 100
+    damage = 150
     attack = "hitscan"
     density = 0.1
     cage_factor = 0
@@ -306,7 +310,7 @@ UNFINISHED.MONSTERS =
     level = 1.6
     prob = 60
     health = 80
-    damage = 10
+    damage = 12.0
     attack = "hitscan"
     give = { {weapon="chain"}, {ammo="bullet",count=10} }
     weap_needed = { chain=true }
@@ -319,7 +323,7 @@ UNFINISHED.MONSTERS =
     replace_prob = 15
     disloyal = true
     trap_factor = 2.4
-    infight_damage = 45
+    infight_damage = 65
   }
 
 -- Shows up sooner, marginal probability decrease and
@@ -330,10 +334,10 @@ UNFINISHED.MONSTERS =
     id = 66
     r = 20
     h = 64
-    level = 3.5
+    level = 5
     prob = 25
     health = 300
-    damage = 9 --8.5
+    damage = 15.0 -- Some replacements do tons of damage
     attack = "missile"
     weap_min_damage = 60
     density = 0.6
@@ -341,8 +345,8 @@ UNFINISHED.MONSTERS =
     room_size = "any"
     replaces = "knight"
     replace_prob = 15
-    trap_factor = 3.6
-    infight_damage = 20
+    trap_factor = 2.0
+    infight_damage = 50
   }
 
 -- Shows up sooner, increased chance to replace
@@ -355,7 +359,7 @@ UNFINISHED.MONSTERS =
     level = 4
     prob = 26
     health = 500
-    damage = 4.0
+    damage = 15.0
     attack = "missile"
     weap_min_damage = 50
     weap_prefs = { launch=1.75, super=1.5, plasma=1.33 }
@@ -364,7 +368,7 @@ UNFINISHED.MONSTERS =
     replaces = "mancubus"
     replace_prob = 25
     room_size = "any" --medium
-    infight_damage = 36
+    infight_damage = 60
   }
 
 -- Shows up sooner, increased replacement for Arachnotron
@@ -374,10 +378,10 @@ UNFINISHED.MONSTERS =
     id = 67
     r = 48
     h = 64
-    level = 4.5
+    level = 5
     prob = 20
     health = 600
-    damage = 8.0
+    damage = 12.0
     attack = "missile"
     weap_prefs = { launch=1.5, super=1.5, plasma=1.5, chain=1.2 }
     density = 0.32
@@ -386,7 +390,7 @@ UNFINISHED.MONSTERS =
     replace_prob = 30
     room_size = "large"
     outdoor_factor = 2.0
-    infight_damage = 70
+    infight_damage = 110 -- Has a close up flamethrower attack as well
     boss_replacement = "baron"
   }
 
@@ -400,7 +404,7 @@ UNFINISHED.MONSTERS =
     level = 4.5
     prob = 12
     health = 500
-    damage = 10.7
+    damage = 15.0
     attack = "missile"
     weap_min_damage = 60
     weap_prefs = { launch=1.5, super=1.5, plasma=1.5, chain=1.2 }
@@ -408,7 +412,7 @@ UNFINISHED.MONSTERS =
     replace_prob = 30
     density = 0.5
     room_size = "medium"
-    infight_damage = 62
+    infight_damage = 95
     boss_replacement = "revenant"
   }
 
@@ -420,21 +424,21 @@ UNFINISHED.MONSTERS =
     id = 64
     r = 20
     h = 56
-    level = 6 --6.5
+    level = 8
     boss_type = "nasty"
     boss_prob = 50
-    boss_limit = 3 --Triple the pain for this module, up from 2
+    boss_limit = 1 -- Vile replacements are pretty nasty, hence limited to 1
     prob = 5
     crazy_prob = 15
     health = 700
-    damage = 25
+    damage = 40
     attack = "hitscan"
-    density = 0.17
+    density = 0.12
     room_size = "medium"
-    weap_prefs = { launch=2.0, super=1.25, plasma=1.5, bfg=1.5 }
+    weap_prefs = { launch=3.0, super=1.5, plasma=2.0, bfg=2.5 }
     weap_min_damage = 120
     nasty = true
-    infight_damage = 18
+    infight_damage = 70
     boss_replacement = "baron"
   }
 
@@ -448,22 +452,28 @@ UNFINISHED.MONSTERS =
     level = 4
     boss_type = "nasty"
     boss_prob = 15
-    boss_limit = 4 --Increases the pain, up from 3. hue hue
+    boss_limit = 2
     prob = 10
     crazy_prob = 15
     health = 900  -- 400 + 5 skulls
-    damage = 14.5 -- about 5 skulls
+    damage = 20.0 -- about 5 skulls
     attack = "missile"
     density = 0.2
     float = true
     weap_min_damage = 100
-    weap_prefs = { launch=1.0, super=1.25, chain=1.5, shotty=0.7 }
+    weap_prefs = { launch=1.5, super=1.5, chain=1.5, shotty=0.7, plasma=1.7 }
     room_size = "any" --large
     cage_factor = 0  -- never put in cages
-    infight_damage = 4.5 -- guess
+    infight_damage = 40 -- Pain Elemental replacements have direct damage now
   }
 
-  -- NOTE: this is not normally added to levels
+  -- Possible replacements:
+  -- SS Nazi (Blue outfit with submachine guns)
+  -- Guard (The tan outfit guys with pistol)
+  -- Mutant (Chest rifles!)
+  -- SS Officer (Gray outfits with good aim)
+  -- Dog (Bitey bite)
+  -- HITLER! (Mecha suit!)
   ss_nazi =
   {
     id = 84
@@ -473,29 +483,29 @@ UNFINISHED.MONSTERS =
     prob  = 0
     crazy_prob = 0
     health = 50
-    damage = 2.8
+    damage = 10
     attack = "hitscan"
     give = { {ammo="bullet",count=5} }
     density = 1.5
-    infight_damage = 6.0
+    infight_damage = 18
   }
 }
 
-DOOM.WEAPONS =
+COMPLEX_DOOM.WEAPONS =
 {
   fist =
   {
     attack = "melee"
     rate = 1.5
-    damage = 10
+    damage = 15
   }
 
   pistol =
   {
     pref = 1
     attack = "hitscan"
-    rate = 1.8
-    accuracy = 75
+    rate = 5.0 -- Pistol is semi-automatic now
+    accuracy = 85
     damage = 10
     ammo = "bullet"
     per = 1
@@ -565,7 +575,7 @@ DOOM.WEAPONS =
     attack = "missile"
     rate = 1.7
     accuracy = 80
-    damage = 170
+    damage = 200 -- Rocket does a bit more damage
     splash = { 65,20,5 }
     ammo = "rocket"
     per = 1
@@ -632,18 +642,19 @@ function COMPLEX_DOOM.setup(self)
   end
 end
 
-
+-- How to implement this into "Modded Game Extras" module??
 UNFINISHED["COMPLEX_DOOM"] =
 {
   label = _("Complex Doom Modofications")
 
   side = "left"
   priority = 61
-  game = "doomish"
+  game = { doom1=1, doom2=1, heretic=0, hexen=0 } -- Dunno if it has support for Heretic/Hexen
 
-  tooltip = "Changes enemy placement and thus makes overall gameplay a bit to fair bit harder, depending if you use additional mods in the case of GZDoom."
+  tooltip = "Alters to fit the difficulty that Complex Doom provides. Do not use with 'Harder Enemy Setup' addon, will conflict."
 
-  engine = { zdoom=1, gzdoom=1, skulltag=1, limit=1 }
+  -- Zandronum *SHOULD* work with v27, otherwise will remove it.
+  engine = { zdoom=1, gzdoom=1, skulltag=1, limit=0, heretic=0, hexen=0 }
 
   tables =
   {
