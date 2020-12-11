@@ -84,7 +84,7 @@ UNFINISHED.MONSTERS =
   -- Shotgun zombie (Same as stock, but potential to do more damage)
   -- Assault shotgun zombie (Uses a semi-auto shotgun, hurts even more due to fire rate)
   -- Super shotgun zombie (Double barrel misery. Hurts a lot)
-  -- Quad barrel shotgunner (If you thought super shotgunner was bad..Don't want to be close with him!)
+  -- Quad barrel shotgunner (If you thought super shotgunner was bad..Don't want to be close to him!)
   shooter =
   {
     id = 9
@@ -790,14 +790,14 @@ COMPLEX_DOOM.PICKUPS =
   mine =
   {
     kind = "ammo"
-    give { {ammo="rocket" count=1} } -- Not a rocket but its damage is equal or higher tham
+    give = { {ammo="rocket", count=1 } } -- Not a rocket but its damage is equal or higher tham
                                     -- a rocket.
   }
 
   grenade =
   {
     kind = "ammo"
-    give { {ammo="rocket" count=1} }  -- Again, hackery to tell Oblige it's ammo.
+    give = { {ammo="rocket", count=1} }  -- Again, hackery to tell Oblige it's ammo.
   }
 
   --
@@ -849,7 +849,7 @@ COMPLEX_DOOM.NICE_ITEMS =
     secret_prob = 40
     give = { {health=150} }
   }
- }
+
   -- WEAPONS --
 
   saw =
@@ -883,6 +883,7 @@ COMPLEX_DOOM.NICE_ITEMS =
   -- which the player is forced to cross.
   --
 }
+
 
 
 function COMPLEX_DOOM.setup(self)
