@@ -75,6 +75,8 @@ PREFABS.Hallway_pipeline_locked_red2 =
   y_fit = "top"
   deep   = 16
 
+  engine = "gzdoom"
+
   sound = "Pipeline"
 
   uses_epic_textures = true
@@ -129,6 +131,8 @@ PREFABS.Hallway_pipeline_barred1 =
   seed_h = 1
 
   deep   = 16
+
+  engine = "gzdoom"
 
   sound = "Pipeline"
 
