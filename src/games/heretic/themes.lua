@@ -77,7 +77,7 @@ HERETIC.THEMES =
       deuce = 50
     }
 
-    scenic_fences =
+    scenic_fence =
     {
       GATMETL2 = 50
       GATMETL3 = 50
@@ -112,6 +112,16 @@ HERETIC.THEMES =
       lava   = 50
       sludge = 20
     }
+    
+    ceiling_sinks =
+    {
+      PLAIN = 0.1
+    }
+
+    floor_sinks =
+    {
+      PLAIN = 0.1
+    }
 
     facades =
     {
@@ -121,12 +131,17 @@ HERETIC.THEMES =
 
     fence_groups =
     {
-      PLAIN = 1
+      PLAIN = 50
+    }
+
+    fence_posts =
+    {
+      Post = 50
     }
 
     beam_groups =
     {
-      beam_metal = 10
+      beam_metal = 50
     }
 
     scenic_fences =
@@ -136,6 +151,13 @@ HERETIC.THEMES =
       GATMETL4 = 50
       GATMETL5 = 50
     }
+    
+    sink_style =
+    {
+      sharp = 1
+      curved = 0.1
+    }
+    
   }
 
 
