@@ -4,6 +4,9 @@
 --
 --  Copyright (C) 2006-2017 Andrew Apted
 --  Copyright (C)      2008 Sam Trenholme
+--  Copyright (C) 2019-2020 MsrSgtShooterPerson
+--  --Adapted from MsrSgtShooterPerson's Doom themes.lua file
+    --Into a singular theme (Castle) for Heretic
 --
 --  This program is free software; you can redistribute it and/or
 --  modify it under the terms of the GNU General Public License
