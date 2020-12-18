@@ -744,20 +744,20 @@ HERETIC.ROOM_THEMES =
     
     porch_floors =
     {
+      FLAT503 = 10
+      FLAT503 = 15
+      FLAT516 = 8
+      FLOOR05 = 10
+      FLOOR06 = 5
+      FLOOR06 = 8
+      FLOOR08 = 10
       FLOOR10 = 10
       FLOOR11 = 10
-      FLOOR06 = 5
-      FLOOR08 = 10
       FLOOR12 = 10
-      FLAT503 = 15
       FLOOR17 = 15
-      FLAT503 = 10
-      FLOOR29 = 10
-      FLOOR06 = 8
-      FLAT516 = 8
-      FLOOR28 = 10
       FLOOR25 = 15
-      FLOOR05 = 10
+      FLOOR28 = 10
+      FLOOR29 = 10
     }  
   }
 
@@ -813,7 +813,6 @@ HERETIC.ROOM_THEMES =
     {
       FLOOR10 = 30
       FLAT503 = 20
-      FLAT503 = 15
       FLOOR11 = 10
     }
 
@@ -822,7 +821,6 @@ HERETIC.ROOM_THEMES =
       FLOOR10 = 30
       FLOOR12 = 20
       FLOOR08 = 20
-      FLOOR08 = 15
     }
   }
 
@@ -857,7 +855,6 @@ HERETIC.ROOM_THEMES =
     walls =
     {
       LOOSERCK = 50
-      SAINT1 = 50
       SNDPLAIN = 50
       SNDBLCKS = 50
     }
@@ -869,7 +866,6 @@ HERETIC.ROOM_THEMES =
       FLAT522 = 50
       FLOOR11 = 50
       FLOOR12 = 50
-      FLOOR17 = 50
     }
 
     ceilings =
@@ -898,40 +894,35 @@ HERETIC.ROOM_THEMES =
 
     floors =
     {
-      FLOOR10 = 50
-      FLOOR12 = 50
       FLAT503 = 50
-      FLOOR11 = 50
-      FLOOR06 = 50
-      FLAT522 = 50
-      FLAT503 = 50
-      FLOOR16 = 50
-      FLOOR09 = 50
-      FLOOR06 = 50
+      FLAT508 = 50
       FLAT516 = 50
       FLAT522 = 50
-      FLOOR30 = 50
-      FLOOR28 = 50
+      FLOOR03 = 50
       FLOOR05 = 50
+      FLOOR06 = 50
+      FLOOR10 = 50
+      FLOOR11 = 50
+      FLOOR12 = 50
+      FLOOR28 = 50
+      FLOOR30 = 50
     }
 
     ceilings =
     {
-      FLAT516 = 50
+      FLAT503 = 50
       FLAT508 = 50
       FLAT516 = 50
-      FLOOR10 = 50
-      FLAT503 = 50
-      FLOOR12 = 50
-      FLAT503 = 50
-      FLOOR11 = 50
-      FLOOR06 = 50
-      FLAT516 = 50
       FLAT522 = 50
-      FLOOR30 = 50
-      FLOOR28 = 50
       FLOOR03 = 50
       FLOOR05 = 50
+      FLOOR06 = 50
+      FLOOR10 = 50
+      FLOOR11 = 50
+      FLOOR12 = 50
+      FLOOR28 = 50
+      FLOOR30 = 50
+
     }
   }
    
