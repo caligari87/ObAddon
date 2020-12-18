@@ -34,112 +34,21 @@ HERETIC.SINKS =
     trim_light = 16
   }
 
-  sky_shiny =
-  {
-    mat   = "_SKY"
-    dz    = 32
-    light = 16
-
-    trim_mat = "FLOOR08"
-    trim_dz  = -5
-    trim_light = 16
-  }
-
   sky_red =
   {
     mat   = "_SKY"
     dz    = 32
     light = 16
 
-    trim_mat = "FLTLAVA1"
+    trim_mat = "FLOOR09"
     trim_dz  = -5
     trim_light = 16
   }
 
-  sky_tech1 =
+  sky_castle1 =
   {
     mat   = "_SKY"
     dz    = 128
-    light = 16
-
-    trim_mat = "CSTLRCK"
-    trim_dz  = 0
-  }
-
-  sky_tech2 =
-  {
-    mat   = "_SKY"
-    dz    = 128
-    light = 16
-
-    trim_mat = "CSTLRCK"
-    trim_dz  = 0
-  }
-
-  sky_tech3 =
-  {
-    mat   = "_SKY"
-    dz    = 144
-    light = 16
-
-    trim_mat = "METL2"
-    trim_dz  = 16
-  }
-
-  sky_town_1 =
-  {
-    mat   = "_SKY"
-    dz    = 64
-    light = 16
-
-    trim_mat = "WOODWL"
-    trim_dz  = 0
-  }
-
-  sky_town_2 =
-  {
-    mat   = "_SKY"
-    dz    = 72
-    light = 16
-
-    trim_mat = "GRNBLOK1"
-    trim_dz  = 0
-  }
-
-  sky_town_3 =
-  {
-    mat   = "_SKY"
-    dz    = 96
-    light = 16
-
-    trim_mat = "MOSSRCK1"
-    trim_dz  = 0
-  }
-
-  sky_heck_1 =
-  {
-    mat   = "_SKY"
-    dz    = 128
-    light = 16
-
-    trim_mat = "WOODWL"
-    trim_dz  = 0
-  }
-
-  sky_heck_2 =
-  {
-    mat   = "_SKY"
-    dz    = 128
-    light = 16
-
-    trim_mat = "SNDCHNKS"
-    trim_dz  = 0
-  }
-
-  sky_heck_3 =
-  {
-    mat   = "_SKY"
-    dz    = 64
     light = 16
 
     trim_mat = "CSTLRCK"
@@ -147,27 +56,6 @@ HERETIC.SINKS =
   }
 
 -- sky ceilings
-
-  sky_heck_4 =
-  {
-    mat   = "_SKY"
-    dz    = 128
-    light = 16
-
-    trim_mat = "GRSKULL3"
-    trim_dz  = 0
-  }
-
-  sky_bronze =
-  {
-    mat   = "_SKY"
-    dz    = 48
-    light = 16
-
-    trim_mat = "GRNBLOK1"
-    trim_dz  = -9
-    trim_light = 16
-  }
 
   sky_metal2 =
   {
@@ -180,27 +68,7 @@ HERETIC.SINKS =
     trim_light = 16
   }
 
-  sky_pipes =
-  {
-    mat   = "_SKY"
-    dz    = 128
-    light = 16
-
-    trim_mat = "METL2"
-    trim_dz  = 0
-  }
-
-  sky_heck_5 =
-  {
-    mat   = "_SKY"
-    dz    = 64
-    light = 16
-
-    trim_mat = "CSTLRCK"
-    trim_dz  = 0
-  }
-
-  sky_tech4 =
+  sky_castle2 =
   {
     mat   = "_SKY"
     dz    = 144
@@ -220,67 +88,7 @@ HERETIC.SINKS =
     trim_dz  = 0
   }
 
-  sky_stone_2 =
-  {
-    mat   = "_SKY"
-    dz    = 64
-    light = 16
-
-    trim_mat = "CSTLRCK"
-    trim_dz  = 0
-  }
-
-  sky_heck_6 =
-  {
-    mat   = "_SKY"
-    dz    = 128
-    light = 16
-
-    trim_mat = "WOODWL"
-    trim_dz  = 0
-  }
-
-  sky_heck_7 =
-  {
-    mat   = "_SKY"
-    dz    = 128
-    light = 16
-
-    trim_mat = "MOSSRCK1"
-    trim_dz  = 0
-  }
-
-  sky_heck_8 =
-  {
-    mat   = "_SKY"
-    dz    = 128
-    light = 16
-
-    trim_mat = "MOSSRCK1"
-    trim_dz  = 0
-  }
-
-  sky_heck_9 =
-  {
-    mat   = "_SKY"
-    dz    = 80
-    light = 16
-
-    trim_mat = "SAINT1"
-    trim_dz  = 0
-  }
-
-  sky_tech5 =
-  {
-    mat   = "_SKY"
-    dz    = 128
-    light = 16
-
-    trim_mat = "CSTLRCK"
-    trim_dz  = 16
-  }
-
-  sky_tech6 =
+  sky_castle3 =
   {
     mat   = "_SKY"
     dz    = 128
@@ -290,17 +98,7 @@ HERETIC.SINKS =
     trim_dz  = 16
   }
 
-  sky_tech7 =
-  {
-    mat   = "_SKY"
-    dz    = 48
-    light = 16
-
-    trim_mat = "CSTLRCK"
-    trim_dz  = 16
-  }
-
-  sky_tech8 =
+  sky_castle4 =
   {
     mat   = "_SKY"
     dz    = 128
@@ -310,67 +108,7 @@ HERETIC.SINKS =
     trim_dz  = 16
   }
 
-  sky_tech9 =
-  {
-    mat   = "_SKY"
-    dz    = 128
-    light = 16
-
-    trim_mat = "CSTLRCK"
-    trim_dz  = 16
-  }
-
-  sky_cement =
-  {
-    mat   = "_SKY"
-    dz    = 64
-    light = 16
-
-    trim_mat = "CSTLRCK"
-    trim_dz  = 16
-  }
-
-  sky_brick10 =
-  {
-    mat   = "_SKY"
-    dz    = 64
-    light = 16
-
-    trim_mat = "CTYSTCI1"
-    trim_dz  = 16
-  }
-
-  sky_brownpip =
-  {
-    mat   = "_SKY"
-    dz    = 112
-    light = 16
-
-    trim_mat = "GRNBLOK2"
-    trim_dz  = 16
-  }
-
-  sky_crackle1 =
-  {
-    mat   = "_SKY"
-    dz    = 80
-    light = 16
-
-    trim_mat = "CSTLRCK"
-    trim_dz  = 16
-  }
-
-  sky_crackle2 =
-  {
-    mat   = "_SKY"
-    dz    = 64
-    light = 16
-
-    trim_mat = "CSTLRCK"
-    trim_dz  = 16
-  }
-
-  sky_fireblu =
+  sky_fltlava =
   {
     mat   = "_SKY"
     dz    = 80
@@ -378,76 +116,6 @@ HERETIC.SINKS =
 
     trim_mat = "FLTLAVA1"
     trim_dz  = 16
-  }
-
-  sky_modwall =
-  {
-    mat   = "_SKY"
-    dz    = 64
-    light = 16
-
-    trim_mat = "CTYSTUC3"
-    trim_dz  = 16
-  }
-
-  sky_heck_10 =
-  {
-    mat   = "_SKY"
-    dz    = 128
-    light = 16
-
-    trim_mat = "BANNER4"
-    trim_dz  = 16
-  }
-
-  sky_heck_11 =
-  {
-    mat   = "_SKY"
-    dz    = 128
-    light = 16
-
-    trim_mat = "BANNER5"
-    trim_dz  = 16
-  }
-
-  sky_heck_12 =
-  {
-    mat   = "_SKY"
-    dz    = 128
-    light = 16
-
-    trim_mat = "BANNER1"
-    trim_dz  = 16
-  }
-
-  sky_heck_13 =
-  {
-    mat   = "_SKY"
-    dz    = 96
-    light = 16
-
-    trim_mat = "SNDBLCKS"
-    trim_dz  = 16
-  }
-
-  sky_heck_14 =
-  {
-    mat   = "_SKY"
-    dz    = 128
-    light = 16
-
-    trim_mat = "SNDPLAIN"
-    trim_dz  = 16
-  }
-
-  sky_heck_15 =
-  {
-    mat   = "_SKY"
-    dz    = 104
-    light = 16
-
-    trim_mat = "SNDBLCKS"
-    trim_dz  = 0
   }
 
   -- liquid floor --
@@ -458,22 +126,6 @@ HERETIC.SINKS =
     dz  = -12
   }
 
-  liquid_blood =
-  {
-    mat = "FLAT517"
-    dz  = -12
-    --light = 16
-  }
-
-  liquid_shiny =
-  {
-    mat = "_LIQUID"
-    dz  = -8
-
-    trim_mat = "FLOOR08"
-    trim_dz  = 0
-  }
-
   liquid_metal =
   {
     mat = "_LIQUID"
@@ -481,24 +133,6 @@ HERETIC.SINKS =
 
     trim_mat = "METL2"
     trim_dz  = 0
-  }
-
-  liquid_marble =
-  {
-    mat = "_LIQUID"
-    dz  = -12
-
-    trim_mat = "GRSTNPBV"
-    trim_dz  = 0
-  }
-
-  liquid_ash =
-  {
-    mat = "_LIQUID"
-    dz  = -10
-
-    trim_mat = "LOOSERCK"
-    trim_dz  = 2
   }
 
   liquid_firelava =
@@ -511,15 +145,6 @@ HERETIC.SINKS =
     trim_dz  = 2
   }
 
-  liquid_metal2 =
-  {
-    mat = "_LIQUID"
-    dz  = -8
-
-    trim_mat = "METL2"
-    trim_dz  = 0
-  }
-
   liquid_bstone =
   {
     mat = "_LIQUID"
@@ -529,36 +154,9 @@ HERETIC.SINKS =
     trim_dz  = 2
   }
 
-  liquid_bstone2 =
-  {
-    mat = "_LIQUID"
-    dz  = -8
-
-    trim_mat = "CSTLRCK"
-    trim_dz  = 2
-  }
 
   -- ceiling lights --
 
-  light_red_shiny =
-  {
-    mat = "FLOOR22"
-    dz  = 4
-    light = 16
-
-    trim_mat = "FLOOR08"
-    trim_dz  = -5
-  }
-
-  light_orange_shiny =
-  {
-    mat = "FLOOR24"
-    dz  = 4
-    light = 16
-
-    trim_mat = "FLOOR08"
-    trim_dz  = -5
-  }
 
   light_brightred_metal =
   {
@@ -569,48 +167,6 @@ HERETIC.SINKS =
     trim_mat = "METL2"
     trim_dz  = -5
     trim_light = 16
-  }
-
-  light_brightred_metal2 =
-  {
-    mat = "FLOOR09"
-    dz  = 8
-    light = 32
-
-    trim_mat = "CSTLRCK"
-    trim_dz  = -5
-    trim_light = 16
-  }
-
-  light_diamond =
-  {
-    mat = "FLOOR22"
-    dz  = 8
-    light = 16
-  }
-
-  light_urban1 =
-  {
-    mat = "FLAT508"
-    dz  = 4
-    light = 32
-
-    trim_mat = "METL2"
-    trim_dz  = -5
-  }
-
-  light_heck_red =
-  {
-    mat = "FLOOR09"
-    dz  = 16
-    light = 16
-  }
-
-  light_heck_lava =
-  {
-    mat = "FLTLAVA1"
-    dz  = 16
-    light = 32
   }
 
   light_side1 =
@@ -625,16 +181,6 @@ HERETIC.SINKS =
 
   light_side2 =
   {
-    mat = "FLOOR05"
-    dz  = 16
-    light = 16
-
-    trim_mat = "METL1"
-    trim_dz  = 0
-  }
-
-  light_side3 =
-  {
     mat = "FLOOR30"
     dz  = 16
     light = 32
@@ -643,27 +189,7 @@ HERETIC.SINKS =
     trim_dz  = 0
   }
 
-  light_side4 =
-  {
-    mat = "FLOOR16"
-    dz  = 16
-    light = 32
-
-    trim_mat = "METL1"
-    trim_dz  = 0
-  }
-
-  light_side5 =
-  {
-    mat = "FLOOR05"
-    dz  = 16
-    light = 16
-
-    trim_mat = "METL1"
-    trim_dz  = 0
-  }
-
-  light_side6 =
+   light_side3 =
   {
     mat = "FLOOR17"
     dz  = 24
@@ -681,21 +207,9 @@ HERETIC.SINKS =
     dz  = -8
   }
 
-  floor_skulls =
-  {
-    mat = "FLOOR17"
-    dz  = -8
-  }
-
-  floor_snakes =
-  {
-    mat = "FLAT512"
-    dz  = -8
-  }
-
   floor_green =
   {
-    mat = "FLAT512"
+    mat = "FLOOR18"
     dz  = -8
   }
 
@@ -711,51 +225,15 @@ HERETIC.SINKS =
     dz  = -8
   }
 
-  floor_blue2 =
-  {
-    mat = "FLOOR16"
-    dz  = -8
-  }
-
-  floor_glowingrock2 =
+   floor_glowingrock2 =
   {
     mat = "FLTLAVA1"
     dz  = -8
   }
 
-  floor_blue3 =
-  {
-    mat = "FLOOR16"
-    dz  = -8
-  }
-
-  floor_green2 =
-  {
-    mat = "FLAT512"
-    dz  = -8
-  }
-
-  floor_dirt1 =
+  floor_dirt =
   {
     mat = "FLOOR17"
-    dz  = -8
-  }
-
-  floor_dirt2 =
-  {
-    mat = "FLOOR17"
-    dz  = -8
-  }
-
-  floor_dirt3 =
-  {
-    mat = "FLOOR17"
-    dz  = -8
-  }
-
-  floor_snakes2 =
-  {
-    mat = "FLAT512"
     dz  = -8
   }
 
@@ -765,24 +243,6 @@ HERETIC.SINKS =
   {
     mat = "FLOOR09"
     dz  = 8
-  }
-
-  ceil_vdark =
-  {
-    mat   = "FLAT503"
-    dz    = 64
-
-    trim_mat = "CSTLRCK"
-    trim_dz  = 0
-  }
-
-   ceil_vdark2 =
-  {
-    mat   = "FLAT503"
-    dz    = 64
-
-    trim_mat = "METL2"
-    trim_dz  = 0
   }
 
   ceil_icky =
@@ -796,41 +256,11 @@ HERETIC.SINKS =
 
   ceil_glowrock =
   {
-    mat = "FLAT523"
-    dz    = 64
-    light = 16
-
-    trim_mat = "LOOSERCK"
-    trim_dz  = -8
-  }
-
-  ceil_glowrock2 =
-  {
     mat = "FLTLAVA1"
     dz    = 64
     light = 16
 
     trim_mat = "LOOSERCK"
-    trim_dz  = -8
-  }
-
-  ceil_hotrock =
-  {
-    mat = "FLAT522"
-    dz    = 64
-    light = 24
-
-    trim_mat = "SAINT1"
-    trim_dz  = -8
-  }
-
-  ceil_hotrock2 =
-  {
-    mat = "FLAT523"
-    dz    = 64
-    light = 24
-
-    trim_mat = "SAINT1"
     trim_dz  = -8
   }
 
@@ -840,25 +270,6 @@ HERETIC.SINKS =
     dz    = 64
 
     trim_mat = "CSTLRCK"
-    trim_dz  = -8
-  }
-
-  ceil_blood =
-  {
-    mat = "FLAT517"
-    dz    = 64
-
-    trim_mat = "CSTLRCK"
-    trim_dz  = -8
-  }
-
-  ceil_sprock =
-  {
-    mat = "FLOOR17"
-    dz    = 64
-    light = 24
-
-    trim_mat = "SAINT1"
     trim_dz  = -8
   }
 
@@ -935,7 +346,7 @@ HERETIC.SINKS =
     trim_dz = -4
   }
 
-  -- street sink def, do not use for anything else
+  --[[ street sink def, do not use for anything else
   floor_default_streets =
   {
     mat = "FLOOR30"
@@ -943,7 +354,7 @@ HERETIC.SINKS =
 
     trim_mat = "FLOOR10"
     trim_dz = 2
-  }
+  } ]]
 }
 
 
@@ -1064,46 +475,46 @@ HERETIC.THEMES =
     
      floor_sinks =
     {
-      liquid_plain = 10
-      liquid_shiny = 5
-      liquid_metal2 = 5
-      floor_blue2 = 25
-      floor_blue3 = 25
+      liquid_plain = 15
+      liquid_metal = 10
+      liquid_firelava = 5
+      liquid_bstone = 5
+      floor_glowingrock
+      floor_green = 25
+      floor_red = 15
+      floor_blue = 25
+      floor_glowingrock2 = 15
+      floor_dirt = 25
+      floor_sky = 5
+      floor_trim_sky = 5
       floor_trim_liquid = 5
       floor_mixup = 25
       floor_shawn_wall = 25
       floor_shawn_c = 25
+      floor_metal_wall = 25
+      floor_metal_c = 25
     }
 
     ceiling_sinks =
     {
-      sky_shiny = 20
+      sky_plain = 25
+      sky_metal = 20
       sky_metal2 = 20
+      sky_red = 15
       sky_stone_1 = 5
-      sky_stone_2 = 5
-      sky_tech1 = 7
-      sky_tech2 = 7
-      sky_tech3 = 20
-      sky_tech4 = 15
-      sky_tech5 = 10
-      sky_tech6 = 10
-      sky_tech7 = 5
-      sky_tech8 = 10
-      sky_tech9 = 10
-      sky_bronze = 10
-      sky_pipes  = 7
-      sky_cement = 5
-      sky_brownpip = 10
-      light_red_shiny = 40
-      light_orange_shiny = 20
-      light_brightred_metal2 = 20
+      sky_castle1 = 7
+      sky_castle2 = 7
+      sky_castle3 = 20
+      sky_castle4 = 15
+      sky_fltlava = 5
+      light_brightred_metal = 20
       light_side1 = 100
       light_side2 = 100
       light_side3 = 100
-      light_side4 = 100
-      light_side5 = 100
-      light_side6 = 100
-      ceil_vdark2 = 30
+      ceil_redash = 10
+      ceil_icky = 10
+      ceil_glowrock = 10
+      ceil_water = 5
     }
 
     fences =
@@ -1113,7 +524,6 @@ HERETIC.THEMES =
       METL2 = 30
       GRNBLOK1 = 30
       MOSSRCK1 = 30
-      CTYSTCI1 = 10
       METL1 = 10
     }
 
