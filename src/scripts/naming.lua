@@ -2400,6 +2400,103 @@ namelib.NAMES =
   }
   -- end of 'URBAN' theme
 
+  CASTLE =
+  {
+    patterns =
+    {
+      -- lexicon legend:
+      -- %e = Entity
+      -- %a = Adjectives
+      -- %n = Places
+      -- %h = Explicit description (e.g. I am Satan, "Arena of <Satan>")
+      -- %o = Implicit description (e.g. I am Satanic, "Arena of <the Satanic>")
+      -- %v = Prefixed phrase (as per COMMON table e.g. "<Scourge of the> Arena)
+      -- %r = Road suffix (St., Street, Road, Rd., etc.)
+
+         ["%a %n"] = 60
+      ["%t %a %n"] = 15
+      ["%t NOUNGENANGLICAN %n"] = 20
+      ["%t NOUNGENEXOTIC %n"] = 7
+
+      [   "%n of %h"] = 15
+      ["%t %n of %h"] = 8
+      ["%a %n of %h"] = 6
+
+      [   "%n of the %o"] = 15
+      ["%t %n of the %o"] = 8
+      ["%a %n of the %o"] = 6
+
+      ["%v %n"]    = 25
+      ["%v %a %n"] = 25
+
+      ["%a %n %x"] = 20
+      ["%n of the %o %x"] = 3
+      ["%v %n %x"] = 5
+      ["%v %a %n %x"] = 5
+
+      ["%s"] = 25
+
+      -- Types of roads, useful when Streets Mode
+      -- kicks in.
+      ["NOUNGENANGLICAN %r"] = 25
+      ["NOUNNUMBER NOUNGENANGLICAN %r"] = 40
+
+      ["NOUNGENEXOTIC %r"] = 13
+      ["NOUNNUMBER NOUNGENEXOTIC %r"] = 20
+
+      -- ObAddon contributor names
+      ["NOUNMEMBERS %n"] = 5
+
+      ["NOUNGENANGLICAN %n"] = 35
+      ["NOUNGENEXOTIC %n"] = 10
+    }
+
+    lexicon =
+    {
+      t =
+      {
+        The=50
+      }
+
+      r =
+      {
+        Path=50
+      }
+
+      a =
+      {
+        Magical=50,
+        Mystical=50,
+      }
+
+      n =
+      {
+        Castle=20, Citadel=10,
+        Keep=3, Slough=3, Temple=3,
+        Gate=10, Prison=15, Dens=5,
+        Coliseum=2, Courtyard=10, Court=10,
+      }
+
+      h = -- explicit descriptors (e.g. "Arena of Doom")
+      {
+       Evil=50
+      }
+
+      o = -- implicit descriptors (e.g. "Arena of the Doomed")
+      {
+       Eternal=50
+      }
+
+      s =
+      {
+        -- single complete level names
+
+        ["Castle of Incomplete Heretic Support"]=10
+        
+      }
+    }
+  }
+  -- end of 'CASTLE' theme
 
   --------------------------------------------------
 
