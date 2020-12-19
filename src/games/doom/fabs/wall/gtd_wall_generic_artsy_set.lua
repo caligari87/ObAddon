@@ -96,6 +96,9 @@ PREFABS.Wall_generic_artsy_center_braced_ind =
 
   group = "gtd_generic_artsy_center_braced_ind"
 
+  tex_WOODMET2 = "GRAY7"
+  tex_METAL = "SHAWN2"
+
   z_fit = "top"
 }
 
@@ -105,9 +108,6 @@ PREFABS.Wall_generic_artsy_center_braced_hell =
   map = "MAP07"
 
   group = "gtd_generic_artsy_center_braced_hell"
-
-  tex_WOODMET2 = "GRAY7"
-  tex_METAL = "SHAWN2"
 
   z_fit = "top"
 }
@@ -146,6 +146,9 @@ PREFABS.Wall_generic_artsy_center_braced_ind_diag =
   group = "gtd_generic_artsy_center_braced_ind"
 
   where = "diagonal"
+
+  tex_WOODMET2 = "GRAY7"
+  tex_METAL = "SHAWN2"
 
   z_fit = "top"
 }
