@@ -98,6 +98,7 @@ PREFABS.Wall_generic_artsy_center_braced_ind =
 
   tex_WOODMET2 = "GRAY7"
   tex_METAL = "SHAWN2"
+  flat_CEIL5_2 = "FLAT19"
 
   z_fit = "top"
 }
@@ -149,6 +150,7 @@ PREFABS.Wall_generic_artsy_center_braced_ind_diag =
 
   tex_WOODMET2 = "GRAY7"
   tex_METAL = "SHAWN2"
+  flat_CEIL5_2 = "FLAT19"
 
   z_fit = "top"
 }

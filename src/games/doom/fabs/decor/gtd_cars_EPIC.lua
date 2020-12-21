@@ -72,7 +72,7 @@ PREFABS.Decor_minitruck_beige_EPIC =
 {
   template = "Decor_minitruck_EPIC"
 
-  replaces = "Decor_minitruck"
+  replaces = "Decor_minitruck_beige"
 
   flat_FLAT23 = "CRATOP2"
 

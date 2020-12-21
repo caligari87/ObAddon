@@ -41,6 +41,8 @@ PREFABS.Wall_urban_neon_sign_scrolling_tall =
     [423] = 1
     [424] = 1
   }
+
+  z_fit = "top"
 }
 
 PREFABS.Wall_urban_neon_sign_id =
