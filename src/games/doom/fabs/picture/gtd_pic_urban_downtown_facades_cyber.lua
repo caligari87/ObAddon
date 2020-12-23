@@ -3,13 +3,15 @@ PREFABS.Pic_urban_downtown_facade_cyber_mid_inset =
   file = "picture/gtd_pic_urban_downtown_facades_cyber.wad"
   map  = "MAP01"
 
-  prob  = 100
+  prob  = 100000000
   theme = "urban"
 
   env = "outdoor"
 
   seed_w = 2
   seed_h = 1
+
+  deep = 16
 
   where = "seeds"
 

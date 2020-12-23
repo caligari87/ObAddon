@@ -9951,6 +9951,34 @@ SIDEWALK_BUILDING_L =
   }
 }
 
+SIDEWALK_OVERHANG =
+{
+  prob = 20
+
+  pass = "sidewalk"
+
+  structure =
+  {
+    "11....","11AAAA"
+    "11....","11AAAA"
+    "xx....","xx#AA#"  
+  }
+}
+
+SIDEWALK_OVERHANG_CORNER =
+{
+  prob = 20
+
+  pass = "sidewalk"
+
+  structure =
+  {
+    "xx...","xxAAA"
+    "11...","11AAA"
+    "11...","11#AA"
+  }
+}
+
 SIDEWALK_CURVE =
 {
   prob = 20
