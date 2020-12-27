@@ -6,7 +6,7 @@ PREFABS.Pic_dem_windows_deco1 =
   file   = "picture/dem_pic_fake_windows.wad"
   map    = "MAP01"
 
-  prob   = 700
+  prob   = 200
 
   theme  = "urban"
 
@@ -24,7 +24,6 @@ PREFABS.Pic_dem_windows_deco1 =
   bound_z1 = 0
   bound_z2 = 144
 
-  x_fit = "frame"
   z_fit = "top"
 
 
@@ -146,7 +145,7 @@ PREFABS.Pic_dem_windows_decoc1 =
   file   = "picture/dem_pic_fake_windows.wad"
   map    = "MAP04"
 
-  prob   = 700
+  prob   = 200
 
   theme  = "urban"
 
@@ -164,7 +163,6 @@ PREFABS.Pic_dem_windows_decoc1 =
   bound_z1 = 0
   bound_z2 = 144
 
-  x_fit = "frame"
   z_fit = "top"
 
 
@@ -288,7 +286,7 @@ PREFABS.Pic_dem_windows_deco7 =
 
   engine = "zdoom"
 
-  prob   = 700
+  prob   = 200
 
   theme  = "tech"
 
@@ -306,7 +304,6 @@ PREFABS.Pic_dem_windows_deco7 =
   bound_z1 = 0
   bound_z2 = 144
 
-  x_fit = "frame"
   z_fit = "top"
 
 
@@ -357,7 +354,7 @@ PREFABS.Pic_dem_windows_deco10 =
 
   engine = "zdoom"
 
-  prob   = 700
+  prob   = 200
 
   theme  = "tech"
 
@@ -375,7 +372,6 @@ PREFABS.Pic_dem_windows_deco10 =
   bound_z1 = 0
   bound_z2 = 144
 
-  x_fit = "frame"
   z_fit = "top"
 
 
@@ -426,7 +422,7 @@ PREFABS.Pic_dem_windows_deco13 =
 
   engine = "zdoom"
 
-  prob   = 700
+  prob   = 200
 
   theme  = "tech"
 
@@ -444,7 +440,6 @@ PREFABS.Pic_dem_windows_deco13 =
   bound_z1 = 0
   bound_z2 = 144
 
-  x_fit = "frame"
   z_fit = "top"
 
 
@@ -495,7 +490,7 @@ PREFABS.Pic_dem_windows_deco16 =
 
   engine = "zdoom"
 
-  prob   = 700
+  prob   = 200
 
   theme  = "tech"
 
@@ -513,7 +508,6 @@ PREFABS.Pic_dem_windows_deco16 =
   bound_z1 = 0
   bound_z2 = 144
 
-  x_fit = "frame"
   z_fit = "top"
 
 
@@ -564,7 +558,7 @@ PREFABS.Pic_dem_windows_deco19 =
 
   engine = "zdoom"
 
-  prob   = 700
+  prob   = 200
 
   theme  = "hell"
 
@@ -582,7 +576,6 @@ PREFABS.Pic_dem_windows_deco19 =
   bound_z1 = 0
   bound_z2 = 144
 
-  x_fit = "frame"
   z_fit = "top"
 
 
@@ -627,7 +620,7 @@ PREFABS.Pic_dem_windows_deco22 =
 
   engine = "zdoom"
 
-  prob   = 700
+  prob   = 200
 
   theme  = "hell"
 
@@ -645,7 +638,6 @@ PREFABS.Pic_dem_windows_deco22 =
   bound_z1 = 0
   bound_z2 = 144
 
-  x_fit = "frame"
   z_fit = "top"
 
 
