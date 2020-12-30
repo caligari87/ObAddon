@@ -63,6 +63,44 @@ namelib.NAMES =
 
       }
 
+      -- Why not some level names common in all themes?
+      -- Also, how do we keep 'Common' theme full names
+      -- from not being in more than one theme?
+      -- -Armaetus, 12/30/20
+      s =
+      {
+        ["A Walk on Thin Ice"]=10
+        ["Annihilation"]=10
+        ["Compromised"]=10
+        ["Complete Breakdown"]=10
+        ["Concrete Retribution"]=10
+        ["Final Suffering"]=10
+        ["Genocidal Delusions"]=10
+        ["Liquid Violence"]=10
+        ["Revelations of Doom"]=10 -- Also a Hellhammer song title
+        ["Through the Looking Glass"]=10
+        ["Where Demons Roam"]=10
+        ["Woeful Unknown"]
+
+        -- Single word descriptions, typically work (IE Fear for E4M9)
+        ["Agony"]=10
+        ["Anguish"]=10
+        ["Chaos"]=10
+        ["Contempt"]=10
+        ["Despair"]=10
+        ["Dread"]=10
+        ["Fear"]=10 -- Why not?
+        ["Fury"]=10
+        ["Guilt"]=10
+        ["Hatred"]=10
+        ["Misery"]=10
+        ["Pain"]=10
+        ["Resentment"]=10
+        ["Spite"]=10
+        ["Terror"]=10
+        ["Woe"]=10
+      }
+
       v =
       {
         ["Curse of the"]=10
@@ -1717,6 +1755,18 @@ namelib.NAMES =
         ["Tribute to the Dark Ones"]=10
         ["Unto the Unhallowed Abyss"]=10
         ["Wretched Mortal Form"]=10
+
+        -- 2020 end of year additions
+        ["A Harrowing Journey"]=10
+        ["Anchors of Cruelty"]=10
+        ["Barbequed Viscera"]=10
+        ["Crispy Fried Epidermis"]=10
+        ["Fissure of Blood"]=10
+        ["Hell's Fortune"]=10
+        ["Pure Peril"]=10
+        ["Simply Macabre"]=10
+        ["Towers in the Fog"]=10
+        ["Weaving of the Artery"]=10
       }
     }
   }
@@ -2492,7 +2542,7 @@ namelib.NAMES =
         -- single complete level names
 
         ["Castle of Incomplete Heretic Support"]=10
-        
+
       }
     }
   }
@@ -3022,14 +3072,14 @@ namelib.NAMES =
         ["You Wouldn't Steal a Car"]=10
         ["Papa Bless"]=10
 
-        --literature (or derived/deviated from them)
+        -- literature (or derived/deviated from them)
         ["Brave New World"]=10
         ["Caught in the Rye"]=10
         ["Silence of the Lambs"]=10
         ["The Dragon Tattoo"]=10
         ["The Raven"]=10
 
-        --bands or songs (generally or sort of psychedelic)
+        -- Bands or songs (generally or sort of psychedelic)
         ["Here Comes The Rooster"]=10 --Alice in Chains
         ["Here Comes The Sun"]=10
         ["Good Times Bad Times"]=10
@@ -3081,6 +3131,37 @@ namelib.NAMES =
         ["K"]=10
         ["Locust Masqurade"]=10
         ["Super Shotgun Smoothie"]=10
+
+        -- Yet more shit, added as end of 2020 stuff!
+        -- From the Doom level name generator:
+        -- http://www.teamhellspawn.com/exl/name_gen/
+        ["A Weather Thinker"]=10
+        ["Acid Wizards"]=10
+        ["Burned Goat"]=10
+        ["Carmack's Castle"]=10
+        ["Combining Question"]=10
+        ["Consumed UAC Project"]=10
+        ["Courtyard of Opiophobia"]=10
+        ["Dirty Mancubus"]=10
+        ["Empty Masters"]=10
+        ["Fiery Biosphere"]=10
+        ["Flesh Massacred"]=10
+        ["For No Woeful Angels"]=10
+        ["Haunted Furnace"]=10
+        ["Hurt Settlement"]=10
+        ["Hurting Exodus"]=10
+        ["Inside the Rift"]=10
+        ["Invisible Fate"]=10
+        ["Losing the Problem"]=10
+        ["Lost Point"]=10
+        ["Making Every Question"]=10
+        ["No Supply Demon"]=10
+        ["Ocean"]=10
+        ["Shambling Plant"]=10
+        ["The Knife Path"]=10
+        ["The Novice Experiment"]=10
+        ["Wronging Point"]=10
+        ["Void Moons"]=10
       }
     }
   }
@@ -4075,6 +4156,7 @@ namelib.NAMES =
         Ghoulish  = 10
         Godless = 10
         Gruesome = 15
+        Harrowing = 10
         Haunted = 10
         Hellish = 10
         Malicious = 10
