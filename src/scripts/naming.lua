@@ -80,7 +80,7 @@ namelib.NAMES =
         ["Revelations of Doom"]=10 -- Also a Hellhammer song title
         ["Through the Looking Glass"]=10
         ["Where Demons Roam"]=10
-        ["Woeful Unknown"]
+        ["Woeful Unknown"]=10
 
         -- Single word descriptions, typically work (IE Fear for E4M9)
         ["Agony"]=10
