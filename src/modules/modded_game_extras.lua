@@ -2,7 +2,7 @@
 --  MODULE: Modded Game extras module
 ------------------------------------------------------------------------
 --
---  Copyright (C) 2019-2020 MsrSgtShooterPerson
+--  Copyright (C) 2019-2021 MsrSgtShooterPerson
 --
 --  This program is free software; you can redistribute it and/or
 --  modify it under the terms of the GNU General Public License
@@ -109,7 +109,7 @@ MODDED_GAME_EXTRAS.D4T_THINGS =
     closet_prob = 8
     secret_prob = 60
   }
-  
+
   d4t_spectre_rune =
   {
     id = 13679, kind = "powerup", level = 2,
