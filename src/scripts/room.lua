@@ -5,7 +5,7 @@
 --  Oblige Level Maker // ObAddon
 --
 --  Copyright (C) 2006-2017 Andrew Apted
---  Copyright (C) 2019-2020 MsrSgtShooterPerson
+--  Copyright (C) 2019-2021 MsrSgtShooterPerson
 --
 --  This program is free software; you can redistribute it and/or
 --  modify it under the terms of the GNU General Public License
@@ -1494,12 +1494,12 @@ function Room_border_up()
 
 
   local function can_fence(A1, A2)
-    if A1.chunk and A1.chunk.kind == "stair" 
+    if A1.chunk and A1.chunk.kind == "stair"
     and (A1.chunk.dest_area == A2 or A1.chunk.from_area == A2) then
       return false
     end
 
-    if A2.chunk and A2.chunk.kind == "stair" 
+    if A2.chunk and A2.chunk.kind == "stair"
     and (A2.chunk.dest_area == A1 or A2.chunk.from_area == A1) then
       return false
     end

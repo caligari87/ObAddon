@@ -5,7 +5,7 @@
 --  Oblige Level Maker // ObAddon
 --
 --  Copyright (C) 2006-2017 Andrew Apted
---  Copyright (C) 2020 MsrSgtShooterPerson
+--  Copyright (C) 2020-2021 MsrSgtShooterPerson
 --
 --  This program is free software; you can redistribute it and/or
 --  modify it under the terms of the GNU General Public License
@@ -2542,7 +2542,7 @@ function Quest_nice_items()
     local function pick_room_for_si(info)
       each R in LEVEL.rooms do
         if R.closets and #R.closets > 2
-        and not R.secondary_important 
+        and not R.secondary_important
         and not R.is_hallway then
           local do_it = false
 
