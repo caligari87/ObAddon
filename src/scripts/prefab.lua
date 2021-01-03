@@ -713,7 +713,7 @@ function Fab_transform_Z(fab, T)
       error("Fitted prefab has no vertical range! Culprit: " .. fab.map .. " from " .. fab.name)
 
     elseif math.abs(bbox.z1) > 0.1 then
-      error("Fitted prefab must have lowest Z coord at 0. Culprit: " .. fab.map .. " from " .. fab.name .. 
+      error("Fitted prefab must have lowest Z coord at 0. Culprit: " .. fab.map .. " from " .. fab.name ..
     " Bounding box z1: " .. bbox.z1)
     end
 

@@ -25,7 +25,7 @@ PREFABS.Cage_dem_garage_ambush1 =
   over   = -16
 
   x_fit = "frame"
-  y_fit  = "frame"
+  y_fit = "frame"
 
   tex_BRICK9 = { BRICK1=50, BRICK10=50, BRICK11=50,
     BRICK2=50, BRICK3=50, BRICK4=50,
@@ -475,7 +475,7 @@ PREFABS.Cage_dem_windows_ambush1 =
   file   = "cage/dem_cages.wad"
   map    = "MAP19"
 
-  prob   = 700
+  prob   = 200
 
   theme  = "urban"
 
@@ -484,7 +484,7 @@ PREFABS.Cage_dem_windows_ambush1 =
   where  = "seeds"
   shape  = "U"
 
-  seed_w = 1
+  seed_w = 2
   seed_h = 1
 
   deep   = 48
@@ -494,9 +494,8 @@ PREFABS.Cage_dem_windows_ambush1 =
   bound_z1 = 0
   bound_z2 = 144
 
-  x_fit = "frame"
+  y_fit = "top"
   z_fit = "top"
-
 
   uses_epic_textures = true
 
@@ -506,10 +505,10 @@ PREFABS.Cage_dem_windows_ambush1 =
   }
 
   tex_BRICK1 = { BRICK2=50, BRICK1=50, BRICK12=50, BRICK4=50, BRICK5=50,
-		BRICK6=50, BRICK7=50, BRICK8=50, BRICK9=50, BSTONE1=50,
-		BSTONE2=50, STEPTOP=50, STONE6=50, STONE7=50, STUCCO=50,
-		STUCCO1=50, STUCCO3=50, TANROCK3=50, WOOD12=50, BRIKS16=50,
-		BRIKS31=50, BRONZE5=50, PANNYA=50, STUC01=50
+        BRICK6=50, BRICK7=50, BRICK8=50, BRICK9=50, BSTONE1=50,
+        BSTONE2=50, STEPTOP=50, STONE6=50, STONE7=50, STUCCO=50,
+        STUCCO1=50, STUCCO3=50, TANROCK3=50, WOOD12=50, BRIKS16=50,
+        BRIKS31=50, BRONZE5=50, PANNYA=50, STUC01=50
   }
 
 }
@@ -546,15 +545,15 @@ PREFABS.Cage_dem_windows_ambush4 =
 
 
   tex_PANBORD1 = { DOORSTOP=50 }
-  
+
 
   flat_FLAT5_5 = { FLAT19=50, FLAT23=50, FLAT5_4=50, CRATOP1=50
   }
 
   tex_BRICK1 = { GRAY1=50, GRAY5=50, SHAWN2=50, SILVER1=50, STEP4=50, STONE4=50,
-		STONE=50, BRIKS32=50, BRIKS43=50, BROWN2=50, BROWN3=50, GOTH07=50,
-		GOTH13=50, GRAY9=50, GRAY8=50, ROK17=50, SHAWSH04=50, STON4=50,
-		STON7=50, STONE10=50, STONE8=50, STONE9=50 
+        STONE=50, BRIKS32=50, BRIKS43=50, BROWN2=50, BROWN3=50, GOTH07=50,
+        GOTH13=50, GRAY9=50, GRAY8=50, ROK17=50, SHAWSH04=50, STON4=50,
+        STON7=50, STONE10=50, STONE8=50, STONE9=50
   }
 
 }
@@ -571,15 +570,15 @@ PREFABS.Cage_dem_windows_ambush5 =
   bound_z2 = 200
 
   tex_PANBORD1 = { DOORSTOP=50 }
-  
+
 
   flat_FLAT5_5 = { FLAT19=50, FLAT23=50, FLAT5_4=50, CRATOP1=50
   }
 
   tex_BRICK1 = { GRAY1=50, GRAY5=50, SHAWN2=50, SILVER1=50, STEP4=50, STONE4=50,
-		STONE=50, BRIKS32=50, BRIKS43=50, BROWN2=50, BROWN3=50, GOTH07=50,
-		GOTH13=50, GRAY9=50, GRAY8=50, ROK17=50, SHAWSH04=50, STON4=50,
-		STON7=50, STONE10=50, STONE8=50, STONE9=50
+        STONE=50, BRIKS32=50, BRIKS43=50, BROWN2=50, BROWN3=50, GOTH07=50,
+        GOTH13=50, GRAY9=50, GRAY8=50, ROK17=50, SHAWSH04=50, STON4=50,
+        STON7=50, STONE10=50, STONE8=50, STONE9=50
   }
 
 }
@@ -596,15 +595,15 @@ PREFABS.Cage_dem_windows_ambush6 =
   bound_z2 = 248
 
   tex_PANBORD1 = { DOORSTOP=50 }
-  
+
 
   flat_FLAT5_5 = { FLAT19=50, FLAT23=50, FLAT5_4=50, CRATOP1=50
   }
 
   tex_BRICK1 = { GRAY1=50, GRAY5=50, SHAWN2=50, SILVER1=50, STEP4=50, STONE4=50,
-		STONE=50, BRIKS32=50, BRIKS43=50, BROWN2=50, BROWN3=50, GOTH07=50,
-		GOTH13=50, GRAY9=50, GRAY8=50, ROK17=50, SHAWSH04=50, STON4=50,
-		STON7=50, STONE10=50, STONE8=50, STONE9=50
+        STONE=50, BRIKS32=50, BRIKS43=50, BROWN2=50, BROWN3=50, GOTH07=50,
+        GOTH13=50, GRAY9=50, GRAY8=50, ROK17=50, SHAWSH04=50, STON4=50,
+        STON7=50, STONE10=50, STONE8=50, STONE9=50
   }
 
 }
@@ -616,7 +615,7 @@ PREFABS.Cage_dem_windows_ambushd1 =
   file   = "cage/dem_cages.wad"
   map    = "MAP22"
 
-  prob   = 500
+  prob   = 200
 
   theme  = "urban"
 
@@ -635,9 +634,8 @@ PREFABS.Cage_dem_windows_ambushd1 =
   bound_z1 = 0
   bound_z2 = 144
 
-  x_fit = "frame"
+  y_fit = "top"
   z_fit = "top"
-
 
   uses_epic_textures = true
 
@@ -647,10 +645,10 @@ PREFABS.Cage_dem_windows_ambushd1 =
   }
 
   tex_BRICK1 = { BRICK2=50, BRICK1=50, BRICK12=50, BRICK4=50, BRICK5=50,
-		BRICK6=50, BRICK7=50, BRICK8=50, BRICK9=50, BSTONE1=50,
-		BSTONE2=50, STEPTOP=50, STONE6=50, STONE7=50, STUCCO=50,
-		STUCCO1=50, STUCCO3=50, TANROCK3=50, WOOD12=50, BRIKS16=50,
-		BRIKS31=50, BRONZE5=50, PANNYA=50, STUC01=50
+        BRICK6=50, BRICK7=50, BRICK8=50, BRICK9=50, BSTONE1=50,
+        BSTONE2=50, STEPTOP=50, STONE6=50, STONE7=50, STUCCO=50,
+        STUCCO1=50, STUCCO3=50, TANROCK3=50, WOOD12=50, BRIKS16=50,
+        BRIKS31=50, BRONZE5=50, PANNYA=50, STUC01=50
   }
 
 }
@@ -687,15 +685,15 @@ PREFABS.Cage_dem_windows_ambushd4 =
 
 
   tex_PANBORD1 = { DOORSTOP=50 }
-  
+
 
   flat_FLAT5_5 = { FLAT19=50, FLAT23=50, FLAT5_4=50, CRATOP1=50
   }
 
   tex_BRICK1 = { GRAY1=50, GRAY5=50, SHAWN2=50, SILVER1=50, STEP4=50, STONE4=50,
-		STONE=50, BRIKS32=50, BRIKS43=50, BROWN2=50, BROWN3=50, GOTH07=50,
-		GOTH13=50, GRAY9=50, GRAY8=50, ROK17=50, SHAWSH04=50, STON4=50,
-		STON7=50, STONE10=50, STONE8=50, STONE9=50 
+        STONE=50, BRIKS32=50, BRIKS43=50, BROWN2=50, BROWN3=50, GOTH07=50,
+        GOTH13=50, GRAY9=50, GRAY8=50, ROK17=50, SHAWSH04=50, STON4=50,
+        STON7=50, STONE10=50, STONE8=50, STONE9=50
   }
 
 }
@@ -712,15 +710,15 @@ PREFABS.Cage_dem_windows_ambushd5 =
   bound_z2 = 200
 
   tex_PANBORD1 = { DOORSTOP=50 }
-  
+
 
   flat_FLAT5_5 = { FLAT19=50, FLAT23=50, FLAT5_4=50, CRATOP1=50
   }
 
   tex_BRICK1 = { GRAY1=50, GRAY5=50, SHAWN2=50, SILVER1=50, STEP4=50, STONE4=50,
-		STONE=50, BRIKS32=50, BRIKS43=50, BROWN2=50, BROWN3=50, GOTH07=50,
-		GOTH13=50, GRAY9=50, GRAY8=50, ROK17=50, SHAWSH04=50, STON4=50,
-		STON7=50, STONE10=50, STONE8=50, STONE9=50
+        STONE=50, BRIKS32=50, BRIKS43=50, BROWN2=50, BROWN3=50, GOTH07=50,
+        GOTH13=50, GRAY9=50, GRAY8=50, ROK17=50, SHAWSH04=50, STON4=50,
+        STON7=50, STONE10=50, STONE8=50, STONE9=50
   }
 
 }
@@ -737,15 +735,15 @@ PREFABS.Cage_dem_windows_ambushd6 =
   bound_z2 = 248
 
   tex_PANBORD1 = { DOORSTOP=50 }
-  
+
 
   flat_FLAT5_5 = { FLAT19=50, FLAT23=50, FLAT5_4=50, CRATOP1=50
   }
 
   tex_BRICK1 = { GRAY1=50, GRAY5=50, SHAWN2=50, SILVER1=50, STEP4=50, STONE4=50,
-		STONE=50, BRIKS32=50, BRIKS43=50, BROWN2=50, BROWN3=50, GOTH07=50,
-		GOTH13=50, GRAY9=50, GRAY8=50, ROK17=50, SHAWSH04=50, STON4=50,
-		STON7=50, STONE10=50, STONE8=50, STONE9=50
+        STONE=50, BRIKS32=50, BRIKS43=50, BROWN2=50, BROWN3=50, GOTH07=50,
+        GOTH13=50, GRAY9=50, GRAY8=50, ROK17=50, SHAWSH04=50, STON4=50,
+        STON7=50, STONE10=50, STONE8=50, STONE9=50
   }
 
 }
@@ -759,7 +757,7 @@ PREFABS.Cage_dem_windows_ambusho1 =
 
   engine = "zdoom"
 
-  prob   = 700
+  prob   = 200
 
   theme  = "urban"
 
@@ -778,9 +776,8 @@ PREFABS.Cage_dem_windows_ambusho1 =
   bound_z1 = 0
   bound_z2 = 144
 
-  x_fit = "frame"
+  y_fit = "top"
   z_fit = "top"
-
 
   uses_epic_textures = true
 
@@ -790,10 +787,10 @@ PREFABS.Cage_dem_windows_ambusho1 =
   }
 
   tex_BRICK1 = { BRICK2=50, BRICK1=50, BRICK12=50, BRICK4=50, BRICK5=50,
-		BRICK6=50, BRICK7=50, BRICK8=50, BRICK9=50, BSTONE1=50,
-		BSTONE2=50, STEPTOP=50, STONE6=50, STONE7=50, STUCCO=50,
-		STUCCO1=50, STUCCO3=50, TANROCK3=50, WOOD12=50, BRIKS16=50,
-		BRIKS31=50, BRONZE5=50, PANNYA=50, STUC01=50
+        BRICK6=50, BRICK7=50, BRICK8=50, BRICK9=50, BSTONE1=50,
+        BSTONE2=50, STEPTOP=50, STONE6=50, STONE7=50, STUCCO=50,
+        STUCCO1=50, STUCCO3=50, TANROCK3=50, WOOD12=50, BRIKS16=50,
+        BRIKS31=50, BRONZE5=50, PANNYA=50, STUC01=50
   }
 
 }
@@ -830,15 +827,15 @@ PREFABS.Cage_dem_windows_ambusho4 =
 
 
   tex_PANBORD1 = { DOORSTOP=50 }
-  
+
 
   flat_FLAT5_5 = { FLAT19=50, FLAT23=50, FLAT5_4=50, CRATOP1=50
   }
 
   tex_BRICK1 = { GRAY1=50, GRAY5=50, SHAWN2=50, SILVER1=50, STEP4=50, STONE4=50,
-		STONE=50, BRIKS32=50, BRIKS43=50, BROWN2=50, BROWN3=50, GOTH07=50,
-		GOTH13=50, GRAY9=50, GRAY8=50, ROK17=50, SHAWSH04=50, STON4=50,
-		STON7=50, STONE10=50, STONE8=50, STONE9=50 
+        STONE=50, BRIKS32=50, BRIKS43=50, BROWN2=50, BROWN3=50, GOTH07=50,
+        GOTH13=50, GRAY9=50, GRAY8=50, ROK17=50, SHAWSH04=50, STON4=50,
+        STON7=50, STONE10=50, STONE8=50, STONE9=50
   }
 
 }
@@ -855,15 +852,15 @@ PREFABS.Cage_dem_windows_ambusho5 =
   bound_z2 = 200
 
   tex_PANBORD1 = { DOORSTOP=50 }
-  
+
 
   flat_FLAT5_5 = { FLAT19=50, FLAT23=50, FLAT5_4=50, CRATOP1=50
   }
 
   tex_BRICK1 = { GRAY1=50, GRAY5=50, SHAWN2=50, SILVER1=50, STEP4=50, STONE4=50,
-		STONE=50, BRIKS32=50, BRIKS43=50, BROWN2=50, BROWN3=50, GOTH07=50,
-		GOTH13=50, GRAY9=50, GRAY8=50, ROK17=50, SHAWSH04=50, STON4=50,
-		STON7=50, STONE10=50, STONE8=50, STONE9=50
+        STONE=50, BRIKS32=50, BRIKS43=50, BROWN2=50, BROWN3=50, GOTH07=50,
+        GOTH13=50, GRAY9=50, GRAY8=50, ROK17=50, SHAWSH04=50, STON4=50,
+        STON7=50, STONE10=50, STONE8=50, STONE9=50
   }
 
 }
@@ -880,15 +877,15 @@ PREFABS.Cage_dem_windows_ambusho6 =
   bound_z2 = 248
 
   tex_PANBORD1 = { DOORSTOP=50 }
-  
+
 
   flat_FLAT5_5 = { FLAT19=50, FLAT23=50, FLAT5_4=50, CRATOP1=50
   }
 
   tex_BRICK1 = { GRAY1=50, GRAY5=50, SHAWN2=50, SILVER1=50, STEP4=50, STONE4=50,
-		STONE=50, BRIKS32=50, BRIKS43=50, BROWN2=50, BROWN3=50, GOTH07=50,
-		GOTH13=50, GRAY9=50, GRAY8=50, ROK17=50, SHAWSH04=50, STON4=50,
-		STON7=50, STONE10=50, STONE8=50, STONE9=50
+        STONE=50, BRIKS32=50, BRIKS43=50, BROWN2=50, BROWN3=50, GOTH07=50,
+        GOTH13=50, GRAY9=50, GRAY8=50, ROK17=50, SHAWSH04=50, STON4=50,
+        STON7=50, STONE10=50, STONE8=50, STONE9=50
   }
 
 }
@@ -902,7 +899,7 @@ PREFABS.Cage_dem_windows_ambush7 =
 
   engine = "zdoom"
 
-  prob   = 700
+  prob   = 200
 
   theme  = "tech"
 
@@ -921,9 +918,8 @@ PREFABS.Cage_dem_windows_ambush7 =
   bound_z1 = 0
   bound_z2 = 144
 
-  x_fit = "frame"
+  y_fit = "top"
   z_fit = "top"
-
 
   uses_epic_textures = true
 
@@ -972,7 +968,7 @@ PREFABS.Cage_dem_windows_ambusho7 =
 
   engine = "zdoom"
 
-  prob   = 700
+  prob   = 200
 
   theme  = "tech"
 
@@ -991,9 +987,8 @@ PREFABS.Cage_dem_windows_ambusho7 =
   bound_z1 = 0
   bound_z2 = 144
 
-  x_fit = "frame"
+  y_fit = "top"
   z_fit = "top"
-
 
   uses_epic_textures = true
 
@@ -1042,7 +1037,7 @@ PREFABS.Cage_dem_windows_ambush10 =
 
   engine = "zdoom"
 
-  prob   = 700
+  prob   = 200
 
   theme  = "tech"
 
@@ -1061,9 +1056,8 @@ PREFABS.Cage_dem_windows_ambush10 =
   bound_z1 = 0
   bound_z2 = 144
 
-  x_fit = "frame"
+  y_fit = "top"
   z_fit = "top"
-
 
   uses_epic_textures = true
 
@@ -1112,7 +1106,7 @@ PREFABS.Cage_dem_windows_ambusho10 =
 
   engine = "zdoom"
 
-  prob   = 700
+  prob   = 200
 
   theme  = "tech"
 
@@ -1131,9 +1125,8 @@ PREFABS.Cage_dem_windows_ambusho10 =
   bound_z1 = 0
   bound_z2 = 144
 
-  x_fit = "frame"
+  y_fit = "top"
   z_fit = "top"
-
 
   uses_epic_textures = true
 
@@ -1182,7 +1175,7 @@ PREFABS.Cage_dem_windows_ambush13 =
 
   engine = "zdoom"
 
-  prob   = 700
+  prob   = 200
 
   theme  = "hell"
 
@@ -1201,9 +1194,8 @@ PREFABS.Cage_dem_windows_ambush13 =
   bound_z1 = 0
   bound_z2 = 144
 
-  x_fit = "frame"
+  y_fit = "top"
   z_fit = "top"
-
 
   uses_epic_textures = true
 
@@ -1221,7 +1213,6 @@ PREFABS.Cage_dem_windows_ambush14 =
 
   bound_z1 = 0
   bound_z2 = 200
-
 }
 
 PREFABS.Cage_dem_windows_ambush15 =
@@ -1234,7 +1225,6 @@ PREFABS.Cage_dem_windows_ambush15 =
 
   bound_z1 = 0
   bound_z2 = 248
-
 }
 
 ---- Hell windows ambush ----
@@ -1246,7 +1236,7 @@ PREFABS.Cage_dem_windows_ambush16 =
 
   engine = "zdoom"
 
-  prob   = 700
+  prob   = 200
 
   theme  = "hell"
 
@@ -1265,9 +1255,8 @@ PREFABS.Cage_dem_windows_ambush16 =
   bound_z1 = 0
   bound_z2 = 144
 
-  x_fit = "frame"
+  y_fit = "top"
   z_fit = "top"
-
 
   uses_epic_textures = true
 
@@ -1279,7 +1268,6 @@ PREFABS.Cage_dem_windows_ambush16 =
   green_torch_sm = 50
   red_torch_sm  = 50
   }
-
 }
 
 PREFABS.Cage_dem_windows_ambush17 =
@@ -1292,7 +1280,6 @@ PREFABS.Cage_dem_windows_ambush17 =
 
   bound_z1 = 0
   bound_z2 = 200
-
 }
 
 PREFABS.Cage_dem_windows_ambush18 =
@@ -1305,7 +1292,6 @@ PREFABS.Cage_dem_windows_ambush18 =
 
   bound_z1 = 0
   bound_z2 = 248
-
 }
 
 ---- Hell windows ambush where enemy duck for cover ----
@@ -1336,9 +1322,8 @@ PREFABS.Cage_dem_windows_ambushd7 =
   bound_z1 = 0
   bound_z2 = 144
 
-  x_fit = "frame"
+  y_fit = "top"
   z_fit = "top"
-
 
   uses_epic_textures = true
 
@@ -1350,7 +1335,6 @@ PREFABS.Cage_dem_windows_ambushd7 =
   green_torch_sm = 50
   red_torch_sm  = 50
   }
-
 }
 
 PREFABS.Cage_dem_windows_ambushd8 =
@@ -1363,7 +1347,6 @@ PREFABS.Cage_dem_windows_ambushd8 =
 
   bound_z1 = 0
   bound_z2 = 200
-
 }
 
 PREFABS.Cage_dem_windows_ambushd9 =
@@ -1376,7 +1359,6 @@ PREFABS.Cage_dem_windows_ambushd9 =
 
   bound_z1 = 0
   bound_z2 = 248
-
 }
 
 

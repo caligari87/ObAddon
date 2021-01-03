@@ -9961,7 +9961,7 @@ SIDEWALK_OVERHANG =
   {
     "11....","11AAAA"
     "11....","11AAAA"
-    "xx....","xx#AA#"  
+    "xx....","xx#AA#"
   }
 }
 

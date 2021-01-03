@@ -3931,6 +3931,16 @@ DOOM.ROOM_THEMES =
     {
       CEMENT7 = 50
       CEMENT9 = 50
+      GRAY1 = 20
+      GRAY4 = 20
+      GRAY5 = 20
+      GRAY7 = 20
+      GRAYBIG = 20
+      GRAYTALL = 20
+      STONE2 = 15
+      STARG1 = 15
+      STARTAN3 = 15
+      MARBLE1 = 10
     }
 
     floors =

@@ -23,7 +23,7 @@ ZDOOM_SOUND_DEFS =
 -- Ambient sounds for indoors
 Indoors_Tech =  { lump = "TECHIND",   flags = "$limit TECHIND 1", args = "CHAN_AUTO, 0.5, true"  }
 Indoors_Hell =  { lump = "HELLIND",   flags = "$limit HELLIND 1", args = "CHAN_AUTO, 0.5, true"  }
-  
+
 -- Ambient sounds for outdoors
 Outdoors_Hell =             { lump = "HELLOUT",   flags = "$limit HELLOUT 1"  }
 Outdoors_Tech =             { lump = "TECHAMB",   flags = "$limit TECHAMB 1"  }

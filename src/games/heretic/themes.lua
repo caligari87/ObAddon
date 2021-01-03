@@ -431,7 +431,7 @@ HERETIC.THEMES =
 
   castle =
   {
-  
+
    style_list =
     {
 --[[     caves = { none=60, few=40, some=12, heaps=2 }
@@ -454,7 +454,7 @@ HERETIC.THEMES =
       barrels = { none=10, few=50, some=20, heaps=5 } ]]
     }
 
-  
+
     liquids =
     {
       water2 = 40
@@ -462,20 +462,20 @@ HERETIC.THEMES =
       lava   = 50
       sludge = 20
     }
-    
+
     narrow_halls =
     {
       vent = 50
       mineshaft = 50
       access = 50
     }
-    
+
     wide_halls =
     {
       deuce = 50
       metro = 50
     }
-    
+
      floor_sinks =
     {
       liquid_plain = 15
@@ -572,15 +572,15 @@ HERETIC.THEMES =
       wall_torch   = 70
       mercury_lamp  = 10
     }
-    
+
     outdoor_torches =
     {
       fire_brazier   = 10
       mercury_lamp  = 40
     }
-    
+
     ceil_light_prob = 70
-    
+
     scenic_fences =
     {
       GATMETL2 = 50
@@ -588,13 +588,13 @@ HERETIC.THEMES =
       GATMETL4 = 50
       GATMETL5 = 50
     }
-    
+
     sink_style =
     {
       sharp = 1
       curved = 0.1
     }
-    
+
   }
 
 }
@@ -627,7 +627,7 @@ HERETIC.ROOM_THEMES =
       FLAT523 = 50
     }
   }
-  
+
   ---- CASTLE THEME --------------------------------
 
   castle_Green =
@@ -741,7 +741,7 @@ HERETIC.ROOM_THEMES =
       FLOOR17=50, FLAT509=20, FLAT510=20,
       FLAT513=20, FLAT516=35,
     }
-    
+
     porch_floors =
     {
       FLAT503 = 10
@@ -758,7 +758,7 @@ HERETIC.ROOM_THEMES =
       FLOOR25 = 15
       FLOOR28 = 10
       FLOOR29 = 10
-    }  
+    }
   }
 
 
@@ -794,9 +794,9 @@ HERETIC.ROOM_THEMES =
       FLAT510 = 10
       FLAT520 = 10
     }
-    
+
   }
-  
+
   castle_vent_Hallway =
   {
     env   = "hallway"
@@ -845,7 +845,7 @@ HERETIC.ROOM_THEMES =
       FLOOR10 = 30
     }
   }
-    
+
     castle_mineshaft_Hallway =
   {
     env = "hallway"
@@ -874,7 +874,7 @@ HERETIC.ROOM_THEMES =
                  -- separate _CEIL textures
     }
    }
-   
+
    castle_metro_Hallway =
   {
     env   = "hallway"
@@ -925,7 +925,7 @@ HERETIC.ROOM_THEMES =
 
     }
   }
-   
+
 }
 ------------------------------------------------------------------------
 
@@ -941,19 +941,19 @@ HERETIC.ROOMS =
   {
     env = "any"
   }
-  
+
   PRISON =
   {
     style = "cages"
     prob  = 50
   }
-  
+
   OUTSIDE =
   {
     env = "outdoor"
     prob = 50
   }
-  
+
 }
 
 
