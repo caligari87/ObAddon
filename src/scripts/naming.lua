@@ -71,23 +71,43 @@ namelib.NAMES =
       {
         ["A Walk on Thin Ice"]=10
         ["Annihilation"]=10
+        ["Armaetus Loves Naming"]=10 -- Bahaha!
+        ["Black Skies"]=10
         ["Compromised"]=10
         ["Complete Breakdown"]=10
         ["Concrete Retribution"]=10
+        ["Converging Hex Sequence"]=10
+        ["Dead Men's Choir"]=10
+        ["Duality of Entropy"]=10
         ["Final Suffering"]=10
+        ["Fire With Fire"]=10
+        ["Fueling the Flames"]=10
         ["Genocidal Delusions"]=10
         ["Liquid Violence"]=10
+        ["Negative Inverted Sphere"]=10
+        ["No Violence, No Progress"]=10
+        ["Parallel Tribulation"]=10
         ["Revelations of Doom"]=10 -- Also a Hellhammer song title
+        ["Spiraling Uncertainity"]=10
+        ["The Fourth Dimension"]=10
+        ["The Marine Element"]=10
+        ["The Unknown"]=10
         ["Through the Looking Glass"]=10
         ["Where Demons Roam"]=10
+        ["Within the Mirror"]=10
         ["Woeful Unknown"]=10
+        ["Zero Null"]=10
 
         -- Single word descriptions, typically work (IE Fear for E4M9)
+        -- Usually adjectives, mostly negative.
+        ["Absolution"]=10
         ["Agony"]=10
         ["Anguish"]=10
         ["Chaos"]=10
         ["Contempt"]=10
+        ["Deconstruction"]=10
         ["Despair"]=10
+        ["Doubt"]=10
         ["Dread"]=10
         ["Fear"]=10 -- Why not?
         ["Fury"]=10
@@ -95,10 +115,13 @@ namelib.NAMES =
         ["Hatred"]=10
         ["Misery"]=10
         ["Pain"]=10
+        ["Purity"]=10
+        ["Redemption"]=10
         ["Resentment"]=10
         ["Spite"]=10
         ["Terror"]=10
         ["Woe"]=10
+        ["Wrath"]=10
       }
 
       v =
@@ -153,6 +176,10 @@ namelib.NAMES =
         ["Piss off with the"]=5
         ["Wait, why another"]=5
         ["Good lord, another"]=5
+
+        -- 2021 additions!
+        ["Really, another"]=5
+        ["Wow, another"]=5
 
         -- these by MSSP
         ["Battle for the"]=15
@@ -843,6 +870,14 @@ namelib.NAMES =
         ["Compromised UAC Fortification"]=10
         ["Fragmented Forces"]=10
         ["Turning Point"]=10
+
+        -- Armaetus names, 2021 edition
+        ["A Moonlit Sky of Terror"]=10
+        ["Deconstruction"]=10
+        ["Devoid of Power"]=10
+        ["Fall of Technology"]=10
+        ["Hexadecimal Destruction"]=10
+        ["Wires and Hard Drives"]=10
 
       }
     }
@@ -1604,7 +1639,6 @@ namelib.NAMES =
         ["Marbellum"]=10
         ["Meltdown"]=10
         ["Menzobarranzen"]=10
-        ["Misery"]=10
         ["Myth of Progress"]=10
         ["Necessary Death"]=10
         ["Necromancide"]=10
@@ -1767,6 +1801,21 @@ namelib.NAMES =
         ["Simply Macabre"]=10
         ["Towers in the Fog"]=10
         ["Weaving of the Artery"]=10
+
+        -- 2021 naming conventions from Armaerus
+        ["Bodily Assimilation"]=10
+        ["Chains of Suffering"]=10
+        ["Divine Abjuration"]=10
+        ["Fueled by Tears"]=10
+        ["Funeral Monolith"]=10
+        ["Human Barbeque"]=10 -- Nod to Evilution
+        ["Melted from Within"]=10
+        ["Out of the Frying Pan"]=10
+        ["Spectral Anomalies"]=10
+        ["Tasty Human Giblets"]=10
+        ["The Invocation of Fear"]=10
+        ["The Hexvoid"]=10
+        ["Visions of Misery"]=10
       }
     }
   }
@@ -2445,6 +2494,9 @@ namelib.NAMES =
         ["Howling Corridors"]=10
         ["The Smell of Plasma"]=10
         ["Vertical Drop"]=10
+
+        -- 2021 naming convention by Armaetus
+        ["Blessed Twilight"]=10
       }
     }
   }
