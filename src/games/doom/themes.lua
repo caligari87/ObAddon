@@ -3,7 +3,7 @@
 --------------------------------------------------------------------
 --
 --  Copyright (C) 2006-2017 Andrew Apted
---  Copyright (C) 2011,2019 Armaetus
+--  Copyright (C) 2011,2019, 2021 Armaetus
 --  Copyright (C) 2019-2021 MsrSgtShooterPerson
 --
 --  This program is free software; you can redistribute it and/or
@@ -1390,7 +1390,9 @@ DOOM.THEMES =
     {
       caves = { none=75, few=30 }
       outdoors = { none=15, few=40, some=80, heaps=10 }
+      beams   = { none=10, few=50, some=20, heaps=5  }
       big_rooms = { none=40, few=25, some=15, heaps=5 }
+      big_outdoor_rooms = { none=40, few=5, some=3, heaps=1 }
       hallways = { none=15, few=45, some=20, heaps=10 }
       windows = { few=15, some=85, heaps=40 }
       pictures = { few=20, some=75, heaps=45 }
@@ -1398,14 +1400,20 @@ DOOM.THEMES =
       doors = { few=25, some=75, heaps=30 }
       teleporters = { none=70, few=40, some=10, heaps=3 }
       keys = { none=20, few=80, some=70, heaps=30 }
+      trikeys = { none=10, few=60, some=20, heaps=5 }
       switches = { none=25, few=75, some=40, heaps=15 }
       secrets = { few=15, some=80, heaps=30 }
+      scenics = { none=10,  few=35, some=60, heaps=20 }
       symmetry = { none=50, few=50, some=50, heaps=50 }
       steepness = { few=30, some=70, heaps=40 }
       cages = { none=70, few=25, some=10, heaps=5 }
       traps = { few=60, some=40, heaps=20 }
       barrels = { few=5, some=85, heaps=60 }
       ambushes = { few=30, some=75, heaps=20 }
+      parks   = { none=10 , few=2 , some=1 , heaps=1 }
+      park_detail = { none=0, few=15, some=60, heaps=25 }
+      porches = { none=5,  few=30, some=60, heaps=15 }
+      fences = { none=20, few=40, some=70, heaps=10 }
     }
 
     scenic_fences =
@@ -1740,22 +1748,28 @@ DOOM.THEMES =
     {
       caves = { none=60, few=40, some=12, heaps=2 }
       outdoors = { none=10, few=35, some=90, heaps=30 }
+      big_outdoor_rooms = { none=15, few=40, some=70, heaps=20 }
       pictures = { few=20, some=80, heaps=30 }
       hallways = { none=30, few=80, some=15, heaps=10 }
       windows = { few=25, some=50, heaps=90 }
       cages = { none=30, few=50, some=20, heaps=10 }
       liquids = { none=45, few=30, some=20, heaps=5 }
       doors = { few=20, some=70, heaps=30 }
+      beams  = { none=10, few=60, some=40, heaps=10 }
       steepness = { few=25, some=50, heaps=90 }
       big_rooms = { none=25, few=40, some=25, heaps=15 }
       ambushes = { none=5, few=20, some=75, heaps=30 }
       teleporters = { none=20, few=30, some=65, heaps=10 }
       keys = { none=15, few=50, some=50, heaps=20 }
+      trikeys = { none=10, few=40, some=80, heaps=20 }
       symmetry = { none=40, few=30, some=35, heaps=25 }
       switches = { none=20, few=60, some=40, heaps=10 }
       secrets = { few=5, some=80, heaps=25 }
+      scenics  = { none=5,  few=25, some=40, heaps=80}
       traps   = { none=10, few=40, some=70, heaps=25 }
       barrels = { none=10, few=50, some=20, heaps=5 }
+      fences  = { none=5, few=20, some=80, heaps=15 }
+      porches = { none=5, few=15, some=80, heaps=50 }
     }
 
     ceil_light_prob = 65
@@ -2177,18 +2191,25 @@ DOOM.THEMES =
       steepness = { few=25, some=70, heaps=40 }
       pictures = { few=50, some=50, heaps=70 }
       big_rooms = { none=25, few=60, some=15, heaps=10 }
+      big_outdoor_rooms = { none=25, few=25, some=80, heaps=10 }
       ambushes = { none=10, few=15, some=55, heaps=35 }
       hallways = { none=20, few=60, some=15, heaps=5 }
       teleporters = { none=15, few=25, some=60, heaps=10 }
       keys = { none=15, few=40, some=60, heaps=25 }
+      trikeys = { none=10, few=50, some=80, heaps=25 }
       liquids = { none=20, few=45, some=25, heaps=15 }
       traps = { few=20, some=70, heaps=40 }
       switches = { none=25, few=60, some=35, heaps=10 }
       cages    = { none=15, few=25, some=65, heaps=10 }
       symmetry = { none=55, few=25, some=40, heaps=20 }
       secrets = { few=65, some=40, heaps=10 }
+      scenics = { none=5,  few=30, some=60, heaps=80}
       caves = { none=60, few=35, some=8, heaps=3 }
       barrels = { none=45, few=15, some=5, heaps=4 }
+      beams = { none=10, few=15, some=40, heaps=5 }
+      porches = { none=0, few=25, some=40, heaps=80 }
+      fences  = { none=5, few=15, some=80, heaps=25 }
+      beams  = { none=15, few=60, some=30, heaps=10 }
     }
 
     monster_prefs =

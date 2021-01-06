@@ -3,7 +3,7 @@
 --------------------------------------------------------------------
 --
 --  Copyright (C) 2006-2017 Andrew Apted
---  Copyright (C) 2011,2019 Chris Pisarczyk / Armaetus
+--  Copyright (C) 2011,2019, 2021 Chris Pisarczyk / Armaetus
 --  Copyright (C) 2019 MsrSgtShooterPerson
 --
 --  This program is free software; you can redistribute it and/or
@@ -711,6 +711,7 @@ ULTDOOM.THEMES =
       caves = { none=70, few=30 }
       outdoors = { few=70, some=30, heaps=10 }
       big_rooms = { none=50, few=25, some=10, heaps=5 }
+      big_outdoor_rooms = { none=25, few=30, some=70, heaps=10 }
       hallways = { none=20, few=45, some=20, heaps=10 }
       windows = { few=15, some=85, heaps=40 }
       pictures = { few=20, some=75, heaps=45 }
@@ -718,14 +719,19 @@ ULTDOOM.THEMES =
       doors = { few=25, some=75, heaps=30 }
       teleporters = { none=75, few=30, some=10, heaps=3 }
       keys = { none=15, few=40, some=70, heaps=30 }
+      trikeys = { none=15, few=70, some=30, heaps=10 }
       switches = { none=25, few=75, some=40, heaps=15 }
       secrets = { few=15, some=80, heaps=30 }
       symmetry = { none=50, few=50, some=50, heaps=50 }
       steepness = { few=30, some=70, heaps=40 }
+      scenics = { none=3, few=10, some=80, heaps=25 }
       cages = { none=70, few=20, some=10, heaps=2 }
       traps = { few=60, some=40, heaps=15 }
       barrels = { few=5, some=85, heaps=60 }
       ambushes = { few=35, some=65, heaps=20 }
+      beams  = { none=10, few=15, some=40, heaps=5 }
+      porches = { none=15, few=40, some=60, heaps=30 }
+      fences = { none=5, few=40, some=60, heaps=15 }
     }
 
     scenic_fences =
@@ -927,7 +933,27 @@ ULTDOOM.THEMES =
       Post_gothic_red_2 = 10
     }
 
-    -- Deimos doesn't have a window groups table!!! -MSSP-FIXME
+    -- Copied from the Tech theme and altered a bit.
+    window_groups =
+    {
+      square = 70
+      tall   = 90
+      grate  = 40
+      barred = 5
+      round  = 10
+      supertall = 70
+      gtd_window_cage_highbars = 20
+      gtd_window_cage_lowbars = 10
+      gtd_window_full_open = 15
+      gtd_window_full_open_tall = 15
+      gtd_window_bay = 20
+      gtd_window_absurdly_open = 40
+      gtd_window_quakeish = 20
+      gtd_window_low = 10
+      gtd_window_weabdows = 20
+      gtd_window_metal_frames = 20
+      gtd_window_construction_frames = 20
+    }
 
     ceil_light_prob = 65
 
@@ -943,14 +969,19 @@ ULTDOOM.THEMES =
       doors = { few=25, some=75, heaps=30 }
       teleporters = { none=55, few=40, some=15, heaps=3 }
       keys = { none=15, few=60, some=70, heaps=40 }
+      trikeys = { few=40, some=80, heaps=20 }
       switches = { none=20, few=65, some=50, heaps=15 }
       secrets = { few=12, some=80, heaps=30 }
       symmetry = { none=50, few=50, some=50, heaps=50 }
       steepness = { few=40, some=80, heaps=35 }
+      scenics = { few=20, some=50, heaps=85}
       cages = { none=55, few=35, some=10, heaps=5 }
       traps = { few=40, some=60, heaps=30 }
       barrels = { few=10, some=55, heaps=30 }
       ambushes = { few=20, some=95, heaps=30 }
+      beams  = { none=10, few=15, some=40, heaps=5 }
+      porches = { none=15, few=20, some=80, heaps=45 }
+      fences = { none=10, few=20, some=80, heaps=30 }
     }
 
     scenic_fences =
@@ -1224,10 +1255,12 @@ ULTDOOM.THEMES =
       steepness = { few=35, some=70, heaps=30 }
       pictures = { few=50, some=50, heaps=70 }
       big_rooms = { none=25, few=60, some=15, heaps=10 }
+      big_outdoor_rooms = { none=5, few=50, some=80, heaps=25}
       ambushes = { none=10, few=15, some=55, heaps=35 }
       hallways = { none=20, few=60, some=15, heaps=5 }
       teleporters = { none=15, few=25, some=60, heaps=10 }
       keys = { none=15, few=40, some=60, heaps=25 }
+      trikeys = { none=10, few=40, some=70, heaps=35 }
       liquids = { none=20, few=45, some=25, heaps=15 }
       traps = { few=20, some=70, heaps=40 }
       switches = { none=25, few=60, some=35, heaps=10 }
@@ -1236,6 +1269,9 @@ ULTDOOM.THEMES =
       secrets = { few=65, some=40, heaps=10 }
       caves = { none=60, few=35, some=8, heaps=3 }
       barrels = { none=45, few=15, some=5, heaps=4 }
+      fences = { none=30, few=20, some=90, heaps=40 }
+      porches = { none=10, few=40, some=30, heaps=75 }
+      beams = { none=15, few=40, some=20, heaps=5 }
     }
 
     monster_prefs =
@@ -1524,14 +1560,19 @@ ULTDOOM.THEMES =
       hallways = { none=20, few=60, some=15, heaps=5 }
       teleporters = { none=15, few=25, some=60, heaps=10 }
       keys = { none=15, few=40, some=60, heaps=25 }
+      trikeys  = { none=10, few=40, some=85, heaps=20 }
       liquids = { none=20, few=45, some=25, heaps=15 }
       traps = { few=20, some=40, heaps=80 }
       switches = { none=25, few=60, some=35, heaps=10 }
       cages    = { none=15, few=25, some=65, heaps=10 }
       symmetry = { none=55, few=25, some=40, heaps=20 }
       secrets = { few=45, some=40, heaps=10 }
+      scenics = { few=15, some=60, heaps=80}
       caves = { none=60, few=35, some=8, heaps=3 }
       barrels = { none=45, few=15, some=5, heaps=4 }
+      beams = { none=10, few=40, some=50, heaps=15 }
+      porches = { few=10, some=60, heaps=80 }
+      fences = { none=5, few=20, some=80, heaps=40 }
     }
 
     scenic_fences =
