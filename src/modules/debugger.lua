@@ -86,6 +86,14 @@ function DEBUG_CONTROL.setup(self)
   end
 end
 
+function DEBUG_CONTROL.all_done()
+  if PARAM.attach_debug_info and PARAM.attach_debug_info == "yes" then
+    local log_text = {}
+
+    gui.wad_add_text_lump("OBLOGS", log_text)
+  end
+end
+
 ----------------------------------------------------------------
 
 OB_MODULES["debugger"] =
@@ -207,5 +215,16 @@ OB_MODULES["debugger"] =
       default = "yes"
       priority = 92
     }
+
+--[[
+    attach_debug_info =
+    {
+      name = "attach_debug_info"
+      label = _("Attach DEBUG Info")
+      choices = DEBUG_CONTROL.YES_NO
+      tooltip = "Attaches certain debug info into an OBLOGS text lump in the generated WAD."
+      priority = 91
+    }
   }
+]]
 }

@@ -2206,7 +2206,6 @@ DOOM.THEMES =
       scenics = { none=5,  few=30, some=60, heaps=80}
       caves = { none=60, few=35, some=8, heaps=3 }
       barrels = { none=45, few=15, some=5, heaps=4 }
-      beams = { none=10, few=15, some=40, heaps=5 }
       porches = { none=0, few=25, some=40, heaps=80 }
       fences  = { none=5, few=15, some=80, heaps=25 }
       beams  = { none=15, few=60, some=30, heaps=10 }
