@@ -225,6 +225,6 @@ OB_MODULES["debugger"] =
       tooltip = "Attaches certain debug info into an OBLOGS text lump in the generated WAD."
       priority = 91
     }
-  }
 ]]
+  }
 }
