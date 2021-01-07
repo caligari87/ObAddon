@@ -7,6 +7,7 @@ PREFABS.Pic_dem_windows_deco1 =
   map    = "MAP01"
 
   prob   = 30
+  skip_prob = 50
 
   theme  = "urban"
 
@@ -143,6 +144,7 @@ PREFABS.Pic_dem_windows_decoc1 =
   map    = "MAP04"
 
   prob   = 30
+  skip_prob = 50
 
   theme  = "urban"
 
@@ -276,6 +278,7 @@ PREFABS.Pic_dem_windows_deco7 =
   engine = "zdoom"
 
   prob   = 30
+  skip_prob = 50
 
   theme  = "tech"
 
@@ -342,6 +345,7 @@ PREFABS.Pic_dem_windows_deco10 =
   engine = "zdoom"
 
   prob   = 30
+  skip_prob = 50
 
   theme  = "tech"
 
@@ -407,6 +411,7 @@ PREFABS.Pic_dem_windows_deco13 =
   engine = "zdoom"
 
   prob   = 30
+  skip_prob = 50
 
   theme  = "tech"
 
@@ -472,6 +477,7 @@ PREFABS.Pic_dem_windows_deco16 =
   engine = "zdoom"
 
   prob   = 30
+  skip_prob = 50
 
   theme  = "tech"
 
