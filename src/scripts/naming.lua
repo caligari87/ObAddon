@@ -79,14 +79,18 @@ namelib.NAMES =
         ["Converging Hex Sequence"]=10
         ["Dead Men's Choir"]=10
         ["Duality of Entropy"]=10
+        ["Empty Echo"]=10
         ["Final Suffering"]=10
         ["Fire With Fire"]=10
         ["Fueling the Flames"]=10
         ["Genocidal Delusions"]=10
+        ["Go Fuck Yourself"]=10 -- Sunlust MAP29. Might be too spicy!
+        ["Headshot"]=10
         ["Liquid Violence"]=10
         ["Negative Inverted Sphere"]=10
         ["No Violence, No Progress"]=10
         ["Parallel Tribulation"]=10
+        ["Plausable Fear"]=10
         ["Revelations of Doom"]=10 -- Also a Hellhammer song title
         ["Spiraling Uncertainity"]=10
         ["The Fourth Dimension"]=10
@@ -114,10 +118,12 @@ namelib.NAMES =
         ["Guilt"]=10
         ["Hatred"]=10
         ["Misery"]=10
+        ["Numb"]=10
         ["Pain"]=10
         ["Purity"]=10
         ["Redemption"]=10
         ["Resentment"]=10
+        ["Seclusion"]=10
         ["Spite"]=10
         ["Terror"]=10
         ["Woe"]=10
@@ -873,10 +879,18 @@ namelib.NAMES =
 
         -- Armaetus names, 2021 edition
         ["A Moonlit Sky of Terror"]=10
+        ["Among the Stars"]=10
+        ["Blue Screen of Death"]=10
         ["Deconstruction"]=10
         ["Devoid of Power"]=10
+        ["Factor of Zero"]=10
         ["Fall of Technology"]=10
         ["Hexadecimal Destruction"]=10
+        ["Quantum Dissolution"]=10
+        ["Space Debris"]=10
+        ["The Rubicon"]=10
+        ["Time and Space"]=10
+        ["When Entropy Declines"]=10
         ["Wires and Hard Drives"]=10
 
       }
@@ -1806,16 +1820,21 @@ namelib.NAMES =
         ["Bodily Assimilation"]=10
         ["Chains of Suffering"]=10
         ["Divine Abjuration"]=10
+        ["Dominus Infernum"]=10
         ["Fueled by Tears"]=10
         ["Funeral Monolith"]=10
+        ["Goat Worship"]=10
         ["Human Barbeque"]=10 -- Nod to Evilution
         ["Melted from Within"]=10
+        ["Nazarene's Scripture"]=10
         ["Out of the Frying Pan"]=10
         ["Spectral Anomalies"]=10
         ["Tasty Human Giblets"]=10
-        ["The Invocation of Fear"]=10
+        ["The Grey of Winter"]=10
         ["The Hexvoid"]=10
+        ["The Invocation of Fear"]=10
         ["Visions of Misery"]=10
+        ["Withered and Forgotten"]=10
       }
     }
   }
@@ -2496,7 +2515,11 @@ namelib.NAMES =
         ["Vertical Drop"]=10
 
         -- 2021 naming convention by Armaetus
+        ["Ashen Grip"]=10
         ["Blessed Twilight"]=10
+        ["Fading Sun"]=10
+        ["Ruined"]=10
+        ["When All Hope is Lost"]=10
       }
     }
   }
@@ -2581,12 +2604,20 @@ namelib.NAMES =
 
       h = -- explicit descriptors (e.g. "Arena of Doom")
       {
+       Blasphemy=50
        Evil=50
       }
 
       o = -- implicit descriptors (e.g. "Arena of the Doomed")
       {
+       Baleful=50
+       Consumed=50
+       Corrupted=50
+       Diabolic=50
        Eternal=50
+       Ruined=50
+       Shattered=50
+       Unhallowed=50
       }
 
       s =
@@ -2845,6 +2876,10 @@ namelib.NAMES =
         ["Zero Calm Here"]=10
 
         ["Sentinel Prime"]=10 -- Doom Eternal
+
+        -- 2021 additions
+        ["A Bit Too Simple"]=10
+        ["Much Too Simple"]=10
       }
     }
   }
@@ -3296,6 +3331,15 @@ namelib.NAMES =
       ["%p of %c"] = 2
       ["%c is Missing"] = 2
       ["%c did What?"] = 2
+
+       -- 2021 additions..
+       ["%a Fate"]=5
+       ["Death's %p"]=5
+       ["Devolution: %j"]=5
+       ["Fueled by %j"]=5
+       ["Meltdown: %j"]=5
+       ["Nullified: %a"]
+       ["The %a Agenda"]=5
 
       -- E.T.'s additions
       ["%p of the %a %j"]=4
@@ -3957,6 +4001,23 @@ namelib.NAMES =
         ["Riding Shotgun"] = 10
         ["Ice Hard and Slick"] = 10
         ["Straight from a Bad Dream"] = 10
+
+        -- 2021 stuff..
+        ["Absolution"]=10 -- Doom 64
+        ["Beyond Eternity"]=10
+        ["Beyond Serenity"]=10
+        ["Damaged"]=10
+        ["Dead Shining Star"]=10  -- A V:28 song title
+        ["Peace of Mind"]=10
+        ["Shoot to Kill"]=10
+        ["Shutdown"]=10
+        ["Tranquility"]=10
+        ["Unleash The Energy"]=10 -- Also V:28 (See: https://www.metal-archives.com/bands/V%3A28/16470 )
+        ["Whispers from the Void"]=10
+
+        -- WAD title stuff
+        ["Crossing Acheron"]=5
+        ["Cyberdreams"]=5
       }
 
       c = -- oh boy, here we go again...
