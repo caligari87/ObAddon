@@ -3338,7 +3338,7 @@ namelib.NAMES =
        ["Devolution: %j"]=5
        ["Fueled by %j"]=5
        ["Meltdown: %j"]=5
-       ["Nullified: %a"]
+       ["Nullified: %a"]=5
        ["The %a Agenda"]=5
 
       -- E.T.'s additions
