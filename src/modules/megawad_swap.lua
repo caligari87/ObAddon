@@ -1,9 +1,9 @@
 ------------------------------------------------------------------------
---  MODULE: Megaewad Music Swapping for DOOM
+--  MODULE: Megawad Music Swapping for DOOM
 ------------------------------------------------------------------------
 --
 --  Copyright (C) 2014 Andrew Apted
---  Copyright (C) 2019 Armaetus
+--  Copyright (C) 2019-2021 Armaetus
 --
 --  This program is free software; you can redistribute it and/or
 --  modify it under the terms of the GNU General Public License

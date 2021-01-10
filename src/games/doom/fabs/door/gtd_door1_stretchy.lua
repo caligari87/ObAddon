@@ -40,7 +40,7 @@ PREFABS.Door_plain_tech_stretchy_brown =
 {
   template = "Door_plain_tech_stretchy_silver"
 
-  tex_BIGDOOR1 = 
+  tex_BIGDOOR1 =
   {
     BIGDOOR3 = 1
     BIGDOOR4 = 1

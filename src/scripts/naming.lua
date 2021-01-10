@@ -7,8 +7,8 @@
 --  Copyright (C) 2008-2018 Andrew Apted
 --  Copyright (C) 2008-2009 Jon Vail
 --  Copyright (C)      2009 Enhas
---  Copyright (C) 2010-2020 Armaetus
---  Copyright (C) 2020 MsrSgtShooterPerson
+--  Copyright (C) 2010-2021 Armaetus
+--  Copyright (C) 2021 MsrSgtShooterPerson
 --  Copyright (C) 2020 EpicTyphlosion
 --
 --  This program is free software; you can redistribute it and/or
@@ -63,6 +63,91 @@ namelib.NAMES =
 
       }
 
+      -- Why not some level names common in all themes?
+      -- Also, how do we keep 'Common' theme full names
+      -- from not being in more than one theme?
+      -- -Armaetus, 12/30/20
+      s =
+      {
+        ["A Walk on Thin Ice"]=10
+        ["Alternative Means"]=10
+        ["Annihilation"]=10
+        ["Armaetus Loves Naming"]=10 -- Bahaha!
+        ["Backstabbed"]=10
+        ["Black Skies"]=10
+        ["Choirs of Progress"]=10
+        ["Compromised"]=10
+        ["Complete Breakdown"]=10
+        ["Concrete Retribution"]=10
+        ["Converging Hex Sequence"]=10
+        ["Dead Men's Choir"]=10
+        ["Duality of Entropy"]=10
+        ["Dulling of the Senses"]=10
+        ["Empty Echo"]=10
+        ["Finding The Path"]=10
+        ["Final Suffering"]=10
+        ["Fire With Fire"]=10
+        ["Fueling the Flames"]=10
+        ["Genocidal Delusions"]=10
+        ["Go Fuck Yourself"]=10 -- Sunlust MAP29. Might be too spicy!
+        ["Headshot"]=10
+        ["Into the Fog"]=10
+        ["Liquid Violence"]=10
+        ["Memories from the Surface"]=10
+        ["Negative Inverted Sphere"]=10
+        ["Never Forgive, Never Forget"]=10
+        ["Never Give Up"]=10
+        ["No Violence, No Progress"]=10
+        ["Parallel Tribulation"]=10
+        ["Passing Through"]=10
+        ["Plausable Fear"]=10
+        ["Revelations of Doom"]=10 -- Also a Hellhammer song title
+        ["Spiraling Uncertainity"]=10
+        ["The Fourth Dimension"]=10
+        ["The Marine Element"]=10
+        ["The Unknown"]=10
+        ["Through the Looking Glass"]=10
+        ["Where Demons Roam"]=10
+        ["Within the Mirror"]=10
+        ["Woeful Unknown"]=10
+        ["Zero Null"]=10
+
+        -- Single word descriptions, typically work (IE Fear for E4M9)
+        -- Usually adjectives, mostly negative.
+        ["Absolution"]=10
+        ["Agony"]=10
+        ["Anguish"]=10
+        ["Atonement"]=10
+        ["Betrayal"]=10
+        ["Chaos"]=10
+        ["Contempt"]=10
+        ["Cowardice"]=10
+        ["Deconstruction"]=10
+        ["Despair"]=10
+        ["Desperation"]=10
+        ["Dismay"]=10
+        ["Doubt"]=10
+        ["Dread"]=10
+        ["Envy"]=10
+        ["Fear"]=10 -- Why not?
+        ["Fury"]=10
+        ["Guilt"]=10
+        ["Hatred"]=10
+        ["Misery"]=10
+        ["Numb"]=10
+        ["Pain"]=10
+        ["Purity"]=10
+        ["Redemption"]=10
+        ["Resentment"]=10
+        ["Revulsion"]=10
+        ["Seclusion"]=10
+        ["Spite"]=10
+        ["Terror"]=10
+        ["Turmoil"]=10
+        ["Woe"]=10
+        ["Wrath"]=10
+      }
+
       v =
       {
         ["Curse of the"]=10
@@ -115,6 +200,10 @@ namelib.NAMES =
         ["Piss off with the"]=5
         ["Wait, why another"]=5
         ["Good lord, another"]=5
+
+        -- 2021 additions!
+        ["Really, another"]=5
+        ["Wow, another"]=5
 
         -- these by MSSP
         ["Battle for the"]=15
@@ -805,6 +894,31 @@ namelib.NAMES =
         ["Compromised UAC Fortification"]=10
         ["Fragmented Forces"]=10
         ["Turning Point"]=10
+
+        -- Armaetus names, 2021 edition
+        ["A Moonlit Sky of Terror"]=10
+        ["A Simple Solution"]=10
+        ["Among the Stars"]=10
+        ["Blue Screen of Death"]=10
+        ["Broken Terminal"]=10
+        ["Deconstruction"]=10
+        ["Devoid of Power"]=10
+        ["End Transmission"]=10
+        ["Exposure to Space"]=10
+        ["Factor of Zero"]=10
+        ["Fall of Technology"]=10
+        ["Hexadecimal Destruction"]=10
+        ["Manifest"]=10
+        ["Quantum Dissolution"]=10
+        ["Shut It Down"]=10
+        ["Space Debris"]=10
+        ["Terminal Resistance"]=10
+        ["The Rubicon"]=10
+        ["The Warzone Within"]=10
+        ["Time and Space"]=10
+        ["Timepiece"]=10
+        ["When Entropy Declines"]=10
+        ["Wires and Hard Drives"]=10
 
       }
     }
@@ -1566,7 +1680,6 @@ namelib.NAMES =
         ["Marbellum"]=10
         ["Meltdown"]=10
         ["Menzobarranzen"]=10
-        ["Misery"]=10
         ["Myth of Progress"]=10
         ["Necessary Death"]=10
         ["Necromancide"]=10
@@ -1717,6 +1830,56 @@ namelib.NAMES =
         ["Tribute to the Dark Ones"]=10
         ["Unto the Unhallowed Abyss"]=10
         ["Wretched Mortal Form"]=10
+
+        -- 2020 end of year additions
+        ["A Harrowing Journey"]=10
+        ["Anchors of Cruelty"]=10
+        ["Barbequed Viscera"]=10
+        ["Crispy Fried Epidermis"]=10
+        ["Fissure of Blood"]=10
+        ["Hell's Fortune"]=10
+        ["Pure Peril"]=10
+        ["Simply Macabre"]=10
+        ["Towers in the Fog"]=10
+        ["Weaving of the Artery"]=10
+
+        -- 2021 naming conventions from Armaerus
+        ["Abstractus Diabolis"]=10
+        ["Agonizer Mortus"]=10
+        ["Ash in the Eyes"]=10
+        ["Blood Fountain"]=10
+        ["Blood Overload"]=10
+        ["Bodily Assimilation"]=10
+        ["Chains of Suffering"]=10
+        ["Death's Gratification"]=10
+        ["Devil's Dilemma"]=10
+        ["Divine Abjuration"]=10
+        ["Doors To Nowhere"]=10
+        ["Dominus Infernum"]=10
+        ["Drizzled With Phlegm"]=10
+        ["Fueled by Tears"]=10
+        ["Funeral Monolith"]=10
+        ["Goat Worship"]=10
+        ["Human Barbeque"]=10 -- Nod to Evilution
+        ["Human Garbage"]=10
+        ["Killing Time, Killing You"]=10
+        ["Lunacy of Mankind"]=10
+        ["Melted from Within"]=10
+        ["More Than Hate"]=10
+        ["Nazarene's Scripture"]=10
+        ["Organ Slushie"]=10
+        ["Out of the Frying Pan"]=10
+        ["Sermons of Sin"]=10
+        ["Spectral Anomalies"]=10
+        ["Tasty Human Giblets"]=10
+        ["The Bitter Times"]=10
+        ["The Grey of Winter"]=10
+        ["The Hexvoid"]=10
+        ["The Invocation of Fear"]=10
+        ["Visions of Misery"]=10
+        ["Windfall of Delerium"]=10
+        ["Winds of Dusk"]=10
+        ["Withered and Forgotten"]=10
       }
     }
   }
@@ -2395,6 +2558,38 @@ namelib.NAMES =
         ["Howling Corridors"]=10
         ["The Smell of Plasma"]=10
         ["Vertical Drop"]=10
+
+        -- 2021 naming convention by Armaetus
+        ["A Fate No Worse"]=10
+        ["Abandoned"]=10
+        ["Among the Abyss"]=10
+        ["Art of Urban Decay"]=10
+        ["Ashen Grip"]=10
+        ["Beyond the Mist"]=10
+        ["Beyond Survival"]=10
+        ["Blessed Twilight"]=10
+        ["Contemporary Silence"]=10
+        ["Cold, Icy Winds"]=10
+        ["Criteria of a Bum"]=10
+        ["Dumpsters and Demons"]=10
+        ["Dwelling in the Shroud"]=10
+        ["End of Seasons"]=10
+        ["Fading Sun"]=10
+        ["Frontier of Dust"]=10
+        ["Hymn of Solitude"]=10
+        ["Letting it all Go"]=10
+        ["Long Forgotten"]=10
+        ["Lurking Death"]=10
+        ["No Return"]=10
+        ["Rain"]=10
+        ["Retirement of Man"]=10
+        ["Ruined"]=10
+        ["The Sawtooth Smile"]=10
+        ["This Graveyard Earth"]=10
+        ["Unspoken Stars"]=10
+        ["Urban Megalths"]=10
+        ["When All Hope is Lost"]=10
+        ["Wicked Corridors"]=10
       }
     }
   }
@@ -2479,12 +2674,21 @@ namelib.NAMES =
 
       h = -- explicit descriptors (e.g. "Arena of Doom")
       {
+       Blasphemy=50
        Evil=50
       }
 
       o = -- implicit descriptors (e.g. "Arena of the Doomed")
       {
        Eternal=50
+       Baleful=50
+       Consumed=50
+       Corrupted=50
+       Diabolic=50
+       Eternal=50
+       Ruined=50
+       Shattered=50
+       Unhallowed=50
       }
 
       s =
@@ -2492,7 +2696,7 @@ namelib.NAMES =
         -- single complete level names
 
         ["Castle of Incomplete Heretic Support"]=10
-        
+
       }
     }
   }
@@ -2743,6 +2947,11 @@ namelib.NAMES =
         ["Zero Calm Here"]=10
 
         ["Sentinel Prime"]=10 -- Doom Eternal
+
+        -- 2021 additions
+        ["A Bit Too Simple"]=10
+        ["Dead End"]=10
+        ["Much Too Simple"]=10
       }
     }
   }
@@ -3022,14 +3231,14 @@ namelib.NAMES =
         ["You Wouldn't Steal a Car"]=10
         ["Papa Bless"]=10
 
-        --literature (or derived/deviated from them)
+        -- literature (or derived/deviated from them)
         ["Brave New World"]=10
         ["Caught in the Rye"]=10
         ["Silence of the Lambs"]=10
         ["The Dragon Tattoo"]=10
         ["The Raven"]=10
 
-        --bands or songs (generally or sort of psychedelic)
+        -- Bands or songs (generally or sort of psychedelic)
         ["Here Comes The Rooster"]=10 --Alice in Chains
         ["Here Comes The Sun"]=10
         ["Good Times Bad Times"]=10
@@ -3081,6 +3290,37 @@ namelib.NAMES =
         ["K"]=10
         ["Locust Masqurade"]=10
         ["Super Shotgun Smoothie"]=10
+
+        -- Yet more shit, added as end of 2020 stuff!
+        -- From the Doom level name generator:
+        -- http://www.teamhellspawn.com/exl/name_gen/
+        ["A Weather Thinker"]=10
+        ["Acid Wizards"]=10
+        ["Burned Goat"]=10
+        ["Carmack's Castle"]=10
+        ["Combining Question"]=10
+        ["Consumed UAC Project"]=10
+        ["Courtyard of Opiophobia"]=10
+        ["Dirty Mancubus"]=10
+        ["Empty Masters"]=10
+        ["Fiery Biosphere"]=10
+        ["Flesh Massacred"]=10
+        ["For No Woeful Angels"]=10
+        ["Haunted Furnace"]=10
+        ["Hurt Settlement"]=10
+        ["Hurting Exodus"]=10
+        ["Inside the Rift"]=10
+        ["Invisible Fate"]=10
+        ["Losing the Problem"]=10
+        ["Lost Point"]=10
+        ["Making Every Question"]=10
+        ["No Supply Demon"]=10
+        ["Ocean"]=10
+        ["Shambling Plant"]=10
+        ["The Knife Path"]=10
+        ["The Novice Experiment"]=10
+        ["Wronging Point"]=10
+        ["Void Moons"]=10
       }
     }
   }
@@ -3163,6 +3403,15 @@ namelib.NAMES =
       ["%p of %c"] = 2
       ["%c is Missing"] = 2
       ["%c did What?"] = 2
+
+       -- 2021 additions..
+       ["%a Fate"]=5
+       ["Death's %p"]=5
+       ["Devolution: %j"]=5
+       ["Fueled by %j"]=5
+       ["Meltdown: %j"]=5
+       ["Nullified: %a"]=5
+       ["The %a Agenda"]=5
 
       -- E.T.'s additions
       ["%p of the %a %j"]=4
@@ -3824,6 +4073,34 @@ namelib.NAMES =
         ["Riding Shotgun"] = 10
         ["Ice Hard and Slick"] = 10
         ["Straight from a Bad Dream"] = 10
+
+        -- 2021 stuff..
+        ["Absolution"]=10 -- Doom 64
+        ["Beyond Eternity"]=10
+        ["Beyond Serenity"]=10
+        ["Damaged"]=10
+        ["Dead Shining Star"]=10  -- A V:28 song title
+        ["Eerie Delights"]=10
+        ["Forcing Your Way"]=10 -- Nod to Final Fantasy
+        ["Hope Dies Here"]=10
+        ["Mephisto"]=10
+        ["Ouroboros"]=10
+        ["Peace of Mind"]=10
+        ["Regret"]=10
+        ["Seclusion"]=10
+        ["Shades of Gray"]=10
+        ["Shoot to Kill"]=10
+        ["Shutdown"]=10
+        ["Stygian Outlook"]=10
+        ["Submission"]=10
+        ["The Culling Fields"]=10
+        ["Tranquility"]=10
+        ["Unleash The Energy"]=10 -- Also V:28 (See: https://www.metal-archives.com/bands/V%3A28/16470 )
+        ["Whispers from the Void"]=10
+
+        -- WAD title stuff
+        ["Crossing Acheron"]=5
+        ["Cyberdreams"]=5
       }
 
       c = -- oh boy, here we go again...
@@ -4075,6 +4352,7 @@ namelib.NAMES =
         Ghoulish  = 10
         Godless = 10
         Gruesome = 15
+        Harrowing = 10
         Haunted = 10
         Hellish = 10
         Malicious = 10

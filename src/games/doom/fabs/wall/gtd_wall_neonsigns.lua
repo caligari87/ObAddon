@@ -20,6 +20,31 @@ PREFABS.Wall_urban_neon_sign =
   z_fit  = "bottom"
 }
 
+PREFABS.Wall_urban_neon_sign_scrolling_tall =
+{
+  template = "Wall_urban_neon_sign"
+  map = "MAP02"
+
+  height = 160
+
+  deep = 96
+
+  tex_CEMENT1 =
+  {
+    CEMENT2 = 5
+    CEMENT4 = 5
+  }
+
+  line_1 =
+  {
+    [422] = 1
+    [423] = 1
+    [424] = 1
+  }
+
+  z_fit = "top"
+}
+
 PREFABS.Wall_urban_neon_sign_id =
 {
   template = "Wall_urban_neon_sign"

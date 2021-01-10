@@ -1,3 +1,16 @@
+--------------------------------------------------------------------
+--  GZDoom Marine Closets
+--------------------------------------------------------------------
+--
+--  Copyright (C) 2019-2021 MsrShooterPerson
+--
+--  This program is free software; you can redistribute it and/or
+--  modify it under the terms of the GNU General Public License
+--  as published by the Free Software Foundation; either version 2
+--  of the License, or (at your option) any later version.
+--
+--------------------------------------------------------------------
+
 MARINE_CLOSET_TUNE = {}
 
 MARINE_CLOSET_TUNE.CHANCE =
@@ -1264,7 +1277,7 @@ function MARINE_CLOSET_TUNE.setup(self)
 end
 
 function MARINE_CLOSET_TUNE.calc_closets()
-  if rand.odds(tonumber(PARAM.m_c_chance)) 
+  if rand.odds(tonumber(PARAM.m_c_chance))
   and not LEVEL.prebuilt then
     local rngmin
     local rngmax

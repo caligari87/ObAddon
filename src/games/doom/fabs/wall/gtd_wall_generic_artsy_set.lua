@@ -89,6 +89,30 @@ PREFABS.Wall_generic_artsy_frame_metal_hell =
   z_fit = "top"
 }
 
+PREFABS.Wall_generic_artsy_center_braced_ind =
+{
+  template = "Wall_generic_artsy_bedazzled"
+  map = "MAP07"
+
+  group = "gtd_generic_artsy_center_braced_ind"
+
+  tex_WOODMET2 = "GRAY7"
+  tex_METAL = "SHAWN2"
+  flat_CEIL5_2 = "FLAT19"
+
+  z_fit = "top"
+}
+
+PREFABS.Wall_generic_artsy_center_braced_hell =
+{
+  template = "Wall_generic_artsy_bedazzled"
+  map = "MAP07"
+
+  group = "gtd_generic_artsy_center_braced_hell"
+
+  z_fit = "top"
+}
+
 -- diagonals
 
 PREFABS.Wall_generic_mid_band_diag =
@@ -113,4 +137,32 @@ PREFABS.Wall_generic_double_banded_ceil_diag =
   where = "diagonal"
 
   z_fit = {60,68}
+}
+
+PREFABS.Wall_generic_artsy_center_braced_ind_diag =
+{
+  template = "Wall_generic_artsy_bedazzled"
+  map = "MAP17"
+
+  group = "gtd_generic_artsy_center_braced_ind"
+
+  where = "diagonal"
+
+  tex_WOODMET2 = "GRAY7"
+  tex_METAL = "SHAWN2"
+  flat_CEIL5_2 = "FLAT19"
+
+  z_fit = "top"
+}
+
+PREFABS.Wall_generic_artsy_center_braced_hell_diag =
+{
+  template = "Wall_generic_artsy_bedazzled"
+  map = "MAP17"
+
+  group = "gtd_generic_artsy_center_braced_hell"
+
+  where = "diagonal"
+
+  z_fit = "top"
 }

@@ -717,17 +717,17 @@ PREFABS.Pic_dem_jumpy2_secretcloset =
 ---Garrett blood fountain with a secret---
 PREFABS.Item_dem_garrett_fountain1 =
 {
-  file   = "item/dem_secret_closets.wad"
-  map    = "MAP24"
+  file = "item/dem_secret_closets.wad"
+  map  = "MAP24"
 
-  theme  = "hell"
-  env      = "building"
-  prob   = 30
+  theme = "hell"
+  env  = "building"
+  prob = 30
 
-  key   = "secret"
+  key = "secret"
 
   where  = "seeds"
-  seed_w = 1
+  seed_w = 2
   seed_h = 1
 
   deep = 48
@@ -742,7 +742,6 @@ PREFABS.Item_dem_garrett_fountain1 =
   z_fit  = "top"
 
   can_flip = true
-
 }
 
 PREFABS.Item_dem_garrett_fountain2 =
@@ -800,11 +799,10 @@ PREFABS.Item_dem_gtd_alcove_secret =
   map    = "MAP28"
 
   theme  = "hell"
-  env      = "building"
+  env    = "building"
   prob   = 100
 
   key   = "secret"
-
 
   where  = "seeds"
   seed_w = 2
@@ -817,7 +815,6 @@ PREFABS.Item_dem_gtd_alcove_secret =
   bound_z1 = 0
   bound_z2 = 128
 
-
   x_fit = "frame"
   y_fit  = "top"
   z_fit  = "top"
@@ -827,5 +824,4 @@ PREFABS.Item_dem_gtd_alcove_secret =
     potion = 50
     helmet = 50
   }
-
 }

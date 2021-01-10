@@ -5,8 +5,8 @@
 --  Oblige Level Maker // ObAddon
 --
 --  Copyright (C) 2006-2017 Andrew Apted
---  Copyright (C) 2020 MsrSgtShooterPerson
---  Copyright (C) 2020 Armaetus
+--  Copyright (C) 2020-2021 MsrSgtShooterPerson
+--  Copyright (C) 2020-2021 Armaetus
 --
 --  This program is free software; you can redistribute it and/or
 --  modify it under the terms of the GNU General Public License
@@ -256,7 +256,7 @@ PROC_GOTCHA_QUANTITY_MULTIPLIER =
 --
 GLOBAL_STYLE_LIST =
 {
-  outdoors    = { none=20, few=40, some=30, heaps=7 }
+  outdoors    = { none=30, few=30, some=30, heaps=7 }
   caves       = { none=25, few=15, some=15, heaps=5 }
   parks       = { none=7 , few=1 , some=1 , heaps=1 }
   liquids     = { none=0,  few=20, some=25, heaps=50 }
