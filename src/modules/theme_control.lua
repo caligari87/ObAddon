@@ -65,6 +65,14 @@ THEME_CONTROL.RAMP_FACTOR =
 }
 
 
+THEME_CONTROL.SIZE_BIAS =
+{
+  "small",   _("Smaller"),
+  "default", _("DEFAULT"),
+  "large",   _("Larger"),
+}
+
+
 function THEME_CONTROL.set_a_theme(LEV, opt)
   if opt.value == "no_change" then
     return
@@ -191,6 +199,18 @@ OB_MODULES["level_control"] =
       choices = THEME_CONTROL.RAMP_FACTOR
       default = "0.66"
       gap = 1
+    }
+
+    level_size_bias =
+    {
+      name = "level_size_bias"
+      label = _("Level Size Bias")
+      priority = 3
+      tooltip = "Alters probability skew when using Mix It Up for level sizes. " ..
+      "DEFAULT is a normal curve where Average is the most common size while smaller or larger sizes " ..
+      "become rarer. Combine with Level Upper and Lower Bounds for greater control."
+      choices = THEME_CONTROL.SIZE_BIAS
+      default = "default"
     }
   }
 }
