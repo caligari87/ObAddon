@@ -3202,6 +3202,7 @@ ARMAETUS_THEMES =
       gtd_window_tall_and_glassy = 10
       gtd_window_goffik = 2.5
       gtd_window_goffik_gold = 2.5
+      gtd_window_octo_glass = 30
     }
 
     street_sinks =
@@ -3441,6 +3442,7 @@ ARMAETUS_THEMES =
       gtd_window_tall_and_glassy = 60
       gtd_window_goffik = 5
       gtd_window_goffik_gold = 5
+      gtd_window_octo_glass = 20
     }
 
     street_sinks =
