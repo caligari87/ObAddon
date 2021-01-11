@@ -196,30 +196,30 @@ function Level_determine_map_size(LEV)
 
     local MIXED_PROBS_SKEW_SMALL =
     {
-      micro=512,
+      micro=384,
       mini=256,
-      tiny=128,
-      small=64,
-      average=32,
-      large=16,
-      huge=8,
-      colossal=4,
-      gargan=2,
-      trans=1
+      tiny=170,
+      small=114,
+      average=76,
+      large=51,
+      huge=34,
+      colossal=23,
+      gargan=15,
+      trans=10
     }
 
     local MIXED_PROBS_SKEW_LARGE =
     {
-      micro=1,
-      mini=2,
-      tiny=4,
-      small=8,
-      average=16,
-      large=32,
-      huge=64,
-      colossal=128,
+      micro=10,
+      mini=15,
+      tiny=23,
+      small=34,
+      average=51,
+      large=76,
+      huge=114,
+      colossal=170,
       gargan=256,
-      trans=512
+      trans=384
     }
 
     local prob_table = MIXED_PROBS
