@@ -3426,10 +3426,6 @@ function Room_floor_ceil_heights()
       A.ceil_mat = N.ceil_mat
       A.is_porch_neighbor = true
 
-      if A.peer then
-        A.peer.is_porch_neighbor = true
-      end
-
       if A.room.is_outdoor and A.mode == "cage" then
         A.ceil_h = N.ceil_h
         A.floor_h = (N.floor_h or N.chunk.floor_h) + 24
@@ -3442,6 +3438,12 @@ function Room_floor_ceil_heights()
         A.cage_mode = "fancy"
       else
         A.ceil_h = N.ceil_h
+      end
+
+      if A.peer then
+        A.peer.is_porch_neighbor = true
+        A.peer.ceil_mat = A.ceil_mat
+        A.peer.ceil_h = A.ceil_h
       end
 
     end

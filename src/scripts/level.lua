@@ -194,24 +194,62 @@ function Level_determine_map_size(LEV)
       trans=3
     }
 
+    local MIXED_PROBS_SKEW_SMALL =
+    {
+      micro=384,
+      mini=256,
+      tiny=170,
+      small=114,
+      average=76,
+      large=51,
+      huge=34,
+      colossal=23,
+      gargan=15,
+      trans=10
+    }
+
+    local MIXED_PROBS_SKEW_LARGE =
+    {
+      micro=10,
+      mini=15,
+      tiny=23,
+      small=34,
+      average=51,
+      large=76,
+      huge=114,
+      colossal=170,
+      gargan=256,
+      trans=384
+    }
+
+    local prob_table = MIXED_PROBS
+
+    if PARAM.level_size_bias then
+      if PARAM.level_size_bias == "small" then
+        prob_table = MIXED_PROBS_SKEW_SMALL
+      elseif PARAM.level_size_bias == "large" then
+        prob_table = MIXED_PROBS_SKEW_LARGE
+      end
+    end
+
     -- Level Control fine tune for Mix It Up
     if PARAM.level_upper_bound then
-      each k,v in MIXED_PROBS do
+      each k,v in prob_table do
         if SIZES[k] > SIZES[PARAM.level_upper_bound] then
-          MIXED_PROBS[k] = 0
+          prob_table[k] = 0
         end
       end
     end
 
     if PARAM.level_lower_bound then
-      each k,v in MIXED_PROBS do
+      each k,v in prob_table do
         if SIZES[k] < SIZES[PARAM.level_lower_bound] then
-          MIXED_PROBS[k] = 0
+          prob_table[k] = 0
         end
       end
     end
 
-    ob_size = rand.key_by_probs(MIXED_PROBS)
+    ob_size = rand.key_by_probs(prob_table)
   end
 
   if ob_size == "prog" or ob_size == "epi" then
