@@ -5,6 +5,7 @@
 --  Copyright (C) 2008-2017 Andrew Apted
 --  Copyright (C) 2018-2019 Armaetus
 --  Copyright (C) 2018-2020 MsrSgtShooterPerson
+--  Adapter for Heretic by Dashodanger
 --
 --  This program is free software; you can redistribute it and/or
 --  modify it under the terms of the GNU General Public License
@@ -18,9 +19,9 @@
 --
 ------------------------------------------------------------------------
 
-SKY_GEN = { }
+SKY_GEN_HERETIC = { }
 
-SKY_GEN.SKY_CHOICES =
+SKY_GEN_HERETIC.SKY_CHOICES =
 {
   "sky_default", _("Default"),
   "50",          _("Random"),
@@ -28,14 +29,14 @@ SKY_GEN.SKY_CHOICES =
   "sky_day",     _("Day"),
 }
 
-SKY_GEN.HILL_STATE =
+SKY_GEN_HERETIC.HILL_STATE =
 {
   "hs_random", _("Random"),
   "hs_none",   _("Never"),
   "hs_always", _("Always"),
 }
 
-SKY_GEN.HILL_PARAMS =
+SKY_GEN_HERETIC.HILL_PARAMS =
 {
   "hp_random",      _("Random"),
   "hp_hilly",       _("Hills"),
@@ -43,7 +44,7 @@ SKY_GEN.HILL_PARAMS =
   "hp_cavernous",   _("Cavernous"),
 }
 
-SKY_GEN.CLOUD_COLOR_CHOICES =
+SKY_GEN_HERETIC.CLOUD_COLOR_CHOICES =
 {
   "default", _("DEFAULT"),
   "SKY_CLOUDS", _("Blue + White Clouds"),
@@ -65,7 +66,7 @@ SKY_GEN.CLOUD_COLOR_CHOICES =
   "RAINBOW_CLOUDS", _("Rainbow"),
 }
 
-SKY_GEN.TERRAIN_COLOR_CHOICES =
+SKY_GEN_HERETIC.TERRAIN_COLOR_CHOICES =
 {
   "default", _("DEFAULT"),
   "BLACK_HILLS", _("Black"),
@@ -79,7 +80,7 @@ SKY_GEN.TERRAIN_COLOR_CHOICES =
   "ICE_HILLS", _("Ice"),
 }
 
-SKY_GEN.NEBULA_COLOR_CHOICES =
+SKY_GEN_HERETIC.NEBULA_COLOR_CHOICES =
 {
   "default", _("DEFAULT"),
   "none", _("None"),
@@ -89,146 +90,146 @@ SKY_GEN.NEBULA_COLOR_CHOICES =
   "GREEN_NEBULA", _("Green"),
 }
 
-SKY_GEN.colormaps =
+SKY_GEN_HERETIC.colormaps =
 {
   -- star colors --
 
   STARS =
   {
-    8, 7, 6, 5,
-    111, 109, 107, 104, 101,
-    98, 95, 91, 87, 83, 4
+    0, 1, 2, 3,
+    6, 9, 11, 13, 15,
+    16, 19, 21, 23, 25, 255
   }
 
   RED_NEBULA =
   {
     0,0,0,0,0, 0,0,0,0,0, 0,0,0,0,0,
-    191,190,189,188,186,184,182,180
+    145,146,147,148,150,152,154,156
   }
 
   BLUE_NEBULA =
   {
     0,0,0,0,0, 0,0,0,0,0, 0,0,0,0,0,
-    247,246,245,244,243,242,241,240,
-    207,206,205,204,203,202,201,200
+    185,186,187,188,189,190,191,192,
+    193,194,195,196,197,198,199,200
   }
 
   BROWN_NEBULA =
   {
     0,0,0,0,0, 0,0,0,0,0, 0,0,0,0,0,
-    2,2,1,1, 79,79,78,77,76,75,74,73,71,69
+    3,3,4,4, 67,67,68,69,70,71,72,73,75,77
   }
 
   GREEN_NEBULA =
   {
     0,0,0,0,0, 0,0,0,0,0, 0,0,0,0,0,
-    127, 126, 125, 124, 123, 122, 121,
-    120, 119, 118, 117, 115, 113, 112
+    209, 210, 211, 212, 213, 214, 215,
+    216, 217, 218, 219, 221, 223, 224
   }
 
   -- cloud colors --
 
   GREY_CLOUDS =
   {
-    106, 104, 102, 100,
-    98, 96, 94, 92, 90,
-    88, 86, 84, 82, 80
+    11, 13, 15, 17,
+    19, 21, 23, 25, 27,
+    29, 31, 33
   }
 
   DARK_CLOUDS =
   {
-    7, 6, 5,
-    110, 109, 108, 107, 106,
-    105, 104, 103, 102, 101
+    1, 2, 3,
+    4, 5, 6, 7, 8,
+    9, 10, 11, 12, 13
   }
 
   BLUE_CLOUDS =
   {
-    245, 245, 244, 244, 243, 242, 241,
-    240, 206, 205, 204, 204, 203, 203
+    185, 185, 186, 186, 187, 188, 189,
+    190, 192, 193, 194, 194, 195, 195
   }
 
   HELL_CLOUDS =
   {
-    188, 185, 184, 183, 182, 181, 180,
-    179, 178, 177, 176, 175, 174, 173
+    148, 149, 150, 151, 152, 153, 154,
+    155, 156, 157, 158, 159, 160, 161
   }
 
   ORANGE_CLOUDS =
   {
-    234, 232, 222, 220, 218, 216, 214, 211
+    137, 138, 139, 140, 127, 128, 130, 132
   }
 
   HELLISH_CLOUDS =
   {
-    0, 0, 0, 0, 0, 47, 191, 190, 191, 47, 0, 0
+    0, 0, 0, 0, 0, 145, 146, 147, 146, 145, 0, 0
   }
 
   BROWN_CLOUDS =
   {
-     2, 1,
-     79, 78, 77, 76, 75, 74, 73,
-     72, 71, 70, 69, 67, 66, 65
+     3, 4,
+     68, 69, 70, 71, 72, 73, 74,
+     75, 76, 77, 78, 80, 81, 82
   }
 
   BROWNISH_CLOUDS =
   {
-    239, 238, 237, 236, 143, 142, 141,
-    140, 139, 138, 137, 136, 135, 134,
-    133, 130, 129, 128
+    95, 96, 97, 98, 99, 100, 101,
+    102, 103, 104, 105, 106, 107, 108,
+    109, 110
   }
 
   YELLOW_CLOUDS =
   {
-    167, 166, 165, 164, 163, 162,
-    161, 160, 228, 227, 225
+    118, 119, 121, 123, 125, 131,
+    132, 133, 144, 136
   }
 
   GREEN_CLOUDS =
   {
-    127, 126, 125, 124, 123, 122, 121,
-    120, 119, 118, 117, 115, 113, 112
+    209, 210, 211, 212, 213, 214, 215,
+    216, 217, 218, 219, 221, 223, 224
   }
 
   JADE_CLOUDS =
   {
-    12, 11, 10, 9,
-    159, 158, 157, 156, 155, 154, 153, 152
+    229, 230, 231, 232,
+    233, 234, 235, 236, 237, 238, 239, 240
   }
 
   DARKRED_CLOUDS =
   {
-     47, 46, 45, 44, 43, 42, 41, 40, 39, 37, 36, 34
+     145, 146, 147, 148, 149, 150, 151, 152
   }
 
   PEACH_CLOUDS =
   {
-     68, 66, 64, 62, 60, 58, 57
+     80, 82, 84, 86, 88, 89
   }
 
   WHITE_CLOUDS =
   {
-     99, 98, 97, 96, 95, 94, 93,
-     92, 91, 90, 89, 88, 87, 86,
-     85, 84, 83, 81
+     12, 13, 14, 15, 16, 17, 18,
+     19, 20, 21, 22, 23, 24, 25,
+     26, 27, 28, 30, 32
   }
 
   SKY_CLOUDS =
   {
-    193, 194, 195, 196, 197, 198, 199, 200, 201
+    200, 199, 198, 197
   }
 
   PURPLE_CLOUDS =
   {
-    254, 253, 252, 251, 250, 251, 252, 253, 254
+    171, 172, 173, 174, 175, 174, 173, 172, 171
   }
 
   RAINBOW_CLOUDS =
   {
-    191, 186, 181, 176,
-    231, 161, 164, 167,
-    242, 207, 204, 199,
-    115, 119, 123, 127
+    145, 150, 154, 158,
+    144, 143, 140, 137,
+    187, 192, 196, 199,
+    219, 215, 213, 211
   }
 
   -- hill colors --
@@ -240,64 +241,88 @@ SKY_GEN.colormaps =
 
   BROWN_HILLS =
   {
-    0, 2, 2, 1,
-    79,78,77,76,75,74,73,72,
-    71,70,69,68,67,66,65,64
+    0, 3, 3, 4,
+    96,97,98,99,100,76,77,78,
+    79,80,81,82,83,84,123,122
   }
 
   TAN_HILLS =
   {
-    239, 238, 237,
-    143, 142, 141, 140, 138, 136, 134, 132, 130, 129, 128
+    96, 97, 98,
+    99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110
   }
 
   GREEN_HILLS =
   {
-    0, 7,
-    127, 126, 125, 124, 123, 122, 121,
-    120, 119, 118, 117, 116, 115, 114, 113
+    0, 1,
+    210, 211, 212, 213, 214, 215, 216,
+    217, 218, 219, 220, 221, 222, 223, 224
   }
 
   DARKGREEN_HILLS =
   {
-    0, 7, 127, 126, 125, 124
+    0, 1, 210, 211, 212, 213
   }
 
   HELL_HILLS =
   {
-    0, 6, 47, 46, 45, 44, 43, 42, 41, 40,
-    39, 38, 37, 36, 35, 34, 33
+    0, 2, 145, 146, 147, 148, 149, 150, 151, 152,
+    153
   }
 
   DARKBROWN_HILLS =
   {
-    8, 7, 2, 1, 79, 78, 77, 76, 75
+    1, 2, 3, 4, 95, 96, 97, 98
   }
 
   GREENISH_HILLS =
   {
-    0, 7, 12, 11, 10, 9, 15, 14, 13,
-    159, 158, 157, 156, 155, 154
+    0, 1, 225, 226, 227, 228, 96, 97, 98,
+    232, 233, 234, 235, 236, 237
   }
 
   ICE_HILLS =
   {
-    0, 244,
-    207, 206, 205, 204, 203, 202, 201,
-    200, 198, 197, 195, 194, 193, 192
+    0, 185,
+    193, 194, 195, 196, 197, 198, 199,
+    200, 201, 202
   }
 }
 
--- Some ideas for Doom/Ultimate Doom if going with a theme to make it like "Original" theming:
--- Phobos: White/Gray/Dark skies, brown/brown-green/ice hills/mountains
--- Deimos: Red/Orange/Dark skies, brown/black/ice hills/mountains
--- Hell: Red/Orange/Yellow/Green skies, any hill/mountain type goes
--- E4: Orange/Yellow/White/Gray/Dark skies, any hill/mountain type goes
-
-
-SKY_GEN.themes =
+SKY_GEN_HERETIC.themes =
 {
-  urban =
+  psycho =
+  {
+    clouds =
+    {
+      PURPLE_CLOUDS  = 90
+      YELLOW_CLOUDS  = 70
+      HELLISH_CLOUDS = 20
+      RAINBOW_CLOUDS = 10
+
+      GREEN_CLOUDS = 70
+      BLUE_CLOUDS  = 70
+      WHITE_CLOUDS = 30
+      GREY_CLOUDS  = 30
+    }
+
+    hills =
+    {
+      BLUE_CLOUDS = 50
+      GREEN_HILLS = 50
+      RAINBOW_CLOUDS = 50
+      PURPLE_CLOUDS = 30
+      YELLOW_CLOUDS = 30
+      ORANGE_CLOUDS = 30
+      WHITE_CLOUDS = 30
+      HELLISH_CLOUDS = 20
+    }
+
+    -- no dark_hills
+  }
+  
+  castle =
+    -- at the moment a 1:1 copy of the Doom generator urban theme values
   {
     clouds =
     {
@@ -333,74 +358,10 @@ SKY_GEN.themes =
       ICE_HILLS = 25
     }
   }
-
-
-  hell =
-  {
-    clouds =
-    {
-      HELL_CLOUDS = 100
-      DARKRED_CLOUDS = 70
-      HELLISH_CLOUDS = 55
-      YELLOW_CLOUDS = 40
-      ORANGE_CLOUDS = 40
-      JADE_CLOUDS = 35
-      GREEN_CLOUDS = 30
-      WHITE_CLOUDS = 30
-      GREY_CLOUDS = 30
-      PEACH_CLOUDS = 20
-      DARK_CLOUDS = 40
-
-    }
-
-    hills =
-    {
-      HELL_HILLS = 50
-      BROWN_HILLS = 50
-      DARKBROWN_HILLS = 50
-      BLACK_HILLS = 25
-    }
-
-    dark_hills =
-    {
-      HELL_HILLS = 50
-      DARKBROWN_HILLS = 20
-    }
-  }
-
-  psycho =
-  {
-    clouds =
-    {
-      PURPLE_CLOUDS  = 90
-      YELLOW_CLOUDS  = 70
-      HELLISH_CLOUDS = 20
-      RAINBOW_CLOUDS = 10
-
-      GREEN_CLOUDS = 70
-      BLUE_CLOUDS  = 70
-      WHITE_CLOUDS = 30
-      GREY_CLOUDS  = 30
-    }
-
-    hills =
-    {
-      BLUE_CLOUDS = 50
-      GREEN_HILLS = 50
-      RAINBOW_CLOUDS = 50
-      PURPLE_CLOUDS = 30
-      YELLOW_CLOUDS = 30
-      ORANGE_CLOUDS = 30
-      WHITE_CLOUDS = 30
-      HELLISH_CLOUDS = 20
-    }
-
-    -- no dark_hills
-  }
   
 }
 
-function SKY_GEN.setup(self)
+function SKY_GEN_HERETIC.setup(self)
   for name,opt in pairs(self.options) do
     local value = self.options[name].value
     PARAM[name] = value
@@ -409,7 +370,7 @@ function SKY_GEN.setup(self)
   PARAM.episode_sky_color = {}
 end
 
-function SKY_GEN.generate_skies()
+function SKY_GEN_HERETIC.generate_skies()
 
   -- select episode for the starry starry night
   local starry_ep = rand.irange(1, # GAME.episodes)
@@ -426,7 +387,7 @@ function SKY_GEN.generate_skies()
   end
 
   -- copy all theme tables [so we can safely modify them]
-  local all_themes = table.deep_copy(SKY_GEN.themes)
+  local all_themes = table.deep_copy(SKY_GEN_HERETIC.themes)
 
 
   gui.printf("\nSky generator:\n");
@@ -459,17 +420,10 @@ function SKY_GEN.generate_skies()
     -- only rarely combine stars + nebula + hills
     local is_hilly  = rand.odds(sel(is_nebula, 25, 90))
 
-    -- MSSP-SUGGESTS: add sky themes for other level theme types?
-    local theme_name = rand.pick{"urban", "hell"}
+    local theme_name = "castle"
 
     if OB_CONFIG.theme == "psycho" then
       theme_name = "psycho"
-    end
-
-    if EPI.levels[1].theme_name == "tech" then
-      theme_name = "urban"
-    elseif EPI.levels[1].theme_name == "hell" then
-      theme_name = "hell"
     end
 
     local theme = all_themes[theme_name]
@@ -514,7 +468,7 @@ function SKY_GEN.generate_skies()
         end
       end
 
-      local colormap = SKY_GEN.colormaps[name]
+      local colormap = SKY_GEN_HERETIC.colormaps[name]
       if not colormap then
         error("SKY_GEN: unknown colormap: " .. tostring(name))
       end
@@ -537,7 +491,7 @@ function SKY_GEN.generate_skies()
 
       local name = "STARS"
 
-      local colormap = SKY_GEN.colormaps[name]
+      local colormap = SKY_GEN_HERETIC.colormaps[name]
       if not colormap then
         error("SKY_GEN: unknown colormap: " .. tostring(name))
       end
@@ -572,7 +526,7 @@ function SKY_GEN.generate_skies()
         name = PARAM.terrain_color
       end
 
-      local colormap = SKY_GEN.colormaps[name]
+      local colormap = SKY_GEN_HERETIC.colormaps[name]
       if not colormap then
         error("SKY_GEN: unknown colormap: " .. tostring(name))
       end
@@ -626,19 +580,19 @@ end
 
 ----------------------------------------------------------------
 
-OB_MODULES["sky_generator"] =
+OB_MODULES["sky_generator_heretic"] =
 {
   label = _("Sky Generator")
 
   side = "left"
   priority = 93
 
-  game = "doomish"
+  game = "heretic"
 
   hooks =
   {
-    setup = SKY_GEN.setup
-    get_levels_after_themes = SKY_GEN.generate_skies
+    setup = SKY_GEN_HERETIC.setup
+    get_levels_after_themes = SKY_GEN_HERETIC.generate_skies
   }
 
   options =
@@ -646,7 +600,7 @@ OB_MODULES["sky_generator"] =
     force_sky =
     {
       label=_("Time of Day")
-      choices=SKY_GEN.SKY_CHOICES
+      choices=SKY_GEN_HERETIC.SKY_CHOICES
       priority = 10
       tooltip = "This forces the sky background (behind the hills and clouds) to either be night or day. " ..
       "Default means vanilla Oblige behavior of picking one episode to be night. Random means 50% chance of " ..
@@ -657,7 +611,7 @@ OB_MODULES["sky_generator"] =
     force_hills =
     {
       label=_("Terrain Foreground")
-      choices=SKY_GEN.HILL_STATE
+      choices=SKY_GEN_HERETIC.HILL_STATE
       priority = 9
       tooltip = "Influences whether the sky generator should generate terrain in the skybox."
       default = "hs_random"
@@ -666,7 +620,7 @@ OB_MODULES["sky_generator"] =
     force_hill_params =
     {
       label=_("Terrain Parameters")
-      choices=SKY_GEN.HILL_PARAMS
+      choices=SKY_GEN_HERETIC.HILL_PARAMS
       priority = 8
       tooltip = "Changes the parameters of generated hills, if there are any. " ..
                 "'Cavernous' causes the terrain to nearly fill up most of the sky," ..
@@ -678,7 +632,7 @@ OB_MODULES["sky_generator"] =
     cloud_color =
     {
       label = _("Day Sky Color")
-      choices = SKY_GEN.CLOUD_COLOR_CHOICES
+      choices = SKY_GEN_HERETIC.CLOUD_COLOR_CHOICES
       priority= 7
       tooltip = "Picks the color of the sky if day. Default means random and theme-ish."
       default = "default"
@@ -687,7 +641,7 @@ OB_MODULES["sky_generator"] =
     terrain_color =
     {
       label = _("Terrain Color")
-      choices = SKY_GEN.TERRAIN_COLOR_CHOICES
+      choices = SKY_GEN_HERETIC.TERRAIN_COLOR_CHOICES
       priority = 6
       tooltip = "Picks the color of the terrain in the sky if available. Default means random and theme-ish."
       default = "default"
@@ -696,7 +650,7 @@ OB_MODULES["sky_generator"] =
     nebula_color =
     {
       label = _("Nebula Color")
-      choices = SKY_GEN.NEBULA_COLOR_CHOICES
+      choices = SKY_GEN_HERETIC.NEBULA_COLOR_CHOICES
       priority = 5
       tooltip = "Picks the color of nebula if sky is night. 'None' means just a plain starry night sky. " ..
                 "Default means random and theme-ish."

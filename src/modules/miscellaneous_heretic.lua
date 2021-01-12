@@ -18,15 +18,15 @@
 --
 ------------------------------------------------------------------------
 
-MISC_STUFF = { }
+MISC_STUFF_HERETIC = { }
 
-MISC_STUFF.YES_NO =
+MISC_STUFF_HERETIC.YES_NO =
 {
   "no",  _("No"),
   "yes", _("Yes"),
 }
 
-MISC_STUFF.LIGHTINGS =
+MISC_STUFF_HERETIC.LIGHTINGS =
 {
   "flat",    _("FLAT"),
   "lower",   _("Lower"),
@@ -34,7 +34,7 @@ MISC_STUFF.LIGHTINGS =
   "higher",  _("Higher"),
 }
 
-MISC_STUFF.LIGHT_CHOICES =
+MISC_STUFF_HERETIC.LIGHT_CHOICES =
 {
   "-3",   _("Pitch-black"),
   "-2",   _("Gloomy"),
@@ -45,14 +45,14 @@ MISC_STUFF.LIGHT_CHOICES =
   "+3",   _("Radiant"),
 }
 
-MISC_STUFF.LIVEMAP_CHOICES =
+MISC_STUFF_HERETIC.LIVEMAP_CHOICES =
 {
   "step", _("Per Step (Very Slow)"),
   "room", _("Per Room (Slightly Slow)"),
   "none", _("No Live Minimap"),
 }
 
-MISC_STUFF.SINK_STYLE_CHOICES =
+MISC_STUFF_HERETIC.SINK_STYLE_CHOICES =
 {
   "themed", _("Per Theme"),
   "curved", _("Curved"),
@@ -60,7 +60,7 @@ MISC_STUFF.SINK_STYLE_CHOICES =
   "random", _("Random"),
 }
 
-MISC_STUFF.HEIGHT_CHOICES =
+MISC_STUFF_HERETIC.HEIGHT_CHOICES =
 {
   "short",     _("Mostly Short"),
   "short-ish", _("Slightly Short"),
@@ -70,28 +70,28 @@ MISC_STUFF.HEIGHT_CHOICES =
   "mixed",     _("Mix It Up"),
 }
 
-MISC_STUFF.WINDOW_BLOCKING_CHOICES =
+MISC_STUFF_HERETIC.WINDOW_BLOCKING_CHOICES =
 {
   "not_on_vistas", _("Not on Vistas"),
   "never",         _("Never"),
   "all",           _("All"),
 }
 
-MISC_STUFF.RAIL_BLOCKING_CHOICES =
+MISC_STUFF_HERETIC.RAIL_BLOCKING_CHOICES =
 {
   "never",       _("Never"),
   "on_occasion", _("Occasional"),
   "all",         _("All"),
 }
 
-MISC_STUFF.LIQUID_SINK_OPTIONS =
+MISC_STUFF_HERETIC.LIQUID_SINK_OPTIONS =
 {
   "yes",          _("Yes"),
   "not_damaging", _("No Damaging"),
   "no",           _("No"),
 }
 
-MISC_STUFF.LINEAR_START_CHOICES =
+MISC_STUFF_HERETIC.LINEAR_START_CHOICES =
 {
   "100",     _("All"),
   "75",      _("75% of All Levels"),
@@ -101,7 +101,7 @@ MISC_STUFF.LINEAR_START_CHOICES =
   "default", _("DEFAULT"),
 }
 
-function MISC_STUFF.begin_level(self)
+function MISC_STUFF_HERETIC.begin_level(self)
   each opt in self.options do
     local name  = assert(opt.name)
     local value = opt.value
@@ -124,49 +124,49 @@ function MISC_STUFF.begin_level(self)
 end
 
 
-OB_MODULES["misc"] =
+OB_MODULES["misc_heretic"] =
 {
   label = _("Miscellaneous")
   
-  game = "doomish"
+  game = "heretic"
 
   side = "left"
   priority = 103
 
   hooks =
   {
-    begin_level = MISC_STUFF.begin_level
+    begin_level = MISC_STUFF_HERETIC.begin_level
   }
 
   options =
   {
     {
       name="pistol_starts"
-      label=_("Pistol Starts")
-      choices=MISC_STUFF.YES_NO
-      tooltip=_("Ensure every map can be completed from a pistol start (ignore weapons obtained from earlier maps)")
+      label=_("Wand Starts")
+      choices=MISC_STUFF_HERETIC.YES_NO
+      tooltip=_("Ensure every map can be completed from a wand start (ignore weapons obtained from earlier maps)")
     }
     {
       name="alt_starts"
       label=_("Alt-start Rooms")
-      choices=MISC_STUFF.YES_NO
+      choices=MISC_STUFF_HERETIC.YES_NO
       tooltip=_("For Co-operative games, sometimes have players start in different rooms")
     }
-    {
+--[[    {
       name = "foreshadowing_exit"
       label = _("Foreshadowing Exit")
-      choices = MISC_STUFF.YES_NO
+      choices = MISC_STUFF_HERETIC.YES_NO
       tooltip = "Gets exit room theme to follow the theme of the next level, if different."
       default = "yes"
       gap=1
     }
-
+]]
     { name="big_rooms",   label=_("Big Rooms"),      choices=STYLE_CHOICES }
     { name="big_outdoor_rooms", label=_("Big Outdoors"), choices=STYLE_CHOICES }
     {
       name="room_heights",
       label=_("Room Heights"),
-      choices=MISC_STUFF.HEIGHT_CHOICES,
+      choices=MISC_STUFF_HERETIC.HEIGHT_CHOICES,
       tooltip=_("Determines if rooms should have a height limit or should exaggerate their height. " ..
       "Short means room areas strictly have at most 128 units of height, tall means rooms immediately have " ..
       "doubled heights. Normal is the default Oblige behavior.")
@@ -194,7 +194,7 @@ OB_MODULES["misc"] =
     {
       name="passable_windows",
       label=_("Passable Windows"),
-      choices=MISC_STUFF.WINDOW_BLOCKING_CHOICES,
+      choices=MISC_STUFF_HERETIC.WINDOW_BLOCKING_CHOICES,
       tooltip=_("Sets the preferences for passability on certain windows. On Vistas Only means only windows " ..
                 "that look out to vistas/map border scenics have a blocking line."),
       default="not_on_vistas",
@@ -202,7 +202,7 @@ OB_MODULES["misc"] =
     {
       name="passable_railings",
       label=_("Passable Railings"),
-      choices=MISC_STUFF.RAIL_BLOCKING_CHOICES,
+      choices=MISC_STUFF_HERETIC.RAIL_BLOCKING_CHOICES,
       tooltip=_("Sets the passability of railing junctions between full impassability or the 3D midtex flag. " ..
             "Occasional means 3D midtex is only used on railings between areas the player is supposed to " ..
             "circumvent. Always means the inclusion of cages and scenic rails, allowing flying monsters to " ..
@@ -227,7 +227,7 @@ OB_MODULES["misc"] =
     }
     { name = "corner_style",
       label=_("Sink Style"),
-      choices=MISC_STUFF.SINK_STYLE_CHOICES,
+      choices=MISC_STUFF_HERETIC.SINK_STYLE_CHOICES,
       tooltip = "Determines the style for corners with sunken " ..
                 "ceilings and floors. Curved makes sink " ..
                 "corners soft, while Sharp leaves the corners angular. " ..
@@ -238,7 +238,7 @@ OB_MODULES["misc"] =
     {
       name = "liquid_sinks"
       label=_("Liquid Sinks"),
-      choices=MISC_STUFF.LIQUID_SINK_OPTIONS,
+      choices=MISC_STUFF_HERETIC.LIQUID_SINK_OPTIONS,
       tooltip = "Enables or disables liquid sinks. Liquid sinks are walkable floors that " ..
                 "are often converted into depressions with the level's liquid. " ..
                 "May greatly inconvenience the player but default Oblige behavior is 'Yes'.",
@@ -249,7 +249,7 @@ OB_MODULES["misc"] =
     { name="darkness",    label=_("Dark Outdoors"),  choices=STYLE_CHOICES }
     { name="brightness_offset",
       label=_("Brightness Offset"),
-      choices=MISC_STUFF.LIGHT_CHOICES,
+      choices=MISC_STUFF_HERETIC.LIGHT_CHOICES,
       tooltip = "Creates an extra brightness offset for rooms. Does not change the lighting palette for rooms.",
       default = "none"
     }
@@ -257,15 +257,16 @@ OB_MODULES["misc"] =
 
     { name="doors",       label=_("Doors"),          choices=STYLE_CHOICES }
     { name="keys",        label=_("Keyed Doors"),    choices=STYLE_CHOICES }
-    { name="trikeys",     label=_("Triple-Keyed Doors"),          choices=STYLE_CHOICES,
+--[[    { name="trikeys",     label=_("Triple-Keyed Doors"),          choices=STYLE_CHOICES,
       tooltip = "Controls the chance to get three key door whenever three keys are present.",
     }
+]]
     { name="switches",    label=_("Switched Doors"), choices=STYLE_CHOICES, gap=1 }
 
-    {
+--[[    {
       name="road_markings",
       label=_("Road Markings"),
-      choices=MISC_STUFF.YES_NO,
+      choices=MISC_STUFF_HERETIC.YES_NO,
       default = "yes",
       tooltip = _("Adds street markings to roads."),
     }
@@ -281,16 +282,16 @@ OB_MODULES["misc"] =
     {
       name="exit_signs"
       label=_("Exit Signs")
-      choices=MISC_STUFF.YES_NO
+      choices=MISC_STUFF_HERETIC.YES_NO
       tooltip=_("Places exit signs by exiting room")
       default = "yes"
       gap=1
     }
-
+--]]
     {
       name="linear_start"
       label=_("Linear Start")
-      choices=MISC_STUFF.LINEAR_START_CHOICES
+      choices=MISC_STUFF_HERETIC.LINEAR_START_CHOICES
       tooltip=_("Stops start rooms from having more than one external room connection. " ..
       "Can help reduce being overwhelmed by attacks from multiple directions " ..
       "when multiple neighboring rooms connect into the start room. Default means " ..
@@ -312,20 +313,9 @@ OB_MODULES["misc"] =
     {
       name="live_minimap"
       label=_("Live Growth Minimap")
-      choices=MISC_STUFF.LIVEMAP_CHOICES
+      choices=MISC_STUFF_HERETIC.LIVEMAP_CHOICES
       tooltip=_("Shows more steps Oblige performs on rooms as they are grown on the GUI minimap. May take a hit on generation speed.")
     }
 
----- PLANNED (UNFINISHED) STUFF ----
-
--- already done: -- MSSP
---  { name="light_level",  label=_("Lighting"),   choices=MISC_STUFF.LIGHTINGS }
---  { name="detail_level", label=_("Detail"),     choices=MISC_STUFF.LIGHTINGS, gap=1 }
-
---  pictures    = { label=_("Pictures"),       choices=STYLE_CHOICES }
---  cycles      = { label=_("Multiple Paths"), choices=STYLE_CHOICES }
---  ex_floors   = { label=_("3D Floors"),      choices=STYLE_CHOICES }
-
---  lakes       = { label=_("Lakes"),          choices=STYLE_CHOICES }
   }
 }

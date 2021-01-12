@@ -2680,6 +2680,7 @@ namelib.NAMES =
 
       o = -- implicit descriptors (e.g. "Arena of the Doomed")
       {
+       Eternal=50
        Baleful=50
        Consumed=50
        Corrupted=50

@@ -454,13 +454,47 @@ HERETIC.THEMES =
       barrels = { none=10, few=50, some=20, heaps=5 } ]]
     }
 
-
     liquids =
     {
       water2 = 40
       water  = 10
       lava   = 50
       sludge = 20
+    }
+    
+    narrow_halls =
+    {
+      vent = 50
+      mineshaft = 50
+      access = 50
+    }
+    
+    wide_halls =
+    {
+      deuce = 50
+      metro = 50
+    }
+    
+     floor_sinks =
+    {
+      liquid_plain = 15
+      liquid_metal = 10
+      liquid_firelava = 5
+      liquid_bstone = 5
+      floor_glowingrock
+      floor_green = 25
+      floor_red = 15
+      floor_blue = 25
+      floor_glowingrock2 = 15
+      floor_dirt = 25
+      floor_sky = 5
+      floor_trim_sky = 5
+      floor_trim_liquid = 5
+      floor_mixup = 25
+      floor_shawn_wall = 25
+      floor_shawn_c = 25
+      floor_metal_wall = 25
+      floor_metal_c = 25
     }
 
     narrow_halls =
@@ -572,7 +606,7 @@ HERETIC.THEMES =
       wall_torch   = 70
       mercury_lamp  = 10
     }
-
+    
     outdoor_torches =
     {
       fire_brazier   = 10
@@ -759,6 +793,7 @@ HERETIC.ROOM_THEMES =
       FLOOR28 = 10
       FLOOR29 = 10
     }
+
   }
 
 
@@ -794,9 +829,9 @@ HERETIC.ROOM_THEMES =
       FLAT510 = 10
       FLAT520 = 10
     }
-
+    
   }
-
+  
   castle_vent_Hallway =
   {
     env   = "hallway"
@@ -925,7 +960,7 @@ HERETIC.ROOM_THEMES =
 
     }
   }
-
+   
 }
 ------------------------------------------------------------------------
 
