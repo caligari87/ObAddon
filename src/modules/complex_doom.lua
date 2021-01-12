@@ -49,12 +49,9 @@
 -- Based on the "Harder Enemy Setup" module, so there's no need to
 -- use both.
 
--- Also Shooter, can there be some way to define custom items/weapons/ammo instead of this
--- hackery I am putting below?
-
 COMPLEX_DOOM = { }
 
-UNFINISHED.MONSTERS =
+COMPLEX_DOOM.MONSTERS =
 {
 
 -- Possible replacements:
@@ -70,17 +67,17 @@ UNFINISHED.MONSTERS =
     level = 1
     prob = 50
     health = 45 -- Average health. All replacement health divided by 4.
-    damage = 8.0 -- Need some sort of average damage due to the replacements.
-    attack = "missile" -- None of these are instant hit except railgunner's slug, so changed here.
+    damage = 3.0 -- Need some sort of average damage due to the replacements.
+    attack = "hitscan"
     replaces = "shooter"
     replace_prob = 20
-    give = { {ammo="bullet",count=5}, {ammo="grenade", count=1}, {ammo="mine", count=1}, {health="health_flask", count=5}, {ammo="ammo_pack", count=1}, {ammo="cells", count=20} }
+    give = { {ammo="bullet",count=5} }
     weap_prefs = { shotty=1.2, chain=1.5 } -- Pistol is actually useful on these guys!
     density = 1.5
     room_size = "any" --small
     disloyal = true
-    trap_factor = 0.05
-    infight_damage = 15.0 -- Due to the projectile damage done
+    trap_factor = 0.3
+    infight_damage = 12.0 -- Due to the projectile damage done
   }
 
   -- Possible replacements:
@@ -96,10 +93,10 @@ UNFINISHED.MONSTERS =
     level = 1
     prob = 75
     health = 50
-    damage = 14.0
+    damage = 5.0
     attack = "hitscan"
     density = 1.0
-    give = { {weapon="shotty"}, {ammo="shell",count=4}, {ammo="bullet",count=5}, {ammo="grenade", count=1}, {ammo="mine", count=1}, {health="health_flask", count=5}, {ammo="ammo_pack", count=1} }
+    give = { {weapon="shotty"}, {ammo="shell",count=4} }
     weap_prefs = { shotty=1.2, chain=1.5, plasma=1.2 }
     weap_needed = { shotty=true }
     species = "zombie"
@@ -124,10 +121,9 @@ UNFINISHED.MONSTERS =
     level = 1
     prob = 140
     health = 85
-    damage = 8.0
+    damage = 4.0
     attack = "missile"
     density = 1.0
-    give = { {health="health_flask", count=5}, {ammo="armor_shard", count=1} }
     replaces = "demon"
     replace_prob = 25
     weap_needed = { shotty=true }
@@ -145,16 +141,17 @@ UNFINISHED.MONSTERS =
     level = 5
     prob = 25
     health = 100
-    damage = 6.0
+    damage = 2.0
     attack = "melee"
     density = 0.5
     float = true
     weap_prefs = { super=1.5, chain=1.3, launch=0.3 }
+    weap_needed = { shotty=true }
     room_size = "any" --small
     disloyal = true
-    trap_factor = 0.35 --0.2
+    trap_factor = 0
     cage_factor = 0
-    infight_damage = 8.0
+    infight_damage = 6.0
   }
 
   -- Possible replacements:
@@ -170,13 +167,14 @@ UNFINISHED.MONSTERS =
     level = 4
     prob = 50
     health = 260
-    damage = 15.0
+    damage = 5.0
     attack = "melee"
     density = 0.85
     weap_min_damage = 40
     weap_needed = { shotty=true }
     weap_prefs = { super=1.75, shotty=1.35, chain=1.5, plasma=1.2, launch=0.3 }
     room_size = "any"
+    cage_factor = 0
     infight_damage = 40
   }
 
@@ -191,7 +189,7 @@ UNFINISHED.MONSTERS =
     replace_prob = 35
     crazy_prob = 25
     health = 260
-    damage = 15.0
+    damage = 5.0
     attack = "melee"
     density = 0.5
     invis = true
@@ -202,6 +200,7 @@ UNFINISHED.MONSTERS =
     species = "demon"
     room_size = "any"
     trap_factor = 0.3
+    cage_factor = 0
     infight_damage = 40
   }
 
@@ -213,7 +212,7 @@ UNFINISHED.MONSTERS =
     level = 5
     prob = 30
     health = 600
-    damage = 12.0
+    damage = 6.0
     attack = "missile"
     density = 0.6
     weap_min_damage = 40
@@ -244,7 +243,7 @@ UNFINISHED.MONSTERS =
     weap_needed = { launch=true }
     weap_prefs = { launch=1.75, super=1.5, plasma=1.75, bfg=1.5 }
     health = 1250
-    damage = 35.0
+    damage = 10.0
     attack = "missile"
     density = 0.3
     weap_min_damage = 88
@@ -263,7 +262,7 @@ UNFINISHED.MONSTERS =
     prob = 1.6
     crazy_prob = 10
     health = 4000
-    damage = 300
+    damage = 200
     attack = "missile"
     density = 0.1
     weap_needed = { bfg=true }
@@ -289,7 +288,7 @@ UNFINISHED.MONSTERS =
     prob = 2.0
     crazy_prob = 10
     health = 3000
-    damage = 250
+    damage = 150
     attack = "hitscan"
     density = 0.1
     cage_factor = 0
@@ -317,10 +316,10 @@ UNFINISHED.MONSTERS =
     level = 1.6
     prob = 60
     health = 80
-    damage = 15.0
+    damage = 7.0
     attack = "hitscan"
-    give = { {weapon="chain"}, {ammo="bullet",count=10}, {ammo="bullet",count=5}, {ammo="grenade", count=1}, {ammo="mine", count=1}, {ammo="health_flask", count=5}, {ammo="ammo_pack", count=1} }
-    weap_needed = { chain=true }
+    give = { {weapon="chain"}, {ammo="bullet",count=10} }
+    weap_needed = { shotty=true }
     weap_min_damage = 50
     weap_prefs = { shotty=1.5, super=1.75, chain=2.0, plasma=1.3, launch=1.1 }
     density = 0.75
@@ -341,14 +340,15 @@ UNFINISHED.MONSTERS =
     id = 66
     r = 20
     h = 64
-    level = 5
+    level = 4
     prob = 25
     health = 300
-    damage = 15.0 -- Some replacements do tons of damage
+    damage = 11.0 -- Some replacements do tons of damage
     attack = "missile"
     weap_min_damage = 60
     density = 0.6
     weap_prefs = { launch=1.75, plasma=1.75, chain=1.5, super=1.25 }
+    weap_needed = { super=true }
     room_size = "any"
     replaces = "knight"
     replace_prob = 15
@@ -366,9 +366,10 @@ UNFINISHED.MONSTERS =
     level = 5
     prob = 26
     health = 500
-    damage = 20.0
+    damage = 6.0
     attack = "missile"
     weap_min_damage = 50
+    weap_needed = { super=true }
     weap_prefs = { launch=1.75, super=1.5, plasma=1.33 }
     density = 0.75
     species = "baron"
@@ -388,8 +389,9 @@ UNFINISHED.MONSTERS =
     level = 6
     prob = 20
     health = 600
-    damage = 20.0
+    damage = 10.0
     attack = "missile"
+    weap_needed = { super=true }
     weap_prefs = { launch=1.5, super=1.5, plasma=1.5, chain=1.2 }
     density = 0.32
     weap_min_damage = 88
@@ -408,16 +410,18 @@ UNFINISHED.MONSTERS =
     id = 68
     r = 64
     h = 64
-    level = 4.5
+    level = 5
     prob = 12
     health = 500
-    damage = 25.0
+    damage = 12.0
     attack = "missile"
     weap_min_damage = 60
+    weap_needed = { super=true }
     weap_prefs = { launch=1.5, super=1.5, plasma=1.5, chain=1.2 }
     replaces = "mancubus"
     replace_prob = 30
     density = 0.5
+    cage_factor = 0
     room_size = "medium"
     infight_damage = 95
     boss_replacement = "revenant"
@@ -441,15 +445,16 @@ UNFINISHED.MONSTERS =
     prob = 2
     crazy_prob = 5
     health = 850
-    damage = 40
+    damage = 25
     attack = "hitscan"
     density = 0.1
+    trap_factor = 0.01
     room_size = "medium"
     weap_needed = { bfg=true }
     weap_prefs = { launch=3.0, super=1.5, plasma=2.0, bfg=2.5 }
     weap_min_damage = 120
     nasty = true
-    infight_damage = 100
+    infight_damage = 150
     boss_replacement = "baron"
   }
 
@@ -467,14 +472,16 @@ UNFINISHED.MONSTERS =
     prob = 10
     crazy_prob = 15
     health = 900  -- 400 + 5 skulls
-    damage = 20.0 -- about 5 skulls
+    damage = 16.0 -- about 5 skulls
     attack = "missile"
     density = 0.2
     float = true
     weap_min_damage = 100
+    weap_needed = { launch=true }
     weap_prefs = { launch=1.5, super=1.5, chain=1.5, shotty=0.7, plasma=1.7 }
     room_size = "any" --large
     cage_factor = 0  -- never put in cages
+    trap_factor = 1.1
     infight_damage = 50 -- Pain Elemental replacements have direct damage now
   }
 
@@ -494,7 +501,7 @@ UNFINISHED.MONSTERS =
     prob  = 0
     crazy_prob = 0
     health = 50
-    damage = 10
+    damage = 5
     attack = "hitscan"
     give = { {ammo="bullet",count=5} }
     density = 1.5
@@ -502,7 +509,7 @@ UNFINISHED.MONSTERS =
   }
 }
 
-UNFINISHED.WEAPONS =
+COMPLEX_DOOM.WEAPONS =
 {
   fist =
   {
@@ -513,7 +520,7 @@ UNFINISHED.WEAPONS =
 
   pistol =
   {
-    pref = 1
+    pref = 4
     attack = "hitscan"
     rate = 5.0 -- Pistol is semi-automatic now
     accuracy = 85
@@ -525,7 +532,7 @@ UNFINISHED.WEAPONS =
   shotty =
   {
     id = 2001
-    level = 1.5
+    level = 1
     pref = 40
     add_prob = 40
     attack = "hitscan"
@@ -542,7 +549,7 @@ UNFINISHED.WEAPONS =
   chain =
   {
     id = 2002
-    level = 1.5
+    level = 1
     pref = 70
     upgrades = "pistol"
     add_prob = 40
@@ -560,7 +567,7 @@ UNFINISHED.WEAPONS =
   super =
   {
     id = 82
-    level = 2.7
+    level = 2.5
     pref = 40
     upgrades = "shotty"
     add_prob = 70
@@ -597,7 +604,7 @@ UNFINISHED.WEAPONS =
   plasma =
   {
     id = 2004
-    level = 5.2
+    level = 4
     pref = 25
     add_prob = 50
     attack = "missile"
@@ -613,7 +620,7 @@ UNFINISHED.WEAPONS =
   bfg =
   {
     id = 2006
-    level = 8
+    level = 6
     pref = 12
     upgrades = "plasma"
     add_prob = 20
@@ -631,7 +638,7 @@ UNFINISHED.WEAPONS =
 }
 
 -- Need some changes here too!
-UNFINISHED.PICKUPS =
+COMPLEX_DOOM.PICKUPS =
 {
   -- HEALTH --
 
@@ -655,53 +662,6 @@ UNFINISHED.PICKUPS =
     give = { {health=2} }
   }
 
-
- -- Complex Doom items, never placed but used for letting Oblige know
- -- that monsters can drop more than one kind of item.
-
-  health_flask =
-  {
-    kind = "health"
-    give = { {health=5} }
-  }
-
-    healthkit =
-  {
-    kind = "health"
-    give = { {health=25} }
-  }
-
-    rejuv_kit =
-  {
-    kind = "health"
-    give = { {health=100} }
-  }
-
-   ammo_pack =
-  {
-    kind = "ammo"
-    give = { {ammo="bullet",count=10 }, {ammo="shell", count=4 },
-             {ammo="cell",  count=20 }, {ammo="rocket",count=1 } }
-  }
-
-  armor_shard =
-  {
-  kind="armor"
-  give = { { health=5 } }
-  }
-
-  mine =
-  {
-    kind = "ammo"
-    give = { {ammo="rocket", count=1 } } -- Not a rocket but its damage is equal or higher tham
-                                    -- a rocket.
-  }
-
-  grenade =
-  {
-    kind = "ammo"
-    give = { {ammo="rocket", count=1} }  -- Again, hackery to tell Oblige it's ammo.
-  }
 
   --
   -- NOTES:
@@ -740,15 +700,15 @@ function COMPLEX_DOOM.setup(self)
 end
 
 -- How to implement this into "Modded Game Extras" module??
-UNFINISHED["COMPLEX_DOOM"] =
+OB_MODULES["complex_doom"] =
 {
-  label = _("Complex Doom Modofications")
+  label = _("Complex Doom Modifications")
 
   side = "left"
   priority = 61
   game = { doom1=1, doom2=1 } -- Dunno if it has support for Heretic/Hexen
 
-  tooltip = "Alters to fit the difficulty that Complex Doom provides. Do not use with 'Harder Enemy Setup' addon, will conflict."
+  tooltip = "Alters to better fit the difficulty that Complex Doom provides. Do not use with 'Harder Enemy Setup' addon, will conflict."
 
   -- Zandronum *SHOULD* work with v27, otherwise will remove it.
   engine = { zdoom=1, gzdoom=1, skulltag=1 }
