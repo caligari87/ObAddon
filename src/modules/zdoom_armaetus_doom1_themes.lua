@@ -612,19 +612,48 @@ ARMAETUS_DOOM1_ROOM_THEMES =
 
     walls =
     {
+      CEM01 = 50
+      CEM02 = 50
       CEM03 = 15
       CEM04 = 15
-      CEM06 = 120
-      CEM07 = 120
-      CEM09 = 120
+      CEM06 = 50
+      CEM07 = 50
+      CEM09 = 50
+      CEM10 = 50
+      CEM11 = 50
+      BRIKS31 = 50
+      BRIKS32 = 50
+      BRONZEG1 = 15
+      BRONZEG2 = 15
+      BRONZEG3 = 15
+      BROWN2 = 50
+      BROWN3 = 50
+      GRAY6 = 15
+      GRAY8 = 15
+      GRAY9 = 15
+      SNOWWAL1 = 15
+      SNOWWAL2 = 15
+      SNOWWAL3 = 15
+      STON7 = 15
+      STONE10 = 15
+      STONE8 = 15
     }
 
     floors =
     {
-      FLAT1 = 50
-      FLAT5_4 = 40
-      GRATE1  = 15
-      GRATE2  = 15
+      FLAT1 = 30
+      FLAT3 = 30
+      FLAT5_4 = 25
+      FLAT19 = 15
+      FLAT20 = 15
+      FLOOR0_3 = 15
+      FLOOR0_5 = 15
+      FLOOR4_7 = 15
+      GRATE1 = 15
+      GRATE2 = 15
+      GRATE5 = 25
+      GRATE6 = 25
+      GRATE7 = 15
       FLOOR4_8 = 10
       FLOOR5_1 = 10
       FLOOR51C = 10
@@ -632,11 +661,21 @@ ARMAETUS_DOOM1_ROOM_THEMES =
       FLOOR46E = 15
       DARKF01 = 15
       DARKF02 = 15
+      SHINY01 = 25
+      SHINY02 = 25
+      SHINY04 = 25
+      SLIME14 = 15
+      TILES4 = 20
+      TILES6 = 20
     }
 
     ceilings =
     {
-      FLAT19 = 50
+      FLAT1 = 15
+      FLAT3 = 5
+      FLAT18 = 30
+      FLAT19 = 40
+      FLOOR0_5 = 30
       CEIL3_5 = 30
       FLAT5_4 = 20
       MFLR8_1 = 15
