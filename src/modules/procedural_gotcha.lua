@@ -66,6 +66,8 @@ end
 OB_MODULES["procedural_gotcha"] =
 {
   label = _("Procedural Gotcha Options")
+  
+  game = "doomish"
 
   side = "right"
   priority = 92

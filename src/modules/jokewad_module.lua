@@ -380,6 +380,8 @@ OB_MODULES["jokewad_module"] =
 {
   label = _("Jokewad Module")
 
+  game = "doomish"
+
   side = "left"
   priority = 60
 

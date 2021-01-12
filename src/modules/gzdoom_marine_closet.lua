@@ -1419,6 +1419,8 @@ end
 OB_MODULES["gzdoom_marine_closets"] =
 {
   label = _("[Exp]GZDoom Marine Closets")
+  
+  game = "doomish"
 
   side = "right"
   priority = 93
