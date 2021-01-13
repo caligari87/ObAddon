@@ -8,8 +8,8 @@ PREFABS.Door_scionox_secret_lift =
 
   where  = "edge"
   key    = "secret"
-  deep   = 44
-  over   = 44
+  deep   = 52
+  over   = 52
 
   bound_z1 = -128
   bound_z2 = 16
