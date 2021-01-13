@@ -434,7 +434,7 @@ HERETIC.THEMES =
 
    style_list =
     {
---[[     caves = { none=60, few=40, some=12, heaps=2 }
+      caves = { none=60, few=40, some=12, heaps=2 }
       outdoors = { none=10, few=35, some=90, heaps=30 }
       pictures = { few=20, some=80, heaps=30 }
       hallways = { none=30, few=80, some=15, heaps=10 }
@@ -451,7 +451,7 @@ HERETIC.THEMES =
       switches = { none=20, few=60, some=40, heaps=10 }
       secrets = { few=5, some=80, heaps=25 }
       traps   = { none=10, few=40, some=70, heaps=25 }
-      barrels = { none=10, few=50, some=20, heaps=5 } ]]
+      barrels = { none=10, few=50, some=20, heaps=5 }
     }
 
     liquids =
@@ -600,6 +600,12 @@ HERETIC.THEMES =
       beam_metal = 50
     }
 
+    window_groups =
+    {
+      square = 70
+      tall   = 30
+    }
+    
     cave_torches =
     {
       fire_brazier  = 20
