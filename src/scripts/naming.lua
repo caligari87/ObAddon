@@ -7953,6 +7953,7 @@ function namelib.test()
   test_theme("TECH")
   test_theme("GOTHIC")
   test_theme("URBAN")
+  test_theme("CASTLE")
 
   test_theme("BOSS")
   test_theme("EPISODE")
