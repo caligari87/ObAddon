@@ -32,7 +32,7 @@ HERETIC.SINKS =
     dz    = 48
     light = 16
 
-    trim_mat = "METL2"
+    trim_mat = "METL1"
     trim_dz  = -9
     trim_light = 16
   }
@@ -374,54 +374,10 @@ HERETIC.THEMES =
       k_blue   = 30
     }
 
-    beam_groups =
-    {
-      beam_metal = 50
-    }
-
-    wall_groups =
-    {
-      PLAIN = 50
-      torches1 = 50
-    }
-
-    window_groups =
-    {
-      square = 70
-      tall   = 30
-    }
-
-    fence_groups =
-    {
-      PLAIN = 50
-    }
-
-    fence_posts =
-    {
-      Post = 50
-    }
-
-    wide_halls =
-    {
-      deuce = 50
-    }
-
-    scenic_fence =
-    {
-      GATMETL2 = 50
-      GATMETL3 = 50
-      GATMETL4 = 50
-      GATMETL5 = 50
-    }
-
     skyboxes =
     {
       -- Heretic needs a 3D skybox, bois
     }
-
-    steps_mat = "FLOOR10"
-
-    post_mat  = "METL2"
 
     cage_lights = { 0, 8, 12, 13 }
 
@@ -457,46 +413,12 @@ HERETIC.THEMES =
     liquids =
     {
       water2 = 40
-      water  = 10
-      lava   = 50
-      sludge = 20
+      water  = 50
+      lava   = 10
+      sludge = 15
+      magma  = 10
     }
     
-    narrow_halls =
-    {
-      vent = 50
-      mineshaft = 50
-      access = 50
-    }
-    
-    wide_halls =
-    {
-      deuce = 50
-      metro = 50
-    }
-    
-     floor_sinks =
-    {
-      liquid_plain = 15
-      liquid_metal = 10
-      liquid_firelava = 5
-      liquid_bstone = 5
-      floor_glowingrock
-      floor_green = 25
-      floor_red = 15
-      floor_blue = 25
-      floor_glowingrock2 = 15
-      floor_dirt = 25
-      floor_sky = 5
-      floor_trim_sky = 5
-      floor_trim_liquid = 5
-      floor_mixup = 25
-      floor_shawn_wall = 25
-      floor_shawn_c = 25
-      floor_metal_wall = 25
-      floor_metal_c = 25
-    }
-
     narrow_halls =
     {
       vent = 50
@@ -510,7 +432,7 @@ HERETIC.THEMES =
       metro = 50
     }
 
-     floor_sinks =
+    floor_sinks =
     {
       liquid_plain = 15
       liquid_metal = 10
@@ -606,6 +528,12 @@ HERETIC.THEMES =
       tall   = 30
     }
     
+    wall_groups =
+    {
+      PLAIN = 50
+      torches1 = 50
+    }
+    
     cave_torches =
     {
       fire_brazier  = 20
@@ -627,6 +555,7 @@ HERETIC.THEMES =
       GATMETL3 = 50
       GATMETL4 = 50
       GATMETL5 = 50
+      WDGAT64 = 50
     }
 
     sink_style =
@@ -634,6 +563,10 @@ HERETIC.THEMES =
       sharp = 1
       curved = 0.1
     }
+    
+    steps_mat = "FLOOR10"
+
+    post_mat  = "WOODWL"
 
   }
 
@@ -1005,7 +938,7 @@ OB_THEMES["castle"] =
 {
   label = _("Castle")
   game = "heretic"
-  name_theme = "CASTLE"
+  name_class = "CASTLE"
   mixed_prob = 50
 }
 

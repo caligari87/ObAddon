@@ -664,7 +664,7 @@ if map_num == 44 then
 
     local mapinfo =
     {
-      'map ' .. map_id .. ' "'..Naming_grab_one(string.upper(GAME.levels[map_num].theme_name))..'"\n'
+      'map ' .. map_id .. ' lookup HHUSTR_'.. name_string_map_id ..'\n'
       '{\n'
       '  cluster = 1\n'
       '  sky1 = "' .. sky_tex .. '"\n'
