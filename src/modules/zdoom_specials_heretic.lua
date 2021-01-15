@@ -161,16 +161,30 @@ ZDOOM_SPECIALS_HERETIC.MAP_NOMENCLATURE =
   [45] = "E5M9"
 }
 
+-- Attempting to make episode-specific Interpics
+-- Clusters 1-5 are Episodes 1-5
+-- Cluster 6-10 are the secret level for each episode
+-- For now, I've only made one picture, which is a tiled version
+-- of the regular level transition background
 ZDOOM_SPECIALS_HERETIC.INTERPICS =
 {
-  --[[OBDNLOAD = 50
-  OBDNLOA2 = 50
-  OBDNLOA3 = 50
-  OBDNLOA4 = 50
-  OBDNLOA5 = 50
-  OBDNLOA6 = 50
-  OBDNLOA7 = 50]]
-  AUTOPAGE = 50
+--  OBDNLOAD = 50
+--  OBDNLOA2 = 50
+--  OBDNLOA3 = 50
+--  OBDNLOA4 = 50
+--  OBDNLOA5 = 50
+--  OBDNLOA6 = 50
+--  OBDNLOA7 = 50
+  [1] = "HERETIC1",
+  [2] = "HERETIC1",
+  [3] = "HERETIC1",
+  [4] = "HERETIC1",
+  [5] = "HERETIC1",
+  [6] = "HERETIC1",
+  [7] = "HERETIC1",
+  [8] = "HERETIC1",
+  [9] = "HERETIC1",
+  [10] = "HERETIC1"
 }
 
 ZDOOM_SPECIALS_HERETIC.INTERPIC_MUSIC =
@@ -484,11 +498,11 @@ if map_num == 44 then
     map_id_next = ZDOOM_SPECIALS_HERETIC.MAP_NOMENCLATURE[map_num + 1]
 
     -- resolve proper episodic sky texture assignments
-    if map_num <= 11 then
+    if map_num <= 9 then
       sky_tex = "SKY1"
-    elseif map_num > 11 and map_num <= 20 then
+    elseif map_num > 18 and map_num <= 27 then
       sky_tex = "SKY2"
-    elseif map_num > 20 then
+    elseif map_num > 27 then
       sky_tex = "SKY3"
     end
 
@@ -583,93 +597,87 @@ if map_num == 44 then
       fog_intensity_line = ""
     end
 
-    -- add cluster linking for DOOM2
+    -- add cluster linking, 2 clusters per episode and one for each secret level
     local cluster_line = ''
 
-    if PARAM.story_generator == "generic" then
-      if OB_CONFIG.game == "doom2" or OB_CONFIG.game == "tnt" or OB_CONFIG.game == "plutonia"  then
-        if map_num >= 1 and map_num <= 5 then
-          cluster_line = "  Cluster = 5\n"
-        elseif map_num > 5 and map_num <= 11 then
-          cluster_line = "  Cluster = 6\n"
-        elseif map_num > 11 and map_num <= 14 then
-          cluster_line = "  Cluster = 7\n"
-        elseif map_num > 14 and map_num <= 20 then
-          cluster_line = "  Cluster = 8\n"
-        elseif map_num > 20 and map_num <= 30 then
-          cluster_line = "  Cluster = 9\n"
-        elseif map_num == 31 then
-          cluster_line = "  Cluster = 10\n"
-        elseif map_num == 32 then
-          cluster_line = "  Cluster = 11\n"
-        end
-      end
-    elseif PARAM.story_generator == "proc" then
-      if OB_CONFIG.game == "doom2" or OB_CONFIG.game == "tnt" or OB_CONFIG.game == "plutonia"  then
-        if map_num >= 1 and map_num <= 5 then
-          cluster_line = "  Cluster = 1\n"
-        elseif map_num > 5 and map_num <= 11 then
-          cluster_line = "  Cluster = 2\n"
-        elseif map_num == 12 then
-          cluster_line = "  Cluster = 3\n"
-        elseif map_num > 12 and map_num <= 14 then
-          cluster_line = "  Cluster = 4\n"
-        elseif map_num > 14 and map_num <= 20 then
-          cluster_line = "  Cluster = 5\n"
-        elseif map_num == 21 then
-          cluster_line = "  Cluster = 6\n"
-        elseif map_num > 21 and map_num <= 30 then
-          cluster_line = "  Cluster = 7\n"
-        elseif map_num == 31 then
-          cluster_line = "  Cluster = 8\n"
-        elseif map_num == 32 then
-          cluster_line = "  Cluster = 9\n"
-        end
-      end
+    if map_num >= 1 and map_num <= 4 then
+      cluster_line = "  Cluster = 1\n"
+    elseif map_num > 4 and map_num <= 8 then
+      cluster_line = "  Cluster = 2\n"
+    elseif map_num > 9 and map_num <= 13 then
+      cluster_line = "  Cluster = 3\n"
+    elseif map_num > 13 and map_num <= 17 then
+      cluster_line = "  Cluster = 4\n"
+    elseif map_num > 18 and map_num <= 22 then
+      cluster_line = "  Cluster = 5\n"
+    elseif map_num > 22 and map_num <= 26 then
+      cluster_line = "  Cluster = 6\n"
+    elseif map_num > 27 and map_num <= 31 then
+      cluster_line = "  Cluster = 7\n"
+    elseif map_num > 31 and map_num <= 35 then
+      cluster_line = "  Cluster = 8\n"
+    elseif map_num > 36 and map_num <= 40 then
+      cluster_line = "  Cluster = 9\n"
+    elseif map_num > 40 and map_num <= 44 then
+      cluster_line = "  Cluster = 10\n"
+    elseif map_num == 9 then
+      cluster_line = "  Cluster = 11\n"
+    elseif map_num == 18 then
+      cluster_line = "  Cluster = 12\n"
+    elseif map_num == 27 then
+      cluster_line = "  Cluster = 13\n"
+    elseif map_num == 36 then
+      cluster_line = "  Cluster = 14\n"
+    elseif map_num == 45 then
+      cluster_line = "  Cluster = 15\n"
     end
 
-    -- fix for level name string linking between Doom VS Doom 2
-    local name_string_map_id
-    if OB_CONFIG.game == "doom1" or OB_CONFIG.game == "ultdoom" or OB_CONFIG.game == "heretic" then
-      name_string_map_id = map_id
-    else
-      name_string_map_id = map_num
-    end
 
-    -- special tags for Doom 1 stuff
+    local name_string_map_id = map_id
+
+    -- special tags for Heretic stuff
     local special_attributes = ''
-    if OB_CONFIG.game == "doom1" or OB_CONFIG.game == "ultdoom" then
-      if map_id == "E1M8" then
-        special_attributes = '  nointermission\n'
-        if GAME.levels[map_num].prebuilt then
-          special_attributes = special_attributes .. '  nosoundclipping\n'
-          special_attributes = special_attributes .. '  baronspecial\n'
-          special_attributes = special_attributes .. '  specialaction_lowerfloor\n'
-        end
-      elseif map_id == "E2M8" then
-        special_attributes = '  nointermission\n'
-        if GAME.levels[map_num].prebuilt then
-          special_attributes = special_attributes .. '  nosoundclipping\n'
-          special_attributes = special_attributes .. '  cyberdemonspecial\n'
-          special_attributes = special_attributes .. '  specialaction_exitlevel\n'
-        end
-      elseif map_id == "E3M8" then
-        special_attributes = '  nointermission\n'
-        if GAME.levels[map_num].prebuilt then
-          special_attributes = special_attributes .. '  nosoundclipping\n'
-          special_attributes = special_attributes .. '  spidermastermindspecial\n'
-          special_attributes = special_attributes .. '  specialaction_exitlevel\n'
-        end
-      elseif map_id == "E4M8" then
-        special_attributes = '  nointermission\n'
-        if GAME.levels[map_num].prebuilt then
-          special_attributes = special_attributes .. '  nosoundclipping\n'
-          special_attributes = special_attributes .. '  spidermastermindspecial\n'
-          special_attributes = special_attributes .. '  specialaction_lowerfloor\n'
-        end
-      else
-        special_attributes = ''
+    if map_id == "E1M8" then
+      special_attributes = '  nointermission\n'
+      if GAME.levels[map_num].prebuilt then
+        special_attributes = special_attributes .. '  nosoundclipping\n'
+        special_attributes = special_attributes .. '  ironlichspecial\n'
+        special_attributes = special_attributes .. '  specialaction_lowerfloortohighest\n'
       end
+    elseif map_id == "E2M8" then
+      special_attributes = '  nointermission\n'
+      if GAME.levels[map_num].prebuilt then
+        special_attributes = special_attributes .. '  nosoundclipping\n'
+        special_attributes = special_attributes .. '  minotaurspecial\n'
+        special_attributes = special_attributes .. '  specialaction_lowerfloortohighest\n'
+        special_attributes = special_attributes .. '  specialaction_killmonsters\n'
+      end
+    elseif map_id == "E3M8" then
+      special_attributes = '  nointermission\n'
+      if GAME.levels[map_num].prebuilt then
+        special_attributes = special_attributes .. '  nosoundclipping\n'
+        special_attributes = special_attributes .. '  dsparilspecial\n'
+        special_attributes = special_attributes .. '  specialaction_lowerfloortohighest\n'
+        special_attributes = special_attributes .. '  specialaction_killmonsters\n'
+      end
+    elseif map_id == "E4M8" then
+      special_attributes = '  nointermission\n'
+      if GAME.levels[map_num].prebuilt then
+        special_attributes = special_attributes .. '  nosoundclipping\n'
+        special_attributes = special_attributes .. '  ironlichspecial\n'
+        special_attributes = special_attributes .. '  specialaction_lowerfloortohighest\n'
+        special_attributes = special_attributes .. '  specialaction_killmonsters\n'
+      end
+    elseif map_id == "E5M8" then
+      special_attributes = '  nointermission\n'
+      if GAME.levels[map_num].prebuilt then
+        special_attributes = special_attributes .. '  nosoundclipping\n'
+        special_attributes = special_attributes .. '  minotaurspecial\n'
+        special_attributes = special_attributes .. '  specialaction_lowerfloortohighest\n'
+        special_attributes = special_attributes .. '  specialaction_killmonsters\n'
+      end
+    else
+      special_attributes = ''
     end
 
     if PARAM.no_intermission == "yes" then
@@ -709,19 +717,19 @@ if map_num == 44 then
 
       clusterdef =
       {
-        'cluster 5\n' -- MAP01-05
+        'cluster 1\n' -- E1M1-E1M4
         '{\n'
         '' .. cluster_music_line .. ''
         '  pic = "' .. interpic .. '"\n'
         '  exittext =\n'
-        '    "Hell has taken a strong hold",\n'
-        '    "upon these lands, corrupting it",\n'
-        '    "in their wake!",\n'
+        '    "The land before you is filled",\n'
+        '    "with peril...",\n'       
         '    " ",\n'
-        '    "Ahead, their forces gather in strength",\n'
-        '    "almost inumerable in count."\n'
+        '    "Wand at the ready, you venture",\n'
+        '    "forth to find the source",\n'
+        '    "of this scourge."\n'
         '}\n'
-        'cluster 6\n' -- MAP06-MAP11
+        'cluster 2\n' -- E1M5-E1M8
         '{\n'
         '' .. cluster_music_line .. ''
         '  pic = "' .. interpic .. '"\n'
@@ -737,7 +745,7 @@ if map_num == 44 then
         '    " ",\n'
         '    "The battle rages on!"\n'
         '}\n'
-        'cluster 7\n' -- MAP12-14
+        'cluster 3\n' -- E2M1-E2M4
         '{\n'
         '' .. cluster_music_line .. ''
         '  pic = "' .. interpic .. '"\n'
@@ -750,7 +758,7 @@ if map_num == 44 then
         '    "a secret point of interest",\n'
         '    "may exist nearby..."\n'
         '}\n'
-        'cluster 8\n' -- MAP15-20
+        'cluster 4\n' -- E2M5-E2M8
         '{\n'
         '' .. cluster_music_line .. ''
         '  pic = "' .. interpic .. '"\n'
@@ -763,7 +771,7 @@ if map_num == 44 then
         '    "and the opportunity for their defeat",\n'
         '    "draws ever closer..."\n'
         '}\n'
-        'cluster 9\n' -- MAP21-30
+        'cluster 5\n' -- E3M1-E3M4
         '{\n'
         '' .. cluster_music_line .. ''
         '  pic = "' .. interpic .. '"\n'
@@ -781,7 +789,79 @@ if map_num == 44 then
         '    "Hell is already preparing",\n'
         '    "for another challenge."\n'
         '}\n'
-        'cluster 10\n' -- MAP31
+        'cluster 6\n' -- E3M5-E3M8
+        '{\n'
+        '' .. cluster_music_line .. ''
+        '  pic = "' .. interpic .. '"\n'
+        '  exittext =\n'
+        '    "The land before you is filled",\n'
+        '    "with peril...",\n'       
+        '    " ",\n'
+        '    "Wand at the ready, you venture",\n'
+        '    "forth to find the source",\n'
+        '    "of this scourge."\n'
+        '}\n'
+        'cluster 7\n' -- E4M1-E4M4
+        '{\n'
+        '' .. cluster_music_line .. ''
+        '  pic = "' .. interpic .. '"\n'
+        '  exittext =\n'
+        '    "A lieutenant of hell falls",\n'
+        '    "but otherworldly shrieks echo",\n'
+        '    "further still.",\n'
+        '    " ",\n'
+        '    "You pick up your armaments",\n'
+        '    "and point them forward",\n'
+        '    "to continue the siege",\n'
+        '    "against the darkness.",\n'
+        '    " ",\n'
+        '    "The battle rages on!"\n'
+        '}\n'
+        'cluster 8\n' -- E4M5-E4M8
+        '{\n'
+        '' .. cluster_music_line .. ''
+        '  pic = "' .. interpic .. '"\n'
+        '  exittext =\n'
+        '    "You tirelessly battle against",\n'
+        '    "waves upon waves of",\n'
+        '    "seemingly infinite hellspawn.",\n'
+        '    " ",\n'
+        '    "Your tracker informs you",\n'
+        '    "a secret point of interest",\n'
+        '    "may exist nearby..."\n'
+        '}\n'
+        'cluster 9\n' -- E5M1-E5M4
+        '{\n'
+        '' .. cluster_music_line .. ''
+        '  pic = "' .. interpic .. '"\n'
+        '  exittext =\n'
+        '    "Hell\'s forces attempt to push back",\n'
+        '    "but your relentless assault on their",\n'
+        '    "breaches keeps them at bay!",\n'
+        '    " ",\n'
+        '    "More of their overlords have fallen",\n'
+        '    "and the opportunity for their defeat",\n'
+        '    "draws ever closer..."\n'
+        '}\n'
+        'cluster 10\n' -- E5M5-E5M8
+        '{\n'
+        '' .. cluster_music_line .. ''
+        '  pic = "' .. interpic .. '"\n'
+        '  exittext =\n'
+        '    "Mission Accomplished!",\n'
+        '    " ",\n'
+        '    "You have loosened hell\'s grip upon",\n'
+        '    "this place! Demonic entities flee in terror",\n'
+        '    "from your display of indomitable strength.",\n'
+        '    " ",\n'
+        '    "You realize, however,",\n'
+        '    "while hell lies defeated today,",\n'
+        '    "hell has not yet been destroyed.",\n'
+        '    "Rest for now, but remember:",\n'
+        '    "Hell is already preparing",\n'
+        '    "for another challenge."\n'
+        '}\n'
+        'cluster 11\n' -- E1M9
         '{\n'
         '' .. cluster_music_line .. ''
         '  pic = "' .. interpic .. '"\n'
@@ -793,7 +873,40 @@ if map_num == 44 then
         '    " ",\n'
         '    "You are about to prove them otherwise."\n'
         '}\n'
-        'cluster 11\n' -- MAP32
+        'cluster 12\n' -- E2M9
+        '{\n'
+        '' .. cluster_music_line .. ''
+        '  pic = "' .. interpic .. '"\n'
+        '  entertext =\n'
+        '    "It seems this secret trail",\n'
+        '    "goes further than expected.",\n'
+        '    "It is time to finish this",\n'
+        '    "once and for all and eradicate",\n'
+        '    "this hidden pocket of hellish infestation."\n'
+        '}\n'
+        'cluster 13\n' -- E3M9
+        '{\n'
+        '' .. cluster_music_line .. ''
+        '  pic = "' .. interpic .. '"\n'
+        '  entertext =\n'
+        '    "It seems this secret trail",\n'
+        '    "goes further than expected.",\n'
+        '    "It is time to finish this",\n'
+        '    "once and for all and eradicate",\n'
+        '    "this hidden pocket of hellish infestation."\n'
+        '}\n'
+        'cluster 14\n' -- E4M9
+        '{\n'
+        '' .. cluster_music_line .. ''
+        '  pic = "' .. interpic .. '"\n'
+        '  entertext =\n'
+        '    "It seems this secret trail",\n'
+        '    "goes further than expected.",\n'
+        '    "It is time to finish this",\n'
+        '    "once and for all and eradicate",\n'
+        '    "this hidden pocket of hellish infestation."\n'
+        '}\n'
+        'cluster 15\n' -- E5M9
         '{\n'
         '' .. cluster_music_line .. ''
         '  pic = "' .. interpic .. '"\n'
@@ -811,59 +924,95 @@ if map_num == 44 then
       -- create cluster information
       clusterdef =
       {
-        'cluster 1\n' -- MAP01-MAP05
+        'cluster 1\n' -- E1M1-E1M4
         '{\n'
         '' .. cluster_music_line .. ''
         '  pic = "' .. interpic .. '"\n'
         '  exittext = lookup, "STORYSTART1"\n'
         '}\n'
-        'cluster 2\n' -- MAP06-MAP11
+        'cluster 2\n' -- E1M5-E1M8
         '{\n'
         '' .. cluster_music_line .. ''
         '  pic = "' .. interpic .. '"\n'
         '  exittext = lookup, "STORYEND1"\n'
         '}\n'
-        'cluster 3\n' -- MAP012
+        'cluster 3\n' -- E2M1-E2M4
         '{\n'
         '' .. cluster_music_line .. ''
         '  pic = "' .. interpic .. '"\n'
         '  exittext = lookup, "STORYSTART2"\n'
         '}\n'
-        'cluster 4\n' -- MAP13-MAP14
-        '{\n'
-        '' .. cluster_music_line .. ''
-        '  pic = "' .. interpic .. '"\n'
-        '  exittext = lookup, "SECRETNEARBY"\n'
-        '}\n'
-        'cluster 5\n' -- MAP15-MAP20
+        'cluster 4\n' -- E2M5-E2M8
         '{\n'
         '' .. cluster_music_line .. ''
         '  pic = "' .. interpic .. '"\n'
         '  exittext = lookup, "STORYEND2"\n'
         '}\n'
-        'cluster 6\n' -- MAP21
+        'cluster 5\n' -- E3M1-E3M4
         '{\n'
         '' .. cluster_music_line .. ''
         '  pic = "' .. interpic .. '"\n'
         '  exittext = lookup, "STORYSTART3"\n'
         '}\n'
-        'cluster 7\n' -- MAP22-30
+        'cluster 6\n' -- E3M5-E3M8
         '{\n'
         '' .. cluster_music_line .. ''
         '  pic = "' .. interpic .. '"\n'
         '  exittext = lookup, "STORYEND3"\n'
         '}\n'
-        'cluster 8\n' -- MAP31
+        'cluster 7\n' -- E4M1-E4M4
+        '{\n'
+        '' .. cluster_music_line .. ''
+        '  pic = "' .. interpic .. '"\n'
+        '  exittext = lookup, "STORYSTART4"\n'
+        '}\n'
+        'cluster 8\n' -- E4M5-E4M8
+        '{\n'
+        '' .. cluster_music_line .. ''
+        '  pic = "' .. interpic .. '"\n'
+        '  entertext = lookup, "STORYEND4"\n'
+        '}\n'
+        'cluster 9\n' -- E5M1-E5M4
+        '{\n'
+        '' .. cluster_music_line .. ''
+        '  pic = "' .. interpic .. '"\n'
+        '  entertext = lookup, "STORYSTART5"\n'
+        '}\n'
+        'cluster 10\n' -- E5M5-E5M8
+        '{\n'
+        '' .. cluster_music_line .. ''
+        '  pic = "' .. interpic .. '"\n'
+        '  entertext = lookup, "STORYEND5"\n'
+        '}\n'
+        'cluster 11\n' -- E1M9
+        '{\n'
+        '' .. cluster_music_line .. ''
+        '  pic = "' .. interpic .. '"\n'
+        '  exittext = lookup, "SECRET1"\n'
+        '}\n'
+        'cluster 12\n' -- E2M9
+        '{\n'
+        '' .. cluster_music_line .. ''
+        '  pic = "' .. interpic .. '"\n'
+        '  exittext = lookup, "SECRET2"\n'
+        '}\n'
+        'cluster 13\n' -- E3M9
         '{\n'
         '' .. cluster_music_line .. ''
         '  pic = "' .. interpic .. '"\n'
         '  entertext = lookup, "SECRET1"\n'
         '}\n'
-        'cluster 9\n' -- MAP32
+        'cluster 14\n' -- E4M9
         '{\n'
         '' .. cluster_music_line .. ''
         '  pic = "' .. interpic .. '"\n'
         '  entertext = lookup, "SECRET2"\n'
+        '}\n'
+        'cluster 15\n' -- E5M9
+        '{\n'
+        '' .. cluster_music_line .. ''
+        '  pic = "' .. interpic .. '"\n'
+        '  entertext = lookup, "SECRET1"\n'
         '}\n'
       }
     end
@@ -892,7 +1041,7 @@ if map_num == 44 then
 
   local info = {}
 
-  local ipic = rand.key_by_probs(ZDOOM_SPECIALS_HERETIC.INTERPICS)
+--  local ipic = ZDOOM_SPECIALS_HERETIC.INTERPICS[cluster_num]
 
   -- collect lines for MAPINFO lump
   PARAM.mapinfolump = {}
@@ -909,7 +1058,27 @@ if map_num == 44 then
   for i=1, #GAME.levels do
 
     info.map_num = i
-    info.interpic = ipic
+    if i >= 1 and i <= 8 then
+      info.interpic = ZDOOM_SPECIALS_HERETIC.INTERPICS[1]
+    elseif i > 9 and i <= 17 then
+      info.interpic = ZDOOM_SPECIALS_HERETIC.INTERPICS[2]
+    elseif i > 18 and i <= 26 then
+      info.interpic = ZDOOM_SPECIALS_HERETIC.INTERPICS[3]
+    elseif i > 27 and i <= 35 then
+      info.interpic = ZDOOM_SPECIALS_HERETIC.INTERPICS[4]
+    elseif i > 36 and i <= 44 then
+      info.interpic = ZDOOM_SPECIALS_HERETIC.INTERPICS[5]
+    elseif i == 9 then
+      info.interpic = ZDOOM_SPECIALS_HERETIC.INTERPICS[6]
+    elseif i == 18 then
+      info.interpic = ZDOOM_SPECIALS_HERETIC.INTERPICS[7]
+    elseif i == 27 then
+      info.interpic = ZDOOM_SPECIALS_HERETIC.INTERPICS[8]
+    elseif i == 36 then
+      info.interpic = ZDOOM_SPECIALS_HERETIC.INTERPICS[9]
+    elseif i== 45 then
+      info.interpic = ZDOOM_SPECIALS_HERETIC.INTERPICS[10]
+    end
 
     if not PARAM.episode_sky_color then
       gui.printf("WARNING: User set fog color to be set by Sky Generator " ..
@@ -918,11 +1087,11 @@ if map_num == 44 then
     end
 
     if PARAM.fog_generator == "per_sky_gen" then
-      if i <= 11 then
+      if i <= 9 then
         info.fog_color = pick_sky_color_from_skygen_map(1)
-      elseif i > 11 and i <= 20 then
+      elseif i > 9 and i <= 18 then
         info.fog_color = pick_sky_color_from_skygen_map(2)
-      elseif i > 20 then
+      elseif i > 18 then
         info.fog_color = pick_sky_color_from_skygen_map(3)
       end
     elseif PARAM.fog_generator == "random" then
@@ -939,45 +1108,44 @@ if map_num == 44 then
   end
 
   -- lines for episode definition
-  if PARAM.episode_selection == "yes" then
 
-      local episode_info = add_episodedef(1)
+    table.insert(PARAM.mapinfolump,"clearepisodes\n")
+
+    local episode_info = add_episodedef(1)
+    each line in episode_info do
+      table.insert(PARAM.mapinfolump,line)
+    end
+
+    if #GAME.levels > 9 then
+      episode_info = add_episodedef(10)
       each line in episode_info do
         table.insert(PARAM.mapinfolump,line)
       end
+    end
+      
+    if #GAME.levels > 18 then
+      episode_info = add_episodedef(19)
+      each line in episode_info do
+        table.insert(PARAM.mapinfolump,line)
+      end
+    end
 
-      if #GAME.levels > 9 then
-        episode_info = add_episodedef(10)
-        each line in episode_info do
-          table.insert(PARAM.mapinfolump,line)
-        end
+    if #GAME.levels > 27 then
+      episode_info = add_episodedef(28)
+      each line in episode_info do
+        table.insert(PARAM.mapinfolump,line)
       end
+    end
       
-      if #GAME.levels > 18 then
-        episode_info = add_episodedef(19)
-        each line in episode_info do
-          table.insert(PARAM.mapinfolump,line)
-        end
+    if #GAME.levels > 36 then
+      episode_info = add_episodedef(37)
+      each line in episode_info do
+        table.insert(PARAM.mapinfolump,line)
       end
-
-      if #GAME.levels > 27 then
-        episode_info = add_episodedef(28)
-        each line in episode_info do
-          table.insert(PARAM.mapinfolump,line)
-        end
-      end
-      
-      if #GAME.levels > 36 then
-        episode_info = add_episodedef(37)
-        each line in episode_info do
-          table.insert(PARAM.mapinfolump,line)
-        end
-      end 
-      
-  end
+    end 
 
   -- collect lines for the cluster information in MAPINFO
-  local clusterinfo_lines = add_clusterdef(ipic)
+  local clusterinfo_lines = add_clusterdef(info.interpic)
   if clusterinfo_lines then
     each line in clusterinfo_lines do
       table.insert(PARAM.mapinfolump,line)
@@ -1098,15 +1266,6 @@ OB_MODULES["zdoom_specials_heretic"] =
       choices = ZDOOM_SPECIALS_HERETIC.INTERPIC_MUSIC
       default = "MUS_INTR"
       tooltip = "Changes the music playing during intermission screens."
-    }
-
-    episode_selection = {
-      label = _("Episode Selection"),
-      priority = 2
-      choices = ZDOOM_SPECIALS_HERETIC.YES_NO
-      default = "no"
-      tooltip = "Creates a classic Doom/Ultimate Doom style episode selection."
-      gap = 1
     }
 
     no_intermission = {
