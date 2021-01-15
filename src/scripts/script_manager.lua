@@ -141,8 +141,13 @@ function ScriptMan_assemble_decorate_lump()
     ARMAETUS_EPIC_TEXTURES.TEMPLATES.DEC_TREES .. "\n"
   end
   if PARAM.dynamic_lights == "yes" then
-    decorate_script_lines = decorate_script_lines ..
-    ZDOOM_SPECIALS.DYNAMIC_LIGHT_DECORATE .. "\n"
+    if OB_CONFIG.game == "heretic" then
+        decorate_script_lines = decorate_script_lines ..
+        ZDOOM_SPECIALS_HERETIC.DYNAMIC_LIGHT_DECORATE .. "\n"
+    else
+        decorate_script_lines = decorate_script_lines ..
+        ZDOOM_SPECIALS.DYNAMIC_LIGHT_DECORATE .. "\n"
+    end
   end
   if SCRIPTS.hn_marker_decorate_lines then
     decorate_script_lines = decorate_script_lines ..
@@ -189,13 +194,23 @@ function ScriptMan_assemble_gldefs_lump()
   local gldefs_lines = ""
 
   if PARAM.dynamic_lights == "yes" then
-    gldefs_lines = gldefs_lines ..
-    ZDOOM_SPECIALS.DYNAMIC_LIGHT_GLDEFS
+    if OB_CONFIG.game == "heretic" then
+        gldefs_lines = gldefs_lines ..
+        ZDOOM_SPECIALS_HERETIC.DYNAMIC_LIGHT_GLDEFS
+    else
+        gldefs_lines = gldefs_lines ..
+        ZDOOM_SPECIALS.DYNAMIC_LIGHT_GLDEFS
+    end
   end
 
   if PARAM.glowing_flats == "yes" then
-    gldefs_lines = gldefs_lines ..
-    ZDOOM_SPECIALS.GLOWING_FLATS_GLDEFS
+    if OB_CONFIG.game == "heretic" then
+        gldefs_lines = gldefs_lines ..
+        ZDOOM_SPECIALS_HERETIC.GLOWING_FLATS_GLDEFS
+    else
+        gldefs_lines = gldefs_lines ..
+        ZDOOM_SPECIALS.GLOWING_FLATS_GLDEFS
+    end
   end
 
   if gldefs_lines != "" then

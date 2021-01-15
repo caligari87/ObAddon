@@ -5,7 +5,7 @@
 --  Copyright (C) 2008-2017 Andrew Apted
 --  Copyright (C) 2018-2019 Armaetus
 --  Copyright (C) 2018-2020 MsrSgtShooterPerson
---  Adapter for Heretic by Dashodanger
+--  Adapted for Heretic by Dashodanger
 --
 --  This program is free software; you can redistribute it and/or
 --  modify it under the terms of the GNU General Public License

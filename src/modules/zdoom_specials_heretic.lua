@@ -163,13 +163,14 @@ ZDOOM_SPECIALS_HERETIC.MAP_NOMENCLATURE =
 
 ZDOOM_SPECIALS_HERETIC.INTERPICS =
 {
-  OBDNLOAD = 50
+  --[[OBDNLOAD = 50
   OBDNLOA2 = 50
   OBDNLOA3 = 50
   OBDNLOA4 = 50
   OBDNLOA5 = 50
   OBDNLOA6 = 50
-  OBDNLOA7 = 50
+  OBDNLOA7 = 50]]
+  AUTOPAGE = 50
 }
 
 ZDOOM_SPECIALS_HERETIC.INTERPIC_MUSIC =
@@ -314,21 +315,36 @@ Glow
   Flats
   {
 
-    // vanilla liquids
-    FLTFLWW1
-    FLTWAWA1
+    // vanilla liquids - I prefer that only the 'dangerous' liquids be glowing, but uncomment the first six below for all liquids
+//    FLTFLWW1
+//    FLTFLWW2
+//    FLTFLWW3
+//    FLTWAWA1
+//    FLTWAWA2
+//    FLTWAWA3
     FLTSLUD1
+    FLTSLUD2
+    FLTSLUD3
     FLATHUH1
+    FLATHUH2
+    FLATHUH3
+    FLATHUH4
     FLTLAVA1
+    FLTLAVA2
+    FLTLAVA3
+    FLTLAVA4
 
     //teleporter gate textures
     FLTTELE1
+    FLTTELE2
+    FLTTELE3
+    FLTTELE4
 
   }
 
-  Texture "FLTWAWA1", 0a0ac4, 128
-  Texture "FLTWAWA2", 0a0ac4, 128
-  Texture "FLTWAWA3", 0a0ac4, 128
+//  Texture "FLTWAWA1", 0a0ac4, 128
+//  Texture "FLTWAWA2", 0a0ac4, 128
+//  Texture "FLTWAWA3", 0a0ac4, 128
   Texture "F_SKY1", 808080, 128
 }
 ]]
