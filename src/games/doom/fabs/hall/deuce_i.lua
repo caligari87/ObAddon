@@ -174,3 +174,61 @@ PREFABS.Hallway_deuce_i_light_box_tech =
   flat_CEIL1_3 = "FLAT17"
   flat_CEIL5_2 = "FLAT23"
 }
+
+PREFABS.Hallway_deuce_i_fake_door_and_window =
+{
+  template = "Hallway_deuce_i1"
+  map = "MAP07"
+  theme = "urban"
+
+  prob = 35
+
+  tex_DOOR3 =
+  {
+    DOOR=1, 
+    DOOR=3,
+    SPCDOOR3=1
+  }
+  tex_METAL = "SHAWN2"
+  flat_CEIL1_3 = "FLAT17"
+  flat_CEIL5_2 = "FLAT23"
+}
+
+PREFABS.Hallway_deuce_i_fake_door =
+{
+  template = "Hallway_deuce_i1"
+  map = "MAP08"
+  theme = "!hell"
+
+  prob = 35
+
+  tex_DOOR3 =
+  {
+    DOOR=1, 
+    DOOR=3,
+    SPCDOOR3=1
+  }
+  tex_METAL = "SHAWN2"
+  flat_CEIL1_3 = "FLAT17"
+  flat_CEIL5_2 = "FLAT23"
+}
+
+PREFABS.Hallway_deuce_i_shutter =
+{
+  template = "Hallway_deuce_i1"
+  map = "MAP09"
+  theme = "!hell"
+
+  prob = 35
+
+  tex_STEP4 = 
+  { 
+    STEP4=2, 
+    STEP1=1, 
+    STEP2=1,
+    STEP5=1
+  }
+  tex_METAL = "SHAWN2"
+  flat_CEIL1_3 = "FLAT17"
+  flat_CEIL5_2 = "FLAT23"
+}
