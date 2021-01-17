@@ -38,8 +38,8 @@ function ZStoryGen_heretic_format_story_chunk(story_strings, info, store)
         mcevil = info.demon_name
         if string.find(story_strings, "_EVULZ") then
           mcevil = mcevil .. " the " .. info.demon_title
-        elseif string.find(story_strings, "_GOTHIC_LEVEL") then
-          mcevil = mcevil .. " of " .. info.gothic_level
+        elseif string.find(story_strings, "_CASTLE_LEVEL") then
+          mcevil = mcevil .. " of " .. info.castle_level
         end
         if PARAM.epi_names[store] == nil then
           PARAM.epi_names[store] = mcevil
@@ -50,12 +50,11 @@ function ZStoryGen_heretic_format_story_chunk(story_strings, info, store)
     story_strings = string.gsub(story_strings, "_RAND_DEMON", info.demon_name)
     story_strings = string.gsub(story_strings, "_RAND_ENGLISH_PLACE", info.anglican_name)
     story_strings = string.gsub(story_strings, "_EVULZ", info.demon_title)
-    story_strings = string.gsub(story_strings, "_GOTHIC_LEVEL", info.gothic_level)
+    story_strings = string.gsub(story_strings, "_CASTLE_LEVEL", info.castle_level)
     story_strings = string.gsub(story_strings, "_RAND_CONTRIBUTOR", info.contributor_name)
-    story_strings = string.gsub(story_strings, "_MCGUFFIN_TECH", info.tech_mcguffin)
-    story_strings = string.gsub(story_strings, "_MCGUFFIN_HELL", info.hell_mcguffin)
-    story_strings = string.gsub(story_strings, "_RAND_ENTITY_TECH", info.tech_entity)
-    story_strings = string.gsub(story_strings, "_INSTALLATION", info.installation)
+    story_strings = string.gsub(story_strings, "_MCGUFFIN_MAGICAL", info.magical_mcguffin)
+--    story_strings = string.gsub(story_strings, "_RAND_ENTITY_TECH", info.tech_entity) Can uncomment if a Heretic equivalent of tech entities is used
+--    story_strings = string.gsub(story_strings, "_INSTALLATION", info.installation) Can uncomment when installations are used in Heretic stories
   end
 
   -- dialogue quotes and apostrphes, man
@@ -130,19 +129,18 @@ function ZStoryGen_heretic_create_characters_and_stuff(lev_info)
   -- some names based on the namelib need to pass through the unique noun generator on
   -- the occasion it picks up the noun gen keywords, or the keywords will
   -- stay as they are in the string
-  local demon_name = rand.key_by_probs(namelib.NAMES.GOTHIC.lexicon.e)
+  local demon_name = rand.key_by_probs(namelib.NAMES.CASTLE.lexicon.e)
   demon_name = string.gsub(demon_name, "NOUNGENEXOTIC", namelib.generate_unique_noun("exotic"))
   info.demon_name = demon_name
 
   info.anglican_name = namelib.generate_unique_noun("anglican")
 
   info.demon_title = rand.key_by_probs(ZDOOM_STORIES_HERETIC.EVIL_TITLES)
-  info.gothic_level = Naming_grab_one("GOTHIC")
+  info.castle_level = Naming_grab_one("CASTLE")
   info.contributor_name = rand.pick(namelib.COMMUNITY_MEMBERS.contributors)
-  info.hell_mcguffin = rand.key_by_probs(ZDOOM_STORIES_HERETIC.MCGUFFINS.hellish)
-  info.tech_mcguffin = rand.key_by_probs(ZDOOM_STORIES_HERETIC.MCGUFFINS.tech)
-  info.tech_entity = rand.key_by_probs(ZDOOM_STORIES_HERETIC.ENTITIES.tech)
-  info.installation = rand.key_by_probs(ZDOOM_STORIES_HERETIC.INSTALLATIONS)
+  info.magical_mcguffin = rand.key_by_probs(ZDOOM_STORIES_HERETIC.MCGUFFINS.magical)
+--  info.tech_entity = rand.key_by_probs(ZDOOM_STORIES_HERETIC.ENTITIES.tech)
+--  info.installation = rand.key_by_probs(ZDOOM_STORIES_HERETIC.INSTALLATIONS)
 
   return info
 end
@@ -205,21 +203,9 @@ function ZStoryGen_heretic_init()
 
 
   -- create secret messages
-  local secret_entry = ZStoryGen_heretic_format_story_chunk(rand.pick(ZDOOM_STORIES_HERETIC.SECRET_TEXTS.d2_secretnearby))
-  local secret1 = ZStoryGen_heretic_format_story_chunk(rand.pick(ZDOOM_STORIES_HERETIC.SECRET_TEXTS.d2_secret1))
-  local secret2 = ZStoryGen_heretic_format_story_chunk(rand.pick(ZDOOM_STORIES_HERETIC.SECRET_TEXTS.d2_secret2))
-  table.insert(PARAM.language_lump, "SECRETNEARBY =\n")
-  for _,line in pairs(secret_entry) do
-    table.insert(PARAM.language_lump, "  " .. line .. "\n")
-  end
-  table.insert(PARAM.language_lump, "\n")
-  table.insert(PARAM.language_lump, "SECRET1 =\n")
-  for _,line in pairs(secret1) do
-    table.insert(PARAM.language_lump, "  " .. line .. "\n")
-  end
-  table.insert(PARAM.language_lump, "\n")
-  table.insert(PARAM.language_lump, "SECRET2 =\n")
-  for _,line in pairs(secret2) do
+  local secret = ZStoryGen_heretic_format_story_chunk(rand.pick(ZDOOM_STORIES_HERETIC.SECRET_TEXTS.heretic_secret))
+  table.insert(PARAM.language_lump, "SECRET =\n")
+  for _,line in pairs(secret) do
     table.insert(PARAM.language_lump, "  " .. line .. "\n")
   end
 
