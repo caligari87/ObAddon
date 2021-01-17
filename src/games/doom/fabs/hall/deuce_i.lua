@@ -175,6 +175,8 @@ PREFABS.Hallway_deuce_i_light_box_tech =
   flat_CEIL5_2 = "FLAT23"
 }
 
+--
+
 PREFABS.Hallway_deuce_i_fake_door_and_window =
 {
   template = "Hallway_deuce_i1"
@@ -185,27 +187,26 @@ PREFABS.Hallway_deuce_i_fake_door_and_window =
 
   tex_DOOR3 =
   {
-    DOOR=1, 
-    DOOR=3,
+    DOOR1=1, 
+    DOOR3=1,
     SPCDOOR3=1
   }
-  tex_METAL = "SHAWN2"
-  flat_CEIL1_3 = "FLAT17"
-  flat_CEIL5_2 = "FLAT23"
 }
 
-PREFABS.Hallway_deuce_i_fake_door =
+--
+
+PREFABS.Hallway_deuce_i_fake_door_tech =
 {
   template = "Hallway_deuce_i1"
   map = "MAP08"
-  theme = "!hell"
+  theme = "tech"
 
   prob = 35
 
   tex_DOOR3 =
   {
-    DOOR=1, 
-    DOOR=3,
+    DOOR1=1, 
+    DOOR3=1,
     SPCDOOR3=1
   }
   tex_METAL = "SHAWN2"
@@ -213,11 +214,29 @@ PREFABS.Hallway_deuce_i_fake_door =
   flat_CEIL5_2 = "FLAT23"
 }
 
-PREFABS.Hallway_deuce_i_shutter =
+PREFABS.Hallway_deuce_i_fake_door_urban =
+{
+  template = "Hallway_deuce_i1"
+  map = "MAP08"
+  theme = "urban"
+
+  prob = 35
+
+  tex_DOOR3 =
+  {
+    DOOR1=1, 
+    DOOR3=1,
+    SPCDOOR3=1
+  }
+}
+
+--
+
+PREFABS.Hallway_deuce_i_shutter_tech =
 {
   template = "Hallway_deuce_i1"
   map = "MAP09"
-  theme = "!hell"
+  theme = "tech"
 
   prob = 35
 
@@ -231,4 +250,21 @@ PREFABS.Hallway_deuce_i_shutter =
   tex_METAL = "SHAWN2"
   flat_CEIL1_3 = "FLAT17"
   flat_CEIL5_2 = "FLAT23"
+}
+
+PREFABS.Hallway_deuce_i_shutter_urban =
+{
+  template = "Hallway_deuce_i1"
+  map = "MAP09"
+  theme = "urban"
+
+  prob = 35
+
+  tex_STEP4 = 
+  { 
+    STEP4=2, 
+    STEP1=1, 
+    STEP2=1,
+    STEP5=1
+  }
 }
