@@ -602,7 +602,7 @@ PLUTONIA.MONSTERS =
     weap_prefs = { super=1.75, shotty=1.35, chain=1.3, plasma=1.1, launch=0.3 }
     room_size = "any"
     infight_damage = 3.5
-    trap_factor 1.2
+    trap_factor = 1.2
     cage_factor = 0
   }
 
