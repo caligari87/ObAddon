@@ -2653,6 +2653,57 @@ namelib.NAMES =
         The=50
       }
 
+      e =
+      {
+
+        -- Here come the Lovecraftians!
+        Ktulu=2, Dagon=3, Nyarlathotep=2,
+
+        -- civilizations that don't even exist anymore
+        -- evil stuff (Sumerians, Akkadians etc.)
+        Erishkigal=3, Utukku=3, Namtar=2, Lamashtu=2,
+        Ninurta=3, ["Ardat Lili"]=2, Asag=2,
+
+        -- Dungeons and Dragons / Pathfinder
+        -- note: a lot of these names are probably borrowed
+        -- from elsewhere (i.e. real world cultures) so they
+        -- should be sorted into there instead...
+        Yeenoghlu=3, Adimarchus=3, Lolth=3,
+        Gresil=2, Jubilex=3, Kerzit=2, Caasimolar=3,
+
+        --==| couldn't figure it out |==--
+        --+ totally no clue
+        Ceren=2, Dozod=2, Kalrac=2, Quenna=3,
+
+        Draco=2, -- it's Latin for dragon but I don't know anything else more specific
+        Ouroboros=5, -- actually sort of a neutral symbol
+
+        -- Hexen?
+        Vuradi=2,
+
+        --+ Are these book authors? They don't seem to be the 'demonic' sort.
+        Oltion=2, Orgel=2,
+
+        --+ Is this supposed to be Balrog from LotR or a variant from other media?
+        Balrok=3,
+
+        -- Chaos Lords
+        -- See: https://en.wikipedia.org/wiki/Law_and_Chaos
+        Arioch=3, Mabelode=3, Urleh=3, Xiombarg=3,
+
+        -- Demonology A-Z names, see: https://hellhorror.com/demon-names-list-A/
+        Abatu=3, Abdiel=3, Abduxuel=3, Abezethibou=3, Adramelech=3, Angrboda=3, Apollyon=3,
+        Asakku=3, Atazoth=3, Flauros=3, Glasyalabolas=3, Jezebeth=3, Merihim=3, Morax=3,
+        Nicor=3, Nybbas=3, Nysrogh=3, Onoskelis=3, Philatanus=3, Sonneillon=3, Sorath=4,
+        Thamuz=3, Valafar=3, Verdelet=3,
+
+
+        -- ObAddon contributor names
+        NOUNMEMBERS = 90
+
+        NOUNGENEXOTIC = 700
+      }
+
       r =
       {
         Path=50

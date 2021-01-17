@@ -949,31 +949,31 @@ if map_num == 44 then
         '{\n'
         '' .. cluster_music_line .. ''
         '  pic = "' .. interpic .. '"\n'
-        '  exittext = lookup, "SECRET1"\n'
+        '  exittext = lookup, "SECRET"\n'
         '}\n'
         'cluster 12\n' -- E2M9
         '{\n'
         '' .. cluster_music_line .. ''
         '  pic = "' .. interpic .. '"\n'
-        '  exittext = lookup, "SECRET2"\n'
+        '  exittext = lookup, "SECRET"\n'
         '}\n'
         'cluster 13\n' -- E3M9
         '{\n'
         '' .. cluster_music_line .. ''
         '  pic = "' .. interpic .. '"\n'
-        '  entertext = lookup, "SECRET1"\n'
+        '  entertext = lookup, "SECRET"\n'
         '}\n'
         'cluster 14\n' -- E4M9
         '{\n'
         '' .. cluster_music_line .. ''
         '  pic = "' .. interpic .. '"\n'
-        '  entertext = lookup, "SECRET2"\n'
+        '  entertext = lookup, "SECRET"\n'
         '}\n'
         'cluster 15\n' -- E5M9
         '{\n'
         '' .. cluster_music_line .. ''
         '  pic = "' .. interpic .. '"\n'
-        '  entertext = lookup, "SECRET1"\n'
+        '  entertext = lookup, "SECRET"\n'
         '}\n'
       }
     end
