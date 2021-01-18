@@ -453,32 +453,31 @@ jungle =
       MIDBARS3 = 50
     }
 
-    -- Pending alterations
     style_list =
     {
-      doors = { none=15, few=30, some=65, heaps=25 }
-      outdoors = { none=5, few=35, some=60, heaps=10 }
-      steepness = { few=15, some=90, heaps=50 }
-      pictures = { few=50, some=50, heaps=70 }
-      big_rooms = { none=25, few=60, some=15, heaps=10 }
-      big_outdoor_rooms = { none=25, few=25, some=80, heaps=10 }
-      ambushes = { none=10, few=15, some=55, heaps=35 }
-      hallways = { none=20, few=60, some=15, heaps=5 }
-      teleporters = { none=15, few=25, some=60, heaps=10 }
-      keys = { none=15, few=40, some=60, heaps=25 }
-      trikeys = { none=10, few=50, some=80, heaps=25 }
-      liquids = { none=20, few=45, some=25, heaps=15 }
-      traps = { few=20, some=70, heaps=40 }
-      switches = { none=25, few=60, some=35, heaps=10 }
-      cages    = { none=15, few=25, some=65, heaps=10 }
-      symmetry = { none=55, few=25, some=40, heaps=20 }
-      secrets = { few=65, some=40, heaps=10 }
-      scenics = { none=5,  few=30, some=60, heaps=80}
-      caves = { none=60, few=35, some=8, heaps=3 }
-      barrels = { none=45, few=15, some=5, heaps=4 }
-      porches = { none=0, few=25, some=40, heaps=80 }
-      fences  = { none=5, few=15, some=80, heaps=25 }
-      beams  = { none=15, few=60, some=30, heaps=10 }
+      doors = { none=5, few=30, some=65, heaps=20 }
+      outdoors = { few=15, some=80, heaps=30 }
+      steepness = { some=75, heaps=40 }
+      pictures = { few=20, some=50, heaps=70 }
+      big_rooms = { few=60, some=25, heaps=10 }
+      big_outdoor_rooms = { none=10, few=50, some=20, heaps=10 }
+      ambushes = { few=25, some=55, heaps=85 }
+      hallways = { none=25, few=70, some=15, heaps=5 }
+      teleporters = { none=10, few=30, some=80, heaps=10 }
+      keys = { few=20, some=90, heaps=35 }
+      trikeys = { none=15, few=40, some=80, heaps=35 }
+      liquids = { none=15, few=45, some=35, heaps=15 }
+      traps = { few=10, some=40, heaps=70 }
+      switches = { none=5, few=40, some=75, heaps=15 }
+      cages    = { none=10, few=45, some=85, heaps=15 }
+      symmetry = { none=85, few=55, some=15, heaps=10 }
+      secrets = { few=25, some=80, heaps=30 }
+      scenics = { few=10, some=75, heaps=90 }
+      caves = { none=80, few=35, some=5, heaps=1 }
+      barrels = { none=15, few=55, some=15, heaps=5 }
+      porches = { few=25, some=30, heaps=80 }
+      fences  = { few=10, some=70, heaps=35 }
+      beams  = { few=10, some=20, heaps=70 }
     }
 
     skyboxes =
