@@ -146,6 +146,68 @@ function HERETIC.get_levels()
       if LEV.prebuilt then
         LEV.name_theme = LEV.prebuilt.name_theme or "BOSS"
       end
+      
+          -- procedural gotcha management code
+
+    -- Prebuilts are to exist over procedural gotchas
+    -- this means procedural gotchas will not override
+    -- Icon of Sin for example if prebuilts are still on
+    if not LEV.prebuilt then
+
+      --handling for the Final Only option
+      if OB_CONFIG.procedural_gotchas == "final" then
+        if OB_CONFIG.length == "single" then
+          if map == 1 then LEV.is_procedural_gotcha = true end
+        elseif OB_CONFIG.length == "few" then
+          if map == 4 then LEV.is_procedural_gotcha = true end
+        elseif OB_CONFIG.length == "episode" then
+          if map == 11 then LEV.is_procedural_gotcha = true end
+        elseif OB_CONFIG.length == "game" then
+          if map == 30 then LEV.is_procedural_gotcha = true end
+        end
+      end
+
+      --every 10 maps
+      if OB_CONFIG.procedural_gotchas == "epi" then
+        if map == 11 or map == 20 or map == 30 then
+          LEV.is_procedural_gotcha = true
+        end
+      end
+      if OB_CONFIG.procedural_gotchas == "2epi" then
+        if map == 5 or map == 11 or map == 16 or map == 20 or map == 25 or map == 30 then
+          LEV.is_procedural_gotcha = true
+        end
+      end
+      if OB_CONFIG.procedural_gotchas == "3epi" then
+        if map == 3 or map == 7 or map == 11 or map == 14 or map == 17 or map == 20 or map == 23 or map == 27 or map == 30 then
+          LEV.is_procedural_gotcha = true
+        end
+      end
+      if OB_CONFIG.procedural_gotchas == "4epi" then
+        if map == 3 or map == 6 or map == 9 or map == 11 or map == 14 or map == 16 or map == 18 or map == 20 or map == 23 or map == 26 or map == 28 or map == 30 then
+          LEV.is_procedural_gotcha = true
+        end
+      end
+
+      --5% of maps after map 4
+      if OB_CONFIG.procedural_gotchas == "5p" then
+        if map > 4 and map != 15 and map != 31 then
+          if rand.odds(5) then LEV.is_procedural_gotcha = true end
+        end
+      end
+
+      -- 10% of maps after map 4
+      if OB_CONFIG.procedural_gotchas == "10p" then
+        if map > 4 and map != 15 and map != 31 then
+          if rand.odds(10) then LEV.is_procedural_gotcha = true end
+        end
+      end
+
+      -- for masochists... or debug testing
+      if OB_CONFIG.procedural_gotchas == "all" then
+        LEV.is_procedural_gotcha = true
+      end
+    end
 
     end -- for map
 
@@ -156,5 +218,6 @@ function HERETIC.get_levels()
     end
 
   end -- for episode
+  
 end
 

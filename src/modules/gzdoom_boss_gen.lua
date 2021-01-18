@@ -950,41 +950,6 @@ class bossabilitygiver_pyro : bossabilitygiver { }
 class bossabilitygiver_bounce : bossabilitygiver { }
 class bossabilitygiver_homing : bossabilitygiver { }
 ]]
-  BAR = [[if(bossFound)
-        {
-        ThinkerIterator BossFinder = ThinkerIterator.Create("bossController");
-        bossController mo;
-        while (mo = bossController(BossFinder.Next()))
-        {
-            if(mo.boss && mo.bossactive && !mo.bossdead)
-            {
-            int bars = (mo.boss.health * 20) / mo.boss.starthealth;
-            string barsx;
-            for(int i = 0; i<bars; i++)
-            {
-                barsx.AppendFormat("I");
-            }
-            string name = Stringtable.Localize(string.format("%%s%%i","$BOSS_NAME",currentboss));
-            string bosshp = string.format("%%s %%s %%s", name, "\n", barsx);
-            if(name.length()>32)
-            {
-                if(name.length()>41)
-                {
-                    screen.DrawText(SmallFont, Font.CR_RED, -92, -32, bosshp, DTA_Clean, true);
-                }
-                else
-                {
-                    screen.DrawText(BigFont, Font.CR_RED, -92, -32, bosshp, DTA_Clean, true);
-                }
-            }
-            else
-            {
-                screen.DrawText(BigFont, Font.CR_RED, 32, -32, bosshp, DTA_Clean, true);
-            }
-            }
-        }
-        }
-]]
   LVL = [[if(level.LevelNum == NUM)
         {
             bossEnabled = true;
@@ -1283,6 +1248,82 @@ BOSS_GEN_TUNE.TRAITS =
   }
 }
 
+function BOSS_GEN_TUNE.game_specific_hpbar()
+    if OB_CONFIG.game == "heretic" then
+     BOSS_GEN_TUNE.TEMPLATES.BAR = [[if(bossFound)
+        {
+        ThinkerIterator BossFinder = ThinkerIterator.Create("bossController");
+        bossController mo;
+        while (mo = bossController(BossFinder.Next()))
+        {
+            if(mo.boss && mo.bossactive && !mo.bossdead)
+            {
+            int bars = (mo.boss.health * 20) / mo.boss.starthealth;
+            string barsx;
+            for(int i = 0; i<bars; i++)
+            {
+                barsx.AppendFormat("1");
+            }
+            string name = Stringtable.Localize(string.format("%%s%%i","$BOSS_NAME",currentboss));
+            string bosshp = string.format("%%s %%s %%s", name, "\n", barsx);
+            if(name.length()>32)
+            {
+                if(name.length()>41)
+                {
+                    screen.DrawText(SmallFont, Font.CR_RED, -92, -32, bosshp, DTA_Clean, true);
+                }
+                else
+                {
+                    screen.DrawText(BigFont, Font.CR_RED, -92, -32, bosshp, DTA_Clean, true);
+                }
+            }
+            else
+            {
+                screen.DrawText(BigFont, Font.CR_RED, 32, -32, bosshp, DTA_Clean, true);
+            }
+            }
+        }
+        }
+]]
+    else
+     BOSS_GEN_TUNE.TEMPLATES.BAR = [[if(bossFound)
+        {
+        ThinkerIterator BossFinder = ThinkerIterator.Create("bossController");
+        bossController mo;
+        while (mo = bossController(BossFinder.Next()))
+        {
+            if(mo.boss && mo.bossactive && !mo.bossdead)
+            {
+            int bars = (mo.boss.health * 20) / mo.boss.starthealth;
+            string barsx;
+            for(int i = 0; i<bars; i++)
+            {
+                barsx.AppendFormat("I");
+            }
+            string name = Stringtable.Localize(string.format("%%s%%i","$BOSS_NAME",currentboss));
+            string bosshp = string.format("%%s %%s %%s", name, "\n", barsx);
+            if(name.length()>32)
+            {
+                if(name.length()>41)
+                {
+                    screen.DrawText(SmallFont, Font.CR_RED, -92, -32, bosshp, DTA_Clean, true);
+                }
+                else
+                {
+                    screen.DrawText(BigFont, Font.CR_RED, -92, -32, bosshp, DTA_Clean, true);
+                }
+            }
+            else
+            {
+                screen.DrawText(BigFont, Font.CR_RED, 32, -32, bosshp, DTA_Clean, true);
+            }
+            }
+        }
+        }
+]]
+    end
+end
+
 function BOSS_GEN_TUNE.grab_random_taunt()
   return rand.key_by_probs(BOSS_GEN_TUNE.TAUNTS)
 end
@@ -1468,6 +1509,7 @@ function BOSS_GEN_TUNE.all_done()
   scripty = string.gsub(scripty, "LEVELCODE", PARAM.lvlstr)
 
   if PARAM.boss_gen_hpbar == "yes" then
+    BOSS_GEN_TUNE.game_specific_hpbar()
     scripty = string.gsub(scripty, "BOSSHPBAR", BOSS_GEN_TUNE.TEMPLATES.BAR)
   else
     scripty = string.gsub(scripty, "BOSSHPBAR", "")
@@ -1610,7 +1652,7 @@ OB_MODULES["gzdoom_boss_gen"] =
 {
   label = _("[Exp]GZDoom Boss Generator")
   
-  game = "doomish"
+--  game = "doomish"
 
   side = "right"
   priority = 92
