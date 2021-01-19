@@ -138,7 +138,7 @@ OB_MODULES["level_control"] =
 {
   label = _("Level/Theme Control")
 
-  game = "doomish"
+--  game = "doomish"
 
   priority = 103
 

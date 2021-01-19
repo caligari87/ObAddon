@@ -12,6 +12,24 @@
 --
 ------------------------------------------------------------------------
 
+HEXEN.SINKS =
+{
+
+  sky_plain =
+  {
+    mat   = "_SKY"
+    dz    = 64
+    light = 16
+  }
+  
+  liquid_plain =
+  {
+    mat = "_LIQUID"
+    dz  = -12
+  }
+  
+}
+
 HEXEN.THEMES =
 {
   DEFAULTS =
@@ -41,6 +59,72 @@ HEXEN.THEMES =
     dungeon =
     {
     
+      floor_sinks =
+      {
+        liquid_plain = 50
+      }
+
+      ceiling_sinks =
+      {
+        sky_plain = 50
+      }
+    
+      sink_style =
+      {
+        sharp = 1
+        curved = 0.1
+      }   
+    
+      fence_groups =
+      {
+        PLAIN = 50
+      }
+      
+      beam_groups =
+      {
+        beam_metal = 50
+      }
+      
+      fences =
+      {
+        STEEL01=40
+        STEEL02=10
+        STEEL05=10
+        STEEL06=15
+        STEEL07=5
+        STEEL08=5
+      } 
+      
+      cage_mats =
+      {
+        STEEL01=40
+        STEEL02=10
+        STEEL05=10
+        STEEL06=15
+        STEEL07=5
+        STEEL08=5
+      }
+      
+      scenic_fences =
+      {
+        SEWER_BAR3 = 50
+        SEWER_BAR4 = 50
+      }
+      
+      fence_posts =
+      {
+        Post = 50
+      }
+      
+      facades =
+      {
+        CASTLE07=35
+        CAVE02=15
+        PRTL03=5
+      }
+      
+      steps_mat = "F_011"
+      
     }
     
     elemental =
@@ -65,6 +149,9 @@ HEXEN.ROOM_THEMES =
 
     dungeon_monktan =
   {
+    env  = "building"
+    prob = 50
+  
     walls =
     {
       MONK02=40
@@ -98,6 +185,9 @@ HEXEN.ROOM_THEMES =
 
     dungeon_monktan_large =
   {
+    env  = "building"
+    prob = 50
+    
     walls =
     {
       MONK14=35
@@ -133,10 +223,13 @@ HEXEN.ROOM_THEMES =
 
   dungeon_monkgray =
   {
+   env  = "building"
+   prob = 50
+  
     walls =
     {
       MONK01=30
-  }
+    }
 
     floors =
     {
@@ -639,6 +732,9 @@ HEXEN.ROOM_THEMES =
 
   dungeon_outdoors1 =
   {
+    env  = "outdoor"
+    prob = 50
+  
     floors =
     {
       F_024=75
@@ -677,6 +773,9 @@ HEXEN.ROOM_THEMES =
 
   dungeon_outdoors2 =
   {
+    env  = "cave"
+    prob = 50
+  
     floors =
     {
       F_024=50
@@ -2471,7 +2570,7 @@ OB_THEMES["dungeon"] =
   mixed_prob = 50
 }
 
-OB_THEMES["elemental"] =
+UNFINISHED["elemental"] =
 {
   label = _("Elemental")
   game = "hexen"
@@ -2479,7 +2578,7 @@ OB_THEMES["elemental"] =
   mixed_prob = 50
 }
 
-OB_THEMES["wilderness"] =
+UNFINISHED["wilderness"] =
 {
   label = _("Wilderness")
   game = "hexen"
@@ -2487,7 +2586,7 @@ OB_THEMES["wilderness"] =
   mixed_prob = 50
 }
 
---[[OB_THEMES["x_cave"] =
+UNFINISHED["x_cave"] =
 {
   label = _("Cave")
   game = "hexen"
@@ -2495,7 +2594,7 @@ OB_THEMES["wilderness"] =
   mixed_prob = 20
 }
 
-OB_THEMES["x_ice"] =
+UNFINISHED["x_ice"] =
 {
   label = _("Ice")
   game = "hexen"
@@ -2503,7 +2602,7 @@ OB_THEMES["x_ice"] =
   mixed_prob = 10
 }
 
-OB_THEMES["x_swamp"] =
+UNFINISHED["x_swamp"] =
 {
   label = _("Swamp")
   game = "hexen"
@@ -2511,12 +2610,11 @@ OB_THEMES["x_swamp"] =
   mixed_prob = 20
 }
 
-OB_THEMES["x_village"] =
+UNFINISHED["x_village"] =
 {
   label = _("Village")
   game = "hexen"
   name_theme = "URBAN"
   mixed_prob = 20
 }
-]]
 
