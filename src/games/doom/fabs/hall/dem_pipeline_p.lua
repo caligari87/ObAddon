@@ -16,7 +16,6 @@ PREFABS.Hallway_pipeline_p1 =
   seed_w = 2
   seed_h = 2
 
-  engine = "gzdoom"
   can_flip = true
 
   sound = "Pipeline"
