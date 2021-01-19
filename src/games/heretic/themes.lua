@@ -421,15 +421,15 @@ HERETIC.THEMES =
     
     narrow_halls =
     {
-      vent = 50
+--      vent = 50
       mineshaft = 50
-      access = 50
+--      access = 50
     }
 
     wide_halls =
     {
       deuce = 50
-      metro = 50
+--      metro = 50
     }
 
     floor_sinks =

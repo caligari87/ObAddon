@@ -136,7 +136,7 @@ ZDOOM_STORIES_HERETIC.STORIES =
       see to the sealing of your fate. We will meet soon."]],
 
       -- eye for an eye
-      [["You!" a bellowing voices beckons. You cannot scry the source, but
+      [["You!" a bellowing voice beckons. You cannot scry the source, but
       its speech continues. "You have scarred me before. You do not remember
       me, but soon you will. I am _RAND_DEMON the _EVULZ. I shall inflict
       pain on you as you had on me. I will tear you limb from limb."
