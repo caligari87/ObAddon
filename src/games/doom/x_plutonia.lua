@@ -162,8 +162,8 @@ PLUTONIA.EPISODES =
 }
 
 -- WORK IN PROGRESS --
--- TEMPORARY SHIT, DO NOT REENABLE JUST YET! --
--- -Armaetus, October 2nd, 2020
+-- TEMPORARY SHIT, USABLE BUT NEEDS MORE!
+-- -Armaetus, January 19th, 2021
 
 -- More tables and other crap are needed so
 -- Plutonia has some exclusive themes added,
@@ -179,10 +179,10 @@ PLUTONIA.EPISODES =
 
 
 -- Copied from x_tnt.lua as a placeholder, mostly.
-UNFINISHED.THEMES =
+--[[PLUTONIA.THEMES =
 {
 
-jungle =
+DEFAULTS =
   {
     liquids =
     {
@@ -190,13 +190,6 @@ jungle =
       blood = 30
       water = 40
       lava  = 10
-    }
-
-    entity_remap =
-    {
-      k_red    = "ks_red"
-      k_blue   = "ks_blue"
-      k_yellow = "ks_yellow"
     }
 
     facades =
@@ -209,19 +202,6 @@ jungle =
       BIGBRIK1 = 30
       BSTONE2  = 20
       BRICK4   = 10
-    }
-
-    prefab_remap =
-    {
-      DOORBLU  = "DOORBLU2"
-      DOORRED  = "DOORRED2"
-      DOORYEL  = "DOORYEL2"
-
-      SILVER3  = "MURAL1"
-      GATE3    = "FLAT22"
-      GATE4    = "FLAT22"
-      REDWALL  = "DOKGRIR"
-      SW1COMP  = "SW1CMT"
     }
 
     window_groups =
@@ -478,7 +458,12 @@ jungle =
       porches = { few=25, some=30, heaps=80 }
       fences  = { few=10, some=70, heaps=35 }
       beams  = { few=10, some=20, heaps=70 }
+      mon_variety = { some=10, heaps=95}
     }
+
+    ceil_light_prob = 50
+
+    cage_lights = { 0, 8, 12, 13, 17 }
 
     skyboxes =
     {
@@ -487,60 +472,281 @@ jungle =
       Skybox_garrett_city = 15
     }
   }
-}
 
-UNFINISHED.ROOM_THEMES =
-{
-
--- JUNGLE BULLSHIT --
--- TEMP TEMP TEMP! --
-
-  jungle_placeholder =
+  tech =
   {
-    env  = "building"
-    prob = 25
 
-    walls =
+    entity_remap =
     {
-      STARTAN2 = 50
-      STARTAN3 = 60
-
-      STARG1 = 40
-      STARG2 = 20
-      STARG3 = 40
-
-      STARGR1 = 50
-      STARGR2 = 20
-
-      STARBR2  = 40
+      green_torch = "mercury_lamp"
     }
 
-    floors =
+    ceil_light_prob = 70
+
+    monster_prefs =
     {
-      FLOOR4_8 = 50
-      FLOOR5_1 = 50
-      FLOOR5_3 = 30
-      FLOOR0_3 = 30
-      FLOOR5_1 = 25
-      FLOOR3_3 = 20
-      FLOOR0_2 = 20
-      FLOOR0_1 = 20
-      FLOOR4_6 = 15
-      FLOOR7_1 = 15
-      FLAT4 = 15
-      FLAT14 = 10
-      SLIME15 = 10
-      SLIME16 = 10
-      FLOOR1_6 = 6
-      FLOOR1_1 = 8
-      FLOOR0_5 = 5
-      FLAT5 = 5
+      gunner = 1.5
+      mancubus = 0.9
+      revenant = 1.1
+      knight = 1.1
+      imp = 1.33
+      demon = 0.9
+      vile = 0.6
+      shooter = 1.2
+      zombie = 0.9
+      skull = 0.2
     }
+
+        beam_groups =
+    {
+      beam_shiny = 75
+      beam_quakeish = 50
+      beam_lights = 50
+      beam_lights_white = 50
+      beam_lights_vertical_tech = 50
+      beam_textured = 50
+    }
+
+    style_list =
+    {
+      doors = { none=5, few=30, some=65, heaps=20 }
+      outdoors = { few=15, some=80, heaps=30 }
+      steepness = { few=25, some=75, heaps=40 }
+      pictures = { few=20, some=50, heaps=70 }
+      big_rooms = { none=15, few=60, some=25, heaps=10 }
+      big_outdoor_rooms = { none=20, few=50, some=20, heaps=10 }
+      windows = { few=10, some=60, heaps=30 }
+      ambushes = { few=25, some=75, heaps=40 }
+      hallways = { none=25, few=70, some=15, heaps=5 }
+      teleporters = { none=15, few=70, some=25, heaps=5 }
+      keys = { none=10, few=40, some=90, heaps=25 }
+      trikeys = { none=15, few=40, some=80, heaps=35 }
+      liquids = { none=20, few=75, some=35, heaps=10 }
+      traps = { few=15, some=80, heaps=40 }
+      switches = { none=10, few=40, some=75, heaps=15 }
+      cages    = { none=20, few=60, some=20, heaps=15 }
+      symmetry = { none=85, few=55, some=15, heaps=15 }
+      secrets = { few=25, some=80, heaps=30 }
+      scenics = { few=10, some=75, heaps=90 }
+      caves = { none=85, few=15, some=3 }
+      barrels = { none=5, few=25, some=65, heaps=15 }
+      porches = { few=25, some=80, heaps=35 }
+      fences  = { few=20, some=70, heaps=35 }
+      beams  = { few=10, some=50, heaps=30 }
+      mon_variety = { some=10, heaps=95}
+    }
+
+    sink_style =
+    {
+      sharp = 1
+      curved = 1
+    }
+
+    skyboxes =
+    {
+      Skybox_generic = 50
+      Skybox_hellish_city = 50
+    }
+
+    cage_lights = { 0, 8, 12, 13, 17 }
+
+    techy_doors = true
+
+    post_mat = "DOORSTOP"
   }
-}
+ }
+
+  urban =
+  {
+
+    ceil_light_prob = 60
+
+    monster_prefs =
+    {
+      gunner = 2.0
+      mancubus = 0.9
+      revenant = 1.3
+      knight = 1.2
+      imp = 1.5
+      demon = 1.2
+      vile = 1.2
+      shooter = 1.33
+      zombie = 0.9
+      skull = 0.5
+      pain = 1.33
+    }
+
+    beam_groups =
+    {
+      beam_gothic = 75
+      beam_quakeish = 30
+      beam_lights = 25
+      beam_lights_white = 40
+      beam_lights_vertical_tech = 30
+      beam_wood = 30
+      beam_textured = 50
+    }
+
+    style_list =
+    {
+      doors = { few=40, some=85, heaps=25 }
+      outdoors = { few=15, some=80, heaps=30 }
+      steepness = { few=15, some=45, heaps=90 }
+      pictures = { few=10, some=50, heaps=70 }
+      big_rooms = { none=5, few=60, some=35, heaps=15 }
+      big_outdoor_rooms = { none=10, few=50, some=30, heaps=10 }
+      windows = { few=10, some=50, heaps=80 }
+      ambushes = { few=25, some=40, heaps=50 }
+      hallways = { none=20, few=70, some=20, heaps=5 }
+      teleporters = { none=15, few=35, some=70, heaps=10 }
+      keys = { none=5, few=20, some=90, heaps=35 }
+      trikeys = { none=10, few=40, some=80, heaps=35 }
+      liquids = { none=20, few=60, some=45, heaps=15 }
+      traps = { few=25, some=80, heaps=60 }
+      switches = { none=10, few=40, some=75, heaps=25 }
+      cages    = { none=20, few=25, some=60, heaps=15 }
+      symmetry = { none=45, few=55, some=25, heaps=25 }
+      secrets = { few=15, some=80, heaps=35 }
+      scenics = { few=5, some=45, heaps=90 }
+      caves = { none=75, few=15, some=3 }
+      barrels = { none=25, few=75, some=15, heaps=10 }
+      porches = { none=5, few=15, some=35, heaps=85 }
+      fences  = { none=10, few=10, some=70, heaps=40 }
+      beams  = { few=20, some=50, heaps=40 }
+      mon_variety = { some=10, heaps=95}
+    }
+
+    sink_style =
+    {
+      sharp = 1
+      curved = 0.7
+    }
+
+    skyboxes =
+    {
+      Skybox_generic = 50
+      Skybox_hellish_city = 50
+    }
+
+    cage_lights = { 0, 1, 8, 12, 13, 17 }
+
+  }
+
+hell =
+  {
+    liquids =
+    {
+      lava   = 80
+      blood  = 40
+      slime  = 30
+      water  = 20
+      nukage = 5
+    }
+
+    entity_remap =
+    {
+      k_red    = "ks_red"
+      k_blue   = "ks_blue"
+      k_yellow = "ks_yellow"
+    }
+
+    prefab_remap =
+    {
+      DOORBLU  = "DOORBLU2"
+      DOORRED  = "DOORRED2"
+      DOORYEL  = "DOORYEL2"
+
+      BIGDOOR1 = "BIGDOOR6"
+      BIGDOOR2 = "BIGDOOR7"
+      BIGDOOR3 = "BIGDOOR7"
+      BIGDOOR4 = "BIGDOOR5"
+
+      SW1COMP  = "SW1LION"
+      SW1PIPE  = "SW1BROWN"
+    }
+
+    park_decor =
+    {
+      burnt_tree = 75
+      brown_stub = 55
+      big_tree = 40
+      evil_eye   = 10
+      skull_rock = 20
+      skull_cairn = 25
+      skull_pole = 20
+      skull_kebab = 15
+      green_pillar = 5
+      green_column  = 5
+      green_column_hrt = 3
+      red_pillar = 5
+      red_column = 5
+      red_column_skl = 3
+    }
+
+    beam_groups =
+    {
+      beam_gothic = 50
+      beam_quakeish = 50
+      beam_lights_vertical_hell = 50
+      beam_wood = 50
+      beam_textured = 50
+    }
+
+    style_list =
+    {
+      doors = { none=15, few=60, some=30, heaps=15 }
+      outdoors = { none=5, few=25, some=60, heaps=10 }
+      steepness = { few=50, some=50, heaps=50 }
+      pictures = { few=30, some=50, heaps=70 }
+      big_rooms = { none=25, few=60, some=25, heaps=10 }
+      big_outdoor_rooms = { none=15, few=25, some=80, heaps=15 }
+      ambushes = { few=15, some=40, heaps=75 }
+      hallways = { none=20, few=70, some=20, heaps=5 }
+      teleporters = { none=10, few=25, some=60, heaps=20 }
+      keys = { none=20, few=30, some=50, heaps=85 }
+      trikeys = { none=20, few=30, some=80, heaps=50 }
+      liquids = { none=15, few=20, some=65, heaps=15 }
+      traps = { few=10, some=75, heaps=50 }
+      switches = { none=20, few=30, some=60, heaps=10 }
+      cages    = { none=10, few=40, some=85, heaps=20 }
+      symmetry = { none=75, few=25, some=55, heaps=15 }
+      secrets = { few=65, some=40, heaps=10 }
+      scenics = { few=20, some=60, heaps=80}
+      caves = { none=60, few=30, some=8, heaps=3 }
+      barrels = { none=75, few=20, some=5, heaps=4 }
+      porches = { few=25, some=80, heaps=40 }
+      fences  = { none=10, few=15, some=80, heaps=35 }
+      beams  = { none=15, few=25, some=70, heaps=20 }
+      windows = { few=15, some=85, heaps=30 }
+    }
+
+    monster_prefs =
+    {
+      zombie  = 0.8
+      shooter = 1.2
+      vile    = 1.3
+      imp     = 1.5
+      demon   = 1.3
+      spectre = 1.3
+      skull   = 1.5
+      gunner  = 1.5
+      revenant = 1.35
+      mancubus = 1.3
+      knight = 1.25
+      Cyberdemon = 1.5
+      Mastermind = 1.5
+    }
+
+    skyboxes =
+    {
+      Skybox_garrett_hell = 50
+      Skybox_hellish_city = 30
+    }
+
+    ceil_light_prob = 30
+  }]]
 
 -- Seeing if this works to set up Plutonia style traps and ambushes..
-
 PLUTONIA.MONSTERS =
 {
 
@@ -549,7 +755,7 @@ PLUTONIA.MONSTERS =
     id = 9
     r = 20
     h = 56
-    level = 1.7
+    level = 1.5
     prob = 90
     health = 30
     damage = 3.0
@@ -560,7 +766,7 @@ PLUTONIA.MONSTERS =
     weap_needed = { shotty=true }
     species = "zombie"
     replaces = "zombie"
-    replace_prob = 15
+    replace_prob = 20
     room_size = "any" --small
     disloyal = true
     trap_factor = 2.5
@@ -579,7 +785,7 @@ PLUTONIA.MONSTERS =
     attack = "missile"
     density = 1.0
     replaces = "demon"
-    replace_prob = 15
+    replace_prob = 25
     weap_prefs = { shotty=1.5, chain=1.25, super=1.2 }
     room_size = "any" --small
     trap_factor = 0.7 --0.3
@@ -643,8 +849,9 @@ PLUTONIA.MONSTERS =
     weap_min_damage = 40
     float = true
     weap_prefs = { launch=1.25, super=1.75, chain=1.2, shotty=0.7, plasma=1.2 }
-    room_size = "medium" --any
+    room_size = "large" --any
     trap_factor = 0.85
+    cage_factor = 0
     infight_damage = 21
   }
 
@@ -653,7 +860,7 @@ PLUTONIA.MONSTERS =
     id = 65
     r = 20
     h = 56
-    level = 2
+    level = 1.8
     prob = 60
     health = 70
     damage = 5.5
@@ -664,9 +871,9 @@ PLUTONIA.MONSTERS =
     weap_prefs = { shotty=1.5, super=1.75, chain=2.0, plasma=1.2, launch=1.1 }
     density = 1.1
     species = "zombie"
-    room_size = "medium" --any
+    room_size = "any"
     replaces = "shooter"
-    replace_prob = 15
+    replace_prob = 20
     disloyal = true
     trap_factor = 5.0
     infight_damage = 25
@@ -687,9 +894,10 @@ PLUTONIA.MONSTERS =
     weap_prefs = { launch=1.75, plasma=1.75, chain=1.5, super=1.25 }
     room_size = "any"
     replaces = "knight"
-    replace_prob = 15
+    replace_prob = 20
     trap_factor = 4.0
     infight_damage = 20
+    boss_replacement = "knight"
   }
 
   knight =
@@ -697,7 +905,7 @@ PLUTONIA.MONSTERS =
     id = 69
     r = 24
     h = 64
-    level = 4
+    level = 3
     prob = 26
     health = 500
     damage = 4.0
@@ -707,9 +915,11 @@ PLUTONIA.MONSTERS =
     density = 0.75
     species = "baron"
     replaces = "mancubus"
-    replace_prob = 15
+    replace_prob = 25
     room_size = "medium"
     infight_damage = 36
+    trap_factor = 1.5
+    boss_replacement = "baron"
   }
 
   mancubus =
@@ -723,10 +933,11 @@ PLUTONIA.MONSTERS =
     damage = 8.0
     attack = "missile"
     weap_prefs = { launch=1.5, super=1.5, plasma=1.5, chain=1.2 }
-    density = 0.32
+    density = 0.45
+    outdoor_factor = 1.5
     weap_min_damage = 88
     replaces = "arach"
-    replace_prob = 10
+    replace_prob = 20
     room_size = "large"
     infight_damage = 70
     trap_factor = 1.2
@@ -743,6 +954,7 @@ PLUTONIA.MONSTERS =
     health = 500
     damage = 10.7
     attack = "missile"
+    outdoor_factor = 1.25
     weap_min_damage = 60
     weap_prefs = { launch=1.5, super=1.5, plasma=1.5, chain=1.2 }
     replaces = "mancubus"
@@ -771,7 +983,7 @@ PLUTONIA.MONSTERS =
     room_size = "medium"
     weap_prefs = { launch=2.0, super=1.25, plasma=1.5, bfg=1.5 }
     weap_min_damage = 120
-    outdoor_factor = 0.8
+    outdoor_factor = 0.4
     nasty = true
     infight_damage = 18
     trap_factor = 1.25
@@ -786,7 +998,7 @@ PLUTONIA.MONSTERS =
     level = 5
     boss_type = "nasty"
     boss_prob = 20
-    boss_limit = 3 --Limits the insanity with Lost Soul spawning with ports/options having no limit on
+    boss_limit = 4 --Number increased because Plutonia
     prob = 10
     crazy_prob = 15
     health = 900  -- 400 + 5 skulls
@@ -798,6 +1010,7 @@ PLUTONIA.MONSTERS =
     weap_prefs = { launch=1.0, super=1.25, chain=1.5, shotty=0.7 }
     room_size = "large" --any
     cage_factor = 0  -- never put in cages
+    outdoor_factor = 1.5
     infight_damage = 4.5 -- guess
   }
 }
