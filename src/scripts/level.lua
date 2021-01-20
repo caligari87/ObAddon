@@ -2576,50 +2576,91 @@ end
 function Level_choose_skybox()
   local skyfab
 
+  local function Choose_episodic_skybox()
+    if not LEVEL.episode.skybox then
+      return PREFABS[rand.key_by_probs(THEME.skyboxes)]
+    else
+      return LEVEL.episode.skybox
+    end
+  end
+
+  local function Choose_skybox(mode)
+    if mode == "random" then
+      local reqs =
+      {
+        kind = "skybox"
+        where = "point"
+        size = 1
+      }
+      local def = Fab_pick(reqs)
+      return assert(def)
+  
+    elseif mode == "themed" then
+      return PREFABS[rand.key_by_probs(THEME.skyboxes)]
+  
+    elseif mode == "generic" then
+      if PARAM.epic_textures_activated then
+        return PREFABS["Skybox_hellish_city_EPIC"]
+      else
+        return PREFABS["Skybox_hellish_city"]
+      end
+    end
+  end
+
   if table.empty(THEME.skyboxes) then
     gui.printf("WARNING! No skybox table for theme: " .. LEVEL.theme_name .. "\n")
     return
   end
 
-  if OB_CONFIG.zdoom_skybox == "random" then
-    local reqs =
-    {
-      kind = "skybox"
-      where = "point"
-      size = 1
-    }
+  if OB_CONFIG.zdoom_skybox == "disable" then return end
 
-    local def = Fab_pick(reqs)
+  local same_skyfab = "yes"
 
-    skyfab = assert(def)
-
-  elseif OB_CONFIG.zdoom_skybox == "themed" then
-    skyfab = PREFABS[rand.key_by_probs(THEME.skyboxes)]
-
-  elseif OB_CONFIG.zdoom_skybox == "episodic" then
-    if not LEVEL.episode.skybox then
-      LEVEL.episode.skybox = PREFABS[rand.key_by_probs(THEME.skyboxes)]
-    end
+  if OB_CONFIG.zdoom_skybox == "episodic" then
+    LEVEL.episode.skybox = Choose_episodic_skybox()
     skyfab = LEVEL.episode.skybox
-
-  elseif OB_CONFIG.zdoom_skybox == "generic" then
-    if PARAM.epic_textures_activated then
-      skyfab = PREFABS["Skybox_hellish_city_EPIC"]
-    else
-      skyfab = PREFABS["Skybox_hellish_city"]
-    end
-
+  else
+    LEVEL.skybox = Choose_skybox(OB_CONFIG.zdoom_skybox)
+    skyfab = LEVEL.skybox
   end
 
-  if not skyfab and OB_CONFIG.zdoom_skybox != "disable" then
-    gui.printf("WARNING: Could not find a proper skybox for theme '" .. LEVEL.theme_name .. "'\n")
+  -- check against exclusions
+  if LEVEL.outdoor_theme and LEVEL.outdoor_theme != "temperate" 
+  and ARMAETUS_SKYBOX_EXCLUSIONS then
+
+    while same_skyfab == "yes" do 
+  
+      each ex in ARMAETUS_SKYBOX_EXCLUSIONS[LEVEL.outdoor_theme] do
+        if OB_CONFIG.zdoom_skybox == "episodic" then
+          if LEVEL.episode.skybox.name and LEVEL.episode.skybox.name == ex then
+            same_skyfab = "yes"
+          end
+        elseif OB_CONFIG.zdoom_skybox != "disable" then
+          if LEVEL.skybox.name and LEVEL.skybox.name == ex then
+            same_skyfab = "yes"
+          end
+        end
+      end
+
+      if same_skyfab == "yes" then
+        if OB_CONFIG.zdoom_skybox == "episodic" then
+          LEVEL.episode.skybox = Choose_episodic_skybox()
+          skyfab = LEVEL.episode.skybox
+        else
+          LEVEL.skybox = Choose_skybox(OB_CONFIG.zdoom_skybox)
+          skyfab = LEVEL.skybox
+        end
+        same_skyfab = "no"
+      end
+
+    end
   end
 
   if skyfab then
-    gui.printf("Skybox: " .. skyfab.name .. "\n")
+    gui.printf("Level skybox: " .. skyfab.name .. "\n")
+  else
+    gui.printf("WARNING: Could not find a proper skybox for theme '" .. LEVEL.theme_name .. "'\n")
   end
-
-  LEVEL.skybox = skyfab
 end
 
 

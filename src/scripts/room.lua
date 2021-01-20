@@ -3916,9 +3916,13 @@ function Room_cleanup_stairs_to_nowhere(R)
           local diff = lowest_floor - A.floor_h
           A.floor_h = lowest_floor + 32
           A.ceil_h = A.ceil_h + diff
-        elseif A.ceil_h > tallest_ceiling and tallest_ceiling > -EXTREME_H then
+        end
+        if A.ceil_h > tallest_ceiling and tallest_ceiling > -EXTREME_H then
           local diff = lowest_floor + A.ceil_h
           A.ceil_h = tallest_ceiling
+          if diff < 96 then
+            A.ceil_h = lowest_floor + 96
+          end
         end
 
       end

@@ -3876,14 +3876,17 @@ ARMAETUS_NATURALS =
 }
 
 -- exclude tables for specific environment themes
-ARMAETUS_EXCLUDE_DESERT_SKYBOXES =
+ARMAETUS_SKYBOX_EXCLUSIONS =
 {
-  "Skybox_craneo_egypt_EPIC"
-}
+  desert =
+  {
+    "Skybox_craneo_egypt_EPIC"
+  }
 
-ARMAETUS_EXCLUDE_SNOW_SKYBOXES =
-{
-  "Skybox_garrett_winterfall_EPIC"
+  snow =
+  {
+    "Skybox_garrett_winterfall_EPIC"
+  }
 }
 
 -- intercepts for the new environment theme feature
