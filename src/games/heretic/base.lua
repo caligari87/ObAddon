@@ -28,6 +28,7 @@ gui.import("entities")
 gui.import("monsters")
 gui.import("pickups")
 gui.import("weapons")
+gui.import("shapes")
 
 gui.import("materials")
 gui.import("themes")
