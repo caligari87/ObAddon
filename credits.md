@@ -16,6 +16,7 @@
 * **Swedra** - Contributions to naming generator.
 * **EpicTyphlosion** - Prefabs, contributions to naming generator.
 * **josh771** - ZScript code for flies (from fauna module)
+* **dasho** - Hexen re-implementation.
 * **Caligari87** - Repository maintainer, Discord moderation.
 
 And the rest of the Oblige enthusiasts out there! If your name isn't here and should be, or any of the above needs to be fixed, please contact a repository maintainer either here on GitHub or the Oblige Discord server.
