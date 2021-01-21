@@ -2122,6 +2122,15 @@ ARMAETUS_LIQUIDS =
     ice     = 40
     ice2    = 40
   }
+
+  exclusions =
+  {
+    desert =
+    {
+      "ice1",
+      "ice2"
+    }
+  }
 }
 
 -- Custom sink definitions as well as probability tables.
