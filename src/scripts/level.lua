@@ -2516,7 +2516,19 @@ function Level_choose_liquid()
   LEVEL.liquid_usage = usage
 
   -- pick the liquid to use
-  local name = rand.key_by_probs(THEME.liquids)
+  local liq_tab = THEME.liquids
+
+  -- exclude liquids from certain environment themes
+  if LEVEL.outdoor_theme then
+    if THEME.liquids.exclusions 
+    and THEME.liquids.exclusions[LEVEL.outdoor_theme] then
+      each L in THEME.liquids.exclusions[LEVEL.outdoor_theme] do
+        liq_tab[L] = 0
+      end
+    end
+  end
+
+  local name = rand.key_by_probs(liq_tab)
   local liquid = GAME.LIQUIDS[name]
 
   if not liquid then
