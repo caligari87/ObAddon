@@ -82,7 +82,7 @@ PREFABS.Pillar_gtd_generic3 =
 PREFABS.Pillar_gtd_generic1_2x =
 {
   template = "Pillar_gtd_generic1"
-  map      = "MAP05"
+  map      = "MAP04"
 
   prob = 10000
 
