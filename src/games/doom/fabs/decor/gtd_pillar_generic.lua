@@ -73,4 +73,66 @@ PREFABS.Pillar_gtd_generic3 =
 {
   template = "Pillar_gtd_generic1"
   map      = "MAP03"
+
+  theme = "any"
+}
+
+--
+
+PREFABS.Pillar_gtd_generic1_2x =
+{
+  template = "Pillar_gtd_generic1"
+  map      = "MAP05"
+
+  prob = 10000
+
+  theme  = "!hell"
+
+  tex_LITE5 =
+  {
+    LITE5 = 50
+    LITEBLU4 = 50
+    LITEBLU1 = 50
+  }
+}
+
+PREFABS.Pillar_gtd_generic1_hell_4x =
+{
+  template = "Pillar_gtd_generic1"
+  map      = "MAP07"
+
+  prob = 10000
+
+  theme  = "hell"
+
+  tex_LITE5 =
+  {
+    FIREBLU1 = 50
+    FIRELAVA = 50
+    FIREMAG1 = 50
+  }
+}
+
+PREFABS.Pillar_gtd_generic3_2x =
+{
+  map = "MAP06"
+  template = "Pillar_gtd_generic1"
+
+  prob = 10000
+
+  theme = "any"
+
+  size = 176
+}
+
+PREFABS.Pillar_gtd_generic3_4x =
+{
+  map = "MAP09"
+  template = "Pillar_gtd_generic1"
+
+  prob = 10000
+
+  theme = "any"
+
+  size = 176
 }
