@@ -45,7 +45,7 @@ OB_GAMES["hexen"] =
 
   -- Hexen map format is a minor variation on the DOOM format
   format = "doom"
-  sub_format = "hexen"
+--  sub_format = "hexen"
 
   game_dir = "hexen"
   iwad_name = "hexen.wad"

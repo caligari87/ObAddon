@@ -24,7 +24,7 @@ HEXEN.SINKS =
   
   liquid_plain =
   {
-    mat = "_LIQUID"
+    mat = "X_005"
     dz  = -12
   }
   
@@ -121,6 +121,13 @@ HEXEN.THEMES =
         CASTLE07=35
         CAVE02=15
         PRTL03=5
+      }
+      
+      liquids =
+      {
+        water  = 50
+        lava   = 10
+        muck   = 20
       }
       
       steps_mat = "F_011"
