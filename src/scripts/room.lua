@@ -2103,6 +2103,15 @@ function Room_choose_size(R, not_big)
   end
 
   local sum = LEVEL.map_W * 2/3 + rand.range( 10,50 )
+
+  -- some extra size experiments - should be revised for
+  -- more direct control. In fact, maybe this whole size
+  -- decision code could use a clean-up 
+    if not PARAM.experimental_size_variance or 
+  PARAM.experimental_size_variance == "more" then
+    sum = sum * LEVEL.size_multiplier
+  end
+
   R.floor_limit = rand.key_by_probs(
     {
       [1]=3

@@ -331,6 +331,16 @@ function Episode_determine_map_sizes()
     LEV.map_W = W
     LEV.map_H = H
 
+    LEV.size_multiplier = rand.pick(
+      {
+        [0.25] = 2
+        [0.5] = 3
+        [0.75] = 4
+        [1] = 5
+        [1.25] = 1
+        [1.5] = 1
+      }
+    )
   end
 end
 
