@@ -100,6 +100,8 @@ PREFABS.Pillar_gtd_generic1_2x =
 
   theme  = "!hell"
 
+  size = 176
+
   tex_LITE5 =
   {
     LITE5 = 50
@@ -116,6 +118,8 @@ PREFABS.Pillar_gtd_generic1_hell_4x =
   prob = 15000
 
   theme  = "hell"
+
+  size = 176
 
   tex_LITE5 =
   {
