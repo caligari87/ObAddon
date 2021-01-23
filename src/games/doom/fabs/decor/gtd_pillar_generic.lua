@@ -3,8 +3,7 @@ PREFABS.Pillar_gtd_generic1 =
   file   = "decor/gtd_pillar_generic.wad"
   map    = "MAP01"
 
-  rank   = 2
-  prob   = 5000
+  prob   = 7500
   theme  = "!hell"
   env    = "building"
 
@@ -96,11 +95,11 @@ PREFABS.Pillar_gtd_generic1_2x =
   template = "Pillar_gtd_generic1"
   map      = "MAP04"
 
-  prob = 20000
+  prob = 10000
 
   theme  = "!hell"
 
-  size = 176
+  size = 160
 
   tex_LITE5 =
   {
@@ -108,6 +107,44 @@ PREFABS.Pillar_gtd_generic1_2x =
     LITEBLU4 = 50
     LITEBLU1 = 50
   }
+}
+
+PREFABS.Pillar_gtd_generic1_hell_2x =
+{
+  template = "Pillar_gtd_generic1"
+  map      = "MAP04"
+
+  prob = 10000
+
+  theme  = "hell"
+
+  size = 160
+
+  tex_LITE5 =
+  {
+    FIREBLU1 = 50
+    FIRELAVA = 50
+    FIREMAG1 = 50
+  } 
+}
+
+PREFABS.Pillar_gtd_generic1_4x =
+{
+  template = "Pillar_gtd_generic1"
+  map      = "MAP07"
+
+  prob = 10000
+
+  theme  = "!hell"
+
+  size = 160
+
+  tex_LITE5 =
+  {
+    FIREBLU1 = 50
+    FIRELAVA = 50
+    FIREMAG1 = 50
+  } 
 }
 
 PREFABS.Pillar_gtd_generic1_hell_4x =
@@ -119,7 +156,7 @@ PREFABS.Pillar_gtd_generic1_hell_4x =
 
   theme  = "hell"
 
-  size = 176
+  size = 160
 
   tex_LITE5 =
   {
@@ -134,11 +171,11 @@ PREFABS.Pillar_gtd_generic3_2x =
   map = "MAP06"
   template = "Pillar_gtd_generic1"
 
-  prob = 20000
+  prob = 15000
 
   theme = "any"
 
-  size = 176
+  size = 160
 
   height = 96
   bound_z2 = 96
@@ -154,7 +191,7 @@ PREFABS.Pillar_gtd_generic3_4x =
 
   theme = "any"
 
-  size = 176
+  size = 160
 
   height = 96
   bound_z2 = 96
