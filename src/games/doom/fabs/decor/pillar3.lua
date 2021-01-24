@@ -9,7 +9,7 @@ PREFABS.Pillar_tech3 =
 
   rank   = 2
   prob   = 3500
-  skip_prob = 35
+  skip_prob = 55
 
   theme  = "tech"
   env    = "building"

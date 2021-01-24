@@ -889,16 +889,8 @@ function Grower_calc_rule_probs()
   if not LEVEL.is_procedural_gotcha then
     if OB_CONFIG.layout_absurdity == "all" then
       LEVEL.is_absurd = true
-    elseif OB_CONFIG.layout_absurdity == "75" then
-      if rand.odds(75) then
-        LEVEL.is_absurd = true
-      end
-    elseif OB_CONFIG.layout_absurdity == "50" then
-      if rand.odds(50) then
-        LEVEL.is_absurd = true
-      end
-    elseif OB_CONFIG.layout_absurdity == "25" then
-      if rand.odds(25) then
+    elseif OB_CONFIG.layout_absurdity != "none" then
+      if rand.odds(int(OB_CONFIG.layout_absurdity)) then
         LEVEL.is_absurd = true
       end
     end
@@ -936,6 +928,9 @@ function Grower_calc_rule_probs()
         if rand.odds(75) then
           ab_factor = rand.range( 100,1000000 )
           GAME.SHAPE_GRAMMAR[absurded_rule].use_prob = GAME.SHAPE_GRAMMAR[absurded_rule].use_prob * ab_factor
+          if GAME.SHAPE_GRAMMAR[absurded_rule].new_area then
+            LEVEL.has_absurd_new_area_rules = true
+          end
         else
           ab_factor = rand.range( 0.01,0.75 )
           GAME.SHAPE_GRAMMAR[absurded_rule].use_prob = GAME.SHAPE_GRAMMAR[absurded_rule].use_prob * ab_factor

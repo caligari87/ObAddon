@@ -2107,9 +2107,15 @@ function Room_choose_size(R, not_big)
   -- some extra size experiments - should be revised for
   -- more direct control. In fact, maybe this whole size
   -- decision code could use a clean-up 
-    if not PARAM.experimental_size_variance or 
-  PARAM.experimental_size_variance == "more" then
+  if LEVEL.size_multiplier then
     sum = sum * LEVEL.size_multiplier
+  end
+
+  if LEVEL.size_consistency == "strict" then
+    if not LEVEL.strict_size then
+      LEVEL.strict_size = sum
+    end
+    sum = LEVEL.strict_size 
   end
 
   R.floor_limit = rand.key_by_probs(
@@ -2201,6 +2207,13 @@ function Room_choose_size(R, not_big)
       }
     )
 
+  end
+
+  if LEVEL.area_multiplier then
+    R.floor_limit = int(R.floor_limit * LEVEL.area_multiplier)
+  end
+  if LEVEL.has_absurd_new_area_rules then
+    R.floor_limit = R.floor_limit * 4
   end
 
   -- Special instructions for procedural gotcha rooms

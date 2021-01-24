@@ -438,7 +438,7 @@ PREFABS.Pic_urban_downtown_facade_destroyed_roof =
   skip_prob = 50
   prob = 80
 
-  deep = 0
+  deep = 16
 
   in_porches = "never"
 

@@ -331,16 +331,38 @@ function Episode_determine_map_sizes()
     LEV.map_W = W
     LEV.map_H = H
 
-    LEV.size_multiplier = rand.pick(
-      {
-        [0.25] = 2
-        [0.5] = 3
-        [0.75] = 4
-        [1] = 5
-        [1.25] = 1
-        [1.5] = 1
-      }
-    )
+    -- part of the experimental size multiplier experiments
+    if not PARAM.experimental_size_variance
+    or PARAM.experimental_size_variance == "more" then
+      LEV.size_multiplier = rand.pick(
+        {
+          [0.25] = 2
+          [0.5] = 3
+          [0.75] = 4
+          [1] = 5
+          [1.25] = 1
+          [1.5] = 0.75
+        }
+      )
+
+      LEV.area_multiplier = rand.pick(
+        {
+          [0.15] = 1
+          [0.5] = 2
+          [0.75] = 2
+          [1] = 5
+          [1.5] = 2
+          [2] = 1
+        }
+      )
+
+      LEV.size_consistency = rand.key_by_probs(
+        {
+          strict = 20
+          normal = 75
+        }
+      )
+    end
   end
 end
 
