@@ -3590,10 +3590,6 @@ function Grower_grammatical_room(R, pass, is_emergency)
       apply_num = math.ceil(apply_num * 0.25)
     end
 
-  elseif pass == "liquefy" then
-
-    apply_num = math.round(style_sel("liquids", 4, 6, 8, 10))
-
   else
     error("unknown grammar pass: " .. tostring(pass))
   end
@@ -3822,17 +3818,6 @@ function Grower_sprout_room(R)
     -- to distort the layout a bit more
     Grower_grammatical_room(R, "square_out")
     R.is_squarified = true
-
-    -- liquefy pass - adds more liquid elements to rooms
-    -- in an attemp to break away from preset liquid chunks
-    -- set by shape rules
-    -- MSSP-TODO: skip specific rules instead of skipping the pass entirely
-    -- for symmetric rooms
-    if LEVEL.liquid and rand.odds(style_sel("liquids", 20, 40, 60, 80))
-    and not R.symmetry then
-      Grower_grammatical_room(R, "liquefy")
-      R.is_liquid_pooled = true
-    end
   end
 
   -- if hallway did not sprout, try again
