@@ -152,20 +152,4 @@ DECORATE_CLOSET_2x1 =
   closet = { from_dir=2 }
 }
 
-LIQUEFY_SQ_CREATE =
-{
-  pass = "liquefy"
-
-  prob = 5
-
-  structure =
-  {
-    "1111","1111"
-    "1111","1~~1"
-    "1111","1~~1"
-    "1111","1111"
-  }
 }
-
-}
-

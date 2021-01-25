@@ -214,6 +214,21 @@ OB_MODULES["debugger"] =
       tooltip = "Disables or enables caves with height variations."
       default = "yes"
       priority = 92
+      gap = 1
+    }
+
+    experimental_size_variance =
+    {
+      name = "experimental_size_variance"
+      label = _("Room Size Variance")
+      choices =
+      {
+        "more", _("More"),
+        "none", _("NONE"),
+      }
+      tooltip = "Attempts to add extreme size variability to general room sizes."
+      default = "more"
+      priority = 91
     }
 
 --[[

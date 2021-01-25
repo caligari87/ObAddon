@@ -1319,10 +1319,6 @@ function ob_transfer_ui_options()
   if OB_CONFIG.theme == "mixed" then
      OB_CONFIG.theme = "epi"
   end
-
-  --[[ if OB_CONFIG.size == "tiny" then
-     OB_CONFIG.size = "small"
-  end]]
 end
 
 

@@ -889,16 +889,8 @@ function Grower_calc_rule_probs()
   if not LEVEL.is_procedural_gotcha then
     if OB_CONFIG.layout_absurdity == "all" then
       LEVEL.is_absurd = true
-    elseif OB_CONFIG.layout_absurdity == "75" then
-      if rand.odds(75) then
-        LEVEL.is_absurd = true
-      end
-    elseif OB_CONFIG.layout_absurdity == "50" then
-      if rand.odds(50) then
-        LEVEL.is_absurd = true
-      end
-    elseif OB_CONFIG.layout_absurdity == "25" then
-      if rand.odds(25) then
+    elseif OB_CONFIG.layout_absurdity != "none" then
+      if rand.odds(int(OB_CONFIG.layout_absurdity)) then
         LEVEL.is_absurd = true
       end
     end
@@ -936,6 +928,9 @@ function Grower_calc_rule_probs()
         if rand.odds(75) then
           ab_factor = rand.range( 100,1000000 )
           GAME.SHAPE_GRAMMAR[absurded_rule].use_prob = GAME.SHAPE_GRAMMAR[absurded_rule].use_prob * ab_factor
+          if GAME.SHAPE_GRAMMAR[absurded_rule].new_area then
+            LEVEL.has_absurd_new_area_rules = true
+          end
         else
           ab_factor = rand.range( 0.01,0.75 )
           GAME.SHAPE_GRAMMAR[absurded_rule].use_prob = GAME.SHAPE_GRAMMAR[absurded_rule].use_prob * ab_factor
@@ -3590,10 +3585,6 @@ function Grower_grammatical_room(R, pass, is_emergency)
       apply_num = math.ceil(apply_num * 0.25)
     end
 
-  elseif pass == "liquefy" then
-
-    apply_num = math.round(style_sel("liquids", 4, 6, 8, 10))
-
   else
     error("unknown grammar pass: " .. tostring(pass))
   end
@@ -3822,17 +3813,6 @@ function Grower_sprout_room(R)
     -- to distort the layout a bit more
     Grower_grammatical_room(R, "square_out")
     R.is_squarified = true
-
-    -- liquefy pass - adds more liquid elements to rooms
-    -- in an attemp to break away from preset liquid chunks
-    -- set by shape rules
-    -- MSSP-TODO: skip specific rules instead of skipping the pass entirely
-    -- for symmetric rooms
-    if LEVEL.liquid and rand.odds(style_sel("liquids", 20, 40, 60, 80))
-    and not R.symmetry then
-      Grower_grammatical_room(R, "liquefy")
-      R.is_liquid_pooled = true
-    end
   end
 
   -- if hallway did not sprout, try again

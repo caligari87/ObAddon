@@ -2103,6 +2103,21 @@ function Room_choose_size(R, not_big)
   end
 
   local sum = LEVEL.map_W * 2/3 + rand.range( 10,50 )
+
+  -- some extra size experiments - should be revised for
+  -- more direct control. In fact, maybe this whole size
+  -- decision code could use a clean-up 
+  if LEVEL.size_multiplier then
+    sum = sum * LEVEL.size_multiplier
+  end
+
+  if LEVEL.size_consistency == "strict" then
+    if not LEVEL.strict_size then
+      LEVEL.strict_size = sum
+    end
+    sum = LEVEL.strict_size 
+  end
+
   R.floor_limit = rand.key_by_probs(
     {
       [1]=3
@@ -2192,6 +2207,13 @@ function Room_choose_size(R, not_big)
       }
     )
 
+  end
+
+  if LEVEL.area_multiplier then
+    R.floor_limit = int(R.floor_limit * LEVEL.area_multiplier)
+  end
+  if LEVEL.has_absurd_new_area_rules then
+    R.floor_limit = R.floor_limit * 4
   end
 
   -- Special instructions for procedural gotcha rooms
@@ -3426,7 +3448,7 @@ function Room_floor_ceil_heights()
       A.ceil_mat = N.ceil_mat
       A.is_porch_neighbor = true
 
-      if A.room.is_outdoor and A.mode == "cage" then
+      if A.mode == "cage" then
         A.ceil_h = N.ceil_h
         A.floor_h = (N.floor_h or N.chunk.floor_h) + 24
 
@@ -3436,11 +3458,10 @@ function Room_floor_ceil_heights()
           A.floor_h = A.ceil_h - 96
         end
         A.cage_mode = "fancy"
-      else
-        A.ceil_h = N.ceil_h
       end
 
       if A.peer then
+        A.peer.is_outdoor = false
         A.peer.is_porch_neighbor = true
         A.peer.ceil_mat = A.ceil_mat
         A.peer.ceil_h = A.ceil_h

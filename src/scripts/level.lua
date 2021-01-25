@@ -331,6 +331,49 @@ function Episode_determine_map_sizes()
     LEV.map_W = W
     LEV.map_H = H
 
+    -- part of the experimental size multiplier experiments
+    if not PARAM.experimental_size_variance
+    or PARAM.experimental_size_variance == "more" then
+      LEV.size_multiplier = rand.key_by_probs(
+        {
+          [0.25] = 2
+          [0.5] = 3
+          [0.75] = 4
+          [1] = 4
+          [1.25] = 3
+          [1.5] = 2
+          [2] = 2
+          [4] = 1
+          [6] = 1
+        }
+      )
+
+      LEV.area_multiplier = rand.key_by_probs(
+        {
+          [0.15] = 1
+          [0.5] = 2
+          [0.75] = 2
+          [1] = 3
+          [1.5] = 2
+          [2] = 1
+          [4] = 1
+        }
+      )
+
+      LEV.size_consistency = rand.key_by_probs(
+        {
+          strict = 25
+          normal = 75
+        }
+      )
+
+      gui.printf(
+        "\nexp_size_multiplier: " .. LEV.size_multiplier .. "\n" ..
+        "exp_area_multiplier: " .. LEV.area_multiplier .. "\n" ..
+        "exp_size_consistency: " .. LEV.size_consistency .. "\n"
+      )
+
+    end
   end
 end
 
