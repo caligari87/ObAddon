@@ -17,7 +17,7 @@
 --
 -------------------------------------------------------------------
 
-gui.import("zdoom_stories_heretic.lua")
+gui.import("zdoom_stories.lua")
 
 table.name_up(ZDOOM_STORIES_HERETIC.STORIES)
 
