@@ -148,9 +148,9 @@ PREFABS.Pillar_gtd_generic1_4x =
 
   tex_LITE5 =
   {
-    FIREBLU1 = 50
-    FIRELAVA = 50
-    FIREMAG1 = 50
+    LITE5 = 50
+    LITEBLU4 = 50
+    LITEBLU1 = 50
   } 
 }
 
