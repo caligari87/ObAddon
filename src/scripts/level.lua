@@ -334,18 +334,19 @@ function Episode_determine_map_sizes()
     -- part of the experimental size multiplier experiments
     if not PARAM.experimental_size_variance
     or PARAM.experimental_size_variance == "more" then
-      LEV.size_multiplier = rand.pick(
+      LEV.size_multiplier = rand.key_by_probs(
         {
           [0.25] = 2
           [0.5] = 3
           [0.75] = 4
           [1] = 5
-          [1.25] = 1
-          [1.5] = 0.75
+          [1.25] = 3
+          [1.5] = 2
+          [2] = 1
         }
       )
 
-      LEV.area_multiplier = rand.pick(
+      LEV.area_multiplier = rand.key_by_probs(
         {
           [0.15] = 1
           [0.5] = 2
