@@ -3,7 +3,8 @@ PREFABS.Decor_wood_skull_shed =
   file   = "decor/armaetus_wood_skull_shed.wad"
   map    = "MAP01"
 
-  prob   = 2000
+  prob   = 4500
+  skip_prob = 35
 
   where  = "point"
   theme  = "!tech"
