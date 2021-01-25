@@ -828,6 +828,7 @@ function ob_load_all_modules()
   gui.printf("Loading all modules...\n")
 
   local list = gui.scan_directory("modules", "*.lua")
+  local subdirs = gui.scan_directory("modules", "DIRS")
 
   if not list then
     gui.printf("FAILED: scan 'modules' directory\n")
@@ -839,6 +840,21 @@ function ob_load_all_modules()
   each filename in list do
     gui.debugf("  %s\n", filename)
     gui.import(filename)
+  end
+
+  if subdirs then
+    each directory in subdirs do
+      list = gui.scan_directory("modules/" .. directory, "*.lua")
+      if not list then
+        gui.printf("FAILED: scan 'modules' subdirectory\n")
+        return
+      end
+      gui.set_import_dir("modules/" .. directory)
+      each filename in list do
+        gui.debugf("  %s\n", filename)
+        gui.import(filename)
+      end
+    end
   end
 
   gui.set_import_dir("")

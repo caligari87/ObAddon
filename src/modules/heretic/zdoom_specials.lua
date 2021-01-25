@@ -17,7 +17,7 @@
 --
 -------------------------------------------------------------------
 
-gui.import("zdoom_story_gen_heretic.lua")
+gui.import("zdoom_story_gen.lua")
 
 ZDOOM_SPECIALS_HERETIC = { }
 
