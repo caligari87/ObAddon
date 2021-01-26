@@ -26,99 +26,17 @@ HERETIC.SINKS =
     light = 16
   }
 
-  sky_metal =
-  {
-    mat   = "_SKY"
-    dz    = 48
-    light = 16
-
-    trim_mat = "METL1"
-    trim_dz  = -9
-    trim_light = 16
-  }
-
-  sky_red =
-  {
-    mat   = "_SKY"
-    dz    = 32
-    light = 16
-
-    trim_mat = "FLOOR09"
-    trim_dz  = -5
-    trim_light = 16
-  }
-
-  sky_castle1 =
-  {
-    mat   = "_SKY"
-    dz    = 128
-    light = 16
-
-    trim_mat = "CSTLRCK"
-    trim_dz  = 0
-  }
-
 -- sky ceilings
 
-  sky_metal2 =
+  sky_ceiling =
   {
     mat   = "_SKY"
     dz    = 48
     light = 16
 
-    trim_mat = "METL2"
+    trim_mat = "_WALL"
     trim_dz  = -9
     trim_light = 16
-  }
-
-  sky_castle2 =
-  {
-    mat   = "_SKY"
-    dz    = 144
-    light = 16
-
-    trim_mat = "GRNBLOK4"
-    trim_dz  = 16
-  }
-
-  sky_stone_1 =
-  {
-    mat   = "_SKY"
-    dz    = 64
-    light = 16
-
-    trim_mat = "CSTLRCK"
-    trim_dz  = 0
-  }
-
-  sky_castle3 =
-  {
-    mat   = "_SKY"
-    dz    = 128
-    light = 16
-
-    trim_mat = "MOSSRCK1"
-    trim_dz  = 16
-  }
-
-  sky_castle4 =
-  {
-    mat   = "_SKY"
-    dz    = 128
-    light = 16
-
-    trim_mat = "METL1"
-    trim_dz  = 16
-  }
-
-  sky_fltlava =
-  {
-    mat   = "_SKY"
-    dz    = 80
-    light = 32
-
-    trim_mat = "FLTLAVA1"
-    trim_dz  = 16
   }
 
   -- liquid floor --
@@ -129,151 +47,29 @@ HERETIC.SINKS =
     dz  = -12
   }
 
-  liquid_metal =
+  liquid_trim =
   {
-    mat = "_LIQUID"
-    dz  = -8
+    mat   = "_LIQUID"
+    dz    = 48
+    light = 16
 
-    trim_mat = "METL2"
-    trim_dz  = 0
+    trim_mat = "_WALL"
+    trim_dz  = -9
+    trim_light = 16
   }
-
-  liquid_firelava =
-  {
-    mat = "_LIQUID"
-    dz  = -8
-    light = 40
-
-    trim_mat = "FLTLAVA1"
-    trim_dz  = 2
-  }
-
-  liquid_bstone =
-  {
-    mat = "_LIQUID"
-    dz  = -8
-
-    trim_mat = "CSTLRCK"
-    trim_dz  = 2
-  }
-
 
   -- ceiling lights --
 
 
-  light_brightred_metal =
+  light_plain =
   {
-    mat = "FLOOR09"
+    mat = "_FLOOR"
     dz  = 8
     light = 32
 
-    trim_mat = "METL2"
+    trim_mat = "_WALL"
     trim_dz  = -5
     trim_light = 16
-  }
-
-  light_side1 =
-  {
-    mat = "FLOOR16"
-    dz  = 16
-    light = 32
-
-    trim_mat = "METL1"
-    trim_dz  = 0
-  }
-
-  light_side2 =
-  {
-    mat = "FLOOR30"
-    dz  = 16
-    light = 32
-
-    trim_mat = "METL1"
-    trim_dz  = 0
-  }
-
-   light_side3 =
-  {
-    mat = "FLOOR17"
-    dz  = 24
-    light = 24
-
-    trim_mat = "GRNBLOK4"
-    trim_dz  = 0
-  }
-
-  -- misc floor --
-
-  floor_glowingrock =
-  {
-    mat = "FLAT523"
-    dz  = -8
-  }
-
-  floor_green =
-  {
-    mat = "FLOOR18"
-    dz  = -8
-  }
-
-  floor_red =
-  {
-    mat = "FLOOR09"
-    dz  = -8
-  }
-
-  floor_blue =
-  {
-    mat = "FLOOR16"
-    dz  = -8
-  }
-
-   floor_glowingrock2 =
-  {
-    mat = "FLTLAVA1"
-    dz  = -8
-  }
-
-  floor_dirt =
-  {
-    mat = "FLOOR17"
-    dz  = -8
-  }
-
-  -- misc ceiling --
-
-  ceil_redash =
-  {
-    mat = "FLOOR09"
-    dz  = 8
-  }
-
-  ceil_icky =
-  {
-    mat   = "FLOOR08"
-    dz    = 64
-
-    trim_mat = "MOSSRCK1"
-    trim_dz  = 64
-  }
-
-  ceil_glowrock =
-  {
-    mat = "FLTLAVA1"
-    dz    = 64
-    light = 16
-
-    trim_mat = "LOOSERCK"
-    trim_dz  = -8
-  }
-
-  ceil_water =
-  {
-    mat = "FLTFLWW1"
-    dz    = 64
-
-    trim_mat = "CSTLRCK"
-    trim_dz  = -8
   }
 
   -- fantastic floors
@@ -283,7 +79,7 @@ HERETIC.SINKS =
     dz = -16
     light = 32
 
-    trim_mat = "FLOOR18"
+    trim_mat = "_WALL"
     trim_dz = -8
   }
 
@@ -310,42 +106,6 @@ HERETIC.SINKS =
     dz = -8
 
     trim_mat = "_WALL"
-    trim_dz = -4
-  }
-
-  floor_shawn_wall =
-  {
-    mat = "_WALL"
-    dz = -8
-
-    trim_mat = "CSTLRCK"
-    trim_dz = -4
-  }
-
-  floor_metal_wall =
-  {
-    mat = "_WALL"
-    dz = -8
-
-    trim_mat = "METL2"
-    trim_dz = -4
-  }
-
-  floor_shawn_c =
-  {
-    mat = "_CEIL"
-    dz = -8
-
-    trim_mat = "CSTLRCK"
-    trim_dz = -4
-  }
-
-  floor_metal_c =
-  {
-    mat = "_CEIL"
-    dz = -8
-
-    trim_mat = "METL2"
     trim_dz = -4
   }
 
@@ -421,90 +181,48 @@ HERETIC.THEMES =
     
     narrow_halls =
     {
---      vent = 50
-      mineshaft = 50
---      access = 50
+      vent = 50
     }
 
     wide_halls =
     {
       deuce = 50
---      metro = 50
     }
 
     floor_sinks =
     {
-      liquid_plain = 15
-      liquid_metal = 10
-      liquid_firelava = 5
-      liquid_bstone = 5
-      floor_glowingrock
-      floor_green = 25
-      floor_red = 15
-      floor_blue = 25
-      floor_glowingrock2 = 15
-      floor_dirt = 25
+      liquid_plain = 40
+      liquid_trim = 40
       floor_sky = 5
       floor_trim_sky = 5
       floor_trim_liquid = 5
-      floor_mixup = 25
-      floor_shawn_wall = 25
-      floor_shawn_c = 25
-      floor_metal_wall = 25
-      floor_metal_c = 25
+      floor_mixup = 5
     }
 
     ceiling_sinks =
     {
-      sky_plain = 25
-      sky_metal = 20
-      sky_metal2 = 20
-      sky_red = 15
-      sky_stone_1 = 5
-      sky_castle1 = 7
-      sky_castle2 = 7
-      sky_castle3 = 20
-      sky_castle4 = 15
-      sky_fltlava = 5
-      light_brightred_metal = 20
-      light_side1 = 100
-      light_side2 = 100
-      light_side3 = 100
-      ceil_redash = 10
-      ceil_icky = 10
-      ceil_glowrock = 10
-      ceil_water = 5
+      sky_plain = 50
+      sky_ceiling = 50
+      light_plain = 25
     }
 
     fences =
     {
-      GRNBLOK4 = 60
-      CSTLRCK = 40
-      METL2 = 30
-      GRNBLOK1 = 30
-      MOSSRCK1 = 30
-      METL1 = 10
+      CSTLRCK = 80
+      GRSTNPB = 40
     }
 
     cage_mats =
     {
-      METL1 = 60
-      METL2 = 60
-      GRNBLOK4 = 60
-      CSTLRCK = 60
-      MOSSRCK1 = 40
-      GRNBLOK1 = 40
+      CSTLRCK = 80
+      GRSTNPB = 40
     }
 
     facades =
     {
-      GRNBLOK3 = 80
-      GRNBLOK1 = 40
-      CSTLRCK = 30
-      GRNBLOK2 = 25
-      MOSSRCK1 = 5
-      METL2 = 15
-      METL1 = 10
+      CSTLRCK = 80
+      GRSTNPB = 40
+      CTYSTUC2 = 10
     }
 
     fence_groups =
@@ -547,7 +265,7 @@ HERETIC.THEMES =
       mercury_lamp  = 40
     }
 
-    ceil_light_prob = 70
+--    ceil_light_prob = 70
 
     scenic_fences =
     {
@@ -555,6 +273,145 @@ HERETIC.THEMES =
       GATMETL3 = 50
       GATMETL4 = 50
       GATMETL5 = 50
+    }
+
+    sink_style =
+    {
+      sharp = 1
+      curved = 0.1
+    }
+    
+    steps_mat = "WOODWL"
+
+    post_mat  = "METL2"
+
+  }
+  
+  cave =
+  {
+
+   style_list =
+    {
+      caves = { none=60, few=40, some=12, heaps=2 }
+      outdoors = { none=10, few=35, some=90, heaps=30 }
+      pictures = { few=20, some=80, heaps=30 }
+      hallways = { none=30, few=80, some=15, heaps=10 }
+      windows = { few=25, some=50, heaps=90 }
+      cages = { none=30, few=50, some=20, heaps=10 }
+      liquids = { none=45, few=30, some=20, heaps=5 }
+      doors = { few=20, some=70, heaps=30 }
+      steepness = { few=25, some=50, heaps=90 }
+      big_rooms = { none=25, few=40, some=25, heaps=15 }
+      ambushes = { none=5, few=20, some=75, heaps=30 }
+      teleporters = { none=20, few=30, some=65, heaps=10 }
+      keys = { none=15, few=50, some=50, heaps=20 }
+      symmetry = { none=40, few=30, some=35, heaps=25 }
+      switches = { none=20, few=60, some=40, heaps=10 }
+      secrets = { few=5, some=80, heaps=25 }
+      traps   = { none=10, few=40, some=70, heaps=25 }
+      barrels = { none=10, few=50, some=20, heaps=5 }
+    }
+
+    liquids =
+    {
+      water2 = 40
+      water  = 50
+      lava   = 20
+      magma  = 10
+    }
+    
+    narrow_halls =
+    {
+      vent = 50
+    }
+
+    wide_halls =
+    {
+      deuce = 50
+    }
+
+    floor_sinks =
+    {
+      liquid_plain = 40
+      liquid_trim = 40
+      floor_sky = 5
+      floor_trim_sky = 5
+      floor_trim_liquid = 5
+      floor_mixup = 5
+    }
+
+    ceiling_sinks =
+    {
+      sky_plain = 50
+      sky_ceiling = 50
+      light_plain = 25
+    }
+
+    fences =
+    {
+      LOOSERCK = 80
+      LAVA1 = 40
+      RCKSNMUD = 30
+    }
+
+    cage_mats =
+    {
+      LOOSERCK = 80
+      LAVA1 = 40
+      RCKSNMUD = 30
+    }
+
+    facades =
+    {
+      LOOSERCK = 80
+      LAVA1 = 40
+      RCKSNMUD = 30
+    }
+
+    fence_groups =
+    {
+      PLAIN = 50
+    }
+
+    fence_posts =
+    {
+      Post = 50
+    }
+
+    beam_groups =
+    {
+      beam_metal = 50
+    }
+
+    window_groups =
+    {
+      square = 70
+      tall   = 30
+    }
+    
+    wall_groups =
+    {
+      PLAIN = 50
+      torches1 = 50
+    }
+    
+    cave_torches =
+    {
+      fire_brazier  = 20
+      wall_torch   = 70
+      mercury_lamp  = 10
+    }
+    
+    outdoor_torches =
+    {
+      fire_brazier   = 10
+      mercury_lamp  = 40
+    }
+
+--    ceil_light_prob = 70
+
+    scenic_fences =
+    {
       WDGAT64 = 50
     }
 
@@ -564,7 +421,423 @@ HERETIC.THEMES =
       curved = 0.1
     }
     
-    steps_mat = "FLOOR10"
+    steps_mat = "LOOSERCK"
+
+    post_mat  = "WOODWL"
+
+  }
+  
+  dome =
+  {
+
+   style_list =
+    {
+      caves = { none=60, few=40, some=12, heaps=2 }
+      outdoors = { none=10, few=35, some=90, heaps=30 }
+      pictures = { few=20, some=80, heaps=30 }
+      hallways = { none=30, few=80, some=15, heaps=10 }
+      windows = { few=25, some=50, heaps=90 }
+      cages = { none=30, few=50, some=20, heaps=10 }
+      liquids = { none=45, few=30, some=20, heaps=5 }
+      doors = { few=20, some=70, heaps=30 }
+      steepness = { few=25, some=50, heaps=90 }
+      big_rooms = { none=25, few=40, some=25, heaps=15 }
+      ambushes = { none=5, few=20, some=75, heaps=30 }
+      teleporters = { none=20, few=30, some=65, heaps=10 }
+      keys = { none=15, few=50, some=50, heaps=20 }
+      symmetry = { none=40, few=30, some=35, heaps=25 }
+      switches = { none=20, few=60, some=40, heaps=10 }
+      secrets = { few=5, some=80, heaps=25 }
+      traps   = { none=10, few=40, some=70, heaps=25 }
+      barrels = { none=10, few=50, some=20, heaps=5 }
+    }
+
+    liquids =
+    {
+      water2 = 40
+      water  = 50
+      lava   = 5
+      sludge = 15
+      magma  = 5
+    }
+    
+    narrow_halls =
+    {
+      vent = 50
+    }
+
+    wide_halls =
+    {
+      deuce = 50
+    }
+
+    floor_sinks =
+    {
+      liquid_plain = 40
+      liquid_trim = 40
+      floor_sky = 5
+      floor_trim_sky = 5
+      floor_trim_liquid = 5
+      floor_mixup = 5
+    }
+
+    ceiling_sinks =
+    {
+      sky_plain = 50
+      sky_ceiling = 50
+      light_plain = 25
+    }
+
+    fences =
+    {
+      SQPEB1 = 80
+      CSTLRCK = 40
+    }
+
+    cage_mats =
+    {
+      SQPEB1 = 80
+      CSTLRCK = 40
+    }
+
+    facades =
+    {
+      SQPEB1 = 80
+      CSTLRCK = 40
+      CTYSTUC2 = 30
+    }
+
+    fence_groups =
+    {
+      PLAIN = 50
+    }
+
+    fence_posts =
+    {
+      Post = 50
+    }
+
+    beam_groups =
+    {
+      beam_metal = 50
+    }
+
+    window_groups =
+    {
+      square = 70
+      tall   = 30
+    }
+    
+    wall_groups =
+    {
+      PLAIN = 50
+      torches1 = 50
+    }
+    
+    cave_torches =
+    {
+      fire_brazier  = 20
+      wall_torch   = 70
+      mercury_lamp  = 10
+    }
+    
+    outdoor_torches =
+    {
+      fire_brazier   = 10
+      mercury_lamp  = 40
+    }
+
+--    ceil_light_prob = 70
+
+    scenic_fences =
+    {
+      GATMETL2 = 50
+      GATMETL3 = 50
+      GATMETL4 = 50
+      GATMETL5 = 50
+    }
+
+    sink_style =
+    {
+      sharp = 1
+      curved = 0.1
+    }
+    
+    steps_mat = "WOODWL"
+
+    post_mat  = "METL2"
+
+  }
+  
+   egypt =
+  {
+
+   style_list =
+    {
+      caves = { none=60, few=40, some=12, heaps=2 }
+      outdoors = { none=10, few=35, some=90, heaps=30 }
+      pictures = { few=20, some=80, heaps=30 }
+      hallways = { none=30, few=80, some=15, heaps=10 }
+      windows = { few=25, some=50, heaps=90 }
+      cages = { none=30, few=50, some=20, heaps=10 }
+      liquids = { none=45, few=30, some=20, heaps=5 }
+      doors = { few=20, some=70, heaps=30 }
+      steepness = { few=25, some=50, heaps=90 }
+      big_rooms = { none=25, few=40, some=25, heaps=15 }
+      ambushes = { none=5, few=20, some=75, heaps=30 }
+      teleporters = { none=20, few=30, some=65, heaps=10 }
+      keys = { none=15, few=50, some=50, heaps=20 }
+      symmetry = { none=40, few=30, some=35, heaps=25 }
+      switches = { none=20, few=60, some=40, heaps=10 }
+      secrets = { few=5, some=80, heaps=25 }
+      traps   = { none=10, few=40, some=70, heaps=25 }
+      barrels = { none=10, few=50, some=20, heaps=5 }
+    }
+
+    liquids =
+    {
+      water2 = 40
+      water  = 50
+    }
+    
+    narrow_halls =
+    {
+      vent = 50
+    }
+
+    wide_halls =
+    {
+      deuce = 50
+    }
+
+    floor_sinks =
+    {
+      liquid_plain = 40
+      liquid_trim = 40
+      floor_sky = 5
+      floor_trim_sky = 5
+      floor_trim_liquid = 5
+      floor_mixup = 5
+    }
+
+    ceiling_sinks =
+    {
+      sky_plain = 50
+      sky_ceiling = 50
+      light_plain = 25
+    }
+
+    fences =
+    {
+      SNDPLAIN = 80
+      SNDBLCKS = 30
+      SPINE2 = 10
+    }
+
+    cage_mats =
+    {
+      SNDPLAIN = 80
+      SNDBLCKS = 30
+      SPINE2 = 10
+    }
+
+    facades =
+    {
+      SNDPLAIN = 80
+      SNDBLCKS = 30
+      SPINE2 = 10
+    }
+
+    fence_groups =
+    {
+      PLAIN = 50
+    }
+
+    fence_posts =
+    {
+      Post = 50
+    }
+
+    beam_groups =
+    {
+      beam_metal = 50
+    }
+
+    window_groups =
+    {
+      square = 70
+      tall   = 30
+    }
+    
+    wall_groups =
+    {
+      PLAIN = 50
+      torches1 = 50
+    }
+    
+    cave_torches =
+    {
+      fire_brazier  = 20
+      wall_torch   = 70
+      mercury_lamp  = 10
+    }
+    
+    outdoor_torches =
+    {
+      fire_brazier   = 10
+      mercury_lamp  = 40
+    }
+
+--    ceil_light_prob = 70
+
+    scenic_fences =
+    {
+      WDGAT64 = 50
+    }
+
+    sink_style =
+    {
+      sharp = 1
+      curved = 0.1
+    }
+    
+    steps_mat = "FLOOR27"
+
+    post_mat  = "WOODWL"
+
+  }
+
+ 
+   garish =
+  {
+
+   style_list =
+    {
+      caves = { none=60, few=40, some=12, heaps=2 }
+      outdoors = { none=10, few=35, some=90, heaps=30 }
+      pictures = { few=20, some=80, heaps=30 }
+      hallways = { none=30, few=80, some=15, heaps=10 }
+      windows = { few=25, some=50, heaps=90 }
+      cages = { none=30, few=50, some=20, heaps=10 }
+      liquids = { none=45, few=30, some=20, heaps=5 }
+      doors = { few=20, some=70, heaps=30 }
+      steepness = { few=25, some=50, heaps=90 }
+      big_rooms = { none=25, few=40, some=25, heaps=15 }
+      ambushes = { none=5, few=20, some=75, heaps=30 }
+      teleporters = { none=20, few=30, some=65, heaps=10 }
+      keys = { none=15, few=50, some=50, heaps=20 }
+      symmetry = { none=40, few=30, some=35, heaps=25 }
+      switches = { none=20, few=60, some=40, heaps=10 }
+      secrets = { few=5, some=80, heaps=25 }
+      traps   = { none=10, few=40, some=70, heaps=25 }
+      barrels = { none=10, few=50, some=20, heaps=5 }
+    }
+
+    liquids =
+    {
+      water2 = 40
+      water  = 50
+      lava   = 10
+      magma  = 10
+    }
+    
+    narrow_halls =
+    {
+      vent = 50
+    }
+
+    wide_halls =
+    {
+      deuce = 50
+    }
+
+    floor_sinks =
+    {
+      liquid_plain = 40
+      liquid_trim = 40
+      floor_sky = 5
+      floor_trim_sky = 5
+      floor_trim_liquid = 5
+      floor_mixup = 5
+    }
+
+    ceiling_sinks =
+    {
+      sky_plain = 50
+      sky_ceiling = 50
+      light_plain = 25
+    }
+
+    fences =
+    {
+      REDWALL = 40
+    }
+
+    cage_mats =
+    {
+      REDWALL = 40
+    }
+
+    facades =
+    {
+      REDWALL = 40
+      WATRWAL1 = 20
+    }
+
+    fence_groups =
+    {
+      PLAIN = 50
+    }
+
+    fence_posts =
+    {
+      Post = 50
+    }
+
+    beam_groups =
+    {
+      beam_metal = 50
+    }
+
+    window_groups =
+    {
+      square = 70
+      tall   = 30
+    }
+    
+    wall_groups =
+    {
+      PLAIN = 50
+      torches1 = 50
+    }
+    
+    cave_torches =
+    {
+      fire_brazier  = 20
+      wall_torch   = 70
+      mercury_lamp  = 10
+    }
+    
+    outdoor_torches =
+    {
+      fire_brazier   = 10
+      mercury_lamp  = 40
+    }
+
+--    ceil_light_prob = 70
+
+    scenic_fences =
+    {
+      WDGAT64 = 50
+    }
+
+    sink_style =
+    {
+      sharp = 1
+      curved = 0.1
+    }
+    
+    steps_mat = "FLAT502"
 
     post_mat  = "WOODWL"
 
@@ -575,168 +848,119 @@ HERETIC.THEMES =
 
 HERETIC.ROOM_THEMES =
 {
-  any_Hallway =
-  {
-    env  = "hallway"
-    prob = 1
-
-    walls =
-    {
-      GRSTNPB  = 60
-      SANDSQ2  = 20
-      SNDCHNKS = 20
-    }
-
-    floors =
-    {
-      FLOOR00 = 50
-      FLOOR18 = 50
-      FLAT521 = 50
-      FLAT506 = 50
-    }
-
-    ceilings =
-    {
-      FLAT523 = 50
-    }
-  }
 
   ---- CASTLE THEME --------------------------------
 
-  castle_Green =
+   
+  castle_Gold =
   {
     env  = "building"
-    prob = 50
+    prob = 20
 
     walls =
     {
-      GRNBLOK1 = 50
-      MOSSRCK1 = 50
+      SANDSQ2 = 50
     }
 
     floors =
     {
-      FLOOR19 = 20
-      FLOOR27 = 50
-      FLAT520 = 50
-      FLAT521 = 50
-    }
-
-    ceilings =
-    {
-      FLOOR05 = 50
-      FLAT512 = 50
-    }
-  }
-
-
-  castle_Gray =
-  {
-    env  = "building"
-    prob = 50
-
-    walls =
-    {
-      CSTLRCK  = 50
-      TRISTON1 = 50
-    }
-
-    floors =
-    {
-      FLAT503 = 50
-      FLAT522 = 50
-      FLOOR10 = 50
-    }
-
-    ceilings =
-    {
-      FLOOR04 = 50
-      FLAT520 = 50
-    }
-  }
-
-
-  castle_Orange =
-  {
-    env  = "building"
-    prob = 50
-
-    walls =
-    {
-      SQPEB2   = 50
-      TRISTON2 = 50
-    }
-
-    floors =
-    {
-      FLOOR01 = 50
-      FLOOR03 = 50
       FLOOR06 = 20
     }
 
     ceilings =
     {
-      FLAT523 = 50
-      FLOOR17 = 50
+      FLOOR11 = 50
     }
   }
 
-  castle_Cave =
+  castle_Block =
   {
-    env  = "cave"
+    env  = "building"
     prob = 50
 
     walls =
     {
-      LOOSERCK=20, BRWNRCKS=20
+      GRSTNPB = 50
     }
 
     floors =
     {
-      LOOSERCK=20, BRWNRCKS=20
+      FLOOR03 = 20
+    }
+
+    ceilings =
+    {
+      FLOOR03 = 50
     }
   }
 
 
-  castle_Outdoors =
+  castle_Mossy =
   {
-    env  = "outdoor"
+    env  = "building"
     prob = 50
 
+    walls =
+    {
+      MOSSRCK1 = 50
+    }
+
     floors =
     {
-      FLOOR00=20, FLOOR27=30, FLOOR18=50,
-      FLAT522=10, FLAT523=20,
+      FLOOR00 = 50
     }
 
-    naturals =
+    ceilings =
     {
-      FLOOR17=50, FLAT509=20, FLAT510=20,
-      FLAT513=20, FLAT516=35,
+      FLOOR04 = 50
     }
-
-    porch_floors =
-    {
-      FLAT503 = 10
-      FLAT503 = 15
-      FLAT516 = 8
-      FLOOR05 = 10
-      FLOOR06 = 5
-      FLOOR06 = 8
-      FLOOR08 = 10
-      FLOOR10 = 10
-      FLOOR11 = 10
-      FLOOR12 = 10
-      FLOOR17 = 15
-      FLOOR25 = 15
-      FLOOR28 = 10
-      FLOOR29 = 10
-    }
-
   }
 
 
-  castle_deuce_Hallway =
+  castle_Wood =
+  {
+    env  = "building"
+    prob = 50
+
+    walls =
+    {
+      WOODWL = 50
+    }
+
+    floors =
+    {
+      FLOOR10 = 50
+    }
+
+    ceilings =
+    {
+      FLOOR12 = 50
+    }
+  }
+  
+  castle_Hut =
+  {
+    env  = "building"
+    prob = 50
+
+    walls =
+    {
+      CTYSTUC3 = 50
+    }
+
+    floors =
+    {
+      FLOOR10 = 50
+    }
+    
+    ceilings =
+    {
+      FLOOR11 = 50
+    }
+    
+  }
+  
+  castle_deuce_Hallway_Rckhall =
   {
     env   = "hallway"
     group = "deuce"
@@ -744,182 +968,1198 @@ HERETIC.ROOM_THEMES =
 
     walls =
     {
-      SNDCHNKS = 30
-      SQPEB1   = 30
-      SQPEB2   = 20
-      SKULLSB1 = 10
+      GRSTNPB = 50
     }
 
     floors =
     {
-      FLOOR00 = 20
-      FLOOR01 = 20
-      FLOOR06 = 20
-      FLOOR07 = 20
-      FLOOR09 = 20
-      FLAT502 = 10
+      FLOOR03 = 50
     }
 
     ceilings =
     {
-      FLOOR29 = 20
-      FLOOR00 = 10
-      FLOOR09 = 10
-      FLAT510 = 10
-      FLAT520 = 10
+      FLOOR03 = 50
     }
     
   }
   
-  castle_vent_Hallway =
+  castle_vent_Hallway_Rckhall =
   {
     env   = "hallway"
     group = "vent"
-    prob  = 1
+    prob  = 50
 
     walls =
     {
-      CSTLRCK = 50
-      MOSSRCK1 = 30
+      GRSTNPB = 50
     }
 
     floors =
     {
-      FLOOR10 = 30
-      FLAT503 = 20
-      FLOOR11 = 10
+      FLOOR03 = 50
     }
 
     ceilings =
     {
-      FLOOR10 = 30
-      FLOOR12 = 20
-      FLOOR08 = 20
+      FLOOR03 = 50
     }
+    
   }
-
-  castle_access_Hallway =
+  
+    castle_deuce_Hallway_Sthall =
   {
     env   = "hallway"
-    group = "access"
-    prob  = 1
-
-    walls =
-    {
-      CSTLRCK = 50
-    }
-
-    floors =
-    {
-      FLOOR10 = 30
-    }
-
-    ceilings =
-    {
-      FLOOR10 = 30
-    }
-  }
-
-    castle_mineshaft_Hallway =
-  {
-    env = "hallway"
-    group = "mineshaft"
-    prob = 1
+    group = "deuce"
+    prob  = 50
 
     walls =
     {
       LOOSERCK = 50
+    }
+
+    floors =
+    {
+      FLOOR00 = 50
+    }
+
+    ceilings =
+    {
+      FLOOR00 = 50
+    }
+    
+  }
+  
+  castle_vent_Hallway_Sthall =
+  {
+    env   = "hallway"
+    group = "vent"
+    prob  = 50
+
+    walls =
+    {
+      LOOSERCK = 50
+    }
+
+    floors =
+    {
+      FLOOR00 = 50
+    }
+
+    ceilings =
+    {
+      FLOOR00 = 50
+    }
+    
+  }
+  
+  castle_deuce_Hallway_Wdhall =
+  {
+    env   = "hallway"
+    group = "deuce"
+    prob  = 50
+
+    walls =
+    {
+      SQPEB2 = 50
+    }
+
+    floors =
+    {
+      FLOOR06 = 50
+    }
+
+    ceilings =
+    {
+      FLOOR06 = 50
+    }
+    
+  }
+  
+  castle_vent_Hallway_Wdhall =
+  {
+    env   = "hallway"
+    group = "vent"
+    prob  = 50
+
+    walls =
+    {
+      SQPEB2 = 50
+    }
+
+    floors =
+    {
+      FLOOR06 = 50
+    }
+
+    ceilings =
+    {
+      FLOOR06 = 50
+    }
+    
+  }
+  
+  castle_Outdoors_Stony =
+  {
+    env  = "outdoor"
+    prob = 50
+
+    floors =
+    {
+      FLOOR00 = 20
+    }
+
+    naturals =
+    {
+      FLOOR00 = 20
+    }
+
+    porch_floors =
+    {
+      FLOOR00 = 50
+    }
+
+  }
+  
+  castle_Outdoors_Muddy =
+  {
+    env  = "outdoor"
+    prob = 50
+
+    floors =
+    {
+      FLOOR17 = 20
+    }
+
+    naturals =
+    {
+      FLOOR17 = 20
+    }
+
+    porch_floors =
+    {
+      FLOOR17 = 50
+    }
+
+  }
+  
+  castle_Outdoors_Sandy =
+  {
+    env  = "outdoor"
+    prob = 50
+
+    floors =
+    {
+      FLOOR27 = 20
+    }
+
+    naturals =
+    {
+      FLOOR27 = 20
+    }
+
+    porch_floors =
+    {
+      FLOOR27 = 50
+    }
+
+  }
+  
+  --------- CAVE THEME -------------
+
+  cave_Cave1 =
+  {
+    env  = "building"
+    prob = 50
+
+    walls =
+    {
+      LOOSERCK = 50
+    }
+
+    floors =
+    {
+      FLAT516 = 50
+    }
+    
+    ceilings =
+    {
+      FLOOR01 = 50
+    }
+    
+  }
+
+  cave_Cave2 =
+  {
+    env  = "building"
+    prob = 50
+
+    walls =
+    {
+      LAVA1 = 50
+    }
+
+    floors =
+    {
+      FLAT516 = 50
+    }
+    
+    ceilings =
+    {
+      FLAT506 = 50
+    }
+    
+  }
+  
+  cave_Cave3 =
+  {
+    env  = "building"
+    prob = 50
+
+    walls =
+    {
+      BRWNRCKS = 50
+    }
+
+    floors =
+    {
+      FLOOR01 = 50
+    }
+    
+    ceilings =
+    {
+      FLAT516 = 50
+    }
+    
+  }
+  
+    cave_Root =
+  {
+    env  = "building"
+    prob = 50
+
+    walls =
+    {
+      ROOTWALL = 50
+    }
+
+    floors =
+    {
+      FLAT506 = 50
+    }
+    
+    ceilings =
+    {
+      FLAT506 = 50
+    }
+    
+  }
+
+  cave_deuce_Hallway_Sthall =
+  {
+    env   = "hallway"
+    group = "deuce"
+    prob  = 50
+
+    walls =
+    {
+      LOOSERCK = 50
+    }
+
+    floors =
+    {
+      FLOOR00 = 50
+    }
+
+    ceilings =
+    {
+      FLOOR00 = 50
+    }
+    
+  }
+  
+  cave_vent_Hallway_Sthall =
+  {
+    env   = "hallway"
+    group = "vent"
+    prob  = 50
+
+    walls =
+    {
+      LOOSERCK = 50
+    }
+
+    floors =
+    {
+      FLOOR00 = 50
+    }
+
+    ceilings =
+    {
+      FLOOR00 = 50
+    }
+    
+  }
+  
+  cave_deuce_Hallway_Rthall =
+  {
+    env   = "hallway"
+    group = "deuce"
+    prob  = 50
+
+    walls =
+    {
+      ROOTWALL = 50
+    }
+
+    floors =
+    {
+      FLAT506 = 50
+    }
+
+    ceilings =
+    {
+      FLAT506 = 50
+    }
+    
+  }
+  
+  cave_vent_Hallway_Rthall =
+  {
+    env   = "hallway"
+    group = "vent"
+    prob  = 50
+
+    walls =
+    {
+      ROOTWALL = 50
+    }
+
+    floors =
+    {
+      FLAT506 = 50
+    }
+
+    ceilings =
+    {
+      FLAT506 = 50
+    }
+    
+  }
+
+  cave_Outdoors_Cave01 =
+  {
+    env  = "outdoor"
+    prob = 50
+
+    floors =
+    {
+      FLAT516 = 20
+    }
+
+    naturals =
+    {
+      FLAT516 = 20
+    }
+
+    porch_floors =
+    {
+      FLAT516 = 20
+    }
+
+  }
+  
+    cave_Outdoors_Cave02 =
+  {
+    env  = "outdoor"
+    prob = 50
+
+    floors =
+    {
+      FLAT510 = 20
+    }
+
+    naturals =
+    {
+      FLAT510 = 20
+    }
+
+    porch_floors =
+    {
+      FLAT510 = 20
+    }
+
+  }
+  
+  --------- DOME THEME -------------
+
+  dome_Disco2 =
+  {
+    env  = "building"
+    prob = 50
+
+    walls =
+    {
+      SQPEB1 = 50
+    }
+
+    floors =
+    {
+      FLAT522 = 50
+    }
+    
+    ceilings =
+    {
+      FLOOR06 = 50
+    }
+    
+  }
+
+  dome_Mossy =
+  {
+    env  = "building"
+    prob = 50
+
+    walls =
+    {
+      MOSSRCK1 = 50
+    }
+
+    floors =
+    {
+      FLOOR00 = 50
+    }
+    
+    ceilings =
+    {
+      FLOOR04 = 50
+    }
+    
+  }
+  
+  dome_Hut =
+  {
+    env  = "building"
+    prob = 50
+
+    walls =
+    {
+      CTYSTUC3 = 50
+    }
+
+    floors =
+    {
+      FLOOR10 = 50
+    }
+    
+    ceilings =
+    {
+      FLOOR11 = 50
+    }
+    
+  }
+  
+  dome_deuce_Hallway_Rckhall =
+  {
+    env   = "hallway"
+    group = "deuce"
+    prob  = 50
+
+    walls =
+    {
+      GRSTNPB = 50
+    }
+
+    floors =
+    {
+      FLOOR03 = 50
+    }
+
+    ceilings =
+    {
+      FLOOR03 = 50
+    }
+    
+  }
+  
+  dome_vent_Hallway_Rckhall =
+  {
+    env   = "hallway"
+    group = "vent"
+    prob  = 50
+
+    walls =
+    {
+      GRSTNPB = 50
+    }
+
+    floors =
+    {
+      FLOOR03 = 50
+    }
+
+    ceilings =
+    {
+      FLOOR03 = 50
+    }
+    
+  }
+  
+  dome_deuce_Hallway_Whall =
+  {
+    env   = "hallway"
+    group = "deuce"
+    prob  = 50
+
+    walls =
+    {
+      MOSAIC1 = 50
+    }
+
+    floors =
+    {
+      FLTWAWA1 = 50
+    }
+
+    ceilings =
+    {
+      FLAT502 = 50
+    }
+    
+  }
+  
+  dome_vent_Hallway_Whall =
+  {
+    env   = "hallway"
+    group = "vent"
+    prob  = 50
+
+    walls =
+    {
+      MOSAIC1 = 50
+    }
+
+    floors =
+    {
+      FLTWAWA1 = 50
+    }
+
+    ceilings =
+    {
+      FLAT502 = 50
+    }
+    
+  }
+ 
+  dome_Outdoors_ODisco2 =
+  {
+    env  = "outdoor"
+    prob = 50
+
+    floors =
+    {
+      FLAT522 = 20
+    }
+
+    naturals =
+    {
+      FLAT522 = 20
+    }
+
+    porch_floors =
+    {
+      SPINE2 = 20
+    }
+
+  }
+  
+  dome_Outdoors_Muddy =
+  {
+    env  = "outdoor"
+    prob = 50
+
+    floors =
+    {
+      FLOOR17 = 20
+    }
+
+    naturals =
+    {
+      FLOOR17 = 20
+    }
+
+    porch_floors =
+    {
+      FLOOR17 = 20
+    }
+
+  }
+  
+  dome_Outdoors_Sandy =
+  {
+    env  = "outdoor"
+    prob = 50
+
+    floors =
+    {
+      FLOOR27 = 20
+    }
+
+    naturals =
+    {
+      FLOOR27 = 20
+    }
+
+    porch_floors =
+    {
+      FLOOR27 = 20
+    }
+
+  }
+  
+------- EGYPT THEME -------
+
+   egypt_Gold =
+  {
+    env  = "building"
+    prob = 50
+
+    walls =
+    {
+      SANDSQ2 = 50
+    }
+
+    floors =
+    {
+      FLOOR06 = 50
+    }
+
+    ceilings =
+    {
+      FLOOR11 = 50
+    }
+  }
+  
+  egypt_Wood =
+  {
+    env  = "building"
+    prob = 50
+
+    walls =
+    {
+      WOODWL = 50
+    }
+
+    floors =
+    {
+      FLOOR10 = 50
+    }
+
+    ceilings =
+    {
+      FLOOR12 = 50
+    }
+  }
+
+  egypt_Disco1 =
+  {
+    env  = "building"
+    prob = 50
+
+    walls =
+    {
+      SPINE2 = 50
+    }
+
+    floors =
+    {
+      FLAT522 = 50
+    }
+    
+    ceilings =
+    {
+      FLOOR06 = 50
+    }
+    
+  }
+  
+  egypt_Pyramid =
+  {
+    env  = "building"
+    prob = 50
+
+    walls =
+    {
       SNDPLAIN = 50
+    }
+
+    floors =
+    {
+      FLOOR27 = 50
+    }
+    
+    ceilings =
+    {
+      FLOOR10 = 50
+    }
+    
+  }
+  
+  egypt_Pharoah =
+  {
+    env  = "building"
+    prob = 50
+
+    walls =
+    {
+      TRISTON2 = 50
+    }
+
+    floors =
+    {
+      FLAT522 = 50
+    }
+    
+    ceilings =
+    {
+      FLOOR20 = 50
+    }
+    
+  }
+  
+  egypt_Parlor =
+  {
+    env  = "building"
+    prob = 50
+
+    walls =
+    {
+      SQPEB2 = 50
+    }
+
+    floors =
+    {
+      FLOOR06 = 50
+    }
+    
+    ceilings =
+    {
+      FLOOR06 = 50
+    }
+    
+  }
+  
+  egypt_Sblock =
+  {
+    env  = "building"
+    prob = 50
+
+    walls =
+    {
       SNDBLCKS = 50
     }
 
     floors =
     {
-      FLOOR17 = 50
-      FLAT523 = 50
-      FLAT522 = 50
-      FLOOR11 = 50
-      FLOOR12 = 50
+      FLOOR27 = 50
+    }
+    
+    ceilings =
+    {
+      FLOOR10 = 50
+    }
+    
+  }
+  
+  egypt_Cave3 =
+  {
+    env  = "building"
+    prob = 10
+
+    walls =
+    {
+      BRWNRCKS = 50
+    }
+
+    floors =
+    {
+      FLOOR01 = 50
+    }
+    
+    ceilings =
+    {
+      FLAT516 = 50
+    }
+    
+  }
+  
+  egypt_deuce_Hallway_Wdhall =
+  {
+    env   = "hallway"
+    group = "deuce"
+    prob  = 50
+
+    walls =
+    {
+      SQPEB2 = 50
+    }
+
+    floors =
+    {
+      FLOOR06 = 50
     }
 
     ceilings =
     {
-      FLOOR11 = 50 -- the mineshafts don't actually have
-                 -- separate _CEIL textures
+      FLOOR06 = 50
     }
-   }
-
-   castle_metro_Hallway =
+    
+  }
+  
+  egypt_vent_Hallway_Wdhall =
   {
     env   = "hallway"
-    group = "metro"
-    prob  = 15
+    group = "vent"
+    prob  = 50
 
     walls =
     {
-      GRNBLOK3 = 50
-      CSTLRCK = 50
-      GRNBLOK1 = 50
-      GRNBLOK2 = 50
-      GRNBLOK4 = 50
-      METL1 = 50
+      SQPEB2 = 50
+    }
+
+    floors =
+    {
+      FLOOR06 = 50
+    }
+
+    ceilings =
+    {
+      FLOOR06 = 50
+    }
+    
+  }
+  
+  egypt_deuce_Hallway_Sdhall =
+  {
+    env   = "hallway"
+    group = "deuce"
+    prob  = 50
+
+    walls =
+    {
+      SNDPLAIN = 50
+    }
+
+    floors =
+    {
+      FLOOR27 = 50
+    }
+
+    ceilings =
+    {
+      FLOOR10 = 50
+    }
+    
+  }
+  
+  egypt_vent_Hallway_Sdhall =
+  {
+    env   = "hallway"
+    group = "vent"
+    prob  = 50
+
+    walls =
+    {
+      SNDPLAIN = 50
+    }
+
+    floors =
+    {
+      FLOOR27 = 50
+    }
+
+    ceilings =
+    {
+      FLOOR10 = 50
+    }
+    
+  }
+  
+  egypt_Outdoors_ODisco1 =
+  {
+    env  = "outdoor"
+    prob = 50
+
+    floors =
+    {
+      FLAT522 = 50
+    }
+
+    naturals =
+    {
+      FLAT522 = 50
+
+    }
+
+    porch_floors =
+    {
+      SNDBLCKS = 50
+    }
+
+  }
+  
+  egypt_Outdoors_PyramidO =
+  {
+    env  = "outdoor"
+    prob = 50
+
+    floors =
+    {
+      FLOOR27 = 50
+    }
+
+    naturals =
+    {
+      FLOOR27 = 50
+    }
+
+    porch_floors =
+    {
+      SPINE2 = 50
+    }
+
+  }
+  
+  egypt_Outdoors_PharoahO =
+  {
+    env  = "outdoor"
+    prob = 50
+
+    floors =
+    {
+      FLAT521 = 50
+    }
+
+    naturals =
+    {
+      FLAT521 = 50
+    }
+
+    porch_floors =
+    {
+      SQPEB2 = 50
+    }
+
+  }
+  
+  egypt_Outdoors_Sandz =
+  {
+    env  = "outdoor"
+    prob = 50
+
+    floors =
+    {
+      FLOOR27 = 50
+    }
+
+    naturals =
+    {
+      FLOOR27 = 50
+    }
+
+    porch_floors =
+    {
+      FLOOR27 = 50
+    }
+
+  }
+   
+  
+--------- GARISH THEME -------------
+
+  garish_Purple =
+  {
+    env  = "building"
+    prob = 50
+
+    walls =
+    {
       BLUEFRAG = 50
     }
 
     floors =
     {
-      FLAT503 = 50
-      FLAT508 = 50
-      FLAT516 = 50
-      FLAT522 = 50
-      FLOOR03 = 50
-      FLOOR05 = 50
-      FLOOR06 = 50
-      FLOOR10 = 50
-      FLOOR11 = 50
-      FLOOR12 = 50
-      FLOOR28 = 50
-      FLOOR30 = 50
+      FLOOR07 = 50
+    }
+    
+    ceilings =
+    {
+      FLOOR07 = 50
+    }
+    
+  }
+
+  garish_Blue =
+  {
+    env  = "building"
+    prob = 50
+
+    walls =
+    {
+      MOSAIC1 = 50
+    }
+
+    floors =
+    {
+      FLAT502 = 50
+    }
+    
+    ceilings =
+    {
+      FLOOR16 = 50
+    }
+    
+  }
+  
+  garish_Ice =
+  {
+    env  = "building"
+    prob = 50
+
+    walls =
+    {
+      STNGLS1 = 50
+    }
+
+    floors =
+    {
+      FLAT502 = 50
+    }
+    
+    ceilings =
+    {
+      FLAT517 = 50
+    }
+    
+  }
+  
+  garish_deuce_Hallway_Whall =
+  {
+    env   = "hallway"
+    group = "deuce"
+    prob  = 50
+
+    walls =
+    {
+      MOSAIC1 = 50
+    }
+
+    floors =
+    {
+      FLTWAWA1 = 50
     }
 
     ceilings =
     {
-      FLAT503 = 50
-      FLAT508 = 50
-      FLAT516 = 50
-      FLAT522 = 50
-      FLOOR03 = 50
-      FLOOR05 = 50
-      FLOOR06 = 50
-      FLOOR10 = 50
-      FLOOR11 = 50
-      FLOOR12 = 50
-      FLOOR28 = 50
-      FLOOR30 = 50
+      FLAT502 = 50
+    }
+    
+  }
+  
+  garish_vent_Hallway_Whall =
+  {
+    env   = "hallway"
+    group = "vent"
+    prob  = 50
 
+    walls =
+    {
+      MOSAIC1 = 50
+    }
+
+    floors =
+    {
+      FLTWAWA1 = 50
+    }
+
+    ceilings =
+    {
+      FLAT502 = 50
+    }
+    
+  }
+  
+  garish_Outdoors_Water =
+  {
+    env  = "outdoor"
+    prob = 50
+
+    floors =
+    {
+      FLTWAWA1 = 20
+    }
+
+    naturals =
+    {
+      FLTWAWA1 = 20
+    }
+
+    porch_floors =
+    {
+      FLTWAWA1 = 20
+    }
+
+  }  
+  
+  garish_Outdoors_PurpleO =
+  {
+    env  = "outdoor"
+    prob = 50
+
+    floors =
+    {
+      FLOOR07 = 20
+    }
+
+    naturals =
+    {
+      FLOOR07 = 20
+    }
+
+    porch_floors =
+    {
+      FLOOR07 = 20
+    }
+
+  } 
+   
+--------- GENERIC ITEMS ----------
+
+  any_Cave =
+  {
+    env  = "cave"
+    prob = 50
+
+    walls =
+    {
+      LOOSERCK=20, LAVA1=20, BRWNRCKS=20, ROOTWALL=20
+    }
+
+    floors =
+    {
+      FLAT516=20, FLAT506=20, FLOOR01=20
     }
   }
    
 }
 ------------------------------------------------------------------------
 
-HERETIC.NAMES =
-{
-  -- TODO
-}
-
 
 HERETIC.ROOMS =
 {
+
   GENERIC =
   {
     env = "any"
-  }
-
-  PRISON =
-  {
-    style = "cages"
-    prob  = 50
   }
 
   OUTSIDE =
@@ -937,6 +2177,38 @@ HERETIC.ROOMS =
 OB_THEMES["castle"] =
 {
   label = _("Castle")
+  game = "heretic"
+  name_class = "CASTLE"
+  mixed_prob = 50
+}
+
+OB_THEMES["cave"] =
+{
+  label = _("Cave")
+  game = "heretic"
+  name_class = "CASTLE"
+  mixed_prob = 50
+}
+
+OB_THEMES["dome"] =
+{
+  label = _("Dome")
+  game = "heretic"
+  name_class = "CASTLE"
+  mixed_prob = 50
+}
+
+OB_THEMES["egypt"] =
+{
+  label = _("Egypt")
+  game = "heretic"
+  name_class = "CASTLE"
+  mixed_prob = 50
+}
+
+OB_THEMES["garish"] =
+{
+  label = _("Garish")
   game = "heretic"
   name_class = "CASTLE"
   mixed_prob = 50
