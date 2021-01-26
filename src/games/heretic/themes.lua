@@ -5,8 +5,8 @@
 --  Copyright (C) 2006-2017 Andrew Apted
 --  Copyright (C)      2008 Sam Trenholme
 --  Copyright (C) 2019-2020 MsrSgtShooterPerson
---  --Adapted from MsrSgtShooterPerson's Doom themes.lua file
-    --Into a singular theme (Castle) for Heretic
+--  Adapted for Heretic by Dashodanger using Andrew's original Heretic themes
+--  from Oblige <= 4.28
 --
 --  This program is free software; you can redistribute it and/or
 --  modify it under the terms of the GNU General Public License
@@ -50,12 +50,10 @@ HERETIC.SINKS =
   liquid_trim =
   {
     mat   = "_LIQUID"
-    dz    = 48
-    light = 16
+    dz    = -16
 
     trim_mat = "_WALL"
-    trim_dz  = -9
-    trim_light = 16
+    trim_dz  = -8
   }
 
   -- ceiling lights --
@@ -70,6 +68,18 @@ HERETIC.SINKS =
     trim_mat = "_WALL"
     trim_dz  = -5
     trim_light = 16
+  }
+
+-- plain floors
+
+  floor_plain =
+  {
+    mat = "_FLOOR"
+    dz = -16
+    light = 32
+
+    trim_mat = "_WALL"
+    trim_dz = -8
   }
 
   -- fantastic floors
@@ -191,6 +201,7 @@ HERETIC.THEMES =
 
     floor_sinks =
     {
+      floor_plain = 50
       liquid_plain = 40
       liquid_trim = 40
       floor_sky = 5
@@ -332,6 +343,7 @@ HERETIC.THEMES =
 
     floor_sinks =
     {
+      floor_plain = 50
       liquid_plain = 40
       liquid_trim = 40
       floor_sky = 5
@@ -473,6 +485,7 @@ HERETIC.THEMES =
 
     floor_sinks =
     {
+      floor_plain = 50
       liquid_plain = 40
       liquid_trim = 40
       floor_sky = 5
@@ -612,6 +625,7 @@ HERETIC.THEMES =
 
     floor_sinks =
     {
+      floor_plain = 50
       liquid_plain = 40
       liquid_trim = 40
       floor_sky = 5
@@ -753,6 +767,7 @@ HERETIC.THEMES =
 
     floor_sinks =
     {
+      floor_plain = 50
       liquid_plain = 40
       liquid_trim = 40
       floor_sky = 5
