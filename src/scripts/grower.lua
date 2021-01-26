@@ -1057,6 +1057,14 @@ function Grower_decide_extents()
   LEVEL.min_rooms = math.max(3, int(base / 3))
   LEVEL.max_rooms = math.max(6, int(base))
 
+  -- add extra rooms based on extra size and area multiplier
+  if LEVEL.size_multiplier < 1 then
+    LEVEL.max_rooms = int(LEVEL.max_rooms * ((1 - LEVEL.size_multiplier)+1) * 2/3)
+  end
+  if LEVEL.area_multiplier < 1 then
+    LEVEL.max_rooms = int(LEVEL.max_rooms * ((1 - LEVEL.area_multiplier)+1) * 2/3)
+  end
+
   -- specific instructions for procedural gotcha
 
   if LEVEL.is_procedural_gotcha == true then
