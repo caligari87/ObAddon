@@ -65,7 +65,7 @@ PREFABS.Pic_EPIC_box_gothic_semibig =
 PREFABS.Pic_EPIC_box_skeletons =
 {
   template = "Pic_EPIC_box_template"
-  map = "MAP01"
+  map = "MAP20" -- low brightness version of MAP01
 
   prob = 35 * 8
 
@@ -75,18 +75,18 @@ PREFABS.Pic_EPIC_box_skeletons =
 
   tex_GLASS1 =
   {
-   DEATH1 = 50
-   DEATH2 = 50
-   DEATH3 = 50
-   GUY1   = 25
-   PENTA1 = 5
+    DEATH1 = 50
+    DEATH2 = 50
+    DEATH3 = 50
+    GUY1   = 25
+    PENTA1 = 5
   }
 }
 
 PREFABS.Pic_EPIC_box_marblefaces =
 {
   template = "Pic_EPIC_box_template"
-  map = "MAP01"
+  map = "MAP20" -- low brightness version of MAP01
 
   prob = 32 * 7
 
@@ -96,17 +96,17 @@ PREFABS.Pic_EPIC_box_marblefaces =
 
   tex_GLASS1 =
   {
-   MARBFAB1 = 50
-   MARBFAB2 = 50
-   MARBFAB3 = 50
-   MARBFAC5 = 50
-   MARBFAC6 = 50
-   MARBFAC7 = 50
-   MARBFAC8 = 50
-   MARBFAC9 = 50
-   MARBFACA = 50
-   MARBFACB = 50
-   MARBFACF = 50
+    MARBFAB1 = 50
+    MARBFAB2 = 50
+    MARBFAB3 = 50
+    MARBFAC5 = 50
+    MARBFAC6 = 50
+    MARBFAC7 = 50
+    MARBFAC8 = 50
+    MARBFAC9 = 50
+    MARBFACA = 50
+    MARBFACB = 50
+    MARBFACF = 50
   }
 }
 
@@ -134,7 +134,7 @@ PREFABS.Pic_EPIC_box_wallofskulls =
 PREFABS.Pic_EPIC_box_doom2bodies =
 {
   template = "Pic_EPIC_box_template"
-  map = "MAP01"
+  map = "MAP20" -- dark version of MAP01
 
   prob = 30 * 8
 
@@ -144,8 +144,8 @@ PREFABS.Pic_EPIC_box_doom2bodies =
 
   tex_GLASS1 =
   {
-   SPDUDE7 = 50
-   SPDUDE8 = 50
+    SPDUDE7 = 50
+    SPDUDE8 = 50
   }
 }
 
@@ -184,11 +184,11 @@ PREFABS.Pic_EPIC_box_small_facesofevil =
 
   tex_COMPSA1 =
   {
-   EVILFAC2 = 50
-   EVILFAC4 = 50
-   EVILFAC5 = 50
-   EVILFAC6 = 50
-   EVILFAC7 = 50
+    EVILFAC2 = 50
+    EVILFAC4 = 50
+    EVILFAC5 = 50
+    EVILFAC6 = 50
+    EVILFAC7 = 50
   }
 }
 
@@ -303,10 +303,10 @@ PREFABS.Pic_EPIC_box_static =
 
   tex_COMPSA1 =
   {
-   NOISE2A = 50
-   NOISE3A = 50
-   TVSNOW01 = 50
-   COMPFUZ1 = 50
+    NOISE2A = 50
+    NOISE3A = 50
+    TVSNOW01 = 50
+    COMPFUZ1 = 50
   }
 }
 
@@ -480,10 +480,10 @@ PREFABS.Pic_EPIC_box_whitelion_and_goat =
 
   tex_GLASS1 =
   {
-   LIONMRB1 = 50
-   LIONMRB2 = 50
-   LIONMRB3 = 50
-   GOATMARB = 50
+    LIONMRB1 = 50
+    LIONMRB2 = 50
+    LIONMRB3 = 50
+    GOATMARB = 50
   }
 }
 
@@ -533,7 +533,7 @@ PREFABS.Pic_EPIC_WoodenDemon =
 
   prob = 35
 
-  height = 128
+  height = 160
 
   theme = "!tech"
 
@@ -542,7 +542,6 @@ PREFABS.Pic_EPIC_WoodenDemon =
   tex_GLASS1 = "WOODDEM1"
 
   sector_1  = { [0]=75, [1]=15 }
-
 }
 
 
