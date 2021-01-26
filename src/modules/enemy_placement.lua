@@ -44,6 +44,7 @@ HARDER_ENEMY.MONSTERS =
     room_size = "any" --small
     disloyal = true
     trap_factor = 0.01
+    outdoor_factor = 0.5
     infight_damage = 1.9
   }
 
@@ -65,10 +66,11 @@ HARDER_ENEMY.MONSTERS =
     weap_needed = { shotty=true }
     species = "zombie"
     replaces = "zombie"
-    replace_prob = 30
+    replace_prob = 25
     room_size = "any" --small
     disloyal = true
     trap_factor = 2.2 --2.0
+    outdoor_factor = 0.66
     infight_damage = 6.1
   }
 
@@ -85,10 +87,11 @@ HARDER_ENEMY.MONSTERS =
     attack = "missile"
     density = 1.0
     replaces = "demon"
-    replace_prob = 30
+    replace_prob = 25
     weap_prefs = { shotty=1.5, chain=1.25, super=1.2 }
     room_size = "any" --small
-    trap_factor = 0.5 --0.3
+    trap_factor = 0.7
+    outdoor_factor = 0.8
     infight_damage = 4.0
   }
 
@@ -97,7 +100,7 @@ HARDER_ENEMY.MONSTERS =
     id = 3006
     r = 16
     h = 56
-    level = 4 -- STOP SHOWING UP ON MAP01!!
+    level = 4
     prob = 25
     health = 100
     damage = 1.7
@@ -107,8 +110,9 @@ HARDER_ENEMY.MONSTERS =
     weap_prefs = { super=1.5, chain=1.3, launch=0.3 }
     room_size = "any" --small
     disloyal = true
-    trap_factor = 0.35 --0.2
+    trap_factor = 0
     cage_factor = 0
+    outdoor_factor = 2.5
     infight_damage = 2.1
   }
 
@@ -127,6 +131,8 @@ HARDER_ENEMY.MONSTERS =
     weap_min_damage = 40
     weap_prefs = { super=1.75, shotty=1.35, chain=1.3, plasma=1.1, launch=0.3 }
     room_size = "any"
+    trap_factor = 0.6
+    outdoor_factor = 3.0
     infight_damage = 3.5
   }
 
@@ -150,7 +156,7 @@ HARDER_ENEMY.MONSTERS =
     weap_prefs = { super=1.75, shotty=1.35, chain=1.3, plasma=1.1, launch=0.3 }
     species = "demon"
     room_size = "any"
-    trap_factor = 0.3
+    trap_factor = 0.8
     infight_damage = 2.5
   }
 
@@ -174,6 +180,7 @@ HARDER_ENEMY.MONSTERS =
     replace_prob = 20
     room_size = "any" --large
     trap_factor = 0.5
+    outdoor_factor = 1.33
     infight_damage = 21
   }
 
@@ -198,6 +205,7 @@ HARDER_ENEMY.MONSTERS =
     density = 0.3
     weap_min_damage = 88
     room_size = "any" --medium
+    trap_factor = 0.5
     infight_damage = 40
   }
 
@@ -221,6 +229,7 @@ HARDER_ENEMY.MONSTERS =
     room_size = "large" --medium
     infight_damage = 1600
     cage_factor = 0
+    outdoor_factor = 2.0
     boss_replacement = "baron"
   }
 
@@ -243,6 +252,7 @@ HARDER_ENEMY.MONSTERS =
     attack = "hitscan"
     density = 0.1
     cage_factor = 0
+    outdoor_factor = 3.0
     weap_min_damage = 200
     weap_prefs = { bfg=10.0 }
     room_size = "large"
@@ -275,7 +285,8 @@ HARDER_ENEMY.MONSTERS =
     replaces = "shooter"
     replace_prob = 30
     disloyal = true
-    trap_factor = 2.4
+    trap_factor = 3.0
+    outdoor_factor = 0.75
     infight_damage = 25
   }
 
@@ -299,6 +310,7 @@ HARDER_ENEMY.MONSTERS =
     replaces = "knight"
     replace_prob = 15
     trap_factor = 3.6
+    outdoor_factor = 1.5
     infight_damage = 20
   }
 
@@ -321,6 +333,8 @@ HARDER_ENEMY.MONSTERS =
     replaces = "mancubus"
     replace_prob = 25
     room_size = "any" --medium
+    trap_factor = 1.1
+    outdoor_factor = 1.25
     infight_damage = 36
   }
 
@@ -343,6 +357,7 @@ HARDER_ENEMY.MONSTERS =
     replace_prob = 30
     room_size = "large"
     outdoor_factor = 2.0
+    trap_factor = 0.8
     infight_damage = 70
     boss_replacement = "baron"
   }
@@ -366,6 +381,8 @@ HARDER_ENEMY.MONSTERS =
     density = 0.5
     room_size = "medium"
     infight_damage = 62
+    trap_factor = 0.5
+    outdoor_factor = 4.0
     boss_replacement = "revenant"
   }
 
@@ -392,6 +409,8 @@ HARDER_ENEMY.MONSTERS =
     weap_min_damage = 120
     nasty = true
     infight_damage = 18
+    trap_factor = 0.3
+    outdoor_factor = 1.5
     boss_replacement = "baron"
   }
 
@@ -417,6 +436,8 @@ HARDER_ENEMY.MONSTERS =
     weap_prefs = { launch=1.0, super=1.25, chain=1.5, shotty=0.7 }
     room_size = "any" --large
     cage_factor = 0  -- never put in cages
+    trap_factor = 1.5
+    outdoor_factor = 3.0
     infight_damage = 4.5 -- guess
   }
 
