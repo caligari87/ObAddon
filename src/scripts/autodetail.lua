@@ -60,7 +60,7 @@ end
 
 
 function Autodetail_plain_walls()
-  LEVEL.autodetail_plain_walls_factor = 1
+  LEVEL.autodetail_plain_walls_factor = 0
 
   if PARAM.autodetail == "off" then return end
 

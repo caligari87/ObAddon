@@ -472,7 +472,7 @@ Glow
   Texture "FWATER2", 0a0ac4, 128
   Texture "FWATER3", 0a0ac4, 128
   Texture "FWATER4", 0a0ac4, 128
-  Texture "F_SKY1", 808080, 128
+  Texture "F_SKY1", 404040, 384
 }
 ]]
 

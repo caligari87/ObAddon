@@ -29,7 +29,7 @@ PREFABS.Decor_armaetus_crufiied_pillar_1_EPIC =
 PREFABS.Decor_armaetus_crufiied_pillar_4x =
 {
   file   = "decor/armaetus_crucified.wad"
-  map    = "MAP01"
+  map    = "MAP02"
 
   prob   = 3500
   theme  = "hell"
