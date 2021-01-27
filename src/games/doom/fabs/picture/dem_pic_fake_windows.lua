@@ -543,7 +543,7 @@ PREFABS.Pic_dem_windows_deco19 =
 
   engine = "zdoom"
 
-  prob   = 40
+  prob   = 0 --40
 
   theme  = "hell"
 
@@ -576,6 +576,8 @@ PREFABS.Pic_dem_windows_deco20 =
 
   map = "MAP20"
 
+  prob = 40
+
   height = 200
 
   bound_z1 = 0
@@ -587,6 +589,8 @@ PREFABS.Pic_dem_windows_deco21 =
   template = "Pic_dem_windows_deco19"
 
   map = "MAP21"
+
+  prob = 40
 
   height = 248
 
