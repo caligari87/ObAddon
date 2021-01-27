@@ -368,9 +368,9 @@ function Episode_determine_map_sizes()
       )
 
       gui.printf(
-        "\nexp_size_multiplier: " .. LEV.size_multiplier .. "\n" ..
+        "exp_size_multiplier: " .. LEV.size_multiplier .. "\n" ..
         "exp_area_multiplier: " .. LEV.area_multiplier .. "\n" ..
-        "exp_size_consistency: " .. LEV.size_consistency .. "\n"
+        "exp_size_consistency: " .. LEV.size_consistency .. "\n\n"
       )
 
     end
