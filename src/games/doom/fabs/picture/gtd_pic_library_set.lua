@@ -5,7 +5,7 @@ PREFABS.Pic_gtd_library_big_shelves_EPIC =
 
   prob   = 50
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   replaces = "Pic_gtd_library_big_shelves"
 

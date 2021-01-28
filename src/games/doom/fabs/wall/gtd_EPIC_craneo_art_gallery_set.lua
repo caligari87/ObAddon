@@ -7,7 +7,7 @@ PREFABS.Wall_epic_craneo_paintings =
 
   group = "gtd_epic_craneo_paintings"
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   where  = "edge"
   height = 128

@@ -64,7 +64,7 @@ PREFABS.Decor_litter1 =
   theme  = "!hell"
   env    = "!cave"
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   can_be_on_roads = true
 
@@ -121,7 +121,7 @@ PREFABS.Decor_deal =
   theme  = "urban"
   env    = "!cave"
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   where  = "point"
   size   = 256

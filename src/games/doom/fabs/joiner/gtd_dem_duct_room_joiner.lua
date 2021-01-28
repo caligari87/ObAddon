@@ -7,7 +7,7 @@ PREFABS.Joiner_ducts_room_to_room_joiner =
 
   theme = "!hell"
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   style  = "traps"
 

@@ -100,7 +100,7 @@ PREFABS.Wall_hell_giant_stone_faces_EPIC =
 
   group = "hell_o_giant_stone_faces"
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   replaces = "Wall_hell_giant_stone_faces"
 
@@ -202,7 +202,7 @@ PREFABS.Wall_hell_outdoor_red_glass_tall_EPIC =
 
   group = "hell_o_red_glass_tall"
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   replaces = "Wall_hell_outdoor_red_glass_tall"
 
@@ -230,7 +230,7 @@ PREFABS.Wall_hell_outdoor_rising_energy_EPIC =
   template = "Wall_hell_stone_brace"
   map = "MAP10"
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   height = 192
 
@@ -298,7 +298,7 @@ PREFABS.Wall_gothic_flying_alcoves_EPIC =
   group = "hell_o_flying_alcoves"
 
   replaces = "Wall_gothic_flying_alcoves"
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   deep = 64
 
@@ -326,7 +326,7 @@ PREFABS.Wall_hell_outdoor_torch_fenced_EPIC =
   map = "MAP13"
 
   replaces = "Wall_hell_outdoor_torch_fenced"
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   group = "hell_o_torch_fenced"
 
@@ -365,7 +365,7 @@ PREFABS.Wall_hell_outdoor_dark_banners_EPIC =
   map = "MAP14"
 
   replaces = "Wall_hell_outdoor_dark_banners"
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   group = "hell_o_dark_banners"
 
@@ -413,7 +413,7 @@ PREFABS.Wall_hell_dark_cathedral_windows_EPIC = --#
   map = "MAP15"
 
   replaces = "Wall_hell_dark_cathedral_windows"
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   group = "hell_o_dark_cathedral_windows"
 
@@ -439,7 +439,7 @@ PREFABS.Wall_hell_gothic_skin_red_EPIC = --#
   template = "Wall_hell_stone_brace"
   map = "MAP17"
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   group = "hell_o_gothic_skin_red"
 
@@ -451,7 +451,7 @@ PREFABS.Wall_hell_marb_icon_bfalls_EPIC = --#
   template = "Wall_hell_stone_brace"
   map = "MAP18"
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   group = "hell_o_marb_icon_bfalls"
 
@@ -465,7 +465,7 @@ PREFABS.Wall_hell_marb_icon_bfalls_EPIC_alt = --#
 
   prob = 25
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   group = "hell_o_marb_icon_bfalls"
 
@@ -481,7 +481,7 @@ PREFABS.Wall_hell_egyptish_EPIC = --#
   template = "Wall_hell_stone_brace"
   map = "MAP19"
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   replaces = "Wall_hell_egyptish"
 
@@ -525,7 +525,7 @@ PREFABS.Wall_hell_catamet = --#
   template = "Wall_hell_stone_brace"
   map = "MAP21"
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
   replaces = "Wall_hell_catamet_vanilla"
 
   group = "hell_o_catamet"

@@ -5,7 +5,7 @@ PREFABS.Pic_gtd_teklite_red =
 
   prob   = 50
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
   group = "gtd_wall_teklitecomp_red"
 
   where  = "seeds"

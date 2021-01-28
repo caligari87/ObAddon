@@ -7,7 +7,7 @@ PREFABS.Pic_EPIC_box_template = -- this is now a base template and is disabled.
   env   = "building"
   theme = "!tech"
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   where  = "seeds"
   seed_w = 2

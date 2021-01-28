@@ -39,7 +39,7 @@ PREFABS.Fence_tech_lit_EPIC =
 
   prob   = 50
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
   replaces = "Fence_tech_lit"
 
   group  = "fence_tech_lit"
@@ -62,7 +62,7 @@ PREFABS.Fence_tech_lit_diag_EPIC =
 
   prob   = 50
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
   replaces = "Fence_tech_lit_diag"
 
   group  = "fence_tech_lit"
@@ -90,7 +90,7 @@ PREFABS.Fence_tech_hl_bars =
   group = "fence_tech_hl_bars"
 
   replaces = "Fence_gappy_fallback"
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   where  = "edge"
 
@@ -109,7 +109,7 @@ PREFABS.Fence_tech_hl_bars_diag =
   group = "fence_tech_hl_bars"
 
   replaces = "Fence_gappy_fallback_diag"
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   where = "diagonal"
 }

@@ -41,7 +41,7 @@ PREFABS.Fence_highway_bars_warnstep =
 
   group = "fence_highway_bars_warnstep"
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   tex_STEP4 = "WARNSTEP"
 }
@@ -53,7 +53,7 @@ PREFABS.Fence_highway_bars_diag_warnstep =
 
   group = "fence_highway_bars_warnstep"
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   tex_STEP4 = "WARNSTEP"
 }

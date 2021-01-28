@@ -43,7 +43,7 @@ PREFABS.Decor_craneo_arcade_machine_EPIC =
 
   prob = 550
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
   replaces = "Decor_craneo_arcade_machine"
 
   size = 64
@@ -79,7 +79,7 @@ PREFABS.Decor_craneo_arcade_machine_doublet_EPIC =
 
   prob = 550
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   size = 112
 

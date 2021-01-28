@@ -35,7 +35,7 @@ PREFABS.Cage_sandbag_fort_EPIC =
   size     = 104
 
   replaces = "Cage_sandbag_fort"
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   tex_BRICK12 = "SANDBAGS"
 
@@ -53,7 +53,7 @@ PREFABS.Cage_sandbag_fort_for_two_EPIC =
   size     = 136
 
   replaces = "Cage_sandbag_fort_for_two"
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   tex_BRICK12 = "SANDBAGS"
 
@@ -87,7 +87,7 @@ PREFABS.Cage_sandbag_inset_EPIC =
   prob = 300
 
   replaces = "Cage_sandbag_inset"
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   where = "seeds"
   shape = "U"

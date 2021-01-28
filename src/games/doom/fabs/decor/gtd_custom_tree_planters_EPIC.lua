@@ -3,7 +3,7 @@ PREFABS.Decor_square_planter_grass =
   file   = "decor/gtd_custom_tree_planters_EPIC.wad"
   map    = "MAP01"
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   outdoor_theme = "temperate"
 

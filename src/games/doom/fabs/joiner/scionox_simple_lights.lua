@@ -70,7 +70,7 @@ PREFABS.Joiner_scionox_simple_lights_4 =
 PREFABS.Joiner_scionox_simple_lights_5 =
 {
   template = "Joiner_scionox_simple_lights_4"
-  uses_epic_textures = true
+  texture_pack = "armaetus"
   tex_COMPBLUE = "COMPRED"
   flat_FLAT14 = "FLAT15"
   flat_CEIL4_2 = "TEK1"
@@ -79,7 +79,7 @@ PREFABS.Joiner_scionox_simple_lights_5 =
 PREFABS.Joiner_scionox_simple_lights_6 =
 {
   template = "Joiner_scionox_simple_lights_4"
-  uses_epic_textures = true
+  texture_pack = "armaetus"
   tex_COMPBLUE = "COMPGREN"
   flat_FLAT14 = "GRENFLOR"
   flat_CEIL4_2 = "TEK2"

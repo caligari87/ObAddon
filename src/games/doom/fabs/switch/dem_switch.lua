@@ -11,7 +11,7 @@ PREFABS.Switch_military_radio =
 
   size   = 88
   height = 64
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
 
   prob   = 90

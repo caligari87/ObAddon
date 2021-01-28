@@ -142,7 +142,7 @@ PREFABS.Wall_modern_shutter_EPIC =
   prob   = 20
   theme = "urban"
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
   replaces = "Wall_modern_shutter"
 
   on_liquids = "never"
@@ -301,7 +301,7 @@ PREFABS.Wall_holo_marquee =
 
   engine = "zdoom"
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   prob = 10
 

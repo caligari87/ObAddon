@@ -11,7 +11,7 @@ PREFABS.Pic_locked_gunstore =
   where  = "seeds"
   height = 128
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   seed_w = 2
   seed_h = 2

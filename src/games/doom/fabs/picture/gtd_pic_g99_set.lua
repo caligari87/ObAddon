@@ -8,7 +8,7 @@ PREFABS.Pic_gtd_g99_1 =
 
   group = "gtd_g99"
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   where  = "seeds"
   seed_w = 2

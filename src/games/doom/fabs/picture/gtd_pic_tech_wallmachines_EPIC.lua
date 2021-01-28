@@ -8,7 +8,7 @@ PREFABS.Pic_gtd_tech_core_thing =
 
   env = "!cave"
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   where  = "seeds"
   height = 128

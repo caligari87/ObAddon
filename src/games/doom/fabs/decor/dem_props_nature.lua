@@ -29,7 +29,7 @@ PREFABS.Decor_dem_cavevines1 =
     MIDVINE1=50, MIDVINE2=50
     }
 
-uses_epic_textures = true
+texture_pack = "armaetus"
 
 }
 
@@ -119,7 +119,7 @@ PREFABS.Decor_dem_campfireC =
   bound_z1 = 0
   bound_z2 = 224
 
-uses_epic_textures = true
+texture_pack = "armaetus"
 
 
 }
@@ -249,7 +249,7 @@ PREFABS.Decor_dem_stalav1 =
     MIDVINE1=50, MIDVINE2=50
     }
 
-uses_epic_textures = true
+texture_pack = "armaetus"
 
   liquid = true
 
@@ -312,7 +312,7 @@ PREFABS.Decor_dem_ruins1 =
   bound_z1 = 0
   bound_z2 = 128
 
-uses_epic_textures = true
+texture_pack = "armaetus"
 
 }
 
@@ -343,7 +343,7 @@ PREFABS.Decor_dem_ruinsjs1 =
   bound_z1 = 0
   bound_z2 = 152
 
-uses_epic_textures = true
+texture_pack = "armaetus"
 
   thing_2023 =
   {

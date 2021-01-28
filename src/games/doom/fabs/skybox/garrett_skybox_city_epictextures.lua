@@ -7,7 +7,7 @@ PREFABS.Skybox_garrett_city_EPIC =
 
   prob  = 50
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   kind  = "skybox"
 

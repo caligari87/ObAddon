@@ -24,7 +24,7 @@ PREFABS.Hallway_conveyor_locked_red1 =
 
   deep   = 16
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   sound = "Conveyor_Mech"
 }
@@ -74,7 +74,7 @@ PREFABS.Hallway_conveyor_barred1 =
   seed_h = 1
   deep   = 16
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
  thing_2035 =
   {

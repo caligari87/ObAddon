@@ -8,7 +8,7 @@ PREFABS.Decor_Armaetus_bars_EPIC =
   map    = "MAP01"
   theme  = "!tech"
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   prob   = 50
 
@@ -48,7 +48,7 @@ UNFINISHED.Armaetus_bars_EPIC_diag =
   map    = "MAP02"
   theme  = "!tech"
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   prob   = 50
 

@@ -3504,8 +3504,8 @@ function Render_scenic_fabs()
       local def = Fab_pick(reqs, "none_ok")
 
       if def then
-        local fx = x * SEED_SIZE
-        local fy = y * SEED_SIZE
+        local fx = x * SEED_SIZE + 32
+        local fy = y * SEED_SIZE + 32
 
         local fab =
         {

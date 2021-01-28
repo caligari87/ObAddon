@@ -11,7 +11,7 @@ PREFABS.Item_craneo_marble_key_trap =
   theme = "!tech"
   env   = "outdoor"
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   where = "seeds"
   height = 160
@@ -50,7 +50,7 @@ PREFABS.Item_craneo_marble_item_trap_interior =
 
   style = "traps"
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   prob  = 30
   theme = "!tech"

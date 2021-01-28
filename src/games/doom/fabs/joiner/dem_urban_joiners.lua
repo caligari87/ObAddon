@@ -103,7 +103,7 @@ PREFABS.Joiner_bedroom =
   x_fit = "frame"
   y_fit  = "frame"
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   can_flip = true
 
@@ -145,7 +145,7 @@ PREFABS.Joiner_bedroom2 =
   x_fit = "frame"
   y_fit  = "frame"
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   can_flip = true
 
@@ -234,7 +234,7 @@ PREFABS.Joiner_bar =
   x_fit = "frame"
   y_fit  = "frame"
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   can_flip = true
 
@@ -276,7 +276,7 @@ PREFABS.Joiner_waiting_room =
   x_fit = "frame"
   y_fit  = "frame"
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   can_flip = true
 
@@ -323,7 +323,7 @@ PREFABS.Joiner_electronic_store =
   x_fit = "frame"
   y_fit  = "frame"
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   can_flip = true
 
@@ -367,7 +367,7 @@ PREFABS.Joiner_cornerstore =
   x_fit = "frame"
   y_fit  = "frame"
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   can_flip = true
 
@@ -411,7 +411,7 @@ PREFABS.Joiner_bookstore =
   x_fit = "frame"
   y_fit  = "frame"
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   can_flip = true
 
@@ -458,7 +458,7 @@ PREFABS.Joiner_elevatorshaft =
   delta_h = 256
   nearby_h = 328
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   can_flip = true
 
@@ -505,7 +505,7 @@ PREFABS.Joiner_elevatorshaftcorr =
   delta_h = 256
   nearby_h = 328
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   can_flip = true
 

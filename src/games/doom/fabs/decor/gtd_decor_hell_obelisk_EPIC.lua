@@ -7,7 +7,7 @@ PREFABS.Decor_hell_obelisk_EPIC_red =
   theme  = "hell"
   env    = "outdoor"
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   where  = "point"
   size   = 96

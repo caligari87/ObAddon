@@ -10,7 +10,7 @@ PREFABS.Light_EPIC_basic =
   prob   = 0
   env    = "building"
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   kind   = "light"
   where  = "point"

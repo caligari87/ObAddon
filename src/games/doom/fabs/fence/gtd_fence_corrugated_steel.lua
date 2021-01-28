@@ -6,7 +6,7 @@ PREFABS.Fence_corrugated_steel =
   prob   = 50
 
   replaces = "Fence_corrugated_steel_plain"
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   group  = "fence_corrugated_steel"
 
@@ -32,7 +32,7 @@ PREFABS.Fence_corrugated_steel_diag =
   map    = "MAP02"
 
   replaces = "Fence_corrugated_steel_plain_diag"
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   where  = "diagonal"
 }

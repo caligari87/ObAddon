@@ -7,7 +7,7 @@ PREFABS.Skybox_tech_ffvii_EPIC =
 
   where = "point"
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   kind  = "skybox"
 

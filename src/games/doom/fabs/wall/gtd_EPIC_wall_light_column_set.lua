@@ -10,7 +10,7 @@ PREFABS.Wall_epic_collite_inset_straight_green =
 
   group = "gtd_collite_set_green"
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   where  = "edge"
   height = 128
@@ -33,7 +33,7 @@ PREFABS.Wall_epic_collite_inset_diagonal_green =
 
   group = "gtd_collite_set_green"
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   where  = "diagonal"
   height = 128

@@ -5,7 +5,7 @@ PREFABS.Window_chainlink_1 =
 
   group  = "gtd_window_chainlinks"
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   prob   = 50
 

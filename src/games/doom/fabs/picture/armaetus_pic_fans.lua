@@ -7,7 +7,7 @@ PREFABS.Pic_armaetus_double_fans =
   env = "building"
   theme = "!hell"
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   where = "seeds"
   height = 128

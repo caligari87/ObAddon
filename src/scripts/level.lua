@@ -336,9 +336,9 @@ function Episode_determine_map_sizes()
     or PARAM.experimental_size_variance == "more" then
       LEV.size_multiplier = rand.key_by_probs(
         {
-          [0.25] = 2
-          [0.5] = 3
-          [0.75] = 4
+          [0.25] = 1
+          [0.5] = 2
+          [0.75] = 3
           [1] = 4
           [1.25] = 3
           [1.5] = 2

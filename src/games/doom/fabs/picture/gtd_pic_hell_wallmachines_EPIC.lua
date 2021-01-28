@@ -6,7 +6,7 @@ PREFABS.Pic_gtd_hell_skull_grinding_mill =
   prob   = 15
   theme = "hell"
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   where  = "seeds"
   height = 128

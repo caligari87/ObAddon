@@ -42,7 +42,7 @@ PREFABS.Pic_urban_mirrors_edge_wall_EPIC =
 
   env = "building"
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
   replaces = "Pic_urban_mirrors_edge_wall"
 
   where  = "seeds"

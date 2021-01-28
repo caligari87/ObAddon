@@ -3,7 +3,7 @@ PREFABS.Decor_armaetus_slad_pool =
   file   = "decor/armaetus_decor_sladpool.wad"
   map    = "MAP01"
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   prob   = 5000
   theme  = "!hell"

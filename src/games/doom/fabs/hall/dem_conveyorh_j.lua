@@ -22,7 +22,7 @@ PREFABS.Hallway_conveyorh_term1 =
 
   deep   = 16
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
 }
 

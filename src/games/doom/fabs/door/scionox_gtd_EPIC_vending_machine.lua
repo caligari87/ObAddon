@@ -8,7 +8,7 @@ PREFABS.Door_EPIC_vending_machine_secret =
   theme  = "!hell"
   env    = "!outdoor"
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   on_liquids = "never"
 

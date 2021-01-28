@@ -3,7 +3,7 @@ PREFABS.Decor_armaetus_basic_computer1 =
   file   = "decor/armaetus_basiccomp1.wad"
   map    = "MAP01"
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   prob   = 3500
   theme  = "!hell"

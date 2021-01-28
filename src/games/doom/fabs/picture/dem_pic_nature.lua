@@ -215,7 +215,7 @@ PREFABS.Pic_dem_caveind1 =
     MIDVINE1=50, MIDVINE2=50
     }
 
-uses_epic_textures = true
+texture_pack = "armaetus"
 sound = "Water_Streaming"
 
 }
@@ -224,7 +224,7 @@ PREFABS.Pic_dem_caveind2 =
 {
   template  = "Pic_dem_caveind1"
   map    = "MAP17"
-uses_epic_textures = false
+texture_pack = "none"
   liquid = false
 }
 
@@ -262,7 +262,7 @@ PREFABS.Pic_dem_caveind4 =
     MIDVINE1=50, MIDVINE2=50
     }
 
-uses_epic_textures = true
+texture_pack = "armaetus"
 
 }
 
@@ -308,7 +308,7 @@ PREFABS.Pic_dem_caveind7 =
     MIDVINE1=50, MIDVINE2=50
     }
 
-uses_epic_textures = true
+texture_pack = "armaetus"
 
 }
 
@@ -316,7 +316,7 @@ PREFABS.Pic_dem_caveind8 =
 {
   template  = "Pic_dem_caveind7"
   map    = "MAP23"
-uses_epic_textures = true
+texture_pack = "armaetus"
   liquid = true
   sound = "Water_Streaming"
 }
@@ -325,7 +325,7 @@ PREFABS.Pic_dem_caveind9 =
 {
   template  = "Pic_dem_caveind7"
   map    = "MAP24"
-uses_epic_textures = false
+texture_pack = "none"
   liquid = false
 }
 
@@ -356,7 +356,7 @@ PREFABS.Pic_dem_caveind10 =
     MIDVINE1=50, MIDVINE2=50
     }
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
   sound = "Water_Streaming"
 }
 
@@ -365,14 +365,14 @@ PREFABS.Pic_dem_caveind11 =
   template  = "Pic_dem_caveind10"
   map    = "MAP26"
   z_fit = { 88,96 }
-uses_epic_textures = true
+texture_pack = "armaetus"
 }
 
 PREFABS.Pic_dem_caveind12 =
 {
   template  = "Pic_dem_caveind10"
   map    = "MAP27"
-uses_epic_textures = true
+texture_pack = "armaetus"
 }
 
 ---- outdoor nooks ----
@@ -420,7 +420,7 @@ PREFABS.Pic_dem_nook2 =
 {
   template  = "Pic_dem_nook1"
   map    = "MAP29"
-uses_epic_textures = false
+texture_pack = "none"
 }
 
 PREFABS.Pic_dem_nook3 =
@@ -631,7 +631,7 @@ PREFABS.Pic_dem_nookd2 =
   map    = "MAP41"
   theme = "any"
   liquid = true
-  uses_epic_textures = true
+  texture_pack = "armaetus"
   sound = "Water_Streaming"
 }
 
@@ -640,7 +640,7 @@ PREFABS.Pic_dem_nookd3 =
   template  = "Pic_dem_nookd1"
   map    = "MAP42"
   theme = "!hell"
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
 }
 
@@ -693,7 +693,7 @@ PREFABS.Pic_dem_nookd6 =
   template  = "Pic_dem_nookd4"
   map    = "MAP45"
   z_fit = { 56,62 }
-  uses_epic_textures = true
+  texture_pack = "armaetus"
   liquid = true
   sound = "Water_Streaming"
 }
@@ -744,7 +744,7 @@ PREFABS.Pic_dem_nookd8 =
   map    = "MAP47"
   z_fit = "stretch"
   theme = "any"
-  uses_epic_textures = true
+  texture_pack = "armaetus"
   liquid = true
   sound = "Water_Streaming"
 }
@@ -803,14 +803,14 @@ PREFABS.Pic_dem_nookd11 =
   theme = "!hell"
   z_fit = { 56,64 }
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 }
 
 PREFABS.Pic_dem_nookd12 =
 {
   template  = "Pic_dem_nookd10"
   map    = "MAP51"
-  uses_epic_textures = true
+  texture_pack = "armaetus"
   liquid = true
 }
 
@@ -841,7 +841,7 @@ PREFABS.Pic_dem_campsiteC =
 
   z_fit = { 64,72 }
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
 }
 
@@ -893,7 +893,7 @@ PREFABS.Pic_dem_cabin =
 
   z_fit = { 99,104 }
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   thing_10 =
   {
@@ -936,7 +936,7 @@ PREFABS.Pic_dem_waterfallC1 =
   x_fit = "stretch"
   z_fit = { 16,32 }
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   liquid = true
   sound = "Water_Streaming"
@@ -979,7 +979,7 @@ PREFABS.Pic_dem_waterfallN1 =
   x_fit = "stretch"
   z_fit = { 24,40 }
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
   liquid = true
 }
 
@@ -1018,7 +1018,7 @@ PREFABS.Pic_dem_waterfallC2 =
 
   liquid = "harmful"
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
   sound = "Water_Streaming"
 }
 
@@ -1060,7 +1060,7 @@ PREFABS.Pic_dem_waterfallN2 =
 
   liquid = "harmful"
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
 }
 
@@ -1099,7 +1099,7 @@ PREFABS.Pic_dem_waterfallC3 =
 
   liquid = "harmful"
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
 }
 
@@ -1141,7 +1141,7 @@ PREFABS.Pic_dem_waterfallN3 =
 
   liquid = "harmful"
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
 }
 
@@ -1181,7 +1181,7 @@ PREFABS.Pic_dem_ruinsN1 =
   x_fit = "stretch"
   z_fit = { 84,92 }
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
 }
 
@@ -1216,7 +1216,7 @@ PREFABS.Pic_dem_ruinsC1 =
   x_fit = "stretch"
   z_fit = { 84,92 }
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
 }
 

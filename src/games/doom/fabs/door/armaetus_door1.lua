@@ -3,7 +3,7 @@ PREFABS.Door_armaetus_door1 =
   file   = "door/armaetus_door1.wad"
   map    = "MAP01"
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   prob   = 20
 
@@ -38,7 +38,7 @@ PREFABS.Door_armaetus_door_KEYRED =
   file   = "door/armaetus_door1.wad"
   map    = "MAP02"
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   prob   = 50
 

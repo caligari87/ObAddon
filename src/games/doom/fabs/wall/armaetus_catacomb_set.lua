@@ -7,7 +7,7 @@ PREFABS.Wall_armaetus_catacomb_straight =
   prob   = 50
   env = "building"
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   group = "armaetus_catacomb_wall_set"
 

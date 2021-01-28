@@ -9,7 +9,7 @@ PREFABS.Wall_epic_churchy_glass_1 =
 
   group = "gtd_wall_churchy_glass"
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   where  = "edge"
   height = 128
@@ -46,7 +46,7 @@ PREFABS.Wall_epic_churchy_glass_diagonal =
 
   group = "gtd_wall_churchy_glass"
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   where  = "diagonal"
   height = 128

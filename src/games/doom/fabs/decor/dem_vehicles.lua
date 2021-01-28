@@ -12,7 +12,7 @@ PREFABS.Decor_apc =
   prob   = 4500
   theme  = "urban"
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   can_be_on_roads = true
 
@@ -38,7 +38,7 @@ PREFABS.Decor_forklift1T =
   prob   = 1500
   theme  = "tech"
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   can_be_on_roads = true
 
@@ -62,7 +62,7 @@ PREFABS.Decor_forklift2T =
   prob   = 1500
   theme  = "tech"
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   can_be_on_roads = true
 
@@ -86,7 +86,7 @@ PREFABS.Decor_forklift3T =
   prob   = 1500
   theme  = "tech"
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   can_be_on_roads = true
 
@@ -110,7 +110,7 @@ PREFABS.Decor_forklift4T =
   prob   = 1500
   theme  = "tech"
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   can_be_on_roads = true
 
@@ -134,7 +134,7 @@ PREFABS.Decor_forklift5T =
   prob   = 1500
   theme  = "tech"
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   can_be_on_roads = true
 
@@ -171,7 +171,7 @@ PREFABS.Decor_forklift1U =
   prob   = 2000
   theme  = "urban"
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   where  = "point"
   height = 128
@@ -193,7 +193,7 @@ PREFABS.Decor_forklift2U =
   prob   = 2000
   theme  = "urban"
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   can_be_on_roads = true
 
@@ -217,7 +217,7 @@ PREFABS.Decor_forklift3U =
   prob   = 2000
   theme  = "urban"
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   can_be_on_roads = true
 
@@ -241,7 +241,7 @@ PREFABS.Decor_forklift4U =
   prob   = 2000
   theme  = "urban"
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   can_be_on_roads = true
 
@@ -265,7 +265,7 @@ PREFABS.Decor_forklift5U =
   prob   = 2000
   theme  = "urban"
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   can_be_on_roads = true
 

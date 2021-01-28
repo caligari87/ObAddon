@@ -4,7 +4,7 @@ PREFABS.Item_craneo_bank_safe =
 
   map   = "MAP01"
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   prob = 30
 

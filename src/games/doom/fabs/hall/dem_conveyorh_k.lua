@@ -24,7 +24,7 @@ PREFABS.Hallway_conveyorh_locked_red1 =
 
   deep   = 16
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 }
 
 PREFABS.Hallway_conveyorh_locked_blue1 =
@@ -202,7 +202,7 @@ PREFABS.Hallway_conveyorh_barred1 =
   seed_h = 1
   deep   = 16
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   tag_1  = "?door_tag"
   door_action = "S1_LowerFloor"

@@ -28,7 +28,7 @@ PREFABS.Pic_gtd_tech_server_big_monitor =
   template = "Pic_gtd_tech_server_console"
   map = "MAP02"
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   tex_COMPCT01 =
   {
@@ -47,7 +47,7 @@ PREFABS.Pic_gtd_tech_server_CPU_banks =
   template = "Pic_gtd_tech_server_console"
   map = "MAP03"
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   z_fit = "top"
 }

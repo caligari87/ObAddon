@@ -11,7 +11,7 @@ PREFABS.Start_scionox_quakeish_tech_start =
 
   where  = "seeds"
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   seed_w = 1
   seed_h = 1

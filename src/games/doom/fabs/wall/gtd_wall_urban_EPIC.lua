@@ -8,7 +8,7 @@ PREFABS.Wall_urban_tall_vent =
 
   env = "outdoor"
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   where  = "edge"
   height = 128

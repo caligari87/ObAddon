@@ -188,7 +188,7 @@ PREFABS.Light_fan_tech =
   template = "Light_basic"
   map      = "MAP03"
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   prob   = 20
   theme  = "tech"
@@ -206,7 +206,7 @@ PREFABS.Light_fan_rusty =
   template = "Light_basic"
   map      = "MAP03"
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   prob   = 20
   theme  = "!tech"

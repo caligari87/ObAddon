@@ -187,7 +187,7 @@ PREFABS.Cage_dem_bunker_ambush1 =
   y_fit  = "frame"
   z_fit = { 56,64 }
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
 
   thing_3004 =
@@ -330,7 +330,7 @@ PREFABS.Cage_dem_shrineC =
 
   z_fit = { 56,64 }
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
 }
 
@@ -375,7 +375,7 @@ PREFABS.Cage_dem_ruinsN1amb =
   x_fit = "stretch"
   z_fit = { 84,92 }
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
 }
 
@@ -411,7 +411,7 @@ PREFABS.Cage_dem_ruinsC1amb =
   x_fit = "stretch"
   z_fit = { 84,92 }
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
 }
 
@@ -453,7 +453,7 @@ PREFABS.Cage_dem_cabinamb =
 
   z_fit = { 99,104 }
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   thing_10 =
   {
@@ -497,7 +497,7 @@ PREFABS.Cage_dem_windows_ambush1 =
   y_fit = "top"
   z_fit = "top"
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   sector_17 = { [0]=50, [17]=50 }
 
@@ -637,7 +637,7 @@ PREFABS.Cage_dem_windows_ambushd1 =
   y_fit = "top"
   z_fit = "top"
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   sector_17 = { [0]=50, [17]=50 }
 
@@ -779,7 +779,7 @@ PREFABS.Cage_dem_windows_ambusho1 =
   y_fit = "top"
   z_fit = "top"
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   sector_17 = { [0]=50, [17]=50 }
 
@@ -921,7 +921,7 @@ PREFABS.Cage_dem_windows_ambush7 =
   y_fit = "top"
   z_fit = "top"
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   sector_17 = { [0]=50, [17]=50 }
 
@@ -990,7 +990,7 @@ PREFABS.Cage_dem_windows_ambusho7 =
   y_fit = "top"
   z_fit = "top"
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   sector_17 = { [0]=50, [17]=50 }
 
@@ -1059,7 +1059,7 @@ PREFABS.Cage_dem_windows_ambush10 =
   y_fit = "top"
   z_fit = "top"
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   sector_17 = { [0]=50, [17]=50 }
 
@@ -1128,7 +1128,7 @@ PREFABS.Cage_dem_windows_ambusho10 =
   y_fit = "top"
   z_fit = "top"
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   sector_17 = { [0]=50, [17]=50 }
 
@@ -1197,7 +1197,7 @@ PREFABS.Cage_dem_windows_ambush13 =
   y_fit = "top"
   z_fit = "top"
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   sector_17 = { [0]=50, [17]=50 }
 
@@ -1262,7 +1262,7 @@ PREFABS.Cage_dem_windows_ambush16 =
   y_fit = "top"
   z_fit = "top"
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   sector_17 = { [0]=50, [17]=50 }
 
@@ -1329,7 +1329,7 @@ PREFABS.Cage_dem_windows_ambushd7 =
   y_fit = "top"
   z_fit = "top"
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   sector_17 = { [0]=50, [17]=50 }
 

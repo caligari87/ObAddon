@@ -11,7 +11,7 @@ PREFABS.Pic_service_gate_1 =
   where = "seeds"
   height = 128
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   deep = 16
 

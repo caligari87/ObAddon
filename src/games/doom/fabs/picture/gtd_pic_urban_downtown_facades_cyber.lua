@@ -21,7 +21,7 @@ PREFABS.Pic_urban_downtown_facade_cyber_mid_inset =
   x_fit = { 124,132 }
   z_fit = { 140,252 }
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   tex_MODWALL3 =
   {

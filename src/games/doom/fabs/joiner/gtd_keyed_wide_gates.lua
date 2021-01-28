@@ -7,7 +7,7 @@ PREFABS.Locked_gtd_wide_gates_red =
   where = "seeds"
   shape = "I"
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   key = "k_red"
 

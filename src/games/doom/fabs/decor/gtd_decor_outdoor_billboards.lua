@@ -23,7 +23,7 @@ PREFABS.Decor_outdoor_billboard_UAC_sheet =
   file = "decor/gtd_decor_outdoor_billboards.wad"
   map = "MAP02"
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   where  = "point"
 

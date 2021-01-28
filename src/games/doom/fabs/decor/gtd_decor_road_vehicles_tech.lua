@@ -7,7 +7,7 @@ PREFABS.Decor_road_vehicle_tractor_thing =
   theme = "tech"
   env = "outdoor"
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   can_be_on_roads = true
 

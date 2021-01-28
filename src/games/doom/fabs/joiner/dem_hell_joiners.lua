@@ -69,7 +69,7 @@ PREFABS.Joiner_rift1 =
 
   can_flip = true
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 }
 
 --rift2
@@ -98,7 +98,7 @@ PREFABS.Joiner_rift2 =
 
   can_flip = true
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 }
 
 
@@ -128,7 +128,7 @@ PREFABS.Joiner_rift3 =
 
   can_flip = true
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 }
 
 --rift4
@@ -157,7 +157,7 @@ PREFABS.Joiner_rift4 =
 
   can_flip = true
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 }
 
 --room of mirrors1V2
@@ -258,7 +258,7 @@ PREFABS.Joiner_rift1trap =
 
   can_flip = true
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 }
 
 --rift4 trapped
@@ -289,7 +289,7 @@ PREFABS.Joiner_rift4trap =
 
   can_flip = true
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 }
 
 --room of mirrors1 secret

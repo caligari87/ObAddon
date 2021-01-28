@@ -13,7 +13,7 @@ PREFABS.Joiner_simple2_epic =
   where  = "seeds"
   shape  = "I"
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   seed_w = 3
   seed_h = 1

@@ -28,7 +28,7 @@ PREFABS.Pic_dem_windows_deco1 =
   z_fit = "top"
   y_fit = "top"
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   sector_17 = { [0]=50, [17]=50 }
 
@@ -165,7 +165,7 @@ PREFABS.Pic_dem_windows_decoc1 =
   z_fit = "top"
   y_fit = "top"
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   sector_17 = { [0]=50, [17]=50 }
 
@@ -299,7 +299,7 @@ PREFABS.Pic_dem_windows_deco7 =
   z_fit = "top"
   y_fit = "top"
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   sector_17 = { [0]=50, [17]=50 }
 
@@ -366,7 +366,7 @@ PREFABS.Pic_dem_windows_deco10 =
   z_fit = "top"
   y_fit = "top"
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   sector_17 = { [0]=50, [17]=50 }
 
@@ -432,7 +432,7 @@ PREFABS.Pic_dem_windows_deco13 =
   z_fit = "top"
   y_fit = "top"
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   sector_17 = { [0]=50, [17]=50 }
 
@@ -498,7 +498,7 @@ PREFABS.Pic_dem_windows_deco16 =
   z_fit = "top"
   y_fit = "top"
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   sector_17 = { [0]=50, [17]=50 }
 
@@ -564,7 +564,7 @@ PREFABS.Pic_dem_windows_deco19 =
   z_fit = "top"
   y_fit = "top"
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   sector_17 = { [0]=50, [17]=50 }
 
@@ -628,7 +628,7 @@ PREFABS.Pic_dem_windows_deco22 =
   z_fit = "top"
   y_fit = "top"
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   sector_17 = { [0]=50, [17]=50 }
 
