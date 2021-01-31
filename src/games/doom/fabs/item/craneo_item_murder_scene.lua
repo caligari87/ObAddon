@@ -13,5 +13,5 @@ PREFABS.Item_craneo_murder_scene =
   theme = "urban"
   env   = "outdoor"
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 }

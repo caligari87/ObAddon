@@ -3,7 +3,7 @@ PREFABS.Wall_armaetus_fan_general =
   file = "wall/armaetus_wall_fans.wad"
   map = "MAP01"
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   prob = 20
 

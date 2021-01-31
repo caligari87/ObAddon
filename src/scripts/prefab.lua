@@ -177,8 +177,9 @@ function Fab_load_all_definitions()
     end
 
     -- attachment for fabs that use Armaetus's Epic textures
-    if not PARAM["epic_textures_activated"] then
-      if def.uses_epic_textures then
+    if def.texture_pack then
+      if def.texture_pack == "armaetus"
+      and not PARAM["epic_textures_activated"] then
         def.skip_prob = 100
       end
     end

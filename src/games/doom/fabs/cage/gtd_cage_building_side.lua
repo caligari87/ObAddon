@@ -10,7 +10,7 @@ PREFABS.Cage_wall_building_terrace =
 
   height = 216
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   where  = "seeds"
   shape  = "U"

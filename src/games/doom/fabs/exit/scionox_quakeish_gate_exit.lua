@@ -11,7 +11,7 @@ PREFABS.Exit_scionox_quakeish_gate_exit =
 
   where  = "seeds"
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   seed_w = 3
   seed_h = 2

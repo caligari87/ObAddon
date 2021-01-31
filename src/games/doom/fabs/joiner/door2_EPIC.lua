@@ -3,7 +3,7 @@ PREFABS.Joiner_EPIC_door2_tech =
   file   = "joiner/door2.wad"
   map    = "MAP03"
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   prob   = 250
   theme  = "tech"

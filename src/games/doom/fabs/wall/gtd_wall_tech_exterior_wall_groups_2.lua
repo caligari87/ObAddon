@@ -43,7 +43,7 @@ PREFABS.Wall_tech_outdoor_sewer_hatches = --#
 
   group = "tech_o_everyone_likes_sewers"
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   tex_SLADRIP1 =
   {

@@ -8,7 +8,7 @@ PREFABS.Wall_trash1 =
   theme = "urban"
   env    = "outdoor"
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   on_liquids = "never"
 
@@ -45,7 +45,7 @@ PREFABS.Wall_trash2 =
   theme = "urban"
   env    = "outdoor"
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   on_liquids = "never"
 
@@ -82,7 +82,7 @@ PREFABS.Wall_trash3 =
   theme = "urban"
   env    = "outdoor"
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   on_liquids = "never"
 
@@ -239,7 +239,7 @@ PREFABS.Wall_boombox =
   theme = "urban"
   env    = "outdoor"
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   on_liquids = "never"
 

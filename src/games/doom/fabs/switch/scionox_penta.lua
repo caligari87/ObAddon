@@ -10,7 +10,7 @@ PREFABS.Switch_scionox_penta =
 
   where  = "point"
   size   = 96
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   tag_1  = "?switch_tag"
 

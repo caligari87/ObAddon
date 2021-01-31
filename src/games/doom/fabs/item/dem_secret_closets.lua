@@ -254,7 +254,7 @@ PREFABS.Item_secret_hellmachine1V1_closet =
 
   can_flip = true
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
 }
 
@@ -284,7 +284,7 @@ PREFABS.Item_secret_hellmachine1V2_closet =
 
   can_flip = true
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
 
 }
@@ -315,7 +315,7 @@ PREFABS.Item_secret_techmachine1V1_closet =
 
   can_flip = true
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
 }
 
@@ -345,7 +345,7 @@ PREFABS.Item_secret_techmachine1V2_closet =
 
   can_flip = true
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
 }
 
@@ -381,7 +381,7 @@ PREFABS.Item_dem_shrine_secretclosetC =
 
   z_fit = { 56,64 }
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   thing_2014 =
   {
@@ -433,7 +433,7 @@ PREFABS.Item_dem_campsiteC_secretcloset =
 
   z_fit = { 64,72 }
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
 }
 
@@ -478,7 +478,7 @@ PREFABS.Item_dem_cavein_secretcloset =
     MIDVINE1=50, MIDVINE2=50
     }
 
-uses_epic_textures = true
+texture_pack = "armaetus"
 
   thing_2014 =
   {
@@ -561,7 +561,7 @@ PREFABS.Item_dem_cavestal_secretcloset =
 
   z_fit = { 88,96 }
 
-uses_epic_textures = true
+texture_pack = "armaetus"
 
   thing_2014 =
   {
@@ -602,7 +602,7 @@ PREFABS.Pic_dem_waterfallC1_secretcloset =
   x_fit = "stretch"
   z_fit = { 16,32 }
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   thing_2014 =
   {
@@ -651,7 +651,7 @@ PREFABS.Pic_dem_waterfallN1_secretcloset =
   x_fit = "stretch"
   z_fit = { 24,40 }
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   tex_MIDVINE1 = {
     MIDVINE1=50, MIDVINE2=50
@@ -698,7 +698,7 @@ PREFABS.Pic_dem_jumpy1_secretcloset =
   x_fit = "stretch"
   z_fit = { 128,136 }
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   thing_2014 =
   {

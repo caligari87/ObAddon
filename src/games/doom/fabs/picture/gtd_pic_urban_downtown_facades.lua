@@ -92,7 +92,7 @@ PREFABS.Pic_urban_downtown_facade1_EPIC =
 
   replaces = "Pic_urban_downtown_facade1_vanilla"
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   seed_w = 2
   seed_h = 1
@@ -303,7 +303,7 @@ PREFABS.Pic_urban_downtown_facade3_EPIC =
 
   replaces = "Pic_urban_downtown_facade3_vanilla"
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   seed_w = 2
   seed_h = 1

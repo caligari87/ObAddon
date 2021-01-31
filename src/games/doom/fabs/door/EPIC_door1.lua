@@ -3,7 +3,7 @@ PREFABS.Door_EPIC_plain_tech =
   file   = "door/door1.wad"
   map    = "MAP02"
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   prob   = 20
   rank   = 1

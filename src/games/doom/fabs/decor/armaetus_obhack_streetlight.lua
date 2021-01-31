@@ -24,3 +24,9 @@ PREFABS.Decor_obhack_streetlight_2 =
   template = "Decor_obhack_streetlight"
   map = "MAP02"
 }
+
+PREFABS.Decor_obhack_streetlight_3 =
+{
+  template = "Decor_obhack_streetlight"
+  map = "MAP03"
+}

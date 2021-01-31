@@ -26,7 +26,7 @@ PREFABS.Wall_hell_egyptish_triwindows = --#
 
   prob = 15
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   group = "hell_o_egyptish_triwindows"
 }
@@ -88,7 +88,7 @@ PREFABS.Wall_hell_alt_cathedral_windows = --#
 
   group = "hell_o_alt_cathedral_windows"
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   z_fit = { 48,96 }
 }
@@ -114,7 +114,7 @@ PREFABS.Wall_hell_pencil_arch = --#
 
   group = "hell_o_pencil_arch"
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   z_fit = { 66,70 }
 
@@ -140,7 +140,7 @@ PREFABS.Wall_hell_hereticish_arch = --#
 
   group = "hell_o_hereticish_arch"
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   z_fit = { 56,88 }
 }

@@ -49,6 +49,11 @@
 -- Based on the "Harder Enemy Setup" module, so there's no need to
 -- use both.
 
+-- Another note for contributors: If you also have Complex Doom v27,
+-- please run this and provide feedback so I can further tweak settings
+-- as I am not certain things are fully balanced yet.
+-- -Armaetus, Jan. 31st, 2021
+
 COMPLEX_DOOM = { }
 
 COMPLEX_DOOM.MONSTERS =

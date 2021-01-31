@@ -53,7 +53,7 @@ PREFABS.Wall_tech_octagon_insets_EPIC_1 =
   template = "Wall_tech_octagon_insets_1"
   map      = "MAP04"
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   prob     = 650
 }
@@ -63,7 +63,7 @@ PREFABS.Wall_tech_octagon_insets_EPIC_2 =
   template = "Wall_tech_octagon_insets_1"
   map      = "MAP05"
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   prob     = 150
 }
@@ -73,7 +73,7 @@ PREFABS.Wall_tech_octagon_insets_EPIC_3 =
   template = "Wall_tech_octagon_insets_1"
   map      = "MAP06"
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   prob     = 150
 }

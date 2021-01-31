@@ -32,7 +32,7 @@ PREFABS.Wall_urban_storage2_expensive_shit =
 
   prob = 25
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   tex_CRATE1 = "CRATJOKE"
 }

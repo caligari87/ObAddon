@@ -5,7 +5,7 @@ PREFABS.Decor_EPIC_craneo_painting_point =
 
   group = "gtd_epic_craneo_paintings"
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   prob   = 5000
 

@@ -7,7 +7,7 @@ PREFABS.Pic_dem_hell_flesh_conveyors_quality_control =
   prob   = 15
   theme = "hell"
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   where  = "seeds"
   height = 128

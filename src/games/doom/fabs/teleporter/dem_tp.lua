@@ -7,7 +7,7 @@ PREFABS.Dem_teleports1 =
   file = "teleporter/dem_tp.wad"
   map = "MAP02"
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   prob = 50
 

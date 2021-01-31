@@ -62,7 +62,7 @@ PREFABS.Wall_hell_marbface_EPIC_1 =
   env = "building"
 
   replaces = "Wall_hell_marbface_1"
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   group = "gtd_wall_marbface"
 
@@ -99,7 +99,7 @@ PREFABS.Wall_hell_marbface_diag_EPIC =
   group = "gtd_wall_marbface"
 
   replaces = "Wall_hell_marbface_diag"
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   where  = "diagonal"
 

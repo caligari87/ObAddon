@@ -8,7 +8,7 @@ PREFABS.Decor_sedan_EPIC =
 
   can_be_on_roads = true
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   replaces = "Decor_sedan"
 
@@ -51,7 +51,7 @@ PREFABS.Decor_minitruck_EPIC =
 
   can_be_on_roads = true
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   replaces = "Decor_minitruck"
 

@@ -55,7 +55,7 @@ PREFABS.Arch_hole_in_the_wall_red_key =
 
   engine = "zdoom"
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   key = "k_red"
 

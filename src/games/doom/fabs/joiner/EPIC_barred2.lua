@@ -7,7 +7,7 @@ PREFABS.Joiner_EPIC_remote_door_tech =
 
   theme = "tech"
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   key    = "barred"
 

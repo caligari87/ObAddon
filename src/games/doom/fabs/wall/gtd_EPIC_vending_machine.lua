@@ -7,7 +7,7 @@ PREFABS.Decor_EPIC_vending_machine =
   theme  = "!hell"
   env    = "!outdoor"
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   on_liquids = "never"
 

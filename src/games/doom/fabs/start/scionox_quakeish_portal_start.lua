@@ -12,7 +12,7 @@ PREFABS.Start_scionox_quakeish_portal_start =
 
   where  = "seeds"
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   seed_w = 2
   seed_h = 2

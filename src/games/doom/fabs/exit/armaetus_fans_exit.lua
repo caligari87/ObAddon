@@ -9,7 +9,7 @@ PREFABS.Exit_armaetus_fans_exit =
 
   where  = "seeds"
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   seed_w = 2
   seed_h = 2

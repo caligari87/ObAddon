@@ -910,7 +910,8 @@ function Monster_fill_room(R)
 
     end
 
-    if PARAM.marine_gen and PARAM.level_has_marine_closets and R.secondary_important and R.secondary_important.kind == "marine_closet" then
+    if PARAM.marine_gen and PARAM.level_has_marine_closets 
+    and R.secondary_important and R.secondary_important.kind == "marine_closet" then
       if PARAM.m_c_quantity == "more" then
         qty = qty * 1.5
       elseif PARAM.m_c_quantity == "lot" then

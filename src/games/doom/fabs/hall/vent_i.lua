@@ -37,7 +37,7 @@ PREFABS.Hallway_vent_i_EPIC =
 
   theme = "!hell"
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   sound = "Indoor_Fan"
 }

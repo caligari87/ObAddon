@@ -18,7 +18,7 @@ PREFABS.Switch_armaetus_epic_1 =
   deep   =  16
   over   = -16
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   x_fit = "frame"
   y_fit = "top"

@@ -42,7 +42,7 @@ PREFABS.Hallway_metro_t_boxy_vending_machine =
 
   engine = "zdoom"
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   prob = 25
 

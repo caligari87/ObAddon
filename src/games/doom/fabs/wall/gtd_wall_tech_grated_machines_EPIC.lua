@@ -7,7 +7,7 @@ PREFABS.Wall_tech_grated_machines_epic_plain_1 =
 
   group = "gtd_wall_grated_machines_epic"
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   where = "edge"
   deep = 16

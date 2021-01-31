@@ -64,7 +64,7 @@ PREFABS.Wall_hell_bloodgutters3_EPIC =
   template = "Wall_hell_bloodgutters1"
   replaces = "Wall_hell_bloodgutters3"
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
   map = "MAP04"
 
   tex_SP_DUDE4 =

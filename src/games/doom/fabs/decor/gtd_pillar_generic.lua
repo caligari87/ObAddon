@@ -6,7 +6,7 @@ PREFABS.Pillar_gtd_generic1 =
   rank   = 2
   prob   = 7500
 
-  skip_prob = 35
+  skip_prob = 55
 
   theme  = "!hell"
   env    = "building"
@@ -100,7 +100,7 @@ PREFABS.Pillar_gtd_generic1_2x =
   map      = "MAP04"
 
   prob = 10000
-  skip_prob = 55
+  skip_prob = 75
 
   theme  = "!hell"
 
@@ -120,7 +120,7 @@ PREFABS.Pillar_gtd_generic1_hell_2x =
   map      = "MAP04"
 
   prob = 10000
-  skip_prob = 55
+  skip_prob = 75
 
   theme  = "hell"
 
@@ -140,7 +140,7 @@ PREFABS.Pillar_gtd_generic1_4x =
   map      = "MAP07"
 
   prob = 10000
-  skip_prob = 55
+  skip_prob = 75
 
   theme  = "!hell"
 
@@ -160,7 +160,7 @@ PREFABS.Pillar_gtd_generic1_hell_4x =
   map      = "MAP07"
 
   prob = 15000
-  skip_prob = 55
+  skip_prob = 75
 
   theme  = "hell"
 
@@ -180,7 +180,7 @@ PREFABS.Pillar_gtd_generic3_2x =
   template = "Pillar_gtd_generic1"
 
   prob = 15000
-  skip_prob = 55
+  skip_prob = 75
 
   theme = "any"
 
@@ -197,7 +197,7 @@ PREFABS.Pillar_gtd_generic3_4x =
   template = "Pillar_gtd_generic1"
 
   prob = 15000
-  skip_prob = 55
+  skip_prob = 75
 
   theme = "any"
 

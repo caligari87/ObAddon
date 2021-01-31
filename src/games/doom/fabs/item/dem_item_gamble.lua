@@ -69,6 +69,40 @@ PREFABS.Item_dem_gamble_closet2 =
   template = "Item_dem_gamble_closet1"
   map = "MAP02"
 
+  theme = "!tech"
+
+  thing_2007 =
+  {
+   berserk = 1
+   invis = 5
+   allmap = 2
+   goggles = 5
+  }
+
+  thing_2008 =
+  {
+   bullet_box = 5
+   shell_box = 5
+   rocket_box = 2
+   cell_pack = 1
+  }
+
+  thing_2010 =
+  {
+   green_armor = 2
+   backpack = 1
+   stimpack = 5
+   medikit = 5
+  }
+}
+
+PREFABS.Item_dem_gamble_closet2_tech =
+{
+  template = "Item_dem_gamble_closet1"
+  map = "MAP03"
+
+  theme = "tech"
+
   thing_2007 =
   {
    berserk = 1

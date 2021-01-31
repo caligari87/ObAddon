@@ -6,7 +6,7 @@ PREFABS.Arch_duct_room_to_room_door =
   prob = 40
   theme = "!hell"
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   kind = "arch"
   where = "edge"

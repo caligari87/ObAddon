@@ -16,7 +16,7 @@ PREFABS.Item_alcove_techy_epic =
 
   item_kind = "key"
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   where  = "seeds"
   seed_w = 2

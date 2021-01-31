@@ -7,7 +7,7 @@ PREFABS.Wall_epic_obaddon_banner =
   env   = "!building"
   theme = "!hell"
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   where  = "edge"
   height = 256

@@ -8,7 +8,7 @@ PREFABS.Pic_craneo_tv_store =
   theme = "urban"
   env = "!cave"
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   where  = "seeds"
 

@@ -57,7 +57,7 @@ PREFABS.Item_dem_rift_closet =
   x_fit = "frame"
   y_fit  = "frame"
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   thing_63 =
   {
@@ -180,7 +180,7 @@ PREFABS.Item_dem_elevatorshaft_closet =
   x_fit = "frame"
   y_fit  = "frame"
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   tex_BROWN1 = {
     GRAY1=50, GRAY4=50, GRAY5=50, GRAY6=50,
@@ -217,7 +217,7 @@ PREFABS.Item_dem_elevatorshaftcorr_closet =
   x_fit = "frame"
   y_fit = "top"
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   tex_BROWN1 = {
     GRAY1=50, GRAY4=50, GRAY5=50, GRAY6=50,
@@ -318,7 +318,7 @@ PREFABS.Item_dem_bedroom_closet =
   x_fit = "frame"
   y_fit  = "frame"
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   tex_BRICK9 = {
     BRICK1=50, BRICK10=50, BRICK11=50,
@@ -385,7 +385,7 @@ PREFABS.Item_dem_bar_closets =
   x_fit = "frame"
   y_fit  = "frame"
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   tex_STARTAN1 = {
     BRICK1=50, BRICK12=50, BRICK11=50,
@@ -422,7 +422,7 @@ PREFABS.Item_dem_waiting_room_closets =
   x_fit = "frame"
   y_fit  = "frame"
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   tex_STARTAN1 = {
     BRICK1=50, BRICK12=50, BRICK11=50,
@@ -461,7 +461,7 @@ PREFABS.Item_dem_electronic_store_closets =
   x_fit = "frame"
   y_fit  = "frame"
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   tex_STARTAN1 = {
     BRICK1=50, BRICK12=50, BRICK11=50,
@@ -499,7 +499,7 @@ PREFABS.Item_dem_cornerstore_closets =
   x_fit = "frame"
   y_fit  = "frame"
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   tex_STARTAN1 = {
     BRICK1=50, BRICK12=50, BRICK11=50,
@@ -538,7 +538,7 @@ PREFABS.Item_dem_bookstore_closets =
   x_fit = "frame"
   y_fit  = "frame"
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   tex_STARTAN1 = {
     BRICK1=50, BRICK12=50,
@@ -624,7 +624,7 @@ PREFABS.Item_dem_shrine_closetC =
 
   z_fit = { 56,64 }
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
 }
 
@@ -671,7 +671,7 @@ PREFABS.Item_dem_cabin_closet =
 
   z_fit = { 99,104 }
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   thing_10 =
   {
@@ -713,7 +713,7 @@ PREFABS.Item_dem_campsiteC_closet =
 
   z_fit = { 64,72 }
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
 }
 
@@ -765,7 +765,7 @@ PREFABS.Item_dem_bunker_closetP =
   y_fit  = "frame"
   z_fit = { 56,64 }
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
 
   thing_3004 =

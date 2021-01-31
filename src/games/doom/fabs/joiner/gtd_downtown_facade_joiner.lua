@@ -8,7 +8,7 @@ PREFABS.Joiner_downtown_facade =
   delta_h = 0
   nearby_h = 256
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   theme  = "urban"
   env    = "outdoor"

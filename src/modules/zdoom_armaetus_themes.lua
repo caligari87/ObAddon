@@ -3269,7 +3269,7 @@ ARMAETUS_THEMES =
       ceiling_sink_GOTH21Y = 5
       ceiling_sink_GOTH21G = 5
       ceiling_sink_GOTH21B = 5
-      ceiling_sink_GOTH21P = 5
+      -- ceiling_sink_GOTH21P = 5
     }
 
     floor_sinks =
@@ -3283,7 +3283,7 @@ ARMAETUS_THEMES =
       floor_c43_red = 10
       floor_c43_yellow = 10
       floor_c43_green = 10
-      floor_c43_purple = 2
+      -- floor_c43_purple = 2
     }
 
     scenic_fences =

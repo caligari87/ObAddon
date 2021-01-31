@@ -29,7 +29,7 @@ PREFABS.Decor_armaetus_flagpole_obaddon_logo_earth =
   theme  = "!hell"
   env = "outdoor"
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   height = 384
   size   = 56
@@ -47,7 +47,7 @@ PREFABS.Decor_armaetus_flagpole_obaddon_logo_hell =
   theme  = "hell"
   env = "outdoor"
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   height = 384
   size   = 56

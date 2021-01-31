@@ -10,7 +10,7 @@ PREFABS.Wall_epic_wallbodies =
 
   group = "armaetus_wallbodies"
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   tex_COLLITE1 = "BODIES1"
 
@@ -35,7 +35,7 @@ PREFABS.Wall_epic_wallbodies_diagonal =
 
   group = "armaetus_wallbodies"
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   tex_COLLITE1 = "BODIES1"
 

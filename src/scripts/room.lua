@@ -2191,19 +2191,13 @@ function Room_choose_size(R, not_big)
 
   --Make parks bigger
   elseif R.is_park then
-    R. size_limit = sum * rand.range( 2,3 )
-    R.floor_limit = rand.key_by_probs(
+    R. size_limit = sum * rand.key_by_probs(
       {
-        [5]=1
+        [2]=2
+        [3]=2
+        [4]=1.5
         [6]=1
-        [7]=1
-        [8]=2
-        [9]=2
-        [10]=3
-        [11]=3
-        [13]=3
-        [14]=2
-        [15]=1
+        [8]=1
       }
     )
 

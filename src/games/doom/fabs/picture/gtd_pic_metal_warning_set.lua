@@ -8,7 +8,7 @@ PREFABS.Pic_metal_warning_gate =
 
   group = "gtd_wall_metal_warning"
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   where  = "seeds"
   height = 128

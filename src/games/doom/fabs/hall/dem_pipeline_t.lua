@@ -19,7 +19,7 @@ PREFABS.Hallway_pipeline_t1 =
 
   sound = "Pipeline"
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 }
 
 PREFABS.Hallway_pipeline_t2 =

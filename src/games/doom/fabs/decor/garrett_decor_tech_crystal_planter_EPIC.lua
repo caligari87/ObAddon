@@ -7,7 +7,7 @@ PREFABS.Decor_garrett_hell_crystal_analyser_thing_EPIC =
   theme  = "tech"
   env    = "building"
 
-  uses_epic_textures = true
+  texture_pack = "armaetus"
 
   where  = "point"
 
