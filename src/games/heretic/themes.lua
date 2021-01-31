@@ -70,6 +70,15 @@ HERETIC.SINKS =
     trim_light = 16
   }
 
+-- plain ceilings
+
+  ceiling_plain =
+  {
+    mat   = "_CEIL"
+    dz    = 64
+    light = 16
+  }
+
 -- plain floors
 
   floor_plain =
@@ -155,7 +164,7 @@ HERETIC.THEMES =
   }
 
 
-  castle =
+  city =
   {
 
    style_list =
@@ -212,8 +221,9 @@ HERETIC.THEMES =
 
     ceiling_sinks =
     {
-      sky_plain = 50
-      sky_ceiling = 50
+      ceiling_plain = 50
+      --sky_plain = 50
+      --sky_ceiling = 50
       light_plain = 25
     }
 
@@ -231,9 +241,11 @@ HERETIC.THEMES =
 
     facades =
     {
-      CSTLRCK = 80
-      GRSTNPB = 40
-      CTYSTUC2 = 10
+      GRSTNPB = 50
+      GRSTNPBV = 15
+      CSTLRCK = 40
+      CTYSTUC4 = 15
+      SPINE2 = 5
     }
 
     fence_groups =
@@ -263,7 +275,7 @@ HERETIC.THEMES =
       torches1 = 50
     }
     
-    cave_torches =
+    maw_torches =
     {
       fire_brazier  = 20
       wall_torch   = 70
@@ -280,10 +292,7 @@ HERETIC.THEMES =
 
     scenic_fences =
     {
-      GATMETL2 = 50
-      GATMETL3 = 50
-      GATMETL4 = 50
-      GATMETL5 = 50
+      WDGAT64 = 50
     }
 
     sink_style =
@@ -292,13 +301,13 @@ HERETIC.THEMES =
       curved = 0.1
     }
     
-    steps_mat = "WOODWL"
+    steps_mat = "CSTLRCK"
 
-    post_mat  = "METL2"
+    post_mat  = "WOODWL"
 
   }
   
-  cave =
+  maw =
   {
 
    style_list =
@@ -354,30 +363,26 @@ HERETIC.THEMES =
 
     ceiling_sinks =
     {
-      sky_plain = 50
-      sky_ceiling = 50
+      ceiling_plain = 50
+      --sky_plain = 50
+      --sky_ceiling = 50
       light_plain = 25
     }
 
     fences =
     {
       LOOSERCK = 80
-      LAVA1 = 40
-      RCKSNMUD = 30
     }
 
     cage_mats =
     {
       LOOSERCK = 80
-      LAVA1 = 40
-      RCKSNMUD = 30
     }
 
     facades =
     {
       LOOSERCK = 80
       LAVA1 = 40
-      RCKSNMUD = 30
     }
 
     fence_groups =
@@ -407,7 +412,7 @@ HERETIC.THEMES =
       torches1 = 50
     }
     
-    cave_torches =
+    maw_torches =
     {
       fire_brazier  = 20
       wall_torch   = 70
@@ -424,7 +429,10 @@ HERETIC.THEMES =
 
     scenic_fences =
     {
-      WDGAT64 = 50
+      GATMETL2 = 50
+      GATMETL3 = 50
+      GATMETL4 = 50
+      GATMETL5 = 50
     }
 
     sink_style =
@@ -433,9 +441,9 @@ HERETIC.THEMES =
       curved = 0.1
     }
     
-    steps_mat = "LOOSERCK"
+    steps_mat = "SQPEB1"
 
-    post_mat  = "WOODWL"
+    post_mat  = "SQPEB1"
 
   }
   
@@ -496,28 +504,30 @@ HERETIC.THEMES =
 
     ceiling_sinks =
     {
-      sky_plain = 50
-      sky_ceiling = 50
+      ceiling_plain = 50
+      --sky_plain = 50
+      --sky_ceiling = 50
       light_plain = 25
     }
 
     fences =
     {
-      SQPEB1 = 80
-      CSTLRCK = 40
+      GRSTNPB = 80
+      BRWNRCKS = 40
     }
 
     cage_mats =
     {
-      SQPEB1 = 80
-      CSTLRCK = 40
+      GRSTNPB = 80
+      BRWNRCKS = 40
     }
 
     facades =
     {
-      SQPEB1 = 80
-      CSTLRCK = 40
-      CTYSTUC2 = 30
+      GRSTNPB = 50
+      ROOTWALL = 50
+      CSTLRCK = 50
+      BRWNRCKS = 50
     }
 
     fence_groups =
@@ -547,7 +557,7 @@ HERETIC.THEMES =
       torches1 = 50
     }
     
-    cave_torches =
+    maw_torches =
     {
       fire_brazier  = 20
       wall_torch   = 70
@@ -576,13 +586,13 @@ HERETIC.THEMES =
       curved = 0.1
     }
     
-    steps_mat = "WOODWL"
+    steps_mat = "GRSTNPB"
 
-    post_mat  = "METL2"
+    post_mat  = "WOODWL"
 
   }
   
-   egypt =
+   ossuary =
   {
 
    style_list =
@@ -636,30 +646,30 @@ HERETIC.THEMES =
 
     ceiling_sinks =
     {
-      sky_plain = 50
-      sky_ceiling = 50
+      ceiling_plain = 50
+      --sky_plain = 50
+      --sky_ceiling = 50
       light_plain = 25
     }
 
     fences =
     {
-      SNDPLAIN = 80
-      SNDBLCKS = 30
-      SPINE2 = 10
+      CSTLRCK = 40
     }
 
     cage_mats =
     {
-      SNDPLAIN = 80
-      SNDBLCKS = 30
-      SPINE2 = 10
+      CSTLRCK = 40
     }
 
     facades =
     {
-      SNDPLAIN = 80
-      SNDBLCKS = 30
-      SPINE2 = 10
+      CSTLMOSS = 50
+      SNDBLCKS = 25
+      CSTLRCK = 40
+      CHAINSD = 15
+      LOOSERCK = 30
+      GRNBLOK1 = 10
     }
 
     fence_groups =
@@ -689,7 +699,7 @@ HERETIC.THEMES =
       torches1 = 50
     }
     
-    cave_torches =
+    maw_torches =
     {
       fire_brazier  = 20
       wall_torch   = 70
@@ -715,14 +725,14 @@ HERETIC.THEMES =
       curved = 0.1
     }
     
-    steps_mat = "FLOOR27"
+    steps_mat = "SQPEB2"
 
     post_mat  = "WOODWL"
 
   }
 
  
-   garish =
+  demense =
   {
 
    style_list =
@@ -778,25 +788,36 @@ HERETIC.THEMES =
 
     ceiling_sinks =
     {
-      sky_plain = 50
-      sky_ceiling = 50
+      ceiling_plain = 50
+      --sky_plain = 50
+      --sky_ceiling = 50
       light_plain = 25
     }
 
     fences =
     {
-      REDWALL = 40
+      SQPEB1 = 20
+      GRSTNPB = 20
     }
 
     cage_mats =
     {
-      REDWALL = 40
+      SQPEB1 = 20
+      GRSTNPB = 20
     }
 
     facades =
     {
-      REDWALL = 40
-      WATRWAL1 = 20
+      RCKSNMUD = 40
+      BRWNRCKS = 30
+      TRISTON1 = 20
+      LOOSERCK = 40
+      SNDBLCKS = 30
+      CSTLRCK = 20
+      GRSTNPB = 20
+      METL2 = 10
+      SQPEB1 = 20
+      TRISTON2 = 10
     }
 
     fence_groups =
@@ -826,14 +847,14 @@ HERETIC.THEMES =
       torches1 = 50
     }
     
-    cave_torches =
+    maw_torches =
     {
       fire_brazier  = 20
       wall_torch   = 70
       mercury_lamp  = 10
     }
     
-    outdoor_torches =
+    outdoor_torches = 
     {
       fire_brazier   = 10
       mercury_lamp  = 40
@@ -852,7 +873,7 @@ HERETIC.THEMES =
       curved = 0.1
     }
     
-    steps_mat = "FLAT502"
+    steps_mat = "SQPEB1"
 
     post_mat  = "WOODWL"
 
@@ -864,22 +885,74 @@ HERETIC.THEMES =
 HERETIC.ROOM_THEMES =
 {
 
-  ---- CASTLE THEME --------------------------------
+  ---- CITY THEME --------------------------------
+  -- Combos observed during Episode 1
 
    
-  castle_Gold =
+  city_Floor03_Floor04 =
   {
     env  = "building"
-    prob = 20
+    prob = 50
 
     walls =
     {
+      GRSTNPB = 50
+      GRSTNPBV = 20
+      WOODWL = 15
+      SKULLSB1 = 5
+    }
+
+    floors =
+    {
+      FLOOR03 = 50
+      FLOOR04 = 25
+    }
+
+    ceilings =
+    {
+      FLOOR03 = 50
+      FLOOR04 = 25
+    }
+  }
+  
+    city_Floor10_Floor12 =
+  {
+    env  = "building"
+    prob = 50
+
+    walls =
+    {
+      GRSTNPB = 50
+      WOODWL = 25
+      CTYSTCI2 = 10
+      CTYSTUC4 = 10
+    }
+
+    floors =
+    {
+      FLOOR10 = 50
+    }
+
+    ceilings =
+    {
+      FLOOR12 = 50
+    }
+  }
+  
+  city_Floor06_Floor11 =
+  {
+    env  = "building"
+    prob = 50
+
+    walls =
+    {
+      SNDBLCKS = 50
       SANDSQ2 = 50
     }
 
     floors =
     {
-      FLOOR06 = 20
+      FLOOR06 = 50
     }
 
     ceilings =
@@ -887,8 +960,33 @@ HERETIC.ROOM_THEMES =
       FLOOR11 = 50
     }
   }
+  
+  city_Floor04_Floor19 =
+  {
+    env  = "building"
+    prob = 50
 
-  castle_Block =
+    walls =
+    {
+      SKULLSB1 = 50
+      CHAINSD = 50
+      SANDSQ2 = 25
+    }
+
+    floors =
+    {
+      FLOOR19 = 50
+      FLOOR04 = 25
+    }
+
+    ceilings =
+    {
+      FLOOR04 = 50
+      FLOOR19 = 25
+    }
+  }
+  
+  city_Grstnpb_Misc =
   {
     env  = "building"
     prob = 50
@@ -900,29 +998,56 @@ HERETIC.ROOM_THEMES =
 
     floors =
     {
-      FLOOR03 = 20
+      FLOOR10 = 50
+      FLOOR00 = 25
+      FLOOR04 = 25
+      METL1 = 15
     }
 
     ceilings =
     {
-      FLOOR03 = 50
+      FLOOR00 = 50
+      FLOOR19 = 25
+      FLOOR03 = 25
     }
   }
-
-
-  castle_Mossy =
+  
+  city_Sndblcks_Misc =
   {
     env  = "building"
     prob = 50
 
     walls =
     {
-      MOSSRCK1 = 50
+      SNDBLCKS = 50
     }
 
     floors =
     {
-      FLOOR00 = 50
+      METL1 = 15
+      FLOOR06 = 50
+    }
+
+    ceilings =
+    {
+      FLOOR11 = 50
+      FLOOR25 = 50
+    }
+  }
+  
+  city_Grstnpbv_Misc =
+  {
+    env  = "building"
+    prob = 50
+
+    walls =
+    {
+      GRSTNPBV = 50
+    }
+
+    floors =
+    {
+      FLOOR06 = 50
     }
 
     ceilings =
@@ -930,9 +1055,1032 @@ HERETIC.ROOM_THEMES =
       FLOOR04 = 50
     }
   }
+  
+  city_Spine2_Misc =
+  {
+    env  = "building"
+    prob = 50
+
+    walls =
+    {
+      SPINE2 = 50
+    }
+
+    floors =
+    {
+      FLOOR04 = 50
+    }
+
+    ceilings =
+    {
+      FLOOR25 = 50
+    }
+  }
+  
+  city_deuce_Hallway_Floor03 =
+  {
+    env   = "hallway"
+    group = "deuce"
+    prob  = 50
+
+    walls =
+    {
+      GRSTNPB = 50
+      GRSTNPBV = 50
+      WOODWL = 20
+    }
+
+    floors =
+    {
+      FLOOR03 = 50
+    }
+
+    ceilings =
+    {
+      FLOOR03 = 50
+    }
+    
+  }
+  
+  city_vent_Hallway_Floor03 =
+  {
+    env   = "hallway"
+    group = "vent"
+    prob  = 50
+
+    walls =
+    {
+      GRSTNPB = 50
+      GRSTNPBV = 50
+      WOODWL = 20
+    }
+
+    floors =
+    {
+      FLOOR03 = 50
+    }
+
+    ceilings =
+    {
+      FLOOR03 = 50
+    }
+    
+  }
+  
+  city_deuce_Hallway_Floor04 =
+  {
+    env   = "hallway"
+    group = "deuce"
+    prob  = 50
+
+    walls =
+    {
+      GRSTNPB = 50
+      GRSTNPBV = 50
+    }
+
+    floors =
+    {
+      FLOOR04 = 50
+    }
+
+    ceilings =
+    {
+      FLOOR04 = 50
+    }
+    
+  }
+  
+  city_vent_Hallway_Floor04 =
+  {
+    env   = "hallway"
+    group = "vent"
+    prob  = 50
+
+    walls =
+    {
+      GRSTNPB = 50
+      GRSTNPBV = 50
+    }
+
+    floors =
+    {
+      FLOOR04 = 50
+    }
+
+    ceilings =
+    {
+      FLOOR04 = 50
+    }
+    
+  }
+  
+    city_deuce_Hallway_Sndchnks =
+  {
+    env   = "hallway"
+    group = "deuce"
+    prob  = 15
+
+    walls =
+    {
+      SNDCHNKS = 50
+    }
+
+    floors =
+    {
+      FLOOR06 = 50
+    }
+
+    ceilings =
+    {
+      FLOOR06 = 20
+    }
+    
+  }
+  
+  city_vent_Hallway_Sndcnks =
+  {
+    env   = "hallway"
+    group = "vent"
+    prob  = 15
+
+    walls =
+    {
+      SNDCHNKS = 50
+    }
+
+    floors =
+    {
+      FLOOR06 = 50
+    }
+
+    ceilings =
+    {
+      FLOOR06 = 20
+    }
+    
+  }
+  
+  city_Outdoors =
+  {
+    env  = "outdoor"
+    prob = 50
+
+    floors =
+    {
+      FLOOR00 = 50
+      FLOOR04 = 50
+      FLOOR01 = 50
+      FLOOR10 = 50
+    }
+
+    naturals =
+    {
+      FLOOR17 = 50
+      FLOOR27 = 50
+    }
+
+    porch_floors =
+    {
+      FLOOR00 = 50
+      FLOOR04 = 50
+      FLOOR01 = 50
+      FLOOR10 = 50
+      FLOOR19 = 10
+    }
+
+  }
+  
+  --------- MAW THEME -------------
+  -- Combos observed during Episode 2
+
+  maw_Looserck =
+  {
+    env  = "building"
+    prob = 50
+
+    walls =
+    {
+      LOOSERCK = 50
+    }
+
+    floors =
+    {
+      FLAT516 = 50
+      FLAT510 = 50
+      FLOOR04 = 50
+      FLOOR01 = 50
+      FLAT521 = 50
+    }
+    
+    ceilings =
+    {
+      FLAT509 = 50
+      FLOOR01 = 50
+      FLAT510 = 50
+    }
+    
+  }
+
+  maw_Lava1 =
+  {
+    env  = "building"
+    prob = 30
+
+    walls =
+    {
+      LAVA1 = 50
+    }
+
+    floors =
+    {
+      FLOOR04 = 50
+      FLAT510 = 50
+      FLAT521 = 50
+    }
+    
+    ceilings =
+    {
+      FLAT509 = 50
+      FLOOR04 = 50
+      FLAT510 = 50
+    }
+    
+  }
+  
+  maw_Misc =
+  {
+    env  = "building"
+    prob = 15
+
+    walls =
+    {
+      GRSTNPB = 50
+      GRSTNPBV = 25
+    }
+
+    floors =
+    {
+      FLOOR04 = 50
+      FLAT510 = 50
+    }
+    
+    ceilings =
+    {
+      FLAT509 = 50
+      FLOOR04 = 50
+    }
+    
+  }
+
+  maw_deuce_Hallway_Looserck =
+  {
+    env   = "hallway"
+    group = "deuce"
+    prob  = 50
+
+    walls =
+    {
+      LOOSERCK = 50
+    }
+
+    floors =
+    {
+      FLAT516 = 50
+    }
+    
+    ceilings =
+    {
+      FLAT509 = 50
+    }
+    
+  }
+  
+  maw_vent_Hallway_Looserck =
+  {
+    env   = "hallway"
+    group = "vent"
+    prob  = 50
+
+    walls =
+    {
+      LOOSERCK = 50
+    }
+
+    floors =
+    {
+      FLAT516 = 50
+    }
+    
+    ceilings =
+    {
+      FLAT509 = 50
+    }
+    
+  }
+  
+  maw_deuce_Hallway_Grstnpb =
+  {
+    env   = "hallway"
+    group = "deuce"
+    prob  = 50
+
+    walls =
+    {
+      GRSTNPB = 50
+      GRSTNPBV = 25
+    }
+
+    floors =
+    {
+      FLOOR04 = 50
+    }
+    
+    ceilings =
+    {
+      FLOOR04 = 50
+    }
+    
+  }
+  
+  maw_vent_Hallway_Grstnpb =
+  {
+    env   = "hallway"
+    group = "vent"
+    prob  = 50
+
+    walls =
+    {
+      GRSTNPB = 50
+      GRSTNPBV = 25
+    }
+
+    floors =
+    {
+      FLOOR04 = 50
+    }
+    
+    ceilings =
+    {
+      FLOOR04 = 50
+    }
+    
+  }
+  
+  maw_deuce_Hallway_Lava1 =
+  {
+    env   = "hallway"
+    group = "deuce"
+    prob  = 50
+
+    walls =
+    {
+      LAVA1 = 50
+    }
+
+    floors =
+    {
+      FLAT510 = 50
+    }
+    
+    ceilings =
+    {
+      FLAT509 = 50
+    }
+    
+  }
+  
+  maw_vent_Hallway_Lava1 =
+  {
+    env   = "hallway"
+    group = "vent"
+    prob  = 50
+
+    walls =
+    {
+      LAVA1 = 50
+    }
+
+    floors =
+    {
+      FLAT510 = 50
+    }
+    
+    ceilings =
+    {
+      FLAT509 = 50
+    }
+    
+  }
 
 
-  castle_Wood =
+  maw_Outdoors =
+  {
+    env  = "outdoor"
+    prob = 50
+
+    floors =
+    {
+      FLAT516 = 20
+    }
+
+    naturals =
+    {
+      FLAT516 = 20
+      FLAT517 = 20
+    }
+
+    porch_floors =
+    {
+      FLOOR04 = 20
+      FLOOR01 = 20
+      FLAT503 = 20
+      FLAT521 = 20
+    }
+
+  }
+
+  --------- DOME THEME -------------
+  -- Combos observed during Episode 3
+
+
+  dome_Grstnpb =
+  {
+    env  = "building"
+    prob = 50
+
+    walls =
+    {
+      GRSTNPB = 50
+    }
+
+    floors =
+    {
+      FLAT503 = 50
+      FLAT523 = 50
+      FLAT521 = 50
+    }
+    
+    ceilings =
+    {
+      FLAT503 = 50
+      FLOOR27 = 50
+      FLAT521 = 50
+    }
+    
+  }
+  
+  dome_Grnblok1 =
+  {
+    env  = "building"
+    prob = 50
+
+    walls =
+    {
+      GRNBLOK1 = 50
+    }
+
+    floors =
+    {
+      FLAT522 = 50
+      FLAT503 = 50
+    }
+    
+    ceilings =
+    {
+      FLAT520 = 50
+      FLAT522 = 50
+      FLAT506 = 50
+    }
+    
+  }
+  
+  dome_Cstlrck =
+  {
+    env  = "building"
+    prob = 50
+
+    walls =
+    {
+      CSTLRCK = 50
+    }
+
+    floors =
+    {
+      FLOOR04 = 50
+      FLOOR27 = 50
+      FLAT523 = 50
+    }
+    
+    ceilings =
+    {
+      FLOOR04 = 50
+      FLAT504 = 50
+    }
+    
+  }
+  
+  dome_Spine2_Sndplain =
+  {
+    env  = "building"
+    prob = 50
+
+    walls =
+    {
+      SPINE2 = 50
+      SNDPLAIN = 25
+    }
+
+    floors =
+    {
+      FLAT522 = 50
+      FLAT521 = 50
+    }
+    
+    ceilings =
+    {
+      FLAT522 = 50
+      FLOOR01 = 50
+      FLAT521 = 50
+    }
+    
+  }
+  
+  dome_Triston1 =
+  {
+    env  = "building"
+    prob = 50
+
+    walls =
+    {
+      TRISTON1 = 50
+    }
+
+    floors =
+    {
+      FLAT507 = 50
+      FLAT523 = 50
+    }
+    
+    ceilings =
+    {
+      FLAT508 = 50
+      FLAT521 = 50
+    }
+    
+  }
+  
+  dome_Mosaic =
+  {
+    env  = "building"
+    prob = 15
+
+    walls =
+    {
+      MOSAIC1 = 50
+      MOSAIC3 = 50
+    }
+
+    floors =
+    {
+      FLAT504 = 50
+      FLAT502 = 50
+      FLOOR04 = 50
+      FLTWAWA1 = 5
+    }
+    
+    ceilings =
+    {
+      FLAT502 = 50
+      FLAT504 = 50
+      FLOOR07 = 50
+    }
+    
+  }
+  
+  dome_deuce_Hallway_Grstnpb =
+  {
+    env   = "hallway"
+    group = "deuce"
+    prob  = 50
+
+    walls =
+    {
+      GRSTNPB = 50
+    }
+
+    floors =
+    {
+      FLAT503 = 50
+      FLAT523 = 50
+    }
+    
+    ceilings =
+    {
+      FLAT503 = 50
+      FLOOR27 = 50
+    }
+    
+  }
+  
+  dome_vent_Hallway_Grstnpb =
+  {
+    env   = "hallway"
+    group = "vent"
+    prob  = 50
+
+    walls =
+    {
+      GRSTNPB = 50
+    }
+
+    floors =
+    {
+      FLAT503 = 50
+      FLAT523 = 50
+    }
+    
+    ceilings =
+    {
+      FLAT503 = 50
+      FLOOR27 = 50
+    }
+    
+  }
+  
+  dome_deuce_Hallway_Grnblok1 =
+  {
+    env   = "hallway"
+    group = "deuce"
+    prob  = 25
+
+    walls =
+    {
+      GRNBLOK1 = 50
+    }
+
+    floors =
+    {
+      FLAT522 = 50
+    }
+    
+    ceilings =
+    {
+      FLAT522 = 50
+    }
+    
+  }
+  
+  dome_vent_Hallway_Grnblok1 =
+  {
+    env   = "hallway"
+    group = "vent"
+    prob  = 25
+
+    walls =
+    {
+      GRNBLOK1 = 50
+    }
+
+    floors =
+    {
+      FLAT522 = 50
+    }
+    
+    ceilings =
+    {
+      FLAT522 = 50
+    }
+    
+  }
+
+  dome_deuce_Hallway_Sndplain =
+  {
+    env   = "hallway"
+    group = "deuce"
+    prob  = 25
+
+    walls =
+    {
+      SNDPLAIN = 50
+    }
+
+    floors =
+    {
+      FLAT521 = 50
+    }
+    
+    ceilings =
+    {
+      FLAT521 = 50
+    }
+    
+  }
+  
+  dome_vent_Hallway_Sndplain =
+  {
+    env   = "hallway"
+    group = "vent"
+    prob  = 25
+
+    walls =
+    {
+      SNDPLAIN = 50
+    }
+
+    floors =
+    {
+      FLAT521 = 50
+    }
+    
+    ceilings =
+    {
+      FLAT521 = 50
+    }
+    
+  }
+ 
+  dome_Outdoors =
+  {
+    env  = "outdoor"
+    prob = 50
+
+    floors =
+    {
+      FLAT503 = 20
+      FLAT523 = 20
+      FLOOR04 = 20
+      FLOOR05 = 20
+    }
+
+    naturals =
+    {
+      FLTWAWA1 = 20
+    }
+
+    porch_floors =
+    {
+      FLAT503 = 20
+      FLAT523 = 20
+      FLOOR04 = 20
+      FLOOR05 = 20
+    }
+
+  }
+  
+------- OSSUARY THEME -------
+-- Combos observed during Episode 4
+
+   ossuary_Grstnpb =
+  {
+    env  = "building"
+    prob = 50
+
+    walls =
+    {
+      GRSTNPB = 50
+    }
+
+    floors =
+    {
+      FLAT503 = 50
+      FLAT523 = 50
+      FLOOR10 = 50
+      FLAT521 = 50
+      FLOOR03 = 50
+    }
+
+    ceilings =
+    {
+      FLAT522 = 50
+      FLAT504 = 50
+      FLOOR10 = 50
+      FLOOR03 = 50
+    }
+    
+  }
+  
+   ossuary_Spine2 =
+  {
+    env  = "building"
+    prob = 50
+
+    walls =
+    {
+      SPINE2 = 50
+    }
+
+    floors =
+    {
+      FLOOR19 = 50
+      FLOOR25 = 50
+    }
+
+    ceilings =
+    {
+      FLAT522 = 50
+      FLAT523 = 50
+    }
+    
+  }
+  
+   ossuary_Chainsd =
+  {
+    env  = "building"
+    prob = 50
+
+    walls =
+    {
+      CHAINSD = 50
+    }
+
+    floors =
+    {
+      FLAT503 = 50
+      FLAT504 = 50
+      FLOOR19 = 50
+    }
+
+    ceilings =
+    {
+      FLAT522 = 50
+      FLAT504 = 50
+    }
+    
+  }
+  
+   ossuary_Cstlrck =
+  {
+    env  = "building"
+    prob = 50
+
+    walls =
+    {
+      CSTLRCK = 50
+    }
+
+    floors =
+    {
+      FLAT522 = 50
+      FLAT521 = 50
+    }
+
+    ceilings =
+    {
+      FLAT523 = 50
+      FLAT507 = 50
+      FLOOR12 = 50
+    }
+    
+  }
+    
+   ossuary_Metl2 =
+  {
+    env  = "building"
+    prob = 50
+
+    walls =
+    {
+      METL2 = 50
+    }
+
+    floors =
+    {
+      FLOOR28 = 50
+      FLAT521 = 50
+    }
+
+    ceilings =
+    {
+      FLAT512 = 50
+      FLAT504 = 50
+      FLOOR29 = 50
+    }
+    
+  }
+  
+   ossuary_Grnblok =
+  {
+    env  = "building"
+    prob = 50
+
+    walls =
+    {
+      GRNBLOK1 = 50
+      GRNBLOK2 = 10
+    }
+
+    floors =
+    {
+      FLOOR25 = 50
+      FLAT521 = 50
+      FLOOR19 = 50
+    }
+
+    ceilings =
+    {
+      FLAT521 = 50
+      FLAT522 = 50
+    }
+    
+  }
+  
+   ossuary_Triston2_Sndplain =
+  {
+    env  = "building"
+    prob = 50
+
+    walls =
+    {
+      TRISTON2 = 50
+      SNDPLAIN = 50
+    }
+
+    floors =
+    {
+      FLAT523 = 50
+      FLAT522 = 50
+    }
+
+    ceilings =
+    {
+      FLAT523 = 50
+      FLAT503 = 50
+    }
+    
+  }
+  
+   ossuary_Triston1 =
+  {
+    env  = "building"
+    prob = 50
+
+    walls =
+    {
+      TRISTON1 = 50
+    }
+
+    floors =
+    {
+      FLOOR19 = 50
+      FLOOR28 = 50
+    }
+
+    ceilings =
+    {
+      FLAT523 = 50
+      FLOOR28 = 50
+    }
+    
+  }
+  
+   ossuary_Grstnpbv =
+  {
+    env  = "building"
+    prob = 50
+
+    walls =
+    {
+      GRSTNPBV = 50
+    }
+
+    floors =
+    {
+      FLAT523 = 50
+      FLAT504 = 50
+    }
+
+    ceilings =
+    {
+      FLAT523 = 50
+      FLAT522 = 50
+    }
+    
+  }
+  
+   ossuary_Metl1 =
+  {
+    env  = "building"
+    prob = 50
+
+    walls =
+    {
+      METL1 = 50
+    }
+
+    floors =
+    {
+      FLAT523 = 50
+    }
+
+    ceilings =
+    {
+      FLOOR29 = 50
+    }
+    
+  }
+  
+   ossuary_Woodwl =
   {
     env  = "building"
     prob = 50
@@ -949,56 +2097,175 @@ HERETIC.ROOM_THEMES =
 
     ceilings =
     {
-      FLOOR12 = 50
+      FLOOR11 = 50
     }
+    
   }
-  
-  castle_Hut =
+    
+  ossuary_deuce_Hallway_Cstlrck =
   {
-    env  = "building"
-    prob = 50
+    env   = "hallway"
+    group = "deuce"
+    prob  = 50
 
     walls =
     {
-      CTYSTUC3 = 50
+      CSTLRCK = 50
+    }
+
+    floors =
+    {
+      FLAT522 = 50
+    }
+
+    ceilings =
+    {
+      FLAT523 = 50
+    }
+    
+  }
+  
+  ossuary_vent_Hallway_Cstlrck =
+  {
+    env   = "hallway"
+    group = "vent"
+    prob  = 50
+
+    walls =
+    {
+      CSTLRCK = 50
+    }
+
+    floors =
+    {
+      FLAT522 = 50
+    }
+
+    ceilings =
+    {
+      FLAT523 = 50
+    }
+    
+  }
+  
+  ossuary_deuce_Hallway_Grstnpb =
+  {
+    env   = "hallway"
+    group = "deuce"
+    prob  = 50
+
+    walls =
+    {
+      GRSTNPB = 50
+    }
+
+    floors =
+    {
+      FLAT521 = 50
+    }
+
+    ceilings =
+    {
+      FLOOR19 = 50
+    }
+    
+  }
+  
+  ossuary_vent_Hallway_Grstnpb =
+  {
+    env   = "hallway"
+    group = "vent"
+    prob  = 50
+
+    walls =
+    {
+      GRSTNPB = 50
+    }
+
+    floors =
+    {
+      FLAT521 = 50
+    }
+
+    ceilings =
+    {
+      FLOOR19 = 50
+    }
+    
+  }
+  
+  ossuary_deuce_Hallway_Sndplain =
+  {
+    env   = "hallway"
+    group = "deuce"
+    prob  = 50
+
+    walls =
+    {
+      SNDPLAIN = 50
+    }
+
+    floors =
+    {
+      FLAT522 = 50
+    }
+
+    ceilings =
+    {
+      FLAT503 = 50
+    }
+    
+  }
+  
+  ossuary_vent_Hallway_Sndplain =
+  {
+    env   = "hallway"
+    group = "vent"
+    prob  = 50
+
+    walls =
+    {
+      SNDPLAIN = 50
+    }
+
+    floors =
+    {
+      FLAT522 = 50
+    }
+
+    ceilings =
+    {
+      FLAT503 = 50
+    }
+    
+  }
+  
+  ossuary_deuce_Hallway_Woodwl =
+  {
+    env   = "hallway"
+    group = "deuce"
+    prob  = 50
+
+    walls =
+    {
+      WOODWL = 50
     }
 
     floors =
     {
       FLOOR10 = 50
+      FLAT523 = 50
     }
-    
+
     ceilings =
     {
       FLOOR11 = 50
+      FLOOR10 = 50
     }
     
   }
   
-  castle_deuce_Hallway_Rckhall =
-  {
-    env   = "hallway"
-    group = "deuce"
-    prob  = 50
-
-    walls =
-    {
-      GRSTNPB = 50
-    }
-
-    floors =
-    {
-      FLOOR03 = 50
-    }
-
-    ceilings =
-    {
-      FLOOR03 = 50
-    }
-    
-  }
-  
-  castle_vent_Hallway_Rckhall =
+  ossuary_vent_Hallway_Woodwl =
   {
     env   = "hallway"
     group = "vent"
@@ -1006,274 +2273,108 @@ HERETIC.ROOM_THEMES =
 
     walls =
     {
-      GRSTNPB = 50
+      WOODWL = 50
     }
 
     floors =
     {
-      FLOOR03 = 50
+      FLOOR10 = 50
+      FLAT523 = 50
     }
 
     ceilings =
     {
-      FLOOR03 = 50
+      FLOOR11 = 50
+      FLOOR10 = 50
     }
     
   }
   
-    castle_deuce_Hallway_Sthall =
-  {
-    env   = "hallway"
-    group = "deuce"
-    prob  = 50
-
-    walls =
-    {
-      LOOSERCK = 50
-    }
-
-    floors =
-    {
-      FLOOR00 = 50
-    }
-
-    ceilings =
-    {
-      FLOOR00 = 50
-    }
-    
-  }
-  
-  castle_vent_Hallway_Sthall =
-  {
-    env   = "hallway"
-    group = "vent"
-    prob  = 50
-
-    walls =
-    {
-      LOOSERCK = 50
-    }
-
-    floors =
-    {
-      FLOOR00 = 50
-    }
-
-    ceilings =
-    {
-      FLOOR00 = 50
-    }
-    
-  }
-  
-  castle_deuce_Hallway_Wdhall =
-  {
-    env   = "hallway"
-    group = "deuce"
-    prob  = 50
-
-    walls =
-    {
-      SQPEB2 = 50
-    }
-
-    floors =
-    {
-      FLOOR06 = 50
-    }
-
-    ceilings =
-    {
-      FLOOR06 = 50
-    }
-    
-  }
-  
-  castle_vent_Hallway_Wdhall =
-  {
-    env   = "hallway"
-    group = "vent"
-    prob  = 50
-
-    walls =
-    {
-      SQPEB2 = 50
-    }
-
-    floors =
-    {
-      FLOOR06 = 50
-    }
-
-    ceilings =
-    {
-      FLOOR06 = 50
-    }
-    
-  }
-  
-  castle_Outdoors_Stony =
+  ossuary_Outdoors =
   {
     env  = "outdoor"
     prob = 50
 
     floors =
     {
-      FLOOR00 = 20
+      FLOOR18 = 50
+      FLAT522 = 50
+      FLAT523 = 50
+      SQPEB2 = 25
     }
 
     naturals =
-    {
-      FLOOR00 = 20
-    }
-
-    porch_floors =
-    {
-      FLOOR00 = 50
-    }
-
-  }
-  
-  castle_Outdoors_Muddy =
-  {
-    env  = "outdoor"
-    prob = 50
-
-    floors =
-    {
-      FLOOR17 = 20
-    }
-
-    naturals =
-    {
-      FLOOR17 = 20
-    }
-
-    porch_floors =
     {
       FLOOR17 = 50
     }
 
-  }
-  
-  castle_Outdoors_Sandy =
-  {
-    env  = "outdoor"
-    prob = 50
-
-    floors =
-    {
-      FLOOR27 = 20
-    }
-
-    naturals =
-    {
-      FLOOR27 = 20
-    }
-
     porch_floors =
     {
-      FLOOR27 = 50
+      FLOOR18 = 50
+      FLAT522 = 50
+      FLAT523 = 50
+      SQPEB2 = 25
     }
 
   }
+    
   
-  --------- CAVE THEME -------------
+--------- DEMENSE THEME -------------
+-- Combos observed during Episode 5
 
-  cave_Cave1 =
+  demense_Sqpeb2 =
   {
     env  = "building"
     prob = 50
 
     walls =
     {
-      LOOSERCK = 50
-    }
-
-    floors =
-    {
-      FLAT516 = 50
-    }
-    
-    ceilings =
-    {
-      FLOOR01 = 50
-    }
-    
-  }
-
-  cave_Cave2 =
-  {
-    env  = "building"
-    prob = 50
-
-    walls =
-    {
-      LAVA1 = 50
-    }
-
-    floors =
-    {
-      FLAT516 = 50
-    }
-    
-    ceilings =
-    {
-      FLAT506 = 50
-    }
-    
-  }
-  
-  cave_Cave3 =
-  {
-    env  = "building"
-    prob = 50
-
-    walls =
-    {
-      BRWNRCKS = 50
+      SQPEB2 = 50
     }
 
     floors =
     {
       FLOOR01 = 50
+      FLOOR05 = 50
     }
     
     ceilings =
     {
-      FLAT516 = 50
+      FLOOR05 = 50
     }
     
   }
-  
-    cave_Root =
+
+  demense_Mossrck1 =
   {
     env  = "building"
     prob = 50
 
     walls =
     {
-      ROOTWALL = 50
+      MOSSRCK1 = 50
     }
 
     floors =
     {
-      FLAT506 = 50
+      FLOOR01 = 50
+      FLAT523 = 50
+      FLOOR10 = 50
     }
     
     ceilings =
     {
-      FLAT506 = 50
+      FLOOR01 = 50
+      FLAT522 = 50
+      FLAT521 = 50
     }
     
   }
-
-  cave_deuce_Hallway_Sthall =
+  
+  demense_Looserck =
   {
-    env   = "hallway"
-    group = "deuce"
-    prob  = 50
+    env  = "building"
+    prob = 50
 
     walls =
     {
@@ -1282,132 +2383,141 @@ HERETIC.ROOM_THEMES =
 
     floors =
     {
-      FLOOR00 = 50
+      FLOOR03 = 50
     }
-
+    
     ceilings =
     {
-      FLOOR00 = 50
+      FLOOR01 = 50
+      FLOOR03 = 50
     }
     
   }
   
-  cave_vent_Hallway_Sthall =
+  demense_Sndplain =
   {
-    env   = "hallway"
-    group = "vent"
-    prob  = 50
-
-    walls =
-    {
-      LOOSERCK = 50
-    }
-
-    floors =
-    {
-      FLOOR00 = 50
-    }
-
-    ceilings =
-    {
-      FLOOR00 = 50
-    }
-    
-  }
-  
-  cave_deuce_Hallway_Rthall =
-  {
-    env   = "hallway"
-    group = "deuce"
-    prob  = 50
-
-    walls =
-    {
-      ROOTWALL = 50
-    }
-
-    floors =
-    {
-      FLAT506 = 50
-    }
-
-    ceilings =
-    {
-      FLAT506 = 50
-    }
-    
-  }
-  
-  cave_vent_Hallway_Rthall =
-  {
-    env   = "hallway"
-    group = "vent"
-    prob  = 50
-
-    walls =
-    {
-      ROOTWALL = 50
-    }
-
-    floors =
-    {
-      FLAT506 = 50
-    }
-
-    ceilings =
-    {
-      FLAT506 = 50
-    }
-    
-  }
-
-  cave_Outdoors_Cave01 =
-  {
-    env  = "outdoor"
+    env  = "building"
     prob = 50
 
+    walls =
+    {
+      SNDPLAIN = 50
+    }
+
     floors =
     {
-      FLAT516 = 20
+      FLOOR06 = 50
+      FLOOR19 = 50
     }
-
-    naturals =
+    
+    ceilings =
     {
-      FLAT516 = 20
+      FLAT503 = 50
     }
-
-    porch_floors =
-    {
-      FLAT516 = 20
-    }
-
+    
   }
   
-    cave_Outdoors_Cave02 =
+  demense_Cstlrck =
   {
-    env  = "outdoor"
+    env  = "building"
     prob = 50
 
+    walls =
+    {
+      CSTLRCK = 50
+    }
+
     floors =
     {
-      FLAT510 = 20
+      FLAT521 = 50
+      FLAT523 = 50
+      FLOOR19 = 50
+      FLOOR28 = 50
     }
-
-    naturals =
+    
+    ceilings =
     {
-      FLAT510 = 20
+      FLAT521 = 50
+      FLAT522 = 50
+      FLOOR04 = 50
     }
-
-    porch_floors =
-    {
-      FLAT510 = 20
-    }
-
+    
   }
   
-  --------- DOME THEME -------------
+  demense_Grskull_Chainsd =
+  {
+    env  = "building"
+    prob = 50
 
-  dome_Disco2 =
+    walls =
+    {
+      GRSKULL1 = 50
+      GRSKULL2 = 50
+      CHAINSD = 50
+    }
+
+    floors =
+    {
+      FLAT521 = 50
+      FLAT523 = 50
+    }
+    
+    ceilings =
+    {
+      FLAT522 = 50
+      FLAT521 = 50
+    }
+    
+  }
+  
+  demense_Spine2_Sndchnks =
+  {
+    env  = "building"
+    prob = 50
+
+    walls =
+    {
+      SPINE2 = 50
+      SNDCHNKS = 50
+    }
+
+    floors =
+    {
+      FLAT522 = 50
+      FLAT523 = 50
+    }
+    
+    ceilings =
+    {
+      FLAT523 = 50
+      FLOOR19 = 50
+    }
+    
+  }
+  
+  demense_Triston1 =
+  {
+    env  = "building"
+    prob = 50
+
+    walls =
+    {
+      TRISTON1 = 50
+    }
+
+    floors =
+    {
+      FLOOR19 = 50
+    }
+    
+    ceilings =
+    {
+      FLOOR19 = 50
+    }
+    
+  }
+  
+  demense_Sqpeb1 =
   {
     env  = "building"
     prob = 50
@@ -1419,65 +2529,20 @@ HERETIC.ROOM_THEMES =
 
     floors =
     {
-      FLAT522 = 50
+      FLOOR17 = 50
     }
     
     ceilings =
     {
-      FLOOR06 = 50
-    }
-    
-  }
-
-  dome_Mossy =
-  {
-    env  = "building"
-    prob = 50
-
-    walls =
-    {
-      MOSSRCK1 = 50
-    }
-
-    floors =
-    {
-      FLOOR00 = 50
-    }
-    
-    ceilings =
-    {
-      FLOOR04 = 50
+      FLOOR27 = 50
     }
     
   }
   
-  dome_Hut =
+  demense_Grstnpb =
   {
     env  = "building"
     prob = 50
-
-    walls =
-    {
-      CTYSTUC3 = 50
-    }
-
-    floors =
-    {
-      FLOOR10 = 50
-    }
-    
-    ceilings =
-    {
-      FLOOR11 = 50
-    }
-    
-  }
-  
-  dome_deuce_Hallway_Rckhall =
-  {
-    env   = "hallway"
-    group = "deuce"
-    prob  = 50
 
     walls =
     {
@@ -1486,397 +2551,94 @@ HERETIC.ROOM_THEMES =
 
     floors =
     {
-      FLOOR03 = 50
-    }
-
-    ceilings =
-    {
-      FLOOR03 = 50
+      FLAT523 = 50
     }
     
-  }
-  
-  dome_vent_Hallway_Rckhall =
-  {
-    env   = "hallway"
-    group = "vent"
-    prob  = 50
-
-    walls =
-    {
-      GRSTNPB = 50
-    }
-
-    floors =
-    {
-      FLOOR03 = 50
-    }
-
     ceilings =
     {
-      FLOOR03 = 50
+      FLAT503 = 50
     }
     
-  }
-  
-  dome_deuce_Hallway_Whall =
-  {
-    env   = "hallway"
-    group = "deuce"
-    prob  = 50
-
-    walls =
-    {
-      MOSAIC1 = 50
-    }
-
-    floors =
-    {
-      FLTWAWA1 = 50
-    }
-
-    ceilings =
-    {
-      FLAT502 = 50
-    }
-    
-  }
-  
-  dome_vent_Hallway_Whall =
-  {
-    env   = "hallway"
-    group = "vent"
-    prob  = 50
-
-    walls =
-    {
-      MOSAIC1 = 50
-    }
-
-    floors =
-    {
-      FLTWAWA1 = 50
-    }
-
-    ceilings =
-    {
-      FLAT502 = 50
-    }
-    
-  }
+  }         
  
-  dome_Outdoors_ODisco2 =
+  demense_deuce_Hallway_Sqpeb1 =
   {
-    env  = "outdoor"
-    prob = 50
-
-    floors =
-    {
-      FLAT522 = 20
-    }
-
-    naturals =
-    {
-      FLAT522 = 20
-    }
-
-    porch_floors =
-    {
-      SPINE2 = 20
-    }
-
-  }
-  
-  dome_Outdoors_Muddy =
-  {
-    env  = "outdoor"
-    prob = 50
-
-    floors =
-    {
-      FLOOR17 = 20
-    }
-
-    naturals =
-    {
-      FLOOR17 = 20
-    }
-
-    porch_floors =
-    {
-      FLOOR17 = 20
-    }
-
-  }
-  
-  dome_Outdoors_Sandy =
-  {
-    env  = "outdoor"
-    prob = 50
-
-    floors =
-    {
-      FLOOR27 = 20
-    }
-
-    naturals =
-    {
-      FLOOR27 = 20
-    }
-
-    porch_floors =
-    {
-      FLOOR27 = 20
-    }
-
-  }
-  
-------- EGYPT THEME -------
-
-   egypt_Gold =
-  {
-    env  = "building"
-    prob = 50
+    env   = "hallway"
+    group = "deuce"
+    prob  = 50
 
     walls =
     {
-      SANDSQ2 = 50
+      SQPEB1 = 50
     }
 
     floors =
     {
-      FLOOR06 = 50
-    }
-
-    ceilings =
-    {
-      FLOOR11 = 50
-    }
-  }
-  
-  egypt_Wood =
-  {
-    env  = "building"
-    prob = 50
-
-    walls =
-    {
-      WOODWL = 50
-    }
-
-    floors =
-    {
-      FLOOR10 = 50
-    }
-
-    ceilings =
-    {
-      FLOOR12 = 50
-    }
-  }
-
-  egypt_Disco1 =
-  {
-    env  = "building"
-    prob = 50
-
-    walls =
-    {
-      SPINE2 = 50
-    }
-
-    floors =
-    {
-      FLAT522 = 50
+      FLOOR17 = 50
+      FLAT523 = 50
     }
     
     ceilings =
     {
-      FLOOR06 = 50
+      FLOOR27 = 50
+      FLAT523 = 50
     }
     
   }
   
-  egypt_Pyramid =
+  demense_vent_Hallway_Sqpeb1 =
   {
-    env  = "building"
-    prob = 50
+    env   = "hallway"
+    group = "vent"
+    prob  = 50
+
+    walls =
+    {
+      SQPEB1 = 50
+    }
+
+    floors =
+    {
+      FLOOR17 = 50
+      FLAT523 = 50
+    }
+    
+    ceilings =
+    {
+      FLOOR27 = 50
+      FLAT523 = 50
+    }
+    
+  }
+  
+  demense_deuce_Hallway_Sndplain_Sndblcks =
+  {
+    env   = "hallway"
+    group = "deuce"
+    prob  = 50
 
     walls =
     {
       SNDPLAIN = 50
-    }
-
-    floors =
-    {
-      FLOOR27 = 50
-    }
-    
-    ceilings =
-    {
-      FLOOR10 = 50
-    }
-    
-  }
-  
-  egypt_Pharoah =
-  {
-    env  = "building"
-    prob = 50
-
-    walls =
-    {
-      TRISTON2 = 50
-    }
-
-    floors =
-    {
-      FLAT522 = 50
-    }
-    
-    ceilings =
-    {
-      FLOOR20 = 50
-    }
-    
-  }
-  
-  egypt_Parlor =
-  {
-    env  = "building"
-    prob = 50
-
-    walls =
-    {
-      SQPEB2 = 50
-    }
-
-    floors =
-    {
-      FLOOR06 = 50
-    }
-    
-    ceilings =
-    {
-      FLOOR06 = 50
-    }
-    
-  }
-  
-  egypt_Sblock =
-  {
-    env  = "building"
-    prob = 50
-
-    walls =
-    {
       SNDBLCKS = 50
     }
 
     floors =
     {
-      FLOOR27 = 50
-    }
-    
-    ceilings =
-    {
-      FLOOR10 = 50
-    }
-    
-  }
-  
-  egypt_Cave3 =
-  {
-    env  = "building"
-    prob = 10
-
-    walls =
-    {
-      BRWNRCKS = 50
-    }
-
-    floors =
-    {
-      FLOOR01 = 50
-    }
-    
-    ceilings =
-    {
-      FLAT516 = 50
-    }
-    
-  }
-  
-  egypt_deuce_Hallway_Wdhall =
-  {
-    env   = "hallway"
-    group = "deuce"
-    prob  = 50
-
-    walls =
-    {
-      SQPEB2 = 50
-    }
-
-    floors =
-    {
+      FLAT523 = 50
       FLOOR06 = 50
+      FLOOR19 = 50
     }
-
+    
     ceilings =
     {
-      FLOOR06 = 50
+      FLAT503 = 50
+      FLAT521 = 50
     }
     
   }
   
-  egypt_vent_Hallway_Wdhall =
-  {
-    env   = "hallway"
-    group = "vent"
-    prob  = 50
-
-    walls =
-    {
-      SQPEB2 = 50
-    }
-
-    floors =
-    {
-      FLOOR06 = 50
-    }
-
-    ceilings =
-    {
-      FLOOR06 = 50
-    }
-    
-  }
-  
-  egypt_deuce_Hallway_Sdhall =
-  {
-    env   = "hallway"
-    group = "deuce"
-    prob  = 50
-
-    walls =
-    {
-      SNDPLAIN = 50
-    }
-
-    floors =
-    {
-      FLOOR27 = 50
-    }
-
-    ceilings =
-    {
-      FLOOR10 = 50
-    }
-    
-  }
-  
-  egypt_vent_Hallway_Sdhall =
+  demense_vent_Hallway_Sndplain_Sndblcks =
   {
     env   = "hallway"
     group = "vent"
@@ -1885,179 +2647,25 @@ HERETIC.ROOM_THEMES =
     walls =
     {
       SNDPLAIN = 50
-    }
-
-    floors =
-    {
-      FLOOR27 = 50
-    }
-
-    ceilings =
-    {
-      FLOOR10 = 50
-    }
-    
-  }
-  
-  egypt_Outdoors_ODisco1 =
-  {
-    env  = "outdoor"
-    prob = 50
-
-    floors =
-    {
-      FLAT522 = 50
-    }
-
-    naturals =
-    {
-      FLAT522 = 50
-
-    }
-
-    porch_floors =
-    {
       SNDBLCKS = 50
     }
 
-  }
-  
-  egypt_Outdoors_PyramidO =
-  {
-    env  = "outdoor"
-    prob = 50
-
     floors =
     {
-      FLOOR27 = 50
+      FLAT523 = 50
+      FLOOR06 = 50
+      FLOOR19 = 50
     }
-
-    naturals =
+    
+    ceilings =
     {
-      FLOOR27 = 50
-    }
-
-    porch_floors =
-    {
-      SPINE2 = 50
-    }
-
-  }
-  
-  egypt_Outdoors_PharoahO =
-  {
-    env  = "outdoor"
-    prob = 50
-
-    floors =
-    {
+      FLAT503 = 50
       FLAT521 = 50
     }
-
-    naturals =
-    {
-      FLAT521 = 50
-    }
-
-    porch_floors =
-    {
-      SQPEB2 = 50
-    }
-
-  }
-  
-  egypt_Outdoors_Sandz =
-  {
-    env  = "outdoor"
-    prob = 50
-
-    floors =
-    {
-      FLOOR27 = 50
-    }
-
-    naturals =
-    {
-      FLOOR27 = 50
-    }
-
-    porch_floors =
-    {
-      FLOOR27 = 50
-    }
-
-  }
-   
-  
---------- GARISH THEME -------------
-
-  garish_Purple =
-  {
-    env  = "building"
-    prob = 50
-
-    walls =
-    {
-      BLUEFRAG = 50
-    }
-
-    floors =
-    {
-      FLOOR07 = 50
-    }
-    
-    ceilings =
-    {
-      FLOOR07 = 50
-    }
-    
-  }
-
-  garish_Blue =
-  {
-    env  = "building"
-    prob = 50
-
-    walls =
-    {
-      MOSAIC1 = 50
-    }
-
-    floors =
-    {
-      FLAT502 = 50
-    }
-    
-    ceilings =
-    {
-      FLOOR16 = 50
-    }
     
   }
   
-  garish_Ice =
-  {
-    env  = "building"
-    prob = 50
-
-    walls =
-    {
-      STNGLS1 = 50
-    }
-
-    floors =
-    {
-      FLAT502 = 50
-    }
-    
-    ceilings =
-    {
-      FLAT517 = 50
-    }
-    
-  }
-  
-  garish_deuce_Hallway_Whall =
+  demense_deuce_Hallway_Metl2 =
   {
     env   = "hallway"
     group = "deuce"
@@ -2065,22 +2673,25 @@ HERETIC.ROOM_THEMES =
 
     walls =
     {
-      MOSAIC1 = 50
+      METL2 = 50
     }
 
     floors =
     {
-      FLTWAWA1 = 50
+      FLAT523 = 50
+      FLAT522 = 50
+      FLOOR28 = 50
     }
-
+    
     ceilings =
     {
-      FLAT502 = 50
+      FLAT523 = 50
+      FLAT521 = 50
     }
     
   }
   
-  garish_vent_Hallway_Whall =
+  demense_vent_Hallway_Metl2 =
   {
     env   = "hallway"
     group = "vent"
@@ -2088,64 +2699,102 @@ HERETIC.ROOM_THEMES =
 
     walls =
     {
-      MOSAIC1 = 50
+      METL2 = 50
     }
 
     floors =
     {
-      FLTWAWA1 = 50
+      FLAT523 = 50
+      FLAT522 = 50
+      FLOOR28 = 50
     }
-
+    
     ceilings =
     {
-      FLAT502 = 50
+      FLAT523 = 50
+      FLAT521 = 50
     }
     
   }
   
-  garish_Outdoors_Water =
+  demense_deuce_Hallway_Cstlrck_Grstnpb =
+  {
+    env   = "hallway"
+    group = "deuce"
+    prob  = 50
+
+    walls =
+    {
+      CSTLRCK = 50
+      GRSTNPB = 50
+    }
+
+    floors =
+    {
+      FLAT523 = 50
+    }
+    
+    ceilings =
+    {
+      FLAT523 = 50
+      FLAT504 = 50
+    }
+    
+  }
+  
+  demense_vent_Hallway_Cstlrck_Grstnpb =
+  {
+    env   = "hallway"
+    group = "vent"
+    prob  = 50
+
+    walls =
+    {
+      CSTLRCK = 50
+      GRSTNPB = 50
+    }
+
+    floors =
+    {
+      FLAT523 = 50
+    }
+    
+    ceilings =
+    {
+      FLAT523 = 50
+      FLAT504 = 50
+    }
+    
+  }
+  
+  demense_Outdoors =
   {
     env  = "outdoor"
     prob = 50
 
     floors =
     {
-      FLTWAWA1 = 20
+      FLAT513 = 50
+      FLOOR04 = 50
+      FLOOR18 = 50
+      FLAT522 = 50
+      FLOOR05 = 50
     }
 
     naturals =
     {
-      FLTWAWA1 = 20
+      FLAT513 = 20
+      FLOOR27 = 20
     }
 
     porch_floors =
     {
-      FLTWAWA1 = 20
+      FLOOR19 = 20
+      FLAT523 = 20
     }
 
   }  
   
-  garish_Outdoors_PurpleO =
-  {
-    env  = "outdoor"
-    prob = 50
-
-    floors =
-    {
-      FLOOR07 = 20
-    }
-
-    naturals =
-    {
-      FLOOR07 = 20
-    }
-
-    porch_floors =
-    {
-      FLOOR07 = 20
-    }
-
-  } 
    
 --------- GENERIC ITEMS ----------
 
@@ -2189,17 +2838,17 @@ HERETIC.ROOMS =
 ------------------------------------------------------------------------
 
 
-OB_THEMES["castle"] =
+OB_THEMES["city"] =
 {
-  label = _("Castle")
+  label = _("City")
   game = "heretic"
   name_class = "CASTLE"
   mixed_prob = 50
 }
 
-OB_THEMES["cave"] =
+OB_THEMES["maw"] =
 {
-  label = _("Cave")
+  label = _("Maw")
   game = "heretic"
   name_class = "CASTLE"
   mixed_prob = 50
@@ -2213,17 +2862,17 @@ OB_THEMES["dome"] =
   mixed_prob = 50
 }
 
-OB_THEMES["egypt"] =
+OB_THEMES["ossuary"] =
 {
-  label = _("Egypt")
+  label = _("Ossuary")
   game = "heretic"
   name_class = "CASTLE"
   mixed_prob = 50
 }
 
-OB_THEMES["garish"] =
+OB_THEMES["demense"] =
 {
-  label = _("Garish")
+  label = _("Demense")
   game = "heretic"
   name_class = "CASTLE"
   mixed_prob = 50

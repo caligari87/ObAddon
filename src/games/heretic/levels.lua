@@ -28,7 +28,7 @@ HERETIC.EPISODES =
   {
     ep_index = 1
 
-    theme = "castle"
+    theme = "city"
     boss = "Ironlich"
     sky_patch = "SKY1"
     dark_prob = 10
@@ -39,7 +39,7 @@ HERETIC.EPISODES =
   {
     ep_index = 2
 
-    theme = "cave"
+    theme = "maw"
     boss = "Maulotaur"
     sky_patch = "SKY2"
     dark_prob = 10
@@ -61,7 +61,7 @@ HERETIC.EPISODES =
   {
     ep_index = 4
 
-    theme = "egypt"
+    theme = "ossuary"
     boss = "Ironlich"
     sky_patch = "SKY3"
     dark_prob = 10
@@ -72,7 +72,7 @@ HERETIC.EPISODES =
   {
     ep_index = 5
 
-    theme = "garish"
+    theme = "demense"
     boss = "Maulotaur"
     sky_patch = "SKY3"
     dark_prob = 10
