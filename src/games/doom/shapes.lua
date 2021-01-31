@@ -4810,6 +4810,186 @@ GROW_NARROW_CANAL_OUTER_CURVE =
   }
 }
 
+-- MSSP's maze parts. [MAZE]
+GROW_MAZE_STRAIGHT =
+{
+  prob = 10
+  skip_prob = 35
+
+  structure =
+  {
+    "x.x","x1x"
+    "x.x","x1x"
+    "...","#1#"
+    "...","#1#"
+    "x1x","x1x"
+    "x1x","x1x"
+  }
+}
+
+GROW_MAZE_STRAIGHT_LONG =
+{
+  prob = 8
+  skip_prob = 35
+
+  structure =
+  {
+    "x.x","x1x"
+    "x.x","x1x"
+    "...","#1#"
+    "...","#1#"
+    "...","#1#"
+    "...","#1#"
+    "x1x","x1x"
+    "x1x","x1x"
+  }
+}
+
+GROW_MAZE_L =
+{
+  prob = 8
+  skip_prob = 35
+
+  structure =
+  {
+    "...xx","###xx"
+    ".....","#1111"
+    "...xx","#1#xx"
+    "...xx","#1#xx"
+    "x1xxx","x1xxx"
+    "x1xxx","x1xxx"
+  }
+}
+
+GROW_MAZE_L_DIAG =
+{
+  prob = 8
+  skip_prob = 35
+
+  structure =
+  {
+    "xx.xxx","xx#xxx"
+    "x.....","x#/111"
+    "....xx","#/1/xx"
+    "....xx","#1/#xx"
+    "x1xxxx","x1xxxx"
+    "x1xxxx","x1xxxx"
+  }
+
+  diagonals =
+  {
+         ".1"
+    ".1","1."
+    "1."
+  }
+}
+
+GROW_MAZE_T =
+{
+  prob = 8
+  skip_prob = 35
+
+  structure =
+  {
+    "xx...xx","xx###xx"
+    ".......","1111111"
+    "xx...xx","xx#1#xx"
+    "xx...xx","xx#1#xx"
+    "xxx1xxx","xxx1xxx"
+    "xxx1xxx","xxx1xxx"
+  }
+}
+
+GROW_MAZE_T_DIAG =
+{
+  prob = 8
+  skip_prob = 35
+
+  structure =
+  {
+    "xx..x..xx","xx##x##xx"
+    ".........","111%#/111"
+    "xx.....xx","xx%111/xx"
+    "xx.....xx","xx#%1/#xx"
+    "xxxx1xxxx","xxxx1xxxx"
+    "xxxx1xxxx","xxxx1xxxx"
+  }
+
+  diagonals =
+  {
+    ".1","1."
+    ".1","1."
+    ".1","1."
+  }
+}
+
+GROW_MAZE_CROSS =
+{
+  prob = 7
+  skip_prob = 45
+
+  structure =
+  {
+    "xxx.xxx","xxx1xxx"
+    "xxx.xxx","xxx1xxx"
+    "xx...xx","xx#1#xx"
+    "xx...xx","xx#1#xx"
+    ".......","1111111"
+    "xx...xx","xx#1#xx"
+    "xx...xx","xx#1#xx"
+    "xxx1xxx","xxx1xxx"
+    "xxx1xxx","xxx1xxx"
+  }
+}
+
+GROW_MAZE_U =
+{
+  prob = 7
+  skip_prob = 45
+
+  structure =
+  {
+    "x...x","x111x"
+    ".....","#1#1#"
+    ".....","#1#1#"
+    "x1x1x","x1x1x"
+    "x1x1x","x1x1x"
+  }
+}
+
+GROW_STRAIGHT_CAGE =
+{
+  prob = 10
+  skip_prob = 35
+
+  structure =
+  {
+    "x.x","x1x"
+    "x.x","x1x"
+    "...","#1C"
+    "...","#1C"
+    "x1x","x1x"
+    "x1x","x1x"
+  }
+}
+
+GROW_STRAIGHT_CAGE_ALT =
+{
+  prob = 10
+  skip_prob = 35
+
+  structure =
+  {
+    "x.x","x1x"
+    "x.x","x1x"
+    "...","#1C"
+    "...","#1#"
+    "...","#1C"
+    "x1x","x1x"
+    "x1x","x1x"
+  }
+}
+
 -- MSSP's liquid slabs. [LIQUID_SLABS]
 
 GROW_LIQUID_SLAB_ENTRY =
