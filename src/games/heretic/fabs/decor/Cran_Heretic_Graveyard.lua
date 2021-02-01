@@ -4,7 +4,6 @@ PREFABS.Cran_Heretic_Graveyard =
   map    = "E1M1"
 
   prob   = 10000
-  theme  = "castle"
   env    = "!building"
 
   where  = "point"

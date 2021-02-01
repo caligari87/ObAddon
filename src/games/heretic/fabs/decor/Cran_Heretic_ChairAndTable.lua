@@ -4,7 +4,7 @@ PREFABS.Cran_Heretic_ChairAndTable =
   map    = "E1M1"
 
   prob   = 10000
-  theme  = "castle"
+  theme  = "city"
   env    = "building"
 
   where  = "point"

@@ -5,8 +5,7 @@
 --  Copyright (C) 2006-2017 Andrew Apted
 --  Copyright (C)      2008 Sam Trenholme
 --  Copyright (C) 2019-2020 MsrSgtShooterPerson
---  Adapted for Heretic by Dashodanger using Andrew's original Heretic themes
---  from Oblige <= 4.28
+--  Adapted for Heretic by Dashodanger
 --
 --  This program is free software; you can redistribute it and/or
 --  modify it under the terms of the GNU General Public License
@@ -299,6 +298,11 @@ HERETIC.THEMES =
     {
       sharp = 1
       curved = 0.1
+    }
+    
+    skyboxes =
+    {
+      Skybox_castle_skybox = 50
     }
     
     steps_mat = "CSTLRCK"
