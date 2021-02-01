@@ -9,7 +9,7 @@ PREFABS.Pillar_tech3 =
 
   rank   = 2
   prob   = 3500
-  skip_prob = 55
+  skip_prob = 65
 
   theme  = "tech"
   env    = "building"
@@ -60,7 +60,7 @@ PREFABS.Pillar3_urban1 =
   template  = "Pillar_tech3"
 
   theme  = "urban"
-  skip_prob = 45
+  skip_prob = 55
 
   tex_SILVER2 = "MODWALL1"
   tex_COMPSPAN = "BRICK4"
