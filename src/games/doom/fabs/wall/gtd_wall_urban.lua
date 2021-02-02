@@ -279,6 +279,8 @@ PREFABS.Wall_wide_dark_windows_with_door =
 
   z_fit = "top"
 
+  need_solid_back = true
+
   tex_MODWALL4 = "MODWALL4"
   tex_MODWALL3 =
   {
