@@ -562,9 +562,9 @@ msgstr  ""
 msgid   "Theme: "
 msgstr  ""
 
-# #############################
-# We probably need to add all the new choices down here
-# #############################
+# #######################################################
+# We probably need to add all the new choices down here #
+# #######################################################
 
 #: modules/ctl_doom.lua:23 modules/ctl_doom.lua:127 modules/ctl_heretic.lua:23
 #: modules/ctl_heretic.lua:110
@@ -744,9 +744,9 @@ msgstr  ""
 msgid   "Heretic Weapon Control"
 msgstr  ""
 
-# ######################
-# Utterly useless if we will never add in Quake support..
-# ######################
+# #########################################################
+# Utterly useless if we will never add in Quake support.. #
+# #########################################################
 
 #: modules/export_map.lua:266
 msgid   "Export .MAP files"
@@ -880,9 +880,9 @@ msgstr  ""
 msgid   "Episodic"
 msgstr  ""
 
-# ###############################
-# Need the bigger and smaller sizes added here!
-# ###############################
+# ###############################################
+# Need the bigger and smaller sizes added here! #
+# ###############################################
 
 #: modules/ui_arch.lua:24
 msgid   "Progressive"
