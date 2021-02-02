@@ -91,15 +91,6 @@ HERETIC.SINKS =
   }
 
   -- fantastic floors
-  floor_sky =
-  {
-    mat = "_SKY"
-    dz = -16
-    light = 32
-
-    trim_mat = "_WALL"
-    trim_dz = -8
-  }
 
   floor_trim_sky =
   {
@@ -212,7 +203,6 @@ HERETIC.THEMES =
       floor_plain = 50
       liquid_plain = 40
       liquid_trim = 40
-      floor_sky = 5
       floor_trim_sky = 5
       floor_trim_liquid = 5
       floor_mixup = 5
@@ -359,7 +349,6 @@ HERETIC.THEMES =
       floor_plain = 50
       liquid_plain = 40
       liquid_trim = 40
-      floor_sky = 5
       floor_trim_sky = 5
       floor_trim_liquid = 5
       floor_mixup = 5
@@ -500,7 +489,6 @@ HERETIC.THEMES =
       floor_plain = 50
       liquid_plain = 40
       liquid_trim = 40
-      floor_sky = 5
       floor_trim_sky = 5
       floor_trim_liquid = 5
       floor_mixup = 5
@@ -642,7 +630,6 @@ HERETIC.THEMES =
       floor_plain = 50
       liquid_plain = 40
       liquid_trim = 40
-      floor_sky = 5
       floor_trim_sky = 5
       floor_trim_liquid = 5
       floor_mixup = 5
@@ -784,7 +771,6 @@ HERETIC.THEMES =
       floor_plain = 50
       liquid_plain = 40
       liquid_trim = 40
-      floor_sky = 5
       floor_trim_sky = 5
       floor_trim_liquid = 5
       floor_mixup = 5
