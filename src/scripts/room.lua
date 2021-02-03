@@ -4062,9 +4062,9 @@ function Room_cleanup_stairs_to_nowhere(R)
 
   select_porch_floor_mats(R)
 
-  if not R.is_park then
+  --[[if not R.is_park then
     fixup_cages()
-  end
+  end]]
 
 end
 
