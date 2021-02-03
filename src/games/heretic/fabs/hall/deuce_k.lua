@@ -28,8 +28,8 @@ PREFABS.Hallway_deuce_locked_green =
   map    = "MAP01"
   key = "k_green"
 
-  tex_DRIPWALL = "GRNBLOK1"
   line_34 = 33
+  thing_96 = 95
 }
 
 
@@ -39,8 +39,8 @@ PREFABS.Hallway_deuce_locked_blue =
   map  = "MAP01"
   key  = "k_blue"
 
-  tex_DRIPWALL = "BLUEFRAG"
-  line_34     = 32
+  line_34 = 32
+  thing_96 = 94
 }
 
 
