@@ -231,6 +231,16 @@ OB_MODULES["debugger"] =
       priority = 91
     }
 
+    start_room_size =
+    {
+      name = "start_room_size"
+      label = _ ("Start Size Variance")
+      choices = DEBUG_CONTROL.YES_NO
+      tooltip = "Affects whether Room Size Variance also influences start rooms."
+      default = "no"
+      priority = 90
+    }
+
 --[[
     attach_debug_info =
     {
