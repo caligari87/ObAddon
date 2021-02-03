@@ -2106,16 +2106,20 @@ function Room_choose_size(R, not_big)
 
   -- some extra size experiments - should be revised for
   -- more direct control. In fact, maybe this whole size
-  -- decision code could use a clean-up 
-  if LEVEL.size_multiplier then
-    sum = sum * LEVEL.size_multiplier
-  end
-
-  if LEVEL.size_consistency == "strict" then
-    if not LEVEL.strict_size then
-      LEVEL.strict_size = sum
+  -- decision code could use a clean-up
+  if (R.is_start and PARAM.start_room_size 
+  and PARAM.start_room_size == "yes") 
+  or not R.is_secret then 
+    if LEVEL.size_multiplier then
+      sum = sum * LEVEL.size_multiplier
     end
-    sum = LEVEL.strict_size 
+
+    if LEVEL.size_consistency == "strict" then
+      if not LEVEL.strict_size then
+        LEVEL.strict_size = sum
+      end
+      sum = LEVEL.strict_size 
+    end
   end
 
   R.floor_limit = rand.key_by_probs(
@@ -2203,11 +2207,15 @@ function Room_choose_size(R, not_big)
 
   end
 
-  if LEVEL.area_multiplier then
-    R.floor_limit = int(R.floor_limit * LEVEL.area_multiplier)
-  end
-  if LEVEL.has_absurd_new_area_rules then
-    R.floor_limit = R.floor_limit * 4
+  if (R.is_start and PARAM.start_room_size 
+  and PARAM.start_room_size == "yes") 
+  or not R.is_secret then
+    if LEVEL.area_multiplier then
+      R.floor_limit = int(R.floor_limit * LEVEL.area_multiplier)
+    end
+    if LEVEL.has_absurd_new_area_rules then
+      R.floor_limit = R.floor_limit * 4
+    end
   end
 
   -- Special instructions for procedural gotcha rooms
@@ -4062,9 +4070,9 @@ function Room_cleanup_stairs_to_nowhere(R)
 
   select_porch_floor_mats(R)
 
-  if not R.is_park then
+  --[[if not R.is_park then
     fixup_cages()
-  end
+  end]]
 
 end
 
