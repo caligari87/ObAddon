@@ -44,8 +44,7 @@ ROOT_1 =
 
 -----------------------------------------
 
-
-GROW_2 =
+GROW_1 =
 {
   prob = 400 --Non-MSSP default: 100
   prob_skew = 2
@@ -54,6 +53,18 @@ GROW_2 =
   {
     "...", ".1."
     "x1x", "x1x"
+  }
+}
+
+GROW_2 =
+{
+  prob = 400 --Non-MSSP default: 100
+  prob_skew = 2
+
+  structure =
+  {
+    "....", ".11."
+    "x11x", "x11x"
   }
 }
 
@@ -67,9 +78,9 @@ SPROUT_DIRECT_1 =
 
   structure =
   {
-    "...", "..."
-    "...", ".R."
-    "x1x", "x1x"
+    "....", "...."
+    "....", ".RR."
+    "x11x", "x11x"
   }
 
   new_room =
@@ -90,9 +101,9 @@ SPROUT_DIRECT_2_EMERGENCY =
 
   structure =
   {
-    ".", "R"
-    ".", "R"
-    "1", "1"
+    "..", "RR"
+    "..", "RR"
+    "11", "11"
   }
 
   new_room =
@@ -149,6 +160,34 @@ DECORATE_CLOSET_2x1 =
   }
 
   closet = { from_dir=2 }
+}
+
+FILLER_1 =
+{
+  pass = "filler"
+  prob = 40 --30
+
+  structure =
+  {
+    "1.", "1."
+    "1.", "11"
+    "11", "11"
+  }
+}
+
+SMOOTHER_1 =
+{
+  pass = "smoother"
+  prob = 75 --50
+
+  structure =
+  {
+    "x.", "x."
+    "1.", "1%"
+    "11", "11"
+  }
+
+  diagonals = { "1." }
 }
 
 }
