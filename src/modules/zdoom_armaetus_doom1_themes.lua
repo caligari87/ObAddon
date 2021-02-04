@@ -1140,13 +1140,13 @@ ARMAETUS_DOOM1_ROOM_THEMES =
     {
       CEM03 = 25
       CEM04 = 25
-      CEM06 = 110
-      CEM07 = 110
-      CEM09 = 110
-      DRKCMT01 = 10
-      DRKCMT02 = 10
-      DRKCMT03 = 10
-      DRKCMT04 = 10
+      CEM06 = 75
+      CEM07 = 75
+      CEM09 = 75
+      DRKCMT01 = 20
+      DRKCMT02 = 20
+      DRKCMT03 = 20
+      DRKCMT04 = 20
       HELLCMT1 = 20
       HELLCMT2 = 20
       HELLCMT3 = 20
@@ -1155,12 +1155,22 @@ ARMAETUS_DOOM1_ROOM_THEMES =
       HELLCMT6 = 20
       HELLCMT7 = 15
       HELLCMT8 = 15
+
+      BRONZEG1 = 15
+      BRONZEG2 = 15
+      BRONZEG3 = 15
+      KMARBLE1 = 15
+      KMARBLE2 = 15
+      KMARBLE3 = 15
+      REDMARB1 = 15
+      REDMARB2 = 15
+      REDMARB3 = 15
     }
 
     floors =
     {
-      FLAT1 = 50
-      FLAT5_4 = 40
+      FLAT1 = 30
+      FLAT5_4 = 20
       FLAT5_2 = 5
       FLAT5_1 = 5
       GRATE1  = 10
@@ -1173,18 +1183,47 @@ ARMAETUS_DOOM1_ROOM_THEMES =
       FLOOR46E = 10
       DARKF01 = 10
       DARKF02 = 10
+
+      G04 = 10
+      G05 = 10
+      G06 = 10
+      G07 = 10
+      G08 = 10
+      G09 = 10
+      G10 = 10
+      G12 = 10
+      G13 = 10
+      G14 = 10
+      G15 = 10
+      G18 = 10
+      G20 = 10
+      G21 = 10
     }
 
     ceilings =
     {
-      FLAT19 = 50
-      FLAT5_4 = 20
+      FLAT19 = 10
+      FLAT5_4 = 10
       MFLR8_1 = 15
       FLAT5_2 = 5
       CEIL1_1 = 5
       FLAT5_2 = 5
       GRATE4  = 10
       GRATE8  = 10
+
+      G04 = 10
+      G05 = 10
+      G06 = 10
+      G07 = 10
+      G08 = 10
+      G09 = 10
+      G10 = 10
+      G12 = 10
+      G14 = 10
+      G15 = 10
+      G18 = 10
+      G20 = 10
+      G21 = 10
     }
   }
 

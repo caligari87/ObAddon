@@ -24,6 +24,15 @@ PREFABS.Decor_crap_house_1 =
     FLAT4 = 2
     FLAT1 = 2
   }
+
+  tex_MODWALL3 =
+  {
+    MODWALL2 = 2
+    MODWALL3 = 5
+    MODWALL4 = 5
+    BLAKWAL1 = 5
+    BLAKWAL2 = 5
+  }
 }
 
 PREFABS.Decor_crap_house_2 =
@@ -40,4 +49,22 @@ PREFABS.Decor_crap_house_3 =
 {
   template = "Decor_crap_house_1"
   map = "MAP03"
+}
+
+PREFABS.Decor_crap_house_4 =
+{
+  template = "Decor_crap_house_1"
+  map = "MAP04"
+}
+
+PREFABS.Decor_crap_house_5 =
+{
+  template = "Decor_crap_house_1"
+  map = "MAP05"
+
+  size = 128
+
+  height = 200
+
+  bound_z = 200
 }

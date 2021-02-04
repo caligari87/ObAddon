@@ -2012,7 +2012,7 @@ stderrf("Cages in %s [%s pressure] --> any_prob=%d  per_prob=%d\n",
     if table.empty(usable_chunks) then return end
 
     preferred_chunk = rand.pick(usable_chunks)
-    gui.printf(table.tostr(usable_chunks,2))
+    -- gui.printf(table.tostr(usable_chunks,2))
 
     reqs = preferred_chunk:base_reqs(preferred_chunk.from_dir)
 
