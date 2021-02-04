@@ -255,7 +255,6 @@ PREFABS.Item_secret_hellmachine1V1_closet =
   can_flip = true
 
   texture_pack = "armaetus"
-
 }
 
 --Stretch your arm under the hatch to open the machine V2
@@ -285,8 +284,6 @@ PREFABS.Item_secret_hellmachine1V2_closet =
   can_flip = true
 
   texture_pack = "armaetus"
-
-
 }
 
 --One of the cpu chip is defective, shoot it to open the core! V1
