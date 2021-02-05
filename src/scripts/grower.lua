@@ -1058,6 +1058,7 @@ function Grower_decide_extents()
   LEVEL.max_rooms = math.max(6, int(base))
 
   -- add extra rooms based on extra size and area multiplier
+
   if LEVEL.size_multiplier then
     if LEVEL.size_multiplier < 1 then
       LEVEL.max_rooms = int(LEVEL.max_rooms * ((1 - LEVEL.size_multiplier)+1) * 2/3)

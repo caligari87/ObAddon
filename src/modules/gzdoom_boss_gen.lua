@@ -1651,7 +1651,7 @@ end
 OB_MODULES["gzdoom_boss_gen"] =
 {
   label = _("[Exp]GZDoom Boss Generator")
-  
+
 --  game = "doomish"
 
   side = "right"

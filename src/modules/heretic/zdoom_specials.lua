@@ -723,7 +723,7 @@ if map_num == 44 then
         '  pic = "' .. interpic .. '"\n'
         '  exittext =\n'
         '    "The land before you is filled",\n'
-        '    "with peril...",\n'       
+        '    "with peril...",\n'
         '    " ",\n'
         '    "Wand at the ready, you venture",\n'
         '    "forth to find the source",\n'
@@ -786,7 +786,7 @@ if map_num == 44 then
         '  pic = "' .. interpic .. '"\n'
         '  exittext =\n'
         '    "You have emerged as the victor",\n'
-        '    "in a clash truly beyond reckoning.",\n'       
+        '    "in a clash truly beyond reckoning.",\n'
         '    " ",\n'
         '    "Your quest is not over, however.",\n'
         '    "The desolation left in your wake must",\n'
@@ -1083,7 +1083,7 @@ if map_num == 44 then
         table.insert(PARAM.mapinfolump,line)
       end
     end
-      
+
     if #GAME.levels > 18 then
       episode_info = add_episodedef(19)
       each line in episode_info do
@@ -1097,13 +1097,13 @@ if map_num == 44 then
         table.insert(PARAM.mapinfolump,line)
       end
     end
-      
+
     if #GAME.levels > 36 then
       episode_info = add_episodedef(37)
       each line in episode_info do
         table.insert(PARAM.mapinfolump,line)
       end
-    end 
+    end
 
   -- collect lines for the cluster information in MAPINFO
   local clusterinfo_lines = add_clusterdef(info.interpic)
@@ -1119,7 +1119,7 @@ if map_num == 44 then
   end
 
   gui.wad_merge_sections("data/loading/loading_screens.wad")
-  
+
 end
 
 OB_MODULES["zdoom_specials_heretic"] =

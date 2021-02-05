@@ -320,7 +320,7 @@ SKY_GEN_HERETIC.themes =
 
     -- no dark_hills
   }
-  
+
   castle =
     -- at the moment a 1:1 copy of the Doom generator urban theme values
   {
@@ -358,7 +358,7 @@ SKY_GEN_HERETIC.themes =
       ICE_HILLS = 25
     }
   }
-  
+
 }
 
 function SKY_GEN_HERETIC.setup(self)

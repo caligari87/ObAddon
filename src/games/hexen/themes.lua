@@ -21,13 +21,13 @@ HEXEN.SINKS =
     dz    = 64
     light = 16
   }
-  
+
   liquid_plain =
   {
     mat = "X_005"
     dz  = -12
   }
-  
+
 }
 
 HEXEN.THEMES =
@@ -46,19 +46,19 @@ HEXEN.THEMES =
       k_rusty = 50
       k_silver = 50
       k_swamp = 50
-      k_steel = 50     
-    }      
-    
+      k_steel = 50
+    }
+
     skyboxes =
     {
 
     }
-    
+
   }
-  
+
     dungeon =
     {
-    
+
       floor_sinks =
       {
         liquid_plain = 50
@@ -68,23 +68,23 @@ HEXEN.THEMES =
       {
         sky_plain = 50
       }
-    
+
       sink_style =
       {
         sharp = 1
         curved = 0.1
-      }   
-    
+      }
+
       fence_groups =
       {
         PLAIN = 50
       }
-      
+
       beam_groups =
       {
         beam_metal = 50
       }
-      
+
       fences =
       {
         STEEL01=40
@@ -93,8 +93,8 @@ HEXEN.THEMES =
         STEEL06=15
         STEEL07=5
         STEEL08=5
-      } 
-      
+      }
+
       cage_mats =
       {
         STEEL01=40
@@ -104,46 +104,46 @@ HEXEN.THEMES =
         STEEL07=5
         STEEL08=5
       }
-      
+
       scenic_fences =
       {
         SEWER_BAR3 = 50
         SEWER_BAR4 = 50
       }
-      
+
       fence_posts =
       {
         Post = 50
       }
-      
+
       facades =
       {
         CASTLE07=35
         CAVE02=15
         PRTL03=5
       }
-      
+
       liquids =
       {
         water  = 50
         lava   = 10
         muck   = 20
       }
-      
+
       steps_mat = "F_011"
-      
+
     }
-    
+
     elemental =
     {
-    
+
     }
-    
+
     wilderness =
     {
-    
+
     }
-    
+
 }
 
 
@@ -158,7 +158,7 @@ HEXEN.ROOM_THEMES =
   {
     env  = "building"
     prob = 50
-  
+
     walls =
     {
       MONK02=40
@@ -194,7 +194,7 @@ HEXEN.ROOM_THEMES =
   {
     env  = "building"
     prob = 50
-    
+
     walls =
     {
       MONK14=35
@@ -232,7 +232,7 @@ HEXEN.ROOM_THEMES =
   {
    env  = "building"
    prob = 50
-  
+
     walls =
     {
       MONK01=30
@@ -741,7 +741,7 @@ HEXEN.ROOM_THEMES =
   {
     env  = "outdoor"
     prob = 50
-  
+
     floors =
     {
       F_024=75
@@ -782,7 +782,7 @@ HEXEN.ROOM_THEMES =
   {
     env  = "cave"
     prob = 50
-  
+
     floors =
     {
       F_024=50

@@ -146,7 +146,7 @@ function HERETIC.get_levels()
       if LEV.prebuilt then
         LEV.name_theme = LEV.prebuilt.name_theme or "BOSS"
       end
-      
+
           -- procedural gotcha management code
 
     -- Prebuilts are to exist over procedural gotchas
@@ -225,7 +225,7 @@ function HERETIC.get_levels()
         LEV.has_streets = true
       end
     end
-    
+
     if not LEV.prebuilt then
       if OB_CONFIG.linear_mode == "all" then
         LEV.is_linear = true
@@ -257,6 +257,6 @@ function HERETIC.get_levels()
     end
 
   end -- for episode
-  
+
 end
 

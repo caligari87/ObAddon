@@ -2564,7 +2564,7 @@ function Level_choose_liquid()
 
   -- exclude liquids from certain environment themes
   if LEVEL.outdoor_theme then
-    if THEME.liquids.exclusions 
+    if THEME.liquids.exclusions
     and THEME.liquids.exclusions[LEVEL.outdoor_theme] then
       each L in THEME.liquids.exclusions[LEVEL.outdoor_theme] do
         liq_tab[L] = 0
@@ -2650,10 +2650,10 @@ function Level_choose_skybox()
       }
       local def = Fab_pick(reqs)
       return assert(def)
-  
+
     elseif mode == "themed" then
       return PREFABS[rand.key_by_probs(THEME.skyboxes)]
-  
+
     elseif mode == "generic" then
       if PARAM.epic_textures_activated then
         return PREFABS["Skybox_hellish_city_EPIC"]
@@ -2681,11 +2681,11 @@ function Level_choose_skybox()
   end
 
   -- check against exclusions
-  if LEVEL.outdoor_theme and LEVEL.outdoor_theme != "temperate" 
+  if LEVEL.outdoor_theme and LEVEL.outdoor_theme != "temperate"
   and ARMAETUS_SKYBOX_EXCLUSIONS then
 
-    while same_skyfab == "yes" do 
-  
+    while same_skyfab == "yes" do
+
       each ex in ARMAETUS_SKYBOX_EXCLUSIONS[LEVEL.outdoor_theme] do
         if OB_CONFIG.zdoom_skybox == "episodic" then
           if LEVEL.episode.skybox.name and LEVEL.episode.skybox.name == ex then

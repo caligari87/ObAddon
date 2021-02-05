@@ -13,6 +13,6 @@ PREFABS.Cran_Heretic_ChairAndTable =
 
   bound_z1 = 0
   bound_z2 = 128
-  
+
   z_fit = top
 }

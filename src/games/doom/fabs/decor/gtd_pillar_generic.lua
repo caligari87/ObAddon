@@ -131,7 +131,7 @@ PREFABS.Pillar_gtd_generic1_hell_2x =
     FIREBLU1 = 50
     FIRELAVA = 50
     FIREMAG1 = 50
-  } 
+  }
 }
 
 PREFABS.Pillar_gtd_generic1_4x =
@@ -151,7 +151,7 @@ PREFABS.Pillar_gtd_generic1_4x =
     LITE5 = 50
     LITEBLU4 = 50
     LITEBLU1 = 50
-  } 
+  }
 }
 
 PREFABS.Pillar_gtd_generic1_hell_4x =

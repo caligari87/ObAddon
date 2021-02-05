@@ -149,7 +149,7 @@ ZDOOM_STORIES_HERETIC.STORIES =
       in a distorted voice. "You are encroaching upon our nest, mortal. My brood
       do not take kindly to you. But I, _RAND_DEMON of _CASTLE_LEVEL, will
       greet you with glee. Come and enter." The figure dissolves back into the viscera.]]
-      
+
     }
 
     conclusions =
@@ -226,7 +226,7 @@ ZDOOM_STORIES_HERETIC.STORIES =
 
       [[You enter a study filled with various tomes and scrolls.
       Strange glyphs line the walls and you seem to hear a faint chanting in
-      a language that you cannot understand. In the center of the room is a 
+      a language that you cannot understand. In the center of the room is a
       pedestal carrying _MCGUFFIN_MAGICAL! As you swipe the item and place it
       into your bag, the glpyhs fade into nothingness and the room becomes
       deathly silent. You are unsure of the relic's purpose, but decide that
@@ -269,7 +269,7 @@ ZDOOM_STORIES_HERETIC.STORIES =
       I don't have much time left! That creature, _RAND_DEMON did this to me.
       I want you to... to make that foul scum pay."
       Life escapes the warrior's eyes.
-      You raise a cairn of stones over the poor soul and swear 
+      You raise a cairn of stones over the poor soul and swear
       vengeance upon _RAND_DEMON.]],
 
       -- hear my plea
@@ -287,7 +287,7 @@ ZDOOM_STORIES_HERETIC.STORIES =
       [[You are interrupted by a mage. He walks with a limp and his robes
       are strewn with blood. "A moment, hero." He backs to a wall, gripping his arm.
       "The Council, they made us summon _RAND_DEMON. It was an attempt to
-      subjugate a demon for their own ends, but it escaped the ritual circle, 
+      subjugate a demon for their own ends, but it escaped the ritual circle,
       killing everyone! I am the only one left. You have to take it down!"
       You feel anger, but lecturing the mage would not solve anything.
       You offer a potion but the mage refuses. "No, I'll pay the price for my
@@ -301,7 +301,7 @@ ZDOOM_STORIES_HERETIC.STORIES =
       "Mortal! Your transgressions will not be forgo-"
       _SPACE
       You silence the creature by planting your staff right between its eyes.
-      A gaping maw of blood, guts, and what was probably an eyeball 
+      A gaping maw of blood, guts, and what was probably an eyeball
       lie were its face used to be. Vengeance is served. You make your exit.]],
 
       -- put a sock in it

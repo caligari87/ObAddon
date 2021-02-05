@@ -127,7 +127,7 @@ end
 OB_MODULES["misc_heretic"] =
 {
   label = _("Miscellaneous")
-  
+
   game = "heretic"
 
   side = "left"

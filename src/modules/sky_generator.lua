@@ -397,7 +397,7 @@ SKY_GEN.themes =
 
     -- no dark_hills
   }
-  
+
 }
 
 function SKY_GEN.setup(self)

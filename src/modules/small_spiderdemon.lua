@@ -28,7 +28,7 @@ end
 OB_MODULES["small_spiderdemon"] =
 {
   label = _("Smaller Spiderdemon")
-  
+
   game = "doomish"
 
   side = "left"

@@ -21,7 +21,7 @@ HEXEN.EPISODES =
   episode1 =
   {
     ep_index = 1
-  
+
     theme = "dungeon"
     sky_light = 0.65
   }
@@ -29,7 +29,7 @@ HEXEN.EPISODES =
   episode2 =
   {
     ep_index = 2
-  
+
     theme = "dungeon"
     sky_light = 0.75
   }
@@ -37,7 +37,7 @@ HEXEN.EPISODES =
   episode3 =
   {
     ep_index = 3
-  
+
     theme = "dungeon"
     sky_light = 0.65
   }
@@ -45,7 +45,7 @@ HEXEN.EPISODES =
   episode4 =
   {
     ep_index = 4
-  
+
     theme = "dungeon"
     sky_light = 0.60
   }
@@ -53,7 +53,7 @@ HEXEN.EPISODES =
   episode5 =
   {
     ep_index = 5
-  
+
     theme = "dungeon"
     sky_light = 0.50
   }
@@ -96,7 +96,7 @@ function HEXEN.get_levels()
       local LEV =
       {
         episode  = EPI
-        
+
         name  = string.format("MAP%02d", map)
         --name = string.format("E%dM%d", ep_index, map)
 
@@ -115,7 +115,7 @@ function HEXEN.get_levels()
       if LEV.prebuilt then
         LEV.name_theme = LEV.prebuilt.name_theme or "BOSS"
       end
-      
+
           -- procedural gotcha management code
 
     -- Prebuilts are to exist over procedural gotchas
@@ -194,7 +194,7 @@ function HEXEN.get_levels()
         LEV.has_streets = true
       end
     end
-    
+
     if not LEV.prebuilt then
       if OB_CONFIG.linear_mode == "all" then
         LEV.is_linear = true

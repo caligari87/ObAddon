@@ -187,7 +187,7 @@ PREFABS.Hallway_deuce_i_fake_door_and_window =
 
   tex_DOOR3 =
   {
-    DOOR1=1, 
+    DOOR1=1,
     DOOR3=1,
     SPCDOOR3=1
   }
@@ -207,7 +207,7 @@ PREFABS.Hallway_deuce_i_fake_door_tech =
 
   tex_DOOR3 =
   {
-    DOOR1=1, 
+    DOOR1=1,
     DOOR3=1,
     SPCDOOR3=1
   }
@@ -228,7 +228,7 @@ PREFABS.Hallway_deuce_i_fake_door_urban =
 
   tex_DOOR3 =
   {
-    DOOR1=1, 
+    DOOR1=1,
     DOOR3=1,
     SPCDOOR3=1
   }
@@ -246,10 +246,10 @@ PREFABS.Hallway_deuce_i_shutter_tech =
 
   prob = 35
 
-  tex_STEP4 = 
-  { 
-    STEP4=2, 
-    STEP1=1, 
+  tex_STEP4 =
+  {
+    STEP4=2,
+    STEP1=1,
     STEP2=1,
     STEP5=1
   }
@@ -268,10 +268,10 @@ PREFABS.Hallway_deuce_i_shutter_urban =
 
   prob = 35
 
-  tex_STEP4 = 
-  { 
-    STEP4=2, 
-    STEP1=1, 
+  tex_STEP4 =
+  {
+    STEP4=2,
+    STEP1=1,
     STEP2=1,
     STEP5=1
   }
