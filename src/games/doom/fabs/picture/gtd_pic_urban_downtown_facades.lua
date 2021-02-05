@@ -381,7 +381,7 @@ PREFABS.Pic_urban_downtown_facade_alley =
   template = "Pic_urban_downtown_facade3_EPIC"
   map = "MAP06"
 
-  height = 160
+  height = 256
 
   in_porches = "never"
 

@@ -286,6 +286,13 @@ SKY_GEN.colormaps =
     207, 206, 205, 204, 203, 202, 201,
     200, 198, 197, 195, 194, 193, 192
   }
+
+  SNOW_HILLS =
+  {
+    0, 8, 6, 5, 111, 109, 107, 105,
+    90, 88, 86, 84, 82, 80, 4
+    --87, 86, 85, 84, 83, 82, 81, 80, 4
+  }
 }
 
 -- Some ideas for Doom/Ultimate Doom if going with a theme to make it like "Original" theming:
@@ -324,6 +331,7 @@ SKY_GEN.themes =
       GREENISH_HILLS = 30
       ICE_HILLS = 12
       BLACK_HILLS = 5
+      SNOW_HILLS = 20
     }
 
     dark_hills =
@@ -359,6 +367,7 @@ SKY_GEN.themes =
       BROWN_HILLS = 50
       DARKBROWN_HILLS = 50
       BLACK_HILLS = 25
+      SNOW_HILLS = 25
     }
 
     dark_hills =
