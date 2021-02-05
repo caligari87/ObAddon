@@ -1,5 +1,5 @@
 ------------------------------------------------------------------------
---  BASE FILE for HEXEN
+--  BASE FILE for STRIFE
 ------------------------------------------------------------------------
 --
 --  Oblige Level Maker
@@ -19,7 +19,7 @@
 --
 ------------------------------------------------------------------------
 
-HEXEN = { }
+STRIFE = { }
 
 
 ------------------------------------------------------------
@@ -38,27 +38,26 @@ gui.import("resources")
 
 ------------------------------------------------------------
 
-OB_GAMES["hexen"] =
+UNFINISHED["strife"] =
 {
-  label = _("Hexen")
+  label = _("Strife")
   priority = 34
 
-  -- Hexen map format is a minor variation on the DOOM format
   format = "doom"
-  sub_format = "hexen"
+  sub_format = "strife"
 
-  game_dir = "hexen"
-  iwad_name = "hexen.wad"
+  game_dir = "strife"
+  iwad_name = "strife1.wad"
 
   tables =
   {
-    HEXEN
+    STRIFE
   }
 
   hooks =
   {
-    get_levels = HEXEN.get_levels
-    all_done   = HEXEN.all_done
+    get_levels = STRIFE.get_levels
+    all_done   = STRIFE.all_done
   }
 }
 

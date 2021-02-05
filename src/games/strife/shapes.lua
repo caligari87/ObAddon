@@ -19,7 +19,7 @@
 --
 ------------------------------------------------------------------------
 
-HEXEN.SHAPE_GRAMMAR =
+STRIFE.SHAPE_GRAMMAR =
 {
 
 ROOT_1 =
@@ -28,9 +28,10 @@ ROOT_1 =
 
   structure =
   {
-    "!!!", "..."
-    "!!!", ".R."
-    "!!!", "..."
+    "!!!!", "...."
+    "!!!!", ".RR."
+    "!!!!", ".RR."
+    "!!!!", "...."
   }
 
 --[[  new_room =
@@ -44,17 +45,6 @@ ROOT_1 =
 
 -----------------------------------------
 
-GROW_1 =
-{
-  prob = 400 --Non-MSSP default: 100
-  prob_skew = 2
-
-  structure =
-  {
-    "...", ".1."
-    "x1x", "x1x"
-  }
-}
 
 GROW_2 =
 {
@@ -143,8 +133,8 @@ SQUARE_OUT_FROM_CORNER_2X =
 
   structure =
   {
-    "1.","11"
-    "x1","x1"
+    "1..","111"
+    "x11","x11"
   }
 }
 
@@ -162,32 +152,20 @@ DECORATE_CLOSET_2x1 =
   closet = { from_dir=2 }
 }
 
-FILLER_1 =
+LIQUEFY_SQ_CREATE =
 {
-  pass = "filler"
-  prob = 40 --30
+  pass = "liquefy"
+
+  prob = 5
 
   structure =
   {
-    "1.", "1."
-    "1.", "11"
-    "11", "11"
+    "1111","1111"
+    "1111","1~~1"
+    "1111","1~~1"
+    "1111","1111"
   }
 }
 
-SMOOTHER_1 =
-{
-  pass = "smoother"
-  prob = 75 --50
-
-  structure =
-  {
-    "x.", "x."
-    "1.", "1%"
-    "11", "11"
-  }
-
-  diagonals = { "1." }
 }
 
-}

@@ -4,6 +4,7 @@
 --
 --  Copyright (C) 2006-2011 Andrew Apted
 --  Copyright (C) 2011-2012 Jared Blackburn
+--  Adapted to Oblige 7.7x by Dashodanger
 --
 --  This program is free software; you can redistribute it and/or
 --  modify it under the terms of the GNU General Public License
@@ -21,13 +22,13 @@ HEXEN.SINKS =
     dz    = 64
     light = 16
   }
-
+  
   liquid_plain =
   {
     mat = "X_005"
     dz  = -12
   }
-
+  
 }
 
 HEXEN.THEMES =
@@ -46,19 +47,19 @@ HEXEN.THEMES =
       k_rusty = 50
       k_silver = 50
       k_swamp = 50
-      k_steel = 50
-    }
-
+      k_steel = 50     
+    }      
+    
     skyboxes =
     {
 
     }
-
+    
   }
-
+  
     dungeon =
     {
-
+    
       floor_sinks =
       {
         liquid_plain = 50
@@ -68,23 +69,98 @@ HEXEN.THEMES =
       {
         sky_plain = 50
       }
-
+    
       sink_style =
       {
         sharp = 1
         curved = 0.1
-      }
-
+      }   
+    
       fence_groups =
       {
         PLAIN = 50
       }
-
+      
       beam_groups =
       {
         beam_metal = 50
       }
+      
+      fences =
+      {
+        CASTLE07=35
+        CASTLE11=25
+      } 
+      
+      cage_mats =
+      {
+        CASTLE07=35
+        CASTLE11=25
+      }
+      
+      scenic_fences =
+      {
+        SEWER_BAR3 = 50
+        SEWER_BAR4 = 50
+      }
+      
+      fence_posts =
+      {
+        Post = 50
+      }
+      
+      facades =
+      {
+        CASTLE07=35
+        CASTLE11=25
+        CAVE02=15
+        MONK01=20
+        MONK02=20
+        MONK08=15
+        PRTL02=10
+        PRTL03=5
+      }
+      
+      liquids =
+      {
+        water  = 50
+        lava   = 10
+        muck   = 20
+      }
+      
+      steps_mat = "F_011"
+      
+    }
+    
+    fire =
+    {
+    
+      floor_sinks =
+      {
+        liquid_plain = 50
+      }
 
+      ceiling_sinks =
+      {
+        sky_plain = 50
+      }
+    
+      sink_style =
+      {
+        sharp = 1
+        curved = 0.1
+      }   
+    
+      fence_groups =
+      {
+        PLAIN = 50
+      }
+      
+      beam_groups =
+      {
+        beam_metal = 50
+      }
+      
       fences =
       {
         STEEL01=40
@@ -93,8 +169,8 @@ HEXEN.THEMES =
         STEEL06=15
         STEEL07=5
         STEEL08=5
-      }
-
+      } 
+      
       cage_mats =
       {
         STEEL01=40
@@ -104,46 +180,545 @@ HEXEN.THEMES =
         STEEL07=5
         STEEL08=5
       }
-
+      
       scenic_fences =
       {
         SEWER_BAR3 = 50
         SEWER_BAR4 = 50
       }
-
+      
       fence_posts =
       {
         Post = 50
       }
-
+      
       facades =
       {
-        CASTLE07=35
-        CAVE02=15
-        PRTL03=5
+      
       }
-
+      
       liquids =
       {
-        water  = 50
         lava   = 10
-        muck   = 20
+      }
+      
+      steps_mat = "F_011"
+    
+    }
+    
+    ice =
+    {
+    
+      floor_sinks =
+      {
+        liquid_plain = 50
       }
 
+      ceiling_sinks =
+      {
+        sky_plain = 50
+      }
+    
+      sink_style =
+      {
+        sharp = 1
+        curved = 0.1
+      }   
+    
+      fence_groups =
+      {
+        PLAIN = 50
+      }
+      
+      beam_groups =
+      {
+        beam_metal = 50
+      }
+      
+      fences =
+      {
+        STEEL01=40
+        STEEL02=10
+        STEEL05=10
+        STEEL06=15
+        STEEL07=5
+        STEEL08=5
+      } 
+      
+      cage_mats =
+      {
+        STEEL01=40
+        STEEL02=10
+        STEEL05=10
+        STEEL06=15
+        STEEL07=5
+        STEEL08=5
+      }
+      
+      scenic_fences =
+      {
+        SEWER_BAR3 = 50
+        SEWER_BAR4 = 50
+      }
+      
+      fence_posts =
+      {
+        Post = 50
+      }
+      
+      facades =
+      {
+      
+      }
+      
+      liquids =
+      {
+        lava   = 10
+      }
+      
       steps_mat = "F_011"
-
+    
     }
-
-    elemental =
+    
+    steel =
     {
+    
+      floor_sinks =
+      {
+        liquid_plain = 50
+      }
 
+      ceiling_sinks =
+      {
+        sky_plain = 50
+      }
+    
+      sink_style =
+      {
+        sharp = 1
+        curved = 0.1
+      }   
+    
+      fence_groups =
+      {
+        PLAIN = 50
+      }
+      
+      beam_groups =
+      {
+        beam_metal = 50
+      }
+      
+      fences =
+      {
+        STEEL01=40
+        STEEL02=10
+        STEEL05=10
+        STEEL06=15
+        STEEL07=5
+        STEEL08=5
+      } 
+      
+      cage_mats =
+      {
+        STEEL01=40
+        STEEL02=10
+        STEEL05=10
+        STEEL06=15
+        STEEL07=5
+        STEEL08=5
+      }
+      
+      scenic_fences =
+      {
+        SEWER_BAR3 = 50
+        SEWER_BAR4 = 50
+      }
+      
+      fence_posts =
+      {
+        Post = 50
+      }
+      
+      facades =
+      {
+      
+      }
+      
+      liquids =
+      {
+        lava   = 10
+      }
+      
+      steps_mat = "F_011"
+    
     }
-
-    wilderness =
+    
+    desert =
     {
+    
+      floor_sinks =
+      {
+        liquid_plain = 50
+      }
 
+      ceiling_sinks =
+      {
+        sky_plain = 50
+      }
+    
+      sink_style =
+      {
+        sharp = 1
+        curved = 0.1
+      }   
+    
+      fence_groups =
+      {
+        PLAIN = 50
+      }
+      
+      beam_groups =
+      {
+        beam_metal = 50
+      }
+      
+      fences =
+      {
+        FOREST01=10
+        MONK16=25
+      } 
+      
+      cage_mats =
+      {
+        FOREST01=10
+        MONK16=25
+      }
+      
+      scenic_fences =
+      {
+        SEWER_BAR3 = 50
+        SEWER_BAR4 = 50
+      }
+      
+      fence_posts =
+      {
+        Post = 50
+      }
+      
+      facades =
+      {
+        FOREST01=10
+        MONK16=25
+      }
+      
+      liquids =
+      {
+        lava   = 10
+      }
+      
+      steps_mat = "F_011"
+    
     }
+    
+    cave =
+    {
+    
+      floor_sinks =
+      {
+        liquid_plain = 50
+      }
 
+      ceiling_sinks =
+      {
+        sky_plain = 50
+      }
+    
+      sink_style =
+      {
+        sharp = 1
+        curved = 0.1
+      }   
+    
+      fence_groups =
+      {
+        PLAIN = 50
+      }
+      
+      beam_groups =
+      {
+        beam_metal = 50
+      }
+      
+      fences =
+      {
+        STEEL01=40
+        STEEL02=10
+        STEEL05=10
+        STEEL06=15
+        STEEL07=5
+        STEEL08=5
+      } 
+      
+      cage_mats =
+      {
+        STEEL01=40
+        STEEL02=10
+        STEEL05=10
+        STEEL06=15
+        STEEL07=5
+        STEEL08=5
+      }
+      
+      scenic_fences =
+      {
+        SEWER_BAR3 = 50
+        SEWER_BAR4 = 50
+      }
+      
+      fence_posts =
+      {
+        Post = 50
+      }
+      
+      facades =
+      {
+        CAVE03=10
+      }
+      
+      liquids =
+      {
+        lava   = 10
+      }
+      
+      steps_mat = "F_011"
+    
+    }
+    
+    swamp =
+    {
+    
+      floor_sinks =
+      {
+        liquid_plain = 50
+      }
+
+      ceiling_sinks =
+      {
+        sky_plain = 50
+      }
+    
+      sink_style =
+      {
+        sharp = 1
+        curved = 0.1
+      }   
+    
+      fence_groups =
+      {
+        PLAIN = 50
+      }
+      
+      beam_groups =
+      {
+        beam_metal = 50
+      }
+      
+      fences =
+      {
+        STEEL01=40
+        STEEL02=10
+        STEEL05=10
+        STEEL06=15
+        STEEL07=5
+        STEEL08=5
+      } 
+      
+      cage_mats =
+      {
+        STEEL01=40
+        STEEL02=10
+        STEEL05=10
+        STEEL06=15
+        STEEL07=5
+        STEEL08=5
+      }
+      
+      scenic_fences =
+      {
+        SEWER_BAR3 = 50
+        SEWER_BAR4 = 50
+      }
+      
+      fence_posts =
+      {
+        Post = 50
+      }
+      
+      facades =
+      {
+      
+      }
+      
+      liquids =
+      {
+        lava   = 10
+      }
+      
+      steps_mat = "F_011"
+    
+    }
+    
+    forest =
+    {
+    
+      floor_sinks =
+      {
+        liquid_plain = 50
+      }
+
+      ceiling_sinks =
+      {
+        sky_plain = 50
+      }
+    
+      sink_style =
+      {
+        sharp = 1
+        curved = 0.1
+      }   
+    
+      fence_groups =
+      {
+        PLAIN = 50
+      }
+      
+      beam_groups =
+      {
+        beam_metal = 50
+      }
+      
+      fences =
+      {
+        STEEL01=40
+        STEEL02=10
+        STEEL05=10
+        STEEL06=15
+        STEEL07=5
+        STEEL08=5
+      } 
+      
+      cage_mats =
+      {
+        STEEL01=40
+        STEEL02=10
+        STEEL05=10
+        STEEL06=15
+        STEEL07=5
+        STEEL08=5
+      }
+      
+      scenic_fences =
+      {
+        SEWER_BAR3 = 50
+        SEWER_BAR4 = 50
+      }
+      
+      fence_posts =
+      {
+        Post = 50
+      }
+      
+      facades =
+      {
+        FOREST01=40
+        FOREST02=10
+        WINN01=30
+      }
+      
+      liquids =
+      {
+        lava   = 10
+      }
+      
+      steps_mat = "F_011"
+    
+    }
+    
+    village =
+    {
+    
+      floor_sinks =
+      {
+        liquid_plain = 50
+      }
+
+      ceiling_sinks =
+      {
+        sky_plain = 50
+      }
+    
+      sink_style =
+      {
+        sharp = 1
+        curved = 0.1
+      }   
+    
+      fence_groups =
+      {
+        PLAIN = 50
+      }
+      
+      beam_groups =
+      {
+        beam_metal = 50
+      }
+      
+      fences =
+      {
+        STEEL01=40
+        STEEL02=10
+        STEEL05=10
+        STEEL06=15
+        STEEL07=5
+        STEEL08=5
+      } 
+      
+      cage_mats =
+      {
+        STEEL01=40
+        STEEL02=10
+        STEEL05=10
+        STEEL06=15
+        STEEL07=5
+        STEEL08=5
+      }
+      
+      scenic_fences =
+      {
+        SEWER_BAR3 = 50
+        SEWER_BAR4 = 50
+      }
+      
+      fence_posts =
+      {
+        Post = 50
+      }
+      
+      facades =
+      {
+      
+      }
+      
+      liquids =
+      {
+        lava   = 10
+      }
+      
+      steps_mat = "F_011"
+    
+    }
+    
 }
 
 
@@ -158,7 +733,7 @@ HEXEN.ROOM_THEMES =
   {
     env  = "building"
     prob = 50
-
+  
     walls =
     {
       MONK02=40
@@ -187,14 +762,13 @@ HEXEN.ROOM_THEMES =
       F_092=5
     }
 
-    hallways  = { dungeon_monktan=50 }
   }
 
     dungeon_monktan_large =
   {
     env  = "building"
     prob = 50
-
+    
     walls =
     {
       MONK14=35
@@ -225,14 +799,13 @@ HEXEN.ROOM_THEMES =
       F_092=5
     }
 
-    hallways  = { dungeon_monktan_large=50 }
   }
 
   dungeon_monkgray =
   {
    env  = "building"
    prob = 50
-
+  
     walls =
     {
       MONK01=30
@@ -266,16 +839,10 @@ HEXEN.ROOM_THEMES =
       F_092=5
     }
 
-    hallways  = { dungeon_monkgray=25, dungeon_monkrosette=50 }
   }
 
   dungeon_monkrosette =
   {
-        facades =
-  {
-      MONK01=35
-      MONK07=15
-        }
 
     walls =
     {
@@ -293,16 +860,10 @@ HEXEN.ROOM_THEMES =
       F_031=50
     }
 
-    hallways  = { dungeon_monkgray=25, dungeon_monkrosette=50 }
-  }
+    }
 
   dungeon_portals1 =
   {
-        facades =
-        {
-      PRTL02=30
-      PRTL03=5
-        }
 
     walls =
     {
@@ -321,9 +882,8 @@ HEXEN.ROOM_THEMES =
     {
       F_010=25
       F_044=50
-  }
+    }
 
-    hallways  = { dungeon_portals1=50 }
   }
 
   dungeon_portals2 =
@@ -347,7 +907,6 @@ HEXEN.ROOM_THEMES =
       F_044=50
     }
 
-    hallways  = { dungeon_portals2=50 }
   }
 
   -- This is the dark, dank dungeon type of crumbling castles, cemetaries,
@@ -390,8 +949,7 @@ HEXEN.ROOM_THEMES =
       F_089=5
     }
 
-    hallways  = { dungeon_tomb1=50 }
-    }
+  }
 
   dungeon_tomb2 =
   {
@@ -419,7 +977,6 @@ HEXEN.ROOM_THEMES =
       F_089=5
     }
 
-    hallways  = { dungeon_tomb2=50 }
   }
 
   dungeon_tomb3 =
@@ -445,7 +1002,6 @@ HEXEN.ROOM_THEMES =
       F_048=10
     }
 
-    hallways  = { dungeon_tomb3=50 }
   }
 
   dungeon_castle_gray =
@@ -478,17 +1034,10 @@ HEXEN.ROOM_THEMES =
       F_076=5
     }
 
-    hallways  = { dungeon_castle_gray=50 }
   }
 
   dungeon_castle_gray_small =
   {
-    facades =
-  {
-      CASTLE07=35
-      CAVE02=15
-      PRTL03=5
-    }
 
     walls =
     {
@@ -522,19 +1071,10 @@ HEXEN.ROOM_THEMES =
       F_076=5
     }
 
-    hallways  = { dungeon_castle_gray_small=50 }
   }
 
   dungeon_castle_gray_chains =
   { -- These patterns are pretyy much the same as castle01 (but with chains) -- should the be separate?  JB
-        rarity="minor"
-
-        facades =
-        {
-      CASTLE07=35
-      CAVE02=10
-      PRTL03=5
-        }
 
     walls =
     {
@@ -565,7 +1105,6 @@ HEXEN.ROOM_THEMES =
       F_076=5
     }
 
-    hallways  = { dungeon_castle_gray_small=50 }
   }
 
   dungeon_castle_yellow =
@@ -595,19 +1134,10 @@ HEXEN.ROOM_THEMES =
       F_029=10
     }
 
-    hallways  = { dungeon_castle_yellow=50 }
   }
 
   dungeon_library =
   {
-    facades =
-    {
-      MONK01=10
-      MONK02=10
-      CASTLE11=10
-        }
-
-    rarity="episode"
 
     walls =
     { -- When/if prefab bookshelve are available, the walls should usuallty not be books, JB
@@ -641,20 +1171,20 @@ HEXEN.ROOM_THEMES =
       F_089=5
       F_092=20
     }
-    }
+  }
 
   dungeon_sewer1 =
-    {
+  {
     walls =
     {
       SEWER01=25
       SEWER05=5
       SEWER06=5
       SEWER02=1
-  }
+    } 
 
     floors =
-  {
+    {
       F_017=10
       F_018=10
       F_021=12
@@ -671,11 +1201,11 @@ HEXEN.ROOM_THEMES =
       F_023=10
     }
 
-    hallways  = { dungeon_sewer1=50 }
   }
 
   dungeon_sewer2 =
   {
+  
     walls =
     {
       SEWER07=15
@@ -704,12 +1234,10 @@ HEXEN.ROOM_THEMES =
       F_023=10
     }
 
-    hallways  = { dungeon_sewer2=50 }
   }
 
   dungeon_sewer_metal =
   {
-    rarity="minor"
 
     walls =
     {
@@ -734,14 +1262,13 @@ HEXEN.ROOM_THEMES =
       F_023=10
     }
 
-    hallways  = { dungeon_sewer1=40, dungeon_sewer2=50 }
   }
 
-  dungeon_outdoors1 =
+  dungeon_outdoors =
   {
     env  = "outdoor"
     prob = 50
-
+  
     floors =
     {
       F_024=75
@@ -776,55 +1303,39 @@ HEXEN.ROOM_THEMES =
       WASTE01=20
       CAVE05=40
     }
-  }
-
-  dungeon_outdoors2 =
-  {
-    env  = "cave"
-    prob = 50
-
-    floors =
+    
+    porch_floors =
     {
-      F_024=50
-      F_034=75
+      F_024=75
+      F_034=50
       F_001=10
       F_002=10
       F_004=10
       F_005=10
       F_006=10
       F_007=10
-      F_008=2
-      F_009=2
-      F_012=2
-      F_013=2
-      F_015=2
-      F_017=2
-      F_018=2
-      F_021=1
-      F_022=2
-      F_027=2
+      F_010=2
+      F_011=4
+      F_025=3
+      F_028=2
+      F_029=2
       F_030=2
-      F_031=1
-      F_038=10
-      F_042=1
-      F_044=2
-      F_045=1
-      F_057=2
-      F_058=2
+      F_031=2
+      F_046=2
+      F_047=2
+      F_048=2
+      F_057=1
       F_059=2
-      F_073=2
-      F_076=2
+      F_077=2
+      F_089=2
+      F_012=2
+      F_014=2
     }
-
-    naturals =
-    {
-      WASTE02=30
-      FOREST02=10
-    }
+    
   }
 
-  -- This is the element fire, as in "The Guardian or Fire" in Raven's original wad.
-  Fire_room1 =
+  -- This is the element fire, as in "The Guardian or fire" in Raven's original wad.
+  fire_room1 =
   {
     walls =
     {
@@ -855,26 +1366,11 @@ HEXEN.ROOM_THEMES =
       F_082=5
     }
 
-    __corners =
-    {
-      FIRE01=30
-      FIRE04=5
-      FIRE05=10
-      FIRE06=15
-      FIRE07=15
-      FIRE08=10
-      FIRE09=10
-      FIRE10=10
-      FIRE11=10
-      FIRE12=10
-      X_FIRE01=30
-    }
-
-        hallways  = { Fire_room1=50, Fire_room2=25 }
   }
 
-  Fire_room2 =
+  fire_room2 =
   {
+  
     walls =
     {
       FIRE01=30
@@ -896,20 +1392,13 @@ HEXEN.ROOM_THEMES =
       F_082=5
     }
 
-    naturals =
-    {
-      FIRE01=60
-    }
-
-        hallways  = { Fire_room1=15, Fire_room2=65 }
   }
 
 
-  -- This is the element fire, as in "The Guardian or Fire" in Raven's original wad.
-  Fire_lavawalls =
-  { -- Fire could be split up, but these textures were pretty mixed up in the
+  -- This is the element fire, as in "The Guardian or fire" in Raven's original wad.
+  fire_lavawalls =
+  { -- fire could be split up, but these textures were pretty mixed up in the
     -- original wads, and it looks good as it is, JB
-        rarity="zone"
 
     walls =
     {
@@ -935,26 +1424,13 @@ HEXEN.ROOM_THEMES =
       F_082=15
     }
 
-    __corners =
-    {
-      FIRE01=30
-      FIRE04=5
-      FIRE05=10
-      FIRE06=15
-      FIRE07=15
-      FIRE08=10
-      FIRE09=10
-      FIRE10=10
-      FIRE11=10
-      FIRE12=10
-      X_FIRE01=30
-    }
-
-    hallways = { Fire_room1=50 }
   }
 
-  Fire_outdoors =
+  fire_outdoors =
   {
+    env  = "outdoor"
+    prob = 50
+  
     floors =
     {
       F_013=5
@@ -977,11 +1453,13 @@ HEXEN.ROOM_THEMES =
       FIRE11=10
       FIRE12=10
     }
+    
   }
 
   -- This is the "element" ice
-  Ice_room1 =
+  ice_room1 =
   {
+  
     walls =
     {
       ICE02=30
@@ -1001,11 +1479,12 @@ HEXEN.ROOM_THEMES =
       F_040=30
     }
 
-    hallways  = { Ice_room1=50 }
+
   }
 
-  Ice_room2 =
+  ice_room2 =
   { -- Not technically right, but works for what it does ;-) JB
+  
     walls =
     {
       ICE01=15
@@ -1028,20 +1507,13 @@ HEXEN.ROOM_THEMES =
       F_040=30
     }
 
-    hallways  = { Ice_room1=50, Ice_room2=50 }
   }
 
-  Ice_cave =
+  ice_outdoors =
   {
-    naturals =
-    {
-      ICE01=75
-      ICE06=25
-    }
-  }
-
-  Ice_outdoors =
-  {
+    env  = "outdoor"
+    prob = 50
+  
     floors =
     {
       F_013=15
@@ -1056,13 +1528,13 @@ HEXEN.ROOM_THEMES =
       ICE03=5
       ICE06=25
     }
+    
   }
 
 
-  -- This is the "element" steel, as in "The Guardian or Steel" in Raven's original wad.
-  Steel_room_mix =
+  -- This is the "element" steel, as in "The Guardian or steel" in Raven's original wad.
+  steel_room_mix =
   { -- Not technically right, but works for what it does ;-) JB
-        rarity="minor"
 
     walls =
     {
@@ -1098,31 +1570,13 @@ HEXEN.ROOM_THEMES =
       F_074=40
       F_075=15
       F_078=10
+    }
+
   }
 
-    naturals =
-    {
-      STEEL01=40
-      STEEL02=10
-      STEEL05=10
-      STEEL06=15
-      STEEL07=5
-      STEEL08=5
-    }
-
-    __corners =
-    {
-      STEEL01=40
-      STEEL02=10
-      STEEL05=10
-      STEEL06=15
-      STEEL07=5
-      STEEL08=5
-    }
-    }
-
-  Steel_room_gray =
+  steel_room_gray =
   {
+  
     walls =
   {
       STEEL06=35
@@ -1152,16 +1606,11 @@ HEXEN.ROOM_THEMES =
       F_078=10
     }
 
-    naturals =
-    {
-      STEEL06=35
-      STEEL07=15
-      STEEL08=5
-    }
   }
 
-  Steel_room_rust =
+  steel_room_rust =
   {
+  
     walls =
     {
       STEEL01=40
@@ -1180,21 +1629,11 @@ HEXEN.ROOM_THEMES =
       F_075=15
     }
 
-    naturals =
-    {
-      STEEL01=40
-      STEEL02=10
-    }
-    }
+  }
 
   -- This is the barren, deserty wildness, based on "The Wasteland" in Raven's original wad.
-  Desert_room_stone =
+  desert_room_stone =
   {
-        facades =
-    {
-      FOREST01=10
-      MONK16=25
-    }
 
     walls =
     {
@@ -1212,10 +1651,10 @@ HEXEN.ROOM_THEMES =
       F_029=20
       F_044=15
       F_082=10
-  }
+    }
 
     ceilings =
-  {
+    {
       F_037=20
       F_029=20
       F_044=15
@@ -1223,10 +1662,14 @@ HEXEN.ROOM_THEMES =
       D_END3=27
       D_END4=3
     }
+    
   }
 
-  Desert_outdoors =
+  desert_outdoors =
   {
+    env  = "outdoor"
+    prob = 50
+    
     floors =
     {
       F_002=25
@@ -1243,12 +1686,13 @@ HEXEN.ROOM_THEMES =
       WASTE04=10
       WASTE03=5
     }
+    
   }
 
   -- This is the cave type wildness; also, many caves used elsewhere;
   -- most caves have floor, ceiling, and walls so that they can double
   -- in other cave-ish roles. JB
-  Cave_room =
+  cave_room =
   { -- These are built rooms for the cave level (the rest are naturals of some kind)
     walls =
     {
@@ -1271,26 +1715,12 @@ HEXEN.ROOM_THEMES =
       F_040=40
       F_073=10
       F_076=15
-  }
-
-    __corners =
-    {
-      PILLAR01=20
-      WOOD01=15
-      WOOD03=15
-      D_END3=50
-      D_END4=5
     }
 
-    hallways  = { Cave_gray=50, Cave_room=50 }
   }
 
-  Cave_gray =
+  cave_gray =
   {
-    facades =
-    {
-      CAVE03=10
-    }
 
     walls =
     {
@@ -1311,22 +1741,10 @@ HEXEN.ROOM_THEMES =
       F_040=40
     }
 
-    naturals =
-    {
-      CAVE03=10
-      CAVE04=55
-      WASTE02=15
-    }
-
-    hallways  = { Cave_gray=50 }
   }
 
-  Cave_stalag =
+  cave_stalag =
   {
-        facades =
-        {
-      CAVE03=10
-        }
 
     walls =
     {
@@ -1345,20 +1763,15 @@ HEXEN.ROOM_THEMES =
       F_040=40
     }
 
-    naturals =
-    {
-      CAVE06=60
-    }
-
-        hallways  = { Cave_gray=50, Cave_stalag=50 }
   }
 
-  Cave_brown =
+  cave_brown =
   {
+  
     walls =
     {
       CAVE05=60
-  }
+    }
 
     floors =
     {
@@ -1370,19 +1783,13 @@ HEXEN.ROOM_THEMES =
     {
       F_001=75
       F_002=40
-  }
-
-    naturals =
-    {
-      CAVE03=20
-      CAVE05=60
     }
 
-    hallways  = { Cave_brown=50 }
   }
 
-  Cave_green =
+  cave_green =
   {
+  
     walls =
     {
       FOREST02=25
@@ -1402,15 +1809,9 @@ HEXEN.ROOM_THEMES =
       F_038=75
     }
 
-    naturals =
-    {
-      FOREST02=25
-    }
-
-    hallways  = { Cave_green=50 }
   }
 
-  Cave_swamp =
+  cave_swamp =
   {
     walls =
     {
@@ -1424,27 +1825,21 @@ HEXEN.ROOM_THEMES =
       F_020=40
       F_039=25
       F_040=20
-  }
+    }
 
     ceilings =
-  {
+    {
       F_019=75
       F_020=40
       F_039=25
       F_040=20
     }
 
-    naturals =
-    {
-      SWAMP01=20
-      SWAMP03=20
-    }
-
-    hallways  = { Cave_swamp=50 }
   }
 
-  Cave_desert_tan =
+  cave_desert_tan =
   {
+  
     walls =
     {
       WASTE01=35
@@ -1462,19 +1857,13 @@ HEXEN.ROOM_THEMES =
     {
       F_003=75
       F_002=40
-  }
-
-    naturals =
-    {
-      WASTE01=35
-      WASTE04=10
     }
 
-    hallways  = { Cave_desert_tan=50 }
   }
 
-  Cave_desert_gray =
+  cave_desert_gray =
   {
+  
     walls =
     {
       WASTE02=30
@@ -1492,19 +1881,15 @@ HEXEN.ROOM_THEMES =
       F_040=40
     }
 
-    naturals =
-    {
-      WASTE02=30
-      WASTE03=5
-    }
-
-    hallways  = { Cave_desert_gray=50 }
   }
 
-  Cave_outdoors =
+  cave_outdoors =
   {
+    env  = "outdoor"
+    prob = 50
+    
     floors =
-  {
+    {
       F_007=10
       F_039=75
       F_040=40
@@ -1516,14 +1901,15 @@ HEXEN.ROOM_THEMES =
     {
       CAVE03=70
     }
+    
   }
 
 
   -- This is the swamp-type wilderness
-  Swamp1_castle =
+  swamp_castle =
   {
     walls =
-  {
+    {
       SWAMP01=30
       SWAMP03=30
       SWAMP04=30
@@ -1553,11 +1939,11 @@ HEXEN.ROOM_THEMES =
       F_092=5
     }
 
-    hallways  = { Swamp1_castle=50 }
   }
 
-  Swamp1_hut =
+  swamp_hut =
   {
+  
     walls =
     {
       VILL01=5
@@ -1582,11 +1968,13 @@ HEXEN.ROOM_THEMES =
       F_092=10
     }
 
-    hallways  = { Swamp1_hut=50 }
   }
 
-  Swamp1_outdoors =
+  swamp_outdoors =
   {
+    env  = "outdoor"
+    prob = 50
+    
     floors =
     {
       F_017=5
@@ -1599,7 +1987,7 @@ HEXEN.ROOM_THEMES =
       F_005=10
       F_006=10
       F_007=5
-  }
+    }
 
     naturals =
     {
@@ -1613,12 +2001,14 @@ HEXEN.ROOM_THEMES =
       CAVE06=10
       WASTE02=5
     }
+    
   }
 
 
   -- This is the woodland wilderness found in The Shadow Wood and Winnowing Hall;
-  Forest_room1 =
+  forest_room1 =
   {
+  
     walls =
     {
       FOREST01=40
@@ -1641,26 +2031,13 @@ HEXEN.ROOM_THEMES =
       F_089=10
     }
 
-    __corners =
-    {
-      FOREST10=20
-      WOOD01=15
-      WOOD03=3
-    }
-
-    hallways  = { Forest_room1=50 }
   }
 
-  Forest_room2 =
+  forest_room2 =
   {
-    facades =
-    {
-      FOREST01=40
-      FOREST02=10
-  }
 
     walls =
-  {
+    {
       FOREST02=40
       FOREST03=10
       FOREST04=10
@@ -1678,23 +2055,10 @@ HEXEN.ROOM_THEMES =
       F_038=25
     }
 
-    __corners =
-    {
-      FOREST10=20
-      WOOD01=15
-      WOOD03=3
-    }
-
-    hallways  = { Forest_room2=50 }
   }
 
-  Forest_room3 =
+  forest_room3 =
   {
-    facades =
-  {
-      FOREST01=10
-      WINN01=40
-    }
 
     walls =
     {
@@ -1714,18 +2078,13 @@ HEXEN.ROOM_THEMES =
       F_073=25
     }
 
-    __corners =
-    {
-      FOREST10=20
-      WOOD01=15
-      WOOD03=3
   }
 
-    hallways  = { Forest_room3=50 }
-}
-
-  Forest_outdoors =
+  forest_outdoors =
   {
+    env  = "outdoor"
+    prob = 50
+    
     floors =
     {
       F_005=15
@@ -1741,10 +2100,12 @@ HEXEN.ROOM_THEMES =
       CAVE05=40
       CAVE03=50
     }
+    
   }
 
-  Village_room =
+  village_room =
   {
+  
     walls =
     {
       WOOD01=5
@@ -1772,10 +2133,12 @@ HEXEN.ROOM_THEMES =
       F_054=20
       F_055=20
     }
+    
   }
 
-  Village_brick =
+  village_brick =
   {
+  
     walls =
     {
       VILL01=5
@@ -1801,770 +2164,49 @@ HEXEN.ROOM_THEMES =
       F_054=20
       F_055=20
     }
+    
   }
-}
 
-
-HEXEN.LEVEL_THEMES =
-{
-  hexen_dungeon1 =
+  any_Cave =
   {
+    env  = "cave"
     prob = 50
 
-    buildings = { dungeon_monktan=40, dungeon_monktan_large=20,
-                  dungeon_monkgray=30, dungeon_monkrosette=15,
-                }
-    caves     = { Cave_gray=50 }
-    outdoors  = { dungeon_outdoors1=50 }
-    hallways  = { dungeon_monktan=40, dungeon_monktan_large=20,
-                  dungeon_monkgray=30, dungeon_monkrosette=15 }
-
-    pictures =
+    walls =
     {
-      Pic_GlassSmall=65
-      Pic_GlassBig=10
-      Pic_BooksSmall=10
-      Pic_BooksBig=10
-      Pic_Planets=5
-      Pic_Saint=10
-      Pic_Dogs=15
-      Pic_Dragon=15
-      Pic_DemonFace2=10
-      Pic_DemonFace=10
+      CAVE01=30
+      CAVE02=30
+      CAVE07=25
     }
 
-    -- FIXME: other stuff
-
-    style_list =
+    floors =
     {
-      mon_variety = { none=1, few=65, some=30, heaps=4 }
-    }
-
-    monster_prefs =
-    {
-      bishop=3.0, centaur1=2.0, centaur2=1.5
+      F_039=75
+      F_040=40
+      F_073=10
+      F_076=15
     }
 
   }
-
-
-  -- Castle type dungeon
-  hexen_dungeon2 =
-  {
-    prob = 50
-
-    liquids = { water=25, muck=70, icefloor=5 }
-
-    buildings = { dungeon_castle_gray=30,  dungeon_castle_gray_small= 15,
-                  dungeon_castle_gray_chains=5, dungeon_castle_yellow=15,
-                }
-    caves     = { Cave_gray=30, Cave_swamp=5, Cave_green=15 }
-    outdoors  = { dungeon_outdoors2=50 }
-    hallways  = { dungeon_castle_gray=30,  dungeon_castle_gray_small= 15,
-                  dungeon_castle_yellow=15 }
-
-    facades =
-    {
-      CASTLE07=50, CASTLE11=10, CAVE01=10,
-      CAVE02=15, PRTL03=10
-    }
-
-    pictures =
-    {
-      Pic_GlassSmall=5
-      Pic_BooksSmall=5
-      Pic_BooksBig=5
-      Pic_Saint=10
-      Pic_Dogs=15
-      Pic_Dragon=15
-      Pic_DemonFace2=15
-      Pic_SwordGuy=25
-    }
-
-    -- FIXME: other stuff
-
-    monster_prefs =
-    {
-      centaur1=2.0, centaur2=3.0, demon1=3.0
-    }
-
-    style_list =
-    {
-      caves = { none=30, few=70, some=20,  heaps=0 }
-      outdoors = { none=50, few=50, some=20,  heaps=0 }
-      mon_variety = { none=1, few=65, some=30, heaps=4 }
-    }
-  }
-
-
-  -- Tombs / necropolis
-  hexen_dungeon3 =
-  {
-    prob = 30
-
-    liquids = { water=25, muck=25, icefloor=25, lava=25 }
-
-    buildings = { dungeon_tomb1=10, dungeon_tomb2=10, dungeon_tomb3=10 }
-    caves     = { Cave_gray=50, Cave_swamp=10, Cave_green=5 }
-    outdoors  = { dungeon_outdoors2=50 }
-    hallways  = { dungeon_tomb1=10, dungeon_tomb2=10, dungeon_tomb3=10 }
-
-
-    pictures =
-    {
-      Pic_GlassSmall=25
-      Pic_GlassBig=50
-      Pic_Saint=25
-      Pic_Dogs=15
-      Pic_DemonFace2=25
-      Pic_DemonCross=5
-      Pic_Grave=60
-
-    }
-
-    -- FIXME: other stuff
-
-    monster_prefs =
-    {
-      bishop=3.0, centaur2=3.0, reiver=2.5
-    }
-
-    style_list =
-    {
-      caves = { none=30, few=70, some=20,  heaps=0 }
-      outdoors = { none=50, few=50, some=20,  heaps=0 }
-      mon_variety = { none=1, few=65, some=30, heaps=4 }
-    }
-  }
-
-  -- Sewers / effluvium
-  hexen_dungeon4 =
-  {
-    prob = 20
-
-    liquids = { muck=70 }
-
-    buildings = { dungeon_sewer1=30, dungeon_sewer2=20,
-                  dungeon_sewer_metal=5 }
-    caves     = { Cave_gray=25, Cave_swamp=25 }
-    outdoors  = { dungeon_outdoors2=50 }
-    hallways  = { dungeon_sewer1=30, dungeon_sewer2=20 }
-
-    pictures =
-    {
-      Pic_DemonFace2=90
-      Pic_DemonCross=5
-      Pic_DemonFace3=5
-    }
-
-    facades =
-    {
-      CASTLE07=50, CASTLE11=10, CAVE01=10,
-      CAVE02=15, PRTL03=10
-    }
-
-    monster_prefs =
-    {
-      -- need high values just to make them appear
-      serpent1=5000, serpent2=3000
-    }
-
-    style_list =
-    {
-      liquids  = { none=0,  few=0,  some=0,   heaps=100 }
-      caves    = { none=30, few=70, some=20,  heaps=0   }
-      outdoors = { none=50, few=50, some=20,  heaps=0 }
-    }
-  }
-
-  hexen_dungeon5 =
-  {
-    prob = 20
-
-    buildings = { dungeon_portals1=45, dungeon_portals2=15 }
-    caves     = { Cave_gray=50 }
-    outdoors  = { dungeon_outdoors1=50 }
-    hallways  = { dungeon_portals1=45, dungeon_portals2=15 }
-
-    pictures =
-    {
-      Pic_DemonFace2=20
-      Pic_DemonCross=5
-      Pic_DemonFace3=5
-      Pic_Dogs=10
-      Pic_Saint=10
-    }
-
-    -- FIXME: other stuff
-
-    monster_prefs =
-    {
-      ettin=3.0, demon1=2.0, centaur1=1.5, iceguy=3.0
-    }
-  }
-
-  -- Hypostyle
-  hexen_dungeon6 =
-  {
-    prob = 10
-
-    liquids = { lava=95, icefloor=5 }
-
-    buildings = { dungeon_castle_gray=5,  Fire_room1=5,
-                  Forest_room3=45, dungeon_tomb3=5 }
-    caves     = { Cave_gray=55, Cave_stalag=25, Fire_room1=10 }
-    outdoors  = { dungeon_outdoors2=50 }
-    hallways  = { dungeon_castle_gray=5,  Fire_room1=5,
-                  Forest_room3=45, dungeon_tomb3=5 }
-
-    pictures =
-    {
-      Pic_GlassSmall=5
-      Pic_BooksSmall=5
-      Pic_BooksBig=5
-      Pic_Saint=10
-      Pic_Dogs=15
-      Pic_Dragon=15
-      Pic_DemonFace2=25
-      Pic_SwordGuy=5
-    }
-
-    facades =
-    {
-      CASTLE07=50, CASTLE11=10, CAVE01=10,
-      CAVE02=15, PRTL03=10
-    }
-
-    -- FIXME: other stuff
-
-    monster_prefs =
-    {
-      afrit=2.0, centaur1=3.0, demon1=3.0, afrit=3.0
-    }
-
-    style_list =
-    {
-      caves = { none=20, few=70, some=30,  heaps=0 }
-      outdoors = { none=100, few=0, some=0,  heaps=0 }
-    }
-  }
-
-
-  hexen_element1 =
-  {
-    prob = 20
-
-    liquids = { lava=100 }
-
-    buildings = { Fire_room1=65,  Fire_room2=35,  Fire_lavawalls=5}
-    caves     = { Fire_room2=50 }
-    outdoors  = { Fire_outdoors=50 }
-    hallways  = { Fire_room1=50, Fire_room2=40 }
-
-    pictures =
-    {
-      Pic_DemonFace3=65
-      Pic_DemonCross=40
-      Pic_Saint=5
-      Pic_Dogs=5
-      Pic_DemonFace2=5
-    }
-
-    __big_pillars = { pillar02=10, fire06=25, xfire=15 }
-
-    __outer_fences =
-    {
-      FIRE01=30, FIRE04=5, FIRE05=10, FIRE06=15,
-      FIRE07=15, FIRE08=10, FIRE09=10, FIRE10=10,
-      FIRE11=10, FIRE12=10
-    }
-
-    monster_prefs =
-    {
-      afrit=3.5
-    }
-
-    style_list =
-    {
-      caves = { none=30, few=70,  some=30,  heaps=0  }
-      outdoors = { none=70, few=5,   some=0,   heaps=0  }
-      liquids  = { none=0,  few=10,  some=60,  heaps=40 }
-      lakes    = { none=0,  few=10,  some=60,  heaps=40 }
-      mon_variety = { none=1, few=65, some=30, heaps=4 }
-    }
-  }
-
-
-  hexen_element2 =
-  {
-    prob = 20
-
-    liquids = { icefloor=100 } -- ice1 will use "liquids = { ice=70, water=30 }" instead, for variety.
-
-    buildings = { Ice_room1=65, Ice_room2=35 }
-    caves     = { Ice_cave=50 }
-    outdoors  = { Ice_outdoors=50 }
-    hallways  = { Ice_room1=65, Ice_room2=35 }
-
-    pictures =
-    {
-      Pic_DemonFace2=65
-      Pic_DemonFace3=5
-      Pic_Dogs=5
-      Pic_Saint=25
-    }
-
-    __big_pillars = { ice01=5, ice02=20 }
-
-    __outer_fences =
-    {
-      ICE01=25, ICE06=75
-    }
-
-    style_list =
-    {
-      caves = { none=30, few=70,  some=30,  heaps=0  }
-      outdoors = { none=70, few=5,   some=0,   heaps=0  }
-      liquids  = { none=0,  few=10,  some=60,  heaps=40 }
-      lakes    = { none=0,  few=0,   some=40,  heaps=60 }
-      pictures = { none=50, few=10,  some=10,  heaps=0  }
-      mon_variety = { none=1, few=65, some=30, heaps=4 }
-    }
-
-    monster_prefs =
-    {
-      iceguy =500, afrit=0.2
-    }
-  }
-
-
-  hexen_element3 =
-  {
-    prob = 20
-
-    square_caves = true
-
-    liquids = { lava=20, icefloor=10, water=5, muck=5 }
-
-    buildings = { Steel_room_mix=10, Steel_room_gray=35, Steel_room_rust=25 }
-    caves     = { Steel_room_mix=25, Steel_room_gray=25, Steel_room_rust=25 }
-    outdoors  = { Steel_room_mix=25, Steel_room_gray=25, Steel_room_rust=25 }
-    hallways  = { Steel_room_mix=10, Steel_room_gray=35, Steel_room_rust=25 }
-
-    pictures =
-    {
-      Pic_Dragon=5
-      Pic_DemonCross=45
-    }
-
-    __big_pillars = { steel01=10, steel02=10, steel06=10, steel07=10 }
-
-    __outer_fences =
-    {
-      STEEL01=40, STEEL02=10, STEEL05=10,
-      STEEL06=15, STEEL07=5, STEEL08=5
-    }
-
-    style_list =
-    {
-      caves = { none=70, few=30,  some=5,  heaps=0 }
-      outdoors = { none=70, few=5,   some=0,  heaps=0 }
-      liquids  = { none=40, few=60,  some=10, heaps=0 }
-      lakes    = { none=60, few=40,  some=0,  heaps=0 } -- I don't think this is need, but to be safe...
-      pictures = { none=50, few=0,   some=0,  heaps=0 }
-    }
-  }
-
-
-  hexen_wild1 =
-  {
-    prob = 30
-
-    liquids = { water=30, muck=40, lava=20 }
-
-    buildings = { Desert_room_stone=25, Cave_desert_tan=20,
-                  Cave_desert_gray=15, Village_room=25 }
-    caves     = { Cave_desert_tan=60, Cave_desert_gray=40,
-                  Cave_brown=25 }
-    outdoors  = { Desert_outdoors=50 }
-    hallways  = { Cave_desert_tan=55, Cave_desert_gray=40 }
-
-    pictures =
-    {
-      Pic_DemonFace=4
-      Pic_BooksSmall=1
-      Pic_DemonFace2=10
-      Pic_Dogs=5
-      Pic_Saint=5
-    }
-
-    __pictures =
-    {
-      pic_forest11=5, pic_books01=1, pic_tomb06=15,
-      pic_monk06=2, pic_monk11=2, pic_spawn13=2
-    }
-
-    __big_pillars = { pillar01=5, monk14=25 }
-
-    __outer_fences =
-    {
-      WASTE01=35, WASTE02=15
-    }
-
-    style_list =
-    {
-      outdoors = { none=0,  few=0,  some=80,  heaps=20 }
-      liquids  = { none=30, few=70, some=5,   heaps=0  }
-      lakes    = { none=10, few=70, some=10,  heaps=0  }
-  --  I have an idea for a natural-net dividing a large natural into small ones connected by tunnels,
-  --  but this doesn't exist and I can't create it now, so...
-  --   This is the wrong type of hallway, but best I can do now.
-  --  hallways = { none=0,  few=10, some=30, heaps=90 }
-    }
-  }
-
-
-  hexen_wild2 =
-  {
-    prob = 30
-
-    liquids = { water=60, muck=10, lava=25 }
-
-    --Not sure I like mixing the gray and brown cave themes too much, JB
-    buildings = { Cave_room=50, Cave_gray=15, Cave_brown=5 }
-    caves     = { Cave_gray=20, Cave_stalag=30, Cave_brown=10 }
-    outdoors  = { Cave_outdoors=50 }
-    hallways  = { Cave_gray=30, Cave_stalag=20, Cave_brown=10 }
-
-    pictures =
-    {
-      Pic_DemonFace=4
-      Pic_DemonCross=1
-      Pic_DemonFace2=10
-      Pic_DemonFace3=5
-      Pic_Dogs=5
-      Pic_Saint=5
-    }
-
-    __big_pillars =
-    {
-      monk14=10, castle07=5, prtl02=5, fire06=10
-    }
-
-    __outer_fences = { CAVE03=20, CAVE04=40, CAVE05=15, WASTE02=25 }
-
-    style_list =
-    {
-      caves      = { none=0,  few=0,  some=0,  heaps=70 }
-      odd_shapes = { none=0,  few=0,  some=30, heaps=70 }
-      outdoors = { none=30, few=70, some=5,  heaps=0  }
-      crates   = { none=60, few=40, some=0,  heaps=0  }
-    }
-
-    monster_prefs =
-    {
-      demon1=3.0, demon2=3.0
-    }
-
-    door_probs   = { out_diff=10, combo_diff= 3, normal=1 }
-    window_probs = { out_diff=30, combo_diff=30, normal=5 }
-  }
-
-
-  hexen_wild3 =
-  {
-    prob = 30
-
-    liquids = { muck=100 }  -- for whole mulit-level swamp1 theme this will be "liquids = { muck=80, water 20 }"
-
-    buildings = { Swamp1_castle=20, dungeon_castle_gray=20, Swamp1_hut=60 }
-    caves     = { Cave_swamp=20, Cave_gray=30 }
-    outdoors  = { Swamp1_outdoors=50 }
-    hallways  = { Swamp1_castle=20, dungeon_castle_gray=20, Swamp1_hut=60 }
-
-    pictures =
-    {
-      Pic_DemonFace=2
-      Pic_BooksSmall=1
-      Pic_DemonFace2=25
-      Pic_DemonFace3=7
-      Pic_Dogs=5
-      Pic_Saint=5
-    }
-
-    __big_pillars =
-    {
-      swamp01=20, swamp02=20, vill01=5, wood03=15
-    }
-
-    __outer_fences =
-    {
-      SWAMP01=20, SWAMP03=20, SWAMP04=20, FOREST07=10,
-      CAVE03=10, CAVE04=10, CAVE05=10, CAVE06=10,
-      WASTE02=5
-    }
-
-    style_list =
-    {
-      caves = { none=0, few=5, some=80, heaps=10  }
-      outdoors = { none=0, few=5, some=80, heaps=10  }
-  --   I had considered including flat x_09 (muck) as a floor texture, and not using
-  --  liquids, but realized this would likely produce diases of muck, ect.  We need
-  --  officially transversable liquids for this theme to really work.
-      liquids  = { none=0, few=0, some=0,  heaps=100 }
-      lakes    = { none=0, few=0, some=0,  heaps=100 }
-      mon_variety = { none=1, few=65, some=30, heaps=4 }
-    }
-
-    monster_prefs =
-    {
-      -- need high values just to make them appear
-      serpent1=5000, serpent2=3000
-    }
-  }
-
-
-  hexen_wild4 =
-  {
-    prob = 30
-
-    liquids = { water=60, muck=15, lava=10 }
-
-    buildings = { Forest_room1=30, Forest_room2=20, Forest_room3=30 }
-    caves     = { Cave_gray=30, Cave_green=25, Cave_brown=40 }
-    outdoors  = { Forest_outdoors=50 }
-    hallways  = { Forest_room3=30, Forest_room2=20, Forest_room3=30 }
-
-    pictures =
-    {
-      Pic_DemonFace=4
-      Pic_BooksSmall=1
-      Pic_DemonFace2=10
-      Pic_GlassSmall=5
-      Pic_Dogs=5
-      Pic_Saint=5
-    }
-
-    __big_pillars =
-    {
-      vill01=5, wood01=15, wood02=5, forest01=25,
-      pillar01=10, pillar02=5, prtl02=20, monk15=10,
-      castle07=5
-    }
-
-    style_list =
-    {
-      caves      = { none=0, few=5,  some=50, heaps=10 }
-      outdoors   = { none=0, few=5,  some=50, heaps=10 }
-      subrooms   = { none=0, few=15, some=50, heaps=50 }
-      islands    = { none=0, few=15, some=50, heaps=50 }
-    }
-
-    monster_prefs =
-    {
-      afrit=3.0, etin=2.5, bishop=1.5
-    }
-  }
-
-
-  hexen_cave1 =
-  {
-    prob = 20
-
-    liquids = { water=60, muck=10, lava=25 }
-
-    --Not sure I like mixing the gray and brown cave themes too much, JB
-    buildings = { Cave_room=50, Cave_gray=15, Cave_brown=5 }
-    caves     = { Cave_gray=20, Cave_stalag=30, Cave_brown=10 }
-    outdoors  = { Cave_outdoors=50 }
-    hallways  = { Cave_gray=30, Cave_stalag=20, Cave_brown=10 }
-
-    pictures =
-    {
-      Pic_DemonFace=4
-      Pic_DemonCross=1
-      Pic_DemonFace2=10
-      Pic_DemonFace3=5
-      Pic_Dogs=5
-      Pic_Saint=5
-    }
-
-    __big_pillars =
-    {
-      monk14=10, castle07=5, prtl02=5, fire06=10
-    }
-
-    __outer_fences = { CAVE03=20, CAVE04=40, CAVE05=15, WASTE02=25 }
-
-    style_list =
-    {
-      caves      = { none=0,  few=0,  some=0,  heaps=70 }
-      odd_shapes = { none=0,  few=0,  some=30, heaps=70 }
-      outdoors = { none=30, few=70, some=5,  heaps=0  }
-      crates   = { none=60, few=40, some=0,  heaps=0  }
-      mon_variety = { none=1, few=65, some=30, heaps=4 }
-    }
-
-    monster_prefs =
-    {
-      demon1=3.0, demon2=3.0
-    }
-
-    door_probs   = { out_diff=10, combo_diff= 3, normal=1 }
-    window_probs = { out_diff=30, combo_diff=30, normal=5 }
-  }
-
-
-  hexen_ice1 =
-  {
-    prob = 20
-
-    liquids = { icefloor=70, water=30 }
-
-    buildings = { Ice_room1=65, Ice_room2=35 }
-    caves     = { Ice_cave=50 }
-    outdoors  = { Ice_outdoors=50 }
-    hallways  = { Ice_room1=65, Ice_room2=35 }
-
-    pictures =
-    {
-      Pic_Dragon=5
-      Pic_DemonCross=15
-    }
-
-    __big_pillars = { ice01=5, ice02=20 }
-
-    __outer_fences =
-    {
-      ICE01=25, ICE06=75
-    }
-
-    style_list =
-    {
-      caves = { none=30, few=70,  some=30,  heaps=0  }
-      outdoors = { none=70, few=5,   some=0,   heaps=0  }
-      liquids  = { none=0,  few=10,  some=60,  heaps=40 }
-      lakes    = { none=0,  few=0,   some=40,  heaps=60 }
-      pictures = { none=50, few=10,  some=10,  heaps=0  }
-      mon_variety = { none=1, few=65, some=30, heaps=4 }
-    }
-
-    monster_prefs =
-    {
-      iceguy=500, afrit=0.2
-    }
-  }
-
-
-  hexen_swamp1 =
-  {
-    prob = 20
-
-    liquids = { muck=80, water=20 }
-
-    buildings = { Swamp1_castle=20, dungeon_castle_gray=20, Swamp1_hut=60  }
-    caves     = { Cave_swamp=20, Cave_gray=30 }
-    outdoors  = { Swamp1_outdoors=50 }
-    hallways  = { Swamp1_castle=20, dungeon_castle_gray=20, Swamp1_hut=60  }
-
-    pictures =
-    {
-      Pic_DemonFace=2
-      Pic_BooksSmall=1
-      Pic_DemonFace2=25
-      Pic_DemonFace3=7
-      Pic_Dogs=5
-      Pic_Saint=5
-    }
-
-    __big_pillars = { swamp01=20, swamp02=20, vill01=5, wood03=15 }
-
-    __outer_fences =
-    {
-      SWAMP01=20, SWAMP03=20, SWAMP04=20, FOREST07=10,
-      CAVE03=10, CAVE04=10, CAVE05=10, CAVE06=10,
-      WASTE02=5
-    }
-
-    style_list =
-    {
-      caves = { none=0, few=5, some=80, heaps=10  }
-      outdoors = { none=0, few=5, some=80, heaps=10  }
-  --   I had considered including flat x_09 (muck) as a floor texture, and not using
-  --  liquids, but realized this would likely produce diases of muck, ect.  We need
-  --  officially transversable liquids for this theme to really work.
-      liquids  = { none=0, few=0, some=0,  heaps=100 }
-      lakes    = { none=0, few=0, some=0,  heaps=100 }
-      mon_variety = { none=1, few=65, some=30, heaps=4 }
-    }
-
-    monster_prefs =
-    {
-      -- need high values just to make them appear
-      serpent1=5000, serpent2=3000
-    }
-  }
-
-  hexen_village1 =
-  {
-    prob = 30
-
-    liquids = { water=60, muck=15, lava=10 }
-
-    buildings = { Forest_room1=30, Forest_room2=20, Forest_room3=30,
-                  Desert_room_stone=25, Village_room=45, Village_brick=25,
-                  dungeon_castle_gray=15 }
-    caves     = { Cave_gray=30, Cave_green=25, Cave_brown=40 }
-    outdoors  = { Forest_outdoors=50 }
-    hallways  = { Forest_room3=30, Forest_room2=20, Forest_room3=30,
-                  Desert_room_stone=25, Village_room=45,
-                  dungeon_castle_gray=15 }
-
-    pictures =
-    {
-      Pic_DemonFace=5
-      Pic_BooksSmall=10
-      Pic_BooksBig=10
-      Pic_DemonFace2=10
-      Pic_GlassSmall=15
-      Pic_GlassBig=10
-      Pic_Dogs=5
-      Pic_Saint=5
-      Pic_Dragon=5
-      Pic_SwordGuy=5
-    }
-
-    __big_pillars =
-    {
-      vill01=5, wood01=15, wood02=5, forest01=25,
-      pillar01=10, pillar02=5, prtl02=20, monk15=10,
-      castle07=5
-    }
-
-    style_list =
-    {
-      caves      = { none=0, few=5,  some=50, heaps=10 }
-      outdoors   = { none=0, few=5,  some=50, heaps=10 }
-      subrooms   = { none=0, few=15, some=50, heaps=50 }
-      islands    = { none=0, few=15, some=50, heaps=50 }
-    }
-
-    monster_prefs =
-    {
-      afrit=3.0, etin=2.5, bishop=1.5
-    }
-  }
+  
 }
-
 
 ------------------------------------------------------------------------
 
 HEXEN.ROOMS =
 {
+
   GENERIC =
   {
     environment = "any"
   }
+  
+  OUTSIDE =
+  {
+    env = "outdoor"
+    prob = 50
+  }
+  
 }
 
 --------------------------------------------------
@@ -2577,23 +2219,39 @@ OB_THEMES["dungeon"] =
   mixed_prob = 50
 }
 
-UNFINISHED["elemental"] =
+OB_THEMES["fire"] =
 {
-  label = _("Elemental")
+  label = _("Fire")
   game = "hexen"
   name_theme = "GOTHIC"
   mixed_prob = 50
 }
 
-UNFINISHED["wilderness"] =
+OB_THEMES["ice"] =
 {
-  label = _("Wilderness")
+  label = _("Ice")
   game = "hexen"
   name_theme = "GOTHIC"
   mixed_prob = 50
 }
 
-UNFINISHED["x_cave"] =
+OB_THEMES["steel"] =
+{
+  label = _("Steel")
+  game = "hexen"
+  name_theme = "GOTHIC"
+  mixed_prob = 20
+}
+
+OB_THEMES["desert"] =
+{
+  label = _("Desert")
+  game = "hexen"
+  name_theme = "GOTHIC"
+  mixed_prob = 10
+}
+
+OB_THEMES["cave"] =
 {
   label = _("Cave")
   game = "hexen"
@@ -2601,15 +2259,7 @@ UNFINISHED["x_cave"] =
   mixed_prob = 20
 }
 
-UNFINISHED["x_ice"] =
-{
-  label = _("Ice")
-  game = "hexen"
-  name_theme = "GOTHIC"
-  mixed_prob = 10
-}
-
-UNFINISHED["x_swamp"] =
+OB_THEMES["swamp"] =
 {
   label = _("Swamp")
   game = "hexen"
@@ -2617,7 +2267,15 @@ UNFINISHED["x_swamp"] =
   mixed_prob = 20
 }
 
-UNFINISHED["x_village"] =
+OB_THEMES["forest"] =
+{
+  label = _("Forest")
+  game = "hexen"
+  name_theme = "GOTHIC"
+  mixed_prob = 20
+}
+
+OB_THEMES["village"] =
 {
   label = _("Village")
   game = "hexen"
