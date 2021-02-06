@@ -4827,6 +4827,36 @@ GROW_MAZE_STRAIGHT =
   }
 }
 
+GROW_MAZE_STRAIGHT_NEW_AREA =
+{
+  prob = 10
+  skip_prob = 35
+
+  structure =
+  {
+    "x.x","xAx"
+    "x.x","xAx"
+    "...","#1#"
+    "x1x","x1x"
+    "x1x","x1x"
+  }
+}
+GROW_MAZE_STRAIGHT_STAIRED =
+{
+  prob = 10
+  skip_prob = 35
+
+  structure =
+  {
+    "x.x","xAx"
+    "x.x","xAx"
+    "...","#^#"
+    "...","#1#"
+    "x1x","x1x"
+    "x1x","x1x"
+  }
+}
+
 GROW_MAZE_STRAIGHT_LONG =
 {
   prob = 8
@@ -4840,6 +4870,23 @@ GROW_MAZE_STRAIGHT_LONG =
     "...","#1#"
     "...","#1#"
     "...","#1#"
+    "x1x","x1x"
+    "x1x","x1x"
+  }
+}
+
+GROW_MAZE_STRAIGHT_STAIRED_LONG =
+{
+  prob = 10
+  skip_prob = 35
+
+  structure =
+  {
+    "x.x","xAx"
+    "x.x","xAx"
+    "...","#^#"
+    "...","#^#"
+    "...","#^#"
     "x1x","x1x"
     "x1x","x1x"
   }
@@ -4933,9 +4980,7 @@ GROW_MAZE_CROSS =
     "xxx.xxx","xxx1xxx"
     "xxx.xxx","xxx1xxx"
     "xx...xx","xx#1#xx"
-    "xx...xx","xx#1#xx"
     ".......","1111111"
-    "xx...xx","xx#1#xx"
     "xx...xx","xx#1#xx"
     "xxx1xxx","xxx1xxx"
     "xxx1xxx","xxx1xxx"
@@ -4950,6 +4995,7 @@ GROW_MAZE_U =
   structure =
   {
     "x...x","x111x"
+    "x.x.x","x1x1x"
     ".....","#1#1#"
     ".....","#1#1#"
     "x1x1x","x1x1x"

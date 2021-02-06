@@ -183,7 +183,7 @@ PREFABS.Hallway_deuce_i_fake_door_and_window =
   map = "MAP07"
   theme = "urban"
 
-  prob = 35
+  prob = 50
 
   tex_DOOR3 =
   {
@@ -203,7 +203,7 @@ PREFABS.Hallway_deuce_i_fake_door_tech =
   map = "MAP08"
   theme = "tech"
 
-  prob = 35
+  prob = 75
 
   tex_DOOR3 =
   {
@@ -224,7 +224,7 @@ PREFABS.Hallway_deuce_i_fake_door_urban =
   map = "MAP08"
   theme = "urban"
 
-  prob = 35
+  prob = 50
 
   tex_DOOR3 =
   {
@@ -244,7 +244,7 @@ PREFABS.Hallway_deuce_i_shutter_tech =
   map = "MAP09"
   theme = "tech"
 
-  prob = 35
+  prob = 75
 
   tex_STEP4 =
   {
@@ -266,7 +266,7 @@ PREFABS.Hallway_deuce_i_shutter_urban =
   map = "MAP09"
   theme = "urban"
 
-  prob = 35
+  prob = 50
 
   tex_STEP4 =
   {
