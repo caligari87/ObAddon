@@ -2452,6 +2452,12 @@ ZDOOM_STORIES.ENTITIES =
     CEREBRO=5, -- X-Men
     COLOSSUS=5,
     ZERO=5,
+    OMICRON=5,
+    LAMBDA=5,
+    TAU=5,
+    UPSILON=5,
+    THETA=5,
+    IOTA=5,
   }
 }
 
@@ -2527,6 +2533,17 @@ ZDOOM_STORIES.QUIT_MESSAGES =
   [[Is this really what it has come to?]],
   [[That's right, abandon your fellow marines in a time of need...]],
   [[RAND_CONTRIBUTOR has decided you are unworthy of your skills here.]],
+  [[Is that the way it's gonna be? Fine, now piss off.]],
+  [[We don't have time for this quitting nonsense.]],
+  [[Didn't think you were the type to pussy out of Doom..]],
+  [[I should have known better. There are better and more capable players that don't quite early..]],
+  [[Ego bruised from losing? Too bad.]],
+  [[There's too much bullshit and we don't need you to add to it.]],
+  [[Go sit on a shotgun barrel and pull the trigger.]],
+  [[By the time you read this message, you already lost.]],
+  [[We insist you stay and play just a little bit longer.]],
+  [[Quitters are not winners.]],
+
 
   -- hardcore philosophy
   [[Are you quitting because you realized no matter how much hellspawn you mow down, Oblige will just give you more?]],
