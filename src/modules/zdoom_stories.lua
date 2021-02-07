@@ -2536,7 +2536,7 @@ ZDOOM_STORIES.QUIT_MESSAGES =
   [[Is that the way it's gonna be? Fine, now piss off.]],
   [[We don't have time for this quitting nonsense.]],
   [[Didn't think you were the type to pussy out of Doom..]],
-  [[I should have known better. There are better and more capable players that don't quite early..]],
+  [[I should have known better. There are better and more capable players that don't quit early..]],
   [[Ego bruised from losing? Too bad.]],
   [[There's too much bullshit and we don't need you to add to it.]],
   [[Go sit on a shotgun barrel and pull the trigger.]],
