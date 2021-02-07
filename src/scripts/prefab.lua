@@ -1175,7 +1175,11 @@ function Fab_load_wad(def)
     else
       -- keep these flags: block-all, block-mon, secret, no-draw,
       --                   always-draw, block-sound, pass-thru
-      flags = bit.band(flags, 0x1FFF)
+      if OB_CONFIG.game == "hexen" then
+        flags = bit.band(flags, 0x1FFF)
+      else
+        flags = bit.band(flags, 0x2E3)
+      end
 
       if flags != 0 then
         C2.flags = flags
