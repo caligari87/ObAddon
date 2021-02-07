@@ -4,6 +4,8 @@ PREFABS.Lift_gtd_disguised_64 =
   map = "MAP01"
 
   prob = 10
+  prob_skew = 2
+
   style = "steepness"
   env = "building"
 

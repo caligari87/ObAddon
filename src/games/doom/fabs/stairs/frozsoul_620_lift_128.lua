@@ -3,6 +3,8 @@ PREFABS.lift_620_128 =
   file   = "stairs/frozsoul_620_lift_128.wad"
 
   prob   = 10
+  prob_skew = 1.5
+
   theme  = "!hell"
   style  = "steepness"
 

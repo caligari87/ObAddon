@@ -4,6 +4,8 @@ PREFABS.Stairs_128 =
   map    = "MAP01"
 
   prob   = 25
+  prob_skew = 3
+
   style  = "steepness"
 
   where  = "seeds"
