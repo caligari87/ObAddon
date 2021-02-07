@@ -6642,6 +6642,79 @@ GROW_36_CORNER_DIAMOND =
   }
 }
 
+GROW_36_HEXAGON_INSET =
+{
+  prob = 20
+  skip_prob = 50
+
+  structure =
+  {
+    "x....x","x1111x"
+    "x.....","x11/A%"
+    "......","111AAA"
+    "......","111AAA"
+    "......","111AAA"
+    "x.....","x11%A/"
+    "x....x","x1111x"
+  }
+
+  diagonals =
+  {
+    "1A","A."
+    "1A","A."
+  }
+}
+
+GROW_36_HEXAGON_INSET =
+{
+  prob = 12
+  skip_prob = 50
+
+  structure =
+  {
+    "x....x","x1111x"
+    "x.....","x11/A%"
+    "x.....","x11#AA"
+    "1.....","111AAA"
+    "1.....","111AAA"
+    "x.....","x11#AA"
+    "x.....","x11%A/"
+    "x....x","x1111x"
+  }
+
+  diagonals =
+  {
+    "1A","A."
+    "1A","A."
+  }
+}
+
+GROW_36_HEXAGON_INSET_MOAT =
+{
+  prob = 20
+  skip_prob = 75
+
+  structure =
+  {
+    "x....x","x1/~~x"
+    "x.....","x1~/A%"
+    "x.....","x1~#AA"
+    "1.....","11>AAA"
+    "1.....","11>AAA"
+    "x.....","x1~#AA"
+    "x.....","x1~%A/"
+    "x....x","x1%~~x"
+  }
+
+  diagonals =
+  {
+    "1~"
+    "~A","A."
+    "~A","A."
+    "1~"
+  }
+}
+
 -- [4x3_ALPHABET]
 
 GROW_3x_A =
