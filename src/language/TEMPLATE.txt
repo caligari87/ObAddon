@@ -1,23 +1,497 @@
-# Language Translation for ObAddon.
-# This file is put in the public domain.
-#
-#, fuzzy
-msgid   ""
-msgstr  "Project-Id-Version: Oblige Level Maker\n"
-        "Report-Msgid-Bugs-To: \n"
-        "POT-Creation-Date: 2016-05-09 23:41+1000\n"
-        "PO-Revision-Date: 2017-05-29 23:05+1000\n"
-        "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-        "Language-Team: LANGUAGE <LL@li.org>\n"
-        "Language: \n"
-        "MIME-Version: 1.0\n"
-        "Content-Type: text/plain; charset=CHARSET\n"
-        "Content-Transfer-Encoding: 8bit\n"
 
-# ###################################################################################################################################################################################### #
-# Comments by Dashodanger: One can automate this process for each time the code is changed with the following nightmarish one-liner (in Linux; run this from the ObAddon/src directory): #
-# grep -n -r -o "[_][(]\".*\"[)]" | sed -r {s/"^"/"#: "/} | sed -r {s/":_"/"\n"/} | sed -r {s/"\("/"msgid\t"/} | sed -r {s/"\)$"/"\nmsgstr\t\"\"\n"/} | sed -r {s/":$"/""/}              #
-# ###################################################################################################################################################################################### #
+#: gui/m_about.cc:189
+msgid	"About OBLIGE"
+msgstr	""
+
+#: gui/m_manage.cc:347
+msgid	"CURRENT SETTINGS"
+msgstr	""
+
+#: gui/m_manage.cc:363
+msgid	"Pick file to save to"
+msgstr	""
+
+#: gui/m_manage.cc:376
+#, c-format
+msgid	"Unable to save the file:\n\n%s"
+msgstr	""
+
+#: gui/m_manage.cc:409
+msgid	"Error writing to file."
+msgstr	""
+
+#: gui/m_manage.cc:411
+#, c-format
+msgid	"Unable to save the file:\n\n%s"
+msgstr	""
+
+#: gui/m_manage.cc:474
+msgid	"Select file to load"
+msgstr	""
+
+#: gui/m_manage.cc:496
+#, c-format
+msgid	"Unable to load the file:\n\n%s"
+msgstr	""
+
+#: gui/m_manage.cc:519
+#, c-format
+msgid	"Cannot open: %s\n\n%s"
+msgstr	""
+
+#: gui/m_manage.cc:527
+msgid	"No config found in file."
+msgstr	""
+
+#: gui/m_manage.cc:557
+msgid	"PASTED TEXT"
+msgstr	""
+
+#: gui/m_manage.cc:761
+msgid	"Load"
+msgstr	""
+
+#: gui/m_manage.cc:765
+msgid	"(can be WAD or PAK)"
+msgstr	""
+
+#: gui/m_manage.cc:769
+msgid	"Recent"
+msgstr	""
+
+#: gui/m_manage.cc:772
+msgid	"Save"
+msgstr	""
+
+#: gui/m_manage.cc:776
+msgid	"Use"
+msgstr	""
+
+#: gui/m_manage.cc:779
+msgid	"Note: this will replace\nall current settings!"
+msgstr	""
+
+#: gui/m_manage.cc:803
+msgid	" Clipboard Operations"
+msgstr	""
+
+#: gui/m_manage.cc:813
+msgid	"Cut"
+msgstr	""
+
+#: gui/m_manage.cc:820
+msgid	"Copy"
+msgstr	""
+
+#: gui/m_manage.cc:827
+msgid	"Paste"
+msgstr	""
+
+#: gui/m_manage.cc:858
+msgid	"OBLIGE Config Manager"
+msgstr	""
+
+#: gui/g_doom.cc:204
+#, c-format
+msgid	"Unable to create wad file:\n\n%s"
+msgstr	""
+
+#: gui/g_doom.cc:505
+msgid	"OK"
+msgstr	""
+
+#: gui/g_doom.cc:509
+msgid	"Bad Arguments"
+msgstr	""
+
+#: gui/g_doom.cc:513
+msgid	"Bad Args (fixed)"
+msgstr	""
+
+#: gui/g_doom.cc:516
+msgid	"Read Error"
+msgstr	""
+
+#: gui/g_doom.cc:517
+msgid	"Write Error"
+msgstr	""
+
+#: gui/g_doom.cc:521
+msgid	"Cancelled by User"
+msgstr	""
+
+#: gui/g_doom.cc:526
+msgid	"Unknown Error"
+msgstr	""
+
+#: gui/g_doom.cc:558
+#, c-format
+msgid	"glBSP Failure:\n%s"
+msgstr	""
+
+#: gui/g_doom.cc:600
+msgid	"Building nodes"
+msgstr	""
+
+#: gui/g_doom.cc:658
+msgid	"glBSP Error"
+msgstr	""
+
+#: gui/g_doom.cc:667
+msgid	"Cancelled"
+msgstr	""
+
+#: gui/g_doom.cc:677
+msgid	"glBSP Error"
+msgstr	""
+
+#: gui/g_doom.cc:728
+msgid	"Cancelled"
+msgstr	""
+
+#: gui/g_doom.cc:737
+msgid	"Error (create file)"
+msgstr	""
+
+#: gui/g_doom.cc:742
+msgid	"CSG"
+msgstr	""
+
+#: gui/m_options.cc:269
+msgid	"AUTO"
+msgstr	""
+
+#: gui/m_options.cc:380
+msgid	"Appearance"
+msgstr	""
+
+#: gui/m_options.cc:389
+msgid	"Language: "
+msgstr	""
+
+#: gui/m_options.cc:398
+msgid	"Font Size: "
+msgstr	""
+
+#: gui/m_options.cc:400
+msgid	"AUTO|Tiny|Small|Medium|Large|Huge"
+msgstr	""
+
+#: gui/m_options.cc:407
+msgid	" Alternate Look"
+msgstr	""
+
+#: gui/m_options.cc:414
+msgid	" Change Settings via Mouse Wheel"
+msgstr	""
+
+#: gui/m_options.cc:425
+msgid	"File Options"
+msgstr	""
+
+#: gui/m_options.cc:434
+msgid	" Create Backups"
+msgstr	""
+
+#: gui/m_options.cc:441
+msgid	" Overwrite File Warning"
+msgstr	""
+
+#: gui/m_options.cc:448
+msgid	" Debugging Messages"
+msgstr	""
+
+#: gui/m_options.cc:478
+msgid	"Note: some options require a restart."
+msgstr	""
+
+#: gui/m_options.cc:523
+msgid	"OBLIGE Misc Options"
+msgstr	""
+
+#: gui/m_lua.cc:599
+#, c-format
+msgid	"Making %s"
+msgstr	""
+
+#: gui/m_lua.cc:1070
+#, c-format
+msgid	"Script Error: %s"
+msgstr	""
+
+#: gui/m_lua.cc:1405
+msgid	"Script Error"
+msgstr	""
+
+#: gui/m_lua.cc:1417
+msgid	"Cancelled"
+msgstr	""
+
+#: gui/g_nukem.cc:498
+msgid	"Cancelled"
+msgstr	""
+
+#: gui/g_nukem.cc:507
+msgid	"Error (create file)"
+msgstr	""
+
+#: gui/g_nukem.cc:512
+msgid	"CSG"
+msgstr	""
+
+#: gui/m_dialog.cc:209
+msgid	"OBLIGE - Error Message"
+msgstr	""
+
+#: gui/m_dialog.cc:235
+msgid	"Select output file"
+msgstr	""
+
+#: gui/m_dialog.cc:260
+#, c-format
+msgid	"Unable to create the file:\n\n%s"
+msgstr	""
+
+#: gui/m_dialog.cc:323
+msgid	"Enter New Seed Number:"
+msgstr	""
+
+#: gui/m_dialog.cc:449
+msgid	"Save"
+msgstr	""
+
+#: gui/m_dialog.cc:455
+msgid	"Copy"
+msgstr	""
+
+#: gui/m_dialog.cc:610
+msgid	"Pick file to save to"
+msgstr	""
+
+#: gui/m_dialog.cc:620
+#, c-format
+msgid	"Unable to save the file:\n\n%s"
+msgstr	""
+
+#: gui/m_dialog.cc:647
+#, c-format
+msgid	"Unable to save the file:\n\n%s"
+msgstr	""
+
+#: gui/m_dialog.cc:662
+msgid	"OBLIGE Log Viewer"
+msgstr	""
+
+#: gui/g_quake.cc:1392
+msgid	"CSG"
+msgstr	""
+
+#: gui/g_quake.cc:1393
+msgid	"BSP"
+msgstr	""
+
+#: gui/g_quake.cc:1394
+msgid	"Vis"
+msgstr	""
+
+#: gui/g_quake.cc:1395
+msgid	"Light"
+msgstr	""
+
+#: gui/g_quake.cc:1396
+msgid	"Hull"
+msgstr	""
+
+#: gui/g_quake.cc:1452
+msgid	"Cancelled"
+msgstr	""
+
+#: gui/g_quake.cc:1461
+msgid	"Error (create file)"
+msgstr	""
+
+#: gui/main.cc:417
+msgid	"No"
+msgstr	""
+
+#: gui/main.cc:418
+msgid	"Yes"
+msgstr	""
+
+#: gui/main.cc:419
+msgid	"OK"
+msgstr	""
+
+#: gui/main.cc:420
+msgid	"Cancel"
+msgstr	""
+
+#: gui/main.cc:421
+msgid	"Close"
+msgstr	""
+
+#: gui/main.cc:618
+msgid	"Preparing..."
+msgstr	""
+
+#: gui/main.cc:643
+msgid	"Success"
+msgstr	""
+
+#: gui/main.cc:668
+msgid	"Cancelled"
+msgstr	""
+
+#: gui/main.cc:797
+#, c-format
+msgid	"No such config file: %s\n"
+msgstr	""
+
+#: gui/main.cc:847
+#, c-format
+msgid	"No such config file: %s\n"
+msgstr	""
+
+#: gui/main.cc:905
+#, c-format
+msgid	"Sorry, an internal error occurred:\n%s"
+msgstr	""
+
+#: gui/main.cc:909
+msgid	"An unknown problem occurred (UI code)"
+msgstr	""
+
+#: gui/g_quake3.cc:1345
+msgid	"Cancelled"
+msgstr	""
+
+#: gui/g_quake3.cc:1354
+msgid	"Error (create file)"
+msgstr	""
+
+#: gui/g_wolf.cc:393
+msgid	"Error (create file)"
+msgstr	""
+
+#: gui/g_wolf.cc:405
+msgid	"Error (create file)"
+msgstr	""
+
+#: gui/g_wolf.cc:451
+msgid	"Error (write file)"
+msgstr	""
+
+#: gui/m_trans.cc:53
+msgid	"AUTO"
+msgstr	""
+
+#: gui/g_quake2.cc:1127
+msgid	"Cancelled"
+msgstr	""
+
+#: gui/g_quake2.cc:1136
+msgid	"Error (create file)"
+msgstr	""
+
+#: gui/ui_game.cc:48
+msgid	"Game Settings"
+msgstr	""
+
+#: gui/ui_game.cc:62
+msgid	"Game: "
+msgstr	""
+
+#: gui/ui_game.cc:70
+msgid	"Engine: "
+msgstr	""
+
+#: gui/ui_game.cc:78
+msgid	"Length: "
+msgstr	""
+
+#: gui/ui_game.cc:86
+msgid	"Theme: "
+msgstr	""
+
+#: gui/m_addons.cc:453
+msgid	"List of Addons"
+msgstr	""
+
+#: gui/m_addons.cc:484
+msgid	"Changes require a restart"
+msgstr	""
+
+#: gui/m_addons.cc:606
+msgid	"OBLIGE Addons"
+msgstr	""
+
+#: gui/m_addons.cc:624
+msgid	"Changes to addons require a restart.\nOBLIGE will now close."
+msgstr	""
+
+#: gui/ui_build.cc:63
+msgid	"Menu"
+msgstr	""
+
+#: gui/ui_build.cc:66
+msgid	"About"
+msgstr	""
+
+#: gui/ui_build.cc:67
+msgid	"Options"
+msgstr	""
+
+#: gui/ui_build.cc:68
+msgid	"Addon List"
+msgstr	""
+
+#: gui/ui_build.cc:69
+msgid	"Set Seed"
+msgstr	""
+
+#: gui/ui_build.cc:70
+msgid	"View Logs"
+msgstr	""
+
+#: gui/ui_build.cc:71
+msgid	"Config Manager"
+msgstr	""
+
+#: gui/ui_build.cc:77
+msgid	"Build"
+msgstr	""
+
+#: gui/ui_build.cc:86
+msgid	"Quit"
+msgstr	""
+
+#: gui/ui_build.cc:98
+msgid	"Ready to go!"
+msgstr	""
+
+#: gui/ui_build.cc:181
+msgid	"Plan"
+msgstr	""
+
+#: gui/ui_build.cc:257
+msgid	"Cancel"
+msgstr	""
+
+#: gui/ui_build.cc:267
+msgid	"Quit"
+msgstr	""
+
+#: gui/ui_build.cc:283
+msgid	"Plan"
+msgstr	""
+
+#: gui/ui_build.cc:284
+msgid	"Rooms"
+msgstr	""
+
+#: gui/ui_build.cc:285
+msgid	"Mons"
+msgstr	""
 
 #: modules/hexen/miscellaneous.lua:25
 msgid	"No"
@@ -643,6 +1117,78 @@ msgstr	""
 msgid	"Exit type"
 msgstr	""
 
+#: modules/ctl_heretic.lua:23
+msgid	"DEFAULT"
+msgstr	""
+
+#: modules/ctl_heretic.lua:24
+msgid	"None at all"
+msgstr	""
+
+#: modules/ctl_heretic.lua:25
+msgid	"Scarce"
+msgstr	""
+
+#: modules/ctl_heretic.lua:26
+msgid	"Less"
+msgstr	""
+
+#: modules/ctl_heretic.lua:27
+msgid	"Plenty"
+msgstr	""
+
+#: modules/ctl_heretic.lua:28
+msgid	"More"
+msgstr	""
+
+#: modules/ctl_heretic.lua:29
+msgid	"Heaps"
+msgstr	""
+
+#: modules/ctl_heretic.lua:30
+msgid	"INSANE"
+msgstr	""
+
+#: modules/ctl_heretic.lua:83
+msgid	"Heretic Monster Control"
+msgstr	""
+
+#: modules/ctl_heretic.lua:121
+msgid	"DEFAULT"
+msgstr	""
+
+#: modules/ctl_heretic.lua:122
+msgid	"None at all"
+msgstr	""
+
+#: modules/ctl_heretic.lua:123
+msgid	"Scarce"
+msgstr	""
+
+#: modules/ctl_heretic.lua:124
+msgid	"Less"
+msgstr	""
+
+#: modules/ctl_heretic.lua:125
+msgid	"Plenty"
+msgstr	""
+
+#: modules/ctl_heretic.lua:126
+msgid	"More"
+msgstr	""
+
+#: modules/ctl_heretic.lua:127
+msgid	"Heaps"
+msgstr	""
+
+#: modules/ctl_heretic.lua:128
+msgid	"I LOVE IT"
+msgstr	""
+
+#: modules/ctl_heretic.lua:171
+msgid	"Heretic Weapon Control"
+msgstr	""
+
 #: modules/music_swap.lua:115
 msgid	"Music Swapper"
 msgstr	""
@@ -945,6 +1491,10 @@ msgstr	""
 
 #: modules/modded_game_extras.lua:1052
 msgid	"D4T Entities"
+msgstr	""
+
+#: modules/export_map.lua:266
+msgid	"Export .MAP files"
 msgstr	""
 
 #: modules/ui_mons.lua:25
@@ -1995,6 +2545,78 @@ msgstr	""
 msgid	"Ideal if you have a music WAD replacing all tracks in the game. A note if you are using the ZDoom Specials Shuffle Music option, there is no need to use this module. This is ideal for non-ZDoom ports only."
 msgstr	""
 
+#: modules/ctl_quake.lua:23
+msgid	"DEFAULT"
+msgstr	""
+
+#: modules/ctl_quake.lua:24
+msgid	"None at all"
+msgstr	""
+
+#: modules/ctl_quake.lua:25
+msgid	"Scarce"
+msgstr	""
+
+#: modules/ctl_quake.lua:26
+msgid	"Less"
+msgstr	""
+
+#: modules/ctl_quake.lua:27
+msgid	"Plenty"
+msgstr	""
+
+#: modules/ctl_quake.lua:28
+msgid	"More"
+msgstr	""
+
+#: modules/ctl_quake.lua:29
+msgid	"Heaps"
+msgstr	""
+
+#: modules/ctl_quake.lua:30
+msgid	"INSANE"
+msgstr	""
+
+#: modules/ctl_quake.lua:78
+msgid	"Quake Monster Control"
+msgstr	""
+
+#: modules/ctl_quake.lua:113
+msgid	"DEFAULT"
+msgstr	""
+
+#: modules/ctl_quake.lua:114
+msgid	"None at all"
+msgstr	""
+
+#: modules/ctl_quake.lua:115
+msgid	"Scarce"
+msgstr	""
+
+#: modules/ctl_quake.lua:116
+msgid	"Less"
+msgstr	""
+
+#: modules/ctl_quake.lua:117
+msgid	"Plenty"
+msgstr	""
+
+#: modules/ctl_quake.lua:118
+msgid	"More"
+msgstr	""
+
+#: modules/ctl_quake.lua:119
+msgid	"Heaps"
+msgstr	""
+
+#: modules/ctl_quake.lua:120
+msgid	"I LOVE IT"
+msgstr	""
+
+#: modules/ctl_quake.lua:163
+msgid	"Quake Weapon Control"
+msgstr	""
+
 #: modules/miscellaneous.lua:25
 msgid	"No"
 msgstr	""
@@ -2689,6 +3311,78 @@ msgstr	""
 
 #: modules/strife/miscellaneous.lua:329
 msgid	"Lakes"
+msgstr	""
+
+#: modules/ctl_quake2.lua:23
+msgid	"DEFAULT"
+msgstr	""
+
+#: modules/ctl_quake2.lua:24
+msgid	"None at all"
+msgstr	""
+
+#: modules/ctl_quake2.lua:25
+msgid	"Scarce"
+msgstr	""
+
+#: modules/ctl_quake2.lua:26
+msgid	"Less"
+msgstr	""
+
+#: modules/ctl_quake2.lua:27
+msgid	"Plenty"
+msgstr	""
+
+#: modules/ctl_quake2.lua:28
+msgid	"More"
+msgstr	""
+
+#: modules/ctl_quake2.lua:29
+msgid	"Heaps"
+msgstr	""
+
+#: modules/ctl_quake2.lua:30
+msgid	"INSANE"
+msgstr	""
+
+#: modules/ctl_quake2.lua:75
+msgid	"Quake2 Monster Control"
+msgstr	""
+
+#: modules/ctl_quake2.lua:121
+msgid	"DEFAULT"
+msgstr	""
+
+#: modules/ctl_quake2.lua:122
+msgid	"None at all"
+msgstr	""
+
+#: modules/ctl_quake2.lua:123
+msgid	"Scarce"
+msgstr	""
+
+#: modules/ctl_quake2.lua:124
+msgid	"Less"
+msgstr	""
+
+#: modules/ctl_quake2.lua:125
+msgid	"Plenty"
+msgstr	""
+
+#: modules/ctl_quake2.lua:126
+msgid	"More"
+msgstr	""
+
+#: modules/ctl_quake2.lua:127
+msgid	"Heaps"
+msgstr	""
+
+#: modules/ctl_quake2.lua:128
+msgid	"I LOVE IT"
+msgstr	""
+
+#: modules/ctl_quake2.lua:171
+msgid	"Quake2 Weapon Control"
 msgstr	""
 
 #: modules/zdoom_specials.lua:25
@@ -3871,6 +4565,110 @@ msgstr	""
 msgid	"ZDoom 3D Skybox"
 msgstr	""
 
+#: modules/stealth_mons.lua:229
+msgid	"Normal"
+msgstr	""
+
+#: modules/stealth_mons.lua:230
+msgid	"Less"
+msgstr	""
+
+#: modules/stealth_mons.lua:231
+msgid	"More"
+msgstr	""
+
+#: modules/stealth_mons.lua:262
+msgid	"Stealth Monsters"
+msgstr	""
+
+#: modules/stealth_mons.lua:282
+msgid	"Default Quantity"
+msgstr	""
+
+#: modules/stealth_mons.lua:294
+msgid	"DEFAULT"
+msgstr	""
+
+#: modules/stealth_mons.lua:295
+msgid	"None at all"
+msgstr	""
+
+#: modules/stealth_mons.lua:296
+msgid	"Scarce"
+msgstr	""
+
+#: modules/stealth_mons.lua:297
+msgid	"Less"
+msgstr	""
+
+#: modules/stealth_mons.lua:298
+msgid	"Plenty"
+msgstr	""
+
+#: modules/stealth_mons.lua:299
+msgid	"More"
+msgstr	""
+
+#: modules/stealth_mons.lua:300
+msgid	"Heaps"
+msgstr	""
+
+#: modules/stealth_mons.lua:301
+msgid	"INSANE"
+msgstr	""
+
+#: modules/stealth_mons.lua:335
+msgid	"Stealth Monsters : Control"
+msgstr	""
+
+#: modules/stealth_mons.lua:346
+msgid	"Zombieman"
+msgstr	""
+
+#: modules/stealth_mons.lua:347
+msgid	"Shotgun Guy"
+msgstr	""
+
+#: modules/stealth_mons.lua:348
+msgid	"Imp"
+msgstr	""
+
+#: modules/stealth_mons.lua:349
+msgid	"Demon"
+msgstr	""
+
+#: modules/stealth_mons.lua:350
+msgid	"Cacodemon"
+msgstr	""
+
+#: modules/stealth_mons.lua:351
+msgid	"Baron of Hell"
+msgstr	""
+
+#: modules/stealth_mons.lua:353
+msgid	"Chaingunner"
+msgstr	""
+
+#: modules/stealth_mons.lua:354
+msgid	"Hell Knight"
+msgstr	""
+
+#: modules/stealth_mons.lua:355
+msgid	"Revenant"
+msgstr	""
+
+#: modules/stealth_mons.lua:356
+msgid	"Mancubus"
+msgstr	""
+
+#: modules/stealth_mons.lua:357
+msgid	"Arachnotron"
+msgstr	""
+
+#: modules/stealth_mons.lua:358
+msgid	"Arch-vile"
+msgstr	""
+
 #: modules/heretic/prefab_controller.lua:24
 msgid	"DEFAULT"
 msgstr	""
@@ -4691,6 +5489,18 @@ msgstr	""
 msgid	"Hexen"
 msgstr	""
 
+#: games/quake/themes.lua:263
+msgid	"Tech"
+msgstr	""
+
+#: games/quake/themes.lua:272
+msgid	"Castle"
+msgstr	""
+
+#: games/quake/base.lua:76
+msgid	"Quake"
+msgstr	""
+
 #: games/doom/x_tnt.lua:466
 msgid	"TNT Evilution"
 msgstr	""
@@ -4765,6 +5575,10 @@ msgstr	""
 
 #: games/heretic/base.lua:43
 msgid	"Heretic"
+msgstr	""
+
+#: engines/boom.lua:165
+msgid	"BOOM Compat"
 msgstr	""
 
 #: engines/zdoom.lua:50
