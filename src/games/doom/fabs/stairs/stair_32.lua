@@ -8,6 +8,8 @@ PREFABS.Stair_32 =
 
   map    = "MAP01"
   prob   = 90
+  prob_skew = 3
+
   theme  = "!hell"
 
   where  = "seeds"

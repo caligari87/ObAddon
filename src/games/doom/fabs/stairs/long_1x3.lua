@@ -7,6 +7,8 @@ PREFABS.Stair_long_1x3 =
   file   = "stairs/long_1x3.wad"
 
   prob   = 110 --90
+  prob_skew = 3
+
   theme  = "!hell"
   map    = "MAP01"
 

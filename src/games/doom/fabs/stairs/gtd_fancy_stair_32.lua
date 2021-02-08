@@ -4,6 +4,8 @@ PREFABS.Stair_fancy_32_brown =
   map = "MAP01"
 
   prob = 10
+  prob_skew = 3
+
   style = "steepness"
 
   where = "seeds"

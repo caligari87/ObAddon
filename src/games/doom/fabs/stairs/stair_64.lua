@@ -22,6 +22,8 @@ PREFABS.Stair_64_red =
 
   map   = "MAP01"
   prob  = 0
+  prob_skew = 3
+
   theme = "urban"
 
   where  = "seeds"
