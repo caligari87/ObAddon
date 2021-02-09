@@ -22,19 +22,3 @@ PREFABS.Exit_closet1 =
 
 
 ----------------------------------------------------------------------
-
-PREFABS.Exit_closet1_secret =
-{
-  template = "Exit_closet1"
-
-  kind = "secret_exit"
-
-  -- replace normal exit special with "exit to secret" special
-  line_11 = 51
-
-  -- retexture to a red color
-  tex_METL2 = "REDWALL"
-  flat_FLAT502 = "FLOOR09"
-  flat_FLOOR30 = "FLOOR09"
-}
-
