@@ -259,7 +259,7 @@ DOOM.MATERIALS =
   CEIL1_3  = { f="CEIL1_3", t="WOOD1" }
   CEIL3_1  = { f="CEIL3_1", t="STARBR2" }
   CEIL3_2  = { f="CEIL3_2", t="STARTAN2" }
-  CEIL3_3  = { f="CEIL3_3", t="STARTAN2" }
+  CEIL3_3  = { f="CEIL3_3", t="BROWN1" }
   CEIL3_4  = { f="CEIL3_4", t="STARTAN2" }
   CEIL3_5  = { f="CEIL3_5", t="STONE2" }
   CEIL3_6  = { f="CEIL3_6", t="STONE2" }
@@ -280,7 +280,7 @@ DOOM.MATERIALS =
   DEM1_3   = { f="DEM1_3", t="MARBLE1" }
   DEM1_4   = { f="DEM1_4", t="MARBLE1" }
   DEM1_5   = { f="DEM1_5", t="MARBLE1" }
-  DEM1_6   = { f="DEM1_6", t="MARBLE1" }
+  DEM1_6   = { f="DEM1_6", t="MARBLE2" }
 
   FLAT1    = { f="FLAT1",   t="GRAY1" }
   FLAT2    = { f="FLAT2",   t="GRAY1" }
@@ -289,7 +289,7 @@ DOOM.MATERIALS =
 
   FLAT5    = { f="FLAT5",   t="BROWNHUG" }
   FLAT5_1  = { f="FLAT5_1", t="WOOD1" }
-  FLAT5_2  = { f="FLAT5_2", t="WOOD1" }
+  FLAT5_2  = { f="FLAT5_2", t="WOOD12" }
   FLAT5_3  = { f="FLAT5_3", t="REDWALL" }
   FLAT5_4  = { f="FLAT5_4", t="STONE" }
   FLAT5_6  = { f="FLAT5_6", t="CRACKLE4" }
@@ -298,31 +298,31 @@ DOOM.MATERIALS =
   FLAT9    = { f="FLAT9",  t="GRAY4" }
   FLAT14   = { f="FLAT14", t="COMPBLUE" }
   FLAT17   = { f="FLAT17", t="GRAY1" }
-  FLAT18   = { f="FLAT18", t="GRAY1" }
+  FLAT18   = { f="FLAT18", t="SILVER1" }
   FLAT19   = { f="FLAT19", t="GRAY1" }
-  FLAT20   = { f="FLAT20", t="SHAWN2" }
+  FLAT20   = { f="FLAT20", t="SILVER1" }
   FLAT22   = { f="FLAT22", t="SHAWN2" }
   FLAT23   = { f="FLAT23", t="SHAWN2" }
 
   FLOOR0_1 = { f="FLOOR0_1", t="STARTAN2" }
   FLOOR0_2 = { f="FLOOR0_2", t="STARBR2" }
   FLOOR0_3 = { f="FLOOR0_3", t="GRAY1" }
-  FLOOR0_5 = { f="FLOOR0_5", t="GRAY1" }
-  FLOOR0_6 = { f="FLOOR0_6", t="GRAY1" }
-  FLOOR0_7 = { f="FLOOR0_7", t="GRAY1" }
+  FLOOR0_5 = { f="FLOOR0_5", t="GRAY4" }
+  FLOOR0_6 = { f="FLOOR0_6", t="GRAY5" }
+  FLOOR0_7 = { f="FLOOR0_7", t="GRAY7" }
   FLOOR1_1 = { f="FLOOR1_1", t="COMPBLUE" }
   FLOOR1_6 = { f="FLOOR1_6", t="REDWALL" }
   FLOOR1_7 = { f="FLOOR1_7", t="REDWALL" }
   FLOOR3_3 = { f="FLOOR3_3", t="BROWN1" }
 
   FLOOR4_1 = { f="FLOOR4_1", t="STARTAN2" }
-  FLOOR4_5 = { f="FLOOR4_5", t="STARTAN2" }
-  FLOOR4_6 = { f="FLOOR4_6", t="STARTAN2" }
+  FLOOR4_5 = { f="FLOOR4_5", t="BRONZE1" }
+  FLOOR4_6 = { f="FLOOR4_6", t="BRONZE3" }
   FLOOR4_8 = { f="FLOOR4_8", t="METAL1" }
   FLOOR5_1 = { f="FLOOR5_1", t="METAL1" }
   FLOOR5_2 = { f="FLOOR5_2", t="BROWNHUG" }
-  FLOOR5_3 = { f="FLOOR5_3", t="BROWNHUG" }
-  FLOOR5_4 = { f="FLOOR5_4", t="BROWNHUG" }
+  FLOOR5_3 = { f="FLOOR5_3", t="BROWN1" }
+  FLOOR5_4 = { f="FLOOR5_4", t="STARTAN2" }
   FLOOR6_1 = { f="FLOOR6_1", t="REDWALL" }
   FLOOR7_1 = { f="FLOOR7_1", t="BROWNHUG" }
   FLOOR7_2 = { f="FLOOR7_2", t="MARBLE1" }
