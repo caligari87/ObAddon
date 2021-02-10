@@ -114,7 +114,7 @@ MISC_STUFF.ROOM_SIZE_MULTIPLIER_CHOICES =
   "6", _("x6"),
   "8", _("x8"),
   "vanilla", _("Vanilla"),
-  "mixed", _("A Bit Mixed")
+  "mixed", _("Mix It Up")
 }
 
 MISC_STUFF.AREA_COUNT_MULTIPLIER_CHOICES =
@@ -127,14 +127,14 @@ MISC_STUFF.AREA_COUNT_MULTIPLIER_CHOICES =
   "2", _("x2"),
   "4", _("x4"),
   "vanilla", _("Vanilla"),
-  "mixed", _("A Bit Mixed")
+  "mixed", _("Mix It Up")
 }
 
 MISC_STUFF.ROOM_SIZE_CONSISTENCY_CHOICES =
 {
   "normal", _("Vanilla"),
   "strict", _("Strict"),
-  "mixed", _("A Bit Mixed")
+  "mixed", _("Mix It Up")
 }
 
 function MISC_STUFF.setup(self)
@@ -216,7 +216,7 @@ OB_MODULES["misc"] =
       default = "mixed"
       tooltip = "Alters the general size and ground coverage of rooms.\n\n" ..
         "Vanilla: No room size multipliers.\n\n" ..
-        "A Bit Mixed: All multiplier ranges are randomly used with highest and lowest multipliers being rarest."
+        "Mix It Up: All multiplier ranges are randomly used with highest and lowest multipliers being rarest."
     }
     { 
       name="room_area_multiplier", label=_("Area Count Multiplier")
@@ -225,7 +225,7 @@ OB_MODULES["misc"] =
       tooltip = "Alters the amount of areas in a room. Influences the amount rooms are divided into different elevations or "..
         "simply different ceilings if a level has no steepness.\n\n" ..
         "Vanilla: No area quantity multipliers.\n\n" ..
-        "A Bit Mixed: All multiplier ranges are randomly used with highest and lowest multipliers being rarest."
+        "Mix It Up: All multiplier ranges are randomly used with highest and lowest multipliers being rarest."
     }
     { 
       name="room_size_consistency", label=_("Size Consistency")
@@ -235,7 +235,7 @@ OB_MODULES["misc"] =
         "Can be paired with above choices for more enforced results.\n\n" ..
         "Vanilla: Original behavior. Rooms in a level have vary in size from each other. Big Rooms options are respected.\n\n" ..
         "Stict: All rooms in the level have a single set size/coverage.\n\n" ..
-        "A Bit Mixed: A mixture of 75% Vanilla, 25% Strict."
+        "Mix It Up: A mixture of 75% Vanilla, 25% Strict."
       gap = 1
     }
 
