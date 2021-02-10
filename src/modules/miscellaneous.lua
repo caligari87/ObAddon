@@ -101,6 +101,54 @@ MISC_STUFF.LINEAR_START_CHOICES =
   "default", _("DEFAULT"),
 }
 
+MISC_STUFF.ROOM_SIZE_MULTIPLIER_CHOICES =
+{
+  "0.25", _("x0.25"),
+  "0.5", _("x0.5"),
+  "0.75", _("x0.75"),
+  "1", _("x1"),
+  "1.25", _("x1.25"),
+  "1.5", _("x1.5"),
+  "2", _("x2"),
+  "4", _("x4"),
+  "6", _("x6"),
+  "8", _("x8"),
+  "vanilla", _("Vanilla"),
+  "mixed", _("A Bit Mixed")
+}
+
+MISC_STUFF.AREA_COUNT_MULTIPLIER_CHOICES =
+{
+  "0.15", _("x0.15"),
+  "0.5", _("x0.5"),
+  "0.75", _("x0.75"),
+  "1", _("x1"),
+  "1.5", _("x1.5"),
+  "2", _("x2"),
+  "4", _("x4"),
+  "vanilla", _("Vanilla"),
+  "mixed", _("A Bit Mixed")
+}
+
+MISC_STUFF.ROOM_SIZE_CONSISTENCY_CHOICES =
+{
+  "normal", _("Vanilla"),
+  "strict", _("Strict"),
+  "mixed", _("A Bit Mixed")
+}
+
+function MISC_STUFF.setup(self)
+  -- these parameters have to be instantiated in this hook
+  -- because begin_level happens *after* level size decisions
+  each opt in self.options do
+    if opt.name == "room_size_multiplier" or
+    opt.name == "room_area_multiplier" or
+    opt.name == "room_size_consistency" then
+      PARAM[opt.name] = opt.value
+    end
+  end
+end
+
 function MISC_STUFF.begin_level(self)
   each opt in self.options do
     local name  = assert(opt.name)
@@ -135,6 +183,7 @@ OB_MODULES["misc"] =
 
   hooks =
   {
+    setup = MISC_STUFF.setup
     begin_level = MISC_STUFF.begin_level
   }
 
@@ -159,6 +208,35 @@ OB_MODULES["misc"] =
       tooltip = "Gets exit room theme to follow the theme of the next level, if different."
       default = "yes"
       gap=1
+    }
+
+    { 
+      name="room_size_multiplier", label=_("Room Size Multiplier")
+      choices = MISC_STUFF.ROOM_SIZE_MULTIPLIER_CHOICES
+      default = "mixed"
+      tooltip = "Alters the general size and ground coverage of rooms.\n\n" ..
+        "Vanilla: No room size multipliers.\n\n" ..
+        "A Bit Mixed: All multiplier ranges are randomly used with highest and lowest multipliers being rarest."
+    }
+    { 
+      name="room_area_multiplier", label=_("Area Count Multiplier")
+      choices = MISC_STUFF.AREA_COUNT_MULTIPLIER_CHOICES
+      default = "mixed"
+      tooltip = "Alters the amount of areas in a room. Influences the amount rooms are divided into different elevations or "..
+        "simply different ceilings if a level has no steepness.\n\n" ..
+        "Vanilla: No area quantity multipliers.\n\n" ..
+        "A Bit Mixed: All multiplier ranges are randomly used with highest and lowest multipliers being rarest."
+    }
+    { 
+      name="room_size_consistency", label=_("Size Consistency")
+      choices = MISC_STUFF.ROOM_SIZE_CONSISTENCY_CHOICES
+      default = "mixed"
+      tooltip = "Changes whether rooms follow a strict single size or not. " ..
+        "Can be paired with above choices for more enforced results.\n\n" ..
+        "Vanilla: Original behavior. Rooms in a level have vary in size from each other. Big Rooms options are respected.\n\n" ..
+        "Stict: All rooms in the level have a single set size/coverage.\n\n" ..
+        "A Bit Mixed: A mixture of 75% Vanilla, 25% Strict."
+      gap = 1
     }
 
     { name="big_rooms",   label=_("Big Rooms"),      choices=STYLE_CHOICES }

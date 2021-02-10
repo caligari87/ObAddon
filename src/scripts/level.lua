@@ -332,49 +332,67 @@ function Episode_determine_map_sizes()
     LEV.map_H = H
 
     -- part of the experimental size multiplier experiments
-    if not PARAM.experimental_size_variance
-    or PARAM.experimental_size_variance == "more" then
-      LEV.size_multiplier = rand.key_by_probs(
-        {
-          [0.25] = 1
-          [0.5] = 2
-          [0.75] = 3
-          [1] = 3
-          [1.25] = 3
-          [1.5] = 2
-          [2] = 2
-          [4] = 1.5
-          [6] = 1
-          [8] = 1
-        }
-      )
-
-      LEV.area_multiplier = rand.key_by_probs(
-        {
-          [0.15] = 1
-          [0.5] = 2
-          [0.75] = 2
-          [1] = 3
-          [1.5] = 2
-          [2] = 2
-          [4] = 1
-        }
-      )
-
-      LEV.size_consistency = rand.key_by_probs(
-        {
-          strict = 25
-          normal = 75
-        }
-      )
-
-      gui.printf(
-        "exp_size_multiplier: " .. LEV.size_multiplier .. "\n" ..
-        "exp_area_multiplier: " .. LEV.area_multiplier .. "\n" ..
-        "exp_size_consistency: " .. LEV.size_consistency .. "\n\n"
-      )
-
+    LEV.size_multiplier = 1
+    LEV.area_multiplier = 1
+    LEV.size_consistency = "normal"
+  
+    if PARAM.room_size_multiplier then
+      if PARAM.room_size_multiplier == "mixed" then
+        LEV.size_multiplier = rand.key_by_probs(
+          {
+            [0.25] = 1
+            [0.5] = 2
+            [0.75] = 3
+            [1] = 3
+            [1.25] = 3
+            [1.5] = 2
+            [2] = 2
+            [4] = 1.5
+            [6] = 1
+            [8] = 1
+          }
+        )
+      elseif PARAM.room_size_multiplier != "vanilla" then
+        LEV.size_multiplier = tonumber(PARAM.room_size_multiplier)
+      end
     end
+
+    if PARAM.room_area_multiplier then
+      if PARAM.room_area_multiplier == "mixed" then
+        LEV.area_multiplier = rand.key_by_probs(
+          {
+            [0.15] = 1
+            [0.5] = 2
+            [0.75] = 2
+            [1] = 3
+            [1.5] = 2
+            [2] = 2
+            [4] = 1
+          }
+        )
+      elseif PARAM.room_size_multiplier != "vanilla" then
+        LEV.area_multiplier = tonumber(PARAM.room_area_multiplier)
+      end
+    end
+
+    if PARAM.room_size_consistency then
+      if PARAM.room_size_consistency == "mixed" then
+        LEV.size_consistency = rand.key_by_probs(
+          {
+            strict = 25
+            normal = 75
+          }
+        )
+      else 
+        LEV.size_consistency = PARAM.room_size_consistency
+      end
+    end
+
+    gui.printf(
+      "size_multiplier: " .. LEV.size_multiplier .. "\n" ..
+      "area_multiplier: " .. LEV.area_multiplier .. "\n" ..
+      "size_consistency: " .. LEV.size_consistency .. "\n\n"
+    )
   end
 end
 
