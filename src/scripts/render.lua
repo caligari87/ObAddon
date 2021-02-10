@@ -266,7 +266,7 @@ function Render_edge(E)
 
       -- don't allow more than one wall that's not flat enough
       -- on the same seed
-      if E.wall_depth and E.wall_depth > 16 then
+      if E.S.wall_depth and E.S.wall_depth > 16 then
         reqs.deep = 16
       end
 
