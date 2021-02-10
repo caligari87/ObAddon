@@ -12,3 +12,17 @@ PREFABS.Hallway_mineshaft_u =
   seed_h = 1
   seed_w = 1
 }
+
+PREFABS.Hallway_mineshaft_u_cave_in =
+{
+  template = "Hallway_mineshaft_u"
+  map = "MAP02"
+}
+
+PREFABS.Hallway_mineshaft_u_dig =
+{
+  template = "Hallway_mineshaft_u"
+  map = "MAP03"
+
+  prob = 25
+}

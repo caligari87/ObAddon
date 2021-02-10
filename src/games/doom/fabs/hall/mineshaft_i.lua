@@ -38,3 +38,23 @@ PREFABS.Hallway_mineshaft_irise1=
 
   can_flip = true
 }
+
+PREFABS.Hallway_mineshaft_i_collapse =
+{
+  template = "Hallway_mineshaft_i1"
+  map = "MAP05"
+
+  prob = 35
+
+  can_flip = true
+}
+
+PREFABS.Hallway_mineshaft_i_collapse2 =
+{
+  template = "Hallway_mineshaft_i1"
+  map = "MAP06"
+
+  prob = 35
+
+  can_flip = true
+}
