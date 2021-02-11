@@ -104,6 +104,18 @@ function ScriptMan_assemble_mapinfo_lump()
   end
 end
 
+function ScriptMan_assemble_trnslate_lump()
+  local trnslate_lines = ""
+
+  if PARAM.MARINETRNSLATE then
+    trnslate_lines = trnslate_lines .. PARAM.MARINETRNSLATE .. "\n"
+  end
+
+  if trnslate_lines != "" then
+    add_script_lump("TRNSLATE", trnslate_lines)
+  end
+end
+
 
 function ScriptMan_assemble_zscript_lump()
   local zscript_lines = ""
@@ -292,6 +304,7 @@ function ScriptMan_init()
   ScriptMan_assemble_gldefs_lump()
   ScriptMan_assemble_sndinfo_lump()
   ScriptMan_assemble_mapinfo_lump()
+  ScriptMan_assemble_trnslate_lump()
   ScriptMan_assemble_language_lump()
   ScriptMan_assemble_acs_loader_lump()
   ScriptMan_assemble_textures_lump()
