@@ -2227,7 +2227,7 @@ stderrf("Cages in %s [%s pressure] --> any_prob=%d  per_prob=%d\n",
 
 
   local function pick_decorative_bling(R)
-    local decor_prob
+    local decor_prob = rand.pick({ 20, 55, 90 })
 
     local decor_prob_tab =
     {
@@ -2238,15 +2238,8 @@ stderrf("Cages in %s [%s pressure] --> any_prob=%d  per_prob=%d\n",
       fab_none = 0
     }
 
-    decor_prob = rand.pick({ 20, 55, 90 })
-
     if PARAM.point_prob and PARAM.point_prob != "fab_default" then
       decor_prob = decor_prob_tab[PARAM.point_prob]
-    end
-
-    -- give a small boost if it's a big room
-    if R.is_big then
-      decor_prob = math.clamp(0, decor_prob * 1.5, 100)
     end
 
     decor_prob = math.clamp(0, decor_prob / (LEVEL.autodetail_group_walls_factor / 2), 100)
