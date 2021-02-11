@@ -234,7 +234,7 @@ OB_MODULES["misc"] =
       tooltip = "Changes whether rooms follow a strict single size or not. " ..
         "Can be paired with above choices for more enforced results.\n\n" ..
         "Vanilla: Original behavior. Rooms in a level have vary in size from each other. Big Rooms options are respected.\n\n" ..
-        "Stict: All rooms in the level have a single set size/coverage.\n\n" ..
+        "Strict: All rooms in the level have a single set size/coverage.\n\n" ..
         "Mix It Up: A mixture of 75% Vanilla, 25% Strict."
       gap = 1
     }
