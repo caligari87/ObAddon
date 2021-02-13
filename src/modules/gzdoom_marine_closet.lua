@@ -199,11 +199,11 @@ class AIMarine : Actor
         PLAY MLKJIH 5;
         Goto See;
     }
-	override void PostBeginPlay()
-	{
-		super.PostBeginPlay();
-		MTRANSLATE
-	}
+    override void PostBeginPlay()
+    {
+        super.PostBeginPlay();
+        MTRANSLATE
+    }
     override void Tick()
     {
         super.Tick();
@@ -1269,7 +1269,7 @@ class BFGBallAIMarine : BFGBall
   ]]
   FFX = [[if(inflictor && ((inflictor.bISMONSTER && inflictor.bFriendly) || (!inflictor.bISMONSTER && inflictor.target && inflictor.target is "AIMarine" && !(inflictor is "ExplosiveBarrel"))))
   {
-	return 0;
+    return 0;
   }
   ]]
 }
@@ -1465,7 +1465,7 @@ function MARINE_CLOSET_TUNE.all_done()
     scripty = string.gsub(scripty, "\"Rocket\"", "\"RocketAIMarine\"")
     scripty = string.gsub(scripty, "\"BFGBall\"", "\"BFGBallAIMarine\"")
   end
-  
+
   if PARAM.m_c_ff == "no2" then
     scripty = string.gsub(scripty, "MFRIENDLYFIREX", MARINE_CLOSET_TUNE.TEMPLATES.FFX)
   else
@@ -1475,7 +1475,7 @@ function MARINE_CLOSET_TUNE.all_done()
   if PARAM.m_c_sprites == "yes1" then
     gui.wad_merge_sections("modules/zdoom_internal_scripts/AISprite.wad")
   end
-  
+
   if PARAM.m_c_color == "MarAI1" then
     scripty = string.gsub(scripty, "MTRANSLATE", "")
   elseif PARAM.m_c_color == "rng" then
@@ -1484,12 +1484,12 @@ function MARINE_CLOSET_TUNE.all_done()
     scripty = string.gsub(scripty, "MTRANSLATE", MARINE_CLOSET_TUNE.TEMPLATES.TRANSL3)
   else
     scripty = string.gsub(scripty, "MTRANSLATE", MARINE_CLOSET_TUNE.TEMPLATES.TRANSL)
-	scripty = string.gsub(scripty, "MTRANSDEF", "\"" .. PARAM.m_c_color .. "\"")
+    scripty = string.gsub(scripty, "MTRANSDEF", "\"" .. PARAM.m_c_color .. "\"")
   end
 
   PARAM.MARINESCRIPT = PARAM.MARINESCRIPT .. scripty
   PARAM.MARINEMAPINFO = MARINE_CLOSET_TUNE.MAPINFO
-  
+
   if PARAM.m_c_color != "MarAI1" then
     PARAM.MARINETRNSLATE = MARINE_CLOSET_TUNE.TRNSLATE
   end
@@ -1684,7 +1684,7 @@ OB_MODULES["gzdoom_marine_closets"] =
       default = "no",
       tooltip = "By default marines do no damage to player. However that means their use their own version of puffs and projectiles.\n" ..
       "If this is enabled marines can damage player and original puffs and projectiles are used making them affected by mods that replace those.\n"..
-	  "Additionally if self damage variant is chosen marines can still get hurt by exploding barrels and such",
+      "Additionally if self damage variant is chosen marines can still get hurt by exploding barrels and such",
     }
     m_c_sprites =
     {
@@ -1697,7 +1697,7 @@ OB_MODULES["gzdoom_marine_closets"] =
       "If this is enabled, marines will use special sprites according to weapon they carry.\n" ..
       "With merge option sprites will be merged into oblige wad, otherwise they need to be loaded separately.",
     }
-	m_c_boss =
+    m_c_boss =
     {
       name = "m_c_boss",
       label = _("Allow in Gotchas"),
@@ -1706,7 +1706,7 @@ OB_MODULES["gzdoom_marine_closets"] =
       default = "no",
       tooltip = "Allows or disallows marine closets to spawn on gotchas and boss generator levels.",
     }
-	m_c_color =
+    m_c_color =
     {
       name = "m_c_color",
       label = _("Marine Color"),

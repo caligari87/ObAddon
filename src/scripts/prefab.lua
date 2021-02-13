@@ -1175,14 +1175,14 @@ function Fab_load_wad(def)
       -- keep these flags: block-all, block-mon, secret, no-draw,
       --                   always-draw, block-sound, pass-thru
       flags = bit.band(flags, 0x2E3)
-      
+
       if flags != 0 then
         C2.flags = flags
 
         -- this makes sure the flags get applied
         if not C2.special then C2.special = 0 end
       end
-      
+
       upper_unpeg = (bit.band(flags, MLF_UpperUnpegged) != 0)
       lower_unpeg = (bit.band(flags, MLF_LowerUnpegged) != 0)
     end
@@ -1199,7 +1199,7 @@ function Fab_load_wad(def)
 
     return C2
   end
-  
+
   local function decode_3d_floor_side(exfl, C)
     local C2 = { x=C.x, y=C.y }
 
@@ -1220,7 +1220,7 @@ function Fab_load_wad(def)
 
 
     each C in coords do
-      table.insert(B, decode_polygon_side(nil, C, 1))      
+      table.insert(B, decode_polygon_side(nil, C, 1))
     end
 
     -- add this new brush to the prefab
@@ -1260,7 +1260,7 @@ function Fab_load_wad(def)
 
     decode_lighting(S, B[1])
 
-    each C in coords do 
+    each C in coords do
       table.insert(B, decode_polygon_side(S, C, 1))
     end
 

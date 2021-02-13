@@ -210,7 +210,7 @@ OB_MODULES["misc"] =
       gap=1
     }
 
-    { 
+    {
       name="room_size_multiplier", label=_("Room Size Multiplier")
       choices = MISC_STUFF.ROOM_SIZE_MULTIPLIER_CHOICES
       default = "mixed"
@@ -218,7 +218,7 @@ OB_MODULES["misc"] =
         "Vanilla: No room size multipliers.\n\n" ..
         "Mix It Up: All multiplier ranges are randomly used with highest and lowest multipliers being rarest."
     }
-    { 
+    {
       name="room_area_multiplier", label=_("Area Count Multiplier")
       choices = MISC_STUFF.AREA_COUNT_MULTIPLIER_CHOICES
       default = "mixed"
@@ -227,7 +227,7 @@ OB_MODULES["misc"] =
         "Vanilla: No area quantity multipliers.\n\n" ..
         "Mix It Up: All multiplier ranges are randomly used with highest and lowest multipliers being rarest."
     }
-    { 
+    {
       name="room_size_consistency", label=_("Size Consistency")
       choices = MISC_STUFF.ROOM_SIZE_CONSISTENCY_CHOICES
       default = "mixed"

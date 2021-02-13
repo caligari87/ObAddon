@@ -1805,8 +1805,8 @@ OB_MODULES["gzdoom_boss_gen"] =
       default = "default",
       tooltip = "Changes exit type after boss has been destroyed."
     }
-	
-	boss_gen_ammo =
+
+    boss_gen_ammo =
     {
       name = "boss_gen_ammo",
       label = _("Ammo supplies mult"),
@@ -1815,8 +1815,8 @@ OB_MODULES["gzdoom_boss_gen"] =
       default = "3",
       tooltip = "Changes multiplier of ammunition items on the boss arena(This is also affected by boss health multiplier)."
     }
-	
-	boss_gen_heal =
+
+    boss_gen_heal =
     {
       name = "boss_gen_heal",
       label = _("Healing supplies mult"),

@@ -127,7 +127,7 @@ end
 OB_MODULES["misc_strife"] =
 {
   label = _("Miscellaneous")
-  
+
   game = "strife"
 
   side = "left"
