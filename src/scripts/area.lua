@@ -1288,6 +1288,17 @@ function Corner_is_at_area_corner(corner)
 
   end
 
+  -- corner is by at least one diagonal and is between two areas
+  if #corner.areas > 1 then
+    local diagonal_score = 0
+
+    each S in corner.seeds do
+      if S.top then diagonal_score = diagonal_score + 1 end
+    end
+
+    if diagonal_score == 1 then return true end
+  end
+
   return false
 end
 

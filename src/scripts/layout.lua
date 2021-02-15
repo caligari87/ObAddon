@@ -2662,9 +2662,7 @@ function Layout_handle_corners()
       end
 
       if near_porch(corner, "porch_neighbor") then
-
         each S in corner.seeds do
-
           if S.chunk then
             if S.chunk.kind == "stair" then
               pillar_it = true
@@ -2674,9 +2672,7 @@ function Layout_handle_corners()
           if S.area.mode == "liquid" then
             pillar_it = true
           end
-
         end
-
       end
     end
 
