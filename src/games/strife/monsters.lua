@@ -14,11 +14,11 @@
 
 STRIFE.MONSTERS =
 {
-  acolyte_gray = 
-  { 
+  acolyte_gray =
+  {
     id=146
     r=24
-    h=64  
+    h=64
     level = 1
     prob = 5
     density = 0.2

@@ -87,7 +87,7 @@ STRIFE.THEMES =
     {
 
     }
-    
+
     narrow_halls =
     {
       vent = 50
@@ -144,17 +144,17 @@ STRIFE.THEMES =
       square = 70
       tall   = 30
     }
-    
+
     wall_groups =
     {
       PLAIN = 50
     }
-    
+
     cave_torches =
     {
 
     }
-    
+
     outdoor_torches =
     {
 
@@ -172,7 +172,7 @@ STRIFE.THEMES =
       sharp = 1
       curved = 0.1
     }
-    
+
     steps_mat = "F_BRKTOP"
 
     post_mat  = "BRKGRY01"
@@ -251,7 +251,7 @@ STRIFE.ROOM_THEMES =
     }
 
   }
-  
+
   town_Cave =
   {
     env  = "cave"
@@ -273,7 +273,7 @@ STRIFE.ROOM_THEMES =
     }
 
   }
-   
+
 }
 ------------------------------------------------------------------------
 

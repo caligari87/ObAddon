@@ -38,7 +38,7 @@ STRIFE.MATERIALS =
 
   F_BRKTOP = { t="BRKGRY01", f="F_BRKTOP" }
   F_CAVE01 = { t="WALCAV01", f="F_CAVE01" }
-  
+
   -- liquids --
   F_WATR01 = { f="F_WATR01", t="WATR01" }
 

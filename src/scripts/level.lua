@@ -335,7 +335,7 @@ function Episode_determine_map_sizes()
     LEV.size_multiplier = 1
     LEV.area_multiplier = 1
     LEV.size_consistency = "normal"
-  
+
     if PARAM.room_size_multiplier then
       if PARAM.room_size_multiplier == "mixed" then
         LEV.size_multiplier = rand.key_by_probs(
@@ -383,7 +383,7 @@ function Episode_determine_map_sizes()
             normal = 75
           }
         )
-      else 
+      else
         LEV.size_consistency = PARAM.room_size_consistency
       end
     end

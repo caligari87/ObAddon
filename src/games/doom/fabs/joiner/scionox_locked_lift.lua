@@ -3,7 +3,7 @@ PREFABS.Joiner_scionox_locked_lift_barred =
   file   = "joiner/scionox_locked_lift.wad"
   map    = "MAP01"
 
-  prob   = 75
+  prob   = 125
   theme  = "tech"
   style  = "steepness"
 
@@ -12,13 +12,10 @@ PREFABS.Joiner_scionox_locked_lift_barred =
   key = "sw_metal"
 
   seed_w = 1
-  seed_h = 1
+  seed_h = 2
 
   deep   = 16
   over   = 16
-
-  x_fit = "frame"
-  y_fit = { 56,104 }
 
   delta_h  = 128
   nearby_h = 128
@@ -31,6 +28,7 @@ PREFABS.Joiner_scionox_locked_lift_barred =
   tex_COMPBLUE = { COMPBLUE=50, METAL1=50, SHAWN2=50, SILVER1=50, SPACEW4=60, TEKLITE=50 }
 
   x_fit = {20,28 , 36,44 , 52,60 , 68,76 , 84,92 , 100,108}
+  y_fit = { 56,232 }
 }
 
 PREFABS.Joiner_scionox_locked_lift_barred_urban =
@@ -82,7 +80,7 @@ PREFABS.Joiner_scionox_locked_lift_keyed_bars_tech_red =
   file   = "joiner/scionox_locked_lift.wad"
   map    = "MAP03"
 
-  prob   = 75
+  prob   = 125
   theme  = "tech"
   style  = "steepness"
 
@@ -91,13 +89,10 @@ PREFABS.Joiner_scionox_locked_lift_keyed_bars_tech_red =
   key = "k_red"
 
   seed_w = 1
-  seed_h = 1
+  seed_h = 2
 
   deep   = 16
   over   = 16
-
-  x_fit = "frame"
-  y_fit = "frame"
 
   delta_h  = 128
   nearby_h = 128
@@ -107,6 +102,7 @@ PREFABS.Joiner_scionox_locked_lift_keyed_bars_tech_red =
   tex_COMPBLUE = { COMPBLUE=50, METAL1=50, SHAWN2=50, SILVER1=50, SPACEW4=60, TEKLITE=50 }
 
   x_fit = {20,28 , 36,44 , 52,60 , 68,76 , 84,92 , 100,108}
+  y_fit = {192,224}
 }
 
 PREFABS.Joiner_scionox_locked_lift_keyed_bars_tech_blue =
@@ -196,7 +192,7 @@ PREFABS.Joiner_scionox_locked_lift_gated_switch =
   file   = "joiner/scionox_locked_lift.wad"
   map    = "MAP07"
 
-  prob   = 150
+  prob   = 225
   theme  = "tech"
   style  = "steepness"
 
@@ -205,13 +201,13 @@ PREFABS.Joiner_scionox_locked_lift_gated_switch =
   key = "sw_metal"
 
   seed_w = 2
-  seed_h = 1
+  seed_h = 2
 
   deep   = 16
   over   = 16
 
   x_fit = "frame"
-  y_fit = {52,60 , 92,108}
+  y_fit = {56,64 , 224,232}
 
   delta_h  = 128
   nearby_h = 128
@@ -249,7 +245,7 @@ PREFABS.Joiner_scionox_locked_lift_lockgate_switch =
   file   = "joiner/scionox_locked_lift.wad"
   map    = "MAP08"
 
-  prob   = 75
+  prob   = 125
   theme  = "tech"
   style  = "steepness"
 
@@ -258,13 +254,13 @@ PREFABS.Joiner_scionox_locked_lift_lockgate_switch =
   key = "k_red"
 
   seed_w = 2
-  seed_h = 1
+  seed_h = 2
 
   deep   = 16
   over   = 16
 
   x_fit = "frame"
-  y_fit = {44,52 , 108,116}
+  y_fit = {56,64 , 224,232}
 
   can_flip = true
 
