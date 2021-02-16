@@ -2492,16 +2492,18 @@ function Layout_handle_corners()
   end
 
 
-  local function near_porch(corner, mode)
+  local function near_porch(corner)
+    local diff = corner.areas[1].ceil_h
+    local near_porch = false
 
     each A in corner.areas do
-
-      if mode == "porch" then
-        if A.is_porch then return true end
-      elseif mode == "porch_neighbor" then
-        if A.is_porch_neighbor then return true end
+      if A.is_porch or A.is_porch_neighbor then
+        near_porch = true
       end
 
+      if near_porch and A.ceil_h != diff then 
+        return true
+      end
     end
 
     return false
@@ -2551,9 +2553,7 @@ function Layout_handle_corners()
         local tallest_h = -EXTREME_H
         each xjunc in corner.junctions do
           if xjunc.E1 and xjunc.E1.fence_top_z then
-            if xjunc.E1.fence_top_z > tallest_h then
-              tallest_h = xjunc.E1.fence_top_z
-            end
+            tallest_h = math.max(tallest_h, xjunc.E1.fence_top_z)
           end
         end
 
@@ -2584,9 +2584,7 @@ function Layout_handle_corners()
         if mostly_env == "building" then
 
           each A in corner.areas do
-            if A.ceil_h > tallest_h then
-              tallest_h = A.ceil_h
-            end
+            tallest_h = math.max(tallest_h, A.ceil_h)
           end
           post_top_z = tallest_h
 
@@ -2608,9 +2606,7 @@ function Layout_handle_corners()
             end
 
             if A.floor_h then
-              if A.floor_h > tallest_h then
-                tallest_h = A.floor_h
-              end
+              tallest_h = math.max(tallest_h, A.floor_h)
             end
           end
 
@@ -2656,23 +2652,10 @@ function Layout_handle_corners()
         end
       end
 
-      -- create support pillars on the corners of fenceposts
-      if near_porch(corner, "porch") then
+      -- create support pillars on the corners
+      -- where sky and ceilings of any other texture meet 
+      if near_porch(corner) then
         pillar_it = true
-      end
-
-      if near_porch(corner, "porch_neighbor") then
-        each S in corner.seeds do
-          if S.chunk then
-            if S.chunk.kind == "stair" then
-              pillar_it = true
-            end
-          end
-
-          if S.area.mode == "liquid" then
-            pillar_it = true
-          end
-        end
       end
     end
 
