@@ -254,7 +254,11 @@ START_CLOSET_4x2 =
 ------------------------------------------
 
 
-EXIT_1 =
+-- MSSP: Commented out these rules - these seem to be
+-- from an abandoned experiment by Andrew to grow maps
+-- backwards (from an exit) to provide combat space for bosses
+
+--[[EXIT_1 =
 {
   prob = 75 --60
 
@@ -521,7 +525,7 @@ EXIT3_DECOR =
   }
 
   closet = { from_dir=2 }
-}
+}]]
 
 
 ------------------------------------------
@@ -5376,7 +5380,7 @@ GROW_LAKE_BIG_O_WIDE_NEW_AREA =
 
 GROW_LAKE_BIG_L_NEW_AREA =
 {
-  prob = 25
+  prob = 35
   skip_prob = 75
 
   structure =
@@ -5486,7 +5490,7 @@ GROW_LAKE_CROSS_NEW_AREA =
 
 GROW_LAKE_CROSS_NEW_AREA_STRAIGHT =
 {
-  prob = 25
+  prob = 35
   skip_prob = 75
 
   structure =
@@ -5929,8 +5933,8 @@ GROW_ELEVATED_PILLAR_ROUND =
 
 GROW_ELEVATED_PILLAR_U =
 {
-  prob = 50
-  skip_prob = 50
+  prob = 20
+  skip_prob = 70
 
   env = "!cave"
 
@@ -5946,8 +5950,8 @@ GROW_ELEVATED_PILLAR_U =
 
 GROW_ELEVATED_PILLAR_U_FULL =
 {
-  prob = 50
-  skip_prob = 50
+  prob = 20
+  skip_prob = 70
 
   env = "!cave"
 
@@ -8788,7 +8792,7 @@ GROW_EXTRUSION_4X4 =
 
 GROW_EXTRUSION_NEW_AREA_4x2 =
 {
-  prob = 80
+  prob = 35
   skip_prob = 10
 
   structure =
@@ -8796,6 +8800,21 @@ GROW_EXTRUSION_NEW_AREA_4x2 =
     "1111","1111"
     "....","AAAA"
     "....","AAAA"
+  }
+}
+
+GROW_EXTRUSION_NEW_AREA_4x2_RETURN =
+{
+  prob = 45
+  skip_prob = 10
+
+  structure =
+  {
+    "1111","1111"
+    "....","AAAA"
+    "....","AAAA"
+    "1111","1111"
+    "1111","1111"
   }
 }
 
@@ -9060,6 +9079,7 @@ GROW_INTO_CLIFF =
     "....","11AA"
     "....","11AA"
     "....","11^^"
+    "....","1111"
     "....","1111"
     "11xx","11xx"
   }
@@ -9367,7 +9387,7 @@ GROW_LIQUID_POOL_PLACE_3x6 =
   }
 }
 
-GROW_LIQUID_POOL_PLACE =
+--[[GROW_LIQUID_POOL_PLACE =
 {
   prob = 25
   skip_prob = 30
@@ -9460,7 +9480,7 @@ GROW_LIQUID_POOL_EXTEND_CURVED =
   {
     "~1"
   }
-}
+}]]
 
 GROW_LIQUID_PILLAR =
 {
