@@ -7,8 +7,7 @@ PREFABS.Pillar_tech3 =
   file   = "decor/pillar3.wad"
   map    = "MAP01"
 
-  rank   = 2
-  prob   = 3500
+  prob   = 25000
   skip_prob = 65
 
   theme  = "tech"

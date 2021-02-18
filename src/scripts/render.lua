@@ -171,29 +171,19 @@ function Render_edge(E)
 
   local function pick_wall_prefab()
 
-    local function check_area_state(seed, other_seed, mode)
+    local function check_area_state(S1, S2, mode)
 
       if mode == "narrow_area" then
-        if seed.area != other_seed.area then
-          return true
-        end
+        if S1.area != S2.area then return true end
       end
 
       if mode == "potentially_obstructing" then
 
-        if not other_seed.area then
-          return true
-        end
+        if not S2.area then return true end
 
-        if seed.area.room and other_seed.area.room then
-          if seed.area.room != other_seed.area.room then
-            return true
-          end
-
-          if other_seed.area.chunk then
-            return true
-          end
-
+        if S1.area.room and S2.area.room then
+          if S1.area.room != S2.area.room then return true end
+          if S2.area.chunk then return true end
         end
       end
 
@@ -379,6 +369,8 @@ function Render_edge(E)
       def = Fab_pick(reqs)
     end
 
+    E.S.wall_depth = math.max(E.S.wall_depth or 16, def.deep or 16)
+
     return def
   end
 
@@ -509,10 +501,6 @@ function Render_edge(E)
     end
 
     local def = pick_wall_prefab()
-
-    E.deep = def.deep
-
-    E.S.wall_depth = math.max(E.deep or 0, E.S.wall_depth or 0)
 
     local z1 = A.floor_h
     local z2 = A.ceil_h
