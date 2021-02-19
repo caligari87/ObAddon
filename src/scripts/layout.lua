@@ -2509,6 +2509,18 @@ function Layout_handle_corners()
     return false
   end
 
+  
+  local function near_indoor_fence(junc)
+
+    if junc.A1.room and junc.A1.room:get_env() == "building" or
+    junc.A2.room and junc.A2.room:get_env() == "building" then
+      if junc.E1 and junc.E1.kind == "fence" then return true end
+      if junc.E2 and junc.E2.kind == "fence" then return true end
+    end
+
+    return false
+  end
+
 
   local function fetch_good_pillar_material(corner)
 
@@ -2516,15 +2528,11 @@ function Layout_handle_corners()
 
     if mostly_env == "outdoor" then
       each A in corner.areas do
-        if A.room then
-          return A.room.zone.facade_mat
-        end
+        if A.room then return A.room.zone.facade_mat end
       end
     elseif mostly_env == "building" then
       each A in corner.areas do
-        if A.room then
-          return A.room.main_tex
-        end
+        if A.room then return A.room.main_tex end
       end
     end
 
@@ -2579,38 +2587,26 @@ function Layout_handle_corners()
 
         -- indoor posts should meet the ceiling
         local tallest_h = -EXTREME_H
-        local tallest_scenic_fences_h = -EXTREME_H
 
         if mostly_env == "building" then
-
-          each A in corner.areas do
-            tallest_h = math.max(tallest_h, A.ceil_h)
-          end
-          post_top_z = tallest_h
+          post_top_z = EXTREME_H
 
         else
 
           -- outdoor posts should meet up to the rail height
-          local neighbors_simple_fence = false
           each A in corner.areas do
-
-            if A.border_type then
-              if A.border_type == "simple_fence" then
-                neighbors_simple_fence = true
-              end
-            end
 
             if A.is_porch or A.is_porch_neighbor then
               tallest_h = A.zone.sky_h
               continue
             end
 
+            tallest_h = math.max(tallest_h, A.floor_h + assert(junc.E1.rail_offset))
+
             if A.floor_h then
               tallest_h = math.max(tallest_h, A.floor_h)
             end
           end
-
-          tallest_h = tallest_h + assert(junc.E1.rail_offset)
 
           post_top_z = tallest_h
         end
@@ -2639,9 +2635,6 @@ function Layout_handle_corners()
 
       if not Corner_is_at_area_corner(corner) then return end
 
-      if junc.A1.dead_end or junc.A2.dead_end
-      and junc.A1.room:get_env() == "building" then return end
-
       -- don't put pillars adjacent to joiners and closets
       each S in corner.seeds do
         if S.chunk then
@@ -2654,7 +2647,8 @@ function Layout_handle_corners()
 
       -- create support pillars on the corners
       -- where sky and ceilings of any other texture meet 
-      if near_porch(corner) then
+      if near_porch(corner) 
+      or near_indoor_fence(junc) then
         pillar_it = true
       end
     end
