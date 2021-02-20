@@ -2038,13 +2038,18 @@ stderrf("Cages in %s [%s pressure] --> any_prob=%d  per_prob=%d\n",
 
     if not tab then return end
 
-    local autodetail_odds = THEME.wall_group_prob or 35
+    local prob = THEME.wall_group_prob or 35
     if LEVEL.autodetail_group_walls_factor then
-      autodetail_odds = autodetail_odds - math.clamp(0, LEVEL.autodetail_group_walls_factor, 35)
+      prob = prob - math.clamp(0, LEVEL.autodetail_group_walls_factor, 35)
+    end
+
+    if PARAM.group_wall_prob and PARAM.group_wall_prob != "fab_default" then
+      prob = prob * (1 - PREFAB_CONTROL.WALL_REDUCTION_ODDS[PARAM.group_wall_prob])
+      prob = math.clamp(0, prob, 100)
     end
 
     each fg in R.floor_groups do
-      if rand.odds(autodetail_odds) then
+      if rand.odds(prob) then
         fg.wall_group = rand.key_by_probs(tab)
       end
     end

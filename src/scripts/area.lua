@@ -755,6 +755,15 @@ function Junction_make_wall(junc)
 
     E.wall_mat = Junction_calc_wall_tex(A1, A2)
 
+    local plain_wall_prob = 0
+
+    if PARAM.wall_prob and PARAM.wall_prob != "fab_default" then
+      plain_wall_prob = plain_wall_prob + (PREFAB_CONTROL.WALL_REDUCTION_ODDS[PARAM.wall_prob] * 100)
+      plain_wall_prob = math.clamp(0, plain_wall_prob, 100)
+    end
+
+    if rand.odds(plain_wall_prob) then E.plain = true end
+
     if pass == 1 then
       junc.E1 = E
     else
