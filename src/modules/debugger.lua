@@ -178,6 +178,16 @@ OB_MODULES["debugger"] =
       tooltip = "Displays usage statistics for shape grammar rules."
       default = "no"
       priority=95
+    }
+    
+    save_svg =
+    {
+      name = "save_svg"
+      label = _("Save Map Previews")
+      choices=DEBUG_CONTROL.YES_NO
+      tooltip = "Saves SVG format images of generated map thumbnails."
+      default = "no"
+      priority=94
       gap = 1
     }
 
@@ -188,7 +198,7 @@ OB_MODULES["debugger"] =
       choices = DEBUG_CONTROL.YES_NO
       tooltip = "Enables games other than Doom 2 in Game Settings list."
       default = "no"
-      priority = 94
+      priority = 60
       gap = 1
     }
 
@@ -198,7 +208,7 @@ OB_MODULES["debugger"] =
       label = _("Peered Starts/Exits")
       choices = DEBUG_CONTROL.YES_NO
       default = "no"
-      priority = 93
+      priority = 52
     }
 
     steppy_caves =
@@ -213,7 +223,7 @@ OB_MODULES["debugger"] =
       }
       tooltip = "Disables or enables caves with height variations."
       default = "yes"
-      priority = 92
+      priority = 51
       gap = 1
     }
 
@@ -224,7 +234,7 @@ OB_MODULES["debugger"] =
       choices = DEBUG_CONTROL.YES_NO
       tooltip = "Affects whether Room Size Variance also influences start rooms."
       default = "no"
-      priority = 90
+      priority = 50
     }
 
 --[[
