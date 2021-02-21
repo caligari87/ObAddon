@@ -2818,7 +2818,7 @@ GROW_COLLONADE_510_STAIRS_STRAIGHT =
 
 GROW_COLLONADE_510_STAIRS_TRI =
 {
-  prob = 25
+  prob = 20
   skip_prob = 75
 
   structure =
@@ -2830,7 +2830,66 @@ GROW_COLLONADE_510_STAIRS_TRI =
     "..........","AA<1111>AA"
     "..........","AA<1111>AA"
     "..........","AA<1111>AA"
-    "xxx1111xxx","xxx1111xxx"
+    "xxxx11xxxx","xxxx11xxxx"
+  }
+}
+
+GROW_COLLONADE_VAULT =
+{
+  prob = 20
+  skip_prob = 75
+
+  structure =
+  {
+    "........","11111111"
+    "........","11#11#11"
+    "........","11111111"
+    "........","11#11#11"
+    "........","11111111"
+    "........","11#11#11"
+    "........","11111111"
+    "........","11#11#11"
+    "........","11111111"
+    "xxx11xxx","xxx11xxx"
+  }
+}
+
+GROW_COLLONADE_VAULT_NEW_AREA =
+{
+  prob = 20
+  skip_prob = 75
+
+  structure =
+  {
+    "........","AA1111AA"
+    "........","AA#11#AA"
+    "........","AA1111AA"
+    "........","AA#11#AA"
+    "........","AA1111AA"
+    "........","AA#11#AA"
+    "........","AA1111AA"
+    "........","AA#11#AA"
+    "........","AA1111AA"
+    "xxx11xxx","xxx11xxx"
+  }
+}
+
+GROW_COLLONADE_VAULT_THICK_PILLARS_NEW_AREA =
+{
+  prob = 25
+  skip_prob = 75
+
+  structure =
+  {
+    "..........","AAA1111AAA"
+    "..........","AA##11##AA"
+    "..........","AA##11##AA"
+    "..........","AAA1111AAA"
+    "..........","AAA1111AAA"
+    "..........","AA##11##AA"
+    "..........","AA##11##AA"
+    "..........","AAA1111AAA"
+    "xxxx11xxxx","xxxx11xxxx"
   }
 }
 
