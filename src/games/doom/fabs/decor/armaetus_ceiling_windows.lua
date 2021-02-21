@@ -1,6 +1,6 @@
-PREFABS.Decor_armaedus_sky_penta =
+PREFABS.Decor_armaetus_sky_penta =
 {
-  file   = "decor/armaetus_sky_penta.wad"
+  file   = "decor/armaetus_ceiling_windows.wad"
   map    = "MAP01"
 
   prob   = 7500
@@ -16,4 +16,10 @@ PREFABS.Decor_armaedus_sky_penta =
   bound_z2 = 144
 
   z_fit = "bottom"
+}
+
+PREFABS.Decor_gtd_sky_reticule =
+{
+  template = "Decor_armaetus_sky_penta"
+  map = "MAP02"
 }

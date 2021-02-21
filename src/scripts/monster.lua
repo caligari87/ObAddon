@@ -97,11 +97,7 @@ function Monster_pacing()
       if R.is_hallway or R.is_secret then
         R.pressure = "low"
         if R.is_secret and OB_CONFIG.secret_monsters == "yesyes" then
-          if rand.odds(75) then
-            R.pressure = "medium"
-          else
-            R.pressure = "high"
-          end
+          R.pressure = rand.sel(75, "medium", "high")
         end
         continue
       end
@@ -149,12 +145,8 @@ function Monster_pacing()
 
 
   local function handle_known_room(R)
-    if R == LEVEL.exit_room then
-      set_room(R, "high")
-      return
-    end
-
-    if LEVEL.is_procedural_gotcha and PARAM.boss_gen then
+    if R == LEVEL.exit_room 
+    or (LEVEL.is_procedural_gotcha and PARAM.boss_gen) then
       set_room(R, "high")
       return
     end
