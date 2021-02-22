@@ -186,7 +186,7 @@ OB_MODULES["ui_arch"] =
       name = "layout_absurdity"
       label = _("Layout Absurdity")
       choices=UI_ARCH.ABSURDITY_CHOICES
-      default="none"
+      default="50"
       tooltip = "The layout absurdifier attempts to cause levels to overprefer specific shape " ..
       "rules from the ruleset in order to create odd and possibly broken but interesting combinations. " ..
       "Use at your own risk. These options will affect the amount of levels have the absurdity module activated on. " ..

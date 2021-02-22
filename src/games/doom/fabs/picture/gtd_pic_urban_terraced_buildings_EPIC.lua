@@ -3,7 +3,7 @@ PREFABS.Pic_urban_terraced_building_2x =
   file = "picture/gtd_pic_urban_terraced_buildings_EPIC.wad"
   map = "MAP01"
 
-  prob = 300
+  prob = 150
   theme = "urban"
   engine = "zdoom"
 
