@@ -32,7 +32,7 @@ GROUPED_WALL_TONE_DOWN_EXP = 2.5
 
 -- the total perimeter of wall-ish junctions required in the map
 -- before Autodetail for ungrouped walls kicks in
-LEVEL_PERIMETER_COUNT_KICKIN = 1000
+LEVEL_PERIMETER_COUNT_KICKIN = 1800
 
 -- added exponent for ungrouped walls
 -- higher numbers mean plain walls are more likely
