@@ -306,22 +306,11 @@ function Episode_determine_map_sizes()
     local W, H = Level_determine_map_size(LEV)
 
     if LEV.is_procedural_gotcha == true then
+      W = 26 -- defualt for proc gotchas
       if PARAM.gotcha_map_size then
-        if PARAM.gotcha_map_size == "large" then
-          W = 30
-        elseif PARAM.gotcha_map_size == "regular" then
-          W = 26
-        elseif PARAM.gotcha_map_size == "small" then
-          W = 22
-        elseif PARAM.gotcha_map_size == "tiny" then
-          W = 16
-        end
-      else
-        W = 26
+        W = PROC_GOTCHA_MAP_SIZES[PARAM.gotcha_map_size]
       end
-      if LEV.is_procedural_gotcha == true and PARAM.boss_gen then
-        W = 16
-      end
+      if PARAM.boss_gen then W = 16 end
       H = W
     end
 
@@ -370,7 +359,7 @@ function Episode_determine_map_sizes()
             [4] = 1
           }
         )
-      elseif PARAM.room_size_multiplier != "vanilla" then
+      elseif PARAM.room_area_multiplier != "vanilla" then
         LEV.area_multiplier = tonumber(PARAM.room_area_multiplier)
       end
     end
@@ -2706,13 +2695,15 @@ function Level_choose_skybox()
 
       each ex in ARMAETUS_SKYBOX_EXCLUSIONS[LEVEL.outdoor_theme] do
         if OB_CONFIG.zdoom_skybox == "episodic" then
-          if LEVEL.episode.skybox.name and LEVEL.episode.skybox.name == ex then
+          if LEVEL.episode.skybox.name == ex then
+            gui.printf("Initial skybox: " .. LEVEL.episode.skybox.name .. "\n")
             same_skyfab = "yes"
-          end
+          else same_skyfab = "no" end
         elseif OB_CONFIG.zdoom_skybox != "disable" then
-          if LEVEL.skybox.name and LEVEL.skybox.name == ex then
+          if LEVEL.skybox.name == ex then
+            gui.printf("Initial skybox: " .. LEVEL.skybox.name .. "\n")
             same_skyfab = "yes"
-          end
+          else same_skyfab = "no" end
         end
       end
 
@@ -2724,7 +2715,6 @@ function Level_choose_skybox()
           LEVEL.skybox = Choose_skybox(OB_CONFIG.zdoom_skybox)
           skyfab = LEVEL.skybox
         end
-        same_skyfab = "no"
       end
 
     end

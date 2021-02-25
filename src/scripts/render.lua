@@ -264,21 +264,21 @@ function Render_edge(E)
       -- at least one seed ahead is not in the same area
       -- as the current wall
       local tx, ty = geom.nudge(E.S.mid_x, E.S.mid_y, 10-dir, 128)
-      local o_s = Seed_from_coord(tx, ty)
+      local S2 = Seed_from_coord(tx, ty)
 
-      if check_area_state(E.S, o_s, "narrow_area") then
+      if check_area_state(E.S, S2, "narrow_area") then
         reqs.deep = 16
       end
 
       -- use only flat walls if in a corner
       tx, ty = geom.nudge(E.S.mid_x, E.S.mid_y, geom.LEFT[dir], 128)
-      o_s = Seed_from_coord(tx, ty)
-      if check_area_state(E.S, o_s, "potentially_obstructing") then
+      S2 = Seed_from_coord(tx, ty)
+      if check_area_state(E.S, S2, "potentially_obstructing") then
         reqs.deep = 16
       end
       tx, ty = geom.nudge(E.S.mid_x, E.S.mid_y, geom.RIGHT[dir], 128)
-      o_s = Seed_from_coord(tx, ty)
-      if check_area_state(E.S, o_s, "potentially_obstructing") then
+      S2 = Seed_from_coord(tx, ty)
+      if check_area_state(E.S, S2, "potentially_obstructing") then
         reqs.deep = 16
       end
 
@@ -311,35 +311,35 @@ function Render_edge(E)
       -- i.e. fake doors and windows
       reqs.has_solid_back = true
       tx, ty = geom.nudge(E.S.mid_x, E.S.mid_y, 10-dir, -128)
-      o_s = Seed_from_coord(tx, ty)
+      S2 = Seed_from_coord(tx, ty)
 
       -- if seeds on either side don't belong to the same room
       -- then it's not solid
-      if o_s.area then
+      if S2.area then
         reqs.has_solid_back = false
 
-        if o_s.area.mode == "liquid" then
+        if S2.area.mode == "liquid" then
           reqs.has_solid_back = false
         end
 
         -- override: but if there are height differences
         -- why not allow it?
-        if o_s.area.floor_h and E.S.area.floor_h then
-          if o_s.area.floor_h >= E.S.area.floor_h + 128 then
+        if S2.area.floor_h and E.S.area.floor_h then
+          if S2.area.floor_h >= E.S.area.floor_h + 128 then
             reqs.has_solid_back = true
           end
         end
-        if o_s.area.ceil_h and E.S.area.ceil_h then
-          if o_s.area.ceil_h <= E.S.area.floor_h then
+        if S2.area.ceil_h and E.S.area.ceil_h then
+          if S2.area.ceil_h <= E.S.area.floor_h then
             reqs.has_solid_back = true
           end
         end
 
-        if o_s.area.chunk then
+        if S2.area.chunk then
           reqs.has_solid_back = false
         end
 
-        if o_s.area.mode == "void" then
+        if S2.area.mode == "void" then
           reqs.has_solid_back = true
         end
       end
@@ -352,15 +352,10 @@ function Render_edge(E)
 
     local def = Fab_pick(reqs, sel(reqs.group, "none_ok", nil))
 
-    -- autodetail override
-    if LEVEL.autodetail_plain_walls_factor then
-      if rand.odds(math.clamp(0, LEVEL.autodetail_plain_walls_factor * 1.25, 100)) then
-        if reqs.where == "edge" then
-          def = PREFABS["Wall_plain"]
-        elseif reqs.where == "diagonal" then
-          def = PREFABS["Wall_plain_diag"]
-        end
-      end
+    -- autodetail and prefab control override
+    if E.plain then
+      if reqs.where == "edge" then def = PREFABS["Wall_plain"]
+      elseif reqs.where == "diagonal" then def = PREFABS["Wall_plain_diag"] end
     end
 
     -- when a wall group is not selected, use the ungrouped walls

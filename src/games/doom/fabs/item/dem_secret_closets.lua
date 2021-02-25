@@ -672,6 +672,7 @@ PREFABS.Pic_dem_jumpy1_secretcloset =
   engine = "zdoom"
 
   theme = "!hell"
+  height = 192
 
   prob   = 100
 
@@ -690,7 +691,7 @@ PREFABS.Pic_dem_jumpy1_secretcloset =
   over = -16
 
   bound_z1 = 0
-  bound_z2 = 128
+  bound_z2 = 192
 
   x_fit = "stretch"
   z_fit = { 128,136 }
@@ -709,6 +710,12 @@ PREFABS.Pic_dem_jumpy2_secretcloset =
 {
   template  = "Pic_dem_jumpy1_secretcloset"
   map    = "MAP23"
+
+  height = 256
+  
+  z_fit = { 88,96 }
+
+  bound_z2 = 256
 }
 
 ---Garrett blood fountain with a secret---

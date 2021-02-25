@@ -7,8 +7,7 @@ PREFABS.Dem_Pillars_tech3 =
   file   = "decor/dem_pillars.wad"
   map    = "MAP01"
 
-  rank   = 2
-  prob   = 800
+  prob   = 3000
   theme  = "tech"
   env    = "building"
 

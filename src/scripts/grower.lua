@@ -4638,7 +4638,7 @@ function Grower_create_rooms()
   Seed_squarify()
 
   -- debugging aid
-  if OB_CONFIG.svg then
+  if OB_CONFIG.svg or (PARAM.save_svg and PARAM.save_svg == "yes") then
     Seed_save_svg_image("grow_" .. OB_CONFIG.seed .. "_" .. LEVEL.name .. ".svg")
   end
 

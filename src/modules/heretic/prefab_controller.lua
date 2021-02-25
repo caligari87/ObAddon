@@ -57,22 +57,6 @@ PREFAB_CONTROL_HERETIC.FINE_TUNE_MULT_FACTORS =
   "8", _("I LOVE IT"),
 }
 
---[[PREFAB_CONTROL_HERETIC.FINE_TUNE_FABS =
-{
-  sight_ambushes =
-  {
-    "Cage_auto_open",
-    "Cage_auto_open_smaller",
-    "Cage_teleporter_ambush_tech",
-    "Cage_teleporter_ambush_hell",
-    "Cage_dem_garage_ambush1",
-    "Cage_dem_garage_ambush1CBL",
-    "Cage_dem_garage_ambush1CBR",
-    "Cage_dem_garage_ambush2",
-    "Cage_scionox_guardpost_destroyed",
-  }
-}
-
 function PREFAB_CONTROL_HERETIC.setup(self)
   for name,opt in pairs(self.options) do
     local value = self.options[name].value
@@ -119,7 +103,7 @@ function PREFAB_CONTROL_HERETIC.fine_tune_filters()
     end
   end
 end
-]]
+
 ----------------------------------------------------------------
 
 OB_MODULES["prefab_control_heretic"] =

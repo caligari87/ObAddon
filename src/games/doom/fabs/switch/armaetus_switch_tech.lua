@@ -5,6 +5,8 @@ PREFABS.Switch_armaetus_tech =
   theme  = "!hell"
   key = "sw_metal"
 
+  height = 48
+
   prob   = 50
 
   where  = "point"

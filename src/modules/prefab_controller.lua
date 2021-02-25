@@ -25,7 +25,16 @@ PREFAB_CONTROL.WALL_CHOICES =
   "fab_less",    _("Less"),
   "fab_few",     _("Few"),
   "fab_rare",    _("Rare"),
-  "fab_random",  _("Mix It Up"),
+  "fab_none",    _("NONE"),
+}
+
+PREFAB_CONTROL.WALL_REDUCTION_ODDS =
+{
+  fab_some = 0.2
+  fab_less = 0.4
+  fab_few = 0.6
+  fab_rare = 0.8
+  fab_none = 1
 }
 
 PREFAB_CONTROL.POINT_CHOICES =
@@ -54,22 +63,6 @@ PREFAB_CONTROL.FINE_TUNE_MULT_FACTORS =
   "2", _("More"),
   "4", _("Heaps"),
   "8", _("I LOVE IT"),
-}
-
-PREFAB_CONTROL.FINE_TUNE_FABS =
-{
-  sight_ambushes =
-  {
-    "Cage_auto_open",
-    "Cage_auto_open_smaller",
-    "Cage_teleporter_ambush_tech",
-    "Cage_teleporter_ambush_hell",
-    "Cage_dem_garage_ambush1",
-    "Cage_dem_garage_ambush1CBL",
-    "Cage_dem_garage_ambush1CBR",
-    "Cage_dem_garage_ambush2",
-    "Cage_scionox_guardpost_destroyed",
-  }
 }
 
 function PREFAB_CONTROL.setup(self)
@@ -167,6 +160,16 @@ OB_MODULES["prefab_control"] =
       tooltip = "Determines the amount plain wall prefabs. What it actually does is greatly increase the probability of Oblige's basic plain wall prefab, rather than reduce the probability of all the prefabs in the library."
       default = "fab_default"
       priority = 100
+    }
+
+    group_wall_prob =
+    {
+      name = "group_wall_prob"
+      label = _("Group Walls")
+      choices = PREFAB_CONTROL.WALL_CHOICES
+      tooltip = "Determines the percentage at which grouped walls are applied to rooms."
+      default = "fab_default"
+      priority = 99
       gap = 1
     }
 

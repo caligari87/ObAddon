@@ -227,6 +227,14 @@ SECRET_BONUS_FACTORS =
   heapsest = 4
 }
 
+PROC_GOTCHA_MAP_SIZES =
+{
+  large = 30
+  regular = 26
+  small = 22
+  tiny = 16
+}
+
 PROC_GOTCHA_STRENGTH_LEVEL =
 {
   none        = 0
@@ -245,6 +253,7 @@ PROC_GOTCHA_QUANTITY_MULTIPLIER =
   ["25"]  = 1.25
   ["50"]  = 1.5
   ["100"] = 2
+  ["150"] = 3
   ["200"] = 4
   ["400"] = 8
 }

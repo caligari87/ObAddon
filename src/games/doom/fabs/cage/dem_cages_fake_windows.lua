@@ -443,10 +443,10 @@ PREFABS.Cage_dem_windows_ambush7 =
 
   deep   = 48
 
-  height = 144
+  height = 152
 
   bound_z1 = 0
-  bound_z2 = 144
+  bound_z2 = 152
 
   y_fit = "top"
   z_fit = "top"
