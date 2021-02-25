@@ -2695,13 +2695,15 @@ function Level_choose_skybox()
 
       each ex in ARMAETUS_SKYBOX_EXCLUSIONS[LEVEL.outdoor_theme] do
         if OB_CONFIG.zdoom_skybox == "episodic" then
-          if LEVEL.episode.skybox.name and LEVEL.episode.skybox.name == ex then
+          if LEVEL.episode.skybox.name == ex then
+            gui.printf("Initial skybox: " .. LEVEL.episode.skybox.name .. "\n")
             same_skyfab = "yes"
-          end
+          else same_skyfab = "no" end
         elseif OB_CONFIG.zdoom_skybox != "disable" then
-          if LEVEL.skybox.name and LEVEL.skybox.name == ex then
+          if LEVEL.skybox.name == ex then
+            gui.printf("Initial skybox: " .. LEVEL.skybox.name .. "\n")
             same_skyfab = "yes"
-          end
+          else same_skyfab = "no" end
         end
       end
 
@@ -2713,7 +2715,6 @@ function Level_choose_skybox()
           LEVEL.skybox = Choose_skybox(OB_CONFIG.zdoom_skybox)
           skyfab = LEVEL.skybox
         end
-        same_skyfab = "no"
       end
 
     end

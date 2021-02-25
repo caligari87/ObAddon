@@ -1269,6 +1269,12 @@ DOOM.THEMES =
       gtd_generic_frame_light_band = 25
       gtd_generic_frame_metal = 25
       gtd_generic_artsy_center_braced_ind = 25
+      gtd_generic_d64_1x = 4
+      gtd_generic_d64_1x_yellow = 4
+      gtd_generic_d64_1x_blue = 4
+      gtd_generic_d64_2x = 4
+      gtd_generic_d64_2x_yellow = 4
+      gtd_generic_d64_2x_blue = 4
     }
 
     outdoor_wall_groups =
@@ -1632,6 +1638,12 @@ DOOM.THEMES =
       gtd_generic_frame_light_band = 15
       gtd_generic_frame_metal = 15
       gtd_generic_artsy_center_braced_ind = 15
+      gtd_generic_d64_1x = 2
+      gtd_generic_d64_1x_yellow = 2
+      gtd_generic_d64_1x_blue = 2
+      gtd_generic_d64_2x = 2
+      gtd_generic_d64_2x_yellow = 2
+      gtd_generic_d64_2x_blue = 2
     }
 
     window_groups =
@@ -2042,6 +2054,12 @@ DOOM.THEMES =
       gtd_generic_frame_light_band = 40
       gtd_generic_frame_metal = 40
       gtd_generic_artsy_center_braced_hell = 40
+      gtd_generic_d64_1x = 6
+      gtd_generic_d64_1x_yellow = 6
+      gtd_generic_d64_1x_blue = 6
+      gtd_generic_d64_2x = 6
+      gtd_generic_d64_2x_yellow = 6
+      gtd_generic_d64_2x_blue = 6
     }
 
     outdoor_wall_groups =

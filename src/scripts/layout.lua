@@ -2602,7 +2602,7 @@ function Layout_handle_corners()
           each A in corner.areas do
 
             if A.is_porch or A.is_porch_neighbor then
-              tallest_h = A.zone.sky_h
+              tallest_h = EXTREME_H
               continue
             end
 
