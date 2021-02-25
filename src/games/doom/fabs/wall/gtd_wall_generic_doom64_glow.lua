@@ -19,7 +19,7 @@ PREFABS.Wall_generic_doom64_1x=
   bound_z1 = 0
   bound_z2 = 96
 
-  z_fit = "top"
+  z_fit = {4,8}
 }
 
 PREFABS.Wall_generic_doom64_1x_diag =
