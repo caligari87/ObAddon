@@ -725,7 +725,7 @@ function Grower_preprocess_grammar()
 
       table.expand_templates(grammar)
 
-      each name,cur_def in grammar do
+      for name,cur_def in pairs(grammar) do
 
         if cur_def.is_processed then continue end
         cur_def.is_processed = true
@@ -797,7 +797,7 @@ function Grower_calc_rule_probs()
 
     local factor = 1.0,
 
-    each name in rule.styles do
+    for _,name in pairs(rule.styles) do
       if STYLE[name] == nil then
         error("Unknown style in grammar rule: " .. tostring(name))
       end
@@ -865,7 +865,7 @@ function Grower_calc_rule_probs()
 
   PARAM.skipped_rules = 0,
 
-  each name,rule in GAME.SHAPE_GRAMMAR do
+  for name,rule in pairs(GAME.SHAPE_GRAMMAR) do
     rule.use_prob = calc_prob(rule)
     if rule.use_prob == 0 then
       PARAM.skipped_rules = PARAM.skipped_rules + 1,
@@ -907,7 +907,7 @@ function Grower_calc_rule_probs()
     gui.printf(rules_to_absurdify .. " rules will be absurd!\n\n")
 
     local grammarset = {},
-    each name,rule in GAME.SHAPE_GRAMMAR do
+    for name,rule in pairs(GAME.SHAPE_GRAMMAR) do
       table.insert(grammarset, rule.name)
     end
 
@@ -1159,7 +1159,7 @@ function Grower_split_liquids()
 
     table.insert(list, S)
 
-    each dir in geom.ALL_DIRS do
+    for _,dir in pairs(geom.ALL_DIRS) do
       local N = S:neighbor(dir)
 
       if N and N.area == S.area and not N.mark_contiguous then
@@ -1481,7 +1481,7 @@ function Grower_kill_room(R)
   local function handle_conn()
     -- there should be a single prelim-conn : find and kill it
 
-    each PC in LEVEL.prelim_conns do
+    for _,PC in pairs(LEVEL.prelim_conns) do
       if PC.R1 == R or PC.R2 == R then
         gui.debugf("  killing prelim conn %s -> %s\n", PC.R1.name, PC.R2.name)
 
@@ -1506,7 +1506,7 @@ function Grower_kill_room(R)
     end
 
     -- sanity check
-    each PC in LEVEL.prelim_conns do
+    for _,PC in pairs(LEVEL.prelim_conns) do
       assert(not (PC.R1 == R or PC.R2 == R))
     end
   end
@@ -1761,7 +1761,7 @@ function Grower_grammatical_pass(R, pass, apply_num, stop_prob,
   local function collect_matching_rules(want_pass, stop_prob, no_new_areas)
     local tab = {},
 
-    each name,rule in grammar do
+    for name,rule in pairs(grammar) do
       if rule.pass ~= want_pass then continue end
 
       if no_new_areas and rule.new_area then continue end
@@ -3090,7 +3090,7 @@ end
     area_map[3] = nil
     link_chunk  = nil
 
-    each area_num, loc in cur_rule.focal_points do
+    for area_num, loc in pairs(cur_rule.focal_points) do
       if not match_a_focal_point(area_num, T, loc.gx, loc.gy) then
         return false
       end
@@ -3212,7 +3212,7 @@ end
 
       local factor = 1.0,
 
-      each name in rule.styles do
+      for _,name in pairs(rule.styles) do
         if STYLE[name] == nil then
           error("Unknown style in grammar rule: " .. tostring(name))
         end
@@ -3280,7 +3280,7 @@ end
 
 
     local function change_group_probs(mode)
-      each name,cur_def in grammar do
+      for name,cur_def in pairs(grammar) do
         if rule.group == cur_def.group
         and rule.group_pos ~= "entry" then
           if mode == "highlight" then
@@ -3659,7 +3659,7 @@ function Grower_prune_hallway(R)
   local function kill_a_piece(piece)
     assert(not piece.is_dead)
 
-    each dir, P2 in piece.h_join do
+    for dir, P2 in pairs(piece.h_join) do
       if not P2.is_dead then
         assert(P2.h_join[10 - dir] == piece)
                P2.h_join[10 - dir] = nil
@@ -3678,7 +3678,7 @@ function Grower_prune_hallway(R)
 
     local neighbors = table.copy(piece.h_join)
 
-    each dir,P in neighbors do
+    for dir,P in pairs(neighbors) do
       if not seen[P.id] then
         dead_end_flow(P, seen, piece)
       end
@@ -3692,7 +3692,7 @@ function Grower_prune_hallway(R)
     -- count number of REAL destinations
     local count = 0,
 
-    each dir, P2 in piece.h_join do
+    for dir, P2 in pairs(piece.h_join) do
       if not P2.delay_pruned then
         count = count + 1,
       end
@@ -3706,7 +3706,7 @@ function Grower_prune_hallway(R)
     -- (since the current piece will be removed or become a dead-end)
     neighbors = table.copy(piece.h_join)
 
-    each dir, P2 in neighbors do
+    for dir, P2 in pairs(neighbors) do
       if P2.delay_pruned then
         kill_a_piece(P2)
       end
@@ -4117,7 +4117,7 @@ gui.debugf("=== Coverage seeds: %d/%d  rooms: %d/%d\n",
     if R:prelim_conn_num() == 0 then
       Grower_sprout_room(R)
 
-      each PC in LEVEL.prelim_conns do
+      for _,PC in pairs(LEVEL.prelim_conns) do
         if PC.R1 == R or PC.R2 == R then
           local other = sel(PC.R1 == R, PC.R2, PC.R1)
 
@@ -4442,7 +4442,7 @@ function Grower_flatten_outdoor_fences()
     local nb_count = 0,
     local nb_area
 
-    each dir in geom.ALL_DIRS do
+    for _,dir in pairs(geom.ALL_DIRS) do
       local N = S:neighbor(dir)
 
       if N and N.area and
@@ -4648,7 +4648,7 @@ function Grower_create_rooms()
 
     gui.printf("\n--==| Shape Rule Statistics |==--\n" ..
     "NAME: APPLY COUNT / TRIAL COUNT : USE PROBABILITY\n")
-    each rule, info in GROWER_DEBUG_INFO do
+    for rule, info in pairs(GROWER_DEBUG_INFO) do
 
       local cur_prob = GAME.SHAPE_GRAMMAR[info.name].use_prob
 

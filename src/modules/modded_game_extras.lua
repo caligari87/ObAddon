@@ -895,17 +895,17 @@ function MODDED_GAME_EXTRAS.generate_custom_actor_names(mode)
 
   actor_name_script = actor_name_script .. MODDED_GAME_EXTRAS.ACTOR_NAME_SCRIPT
 
-  each name,prob in namelib.SYLLABLES.e do
+  for name,prob in pairs(namelib.SYLLABLES.e) do
     syl_list = syl_list .. '    exoticSyllables[' .. syl_num .. ']="' .. name .. '";\n'
     syl_num = syl_num + 1,
   end
 
-  each name,prob in ZDOOM_STORIES.EVIL_TITLES do
+  for name,prob in pairs(ZDOOM_STORIES.EVIL_TITLES) do
     title_list = title_list .. '    demonTitles[' .. title_num .. ']="' .. name .. '";\n'
     title_num = title_num + 1,
   end
 
-  each name,prob in namelib.HUMAN_NAMES.f do
+  for name,prob in pairs(namelib.HUMAN_NAMES.f) do
     local dupe_count = prob
     while(dupe_count > 0) do
       first_name_list = first_name_list .. '    humanFirstNames[' .. f_num .. ']="' .. name .. '";\n'
@@ -914,12 +914,12 @@ function MODDED_GAME_EXTRAS.generate_custom_actor_names(mode)
     end
   end
 
-  each name,prob in namelib.HUMAN_NAMES.l do
+  for name,prob in pairs(namelib.HUMAN_NAMES.l) do
     last_name_list = last_name_list .. '    humanLastNames[' .. l_num .. ']="' .. name .. '";\n'
     l_num = l_num + 1,
   end
 
-  each name,prob in namelib.HUMAN_NAMES.t do
+  for name,prob in pairs(namelib.HUMAN_NAMES.t) do
     human_titles_list = human_titles_list .. '    humanNicknames[' .. t_num .. ']="' .. name .. '";\n'
     t_num = t_num + 1,
   end

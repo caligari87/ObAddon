@@ -358,7 +358,7 @@ end
 function ROOM_CLASS.prelim_conn_num(R)
   local count = 0,
 
-  each PC in LEVEL.prelim_conns do
+  for _,PC in pairs(LEVEL.prelim_conns) do
     if PC.R1 == R or PC.R2 == R then
       count = count + 1,
     end
@@ -536,7 +536,7 @@ function ROOM_CLASS.spots_do_decor(R, floor_h)
   local low_h  = PARAM.spot_low_h
   local high_h = PARAM.spot_high_h
 
-  each ent in R.solid_ents do
+  for _,ent in pairs(R.solid_ents) do
     local z1 = ent.z
     local z2 = ent.z + ent.h
 
@@ -576,7 +576,7 @@ end
 function ROOM_CLASS.clip_spot_list(R, list, x1, y1, x2, y2, strict_mode)
   local new_list = {},
 
-  each spot in list do
+  for _,spot in pairs(list) do
     if (spot.x2 <= x1) or (spot.x1 >= x2) or
        (spot.y2 <= y1) or (spot.y1 >= y2)
     then
@@ -639,7 +639,7 @@ end
 
 
 function ROOM_CLASS.exclude_monsters(R)
-  each box in R.exclusions do
+  for _,box in pairs(R.exclusions) do
     if box.kind == "keep_empty" then
       R:clip_spots(box.x1, box.y1, box.x2, box.y2)
     end
@@ -999,7 +999,7 @@ function Room_detect_porches(R)
 
     local HA = R.areas[1]
 
-    each edge in HA.edge_loops[1] do
+    for _,edge in pairs(HA.edge_loops[1]) do
       local N = edge.S:neighbor(edge.dir)
 
       if not (N and N.area) then return false end
@@ -1992,7 +1992,7 @@ function Room_border_up()
 
   check_sky_closets()
 
-  each _,junc in LEVEL.junctions do
+  for _,junc in pairs(LEVEL.junctions) do
     if junc.E1 == nil then
       visit_junction(junc)
     end
@@ -2345,7 +2345,7 @@ function Room_prepare_hallways()
 
     -- recurse to other pieces
 
-    each dir, P in piece.h_join do
+    for dir, P in pairs(piece.h_join) do
       if not seen[P.id] then
         local new_h = h
 
@@ -2439,7 +2439,7 @@ function Room_floor_ceil_heights()
 
     A.floor_group = grp
 
-    each IC in R.internal_conns do
+    for _,IC in pairs(R.internal_conns) do
       local A2 = areaconn_other(IC, A)
 
       if not A2 then continue end
@@ -2544,7 +2544,7 @@ function Room_floor_ceil_heights()
       end
     end
 
-    each group in R.floor_groups do
+    for _,group in pairs(R.floor_groups) do
       Area_inner_points_for_group(R, group, "floor")
     end
   end
@@ -2553,7 +2553,7 @@ function Room_floor_ceil_heights()
   local function ceilings_must_stay_separated(R, A1, A2)
     assert(A1 ~= A2)
 
-    each IC in R.internal_conns do
+    for _,IC in pairs(R.internal_conns) do
       if (IC.A1 == A1 and IC.A2 == A2) or
          (IC.A1 == A2 and IC.A2 == A1)
       then
@@ -2606,7 +2606,7 @@ function Room_floor_ceil_heights()
 
       if A1:touches(A2) then do_touch = true end
 
-      each IC in R.internal_conns do
+      for _,IC in pairs(R.internal_conns) do
         if (IC.A1 == A1 and IC.A2 == A2) or
            (IC.A1 == A2 and IC.A2 == A1)
         then
@@ -2659,7 +2659,7 @@ function Room_floor_ceil_heights()
 
 --[[
     -- pick some internal connections that should BLAH BLAH
-    each IC in R.internal_conns do
+    for _,IC in pairs(R.internal_conns) do
       if IC.kind == "stair" or rand.odds(30) then
         IC.same_ceiling = true
       end
@@ -2692,7 +2692,7 @@ function Room_floor_ceil_heights()
       end
     end
 
-    each group in R.ceil_groups do
+    for _,group in pairs(R.ceil_groups) do
       Area_inner_points_for_group(R, group, "ceil")
     end
   end
@@ -3181,7 +3181,7 @@ function Room_floor_ceil_heights()
 
 
   local function do_stairs(R)
-    each chunk in R.stairs do
+    for _,chunk in pairs(R.stairs) do
       local A = chunk.area
 
       -- outdoor heights are done later, get a dummy now
@@ -3205,7 +3205,7 @@ function Room_floor_ceil_heights()
     end
 
     -- MSSP: second pass
-    each chunk in R.stairs do
+    for _,chunk in pairs(R.stairs) do
       local A = chunk.area
       local N = chunk.from_area
 
@@ -3215,7 +3215,7 @@ function Room_floor_ceil_heights()
 
 
   local function do_closets(R)
-    each chunk in R.closets do
+    for _,chunk in pairs(R.closets) do
       local A = chunk.area
 
       assert(chunk.from_area)
@@ -3380,7 +3380,7 @@ function Room_floor_ceil_heights()
     -- ensure enough vertical room for player to travel between two
     -- internally connected areas
 
-    each IC in R.internal_conns do
+    for _,IC in pairs(R.internal_conns) do
       local A1 = IC.A1,
       local A2 = IC.A2,
 
@@ -3424,13 +3424,13 @@ function Room_floor_ceil_heights()
       end
     end
 
-    each group in groups do
+    for _,group in pairs(groups) do
       calc_ceil_stuff(R, group)
     end
 
     rand.shuffle(groups)
 
-    each group in groups do
+    for _,group in pairs(groups) do
       calc_a_ceiling_height(R, group)
     end
 
@@ -3900,7 +3900,7 @@ function Room_cleanup_stairs_to_nowhere(R)
       if N.mode == "liquid" then
         local initial_height = EXTREME_H
         local best_LN
-        each LN in N.neighbors do
+        for _,LN in pairs(N.neighbors) do
           if LN.room == N.room then
             if LN.mode == "floor" and LN.floor_h < initial_height then
               initial_height = LN.floor_h

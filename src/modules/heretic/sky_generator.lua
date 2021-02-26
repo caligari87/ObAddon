@@ -392,7 +392,7 @@ function SKY_GEN_HERETIC.generate_skies()
 
   gui.printf("\nSky generator:\n");
 
-  each EPI in GAME.episodes do
+  for _,EPI in pairs(GAME.episodes) do
 
     if not EPI.levels[1] then return end -- empty game episode?
 

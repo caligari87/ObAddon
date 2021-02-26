@@ -63,7 +63,7 @@ function Cave_brush(area, x, y)
 
   local diag_map = area.diagonals
 
-  each side in CELL_CORNERS do
+  for _,side in pairs(CELL_CORNERS) do
     -- create a triangle when cell straddles a diagonal seed
     if diag_map[x][y] == 10 - side then continue end
 
@@ -276,11 +276,11 @@ function Cave_collect_walk_rects(R, area)
     rect_for_connection(C)
   end
 
-  each chunk in R.floor_chunks do
+  for _,chunk in pairs(R.floor_chunks) do
     rect_for_floor_chunk(chunk)
   end
 
-  each chunk in R.closets do
+  for _,chunk in pairs(R.closets) do
     rect_for_closet(chunk)
   end
 end
@@ -362,7 +362,7 @@ end
 
 
 function Cave_clear_walk_rects(area)
-  each rect in area.walk_rects do
+  for _,rect in pairs(area.walk_rects) do
     area.walk_map:fill(rect.cx1, rect.cy1, rect.cx2, rect.cy2, -1)
   end
 end
@@ -393,7 +393,7 @@ end
 function Cave_cell_touches_room(area, cx, cy, R)
   -- checks diagonal directions too (i.e. corner touches)
 
-  each dir in geom.ALL_DIRS do
+  for _,dir in pairs(geom.ALL_DIRS) do
     local nx, ny = geom.nudge(cx, cy, dir)
 
     -- get seed coordinate of neighbor cell
@@ -491,7 +491,7 @@ function Cave_generate_cave(R, area)
         end
       end
 
-      each dir in geom.CORNERS do
+      for _,dir in pairs(geom.CORNERS) do
         if Cave_is_edge(S, dir) then
           -- lakes require whole seed to be cleared (esp. at "innie corners")
           if is_lake then
@@ -532,7 +532,7 @@ function Cave_generate_cave(R, area)
 
 
   local function is_fully_interior(S)
-    each dir in geom.ALL_DIRS do
+    for _,dir in pairs(geom.ALL_DIRS) do
       if Cave_is_edge(S, dir) then return false end
     end
 
@@ -799,7 +799,7 @@ function Cave_liquid_pools__OLD()
 
   local prob = 70  -- FIXME
 
-  each island in cave.islands do
+  for _,island in pairs(cave.islands) do
     if rand.odds(prob) then
       turn_area_into_liquid(island)
     end
@@ -864,7 +864,7 @@ function Cave_create_areas(R, area)
 
 
   local function apply_walk_chunks(map)
-    each rect in area.walk_rects do
+    for _,rect in pairs(area.walk_rects) do
       local cx1, cy1 = rect.cx1, rect.cy1,
       local cx2, cy2 = rect.cx2, rect.cy2,
 
@@ -987,7 +987,7 @@ function Cave_create_areas(R, area)
 
     table.insert(area.walk_floors, AREA)
 
----??  each WC in area.walk_rects do
+---??  for _,WC in pairs(area.walk_rects) do
 ---??    WC.cave_area = AREA
 ---??  end
 
@@ -1058,7 +1058,7 @@ function Cave_create_areas(R, area)
 
     group_map = GRID_CLASS.blank_copy(area.cave_map)
 
-    each WC in area.walk_rects do
+    for _,WC in pairs(area.walk_rects) do
       add_group_to_map(WC)
     end
   end
@@ -1414,7 +1414,7 @@ function Cave_bunch_areas(R, mode)
   local function grow_bunch(list)
     local poss = {},
 
-    each B,_ in list do
+    for B,_ in pairs(list) do
       for _,N in pairs(pairs(B.neighbors)) do
         if list[N] then continue end
         if N.near_bunch then continue end
@@ -1438,7 +1438,7 @@ function Cave_bunch_areas(R, mode)
   local function install_bunch(list)
     local head_B
 
-    each B,_ in list do
+    for B,_ in pairs(list) do
       if not head_B then head_B = B end
 
       if mode == "sky"    then B.sky_bunch    = head_B ; B.is_sky    = true end
@@ -1702,7 +1702,7 @@ function Cave_floor_heights(R, entry_h)
     local cy = (e_blob.cy1 + e_blob.cy2) / 2,
     local nearest_dist = EXTREME_H
 
-    each WF in area.walk_floors do
+    for _,WF in pairs(area.walk_floors) do
       --[[local cx_c = (WF.cx1 + WF.cx2) / 2,
       local cy_c = (WF.cy1 + WF.cy2) / 2,
 
@@ -1717,7 +1717,7 @@ function Cave_floor_heights(R, entry_h)
       )
     end
 
-    each WF in area.walk_floors do
+    for _,WF in pairs(area.walk_floors) do
       if WF.dist_to_entry == 0 then
         return WF
       end
@@ -1732,7 +1732,7 @@ function Cave_floor_heights(R, entry_h)
   local function transfer_heights()
     -- transfer heights to importants and portals
     -- FIXME
-    each imp in R.cave_imps do
+    for _,imp in pairs(R.cave_imps) do
       assert(imp.area)
       assert(imp.area.floor_h)
 
@@ -1773,7 +1773,7 @@ function Cave_floor_heights(R, entry_h)
     for _,B in pairs(pairs(area.walk_floors)) do
       if not B.children then continue end
 
-      each SINK in B.children do
+      for _,SINK in pairs(B.children) do
         SINK.floor_h = B.floor_h + SINK.floor_dz
 
         if B.ceil_h then
@@ -1858,7 +1858,7 @@ function Cave_floor_heights(R, entry_h)
 
 
   local function temp_chunk_crud()
-    each chunk in R.floor_chunks do
+    for _,chunk in pairs(R.floor_chunks) do
       if chunk.content == "MON_TELEPORT" then
         chunk.floor_h   = entry_h
         chunk.floor_mat = R.mon_tele_floor
@@ -1955,7 +1955,7 @@ function Cave_fill_lakes(R)
 
   local path_id = cave.flood[p1.cx1][p1.cy1]
 
-  each id,reg in cave.regions do
+  for id,reg in pairs(cave.regions) do
     if (id > 0) then
       add_lake(id, reg)
     end
@@ -2065,7 +2065,7 @@ function Cave_lake_fences(R)
       cx1 = (x - area.base_sx) * 2 + 1,
       cy1 = (y - area.base_sy) * 2 + 1,
 
-      each dir in geom.CORNERS do
+      for _,dir in pairs(geom.CORNERS) do
         if not Cave_is_edge(S, dir) then continue end
 
         local A_dir = geom. LEFT_45[dir]
@@ -2247,7 +2247,7 @@ function Cave_make_waterfalls(R)
 
 
   local function connect_pools()
-    each lake in area.lakes do
+    for _,lake in pairs(area.lakes) do
       local w, h = geom.group_size(lake.cx1, lake.cy1, lake.cx2, lake.cy2)
 
       -- too large?
@@ -2257,7 +2257,7 @@ function Cave_make_waterfalls(R)
       local DIRS = { 2,4,6,8 },
       rand.shuffle(DIRS)
 
-      each dir in DIRS do
+      for _,dir in pairs(DIRS) do
         if try_waterfall(lake, dir) then
           break;
         end
@@ -2570,7 +2570,7 @@ function Cave_decorations(R)
 
 
   local function kill_nearby_locs(list, x, y)
-    each loc in list do
+    for _,loc in pairs(list) do
       if math.abs(loc.cx - x) <= 2 and
          math.abs(loc.cy - y) <= 2,
       then
@@ -2775,7 +2775,7 @@ function Cave_build_a_cave(R, entry_h)
   Cave_decorations(R)
 
   -- distribute info for importants
-  each WC in area.walk_rects do
+  for _,WC in pairs(area.walk_rects) do
     local blob = area.blobs[WC.cx1][WC.cy1]
     assert(blob)
 
@@ -2810,8 +2810,8 @@ function Cave_build_a_cave(R, entry_h)
   end
 
   --[[ sync heights of blobs near to walk rects
-  each WC in area.walk_rects do
-    each BOT in area.blobs do
+  for _,WC in pairs(area.walk_rects) do
+    for _,BOT in pairs(area.blobs) do
       for _,B in pairs(pairs(BOT)) do
         if B.is_wall then continue end
 
@@ -2836,7 +2836,7 @@ function Cave_build_a_cave(R, entry_h)
         local yas_queen = false
 
         for _,P in pairs(pairs(points)) do
-          each CP in points_to_compare do
+          for _,CP in pairs(points_to_compare) do
             dist = geom.dist(P.x, P.y, CP.x, CP.y)
             if dist <= dist_to_check then
               yas_queen = true
@@ -3150,7 +3150,7 @@ function Cave_build_a_park(R, entry_h)
     local sum   = 0,
     local count = 0,
 
-    each x,r in y_ranges do
+    for x,r in pairs(y_ranges) do
       local top = 0,
       local bottom = 0,
 
@@ -3284,7 +3284,7 @@ function Cave_build_a_park(R, entry_h)
 
     -- handle little cut-off pieces
 
-    each _,reg in map2.regions do
+    for _,reg in pairs(map2.regions) do
       if reg.size < 6 and reg.id ~= B1 and reg.id != B2 then
         merge_a_runt(map2, reg, RIVER)
       end
@@ -3365,7 +3365,7 @@ function Cave_build_a_park(R, entry_h)
     for cy = B.cy1, B.cy2 do
       if blob_map[cx][cy] ~= B.id then continue end
 
-      each dir in geom.ALL_DIRS do
+      for _,dir in pairs(geom.ALL_DIRS) do
         local nx, ny = geom.nudge(cx, cy, dir)
         if not blob_map:valid(nx, ny) then return false end
 
@@ -3390,7 +3390,7 @@ function Cave_build_a_park(R, entry_h)
   local function river_add_towers()
     local prob = rand.pick({ 10, 30, 90 })
 
-    each _,B in blob_map.regions do
+    for _,B in pairs(blob_map.regions) do
       if rand.odds(prob) and can_make_river_tower(B) then
         B.is_tower = true
         B.prelim_h = B.prelim_h + 64,
@@ -3427,7 +3427,7 @@ function Cave_build_a_park(R, entry_h)
       install_river(best, RIVER)
     end
 
-    --[[each _,B in RIVER do
+    --[[for _,B in pairs(RIVER) do
       B.prelim_h = entry_h
       B.floor_mat = area.room.floor_mat
     end
@@ -3435,7 +3435,7 @@ function Cave_build_a_park(R, entry_h)
     river_add_towers(blob_map)
 
     -- render em
-    each _,reg in RIVER do
+    for _,reg in pairs(RIVER) do
       if reg.is_tower then
         do_install_floor_blob(reg, 0)
       end
@@ -3447,7 +3447,7 @@ function Cave_build_a_park(R, entry_h)
 
 
   local function hill_clear()
-    each _,B in blob_map.regions do
+    for _,B in pairs(blob_map.regions) do
       B.floor_id = nil
       B.stair    = nil
     end
@@ -3457,14 +3457,14 @@ function Cave_build_a_park(R, entry_h)
   local function hill_save(HILL)
     HILL.blob_floors = {},
 
-    each _,B in blob_map.regions do
+    for _,B in pairs(blob_map.regions) do
       HILL.blob_floors[B.id] = B.floor_id
     end
   end
 
 
   local function hill_restore(HILL)
-    each _,B in blob_map.regions do
+    for _,B in pairs(blob_map.regions) do
       B.floor_id = HILL.blob_floors[B.id]
     end
   end
@@ -3504,7 +3504,7 @@ function Cave_build_a_park(R, entry_h)
     -- pick the one with highest count
     local best
 
-    each id,count in counts do
+    for id,count in pairs(counts) do
       if not best or count > counts[best] then
         best = id
       end
@@ -3607,7 +3607,7 @@ function Cave_build_a_park(R, entry_h)
 
     B.floor_id = f_id
 
-    each st in stairs do
+    for _,st in pairs(stairs) do
       if not st.is_contained then continue end
 
       if st.src == B then
@@ -3659,7 +3659,7 @@ function Cave_build_a_park(R, entry_h)
 
     local unfilled = {},
 
-    each _,B in blob_map.regions do
+    for _,B in pairs(blob_map.regions) do
       if B.floor_id == old then
         table.insert(unfilled, B)
       end
@@ -3667,7 +3667,7 @@ function Cave_build_a_park(R, entry_h)
 
     rand.shuffle(unfilled)
 
-    each _,B in blob_map.regions do
+    for _,B in pairs(blob_map.regions) do
       rand.shuffle(B.neighbors)
     end
 
@@ -3707,7 +3707,7 @@ function Cave_build_a_park(R, entry_h)
 
     -- check whether all blobs with old floor were replaced
 
-    each _,B in blob_map.regions do
+    for _,B in pairs(blob_map.regions) do
       if B.floor_id == old then
         return false
       end
@@ -3748,11 +3748,11 @@ function Cave_build_a_park(R, entry_h)
 
     local F1 = hill_new_floor()
 
-    each _,B in blob_map.regions do
+    for _,B in pairs(blob_map.regions) do
       hill_set_floor(B, F1)
     end
 
-    each st in stairs do
+    for _,st in pairs(stairs) do
       hill_set_floor(st.B, "stair")
     end
 
@@ -3760,7 +3760,7 @@ function Cave_build_a_park(R, entry_h)
     -- then for each stair we divide its floor into two new floors.
     -- if this fails, then we abort the attempt.
 
-    each st in stairs do
+    for _,st in pairs(stairs) do
       if not hill_divide_floor(st, stairs) then
         return
       end
@@ -3771,7 +3771,7 @@ function Cave_build_a_park(R, entry_h)
 
     local floor_sizes = {},
 
-    each _,B in blob_map.regions do
+    for _,B in pairs(blob_map.regions) do
       local f_id = B.floor_id
 
       if f_id ~= "stair" then
@@ -3782,7 +3782,7 @@ function Cave_build_a_park(R, entry_h)
     local total_size = 0,
     local min_size   = 9e9,
 
-    each _,size in floor_sizes do
+    for _,size in pairs(floor_sizes) do
       total_size = total_size + size
       min_size   = math.min(min_size, size)
     end
@@ -3810,7 +3810,7 @@ function Cave_build_a_park(R, entry_h)
 
     local floors = HILL.floors
 
-    each st in HILL.stairs do
+    for _,st in pairs(HILL.stairs) do
       local src  = assert(st.src .floor_id)
       local dest = assert(st.dest.floor_id)
 
@@ -3819,7 +3819,7 @@ function Cave_build_a_park(R, entry_h)
     end
 
     -- see what walk_rects are used on each floor
-    each WC in area.walk_rects do
+    for _,WC in pairs(area.walk_rects) do
       local id = blob_map[WC.cx1][WC.cy1]
       assert(id)
 
@@ -3844,7 +3844,7 @@ function Cave_build_a_park(R, entry_h)
 
     local profile = {},
 
-    each id,_ in HILL.floors do
+    for id,_ in pairs(HILL.floors) do
       profile[id] = {},
     end
 
@@ -3852,7 +3852,7 @@ function Cave_build_a_park(R, entry_h)
 
     local start_f
 
-    each id, F in HILL.floors do
+    for id, F in pairs(HILL.floors) do
       assert(F.stair_num >= 1)
 
       if F.stair_num == 1 and (not start_f or rand.odds(50)) then
@@ -3870,7 +3870,7 @@ function Cave_build_a_park(R, entry_h)
 
       rand.shuffle(HILL.stairs)
 
-      each st in HILL.stairs do
+      for _,st in pairs(HILL.stairs) do
         local P1 = profile[st.src .floor_id]
         local P2 = profile[st.dest.floor_id]
 
@@ -3892,7 +3892,7 @@ function Cave_build_a_park(R, entry_h)
 
 
     -- sanity check
-    each id, P in profile do
+    for id, P in pairs(profile) do
       assert(P.prelim_h)
     end
 
@@ -3918,7 +3918,7 @@ function Cave_build_a_park(R, entry_h)
     for cy = B.cy1, B.cy2 do
       if blob_map[cx][cy] ~= B.id then continue end
 
-      each dir in geom.ALL_DIRS do
+      for _,dir in pairs(geom.ALL_DIRS) do
         local nx, ny = geom.nudge(cx, cy, dir)
         if not blob_map:valid(nx, ny) then return false end
 
@@ -3943,7 +3943,7 @@ function Cave_build_a_park(R, entry_h)
   local function hill_add_towers(HILL)
     local prob = rand.pick({ 10, 30, 90 })
 
-    each _,B in blob_map.regions do
+    for _,B in pairs(blob_map.regions) do
       if rand.odds(prob) and can_make_tower(B) then
         B.is_tower = true
         B.prelim_h = B.prelim_h + 64,
@@ -4010,13 +4010,13 @@ function Cave_build_a_park(R, entry_h)
     -- visit each blob and see if we can make a pool
     -- [ update prelim_h in a second pass, to two or more neighboring
     --   blobs to become liquid ]
-    each _,B in blob_map.regions do
+    for _,B in pairs(blob_map.regions) do
       if rand.odds(prob) and can_make_pool(B) then
         B.is_pool = true
       end
     end
 
-    each _,B in blob_map.regions do
+    for _,B in pairs(blob_map.regions) do
       if B.is_pool then
         hill_make_a_pool(B)
       end
@@ -4031,7 +4031,7 @@ function Cave_build_a_park(R, entry_h)
     -- never on a diagonal cell
     if area.diagonals[cx][cy] then return nil end
 
-    each dir in geom.ALL_DIRS do
+    for _,dir in pairs(geom.ALL_DIRS) do
       local nx, ny = geom.nudge(cx, cy, dir)
       if not blob_map:valid(nx, ny) then return nil end
 
@@ -4047,7 +4047,7 @@ function Cave_build_a_park(R, entry_h)
     end
 
     -- ensure tree is not adjacent to another one
-    each loc in tree_locs do
+    for _,loc in pairs(tree_locs) do
       if math.abs(cx - loc.cx) <= 1 and
          math.abs(cy - loc.cy) <= 1,
       then
@@ -4101,7 +4101,7 @@ function Cave_build_a_park(R, entry_h)
 
     local prob = style_sel("park_detail", 0, 30, 60, 90)
 
-    each _,B in blob_map.regions do
+    for _,B in pairs(blob_map.regions) do
       if rand.odds(prob) then
         try_add_decor_item(B)
       end
@@ -4119,7 +4119,7 @@ function Cave_build_a_park(R, entry_h)
 
     local floors = {}  --  [floor_id] -> { prelim_h=xxx },
 
-    each _,f_id in HILL.blob_floors do
+    for _,f_id in pairs(HILL.blob_floors) do
       if f_id ~= "stair" and not floors[f_id] then
         floors[f_id] = { id=f_id, stair_num=0 },
       end
@@ -4143,7 +4143,7 @@ function Cave_build_a_park(R, entry_h)
     local h_list = {},
     local h_mats = {},
 
-    each _,P in HILL.profile do
+    for _,P in pairs(HILL.profile) do
       table.add_unique(h_list, P.prelim_h)
     end
 
@@ -4163,7 +4163,7 @@ function Cave_build_a_park(R, entry_h)
     -- install the height profile
     -- [ stairs are processed later.... ]
 
-    each _,B in blob_map.regions do
+    for _,B in pairs(blob_map.regions) do
       if B.floor_id ~= "stair" then
         local P1 = HILL.profile[B.floor_id]
         assert(P1)
@@ -4179,7 +4179,7 @@ function Cave_build_a_park(R, entry_h)
       end
     end
 
-    each st in HILL.stairs do
+    for _,st in pairs(HILL.stairs) do
       st.B.stair_info = st
     end
 
@@ -4197,7 +4197,7 @@ function Cave_build_a_park(R, entry_h)
 
     local all_stairs = {},
 
-    each _,B in blob_map.regions do
+    for _,B in pairs(blob_map.regions) do
       for pass = 1, 2 do
         local is_vert = (pass == 2)
         local ok,src,dest = hill_blob_is_good_stair(B, is_vert)
@@ -4424,7 +4424,7 @@ function Cave_build_a_park(R, entry_h)
   local function hill_fill_gaps()
     local changes = false
 
-    each _,B in blob_map.regions do
+    for _,B in pairs(blob_map.regions) do
       local nb
 
       if not B.prelim_h then
@@ -4491,14 +4491,14 @@ stderrf("  picked chain from blob %d --> %d\n", B.id, C.id)
       C.floor_id = B.floor_id + 1,
       C.prelim_h = B.prelim_h + 8,
 
-      each step in chain do
+      for _,step in pairs(chain) do
         step.floor_id = "step",
         step.prelim_h = C.prelim_h
 
         C.prelim_h = C.prelim_h + 8,
       end
 
-      each step in chain do
+      for _,step in pairs(chain) do
         hill_set_neighbors(step, C)
       end
 
@@ -4535,7 +4535,7 @@ stderrf("  picked chain from blob %d --> %d\n", B.id, C.id)
 
     -- TODO : merge neighboring blobs with same h/mat  [ must handle "decor" too!! ]
 
-    each _,reg in blob_map.regions do
+    for _,reg in pairs(blob_map.regions) do
       if reg.floor_id == "stair" then
         do_install_stair_blob(reg, base_h)
 
@@ -4554,7 +4554,7 @@ stderrf("  picked chain from blob %d --> %d\n", B.id, C.id)
     -- MSSP-TODO
     --print_area(area)
     --[[for _,B in pairs(pairs(area.blobs)) do
-      each cell in B do
+      for _,cell in pairs(B) do
         local bx = area.base_sx
         local by = area.base_sy
 
@@ -4591,7 +4591,7 @@ stderrf("  picked chain from blob %d --> %d\n", B.id, C.id)
       end
     end]]
 
-    each WC in area.walk_rects do
+    for _,WC in pairs(area.walk_rects) do
       local blob = area.blobs[WC.cx1][WC.cy1]
       assert(blob)
 
@@ -4654,7 +4654,7 @@ stderrf("  picked chain from blob %d --> %d\n", B.id, C.id)
     end
 
     --
-    each _,B in blob_map.regions do
+    for _,B in pairs(blob_map.regions) do
       B.prelim_h = entry_h
       B.floor_mat = R.floor_mat
     end
@@ -4664,7 +4664,7 @@ stderrf("  picked chain from blob %d --> %d\n", B.id, C.id)
     hill_add_decor(blob_map)
 
     -- render em
-    each _,reg in blob_map.regions do
+    for _,reg in pairs(blob_map.regions) do
       if reg.prelim_h then
         do_install_floor_blob(reg, 0)
       end
@@ -5077,7 +5077,7 @@ function Cave_build_a_scenic_vista(area)
     end
 
     if THEME.cliff_trees then
-      each id, reg in blob_map.regions do
+      for id, reg in pairs(blob_map.regions) do
         local cx, cy = blob_map:random_blob_cell(id)
         if not cx then continue end
 
@@ -5151,7 +5151,7 @@ function Cave_build_a_scenic_vista(area)
     end
 
     if THEME.cliff_trees then
-      each id, reg in blob_map.regions do
+      for id, reg in pairs(blob_map.regions) do
         local cx, cy = blob_map:random_blob_cell(id)
         if not cx then continue end
 
@@ -5257,7 +5257,7 @@ function Cave_build_a_scenic_vista(area)
     --add some scenery objects
 
     if THEME.cliff_trees then
-      each id, reg in blob_map.regions do
+      for id, reg in pairs(blob_map.regions) do
         local cx, cy = blob_map:random_blob_cell(id)
         if not cx then continue end
 

@@ -106,7 +106,7 @@ function Fab_load_all_definitions()
 
     gui.set_import_dir(dir)
 
-    each filename in list do
+    for _,filename in pairs(list) do
       gui.debugf("Loading %s/%s\n", sub, filename)
 
       gui.import(filename)
@@ -126,7 +126,7 @@ function Fab_load_all_definitions()
       return
     end
 
-    each sub in subdirs do
+    for _,sub in pairs(subdirs) do
       load_from_subdir(top_level, sub)
     end
 
@@ -134,7 +134,7 @@ function Fab_load_all_definitions()
     -- [ we assume previous defs also got it, hence this will only set
     --   the dir_name in the definitions just loaded ]
 
-    each name,def in PREFABS do
+    for name,def in pairs(PREFABS) do
       if not def.dir_name then
         def.dir_name = top_level
       end
@@ -195,7 +195,7 @@ function Fab_load_all_definitions()
           table.remove(PREFABS[def.name])
 
           -- remove templates of a replaced fab as well
-          each name,odef in PREFABS do
+          for name,odef in pairs(PREFABS) do
             if odef.template == def.replaces then
               table.remove(PREFABS[odef])
             end
@@ -210,7 +210,7 @@ function Fab_load_all_definitions()
           PREFABS[def.replaces].use_prob = 0,
           PREFABS[def.replaces].skip_prob = 100,
 
-          each name,odef in PREFABS do
+          for name,odef in pairs(PREFABS) do
             if odef.template == def.replaces then
               PREFABS[odef].prob = 0,
               PREFABS[odef].use_prob = 0,
@@ -248,7 +248,7 @@ function Fab_load_all_definitions()
 
     local count = 0,
 
-    each name,def in PREFABS do
+    for name,def in pairs(PREFABS) do
       if not def.kind then
         def.kind = kind_from_filename(def.file)
       end
@@ -276,7 +276,7 @@ end
 
 
 function Fab_update_skip_prob()
-  each name,def in PREFABS do
+  for name,def in pairs(PREFABS) do
     if def.skip_prob then
       if rand.odds(def.skip_prob) then
         def.use_prob = 0,
@@ -851,11 +851,11 @@ function Fab_process_spots(fab, room)
   local function OLD__distribute_spots(R, list)
     local seen = {},
 
-    each spot in list do
+    for _,spot in pairs(list) do
       seen[spot.kind] = 1,
     end
 
-    each spot in list do
+    for _,spot in pairs(list) do
       if not seen["big_item"] and spot.kind == "important" then
         local new_spot = table.copy(spot)
         new_spot.kind = "big_item",
@@ -1043,7 +1043,7 @@ function Fab_parse_edges__OLD(skin)
   end
 
 
-  each k, edge in skin do
+  for k, edge in pairs(skin) do
     if k == "north" then parse_edge(8, edge) end
     if k == "south" then parse_edge(2, edge) end
     if k == "east"  then parse_edge(6, edge) end
@@ -1717,7 +1717,7 @@ function Fab_merge_skins(fab, room, list)
     table.merge(result, room.skin)
   end
 
-  each skin in list do
+  for _,skin in pairs(list) do
     table.merge(result, skin)
   end
 
@@ -1753,7 +1753,7 @@ function Fab_collect_fields(fab)
   local function matching_fields()
     local list = { },
 
-    each k,v in fab do
+    for k,v in pairs(fab) do
       if match_prefix(k) then
         table.insert(list, k)
       end
@@ -1795,7 +1795,7 @@ function Fab_substitutions(fab, SKIN)
     -- most fields with a table value are considered to be random
     -- replacement, e.g. tex_FOO = { COMPSTA1=50, COMPSTA2=50 }.
 
-    each name in keys do
+    for _,name in pairs(keys) do
       local value = fab.fields[name]
 
       if type(value) ~= "table" then continue end
@@ -1835,7 +1835,7 @@ function Fab_substitutions(fab, SKIN)
 
 
   local function subst_pass(keys)
-    each name in keys do
+    for _,name in pairs(keys) do
       local value = fab.fields[name]
 
       if is_subst(value) then
@@ -2035,7 +2035,7 @@ function Fab_replacements(fab)
 
     if not THEME.entity_remap then return end
 
-    each name1,name2 in THEME.entity_remap do
+    for name1,name2 in pairs(THEME.entity_remap) do
       local id1 = get_entity_id(name1)
       local id2 = get_entity_id(name2)
 
@@ -2274,7 +2274,7 @@ function Fab_find_matches(reqs, match_state)
   local function match_word_or_table(req_k, def_k)
     if type(req_k) == "table" and def_k then
       -- recursively check each keyword to allow table<-->table matches
-      each r2,_ in req_k do
+      for r2,_ in pairs(req_k) do
         if match_word_or_table(r2, def_k) then return true end
       end
 
@@ -2419,7 +2419,7 @@ function Fab_find_matches(reqs, match_state)
 
     local factor = 1.0,
 
-    each name in style_tab do
+    for _,name in pairs(style_tab) do
       if STYLE[name] == nil then
         error("Unknown style name in prefab def: " .. tostring(name))
       end
@@ -2454,7 +2454,7 @@ function Fab_find_matches(reqs, match_state)
 
   local tab = {},
 
-  each name,def in PREFABS do
+  for name,def in pairs(PREFABS) do
     local prob = prob_for_match(def, match_state, reqs.theme_override)
 
     if prob > 0 then

@@ -183,7 +183,7 @@ function CTL_DOOM.weapon_setup(self)
 
   if PARAM.weapon_prefs == "vanilla",
   or PARAM.weapon_prefs == "none" then
-    each mon in GAME.MONSTERS do
+    for _,mon in pairs(GAME.MONSTERS) do
       mon.weapon_prefs = nil
     end
   end
@@ -256,11 +256,11 @@ function CTL_DOOM.item_setup(self)
     end
   end
 
-  each name, info in GAME.PICKUPS do
+  for name, info in pairs(GAME.PICKUPS) do
     change_probz(name, info)
   end
 
-  each name, info in GAME.NICE_ITEMS do
+  for name, info in pairs(GAME.NICE_ITEMS) do
     change_probz(name, info)
   end
 end

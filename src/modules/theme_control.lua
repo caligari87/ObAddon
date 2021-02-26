@@ -92,7 +92,7 @@ function THEME_CONTROL.get_levels(self)
     PARAM[name] = value
   end
 
-  each LEV in GAME.levels do
+  for _,LEV in pairs(GAME.levels) do
     local name
 
     if LEV.is_secret then

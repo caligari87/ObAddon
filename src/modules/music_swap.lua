@@ -91,7 +91,7 @@ function MUSIC_SWAP.get_levels(self)
     epi_list = MUSIC_SWAP.doom1_music
   end
 
-  each _,src in epi_list do
+  for _,src in pairs(epi_list) do
     local dest = table.copy(src)
 
     -- this shuffle algorithm ensures first entry is never the same

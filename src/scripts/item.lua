@@ -88,7 +88,7 @@ HEXEN2_FLAGS =
 function Player_init()
   LEVEL.hmodels = table.deep_copy(GAME.PLAYER_MODEL)
 
-  each CL,hmodel in LEVEL.hmodels do
+  for CL,hmodel in pairs(LEVEL.hmodels) do
     hmodel.class = CL
   end
 end
@@ -97,7 +97,7 @@ end
 function Player_give_weapon(weapon, only_CL)
   gui.printf("Giving weapon: %s\n", weapon)
 
-  each CL,hmodel in LEVEL.hmodels do
+  for CL,hmodel in pairs(LEVEL.hmodels) do
     if not only_CL or (only_CL == CL) then
       hmodel.weapons[weapon] = 1,
     end
@@ -106,8 +106,8 @@ end
 
 
 function Player_give_class_weapon(slot)
-  each name,W in GAME.WEAPONS do
-    each CL,hmodel in LEVEL.hmodels do
+  for name,W in pairs(GAME.WEAPONS) do
+    for CL,hmodel in pairs(LEVEL.hmodels) do
       if W.slot == slot and W.class == CL then
         hmodel.weapons[name] = 1,
       end
@@ -118,7 +118,7 @@ end
 
 function Player_give_map_stuff()
   if LEVEL.assume_weapons then
-    each name,_ in LEVEL.assume_weapons do
+    for name,_ in pairs(LEVEL.assume_weapons) do
           if name == "weapon2" then Player_give_class_weapon(2)
       elseif name == "weapon3" then Player_give_class_weapon(3)
       elseif name == "weapon4" then Player_give_class_weapon(4)
@@ -133,12 +133,12 @@ end
 function Player_give_room_stuff(R)
   -- give weapons, plus any ammo they come with
   if not PARAM.hexen_weapons then
-    each name in R.weapons do
+    for _,name in pairs(R.weapons) do
       Player_give_weapon(name)
 
       local weap = GAME.WEAPONS[name]
       if weap and weap.give then
-        each CL,hmodel in LEVEL.hmodels do
+        for CL,hmodel in pairs(LEVEL.hmodels) do
           Player_give_stuff(hmodel, weap.give)
         end
       end
@@ -149,10 +149,10 @@ function Player_give_room_stuff(R)
 
   -- take nice items into account too (except for secrets)
   if not R.is_secrets then
-    each name in R.items do
+    for _,name in pairs(R.items) do
       local info = GAME.NICE_ITEMS[name] or GAME.PICKUPS[name]
       if info and info.give then
-        each CL,hmodel in LEVEL.hmodels do
+        for CL,hmodel in pairs(LEVEL.hmodels) do
           Player_give_stuff(hmodel, info.give)
         end
       end
@@ -161,10 +161,10 @@ function Player_give_room_stuff(R)
 
   -- handle storage rooms too
   if R.storage_items then
-    each pair in R.storage_items do
+    for _,pair in pairs(R.storage_items) do
       local info = assert(pair.item)
       if info.give then
-        each CL,hmodel in LEVEL.hmodels do
+        for CL,hmodel in pairs(LEVEL.hmodels) do
           Player_give_stuff(hmodel, info.give)
         end
       end
@@ -174,7 +174,7 @@ end
 
 
 function Player_give_stuff(hmodel, give_list)
-  each give in give_list do
+  for _,give in pairs(give_list) do
     if give.health then
       gui.debugf("Giving [%s] health: %d\n",
                  hmodel.class, give.health)
@@ -211,7 +211,7 @@ function Player_firepower()
     local firepower = 0,
     local divisor   = 0,
 
-    each weapon,_ in hmodel.weapons do
+    for weapon,_ in pairs(hmodel.weapons) do
       local info = GAME.WEAPONS[weapon]
 
       if not info then
@@ -249,7 +249,7 @@ function Player_firepower()
   local fp_total  = 0,
   local class_num = 0,
 
-  each CL,hmodel in LEVEL.hmodels do
+  for CL,hmodel in pairs(LEVEL.hmodels) do
     fp_total = fp_total + get_firepower(hmodel)
     class_num = class_num + 1,
   end
@@ -263,7 +263,7 @@ end
 function Player_has_weapon(weap_needed)
 
   local function class_has_one(hmodel)
-    each name,_ in hmodel.weapons do
+    for name,_ in pairs(hmodel.weapons) do
       if weap_needed[name] then
         return true
       end
@@ -275,7 +275,7 @@ function Player_has_weapon(weap_needed)
 
   -- we require a match for every class
 
-  each CL,hmodel in LEVEL.hmodels do
+  for CL,hmodel in pairs(LEVEL.hmodels) do
     if not class_has_one(hmodel) then
       return false
     end
@@ -288,7 +288,7 @@ end
 function Player_max_damage()
   local result = 5,
 
-  each name,info in GAME.WEAPONS do
+  for name,info in pairs(GAME.WEAPONS) do
     local W_damage = info.rate * info.damage
 
     if W_damage > result and Player_has_weapon({ [name]=1 }) then
@@ -304,8 +304,8 @@ function Player_find_initial_weapons()
   -- find with weapons the player always owns
   local list = {},
 
-  each CL,hmodel in LEVEL.hmodels do
-    each name,_ in hmodel.weapons do
+  for CL,hmodel in pairs(LEVEL.hmodels) do
+    for name,_ in pairs(hmodel.weapons) do
       list[name] = 1,
     end
   end
@@ -317,7 +317,7 @@ end
 
 function Player_find_zone_weapons(Z, list)
   for _,R in pairs(pairs(Z.rooms)) do
-    each name in R.weapons do
+    for _,name in pairs(R.weapons) do
       list[name] = 1,
     end
   end
@@ -370,7 +370,7 @@ function Player_weapon_palettes()
   local function apply_pref_table(pal, prefs)
     if not prefs then return end
 
-    each name,factor in prefs do
+    for name,factor in pairs(prefs) do
       if pal[name] then
          pal[name] = pal[name] * factor
       end
@@ -406,7 +406,7 @@ function Player_weapon_palettes()
 
     local quants = decide_quantities(total)
 
-    each name,_ in got_weaps do
+    for name,_ in pairs(got_weaps) do
       pal[name] = table.remove(quants, 1)
     end
 
@@ -419,7 +419,7 @@ function Player_weapon_palettes()
 
 
   local function dump_palette(pal)
-    each weap,qty in pal do
+    for weap,qty in pairs(pal) do
       gui.debugf("   %-9s* %1.2f\n", weap, qty)
     end
   end
@@ -451,7 +451,7 @@ function Item_simulate_battle(R)
   local function make_empty_stats()
     local stats = {},
 
-    each CL,_ in GAME.PLAYER_MODEL do
+    for CL,_ in pairs(GAME.PLAYER_MODEL) do
       stats[CL] = {},
     end
 
@@ -481,7 +481,7 @@ function Item_simulate_battle(R)
       ammo_mul = ammo_mul * factor
     end
 
-    each name,qty in stats do
+    for name,qty in pairs(stats) do
       if name == "health" then
         stats[name] = qty * heal_mul
       else
@@ -492,7 +492,7 @@ function Item_simulate_battle(R)
 
 
   local function subtract_stuff_we_have(stats, hmodel)
-    each name,have_qty in hmodel.stats do
+    for name,have_qty in pairs(hmodel.stats) do
       local need_qty = stats[name] or 0,
       if have_qty > 0 and need_qty > 0 then
         local min_q = math.min(have_qty, need_qty)
@@ -530,7 +530,7 @@ function Item_simulate_battle(R)
     local list = {},
     local seen = {},
 
-    each name,_ in hmodel.weapons do
+    for name,_ in pairs(hmodel.weapons) do
       local info = assert(GAME.WEAPONS[name])
 
       local factor = R.zone.weap_palette[name]
@@ -543,7 +543,7 @@ function Item_simulate_battle(R)
 
     if not PARAM.pistol_starts then
       -- allow weapons from previous levels
-      each name,_ in EPISODE.seen_weapons do
+      for name,_ in pairs(EPISODE.seen_weapons) do
         if not seen[name] then
           local info = assert(GAME.WEAPONS[name])
           assert(info.pref)
@@ -604,7 +604,7 @@ function Item_simulate_battle(R)
   R.item_stats = make_empty_stats()
 
   if #R.monster_list >= 1 then
-    each CL,hmodel in LEVEL.hmodels do
+    for CL,hmodel in pairs(LEVEL.hmodels) do
       battle_for_class(CL, hmodel)
     end
   end
@@ -662,7 +662,7 @@ function Item_distribute_stats()
 
     -- adjust ratio values to be in range 0.0 - 1.0,
     if total > 0 then
-      each loc in list do
+      for _,loc in pairs(list) do
         loc.ratio = loc.ratio / total
       end
     end
@@ -675,10 +675,10 @@ function Item_distribute_stats()
     -- ratio is a value between 0.0 and 1.0, based on the number
     -- and size of the earlier rooms (in the loc list).
 
-    each CL,R_stats in R.item_stats do
+    for CL,R_stats in pairs(R.item_stats) do
       local N_stats = N.item_stats[CL]
 
-      each stat,qty in R_stats do
+      for stat,qty in pairs(R_stats) do
         if qty <= 0 then continue end
 
         local value = qty * ratio
@@ -707,7 +707,7 @@ function Item_distribute_stats()
     -- no stats?
     if not R.item_stats then return end
 
-    each loc in get_earlier_rooms(R) do
+    for _,loc in pairs(get_earlier_rooms(R)) do
       distribute_to_room(R, loc.room, loc.ratio)
     end
   end
@@ -753,7 +753,7 @@ function Item_pickups_for_class(CL)
             function(A, B) return A.score > B.score end, "remove")
 
     -- update remaining scores so next one chosen is far away
-    each spot in R.big_spots do
+    for _,spot in pairs(R.big_spots) do
       local dist = Monster_dist_between_spots(spot, result, 80) / 256,
 
       spot.score = spot.score + dist
@@ -798,7 +798,7 @@ function Item_pickups_for_class(CL)
       local spot = R.item_spots[index]
       local dist = 9e9,
 
-      each prev in prev_spots do
+      for _,prev in pairs(prev_spots) do
         local d = Monster_dist_between_spots(prev, spot)
         dist = math.min(dist, d)
       end
@@ -832,7 +832,7 @@ function Item_pickups_for_class(CL)
 
 
   local function place_item_list(R, item_list)
-    each pair in item_list do
+    for _,pair in pairs(item_list) do
       local item  = pair.item
       local count = pair.count
 
@@ -870,7 +870,7 @@ function Item_pickups_for_class(CL)
   local function decide_pickup(R, stat, qty)
     local item_tab = {},
 
-    each name,info in GAME.PICKUPS do
+    for name,info in pairs(GAME.PICKUPS) do
       local prob = info.add_prob or 0,
 
       if prob > 0 and
@@ -926,7 +926,7 @@ function Item_pickups_for_class(CL)
 
     -- when getting a weapon, should get some ammo for it too
     if R.weapons then
-      each name in R.weapons do
+      for _,name in pairs(R.weapons) do
         local info = GAME.WEAPONS[name]
 
         if info.ammo and info.ammo == stat and info.bonus_ammo then
@@ -1024,7 +1024,7 @@ function Item_pickups_for_class(CL)
       end
     end
 
-    each stat,qty in stats do
+    for stat,qty in pairs(stats) do
 
       -- this secret room is a treasure trove, baby!
       if R.is_secret then
@@ -1035,7 +1035,7 @@ function Item_pickups_for_class(CL)
 
       gui.debugf("Item list for %s:%1.1f [%s] @ %s\n", stat,qty, CL, R.name)
 
-      each pair in item_list do
+      for _,pair in pairs(item_list) do
         local item = pair.item
         gui.debugf("   %dx %s (%d)\n", pair.count, item.name,
                    item.give[1].health or item.give[1].count)
@@ -1081,7 +1081,7 @@ function Item_add_pickups()
     R.item_spots = Monster_split_spots(R.item_spots, 25)
   end
 
-  each CL,_ in LEVEL.hmodels do
+  for CL,_ in pairs(LEVEL.hmodels) do
     Item_pickups_for_class(CL)
   end
 end

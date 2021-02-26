@@ -65,7 +65,7 @@ function PREFAB_CONTROL_HERETIC.setup(self)
 end
 
 function PREFAB_CONTROL_HERETIC.fine_tune_filters()
-  each name,fab in PREFABS do
+  for name,fab in pairs(PREFABS) do
     if fab.filter == "gamble" then
       fab.prob = fab.prob * tonumber(PARAM.pf_gamble)
       fab.use_prob = fab.use_prob * tonumber(PARAM.pf_gamble)

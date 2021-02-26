@@ -379,7 +379,7 @@ function GRID_CLASS.dump_regions(grid)
   local solid_regs  = 0,
   local solid_cells = 0,
 
-  each id, REG in grid.regions do
+  for id, REG in pairs(grid.regions) do
     gui.debugf("  %+4d : (%d %d) .. (%d %d) size:%d\n",
                REG.id, REG.cx1, REG.cy1, REG.cx2, REG.cy2, REG.size)
 
@@ -527,7 +527,7 @@ function GRID_CLASS.solidify_pockets(grid, walk_id, solid_id)
 
 
   local function find_next()
-    each id, REG in grid.regions do
+    for id, REG in pairs(grid.regions) do
       if id < 0 and id ~= walk_id then
         return id, REG
       end
@@ -643,7 +643,7 @@ function GRID_CLASS.find_islands(grid)
 
   -- create the grids --
 
-  each reg, pot in potentials do
+  for reg, pot in pairs(potentials) do
     if pot == "maybe" then
       local island = grid:copy_region(reg)
 
@@ -1029,7 +1029,7 @@ function GRID_CLASS.dump_blobs(grid)
 
     local line = "",
 
-    each id, reg in grid.regions do
+    for id, reg in pairs(grid.regions) do
       line = line .. "  " .. string.format("%2d", reg.size)
 
       if #line > 40 then
@@ -1355,7 +1355,7 @@ function GRID_CLASS.merge_small_blobs(grid, min_size)
     -- need to copy the keys, since we modify the table as we go
     local id_list = table.keys(grid.regions)
 
-    each id in id_list do
+    for _,id in pairs(id_list) do
       if grid.regions[id] and grid.regions[id].size < min_size then
         local nb = candidate_to_merge(id)
 
@@ -1411,7 +1411,7 @@ function GRID_CLASS.walkify_blobs(grid, walk_rects)
 
   ---| walkify_blobs |---
 
-  each rect in walk_rects do
+  for _,rect in pairs(walk_rects) do
     handle_rect(rect)
   end
 end
@@ -1532,7 +1532,7 @@ end
 
 
 function GRID_CLASS.neighbors_of_blobs(grid)
-  each id, reg in grid.regions do
+  for id, reg in pairs(grid.regions) do
     reg.neighbors = {},
   end
 
@@ -1574,11 +1574,11 @@ function GRID_CLASS.spread_blob_dists(grid, field)
   repeat
     changes = false
 
-    each _,B1 in grid.regions do
+    for _,B1 in pairs(grid.regions) do
       -- compute minimum of neighbors
       local min_val
 
-      each _,B2 in B1.neighbors do
+      for _,B2 in pairs(B1.neighbors) do
         if B2[field] and (not min_val or B2[field] < min_val) then
           min_val = B2[field]
         end

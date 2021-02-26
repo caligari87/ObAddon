@@ -19,11 +19,11 @@
 ------------------------------------------------------------------------
 
 
-Trans = {},
+Trans = {}
 
-brushlib = {},
+brushlib = {}
 
-AMBIENT_LIGHT = {},
+AMBIENT_LIGHT = {}
 
 
 function raw_add_brush(brush)
@@ -101,7 +101,7 @@ end
 ------------------------------------------------------------------------
 
 function Ambient_reset()
-  AMBIENT_LIGHT = {},
+  AMBIENT_LIGHT = {}
 end
 
 
@@ -151,11 +151,11 @@ Trans.TRANSFORM =
   -- fitted_x  : size which a "fitted" prefab needs to become
   -- fitted_y
   -- fitted_z
-},
+}
 
 
 function Trans.clear()
-  Trans.TRANSFORM = {},
+  Trans.TRANSFORM = {}
 end
 
 function Trans.set(T)
@@ -176,10 +176,10 @@ function Trans.remap_coord(groups, n)
   if n <= groups[1].low  then return n + (groups[1].low2 -  groups[1].low)  end
   if n >= groups[T].high then return n + (groups[T].high2 - groups[T].high) end
 
-  local idx = 1,
+  local idx = 1
 
   while (idx < T) and (n > groups[idx].high) do
-    idx = idx + 1,
+    idx = idx + 1
   end
 
   local G = groups[idx]
@@ -323,7 +323,7 @@ function Trans.entity(name, x, y, z, props)
   if name == "nothing" then return end
 
   if not props then
-    props = {},
+    props = {}
   end
 
   local info = GAME.ENTITIES[name] or
@@ -370,7 +370,7 @@ function Trans.rect_coords(x1, y1, x2, y2)
     { x=x2, y=y2 },
     { x=x1, y=y2 },
     { x=x1, y=y1 },
-  },
+  }
 end
 
 
@@ -381,22 +381,22 @@ function Trans.spot_transform(x, y, z, dir)
 
   return
   {
-    add_x = x
-    add_y = y
-    add_z = z
+    add_x = x,
+    add_y = y,
+    add_z = z,
     rotate = ANGS[dir or 2]
-  },
+  }
 end
 
 
 function Trans.box_transform(x1, y1, x2, y2, z, dir)
   if not dir then dir = 2 end
 
-  local XS   = { [2]=x1, [8]= x2, [4]= x1, [6]=x2 },
-  local YS   = { [2]=y1, [8]= y2, [4]= y2, [6]=y1 },
-  local ANGS = { [2]=0,  [8]=180, [4]=270, [6]=90 },
+  local XS   = { [2]=x1, [8]= x2, [4]= x1, [6]=x2 }
+  local YS   = { [2]=y1, [8]= y2, [4]= y2, [6]=y1 }
+  local ANGS = { [2]=0,  [8]=180, [4]=270, [6]=90 }
 
-  local T = {},
+  local T = {}
 
   T.add_x = XS[dir]
   T.add_y = YS[dir]
@@ -405,24 +405,24 @@ function Trans.box_transform(x1, y1, x2, y2, z, dir)
   T.rotate = ANGS[dir]
 
   if geom.is_vert(dir) then
-    T.fitted_x = x2 - x1,
-    T.fitted_y = y2 - y1,
+    T.fitted_x = x2 - x1
+    T.fitted_y = y2 - y1
   else
-    T.fitted_x = y2 - y1,
-    T.fitted_y = x2 - x1,
+    T.fitted_x = y2 - y1
+    T.fitted_y = x2 - x1
   end
 
-  T.bbox = { x1=x1, y1=y1, x2=x2, y2=y2 },
+  T.bbox = { x1=x1, y1=y1, x2=x2, y2=y2 }
 
   return T
 end
 
 
 function Trans.edge_transform(E, z, ofs_L, ofs_R, deep, over, flip_it)
-  local x1 = E.S.x1,
-  local y1 = E.S.y1,
-  local x2 = E.S.x2,
-  local y2 = E.S.y2,
+  local x1 = E.S.x1
+  local y1 = E.S.y1
+  local x2 = E.S.x2
+  local y2 = E.S.y2
 
   if flip_it then
     deep,  over  = over,  deep
@@ -453,8 +453,8 @@ end
 
 
 function Trans.set_fitted_z(T, z1, z2)
-  T.add_z    = z1,
-  T.fitted_z = z2 - z1,
+  T.add_z    = z1
+  T.fitted_z = z2 - z1
 end
 
 
@@ -466,8 +466,8 @@ end
 function Mat_prepare_trip()
 
   -- build the psychedelic mapping
-  local m_before = {},
-  local m_after  = {},
+  local m_before = {}
+  local m_after  = {}
 
   for m,def in pairs(pairs(GAME.MATERIALS)) do
     if not def.sane and
@@ -483,7 +483,7 @@ function Mat_prepare_trip()
 
   rand.shuffle(m_after)
 
-  LEVEL.psycho_map = {},
+  LEVEL.psycho_map = {}
 
   for i = 1,#m_before do
     LEVEL.psycho_map[m_before[i]] = m_after[i]
@@ -492,7 +492,7 @@ end
 
 function Mat_lookup_tex(name)
   if not name or name == "" or name == "-" then
-    name = "_ERROR",
+    name = "_ERROR"
   end
 
   if LEVEL.psychedelic and LEVEL.psycho_map[name] then
@@ -516,7 +516,7 @@ function Mat_lookup_tex(name)
     -- prevent further messages (create a new material)
     local src_mat = assert(GAME.MATERIALS["_DEFAULT"])
 
-    mat = { t=name, f=src_mat.f },
+    mat = { t=name, f=src_mat.f }
 
     GAME.MATERIALS[name] = mat
   end
@@ -527,7 +527,7 @@ end
 
 function Mat_lookup_flat(name)
   if not name or name == "" or name == "-" then
-    name = "_ERROR",
+    name = "_ERROR"
   end
 
   if LEVEL.psychedelic and LEVEL.psycho_map[name] then
@@ -542,7 +542,7 @@ function Mat_lookup_flat(name)
     -- prevent further messages (create a new material)
     local src_mat = assert(GAME.MATERIALS["_DEFAULT"])
 
-    mat = { f=name, t=src_mat.t },
+    mat = { f=name, t=src_mat.t }
 
     GAME.MATERIALS[name] = mat
   end
@@ -566,20 +566,20 @@ DOOM_LINE_FLAGS =
   draw_never  = 0x80,
   draw_always = 0x100,
 
-  pass_thru   = 0x200  -- Boom
+  pass_thru   = 0x200,  -- Boom
 
   tridee_midtex   = 0x400,
-},
+}
 
 
 HEXEN_ACTIONS =
 {
-  W1 = 0x0000, WR = 0x0200  -- walk
-  S1 = 0x0400, SR = 0x0600  -- switch
-  M1 = 0x0800, MR = 0x0A00  -- monster
-  G1 = 0x0c00, GR = 0x0E00  -- gun / projectile
+  W1 = 0x0000, WR = 0x0200,  -- walk
+  S1 = 0x0400, SR = 0x0600,  -- switch
+  M1 = 0x0800, MR = 0x0A00,  -- monster
+  G1 = 0x0c00, GR = 0x0E00,  -- gun / projectile
   B1 = 0x1000, BR = 0x1200  -- bump
-},
+}
 
 
 function brushlib.quad(x1,y1, x2,y2, b,t)
@@ -589,7 +589,7 @@ function brushlib.quad(x1,y1, x2,y2, b,t)
     { x=x2, y=y1 },
     { x=x2, y=y2 },
     { x=x1, y=y2 },
-  },
+  }
 
   if b then table.insert(coords, { b=b }) end
   if t then table.insert(coords, { t=t }) end
@@ -604,7 +604,7 @@ function brushlib.triangle(x1,y1, x2,y2, x3,y3, b,t)
     { x=x1, y=y1 },
     { x=x2, y=y2 },
     { x=x3, y=y3 },
-  },
+  }
 
   if b then table.insert(coords, { b=b }) end
   if t then table.insert(coords, { t=t }) end
@@ -617,14 +617,14 @@ function brushlib.dump(brush, title)
   gui.debugf("%s:\n{\n", title or "Brush")
 
   for _,C in pairs(pairs(brush)) do
-    local field_list = {},
+    local field_list = {}
 
-    each name,val in C do
+    for name,val in pairs(C) do
       local pos
       if name == "m" or name == "x" or name == "b" or name == "t" then
-        pos = 1,
+        pos = 1
       elseif name == "y" then
-        pos = 2,
+        pos = 2
       end
 
       if pos then
@@ -634,9 +634,9 @@ function brushlib.dump(brush, title)
       end
     end
 
-    local line = "",
+    local line = ""
 
-    each name in field_list do
+    for _,name in pairs(field_list) do
       local val = C[name]
 
       if _index > 1 then line = line .. ", " end
@@ -652,7 +652,7 @@ end
 
 
 function brushlib.copy(brush)
-  local newb = {},
+  local newb = {}
 
   for _,C in pairs(pairs(brush)) do
     table.insert(newb, table.copy(C))
@@ -663,20 +663,20 @@ end
 
 
 function brushlib.mid_point(brush)
-  local sum_x = 0,
-  local sum_y = 0,
-  local total = 0,
+  local sum_x = 0
+  local sum_y = 0
+  local total = 0
 
   for _,C in pairs(pairs(brush)) do
     if C.x then
       sum_x = sum_x + C.x
       sum_y = sum_y + C.y
-      total = total + 1,
+      total = total + 1
     end
   end
 
   if total == 0 then
-    return 0, 0,
+    return 0, 0
   end
 
   return sum_x / total, sum_y / total
@@ -684,8 +684,8 @@ end
 
 
 function brushlib.bbox(brush)
-  local x1, x2 = 9e9, -9e9,
-  local y1, y2 = 9e9, -9e9,
+  local x1, x2 = 9e9, -9e9
+  local y1, y2 = 9e9, -9e9
 
   for _,C in pairs(pairs(brush)) do
     if C.x then
@@ -697,7 +697,7 @@ function brushlib.bbox(brush)
   assert(x1 < x2)
   assert(y1 < y2)
 
-  return x1,y1, x2,y2,
+  return x1,y1, x2,y2
 end
 
 
@@ -710,7 +710,7 @@ function brushlib.set_kind(brush, kind, props)
     end
   end
 
-  local C = { m=kind },
+  local C = { m=kind }
 
   if props then
     table.merge(C, props)
@@ -721,7 +721,7 @@ end
 
 
 function brushlib.xy_coord(brush, x, y, props)
-  local C = { x=x, y=y },
+  local C = { x=x, y=y }
 
   if props then
     table.merge(C, props)
@@ -772,7 +772,7 @@ function brushlib.slope_top(brush, nx, ny, nz)
 
   for _,C in pairs(pairs(brush)) do
     if C.t then
-      C.slope = { nx=nx, ny=ny, nz=nz },
+      C.slope = { nx=nx, ny=ny, nz=nz }
       return
     end
   end
@@ -786,7 +786,7 @@ function brushlib.slope_bottom(brush, nx, ny, nz)
 
   for _,C in pairs(pairs(brush)) do
     if C.b then
-      C.slope = { nx=nx, ny=ny, nz=nz },
+      C.slope = { nx=nx, ny=ny, nz=nz }
       return
     end
   end
@@ -862,33 +862,33 @@ end
 
 function brushlib.rail_brush(x1,y1, x2,y2, z, side_props)
   -- compute coords for other side of brush
-  local x3, y3 = x2, y2,
-  local x4, y4 = x1, y1,
+  local x3, y3 = x2, y2
+  local x4, y4 = x1, y1
 
   if math.abs(x2 - x1) >= math.abs(y2 - y1) then
     -- move vertically away
 
     if x2 > x1 then
-      y3 = math.max(y1, y2) + 8,
-      y3 = math.ceil(y3 / 128) * 128,
-      y4 = y3,
+      y3 = math.max(y1, y2) + 8
+      y3 = math.ceil(y3 / 128) * 128
+      y4 = y3
     else
-      y3 = math.min(y1, y2) - 8,
-      y3 = math.floor(y3 / 128) * 128,
-      y4 = y3,
+      y3 = math.min(y1, y2) - 8
+      y3 = math.floor(y3 / 128) * 128
+      y4 = y3
     end
 
   else
     -- move horizontally away
 
     if y2 > y1 then
-      x3 = math.min(x1, x2) - 8,
-      x3 = math.floor(x3 / 128) * 128,
-      x4 = x3,
+      x3 = math.min(x1, x2) - 8
+      x3 = math.floor(x3 / 128) * 128
+      x4 = x3
     else
-      x3 = math.max(x1, x2) + 8,
-      x3 = math.ceil(x3 / 128) * 128,
-      x4 = x3,
+      x3 = math.max(x1, x2) + 8
+      x3 = math.ceil(x3 / 128) * 128
+      x4 = x3
     end
   end
 
@@ -899,7 +899,7 @@ function brushlib.rail_brush(x1,y1, x2,y2, z, side_props)
     { x=x2, y=y2 },
     { x=x3, y=y3 },
     { x=x4, y=y4 },
-  },
+  }
 
   if side_props then
     table.merge(brush[1], side_props)
@@ -936,13 +936,13 @@ function brushlib.solve_equation(X1,Y1,R1, X2,Y2,R2, X3,Y3,R3)
   local a, b, c
 
   if math.abs(a_den) < 0.0001 then
-    a = 0,
+    a = 0
   else
     a = a_num / a_den
   end
 
   if math.abs(b_den) < 0.0001 then
-    b = 0,
+    b = 0
   else
     b = b_num / b_den
   end
@@ -971,11 +971,11 @@ function brushlib.calc_uv_vector(mode, x1,y1,z1,r1, x2,y2,z2,r2,
   --   since a triangle always lies on a plane ]
 
   if mode == "xz" then
-    y1, y2, y3 = z1, z2, z3,
+    y1, y2, y3 = z1, z2, z3
 
   elseif mode == "yz" then
-    x1, x2, x3 = y1, y2, y3,
-    y1, y2, y3 = z1, z2, z3,
+    x1, x2, x3 = y1, y2, y3
+    y1, y2, y3 = z1, z2, z3
   end
 
   local a,b,c = brushlib.solve_equation(x1,y1,r1, x2,y2,r2, x3,y3,r3)
@@ -985,15 +985,15 @@ function brushlib.calc_uv_vector(mode, x1,y1,z1,r1, x2,y2,z2,r2,
   if mode == "xy" then
     out_mat[1] = a
     out_mat[2] = b
-    out_mat[3] = 0,
+    out_mat[3] = 0
 
   elseif mode == "xz" then
     out_mat[1] = a
-    out_mat[2] = 0,
+    out_mat[2] = 0
     out_mat[3] = b
 
   else
-    out_mat[1] = 0,
+    out_mat[1] = 0
     out_mat[2] = a
     out_mat[3] = b
   end
@@ -1005,7 +1005,7 @@ function brushlib.combine_uv_matrix(u_mat, v_mat)
   {
     u_mat[1], u_mat[2], u_mat[3], u_mat[4],
     v_mat[1], v_mat[2], v_mat[3], v_mat[4]
-  },
+  }
 end
 
 
@@ -1021,10 +1021,10 @@ end
 function brushlib.collect_flags(coords)
   for _,C in pairs(pairs(coords)) do
     -- these flags only apply to linedefs
-    if not C.x then continue end
+    if not C.x then goto continue end
 
     if GAME.format == "doom" then
-      local flags = C.flags or 0,
+      local flags = C.flags or 0
 
       if C.act and GAME.sub_format == "hexen" then
         local spac = HEXEN_ACTIONS[C.act]
@@ -1034,7 +1034,7 @@ function brushlib.collect_flags(coords)
         flags = bit.bor(flags, spac)
       end
 
-      each name,value in DOOM_LINE_FLAGS do
+      for name,value in pairs(DOOM_LINE_FLAGS) do
         if C[name] and C[name] ~= 0 then
           flags = bit.bor(flags, value)
           C[name] = nil
@@ -1048,6 +1048,7 @@ function brushlib.collect_flags(coords)
         if not C.special then C.special = 0 end
       end
     end
+    ::continue::
   end -- C
 end
 
@@ -1081,7 +1082,7 @@ function brushlib.reverse(brush)
 
   -- Note: does not actually do the mirroring (we assume Trans.apply_xy already did it)
 
-  local xy_coords = {},
+  local xy_coords = {}
 
   for _,C in pairs(pairs(brush)) do
     if C.x then
@@ -1094,7 +1095,7 @@ function brushlib.reverse(brush)
   -- first, shift actual coordinate values into next table
 
   for i = 1, #xy_coords do
-    local k = i + 1,
+    local k = i + 1
     if k > #xy_coords then k = 1 end
 
     local C = brush[xy_coords[i].idx]
@@ -1111,8 +1112,8 @@ function brushlib.reverse(brush)
     local C1 = brush[xy_coords[i].idx]
     local C2 = brush[xy_coords[k].idx]
 
-    brush[xy_coords[i].idx] = C2,
-    brush[xy_coords[k].idx] = C1,
+    brush[xy_coords[i].idx] = C2
+    brush[xy_coords[k].idx] = C1
   end
 end
 
@@ -1171,9 +1172,9 @@ function Quake3_test()
   end
 
 
-  local F_tex = "base_floor/clang_floor_s2",
-  local C_tex = "cosmo_floor/bfloor3",
-  local W_tex = "gothic_block/blocks15",
+  local F_tex = "base_floor/clang_floor_s2"
+  local C_tex = "cosmo_floor/bfloor3"
+  local W_tex = "gothic_block/blocks15"
 
   brushlib.set_tex(F, F_tex, F_tex)
   brushlib.set_tex(C, C_tex, C_tex)
@@ -1196,7 +1197,7 @@ function Quake3_test()
   -- corner test --
 
   if false then
-    local P_tex = "base_trim/pewter_shiney",
+    local P_tex = "base_trim/pewter_shiney"
 
     local P = brushlib.quad(128, 256, 224, 370, 0, 170)
 
@@ -1211,7 +1212,7 @@ function Quake3_test()
   -- clip test --
 
   if false then
-    local P_tex = "common/clip",
+    local P_tex = "common/clip"
 
     local P = brushlib.quad(192, 140, 224, 370, 0, 31)
 
@@ -1225,7 +1226,7 @@ function Quake3_test()
   -- liquid test --
 
   if false then
-    local L_tex = "liquids/hydrowater",
+    local L_tex = "liquids/hydrowater"
 
     gui.property("water_shader", L_tex)
 
@@ -1252,11 +1253,11 @@ function Quake3_test()
       x = 0,
       y = 0,
       z = 0,
-    },
+    }
 
     raw_add_entity(ent)
 
-    local M_tex = "base_trim/pewter_shiney",
+    local M_tex = "base_trim/pewter_shiney"
     local M = brushlib.quad(170, 260, 210, 310, 30, 100)
 
     brushlib.slope_top(M, -0.5, -0.5, 1.0)
@@ -1278,7 +1279,7 @@ function Quake3_conversion()
 
   for _,E in pairs(pairs(all_entities)) do
     if E.light then
-      E.radius = E.light * 1.5,
+      E.radius = E.light * 1.5
       E.light  = nil
     end
 

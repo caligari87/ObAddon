@@ -1344,7 +1344,7 @@ end
 function BOSS_GEN_TUNE.grab_random_trait(btype, etraits)
   local traits = {},
 
-  each name,info in BOSS_GEN_TUNE.TRAITS do
+  for name,info in pairs(BOSS_GEN_TUNE.TRAITS) do
 
   local tprob
     local stack = 0,
@@ -1365,7 +1365,7 @@ function BOSS_GEN_TUNE.grab_random_trait(btype, etraits)
   end
 
   if etraits ~= nil then
-    each etrait,einfo in etraits do
+    for etrait,einfo in pairs(etraits) do
         if einfo == info.name then
           stack = stack + 1,
         if PARAM.boss_gen_dmult < 0 then
@@ -1622,7 +1622,7 @@ function BOSS_GEN_TUNE.all_done()
 
     local demon_name
     if PARAM.story_generator == "proc" then
-      each epiboss in PARAM.epi_bosses do
+      for _,epiboss in pairs(PARAM.epi_bosses) do
         if i == epiboss then
           demon_name = PARAM.epi_names[cnt]
         cnt = cnt + 1,

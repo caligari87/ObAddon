@@ -166,7 +166,7 @@ function DOOM.make_episode_gfx()
 
   gui.set_colormap(2, colors)
 
-  each EPI in GAME.episodes do
+  for _,EPI in pairs(GAME.episodes) do
     if EPI.name_patch and EPI.description then
       gui.wad_name_gfx(EPI.name_patch, EPI.description, 2)
     end

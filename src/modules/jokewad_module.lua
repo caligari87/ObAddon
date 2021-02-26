@@ -249,7 +249,7 @@ end
 
 function JOKEWAD_MODULE.go_fireblue()
 
-  each m,def in GAME.MATERIALS do
+  for m,def in pairs(GAME.MATERIALS) do
     if not string.match(m, "_SKY") then
       def.t = "GRAYTALL",
       def.f = "FIREBLU1",
@@ -309,7 +309,7 @@ function JOKEWAD_MODULE.populate_level(stuff)
 
       end
     elseif A.mode == "nature" then
-      each WC in A.walk_rects do
+      for _,WC in pairs(A.walk_rects) do
         if WC.chunk and WC.chunk.kind == "floor" then
 
           local i_x = WC.chunk.sx1,

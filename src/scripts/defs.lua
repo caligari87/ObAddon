@@ -21,32 +21,32 @@
 ------------------------------------------------------------------------
 
 -- important global tables
-GAME   = {},
-PARAM  = {},
-STYLE  = {},
-LEVEL  = {},
-THEME  = {},
-SEEDS  = {},
+GAME   = {}
+PARAM  = {}
+STYLE  = {}
+LEVEL  = {}
+THEME  = {}
+SEEDS  = {}
 
-SCRIPTS = {},
+SCRIPTS = {}
 
-EPISODE = {},
-PREFABS = {},
-GROUPS  = {},
-TEMPLATES = {},
+EPISODE = {}
+PREFABS = {}
+GROUPS  = {}
+TEMPLATES = {}
 
 
 -- a place for unfinished stuff
-UNFINISHED = {},
+UNFINISHED = {}
 
 
 -- tables which interface with GUI code
-OB_CONFIG = {},
+OB_CONFIG = {}
 
-OB_GAMES   = {},
-OB_THEMES  = {},
-OB_ENGINES = {},
-OB_MODULES = {},
+OB_GAMES   = {}
+OB_THEMES  = {}
+OB_ENGINES = {}
+OB_MODULES = {}
 
 
 -- internationalization / localization
@@ -56,45 +56,45 @@ function _(s) return gui.gettext(s) end
 -- the default engine (basically Vanilla + limit removing)
 OB_ENGINES["nolimit"] =
 {
-  label = _("Limit Removing")
+  label = _("Limit Removing"),
   priority = 95,
-},
+}
 
 
 -- special theme types, usable by all games
 OB_THEMES["original"] =
 {
-  label = _("Original")
+  label = _("Original"),
   priority = 91,
-},
+}
 
 
 OB_THEMES["epi"] =
 {
-  label = _("Episodic")
+  label = _("Episodic"),
   priority = 85,
-},
+}
 
 
 OB_THEMES["jumble"] =
 {
-  label = _("Jumbled Up")
+  label = _("Jumbled Up"),
   priority = 80,
-},
+}
 
 
 OB_THEMES["bit_mixed"] =
 {
-  label = _("Bit Mixed")
+  label = _("Bit Mixed"),
   priority = 81,
-},
+}
 
 
 OB_THEMES["psycho"] =
 {
-  label = _("Psychedelic")
+  label = _("Psychedelic"),
   priority = -99  -- bottom most
-},
+}
 
 
 -- choices for Length button
@@ -104,13 +104,13 @@ LENGTH_CHOICES =
   "few",     _("A Few Maps"),
   "episode", _("One Episode"),
   "game",    _("Full Game"),
-},
+}
 
 
 -- important constants --
 
 -- size of each seed square
-SEED_SIZE = 128,
+SEED_SIZE = 128
 
 -- largest map size
 SEED_W    = 90 --112,
@@ -121,18 +121,18 @@ SEED_H    = 90 --112,
 -- the main map.
 
 -- highest possible Z coord (and lowest, when negative)
-EXTREME_H = 32000,
+EXTREME_H = 32000
 
 
 -- special value for merging tables
-REMOVE_ME = "__REMOVE__",
+REMOVE_ME = "__REMOVE__"
 
 
 -- constants for gui.spots_xxx API functions
-SPOT_CLEAR    = 0,
-SPOT_LOW_CEIL = 1,
-SPOT_WALL     = 2,
-SPOT_LEDGE    = 3,
+SPOT_CLEAR    = 0
+SPOT_LOW_CEIL = 1
+SPOT_WALL     = 2
+SPOT_LEDGE    = 3
 
 
 -- monster and item stuff
@@ -154,7 +154,7 @@ MONSTER_QUANTITIES =
   chaotic = 5.5,
   unhinged = 6.0,
   ludicrous = 6.66,
-},
+}
 
 MONSTER_KIND_TAB =
 {
@@ -175,7 +175,7 @@ MONSTER_KIND_TAB =
   chaotic = 2.0,
   unhinged = 2.0,
   ludicrous = 2.0,
-},
+}
 
 RAMP_UP_FACTORS =
 {
@@ -185,14 +185,14 @@ RAMP_UP_FACTORS =
   fast   = 1.50,
   veryfast = 2.00,
   extfast = 3.00,
-},
+}
 
 BOSS_FACTORS =
 {
   easier = 0.30,
   medium = 0.60,
   harder = 1.00,
-},
+}
 
 HEALTH_FACTORS =
 {
@@ -201,10 +201,10 @@ HEALTH_FACTORS =
   less     = 0.64,
   bit_less = 0.8,
   normal   = 1.0,
-  bit_more = 1.15 --1.3,
-  more     = 1.5 --1.6,
+  bit_more = 1.15, --1.3,
+  more     = 1.5, --1.6,
   heaps    = 2.5,
-},
+}
 
 AMMO_FACTORS =
 {
@@ -216,7 +216,7 @@ AMMO_FACTORS =
   bit_more = 1.1,
   more     = 1.25,
   heaps    = 1.6,
-},
+}
 
 SECRET_BONUS_FACTORS =
 {
@@ -225,7 +225,7 @@ SECRET_BONUS_FACTORS =
   heaps    = 1,
   heapser  = 2,
   heapsest = 4,
-},
+}
 
 PROC_GOTCHA_MAP_SIZES =
 {
@@ -233,7 +233,7 @@ PROC_GOTCHA_MAP_SIZES =
   regular = 26,
   small = 22,
   tiny = 16,
-},
+}
 
 PROC_GOTCHA_STRENGTH_LEVEL =
 {
@@ -242,7 +242,7 @@ PROC_GOTCHA_STRENGTH_LEVEL =
   tougher     = 4,
   crazier     = 8,
   nightmarish = 16,
-},
+}
 
 PROC_GOTCHA_QUANTITY_MULTIPLIER =
 {
@@ -256,7 +256,7 @@ PROC_GOTCHA_QUANTITY_MULTIPLIER =
   ["150"] = 3,
   ["200"] = 4,
   ["400"] = 8,
-},
+}
 
 
 
@@ -305,7 +305,7 @@ GLOBAL_STYLE_LIST =
   lakes       = { none=0,  few=60, some=0,  heaps=10 },
   islands     = { none=0,  few=60, some=0,  heaps=40 },
   ]]
-},
+}
 
 
 STYLE_CHOICES =
@@ -318,7 +318,7 @@ STYLE_CHOICES =
   "more",   _("More"),
   "heaps",  _("Heaps"),
   "mixed",  _("Mix It Up"),
-},
+}
 
 
 --
@@ -333,7 +333,7 @@ GLOBAL_PARAMETERS =
 
   spot_low_h  = 72,
   spot_high_h = 128,
-},
+}
 
 
 --
@@ -375,7 +375,7 @@ GLOBAL_PREFAB_FIELDS =
   offset_402   = "?y_offset2",
   offset_403   = "?y_offset3",
   offset_404   = "?y_offset4",
-},
+}
 
 
 GLOBAL_SKIN_DEFAULTS =
@@ -412,4 +412,4 @@ GLOBAL_SKIN_DEFAULTS =
   message = "",
   wait = "",
   targetname = "",
-},
+}

@@ -23,28 +23,28 @@
 -- the volume of a map in seed count
 -- this is the minimum volume required
 -- before Autodetail for grouped walls kicks in
-LEVEL_SVOLUME_KICKIN = 1800,
+LEVEL_SVOLUME_KICKIN = 1800
 
 -- added exponent for grouped walls
 -- higher numbers mean grouped walls are even
 -- less likely to show
-GROUPED_WALL_TONE_DOWN_EXP = 2.5,
+GROUPED_WALL_TONE_DOWN_EXP = 2.5
 
 -- the total perimeter of wall-ish junctions required in the map
 -- before Autodetail for ungrouped walls kicks in
-LEVEL_PERIMETER_COUNT_KICKIN = 1800,
+LEVEL_PERIMETER_COUNT_KICKIN = 1800
 
 -- added exponent for ungrouped walls
 -- higher numbers mean plain walls are more likely
-UNGROUPED_WALL_TONE_DOWN_EXP = 2,
+UNGROUPED_WALL_TONE_DOWN_EXP = 2
 
 
 function Autodetail_get_level_svolume()
-  LEVEL.autodetail_group_walls_factor = 1,
+  LEVEL.autodetail_group_walls_factor = 1
 
   if PARAM.autodetail == "off" then return end
 
-  local total_walkable_area = 0,
+  local total_walkable_area = 0
 
   for _,R in pairs(pairs(LEVEL.rooms)) do
     total_walkable_area = total_walkable_area + R.svolume
@@ -60,12 +60,12 @@ end
 
 
 function Autodetail_plain_walls()
-  LEVEL.autodetail_plain_walls_factor = 0,
+  LEVEL.autodetail_plain_walls_factor = 0
 
   if PARAM.autodetail == "off" then return end
 
-  local total_perimeter = 0,
-  each _,junc in LEVEL.junctions do
+  local total_perimeter = 0
+  for _,junc in pairs(LEVEL.junctions) do
     if junc.E1 and Edge_is_wallish(junc.E1) then
       total_perimeter = total_perimeter + junc.perimeter
     end
@@ -73,16 +73,16 @@ function Autodetail_plain_walls()
 
   LEVEL.total_perimeter = total_perimeter
 
-  local tone_down_factor = 0,
+  local tone_down_factor = 0
 
   if total_perimeter >= LEVEL_PERIMETER_COUNT_KICKIN then
-    tone_down_factor = (1 - (LEVEL_PERIMETER_COUNT_KICKIN / total_perimeter)) * 100,
+    tone_down_factor = (1 - (LEVEL_PERIMETER_COUNT_KICKIN / total_perimeter)) * 100
     tone_down_factor = tone_down_factor * UNGROUPED_WALL_TONE_DOWN_EXP
   end
 
   LEVEL.autodetail_plain_walls_factor = math.clamp(0, tone_down_factor * 1.25, 100)
 
-  each _,junc in LEVEL.junctions do
+  for _,junc in pairs(LEVEL.junctions) do
     if junc.E1 and junc.E1.kind == "wall" then
       if rand.odds(LEVEL.autodetail_plain_walls_factor) then
         junc.E1.plain = true

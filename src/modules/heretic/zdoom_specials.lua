@@ -1010,7 +1010,7 @@ if map_num == 44 then
 
   if PARAM.custom_quit_messages == "yes" then
     local gamedef_lines = add_gamedef()
-    each line in gamedef_lines do
+    for _,line in pairs(gamedef_lines) do
       table.insert(PARAM.gameinfolump,line)
     end
     ZStoryGen_heretic_quitmessages()
@@ -1062,7 +1062,7 @@ if map_num == 44 then
     end
 
     local mapinfo_lines = add_mapinfo(info)
-    each line in mapinfo_lines do
+    for _,line in pairs(mapinfo_lines) do
       table.insert(PARAM.mapinfolump,line)
     end
 
@@ -1073,34 +1073,34 @@ if map_num == 44 then
     table.insert(PARAM.mapinfolump,"clearepisodes\n")
 
     local episode_info = add_episodedef(1)
-    each line in episode_info do
+    for _,line in pairs(episode_info) do
       table.insert(PARAM.mapinfolump,line)
     end
 
     if #GAME.levels > 9 then
       episode_info = add_episodedef(10)
-      each line in episode_info do
+      for _,line in pairs(episode_info) do
         table.insert(PARAM.mapinfolump,line)
       end
     end
 
     if #GAME.levels > 18 then
       episode_info = add_episodedef(19)
-      each line in episode_info do
+      for _,line in pairs(episode_info) do
         table.insert(PARAM.mapinfolump,line)
       end
     end
 
     if #GAME.levels > 27 then
       episode_info = add_episodedef(28)
-      each line in episode_info do
+      for _,line in pairs(episode_info) do
         table.insert(PARAM.mapinfolump,line)
       end
     end
 
     if #GAME.levels > 36 then
       episode_info = add_episodedef(37)
-      each line in episode_info do
+      for _,line in pairs(episode_info) do
         table.insert(PARAM.mapinfolump,line)
       end
     end
@@ -1108,7 +1108,7 @@ if map_num == 44 then
   -- collect lines for the cluster information in MAPINFO
   local clusterinfo_lines = add_clusterdef(info.interpic)
   if clusterinfo_lines then
-    each line in clusterinfo_lines do
+    for _,line in pairs(clusterinfo_lines) do
       table.insert(PARAM.mapinfolump,line)
     end
   end

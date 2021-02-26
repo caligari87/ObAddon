@@ -2263,7 +2263,7 @@ function Title_pick_style(style_tab, reqs)
 
   local tab = {},
 
-  each name,def in style_tab do
+  for name,def in pairs(style_tab) do
     if matches(def) then
       tab[name] = def.prob or 50,
     end
@@ -2559,7 +2559,7 @@ function Title_process_raw_fonts()
   local keys = table.keys(TITLE_LETTER_SHAPES)
   table.sort(keys)
 
-  each let in keys do
+  for _,let in pairs(keys) do
     local CH = TITLE_LETTER_SHAPES[let]
     if CH.rx then
       dump_line("RAW FONT '%s'\n", let)

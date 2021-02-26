@@ -191,7 +191,7 @@ end
 function Quest_size_of_room_set(rooms)
   local total = 0,
 
-  each id, R in rooms do
+  for id, R in pairs(rooms) do
     total = total + R.svolume
   end
 
@@ -461,7 +461,7 @@ function Quest_eval_divide_at_conn(C, goal, info)
   local function unused_rooms_in_set(rooms)
     local leafs = {},
 
-    each id, R in rooms do
+    for id, R in pairs(rooms) do
       if R.is_secret then continue end
 
       if R.is_hallway then continue end
@@ -551,9 +551,9 @@ gui.debugf("  quest : %s\n", quest.name)
 
 --[[
 stderrf("BEFORE =\n  ")
-each id,_ in before do stderrf("%d ", id) end stderrf("\n\n")
+for id,_ in pairs(before) do stderrf("%d ", id) end stderrf("\n\n")
 stderrf("AFTER =\n  ")
-each id,_ in after do stderrf("%d ", id) end stderrf("\n\n")
+for id,_ in pairs(after) do stderrf("%d ", id) end stderrf("\n\n")
 --]]
 
   local before_R = C.R1,
@@ -636,7 +636,7 @@ function Quest_perform_division(info)
 
 
   local function assign_quest(Q)
-    each id, R in Q.rooms do
+    for id, R in pairs(Q.rooms) do
       R.quest = Q
     end
   end
@@ -713,7 +713,7 @@ gui.debugf("   %s\n", targ.name)
 
 gui.debugf("PLACING NEW GOALS:\n")
 
-    each goal in info.new_goals do
+    for _,goal in pairs(info.new_goals) do
       local R = pick_room_for_goal(Q1)
 
 gui.debugf("  %s @ %s in %s\n", goal.name, R.name, Q1.name)
@@ -815,7 +815,7 @@ function Quest_scan_all_conns(new_goals, do_quest)
     -- must be same quest on each side
     if C.R2.quest ~= quest then continue end
 
-    each goal in quest.goals do
+    for _,goal in pairs(quest.goals) do
       Quest_eval_divide_at_conn(C, goal, info)
     end
   end
@@ -850,7 +850,7 @@ function Quest_add_major_quests()
   local function count_unused_leafs(quest)
     local unused = 0,
 
-    each id, R in quest.rooms do
+    for id, R in pairs(quest.rooms) do
       if R:is_unused_leaf() then
         unused = unused + 1,
       end
@@ -868,7 +868,7 @@ function Quest_add_major_quests()
     -- decide maximum number
     local max_num = 1 + int(#LEVEL.rooms / 5)
 
-    each name,_ in key_tab do
+    for name,_ in pairs(key_tab) do
       if rand.odds(each_prob) then
         local GOAL = Goal_new("KEY")
 
@@ -916,7 +916,7 @@ function Quest_add_major_quests()
 
     local prob_tab = {},
 
-    each goal in list do
+    for _,goal in pairs(list) do
       prob_tab[_index] = assert(goal.prob)
     end
 
@@ -1830,7 +1830,7 @@ function Quest_find_backtracks()
   ---| Quest_find_backtracks |---
 
   for _,R in pairs(pairs(LEVEL.rooms)) do
-    each goal in R.goals do
+    for _,goal in pairs(R.goals) do
       if goal.kind == "KEY" or goal.kind == "SWITCH" then
         look_for_path(R, goal)
       end
@@ -2148,7 +2148,7 @@ function Quest_nice_items()
     each name1 in avoid_items do
       local info1 = assert(ALL_ITEMS[name1])
 
-      each name2,val in pal do
+      for name2,val in pairs(pal) do
         local info2 = assert(ALL_ITEMS[name2])
 
         if info1.kind == info2.kind then
@@ -2167,7 +2167,7 @@ function Quest_nice_items()
   local function secret_palette(do_closet)
     local pal = {},
 
-    each name,info in ALL_ITEMS do
+    for name,info in pairs(ALL_ITEMS) do
       if (info.level or 1) > max_level then
         continue
       end
@@ -2192,7 +2192,7 @@ function Quest_nice_items()
   local function normal_palette()
     local pal = {},
 
-    each name,info in GAME.NICE_ITEMS do
+    for name,info in pairs(GAME.NICE_ITEMS) do
       if (info.level or 1) > max_level then
         continue
       end
@@ -2213,7 +2213,7 @@ function Quest_nice_items()
 
     -- Note: no powerups in start room
 
-    each name,info in GAME.NICE_ITEMS do
+    for name,info in pairs(GAME.NICE_ITEMS) do
       if (info.level or 1) > max_level then
         continue
       end
@@ -2236,7 +2236,7 @@ function Quest_nice_items()
   local function crazy_palette()
     local pal = {},
 
-    each name,info in GAME.NICE_ITEMS do
+    for name,info in pairs(GAME.NICE_ITEMS) do
       -- ignore secret-only items
       if not info.add_prob then continue end
 
@@ -2248,7 +2248,7 @@ function Quest_nice_items()
 
 
   local function have_weapon_for_ammo(ammo)
-    each name,info in GAME.WEAPONS do
+    for name,info in pairs(GAME.WEAPONS) do
       if info.ammo ~= ammo then continue end
 
       -- the player always has this weapon?
@@ -2274,7 +2274,7 @@ function Quest_nice_items()
   local function storage_palette()
     local pal = {},
 
-    each name,info in ALL_ITEMS do
+    for name,info in pairs(ALL_ITEMS) do
       if not info.storage_prob then continue end
 
       -- check if we have a weapon which uses this ammo
@@ -2576,7 +2576,7 @@ function Quest_nice_items()
       end
     end
 
-    each SI in simp_tab do
+    for _,SI in pairs(simp_tab) do
       if rand.odds(SI.level_prob) then pick_room_for_si(SI) end
     end
   end
@@ -2816,7 +2816,7 @@ function Quest_room_themes()
   local function collect_usable_themes(env, group, override)
     local tab = {},
 
-    each name,info in GAME.ROOM_THEMES do
+    for name,info in pairs(GAME.ROOM_THEMES) do
       if info.kind then
         error("Room theme uses old 'kind' keyword: " .. name)
       end

@@ -7908,7 +7908,7 @@ end
 
 
 function namelib.match_parts(word, parts)
-  each p,_ in parts do
+  for p,_ in pairs(parts) do
     for w in string.gmatch(word, "%a+") do
       local low = string.lower(w)
 
@@ -7974,10 +7974,10 @@ function namelib.choose_one(DEF, max_len)
   until #name <= max_len
 
   -- adjust probabilities
-  each c,word_tab in DEF.lexicon do
+  for c,word_tab in pairs(DEF.lexicon) do
     local divisor = DEF.divisors[c] or 10,
 
-    each w,prob in word_tab do
+    for w,prob in pairs(word_tab) do
       if namelib.match_parts(w, parts) then
         DEF.lexicon[c][w] = prob / divisor
       end
@@ -8037,7 +8037,7 @@ function namelib.test()
       gui.rand_seed(set)
       local list = namelib.generate(T, 12, 28)
 
-      each name in list do
+      for _,name in pairs(list) do
         gui.debugf("%s Set %d Name %2d: %s\n", T, set, _index, name)
       end
 

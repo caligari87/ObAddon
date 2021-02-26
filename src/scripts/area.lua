@@ -611,7 +611,7 @@ function Junction_init()
 
   for _,A in pairs(pairs(LEVEL.areas)) do
   for _,S in pairs(pairs(A.seeds)) do
-  each dir in geom.ALL_DIRS do
+  for _,dir in pairs(geom.ALL_DIRS) do
 
     local N = S:neighbor(dir, "NODIR")
 
@@ -638,7 +638,7 @@ function Junction_init()
   end
 
 --[[ DEBUG
-  each name,J in LEVEL.junctions do
+  for name,J in pairs(LEVEL.junctions) do
     gui.printf("Junc %s : perimeter %d\n", name, J.perimeter)
   end
 --]]
@@ -1002,7 +1002,7 @@ function Corner_init()
 
   for _,A in pairs(pairs(LEVEL.areas)) do
   for _,S in pairs(pairs(A.seeds)) do
-  each dir in geom.CORNERS do
+  for _,dir in pairs(geom.CORNERS) do
 
     if S.diagonal and S.diagonal == (10 - dir) then continue end
 
@@ -1205,7 +1205,7 @@ function Corner_touches_wall(corner)
     if Edge_is_wallish(E) then return true end
   end
 
-  each junc in corner.junctions do
+  for _,junc in pairs(corner.junctions) do
     if junc.E1 and Edge_is_wallish(junc.E1) then return true end
     if junc.E2 and Edge_is_wallish(junc.E2) then return true end
   end
@@ -1242,7 +1242,7 @@ function Corner_is_at_area_corner(corner)
 
   -- corner isn't at a corner when along parallel walls
   local wall_count = 0,
-  each junc in corner.junctions do
+  for _,junc in pairs(corner.junctions) do
     if junc.E1 then
       if Edge_is_wallish(junc.E1) then
         wall_count = wall_count + 1,
@@ -1253,7 +1253,7 @@ function Corner_is_at_area_corner(corner)
 
   -- no pillars if all junctions are beams
   local beam_count = 0,
-  each junc in corner.junctions do
+  for _,junc in pairs(corner.junctions) do
     if junc.E1 then
       if junc.E1.kind == "beams" or Edge_is_wallish(junc.E1) then
         beam_count = beam_count + 1,
@@ -1369,7 +1369,7 @@ function Area_find_neighbors()
 
   for _,A in pairs(pairs(LEVEL.areas)) do
   for _,S in pairs(pairs(A.seeds)) do
-  each dir in geom.ALL_DIRS do
+  for _,dir in pairs(geom.ALL_DIRS) do
     local N = S:neighbor(dir)
 
     if N and N.area and N.area ~= A then
@@ -1413,7 +1413,7 @@ function Area_locate_chunks()
   local function check_touches_wall(sx1,sy1, sx2,sy2)
     -- this is mainly for caves
 
-    each dir in geom.SIDES do
+    for _,dir in pairs(geom.SIDES) do
       local tx1, ty1 = sx1, sy1,
       local tx2, ty2 = sx2, sy2,
 
@@ -1654,7 +1654,7 @@ function Area_locate_chunks()
   local function find_chunks_in_area(A)
     local seed_list = table.copy(A.seeds)
 
-    each pass in PASSES do
+    for _,pass in pairs(PASSES) do
       rand.shuffle(seed_list)
 
       find_sized_chunks(A, seed_list, pass)
@@ -1864,7 +1864,7 @@ function Area_closet_edges()
   ---| Area_closet_edges |---
 
   for _,R in pairs(pairs(LEVEL.rooms)) do
-    each CL in R.closets do
+    for _,CL in pairs(R.closets) do
       visit_closet(CL, R)
     end
   end
@@ -1967,7 +1967,7 @@ function Area_pick_facing_rooms()
       if sel(A.is_outdoor, 1, 0) ~= sel(want_outdoor, 1, 0) then continue end
 
       for _,S in pairs(pairs(A.seeds)) do
-      each dir in geom.ALL_DIRS do
+      for _,dir in pairs(geom.ALL_DIRS) do
         local N = S:neighbor(dir)
         local T = N and N.area
 
@@ -2179,7 +2179,7 @@ function Area_divvy_up_borders()
       end
 
       -- apply the changes
-      each tab in changes do
+      for _,tab in pairs(changes) do
         set_zborder(tab.S, tab.zborder)
         table.kill_elem(seed_list, tab.S)
       end
@@ -2191,7 +2191,7 @@ function Area_divvy_up_borders()
   local function marking_func(S)
     local zb
 
-    each dir in geom.ALL_DIRS do
+    for _,dir in pairs(geom.ALL_DIRS) do
       local N = S:neighbor(dir)
       if not N then continue end
 
@@ -2280,7 +2280,7 @@ function Area_divvy_up_borders()
   local function majority_func(S)
     local counts = {},
 
-    each dir in geom.ALL_DIRS do
+    for _,dir in pairs(geom.ALL_DIRS) do
       local N = S:neighbor(dir)
       if not N then continue end
 
@@ -2290,13 +2290,13 @@ function Area_divvy_up_borders()
       counts[z] = (counts[z] or 0) + 1,
     end
 
-    each z, num in counts do
+    for z, num in pairs(counts) do
       if num >= 3 then return z end
     end
 
     local double_z
 
-    each z, num in counts do
+    for z, num in pairs(counts) do
       if num == 2 then
         if double_z then return nil end
         double_z = z
@@ -2310,7 +2310,7 @@ function Area_divvy_up_borders()
   local function emergency_func(S)
     local counts = {},
 
-    each dir in geom.ALL_DIRS do
+    for _,dir in pairs(geom.ALL_DIRS) do
       local N = S:neighbor(dir)
       if not N then continue end
 
@@ -2441,7 +2441,7 @@ function Area_divvy_up_borders()
 
   local function try_merge_an_area(T1)
     for _,S in pairs(pairs(T1.seeds)) do
-    each dir in geom.ALL_DIRS do
+    for _,dir in pairs(geom.ALL_DIRS) do
       local N = S:neighbor(dir)
 
       local T2 = (N and N.temp_area)
@@ -2513,7 +2513,7 @@ function Area_divvy_up_borders()
 
     for _,T in pairs(pairs(temp_areas)) do
       for _,S in pairs(pairs(T.seeds)) do
-        each dir in geom.ALL_DIRS do
+        for _,dir in pairs(geom.ALL_DIRS) do
           test_neighbor_at_seed(T, S, dir)
         end
       end

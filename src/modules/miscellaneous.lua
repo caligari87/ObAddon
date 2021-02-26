@@ -140,7 +140,7 @@ MISC_STUFF.ROOM_SIZE_CONSISTENCY_CHOICES =
 function MISC_STUFF.setup(self)
   -- these parameters have to be instantiated in this hook
   -- because begin_level happens *after* level size decisions
-  each opt in self.options do
+  for _,opt in pairs(self.options) do
     if opt.name == "room_size_multiplier" or
     opt.name == "room_area_multiplier" or
     opt.name == "room_size_consistency" then
@@ -150,7 +150,7 @@ function MISC_STUFF.setup(self)
 end
 
 function MISC_STUFF.begin_level(self)
-  each opt in self.options do
+  for _,opt in pairs(self.options) do
     local name  = assert(opt.name)
     local value = opt.value
 

@@ -65,7 +65,7 @@ function ScriptMan_assemble_mapinfo_lump()
 
   -- MAPINFO extras
   if PARAM.custom_quit_messages == "yes" then
-    each line in PARAM.gameinfolump do
+    for _,line in pairs(PARAM.gameinfolump) do
       table.insert(mapinfo_lines,line)
     end
   end
@@ -77,24 +77,24 @@ function ScriptMan_assemble_mapinfo_lump()
       "{\n",
   },
   if SCRIPTS.fauna_mapinfo then
-    each line in SCRIPTS.fauna_mapinfo do
+    for _,line in pairs(SCRIPTS.fauna_mapinfo) do
       table.insert(doomednum_lines,line)
     end
   end
   if PARAM.marine_gen then
-    each line in PARAM.MARINEMAPINFO do
+    for _,line in pairs(PARAM.MARINEMAPINFO) do
       table.insert(doomednum_lines,line)
     end
   end
   if #doomednum_lines > 2 then
     table.insert(doomednum_lines, "}\n")
-    each line in doomednum_lines do
+    for _,line in pairs(doomednum_lines) do
       table.insert(mapinfo_lines,line)
     end
   end
 
   if PARAM.mapinfolump ~= nil then
-    each line in PARAM.mapinfolump do
+    for _,line in pairs(PARAM.mapinfolump) do
       table.insert(mapinfo_lines,line)
     end
   end
@@ -236,17 +236,17 @@ function ScriptMan_assemble_language_lump()
   },
 
   if PARAM.boss_gen and PARAM.boss_count ~= -1 then
-    each line in PARAM.BOSSLANG do
+    for _,line in pairs(PARAM.BOSSLANG) do
       table.insert(language_lines,line)
     end
   end
   if PARAM.language_lump ~= nil then
-    each line in PARAM.language_lump do
+    for _,line in pairs(PARAM.language_lump) do
       table.insert(language_lines,line)
     end
   end
   if PARAM.quit_messages == "yes" then
-    each line in PARAM.quit_messagelump do
+    for _,line in pairs(PARAM.quit_messagelump) do
       table.insert(language_lines,line)
     end
   end

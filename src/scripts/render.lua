@@ -1124,7 +1124,7 @@ function Render_corner(cx, cy)
   local function init_wall_analysis()
     analysis = {},
 
-    each dir in geom.ALL_DIRS do
+    for _,dir in pairs(geom.ALL_DIRS) do
       if corner.walls[dir] then
         analysis[dir] = corner.walls[dir]
       else
@@ -1137,7 +1137,7 @@ function Render_corner(cx, cy)
   local function init_fence_analysis()
     analysis = {},
 
-    each dir in geom.ALL_DIRS do
+    for _,dir in pairs(geom.ALL_DIRS) do
       if corner.fences[dir] then
         analysis[dir] = corner.fences[dir]
       else
@@ -1292,7 +1292,7 @@ function Render_corner(cx, cy)
       init_wall_analysis()
     end
 
-    each dir in geom.CORNERS do
+    for _,dir in pairs(geom.CORNERS) do
       if detect_gap(dir, 1, 1) or
          detect_gap(dir, 1, 2) or
          detect_gap(dir, 2, 1) or
@@ -1302,7 +1302,7 @@ function Render_corner(cx, cy)
       end
     end
 
-    each dir in geom.SIDES do
+    for _,dir in pairs(geom.SIDES) do
       if detect_gap(dir, 2, 2, "is_sharp") or
          detect_gap(dir, 3, 2, "is_sharp") or
          detect_gap(dir, 2, 3, "is_sharp")
@@ -2744,7 +2744,7 @@ function Render_area(A)
     end
 
     for _,S in pairs(pairs(A.seeds)) do
-      each dir in geom.ALL_DIRS do
+      for _,dir in pairs(geom.ALL_DIRS) do
         Render_junction(A, S, dir)
       end
     end
@@ -2812,13 +2812,13 @@ function Render_all_chunks()
     SWITCHES_ONLY = (pass == 2)
 
     for _,R in pairs(pairs(LEVEL.rooms)) do
-      each chunk in R.floor_chunks do visit_chunk(chunk) end
-      each chunk in R.ceil_chunks  do visit_chunk(chunk) end
+      for _,chunk in pairs(R.floor_chunks) do visit_chunk(chunk) end
+      for _,chunk in pairs(R.ceil_chunks ) do visit_chunk(chunk) end
 
-      each chunk in R.closets do visit_chunk(chunk) end
-      each chunk in R.stairs  do visit_chunk(chunk) end
-      each chunk in R.joiners do visit_chunk(chunk) end
-      each chunk in R.pieces  do visit_chunk(chunk) end
+      for _,chunk in pairs(R.closets) do visit_chunk(chunk) end
+      for _,chunk in pairs(R.stairs ) do visit_chunk(chunk) end
+      for _,chunk in pairs(R.joiners) do visit_chunk(chunk) end
+      for _,chunk in pairs(R.pieces ) do visit_chunk(chunk) end
     end
   end
 end
@@ -2856,7 +2856,7 @@ function Render_depot(depot)
   local cur_trap = assert(dest_R.traps[#dest_R.traps])
 
   if depot.max_spot_size then
-    each spot in cur_trap.mon_spots do
+    for _,spot in pairs(cur_trap.mon_spots) do
       if spot.x2 > spot.x1 + depot.max_spot_size then
          spot.x2 = spot.x1 + depot.max_spot_size
       end
@@ -2893,7 +2893,7 @@ function Render_all_areas()
   end
   end
 
-  each depot in LEVEL.depots do
+  for _,depot in pairs(LEVEL.depots) do
     Render_depot(depot)
   end
 
@@ -2926,7 +2926,7 @@ function Render_all_street_markings()
 
   local road_segments = 0,
   local road_dead_ends = 0,
-  each name,info in LEVEL.road_marking_spots do
+  for name,info in pairs(LEVEL.road_marking_spots) do
     local x = info.x
     local y = info.y
     local z = info.z
@@ -3025,7 +3025,7 @@ function Render_all_street_traffic()
 
   rand.shuffle(LEVEL.road_street_traffic_spots)
 
-  each SPOT in LEVEL.road_street_traffic_spots do
+  for _,SPOT in pairs(LEVEL.road_street_traffic_spots) do
 
     -- stagger positions a bit
     SPOT.x = SPOT.x + int(rand.range(-32,32))
@@ -3510,7 +3510,7 @@ function Render_scenic_fabs()
   end
 
   local function render_the_fabs()
-    each info in LEVEL.scenic_fabs do
+    for _,info in pairs(LEVEL.scenic_fabs) do
       local T = Trans.spot_transform(info.x, info.y, info.z1, rand.pick({2,4,6,8}))
 
       local def = info.prefab_def
@@ -3786,7 +3786,7 @@ function Render_triggers()
   ---| Render_triggers |---
 
   for _,R in pairs(pairs(LEVEL.rooms)) do
-    each trig in R.triggers do
+    for _,trig in pairs(R.triggers) do
       build_trigger(R, trig)
     end
   end
@@ -3829,7 +3829,7 @@ function Render_determine_spots()
     gui.spots_begin(rx1 - 48, ry1 - 48, rx2 + 48, ry2 + 48, floor_height, SPOT_LEDGE)
 
     -- clear polygons making up the floor
-    each brush in A.floor_brushes do
+    for _,brush in pairs(A.floor_brushes) do
       gui.spots_fill_poly(brush, SPOT_CLEAR)
     end
 
@@ -3857,14 +3857,14 @@ function Render_determine_spots()
 
     -- this is mainly for traps
     if A.mon_focus then
-      each spot in mon_spots do
+      for _,spot in pairs(mon_spots) do
         spot.face = A.mon_focus
       end
     end
 
     -- for large cages/traps, adjust quantities
     if mode == "cage" or mode == "trap" then
-      each spot in mon_spots do
+      for _,spot in pairs(mon_spots) do
         spot.use_factor = 1.0 / (A.svolume ^ 0.64)
       end
     end
@@ -3991,7 +3991,7 @@ gui.spots_dump("Cave spot dump")
 
 
   local function spots_in_natural_area(R, area)
-    each FL in area.walk_floors do
+    for _,FL in pairs(area.walk_floors) do
       spots_in_cave_floor(R, area, FL)
     end
   end

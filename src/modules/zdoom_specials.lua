@@ -1107,7 +1107,7 @@ function ZDOOM_SPECIALS.do_special_stuff()
 
   if PARAM.custom_quit_messages == "yes" then
     local gamedef_lines = add_gamedef()
-    each line in gamedef_lines do
+    for _,line in pairs(gamedef_lines) do
       table.insert(PARAM.gameinfolump,line)
     end
     ZStoryGen_quitmessages()
@@ -1143,7 +1143,7 @@ function ZDOOM_SPECIALS.do_special_stuff()
     end
 
     local mapinfo_lines = add_mapinfo(info)
-    each line in mapinfo_lines do
+    for _,line in pairs(mapinfo_lines) do
       table.insert(PARAM.mapinfolump,line)
     end
 
@@ -1156,17 +1156,17 @@ function ZDOOM_SPECIALS.do_special_stuff()
     -- but there is from now on
     if OB_CONFIG.game == "doom2" or OB_CONFIG.game == "tnt" or OB_CONFIG.game == "plutonia" then
       local episode_1_info = add_episodedef(1)
-      each line in episode_1_info do
+      for _,line in pairs(episode_1_info) do
         table.insert(PARAM.mapinfolump,line)
       end
 
       if #GAME.levels > 11 then
         local episode_2_info = add_episodedef(12)
         local episode_3_info = add_episodedef(21)
-        each line in episode_2_info do
+        for _,line in pairs(episode_2_info) do
           table.insert(PARAM.mapinfolump,line)
         end
-        each line in episode_3_info do
+        for _,line in pairs(episode_3_info) do
           table.insert(PARAM.mapinfolump,line)
         end
       end
@@ -1174,24 +1174,24 @@ function ZDOOM_SPECIALS.do_special_stuff()
 
     if OB_CONFIG.game == "doom1" or OB_CONFIG.game == "ultdoom" then
       local episode_info = add_episodedef(1)
-      each line in episode_info do
+      for _,line in pairs(episode_info) do
         table.insert(PARAM.mapinfolump,line)
       end
 
       if #GAME.levels > 9 then
         episode_info = add_episodedef(10)
-        each line in episode_info do
+        for _,line in pairs(episode_info) do
           table.insert(PARAM.mapinfolump,line)
         end
         episode_info = add_episodedef(19)
-        each line in episode_info do
+        for _,line in pairs(episode_info) do
           table.insert(PARAM.mapinfolump,line)
         end
       end
 
       if #GAME.levels > 27 then
         episode_info = add_episodedef(28)
-        each line in episode_info do
+        for _,line in pairs(episode_info) do
           table.insert(PARAM.mapinfolump,line)
         end
       end
@@ -1201,7 +1201,7 @@ function ZDOOM_SPECIALS.do_special_stuff()
   -- collect lines for the cluster information in MAPINFO
   local clusterinfo_lines = add_clusterdef(ipic)
   if clusterinfo_lines then
-    each line in clusterinfo_lines do
+    for _,line in pairs(clusterinfo_lines) do
       table.insert(PARAM.mapinfolump,line)
     end
   end
