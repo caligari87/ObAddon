@@ -1,17 +1,17 @@
 PREFABS.Exit_duke_nukem_exit =
 {
-  file   = "exit/gtd_duke_nukem_exit.wad"
-  map    = "MAP01"
+  file   = "exit/gtd_duke_nukem_exit.wad",
+  map    = "MAP01",
 
-  prob   = 200
+  prob   = 200,
 
-  where  = "seeds"
+  where  = "seeds",
 
-  seed_w = 2
-  seed_h = 1
+  seed_w = 2,
+  seed_h = 1,
 
-  deep = 16
+  deep = 16,
 
-  x_fit = "frame"
-  y_fit = "top"
-}
+  x_fit = "frame",
+  y_fit = "top",
+},

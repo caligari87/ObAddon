@@ -7,7 +7,7 @@
 --
 --  This program is free software; you can redistribute it and/or
 --  modify it under the terms of the GNU General Public License
---  as published by the Free Software Foundation; either version 2
+--  as published by the Free Software Foundation; either version 2,
 --  of the License, or (at your option) any later version.
 --
 --  This program is distributed in the hope that it will be useful,
@@ -17,16 +17,16 @@
 --
 ------------------------------------------------------------------------
 
-FAUNA_MODULE = {}
+FAUNA_MODULE = {},
 
 FAUNA_MODULE.ENABLE_DISABLE =
 {
   "enable",  _("Enable"),
   "disable", _("Disable"),
-}
+},
 
 function FAUNA_MODULE.setup(self)
-  for name,opt in pairs(self.options) do
+  for name,opt in pairs(pairs(self.options)) do
     local value = self.options[name].value
     PARAM[name] = value
   end
@@ -43,41 +43,41 @@ ACTOR Fauna
   -COUNTKILL
   +NOTELESTOMP
   +NEVERRESPAWN
-}
+},
 
 ACTOR Insect: Fauna
 {
   +NEVERTARGET
-}
+},
 
 ACTOR FlyingInsect: Insect
 {
   +BOUNCEONWALLS
   +FLOAT
   +NOGRAVITY
-}
+},
 
 ACTOR Rodent: Fauna
 {
-  damagefactor "Trample", 0
-  damagefactor "Stomp", 0
-}
+  damagefactor "Trample", 0,
+  damagefactor "Stomp", 0,
+},
 
 // Credits:
 // Decorate: Captain Toenail    (with modifications by Frozsoul)
 // Sprites: Operation Bodycount
 // Sounds: FindSounds.com
-actor ScurryRat: Rodent 30100
+actor ScurryRat: Rodent 30100,
 {
-  radius 8
-  height 8
-  mass 50
-  speed 15
-  scale 0.25
-  health 1
-  seesound    "rat/active"
-  activesound "rat/active"
-  deathsound  "rat/death"
+  radius 8,
+  height 8,
+  mass 50,
+  speed 15,
+  scale 0.25,
+  health 1,
+  seesound    "rat/active",
+  activesound "rat/active",
+  deathsound  "rat/death",
   +FLOORCLIP
   +FRIGHTENED
   +LOOKALLAROUND
@@ -124,25 +124,25 @@ actor ScurryRat: Rodent 30100
     RATS C 2 ThrustThing(angle * 256 / 360 + 128,40,1,0)
     RATS C 2 ThrustThingZ(0,15,0,1)
     TNT1 A 0 A_PlaySound("rat/scurry", 4, 0.8, 1, 3)
-    TNT1 A 0
+    TNT1 A 0,
     {
         if (Random(0, 255) < 50)
         {
             A_SetSpeed(RandomPick(18, 20, 22));
-        }
-    }
+        },
+    },
     Goto See
   Death:
     TNT1 A 0 A_StopSound(4)
     RATS I 3 A_ScreamAndUnblock
-    RATS JKL 3
-    RATS L -1
+    RATS JKL 3,
+    RATS L -1,
     stop
-  }
-}
+  },
+},
 ]]
 
--- ZScript code: josh771
+-- ZScript code: josh771,
 -- Sounds: FreeSounds
 -- Sprites: Blood
 -- Sprite Edit: Doomedarchviledemon
@@ -166,7 +166,7 @@ class SpringyFly : Actor
         //d == damping coefficient
         //simple damped spring formula
         return -(d * v) - (k * (p - r));
-    }
+    },
 
     void getNewDest()
     {
@@ -180,7 +180,7 @@ class SpringyFly : Actor
             dest.y,
             fltData);
         dest = (dest + fltData.HitLocation) * 0.5;
-    }
+    },
 
     override void PostBeginPlay()
     {
@@ -192,7 +192,7 @@ class SpringyFly : Actor
         pause = 0;
         scale *= frandom(0.1,0.2);
         A_StartSound("fly/buzz", CHAN_BODY, CHANF_LOOP);
-    }
+    },
 
     override void Tick()
     {
@@ -203,7 +203,7 @@ class SpringyFly : Actor
         UpdateWaterLevel();
 
         //This block manually advances states. Ripped straight from FastProjectile class:
-        if (tics != -1)
+        if (tics ~= -1)
         {
             if (tics > 0)
                 tics--;
@@ -211,18 +211,18 @@ class SpringyFly : Actor
             {
                 if (!SetState (CurState.NextState)) // mobj was removed
                     return;
-            }
-        }
+            },
+        },
 
         if (pause)
         {
             vel *= 0.8;
             pause--;
-        }
+        },
         else
         {
             vel += spring(pos, dest, vel, 0.01, 0.01);
-        }
+        },
 
         A_FaceMovementDirection();
 
@@ -234,25 +234,25 @@ class SpringyFly : Actor
             {
                 target = fltData.HitActor;
                 chase = random(18, 525);
-            }
-        }
+            },
+        },
         else
             ignore--;
 
         LineTrace(angle, vel.length() * 4, pitch, TRF_THRUACTORS, 4, 4, data:fltData);
 
-        if (fltData.HitType != TRACE_HitNone)
+        if (fltData.HitType ~= TRACE_HitNone)
         {
             vel *= 0.8;
-        }
+        },
 
         else
         {
             if (!target && !random(0,34))
             {
                 getNewDest();
-            }
-        }
+            },
+        },
 
         SetOrigin(pos + vel, true);
 
@@ -265,14 +265,14 @@ class SpringyFly : Actor
             {
                 A_ClearTarget();
                 ignore = random(18, 105);
-            }
+            },
             else
                 chase--;
-        }
+        },
 
         if (!pause && !random(0,104))
             pause = random(1,35);
-    }
+    },
 
     Default
     {
@@ -281,15 +281,15 @@ class SpringyFly : Actor
         Radius 4;
         +FORCEXYBILLBOARD;
         +NOGRAVITY;
-    }
+    },
 
     States
     {
     Spawn:
         FLYA AB 1;
         Loop;
-    }
-}
+    },
+},
 ]]
 
 -- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ SNDINFO ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -297,22 +297,22 @@ class SpringyFly : Actor
 FAUNA_MODULE.SNDINFO =
 [[
 Fly/Buzz FLYBUZZ
-$attenuation Fly/Buzz 3
+$attenuation Fly/Buzz 3,
 
 // Scurry rat active (squeaking) sounds
 // Includes NULLs to reduce frequency of squeaking noise
 DSRATIDL DSRATIDL
 DSRAT DSRAT
-$attenuation DSRATIDL 3
-$attenuation DSRAT 3
-$random rat/active { DSRATIDL DSRAT DSRAT DSRAT DSRAT NULL NULL NULL NULL NULL NULL NULL NULL NULL NULL NULL NULL }
+$attenuation DSRATIDL 3,
+$attenuation DSRAT 3,
+$random rat/active { DSRATIDL DSRAT DSRAT DSRAT DSRAT NULL NULL NULL NULL NULL NULL NULL NULL NULL NULL NULL NULL },
 
 // Scurry rat death sounds
-DSRATDI1    DSRATDI1
-DSRATDI2    DSRATDI2
-$attenuation DSRATDI1 3
-$attenuation DSRATDI2 3
-$random rat/death    { DSRATDI1 DSRATDI2 }
+DSRATDI1    DSRATDI1,
+DSRATDI2    DSRATDI2,
+$attenuation DSRATDI1 3,
+$attenuation DSRATDI2 3,
+$random rat/death    { DSRATDI1 DSRATDI2 },
 
 // Sound modified from https://freesound.org/people/krnash/sounds/389794/
 rat/scurry    RATCRAWL
@@ -324,23 +324,23 @@ FAUNA_MODULE.ACTORS =
 {
   SpringyFly =
   {
-    id = 30000
-    cluster = 2
-  }
+    id = 30000,
+    cluster = 2,
+  },
 
   rat =
   {
-    id = 30100
-    cluster = 1
-  }
-}
+    id = 30100,
+    cluster = 1,
+  },
+},
 
 FAUNA_MODULE.DOOMEDNUMS =
 {
 [[
   30000 = SpringyFly
 ]]
-}
+},
 
 function FAUNA_MODULE.get_levels()
 end
@@ -361,49 +361,49 @@ end
 
 function FAUNA_MODULE.add_flies()
 
-  each A in LEVEL.areas do
+  for _,A in pairs(pairs(LEVEL.areas)) do
 
     if (A.mode and A.mode == "floor") then
-      each S in A.seeds do
+      for _,S in pairs(pairs(A.seeds)) do
 
         -- No spawning in outdoor snow areas
         if (A.is_outdoor and LEVEL.outdoor_theme == "snow") then end
 
         -- Default spawning odds
-        local spawn_odds = 10
+        local spawn_odds = 10,
 
         -- Lower spawning probability if indoors
         if (A.is_indoor) then
-          spawn_odds = 5
+          spawn_odds = 5,
         end
 
         -- Greater spawning probability if outdoors and temperate
         if (A.is_outdoor and LEVEL.outdoor_theme == "temperate") then
-          spawn_odds = 15
+          spawn_odds = 15,
         end
 
         if rand.odds(spawn_odds) then
 
           local item_tab = {
-            SpringyFly = 5
-          }
+            SpringyFly = 5,
+          },
 
           local choice = rand.key_by_probs(item_tab)
           local item = FAUNA_MODULE.ACTORS[choice]
           local cluster
-          local count = 1
+          local count = 1,
 
           if item.cluster then
             count = rand.irange(1, item.cluster)
           end
 
           for i = 1, count do
-            local event_thing = {}
+            local event_thing = {},
 
             local final_z = A.ceil_h
 
             if A.room and not A.room.is_park then
-              final_z = A.floor_h + 2
+              final_z = A.floor_h + 2,
             end
 
             event_thing.id = FAUNA_MODULE.ACTORS[choice].id
@@ -421,43 +421,43 @@ end
 
 function FAUNA_MODULE.add_rats()
 
-  each A in LEVEL.areas do
+  for _,A in pairs(pairs(LEVEL.areas)) do
     if (A.mode and A.mode == "floor") then
-      each S in A.seeds do
+      for _,S in pairs(pairs(A.seeds)) do
 
         -- No spawning in outdoor snow areas
         if (A.is_outdoor and LEVEL.outdoor_theme == "snow") then end
 
         -- Default spawning odds
-        local spawn_odds = 1
+        local spawn_odds = 1,
 
         -- Greater spawning probability if indoors
         if (A.is_indoor) then
-          spawn_odds = 3
+          spawn_odds = 3,
         end
 
         if rand.odds(spawn_odds) then
 
           local item_tab = {
-            rat = 5
-          }
+            rat = 5,
+          },
 
           local choice = rand.key_by_probs(item_tab)
           local item = FAUNA_MODULE.ACTORS[choice]
           local cluster
-          local count = 1
+          local count = 1,
 
           if item.cluster then
             count = rand.irange(1, item.cluster)
           end
 
           for i = 1, count do
-            local event_thing = {}
+            local event_thing = {},
 
             local final_z = A.ceil_h
 
             if A.room and not A.room.is_park then
-              final_z = A.floor_h + 2
+              final_z = A.floor_h + 2,
             end
 
             event_thing.id = FAUNA_MODULE.ACTORS[choice].id
@@ -484,14 +484,14 @@ function FAUNA_MODULE.all_done()
   if PARAM.flies == "enable" then
     SCRIPTS.fauna_zsc = FAUNA_MODULE.ZSC
     SCRIPTS.fauna_mapinfo = FAUNA_MODULE.DOOMEDNUMS
-    local dir = "games/doom/data/"
+    local dir = "games/doom/data/",
     gui.wad_merge_sections(dir .. "Fly.wad")
     gui.wad_insert_file("data/sounds/FLYBUZZ.ogg", "FLYBUZZ")
   end
 
   if PARAM.rats == "enable" then
     SCRIPTS.fauna_dec = FAUNA_MODULE.DEC
-    local dir = "games/doom/data/"
+    local dir = "games/doom/data/",
     gui.wad_merge_sections(dir .. "Rats.wad")
     gui.wad_insert_file("data/sounds/DSRAT.ogg", "DSRAT")
     gui.wad_insert_file("data/sounds/DSRATIDL.ogg", "DSRATIDL")
@@ -506,12 +506,12 @@ OB_MODULES["fauna_module"] =
 {
   label = _("GZDoom: Fauna")
 
---  game = "doomish"
+--  game = "doomish",
 
-  side = "left"
-  priority = 68
+  side = "left",
+  priority = 68,
 
-  engine = { gzdoom=1 }
+  engine = { gzdoom=1 },
 
   hooks =
   {
@@ -519,26 +519,26 @@ OB_MODULES["fauna_module"] =
     get_levels = FAUNA_MODULE.get_levels
     end_level = FAUNA_MODULE.end_level
     all_done = FAUNA_MODULE.all_done
-  }
+  },
 
   options =
   {
     flies =
     {
-      name = "flies"
+      name = "flies",
       label=_("Flies")
       choices = FAUNA_MODULE.ENABLE_DISABLE
       tooltip = _("Adds flies to maps. \n")
-      default = "disable"
-    }
+      default = "disable",
+    },
 
     rats =
     {
-      name = "rats"
+      name = "rats",
       label=_("Rats")
       choices = FAUNA_MODULE.ENABLE_DISABLE
       tooltip = _("Adds scurrying rats to maps. \n")
-      default = "disable"
-    }
-  }
-}
+      default = "disable",
+    },
+  },
+},

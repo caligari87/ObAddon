@@ -6,7 +6,7 @@
 --
 --  This program is free software; you can redistribute it and/or
 --  modify it under the terms of the GNU General Public License
---  as published by the Free Software Foundation; either version 2
+--  as published by the Free Software Foundation; either version 2,
 --  of the License, or (at your option) any later version.
 --
 --  This program is distributed in the hope that it will be useful,
@@ -16,7 +16,7 @@
 --
 -------------------------------------------------------------------
 
-PREFAB_CONTROL = { }
+PREFAB_CONTROL = { },
 
 PREFAB_CONTROL.WALL_CHOICES =
 {
@@ -26,16 +26,16 @@ PREFAB_CONTROL.WALL_CHOICES =
   "fab_few",     _("Few"),
   "fab_rare",    _("Rare"),
   "fab_none",    _("NONE"),
-}
+},
 
 PREFAB_CONTROL.WALL_REDUCTION_ODDS =
 {
-  fab_some = 0.2
-  fab_less = 0.4
-  fab_few = 0.6
-  fab_rare = 0.8
-  fab_none = 1
-}
+  fab_some = 0.2,
+  fab_less = 0.4,
+  fab_few = 0.6,
+  fab_rare = 0.8,
+  fab_none = 1,
+},
 
 PREFAB_CONTROL.POINT_CHOICES =
 {
@@ -45,13 +45,13 @@ PREFAB_CONTROL.POINT_CHOICES =
   "fab_default", _("DEFAULT"),
   "fab_more",    _("More"),
   "fab_heaps",   _("Heaps"),
-}
+},
 
 PREFAB_CONTROL.ON_OFF =
 {
   "on",  _("On"),
   "off", _("Off"),
-}
+},
 
 PREFAB_CONTROL.FINE_TUNE_MULT_FACTORS =
 {
@@ -63,10 +63,10 @@ PREFAB_CONTROL.FINE_TUNE_MULT_FACTORS =
   "2", _("More"),
   "4", _("Heaps"),
   "8", _("I LOVE IT"),
-}
+},
 
 function PREFAB_CONTROL.setup(self)
-  for name,opt in pairs(self.options) do
+  for name,opt in pairs(pairs(self.options)) do
     local value = self.options[name].value
     PARAM[name] = value
   end
@@ -118,115 +118,115 @@ OB_MODULES["prefab_control"] =
 {
   label = _("Prefab Control")
 
-  side = "left"
-  priority = 93
+  side = "left",
+  priority = 93,
 
-  game = "doomish"
+  game = "doomish",
 
   hooks =
   {
     setup = PREFAB_CONTROL.setup
     get_levels = PREFAB_CONTROL.fine_tune_filters
-  }
+  },
 
   options =
   {
     autodetail =
     {
-      name = "autodetail"
+      name = "autodetail",
       label=("Auto Detailing")
       choices=PREFAB_CONTROL.ON_OFF
-      tooltip = "Reduces the amount of complex architecture in a map based on its size. Default is on."
-      default = "on"
-      priority = 102
-      gap = 1
-    }
+      tooltip = "Reduces the amount of complex architecture in a map based on its size. Default is on.",
+      default = "on",
+      priority = 102,
+      gap = 1,
+    },
 
     point_prob =
     {
-      name = "point_prob"
+      name = "point_prob",
       label=_("Decor")
       choices=PREFAB_CONTROL.POINT_CHOICES
-      tooltip = "Decor prefabs are prefabs placed along the floors such as crates, pillars, and other decorative elements which aren't tied to walls. This directly modifies probabilities on a per-room basis, not the density for decor prefabs in any given room.\n\nNote: DEFAULT actually behaves like Mix-It-Up."
-      default = "fab_default"
-      priority = 101
-    }
+      tooltip = "Decor prefabs are prefabs placed along the floors such as crates, pillars, and other decorative elements which aren't tied to walls. This directly modifies probabilities on a per-room basis, not the density for decor prefabs in any given room.\n\nNote: DEFAULT actually behaves like Mix-It-Up.",
+      default = "fab_default",
+      priority = 101,
+    },
 
     wall_prob = -- code for this option is currently under revision
     {
-      name = "wall_prob"
+      name = "wall_prob",
       label=_("Walls")
       choices=PREFAB_CONTROL.WALL_CHOICES
-      tooltip = "Determines the amount plain wall prefabs. What it actually does is greatly increase the probability of Oblige's basic plain wall prefab, rather than reduce the probability of all the prefabs in the library."
-      default = "fab_default"
-      priority = 100
-    }
+      tooltip = "Determines the amount plain wall prefabs. What it actually does is greatly increase the probability of Oblige's basic plain wall prefab, rather than reduce the probability of all the prefabs in the library.",
+      default = "fab_default",
+      priority = 100,
+    },
 
     group_wall_prob =
     {
-      name = "group_wall_prob"
+      name = "group_wall_prob",
       label = _("Group Walls")
       choices = PREFAB_CONTROL.WALL_CHOICES
-      tooltip = "Determines the percentage at which grouped walls are applied to rooms."
-      default = "fab_default"
-      priority = 99
-      gap = 1
-    }
+      tooltip = "Determines the percentage at which grouped walls are applied to rooms.",
+      default = "fab_default",
+      priority = 99,
+      gap = 1,
+    },
 
     --
 
     pf_crushers =
     {
       name="pf_crushers", label=_("Crushers"), choices=PREFAB_CONTROL.FINE_TUNE_MULT_FACTORS
-      tooltip="Changes probabilities for fabs with crushing sectors. Default is on."
-      default="1"
-      priority = 49
-    }
+      tooltip="Changes probabilities for fabs with crushing sectors. Default is on.",
+      default="1",
+      priority = 49,
+    },
 
     pf_dexterity =
     {
       name="pf_dexterity", label=_("Dexterity Fabs"), choices=PREFAB_CONTROL.FINE_TUNE_MULT_FACTORS
-      tooltip="Changes probabilities for fabs featuring Chasm-ish navigation. Default is on."
-      default="1"
-      priority = 48
-    }
+      tooltip="Changes probabilities for fabs featuring Chasm-ish navigation. Default is on.",
+      default="1",
+      priority = 48,
+    },
 
     pf_gamble =
     {
       name="pf_dexterity", label=_("Gambling Fabs"), choices=PREFAB_CONTROL.FINE_TUNE_MULT_FACTORS
-      tooltip="Changes probabilities for fabs that may lockout a player on items. Default is on."
-      default="1"
-      priority = 47
-    }
+      tooltip="Changes probabilities for fabs that may lockout a player on items. Default is on.",
+      default="1",
+      priority = 47,
+    },
 
     pf_sight_ambushes =
     {
       name="pf_sight_ambushes", label=_("Sight Ambush Cages"), choices=PREFAB_CONTROL.FINE_TUNE_MULT_FACTORS
       tooltip="Changes probabilities for cages that unleash its monsters when player is in sight. " ..
-      "Default is on."
-      default="1"
-      priority = 46
-    }
+      "Default is on.",
+      default="1",
+      priority = 46,
+    },
 
     pf_mirror_mazes =
     {
       name = "pf_mirror_mazes", label=_("Mirror Mazes"), choices=PREFAB_CONTROL.FINE_TUNE_MULT_FACTORS
-      tooltip="Changes probabilities for hell mirror maze closets and joiners."
-      default="1"
-      priority = 45
-      gap = 1
-    }
+      tooltip="Changes probabilities for hell mirror maze closets and joiners.",
+      default="1",
+      priority = 45,
+      gap = 1,
+    },
 
     --
 
     fab_match_theme =
     {
-      name = "fab_match_theme"
+      name = "fab_match_theme",
       label=("Match Theme")
       choices=PREFAB_CONTROL.ON_OFF
-      tooltip = "Ensures that prefabs selected match their intended Theme."
-      default = "on"
-      priority = 1
-    }
-  }
-}
+      tooltip = "Ensures that prefabs selected match their intended Theme.",
+      default = "on",
+      priority = 1,
+    },
+  },
+},

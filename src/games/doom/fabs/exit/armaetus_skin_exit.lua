@@ -1,11 +1,11 @@
 PREFABS.Exit_hell_skin_exit =
 {
-  file = "exit/armaetus_skin_exit.wad"
-  map = "MAP01"
+  file = "exit/armaetus_skin_exit.wad",
+  map = "MAP01",
 
-  theme = "hell"
+  theme = "hell",
 
-  where  = "point"
+  where  = "point",
 
-  prob = 1000
-}
+  prob = 1000,
+},

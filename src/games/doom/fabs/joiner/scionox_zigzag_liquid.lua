@@ -2,27 +2,27 @@
 
 PREFABS.Joiner_scionox_zigzag_liquid =
 {
-  file   = "joiner/scionox_zigzag_liquid.wad"
-  map    = "MAP01"
+  file   = "joiner/scionox_zigzag_liquid.wad",
+  map    = "MAP01",
 
-  prob   = 250
-  theme  = "!hell"
+  prob   = 250,
+  theme  = "!hell",
 
-  where  = "seeds"
-  shape  = "I"
+  where  = "seeds",
+  shape  = "I",
 
-  seed_w = 2
-  seed_h = 2
+  seed_w = 2,
+  seed_h = 2,
 
-  deep   = 16
-  over   = 16
+  deep   = 16,
+  over   = 16,
 
-  x_fit  = "frame"
-  y_fit  = "frame"
-}
+  x_fit  = "frame",
+  y_fit  = "frame",
+},
 PREFABS.Joiner_scionox_zigzag_liquid_2 =
 {
-  template = "Joiner_scionox_zigzag_liquid"
-  theme  = "hell"
-  map    = "MAP02"
-}
+  template = "Joiner_scionox_zigzag_liquid",
+  theme  = "hell",
+  map    = "MAP02",
+},

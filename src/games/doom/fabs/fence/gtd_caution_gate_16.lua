@@ -1,26 +1,26 @@
 PREFABS.Bars_caution_barrier =
 {
-  file   = "fence/gtd_caution_gate_16.wad"
-  map    = "MAP01"
+  file   = "fence/gtd_caution_gate_16.wad",
+  map    = "MAP01",
 
-  prob   = 100
+  prob   = 100,
 
-  theme  = "!hell"
+  theme  = "!hell",
 
-  where  = "edge"
-  key    = "barred"
+  where  = "edge",
+  key    = "barred",
 
-  seed_w = 2
+  seed_w = 2,
 
-  deep   = 16
-  over   = 16
+  deep   = 16,
+  over   = 16,
 
-  fence_h = 32
+  fence_h = 32,
 
-  x_fit  = "frame"
+  x_fit  = "frame",
 
-  bound_z1 = 0
+  bound_z1 = 0,
 
-  tag_1  = "?door_tag"
-  door_action = "S1_LowerFloor"
-}
+  tag_1  = "?door_tag",
+  door_action = "S1_LowerFloor",
+},

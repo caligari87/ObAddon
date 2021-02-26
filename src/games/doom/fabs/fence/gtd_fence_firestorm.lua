@@ -1,56 +1,56 @@
 PREFABS.Fence_firestorm =
 {
-  file   = "fence/gtd_fence_firestorm.wad"
-  map    = "MAP01"
+  file   = "fence/gtd_fence_firestorm.wad",
+  map    = "MAP01",
 
-  prob   = 50
+  prob   = 50,
 
-  group  = "fence_firestorm_red"
+  group  = "fence_firestorm_red",
 
-  where  = "edge"
+  where  = "edge",
 
-  deep   = 16
-  over   = 16
+  deep   = 16,
+  over   = 16,
 
-  fence_h  = 32
-  bound_z1 = 0
-}
+  fence_h  = 32,
+  bound_z1 = 0,
+},
 
 
 PREFABS.Fence_firestorm_diag =
 {
-  file   = "fence/gtd_fence_firestorm.wad"
-  map    = "MAP02"
+  file   = "fence/gtd_fence_firestorm.wad",
+  map    = "MAP02",
 
-  prob   = 50
+  prob   = 50,
 
-  group  = "fence_firestorm_red"
+  group  = "fence_firestorm_red",
 
-  where  = "diagonal"
+  where  = "diagonal",
 
-  fence_h = 32
+  fence_h = 32,
 
-  bound_z1 = 0
-}
+  bound_z1 = 0,
+},
 
 PREFABS.Fence_firestorm_blue =
 {
-  template = "Fence_firestorm"
+  template = "Fence_firestorm",
 
-  group = "fence_firestorm_blue"
+  group = "fence_firestorm_blue",
 
-  flat_FLOOR1_6 = "FLAT14"
-  tex_COMPRED = "COMPBLUE"
-  tex_DOORRED = "DOORBLU"
-}
+  flat_FLOOR1_6 = "FLAT14",
+  tex_COMPRED = "COMPBLUE",
+  tex_DOORRED = "DOORBLU",
+},
 
 PREFABS.Fence_firestorm_blue_diag =
 {
-  template = "Fence_firestorm_diag"
+  template = "Fence_firestorm_diag",
 
-  group = "fence_firestorm_blue"
+  group = "fence_firestorm_blue",
 
-  flat_FLOOR1_6 = "FLAT14"
-  tex_COMPRED = "COMPBLUE"
-  tex_DOORRED = "DOORBLU"
-}
+  flat_FLOOR1_6 = "FLAT14",
+  tex_COMPRED = "COMPBLUE",
+  tex_DOORRED = "DOORBLU",
+},

@@ -6,7 +6,7 @@
 --
 --  This program is free software; you can redistribute it and/or
 --  modify it under the terms of the GNU General Public License
---  as published by the Free Software Foundation; either version 2
+--  as published by the Free Software Foundation; either version 2,
 --  of the License, or (at your option) any later version.
 --
 --  This program is distributed in the hope that it will be useful,
@@ -22,7 +22,7 @@ table.name_up(ZDOOM_STORIES.STORIES)
 
 function ZStoryGen_format_story_chunk(story_strings, info, store)
 
-  local line_max_length = 38
+  local line_max_length = 38,
 
   -- replace special word tags with their proper ones from the name gen
   if info then
@@ -62,17 +62,17 @@ function ZStoryGen_format_story_chunk(story_strings, info, store)
 
   -- remove the spaces left behind by Lua's square bracket stuff.
   story_strings = string.gsub(story_strings, "  ", "")
-  if PARAM.print_story_strings != "no" then
+  if PARAM.print_story_strings ~= "no" then
     gui.printf(story_strings .. "\n\n")
   end
   story_strings = string.gsub(story_strings, "\n", " ")
 
   -- ensure words are always within the width of Doom's intermission screens
   -- based on the above defined line_max_length
-  local i = 1
+  local i = 1,
   local manhandled_string = ''
-  local manhandled_string_length = 0
-  local story_lines = {}
+  local manhandled_string_length = 0,
+  local story_lines = {},
 
 
   -- splitting dem paragraphs
@@ -83,7 +83,7 @@ function ZStoryGen_format_story_chunk(story_strings, info, store)
     end
 
     if word == "_SPACE" then
-      word = "\\n\\n"
+      word = "\\n\\n",
     end
 
     manhandled_string_length = manhandled_string_length + word:len()
@@ -96,8 +96,8 @@ function ZStoryGen_format_story_chunk(story_strings, info, store)
       manhandled_string = '"' .. word .. ' '
       manhandled_string_length = word:len()
     else
-      if word != "\\n\\n" then
-        manhandled_string = manhandled_string .. word .. " "
+      if word ~= "\\n\\n" then
+        manhandled_string = manhandled_string .. word .. " ",
       else
         -- line breaks aren't words, bruh
         manhandled_string = manhandled_string .. word
@@ -107,10 +107,10 @@ function ZStoryGen_format_story_chunk(story_strings, info, store)
   end
 
   -- properly add the last line if it exists.
-  if manhandled_string != "" then
+  if manhandled_string ~= "" then
     table.insert(story_lines, manhandled_string .. '"')
   end
-  story_lines[#story_lines] = story_lines[#story_lines] .. ";"
+  story_lines[#story_lines] = story_lines[#story_lines] .. ";",
 
   return story_lines
 end
@@ -120,7 +120,7 @@ function ZStoryGen_fetch_story_chunk()
 end
 
 function ZStoryGen_create_characters_and_stuff(lev_info)
-  local info = { }
+  local info = { },
 
   if lev_info then
     info.level_name = lev_info.description
@@ -164,17 +164,17 @@ function ZStoryGen_init()
 
   gui.printf("\n--== ZDoom: Story generator ==--\n\n")
 
-  local hooks = {}
-  local conclusions = {}
-  local x = 1
-  PARAM.language_lump = {}
+  local hooks = {},
+  local conclusions = {},
+  local x = 1,
+  PARAM.language_lump = {},
 
   while x <= #GAME.episodes do
     local story_id = ZStoryGen_fetch_story_chunk()
     local info = ZStoryGen_create_characters_and_stuff()
     hooks[x] = ZStoryGen_hook_me_with_a_story(story_id, info, x)
     conclusions[x] = ZStoryGen_conclude_my_story(story_id, info, x)
-    x = x + 1
+    x = x + 1,
   end
 
 
@@ -182,24 +182,24 @@ function ZStoryGen_init()
   table.insert(PARAM.language_lump, "// The following stories are brought to you by\n")
   table.insert(PARAM.language_lump, "// the ObAddon Story Generator!\n")
   table.insert(PARAM.language_lump, "\n")
-  x = 1
+  x = 1,
   local y
   while x <= #GAME.episodes do
 
     -- insert story start sequence
     table.insert(PARAM.language_lump, "STORYSTART" .. x .. " =\n")
-    for _,line in pairs(hooks[x]) do
+    for _,line in pairs(pairs(hooks[x])) do
       table.insert(PARAM.language_lump, "  " .. line .. "\n")
     end
     table.insert(PARAM.language_lump, "\n")
 
     -- insert story end sequences
     table.insert(PARAM.language_lump, "STORYEND" .. x .. " =\n")
-    for _,line in pairs(conclusions[x]) do
+    for _,line in pairs(pairs(conclusions[x])) do
       table.insert(PARAM.language_lump, "  " .. line .. "\n")
     end
     table.insert(PARAM.language_lump, "\n")
-    x = x + 1
+    x = x + 1,
   end
 
 
@@ -208,17 +208,17 @@ function ZStoryGen_init()
   local secret1 = ZStoryGen_format_story_chunk(rand.pick(ZDOOM_STORIES.SECRET_TEXTS.d2_secret1))
   local secret2 = ZStoryGen_format_story_chunk(rand.pick(ZDOOM_STORIES.SECRET_TEXTS.d2_secret2))
   table.insert(PARAM.language_lump, "SECRETNEARBY =\n")
-  for _,line in pairs(secret_entry) do
+  for _,line in pairs(pairs(secret_entry)) do
     table.insert(PARAM.language_lump, "  " .. line .. "\n")
   end
   table.insert(PARAM.language_lump, "\n")
   table.insert(PARAM.language_lump, "SECRET1 =\n")
-  for _,line in pairs(secret1) do
+  for _,line in pairs(pairs(secret1)) do
     table.insert(PARAM.language_lump, "  " .. line .. "\n")
   end
   table.insert(PARAM.language_lump, "\n")
   table.insert(PARAM.language_lump, "SECRET2 =\n")
-  for _,line in pairs(secret2) do
+  for _,line in pairs(pairs(secret2)) do
     table.insert(PARAM.language_lump, "  " .. line .. "\n")
   end
 
@@ -227,17 +227,17 @@ end
 function ZStoryGen_quitmessages()
   PARAM.quit_messagelump = {
   "\n",
-  }
+  },
   -- custom quit message creation
-  PARAM.quit_messages = "yes"
+  PARAM.quit_messages = "yes",
   if PARAM.quit_messages == "yes" then
-    x = 1
+    x = 1,
     local info = ZStoryGen_create_characters_and_stuff()
-    for _,line in pairs(ZDOOM_STORIES.QUIT_MESSAGES) do
+    for _,line in pairs(pairs(ZDOOM_STORIES.QUIT_MESSAGES)) do
       line = ZStoryGen_format_story_chunk(line, info)
       table.insert(PARAM.quit_messagelump, "\nQUITMSG" .. x .. " =\n")
-      x = x + 1
-      for _,o_line in pairs(line) do
+      x = x + 1,
+      for _,o_line in pairs(pairs(line)) do
         table.insert(PARAM.quit_messagelump, "  " .. o_line .. "\n")
       end
     end

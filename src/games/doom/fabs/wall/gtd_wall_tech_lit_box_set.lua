@@ -1,74 +1,74 @@
 PREFABS.Wall_tech_lit_box_blue =
 {
-  file   = "wall/gtd_wall_tech_lit_box_set.wad"
-  map    = "MAP01"
+  file   = "wall/gtd_wall_tech_lit_box_set.wad",
+  map    = "MAP01",
 
-  prob   = 50
+  prob   = 50,
 
-  group = "gtd_wall_lit_box_blue"
+  group = "gtd_wall_lit_box_blue",
 
-  where  = "edge"
-  deep   = 16
-  height = 128
+  where  = "edge",
+  deep   = 16,
+  height = 128,
 
-  bound_z1 = 0
-  bound_z2 = 128
+  bound_z1 = 0,
+  bound_z2 = 128,
 
-  z_fit  = { 24,32 }
-}
+  z_fit  = { 24,32 },
+},
 
 PREFABS.Wall_tech_lit_box_blue_diagonal =
 {
-  template   = "Wall_tech_lit_box_blue"
-  map    = "MAP02"
+  template   = "Wall_tech_lit_box_blue",
+  map    = "MAP02",
 
-  prob   = 50
+  prob   = 50,
 
-  group = "gtd_wall_lit_box_blue"
+  group = "gtd_wall_lit_box_blue",
 
-  where  = "diagonal"
-}
+  where  = "diagonal",
+},
 
 PREFABS.Wall_tech_lit_box_red =
 {
-  template   = "Wall_tech_lit_box_blue"
-  map    = "MAP03"
+  template   = "Wall_tech_lit_box_blue",
+  map    = "MAP03",
 
-  prob   = 50
+  prob   = 50,
 
-  group = "gtd_wall_lit_box_red"
-}
+  group = "gtd_wall_lit_box_red",
+},
 
 PREFABS.Wall_tech_lit_box_red_diagonal =
 {
-  template   = "Wall_tech_lit_box_blue"
-  map    = "MAP04"
+  template   = "Wall_tech_lit_box_blue",
+  map    = "MAP04",
 
-  prob   = 50
+  prob   = 50,
 
-  group = "gtd_wall_lit_box_red"
+  group = "gtd_wall_lit_box_red",
 
-  where = "diagonal"
-}
+  where = "diagonal",
+},
 
 PREFABS.Wall_tech_lit_box_white =
 {
-  template   = "Wall_tech_lit_box_blue"
-  map    = "MAP05"
+  template   = "Wall_tech_lit_box_blue",
+  map    = "MAP05",
 
-  prob   = 50
+  prob   = 50,
 
-  group = "gtd_wall_lit_box_white"
-}
+  group = "gtd_wall_lit_box_white",
+},
 
 PREFABS.Wall_tech_lit_box_white_diagonal =
 {
-  template   = "Wall_tech_lit_box_blue"
-  map    = "MAP06"
+  template   = "Wall_tech_lit_box_blue",
+  map    = "MAP06",
 
-  prob   = 50
+  prob   = 50,
 
-  group = "gtd_wall_lit_box_white"
+  group = "gtd_wall_lit_box_white",
 
-  where  = "diagonal"
-}
+  where  = "diagonal",
+},

@@ -1,13 +1,13 @@
 PREFABS.Switch_craneo_portable_laptop =
 {
-  file = "switch/craneo_switch_laptop.wad"
+  file = "switch/craneo_switch_laptop.wad",
 
-  key = "sw_metal"
-  where = "point"
+  key = "sw_metal",
+  where = "point",
 
-  size = 64
+  size = 64,
 
-  prob = 65
+  prob = 65,
 
-  tag_1 = "?switch_tag"
-}
+  tag_1 = "?switch_tag",
+},

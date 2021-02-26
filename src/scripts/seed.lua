@@ -9,7 +9,7 @@
 --
 --  This program is free software; you can redistribute it and/or
 --  modify it under the terms of the GNU General Public License
---  as published by the Free Software Foundation; either version 2
+--  as published by the Free Software Foundation; either version 2,
 --  of the License, or (at your option) any later version.
 --
 --  This program is distributed in the hope that it will be useful,
@@ -94,8 +94,8 @@
     kind : keyword  -- "nothing" (keep it empty)
                     -- "ignore" (use the junction instead)
                     -- "wall", "doorway",
-                    -- "window", "fence", "railing"
-                    -- "sky_edge"
+                    -- "window", "fence", "railing",
+                    -- "sky_edge",
                     -- [ "steps" ]
                     -- "beams" -- ObAddon-only feature -MSSP
 
@@ -126,12 +126,12 @@
 
     kind : keyword  -- "floor" (part of a walkable area)
                     -- "ceil"  (part of a ceiling)
-                    -- "liquid"
-                    -- "stair"
+                    -- "liquid",
+                    -- "stair",
                     -- "closet" ('T' elements in rules)
                     -- "joiner" ('J' elements in rules)
                     -- "hallway" piece
-                    -- "link"
+                    -- "link",
 
     area : AREA
 
@@ -149,14 +149,14 @@
                       -- "whole" (completely self-contained)
                       -- is NIL for content-only stuff (e.g. pillars)
 
-    shape : keyword  -- "U" or "I" or "L" or "T" or "P"
+    shape : keyword  -- "U" or "I" or "L" or "T" or "P",
                      -- used for stairs, closets, joiners, hallway pieces
 
     content : keyword  -- is NIL when unused / free
-                       -- "START", "EXIT", "SECRET_EXIT"
-                       -- "TELEPORTER", "SWITCH"
-                       -- "KEY", "WEAPON", "ITEM"
-                       -- "CAGE", "TRAP", "DECORATION"
+                       -- "START", "EXIT", "SECRET_EXIT",
+                       -- "TELEPORTER", "SWITCH",
+                       -- "KEY", "WEAPON", "ITEM",
+                       -- "CAGE", "TRAP", "DECORATION",
 
     is_secret      -- boolean
     is_bossy       -- boolean  (keep it clear for a boss monster)
@@ -195,11 +195,11 @@
 --------------------------------------------------------------]]
 
 
-BASE_X = 0
-BASE_Y = 0
+BASE_X = 0,
+BASE_Y = 0,
 
 
-SEED_CLASS = {}
+SEED_CLASS = {},
 
 --
 -- convert a square seed to a pair of diagonal seeds.
@@ -217,8 +217,8 @@ function SEED_CLASS.split(S, diagonal)
 
   S2.diagonal = 10 - diagonal
 
-  S2.x1 = S.x1 ; S2.y1 = S.y1
-  S2.x2 = S.x2 ; S2.y2 = S.y2
+  S2.x1 = S.x1 ; S2.y1 = S.y1,
+  S2.x2 = S.x2 ; S2.y2 = S.y2,
 
   S2.edge_of_map = S.edge_of_map
 
@@ -251,7 +251,7 @@ function SEED_CLASS.join_halves(S)
 
   S2.name = "DEAD_" .. S2.name
   S2.is_dead = true
-  S2.diagonal = "dead"
+  S2.diagonal = "dead",
 
   S2.area = nil
   S2.room = nil
@@ -347,24 +347,24 @@ end
 
 function SEED_CLASS.calc_mid_point(S)
   -- 'S' can be a half-seed too
-  local mx = (S.x1 + S.x2) / 2
-  local my = (S.y1 + S.y2) / 2
+  local mx = (S.x1 + S.x2) / 2,
+  local my = (S.y1 + S.y2) / 2,
 
   if S.diagonal == 1 then
-    mx = (S.x1 + mx) / 2
-    my = (S.y1 + my) / 2
+    mx = (S.x1 + mx) / 2,
+    my = (S.y1 + my) / 2,
 
   elseif S.diagonal == 3 then
-    mx = (S.x2 + mx) / 2
-    my = (S.y1 + my) / 2
+    mx = (S.x2 + mx) / 2,
+    my = (S.y1 + my) / 2,
 
   elseif S.diagonal == 7 then
-    mx = (S.x1 + mx) / 2
-    my = (S.y2 + my) / 2
+    mx = (S.x1 + mx) / 2,
+    my = (S.y2 + my) / 2,
 
   elseif S.diagonal == 9 then
-    mx = (S.x2 + mx) / 2
-    my = (S.y2 + my) / 2
+    mx = (S.x2 + mx) / 2,
+    my = (S.y2 + my) / 2,
   end
 
   S.mid_x = int(mx)
@@ -458,8 +458,8 @@ end
 
 
 function SEED_CLASS.line_coords(S, dir)
-  local x1, y1 = S.x1, S.y1
-  local x2, y2 = S.x2, S.y2
+  local x1, y1 = S.x1, S.y1,
+  local x2, y2 = S.x2, S.y2,
 
   if dir == 8 then y1 = y2 end
   if dir == 2 then y2 = y1 end
@@ -467,14 +467,14 @@ function SEED_CLASS.line_coords(S, dir)
   if dir == 6 then x1 = x2 end
 
   if dir == 2 then
-    x1, x2 = x2, x1
+    x1, x2 = x2, x1,
   end
 
   if dir == 6 or dir == 1 or dir == 9 then
-    y1, y2 = y2, y1
+    y1, y2 = y2, y1,
   end
 
-  return x1,y1, x2,y2
+  return x1,y1, x2,y2,
 end
 
 
@@ -498,26 +498,26 @@ end
 function SEED_CLASS.make_brush(S)
   local brush =
   {
-    { x=S.x1, y=S.y1, __dir=2 }
-    { x=S.x2, y=S.y1, __dir=6 }
-    { x=S.x2, y=S.y2, __dir=8 }
-    { x=S.x1, y=S.y2, __dir=4 }
-  }
+    { x=S.x1, y=S.y1, __dir=2 },
+    { x=S.x2, y=S.y1, __dir=6 },
+    { x=S.x2, y=S.y2, __dir=8 },
+    { x=S.x1, y=S.y2, __dir=4 },
+  },
 
   if S.diagonal == 3 then
-    brush[3].__dir = 7
+    brush[3].__dir = 7,
     table.remove(brush, 4)
 
   elseif S.diagonal == 7 then
-    brush[1].__dir = 3
+    brush[1].__dir = 3,
     table.remove(brush, 2)
 
   elseif S.diagonal == 1 then
-    brush[2].__dir = 9
+    brush[2].__dir = 9,
     table.remove(brush, 3)
 
   elseif S.diagonal == 9 then
-    brush[4].__dir = 1
+    brush[4].__dir = 1,
     table.remove(brush, 1)
 
   elseif S.diagonal then
@@ -537,14 +537,14 @@ function Seed_create(sx, sy, x1, y1)
     sx = sx
     sy = sy
 
-    x1 = x1
-    y1 = y1
+    x1 = x1,
+    y1 = y1,
 
     name = string.format("SEED [%d,%d]", sx, sy)
 
-    edge   = {}
-    m_cell = {}
-  }
+    edge   = {},
+    m_cell = {},
+  },
 
   S.x2 = S.x1 + SEED_SIZE
   S.y2 = S.y1 + SEED_SIZE
@@ -561,8 +561,8 @@ function Seed_init()
   SEEDS = table.array_2D(SEED_W, SEED_H)
 
   -- offset the map in DOOM for flat alignment
-  BASE_X = 32
-  BASE_Y = 32
+  BASE_X = 32,
+  BASE_Y = 32,
 
   -- Centre the map : needed for Quake, Hexen2 (etc).
   -- This formula ensures that 'coord 0' is still a seed boundary,
@@ -583,7 +583,7 @@ function Seed_init()
 
   -- init depot locations [ for teleport-in monsters ]
 
-  LEVEL.depot_locs = {}
+  LEVEL.depot_locs = {},
 
   local depot_x = BASE_X
   local depot_y = BASE_Y + SEED_H * SEED_SIZE
@@ -591,7 +591,7 @@ function Seed_init()
   for row = 0, 2 do
   for col = 0, int(SEED_W / 3) - 1 do
     local x = depot_x + col * 3 * SEED_SIZE
-    local y = depot_y + row * 6 * SEED_SIZE + 64
+    local y = depot_y + row * 6 * SEED_SIZE + 64,
 
     table.insert(LEVEL.depot_locs, { x=x, y=y })
   end
@@ -660,7 +660,7 @@ function Seed_squarify()
   end -- sx, sy
   end
 
-  each A in LEVEL.areas do
+  for _,A in pairs(pairs(LEVEL.areas)) do
     A:remove_dead_seeds()
   end
 end
@@ -673,7 +673,7 @@ function Seed_coord_range(sx1, sy1, sx2, sy2)
   local S1 = SEEDS[sx1][sy1]
   local S2 = SEEDS[sx2][sy2]
 
-  return S1.x1, S1.y1, S2.x2, S2.y2
+  return S1.x1, S1.y1, S2.x2, S2.y2,
 end
 
 
@@ -694,8 +694,8 @@ function Seed_from_loc(loc)
 
   local dx, dy = geom.delta(loc)
 
-  dx = 0.5 + dx * 0.3 + rand.irange(-2, 2) / 20
-  dy = 0.5 + dy * 0.3 + rand.irange(-2, 2) / 20
+  dx = 0.5 + dx * 0.3 + rand.irange(-2, 2) / 20,
+  dy = 0.5 + dy * 0.3 + rand.irange(-2, 2) / 20,
 
   local sx = rand.int(SEED_W * dx - 1.5)
   local sy = rand.int(SEED_H * dy - 1.5)
@@ -745,10 +745,10 @@ function Seed_alloc_depot(room)
     room = room
     x1 = loc.x
     y1 = loc.y
-    skin = {}
-  }
+    skin = {},
+  },
 
-  DEPOT.skin.wall = "_ERROR"
+  DEPOT.skin.wall = "_ERROR",
 
   table.insert(LEVEL.depots, DEPOT)
 
@@ -781,7 +781,7 @@ function Seed_dump_rooms()
   end
 
   for y = SEED_H,1,-1 do
-    local line = "  "
+    local line = "  ",
     for x = 1,SEED_W do
       line = line .. seed_to_char(SEEDS[x][y])
     end
@@ -797,7 +797,7 @@ end
 function Seed_save_svg_image(filename)
 
   -- grid size
-  local SIZE = 14
+  local SIZE = 14,
 
   local TOP  = (SEED_H + 1) * SIZE
 
@@ -832,15 +832,15 @@ function Seed_save_svg_image(filename)
     local A1 = S1.area
     local A2 = S2 and S2.area
 
-    local color = "#777"
-    local lin_w = 2
+    local color = "#777",
+    local lin_w = 2,
 
     if S1.kind == "dead" or (S2 and S2.kind == "dead") then
-      color = "#f00"
-      lin_w = 3
+      color = "#f00",
+      lin_w = 3,
 
-    elseif (S1.h_link or (S2 and S2.h_link)) and S1.h_link != (S2 and S2.h_link) then
-      color = "#f00"
+    elseif (S1.h_link or (S2 and S2.h_link)) and S1.h_link ~= (S2 and S2.h_link) then
+      color = "#f00",
 
     elseif not A1 then
       return
@@ -849,37 +849,37 @@ function Seed_save_svg_image(filename)
       -- no change
 
     elseif A1 == A2 then
-      color = "#ccf"
-      lin_w = 1
+      color = "#ccf",
+      lin_w = 1,
       return
 
     elseif not A1.room and not A2.room then
       -- no change
 
     elseif (A1.chunk and A1.chunk.kind == "joiner") or (A2.chunk and A2.chunk.kind == "joiner") then
-      color = "#f0f"
+      color = "#f0f",
     elseif A1.room and (A1.room == A2.room) then
-      color = "#0f0"
+      color = "#0f0",
     elseif (A1.room and A1.room.is_hallway) or (A2.room and A2.room.is_hallway) then
-      color = "#fb0"
+      color = "#fb0",
     else
-      color = "#00f"
-      lin_w = 3
+      color = "#00f",
+      lin_w = 3,
     end
 
     local sx1, sy1 = S1.sx, S1.sy
-    local sx2, sy2 = sx1 + 1, sy1 + 1
+    local sx2, sy2 = sx1 + 1, sy1 + 1,
 
     if dir == 3 or dir == 7 then
       -- no change
 
     elseif dir == 1 or dir == 9 then
-      sy1, sy2 = sy2, sy1
+      sy1, sy2 = sy2, sy1,
 
-    elseif dir == 2 then sy2 = sy1
-    elseif dir == 8 then sy1 = sy2
-    elseif dir == 4 then sx2 = sx1
-    elseif dir == 6 then sx1 = sx2
+    elseif dir == 2 then sy2 = sy1,
+    elseif dir == 8 then sy1 = sy2,
+    elseif dir == 4 then sx2 = sx1,
+    elseif dir == 6 then sx1 = sx2,
     else
       error("uhhh what")
     end
@@ -900,8 +900,8 @@ function Seed_save_svg_image(filename)
   fp:write('<svg xmlns="http://www.w3.org/2000/svg" version="1.1">\n')
 
   -- grid
-  local min_x = 0
-  local min_y = 0
+  local min_x = 0,
+  local min_y = 0,
 
   local max_x = SEED_W * SIZE
   local max_y = SEED_H * SIZE
@@ -950,19 +950,19 @@ function Seed_draw_minimap()
   local S1 = SEEDS[LEVEL.walkable_x1][LEVEL.walkable_y1]
   local S2 = SEEDS[LEVEL.walkable_x2][LEVEL.walkable_y2]
 
-  local min_x = S1.x1 - 64
-  local min_y = S1.y1 - 64
+  local min_x = S1.x1 - 64,
+  local min_y = S1.y1 - 64,
 
-  local max_x = S2.x2 + 64
-  local max_y = S2.y2 + 64
+  local max_x = S2.x2 + 64,
+  local max_y = S2.y2 + 64,
 
   local  width = max_x - min_x
   local height = max_y - min_y
 
   local size = math.max(width, height)
 
-  local ofs_x = (size -  width) / 2
-  local ofs_y = (size - height) / 2
+  local ofs_x = (size -  width) / 2,
+  local ofs_y = (size - height) / 2,
 
 
   local function draw_edge(S, dir, color)
@@ -1009,16 +1009,16 @@ function Seed_draw_minimap()
       if R1.name > R2.name then return end
     end
 
-    local color = "#ffffff"
+    local color = "#ffffff",
 
     if (R1 and R1.is_cave) or (R2 and R2.is_cave) then
-      color = "#ff9933"
+      color = "#ff9933",
     elseif (R1 and R1.is_outdoor) or (R2 and R2.is_outdoor) then
-      color = "#11aaff"
+      color = "#11aaff",
     end
 
     if (R1 and R1.is_park) or (R2 and R2.is_park) then
-      color = "#70d872"
+      color = "#70d872",
     end
 
     draw_edge(S1, dir, color)
@@ -1058,7 +1058,7 @@ function Edge_new(kind, S, dir, long)
     long = long
     kind = kind
     area = S.area
-  }
+  },
 
   -- add it into each seed
   for i = 1, long do
@@ -1122,10 +1122,10 @@ function Edge_new_pair(kind1, kind2, S, dir, long)
   local E1 = Edge_new         (kind1, S, dir, long)
   local E2 = Edge_new_opposite(kind2, S, dir, long)
 
-  E1.peer = E2
-  E2.peer = E1
+  E1.peer = E2,
+  E2.peer = E1,
 
-  return E1, E2
+  return E1, E2,
 end
 
 
@@ -1156,17 +1156,17 @@ function Edge_line_coords(E)
 
   local x2, y2 = N:right_corner_coord(E.dir)
 
-  return x1,y1, x2,y2
+  return x1,y1, x2,y2,
 end
 
 
 function Edge_mid_point(E)
   local x1,y1, x2,y2 = Edge_line_coords(E)
 
-  x1 = (x1 + x2) / 2
-  y1 = (y1 + y2) / 2
+  x1 = (x1 + x2) / 2,
+  y1 = (y1 + y2) / 2,
 
-  return x1, y1
+  return x1, y1,
 end
 
 
@@ -1175,7 +1175,7 @@ function Edge_is_wallish(E)
 
   if E.kind == "wall" or
      E.kind == "window" or
-     E.kind == "doorway"
+     E.kind == "doorway",
   then
     return true
   end
@@ -1185,7 +1185,7 @@ function Edge_is_wallish(E)
     local kind2 = E.peer.kind
 
     if kind2 == "window" or
-       kind2 == "doorway"
+       kind2 == "doorway",
     then
       return true
     end
@@ -1207,7 +1207,7 @@ function Edge_wallish_tex(E)
   end
 
   -- fallback
-  return "_ERROR"
+  return "_ERROR",
 end
 
 
@@ -1225,7 +1225,7 @@ end
 ------------------------------------------------------------------------
 
 
-CHUNK_CLASS = {}
+CHUNK_CLASS = {},
 
 
 function CHUNK_CLASS.new(kind, sx1,sy1, sx2,sy2)
@@ -1235,14 +1235,14 @@ function CHUNK_CLASS.new(kind, sx1,sy1, sx2,sy2)
 
     kind = kind
 
-    sx1 = sx1, sy1 = sy1
-    sx2 = sx2, sy2 = sy2
+    sx1 = sx1, sy1 = sy1,
+    sx2 = sx2, sy2 = sy2,
 
     sw = (sx2 - sx1 + 1)
     sh = (sy2 - sy1 + 1)
 
-    encroach = {}
-  }
+    encroach = {},
+  },
 
   CK.name = string.format("CHUNK_%d", CK.id)
 
@@ -1251,8 +1251,8 @@ function CHUNK_CLASS.new(kind, sx1,sy1, sx2,sy2)
   local S1 = SEEDS[sx1][sy1]
   local S2 = SEEDS[sx2][sy2]
 
-  CK.x1, CK.y1 = S1.x1, S1.y1
-  CK.x2, CK.y2 = S2.x2, S2.y2
+  CK.x1, CK.y1 = S1.x1, S1.y1,
+  CK.x2, CK.y2 = S2.x2, S2.y2,
 
   CK.mx = math.mid(S1.x1, S2.x2)
   CK.my = math.mid(S1.y1, S2.y2)
@@ -1293,18 +1293,18 @@ end
 function CHUNK_CLASS.base_reqs(chunk, dir)
   local reqs =
   {
-    where  = "seeds"
+    where  = "seeds",
 
     seed_w = chunk.sw
     seed_h = chunk.sh
-  }
+  },
 
   if geom.is_horiz(dir) then
     reqs.seed_w = chunk.sh
     reqs.seed_h = chunk.sw
   end
 
-  local h1, h2
+  local h1, h2,
 
   if chunk.from_area then h1 = chunk.from_area:get_height() end
   if chunk.dest_area then h2 = chunk.dest_area:get_height() end
@@ -1312,7 +1312,7 @@ function CHUNK_CLASS.base_reqs(chunk, dir)
   if h1 and h2 then
     reqs.height = math.min(h1, h2)
   else
-    reqs.height = h1 or h2
+    reqs.height = h1 or h2,
   end
 
   return reqs
@@ -1349,8 +1349,8 @@ function CHUNK_CLASS.is_open_to_sky(chunk, R)
   local function area_open_to_sky(A)
     if not A.is_outdoor then return false end
     if A.mode == "void" then return false end
-    if A.room and A.room != R then return false end
-    if A.mode == "scenic" and A.face_room != R then return false end
+    if A.room and A.room ~= R then return false end
+    if A.mode == "scenic" and A.face_room ~= R then return false end
     if A.border_type == "no_vista" then return false end
 
     return true
@@ -1389,7 +1389,7 @@ function CHUNK_CLASS.is_open_to_room(chunk, R)
   if R.is_outdoor then return false end
 
   local function area_open_to_room(A)
-    if A.room != R then return false end
+    if A.room ~= R then return false end
 
     -- TODO : check for stairs
 
@@ -1461,7 +1461,7 @@ function CHUNK_CLASS.create_edge_pair(chunk, kind1, side)
 
   local E2 = Edge_new_opposite("nothing", E1.S, E1.dir, E1.long)
 
-  return E1, E2
+  return E1, E2,
 end
 
 
@@ -1469,8 +1469,8 @@ function CHUNK_CLASS.flip(chunk)
   local A1 = chunk.from_area
   local A2 = chunk.dest_area
 
-  chunk.from_area = A2
-  chunk.dest_area = A1
+  chunk.from_area = A2,
+  chunk.dest_area = A1,
 
   if chunk.shape == "L" then
     chunk.from_dir, chunk.dest_dir = chunk.dest_dir, chunk.from_dir

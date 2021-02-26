@@ -4,95 +4,95 @@
 
 PREFABS.Beam =
 {
-  file   = "fence/beam.wad"
-  map    = "MAP01"
+  file   = "fence/beam.wad",
+  map    = "MAP01",
 
-  group  = "beam_gothic"
+  group  = "beam_gothic",
 
-  kind   = "beam"
+  kind   = "beam",
 
-  prob   = 50
+  prob   = 50,
 
-  where  = "edge"
+  where  = "edge",
 
-  deep   = 8
-  over   = 8
+  deep   = 8,
+  over   = 8,
 
-  bound_z1 = 0
-}
+  bound_z1 = 0,
+},
 
 PREFABS.Beam_diagonal =
 {
-  file   = "fence/beam.wad"
-  map    = "MAP02"
+  file   = "fence/beam.wad",
+  map    = "MAP02",
 
-  group  = "beam_gothic"
+  group  = "beam_gothic",
 
-  kind   = "beam"
+  kind   = "beam",
 
-  prob   = 50
+  prob   = 50,
 
-  where  = "diagonal"
+  where  = "diagonal",
 
-  bound_z1 = 0
-}
+  bound_z1 = 0,
+},
 
 PREFABS.Beam_tech =
 {
-  template = "Beam"
-  map = "MAP03"
+  template = "Beam",
+  map = "MAP03",
 
-  group = "beam_shiny"
-}
+  group = "beam_shiny",
+},
 
 PREFABS.Beam_diagonal_tech =
 {
-  template = "Beam_diagonal"
-  map = "MAP04"
+  template = "Beam_diagonal",
+  map = "MAP04",
 
-  group = "beam_shiny"
-}
+  group = "beam_shiny",
+},
 
 PREFABS.Beam_wall_textured =
 {
-  template = "Beam"
-  map = "MAP05"
+  template = "Beam",
+  map = "MAP05",
 
-  theme = "!tech"
+  theme = "!tech",
 
-  group = "beam_textured"
-}
+  group = "beam_textured",
+},
 
 PREFABS.Beam_wall_textured_diagonal =
 {
-  template = "Beam_diagonal"
-  map = "MAP06"
+  template = "Beam_diagonal",
+  map = "MAP06",
 
-  theme = "!tech"
+  theme = "!tech",
 
-  group = "beam_textured"
-}
+  group = "beam_textured",
+},
 
 PREFABS.Beam_wall_textured_tech =
 {
-  template = "Beam"
-  map = "MAP05"
+  template = "Beam",
+  map = "MAP05",
 
-  theme = "tech"
+  theme = "tech",
 
-  group = "beam_textured"
+  group = "beam_textured",
 
-  tex_METAL = "SHAWN2"
-}
+  tex_METAL = "SHAWN2",
+},
 
 PREFABS.Beam_wall_textured_diagonal_tech =
 {
-  template = "Beam_diagonal"
-  map = "MAP06"
+  template = "Beam_diagonal",
+  map = "MAP06",
 
-  theme = "tech"
+  theme = "tech",
 
-  group = "beam_textured"
+  group = "beam_textured",
 
-  tex_METAL = "SHAWN2"
-}
+  tex_METAL = "SHAWN2",
+},

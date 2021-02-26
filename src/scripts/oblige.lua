@@ -9,7 +9,7 @@
 --
 --  This program is free software; you can redistribute it and/or
 --  modify it under the terms of the GNU General Public License
---  as published by the Free Software Foundation; either version 2
+--  as published by the Free Software Foundation; either version 2,
 --  of the License, or (at your option) any later version.
 --
 --  This program is distributed in the hope that it will be useful,
@@ -83,13 +83,13 @@ function ob_traceback(msg)
 
       local func_name = "???"
 
-      if info.namewhat and info.namewhat != "" then
+      if info.namewhat and info.namewhat ~= "" then
         func_name = info.name or "???"
       else
         -- perform our own search of the global namespace,
         -- since the standard LUA code (5.1.2) will not check it
         -- for the topmost function (the one called by C code)
-        each k,v in _G do
+        for k,v in pairs(_G) do
           if v == info.func then
             func_name = k
             break;
@@ -109,7 +109,7 @@ function ob_traceback(msg)
 
     elseif info.what == "C" then
 
-      if info.namewhat and info.namewhat != "" then
+      if info.namewhat and info.namewhat ~= "" then
         gui.printf("  %d: c-function %s()\n", i, info.name or "???")
       end
     end
@@ -151,7 +151,7 @@ end
 
 
 function ob_check_ui_module(def)
-  return string.match(def.name, "^ui") != nil
+  return string.match(def.name, "^ui") ~= nil
 end
 
 
@@ -318,14 +318,14 @@ function ob_match_module(T)
 
   local mod_tab = T.module
 
-  if type(mod_tab) != "table" then
+  if type(mod_tab) ~= "table" then
     mod_tab  = { [T.module]=1 }
     T.module = mod_tab
   end
 
   -- require ALL specified modules to be present and enabled
 
-  each name,_ in mod_tab do
+  for _,name in pairs(mod_tab) do
     local def = OB_MODULES[name]
 
     if not (def and def.shown and def.enabled) then
@@ -342,14 +342,14 @@ function ob_match_feature(T)
 
   local feat_tab = T.feature
 
-  if type(feat_tab) != "table" then
+  if type(feat_tab) ~= "table" then
     feat_tab  = { [T.feature]=1 }
     T.feature = feat_tab
   end
 
   -- require ALL specified features to be available
 
-  each name,_ in feat_tab do
+  for _,name in pairs(feat_tab) do
     local param = PARAM[name]
 
     if param == nil or param == false then
@@ -380,21 +380,21 @@ function ob_resolve_theme_keyword(T)
   {
     deimos =
     {
-      "tech"
-      "hell"
-    }
+      "tech",
+      "hell",
+    },
 
     industrial =
     {
-      "tech"
-      "urban"
-    }
+      "tech",
+      "urban",
+    },
 
     flesh =
     {
-      "hell"
-      "urban"
-    }
+      "hell",
+      "urban",
+    },
   }
 
   if keys[T] then
@@ -410,7 +410,7 @@ end
 function ob_update_engines()
   local need_new = false
 
-  each name,def in OB_ENGINES do
+  for name,def in pairs(OB_ENGINES) do
     local shown = ob_match_conf(def)
 
     if not shown and (OB_CONFIG.engine == name) then
@@ -421,7 +421,7 @@ function ob_update_engines()
   end
 
   if need_new then
-    OB_CONFIG.engine = "nolimit"
+    OB_CONFIG.engine = "nolimit",
     gui.set_button("engine", OB_CONFIG.engine)
   end
 end
@@ -431,7 +431,7 @@ end
 function ob_update_themes()
   local new_label
 
-  each name,def in OB_THEMES do
+  for name,def in pairs(OB_THEMES) do
     local shown = ob_match_conf(def)
 
     if not shown and (OB_CONFIG.theme == name) then
@@ -444,7 +444,7 @@ function ob_update_themes()
 
   -- try to keep the same GUI label
   if new_label then
-    each name,def in OB_THEMES do
+    for name,def in pairs(OB_THEMES) do
       local shown = ob_match_conf(def)
 
       if shown and def.label == new_label then
@@ -455,7 +455,7 @@ function ob_update_themes()
     end
 
     -- otherwise revert to As Original
-    OB_CONFIG.theme = "original"
+    OB_CONFIG.theme = "original",
     gui.set_button("theme", OB_CONFIG.theme)
   end
 end
@@ -470,10 +470,10 @@ function ob_update_modules()
   for loop = 1,100 do
     local changed = false
 
-    each name,def in OB_MODULES do
+    for name,def in pairs(OB_MODULES) do
       local shown = ob_match_conf(def)
 
-      if shown != def.shown then
+      if shown ~= def.shown then
         changed = true
       end
 
@@ -500,7 +500,7 @@ function ob_find_mod_option(mod, opt_name)
 
   -- if 'options' is a list, search it one-by-one
   if mod.options[1] then
-    each opt in mod.options do
+    for _,opt in pairs(mod.options) do
       if opt.name == opt_name then
         return opt
       end
@@ -515,7 +515,7 @@ function ob_defs_conflict(def1, def2)
   if not def1.conflicts then return false end
   if not def2.conflicts then return false end
 
-  each name,_ in def1.conflicts do
+  for name,_ in pairs(def1.conflicts) do
     if def2.conflicts[name] then
       return true
     end
@@ -544,8 +544,8 @@ function ob_set_mod_option(name, option, value)
 
     -- handle conflicting modules (like Radio buttons)
     if value then
-      each other,odef in OB_MODULES do
-        if odef != mod and ob_defs_conflict(mod, odef) then
+      for other,odef in pairs(OB_MODULES) do
+        if odef ~= mod and ob_defs_conflict(mod, odef) then
           odef.enabled = false
           gui.set_module(other, odef.enabled)
         end
@@ -599,9 +599,9 @@ function ob_set_config(name, value)
 
   -- check all the UI modules for a matching option
   -- [ this is only needed when parsing the CONFIG.txt file ]
-  each _,mod in OB_MODULES do
+  for _,mod in pairs(OB_MODULES) do
     if ob_check_ui_module(mod) then
-      each opt in mod.options do
+      for _,opt in pairs(mod.options) do
         if opt.name == name then
           ob_set_mod_option(mod.name, name, value)
           return
@@ -698,7 +698,7 @@ function ob_read_all_config(need_full, log_only)
   do_line("-- dashodanger")
   do_line("-- https://github.com/caligari87/ObAddon/\n")
 
-  if OB_CONFIG.seed and OB_CONFIG.seed != 0 then
+  if OB_CONFIG.seed and OB_CONFIG.seed ~= 0 then
     do_line("seed = " .. OB_CONFIG.seed)
     do_line("")
   end
@@ -714,14 +714,14 @@ function ob_read_all_config(need_full, log_only)
   do_line("")
 
   -- the UI modules/panels use bare option names
-  each name in table.keys_sorted(OB_MODULES) do
+  for _,name in pairs(table.keys_sorted(OB_MODULES)) do
     local def = OB_MODULES[name]
 
     if ob_check_ui_module(def) then
       do_line("---- %s ----", def.label)
       do_line("")
 
-      each opt in def.options do
+      for _,opt in pairs(def.options) do
         do_value(opt.name, opt.value)
       end
 
@@ -732,12 +732,12 @@ function ob_read_all_config(need_full, log_only)
   do_line("---- Other Modules ----")
   do_line("")
 
-  each name in table.keys_sorted(OB_MODULES) do
+  for _,name in pairs(table.keys_sorted(OB_MODULES)) do
     local def = OB_MODULES[name]
 
-    if ob_check_ui_module(def) then continue end
+    if ob_check_ui_module(def) then goto continue end
 
-    if not need_full and not def.shown then continue end
+    if not need_full and not def.shown then goto continue end
 
     do_line("@%s = %s", name, sel(def.enabled, "1", "0"))
 
@@ -745,11 +745,11 @@ function ob_read_all_config(need_full, log_only)
     if need_full or def.enabled then
       if def.options and not table.empty(def.options) then
         if def.options[1] then
-          each opt in def.options do
+          for _,opt in pairs(def.options) do
             do_mod_value(opt.name, opt.value)
           end
         else
-          each o_name,opt in def.options do
+          for o_name,opt in pairs(def.options) do
             do_mod_value(o_name, opt.value)
           end
         end
@@ -757,6 +757,7 @@ function ob_read_all_config(need_full, log_only)
     end
 
     do_line("")
+    ::continue::
   end
 
   do_line("-- END --")
@@ -794,7 +795,7 @@ function ob_load_all_games()
     gui.printf("Only loading one game: '%s'\n", OB_CONFIG.only_game)
     ob_load_game(OB_CONFIG.only_game)
   else
-    each game in list do
+    for _,game in pairs(list) do
       ob_load_game(game)
     end
   end
@@ -817,7 +818,7 @@ function ob_load_all_engines()
 
   gui.set_import_dir("engines")
 
-  each filename in list do
+  for _,filename in pairs(list) do
     gui.debugf("  %s\n", filename)
     gui.import(filename)
   end
@@ -839,20 +840,20 @@ function ob_load_all_modules()
 
   gui.set_import_dir("modules")
 
-  each filename in list do
+  for  _,filename in pairs(list) do
     gui.debugf("  %s\n", filename)
     gui.import(filename)
   end
 
   if subdirs then
-    each directory in subdirs do
+    for _,directory in pairs(subdirs) do
       list = gui.scan_directory("modules/" .. directory, "*.lua")
       if not list then
         gui.printf("FAILED: scan 'modules' subdirectory\n")
         return
       end
       gui.set_import_dir("modules/" .. directory)
-      each filename in list do
+      for _,filename in pairs(list) do
         gui.debugf("  %s\n", filename)
         gui.import(filename)
       end
@@ -921,7 +922,7 @@ function ob_init()
   local function preinit_all(DEFS)
     local removed = {}
 
-    each name,def in DEFS do
+    for name,def in pairs(DEFS) do
       if def.preinit_func then
         if def.preinit_func(def) == REMOVE_ME then
           table.insert(removed, name)
@@ -929,7 +930,7 @@ function ob_init()
       end
     end
 
-    each name in removed do
+    for _,name in pairs(removed) do
       DEFS[name] = nil
     end
   end
@@ -957,7 +958,7 @@ function ob_init()
 
     local min_priority = 999
 
-    each name,def in DEFS do
+    for name,def in pairs(DEFS) do
       assert(def.name and def.label)
       table.insert(list, def)
       min_priority = math.min(min_priority, def.priority or 50)
@@ -978,7 +979,7 @@ function ob_init()
 
     table.sort(list, button_sorter)
 
-    each def in list do
+    for _,def in pairs(list) do
       if what == "module" then
         local where = def.side or "right"
 
@@ -994,7 +995,7 @@ function ob_init()
     end
 
     -- set the current value
-    if what != "module" then
+    if what ~= "module" then
       local default = list[1] and list[1].name
 
       OB_CONFIG[what] = default
@@ -1018,7 +1019,7 @@ function ob_init()
   local function create_mod_options()
     gui.debugf("creating module options\n", what)
 
-    each _,mod in OB_MODULES do
+    for _,mod in pairs(OB_MODULES) do
       if not mod.options then
         mod.options = {}
       else
@@ -1028,7 +1029,7 @@ function ob_init()
         if list[1] == nil then
           list = {}
 
-          each name,opt in mod.options do
+          for name,opt in pairs(mod.options) do
             opt.name = name
             table.insert(list, opt)
           end
@@ -1036,7 +1037,7 @@ function ob_init()
           table.sort(list, button_sorter)
         end
 
-        each opt in list do
+        for _,opt in pairs(list) do
           assert(opt.label)
           assert(opt.choices)
 
@@ -1071,7 +1072,7 @@ function ob_init()
   end
 
 
-  OB_CONFIG.seed = 0
+  OB_CONFIG.seed = 0,
 
   create_buttons("game",   OB_GAMES)
   create_buttons("engine", OB_ENGINES)
@@ -1178,12 +1179,12 @@ end
 
 
 function ob_merge_table_list(tab_list)
-  each GT in tab_list do
+  for _,GT in pairs(tab_list) do
     assert(GT)
-    each name,tab in GT do
+    for name,tab in pairs(GT) do
       -- upper-case names should always be tables to copy
       if string.match(name, "^[A-Z]") then
-        if type(tab) != "table" then
+        if type(tab) ~= "table" then
           error("Game field not a table: " .. tostring(name))
         end
         ob_merge_tab(name, tab)
@@ -1217,8 +1218,8 @@ function ob_add_current_game()
       child.hooks = table.merge_missing(child.hooks or {}, def.hooks)
     end
 
-    each keyword in { "format", "sub_format", "game_dir" } do
-      if def[keyword] != nil then
+    for _,keyword in pairs({ "format", "sub_format", "game_dir" }) do
+      if def[keyword] ~= nil then
         GAME[keyword] = def[keyword]
       end
     end
@@ -1265,7 +1266,7 @@ function ob_sort_modules()
   -- find all the visible & enabled modules
   -- [ ignore the special UI modules/panels ]
 
-  each _,mod in OB_MODULES do
+  for _,mod in pairs(OB_MODULES) do
     if mod.enabled and mod.shown and not ob_check_ui_module(mod) then
       table.insert(GAME.modules, mod)
     end
@@ -1290,9 +1291,9 @@ end
 
 
 function ob_invoke_hook(name, ...)
-  -- two passes, for example: setup and setup2
+  -- two passes, for example: setup and setup2,
   for pass = 1,2 do
-    each mod in GAME.modules do
+    for _,mod in pairs(GAME.modules) do
       local func = mod.hooks and mod.hooks[name]
 
       if func then
@@ -1307,9 +1308,9 @@ end
 
 
 function ob_transfer_ui_options()
-  each _,mod in OB_MODULES do
+  for _,mod in pairs(OB_MODULES) do
     if ob_check_ui_module(mod) then
-      each opt in mod.options do
+      for _,opt in pairs(mod.options) do
         OB_CONFIG[opt.name] = opt.value or "UNSET"
       end
     end
@@ -1348,7 +1349,7 @@ function ob_build_setup()
   -- merge tables from each module
   -- [ but skip GAME and ENGINE, which are already merged ]
 
-  each mod in GAME.modules do
+  for _,mod in pairs(GAME.modules) do
     if _index > 2 and mod.tables then
       ob_merge_table_list(mod.tables)
     end

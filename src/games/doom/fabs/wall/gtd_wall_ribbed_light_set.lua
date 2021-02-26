@@ -1,52 +1,52 @@
 PREFABS.Wall_gtd_ribbed_lights =
 {
-  file   = "wall/gtd_wall_ribbed_light_set.wad"
-  map    = "MAP01"
+  file   = "wall/gtd_wall_ribbed_light_set.wad",
+  map    = "MAP01",
 
-  engine = "zdoom"
+  engine = "zdoom",
 
-  prob   = 50
-  group  = "gtd_ribbed_lights"
+  prob   = 50,
+  group  = "gtd_ribbed_lights",
 
-  where  = "edge"
+  where  = "edge",
 
-  deep   = 16
+  deep   = 16,
 
-  height = 128
+  height = 128,
 
-  bound_z1 = 0
-  bound_z2 = 128
+  bound_z1 = 0,
+  bound_z2 = 128,
 
-  z_fit = "top"
+  z_fit = "top",
 
-  sector_1  = { [0]=90, [1]=15 }
-}
+  sector_1  = { [0]=90, [1]=15 },
+},
 
 PREFABS.Wall_gtd_ribbed_lights_diag =
 {
-  template = "Wall_gtd_ribbed_lights"
+  template = "Wall_gtd_ribbed_lights",
 
-  map = "MAP02"
+  map = "MAP02",
 
-  where = "diagonal"
-}
+  where = "diagonal",
+},
 
 PREFABS.Wall_gtd_ribbed_lights_fallback =
 {
-  template = "Wall_gtd_ribbed_lights"
+  template = "Wall_gtd_ribbed_lights",
 
-  map = "MAP03"
+  map = "MAP03",
 
-  engine = "!zdoom"
-}
+  engine = "!zdoom",
+},
 
 PREFABS.Wall_gtd_ribbed_lights_diag_fallback =
 {
-  template = "Wall_gtd_ribbed_lights"
+  template = "Wall_gtd_ribbed_lights",
 
-  map = "MAP04"
+  map = "MAP04",
 
-  engine = "!zdoom"
+  engine = "!zdoom",
 
-  where = "diagonal"
-}
+  where = "diagonal",
+},

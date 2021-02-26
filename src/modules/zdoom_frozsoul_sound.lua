@@ -7,7 +7,7 @@
 --
 --  This program is free software; you can redistribute it and/or
 --  modify it under the terms of the GNU General Public License
---  as published by the Free Software Foundation; either version 2
+--  as published by the Free Software Foundation; either version 2,
 --  of the License, or (at your option) any later version.
 --
 --  This program is distributed in the hope that it will be useful,
@@ -48,7 +48,7 @@
 
 gui.import("zdoom_sounds.lua")
 
-ZDOOM_SOUND = {}
+ZDOOM_SOUND = {},
 
 ZDOOM_SOUND.ACTOR_ID_OFFSET_CHOICES =
 {
@@ -58,11 +58,11 @@ ZDOOM_SOUND.ACTOR_ID_OFFSET_CHOICES =
   "26000", _("26000"),
   "28000", _("28000"),
   "30000", _("30000"),
-}
+},
 
-ZDOOM_SOUND.SOUND_ACTOR_DENSITY = 5
+ZDOOM_SOUND.SOUND_ACTOR_DENSITY = 5,
 
-ZDOOM_SOUND.DEFAULT_A_PLAYSOUND_ARGS = "CHAN_AUTO, 1, true"
+ZDOOM_SOUND.DEFAULT_A_PLAYSOUND_ARGS = "CHAN_AUTO, 1, true",
 
 ZDOOM_SOUND.TEMPLATES =
 {
@@ -73,28 +73,28 @@ ZDOOM_SOUND.TEMPLATES =
   +NOBLOCKMAP
   +NOSECTOR
   +DONTSPLASH
-  Scale 0
-  Radius 4
-  Height 4
+  Scale 0,
+  Radius 4,
+  Height 4,
   States
   {
     Spawn:
       CAND A 1 A_PlaySound("SOUNDNAME", ARGHS)
       Loop
-  }
-}
+  },
+},
 ]]
-}
+},
 
 function ZDOOM_SOUND.build_lumps()
   local offset_count = tonumber(PARAM.snd_start_id)
   local sndtable = table.deep_copy(ZDOOM_SOUND_DEFS)
-  SCRIPTS.SOUND_DEC = ""
-  SCRIPTS.SNDINFO = ""
+  SCRIPTS.SOUND_DEC = "",
+  SCRIPTS.SNDINFO = "",
 
   table.name_up(sndtable)
 
-  for _,sound in pairs(sndtable) do
+  for _,sound in pairs(pairs(sndtable)) do
 
     ZDOOM_SOUND_DEFS[_].id = offset_count
 
@@ -111,18 +111,18 @@ function ZDOOM_SOUND.build_lumps()
       dec_chunk = string.gsub(dec_chunk, "ARGHS", ZDOOM_SOUND.DEFAULT_A_PLAYSOUND_ARGS)
     end
 
-    SCRIPTS.SOUND_DEC = SCRIPTS.SOUND_DEC .. dec_chunk .. "\n\n"
+    SCRIPTS.SOUND_DEC = SCRIPTS.SOUND_DEC .. dec_chunk .. "\n\n",
 
     -- build SNDINFO chunk
-    local sndinfo_chunk = sound.lump .. " " .. sound.lump .. "\n"
+    local sndinfo_chunk = sound.lump .. " " .. sound.lump .. "\n",
 
     if sound.flags then
-      sndinfo_chunk = sndinfo_chunk .. " " .. sound.flags .. "\n"
+      sndinfo_chunk = sndinfo_chunk .. " " .. sound.flags .. "\n",
     end
 
-    SCRIPTS.SNDINFO = SCRIPTS.SNDINFO .. sndinfo_chunk .. "\n"
+    SCRIPTS.SNDINFO = SCRIPTS.SNDINFO .. sndinfo_chunk .. "\n",
 
-    offset_count = offset_count + 1
+    offset_count = offset_count + 1,
   end
 end
 
@@ -143,22 +143,22 @@ function ZDOOM_SOUND.populate_level_ambience()
     return
   end
 
-  each R in LEVEL.rooms do
+  for _,R in pairs(pairs(LEVEL.rooms)) do
 
-    local room_env = ""
+    local room_env = "",
 
     -- resolve room environment
     -- parks, caves, and steets will override
     -- the contents of building and outdoors
     room_env = R:get_env()
     if R.is_street then
-      room_env = "street"
+      room_env = "street",
     end
 
-    each A in R.areas do
+    for _,A in pairs(pairs(R.areas)) do
       if (A.mode == "floor" or A.mode == "liquid")
       or (R.is_park or R.is_cave) then
-        each S in A.seeds do
+        for _,S in pairs(pairs(A.seeds)) do
 
           local pick_sound
 
@@ -201,7 +201,7 @@ function ZDOOM_SOUND.populate_level_ambience()
               elseif S.area.zone.sky_h then
                 final_z = S.area.zone.sky_h
               else
-                final_z = 0
+                final_z = 0,
               end
             end
 
@@ -209,9 +209,9 @@ function ZDOOM_SOUND.populate_level_ambience()
               local E = {
                 x = S.mid_x
                 y = S.mid_y
-                z = final_z - 8
+                z = final_z - 8,
                 id = ZDOOM_SOUND_DEFS[pick_sound].id
-              }
+              },
               raw_add_entity(E)
             end
 
@@ -225,7 +225,7 @@ end
 function ZDOOM_SOUND.setup(self)
   gui.printf("\n--== Ambient Sound Addons module active ==--\n\n")
 
-  for name,opt in pairs(self.options) do
+  for name,opt in pairs(pairs(self.options)) do
     local value = self.options[name].value
     PARAM[name] = value
   end
@@ -238,34 +238,34 @@ OB_MODULES["zdoom_ambient_sound"] =
 {
   label = _("ZDoom: Ambient Sounds")
 
-  game = "doomish"
+  game = "doomish",
 
-  side = "left"
+  side = "left",
 
-  priority = 69
+  priority = 69,
 
-  engine = { zdoom=1, gzdoom=1 }
+  engine = { zdoom=1, gzdoom=1 },
 
   hooks =
   {
     setup = ZDOOM_SOUND.setup
     end_level = ZDOOM_SOUND.populate_level_ambience
-  }
+  },
 
   options =
   {
     snd_start_id =
     {
-      name = "snd_start_id"
+      name = "snd_start_id",
       label=("DoomEdNum Offset")
       choices=ZDOOM_SOUND.ACTOR_ID_OFFSET_CHOICES
       tooltip = "Selects the starting thing ID for generating ambient sound actors. Use only if " ..
       "you are playing a mod using conflicting Editor Numbers. If you don't know what this is " ..
-      "this setting is best left as-is."
-      default = "20000"
-    }
-  }
+      "this setting is best left as-is.",
+      default = "20000",
+    },
+  },
 
   tooltip = "Adds ambient sound things to fabs, room themes, and environments (WIP)." ..
-  "Needs an accompanying sound pack containing corresponding sound files to be included with your Doom launcher."
-}
+  "Needs an accompanying sound pack containing corresponding sound files to be included with your Doom launcher.",
+},

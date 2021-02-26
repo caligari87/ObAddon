@@ -9,7 +9,7 @@
 --
 --  This program is free software; you can redistribute it and/or
 --  modify it under the terms of the GNU General Public License
---  as published by the Free Software Foundation; either version 2
+--  as published by the Free Software Foundation; either version 2,
 --  of the License, or (at your option) any later version.
 --
 --  This program is distributed in the hope that it will be useful,
@@ -67,7 +67,7 @@
     triggers : list(TRIGGER)  -- used for traps
 
 
-    light_level : keyword    -- "bright", "normal", "dark" or "verydark"
+    light_level : keyword    -- "bright", "normal", "dark" or "verydark",
 
     symmetry : SYMMETRY_INFO
 
@@ -92,7 +92,7 @@
 
     mx, my, mz   -- middle point
 
-    kind : keyword    -- "monster", "item", "big_item"
+    kind : keyword    -- "monster", "item", "big_item",
                       -- FIXME : what else?
 
     where : keyword   -- "floor", "closet",
@@ -104,7 +104,7 @@
 
 --class TRIGGER
 --[[
-    kind : keyword    -- "edge" or "spot"
+    kind : keyword    -- "edge" or "spot",
 
     edge   : EDGE     -- place trigger near this edge (of a door/joiner/closet)
     spot   : CHUNK    -- place trigger around this floor chunk (of an item/switch)
@@ -117,7 +117,7 @@
 ------------------------------------------------------------------------
 
 
-ROOM_CLASS = {}
+ROOM_CLASS = {},
 
 function ROOM_CLASS.new()
   local id = alloc_id("room")
@@ -127,60 +127,60 @@ function ROOM_CLASS.new()
     id = id
     name = string.format("ROOM_%d", id)
 
-    svolume = 0
-    total_inner_points = 0
-    num_windows = 0
-    need_teleports = 0
+    svolume = 0,
+    total_inner_points = 0,
+    num_windows = 0,
+    need_teleports = 0,
 
-    areas = {}
-    seeds = {}
-    conns = {}
-    internal_conns = {}
-    temp_areas = {}
+    areas = {},
+    seeds = {},
+    conns = {},
+    internal_conns = {},
+    temp_areas = {},
 
-    goals = {}
-    teleporters = {}
-    weapons = {}
-    items = {}
-    closet_items = {}
+    goals = {},
+    teleporters = {},
+    weapons = {},
+    items = {},
+    closet_items = {},
 
-    mon_spots  = {}
-    item_spots = {}
-    big_spots  = {}
-    entry_spots = {}
+    mon_spots  = {},
+    item_spots = {},
+    big_spots  = {},
+    entry_spots = {},
     important_spots = {}   -- from prefabs
 
-    floor_chunks  = {}
-     ceil_chunks  = {}
-    liquid_chunks = {}
+    floor_chunks  = {},
+     ceil_chunks  = {},
+    liquid_chunks = {},
 
-    closets = {}
-    stairs  = {}
-    joiners = {}
-    pieces  = {}
+    closets = {},
+    stairs  = {},
+    joiners = {},
+    pieces  = {},
 
-    cages = {}
-    traps = {}
-    triggers = {}
-    aversions = {}
+    cages = {},
+    traps = {},
+    triggers = {},
+    aversions = {},
 
     used_chunks = 0  -- includes closets
 
-    floor_mats = {}
-     ceil_mats = {}
+    floor_mats = {},
+     ceil_mats = {},
 
-    floor_groups = {}
-     ceil_groups = {}
+    floor_groups = {},
+     ceil_groups = {},
 
-    solid_ents = {}
-    exclusions = {}
-    avoid_mons = {}
-    locked_fences = {}
+    solid_ents = {},
+    exclusions = {},
+    avoid_mons = {},
+    locked_fences = {},
 
-    hazard_health = 0
+    hazard_health = 0,
 
-    scenic_fences = {}
-  }
+    scenic_fences = {},
+  },
 
   table.set_class(R, ROOM_CLASS)
   table.insert(LEVEL.rooms, R)
@@ -209,14 +209,14 @@ function ROOM_CLASS.get_env(R)
 
   if R.is_outdoor then return "outdoor" end
 
-  return "building"
+  return "building",
 end
 
 
 function ROOM_CLASS.rough_size(R)
-  local count = 0
+  local count = 0,
 
-  each A in R.areas do
+  for _,A in pairs(pairs(R.areas)) do
     count = count + #A.seeds
   end
 
@@ -225,11 +225,11 @@ end
 
 
 function ROOM_CLASS.num_floors(R)
-  local count = 0
+  local count = 0,
 
-  each A in R.areas do
+  for _,A in pairs(pairs(R.areas)) do
     if A.mode == "floor" then
-      count = count + 1
+      count = count + 1,
     end
   end
 
@@ -242,7 +242,7 @@ function ROOM_CLASS.kill_it(R)
   assert(not R.is_dead)
 
   -- sanity check
-  each C in LEVEL.conns do
+  for _,C in pairs(pairs(LEVEL.conns)) do
     if (C.R1 == R) or (C.R2 == R) then
       error("Killed a connected room!")
     end
@@ -253,7 +253,7 @@ function ROOM_CLASS.kill_it(R)
   -- remove from the trunk object
   table.kill_elem(R.trunk.rooms, R)
 
-  each A in R.areas do
+  for _,A in pairs(pairs(R.areas)) do
     gui.debugf("   kill %s\n", A.name)
     A:kill_it()
   end
@@ -271,7 +271,7 @@ end
 
 function ROOM_CLASS.try_collect_seed(R, S)
   if not S.area then return end
-  if S.area.room != R then return end
+  if S.area.room ~= R then return end
 
   S.room = R
 
@@ -302,8 +302,8 @@ function ROOM_CLASS.collect_seeds(R)
     error("Room with no seeds!")
   end
 
-  R.sw = R.sx2 - R.sx1 + 1
-  R.sh = R.sy2 - R.sy1 + 1
+  R.sw = R.sx2 - R.sx1 + 1,
+  R.sh = R.sy2 - R.sy1 + 1,
 end
 
 
@@ -318,15 +318,15 @@ function ROOM_CLASS.get_bbox(R)
   local S1 = SEEDS[R.sx1][R.sy1]
   local S2 = SEEDS[R.sx2][R.sy2]
 
-  return S1.x1, S1.y1, S2.x2, S2.y2
+  return S1.x1, S1.y1, S2.x2, S2.y2,
 end
 
 
 function ROOM_CLASS.has_sky_neighbor(R)
-  each C in R.conns do
+  for _,C in pairs(pairs(R.conns)) do
     if C.A1.room == C.A2.room then continue end
     local N = C:other_room(A)
-    if N.is_outdoor and N.mode != "void" then return true end
+    if N.is_outdoor and N.mode ~= "void" then return true end
   end
 
   return false
@@ -334,8 +334,8 @@ end
 
 
 function ROOM_CLASS.has_vista_neighbor(R) --MSSP
-  each A in R.areas do
-    each N in A.neighbors do
+  for _,A in pairs(pairs(R.areas)) do
+    for _,N in pairs(pairs(A.neighbors)) do
       if N.mode == "scenic" then
         return true
       end
@@ -347,7 +347,7 @@ end
 
 
 function ROOM_CLASS.has_teleporter(R)
-  each C in R.conns do
+  for _,C in pairs(pairs(R.conns)) do
     if C.kind == "teleporter" then return true end
   end
 
@@ -356,11 +356,11 @@ end
 
 
 function ROOM_CLASS.prelim_conn_num(R)
-  local count = 0
+  local count = 0,
 
   each PC in LEVEL.prelim_conns do
     if PC.R1 == R or PC.R2 == R then
-      count = count + 1
+      count = count + 1,
     end
   end
 
@@ -369,9 +369,9 @@ end
 
 
 function ROOM_CLASS.calc_walk_vol(R)
-  local vol = 0
+  local vol = 0,
 
-  each A in R.areas do
+  for _,A in pairs(pairs(R.areas)) do
     if (A.mode == "floor" or A.mode == "nature") or
        (A.chunk and A.chunk.kind == "stair")
     then
@@ -388,14 +388,14 @@ end
 
 
 function ROOM_CLASS.total_conns(R, ignore_secrets)
-  local count = 0
+  local count = 0,
 
-  each C in R.conns do
+  for _,C in pairs(pairs(R.conns)) do
     if ignore_secrets and C.is_secret then
       continue
     end
 
-    count = count + 1
+    count = count + 1,
   end
 
   return count
@@ -433,7 +433,7 @@ function ROOM_CLASS.secret_entry_conn(R, skip_room)
   -- find entry connection for a potential secret room.
   -- when skip_room is non-nil, ignore it.
 
-  each C in R.conns do
+  for _,C in pairs(pairs(R.conns)) do
     local R2 = C:other_room(R)
 
     if R2 == skip_room then continue end
@@ -449,10 +449,10 @@ function ROOM_CLASS.add_entry_spot(R, spot)
   table.insert(R.entry_spots, spot)
 
   if not R.entry_coord then
-    local mx = (spot.x1 + spot.x2) / 2
-    local my = (spot.y1 + spot.y2) / 2
+    local mx = (spot.x1 + spot.x2) / 2,
+    local my = (spot.y1 + spot.y2) / 2,
 
-    R.entry_coord = { x=mx, y=my, z=spot.z1 + 40, angle=spot.angle }
+    R.entry_coord = { x=mx, y=my, z=spot.z1 + 40, angle=spot.angle },
   end
 end
 
@@ -463,13 +463,13 @@ function ROOM_CLASS.furthest_dist_from_entry(R)
     local S1 = SEEDS[R.sx1][R.sy1]
     local S2 = SEEDS[R.sx2][R.sy2]
 
-    local w = S2.x2 - S1.x1
-    local h = S2.y2 - S1.y1
+    local w = S2.x2 - S1.x1,
+    local h = S2.y2 - S1.y1,
 
     return math.max(w, h)
   end
 
-  local result = 512
+  local result = 512,
 
   local ex = R.entry_coord.x
   local ey = R.entry_coord.y
@@ -478,7 +478,7 @@ function ROOM_CLASS.furthest_dist_from_entry(R)
   for sy = R.sy1, R.sy2 do
     local S = SEEDS[sx][sy]
 
-    if S.room != R then continue end
+    if S.room ~= R then continue end
 
     local ox = sel(S.x1 < ex, S.x1, S.x2)
     local oy = sel(S.y1 < ey, S.y1, S.y2)
@@ -506,12 +506,12 @@ function ROOM_CLASS.add_solid_ent(R, id, x, y, z)
 
   local info
 
-  if type(id) != "number" then
+  if type(id) ~= "number" then
     info = GAME.ENTITIES[id]
   end
 
   if not info then
-    info = { r=32, h=96 }
+    info = { r=32, h=96 },
   end
 
   if info.pass then return end
@@ -526,7 +526,7 @@ function ROOM_CLASS.add_solid_ent(R, id, x, y, z)
 
     r = info.r
     h = info.h
-  }
+  },
 
   table.insert(R.solid_ents, SOLID_ENT)
 end
@@ -567,14 +567,14 @@ function ROOM_CLASS.add_exclusion(R, kind, x1, y1, r, x2, y2)
     y1 = y1 - r
     x2 = x2 + r
     y2 = y2 + r
-  }
+  },
 
   table.insert(R.exclusions, area)
 end
 
 
 function ROOM_CLASS.clip_spot_list(R, list, x1, y1, x2, y2, strict_mode)
-  local new_list = {}
+  local new_list = {},
 
   each spot in list do
     if (spot.x2 <= x1) or (spot.x1 >= x2) or
@@ -587,11 +587,11 @@ function ROOM_CLASS.clip_spot_list(R, list, x1, y1, x2, y2, strict_mode)
       continue
 
     else
-      local w1 = x1 - spot.x1
-      local w2 = spot.x2 - x2
+      local w1 = x1 - spot.x1,
+      local w2 = spot.x2 - x2,
 
-      local h1 = y1 - spot.y1
-      local h2 = spot.y2 - y2
+      local h1 = y1 - spot.y1,
+      local h2 = spot.y2 - y2,
 
       -- totally clipped?
       if math.max(w1, w2, h1, h2) < 8 then
@@ -601,13 +601,13 @@ function ROOM_CLASS.clip_spot_list(R, list, x1, y1, x2, y2, strict_mode)
       -- shrink the existing box (keep side with most free space)
 
       if w1 >= math.max(w2, h1, h2) then
-        spot.x2 = spot.x1 + w1
+        spot.x2 = spot.x1 + w1,
       elseif w2 >= math.max(w1, h1, h2) then
-        spot.x1 = spot.x2 - w2
+        spot.x1 = spot.x2 - w2,
       elseif h1 >= math.max(w1, w2, h2) then
-        spot.y2 = spot.y1 + h1
+        spot.y2 = spot.y1 + h1,
       else
-        spot.y1 = spot.y2 - h2
+        spot.y1 = spot.y2 - h2,
       end
 
       assert(spot.x2 > spot.x1)
@@ -628,8 +628,8 @@ function ROOM_CLASS.clip_spots(R, x1, y1, x2, y2)
   assert(y1 < y2)
 
   -- enlarge the area a bit
-  x1, y1 = x1 - 4, y1 - 4
-  x2, y2 = x2 + 4, y2 + 4
+  x1, y1 = x1 - 4, y1 - 4,
+  x2, y2 = x2 + 4, y2 + 4,
 
   R.mon_spots  = R:clip_spot_list(R.mon_spots,  x1, y1, x2, y2)
 
@@ -672,7 +672,7 @@ function ROOM_CLASS.pick_direct_delta_h(R, from_h, A1, A2)
     return from_h
   end
 
-  local h = 8
+  local h = 8,
 
   return R:usable_delta_h(from_h, h)
 end
@@ -688,7 +688,7 @@ end
 
 function ROOM_CLASS.get_highest_ceiling(R) --MSSP
   local h = -EXTREME_H
-  each A in R.areas do
+  for _,A in pairs(pairs(R.areas)) do
     if A.ceil_h then
       if A.ceil_h > h then
         h = A.ceil_h
@@ -712,13 +712,13 @@ function Room_prepare_skies()
     if rand.odds(2)  then return 256 end
     if rand.odds(10) then return 192 end
 
-    return 144
+    return 144,
   end
 
 
   ---| Room_prepare_skies |---
 
-  each Z in LEVEL.zones do
+  for _,Z in pairs(pairs(LEVEL.zones)) do
     Z.sky_add_h = new_sky_add_h()
   end
 end
@@ -737,15 +737,15 @@ function Room_reckon_door_tex()
     for pass = 1,2 do
       E1.wall_mat = Junction_calc_wall_tex(A1, A2)
 
-      A1, A2 = A2, A1
-      E1, E2 = E2, E1
+      A1, A2 = A2, A1,
+      E1, E2 = E2, E1,
     end
   end
 
 
   ---| Room_reckon_door_tex |---
 
-  each C in LEVEL.conns do
+  for _,C in pairs(pairs(LEVEL.conns)) do
     if C.kind == "edge" then
       visit_conn(C, C.E1, C.E2)
       visit_conn(C, C.F1, C.F2)
@@ -800,7 +800,7 @@ function Room_pick_joiner_prefab(C, chunk)
 
     -- this is needed when the environment on each side is important,
     -- such as the joiner connecting a normal room to a cave.
-    if chunk.prefab_def.force_flip != nil then
+    if chunk.prefab_def.force_flip ~= nil then
       flip_it = chunk.prefab_def.force_flip
     end
 
@@ -817,7 +817,7 @@ end
 function Room_pick_edge_prefab(C)
 
   local function make_fence(E)
-    E.kind = "fence"
+    E.kind = "fence",
     E.fence_mat = assert(E.area.zone.fence_mat)
 
     -- fence_top_z computed later...
@@ -832,10 +832,10 @@ function Room_pick_edge_prefab(C)
   local  indoor_prob = style_sel("doors", 0, 15, 35,  65)
   local outdoor_prob = style_sel("doors", 0, 70, 90, 100)
 
-  local E = C.E1
+  local E = C.E1,
 
-  if E.kind != "doorway" then
-    E = C.E2
+  if E.kind ~= "doorway" then
+    E = C.E2,
   end
 
   assert(E.kind == "doorway")
@@ -843,11 +843,11 @@ function Room_pick_edge_prefab(C)
 
   -- get orientation right, "front" of prefab faces earlier room
 
-  local R1 = C.R1
-  local R2 = C.R2
+  local R1 = C.R1,
+  local R2 = C.R2,
 
-  if R1 != E.area.room then
-    R1, R2 = R2, R1
+  if R1 ~= E.area.room then
+    R1, R2 = R2, R1,
   end
 
   if R1.lev_along > R2.lev_along then
@@ -859,18 +859,18 @@ function Room_pick_edge_prefab(C)
 
   local reqs =
   {
-    kind = "arch"
+    kind = "arch",
 
     seed_w = assert(E.long)
-  }
+  },
 
   local goal
 
   if geom.is_corner(E.dir) then
-    reqs.where = "diagonal"
+    reqs.where = "diagonal",
     reqs.seed_h = reqs.seed_w
   else
-    reqs.where = "edge"
+    reqs.where = "edge",
   end
 
   reqs.env      = R1:get_env()
@@ -881,7 +881,7 @@ function Room_pick_edge_prefab(C)
   C:get_lock_reqs(reqs)
 
   if C.lock then
-    reqs.kind = "door"
+    reqs.kind = "door",
 
     goal = C.lock.goals[1]
 
@@ -895,19 +895,19 @@ function Room_pick_edge_prefab(C)
        goal.kind == "LOCAL_SWITCH" and
        rand.odds(80+20)
     then
-      reqs.kind = "fence"
+      reqs.kind = "fence",
 
       make_fence(E)
     end
 
   -- secret door ?
   elseif C.is_secret then
-    reqs.kind = "door"
+    reqs.kind = "door",
 
     C.is_door = true
 
     if R1.is_outdoor and R2.is_outdoor then
-      reqs.kind = "fence"
+      reqs.kind = "fence",
 
       make_fence(E)
     end
@@ -921,7 +921,7 @@ function Room_pick_edge_prefab(C)
     end
 
     if rand.odds(prob) then
-      -- TODO : reqs.kind = "door"
+      -- TODO : reqs.kind = "door",
 
       C.is_door = true
     end
@@ -940,7 +940,7 @@ end
 
 
 function Room_reckon_doors()
-  each C in LEVEL.conns do
+  for _,C in pairs(pairs(LEVEL.conns)) do
     if C.kind == "edge" then
       Room_pick_edge_prefab(C)
 
@@ -984,10 +984,10 @@ function Room_detect_porches(R)
     if not A.room.porch_fence_type then
       A.room.porch_fence_type = rand.key_by_probs(
         {
-          fence = 5
-          railing = 3
-          wall = 5
-        }
+          fence = 5,
+          railing = 3,
+          wall = 5,
+        },
       )
     end
   end
@@ -1012,7 +1012,7 @@ function Room_detect_porches(R)
       end
 
       local R2 = A2.room
-      assert(R2 != R)
+      assert(R2 ~= R)
 
       if not R2 then
         -- no void, thanks
@@ -1020,7 +1020,7 @@ function Room_detect_porches(R)
       end
 
       -- same zone?
-      if R2.zone != R.zone then
+      if R2.zone ~= R.zone then
         -- ok
         continue
       end
@@ -1045,11 +1045,11 @@ function Room_detect_porches(R)
 
 
   local function eval_porch(A, mode)
-    -- mode is either "indoor" or "outdoor"
+    -- mode is either "indoor" or "outdoor",
 
     if A.room.floor_areas <= 1 then return -1 end
 
-    if A.mode != "floor" then return -1 end
+    if A.mode ~= "floor" then return -1 end
 
     -- single outdoor room? weird for it to be a porch --MSSP
     if #A.room.areas < 2 then return -1 end
@@ -1066,7 +1066,7 @@ function Room_detect_porches(R)
 
     -- FIXME.....
 
-    local score = 100 + A.svolume - A.openness * 100
+    local score = 100 + A.svolume - A.openness * 100,
 
     -- tie break
     return score + gui.random()
@@ -1078,13 +1078,13 @@ function Room_detect_porches(R)
     -- MSSP: new behavior. Multiple porches per room, limited
     -- by the amount of areas within the room. (no more than half
     -- the room should be porched at least)
-    local porchables = {}
+    local porchables = {},
 
-    R.floor_areas = 0
-    each A in R.areas do
+    R.floor_areas = 0,
+    for _,A in pairs(pairs(R.areas)) do
 
       if A.mode == "floor" then
-        R.floor_areas = R.floor_areas + 1
+        R.floor_areas = R.floor_areas + 1,
       end
 
       A.porch_score = eval_porch(A, "indoor")
@@ -1096,8 +1096,8 @@ function Room_detect_porches(R)
     table.sort(porchables,
     function(A, B) return A.porch_score > B.porch_score end)
 
-    R.porch_count = 0
-    each A in porchables do
+    R.porch_count = 0,
+    for _,A in pairs(pairs(porchables)) do
 
       if R.porch_count > math.floor(R.floor_areas/3) then return end
 
@@ -1108,7 +1108,7 @@ function Room_detect_porches(R)
         set_as_porch(A)
 
         gui.debugf("Made %s into a PORCH\n", A.name)
-        R.porch_count = R.porch_count + 1
+        R.porch_count = R.porch_count + 1,
       end
 
     end
@@ -1132,16 +1132,16 @@ end
 
 function Room_make_windows(A1, A2)
 
-  local edge_list = {}
-  local total_len = 0
+  local edge_list = {},
+  local total_len = 0,
 
   local WINDOW_PATTERNS =
   {
-    "1", "2", "3", "22", "2-2", "33", "3-3"
-  }
+    "1", "2", "3", "22", "2-2", "33", "3-3",
+  },
 
   if rand.odds(50) then
-    WINDOW_PATTERNS[6] = "222"
+    WINDOW_PATTERNS[6] = "222",
   end
 
 
@@ -1156,7 +1156,7 @@ function Room_make_windows(A1, A2)
 
     if A.mode == "scenic" then return false end
 
-    if A.chunk and A.chunk.kind != "floor" then return false end
+    if A.chunk and A.chunk.kind ~= "floor" then return false end
 
     if A.room.is_hallway then return false end
 
@@ -1175,20 +1175,20 @@ function Room_make_windows(A1, A2)
     if group2 == nil then return group1 end
 
     if not R2 then
-      return group1
+      return group1,
     end
 
     if R1.zone.along <= R2.zone.along then
-      return group1
+      return group1,
     else
-      return group2
+      return group2,
     end
   end
 
 
   local function calc_vertical_space(A1, A2)
     if A1.is_outdoor and not A2.is_outdoor then
-       A1, A2 = A2, A1
+       A1, A2 = A2, A1,
     end
 
     local c1 = A1.ceil_h
@@ -1210,13 +1210,13 @@ function Room_make_windows(A1, A2)
   local function is_possible_at_seed(S, dir)
     if not S then return false end
 
-    if S.area != A1 then return false end
+    if S.area ~= A1 then return false end
 
     local N = S:neighbor(dir)
 
     if not N then return false end
 
-    if N.area != A2 then return false end
+    if N.area ~= A2 then return false end
 
     -- already have edges here?
     if S.edge[dir]    then return false end
@@ -1229,14 +1229,14 @@ function Room_make_windows(A1, A2)
   local function kill_seed(S, seed_list)
     for k = 1, #seed_list do
       if seed_list[k] == S then
-         seed_list[k] = "DEAD"
+         seed_list[k] = "DEAD",
       end
     end
   end
 
 
   local function add_piece(S, dir, long)
-    local E = { S=S, dir=dir, long=long }
+    local E = { S=S, dir=dir, long=long },
 
 --stderrf("  %s dir:%d long:%d\n", E.S.name, dir, long)
 
@@ -1258,7 +1258,7 @@ function Room_make_windows(A1, A2)
     local LS = S
     local RS = S
 
-    local long = 1
+    local long = 1,
 
     for pass = 1, 9 do
       RS = RS:neighbor(R_dir)
@@ -1267,7 +1267,7 @@ function Room_make_windows(A1, A2)
         break;
       end
 
-      long = long + 1
+      long = long + 1,
 
       kill_seed(RS, seed_list)
     end
@@ -1280,7 +1280,7 @@ function Room_make_windows(A1, A2)
       end
 
       S = LS
-      long = long + 1
+      long = long + 1,
 
       kill_seed(LS, seed_list)
     end
@@ -1289,11 +1289,11 @@ function Room_make_windows(A1, A2)
     -- [ currently windows this wide *never* occur ]
     while long >= 9 do
       S = S:neighbor(R_dir)
-      long = long - 2
+      long = long - 2,
     end
 
     if long >= 8 then
-      long = 7
+      long = 7,
     end
 
     -- divide really wide windows into smaller ones
@@ -1329,7 +1329,7 @@ function Room_make_windows(A1, A2)
       for i = 1, #seed_list do
         local S = seed_list[i]
 
-        if S != "DEAD" then
+        if S ~= "DEAD" then
           check_for_edge(S, dir, seed_list)
         end
       end
@@ -1340,7 +1340,7 @@ function Room_make_windows(A1, A2)
 
 
   local function install_windows(group, z, height, base_prob)
-    each E in edge_list do
+    for _,E in pairs(pairs(edge_list)) do
       -- wide windows occur quite rarely, so bump up their chance
       local prob = base_prob
       if E.long >= 2 then
@@ -1368,7 +1368,7 @@ function Room_make_windows(A1, A2)
 
   if not area_can_window(A1) then return end
 
-  if A2.mode != "scenic" then
+  if A2.mode ~= "scenic" then
     if not area_can_window(A2) then return end
   end
 
@@ -1409,18 +1409,18 @@ function Room_make_windows(A1, A2)
 
   -- less chance between indoor rooms
   if (not A1.is_outdoor and not A2.is_outdoor) then
-    prob = prob * 0.7
+    prob = prob * 0.7,
   end
 
   -- much less chance between zones
-  if A1.zone != A2.zone then
-    prob = prob * 0.3
+  if A1.zone ~= A2.zone then
+    prob = prob * 0.3,
   end
 
   -- what the heck is a porch that doesn't
   -- have windows? -MSSP
   if A1.is_porch or A2.is_porch then
-    prob = 140
+    prob = 140,
   end
 
   install_windows(group, z, height, prob)
@@ -1439,7 +1439,7 @@ function Room_border_up()
 
 
   local function can_omit_fence(A1, A2)
-    -- TODO : support mode == "nature"
+    -- TODO : support mode == "nature",
     if not (A1.mode == "floor" and A1.room) then return false end
     if not (A2.mode == "floor" and A2.room) then return false end
 
@@ -1454,9 +1454,9 @@ function Room_border_up()
     end
 
     if A1.room.lev_along > A2.room.lev_along then
-      return A1.floor_h > A2.floor_h + 78
+      return A1.floor_h > A2.floor_h + 78,
     else
-      return A2.floor_h > A1.floor_h + 78
+      return A2.floor_h > A1.floor_h + 78,
     end
   end
 
@@ -1476,7 +1476,7 @@ function Room_border_up()
     end
 
     -- beams cannot be on edges between areas of the same height
-    -- and a length of only 1
+    -- and a length of only 1,
     if junction.perimeter == 1 and (A1.floor_h == A2.floor_h) then
       return false
     end
@@ -1494,17 +1494,17 @@ function Room_border_up()
 
 
   local function can_fence(A1, A2)
-    if A1.chunk and A1.chunk.kind == "stair"
+    if A1.chunk and A1.chunk.kind == "stair",
     and (A1.chunk.dest_area == A2 or A1.chunk.from_area == A2) then
       return false
     end
 
-    if A2.chunk and A2.chunk.kind == "stair"
+    if A2.chunk and A2.chunk.kind == "stair",
     and (A2.chunk.dest_area == A1 or A2.chunk.from_area == A1) then
       return false
     end
 
-    if A1.mode == "liquid" or A2.mode == "liquid"
+    if A1.mode == "liquid" or A2.mode == "liquid",
     or A1.mode == "cage" or A2.mode == "cage" then
       return false
     end
@@ -1521,7 +1521,7 @@ function Room_border_up()
         return A1.fence_up_type
       end
 
-      if A1.fence_up_type != A2.fence_up_type then
+      if A1.fence_up_type ~= A2.fence_up_type then
         if A1.floor_h > A2.floor_h then
           return A1.fence_up_type
         else
@@ -1541,9 +1541,9 @@ function Room_border_up()
 
 
   local function can_porch_wall(A1, A2)
-    if (A1.mode == "floor"
-    and A2.mode != "floor")
-    or (A1.mode != "floor"
+    if (A1.mode == "floor",
+    and A2.mode ~= "floor")
+    or (A1.mode ~= "floor",
     and A2.mode == "floor") then
       return false
     end
@@ -1571,10 +1571,10 @@ function Room_border_up()
 
 
   local function visit_junction(junc)
-    local A1 = junc.A1
-    local A2 = junc.A2
+    local A1 = junc.A1,
+    local A2 = junc.A2,
 
-    assert(A1 != A2)
+    assert(A1 ~= A2)
 
 
     -- already decided?
@@ -1596,7 +1596,7 @@ function Room_border_up()
 
     -- zones : gotta keep 'em separated
 
-    if A1.zone != A2.zone then
+    if A1.zone ~= A2.zone then
       Room_make_windows(A1, A2)
       Junction_make_wall(junc)
       return
@@ -1613,10 +1613,10 @@ function Room_border_up()
 
     -- room to void / vice versa --
 
-    if A1.mode != "void" and A2.mode == "void" then
+    if A1.mode ~= "void" and A2.mode == "void" then
       Junction_make_wall(junc)
       return
-    elseif A2.mode != "void" and A1.mode == "void" then
+    elseif A2.mode ~= "void" and A1.mode == "void" then
       Junction_make_wall(junc)
       return
     end
@@ -1646,7 +1646,7 @@ function Room_border_up()
     -- scenic to scenic --
 
     if A2.room and not A1.room then
-      A1, A2 = A2, A1
+      A1, A2 = A2, A1,
     end
 
     if not A1.room then
@@ -1662,7 +1662,7 @@ function Room_border_up()
     -- scenic to room --
 
     if not A1.room and A2.room then
-      if A1.border_type == "simple_fence" or A1.border_type == "no_vista"
+      if A1.border_type == "simple_fence" or A1.border_type == "no_vista",
       or A1.border_type == nil then
         Junction_make_wall(junc)
       end
@@ -1672,19 +1672,19 @@ function Room_border_up()
     -- room to scenic --
 
     if not A2.room then
-      if A1.room.border != A2 or A2.border_type == "no_vista" then
+      if A1.room.border ~= A2 or A2.border_type == "no_vista" then
         Junction_make_wall(junc)
 
       elseif not A1.is_outdoor and not A1.is_cave then
-        if A2.border_type != "simple_fence"
-        or A1.border_type != "no_vista"
+        if A2.border_type ~= "simple_fence",
+        or A1.border_type ~= "no_vista",
         or A2.border_type == nil then
           Room_make_windows(A1, A2)
         end
         Junction_make_wall(junc)
 
       elseif A1.is_outdoor then
-        if A2.border_type != "no_vista" then
+        if A2.border_type ~= "no_vista" then
           if A2.fence_type == "fence" then
             Junction_make_fence(junc)
           elseif A2.fence_type == "railing" then
@@ -1711,7 +1711,7 @@ function Room_border_up()
       -- cages --
       -- just minor fixes
 
-      if A1.mode == "cage" and A2.mode == "cage"
+      if A1.mode == "cage" and A2.mode == "cage",
       and ((not A1.cage_mode and A2.cage_mode)
       or (A1.cage_mode and not A2.cage_mode)) then
         Junction_make_railing(junc, "FENCE_MAT_FROM_THEME", "block")
@@ -1739,7 +1739,7 @@ function Room_border_up()
       -- fences --
 
       if A1.is_outdoor and A2.is_outdoor then
-        if (A1.floor_h != A2.floor_h)
+        if (A1.floor_h ~= A2.floor_h)
         and (A1.fence_up or A2.fence_up) then
           if can_fence(A1, A2) then
             local fence_up_type = rail_or_fence(A1, A2)
@@ -1774,7 +1774,7 @@ function Room_border_up()
       or (not A1.is_porch and A2.is_porch) then
 
         if (A1.dead_end or A2.dead_end) then
-          if A1.room and A1.room:get_env() == "building"
+          if A1.room and A1.room:get_env() == "building",
           or A2.room and A2.room:get_env() == "building" then
             Junction_make_empty(junc)
             return
@@ -1832,12 +1832,12 @@ function Room_border_up()
         Junction_make_beams(junc)
       end
 
-      if A1.mode == "cage" or A2.mode == "cage"
+      if A1.mode == "cage" or A2.mode == "cage",
       and A1.room == A2.room then
         Junction_make_railing(junc, "FENCE_MAT_FROM_THEME", "block")
       end
 
-      if A1.room != A2.room then
+      if A1.room ~= A2.room then
         Room_make_windows(A1, A2)
         Junction_make_wall(junc)
       end
@@ -1875,16 +1875,16 @@ function Room_border_up()
 
     local tab = table.copy(THEME.window_groups)
 
-    each Z in LEVEL.zones do
+    for _,Z in pairs(pairs(LEVEL.zones)) do
       Z.window_group = rand.key_by_probs(tab)
 
-      tab[Z.window_group] = tab[Z.window_group] / 2
+      tab[Z.window_group] = tab[Z.window_group] / 2,
     end
   end
 
 
   local function decide_window_boosts()
-    each R in LEVEL.rooms do
+    for _,R in pairs(pairs(LEVEL.rooms)) do
       if R.is_outdoor then continue end
       if R.is_cave    then continue end
 
@@ -1899,15 +1899,15 @@ function Room_border_up()
   end
 
   local function assign_beam_density()
-    each R in LEVEL.rooms do
+    for _,R in pairs(pairs(LEVEL.rooms)) do
       if rand.odds(75) then
         if rand.odds(50) then
-          R.beam_density = "sparse-even"
+          R.beam_density = "sparse-even",
         else
-          R.beam_density = "sparse-odd"
+          R.beam_density = "sparse-odd",
         end
       else
-        R.beam_density = "dense"
+        R.beam_density = "dense",
       end
     end
   end
@@ -1931,26 +1931,26 @@ function Room_border_up()
       return false
     end
 
-    each A in LEVEL.areas do
+    for _,A in pairs(pairs(LEVEL.areas)) do
       if can_have_fences(A) then
         A.fence_up = true
         if rand.odds(50) then
-          A.fence_up_type = "fence"
+          A.fence_up_type = "fence",
         else
-          A.fence_up_type = "rail"
+          A.fence_up_type = "rail",
         end
       end
     end
 
     -- second pass, adopt some empty neighbors of the same height
     -- and give them the the same fency type too
-    each A in LEVEL.areas do
+    for _,A in pairs(pairs(LEVEL.areas)) do
       if A.fence_up then
-        each N in LEVEL.areas do
+        for _,N in pairs(pairs(LEVEL.areas)) do
           if N.room then
             if A.floor_h == N.floor_h
             and A.room == N.room
-            and N.mode == "floor"
+            and N.mode == "floor",
             and not N.fence_up then
               N.fence_up = true
               N.fence_up_type = A.fence_up_type
@@ -1964,15 +1964,15 @@ function Room_border_up()
 
 
   local function check_sky_closets()
-    each A in LEVEL.areas do
-      if A.mode != "chunk" then continue end
+    for _,A in pairs(pairs(LEVEL.areas)) do
+      if A.mode ~= "chunk" then continue end
 
       if not A.room then continue end
       if not A.room.is_outdoor then continue end
       if A.room.border_type == "no_vista" then continue end
 
       local T = A.chunk
-      if T.kind != "closet" then continue end
+      if T.kind ~= "closet" then continue end
 
       if T:is_open_to_sky(A.room) then
         T.open_to_sky = true
@@ -2015,7 +2015,7 @@ function Room_set_kind(R, is_hallway, is_outdoor, is_cave)
   -- determine if outdoor room should be a park
   -- TODO : exit room cannot be a park, remove that restriction
   if is_outdoor and not (is_hallway or is_cave or R.is_street) and
-     R.id != 1
+     R.id ~= 1,
   then
     local park_prob = style_sel("parks", 0, 22, 45, 90)
     if LEVEL.is_nature then park_prob = 100 end
@@ -2033,7 +2033,7 @@ function Room_set_kind(R, is_hallway, is_outdoor, is_cave)
 
     if rand.odds(nature_park_prob) then
       R.is_natural_park = true
-      each A in R.areas do
+      for _,A in pairs(pairs(R.areas)) do
         A.is_natural_park = true
       end
     end
@@ -2043,7 +2043,7 @@ function Room_set_kind(R, is_hallway, is_outdoor, is_cave)
     R.is_cave = true
   end
 
-  each A in R.areas do
+  for _,A in pairs(pairs(R.areas)) do
     A.is_outdoor = R.is_outdoor
   end
 end
@@ -2085,11 +2085,11 @@ function Room_choose_size(R, not_big)
   local prob
 
   if not_big then
-    prob = 0
+    prob = 0,
   elseif R.is_cave then
-    prob = 100
+    prob = 100,
   elseif R.is_start or R.is_exit then
-    prob = 0
+    prob = 0,
   elseif R.is_outdoor then
     prob = style_sel("big_outdoor_rooms", 0, 50, 75, 90)
   else
@@ -2123,12 +2123,12 @@ function Room_choose_size(R, not_big)
 
   R.floor_limit = rand.key_by_probs(
     {
-      [1]=3
-      [2]=4
-      [3]=5
-      [4]=2
-      [5]=1
-    }
+      [1]=3,
+      [2]=4,
+      [3]=5,
+      [4]=2,
+      [5]=1,
+    },
   )
   R.size_limit = sum * rand.range( 0.75,1.5 )
   assert(R.floor_limit)
@@ -2137,12 +2137,12 @@ function Room_choose_size(R, not_big)
     R.size_limit  = sum * rand.range( 1.7,3 )
     R.floor_limit = rand.key_by_probs(
       {
-        [6]=3
-        [7]=2
-        [8]=2
-        [9]=1
-        [10]=1
-      }
+        [6]=3,
+        [7]=2,
+        [8]=2,
+        [9]=1,
+        [10]=1,
+      },
     )
 
   --Make secret rooms smaller
@@ -2150,58 +2150,58 @@ function Room_choose_size(R, not_big)
     R. size_limit = sum * rand.range( 0.6,1.25 )
     R.floor_limit = rand.key_by_probs(
       {
-        [1]=3
-        [2]=2
-        [3]=1
-      }
+        [1]=3,
+        [2]=2,
+        [3]=1,
+      },
     )
 
   elseif R.is_big then
     R. size_limit = sum * rand.range( 2,2.7 )
     R.floor_limit = math.round(R.floor_limit * rand.key_by_probs(
                                       {
-                                        [1]=1
-                                        [1.5]=2
-                                        [2]=3
-                                        [2.5]=4
-                                        [3]=2
-                                        [4]=2
-                                        [5]=1
-                                        [6]=1
-                                        [8]=1
-                                        [10]=1
-                                        [14]=1
-                                        [18]=1
-                                      }
+                                        [1]=1,
+                                        [1.5]=2,
+                                        [2]=3,
+                                        [2.5]=4,
+                                        [3]=2,
+                                        [4]=2,
+                                        [5]=1,
+                                        [6]=1,
+                                        [8]=1,
+                                        [10]=1,
+                                        [14]=1,
+                                        [18]=1,
+                                      },
                                     )
                                 )
 
     --Trying a different formula for is_big rooms
                     --[[rand.key_by_probs(
       {
-        [6]=2
-        [7]=3
-        [8]=3
-        [9]=5
-        [10]=3
-        [11]=2
-        [12]=2
-        [13]=1
-        [14]=1
-        [15]=1
-      }
+        [6]=2,
+        [7]=3,
+        [8]=3,
+        [9]=5,
+        [10]=3,
+        [11]=2,
+        [12]=2,
+        [13]=1,
+        [14]=1,
+        [15]=1,
+      },
     )]]
 
   --Make parks bigger
   elseif R.is_park then
     R. size_limit = sum * rand.key_by_probs(
       {
-        [2]=2
-        [3]=2
-        [4]=1.5
-        [6]=1
-        [8]=1
-      }
+        [2]=2,
+        [3]=2,
+        [4]=1.5,
+        [6]=1,
+        [8]=1,
+      },
     )
 
   end
@@ -2213,7 +2213,7 @@ function Room_choose_size(R, not_big)
       R.floor_limit = int(R.floor_limit * LEVEL.area_multiplier)
     end
     if LEVEL.has_absurd_new_area_rules then
-      R.floor_limit = R.floor_limit * 4
+      R.floor_limit = R.floor_limit * 4,
     end
   end
 
@@ -2222,26 +2222,26 @@ function Room_choose_size(R, not_big)
 
     if not R.is_start then -- main arena size
 
-      R.size_limit = LEVEL.map_W*20
+      R.size_limit = LEVEL.map_W*20,
       R.floor_limit = rand.irange(20,80)
       R.is_big = true
 
     elseif R.is_start then -- start room size
 
-      R.size_limit = LEVEL.map_W * 5
-      R.floor_limit = R.floor_limit * 2
+      R.size_limit = LEVEL.map_W * 5,
+      R.floor_limit = R.floor_limit * 2,
       R.is_big = true
 
       -- extra code for single-room gotchas
       if PARAM.boss_gen then
-        R.size_limit = LEVEL.map_W * 20
+        R.size_limit = LEVEL.map_W * 20,
       end
     end
 
   end
 
   if R.is_street then
-    R.size_limit = (LEVEL.map_W*LEVEL.map_H)*1.3
+    R.size_limit = (LEVEL.map_W*LEVEL.map_H)*1.3,
     R.floor_limit = EXTREME_H
     R.is_big = true
     R.is_outdoor = true
@@ -2271,7 +2271,7 @@ function Room_prepare_hallways()
 
     local reqs = chunk:base_reqs(chunk.from_dir)
 
-    reqs.kind  = "hall"
+    reqs.kind  = "hall",
     reqs.shape = chunk.shape
     reqs.group = assert(chunk.area.room.hall_group)
 
@@ -2282,7 +2282,7 @@ function Room_prepare_hallways()
 
 
   local function flow(R, piece, h, seen)
-    seen[piece.id] = 1
+    seen[piece.id] = 1,
 
     table.insert(R.pieces, piece)
 
@@ -2308,13 +2308,13 @@ function Room_prepare_hallways()
 
     -- terminators get mis-categorized as dead-ends...
     if piece.is_terminator and piece.shape == "U" then
-      piece.shape = "I"
+      piece.shape = "I",
     end
 
     -- an L shape needs a dest_dir, so piece can be mirrored when needed
     if piece.shape == "L" then
       for dir = 2,8,2 do
-        if piece.h_join[dir] and piece.from_dir != dir then
+        if piece.h_join[dir] and piece.from_dir ~= dir then
           piece.dest_dir = dir
         end
       end
@@ -2341,7 +2341,7 @@ function Room_prepare_hallways()
 
     end
 
-    local delta_h = piece.prefab_def.delta_h or 0
+    local delta_h = piece.prefab_def.delta_h or 0,
 
     -- recurse to other pieces
 
@@ -2351,9 +2351,9 @@ function Room_prepare_hallways()
 
         -- most prefabs are orientated along the flow, so only need to
         -- adjust  delta_h for certain "T" pieces (and maybe terminators...)
-        if piece.shape == "T" and piece.from_dir != old_dir then
+        if piece.shape == "T" and piece.from_dir ~= old_dir then
           if dir == piece.from_dir then
-            if delta_h != 0 then
+            if delta_h ~= 0 then
               A.prelim_h = A.prelim_h - delta_h
             end
             new_h = new_h - delta_h
@@ -2382,7 +2382,7 @@ function Room_prepare_hallways()
 
   ---| Room_prepare_hallways |---
 
-  each R in LEVEL.rooms do
+  for _,R in pairs(pairs(LEVEL.rooms)) do
     if R.is_hallway then
       visit_hallway(R)
     end
@@ -2401,7 +2401,7 @@ function Room_floor_ceil_heights()
 
   -- Note: the 'entry_h' field also serves as a "visited already" flag
 
-  local TRAVERSE_H = 80
+  local TRAVERSE_H = 80,
 
 
   local function set_floor(A, h)
@@ -2428,13 +2428,13 @@ function Room_floor_ceil_heights()
 
     -- TODO
 
-    return 0
+    return 0,
   end
 
 
   local function visit_floor_area(R, A, grp)
     if grp == "new" then
-      grp = { id=alloc_id("floor_group") }
+      grp = { id=alloc_id("floor_group") },
     end
 
     A.floor_group = grp
@@ -2453,7 +2453,7 @@ function Room_floor_ceil_heights()
 
       -- stair connections *must* use another group.
       -- direct connections generally use the same group.
-      if IC.kind != "direct" or rand.odds(prob_for_new_floor_group(A, A2)) then
+      if IC.kind ~= "direct" or rand.odds(prob_for_new_floor_group(A, A2)) then
         visit_floor_area(R, A2, "new")
       else
         visit_floor_area(R, A2, A.floor_group)
@@ -2471,7 +2471,7 @@ function Room_floor_ceil_heights()
 
     repeat
       start_area = rand.pick(R.areas)
-    until start_area.mode == "floor"
+    until start_area.mode == "floor",
 
     visit_floor_area(R, start_area, "new")
   end
@@ -2479,16 +2479,16 @@ function Room_floor_ceil_heights()
 
   local function merge_floor_groups(R, group1, group2)
     if group1.id > group2.id then
-      group1, group2 = group2, group1
+      group1, group2 = group2, group1,
     end
 
-    each A in R.areas do
+    for _,A in pairs(pairs(R.areas)) do
       if A.floor_group == group2 then
-        A.floor_group =  group1
+        A.floor_group =  group1,
       end
     end
 
-    group2.id = "DEAD"
+    group2.id = "DEAD",
   end
 
 
@@ -2518,7 +2518,7 @@ function Room_floor_ceil_heights()
 
     if group1 == group2 then return end
 
-    if group1.h != group2.h then return end
+    if group1.h ~= group2.h then return end
 
     if do_floor_groups_touch(R, group1, group2) then
       merge_floor_groups(R, group1, group2)
@@ -2538,7 +2538,7 @@ function Room_floor_ceil_heights()
       end
     end
 
-    each A in R.areas do
+    for _,A in pairs(pairs(R.areas)) do
       if A.floor_group then
         table.add_unique(R.floor_groups, A.floor_group)
       end
@@ -2551,7 +2551,7 @@ function Room_floor_ceil_heights()
 
 
   local function ceilings_must_stay_separated(R, A1, A2)
-    assert(A1 != A2)
+    assert(A1 ~= A2)
 
     each IC in R.internal_conns do
       if (IC.A1 == A1 and IC.A2 == A2) or
@@ -2574,30 +2574,30 @@ function Room_floor_ceil_heights()
 
   local function merge_ceil_groups(R, group1, group2)
     if group1.id > group2.id then
-      group1, group2 = group2, group1
+      group1, group2 = group2, group1,
     end
 
 -- stderrf("%s : merging ceil %d --> %d\n", R.name, group2.id, group1.id)
 
-    each A in R.areas do
+    for _,A in pairs(pairs(R.areas)) do
       if A.ceil_group == group2 then
-         A.ceil_group =  group1
+         A.ceil_group =  group1,
       end
     end
 
-    group2.id = "DEAD"
+    group2.id = "DEAD",
   end
 
 
   local function try_merge_ceil_groups(R, group1, group2)
-    assert(group1 != group2)
+    assert(group1 ~= group2)
 
     local do_touch = false
 
     each A1 in R.areas do
     each A2 in R.areas do
-      if A1.ceil_group != group1 then continue end
-      if A2.ceil_group != group2 then continue end
+      if A1.ceil_group ~= group1 then continue end
+      if A2.ceil_group ~= group2 then continue end
 
       if ceilings_must_stay_separated(R, A1, A2) then return false end
 
@@ -2613,7 +2613,7 @@ function Room_floor_ceil_heights()
           do_touch = true
         end
       end
-    end  -- A1, A2
+    end  -- A1, A2,
     end
 
     if not do_touch then return false end
@@ -2624,9 +2624,9 @@ function Room_floor_ceil_heights()
 
 
   local function group_ceiling_pass(R)
-    local groups = {}
+    local groups = {},
 
-    each A in R.areas do
+    for _,A in pairs(pairs(R.areas)) do
       if A.ceil_group then
         table.add_unique(groups, A.ceil_group)
       end
@@ -2651,9 +2651,9 @@ function Room_floor_ceil_heights()
   local function group_ceilings(R)
     if R.is_outdoor then return end
 
-    each A in R.areas do
+    for _,A in pairs(pairs(R.areas)) do
       if A.mode == "floor" then
-        A.ceil_group = { id=alloc_id("ceil_group") }
+        A.ceil_group = { id=alloc_id("ceil_group") },
       end
     end
 
@@ -2671,7 +2671,7 @@ function Room_floor_ceil_heights()
     end
 
     -- handle stairs
-    each A in R.areas do
+    for _,A in pairs(pairs(R.areas)) do
       if A.chunk and A.chunk.kind == "stair" and not A.chunk.prefab_def.plain_ceiling then
         local N1 = A.chunk.from_area
         local N2 = A.chunk.dest_area
@@ -2686,7 +2686,7 @@ function Room_floor_ceil_heights()
     end
 
 
-    each A in R.areas do
+    for _,A in pairs(pairs(R.areas)) do
       if A.ceil_group then
         table.add_unique(R.ceil_groups, A.ceil_group)
       end
@@ -2701,9 +2701,9 @@ function Room_floor_ceil_heights()
   local function room_add_steps(R)
     -- NOT USED ATM [ should be done while flowing through room ]
 
-    each C in R.internal_conns do
-      local A1 = C.A1
-      local A2 = C.A2
+    for _,C in pairs(pairs(R.internal_conns)) do
+      local A1 = C.A1,
+      local A2 = C.A2,
 
       if C.kind == "stair" then continue end
 
@@ -2722,14 +2722,14 @@ function Room_floor_ceil_heights()
   local function process_room(R, entry_area)
     gui.debugf("ASSIGN FLOORS IN %s\n", R.name)
 
-    local base_h = 0
+    local base_h = 0,
 
     if entry_area then
       base_h = R.entry_h - assert(entry_area.prelim_h)
     end
 
     -- compute the actual floor heights, ensuring entry_area becomes 'entry_h'
-    each A in R.areas do
+    for _,A in pairs(pairs(R.areas)) do
       if A.prelim_h then
         set_floor(A, base_h + A.prelim_h)
       end
@@ -2745,21 +2745,21 @@ function Room_floor_ceil_heights()
 
 
   local function process_park(R)
-    R.walkway_height = 256
-    R.areas[1].base_light = 144
+    R.walkway_height = 256,
+    R.areas[1].base_light = 144,
 
     Cave_build_a_park(R, R.entry_h)
   end
 
 
   local function maintain_material_across_conn(C)
-    if C.kind != "edge" then return false end
+    if C.kind ~= "edge" then return false end
 
     if C.R1.is_cave or C.R2.is_cave then return false end
     if C.R1.is_hallway or C.R2.is_hallway then return false end
 
-    if C.A1.floor_h    != C.A2.floor_h then return false end
-    if C.R1.is_outdoor != C.R2.is_outdoor then return false end
+    if C.A1.floor_h    ~= C.A2.floor_h then return false end
+    if C.R1.is_outdoor ~= C.R2.is_outdoor then return false end
 
     if not (C.E1.kind == "nothing" or C.E1.kind == "doorway") then return false end
     if not (C.E2.kind == "nothing" or C.E2.kind == "doorway") then return false end
@@ -2773,11 +2773,11 @@ function Room_floor_ceil_heights()
 
     -- maintain floor material if same height and no door
     if entry_conn and maintain_material_across_conn(entry_conn) then
-      local A1 = entry_conn.A1
-      local A2 = entry_conn.A2
+      local A1 = entry_conn.A1,
+      local A2 = entry_conn.A2,
 
       if not A1.floor_mat then
-        A1, A2 = A2, A1
+        A1, A2 = A2, A1,
       end
 
       if A1.floor_mat then
@@ -2787,8 +2787,8 @@ function Room_floor_ceil_heights()
       end
     end
 
-    each A in R.areas do
-      if A.mode != "floor" then continue end
+    for _,A in pairs(pairs(R.areas)) do
+      if A.mode ~= "floor" then continue end
 
       assert(A.floor_h)
 
@@ -2821,11 +2821,11 @@ function Room_floor_ceil_heights()
     local tab = R.theme.ceilings or R.theme.floors
     assert(tab)
 
-    each A in R.areas do
+    for _,A in pairs(pairs(R.areas)) do
       if A.is_outdoor then continue end
       if A.is_porch   then continue end
 
-      if A.mode != "floor" then continue end
+      if A.mode ~= "floor" then continue end
 
       assert(A.ceil_h)
 
@@ -2852,10 +2852,10 @@ function Room_floor_ceil_heights()
       chunk.area.is_outdoor = nil
     end
 
-    local delta_h = chunk.prefab_def.delta_h or 0
+    local delta_h = chunk.prefab_def.delta_h or 0,
 
     -- are we entering the joiner from the opposite side?
-    if chunk.from_area.room != prev_room then
+    if chunk.from_area.room ~= prev_room then
       delta_h = 0 - delta_h
     end
 
@@ -2875,12 +2875,12 @@ function Room_floor_ceil_heights()
 
     if entry_area then
       assert(entry_area.room == R)
-      assert(entry_area.mode != "joiner")
+      assert(entry_area.mode ~= "joiner")
     end
 
     -- handle start rooms and teleported-into rooms
     if not entry_h then
-      entry_h = rand.irange(0, 4) * 64
+      entry_h = rand.irange(0, 4) * 64,
     end
 
     R.entry_h = entry_h
@@ -2907,12 +2907,12 @@ function Room_floor_ceil_heights()
     end
 
     -- recurse to neighbors
-    each C in R.conns do
+    for _,C in pairs(pairs(R.conns)) do
       if C.is_cycle then continue end
 
       local R2 = C:other_room(R)
 
-      local A1, A2
+      local A1, A2,
       if C.R1 == R then A1 = C.A1 else A1 = C.A2 end
       if C.R1 == R then A2 = C.A2 else A2 = C.A1 end
 
@@ -2920,7 +2920,7 @@ function Room_floor_ceil_heights()
       if R2.entry_h then continue end
 
       gui.debugf("Recursing though %s (%s)\n", C.name, C.kind)
--- if C.kind != "teleporter"then
+-- if C.kind ~= "teleporter"then
 -- stderrf("  %s / %s ---> %s / %s\n", A1.name, A1.mode, A2.name, A2.mode)
 -- end
 
@@ -2929,8 +2929,8 @@ function Room_floor_ceil_heights()
         continue
       end
 
-      assert(A1.mode != "joiner")
-      assert(A2.mode != "joiner")
+      assert(A1.mode ~= "joiner")
+      assert(A2.mode ~= "joiner")
 
       assert(A1.floor_h)
 
@@ -2946,7 +2946,7 @@ function Room_floor_ceil_heights()
 
 
   local function do_liquid_areas(R)
-    each A in R.areas do
+    for _,A in pairs(pairs(R.areas)) do
       if A.mode == "liquid" then
         local N = A:lowest_neighbor()
         local N2 = A:highest_neighbor()
@@ -2954,8 +2954,8 @@ function Room_floor_ceil_heights()
         if not N then
 --!!!! FIXME : temp stuff for park-border experiment....
 --!!!!    error("failed to find liquid neighbor")
-          A.floor_h = 977
-          A.ceil_h  = 999
+          A.floor_h = 977,
+          A.ceil_h  = 999,
           continue
         end
 
@@ -2988,12 +2988,12 @@ function Room_floor_ceil_heights()
     local function kill_cages(R, want_void)
     -- turn cages in start rooms into a plain floor
 
-    each A in R.areas do
-      if A.mode != "cage" then continue end
+    for _,A in pairs(pairs(R.areas)) do
+      if A.mode ~= "cage" then continue end
 
       --if R.is_park or R.is_cave then
         if R.is_park or R.is_cave or want_void then
-        A.mode = "void"
+        A.mode = "void",
         continue
       end
 
@@ -3027,11 +3027,11 @@ function Room_floor_ceil_heights()
 
     if R.cage_light_fx == 0 then
       -- no effect
-      A.bump_light = 32
+      A.bump_light = 32,
       return
     end
 
-    A.bump_light = 48
+    A.bump_light = 48,
     A.sector_fx  = R.cage_light_fx
   end
 
@@ -3060,7 +3060,7 @@ function Room_floor_ceil_heights()
     local N = get_cage_neighbor(A)
 
     if not N then
-      A.mode = "void"
+      A.mode = "void",
       return
     end
 
@@ -3129,7 +3129,7 @@ function Room_floor_ceil_heights()
 
     -- MSSP-TODO: pick the material from the largest area in the room instead (via svolume)
     while not picked_floor_mat do
-      each A in R.areas do
+      for _,A in pairs(pairs(R.areas)) do
         if A.floor_mat then
           picked_floor_mat = A.floor_mat
         end
@@ -3142,7 +3142,7 @@ function Room_floor_ceil_heights()
     if R.is_outdoor then return end
 
     while not picked_ceil_mat do
-      each A in R.areas do
+      for _,A in pairs(pairs(R.areas)) do
         if A.ceil_mat then
           picked_ceil_mat = A.ceil_mat
         end
@@ -3166,13 +3166,13 @@ function Room_floor_ceil_heights()
       return
     end
 
-    R.cage_rail_areas = {}
+    R.cage_rail_areas = {},
 
     if rand.odds(50) and not R.is_park then
       R.cage_floor_level = true
     end
 
-    each A in R.areas do
+    for _,A in pairs(pairs(R.areas)) do
       if A.mode == "cage" then
         do_a_cage(R, A)
       end
@@ -3186,7 +3186,7 @@ function Room_floor_ceil_heights()
 
       -- outdoor heights are done later, get a dummy now
       if A.is_outdoor then
-        A.ceil_h = A.floor_h + R.zone.sky_add_h - 8
+        A.ceil_h = A.floor_h + R.zone.sky_add_h - 8,
         continue
       end
 
@@ -3197,7 +3197,7 @@ function Room_floor_ceil_heights()
 
       if N1.ceil_h < (N2.floor_h + 96) then
         N1.ceil_h = N2.ceil_h
-        N1 = N2
+        N1 = N2,
       end
 
       A.ceil_h   = N1.ceil_h
@@ -3235,7 +3235,7 @@ function Room_floor_ceil_heights()
     R.max_ceil_h  = -EXTREME_H
     R.min_ceil_h  =  EXTREME_H
 
-    each A in R.areas do
+    for _,A in pairs(pairs(R.areas)) do
       if A.floor_h then
         R.max_floor_h = math.max(R.max_floor_h, A.max_floor_h or A.floor_h)
         R.min_floor_h = math.min(R.min_floor_h, A.min_floor_h or A.floor_h)
@@ -3264,7 +3264,7 @@ function Room_floor_ceil_heights()
 
   local function check_joiner_nearby_h(A)
     -- FIXME for terminators
-    each C in LEVEL.conns do
+    for _,C in pairs(pairs(LEVEL.conns)) do
       if (C.kind == "joiner" or C.kind == "XXX_terminator") and
          (C.A1 == A or C.A2 == A)
       then
@@ -3277,9 +3277,9 @@ function Room_floor_ceil_heights()
 
 
   local function calc_ceil_stuff(R, group)
-    group.vol = 0
+    group.vol = 0,
 
-    each A in R.areas do
+    for _,A in pairs(pairs(R.areas)) do
       if A.ceil_group == group then
         group.vol = group.vol + A.svolume
 
@@ -3292,9 +3292,9 @@ function Room_floor_ceil_heights()
 
     assert(group.max_floor_h)
 
-    group.min_h = 96
+    group.min_h = 96,
 
-    each A in R.areas do
+    for _,A in pairs(pairs(R.areas)) do
       if A.ceil_group == group and A:has_conn() then
         -- TODO : get nearby_h from arch/door prefab  [ but it aint picked yet... ]
         local min_h = A.floor_h + 128 - group.max_floor_h
@@ -3323,17 +3323,17 @@ function Room_floor_ceil_heights()
     end
 
     if R.height_profile == "normal" then
-          if group.vol <  8 then add_h = 96
-      elseif group.vol < 16 then add_h = 128
-      elseif group.vol < 32 then add_h = 160
-      elseif group.vol < 48 then add_h = 192
-      else                       add_h = 256
+          if group.vol <  8 then add_h = 96,
+      elseif group.vol < 16 then add_h = 128,
+      elseif group.vol < 32 then add_h = 160,
+      elseif group.vol < 48 then add_h = 192,
+      else                       add_h = 256,
       end
     elseif R.height_profile == "inverse" then
-      if group.vol     < 16 then add_h = 256
-      elseif group.vol < 32 then add_h = 192
-      elseif group.vol < 48 then add_h = 160
-      else                       add_h = 128
+      if group.vol     < 16 then add_h = 256,
+      elseif group.vol < 32 then add_h = 192,
+      elseif group.vol < 48 then add_h = 160,
+      else                       add_h = 128,
       end
     else
       add_h = rand.pick({128, 160, 192, 224, 256})
@@ -3343,13 +3343,13 @@ function Room_floor_ceil_heights()
     if not R.height_style then
       if PARAM.room_heights then
 
-        if PARAM.room_heights != "mixed" then
+        if PARAM.room_heights ~= "mixed" then
           R.height_style = PARAM.room_heights
         elseif PARAM.room_heights == "mixed" then
           R.height_style = rand.pick({"short","normal","taller"})
         end
 
-        -- nothing actually happens if the height_style is "normal"
+        -- nothing actually happens if the height_style is "normal",
         -- whereas normal is Oblige's default behavior
 
         if string.gmatch(R.height_style, "-ish") and rand.odds(50) then
@@ -3357,9 +3357,9 @@ function Room_floor_ceil_heights()
             if add_h > 128 then add_h = 128 end
           elseif string.gmatch(R.height_style, "tall") then
             if rand.odds(90) then
-              add_h = add_h * 2
+              add_h = add_h * 2,
             else
-              add_h = add_h * 4
+              add_h = add_h * 4,
             end
           end
         end
@@ -3367,7 +3367,7 @@ function Room_floor_ceil_heights()
     end
 
     if add_h > 128 and group.max_floor_h >= group.min_floor_h + 64 then
-      add_h = add_h - 32
+      add_h = add_h - 32,
     end
 
     add_h = math.max(group.min_h, add_h)
@@ -3381,8 +3381,8 @@ function Room_floor_ceil_heights()
     -- internally connected areas
 
     each IC in R.internal_conns do
-      local A1 = IC.A1
-      local A2 = IC.A2
+      local A1 = IC.A1,
+      local A2 = IC.A2,
 
       local top_z = math.max(A1.floor_h, A2.floor_h)
 
@@ -3416,9 +3416,9 @@ function Room_floor_ceil_heights()
     --   ceiling than smaller ones.
     --
 
-    local groups = {}
+    local groups = {},
 
-    each A in R.areas do
+    for _,A in pairs(pairs(R.areas)) do
       if A.ceil_group then
         table.add_unique(groups, A.ceil_group)
       end
@@ -3451,14 +3451,14 @@ function Room_floor_ceil_heights()
 
       if A.mode == "cage" then
         A.ceil_h = N.ceil_h
-        A.floor_h = (N.floor_h or N.chunk.floor_h) + 24
+        A.floor_h = (N.floor_h or N.chunk.floor_h) + 24,
 
         local h_diff
         h_diff = A.ceil_h - A.floor_h
         if h_diff < 96 then
-          A.floor_h = A.ceil_h - 96
+          A.floor_h = A.ceil_h - 96,
         end
-        A.cage_mode = "fancy"
+        A.cage_mode = "fancy",
       end
 
       if A.peer then
@@ -3471,11 +3471,11 @@ function Room_floor_ceil_heights()
     end
 
     local function check_neighboring_porches(A)
-      local porch_count = 0
-      each N in A.neighbors do
+      local porch_count = 0,
+      for _,N in pairs(pairs(A.neighbors)) do
 
         if N.is_porch then
-          porch_count = porch_count + 1
+          porch_count = porch_count + 1,
         end
 
         -- a staircase between two porches... porch it all the time
@@ -3490,7 +3490,7 @@ function Room_floor_ceil_heights()
         if A.room == N.room then
           if porch_count == #A.neighbors then
             return A, N
-          elseif porch_count > 0
+          elseif porch_count > 0,
           and porch_count < #A.neighbors
           and rand.odds(50) then
             return A, N
@@ -3501,10 +3501,10 @@ function Room_floor_ceil_heights()
     end
 
     if R.is_outdoor then
-      each A in R.areas do
+      for _,A in pairs(pairs(R.areas)) do
 
-        local A1
-        local A2
+        local A1,
+        local A2,
 
         if A.chunk then
           if A.chunk.kind == "stair" then
@@ -3536,12 +3536,12 @@ function Room_floor_ceil_heights()
       ceiling_group_heights(R)
     end
 
-    each A in R.areas do
-      if A.mode != "floor" then continue end
+    for _,A in pairs(pairs(R.areas)) do
+      if A.mode ~= "floor" then continue end
 
       -- outdoor heights are done later, get a dummy now
       if A.is_outdoor then
-        A.ceil_h = A.floor_h + R.zone.sky_add_h - 8
+        A.ceil_h = A.floor_h + R.zone.sky_add_h - 8,
         continue
       end
 
@@ -3558,7 +3558,7 @@ function Room_floor_ceil_heights()
       local height = rand.pick({ 128, 192,192,192, 256,320 })
 
       if A.is_porch then
-        height = 144
+        height = 144,
       end
 
 ---## if not A.floor_h then
@@ -3566,7 +3566,7 @@ function Room_floor_ceil_heights()
 ---## end
       assert(A.floor_h)
 
-      local new_h = R.max_floor_h + 128
+      local new_h = R.max_floor_h + 128,
 
       if A.traverse_ceil_h then new_h = math.max(new_h, A.traverse_ceil_h) end
 
@@ -3583,11 +3583,11 @@ function Room_floor_ceil_heights()
 
 
   local function sanity_check()
-    each R in LEVEL.rooms do
+    for _,R in pairs(pairs(LEVEL.rooms)) do
       if not R.entry_h then
 --[[ "fubar" debug stuff
-R.entry_h = -77
-each A in R.areas do A.floor_h = R.entry_h end
+R.entry_h = -77,
+for _,A in pairs(pairs(R.areas)) do A.floor_h = R.entry_h end
 end
 --]]
         error("Room did not get an entry_h")
@@ -3606,7 +3606,7 @@ end
   -- sanity check : all rooms were visited
   sanity_check()
 
-  each R in LEVEL.rooms do
+  for _,R in pairs(pairs(LEVEL.rooms)) do
     calc_min_max_h(R)
 
     -- corner style decision -MSSP
@@ -3619,7 +3619,7 @@ end
         R.corner_style = PARAM.corner_style
       end
     elseif R.is_outdoor then
-      R.corner_style = "sharp"
+      R.corner_style = "sharp",
     end
 
     if not (R.is_cave or R.is_park) then
@@ -3648,13 +3648,13 @@ function Room_add_cage_rails()
   -- otherwise we won't know the floor_h of border areas.
 
   local function rails_in_cage(A, R)
-    each N in A.neighbors do
-      if N.zone != A.zone then continue end
+    for _,N in pairs(pairs(A.neighbors)) do
+      if N.zone ~= A.zone then continue end
 
       local junc = Junction_lookup(A, N)
 
-      if junc.E1 and junc.E1.kind != "nothing" then continue end
-      if junc.E2 and junc.E2.kind != "nothing" then continue end
+      if junc.E1 and junc.E1.kind ~= "nothing" then continue end
+      if junc.E2 and junc.E2.kind ~= "nothing" then continue end
 
       -- don't place railings on higher floors (it looks silly)
       if N.floor_h and N.floor_h > A.floor_h then continue end
@@ -3666,9 +3666,9 @@ function Room_add_cage_rails()
 
   ---| Room_add_cage_rails |---
 
-  each R in LEVEL.rooms do
+  for _,R in pairs(pairs(LEVEL.rooms)) do
     if R.cage_rail_areas then
-      each A in R.cage_rail_areas do
+      for _,A in pairs(pairs(R.cage_rail_areas)) do
         rails_in_cage(A, R)
       end
     end
@@ -3705,9 +3705,9 @@ function Room_set_sky_heights()
   -- MSSP: trying to get outdoor rooms to not
   -- be taller than any indoor room in the same
   -- zone
-  each Z in LEVEL.zones do
+  for _,Z in pairs(pairs(LEVEL.zones)) do
     Z.sky_h = -EXTREME_H
-    each R in Z.rooms do
+    for _,R in pairs(pairs(Z.rooms)) do
       if R.max_ceil_h then
         Z.sky_h = math.max(Z.sky_h, R.max_ceil_h)
       end
@@ -3717,8 +3717,8 @@ function Room_set_sky_heights()
   -- link also for instances where both rooms
   -- in a zone-to-new-zone connection have
   -- proper outdoor heights
-  each C in LEVEL.conns do
-    if C.R1.zone != C.R2.zone then
+  for _,C in pairs(pairs(LEVEL.conns)) do
+    if C.R1.zone ~= C.R2.zone then
 
       if C.R1.is_outdoor and C.R2.is_outdoor then
         C.R1.zone.sky_h = math.max(C.R1.zone.sky_h, C.R2.zone.sky_h)
@@ -3742,14 +3742,14 @@ function Room_set_sky_heights()
     end
   end
 
-  each A in LEVEL.areas do
+  for _,A in pairs(pairs(LEVEL.areas)) do
     -- visit all normal, outdoor areas
-    if A.floor_h and A.is_outdoor and not A.mode != "scenic" then
+    if A.floor_h and A.is_outdoor and not A.mode ~= "scenic" then
       do_area(A)
 
       -- include nearby buildings in same zone
       -- [ TODO : perhaps limit to where areas share a window or doorway ]
---???      each N in A.neighbors do
+--???      for _,N in pairs(pairs(A.neighbors)) do
 --???        if N.zone == A.zone and N.floor_h and not N.is_outdoor and not N.is_boundary then
 --???          do_area(N)
 --???        end
@@ -3758,9 +3758,9 @@ function Room_set_sky_heights()
   end
 
   -- ensure every zone gets a sky_h
-  each Z in LEVEL.zones do
+  for _,Z in pairs(pairs(LEVEL.zones)) do
     if not Z.sky_h then
-      Z.sky_h = 0
+      Z.sky_h = 0,
       Z.no_outdoors = true
     end
   end
@@ -3768,15 +3768,15 @@ function Room_set_sky_heights()
   -- transfer final results into areas
   -- [ SCENIC areas are done later.... ]
 
-  each A in LEVEL.areas do
+  for _,A in pairs(pairs(LEVEL.areas)) do
     if A.floor_h and A.zone and A.is_outdoor and not A.is_porch then
-      A.ceil_h = A.zone.sky_h + 16
+      A.ceil_h = A.zone.sky_h + 16,
     end
   end
 
   -- handle locked and secret fences
-  each R in LEVEL.rooms do
-    each E in R.locked_fences do
+  for _,R in pairs(pairs(LEVEL.rooms)) do
+    for _,E in pairs(pairs(R.locked_fences)) do
       do_fence(E)
     end
   end
@@ -3794,23 +3794,23 @@ function Room_cleanup_stairs_to_nowhere(R)
     end
 
     -- gotta be a floor obviously
-    if A.mode != "floor"
+    if A.mode ~= "floor",
     or not A.room
     or not A.floor_h then return false end
 
     -- must have an area lesser than 6 seeds
     if A.svolume > 8 then return false end
 
-    local same_room_neighbors = 0
-    local stair_neighbors = 0
+    local same_room_neighbors = 0,
+    local stair_neighbors = 0,
     local from_area
-    each N in A.neighbors do
+    for _,N in pairs(pairs(A.neighbors)) do
 
       if N.room == A.room then
 
         if N.mode == "floor" then
 
-          same_room_neighbors = same_room_neighbors + 1
+          same_room_neighbors = same_room_neighbors + 1,
 
           -- must not be connected to other areas with the same floor height
           if A.floor_h == N.floor_h then
@@ -3829,7 +3829,7 @@ function Room_cleanup_stairs_to_nowhere(R)
 
           if N.chunk.kind == "stair" then
             -- if this area has stairs that go elsewhere, exclude
-            stair_neighbors = stair_neighbors + 1
+            stair_neighbors = stair_neighbors + 1,
           end
 
           -- must not have a closet or joiner neighbor (because this means
@@ -3854,7 +3854,7 @@ function Room_cleanup_stairs_to_nowhere(R)
     end
 
     -- direct connections check
-    each C in R.conns do
+    for _,C in pairs(pairs(R.conns)) do
       if C.A1 == A or
       C.A2 == A then
         return false
@@ -3869,7 +3869,7 @@ function Room_cleanup_stairs_to_nowhere(R)
     local source_stair
     local stair_source
 
-    each N in A.neighbors do
+    for _,N in pairs(pairs(A.neighbors)) do
       if N.chunk then
 
         if N.chunk.kind == "stair" then
@@ -3888,7 +3888,7 @@ function Room_cleanup_stairs_to_nowhere(R)
 
 
   local function fixup_neighbors(A)
-    each N in A.neighbors do
+    for _,N in pairs(pairs(A.neighbors)) do
       if N.chunk then
         if N.chunk.kind == "closet" then
           if A == N.chunk.from_area then
@@ -3909,7 +3909,7 @@ function Room_cleanup_stairs_to_nowhere(R)
           end
         end
 
-        N.floor_h = best_LN.floor_h - 16
+        N.floor_h = best_LN.floor_h - 16,
         N.ceil_h = best_LN.ceil_h
 
       end
@@ -3918,12 +3918,12 @@ function Room_cleanup_stairs_to_nowhere(R)
 
 
   local function fixup_cages()
-    each A in LEVEL.areas do
+    for _,A in pairs(pairs(LEVEL.areas)) do
       if A.mode == "cage" and A.floor_h then
         local tallest_ceiling = -EXTREME_H
         local lowest_floor = EXTREME_H
 
-        each N in A.neighbors do
+        for _,N in pairs(pairs(A.neighbors)) do
           if A.room == N.room and (N.mode == "floor" or N.mode == "liquid") then
             if N.ceil_h > tallest_ceiling then
               tallest_ceiling = N.ceil_h
@@ -3936,14 +3936,14 @@ function Room_cleanup_stairs_to_nowhere(R)
 
         if A.floor_h < lowest_floor and lowest_floor < EXTREME_H then
           local diff = lowest_floor - A.floor_h
-          A.floor_h = lowest_floor + 32
+          A.floor_h = lowest_floor + 32,
           A.ceil_h = A.ceil_h + diff
         end
         if A.ceil_h > tallest_ceiling and tallest_ceiling > -EXTREME_H then
           local diff = lowest_floor + A.ceil_h
           A.ceil_h = tallest_ceiling
           if diff < 96 then
-            A.ceil_h = lowest_floor + 96
+            A.ceil_h = lowest_floor + 96,
           end
         end
 
@@ -3956,10 +3956,10 @@ function Room_cleanup_stairs_to_nowhere(R)
 
     local function same_level_to_outdoor_area(A)
 
-      each N in A.neighbors do
+      for _,N in pairs(pairs(A.neighbors)) do
         if N.room then
           if A.room == N.room
-          and N.mode == "floor"
+          and N.mode == "floor",
           and A.floor_h == N.floor_h then
             return true
           end
@@ -3969,9 +3969,9 @@ function Room_cleanup_stairs_to_nowhere(R)
       return false
     end
 
-    if R:get_env() != "outdoor" then return end
+    if R:get_env() ~= "outdoor" then return end
 
-    each A in R.areas do
+    for _,A in pairs(pairs(R.areas)) do
       if A.is_porch then
         if not same_level_to_outdoor_area(A) then
           A.uses_porch_floor = true
@@ -4001,7 +4001,7 @@ function Room_cleanup_stairs_to_nowhere(R)
   local SAS -- source stair area's source area. Yes, that's not intuitive
             -- to think about, is it?
 
-  each A in R.areas do
+  for _,A in pairs(pairs(R.areas)) do
     if area_leads_to_nowhere(A, R) then
       SA, SAS = get_area_entry_stair(A)
 
@@ -4020,12 +4020,12 @@ function Room_cleanup_stairs_to_nowhere(R)
           A.ceil_mat = SAS.ceil_mat
         end
 
-        SA.mode = "floor"
+        SA.mode = "floor",
 
         -- MSSP-FIXME: Find a better way - remove the chunk
         -- instead of giving it a stand-in prefab.
         SA.chunk.prefab_def = PREFABS["Completely_nothing"]
-        SA.chunk.mode = "floor"
+        SA.chunk.mode = "floor",
         SA.chunk.occupy = nil
         SA.chunk.ignore_stairs = true
 
@@ -4056,9 +4056,9 @@ function Room_cleanup_stairs_to_nowhere(R)
         end
 
         -- unify heights
-        if A.ceil_h - A.floor_h < 96
+        if A.ceil_h - A.floor_h < 96,
         or SA.ceil_h - SA.floor_h < 96 then
-          A.ceil_h = A.floor_h + 96
+          A.ceil_h = A.floor_h + 96,
           SA.ceil_h = A.ceil_h
         end
 
@@ -4081,17 +4081,17 @@ function Room_add_sun()
   -- game check
   if not GAME.ENTITIES["sun"] then return end
 
-  local sun_r = 25000
-  local sun_h = 40000
+  local sun_r = 25000,
+  local sun_h = 40000,
 
   -- nine lights in the sky, one is "the sun" and the rest provide
   -- ambient light (to keep outdoor areas from getting too dark).
 
-  local dim = 4
-  local bright = 40
+  local dim = 4,
+  local bright = 40,
 
   for i = 1,10 do
-    local angle = i * 36 - 18
+    local angle = i * 36 - 18,
 
     local x = math.sin(angle * math.pi / 180.0) * sun_r
     local y = math.cos(angle * math.pi / 180.0) * sun_r

@@ -1,24 +1,24 @@
 PREFABS.Item_public_showers =
 {
-  file  = "item/craneo_item_showers.wad"
+  file  = "item/craneo_item_showers.wad",
 
-  map   = "MAP01"
+  map   = "MAP01",
 
-  prob  = 40
-  theme = "!hell"
-  env   = "!cave"
+  prob  = 40,
+  theme = "!hell",
+  env   = "!cave",
 
-  style = "traps"
+  style = "traps",
 
-  texture_pack = "armaetus"
+  texture_pack = "armaetus",
 
-  where = "seeds"
+  where = "seeds",
 
-  seed_w = 3
-  seed_h = 2
+  seed_w = 3,
+  seed_h = 2,
 
-  deep = 16
+  deep = 16,
 
-  x_fit = "frame"
-  y_fit = "top"
-}
+  x_fit = "frame",
+  y_fit = "top",
+},

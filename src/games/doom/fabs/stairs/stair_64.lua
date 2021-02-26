@@ -18,59 +18,59 @@
 
 PREFABS.Stair_64_red =
 {
-  file   = "stairs/stair_64.wad"
+  file   = "stairs/stair_64.wad",
 
-  map   = "MAP01"
-  prob  = 0
-  prob_skew = 3
+  map   = "MAP01",
+  prob  = 0,
+  prob_skew = 3,
 
-  theme = "urban"
+  theme = "urban",
 
-  where  = "seeds"
-  shape  = "I"
+  where  = "seeds",
+  shape  = "I",
 
-  seed_w = 2
+  seed_w = 2,
 
-  x_fit  = "stretch"
+  x_fit  = "stretch",
 
-  bound_z1 = 0
+  bound_z1 = 0,
 
-  delta_h = 64
-}
+  delta_h = 64,
+},
 
 PREFABS.Stair_64_red2 =
 {
-  template   = "Stair_64_red"
+  template   = "Stair_64_red",
 
-  map   = "MAP02"
-  prob  = 20
-  theme = "urban"
+  map   = "MAP02",
+  prob  = 20,
+  theme = "urban",
 
-  tex_MARBGRAY = "REDWALL"
-  flat_DEM1_6 = "FLAT5_3"
+  tex_MARBGRAY = "REDWALL",
+  flat_DEM1_6 = "FLAT5_3",
 
-}
+},
 
 
 PREFABS.Stair_64_hell =
 {
-  template   = "Stair_64_red"
+  template   = "Stair_64_red",
 
-  map   = "MAP02"
-  prob  = 30
-  theme = "hell"
+  map   = "MAP02",
+  prob  = 30,
+  theme = "hell",
 
-}
+},
 
 PREFABS.Stair_64_tech =
 {
-  template   = "Stair_64_red"
+  template   = "Stair_64_red",
 
-  map   = "MAP02"
-  prob  = 20
-  theme = "tech"
+  map   = "MAP02",
+  prob  = 20,
+  theme = "tech",
 
-  tex_MARBGRAY = "SHAWN2"
-  flat_DEM1_6 = "FLAT20"
+  tex_MARBGRAY = "SHAWN2",
+  flat_DEM1_6 = "FLAT20",
 
-}
+},

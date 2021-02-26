@@ -6,12 +6,12 @@
 --
 --  This program is free software; you can redistribute it and/or
 --  modify it under the terms of the GNU General Public License
---  as published by the Free Software Foundation; either version 2
+--  as published by the Free Software Foundation; either version 2,
 --  of the License, or (at your option) any later version.
 --
 --------------------------------------------------------------------
 
-MARINE_CLOSET_TUNE = {}
+MARINE_CLOSET_TUNE = {},
 
 MARINE_CLOSET_TUNE.CHANCE =
 {
@@ -22,7 +22,7 @@ MARINE_CLOSET_TUNE.CHANCE =
   "50",    _("50%"),
   "75",    _("75%"),
   "100",    _("100%"),
-}
+},
 
 MARINE_CLOSET_TUNE.COUNT =
 {
@@ -36,7 +36,7 @@ MARINE_CLOSET_TUNE.COUNT =
   "8",    _("8"),
   "9",    _("9"),
   "10",    _("10"),
-}
+},
 
 MARINE_CLOSET_TUNE.TECH =
 {
@@ -47,13 +47,13 @@ MARINE_CLOSET_TUNE.TECH =
   "rng",    _("Mix It Up"),
   "prog",    _("Progressive"),
   "bfg",    _("BFG Fiesta"),
-}
+},
 
 MARINE_CLOSET_TUNE.YN =
 {
   "yes", _("Yes"),
   "no",  _("No"),
-}
+},
 
 MARINE_CLOSET_TUNE.HEALTH =
 {
@@ -67,7 +67,7 @@ MARINE_CLOSET_TUNE.HEALTH =
   "750",    _("750"),
   "1000",    _("1000"),
   "2000",    _("2000"),
-}
+},
 
 MARINE_CLOSET_TUNE.WAKER =
 {
@@ -75,7 +75,7 @@ MARINE_CLOSET_TUNE.WAKER =
   "range",    _("Range"),
   "close",    _("Close Range"),
   "start",    _("Map Start"),
-}
+},
 
 MARINE_CLOSET_TUNE.QUANTITY =
 {
@@ -83,7 +83,7 @@ MARINE_CLOSET_TUNE.QUANTITY =
   "more",    _("More"),
   "lot",    _("Lots"),
   "horde",    _("Hordes"),
-}
+},
 
 MARINE_CLOSET_TUNE.STRENGTH =
 {
@@ -91,7 +91,7 @@ MARINE_CLOSET_TUNE.STRENGTH =
   "harder",    _("Harder"),
   "tough",    _("Tough"),
   "fierce",    _("Fierce"),
-}
+},
 
 MARINE_CLOSET_TUNE.SCALING =
 {
@@ -100,14 +100,14 @@ MARINE_CLOSET_TUNE.SCALING =
   "reg",    _("Regressive"),
   "epi",    _("Episodic"),
   "epi2",    _("Regressive Episodic"),
-}
+},
 
 MARINE_CLOSET_TUNE.SPRITES =
 {
   "no", _("no"),
   "yes1",  _("Yes + Merge"),
   "yes2",  _("Yes + No Merge"),
-}
+},
 
 MARINE_CLOSET_TUNE.COLORS =
 {
@@ -125,14 +125,14 @@ MARINE_CLOSET_TUNE.COLORS =
   "MarAI12", _("Gold"),
   "rng", _("Random OG Doom"),
   "rng2", _("Full Random"),
-}
+},
 
 MARINE_CLOSET_TUNE.FRIENDLYFIRE =
 {
   "yes", _("Yes"),
   "no2", _("No + Self Damage"),
   "no",  _("No"),
-}
+},
 
 MARINE_CLOSET_TUNE.TEMPLATES =
 {
@@ -165,7 +165,7 @@ class AIMarine : Actor
         DeathSound "*death";
         PainSound "*pain50";
         AIMarine.follower MFOLLOW;
-    }
+    },
     States
     {
     Spawn:
@@ -198,47 +198,47 @@ class AIMarine : Actor
     Raise:
         PLAY MLKJIH 5;
         Goto See;
-    }
+    },
     override void PostBeginPlay()
     {
         super.PostBeginPlay();
         MTRANSLATE
-    }
+    },
     override void Tick()
     {
         super.Tick();
         if(inStateSequence(CurState,ResolveState("See"))&&self.bDormant)
         {
             self.bDormant = false;
-        }
+        },
         if(health > 0 && !self.bDormant)
         {
         if(strafecd>0)
         {
             strafecd--;
-        }
+        },
         if(backcd>0)
         {
             backcd--;
-        }
+        },
         if(self.bFriendly)
         {
         if(scancd>0)
         {
             scancd--;
-        }
+        },
         if(followcd>0)
         {
             followcd--;
-        }
+        },
         if(forgetcd>0)
         {
             forgetcd--;
-        }
+        },
         if(forgetcd==0)
         {
             A_ClearTarget();
-        }
+        },
         if(scancd==0)
         {
             ThinkerIterator picker = ThinkerIterator.Create("Actor");
@@ -251,11 +251,11 @@ class AIMarine : Actor
                     {
                         self.target = newtarget;
                         break;
-                    }
-                }
-            }
+                    },
+                },
+            },
             scancd = 35;
-        }
+        },
         if(follower)
         {
             Actor followtarget = Players[(self.FriendPlayer)].mo;
@@ -267,8 +267,8 @@ class AIMarine : Actor
                     {
                         self.target = null;
                         followcd=random(105,350);
-                    }
-                }
+                    },
+                },
                 else
                 {
                     if(!self.CheckSight(followtarget)&&followcd==0&&self.Distance2D(followtarget) > 2000)
@@ -276,30 +276,30 @@ class AIMarine : Actor
                         if(self.Teleport(followtarget.Vec3Offset(-32, 0, 0, false),0,0))
                         {
                             followcd=random(350,700);
-                        }
+                        },
                         else
                         {
                             followcd=35;
-                        }
-                    }
-                }
-            }
+                        },
+                    },
+                },
+            },
             else
             {
                 if(followtarget && self.CheckSight(followtarget) && self.Distance2D(followtarget) < 128)
                 {
                     seenplayer = true;
-                }
-            }
-        }
-        }
+                },
+            },
+        },
+        },
         if(self.target && CheckSight(self.target) && self.target.health > 0 && self.target.bShootable)
         {
             if(self.Distance2D(target)<200 && backcd==0)
             {
                 A_ChangeVelocity(-20,0,0,1);
                 backcd = random(10,30);
-            }
+            },
             if(strafecd==0)
             {
                 if(InStateSequence(Curstate,ResolveState("See"))||InStateSequence(Curstate,ResolveState("Missile")))
@@ -307,14 +307,14 @@ class AIMarine : Actor
                     if(random(0,1))
                     {
                         A_ChangeVelocity(0,20,0,1);
-                    }
+                    },
                     else
                     {
                         A_ChangeVelocity(0,-20,0,1);
-                    }
+                    },
                     strafecd = random(20,50);
-                }
-            }
+                },
+            },
             if(self.bFriendly)
             {
             forgetcd = 1000;
@@ -333,32 +333,32 @@ class AIMarine : Actor
                             if(allattack.inStateSequence(allattack.CurState,allattack.ResolveState("Spawn")))
                             {
                                 allattack.setStateLabel("See");
-                            }
-                        }
-                    }
-                }
-            }
-            }
-        }
-        }
-    }
+                            },
+                        },
+                    },
+                },
+            },
+            },
+        },
+        },
+    },
     override int DoSpecialDamage(Actor target, int damage, name damagetype)
     {
         if(target && target is "PlayerPawn" && self.bFriendly)
         {
             return 0;
-        }
+        },
         return super.DoSpecialDamage(target,damage,damagetype);
-    }
+    },
     override int TakeSpecialDamage(Actor inflictor, Actor source, int damage, Name damagetype)
     {
         if(source && source is "AIMarine" && source.bFriendly && self.bFriendly)
         {
             MFRIENDLYFIREX
-        }
+        },
         return super.TakeSpecialDamage(inflictor,source,damage,damagetype);
-    }
-}
+    },
+},
 
 class AIMarineWaker : Actor
 {
@@ -366,11 +366,11 @@ class AIMarineWaker : Actor
     {
         +LOOKALLAROUND
         +NOINTERACTION
-    }
+    },
     States
     {
     WSTATE
-    }
+    },
     void A_WakeUpMarines()
     {
         ThinkerIterator Marines = ThinkerIterator.Create("AIMarine");
@@ -390,12 +390,12 @@ class AIMarineWaker : Actor
                     {
                         chosenone.target = targetthis;
                         break;
-                    }
-                }
-            }
-        }
-    }
-}
+                    },
+                },
+            },
+        },
+    },
+},
 ]]
   MWEAK = [[
   class AIMarinePistol : AIMarine
@@ -409,8 +409,8 @@ class AIMarineWaker : Actor
         PLAY A 9 A_FaceTarget;
         PLAY A 0 A_CposRefire;
         Goto Missile;
-    }
-}
+    },
+},
 class AIMarineChaingun : AIMarine
 {
     States
@@ -423,8 +423,8 @@ class AIMarineChaingun : AIMarine
         PLAY F 4 BRIGHT A_CustomBulletAttack(13.6,0,1,5,"BulletPuff");
         PLAY A 0 A_CposRefire;
         Goto Missile+1;
-    }
-}
+    },
+},
 class AIMarineShotgun : AIMarine
 {
     States
@@ -435,8 +435,8 @@ class AIMarineShotgun : AIMarine
         PLAY F 7 BRIGHT A_CustomBulletAttack(5.6,0,7,5,"BulletPuff");
         PLAY BCDABCDABCDABCD 4 A_Chase(null,null);
         Goto See;
-    }
-}
+    },
+},
 class AIMarineSuperShotgun : AIMarine
 {
     States
@@ -453,8 +453,8 @@ class AIMarineSuperShotgun : AIMarine
         PLAY A 0 A_StartSound ("weapons/sshotc");
         PLAY CDABCDABCDABCD 4 A_Chase(null,null);
         Goto See;
-    }
-}
+    },
+},
 class AIMarinePlasma : AIMarine
 {
     States
@@ -467,8 +467,8 @@ class AIMarinePlasma : AIMarine
     MissileOver:
         PLAY DABCD 4 A_Chase(null,null);
         Goto See;
-    }
-}
+    },
+},
 class AIMarineRocket : AIMarine
 {
     States
@@ -479,8 +479,8 @@ class AIMarineRocket : AIMarine
         PLAY E 6;
         PLAY DABCD 4 A_Chase(null,null);
         Goto See;
-    }
-}
+    },
+},
 class AIMarineBFG : AIMarine
 {
     States
@@ -492,8 +492,8 @@ class AIMarineBFG : AIMarine
         PLAY E 4 A_FaceTarget;
         PLAY CDABCDABCDABCD 4 A_Chase(null,null);
         Goto See;
-    }
-}
+    },
+},
   ]]
   MSTRN = [[
   class AIMarinePistol : AIMarine
@@ -507,8 +507,8 @@ class AIMarineBFG : AIMarine
         PLAY A 4 A_FaceTarget;
         PLAY A 0 A_CposRefire;
         Goto Missile;
-    }
-}
+    },
+},
 class AIMarineChaingun : AIMarine
 {
     States
@@ -521,8 +521,8 @@ class AIMarineChaingun : AIMarine
         PLAY F 4 BRIGHT A_CustomBulletAttack(5.6,0,1,5,"BulletPuff");
         PLAY A 0 A_CposRefire;
         Goto Missile+1;
-    }
-}
+    },
+},
 class AIMarineShotgun : AIMarine
 {
     States
@@ -533,8 +533,8 @@ class AIMarineShotgun : AIMarine
         PLAY F 7 BRIGHT A_CustomBulletAttack(5.6,0,7,5,"BulletPuff");
         PLAY BCDABCD 4 A_Chase(null,null);
         Goto See;
-    }
-}
+    },
+},
 class AIMarineSuperShotgun : AIMarine
 {
     States
@@ -551,8 +551,8 @@ class AIMarineSuperShotgun : AIMarine
         PLAY A 0 A_StartSound ("weapons/sshotc");
         PLAY CD 4 A_Chase(null,null);
         Goto See;
-    }
-}
+    },
+},
 class AIMarinePlasma : AIMarine
 {
     States
@@ -565,8 +565,8 @@ class AIMarinePlasma : AIMarine
     MissileOver:
         PLAY DABCD 4 A_Chase(null,null);
         Goto See;
-    }
-}
+    },
+},
 class AIMarineRocket : AIMarine
 {
     States
@@ -577,26 +577,26 @@ class AIMarineRocket : AIMarine
         PLAY E 6;
         PLAY E 0 A_CposRefire;
         Goto Missile;
-    }
-}
+    },
+},
 class AIMarineBFG : AIMarine
 {
     States
     {
     Missile:
-        PLAY E 0 {self.bNOPAIN=1;}
+        PLAY E 0 {self.bNOPAIN=1;},
         PLAY E 5 A_StartSound("weapons/bfgf");
         PLAY EEEEE 5 A_FaceTarget;
         PLAY F 6 Bright A_SpawnProjectile("BFGBall");
-        PLAY F 0 {self.bNOPAIN=0;}
+        PLAY F 0 {self.bNOPAIN=0;},
         PLAY E 4 A_FaceTarget;
         PLAY E 0 A_MonsterRefire(40,"MissileOver");
         Goto Missile;
     MissileOver:
         PLAY CDABCD 4 A_Chase(null,null);
         Goto See;
-    }
-}
+    },
+},
   ]]
   MGSTRN = [[
   class AIMarinePistol : AIMarine
@@ -637,8 +637,8 @@ class AIMarineBFG : AIMarine
   Raise:
     ALY2 MLKJIH 5;
     Goto See;
-  }
-}
+  },
+},
 class AIMarineChaingun : AIMarine
 {
   States
@@ -678,8 +678,8 @@ class AIMarineChaingun : AIMarine
   Raise:
     ALY4 MLKJIH 5;
     Goto See;
-  }
-}
+  },
+},
 class AIMarineShotgun : AIMarine
 {
   States
@@ -717,8 +717,8 @@ class AIMarineShotgun : AIMarine
   Raise:
     ALY5 MLKJIH 5;
     Goto See;
-  }
-}
+  },
+},
 
 class AIMarineSuperShotgun : AIMarine
 {
@@ -763,8 +763,8 @@ class AIMarineSuperShotgun : AIMarine
   Raise:
     AL11 MLKJIH 5;
     Goto See;
-  }
-}
+  },
+},
 class AIMarinePlasma : AIMarine
 {
   States
@@ -804,8 +804,8 @@ class AIMarinePlasma : AIMarine
   Raise:
     ALY8 MLKJIH 5;
     Goto See;
-  }
-}
+  },
+},
 class AIMarineRocket : AIMarine
 {
   States
@@ -843,8 +843,8 @@ class AIMarineRocket : AIMarine
   Raise:
     ALY9 MLKJIH 5;
     Goto See;
-  }
-}
+  },
+},
 class AIMarineBFG : AIMarine
 {
   States
@@ -856,11 +856,11 @@ class AIMarineBFG : AIMarine
     AL10 AAAABBBBCCCCDDDD 1 A_Chase;
     Loop;
   Missile:
-    AL10 E 0 {self.bNOPAIN=1;}
+    AL10 E 0 {self.bNOPAIN=1;},
     AL10 E 5 A_StartSound("weapons/bfgf");
     AL10 EEEEE 5 A_FaceTarget;
     AL10 F 6 Bright A_SpawnProjectile("BFGBall");
-    AL10 F 0 {self.bNOPAIN=0;}
+    AL10 F 0 {self.bNOPAIN=0;},
     AL10 E 4 A_FaceTarget;
     AL10 E 0 A_MonsterRefire(40,"MissileOver");
     Goto Missile;
@@ -888,8 +888,8 @@ class AIMarineBFG : AIMarine
   Raise:
     AL10 MLKJIH 5;
     Goto See;
-  }
-}
+  },
+},
   ]]
   MGWEAK = [[
   class AIMarinePistol : AIMarine
@@ -930,8 +930,8 @@ class AIMarineBFG : AIMarine
   Raise:
     ALY2 MLKJIH 5;
     Goto See;
-  }
-}
+  },
+},
 class AIMarineChaingun : AIMarine
 {
   States
@@ -971,8 +971,8 @@ class AIMarineChaingun : AIMarine
   Raise:
     ALY4 MLKJIH 5;
     Goto See;
-  }
-}
+  },
+},
 class AIMarineShotgun : AIMarine
 {
   States
@@ -1010,8 +1010,8 @@ class AIMarineShotgun : AIMarine
   Raise:
     ALY5 MLKJIH 5;
     Goto See;
-  }
-}
+  },
+},
 
 class AIMarineSuperShotgun : AIMarine
 {
@@ -1056,8 +1056,8 @@ class AIMarineSuperShotgun : AIMarine
   Raise:
     AL11 MLKJIH 5;
     Goto See;
-  }
-}
+  },
+},
 class AIMarinePlasma : AIMarine
 {
   States
@@ -1097,8 +1097,8 @@ class AIMarinePlasma : AIMarine
   Raise:
     ALY8 MLKJIH 5;
     Goto See;
-  }
-}
+  },
+},
 class AIMarineRocket : AIMarine
 {
   States
@@ -1136,8 +1136,8 @@ class AIMarineRocket : AIMarine
   Raise:
     ALY9 MLKJIH 5;
     Goto See;
-  }
-}
+  },
+},
 class AIMarineBFG : AIMarine
 {
   States
@@ -1176,8 +1176,8 @@ class AIMarineBFG : AIMarine
   Raise:
     AL10 MLKJIH 5;
     Goto See;
-  }
-}
+  },
+},
   ]]
   WAKER1 = [[Spawn:
         TNT1 A 4 A_LookEx(LOF_NOSOUNDCHECK);
@@ -1214,16 +1214,16 @@ class AIMarineBFG : AIMarine
     Default
     {
         +PUFFGETSOWNER
-    }
+    },
     override int DoSpecialDamage(Actor target, int damage, name damagetype)
     {
         if(target && target is "PlayerPawn" && self.target && self.target.bFriendly)
         {
             return 0;
-        }
+        },
         return super.DoSpecialDamage(target,damage,damagetype);
-    }
-}
+    },
+},
 
 class PlasmaBallAIMarine : PlasmaBall
 {
@@ -1232,10 +1232,10 @@ class PlasmaBallAIMarine : PlasmaBall
         if(target && target is "PlayerPawn" && self.target && self.target.bFriendly)
         {
             return 0;
-        }
+        },
         return super.DoSpecialDamage(target,damage,damagetype);
-    }
-}
+    },
+},
 class RocketAIMarine : Rocket
 {
     override int DoSpecialDamage(Actor target, int damage, name damagetype)
@@ -1243,10 +1243,10 @@ class RocketAIMarine : Rocket
         if(target && target is "PlayerPawn" && self.target && self.target.bFriendly)
         {
             return 0;
-        }
+        },
         return super.DoSpecialDamage(target,damage,damagetype);
-    }
-}
+    },
+},
 class BFGBallAIMarine : BFGBall
 {
     override int DoSpecialDamage(Actor target, int damage, name damagetype)
@@ -1254,10 +1254,10 @@ class BFGBallAIMarine : BFGBall
         if(target && (target is "PlayerPawn"||target is "AIMarine") && self.target && self.target.bFriendly)
         {
             return 0;
-        }
+        },
         return super.DoSpecialDamage(target,damage,damagetype);
-    }
-}
+    },
+},
 ]]
   TRANSL = [[A_SetTranslation(MTRANSDEF);
   ]]
@@ -1270,9 +1270,9 @@ class BFGBallAIMarine : BFGBall
   FFX = [[if(inflictor && ((inflictor.bISMONSTER && inflictor.bFriendly) || (!inflictor.bISMONSTER && inflictor.target && inflictor.target is "AIMarine" && !(inflictor is "ExplosiveBarrel"))))
   {
     return 0;
-  }
+  },
   ]]
-}
+},
 
 MARINE_CLOSET_TUNE.MAPINFO =
 {
@@ -1286,48 +1286,48 @@ MARINE_CLOSET_TUNE.MAPINFO =
   31006 = AIMarineRocket
   31007 = AIMarineBFG
 ]]
-}
+},
 
 MARINE_CLOSET_TUNE.TRNSLATE =
 [[
-MarAI1 = "112:127=112:127"
-MarAI2 = "112:127=96:111"
-MarAI3 = "112:127=64:79"
-MarAI4 = "112:127=32:47"
-MarAI5 = "112:127=192:207"
-MarAI6 = "112:127=250:254"
-MarAI7 = "112:127=80:95"
-MarAI8 = "112:127=160:167"
-MarAI9 = "112:127=208:223"
-MarAI10 = "112:127=240:247"
-MarAI11 = "112:127=168:191"
-MarAI12 = "112:127=224:231"
+MarAI1 = "112:127=112:127",
+MarAI2 = "112:127=96:111",
+MarAI3 = "112:127=64:79",
+MarAI4 = "112:127=32:47",
+MarAI5 = "112:127=192:207",
+MarAI6 = "112:127=250:254",
+MarAI7 = "112:127=80:95",
+MarAI8 = "112:127=160:167",
+MarAI9 = "112:127=208:223",
+MarAI10 = "112:127=240:247",
+MarAI11 = "112:127=168:191",
+MarAI12 = "112:127=224:231",
 ]]
 
 MARINE_CLOSET_TUNE.TECHWPN =
 {
-[1] = { 31001 }
-[2] = { 31003, 31001, 31001, 31001, 31001, 31001, 31001, 31001 }
-[3] = { 31003, 31002, 31001, 31001, 31001, 31001, 31001, 31001 }
-[4] = { 31003, 31002, 31001, 31001 }
-[5] = { 31003, 31002, 31001, 31003, 31002, 31001, 31003, 31002, 31001, 31004 }
-[6] = { 31003, 31002, 31001, 31003, 31002, 31005, 31003, 31002, 31006, 31004 }
-[7] = { 31003, 31002, 31001, 31004, 31002, 31005, 31006, 31004 }
-[8] = { 31004, 31004, 31002, 31004, 31005, 31005, 31006 }
-[9] = { 31005, 31005, 31005, 31005, 31006, 31006, 31006, 31004, 31007 }
-[10] = { 31005, 31006, 31007 }
-[66] = { 31007 }
-[99] = { 31001, 31001, 31001, 31003, 31003, 31003 ,31002 ,31002 ,31002, 31004, 31004, 31005, 31005, 31006, 31006, 31007 }
-}
+[1] = { 31001 },
+[2] = { 31003, 31001, 31001, 31001, 31001, 31001, 31001, 31001 },
+[3] = { 31003, 31002, 31001, 31001, 31001, 31001, 31001, 31001 },
+[4] = { 31003, 31002, 31001, 31001 },
+[5] = { 31003, 31002, 31001, 31003, 31002, 31001, 31003, 31002, 31001, 31004 },
+[6] = { 31003, 31002, 31001, 31003, 31002, 31005, 31003, 31002, 31006, 31004 },
+[7] = { 31003, 31002, 31001, 31004, 31002, 31005, 31006, 31004 },
+[8] = { 31004, 31004, 31002, 31004, 31005, 31005, 31006 },
+[9] = { 31005, 31005, 31005, 31005, 31006, 31006, 31006, 31004, 31007 },
+[10] = { 31005, 31006, 31007 },
+[66] = { 31007 },
+[99] = { 31001, 31001, 31001, 31003, 31003, 31003 ,31002 ,31002 ,31002, 31004, 31004, 31005, 31005, 31006, 31006, 31007 },
+},
 
 function MARINE_CLOSET_TUNE.setup(self)
   PARAM.marine_gen = true
-  PARAM.MARINESCRIPT = ""
-  PARAM.marine_closets = 0
-  PARAM.marine_marines = 0
-  PARAM.marine_tech = 1
+  PARAM.MARINESCRIPT = "",
+  PARAM.marine_closets = 0,
+  PARAM.marine_marines = 0,
+  PARAM.marine_tech = 1,
 
-  for name,opt in pairs(self.options) do
+  for name,opt in pairs(pairs(self.options)) do
     local value = self.options[name].value
     PARAM[name] = value
   end
@@ -1372,7 +1372,7 @@ function MARINE_CLOSET_TUNE.calc_closets()
     end
 
     if PARAM.m_c_tech == "vlow" then
-      PARAM.marine_tech = 1
+      PARAM.marine_tech = 1,
     elseif PARAM.m_c_tech == "low" then
       PARAM.marine_tech = rand.irange(1,3)
     elseif PARAM.m_c_tech == "mid" then
@@ -1380,14 +1380,14 @@ function MARINE_CLOSET_TUNE.calc_closets()
     elseif PARAM.m_c_tech == "high" then
       PARAM.marine_tech = rand.irange(8,9)
     elseif PARAM.m_c_tech == "rng" then
-      PARAM.marine_tech = 99
+      PARAM.marine_tech = 99,
     elseif PARAM.m_c_tech == "bfg" then
-      PARAM.marine_tech = 66
+      PARAM.marine_tech = 66,
     elseif PARAM.m_c_tech == "prog" then
       if LEVEL.game_along < 1.0 then
         PARAM.marine_tech = math.ceil(LEVEL.game_along * 10)
       else
-        PARAM.marine_tech = 10
+        PARAM.marine_tech = 10,
       end
     end
 
@@ -1397,14 +1397,14 @@ function MARINE_CLOSET_TUNE.calc_closets()
 
   local info =
   {
-    kind = "marine_closet"
-    min_count = 1
+    kind = "marine_closet",
+    min_count = 1,
     max_count = PARAM.marine_closets
     not_start = true
-    min_prog = 0
-    max_prog = 1
-    level_prob = 100
-  }
+    min_prog = 0,
+    max_prog = 1,
+    level_prob = 100,
+  },
 
   if PARAM.level_has_marine_closets then
     table.insert(LEVEL.secondary_importants, info)
@@ -1416,7 +1416,7 @@ function MARINE_CLOSET_TUNE.grab_type()
 end
 
 function MARINE_CLOSET_TUNE.randomize_count()
-   if PARAM.m_c_m_type != "default" then return end
+   if PARAM.m_c_m_type ~= "default" then return end
    local rngmin = math.min(tonumber(PARAM.m_c_m_min),tonumber(PARAM.m_c_m_max))
    local rngmax = math.max(tonumber(PARAM.m_c_m_min),tonumber(PARAM.m_c_m_max))
    PARAM.marine_marines = rand.irange(rngmin,rngmax)
@@ -1458,7 +1458,7 @@ function MARINE_CLOSET_TUNE.all_done()
     scripty = string.gsub(scripty, "WSTATE", MARINE_CLOSET_TUNE.TEMPLATES.WAKER4)
   end
 
-  if PARAM.m_c_ff != "yes" then
+  if PARAM.m_c_ff ~= "yes" then
     scripty = scripty .. MARINE_CLOSET_TUNE.TEMPLATES.PROJREP
     scripty = string.gsub(scripty, "\"BulletPuff\"", "\"BulletPuffAIMarine\"")
     scripty = string.gsub(scripty, "\"PlasmaBall\"", "\"PlasmaBallAIMarine\"")
@@ -1490,7 +1490,7 @@ function MARINE_CLOSET_TUNE.all_done()
   PARAM.MARINESCRIPT = PARAM.MARINESCRIPT .. scripty
   PARAM.MARINEMAPINFO = MARINE_CLOSET_TUNE.MAPINFO
 
-  if PARAM.m_c_color != "MarAI1" then
+  if PARAM.m_c_color ~= "MarAI1" then
     PARAM.MARINETRNSLATE = MARINE_CLOSET_TUNE.TRNSLATE
   end
 end
@@ -1499,17 +1499,17 @@ OB_MODULES["gzdoom_marine_closets"] =
 {
   label = _("[Exp]GZDoom Marine Closets")
 
-  game = "doomish"
+  game = "doomish",
 
-  side = "right"
-  priority = 93
+  side = "right",
+  priority = 93,
 
   hooks =
   {
     setup = MARINE_CLOSET_TUNE.setup
     begin_level = MARINE_CLOSET_TUNE.calc_closets
     all_done = MARINE_CLOSET_TUNE.all_done
-  }
+  },
 
   tooltip=_(
     "[WIP/Experimental]This module adds customizable closets to the map filled with friendly ai marines.")
@@ -1524,7 +1524,7 @@ OB_MODULES["gzdoom_marine_closets"] =
       choices = MARINE_CLOSET_TUNE.CHANCE,
       default = "100",
       tooltip = "Chance per map of marine closets spawning at all. E.G. at 50% theres 50% chance of each map being empty of marine closets.",
-    }
+    },
 
     m_c_min =
     {
@@ -1534,7 +1534,7 @@ OB_MODULES["gzdoom_marine_closets"] =
       choices = MARINE_CLOSET_TUNE.COUNT,
       default = "1",
       tooltip = "Sets least amount of closets that can spawn per map.",
-    }
+    },
 
     m_c_max =
     {
@@ -1544,7 +1544,7 @@ OB_MODULES["gzdoom_marine_closets"] =
       choices = MARINE_CLOSET_TUNE.COUNT,
       default = "2",
       tooltip = "Sets most amount of closets that can spawn per map.",
-    }
+    },
 
     m_c_type =
     {
@@ -1558,7 +1558,7 @@ OB_MODULES["gzdoom_marine_closets"] =
       "Progressive: Goes from min to max through entire game\n" ..
       "Episodic: Goes from min to max through episode\n" ..
       "Regressive/Regressive episodic: Goes from max to min through game or episode" ,
-    }
+    },
 
     m_c_m_min =
     {
@@ -1568,7 +1568,7 @@ OB_MODULES["gzdoom_marine_closets"] =
       choices = MARINE_CLOSET_TUNE.COUNT,
       default = "1",
       tooltip = "Sets least amount of marines that can spawn per closet.",
-    }
+    },
 
     m_c_m_max =
     {
@@ -1578,7 +1578,7 @@ OB_MODULES["gzdoom_marine_closets"] =
       choices = MARINE_CLOSET_TUNE.COUNT,
       default = "5",
       tooltip = "Sets most amount of marines that can spawn per closet.",
-    }
+    },
 
     m_c_m_type =
     {
@@ -1592,7 +1592,7 @@ OB_MODULES["gzdoom_marine_closets"] =
       "Progressive: Goes from min to max through entire game\n" ..
       "Episodic: Goes from min to max through episode\n" ..
       "Regressive/Regressive episodic: Goes from max to min through game or episode" ,
-    }
+    },
 
     m_c_tech =
     {
@@ -1609,7 +1609,7 @@ OB_MODULES["gzdoom_marine_closets"] =
       "Mix it up: Any weapon goes, let the dice decide!\n" ..
       "BFG Fiesta: BFG only, cyberdemons beware!\n" ..
       "Progressive: Marines start with pistols and get more powerful weapons through episode/megawad",
-    }
+    },
 
     m_c_power =
     {
@@ -1619,7 +1619,7 @@ OB_MODULES["gzdoom_marine_closets"] =
       choices = MARINE_CLOSET_TUNE.YN,
       default = "yes",
       tooltip = "Influences whether marines are as accurate and rapid firing as player, or are weaker.",
-    }
+    },
 
     m_c_follow =
     {
@@ -1630,7 +1630,7 @@ OB_MODULES["gzdoom_marine_closets"] =
       default = "no",
       tooltip = "By default marines try to follow the player if they have nothing else to do but would otherwise prioritize chasing enemies, and are also unable to follow player through rough terrain.\n" ..
       "If this is enabled marines will much harder prioritize following player and will teleport if they are too far away.",
-    }
+    },
 
     m_c_health =
     {
@@ -1640,7 +1640,7 @@ OB_MODULES["gzdoom_marine_closets"] =
       choices = MARINE_CLOSET_TUNE.HEALTH,
       default = "100",
       tooltip = "Influences how much damage marines can take before dying.",
-    }
+    },
 
     m_c_waker =
     {
@@ -1654,7 +1654,7 @@ OB_MODULES["gzdoom_marine_closets"] =
       "Range: Closet activates when player is close enough, even if behind wall.\n" ..
       "Close Range: same as range except requires player to be really really close.\n" ..
       "Map Start: Closets are active on map start.",
-    }
+    },
 
     m_c_quantity =
     {
@@ -1664,7 +1664,7 @@ OB_MODULES["gzdoom_marine_closets"] =
       choices = MARINE_CLOSET_TUNE.QUANTITY,
       default = "default",
       tooltip = "Influences amount of monsters in rooms with a marine closet.",
-    }
+    },
 
     m_c_strength =
     {
@@ -1674,7 +1674,7 @@ OB_MODULES["gzdoom_marine_closets"] =
       choices = MARINE_CLOSET_TUNE.STRENGTH,
       default = "default",
       tooltip = "If set, this strength setting is used in the room with marine closet instead of normal one.",
-    }
+    },
     m_c_ff =
     {
       name = "m_c_ff",
@@ -1685,7 +1685,7 @@ OB_MODULES["gzdoom_marine_closets"] =
       tooltip = "By default marines do no damage to player. However that means their use their own version of puffs and projectiles.\n" ..
       "If this is enabled marines can damage player and original puffs and projectiles are used making them affected by mods that replace those.\n"..
       "Additionally if self damage variant is chosen marines can still get hurt by exploding barrels and such",
-    }
+    },
     m_c_sprites =
     {
       name = "m_c_sprites",
@@ -1696,7 +1696,7 @@ OB_MODULES["gzdoom_marine_closets"] =
       tooltip = "By default marines use default player sprite.\n" ..
       "If this is enabled, marines will use special sprites according to weapon they carry.\n" ..
       "With merge option sprites will be merged into oblige wad, otherwise they need to be loaded separately.",
-    }
+    },
     m_c_boss =
     {
       name = "m_c_boss",
@@ -1705,7 +1705,7 @@ OB_MODULES["gzdoom_marine_closets"] =
       choices = MARINE_CLOSET_TUNE.YN,
       default = "no",
       tooltip = "Allows or disallows marine closets to spawn on gotchas and boss generator levels.",
-    }
+    },
     m_c_color =
     {
       name = "m_c_color",
@@ -1714,6 +1714,6 @@ OB_MODULES["gzdoom_marine_closets"] =
       choices = MARINE_CLOSET_TUNE.COLORS,
       default = "MarAI1",
       tooltip = "Lets you choose the color of marines, including option for random color per marine.",
-    }
-  }
-}
+    },
+  },
+},

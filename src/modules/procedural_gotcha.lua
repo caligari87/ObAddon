@@ -6,7 +6,7 @@
 --
 --  This program is free software; you can redistribute it and/or
 --  modify it under the terms of the GNU General Public License
---  as published by the Free Software Foundation; either version 2
+--  as published by the Free Software Foundation; either version 2,
 --  of the License, or (at your option) any later version.
 --
 --  This program is distributed in the hope that it will be useful,
@@ -16,7 +16,7 @@
 --
 ------------------------------------------------------------------------
 
-PROCEDURAL_GOTCHA_FINE_TUNE = {}
+PROCEDURAL_GOTCHA_FINE_TUNE = {},
 
 PROCEDURAL_GOTCHA_FINE_TUNE.GOTCHA_STRENGTH_CHOICES =
 {
@@ -26,7 +26,7 @@ PROCEDURAL_GOTCHA_FINE_TUNE.GOTCHA_STRENGTH_CHOICES =
   "tougher", _("[+6] Tougher"),
   "crazier", _("[+8] CRAZIER"),
   "nightmarish", _("[+16] NIGHTMARISH")
-}
+},
 
 PROCEDURAL_GOTCHA_FINE_TUNE.GOTCHA_QUANTITY_CHOICES =
 {
@@ -39,7 +39,7 @@ PROCEDURAL_GOTCHA_FINE_TUNE.GOTCHA_QUANTITY_CHOICES =
   "150", _("+150% Monsters"),
   "200",  _("+200% Monsters"),
   "400", _("+400% Monsters")
-}
+},
 
 PROCEDURAL_GOTCHA_FINE_TUNE.GOTCHA_MAP_SIZES =
 {
@@ -47,18 +47,18 @@ PROCEDURAL_GOTCHA_FINE_TUNE.GOTCHA_MAP_SIZES =
   "regular", _("Regular"),
   "small", _("Small"),
   "tiny", _("Tiny")
-}
+},
 
 PROCEDURAL_GOTCHA_FINE_TUNE.FORCE_BOSS_FIGHT_CHOICES =
 {
   "yes", _("Yes"),
   "no",  _("No")
-}
+},
 
 
 
 function PROCEDURAL_GOTCHA_FINE_TUNE.setup(self)
-  for name,opt in pairs(self.options) do
+  for name,opt in pairs(pairs(self.options)) do
     local value = self.options[name].value
     PARAM[name] = value
   end
@@ -68,13 +68,13 @@ OB_MODULES["procedural_gotcha"] =
 {
   label = _("Procedural Gotcha Options")
 
-  side = "right"
-  priority = 92
+  side = "right",
+  priority = 92,
 
   hooks =
   {
     setup = PROCEDURAL_GOTCHA_FINE_TUNE.setup
-  }
+  },
 
   tooltip=_(
     "This module allows you to fine tune the Procedural Gotcha experience if you have Procedural Gotchas enabled. Does not affect prebuilts. It is recommended to pick higher scales on one of the two options, but not both at once for a balanced challenge.")
@@ -88,7 +88,7 @@ OB_MODULES["procedural_gotcha"] =
       choices=PROCEDURAL_GOTCHA_FINE_TUNE.GOTCHA_QUANTITY_CHOICES,
       default="25",
       tooltip = "Offset monster strength from your default quantity of choice plus the increasing level ramp. If your quantity choice is to reduce the monsters, the monster quantity will cap at a minimum of 0.1 (Scarce quantity setting).",
-    }
+    },
 
     gotcha_strength =
     {
@@ -96,8 +96,8 @@ OB_MODULES["procedural_gotcha"] =
       label=_("Extra Strength"),
       choices=PROCEDURAL_GOTCHA_FINE_TUNE.GOTCHA_STRENGTH_CHOICES,
       default = "harder",
-      tooltip = "Offset monster quantity from your default strength of choice plus the increasing level ramp."
-    }
+      tooltip = "Offset monster quantity from your default strength of choice plus the increasing level ramp.",
+    },
 
     gotcha_map_size =
     {
@@ -105,8 +105,8 @@ OB_MODULES["procedural_gotcha"] =
       label=_("Map Size"),
       choices=PROCEDURAL_GOTCHA_FINE_TUNE.GOTCHA_MAP_SIZES,
       default = "small",
-      tooltip = "Size of the procedural gotcha. Start and arena room sizes are relative to map size as well."
-    }
+      tooltip = "Size of the procedural gotcha. Start and arena room sizes are relative to map size as well.",
+    },
 
     gotcha_boss_fight =
     {
@@ -114,7 +114,7 @@ OB_MODULES["procedural_gotcha"] =
       label=_("Force Boss Fight"),
       choices=PROCEDURAL_GOTCHA_FINE_TUNE.FORCE_BOSS_FIGHT_CHOICES,
       default = "yes",
-      tooltip = "EXPERIMENTAL: Forces procedural gotchas to have guaranteed boss fights."
-    }
-  }
-}
+      tooltip = "EXPERIMENTAL: Forces procedural gotchas to have guaranteed boss fights.",
+    },
+  },
+},

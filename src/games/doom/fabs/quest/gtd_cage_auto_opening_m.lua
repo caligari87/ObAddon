@@ -1,42 +1,42 @@
 PREFABS.Quest_Marine_auto_open =
 {
-  file   = "quest/gtd_cage_auto_opening_m.wad"
-  map    = "MAP01"
+  file   = "quest/gtd_cage_auto_opening_m.wad",
+  map    = "MAP01",
 
-  prob   = 500
+  prob   = 500,
 
-  theme  = "!hell"
+  theme  = "!hell",
 
-  where  = "seeds"
-  shape  = "U"
+  where  = "seeds",
+  shape  = "U",
 
-  seed_w = 2
-  seed_h = 2
+  seed_w = 2,
+  seed_h = 2,
 
-  deep   = 16
-  over   = -16
+  deep   = 16,
+  over   = -16,
 
-  kind = "sec_quest"
+  kind = "sec_quest",
 
-  group = "marine_closet"
+  group = "marine_closet",
 
-  mmin = 1
-  mmax = 10
+  mmin = 1,
+  mmax = 10,
 
-  x_fit = "frame"
-  y_fit = "top"
-}
+  x_fit = "frame",
+  y_fit = "top",
+},
 
 PREFABS.Quest_auto_open_smaller =
 {
-  template = "Quest_Marine_auto_open"
-  map      = "MAP02"
+  template = "Quest_Marine_auto_open",
+  map      = "MAP02",
 
-  theme    = "!hell"
+  theme    = "!hell",
 
-  seed_w = 2
-  seed_h = 2
+  seed_w = 2,
+  seed_h = 2,
 
-  x_fit  = { 80,96 , 160,176 }
-  y_fit  = { 48,80 }
-}
+  x_fit  = { 80,96 , 160,176 },
+  y_fit  = { 48,80 },
+},

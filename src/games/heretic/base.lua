@@ -9,7 +9,7 @@
 --
 --  This program is free software; you can redistribute it and/or
 --  modify it under the terms of the GNU General Public License
---  as published by the Free Software Foundation; either version 2
+--  as published by the Free Software Foundation; either version 2,
 --  of the License, or (at your option) any later version.
 --
 --  This program is distributed in the hope that it will be useful,
@@ -19,7 +19,7 @@
 --
 ------------------------------------------------------------------------
 
-HERETIC = { }
+HERETIC = { },
 
 
 gui.import("params")
@@ -41,21 +41,21 @@ gui.import("resources")
 OB_GAMES["heretic"] =
 {
   label = _("Heretic")
-  priority = 40
+  priority = 40,
 
-  format = "doom"
-  game_dir = "heretic"
-  iwad_name = "heretic.wad"
+  format = "doom",
+  game_dir = "heretic",
+  iwad_name = "heretic.wad",
 
   tables =
   {
     HERETIC
-  }
+  },
 
   hooks =
   {
     get_levels = HERETIC.get_levels
     all_done   = HERETIC.all_done
-  }
-}
+  },
+},
 

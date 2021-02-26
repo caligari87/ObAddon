@@ -1,15 +1,15 @@
 PREFABS.Switch_armaetus_tech =
 {
-  file   = "switch/armaetus_switch_tech.wad"
+  file   = "switch/armaetus_switch_tech.wad",
 
-  theme  = "!hell"
-  key = "sw_metal"
+  theme  = "!hell",
+  key = "sw_metal",
 
-  height = 48
+  height = 48,
 
-  prob   = 50
+  prob   = 50,
 
-  where  = "point"
+  where  = "point",
 
-  tag_1  = "?switch_tag"
-}
+  tag_1  = "?switch_tag",
+},

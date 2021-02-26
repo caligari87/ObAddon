@@ -7,12 +7,12 @@
 --  Copyright (C) 2020 Tapwave
 --  Copyright (C) 2020 Simon-v
 --  Copyright (C) 2020 EpicTyphlosion
---  Copyright (C) 2020 Beed28
+--  Copyright (C) 2020 Beed28,
 --  Adapted for Heretic by Dashodanger
 --
 --  This program is free software; you can redistribute it and/or
 --  modify it under the terms of the GNU General Public License
---  as published by the Free Software Foundation; either version 2
+--  as published by the Free Software Foundation; either version 2,
 --  of the License, or (at your option) any later version.
 --
 --  This program is distributed in the hope that it will be useful,
@@ -90,20 +90,20 @@ Notes and Tips:
   down to the story chunk pieces. This will make it easier to navigate.
 ]]
 
-ZDOOM_STORIES_HERETIC = { }
+ZDOOM_STORIES_HERETIC = { },
 
 ZDOOM_STORIES_HERETIC.LIST =
 {
   -- common stories
-  i_challenge_you_to_a_duel = 100
-  found_this_weird_magical_mcguffin = 60
-  the_avenger = 40
+  i_challenge_you_to_a_duel = 100,
+  found_this_weird_magical_mcguffin = 60,
+  the_avenger = 40,
 
   -- rare stories
-  deus_ex_machina = 6
-  knock_knock_joke = 2
-  oblige_history = 2
-}
+  deus_ex_machina = 6,
+  knock_knock_joke = 2,
+  oblige_history = 2,
+},
 
 ZDOOM_STORIES_HERETIC.STORIES =
 {
@@ -125,7 +125,7 @@ ZDOOM_STORIES_HERETIC.STORIES =
       It shudders and shakes. A pair of searing red eyes open
       from the inky surface. It speaks:
       "I am _RAND_DEMON the King of _CASTLE_LEVEL.
-      You have entered my realm. I shall deal with you accordingly."
+      You have entered my realm. I shall deal with you accordingly.",
       The shadow fades away.]],
 
       -- I seeeee youuuuu
@@ -139,7 +139,7 @@ ZDOOM_STORIES_HERETIC.STORIES =
       [["You!" a bellowing voice beckons. You cannot scry the source, but
       its speech continues. "You have scarred me before. You do not remember
       me, but soon you will. I am _RAND_DEMON the _EVULZ. I shall inflict
-      pain on you as you had on me. I will tear you limb from limb."
+      pain on you as you had on me. I will tear you limb from limb.",
       You sense a powerful aura some distance away. You know what
       to do.]],
 
@@ -150,7 +150,7 @@ ZDOOM_STORIES_HERETIC.STORIES =
       do not take kindly to you. But I, _RAND_DEMON of _CASTLE_LEVEL, will
       greet you with glee. Come and enter." The figure dissolves back into the viscera.]]
 
-    }
+    },
 
     conclusions =
     {
@@ -158,7 +158,7 @@ ZDOOM_STORIES_HERETIC.STORIES =
       -- the escape
       [[As a critical hit falls upon the demon's body, _RAND_DEMON
       stutters. "This is not how it ends, mortal! I will return
-      and feast upon your soul!"
+      and feast upon your soul!",
       _SPACE
       The creature quickly steps into a newly opened portal behind
       it, and dissipates.
@@ -168,11 +168,11 @@ ZDOOM_STORIES_HERETIC.STORIES =
       [[As _RAND_DEMON falls, its body explodes into a cloud of
       darkness, and slowly fades. An ethereal voice speaks.
       "You have returned me to the void, mortal. Your strength
-      is admirable but remember: the Dark Lords are watching you."
+      is admirable but remember: the Dark Lords are watching you.",
       The voice fades.]]
 
-    }
-  }
+    },
+  },
 
   deus_ex_machina =
   {
@@ -187,7 +187,7 @@ ZDOOM_STORIES_HERETIC.STORIES =
       of creatures rigorously continue their defense and it seems
       their numbers are unending. You decide to fight on, however
       bleak the circumstance.]],
-    }
+    },
     conclusions =
     {
       [[Despite your great effort, the enemy has surrounded
@@ -210,8 +210,8 @@ ZDOOM_STORIES_HERETIC.STORIES =
       "You'll need all the help you can get." _RAND_CONTRIBUTOR
       turns back and leaves, while gesturing at you to keep up
       the good fight.]]
-    }
-  }
+    },
+  },
 
   found_this_weird_magical_mcguffin =
   {
@@ -231,7 +231,7 @@ ZDOOM_STORIES_HERETIC.STORIES =
       into your bag, the glpyhs fade into nothingness and the room becomes
       deathly silent. You are unsure of the relic's purpose, but decide that
       it is safer in your keeping.]]
-    }
+    },
 
     conclusions =
     {
@@ -256,8 +256,8 @@ ZDOOM_STORIES_HERETIC.STORIES =
       "You have something that belongs to us....know that we will return
       to take it from your dead hands, mortal." The voice fades. It seems
       they were after _MCGUFFIN_MAGICAL. It's better off in your possession.]]
-    }
-  }
+    },
+  },
 
   the_avenger =
   {
@@ -267,7 +267,7 @@ ZDOOM_STORIES_HERETIC.STORIES =
       [[You find a warrior slumped against the wall, battered and bloodied.
       His armor is torn from claws marks but he is still alive. "Hey, you!
       I don't have much time left! That creature, _RAND_DEMON did this to me.
-      I want you to... to make that foul scum pay."
+      I want you to... to make that foul scum pay.",
       Life escapes the warrior's eyes.
       You raise a cairn of stones over the poor soul and swear
       vengeance upon _RAND_DEMON.]],
@@ -278,7 +278,7 @@ ZDOOM_STORIES_HERETIC.STORIES =
       Amongst the carnage is a raised hand. One of them is still alive.
       You approach.
       _SPACE
-      "Please. Help... please help me... _RAND_DEMON killed everyone..."
+      "Please. Help... please help me... _RAND_DEMON killed everyone...",
       The woman's body is utterly crushed.
       She utters her last words and her hand falls to the ground. _RAND_DEMON will
       not see another sunrise...]],
@@ -288,17 +288,17 @@ ZDOOM_STORIES_HERETIC.STORIES =
       are strewn with blood. "A moment, hero." He backs to a wall, gripping his arm.
       "The Council, they made us summon _RAND_DEMON. It was an attempt to
       subjugate a demon for their own ends, but it escaped the ritual circle,
-      killing everyone! I am the only one left. You have to take it down!"
+      killing everyone! I am the only one left. You have to take it down!",
       You feel anger, but lecturing the mage would not solve anything.
       You offer a potion but the mage refuses. "No, I'll pay the price for my
       folly...just take that creature down." You nod and leave.]],
-    }
+    },
 
     conclusions =
     {
-      -- STFU part 2
+      -- STFU part 2,
       [[As _RAND_DEMON's body falls to the floor, you step over its chest.
-      "Mortal! Your transgressions will not be forgo-"
+      "Mortal! Your transgressions will not be forgo-",
       _SPACE
       You silence the creature by planting your staff right between its eyes.
       A gaping maw of blood, guts, and what was probably an eyeball
@@ -306,14 +306,14 @@ ZDOOM_STORIES_HERETIC.STORIES =
 
       -- put a sock in it
       [[_RAND_DEMON curses you as its body crumbles. "No! This is not
-      your victory, mortal! With the last of my power, I will-"
+      your victory, mortal! With the last of my power, I will-",
       _SPACE
       You stuff a nearby pod into its mouth. A blast from your wand
       detonates it, scattering blood and debris around the
       room. Vengeance has been achieved. You escape the area.]],
 
-    }
-  }
+    },
+  },
 
   -- Summarized OBLIGE history
   oblige_history =
@@ -321,14 +321,14 @@ ZDOOM_STORIES_HERETIC.STORIES =
     hooks = {
       [[Once upon a time a man named Andrew Apted with a knack for
       programming developed a basic map generator in 2005, but it
-      was crude and written only in C++. It is 2007 now and V2
+      was crude and written only in C++. It is 2007 now and V2,
       of OBLIGE was released to the public with positive response
       from the Doom community.
       _SPACE
       V3 proved to be a big step over V2 in 2009, with a huge
       rewrite of the design, plus many new features over the
       previous version.]]
-    }
+    },
 
     conclusions = {
       [[V4 and V5 have proven to be unwieldy and experimental
@@ -338,8 +338,8 @@ ZDOOM_STORIES_HERETIC.STORIES =
       prefabs from WAD files, opening up near infinite customization.
       _SPACE
       We thank you for this program, Andrew! ]]
-    }
-  }
+    },
+  },
 
   knock_knock_joke =
   {
@@ -349,7 +349,7 @@ ZDOOM_STORIES_HERETIC.STORIES =
       [[Wanna hear a joke?
       _SPACE
       Knock knock. Who's there?]],
-    }
+    },
 
     conclusions = {
       [[ME! ME! ME! ME! ME! ME! HAHAHAHAHAAA!]],
@@ -361,9 +361,9 @@ ZDOOM_STORIES_HERETIC.STORIES =
       [[It's _RAND_DEMON! Oh noes! ]],
 
       [[It's...._CASTLE_LEVEL?? How the fuck is this possible? ]],
-    }
-  }
-}
+    },
+  },
+},
 
 -- TapWave-TODO:
 -- Plz help proof-read! -MSSP
@@ -385,9 +385,9 @@ ZDOOM_STORIES_HERETIC.SECRET_TEXTS =
     distance leave no room for doubt.
     _SPACE
     You grin and ready your wand. It's time to clear this place out.]]
-  }
+  },
 
-}
+},
 
 ZDOOM_STORIES_HERETIC.EVIL_TITLES =
 {
@@ -415,7 +415,7 @@ ZDOOM_STORIES_HERETIC.EVIL_TITLES =
   Atrocious=5,
   Auger=5,
   Avaricious=5,
-  Avulsor=5, -- See definition: "Avulsion"
+  Avulsor=5, -- See definition: "Avulsion",
   Axe=5,
   Baleful=5,
   Bandit=5,
@@ -651,7 +651,7 @@ ZDOOM_STORIES_HERETIC.EVIL_TITLES =
   Pestilent=5,
   Pillager=5,
   Plagued=5,
-  Planeswalker=5
+  Planeswalker=5,
   Plunderer=5,
   Poisoner=5,
   Preceptor=5,
@@ -852,7 +852,7 @@ ZDOOM_STORIES_HERETIC.EVIL_TITLES =
   ["Lich-king"]=5,
   ["Lie Weaver"]=5,
   ["Life-drinker"]=5,
-  ["Living Siege Engine"]=5, --see "Siegebreaker Assault Beast"
+  ["Living Siege Engine"]=5, --see "Siegebreaker Assault Beast",
   ["Lost Sinner"]=5, -- Dark Souls
   ["Lost Templar"]=5,
   ["Mad-eye"]=5,
@@ -896,7 +896,7 @@ ZDOOM_STORIES_HERETIC.EVIL_TITLES =
   ["Whore of Babylon"]=5,
   ["Woe to Man"]=5,
   ["World Ender"]=5,
-}
+},
 
 ZDOOM_STORIES_HERETIC.MCGUFFINS =
 {
@@ -922,8 +922,8 @@ ZDOOM_STORIES_HERETIC.MCGUFFINS =
     ["a sinister looking ring"]=5,
     ["a small, sigil inscripted bust"]=5,
     ["an inscripted bust of Razorfist"]=5, --LMFAO
-  }
-}
+  },
+},
 
 --[[ZDOOM_STORIES_HERETIC.ENTITIES =
 {
@@ -991,7 +991,7 @@ ZDOOM_STORIES_HERETIC.MCGUFFINS =
     ["ZENITH-1X"]=5,
     ["FATHER-79"]=5, -- Antonym of ship AI in movie Alien in 1979, which was named "Mother". Homage!
     HEXUS=5,
-    VEGA=5, -- Doom 2016
+    VEGA=5, -- Doom 2016,
     ICARUS=5, -- Deus Ex
     DAEDALUS=5, -- Deus Ex
     MORPHEUS=5, -- Deus Ex
@@ -1003,8 +1003,8 @@ ZDOOM_STORIES_HERETIC.MCGUFFINS =
     CEREBRO=5, -- X-Men
     COLOSSUS=5,
     ZERO=5,
-  }
-}
+  },
+},
 
 ZDOOM_STORIES_HERETIC.INSTALLATIONS =
 {
@@ -1014,9 +1014,9 @@ ZDOOM_STORIES_HERETIC.INSTALLATIONS =
   ["command control"] = 5,
   ["communications center"] = 5,
   ["experimental weapons center"] = 5,
-  ["foundry"] = 5, -- Doom 2016
+  ["foundry"] = 5, -- Doom 2016,
   ["high security laboratory"] = 5,
-  hydroponics = 5, -- System Shock 2
+  hydroponics = 5, -- System Shock 2,
   ["power plant"] = 5,
   ["research laboratory"] = 5,
   ["testing facility"] = 5,
@@ -1047,7 +1047,7 @@ ZDOOM_STORIES_HERETIC.QUIT_MESSAGES =
   [[Hold up, are you just going to leave like this?]],
   [[We're still going to be here, just go. It may not be as nice when you come back.]],
   [[_RAND_CONTRIBUTOR is disappointed in you. Hit N now or face retribution.]],
-  [[He who is not bold enough to be stared at from across the abyss is not bold enough to stare into it himself.]], -- Silent Hill 2
+  [[He who is not bold enough to be stared at from across the abyss is not bold enough to stare into it himself.]], -- Silent Hill 2,
   [[In the end, there is only death, chaos and more death. And cookies.]],
   [[Remember, a good demon is a dead one. Make that happen!]],
   [[Heroes, press N. Wimps, press Y.]], -- Wolfenstein 3D
@@ -1095,4 +1095,4 @@ ZDOOM_STORIES_HERETIC.QUIT_MESSAGES =
 
   -- other important facts, just facts no silly stuff
   [[This is an actual line of code in Oblige:\n `if not is_big(mon) then has_small = true end`]],
-}
+},

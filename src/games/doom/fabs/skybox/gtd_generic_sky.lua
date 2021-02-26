@@ -1,14 +1,14 @@
 PREFABS.Skybox_generic =
 {
-  file  = "skybox/gtd_generic_sky.wad"
-  map   = "MAP01"
+  file  = "skybox/gtd_generic_sky.wad",
+  map   = "MAP01",
 
-  prob  = 50
+  prob  = 50,
 
-  where = "point"
+  where = "point",
 
-  kind  = "skybox"
+  kind  = "skybox",
 
-  bound_z1 = -256
-  bound_z2 = 256
-}
+  bound_z1 = -256,
+  bound_z2 = 256,
+},

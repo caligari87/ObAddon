@@ -1,37 +1,37 @@
 PREFABS.Item_gtd_lowering_skin_cage =
 {
-  file   = "item/gtd_lowering.wad"
-  map    = "MAP01"
+  file   = "item/gtd_lowering.wad",
+  map    = "MAP01",
 
-  theme  = "hell"
+  theme  = "hell",
 
-  prob   = 150
-  key    = "barred"
-  item_kind = "key"
+  prob   = 150,
+  key    = "barred",
+  item_kind = "key",
 
-  where  = "point"
-  height = 116
+  where  = "point",
+  height = 116,
 
-  tag_1  = "?door_tag"
-  door_action = "S1_LowerFloor"
-}
+  tag_1  = "?door_tag",
+  door_action = "S1_LowerFloor",
+},
 
 PREFABS.Item_gtd_lowering_uac_cage =
 {
-  template = "Item_gtd_lowering_skin_cage"
-  map      = "MAP02"
+  template = "Item_gtd_lowering_skin_cage",
+  map      = "MAP02",
 
-  theme = "tech"
+  theme = "tech",
 
-  height = 88
-}
+  height = 88,
+},
 
 PREFABS.Item_gtd_lowering_wood_cage =
 {
-  template = "Item_gtd_lowering_skin_cage"
-  map      = "MAP03"
+  template = "Item_gtd_lowering_skin_cage",
+  map      = "MAP03",
 
-  theme    = "urban"
+  theme    = "urban",
 
-  height   = 48
-}
+  height   = 48,
+},

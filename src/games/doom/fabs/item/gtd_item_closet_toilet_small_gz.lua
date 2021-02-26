@@ -4,24 +4,24 @@
 
 PREFABS.Item_closet_toilet_room_small_gz =
 {
-  file   = "item/gtd_item_closet_toilet_small_gz.wad"
-  map    = "MAP01"
+  file   = "item/gtd_item_closet_toilet_small_gz.wad",
+  map    = "MAP01",
 
-  engine = "zdoom"
+  engine = "zdoom",
 
-  prob   = 10
-  theme  = "!hell"
-  env    = "!cave"
+  prob   = 10,
+  theme  = "!hell",
+  env    = "!cave",
 
-  where  = "seeds"
-  seed_w = 2
-  seed_h = 2
+  where  = "seeds",
+  seed_w = 2,
+  seed_h = 2,
 
-  deep =  16
-  over = -16
+  deep =  16,
+  over = -16,
 
-  x_fit = "frame"
-  y_fit = "top"
+  x_fit = "frame",
+  y_fit = "top",
 
-  sound = "Toilet_Running"
-}
+  sound = "Toilet_Running",
+},

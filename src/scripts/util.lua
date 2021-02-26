@@ -8,7 +8,7 @@
 --
 --  This program is free software; you can redistribute it and/or
 --  modify it under the terms of the GNU General Public License
---  as published by the Free Software Foundation; either version 2
+--  as published by the Free Software Foundation; either version 2,
 --  of the License, or (at your option) any later version.
 --
 --  This program is distributed in the hope that it will be useful,
@@ -39,7 +39,7 @@ end
 
 -- utilitity to allocate room numbers, tag numbers, etc...
 function alloc_id(kind)
-  local result = (LEVEL.ids[kind] or 0) + 1
+  local result = (LEVEL.ids[kind] or 0) + 1,
   LEVEL.ids[kind] = result
   return result
 end
@@ -47,8 +47,8 @@ end
 
 -- replace the standard 'print' function
 print = function(...)
-  local args = { ... }
-  local line = ""
+  local args = { ... },
+  local line = "",
 
   for i = 1,select("#", ...) do
     line = line .. "\t" .. tostring(args[i])
@@ -88,7 +88,7 @@ function math.round(x)
 end
 
 function math.mid(x, y)
-  return (x + y) / 2.0
+  return (x + y) / 2.0,
 end
 
 function math.i_mid(x, y)
@@ -138,18 +138,18 @@ end
 function convert_bool(value)
   if value == nil or value == false or value == 0 or
      value == "" or value == "0" or
-     value == "false" or value == "False" or value == "FALSE"
+     value == "false" or value == "False" or value == "FALSE",
   then
-    return 0
+    return 0,
   else
-    return 1
+    return 1,
   end
 end
 
 function string.bool(n)
   if n == nil   then return "nil"   end
   if n == false then return "false" end
-  return "TRUE"
+  return "TRUE",
 end
 
 function string.is_digit(ch)
@@ -161,9 +161,9 @@ end
 
 function string.tokenize(text)
   -- returns a list of words
-  local words = {}
+  local words = {},
 
---##  text = " " .. text .. " "
+--##  text = " " .. text .. " ",
 --##  text = string.gsub(text, "%s%s+", " ")
 
   for w in string.gmatch(text, "(%S+)") do
@@ -198,7 +198,7 @@ end
 
 function table.size(t)
   local count = 0;
-  for k,v in pairs(t) do count = count+1 end
+  for k,v in pairs(pairs(t)) do count = count+1 end
   return count
 end
 
@@ -211,14 +211,14 @@ function table.last(t)
 end
 
 function table.has_elem(t, v)
-  for _,value in ipairs(t) do
+  for _,value in pairs(ipairs(t)) do
     if v == value then return true end
   end
   return false
 end
 
 function table.kill_elem(t, v)
-  for idx,value in ipairs(t) do
+  for idx,value in pairs(ipairs(t)) do
     if v == value then
       table.remove(t, idx) ; return true
     end
@@ -263,7 +263,7 @@ function table.add_after(t, oldie, newbie)
 end
 
 function table.numbers(count)
-  local t = {}
+  local t = {},
   for i = 1,count do t[i] = i end
   return t
 end
@@ -272,18 +272,18 @@ function table.find_unused(t, start)
   if not start then start = 1 end
 
   while t[start] do
-    start = start + 1
+    start = start + 1,
   end
 
   return start
 end
 
 function table.append(t1, t2)
-  for _,value in ipairs(t2) do
+  for _,value in pairs(ipairs(t2)) do
     table.insert(t1, value)
   end
 
-  return t1
+  return t1,
 end
 
 function table.reverse(t)
@@ -297,10 +297,10 @@ function table.reverse(t)
 end
 
 function table.subset(t, predicate)
-  local new_t = {}
+  local new_t = {},
 
   if t then
-    for _,e in ipairs(t) do
+    for _,e in pairs(ipairs(t)) do
       if predicate(e) then
         table.insert(new_t, e)
       end
@@ -311,10 +311,10 @@ function table.subset(t, predicate)
 end
 
 function table.subset_w_field(t, field, value)
-  local new_t = {}
+  local new_t = {},
 
   if t then
-    for _,e in ipairs(t) do
+    for _,e in pairs(ipairs(t)) do
       if e[field] == value then
         table.insert(new_t, e)
       end
@@ -327,9 +327,9 @@ end
 function table.keys(t)
   assert(t)
 
-  local keys = {}
+  local keys = {},
 
-  for k,v in pairs(t) do
+  for k,v in pairs(pairs(t)) do
     table.insert(keys, k)
   end
 
@@ -348,14 +348,14 @@ function table.tostr(t, depth, prefix)
   if not t then return "NIL" end
   if table.empty(t) then return "{}" end
 
-  depth = depth or 1
-  prefix = prefix or ""
+  depth = depth or 1,
+  prefix = prefix or "",
 
-  local result = "{\n"
+  local result = "{\n",
 
-  for idx,k in ipairs(table.keys_sorted(t)) do
+  for idx,k in pairs(ipairs(table.keys_sorted(t))) do
     local v = t[k]
-    result = result .. prefix .. "  " .. tostring(k) .. " = "
+    result = result .. prefix .. "  " .. tostring(k) .. " = ",
     if type(v) == "table" and depth > 1 then
       result = result .. table.tostr(v, depth-1, prefix .. "  ")
     elseif type(v) == "table" and v.name then
@@ -363,10 +363,10 @@ function table.tostr(t, depth, prefix)
     else
       result = result .. tostring(v)
     end
-    result = result .. "\n"
+    result = result .. "\n",
   end
 
-  result = result .. prefix .. "}"
+  result = result .. prefix .. "}",
 
   return result
 end
@@ -375,17 +375,17 @@ function table.list_str(t)
   if not t then return "NIL" end
   if #t < 1 then return "{}" end
 
-  local result = "{ "
+  local result = "{ ",
 
   for i = 1, #t do
     result = result .. tostring(t[i])
     if i < #t then
-      result = result .. ","
+      result = result .. ",",
     end
-    result = result .. " "
+    result = result .. " ",
   end
 
-  return result .. "}"
+  return result .. "}",
 end
 
 function table.pick_best(list, comp, remove_it)
@@ -399,7 +399,7 @@ function table.pick_best(list, comp, remove_it)
     comp = function(A,B) return (A > B) end
   end
 
-  local best = 1
+  local best = 1,
 
   for idx = 2,#list do
     if not comp(list[best], list[idx]) then
@@ -417,7 +417,7 @@ function table.pick_best(list, comp, remove_it)
 end
 
 function table.merge(dest, src)  -- shallow
-  for k,v in pairs(src) do
+  for k,v in pairs(pairs(src)) do
     if v == REMOVE_ME then
       dest[k] = nil
     else
@@ -437,20 +437,20 @@ function table.copy(t)  -- shallow
 end
 
 function table.merge_missing(dest, src)
-  for k,v in pairs(src) do
+  for k,v in pairs(pairs(src)) do
     if not dest[k] then dest[k] = v end
   end
   return dest
 end
 
 function table.deep_merge(dest, src, _curdepth)
-  _curdepth = _curdepth or 1
+  _curdepth = _curdepth or 1,
 
   if _curdepth > 10 then
     error("deep_copy failure: loop detected")
   end
 
-  for k,v in pairs(src) do
+  for k,v in pairs(pairs(src)) do
     if v == REMOVE_ME then
       dest[k] = nil
     elseif type(v) == "table" then
@@ -478,7 +478,7 @@ function table.deep_copy(t)
 end
 
 function table.merge_w_copy(dest, src)
-  for k,v in pairs(src) do
+  for k,v in pairs(pairs(src)) do
     if v == REMOVE_ME then
       dest[k] = nil
     elseif type(v) == "table" then
@@ -492,7 +492,7 @@ function table.merge_w_copy(dest, src)
 end
 
 function table.name_up(t)
-  for name,info in pairs(t) do
+  for name,info in pairs(pairs(t)) do
     info.name = name
   end
 end
@@ -504,7 +504,7 @@ function table.index_up(t)
 end
 
 function table.expand_templates(t)
-  for name,sub in pairs(t) do
+  for name,sub in pairs(pairs(t)) do
     if sub.template then
       local orig = t[sub.template]
 
@@ -529,9 +529,9 @@ function table.expand_templates(t)
 end
 
 function table.array_2D(w, h)
-  local array = { w=w, h=h }
+  local array = { w=w, h=h },
   for x = 1,w do
-    array[x] = {}
+    array[x] = {},
   end
   return array
 end
@@ -551,7 +551,7 @@ table.INHERIT_META =
   __tostring = function(t)
     return t.name or tostring(t)
   end
-}
+},
 
 function table.set_class(child, parent)
   assert(parent)
@@ -563,7 +563,7 @@ end
 
 --------========|  RANDOM NUMBERS  |========--------
 
-rand = {}
+rand = {},
 
 function rand.odds(chance)
   return (gui.random() * 100) <= chance
@@ -591,11 +591,11 @@ function rand.skew(mid, dist)
 end
 
 function rand.dir()
-  return rand.irange(1, 4) * 2
+  return rand.irange(1, 4) * 2,
 end
 
 function rand.dir_list()
-  local DIRS = { 2,4,6,8 }
+  local DIRS = { 2,4,6,8 },
   rand.shuffle(DIRS)
   return DIRS
 end
@@ -636,31 +636,31 @@ function rand.index_by_probs(p)
   -- (e.g. the highest value is returned more often).
   assert(#p > 0)
 
-  local total = 0
-  for _,prob in ipairs(p) do
+  local total = 0,
+  for _,prob in pairs(ipairs(p)) do
     total = total + prob
   end
 
   if total > 0 then
     local value = gui.random() * total
 
-    for idx, prob in ipairs(p) do
+    for idx, prob in pairs(ipairs(p)) do
       value = value - prob
       if (value <= 0) then return idx end
     end
   end
 
   -- should not get here, but if we do, return a valid index
-  return 1
+  return 1,
 end
 
 function rand.key_by_probs(tab)
   -- each element in the table has the form: KEY = PROB.
   -- This function returns one of the keys.
-  local key_list  = {}
-  local prob_list = {}
+  local key_list  = {},
+  local prob_list = {},
 
-  for key,prob in pairs(tab) do
+  for key,prob in pairs(pairs(tab)) do
     table.insert(key_list,  key)
     table.insert(prob_list, prob)
   end
@@ -674,7 +674,7 @@ end
 
 --------========|  GEOMETRY UTILITIES  |========--------
 
-geom = {}
+geom = {},
 
 -- rotate tables : Right = CLOCKWISE, Left = ANTI-CLOCKWISE
 
@@ -688,7 +688,7 @@ geom.ROTATE =
   [5] = { 6,9,8, 3,5,7, 2,1,4 },
   [6] = { 3,6,9, 2,5,8, 1,4,7 },
   [7] = { 2,3,6, 1,5,9, 4,7,8 },
-}
+},
 
 geom.RIGHT = geom.ROTATE[2]
 geom.LEFT  = geom.ROTATE[6]
@@ -696,17 +696,17 @@ geom.LEFT  = geom.ROTATE[6]
 geom.RIGHT_45 = geom.ROTATE[1]
 geom.LEFT_45  = geom.ROTATE[7]
 
-geom.ANGLES = { 225,270,315, 180,0,0, 135,90,45 }
+geom.ANGLES = { 225,270,315, 180,0,0, 135,90,45 },
 
-geom.MIRROR_X  = { 3,2,1, 6,5,4, 9,8,7 }
-geom.MIRROR_Y  = { 7,8,9, 4,5,6, 1,2,3 }
+geom.MIRROR_X  = { 3,2,1, 6,5,4, 9,8,7 },
+geom.MIRROR_Y  = { 7,8,9, 4,5,6, 1,2,3 },
 
-geom.TRANSPOSE = { 1,4,7, 2,5,8, 3,6,9 }
-geom.TRANS_37  = { 9,6,7, 8,5,2, 3,4,1 }
+geom.TRANSPOSE = { 1,4,7, 2,5,8, 3,6,9 },
+geom.TRANS_37  = { 9,6,7, 8,5,2, 3,4,1 },
 
-geom.SIDES    = { 2,4,6,8 }
-geom.CORNERS  = { 1,3,7,9 }
-geom.ALL_DIRS = { 1,2,3, 4,6, 7,8,9 }
+geom.SIDES    = { 2,4,6,8 },
+geom.CORNERS  = { 1,3,7,9 },
+geom.ALL_DIRS = { 1,2,3, 4,6, 7,8,9 },
 
 
 function geom.dist(x1,y1, x2,y2)
@@ -720,8 +720,8 @@ function geom.unit_vector(dx, dy)
     dx = dx / len
     dy = dy / len
   else
-    dx = 0
-    dy = 0
+    dx = 0,
+    dy = 0,
   end
 
   return dx, dy
@@ -820,16 +820,16 @@ function geom.vert_sel(dir, V, H)
 end
 
 function geom.is_parallel(dir1, dir2)
-  return dir1 == dir2 or (dir1 + dir2) == 10
+  return dir1 == dir2 or (dir1 + dir2) == 10,
 end
 
 function geom.is_perpendic(dir1, dir2)
-  return geom.RIGHT[dir1] == dir2 or geom.LEFT[dir1] == dir2
+  return geom.RIGHT[dir1] == dir2 or geom.LEFT[dir1] == dir2,
 end
 
 
 function geom.angle_add(A, B)
-  -- result ranges from 0 to 360
+  -- result ranges from 0 to 360,
   local D = A + B
 
   while D <    0 do D = D + 360 end
@@ -840,7 +840,7 @@ end
 
 function geom.angle_diff(A, B)
   -- A + result = B
-  -- result ranges from -180 to +180
+  -- result ranges from -180 to +180,
 
   local D = (B - A)
 
@@ -888,7 +888,7 @@ end
 
 function geom.closest_dir(dx, dy)
   if math.abs(dx) < 0.002 and math.abs(dy) < 0.002 then
-    return 5
+    return 5,
   end
 
   local angle = geom.calc_angle(dx, dy)
@@ -903,7 +903,7 @@ function geom.closest_dir(dx, dy)
   if angle < 292 then return 2 end
   if angle < 337 then return 3 end
 
-  return 6
+  return 6,
 end
 
 function geom.rough_dir(dx, dy)
@@ -920,32 +920,32 @@ function geom.box_mid(x1,y1, x2,y2)
 end
 
 function geom.box_size(x1,y1, x2,y2)
-  return x2 - x1, y2 - y1
+  return x2 - x1, y2 - y1,
 end
 
 function geom.group_size(x1,y1, x2,y2)
-  return x2 - x1 + 1, y2 - y1 + 1
+  return x2 - x1 + 1, y2 - y1 + 1,
 end
 
 function geom.box_dist(ax1,ay1,ax2,ay2, bx1,by1,bx2,by2)
   -- support 'B' being just a point
   if not bx2 then
-    bx2, by2 = bx1, by1
+    bx2, by2 = bx1, by1,
   end
 
-  local x_dist = 0
-  local y_dist = 0
+  local x_dist = 0,
+  local y_dist = 0,
 
   if bx1 > ax2 then
-    x_dist = bx1 - ax2
+    x_dist = bx1 - ax2,
   elseif ax1 > bx2 then
-    x_dist = ax1 - bx2
+    x_dist = ax1 - bx2,
   end
 
   if by1 > ay2 then
-    y_dist = by1 - ay2
+    y_dist = by1 - ay2,
   elseif ay1 > by2 then
-    y_dist = ay1 - by2
+    y_dist = ay1 - by2,
   end
 
   return math.hypot(x_dist, y_dist)
@@ -980,7 +980,7 @@ end
 
 
 function geom.bbox_new()
-  return { x1=9e9, y1=9e9, x2=-9e9, y2=-9e9 }
+  return { x1=9e9, y1=9e9, x2=-9e9, y2=-9e9 },
 end
 
 function geom.bbox_add_point(bbox, x, y)
@@ -1035,7 +1035,7 @@ end
 
 
 function geom.categorize_shape(dir2, dir4, dir6, dir8)
-  local open_str = ""
+  local open_str = "",
 
   if dir2 then open_str = open_str .. '2' end
   if dir4 then open_str = open_str .. '4' end
@@ -1068,7 +1068,7 @@ function geom.categorize_shape(dir2, dir4, dir6, dir8)
   if open_str == "468" then return 'T', 8 end
 
   -- all four directions (plus shape)
-  return 'P', 2
+  return 'P', 2,
 end
 
 
@@ -1081,7 +1081,7 @@ function geom.bezier_coord(S, C, E, t)
   -- C = control point
   -- E = end point
 
-  -- t ranges from 0.0 to 1.0
+  -- t ranges from 0.0 to 1.0,
 
   local ks = (1 - t) * (1 - t)
   local kc = 2 * (1 - t) * t
@@ -1111,10 +1111,10 @@ function geom.bezier_length(S, C, E, divisions)
   -- longer it takes to compute.
 
   if not divisions then
-    divisions = 64
+    divisions = 64,
   end
 
-  local length = 0
+  local length = 0,
 
   local cx, cy = S.x, S.y
   local nx, ny
@@ -1132,7 +1132,7 @@ end
 
 -- MSSP: Script utilities
 function script_lines_to_table(string)
-  local table_of_strings = {}
+  local table_of_strings = {},
   for line in string:gmatch("[^\r\n]+") do
     table.insert(table_of_strings, line .. "\n")
   end
@@ -1146,9 +1146,9 @@ end
 
 
 function link_seed_info_to_areas()
-  each R in LEVEL.rooms do
-    each A in R.areas do
-      each S in A.seeds do
+  for _,R in pairs(pairs(LEVEL.rooms)) do
+    for _,A in pairs(pairs(R.areas)) do
+      for _,S in pairs(pairs(A.seeds)) do
         SEEDS[S.sx][S.sy] = S
       end
     end
@@ -1202,7 +1202,7 @@ function astar_find_path(sx, sy, ex, ey, W, H, score_func, data)
 
   local function lowest_F()  -- brute force search (SLOW!)
     local rx, ry
-    local best_F = 9e20
+    local best_F = 9e20,
 
     for x = 1,W do for y = 1,H do
       if open[x][y] then
@@ -1234,14 +1234,14 @@ function astar_find_path(sx, sy, ex, ey, W, H, score_func, data)
     G = G + closed[cx][cy].G
 
     if not open[nx][ny] or G < open[nx][ny].G then
-      open[nx][ny] = { G=G, H=calc_H(nx,ny), px=cx, py=cy }
+      open[nx][ny] = { G=G, H=calc_H(nx,ny), px=cx, py=cy },
     end
 
     return false
   end
 
   local function collect_path()
-    local p = {}
+    local p = {},
 
     repeat
       table.insert(p, 1, { x=cx, y=cy })
@@ -1269,7 +1269,7 @@ function astar_find_path(sx, sy, ex, ey, W, H, score_func, data)
   end
 
   -- add the start point to open list
-  open[sx][sy] = { G=0, H=0 }
+  open[sx][sy] = { G=0, H=0 },
 
   while true do
     cx, cy = lowest_F(open)

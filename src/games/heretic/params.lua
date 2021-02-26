@@ -8,7 +8,7 @@
 --
 --  This program is free software; you can redistribute it and/or
 --  modify it under the terms of the GNU General Public License
---  as published by the Free Software Foundation; either version 2
+--  as published by the Free Software Foundation; either version 2,
 --  of the License, or (at your option) any later version.
 --
 --  This program is distributed in the hope that it will be useful,
@@ -22,23 +22,23 @@ HERETIC.PARAMETERS =
 {
   teleporters = true
 
-  jump_height = 24
+  jump_height = 24,
 
-  max_name_length = 28
+  max_name_length = 28,
 
-  titlepic_lump   = "TITLE"
-  titlepic_format = "raw"
-  bex_map_prefix = "HHUSTR_"
+  titlepic_lump   = "TITLE",
+  titlepic_format = "raw",
+  bex_map_prefix = "HHUSTR_",
 
-  skip_monsters = { 10,20 }
+  skip_monsters = { 10,20 },
 
-  monster_factor = 1.0
-  health_factor  = 1.0
-  ammo_factor    = 1.0
-  time_factor    = 1.0
+  monster_factor = 1.0,
+  health_factor  = 1.0,
+  ammo_factor    = 1.0,
+  time_factor    = 1.0,
 
-  mon_along_factor = 7.2
-}
+  mon_along_factor = 7.2,
+},
 
 
 HERETIC.ACTIONS =
@@ -61,5 +61,5 @@ HERETIC.ACTIONS =
 
   S1_LowerFloor = { id=23, kind="lower" }  -- down to lowest nb floor
   W1_LowerFloor = { id=38, kind="lower" }  --
-}
+},
 

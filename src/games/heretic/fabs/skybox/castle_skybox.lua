@@ -1,14 +1,14 @@
 PREFABS.Skybox_castle_skybox =
 {
-  file  = "skybox/castle_skybox.wad"
-  map   = "E1M1"
+  file  = "skybox/castle_skybox.wad",
+  map   = "E1M1",
 
-  prob  = 50
+  prob  = 50,
 
-  where = "point"
+  where = "point",
 
-  kind  = "skybox"
+  kind  = "skybox",
 
-  bound_z1 = -64
-  bound_z2 = 320
-}
+  bound_z1 = -64,
+  bound_z2 = 320,
+},

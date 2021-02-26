@@ -4,23 +4,23 @@
 
 PREFABS.Exit_strife =
 {
-  file   = "exit/sw_strife.wad"
-  map    = "MAP01"
+  file   = "exit/sw_strife.wad",
+  map    = "MAP01",
 
-  prob   = 5
+  prob   = 5,
 
-  where  = "point"
-}
+  where  = "point",
+},
 
 
 PREFABS.Exit_strife_secret =
 {
-  file   = "exit/sw_strife.wad"
-  map    = "MAP02"
+  file   = "exit/sw_strife.wad",
+  map    = "MAP02",
 
-  prob   = 5
+  prob   = 5,
 
-  kind   = "secret_exit"
-  where  = "point"
-}
+  kind   = "secret_exit",
+  where  = "point",
+},
 
