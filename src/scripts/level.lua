@@ -2639,8 +2639,8 @@ end
 function Level_choose_skybox()
   local skyfab
 
-  local function Choose_episodic_skybox()
-    if not LEVEL.episode.skybox then
+  local function Choose_episodic_skybox(force_pick)
+    if not LEVEL.episode.skybox or force_pick then
       return PREFABS[rand.key_by_probs(THEME.skyboxes)]
     else
       return LEVEL.episode.skybox
@@ -2697,21 +2697,22 @@ function Level_choose_skybox()
       each ex in ARMAETUS_SKYBOX_EXCLUSIONS[LEVEL.outdoor_theme] do
         if OB_CONFIG.zdoom_skybox == "episodic" then
           if LEVEL.episode.skybox.name == ex then
-            gui.printf("Initial skybox: " .. LEVEL.episode.skybox.name .. "\n")
             same_skyfab = "yes"
           else same_skyfab = "no" end
         elseif OB_CONFIG.zdoom_skybox != "disable" then
           if LEVEL.skybox.name == ex then
-            gui.printf("Initial skybox: " .. LEVEL.skybox.name .. "\n")
             same_skyfab = "yes"
           else same_skyfab = "no" end
         end
       end
 
+      gui.printf("Initial skybox: " .. skyfab .. "\n")
+
       if same_skyfab == "yes" then
         if OB_CONFIG.zdoom_skybox == "episodic" then
-          LEVEL.episode.skybox = Choose_episodic_skybox()
+          LEVEL.episode.skybox = Choose_episodic_skybox("force_it")
           skyfab = LEVEL.episode.skybox
+          gui.printf("New initial skybox: " .. skyfab.name .. "\n")
         else
           LEVEL.skybox = Choose_skybox(OB_CONFIG.zdoom_skybox)
           skyfab = LEVEL.skybox
