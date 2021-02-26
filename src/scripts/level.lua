@@ -2691,7 +2691,7 @@ function Level_choose_skybox()
   if LEVEL.outdoor_theme and LEVEL.outdoor_theme != "temperate"
   and ARMAETUS_SKYBOX_EXCLUSIONS then
 
-    local testx = 0
+    local pick_attempts = 0
     while same_skyfab == "yes" do
 
       each ex in ARMAETUS_SKYBOX_EXCLUSIONS[LEVEL.outdoor_theme] do
@@ -2706,21 +2706,18 @@ function Level_choose_skybox()
         end
       end
 
-      gui.printf("Initial skybox: " .. skyfab .. "\n")
-
       if same_skyfab == "yes" then
         if OB_CONFIG.zdoom_skybox == "episodic" then
           LEVEL.episode.skybox = Choose_episodic_skybox("force_it")
           skyfab = LEVEL.episode.skybox
-          gui.printf("New initial skybox: " .. skyfab.name .. "\n")
         else
           LEVEL.skybox = Choose_skybox(OB_CONFIG.zdoom_skybox)
           skyfab = LEVEL.skybox
         end
       end
 
-      testx = testx + 1
-      if testx > 10 then 
+      pick_attempts = pick_attempts + 1
+      if pick_attempts > 10 then 
         gui.printf(table.tostr(ARMAETUS_SKYBOX_EXCLUSIONS[LEVEL.outdoor_theme]))
         error("Skybox pick repeated too many times!!!! Global warming is real and " ..
         "a billion pigs have been killed by swine flu!!!!") 
