@@ -3889,13 +3889,13 @@ ARMAETUS_SKYBOX_EXCLUSIONS =
 {
   desert =
   {
-    "Skybox_craneo_egypt_EPIC",
-    "Skybox_craneo_space_shuttle_EPIC"
+    "Skybox_garrett_winterfall_EPIC"
   }
 
   snow =
   {
-    "Skybox_garrett_winterfall_EPIC"
+    "Skybox_craneo_egypt_EPIC",
+    "Skybox_craneo_space_shuttle_EPIC"
   }
 }
 
