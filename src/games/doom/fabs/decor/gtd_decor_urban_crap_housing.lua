@@ -1,6 +1,6 @@
 PREFABS.Decor_crap_house_1 =
 {
-  file   = "decor/gtd_urban_crap_housing.wad"
+  file   = "decor/gtd_decor_urban_crap_housing.wad"
   map    = "MAP01"
 
   prob   = 10000
@@ -23,15 +23,6 @@ PREFABS.Decor_crap_house_1 =
     FLOOR1_6 = 5
     FLAT4 = 2
     FLAT1 = 2
-  }
-
-  tex_MODWALL3 =
-  {
-    MODWALL2 = 2
-    MODWALL3 = 5
-    MODWALL4 = 5
-    BLAKWAL1 = 5
-    BLAKWAL2 = 5
   }
 }
 
