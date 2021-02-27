@@ -78,17 +78,17 @@
 --]]
 
 
-CONN_CLASS = {},
+CONN_CLASS = {}
 
 
 function CONN_CLASS.new(kind, R1, R2)
   local C =
   {
-    kind = kind
-    id   = alloc_id("conn")
+    kind = kind,
+    id   = alloc_id("conn"),
     R1   = R1,
     R2   = R2,
-  },
+  }
 
   C.name = string.format("CONN_%d", C.id)
 
@@ -104,8 +104,8 @@ function CONN_CLASS.kill_it(C)
   table.remove(LEVEL.conns, C)
 
   C.name = "DEAD_" .. C.name
-  C.kind = "DEAD",
-  C.id   = -1,
+  C.kind = "DEAD"
+  C.id   = -1
 
   C.R1  = nil ; C.A1 = nil
   C.R2  = nil ; C.A2 = nil
@@ -161,20 +161,20 @@ end
 
 function CONN_CLASS.get_lock_reqs(C, reqs)
   if C.is_secret then
-    reqs.key = "secret",
+    reqs.key = "secret"
     return
   end
 
   if not C.lock then return end
 
   if C.lock.kind == "intraroom" then
-    reqs.key = "barred",
+    reqs.key = "barred"
 
   elseif #C.lock.goals == 2 then
     error("Locked double")
 
   elseif #C.lock.goals == 3 then
-    reqs.key = "k_ALL",
+    reqs.key = "k_ALL"
 
   else
     reqs.key = C.lock.goals[1].item
@@ -188,10 +188,10 @@ end
 function Lock_new(kind, conn)
   local LOCK =
   {
-    id   = alloc_id("lock")
-    kind = kind
+    id   = alloc_id("lock"),
+    kind = kind,
     conn = conn
-  },
+  }
 
   LOCK.name = "LOCK_" .. kind .. "_" .. LOCK.id
 
@@ -221,7 +221,7 @@ function Connect_directly(P)
   local S1   = P.S
   local long = P.long
 
-  local E1, E2,
+  local E1, E2
 
 
   if kind == "edge" then
@@ -261,7 +261,7 @@ function Connect_directly(P)
     E1, E2 = P.chunk:create_edge_pair("nothing", dir1)
 
     if C.R1.is_hallway then
-      E1, E2 = E2, E1,
+      E1, E2 = E2, E1
     end
 
     E1.is_wallish = true
@@ -278,7 +278,7 @@ function Connect_directly(P)
   C.A2 = assert(E2.S.area)
 
   -- error check from MSSP
-  if C.A1.room ~= C.R1 or C.A2.room != C.R2 then
+  if C.A1.room ~= C.R1 or C.A2.room ~= C.R2 then
     if C.R1 then
       print(table.tostr(C.R1))
     else
@@ -314,8 +314,8 @@ end
 
 
 function Connect_teleporter_rooms(P)
-  local R1 = P.R1,
-  local R2 = P.R2,
+  local R1 = P.R1
+  local R2 = P.R2
 
   gui.printf("Teleporter connection: %s --> %s\n", R1.name, R2.name)
 
@@ -331,8 +331,8 @@ function Connect_teleporter_rooms(P)
   C.tele_tag1 = alloc_id("tag")
   C.tele_tag2 = alloc_id("tag")
 
-  R1.used_chunks = R1.used_chunks + 1,
-  R2.used_chunks = R2.used_chunks + 1,
+  R1.used_chunks = R1.used_chunks + 1
+  R2.used_chunks = R2.used_chunks + 1
 end
 
 
