@@ -128,6 +128,7 @@ function PREFAB_CONTROL.set_damaging_hallways()
       fab.tex_FF2200 = "BF0526" -- top lighting
       fab.tex_FF8629 = "130406" -- liquid fog color
       fab.sector_5 = 0 -- nullify damaging sectors
+      fab.thing_2025 = 0
     end
 
     if fab.group == "pipeline" then
@@ -136,6 +137,7 @@ function PREFAB_CONTROL.set_damaging_hallways()
       fab.tex_1F4525 = "4548BA" -- top lighting
       fab.tex_041C08 = "13131C" -- liquid fog color
       fab.sector_7 = 0 -- nullify damaging sectors
+      fab.thing_2025 = 0
     end
   end
 end
