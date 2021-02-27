@@ -82,11 +82,11 @@ Notes
 
 function Fight_Simulator(monsters, weapons, stats)
 
-  local active_mons = {},
+  local active_mons = {}
 
-  local DEFAULT_ACCURACY = 70,
+  local DEFAULT_ACCURACY = 70
 
-  local DEFAULT_INFIGHT_DAMAGE = 20,
+  local DEFAULT_INFIGHT_DAMAGE = 20
 
 
   local function remove_dead_mon()
@@ -103,7 +103,7 @@ function Fight_Simulator(monsters, weapons, stats)
     assert(first_mon)
 
     -- determine probability for each weapon
-    local prob_tab = {},
+    local prob_tab = {}
 
     for _,W in pairs(pairs(weapons)) do
       local prob = W.info.pref
@@ -119,9 +119,9 @@ function Fight_Simulator(monsters, weapons, stats)
 
       -- handle weapon requirements of a monster
       if first_mon.weap_needed and not first_mon.weap_needed[W.info.name] then
-        prob = prob / 200,
+        prob = prob / 200
       elseif first_mon.weap_min_damage and first_mon.weap_min_damage > W_damage then
-        prob = prob / 20,
+        prob = prob / 20
       end
 
       table.insert(prob_tab, prob)
@@ -142,7 +142,7 @@ function Fight_Simulator(monsters, weapons, stats)
     if not M then return end
 
     -- apply the weapon accuracy, or use default
-    damage = damage * (W.info.accuracy or DEFAULT_ACCURACY) / 100,
+    damage = damage * (W.info.accuracy or DEFAULT_ACCURACY) / 100
 
     if M.info.immunity and M.info.immunity[W.info.name] then
       damage = damage * (1 - M.info.immunity[W.info.name])
@@ -209,17 +209,18 @@ function Fight_Simulator(monsters, weapons, stats)
     -- Note: we don't check if monsters "die" here, not needed
 
     -- collect all other monsters which can be fought
-    local others = {},
+    local others = {}
 
-    local total_weight = 0,
+    local total_weight = 0
 
     for _,P in pairs(pairs(active_mons)) do
-      if P == M then continue end
+      if P == M then goto continue end
 
       if can_infight(M.info, P.info) then
         table.insert(others, P)
         total_weight = total_weight + P.info.health
       end
+      ::continue::
     end
 
     -- nothing else to fight with?
@@ -233,9 +234,9 @@ function Fight_Simulator(monsters, weapons, stats)
     local damage = M.info.infight_damage or DEFAULT_INFIGHT_DAMAGE
 
     -- bump up the damage (higher than demo analysis, but seems necessary)
-    damage = damage * 1.5,
+    damage = damage * 1.5
 
-    for _,P in pairs(pairs(others)) do
+    for _,P in pairs(others) do
       -- damage is weighted, bigger monsters get a bigger share
       local factor = P.info.health / total_weight
 
@@ -255,7 +256,7 @@ function Fight_Simulator(monsters, weapons, stats)
 
   ---==| Fight_Simulator |==---
 
-  stats.health = stats.health or 0,
+  stats.health = stats.health or 0
 
   for _,M in pairs(pairs(monsters)) do
     local MON = table.copy(M)
