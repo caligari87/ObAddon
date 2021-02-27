@@ -327,20 +327,7 @@ function Episode_determine_map_sizes()
 
     if PARAM.room_size_multiplier then
       if PARAM.room_size_multiplier == "mixed" then
-        LEV.size_multiplier = rand.key_by_probs(
-          {
-            [0.25] = 1
-            [0.5] = 2
-            [0.75] = 3
-            [1] = 3
-            [1.25] = 3
-            [1.5] = 2
-            [2] = 2
-            [4] = 1.5
-            [6] = 1
-            [8] = 1
-          }
-        )
+        LEV.size_multiplier = rand.key_by_probs(ROOM_SIZE_MULTIPLIER_MIXED_PROBS)
       elseif PARAM.room_size_multiplier != "vanilla" then
         LEV.size_multiplier = tonumber(PARAM.room_size_multiplier)
       end
@@ -348,17 +335,7 @@ function Episode_determine_map_sizes()
 
     if PARAM.room_area_multiplier then
       if PARAM.room_area_multiplier == "mixed" then
-        LEV.area_multiplier = rand.key_by_probs(
-          {
-            [0.15] = 1
-            [0.5] = 2
-            [0.75] = 2
-            [1] = 3
-            [1.5] = 2
-            [2] = 2
-            [4] = 1
-          }
-        )
+        LEV.area_multiplier = rand.key_by_probs(ROOM_AREA_MULTIPLIER_MIXED_PROBS)
       elseif PARAM.room_area_multiplier != "vanilla" then
         LEV.area_multiplier = tonumber(PARAM.room_area_multiplier)
       end
@@ -366,12 +343,7 @@ function Episode_determine_map_sizes()
 
     if PARAM.room_size_consistency then
       if PARAM.room_size_consistency == "mixed" then
-        LEV.size_consistency = rand.key_by_probs(
-          {
-            strict = 25
-            normal = 75
-          }
-        )
+        LEV.size_consistency = rand.key_by_probs(SIZE_CONSISTENCY_MIXED_PROBS)
       else
         LEV.size_consistency = PARAM.room_size_consistency
       end

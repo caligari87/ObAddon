@@ -56,7 +56,7 @@ function _(s) return gui.gettext(s) end
 -- the default engine (basically Vanilla + limit removing)
 OB_ENGINES["nolimit"] =
 {
-  label = _("Limit Removing")
+  label = _("Limit Removing"),
   priority = 95
 }
 
@@ -64,35 +64,35 @@ OB_ENGINES["nolimit"] =
 -- special theme types, usable by all games
 OB_THEMES["original"] =
 {
-  label = _("Original")
+  label = _("Original"),
   priority = 91
 }
 
 
 OB_THEMES["epi"] =
 {
-  label = _("Episodic")
-  priority = 85,
+  label = _("Episodic"),
+  priority = 85
 }
 
 
 OB_THEMES["jumble"] =
 {
-  label = _("Jumbled Up")
+  label = _("Jumbled Up"),
   priority = 80
 }
 
 
 OB_THEMES["bit_mixed"] =
 {
-  label = _("Bit Mixed")
+  label = _("Bit Mixed"),
   priority = 81
 }
 
 
 OB_THEMES["psycho"] =
 {
-  label = _("Psychedelic")
+  label = _("Psychedelic"),
   priority = -99  -- bottom most
 }
 
@@ -103,7 +103,7 @@ LENGTH_CHOICES =
   "single",  _("Single Level"),
   "few",     _("A Few Maps"),
   "episode", _("One Episode"),
-  "game",    _("Full Game"),
+  "game",    _("Full Game")
 }
 
 
@@ -138,123 +138,158 @@ SPOT_LEDGE    = 3
 -- monster and item stuff
 MONSTER_QUANTITIES =
 {
-  rarest = 0.15
-  rarer  = 0.35
-  rare   = 0.7
-  scarce = 1.0
-  few    = 1.3
-  less   = 1.5
-  normal = 2.0
-  more   = 2.5
-  heaps  = 3.0
-  legions = 3.5
-  insane = 4.0
-  deranged = 4.5
-  nuts   = 5.0
-  chaotic = 5.5
-  unhinged = 6.0
+  rarest = 0.15,
+  rarer  = 0.35,
+  rare   = 0.7,
+  scarce = 1.0,
+  few    = 1.3,
+  less   = 1.5,
+  normal = 2.0,
+  more   = 2.5,
+  heaps  = 3.0,
+  legions = 3.5,
+  insane = 4.0,
+  deranged = 4.5,
+  nuts   = 5.0,
+  chaotic = 5.5,
+  unhinged = 6.0,
   ludicrous = 6.66
 }
 
 MONSTER_KIND_TAB =
 {
-  none   = 0.1
-  rarest = 0.25
-  rarer  = 0.5
-  rare   = 0.75
-  scarce = 1.0
-  few    = 1.33
-  less   = 1.6
-  normal = 1.9
-  more   = 2.0
-  heaps  = 2.0
-  legions = 2.0
-  insane = 2.0
-  deranged = 2.0
-  nuts   = 2.0
-  chaotic = 2.0
-  unhinged = 2.0
+  none   = 0.1,
+  rarest = 0.25,
+  rarer  = 0.5,
+  rare   = 0.75,
+  scarce = 1.0,
+  few    = 1.33,
+  less   = 1.6,
+  normal = 1.9,
+  more   = 2.0,
+  heaps  = 2.0,
+  legions = 2.0,
+  insane = 2.0,
+  deranged = 2.0,
+  nuts   = 2.0,
+  chaotic = 2.0,
+  unhinged = 2.0,
   ludicrous = 2.0
 }
 
 RAMP_UP_FACTORS =
 {
-  veryslow = 0.5
-  slow   = 0.75
-  medium = 1.00
-  fast   = 1.50
-  veryfast = 2.00
+  veryslow = 0.5,
+  slow   = 0.75,
+  medium = 1.00,
+  fast   = 1.50,
+  veryfast = 2.00,
   extfast = 3.00
 }
 
 BOSS_FACTORS =
 {
-  easier = 0.30
-  medium = 0.60
+  easier = 0.30,
+  medium = 0.60,
   harder = 1.00
 }
 
 HEALTH_FACTORS =
 {
-  none     = 0
-  scarce   = 0.4
-  less     = 0.64
-  bit_less = 0.8
-  normal   = 1.0
-  bit_more = 1.15 --1.3
-  more     = 1.5 --1.6
+  none     = 0,
+  scarce   = 0.4,
+  less     = 0.64,
+  bit_less = 0.8,
+  normal   = 1.0,
+  bit_more = 1.15, --1.3
+  more     = 1.5, --1.6
   heaps    = 2.5
 }
 
 AMMO_FACTORS =
 {
-  none     = 0
-  scarce   = 0.64
-  less     = 0.8
-  bit_less = 0.9
-  normal   = 1.0
-  bit_more = 1.1
-  more     = 1.25
+  none     = 0,
+  scarce   = 0.64,
+  less     = 0.8,
+  bit_less = 0.9,
+  normal   = 1.0,
+  bit_more = 1.1,
+  more     = 1.25,
   heaps    = 1.6
 }
 
 SECRET_BONUS_FACTORS =
 {
-  none     = 0
-  more     = 0.5
-  heaps    = 1
-  heapser  = 2
+  none     = 0,
+  more     = 0.5,
+  heaps    = 1,
+  heapser  = 2,
   heapsest = 4
 }
 
+--
+
+ROOM_SIZE_MULTIPLIER_MIXED_PROBS =
+{
+  [0.25] = 1,
+  [0.5] = 2,
+  [0.75] = 3,
+  [1] = 3,
+  [1.25] = 3,
+  [1.5] = 2,
+  [2] = 2,
+  [4] = 1.5,
+  [6] = 1,
+  [8] = 1
+}
+
+ROOM_AREA_MULTIPLIER_MIXED_PROBS =
+{
+  [0.15] = 1,
+  [0.5] = 2,
+  [0.75] = 2,
+  [1] = 3,
+  [1.5] = 2,
+  [2] = 2,
+  [4] = 1
+}
+
+SIZE_CONSISTENCY_MIXED_PROBS =
+{
+  strict = 25,
+  normal = 75
+}
+
+--
+
 PROC_GOTCHA_MAP_SIZES =
 {
-  large = 30
-  regular = 26
-  small = 22
+  large = 30,
+  regular = 26,
+  small = 22,
   tiny = 16
 }
 
 PROC_GOTCHA_STRENGTH_LEVEL =
 {
-  none        = 0
-  harder      = 2
-  tougher     = 4
-  crazier     = 8
+  none        = 0,
+  harder      = 2,
+  tougher     = 4,
+  crazier     = 8,
   nightmarish = 16
 }
 
 PROC_GOTCHA_QUANTITY_MULTIPLIER =
 {
-  ["-75"] = 0.25
-  ["-50"] = 0.5
-  ["-25"] = 0.75
-  none    = 1
-  ["25"]  = 1.25
-  ["50"]  = 1.5
-  ["100"] = 2
-  ["150"] = 3
-  ["200"] = 4
+  ["-75"] = 0.25,
+  ["-50"] = 0.5,
+  ["-25"] = 0.75,
+  none    = 1,
+  ["25"]  = 1.25,
+  ["50"]  = 1.5,
+  ["100"] = 2,
+  ["150"] = 3,
+  ["200"] = 4,
   ["400"] = 8
 }
 
