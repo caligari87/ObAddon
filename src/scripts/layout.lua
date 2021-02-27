@@ -38,7 +38,7 @@ function Layout_compute_dists(R)
   local function mark_chunk(chunk)
     for sx = chunk.sx1, chunk.sx2 do
     for sy = chunk.sy1, chunk.sy2 do
-      SEEDS[sx][sy].sig_dist = 0,
+      SEEDS[sx][sy].sig_dist = 0
     end
     end
   end
@@ -52,7 +52,7 @@ function Layout_compute_dists(R)
         local E = S.edge[dir]
 
         if E and E.conn then
-          S.sig_dist = 0.7,
+          S.sig_dist = 0.7
         end
       end
     end
@@ -82,10 +82,10 @@ function Layout_compute_dists(R)
 
 
   local function collect_fillable_seeds()
-    local list = {},
+    local list = {}
 
     for _,S in pairs(pairs(R.seeds)) do
-      if S.sig_dist then continue end
+      if S.sig_dist then goto continue end
 
       for _,dir in pairs(geom.ALL_DIRS) do
         local N = S:neighbor(dir)
@@ -95,6 +95,7 @@ function Layout_compute_dists(R)
           break;
         end
       end
+      ::continue::
     end
 
     return list
@@ -126,8 +127,8 @@ function Layout_compute_dists(R)
 
   local function calc_chunk_sig_dist(chunk)
     -- compute average of all seeds in chunk
-    local sum = 0,
-    local total = 0,
+    local sum = 0
+    local total = 0
 
     for sx = chunk.sx1, chunk.sx2 do
     for sy = chunk.sy1, chunk.sy2 do
@@ -135,7 +136,7 @@ function Layout_compute_dists(R)
 
       if dist then
         sum = sum + dist
-        total = total + 1,
+        total = total + 1
       end
     end
     end
@@ -237,7 +238,7 @@ function Layout_spot_for_wotsit(R, kind, required)
         for _,goal in pairs(R.goals) do
           if goal.chunk and goal.kind == "START" then
             if geom.dist(chunk.mx,chunk.my,goal.chunk.mx,goal.chunk.my) > 726 then
-              return -1,
+              return -1
             end
           end
         end
@@ -268,33 +269,33 @@ function Layout_spot_for_wotsit(R, kind, required)
       return 2.0 + gui.random()
     end
 
-    local score = (chunk.sig_dist or 0) * 10 + 10,
+    local score = (chunk.sig_dist or 0) * 10 + 10
 
     -- tie breaker
-    score = score + gui.random() ^ 2,
+    score = score + gui.random() ^ 2
 
     -- the exit room generally has a closet pre-booked
     if kind == "EXIT" and chunk.prefer_usage == "exit" then
-      score = score + 200,
+      score = score + 200
     end
 
     -- start rooms and teleporter roots too
     if (kind == "START" or kind == "TELEPORTER") and chunk.prefer_usage == "start" then
-      score = score + 200,
+      score = score + 200
     end
 
     -- really really want a secret exit in a closet
     if kind == "SECRET_EXIT" and chunk.kind == "closet" then
-      score = score + 600,
+      score = score + 600
     end
 
     -- in caves, prefer spots which do not touch the room edge,
     -- and prefer not to use closets (which don't look good).
     if R.is_cave then
       if chunk.kind == "closet" then
-        score = score / 3,
+        score = score / 3
       elseif not chunk.touches_wall then
-        score = score * 3,
+        score = score * 3
       end
 
       return score
@@ -302,23 +303,23 @@ function Layout_spot_for_wotsit(R, kind, required)
 
     -- in general, prefer closets over free-standing spots
     if chunk.kind == "closet" then
-      score = score + 22,
+      score = score + 22
     end
 
     if chunk.sw >= 2 or chunk.sh >= 2 then
-      score = score + 9,
+      score = score + 9
     end
 
     if chunk.is_straddler then
       if kind == "EXIT"  or kind == "START" or
-         kind == "KEY" or kind == "SWITCH",
+         kind == "KEY" or kind == "SWITCH"
       then
-        score = score + 41,
+        score = score + 41
       end
     end
 
     if chunk.prefer_usage and chunk.prefer_usage == kind then
-      score = score * 2,
+      score = score * 2
     end
 
     return score
@@ -330,7 +331,7 @@ function Layout_spot_for_wotsit(R, kind, required)
   Layout_compute_dists(R)
 
   local best
-  local best_score = 0,
+  local best_score = 0
 
   -- first, try floor chunks
   for _,chunk in pairs(R.floor_chunks) do
@@ -361,7 +362,7 @@ function Layout_spot_for_wotsit(R, kind, required)
 
     -- ensure we cannot climb over a nearby fence
     if best.kind == "floor" then
-      best.area.podium_h = 24,
+      best.area.podium_h = 24
     end
 
     -- leave room for player to enter a closet
@@ -504,7 +505,7 @@ function Layout_place_importants(R, imp_pass)
     local info = GAME.WEAPONS[name]
     assert(info)
 
-    return info.level * 1000 + info.damage * info.rate + info.pref / 100,
+    return info.level * 1000 + info.damage * info.rate + info.pref / 100
   end
 
 
@@ -533,7 +534,7 @@ function Layout_place_importants(R, imp_pass)
     -- try weapons which failed to be placed in the previous room
     if not table.empty(LEVEL.unplaced_weapons) then
       table.append(R.weapons, LEVEL.unplaced_weapons)
-      LEVEL.unplaced_weapons = {},
+      LEVEL.unplaced_weapons = {}
     end
 
     sort_weapons()
@@ -557,11 +558,11 @@ function Layout_place_hub_gates()
   -- this also does secret exit closets
 
   local function num_free_chunks(list)
-    local count = 0,
+    local count = 0
 
     for _,chunk in pairs(list) do
       if chunk.content == nil then
-        count = count + 1,
+        count = count + 1
       end
     end
 
@@ -574,26 +575,26 @@ function Layout_place_hub_gates()
 
     if free_spots == 0 then return -1 end
 
-    local score = 0,
+    local score = 0
 
     if R.is_secret then
-      score = 300,
+      score = 300
     elseif not (R.is_start or R.is_exit) then
-      score = 200,
+      score = 200
     end
 
     -- prefer it near the end of the map
     if R.lev_along > 0.7 then
-      score = score + 50,
+      score = score + 50
     elseif R.lev_along > 0.4 then
-      score = score + 20,
+      score = score + 20
     end
 
     -- prefer leaving some closets for other things
     score = score + math.clamp(1, free_spots, 7)
 
     -- tie breaker
-    return score + gui.random() * 0.5,
+    return score + gui.random() * 0.5
   end
 
 
@@ -602,14 +603,14 @@ function Layout_place_hub_gates()
 
     if free_spots == 0 then return -1 end
 
-    local score = 0,
+    local score = 0
 
     if R.is_secret then
-      score = 300,
+      score = 300
     elseif not (R.is_start or R.is_exit) then
-      score = 200,
+      score = 200
     elseif #R.goals == 0 then
-      score = 100,
+      score = 100
     end
 
     -- check number of spots against what will be needed
@@ -619,21 +620,21 @@ function Layout_place_hub_gates()
     if R.is_start then need_spots = need_spots + 1 end
 
     if free_spots > need_spots then
-      score = score + 50,
+      score = score + 50
     end
 
     -- prefer it near the end of the map
     if R.lev_along > 0.7 then
-      score = score + 20,
+      score = score + 20
     elseif R.lev_along > 0.4 then
-      score = score + 10,
+      score = score + 10
     end
 
     -- prefer leaving some closets for other things
     score = score + math.clamp(1, free_spots, 7)
 
     -- tie breaker
-    return score + gui.random() * 0.5,
+    return score + gui.random() * 0.5
   end
 
 
@@ -643,7 +644,7 @@ function Layout_place_hub_gates()
     -- should not fail, as our eval function detects free spots
     local chunk = Layout_spot_for_wotsit(R, "SECRET_EXIT", "required")
 
-    chunk.content = "SECRET_EXIT",
+    chunk.content = "SECRET_EXIT"
 
     -- mark the closet as hidden in the room
     chunk.is_secret = true
@@ -652,7 +653,7 @@ function Layout_place_hub_gates()
 
   local function add_secret_closet()
     local best_R
-    local best_score = 0,
+    local best_score = 0
 
     for _,R in pairs(pairs(LEVEL.rooms)) do
       local score = eval_closet_room(R)
@@ -674,7 +675,7 @@ function Layout_place_hub_gates()
 
   local function add_secret_switch()
     local best_R
-    local best_score = 0,
+    local best_score = 0
 
     for _,R in pairs(pairs(LEVEL.rooms)) do
       local score = eval_free_standing_room(R)
@@ -732,29 +733,30 @@ function Layout_choose_face_area(A)
   -- used for scenic liquid pools
 
   local best
-  local best_score = -1,
+  local best_score = -1
 
   for _,N in pairs(pairs(A.neighbors)) do
-    if not N.room then continue end
-    if not N.is_outdoor then continue end
+    if not N.room then goto continue end
+    if not N.is_outdoor then goto continue end
 
-    if N.mode ~= "floor" then continue end
-    if not N.floor_h then continue end
+    if N.mode ~= "floor" then goto continue end
+    if not N.floor_h then goto continue end
 
-    if N.zone ~= A.zone then continue end
+    if N.zone ~= A.zone then goto continue end
 
-    if N.room.is_hallway then continue end
+    if N.room.is_hallway then goto continue end
 
     -- ok --
 
     local junc = Junction_lookup(A, N)
 
-    local score = junc.perimeter + 2.2 * gui.random() ^ 3,
+    local score = junc.perimeter + 2.2 * gui.random() ^ 3
 
     if score > best_score then
       best = N
       best_score = score
     end
+    ::continue::
   end
 
   return best
@@ -769,7 +771,7 @@ function Layout_add_traps()
 
   local function eval_trap_distance(R, chunk)
     -- compute a distance to the room's goal
-    local dist = 0,
+    local dist = 0
 
     if R.guard_chunk then
       local dx = math.abs(R.guard_chunk.mx - chunk.mx)
@@ -779,7 +781,7 @@ function Layout_add_traps()
     end
 
     -- tie breaker
-    chunk.trap_dist = dist + (gui.random() ^ 2) * 16,
+    chunk.trap_dist = dist + (gui.random() ^ 2) * 16
   end
 
 
@@ -790,7 +792,7 @@ function Layout_add_traps()
 
     if R.is_secret then return nil end
 
-    local locs = {},
+    local locs = {}
 
     if kind == "closet" then
       for _,chunk in pairs(R.closets) do
@@ -809,7 +811,7 @@ function Layout_add_traps()
       if R.svolume < 24 then return nil end
 
       -- large chunks are better, so place them first in the list
-      local locs2 = {},
+      local locs2 = {}
 
       for _,chunk in pairs(R.floor_chunks) do
         -- MSSP-FIXME: instead of not placing teleporter traps on road areas,
@@ -848,7 +850,7 @@ function Layout_add_traps()
     -- this is used for trapped items
     -- [ goals have "real" backtracking info ]
 
-    local result = {},
+    local result = {}
 
     if #R.conns == 1 then
       local C = R.conns[1]
@@ -911,7 +913,7 @@ function Layout_add_traps()
 --]]
 
     -- create list of potential rooms for da monsters
-    local places = {},
+    local places = {}
 
     if not R.is_start then
       table.insert(places, { room=R })
@@ -922,7 +924,7 @@ function Layout_add_traps()
     end
 
     -- visit each place, decide what method to use (or to skip it)
-    local result = {},
+    local result = {}
 
     for _,info in pairs(places) do
       local closet_locs
@@ -950,17 +952,17 @@ function Layout_add_traps()
       local teleport_prob
 
       if OB_CONFIG.trap_style == "closets" then
-        teleport_prob = 0,
+        teleport_prob = 0
       elseif OB_CONFIG.trap_style == "80" then
-        teleport_prob = 20,
+        teleport_prob = 20
       elseif OB_CONFIG.trap_style == "60" then
-        teleport_prob = 40,
+        teleport_prob = 40
       elseif OB_CONFIG.trap_style == "40" then
-        teleport_prob = 60,
+        teleport_prob = 60
       elseif OB_CONFIG.trap_style == "20" then
-        teleport_prob = 80,
+        teleport_prob = 80
       elseif OB_CONFIG.trap_style == "teleports" then
-        teleport_prob = 100,
+        teleport_prob = 100
       end
 
       if OB_CONFIG.trap_style ~= "default" then
@@ -987,11 +989,11 @@ function Layout_add_traps()
       end
 
       if closet_locs then
-        info.kind = "closet",
+        info.kind = "closet"
         info.locs = closet_locs
 
       elseif telep_locs then
-        info.kind = "teleport",
+        info.kind = "teleport"
         info.locs = telep_locs
       end
 
@@ -1011,20 +1013,20 @@ gui.debugf("MonRelease in %s : kind --> %s\n",
 
 
   local function make_closet_trap(closet, trig)
-    closet.content = "TRAP",
+    closet.content = "TRAP"
     closet.trigger = trig
 
     if closet.peer and not closet.peer.content then
       closet = closet.peer
 
-      closet.content = "TRAP",
+      closet.content = "TRAP"
       closet.trigger = trig
     end
   end
 
 
   local function make_teleport_trap(chunk, trig)
-    chunk.content = "MON_TELEPORT",
+    chunk.content = "MON_TELEPORT"
     chunk.trigger = trig
     chunk.out_tag = alloc_id("tag")
   end
@@ -1035,7 +1037,7 @@ gui.debugf("MonRelease in %s : kind --> %s\n",
       chunk = chunk.peer
 
       -- using "NOTHING" is not enough (sinks would still be made)
-      chunk.content = "MON_TELEPORT",
+      chunk.content = "MON_TELEPORT"
       chunk.trigger = trig
       chunk.out_tag = 9999  -- a dummy tag (never referenced)
     end
@@ -1092,7 +1094,7 @@ gui.debugf("MonRelease in %s : kind --> %s\n",
 
       for n = 1, #R.triggers do
         if R.triggers[n] then
-          local o = 1,
+          local o = 1
           while locs[o] do
 
             if #locs < 2 then break end
@@ -1102,7 +1104,7 @@ gui.debugf("MonRelease in %s : kind --> %s\n",
             if spot_dist <= 1024 then
               table.remove(locs, o)
             else
-              o = o + 1,
+              o = o + 1
             end
 
           end
@@ -1117,7 +1119,7 @@ gui.debugf("MonRelease in %s : kind --> %s\n",
 
     for n = 1, 3 do
       if locs[n].sw < 2 or locs[n].sh < 2 then
-        DEPOT.max_spot_size = 64,
+        DEPOT.max_spot_size = 64
       end
     end
 
@@ -1150,7 +1152,7 @@ gui.debugf("MonRelease in %s : kind --> %s\n",
 
 
   local function install_a_trap(places, trig)
-    trig.action = "W1_OpenDoorFast",
+    trig.action = "W1_OpenDoorFast"
     trig.tag = alloc_id("tag")
 
     for _,info in pairs(places) do
@@ -1176,7 +1178,7 @@ gui.debugf("MonRelease in %s : kind --> %s\n",
     -- split conn?  [ TODO : return a list of TRIGs ]
     if C.F1 then return nil end
 
-    local E = C.E1,
+    local E = C.E1
     if C.R2 == R then E = C.E2 end
 
     if not E then return nil end
@@ -1185,7 +1187,7 @@ gui.debugf("MonRelease in %s : kind --> %s\n",
     {
       kind = "edge",
       edge = E
-    },
+    }
 
     table.insert(R.triggers, TRIG)
 
@@ -1205,15 +1207,15 @@ gui.debugf("MonRelease in %s : kind --> %s\n",
       TRIG =
       {
         kind = "edge",
-        edges = chunk.edges
+        edges = chunk.edges,
         spot = chunk
-      },
+      }
     else
       TRIG =
       {
         kind = "spot",
         spot = chunk
-      },
+      }
     end
 
     table.insert(R.triggers, TRIG)
@@ -1231,7 +1233,7 @@ gui.debugf("MonRelease in %s : kind --> %s\n",
     -- not notice the released monsters
     if goal.kind == "START" or
        goal.kind == "EXIT" or
-       goal.kind == "SECRET_EXIT",
+       goal.kind == "SECRET_EXIT"
     then
       return
     end
@@ -1250,23 +1252,23 @@ gui.debugf("MonRelease in %s : kind --> %s\n",
     -- returns a probability
 
     if chunk.content == "WEAPON" or
-       chunk.content == "ITEM",
+       chunk.content == "ITEM"
     then
       -- ok
     else
-      return -1,
+      return -1
     end
 
     local prob
     local item = assert(chunk.content_item)
 
     if table.has_elem(LEVEL.new_weapons, item) then
-      prob = 99,
+      prob = 99
     -- very rarely trap weapons you already have
     elseif chunk.content == "WEAPON" then
-      prob = 1,
+      prob = 1
     else
-      prob = 60,
+      prob = 60
     end
 
     if not rand.odds(prob) then return -2 end
@@ -1286,7 +1288,7 @@ gui.debugf("MonRelease in %s : kind --> %s\n",
     table.append(ch_list, R.closets)
 
     local best
-    local best_score = -1,
+    local best_score = -1
 
     for _,chunk in pairs(ch_list) do
       local score = eval_item_for_trap(chunk)
@@ -1299,10 +1301,10 @@ gui.debugf("MonRelease in %s : kind --> %s\n",
     if not best then return end
 
     -- determine places and trigger, and install trap
-    local p_kind = "item",
+    local p_kind = "item"
 
     if best.content == "WEAPON" then
-      p_kind = "weapon",
+      p_kind = "weapon"
     end
 
     local places = places_for_backtracking(R, fake_backtrack(R), p_kind)
@@ -1348,7 +1350,7 @@ function Layout_decorate_rooms(pass)
     if chunk.kind == "closet" then
       reqs = chunk:base_reqs(chunk.from_dir)
 
-      reqs.kind  = "cage",
+      reqs.kind  = "cage"
       reqs.shape = "U"   -- TODO: chunk.shape
 
       chunk.prefab_dir = chunk.from_dir
@@ -1360,7 +1362,7 @@ function Layout_decorate_rooms(pass)
         where = "point",
 
         size  = assert(chunk.space)
-      },
+      }
 
       -- FIXME : hack for caves
       if A.room.is_cave then
@@ -1387,7 +1389,7 @@ function Layout_decorate_rooms(pass)
     -- nothing matched?
     if not prefab_def then return end
 
-    chunk.content    = "CAGE",
+    chunk.content    = "CAGE"
     chunk.prefab_def = prefab_def
 
     if prefab_def.plain_ceiling then
@@ -1415,7 +1417,7 @@ function Layout_decorate_rooms(pass)
 
 
   local function make_secret_closet(chunk, item)
-    chunk.content = "ITEM",
+    chunk.content = "ITEM"
     chunk.content_item = item
 
     chunk.is_secret = true
@@ -1425,13 +1427,13 @@ function Layout_decorate_rooms(pass)
 
 
   local function kill_closet(chunk)
-    chunk.area.mode = "void",
-    chunk.content = "void",
+    chunk.area.mode = "void"
+    chunk.content = "void"
 
     -- TODO : sometimes make a picture
 
     for _,E in pairs(pairs(chunk.edges)) do
-      E.kind = "ignore",
+      E.kind = "ignore"
     end
   end
 
@@ -1441,7 +1443,7 @@ function Layout_decorate_rooms(pass)
 
     local vol = C.joiner_chunk.sw * C.joiner_chunk.sh
 
-    return vol < 4,
+    return vol < 4
   end
 
 
@@ -1464,7 +1466,7 @@ function Layout_decorate_rooms(pass)
 
   -- End commit
 
-    local conn_list = {},
+    local conn_list = {}
 
     for _,C in pairs(pairs(R.conns)) do
       local N = C:other_room(R)
@@ -1492,7 +1494,7 @@ function Layout_decorate_rooms(pass)
 
     local goal = Goal_new("LOCAL_SWITCH")
 
-    goal.item = "sw_metal",
+    goal.item = "sw_metal"
     goal.room = R
     goal.tag  = alloc_id("tag")
 
@@ -1501,7 +1503,7 @@ function Layout_decorate_rooms(pass)
     local lock = Lock_new("intraroom", C)
 
     lock.conn  = C
-    lock.goals = { goal },
+    lock.goals = { goal }
   end
 
 
@@ -1529,7 +1531,7 @@ function Layout_decorate_rooms(pass)
 
     local goal = Goal_new("LOCAL_SWITCH")
 
-    goal.item = "sw_metal",
+    goal.item = "sw_metal"
     goal.room = R
 
     goal.tag = alloc_id("tag")
@@ -1538,7 +1540,7 @@ function Layout_decorate_rooms(pass)
 
     local lock = Lock_new("itemlock")
 
-    lock.goals = { goal },
+    lock.goals = { goal }
     lock.item  = item
 
     item.lock = lock
@@ -1559,20 +1561,20 @@ function Layout_decorate_rooms(pass)
     --      "022" --> only outer parts are in the sink (an island)
     --
 
-    local   area_field = where .. "_group",
-    local corner_field = where .. "_inner",
+    local   area_field = where .. "_group"
+    local corner_field = where .. "_inner"
 
     if not chunk.area[area_field]      then return "000" end
     if not chunk.area[area_field].sink then return "000" end
 
-    local  mid_count,  mid_total = 0, 0,
-    local side_count, side_total = 0, 0,
-    local corn_count, corn_total = 0, 0,
+    local  mid_count,  mid_total = 0, 0
+    local side_count, side_total = 0, 0
+    local corn_count, corn_total = 0, 0
 
-    local cx1 = chunk.sx1,
-    local cy1 = chunk.sy1,
-    local cx2 = chunk.sx2 + 1,
-    local cy2 = chunk.sy2 + 1,
+    local cx1 = chunk.sx1
+    local cy1 = chunk.sy1
+    local cx2 = chunk.sx2 + 1
+    local cy2 = chunk.sy2 + 1
 
     for cx = cx1, cx2 do
     for cy = cy1, cy2 do
@@ -1586,15 +1588,15 @@ function Layout_decorate_rooms(pass)
 
       if ox and oy then
         corn_count = corn_count + sel(A, 1, 0)
-        corn_total = corn_total + 1,
+        corn_total = corn_total + 1
 
       elseif ox or oy then
         side_count = side_count + sel(A, 1, 0)
-        side_total = side_total + 1,
+        side_total = side_total + 1
 
       else
         mid_count = mid_count + sel(A, 1, 0)
-        mid_total = mid_total + 1,
+        mid_total = mid_total + 1
       end
     end
     end
@@ -1602,7 +1604,7 @@ function Layout_decorate_rooms(pass)
     local function part_to_str(count, total)
       if count == 0 then return "0" end
       if count == total then return "2" end
-      return "1",
+      return "1"
     end
 
     return part_to_str( mid_count,  mid_total) ..
@@ -1631,7 +1633,7 @@ function Layout_decorate_rooms(pass)
       where = "point",
 
       size   = assert(chunk.space)
-    },
+    }
 
     -- control check for Epic Textures module environment theme,
     -- if available -MSSP
@@ -1652,7 +1654,7 @@ function Layout_decorate_rooms(pass)
 
         if diff > 0 then diff = 1 end
 
-        reqs.height = reqs.height - math.abs(diff) - 1,
+        reqs.height = reqs.height - math.abs(diff) - 1
       end
     end
 
@@ -1668,7 +1670,7 @@ function Layout_decorate_rooms(pass)
     -- hack for porches, because it's weird to see tree planters
     -- under them -MSSP
     if A.is_porch then
-      reqs.env = "building",
+      reqs.env = "building"
     end
 
     if A.is_road then return end
@@ -1682,23 +1684,23 @@ function Layout_decorate_rooms(pass)
       -- ignore very small sinks (limited to just this chunk)
       if string.sub(sinkstat, 1, 1) == "0" then return end
 
-      reqs.is_sink = "plain",
+      reqs.is_sink = "plain"
 
       -- check if the sink is a liquid material
       if A.floor_group and A.floor_group.sink then
         if A.floor_group.sink.mat == "_LIQUID" then
-          reqs.is_sink = "liquid",
+          reqs.is_sink = "liquid"
         end
         for _,liquid in pairs(GAME.LIQUIDS) do
           if A.floor_group.sink.mat == liquid.mat then
-            reqs.is_sink = "liquid",
+            reqs.is_sink = "liquid"
           end
         end
       end
 
       -- reduce maximum size unless *whole* chunk is in the sink
       if sinkstat ~= "222" then
-        reqs.size = 64,
+        reqs.size = 64
       end
     end
 
@@ -1730,13 +1732,13 @@ function Layout_decorate_rooms(pass)
       chunk.floor_dz = chunk.area.floor_group.sink.dz
     end
 
-    chunk.content = "DECORATION",
+    chunk.content = "DECORATION"
     chunk.prefab_def = def
     chunk.prefab_dir = rand.dir()
 
     -- prevent pillars clobbering ceiling lights
     if def.z_fit and chunk.ceil_above then
-      chunk.ceil_above.content = "NOTHING",
+      chunk.ceil_above.content = "NOTHING"
     end
 
     if chunk.peer and not chunk.peer.content then
@@ -1748,7 +1750,7 @@ function Layout_decorate_rooms(pass)
       peer.prefab_dir   = A.room.symmetry:conv_dir(chunk.prefab_dir)
 
       if def.z_fit and peer.ceil_above then
-        peer.ceil_above.content = "NOTHING",
+        peer.ceil_above.content = "NOTHING"
       end
     end
   end
@@ -1771,7 +1773,7 @@ function Layout_decorate_rooms(pass)
 
   local function pick_cage_spot(locs)
     local best
-    local best_score = -1,
+    local best_score = -1
 
     for _,chunk in pairs(locs) do
       local score = gui.random()
@@ -1800,7 +1802,7 @@ function Layout_decorate_rooms(pass)
     if #locs == 0 then return 0 end
 
     -- determine current quantity of free-range cages
-    local cage_vol = 0,
+    local cage_vol = 0
 
     for _,A in pairs(pairs(R.areas)) do
       if A.mode == "cage" then
@@ -1847,7 +1849,7 @@ stderrf("Cages in %s [%s pressure] --> any_prob=%d  per_prob=%d\n",
     if R.is_secret then return end
 
     -- collect usable chunks
-    local locs = {},
+    local locs = {}
 
     for _,chunk in pairs(R.floor_chunks) do
       local A = chunk.area
@@ -1887,7 +1889,7 @@ stderrf("Cages in %s [%s pressure] --> any_prob=%d  per_prob=%d\n",
   local function try_secret_closets(R)
     if table.empty(R.closet_items) then return end
 
-    local locs = {},
+    local locs = {}
 
     for _,chunk in pairs(R.closets) do
       if not chunk.content then
@@ -1914,7 +1916,7 @@ stderrf("Cages in %s [%s pressure] --> any_prob=%d  per_prob=%d\n",
 
     -- TODO : REVIEW THIS
     --        [ probably should be "decor" once have a proper picture system ]
-    reqs.kind  = "picture",
+    reqs.kind  = "picture"
 
     reqs.env = R:get_env()
 
@@ -1942,7 +1944,7 @@ stderrf("Cages in %s [%s pressure] --> any_prob=%d  per_prob=%d\n",
       reqs.height = EXTREME_H
 
       if R.is_natural_park then
-        reqs.group = "natural_walls",
+        reqs.group = "natural_walls"
       end
     end
 
@@ -1959,7 +1961,7 @@ stderrf("Cages in %s [%s pressure] --> any_prob=%d  per_prob=%d\n",
 
 --stderrf("decor closet : %s\n", chunk.prefab_def.name)
 
-    chunk.content = "DECORATION",
+    chunk.content = "DECORATION"
 
 --????  chunk.prefab_dir = chunk.from_dir
 
@@ -1974,7 +1976,7 @@ stderrf("Cages in %s [%s pressure] --> any_prob=%d  per_prob=%d\n",
 
 
   local function try_decor_closets(R)
-    local locs = {},
+    local locs = {}
 
     for _,chunk in pairs(R.closets) do
       if not chunk.content then
@@ -1984,7 +1986,7 @@ stderrf("Cages in %s [%s pressure] --> any_prob=%d  per_prob=%d\n",
 
     rand.shuffle(locs)
 
-    local use_prob = 100,
+    local use_prob = 100
 
     for _,chunk in pairs(locs) do
       if rand.odds(use_prob) then
@@ -1997,7 +1999,7 @@ stderrf("Cages in %s [%s pressure] --> any_prob=%d  per_prob=%d\n",
   local function try_secondary_importants(R)
     if not R.secondary_important then return end
 
-    local usable_chunks = {},
+    local usable_chunks = {}
     local preferred_chunk
     local def
 
@@ -2016,9 +2018,9 @@ stderrf("Cages in %s [%s pressure] --> any_prob=%d  per_prob=%d\n",
 
     reqs = preferred_chunk:base_reqs(preferred_chunk.from_dir)
 
-    reqs.kind = "sec_quest",
+    reqs.kind = "sec_quest"
     reqs.group = R.secondary_important.kind
-    reqs.shape = "U",
+    reqs.shape = "U"
 
     def = Fab_pick(reqs)
 
@@ -2038,7 +2040,7 @@ stderrf("Cages in %s [%s pressure] --> any_prob=%d  per_prob=%d\n",
 
     if not tab then return end
 
-    local prob = THEME.wall_group_prob or 35,
+    local prob = THEME.wall_group_prob or 35
     if LEVEL.autodetail_group_walls_factor then
       prob = prob - math.clamp(0, LEVEL.autodetail_group_walls_factor, 35)
     end
@@ -2084,7 +2086,7 @@ stderrf("Cages in %s [%s pressure] --> any_prob=%d  per_prob=%d\n",
     end
 
     for _,name in pairs(table.keys(tab)) do
-      if name == "PLAIN" then continue end
+      if name == "PLAIN" then goto continue end
 
       local sink = GAME.SINKS[name]
 
@@ -2094,19 +2096,19 @@ stderrf("Cages in %s [%s pressure] --> any_prob=%d  per_prob=%d\n",
 
       if sink.mat == "_LIQUID" or sink.trim_mat == "_LIQUID" then
         if not LEVEL.liquid then
-          tab[name] = 0,
+          tab[name] = 0
         end
         if PARAM.liquid_sinks then
           if PARAM.liquid_sinks == "no" then
-            tab[name] = 0,
+            tab[name] = 0
           end
           if LEVEL.liquid then
             if LEVEL.liquid.damage
             and PARAM.liquid_sinks == "not_damaging" then
-              tab[name] = 0,
+              tab[name] = 0
             end
             if LEVEL.liquid.damage and LEVEL.is_procedural_gotcha then
-              tab[name] = 0,
+              tab[name] = 0
             end
           end
         end
@@ -2116,6 +2118,7 @@ stderrf("Cages in %s [%s pressure] --> any_prob=%d  per_prob=%d\n",
       then
         tab[name] = nil
       end
+      ::continue::
     end
 
     return tab
@@ -2130,7 +2133,7 @@ stderrf("Cages in %s [%s pressure] --> any_prob=%d  per_prob=%d\n",
     end
 
     for _,fg in pairs(R.floor_groups) do
-      if fg.openness < 0.4 then continue end
+      if fg.openness < 0.4 then goto continue end
 
       local tab = grab_usable_sinks(R, fg, "floor")
       if tab == nil then return end
@@ -2154,6 +2157,7 @@ stderrf("Cages in %s [%s pressure] --> any_prob=%d  per_prob=%d\n",
         end
         fg.sink = GAME.SINKS[rand.key_by_probs(GAME.THEMES[LEVEL.theme_name].street_sinks)]
       end
+      ::continue::
     end
   end
 
@@ -2162,10 +2166,10 @@ stderrf("Cages in %s [%s pressure] --> any_prob=%d  per_prob=%d\n",
     if R.is_cave or R.is_outdoor then return end
 
     for _,cg in pairs(R.ceil_groups) do
-      if cg.openness < 0.4 then continue end
+      if cg.openness < 0.4 then goto continue end
 
       local height = cg.h - cg.max_floor_h
-      if height < 128 then continue end
+      if height < 128 then goto continue end
 
       local tab = grab_usable_sinks(R, cg, "ceiling")
       if tab == nil then return end
@@ -2183,10 +2187,11 @@ stderrf("Cages in %s [%s pressure] --> any_prob=%d  per_prob=%d\n",
         -- inhibit ceiling lights and pillars
         for _,chunk in pairs(R.ceil_chunks) do
           if chunk.area.ceil_group == cg and not chunk.content then
-            chunk.content = "NOTHING",
+            chunk.content = "NOTHING"
           end
         end
       end
+      ::continue::
     end
   end
 
@@ -2198,10 +2203,10 @@ stderrf("Cages in %s [%s pressure] --> any_prob=%d  per_prob=%d\n",
       where = "point",
 
       size  = 80,
-      height = cg.h - cg.max_floor_h
+      height = cg.h - cg.max_floor_h,
 
       env = R:get_env()
-    },
+    }
 
     if R.theme.theme_override then
       reqs.theme_override = R.theme.theme_override
@@ -2218,10 +2223,10 @@ stderrf("Cages in %s [%s pressure] --> any_prob=%d  per_prob=%d\n",
       where = "point",
 
       size = 80,
-      height = A.ceil_h - A.floor_h
+      height = A.ceil_h - A.floor_h,
 
       env = "building",
-    },
+    }
 
     if A.room.theme.theme_override then
       reqs.theme_override = A.room.theme.theme_override
@@ -2241,7 +2246,7 @@ stderrf("Cages in %s [%s pressure] --> any_prob=%d  per_prob=%d\n",
       fab_few = 35,
       fab_rare = 15,
       fab_none = 0,
-    },
+    }
 
     if PARAM.point_prob and PARAM.point_prob ~= "fab_default" then
       decor_prob = decor_prob_tab[PARAM.point_prob]
@@ -2271,62 +2276,66 @@ stderrf("Cages in %s [%s pressure] --> any_prob=%d  per_prob=%d\n",
   local function pick_ceiling_lights(R)
     if R.is_cave or R.is_park then return end
 
-    local groups = {},
+    local groups = {}
 
-    local prob = R.theme.ceil_light_prob or THEME.ceil_light_prob or 50,
+    local prob = R.theme.ceil_light_prob or THEME.ceil_light_prob or 50
 
     for _,cg in pairs(R.ceil_groups) do
-      if not rand.odds(prob) then continue end
+      if not rand.odds(prob) then goto continue end
 
       local def = select_lamp_for_group(R, cg)
-      if not def then continue end
+      if not def then goto continue end
 
       for _,chunk in pairs(R.ceil_chunks) do
-        if chunk.area.ceil_group ~= cg then continue end
-        if chunk.content then continue end
-        if chunk.floor_below and chunk.floor_below.content then continue end
+        if chunk.area.ceil_group ~= cg then goto continue end
+        if chunk.content then goto continue end
+        if chunk.floor_below and chunk.floor_below.content then goto continue end
         if def.height > (chunk.area.ceil_h - chunk.area.floor_h) then
-          continue end
+          goto continue end
 
         if true then
-          chunk.content = "DECORATION",
+          chunk.content = "DECORATION"
           chunk.prefab_def = def
-          chunk.prefab_dir = 2,
+          chunk.prefab_dir = 2
 
-          chunk.area.bump_light = 16,
+          chunk.area.bump_light = 16
 
           chunk.ceil_above = true
         end
+        ::continue::
       end
+      ::continue::
     end
 
     -- allow fabrication of ceiling lights in outdoor porches
     if R.is_outdoor then
       for _,A in pairs(pairs(R.areas)) do
         if A.is_porch then
-          if not rand.odds(prob) then continue end
+          if not rand.odds(prob) then goto continue end
 
           A.lamp_def = select_lamp_for_porch(A)
-          if not A.lamp_def then continue end
+          if not A.lamp_def then goto continue end
         end
+        ::continue::
       end
 
       for _,chunk in pairs(R.floor_chunks) do
         if chunk.area.lamp_def then
-          if chunk.content then continue end
-          if chunk.floor_below and chunk.floor_below.content then continue end
+          if chunk.content then goto continue end
+          if chunk.floor_below and chunk.floor_below.content then goto continue end
 
           if chunk.area.lamp_def.height > (chunk.area.ceil_h - chunk.area.floor_h) then
-            continue end
+            goto continue end
 
-          chunk.content = "DECORATION",
-          chunk.kind = "ceil",
+          chunk.content = "DECORATION"
+          chunk.kind = "ceil"
           chunk.prefab_def = chunk.area.lamp_def
-          chunk.prefab_dir = 2,
+          chunk.prefab_dir = 2
 
-          chunk.area.bump_light = 16,
+          chunk.area.bump_light = 16
 
           chunk.ceil_above = true
+          ::continue::
         end
       end
     end
@@ -2335,13 +2344,13 @@ stderrf("Cages in %s [%s pressure] --> any_prob=%d  per_prob=%d\n",
 
 
   local function unsink_chunk(chunk, where)
-    local corner_field = where .. "_inner",
+    local corner_field = where .. "_inner"
 
-    local cx1 = chunk.sx1,
-    local cx2 = chunk.sx2 + 1,
+    local cx1 = chunk.sx1
+    local cx2 = chunk.sx2 + 1
 
-    local cy1 = chunk.sy1,
-    local cy2 = chunk.sy2 + 1,
+    local cy1 = chunk.sy1
+    local cy2 = chunk.sy2 + 1
 
     for cx = cx1, cx2 do
     for cy = cy1, cy2 do
@@ -2466,7 +2475,7 @@ end
 function Layout_scenic_vistas()
   Area_pick_facing_rooms()
 
-  LEVEL.scenic_fabs = {},
+  LEVEL.scenic_fabs = {}
 
   for _,A in pairs(pairs(LEVEL.areas)) do
     if A.mode == "scenic" then
@@ -2541,7 +2550,7 @@ function Layout_handle_corners()
       end
     end
 
-    return "_DEFAULT",
+    return "_DEFAULT"
   end
 
 
@@ -2555,7 +2564,7 @@ function Layout_handle_corners()
 
     for _,junc in pairs(corner.junctions) do
       if junc.A2 == "map_edge" then return end
-      if not junc.E1 then continue end
+      if not junc.E1 then goto continue end
 
       -- code for fancy fenceposts
       if (junc.E1.kind == "fence" and junc.E1.area.is_outdoor) then
@@ -2572,10 +2581,10 @@ function Layout_handle_corners()
 
         if Corner_is_at_area_corner(corner) then
           corner.post_mat = corner.areas[1].zone.fence_mat
-          corner.kind = "post",
+          corner.kind = "post"
           corner.post_type = assert(corner.areas[1].zone.post_type)
           if corner.post_top_h < tallest_h then
-            corner.post_top_h = tallest_h + 32,
+            corner.post_top_h = tallest_h + 32
           end
         end
 
@@ -2603,7 +2612,7 @@ function Layout_handle_corners()
 
             if A.is_porch or A.is_porch_neighbor then
               tallest_h = EXTREME_H
-              continue
+              goto continue
             end
 
             tallest_h = math.max(tallest_h, A.floor_h + assert(junc.E1.rail_offset))
@@ -2611,22 +2620,24 @@ function Layout_handle_corners()
             if A.floor_h then
               tallest_h = math.max(tallest_h, A.floor_h)
             end
+            ::continue::
           end
 
           post_top_z = tallest_h
         end
 
-        corner.kind = "post",
+        corner.kind = "post"
         if corner.post_top_h < post_top_z then
           corner.post_top_h = post_top_z
         end
       end
+      ::continue::
     end
   end
 
 
   local function add_pillar(corner)
-    corner.kind = "pillar",
+    corner.kind = "pillar"
     corner.mat = fetch_good_pillar_material(corner)
   end
 
@@ -2643,7 +2654,7 @@ function Layout_handle_corners()
       -- don't put pillars adjacent to joiners and closets
       for _,S in pairs(pairs(corner.seeds)) do
         if S.chunk then
-          if S.chunk.kind == "joiner",
+          if S.chunk.kind == "joiner"
           or S.chunk.kind == "closet" then
             return
           end
@@ -2708,7 +2719,7 @@ function Layout_indoor_lighting()
     normal   = 144,
     dark     = 120,
     verydark = 104,
-  },
+  }
 
   local CAVE_LEVELS =
   {
@@ -2716,31 +2727,31 @@ function Layout_indoor_lighting()
     normal   = 128,
     dark     = 112,
     verydark = 96,
-  },
+  }
 
   -- attachment for brightness offset options -MSSP
-  local light_offset = 0,
+  local light_offset = 0
   if PARAM.brightness_offset == "-3" then
-    light_offset = -48,
+    light_offset = -48
   elseif PARAM.brightness_offset == "-2" then
-    light_offset = -24,
+    light_offset = -24
   elseif PARAM.brightness_offset == "-1" then
-    light_offset = -16,
+    light_offset = -16
   elseif PARAM.brightness_offset == "+1" then
-    light_offset = 16,
+    light_offset = 16
   elseif PARAM.brightness_offset == "+2" then
-    light_offset = 24,
+    light_offset = 24
   elseif PARAM.brightness_offset == "+3" then
-    light_offset = 48,
+    light_offset = 48
   else
-    light_offset = 0,
+    light_offset = 0
   end
 
   local function sky_light_to_keyword()
     if LEVEL.sky_light >= 168 then return "bright" end
     if LEVEL.sky_light >= 136 then return "normal" end
     if LEVEL.sky_light >= 120 then return "dark" end
-    return "verydark",
+    return "verydark"
   end
 
   local function set_room(R, what)
@@ -2768,7 +2779,7 @@ function Layout_indoor_lighting()
  -- Very dark here! --Armaetus
 
   local function visit_room(R, prev_room)
-    local tab = { bright=20, normal=45, dark=65, verydark=25 },
+    local tab = { bright=20, normal=45, dark=65, verydark=25 }
 
     if R.is_start then
       tab["verydark"] = nil
@@ -2788,13 +2799,14 @@ function Layout_indoor_lighting()
 
     -- recurse to neighbors
     for _,C in pairs(pairs(R.conns)) do
-      if C.is_cycle then continue end
+      if C.is_cycle then goto continue end
 
       local R2 = C:other_room(R)
 
       if R2.lev_along > R.lev_along then
         visit_room(R2, R)
       end
+      ::continue::
     end
   end
 
@@ -2851,8 +2863,8 @@ function Layout_outdoor_shadows()
 
 
   local function shadow_from_seed(S, dir)
-    local dx = 64,
-    local dy = 96,
+    local dx = 64
+    local dy = 96
 
     local brush
     local wall
@@ -2866,7 +2878,7 @@ function Layout_outdoor_shadows()
         { x = S.x2 - dx, y = S.y1 - dy },
         { x = S.x2     , y = S.y1 - 16 },
         { x = S.x2     , y = S.y1      },
-      },
+      }
     elseif dir == 4 then
       brush =
       {
@@ -2876,7 +2888,7 @@ function Layout_outdoor_shadows()
         { x = S.x1 - 16, y = S.y2      },
         { x = S.x1 - dx, y = S.y2 - dy },
         { x = S.x1 - dx, y = S.y1 - dy },
-      },
+      }
     elseif dir == 1 then
       brush =
       {
@@ -2885,7 +2897,7 @@ function Layout_outdoor_shadows()
         { x = S.x1 - dx, y = S.y2 - dy },
         { x = S.x2 - dx, y = S.y1 - dy },
         { x = S.x2     , y = S.y1      },
-      },
+      }
     elseif dir == 3 then
       brush =
       {
@@ -2894,7 +2906,7 @@ function Layout_outdoor_shadows()
         { x = S.x1 - dx, y = S.y1 - dy },
         { x = S.x2 - dx, y = S.y2 - dy },
         { x = S.x2     , y = S.y2      },
-      },
+      }
     else
       -- nothing needed
       return
