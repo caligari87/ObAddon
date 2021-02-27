@@ -25,15 +25,15 @@ PREFAB_CONTROL.WALL_CHOICES =
   "fab_less",    _("Less"),
   "fab_few",     _("Few"),
   "fab_rare",    _("Rare"),
-  "fab_none",    _("NONE"),
+  "fab_none",    _("NONE")
 }
 
 PREFAB_CONTROL.WALL_REDUCTION_ODDS =
 {
-  fab_some = 0.2
-  fab_less = 0.4
-  fab_few = 0.6
-  fab_rare = 0.8
+  fab_some = 0.2,
+  fab_less = 0.4,
+  fab_few = 0.6,
+  fab_rare = 0.8,
   fab_none = 1
 }
 
@@ -44,13 +44,19 @@ PREFAB_CONTROL.POINT_CHOICES =
   "fab_few",     _("Few"),
   "fab_default", _("DEFAULT"),
   "fab_more",    _("More"),
-  "fab_heaps",   _("Heaps"),
+  "fab_heaps",   _("Heaps")
 }
 
 PREFAB_CONTROL.ON_OFF =
 {
   "on",  _("On"),
-  "off", _("Off"),
+  "off", _("Off")
+}
+
+PREFAB_CONTROL.DAMAGING_HALLWAY_CHOICES =
+{
+  "default", _("DEFAULT"),
+  "no", _("Non-damaging")
 }
 
 PREFAB_CONTROL.FINE_TUNE_MULT_FACTORS =
@@ -62,7 +68,7 @@ PREFAB_CONTROL.FINE_TUNE_MULT_FACTORS =
   "1", _("Default"),
   "2", _("More"),
   "4", _("Heaps"),
-  "8", _("I LOVE IT"),
+  "8", _("I LOVE IT")
 }
 
 function PREFAB_CONTROL.setup(self)
@@ -112,6 +118,33 @@ function PREFAB_CONTROL.fine_tune_filters()
   end
 end
 
+function PREFAB_CONTROL.set_damaging_hallways()
+  if PARAM.pf_damaging_halls == "default" then return end
+
+  each name,fab in PREFABS do
+    if fab.group == "hellcata" then
+      fab.flat_LAVA1 = "BLOOD1"
+      fab.tex_FIREMAG1 = "BFALL1"
+      fab.tex_FF2200 = "BF0526" -- top lighting
+      fab.tex_FF8629 = "130406" -- liquid fog color
+      fab.sector_5 = 0 -- nullify damaging sectors
+    end
+
+    if fab.group == "pipeline" then
+      fab.flat_NUKAGE1 = "FWATER1"
+      fab.tex_SFALL1 = "FWATER1"
+      fab.tex_1F4525 = "4548BA" -- top lighting
+      fab.tex_041C08 = "13131C" -- liquid fog color
+      fab.sector_7 = 0 -- nullify damaging sectors
+    end
+  end
+end
+
+function PREFAB_CONTROL.get_levels()
+  PREFAB_CONTROL.fine_tune_filters()
+  PREFAB_CONTROL.set_damaging_hallways()
+end
+
 ----------------------------------------------------------------
 
 OB_MODULES["prefab_control"] =
@@ -126,7 +159,7 @@ OB_MODULES["prefab_control"] =
   hooks =
   {
     setup = PREFAB_CONTROL.setup
-    get_levels = PREFAB_CONTROL.fine_tune_filters
+    get_levels = PREFAB_CONTROL.get_levels
   }
 
   options =
@@ -214,6 +247,17 @@ OB_MODULES["prefab_control"] =
       tooltip="Changes probabilities for hell mirror maze closets and joiners."
       default="1"
       priority = 45
+      gap = 1
+    }
+
+    --
+
+    damaging_hallways =
+    {
+      name = "pf_damaging_halls", label = _("Damaging Hallways"), choices=PREFAB_CONTROL.DAMAGING_HALLWAY_CHOICES,
+      tooltip = "Changes the liquids on hallways with damaging floors to either be damaging (default) or non-damaging."
+      default = "default"
+      priority = 25
       gap = 1
     }
 
