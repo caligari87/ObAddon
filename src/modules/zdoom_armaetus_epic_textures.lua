@@ -1014,7 +1014,13 @@ function ARMAETUS_EPIC_TEXTURES.put_the_texture_wad_in()
   end
 
   if PARAM.custom_trees != "no" then
-    gui.wad_merge_sections("modules/zdoom_internal_scripts/ObAddon_trees.wad")
+    wad_file = "modules/zdoom_internal_scripts/ObAddon_trees.wad"
+    gui.wad_merge_sections(wad_file)
+  end
+
+  if PARAM.include_brightmaps == "yes" then
+    wad_file = "games/doom/data/ObAddon_Textures_Brightmaps.wad"
+    gui.wad_merge_sections(wad_file)
   end
 end
 ----------------------------------------------------------------
@@ -1032,10 +1038,10 @@ OB_MODULES["armaetus_epic_textures"] =
 
   hooks =
   {
-    setup = ARMAETUS_EPIC_TEXTURES.setup
-    get_levels_after_themes = ARMAETUS_EPIC_TEXTURES.decide_environment_themes
-    begin_level = ARMAETUS_EPIC_TEXTURES.generate_environment_themes
-    level_layout_finished = ARMAETUS_EPIC_TEXTURES.create_environment_themes
+    setup = ARMAETUS_EPIC_TEXTURES.setup,
+    get_levels_after_themes = ARMAETUS_EPIC_TEXTURES.decide_environment_themes,
+    begin_level = ARMAETUS_EPIC_TEXTURES.generate_environment_themes,
+    level_layout_finished = ARMAETUS_EPIC_TEXTURES.create_environment_themes,
     all_done = ARMAETUS_EPIC_TEXTURES.put_the_texture_wad_in
   }
 
@@ -1045,53 +1051,64 @@ OB_MODULES["armaetus_epic_textures"] =
   {
     custom_liquids =
     {
-      name = "custom_liquids"
-      label = _("Custom Liquids")
-      choices = ARMAETUS_EPIC_TEXTURES.YES_NO
-      default = "yes"
-      tooltip = "Adds new custom Textures liquid flats."
+      name = "custom_liquids",
+      label = _("Custom Liquids"),
+      choices = ARMAETUS_EPIC_TEXTURES.YES_NO,
+      default = "yes",
+      tooltip = "Adds new custom Textures liquid flats.",
       priority=4
     }
 
     custom_trees =
     {
-      name = "custom_trees"
-      label = _("Custom Trees")
-      choices = ARMAETUS_EPIC_TEXTURES.SOUCEPORT_CHOICES
-      default = "zs"
+      name = "custom_trees",
+      label = _("Custom Trees"),
+      choices = ARMAETUS_EPIC_TEXTURES.SOUCEPORT_CHOICES,
+      default = "zs",
       tooltip =
         "Adds custom flat-depedendent tree sprites into the game. Currently only replaces " ..
         "trees on specific grass flats and will be expanded in the future to accomnodate " ..
         "custom Textures and more. If you are playing a mod that already does its own trees, " ..
-        "it may be better to leave this off."
+        "it may be better to leave this off.",
       priority=3
     }
 
     environment_themes =
     {
-      name = "environment_themes"
-      label = _("Environment Theme")
-      choices = ARMAETUS_EPIC_TEXTURES.ENVIRONMENT_THEME_CHOICES
-      default = "random"
+      name = "environment_themes",
+      label = _("Environment Theme"),
+      choices = ARMAETUS_EPIC_TEXTURES.ENVIRONMENT_THEME_CHOICES,
+      default = "random",
       tooltip =
         "// THIS FEATURE IS CURRENTLY UNDER CONSTRUCTION \\\\\n" ..
         "Influences outdoor environments with different textures such as " ..
-        "desert sand or icey snow."
-      priority=2
+        "desert sand or icey snow.",
+      priority=2,
       gap=1
     }
 
     include_package =
     {
-      name = "include_package"
-      label = _("Texture WAD Merge")
-      choices = ARMAETUS_EPIC_TEXTURES.YES_NO
-      default = "yes"
+      name = "include_package",
+      label = _("Merge Textures WAD"),
+      choices = ARMAETUS_EPIC_TEXTURES.YES_NO,
+      default = "yes",
       tooltip =
         "Allows the trimming down of resulting WAD by not merging the custom texture WAD.\n\n" ..
         "This will require you to extract and load up the WAD manually in your preferred sourceport installation.\n\n" ..
-        "This is the preferrable option for multiplayer situations and server owners and have each client obtain a copy of the texture pack instead.\n"
+        "This is the preferrable option for multiplayer situations and server owners and have each client obtain a copy of the texture pack instead.\n",
       priority=1
+    }
+
+    include_brightmaps =
+    {
+      name = "include_brightmaps",
+      label = _("Include Brightmaps"),
+      choices = ARMAETUS_EPIC_TEXTURES.YES_NO,
+      default = "yes",
+      tooltip = "Allows merging Epic Textures brightmaps into the WAD. Does not include brightmaps for" ..
+        " base resources from any of the games.",
+      priority = 0
     }
   }
 }

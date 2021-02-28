@@ -225,6 +225,11 @@ function ScriptMan_assemble_gldefs_lump()
     end
   end
 
+  if PARAM.include_brightmaps == "yes" then
+    gldefs_lines = gldefs_lines ..
+    EPIC_BRIGHTMAPS
+  end
+
   if gldefs_lines != "" then
     add_script_lump("GLDEFS", gldefs_lines)
   end

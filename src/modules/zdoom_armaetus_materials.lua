@@ -1253,3 +1253,303 @@ ARMAETUS_MATERIALS = {
 
   FINVSBLE = { t="FINVSBLE", f="FINVSBLE"}
 }
+
+EPIC_BRIGHTMAPS =
+[[brightmap texture COMPSTA3
+{
+  map OBRCPST1
+}
+brightmap texture COMPSTA4
+{
+  map OBRCPST1
+}
+brightmap texture COMPSTA5
+{
+  map OBRCPST2
+}
+brightmap texture COMPSTA6
+{
+  map OBRCPST2
+}
+brightmap texture COMPSTA7
+{
+  map OBRCPST1
+}
+brightmap texture COMPSTA8
+{
+  map OBRCPST1
+}
+brightmap texture COMPSTA9
+{
+  map OBRCPST1
+}
+brightmap texture COMPSTAA
+{
+  map OBRCPST1
+}
+brightmap texture COMPSTAB
+{
+  map OBRCPST3
+}
+
+// shawcomp set
+
+brightmap texture SHAWCOMP
+{
+  map OBRSHCP1
+}
+brightmap texture CONSOLE3
+{
+  map OBRSHCP1
+}
+brightmap texture CONSOLE4
+{
+  map OBRCNSL4
+}
+
+// large single monitors
+
+brightmap texture COMPCT01
+{
+  map OBRCPCT1
+}
+brightmap texture COMPCT02
+{
+  map OBRCPCT1
+}
+brightmap texture COMPCT03
+{
+  map OBRCPCT1
+}
+brightmap texture COMPCT04
+{
+  map OBRCPCT1
+}
+brightmap texture COMPCT05
+{
+  map OBRCPCT1
+}
+brightmap texture COMPCT06
+{
+  map OBRCPCT1
+}
+brightmap texture COMPCT07
+{
+  map OBRCPCT2
+}
+
+// silver light variations
+brightmap texture SILVER2R
+{
+  map OBRSLVL
+}
+brightmap texture SILVER2O
+{
+  map OBRSLVL
+}
+brightmap texture SILVER2Y
+{
+  map OBRSLVL
+}
+brightmap texture SILVER2W
+{
+  map OBRSLVL
+}
+brightmap texture SILVER2G
+{
+  map OBRSLVL
+}
+
+// vent (the only one that needs a brightmap TBH
+brightmap texture COMPVEN2
+{
+  map OBRCPVN2
+}
+
+// vertical lights
+brightmap texture LITE2
+{
+  map OBRLITE2
+}
+brightmap texture LITE96
+{
+  map OBRLIT96
+}
+brightmap texture LITESTON
+{
+  map OBRLITSN
+}
+
+// comptiles
+brightmap texture COMPTIL2
+{
+  map OBRCPTIL
+}
+brightmap texture COMPTIL3
+{
+  map OBRCPTIL
+}
+brightmap texture COMPTIL4
+{
+  map OBRCPTIL
+}
+brightmap texture COMPTIL5
+{
+  map OBRCPTIL
+}
+brightmap texture COMPTIL6
+{
+  map OBRCPTIL
+}
+brightmap texture GRAYBLU1
+{
+  map OBRCPTIL
+}
+brightmap texture SILVBLU1
+{
+  map OBRCPTIL
+}
+brightmap texture TEKGRBLU
+{
+  map OBRCPTIL
+}
+
+// monitors with static/noise
+brightmap texture NOISE1
+{
+  map OBRNOIS1
+}
+brightmap texture NOISE2
+{
+  map OBRNOIS1
+}
+brightmap texture NOISE3
+{
+  map OBRNOIS1
+}
+brightmap texture NOISE4
+{
+  map OBRNOIS1
+}
+//
+brightmap texture NOISE2A
+{
+  map OBRNOIS2
+}
+brightmap texture NOISE2B
+{
+  map OBRNOIS2
+}
+brightmap texture NOISE2C
+{
+  map OBRNOIS2
+}
+brightmap texture NOISE2D
+{
+  map OBRNOIS2
+}
+//
+brightmap texture NOISE3A
+{
+  map OBRNOIS3
+}
+brightmap texture NOISE3B
+{
+  map OBRNOIS3
+}
+brightmap texture NOISE3C
+{
+  map OBRNOIS3
+}
+brightmap texture NOISE3D
+{
+  map OBRNOIS3
+}
+
+// lite5 recolors - excluding the original lite5
+brightmap texture T_VSLTEG
+{
+  map OBRLITE5
+}
+brightmap texture T_VSLTEO
+{
+  map OBRLITE5
+}
+brightmap texture T_VSLTEP
+{
+  map OBRLITE5
+}
+brightmap texture T_VSLTER
+{
+  map OBRLITE5
+}
+brightmap texture T_VSLTEY
+{
+  map OBRLITE5
+}
+
+// gothic stuf
+brightmap texture GLASS1
+{
+  map OBRGLSBG
+}
+brightmap texture GLASS2
+{
+  map OBRGLSBG
+}
+brightmap texture GLASS3
+{
+  map OBRGLSBG
+}
+brightmap texture GLASS4
+{
+  map OBRGLSBG
+}
+brightmap texture GLASS6
+{
+  map OBRGLSBG
+}
+brightmap texture GLASS11
+{
+  map OBRGLSTL
+}
+brightmap texture GLASS12
+{
+  map OBRGLSTL
+}
+brightmap texture GLASS13
+{
+  map OBRGLSTL
+}
+brightmap texture GLASS14
+{
+  map OBRGLSTL
+}
+brightmap texture GOTH21
+{
+  map OBRGT21
+}
+
+// gothic switches
+brightmap texture SW2SKUL1
+{
+  map OBRS2SK
+}
+brightmap texture SW2PENT
+{
+  map OBRS2PT
+}
+
+brightmap texture SW2QUAK
+{
+  map OBRS2QK
+}
+brightmap texture SW2GOTH
+{
+  map OBRS2GH
+}
+brightmap texture SW2CHN
+{
+  map OBRS2CN
+}
+]]
