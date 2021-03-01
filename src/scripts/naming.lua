@@ -30,7 +30,7 @@
 --
 ------------------------------------------------------------------------
 
-namelib = {},
+namelib = {}
 
 
 namelib.NAMES =
@@ -78,7 +78,7 @@ namelib.NAMES =
         ["A Walk on Thin Ice"]=10,
         ["Alternative Means"]=10,
         ["Annihilation"]=10,
-        ["Armaetus Loves Naming"]=10 -- Bahaha!
+        ["Armaetus Loves Naming"]=10, -- Bahaha!
         ["Ascent into Madness"]=10,
         ["Backstabbed"]=10,
         ["Black Skies"]=10,
@@ -98,7 +98,7 @@ namelib.NAMES =
         ["Fire With Fire"]=10,
         ["Fueling the Flames"]=10,
         ["Genocidal Delusions"]=10,
-        ["Go Fuck Yourself"]=10 -- Sunlust MAP29.
+        ["Go Fuck Yourself"]=10, -- Sunlust MAP29.
         ["Headshot"]=10,
         ["Into the Fog"]=10,
         ["Liquid Violence"]=10,
@@ -114,9 +114,9 @@ namelib.NAMES =
         ["Parallel Tribulation"]=10,
         ["Passing Through"]=10,
         ["Plausable Fear"]=10,
-        ["Revelations of Doom"]=10 -- Also a Hellhammer song title
+        ["Revelations of Doom"]=10, -- Also a Hellhammer song title
         ["Spiraling Uncertainity"]=10,
-        ["The Fourth Dimension"]=10 -- Hypocrisy song and album title
+        ["The Fourth Dimension"]=10, -- Hypocrisy song and album title
         ["The Marine Element"]=10,
         ["The Unknown"]=10,
         ["Through the Looking Glass"]=10,
@@ -145,7 +145,7 @@ namelib.NAMES =
         ["Dread"]=10,
         ["Envy"]=10,
         ["Evil"]=10,
-        ["Fear"]=10 -- Why not?
+        ["Fear"]=10, -- Why not?
         ["Fury"]=10,
         ["Guilt"]=10,
         ["Hatred"]=10,
@@ -233,7 +233,7 @@ namelib.NAMES =
         ["Objective:"]=7,
         ["Counterattack in the"]=7,
         ["Ambush in the"]=7,
-        ["Get to da"]=3 -- CHOPPAH!!!
+        ["Get to da"]=3, -- CHOPPAH!!!
         ["War of the"]=10,
         ["Return to"]=10,
         ["Return to the"]=10,
@@ -261,17 +261,17 @@ namelib.NAMES =
 
     divisors =
     {
-      a = 10   --\
-      b = 10   -- adjectives
-      h = 10   --/
+      a = 10,   --\
+      b = 10,   -- adjectives
+      h = 10,   --/
 
-      n = 50   -- noun: Base, Station, City (etc)
-      m = 3    -- monster name: Demon, Imp, Mummy (etc)
-      e = 3    -- evil being: Satan (etc)
+      n = 50,   -- noun: Base, Station, City (etc)
+      m = 3,    -- monster name: Demon, Imp, Mummy (etc)
+      e = 3,    -- evil being: Satan (etc)
 
-      t = 1    -- article: The XX
-      v = 20   -- phrase before a noun: Curse of the XX
-      x = 20   -- phrase AFTER a noun: XX the Way ObAddon Did
+      t = 1,    -- article: The XX
+      v = 20,   -- phrase before a noun: Curse of the XX
+      x = 20,   -- phrase AFTER a noun: XX the Way ObAddon Did
       r = 40,
 
       s = 1000  -- single complete names
@@ -679,8 +679,8 @@ namelib.NAMES =
         ["Capture and Kill"]=10,
         ["Carnage Command"]=10,
         ["Catch The Bullet"]=10,
-        ["Cathode Ray Sunshine"]=10 --Dark Tranquility song
-        ["Clawhammer"]=10 -- Silent Hill
+        ["Cathode Ray Sunshine"]=10, --Dark Tranquility song
+        ["Clawhammer"]=10, -- Silent Hill
         ["Close Quarters"]=10,
         ["Close Call"]=10,
         ["Code Black"]=10,
@@ -703,7 +703,7 @@ namelib.NAMES =
         ["Deja Vu"]=10,
         ["Delta Labs"]=10,
         ["Denial Measures"]=10,
-        ["Dissolution Factor Red"]=10 -- Dark Tranquility
+        ["Dissolution Factor Red"]=10, -- Dark Tranquility
         ["Distortica"]=10,
         ["Domino Effect"]=10,
         ["Don't Give Up Yet"]=10,
@@ -729,7 +729,7 @@ namelib.NAMES =
         ["Hypernova"]=10,
         ["Ignition!"]=10,
         ["In Extremis"]=10,
-        ["Insanity's Crescendo"]=10 -- Dark Tranquility
+        ["Insanity's Crescendo"]=10, -- Dark Tranquility
         ["Interstellar Overdrive"]=10,
         ["Judgement Day"]=10,
         ["Know No Boundries"]=10,
@@ -789,7 +789,7 @@ namelib.NAMES =
         ["Atomic Fortress"]=10,
         ["Artificial Apathy"]=10,
         ["Blast Radius"]=10,
-        ["Celestial Crimes"]=10 -- 1349, I think?
+        ["Celestial Crimes"]=10, -- 1349, I think?
         ["Excessive Exposure"]=10,
         ["False Discharge"]=10,
         ["Galaxy on Fire"]=10,
@@ -824,7 +824,7 @@ namelib.NAMES =
         ["Area Ops"]=10,
         ["Artifact Storage"]=10,
         ["Backup Generating Station"]=10,
-        ["Beware the Storm Eye"]=10 -- Doom 64,
+        ["Beware the Storm Eye"]=10, -- Doom 64,
         ["Blasted"]=10,
         ["Cloud Computing"]=10,
         ["Communications Complex"]=10,
@@ -839,26 +839,26 @@ namelib.NAMES =
         ["Dirty Computers"]=10,
         ["Distribution and Shipping"]=10,
         ["Drilling and Killing"]=10,
-        ["Electric Dreams"]=10 -- This one thought up by MSSP
+        ["Electric Dreams"]=10, -- This one thought up by MSSP
         ["Emergency Comms Center"]=10,
-        ["Endothermic Fission Engine"]=10 -- Demios
+        ["Endothermic Fission Engine"]=10, -- Demios
         ["Excavation Zone"]=10,
         ["Excess Ammunition"]=10,
         ["Expended Shells"]=10,
         ["Expiration Date"]=10,
-        ["Fission Chip Production"]=10 -- Demios
+        ["Fission Chip Production"]=10, -- Demios
         ["Gateway Diabolique"]=10,
         ["Heavy Equipment Zone"]=10,
         ["Hellborne Singularity"]=10,
         ["Hellspawn Quarantine Lab"]=10,
         ["Hydroponics"]=10,
         ["Limited Options"]=10,
-        ["Main Solar Array"]=10 -- Demios
+        ["Main Solar Array"]=10, -- Demios
         ["Mindfuck"]=10,
         ["Monorail Facility Transport"]=10,
         ["Mostly Destructive"]=10,
-        ["Munitions Replication Center"]=10 -- Demios
-        ["Nuclear Missile Banks"]=10 -- Demios
+        ["Munitions Replication Center"]=10, -- Demios
+        ["Nuclear Missile Banks"]=10, -- Demios
         ["Painkiller"]=10,
         ["Power Station 1A"]=10,
         ["Power Station 2A"]=10,
@@ -868,7 +868,7 @@ namelib.NAMES =
         ["Raw Materials Handling"]=10,
         ["Raw Materials Processing"]=10,
         ["Raw Materials Storage"]=10,
-        ["Reinforced Storage Vats"]=10 -- Demios
+        ["Reinforced Storage Vats"]=10, -- Demios
         ["Research & Development"]=10,
         ["Satellite Launch Complex"]=10,
         ["Secondary Transport Hub"]=10,
@@ -878,7 +878,7 @@ namelib.NAMES =
         ["Titan Central Center"]=10,
         ["Tech Innovation Labs"]=10,
         ["Technophile"]=10,
-        ["Total Absolution"]=10 -- Doom 64,
+        ["Total Absolution"]=10, -- Doom 64,
         ["UAC Primary Base Subsystems"]=10,
         ["Upper Dig Site"]=10,
         ["VEGA Secondary Coupling"]=10,
@@ -888,11 +888,11 @@ namelib.NAMES =
         ["Wicked Thy Demon Comes"]=10,
 
         -- MSSP adds more names too
-        ["2 Imps 1 Shotgun"]=10 -- retxirT
-        ["3 Keys 1 Doomguy"]=10 -- there's a '3 guys 1 hammer' thing out there apparently
-        ["Bad Optics"]=10 -- retxirT
-        ["Engineering Gone Bad"]=10 -- Demios, also based on Romero's "Tech Gone Bad",
-        ["Short-Circuit"]=10 -- Demios
+        ["2 Imps 1 Shotgun"]=10, -- retxirT
+        ["3 Keys 1 Doomguy"]=10, -- there's a '3 guys 1 hammer' thing out there apparently
+        ["Bad Optics"]=10, -- retxirT
+        ["Engineering Gone Bad"]=10, -- Demios, also based on Romero's "Tech Gone Bad",
+        ["Short-Circuit"]=10, -- Demios
 
         -- Frozsoul
         ["As the Doomworld Turns"]=10,
@@ -945,7 +945,7 @@ namelib.NAMES =
         ["Data Degeneration"]=10,
         ["Digital Flametongue"]=10,
         ["Orbitdancer"]=10,
-        ["Powder Burns"]=10 -- Bolt Thrower
+        ["Powder Burns"]=10, -- Bolt Thrower
         ["The Particle Storm"]=10 -- Mostly Dark Tranquility, "Into the Particle Storm" won't fit, I think?
 
       },
@@ -1771,13 +1771,13 @@ namelib.NAMES =
         ["Slow Death"]=10,
         ["Soulburn"]=10,
         ["Soul Scars"]=10,
-        ["Spheres of Madness"]=10 -- Song by Decapitated, a Polish death metal band
+        ["Spheres of Madness"]=10, -- Song by Decapitated, a Polish death metal band
         ["Spiritual Madness"]=10,
         ["Stained Tombs"]=10,
         ["Stripped of Flesh"]=10,
         ["Stygiophobia"]=10,
         ["Sympathy Denied"]=10,
-        ["The Bleeding"]=10 -- Doom 64,
+        ["The Bleeding"]=10, -- Doom 64,
         ["The Heretic's Touch"]=10,
         ["The Rotted Foul"]=10,
         ["Time and Dust"]=10,
@@ -1834,7 +1834,7 @@ namelib.NAMES =
         ["Artwork of Affliction"]=10,
         ["Blood Red Sunshine"]=10,
         ["Chaotic Malfeasance"]=10,
-        ["Compulsive Psychosis"]=10 -- Hypocrisy song, melodic death metal
+        ["Compulsive Psychosis"]=10, -- Hypocrisy song, melodic death metal
         ["Crushed Will"]=10,
         ["Death and Dreaming"]=10,
         ["Dessicated and Devoured"]=10,
@@ -1849,8 +1849,8 @@ namelib.NAMES =
         ["Nocturnal Devotion"]=10,
         ["Obelisk of Timelessness"]=10,
         ["Only Death Matters Here"]=10,
-        ["Oscuridad y Muerte"]=10 -- Darkness and Death. Please fix if incorrect.
-        ["Profundis Inferni Convivae"]=10 -- Depths of Hell. Please confirm.
+        ["Oscuridad y Muerte"]=10, -- Darkness and Death. Please fix if incorrect.
+        ["Profundis Inferni Convivae"]=10, -- Depths of Hell. Please confirm.
         ["Processed and Discarded"]=10,
         ["Pure Blasphemy"]=10,
         ["Sanguine Plataeu"]=10,
@@ -1891,7 +1891,7 @@ namelib.NAMES =
         ["Fueled by Tears"]=10,
         ["Funeral Monolith"]=10,
         ["Goat Worship"]=10,
-        ["Human Barbeque"]=10 -- Nod to Evilution
+        ["Human Barbeque"]=10, -- Nod to Evilution
         ["Human Garbage"]=10,
         ["Intestinal Jumprope"]=10,
         ["Killing Time, Killing You"]=10,
@@ -2570,13 +2570,13 @@ namelib.NAMES =
         ["Scrounge"]=10,
         ["Stand Your Ground"]=10,
         ["Steel Scraps"]=10,
-        ["The Mysteries of Octothorp"]=10 -- Come on crowbars82, come and finish your mod lol
+        ["The Mysteries of Octothorp"]=10, -- Come on crowbars82, come and finish your mod lol
         ["The No Go Zone"]=10,
         ["The Twisted Abode"]=10,
         ["Planetary Destruction"]=10,
 
         -- MSSP adds more names as well
-        ["Damned Demon Destruction"]=10 -- Demios
+        ["Damned Demon Destruction"]=10, -- Demios
 
         -- Doom Eternal stuff. Would these be better under Hell?
         ["Ardur"]=10,
@@ -2600,7 +2600,7 @@ namelib.NAMES =
         ["Abandoned"]=10,
         ["Among the Abyss"]=10,
         ["Art of Urban Decay"]=10,
-        ["Ashen Grip"]=10 -- Elder Scrolls Online stuff
+        ["Ashen Grip"]=10, -- Elder Scrolls Online stuff
         ["Beyond the Mist"]=10,
         ["Beyond Survival"]=10,
         ["Blazing Skyscrapers"]=10,
@@ -3024,7 +3024,7 @@ namelib.NAMES =
         ["Destiny"]=10,
         ["Diagnosis Death"]=10,
         ["Disruption of Worlds"]=10,
-        ["Doom"]=10 -- Yeah lol, it's a word to use
+        ["Doom"]=10, -- Yeah lol, it's a word to use
         ["From Every Direction"]=10,
         ["Hellish Blockade"]=10,
         ["In a Snag"]=10,
@@ -3038,14 +3038,14 @@ namelib.NAMES =
         ["Sirens Blaring"]=10,
         ["Subjugation"]=10,
         ["Toll Booth From Hell"]=10,
-        ["The Kismet of Marines"]=10 -- https://www.dictionary.com/browse/kismet
+        ["The Kismet of Marines"]=10, -- https://www.dictionary.com/browse/kismet
         ["The Oppressors"]=10,
         ["The Slow Painful Crush"]=10,
         ["Unwanted Termination"]=10,
         ["Wheel of Misfortune"]=10,
         ["Zero Calm Here"]=10,
 
-        ["Sentinel Prime"]=10 -- Doom Eternal
+        ["Sentinel Prime"]=10, -- Doom Eternal
 
         -- 2021 additions
         ["A Bit Too Simple"]=10,
@@ -3122,7 +3122,7 @@ namelib.NAMES =
         ["100 Ways to Fry"]=10,
         ["All Your Base"]=10,
         ["Anthem for Doom"]=10,
-        ["Axis of Evil"]=10 --Sodom "Axis of Evil" track
+        ["Axis of Evil"]=10, --Sodom "Axis of Evil" track
         ["Andrew's Jumpy Castle"]=10,
         ["A Wibbly Wobbly Hell"]=10,
         ["Baron's Hideout"]=10,
@@ -3133,9 +3133,9 @@ namelib.NAMES =
         ["Bling Bling"]=10,
         ["Bill vs Steve"]=10,
         ["Binary Blob World Order"]=10,
-        ["Bitch Lasanga"]=10 --lol Pewdiepie
+        ["Bitch Lasanga"]=10, --lol Pewdiepie
         ["Blimey Teddy"]=10,
-        ["BOHICA"]=10 --Military slang acronym "Bend over, here it comes again",
+        ["BOHICA"]=10, --Military slang acronym "Bend over, here it comes again",
         ["Bork Bork Bork"]=10,
         ["Cats Rule Here"]=10,
         ["Catapult!"]=10,
@@ -3159,10 +3159,10 @@ namelib.NAMES =
         ["Demonitized"]=10,
         ["Dregs"]=10,
         ["Dragon Rainbow"]=10,
-        ["Drawing Arrows"]=10 --Against Nature song
+        ["Drawing Arrows"]=10, --Against Nature song
         ["Dunked"]=10,
         ["Dysfunctional Doomguy"]=10,
-        ["Essel's Fort -TM-"]=10 --esselfortium, a Doomworld regular and moderator
+        ["Essel's Fort -TM-"]=10, --esselfortium, a Doomworld regular and moderator
         ["E for Effort"]=10,
         ["Enter With Drag On"]=10,
         ["Eye Sore"]=10,
@@ -3171,14 +3171,14 @@ namelib.NAMES =
         ["Far Out!"]=10,
         ["Fatal Error"]=10,
         ["Fishing Expedition"]=10,
-        ["Flipping the Linedef"]=10 --retxirT
+        ["Flipping the Linedef"]=10, --retxirT
         ["FOOBAR"]=10,
         ["Foobie Bletch"]=10,
         ["Froody Hoody Froo"]=10,
-        ["Fraggle's Sock"]=10 --Fraggle, Doomworld moderator and author of Chocolate Doom
+        ["Fraggle's Sock"]=10, --Fraggle, Doomworld moderator and author of Chocolate Doom
         ["Game Settings"]=10,
         ["Geronimo"]=10,
-        ["Get Woke, Go Broke"]=10 --TheQuartering
+        ["Get Woke, Go Broke"]=10, --TheQuartering
         ["Glass Horizon"]=10,
         ["Go Boom Boom"]=10,
         ["Grandstander"]=10,
@@ -3186,38 +3186,38 @@ namelib.NAMES =
         ["Havering Hovercrafts"]=10,
         ["Hello Sailor!"]=10,
         ["Hello There"]=10,
-        ["Hole In Your Head"]=10 --Vaguely close to Nine Inch Nails
-        ["Holy Smokes"]=10 --Suzzy Roche
+        ["Hole In Your Head"]=10, --Vaguely close to Nine Inch Nails
+        ["Holy Smokes"]=10, --Suzzy Roche
         ["Homeboy"]=10,
         ["Howdy Doody"]=10,
         ["Hawaiian Shirt"]=10,
         ["Heard of Cows?"]=10,
-        ["I See Dead People"]=10 --Movie: The Sixth Sense (1999)
+        ["I See Dead People"]=10, --Movie: The Sixth Sense (1999)
         ["Idiots Preferred"]=10,
-        ["Inflating Dwarfs"]=10 --Based on a song by band named Against Nature
+        ["Inflating Dwarfs"]=10, --Based on a song by band named Against Nature
         ["-Insert Map Name Here-"]=10,
         ["Inverted Autumn"]=10,
-        ["It's Over 9000!"]=10 --DBZ meme
+        ["It's Over 9000!"]=10, --DBZ meme
         ["Ka Ching!"]=10,
         ["Kate's Blanket"]=10,
-        ["LazyTown"]=10 -- RIP Robbie Rotten :(
+        ["LazyTown"]=10, -- RIP Robbie Rotten :(
         ["Lame Level"]=10,
         ["Level in the Pubic Domain"]=10,
         ["Like Wow Man"]=10,
         ["Linedef Burning"]=10,
-        ["Linguica's Big Block"]=10 --Doomworld co-founder and administrator
+        ["Linguica's Big Block"]=10, --Doomworld co-founder and administrator
         ["Linux Land"]=10,
         ["LOLWUT"]=10,
         ["Magnitude 10"]=10,
         ["Massive WTF"]=10,
         ["Map of No Return"]=10,
         ["Mind Blower"]=10,
-        ["Meme Review"]=10 --Pewdiepie
+        ["Meme Review"]=10, --Pewdiepie
         ["Money Machine"]=10,
         ["Mixed and Measured"]=10,
-        ["Make Oblige Great Again"]=10 --A play on Donald Trump's "Make America Great Again" slogan
+        ["Make Oblige Great Again"]=10, --A play on Donald Trump's "Make America Great Again" slogan
         ["Monkeys To Infinity"]=10,
-        ["Moonwalk"]=10 --Michael Jackson
+        ["Moonwalk"]=10, --Michael Jackson
         ["Munchies"]=10,
         ["Night Terrors"]=10,
         ["No Clue"]=10,
@@ -3239,12 +3239,12 @@ namelib.NAMES =
         ["Pukage"]=10,
         ["Puppy Containment"]=10,
         ["Pure Bliss"]=10,
-        ["Purple Haze"]=10 --Jimi Hendrix
+        ["Purple Haze"]=10, --Jimi Hendrix
         ["Rainstorm Incoming"]=10,
         ["Raise The Flag"]=10,
         ["Resurrection"]=10,
         ["Retinal Overload"]=10,
-        ["Robbie Rotten's Skeleton Closet"]=10 --LazyTown
+        ["Robbie Rotten's Skeleton Closet"]=10, --LazyTown
         ["Roast 'Em & Toast 'Em"]=10,
         ["Safety Zone"]=10,
         ["Shrouded in Fuzz"]=10,
@@ -3253,30 +3253,30 @@ namelib.NAMES =
         ["Silly Hall"]=10,
         ["SNAFU"]=10,
         ["Soylent Green"]=10,
-        ["Snakes and Ladders"]=10 --A well known children's tabletop game
+        ["Snakes and Ladders"]=10, --A well known children's tabletop game
         ["Stash that Trash!"]=10,
-        ["Spoon Clank"]=10 --Styxhexenhammer666,
+        ["Spoon Clank"]=10, --Styxhexenhammer666,
         ["Sonata in Z Major"]=10,
-        ["Subscribe to Pewdiepie"]=10 --The old Pewdiepie/T-Series "War",
+        ["Subscribe to Pewdiepie"]=10, --The old Pewdiepie/T-Series "War",
         ["Super Hero"]=10,
         ["Technicolor Dazzle"]=10,
         ["That Guy Next Door"]=10,
         ["The Bums of the Future"]=10,
         ["The Perfect Map"]=10,
         ["The Prefabricator"]=10,
-        ["Them Bones"]=10 --Alice in Chains
-        ["Tim's Beanie Buffet"]=10 --Timcast/Tim Pool
+        ["Them Bones"]=10, --Alice in Chains
+        ["Tim's Beanie Buffet"]=10, --Timcast/Tim Pool
         ["This is Not a Hangar Remake"]=10,
         ["Touch Me Not"]=10,
-        ["Twitty Twatty Twee"]=10 --Twitter?
+        ["Twitty Twatty Twee"]=10, --Twitter?
         ["No more visplanes!"]=10,
         ["Wolfgang Blues"]=10,
         ["Welcome to 7-11"]=10,
         ["Wet Behind the Ears"]=10,
         ["What??"]=10,
         ["Wheat Field"]=10,
-        ["Where is Armaetus?"]=10 --I'm right here!!
-        ["Where's the Lamb Sauce?"]=10 --Gordon Ramsay
+        ["Where is Armaetus?"]=10, --I'm right here!!
+        ["Where's the Lamb Sauce?"]=10, --Gordon Ramsay
         ["Yet Another Rewrite"]=10,
         ["You Are Over The Sidedef Limit!"]=10,
         ["You Be Gangsta"]=10,
@@ -3298,32 +3298,32 @@ namelib.NAMES =
         ["Your System Is Below Requirements"]=10,
 
         -- Armaetus adds errors too
-        ["Access is Denied"]=10 --ERROR_INVALID_ACCESS
-        ["Data Error"]=10 --ERROR_CRC
-        ["Network Access is Denied"]=10 --ERROR_NETWORK_ACCESS_DENIED
-        ["The Data is Invalid"]=10 --ERROR_INVALID_DATA
-        ["The Device is Not Ready"]=10 --ERROR_NOT_READY
-        ["The Environment is Incorrect"]=10 --ERROR_BAD_ENVIRONMENT
-        ["The Media is Write Protected"]=10 --ERROR_WRITE_PROTECTED
-        ["The Printer is Out of Paper"]=10 --ERROR_OUT_OF_PAPER
+        ["Access is Denied"]=10, --ERROR_INVALID_ACCESS
+        ["Data Error"]=10, --ERROR_CRC
+        ["Network Access is Denied"]=10, --ERROR_NETWORK_ACCESS_DENIED
+        ["The Data is Invalid"]=10,  --ERROR_INVALID_DATA
+        ["The Device is Not Ready"]=10, --ERROR_NOT_READY
+        ["The Environment is Incorrect"]=10, --ERROR_BAD_ENVIRONMENT
+        ["The Media is Write Protected"]=10, --ERROR_WRITE_PROTECTED
+        ["The Printer is Out of Paper"]=10, --ERROR_OUT_OF_PAPER
 
         -- Linux..
-        ["Block Device Required"]=10 --ENOTBLK
-        ["Broken Pipe"]=10 --EPIPE
-        ["Inappropriate IOCTL for Device"]=10 --ENOTTY
-        ["Invalid Cross-Device Link"]=10 --EXDEV
-        ["Link Number Out of Range"]=10 --ELNRNG
-        ["No Such Process"]=10 --ESRCH
-        ["Protocol Driver Not Attached"]=10 --EUNATCH
-        ["Text File Busy"]=10 --ETXTBSY
+        ["Block Device Required"]=10, --ENOTBLK
+        ["Broken Pipe"]=10, --EPIPE
+        ["Inappropriate IOCTL for Device"]=10, --ENOTTY
+        ["Invalid Cross-Device Link"]=10, --EXDEV
+        ["Link Number Out of Range"]=10, --ELNRNG
+        ["No Such Process"]=10, --ESRCH
+        ["Protocol Driver Not Attached"]=10, --EUNATCH
+        ["Text File Busy"]=10, --ETXTBSY
 
         ["1000-Degree Knives"]=10,
         ["Bad Unboxing"]=10,
-        ["Chocolate Rain"]=10 --Tay Zonday
+        ["Chocolate Rain"]=10, --Tay Zonday
         ["Drink More Water"]=10,
         ["EA Sports. It's In The Game"]=10,
-        ["Hey Sup Beautiful Bastards"]=10 --if we're really doing popular YouTubers
-        ["It's Just a Prank, Bro!"]=10 --had to
+        ["Hey Sup Beautiful Bastards"]=10, --if we're really doing popular YouTubers
+        ["It's Just a Prank, Bro!"]=10, --had to
         ["It's Just a Social Experiment"]=10,
         ["Nobody Got Time For That"]=10,
         ["VGCG"]=10,
@@ -3338,7 +3338,7 @@ namelib.NAMES =
         ["The Raven"]=10,
 
         -- Bands or songs (generally or sort of psychedelic)
-        ["Here Comes The Rooster"]=10 --Alice in Chains
+        ["Here Comes The Rooster"]=10, --Alice in Chains
         ["Here Comes The Sun"]=10,
         ["Good Times Bad Times"]=10,
         ["White Rabbit"]=10,
@@ -3734,7 +3734,7 @@ namelib.NAMES =
         Green = 10,
         White = 10,
         Yellow = 10,
-        ["Fire-blue"] = 10 -- of course
+        ["Fire-blue"] = 10, -- of course
 
         -- material
         Adamantine = 10,
@@ -3778,7 +3778,7 @@ namelib.NAMES =
         Merciless = 10,
         Menacing = 20,
         Morose = 10,
-        Mortal = 10 -- lol
+        Mortal = 10, -- lol
         Nefarious = 5,
         Hateful = 5,
         Savage = 20,
@@ -4084,7 +4084,7 @@ namelib.NAMES =
         ["A Minute to Midnight"] = 10,
         ["Maelstrom of Chaos"] = 10,
         ["Shadows Fall"] = 10,
-        ["Mortally Challenged"] = 10 -- actually coined by Terry Pratchett
+        ["Mortally Challenged"] = 10, -- actually coined by Terry Pratchett
         ["Stormbreak"] = 10,
         ["Firewinds"] = 10,
         ["The Kiss of Death"] = 10,
@@ -4094,8 +4094,8 @@ namelib.NAMES =
         ["The Throne of Fire"] = 10,
         ["Fire and Blood"] = 10,
         ["Remembrance"] = 10,
-        ["What Is Dead May Never Die"] = 10 -- see, even great authors can do a
-        ["All Men Must Die"] = 10           -- "people die when they are killed",
+        ["What Is Dead May Never Die"] = 10, -- see, even great authors can do a
+        ["All Men Must Die"] = 10,           -- "people die when they are killed",
         ["The Dance of Demons"] = 10,
         ["The Gift of Death"] = 10,
 
@@ -4132,7 +4132,7 @@ namelib.NAMES =
         ["Stygian Abyss"] = 10,
         ["Gates of Tartarus"] = 10,
 
-        ["No Mercy"] = 10 -- yes, these are L4D campaign names
+        ["No Mercy"] = 10, -- yes, these are L4D campaign names
         ["Crash Course"] = 10,
         ["Death Toll"] = 10,
         ["Dead Air"] = 10,
@@ -4140,7 +4140,7 @@ namelib.NAMES =
         ["The Sacrifice"] = 10,
         ["The Last Stand"] = 10,
 
-        ["Dead Center"] = 10 -- yes, now L4D2,
+        ["Dead Center"] = 10, -- yes, now L4D2,
         ["The Passing"] = 10,
         ["Dark Carnival"] = 10,
         ["Swamp Fever"] = 10,
@@ -4174,13 +4174,13 @@ namelib.NAMES =
         ["Straight from a Bad Dream"] = 10,
 
         -- 2021 stuff..
-        ["Absolution"]=10 -- Doom 64,
+        ["Absolution"]=10, -- Doom 64,
         ["Beyond Eternity"]=10,
         ["Beyond Serenity"]=10,
         ["Damaged"]=10,
-        ["Dead Shining Star"]=10  -- A V:28 song title
+        ["Dead Shining Star"]=10,  -- A V:28 song title
         ["Eerie Delights"]=10,
-        ["Forcing Your Way"]=10 -- Nod to Final Fantasy
+        ["Forcing Your Way"]=10, -- Nod to Final Fantasy
         ["Hope Dies Here"]=10,
         ["Mephisto"]=10,
         ["Ouroboros"]=10,
@@ -4194,7 +4194,7 @@ namelib.NAMES =
         ["Submission"]=10,
         ["The Culling Fields"]=10,
         ["Tranquility"]=10,
-        ["Unleash The Energy"]=10 -- Also V:28 (See: https://www.metal-archives.com/bands/V%3A28/16470 )
+        ["Unleash The Energy"]=10, -- Also V:28 (See: https://www.metal-archives.com/bands/V%3A28/16470 )
         ["Whispers from the Void"]=10,
 
         -- WAD title stuff
@@ -4218,12 +4218,12 @@ namelib.NAMES =
     patterns =
     {
       -- <adj> <place>  e.g. dark dimension
-      ["%a %p"] = 50 -- Descriptive Place
-      ["The %a %p"] = 45 -- The Descriptive Place
-      ["Into the %a %p"] = 10 -- Into the Descriptive Place
+      ["%a %p"] = 50, -- Descriptive Place
+      ["The %a %p"] = 45, -- The Descriptive Place
+      ["Into the %a %p"] = 10, -- Into the Descriptive Place
 
       -- <adj> <thing>  e.g. eternal gore
-      ["%a %d"] = 50 -- Descriptive Object
+      ["%a %d"] = 50, -- Descriptive Object
 
       ["%d Forever"]  = 5,
       ["%d Always"]  = 5,
@@ -4231,19 +4231,19 @@ namelib.NAMES =
       ["%d Revealed"] = 5,
 
       -- <place> of <desc>  e.g. city of souls
-      ["%p of %d"] = 50 -- Place of Object
-      ["%d in the %p"] = 25 -- Object in the Place
-      ["%d at the %p"] = 25 -- Ojbect at the Place
+      ["%p of %d"] = 50, -- Place of Object
+      ["%d in the %p"] = 25, -- Object in the Place
+      ["%d at the %p"] = 25, -- Ojbect at the Place
 
-      ["The %e of %d"] = 30 -- The Entity of Object
-      ["%e in the %p"] = 30 -- Entity in the Place
+      ["The %e of %d"] = 30, -- The Entity of Object
+      ["%e in the %p"] = 30, -- Entity in the Place
 
       -- <place> of the <entity>  e.g. realm of the devil
-      ["%p of the %e"] = 50 -- Place of the Entity
-      ["The %p of the %e"] = 30 -- The Place of the Entity
-      ["The %d of the %e"] = 30 -- The Abstract Object of the Entity
-      ["The %a %d of the %a %e"] = 40 -- The Descriptive Object of the Descriptive Entity
-      ["The %a %p of the %a %e"] = 40 -- The Descriptive Place of the Descriptive Entity
+      ["%p of the %e"] = 50, -- Place of the Entity
+      ["The %p of the %e"] = 30, -- The Place of the Entity
+      ["The %d of the %e"] = 30, -- The Abstract Object of the Entity
+      ["The %a %d of the %a %e"] = 40, -- The Descriptive Object of the Descriptive Entity
+      ["The %a %p of the %a %e"] = 40, -- The Descriptive Place of the Descriptive Entity
 
       -- miscellaneous
       ["Beyond the %p"] = 8,
@@ -4258,15 +4258,15 @@ namelib.NAMES =
 
       -- MSSP adds grammar rules
 
-      ["Assault on the %a %p"] = 8 -- Assault on the Descriptive Place
-      ["Destroy the %a %p"] = 8 -- Destroy the Descriptive Place
-      ["Attack of the %a %e"] = 8 -- Attack of the Descriptive Entity
-      ["Return of the %e"] = 8 -- Return of the Entity
-      ["A WAD full of %d"] = 5 -- A WAD Full of Abstract Objects
-      ["Return of the %e"] = 8 -- Return of the Entity
-      ["Some very %a %p"] = 8 -- Some very Descriptive Place
-      ["Zone of %d"] = 8 -- Zone of Abstract Object
-      ["The %e WAD"] = 5 -- The Entity WAD
+      ["Assault on the %a %p"] = 8, -- Assault on the Descriptive Place
+      ["Destroy the %a %p"] = 8, -- Destroy the Descriptive Place
+      ["Attack of the %a %e"] = 8, -- Attack of the Descriptive Entity
+      ["Return of the %e"] = 8, -- Return of the Entity
+      ["A WAD full of %d"] = 5, -- A WAD Full of Abstract Objects
+      ["Return of the %e"] = 8,-- Return of the Entity
+      ["Some very %a %p"] = 8, -- Some very Descriptive Place
+      ["Zone of %d"] = 8, -- Zone of Abstract Object
+      ["The %e WAD"] = 5, -- The Entity WAD
       ["Showdown with the %e"] = 7,
       ["They are %a"] = 7,
       ["Call of %d"] = 8,
@@ -4291,19 +4291,19 @@ namelib.NAMES =
 
       -- Armaetus adds more grammar rules
       ["Doom: %d on Earth"] = 10,
-      ["Doomguy VS the %e"] = 10 -- Doomguy VS the [Entity]
-      ["Doomguy and the %e"] = 10 -- Doomguy and the [Entity]
-      ["Vacation in the %d %p"] = 10 -- Vacation in the [Description] [Place]
+      ["Doomguy VS the %e"] = 10, -- Doomguy VS the [Entity]
+      ["Doomguy and the %e"] = 10, -- Doomguy and the [Entity]
+      ["Vacation in the %d %p"] = 10,  -- Vacation in the [Description] [Place]
       ["Evil Unleashed: %a %d"] = 10,
-      ["%c's %d"] = 4 -- [Name]'s Abstract Object
-      ["%c's %a %p"] = 4 -- [Name]'s [Adjective] [Place]
-      ["%c's %p"] = 4 -- [Name]'s [Place]
-      ["Dirty Deeds for the %e"] = 7 -- Dirty Deeds for the [Entity]
-      ["The %e Attacks the %d %p"] = 7 -- The [Entity] Attacks the [Adjective] [Place]
-      ["Is %c %a?"] = 2 -- Is [Name] Adjective?
+      ["%c's %d"] = 4, -- [Name]'s Abstract Object
+      ["%c's %a %p"] = 4, -- [Name]'s [Adjective] [Place]
+      ["%c's %p"] = 4, -- [Name]'s [Place]
+      ["Dirty Deeds for the %e"] = 7, -- Dirty Deeds for the [Entity]
+      ["The %e Attacks the %d %p"] = 7, -- The [Entity] Attacks the [Adjective] [Place]
+      ["Is %c %a?"] = 2, -- Is [Name] Adjective?
       ["%c Is NOT %a!"] = 2,
-      ["%c's Playhouse"] = 3 -- [Name]'s Playhouse
-      ["%c's Warzone"] = 3 -- [Name]'s Warzone
+      ["%c's Playhouse"] = 3, -- [Name]'s Playhouse
+      ["%c's Warzone"] = 3, -- [Name]'s Warzone
       ["%d: the %a %p"] = 7,
       ["Death: %a %p"] = 7,
       ["The %p: Our %d"] = 7,
@@ -4315,18 +4315,18 @@ namelib.NAMES =
       ["Quietus: Complete %d"] = 4,
       ["Is %c By The %a %p?"] = 3,
       ["%a Death and %d"] = 5,
-      ["This WAD has %d"] = 5 -- This WAD has Abstract Objects
-      ["%c's %a WAD"] = 3 -- [Name]'s [Adjective] WAD
+      ["This WAD has %d"] = 5, -- This WAD has Abstract Objects
+      ["%c's %a WAD"] = 3, -- [Name]'s [Adjective] WAD
       ["%c's WAD"] = 3,
       ["%c's Fun Zone"] = 3,
       ["Did %c Do This?"] = 3,
-      ["The %e Lurks Within"] = 5 -- The [Entity] Lurks Within
+      ["The %e Lurks Within"] = 5, -- The [Entity] Lurks Within
       ["The %e Lurks Below"] = 5,
       ["%e Knows You"] = 4,
-      ["Destruction of the %d %p"] = 5 -- Destruction of the [Adjective] [Place]
-      ["%a Black Metal"] = 5 -- [Adjective] Black Metal
-      ["%a Doom Metal"] = 5 -- [Adjective] Doom Metal
-      ["Doomguy's Vacation with %c"] = 5 -- Doomguy's Vacation with [Name]
+      ["Destruction of the %d %p"] = 5, -- Destruction of the [Adjective] [Place]
+      ["%a Black Metal"] = 5, -- [Adjective] Black Metal
+      ["%a Doom Metal"] = 5, -- [Adjective] Doom Metal
+      ["Doomguy's Vacation with %c"] = 5, -- Doomguy's Vacation with [Name]
       ["Sin City: The %a %p"] = 5,
       ["Sin City: The %d"] = 5,
       ["Ruination: %a %p"] = 3,
@@ -4639,11 +4639,11 @@ namelib.NAMES =
         Millenium = 10,
         Century = 10,
         Decade = 10,
-        Eon = 10  -- 100k x 365d. 365k yr
-        Aeon = 10 -- 1m x 365d. 3.65m yr / 1B yrs / Could also represent an indefinite amount of time too
-        Indiction = 7 -- 15 year cycle
-        Epoch = 7 -- 7.3m yrs
-        Megannum = 7 -- 1m years
+        Eon = 10,  -- 100k x 365d. 365k yr
+        Aeon = 10, -- 1m x 365d. 3.65m yr / 1B yrs / Could also represent an indefinite amount of time too
+        Indiction = 7, -- 15 year cycle
+        Epoch = 7, -- 7.3m yrs
+        Megannum = 7, -- 1m years
 
 
         -- seasons/weather
@@ -4691,7 +4691,7 @@ namelib.NAMES =
         Watch = 10,
 
         -- emotions/feels
-        Abuse = 10 -- "Abused" makes no sense in some aspects
+        Abuse = 10, -- "Abused" makes no sense in some aspects
         Apathy = 5,
         Anguish = 10,
         Agony = 20,
@@ -4727,8 +4727,8 @@ namelib.NAMES =
         Torment = 15,
         Wrath = 10,
         Vengeance = 20,
-        Violence = 15 -- "Violent" doesn't make sense
-        Withdrawal = 10 -- Most title additions of using "Withdrawn" wouldn't make sense
+        Violence = 15, -- "Violent" doesn't make sense
+        Withdrawal = 10, -- Most title additions of using "Withdrawn" wouldn't make sense
 
         -- occult
         Ceremony = 10,
@@ -4737,10 +4737,10 @@ namelib.NAMES =
         Idolatry = 10,
         Magic = 15,
         Magik = 10,
-        Ritual = 10 -- Could also be religious
+        Ritual = 10, -- Could also be religious
         Shadows = 10,
 
-        Death = 20 -- This really is an all-around word
+        Death = 20, -- This really is an all-around word
         Flames = 20,
 
         -- religious
@@ -4751,10 +4751,10 @@ namelib.NAMES =
         Doctrine = 10,
         Dogma = 10,
         Faith = 10,
-        Hell = 10 -- Fits better here
-        Icons = 10 -- as in religious icons
-        Souls = 10 -- Frequently mentioned in religious texts as well, namely Judeo-Christian
-        Tenets = 10 -- Also occult
+        Hell = 10, -- Fits better here
+        Icons = 10, -- as in religious icons
+        Souls = 10, -- Frequently mentioned in religious texts as well, namely Judeo-Christian
+        Tenets = 10, -- Also occult
 
         -- states of mind, states in mind
         Bliss = 10,
@@ -4843,7 +4843,7 @@ namelib.NAMES =
         -- secret organizations
         Cabal = 10,
         Circle = 10,
-        Creed = 10 -- Also religious
+        Creed = 10, -- Also religious
         League = 8,
         Order = 10,
         Sect = 8,
@@ -4851,7 +4851,7 @@ namelib.NAMES =
         -- state crimes
         Collusion = 10,
         Conspiracy = 10,
-        Heresy = 10 -- In WH 40k it is if you're not Chaos
+        Heresy = 10,-- In WH 40k it is if you're not Chaos
         Machinations = 10,
         Ruse = 10,
         Subterfurge = 10,
@@ -4875,10 +4875,10 @@ namelib.NAMES =
         -- DOOOOM!!!
         ["Arch-Vile"] = 7,
         Cyberdemon = 15,
-        Doomhunter = 5 -- Doom Eternal
-        ["Doom Slayer"] = 3 -- DOOM/Doom Eternal
-        ["Hell Noble"] = 7 -- Also known as a Baron, I guess
-        ["Hell Priest"]=7 -- Doom Eternal
+        Doomhunter = 5, -- Doom Eternal
+        ["Doom Slayer"] = 3, -- DOOM/Doom Eternal
+        ["Hell Noble"] = 7, -- Also known as a Baron, I guess
+        ["Hell Priest"]=7, -- Doom Eternal
         ["Lost Souls"] = 7,
         Marine = 15,
         Mastermind = 15,
@@ -4897,7 +4897,7 @@ namelib.NAMES =
         Gods  = 20,
         Heretic = 20,
         Hellspawn = 20,
-        Idolater = 20 -- An idol worshipper
+        Idolater = 20, -- An idol worshipper
         Infidel = 20,
         ["Left Behind"] = 10,
         Martyr = 10,
@@ -5265,13 +5265,13 @@ namelib.NAMES =
         ["Fairness Not Guaranteed"]=20,
         ["Fantastic!"] = 30,
         ["Feel the Pain!"] = 25,
-        ["For The Emperor!"] = 30 -- Warhammer 40K
+        ["For The Emperor!"] = 30, -- Warhammer 40K
         ["Game Journos Need Not Apply!"] = 20,
-        ["Get Psyched!"] = 30 -- Wolfenstein 3D
+        ["Get Psyched!"] = 30, -- Wolfenstein 3D
         ["Get Scorched"] = 30,
         ["Getting a Bit Spicy"] = 20,
         ["High Impact Abuse"] = 35,
-        ["Hold On To Your Butts"] = 25 -- From Arnold in Jurassic Park, 1993,
+        ["Hold On To Your Butts"] = 25, -- From Arnold in Jurassic Park, 1993,
         ["Hold Your Ground"] = 30,
         ["Is It Too Hard?"]=15,
         ["If it Moves, Shoot It"] = 30,
@@ -5299,7 +5299,7 @@ namelib.NAMES =
         ["Not A Walk in the Park!"] = 30,
         ["Not Safe For Game Journalists"] = 35,
         ["Now with Dynamic Lights!"] = 30,
-        ["Now with more Impse"] = 30 -- This is not a spelling error, look it up lol
+        ["Now with more Impse"] = 30,-- This is not a spelling error, look it up lol
         ["Oblige is Love, Oblige is Life"] = 40,
         ["Perfect on Ultra-Violence"] = 30,
         ["Peripheral Vision is Mandatory!"] = 30,
@@ -5309,7 +5309,7 @@ namelib.NAMES =
         ["Psychological Abuse"] = 30,
         ["Purified Sin"] = 20,
         ["Ramp it to the MAX!"] = 25,
-        ["Road to the World Cup"] = 20 -- By Swedra
+        ["Road to the World Cup"] = 20, -- By Swedra
         ["Random by Nature"] = 30,
         ["Recreate id's Aesthetics!"]=10,
         ["Reign of Destruction"] = 25,
@@ -5326,13 +5326,13 @@ namelib.NAMES =
         ["Tell Us What You Think"] = 40,
         ["Tell Your Friends!"] = 30,
         ["The Chaosbringer"] = 20,
-        ["The Chaosweaver"] = 20 -- Partially from a Scar Symmetry song
+        ["The Chaosweaver"] = 20, -- Partially from a Scar Symmetry song
         ["The Corridors of Contempt"] = 25,
         ["The Deadzone"] = 20,
         ["The Devil's Playground"] = 30,
         ["The Hellweaver"]=20,
         ["The More, The Merrier"] = 25,
-        ["The New Challengers"] = 20 -- This one by Craneo
+        ["The New Challengers"] = 20, -- This one by Craneo
         ["The Principles of Doom"] = 30,
         ["The Threads of Life"] = 20,
         ["The Shreds of Humanity"] = 20,
@@ -5341,7 +5341,7 @@ namelib.NAMES =
         ["There is Always Doomworld!"] = 20,
         ["There's Always More!"] = 25,
         ["There Is No Rationale"] = 20,
-        ["Third Strike"] = 20 -- Also by Craneo
+        ["Third Strike"] = 20, -- Also by Craneo
         ["This Generator Slays Demons"] = 25,
         ["This Is a Subtitle!"] = 20,
         ["This WAD Shouldn't Suck"] = 25,
@@ -5351,7 +5351,7 @@ namelib.NAMES =
         ["Total Blackout"] = 20,
         ["Totally Worth Your Time"] = 25,
         ["Trust in Thy Firearms"] = 20,
-        ["Turn it to 11!"] = 30 -- Spinal Tap
+        ["Turn it to 11!"] = 30, -- Spinal Tap
         ["Turned Up to 110 Percent!"] = 20,
         ["TY for Supporting ObAddon!"] = 30,
         ["Under Construction"] = 25,
@@ -5416,7 +5416,7 @@ namelib.NAMES =
         ["Day One Edition"] = 20,
         ["Deluxe Edition"] = 25,
         ["Game of the Year Edition"] = 20,
-        ["Greatest Hits"] = 20 -- Craneo
+        ["Greatest Hits"] = 20, -- Craneo
         ["No Microtransactions"] = 20,
         ["Subscribe and Hit that Like Button"] = 40,
         ["The Official Video Game Tie-in"] = 20,
@@ -5437,46 +5437,46 @@ namelib.NAMES =
         ["The World isn't Flat"] = 30,
 
         -- Based on music, be it artists, song titles or album titles
-        ["Doomtanic Hellucinations"] = 20 -- Acid Witch - "Witchtanic Hellucinations" (song)
-        ["Hymns of Destruction"] = 20 -- The Adicts - "Songs of Praise" (album title)
-        ["Ashes of a Burning Earth"] = 25 -- Adversus Semita - "Ashes of a Burning Heaven" (song)
-        ["Doomx V"] = 30 -- Aeba - "Kodex V" (album title)
-        ["Demonic Rampage"] = 20 -- Afrobomination - "Galatic Rampage" (song)
-        ["Hell in Motion"] = 20 --  Against Nature - "All in Motion" (song)
-        ["Show Oneself the STARTAN"] = 15 -- Against Nature - "Show Myself the Door" (song)
-        ["The Divinity of Cyberdemons"] = 20 -- Ahab - The Divinity of Oceans (album title)
-        ["Enraptured by Death"] = 25 -- Akercocke - "Enraptured by Evil" (song)
-        ["Ceremony of Nine Icons"] = 20 -- Akercocke - "The Ceremony of Nine Angels" (song)
-        ["Demon's Lyric"] = 30 -- Akira Yamaoka - "Devil's Lyric" (Silent Hill Soundtrack)
-        ["Blackness that Lurks in our Heart"] = 25 -- Akira Yamaoka - "The Darkness that Lurks in our Mind" (Silent Hill Soundtrack)
-        ["Fear of the Abyss"] = 20 -- Akira Yamaoka - "Fear of the Dark" (Silent Hill Soundtrack)
-        ["Death by the Shotgun"] = 20 -- Alestorm - "Death before the Mast" (song)
-        ["No Secrets Known"] = 20 -- Alice in Chains - All Secrets Known (song)
-        ["Earth Gives Way to Hell"] = 25 -- Alice in Chains - Black Gives Way to Blue (album title)
-        ["Angry Demons"] = 20 -- Alice in Chains - Angry Chair (song)
-        ["Consciousness Beyond Peril"] = 25 -- Alienation Cold - "Dream of an Obscured Consciousness" (song)
-        ["Pursuit of Marines"] = 20 -- Amon Amarth - "The Pursuit of Vikings" (song)
-        ["Ruined Armor and Bloody Rifles"] = 20 -- Amon Amarth - "Tattered Banners and Bloody Flags" (song)
-        ["Maximum Doom"] = 20 -- Annihilator - "Maximum Satan" (song)
-        ["Sometimes They Hear The Fist"] = 25 -- Atomizer - "Sometimes they hear the Bullet" (song)
-        ["Hateful by Nature"] = 20 -- Atrophy - Violent by Nature (album title)
+        ["Doomtanic Hellucinations"] = 20, -- Acid Witch - "Witchtanic Hellucinations" (song)
+        ["Hymns of Destruction"] = 20, -- The Adicts - "Songs of Praise" (album title)
+        ["Ashes of a Burning Earth"] = 25, -- Adversus Semita - "Ashes of a Burning Heaven" (song)
+        ["Doomx V"] = 30, -- Aeba - "Kodex V" (album title)
+        ["Demonic Rampage"] = 20, -- Afrobomination - "Galatic Rampage" (song)
+        ["Hell in Motion"] = 20, --  Against Nature - "All in Motion" (song)
+        ["Show Oneself the STARTAN"] = 15, -- Against Nature - "Show Myself the Door" (song)
+        ["The Divinity of Cyberdemons"] = 20, -- Ahab - The Divinity of Oceans (album title)
+        ["Enraptured by Death"] = 25, -- Akercocke - "Enraptured by Evil" (song)
+        ["Ceremony of Nine Icons"] = 20, -- Akercocke - "The Ceremony of Nine Angels" (song)
+        ["Demon's Lyric"] = 30, -- Akira Yamaoka - "Devil's Lyric" (Silent Hill Soundtrack)
+        ["Blackness that Lurks in our Heart"] = 25, -- Akira Yamaoka - "The Darkness that Lurks in our Mind" (Silent Hill Soundtrack)
+        ["Fear of the Abyss"] = 20, -- Akira Yamaoka - "Fear of the Dark" (Silent Hill Soundtrack)
+        ["Death by the Shotgun"] = 20, -- Alestorm - "Death before the Mast" (song)
+        ["No Secrets Known"] = 20, -- Alice in Chains - All Secrets Known (song)
+        ["Earth Gives Way to Hell"] = 25, -- Alice in Chains - Black Gives Way to Blue (album title)
+        ["Angry Demons"] = 20, -- Alice in Chains - Angry Chair (song)
+        ["Consciousness Beyond Peril"] = 25, -- Alienation Cold - "Dream of an Obscured Consciousness" (song)
+        ["Pursuit of Marines"] = 20, -- Amon Amarth - "The Pursuit of Vikings" (song)
+        ["Ruined Armor and Bloody Rifles"] = 20, -- Amon Amarth - "Tattered Banners and Bloody Flags" (song)
+        ["Maximum Doom"] = 20, -- Annihilator - "Maximum Satan" (song)
+        ["Sometimes They Hear The Fist"] = 25, -- Atomizer - "Sometimes they hear the Bullet" (song)
+        ["Hateful by Nature"] = 20, -- Atrophy - Violent by Nature (album title)
         -- I'll stop here, because I have over 18,000(!!) tracks to go through and this would make this
         -- list VERY, VERY LONG. - Armaetus
 
-        ["Highway to DOOM"] = 20 -- AC/DC - "Highway to Hell" (song)
-        ["Rhythm of Blood"] = 20 -- Unknown - "Rhythm of Red" (Tokyo Xtreme Racer Zero soundtrack)
-        ["Born too Deadly"] = 20 -- The Crystal Method - "Born too Slow" (song)
-        ["Angel and the Devil"] = 20 -- Wolfmother - "Joker and the Thief" (song)
-        ["No Angels Fly"] = 20 -- Sabaton - "No Bullets Fly" (song)
+        ["Highway to DOOM"] = 20, -- AC/DC - "Highway to Hell" (song)
+        ["Rhythm of Blood"] = 20, -- Unknown - "Rhythm of Red" (Tokyo Xtreme Racer Zero soundtrack)
+        ["Born too Deadly"] = 20, -- The Crystal Method - "Born too Slow" (song)
+        ["Angel and the Devil"] = 20, -- Wolfmother - "Joker and the Thief" (song)
+        ["No Angels Fly"] = 20, -- Sabaton - "No Bullets Fly" (song)
 
         -- Nerdery stuff
-        ["d20 Edition"] = 15 -- Also Swedra
+        ["d20 Edition"] = 15, -- Also Swedra
       },
     },
   },
   -- end of 'TITLE' and 'SUB_TITLE' themes
   -- end of all the 'TEXT_XXX' themes
-},
+}
 
 
 ----------------------------------------------------------------
@@ -5486,7 +5486,7 @@ namelib.IGNORE_WORDS =
 {
   ["the"]=1, ["a"]=1,  ["an"]=1, ["of"]=1, ["s"]=1,
   ["for"]=1, ["in"]=1, ["on"]=1, ["to"]=1,
-},
+}
 
 
 
@@ -5563,7 +5563,7 @@ namelib.COMMUNITY_MEMBERS =
     "TTBNC",
     "Yandere Princess",
   },
-},
+}
 
 
 namelib.HUMAN_NAMES =
@@ -7062,7 +7062,7 @@ namelib.HUMAN_NAMES =
     ["See no Evil"] = 1,
     ["Do no Evil"] = 1,
   },
-},
+}
 
 
 namelib.SYLLABLES =
@@ -7356,7 +7356,7 @@ namelib.SYLLABLES =
     -- celestials
     -- note: some of the syllables are deliberately incomplete
     -- because they already show up in the country syllables list
-    sol = 50 -- our sun
+    sol = 50, -- our sun
 
     ry = 50, --mercury
 
@@ -7740,7 +7740,7 @@ namelib.SYLLABLES =
     yon = 50,
     youngs = 50,
   },
-},
+}
 
 
 
@@ -7763,19 +7763,19 @@ function namelib.generate_unique_noun(m)
   end
 
   local function make_random_hashes(a, b)
-    local hash_string = "",
+    local hash_string = ""
 
     local number_list =
     {
       "0","1","2","3","4","5","6","7","8","9",
-    },
+    }
 
     local alphabet_list =
     {
       "A","B","C","D","E","F","G","H","I",
       "J","K","L","M","N","O","P","Q","R",
       "S","T","U","V","W","X","Y","Z",
-    },
+    }
 
     local function fetch_a_digit()
       if rand.odds(75) then
@@ -7789,7 +7789,7 @@ function namelib.generate_unique_noun(m)
       hash_string = fetch_a_digit()
     else
       if rand.odds(20) then
-        hash_string = "-",
+        hash_string = "-"
       end
       hash_string = hash_string .. fetch_a_digit()
     end
@@ -7797,20 +7797,20 @@ function namelib.generate_unique_noun(m)
     return hash_string
   end
 
-  local name = "",
+  local name = ""
   local syllable_count
   if mode == "anglican" then
-    syllable_count = 2,
+    syllable_count = 2
   elseif mode == "exotic" then
     syllable_count = rand.pick({2,2,2,2,3,3,3,3,3,3,4})
   end
 
-  local i = 1,
+  local i = 1
 
   if mode == "anglican" or mode == "exotic" then
     repeat
       name = name .. make_placelike_syllable(mode)
-      i = i + 1,
+      i = i + 1
     until i > syllable_count
   end
 
@@ -7827,8 +7827,8 @@ function namelib.generate_unique_noun(m)
     end
   end
 
-  local x = 0,
-  local num_string = "",
+  local x = 0
+  local num_string = ""
   if mode == "number" then
     -- pick numbers
     local num_length = rand.pick({1,2,3,3,4,4,5,6})
@@ -7840,7 +7840,7 @@ function namelib.generate_unique_noun(m)
       else
         num_string = num_string .. tostring(rand.irange(0,9))
       end
-      x = x + 1,
+      x = x + 1
     end
 
     name = num_string
@@ -7849,7 +7849,7 @@ function namelib.generate_unique_noun(m)
 
     while x < num_length do
       num_string = num_string .. make_random_hashes(x, num_length)
-      x = x + 1,
+      x = x + 1
     end
 
     name = num_string
@@ -7901,7 +7901,7 @@ function namelib.split_word(tab, word)
         low = string.sub(low, 1, 4)
       end
 
-      tab[low] = (tab[low] or 0) + 1,
+      tab[low] = (tab[low] or 0) + 1
     end
   end
 end
@@ -7928,23 +7928,23 @@ end
 
 
 function namelib.one_from_pattern(DEF)
-  local name = "",
-  local words = {},
+  local name = ""
+  local words = {}
 
   local pattern = rand.key_by_probs(DEF.patterns)
-  local pos = 1,
+  local pos = 1
 
   while pos <= #pattern do
 
     local c = string.sub(pattern, pos, pos)
-    pos = pos + 1,
+    pos = pos + 1
 
     if c ~= '%' then
       name = name .. c
     else
       assert(pos <= #pattern)
       c = string.sub(pattern, pos, pos)
-      pos = pos + 1,
+      pos = pos + 1
 
       if not string.match(c, "%a") then
         error("Bad naming pattern: expected letter after %")
@@ -7975,7 +7975,7 @@ function namelib.choose_one(DEF, max_len)
 
   -- adjust probabilities
   for c,word_tab in pairs(DEF.lexicon) do
-    local divisor = DEF.divisors[c] or 10,
+    local divisor = DEF.divisors[c] or 10
 
     for w,prob in pairs(word_tab) do
       if namelib.match_parts(w, parts) then
@@ -7994,9 +7994,9 @@ function namelib.merge_theme(theme_name)
     error("namelib.generate: unknown theme: " .. tostring(theme_name))
   end
 
-  local theme = {},
+  local theme = {}
 
-  local sources = { namelib.NAMES, GAME.NAMES or {} },
+  local sources = { namelib.NAMES, GAME.NAMES or {} }
 
   -- always merge in the "COMMON" theme before the main one
   for _,S in pairs(pairs(sources)) do
@@ -8019,7 +8019,7 @@ end
 function namelib.generate(theme_name, count, max_len)
   local DEF = namelib.merge_theme(theme_name)
 
-  local list = {},
+  local list = {}
 
   for i = 1, count do
     local name = namelib.choose_one(DEF, max_len)
@@ -8057,7 +8057,7 @@ end
 
 
 function Naming_init()
-  namelib.cache = {},
+  namelib.cache = {}
 end
 
 

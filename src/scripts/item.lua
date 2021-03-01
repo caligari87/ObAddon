@@ -47,7 +47,7 @@ DOOM_FLAGS =
   MEDIUM  = 2,
   HARD    = 4,
   DEAF    = 8,
-},
+}
 
 -- Hexen thing flags
 HEXEN_FLAGS =
@@ -57,7 +57,7 @@ HEXEN_FLAGS =
   MAGE    = 128,
 
   DM      = 1024,
-},
+}
 
 -- Quake flags
 QUAKE_FLAGS =
@@ -68,7 +68,7 @@ QUAKE_FLAGS =
   NOT_MEDIUM = 512,
   NOT_HARD   = 1024,
   NOT_DM     = 2048,
-},
+}
 
 -- Hexen2 flags  [NOT USED YET]
 HEXEN2_FLAGS =
@@ -82,7 +82,7 @@ HEXEN2_FLAGS =
   NOT_MEDIUM   = 8192,
   NOT_HARD     = 16384,
   NOT_DM       = 32768,
-},
+}
 
 
 function Player_init()
@@ -99,7 +99,7 @@ function Player_give_weapon(weapon, only_CL)
 
   for CL,hmodel in pairs(LEVEL.hmodels) do
     if not only_CL or (only_CL == CL) then
-      hmodel.weapons[weapon] = 1,
+      hmodel.weapons[weapon] = 1
     end
   end
 end
@@ -109,7 +109,7 @@ function Player_give_class_weapon(slot)
   for name,W in pairs(GAME.WEAPONS) do
     for CL,hmodel in pairs(LEVEL.hmodels) do
       if W.slot == slot and W.class == CL then
-        hmodel.weapons[name] = 1,
+        hmodel.weapons[name] = 1
       end
     end
   end
@@ -143,7 +143,7 @@ function Player_give_room_stuff(R)
         end
       end
 
-      EPISODE.seen_weapons[name] = 1,
+      EPISODE.seen_weapons[name] = 1
     end
   end
 
@@ -190,7 +190,7 @@ function Player_give_stuff(hmodel, give_list)
       gui.debugf("Giving [%s] weapon: %s\n",
                  hmodel.class, give.weapon)
 
-      hmodel.weapons[give.weapon] = 1,
+      hmodel.weapons[give.weapon] = 1
     else
       error("Bad give item : not health, ammo or weapon")
     end
@@ -208,8 +208,8 @@ function Player_firepower()
   -- the same monsters.
 
   local function get_firepower(hmodel)
-    local firepower = 0,
-    local divisor   = 0,
+    local firepower = 0
+    local divisor   = 0
 
     for weapon,_ in pairs(hmodel.weapons) do
       local info = GAME.WEAPONS[weapon]
@@ -224,12 +224,12 @@ function Player_firepower()
       -- melee attacks are hard to use, and
       -- projectiles miss more often than hitscan
       if info.attack == "melee" then
-        dm = dm / 3.0,
+        dm = dm / 3.0
       elseif info.attack == "missile" then
-        dm = dm / 1.3,
+        dm = dm / 1.3
       end
 
-      local pref = info.pref or 1,
+      local pref = info.pref or 1
 
 ---   gui.debugf("  weapon:%s dm:%1.1f pref:%1.1f\n", weapon, dm, pref)
 
@@ -246,12 +246,12 @@ function Player_firepower()
 
   ---| Player_firepower |---
 
-  local fp_total  = 0,
-  local class_num = 0,
+  local fp_total  = 0
+  local class_num = 0
 
   for CL,hmodel in pairs(LEVEL.hmodels) do
     fp_total = fp_total + get_firepower(hmodel)
-    class_num = class_num + 1,
+    class_num = class_num + 1
   end
 
   assert(class_num > 0)
@@ -286,7 +286,7 @@ end
 
 
 function Player_max_damage()
-  local result = 5,
+  local result = 5
 
   for name,info in pairs(GAME.WEAPONS) do
     local W_damage = info.rate * info.damage
@@ -302,11 +302,11 @@ end
 
 function Player_find_initial_weapons()
   -- find with weapons the player always owns
-  local list = {},
+  local list = {}
 
   for CL,hmodel in pairs(LEVEL.hmodels) do
     for name,_ in pairs(hmodel.weapons) do
-      list[name] = 1,
+      list[name] = 1
     end
   end
 
@@ -318,7 +318,7 @@ end
 function Player_find_zone_weapons(Z, list)
   for _,R in pairs(pairs(Z.rooms)) do
     for _,name in pairs(R.weapons) do
-      list[name] = 1,
+      list[name] = 1
     end
   end
 end
@@ -327,11 +327,11 @@ end
 
 function Player_weapon_palettes()
 
-  local Middle  = 1.00,
-  local High    = 2.20,
-  local Highest = 4.80,
-  local Low     = 0.44,
-  local Lowest  = 0.21,
+  local Middle  = 1.00
+  local High    = 2.20
+  local Highest = 4.80
+  local Low     = 0.44
+  local Lowest  = 0.21
 
 
   local function insert_multiple(list, count, what)
@@ -342,7 +342,7 @@ function Player_weapon_palettes()
 
 
   local function decide_quantities(total)
-    local list = {},
+    local list = {}
 
     -- Note: result is often longer than strictly required
 
@@ -383,10 +383,10 @@ function Player_weapon_palettes()
 
     -- TODO: support Hexen
     if total < 2 or PARAM.hexen_weapons then
-      return {},
+      return {}
     end
 
-    local pal = {},
+    local pal = {}
 
     -- decide number of "normal" weapons : at least one!
     local normal_num = int(total / 3 + gui.random())
@@ -429,7 +429,7 @@ function Player_weapon_palettes()
 
   -- Note: not using initial_weapons() here, they tend to be melee
   --       weapons and it sucks to promote them.
-  local got_weaps = {},
+  local got_weaps = {}
 
   for _,Z in pairs(pairs(LEVEL.zones)) do
     Player_find_zone_weapons(Z, got_weaps)
@@ -449,10 +449,10 @@ function Item_simulate_battle(R)
 
 
   local function make_empty_stats()
-    local stats = {},
+    local stats = {}
 
     for CL,_ in pairs(GAME.PLAYER_MODEL) do
-      stats[CL] = {},
+      stats[CL] = {}
     end
 
     return stats
@@ -476,7 +476,7 @@ function Item_simulate_battle(R)
     -- give less ammo in later maps (to counter the build-up over an episode)
     if not PARAM.pistol_starts then
       local along = math.clamp(0, LEVEL.ep_along - 0.2, 0.8)
-      local factor = 1.1 - along * 0.25,
+      local factor = 1.1 - along * 0.25
 
       ammo_mul = ammo_mul * factor
     end
@@ -493,7 +493,7 @@ function Item_simulate_battle(R)
 
   local function subtract_stuff_we_have(stats, hmodel)
     for name,have_qty in pairs(hmodel.stats) do
-      local need_qty = stats[name] or 0,
+      local need_qty = stats[name] or 0
       if have_qty > 0 and need_qty > 0 then
         local min_q = math.min(have_qty, need_qty)
 
@@ -506,11 +506,12 @@ function Item_simulate_battle(R)
 
   local function give_monster_drops(hmodel, mon_list)
     for _,M in pairs(pairs(mon_list)) do
-      if M.is_cage then continue end
+      if M.is_cage then goto continue end
 
       if M.info.give then
         Player_give_stuff(hmodel, M.info.give)
       end
+      ::continue::
     end
   end
 
@@ -527,8 +528,8 @@ function Item_simulate_battle(R)
 
 
   local function collect_weapons(hmodel)
-    local list = {},
-    local seen = {},
+    local list = {}
+    local seen = {}
 
     for name,_ in pairs(hmodel.weapons) do
       local info = assert(GAME.WEAPONS[name])
@@ -621,15 +622,15 @@ function Item_distribute_stats()
 
   -- health mainly stays in same room (a reward for killing the monsters).
   -- ammo mainly goes back, to prepare player for the fight.
-  local HEALTH_RATIO  = 0.35,
-  local AMMO_RATIO    = 0.90,
+  local HEALTH_RATIO  = 0.35
+  local AMMO_RATIO    = 0.90
 
 
   local function get_earlier_rooms(R)
-    local list = {},
+    local list = {}
 
-    local ratio = 1.0,
-    local total = 0.0,
+    local ratio = 1.0
+    local total = 0.0
 
     local N = R
 
@@ -640,7 +641,7 @@ function Item_distribute_stats()
       if N.zone ~= R.zone then break; end
 
       -- never move stuff into hallways
-      if N.is_hallway then continue end
+      if N.is_hallway then goto continue end
 
       -- give more in larger rooms
       local val = ratio * (N.svolume ^ 0.7)
@@ -648,7 +649,8 @@ function Item_distribute_stats()
       table.insert(list, { room=N, ratio=val })
       total = total + val
 
-      ratio = ratio * 0.7,
+      ratio = ratio * 0.7
+      ::continue::
     end
 
     -- handle hallways that are entered from a different zone
@@ -657,7 +659,7 @@ function Item_distribute_stats()
       N = R.entry_conn:other_room(N)
 
       table.insert(list, { room=N, ratio=1.0 })
-      total = 1.0,
+      total = 1.0
     end
 
     -- adjust ratio values to be in range 0.0 - 1.0,
@@ -679,7 +681,7 @@ function Item_distribute_stats()
       local N_stats = N.item_stats[CL]
 
       for stat,qty in pairs(R_stats) do
-        if qty <= 0 then continue end
+        if qty <= 0 then goto continue end
 
         local value = qty * ratio
 
@@ -698,6 +700,7 @@ function Item_distribute_stats()
 
 --      gui.debugf("  distributing %s:%1.1f [%s]  %s --> %s\n",
 --                 stat, value,  CL, R.name, N.name)
+        ::continue::
       end
     end
   end
@@ -745,7 +748,7 @@ function Item_pickups_for_class(CL)
 
   -- this accumulates excess stats
   -- e.g. if wanted health == 20 and we give a medikit, add 5 to excess["health"]
-  local excess = {},
+  local excess = {}
 
 
   local function grab_a_big_spot(R)
@@ -754,7 +757,7 @@ function Item_pickups_for_class(CL)
 
     -- update remaining scores so next one chosen is far away
     for _,spot in pairs(R.big_spots) do
-      local dist = Monster_dist_between_spots(spot, result, 80) / 256,
+      local dist = Monster_dist_between_spots(spot, result, 80) / 256
 
       spot.score = spot.score + dist
     end
@@ -764,7 +767,7 @@ function Item_pickups_for_class(CL)
 
 
   local function place_item(item_name, x, y, z)
-    local props = {},
+    local props = {}
 
     if PARAM.use_spawnflags then
       -- no change
@@ -796,7 +799,7 @@ function Item_pickups_for_class(CL)
     -- FIXME: optimise this!
     for index = 1,#R.item_spots do
       local spot = R.item_spots[index]
-      local dist = 9e9,
+      local dist = 9e9
 
       for _,prev in pairs(prev_spots) do
         local d = Monster_dist_between_spots(prev, spot)
@@ -805,7 +808,7 @@ function Item_pickups_for_class(CL)
 
       -- prefer closest row to a wall
       if spot.wall_dist then
-        dist = dist + spot.wall_dist * 200,
+        dist = dist + spot.wall_dist * 200
       end
 
       -- avoid already used spots
@@ -842,12 +845,12 @@ function Item_pickups_for_class(CL)
       then
         local spot = grab_a_big_spot(R)
         place_item_in_spot(item.name, spot)
-        continue
+        goto continue
       end
 
       -- keep track of a limited number of previously chosen spots.
       -- when making clusters, this is used to find the next spot.
-      local prev_spots = {},
+      local prev_spots = {}
 
       for i = 1,count do
         if table.empty(R.item_spots) then
@@ -863,15 +866,16 @@ function Item_pickups_for_class(CL)
         spot.used = true
         table.insert(R.item_spots, spot)
       end
+      ::continue::
     end
   end
 
 
   local function decide_pickup(R, stat, qty)
-    local item_tab = {},
+    local item_tab = {}
 
     for name,info in pairs(GAME.PICKUPS) do
-      local prob = info.add_prob or 0,
+      local prob = info.add_prob or 0
 
       if prob > 0 and
          (stat == "health" and info.give[1].health) or
@@ -890,7 +894,7 @@ function Item_pickups_for_class(CL)
     local name = rand.key_by_probs(item_tab)
     local info = GAME.PICKUPS[name]
 
-    local count = 1,
+    local count = 1
 
     if info.cluster then
       local each_qty = info.give[1].health or info.give[1].count
@@ -915,7 +919,7 @@ function Item_pickups_for_class(CL)
 
 
   local function bonus_for_room(R, stat)
-    local bonus = 0,
+    local bonus = 0
 
     -- more stuff in start room
     if R.is_start then
@@ -936,7 +940,7 @@ function Item_pickups_for_class(CL)
     end
 
     if OB_CONFIG.strength == "crazy" then
-      bonus = bonus * 2,
+      bonus = bonus * 2
     end
 
     -- compensation for environmental hazards
@@ -972,7 +976,7 @@ function Item_pickups_for_class(CL)
     assert(qty >= 0)
 
     if excess[stat] == nil then
-       excess[stat] = 0,
+       excess[stat] = 0
     end
 
     -- bonus stuff (e.g. ammo accompanying a weapon item)
@@ -998,8 +1002,8 @@ function Item_pickups_for_class(CL)
 
 
   local function compare_items(A, B)
-    local A_rank = A.item.rank or 0,
-    local B_rank = B.item.rank or 0,
+    local A_rank = A.item.rank or 0
+    local B_rank = B.item.rank or 0
 
     if A_rank ~= B_rank then return A_rank > B_rank end
 
@@ -1013,14 +1017,14 @@ function Item_pickups_for_class(CL)
     end
 
     local stats = R.item_stats[CL]
-    local item_list = {},
+    local item_list = {}
 
     -- at least have health inside
     -- while ammo for undiscovered
     -- weapons is unavailable
     if R.is_secret then
       if not stats.health then
-        stats.health = 1,
+        stats.health = 1
       end
     end
 
