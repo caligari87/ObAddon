@@ -46,20 +46,20 @@ function ScriptMan_assemble_mapinfo_lump()
   local mapinfo_lines = {
       "gameinfo\n",
       "{\n",
-  },
+  }
 
-  local eventhandler_lines = "addeventhandlers = ",
+  local eventhandler_lines = "addeventhandlers = "
   if PARAM.boss_gen and PARAM.boss_count ~= -1 then
     eventhandler_lines = eventhandler_lines .. '"BossGenerator_Handler"'
   end
   if PARAM.boss_gen and PARAM.boss_count ~= -1 and SCRIPTS.actor_name_script then
-    eventhandler_lines = eventhandler_lines .. ", ",
+    eventhandler_lines = eventhandler_lines .. ", "
   end
   if SCRIPTS.actor_name_script then
     eventhandler_lines = eventhandler_lines .. '"bossNameHandler"'
   end
   if (PARAM.boss_gen and PARAM.boss_count ~= -1) or SCRIPTS.actor_name_script then
-    eventhandler_lines = eventhandler_lines .. "\n",
+    eventhandler_lines = eventhandler_lines .. "\n"
     table.insert(mapinfo_lines, eventhandler_lines)
   end
 
@@ -75,7 +75,7 @@ function ScriptMan_assemble_mapinfo_lump()
   local doomednum_lines = {
       "DoomedNums\n",
       "{\n",
-  },
+  }
   if SCRIPTS.fauna_mapinfo then
     for _,line in pairs(SCRIPTS.fauna_mapinfo) do
       table.insert(doomednum_lines,line)
@@ -105,10 +105,10 @@ function ScriptMan_assemble_mapinfo_lump()
 end
 
 function ScriptMan_assemble_trnslate_lump()
-  local trnslate_lines = "",
+  local trnslate_lines = ""
 
   if PARAM.MARINETRNSLATE then
-    trnslate_lines = trnslate_lines .. PARAM.MARINETRNSLATE .. "\n",
+    trnslate_lines = trnslate_lines .. PARAM.MARINETRNSLATE .. "\n"
   end
 
   if trnslate_lines ~= "" then
@@ -118,24 +118,24 @@ end
 
 
 function ScriptMan_assemble_zscript_lump()
-  local zscript_lines = "",
+  local zscript_lines = ""
 
   if PARAM.boss_gen and PARAM.boss_count ~= -1 then
-    zscript_lines = zscript_lines .. PARAM.BOSSSCRIPT .. "\n",
+    zscript_lines = zscript_lines .. PARAM.BOSSSCRIPT .. "\n"
   end
   if PARAM.marine_gen then
-    zscript_lines = zscript_lines .. PARAM.MARINESCRIPT .. "\n",
+    zscript_lines = zscript_lines .. PARAM.MARINESCRIPT .. "\n"
   end
   if PARAM.custom_trees == "zs" then
     zscript_lines = zscript_lines ..
-    ARMAETUS_EPIC_TEXTURES.TEMPLATES.ZS_TREES .. "\n",
+    ARMAETUS_EPIC_TEXTURES.TEMPLATES.ZS_TREES .. "\n"
   end
   if SCRIPTS.actor_name_script then
-    zscript_lines = zscript_lines .. SCRIPTS.actor_name_script .. "\n",
+    zscript_lines = zscript_lines .. SCRIPTS.actor_name_script .. "\n"
   end
 
   if SCRIPTS.fauna_zsc then
-    zscript_lines = zscript_lines .. SCRIPTS.fauna_zsc .. "\n",
+    zscript_lines = zscript_lines .. SCRIPTS.fauna_zsc .. "\n"
   end
 
   if zscript_lines ~= "" then
@@ -146,36 +146,36 @@ end
 
 
 function ScriptMan_assemble_decorate_lump()
-  local decorate_script_lines = "",
+  local decorate_script_lines = ""
 
   if PARAM.custom_trees == "decorate" then
     decorate_script_lines = decorate_script_lines ..
-    ARMAETUS_EPIC_TEXTURES.TEMPLATES.DEC_TREES .. "\n",
+    ARMAETUS_EPIC_TEXTURES.TEMPLATES.DEC_TREES .. "\n"
   end
   if PARAM.dynamic_lights == "yes" then
     if OB_CONFIG.game == "heretic" then
         decorate_script_lines = decorate_script_lines ..
-        ZDOOM_SPECIALS_HERETIC.DYNAMIC_LIGHT_DECORATE .. "\n",
+        ZDOOM_SPECIALS_HERETIC.DYNAMIC_LIGHT_DECORATE .. "\n"
     else
         decorate_script_lines = decorate_script_lines ..
-        ZDOOM_SPECIALS.DYNAMIC_LIGHT_DECORATE .. "\n",
+        ZDOOM_SPECIALS.DYNAMIC_LIGHT_DECORATE .. "\n"
     end
   end
   if SCRIPTS.hn_marker_decorate_lines then
     decorate_script_lines = decorate_script_lines ..
-    SCRIPTS.hn_marker_decorate_lines .. "\n",
+    SCRIPTS.hn_marker_decorate_lines .. "\n"
   end
   if PARAM.ambient_sounds then
     decorate_script_lines = decorate_script_lines ..
-    SCRIPTS.SOUND_DEC .. "\n",
+    SCRIPTS.SOUND_DEC .. "\n"
   end
   if SCRIPTS.tissue_doc then
     decorate_script_lines = decorate_script_lines ..
-    SCRIPTS.tissue_doc .. "\n",
+    SCRIPTS.tissue_doc .. "\n"
   end
   if SCRIPTS.fauna_dec then
     decorate_script_lines = decorate_script_lines ..
-    SCRIPTS.fauna_dec .. "\n",
+    SCRIPTS.fauna_dec .. "\n"
   end
 
   if decorate_script_lines ~= "" then
@@ -185,15 +185,15 @@ end
 
 
 function ScriptMan_assemble_sndinfo_lump()
-  local sndinfo_lines = "",
+  local sndinfo_lines = ""
 
   if PARAM.ambient_sounds then
     sndinfo_lines = sndinfo_lines ..
-    SCRIPTS.SNDINFO .. "\n",
+    SCRIPTS.SNDINFO .. "\n"
   end
   if SCRIPTS.fauna_SNDINFO then
     sndinfo_lines = sndinfo_lines ..
-    SCRIPTS.fauna_SNDINFO .. "\n",
+    SCRIPTS.fauna_SNDINFO .. "\n"
   end
 
   if sndinfo_lines ~= "" then
@@ -203,7 +203,7 @@ end
 
 
 function ScriptMan_assemble_gldefs_lump()
-  local gldefs_lines = "",
+  local gldefs_lines = ""
 
   if PARAM.dynamic_lights == "yes" then
     if OB_CONFIG.game == "heretic" then
@@ -233,7 +233,7 @@ end
 function ScriptMan_assemble_language_lump()
   local language_lines = {
       "[enu default]\n",
-  },
+  }
 
   if PARAM.boss_gen and PARAM.boss_count ~= -1 then
     for _,line in pairs(PARAM.BOSSLANG) do
@@ -258,7 +258,7 @@ function ScriptMan_assemble_language_lump()
 end
 
 function ScriptMan_assemble_acs_loader_lump()
-  local acs_loader_lines = {},
+  local acs_loader_lines = {}
 
   if PARAM.custom_trees == "decorate" then
     table.insert(acs_loader_lines, "ASSGRASS\n")
@@ -284,7 +284,7 @@ function ScriptMan_merge_acs_lumps()
 end
 
 function ScriptMan_assemble_textures_lump()
-  local textures_lump_lines = {},
+  local textures_lump_lines = {}
 
   if PARAM.epic_textures_activated then
     table.insert(textures_lump_lines, EPIC_TEXTUREX_LUMP)

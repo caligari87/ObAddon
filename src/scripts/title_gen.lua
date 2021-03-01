@@ -770,7 +770,7 @@ TITLE_LETTER_SHAPES =
   },
 
 -- end of letter_shapes
-},
+}
 
 
 ------------------------------------------------------------------------
@@ -813,12 +813,12 @@ end
 function Title_transform_Perspective(T, x, y)
   local m = x / T.max_along
 
-  m = m ^ 0.7,
+  m = m ^ 0.7
   x = m * T.max_along
 
-  m = 1.2 - m * 0.6,
+  m = 1.2 - m * 0.6
 
-  local n = (1.0 - m) / 2,
+  local n = (1.0 - m) / 2
 
   return T.x + x * T.fw, T.y - (y * m + n) * T.fh
 end
@@ -827,7 +827,7 @@ end
 function Title_transform_FatTop(T, x, y)
   local m = x / T.max_along
 
-  m = (1 - (m * 2)) / 3,
+  m = (1 - (m * 2)) / 3
 
   return T.x + x * T.fw + (1-y) * m * T.fh, T.y - y * T.fh
 end
@@ -836,7 +836,7 @@ end
 function Title_transform_FatBottom(T, x, y)
   local m = x / T.max_along
 
-  m = (1 - (m * 2)) / 3,
+  m = (1 - (m * 2)) / 3
 
   return T.x + x * T.fw + y * m * T.fh, T.y - y * T.fh
 end
@@ -845,12 +845,12 @@ end
 
 TITLE_TRANSFORM_LIST =
 {
-  straight    = Title_transform_Straight
-  italics     = Title_transform_Italics
-  perspective = Title_transform_Perspective
-  fat_top     = Title_transform_FatTop
+  straight    = Title_transform_Straight,
+  italics     = Title_transform_Italics,
+  perspective = Title_transform_Perspective,
+  fat_top     = Title_transform_FatTop,
   fat_bottom  = Title_transform_FatBottom
-},
+}
 
 
 ------------------------------------------------------------------------
@@ -867,12 +867,12 @@ end
 
 function Title_draw_char(T, ch)
   -- we draw lowercase characters as smaller uppercase ones
-  local local_w = 1.0,
-  local local_h = 1.0,
+  local local_w = 1.0
+  local local_h = 1.0
 
   if string.match(ch, "[a-z]") then
-    local_w = 0.8,
-    local_h = 0.7,
+    local_w = 0.8
+    local_h = 0.7
 
     ch = string.upper(ch)
   end
@@ -893,12 +893,13 @@ function Title_draw_char(T, ch)
     local x2 = info.points[i + 1].x
     local y2 = info.points[i + 1].y
 
-    if not x1 or not x2 then continue end
+    if not x1 or not x2 then goto continue end
 
     x1 = T.along + x1 * local_w ; y1 = y1 * local_h
     x2 = T.along + x2 * local_w ; y2 = y2 * local_h
 
     Title_make_stroke(T, x1,y1, x2,y2)
+    ::continue::
   end
 
   -- advance horizontally for next character
@@ -908,10 +909,10 @@ end
 
 
 function Title_measure_char(ch, spacing)
-  local local_w = 1.0,
+  local local_w = 1.0
 
   if string.match(ch, "[a-z]") then
-    local_w = 0.8,
+    local_w = 0.8
     ch = string.upper(ch)
   end
 
@@ -925,7 +926,7 @@ end
 
 
 function Title_draw_string(T, text)
-  T.along = 0,
+  T.along = 0
 
   for i = 1, #text do
     local ch = string.sub(text, i, i)
@@ -937,7 +938,7 @@ end
 
 
 function Title_measure_string(text, spacing)
-  local width = 0,
+  local width = 0
 
   for i = 1, #text do
     local ch = string.sub(text, i, i)
@@ -958,7 +959,7 @@ function Title_centered_string(T, mx, my, text, style)
 
   -- do not create really tall letters
   if T.fh / T.fw > 2.5 then
-     T.fh = T.fw * 2.5,
+     T.fh = T.fw * 2.5
   end
 
 
@@ -970,10 +971,10 @@ function Title_centered_string(T, mx, my, text, style)
 
   width = width * T.fw
 
-  T.x = mx - width * 0.5,
-  T.y = my + T.fh  * 0.5,
+  T.x = mx - width * 0.5
+  T.y = my + T.fh  * 0.5
 
-  local base_ofs = 0 - T.thick / 2,
+  local base_ofs = 0 - T.thick / 2
 
   local thick
 
@@ -1011,11 +1012,11 @@ function Title_centered_string(T, mx, my, text, style)
       elseif style.outline_mode == "zoom" then
         thick = T.thick + i
 
-        T.ofs_x = base_ofs - i / 2,
-        T.ofs_y = base_ofs + i * 1.5,
+        T.ofs_x = base_ofs - i / 2
+        T.ofs_y = base_ofs + i * 1.5
 
       else  -- the normal "surround" mode
-        thick = T.thick + i * 2,
+        thick = T.thick + i * 2
 
         T.ofs_x = base_ofs - i
         T.ofs_y = base_ofs - i
@@ -1066,7 +1067,7 @@ function Title_widest_size_to_fit(text, box_w, max_w, spacing)
     end
   end
 
-  return 10,
+  return 10
 end
 
 
@@ -1105,7 +1106,7 @@ function Title_interp_color(list, ity, out)
       return
     end
 
-    ity = ity - 1,
+    ity = ity - 1
   end
 
   out[1] = list[#list][1]
@@ -1363,7 +1364,7 @@ TITLE_MAIN_STYLES =
 
     narrow = 0.8,
   },
-},
+}
 
 
 TITLE_SUB_STYLES =
@@ -1417,7 +1418,7 @@ TITLE_SUB_STYLES =
     colors = { "#f0f" },
     outlines = { "#505" },
   },
-},
+}
 
 
 TITLE_SPACE_STYLES =
@@ -1486,7 +1487,7 @@ TITLE_SPACE_STYLES =
     thresh = 0.3,
     power  = 2,
   },
-},
+}
 
 
 TITLE_INTERMISSION_STYLES =
@@ -1535,7 +1536,7 @@ TITLE_INTERMISSION_STYLES =
 
     fracdim = 2.9,
   },
-},
+}
 
 
 TITLE_COLOR_RAMPS =
@@ -1637,13 +1638,13 @@ TITLE_COLOR_RAMPS =
     {115,43,0},
     {255,255,115},
   },
-},
+}
 
 
 ------------------------------------------------------------------------
 
 
-TITLE_SEED = 0,
+TITLE_SEED = 0
 
 
 function Title_gen_space_scene()
@@ -1655,7 +1656,7 @@ function Title_gen_space_scene()
 
   local density = rand.pick({40,70,100})
 
-  local big_stars = {},
+  local big_stars = {}
 
 
   local function distance_to_big_star(mx, my, r, x, y)
@@ -1665,11 +1666,11 @@ function Title_gen_space_scene()
 
     if dy >= dx then dx, dy = dy, dx end
 
-    local best_d = 9e9,
+    local best_d = 9e9
 
     for i = 0, 1, 0.05 do
       local px = i * r
-      local py = (1 - i) * 0.4,
+      local py = (1 - i) * 0.4
 
       local d = geom.dist(px, py, dx, dy)
 
@@ -1697,25 +1698,25 @@ function Title_gen_space_scene()
   local function draw_big_star(mx, my, r)
     local r2 = int(r * 1.2)
 
-    local DD = 0.09,
+    local DD = 0.09
 
     for y = my - r,  my + r  do
     for x = mx - r2, mx + r2 do
-      local dx = (x - mx) / r2,
+      local dx = (x - mx) / r2
       local dy = (y - my) / r
 
       local ity = 1.0 / (math.abs(dx) + DD) + 1.0 / (math.abs(dy) + DD)
 
       ity = ity / (1.0 / DD)
-      ity = ity ^ 3.2,
+      ity = ity ^ 3.2
       ity = ity * (1.0 - geom.dist(0, 0, dx, dy))
       ity = 240 * math.clamp(0, ity, 1)
 
-      if ity < 50 then continue end
+      if ity < 50 then goto continue end
 
       gui.title_prop("color", { ity, ity, ity })
       gui.title_draw_rect(x, y, 1, 1)
-
+      ::continue::
     end -- x, y
     end
   end
@@ -1723,7 +1724,7 @@ function Title_gen_space_scene()
 
   local function location_for_big_star(r)
     local mx, my
-    local best_d = -1,
+    local best_d = -1
 
     for loop = 1, 9 do
       local tx = rand.irange(r+2, 320 - (r+2))
@@ -1746,7 +1747,7 @@ function Title_gen_space_scene()
   local function add_big_stars()
     gui.title_prop("render_mode", "additive")
 
-    local BIG_SIZES = { 56, 36, 16 },
+    local BIG_SIZES = { 56, 36, 16 }
 
     for _,r in pairs(pairs(BIG_SIZES)) do
       if rand.odds(50) then
@@ -1777,9 +1778,9 @@ function Title_gen_space_scene()
     else
       gui.title_draw_rect(mx, my, 1, 1)
 
-      col[1] = col[1] * 0.6,
-      col[2] = col[2] * 0.6,
-      col[3] = col[3] * 0.6,
+      col[1] = col[1] * 0.6
+      col[2] = col[2] * 0.6
+      col[3] = col[3] * 0.6
 
       gui.title_prop("color", col)
 
@@ -1794,7 +1795,7 @@ function Title_gen_space_scene()
   local function add_little_stars()
     gui.title_prop("render_mode", "additive")
 
-    local col = { 0,0,0 },
+    local col = { 0,0,0 }
 
     for x = 0, 319 do
       -- begin somewhere off-screen
@@ -1802,7 +1803,7 @@ function Title_gen_space_scene()
 
       while y < 200 do
         if y >= 0 then
-          local size = 1,
+          local size = 1
           if rand.odds(15) then size = 3 end
           if rand.odds(3)  then size = 2 end
 
@@ -1849,7 +1850,7 @@ function Title_gen_ray_burst()
     red = 10,
     pink = 10,
     light_brown = 10,
-  },
+  }
 
   local color_name = rand.key_by_probs(ray_colors)
 
@@ -1858,14 +1859,14 @@ function Title_gen_ray_burst()
 
 
   local function coord(angle, dist)
-    local x = mx + math.sin(angle * math.pi / 180) * dist * 1.2,
+    local x = mx + math.sin(angle * math.pi / 180) * dist * 1.2
     local y = my + math.cos(angle * math.pi / 180) * dist
 
     return x, y
   end
 
   local function draw_ray(angle, thick, col)
-    local col = { 0,0,0 },
+    local col = { 0,0,0 }
 
     for side = 0,1 do
     for m = thick, 0, -0.1 do
@@ -1875,7 +1876,7 @@ function Title_gen_ray_burst()
 
       local ity = 1.0 - m / thick
 
-      ity = (ity ^ 1.4) * 0.8,
+      ity = (ity ^ 1.4) * 0.8
 
       Title_interp_color(color_list, ity, col)
 
@@ -1903,26 +1904,26 @@ function Title_gen_wall_scene()
 
   if rand.odds(37) then
     -- tech lamp
-    lamp_y = 154,
-    lamp_sprite = "lamp2",
+    lamp_y = 154
+    lamp_sprite = "lamp2"
 
-    tex_list = { "airduct", "cement" },
+    tex_list = { "airduct", "cement" }
 
   else
     if rand.odds(50) then
       -- standing lamp
-      lamp_y = 130,
-      lamp_sprite = "lamp1",
+      lamp_y = 130
+      lamp_sprite = "lamp1"
     else
       -- wall-mounted torch
-      lamp_y = 80,
-      lamp_sprite = "lamp3",
+      lamp_y = 80
+      lamp_sprite = "lamp3"
     end
 
    -- Added new shit here
 
     tex_list = { "block1", "block2", "bodiesc", "bricks08", "bricks09", "bronze5", "darkf03", "goth6", "goth10", "goth36", "goth50", "goth51",
-                 "graymet2", "helmet1", "helmet2", "helwal1", "rdrok1" },
+                 "graymet2", "helmet1", "helmet2", "helwal1", "rdrok1" }
   end
 
   -- draw the texture over the whole screen
@@ -1932,14 +1933,14 @@ function Title_gen_wall_scene()
   gui.title_draw_rect(0, 0, 320, 200)
 
   -- decide # of lamps
-  local lamp_num = 2,
+  local lamp_num = 2
   if rand.odds(25) then lamp_num = 1 end
   if rand.odds(25) then lamp_num = 3 end
 
-  local lights = {},
+  local lights = {}
 
   for i = 1, lamp_num do
-    local x = 150,
+    local x = 150
 
     if lamp_num >= 2 and i == 1 then x = 35 end
     if lamp_num >= 2 and i == lamp_num then x = 265 end
@@ -1950,16 +1951,16 @@ function Title_gen_wall_scene()
   -- apply lighting effect
   gui.title_prop("render_mode", "multiply")
 
-  local col = { 0,0,0 },
+  local col = { 0,0,0 }
 
-  local xf = 1.0,
+  local xf = 1.0
   if lamp_num == 1 then xf = 0.7 end
   if lamp_num == 3 then xf = 1.6 end
 
   for x = 0, 319 do
   for y = 0, 199  do
-    local d = 9e9,
-    for _,L in pairs(pairs(lights)) do
+    local d = 9e9
+    for _,L in pairs(lights) do
       d = math.min(d, geom.dist(L.x * xf, L.y, x * xf, y))
     end
 
@@ -1976,7 +1977,7 @@ function Title_gen_wall_scene()
   end
 
   -- draw each lamp
-  for _,L in pairs(pairs(lights)) do
+  for _,L in pairs(lights) do
     gui.title_load_image(L.x - 10, L.y - 16, "data/bg/" .. lamp_sprite .. ".tga")
   end
 end
@@ -2005,7 +2006,7 @@ function Title_gen_cave_scene()
     blue_white = 10,
     pink = 10,
     green = 10,
-  },
+  }
 
   local color_name = rand.key_by_probs(cave_colors)
 
@@ -2015,7 +2016,7 @@ function Title_gen_cave_scene()
 
   local function intensity(mx, r, sx, sy)
     -- compute the normal vector
-    local z = (sy - 99.5) / 99.5,
+    local z = (sy - 99.5) / 99.5
 
     if tall_mode then z = (sy / 190) ^ 1.4 end
 
@@ -2036,30 +2037,30 @@ function Title_gen_cave_scene()
 
 
   local function draw_cone(mx, dist)
-    local col = { 0,0,0 },
+    local col = { 0,0,0 }
 
     local dist_factor = 1.4 / (1 + math.log(dist + 0.5))
 
     for y = 0, 199 do
       -- calc radius at this point
       local r = math.abs(y - 99.5)
-      r = 3 + r ^ 1.6 / 24,
+      r = 3 + r ^ 1.6 / 24
 
       if (dist < 5) then
         r = r + (5 - dist)
       end
 
       if tall_mode then
-        r = (y - (dist-1)*3) * 0.5,
-        if r < 0 then continue end
+        r = (y - (dist-1)*3) * 0.5
+        if r < 0 then goto continue end
 
-        r = 1.2 + r ^ 2.2 / 240,
+        r = 1.2 + r ^ 2.2 / 240
       end
 
       for x = mx - r, mx + r do
         local ity = intensity(mx, r, x, y)
 
-        ity = math.clamp(0, ity, 1) ^ 0.7,
+        ity = math.clamp(0, ity, 1) ^ 0.7
         ity = ity * dist_factor
 
         Title_interp_color(color_list, ity, col)
@@ -2067,6 +2068,7 @@ function Title_gen_cave_scene()
         gui.title_prop("color", col)
         gui.title_draw_rect(x, y, 1, 1)
       end
+      ::continue::
     end
   end
 
@@ -2089,11 +2091,11 @@ end
 
 
 function Title_gen_tunnel_scene()
-  local mx = 60,
-  local my = 60,
+  local mx = 60
+  local my = 60
 
-  local x_mul = 0.75,
-  local y_mul = 0.25,
+  local x_mul = 0.75
+  local y_mul = 0.25
 
   if rand.odds(50) then
     mx = 320 - mx
@@ -2108,17 +2110,17 @@ function Title_gen_tunnel_scene()
     brown_yellow = 10,
     mid_green    = 10,
     mid_grey     = 10,
-  },
+  }
 
   local color_name = rand.key_by_probs(tunnel_colors)
 
   local color_list = TITLE_COLOR_RAMPS[color_name]
   assert(color_list)
 
-  local col = { 0,0,0 },
+  local col = { 0,0,0 }
 
   for r = 1202, 2, -2 do
-    local bump = (gui.random() ^ 10) * 0.7,
+    local bump = (gui.random() ^ 10) * 0.7
     local ity = math.clamp(0.0, r / 1200, 0.9) + bump
 
     ity = ity * (1.0 - r / 900)
@@ -2154,7 +2156,7 @@ function Title_split_into_lines()
   -- Actual return pattern:
   -- line1, line2, mid_line, top_line
 
-  local words = {},
+  local words = {}
 
   for w in string.gmatch(GAME.title, "%S+") do
     table.insert(words, w)
@@ -2215,7 +2217,7 @@ function Title_split_into_lines()
   -- no choice?
   if #words < 2 then return GAME.title end
 
-  local split_prob = 70,
+  local split_prob = 70
 
   if #GAME.title <= 12 then split_prob =  30 end
   if #GAME.title >= 17 then split_prob = 100 end
@@ -2261,11 +2263,11 @@ function Title_pick_style(style_tab, reqs)
     return true
   end
 
-  local tab = {},
+  local tab = {}
 
   for name,def in pairs(style_tab) do
     if matches(def) then
-      tab[name] = def.prob or 50,
+      tab[name] = def.prob or 50
     end
   end
 
@@ -2314,33 +2316,33 @@ function Title_add_title()
 
 
   -- figure out sizes of main area and sub-title area
-  local bb_main = { w=280 },
-  local bb_sub  = { w=240 },
+  local bb_main = { w=280 }
+  local bb_sub  = { w=240 }
 
-  bb_main.h = 110 + num_lines * 5,
-  bb_sub.h  =  50 - num_lines * 5,
+  bb_main.h = 110 + num_lines * 5
+  bb_sub.h  =  50 - num_lines * 5
 
-  bb_main.x = (320 - bb_main.w) / 2,
-  bb_main.y = 20,
+  bb_main.x = (320 - bb_main.w) / 2
+  bb_main.y = 20
 
-  bb_sub.x  = (320 - bb_sub.w) / 2,
+  bb_sub.x  = (320 - bb_sub.w) / 2
   bb_sub.y  = 190 - bb_sub.h
 
   if not sub_title then
-    bb_main.w = 260,
-    bb_main.x = (320 - bb_main.w) / 2,
+    bb_main.w = 260
+    bb_main.x = (320 - bb_main.w) / 2
 
     bb_main.h = sel(bottom_line, 145, 135)
     bb_main.y = sel(bottom_line,  20,  22)
 
     -- dummy values (not used)
-    bb_sub.h = 5,
-    bb_sub.y = 195,
+    bb_sub.h = 5
+    bb_sub.y = 195
   end
 
   if top_line then
-    bb_main.y = bb_main.y - 5,
-    bb_main.h = bb_main.h + 5,
+    bb_main.y = bb_main.y - 5
+    bb_main.h = bb_main.h + 5
   end
 
 --[[
@@ -2367,30 +2369,30 @@ function Title_add_title()
 
 
   -- choose font sizes for the main lines
-  local w1, w2,
+  local w1, w2
 
-  local spacing = 0.45,
+  local spacing = 0.45
 
   if not line2 then
     w1 = Title_widest_size_to_fit(line1, bb_main.w, 50, spacing)
-    w2 = w1,
+    w2 = w1
   else
     w1 = Title_widest_size_to_fit(line1, bb_main.w - 30, 50, spacing)
     w2 = Title_widest_size_to_fit(line2, bb_main.w,      50, spacing)
 
     if false then
       w1 = math.min(w1, w2)
-      w2 = w1,
+      w2 = w1
     end
   end
 
-  local w3 = math.min(w1, w2) * 0.6,
+  local w3 = math.min(w1, w2) * 0.6
 
 
-  local h1 = line_h * 1.2,
-  local h2 = line_h * 1.4,
+  local h1 = line_h * 1.2
+  local h2 = line_h * 1.4
 
-  local h3 = line_h * 0.7,
+  local h3 = line_h * 0.7
 
 --[[
 stderrf("line_h = %1.1f\n", line_h)
@@ -2403,11 +2405,11 @@ stderrf("font sizes: %d x %d  |  %d x %d  |  %d x %d\n", w1,h1, w2,h2, w3,h3)
 
   -- decide geometry for major parts --
 
-  local line1_T = { fw=w1, fh=h1, spacing=spacing },
-  local line2_T = { fw=w2, fh=h2, spacing=spacing },
-  local   mid_T = { fw=w3, fh=h3, spacing=spacing },
+  local line1_T = { fw=w1, fh=h1, spacing=spacing }
+  local line2_T = { fw=w2, fh=h2, spacing=spacing }
+  local   mid_T = { fw=w3, fh=h3, spacing=spacing }
 
-  local GEOMETRIES = { straight=60, italics=30, perspective=20, fat_bottom=20, fat_top=10 },
+  local GEOMETRIES = { straight=60, italics=30, perspective=20, fat_bottom=20, fat_top=10 }
 
   local geometry1 = rand.key_by_probs(GEOMETRIES)
 
@@ -2431,10 +2433,10 @@ stderrf("font sizes: %d x %d  |  %d x %d  |  %d x %d\n", w1,h1, w2,h2, w3,h3)
 
 
   -- decide pen type
-  local PEN_TYPES = { circle=50, box=50 },
+  local PEN_TYPES = { circle=50, box=50 }
 
   if not style.texture and (style.narrow or 1) < 0.62 then
-    PEN_TYPES.slash = 50,
+    PEN_TYPES.slash = 50
   end
 
   line1_T.pen_type = rand.key_by_probs(PEN_TYPES)
@@ -2443,7 +2445,7 @@ stderrf("font sizes: %d x %d  |  %d x %d  |  %d x %d\n", w1,h1, w2,h2, w3,h3)
 
   --- draw main title lines ---
 
-  local mx = 160,
+  local mx = 160
   local my = bb_main.y
 
   if top_line then
@@ -2453,7 +2455,7 @@ stderrf("font sizes: %d x %d  |  %d x %d  |  %d x %d\n", w1,h1, w2,h2, w3,h3)
 
   if line1 then
     Title_centered_string(line1_T, mx, my + line_h, line1, style)
-    my = my + line_h * 2,
+    my = my + line_h * 2
   end
 
   if mid_line then
@@ -2463,14 +2465,14 @@ stderrf("font sizes: %d x %d  |  %d x %d  |  %d x %d\n", w1,h1, w2,h2, w3,h3)
 
   if line2 then
     Title_centered_string(line2_T, mx, my + line_h, line2, style)
-    my = my + line_h * 2,
+    my = my + line_h * 2
   end
 
   if bottom_line then
-    mid_T.fw = mid_T.fw * 2,
-    mid_T.fh = mid_T.fh * 1.4,
+    mid_T.fw = mid_T.fw * 2
+    mid_T.fh = mid_T.fh * 1.4
 
-    my = my + 10,
+    my = my + 10
 
     Title_centered_string(mid_T, mx, my + line_h/2, bottom_line, mid_style)
   end
@@ -2480,28 +2482,28 @@ stderrf("font sizes: %d x %d  |  %d x %d  |  %d x %d\n", w1,h1, w2,h2, w3,h3)
 
   if sub_title then
     -- create the transform
-    local sub_T = {},
+    local sub_T = {}
 
     -- TODO : more variety than this [ depends on the other parts though! ]
-    local sub_geometry = "straight",
+    local sub_geometry = "straight"
 
     sub_T.func = TITLE_TRANSFORM_LIST[sub_geometry]
     assert(sub_T.func)
 
-    local mx = 160,
-    local my = bb_sub.y + bb_sub.h / 2,
+    local mx = 160
+    local my = bb_sub.y + bb_sub.h / 2
 
     style = Title_pick_style(TITLE_SUB_STYLES, {})
 
     sub_T.fw = rand.sel(25, 13, 11)
-    sub_T.fh = 13,
+    sub_T.fh = 13
     sub_T.spacing = rand.sel(50, 0.3, 0.4)
 
     sub_T.thick = Title_calc_max_thickness(sub_T.fw, sub_T.fh)
 
     -- adjust for a mix of upper/lower case
     if string.upper(GAME.sub_title) ~= GAME.sub_title then
-      my = my - sub_T.fh / 8,
+      my = my - sub_T.fh / 8
     end
 
     Title_centered_string(sub_T, mx, my, GAME.sub_title, style)
@@ -2536,18 +2538,19 @@ function Title_process_raw_fonts()
 
       if x == nil and y == nil then
         dump_line("      {}\n")
-        continue
+        goto continue
       end
 
       x = (P.x - CH.rx[1]) / (CH.rx[2] - CH.rx[1])
       y = (P.y - CH.ry[1]) / (CH.ry[2] - CH.ry[1])
 
-      x = x * 0.6,
+      x = x * 0.6
 
       P.x = x
       P.y = y
 
       dump_line("      { x=%1.4f, y=%1.4f }\n", x, y)
+      ::continue::
     end
 
     dump_line("    }\n")
@@ -2582,14 +2585,14 @@ function Title_make_interpic()
                         style.thresh or 0, style.power or 1,
                         style.fracdim or 2.4)
 
-  local BW = 32,
-  local BH = 25,
+  local BW = 32
+  local BH = 25
 
   local bricky = rand.odds(30)
 
   for bx = 0, 10 do
   for by = 0, 8 do
-    local ofs = 0,
+    local ofs = 0
 
     if bricky then ofs = (by % 2) * (BW / 2) end
 
