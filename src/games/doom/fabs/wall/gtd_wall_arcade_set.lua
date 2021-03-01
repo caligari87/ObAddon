@@ -39,4 +39,4 @@ PREFABS.Wall_gtd_arcade_machine_wall =
     [13] = 5,
     [21] = 5,
   },
-},
+}

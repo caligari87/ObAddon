@@ -32,8 +32,8 @@ PREFABS.Locked_2x2_red =
 
   flat_FLAT23 = "BIGDOOR2",
 
-  can_flip = true
-},
+  can_flip = true,
+}
 
 
 PREFABS.Locked_2x2_blue =
@@ -44,7 +44,7 @@ PREFABS.Locked_2x2_blue =
 
   tex_DOORRED = "DOORBLU",
   line_33     = 32,
-},
+}
 
 
 PREFABS.Locked_2x2_yellow =
@@ -55,7 +55,7 @@ PREFABS.Locked_2x2_yellow =
 
   tex_DOORRED = "DOORYEL",
   line_33     = 34,
-},
+}
 
 
 --Hell version
@@ -74,7 +74,7 @@ PREFABS.Locked_2x2_red_hell =
   tex_BRICK4   = "ASHWALL2",
   tex_STONE = "MARBGRAY",
 
-},
+}
 
 PREFABS.Locked_2x2_blue_hell =
 {
@@ -91,7 +91,7 @@ PREFABS.Locked_2x2_blue_hell =
   tex_STONE = "MARBGRAY",
   line_33     = 32,
 
-},
+}
 
 PREFABS.Locked_2x2_yellow_hell =
 {
@@ -108,7 +108,7 @@ PREFABS.Locked_2x2_yellow_hell =
   tex_STONE = "MARBGRAY",
   line_33     = 34,
 
-},
+}
 
 --Urban version
 
@@ -126,7 +126,7 @@ PREFABS.Locked_2x2_red_urban =
   flat_CEIL3_3 = "RROCK09",
   tex_BRICK4   = "TANROCK3",
 
-},
+}
 
 PREFABS.Locked_2x2_blue_urban =
 {
@@ -143,7 +143,7 @@ PREFABS.Locked_2x2_blue_urban =
   tex_BRICK4   = "TANROCK3",
   line_33     = 32,
 
-},
+}
 
 PREFABS.Locked_2x2_yellow_urban =
 {
@@ -160,4 +160,4 @@ PREFABS.Locked_2x2_yellow_urban =
   tex_BRICK4   = "TANROCK3",
   line_33     = 34,
 
-},
+}

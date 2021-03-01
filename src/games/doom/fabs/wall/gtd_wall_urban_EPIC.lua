@@ -19,32 +19,32 @@ PREFABS.Wall_urban_tall_vent =
 
   x_fit = "frame",
   z_fit = "top",
-},
+}
 
 PREFABS.Wall_urban_fire_exit_low =
 {
   template = "Wall_urban_tall_vent",
   map = "MAP02",
 
-  need_solid_back = true
+  need_solid_back = true,
   on_scenics = "never",
 
   height = 208,
   deep = 48,
 
   bound_z2 = 208,
-},
+}
 
 PREFABS.Wall_urban_fire_exit_high =
 {
   template = "Wall_urban_tall_vent",
   map = "MAP03",
 
-  need_solid_back = true
+  need_solid_back = true,
   on_scenics = "never",
 
   height = 336,
   deep = 48,
 
   bound_z2 = 336,
-},
+}

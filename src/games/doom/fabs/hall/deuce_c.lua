@@ -16,7 +16,7 @@ PREFABS.Hallway_deuce_c1 =
 
   seed_w = 2,
   seed_h = 2,
-},
+}
 
 PREFABS.Hallway_deuce_c1_tech =
 {
@@ -26,4 +26,4 @@ PREFABS.Hallway_deuce_c1_tech =
 
   tex_METAL = "SHAWN2",
   flat_CEIL5_2 = "FLAT23",
-},
+}

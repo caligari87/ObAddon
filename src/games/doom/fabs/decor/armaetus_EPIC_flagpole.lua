@@ -17,8 +17,8 @@ PREFABS.Decor_armaetus_flagpole =
 
   sink_mode = "never_liquids",
 
-  z_fit = { 5,6 },
-},
+  z_fit = { 5,6 }
+}
 
 -- Uses OBLIGE logo!!
 PREFABS.Decor_armaetus_flagpole_obaddon_logo_earth =
@@ -36,7 +36,7 @@ PREFABS.Decor_armaetus_flagpole_obaddon_logo_earth =
 
   bound_z1 = 0,
   bound_z2 = 384,
-},
+}
 
 -- Uses OBLIGE logo!!
 PREFABS.Decor_armaetus_flagpole_obaddon_logo_hell =
@@ -58,5 +58,5 @@ PREFABS.Decor_armaetus_flagpole_obaddon_logo_hell =
   tex_OBDNBNR1 =
   {
     OBDNBNR2 = 100,
-  },
-},
+  }
+}

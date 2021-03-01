@@ -18,11 +18,11 @@ PREFABS.Decor_tech_hologram_table =
   bound_z2 = 128,
 
   z_fit = "top",
-},
+}
 
 PREFABS.Decor_tech_hologram_table_kewb =
 {
   template = "Decor_tech_hologram_table",
 
   map      = "MAP02",
-},
+}

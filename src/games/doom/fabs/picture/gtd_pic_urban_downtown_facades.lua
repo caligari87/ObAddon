@@ -72,13 +72,13 @@ PREFABS.Pic_urban_downtown_facade1_vanilla =
     COMPBLUE=50,
     REDWALL=50,
   },
-},
+}
 
 PREFABS.Pic_urban_downtown_facade2_vanilla =
 {
   template = "Pic_urban_downtown_facade1_vanilla",
   map      = "MAP02",
-},
+}
 
 PREFABS.Pic_urban_downtown_facade1_EPIC =
 {
@@ -197,7 +197,7 @@ PREFABS.Pic_urban_downtown_facade1_EPIC =
     COMPBLUE=50,
     REDWALL=50,
   },
-},
+}
 
 PREFABS.Pic_urban_downtown_facade2_EPIC =
 {
@@ -205,7 +205,7 @@ PREFABS.Pic_urban_downtown_facade2_EPIC =
   map      = "MAP02",
 
   replaces = "Pic_urban_downtown_facade2_vanilla",
-},
+}
 
 
 
@@ -289,7 +289,7 @@ PREFABS.Pic_urban_downtown_facade3_vanilla =
     COMPBLUE=50,
     REDWALL=50,
   },
-},
+}
 
 PREFABS.Pic_urban_downtown_facade3_EPIC =
 {
@@ -348,14 +348,14 @@ PREFABS.Pic_urban_downtown_facade3_EPIC =
     COMPBLUE=50,
     REDWALL=50,
   },
-},
+}
 
 PREFABS.Pic_urban_downtown_facade_EPIC_destroyed =
 {
   template = "Pic_urban_downtown_facade3_EPIC",
   map = "MAP04",
 
-  replaces = nil
+  replaces = nil,
 
   skip_prob = 50,
   prob = 80,
@@ -363,7 +363,7 @@ PREFABS.Pic_urban_downtown_facade_EPIC_destroyed =
   over = 0,
 
   x_fit = "frame",
-},
+}
 
 PREFABS.Pic_urban_downtown_facade_fenced_out =
 {
@@ -374,7 +374,7 @@ PREFABS.Pic_urban_downtown_facade_fenced_out =
 
   y_fit = { 32,40 },
   z_fit = "top",
-},
+}
 
 PREFABS.Pic_urban_downtown_facade_alley =
 {
@@ -391,7 +391,7 @@ PREFABS.Pic_urban_downtown_facade_alley =
 
   y_fit = { 32,40 },
   z_fit = { 72,80 },
-},
+}
 
 PREFABS.Pic_urban_downtown_facade_fenced_roof =
 {
@@ -426,7 +426,7 @@ PREFABS.Pic_urban_downtown_facade_fenced_roof =
     FENCE6 = 1,
     FENCE7 = 1,
   },
-},
+}
 
 PREFABS.Pic_urban_downtown_facade_destroyed_roof =
 {
@@ -448,4 +448,4 @@ PREFABS.Pic_urban_downtown_facade_destroyed_roof =
 
   bound_z1 = 0,
   bound_z2 = 240,
-},
+}

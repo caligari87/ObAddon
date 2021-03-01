@@ -77,7 +77,7 @@ PREFABS.Joiner_downtown_facade =
     REDWALL=50,
   },
 
-},
+}
 
 PREFABS.Joiner_downtown_facade_flipped =
 {
@@ -88,4 +88,4 @@ PREFABS.Joiner_downtown_facade_flipped =
   neighbor = "outdoor",
 
   y_fit = { 24,64 },
-},
+}

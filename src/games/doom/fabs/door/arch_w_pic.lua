@@ -24,7 +24,7 @@ PREFABS.Arch_pic1 =
 
   bound_z1 = 0,
   bound_z2 = 128,
-},
+}
 
 
 -- versions for Urban theme --
@@ -37,7 +37,7 @@ PREFABS.Arch_pic1_satyr =
   theme  = "!tech",
 
   tex_SILVER2 = "GSTSATYR",
-},
+}
 
 PREFABS.Arch_pic1_garg =
 {
@@ -47,7 +47,7 @@ PREFABS.Arch_pic1_garg =
   theme  = "!tech",
 
   tex_SILVER2 = "GSTGARG",
-},
+}
 
 PREFABS.Arch_pic1_lion =
 {
@@ -57,5 +57,5 @@ PREFABS.Arch_pic1_lion =
   theme  = "!tech",
 
   tex_SILVER2 = "GSTLION",
-},
+}
 

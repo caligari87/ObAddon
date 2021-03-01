@@ -24,28 +24,28 @@ PREFABS.Hallway_hellcata_term =
 
   engine = "zdoom",
 
-},
+}
 
 PREFABS.Hallway_hellcata_term2 =
 {
   template = "Hallway_hellcata_term",
 
   map    = "MAP02",
-},
+}
 
 PREFABS.Hallway_hellcata_term3 =
 {
   template = "Hallway_hellcata_term",
 
   map    = "MAP03",
-},
+}
 
 PREFABS.Hallway_hellcata_term4 =
 {
   template = "Hallway_hellcata_term",
 
   map    = "MAP04",
-},
+}
 
 PREFABS.Hallway_hellcata_term5 =
 {
@@ -53,4 +53,4 @@ PREFABS.Hallway_hellcata_term5 =
 
   map    = "MAP05",
   key   = "secret",
-},
+}

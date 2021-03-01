@@ -17,7 +17,7 @@ PREFABS.Window_gothic_epic_1 =
   bound_z2 = 128,
 
   x_fit = "frame",
-},
+}
 
 PREFABS.Window_gothic_epic_2 =
 {
@@ -25,7 +25,7 @@ PREFABS.Window_gothic_epic_2 =
   map      = "MAP02",
 
   seed_w   = 2,
-},
+}
 
 PREFABS.Window_gothic_epic_3 =
 {
@@ -33,4 +33,4 @@ PREFABS.Window_gothic_epic_3 =
 
   map      = "MAP03",
   seed_w   = 3,
-},
+}

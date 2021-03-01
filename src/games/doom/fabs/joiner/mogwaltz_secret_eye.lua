@@ -20,8 +20,8 @@ PREFABS.Joiner_secret_secret_shootable_eye =
   y_fit  = { 64,96 },
 
   -- prevent monsters stuck in a barrel
-  solid_ents = true
-},
+  solid_ents = true,
+}
 
 --[[PREFABS.Joiner_secret_secret_shootable_eye_pick_one =
 {
@@ -29,7 +29,7 @@ PREFABS.Joiner_secret_secret_shootable_eye =
   map = "MAP02",
 
   prob = 18,
-},
+}
 
 PREFABS.Joiner_secret_secret_shootable_eye_pick_one_b =
 {
@@ -47,7 +47,7 @@ PREFABS.Joiner_secret_secret_shootable_eye_nodickmove =
   prob = 18,
 
   y_fit = { 128,140 },
-},
+}
 
 PREFABS.Joiner_secret_secret_shootable_eye_nodickmove_b =
 {
@@ -57,4 +57,4 @@ PREFABS.Joiner_secret_secret_shootable_eye_nodickmove_b =
   prob = 18,
 
   y_fit = { 128,140 },
-},
+}

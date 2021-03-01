@@ -16,7 +16,7 @@ PREFABS.Wall_gtd_library_1 =
   bound_z2 = 128,
 
   z_fit = "top",
-},
+}
 
 PREFABS.Wall_gtd_library_wall_2 =
 {
@@ -24,7 +24,7 @@ PREFABS.Wall_gtd_library_wall_2 =
   map      = "MAP02",
 
   prob     = 50,
-},
+}
 
 PREFABS.Wall_gtd_library_diag_1 =
 {
@@ -44,4 +44,4 @@ PREFABS.Wall_gtd_library_diag_1 =
   bound_z2 = 128,
 
   z_fit = "top",
-},
+}

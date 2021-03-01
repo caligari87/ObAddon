@@ -19,7 +19,7 @@ PREFABS.Hallway_deuce_term =
   seed_h = 1,
 
   deep   = 16,
-},
+}
 
 PREFABS.Hallway_deuce_term_tech =
 {
@@ -29,14 +29,14 @@ PREFABS.Hallway_deuce_term_tech =
 
   tex_METAL = "SHAWN2",
   flat_CEIL5_2 = "FLAT23",
-},
+}
 
 -- doorz -MSSP
 PREFABS.Hallway_deuce_term_door =
 {
   template = "Hallway_deuce_term",
   style = "doors",
-},
+}
 
 PREFABS.Hallway_deuce_term_door_tech =
 {
@@ -48,7 +48,7 @@ PREFABS.Hallway_deuce_term_door_tech =
   tex_BIGDOOR6 = "BIGDOOR1",
   tex_METAL = "SHAWN2",
   flat_CEIL5_2 = "FLAT23",
-},
+}
 
 
 PREFABS.Hallway_deuce_secret =
@@ -58,7 +58,7 @@ PREFABS.Hallway_deuce_secret =
   map  = "MAP05",
   theme = "!tech",
   key  = "secret",
-},
+}
 
 PREFABS.Hallway_deuce_secret_tech =
 {
@@ -71,4 +71,4 @@ PREFABS.Hallway_deuce_secret_tech =
   tex_METAL = "SHAWN2",
   flat_CEIL5_2 = "FLAT23",
 
-},
+}

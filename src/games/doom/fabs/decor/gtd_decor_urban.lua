@@ -14,7 +14,7 @@ PREFABS.Decor_bench_n_trashcan =
   bound_z1 = 0,
 
   sink_mode = "never_liquids",
-},
+}
 
 PREFABS.Decor_round_planter =
 {
@@ -30,7 +30,7 @@ PREFABS.Decor_round_planter =
   bound_z1 = 0,
 
   sink_mode = "never_liquids",
-},
+}
 
 PREFABS.Decor_guardhouse =
 {
@@ -51,19 +51,19 @@ PREFABS.Decor_guardhouse =
   z_fit = "top",
 
   sink_mode = "never_liquids",
-},
+}
 
 PREFABS.Decor_marquee_sign =
 {
   file   = "decor/gtd_decor_urban.wad",
   map    = "MAP04",
 
-  prob   = 10000 --10000 -- Increased probability because the templates have now been replaced by a simple prob control.
+  prob   = 10000, --10000 -- Increased probability because the templates have now been replaced by a simple prob control.
   theme  = "urban",
   env    = "building",
 
   where  = "point",
-  size   = 16 --64,
+  size   = 16, --64,
   height = 160,
 
   bound_z1 = 0,
@@ -83,9 +83,9 @@ PREFABS.Decor_marquee_sign =
     O_BOLT   = 50,
     O_PILL   = 50,
     O_CARVE  = 50,
-  },
+  }
 
-},
+}
 
 PREFABS.Decor_market_stall =
 {
@@ -104,14 +104,14 @@ PREFABS.Decor_market_stall =
   bound_z2 = 128,
 
   z_fit = "top",
-},
+}
 
 PREFABS.Decor_street_barrier =
 {
   file   = "decor/gtd_decor_urban.wad",
   map    = "MAP06",
 
-  can_be_on_roads = true
+  can_be_on_roads = true,
 
   prob   = 6000,
   theme  = "urban",
@@ -120,7 +120,7 @@ PREFABS.Decor_street_barrier =
   size   = 64,
 
   bound_z1 = 0,
-},
+}
 
 PREFABS.Decor_waiting_shed =
 {
@@ -139,7 +139,7 @@ PREFABS.Decor_waiting_shed =
   bound_z2 = 128,
 
   z_fit = "top",
-},
+}
 
 PREFABS.Decor_cafe_table_set =
 {
@@ -158,4 +158,4 @@ PREFABS.Decor_cafe_table_set =
   size   = 64,
 
   bound_z1 = 0,
-},
+}

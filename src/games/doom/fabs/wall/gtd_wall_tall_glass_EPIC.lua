@@ -16,7 +16,7 @@ PREFABS.Wall_tall_glass_EPIC_yellow =
   bound_z2 = 160,
 
   z_fit  = "frame",
-},
+}
 
 PREFABS.Wall_tall_glass_EPIC_yellow_diag =
 {
@@ -34,7 +34,7 @@ PREFABS.Wall_tall_glass_EPIC_yellow_diag =
   bound_z2 = 160,
 
   z_fit  = "frame",
-},
+}
 
 PREFABS.Wall_tall_glass_EPIC_orange =
 {
@@ -43,7 +43,7 @@ PREFABS.Wall_tall_glass_EPIC_orange =
   group = "gtd_tall_glass_epic_orange",
 
   tex_GLASS11 = "GLASS12",
-},
+}
 
 PREFABS.Wall_tall_glass_EPIC_orange_diag =
 {
@@ -52,7 +52,7 @@ PREFABS.Wall_tall_glass_EPIC_orange_diag =
   group = "gtd_tall_glass_epic_orange",
 
   tex_GLASS11 = "GLASS12",
-},
+}
 
 PREFABS.Wall_tall_glass_EPIC_red =
 {
@@ -61,7 +61,7 @@ PREFABS.Wall_tall_glass_EPIC_red =
   group = "gtd_tall_glass_epic_red",
 
   tex_GLASS11 = "GLASS13",
-},
+}
 
 PREFABS.Wall_tall_glass_EPIC_red_diag =
 {
@@ -70,7 +70,7 @@ PREFABS.Wall_tall_glass_EPIC_red_diag =
   group = "gtd_tall_glass_epic_red",
 
   tex_GLASS11 = "GLASS13",
-},
+}
 
 PREFABS.Wall_tall_glass_EPIC_blue =
 {
@@ -79,7 +79,7 @@ PREFABS.Wall_tall_glass_EPIC_blue =
   group = "gtd_tall_glass_epic_blue",
 
   tex_GLASS11 = "GLASS14",
-},
+}
 
 PREFABS.Wall_tall_glass_EPIC_blue_diag =
 {
@@ -88,4 +88,4 @@ PREFABS.Wall_tall_glass_EPIC_blue_diag =
   group = "gtd_tall_glass_epic_blue",
 
   tex_GLASS11 = "GLASS14",
-},
+}

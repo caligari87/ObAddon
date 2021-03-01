@@ -22,7 +22,7 @@ PREFABS.Beam_lights =
 
   bound_z1 = 0,
   bound_z2 = 96,
-},
+}
 
 PREFABS.Beam_lights_diagonal =
 {
@@ -41,7 +41,7 @@ PREFABS.Beam_lights_diagonal =
 
   bound_z1 = 0,
   bound_z2 = 96,
-},
+}
 
 PREFABS.Beam_lights_white =
 {
@@ -49,7 +49,7 @@ PREFABS.Beam_lights_white =
   map = "MAP03",
 
   group = "beam_lights_white",
-},
+}
 
 PREFABS.Beam_lights_white_diagonal =
 {
@@ -57,4 +57,4 @@ PREFABS.Beam_lights_white_diagonal =
   map = "MAP04",
 
   group = "beam_lights_white",
-},
+}

@@ -17,7 +17,7 @@ PREFABS.Hallway_hellcata_p1 =
   seed_h = 2,
 
   engine = "zdoom",
-  can_flip = true
+  can_flip = true,
 
   tex_CATACMB2 = {
     CATACMB1=50, CATACMB2=50,
@@ -69,24 +69,24 @@ PREFABS.Hallway_hellcata_p1 =
     dead_zombie = 50,
     dead_shooter = 50,
     dead_imp = 50,
-  },
+  }
 
-},
+}
 
 PREFABS.Hallway_hellcata_p2 =
 {
   template = "Hallway_hellcata_p1",
   map    = "MAP02",
-},
+}
 
 PREFABS.Hallway_hellcata_p3 =
 {
   template = "Hallway_hellcata_p1",
   map    = "MAP03",
-},
+}
 
 PREFABS.Hallway_hellcata_p4 =
 {
   template = "Hallway_hellcata_p1",
   map    = "MAP04",
-},
+}

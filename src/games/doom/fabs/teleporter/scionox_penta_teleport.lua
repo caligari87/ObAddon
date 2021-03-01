@@ -23,7 +23,7 @@ PREFABS.Teleporter_scionox_penta_teleport =
   tex_COMPSTA1 = { COMPSTA1=50, COMPSTA2=50, COMPWERD=50, SPACEW3=50, SILVER2=50, SILVER3=50 },
 
   sound = "Demonic_Teleporter",
-},
+}
 
 PREFABS.Teleporter_scionox_penta_teleport_2 =
 {
@@ -35,7 +35,7 @@ PREFABS.Teleporter_scionox_penta_teleport_2 =
   tex_GRAY5 = "STEP2",
   flat_FLAT19 = "RROCK12",
   thing_2028 = "mercury_lamp",
-},
+}
 
 PREFABS.Teleporter_scionox_penta_teleport_3 =
 {
@@ -99,7 +99,7 @@ PREFABS.Teleporter_scionox_penta_teleport_3 =
     skull_cairn = 50,
     skull_rock = 50,
   },
-},
+}
 
 -- Point version
 PREFABS.Teleporter_scionox_penta_teleport_4 =
@@ -115,7 +115,7 @@ PREFABS.Teleporter_scionox_penta_teleport_4 =
   tag_1 = "?out_tag",
   tag_2 = "?in_tag",
 
-  face_open = true
+  face_open = true,
 
   sound = "Demonic_Teleporter",
-},
+}

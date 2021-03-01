@@ -18,7 +18,7 @@ PREFABS.Joiner_fake_switch_joiner =
 
   x_fit  = "frame",
   y_fit  = { 40,120 },
-},
+}
 
 PREFABS.Joiner_fake_switch_joiner_trapped =
 {
@@ -26,7 +26,7 @@ PREFABS.Joiner_fake_switch_joiner_trapped =
   map = "MAP02",
 
   style = "traps",
-},
+}
 
 PREFABS.Joiner_fake_switch_joiner_hell =
 {
@@ -41,7 +41,7 @@ PREFABS.Joiner_fake_switch_joiner_hell =
     SW1LION = 50,
     SW1SATYR = 50,
   },
-},
+}
 
 PREFABS.Joiner_fake_switch_joiner_hell_trapped =
 {
@@ -58,4 +58,4 @@ PREFABS.Joiner_fake_switch_joiner_hell_trapped =
     SW1LION = 50,
     SW1SATYR = 50,
   },
-},
+}

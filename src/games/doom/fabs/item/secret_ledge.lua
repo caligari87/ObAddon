@@ -27,9 +27,9 @@ PREFABS.Item_secret_ledge_universal =
   tex_STEP2 = { STEP2=50, STEP6=50 },
 
   -- use the occasional-blink FX (fairly rarely)
-  sector_1  = { [0]=15, [1]=50, [2]=10, [3]=10, [8]=50 },
+  sector_1  = { [0]=15, [1]=50, [2]=10, [3]=10, [8]=50 }
 
-},
+}
 
 PREFABS.Item_secret_ledge_tech =
 {
@@ -37,14 +37,14 @@ PREFABS.Item_secret_ledge_tech =
   theme = "tech",
 
   tex_SUPPORT3 = "DOORSTOP",
-},
+}
 
 PREFABS.Item_secret_ledge_universal_flipped =
 {
   template  = "Item_secret_ledge_universal",
 
   map = "MAP02",
-},
+}
 
 PREFABS.Item_secret_ledge_tech_flipped =
 {
@@ -54,7 +54,7 @@ PREFABS.Item_secret_ledge_tech_flipped =
   map = "MAP02",
 
   tex_SUPPORT3 = "DOORSTOP",
-},
+}
 
 -- Variant goes down, with lift and platform to lower
 PREFABS.Item_secret_ledge_sunken_universal =
@@ -63,7 +63,7 @@ PREFABS.Item_secret_ledge_sunken_universal =
   map = "MAP03",
   theme = "!hell",
   prob = 400,
-},
+}
 
 PREFABS.Item_secret_ledge_sunken_universal_flipped =
 {
@@ -71,7 +71,7 @@ PREFABS.Item_secret_ledge_sunken_universal_flipped =
   map = "MAP04",
   theme = "!hell",
   prob = 400,
-},
+}
 
 PREFABS.Item_secret_ledge_sunken_universal_hell =
 {
@@ -83,7 +83,7 @@ PREFABS.Item_secret_ledge_sunken_universal_hell =
   tex_PLAT1 = "SUPPORT3",
   tex_BROWNHUG = "WOOD1",
   flat_FLAT20 = "CEIL5_2",
-},
+}
 
 PREFABS.Item_secret_ledge_sunken_universal_flipped_hell =
 {
@@ -95,4 +95,4 @@ PREFABS.Item_secret_ledge_sunken_universal_flipped_hell =
   tex_PLAT1 = "SUPPORT3",
   tex_BROWNHUG = "WOOD1",
   flat_FLAT20 = "CEIL5_2",
-},
+}

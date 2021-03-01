@@ -37,7 +37,7 @@ flat_GATE1 = { GATE1=50, GATE2=50, GATE3=50, GATE4=50 },
 
 sector_8  = { [8]=60, [2]=15, [3]=15, [8]=15, [17]=20 },
 
-},
+}
 
 
 PREFABS.Teleporter_sky_pad_tech =
@@ -48,5 +48,5 @@ PREFABS.Teleporter_sky_pad_tech =
 
   -- replace blue torches with bollard lamps
   thing_55 = "lamp",
-},
+}
 

@@ -11,4 +11,4 @@ PREFABS.Skybox_garrett_city =
 
   bound_z1 = -256,
   bound_z2 = 256,
-},
+}

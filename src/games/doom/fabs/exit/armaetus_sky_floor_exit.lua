@@ -14,4 +14,4 @@ PREFABS.Exit_armaetus_sky_floor_exit =
 
   x_fit  = "frame",
   y_fit  = "top",
-},
+}

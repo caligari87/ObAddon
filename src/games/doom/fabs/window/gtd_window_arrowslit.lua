@@ -17,7 +17,7 @@ PREFABS.Window_arrowslit_1 =
   bound_z2 = 128,
 
   z_fit = { 64,104 },
-},
+}
 
 PREFABS.Window_arrowslit_2 =
 {
@@ -27,16 +27,16 @@ PREFABS.Window_arrowslit_2 =
   group  = "gtd_window_arrowslit",
 
   seed_w = 2,
-},
+}
 
 PREFABS.Window_arrowslit_3 =
 {
   template = "Window_arrowslit_1",
   map    = "MAP03",
 
-  passable = true
+  passable = true,
 
   group  = "gtd_window_arrowslit",
 
   seed_w = 3,
-},
+}

@@ -24,7 +24,7 @@ PREFABS.Bars_shiny =
 
   tag_1  = "?door_tag",
   door_action = "S1_LowerFloor",
-},
+}
 
 
 PREFABS.Bars_shiny_diag =
@@ -43,7 +43,7 @@ PREFABS.Bars_shiny_diag =
   door_action = "S1_LowerFloor",
 
   bound_z1 = 0,
-},
+}
 
 PREFABS.Bars_shiny_hell =
 {
@@ -53,7 +53,7 @@ PREFABS.Bars_shiny_hell =
 
   tex_SUPPORT2 = "SUPPORT3",
   flat_FLAT23  = "CEIL5_2",
-},
+}
 
 PREFABS.Bars_shiny_diag_hell =
 {
@@ -64,4 +64,4 @@ PREFABS.Bars_shiny_diag_hell =
   tex_SUPPORT2 = "SUPPORT3",
   flat_FLAT23  = "CEIL5_2",
 
-},
+}

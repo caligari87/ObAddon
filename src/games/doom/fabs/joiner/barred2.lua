@@ -23,7 +23,7 @@ PREFABS.Joiner_remote_door =
   door_action = "S1_OpenDoor",
 
   flat_FLAT23 = "SILVER3",
-},
+}
 
 PREFABS.Joiner_remote_door_actual_door1 =
 {
@@ -32,7 +32,7 @@ PREFABS.Joiner_remote_door_actual_door1 =
   theme  = "tech",
   prob   = 45,
   flat_FLAT1 = { FLAT1=50, FLOOR0_1=50, FLAT19=50 },
-},
+}
 
 PREFABS.Joiner_remote_door_actual_door2 =
 {
@@ -43,7 +43,7 @@ PREFABS.Joiner_remote_door_actual_door2 =
   tex_BIGDOOR2 = "BIGDOOR3",
   flat_FLAT20 = "FLOOR7_2",
   flat_FLAT1 = { FLAT1=50, FLOOR0_1=50, FLAT19=50 },
-},
+}
 
 PREFABS.Joiner_remote_door_actual_door3 =
 {
@@ -54,7 +54,7 @@ PREFABS.Joiner_remote_door_actual_door3 =
   tex_BIGDOOR2 = "BIGDOOR4",
   flat_FLAT20 = "FLOOR0_1",
   flat_FLAT1 = { FLAT1=50, FLOOR0_1=50, FLAT19=50 },
-},
+}
 
 PREFABS.Joiner_remote_door_actual_door_urban =
 {
@@ -66,7 +66,7 @@ PREFABS.Joiner_remote_door_actual_door_urban =
   tex_GRAY5 = "WOOD1",
   flat_FLAT20 = "CEIL5_2",
   flat_FLAT1 = { FLAT5_1=50, FLAT5_2=50 },
-},
+}
 
 PREFABS.Joiner_remote_door_actual_door_hell =
 {
@@ -78,7 +78,7 @@ PREFABS.Joiner_remote_door_actual_door_hell =
   tex_GRAY5 = "STONE6",
   flat_FLAT20 = "CEIL5_2",
   flat_FLAT1 = { FLAT10=50, RROCK09=50, RROCK16=50 },
-},
+}
 
 PREFABS.Joiner_remote_sw_metal =
 {
@@ -90,5 +90,5 @@ PREFABS.Joiner_remote_sw_metal =
 
   tex_SILVER3 = "METAL3",
   flat_FLAT23 = "CEIL5_2",
-},
+}
 

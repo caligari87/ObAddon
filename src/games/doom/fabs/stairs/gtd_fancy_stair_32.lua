@@ -20,7 +20,7 @@ PREFABS.Stair_fancy_32_brown =
   bound_z1 = 0,
 
   delta_h = 32,
-},
+}
 
 PREFABS.Stair_fancy_32_green =
 {
@@ -28,7 +28,7 @@ PREFABS.Stair_fancy_32_green =
 
   flat_CEIL5_2 = "RROCK20",
   tex_BRONZE1 = "BROWNGRN",
-},
+}
 
 PREFABS.Stair_fancy_32_grey =
 {
@@ -36,7 +36,7 @@ PREFABS.Stair_fancy_32_grey =
 
   flat_CEIL5_2 = "FLAT1",
   tex_BRONZE1 = "GRAY1",
-},
+}
 
 -----
 -- diagonal-edges
@@ -62,7 +62,7 @@ PREFABS.Stair_fancy_diagonal_edged_32_1X =
   bound_z1 = 0,
 
   delta_h = 32,
-},
+}
 
 PREFABS.Stair_fancy_diagonal_edged_32_2X =
 {
@@ -70,7 +70,7 @@ PREFABS.Stair_fancy_diagonal_edged_32_2X =
   map = "MAP04",
 
   seed_h = 2,
-},
+}
 
 -- hell version
 
@@ -83,4 +83,4 @@ PREFABS.Stair_fancy_diagonal_carpetted =
 
   y_fit = { 28,36 , 60,68 , 92,100 },
   x_fit = { 60,68 },
-},
+}

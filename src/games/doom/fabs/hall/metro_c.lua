@@ -13,7 +13,7 @@ PREFABS.Hallway_metro_c =
 
   seed_w = 2,
   seed_h = 2,
-},
+}
 
 -- slopeless engine fallbacks
 
@@ -26,4 +26,4 @@ PREFABS.Hallway_metro_c_boxy =
   engine = "any",
 
   prob = 10,
-},
+}

@@ -21,7 +21,7 @@ PREFABS.Hallway_conveyorh_i1 =
 
   texture_pack = "armaetus",
 
-},
+}
 
 PREFABS.Hallway_conveyorh_i2 =
 {
@@ -29,7 +29,7 @@ PREFABS.Hallway_conveyorh_i2 =
   map    = "MAP02",
   style  = "cages",
 
-},
+}
 
 PREFABS.Hallway_conveyorh_i3 =
 {
@@ -37,35 +37,35 @@ PREFABS.Hallway_conveyorh_i3 =
   map    = "MAP03",
   style  = "cages",
 
-},
+}
 
 PREFABS.Hallway_conveyorh_i4 =
 {
   template  = "Hallway_conveyorh_i1",
   map    = "MAP04",
 
-},
+}
 
 PREFABS.Hallway_conveyorh_i5 =
 {
   template  = "Hallway_conveyorh_i1",
   map    = "MAP05",
 
-},
+}
 
 PREFABS.Hallway_conveyorh_i6 =
 {
   template  = "Hallway_conveyorh_i1",
   map    = "MAP06",
 
-},
+}
 
 PREFABS.Hallway_conveyorh_i7 =
 {
   template  = "Hallway_conveyorh_i1",
   map    = "MAP07",
 
-},
+}
 
 PREFABS.Hallway_conveyorh_i8 =
 {
@@ -75,14 +75,14 @@ PREFABS.Hallway_conveyorh_i8 =
   prob   = 100,
 
   filter = "crushers",
-},
+}
 
 PREFABS.Hallway_conveyorh_i9 =
 {
   template  = "Hallway_conveyorh_i1",
   map    = "MAP09",
 
-},
+}
 
 PREFABS.Hallway_conveyorh_i10 =
 {
@@ -91,4 +91,4 @@ PREFABS.Hallway_conveyorh_i10 =
   style  = "traps",
   prob   = 100,
 
-},
+}

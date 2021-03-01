@@ -8,10 +8,10 @@ PREFABS.Hallway_access_corner =
 
   where  = "seeds",
   shape  = "L",
-},
+}
 
 PREFABS.Hallway_access_corner_soft =
 {
   template = "Hallway_access_corner",
   map = "MAP02",
-},
+}

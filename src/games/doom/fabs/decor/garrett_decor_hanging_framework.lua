@@ -15,8 +15,8 @@ PREFABS.Decor_garrett_hanging_framework =
   bound_z1 = 0,
   bound_z2 = 164,
 
-  z_fit = {0, 2},
-},
+  z_fit = {0, 2}
+}
 
 PREFABS.Decor_gtd_hanging_framework_2 =
 {
@@ -27,7 +27,7 @@ PREFABS.Decor_gtd_hanging_framework_2 =
   size = 64,
 
   bound_z2 = 192,
-},
+}
 
 PREFABS.Decor_gtd_hanging_framework_3 =
 {
@@ -39,5 +39,5 @@ PREFABS.Decor_gtd_hanging_framework_3 =
 
   bound_z2 = 172,
 
-  z_fit = { 128,156 },
-},
+  z_fit = { 128,156 }
+}

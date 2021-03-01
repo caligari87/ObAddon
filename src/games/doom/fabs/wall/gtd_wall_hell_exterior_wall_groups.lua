@@ -18,7 +18,7 @@ PREFABS.Wall_hell_stone_brace = --#
   z_fit = "bottom",
 
   tex_STONE3 = "STONE2",
-},
+}
 
 PREFABS.Wall_hell_wood_brace = --#
 {
@@ -29,7 +29,7 @@ PREFABS.Wall_hell_wood_brace = --#
   tex_STONE2 = "WOODMET2",
   tex_STONE3 = "WOODMET1",
   flat_FLAT1 = "CEIL5_1",
-},
+}
 
 PREFABS.Wall_hell_metal_framed_skin = --#
 {
@@ -48,7 +48,7 @@ PREFABS.Wall_hell_metal_framed_skin = --#
   },
 
   z_fit = "stretch",
-},
+}
 
 PREFABS.Wall_hell_caged_up_corpses = --#
 {
@@ -69,7 +69,7 @@ PREFABS.Wall_hell_caged_up_corpses = --#
   },
 
   z_fit = "top",
-},
+}
 
 PREFABS.Wall_hell_giant_stone_faces = --#
 {
@@ -89,7 +89,7 @@ PREFABS.Wall_hell_giant_stone_faces = --#
   z_fit = { 8,56 },
 
   bound_z2 = 192,
-},
+}
 
 PREFABS.Wall_hell_giant_stone_faces_EPIC =
 {
@@ -116,7 +116,7 @@ PREFABS.Wall_hell_giant_stone_faces_EPIC =
   z_fit = { 8,56 },
 
   bound_z2 = 192,
-},
+}
 
 PREFABS.Wall_hell_outdoor_rising_spfaces = --#
 {
@@ -128,7 +128,7 @@ PREFABS.Wall_hell_outdoor_rising_spfaces = --#
   group = "hell_o_rising_spfaces",
 
   z_fit = "top",
-},
+}
 
 PREFABS.Wall_hell_outdoor_lava_falls = --#
 {
@@ -147,7 +147,7 @@ PREFABS.Wall_hell_outdoor_lava_falls = --#
   },
 
   z_fit = { 48,72 },
-},
+}
 
 PREFABS.Wall_hell_outdoor_huge_overhang = --#
 {
@@ -159,7 +159,7 @@ PREFABS.Wall_hell_outdoor_huge_overhang = --#
   deep = 48,
 
   z_fit = { 20,52 },
-},
+}
 
 PREFABS.Wall_hell_outdoor_spiny_overhang = --#
 {
@@ -171,7 +171,7 @@ PREFABS.Wall_hell_outdoor_spiny_overhang = --#
   deep = 64,
 
   z_fit = { 32,96 },
-},
+}
 
 PREFABS.Wall_hell_outdoor_red_glass_tall = --#
 {
@@ -191,7 +191,7 @@ PREFABS.Wall_hell_outdoor_red_glass_tall = --#
   z_fit = { 40,120 },
 
   bound_z2 = 192,
-},
+}
 
 PREFABS.Wall_hell_outdoor_red_glass_tall_EPIC =
 {
@@ -209,7 +209,7 @@ PREFABS.Wall_hell_outdoor_red_glass_tall_EPIC =
   z_fit = { 40,120 },
 
   bound_z2 = 192,
-},
+}
 
 PREFABS.Wall_hell_outdoor_rising_energy = --#
 {
@@ -223,7 +223,7 @@ PREFABS.Wall_hell_outdoor_rising_energy = --#
   z_fit = { 136,186 },
 
   bound_z2 = 192,
-},
+}
 
 PREFABS.Wall_hell_outdoor_rising_energy_EPIC =
 {
@@ -249,7 +249,7 @@ PREFABS.Wall_hell_outdoor_rising_energy_EPIC =
   z_fit = { 136,186 },
 
   bound_z2 = 192,
-},
+}
 
 PREFABS.Wall_hell_wooden_palisades = --#
 {
@@ -275,7 +275,7 @@ PREFABS.Wall_hell_wooden_palisades = --#
   },
 
   z_fit = "top",
-},
+}
 
 PREFABS.Wall_gothic_flying_alcoves = --#
 {
@@ -287,7 +287,7 @@ PREFABS.Wall_gothic_flying_alcoves = --#
   deep = 64,
 
   z_fit = "top",
-},
+}
 
 
 PREFABS.Wall_gothic_flying_alcoves_EPIC =
@@ -305,7 +305,7 @@ PREFABS.Wall_gothic_flying_alcoves_EPIC =
   tex_MIDBRN1 ="MIDWIND7",
 
   z_fit = "top",
-},
+}
 
 PREFABS.Wall_hell_outdoor_torch_fenced = --#
 {
@@ -318,7 +318,7 @@ PREFABS.Wall_hell_outdoor_torch_fenced = --#
 
   tex_FENCE4 = "ZZWOLF10",
   tex_METL02 = "METAL",
-},
+}
 
 PREFABS.Wall_hell_outdoor_torch_fenced_EPIC =
 {
@@ -334,7 +334,7 @@ PREFABS.Wall_hell_outdoor_torch_fenced_EPIC =
   tex_METL02 = "METL02",
 
   z_fit = { 28,32 },
-},
+}
 
 PREFABS.Wall_hell_outdoor_dark_banners = --#
 {
@@ -357,7 +357,7 @@ PREFABS.Wall_hell_outdoor_dark_banners = --#
   },
 
   bound_z2 = 160,
-},
+}
 
 PREFABS.Wall_hell_outdoor_dark_banners_EPIC =
 {
@@ -385,7 +385,7 @@ PREFABS.Wall_hell_outdoor_dark_banners_EPIC =
   z_fit = { 16,24 },
 
   bound_z2 = 160,
-},
+}
 
 PREFABS.Wall_hell_dark_cathedral_windows =
 {
@@ -405,7 +405,7 @@ PREFABS.Wall_hell_dark_cathedral_windows =
   flat_CEIL5_1 = "CEIL5_2",
 
   bound_z2 = 256,
-},
+}
 
 PREFABS.Wall_hell_dark_cathedral_windows_EPIC = --#
 {
@@ -422,7 +422,7 @@ PREFABS.Wall_hell_dark_cathedral_windows_EPIC = --#
   z_fit = "bottom",
 
   bound_z2 = 256,
-},
+}
 
 PREFABS.Wall_hell_extruded_arch = --#
 {
@@ -432,7 +432,7 @@ PREFABS.Wall_hell_extruded_arch = --#
   group = "hell_o_extruded_arch",
 
   z_fit = { 40,48 },
-},
+}
 
 PREFABS.Wall_hell_gothic_skin_red_EPIC = --#
 {
@@ -444,7 +444,7 @@ PREFABS.Wall_hell_gothic_skin_red_EPIC = --#
   group = "hell_o_gothic_skin_red",
 
   z_fit = { 36,60 },
-},
+}
 
 PREFABS.Wall_hell_marb_icon_bfalls_EPIC = --#
 {
@@ -456,7 +456,7 @@ PREFABS.Wall_hell_marb_icon_bfalls_EPIC = --#
   group = "hell_o_marb_icon_bfalls",
 
   z_fit = { 54,58 },
-},
+}
 
 PREFABS.Wall_hell_marb_icon_bfalls_EPIC_alt = --#
 {
@@ -474,7 +474,7 @@ PREFABS.Wall_hell_marb_icon_bfalls_EPIC_alt = --#
   tex_ICONMRB1 = "MARBLE4",
   tex_BFALL1 = "MARBLE",
   flat_BLOOD1 = "FLOOR7_2",
-},
+}
 
 PREFABS.Wall_hell_egyptish_EPIC = --#
 {
@@ -494,7 +494,7 @@ PREFABS.Wall_hell_egyptish_EPIC = --#
   },
 
   z_fit = "top",
-},
+}
 
 PREFABS.Wall_hell_egyptish =
 {
@@ -508,7 +508,7 @@ PREFABS.Wall_hell_egyptish =
   tex_MURAL12 = "BSTONE2",
 
   z_fit = "top",
-},
+}
 
 PREFABS.Wall_hell_blood_ocatgon = --#
 {
@@ -518,7 +518,7 @@ PREFABS.Wall_hell_blood_ocatgon = --#
   group = "hell_o_blood_ocatgon",
 
   z_fit = "top",
-},
+}
 
 PREFABS.Wall_hell_catamet = --#
 {
@@ -531,7 +531,7 @@ PREFABS.Wall_hell_catamet = --#
   group = "hell_o_catamet",
 
   z_fit = { 40,48 },
-},
+}
 
 PREFABS.Wall_hell_catamet_vanilla =
 {
@@ -546,7 +546,7 @@ PREFABS.Wall_hell_catamet_vanilla =
   tex_CATACMB5 = "BRWINDOW",
 
   z_fit = { 40,48 },
-},
+}
 
 PREFABS.Wall_hell_crematorium_windows = --#
 {
@@ -556,4 +556,4 @@ PREFABS.Wall_hell_crematorium_windows = --#
   group = "hell_o_crematorium_windows",
 
   z_fit = "bottom",
-},
+}

@@ -32,5 +32,5 @@ PREFABS.Door_EPIC_vending_machine_secret =
     OBVNMCH3 = 50,
     OBVNMCH4 = 50,
     OBVNMCH5 = 50,
-  },
-},
+  }
+}

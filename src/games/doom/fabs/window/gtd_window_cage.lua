@@ -17,7 +17,7 @@ PREFABS.Window_cage_1 =
 
   bound_z1 = 0,
   bound_z2 = 128,
-},
+}
 
 PREFABS.Window_cage_1_tech =
 {
@@ -27,7 +27,7 @@ PREFABS.Window_cage_1_tech =
 
   tex_BROWN144 = "DOORSTOP",
   flat_CEIL5_2 = "FLAT20",
-},
+}
 
 PREFABS.Window_cage_2 =
 {
@@ -38,7 +38,7 @@ PREFABS.Window_cage_2 =
   group  = "gtd_window_cage_lowbars",
 
   seed_w = 2,
-},
+}
 
 PREFABS.Window_cage_2_tech =
 {
@@ -49,7 +49,7 @@ PREFABS.Window_cage_2_tech =
 
   tex_BROWN144 = "DOORSTOP",
   flat_CEIL5_2 = "FLAT20",
-},
+}
 
 PREFABS.Window_cage_3 =
 {
@@ -60,7 +60,7 @@ PREFABS.Window_cage_3 =
   group  = "gtd_window_cage_lowbars",
 
   seed_w = 3,
-},
+}
 
 PREFABS.Window_cage_3_tech =
 {
@@ -71,7 +71,7 @@ PREFABS.Window_cage_3_tech =
 
   tex_BROWN144 = "DOORSTOP",
   flat_CEIL5_2 = "FLAT20",
-},
+}
 
 PREFABS.Window_cage_1_HB =
 {
@@ -81,7 +81,7 @@ PREFABS.Window_cage_1_HB =
   group = "gtd_window_cage_highbars",
 
   tex_MIDBARS3 = "MIDBARS1",
-},
+}
 
 PREFABS.Window_cage_1_tech_HB =
 {
@@ -93,7 +93,7 @@ PREFABS.Window_cage_1_tech_HB =
   tex_BROWN144 = "DOORSTOP",
   flat_CEIL5_2 = "FLAT20",
   tex_MIDBARS3 = "MIDSPACE",
-},
+}
 
 PREFABS.Window_cage_2_HB =
 {
@@ -106,7 +106,7 @@ PREFABS.Window_cage_2_HB =
   group = "gtd_window_cage_highbars",
 
   tex_MIDBARS3 = "MIDBARS1",
-},
+}
 
 PREFABS.Window_cage_2_tech_HB =
 {
@@ -119,7 +119,7 @@ PREFABS.Window_cage_2_tech_HB =
   tex_BROWN144 = "DOORSTOP",
   flat_CEIL5_2 = "FLAT20",
   tex_MIDBARS3 = "MIDSPACE",
-},
+}
 
 PREFABS.Window_cage_3_HB =
 {
@@ -132,7 +132,7 @@ PREFABS.Window_cage_3_HB =
   group = "gtd_window_cage_highbars",
 
   tex_MIDBARS3 = "MIDBARS1",
-},
+}
 
 PREFABS.Window_cage_3_tech_HB =
 {
@@ -145,7 +145,7 @@ PREFABS.Window_cage_3_tech_HB =
   tex_BROWN144 = "DOORSTOP",
   flat_CEIL5_2 = "FLAT20",
   tex_MIDBARS3 = "MIDSPACE",
-},
+}
 
 PREFABS.Window_cage_1_hell =
 {
@@ -154,7 +154,7 @@ PREFABS.Window_cage_1_hell =
   group = "gtd_window_cage_hell",
 
   tex_MIDBARS3 = "MIDGRATE",
-},
+}
 
 PREFABS.Window_cage_2_hell =
 {
@@ -166,7 +166,7 @@ PREFABS.Window_cage_2_hell =
   group = "gtd_window_cage_hell",
 
   tex_MIDBARS3 = "MIDGRATE",
-},
+}
 
 PREFABS.Window_cage_3_hell =
 {
@@ -178,4 +178,4 @@ PREFABS.Window_cage_3_hell =
   group = "gtd_window_cage_hell",
 
   tex_MIDBARS3 = "MIDGRATE",
-},
+}

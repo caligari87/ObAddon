@@ -22,7 +22,7 @@ PREFABS.Locked_curve_red =
 
   -- texture is already "DOORRED",
   -- line special is already #33,
-},
+}
 
 
 PREFABS.Locked_curve_blue =
@@ -32,7 +32,7 @@ PREFABS.Locked_curve_blue =
 
   tex_DOORRED = "DOORBLU",
   line_33     = 32,
-},
+}
 
 
 PREFABS.Locked_curve_yellow =
@@ -42,5 +42,5 @@ PREFABS.Locked_curve_yellow =
 
   tex_DOORRED = "DOORYEL",
   line_33     = 34,
-},
+}
 

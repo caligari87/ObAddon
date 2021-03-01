@@ -42,7 +42,7 @@ PREFABS.Pic_dem_windows_deco1 =
         BRIKS31=50, BRONZE5=50, PANNYA=50, STUC01=50,
   },
 
-},
+}
 
 PREFABS.Pic_dem_windows_deco2 =
 {
@@ -55,7 +55,7 @@ PREFABS.Pic_dem_windows_deco2 =
   bound_z1 = 0,
   bound_z2 = 200,
 
-},
+}
 
 PREFABS.Pic_dem_windows_deco3 =
 {
@@ -68,7 +68,7 @@ PREFABS.Pic_dem_windows_deco3 =
   bound_z1 = 0,
   bound_z2 = 248,
 
-},
+}
 
 PREFABS.Pic_dem_windows_deco4 =
 {
@@ -85,7 +85,7 @@ PREFABS.Pic_dem_windows_deco4 =
         STON7=50, STONE10=50, STONE8=50, STONE9=50,
   },
 
-},
+}
 
 PREFABS.Pic_dem_windows_deco5 =
 {
@@ -109,7 +109,7 @@ PREFABS.Pic_dem_windows_deco5 =
         STON7=50, STONE10=50, STONE8=50, STONE9=50,
   },
 
-},
+}
 
 PREFABS.Pic_dem_windows_deco6 =
 {
@@ -134,7 +134,7 @@ PREFABS.Pic_dem_windows_deco6 =
         STON7=50, STONE10=50, STONE8=50, STONE9=50,
   },
 
-},
+}
 
 ---- City windows decorative closed ----
 
@@ -179,7 +179,7 @@ PREFABS.Pic_dem_windows_decoc1 =
         BRIKS31=50, BRONZE5=50, PANNYA=50, STUC01=50,
   },
 
-},
+}
 
 PREFABS.Pic_dem_windows_decoc2 =
 {
@@ -191,7 +191,7 @@ PREFABS.Pic_dem_windows_decoc2 =
 
   bound_z1 = 0,
   bound_z2 = 200,
-},
+}
 
 PREFABS.Pic_dem_windows_decoc3 =
 {
@@ -203,7 +203,7 @@ PREFABS.Pic_dem_windows_decoc3 =
 
   bound_z1 = 0,
   bound_z2 = 248,
-},
+}
 
 PREFABS.Pic_dem_windows_decoc4 =
 {
@@ -219,7 +219,7 @@ PREFABS.Pic_dem_windows_decoc4 =
         GOTH13=50, GRAY9=50, GRAY8=50, ROK17=50, SHAWSH04=50, STON4=50,
         STON7=50, STONE10=50, STONE8=50, STONE9=50,
   },
-},
+}
 
 PREFABS.Pic_dem_windows_decoc5 =
 {
@@ -242,7 +242,7 @@ PREFABS.Pic_dem_windows_decoc5 =
         GOTH13=50, GRAY9=50, GRAY8=50, ROK17=50, SHAWSH04=50, STON4=50,
         STON7=50, STONE10=50, STONE8=50, STONE9=50,
   },
-},
+}
 
 PREFABS.Pic_dem_windows_decoc6 =
 {
@@ -266,7 +266,7 @@ PREFABS.Pic_dem_windows_decoc6 =
         STON7=50, STONE10=50, STONE8=50, STONE9=50,
   },
 
-},
+}
 
 ----Industrial door/catwalk decorative open---
 
@@ -309,7 +309,7 @@ PREFABS.Pic_dem_windows_deco7 =
   tex_BRICK1 = { GRAY1=50, GRAY4=50, GRAY5=50, GRAY7=50, ICKWALL1=50, ICKWALL2=50, ICKWALL3=50, METAL1=50, METAL2=50, SHAWN2=50, SILVER1=50, STARG1=50, STARG3=50, STARGR1=50, STONE=50, STONE2=50, STONE3=50, TEKGREN2=50, TEKGREN5=50, BIGSTON2=50, BIGSTON3=50, BRONZE5=50, GRAY6=50, GRAY8=50, GRAY9=50, HEX01=50, MET2=50, MET6=50, MET7=50, SHAWN4=50, SHAWN5=50,
   },
 
-},
+}
 
 PREFABS.Pic_dem_windows_deco8 =
 {
@@ -321,7 +321,7 @@ PREFABS.Pic_dem_windows_deco8 =
 
   bound_z1 = 0,
   bound_z2 = 200,
-},
+}
 
 PREFABS.Pic_dem_windows_deco9 =
 {
@@ -333,7 +333,7 @@ PREFABS.Pic_dem_windows_deco9 =
 
   bound_z1 = 0,
   bound_z2 = 248,
-},
+}
 
 ----Industrial door/catwalk decorative closed---
 
@@ -375,7 +375,7 @@ PREFABS.Pic_dem_windows_deco10 =
 
   tex_BRICK1 = { GRAY1=50, GRAY4=50, GRAY5=50, GRAY7=50, ICKWALL1=50, ICKWALL2=50, ICKWALL3=50, METAL1=50, METAL2=50, SHAWN2=50, SILVER1=50, STARG1=50, STARG3=50, STARGR1=50, STONE=50, STONE2=50, STONE3=50, TEKGREN2=50, TEKGREN5=50, BIGSTON2=50, BIGSTON3=50, BRONZE5=50, GRAY6=50, GRAY8=50, GRAY9=50, HEX01=50, MET2=50, MET6=50, MET7=50, SHAWN4=50, SHAWN5=50,
   },
-},
+}
 
 PREFABS.Pic_dem_windows_deco11 =
 {
@@ -387,7 +387,7 @@ PREFABS.Pic_dem_windows_deco11 =
 
   bound_z1 = 0,
   bound_z2 = 200,
-},
+}
 
 PREFABS.Pic_dem_windows_deco12 =
 {
@@ -399,7 +399,7 @@ PREFABS.Pic_dem_windows_deco12 =
 
   bound_z1 = 0,
   bound_z2 = 248,
-},
+}
 
 ----Industrial window decorative open---
 
@@ -441,7 +441,7 @@ PREFABS.Pic_dem_windows_deco13 =
 
   tex_BRICK1 = { GRAY1=50, GRAY4=50, GRAY5=50, GRAY7=50, ICKWALL1=50, ICKWALL2=50, ICKWALL3=50, METAL1=50, METAL2=50, SHAWN2=50, SILVER1=50, STARG1=50, STARG3=50, STARGR1=50, STONE=50, STONE2=50, STONE3=50, TEKGREN2=50, TEKGREN5=50, BIGSTON2=50, BIGSTON3=50, BRONZE5=50, GRAY6=50, GRAY8=50, GRAY9=50, HEX01=50, MET2=50, MET6=50, MET7=50, SHAWN4=50, SHAWN5=50,
   },
-},
+}
 
 PREFABS.Pic_dem_windows_deco14 =
 {
@@ -453,7 +453,7 @@ PREFABS.Pic_dem_windows_deco14 =
 
   bound_z1 = 0,
   bound_z2 = 200,
-},
+}
 
 PREFABS.Pic_dem_windows_deco15 =
 {
@@ -465,7 +465,7 @@ PREFABS.Pic_dem_windows_deco15 =
 
   bound_z1 = 0,
   bound_z2 = 248,
-},
+}
 
 ----Industrial window decorative closed---
 
@@ -508,7 +508,7 @@ PREFABS.Pic_dem_windows_deco16 =
   tex_BRICK1 = { GRAY1=50, GRAY4=50, GRAY5=50, GRAY7=50, ICKWALL1=50, ICKWALL2=50, ICKWALL3=50, METAL1=50, METAL2=50, SHAWN2=50, SILVER1=50, STARG1=50, STARG3=50, STARGR1=50, STONE=50, STONE2=50, STONE3=50, TEKGREN2=50, TEKGREN5=50, BIGSTON2=50, BIGSTON3=50, BRONZE5=50, GRAY6=50, GRAY8=50, GRAY9=50, HEX01=50, MET2=50, MET6=50, MET7=50, SHAWN4=50, SHAWN5=50,
   },
 
-},
+}
 
 PREFABS.Pic_dem_windows_deco17 =
 {
@@ -520,7 +520,7 @@ PREFABS.Pic_dem_windows_deco17 =
 
   bound_z1 = 0,
   bound_z2 = 200,
-},
+}
 
 PREFABS.Pic_dem_windows_deco18 =
 {
@@ -532,7 +532,7 @@ PREFABS.Pic_dem_windows_deco18 =
 
   bound_z1 = 0,
   bound_z2 = 248,
-},
+}
 
 ----Hell battlements decorative---
 
@@ -543,7 +543,7 @@ PREFABS.Pic_dem_windows_deco19 =
 
   engine = "zdoom",
 
-  prob   = 0 --40,
+  prob   = 0, --40,
 
   theme  = "hell",
 
@@ -568,7 +568,7 @@ PREFABS.Pic_dem_windows_deco19 =
 
   sector_17 = { [0]=50, [17]=50 },
 
-},
+}
 
 PREFABS.Pic_dem_windows_deco20 =
 {
@@ -582,7 +582,7 @@ PREFABS.Pic_dem_windows_deco20 =
 
   bound_z1 = 0,
   bound_z2 = 200,
-},
+}
 
 PREFABS.Pic_dem_windows_deco21 =
 {
@@ -596,7 +596,7 @@ PREFABS.Pic_dem_windows_deco21 =
 
   bound_z1 = 0,
   bound_z2 = 248,
-},
+}
 
 ----Hell windows decorative---
 
@@ -638,7 +638,7 @@ PREFABS.Pic_dem_windows_deco22 =
   green_torch_sm = 50,
   red_torch_sm  = 50,
   },
-},
+}
 
 PREFABS.Pic_dem_windows_deco23 =
 {
@@ -650,7 +650,7 @@ PREFABS.Pic_dem_windows_deco23 =
 
   bound_z1 = 0,
   bound_z2 = 200,
-},
+}
 
 PREFABS.Pic_dem_windows_deco24 =
 {
@@ -662,4 +662,4 @@ PREFABS.Pic_dem_windows_deco24 =
 
   bound_z1 = 0,
   bound_z2 = 248,
-},
+}

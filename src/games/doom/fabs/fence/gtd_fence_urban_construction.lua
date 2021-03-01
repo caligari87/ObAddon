@@ -14,7 +14,7 @@ PREFABS.Fence_urban_construction_fence =
 
   fence_h  = 32,
   bound_z1 = 0,
-},
+}
 
 PREFABS.Fence_urban_construction_fence_peek_a_boo =
 {
@@ -22,7 +22,7 @@ PREFABS.Fence_urban_construction_fence_peek_a_boo =
   map      = "MAP02",
 
   prob     = 10,
-},
+}
 
 PREFABS.Fence_urban_construction_fence_ad =
 {
@@ -30,7 +30,7 @@ PREFABS.Fence_urban_construction_fence_ad =
   map      = "MAP03",
 
   prob     = 10,
-},
+}
 
 PREFABS.Fence_urban_construction_fence_diag =
 {
@@ -46,4 +46,4 @@ PREFABS.Fence_urban_construction_fence_diag =
   fence_h = 32,
 
   bound_z1 = 0,
-},
+}

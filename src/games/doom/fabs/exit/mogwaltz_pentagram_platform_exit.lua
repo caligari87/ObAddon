@@ -13,7 +13,7 @@ PREFABS.Exit_mogwaltz_pentagram_platform =
   env    = "outdoor",
   height = 128,
 
-  open_to_sky = true
+  open_to_sky = true,
 
   x_fit  = "frame",
-},
+}

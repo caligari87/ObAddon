@@ -16,7 +16,7 @@ PREFABS.Wall_hell_ossuary_wall_plain =
   bound_z2 = 128,
 
   z_fit  = "top",
-},
+}
 
 PREFABS.Wall_hell_ossuary_wall_diag =
 {
@@ -34,4 +34,4 @@ PREFABS.Wall_hell_ossuary_wall_diag =
   bound_z2 = 128,
 
   z_fit  = "top",
-},
+}

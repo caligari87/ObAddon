@@ -14,4 +14,4 @@ PREFABS.Wall_hell_buttress =
   bound_z2 = 256,
 
   z_fit  = { 192-32,192-16 },
-},
+}

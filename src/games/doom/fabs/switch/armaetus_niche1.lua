@@ -51,7 +51,7 @@ PREFABS.Switch_armaetus_niche1 =
     CEMENT9  = 50,
     COMPSPAN = 50,
   },
-},
+}
 
 PREFABS.Switch_armaetus_niche1_urban =
 {
@@ -111,7 +111,7 @@ PREFABS.Switch_armaetus_niche1_urban =
     BLAKWAL2 = 50,
   },
 
-},
+}
 
 PREFABS.Switch_armaetus_niche1_hell =
 {
@@ -172,7 +172,7 @@ PREFABS.Switch_armaetus_niche1_hell =
     ZIMMER8  = 50,
   },
 
-},
+}
 
 PREFABS.Switch_armaetus_niche1_flesh =
 {
@@ -208,7 +208,7 @@ PREFABS.Switch_armaetus_niche1_flesh =
     METAL    = 50,
   },
 
-},
+}
 
 PREFABS.Switch_armaetus_niche1_deimos =
 {
@@ -249,7 +249,7 @@ PREFABS.Switch_armaetus_niche1_deimos =
     GRAY4    = 50,
     GRAY5    = 50,
   },
-},
+}
 
 PREFABS.Switch_armaetus_niche1_up_tech =
 {
@@ -273,7 +273,7 @@ PREFABS.Switch_armaetus_niche1_up_tech =
     SW1STRTN = 50,
     SW1TEK = 50,
   },
-},
+}
 
 PREFABS.Switch_armaetus_niche1_up_urban =
 {
@@ -308,7 +308,7 @@ PREFABS.Switch_armaetus_niche1_up_urban =
     SW1WOOD = 50,
     SW1ZIM = 50,
   },
-},
+}
 
 PREFABS.Switch_armaetus_niche1_up_hell =
 {
@@ -332,7 +332,7 @@ PREFABS.Switch_armaetus_niche1_up_hell =
     SW1WOOD = 50,
     SW1ZIM = 50,
   },
-},
+}
 
 PREFABS.Switch_armaetus_niche1_up_flesh =
 {
@@ -355,7 +355,7 @@ PREFABS.Switch_armaetus_niche1_up_flesh =
     SW1METAL = 50,
     SW1SLAD  = 50,
   },
-},
+}
 
 PREFABS.Switch_armaetus_niche1_up_deimos =
 {
@@ -381,4 +381,4 @@ PREFABS.Switch_armaetus_niche1_up_deimos =
     SW1STON2 = 50,
     SW1STRTN = 50,
   },
-},
+}

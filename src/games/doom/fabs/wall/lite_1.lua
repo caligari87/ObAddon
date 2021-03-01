@@ -22,5 +22,5 @@ PREFABS.Wall_lite1 =
 
   -- sometimes use random-off light FX
   sector_1 = { [0]=50, [1]=20 },
-},
+}
 

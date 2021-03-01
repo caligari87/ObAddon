@@ -24,7 +24,7 @@ PREFABS.Door_cave_to_cave_frame =
 
   bound_z1 = 0,
   bound_z2 = 128,
-},
+}
 
 PREFABS.Door_cave_to_cave_frame_3x =
 {
@@ -32,4 +32,4 @@ PREFABS.Door_cave_to_cave_frame_3x =
   map = "MAP02",
 
   seed_w = 3,
-},
+}

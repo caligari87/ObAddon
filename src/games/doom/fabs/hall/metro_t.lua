@@ -13,13 +13,13 @@ PREFABS.Hallway_metro_t =
 
   seed_w = 2,
   seed_h = 2,
-},
+}
 
 PREFABS.Hallway_metro_t_plain =
 {
   template = "Hallway_metro_t",
   map = "MAP02",
-},
+}
 
 -- slopeless engine fallback
 
@@ -31,7 +31,7 @@ PREFABS.Hallway_metro_t_boxy =
   engine = "any",
 
   prob = 20,
-},
+}
 
 PREFABS.Hallway_metro_t_boxy_vending_machine =
 {
@@ -53,5 +53,5 @@ PREFABS.Hallway_metro_t_boxy_vending_machine =
     OBVNMCH3 = 50,
     OBVNMCH4 = 50,
     OBVNMCH5 = 50,
-  },
-},
+  }
+}

@@ -24,7 +24,7 @@ PREFABS.Item_tech_window =
   x_fit = "frame",
 
   sound = "Outdoors_Tech",
-},
+}
 
 PREFABS.Item_tech_window_doom1 =
 {
@@ -33,7 +33,7 @@ PREFABS.Item_tech_window_doom1 =
   game   = "doom",
 
   tex_BRONZE4 = "BROWN96",
-},
+}
 
 PREFABS.Item_tech_window_2 =
 {
@@ -57,4 +57,4 @@ PREFABS.Item_tech_window_2 =
   x_fit = "frame",
 
   sound = "Outdoors_Tech",
-},
+}

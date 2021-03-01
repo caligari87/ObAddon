@@ -8,4 +8,4 @@ PREFABS.Switch_portable_laptop =
   prob   = 65,
 
   tag_1 = "?switch_tag",
-},
+}

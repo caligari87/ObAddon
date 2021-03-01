@@ -18,4 +18,4 @@ PREFABS.Switch_armaetus_gothic =
   },
 
   tag_1  = "?switch_tag",
-},
+}

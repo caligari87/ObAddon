@@ -16,7 +16,7 @@ PREFABS.Exit_armaetus_chamber_exit_tech =
 
   x_fit  = "frame",
   y_fit  = "top",
-},
+}
 
 PREFABS.Exit_armaetus_chamber_exit4_gothic =
 {
@@ -24,4 +24,4 @@ PREFABS.Exit_armaetus_chamber_exit4_gothic =
   map = "MAP02",
 
   theme = "hell",
-},
+}

@@ -14,8 +14,8 @@ PREFABS.Hallway_metro_u =
   seed_w = 2,
   seed_h = 2,
 
-  sector_1  = { [0]=90, [1]=15 },
-},
+  sector_1  = { [0]=90, [1]=15 }
+}
 
 PREFABS.Hallway_metro_u_deadend1 =
 {
@@ -25,8 +25,8 @@ PREFABS.Hallway_metro_u_deadend1 =
 
   group    = "metro",
 
-  sector_1  = { [0]=90, [1]=15 },
-},
+  sector_1  = { [0]=90, [1]=15 }
+}
 
 -- Bloody dead end
 PREFABS.Hallway_metro_u_deadend2 =
@@ -37,8 +37,8 @@ PREFABS.Hallway_metro_u_deadend2 =
   group    = "metro",
   prob     = 50,
 
-  sector_1  = { [0]=90, [1]=15 },
-},
+  sector_1  = { [0]=90, [1]=15 }
+}
 
 -- slopeless engine fallback
 
@@ -50,4 +50,4 @@ PREFABS.Hallway_metro_u_boxy =
   engine = "any",
 
   prob = 20,
-},
+}

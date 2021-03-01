@@ -23,5 +23,5 @@ PREFABS.Decor_gtd_gazebo_x =
     LITEBLU1 = 50,
     LITEBLU4 = 50,
     TEKLITE = 50,
-  },
-},
+  }
+}

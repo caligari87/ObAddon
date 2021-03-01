@@ -20,7 +20,7 @@ PREFABS.Pic_hell_alcove_tomb =
 
   x_fit = "frame",
   y_fit = "top",
-},
+}
 
 PREFABS.Pic_hell_alcove_furnace =
 {
@@ -61,7 +61,7 @@ PREFABS.Pic_hell_alcove_furnace =
    gutted_victim1 = 50,
    gutted_victim2 = 50,
    },
-},
+}
 
 PREFABS.Pic_hell_alcove_window =
 {
@@ -69,19 +69,19 @@ PREFABS.Pic_hell_alcove_window =
   map      = "MAP03",
 
   env = "!cave",
-},
+}
 
 PREFABS.Pic_hell_alcove_tomb_2x =
 {
   template = "Pic_hell_alcove_tomb",
   map      = "MAP04",
-},
+}
 
 PREFABS.Pic_hell_alcove_blood_canal =
 {
   template = "Pic_hell_alcove_tomb",
   map      = "MAP05",
-},
+}
 
 PREFABS.Pic_hell_alcove_tomb_4x =
 {
@@ -89,4 +89,4 @@ PREFABS.Pic_hell_alcove_tomb_4x =
   map      = "MAP06",
 
   engine   = "zdoom",
-},
+}

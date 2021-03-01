@@ -37,8 +37,8 @@ PREFABS.Item_generic_frontage_secret =
     MODWALL3 = 20,
     STEP4 = 10,
     STEP5 = 10,
-  },
-},
+  }
+}
 
 PREFABS.Item_generic_frontage_secret_2 =
 {
@@ -66,7 +66,7 @@ PREFABS.Item_generic_frontage_secret_2 =
 
   x_fit = "frame",
   y_fit = "top",
-},
+}
 
 PREFABS.Item_generic_frontage_secret_3 =
 {
@@ -92,7 +92,7 @@ PREFABS.Item_generic_frontage_secret_3 =
 
   x_fit = "frame",
   y_fit = "top",
-},
+}
 
 --based on gtd_pic_urban_commercial_frontages
 
@@ -120,7 +120,7 @@ PREFABS.Item_commercial_frontage_secret =
 
   x_fit = "frame",
   y_fit = "top",
-},
+}
 
 PREFABS.Item_commercial_frontage_secret_2 =
 {
@@ -130,7 +130,7 @@ PREFABS.Item_commercial_frontage_secret_2 =
   seed_w = 3,
 
   prob = 40,
-},
+}
 
 PREFABS.Item_commercial_frontage_secret_3 =
 {
@@ -140,7 +140,7 @@ PREFABS.Item_commercial_frontage_secret_3 =
   seed_w = 3,
 
   prob = 40,
-},
+}
 
 PREFABS.Item_commercial_frontage_secret_4 =
 {
@@ -151,7 +151,7 @@ PREFABS.Item_commercial_frontage_secret_4 =
 
   seed_w = 2,
   seed_h = 2,
-},
+}
 
 PREFABS.Item_commercial_frontage_secret_5 =
 {
@@ -162,7 +162,7 @@ PREFABS.Item_commercial_frontage_secret_5 =
 
   engine = "zdoom",
   seed_w = 3,
-},
+}
 
 PREFABS.Item_commercial_frontage_secret_6 =
 {
@@ -173,7 +173,7 @@ PREFABS.Item_commercial_frontage_secret_6 =
 
   seed_w = 3,
   seed_h = 1,
-},
+}
 
 PREFABS.Item_commercial_frontage_secret_7 =
 {
@@ -185,4 +185,4 @@ PREFABS.Item_commercial_frontage_secret_7 =
   engine = "zdoom",
   seed_w = 3,
 
-},
+}

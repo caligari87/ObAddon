@@ -21,9 +21,9 @@ PREFABS.Light_EPIC_basic =
   bound_z2 = 0,
 
   -- use the occasional-blink FX (fairly rarely)
-  sector_1  = { [0]=90, [1]=15 },
+  sector_1  = { [0]=90, [1]=15 }
 
-},
+}
 
 
 ----------- URBAN THEME ------------------------
@@ -41,8 +41,8 @@ PREFABS.Light_urban_LITBL3F1 =
 
   light_color = "blue",
 
-  sector_1  = { [0]=90, [1]=15 },
-},
+  sector_1  = { [0]=90, [1]=15 }
+}
 
 PREFABS.Light_urban_LITBL3F2 =
 {
@@ -56,8 +56,8 @@ PREFABS.Light_urban_LITBL3F2 =
 
   light_color = "blue",
 
-  sector_1  = { [0]=90, [1]=15 },
-},
+  sector_1  = { [0]=90, [1]=15 }
+}
 
 PREFABS.Light_urban_LITE4F1 =
 {
@@ -71,8 +71,8 @@ PREFABS.Light_urban_LITE4F1 =
 
   light_color = "white",
 
-  sector_1  = { [0]=90, [1]=15 },
-},
+  sector_1  = { [0]=90, [1]=15 }
+}
 
 PREFABS.Light_urban_LITE4F2 =
 {
@@ -86,8 +86,8 @@ PREFABS.Light_urban_LITE4F2 =
 
   light_color = "white",
 
-  sector_1  = { [0]=90, [1]=15 },
-},
+  sector_1  = { [0]=90, [1]=15 }
+}
 
 PREFABS.Light_urban_LITES01 =
 {
@@ -101,8 +101,8 @@ PREFABS.Light_urban_LITES01 =
 
   light_color = "red",
 
-  sector_1  = { [0]=90, [1]=15 },
-},
+  sector_1  = { [0]=90, [1]=15 }
+}
 
 PREFABS.Light_urban_LITES02 =
 {
@@ -116,8 +116,8 @@ PREFABS.Light_urban_LITES02 =
 
   light_color = "blue",
 
-  sector_1  = { [0]=90, [1]=15 },
-},
+  sector_1  = { [0]=90, [1]=15 }
+}
 
 PREFABS.Light_urban_LITES03 =
 {
@@ -131,8 +131,8 @@ PREFABS.Light_urban_LITES03 =
 
   light_color = "yellow",
 
-  sector_1  = { [0]=90, [1]=15 },
-},
+  sector_1  = { [0]=90, [1]=15 }
+}
 
 PREFABS.Light_urban_LITES04 =
 {
@@ -146,8 +146,8 @@ PREFABS.Light_urban_LITES04 =
 
   light_color = "green",
 
-  sector_1  = { [0]=90, [1]=15 },
-},
+  sector_1  = { [0]=90, [1]=15 }
+}
 
 PREFABS.Light_urban_LIGHTS1 =
 {
@@ -161,8 +161,8 @@ PREFABS.Light_urban_LIGHTS1 =
 
   light_color = "red",
 
-  sector_1  = { [0]=90, [1]=15 },
-},
+  sector_1  = { [0]=90, [1]=15 }
+}
 
 PREFABS.Light_urban_LIGHTS2 =
 {
@@ -176,8 +176,8 @@ PREFABS.Light_urban_LIGHTS2 =
 
   light_color = "green",
 
-  sector_1  = { [0]=90, [1]=15 },
-},
+  sector_1  = { [0]=90, [1]=15 }
+}
 
 PREFABS.Light_urban_LIGHTS3 =
 {
@@ -191,8 +191,8 @@ PREFABS.Light_urban_LIGHTS3 =
 
   light_color = "white",
 
-  sector_1  = { [0]=90, [1]=15 },
-},
+  sector_1  = { [0]=90, [1]=15 }
+}
 
 PREFABS.Light_urban_LIGHTS4 =
 {
@@ -206,8 +206,8 @@ PREFABS.Light_urban_LIGHTS4 =
 
   light_color = "blue",
 
-  sector_1  = { [0]=90, [1]=15 },
-},
+  sector_1  = { [0]=90, [1]=15 }
+}
 
 PREFABS.Light_urban_TLITE5_1 =
 {
@@ -221,8 +221,8 @@ PREFABS.Light_urban_TLITE5_1 =
 
   light_color = "white",
 
-  sector_1  = { [0]=90, [1]=15 },
-},
+  sector_1  = { [0]=90, [1]=15 }
+}
 
 PREFABS.Light_urban_TLITE5_2 =
 {
@@ -236,8 +236,8 @@ PREFABS.Light_urban_TLITE5_2 =
 
   light_color = "beige",
 
-  sector_1  = { [0]=90, [1]=15 },
-},
+  sector_1  = { [0]=90, [1]=15 }
+}
 
 PREFABS.Light_urban_TLITE5_3 =
 {
@@ -251,8 +251,8 @@ PREFABS.Light_urban_TLITE5_3 =
 
   light_color = "white",
 
-  sector_1  = { [0]=90, [1]=15 },
-},
+  sector_1  = { [0]=90, [1]=15 }
+}
 
 PREFABS.Light_urban_TLITE65B =
 {
@@ -266,8 +266,8 @@ PREFABS.Light_urban_TLITE65B =
 
   light_color = "blue",
 
-  sector_1  = { [0]=90, [1]=15 },
-},
+  sector_1  = { [0]=90, [1]=15 }
+}
 
 PREFABS.Light_urban_TLITE65G =
 {
@@ -281,8 +281,8 @@ PREFABS.Light_urban_TLITE65G =
 
   light_color = "green",
 
-  sector_1  = { [0]=90, [1]=15 },
-},
+  sector_1  = { [0]=90, [1]=15 }
+}
 
 PREFABS.Light_urban_TLITE65O =
 {
@@ -296,8 +296,8 @@ PREFABS.Light_urban_TLITE65O =
 
   light_color = "orange",
 
-  sector_1  = { [0]=90, [1]=15 },
-},
+  sector_1  = { [0]=90, [1]=15 }
+}
 
 PREFABS.Light_urban_TLITE65W =
 {
@@ -311,8 +311,8 @@ PREFABS.Light_urban_TLITE65W =
 
   light_color = "white",
 
-  sector_1  = { [0]=90, [1]=15 },
-},
+  sector_1  = { [0]=90, [1]=15 }
+}
 
 PREFABS.Light_urban_TLITE65Y =
 {
@@ -326,8 +326,8 @@ PREFABS.Light_urban_TLITE65Y =
 
   light_color = "yellow",
 
-  sector_1  = { [0]=90, [1]=15 },
-},
+  sector_1  = { [0]=90, [1]=15 }
+}
 
 PREFABS.Light_urban_TLITE65P =
 {
@@ -341,8 +341,8 @@ PREFABS.Light_urban_TLITE65P =
 
   light_color = "purple",
 
-  sector_1  = { [0]=90, [1]=15 },
-},
+  sector_1  = { [0]=90, [1]=15 }
+}
 
 
 ----------- TECH THEME ------------------------
@@ -362,8 +362,8 @@ PREFABS.Light_tech_LITBL3F1 =
 
   light_color = "blue",
 
-  sector_1  = { [0]=90, [1]=15 },
-},
+  sector_1  = { [0]=90, [1]=15 }
+}
 
 PREFABS.Light_tech_LITBL3F2 =
 {
@@ -379,8 +379,8 @@ PREFABS.Light_tech_LITBL3F2 =
 
   light_color = "blue",
 
-  sector_1  = { [0]=90, [1]=15 },
-},
+  sector_1  = { [0]=90, [1]=15 }
+}
 
 PREFABS.Light_tech_LITE4F1 =
 {
@@ -396,8 +396,8 @@ PREFABS.Light_tech_LITE4F1 =
 
   light_color = "white",
 
-  sector_1  = { [0]=90, [1]=15 },
-},
+  sector_1  = { [0]=90, [1]=15 }
+}
 
 PREFABS.Light_tech_LITE4F2 =
 {
@@ -413,8 +413,8 @@ PREFABS.Light_tech_LITE4F2 =
 
   light_color = "white",
 
-  sector_1  = { [0]=90, [1]=15 },
-},
+  sector_1  = { [0]=90, [1]=15 }
+}
 
 PREFABS.Light_tech_LITES01 =
 {
@@ -430,8 +430,8 @@ PREFABS.Light_tech_LITES01 =
 
   light_color = "red",
 
-  sector_1  = { [0]=90, [1]=15 },
-},
+  sector_1  = { [0]=90, [1]=15 }
+}
 
 PREFABS.Light_tech_LITES02 =
 {
@@ -447,8 +447,8 @@ PREFABS.Light_tech_LITES02 =
 
   light_color = "blue",
 
-  sector_1  = { [0]=90, [1]=15 },
-},
+  sector_1  = { [0]=90, [1]=15 }
+}
 
 PREFABS.Light_tech_LITES03 =
 {
@@ -464,8 +464,8 @@ PREFABS.Light_tech_LITES03 =
 
   light_color = "yellow",
 
-  sector_1  = { [0]=90, [1]=15 },
-},
+  sector_1  = { [0]=90, [1]=15 }
+}
 
 PREFABS.Light_tech_LITES04 =
 {
@@ -481,8 +481,8 @@ PREFABS.Light_tech_LITES04 =
 
   light_color = "green",
 
-  sector_1  = { [0]=90, [1]=15 },
-},
+  sector_1  = { [0]=90, [1]=15 }
+}
 
 PREFABS.Light_tech_LIGHTS1 =
 {
@@ -498,8 +498,8 @@ PREFABS.Light_tech_LIGHTS1 =
 
   light_color = "red",
 
-  sector_1  = { [0]=90, [1]=15 },
-},
+  sector_1  = { [0]=90, [1]=15 }
+}
 
 PREFABS.Light_tech_LIGHTS2 =
 {
@@ -515,8 +515,8 @@ PREFABS.Light_tech_LIGHTS2 =
 
   light_color = "green",
 
-  sector_1  = { [0]=90, [1]=15 },
-},
+  sector_1  = { [0]=90, [1]=15 }
+}
 
 PREFABS.Light_tech_LIGHTS3 =
 {
@@ -532,8 +532,8 @@ PREFABS.Light_tech_LIGHTS3 =
 
   light_color = "white",
 
-  sector_1  = { [0]=90, [1]=15 },
-},
+  sector_1  = { [0]=90, [1]=15 }
+}
 
 PREFABS.Light_tech_LIGHTS4 =
 {
@@ -549,8 +549,8 @@ PREFABS.Light_tech_LIGHTS4 =
 
   light_color = "blue",
 
-  sector_1  = { [0]=90, [1]=15 },
-},
+  sector_1  = { [0]=90, [1]=15 }
+}
 
 PREFABS.Light_tech_TLITE5_1 =
 {
@@ -566,8 +566,8 @@ PREFABS.Light_tech_TLITE5_1 =
 
   light_color = "white",
 
-  sector_1  = { [0]=90, [1]=15 },
-},
+  sector_1  = { [0]=90, [1]=15 }
+}
 
 PREFABS.Light_tech_TLITE5_2 =
 {
@@ -583,8 +583,8 @@ PREFABS.Light_tech_TLITE5_2 =
 
   light_color = "white",
 
-  sector_1  = { [0]=90, [1]=15 },
-},
+  sector_1  = { [0]=90, [1]=15 }
+}
 
 PREFABS.Light_tech_TLITE5_3 =
 {
@@ -600,8 +600,8 @@ PREFABS.Light_tech_TLITE5_3 =
 
   light_color = "white",
 
-  sector_1  = { [0]=90, [1]=15 },
-},
+  sector_1  = { [0]=90, [1]=15 }
+}
 
 PREFABS.Light_tech_TLITE65B =
 {
@@ -617,8 +617,8 @@ PREFABS.Light_tech_TLITE65B =
 
   light_color = "blue",
 
-  sector_1  = { [0]=90, [1]=15 },
-},
+  sector_1  = { [0]=90, [1]=15 }
+}
 
 PREFABS.Light_tech_TLITE65G =
 {
@@ -634,8 +634,8 @@ PREFABS.Light_tech_TLITE65G =
 
   light_color = "green",
 
-  sector_1  = { [0]=90, [1]=15 },
-},
+  sector_1  = { [0]=90, [1]=15 }
+}
 
 PREFABS.Light_tech_TLITE65O =
 {
@@ -651,8 +651,8 @@ PREFABS.Light_tech_TLITE65O =
 
   light_color = "orange",
 
-  sector_1  = { [0]=90, [1]=15 },
-},
+  sector_1  = { [0]=90, [1]=15 }
+}
 
 PREFABS.Light_tech_TLITE65W =
 {
@@ -668,8 +668,8 @@ PREFABS.Light_tech_TLITE65W =
 
   light_color = "white",
 
-  sector_1  = { [0]=90, [1]=15 },
-},
+  sector_1  = { [0]=90, [1]=15 }
+}
 
 PREFABS.Light_tech_TLITE65Y =
 {
@@ -685,8 +685,8 @@ PREFABS.Light_tech_TLITE65Y =
 
   light_color = "yellow",
 
-  sector_1  = { [0]=90, [1]=15 },
-},
+  sector_1  = { [0]=90, [1]=15 }
+}
 
 PREFABS.Light_tech_TLITE65P =
 {
@@ -702,8 +702,8 @@ PREFABS.Light_tech_TLITE65P =
 
   light_color = "purple",
 
-  sector_1  = { [0]=90, [1]=15 },
-},
+  sector_1  = { [0]=90, [1]=15 }
+}
 
 
 ----------- HELL THEME ------------------------
@@ -722,7 +722,7 @@ PREFABS.Light_hell_GLITE01 =
   flat_TLITE6_4 = "GLITE01",
       tex_GRAY7 = "METAL",
      flat_FLAT19 = "CEIL5_2",
-},
+}
 
 PREFABS.Light_hell_GLITE02 =
 {
@@ -737,7 +737,7 @@ PREFABS.Light_hell_GLITE02 =
   flat_TLITE6_4 = "GLITE02",
       tex_GRAY7 = "METAL",
      flat_FLAT19 = "CEIL5_2",
-},
+}
 
 PREFABS.Light_hell_GLITE03 =
 {
@@ -752,7 +752,7 @@ PREFABS.Light_hell_GLITE03 =
   flat_TLITE6_4 = "GLITE03",
       tex_GRAY7 = "METAL",
      flat_FLAT19 = "CEIL5_2",
-},
+}
 
 PREFABS.Light_hell_GLITE04 =
 {
@@ -767,7 +767,7 @@ PREFABS.Light_hell_GLITE04 =
   flat_TLITE6_4 = "GLITE04",
       tex_GRAY7 = "METAL",
      flat_FLAT19 = "CEIL5_2",
-},
+}
 
 PREFABS.Light_hell_GLITE05 =
 {
@@ -782,7 +782,7 @@ PREFABS.Light_hell_GLITE05 =
   flat_TLITE6_4 = "GLITE05",
       tex_GRAY7 = "METAL",
      flat_FLAT19 = "CEIL5_2",
-},
+}
 
 PREFABS.Light_hell_GLITE06 =
 {
@@ -797,7 +797,7 @@ PREFABS.Light_hell_GLITE06 =
   flat_TLITE6_4 = "GLITE06",
       tex_GRAY7 = "METAL",
      flat_FLAT19 = "CEIL5_2",
-},
+}
 
 PREFABS.Light_hell_GLITE07 =
 {
@@ -812,7 +812,7 @@ PREFABS.Light_hell_GLITE07 =
   flat_TLITE6_4 = "GLITE07",
       tex_GRAY7 = "METAL",
      flat_FLAT19 = "CEIL5_2",
-},
+}
 
 PREFABS.Light_hell_GLITE08 =
 {
@@ -827,7 +827,7 @@ PREFABS.Light_hell_GLITE08 =
   flat_TLITE6_4 = "GLITE08",
       tex_GRAY7 = "METAL",
      flat_FLAT19 = "CEIL5_2",
-},
+}
 
 PREFABS.Light_hell_GLITE09 =
 {
@@ -842,7 +842,7 @@ PREFABS.Light_hell_GLITE09 =
   flat_TLITE6_4 = "GLITE09",
       tex_GRAY7 = "METAL",
      flat_FLAT19 = "CEIL5_2",
-},
+}
 
 PREFABS.Light_hell_PLITE1 =
 {
@@ -858,4 +858,4 @@ PREFABS.Light_hell_PLITE1 =
       tex_GRAY7 = "METAL",
      flat_FLAT19 = "CEIL5_2",
 
-},
+}

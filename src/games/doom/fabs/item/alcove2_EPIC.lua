@@ -33,9 +33,9 @@ PREFABS.Item_alcove_techy_epic =
 
   tex_COMPTALL = { COMPTALL=40, TEKWALL4=20, TEKWALL8=30, TEKWALL9=30, TEKWALLA=30, TEKWALLB=30, TEKWALLC=30, TEKWALLD=30, TEKWALLE=30 },
   flat_FLOOR46D = { FLOOR46D=50, FLOOR46E=50, FLAT14=50, FLAT15=50, GRATE1=50, GRATE2=50, GRATE7=50, FLOOR4_8=50, FLOOR5_1=50 },
-  flat_BLACK0 = { BLACK0=50, RROCK03=50 },
+  flat_BLACK0 = { BLACK0=50, RROCK03=50 }
 
-},
+}
 
 PREFABS.Item_alcove_hell_epic =
 {
@@ -51,9 +51,9 @@ PREFABS.Item_alcove_hell_epic =
    flat_FLAT5_2 = { FLAT5_2=50, FLAT5_1=50, WOODTIL=50, WOODTI2=50 },
    flat_GRATE8 = { GRATE8=50, BMARB3=50, G12=50, GMET02=50, GMET03=50, GMET04=50, GMET05=50 },
 
-   sector_12 = { [0]=20, [17]=60 },
+   sector_12 = { [0]=20, [17]=60 }
 
-},
+}
 
 PREFABS.Item_alcove_urban_epic =
 {
@@ -67,6 +67,6 @@ PREFABS.Item_alcove_urban_epic =
   tex_EVILFAC2 = { EVILFAC2=50, EVILFAC4=50, EVILFAC5=50, EVILFAC6=50, EVILFAC7=20, EVILFAC8=20, EVILFAC9=20, EVILFACA=20 },
   flat_GSTN05 = { GSTN05=50, WOODTIL=50, WOODTI2=50, TILES2=50, TILES3=50 },
 
-   sector_12 = { [0]=40, [8]=15, [17]=25 },
+   sector_12 = { [0]=40, [8]=15, [17]=25 }
 
-},
+}

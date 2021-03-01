@@ -16,7 +16,7 @@ PREFABS.Light_gtd_hell_lantern =
 
   bound_z1 = -32,
   bound_z2 = 0,
-},
+}
 
 PREFABS.Light_gtd_hell_lantern2 =
 {
@@ -25,7 +25,7 @@ PREFABS.Light_gtd_hell_lantern2 =
   light_color = "red",
 
   tex_FIRELAV2 = "FIREBLU1",
-},
+}
 
 PREFABS.Light_gtd_hell_lantern3 =
 {
@@ -34,7 +34,7 @@ PREFABS.Light_gtd_hell_lantern3 =
   light_color = "red",
 
   tex_FIRELAV2 = "BFALL1",
-},
+}
 
 PREFABS.Light_gtd_hell_lantern4 =
 {
@@ -43,7 +43,7 @@ PREFABS.Light_gtd_hell_lantern4 =
   light_color = "green",
 
   tex_FIRELAV2 = "SFALL1",
-},
+}
 
 PREFABS.Light_gtd_hell_lantern5 =
 {
@@ -52,7 +52,7 @@ PREFABS.Light_gtd_hell_lantern5 =
   light_color = "blue",
 
   tex_FIRELAV2 = "COMPBLUE",
-},
+}
 
 PREFABS.Light_gtd_hell_lantern6 =
 {
@@ -61,7 +61,7 @@ PREFABS.Light_gtd_hell_lantern6 =
   light_color = "red",
 
   tex_FIRELAV2 = "CRACKLE2",
-},
+}
 
 PREFABS.Light_gtd_hell_lantern7 =
 {
@@ -70,7 +70,7 @@ PREFABS.Light_gtd_hell_lantern7 =
   light_color = "yellow",
 
   tex_FIRELAV2 = "CRACKLE4",
-},
+}
 
 PREFABS.Light_gtd_hell_skylight =
 {
@@ -90,7 +90,7 @@ PREFABS.Light_gtd_hell_skylight =
 
   bound_z1 = -32,
   bound_z2 = 0,
-},
+}
 
 PREFABS.Light_gtd_hell_skylight2 =
 {
@@ -99,7 +99,7 @@ PREFABS.Light_gtd_hell_skylight2 =
   light_color = "orange",
 
   flat_FLOOR1_6 = "FLOOR3_3",
-},
+}
 
 PREFABS.Light_gtd_hell_skylight3 =
 {
@@ -108,7 +108,7 @@ PREFABS.Light_gtd_hell_skylight3 =
   light_color = "blue",
 
   flat_FLOOR1_6 = "FLAT14",
-},
+}
 
 PREFABS.Light_gtd_hell_skylight4 =
 {
@@ -117,7 +117,7 @@ PREFABS.Light_gtd_hell_skylight4 =
   light_color = "red",
 
   flat_FLOOR1_6 = "RROCK01",
-},
+}
 
 PREFABS.Light_gtd_hell_skylight5 =
 {
@@ -126,7 +126,7 @@ PREFABS.Light_gtd_hell_skylight5 =
   light_color = "yellow",
 
   flat_FLOOR1_6 = "RROCK02",
-},
+}
 
 PREFABS.Light_gtd_hell_skylight6 =
 {
@@ -135,7 +135,7 @@ PREFABS.Light_gtd_hell_skylight6 =
   light_color = "none",
 
   flat_FLOOR1_6 = "RROCK04",
-},
+}
 
 PREFABS.Light_gtd_hell_lantern_square =
 {
@@ -155,7 +155,7 @@ PREFABS.Light_gtd_hell_lantern_square =
 
   bound_z1 = -32,
   bound_z2 = 0,
-},
+}
 
 PREFABS.Light_gtd_hell_lantern_square2 =
 {
@@ -164,7 +164,7 @@ PREFABS.Light_gtd_hell_lantern_square2 =
   light_color = "red",
 
   tex_FIRELAV2 = "FIREBLU1",
-},
+}
 
 PREFABS.Light_gtd_hell_lantern_square3 =
 {
@@ -173,7 +173,7 @@ PREFABS.Light_gtd_hell_lantern_square3 =
   light_color = "white",
 
   tex_FIRELAV2 = "LITE3",
-},
+}
 
 PREFABS.Light_gtd_hell_lantern_square4 =
 {
@@ -182,7 +182,7 @@ PREFABS.Light_gtd_hell_lantern_square4 =
   light_color = "blue",
 
   tex_FIRELAV2 = "LITEBLU4",
-},
+}
 
 PREFABS.Light_gtd_hell_lantern_square5 =
 {
@@ -191,7 +191,7 @@ PREFABS.Light_gtd_hell_lantern_square5 =
   light_color = "blue",
 
   tex_FIRELAV2 = "COMPBLUE",
-},
+}
 
 PREFABS.Light_gtd_hell_lantern_square6 =
 {
@@ -200,7 +200,7 @@ PREFABS.Light_gtd_hell_lantern_square6 =
   light_color = "red",
 
   tex_FIRELAV2 = "CRACKLE2",
-},
+}
 
 PREFABS.Light_gtd_hell_lantern_square7 =
 {
@@ -209,4 +209,4 @@ PREFABS.Light_gtd_hell_lantern_square7 =
   light_color = "yellow",
 
   tex_FIRELAV2 = "CRACKLE4",
-},
+}

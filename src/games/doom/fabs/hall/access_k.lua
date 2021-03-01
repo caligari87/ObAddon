@@ -13,7 +13,7 @@ PREFABS.Hallway_access_door_locked_red =
   shape  = "I",
 
   deep   = 16,
-},
+}
 
 PREFABS.Hallway_access_door_locked_blue =
 {
@@ -23,7 +23,7 @@ PREFABS.Hallway_access_door_locked_blue =
 
   tex_DOORRED = "DOORBLU",
   line_135 = 133,
-},
+}
 
 PREFABS.Hallway_access_door_locked_yellow =
 {
@@ -33,7 +33,7 @@ PREFABS.Hallway_access_door_locked_yellow =
 
   tex_DOORRED = "DOORYEL",
   line_135 = 137,
-},
+}
 
 --
 
@@ -55,4 +55,4 @@ PREFABS.Hallway_access_door_locked_switched =
 
   tag_1 = "?door_tag",
   door_action = "S1_LowerFloor",
-},
+}

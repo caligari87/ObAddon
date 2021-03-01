@@ -15,7 +15,7 @@ PREFABS.Hallway_mineshaft_plain =
 
   seed_h = 1,
   seed_w = 1,
-},
+}
 
 PREFABS.Hallway_mineshaft_secret =
 {
@@ -23,4 +23,4 @@ PREFABS.Hallway_mineshaft_secret =
 
   map    = "MAP02",
   key    = "secret",
-},
+}

@@ -7,4 +7,4 @@ PREFABS.Completely_nothing =
 
   seed_w = 1,
   seed_h = 1,
-},
+}

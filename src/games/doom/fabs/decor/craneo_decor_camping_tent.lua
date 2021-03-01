@@ -18,7 +18,7 @@
   bound_z2 = 56,
 
   sink_mode = "never",
-},
+}
 
 PREFABS.Decor_camping_tent_red =
 {
@@ -26,7 +26,7 @@ PREFABS.Decor_camping_tent_red =
 
   tex_COMPBLUE = "REDWALL",
   flat_FLAT14 = "FLOOR1_6",
-},
+}
 
 PREFABS.Decor_camping_tent_beige =
 {

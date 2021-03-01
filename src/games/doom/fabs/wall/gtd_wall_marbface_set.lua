@@ -24,7 +24,7 @@ PREFABS.Wall_hell_marbface_1 =
     MARBFAC3 = 50,
     MARBFACE = 50,
   },
-},
+}
 
 PREFABS.Wall_hell_marbface_diag =
 {
@@ -50,7 +50,7 @@ PREFABS.Wall_hell_marbface_diag =
     MARBFAC3 = 50,
     MARBFACE = 50,
   },
-},
+}
 
 PREFABS.Wall_hell_marbface_EPIC_1 =
 {
@@ -87,7 +87,7 @@ PREFABS.Wall_hell_marbface_EPIC_1 =
     MARBFAC7 = 50,
     MARBFACF = 50,
   },
-},
+}
 
 PREFABS.Wall_hell_marbface_diag_EPIC =
 {
@@ -122,4 +122,4 @@ PREFABS.Wall_hell_marbface_diag_EPIC =
     MARBFAC7 = 50,
     MARBFACF = 50,
   },
-},
+}

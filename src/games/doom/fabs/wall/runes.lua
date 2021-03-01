@@ -20,42 +20,42 @@ PREFABS.Wall_runes1_A =
 
   bound_z1 = 0,
   bound_z2 = 128,
-},
+}
 
 
 PREFABS.Wall_runes1_B =
 {
   template = "Wall_runes1_A",
   map      = "MAP02",
-},
+}
 
 
 PREFABS.Wall_runes1_C =
 {
   template = "Wall_runes1_A",
   map      = "MAP03",
-},
+}
 
 
 PREFABS.Wall_runes1_D =
 {
   template = "Wall_runes1_A",
   map      = "MAP04",
-},
+}
 
 
 PREFABS.Wall_runes1_E =
 {
   template = "Wall_runes1_A",
   map      = "MAP05",
-},
+}
 
 
 PREFABS.Wall_runes1_F =
 {
   template = "Wall_runes1_A",
   map      = "MAP06",
-},
+}
 
 
 ----------- FIRELAVA variation --------------------
@@ -68,7 +68,7 @@ PREFABS.Wall_runes2_A =
 
   group = "runes2",
   tex_FIREBLU1 = "FIRELAVA",
-},
+}
 
 
 PREFABS.Wall_runes2_B =
@@ -78,7 +78,7 @@ PREFABS.Wall_runes2_B =
 
   group = "runes2",
   tex_FIREBLU1 = "FIRELAVA",
-},
+}
 
 
 PREFABS.Wall_runes2_C =
@@ -88,7 +88,7 @@ PREFABS.Wall_runes2_C =
 
   group = "runes2",
   tex_FIREBLU1 = "FIRELAVA",
-},
+}
 
 
 PREFABS.Wall_runes2_D =
@@ -98,7 +98,7 @@ PREFABS.Wall_runes2_D =
 
   group = "runes2",
   tex_FIREBLU1 = "FIRELAVA",
-},
+}
 
 
 PREFABS.Wall_runes2_E =
@@ -108,7 +108,7 @@ PREFABS.Wall_runes2_E =
 
   group = "runes2",
   tex_FIREBLU1 = "FIRELAVA",
-},
+}
 
 
 PREFABS.Wall_runes2_F =
@@ -118,7 +118,7 @@ PREFABS.Wall_runes2_F =
 
   group = "runes2",
   tex_FIREBLU1 = "FIRELAVA",
-},
+}
 
 
 ----------- CRACKLE2 variation --------------------
@@ -131,7 +131,7 @@ PREFABS.Wall_runes3_A =
 
   group = "runes3",
   tex_FIREBLU1 = "CRACKLE2",
-},
+}
 
 
 PREFABS.Wall_runes3_B =
@@ -141,7 +141,7 @@ PREFABS.Wall_runes3_B =
 
   group = "runes3",
   tex_FIREBLU1 = "CRACKLE2",
-},
+}
 
 
 PREFABS.Wall_runes3_C =
@@ -151,7 +151,7 @@ PREFABS.Wall_runes3_C =
 
   group = "runes3",
   tex_FIREBLU1 = "CRACKLE2",
-},
+}
 
 
 PREFABS.Wall_runes3_D =
@@ -161,7 +161,7 @@ PREFABS.Wall_runes3_D =
 
   group = "runes3",
   tex_FIREBLU1 = "CRACKLE2",
-},
+}
 
 
 PREFABS.Wall_runes3_E =
@@ -171,7 +171,7 @@ PREFABS.Wall_runes3_E =
 
   group = "runes3",
   tex_FIREBLU1 = "CRACKLE2",
-},
+}
 
 
 PREFABS.Wall_runes3_F =
@@ -181,7 +181,7 @@ PREFABS.Wall_runes3_F =
 
   group = "runes3",
   tex_FIREBLU1 = "CRACKLE2",
-},
+}
 
 ----------- SP_FACE1 variation --------------------
 
@@ -193,7 +193,7 @@ PREFABS.Wall_runes4_A =
 
   group = "runes4",
   tex_FIREBLU1 = "SP_FACE1",
-},
+}
 
 
 PREFABS.Wall_runes4_B =
@@ -203,7 +203,7 @@ PREFABS.Wall_runes4_B =
 
   group = "runes4",
   tex_FIREBLU1 = "SP_FACE1",
-},
+}
 
 
 PREFABS.Wall_runes4_C =
@@ -213,7 +213,7 @@ PREFABS.Wall_runes4_C =
 
   group = "runes4",
   tex_FIREBLU1 = "SP_FACE1",
-},
+}
 
 
 PREFABS.Wall_runes4_D =
@@ -223,7 +223,7 @@ PREFABS.Wall_runes4_D =
 
   group = "runes4",
   tex_FIREBLU1 = "SP_FACE1",
-},
+}
 
 
 PREFABS.Wall_runes4_E =
@@ -233,7 +233,7 @@ PREFABS.Wall_runes4_E =
 
   group = "runes4",
   tex_FIREBLU1 = "SP_FACE1",
-},
+}
 
 
 PREFABS.Wall_runes4_F =
@@ -243,7 +243,7 @@ PREFABS.Wall_runes4_F =
 
   group = "runes4",
   tex_FIREBLU1 = "SP_FACE1",
-},
+}
 
 ----------- SLOPPY1 variation --------------------
 
@@ -255,7 +255,7 @@ PREFABS.Wall_runes5_A =
 
   group = "runes5",
   tex_FIREBLU1 = "SLOPPY1",
-},
+}
 
 
 PREFABS.Wall_runes5_B =
@@ -265,7 +265,7 @@ PREFABS.Wall_runes5_B =
 
   group = "runes5",
   tex_FIREBLU1 = "SP_FACE1",
-},
+}
 
 
 PREFABS.Wall_runes5_C =
@@ -275,7 +275,7 @@ PREFABS.Wall_runes5_C =
 
   group = "runes5",
   tex_FIREBLU1 = "SLOPPY1",
-},
+}
 
 
 PREFABS.Wall_runes5_D =
@@ -285,7 +285,7 @@ PREFABS.Wall_runes5_D =
 
   group = "runes5",
   tex_FIREBLU1 = "SLOPPY1",
-},
+}
 
 
 PREFABS.Wall_runes5_E =
@@ -295,7 +295,7 @@ PREFABS.Wall_runes5_E =
 
   group = "runes5",
   tex_FIREBLU1 = "SLOPPY1",
-},
+}
 
 
 PREFABS.Wall_runes5_F =
@@ -305,4 +305,4 @@ PREFABS.Wall_runes5_F =
 
   group = "runes5",
   tex_FIREBLU1 = "SLOPPY1",
-},
+}

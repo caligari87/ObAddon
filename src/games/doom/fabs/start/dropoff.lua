@@ -29,7 +29,7 @@ PREFABS.Start_Dropoff =
    lamp       = 50,
   },
 
-},
+}
 
 PREFABS.Start_Dropoff_hell =
 {
@@ -48,7 +48,7 @@ PREFABS.Start_Dropoff_hell =
 
  tex_METAL4 = "SUPPORT3",
 
-},
+}
 
 PREFABS.Start_Dropoff_urban =
 {
@@ -67,4 +67,4 @@ PREFABS.Start_Dropoff_urban =
  tex_METAL4 = "WOOD4",
  flat_CEIL5_2 = "FLAT5_2",
 
-},
+}

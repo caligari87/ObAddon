@@ -23,7 +23,7 @@ PREFABS.Quest_scionox_marine_generic =
 
   x_fit = "frame",
   y_fit = "top",
-},
+}
 
 PREFABS.Quest_scionox_marine_generic_2 =
 {
@@ -32,7 +32,7 @@ PREFABS.Quest_scionox_marine_generic_2 =
 
   seed_w = 2,
   seed_h = 2,
-},
+}
 
 PREFABS.Quest_scionox_marine_generic_3 =
 {
@@ -41,4 +41,4 @@ PREFABS.Quest_scionox_marine_generic_3 =
 
   seed_w = 1,
   seed_h = 2,
-},
+}

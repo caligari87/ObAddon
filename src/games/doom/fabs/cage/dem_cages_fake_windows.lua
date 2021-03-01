@@ -39,9 +39,9 @@ PREFABS.Cage_dem_windows_ambush1 =
         BSTONE2=50, STEPTOP=50, STONE6=50, STONE7=50, STUCCO=50,
         STUCCO1=50, STUCCO3=50, TANROCK3=50, WOOD12=50, BRIKS16=50,
         BRIKS31=50, BRONZE5=50, PANNYA=50, STUC01=50,
-  },
+  }
 
-},
+}
 
 PREFABS.Cage_dem_windows_ambush2 =
 {
@@ -54,7 +54,7 @@ PREFABS.Cage_dem_windows_ambush2 =
   bound_z1 = 0,
   bound_z2 = 200,
 
-},
+}
 
 PREFABS.Cage_dem_windows_ambush3 =
 {
@@ -67,7 +67,7 @@ PREFABS.Cage_dem_windows_ambush3 =
   bound_z1 = 0,
   bound_z2 = 248,
 
-},
+}
 
 PREFABS.Cage_dem_windows_ambush4 =
 {
@@ -84,9 +84,9 @@ PREFABS.Cage_dem_windows_ambush4 =
         STONE=50, BRIKS32=50, BRIKS43=50, BROWN2=50, BROWN3=50, GOTH07=50,
         GOTH13=50, GRAY9=50, GRAY8=50, ROK17=50, SHAWSH04=50, STON4=50,
         STON7=50, STONE10=50, STONE8=50, STONE9=50,
-  },
+  }
 
-},
+}
 
 PREFABS.Cage_dem_windows_ambush5 =
 {
@@ -109,9 +109,9 @@ PREFABS.Cage_dem_windows_ambush5 =
         STONE=50, BRIKS32=50, BRIKS43=50, BROWN2=50, BROWN3=50, GOTH07=50,
         GOTH13=50, GRAY9=50, GRAY8=50, ROK17=50, SHAWSH04=50, STON4=50,
         STON7=50, STONE10=50, STONE8=50, STONE9=50,
-  },
+  }
 
-},
+}
 
 PREFABS.Cage_dem_windows_ambush6 =
 {
@@ -134,9 +134,9 @@ PREFABS.Cage_dem_windows_ambush6 =
         STONE=50, BRIKS32=50, BRIKS43=50, BROWN2=50, BROWN3=50, GOTH07=50,
         GOTH13=50, GRAY9=50, GRAY8=50, ROK17=50, SHAWSH04=50, STON4=50,
         STON7=50, STONE10=50, STONE8=50, STONE9=50,
-  },
+  }
 
-},
+}
 
 ---- City windows ambush where monsters duck for cover ----
 
@@ -179,9 +179,9 @@ PREFABS.Cage_dem_windows_ambushd1 =
         BSTONE2=50, STEPTOP=50, STONE6=50, STONE7=50, STUCCO=50,
         STUCCO1=50, STUCCO3=50, TANROCK3=50, WOOD12=50, BRIKS16=50,
         BRIKS31=50, BRONZE5=50, PANNYA=50, STUC01=50,
-  },
+  }
 
-},
+}
 
 PREFABS.Cage_dem_windows_ambushd2 =
 {
@@ -194,7 +194,7 @@ PREFABS.Cage_dem_windows_ambushd2 =
   bound_z1 = 0,
   bound_z2 = 200,
 
-},
+}
 
 PREFABS.Cage_dem_windows_ambushd3 =
 {
@@ -207,7 +207,7 @@ PREFABS.Cage_dem_windows_ambushd3 =
   bound_z1 = 0,
   bound_z2 = 248,
 
-},
+}
 
 PREFABS.Cage_dem_windows_ambushd4 =
 {
@@ -224,9 +224,9 @@ PREFABS.Cage_dem_windows_ambushd4 =
         STONE=50, BRIKS32=50, BRIKS43=50, BROWN2=50, BROWN3=50, GOTH07=50,
         GOTH13=50, GRAY9=50, GRAY8=50, ROK17=50, SHAWSH04=50, STON4=50,
         STON7=50, STONE10=50, STONE8=50, STONE9=50,
-  },
+  }
 
-},
+}
 
 PREFABS.Cage_dem_windows_ambushd5 =
 {
@@ -249,9 +249,9 @@ PREFABS.Cage_dem_windows_ambushd5 =
         STONE=50, BRIKS32=50, BRIKS43=50, BROWN2=50, BROWN3=50, GOTH07=50,
         GOTH13=50, GRAY9=50, GRAY8=50, ROK17=50, SHAWSH04=50, STON4=50,
         STON7=50, STONE10=50, STONE8=50, STONE9=50,
-  },
+  }
 
-},
+}
 
 PREFABS.Cage_dem_windows_ambushd6 =
 {
@@ -274,9 +274,9 @@ PREFABS.Cage_dem_windows_ambushd6 =
         STONE=50, BRIKS32=50, BRIKS43=50, BROWN2=50, BROWN3=50, GOTH07=50,
         GOTH13=50, GRAY9=50, GRAY8=50, ROK17=50, SHAWSH04=50, STON4=50,
         STON7=50, STONE10=50, STONE8=50, STONE9=50,
-  },
+  }
 
-},
+}
 
 ---- City windows ambush where monsters open the window ----
 
@@ -321,9 +321,9 @@ PREFABS.Cage_dem_windows_ambusho1 =
         BSTONE2=50, STEPTOP=50, STONE6=50, STONE7=50, STUCCO=50,
         STUCCO1=50, STUCCO3=50, TANROCK3=50, WOOD12=50, BRIKS16=50,
         BRIKS31=50, BRONZE5=50, PANNYA=50, STUC01=50,
-  },
+  }
 
-},
+}
 
 PREFABS.Cage_dem_windows_ambusho2 =
 {
@@ -336,7 +336,7 @@ PREFABS.Cage_dem_windows_ambusho2 =
   bound_z1 = 0,
   bound_z2 = 200,
 
-},
+}
 
 PREFABS.Cage_dem_windows_ambusho3 =
 {
@@ -349,7 +349,7 @@ PREFABS.Cage_dem_windows_ambusho3 =
   bound_z1 = 0,
   bound_z2 = 248,
 
-},
+}
 
 PREFABS.Cage_dem_windows_ambusho4 =
 {
@@ -366,9 +366,9 @@ PREFABS.Cage_dem_windows_ambusho4 =
         STONE=50, BRIKS32=50, BRIKS43=50, BROWN2=50, BROWN3=50, GOTH07=50,
         GOTH13=50, GRAY9=50, GRAY8=50, ROK17=50, SHAWSH04=50, STON4=50,
         STON7=50, STONE10=50, STONE8=50, STONE9=50,
-  },
+  }
 
-},
+}
 
 PREFABS.Cage_dem_windows_ambusho5 =
 {
@@ -391,9 +391,9 @@ PREFABS.Cage_dem_windows_ambusho5 =
         STONE=50, BRIKS32=50, BRIKS43=50, BROWN2=50, BROWN3=50, GOTH07=50,
         GOTH13=50, GRAY9=50, GRAY8=50, ROK17=50, SHAWSH04=50, STON4=50,
         STON7=50, STONE10=50, STONE8=50, STONE9=50,
-  },
+  }
 
-},
+}
 
 PREFABS.Cage_dem_windows_ambusho6 =
 {
@@ -416,9 +416,9 @@ PREFABS.Cage_dem_windows_ambusho6 =
         STONE=50, BRIKS32=50, BRIKS43=50, BROWN2=50, BROWN3=50, GOTH07=50,
         GOTH13=50, GRAY9=50, GRAY8=50, ROK17=50, SHAWSH04=50, STON4=50,
         STON7=50, STONE10=50, STONE8=50, STONE9=50,
-  },
+  }
 
-},
+}
 
 ---- Industrial door/catwalk ambush ----
 
@@ -459,9 +459,9 @@ PREFABS.Cage_dem_windows_ambush7 =
   },
 
   tex_BRICK1 = { GRAY1=50, GRAY4=50, GRAY5=50, GRAY7=50, ICKWALL1=50, ICKWALL2=50, ICKWALL3=50, METAL1=50, METAL2=50, SHAWN2=50, SILVER1=50, STARG1=50, STARG3=50, STARGR1=50, STONE=50, STONE2=50, STONE3=50, TEKGREN2=50, TEKGREN5=50, BIGSTON2=50, BIGSTON3=50, BRONZE5=50, GRAY6=50, GRAY8=50, GRAY9=50, HEX01=50, MET2=50, MET6=50, MET7=50, SHAWN4=50, SHAWN5=50,
-  },
+  }
 
-},
+}
 
 PREFABS.Cage_dem_windows_ambush8 =
 {
@@ -474,7 +474,7 @@ PREFABS.Cage_dem_windows_ambush8 =
   bound_z1 = 0,
   bound_z2 = 200,
 
-},
+}
 
 PREFABS.Cage_dem_windows_ambush9 =
 {
@@ -487,7 +487,7 @@ PREFABS.Cage_dem_windows_ambush9 =
   bound_z1 = 0,
   bound_z2 = 248,
 
-},
+}
 
 ---- Industrial door/catwalk ambush where monsters open the door ----
 
@@ -528,9 +528,9 @@ PREFABS.Cage_dem_windows_ambusho7 =
   },
 
   tex_BRICK1 = { GRAY1=50, GRAY4=50, GRAY5=50, GRAY7=50, ICKWALL1=50, ICKWALL2=50, ICKWALL3=50, METAL1=50, METAL2=50, SHAWN2=50, SILVER1=50, STARG1=50, STARG3=50, STARGR1=50, STONE=50, STONE2=50, STONE3=50, TEKGREN2=50, TEKGREN5=50, BIGSTON2=50, BIGSTON3=50, BRONZE5=50, GRAY6=50, GRAY8=50, GRAY9=50, HEX01=50, MET2=50, MET6=50, MET7=50, SHAWN4=50, SHAWN5=50,
-  },
+  }
 
-},
+}
 
 PREFABS.Cage_dem_windows_ambusho8 =
 {
@@ -543,7 +543,7 @@ PREFABS.Cage_dem_windows_ambusho8 =
   bound_z1 = 0,
   bound_z2 = 200,
 
-},
+}
 
 PREFABS.Cage_dem_windows_ambusho9 =
 {
@@ -556,7 +556,7 @@ PREFABS.Cage_dem_windows_ambusho9 =
   bound_z1 = 0,
   bound_z2 = 248,
 
-},
+}
 
 ---- Industrial windows ambush----
 
@@ -597,9 +597,9 @@ PREFABS.Cage_dem_windows_ambush10 =
   },
 
   tex_BRICK1 = { GRAY1=50, GRAY4=50, GRAY5=50, GRAY7=50, ICKWALL1=50, ICKWALL2=50, ICKWALL3=50, METAL1=50, METAL2=50, SHAWN2=50, SILVER1=50, STARG1=50, STARG3=50, STARGR1=50, STONE=50, STONE2=50, STONE3=50, TEKGREN2=50, TEKGREN5=50, BIGSTON2=50, BIGSTON3=50, BRONZE5=50, GRAY6=50, GRAY8=50, GRAY9=50, HEX01=50, MET2=50, MET6=50, MET7=50, SHAWN4=50, SHAWN5=50,
-  },
+  }
 
-},
+}
 
 PREFABS.Cage_dem_windows_ambush11 =
 {
@@ -612,7 +612,7 @@ PREFABS.Cage_dem_windows_ambush11 =
   bound_z1 = 0,
   bound_z2 = 200,
 
-},
+}
 
 PREFABS.Cage_dem_windows_ambush12 =
 {
@@ -625,7 +625,7 @@ PREFABS.Cage_dem_windows_ambush12 =
   bound_z1 = 0,
   bound_z2 = 248,
 
-},
+}
 
 ---- Industrial window ambush where monsters open the window ----
 
@@ -666,9 +666,9 @@ PREFABS.Cage_dem_windows_ambusho10 =
   },
 
   tex_BRICK1 = { GRAY1=50, GRAY4=50, GRAY5=50, GRAY7=50, ICKWALL1=50, ICKWALL2=50, ICKWALL3=50, METAL1=50, METAL2=50, SHAWN2=50, SILVER1=50, STARG1=50, STARG3=50, STARGR1=50, STONE=50, STONE2=50, STONE3=50, TEKGREN2=50, TEKGREN5=50, BIGSTON2=50, BIGSTON3=50, BRONZE5=50, GRAY6=50, GRAY8=50, GRAY9=50, HEX01=50, MET2=50, MET6=50, MET7=50, SHAWN4=50, SHAWN5=50,
-  },
+  }
 
-},
+}
 
 PREFABS.Cage_dem_windows_ambusho11 =
 {
@@ -681,7 +681,7 @@ PREFABS.Cage_dem_windows_ambusho11 =
   bound_z1 = 0,
   bound_z2 = 200,
 
-},
+}
 
 PREFABS.Cage_dem_windows_ambusho12 =
 {
@@ -694,7 +694,7 @@ PREFABS.Cage_dem_windows_ambusho12 =
   bound_z1 = 0,
   bound_z2 = 248,
 
-},
+}
 
 ---- Hell battlements ambush ----
 
@@ -705,7 +705,7 @@ PREFABS.Cage_dem_windows_ambush13 =
 
   engine = "zdoom",
 
-  prob   = 0 --200,
+  prob   = 0, --200,
 
   theme  = "hell",
 
@@ -729,9 +729,9 @@ PREFABS.Cage_dem_windows_ambush13 =
 
   texture_pack = "armaetus",
 
-  sector_17 = { [0]=50, [17]=50 },
+  sector_17 = { [0]=50, [17]=50 }
 
-},
+}
 
 PREFABS.Cage_dem_windows_ambush14 =
 {
@@ -745,7 +745,7 @@ PREFABS.Cage_dem_windows_ambush14 =
 
   bound_z1 = 0,
   bound_z2 = 200,
-},
+}
 
 PREFABS.Cage_dem_windows_ambush15 =
 {
@@ -759,7 +759,7 @@ PREFABS.Cage_dem_windows_ambush15 =
 
   bound_z1 = 0,
   bound_z2 = 248,
-},
+}
 
 ---- Hell windows ambush ----
 
@@ -801,8 +801,8 @@ PREFABS.Cage_dem_windows_ambush16 =
   blue_torch_sm = 50,
   green_torch_sm = 50,
   red_torch_sm  = 50,
-  },
-},
+  }
+}
 
 PREFABS.Cage_dem_windows_ambush17 =
 {
@@ -814,7 +814,7 @@ PREFABS.Cage_dem_windows_ambush17 =
 
   bound_z1 = 0,
   bound_z2 = 200,
-},
+}
 
 PREFABS.Cage_dem_windows_ambush18 =
 {
@@ -826,7 +826,7 @@ PREFABS.Cage_dem_windows_ambush18 =
 
   bound_z1 = 0,
   bound_z2 = 248,
-},
+}
 
 ---- Hell windows ambush where enemy duck for cover ----
 
@@ -868,8 +868,8 @@ PREFABS.Cage_dem_windows_ambushd7 =
   blue_torch_sm = 50,
   green_torch_sm = 50,
   red_torch_sm  = 50,
-  },
-},
+  }
+}
 
 PREFABS.Cage_dem_windows_ambushd8 =
 {
@@ -881,7 +881,7 @@ PREFABS.Cage_dem_windows_ambushd8 =
 
   bound_z1 = 0,
   bound_z2 = 200,
-},
+}
 
 PREFABS.Cage_dem_windows_ambushd9 =
 {
@@ -893,4 +893,4 @@ PREFABS.Cage_dem_windows_ambushd9 =
 
   bound_z1 = 0,
   bound_z2 = 248,
-},
+}

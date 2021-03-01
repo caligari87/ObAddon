@@ -8,7 +8,7 @@ PREFABS.Window_metal_frame_1 =
 
   theme = "!hell",
 
-  passable = true
+  passable = true,
 
   where  = "edge",
   seed_w = 1,
@@ -21,7 +21,7 @@ PREFABS.Window_metal_frame_1 =
   bound_z2 = 96,
 
   z_fit = {48,64},
-},
+}
 
 PREFABS.Window_metal_frame_2 =
 {
@@ -29,7 +29,7 @@ PREFABS.Window_metal_frame_2 =
   map      = "MAP02",
 
   seed_w   = 2,
-},
+}
 
 PREFABS.Window_metal_frame_3 =
 {
@@ -37,7 +37,7 @@ PREFABS.Window_metal_frame_3 =
   map      = "MAP03",
 
   seed_w   = 3,
-},
+}
 
 PREFABS.Window_metal_frame_1_hell =
 {
@@ -49,7 +49,7 @@ PREFABS.Window_metal_frame_1_hell =
   tex_STEP4 = "METAL",
   tex_DOORSTOP = "METAL",
   flat_FLAT23 = "CEIL5_2",
-},
+}
 
 PREFABS.Window_metal_frame_2_hell =
 {
@@ -63,7 +63,7 @@ PREFABS.Window_metal_frame_2_hell =
   tex_STEP4 = "METAL",
   tex_DOORSTOP = "METAL",
   flat_FLAT23 = "CEIL5_2",
-},
+}
 
 PREFABS.Window_metal_frame_3_hell =
 {
@@ -77,4 +77,4 @@ PREFABS.Window_metal_frame_3_hell =
   tex_STEP4 = "METAL",
   tex_DOORSTOP = "METAL",
   flat_FLAT23 = "CEIL5_2",
-},
+}

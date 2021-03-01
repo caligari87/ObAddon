@@ -19,7 +19,7 @@ PREFABS.Beam =
   over   = 8,
 
   bound_z1 = 0,
-},
+}
 
 PREFABS.Beam_diagonal =
 {
@@ -35,7 +35,7 @@ PREFABS.Beam_diagonal =
   where  = "diagonal",
 
   bound_z1 = 0,
-},
+}
 
 PREFABS.Beam_tech =
 {
@@ -43,7 +43,7 @@ PREFABS.Beam_tech =
   map = "MAP03",
 
   group = "beam_shiny",
-},
+}
 
 PREFABS.Beam_diagonal_tech =
 {
@@ -51,7 +51,7 @@ PREFABS.Beam_diagonal_tech =
   map = "MAP04",
 
   group = "beam_shiny",
-},
+}
 
 PREFABS.Beam_wall_textured =
 {
@@ -61,7 +61,7 @@ PREFABS.Beam_wall_textured =
   theme = "!tech",
 
   group = "beam_textured",
-},
+}
 
 PREFABS.Beam_wall_textured_diagonal =
 {
@@ -71,7 +71,7 @@ PREFABS.Beam_wall_textured_diagonal =
   theme = "!tech",
 
   group = "beam_textured",
-},
+}
 
 PREFABS.Beam_wall_textured_tech =
 {
@@ -83,7 +83,7 @@ PREFABS.Beam_wall_textured_tech =
   group = "beam_textured",
 
   tex_METAL = "SHAWN2",
-},
+}
 
 PREFABS.Beam_wall_textured_diagonal_tech =
 {
@@ -95,4 +95,4 @@ PREFABS.Beam_wall_textured_diagonal_tech =
   group = "beam_textured",
 
   tex_METAL = "SHAWN2",
-},
+}

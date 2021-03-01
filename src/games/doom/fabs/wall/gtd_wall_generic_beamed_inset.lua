@@ -17,7 +17,7 @@ PREFABS.Wall_generic_beamed_inset =
   bound_z2 = 128,
 
   z_fit = {64, 70},
-},
+}
 
 PREFABS.Wall_generic_beamed_inset_diag =
 {
@@ -25,7 +25,7 @@ PREFABS.Wall_generic_beamed_inset_diag =
   map = "MAP02",
 
   where = "diagonal",
-},
+}
 
 --
 
@@ -36,7 +36,7 @@ PREFABS.Wall_generic_beamed_inset_hell =
   theme = "hell",
 
   tex_METAL7 = "METAL2",
-},
+}
 
 PREFABS.Wall_generic_beamed_inset_diag_hell =
 {
@@ -48,4 +48,4 @@ PREFABS.Wall_generic_beamed_inset_diag_hell =
   where = "diagonal",
 
   tex_METAL7 = "METAL2",
-},
+}

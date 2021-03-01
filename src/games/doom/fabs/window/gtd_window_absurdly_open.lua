@@ -17,7 +17,7 @@ PREFABS.Window_absurdly_open_1 =
 
   bound_z1 = 0,
   bound_z2 = 128,
-},
+}
 
 PREFABS.Window_absurdly_open_2 =
 {
@@ -25,7 +25,7 @@ PREFABS.Window_absurdly_open_2 =
   map      = "MAP02",
 
   seed_w   = 2,
-},
+}
 
 PREFABS.Window_absurdly_open_3 =
 {
@@ -33,4 +33,4 @@ PREFABS.Window_absurdly_open_3 =
   map      = "MAP03",
 
   seed_w   = 3,
-},
+}

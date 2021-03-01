@@ -16,10 +16,10 @@ PREFABS.Ladder_128_rustic =
   bound_z1 = 0,
 
   delta_h = 128,
-  plain_ceiling = true
+  plain_ceiling = true,
 
   tex_STEPLAD1 = {STEPLAD1=50, STEP1=50, STEP3=50},
-},
+}
 
 PREFABS.Ladder_128_techy =
 {
@@ -32,7 +32,7 @@ PREFABS.Ladder_128_techy =
   tex_METAL = "SILVER1",
   tex_SUPPORT3 = {SUPPORT2=50, LITEBLU1=50, SUPPORT3=50},
   flat_CEIL5_2 = "FLAT19",
-},
+}
 
 PREFABS.Ladder_128_woody =
 {
@@ -44,7 +44,7 @@ PREFABS.Ladder_128_woody =
   tex_METAL = "WOOD8",
   tex_SUPPORT3 = "WOOD8",
   flat_CEIL5_2 = "FLAT5_1",
-},
+}
 
 PREFABS.Ladder_128_rustic_2x =
 {
@@ -53,7 +53,7 @@ PREFABS.Ladder_128_rustic_2x =
   map = "MAP02",
 
   seed_h = 2,
-},
+}
 
 PREFABS.Ladder_128_techy_2x =
 {
@@ -70,7 +70,7 @@ PREFABS.Ladder_128_techy_2x =
   tex_METAL = "SILVER1",
   tex_SUPPORT3 = {SUPPORT2=50, LITEBLU1=50, SUPPORT3=50},
   flat_CEIL5_2 = "FLAT19",
-},
+}
 
 PREFABS.Ladder_128_woody_2x =
 {
@@ -86,7 +86,7 @@ PREFABS.Ladder_128_woody_2x =
   tex_METAL = "WOOD8",
   tex_SUPPORT3 = "WOOD8",
   flat_CEIL5_2 = "FLAT5_1",
-},
+}
 
 PREFABS.Ladder_thin =
 {
@@ -106,7 +106,7 @@ PREFABS.Ladder_thin =
   bound_z1 = 0,
 
   delta_h = 128,
-  plain_ceiling = true
+  plain_ceiling = true,
 
   tex_STEPLAD1 =
   {
@@ -115,7 +115,7 @@ PREFABS.Ladder_thin =
     STEP3 = 25,
     STEPTOP = 50,
   },
-},
+}
 
 PREFABS.Ladder_thin_2x =
 {
@@ -123,4 +123,4 @@ PREFABS.Ladder_thin_2x =
   map = "MAP04",
 
   seed_h = 2,
-},
+}

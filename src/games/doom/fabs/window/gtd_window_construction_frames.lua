@@ -7,7 +7,7 @@ PREFABS.Window_gtd_construction_frames_1_1 =
 
   prob   = 50,
 
-  passable = true
+  passable = true,
 
   where  = "edge",
   seed_w = 1,
@@ -20,25 +20,25 @@ PREFABS.Window_gtd_construction_frames_1_1 =
   bound_z2 = 128,
 
   z_fit = { 64,68 },
-},
+}
 
 PREFABS.Window_gtd_construction_frames_1_2 =
 {
   template   = "Window_gtd_construction_frames_1_1",
   map    = "MAP02",
-},
+}
 
 PREFABS.Window_gtd_construction_frames_1_3 =
 {
   template   = "Window_gtd_construction_frames_1_1",
   map    = "MAP03",
-},
+}
 
 PREFABS.Window_gtd_construction_frames_1_4 =
 {
   template   = "Window_gtd_construction_frames_1_1",
   map    = "MAP04",
-},
+}
 
 PREFABS.Window_gtd_construction_frames_2 =
 {
@@ -46,7 +46,7 @@ PREFABS.Window_gtd_construction_frames_2 =
   map    = "MAP05",
 
   seed_w = 2,
-},
+}
 
 PREFABS.Window_gtd_construction_frames_3 =
 {
@@ -54,7 +54,7 @@ PREFABS.Window_gtd_construction_frames_3 =
   map    = "MAP06",
 
   seed_w = 3,
-},
+}
 
 -- alt fits
 
@@ -64,7 +64,7 @@ PREFABS.Window_gtd_construction_frames_1_1_low =
   map    = "MAP01",
 
   z_fit = "bottom",
-},
+}
 
 PREFABS.Window_gtd_construction_frames_1_1_high =
 {
@@ -72,7 +72,7 @@ PREFABS.Window_gtd_construction_frames_1_1_high =
   map    = "MAP01",
 
   z_fit = "top",
-},
+}
 
 PREFABS.Window_gtd_construction_frames_1_2_low =
 {
@@ -80,7 +80,7 @@ PREFABS.Window_gtd_construction_frames_1_2_low =
   map    = "MAP02",
 
   z_fit = "bottom",
-},
+}
 
 PREFABS.Window_gtd_construction_frames_1_2_high =
 {
@@ -88,7 +88,7 @@ PREFABS.Window_gtd_construction_frames_1_2_high =
   map    = "MAP02",
 
   z_fit = "top",
-},
+}
 
 PREFABS.Window_gtd_construction_frames_1_3_low =
 {
@@ -96,7 +96,7 @@ PREFABS.Window_gtd_construction_frames_1_3_low =
   map    = "MAP03",
 
   z_fit = "bottom",
-},
+}
 
 PREFABS.Window_gtd_construction_frames_1_3_high =
 {
@@ -104,7 +104,7 @@ PREFABS.Window_gtd_construction_frames_1_3_high =
   map    = "MAP03",
 
   z_fit = "top",
-},
+}
 
 -- 2x
 
@@ -116,7 +116,7 @@ PREFABS.Window_gtd_construction_frames_2_high =
   seed_w = 2,
 
   z_fit = "top",
-},
+}
 
 PREFABS.Window_gtd_construction_frames_2_low =
 {
@@ -126,7 +126,7 @@ PREFABS.Window_gtd_construction_frames_2_low =
   seed_w = 2,
 
   z_fit = "bottom",
-},
+}
 
 -- 3x
 
@@ -138,7 +138,7 @@ PREFABS.Window_gtd_construction_frames_3_high =
   seed_w = 3,
 
   z_fit = "top",
-},
+}
 
 PREFABS.Window_gtd_construction_frames_3_low =
 {
@@ -148,4 +148,4 @@ PREFABS.Window_gtd_construction_frames_3_low =
   seed_w = 3,
 
   z_fit = "bottom",
-},
+}

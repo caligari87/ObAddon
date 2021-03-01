@@ -24,7 +24,7 @@ PREFABS.Teleporter_scionox_trap_teleport =
 
   flat_FLAT5_3 = "REDWALL",
   sector_8 = { [8]=50, [1]=15, [2]=10, [3]=10, [0]=5 },
-},
+}
 
 PREFABS.Teleporter_scionox_trap_teleport_2 =
 {
@@ -33,7 +33,7 @@ PREFABS.Teleporter_scionox_trap_teleport_2 =
 
   sector_13 = { [13]=50, [12]=25, [1]=15, [2]=10, [3]=10, [0]=5 },
   tex_SW1GARG = { SW1GARG=50, SW1LION=50, SW1SATYR=50 },
-},
+}
 
 PREFABS.Teleporter_scionox_trap_teleport_3 =
 {
@@ -41,7 +41,7 @@ PREFABS.Teleporter_scionox_trap_teleport_3 =
   map    = "MAP03",
 
   theme  = "tech",
-},
+}
 
 PREFABS.Teleporter_scionox_trap_teleport_4 =
 {
@@ -50,7 +50,7 @@ PREFABS.Teleporter_scionox_trap_teleport_4 =
 
   theme  = "urban",
   sector_8 = { [8]=50, [1]=15, [2]=10, [3]=10, [0]=3 },
-},
+}
 
 PREFABS.Teleporter_scionox_trap_teleport_5 =
 {
@@ -58,4 +58,4 @@ PREFABS.Teleporter_scionox_trap_teleport_5 =
   map    = "MAP05",
 
   theme  = "hell",
-},
+}

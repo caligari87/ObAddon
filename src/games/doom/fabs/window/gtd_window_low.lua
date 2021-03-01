@@ -15,7 +15,7 @@ PREFABS.Window_low_1 =
 
   bound_z1 = 0,
   bound_z2 = 32,
-},
+}
 
 PREFABS.Window_low_2 =
 {
@@ -23,7 +23,7 @@ PREFABS.Window_low_2 =
   map      = "MAP02",
 
   seed_w   = 2,
-},
+}
 
 PREFABS.Window_low_3 =
 {
@@ -31,7 +31,7 @@ PREFABS.Window_low_3 =
   map      = "MAP03",
 
   seed_w   = 3,
-},
+}
 
 PREFABS.Window_low_2_with_opening =
 {
@@ -44,4 +44,4 @@ PREFABS.Window_low_2_with_opening =
 
   height = 112,
   bound_z2 = 112,
-},
+}

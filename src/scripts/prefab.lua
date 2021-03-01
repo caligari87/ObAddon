@@ -396,7 +396,7 @@ end
 
 
 function is_subst(value)
-  return type(value) == "string" and string.match(value, "^[~?]")
+  return type(value) == "string" and string.match(value, "^[!?]")
 end
 
 
@@ -412,7 +412,7 @@ function Fab_apply_substitute(value, SKIN)
   if op       == "" then op       = nil end
   if number   == "" then number   = nil end
 
-  if not var_name or (op and not number) or (op and neg == '~') then
+  if not var_name or (op and not number) or (op and neg == '!') then
     error("bad substitution: " .. tostring(value));
   end
 
@@ -433,7 +433,7 @@ function Fab_apply_substitute(value, SKIN)
   end
 
   -- apply the boolean negation
-  if neg == '~' then
+  if neg == '!' then
     return 1 - convert_bool(value)
 
   -- apply the operator
@@ -445,7 +445,7 @@ function Fab_apply_substitute(value, SKIN)
     if op == "-" then return value - number end
 
     if op == "==" then return sel(value == number, 1, 0) end
-    if op == "~=" then return sel(value ~= number, 1, 0) end
+    if op == "!=" then return sel(value ~= number, 1, 0) end
 
     error("bad subst operator: " .. tostring(op))
   end
@@ -462,13 +462,13 @@ function Fab_determine_bbox(fab)
   -- Note: no need to handle slopes, they are defined to be "shrinky",
   --       (i.e. never higher that t, never lower than b).
 
-  for _,B in pairs(pairs(fab.brushes)) do
+  for _,B in pairs(fab.brushes) do
     if B[1].outlier then goto continue end
     if B[1].m == "light" then goto continue end
     if B[1].m == "rail"  then goto continue end
     if B[1].m == "spot"  then goto continue end
 
-    for _,C in pairs(pairs(B)) do
+    for _,C in pairs(B) do
 
       if C.x then
         if not x1 then
@@ -518,7 +518,7 @@ end
 function Fab_transform_XY(fab, T)
 
   local function brush_xy(brush)
-    for _,C in pairs(pairs(brush)) do
+    for _,C in pairs(brush) do
       if C.x then C.x, C.y = Trans.apply_xy(C.x, C.y) end
 
       if C.slope then C.slope = Trans.apply_slope(C.slope) end
@@ -617,15 +617,15 @@ function Fab_transform_XY(fab, T)
 
   -- apply the coordinate transform to all parts of the prefab
 
-  for _,B in pairs(pairs(fab.brushes)) do
+  for _,B in pairs(fab.brushes) do
     brush_xy(B)
   end
 
-  for _,E in pairs(pairs(fab.entities)) do
+  for _,E in pairs(fab.entities) do
     entity_xy(E)
   end
 
-  for _,M in pairs(pairs(fab.models)) do
+  for _,M in pairs(fab.models) do
     model_xy(M)
     entity_xy(M.entity)
   end
@@ -640,7 +640,7 @@ function Fab_transform_Z(fab, T)
   local function brush_z(brush)
     local b, t
 
-    for _,C in pairs(pairs(brush)) do
+    for _,C in pairs(brush) do
       if C.b then C.b = Trans.apply_z(C.b) ; b = C.b end
       if C.t then C.t = Trans.apply_z(C.t) ; t = C.t end
     end
@@ -727,15 +727,15 @@ function Fab_transform_Z(fab, T)
 
   -- apply the coordinate transform to all parts of the prefab
 
-  for _,B in pairs(pairs(fab.brushes)) do
+  for _,B in pairs(fab.brushes) do
     brush_z(B)
   end
 
-  for _,E in pairs(pairs(fab.entities)) do
+  for _,E in pairs(fab.entities) do
     entity_z(E)
   end
 
-  for _,M in pairs(pairs(fab.models)) do
+  for _,M in pairs(fab.models) do
     model_z(M)
   end
 
@@ -747,7 +747,7 @@ end
 function Fab_bound_brushes_Z(fab, z1, z2)
   if not (z1 or z2) then return end
 
-  for _,B in pairs(pairs(fab.brushes)) do
+  for _,B in pairs(fab.brushes) do
     local b = Brush_get_b(B)
     local t = Brush_get_t(B)
 
@@ -771,17 +771,17 @@ function Fab_render(fab)
     fab_map = "object"
   end
 
-  for _,B in pairs(pairs(fab.brushes)) do
+  for _,B in pairs(fab.brushes) do
     if B[1].m ~= "spot" then
       raw_add_brush(B)
     end
   end
 
-  for _,M in pairs(pairs(fab.models)) do
+  for _,M in pairs(fab.models) do
     raw_add_model(M)
   end
 
-  for _,E in pairs(pairs(fab.entities)) do
+  for _,E in pairs(fab.entities) do
     if E.id then
       raw_add_entity(E)
     end
@@ -799,7 +799,7 @@ function Fab_solid_entities(fab, room)
 
   if fab.solid_ents ~= true then return end
 
-  for _,E in pairs(pairs(fab.entities)) do
+  for _,E in pairs(fab.entities) do
     if E.id then
       room:add_solid_ent(E.id, E.x, E.y, E.z)
     end
@@ -822,7 +822,7 @@ function Fab_process_spots(fab, room)
     if brushlib.is_quad(B) then
       x1,y1, x2,y2 = brushlib.bbox(B)
 
-      for _,C in pairs(pairs(B)) do
+      for _,C in pairs(B) do
         if C.b then z1 = C.b end
         if C.t then z2 = C.t end
       end
@@ -914,7 +914,7 @@ gui.debugf("Fab_process_spots @ %s\n", room and room.name or "???")
   --TODO : review this
   if not room then return end
 
-  for _,B in pairs(pairs(fab.brushes)) do
+  for _,B in pairs(fab.brushes) do
     if B[1].m == "spot" then
       process_spot(B)
     end
@@ -1220,7 +1220,7 @@ function Fab_load_wad(def)
     }
 
 
-    for _,C in pairs(pairs(coords)) do
+    for _,C in pairs(coords) do
       table.insert(B, decode_polygon_side(nil, C, 1))
     end
 
@@ -1261,7 +1261,7 @@ function Fab_load_wad(def)
 
     decode_lighting(S, B[1])
 
-    for _,C in pairs(pairs(coords)) do
+    for _,C in pairs(coords) do
       table.insert(B, decode_polygon_side(S, C, 1))
     end
 
@@ -1353,7 +1353,7 @@ function Fab_load_wad(def)
       table.insert(B, C)
     end
 
-    for _,C in pairs(pairs(coords)) do
+    for _,C in pairs(coords) do
       table.insert(B, decode_polygon_side(S, C, pass))
     end
 
@@ -1381,7 +1381,7 @@ function Fab_load_wad(def)
     table.insert(B, TOP)
 
     -- sides
-    for _,C in pairs(pairs(coords)) do
+    for _,C in pairs(coords) do
       table.insert(B, decode_3d_floor_side(exfl, C))
     end
 
@@ -1750,7 +1750,7 @@ function Fab_collect_fields(fab)
 
   fab.fields = {}
 
-  for _,k in pairs(pairs(matching_fields())) do
+  for _,k in pairs(matching_fields()) do
     fab.fields[k] = fab[k] ; fab[k] = nil
   end
 
@@ -2034,8 +2034,8 @@ function Fab_replacements(fab)
 
   build_entity_remap_table()
 
-  for _,B in pairs(pairs(fab.brushes)) do
-    for _,C in pairs(pairs(B)) do
+  for _,B in pairs(fab.brushes) do
+    for _,C in pairs(B) do
       if C.special and C.x     then C.special = check("line",   C.special) end
       if C.special and not C.x then C.special = check("sector", C.special) end
 
@@ -2052,7 +2052,7 @@ function Fab_replacements(fab)
     end
   end
 
-  for _,E in pairs(pairs(fab.entities)) do
+  for _,E in pairs(fab.entities) do
     check_props(E)
 
     -- unknown entities set the 'id' to NIL
@@ -2107,7 +2107,7 @@ function Fabricate(room, def, T, skins)
   if PARAM.marine_gen and PARAM.level_has_marine_closets and fab.group == "marine_closet" then
     MARINE_CLOSET_TUNE.randomize_count()
     local marines = PARAM.marine_marines
-    for _,E in pairs(pairs(fab.entities)) do
+    for _,E in pairs(fab.entities) do
       if E.id and E.id == 8001 then
         if marines > 0 then
           E.id = MARINE_CLOSET_TUNE.grab_type()

@@ -18,7 +18,7 @@ PREFABS.Wall_generic_direct_waterfall =
   on_liquids = "only",
 
   sound = "Water_Streaming",
-},
+}
 
 PREFABS.Wall_generic_ceiling_sleuce =
 {
@@ -40,7 +40,7 @@ PREFABS.Wall_generic_ceiling_sleuce =
   on_liquids = "only",
 
   sound = "Waterfall_Rush",
-},
+}
 
 PREFABS.Wall_generic_side_sleuce =
 {
@@ -62,4 +62,4 @@ PREFABS.Wall_generic_side_sleuce =
   on_liquids = "only",
 
   sound = "Water_Streaming",
-},
+}

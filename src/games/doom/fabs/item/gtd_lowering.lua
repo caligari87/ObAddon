@@ -14,7 +14,7 @@ PREFABS.Item_gtd_lowering_skin_cage =
 
   tag_1  = "?door_tag",
   door_action = "S1_LowerFloor",
-},
+}
 
 PREFABS.Item_gtd_lowering_uac_cage =
 {
@@ -24,7 +24,7 @@ PREFABS.Item_gtd_lowering_uac_cage =
   theme = "tech",
 
   height = 88,
-},
+}
 
 PREFABS.Item_gtd_lowering_wood_cage =
 {
@@ -34,4 +34,4 @@ PREFABS.Item_gtd_lowering_wood_cage =
   theme    = "urban",
 
   height   = 48,
-},
+}

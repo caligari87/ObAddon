@@ -26,8 +26,8 @@ PREFABS.Cage_wall_brncage_tech =
   {
     BRNSMALC = 50,
     MIDSPACE = 50,
-  },
-},
+  }
+}
 
 PREFABS.Cage_wall_brncage_urban =
 {
@@ -37,7 +37,7 @@ PREFABS.Cage_wall_brncage_urban =
 
   tex_LITEBLU4 = "LITE5",
   tex_COMPBLUE = "BRICKLIT",
-},
+}
 
 PREFABS.Cage_wall_brncage_hell =
 {
@@ -55,4 +55,4 @@ PREFABS.Cage_wall_brncage_hell =
   tex_COMPBLUE = "FIRELAVA",
 
   flat_FLAT23 = "RROCK02",
-},
+}

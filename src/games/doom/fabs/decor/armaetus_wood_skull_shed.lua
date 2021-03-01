@@ -14,8 +14,8 @@ PREFABS.Decor_wood_skull_shed =
   bound_z1 = 0,
   bound_z2 = 128,
 
-  z_fit = { 24,88 },
-},
+  z_fit = { 24,88 }
+}
 
 PREFABS.Decor_wood_skull_shed_octo =
 {
@@ -26,5 +26,5 @@ PREFABS.Decor_wood_skull_shed_octo =
 
   bound_z2 = 192,
 
-  z_fit = { 40,88 },
-},
+  z_fit = { 40,88 }
+}

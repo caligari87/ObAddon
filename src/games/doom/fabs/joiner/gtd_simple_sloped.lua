@@ -26,4 +26,4 @@ PREFABS.Joiner_simple_sloped =
 
   x_fit = { 128-4,128+4 },
   y_fit = { 64,112 , 176,224 },
-},
+}

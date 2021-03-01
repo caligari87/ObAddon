@@ -7,7 +7,7 @@ PREFABS.Decor_armaetus_basic_computer1 =
 
   prob   = 3500,
   theme  = "!hell",
-  env    = "building" --!cave
+  env    = "building", --!cave
 
   where  = "point",
   size   = 96,
@@ -15,19 +15,19 @@ PREFABS.Decor_armaetus_basic_computer1 =
 
   bound_z1 = 0,
   bound_z2 = 138,
-},
+}
 
 PREFABS.Decor_armaetus_basic_computer2 =
 {
   template = "Decor_armaetus_basic_computer1",
   map      = "MAP02",
-},
+}
 
 PREFABS.Decor_armaetus_basic_computer3 =
 {
   template = "Decor_armaetus_basic_computer1",
   map      = "MAP03",
-},
+}
 
 -- This uses action 261 ( Set Tagged Ceiling Lighting to Lighting on 1st Sidedef's Sector ) to give the
 -- effect of light on the lower area without light being on the ceiling indoors. It is done with a tagged linedef
@@ -40,4 +40,4 @@ PREFABS.Decor_armaetus_basic_computer4 =
 {
   template = "Decor_armaetus_basic_computer1",
   map      = "MAP04",
-},
+}

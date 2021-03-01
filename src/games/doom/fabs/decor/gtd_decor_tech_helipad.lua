@@ -14,11 +14,11 @@ PREFABS.Tech_helipad_H =
 
   bound_z1 = 0,
   bound_z2 = 16,
-},
+}
 
 PREFABS.Tech_helipad_O =
 {
   template = "Tech_helipad_H",
 
   map      = "MAP02",
-},
+}

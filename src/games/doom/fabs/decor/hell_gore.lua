@@ -19,8 +19,8 @@ PREFABS.Decor_hellgore1 =
   bound_z1 = 0,
   bound_z2 = 192,
 
-  face_open = true
-},
+  face_open = true,
+}
 
 
 -- Inverted cross
@@ -40,8 +40,8 @@ PREFABS.Decor_hellgore1_inverted =
   bound_z1 = 0,
   bound_z2 = 192,
 
-  face_open = true
-},
+  face_open = true,
+}
 
 -- Hack to place normal decorations
 PREFABS.Decor_hellgore6 =
@@ -54,11 +54,11 @@ PREFABS.Decor_hellgore6 =
 
   where  = "point",
   size   = 64,
-  height = 64 --guess
+  height = 64, --guess
 
   bound_z1 = 0,
 
-  solid_ents = true
+  solid_ents = true,
 
   thing_34 =
   {
@@ -67,5 +67,5 @@ PREFABS.Decor_hellgore6 =
     skull_kebab = 20,
     skull_pole = 15,
     skull_cairn = 10,
-  },
-},
+  }
+}

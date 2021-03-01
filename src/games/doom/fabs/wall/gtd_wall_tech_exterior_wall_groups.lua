@@ -17,7 +17,7 @@ PREFABS.Wall_tech_outdoor_caution_strip = --#
   bound_z2 = 128,
 
   z_fit = {24,32},
-},
+}
 
 PREFABS.Wall_tech_outdoor_orange_light_stack = --#
 {
@@ -28,7 +28,7 @@ PREFABS.Wall_tech_outdoor_orange_light_stack = --#
   group = "tech_o_orange_light_stack",
 
   z_fit    = "stretch",
-},
+}
 
 -- LITE strips
 
@@ -41,7 +41,7 @@ PREFABS.Wall_tech_outdoor_lite_strip_white = --#
   group = "tech_o_lite_strip_white",
 
   z_fit = "bottom",
-},
+}
 
 PREFABS.Wall_tech_outdoor_lite_strip_blue = --#
 {
@@ -54,7 +54,7 @@ PREFABS.Wall_tech_outdoor_lite_strip_blue = --#
   z_fit = "bottom",
 
   tex_LITE3 = "LITEBLU4",
-},
+}
 
 -- teklite inset
 
@@ -67,7 +67,7 @@ PREFABS.Wall_tech_outdoor_inset_teklite = --#
   group = "tech_o_inset_teklite",
 
   z_fit    = "top",
-},
+}
 
 PREFABS.Wall_tech_outdoor_inset_teklite2 = --#
 {
@@ -80,7 +80,7 @@ PREFABS.Wall_tech_outdoor_inset_teklite2 = --#
   tex_TEKLITE = "TEKLITE2",
 
   z_fit    = "top",
-},
+}
 
 -- green light
 
@@ -93,7 +93,7 @@ PREFABS.Wall_tech_outdoor_halfbase_green_light = --#
   group = "tech_o_halfbase_green_light",
 
   z_fit    = {40,56},
-},
+}
 
 PREFABS.Wall_tech_outdoor_halfbase_blue_triangle = --#
 {
@@ -106,7 +106,7 @@ PREFABS.Wall_tech_outdoor_halfbase_blue_triangle = --#
   tex_TEKGREN5 = "TEKGREN3",
 
   z_fit     = "top",
-},
+}
 
 -- because you need to be constantly reminded how the UAC screwed everything up
 
@@ -127,7 +127,7 @@ PREFABS.Wall_tech_outdoor_giant_UAC_sign = --#
   },
 
   sector_1 = { [0]=80, [1]=15 },
-},
+}
 
 -- vents
 
@@ -146,7 +146,7 @@ PREFABS.Wall_tech_outdoor_double_hanging_vents = --#
   },
 
   z_fit = "bottom",
-},
+}
 
 -- overhangs
 
@@ -164,7 +164,7 @@ PREFABS.Wall_tech_outdoor_overhanging_braced_vent = --#
   z_fit = { 48,56 },
 
   bound_z2 = 192,
-},
+}
 
 PREFABS.Wall_tech_outdoor_overhanging_lite_platform = --#
 {
@@ -177,7 +177,7 @@ PREFABS.Wall_tech_outdoor_overhanging_lite_platform = --#
   deep = 64,
 
   z_fit = { 12,20 },
-},
+}
 
 PREFABS.Wall_tech_outdoor_pipe_junctions = --#
 {
@@ -198,7 +198,7 @@ PREFABS.Wall_tech_outdoor_pipe_junctions = --#
   z_fit = { 32,96 },
 
   bound_z2 = 192,
-},
+}
 
 PREFABS.Wall_tech_hadleys_hope_sort_of_wall = --#
 {
@@ -217,7 +217,7 @@ PREFABS.Wall_tech_hadleys_hope_sort_of_wall = --#
   z_fit = "bottom",
 
   bound_z2 = 192,
-},
+}
 
 PREFABS.Wall_tech_overhanging_lights = --#
 {
@@ -232,7 +232,7 @@ PREFABS.Wall_tech_overhanging_lights = --#
   engine = "zdoom",
 
   z_fit = "top",
-},
+}
 
 PREFABS.Wall_outdoor_shiny_silver_overhang = --#
 {
@@ -254,7 +254,7 @@ PREFABS.Wall_outdoor_shiny_silver_overhang = --#
   z_fit = "bottom",
 
   bound_z2 = 160,
-},
+}
 
 PREFABS.Wall_outdoor_shiny_silver_overhang_EPIC =
 {
@@ -283,7 +283,7 @@ PREFABS.Wall_outdoor_shiny_silver_overhang_EPIC =
   z_fit = "bottom",
 
   bound_z2 = 160,
-},
+}
 
 PREFABS.Wall_tech_caution_bracket_silver_scaffolding = --#
 {
@@ -299,7 +299,7 @@ PREFABS.Wall_tech_caution_bracket_silver_scaffolding = --#
   tex_SHAWN4 = "SHAWN2",
   tex_WARNSTEP = "METAL",
   flat_WARN2 = "CEIL5_2",
-},
+}
 
 PREFABS.Wall_tech_caution_bracket_silver_scaffolding_EPIC =
 {
@@ -313,7 +313,7 @@ PREFABS.Wall_tech_caution_bracket_silver_scaffolding_EPIC =
   texture_pack = "armaetus",
 
   z_fit = { 56,72 },
-},
+}
 
 PREFABS.Wall_tech_outdoor_concrete_brace = --#
 {
@@ -326,7 +326,7 @@ PREFABS.Wall_tech_outdoor_concrete_brace = --#
   group = "tech_o_concrete_base",
 
   z_fit = { 0,32 , 48,56 },
-},
+}
 
 PREFABS.Wall_tech_fence_lights_uac_thing = --#
 {
@@ -342,7 +342,7 @@ PREFABS.Wall_tech_fence_lights_uac_thing = --#
   tex_TEKGRDR = "TEKGREN2",
   tex_BROWN2 = "GRAY7",
   tex_FENCE2 = "MIDBARS1",
-},
+}
 
 PREFABS.Wall_tech_fence_lights_uac_thing_EPIC =
 {
@@ -361,7 +361,7 @@ PREFABS.Wall_tech_fence_lights_uac_thing_EPIC =
     TEKGRDR = 1,
     TEKGRBLU = 5,
   },
-},
+}
 
 PREFABS.Wall_tech_outdoor_tekgren_grates_thing = --#
 {
@@ -373,7 +373,7 @@ PREFABS.Wall_tech_outdoor_tekgren_grates_thing = --#
   z_fit = "top",
 
   tex_FENCE3 = "MIDBARS3",
-},
+}
 
 PREFABS.Wall_tech_outdoor_tekgren_grates_thing_EPIC =
 {
@@ -387,7 +387,7 @@ PREFABS.Wall_tech_outdoor_tekgren_grates_thing_EPIC =
   texture_pack = "armaetus",
 
   z_fit = "top",
-},
+}
 
 PREFABS.Wall_tech_outdoor_black_mesa_overlook = -- #
 {
@@ -405,7 +405,7 @@ PREFABS.Wall_tech_outdoor_black_mesa_overlook = -- #
   z_fit = { 120,164 },
 
   bound_z2 = 192,
-},
+}
 
 PREFABS.Wall_tech_outdoor_black_mesa_overlook_EPIC =
 {
@@ -426,7 +426,7 @@ PREFABS.Wall_tech_outdoor_black_mesa_overlook_EPIC =
   z_fit = { 120,164 },
 
   bound_z2 = 192,
-},
+}
 
 PREFABS.Wall_tech_outdoor_compblue_tall_EPIC = --#
 {
@@ -440,7 +440,7 @@ PREFABS.Wall_tech_outdoor_compblue_tall_EPIC = --#
   group = "tech_o_compblue_tall",
 
   z_fit = { 28,60 },
-},
+}
 
 PREFABS.Wall_tech_outdoor_compblue_tall =
 {
@@ -452,7 +452,7 @@ PREFABS.Wall_tech_outdoor_compblue_tall =
   tex_SILVBLU1 = "SHAWN2",
 
   z_fit = { 28,60 },
-},
+}
 
 PREFABS.Wall_tech_outdoor_grey_metal_sloped_EPIC = --#
 {
@@ -468,7 +468,7 @@ PREFABS.Wall_tech_outdoor_grey_metal_sloped_EPIC = --#
   group = "tech_o_grey_metal_sloped",
 
   z_fit = { 20,68 },
-},
+}
 
 PREFABS.Wall_tech_outdoor_grey_metal_sloped =
 {
@@ -484,7 +484,7 @@ PREFABS.Wall_tech_outdoor_grey_metal_sloped =
   tex_URBAN8 = "SHAWN2",
   tex_GRAYMET4 = "GRAY7",
   tex_BIGDOORC = "DOORSTOP",
-},
+}
 
 PREFABS.Wall_tech_outdoor_tall_light = --#
 {
@@ -494,7 +494,7 @@ PREFABS.Wall_tech_outdoor_tall_light = --#
   group = "tech_o_tall_light",
 
   z_fit = "top",
-},
+}
 
 PREFABS.Wall_tech_outdoor_tall_light_alt_color = --#
 {
@@ -507,7 +507,7 @@ PREFABS.Wall_tech_outdoor_tall_light_alt_color = --#
   tex_CEIL4_3 = "FLOOR1_6",
 
   z_fit = "top",
-},
+}
 
 PREFABS.Wall_hexagon_uac_spotlights = --#
 {
@@ -519,4 +519,4 @@ PREFABS.Wall_hexagon_uac_spotlights = --#
   group = "tech_o_hexagon_uac_spotlights",
 
   z_fit = { 64,72  },
-},
+}

@@ -25,4 +25,4 @@ PREFABS.Exit_scionox_quakeish_tech_exit =
 
   x_fit  = "frame",
   y_fit  = "top",
-},
+}

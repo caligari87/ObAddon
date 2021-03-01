@@ -3,9 +3,9 @@ PREFABS.Pic_armaetus_waterfountain =
   file   = "picture/armaetus_pic_waterfountain.wad",
   map    = "MAP01",
 
-  prob   = 25 -- 25,
+  prob   = 25, -- 25,
 
-  liquid = true
+  liquid = true,
 
   theme  = "!tech",
 
@@ -25,4 +25,4 @@ PREFABS.Pic_armaetus_waterfountain =
   y_fit = "top",
 
   sound = "Water_Streaming",
-},
+}

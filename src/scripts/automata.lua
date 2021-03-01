@@ -494,7 +494,7 @@ function GRID_CLASS.flood_fill(grid)
   while #next_points > 0 do
     local np_list = next_points ; next_points = {}
 
-    for _,P in pairs(pairs(np_list)) do
+    for _,P in pairs(np_list) do
       flood_point(P.x, P.y)
     end
   end

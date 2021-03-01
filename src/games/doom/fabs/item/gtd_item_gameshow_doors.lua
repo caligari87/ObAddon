@@ -19,25 +19,25 @@ PREFABS.Item_gtd_gameshow_doors_1 =
 
   x_fit = "frame",
   y_fit = "top",
-},
+}
 
 PREFABS.Item_gtd_gameshow_doors_2 =
 {
   template = "Item_gtd_gameshow_doors_1",
   map = "MAP02",
-},
+}
 
 PREFABS.Item_gtd_gameshow_doors_3 =
 {
   template = "Item_gtd_gameshow_doors_1",
   map = "MAP03",
-},
+}
 
 PREFABS.Item_gtd_gameshow_doors_4 =
 {
   template = "Item_gtd_gameshow_doors_1",
   map = "MAP04",
-},
+}
 
 PREFABS.Item_gtd_gameshow_doors_1_hell =
 {
@@ -48,7 +48,7 @@ PREFABS.Item_gtd_gameshow_doors_1_hell =
 
   tex_DOOR1 = "WOODMET1",
   flat_FLAT19 = "FLOOR6_1",
-},
+}
 
 PREFABS.Item_gtd_gameshow_doors_2_hell =
 {
@@ -59,7 +59,7 @@ PREFABS.Item_gtd_gameshow_doors_2_hell =
 
   tex_DOOR1 = "WOODMET1",
   flat_FLAT19 = "FLOOR6_1",
-},
+}
 
 PREFABS.Item_gtd_gameshow_doors_3_hell =
 {
@@ -70,7 +70,7 @@ PREFABS.Item_gtd_gameshow_doors_3_hell =
 
   tex_DOOR1 = "WOODMET1",
   flat_FLAT19 = "FLOOR6_1",
-},
+}
 
 PREFABS.Item_gtd_gameshow_doors_4_hell =
 {
@@ -81,4 +81,4 @@ PREFABS.Item_gtd_gameshow_doors_4_hell =
 
   tex_DOOR1 = "WOODMET1",
   flat_FLAT19 = "FLOOR6_1",
-},
+}

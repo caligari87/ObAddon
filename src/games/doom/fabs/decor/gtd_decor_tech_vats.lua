@@ -17,4 +17,4 @@ PREFABS.Decor_tech_vats =
   bound_z2 = 128,
 
   z_fit = "top",
-},
+}

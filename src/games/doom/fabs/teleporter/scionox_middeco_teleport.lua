@@ -22,7 +22,7 @@ PREFABS.Teleporter_scionox_middeco_teleport =
   tag_2 = "?in_tag",
 
   sector_8  = { [8]=50, [1]=10, [2]=10, [3]=10, [17]=10 },
-},
+}
 
 PREFABS.Teleporter_scionox_middeco_teleport_2 =
 {
@@ -37,7 +37,7 @@ PREFABS.Teleporter_scionox_middeco_teleport_2 =
   flat_GATE2 = "FLAT22",
   flat_RROCK09 = "FLOOR4_6",
   flat_FLOOR1_6 = "CEIL4_2",
-},
+}
 
 PREFABS.Teleporter_scionox_middeco_teleport_3 =
 {
@@ -50,7 +50,7 @@ PREFABS.Teleporter_scionox_middeco_teleport_3 =
   flat_GATE2 = "GATE4",
   flat_RROCK09 = "FLOOR0_3",
   flat_FLOOR1_6 = "CEIL5_1",
-},
+}
 
 PREFABS.Teleporter_scionox_middeco_teleport_4 =
 {
@@ -62,7 +62,7 @@ PREFABS.Teleporter_scionox_middeco_teleport_4 =
   flat_GATE2 = "GATE4",
   flat_RROCK09 = "FLAT5_5",
   flat_FLOOR1_6 = "FLOOR7_1",
-},
+}
 
 PREFABS.Teleporter_scionox_middeco_teleport_5 =
 {
@@ -74,7 +74,7 @@ PREFABS.Teleporter_scionox_middeco_teleport_5 =
   flat_GATE2 = "GATE3",
   flat_RROCK09 = "FLAT5_1",
   flat_FLOOR1_6 = "FLAT5_2",
-},
+}
 
 PREFABS.Teleporter_scionox_middeco_teleport_6 =
 {
@@ -86,4 +86,4 @@ PREFABS.Teleporter_scionox_middeco_teleport_6 =
   flat_GATE2 = "GATE1",
   flat_RROCK09 = "FLOOR7_2",
   flat_FLOOR1_6 = "FLOOR7_2",
-},
+}

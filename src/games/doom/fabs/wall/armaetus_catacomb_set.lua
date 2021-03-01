@@ -21,7 +21,7 @@ PREFABS.Wall_armaetus_catacomb_straight =
   z_fit  = "frame",
 
   tex_CATACMB1 = { CATACMB1=50, CATACMB4=50 },
-},
+}
 
 PREFABS.Wall_armaetus_catacomb_diagonal =
 {
@@ -33,7 +33,7 @@ PREFABS.Wall_armaetus_catacomb_diagonal =
   where    = "diagonal",
 
   tex_CATACMB1 = { CATACMB1=50, CATACMB4=50 },
-},
+}
 
 -- Brown catacombs
 
@@ -46,7 +46,7 @@ PREFABS.Wall_armaetus_catacomb_brown =
   map      = "MAP01",
 
   tex_CATACMB1 = "CATACMB4",
-},
+}
 
 PREFABS.Wall_armaetus_catacomb_brown_diagonal =
 {
@@ -59,4 +59,4 @@ PREFABS.Wall_armaetus_catacomb_brown_diagonal =
   where = "diagonal",
 
   tex_CATACMB1 = "CATACMB4",
-},
+}

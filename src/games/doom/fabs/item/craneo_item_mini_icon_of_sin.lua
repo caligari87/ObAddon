@@ -19,4 +19,4 @@ PREFABS.Item_craneo_mini_icon_of_sin =
 
   x_fit = { 32,48 , 208,224 },
   y_fit = "top",
-},
+}

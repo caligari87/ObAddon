@@ -12,7 +12,7 @@ PREFABS.Wall_fake_door =
 
   on_scenics = "never",
 
-  need_solid_back = true
+  need_solid_back = true,
 
   where  = "edge",
   height = 128,
@@ -29,7 +29,7 @@ PREFABS.Wall_fake_door =
     DOOR1 = 50,
     DOOR3 = 50,
   },
-},
+}
 
 PREFABS.Wall_fake_door_tech =
 {
@@ -38,7 +38,7 @@ PREFABS.Wall_fake_door_tech =
   theme = "tech",
 
   prob  = 2,
-},
+}
 
 -- braceless fake door
 
@@ -48,7 +48,7 @@ PREFABS.Wall_fake_door_braceless =
   map      = "MAP06",
 
   prob     = 40,
-},
+}
 
 PREFABS.Wall_fake_door_tech_braceless =
 {
@@ -58,7 +58,7 @@ PREFABS.Wall_fake_door_tech_braceless =
   theme    = "tech",
 
   prob     = 3,
-},
+}
 
 --
 
@@ -96,7 +96,7 @@ PREFABS.Wall_modern_piping =
     TEKWALL4 = 0.5,
     TEKWALL6 = 0.5,
   },
-},
+}
 
 -- shutters
 
@@ -112,7 +112,7 @@ PREFABS.Wall_modern_shutter =
 
   on_scenics = "never",
 
-  need_solid_back = true
+  need_solid_back = true,
 
   where  = "edge",
   height = 128,
@@ -132,7 +132,7 @@ PREFABS.Wall_modern_shutter =
     STEP3 = 50,
     STEP5 = 50,
   },
-},
+}
 
 PREFABS.Wall_modern_shutter_EPIC =
 {
@@ -149,7 +149,7 @@ PREFABS.Wall_modern_shutter_EPIC =
 
   on_scenics = "never",
 
-  need_solid_back = true
+  need_solid_back = true,
 
   where  = "edge",
   height = 128,
@@ -171,7 +171,7 @@ PREFABS.Wall_modern_shutter_EPIC =
     URBAN6 = 150,
     URBAN8 = 150,
   },
-},
+}
 
 PREFABS.Wall_modern_shutter_braceless =
 {
@@ -179,7 +179,7 @@ PREFABS.Wall_modern_shutter_braceless =
   map      = "MAP07",
 
   prob     = 40,
-},
+}
 
 PREFABS.Wall_modern_shutter_EPIC_braceless =
 {
@@ -187,7 +187,7 @@ PREFABS.Wall_modern_shutter_EPIC_braceless =
   map      = "MAP07",
 
   prob     = 40,
-},
+}
 
 PREFABS.Wall_fake_warehouse_window =
 {
@@ -217,7 +217,7 @@ PREFABS.Wall_fake_warehouse_window =
     TEKGREN5 = 8,
     TEKLITE2 = 6,
   },
-},
+}
 
 PREFABS.Wall_double_dark_windows =
 {
@@ -244,7 +244,7 @@ PREFABS.Wall_double_dark_windows =
     BLAKWAL1 = 50,
     BLAKWAL2 = 50,
   },
-},
+}
 
 PREFABS.Wall_wide_dark_windows =
 {
@@ -264,7 +264,7 @@ PREFABS.Wall_wide_dark_windows =
     STEP4 = 3,
     STEP5 = 3,
   },
-},
+}
 
 PREFABS.Wall_wide_dark_windows_with_door =
 {
@@ -279,7 +279,7 @@ PREFABS.Wall_wide_dark_windows_with_door =
 
   z_fit = "top",
 
-  need_solid_back = true
+  need_solid_back = true,
 
   tex_MODWALL4 = "MODWALL4",
   tex_MODWALL3 =
@@ -294,7 +294,7 @@ PREFABS.Wall_wide_dark_windows_with_door =
     SPCDOOR1 = 25,
     SPCDOOR2 = 25,
   },
-},
+}
 
 PREFABS.Wall_holo_marquee =
 {
@@ -319,4 +319,4 @@ PREFABS.Wall_holo_marquee =
     COMPGREN = 50,
     COMPRED = 50,
   },
-},
+}

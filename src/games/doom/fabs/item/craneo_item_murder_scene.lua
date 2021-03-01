@@ -14,4 +14,4 @@ PREFABS.Item_craneo_murder_scene =
   env   = "outdoor",
 
   texture_pack = "armaetus",
-},
+}

@@ -24,8 +24,8 @@ PREFABS.Pillar_gtd_generic1 =
     LITE5 = 50,
     LITEBLU4 = 50,
     LITEBLU1 = 50,
-  },
-},
+  }
+}
 
 PREFABS.Pillar_gtd_generic1_hell =
 {
@@ -39,8 +39,8 @@ PREFABS.Pillar_gtd_generic1_hell =
     FIREBLU1 = 50,
     FIRELAVA = 50,
     FIREMAG1 = 50,
-  },
-},
+  }
+}
 
 PREFABS.Pillar_gtd_generic2 =
 {
@@ -58,8 +58,8 @@ PREFABS.Pillar_gtd_generic2 =
     SILVER2 = 50,
     LITE3 = 50,
     LITEBLU4 = 50,
-  },
-},
+  }
+}
 
 PREFABS.Pillar_gtd_generic2_hell =
 {
@@ -76,8 +76,8 @@ PREFABS.Pillar_gtd_generic2_hell =
   {
     FIRELAVA = 20,
     FIREMAG1 = 20,
-  },
-},
+  }
+}
 
 PREFABS.Pillar_gtd_generic3 =
 {
@@ -89,7 +89,7 @@ PREFABS.Pillar_gtd_generic3 =
   z_fit = {24,74},
 
   theme = "any",
-},
+}
 
 --
 
@@ -110,8 +110,8 @@ PREFABS.Pillar_gtd_generic1_2x =
     LITE5 = 50,
     LITEBLU4 = 50,
     LITEBLU1 = 50,
-  },
-},
+  }
+}
 
 PREFABS.Pillar_gtd_generic1_hell_2x =
 {
@@ -130,8 +130,8 @@ PREFABS.Pillar_gtd_generic1_hell_2x =
     FIREBLU1 = 50,
     FIRELAVA = 50,
     FIREMAG1 = 50,
-  },
-},
+  }
+}
 
 PREFABS.Pillar_gtd_generic1_4x =
 {
@@ -150,8 +150,8 @@ PREFABS.Pillar_gtd_generic1_4x =
     LITE5 = 50,
     LITEBLU4 = 50,
     LITEBLU1 = 50,
-  },
-},
+  }
+}
 
 PREFABS.Pillar_gtd_generic1_hell_4x =
 {
@@ -170,8 +170,8 @@ PREFABS.Pillar_gtd_generic1_hell_4x =
     FIREBLU1 = 50,
     FIRELAVA = 50,
     FIREMAG1 = 50,
-  },
-},
+  }
+}
 
 PREFABS.Pillar_gtd_generic3_2x =
 {
@@ -187,8 +187,8 @@ PREFABS.Pillar_gtd_generic3_2x =
 
   height = 96,
   bound_z2 = 96,
-  z_fit = {24,74},
-},
+  z_fit = {24,74}
+}
 
 PREFABS.Pillar_gtd_generic3_4x =
 {
@@ -204,5 +204,5 @@ PREFABS.Pillar_gtd_generic3_4x =
 
   height = 96,
   bound_z2 = 96,
-  z_fit = {24,74},
-},
+  z_fit = {24,74}
+}

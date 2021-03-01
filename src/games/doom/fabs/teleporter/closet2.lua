@@ -26,7 +26,7 @@ PREFABS.Teleporter_Closet2 =
   flat_FLAT5_3 = "REDWALL",
 
   sector_8 = { [8]=50, [1]=15, [2]=10, [3]=10, [0]=5 },
-},
+}
 
 
 PREFABS.Teleporter_Closet_tech =
@@ -51,7 +51,7 @@ PREFABS.Teleporter_Closet_tech =
   tag_2 = "?in_tag",
 
 
-},
+}
 
 PREFABS.Teleporter_Closet_urban =
 {
@@ -76,7 +76,7 @@ PREFABS.Teleporter_Closet_urban =
 
   sector_8 = { [8]=50, [1]=15, [2]=10, [3]=10, [0]=3 },
 
-},
+}
 
 PREFABS.Teleporter_Closet_hell =
 {
@@ -99,7 +99,7 @@ PREFABS.Teleporter_Closet_hell =
   tag_1 = "?out_tag",
   tag_2 = "?in_tag",
 
-},
+}
 
 PREFABS.Teleporter_Closet_general =
 {
@@ -125,4 +125,4 @@ PREFABS.Teleporter_Closet_general =
   sector_13 = { [13]=50, [12]=25, [1]=15, [2]=10, [3]=10, [0]=5 },
   tex_SW1GARG = { SW1GARG=50, SW1LION=50, SW1SATYR=50 },
 
-},
+}

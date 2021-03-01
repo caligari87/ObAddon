@@ -27,7 +27,7 @@ PREFABS.Joiner_simple2 =
   tex_SHAWN2 = "WOOD1",
   flat_FLAT20 = { FLAT5_1=50, FLAT5_2=50 },
 
-},
+}
 
 PREFABS.Joiner_simple2_urban1 =
 {
@@ -39,7 +39,7 @@ PREFABS.Joiner_simple2_urban1 =
   tex_SHAWN2 = "WOOD1",
   flat_FLAT20 = { FLAT5_1=50, FLAT5_2=50 },
 
-},
+}
 
 PREFABS.Joiner_simple2_urban2 =
 {
@@ -51,7 +51,7 @@ PREFABS.Joiner_simple2_urban2 =
   tex_SHAWN2 = "STONE",
   flat_FLAT20 = "FLAT5_4",
 
-},
+}
 
 PREFABS.Joiner_simple2_urban3 =
 {
@@ -63,7 +63,7 @@ PREFABS.Joiner_simple2_urban3 =
   flat_FLAT20 = { FLAT8=50, FLOOR0_2=50 },
 
 
-},
+}
 
 PREFABS.Joiner_simple2_urban4 =
 {
@@ -74,7 +74,7 @@ PREFABS.Joiner_simple2_urban4 =
   tex_SHAWN2 = "CEMENT9",
   flat_FLAT20 = { FLAT5_4=50, FLAT19=50 },
 
-},
+}
 
 PREFABS.Joiner_simple2_urban5 =
 {
@@ -84,7 +84,7 @@ PREFABS.Joiner_simple2_urban5 =
   tex_WOODMET4 = { STONE6=50, STUCCO1=50, STUCCO2=50, STUCCO3=50 },
   tex_SHAWN2 = "STUCCO",
   flat_FLAT20 = { FLAT5_5=50, FLAT5=50, FLOOR0_1=50 },
-},
+}
 
 PREFABS.Joiner_simple2_tech1 =
 {
@@ -97,7 +97,7 @@ PREFABS.Joiner_simple2_tech1 =
   tex_SHAWN2 = "SHAWN2",
   flat_FLAT20 = { FLAT20=50, FLAT23=50 },
 
-},
+}
 
 PREFABS.Joiner_simple2_tech2 =
 {
@@ -110,7 +110,7 @@ PREFABS.Joiner_simple2_tech2 =
   tex_SHAWN2 = "STONE",
   flat_FLAT20 = { FLAT5_4=50, FLOOR0_3=50 },
 
-},
+}
 
 PREFABS.Joiner_simple2_tech3 =
 {
@@ -123,7 +123,7 @@ PREFABS.Joiner_simple2_tech3 =
   tex_SHAWN2 = "STONE",
   flat_FLAT20 = { FLAT5_4=50, FLOOR0_3=50, FLAT19=50 },
 
-},
+}
 
 PREFABS.Joiner_simple2_tech4 =
 {
@@ -136,7 +136,7 @@ PREFABS.Joiner_simple2_tech4 =
   tex_SHAWN2 = "STONE4",
   flat_FLAT20 = { FLAT5_4=50, FLOOR0_3=50 },
 
-},
+}
 
 PREFABS.Joiner_simple2_tech5 =
 {
@@ -149,7 +149,7 @@ PREFABS.Joiner_simple2_tech5 =
   tex_SHAWN2 = "METAL2",
   flat_FLAT20 = { SLIME14=50, SLIME15=50 },
 
-},
+}
 
 PREFABS.Joiner_simple2_tech6 =
 {
@@ -162,7 +162,7 @@ PREFABS.Joiner_simple2_tech6 =
   tex_SHAWN2 = "SHAWN2",
   flat_FLAT20 = { FLAT20=50, FLAT23=50 },
 
-},
+}
 
 PREFABS.Joiner_simple2_tech7 =
 {
@@ -175,7 +175,7 @@ PREFABS.Joiner_simple2_tech7 =
   tex_SHAWN2 = { TEKWALL4=50, TEKWALL1=50 },
   flat_FLAT20 = "CEIL5_1",
 
-},
+}
 
 PREFABS.Joiner_simple2_hell1 =
 {
@@ -186,7 +186,7 @@ PREFABS.Joiner_simple2_hell1 =
   tex_SHAWN2 = { STONE6=50, STONE7=50 },
   flat_FLAT20 = { FLAT5_5=50, FLAT5=50 },
 
-},
+}
 
 PREFABS.Joiner_simple2_hell2 =
 {
@@ -197,7 +197,7 @@ PREFABS.Joiner_simple2_hell2 =
   tex_SHAWN2 = "MARBLE1",
   flat_FLAT20 = { DEM1_5=50, DEM1_6=50, FLOOR7_2=50 },
 
-},
+}
 
 PREFABS.Joiner_simple2_hell3 =
 {
@@ -208,7 +208,7 @@ PREFABS.Joiner_simple2_hell3 =
   tex_SHAWN2 = "SKSNAKE1",
   flat_FLAT20 = "SFLR6_1",
 
-},
+}
 
 PREFABS.Joiner_simple2_hell3a =
 {
@@ -219,7 +219,7 @@ PREFABS.Joiner_simple2_hell3a =
   tex_SHAWN2 = "SKSNAKE2",
   flat_FLAT20 = "SFLR6_4",
 
-},
+}
 
 PREFABS.Joiner_simple2_hell4 =
 {
@@ -230,7 +230,7 @@ PREFABS.Joiner_simple2_hell4 =
   tex_SHAWN2 = "SP_HOT1",
   flat_FLAT20 = "FLAT5_3",
 
-},
+}
 
 PREFABS.Joiner_simple2_hell5 =
 {
@@ -241,7 +241,7 @@ PREFABS.Joiner_simple2_hell5 =
   tex_SHAWN2 = "METAL",
   flat_FLAT20 = "CEIL5_2",
 
-},
+}
 
 
 PREFABS.Joiner_simple2_general1 =
@@ -253,7 +253,7 @@ PREFABS.Joiner_simple2_general1 =
   tex_SHAWN2 = { STONE4=50, STONE=50 },
   flat_FLAT20 = "FLAT5_4",
 
-},
+}
 
 PREFABS.Joiner_simple2_general2 =
 {
@@ -263,4 +263,4 @@ PREFABS.Joiner_simple2_general2 =
   tex_SHAWN2 = "GRAY1",
   flat_FLAT20 = "FLAT5_4",
 
-},
+}

@@ -17,7 +17,7 @@ PREFABS.Hallway_vent_plain =
   shape  = "I",
 
   deep   = 16,
-},
+}
 
 PREFABS.Hallway_vent_plain_hell =
 {
@@ -27,7 +27,7 @@ PREFABS.Hallway_vent_plain_hell =
 
   tex_MIDSPACE = "MIDBRN1",
 
-},
+}
 
 
 PREFABS.Hallway_vent_door =
@@ -38,7 +38,7 @@ PREFABS.Hallway_vent_door =
   theme  = "!tech",
 
   prob   = 30,
-},
+}
 
 PREFABS.Hallway_vent_door_tech =
 {
@@ -53,7 +53,7 @@ PREFABS.Hallway_vent_door_tech =
   tex_DOOR3 = { DOOR3=50, DOOR1=50 },
   flat_CEIL5_2 = "FLAT20",
 
-},
+}
 
 PREFABS.Hallway_vent_secret =
 {
@@ -62,7 +62,7 @@ PREFABS.Hallway_vent_secret =
   map    = "MAP05",
   key    = "secret",
   theme  = "urban",
-},
+}
 
 PREFABS.Hallway_vent_secret_tech =
 {
@@ -73,7 +73,7 @@ PREFABS.Hallway_vent_secret_tech =
   theme  = "tech",
 
   tex_SW1GARG = "TEKWALL4",
-},
+}
 
 PREFABS.Hallway_vent_secret_hell =
 {
@@ -83,5 +83,5 @@ PREFABS.Hallway_vent_secret_hell =
   key    = "secret",
   theme  = "hell",
 
-  tex_SW1GARG = { SKIN2=50, SP_FACE2=50, SLOPPY1=50, FIREBLU1=50 },
-},
+  tex_SW1GARG = { SKIN2=50, SP_FACE2=50, SLOPPY1=50, FIREBLU1=50 }
+}

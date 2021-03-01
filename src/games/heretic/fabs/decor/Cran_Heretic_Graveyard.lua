@@ -12,4 +12,4 @@ PREFABS.Cran_Heretic_Graveyard =
 
   bound_z1 = 0,
   bound_z2 = 128,
-},
+}

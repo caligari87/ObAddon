@@ -6,7 +6,7 @@ PREFABS.Item_weapon_case =
   map  = "MAP01",
 
   prob = 75,
-},
+}
 
 PREFABS.Item_broken_crate =
 {
@@ -15,4 +15,4 @@ PREFABS.Item_broken_crate =
   size = 64,
 
   map = "MAP02",
-},
+}

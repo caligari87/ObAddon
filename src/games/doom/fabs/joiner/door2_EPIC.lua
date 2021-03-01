@@ -34,7 +34,7 @@ PREFABS.Joiner_EPIC_door2_tech =
   flat_FLOOR0_3 = { FLOOR0_3=50, FLAT5_4=50, CEIL3_5=50, FLAT1=50 },
 
   sector_1  = { [0]=70, [1]=15, [2]=5, [3]=5, [8]=10, [12]=7, [13]=7 },
-},
+}
 
 PREFABS.Joiner_EPIC_door2_urban =
 {
@@ -62,7 +62,7 @@ PREFABS.Joiner_EPIC_door2_urban =
     BIGDOORK = 50,
     BIGDOORL = 50,
   },
-},
+}
 
 PREFABS.Joiner_EPIC_door2_hell =
 {
@@ -84,4 +84,4 @@ PREFABS.Joiner_EPIC_door2_hell =
     BIGDOORJ = 50,
     BIGDOORK = 50,
   },
-},
+}

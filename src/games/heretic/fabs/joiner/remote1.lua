@@ -23,5 +23,5 @@ PREFABS.Joiner_remote1 =
 
   tag_1  = "?door_tag",
   door_action = "S1_OpenDoor",
-},
+}
 

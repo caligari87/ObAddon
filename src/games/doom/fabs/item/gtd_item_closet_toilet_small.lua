@@ -24,4 +24,4 @@ PREFABS.Item_closet_toilet_room_small =
   y_fit = "top",
 
   sound = "Toilet_Running",
-},
+}

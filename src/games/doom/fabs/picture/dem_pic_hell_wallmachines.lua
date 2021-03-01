@@ -22,4 +22,4 @@ PREFABS.Pic_dem_hell_flesh_conveyors_quality_control =
 
   x_fit = "frame",
   y_fit = "top",
-},
+}

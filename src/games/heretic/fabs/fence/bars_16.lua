@@ -24,4 +24,4 @@ PREFABS.Bars_shiny =
 
   tag_1  = "?door_tag",
   door_action = "S1_LowerFloor",
-},
+}

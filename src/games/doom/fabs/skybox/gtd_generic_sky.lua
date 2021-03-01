@@ -11,4 +11,4 @@ PREFABS.Skybox_generic =
 
   bound_z1 = -256,
   bound_z2 = 256,
-},
+}

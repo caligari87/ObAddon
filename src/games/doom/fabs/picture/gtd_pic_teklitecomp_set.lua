@@ -22,7 +22,7 @@ PREFABS.Pic_gtd_teklite_red =
   x_fit = { 100,156 },
   y_fit = "top",
   z_fit = { 68,84 },
-},
+}
 
 -- orange
 PREFABS.Pic_gtd_teklite_orange =
@@ -35,7 +35,7 @@ PREFABS.Pic_gtd_teklite_orange =
   tex_RDWAL01 = "COLLITE2",
   tex_TEKWALL8 = "TEKWALLE",
   tex_COMPRED = "COMPGREN",
-},
+}
 
 -- blue
 PREFABS.Pic_gtd_teklite_blue =
@@ -48,4 +48,4 @@ PREFABS.Pic_gtd_teklite_blue =
   tex_RDWAL01 = "COLLITE3",
   tex_TEKWALL8 = "TEKWALLB",
   tex_COMPRED = "COMPBLUE",
-},
+}

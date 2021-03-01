@@ -27,7 +27,7 @@ PREFABS.Locked_joiner_red =
 
   -- texture is already "DOORRED",
   -- line special is already #33,
-},
+}
 
 
 PREFABS.Locked_joiner_blue =
@@ -37,7 +37,7 @@ PREFABS.Locked_joiner_blue =
 
   tex_DOORRED = "DOORBLU",
   line_33     = 32,
-},
+}
 
 
 PREFABS.Locked_joiner_yellow =
@@ -47,7 +47,7 @@ PREFABS.Locked_joiner_yellow =
 
   tex_DOORRED = "DOORYEL",
   line_33     = 34,
-},
+}
 
 -- Hell--
 
@@ -79,7 +79,7 @@ PREFABS.Locked_joiner_red_hell =
 
   -- texture is already "DOORRED",
   -- line special is already #33,
-},
+}
 
 
 PREFABS.Locked_joiner_blue_hell =
@@ -90,7 +90,7 @@ PREFABS.Locked_joiner_blue_hell =
 
   tex_DOORRED = "DOORBLU2",
   line_33     = 32,
-},
+}
 
 
 PREFABS.Locked_joiner_yellow_hell =
@@ -101,7 +101,7 @@ PREFABS.Locked_joiner_yellow_hell =
 
   tex_DOORRED = "DOORYEL2",
   line_33     = 34,
-},
+}
 
 -- Tech --
 
@@ -133,7 +133,7 @@ PREFABS.Locked_joiner_red_tech =
 
   -- texture is already "DOORRED",
   -- line special is already #33,
-},
+}
 
 
 PREFABS.Locked_joiner_blue_tech =
@@ -144,7 +144,7 @@ PREFABS.Locked_joiner_blue_tech =
 
   tex_DOORRED = "DOORBLU2",
   line_33     = 32,
-},
+}
 
 
 PREFABS.Locked_joiner_yellow_tech =
@@ -155,7 +155,7 @@ PREFABS.Locked_joiner_yellow_tech =
 
   tex_DOORRED = "DOORYEL2",
   line_33     = 34,
-},
+}
 
 
 PREFABS.Locked_joiner_red_tech2 =
@@ -186,7 +186,7 @@ PREFABS.Locked_joiner_red_tech2 =
 
   -- texture is already "DOORRED",
   -- line special is already #33,
-},
+}
 
 
 PREFABS.Locked_joiner_blue_tech =
@@ -197,7 +197,7 @@ PREFABS.Locked_joiner_blue_tech =
 
   tex_DOORRED = "DOORBLU2",
   line_33     = 32,
-},
+}
 
 
 PREFABS.Locked_joiner_yellow_tech2 =
@@ -208,6 +208,6 @@ PREFABS.Locked_joiner_yellow_tech2 =
 
   tex_DOORRED = "DOORYEL2",
   line_33     = 34,
-},
+}
 
 --

@@ -20,7 +20,7 @@ PREFABS.Pic_sewer_set_sewer_hole =
 
   x_fit = { 44,48 , 200,208 },
   y_fit = "top",
-},
+}
 
 PREFABS.Pic_sewer_machine_grates =
 {
@@ -30,7 +30,7 @@ PREFABS.Pic_sewer_machine_grates =
   prob = 5000,
 
   x_fit = "frame",
-},
+}
 
 -- MSSP-TODO: replace with something nicer?
 PREFABS.Pic_sewer_set_plain =
@@ -41,4 +41,4 @@ PREFABS.Pic_sewer_set_plain =
   prob = 10000,
 
   x_fit = "frame",
-},
+}

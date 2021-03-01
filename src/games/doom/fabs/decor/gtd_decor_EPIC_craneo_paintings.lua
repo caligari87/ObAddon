@@ -42,5 +42,5 @@ PREFABS.Decor_EPIC_craneo_painting_point =
     CPHRSMN2 = 50,
     CPSATRN = 50,
     CPVLAD = 50,
-  },
-},
+  }
+}

@@ -24,7 +24,7 @@ PREFABS.Item_dem_mirrormaze_closet =
 
   x_fit = "frame",
   y_fit  = "frame",
-},
+}
 
 --a item in a maze of mirrors2 in hell
 PREFABS.Item_dem_mirrormaze2_closet =
@@ -34,7 +34,7 @@ PREFABS.Item_dem_mirrormaze2_closet =
 
   seed_w = 2,
   seed_h = 3,
-},
+}
 
 --a item on a shrine in a rift in hell
 PREFABS.Item_dem_rift_closet =
@@ -93,9 +93,9 @@ PREFABS.Item_dem_rift_closet =
     big_tree = 50,
     burnt_tree = 50,
 
-  },
+  }
 
-},
+}
 
 --an item forgotten in a grocery store
 PREFABS.Item_dem_grocerystore_closet =
@@ -152,9 +152,9 @@ PREFABS.Item_dem_grocerystore_closet =
     hang_torso = 50,
     hang_leg   = 50,
     hang_leg_gone = 50,
-  },
+  }
 
-},
+}
 
 --an elevator shaft with an item
 PREFABS.Item_dem_elevatorshaft_closet =
@@ -191,8 +191,8 @@ PREFABS.Item_dem_elevatorshaft_closet =
     MET2=50, MET6=50, MET7=50, PIPEDRK1=50,
     SHAWGRY4=50, SHAWN01C=50, SHAWN01F=50,
     SHAWVEN2=50, SHAWVENT=50,
-  },
-},
+  }
+}
 
 --a corrupted elevator shaft with an item
 PREFABS.Item_dem_elevatorshaftcorr_closet =
@@ -228,8 +228,8 @@ PREFABS.Item_dem_elevatorshaftcorr_closet =
     MET2=50, MET6=50, MET7=50, PIPEDRK1=50,
     SHAWGRY4=50, SHAWN01C=50, SHAWN01F=50,
     SHAWVEN2=50, SHAWVENT=50,
-  },
-},
+  }
+}
 
 --a living room with an item
 PREFABS.Item_dem_living_room_closet =
@@ -260,8 +260,8 @@ PREFABS.Item_dem_living_room_closet =
     BRICK6=50, BRICK7=50, BRICK8=50,
     BIGBRIK1=50, BIGBRIK2=50, STONE2=50,
     STUCCO=50,  STUCCO1=50,  STUCCO3=50,
-  },
-},
+  }
+}
 
 --a kitchen with an item hidden behind the table
 PREFABS.Item_dem_kitchen_closet =
@@ -291,8 +291,8 @@ PREFABS.Item_dem_kitchen_closet =
      BRICK6=50, BRICK7=50, BRICK8=50,
      BIGBRIK1=50, BIGBRIK2=50, STONE2=50,
      STUCCO=50, STUCCO1=50, STUCCO3=50,
-    },
-},
+    }
+}
 
 --a bedroom with an hidden item
 PREFABS.Item_dem_bedroom_closet =
@@ -326,8 +326,8 @@ PREFABS.Item_dem_bedroom_closet =
      BRICK6=50, BRICK7=50, BRICK8=50,
      BIGBRIK1=50, BIGBRIK2=50, STONE2=50,
      STUCCO=50, STUCCO1=50, STUCCO3=50,
-    },
-},
+    }
+}
 
 
 --an appartment stairwell with a ritual and an item
@@ -360,8 +360,8 @@ PREFABS.Item_dem_stairwell_closet =
      BRICK6=50, BRICK7=50, BRICK8=50,
      BIGBRIK1=50, BIGBRIK2=50, STONE2=50,
      STUCCO=50, STUCCO1=50, STUCCO3=50,
-    },
-},
+    }
+}
 
 --a bar with an item hidden behind of it
 PREFABS.Item_dem_bar_closets =
@@ -395,8 +395,8 @@ PREFABS.Item_dem_bar_closets =
     STUCCO=50,  STUCCO1=50,  STUCCO3=50, STARGR1=50, GRAY7=50,
     PANEL6=50, BRIKS40=50, BRIKS43=50,
     GOTH16=50, GOTH31=50, WD03=50,
-  },
-},
+  }
+}
 
 --a waiting room with an item on the desk
 PREFABS.Item_dem_waiting_room_closets =
@@ -437,8 +437,8 @@ PREFABS.Item_dem_waiting_room_closets =
   tex_CPAQLRRE = {
     CPAQLRRE=50, CPGARDEN=50, CPGARDN2=50,
     CPHRSEMN=50, CPHRSMN2=50,
-  },
-},
+  }
+}
 
 --a raided electronic store with an item
 PREFABS.Item_dem_electronic_store_closets =
@@ -471,9 +471,9 @@ PREFABS.Item_dem_electronic_store_closets =
     STUCCO=50,  STUCCO1=50,  STUCCO3=50, STARGR1=50,
     PANEL6=50, BRIKS40=50, BRIKS43=50,
     GOTH16=50, GOTH31=50, WD03=50,
-  },
+  }
 
-},
+}
 
 --a raided cornerstore with only one item remaining
 PREFABS.Item_dem_cornerstore_closets =
@@ -510,9 +510,9 @@ PREFABS.Item_dem_cornerstore_closets =
     PANEL6=50, BRIKS40=50, BRIKS43=50,
     GOTH31=50, BRICK9=50,
     BRICK10=50,TANROCK2=50, TANROCK3=50,
-  },
+  }
 
-},
+}
 
 --a fairly intact bookstore with an item inside
 PREFABS.Item_dem_bookstore_closets =
@@ -548,9 +548,9 @@ PREFABS.Item_dem_bookstore_closets =
     STUCCO3=50, BRIKS43=50,
     GOTH31=50,GOTH16=50,GOTH02=50,
     BRICK9=50, TANROCK2=50, TANROCK3=50,
-  },
+  }
 
-},
+}
 
 --a item in a scrying room in hell
 PREFABS.Item_dem_scrying1_closet =
@@ -572,7 +572,7 @@ PREFABS.Item_dem_scrying1_closet =
 
   x_fit = "frame",
   y_fit = "frame",
-},
+}
 
 --a item in a scrying room in hell
 PREFABS.Item_dem_scrying2_closet =
@@ -593,7 +593,7 @@ PREFABS.Item_dem_scrying2_closet =
 
   x_fit = "frame",
   y_fit  = "frame",
-},
+}
 
 ---- natural shrine getting corrupted by demon with an item ----
 
@@ -626,7 +626,7 @@ PREFABS.Item_dem_shrine_closetC =
 
   texture_pack = "armaetus",
 
-},
+}
 
 PREFABS.Item_dem_shrine_closetN =
 {
@@ -637,7 +637,7 @@ PREFABS.Item_dem_shrine_closetN =
   group = "natural_walls",
 
 
-},
+}
 
 
 ----Natural corner with old cabin that have enemies inside and an item----
@@ -682,9 +682,9 @@ PREFABS.Item_dem_cabin_closet =
     dead_zombie = 50,
     dead_shooter = 50,
     dead_imp = 50,
-  },
+  }
 
-},
+}
 
 ----Natural corner with campsite that have an item----
 
@@ -715,7 +715,7 @@ PREFABS.Item_dem_campsiteC_closet =
 
   texture_pack = "armaetus",
 
-},
+}
 
 PREFABS.Item_dem_campsiteN_closet =
 {
@@ -724,14 +724,14 @@ PREFABS.Item_dem_campsiteN_closet =
   env = "nature",
 
   group = "natural_walls",
-},
+}
 
 PREFABS.Item_dem_campsiteP_closet =
 {
   template  = "Item_dem_campsiteC_closet",
   map    = "MAP23",
   env = "park",
-},
+}
 
 ----a concrete bunker with an item inside ----
 
@@ -775,9 +775,9 @@ PREFABS.Item_dem_bunker_closetP =
     shooter = 30,
     imp = 50,
     gunner = 20,
-  },
+  }
 
-},
+}
 
 
 
@@ -787,7 +787,7 @@ PREFABS.Item_dem_bunker_closetC =
 
   map = "MAP25",
   env    = "cave",
-},
+}
 
 PREFABS.Item_dem_bunker_closetN =
 {
@@ -796,4 +796,4 @@ PREFABS.Item_dem_bunker_closetN =
   map = "MAP26",
   env = "nature",
   group = "natural_walls",
-},
+}

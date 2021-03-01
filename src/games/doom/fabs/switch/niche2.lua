@@ -22,7 +22,7 @@ PREFABS.Switch_niche2 =
   -- use the occasional-blink FX (fairly rarely)
   sector_1  = { [0]=80, [1]=15, [2]=5, [3]=5, [8]=5 },
 
-},
+}
 
 PREFABS.Switch_niche3 =
 {
@@ -48,7 +48,7 @@ PREFABS.Switch_niche3 =
   tex_SLADWALL = "GSTONE1",
   tex_SW1SLAD  = "SW1GSTON",
 
-},
+}
 
 PREFABS.Switch_niche4 =
 {
@@ -74,7 +74,7 @@ PREFABS.Switch_niche4 =
   tex_SLADWALL = "SP_HOT1",
   tex_SW1SLAD  = "SW1HOT",
 
-},
+}
 
 PREFABS.Switch_niche5 =
 {
@@ -100,7 +100,7 @@ PREFABS.Switch_niche5 =
   tex_SLADWALL = "METAL",
   tex_SW1SLAD  = { SW1GARG=50, SW1SATYR=50, SW1LION=50 },
 
-},
+}
 
 PREFABS.Switch_niche6 =
 {
@@ -126,7 +126,7 @@ PREFABS.Switch_niche6 =
   tex_SLADWALL = "BIGBRIK2",
   tex_SW1SLAD  = "SW1BRIK",
 
-},
+}
 
 PREFABS.Switch_niche7 =
 {
@@ -152,7 +152,7 @@ PREFABS.Switch_niche7 =
   tex_SLADWALL = "CEMENT9",
   tex_SW1SLAD  = "SW1CMT",
 
-},
+}
 
 PREFABS.Switch_niche8 =
 {
@@ -178,7 +178,7 @@ PREFABS.Switch_niche8 =
   tex_SLADWALL = "WOODMET1",
   tex_SW1SLAD  = "SW1WDMET",
 
-},
+}
 
 PREFABS.Switch_niche9 =
 {
@@ -204,7 +204,7 @@ PREFABS.Switch_niche9 =
   tex_SLADWALL = "ZIMMER1",
   tex_SW1SLAD  = "SW1ZIM",
 
-},
+}
 
 PREFABS.Switch_niche10 =
 {
@@ -229,7 +229,7 @@ PREFABS.Switch_niche10 =
   tex_SLADWALL = { STONE2=80, STONE3=35 },
   tex_SW1SLAD  = "SW1STON1",
 
-},
+}
 
 PREFABS.Switch_niche11 =
 {
@@ -255,7 +255,7 @@ PREFABS.Switch_niche11 =
   tex_SLADWALL = "COMPBLUE",
   tex_SW1SLAD  = "SW1BLUE",
 
-},
+}
 
 PREFABS.Switch_niche12 =
 {
@@ -281,7 +281,7 @@ PREFABS.Switch_niche12 =
   tex_SLADWALL = "GRAY5",
   tex_SW1SLAD  = { SW1GRAY=50, SW1GRAY1=50 },
 
-},
+}
 
 PREFABS.Switch_niche13 =
 {
@@ -307,7 +307,7 @@ PREFABS.Switch_niche13 =
   tex_SLADWALL = "BROWN1",
   tex_SW1SLAD  = "SW1BRN2",
 
-},
+}
 
 PREFABS.Switch_niche14 =
 {
@@ -333,7 +333,7 @@ PREFABS.Switch_niche14 =
   tex_SLADWALL = "STONE6",
   tex_SW1SLAD  = "SW1STON6",
 
-},
+}
 
 PREFABS.Switch_niche15 =
 {
@@ -359,7 +359,7 @@ PREFABS.Switch_niche15 =
   tex_SLADWALL = "TEKGREN2",
   tex_SW1SLAD  = "SW1TEK",
 
-},
+}
 
 PREFABS.Switch_niche16 =
 {
@@ -385,7 +385,7 @@ PREFABS.Switch_niche16 =
   tex_SLADWALL = "MODWALL1",
   tex_SW1SLAD  = "SW1MOD1",
 
-},
+}
 
 PREFABS.Switch_niche17 =
 {
@@ -411,7 +411,7 @@ PREFABS.Switch_niche17 =
   tex_SLADWALL = "PANCASE2",
   tex_SW1SLAD  = "SW1PANEL",
 
-},
+}
 
 PREFABS.Switch_niche18 =
 {
@@ -437,7 +437,7 @@ PREFABS.Switch_niche18 =
   tex_SLADWALL = "GRAYVINE",
   tex_SW1SLAD  = "SW1VINE",
 
-},
+}
 
 PREFABS.Switch_niche19 =
 {
@@ -463,7 +463,7 @@ PREFABS.Switch_niche19 =
   tex_SLADWALL = "WOOD1",
   tex_SW1SLAD  = "SW1WOOD",
 
-},
+}
 
 PREFABS.Switch_niche20 =
 {
@@ -489,7 +489,7 @@ PREFABS.Switch_niche20 =
   tex_SLADWALL = "METAL1",
   tex_SW1SLAD  = "SW1METAL",
 
-},
+}
 
 PREFABS.Switch_niche21 =
 {
@@ -515,7 +515,7 @@ PREFABS.Switch_niche21 =
   tex_SLADWALL = "ROCK1",
   tex_SW1SLAD  = "SW1ROCK",
 
-},
+}
 
 PREFABS.Switch_niche22 =
 {
@@ -541,7 +541,7 @@ PREFABS.Switch_niche22 =
   tex_SLADWALL = "SKIN2",
   tex_SW1SLAD  = "SW1SKIN",
 
-},
+}
 
 PREFABS.Switch_niche23 =
 {
@@ -567,4 +567,4 @@ PREFABS.Switch_niche23 =
   tex_SLADWALL = "SLOPPY1",
   tex_SW1SLAD  = "SW1SKULL",
 
-},
+}

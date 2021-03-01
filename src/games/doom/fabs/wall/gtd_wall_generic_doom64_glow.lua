@@ -20,7 +20,7 @@ PREFABS.Wall_generic_doom64_1x=
   bound_z2 = 96,
 
   z_fit = {4,8},
-},
+}
 
 PREFABS.Wall_generic_doom64_1x_diag =
 {
@@ -28,7 +28,7 @@ PREFABS.Wall_generic_doom64_1x_diag =
   map    = "MAP02",
 
   where  = "diagonal",
-},
+}
 
 -- yellow
 
@@ -40,7 +40,7 @@ PREFABS.Wall_generic_doom64_1x_yellow =
   group  = "gtd_generic_d64_1x_yellow",
 
   flat_TLITE6_5 = "TLITE6_6",
-},
+}
 
 PREFABS.Wall_generic_doom64_1x_diag_yellow =
 {
@@ -52,7 +52,7 @@ PREFABS.Wall_generic_doom64_1x_diag_yellow =
   group  = "gtd_generic_d64_1x_yellow",
 
   flat_TLITE6_5 = "TLITE6_6",
-},
+}
 
 -- blue
 
@@ -64,7 +64,7 @@ PREFABS.Wall_generic_doom64_1x_blue =
   group  = "gtd_generic_d64_1x_blue",
 
   flat_TLITE6_5 = "CEIL4_3",
-},
+}
 
 PREFABS.Wall_generic_doom64_1x_diag_blue =
 {
@@ -76,7 +76,7 @@ PREFABS.Wall_generic_doom64_1x_diag_blue =
   group  = "gtd_generic_d64_1x_blue",
 
   flat_TLITE6_5 = "CEIL4_3",
-},
+}
 
 --
 -- red 2x
@@ -88,7 +88,7 @@ PREFABS.Wall_generic_doom64_2x =
   map = "MAP03",
 
   group = "gtd_generic_d64_2x",
-},
+}
 
 PREFABS.Wall_generic_doom64_2x_diag =
 {
@@ -98,7 +98,7 @@ PREFABS.Wall_generic_doom64_2x_diag =
   where  = "diagonal",
 
   group  = "gtd_generic_d64_2x",
-},
+}
 
 -- yellow
 
@@ -110,7 +110,7 @@ PREFABS.Wall_generic_doom64_2x_yellow =
   group = "gtd_generic_d64_2x_yellow",
 
   flat_TLITE6_5 = "TLITE6_6",
-},
+}
 
 PREFABS.Wall_generic_doom64_2x_diag_yellow =
 {
@@ -122,7 +122,7 @@ PREFABS.Wall_generic_doom64_2x_diag_yellow =
   group  = "gtd_generic_d64_2x_yellow",
 
   flat_TLITE6_5 = "TLITE6_6",
-},
+}
 
 -- blue
 
@@ -134,7 +134,7 @@ PREFABS.Wall_generic_doom64_2x_blue =
   group = "gtd_generic_d64_2x_blue",
 
   flat_TLITE6_5 = "CEIL4_3",
-},
+}
 
 PREFABS.Wall_generic_doom64_2x_diag_blue =
 {
@@ -146,4 +146,4 @@ PREFABS.Wall_generic_doom64_2x_diag_blue =
   group  = "gtd_generic_d64_2x_blue",
 
   flat_TLITE6_5 = "CEIL4_3",
-},
+}

@@ -26,8 +26,8 @@ PREFABS.Door_secret =
     gibs = 10,
     gibbed_player = 5,
     pool_brains = 5,
-  },
-},
+  }
+}
 
 
 PREFABS.Door_secret_diag =
@@ -39,7 +39,7 @@ PREFABS.Door_secret_diag =
 
   where  = "diagonal",
   key    = "secret",
-},
+}
 
 
 -- wall is lit up
@@ -49,7 +49,7 @@ PREFABS.Door_secret3 =
   map      = "MAP03",
 
   prob   = 50,
-},
+}
 
 
 -- small gap at bottom
@@ -59,7 +59,7 @@ PREFABS.Door_secret4 =
   map      = "MAP04",
 
   prob   = 100,
-},
+}
 
 
 -- looks like a window
@@ -69,5 +69,5 @@ PREFABS.Door_secret5 =
   map      = "MAP05",
 
   prob   = 150,
-},
+}
 

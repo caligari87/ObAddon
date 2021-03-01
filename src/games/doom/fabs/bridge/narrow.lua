@@ -10,7 +10,7 @@ PREFABS.Bridge_narrow1 =
   prob   = 90,
 
   where  = "point",
-},
+}
 
 PREFABS.Bridge_narrow1_hell =
 {
@@ -22,4 +22,4 @@ PREFABS.Bridge_narrow1_hell =
   tex_SUPPORT2 = "SUPPORT3",
   flat_FLAT20  = "CEIL5_2",
   flat_CEIL5_2 = "FLAT5_2",
-},
+}

@@ -24,7 +24,7 @@ PREFABS.Decor_Armaetus_bars_EPIC =
 
   tag_1  = "?door_tag",
   door_action = "S1_OpenDoor",
-},
+}
 
 
 PREFABS.Decor_Armaetus_bars_EPIC_wide =
@@ -36,7 +36,7 @@ PREFABS.Decor_Armaetus_bars_EPIC_wide =
   seed_w = 2,
 
   x_fit  = "frame",
-},
+}
 
 
 -- Does this even work???
@@ -60,4 +60,4 @@ UNFINISHED.Armaetus_bars_EPIC_diag =
 
   tag_1  = "?door_tag",
   door_action = "S1_OpenDoor",
-},
+}

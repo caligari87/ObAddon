@@ -24,7 +24,7 @@ PREFABS.Decor_3x3_bookshelves_thin =
   },
 
   sink_mode = "never_liquids",
-},
+}
 
 PREFABS.Decor_3x3_bookshelves_thick =
 {
@@ -33,7 +33,7 @@ PREFABS.Decor_3x3_bookshelves_thick =
   map      = "MAP02",
 
   size     = 208,
-},
+}
 
 PREFABS.Decor_3x1_bookshelves =
 {
@@ -42,4 +42,4 @@ PREFABS.Decor_3x1_bookshelves =
   map      = "MAP03",
 
   size     = 144,
-},
+}

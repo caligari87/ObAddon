@@ -12,13 +12,13 @@ PREFABS.Hallway_access_open_joiner =
   shape  = "I",
 
   deep   = 16,
-},
+}
 
 PREFABS.Hallway_access_door_panel =
 {
   template = "Hallway_access_open_joiner",
   map = "MAP20",
-},
+}
 
 --
 
@@ -28,7 +28,7 @@ PREFABS.Hallway_access_door =
   map      = "MAP02",
 
   style    = "doors",
-},
+}
 
 PREFABS.Hallway_access_door_switch =
 {
@@ -36,7 +36,7 @@ PREFABS.Hallway_access_door_switch =
   map = "MAP03",
 
   style = "doors",
-},
+}
 
 PREFABS.Hallway_access_secret =
 {
@@ -44,4 +44,4 @@ PREFABS.Hallway_access_secret =
   map      = "MAP10",
 
   key      = "secret",
-},
+}

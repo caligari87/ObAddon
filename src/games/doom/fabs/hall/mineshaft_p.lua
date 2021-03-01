@@ -10,4 +10,4 @@ PREFABS.Hallway_mineshaft_p =
   shape  = "P",
 
   mon_height = 96,
-},
+}

@@ -25,8 +25,8 @@ PREFABS.Joiner_armaetus_cave_to_cave_joiner =
   x_fit = "frame",
   y_fit = "frame",
 
-  can_flip = true
-},
+  can_flip = true,
+}
 
 PREFABS.Joiner_armaetus_cave_to_cave_joiner_2x1 =
 {
@@ -37,7 +37,7 @@ PREFABS.Joiner_armaetus_cave_to_cave_joiner_2x1 =
   seed_h   = 1,
 
   delta_h  = 32,
-},
+}
 
 PREFABS.Joiner_armaetus_cave_to_cave_joiner_2x1_any_to_cave =
 {
@@ -56,4 +56,4 @@ PREFABS.Joiner_armaetus_cave_to_cave_joiner_2x1_any_to_cave =
   delta_h = 64,
 
   y_fit = {24,136},
-},
+}

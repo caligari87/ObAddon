@@ -93,14 +93,14 @@ PREFABS.Pic_urban_downtown_facade_cyber_mid_inset =
 
   bound_z1 = 0,
   bound_z2 = 368,
-},
+}
 
 PREFABS.Pic_urban_downtown_facade_cyber_mid_inset_top_fit =
 {
   template = "Pic_urban_downtown_facade_cyber_mid_inset",
 
   z_fit = { 260,264 },
-},
+}
 
 PREFABS.Pic_urban_downtown_facade_cyber_notched =
 {
@@ -112,4 +112,4 @@ PREFABS.Pic_urban_downtown_facade_cyber_notched =
   z_fit = { 140,252 },
 
   bound_z2 = 256,
-},
+}

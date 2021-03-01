@@ -19,4 +19,4 @@ PREFABS.Item_alcove_barred =
 
   tag_1  = "?door_tag",
   door_action = "S1_OpenDoor",
-},
+}

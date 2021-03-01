@@ -18,7 +18,7 @@ PREFABS.Hallway_organs_i1 =
   seed_h = 2,
 
   engine = "zdoom",
-  can_flip = true
+  can_flip = true,
 
   thing_24 =
   {
@@ -114,46 +114,46 @@ line_425 =
   [426]=50,
   [427]=50,
   [428]=50,
-},
+}
 
-},
+}
 
 PREFABS.Hallway_organs_i2 =
 {
   template = "Hallway_organs_i1",
   map    = "MAP02",
-},
+}
 
 PREFABS.Hallway_organs_i3 =
 {
   template = "Hallway_organs_i1",
   map    = "MAP03",
-},
+}
 
 PREFABS.Hallway_organs_i4 =
 {
   template = "Hallway_organs_i1",
   map    = "MAP04",
-},
+}
 
 PREFABS.Hallway_organs_i5 =
 {
   template = "Hallway_organs_i1",
   map    = "MAP05",
 
-},
+}
 
 PREFABS.Hallway_organs_i6 =
 {
   template = "Hallway_organs_i1",
   map    = "MAP06",
-},
+}
 
 PREFABS.Hallway_organs_i7 =
 {
   template = "Hallway_organs_i1",
   map    = "MAP07",
-},
+}
 
 PREFABS.Hallway_organs_i8 =
 {
@@ -163,55 +163,55 @@ PREFABS.Hallway_organs_i8 =
   style = "steepness",
 
   delta_h = 64,
-},
+}
 
 PREFABS.Hallway_organs_i9 =
 {
   template = "Hallway_organs_i1",
   map    = "MAP09",
-},
+}
 
 PREFABS.Hallway_organs_i10 =
 {
   template = "Hallway_organs_i1",
   map    = "MAP10",
-},
+}
 
 PREFABS.Hallway_organs_i11 =
 {
   template = "Hallway_organs_i1",
   map    = "MAP11",
-},
+}
 
 PREFABS.Hallway_organs_i12 =
 {
   template = "Hallway_organs_i1",
   map    = "MAP12",
-},
+}
 
 PREFABS.Hallway_organs_i13 =
 {
   template = "Hallway_organs_i1",
   map    = "MAP13",
-},
+}
 
 PREFABS.Hallway_organs_i14 =
 {
   template = "Hallway_organs_i1",
   map    = "MAP14",
-},
+}
 
 PREFABS.Hallway_organs_i15 =
 {
   template = "Hallway_organs_i1",
   map    = "MAP15",
-},
+}
 
 PREFABS.Hallway_organs_i16 =
 {
   template = "Hallway_organs_i1",
   map    = "MAP16",
-},
+}
 
 PREFABS.Hallway_organs_i17 =
 {
@@ -219,4 +219,4 @@ PREFABS.Hallway_organs_i17 =
   map    = "MAP17",
 
   style  = "cages",
-},
+}

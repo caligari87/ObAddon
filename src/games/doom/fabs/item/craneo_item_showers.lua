@@ -21,4 +21,4 @@ PREFABS.Item_public_showers =
 
   x_fit = "frame",
   y_fit = "top",
-},
+}

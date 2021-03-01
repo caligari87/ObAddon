@@ -23,7 +23,7 @@ PREFABS.Cage_fake_switch =
   bound_z1 = 0,
 
   -- use the occasional-blink FX (fairly rarely)
-  sector_1  = { [0]=70, [1]=15, [2]=5, [3]=5, [8]=10, [12]=3, [13]=3 },
+  sector_1  = { [0]=70, [1]=15, [2]=5, [3]=5, [8]=10, [12]=3, [13]=3 }
 
-},
+}
 

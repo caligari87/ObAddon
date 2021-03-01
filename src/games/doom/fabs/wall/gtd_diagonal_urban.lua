@@ -14,7 +14,7 @@ PREFABS.Wall_urban_diagonal_window_bright =
   bound_z2 = 128,
 
   z_fit  = "top",
-},
+}
 
 PREFABS.Wall_urban_diagonal_window_dark =
 {
@@ -32,7 +32,7 @@ PREFABS.Wall_urban_diagonal_window_dark =
     BLAKWAL1=50,
     BLAKWAL2=50,
   },
-},
+}
 
 PREFABS.Wall_urban_diagonal_window_dark_top_fit =
 {
@@ -50,7 +50,7 @@ PREFABS.Wall_urban_diagonal_window_dark_top_fit =
     BLAKWAL1=50,
     BLAKWAL2=50,
   },
-},
+}
 
 PREFABS.Wall_urban_tall_lite5 =
 {
@@ -60,4 +60,4 @@ PREFABS.Wall_urban_tall_lite5 =
   theme = "!hell",
 
   z_fit = { 60,68 },
-},
+}

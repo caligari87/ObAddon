@@ -8,4 +8,4 @@ PREFABS.Hallway_access_intersection =
 
   where  = "seeds",
   shape  = "P",
-},
+}

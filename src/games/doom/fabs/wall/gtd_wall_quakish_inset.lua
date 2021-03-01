@@ -16,7 +16,7 @@ PREFABS.Wall_quakish_insets_1 =
   bound_z2 = 128,
 
   z_fit  = "top",
-},
+}
 
 PREFABS.Wall_quakish_insets_diagonal =
 {
@@ -36,4 +36,4 @@ PREFABS.Wall_quakish_insets_diagonal =
   bound_z2 = 128,
 
   z_fit  = "top",
-},
+}

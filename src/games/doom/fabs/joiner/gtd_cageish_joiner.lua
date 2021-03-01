@@ -16,7 +16,7 @@ PREFABS.Joiner_gtd_cageish_joiner_bunker =
 
   x_fit = { 80,96 , 160,176 },
   y_fit = "frame",
-},
+}
 
 PREFABS.Joiner_gtd_cageish_joiner_bunker_4x4 =
 {
@@ -27,7 +27,7 @@ PREFABS.Joiner_gtd_cageish_joiner_bunker_4x4 =
 
   x_fit = { 32,56 , 200,224 },
   y_fit = "frame",
-},
+}
 
 PREFABS.Joiner_gtd_cageish_joiner_2_standing =
 {
@@ -38,8 +38,8 @@ PREFABS.Joiner_gtd_cageish_joiner_2_standing =
 
   x_fit = "frame",
 
-  can_flip = true
-},
+  can_flip = true,
+}
 
 PREFABS.Joiner_gtd_cageish_joiner_4_standing =
 {
@@ -52,8 +52,8 @@ PREFABS.Joiner_gtd_cageish_joiner_4_standing =
 
   x_fit = "frame",
 
-  can_flip = true
-},
+  can_flip = true,
+}
 
 PREFABS.Joiner_gtd_cageish_joiner_lowering_pillars =
 {
@@ -64,4 +64,4 @@ PREFABS.Joiner_gtd_cageish_joiner_lowering_pillars =
   seed_h = 2,
 
   x_fit = "frame",
-},
+}

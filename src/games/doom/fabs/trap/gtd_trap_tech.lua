@@ -27,7 +27,7 @@ PREFABS.Trap_closet_tech =
   bound_z2 = 128,
 
   tag_1 = "?trap_tag",
-},
+}
 
 PREFABS.Trap_closet_tech_2 =
 {
@@ -36,4 +36,4 @@ PREFABS.Trap_closet_tech_2 =
   map = "MAP02",
 
   x_fit = { 40,56 , 200,216 },
-},
+}

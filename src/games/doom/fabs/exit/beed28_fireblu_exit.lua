@@ -23,8 +23,8 @@ PREFABS.Exit_beed28_fireblu_exit =
     green_torch = 50,
     green_torch_sm = 50,
     candelabra = 50,
-  },
-},
+  }
+}
 
 PREFABS.Exit_beed28_fireblu_exit_tech =
 {
@@ -42,4 +42,4 @@ PREFABS.Exit_beed28_fireblu_exit_tech =
 
   flat_MFLR8_2 = "FLAT23",
   tex_METAL = "GRAY1",
-},
+}

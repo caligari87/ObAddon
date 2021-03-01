@@ -36,7 +36,7 @@ PREFABS.Stair_64_red =
   bound_z1 = 0,
 
   delta_h = 64,
-},
+}
 
 PREFABS.Stair_64_red2 =
 {
@@ -49,7 +49,7 @@ PREFABS.Stair_64_red2 =
   tex_MARBGRAY = "REDWALL",
   flat_DEM1_6 = "FLAT5_3",
 
-},
+}
 
 
 PREFABS.Stair_64_hell =
@@ -60,7 +60,7 @@ PREFABS.Stair_64_hell =
   prob  = 30,
   theme = "hell",
 
-},
+}
 
 PREFABS.Stair_64_tech =
 {
@@ -73,4 +73,4 @@ PREFABS.Stair_64_tech =
   tex_MARBGRAY = "SHAWN2",
   flat_DEM1_6 = "FLAT20",
 
-},
+}

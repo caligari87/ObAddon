@@ -22,4 +22,4 @@ PREFABS.Joiner_ducts_room_to_room_joiner =
 
   x_fit = "frame",
   y_fit = "frame",
-},
+}

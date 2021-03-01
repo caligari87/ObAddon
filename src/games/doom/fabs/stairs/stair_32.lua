@@ -21,7 +21,7 @@ PREFABS.Stair_32 =
   bound_z2 = 32,
 
   delta_h = 32,
-},
+}
 
 PREFABS.Stair_32_hell1 =
 {
@@ -35,7 +35,7 @@ PREFABS.Stair_32_hell1 =
   tex_BROWN1 = "MARBGRAY",
   flat_FLOOR7_1 = "FLOOR7_2",
 
-},
+}
 
 PREFABS.Stair_32_hell2 =
 {
@@ -49,7 +49,7 @@ PREFABS.Stair_32_hell2 =
   tex_BROWN1 = "MARBLE1",
   flat_FLOOR7_1 = "DEM1_6",
 
-},
+}
 
 PREFABS.Stair_32_hell3 =
 {
@@ -63,4 +63,4 @@ PREFABS.Stair_32_hell3 =
   tex_BROWN1 = "METAL",
   flat_FLOOR7_1 = "CEIL5_2",
 
-},
+}

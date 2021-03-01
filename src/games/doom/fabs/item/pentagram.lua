@@ -14,7 +14,7 @@ PREFABS.Item_pentagram =
 
   where = "point",
   size  = 90   -- actually bigger, but won't block movement
-},
+}
 
 PREFABS.Item_pentagram2 =
 {
@@ -27,11 +27,11 @@ PREFABS.Item_pentagram2 =
   item_kind = "key",
 
   where = "point",
-  size  = 90   -- actually bigger, but won't block movement
+  size  = 90,   -- actually bigger, but won't block movement
 
   tex_ROCKRED1 = "REDWALL",
   flat_FLOOR1_6 = "FLAT5_3",
-},
+}
 
 
 PREFABS.Item_pentagram3 =
@@ -45,11 +45,11 @@ PREFABS.Item_pentagram3 =
   item_kind = "key",
 
   where = "point",
-  size  = 90   -- actually bigger, but won't block movement
+  size  = 90,   -- actually bigger, but won't block movement
 
   tex_ROCKRED1 = "BFALL1",
   flat_FLOOR1_6 = "BLOOD1",
-},
+}
 
 
 PREFABS.Item_pentagram4 =
@@ -63,11 +63,11 @@ PREFABS.Item_pentagram4 =
   item_kind = "key",
 
   where = "point",
-  size  = 90   -- actually bigger, but won't block movement
+  size  = 90,  -- actually bigger, but won't block movement
 
   tex_ROCKRED1 = "LFALL1",
   flat_FLOOR1_6 = "LAVA1",
-},
+}
 
 -- Rare tech pentagram, because hell influence
 PREFABS.Item_pentagram5 =
@@ -81,8 +81,8 @@ PREFABS.Item_pentagram5 =
   item_kind = "key",
 
   where = "point",
-  size  = 90   -- actually bigger, but won't block movement
+  size  = 90,   -- actually bigger, but won't block movement
 
   tex_ROCKRED1 = "COMPBLUE",
   flat_FLOOR1_6 = "CEIL4_2",
-},
+}

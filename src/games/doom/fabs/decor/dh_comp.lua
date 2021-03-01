@@ -18,5 +18,5 @@ PREFABS.Decor_dittohead_computer =
   bound_z1 = 0,
   bound_z2 = 160,
 
-  z_fit  = { 128,136 },
-},
+  z_fit  = { 128,136 }
+}

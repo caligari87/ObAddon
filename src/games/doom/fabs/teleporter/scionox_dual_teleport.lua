@@ -22,7 +22,7 @@ PREFABS.Teleporter_scionox_dual_teleport =
   tag_4 = "?in_tag",
 
   sector_8  = { [8]=50, [1]=10, [2]=10, [3]=10, [17]=10 },
-},
+}
 
 PREFABS.Teleporter_scionox_dual_teleport_2 =
 {
@@ -33,7 +33,7 @@ PREFABS.Teleporter_scionox_dual_teleport_2 =
   tex_COMPBLUE = "PANEL4",
   flat_CEIL4_2 = "FLAT5_5",
 
-},
+}
 
 PREFABS.Teleporter_scionox_dual_teleport_3 =
 {
@@ -41,4 +41,4 @@ PREFABS.Teleporter_scionox_dual_teleport_3 =
   theme  = "hell",
 
   map    = "MAP02",
-},
+}

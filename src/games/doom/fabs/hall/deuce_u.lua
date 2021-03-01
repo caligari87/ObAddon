@@ -20,7 +20,7 @@ PREFABS.Hallway_deuce_u1 =
   tex_METAL = "METAL",
   flat_CEIL5_2 = "METAL",
 
-},
+}
 
 PREFABS.Hallway_deuce_u1_hell =
 {
@@ -30,7 +30,7 @@ PREFABS.Hallway_deuce_u1_hell =
   tex_GRAYPOIS = { GSTLION=50, GSTGARG=50, GSTSATYR=50},
   flat_FLOOR0_3 = "FLOOR7_2",
 
-},
+}
 
 PREFABS.Hallway_deuce_u1_tech =
 {
@@ -40,4 +40,4 @@ PREFABS.Hallway_deuce_u1_tech =
   tex_METAL = "SHAWN2",
   flat_CEIL5_2 = "FLAT23",
 
-},
+}

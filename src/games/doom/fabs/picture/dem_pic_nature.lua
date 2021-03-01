@@ -23,19 +23,19 @@ PREFABS.Pic_dem_cavein1 =
 
   x_fit = "stretch",
   z_fit = { 56,64 },
-},
+}
 
 PREFABS.Pic_dem_cavein2 =
 {
   template  = "Pic_dem_cavein1",
   map    = "MAP02",
-},
+}
 
 PREFABS.Pic_dem_cavein3 =
 {
   template  = "Pic_dem_cavein1",
   map    = "MAP03",
-},
+}
 
 PREFABS.Pic_dem_cavein4 =
 {
@@ -60,19 +60,19 @@ PREFABS.Pic_dem_cavein4 =
 
   x_fit = "stretch",
   z_fit = { 56,64 },
-},
+}
 
 PREFABS.Pic_dem_cavein5 =
 {
   template  = "Pic_dem_cavein4",
   map    = "MAP05",
-},
+}
 
 PREFABS.Pic_dem_cavein6 =
 {
   template  = "Pic_dem_cavein4",
   map    = "MAP06",
-},
+}
 
 PREFABS.Pic_dem_cavein7 =
 {
@@ -96,19 +96,19 @@ PREFABS.Pic_dem_cavein7 =
 
   x_fit = "stretch",
   z_fit = { 56,64 },
-},
+}
 
 PREFABS.Pic_dem_cavein8 =
 {
   template  = "Pic_dem_cavein7",
   map    = "MAP08",
-},
+}
 
 PREFABS.Pic_dem_cavein9 =
 {
   template  = "Pic_dem_cavein7",
   map    = "MAP09",
-},
+}
 
 PREFABS.Pic_dem_cavein10 =
 {
@@ -132,19 +132,19 @@ PREFABS.Pic_dem_cavein10 =
 
   x_fit = "stretch",
   z_fit = { 56,64 },
-},
+}
 
 PREFABS.Pic_dem_cavein11 =
 {
   template  = "Pic_dem_cavein10",
   map    = "MAP11",
-},
+}
 
 PREFABS.Pic_dem_cavein12 =
 {
   template  = "Pic_dem_cavein10",
   map    = "MAP12",
-},
+}
 
 
 PREFABS.Pic_dem_cavein13 =
@@ -170,20 +170,20 @@ PREFABS.Pic_dem_cavein13 =
 
   x_fit = "stretch",
   z_fit = { 56,64 },
-},
+}
 
 PREFABS.Pic_dem_cavein14 =
 {
   template  = "Pic_dem_cavein13",
   map    = "MAP14",
-},
+}
 
 PREFABS.Pic_dem_cavein15 =
 {
   template  = "Pic_dem_cavein13",
   map    = "MAP15",
   z_fit = { 56,64 },
-},
+}
 
 ---- cave-in with deco ----
 
@@ -198,7 +198,7 @@ PREFABS.Pic_dem_caveind1 =
   where  = "seeds",
   height = 128,
 
-  liquid = true
+  liquid = true,
 
   seed_w = 3,
   seed_h = 2,
@@ -218,7 +218,7 @@ PREFABS.Pic_dem_caveind1 =
 texture_pack = "armaetus",
 sound = "Water_Streaming",
 
-},
+}
 
 PREFABS.Pic_dem_caveind2 =
 {
@@ -226,15 +226,15 @@ PREFABS.Pic_dem_caveind2 =
   map    = "MAP17",
 texture_pack = "none",
   liquid = false
-},
+}
 
 PREFABS.Pic_dem_caveind3 =
 {
   template  = "Pic_dem_caveind1",
   map    = "MAP18",
-  liquid = true
+  liquid = true,
   sound = "Water_Streaming",
-},
+}
 
 PREFABS.Pic_dem_caveind4 =
 {
@@ -264,22 +264,22 @@ PREFABS.Pic_dem_caveind4 =
 
 texture_pack = "armaetus",
 
-},
+}
 
 PREFABS.Pic_dem_caveind5 =
 {
   template  = "Pic_dem_caveind4",
   map    = "MAP20",
-  liquid = true
-},
+  liquid = true,
+}
 
 PREFABS.Pic_dem_caveind6 =
 {
   template  = "Pic_dem_caveind4",
   map    = "MAP21",
-  liquid = true
+  liquid = true,
   sound = "Water_Streaming",
-},
+}
 
 PREFABS.Pic_dem_caveind7 =
 {
@@ -297,7 +297,7 @@ PREFABS.Pic_dem_caveind7 =
 
   deep = 16,
   over = -16,
-  liquid = true
+  liquid = true,
 
   bound_z1 = 0,
   bound_z2 = 128,
@@ -310,16 +310,16 @@ PREFABS.Pic_dem_caveind7 =
 
 texture_pack = "armaetus",
 
-},
+}
 
 PREFABS.Pic_dem_caveind8 =
 {
   template  = "Pic_dem_caveind7",
   map    = "MAP23",
 texture_pack = "armaetus",
-  liquid = true
+  liquid = true,
   sound = "Water_Streaming",
-},
+}
 
 PREFABS.Pic_dem_caveind9 =
 {
@@ -327,7 +327,7 @@ PREFABS.Pic_dem_caveind9 =
   map    = "MAP24",
 texture_pack = "none",
   liquid = false
-},
+}
 
 PREFABS.Pic_dem_caveind10 =
 {
@@ -345,7 +345,7 @@ PREFABS.Pic_dem_caveind10 =
 
   deep = 16,
   over = -16,
-  liquid = true
+  liquid = true,
 
   bound_z1 = 0,
   bound_z2 = 128,
@@ -358,7 +358,7 @@ PREFABS.Pic_dem_caveind10 =
 
   texture_pack = "armaetus",
   sound = "Water_Streaming",
-},
+}
 
 PREFABS.Pic_dem_caveind11 =
 {
@@ -366,14 +366,14 @@ PREFABS.Pic_dem_caveind11 =
   map    = "MAP26",
   z_fit = { 88,96 },
 texture_pack = "armaetus",
-},
+}
 
 PREFABS.Pic_dem_caveind12 =
 {
   template  = "Pic_dem_caveind10",
   map    = "MAP27",
 texture_pack = "armaetus",
-},
+}
 
 ---- outdoor nooks ----
 
@@ -414,20 +414,20 @@ PREFABS.Pic_dem_nook1 =
     [43] = 25,
     [0] = 50,
   },
-},
+}
 
 PREFABS.Pic_dem_nook2 =
 {
   template  = "Pic_dem_nook1",
   map    = "MAP29",
 texture_pack = "none",
-},
+}
 
 PREFABS.Pic_dem_nook3 =
 {
   template  = "Pic_dem_nook1",
   map    = "MAP30",
-},
+}
 
 PREFABS.Pic_dem_nook4 =
 {
@@ -466,19 +466,19 @@ PREFABS.Pic_dem_nook4 =
     [43] = 25,
     [0] = 50,
   },
-},
+}
 
 PREFABS.Pic_dem_nook5 =
 {
   template  = "Pic_dem_nook4",
   map    = "MAP32",
-},
+}
 
 PREFABS.Pic_dem_nook6 =
 {
   template  = "Pic_dem_nook4",
   map    = "MAP33",
-},
+}
 
 PREFABS.Pic_dem_nook7 =
 {
@@ -517,19 +517,19 @@ PREFABS.Pic_dem_nook7 =
     [43] = 25,
     [0] = 50,
   },
-},
+}
 
 PREFABS.Pic_dem_nook8 =
 {
   template  = "Pic_dem_nook7",
   map    = "MAP35",
-},
+}
 
 PREFABS.Pic_dem_nook9 =
 {
   template  = "Pic_dem_nook7",
   map    = "MAP36",
-},
+}
 
 PREFABS.Pic_dem_nook10 =
 {
@@ -568,19 +568,19 @@ PREFABS.Pic_dem_nook10 =
     [43] = 25,
     [0] = 50,
   },
-},
+}
 
 PREFABS.Pic_dem_nook11 =
 {
   template  = "Pic_dem_nook10",
   map    = "MAP38",
-},
+}
 
 PREFABS.Pic_dem_nook12 =
 {
   template  = "Pic_dem_nook10",
   map    = "MAP39",
-},
+}
 
 
 
@@ -623,17 +623,17 @@ PREFABS.Pic_dem_nookd1 =
     [43] = 25,
     [0] = 50,
   },
-},
+}
 
 PREFABS.Pic_dem_nookd2 =
 {
   template  = "Pic_dem_nookd1",
   map    = "MAP41",
   theme = "any",
-  liquid = true
+  liquid = true,
   texture_pack = "armaetus",
   sound = "Water_Streaming",
-},
+}
 
 PREFABS.Pic_dem_nookd3 =
 {
@@ -642,7 +642,7 @@ PREFABS.Pic_dem_nookd3 =
   theme = "!hell",
   texture_pack = "armaetus",
 
-},
+}
 
 PREFABS.Pic_dem_nookd4 =
 {
@@ -680,13 +680,13 @@ PREFABS.Pic_dem_nookd4 =
     [43] = 25,
     [0] = 50,
   },
-},
+}
 
 PREFABS.Pic_dem_nookd5 =
 {
   template  = "Pic_dem_nookd4",
   map    = "MAP44",
-},
+}
 
 PREFABS.Pic_dem_nookd6 =
 {
@@ -694,9 +694,9 @@ PREFABS.Pic_dem_nookd6 =
   map    = "MAP45",
   z_fit = { 56,62 },
   texture_pack = "armaetus",
-  liquid = true
+  liquid = true,
   sound = "Water_Streaming",
-},
+}
 
 PREFABS.Pic_dem_nookd7 =
 {
@@ -736,7 +736,7 @@ PREFABS.Pic_dem_nookd7 =
     [43] = 25,
     [0] = 50,
   },
-},
+}
 
 PREFABS.Pic_dem_nookd8 =
 {
@@ -745,9 +745,9 @@ PREFABS.Pic_dem_nookd8 =
   z_fit = "stretch",
   theme = "any",
   texture_pack = "armaetus",
-  liquid = true
+  liquid = true,
   sound = "Water_Streaming",
-},
+}
 
 PREFABS.Pic_dem_nookd9 =
 {
@@ -755,7 +755,7 @@ PREFABS.Pic_dem_nookd9 =
   map    = "MAP48",
   z_fit = { 40,56 },
   theme = "any",
-},
+}
 
 PREFABS.Pic_dem_nookd10 =
 {
@@ -794,7 +794,7 @@ PREFABS.Pic_dem_nookd10 =
     [43] = 25,
     [0] = 50,
   },
-},
+}
 
 PREFABS.Pic_dem_nookd11 =
 {
@@ -804,15 +804,15 @@ PREFABS.Pic_dem_nookd11 =
   z_fit = { 56,64 },
 
   texture_pack = "armaetus",
-},
+}
 
 PREFABS.Pic_dem_nookd12 =
 {
   template  = "Pic_dem_nookd10",
   map    = "MAP51",
   texture_pack = "armaetus",
-  liquid = true
-},
+  liquid = true,
+}
 
 ----Natural corner with campsite----
 
@@ -843,7 +843,7 @@ PREFABS.Pic_dem_campsiteC =
 
   texture_pack = "armaetus",
 
-},
+}
 
 PREFABS.Pic_dem_campsiteN =
 {
@@ -852,7 +852,7 @@ PREFABS.Pic_dem_campsiteN =
   env = "nature",
 
   group = "natural_walls",
-},
+}
 
 PREFABS.Pic_dem_campsiteP =
 {
@@ -862,7 +862,7 @@ PREFABS.Pic_dem_campsiteP =
   env = "park",
 
   prob = 100,
-},
+}
 
 ----Natural corner with old cabin----
 
@@ -906,7 +906,7 @@ PREFABS.Pic_dem_cabin =
     dead_imp = 50,
   },
 
-},
+}
 
 ----Natural corner with waterfall or lake----
 
@@ -938,15 +938,15 @@ PREFABS.Pic_dem_waterfallC1 =
 
   texture_pack = "armaetus",
 
-  liquid = true
+  liquid = true,
   sound = "Water_Streaming",
-},
+}
 
 PREFABS.Pic_dem_lakeC1 =
 {
   template  = "Pic_dem_waterfallC1",
   map    = "MAP57",
-},
+}
 
 
 PREFABS.Pic_dem_waterfallN1 =
@@ -980,14 +980,14 @@ PREFABS.Pic_dem_waterfallN1 =
   z_fit = { 24,40 },
 
   texture_pack = "armaetus",
-  liquid = true
-},
+  liquid = true,
+}
 
 PREFABS.Pic_dem_lakeN1 =
 {
   template  = "Pic_dem_waterfallN1",
   map    = "MAP59",
-},
+}
 
 PREFABS.Pic_dem_waterfallC2 =
 {
@@ -1020,13 +1020,13 @@ PREFABS.Pic_dem_waterfallC2 =
 
   texture_pack = "armaetus",
   sound = "Water_Streaming",
-},
+}
 
 PREFABS.Pic_dem_lakeC2 =
 {
   template  = "Pic_dem_waterfallC2",
   map    = "MAP61",
-},
+}
 
 
 PREFABS.Pic_dem_waterfallN2 =
@@ -1062,13 +1062,13 @@ PREFABS.Pic_dem_waterfallN2 =
 
   texture_pack = "armaetus",
 
-},
+}
 
 PREFABS.Pic_dem_lakeN2 =
 {
   template  = "Pic_dem_waterfallN2",
   map    = "MAP63",
-},
+}
 
 PREFABS.Pic_dem_waterfallC3 =
 {
@@ -1101,13 +1101,13 @@ PREFABS.Pic_dem_waterfallC3 =
 
   texture_pack = "armaetus",
 
-},
+}
 
 PREFABS.Pic_dem_lakeC3 =
 {
   template  = "Pic_dem_waterfallC3",
   map    = "MAP65",
-},
+}
 
 
 PREFABS.Pic_dem_waterfallN3 =
@@ -1143,13 +1143,13 @@ PREFABS.Pic_dem_waterfallN3 =
 
   texture_pack = "armaetus",
 
-},
+}
 
 PREFABS.Pic_dem_lakeN3 =
 {
   template  = "Pic_dem_waterfallN3",
   map    = "MAP67",
-},
+}
 
 
 ---- Ruins and old temples ----
@@ -1183,13 +1183,13 @@ PREFABS.Pic_dem_ruinsN1 =
 
   texture_pack = "armaetus",
 
-},
+}
 
 PREFABS.Pic_dem_ruinsN2 =
 {
   template  = "Pic_dem_ruinsN1",
   map    = "MAP69",
-},
+}
 
 PREFABS.Pic_dem_ruinsC1 =
 {
@@ -1218,10 +1218,10 @@ PREFABS.Pic_dem_ruinsC1 =
 
   texture_pack = "armaetus",
 
-},
+}
 
 PREFABS.Pic_dem_ruinsC2 =
 {
   template  = "Pic_dem_ruinsC1",
   map    = "MAP71",
-},
+}

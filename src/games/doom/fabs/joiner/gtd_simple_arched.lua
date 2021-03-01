@@ -29,7 +29,7 @@ PREFABS.Joiner_simple_arched =
   y_fit = { 64,96 , 192,224 },
 
   sector_1 = 0 -- a hack to stop Oblige from culling this sector, required by ZDoom slope linedefs
-},
+}
 
 PREFABS.Joiner_simple_arched_urban = {
   template = "Joiner_simple_arched",
@@ -37,7 +37,7 @@ PREFABS.Joiner_simple_arched_urban = {
   theme = "urban",
 
   thing_46 = 85,
-},
+}
 
 PREFABS.Joiner_simple_arched_notzdoom = {
   template = "Joiner_simple_arched",
@@ -46,7 +46,7 @@ PREFABS.Joiner_simple_arched_notzdoom = {
   theme = "hell",
 
   line_341 = 0,
-},
+}
 
 PREFABS.Joiner_simple_arched_urban_notzdoom = {
   template = "Joiner_simple_arched",
@@ -56,4 +56,4 @@ PREFABS.Joiner_simple_arched_urban_notzdoom = {
 
   thing_46 = 85,
   line_341 = 0,
-},
+}

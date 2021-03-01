@@ -19,7 +19,7 @@ PREFABS.Decor_water_fountain =
   sink_mode = "never_liquids",
 
   sound = "Water_Streaming",
-},
+}
 
 PREFABS.Decor_blood_fountain =
 {
@@ -36,7 +36,7 @@ PREFABS.Decor_blood_fountain =
   bound_z1 = 0,
 
   sink_mode = "never_liquids",
-},
+}
 
 PREFABS.Decor_lava_fountain =
 {
@@ -53,4 +53,4 @@ PREFABS.Decor_lava_fountain =
   bound_z1 = 0,
 
   sink_mode = "never_liquids",
-},
+}

@@ -9,7 +9,7 @@ PREFABS.Item_pedestal =
   theme = "!tech",
 
   prob = 50,
-},
+}
 
 PREFABS.Item_pedestal_tech =
 {
@@ -18,4 +18,4 @@ PREFABS.Item_pedestal_tech =
 
   tex_METAL = "SHAWN2",
   flat_CEIL1_2 = "FLAT20",
-},
+}

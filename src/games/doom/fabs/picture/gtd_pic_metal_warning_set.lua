@@ -24,7 +24,7 @@ PREFABS.Pic_metal_warning_gate =
   x_fit = "frame",
   y_fit = "top",
   z_fit = { 40,88 },
-},
+}
 
 PREFABS.Pic_metal_warning_pillars =
 {
@@ -34,7 +34,7 @@ PREFABS.Pic_metal_warning_pillars =
   theme = "any",
 
   x_fit = { 40,56 , 104,152 , 200,216 },
-},
+}
 
 PREFABS.Pic_metal_warning_lite5 =
 {
@@ -42,7 +42,7 @@ PREFABS.Pic_metal_warning_lite5 =
   map = "MAP03",
 
   theme = "!hell",
-},
+}
 
 PREFABS.Pic_metal_warning_lite5_hell =
 {
@@ -52,4 +52,4 @@ PREFABS.Pic_metal_warning_lite5_hell =
   theme = "hell",
 
   tex_LITE5 = "RDWAL01",
-},
+}

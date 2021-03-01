@@ -15,7 +15,7 @@ PREFABS.Wall_tech_lit_box_blue =
   bound_z2 = 128,
 
   z_fit  = { 24,32 },
-},
+}
 
 PREFABS.Wall_tech_lit_box_blue_diagonal =
 {
@@ -27,7 +27,7 @@ PREFABS.Wall_tech_lit_box_blue_diagonal =
   group = "gtd_wall_lit_box_blue",
 
   where  = "diagonal",
-},
+}
 
 PREFABS.Wall_tech_lit_box_red =
 {
@@ -37,7 +37,7 @@ PREFABS.Wall_tech_lit_box_red =
   prob   = 50,
 
   group = "gtd_wall_lit_box_red",
-},
+}
 
 PREFABS.Wall_tech_lit_box_red_diagonal =
 {
@@ -49,7 +49,7 @@ PREFABS.Wall_tech_lit_box_red_diagonal =
   group = "gtd_wall_lit_box_red",
 
   where = "diagonal",
-},
+}
 
 PREFABS.Wall_tech_lit_box_white =
 {
@@ -59,7 +59,7 @@ PREFABS.Wall_tech_lit_box_white =
   prob   = 50,
 
   group = "gtd_wall_lit_box_white",
-},
+}
 
 PREFABS.Wall_tech_lit_box_white_diagonal =
 {
@@ -71,4 +71,4 @@ PREFABS.Wall_tech_lit_box_white_diagonal =
   group = "gtd_wall_lit_box_white",
 
   where  = "diagonal",
-},
+}

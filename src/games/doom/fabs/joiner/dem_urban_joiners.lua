@@ -29,7 +29,7 @@ PREFABS.Joiner_living_room =
   x_fit = "frame",
   y_fit  = "frame",
 
-  can_flip = true
+  can_flip = true,
 
   tex_BRICK9 = {
     BRICK1=50, BRICK10=50, BRICK11=50,
@@ -38,7 +38,7 @@ PREFABS.Joiner_living_room =
     BIGBRIK1=50, BIGBRIK2=50, STONE2=50,
     STUCCO=50,  STUCCO1=50,  STUCCO3=50,
   },
-},
+}
 
 --a kitchen joiner
 PREFABS.Joiner_kitchen =
@@ -65,7 +65,7 @@ PREFABS.Joiner_kitchen =
   x_fit = "frame",
   y_fit = "frame",
 
-  can_flip = true
+  can_flip = true,
 
   tex_BRICK9 = {
     BRICK1=50, BRICK10=50, BRICK11=50,
@@ -74,7 +74,7 @@ PREFABS.Joiner_kitchen =
      BIGBRIK1=50, BIGBRIK2=50, STONE2=50,
      STUCCO=50, STUCCO1=50, STUCCO3=50,
     },
-},
+}
 
 --a bedroom joiner
 PREFABS.Joiner_bedroom =
@@ -105,7 +105,7 @@ PREFABS.Joiner_bedroom =
 
   texture_pack = "armaetus",
 
-  can_flip = true
+  can_flip = true,
 
   tex_BRICK9 = {
     BRICK1=50, BRICK10=50, BRICK11=50,
@@ -114,7 +114,7 @@ PREFABS.Joiner_bedroom =
      BIGBRIK1=50, BIGBRIK2=50, STONE2=50,
      STUCCO=50, STUCCO1=50, STUCCO3=50,
     },
-},
+}
 
 --a bedroom joiner but with a secret
 PREFABS.Joiner_bedroom2 =
@@ -147,7 +147,7 @@ PREFABS.Joiner_bedroom2 =
 
   texture_pack = "armaetus",
 
-  can_flip = true
+  can_flip = true,
 
   thing_2013 =
   {
@@ -162,7 +162,7 @@ PREFABS.Joiner_bedroom2 =
      BIGBRIK1=50, BIGBRIK2=50, STONE2=50,
      STUCCO=50, STUCCO1=50, STUCCO3=50,
     },
-},
+}
 
 --an appartment stairwell joiner
 PREFABS.Joiner_stairwell =
@@ -196,7 +196,7 @@ PREFABS.Joiner_stairwell =
   delta_h = 96,
   nearby_h = 272,
 
-  can_flip = true
+  can_flip = true,
 
   tex_BRICK9 = {
     BRICK1=50, BRICK10=50, BRICK11=50,
@@ -205,7 +205,7 @@ PREFABS.Joiner_stairwell =
      BIGBRIK1=50, BIGBRIK2=50, STONE2=50,
      STUCCO=50, STUCCO1=50, STUCCO3=50,
     },
-},
+}
 
 --a bar joiner
 PREFABS.Joiner_bar =
@@ -236,7 +236,7 @@ PREFABS.Joiner_bar =
 
   texture_pack = "armaetus",
 
-  can_flip = true
+  can_flip = true,
 
   tex_STARTAN1 = {
     BRICK1=50, BRICK12=50, BRICK11=50,
@@ -247,7 +247,7 @@ PREFABS.Joiner_bar =
     PANEL6=50, BRIKS40=50, BRIKS43=50,
     GOTH16=50, GOTH31=50, WD03=50,
   },
-},
+}
 
 --a waiting room joiner
 PREFABS.Joiner_waiting_room =
@@ -278,7 +278,7 @@ PREFABS.Joiner_waiting_room =
 
   texture_pack = "armaetus",
 
-  can_flip = true
+  can_flip = true,
 
   tex_STARTAN1 = {
     BRICK1=50, BRICK12=50, BRICK11=50,
@@ -294,7 +294,7 @@ PREFABS.Joiner_waiting_room =
     CPAQLRRE=50, CPGARDEN=50, CPGARDN2=50,
     CPHRSEMN=50, CPHRSMN2=50,
   },
-},
+}
 
 --a raided electronic store joiner
 PREFABS.Joiner_electronic_store =
@@ -325,7 +325,7 @@ PREFABS.Joiner_electronic_store =
 
   texture_pack = "armaetus",
 
-  can_flip = true
+  can_flip = true,
 
   tex_STARTAN1 = {
     BRICK1=50, BRICK12=50, BRICK11=50,
@@ -337,7 +337,7 @@ PREFABS.Joiner_electronic_store =
     GOTH16=50, GOTH31=50, WD03=50,
   },
 
-},
+}
 
 
 --a raided cornerstore
@@ -369,7 +369,7 @@ PREFABS.Joiner_cornerstore =
 
   texture_pack = "armaetus",
 
-  can_flip = true
+  can_flip = true,
 
   tex_STARTAN1 = {
     BRICK1=50, BRICK12=50, BRICK11=50,
@@ -382,7 +382,7 @@ PREFABS.Joiner_cornerstore =
     BRICK10=50,TANROCK2=50, TANROCK3=50,
   },
 
-},
+}
 
 --a fairly intact bookstore
 PREFABS.Joiner_bookstore =
@@ -413,7 +413,7 @@ PREFABS.Joiner_bookstore =
 
   texture_pack = "armaetus",
 
-  can_flip = true
+  can_flip = true,
 
   tex_STARTAN1 = {
     BRICK1=50, BRICK12=50,
@@ -425,7 +425,7 @@ PREFABS.Joiner_bookstore =
     BRICK9=50, TANROCK2=50, TANROCK3=50,
   },
 
-},
+}
 
 --an elevator shaft
 PREFABS.Joiner_elevatorshaft =
@@ -460,7 +460,7 @@ PREFABS.Joiner_elevatorshaft =
 
   texture_pack = "armaetus",
 
-  can_flip = true
+  can_flip = true,
 
   tex_BROWN1 = {
     GRAY1=50, GRAY4=50, GRAY5=50, GRAY6=50,
@@ -472,7 +472,7 @@ PREFABS.Joiner_elevatorshaft =
     SHAWGRY4=50, SHAWN01C=50, SHAWN01F=50,
     SHAWVEN2=50, SHAWVENT=50,
   },
-},
+}
 
 --a corrupted elevator shaft
 PREFABS.Joiner_elevatorshaftcorr =
@@ -507,7 +507,7 @@ PREFABS.Joiner_elevatorshaftcorr =
 
   texture_pack = "armaetus",
 
-  can_flip = true
+  can_flip = true,
 
   tex_BROWN1 = {
     GRAY1=50, GRAY4=50, GRAY5=50, GRAY6=50,
@@ -519,4 +519,4 @@ PREFABS.Joiner_elevatorshaftcorr =
     SHAWGRY4=50, SHAWN01C=50, SHAWN01F=50,
     SHAWVEN2=50, SHAWVENT=50,
   },
-},
+}

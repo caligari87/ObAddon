@@ -13,8 +13,8 @@ PREFABS.Decor_armaetus_crucified_pillar_1 =
   bound_z1 = 0,
   bound_z2 = 138,
 
-  tex_SP_DUDE4 = { SP_DUDE4=50, SP_DUDE5=50 },
-},
+  tex_SP_DUDE4 = { SP_DUDE4=50, SP_DUDE5=50 }
+}
 
 PREFABS.Decor_armaetus_crucified_pillar_1_EPIC =
 {
@@ -23,8 +23,8 @@ PREFABS.Decor_armaetus_crucified_pillar_1_EPIC =
   texture_pack = "armaetus",
   replaces   = "Decor_armaetus_crucified_pillar_1",
 
-  tex_SP_DUDE4 = { SP_DUDE4=50, SP_DUDE5=50, SPDUDE3=50, SPDUDE6=30 },
-},
+  tex_SP_DUDE4 = { SP_DUDE4=50, SP_DUDE5=50, SPDUDE3=50, SPDUDE6=30 }
+}
 
 PREFABS.Decor_armaetus_crucified_pillar_4x =
 {
@@ -35,7 +35,7 @@ PREFABS.Decor_armaetus_crucified_pillar_4x =
   height = 136,
 
   bound_z2 = 138,
-},
+}
 
 PREFABS.Decor_armaetus_crucified_pillar_4x_EPIC =
 {
@@ -50,8 +50,8 @@ PREFABS.Decor_armaetus_crucified_pillar_4x_EPIC =
 
   bound_z2 = 138,
 
-  tex_SP_DUDE4 = { SP_DUDE4=50, SP_DUDE5=50, SPDUDE3=50, SPDUDE6=30 },
-},
+  tex_SP_DUDE4 = { SP_DUDE4=50, SP_DUDE5=50, SPDUDE3=50, SPDUDE6=30 }
+}
 
 PREFABS.Decor_armaetus_crucified_pillar_big =
 {
@@ -63,7 +63,7 @@ PREFABS.Decor_armaetus_crucified_pillar_big =
   size = 112,
 
   bound_z2 = 112,
-},
+}
 
 PREFABS.Decor_armaetus_crucified_pillar_4x_EPIC =
 {
@@ -79,5 +79,5 @@ PREFABS.Decor_armaetus_crucified_pillar_4x_EPIC =
 
   bound_z2 = 112,
 
-  tex_SP_DUDE4 = { SP_DUDE4=50, SP_DUDE5=50, SPDUDE3=50, SPDUDE6=30 },
-},
+  tex_SP_DUDE4 = { SP_DUDE4=50, SP_DUDE5=50, SPDUDE3=50, SPDUDE6=30 }
+}

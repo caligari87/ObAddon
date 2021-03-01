@@ -14,4 +14,4 @@ PREFABS.Cran_Heretic_HumanBBQ =
   bound_z1 = 0,
   bound_z2 = 136,
   z_fit = bottom
-},
+}

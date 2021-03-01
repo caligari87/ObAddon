@@ -18,7 +18,7 @@ PREFABS.Depot_raise =
   tag_1 = "?out_tag1",
   tag_2 = "?out_tag2",
   tag_3 = "?out_tag3",
-},
+}
 
 
 PREFABS.Depot_lower =
@@ -26,5 +26,5 @@ PREFABS.Depot_lower =
   template = "Depot_raise",
 
   map = "MAP02",
-},
+}
 

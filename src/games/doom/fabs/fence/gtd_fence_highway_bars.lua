@@ -14,7 +14,7 @@ PREFABS.Fence_highway_bars =
 
   fence_h  = 32,
   bound_z1 = 0,
-},
+}
 
 
 PREFABS.Fence_highway_bars_diag =
@@ -31,7 +31,7 @@ PREFABS.Fence_highway_bars_diag =
   fence_h = 32,
 
   bound_z1 = 0,
-},
+}
 
 --
 
@@ -44,7 +44,7 @@ PREFABS.Fence_highway_bars_warnstep =
   texture_pack = "armaetus",
 
   tex_STEP4 = "WARNSTEP",
-},
+}
 
 
 PREFABS.Fence_highway_bars_diag_warnstep =
@@ -56,4 +56,4 @@ PREFABS.Fence_highway_bars_diag_warnstep =
   texture_pack = "armaetus",
 
   tex_STEP4 = "WARNSTEP",
-},
+}

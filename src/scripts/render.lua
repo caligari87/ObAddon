@@ -432,7 +432,7 @@ function Render_edge(E)
 
     local f_brush = brushlib.quad(x1, y1, x2, y2)
 
-    for _,C in pairs(pairs(f_brush)) do
+    for _,C in pairs(f_brush) do
       C.flags = DOOM_LINE_FLAGS.draw_never
     end
 
@@ -1080,7 +1080,7 @@ function Render_corner(cx, cy)
     if not corner.post_type then
       local brush  = brushlib.quad(mx - 8, my - 8, mx + 8, my + 8)
 
-      for _,C in pairs(pairs(brush)) do
+      for _,C in pairs(brush) do
         C.u1 = 0
         C.v1 = 0
       end
@@ -1680,7 +1680,7 @@ end
 
 
 function Render_void_area(A, S)
-  for _,S in pairs(pairs(A.seeds)) do
+  for _,S in pairs(A.seeds) do
     local w_brush = S:make_brush()
 
     brushlib.set_mat(w_brush, "_DEFAULT")
@@ -1735,7 +1735,7 @@ function Render_floor(A)
 
   ---| Render_floor |---
 
-  for _,S in pairs(pairs(A.seeds)) do
+  for _,S in pairs(A.seeds) do
     if should_do_seed(S) then
       render_seed(S)
 
@@ -1789,7 +1789,7 @@ function Render_ceiling(A)
 
   ---| Render_ceiling |---
 
-  for _,S in pairs(pairs(A.seeds)) do
+  for _,S in pairs(A.seeds) do
     if should_do_seed(S) then
       render_seed(S)
 
@@ -2138,7 +2138,7 @@ chunk.goal.action = "S1_OpenDoor"  -- FIXME IT SHOULD BE SET WHEN JOINER IS REND
     local brush = brushlib.quad(mx - r, my - r, mx + r, my + r)
 
     -- mark as "no draw",
-    for _,C in pairs(pairs(brush)) do
+    for _,C in pairs(brush) do
       C.draw_never = 1
     end
 
@@ -2628,7 +2628,7 @@ chunk.goal.action = "S1_OpenDoor"  -- FIXME IT SHOULD BE SET WHEN JOINER IS REND
     A.ceil_mat = "_SKY"
 
     -- disable walls around/inside this chunk
-    for _,N in pairs(pairs(A.neighbors)) do
+    for _,N in pairs(A.neighbors) do
       Junction_make_empty(Junction_lookup(A, N))
     end
   end
@@ -2738,12 +2738,12 @@ function Render_area(A)
   if A.chunk and A.chunk.occupy == "whole" then
     -- whole chunks never build walls inside them
   else
-    for _,E in pairs(pairs(A.edges)) do
+    for _,E in pairs(A.edges) do
       assert(E.area == A)
       Render_edge(E)
     end
 
-    for _,S in pairs(pairs(A.seeds)) do
+    for _,S in pairs(A.seeds) do
       for _,dir in pairs(geom.ALL_DIRS) do
         Render_junction(A, S, dir)
       end
@@ -2811,7 +2811,7 @@ function Render_all_chunks()
     -- [ to get correct action of the remote door, etc ]
     SWITCHES_ONLY = (pass == 2)
 
-    for _,R in pairs(pairs(LEVEL.rooms)) do
+    for _,R in pairs(LEVEL.rooms) do
       for _,chunk in pairs(R.floor_chunks) do visit_chunk(chunk) end
       for _,chunk in pairs(R.ceil_chunks ) do visit_chunk(chunk) end
 
@@ -2883,7 +2883,7 @@ end
 
 
 function Render_all_areas()
-  for _,A in pairs(pairs(LEVEL.areas)) do
+  for _,A in pairs(LEVEL.areas) do
     Render_area(A)
   end
 
@@ -3163,9 +3163,9 @@ function Render_find_street_markings()
   end
 
   local function update_seeds_table()
-    for _,R in pairs(pairs(LEVEL.rooms)) do
-      for _,A in pairs(pairs(R.areas)) do
-        for _,S in pairs(pairs(A.seeds)) do
+    for _,R in pairs(LEVEL.rooms) do
+      for _,A in pairs(R.areas) do
+        for _,S in pairs(A.seeds) do
           SEEDS[S.sx][S.sy] = S
           if S.area.is_road and R.svolume > 48 then
             markable_seeds = markable_seeds + 1
@@ -3524,7 +3524,7 @@ function Render_scenic_fabs()
     end
   end
 
-  for _,A in pairs(pairs(LEVEL.areas)) do
+  for _,A in pairs(LEVEL.areas) do
     if A.border_type == "fake_room" then
       place_scenic_fabs(A)
     end
@@ -3612,7 +3612,7 @@ end
 
 
 function Render_set_all_properties()
-  for _,A in pairs(pairs(LEVEL.areas)) do
+  for _,A in pairs(LEVEL.areas) do
     Render_properties_for_area(A)
   end
 end
@@ -3652,7 +3652,7 @@ function Render_triggers()
       brush = brushlib.quad(chunk.x1 + w, chunk.y1 + h, chunk.x2 - w, chunk.y2 - h)
     end
 
-    for _,C in pairs(pairs(brush)) do
+    for _,C in pairs(brush) do
       setup_coord(C, trig)
     end
 
@@ -3755,7 +3755,7 @@ function Render_triggers()
       do_spot_trigger(R, trig)
 
     elseif trig.kind == "edge" then
-      for _,E in pairs(pairs(trig.edges)) do
+      for _,E in pairs(trig.edges) do
         do_edge_trigger(R, trig, E)
       end
 
@@ -3766,7 +3766,7 @@ function Render_triggers()
 
 
   local function test_triggers()
-    for _,C in pairs(pairs(LEVEL.conns)) do
+    for _,C in pairs(LEVEL.conns) do
       local E = C.E1
       if C.R1.lev_along > C.R2.lev_along then E = C.E2 end
       if E then
@@ -3785,7 +3785,7 @@ function Render_triggers()
 
   ---| Render_triggers |---
 
-  for _,R in pairs(pairs(LEVEL.rooms)) do
+  for _,R in pairs(LEVEL.rooms) do
     for _,trig in pairs(R.triggers) do
       build_trigger(R, trig)
     end
@@ -3834,7 +3834,7 @@ function Render_determine_spots()
     end
 
     -- set the edges of the area
-    for _,E in pairs(pairs(A.side_edges)) do
+    for _,E in pairs(A.side_edges) do
       gui.spots_draw_line(E.x1, E.y1, E.x2, E.y2, SPOT_LEDGE)
     end
 
@@ -3950,7 +3950,7 @@ function Render_determine_spots()
     end
 
     -- set the edges of the room
-    for _,E in pairs(pairs(area.side_edges)) do
+    for _,E in pairs(area.side_edges) do
       gui.spots_draw_line(E.x1, E.y1, E.x2, E.y2, SPOT_LEDGE)
     end
 
@@ -3998,7 +3998,7 @@ gui.spots_dump("Cave spot dump")
 
 
   local function spots_in_room(R)
-    for _,A in pairs(pairs(R.areas)) do
+    for _,A in pairs(R.areas) do
       if A.mode == "floor" or A.mode == "cage" then
         if not A.floor_group then
           spots_in_flat_floor(R, A)
@@ -4043,7 +4043,7 @@ gui.spots_dump("Cave spot dump")
 
   ---| Render_determine_spots |---
 
-  for _,R in pairs(pairs(LEVEL.rooms)) do
+  for _,R in pairs(LEVEL.rooms) do
     spots_in_room(R)
 
     R:exclude_monsters()
@@ -4091,7 +4091,7 @@ function Render_cells(area)
     assert(B)
     assert(B.floor_h)
 
-    return string.format("1-%5d-%5d", B.floor_h + 50000, 50000 - (B.ceil_h or 0))
+    return string.format("1-%5d-%5d", int(B.floor_h + 50000), int(50000 - (B.ceil_h or 0)))
   end
 
 
@@ -4246,7 +4246,7 @@ function Render_cells(area)
 
     local result = 0
 
-    for _,L in pairs(pairs(area.cave_lights)) do
+    for _,L in pairs(area.cave_lights) do
       -- compute distance
       local dx = L.x - cell_x
       local dy = L.y - cell_y
@@ -4308,7 +4308,7 @@ function Render_cells(area)
 
     -- disable liquid lighting in outdoor rooms
     if f_mat == "_LIQUID" and area.is_outdoor and not LEVEL.is_dark then
-      for _,C in pairs(pairs(f_brush)) do
+      for _,C in pairs(f_brush) do
         if C.t then C.light_add = 0 end
       end
     end

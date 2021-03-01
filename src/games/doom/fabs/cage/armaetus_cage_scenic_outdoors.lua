@@ -8,7 +8,7 @@
 
   prob  = 250,
 
-  liquid = true
+  liquid = true,
 
   where  = "seeds",
   shape  = "U",
@@ -21,17 +21,17 @@
 
   x_fit = "stretch",
   y_fit = "top",
-},
+}
 
 PREFABS.Cage_armaetus_scenic_outdoors2 =
 {
   template = "Cage_armaetus_scenic_outdoors1",
   map = "MAP02",
-},
+}
 
 PREFABS.Cage_armaetus_scenic_outdoors3 =
 {
   template = "Cage_armaetus_scenic_outdoors1",
   map = "MAP03",
-},
+}
 ]]

@@ -45,7 +45,7 @@ PREFABS.Joiner_EPIC_remote_door_tech =
     CEIL5_1 = 50,
     CEIL5_2 = 50,
   },
-},
+}
 
 PREFABS.Joiner_EPIC_remote_door_urban =
 {
@@ -73,7 +73,7 @@ PREFABS.Joiner_EPIC_remote_door_urban =
     BIGDOORK = 50,
     BIGDOORL = 50,
   },
-},
+}
 
 PREFABS.Joiner_EPIC_remote_door_hell =
 {
@@ -95,7 +95,7 @@ PREFABS.Joiner_EPIC_remote_door_hell =
     BIGDOORJ = 50,
     BIGDOORK = 50,
   },
-},
+}
 
 PREFABS.Joiner_EPIC_remote_sw_metal_tech =
 {
@@ -121,7 +121,7 @@ PREFABS.Joiner_EPIC_remote_sw_metal_tech =
   },
 
   flat_FLAT23 = "CEIL5_2",
-},
+}
 
 PREFABS.Joiner_EPIC_remote_sw_metal_urban =
 {
@@ -155,7 +155,7 @@ PREFABS.Joiner_EPIC_remote_sw_metal_urban =
   },
 
   flat_FLAT23 = "CEIL5_2",
-},
+}
 
 PREFABS.Joiner_EPIC_remote_sw_metal_hell =
 {
@@ -183,4 +183,4 @@ PREFABS.Joiner_EPIC_remote_sw_metal_hell =
   },
 
   flat_FLAT23 = "CEIL5_2",
-},
+}

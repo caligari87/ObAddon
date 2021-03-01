@@ -6,7 +6,7 @@ PREFABS.Joiner_curve1 =
 {
   file   = "joiner/curve1.wad",
 
-  prob   = 200 --100,
+  prob   = 200, --100,
   style  = "steepness",
 
   where  = "seeds",
@@ -17,49 +17,49 @@ PREFABS.Joiner_curve1 =
 
   delta_h  = 64,
   nearby_h = 128,
-},
+}
 
 PREFABS.Joiner_curve1_general =
 {
   template = "Joiner_curve1",
 
   tex_ICKWALL1 = "ICKWALL3",
-},
+}
 
 PREFABS.Joiner_curve1_general2 =
 {
   template = "Joiner_curve1",
 
   tex_ICKWALL1 = "STONE2",
-},
+}
 
 PREFABS.Joiner_curve1_general3 =
 {
   template = "Joiner_curve1",
 
   tex_ICKWALL1 = "STONE3",
-},
+}
 
 PREFABS.Joiner_curve1_general4 =
 {
   template = "Joiner_curve1",
 
   tex_ICKWALL1 = "PIPE2",
-},
+}
 
 PREFABS.Joiner_curve1_general5 =
 {
   template = "Joiner_curve1",
 
   tex_ICKWALL1 = "PIPE4",
-},
+}
 
 PREFABS.Joiner_curve1_general6 =
 {
   template = "Joiner_curve1",
 
   tex_ICKWALL1 = "GRAYVINE",
-},
+}
 
 PREFABS.Joiner_curve1_tech1 =
 {
@@ -71,7 +71,7 @@ PREFABS.Joiner_curve1_tech1 =
   tex_STEP6 = "STONE2",
   flat_FLAT1 = "FLOOR4_8",
   flat_FLAT5_5 = "CEIL3_5",
-},
+}
 
 PREFABS.Joiner_curve1_tech1a =
 {
@@ -84,7 +84,7 @@ PREFABS.Joiner_curve1_tech1a =
   tex_STEP6 = "STONE2",
   flat_FLAT1 = "FLOOR4_8",
   flat_FLAT5_5 = "CEIL3_5",
-},
+}
 
 PREFABS.Joiner_curve1_tech1b =
 {
@@ -97,7 +97,7 @@ PREFABS.Joiner_curve1_tech1b =
   tex_STEP6 = "STONE2",
   flat_FLAT1 = "FLOOR4_8",
   flat_FLAT5_5 = "CEIL3_5",
-},
+}
 
 PREFABS.Joiner_curve1_tech1c =
 {
@@ -109,7 +109,7 @@ PREFABS.Joiner_curve1_tech1c =
   tex_STEP6 = "STONE2",
   flat_FLAT1 = "FLOOR4_8",
   flat_FLAT5_5 = "CEIL3_5",
-},
+}
 
 PREFABS.Joiner_curve1_tech1d =
 {
@@ -121,7 +121,7 @@ PREFABS.Joiner_curve1_tech1d =
   tex_STEP6 = "STONE2",
   flat_FLAT1 = "FLOOR4_8",
   flat_FLAT5_5 = "CEIL3_5",
-},
+}
 
 PREFABS.Joiner_curve1_tech1e =
 {
@@ -133,7 +133,7 @@ PREFABS.Joiner_curve1_tech1e =
   tex_STEP6 = "STONE2",
   flat_FLAT1 = "FLAT14",
   flat_FLAT5_5 = "CEIL3_5",
-},
+}
 
 PREFABS.Joiner_curve1_tech1f =
 {
@@ -145,7 +145,7 @@ PREFABS.Joiner_curve1_tech1f =
   tex_STEP6 = "STONE3",
   flat_FLAT1 = "FLOOR4_8",
   flat_FLAT5_5 = "CEIL3_5",
-},
+}
 
 PREFABS.Joiner_curve1_tech1g =
 {
@@ -157,7 +157,7 @@ PREFABS.Joiner_curve1_tech1g =
   tex_STEP6 = "STONE2",
   flat_FLAT1 = "FLOOR4_8",
   flat_FLAT5_5 = "CEIL3_5",
-},
+}
 
 PREFABS.Joiner_curve1_tech1h =
 {
@@ -169,7 +169,7 @@ PREFABS.Joiner_curve1_tech1h =
   tex_STEP6 = "SHAWN2",
   flat_FLAT1 = "FLOOR4_8",
   flat_FLAT5_5 = "FLAT20",
-},
+}
 
 PREFABS.Joiner_curve1_urban1 =
 {
@@ -180,7 +180,7 @@ PREFABS.Joiner_curve1_urban1 =
   tex_STEP6 = "STONE2",
   flat_FLAT1 = "FLOOR5_4",
   flat_FLAT5_5 = "CEIL3_5",
-},
+}
 
 PREFABS.Joiner_curve1_urban2 =
 {
@@ -191,7 +191,7 @@ PREFABS.Joiner_curve1_urban2 =
   tex_STEP6 = "STONE",
   flat_FLAT1 = "FLAT5_4",
   flat_FLAT5_5 = "FLAT5_4",
-},
+}
 
 PREFABS.Joiner_curve1_urban3 =
 {
@@ -203,7 +203,7 @@ PREFABS.Joiner_curve1_urban3 =
   flat_FLAT5_5 = "CEIL3_5",
   tex_STEP6 = "STONE2",
   tex_STEP4 = "STEP6",
-},
+}
 
 PREFABS.Joiner_curve1_urban4 =
 {
@@ -215,7 +215,7 @@ PREFABS.Joiner_curve1_urban4 =
   tex_STEP4 = "STEP6",
   flat_FLAT1 = "FLAT5",
   flat_FLAT5_5 = "FLAT1",
-},
+}
 
 PREFABS.Joiner_curve1_urban5 =
 {
@@ -226,7 +226,7 @@ PREFABS.Joiner_curve1_urban5 =
   tex_STEP6 = "PANCASE2",
   tex_STEP4 = "STEP6",
   flat_FLAT1 = "FLAT5_5",
-},
+}
 
 PREFABS.Joiner_curve1_urban6 =
 {
@@ -238,7 +238,7 @@ PREFABS.Joiner_curve1_urban6 =
   tex_STEP4 = "STEP6",
   flat_FLAT1 = "FLAT5_5",
   flat_FLAT5_5 = "CEIL1_1",
-},
+}
 
 PREFABS.Joiner_curve1_urban7 =
 {
@@ -250,7 +250,7 @@ PREFABS.Joiner_curve1_urban7 =
   tex_STEP4 = "STEP6",
   flat_FLAT1 = "FLAT5_5",
   flat_FLAT5_5 = "CEIL1_1",
-},
+}
 
 PREFABS.Joiner_curve1_urban8 =
 {
@@ -262,7 +262,7 @@ PREFABS.Joiner_curve1_urban8 =
   tex_STEP4 = "STEP6",
   flat_FLAT1 = "FLAT5_5",
   flat_FLAT5_5 = "CEIL1_1",
-},
+}
 
 PREFABS.Joiner_curve1_urban9 =
 {
@@ -274,7 +274,7 @@ PREFABS.Joiner_curve1_urban9 =
   tex_STEP4 = "STEP6",
   tex_STEP6 = "WOOD3",
   flat_FLAT5_5 = "CEIL1_1",
-},
+}
 
 PREFABS.Joiner_curve1_urban10 =
 {
@@ -286,7 +286,7 @@ PREFABS.Joiner_curve1_urban10 =
   tex_STEP4 = "STEP6",
   tex_STEP6 = "WOOD3",
   flat_FLAT5_5 = "CEIL1_1",
-},
+}
 
 PREFABS.Joiner_curve1_hell1 =
 {
@@ -298,7 +298,7 @@ PREFABS.Joiner_curve1_hell1 =
   tex_STEP4 = "WOOD1",
   flat_FLAT1 = "FLAT5_1",
   flat_FLAT5_5 = "FLOOR7_2",
-},
+}
 
 PREFABS.Joiner_curve1_hell2 =
 {
@@ -310,7 +310,7 @@ PREFABS.Joiner_curve1_hell2 =
   tex_STEP4 = "MARBLE1",
   flat_FLAT1 = "DEM1_6",
   flat_FLAT5_5 = "FLAT5_2",
-},
+}
 
 PREFABS.Joiner_curve1_hell3 =
 {
@@ -322,7 +322,7 @@ PREFABS.Joiner_curve1_hell3 =
   tex_STEP4 = "WOOD1",
   flat_FLAT1 = "FLAT5_1",
   flat_FLAT5_5 = "FLOOR7_2",
-},
+}
 
 PREFABS.Joiner_curve1_hell4 =
 {
@@ -334,7 +334,7 @@ PREFABS.Joiner_curve1_hell4 =
   tex_STEP4 = "WOOD1",
   flat_FLAT1 = "FLAT5_1",
   flat_FLAT5_5 = "FLOOR7_2",
-},
+}
 
 PREFABS.Joiner_curve1_hell5 =
 {
@@ -346,7 +346,7 @@ PREFABS.Joiner_curve1_hell5 =
   tex_STEP4 = "WOOD1",
   flat_FLAT1 = "FLAT5_1",
   flat_FLAT5_5 = "FLAT5_2",
-},
+}
 
 PREFABS.Joiner_curve1_hell6 =
 {
@@ -358,7 +358,7 @@ PREFABS.Joiner_curve1_hell6 =
   tex_STEP4 = "SUPPORT3",
   flat_FLAT1 = "CEIL5_2",
   flat_FLAT5_5 = "CEIL5_2",
-},
+}
 
 PREFABS.Joiner_curve1_hell7 =
 {
@@ -370,7 +370,7 @@ PREFABS.Joiner_curve1_hell7 =
   tex_STEP4 = "SUPPORT3",
   flat_FLAT1 = "CEIL5_2",
   flat_FLAT5_5 = "CEIL5_2",
-},
+}
 
 PREFABS.Joiner_curve1_hell8 =
 {
@@ -382,7 +382,7 @@ PREFABS.Joiner_curve1_hell8 =
   tex_STEP4 = "SUPPORT3",
   flat_FLAT1 = "CEIL5_2",
   flat_FLAT5_5 = "CEIL5_2",
-},
+}
 
 PREFABS.Joiner_curve1_hell9 =
 {
@@ -394,4 +394,4 @@ PREFABS.Joiner_curve1_hell9 =
   tex_STEP4 = "STEP6",
   flat_FLAT1 = "FLAT5_5",
   flat_FLAT5_5 = "FLAT5_2",
-},
+}

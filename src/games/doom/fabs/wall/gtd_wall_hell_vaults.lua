@@ -16,7 +16,7 @@ PREFABS.Wall_hell_vaults_plain =
   bound_z2 = 128,
 
   z_fit = "bottom",
-},
+}
 
 PREFABS.Wall_hell_vaults_windowed =
 {
@@ -25,7 +25,7 @@ PREFABS.Wall_hell_vaults_windowed =
   map = "MAP02",
 
   prob = 20,
-},
+}
 
 PREFABS.Wall_hell_vaults_diag =
 {
@@ -34,7 +34,7 @@ PREFABS.Wall_hell_vaults_diag =
 
   prob = 50,
   where = "diagonal",
-},
+}
 
 --
 
@@ -44,7 +44,7 @@ PREFABS.Wall_hell_vaults_floor_tex =
   map = "MAP10",
 
   group = "gtd_wall_hell_vaults_ftex",
-},
+}
 
 PREFABS.Wall_hell_vaults_floor_tex_diag =
 {
@@ -54,4 +54,4 @@ PREFABS.Wall_hell_vaults_floor_tex_diag =
   where = "diagonal",
 
   group = "gtd_wall_hell_vaults_ftex",
-},
+}

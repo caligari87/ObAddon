@@ -64,4 +64,4 @@ PREFABS.Switch_scionox_penta =
     skull_cairn = 50,
     skull_rock = 50,
   },
-},
+}

@@ -30,7 +30,7 @@ PREFABS.Start_sky_pad =
   tex_STARBR2 = { SHAWN2=50, METAL2=50, STARBR2=50, TEKWALL4=50, STARGR1=50, STONE=50 },
   flat_FLOOR4_1 = { FLOOR4_1=50, FLOOR4_5=50, FLOOR4_6=50 },
 
-},
+}
 
 
 PREFABS.Start_sky_pad_hell =
@@ -56,7 +56,7 @@ PREFABS.Start_sky_pad_hell =
   tex_BROWN1  = { STONE2=50, STONE3=50, STONE4=50 },
 
   flat_FLOOR4_1 = "FLAT1",
-},
+}
 
 PREFABS.Start_sky_pad_urban =
 {
@@ -82,4 +82,4 @@ PREFABS.Start_sky_pad_urban =
   tex_BROWN1  = { STONE2=50, STONE3=50, STONE4=50, STONE5=50 },
 
   flat_FLOOR4_1 = "FLAT1",
-},
+}

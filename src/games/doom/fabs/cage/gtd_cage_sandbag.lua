@@ -9,7 +9,7 @@ PREFABS.Cage_sandbag_fort =
   size   = 96,
 
   bound_z1 = 0,
-},
+}
 
 PREFABS.Cage_sandbag_fort_for_two =
 {
@@ -22,7 +22,7 @@ PREFABS.Cage_sandbag_fort_for_two =
   size     = 128,
 
   bound_z1 = 0,
-},
+}
 
 PREFABS.Cage_sandbag_fort_EPIC =
 {
@@ -40,7 +40,7 @@ PREFABS.Cage_sandbag_fort_EPIC =
   tex_BRICK12 = "SANDBAGS",
 
   bound_z1 = 0,
-},
+}
 
 PREFABS.Cage_sandbag_fort_for_two_EPIC =
 {
@@ -58,7 +58,7 @@ PREFABS.Cage_sandbag_fort_for_two_EPIC =
   tex_BRICK12 = "SANDBAGS",
 
   bound_z1 = 0,
-},
+}
 
 PREFABS.Cage_sandbag_inset =
 {
@@ -77,7 +77,7 @@ PREFABS.Cage_sandbag_inset =
 
   x_fit = { 84,92 , 164,172 },
   y_fit = "top",
-},
+}
 
 PREFABS.Cage_sandbag_inset_EPIC =
 {
@@ -103,4 +103,4 @@ PREFABS.Cage_sandbag_inset_EPIC =
   tex_BRICK12 = "SANDBAGS",
 
   tex_MIDBARS1 = "FENCE2",
-},
+}

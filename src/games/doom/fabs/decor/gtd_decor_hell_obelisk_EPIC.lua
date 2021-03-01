@@ -14,10 +14,10 @@ PREFABS.Decor_hell_obelisk_EPIC_red =
   height = 352,
 
   bound_z1 = 0,
-},
+}
 
 PREFABS.Decor_hell_obelisk_EPIC_yellow =
 {
   template = "Decor_hell_obelisk_EPIC_red",
   map      = "MAP02",
-},
+}

@@ -22,7 +22,7 @@ PREFABS.Switch_niche2 =
   -- use the occasional-blink FX (fairly rarely)
   sector_1  = { [0]=80, [1]=15, [2]=5, [3]=5, [8]=5 },
 
-},
+}
 
 PREFABS.Switch_niche3 =
 {
@@ -44,4 +44,4 @@ PREFABS.Switch_niche3 =
   -- use the occasional-blink FX (fairly rarely)
   sector_1  = { [0]=80, [1]=15, [2]=5, [3]=5, [8]=5 },
 
-},
+}

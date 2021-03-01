@@ -34,9 +34,9 @@ PREFABS.Cage_dem_garage_ambush1 =
     STONE3=50, BRICK12=50, BRICK5=50,
     BRONZE1=50, BROWN1=50, BROWN96=50,
     BROWNGRN=50, CEMENT7=50, CEMENT9=50,
-  },
+  }
 
-},
+}
 
 PREFABS.Cage_dem_garage_ambush1CBL =
 {
@@ -45,7 +45,7 @@ PREFABS.Cage_dem_garage_ambush1CBL =
   flat_FLAT5_3 = "CEIL4_2",
 
   tex_REDWALL = "COMPBLUE",
-},
+}
 
 PREFABS.Cage_dem_garage_ambush1CBR =
 {
@@ -54,7 +54,7 @@ PREFABS.Cage_dem_garage_ambush1CBR =
   flat_FLAT5_3 = "CEIL5_2",
 
   tex_REDWALL = "BROWN144",
-},
+}
 
 --a garage cage with a big truck
 PREFABS.Cage_dem_garage_ambush2 =
@@ -88,9 +88,9 @@ PREFABS.Cage_dem_garage_ambush2 =
     STONE3=50, BRICK12=50, BRICK5=50,
     BRONZE1=50, BROWN1=50, BROWN96=50,
     BROWNGRN=50, CEMENT7=50, CEMENT9=50,
-  },
+  }
 
-},
+}
 
 --a grocery store with a horde of enemies inside
 PREFABS.Cage_dem_store_ambush =
@@ -115,7 +115,7 @@ PREFABS.Cage_dem_store_ambush =
   x_fit = "frame",
   y_fit  = "frame",
 
-  can_flip = true
+  can_flip = true,
 
   tex_BRICK9 = {
     BRICK1=50, BRICK10=50, BRICK11=50,
@@ -148,8 +148,8 @@ PREFABS.Cage_dem_store_ambush =
   hang_torso = 50,
   hang_leg   = 50,
   hang_leg_gone = 50,
-  },
-},
+  }
+}
 
 --
 --Cages for outdoor
@@ -197,9 +197,9 @@ PREFABS.Cage_dem_bunker_ambush1 =
     shooter = 30,
     imp = 50,
     gunner = 20,
-  },
+  }
 
-},
+}
 
 
 
@@ -209,7 +209,7 @@ PREFABS.Cage_dem_bunker_ambush2 =
 
   map = "MAP05",
   env    = "cave",
-},
+}
 
 PREFABS.Cage_dem_bunker_ambush3 =
 {
@@ -218,7 +218,7 @@ PREFABS.Cage_dem_bunker_ambush3 =
   map = "MAP06",
   env = "nature",
   group = "natural_walls",
-},
+}
 
 ----upper ledge ambush----
 
@@ -249,7 +249,7 @@ PREFABS.Cage_dem_ledge_ambush1 =
   x_fit = "frame",
   z_fit = "top",
 
-},
+}
 
 PREFABS.Cage_dem_ledge_ambush2 =
 {
@@ -260,9 +260,9 @@ PREFABS.Cage_dem_ledge_ambush2 =
 
 
   x_fit = "frame",
-  z_fit = { 16,24 },
+  z_fit = { 16,24 }
 
-},
+}
 
 PREFABS.Cage_dem_ledge_ambush3 =
 {
@@ -274,8 +274,8 @@ PREFABS.Cage_dem_ledge_ambush3 =
 
 
   x_fit = "frame",
-  z_fit = { 18,26 },
-},
+  z_fit = { 18,26 }
+}
 
 PREFABS.Cage_dem_ledge_ambush4 =
 {
@@ -287,7 +287,7 @@ PREFABS.Cage_dem_ledge_ambush4 =
   bound_z1 = 0,
   bound_z2 = 184,
 
-},
+}
 
 PREFABS.Cage_dem_ledge_ambush5 =
 {
@@ -299,7 +299,7 @@ PREFABS.Cage_dem_ledge_ambush5 =
   bound_z1 = 0,
   bound_z2 = 232,
 
-},
+}
 
 ---- natural shrine getting corrupted by demon ----
 
@@ -332,7 +332,7 @@ PREFABS.Cage_dem_shrineC =
 
   texture_pack = "armaetus",
 
-},
+}
 
 PREFABS.Cage_dem_shrineN =
 {
@@ -343,7 +343,7 @@ PREFABS.Cage_dem_shrineN =
   group = "natural_walls",
 
 
-},
+}
 
 ---- Ruins with enemies hidden inside ----
 
@@ -377,13 +377,13 @@ PREFABS.Cage_dem_ruinsN1amb =
 
   texture_pack = "armaetus",
 
-},
+}
 
 PREFABS.Cage_dem_ruinsN2amb =
 {
   template  = "Cage_dem_ruinsN1amb",
   map    = "MAP13",
-},
+}
 
 PREFABS.Cage_dem_ruinsC1amb =
 {
@@ -413,13 +413,13 @@ PREFABS.Cage_dem_ruinsC1amb =
 
   texture_pack = "armaetus",
 
-},
+}
 
 PREFABS.Cage_dem_ruinsC2amd =
 {
   template  = "Cage_dem_ruinsC1amb",
   map    = "MAP15",
-},
+}
 
 
 ----Natural corner with old cabin that have enemies inside----
@@ -464,6 +464,6 @@ PREFABS.Cage_dem_cabinamb =
     dead_zombie = 50,
     dead_shooter = 50,
     dead_imp = 50,
-  },
+  }
 
-},
+}

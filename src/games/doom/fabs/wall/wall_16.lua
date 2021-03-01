@@ -18,7 +18,7 @@ PREFABS.Wall_plain =
 
   x_fit  = "stretch",
   z_fit  = "stretch",
-},
+}
 
 
 PREFABS.Wall_plain_diag =
@@ -34,4 +34,4 @@ PREFABS.Wall_plain_diag =
   bound_z2 = 2,
 
   z_fit  = "stretch",
-},
+}

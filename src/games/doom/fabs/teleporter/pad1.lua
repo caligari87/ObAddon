@@ -15,7 +15,7 @@ PREFABS.Teleporter1 =
 
   sector_8  = { [8]=60, [2]=10, [3]=10, [17]=10, [21]=10 },
 
-},
+}
 
 PREFABS.Teleporter2 =
 {
@@ -31,7 +31,7 @@ PREFABS.Teleporter2 =
 
   sector_8  = { [8]=60, [2]=10, [3]=10, [17]=10, [21]=10 },
 
-},
+}
 
 PREFABS.Teleporter3 =
 {
@@ -47,7 +47,7 @@ PREFABS.Teleporter3 =
 
   sector_8  = { [8]=60, [2]=10, [3]=10, [17]=10, [21]=10 },
 
-},
+}
 
 PREFABS.Teleporter4 =
 {
@@ -63,4 +63,4 @@ PREFABS.Teleporter4 =
 
   sector_8  = { [8]=60, [2]=10, [3]=10, [17]=10, [21]=10 },
 
-},
+}

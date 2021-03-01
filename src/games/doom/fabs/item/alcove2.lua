@@ -28,16 +28,16 @@ PREFABS.Item_alcove_techy =
 
   tex_COMPTALL = { COMPTALL=80, TEKWALL4=30 },
   flat_FLOOR0_2 = { FLOOR0_2=50, FLOOR0_1=50, FLAT5=50 },
-  flat_CEIL4_3 = { CEIL4_3=50, CEIL4_2=50, CEIL4_1=50, CEIL5_2=50, FLAT4=50, CEIL3_5=50, CEIL3_1=50, CEIL3_2=50, CEIL3_3=50, FLOOR7_1=50, SLIME14=50, SLIME15=50 },
+  flat_CEIL4_3 = { CEIL4_3=50, CEIL4_2=50, CEIL4_1=50, CEIL5_2=50, FLAT4=50, CEIL3_5=50, CEIL3_1=50, CEIL3_2=50, CEIL3_3=50, FLOOR7_1=50, SLIME14=50, SLIME15=50 }
 
-},
+}
 
 PREFABS.Item_alcove_hell =
 {
   template = "Item_alcove_techy",
   theme = "hell",
 
-  prob = 100 -- hell alcoves had a default prob of 200, total 400,
+  prob = 100, -- hell alcoves had a default prob of 200, total 400,
 
   tex_METAL2 = "SUPPORT3",
   tex_SHAWN2 = "MARBLE1",
@@ -51,7 +51,7 @@ PREFABS.Item_alcove_hell =
 
   sector_12 = 0,
 
-},
+}
 
 PREFABS.Item_alcove_hell2 =
 {
@@ -70,9 +70,9 @@ PREFABS.Item_alcove_hell2 =
   flat_CEIL4_3 = { FLOOR6_1=50, FLOOR6_2=50, FLAT5_2=50, GRNROCK=50, RROCK12=50, RROCK13=50, RROCK15=50, SLIME13=50, SLIME09=50, MFLR8_2=50, RROCK01=50, RROCK02=50 },
   flat_FLAT23 = "FLOOR7_2",
 
-  sector_12 = { [0]=20, [17]=60 },
+  sector_12 = { [0]=20, [17]=60 }
 
-},
+}
 
 PREFABS.Item_alcove_urban =
 {
@@ -89,4 +89,4 @@ PREFABS.Item_alcove_urban =
 
   sector_12 = 0,
 
-},
+}

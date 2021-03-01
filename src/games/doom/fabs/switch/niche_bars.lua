@@ -7,7 +7,7 @@ PREFABS.Switch_niche_bars =
   file   = "switch/niche_bars.wad",
 
   theme  = "tech",
-  prob   = 100 --50,
+  prob   = 100, --50,
   key    = "barred",
 
   where  = "seeds",
@@ -25,5 +25,5 @@ PREFABS.Switch_niche_bars =
 
   sector_1  = { [0]=70, [1]=15, [2]=5, [3]=5, [8]=10, [12]=5, [13]=5 },
 
-},
+}
 

@@ -22,7 +22,7 @@ PREFABS.Teleporter_scionox_pillar_teleport =
 
   sector_8  = { [8]=50, [1]=10, [2]=10, [3]=10, [17]=10 },
   tex_SPCDOOR2 = { SPCDOOR1=50, SPCDOOR2=50, SPCDOOR3=50, SPCDOOR4=50 },
-},
+}
 
 PREFABS.Teleporter_scionox_pillar_teleport_2 =
 {
@@ -30,4 +30,4 @@ PREFABS.Teleporter_scionox_pillar_teleport_2 =
   theme  = "hell",
   map    = "MAP02",
   tex_WOODMET2 = { WOODMET1=50, WOODMET2=50, WOODMET3=50, WOODMET4=50 },
-},
+}

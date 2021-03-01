@@ -19,7 +19,7 @@ PREFABS.Window_grate_1 =
 
   bound_z1 = 0,
   bound_z2 = 128,
-},
+}
 
 PREFABS.Window_grate_1_midspace =
 {
@@ -27,7 +27,7 @@ PREFABS.Window_grate_1_midspace =
   map      = "MAP01",
   theme    = "tech",
   tex_MIDBARS3 = "MIDSPACE",
-},
+}
 
 PREFABS.Window_grate_2 =
 {
@@ -35,7 +35,7 @@ PREFABS.Window_grate_2 =
   map      = "MAP02",
   theme    = "!tech",
   seed_w   = 2,
-},
+}
 
 PREFABS.Window_grate_2_midspace =
 {
@@ -44,7 +44,7 @@ PREFABS.Window_grate_2_midspace =
   theme    = "tech",
   tex_MIDBARS3 = "MIDSPACE",
   seed_w = 2,
-},
+}
 
 PREFABS.Window_grate_3 =
 {
@@ -52,7 +52,7 @@ PREFABS.Window_grate_3 =
   map      = "MAP03",
   theme    = "!tech",
   seed_w   = 3,
-},
+}
 
 PREFABS.Window_grate_3_midspace =
 {
@@ -61,4 +61,4 @@ PREFABS.Window_grate_3_midspace =
   theme    = "tech",
   tex_MIDBARS3 = "MIDSPACE",
   seed_w = 3,
-},
+}

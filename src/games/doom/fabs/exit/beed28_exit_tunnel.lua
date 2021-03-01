@@ -25,8 +25,8 @@ PREFABS.Exit_beed28_tunnel =
    mercury_lamp = 50,
    mercury_small = 50,
    lamp = 50,
-  },
-},
+  }
+}
 
 PREFABS.Exit_beed28_tunnel_hell =
 {
@@ -44,5 +44,5 @@ PREFABS.Exit_beed28_tunnel_hell =
    green_torch = 50,
    red_torch = 50,
    candelabra = 50,
-  },
-},
+  }
+}

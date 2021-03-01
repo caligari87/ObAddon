@@ -17,18 +17,18 @@ PREFABS.Wall_garrett_hell_bloody_fountain =
   bound_z2 = 128,
 
   z_fit  = "top",
-},
+}
 
 PREFABS.Wall_garrett_hell_bloody_fountain2 =
 {
   template = "Wall_garrett_hell_bloody_fountain",
 
   map = "MAP02",
-},
+}
 
 PREFABS.Wall_garrett_hell_bloody_fountain3 =
 {
   template = "Wall_garrett_hell_bloody_fountain",
 
   map = "MAP03",
-},
+}

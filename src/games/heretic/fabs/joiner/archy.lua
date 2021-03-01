@@ -20,7 +20,7 @@ PREFABS.Joiner_archy1 =
 
   x_fit = "frame",
   y_fit = "stretch",
-},
+}
 
 
 PREFABS.Joiner_archy1_wide =
@@ -41,5 +41,5 @@ PREFABS.Joiner_archy1_wide =
 
   x_fit = "frame",
   y_fit = "frame",
-},
+}
 

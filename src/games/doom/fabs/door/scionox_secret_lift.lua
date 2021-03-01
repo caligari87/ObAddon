@@ -15,4 +15,4 @@ PREFABS.Door_scionox_secret_lift =
   bound_z2 = 16,
 
   x_fit  = "frame",
-},
+}

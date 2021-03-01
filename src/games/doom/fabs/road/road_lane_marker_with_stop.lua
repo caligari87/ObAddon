@@ -9,4 +9,4 @@ PREFABS.Road_lane_marker_with_stop =
 
   bound_z1 = -16,
   bound_z2 = 128,
-},
+}

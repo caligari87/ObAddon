@@ -31,8 +31,8 @@ PREFABS.Locked_huge_red =
   -- texture is already "DOORRED",
   -- line special is already #135 (open red door)
 
-  can_flip = true
-},
+  can_flip = true,
+}
 
 
 PREFABS.Locked_huge_blue =
@@ -43,7 +43,7 @@ PREFABS.Locked_huge_blue =
 
   tex_DOORRED = "DOORBLU",
   line_135    = 133,
-},
+}
 
 
 PREFABS.Locked_huge_yellow =
@@ -54,7 +54,7 @@ PREFABS.Locked_huge_yellow =
 
   tex_DOORRED = "DOORYEL",
   line_135    = 137,
-},
+}
 
 -- Tech variant -MSSP
 
@@ -65,7 +65,7 @@ PREFABS.Locked_huge_red_tech =
   theme        = "tech",
 
   tex_BIGDOOR6 = "BIGDOOR4",
-},
+}
 
 PREFABS.Locked_huge_blue_tech =
 {
@@ -79,7 +79,7 @@ PREFABS.Locked_huge_blue_tech =
 
   tex_DOORRED  = "DOORBLU",
   line_135     = 133,
-},
+}
 
 PREFABS.Locked_huge_yellow_tech =
 {
@@ -93,7 +93,7 @@ PREFABS.Locked_huge_yellow_tech =
 
   tex_DOORRED  = "DOORYEL",
   line_135     = 137,
-},
+}
 
 --------------------------------------------
 ------- Another huge locked door -----------
@@ -110,7 +110,7 @@ PREFABS.Locked_huge3_red =
 
   -- texture is already "DOORRED",
   -- line special is already #33 (open red door)
-},
+}
 
 
 PREFABS.Locked_huge3_blue =
@@ -126,7 +126,7 @@ PREFABS.Locked_huge3_blue =
 
   tex_DOORRED = "DOORBLU",
   line_33     = 32,
-},
+}
 
 
 PREFABS.Locked_huge3_yellow =
@@ -142,4 +142,4 @@ PREFABS.Locked_huge3_yellow =
 
   tex_DOORRED = "DOORYEL",
   line_33     = 34,
-},
+}

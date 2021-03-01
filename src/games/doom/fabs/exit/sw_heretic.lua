@@ -8,5 +8,5 @@ UNFINISHED.Exit_heretic =
   where  = "point",
 
   game   = "heretic",
-},
+}
 

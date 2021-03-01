@@ -3,7 +3,7 @@ PREFABS.Joiner_leap =
   file = "joiner/gtd_leap_joiner.wad",
   map = "MAP01",
 
-  liquid = true
+  liquid = true,
 
   prob = 225,
 
@@ -20,4 +20,4 @@ PREFABS.Joiner_leap =
 
   x_fit = { 112,144 },
   y_fit = { 24,28 , 132,136 },
-},
+}

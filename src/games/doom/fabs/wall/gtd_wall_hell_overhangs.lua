@@ -18,7 +18,7 @@ PREFABS.Wall_hell_castle_maccicolations =
 
   x_fit = "frame",
   z_fit = "bottom",
-},
+}
 
 PREFABS.Wall_hell_castle_maccicolations_overhang =
 {
@@ -27,7 +27,7 @@ PREFABS.Wall_hell_castle_maccicolations_overhang =
   map = "MAP02",
 
   deep = 32,
-},
+}
 
 PREFABS.Wall_hell_castle_maccicolations_turret =
 {
@@ -40,4 +40,4 @@ PREFABS.Wall_hell_castle_maccicolations_turret =
   deep = 48,
 
   bound_z2 = 192,
-},
+}

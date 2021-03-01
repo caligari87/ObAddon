@@ -7999,14 +7999,14 @@ function namelib.merge_theme(theme_name)
   local sources = { namelib.NAMES, GAME.NAMES or {} }
 
   -- always merge in the "COMMON" theme before the main one
-  for _,S in pairs(pairs(sources)) do
+  for _,S in pairs(sources) do
     if S["COMMON"] then
       table.deep_merge(theme, S["COMMON"])
     end
   end
 
   -- now merge in the actual specific theme
-  for _,S in pairs(pairs(sources)) do
+  for _,S in pairs(sources) do
     if S[theme_name] then
       table.deep_merge(theme, S[theme_name])
     end

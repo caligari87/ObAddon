@@ -18,7 +18,7 @@ PREFABS.Fence_plain =
 
   fence_h  = 32,
   bound_z1 = 0,
-},
+}
 
 
 PREFABS.Fence_plain_diag =
@@ -35,4 +35,4 @@ PREFABS.Fence_plain_diag =
   fence_h = 32,
 
   bound_z1 = 0,
-},
+}

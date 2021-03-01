@@ -23,4 +23,4 @@ PREFABS.Pic_locked_gunstore =
 
   x_fit = "frame",
   y_fit = "top",
-},
+}

@@ -338,7 +338,7 @@ end
 
 
 function Connect_finalize()
-  for _,P in pairs(pairs(LEVEL.prelim_conns)) do
+  for _,P in pairs(LEVEL.prelim_conns) do
     assert(P.kind)
 
     if P.kind == "teleporter" then

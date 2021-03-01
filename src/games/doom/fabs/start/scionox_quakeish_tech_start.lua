@@ -20,7 +20,7 @@ PREFABS.Start_scionox_quakeish_tech_start =
 
   x_fit  = "frame",
   y_fit  = "top",
-},
+}
 
 PREFABS.Start_scionox_quakeish_tech_start_2 =
 {
@@ -31,4 +31,4 @@ PREFABS.Start_scionox_quakeish_tech_start_2 =
 
   tex_COMPCT02 = { COMPCT02=50, COMPCT01=50, COMPCT03=50, GRAYMET7=50,
   GRAYMET9=50, DFAN1=50, GRAYBLU1=50 },
-},
+}

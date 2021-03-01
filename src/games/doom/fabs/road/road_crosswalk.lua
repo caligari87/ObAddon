@@ -9,4 +9,4 @@ PREFABS.Road_crosswalk =
 
   bound_z1 = -16,
   bound_z2 = 128,
-},
+}

@@ -12,7 +12,7 @@ PREFABS.Hallway_vent_i1 =
 
   where  = "seeds",
   shape  = "I",
-},
+}
 
 PREFABS.Hallway_vent_i_rise =
 {
@@ -25,8 +25,8 @@ PREFABS.Hallway_vent_i_rise =
 
   delta_h = 64,
 
-  can_flip = true
-},
+  can_flip = true,
+}
 
 PREFABS.Hallway_vent_i_EPIC =
 {
@@ -40,7 +40,7 @@ PREFABS.Hallway_vent_i_EPIC =
   texture_pack = "armaetus",
 
   sound = "Indoor_Fan",
-},
+}
 
 PREFABS.Hallway_vent_i_lights =
 {
@@ -60,7 +60,7 @@ PREFABS.Hallway_vent_i_lights =
   },
 
   sound = "Indoor_Fan",
-},
+}
 
 -- i-piece with single side door
 
@@ -73,8 +73,8 @@ PREFABS.Hallway_vent_i_side_door_tech =
 
   theme = "!hell",
 
-  can_flip = true
-},
+  can_flip = true,
+}
 
 PREFABS.Hallway_vent_i_side_door_gothic =
 {
@@ -88,8 +88,8 @@ PREFABS.Hallway_vent_i_side_door_gothic =
   tex_DOOR3 = "WOODMET1",
   tex_DOORSTOP = "METAL",
 
-  can_flip = true
-},
+  can_flip = true,
+}
 
 PREFABS.Hallway_vent_i_side_window =
 {
@@ -98,8 +98,8 @@ PREFABS.Hallway_vent_i_side_window =
 
   prob = 17,
 
-  can_flip = true
-},
+  can_flip = true,
+}
 
 PREFABS.Hallway_vent_i_side_lights_tech =
 {
@@ -110,8 +110,8 @@ PREFABS.Hallway_vent_i_side_lights_tech =
 
   theme = "!hell",
 
-  can_flip = true
-},
+  can_flip = true,
+}
 
 PREFABS.Hallway_vent_i_side_lights_gothic =
 {
@@ -124,5 +124,5 @@ PREFABS.Hallway_vent_i_side_lights_gothic =
 
   tex_LITE3 = "ROCKRED1",
 
-  can_flip = true
-},
+  can_flip = true,
+}

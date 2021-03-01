@@ -26,7 +26,7 @@ PREFABS.Sidewalk_16_tech =
 
   tex_METAL = "STEP4",
   flat_CEIL5_2 = "FLAT19",
-},
+}
 
 PREFABS.Sidewalk_16_gothic =
 {
@@ -36,7 +36,7 @@ PREFABS.Sidewalk_16_gothic =
 
   tex_METAL = "METAL",
   flat_CEIL5_2 = "CEIL5_2",
-},
+}
 
 -- with lights
 
@@ -46,7 +46,7 @@ PREFABS.Sidewalk_16_lit =
   map = "MAP02",
 
   prob = 6,
-},
+}
 
 PREFABS.Sidewalk_16_lit_blue =
 {
@@ -56,4 +56,4 @@ PREFABS.Sidewalk_16_lit_blue =
   prob = 6,
 
   tex_LITE5 = "LITEBLU4",
-},
+}

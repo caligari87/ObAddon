@@ -23,27 +23,27 @@ PREFABS.Joiner_scionox_locked_lift_barred =
   tag_1  = "?door_tag",
   door_action = "S1_OpenDoor",
 
-  can_flip = true
+  can_flip = true,
 
   tex_COMPBLUE = { COMPBLUE=50, METAL1=50, SHAWN2=50, SILVER1=50, SPACEW4=60, TEKLITE=50 },
 
   x_fit = {20,28 , 36,44 , 52,60 , 68,76 , 84,92 , 100,108},
   y_fit = { 56,232 },
-},
+}
 
 PREFABS.Joiner_scionox_locked_lift_barred_urban =
 {
   template = "Joiner_scionox_locked_lift_barred",
   theme  = "urban",
   tex_COMPBLUE = { BIGBRIK1=50, BRICK10=50, BRICK11=50, WOOD12=50, WOOD1=60, PANEL4=50 },
-},
+}
 
 PREFABS.Joiner_scionox_locked_lift_barred_2 =
 {
   template = "Joiner_scionox_locked_lift_barred",
   map    = "MAP02",
   delta_h  = 72,
-},
+}
 
 PREFABS.Joiner_scionox_locked_lift_barred_urban_2 =
 {
@@ -52,7 +52,7 @@ PREFABS.Joiner_scionox_locked_lift_barred_urban_2 =
   theme  = "urban",
   tex_COMPBLUE = { BIGBRIK1=50, BRICK10=50, BRICK11=50, WOOD12=50, WOOD1=60, PANEL4=50 },
   delta_h  = 72,
-},
+}
 
 PREFABS.Joiner_scionox_locked_lift_thicc_barred_hell =
 {
@@ -62,7 +62,7 @@ PREFABS.Joiner_scionox_locked_lift_thicc_barred_hell =
   tex_COMPBLUE = { REDWALL=50, GSTONE1=50, METAL=50, SP_FACE2=50, SKSNAKE2=60, WOODVERT=50 },
 
   x_fit = {28,36 , 60,68 , 92,100},
-},
+}
 
 PREFABS.Joiner_scionox_locked_lift_thicc_barred_hell_2 =
 {
@@ -73,7 +73,7 @@ PREFABS.Joiner_scionox_locked_lift_thicc_barred_hell_2 =
   delta_h  = 72,
 
   x_fit = {28,36 , 60,68 , 92,100},
-},
+}
 
 PREFABS.Joiner_scionox_locked_lift_keyed_bars_tech_red =
 {
@@ -97,13 +97,13 @@ PREFABS.Joiner_scionox_locked_lift_keyed_bars_tech_red =
   delta_h  = 128,
   nearby_h = 128,
 
-  can_flip = true
+  can_flip = true,
 
   tex_COMPBLUE = { COMPBLUE=50, METAL1=50, SHAWN2=50, SILVER1=50, SPACEW4=60, TEKLITE=50 },
 
   x_fit = {20,28 , 36,44 , 52,60 , 68,76 , 84,92 , 100,108},
   y_fit = {192,224},
-},
+}
 
 PREFABS.Joiner_scionox_locked_lift_keyed_bars_tech_blue =
 {
@@ -112,7 +112,7 @@ PREFABS.Joiner_scionox_locked_lift_keyed_bars_tech_blue =
   key    = "k_blue",
   tex_DOORRED = "DOORBLU",
   line_135     = 133,
-},
+}
 
 PREFABS.Joiner_scionox_locked_lift_keyed_bars_tech_yellow =
 {
@@ -121,14 +121,14 @@ PREFABS.Joiner_scionox_locked_lift_keyed_bars_tech_yellow =
   key    = "k_yellow",
   tex_DOORRED = "DOORYEL",
   line_135     = 137,
-},
+}
 
 PREFABS.Joiner_scionox_locked_lift_keyed_bars_urban_red =
 {
   template = "Joiner_scionox_locked_lift_keyed_bars_tech_red",
   theme  = "urban",
   tex_COMPBLUE = { BIGBRIK1=50, BRICK10=50, BRICK11=50, WOOD12=50, WOOD1=60, PANEL4=50 },
-},
+}
 
 PREFABS.Joiner_scionox_locked_lift_keyed_bars_urban_blue =
 {
@@ -138,7 +138,7 @@ PREFABS.Joiner_scionox_locked_lift_keyed_bars_urban_blue =
   tex_DOORRED = "DOORBLU",
   line_135     = 133,
   tex_COMPBLUE = { BIGBRIK1=50, BRICK10=50, BRICK11=50, WOOD12=50, WOOD1=60, PANEL4=50 },
-},
+}
 
 PREFABS.Joiner_scionox_locked_lift_keyed_bars_urban_yellow =
 {
@@ -148,7 +148,7 @@ PREFABS.Joiner_scionox_locked_lift_keyed_bars_urban_yellow =
   tex_DOORRED = "DOORYEL",
   line_135     = 137,
   tex_COMPBLUE = { BIGBRIK1=50, BRICK10=50, BRICK11=50, WOOD12=50, WOOD1=60, PANEL4=50 },
-},
+}
 
 PREFABS.Joiner_scionox_locked_lift_keyed_bars_hell_red =
 {
@@ -159,7 +159,7 @@ PREFABS.Joiner_scionox_locked_lift_keyed_bars_hell_red =
   tex_COMPBLUE = { REDWALL=50, GSTONE1=50, METAL=50, SP_FACE2=50, SKSNAKE2=60, WOODVERT=50 },
 
   x_fit = {28,36 , 60,68 , 92,100},
-},
+}
 
 PREFABS.Joiner_scionox_locked_lift_keyed_bars_hell_blue =
 {
@@ -172,7 +172,7 @@ PREFABS.Joiner_scionox_locked_lift_keyed_bars_hell_blue =
   tex_COMPBLUE = { REDWALL=50, GSTONE1=50, METAL=50, SP_FACE2=50, SKSNAKE2=60, WOODVERT=50 },
 
   x_fit = {28,36 , 60,68 , 92,100},
-},
+}
 
 PREFABS.Joiner_scionox_locked_lift_keyed_bars_hell_yellow =
 {
@@ -185,7 +185,7 @@ PREFABS.Joiner_scionox_locked_lift_keyed_bars_hell_yellow =
   tex_COMPBLUE = { REDWALL=50, GSTONE1=50, METAL=50, SP_FACE2=50, SKSNAKE2=60, WOODVERT=50 },
 
   x_fit = {28,36 , 60,68 , 92,100},
-},
+}
 
 PREFABS.Joiner_scionox_locked_lift_gated_switch =
 {
@@ -212,13 +212,13 @@ PREFABS.Joiner_scionox_locked_lift_gated_switch =
   delta_h  = 128,
   nearby_h = 128,
 
-  can_flip = true
+  can_flip = true,
 
   tag_1  = "?door_tag",
   door_action = "S1_OpenDoor",
 
   tex_COMPBLUE = { COMPBLUE=50, METAL1=50, SHAWN2=50, SILVER1=50, SPACEW4=60, TEKLITE=50 },
-},
+}
 
 PREFABS.Joiner_scionox_locked_lift_gated_switch_urban =
 {
@@ -226,7 +226,7 @@ PREFABS.Joiner_scionox_locked_lift_gated_switch_urban =
   theme  = "urban",
   tex_COMPBLUE = { BIGBRIK1=50, BRICK10=50, BRICK11=50, WOOD12=50, WOOD1=60, PANEL4=50 },
   thing_2028 = "mercury_small",
-},
+}
 
 PREFABS.Joiner_scionox_locked_lift_gated_switch_hell =
 {
@@ -238,7 +238,7 @@ PREFABS.Joiner_scionox_locked_lift_gated_switch_hell =
   tex_SHAWN1 = "SKSPINE1",
   tex_PLAT1 = "SUPPORT3",
   thing_2028 = "red_torch_sm",
-},
+}
 
 PREFABS.Joiner_scionox_locked_lift_lockgate_switch =
 {
@@ -262,13 +262,13 @@ PREFABS.Joiner_scionox_locked_lift_lockgate_switch =
   x_fit = "frame",
   y_fit = {56,64 , 224,232},
 
-  can_flip = true
+  can_flip = true,
 
   delta_h  = 128,
   nearby_h = 128,
 
   tex_COMPBLUE = { COMPBLUE=50, METAL1=50, SHAWN2=50, SILVER1=50, SPACEW4=60, TEKLITE=50 },
-},
+}
 
 PREFABS.Joiner_scionox_locked_lift_lockgate_switch_blue =
 {
@@ -277,7 +277,7 @@ PREFABS.Joiner_scionox_locked_lift_lockgate_switch_blue =
   key    = "k_blue",
   tex_DOORRED = "DOORBLU",
   line_135     = 133,
-},
+}
 
 PREFABS.Joiner_scionox_locked_lift_lockgate_switch_yellow =
 {
@@ -286,7 +286,7 @@ PREFABS.Joiner_scionox_locked_lift_lockgate_switch_yellow =
   key    = "k_yellow",
   tex_DOORRED = "DOORYEL",
   line_135     = 137,
-},
+}
 
 PREFABS.Joiner_scionox_locked_lift_lockgate_switch_red_urban =
 {
@@ -294,7 +294,7 @@ PREFABS.Joiner_scionox_locked_lift_lockgate_switch_red_urban =
   theme  = "urban",
   tex_COMPBLUE = { BIGBRIK1=50, BRICK10=50, BRICK11=50, WOOD12=50, WOOD1=60, PANEL4=50 },
   thing_2028 = "mercury_small",
-},
+}
 
 PREFABS.Joiner_scionox_locked_lift_lockgate_switch_blue_urban =
 {
@@ -305,7 +305,7 @@ PREFABS.Joiner_scionox_locked_lift_lockgate_switch_blue_urban =
   line_135     = 133,
   tex_COMPBLUE = { BIGBRIK1=50, BRICK10=50, BRICK11=50, WOOD12=50, WOOD1=60, PANEL4=50 },
   thing_2028 = "mercury_small",
-},
+}
 
 PREFABS.Joiner_scionox_locked_lift_lockgate_switch_yellow_urban =
 {
@@ -316,7 +316,7 @@ PREFABS.Joiner_scionox_locked_lift_lockgate_switch_yellow_urban =
   line_135     = 137,
   tex_COMPBLUE = { BIGBRIK1=50, BRICK10=50, BRICK11=50, WOOD12=50, WOOD1=60, PANEL4=50 },
   thing_2028 = "mercury_small",
-},
+}
 
 PREFABS.Joiner_scionox_locked_lift_lockgate_switch_hell_red =
 {
@@ -330,7 +330,7 @@ PREFABS.Joiner_scionox_locked_lift_lockgate_switch_hell_red =
   tex_SUPPORT2 = "SUPPORT3",
   tex_SHAWN1 = "SKSPINE1",
   thing_2028 = "red_torch_sm",
-},
+}
 
 PREFABS.Joiner_scionox_locked_lift_lockgate_switch_hell_blue =
 {
@@ -345,7 +345,7 @@ PREFABS.Joiner_scionox_locked_lift_lockgate_switch_hell_blue =
   tex_SUPPORT2 = "SUPPORT3",
   tex_SHAWN1 = "SKSPINE1",
   thing_2028 = "red_torch_sm",
-},
+}
 
 PREFABS.Joiner_scionox_locked_lift_lockgate_switch_hell_yellow =
 {
@@ -360,7 +360,7 @@ PREFABS.Joiner_scionox_locked_lift_lockgate_switch_hell_yellow =
   tex_SUPPORT2 = "SUPPORT3",
   tex_SHAWN1 = "SKSPINE1",
   thing_2028 = "red_torch_sm",
-},
+}
 
 PREFABS.Joiner_scionox_locked_lift_trikey_lockgate_switch =
 {
@@ -368,7 +368,7 @@ PREFABS.Joiner_scionox_locked_lift_trikey_lockgate_switch =
 
   map    = "MAP09",
   key    = "k_ALL",
-},
+}
 
 PREFABS.Joiner_scionox_locked_lift_trikey_lockgate_switch_urban =
 {
@@ -382,7 +382,7 @@ PREFABS.Joiner_scionox_locked_lift_trikey_lockgate_switch_urban =
   tex_COMPBLUE = { BIGBRIK1=50, BRICK10=50, BRICK11=50, WOOD12=50, WOOD1=60, PANEL4=50 },
 
   thing_2028 = "mercury_small",
-},
+}
 
 PREFABS.Joiner_scionox_locked_lift_trikey_lockgate_switch_urban =
 {
@@ -401,4 +401,4 @@ PREFABS.Joiner_scionox_locked_lift_trikey_lockgate_switch_urban =
   tex_BIGDOOR1 = "MARBFAC3",
 
   thing_2028 = "red_torch_sm",
-},
+}

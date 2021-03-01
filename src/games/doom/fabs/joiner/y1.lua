@@ -21,8 +21,8 @@ PREFABS.Joiner_y1 =
 
   delta_h  = 24,
   nearby_h = 128,
-  can_flip = true
-},
+  can_flip = true,
+}
 
 PREFABS.Joiner_y1a =
 {
@@ -33,7 +33,7 @@ PREFABS.Joiner_y1a =
   tex_STONE = "STONE5",
   flat_FLAT1 = "FLAT5_4",
 
-},
+}
 
 PREFABS.Joiner_y1b =
 {
@@ -47,7 +47,7 @@ PREFABS.Joiner_y1b =
   tex_STONE = "STEP4",
   flat_FLAT1 = "FLOOR4_8",
 
-},
+}
 
 PREFABS.Joiner_y1b1 =
 {
@@ -61,7 +61,7 @@ PREFABS.Joiner_y1b1 =
   tex_STONE = "STEP6",
   flat_FLAT1 = "FLOOR0_1",
 
-},
+}
 
 PREFABS.Joiner_y1b2 =
 {
@@ -75,7 +75,7 @@ PREFABS.Joiner_y1b2 =
   tex_STONE = "STEP4",
   flat_FLAT1 = "FLOOR4_8",
 
-},
+}
 
 PREFABS.Joiner_y1b3 =
 {
@@ -88,7 +88,7 @@ PREFABS.Joiner_y1b3 =
   tex_STONE = "STEP6",
   flat_FLAT1 = "FLOOR5_4",
 
-},
+}
 
 PREFABS.Joiner_y1b4 =
 {
@@ -101,7 +101,7 @@ PREFABS.Joiner_y1b4 =
   flat_FLAT1 = "FLAT14",
   map    = "MAP02",
 
-},
+}
 
 
 PREFABS.Joiner_y1c =
@@ -115,7 +115,7 @@ PREFABS.Joiner_y1c =
   flat_FLAT1 = "FLOOR4_8",
   map    = "MAP02",
 
-},
+}
 
 PREFABS.Joiner_y1c1a1 =
 {
@@ -124,7 +124,7 @@ PREFABS.Joiner_y1c1a1 =
   theme  = "tech",
   map    = "MAP02",
 
-},
+}
 
 PREFABS.Joiner_y1d =
 {
@@ -136,7 +136,7 @@ PREFABS.Joiner_y1d =
   tex_STONE = "STEP6",
   flat_FLAT1 = "FLAT5_5",
 
-},
+}
 
 PREFABS.Joiner_y1e =
 {
@@ -148,7 +148,7 @@ PREFABS.Joiner_y1e =
   tex_STONE = "STEPTOP",
   flat_FLAT1 = "FLAT5_1",
 
-},
+}
 
 PREFABS.Joiner_y1e1a =
 {
@@ -160,7 +160,7 @@ PREFABS.Joiner_y1e1a =
   tex_STONE = "STEP6",
   flat_FLAT1 = "FLAT5_2",
 
-},
+}
 
 PREFABS.Joiner_y1e2 =
 {
@@ -172,7 +172,7 @@ PREFABS.Joiner_y1e2 =
   tex_STONE = "STEP6",
   flat_FLAT1 = "FLAT5_2",
 
-},
+}
 
 PREFABS.Joiner_y1f =
 {
@@ -184,7 +184,7 @@ PREFABS.Joiner_y1f =
   tex_STONE = "STEP6",
   flat_FLAT1 = "FLAT5_5",
 
-},
+}
 
 PREFABS.Joiner_y1g =
 {
@@ -197,7 +197,7 @@ PREFABS.Joiner_y1g =
   tex_STONE = "STONE6",
   flat_FLAT1 = "RROCK09",
 
-},
+}
 
 PREFABS.Joiner_y1h =
 {
@@ -210,7 +210,7 @@ PREFABS.Joiner_y1h =
   tex_STONE = "ASHWALL2",
   flat_FLAT1 = "FLOOR6_2",
 
-},
+}
 
 PREFABS.Joiner_y1ha =
 {
@@ -223,7 +223,7 @@ PREFABS.Joiner_y1ha =
   tex_STONE = "ASHWALL2",
   flat_FLAT1 = "FLOOR6_2",
 
-},
+}
 
 PREFABS.Joiner_y1i =
 {
@@ -236,7 +236,7 @@ PREFABS.Joiner_y1i =
   tex_STONE = "SUPPORT3",
   flat_FLAT1 = "CEIL5_2",
 
-},
+}
 
 PREFABS.Joiner_y1i1 =
 {
@@ -249,7 +249,7 @@ PREFABS.Joiner_y1i1 =
   tex_STONE = "SUPPORT3",
   flat_FLAT1 = "CEIL5_2",
 
-},
+}
 
 PREFABS.Joiner_y1j =
 {
@@ -262,4 +262,4 @@ PREFABS.Joiner_y1j =
   tex_STONE = "SUPPORT3",
   flat_FLAT1 = "CEIL5_2",
 
-},
+}

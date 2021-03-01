@@ -15,7 +15,7 @@ PREFABS.Switch_small_sw_blue =
   tag_1  = "?switch_tag",
 
   -- prefab has COMPBLUE / FLAT14 textures
-},
+}
 
 
 PREFABS.Switch_small_sw_red =
@@ -26,7 +26,7 @@ PREFABS.Switch_small_sw_red =
 
   tex_COMPBLUE = "REDWALL",
   flat_FLAT14  = "REDWALL",
-},
+}
 
 
 PREFABS.Switch_small_sw_metal =
@@ -37,5 +37,5 @@ PREFABS.Switch_small_sw_metal =
 
   tex_COMPBLUE = "METAL",
   flat_FLAT14  = "METAL",
-},
+}
 

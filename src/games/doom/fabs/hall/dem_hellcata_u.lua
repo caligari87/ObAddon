@@ -70,45 +70,45 @@ PREFABS.Hallway_hellcata_u1 =
     dead_zombie = 50,
     dead_shooter = 50,
     dead_imp = 50,
-  },
+  }
 
-},
+}
 
 PREFABS.Hallway_hellcata_u2 =
 {
   template = "Hallway_hellcata_u1",
   map    = "MAP02",
-},
+}
 
 PREFABS.Hallway_hellcata_u3 =
 {
   template = "Hallway_hellcata_u1",
   map    = "MAP03",
-},
+}
 
 PREFABS.Hallway_hellcata_u4 =
 {
   template = "Hallway_hellcata_u1",
   map    = "MAP04",
-},
+}
 
 PREFABS.Hallway_hellcata_u5 =
 {
   template = "Hallway_hellcata_u1",
   map    = "MAP05",
-},
+}
 
 PREFABS.Hallway_hellcata_u6 =
 {
   template = "Hallway_hellcata_u1",
   map    = "MAP06",
-},
+}
 
 PREFABS.Hallway_hellcata_u7 =
 {
   template = "Hallway_hellcata_u1",
   map    = "MAP07",
-},
+}
 
 PREFABS.Hallway_hellcata_u8 =
 {
@@ -118,7 +118,7 @@ PREFABS.Hallway_hellcata_u8 =
 
 
   style  = "cages",
-},
+}
 
 PREFABS.Hallway_hellcata_u9 =
 {
@@ -126,10 +126,10 @@ PREFABS.Hallway_hellcata_u9 =
   prob   = 1,
   style = "secrets",
   map    = "MAP09",
-},
+}
 
 PREFABS.Hallway_hellcata_u10 =
 {
   template = "Hallway_hellcata_u1",
   map    = "MAP10",
-},
+}

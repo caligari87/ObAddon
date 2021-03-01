@@ -20,7 +20,7 @@ UNFINISHED.Wall_vertgap =
   bound_z2 = 24,
 
   z_fit  = "top",
-},
+}
 
 
 UNFINISHED.Wall_vertgap_diag =
@@ -41,5 +41,5 @@ UNFINISHED.Wall_vertgap_diag =
   bound_z2 = 24,
 
   z_fit  = "top",
-},
+}
 

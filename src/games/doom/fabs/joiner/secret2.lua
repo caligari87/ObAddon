@@ -36,8 +36,8 @@ PREFABS.Joiner_secret2_A =
   },
 
   -- prevent monsters stuck in a barrel
-  solid_ents = true
-},
+  solid_ents = true,
+}
 
 
 -- hint is a small gap
@@ -47,7 +47,7 @@ PREFABS.Joiner_secret2_B =
   map      = "MAP02",
 
   prob   = 50,
-},
+}
 
 
 -- this one looks like a picture
@@ -59,7 +59,7 @@ PREFABS.Joiner_secret2_C1 =
   prob   = 100,
   theme  = "tech",
   env    = "building",
-},
+}
 
 PREFABS.Joiner_secret2_C2 =
 {
@@ -71,5 +71,5 @@ PREFABS.Joiner_secret2_C2 =
   env    = "building",
 
   tex_SILVER2 = "MARBFAC3",
-},
+}
 

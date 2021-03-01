@@ -14,20 +14,20 @@ PREFABS.Wall_tech_diag_outcrop =
   bound_z2 = 128,
 
   z_fit  = { 32,40 },
-},
+}
 
 PREFABS.Wall_tech_diag_outcrop_outdoor =
 {
   template = "Wall_tech_diag_outcrop",
 
   env = "outdoor",
-},
+}
 
 PREFABS.Wall_tech_diag_triple_braced =
 {
   template = "Wall_tech_diag_outcrop",
   map      = "MAP02",
-},
+}
 
 PREFABS.Wall_tech_diag_triple_braced_outdoor =
 {
@@ -35,7 +35,7 @@ PREFABS.Wall_tech_diag_triple_braced_outdoor =
   map      = "MAP02",
 
   env = "outdoor",
-},
+}
 
 PREFABS.Wall_tech_diag_overhead_roof =
 {
@@ -45,7 +45,7 @@ PREFABS.Wall_tech_diag_overhead_roof =
   env    = "outdoor",
 
   z_fit  = { 32,40 },
-},
+}
 
 PREFABS.Wall_diag_generic_top_band =
 {
@@ -62,7 +62,7 @@ PREFABS.Wall_diag_generic_top_band =
     METAL3 = 1,
     METAL5 = 1,
   },
-},
+}
 
 PREFABS.Wall_diag_generic_side_band =
 {
@@ -72,4 +72,4 @@ PREFABS.Wall_diag_generic_side_band =
   prob = 50,
 
   env = "any",
-},
+}

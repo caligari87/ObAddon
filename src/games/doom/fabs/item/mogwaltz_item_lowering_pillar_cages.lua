@@ -33,14 +33,14 @@ PREFABS.Item_mogwaltz_lowering_pillar =
     [2028] = 50,
     [85] = 50,
     [86] = 50,
-  },
-},
+  }
+}
 
 PREFABS.Item_mogwaltz_lowering_pillar_inactive =
 {
   template = "Item_mogwaltz_lowering_pillar",
   map = "MAP02",
-},
+}
 
 -- gothic version for both urban and hell
 
@@ -64,8 +64,8 @@ PREFABS.Item_mogwaltz_lowering_pillar_gothic =
     [44]=50,
     [45]=50,
     [46]=50,
-  },
-},
+  }
+}
 
 PREFABS.Item_mogwaltz_lowering_pillar_gothic_inactive =
 {
@@ -87,8 +87,8 @@ PREFABS.Item_mogwaltz_lowering_pillar_gothic_inactive =
     [44]=50,
     [45]=50,
     [46]=50,
-  },
-},
+  }
+}
 
 PREFABS.Item_mogwaltz_lowering_pillar_alt =
 {
@@ -100,7 +100,7 @@ PREFABS.Item_mogwaltz_lowering_pillar_alt =
   style = "traps",
 
   theme = "!hell",
-},
+}
 
 PREFABS.Item_mogwaltz_lowering_pillar_alt_fast =
 {
@@ -114,7 +114,7 @@ PREFABS.Item_mogwaltz_lowering_pillar_alt_fast =
   theme = "!hell",
 
   line_24840 = 24848,
-},
+}
 
 PREFABS.Item_mogwaltz_lowering_pillar_alt_caged =
 {
@@ -126,7 +126,7 @@ PREFABS.Item_mogwaltz_lowering_pillar_alt_caged =
   style = "traps",
 
   theme = "!hell",
-},
+}
 
 PREFABS.Item_mogwaltz_lowering_pillar_alt_lowering =
 {
@@ -138,7 +138,7 @@ PREFABS.Item_mogwaltz_lowering_pillar_alt_lowering =
   style = "traps",
 
   theme = "!hell",
-},
+}
 
 PREFABS.Item_mogwaltz_lowering_pillar_joke_is_on_you =
 {
@@ -148,4 +148,4 @@ PREFABS.Item_mogwaltz_lowering_pillar_joke_is_on_you =
   prob = 10,
 
   theme = "!hell",
-},
+}

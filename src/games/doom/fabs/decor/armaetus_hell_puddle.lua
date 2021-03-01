@@ -13,4 +13,4 @@ PREFABS.Decor_armaetus_hell_puddle =
   bound_z1 = 0,
 
   sink_mode = "never_liquids",
-},
+}

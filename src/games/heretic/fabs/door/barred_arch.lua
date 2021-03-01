@@ -27,7 +27,7 @@ PREFABS.Arch_barred =
 
   tag_1  = "?door_tag",
   door_action = "S1_OpenDoor",
-},
+}
 
 
 PREFABS.Arch_barred_wide =
@@ -40,7 +40,7 @@ PREFABS.Arch_barred_wide =
   seed_w = 2,
 
   x_fit  = "frame",
-},
+}
 
 
 PREFABS.Arch_barred_diag =
@@ -58,4 +58,4 @@ PREFABS.Arch_barred_diag =
 
   tag_1  = "?door_tag",
   door_action = "S1_OpenDoor",
-},
+}

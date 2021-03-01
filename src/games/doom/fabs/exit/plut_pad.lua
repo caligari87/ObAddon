@@ -12,7 +12,7 @@ PREFABS.Exit_plutonia =
   prob   = 50,
 
   where  = "point",
-},
+}
 
 
 PREFABS.Exit_plutonia_secret =
@@ -23,5 +23,5 @@ PREFABS.Exit_plutonia_secret =
 
   -- replace normal exit special with "exit to secret" special
   line_52 = 124,
-},
+}
 

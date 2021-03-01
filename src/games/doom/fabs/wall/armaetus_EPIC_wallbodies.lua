@@ -23,7 +23,7 @@ PREFABS.Wall_epic_wallbodies =
 
   x_fit = "frame",
   z_fit = { 64-8,64+8 },
-},
+}
 
 PREFABS.Wall_epic_wallbodies_diagonal =
 {
@@ -48,7 +48,7 @@ PREFABS.Wall_epic_wallbodies_diagonal =
 
   x_fit = "frame",
   z_fit = { 64-8,64+8 },
-},
+}
 
 -- BLOODY version
 
@@ -59,7 +59,7 @@ PREFABS.Wall_epic_wallbodies2 =
   group = "armaetus_wallbodies_bloody",
 
   tex_COLLITE1 = "BODIESB",
-},
+}
 
 PREFABS.Wall_epic_wallbodies_diagonal2 =
 {
@@ -68,7 +68,7 @@ PREFABS.Wall_epic_wallbodies_diagonal2 =
   group = "armaetus_wallbodies_bloody",
 
   tex_COLLITE1 = "BODIESB",
-},
+}
 
 -- OLD version
 
@@ -79,7 +79,7 @@ PREFABS.Wall_epic_wallbodies3 =
   group = "armaetus_wallbodies_old",
 
   tex_COLLITE1 = "BODIESC",
-},
+}
 
 PREFABS.Wall_epic_wallbodies_diagonal3 =
 {
@@ -88,7 +88,7 @@ PREFABS.Wall_epic_wallbodies_diagonal3 =
   group = "armaetus_wallbodies_old",
 
   tex_COLLITE1 = "BODIESC",
-},
+}
 
 -- BONES version
 
@@ -99,7 +99,7 @@ PREFABS.Wall_epic_wallbodies4 =
   group = "armaetus_wallbodies_bones",
 
   tex_COLLITE1 = "BONES3",
-},
+}
 
 PREFABS.Wall_epic_wallbodies_diagonal4 =
 {
@@ -108,4 +108,4 @@ PREFABS.Wall_epic_wallbodies_diagonal4 =
   group = "armaetus_wallbodies_bones",
 
   tex_COLLITE1 = "BONES3",
-},
+}

@@ -34,8 +34,8 @@ PREFABS.Door_small_vanilla =
     SPCDOOR2 = 25,
     SPCDOOR3 = 50,
     SPCDOOR4 = 25,
-  },
-},
+  }
+}
 
 PREFABS.Door_small_vanilla_gothic =
 {
@@ -56,5 +56,5 @@ PREFABS.Door_small_vanilla_gothic =
     SW1LION = 0.3,
     SW1SATYR = 0.3,
     SW1WOOD = 0.3,
-  },
-},
+  }
+}

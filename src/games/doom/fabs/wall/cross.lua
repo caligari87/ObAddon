@@ -20,7 +20,7 @@ PREFABS.Wall_cross1 =
 
   bound_z1 = 0,
   bound_z2 = 128,
-},
+}
 
 
 PREFABS.Wall_cross2 =
@@ -33,7 +33,7 @@ PREFABS.Wall_cross2 =
 
   -- disable oscillating light FX
   sector_8 = 0,
-},
+}
 
 PREFABS.Wall_cross3 =
 {
@@ -45,7 +45,7 @@ PREFABS.Wall_cross3 =
 
   -- disable oscillating light FX
   sector_8 = 0,
-},
+}
 
 PREFABS.Wall_cross4 =
 {
@@ -57,7 +57,7 @@ PREFABS.Wall_cross4 =
 
   -- disable oscillating light FX
   sector_8 = 0,
-},
+}
 
 PREFABS.Wall_cross5 =
 {
@@ -69,4 +69,4 @@ PREFABS.Wall_cross5 =
 
   -- disable oscillating light FX
   sector_8 = 0,
-},
+}

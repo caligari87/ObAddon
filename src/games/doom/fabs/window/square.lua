@@ -10,7 +10,7 @@ PREFABS.Window_square1 =
 
   group  = "square",
 
-  passable = true
+  passable = true,
 
   prob   = 50,
 
@@ -23,7 +23,7 @@ PREFABS.Window_square1 =
 
   bound_z1 = 0,
   bound_z2 = 112,
-},
+}
 
 PREFABS.Window_square1_tech =
 {
@@ -33,7 +33,7 @@ PREFABS.Window_square1_tech =
 
   flat_FLAT1 = "FLAT20",
 
-},
+}
 
 
 PREFABS.Window_square2 =
@@ -43,7 +43,7 @@ PREFABS.Window_square2 =
   map      = "MAP02",
 
   seed_w   = 2,
-},
+}
 
 PREFABS.Window_square2_tech =
 {
@@ -54,7 +54,7 @@ PREFABS.Window_square2_tech =
   flat_FLAT1 = "FLAT20",
   seed_w = 2,
 
-},
+}
 
 
 PREFABS.Window_square3 =
@@ -64,7 +64,7 @@ PREFABS.Window_square3 =
   map      = "MAP03",
 
   seed_w   = 3,
-},
+}
 
 
 PREFABS.Window_square3_tech =
@@ -75,4 +75,4 @@ PREFABS.Window_square3_tech =
 
   flat_FLAT1 = "FLAT20",
   seed_w = 3,
-},
+}

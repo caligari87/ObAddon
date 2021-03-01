@@ -15,7 +15,7 @@ PREFABS.Wall_natural1 =
 
   x_fit  = "stretch",
   z_fit  = "stretch",
-},
+}
 
 PREFABS.Wall_natural2 =
 {
@@ -26,7 +26,7 @@ PREFABS.Wall_natural2 =
   bound_z2 = 2,
 
   deep  = 16,
-},
+}
 
 PREFABS.Wall_natural3 =
 {
@@ -34,7 +34,7 @@ PREFABS.Wall_natural3 =
   map      = "MAP03",
 
   deep  = 40,
-},
+}
 
 PREFABS.Wall_natural4 =
 {
@@ -42,7 +42,7 @@ PREFABS.Wall_natural4 =
   map      = "MAP04",
 
   deep  = 28,
-},
+}
 
 PREFABS.Wall_natural5 =
 {
@@ -50,7 +50,7 @@ PREFABS.Wall_natural5 =
   map      = "MAP05",
 
   deep  = 40,
-},
+}
 
 PREFABS.Wall_natural6 =
 {
@@ -58,7 +58,7 @@ PREFABS.Wall_natural6 =
   map      = "MAP06",
 
   deep  = 16,
-},
+}
 
 PREFABS.Wall_natural7 =
 {
@@ -66,7 +66,7 @@ PREFABS.Wall_natural7 =
   map      = "MAP07",
 
   deep  = 16,
-},
+}
 
 PREFABS.Wall_natural8 =
 {
@@ -74,7 +74,7 @@ PREFABS.Wall_natural8 =
   map      = "MAP08",
 
   deep  = 32,
-},
+}
 
 PREFABS.Wall_natural9 =
 {
@@ -82,7 +82,7 @@ PREFABS.Wall_natural9 =
   map      = "MAP09",
 
   deep  = 40,
-},
+}
 
 PREFABS.Wall_natural10 =
 {
@@ -90,7 +90,7 @@ PREFABS.Wall_natural10 =
   map      = "MAP10",
 
   deep  = 64,
-},
+}
 
 PREFABS.Wall_natural11_half =
 {
@@ -98,7 +98,7 @@ PREFABS.Wall_natural11_half =
   map = "MAP11",
 
   deep = 16,
-},
+}
 
 PREFABS.Wall_natural12_half =
 {
@@ -106,7 +106,7 @@ PREFABS.Wall_natural12_half =
   map = "MAP12",
 
   deep = 16,
-},
+}
 
 PREFABS.Wall_natural13_half =
 {
@@ -114,7 +114,7 @@ PREFABS.Wall_natural13_half =
   map = "MAP13",
 
   deep = 16,
-},
+}
 
 PREFABS.Wall_natural14_half =
 {
@@ -122,7 +122,7 @@ PREFABS.Wall_natural14_half =
   map = "MAP14",
 
   deep = 16,
-},
+}
 
 PREFABS.Wall_natural15_half =
 {
@@ -130,4 +130,4 @@ PREFABS.Wall_natural15_half =
   map = "MAP15",
 
   deep = 16,
-},
+}

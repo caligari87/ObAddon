@@ -15,5 +15,5 @@ PREFABS.Start_closet1 =
 
   x_fit = "frame",
   y_fit = "top",
-},
+}
 

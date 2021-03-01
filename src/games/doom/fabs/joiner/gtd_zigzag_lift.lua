@@ -23,7 +23,7 @@
 
   -- delta_h  = 128,
   -- nearby_h = 128,
-  -- can_flip = true
+  -- can_flip = true,
 
 -- },
 
@@ -53,9 +53,9 @@ PREFABS.Joiner_zigzag_lift =
 
   delta_h  = 64,
   nearby_h = 128,
-  can_flip = true
+  can_flip = true,
 
-},
+}
 
 PREFABS.Joiner_zigzag_lift_mirrored =
 {
@@ -83,6 +83,6 @@ PREFABS.Joiner_zigzag_lift_mirrored =
 
   delta_h  = 64,
   nearby_h = 128,
-  can_flip = true
+  can_flip = true,
 
-},
+}

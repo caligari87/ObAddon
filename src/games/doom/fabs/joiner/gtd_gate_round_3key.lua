@@ -20,7 +20,7 @@ PREFABS.Locked_joiner_round_3key_modern =
 
   x_fit = "frame",
   y_fit = { 132,136 },
-},
+}
 
 PREFABS.Locked_joiner_round_3key_hell =
 {
@@ -37,4 +37,4 @@ PREFABS.Locked_joiner_round_3key_hell =
   tex_DOORRED  = "DOORRED2",
   tex_DOORYEL  = "DOORYEL2",
   tex_DOORBLU  = "DOORBLU2",
-},
+}

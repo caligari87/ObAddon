@@ -20,4 +20,4 @@ PREFABS.Arch_duct_room_to_room_door =
 
   bound_z1 = 0,
   bound_z2 = 128,
-},
+}

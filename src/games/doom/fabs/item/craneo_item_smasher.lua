@@ -16,14 +16,14 @@
 
   x_fit = "frame",
   y_fit = "top",
-},
+}
 
 PREFABS.Item_craneo_smasher_alt_tech =
 {
   template = "Item_craneo_smasher_tech",
 
   map = "MAP02",
-},
+}
 
 PREFABS.Item_craneo_smasher_gothic =
 {
@@ -36,7 +36,7 @@ PREFABS.Item_craneo_smasher_gothic =
   tex_SUPPORT2 = "METAL",
   tex_CEMENT8 = "GSTGARG",
   tex_DOORSTOP = "METAL",
-},
+}
 
 PREFABS.Item_craneo_smasher_alt_gothic =
 {
@@ -50,5 +50,5 @@ PREFABS.Item_craneo_smasher_alt_gothic =
   tex_SUPPORT2 = "METAL",
   tex_CEMENT8 = "GSTGARG",
   tex_DOORSTOP = "METAL",
-},
+}
 ]]

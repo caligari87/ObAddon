@@ -12,7 +12,7 @@ PREFABS.Decor_craneo_billiards_table =
   size  = 96,
 
   bound_z1 = 0,
-},
+}
 
 PREFABS.Decor_craneo_arcade_machine =
 {
@@ -23,7 +23,7 @@ PREFABS.Decor_craneo_arcade_machine =
 
   size = 64,
 
-  face_open = true
+  face_open = true,
 
   sector_13 = {
     [0] = 5,
@@ -31,8 +31,8 @@ PREFABS.Decor_craneo_arcade_machine =
     [2] = 5,
     [13] = 5,
     [21] = 5,
-  },
-},
+  }
+}
 
 --
 
@@ -48,7 +48,7 @@ PREFABS.Decor_craneo_arcade_machine_EPIC =
 
   size = 64,
 
-  face_open = true
+  face_open = true,
 
   tex_ARCD2 =
   {
@@ -69,8 +69,8 @@ PREFABS.Decor_craneo_arcade_machine_EPIC =
     [2] = 5,
     [13] = 5,
     [21] = 5,
-  },
-},
+  }
+}
 
 PREFABS.Decor_craneo_arcade_machine_doublet_EPIC =
 {
@@ -83,7 +83,7 @@ PREFABS.Decor_craneo_arcade_machine_doublet_EPIC =
 
   size = 112,
 
-  face_open = true
+  face_open = true,
 
   tex_ARCD2 =
   {
@@ -117,8 +117,8 @@ PREFABS.Decor_craneo_arcade_machine_doublet_EPIC =
     [2] = 5,
     [13] = 5,
     [21] = 5,
-  },
-},
+  }
+}
 
 -----------------------------------------------
 -- Grouped versions based on arcade wall set --
@@ -129,14 +129,14 @@ PREFABS.Decor_craneo_billiards_table_grouped =
   template = "Decor_craneo_billiards_table",
 
   group = "gtd_wall_arcade",
-},
+}
 
 PREFABS.Decor_rr_tennis_table_grouped =
 {
   template = "Decor_realrexen_tennis_table",
 
   group = "gtd_wall_arcade",
-},
+}
 
 PREFABS.Decor_craneo_arcade_machine_grouped =
 {
@@ -149,7 +149,7 @@ PREFABS.Decor_craneo_arcade_machine_grouped =
 
   size = 64,
 
-  face_open = true
+  face_open = true,
 
   tex_ARCD2 =
   {
@@ -170,8 +170,8 @@ PREFABS.Decor_craneo_arcade_machine_grouped =
     [2] = 5,
     [13] = 5,
     [21] = 5,
-  },
-},
+  }
+}
 
 PREFABS.Decor_craneo_arcade_machine_doublet_grouped =
 {
@@ -184,7 +184,7 @@ PREFABS.Decor_craneo_arcade_machine_doublet_grouped =
 
   size = 112,
 
-  face_open = true
+  face_open = true,
 
   tex_ARCD2 =
   {
@@ -218,5 +218,5 @@ PREFABS.Decor_craneo_arcade_machine_doublet_grouped =
     [2] = 5,
     [13] = 5,
     [21] = 5,
-  },
-},
+  }
+}

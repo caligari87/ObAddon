@@ -18,7 +18,7 @@ PREFABS.Wall_urban_neon_sign =
 
   x_fit  = "frame",
   z_fit  = "bottom",
-},
+}
 
 PREFABS.Wall_urban_neon_sign_scrolling_tall =
 {
@@ -43,7 +43,7 @@ PREFABS.Wall_urban_neon_sign_scrolling_tall =
   },
 
   z_fit = "top",
-},
+}
 
 PREFABS.Wall_urban_neon_sign_id =
 {
@@ -59,7 +59,7 @@ PREFABS.Wall_urban_neon_sign_id =
     CEMENT2 = 50,
     CEMENT4 = 50,
   },
-},
+}
 
 PREFABS.Wall_urban_neon_sign_huge =
 {
@@ -72,4 +72,4 @@ PREFABS.Wall_urban_neon_sign_huge =
   height = 192,
 
   bound_z2 = 192,
-},
+}

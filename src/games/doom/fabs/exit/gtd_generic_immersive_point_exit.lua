@@ -6,14 +6,14 @@ PREFABS.Exit_immersive_point_exit1 =
   where  = "point",
 
   prob   = 1000,
-},
+}
 
 PREFABS.Exit_immersive_point_exit2 =
 {
   template = "Exit_immersive_point_exit1",
 
   map = "MAP02",
-},
+}
 
 PREFABS.Exit_immersive_point_portable_nuke =
 {
@@ -24,4 +24,4 @@ PREFABS.Exit_immersive_point_portable_nuke =
   height = 136,
 
   size = 64,
-},
+}

@@ -9,5 +9,5 @@ PREFABS.Start_basic =
   prob   = 50,
 
   where  = "point",
-},
+}
 

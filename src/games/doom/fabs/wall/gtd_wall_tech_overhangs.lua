@@ -17,7 +17,7 @@ PREFABS.Wall_tech_outdoor_overhang_girder =
 
   x_fit = "frame",
   z_fit = "bottom",
-},
+}
 
 PREFABS.Wall_tech_outdoor_overhang_platform =
 {
@@ -26,7 +26,7 @@ PREFABS.Wall_tech_outdoor_overhang_platform =
   map = "MAP02",
 
   deep = 64,
-},
+}
 
 PREFABS.Wall_tech_outdoor_overhang_transmitter =
 {
@@ -35,7 +35,7 @@ PREFABS.Wall_tech_outdoor_overhang_transmitter =
   map = "MAP03",
 
   deep = 256,
-},
+}
 
 PREFABS.Wall_tech_outdoor_overhang_fence =
 {
@@ -46,4 +46,4 @@ PREFABS.Wall_tech_outdoor_overhang_fence =
   map = "MAP04",
 
   deep = 64,
-},
+}

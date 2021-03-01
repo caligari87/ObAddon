@@ -18,7 +18,7 @@ PREFABS.Item_darklord_key_hut =
 
   x_fit = "frame",
 
-  open_to_sky = true
+  open_to_sky = true,
 
   thing_44 =
   {
@@ -32,6 +32,6 @@ PREFABS.Item_darklord_key_hut =
     red_torch_sm = 50,
     green_torch_sm = 50,
     blue_torch_sm = 50,
-  },
+  }
 
-},
+}

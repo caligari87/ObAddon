@@ -19,7 +19,7 @@ PREFABS.Item_hell_alcove_tomb_secret =
 
   x_fit = "frame",
   y_fit = "top",
-},
+}
 
 PREFABS.Item_hell_alcove_window_secret =
 {
@@ -27,4 +27,4 @@ PREFABS.Item_hell_alcove_window_secret =
   map      = "MAP02",
   engine   = "zdoom",
   seed_w = 3,
-},
+}

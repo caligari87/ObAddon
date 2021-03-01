@@ -20,25 +20,25 @@ PREFABS.Hallway_pipeline_t1 =
   sound = "Pipeline",
 
   texture_pack = "armaetus",
-},
+}
 
 PREFABS.Hallway_pipeline_t2 =
 {
   template = "Hallway_pipeline_t1",
   map    = "MAP02",
-},
+}
 
 PREFABS.Hallway_pipeline_t3 =
 {
   template = "Hallway_pipeline_t1",
   map    = "MAP03",
-},
+}
 
 PREFABS.Hallway_pipeline_t4 =
 {
   template = "Hallway_pipeline_t1",
   map    = "MAP04",
-},
+}
 
 PREFABS.Hallway_pipeline_t5 =
 {
@@ -48,7 +48,7 @@ PREFABS.Hallway_pipeline_t5 =
   filter = "crushers",
 
   style  = "traps",
-},
+}
 
 PREFABS.Hallway_pipeline_t6 =
 {
@@ -56,6 +56,6 @@ PREFABS.Hallway_pipeline_t6 =
   map    = "MAP06",
 
   style  = "cages",
-},
+}
 
 

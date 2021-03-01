@@ -13,5 +13,5 @@ PREFABS.Decor_tentaclepillar =
   bound_z1 = 0,
   bound_z2 = 128,
 
-  z_fit  = { 64-4,64+4 },
-},
+  z_fit  = { 64-4,64+4 }
+}

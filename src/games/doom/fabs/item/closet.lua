@@ -26,7 +26,7 @@ PREFABS.Item_closet_w_door =
 
   flat_FLOOR5_4 = "FLOOR5_3",
   flat_CEIL3_5  = "FLOOR7_1",
-},
+}
 
 PREFABS.Item_closet_w_door_hell =
 {
@@ -40,7 +40,7 @@ PREFABS.Item_closet_w_door_hell =
 
   flat_FLOOR5_4 = "FLOOR6_2",
   flat_CEIL3_5  = "MFLR8_4",
-},
+}
 
 
 PREFABS.Item_closet_w_door_tech =
@@ -65,6 +65,6 @@ PREFABS.Item_closet_w_door_tech =
  tex_BROWNGRN = { BROWNGRN=50, BROWN1=50, BROWN96=50, BROWNPIP=50, TEKWALL1=50, TEKWALL4=50, COMPBLUE=50, STONE2=50, STONE3=50, METAL1=50,
                   METAL2=50, PIPEWAL2=50, SHAWN2=50, SILVER1=50, BROWN144=50, TEKWALL6=50 },
 
- flat_FLOOR5_4 = { FLOOR4_8=50, FLOOR5_1=50, FLAT1=50, CEIL5_1=50, CEIL4_2=50, FLOOR4_6=50 },
+ flat_FLOOR5_4 = { FLOOR4_8=50, FLOOR5_1=50, FLAT1=50, CEIL5_1=50, CEIL4_2=50, FLOOR4_6=50 }
 
-},
+}

@@ -20,5 +20,5 @@ PREFABS.lift_620_128 =
   bound_z1 = 0,
 
   delta_h = 128,
-  plain_ceiling = true
-},
+  plain_ceiling = true,
+}

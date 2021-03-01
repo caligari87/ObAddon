@@ -20,4 +20,4 @@ PREFABS.Pic_hell_lavafalls =
 
   x_fit = "frame",
   y_fit = "top",
-},
+}

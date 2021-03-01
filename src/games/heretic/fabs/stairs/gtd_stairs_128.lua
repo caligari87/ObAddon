@@ -16,7 +16,7 @@ PREFABS.Stairs_128 =
   bound_z1 = 0,
 
   delta_h = 128,
-},
+}
 
 PREFABS.Stairs_128_2X =
 {
@@ -26,7 +26,7 @@ PREFABS.Stairs_128_2X =
   prob   = 220,
 
   seed_h = 2,
-},
+}
 
 PREFABS.Stairs_128_3X =
 {
@@ -35,4 +35,4 @@ PREFABS.Stairs_128_3X =
 
   prob   = 240,
   seed_h = 3,
-},
+}

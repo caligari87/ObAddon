@@ -17,8 +17,8 @@ PREFABS.Item_secret_item_shootable_eye =
   y_fit  = { 64,96 },
 
   -- prevent monsters stuck in a barrel
-  solid_ents = true
-},
+  solid_ents = true,
+}
 
 PREFABS.Item_secret_item_shootable_eye_pair =
 {
@@ -26,4 +26,4 @@ PREFABS.Item_secret_item_shootable_eye_pair =
   map = "MAP02",
 
   prob = 37,
-},
+}

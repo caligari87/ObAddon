@@ -45,7 +45,7 @@ function Layout_compute_dists(R)
 
 
   local function init_sig_dists()
-    for _,S in pairs(pairs(R.seeds)) do
+    for _,S in pairs(R.seeds) do
       S.sig_dist = nil
 
       for _,dir in pairs(geom.ALL_DIRS) do
@@ -84,7 +84,7 @@ function Layout_compute_dists(R)
   local function collect_fillable_seeds()
     local list = {}
 
-    for _,S in pairs(pairs(R.seeds)) do
+    for _,S in pairs(R.seeds) do
       if S.sig_dist then goto continue end
 
       for _,dir in pairs(geom.ALL_DIRS) do
@@ -109,7 +109,7 @@ function Layout_compute_dists(R)
       return false
     end
 
-    for _,S in pairs(pairs(list)) do
+    for _,S in pairs(list) do
       for _,dir in pairs(geom.ALL_DIRS) do
         local N = S:neighbor(dir)
 
@@ -367,7 +367,7 @@ function Layout_spot_for_wotsit(R, kind, required)
 
     -- leave room for player to enter a closet
     if best.kind == "closet" then
-      for _,E in pairs(pairs(best.edges)) do
+      for _,E in pairs(best.edges) do
         Edge_mark_walk(E)
       end
     end
@@ -655,7 +655,7 @@ function Layout_place_hub_gates()
     local best_R
     local best_score = 0
 
-    for _,R in pairs(pairs(LEVEL.rooms)) do
+    for _,R in pairs(LEVEL.rooms) do
       local score = eval_closet_room(R)
 
       if score > best_score then
@@ -677,7 +677,7 @@ function Layout_place_hub_gates()
     local best_R
     local best_score = 0
 
-    for _,R in pairs(pairs(LEVEL.rooms)) do
+    for _,R in pairs(LEVEL.rooms) do
       local score = eval_free_standing_room(R)
 
       if score > best_score then
@@ -713,11 +713,11 @@ function Layout_place_all_importants()
   --   starts and exits and goals can be placed without closets ]
   Layout_place_hub_gates()
 
-  for _,R in pairs(pairs(LEVEL.rooms)) do
+  for _,R in pairs(LEVEL.rooms) do
     Layout_place_importants(R, 1)
   end
 
-  for _,R in pairs(pairs(LEVEL.rooms)) do
+  for _,R in pairs(LEVEL.rooms) do
     Layout_place_importants(R, 2)
   end
 
@@ -735,7 +735,7 @@ function Layout_choose_face_area(A)
   local best
   local best_score = -1
 
-  for _,N in pairs(pairs(A.neighbors)) do
+  for _,N in pairs(A.neighbors) do
     if not N.room then goto continue end
     if not N.is_outdoor then goto continue end
 
@@ -919,7 +919,7 @@ function Layout_add_traps()
       table.insert(places, { room=R })
     end
 
-    for _,N in pairs(pairs(backtrack)) do
+    for _,N in pairs(backtrack) do
       table.insert(places, { room=N })
     end
 
@@ -1321,11 +1321,11 @@ gui.debugf("MonRelease in %s : kind --> %s\n",
 
   if STYLE.traps == "none" then return end
 
-  for _,R in pairs(pairs(LEVEL.rooms)) do
+  for _,R in pairs(LEVEL.rooms) do
     trap_up_goal(R)
   end
 
-  for _,R in pairs(pairs(LEVEL.rooms)) do
+  for _,R in pairs(LEVEL.rooms) do
     trap_up_item(R)
   end
 end
@@ -1432,7 +1432,7 @@ function Layout_decorate_rooms(pass)
 
     -- TODO : sometimes make a picture
 
-    for _,E in pairs(pairs(chunk.edges)) do
+    for _,E in pairs(chunk.edges) do
       E.kind = "ignore"
     end
   end
@@ -1468,7 +1468,7 @@ function Layout_decorate_rooms(pass)
 
     local conn_list = {}
 
-    for _,C in pairs(pairs(R.conns)) do
+    for _,C in pairs(R.conns) do
       local N = C:other_room(R)
 
       if (C.kind == "edge" or C.kind == "joiner" or C.kind == "terminator") and
@@ -1804,7 +1804,7 @@ function Layout_decorate_rooms(pass)
     -- determine current quantity of free-range cages
     local cage_vol = 0
 
-    for _,A in pairs(pairs(R.areas)) do
+    for _,A in pairs(R.areas) do
       if A.mode == "cage" then
         cage_vol = cage_vol + A.svolume
       end
@@ -2309,7 +2309,7 @@ stderrf("Cages in %s [%s pressure] --> any_prob=%d  per_prob=%d\n",
 
     -- allow fabrication of ceiling lights in outdoor porches
     if R.is_outdoor then
-      for _,A in pairs(pairs(R.areas)) do
+      for _,A in pairs(R.areas) do
         if A.is_porch then
           if not rand.odds(prob) then goto continue end
 
@@ -2459,7 +2459,7 @@ stderrf("Cages in %s [%s pressure] --> any_prob=%d  per_prob=%d\n",
 
   ---| Layout_decorate_rooms |---
 
-  for _,R in pairs(pairs(LEVEL.rooms)) do
+  for _,R in pairs(LEVEL.rooms) do
     if pass == 1 then
       decor_early_pass(R)
     else
@@ -2477,13 +2477,13 @@ function Layout_scenic_vistas()
 
   LEVEL.scenic_fabs = {}
 
-  for _,A in pairs(pairs(LEVEL.areas)) do
+  for _,A in pairs(LEVEL.areas) do
     if A.mode == "scenic" then
       Cave_prepare_scenic_vista(A)
     end
   end
 
-  for _,A in pairs(pairs(LEVEL.areas)) do
+  for _,A in pairs(LEVEL.areas) do
     if A.mode == "scenic" then
       Cave_build_a_scenic_vista(A)
     end
@@ -2498,7 +2498,7 @@ function Layout_handle_corners()
   local function fencepost_base_z(corner)
     local z
 
-    for _,A in pairs(pairs(corner.areas)) do
+    for _,A in pairs(corner.areas) do
       z = math.N_max(A.floor_h, z)
     end
 
@@ -2510,7 +2510,7 @@ function Layout_handle_corners()
     local diff = corner.areas[1].ceil_h
     local near_porch = false
 
-    for _,A in pairs(pairs(corner.areas)) do
+    for _,A in pairs(corner.areas) do
       if A.is_porch or A.is_porch_neighbor then
         near_porch = true
       end
@@ -2541,11 +2541,11 @@ function Layout_handle_corners()
     local mostly_env = Corner_get_env(corner)
 
     if mostly_env == "outdoor" then
-      for _,A in pairs(pairs(corner.areas)) do
+      for _,A in pairs(corner.areas) do
         if A.room then return A.room.zone.facade_mat end
       end
     elseif mostly_env == "building" then
-      for _,A in pairs(pairs(corner.areas)) do
+      for _,A in pairs(corner.areas) do
         if A.room then return A.room.main_tex end
       end
     end
@@ -2608,7 +2608,7 @@ function Layout_handle_corners()
         else
 
           -- outdoor posts should meet up to the rail height
-          for _,A in pairs(pairs(corner.areas)) do
+          for _,A in pairs(corner.areas) do
 
             if A.is_porch or A.is_porch_neighbor then
               tallest_h = EXTREME_H
@@ -2652,7 +2652,7 @@ function Layout_handle_corners()
       if not Corner_is_at_area_corner(corner) then return end
 
       -- don't put pillars adjacent to joiners and closets
-      for _,S in pairs(pairs(corner.seeds)) do
+      for _,S in pairs(corner.seeds) do
         if S.chunk then
           if S.chunk.kind == "joiner"
           or S.chunk.kind == "closet" then
@@ -2771,7 +2771,7 @@ function Layout_indoor_lighting()
       base_light = base_light + rand.pick(R.theme.light_adjusts)
     end
 
-    for _,A in pairs(pairs(R.areas)) do
+    for _,A in pairs(R.areas) do
       A.base_light = base_light + light_offset
     end
   end
@@ -2798,7 +2798,7 @@ function Layout_indoor_lighting()
     end
 
     -- recurse to neighbors
-    for _,C in pairs(pairs(R.conns)) do
+    for _,C in pairs(R.conns) do
       if C.is_cycle then goto continue end
 
       local R2 = C:other_room(R)
@@ -2814,7 +2814,7 @@ function Layout_indoor_lighting()
   ---| Layout_indoor_lighting |---
 
   -- setup outdoor rooms first
-  for _,R in pairs(pairs(LEVEL.rooms)) do
+  for _,R in pairs(LEVEL.rooms) do
     if R.is_outdoor then
       -- cannot use set_room() here
       R.light_level = sky_light_to_keyword()
@@ -2922,8 +2922,8 @@ function Layout_outdoor_shadows()
     return
   end
 
-  for _,A in pairs(pairs(LEVEL.areas)) do
-  for _,S in pairs(pairs(A.seeds)) do
+  for _,A in pairs(LEVEL.areas) do
+  for _,S in pairs(A.seeds) do
   for _,dir in pairs(geom.ALL_DIRS) do
     if need_shadow(S, dir) then
       shadow_from_seed(S, dir)

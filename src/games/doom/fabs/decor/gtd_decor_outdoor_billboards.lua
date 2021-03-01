@@ -15,8 +15,8 @@ PREFABS.Decor_outdoor_billboard_UAC =
   bound_z1 = 0,
   bound_z2 = 128,
 
-  z_fit = { 24,48 },
-},
+  z_fit = { 24,48 }
+}
 
 PREFABS.Decor_outdoor_billboard_UAC_sheet =
 {
@@ -36,4 +36,4 @@ PREFABS.Decor_outdoor_billboard_UAC_sheet =
 
   bound_z1 = 0,
   bound_z2 = 160,
-},
+}

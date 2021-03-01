@@ -33,8 +33,8 @@ PREFABS.Door_plain_tech_stretchy_silver =
     SPCDOOR3 = 1,
   },
 
-  sector_1  = { [0]=75, [1]=15, [2]=5, [3]=5, [8]=10, [12]=5, [13]=5 },
-},
+  sector_1  = { [0]=75, [1]=15, [2]=5, [3]=5, [8]=10, [12]=5, [13]=5 }
+}
 
 PREFABS.Door_plain_tech_stretchy_brown =
 {
@@ -49,8 +49,8 @@ PREFABS.Door_plain_tech_stretchy_brown =
   {
     SPCDOOR1 = 1,
     SPCDOOR4 = 1,
-  },
-},
+  }
+}
 
 PREFABS.Door_plain_hell_stretchy =
 {
@@ -65,4 +65,4 @@ PREFABS.Door_plain_hell_stretchy =
     BIGDOOR7 = 1,
   },
   tex_COMPSTA1 = "BIGDOOR5",
-},
+}

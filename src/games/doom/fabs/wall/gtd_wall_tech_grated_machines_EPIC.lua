@@ -17,7 +17,7 @@ PREFABS.Wall_tech_grated_machines_epic_plain_1 =
   bound_z2 = 128,
 
   z_fit = "top",
-},
+}
 
 PREFABS.Wall_tech_grated_machines_epic_diagonal =
 {
@@ -25,4 +25,4 @@ PREFABS.Wall_tech_grated_machines_epic_diagonal =
   map = "MAP02",
 
   where = "diagonal",
-},
+}

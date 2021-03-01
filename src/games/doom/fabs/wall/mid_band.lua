@@ -18,7 +18,7 @@ PREFABS.Wall_midband =
   bound_z2 = 80,
 
   z_fit  = "top",
-},
+}
 
 
 PREFABS.Wall_midband_diag =
@@ -36,7 +36,7 @@ PREFABS.Wall_midband_diag =
   bound_z2 = 80,
 
   z_fit  = "top",
-},
+}
 
 
 ------- LITEBLU4 variation ----------------------
@@ -49,7 +49,7 @@ PREFABS.Wall_midband2 =
   group  = "mid_band2",
 
   tex_LITE3 = "LITEBLU4",
-},
+}
 
 PREFABS.Wall_midband2_diag =
 {
@@ -58,5 +58,5 @@ PREFABS.Wall_midband2_diag =
   group  = "mid_band2",
 
   tex_LITE3 = "LITEBLU4",
-},
+}
 

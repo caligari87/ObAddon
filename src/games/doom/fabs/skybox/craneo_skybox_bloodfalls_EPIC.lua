@@ -13,4 +13,4 @@ PREFABS.Skybox_city_hell_bloodfalls_EPIC =
 
   bound_z1 = -256,
   bound_z2 = 256,
-},
+}

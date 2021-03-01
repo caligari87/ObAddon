@@ -28,7 +28,7 @@ PREFABS.Hallway_conveyor_t1 =
   },
 
   sound = "Conveyor_Mech",
-},
+}
 
 PREFABS.Hallway_conveyor_t2 =
 {
@@ -36,12 +36,12 @@ PREFABS.Hallway_conveyor_t2 =
   map    = "MAP02",
   style  = "cages",
 
-},
+}
 
 PREFABS.Hallway_conveyor_t3 =
 {
   template  = "Hallway_conveyor_t1",
   map    = "MAP03",
 
-},
+}
 

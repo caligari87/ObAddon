@@ -23,11 +23,11 @@ PREFABS.Start_scionox_quakeish_gate_start =
 
   tex_EVILFAC2 = { EVILFAC2=50, EVILFAC4=50, EVILFAC5=50,
   EVILFAC6=50, EVILFAC7=50, EVILFAC8=50, EVILFAC9=50, EVILFACA=50 },
-},
+}
 
 PREFABS.Start_scionox_quakeish_gate_start_2 =
 {
   template = "Start_scionox_quakeish_gate_start",
   tex_BODIESC = "BODIESB",
   flat_BODIESF2 = "BODIESFL",
-},
+}

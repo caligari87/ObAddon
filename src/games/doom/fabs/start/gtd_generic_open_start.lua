@@ -5,7 +5,7 @@ PREFABS.Start_generic_open =
 
   theme = "!hell",
 
-  prob  = 500 --1500,
+  prob  = 500, --1500,
 
   height = 96,
 
@@ -19,7 +19,7 @@ PREFABS.Start_generic_open =
 
   x_fit = "frame",
   y_fit = "top",
-},
+}
 
 PREFABS.Start_generic_open_hell =
 {
@@ -31,4 +31,4 @@ PREFABS.Start_generic_open_hell =
 
   flat_GATE3 = { GATE1=50, GATE2=50, GATE3=70 },
 
-},
+}

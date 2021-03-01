@@ -12,5 +12,5 @@ PREFABS.Start_basic =
 
   flat_FLAT22 = "O_BOLT",
   tex_SHAWN2  = "O_BOLT",
-},
+}
 

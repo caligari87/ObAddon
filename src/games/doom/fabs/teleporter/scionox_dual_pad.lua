@@ -18,8 +18,8 @@ PREFABS.Teleporter_scionox_dual_pad =
   tex_COMPSTA1 = { COMPSTA1=50, COMPSTA2=50 },
   flat_FLOOR4_6 = { FLOOR4_6=50, FLAT20=50, FLAT19=50, FLAT5=50 },
 
-  face_open = true
-},
+  face_open = true,
+}
 
 PREFABS.Teleporter_scionox_dual_pad_2 =
 {
@@ -31,7 +31,7 @@ PREFABS.Teleporter_scionox_dual_pad_2 =
   flat_FLAT22 = "GATE4",
   flat_FLAT23 = "CEIL1_2",
   tex_SILVER1 = "SUPPORT3",
-},
+}
 
 PREFABS.Teleporter_scionox_dual_pad_3 =
 {
@@ -41,7 +41,7 @@ PREFABS.Teleporter_scionox_dual_pad_3 =
 
   tex_SW2SATYR = { SW2SATYR=50, SW2GARG=50, SW2LION=50 },
   flat_RROCK15 = { RROCK15=50, FLOOR7_2=50, FLAT5_1=50, RROCK10=50 },
-},
+}
 
 -- Point version of dual teleport with pillar element
 
@@ -63,8 +63,8 @@ PREFABS.Teleporter_scionox_dual_pad_4 =
   tex_COMPSTA1 = { COMPSTA1=50, COMPSTA2=50 },
   flat_FLOOR4_6 = { FLOOR4_6=50, FLAT20=50, FLAT19=50, FLAT5=50 },
 
-  face_open = true
-},
+  face_open = true,
+}
 
 PREFABS.Teleporter_scionox_dual_pad_5 =
 {
@@ -76,7 +76,7 @@ PREFABS.Teleporter_scionox_dual_pad_5 =
   flat_FLAT22 = "GATE4",
   flat_FLAT23 = "CEIL1_2",
   tex_SILVER1 = "SUPPORT3",
-},
+}
 PREFABS.Teleporter_scionox_dual_pad_6 =
 {
   template = "Teleporter_scionox_dual_pad_4",
@@ -85,4 +85,4 @@ PREFABS.Teleporter_scionox_dual_pad_6 =
 
   tex_SW2SATYR = { SW2SATYR=50, SW2GARG=50, SW2LION=50 },
   flat_RROCK15 = { RROCK15=50, FLOOR7_2=50, FLAT5_1=50, RROCK10=50 },
-},
+}

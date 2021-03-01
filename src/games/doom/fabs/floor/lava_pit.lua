@@ -15,5 +15,5 @@ UNFINISHED.Floor_lavapit =
 
   x_fit = "frame",
   y_fit = "frame",
-},
+}
 

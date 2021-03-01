@@ -15,7 +15,7 @@ PREFABS.Fence_pillar =
   height = 2,
 
   bound_z1 = 0,
-},
+}
 
 PREFABS.Fence_pillar_tech =
 {
@@ -23,4 +23,4 @@ PREFABS.Fence_pillar_tech =
   map = "MAP02",
 
   theme = "tech",
-},
+}

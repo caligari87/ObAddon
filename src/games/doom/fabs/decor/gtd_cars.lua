@@ -6,7 +6,7 @@ PREFABS.Decor_sedan =
   prob   = 6500,
   theme  = "urban",
 
-  can_be_on_roads = true
+  can_be_on_roads = true,
 
   env = "!building",
 
@@ -16,7 +16,7 @@ PREFABS.Decor_sedan =
 
   bound_z1 = 0,
   bound_z2 = 128,
-},
+}
 
 PREFABS.Decor_sedan_blue =
 {
@@ -25,7 +25,7 @@ PREFABS.Decor_sedan_blue =
   flat_FLAT5_3 = "CEIL4_2",
 
   tex_REDWALL = "COMPBLUE",
-},
+}
 
 PREFABS.Decor_sedan_brown =
 {
@@ -34,14 +34,14 @@ PREFABS.Decor_sedan_brown =
   flat_FLAT5_3 = "CEIL5_2",
 
   tex_REDWALL = "BROWN144",
-},
+}
 
 PREFABS.Decor_minitruck =
 {
   file   = "decor/gtd_cars.wad",
   map    = "MAP02",
 
-  can_be_on_roads = true
+  can_be_on_roads = true,
 
   prob   = 7500,
   theme  = "urban",
@@ -54,7 +54,7 @@ PREFABS.Decor_minitruck =
 
   bound_z1 = 0,
   bound_z2 = 128,
-},
+}
 
 PREFABS.Decor_minitruck_beige =
 {
@@ -66,13 +66,13 @@ PREFABS.Decor_minitruck_beige =
   tex_SHAWN2 = "STUCCO",
 
   tex_SPCDOOR3 = "SPCDOOR4",
-},
+}
 
 PREFABS.Decor_hatchback =
 {
   template = "Decor_sedan",
   map = "MAP03",
-},
+}
 
 PREFABS.Decor_hatchback_blue =
 {
@@ -82,7 +82,7 @@ PREFABS.Decor_hatchback_blue =
   flat_FLAT5_3 = "CEIL4_2",
 
   tex_REDWALL = "COMPBLUE",
-},
+}
 
 PREFABS.Decor_hatchback_brown =
 {
@@ -92,13 +92,13 @@ PREFABS.Decor_hatchback_brown =
   flat_FLAT5_3 = "CEIL5_2",
 
   tex_REDWALL = "BROWN144",
-},
+}
 
 PREFABS.Decor_minibus =
 {
   template = "Decor_minitruck",
   map = "MAP04",
-},
+}
 
 PREFABS.Decor_minibus_green =
 {
@@ -107,4 +107,4 @@ PREFABS.Decor_minibus_green =
 
   flat_FLAT23 = "GRASS1",
   tex_SHAWN2 = "BROWNGRN",
-},
+}

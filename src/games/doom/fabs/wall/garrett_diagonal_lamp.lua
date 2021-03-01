@@ -14,4 +14,4 @@ PREFABS.Wall_garrett_tech_diagonal_lamp =
   bound_z2 = 128,
 
   z_fit = "bottom",
-},
+}

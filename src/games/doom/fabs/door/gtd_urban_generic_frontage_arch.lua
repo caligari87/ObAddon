@@ -26,8 +26,8 @@ PREFABS.Arch_generic_urban_frontage =
     LITE5 = 10,
     LITEBLU4 = 10,
     REDWALL = 10,
-  },
-},
+  }
+}
 
 PREFABS.Arch_generic_urban_frontage_alt =
 {
@@ -37,4 +37,4 @@ PREFABS.Arch_generic_urban_frontage_alt =
   prob   = 200,
 
   seed_w = 2,
-},
+}

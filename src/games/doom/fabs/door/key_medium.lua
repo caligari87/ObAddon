@@ -24,7 +24,7 @@ PREFABS.Locked_medium_red =
 
   -- texture is already "DOORRED",
   -- line special is already #33,
-},
+}
 
 PREFABS.Locked_medium_red_hell =
 {
@@ -34,7 +34,7 @@ PREFABS.Locked_medium_red_hell =
    tex_BIGDOOR1 = { BIGDOOR5=50, BIGDOOR6=50, BIGDOOR7=50 },
    flat_FLAT23 = "CEIL5_2",
 
-},
+}
 
 
 PREFABS.Locked_medium_red_diag =
@@ -55,7 +55,7 @@ PREFABS.Locked_medium_red_diag =
 
   -- texture is already "DOORRED",
   -- line special is already #33,
-},
+}
 
 
 ----------------------------------------------
@@ -68,7 +68,7 @@ PREFABS.Locked_medium_blue =
 
   tex_DOORRED = "DOORBLU",
   line_33     = 32,
-},
+}
 
 PREFABS.Locked_medium_blue_hell =
 {
@@ -82,7 +82,7 @@ PREFABS.Locked_medium_blue_hell =
    tex_BIGDOOR1 = { BIGDOOR5=50, BIGDOOR6=50, BIGDOOR7=50 },
    flat_FLAT23 = "CEIL5_2",
 
-},
+}
 
 PREFABS.Locked_medium_blue_diag =
 {
@@ -91,7 +91,7 @@ PREFABS.Locked_medium_blue_diag =
 
   tex_DOORRED = "DOORBLU",
   line_33     = 32,
-},
+}
 
 PREFABS.Locked_medium_blue_diag_hell =
 {
@@ -104,7 +104,7 @@ PREFABS.Locked_medium_blue_diag_hell =
    theme = "hell",
    tex_BIGDOOR1 = { BIGDOOR5=50, BIGDOOR6=50, BIGDOOR7=50 },
    flat_FLAT23 = "CEIL5_2",
-},
+}
 
 ----------------------------------------------
 
@@ -116,7 +116,7 @@ PREFABS.Locked_medium_yellow =
 
   tex_DOORRED = "DOORYEL",
   line_33     = 34,
-},
+}
 
 PREFABS.Locked_medium_yellow_hell =
 {
@@ -130,7 +130,7 @@ PREFABS.Locked_medium_yellow_hell =
   tex_BIGDOOR1 = { BIGDOOR5=50, BIGDOOR6=50, BIGDOOR7=50 },
   flat_FLAT23 = "CEIL5_2",
 
-},
+}
 
 PREFABS.Locked_medium_yellow_diag =
 {
@@ -139,7 +139,7 @@ PREFABS.Locked_medium_yellow_diag =
 
   tex_DOORRED = "DOORYEL",
   line_33     = 34,
-},
+}
 
 PREFABS.Locked_medium_yellow_diag_hell =
 {
@@ -152,4 +152,4 @@ PREFABS.Locked_medium_yellow_diag_hell =
   theme = "hell",
   tex_BIGDOOR1 = { BIGDOOR5=50, BIGDOOR6=50, BIGDOOR7=50 },
   flat_FLAT23 = "CEIL5_2",
-},
+}

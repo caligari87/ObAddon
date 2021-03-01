@@ -14,7 +14,7 @@ PREFABS.Decor_apc =
 
   texture_pack = "armaetus",
 
-  can_be_on_roads = true
+  can_be_on_roads = true,
 
   env = "!building",
 
@@ -26,7 +26,7 @@ PREFABS.Decor_apc =
   bound_z2 = 128,
 
   sink_mode = "never_liquids",
-},
+}
 
 PREFABS.Decor_forklift1T =
 {
@@ -40,7 +40,7 @@ PREFABS.Decor_forklift1T =
 
   texture_pack = "armaetus",
 
-  can_be_on_roads = true
+  can_be_on_roads = true,
 
   where  = "point",
   height = 128,
@@ -50,7 +50,7 @@ PREFABS.Decor_forklift1T =
   bound_z2 = 128,
 
   sink_mode = "never_liquids",
-},
+}
 
 PREFABS.Decor_forklift2T =
 {
@@ -64,7 +64,7 @@ PREFABS.Decor_forklift2T =
 
   texture_pack = "armaetus",
 
-  can_be_on_roads = true
+  can_be_on_roads = true,
 
   where  = "point",
   height = 128,
@@ -74,7 +74,7 @@ PREFABS.Decor_forklift2T =
   bound_z2 = 128,
 
   sink_mode = "never_liquids",
-},
+}
 
 PREFABS.Decor_forklift3T =
 {
@@ -88,7 +88,7 @@ PREFABS.Decor_forklift3T =
 
   texture_pack = "armaetus",
 
-  can_be_on_roads = true
+  can_be_on_roads = true,
 
   where  = "point",
   height = 128,
@@ -98,7 +98,7 @@ PREFABS.Decor_forklift3T =
   bound_z2 = 128,
 
   sink_mode = "never_liquids",
-},
+}
 
 PREFABS.Decor_forklift4T =
 {
@@ -112,7 +112,7 @@ PREFABS.Decor_forklift4T =
 
   texture_pack = "armaetus",
 
-  can_be_on_roads = true
+  can_be_on_roads = true,
 
   where  = "point",
   height = 128,
@@ -122,7 +122,7 @@ PREFABS.Decor_forklift4T =
   bound_z2 = 128,
 
   sink_mode = "never_liquids",
-},
+}
 
 PREFABS.Decor_forklift5T =
 {
@@ -136,7 +136,7 @@ PREFABS.Decor_forklift5T =
 
   texture_pack = "armaetus",
 
-  can_be_on_roads = true
+  can_be_on_roads = true,
 
   where  = "point",
   height = 128,
@@ -158,8 +158,8 @@ PREFABS.Decor_forklift5T =
     dead_imp = 50,
     dead_demon =50,
     dead_caco =50,
-  },
-},
+  }
+}
 
 PREFABS.Decor_forklift1U =
 {
@@ -181,7 +181,7 @@ PREFABS.Decor_forklift1U =
   bound_z2 = 128,
 
   sink_mode = "never_liquids",
-},
+}
 
 PREFABS.Decor_forklift2U =
 {
@@ -195,7 +195,7 @@ PREFABS.Decor_forklift2U =
 
   texture_pack = "armaetus",
 
-  can_be_on_roads = true
+  can_be_on_roads = true,
 
   where  = "point",
   height = 128,
@@ -205,7 +205,7 @@ PREFABS.Decor_forklift2U =
   bound_z2 = 128,
 
   sink_mode = "never_liquids",
-},
+}
 
 PREFABS.Decor_forklift3U =
 {
@@ -219,7 +219,7 @@ PREFABS.Decor_forklift3U =
 
   texture_pack = "armaetus",
 
-  can_be_on_roads = true
+  can_be_on_roads = true,
 
   where  = "point",
   height = 128,
@@ -229,7 +229,7 @@ PREFABS.Decor_forklift3U =
   bound_z2 = 128,
 
   sink_mode = "never_liquids",
-},
+}
 
 PREFABS.Decor_forklift4U =
 {
@@ -243,7 +243,7 @@ PREFABS.Decor_forklift4U =
 
   texture_pack = "armaetus",
 
-  can_be_on_roads = true
+  can_be_on_roads = true,
 
   where  = "point",
   height = 128,
@@ -253,7 +253,7 @@ PREFABS.Decor_forklift4U =
   bound_z2 = 128,
 
   sink_mode = "never_liquids",
-},
+}
 
 PREFABS.Decor_forklift5U =
 {
@@ -267,7 +267,7 @@ PREFABS.Decor_forklift5U =
 
   texture_pack = "armaetus",
 
-  can_be_on_roads = true
+  can_be_on_roads = true,
 
   where  = "point",
   height = 128,
@@ -289,5 +289,5 @@ PREFABS.Decor_forklift5U =
     dead_imp = 50,
     dead_demon =50,
     dead_caco =50,
-  },
-},
+  }
+}

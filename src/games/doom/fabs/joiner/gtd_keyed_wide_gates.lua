@@ -21,7 +21,7 @@ PREFABS.Locked_gtd_wide_gates_red =
 
   x_fit = { 132,140 , 244,252 },
   y_fit = { 28,52 , 108,132 },
-},
+}
 
 PREFABS.Locked_gtd_wide_gates_red_hell =
 {
@@ -30,7 +30,7 @@ PREFABS.Locked_gtd_wide_gates_red_hell =
   theme = "hell",
 
   x_fit = { 56,120 , 264,328 },
-},
+}
 
 PREFABS.Locked_gtd_wide_gates_blue =
 {
@@ -41,7 +41,7 @@ PREFABS.Locked_gtd_wide_gates_blue =
   tex_DOORRED = "DOORBLU",
 
   line_33 = 32,
-},
+}
 
 PREFABS.Locked_gtd_wide_gates_blue_hell =
 {
@@ -56,7 +56,7 @@ PREFABS.Locked_gtd_wide_gates_blue_hell =
   tex_DOORRED2 = "DOORBLU2",
 
   x_fit = { 56,120 , 264,328 },
-},
+}
 
 PREFABS.Locked_gtd_wide_gates_yellow =
 {
@@ -67,7 +67,7 @@ PREFABS.Locked_gtd_wide_gates_yellow =
   tex_DOORRED = "DOORYEL",
 
   line_33 = 34,
-},
+}
 
 PREFABS.Locked_gtd_wide_gates_yellow_hell =
 {
@@ -82,4 +82,4 @@ PREFABS.Locked_gtd_wide_gates_yellow_hell =
   tex_DOORRED2 = "DOORYEL2",
 
   x_fit = { 56,120 , 264,328 },
-},
+}

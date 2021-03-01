@@ -25,7 +25,7 @@ PREFABS.Pic_EPIC_box_template = -- this is now a base template and is disabled.
 
   offset_1 = 0,
   offset_2 = 0,
-},
+}
 
 --[[PREFABS.Pic_EPIC_box_gothic_tall =
 {
@@ -44,7 +44,7 @@ PREFABS.Pic_EPIC_box_template = -- this is now a base template and is disabled.
     GLASS13 = 50,
     GLASS14 = 50,
   },
-},
+}
 
 PREFABS.Pic_EPIC_box_gothic_semibig =
 {
@@ -65,7 +65,7 @@ PREFABS.Pic_EPIC_box_gothic_semibig =
 PREFABS.Pic_EPIC_box_skeletons =
 {
   template = "Pic_EPIC_box_template",
-  map = "MAP20" -- low brightness version of MAP01,
+  map = "MAP20", -- low brightness version of MAP01,
 
   prob = 35 * 8,
 
@@ -81,12 +81,12 @@ PREFABS.Pic_EPIC_box_skeletons =
     GUY1   = 25,
     PENTA1 = 5,
   },
-},
+}
 
 PREFABS.Pic_EPIC_box_marblefaces =
 {
   template = "Pic_EPIC_box_template",
-  map = "MAP20" -- low brightness version of MAP01,
+  map = "MAP20", -- low brightness version of MAP01,
 
   prob = 32 * 7,
 
@@ -108,7 +108,7 @@ PREFABS.Pic_EPIC_box_marblefaces =
     MARBFACB = 50,
     MARBFACF = 50,
   },
-},
+}
 
 PREFABS.Pic_EPIC_box_wallofskulls =
 {
@@ -129,12 +129,12 @@ PREFABS.Pic_EPIC_box_wallofskulls =
    SKULLS3 = 50,
    SKULLS4 = 50,
   },
-},
+}
 
 PREFABS.Pic_EPIC_box_doom2bodies =
 {
   template = "Pic_EPIC_box_template",
-  map = "MAP20" -- dark version of MAP01,
+  map = "MAP20", -- dark version of MAP01,
 
   prob = 30 * 8,
 
@@ -147,7 +147,7 @@ PREFABS.Pic_EPIC_box_doom2bodies =
     SPDUDE7 = 50,
     SPDUDE8 = 50,
   },
-},
+}
 
 PREFABS.Pic_EPIC_box_gothic_hangingbodies =
 {
@@ -162,12 +162,12 @@ PREFABS.Pic_EPIC_box_gothic_hangingbodies =
 
   tex_GLASS10 =
   {
-   SPDUDE3 = 50 -- Doom1 exclusive
-   SPDUDE6 = 50 -- Doom1 exclusive
+   SPDUDE3 = 50, -- Doom1 exclusive
+   SPDUDE6 = 50, -- Doom1 exclusive
    SP_DUDE4 = 30,
    SP_DUDE5 = 30,
   },
-},
+}
 
 PREFABS.Pic_EPIC_box_small_facesofevil =
 {
@@ -190,7 +190,7 @@ PREFABS.Pic_EPIC_box_small_facesofevil =
     EVILFAC6 = 50,
     EVILFAC7 = 50,
   },
-},
+}
 
 PREFABS.Pic_EPIC_box_metal_big =
 {
@@ -215,7 +215,7 @@ PREFABS.Pic_EPIC_box_metal_big =
     SHAWVEN2 = 50,
     CGCANI00 = 50,
   },
-},
+}
 
 PREFABS.Pic_EPIC_box_bishop =
 {
@@ -233,7 +233,7 @@ PREFABS.Pic_EPIC_box_bishop =
    BISHOP = 100,
    GOTH50 = 25,
   },
-},
+}
 
 PREFABS.Pic_EPIC_box_metal_big =
 {
@@ -258,7 +258,7 @@ PREFABS.Pic_EPIC_box_metal_big =
     SHAWVEN2 = 50,
     CGCANI00 = 50,
   },
-},
+}
 
 PREFABS.Pic_EPIC_box_metal_big_bunchacomputers =
 {
@@ -286,7 +286,7 @@ PREFABS.Pic_EPIC_box_metal_big_bunchacomputers =
     CGCANI00 = 50,
     NOISE1   = 50,
   },
-},
+}
 
 PREFABS.Pic_EPIC_box_static =
 {
@@ -308,7 +308,7 @@ PREFABS.Pic_EPIC_box_static =
     TVSNOW01 = 50,
     COMPFUZ1 = 50,
   },
-},
+}
 
 PREFABS.Pic_EPIC_box_metal_small =
 {
@@ -338,7 +338,7 @@ PREFABS.Pic_EPIC_box_metal_small =
     NMONIA1 = 50,
     DECMP04A = 50,
   },
-},
+}
 
 PREFABS.Pic_EPIC_box_metal_wide =
 {
@@ -367,7 +367,7 @@ PREFABS.Pic_EPIC_box_metal_wide =
     COMPSTAA = 50,
     COMPSTAB = 50,
   },
-},
+}
 
 PREFABS.Pic_EPIC_box_silverwall =
 {
@@ -389,7 +389,7 @@ PREFABS.Pic_EPIC_box_silverwall =
    SILVER2W = 50,
    SILVER2Y = 50,
   },
-},
+}
 
 -- 3 seeds wide!!
 PREFABS.Pic_EPIC_box_metal_superwide =
@@ -420,7 +420,7 @@ PREFABS.Pic_EPIC_box_metal_superwide =
 
   sector_1  = { [0]=70, [1]=15 },
 
-},
+}
 
 -- This is 256x56,
 PREFABS.Pic_EPIC_superwide_longconsole =
@@ -441,7 +441,7 @@ PREFABS.Pic_EPIC_superwide_longconsole =
 
   sector_1  = { [0]=70, [1]=20 },
 
-},
+}
 
 -- 64x192,
 PREFABS.Pic_EPIC_ridiculously_tall =
@@ -465,7 +465,7 @@ PREFABS.Pic_EPIC_ridiculously_tall =
     WINGLAS3 = 50,
     WINGLAS4 = 50,
   },
-},
+}
 
 PREFABS.Pic_EPIC_box_whitelion_and_goat =
 {
@@ -485,7 +485,7 @@ PREFABS.Pic_EPIC_box_whitelion_and_goat =
     LIONMRB3 = 50,
     GOATMARB = 50,
   },
-},
+}
 
 
 PREFABS.Pic_EPIC_GreekDude =
@@ -505,7 +505,7 @@ PREFABS.Pic_EPIC_GreekDude =
 
   sector_1  = { [0]=70, [1]=10 },
 
-},
+}
 
 PREFABS.Pic_EPIC_Devilish =
 {
@@ -524,7 +524,7 @@ PREFABS.Pic_EPIC_Devilish =
     GOTH50  = 30,
     GOTH04  = 15,
   },
-},
+}
 
 PREFABS.Pic_EPIC_WoodenDemon =
 {
@@ -542,7 +542,7 @@ PREFABS.Pic_EPIC_WoodenDemon =
   tex_GLASS1 = "WOODDEM1",
 
   sector_1  = { [0]=75, [1]=15 },
-},
+}
 
 
 -- Modified to have Static Sounds
@@ -569,7 +569,7 @@ PREFABS.Pic_EPIC_box_static_sounds =
   },
 
   sound = "Static_Monitor",
-},
+}
 
 PREFABS.Pic_EPIC_box_metal_small_sounds =
 {
@@ -601,4 +601,4 @@ PREFABS.Pic_EPIC_box_metal_small_sounds =
   },
 
   sound = "Static_Monitor",
-},
+}

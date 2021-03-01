@@ -26,7 +26,7 @@ PREFABS.Switch_armaetus_epic_1 =
   sector_1  = { [0]=70, [1]=15, [2]=5, [3]=5, [8]=10, [12]=3, [13]=3 },
 
   tag_1 = "?switch_tag",
-},
+}
 
 PREFABS.Switch_armaetus_huge_skull =
 {
@@ -35,7 +35,7 @@ PREFABS.Switch_armaetus_huge_skull =
   map = "MAP02",
 
   height = 96,
-},
+}
 
 PREFABS.Switch_armaetus_pentagram =
 {
@@ -44,7 +44,7 @@ PREFABS.Switch_armaetus_pentagram =
   map = "MAP03",
 
   height = 112,
-},
+}
 
 PREFABS.Switch_armaetus_mouth_ring_lever =
 {
@@ -53,4 +53,4 @@ PREFABS.Switch_armaetus_mouth_ring_lever =
   map = "MAP04",
 
   height = 96,
-},
+}

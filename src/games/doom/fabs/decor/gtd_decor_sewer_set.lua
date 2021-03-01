@@ -21,7 +21,7 @@ PREFABS.Decor_open_pipe_sewer_group =
 
   z_fit  = "top",
   sound = "Water_Tank",
-},
+}
 
 --
 
@@ -42,8 +42,8 @@ PREFABS.Decor_bunchy_pipe =
   bound_z1 = 0,
   bound_z2 = 128,
 
-  z_fit = { 96,108 },
-},
+  z_fit = { 96,108 }
+}
 
 PREFABS.Decor_pool_thing_whatever_man_nobody_cares =
 {
@@ -51,7 +51,7 @@ PREFABS.Decor_pool_thing_whatever_man_nobody_cares =
   map = "MAP02",
 
   z_fit = "top",
-},
+}
 
 PREFABS.Decor_treatment_pool =
 {
@@ -63,4 +63,4 @@ PREFABS.Decor_treatment_pool =
   size = 96,
 
   z_fit = "top",
-},
+}

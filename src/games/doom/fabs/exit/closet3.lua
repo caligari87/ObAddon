@@ -7,7 +7,7 @@ PREFABS.Exit_closet3 =
   file  = "exit/closet3.wad",
   map   = "MAP01",
 
-  prob  = 50 --20,
+  prob  = 50, --20,
   theme = "!tech",
 
   where  = "seeds",
@@ -23,9 +23,9 @@ PREFABS.Exit_closet3 =
 
   tex_SW1HOT = { SW1HOT=50, SW1GSTON=50 },
 
-  sector_8  = { [8]=50, [1]=15, [0]=10, [12]=5, [13]=5 },
+  sector_8  = { [8]=50, [1]=15, [0]=10, [12]=5, [13]=5 }
 
-},
+}
 
 PREFABS.Exit_closet3_bodies =
 {
@@ -48,7 +48,7 @@ PREFABS.Exit_closet3_bodies =
 
   tex_SW1SKULL = { SW1SKULL=50, SW2SKULL=50 },
 
-  sector_8  = { [8]=50, [1]=15, [0]=10, [12]=5, [13]=5 },
+  sector_8  = { [8]=50, [1]=15, [0]=10, [12]=5, [13]=5 }
 
-},
+}
 

@@ -26,7 +26,7 @@ PREFABS.Locked_joiner_triple =
 
   sector_1  = { [0]=70, [1]=15, [2]=5, [3]=5, [8]=10, [12]=7, [13]=7 },
 
-},
+}
 
 PREFABS.Locked_joiner_triple2 =
 {
@@ -34,7 +34,7 @@ PREFABS.Locked_joiner_triple2 =
 
   tex_BIGDOOR4 = "BIGDOOR3",
   flat_FLOOR7_1 = "BIGDOOR3",
-},
+}
 
 PREFABS.Locked_joiner_triple3 =
 {
@@ -42,7 +42,7 @@ PREFABS.Locked_joiner_triple3 =
 
   tex_BIGDOOR4 = "BIGDOOR2",
   flat_FLOOR7_1 = "BIGDOOR2",
-},
+}
 
 
 -- variation for BOOM compatible ports
@@ -56,7 +56,7 @@ PREFABS.Locked_joiner_triple_boom =
 
   sector_1  = { [0]=70, [1]=15, [2]=5, [3]=5, [8]=10, [12]=7, [13]=7 },
 
-},
+}
 
 PREFABS.Locked_joiner_triple_boom2 =
 {
@@ -71,7 +71,7 @@ PREFABS.Locked_joiner_triple_boom2 =
 
   sector_1  = { [0]=70, [1]=15, [2]=5, [3]=5, [8]=10, [12]=7, [13]=7 },
 
-},
+}
 
 PREFABS.Locked_joiner_triple_boom3 =
 {
@@ -86,7 +86,7 @@ PREFABS.Locked_joiner_triple_boom3 =
 
   sector_1  = { [0]=70, [1]=15, [2]=5, [3]=5, [8]=10, [12]=7, [13]=7 },
 
-},
+}
 
 PREFABS.Locked_joiner_triple_boom_hell1 =
 {
@@ -104,7 +104,7 @@ PREFABS.Locked_joiner_triple_boom_hell1 =
 
   sector_1  = { [0]=70, [1]=15, [2]=5, [3]=5, [8]=10, [12]=7, [13]=7, [17]=20 },
 
-},
+}
 
 PREFABS.Locked_joiner_triple_boom_hell2 =
 {
@@ -122,7 +122,7 @@ PREFABS.Locked_joiner_triple_boom_hell2 =
 
   sector_1  = { [0]=70, [1]=15, [2]=5, [3]=5, [8]=10, [12]=7, [13]=7, [17]=20 },
 
-},
+}
 
 PREFABS.Locked_joiner_triple_boom_urban1 =
 {
@@ -140,4 +140,4 @@ PREFABS.Locked_joiner_triple_boom_urban1 =
 
   sector_1  = { [0]=70, [1]=15, [2]=5, [3]=5, [8]=10, [12]=7, [13]=7, [17]=10 },
 
-},
+}

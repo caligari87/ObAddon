@@ -17,7 +17,7 @@ PREFABS.Exit_closet2 =
 
   x_fit  = "frame",
   y_fit  = "top",
-},
+}
 
 
 ------- Exit-to-Secret ---------------------------
@@ -34,5 +34,5 @@ PREFABS.Exit_closet2_secret =
 
   tex_SW1PIPE = "SW1SKIN",
   offset_32   = 0,
-},
+}
 

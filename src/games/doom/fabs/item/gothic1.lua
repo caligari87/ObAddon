@@ -21,7 +21,7 @@ PREFABS.Item_gothic_balcony =
   over = -16,
 
   x_fit = "frame",
-},
+}
 
 PREFABS.Item_gothic_balcony2 =
 {
@@ -31,7 +31,7 @@ PREFABS.Item_gothic_balcony2 =
   tex_MARBGRAY = "SUPPORT3",
   flat_DEM1_5 = "CEIL5_2",
 
-},
+}
 
 PREFABS.Item_tech_balcony =
 {
@@ -43,7 +43,7 @@ PREFABS.Item_tech_balcony =
   flat_DEM1_5 = "CEIL5_1",
   tex_STEP5 = "STEP4",
 
-},
+}
 
 PREFABS.Item_tech_balcony2 =
 {
@@ -55,7 +55,7 @@ PREFABS.Item_tech_balcony2 =
   flat_DEM1_5 = "CEIL5_1",
   tex_STEP5 = "STEP4",
 
-},
+}
 
 PREFABS.Item_urban_balcony =
 {
@@ -67,7 +67,7 @@ PREFABS.Item_urban_balcony =
   flat_DEM1_5 = "FLAT5_4",
   tex_STEP5 = "STEP6",
 
-},
+}
 
 PREFABS.Item_urban_balcony2 =
 {
@@ -79,7 +79,7 @@ PREFABS.Item_urban_balcony2 =
   flat_DEM1_5 = "RROCK12",
   tex_STEP5 = "STEP4",
 
-},
+}
 
 PREFABS.Item_general_balcony =
 {
@@ -89,4 +89,4 @@ PREFABS.Item_general_balcony =
   tex_MARBGRAY = "STONE4",
   flat_DEM1_5 = "FLAT5_4",
 
-},
+}

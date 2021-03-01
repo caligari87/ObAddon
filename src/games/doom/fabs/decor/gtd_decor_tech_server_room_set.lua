@@ -13,7 +13,7 @@ PREFABS.Decor_tech_server_tower_stout =
 
   bound_z1 = 0,
   bound_z2 = 104,
-},
+}
 
 PREFABS.Decor_tech_server_tower_thin_single =
 {
@@ -24,7 +24,7 @@ PREFABS.Decor_tech_server_tower_thin_single =
   height = 144,
 
   bound_z1 = 144,
-},
+}
 
 PREFABS.Decor_tech_server_tower_thin_double =
 {
@@ -35,4 +35,4 @@ PREFABS.Decor_tech_server_tower_thin_double =
   height = 144,
 
   bound_z1 = 144,
-},
+}

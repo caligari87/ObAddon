@@ -22,7 +22,7 @@ PREFABS.Pic_armaetus_hell_cages =
   y_fit = "top",
 
   tex_MIDGRATE = {MIDGRATE=50, MIDBARS1=50},
-},
+}
 
 PREFABS.Pic_armaetus_hell_cages2 =
 {
@@ -78,4 +78,4 @@ PREFABS.Pic_armaetus_hell_cages2 =
     gutted_torso4 = 50,
   },
 
-},
+}

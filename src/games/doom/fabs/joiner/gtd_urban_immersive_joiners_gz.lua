@@ -20,5 +20,5 @@ PREFABS.Joiner_public_toilet_room_gz =
 
   x_fit = "frame",
 
-  can_flip = true
-},
+  can_flip = true,
+}

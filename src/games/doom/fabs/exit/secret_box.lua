@@ -31,6 +31,6 @@ PREFABS.Exit_secret_box1 =
     dead_imp = 10,
     dead_demon = 10,
     dead_caco = 10,
-  },
-},
+  }
+}
 

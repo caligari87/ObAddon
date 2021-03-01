@@ -17,7 +17,7 @@ PREFABS.Wall_tech_octagon_insets_1 =
   bound_z2 = 128,
 
   z_fit  = "top",
-},
+}
 
 PREFABS.Wall_tech_octagon_insets_2 =
 {
@@ -25,7 +25,7 @@ PREFABS.Wall_tech_octagon_insets_2 =
   map      = "MAP02",
 
   prob     = 10,
-},
+}
 
 PREFABS.Wall_tech_octagon_insets_diagonal =
 {
@@ -46,7 +46,7 @@ PREFABS.Wall_tech_octagon_insets_diagonal =
   bound_z2 = 128,
 
   z_fit  = "top",
-},
+}
 
 PREFABS.Wall_tech_octagon_insets_EPIC_1 =
 {
@@ -56,7 +56,7 @@ PREFABS.Wall_tech_octagon_insets_EPIC_1 =
   texture_pack = "armaetus",
 
   prob     = 650,
-},
+}
 
 PREFABS.Wall_tech_octagon_insets_EPIC_2 =
 {
@@ -66,7 +66,7 @@ PREFABS.Wall_tech_octagon_insets_EPIC_2 =
   texture_pack = "armaetus",
 
   prob     = 150,
-},
+}
 
 PREFABS.Wall_tech_octagon_insets_EPIC_3 =
 {
@@ -76,4 +76,4 @@ PREFABS.Wall_tech_octagon_insets_EPIC_3 =
   texture_pack = "armaetus",
 
   prob     = 150,
-},
+}

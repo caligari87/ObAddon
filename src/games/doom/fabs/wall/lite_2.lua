@@ -19,5 +19,5 @@ PREFABS.Wall_lite2_blue =
 
   bound_z1 = 0,
   bound_z2 = 128,
-},
+}
 

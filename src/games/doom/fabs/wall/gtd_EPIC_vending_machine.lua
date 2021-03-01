@@ -30,4 +30,4 @@ PREFABS.Decor_EPIC_vending_machine =
   },
 
   sound = "Vending_Machine_Hum",
-},
+}

@@ -19,7 +19,7 @@ PREFABS.Cage_teleporter_ambush_tech =
 
   x_fit = { 92,100 , 156,164 },
   y_fit = "top",
-},
+}
 
 PREFABS.Cage_teleporter_ambush_hell =
 {
@@ -29,4 +29,4 @@ PREFABS.Cage_teleporter_ambush_hell =
   theme    = "hell",
 
   x_fit    = "frame",
-},
+}

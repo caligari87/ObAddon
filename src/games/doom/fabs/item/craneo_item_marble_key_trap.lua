@@ -23,7 +23,7 @@ PREFABS.Item_craneo_marble_key_trap =
 
   x_fit = "frame",
 
-  open_to_sky = true
+  open_to_sky = true,
 
   flat_CARPET5 =
   {
@@ -39,8 +39,8 @@ PREFABS.Item_craneo_marble_key_trap =
     MARBFAC6 = 50,
     MARBFAC7 = 50,
     MARBFACF = 50,
-  },
-},
+  }
+}
 
 PREFABS.Item_craneo_marble_item_trap_interior =
 {
@@ -80,4 +80,4 @@ PREFABS.Item_craneo_marble_item_trap_interior =
 
   x_fit = "frame",
   y_fit = "top",
-},
+}

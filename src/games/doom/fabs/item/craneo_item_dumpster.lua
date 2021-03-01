@@ -13,4 +13,4 @@ PREFABS.Item_craneo_dumpster =
 
   bound_z1 = 0,
   bound_z2 = 120,
-},
+}

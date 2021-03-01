@@ -11,7 +11,7 @@ PREFABS.Joiner_barred1 =
   key    = "barred",
   theme  = "tech",
 
-  prob   = 70 --50,
+  prob   = 70, --50,
 
   seed_w = 2,
   seed_h = 1,
@@ -26,7 +26,7 @@ PREFABS.Joiner_barred1 =
   tex_METAL2 = { METAL2=50, BRONZE1=50 },
   tag_1  = "?door_tag",
   door_action = "S1_OpenDoor",
-},
+}
 
 PREFABS.Joiner_barred1_tech2 =
 {
@@ -37,7 +37,7 @@ PREFABS.Joiner_barred1_tech2 =
   tex_METAL = "TEKWALL4",
   tex_METAL2   = { TEKWALL4=50, TEKWALL1=50 },
   flat_CEIL5_2 = "CEIL5_1",
-},
+}
 
 PREFABS.Joiner_barred1_hell =
 {
@@ -49,7 +49,7 @@ PREFABS.Joiner_barred1_hell =
   tex_METAL = { METAL=50, SUPPORT3=50 },
   flat_CEIL5_2 = "FLAT5_2",
 
-},
+}
 
 PREFABS.Joiner_barred1_hell2 =
 {
@@ -61,7 +61,7 @@ PREFABS.Joiner_barred1_hell2 =
   tex_METAL = { METAL=50, SUPPORT3=50 },
   flat_CEIL5_2 = "BLOOD3",
 
-},
+}
 
 PREFABS.Joiner_barred1_urban =
 {
@@ -73,7 +73,7 @@ PREFABS.Joiner_barred1_urban =
   tex_METAL2   = "PANBORD1",
   flat_CEIL5_2 = "RROCK09",
 
-},
+}
 
 PREFABS.Joiner_barred1_urban2 =
 {
@@ -85,4 +85,4 @@ PREFABS.Joiner_barred1_urban2 =
   tex_METAL2   = "PANBORD1",
   flat_CEIL5_2 = "CEIL5_1",
 
-},
+}

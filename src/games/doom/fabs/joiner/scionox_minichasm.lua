@@ -23,7 +23,7 @@ PREFABS.Joiner_scionox_minichasm =
 
   x_fit  = "frame",
   y_fit  = "frame",
-},
+}
 
 PREFABS.Joiner_scionox_minichasm_2 =
 {
@@ -34,4 +34,4 @@ PREFABS.Joiner_scionox_minichasm_2 =
   tex_FIREBLU1 = "COMPBLUE",
   flat_FLOOR7_1 = "FLAT5_4",
   flat_FLOOR1_6 = "CEIL4_2",
-},
+}

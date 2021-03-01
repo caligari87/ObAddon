@@ -30,7 +30,7 @@ PREFABS.Pic_urban_mirrors_edge_wall =
     COMPBLUE = 50,
     REDWALL = 50,
   },
-},
+}
 
 PREFABS.Pic_urban_mirrors_edge_wall_EPIC =
 {
@@ -79,4 +79,4 @@ PREFABS.Pic_urban_mirrors_edge_wall_EPIC =
     TEKWALLD = 20,
     TEKWALLE = 20,
   },
-},
+}

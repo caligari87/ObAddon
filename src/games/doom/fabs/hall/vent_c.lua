@@ -14,7 +14,7 @@ PREFABS.Hallway_vent_c1 =
   shape  = "L",
 
   mon_height = 64,
-},
+}
 
 PREFABS.Hallway_vent_c_sidedoor =
 {
@@ -30,7 +30,7 @@ PREFABS.Hallway_vent_c_sidedoor =
   shape  = "L",
 
   mon_height = 64,
-},
+}
 
 PREFABS.Hallway_vent_c_sidedoor_gothic =
 {
@@ -49,4 +49,4 @@ PREFABS.Hallway_vent_c_sidedoor_gothic =
 
   tex_DOOR3 = "WOODMET1",
   tex_DOORSTOP = "METAL",
-},
+}

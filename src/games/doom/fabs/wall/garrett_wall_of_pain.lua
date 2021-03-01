@@ -14,7 +14,7 @@ PREFABS.Wall_of_pain =
   bound_z2 = 128,
 
   z_fit  = "top",
-},
+}
 
 PREFABS.Wall_of_pain_diagonal =
 {
@@ -31,4 +31,4 @@ PREFABS.Wall_of_pain_diagonal =
   bound_z2 = 128,
 
   z_fit = "top",
-},
+}

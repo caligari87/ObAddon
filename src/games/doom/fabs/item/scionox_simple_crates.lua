@@ -10,7 +10,7 @@ PREFABS.Item_scionox_simple_crates_pile_on_top =
 
   height = 128,
   size = 64,
-},
+}
 
 PREFABS.Item_scionox_simple_crates_pile_on_top_2 =
 {
@@ -18,7 +18,7 @@ PREFABS.Item_scionox_simple_crates_pile_on_top_2 =
 
   flat_CRATOP2 = "CRATOP1",
   tex_CRATE1 = "CRATE2",
-},
+}
 
 PREFABS.Item_scionox_simple_crates_pile_on_side =
 {
@@ -28,7 +28,7 @@ PREFABS.Item_scionox_simple_crates_pile_on_side =
 
   height = 96,
   size  = 96,
-},
+}
 
 PREFABS.Item_scionox_simple_crates_pile_on_side_2 =
 {
@@ -41,7 +41,7 @@ PREFABS.Item_scionox_simple_crates_pile_on_side_2 =
 
   flat_CRATOP2 = "CRATOP1",
   tex_CRATE1 = "CRATE2",
-},
+}
 
 PREFABS.Item_scionox_simple_crates_small_pile =
 {
@@ -51,7 +51,7 @@ PREFABS.Item_scionox_simple_crates_small_pile =
   height = 64,
 
   size  = 48,
-},
+}
 
 PREFABS.Item_scionox_simple_crates_big_pile =
 {
@@ -60,7 +60,7 @@ PREFABS.Item_scionox_simple_crates_big_pile =
   map = "MAP04",
 
   size  = 96,
-},
+}
 
 PREFABS.Item_scionox_simple_crates_big_pile_2 =
 {
@@ -72,13 +72,13 @@ PREFABS.Item_scionox_simple_crates_big_pile_2 =
 
   flat_CRATOP2 = "CRATOP1",
   tex_CRATE1 = "CRATE2",
-},
+}
 
 PREFABS.Item_scionox_simple_crates_single_pile =
 {
   template = "Item_scionox_simple_crates_pile_on_top",
   map = "MAP05",
-},
+}
 
 PREFABS.Item_scionox_simple_crates_single_pile_2 =
 {
@@ -88,7 +88,7 @@ PREFABS.Item_scionox_simple_crates_single_pile_2 =
 
   flat_CRATOP2 = "CRATOP1",
   tex_CRATE1 = "CRATE2",
-},
+}
 
 PREFABS.Item_scionox_simple_crates_closet_tall =
 {
@@ -110,7 +110,7 @@ PREFABS.Item_scionox_simple_crates_closet_tall =
 
   x_fit = "frame",
   y_fit = "top",
-},
+}
 
 PREFABS.Item_scionox_simple_crates_closet_tall_2 =
 {
@@ -118,14 +118,14 @@ PREFABS.Item_scionox_simple_crates_closet_tall_2 =
 
   flat_CRATOP2 = "CRATOP1",
   tex_CRATE1 = "CRATE2",
-},
+}
 
 PREFABS.Item_scionox_simple_crates_closet_side =
 {
   template = "Item_scionox_simple_crates_closet_tall",
 
   map = "MAP07",
-},
+}
 
 PREFABS.Item_scionox_simple_crates_closet_side_2 =
 {
@@ -135,11 +135,11 @@ PREFABS.Item_scionox_simple_crates_closet_side_2 =
 
   flat_CRATOP2 = "CRATOP1",
   tex_CRATE1 = "CRATE2",
-},
+}
 
 PREFABS.Item_scionox_simple_crates_cluster =
 {
   template = "Item_scionox_simple_crates_closet_tall",
 
   map = "MAP08",
-},
+}

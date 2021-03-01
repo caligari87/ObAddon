@@ -23,4 +23,4 @@ PREFABS.Bars_caution_barrier =
 
   tag_1  = "?door_tag",
   door_action = "S1_LowerFloor",
-},
+}

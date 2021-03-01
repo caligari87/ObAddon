@@ -14,4 +14,4 @@ PREFABS.Exit_armaetus_simple_exit =
 
   x_fit  = "frame",
   y_fit  = "top",
-},
+}

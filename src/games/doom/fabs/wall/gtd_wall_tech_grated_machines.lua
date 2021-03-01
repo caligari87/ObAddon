@@ -15,7 +15,7 @@ PREFABS.Wall_tech_grated_machines_plain =
   bound_z2 = 128,
 
   z_fit = "top",
-},
+}
 
 PREFABS.Wall_tech_grated_machines_diagonal =
 {
@@ -27,4 +27,4 @@ PREFABS.Wall_tech_grated_machines_diagonal =
   group = "gtd_wall_grated_machines",
 
   where = "diagonal",
-},
+}

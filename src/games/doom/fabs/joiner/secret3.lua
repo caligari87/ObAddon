@@ -25,7 +25,7 @@ PREFABS.Joiner_secret3_cage =
   x_fit  = "frame",
 
   y_fit  = { 128,144 },
-},
+}
 
 
 -- this looks like a small niche with a light
@@ -38,5 +38,5 @@ PREFABS.Joiner_secret3_niche =
   env    = "building",
 
   y_fit  = { 16,32 },
-},
+}
 

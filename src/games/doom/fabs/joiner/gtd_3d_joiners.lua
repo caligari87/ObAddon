@@ -22,8 +22,8 @@ PREFABS.Joiner_gtd_3D_joiner_center =
 
   delta_h  = 128,
   nearby_h = 128,
-  can_flip = true
-},
+  can_flip = true,
+}
 
 PREFABS.Joiner_gtd_3D_joiner_side_lift_1 =
 {
@@ -33,7 +33,7 @@ PREFABS.Joiner_gtd_3D_joiner_side_lift_1 =
   prob = 75,
 
   x_fit = { 136,144 },
-},
+}
 
 PREFABS.Joiner_gtd_3D_joiner_side_lift_2 =
 {
@@ -43,4 +43,4 @@ PREFABS.Joiner_gtd_3D_joiner_side_lift_2 =
   prob = 75,
 
   x_fit = { 112,120 },
-},
+}

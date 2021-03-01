@@ -20,4 +20,4 @@ PREFABS.Hell_garret_teleport_a =
   tag_2 = "?in_tag",
 
   sector_8  = { [8]=60, [2]=10, [3]=10, [17]=10, [21]=10 },
-},
+}

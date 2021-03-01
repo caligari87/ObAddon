@@ -509,7 +509,7 @@ function Monster_zone_palettes()
       gui.debugf("   %-12s* %1.2f\n", mon, qty)
     end
 
-    gui.debugf("   TOUGHNESS: %d\n", palette_toughness(pal))
+    gui.debugf("   TOUGHNESS: %d\n", int(palette_toughness(pal)))
   end
 
 
@@ -862,7 +862,7 @@ function Monster_fill_room(R)
     if num < 1 then num = 1 end
     if num > 5 then num = 5 end
 
-    gui.debugf("number_of_kinds: %d (base: %d)\n", num, base_num)
+    gui.debugf("number_of_kinds: %d (base: %d)\n", num, int(base_num))
 
     return num
   end

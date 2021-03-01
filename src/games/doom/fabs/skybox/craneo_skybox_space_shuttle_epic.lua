@@ -13,4 +13,4 @@ PREFABS.Skybox_craneo_space_shuttle_EPIC =
 
   bound_z1 = -256,
   bound_z2 = 256,
-},
+}

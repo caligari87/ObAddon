@@ -21,7 +21,7 @@ PREFABS.Arch_curved1 =
   x_fit  = "frame",
 
   bound_z1 = 0,
-},
+}
 
 
 PREFABS.Arch_curved2 =
@@ -32,7 +32,7 @@ PREFABS.Arch_curved2 =
   prob   = 600,
 
   seed_w = 3,
-},
+}
 
 
 PREFABS.Arch_curved3 =
@@ -43,4 +43,4 @@ PREFABS.Arch_curved3 =
   prob   = 800,
 
   seed_w = 4,
-},
+}

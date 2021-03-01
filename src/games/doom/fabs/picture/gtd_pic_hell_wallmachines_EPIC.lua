@@ -21,4 +21,4 @@ PREFABS.Pic_gtd_hell_skull_grinding_mill =
 
   x_fit = "frame",
   y_fit = "top",
-},
+}

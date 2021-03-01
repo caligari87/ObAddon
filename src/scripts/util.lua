@@ -498,14 +498,16 @@ function table.name_up(t)
 end
 
 function table.index_up(t)
-  for _,info in pairs(t) do
-    info.id = _index
+  for index,info in pairs(t) do
+    info.id = index
   end
 end
 
 function table.expand_templates(t)
   for name,sub in pairs(t) do
     if sub.template then
+      print("Name: " .. name)
+      print("Sub-Template: " .. sub.template)
       local orig = t[sub.template]
 
       if orig == nil then
@@ -515,8 +517,9 @@ function table.expand_templates(t)
       if orig == nil then
         error("Missing template: " .. tostring(sub.template) .. " in: " .. name)
       end
-
+      
       if orig.template then
+        print("Orig-Template: " .. orig.template)
         error("Template reference cannot use templates (" .. tostring(sub.template) .. ")")
       end
 
@@ -870,7 +873,7 @@ function geom.calc_angle(dx, dy)
     return nil
   end
 
-  local angle = math.atan2(dy, dx) * 180 / math.pi
+  local angle = math.atan(dy, dx) * 180 / math.pi
 
   if angle < 0 then angle = angle + 360 end
 

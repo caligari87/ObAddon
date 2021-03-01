@@ -30,8 +30,8 @@ PREFABS.Door_armaetus_door1 =
     DOORHI = 50,
     URBAN6 = 50,
     URBAN8 = 50,
-  },
-},
+  }
+}
 
 PREFABS.Door_armaetus_door_KEYRED =
 {
@@ -62,8 +62,8 @@ PREFABS.Door_armaetus_door_KEYRED =
     DOORHI = 50,
     URBAN6 = 50,
     URBAN8 = 50,
-  },
-},
+  }
+}
 
 PREFABS.Door_armaetus_door_KEYBLUE =
 {
@@ -75,7 +75,7 @@ PREFABS.Door_armaetus_door_KEYBLUE =
   line_33 = 32,
 
   tex_DOORRED = "DOORBLU",
-},
+}
 
 PREFABS.Door_armaetus_door_KEYYELLOW =
 {
@@ -87,4 +87,4 @@ PREFABS.Door_armaetus_door_KEYYELLOW =
   line_33 = 34,
 
   tex_DOORRED = "DOORYEL",
-},
+}

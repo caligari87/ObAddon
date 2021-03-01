@@ -14,7 +14,7 @@ PREFABS.Item_podium =
 
   where = "point",
   size  = 24,
-},
+}
 
 
 PREFABS.Item_podium_tech =
@@ -24,7 +24,7 @@ PREFABS.Item_podium_tech =
   map = "MAP02",
 
   theme = "tech",
-},
+}
 
 
 PREFABS.Item_podium_lite3 =
@@ -41,5 +41,5 @@ PREFABS.Item_podium_lite3 =
   flat_CEIL3_1 = "CEIL5_1",
 
   tex_METAL6   = "LITE3",
-},
+}
 

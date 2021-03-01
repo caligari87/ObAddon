@@ -21,7 +21,7 @@ PREFABS.Joiner_secret2_A =
 
   x_fit  = "frame",
   y_fit  = { 64,96 },
-},
+}
 
 
 -- hint is a small gap
@@ -31,5 +31,5 @@ PREFABS.Joiner_secret2_B =
   map      = "MAP02",
 
   prob   = 50,
-},
+}
 

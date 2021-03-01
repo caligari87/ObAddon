@@ -21,8 +21,8 @@ PREFABS.Beam_vertical_lights_tech =
   bound_z1 = 0,
   bound_z2 = 128,
 
-  z_fit = { 24,78 },
-},
+  z_fit = { 24,78 }
+}
 
 PREFABS.Beam_vertical_lights_diagonal_tech =
 {
@@ -40,8 +40,8 @@ PREFABS.Beam_vertical_lights_diagonal_tech =
   bound_z1 = 0,
   bound_z2 = 128,
 
-  z_fit = { 24,78 },
-},
+  z_fit = { 24,78 }
+}
 
 PREFABS.Beam_vertical_lights_hell =
 {
@@ -49,7 +49,7 @@ PREFABS.Beam_vertical_lights_hell =
   map      = "MAP02",
 
   group    = "beam_lights_vertical_hell",
-},
+}
 
 PREFABS.Beam_vertical_lights_diagonal_hell =
 {
@@ -57,4 +57,4 @@ PREFABS.Beam_vertical_lights_diagonal_hell =
   map      = "MAP04",
 
   group    = "beam_lights_vertical_hell",
-},
+}

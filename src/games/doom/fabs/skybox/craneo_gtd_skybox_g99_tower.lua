@@ -13,4 +13,4 @@ PREFABS.Skybox_g99_hell_tower_EPIC =
 
   bound_z1 = -256,
   bound_z2 = 256,
-},
+}

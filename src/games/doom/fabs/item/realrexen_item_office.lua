@@ -28,5 +28,5 @@ PREFABS.Item_realrexen_office =
     dead_player = 25,
     dead_zombie = 25,
     dead_shooter = 25,
-  },
-},
+  }
+}

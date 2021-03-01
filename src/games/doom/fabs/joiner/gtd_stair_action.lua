@@ -22,8 +22,8 @@ PREFABS.Joiner_unfolding_stairs =
   x_fit = {60 , 68},
   y_fit = "frame",
 
-  can_flip = true
-},
+  can_flip = true,
+}
 
 PREFABS.Joiner_unfolding_stairs_switchlocked =
 {
@@ -34,4 +34,4 @@ PREFABS.Joiner_unfolding_stairs_switchlocked =
 
   tag_1  = "?door_tag",
   door_action = "S1_OpenDoor",
-},
+}

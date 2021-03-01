@@ -22,7 +22,7 @@ PREFABS.Pic_heatant_coolant_1 =
 
   x_fit = {68,72 , 84,92 , 104,108},
   y_fit = "top",
-},
+}
 
 PREFABS.Pic_heatant_coolant_2 =
 {
@@ -35,7 +35,7 @@ PREFABS.Pic_heatant_coolant_2 =
 
   x_fit = {36,84 , 172,220},
   y_fit = "top",
-},
+}
 
 PREFABS.Pic_wire_spools =
 {
@@ -48,4 +48,4 @@ PREFABS.Pic_wire_spools =
 
   x_fit = {32,36},
   y_fit = "top",
-},
+}

@@ -17,4 +17,4 @@ PREFABS.Huge_generator_turbine =
   z_fit  = "top",
 
   sound = "Machine_Ventilation",
-},
+}

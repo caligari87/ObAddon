@@ -23,7 +23,7 @@ PREFABS.Locked_armaetus_bars_red_tech =
   tex_METAL = "SHAWN2",
   tex_SUPPORT3 = "SUPPORT2",
   flat_CEIL5_2 = "FLAT19",
-},
+}
 
 PREFABS.Locked_armaetus_bars_blue_tech =
 {
@@ -33,7 +33,7 @@ PREFABS.Locked_armaetus_bars_blue_tech =
 
   tex_DOORRED = "DOORBLU",
   line_135     = 133,
-},
+}
 
 PREFABS.Locked_armaetus_bars_yel_tech =
 {
@@ -43,7 +43,7 @@ PREFABS.Locked_armaetus_bars_yel_tech =
 
   tex_DOORRED = "DOORYEL",
   line_135     = 137,
-},
+}
 
 -- hell version
 
@@ -71,7 +71,7 @@ PREFABS.Locked_armaetus_bars_red_hell =
 
   tex_DOORRED = "DOORRED2",
   tex_DOORSTOP = "METAL",
-},
+}
 
 PREFABS.Locked_armaetus_bars_blue_hell =
 {
@@ -83,7 +83,7 @@ PREFABS.Locked_armaetus_bars_blue_hell =
   tex_DOORSTOP = "METAL",
 
   line_135     = 133,
-},
+}
 
 PREFABS.Locked_armaetus_bars_yel_hell =
 {
@@ -95,4 +95,4 @@ PREFABS.Locked_armaetus_bars_yel_hell =
   tex_DOORSTOP = "METAL",
 
   line_135     = 137,
-},
+}

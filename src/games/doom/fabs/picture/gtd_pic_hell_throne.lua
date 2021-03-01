@@ -20,10 +20,10 @@ PREFABS.Pic_hell_throne =
 
   x_fit = "frame",
   y_fit = "top",
-},
+}
 
 PREFABS.Pic_hell_churchy_altar =
 {
   template = "Pic_hell_throne",
   map      = "MAP02",
-},
+}

@@ -26,7 +26,7 @@ PREFABS.Cage_wall_windowed_rooms_square =
   flat_FLAT5_2 = "FLAT20",
 
   tex_METAL5 = "DOORSTOP",
-},
+}
 
 PREFABS.Cage_wall_windowed_rooms_square_gothic =
 {
@@ -38,7 +38,7 @@ PREFABS.Cage_wall_windowed_rooms_square_gothic =
 
   tex_DOOR1 = "WOODMET1",
   tex_METAL5 = "METAL5",
-},
+}
 
 -- barred windows
 
@@ -55,7 +55,7 @@ PREFABS.Cage_wall_windowed_rooms_barred =
 
   tex_SUPPORT3 = "SHAWN2",
   tex_METAL5 = "DOORSTOP",
-},
+}
 
 PREFABS.Cage_wall_windowed_rooms_barred_gothic =
 {
@@ -72,7 +72,7 @@ PREFABS.Cage_wall_windowed_rooms_barred_gothic =
   flat_FLAT5_2 = "FLAT5_2",
 
   tex_METAL5 = "METAL5",
-},
+}
 
 PREFABS.Cage_wall_windowed_rooms_barred_wide =
 {
@@ -89,7 +89,7 @@ PREFABS.Cage_wall_windowed_rooms_barred_wide =
 
   tex_SUPPORT3 = "SHAWN2",
   tex_METAL5 = "DOORSTOP",
-},
+}
 
 PREFABS.Cage_wall_windowed_rooms_barred_wide_hell =
 {
@@ -108,7 +108,7 @@ PREFABS.Cage_wall_windowed_rooms_barred_wide_hell =
   flat_FLAT5_2 = "FLAT5_2",
 
   tex_METAL5 = "METAL5",
-},
+}
 
 -- open windows with MIDBARS
 
@@ -122,7 +122,7 @@ PREFABS.Cage_wall_windowed_rooms_open =
   flat_FLAT5_2 = "FLAT5_2",
 
   tex_METAL5 = "METAL5",
-},
+}
 
 PREFABS.Cage_wall_windowed_rooms_open_hell =
 {
@@ -136,5 +136,5 @@ PREFABS.Cage_wall_windowed_rooms_open_hell =
   tex_DOOR1 = "WOODMET1",
   tex_METAL5 = "METAL5",
 
-  x_fit = {24,232},
-},
+  x_fit = {24,232}
+}

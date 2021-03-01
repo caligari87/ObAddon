@@ -14,4 +14,4 @@ PREFABS.Exit_armaetus_tp_closet =
 
   x_fit  = "frame",
   y_fit  = "top",
-},
+}

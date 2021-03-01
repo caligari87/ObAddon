@@ -17,4 +17,4 @@ PREFABS.Switch_military_radio =
   prob   = 90,
 
   tag_1 = "?switch_tag",
-},
+}

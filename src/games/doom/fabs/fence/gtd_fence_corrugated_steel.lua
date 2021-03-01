@@ -23,8 +23,8 @@ PREFABS.Fence_corrugated_steel =
     GRAYMET2 = 1,
     GRAYMET3 = 5,
     GRAYMET5 = 1,
-  },
-},
+  }
+}
 
 PREFABS.Fence_corrugated_steel_diag =
 {
@@ -35,7 +35,7 @@ PREFABS.Fence_corrugated_steel_diag =
   texture_pack = "armaetus",
 
   where  = "diagonal",
-},
+}
 
 -- fallbacks
 
@@ -58,7 +58,7 @@ PREFABS.Fence_corrugated_steel_plain =
 
   tex_GRAYMET3 = "SHAWN2",
   tex_BARBWIRE = "ZZWOLF10",
-},
+}
 
 PREFABS.Fence_corrugated_steel_plain_diag =
 {
@@ -79,4 +79,4 @@ PREFABS.Fence_corrugated_steel_plain_diag =
 
   tex_GRAYMET3 = "SHAWN2",
   tex_BARBWIRE = "ZZWOLF10",
-},
+}

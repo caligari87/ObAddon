@@ -20,5 +20,5 @@ PREFABS.Cage_hellbox1 =
   bound_z2 = 168,
 
   z_fit = "top",
-},
+}
 

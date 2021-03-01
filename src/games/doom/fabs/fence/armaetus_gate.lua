@@ -23,7 +23,7 @@ PREFABS.Bars_armaetus_solid_gate =
 
   tag_1  = "?door_tag",
   door_action = "S1_LowerFloor",
-},
+}
 
 PREFABS.Bars_wooden_gate =
 {
@@ -31,7 +31,7 @@ PREFABS.Bars_wooden_gate =
   map      = "MAP02",
 
   theme    = "!tech",
-},
+}
 
 PREFABS.Bars_urban_spikes =
 {
@@ -39,4 +39,4 @@ PREFABS.Bars_urban_spikes =
   map      = "MAP03",
 
   theme    = "!hell",
-},
+}

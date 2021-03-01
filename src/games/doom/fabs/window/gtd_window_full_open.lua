@@ -6,7 +6,7 @@ PREFABS.Window_open_1 =
   group  = "gtd_window_full_open",
   prob   = 50,
 
-  passable = true
+  passable = true,
 
   where  = "edge",
   seed_w = 1,
@@ -17,7 +17,7 @@ PREFABS.Window_open_1 =
 
   bound_z1 = 0,
   bound_z2 = 128,
-},
+}
 
 PREFABS.Window_open_2 =
 {
@@ -25,7 +25,7 @@ PREFABS.Window_open_2 =
   map      = "MAP02",
 
   seed_w   = 2,
-},
+}
 
 PREFABS.Window_open_3 =
 {
@@ -33,7 +33,7 @@ PREFABS.Window_open_3 =
   map      = "MAP03",
 
   seed_w   = 3,
-},
+}
 
 PREFABS.Window_open_4 =
 {
@@ -41,7 +41,7 @@ PREFABS.Window_open_4 =
   map      = "MAP04",
 
   seed_w   = 4,
-},
+}
 
 PREFABS.Window_open_1_tall =
 {
@@ -51,7 +51,7 @@ PREFABS.Window_open_1_tall =
   group = "gtd_window_full_open_tall",
 
   z_fit = { 26,32 },
-},
+}
 
 PREFABS.Window_open_2_tall =
 {
@@ -63,7 +63,7 @@ PREFABS.Window_open_2_tall =
   group = "gtd_window_full_open_tall",
 
   z_fit = { 26,32 },
-},
+}
 
 PREFABS.Window_open_3_tall =
 {
@@ -75,7 +75,7 @@ PREFABS.Window_open_3_tall =
   group = "gtd_window_full_open_tall",
 
   z_fit = { 26,32 },
-},
+}
 
 PREFABS.Window_open_4_tall =
 {
@@ -87,4 +87,4 @@ PREFABS.Window_open_4_tall =
   group = "gtd_window_full_open_tall",
 
   z_fit = { 26,32 },
-},
+}

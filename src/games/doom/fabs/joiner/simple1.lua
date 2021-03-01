@@ -27,7 +27,7 @@ PREFABS.Joiner_simple1 =
 
   sector_1  = { [0]=55, [1]=35, [2]=10, [3]=10, [8]=10, [17]=5 },
 
-},
+}
 
 
 PREFABS.Joiner_simple1_urban =
@@ -43,7 +43,7 @@ PREFABS.Joiner_simple1_urban =
 
   sector_1  = { [0]=55, [1]=35, [2]=10, [3]=10, [8]=10, [17]=5 },
 
-},
+}
 
 PREFABS.Joiner_simple1_hell =
 {
@@ -60,7 +60,7 @@ PREFABS.Joiner_simple1_hell =
 
   sector_1  = { [0]=55, [1]=35, [2]=10, [3]=10, [8]=10, [17]=5 },
 
-},
+}
 
 -- a version of above with a little surprise
 PREFABS.Joiner_simple1_trappy =
@@ -80,7 +80,7 @@ PREFABS.Joiner_simple1_trappy =
 
   sector_1  = { [0]=55, [1]=35, [2]=10, [3]=10, [8]=10, [17]=5 },
 
-},
+}
 
 PREFABS.Joiner_simple1_trappy_urban =
 {
@@ -101,7 +101,7 @@ PREFABS.Joiner_simple1_trappy_urban =
 
   sector_1  = { [0]=55, [1]=35, [2]=10, [3]=10, [8]=10, [17]=5 },
 
-},
+}
 
 PREFABS.Joiner_simple1_trappy_hell =
 {
@@ -124,7 +124,7 @@ PREFABS.Joiner_simple1_trappy_hell =
 
   sector_1  = { [0]=55, [1]=35, [2]=10, [3]=10, [8]=10, [17]=5 },
 
-},
+}
 
 
 PREFABS.Joiner_simple1_wide =
@@ -145,7 +145,7 @@ PREFABS.Joiner_simple1_wide =
 
   sector_1  = { [0]=55, [1]=35, [2]=10, [3]=10, [8]=10, [17]=5 },
 
-},
+}
 
 PREFABS.Joiner_simple1_wide_urban =
 {
@@ -165,7 +165,7 @@ PREFABS.Joiner_simple1_wide_urban =
 
   sector_1  = { [0]=55, [1]=35, [2]=10, [3]=10, [8]=10, [17]=5 },
 
-},
+}
 
 
 PREFABS.Joiner_simple1_wide_hell =
@@ -188,4 +188,4 @@ PREFABS.Joiner_simple1_wide_hell =
 
   sector_1  = { [0]=55, [1]=35, [2]=10, [3]=10, [8]=10, [17]=5 },
 
-},
+}

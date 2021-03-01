@@ -19,7 +19,7 @@ PREFABS.Arch_bare =
 
   bound_z1 = 0,
   bound_z2 = 128,
-},
+}
 
 PREFABS.Arch_bare_columned =
 {
@@ -29,7 +29,7 @@ PREFABS.Arch_bare_columned =
   seed_w = 2,
 
   x_fit = { 32,96 , 160,224 },
-},
+}
 
 PREFABS.Arch_bare_columned_2X =
 {
@@ -38,8 +38,8 @@ PREFABS.Arch_bare_columned_2X =
 
   seed_w = 3,
 
-  x_fit = { 24,104 , 152,232 , 280,360 },
-},
+  x_fit = { 24,104 , 152,232 , 280,360 }
+}
 
 -- hell version
 
@@ -53,7 +53,7 @@ PREFABS.Arch_bare_hell =
   x_fit = { 60,68 },
 
   tex_EXITDOOR = "FIREMAG1",
-},
+}
 
 PREFABS.Arch_bare_columned_hell =
 {
@@ -67,7 +67,7 @@ PREFABS.Arch_bare_columned_hell =
   x_fit = { 32,96 , 160,224 },
 
   tex_EXITDOOR = "FIREMAG1",
-},
+}
 
 PREFABS.Arch_bare_columned_2X_hell =
 {
@@ -81,4 +81,4 @@ PREFABS.Arch_bare_columned_2X_hell =
   x_fit = { 24,104 , 152,232 , 280,360 },
 
   tex_EXITDOOR = "FIREMAG1",
-},
+}

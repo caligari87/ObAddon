@@ -51,7 +51,7 @@ PREFABS.Joiner_simple_one_pillar =
   },
 
   tex_SUPPORT3 = "DOORSTOP",
-},
+}
 
 PREFABS.Joiner_simple_one_pillar_urban =
 {
@@ -92,7 +92,7 @@ PREFABS.Joiner_simple_one_pillar_urban =
     WOODVERT = 50,
     WOOD4 = 50,
   },
-},
+}
 
 PREFABS.Joiner_simple_one_pillar_hell =
 {
@@ -131,4 +131,4 @@ PREFABS.Joiner_simple_one_pillar_hell =
     WOODGARG = 50,
     WOODMET1 = 50,
   },
-},
+}

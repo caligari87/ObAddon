@@ -20,8 +20,8 @@ PREFABS.Pillar_tech3 =
   bound_z1 = 0,
   bound_z2 = 192,
 
-  z_fit  = { 80,112 },
-},
+  z_fit  = { 80,112 }
+}
 
 PREFABS.Pillar3_tech2 =
 {
@@ -29,8 +29,8 @@ PREFABS.Pillar3_tech2 =
 
   theme  = "tech",
 
-  tex_SILVER2 = { TEKWALL1=50, TEKWALL4=50, TEKLITE=50 },
-},
+  tex_SILVER2 = { TEKWALL1=50, TEKWALL4=50, TEKLITE=50 }
+}
 
 PREFABS.Pillar3_hell1 =
 {
@@ -41,7 +41,7 @@ PREFABS.Pillar3_hell1 =
   tex_SILVER2 = "FIREBLU1",
   tex_COMPSPAN = "METAL",
   flat_CEIL5_1 = "CEIL5_2",
-},
+}
 
 PREFABS.Pillar3_hell2 =
 {
@@ -52,7 +52,7 @@ PREFABS.Pillar3_hell2 =
   tex_SILVER2 = { SLOPPY1=50, SP_FACE2=50 },
   tex_COMPSPAN = "SP_HOT1",
   flat_CEIL5_1 = "FLAT5_3",
-},
+}
 
 PREFABS.Pillar3_urban1 =
 {
@@ -64,4 +64,4 @@ PREFABS.Pillar3_urban1 =
   tex_SILVER2 = "MODWALL1",
   tex_COMPSPAN = "BRICK4",
   flat_CEIL5_1 = "CEIL3_2",
-},
+}

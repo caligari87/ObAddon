@@ -17,7 +17,7 @@ PREFABS.Wall_tech_hydroponics =
   bound_z2 = 128,
 
   z_fit  = "top",
-},
+}
 
 PREFABS.Wall_tech_hydroponics_posted =
 {
@@ -25,4 +25,4 @@ PREFABS.Wall_tech_hydroponics_posted =
   map      = "MAP02",
 
   prob     = 15,
-},
+}

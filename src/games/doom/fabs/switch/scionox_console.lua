@@ -11,17 +11,17 @@ PREFABS.Switch_scionox_console =
   where  = "point",
 
   tag_1  = "?switch_tag",
-},
+}
 PREFABS.Switch_scionox_console_2 =
 {
   template = "Switch_scionox_console",
   map    = "MAP02",
-},
+}
 PREFABS.Switch_scionox_console_3 =
 {
   template = "Switch_scionox_console",
   map    = "MAP03",
-},
+}
 PREFABS.Switch_scionox_console_4 =
 {
   template = "Switch_scionox_console",
@@ -33,4 +33,4 @@ PREFABS.Switch_scionox_console_4 =
   seed_w = 2,
 
   deep = 16,
-},
+}

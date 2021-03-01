@@ -23,4 +23,4 @@ PREFABS.Trap_closet_hell =
   y_fit = { 32,112 },
 
   tag_1 = "?trap_tag",
-},
+}

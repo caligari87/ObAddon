@@ -15,7 +15,7 @@ PREFABS.Wall_urban_cement_frame_plain =
   bound_z2 = 128,
 
   z_fit  = "top",
-},
+}
 
 PREFABS.Wall_urban_cement_frame_lite =
 {
@@ -23,7 +23,7 @@ PREFABS.Wall_urban_cement_frame_lite =
   map = "MAP02",
 
   prob = 30,
-},
+}
 
 PREFABS.Wall_urban_cement_frame_doors =
 {
@@ -31,7 +31,7 @@ PREFABS.Wall_urban_cement_frame_doors =
   map = "MAP03",
 
   prob = 15,
-},
+}
 
 PREFABS.Wall_urban_cement_frame_diag =
 {
@@ -42,7 +42,7 @@ PREFABS.Wall_urban_cement_frame_diag =
 
   where  = "diagonal",
 
-  deep = nil
+  deep = nil,
 
   z_fit  = "top",
-},
+}

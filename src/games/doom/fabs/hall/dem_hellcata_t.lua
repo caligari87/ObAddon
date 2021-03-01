@@ -70,36 +70,36 @@ PREFABS.Hallway_hellcata_t1 =
     dead_zombie = 50,
     dead_shooter = 50,
     dead_imp = 50,
-  },
+  }
 
-},
+}
 
 PREFABS.Hallway_hellcata_t2 =
 {
   template = "Hallway_hellcata_t1",
   map    = "MAP02",
-},
+}
 
 PREFABS.Hallway_hellcata_t3 =
 {
   template = "Hallway_hellcata_t1",
   map    = "MAP03",
-},
+}
 
 PREFABS.Hallway_hellcata_t4 =
 {
   template = "Hallway_hellcata_t1",
   map    = "MAP04",
-},
+}
 
 PREFABS.Hallway_hellcata_t5 =
 {
   template = "Hallway_hellcata_t1",
   map    = "MAP05",
-},
+}
 
 PREFABS.Hallway_hellcata_t6 =
 {
   template = "Hallway_hellcata_t1",
   map    = "MAP06",
-},
+}

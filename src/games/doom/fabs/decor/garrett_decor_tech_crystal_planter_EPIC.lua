@@ -17,8 +17,8 @@ PREFABS.Decor_garrett_hell_crystal_analyser_thing_EPIC =
   bound_z1 = 0,
   bound_z2 = 192,
 
-  z_fit = { 48,136 },
-},
+  z_fit = { 48,136 }
+}
 
 PREFABS.Decor_gtd_hell_crystal_analyser_thing_2_EPIC =
 {
@@ -28,12 +28,12 @@ PREFABS.Decor_gtd_hell_crystal_analyser_thing_2_EPIC =
   height = 128,
   size = 104,
 
-  face_open = true
+  face_open = true,
 
   bound_z2 = 128,
 
   z_fit = "top",
-},
+}
 
 PREFABS.Decor_gtd_hell_crystal_analyser_thing_3_EPIC =
 {
@@ -45,9 +45,9 @@ PREFABS.Decor_gtd_hell_crystal_analyser_thing_3_EPIC =
   height = 128,
   size = 112,
 
-  face_open = true
+  face_open = true,
 
   bound_z2 = 128,
 
   z_fit = "top",
-},
+}

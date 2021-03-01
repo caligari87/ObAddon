@@ -11,7 +11,7 @@ PREFABS.Item_gtd_key_pedestal_tech =
 
   where = "point",
   size = 32,
-},
+}
 
 PREFABS.Item_gtd_key_pedestal_urban =
 {
@@ -19,7 +19,7 @@ PREFABS.Item_gtd_key_pedestal_urban =
   map = "MAP02",
 
   theme = "urban",
-},
+}
 
 PREFABS.Item_gtd_key_pedestal_hell =
 {
@@ -31,7 +31,7 @@ PREFABS.Item_gtd_key_pedestal_hell =
   theme = "hell",
 
   size = 24,
-},
+}
 
 PREFABS.Item_gtd_key_oh_he_ded =
 {
@@ -72,5 +72,5 @@ PREFABS.Item_gtd_key_oh_he_ded =
     [20] = 5,
     [19] = 5,
     [18] = 5,
-  },
-},
+  }
+}

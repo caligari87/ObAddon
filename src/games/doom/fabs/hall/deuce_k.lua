@@ -21,7 +21,7 @@ PREFABS.Hallway_deuce_locked_red =
   seed_h = 1,
 
   deep   = 16,
-},
+}
 
 PREFABS.Hallway_deuce_locked_red_tech =
 {
@@ -31,7 +31,7 @@ PREFABS.Hallway_deuce_locked_red_tech =
 
   tex_METAL = "SHAWN2",
   flat_CEIL5_2 = "FLAT23",
-},
+}
 
 
 PREFABS.Hallway_deuce_locked_blue =
@@ -43,7 +43,7 @@ PREFABS.Hallway_deuce_locked_blue =
 
   tex_DOORRED = "DOORBLU",
   line_33     = 32,
-},
+}
 
 PREFABS.Hallway_deuce_locked_blue_tech =
 {
@@ -57,7 +57,7 @@ PREFABS.Hallway_deuce_locked_blue_tech =
 
   tex_METAL = "SHAWN2",
   flat_CEIL5_2 = "FLAT23",
-},
+}
 
 
 PREFABS.Hallway_deuce_locked_yellow =
@@ -69,7 +69,7 @@ PREFABS.Hallway_deuce_locked_yellow =
 
   tex_DOORRED = "DOORYEL",
   line_33     = 34,
-},
+}
 
 PREFABS.Hallway_deuce_locked_yellow_tech =
 {
@@ -83,7 +83,7 @@ PREFABS.Hallway_deuce_locked_yellow_tech =
 
   tex_METAL = "SHAWN2",
   flat_CEIL5_2 = "FLAT23",
-},
+}
 
 
 ----------------------------------------------------------------
@@ -109,7 +109,7 @@ PREFABS.Hallway_deuce_barred =
 
   tag_1  = "?door_tag",
   door_action = "S1_LowerFloor",
-},
+}
 
 PREFABS.Hallway_deuce_barred_tech =
 {
@@ -122,4 +122,4 @@ PREFABS.Hallway_deuce_barred_tech =
   tex_METAL = "SHAWN2",
   flat_CEIL5_2 = "FLAT23",
 
-},
+}

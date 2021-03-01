@@ -25,8 +25,8 @@ PREFABS.Door_plain2 =
 
   flat_TLITE6_6 = { TLITE6_6=50, TLITE6_5=50 },
 
-  sector_1  = { [0]=75, [1]=15, [2]=5, [3]=5, [8]=10, [12]=5, [13]=5 },
-},
+  sector_1  = { [0]=75, [1]=15, [2]=5, [3]=5, [8]=10, [12]=5, [13]=5 }
+}
 
 PREFABS.Door_plain3 =
 {
@@ -40,9 +40,9 @@ PREFABS.Door_plain3 =
 
   flat_TLITE6_6 = { TLITE6_6=50, TLITE6_5=50 },
 
-  sector_1  = { [0]=75, [1]=15, [2]=5, [3]=5, [8]=10, [12]=5, [13]=5 },
+  sector_1  = { [0]=75, [1]=15, [2]=5, [3]=5, [8]=10, [12]=5, [13]=5 }
 
-},
+}
 
 PREFABS.Door_plain4 =
 {
@@ -56,9 +56,9 @@ PREFABS.Door_plain4 =
 
   flat_TLITE6_6 = { TLITE6_6=50, TLITE6_5=50 },
 
-  sector_1  = { [0]=75, [1]=15, [2]=5, [3]=5, [8]=10, [12]=5, [13]=5 },
+  sector_1  = { [0]=75, [1]=15, [2]=5, [3]=5, [8]=10, [12]=5, [13]=5 }
 
-},
+}
 
 -- MSSP: diagonal doors?
 
@@ -75,9 +75,9 @@ PREFABS.Door_plain_diag =
   bound_z1 = 0,
   bound_z2 = 128,
 
-  sector_1  = { [0]=75, [1]=15, [2]=5, [3]=5, [8]=10, [12]=5, [13]=5 },
+  sector_1  = { [0]=75, [1]=15, [2]=5, [3]=5, [8]=10, [12]=5, [13]=5 }
 
-},
+}
 
 PREFABS.Door_plain3_diag =
 {
@@ -87,9 +87,9 @@ PREFABS.Door_plain3_diag =
   tex_BIGDOOR4 = "BIGDOOR3",
   flat_CEIL5_2 = "FLOOR7_2",
 
-  sector_1  = { [0]=75, [1]=15, [2]=5, [3]=5, [8]=10, [12]=5, [13]=5 },
+  sector_1  = { [0]=75, [1]=15, [2]=5, [3]=5, [8]=10, [12]=5, [13]=5 }
 
-},
+}
 
 PREFABS.Door_plain4_diag =
 {
@@ -99,9 +99,9 @@ PREFABS.Door_plain4_diag =
   tex_BIGDOOR4 = "BIGDOOR2",
   flat_CEIL5_2 = "FLAT20",
 
-  sector_1  = { [0]=75, [1]=15, [2]=5, [3]=5, [8]=10, [12]=5, [13]=5 },
+  sector_1  = { [0]=75, [1]=15, [2]=5, [3]=5, [8]=10, [12]=5, [13]=5 }
 
-},
+}
 
 PREFABS.Door_plain2_diag_hell =
 {
@@ -112,13 +112,13 @@ PREFABS.Door_plain2_diag_hell =
   prob   = 250,
 
   flat_TLITE6_6 = "FLAT1",
-  tex_BIGDOOR4 = { BIGDOOR7=50, BIGDOOR6=50, BIGDOOR5=50 },
+  tex_BIGDOOR4 = { BIGDOOR7=50, BIGDOOR6=50, BIGDOOR5=50 }
 
   tex_LITE5 = "FIREBLU1",
 
-  sector_1  = { [0]=85, [1]=15, [2]=5, [3]=5, [8]=10, [12]=5, [13]=5, [17]=20 },
+  sector_1  = { [0]=85, [1]=15, [2]=5, [3]=5, [8]=10, [12]=5, [13]=5, [17]=20 }
 
-},
+}
 
 PREFABS.Door_plain3_diag_hell =
 {
@@ -129,15 +129,15 @@ PREFABS.Door_plain3_diag_hell =
   prob   = 250,
 
   flat_TLITE6_6 = "FLAT1",
-  tex_BIGDOOR4 = { MARBFACE=50, MARBFAC3=50, MARBFAC2=20 },
+  tex_BIGDOOR4 = { MARBFACE=50, MARBFAC3=50, MARBFAC2=20 }
   flat_CEIL5_2 = "FLOOR7_2",
   tex_LITE5 = "FIREBLU1",
   tex_COMPSPAN = "METAL",
   tex_CEIL5_1 = "CEIL5_2",
 
-  sector_1  = { [0]=85, [1]=15, [2]=5, [3]=5, [8]=10, [12]=5, [13]=5, [17]=20 },
+  sector_1  = { [0]=85, [1]=15, [2]=5, [3]=5, [8]=10, [12]=5, [13]=5, [17]=20 }
 
-},
+}
 ]]
 
 PREFABS.Door_plain2_hell =
@@ -152,9 +152,9 @@ PREFABS.Door_plain2_hell =
   tex_COMPSPAN = "METAL",
   tex_CEIL5_1 = "CEIL5_2",
 
-  sector_1  = { [0]=85, [1]=15, [2]=5, [3]=5, [8]=10, [12]=5, [13]=5, [17]=20 },
+  sector_1  = { [0]=85, [1]=15, [2]=5, [3]=5, [8]=10, [12]=5, [13]=5, [17]=20 }
 
-},
+}
 
 PREFABS.Door_plain3_hell =
 {
@@ -170,9 +170,9 @@ PREFABS.Door_plain3_hell =
   tex_CEIL5_1 = "CEIL5_2",
   tex_LITE5 = "FIREBLU1",
 
-  sector_1  = { [0]=85, [1]=15, [2]=5, [3]=5, [8]=10, [12]=5, [13]=5, [17]=20 },
+  sector_1  = { [0]=85, [1]=15, [2]=5, [3]=5, [8]=10, [12]=5, [13]=5, [17]=20 }
 
-},
+}
 
 PREFABS.Door_plain_tech =
 {
@@ -195,9 +195,9 @@ PREFABS.Door_plain_tech =
 
   flat_TLITE6_6 = { TLITE6_6=50, TLITE6_5=50 },
 
-  sector_1  = { [0]=75, [1]=15, [2]=5, [3]=5, [8]=10, [12]=5, [13]=5 },
+  sector_1  = { [0]=75, [1]=15, [2]=5, [3]=5, [8]=10, [12]=5, [13]=5 }
 
-},
+}
 
 --[[
 PREFABS.Door_plain_diag_tech =
@@ -213,7 +213,7 @@ PREFABS.Door_plain_diag_tech =
   bound_z1 = 0,
   bound_z2 = 128,
 
-  sector_1  = { [0]=75, [1]=15, [2]=5, [3]=5, [8]=10, [12]=5, [13]=5 },
+  sector_1  = { [0]=75, [1]=15, [2]=5, [3]=5, [8]=10, [12]=5, [13]=5 }
 
-},
+}
 ]]

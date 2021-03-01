@@ -20,5 +20,5 @@ UNFINISHED.Decor_cave_waterfall =
   y_fit  = "top",
 
   sound = "Waterfall_Rush",
-},
+}
 

@@ -18,7 +18,7 @@ PREFABS.Stair_wide_3x1 =
   bound_z2 = 32,
 
   delta_h = 32,
-},
+}
 
 
 PREFABS.Stair_wide_3x1_torch =
@@ -46,7 +46,7 @@ PREFABS.Stair_wide_3x1_torch =
    green_torch = 15,
   },
 
-},
+}
 
 -- Tech vesion
 PREFABS.Stair_wide_3x1_torch_tech =
@@ -67,7 +67,7 @@ PREFABS.Stair_wide_3x1_torch_tech =
 
   tex_STEP5 = "STEP3",
 
-},
+}
 
 -- Hell vesion
 PREFABS.Stair_wide_3x1_torch_hell =
@@ -82,7 +82,7 @@ PREFABS.Stair_wide_3x1_torch_hell =
    blue_torch = 50,
    green_torch = 50,
   },
-},
+}
 
 PREFABS.Stair_wide_3x1_torch_hell_gore =
 {
@@ -97,7 +97,7 @@ PREFABS.Stair_wide_3x1_torch_hell_gore =
    impaled_human = 50,
    impaled_twitch = 50,
   },
-},
+}
 
 PREFABS.Stair_wide_3x1_torch_eye =
 {
@@ -107,4 +107,4 @@ PREFABS.Stair_wide_3x1_torch_eye =
 
   thing_46 = "evil_eye",
 
-},
+}

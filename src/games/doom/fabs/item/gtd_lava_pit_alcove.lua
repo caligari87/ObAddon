@@ -20,7 +20,7 @@ PREFABS.Item_lava_pit_alcove =
 
   x_fit = "frame",
   y_fit = "top",
-},
+}
 
 -- Lava trap
 PREFABS.Item_lava_pit_alcove_trap =
@@ -30,4 +30,4 @@ PREFABS.Item_lava_pit_alcove_trap =
 
   prob   = 25,
   style  = "traps",
-},
+}

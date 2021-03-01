@@ -19,7 +19,7 @@ PREFABS.Wall_epic_churchy_glass_1 =
   bound_z2 = 128,
 
   z_fit = "bottom",
-},
+}
 
 PREFABS.Wall_epic_churchy_glass_2 =
 {
@@ -27,7 +27,7 @@ PREFABS.Wall_epic_churchy_glass_2 =
   map = "MAP02",
 
   prob = 20,
-},
+}
 
 PREFABS.Wall_epic_churchy_glass_plain =
 {
@@ -35,7 +35,7 @@ PREFABS.Wall_epic_churchy_glass_plain =
   map = "MAP03",
 
   prob = 50,
-},
+}
 
 PREFABS.Wall_epic_churchy_glass_diagonal =
 {
@@ -56,4 +56,4 @@ PREFABS.Wall_epic_churchy_glass_diagonal =
   bound_z2 = 128,
 
   z_fit = "bottom",
-},
+}

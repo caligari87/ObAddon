@@ -3,7 +3,7 @@ PREFABS.Pic_storefront_3x =
   file   = "picture/gtd_pic_urban_generic_frontages.wad",
   map    = "MAP01",
 
-  prob   = 80 --35,
+  prob   = 80, --35,
   theme = "urban",
 
   env   = "!cave",
@@ -37,7 +37,7 @@ PREFABS.Pic_storefront_3x =
     STEP4 = 10,
     STEP5 = 10,
   },
-},
+}
 
 PREFABS.Pic_storefront_2x =
 {
@@ -49,14 +49,14 @@ PREFABS.Pic_storefront_2x =
   seed_w = 2,
 
   x_fit = { 60,68 },
-},
+}
 
 PREFABS.Pic_apartment_row_3x =
 {
   file   = "picture/gtd_pic_urban_generic_frontages.wad",
   map    = "MAP03",
 
-  prob   = 120 --35,
+  prob   = 120, --35,
   theme = "urban",
 
   env   = "!cave",
@@ -75,4 +75,4 @@ PREFABS.Pic_apartment_row_3x =
 
   x_fit = "frame",
   y_fit = "top",
-},
+}

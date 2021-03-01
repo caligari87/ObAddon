@@ -12,7 +12,7 @@ PREFABS.Decor_hell_box_of_people_1 =
   size   = 64,
 
   bound_z1 = 0,
-},
+}
 
 PREFABS.Decor_hell_box_of_people_2 =
 {
@@ -20,4 +20,4 @@ PREFABS.Decor_hell_box_of_people_2 =
   map = "MAP02",
 
   height = 128,
-},
+}

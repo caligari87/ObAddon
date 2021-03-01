@@ -22,4 +22,4 @@ PREFABS.Sidewalk_8 =
   bound_z2 = 8,
 
   delta_h = 8,
-},
+}

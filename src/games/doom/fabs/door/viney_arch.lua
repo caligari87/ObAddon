@@ -28,8 +28,8 @@ PREFABS.Arch_viney1 =
   {
     MIDVINE2 = 1,
     ZZWOLF10 = 10 -- invisibility tex
-  },
-},
+  }
+}
 
 
 PREFABS.Arch_viney1_B =
@@ -38,7 +38,7 @@ PREFABS.Arch_viney1_B =
 
   env      = "any",
   neighbor = "cave",
-},
+}
 
 
 PREFABS.Door_viney1 =
@@ -47,7 +47,7 @@ PREFABS.Door_viney1 =
 
   rank  = 2,
   kind  = "door",
-},
+}
 
 
 ---------- JOINER VERSIONS -----------------------
@@ -77,14 +77,14 @@ PREFABS.Joiner_viney1 =
   x_fit  = "frame",
   y_fit  = { 32,144 },
 
-  force_flip = false
+  force_flip = false,
 
   tex_MIDVINE2 =
   {
     MIDVINE2 = 1,
     ZZWOLF10 = 10 -- invisibility tex
-  },
-},
+  }
+}
 
 
 PREFABS.Joiner_viney1_B =
@@ -95,8 +95,8 @@ PREFABS.Joiner_viney1_B =
   env      = "cave",
   neighbor = "any",
 
-  force_flip = true
-},
+  force_flip = true,
+}
 
 
 PREFABS.Joiner_viney1_CC =
@@ -108,4 +108,4 @@ PREFABS.Joiner_viney1_CC =
   neighbor = "cave",
 
   rank   = nil
-},
+}

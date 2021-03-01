@@ -19,7 +19,7 @@ PREFABS.Teleporter_scionox_small_pillar_teleport =
 
   tag_1 = "?out_tag",
   tag_2 = "?in_tag",
-},
+}
 
 PREFABS.Teleporter_scionox_small_pillar_teleport_2 =
 {
@@ -30,7 +30,7 @@ PREFABS.Teleporter_scionox_small_pillar_teleport_2 =
   tex_SILVER2 = "PANRED",
   tex_GATE4 = "GATE3",
   thing_2028 = "mercury_lamp",
-},
+}
 
 PREFABS.Teleporter_scionox_small_pillar_teleport_3 =
 {
@@ -43,4 +43,4 @@ PREFABS.Teleporter_scionox_small_pillar_teleport_3 =
   tex_LITE5 = "METAL",
   flat_FLAT19 = "CEIL5_2",
   thing_2028 = "candelabra",
-},
+}

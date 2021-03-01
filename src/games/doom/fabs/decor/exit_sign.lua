@@ -11,5 +11,5 @@ PREFABS.Decor_exit_sign =
   prob   = 80,
 
   where  = "point",
-},
+}
 

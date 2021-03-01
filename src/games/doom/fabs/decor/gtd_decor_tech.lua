@@ -14,8 +14,8 @@ PREFABS.Decor_light_pillar_helix =
   bound_z1 = 0,
   bound_z2 = 160,
 
-  z_fit  = { 120+16,120+32 },
-},
+  z_fit  = { 120+16,120+32 }
+}
 
 PREFABS.Decor_light_pillar_core =
 {
@@ -27,8 +27,8 @@ PREFABS.Decor_light_pillar_core =
 
   bound_z2 = 128,
 
-  z_fit  = { 44,76 },
-},
+  z_fit  = { 44,76 }
+}
 
 PREFABS.Decor_light_pillar_core2 =
 {
@@ -40,8 +40,8 @@ PREFABS.Decor_light_pillar_core2 =
 
   bound_z2 = 128,
 
-  z_fit  = { 44,84 },
-},
+  z_fit  = { 44,84 }
+}
 
 PREFABS.Decor_data_pillar =
 {
@@ -54,7 +54,7 @@ PREFABS.Decor_data_pillar =
   bound_z2 = 112,
 
   z_fit  = "top",
-},
+}
 
 PREFABS.Decor_computer_tall =
 {
@@ -67,7 +67,7 @@ PREFABS.Decor_computer_tall =
   bound_z2 = 128,
 
   z_fit  = "top",
-},
+}
 
 PREFABS.Decor_server_rack =
 {
@@ -82,14 +82,14 @@ PREFABS.Decor_server_rack =
   z_fit = "top",
 
   sink_mode = "never",
-},
+}
 
 PREFABS.Decor_open_pipe =
 {
   template = "Decor_light_pillar_helix",
   map    = "MAP07",
 
-  liquid = true
+  liquid = true,
 
   size   = 64,
   height = 128,
@@ -99,7 +99,7 @@ PREFABS.Decor_open_pipe =
   z_fit  = { 32,88 },
 
   sound = "Water_Tank",
-},
+}
 
 PREFABS.Decor_floor_decal_stripes =
 {
@@ -114,7 +114,7 @@ PREFABS.Decor_floor_decal_stripes =
   bound_z2 = 32,
 
   sink_mode = "never",
-},
+}
 
 PREFABS.Decor_sealed_storage =
 {
@@ -127,7 +127,7 @@ PREFABS.Decor_sealed_storage =
   bound_z2 = 128,
 
   z_fit = "top",
-},
+}
 
 PREFABS.Decor_sealed_storage_large =
 {
@@ -140,7 +140,7 @@ PREFABS.Decor_sealed_storage_large =
   bound_z2 = 128,
 
   z_fit = "top",
-},
+}
 
 PREFABS.Decor_fuel_rods =
 {
@@ -152,8 +152,8 @@ PREFABS.Decor_fuel_rods =
 
   bound_z2 = 128,
 
-  z_fit = { 60,90 },
-},
+  z_fit = { 60,90 }
+}
 
 PREFABS.Decor_beacon_thing =
 {
@@ -169,4 +169,4 @@ PREFABS.Decor_beacon_thing =
 
   bound_z1 = 0,
   bound_z2 = 128,
-},
+}

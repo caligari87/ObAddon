@@ -19,8 +19,8 @@ PREFABS.Lift_gtd_pistons_128 =
   bound_z1 = 0,
 
   delta_h = 64,
-  plain_ceiling = true
-},
+  plain_ceiling = true,
+}
 
 PREFABS.Lift_gtd_pistons_128_hell =
 {
@@ -28,4 +28,4 @@ PREFABS.Lift_gtd_pistons_128_hell =
   map = "MAP02",
 
   theme = "hell",
-},
+}

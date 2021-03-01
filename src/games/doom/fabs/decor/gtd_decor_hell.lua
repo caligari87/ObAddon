@@ -14,7 +14,7 @@ PREFABS.Decor_triple_bone_thing =
   bound_z2 = 168,
 
   z_fit  = "top",
-},
+}
 
 PREFABS.Decor_blood_drip_pool =
 {
@@ -45,7 +45,7 @@ PREFABS.Decor_blood_drip_pool =
   },
 
   z_fit  = "top",
-},
+}
 
 PREFABS.Decor_cage_n_corpses =
 {
@@ -68,8 +68,8 @@ PREFABS.Decor_cage_n_corpses =
    impaled_human = 50,
    impaled_twitch = 50,
   },
-  z_fit  = { 112+8,112+16 },
-},
+  z_fit  = { 112+8,112+16 }
+}
 
 PREFABS.Decor_hell_gazebo =
 {
@@ -86,10 +86,10 @@ PREFABS.Decor_hell_gazebo =
   bound_z1 = 0,
   bound_z2 = 160,
 
-  z_fit  = top
+  z_fit  = top,
 
   sink_mode = "never",
-},
+}
 
 PREFABS.Decor_blood_filling_casket =
 {
@@ -107,8 +107,8 @@ PREFABS.Decor_blood_filling_casket =
   bound_z1 = 0,
   bound_z2 = 168,
 
-  z_fit  = { 40+16,40+32 },
-},
+  z_fit  = { 40+16,40+32 }
+}
 
 PREFABS.Decor_vaulted_pillar =
 {
@@ -126,8 +126,8 @@ PREFABS.Decor_vaulted_pillar =
   bound_z1 = 0,
   bound_z2 = 160,
 
-  z_fit  = { 16+16,16+32 },
-},
+  z_fit  = { 16+16,16+32 }
+}
 
 PREFABS.Decor_pentagram_pedestal =
 {
@@ -143,7 +143,7 @@ PREFABS.Decor_pentagram_pedestal =
   bound_z1 = 0,
 
   sink_mode = "never",
-},
+}
 
 PREFABS.Decor_pool_of_guts =
 {
@@ -160,7 +160,7 @@ PREFABS.Decor_pool_of_guts =
   bound_z1 = 0,
 
   sink_mode = "never",
-},
+}
 
 PREFABS.Decor_candle_altar =
 {
@@ -175,4 +175,4 @@ PREFABS.Decor_candle_altar =
   height = 160,
 
   bound_z1 = 0,
-},
+}

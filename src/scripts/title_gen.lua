@@ -860,7 +860,7 @@ function Title_make_stroke(T, x1,y1, x2,y2)
   x1, y1 = T.func(T, x1, y1)
   x2, y2 = T.func(T, x2, y2)
 
-  gui.title_draw_line(x1 + T.ofs_x, y1 + T.ofs_y, x2 + T.ofs_x, y2 + T.ofs_y)
+  gui.title_draw_line(int(x1 + T.ofs_x), int(y1 + T.ofs_y), int(x2 + T.ofs_x), int(y2 + T.ofs_y))
 end
 
 
@@ -1022,8 +1022,8 @@ function Title_centered_string(T, mx, my, text, style)
         T.ofs_y = base_ofs - i
       end
 
-      gui.title_prop("box_w", thick)
-      gui.title_prop("box_h", thick)
+      gui.title_prop("box_w", int(thick))
+      gui.title_prop("box_h", int(thick))
 
       Title_draw_string(T, text)
     end
@@ -1045,12 +1045,12 @@ function Title_centered_string(T, mx, my, text, style)
   end
 
   if style.mode == "gradient" or style.mode == "gradient3" then
-    gui.title_prop("grad_y1", T.y - T.fh + 1)
-    gui.title_prop("grad_y2", T.y - 1)
+    gui.title_prop("grad_y1", int(T.y - T.fh + 1))
+    gui.title_prop("grad_y2", int(T.y - 1))
   end
 
-  gui.title_prop("box_w", T.thick)
-  gui.title_prop("box_h", T.thick)
+  gui.title_prop("box_w", int(T.thick))
+  gui.title_prop("box_h", int(T.thick))
 
   T.ofs_x = base_ofs
   T.ofs_y = base_ofs
@@ -1685,7 +1685,7 @@ function Title_gen_space_scene()
     -- avoid the logo too
     local near_d = geom.dist(315, 195, x, y)
 
-    for _,B in pairs(pairs(big_stars)) do
+    for _,B in pairs(big_stars) do
       local d = distance_to_big_star(B.mx, B.my, B.r, x, y)
 
       near_d = math.min(near_d, d)
@@ -1749,7 +1749,7 @@ function Title_gen_space_scene()
 
     local BIG_SIZES = { 56, 36, 16 }
 
-    for _,r in pairs(pairs(BIG_SIZES)) do
+    for _,r in pairs(BIG_SIZES) do
       if rand.odds(50) then
         local mx, my = location_for_big_star(r)
         table.insert(big_stars, { mx=mx, my=my, r=r })
@@ -1881,7 +1881,7 @@ function Title_gen_ray_burst()
       Title_interp_color(color_list, ity, col)
 
       gui.title_prop("color", col)
-      gui.title_draw_line(mx, my, x1, y1, col)
+      gui.title_draw_line(mx, my, int(x1), int(y1), col)
     end
     end
   end
@@ -2066,7 +2066,7 @@ function Title_gen_cave_scene()
         Title_interp_color(color_list, ity, col)
 
         gui.title_prop("color", col)
-        gui.title_draw_rect(x, y, 1, 1)
+        gui.title_draw_rect(int(x), int(y), 1, 1)
       end
       ::continue::
     end
@@ -2128,7 +2128,7 @@ function Title_gen_tunnel_scene()
     Title_interp_color(color_list, ity, col)
 
     gui.title_prop("color", col)
-    gui.title_draw_disc(mx - r*x_mul, my - r*y_mul, r*1.2, r)
+    gui.title_draw_disc(int(mx - r*x_mul), int(my - r*y_mul), int(r*1.2), int(r))
   end
 end
 
@@ -2532,7 +2532,7 @@ function Title_process_raw_fonts()
     dump_line("    points =\n")
     dump_line("    {\n")
 
-    for _,P in pairs(pairs(CH.points)) do
+    for _,P in pairs(CH.points) do
       local x = P.x
       local y = P.y
 

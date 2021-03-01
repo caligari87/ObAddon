@@ -16,7 +16,7 @@ PREFABS.Decor_blob_lamp =
 
   where  = "point",
   size   = 80,
-},
+}
 
 PREFABS.Decor_blob_lamp_gothic = -- this version is balanced against Mogwaltz's new blob lamp variations
 {
@@ -24,4 +24,4 @@ PREFABS.Decor_blob_lamp_gothic = -- this version is balanced against Mogwaltz's 
   map    = "MAP01",
 
   theme  = "!tech",
-},
+}

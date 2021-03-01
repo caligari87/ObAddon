@@ -35,7 +35,7 @@ PREFABS.Pic_urban_terraced_building_2x =
     DOOR1=5,
     DOOR5=5,
   },
-},
+}
 
 PREFABS.Pic_urban_terraced_building_3x =
 {
@@ -47,4 +47,4 @@ PREFABS.Pic_urban_terraced_building_3x =
   seed_w = 3,
 
   x_fit = {128,176 , 304,352},
-},
+}

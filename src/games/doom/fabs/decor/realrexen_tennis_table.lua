@@ -13,4 +13,4 @@ PREFABS.Decor_realrexen_tennis_table =
   height = 128,
 
   bound_z1 = 0,
-},
+}

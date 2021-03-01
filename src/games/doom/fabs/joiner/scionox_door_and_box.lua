@@ -21,7 +21,7 @@ PREFABS.Joiner_scionox_door_and_box =
   y_fit  = { 8,16 , 144,152 },
 
   tex_BIGDOOR2 = { BIGDOOR1=50, BIGDOOR2=50, BIGDOOR3=50, BIGDOOR4=50 },
-},
+}
 
 PREFABS.Joiner_scionox_door_and_box_2 =
 {
@@ -29,14 +29,14 @@ PREFABS.Joiner_scionox_door_and_box_2 =
 
   flat_CRATOP1 = "CRATOP2",
   tex_CRATE2 = "CRATE1",
-},
+}
 
 PREFABS.Joiner_scionox_door_and_box_3 =
 {
   template = "Joiner_scionox_door_and_box",
   theme  = "urban",
   thing_2028 = "mercury_small",
-},
+}
 
 PREFABS.Joiner_scionox_door_and_box_4 =
 {
@@ -45,7 +45,7 @@ PREFABS.Joiner_scionox_door_and_box_4 =
   thing_2028 = "mercury_small",
   flat_CRATOP1 = "CRATOP2",
   tex_CRATE2 = "CRATE1",
-},
+}
 
 PREFABS.Joiner_scionox_door_and_box_5 =
 {
@@ -58,7 +58,7 @@ PREFABS.Joiner_scionox_door_and_box_5 =
   y_fit  = { 8,16 , 148,152 },
 
   tex_BIGDOOR2 = { BIGDOOR2=50, BIGDOOR3=50, BIGDOOR4=50 },
-},
+}
 
 PREFABS.Joiner_scionox_door_and_box_6 =
 {
@@ -73,7 +73,7 @@ PREFABS.Joiner_scionox_door_and_box_6 =
   tex_BIGDOOR2 = { BIGDOOR2=50, BIGDOOR3=50, BIGDOOR4=50 },
   flat_CRATOP1 = "CRATOP2",
   tex_CRATE2 = "CRATE1",
-},
+}
 
 PREFABS.Joiner_scionox_door_and_box_7 =
 {
@@ -87,7 +87,7 @@ PREFABS.Joiner_scionox_door_and_box_7 =
 
   tex_BIGDOOR2 = { BIGDOOR2=50, BIGDOOR3=50, BIGDOOR4=50 },
   sector_12  = { [0]=30, [8]=8, [12]=15, [13]=15 },
-},
+}
 
 PREFABS.Joiner_scionox_door_and_box_8 =
 {
@@ -103,7 +103,7 @@ PREFABS.Joiner_scionox_door_and_box_8 =
   sector_12  = { [0]=30, [8]=8, [12]=15, [13]=15 },
   flat_CRATOP1 = "CRATOP2",
   tex_CRATE2 = "CRATE1",
-},
+}
 
 PREFABS.Joiner_scionox_door_and_box_9 =
 {
@@ -118,7 +118,7 @@ PREFABS.Joiner_scionox_door_and_box_9 =
   tex_BIGDOOR2 = { BIGDOOR2=50, BIGDOOR3=50, BIGDOOR4=50 },
   sector_12  = { [0]=30, [8]=8, [12]=15, [13]=15 },
   thing_2028 = "mercury_small",
-},
+}
 
 PREFABS.Joiner_scionox_door_and_box_10 =
 {
@@ -135,4 +135,4 @@ PREFABS.Joiner_scionox_door_and_box_10 =
   flat_CRATOP1 = "CRATOP2",
   tex_CRATE2 = "CRATE1",
   thing_2028 = "mercury_small",
-},
+}

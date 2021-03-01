@@ -1,6 +1,6 @@
 PREFABS.Joiner_mogwaltz_auto_open = --modded by MogWaltz
 {
-  file   = "joiner/mogwaltz_joiner_auto_opening2.wad" --originally cage/gtd_cage
+  file   = "joiner/mogwaltz_joiner_auto_opening2.wad", --originally cage/gtd_cage
   map    = "MAP01",
 
   prob   = 80,
@@ -22,4 +22,4 @@ PREFABS.Joiner_mogwaltz_auto_open = --modded by MogWaltz
   y_fit = { 268,276 },
 
   delta_h = 128,
-},
+}

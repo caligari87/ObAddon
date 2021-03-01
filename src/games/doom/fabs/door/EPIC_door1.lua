@@ -42,8 +42,8 @@ PREFABS.Door_EPIC_plain_tech =
     CEIL5_2 = 50,
   },
 
-  sector_1  = { [0]=75, [1]=15, [2]=5, [3]=5, [8]=10, [12]=5, [13]=5 },
-},
+  sector_1  = { [0]=75, [1]=15, [2]=5, [3]=5, [8]=10, [12]=5, [13]=5 }
+}
 
 PREFABS.Door_EPIC_plain_urban =
 {
@@ -68,8 +68,8 @@ PREFABS.Door_EPIC_plain_urban =
     BIGDOORG = 50,
     BIGDOORH = 50,
     BIGDOORL = 50,
-  },
-},
+  }
+}
 
 PREFABS.Door_EPIC_plain_hell =
 {
@@ -89,5 +89,5 @@ PREFABS.Door_EPIC_plain_hell =
     BIGDOORJ = 50,
     BIGDOORK = 50,
     BIGDOORN = 50,
-  },
-},
+  }
+}

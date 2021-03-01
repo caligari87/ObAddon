@@ -23,7 +23,7 @@ PREFABS.Pic_bookstore =
 
   x_fit = "frame",
   y_fit = "top",
-},
+}
 
 PREFABS.Pic_lounge =
 {
@@ -31,7 +31,7 @@ PREFABS.Pic_lounge =
   map    = "MAP02",
 
   seed_w = 3,
-},
+}
 
 PREFABS.Pic_fresh_produce_grocery =
 {
@@ -39,13 +39,13 @@ PREFABS.Pic_fresh_produce_grocery =
   map    = "MAP03",
 
   seed_w = 3,
-},
+}
 
 PREFABS.Pic_bank =
 {
   template = "Pic_bookstore",
   map    = "MAP04",
-},
+}
 
 PREFABS.Pic_some_sort_of_thing_people_do_in_the_future =
 {
@@ -53,7 +53,7 @@ PREFABS.Pic_some_sort_of_thing_people_do_in_the_future =
   map    = "MAP05",
 
   seed_w = 3,
-},
+}
 
 PREFABS.Pic_electronics_store =
 {
@@ -61,7 +61,7 @@ PREFABS.Pic_electronics_store =
   map    = "MAP06",
 
   seed_w = 3,
-},
+}
 
 PREFABS.Pic_locked_double_door_front =
 {
@@ -70,4 +70,4 @@ PREFABS.Pic_locked_double_door_front =
 
   seed_w = 3,
   seed_h = 1,
-},
+}

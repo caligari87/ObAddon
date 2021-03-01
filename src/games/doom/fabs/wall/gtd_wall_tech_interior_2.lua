@@ -47,14 +47,14 @@ PREFABS.Wall_machine_inset =
     METAL3 = 1,
     METAL5 = 1,
   },
-},
+}
 
 PREFABS.Wall_liquid_tank =
 {
   template = "Wall_machine_inset",
   map      = "MAP02",
 
-  liquid   = true
+  liquid   = true,
 
   z_fit   = "stretch",
 
@@ -69,7 +69,7 @@ PREFABS.Wall_liquid_tank =
     TEKLITE = 1,
     TEKLITE2 = 1,
   },
-},
+}
 
 PREFABS.Wall_double_light =
 {
@@ -95,7 +95,7 @@ PREFABS.Wall_double_light =
     SPCDOOR3 = 1,
     SPCDOOR4 = 0.5,
   },
-},
+}
 
 PREFABS.Wall_diag_sewer =
 {
@@ -106,7 +106,7 @@ PREFABS.Wall_diag_sewer =
   theme = "tech",
   env   = "building",
 
-  liquid = true
+  liquid = true,
 
   where  = "diagonal",
   height = 128,
@@ -117,4 +117,4 @@ PREFABS.Wall_diag_sewer =
   z_fit  = "top",
 
   sound = "Water_Streaming",
-},
+}

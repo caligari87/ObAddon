@@ -21,13 +21,13 @@ PREFABS.Wall_hell_sharp_alcoves_single_red = --#
   bound_z2 = 128,
 
   z_fit  = { 32,40 },
-},
+}
 
 PREFABS.Wall_hell_sharp_alcoves_double_red = --#
 {
   template = "Wall_hell_sharp_alcoves_single_red",
   map      = "MAP02",
-},
+}
 
 -- blue version
 
@@ -38,7 +38,7 @@ PREFABS.Wall_hell_sharp_alcoves_blue = --#
 
   tex_FIREMAG1 = "COMPBLUE",
   thing_46 = 44,
-},
+}
 
 PREFABS.Wall_hell_sharp_alcoves_double_blue = --#
 {
@@ -47,7 +47,7 @@ PREFABS.Wall_hell_sharp_alcoves_double_blue = --#
 
   tex_FIREMAG1 = "COMPBLUE",
   thing_46 = 44,
-},
+}
 
 -- green version
 
@@ -58,7 +58,7 @@ PREFABS.Wall_hell_sharp_alcoves_green = --#
 
   tex_FIREMAG1 = "ZIMMER7",
   thing_46 = 45,
-},
+}
 
 PREFABS.Wall_hell_sharp_alcoves_double_green = --#
 {
@@ -67,7 +67,7 @@ PREFABS.Wall_hell_sharp_alcoves_double_green = --#
 
   tex_FIREMAG1 = "ZIMMER7",
   thing_46 = 45,
-},
+}
 
 -- gold
 
@@ -78,7 +78,7 @@ PREFABS.Wall_hell_sharp_alcoves_gold = --#
 
   tex_FIREMAG1 = "CRACKLE4",
   thing_46 = 35,
-},
+}
 
 PREFABS.Wall_hell_sharp_alcoves_double_gold = --#
 {
@@ -87,7 +87,7 @@ PREFABS.Wall_hell_sharp_alcoves_double_gold = --#
 
   tex_FIREMAG1 = "CRACKLE4",
   thing_46 = 35,
-},
+}
 
 -- EPIC versions start here:
 
@@ -102,7 +102,7 @@ PREFABS.Wall_hell_sharp_alcoves_white = --#
 
   tex_FIREMAG1 = "ICEFALL",
   thing_46 = 86,
-},
+}
 
 PREFABS.Wall_hell_sharp_alcoves_double_white = --#
 {
@@ -113,7 +113,7 @@ PREFABS.Wall_hell_sharp_alcoves_double_white = --#
 
   tex_FIREMAG1 = "ICEFALL",
   thing_46 = 86,
-},
+}
 
 -- black
 
@@ -126,7 +126,7 @@ PREFABS.Wall_hell_sharp_alcoves_black = --#
 
   tex_FIREMAG1 = "FIREBLK1",
   thing_46 = 41,
-},
+}
 
 PREFABS.Wall_hell_sharp_alcoves_double_black = --#
 {
@@ -137,7 +137,7 @@ PREFABS.Wall_hell_sharp_alcoves_double_black = --#
 
   tex_FIREMAG1 = "FIREBLK1",
   thing_46 = 41,
-},
+}
 
 -- Yellow version by Demios, needed this version to hide my new secret
 
@@ -148,4 +148,4 @@ PREFABS.Wall_hell_sharp_alcoves_yellow = --#
 
   tex_FIREMAG1 = "CRACKLE4",
   thing_46 = 35,
-},
+}

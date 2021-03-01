@@ -16,7 +16,7 @@ PREFABS.Hallway_mineshaft_locked_red =
 
   seed_w = 1,
   seed_h = 1,
-},
+}
 
 PREFABS.Hallway_mineshaft_locked_blue =
 {
@@ -26,7 +26,7 @@ PREFABS.Hallway_mineshaft_locked_blue =
 
   tex_DOORRED = "DOORBLU",
   line_33     = 32,
-},
+}
 
 PREFABS.Hallway_mineshaft_locked_yellow =
 {
@@ -36,7 +36,7 @@ PREFABS.Hallway_mineshaft_locked_yellow =
 
   tex_DOORRED = "DOORYEL",
   line_33     = 34,
-},
+}
 
 PREFABS.Hallway_mineshaft_barred =
 {
@@ -59,4 +59,4 @@ PREFABS.Hallway_mineshaft_barred =
 
   seed_w = 1,
   seed_h = 1,
-},
+}

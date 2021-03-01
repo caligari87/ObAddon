@@ -27,11 +27,11 @@ PREFABS.Item_closet_toilet_room_gz =
   y_fit = "top",
 
   sound = "Bathroom_Fan",
-},
+}
 
 PREFABS.Item_closet_toilet_room_filthy_gz =
 {
   template   = "Item_closet_toilet_room_gz",
   map = "MAP02",
   prob = 80,
-},
+}

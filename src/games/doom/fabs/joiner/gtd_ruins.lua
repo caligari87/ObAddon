@@ -33,7 +33,7 @@ PREFABS.Joiner_pillaged_shop =
   tex_GRAY7 = { GRAY7=50, ICKWALL3=50, ICKWALL7=30 },
 
   x_fit = "frame",
-},
+}
 
 PREFABS.Joiner_bombed_building =
 {
@@ -75,5 +75,5 @@ PREFABS.Joiner_bombed_building =
   flat_MFLR8_2 = { MFLR8_2=50, FLAT10=50 },
   flat_FLOOR6_2 = { FLOOR6_2=50, RROCK03=50 },
 
-  can_flip = true
-},
+  can_flip = true,
+}

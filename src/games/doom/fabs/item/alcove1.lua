@@ -19,7 +19,7 @@ PREFABS.Item_alcove_small =
 
   x_fit = "frame",
   y_fit = "top",
-},
+}
 
 PREFABS.Item_alcove_small_tech1 =
 {
@@ -31,9 +31,9 @@ PREFABS.Item_alcove_small_tech1 =
   tex_GRAY5 = { TEKWALL1=50, TEKWALL4=50 },
   tex_STEP5 = "STEP4",
   flat_FLAT19 = "CEIL5_1",
-  flat_CEIL3_3 = { FLOOR0_3=50, FLAT5_4=50, FLAT19=50, FLAT18=50 },
+  flat_CEIL3_3 = { FLOOR0_3=50, FLAT5_4=50, FLAT19=50, FLAT18=50 }
 
-},
+}
 
 PREFABS.Item_alcove_small_tech2 =
 {
@@ -45,9 +45,9 @@ PREFABS.Item_alcove_small_tech2 =
   tex_GRAY5 = { METAL2=50, BRONZE1=50 },
   tex_STEP5 = "STEP6",
   flat_FLAT19 = "CEIL5_2",
-  flat_CEIL3_3 = { FLOOR4_8=50, FLOOR5_1=50 },
+  flat_CEIL3_3 = { FLOOR4_8=50, FLOOR5_1=50 }
 
-},
+}
 
 
 PREFABS.Item_alcove_small_tech3 =
@@ -62,7 +62,7 @@ PREFABS.Item_alcove_small_tech3 =
   flat_FLAT19 = { FLAT14=50, CEIL4_1=50, CEIL4_2=50 },
   flat_CEIL3_3 = "FLAT19",
 
-},
+}
 
 PREFABS.Item_alcove_small_urban1 =
 {
@@ -76,7 +76,7 @@ PREFABS.Item_alcove_small_urban1 =
   flat_FLAT19 = "FLAT5_4",
   flat_CEIL3_3 = { CEIL3_1=50, CEIL3_2=50, CEIL3_3=50 },
 
-},
+}
 
 PREFABS.Item_alcove_small_urban2 =
 {
@@ -88,9 +88,9 @@ PREFABS.Item_alcove_small_urban2 =
   tex_GRAY5 = "BRICK10",
   tex_STEP5 = "STEP6",
   flat_FLAT19 = "SLIME13",
-  flat_CEIL3_3 = { FLOOR5_2=50, FLOOR5_3=50, FLOOR5_4=50 },
+  flat_CEIL3_3 = { FLOOR5_2=50, FLOOR5_3=50, FLOOR5_4=50 }
 
-},
+}
 
 PREFABS.Item_alcove_small_urban3 =
 {
@@ -104,7 +104,7 @@ PREFABS.Item_alcove_small_urban3 =
   flat_FLAT19 = "CEIL5_1",
   flat_CEIL3_3 = "FLAT5_4",
 
-},
+}
 
 PREFABS.Item_alcove_small_hell1 =
 {
@@ -118,7 +118,7 @@ PREFABS.Item_alcove_small_hell1 =
   flat_FLAT19 = "FLOOR7_2",
   flat_CEIL3_3 = "CEIL3_1",
 
-},
+}
 
 PREFABS.Item_alcove_small_hell2 =
 {
@@ -132,7 +132,7 @@ PREFABS.Item_alcove_small_hell2 =
   flat_FLAT19 = "FLAT5_3",
   flat_CEIL3_3 = "FLAT5_4",
 
-},
+}
 
 PREFABS.Item_alcove_small_hell3 =
 {
@@ -146,7 +146,7 @@ PREFABS.Item_alcove_small_hell3 =
   flat_FLAT19 = "RROCK03",
   flat_CEIL3_3 = "RROCK09",
 
-},
+}
 
 PREFABS.Item_alcove_small_general1 =
 {
@@ -159,7 +159,7 @@ PREFABS.Item_alcove_small_general1 =
   flat_FLAT19 = "FLAT1",
   flat_CEIL3_3 = "FLAT5_4",
 
-},
+}
 
 PREFABS.Item_alcove_small_general2 =
 {
@@ -172,7 +172,7 @@ PREFABS.Item_alcove_small_general2 =
   flat_FLAT19 = "CEIL5_2",
   flat_CEIL3_3 = "FLOOR5_3",
 
-},
+}
 
 PREFABS.Item_alcove_small_general3 =
 {
@@ -185,7 +185,7 @@ PREFABS.Item_alcove_small_general3 =
   flat_FLAT19 = "FLOOR0_1",
   flat_CEIL3_3 = "FLAT5_4",
 
-},
+}
 
 PREFABS.Item_alcove_small_general4 =
 {
@@ -196,4 +196,4 @@ PREFABS.Item_alcove_small_general4 =
   tex_GRAY5 = { BROWNGRN=50, BROWN96=50, BROWN144=50, BROWNHUG=50 },
   flat_FLAT19 = "FLOOR7_1",
 
-},
+}

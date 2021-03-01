@@ -28,7 +28,7 @@ PREFABS.Wall_urban_diagonal_windows =
     BLAKWAL1 = 5,
     BLAKWAL2 = 5,
   },
-},
+}
 
 PREFABS.Wall_urban_diagonal_windows_EPIC =
 {
@@ -57,4 +57,4 @@ PREFABS.Wall_urban_diagonal_windows_EPIC =
     CITY13 = 10,
     CITY14 = 10,
   },
-},
+}

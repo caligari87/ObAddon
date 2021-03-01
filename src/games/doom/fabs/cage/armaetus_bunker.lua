@@ -18,4 +18,4 @@ PREFABS.Cage_wall_armaetus_bunker =
 
   x_fit = { 112,144 },
   y_fit = "top",
-},
+}

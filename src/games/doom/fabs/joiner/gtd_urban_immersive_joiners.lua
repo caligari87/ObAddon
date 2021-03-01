@@ -20,8 +20,8 @@ PREFABS.Joiner_public_toilet_room =
 
   x_fit = "frame",
 
-  can_flip = true
-},
+  can_flip = true,
+}
 
 PREFABS.Joiner_gtd_stairwell_up =
 {
@@ -48,7 +48,7 @@ PREFABS.Joiner_gtd_stairwell_up =
     BRONZE1 = 50,
     STUCCO1 = 50,
   },
-},
+}
 
 PREFABS.Joiner_gtd_stairwell_flat =
 {
@@ -71,4 +71,4 @@ PREFABS.Joiner_gtd_stairwell_flat =
     BRONZE1 = 50,
     STUCCO1 = 50,
   },
-},
+}

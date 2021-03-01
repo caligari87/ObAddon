@@ -23,4 +23,4 @@ PREFABS.Joiner_armaetus_hell_simple =
   y_fit = "frame",
 
   solid_ents = false
-},
+}

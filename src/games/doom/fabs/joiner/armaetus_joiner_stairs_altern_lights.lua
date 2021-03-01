@@ -22,8 +22,8 @@ PREFABS.Joiner_armaetus_stairs_alternating_lights =
   delta_h  = 56,
   nearby_h = 128,
 
-  can_flip = true
-},
+  can_flip = true,
+}
 
 PREFABS.Joiner_armaetus_stairs_alternating_lights_hell =
 {
@@ -35,4 +35,4 @@ PREFABS.Joiner_armaetus_stairs_alternating_lights_hell =
 
   tex_LITE3 = "SP_FACE2",
   tex_DOORSTOP = "DOORTRAK",
-},
+}

@@ -38,7 +38,7 @@ PREFABS.Wall_raised_comp =
   },
 
   on_liquids = "never",
-},
+}
 
 PREFABS.Wall_grated_thing =
 {
@@ -70,7 +70,7 @@ PREFABS.Wall_grated_thing =
     STEPLAD1 = 1,
     TEKLITE = 1,
   },
-},
+}
 
 PREFABS.Wall_inset =
 {
@@ -98,7 +98,7 @@ PREFABS.Wall_inset =
     GRAY4 = 0.5,
     STEPLAD1 = 0.5,
   },
-},
+}
 
 PREFABS.Wall_vertical_light =
 {
@@ -126,7 +126,7 @@ PREFABS.Wall_vertical_light =
     MODWALL4 = 0.5,
     TEKLITE = 1,
   },
-},
+}
 
 PREFABS.Wall_vertical_double_light =
 {
@@ -154,7 +154,7 @@ PREFABS.Wall_vertical_double_light =
     LITEBLU1 = 1,
     TEKLITE = 1,
   },
-},
+}
 
 PREFABS.Wall_raised_computer_2 =
 {
@@ -191,7 +191,7 @@ PREFABS.Wall_raised_computer_2 =
     TEKLITE2 = 1,
     TEKGREN1 = 1,
   },
-},
+}
 
 PREFABS.Wall_adorned_diag =
 {
@@ -209,7 +209,7 @@ PREFABS.Wall_adorned_diag =
   bound_z2 = 128,
 
   z_fit  = "stretch",
-},
+}
 
 PREFABS.Wall_flat_accent =
 {
@@ -245,7 +245,7 @@ PREFABS.Wall_flat_accent =
     METAL4 = 1,
     METAL5 = 1,
   },
-},
+}
 
   PREFABS.Wall_caged_pipes =
 {
@@ -290,4 +290,4 @@ PREFABS.Wall_flat_accent =
     GRAY7 = 1,
     SHAWN2 = 1,
   },
-},
+}

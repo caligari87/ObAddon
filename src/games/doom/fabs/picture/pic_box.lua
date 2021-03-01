@@ -21,12 +21,12 @@ TEMPLATES.Pic_box_template =
   x_fit = "frame",
   y_fit = "top",
 
-  sector_1 = 0   -- sector special
-  line_2   = 0   -- line special
+  sector_1 = 0,   -- sector special
+  line_2   = 0,   -- line special
 
-  offset_1 = 0   -- X offset
+  offset_1 = 0,   -- X offset
   offset_2 = 0   -- Y offset
-},
+}
 
 
 ----- TECH THEME ------------------------------
@@ -40,7 +40,7 @@ PREFABS.Pic_box_liteblu1 =
   theme = "tech",
 
   tex_PIPES = "LITEBLU1",
-},
+}
 
 
 PREFABS.Pic_box_tekgren3 =
@@ -53,7 +53,7 @@ PREFABS.Pic_box_tekgren3 =
   game  = "doom2",
 
   tex_PIPES = "TEKGREN3",
-},
+}
 
 
 PREFABS.Pic_box_shawn3 =
@@ -64,7 +64,7 @@ PREFABS.Pic_box_shawn3 =
   theme = "tech",
 
   tex_PIPES = "SHAWN3",
-},
+}
 
 PREFABS.Pic_box_silver3 =
 {
@@ -76,7 +76,7 @@ PREFABS.Pic_box_silver3 =
   height = 176,
 
   tex_PIPES = "SILVER3",
-},
+}
 
 --flashy sides, 128px height
 PREFABS.Pic_box_silver2 =
@@ -90,7 +90,7 @@ PREFABS.Pic_box_silver2 =
   height = 176,
 
   tex_PIPES = "SILVER2",
-},
+}
 
 --flashy sides, 64px height
 PREFABS.Pic_box_UAC =
@@ -106,7 +106,7 @@ PREFABS.Pic_box_UAC =
   tex_PIPES = "SHAWN1",
   -- use the occasional-blink FX (fairly rarely)
   sector_1  = { [0]=50, [1]=15 },
-},
+}
 
 
 --flashy sides, 48px height, sides edited to match Tech theme
@@ -124,7 +124,7 @@ PREFABS.Pic_box_computer =
 
   -- use the occasional-blink FX (fairly rarely)
   sector_1  = { [0]=50, [1]=20, [8]=7 },
-},
+}
 
 -- References --
 --MAP07: 128x96, techy silver sides
@@ -147,7 +147,7 @@ PREFABS.Pic_box_gargoyles =
 
   tex_PIPES = { GSTGARG=20, GSTLION=20, GSTSATYR=20 },
   offset_2  = 9,
-},
+}
 
 
 PREFABS.Pic_box_gargoyles2 =
@@ -159,7 +159,7 @@ PREFABS.Pic_box_gargoyles2 =
 
   tex_PIPES = { SW1GARG=20, SW1LION=20, SW1GARG=20 },
   offset_2  = 55,
-},
+}
 
 
 PREFABS.Pic_box_woodskull =
@@ -173,7 +173,7 @@ PREFABS.Pic_box_woodskull =
   seed_w = 2,
 
   tex_PIPES = "WOOD4",
-},
+}
 
 
 PREFABS.Pic_box_big_faces =
@@ -188,7 +188,7 @@ PREFABS.Pic_box_big_faces =
   height = 176,
 
   tex_PIPES = { MARBFACE=10, MARBFAC2=20, MARBFAC3=40 },
-},
+}
 
 
 ----- HELL THEME ------------------------------
@@ -202,7 +202,7 @@ PREFABS.Pic_box_marbfac4 =
 
   tex_PIPES = "MARBFAC4",
   offset_2  = 13,
-},
+}
 
 
 PREFABS.Pic_box_sp_face1 =
@@ -217,11 +217,11 @@ PREFABS.Pic_box_sp_face1 =
   theme  = "hell",
 
   tex_PIPES = "SP_FACE1",
-  line_2    = 48  -- scrolling
+  line_2    = 48,  -- scrolling
 
   sector_1  = { [0]=50, [1]=15 },
 
-},
+}
 
 
 PREFABS.Pic_box_skinface =
@@ -238,7 +238,7 @@ PREFABS.Pic_box_skinface =
   tex_PIPES = { SKINFACE=50, SP_FACE2=50 },
   offset_2  = 16,
   line_2    = 48  -- scrolling
-},
+}
 
 
 
@@ -258,7 +258,7 @@ PREFABS.Pic_box_mural2 =
   height = 176,
 
   tex_PIPES = "MURAL2",
-},
+}
 
 
 PREFABS.Pic_box_huge_mural =
@@ -273,7 +273,7 @@ PREFABS.Pic_box_huge_mural =
   height = 176,
 
   tex_PIPES = "BIGMURAL",
-},
+}
 
 -- HELL THEME --
 
@@ -290,7 +290,7 @@ PREFABS.Pic_crucified1 =
   height = 176,
 
   tex_PIPES = { SP_DUDE1=50, SP_DUDE2=50, SP_DUDE7=50 },
-},
+}
 
 PREFABS.Pic_crucified2 =
 {
@@ -305,4 +305,4 @@ PREFABS.Pic_crucified2 =
   height = 176,
 
   tex_PIPES = { SP_DUDE4=50, SP_DUDE5=50 },
-},
+}

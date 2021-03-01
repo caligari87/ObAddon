@@ -3,7 +3,7 @@ PREFABS.Start_generic_immersive_start =
   file = "start/gtd_generic_immersive_start.wad",
   map = "MAP01",
 
-  prob = 500 --1500,
+  prob = 500, --1500,
   theme = "tech",
 
   where = "seeds",
@@ -16,7 +16,7 @@ PREFABS.Start_generic_immersive_start =
 
   x_fit = "frame",
   y_fit = "top",
-},
+}
 
 PREFABS.Start_generic_immersive_start_urban =
 {
@@ -25,4 +25,4 @@ PREFABS.Start_generic_immersive_start_urban =
   map = "MAP02",
 
   theme = "urban",
-},
+}

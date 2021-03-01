@@ -22,8 +22,8 @@ PREFABS.Hallway_ducts_i_slope =
 
   delta_h = 64,
 
-  can_flip = true
-},
+  can_flip = true,
+}
 
 PREFABS.Hallway_ducts_i_fanwell =
 {
@@ -32,5 +32,5 @@ PREFABS.Hallway_ducts_i_fanwell =
 
   delta_h = 64,
 
-  can_flip = true
-},
+  can_flip = true,
+}

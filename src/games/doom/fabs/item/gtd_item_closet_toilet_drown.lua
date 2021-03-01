@@ -30,4 +30,4 @@ PREFABS.Item_closet_toilet_drown =
   y_fit = "top",
 
   sound = "Bathroom_Fan",
-},
+}

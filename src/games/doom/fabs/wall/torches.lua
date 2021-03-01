@@ -21,7 +21,7 @@ PREFABS.Wall_torches1_diag =
   z_fit  = "top",
 
   solid_ents = false
-},
+}
 
 
 PREFABS.Wall_torches2_diag =
@@ -31,7 +31,7 @@ PREFABS.Wall_torches2_diag =
   group  = "torches2",
 
   thing_45 = "red_torch",
-},
+}
 
 PREFABS.Wall_torches3_diag =
 {
@@ -40,7 +40,7 @@ PREFABS.Wall_torches3_diag =
   group  = "torches3",
 
   thing_45 = "blue_torch",
-},
+}
 
 PREFABS.Wall_torches4_diag =
 {
@@ -49,7 +49,7 @@ PREFABS.Wall_torches4_diag =
   group  = "torches4",
 
   thing_45 = "mercury_small",
-},
+}
 
 PREFABS.Wall_torches5_diag =
 {
@@ -58,7 +58,7 @@ PREFABS.Wall_torches5_diag =
   group  = "torches5",
 
   thing_45 = "mercury_lamp",
-},
+}
 
 PREFABS.Wall_torches6_diag =
 {
@@ -67,7 +67,7 @@ PREFABS.Wall_torches6_diag =
   group  = "torches6",
 
   thing_45 = "candelabra",
-},
+}
 
 PREFABS.Wall_torches7_diag =
 {
@@ -76,7 +76,7 @@ PREFABS.Wall_torches7_diag =
   group  = "torches7",
 
   thing_45 = "lamp",
-},
+}
 
 PREFABS.Wall_torches8_diag =
 {
@@ -85,7 +85,7 @@ PREFABS.Wall_torches8_diag =
   group  = "torches8",
 
   thing_45 = "evil_eye",
-},
+}
 
 PREFABS.Wall_torches9_diag =
 {
@@ -94,7 +94,7 @@ PREFABS.Wall_torches9_diag =
   group  = "torches9",
 
   thing_45 = "burning_barrel",
-},
+}
 
 PREFABS.Wall_torches10_diag =
 {
@@ -103,7 +103,7 @@ PREFABS.Wall_torches10_diag =
   group  = "torches10",
 
   thing_45 = "skull_rock",
-},
+}
 
 PREFABS.Wall_torches11_diag =
 {
@@ -112,4 +112,4 @@ PREFABS.Wall_torches11_diag =
   group  = "torches11",
 
   thing_45 = "tech_column",
-},
+}

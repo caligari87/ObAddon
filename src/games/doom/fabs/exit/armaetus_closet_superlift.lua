@@ -20,7 +20,7 @@ PREFABS.Exit_armaetus_superlift_up =
 
   x_fit  = "frame",
   y_fit  = "bottom",
-},
+}
 
 PREFABS.Exit_armaetus_superlift_down =
 {
@@ -30,4 +30,4 @@ PREFABS.Exit_armaetus_superlift_down =
 
   bound_z1 = 0,
   bound_z2 = 1032+8,
-},
+}

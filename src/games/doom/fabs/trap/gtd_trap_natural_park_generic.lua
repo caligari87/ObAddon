@@ -21,4 +21,4 @@ PREFABS.Trap_naturalistic_park_generic =
   bound_z2 = 160,
 
   tag_1 = "?trap_tag",
-},
+}

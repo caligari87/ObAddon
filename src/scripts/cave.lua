@@ -115,7 +115,7 @@ end
 
 
 function Cave_find_area_for_room(R)
-  for _,A in pairs(pairs(R.areas)) do
+  for _,A in pairs(R.areas) do
     if A.mode == "nature" then
       return A
     end
@@ -273,7 +273,7 @@ function Cave_collect_walk_rects(R, area)
 
   area.walk_rects = {}
 
-  for _,C in pairs(pairs(R.conns)) do
+  for _,C in pairs(R.conns) do
     rect_for_connection(C)
   end
 
@@ -355,7 +355,7 @@ function Cave_map_usable_area(area)
 
   ---| Cave_map_usable_area |---
 
-  for _,S in pairs(pairs(area.seeds)) do
+  for _,S in pairs(area.seeds) do
     visit_seed(S)
   end
 end
@@ -480,7 +480,7 @@ function Cave_generate_cave(R, area)
     -- this also sets most parts of the cave to zero
     -- [ zero means "can make cave here" ]
 
-    for _,S in pairs(pairs(area.seeds)) do
+    for _,S in pairs(area.seeds) do
       for dir = 2,8,2 do
         if Cave_is_edge(S, dir) then
           set_side(S, dir, sel(is_lake, -1, 1))
@@ -543,7 +543,7 @@ function Cave_generate_cave(R, area)
 
 
   local function clear_some_seeds()
-    for _,S in pairs(pairs(area.seeds)) do
+    for _,S in pairs(area.seeds) do
       if rand.odds(10) and is_fully_interior(S) then
         set_whole(S, -1)
       end
@@ -560,7 +560,7 @@ function Cave_generate_cave(R, area)
 
     local walk_id = nil
 
-    for _,P in pairs(pairs(area.walk_rects)) do
+    for _,P in pairs(area.walk_rects) do
       if (cave.flood[P.cx1][P.cy1] or 0) >= 0 then
         -- not valid : the cell is solid or absent
         return false
@@ -1245,7 +1245,7 @@ step:dump("Step:")
 
 
       -- remember area of covered groups (e.g. for outgoing heights)
-      for _,G in pairs(pairs(touched_groups)) do
+      for _,G in pairs(touched_groups) do
         G.area = prev_B
 
         if G.portal then
@@ -1319,7 +1319,7 @@ step:dump("Step:")
 
     -- verify all areas touch at least one other
     if #area.walk_floors > 1 then
-      for _,B in pairs(pairs(area.walk_floors)) do
+      for _,B in pairs(area.walk_floors) do
         assert(not table.empty(B.neighbors))
       end
     end
@@ -1358,7 +1358,7 @@ step:dump("Step:")
       gui.printf("WARNING:\nCave steps failed to cover all important chunks " ..
       "in ROOM" .. area.room.id .. "\n")
       gui.printf(table.tostr(group_list,2) .. "\n")
-      for _,G in pairs(pairs(group_list)) do
+      for _,G in pairs(group_list) do
         if G.kind and G.kind == "conn" then
           gui.printf(table.tostr(G.conn),2)
           gui.printf(table.tostr(G.conn.joiner_chunk),2)
@@ -1386,7 +1386,7 @@ function Cave_bunch_areas(R, mode)
 
 
   local function setup()
-    for _,B in pairs(pairs(area.walk_floors)) do
+    for _,B in pairs(area.walk_floors) do
       if B.goal_type then B.near_bunch = 0 end
     end
   end
@@ -1395,7 +1395,7 @@ function Cave_bunch_areas(R, mode)
   local function pick_start_area()
     local poss = {}
 
-    for _,B in pairs(pairs(area.walk_floors)) do
+    for _,B in pairs(area.walk_floors) do
       if not B.near_bunch then
         table.insert(poss, B)
       end
@@ -1422,7 +1422,7 @@ function Cave_bunch_areas(R, mode)
     local poss = {}
 
     for B,_ in pairs(list) do
-      for _,N in pairs(pairs(B.neighbors)) do
+      for _,N in pairs(B.neighbors) do
         if list[N] then goto continue end
         if N.near_bunch then goto continue end
 
@@ -1454,7 +1454,7 @@ function Cave_bunch_areas(R, mode)
 
       B.near_bunch = 0
 
-      for _,N in pairs(pairs(B.neighbors)) do
+      for _,N in pairs(B.neighbors) do
         if not N.near_bunch or N.near_bunch > 1 then
           N.near_bunch = 1
         end
@@ -1469,7 +1469,7 @@ function Cave_bunch_areas(R, mode)
 
 
   local function clear()
-    for _,B in pairs(pairs(area.walk_floors)) do
+    for _,B in pairs(area.walk_floors) do
       B.near_bunch = nil
     end
   end
@@ -1612,10 +1612,10 @@ function Cave_floor_heights(R, entry_h)
     local diff_h = 16
 
     -- determine minimum of all areas touching the river
-    for _,B in pairs(pairs(area.walk_floors)) do
+    for _,B in pairs(area.walk_floors) do
       if B.liquid_bunch ~= bunch_B then goto continue end
 
-      for _,N in pairs(pairs(B.neighbors)) do
+      for _,N in pairs(B.neighbors) do
         if N.liquid_bunch then goto continue end
 
         if N.floor_h then
@@ -1626,7 +1626,7 @@ function Cave_floor_heights(R, entry_h)
       ::continue::
     end
 
-    for _,B in pairs(pairs(area.walk_floors)) do
+    for _,B in pairs(area.walk_floors) do
       if B.liquid_bunch == bunch_B then
         B.floor_h = h
       end
@@ -1640,10 +1640,10 @@ function Cave_floor_heights(R, entry_h)
     --| ensure all areas touching the river get a floor height now
     --| (to prevent those areas becoming lower than the river).
 
-    for _,B in pairs(pairs(area.walk_floors)) do
+    for _,B in pairs(area.walk_floors) do
       if B.liquid_bunch ~= bunch_B then goto continue end
 
-      for _,N in pairs(pairs(B.neighbors)) do
+      for _,N in pairs(B.neighbors) do
         if N.liquid_bunch then goto continue end
 
         if not N.floor_h then
@@ -1698,7 +1698,7 @@ function Cave_floor_heights(R, entry_h)
 
     rand.shuffle(B.neighbors)
 
-    for _,N in pairs(pairs(B.neighbors)) do
+    for _,N in pairs(B.neighbors) do
       if not N.visited then
         local new_h = h + z_dir * rand.sel(35, 8, 16)
         visit_area(N, z_dir, new_h)
@@ -1775,7 +1775,7 @@ function Cave_floor_heights(R, entry_h)
     R.floor_min_h = entry_h
     R.floor_max_h = entry_h
 
-    for _,B in pairs(pairs(area.walk_floors)) do
+    for _,B in pairs(area.walk_floors) do
       R.floor_min_h = math.min(R.floor_min_h, B.floor_h)
       R.floor_max_h = math.max(R.floor_max_h, B.floor_h)
     end
@@ -1783,7 +1783,7 @@ function Cave_floor_heights(R, entry_h)
 
 
   local function update_walk_ways()
-    for _,B in pairs(pairs(area.walk_floors)) do
+    for _,B in pairs(area.walk_floors) do
       if not B.children then goto continue end
 
       for _,SINK in pairs(B.children) do
@@ -1820,7 +1820,7 @@ function Cave_floor_heights(R, entry_h)
     if not area.lakes then return end
 
     for pass = 1,4 do
-      for _,B in pairs(pairs(area.lakes)) do
+      for _,B in pairs(area.lakes) do
         if not B.floor_h then
 
           local f_h = Cave_heights_near_area(R, A)
@@ -1840,10 +1840,10 @@ function Cave_floor_heights(R, entry_h)
   local function ceiling_for_sky_bunch(bunch_B)
     local h = bunch_B.ceil_h or 0
 
-    for _,B in pairs(pairs(area.walk_floors)) do
+    for _,B in pairs(area.walk_floors) do
       if B.sky_bunch ~= bunch_B then goto continue end
 
-      for _,N in pairs(pairs(B.neighbors)) do
+      for _,N in pairs(B.neighbors) do
         if N.sky_bunch then goto continue end
 
         if N.ceil_h then
@@ -1856,7 +1856,7 @@ function Cave_floor_heights(R, entry_h)
 
     h = h + rand.pick({ 32,48,64,96 })
 
-    for _,B in pairs(pairs(area.walk_floors)) do
+    for _,B in pairs(area.walk_floors) do
       if B.sky_bunch == bunch_B then
         B.ceil_h = h
       end
@@ -1865,7 +1865,7 @@ function Cave_floor_heights(R, entry_h)
 
 
   local function update_sky_bunches()
-    for _,B in pairs(pairs(area.walk_floors)) do
+    for _,B in pairs(area.walk_floors) do
       if B.sky_bunch == B then
         ceiling_for_sky_bunch(B)
       end
@@ -2832,7 +2832,7 @@ function Cave_build_a_cave(R, entry_h)
   --[[ sync heights of blobs near to walk rects
   for _,WC in pairs(area.walk_rects) do
     for _,BOT in pairs(area.blobs) do
-      for _,B in pairs(pairs(BOT)) do
+      for _,B in pairs(BOT) do
         if B.is_wall then continue end
 
         local dist
@@ -2855,7 +2855,7 @@ function Cave_build_a_cave(R, entry_h)
         },
         local yas_queen = false
 
-        for _,P in pairs(pairs(points)) do
+        for _,P in pairs(points) do
           for _,CP in pairs(points_to_compare) do
             dist = geom.dist(P.x, P.y, CP.x, CP.y)
             if dist <= dist_to_check then
@@ -3145,7 +3145,7 @@ function Cave_build_a_park(R, entry_h)
   local function get_river_ranges(points)
     local y_ranges = {}
 
-    for _,P in pairs(pairs(points)) do
+    for _,P in pairs(points) do
       local r = y_ranges[P.x]
 
       if not y_ranges[P.x] then
@@ -3295,7 +3295,7 @@ function Cave_build_a_park(R, entry_h)
 
     local result = true
 
-    for _,P in pairs(pairs(area.walk_rects)) do
+    for _,P in pairs(area.walk_rects) do
       local B = map2.flood[P.cx1][P.cy1]
 
       if not (B == B1 or B == B2) then
@@ -3353,7 +3353,7 @@ function Cave_build_a_park(R, entry_h)
     local bx = points[1].x
     local by = points[1].y
 
-    for _,P in pairs(pairs(points)) do
+    for _,P in pairs(points) do
       area.blobs[P.x][P.y] = RIVER
 
       if check_river_point(P.x, P.y-1) > 0 then area.blobs[P.x][P.y-1] = RIVER end
@@ -3699,7 +3699,7 @@ function Cave_build_a_park(R, entry_h)
     end
 
     local function get_a_neighbor(B)
-      for _,N in pairs(pairs(B.neighbors)) do
+      for _,N in pairs(B.neighbors) do
         if N.floor_id == new1 then return new1 end
         if N.floor_id == new2 then return new2 end
       end
@@ -4001,7 +4001,7 @@ function Cave_build_a_park(R, entry_h)
     if B.floor_id == "stair" then return false end
     if B.is_tower then return false end
 
-    for _,N in pairs(pairs(B.neighbors)) do
+    for _,N in pairs(B.neighbors) do
       if N.floor_id == "stair" then return false end
       if N.prelim_h < B.prelim_h then return false end
     end
@@ -4184,7 +4184,7 @@ function Cave_build_a_park(R, entry_h)
 
     if rand.odds(50) then mat1, mat2 = mat2, mat1 end
 
-    for _,h in pairs(pairs(h_list)) do
+    for _,h in pairs(h_list) do
       h_mats[h] = mat1
       mat1, mat2 = mat2, mat1
     end
@@ -4372,8 +4372,8 @@ function Cave_build_a_park(R, entry_h)
     -- build the steps
     local along = 0
 
-    for _,w in pairs(pairs(div)) do
-      local z = z1 + (z2 - z1) * _index / (#div + 1)
+    for index,w in pairs(div) do
+      local z = z1 + (z2 - z1) * index / (#div + 1)
 
       do_make_stair_step(B, st_dir, along, w, z, floor_mat)
 
@@ -4407,7 +4407,7 @@ function Cave_build_a_park(R, entry_h)
       local nb
       local nb_score = -1
 
-      for _,N in pairs(pairs(B.neighbors)) do
+      for _,N in pairs(B.neighbors) do
         if hill_can_use_step(N, chain, i == length) then
           local score = gui.random()
 
@@ -4442,7 +4442,7 @@ function Cave_build_a_park(R, entry_h)
 
 
   local function hill_set_neighbors(B, ref)
-    for _,N in pairs(pairs(B.neighbors)) do
+    for _,N in pairs(B.neighbors) do
       if not N.floor_id then
         N.floor_id = ref.floor_id
         N.prelim_h = ref.prelim_h
@@ -4458,7 +4458,7 @@ function Cave_build_a_park(R, entry_h)
       local nb
 
       if not B.prelim_h then
-        for _,N in pairs(pairs(B.neighbors)) do
+        for _,N in pairs(B.neighbors) do
           if N.prelim_h and N.floor_id ~= "step" then
             if not nb or rand.odds(50) then nb = N end
           end
@@ -4583,7 +4583,7 @@ stderrf("  picked chain from blob %d --> %d\n", B.id, C.id)
 
     -- MSSP-TODO
     --print_area(area)
-    --[[for _,B in pairs(pairs(area.blobs)) do
+    --[[for _,B in pairs(area.blobs) do
       for _,cell in pairs(B) do
         local bx = area.base_sx
         local by = area.base_sy
@@ -4971,7 +4971,7 @@ function Cave_build_a_scenic_vista(area)
 
       local tallest_h = -EXTREME_H
 
-      for _,N in pairs(pairs(A.neighbors)) do
+      for _,N in pairs(A.neighbors) do
         if N.floor_h and N.room then
           tallest_h = math.max(tallest_h, N.floor_h)
         end
@@ -4983,7 +4983,7 @@ function Cave_build_a_scenic_vista(area)
 
       local lowest_h = EXTREME_H
 
-      for _,N in pairs(pairs(A.neighbors)) do
+      for _,N in pairs(A.neighbors) do
         if N.floor_h and N.room then
           lowest_h = math.min(lowest_h, N.floor_h)
         end
@@ -4997,7 +4997,7 @@ function Cave_build_a_scenic_vista(area)
   local function get_random_area(room)
     local tab = {}
 
-    for _,A in pairs(pairs(room.areas)) do
+    for _,A in pairs(room.areas) do
       if A.mode == "floor" and A.floor_h then
         table.insert(tab, A)
       end

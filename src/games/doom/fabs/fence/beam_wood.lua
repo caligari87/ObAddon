@@ -19,7 +19,7 @@ PREFABS.Beam_wood =
   over   = 8,
 
   bound_z1 = 0,
-},
+}
 
 PREFABS.Beam_wood_diagonal =
 {
@@ -35,4 +35,4 @@ PREFABS.Beam_wood_diagonal =
   where  = "diagonal",
 
   bound_z1 = 0,
-},
+}

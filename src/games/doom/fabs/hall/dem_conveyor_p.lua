@@ -28,5 +28,5 @@ PREFABS.Hallway_conveyor_p1 =
   },
 
   sound = "Conveyor_Mech",
-},
+}
 

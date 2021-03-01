@@ -24,7 +24,7 @@ PREFABS.Hallway_conveyorh_term1 =
 
   texture_pack = "armaetus",
 
-},
+}
 
 PREFABS.Hallway_conveyorh_term2 =
 {
@@ -92,9 +92,9 @@ PREFABS.Hallway_conveyorh_term2 =
     dead_zombie = 50,
     dead_shooter = 50,
     dead_imp = 50,
-  },
+  }
 
-},
+}
 
 PREFABS.Hallway_conveyorh_term3 =
 {
@@ -104,7 +104,7 @@ PREFABS.Hallway_conveyorh_term3 =
 
   engine = "zdoom",
 
-},
+}
 
 PREFABS.Hallway_conveyorh_term4 =
 {
@@ -116,7 +116,7 @@ PREFABS.Hallway_conveyorh_term4 =
 
   style = "doors",
 
-},
+}
 
 PREFABS.Hallway_conveyorh_term5 =
 {
@@ -186,9 +186,9 @@ PREFABS.Hallway_conveyorh_term5 =
     dead_zombie = 50,
     dead_shooter = 50,
     dead_imp = 50,
-  },
+  }
 
-},
+}
 
 PREFABS.Hallway_conveyorh_term6 =
 {
@@ -199,7 +199,7 @@ PREFABS.Hallway_conveyorh_term6 =
 
   engine = "zdoom",
 
-},
+}
 
 
 ---secret
@@ -212,4 +212,4 @@ PREFABS.Hallway_conveyorh_secret =
   key  = "secret",
 
   engine = "zdoom",
-},
+}

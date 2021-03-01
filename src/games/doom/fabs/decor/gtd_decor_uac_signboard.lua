@@ -12,4 +12,4 @@ PREFABS.Decor_UAC_signboard =
 
   bound_z1 = 0,
   bound_z2 = 80,
-},
+}

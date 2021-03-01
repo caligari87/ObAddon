@@ -19,7 +19,7 @@ PREFABS.Crate_small_brown =
   bound_z1 = 0,
 
   sink_mode = "never_liquids",
-},
+}
 
 
 PREFABS.Crate_small_gray =
@@ -28,7 +28,7 @@ PREFABS.Crate_small_gray =
 
    tex_CRATE1  = "CRATE2",
   flat_CRATOP2 = "CRATOP1",
-},
+}
 
 -- ones for Urban and Hell themes
 
@@ -37,7 +37,7 @@ PREFABS.Crate_small_woodmet =
   file   = "decor/crates2.wad",
   map    = "MAP11",
 
-  can_be_on_roads = true
+  can_be_on_roads = true,
 
   theme  = "!tech",
   prob   = 3500,
@@ -46,14 +46,14 @@ PREFABS.Crate_small_woodmet =
   size   = 64,
 
   sink_mode = "never_liquids",
-},
+}
 
 PREFABS.Crate_small_wood3 =
 {
   template = "Crate_small_woodmet",
 
   map    = "MAP10",
-},
+}
 
 
 -- a tall narrow crate
@@ -73,7 +73,7 @@ PREFABS.Crate_tall_brown =
   bound_z1 = 0,
 
   sink_mode = "never_liquids",
-},
+}
 
 
 -- Tall computer screens
@@ -89,7 +89,7 @@ PREFABS.Crate_tall_computers =
 
   tex_CRATELIT = "SPACEW3",
   flat_CRATOP1 = "CEIL5_1",
-},
+}
 
 -- a medium-size crate (96x96)
 
@@ -108,7 +108,7 @@ PREFABS.Crate_medium_gray =
   bound_z1 = 0,
 
   sink_mode = "never_liquids",
-},
+}
 
 
 -- a group of three and a half crates
@@ -129,7 +129,7 @@ PREFABS.Crate_group_medium =
   bound_z1 = 0,
 
   sink_mode = "never_liquids",
-},
+}
 
 -- a large, tall, wooden crate
 
@@ -138,7 +138,7 @@ PREFABS.Crate_large_wooden =
   file   = "decor/crates2.wad",
   map    = "MAP12",
 
-  can_be_on_roads = true
+  can_be_on_roads = true,
 
   theme  = "!tech",
   prob   = 3500,
@@ -148,7 +148,7 @@ PREFABS.Crate_large_wooden =
   height = 160,
 
   sink_mode = "never_liquids",
-},
+}
 
 PREFABS.Small_Computer1 =
 {
@@ -163,8 +163,8 @@ PREFABS.Small_Computer1 =
   size   = 80,
   height = 128,
 
-  tex_COMPSTA1 = { COMPSTA1=50, COMPSTA2=50 },
-},
+  tex_COMPSTA1 = { COMPSTA1=50, COMPSTA2=50 }
+}
 
 PREFABS.Small_Computer2 =
 {
@@ -179,5 +179,5 @@ PREFABS.Small_Computer2 =
   size   = 112,
   height = 128,
 
-  tex_COMPSTA1 = { COMPSTA1=50, COMPSTA2=50 },
-},
+  tex_COMPSTA1 = { COMPSTA1=50, COMPSTA2=50 }
+}

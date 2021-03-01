@@ -17,8 +17,8 @@ PREFABS.Joiner_gtd_universal_beams =
   x_fit = { 176,208 },
   y_fit = { 76,84 },
 
-  can_flip = true
-},
+  can_flip = true,
+}
 
 PREFABS.Joiner_gtd_universal_staircase =
 {
@@ -44,8 +44,8 @@ PREFABS.Joiner_gtd_universal_staircase =
   delta_h  = 64,
   nearby_h = 192,
 
-  can_flip = true
-},
+  can_flip = true,
+}
 
 PREFABS.Joiner_gtd_universal_funnel =
 {
@@ -66,8 +66,8 @@ PREFABS.Joiner_gtd_universal_funnel =
   x_fit = { 120,137 },
   y_fit = { 24,28 , 132,140 },
 
-  can_flip = true
-},
+  can_flip = true,
+}
 
 PREFABS.Joiner_gtd_universal_wavy_staircase =
 {
@@ -108,8 +108,8 @@ PREFABS.Joiner_gtd_universal_wavy_staircase =
     SLIME14 = 5,
   },
 
-  can_flip = true
-},
+  can_flip = true,
+}
 
 PREFABS.Joiner_gtd_universal_wavy_staircase_hell =
 {
@@ -140,4 +140,4 @@ PREFABS.Joiner_gtd_universal_wavy_staircase_hell =
     green_torch_sm=25,
     red_torch_sm=25,
   },
-},
+}

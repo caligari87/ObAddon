@@ -8,7 +8,7 @@ PREFABS.Exit_gazebo1 =
   map    = "MAP01",
 
   rank   = 2,
-  prob   = 100 --100,
+  prob   = 100, --100,
 
   where  = "seeds",
   seed_w = 2,
@@ -17,10 +17,10 @@ PREFABS.Exit_gazebo1 =
   env    = "outdoor",
   height = 192,
 
-  open_to_sky = true
+  open_to_sky = true,
 
   x_fit  = "frame",
-},
+}
 
 
 ------- Exit-to-Secret ---------------------------
@@ -37,5 +37,5 @@ UNFINISHED.Exit_gazebo1_secret =
 
   tex_SW1BLUE  = "SW1HOT",
   tex_COMPBLUE = "REDWALL",
-},
+}
 

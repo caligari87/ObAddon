@@ -20,7 +20,7 @@ PREFABS.Window_weabdows_1 =
 
   bound_z1 = 0,
   bound_z2 = 128,
-},
+}
 
 PREFABS.Window_weabdows_2 =
 {
@@ -28,7 +28,7 @@ PREFABS.Window_weabdows_2 =
   map      = "MAP02",
 
   seed_w   = 2,
-},
+}
 
 PREFABS.Window_weabdows_3 =
 {
@@ -36,7 +36,7 @@ PREFABS.Window_weabdows_3 =
   map      = "MAP03",
 
   seed_w   = 3,
-},
+}
 
 -- fallbacks
 
@@ -50,7 +50,7 @@ PREFABS.Window_not_weabdows =
   rank   = 1,
   prob   = 1,
 
-  passable = true
+  passable = true,
 
   where  = "edge",
   seed_w = 1,
@@ -61,7 +61,7 @@ PREFABS.Window_not_weabdows =
 
   bound_z1 = 0,
   bound_z2 = 128,
-},
+}
 
 PREFABS.Window_not_weabdows_2 =
 {
@@ -69,7 +69,7 @@ PREFABS.Window_not_weabdows_2 =
   map = "MAP02",
 
   seed_w = 2,
-},
+}
 
 PREFABS.Window_not_weabdows_3 =
 {
@@ -77,4 +77,4 @@ PREFABS.Window_not_weabdows_3 =
   map = "MAP03",
 
   seed_w = 3,
-},
+}

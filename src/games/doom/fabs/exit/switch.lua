@@ -11,5 +11,5 @@ PREFABS.Exit_switch1 =
 
   where  = "point",
   size   = 128,
-},
+}
 

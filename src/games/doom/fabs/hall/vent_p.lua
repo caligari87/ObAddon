@@ -14,5 +14,5 @@ PREFABS.Hallway_vent_p1 =
   shape  = "P",
 
   mon_height = 64,
-},
+}
 

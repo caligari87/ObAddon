@@ -14,7 +14,7 @@ PREFABS.Fence_firestorm =
 
   fence_h  = 32,
   bound_z1 = 0,
-},
+}
 
 
 PREFABS.Fence_firestorm_diag =
@@ -31,7 +31,7 @@ PREFABS.Fence_firestorm_diag =
   fence_h = 32,
 
   bound_z1 = 0,
-},
+}
 
 PREFABS.Fence_firestorm_blue =
 {
@@ -42,7 +42,7 @@ PREFABS.Fence_firestorm_blue =
   flat_FLOOR1_6 = "FLAT14",
   tex_COMPRED = "COMPBLUE",
   tex_DOORRED = "DOORBLU",
-},
+}
 
 PREFABS.Fence_firestorm_blue_diag =
 {
@@ -53,4 +53,4 @@ PREFABS.Fence_firestorm_blue_diag =
   flat_FLOOR1_6 = "FLAT14",
   tex_COMPRED = "COMPBLUE",
   tex_DOORRED = "DOORBLU",
-},
+}

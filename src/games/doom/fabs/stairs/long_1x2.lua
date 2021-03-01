@@ -27,7 +27,7 @@ PREFABS.Stair_long_1x2 =
   tex_STEP6 = { STEP6=50, STEP2=50, STEP3=50, STEP5=50 },
   tex_BROWN1 = { BROWN1=50, BROWNGRN=50, BROWN96=50, BROWNHUG=50 },
 
-},
+}
 
 PREFABS.Stair_long_1x2_tech2 =
 {
@@ -39,7 +39,7 @@ PREFABS.Stair_long_1x2_tech2 =
   tex_STEP6 = { STEP6=50, STEP4=50, STEP3=50, STEP5=50 },
   tex_BROWN1 = "METAL1",
   flat_FLOOR7_1 = { FLOOR4_8=50, FLOOR5_1=50 },
-},
+}
 
 PREFABS.Stair_long_1x2_tech3 =
 {
@@ -51,7 +51,7 @@ PREFABS.Stair_long_1x2_tech3 =
   tex_STEP6 = "STEP4",
   tex_BROWN1 = { STARGR1=50, STARGR2=50, STARG3=50 },
   flat_FLOOR7_1 = { FLAT20=50, FLAT23=50 },
-},
+}
 
 PREFABS.Stair_long_1x2_general =
 {
@@ -63,7 +63,7 @@ PREFABS.Stair_long_1x2_general =
   tex_STEP6 = "STEP4",
   tex_BROWN1 = { STONE=50, STONE4=50 },
   flat_FLOOR7_1 = { FLAT19=50, FLAT5_4=50 },
-},
+}
 
 PREFABS.Stair_long_1x2_general2 =
 {
@@ -75,7 +75,7 @@ PREFABS.Stair_long_1x2_general2 =
   tex_STEP6 = "STEP4",
   tex_BROWN1 = { STONE2=50, STONE3=30 },
   flat_FLOOR7_1 = "FLAT1",
-},
+}
 
 PREFABS.Stair_long_1x2_hell1 =
 {
@@ -89,7 +89,7 @@ PREFABS.Stair_long_1x2_hell1 =
   tex_MARBLE1 = "MARBGRAY",
   flat_FLOOR7_1 = "FLOOR7_2",
 
-},
+}
 
 PREFABS.Stair_long_1x2_hell2 =
 {
@@ -102,7 +102,7 @@ PREFABS.Stair_long_1x2_hell2 =
   tex_STEP6 = "MARBLE1",
   flat_FLOOR7_1 = "DEM1_6",
 
-},
+}
 
 PREFABS.Stair_long_1x2_hell3 =
 {
@@ -116,4 +116,4 @@ PREFABS.Stair_long_1x2_hell3 =
   tex_MARBLE1 = "METAL",
   flat_FLOOR7_1 = "CEIL5_2",
 
-},
+}

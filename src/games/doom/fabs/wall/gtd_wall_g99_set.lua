@@ -16,7 +16,7 @@ PREFABS.Wall_gtd_g99_1 =
   bound_z2 = 128,
 
   z_fit = { 56,72 },
-},
+}
 
 PREFABS.Wall_gtd_g99_diag_1 =
 {
@@ -36,4 +36,4 @@ PREFABS.Wall_gtd_g99_diag_1 =
   bound_z2 = 128,
 
   z_fit = { 56,72 },
-},
+}

@@ -20,8 +20,8 @@ PREFABS.Joiner_y3 =
 
   delta_h  = 32,
   nearby_h = 160,
-  can_flip = true
-},
+  can_flip = true,
+}
 
 PREFABS.Joiner_y3a =
 {
@@ -38,7 +38,7 @@ PREFABS.Joiner_y3a =
   tex_STEP5 = "STEP3",
   flat_FLOOR0_1 = "FLOOR6_2",
   flat_CEIL3_5 = "FLAT10",
-},
+}
 
 PREFABS.Joiner_y3b =
 {
@@ -55,7 +55,7 @@ PREFABS.Joiner_y3b =
   tex_STEP5 = "MARBLE1",
   flat_FLOOR0_1 = { DEM1_6=50, DEM1_5=50 },
   flat_CEIL3_5 = { FLOOR7_2=50, DEM1_5=50 },
-},
+}
 
 PREFABS.Joiner_y3c =
 {
@@ -72,7 +72,7 @@ PREFABS.Joiner_y3c =
   tex_SW2SKIN = { PANEL2=50, PANEL3=50, PANRED=50, PANBLUE=50, PANBLACK=50 },
   flat_FLOOR0_1 = "FLAT5_4",
   flat_CEIL3_5 = "FLAT18",
-},
+}
 
 PREFABS.Joiner_y3c1 =
 {
@@ -90,4 +90,4 @@ PREFABS.Joiner_y3c1 =
   tex_SW2SKIN = { PANEL2=50, PANEL3=50, PANRED=50, PANBLUE=50, PANBLACK=50 },
   flat_FLOOR0_1 = "FLAT5_4",
   flat_CEIL3_5 = "FLAT18",
-},
+}

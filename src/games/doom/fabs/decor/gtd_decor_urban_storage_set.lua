@@ -19,8 +19,8 @@ PREFABS.Decor_urban_storage_huge_boxes =
     CRATE2 = 2,
     CRATE3 = 1,
     CRATELIT = 1,
-  },
-},
+  }
+}
 
 PREFABS.Decor_urban_storage_huge_boxes_all_brown =
 {
@@ -30,7 +30,7 @@ PREFABS.Decor_urban_storage_huge_boxes_all_brown =
 
   tex_CRATE2 = "CRATE1",
   flat_CRATOP2 = "CRATOP1",
-},
+}
 
 PREFABS.Decor_urban_storage_huge_boxes_all_grey =
 {
@@ -44,8 +44,8 @@ PREFABS.Decor_urban_storage_huge_boxes_all_grey =
     CRATE2 = 2,
     CRATE3 = 1,
     CRATELIT = 1,
-  },
-},
+  }
+}
 
 --
 
@@ -55,7 +55,7 @@ PREFABS.Decor_urban_storage_huge_boxes_wide =
   map = "MAP02",
 
   prob = 2500,
-},
+}
 
 PREFABS.Decor_urban_storage_huge_boxes_wide_2x1 =
 {
@@ -63,7 +63,7 @@ PREFABS.Decor_urban_storage_huge_boxes_wide_2x1 =
   map = "MAP03",
 
   prob = 3500,
-},
+}
 
 --
 
@@ -78,7 +78,7 @@ PREFABS.Decor_urban_storage_single_box =
   height = 64,
 
   size = 64,
-},
+}
 
 PREFABS.Decor_urban_storage_single_box_tall =
 {
@@ -91,7 +91,7 @@ PREFABS.Decor_urban_storage_single_box_tall =
   height = 128,
 
   size = 64,
-},
+}
 
 PREFABS.Decor_urban_storage_collection =
 {
@@ -100,4 +100,4 @@ PREFABS.Decor_urban_storage_collection =
   map    = "MAP04",
 
   prob = 6500,
-},
+}

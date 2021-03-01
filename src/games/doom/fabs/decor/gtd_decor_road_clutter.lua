@@ -7,7 +7,7 @@ PREFABS.Decor_road_clutter_three_cones =
   theme = "!hell",
   env = "outdoor",
 
-  can_be_on_roads = true
+  can_be_on_roads = true,
 
   where = "point",
   size = 64,
@@ -15,7 +15,7 @@ PREFABS.Decor_road_clutter_three_cones =
 
   bound_z1 = 0,
   bound_z2 = 94,
-},
+}
 
 PREFABS.Decor_road_clutter_one_cone =
 {
@@ -23,7 +23,7 @@ PREFABS.Decor_road_clutter_one_cone =
   map = "MAP02",
 
   size = 32,
-},
+}
 
 PREFABS.Decor_road_clutter_boxes =
 {
@@ -33,7 +33,7 @@ PREFABS.Decor_road_clutter_boxes =
   prob = 3500,
   theme = "!hell",
 
-  can_be_on_roads = true
+  can_be_on_roads = true,
 
   where = "point",
   size = 80,
@@ -45,7 +45,7 @@ PREFABS.Decor_road_clutter_boxes =
   sink_mode = "never_liquids",
 
   flat_CRATOP2 = "CRATOP1",
-},
+}
 
 PREFABS.Decor_road_clutter_boxes_alt =
 {
@@ -58,7 +58,7 @@ PREFABS.Decor_road_clutter_boxes_alt =
 
   tex_CRATE2 = "WOODMET1",
   tex_CRATINY = "WOOD10",
-},
+}
 
 PREFABS.Decor_road_clutter_concrete_barrier =
 {
@@ -69,7 +69,7 @@ PREFABS.Decor_road_clutter_concrete_barrier =
   theme = "!hell",
   env = "outdoor",
 
-  can_be_on_roads = true
+  can_be_on_roads = true,
 
   where = "point",
   size = 80,
@@ -79,13 +79,13 @@ PREFABS.Decor_road_clutter_concrete_barrier =
   bound_z2 = 32,
 
   sink_mode = "never",
-},
+}
 
 PREFABS.Decor_road_clutter_concrete_barrier_striped =
 {
   template = "Decor_road_clutter_concrete_barrier",
   map = "MAP05",
-},
+}
 
 PREFABS.Decor_road_clutter_concrete_barrier_striped_double =
 {
@@ -93,4 +93,4 @@ PREFABS.Decor_road_clutter_concrete_barrier_striped_double =
   map = "MAP06",
 
   size = 100,
-},
+}

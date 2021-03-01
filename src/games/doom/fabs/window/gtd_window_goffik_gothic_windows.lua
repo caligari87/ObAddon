@@ -28,7 +28,7 @@ PREFABS.Window_goffik_1 =
     EVILFAC9 = 1,
     EVILFACA = 1,
   },
-},
+}
 
 PREFABS.Window_goffik_2 =
 {
@@ -36,7 +36,7 @@ PREFABS.Window_goffik_2 =
   map      = "MAP02",
 
   seed_w   = 2,
-},
+}
 
 PREFABS.Window_goffik_3 =
 {
@@ -44,7 +44,7 @@ PREFABS.Window_goffik_3 =
   map      = "MAP03",
 
   seed_w   = 3,
-},
+}
 
 -- yellow/orange variant
 
@@ -59,7 +59,7 @@ PREFABS.Window_goffik_1_gold =
   tex_COMPRED = "COMPYELL",
   tex_COMPTIL2 = "COMPTIL5",
   tex_RDLITE01 = "COLLITE2",
-},
+}
 
 PREFABS.Window_goffik_2_gold =
 {
@@ -74,7 +74,7 @@ PREFABS.Window_goffik_2_gold =
   tex_COMPRED = "COMPYELL",
   tex_COMPTIL2 = "COMPTIL5",
   tex_RDLITE01 = "COLLITE2",
-},
+}
 
 PREFABS.Window_goffik_3_gold =
 {
@@ -89,4 +89,4 @@ PREFABS.Window_goffik_3_gold =
   tex_COMPRED = "COMPYELL",
   tex_COMPTIL2 = "COMPTIL5",
   tex_RDLITE01 = "COLLITE2",
-},
+}

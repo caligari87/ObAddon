@@ -17,13 +17,13 @@ PREFABS.Wall_hell_square_brace =
   bound_z2 = 128,
 
   z_fit = { 24,88 },
-},
+}
 
 PREFABS.Wall_hell_square_brace_double =
 {
   template = "Wall_hell_square_brace",
   map = "MAP02",
-},
+}
 
 PREFABS.Wall_hell_square_brace_arched =
 {
@@ -31,4 +31,4 @@ PREFABS.Wall_hell_square_brace_arched =
   map = "MAP03",
 
   z_fit = { 8,64 },
-},
+}

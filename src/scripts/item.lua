@@ -182,7 +182,7 @@ function Player_give_stuff(hmodel, give_list)
 
     elseif give.ammo then
       gui.debugf("Giving [%s] ammo: %dx %s\n",
-                 hmodel.class, give.count, give.ammo)
+                 hmodel.class, int(give.count), give.ammo)
 
       hmodel.stats[give.ammo] = (hmodel.stats[give.ammo] or 0) + give.count
 
@@ -316,7 +316,7 @@ end
 
 
 function Player_find_zone_weapons(Z, list)
-  for _,R in pairs(pairs(Z.rooms)) do
+  for _,R in pairs(Z.rooms) do
     for _,name in pairs(R.weapons) do
       list[name] = 1
     end
@@ -431,7 +431,7 @@ function Player_weapon_palettes()
   --       weapons and it sucks to promote them.
   local got_weaps = {}
 
-  for _,Z in pairs(pairs(LEVEL.zones)) do
+  for _,Z in pairs(LEVEL.zones) do
     Player_find_zone_weapons(Z, got_weaps)
 
     Z.weap_palette = gen_palette(got_weaps)
@@ -505,7 +505,7 @@ function Item_simulate_battle(R)
 
 
   local function give_monster_drops(hmodel, mon_list)
-    for _,M in pairs(pairs(mon_list)) do
+    for _,M in pairs(mon_list) do
       if M.is_cage then goto continue end
 
       if M.info.give then
@@ -517,7 +517,7 @@ function Item_simulate_battle(R)
 
 
   local function is_weapon_upgraded(name, list)
-    for _,W in pairs(pairs(list)) do
+    for _,W in pairs(list) do
       if W.info.upgrades == name then
         return true
       end
@@ -580,7 +580,7 @@ function Item_simulate_battle(R)
     gui.debugf("Fight Simulator @ %s  class: %s\n", R.name, CL)
 
     gui.debugf("weapons = \n")
-    for _,W in pairs(pairs(weap_list)) do
+    for _,W in pairs(weap_list) do
       gui.debugf("  %s\n", W.info.name)
     end
 
@@ -717,7 +717,7 @@ function Item_distribute_stats()
 
 
   local function dump_results()
-    for _,R in pairs(pairs(LEVEL.rooms)) do
+    for _,R in pairs(LEVEL.rooms) do
       if R.item_stats then
         gui.debugf("final result @ %s = \n%s\n", R.name,
                    table.tostr(R.item_stats, 2))
@@ -728,7 +728,7 @@ function Item_distribute_stats()
 
   ---| Item_distribute_stats |---
 
-  for _,R in pairs(pairs(LEVEL.rooms)) do
+  for _,R in pairs(LEVEL.rooms) do
     visit_room(R)
   end
 
@@ -1063,7 +1063,7 @@ function Item_pickups_for_class(CL)
 
   ---| Item_pickups_for_class |---
 
-  for _,R in pairs(pairs(LEVEL.rooms)) do
+  for _,R in pairs(LEVEL.rooms) do
     pickups_in_room(R)
   end
 end
@@ -1081,7 +1081,7 @@ function Item_add_pickups()
   -- 2. when no small item spots, convert monster spots
 
   -- ensure item spots are fairly small
-  for _,R in pairs(pairs(LEVEL.rooms)) do
+  for _,R in pairs(LEVEL.rooms) do
     R.item_spots = Monster_split_spots(R.item_spots, 25)
   end
 

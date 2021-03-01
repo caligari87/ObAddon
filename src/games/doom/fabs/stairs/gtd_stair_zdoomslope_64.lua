@@ -20,8 +20,8 @@ PREFABS.Stair_slope =
   bound_z1 = 0,
 
   delta_h = 64,
-  plain_ceiling = true
-},
+  plain_ceiling = true,
+}
 
 PREFABS.Stair_slope_2 =
 {
@@ -30,7 +30,7 @@ PREFABS.Stair_slope_2 =
   map = "MAP02",
 
   seed_h = 2,
-},
+}
 
 PREFABS.Stair_slope_3 =
 {
@@ -39,4 +39,4 @@ PREFABS.Stair_slope_3 =
   map = "MAP03",
 
   seed_h = 3,
-},
+}

@@ -10,7 +10,7 @@ PREFABS.Window_round1 =
 
   group  = "round",
 
-  passable = true
+  passable = true,
 
   prob   = 50,
 
@@ -23,7 +23,7 @@ PREFABS.Window_round1 =
 
   bound_z1 = 0,
   bound_z2 = 128,
-},
+}
 
 PREFABS.Window_round1_tech =
 {
@@ -34,7 +34,7 @@ PREFABS.Window_round1_tech =
   tex_METAL = "SHAWN2",
   flat_CEIL5_2 = "FLAT20",
 
-},
+}
 
 PREFABS.Window_round2 =
 {
@@ -44,7 +44,7 @@ PREFABS.Window_round2 =
   theme    = "!tech",
 
   seed_w   = 2,
-},
+}
 
 PREFABS.Window_round2_tech =
 {
@@ -57,7 +57,7 @@ PREFABS.Window_round2_tech =
 
   seed_w   = 2,
 
-},
+}
 
 
 PREFABS.Window_round3 =
@@ -68,7 +68,7 @@ PREFABS.Window_round3 =
   theme    = "!tech",
 
   seed_w   = 3,
-},
+}
 
 PREFABS.Window_round3_tech =
 {
@@ -81,4 +81,4 @@ PREFABS.Window_round3_tech =
 
   seed_w   = 3,
 
-},
+}

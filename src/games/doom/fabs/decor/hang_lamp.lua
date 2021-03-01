@@ -18,5 +18,5 @@ PREFABS.Light_hanging =
 
   bound_z1 = -64,
   bound_z2 = 0,
-},
+}
 

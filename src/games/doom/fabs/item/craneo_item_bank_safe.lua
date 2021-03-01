@@ -19,4 +19,4 @@ PREFABS.Item_craneo_bank_safe =
 
   x_fit = "frame",
   y_fit = "frame",
-},
+}

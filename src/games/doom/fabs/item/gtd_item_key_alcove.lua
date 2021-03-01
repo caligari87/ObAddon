@@ -30,7 +30,7 @@ PREFABS.Item_gtd_alcove2 =
   },
 
   bound_z1 = -32,
-},
+}
 
 PREFABS.Item_gtd_alcove2_urban =
 {
@@ -45,7 +45,7 @@ PREFABS.Item_gtd_alcove2_urban =
   },
   tex_METAL5 = "BRICKLIT",
   flat_CEIL4_3 = "FLAT5_2",
-},
+}
 
 PREFABS.Item_gtd_alcove2_hell =
 {
@@ -60,4 +60,4 @@ PREFABS.Item_gtd_alcove2_hell =
   },
   tex_METAL5 = "WOOD4",
   flat_CEIL4_3 = "DEM1_6",
-},
+}

@@ -15,7 +15,7 @@ PREFABS.Wall_hell_exterior_wg2_template =
   bound_z2 = 128,
 
   z_fit = "top",
-},
+}
 
 --
 
@@ -29,7 +29,7 @@ PREFABS.Wall_hell_egyptish_triwindows = --#
   texture_pack = "armaetus",
 
   group = "hell_o_egyptish_triwindows",
-},
+}
 
 PREFABS.Wall_hell_destroyed_city_facade = --#
 {
@@ -45,7 +45,7 @@ PREFABS.Wall_hell_destroyed_city_facade = --#
     WOOD5 = 1,
     BRWINDOW = 5,
   },
-},
+}
 
 PREFABS.Wall_hell_destroyed_city_facade_2 =
 {
@@ -61,7 +61,7 @@ PREFABS.Wall_hell_destroyed_city_facade_2 =
     WOOD5 = 1,
     BRWINDOW = 5,
   },
-},
+}
 
 PREFABS.Wall_hell_destroyed_city_facade_3 =
 {
@@ -77,7 +77,7 @@ PREFABS.Wall_hell_destroyed_city_facade_3 =
     WOOD5 = 1,
     BRWINDOW = 5,
   },
-},
+}
 
 PREFABS.Wall_hell_alt_cathedral_windows = --#
 {
@@ -91,7 +91,7 @@ PREFABS.Wall_hell_alt_cathedral_windows = --#
   texture_pack = "armaetus",
 
   z_fit = { 48,96 },
-},
+}
 
 PREFABS.Wall_hell_wood_panel_red_banners = --#
 {
@@ -103,7 +103,7 @@ PREFABS.Wall_hell_wood_panel_red_banners = --#
   group = "hell_o_wood_panel_red_banners",
 
   z_fit = "bottom",
-},
+}
 
 PREFABS.Wall_hell_pencil_arch = --#
 {
@@ -129,7 +129,7 @@ PREFABS.Wall_hell_pencil_arch = --#
     EVILFAC9 = 1,
     EVILFACA = 1,
   },
-},
+}
 
 PREFABS.Wall_hell_hereticish_arch = --#
 {
@@ -143,4 +143,4 @@ PREFABS.Wall_hell_hereticish_arch = --#
   texture_pack = "armaetus",
 
   z_fit = { 56,88 },
-},
+}

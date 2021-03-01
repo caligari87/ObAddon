@@ -19,7 +19,7 @@ PREFABS.Wall_generic_gtd_high_gap_straight =
   z_fit = { 24,72 },
 
   sector_1 = { [0]=90, [1]=10 },
-},
+}
 
 PREFABS.Wall_generic_gtd_high_gap_straight_plain =
 {
@@ -28,7 +28,7 @@ PREFABS.Wall_generic_gtd_high_gap_straight_plain =
   map      = "MAP02",
 
   prob = 50,
-},
+}
 
 PREFABS.Wall_generic_gtd_high_gap_diagonal =
 {
@@ -50,7 +50,7 @@ PREFABS.Wall_generic_gtd_high_gap_diagonal =
   z_fit = { 24,72 },
 
   sector_1 = { [0]=90, [1]=10 },
-},
+}
 
 PREFABS.Wall_generic_gtd_high_gap_hell_straight =
 {
@@ -64,7 +64,7 @@ PREFABS.Wall_generic_gtd_high_gap_hell_straight =
 
   tex_STEP4 = "STEPTOP",
   flat_FLAT19 = "CEIL5_2",
-},
+}
 
 PREFABS.Wall_generic_gtd_high_gap_hell_straight_plain =
 {
@@ -82,7 +82,7 @@ PREFABS.Wall_generic_gtd_high_gap_hell_straight_plain =
 
   tex_STEP4 = "STEPTOP",
   flat_FLAT19 = "CEIL5_2",
-},
+}
 
 PREFABS.Wall_generic_gtd_high_gap_hell_diagonal =
 {
@@ -96,7 +96,7 @@ PREFABS.Wall_generic_gtd_high_gap_hell_diagonal =
 
   tex_STEP4 = "STEPTOP",
   flat_FLAT19 = "CEIL5_2",
-},
+}
 
 PREFABS.Wall_generic_gtd_high_gap_straight_alt =
 {
@@ -106,7 +106,7 @@ PREFABS.Wall_generic_gtd_high_gap_straight_alt =
   group = "gtd_wall_high_gap_alt_set",
 
   tex_LITE3 = "LITEBLU4",
-},
+}
 
 PREFABS.Wall_generic_gtd_high_gap_straight_alt_plain =
 {
@@ -120,7 +120,7 @@ PREFABS.Wall_generic_gtd_high_gap_straight_alt_plain =
   group = "gtd_wall_high_gap_alt_set",
 
   tex_LITE3 = "LITEBLU4",
-},
+}
 
 PREFABS.Wall_generic_gtd_high_gap_diagonal_alt =
 {
@@ -130,7 +130,7 @@ PREFABS.Wall_generic_gtd_high_gap_diagonal_alt =
   group = "gtd_wall_high_gap_alt_set",
 
   tex_LITE3 = "LITEBLU4",
-},
+}
 
 PREFABS.Wall_generic_gtd_high_gap_hell_straight_alt =
 {
@@ -145,7 +145,7 @@ PREFABS.Wall_generic_gtd_high_gap_hell_straight_alt =
 
   tex_STEP4 = "STEPTOP",
   flat_FLAT19 = "CEIL5_2",
-},
+}
 
 PREFABS.Wall_generic_gtd_high_gap_hell_straight_alt_plain =
 {
@@ -164,7 +164,7 @@ PREFABS.Wall_generic_gtd_high_gap_hell_straight_alt_plain =
 
   tex_STEP4 = "STEPTOP",
   flat_FLAT19 = "CEIL5_2",
-},
+}
 
 PREFABS.Wall_generic_gtd_high_gap_hell_diagonal_alt =
 {
@@ -179,4 +179,4 @@ PREFABS.Wall_generic_gtd_high_gap_hell_diagonal_alt =
 
   tex_STEP4 = "STEPTOP",
   flat_FLAT19 = "CEIL5_2",
-},
+}

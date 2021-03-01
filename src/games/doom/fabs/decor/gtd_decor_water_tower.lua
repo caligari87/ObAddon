@@ -23,5 +23,5 @@ PREFABS.Decor_water_tower =
     STEPTOP = 50,
     STEP4 = 50,
     GRAY7 = 50,
-  },
-},
+  }
+}

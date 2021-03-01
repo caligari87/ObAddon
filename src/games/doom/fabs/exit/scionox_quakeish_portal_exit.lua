@@ -23,7 +23,7 @@ PREFABS.Exit_scionox_quakeish_portal_exit =
 
   x_fit  = "frame",
   y_fit  = "top",
-},
+}
 
 PREFABS.Exit_scionox_quakeish_portal_exit_2 =
 {
@@ -42,8 +42,8 @@ PREFABS.Exit_scionox_quakeish_portal_exit_2 =
     impaled_twitch = 50,
     skull_cairn = 50,
     skull_rock = 50,
-  },
-},
+  }
+}
 
 PREFABS.Exit_scionox_quakeish_portal_exit_3 =
 {
@@ -93,5 +93,5 @@ PREFABS.Exit_scionox_quakeish_portal_exit_3 =
     impaled_twitch = 50,
     skull_cairn = 50,
     skull_rock = 50,
-  },
-},
+  }
+}

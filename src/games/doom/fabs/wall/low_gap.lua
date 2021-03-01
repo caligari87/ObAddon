@@ -22,7 +22,7 @@ PREFABS.Wall_lowgap =
   bound_z2 = 64,
 
   z_fit  = "top",
-},
+}
 
 
 PREFABS.Wall_lowgap_diag =
@@ -41,7 +41,7 @@ PREFABS.Wall_lowgap_diag =
   bound_z2 = 64,
 
   z_fit  = "top",
-},
+}
 
 
 PREFABS.Wall_lowgap_innerdiag =
@@ -60,7 +60,7 @@ PREFABS.Wall_lowgap_innerdiag =
   bound_z2 = 64,
 
   z_fit = "top",
-},
+}
 
 
 PREFABS.Wall_lowgap2 =
@@ -70,7 +70,7 @@ PREFABS.Wall_lowgap2 =
   group = "low_gap2",
 
   tex_TEKWALL4 = "TEKBRON2",
-},
+}
 
 PREFABS.Wall_lowgap2_diag =
 {
@@ -80,7 +80,7 @@ PREFABS.Wall_lowgap2_diag =
   group = "low_gap2",
 
   tex_TEKWALL4 = "TEKBRON2",
-},
+}
 
 
 PREFABS.Wall_lowgap3 =
@@ -90,7 +90,7 @@ PREFABS.Wall_lowgap3 =
   group = "low_gap3",
 
   tex_TEKWALL4 = "METAL6",
-},
+}
 
 PREFABS.Wall_lowgap3_diag =
 {
@@ -100,7 +100,7 @@ PREFABS.Wall_lowgap3_diag =
   group = "low_gap3",
 
   tex_TEKWALL4 = "METAL6",
-},
+}
 
 PREFABS.Wall_techgap =
 {
@@ -111,7 +111,7 @@ PREFABS.Wall_techgap =
   theme = "tech",
 
   tex_TEKWALL4 = "TEKWALL1",
-},
+}
 
 
 PREFABS.Wall_techgap_diag =
@@ -123,7 +123,7 @@ PREFABS.Wall_techgap_diag =
   theme = "tech",
 
   tex_TEKWALL4 = "TEKWALL1",
-},
+}
 
 PREFABS.Wall_techgap2 =
 {
@@ -134,7 +134,7 @@ PREFABS.Wall_techgap2 =
   theme = "tech",
 
   tex_TEKWALL4 = "LITE5",
-},
+}
 
 
 PREFABS.Wall_techgap_diag2 =
@@ -146,7 +146,7 @@ PREFABS.Wall_techgap_diag2 =
   theme = "tech",
 
   tex_TEKWALL4 = "LITE5",
-},
+}
 
 ----------- HELL THEME -------------------------
 
@@ -159,7 +159,7 @@ PREFABS.Wall_hellgap =
   group = "lowhell3",
 
   tex_TEKWALL4 = "FIREWALL",
-},
+}
 
 
 PREFABS.Wall_hellgap_diag =
@@ -171,7 +171,7 @@ PREFABS.Wall_hellgap_diag =
   group = "lowhell3",
 
   tex_TEKWALL4 = "FIREWALL",
-},
+}
 
 PREFABS.Wall_hellgap2 =
 {
@@ -182,7 +182,7 @@ PREFABS.Wall_hellgap2 =
   theme = "hell",
 
   tex_TEKWALL4 = "SP_FACE2",
-},
+}
 
 
 PREFABS.Wall_hellgap_diag2 =
@@ -194,7 +194,7 @@ PREFABS.Wall_hellgap_diag2 =
   group = "lowhell1",
 
   tex_TEKWALL4 = "SP_FACE2",
-},
+}
 
 PREFABS.Wall_hellgap3 =
 {
@@ -205,7 +205,7 @@ PREFABS.Wall_hellgap3 =
   theme = "hell",
 
   tex_TEKWALL4 = "SP_FACE1",
-},
+}
 
 
 PREFABS.Wall_hellgap_diag3 =
@@ -217,4 +217,4 @@ PREFABS.Wall_hellgap_diag3 =
   theme = "hell",
 
   tex_TEKWALL4 = "SP_FACE1",
-},
+}

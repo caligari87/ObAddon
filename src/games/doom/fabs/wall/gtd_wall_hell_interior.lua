@@ -17,7 +17,7 @@ PREFABS.Wall_hell_braced_arch =
 
   x_fit = "frame",
   z_fit = "bottom",
-},
+}
 
 PREFABS.Wall_hell_braced_arch_candle_lit =
 {
@@ -25,19 +25,19 @@ PREFABS.Wall_hell_braced_arch_candle_lit =
   map = "MAP02",
 
   z_fit = { 36,44 },
-},
+}
 
 PREFABS.Wall_hell_churchy_window_big_inside =
 {
   template = "Wall_hell_braced_arch",
   map = "MAP03",
-},
+}
 
 PREFABS.Wall_hell_churchy_window_small_inside =
 {
   template = "Wall_hell_braced_arch",
   map    = "MAP04",
-},
+}
 
 -- outside versions of the windows
 
@@ -51,7 +51,7 @@ PREFABS.Wall_hell_churchy_window_big_bottom =
   on_scenics = "never",
 
   z_fit = "bottom",
-},
+}
 
 PREFABS.Wall_hell_churchy_window_big_stretch =
 {
@@ -65,7 +65,7 @@ PREFABS.Wall_hell_churchy_window_big_stretch =
   on_scenics = "never",
 
   z_fit = { 48,104 },
-},
+}
 
 PREFABS.Wall_hell_churchy_window_small_bottom =
 {
@@ -77,7 +77,7 @@ PREFABS.Wall_hell_churchy_window_small_bottom =
   on_scenics = "never",
 
   z_fit = "bottom",
-},
+}
 
 PREFABS.Wall_hell_churchy_window_small_stretch =
 {
@@ -91,7 +91,7 @@ PREFABS.Wall_hell_churchy_window_small_stretch =
   on_scenics = "never",
 
   z_fit = { 48,104 },
-},
+}
 
 -- interior versions of walls based on hell_exterior, with brightness properly adjusted
 PREFABS.Wall_hell_square_brace_interior =
@@ -106,7 +106,7 @@ PREFABS.Wall_hell_square_brace_interior =
   env = "building",
 
   z_fit = { 24,88 },
-},
+}
 
 PREFABS.Wall_hell_square_brace_double_interior =
 {
@@ -120,7 +120,7 @@ PREFABS.Wall_hell_square_brace_double_interior =
   env = "building",
 
   z_fit = { 24,88 },
-},
+}
 
 PREFABS.Wall_hell_square_brace_arched_interior =
 {
@@ -134,4 +134,4 @@ PREFABS.Wall_hell_square_brace_arched_interior =
   env = "building",
 
   z_fit = { 8,64 },
-},
+}

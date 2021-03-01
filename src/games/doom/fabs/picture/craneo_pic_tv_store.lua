@@ -24,4 +24,4 @@ PREFABS.Pic_craneo_tv_store =
 
   x_fit = "frame",
   y_fit = "top",
-},
+}

@@ -18,5 +18,5 @@ PREFABS.Hallway_sewer_i_steepness =
 
   delta_h = 64,
 
-  can_flip = true
-},
+  can_flip = true,
+}

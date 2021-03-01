@@ -436,13 +436,13 @@ end
   gui.printf("Game title: %s\n\n", GAME.title)
   gui.printf("Game sub-title: %s\n\n", GAME.sub_title)
 
-  for _,EPI in pairs(GAME.episodes) do
+  for index,EPI in pairs(GAME.episodes) do
     -- only generate names for used episodes
     if table.empty(EPI.levels) then goto continue end
 
     EPI.description = Naming_grab_one("EPISODE")
 
-    gui.printf("Episode %d title: %s\n\n", _index, EPI.description)
+    gui.printf("Episode %d title: %s\n\n", index, EPI.description)
     ::continue::
   end
 end
@@ -1170,7 +1170,7 @@ function Episode_plan_monsters()
   local function boss_fight_str(LEV)
     local names = {}
 
-    for _,F in pairs(pairs(LEV.boss_fights)) do
+    for _,F in pairs(LEV.boss_fights) do
       local s = F.mon
       if F.count > 1 then
         s = string.format("%dx %s", F.count, F.mon)
@@ -1715,9 +1715,9 @@ function Episode_plan_weapons()
   local function pick_secret_weapons()
     local last_one
 
-    for _,LEV in pairs(GAME.levels) do
-      local NL = next_level_in_episode(_index)
-      local PL = next_next_level(_index)
+    for index,LEV in pairs(GAME.levels) do
+      local NL = next_level_in_episode(index)
+      local PL = next_next_level(index)
 
       -- build up a probability table
       local tab = {}
@@ -1957,7 +1957,7 @@ function Hub_connect_levels(epi, keys)
   epi.hub_links = { }
   epi.used_keys = { }
 
-  for _,L in pairs(pairs(levels)) do
+  for _,L in pairs(levels) do
     L.hub_links = { }
   end
 
@@ -1985,7 +1985,7 @@ function Hub_connect_levels(epi, keys)
 
   -- the remaining levels just branch off the current chain
 
-  for _,L in pairs(pairs(levels)) do
+  for _,L in pairs(levels) do
     -- pick existing level to branch from (NEVER the end level)
     local src = chain[rand.irange(1, #chain - 1)]
 
@@ -2039,7 +2039,7 @@ function Hub_assign_keys(epi, keys)
     error("level_for_key failed.")
   end
 
-  for _,L in pairs(pairs(epi.levels)) do
+  for _,L in pairs(epi.levels) do
     L.usable_keys = { }
   end
 
@@ -2103,7 +2103,7 @@ function Hub_assign_pieces(epi, pieces)
 
   local levels = { }
 
-  for _,L in pairs(pairs(epi.levels)) do
+  for _,L in pairs(epi.levels) do
     if L.kind ~= "BOSS" and L.kind ~= "SECRET" then
       table.insert(levels, L)
     end
@@ -2581,7 +2581,7 @@ function Level_choose_liquid()
   if LEVEL.outdoor_theme then
     if THEME.liquids.exclusions
     and THEME.liquids.exclusions[LEVEL.outdoor_theme] then
-      for _,L in pairs(pairs(THEME.liquids.exclusions[LEVEL.outdoor_theme])) do
+      for _,L in pairs(THEME.liquids.exclusions[LEVEL.outdoor_theme]) do
         liq_tab[L] = 0
       end
     end
@@ -2857,7 +2857,7 @@ function Level_make_level(LEV)
 
   gui.printf("\n\n~~~~~~| %s |~~~~~~\n", LEVEL.name)
 
-  LEVEL.seed = (OB_CONFIG.seed * 36) + index - 1,
+  LEVEL.seed = (OB_CONFIG.seed * 36) + index - 1
   gui.printf("Level seed: " .. LEVEL.seed .. "\n")
   LEVEL.ids  = {}
 

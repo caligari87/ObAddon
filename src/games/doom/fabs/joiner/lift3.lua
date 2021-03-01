@@ -26,13 +26,13 @@ PREFABS.Joiner_lift3 =
   y_fit  = { 96,112 },
 
   delta_h  = 104,
-  can_flip = true
+  can_flip = true,
 
   tex_PLAT1    = { PLAT1=50, SUPPORT2=50 },
   tex_SUPPORT3 = "TEKWALL4",
   tex_METAL    = "TEKWALL1",
 
-},
+}
 
 PREFABS.Joiner_lift3_hell =
 {
@@ -43,7 +43,7 @@ PREFABS.Joiner_lift3_hell =
   tex_SUPPORT3 = "MARBLE1",
   flat_TLITE6_5 = "TLITE6_6",
 
-},
+}
 
 PREFABS.Joiner_lift3_urban =
 {
@@ -53,4 +53,4 @@ PREFABS.Joiner_lift3_urban =
   tex_PLAT1    = { PLAT1=50, SUPPORT2=50, SUPPORT3=50 },
   flat_TLITE6_5 = { TLITE6_6=50, TLITE6_5=50 },
 
-},
+}

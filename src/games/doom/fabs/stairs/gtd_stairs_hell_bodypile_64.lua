@@ -20,4 +20,4 @@ PREFABS.Stairs_bodypile_64 =
   bound_z1 = 0,
 
   delta_h = 64,
-},
+}

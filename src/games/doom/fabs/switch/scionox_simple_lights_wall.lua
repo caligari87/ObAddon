@@ -19,14 +19,14 @@ PREFABS.Switch_scionox_simple_lights_wall =
 
   tag_1 = "?switch_tag",
   tex_SW1BRN2 = { SW1BRN2=50, SW1BRNGN=50, SW1COMP=50, SW1GRAY=50, SW1GRAY1=50, SW1METAL=50, SW1STRTN=50, SW1TEK=50 },
-},
+}
 
 PREFABS.Switch_scionox_simple_lights_wall_2 =
 {
   template = "Switch_scionox_simple_lights_wall",
   theme  = "urban",
   tex_SW1BRN2 = { SW1BRIK=50, SW1CMT=50, SW1MOD1=50, SW1GRAY=50, SW1GRAY1=50, SW1SLAD=50, SW1STON1=50, SW1STON6=50, SW1VINE=50 },
-},
+}
 
 PREFABS.Switch_scionox_simple_lights_wall_3 =
 {
@@ -35,13 +35,13 @@ PREFABS.Switch_scionox_simple_lights_wall_3 =
   tex_SW1BRN2 = { SW1GARG=50, SW1LION=50, SW1SATYR=50, SW1GSTON=50, SW1HOT=50, SW1WOOD=50, SW1PANEL=50, SW1ROCK=50, SW1SKIN=50, SW1WDMET=50 },
   tex_LITE5 = { FIREWALA=50, FIREBLU1=50, BFALL1=50 },
   tex_DOORSTOP = "METAL",
-},
+}
 
 PREFABS.Switch_scionox_simple_lights_wall_4 =
 {
   template = "Switch_scionox_simple_lights_wall",
   map = "MAP02",
-},
+}
 
 PREFABS.Switch_scionox_simple_lights_wall_5 =
 {
@@ -55,7 +55,7 @@ PREFABS.Switch_scionox_simple_lights_wall_5 =
     mercury_small = 50,
     burning_barrel = 25,
   },
-},
+}
 
 PREFABS.Switch_scionox_simple_lights_wall_6 =
 {
@@ -72,7 +72,7 @@ PREFABS.Switch_scionox_simple_lights_wall_6 =
     green_torch_sm = 50,
     red_torch_sm = 50,
   },
-},
+}
 
 PREFABS.Switch_scionox_simple_lights_wall_7 =
 {
@@ -84,7 +84,7 @@ PREFABS.Switch_scionox_simple_lights_wall_7 =
     lamp = 50,
     tech_column = 50,
   },
-},
+}
 
 PREFABS.Switch_scionox_simple_lights_wall_8 =
 {
@@ -98,7 +98,7 @@ PREFABS.Switch_scionox_simple_lights_wall_8 =
     mercury_small = 50,
     burning_barrel = 25,
   },
-},
+}
 
 PREFABS.Switch_scionox_simple_lights_wall_9 =
 {
@@ -112,14 +112,14 @@ PREFABS.Switch_scionox_simple_lights_wall_9 =
     skull_rock = 50,
     skull_cairn = 50,
   },
-},
+}
 
 PREFABS.Switch_scionox_simple_lights_wall_10 =
 {
   template = "Switch_scionox_simple_lights_wall",
   map = "MAP04",
   theme  = "!tech",
-},
+}
 
 PREFABS.Switch_scionox_simple_lights_wall_11 =
 {
@@ -135,7 +135,7 @@ PREFABS.Switch_scionox_simple_lights_wall_11 =
     green_torch = 25,
     red_torch = 25,
   },
-},
+}
 
 PREFABS.Switch_scionox_simple_lights_wall_12 =
 {
@@ -150,4 +150,4 @@ PREFABS.Switch_scionox_simple_lights_wall_12 =
     skull_cairn = 25,
     candelabra = 25,
   },
-},
+}

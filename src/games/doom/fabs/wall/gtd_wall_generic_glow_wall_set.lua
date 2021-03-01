@@ -3,7 +3,7 @@ PREFABS.Wall_generic_glow_wall =
   file = "wall/gtd_wall_generic_glow_wall_set.wad",
   map = "MAP01",
 
-  liquid = true
+  liquid = true,
 
   prob = 50,
 
@@ -19,7 +19,7 @@ PREFABS.Wall_generic_glow_wall =
   bound_z2 = 128,
 
   z_fit = { 60,68 },
-},
+}
 
 PREFABS.Wall_generic_glow_wall_diag =
 {
@@ -27,7 +27,7 @@ PREFABS.Wall_generic_glow_wall_diag =
   map = "MAP02",
 
   where = "diagonal",
-},
+}
 
 --
 
@@ -52,7 +52,7 @@ PREFABS.Wall_generic_glow_wall_tech_no_liq =
   z_fit = { 60,68 },
 
   flat__LIQUID = "CEIL4_2",
-},
+}
 
 PREFABS.Wall_generic_glow_wall_tech_no_liq_diag =
 {
@@ -65,7 +65,7 @@ PREFABS.Wall_generic_glow_wall_tech_no_liq_diag =
   where  = "diagonal",
 
   flat__LIQUID = "CEIL4_2",
-},
+}
 
 --
 
@@ -78,7 +78,7 @@ PREFABS.Wall_generic_glow_wall_hell_no_liq =
   theme = "hell",
 
   flat__LIQUID = "RROCK01",
-},
+}
 
 PREFABS.Wall_generic_glow_wall_hell_no_liq_diag =
 {
@@ -91,4 +91,4 @@ PREFABS.Wall_generic_glow_wall_hell_no_liq_diag =
   where  = "diagonal",
 
   flat__LIQUID = "RROCK01",
-},
+}

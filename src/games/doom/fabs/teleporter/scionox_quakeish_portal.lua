@@ -26,7 +26,7 @@ PREFABS.Teleporter_scionox_quakeish_portal =
   tex_CGCANI00 = { CGCANI00=50, COMPWERD=50, SPACEW3=50, COMPCT01=50, COMPCT02=50, COMPCT03=50, CONSOLE6=50, CONSOLE7=50, CONSOLE8=50, NOISE1=50 },
 
   sound = "Demonic_Teleporter",
-},
+}
 PREFABS.Teleporter_scionox_quakeish_portal_2 =
 {
   template = "Teleporter_scionox_quakeish_portal",
@@ -34,7 +34,7 @@ PREFABS.Teleporter_scionox_quakeish_portal_2 =
   tex_TEKWALLA = "TEKWALL8",
   tex_PURFAL1 = "BFAL1",
   flat_TEK3 = "TEK1",
-},
+}
 PREFABS.Teleporter_scionox_quakeish_portal_3 =
 {
   template = "Teleporter_scionox_quakeish_portal",
@@ -42,7 +42,7 @@ PREFABS.Teleporter_scionox_quakeish_portal_3 =
   tex_TEKWALLA = "TEKWALL9",
   tex_PURFAL1 = "NFALL1",
   flat_TEK3 = "TEK2",
-},
+}
 PREFABS.Teleporter_scionox_quakeish_portal_4 =
 {
   template = "Teleporter_scionox_quakeish_portal",
@@ -50,7 +50,7 @@ PREFABS.Teleporter_scionox_quakeish_portal_4 =
   tex_TEKWALLA = "TEKWALLB",
   tex_PURFAL1 = "WFALL1",
   flat_TEK3 = "TEK4",
-},
+}
 PREFABS.Teleporter_scionox_quakeish_portal_5 =
 {
   template = "Teleporter_scionox_quakeish_portal",
@@ -58,7 +58,7 @@ PREFABS.Teleporter_scionox_quakeish_portal_5 =
   tex_TEKWALLA = "TEKWALLE",
   tex_PURFAL1 = "LFALL1",
   flat_TEK3 = "TEK7",
-},
+}
 
 PREFABS.Teleporter_scionox_quakeish_portal_6 =
 {
@@ -74,7 +74,7 @@ PREFABS.Teleporter_scionox_quakeish_portal_6 =
   flat_TEK3 = "GRATE8",
   flat_SHINY01 = "GRATE8",
   flat_WARN1 = "CRATOP1",
-},
+}
 
 PREFABS.Teleporter_scionox_quakeish_portal_7 =
 {
@@ -92,7 +92,7 @@ PREFABS.Teleporter_scionox_quakeish_portal_7 =
   flat_WARN1 = "RMARB3",
 
   thing_86 = "candelabra",
-},
+}
 PREFABS.Teleporter_scionox_quakeish_portal_8 =
 {
   template = "Teleporter_scionox_quakeish_portal",
@@ -109,4 +109,4 @@ PREFABS.Teleporter_scionox_quakeish_portal_8 =
   flat_WARN1 = "RMARB3",
 
   thing_86 = "evil_eye",
-},
+}

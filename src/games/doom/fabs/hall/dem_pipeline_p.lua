@@ -16,18 +16,18 @@ PREFABS.Hallway_pipeline_p1 =
   seed_w = 2,
   seed_h = 2,
 
-  can_flip = true
+  can_flip = true,
 
   sound = "Pipeline",
 
   texture_pack = "armaetus",
-},
+}
 
 PREFABS.Hallway_pipeline_p2 =
 {
   template = "Hallway_pipeline_p1",
   map    = "MAP02",
-},
+}
 
 PREFABS.Hallway_pipeline_p3 =
 {
@@ -37,4 +37,4 @@ PREFABS.Hallway_pipeline_p3 =
   filter = "crushers",
 
   style  = "traps",
-},
+}

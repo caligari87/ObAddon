@@ -14,8 +14,8 @@ PREFABS.Hallway_metro_i =
   seed_w = 2,
   seed_h = 2,
 
-  sector_1  = { [0]=90, [1]=15 },
-},
+  sector_1  = { [0]=90, [1]=15 }
+}
 
 PREFABS.Hallway_metro_i_rise =
 {
@@ -30,8 +30,8 @@ PREFABS.Hallway_metro_i_rise =
 
   delta_h = 64,
 
-  can_flip = true
-},
+  can_flip = true,
+}
 
 -- slopeless fallbacks
 PREFABS.Hallway_metro_i_boxy =
@@ -43,8 +43,8 @@ PREFABS.Hallway_metro_i_boxy =
 
   prob = 4,
 
-  can_flip = true
-},
+  can_flip = true,
+}
 
 PREFABS.Hallway_metro_i_boxy_with_door =
 {
@@ -55,8 +55,8 @@ PREFABS.Hallway_metro_i_boxy_with_door =
 
   prob = 4,
 
-  can_flip = true
-},
+  can_flip = true,
+}
 
 PREFABS.Hallway_metro_i_boxy_train_crossing =
 {
@@ -69,8 +69,8 @@ PREFABS.Hallway_metro_i_boxy_train_crossing =
 
   prob = 2,
 
-  can_flip = true
-},
+  can_flip = true,
+}
 
 PREFABS.Hallway_metro_i_boxy_ticketing_office =
 {
@@ -83,5 +83,5 @@ PREFABS.Hallway_metro_i_boxy_ticketing_office =
 
   prob = 2,
 
-  can_flip = true
-},
+  can_flip = true,
+}

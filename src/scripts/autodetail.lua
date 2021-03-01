@@ -46,7 +46,7 @@ function Autodetail_get_level_svolume()
 
   local total_walkable_area = 0
 
-  for _,R in pairs(pairs(LEVEL.rooms)) do
+  for _,R in pairs(LEVEL.rooms) do
     total_walkable_area = total_walkable_area + R.svolume
   end
 

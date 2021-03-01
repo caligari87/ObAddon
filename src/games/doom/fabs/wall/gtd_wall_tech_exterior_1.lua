@@ -20,7 +20,7 @@ PREFABS.Wall_tech_outdoor_accent_flat_plain =
   bound_z2 = 128,
 
   z_fit = "bottom",
-},
+}
 
 PREFABS.Wall_tech_outdoor_accent_flat_piped =
 {
@@ -38,7 +38,7 @@ PREFABS.Wall_tech_outdoor_accent_flat_piped =
   },
 
   z_fit = { 24,88 },
-},
+}
 
 PREFABS.Wall_tech_top_electric_board_thing =
 {
@@ -55,7 +55,7 @@ PREFABS.Wall_tech_top_electric_board_thing =
     COMPTALL = 1,
     COMPSPAN = 3,
   },
-},
+}
 
 PREFABS.Wall_tech_top_vanilla_vents =
 {
@@ -71,11 +71,11 @@ PREFABS.Wall_tech_top_vanilla_vents =
     METAL5 = 4,
     BLAKWAL2 = 1,
   },
-},
+}
 
 PREFABS.Wall_tech_bottom_vent =
 {
-  template = "Wall_tech_outdoor_accent_flat_piped",
+  template = "Wall_tech_outdoor_accent_flat_plain",
   map = "MAP05",
 
   prob = 10,
@@ -88,7 +88,7 @@ PREFABS.Wall_tech_bottom_vent =
     COMPWERD = 1,
     METAL5 = 2,
   },
-},
+}
 
 PREFABS.Wall_tech_single_brace =
 {
@@ -99,8 +99,8 @@ PREFABS.Wall_tech_single_brace =
 
   z_fit = "frame",
 
-  can_flip = true
-},
+  can_flip = true,
+}
 
 PREFABS.Wall_tech_top_metal =
 {
@@ -117,7 +117,7 @@ PREFABS.Wall_tech_top_metal =
     METAL3 = 1,
     METAL5 = 2,
   },
-},
+}
 
 PREFABS.Wall_tech_bottom_metal_half =
 {
@@ -135,4 +135,4 @@ PREFABS.Wall_tech_bottom_metal_half =
     METAL5 = 1,
     COMPWERD = 1,
   },
-},
+}

@@ -27,7 +27,7 @@ PREFABS.Hallway_conveyor_locked_red1 =
   texture_pack = "armaetus",
 
   sound = "Conveyor_Mech",
-},
+}
 
 PREFABS.Hallway_conveyor_locked_blue1 =
 {
@@ -37,7 +37,7 @@ PREFABS.Hallway_conveyor_locked_blue1 =
 
   tex_DOORRED = "DOORBLU",
   line_33     = 32,
-},
+}
 
 
 PREFABS.Hallway_conveyor_locked_yellow1 =
@@ -48,7 +48,7 @@ PREFABS.Hallway_conveyor_locked_yellow1 =
 
   tex_DOORRED = "DOORYEL",
   line_33     = 34,
-},
+}
 
 
 
@@ -87,5 +87,5 @@ PREFABS.Hallway_conveyor_barred1 =
   door_action = "S1_LowerFloor",
 
   sound = "Conveyor_Mech",
-},
+}
 

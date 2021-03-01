@@ -21,19 +21,19 @@ PREFABS.Hallway_conveyorh_p1 =
 
   texture_pack = "armaetus",
 
-},
+}
 
 PREFABS.Hallway_conveyorh_p2 =
 {
   template  = "Hallway_conveyorh_p1",
   map    = "MAP02",
 
-},
+}
 
 PREFABS.Hallway_conveyorh_p3 =
 {
   template  = "Hallway_conveyorh_p1",
   map    = "MAP03",
 
-},
+}
 

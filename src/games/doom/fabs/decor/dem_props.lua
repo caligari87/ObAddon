@@ -19,8 +19,8 @@ PREFABS.Decor_basketball_hoop =
   bound_z1 = 0,
   bound_z2 = 184,
 
-  face_open = true
-},
+  face_open = true,
+}
 
 -- a trash bin
 PREFABS.Decor_trash_bin =
@@ -37,7 +37,7 @@ PREFABS.Decor_trash_bin =
   bound_z2 = 40,
 
   sink_mode = "never_liquids",
-},
+}
 
 -- a mailbox
 PREFABS.Decor_mailbox =
@@ -52,7 +52,7 @@ PREFABS.Decor_mailbox =
   bound_z2 = 56,
 
   sink_mode = "never_liquids",
-},
+}
 
 -- litter1,
 PREFABS.Decor_litter1 =
@@ -66,7 +66,7 @@ PREFABS.Decor_litter1 =
 
   texture_pack = "armaetus",
 
-  can_be_on_roads = true
+  can_be_on_roads = true,
 
   where  = "point",
   size   = 64,
@@ -76,38 +76,38 @@ PREFABS.Decor_litter1 =
 
   sink_mode = "never",
 
-  face_open = true
-},
+  face_open = true,
+}
 
 PREFABS.Decor_litter2 =
 {
   template = "Decor_litter1",
   map    = "MAP05",
-},
+}
 
 PREFABS.Decor_litter3 =
 {
   template = "Decor_litter1",
   map    = "MAP06",
-},
+}
 
 PREFABS.Decor_litter4 =
 {
   template = "Decor_litter1",
   map    = "MAP07",
-},
+}
 
 PREFABS.Decor_litter5 =
 {
   template = "Decor_litter1",
   map    = "MAP08",
-},
+}
 
 PREFABS.Decor_litter6 =
 {
   template = "Decor_litter1",
   map    = "MAP09",
-},
+}
 
 -- Drug deal gone bad
 PREFABS.Decor_deal =
@@ -131,5 +131,5 @@ PREFABS.Decor_deal =
 
   sink_mode = "never",
 
-  face_open = true
-},
+  face_open = true,
+}

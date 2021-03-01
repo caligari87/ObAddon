@@ -16,7 +16,7 @@ PREFABS.Light_gtd_gothic_chandelier =
   bound_z2 = 0,
 
   light_color = "red",
-},
+}
 
 PREFABS.Light_gtd_gothic_chandelier_alt =
 {
@@ -25,7 +25,7 @@ PREFABS.Light_gtd_gothic_chandelier_alt =
   tex_FIRELAVA = "COMPBLUE",
 
   light_color = "blue",
-},
+}
 
 PREFABS.Light_gtd_gothic_chandelier_alt_2 =
 {
@@ -34,4 +34,4 @@ PREFABS.Light_gtd_gothic_chandelier_alt_2 =
   tex_FIRELAVA = "SFALL1",
 
   light_color = "green",
-},
+}

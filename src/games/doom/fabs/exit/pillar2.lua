@@ -10,7 +10,7 @@ PREFABS.Exit_pillar2 =
   theme = "tech",
 
   where = "point",
-},
+}
 
 
 PREFABS.Exit_pillar2_hell =
@@ -20,7 +20,7 @@ PREFABS.Exit_pillar2_hell =
   theme = "!tech",
 
   tex_SW1STRTN = "SW2GARG",
-},
+}
 
 
 PREFABS.Exit_pillar2_urban =
@@ -31,7 +31,7 @@ PREFABS.Exit_pillar2_urban =
 
   tex_SW1STRTN = "SW1CMT",
   flat_CEIL5_2 = "FLAT8",
-},
+}
 
 
 PREFABS.Exit_pillar2_secret =
@@ -49,5 +49,5 @@ PREFABS.Exit_pillar2_secret =
   line_11 = 51,
 
   tex_SW1STRTN = "SW1HOT",
-},
+}
 

@@ -19,7 +19,7 @@ PREFABS.Hallway_ducts_locked_red1 =
   seed_h = 1,
 
   deep   = 16,
-},
+}
 
 
 PREFABS.Hallway_ducts_locked_blue1 =
@@ -30,7 +30,7 @@ PREFABS.Hallway_ducts_locked_blue1 =
 
   tex_DOORRED = "DOORBLU",
   line_33     = 32,
-},
+}
 
 
 PREFABS.Hallway_ducts_locked_yellow1 =
@@ -41,7 +41,7 @@ PREFABS.Hallway_ducts_locked_yellow1 =
 
   tex_DOORRED = "DOORYEL",
   line_33     = 34,
-},
+}
 
 PREFABS.Hallway_ducts_locked_red2 =
 {
@@ -60,7 +60,7 @@ PREFABS.Hallway_ducts_locked_red2 =
   seed_h = 1,
 
   deep   = 16,
-},
+}
 
 
 PREFABS.Hallway_ducts_locked_blue2 =
@@ -71,7 +71,7 @@ PREFABS.Hallway_ducts_locked_blue2 =
 
   tex_DOORRED = "DOORBLU",
   line_33     = 32,
-},
+}
 
 
 PREFABS.Hallway_ducts_locked_yellow2 =
@@ -82,7 +82,7 @@ PREFABS.Hallway_ducts_locked_yellow2 =
 
   tex_DOORRED = "DOORYEL",
   line_33     = 34,
-},
+}
 
 PREFABS.Hallway_ducts_locked_red3 =
 {
@@ -101,7 +101,7 @@ PREFABS.Hallway_ducts_locked_red3 =
   seed_h = 1,
 
   deep   = 16,
-},
+}
 
 
 PREFABS.Hallway_ducts_locked_blue3 =
@@ -112,7 +112,7 @@ PREFABS.Hallway_ducts_locked_blue3 =
 
   tex_DOORRED = "DOORBLU",
   line_33     = 32,
-},
+}
 
 
 PREFABS.Hallway_ducts_locked_yellow3 =
@@ -123,7 +123,7 @@ PREFABS.Hallway_ducts_locked_yellow3 =
 
   tex_DOORRED = "DOORYEL",
   line_33     = 34,
-},
+}
 
 PREFABS.Hallway_ducts_locked_red4 =
 {
@@ -142,7 +142,7 @@ PREFABS.Hallway_ducts_locked_red4 =
   seed_h = 1,
 
   deep   = 16,
-},
+}
 
 
 PREFABS.Hallway_ducts_locked_blue4 =
@@ -153,7 +153,7 @@ PREFABS.Hallway_ducts_locked_blue4 =
 
   tex_DOORRED = "DOORBLU",
   line_33     = 32,
-},
+}
 
 
 PREFABS.Hallway_ducts_locked_yellow4 =
@@ -164,7 +164,7 @@ PREFABS.Hallway_ducts_locked_yellow4 =
 
   tex_DOORRED = "DOORYEL",
   line_33     = 34,
-},
+}
 
 
 ----------------------------------------------------------------
@@ -190,22 +190,22 @@ PREFABS.Hallway_ducts_barred1 =
 
   tag_1  = "?door_tag",
   door_action = "S1_LowerFloor",
-},
+}
 
 PREFABS.Hallway_ducts_barred2 =
 {
   template   = "Hallway_ducts_barred1",
   map    = "MAP02",
-},
+}
 
 PREFABS.Hallway_ducts_barred3 =
 {
   template   = "Hallway_ducts_barred1",
   map    = "MAP03",
-},
+}
 
 PREFABS.Hallway_ducts_barred4 =
 {
   template   = "Hallway_ducts_barred1",
   map    = "MAP04",
-},
+}

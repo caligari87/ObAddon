@@ -15,4 +15,4 @@ PREFABS.Item_closet_confession_booth =
 
   x_fit = "frame",
   y_fit = "top",
-},
+}

@@ -12,7 +12,7 @@ PREFABS.Joiner_gtd_basic_keyed_curve_green =
 
   seed_w = 2,
   seed_h = 2,
-},
+}
 
 PREFABS.Joiner_gtd_basic_keyed_curve_blue =
 {
@@ -22,7 +22,7 @@ PREFABS.Joiner_gtd_basic_keyed_curve_blue =
 
   line_33 = 32,
   thing_95 = 94,
-},
+}
 
 PREFABS.Joiner_gtd_basic_keyed_curve_yell =
 {
@@ -32,4 +32,4 @@ PREFABS.Joiner_gtd_basic_keyed_curve_yell =
 
   line_33 = 34,
   thing_95 = 96,
-},
+}

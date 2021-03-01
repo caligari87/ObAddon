@@ -6,7 +6,7 @@ PREFABS.Window_bay_1 =
   group  = "gtd_window_bay",
   prob   = 50,
 
-  passable = true
+  passable = true,
 
   where  = "edge",
   seed_w = 1,
@@ -17,7 +17,7 @@ PREFABS.Window_bay_1 =
 
   bound_z1 = 0,
   bound_z2 = 128,
-},
+}
 
 PREFABS.Window_bay_2 =
 {
@@ -25,7 +25,7 @@ PREFABS.Window_bay_2 =
   map      = "MAP02",
 
   seed_w   = 2,
-},
+}
 
 PREFABS.Window_bay_3 =
 {
@@ -33,4 +33,4 @@ PREFABS.Window_bay_3 =
   map      = "MAP03",
 
   seed_w   = 3,
-},
+}

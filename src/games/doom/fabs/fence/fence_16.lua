@@ -13,14 +13,14 @@ PREFABS.Fence_plain =
 
   where  = "edge",
 
-  passable = true
+  passable = true,
 
   deep   = 16,
   over   = 16,
 
   fence_h  = 32,
   bound_z1 = 0,
-},
+}
 
 
 PREFABS.Fence_plain_diag =
@@ -32,11 +32,11 @@ PREFABS.Fence_plain_diag =
 
   group  = "PLAIN",
 
-  passable = true
+  passable = true,
 
   where  = "diagonal",
 
   fence_h = 32,
 
   bound_z1 = 0,
-},
+}

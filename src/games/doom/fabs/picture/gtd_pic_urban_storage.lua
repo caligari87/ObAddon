@@ -7,7 +7,7 @@ PREFABS.Pic_urban_storage_sc1 =
   env = "any",
 
   group = "gtd_wall_urban_storage",
-},
+}
 
 PREFABS.Pic_urban_storage_sc2 =
 {
@@ -20,7 +20,7 @@ PREFABS.Pic_urban_storage_sc2 =
   group = "gtd_wall_urban_storage",
 
   thing_15 = 0,
-},
+}
 
 PREFABS.Pic_urban_storage_sc3 =
 {
@@ -31,4 +31,4 @@ PREFABS.Pic_urban_storage_sc3 =
   env = "any",
 
   group = "gtd_wall_urban_storage",
-},
+}

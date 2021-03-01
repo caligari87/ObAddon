@@ -25,7 +25,7 @@ PREFABS.Quest_Marine_auto_open =
 
   x_fit = "frame",
   y_fit = "top",
-},
+}
 
 PREFABS.Quest_auto_open_smaller =
 {
@@ -39,4 +39,4 @@ PREFABS.Quest_auto_open_smaller =
 
   x_fit  = { 80,96 , 160,176 },
   y_fit  = { 48,80 },
-},
+}

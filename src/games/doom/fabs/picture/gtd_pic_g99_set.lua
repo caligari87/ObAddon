@@ -20,7 +20,7 @@ PREFABS.Pic_gtd_g99_1 =
   x_fit = { 32,64 , 192,224 },
   y_fit = "top",
   z_fit = { 40,88 },
-},
+}
 
 PREFABS.Pic_gtd_g99_candles =
 {
@@ -29,4 +29,4 @@ PREFABS.Pic_gtd_g99_candles =
 
   x_fit = { 116,140 },
   z_fit = { 80,88 },
-},
+}

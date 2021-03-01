@@ -13,7 +13,7 @@ PREFABS.Decor_armaetus_2x2_terminal =
 
   bound_z1 = 0,
   bound_z2 = 72,
-},
+}
 
 PREFABS.Decor_armaetus_2x2_terminal_smaller =
 {
@@ -24,7 +24,7 @@ PREFABS.Decor_armaetus_2x2_terminal_smaller =
   prob = 5000,
 
   size = 176,
-},
+}
 
 PREFABS.Decor_armaetus_2x2_terminal_doom1_tech =
 {
@@ -37,7 +37,7 @@ PREFABS.Decor_armaetus_2x2_terminal_doom1_tech =
 
   tex_METAL2 = "COMPSPAN",
   tex_SPACEW3 = "COMPUTE3",
-},
+}
 
 PREFABS.Decor_armaetus_2x2_terminal_doom1_deimos =
 {
@@ -50,7 +50,7 @@ PREFABS.Decor_armaetus_2x2_terminal_doom1_deimos =
 
   tex_METAL2 = "COMPSPAN",
   tex_SPACEW3 = "COMPUTE3",
-},
+}
 
 PREFABS.Decor_armaetus_2x2_terminal_doom1_tech_smaller =
 {
@@ -65,7 +65,7 @@ PREFABS.Decor_armaetus_2x2_terminal_doom1_tech_smaller =
 
   tex_METAL2 = "COMPSPAN",
   tex_SPACEW3 = "COMPUTE3",
-},
+}
 
 PREFABS.Decor_armaetus_2x2_terminal_doom1_deimos_smaller =
 {
@@ -80,4 +80,4 @@ PREFABS.Decor_armaetus_2x2_terminal_doom1_deimos_smaller =
 
   tex_METAL2 = "COMPSPAN",
   tex_SPACEW3 = "COMPUTE3",
-},
+}

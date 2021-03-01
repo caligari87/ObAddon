@@ -26,8 +26,8 @@ PREFABS.Cage_wall_bunker_tech =
   {
     DOOR1=50,
     DOOR3=50,
-  },
-},
+  }
+}
 
 PREFABS.Cage_wall_bunker_hell =
 {
@@ -36,4 +36,4 @@ PREFABS.Cage_wall_bunker_hell =
   theme    = "hell",
 
   tex_DOOR3 = "WOODMET1",
-},
+}

@@ -11,7 +11,7 @@ PREFABS.Window_tall_1 =
   group  = "tall",
   prob   = 50,
 
-  passable = true
+  passable = true,
 
   rank   = 2,
   height = 176,
@@ -23,7 +23,7 @@ PREFABS.Window_tall_1 =
 
   bound_z1 = 0,
   bound_z2 = 176,
-},
+}
 
 PREFABS.Window_tall_1_tech =
 {
@@ -32,7 +32,7 @@ PREFABS.Window_tall_1_tech =
   theme    = "tech",
   tex_METAL5 = "DOORSTOP",
   flat_CEIL5_2 = "FLAT20",
-},
+}
 
 
 PREFABS.Window_tall_2 =
@@ -41,7 +41,7 @@ PREFABS.Window_tall_2 =
   theme  = "!tech",
   map      = "MAP02",
   seed_w   = 2,
-},
+}
 
 PREFABS.Window_tall_2_tech =
 {
@@ -51,7 +51,7 @@ PREFABS.Window_tall_2_tech =
   seed_w   = 2,
   tex_METAL5 = "DOORSTOP",
   flat_CEIL5_2 = "FLAT20",
-},
+}
 
 
 PREFABS.Window_tall_3 =
@@ -60,7 +60,7 @@ PREFABS.Window_tall_3 =
   theme  = "!tech",
   map      = "MAP03",
   seed_w   = 3,
-},
+}
 
 PREFABS.Window_tall_3_tech =
 {
@@ -70,7 +70,7 @@ PREFABS.Window_tall_3_tech =
   seed_w   = 3,
   tex_METAL5 = "DOORSTOP",
   flat_CEIL5_2 = "FLAT20",
-},
+}
 
 
 ----- Fallbacks for height-limited spots -------------------
@@ -84,7 +84,7 @@ PREFABS.Window_tallish_1 =
 
   rank     = 1,
   height   = 128,
-},
+}
 
 PREFABS.Window_tallish_1_tech =
 {
@@ -96,7 +96,7 @@ PREFABS.Window_tallish_1_tech =
   height   = 128,
   tex_METAL5 = "DOORSTOP",
   flat_CEIL5_2 = "FLAT20",
-},
+}
 
 PREFABS.Window_tallish_2 =
 {
@@ -107,7 +107,7 @@ PREFABS.Window_tallish_2 =
 
   rank     = 1,
   height   = 128,
-},
+}
 
 PREFABS.Window_tallish_2_tech =
 {
@@ -120,7 +120,7 @@ PREFABS.Window_tallish_2_tech =
   height   = 128,
   tex_METAL5 = "DOORSTOP",
   flat_CEIL5_2 = "FLAT20",
-},
+}
 
 PREFABS.Window_tallish_3 =
 {
@@ -131,7 +131,7 @@ PREFABS.Window_tallish_3 =
 
   rank     = 1,
   height   = 128,
-},
+}
 
 PREFABS.Window_tallish_3_tech =
 {
@@ -144,4 +144,4 @@ PREFABS.Window_tallish_3_tech =
   height   = 128,
   tex_METAL5 = "DOORSTOP",
   flat_CEIL5_2 = "FLAT20",
-},
+}

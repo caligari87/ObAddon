@@ -24,7 +24,7 @@ PREFABS.Start_beed28_tunnel =
    mercury_small = 50,
    lamp = 50,
   },
-},
+}
 
 PREFABS.Start_beed28_tunnel_hell =
 {
@@ -41,4 +41,4 @@ PREFABS.Start_beed28_tunnel_hell =
    red_torch = 50,
    candelabra = 50,
   },
-},
+}

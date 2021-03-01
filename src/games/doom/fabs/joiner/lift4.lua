@@ -26,7 +26,7 @@ PREFABS.Joiner_lift4 =
 
   delta_h  = 128,
   nearby_h = 128,
-},
+}
 
 
 PREFABS.Joiner_lift4_hell =
@@ -39,5 +39,5 @@ PREFABS.Joiner_lift4_hell =
   tex_TEKWALL4  = "STONE3",
   flat_MFLR8_2  = "MFLR8_1",
   flat_TLITE6_5 = "TLITE6_6",
-},
+}
 

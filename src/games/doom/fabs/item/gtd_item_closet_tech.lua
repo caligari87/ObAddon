@@ -17,22 +17,22 @@ PREFABS.Item_closet_simple1 =
   x_fit = "frame",
   y_fit = "top",
 
-  sector_1 =  { [0]=20, [8]=20, [12]=50, [13]=30, [21]=10 },
-},
+  sector_1 =  { [0]=20, [8]=20, [12]=50, [13]=30, [21]=10 }
+}
 
 PREFABS.Item_closet_simple2 =
 {
   template = "Item_closet_simple1",
   map    = "MAP02",
 
-  sector_1 = { [0]=1 },
-},
+  sector_1 = { [0]=1 }
+}
 
 PREFABS.Item_closet_simple3 =
 {
   template = "Item_closet_simple1",
   map    = "MAP03",
-},
+}
 
 --
 
@@ -42,7 +42,7 @@ PREFABS.Item_closet_complex1 =
   map    = "MAP04",
 
   prob = 33,
-},
+}
 
 PREFABS.Item_closet_complex2 =
 {
@@ -51,8 +51,8 @@ PREFABS.Item_closet_complex2 =
 
   prob = 33,
 
-  sector_1 = { [0]=1 },
-},
+  sector_1 = { [0]=1 }
+}
 
 PREFABS.Item_closet_complex3 =
 {
@@ -60,4 +60,4 @@ PREFABS.Item_closet_complex3 =
   map    = "MAP06",
 
   prob = 33,
-},
+}

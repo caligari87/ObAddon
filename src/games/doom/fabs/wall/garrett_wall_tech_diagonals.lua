@@ -14,14 +14,14 @@ PREFABS.Wall_garrett_tech_mainframe_diagonal =
   bound_z2 = 128,
 
   z_fit = "top",
-},
+}
 
 PREFABS.Wall_garrett_tech_mainframe_diagonal2 =
 {
   template = "Wall_garrett_tech_mainframe_diagonal",
 
   tex_COMPSTA2 = "COMPSTA1",
-},
+}
 
 PREFABS.Wall_garrett_tech_mainframe_diagonal_infected =
 {
@@ -39,4 +39,4 @@ PREFABS.Wall_garrett_tech_mainframe_diagonal_infected =
   bound_z2 = 128,
 
   z_fit = "top",
-},
+}

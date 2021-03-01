@@ -17,14 +17,14 @@ PREFABS.Wall_hell_bloodgutters1 =
   bound_z2 = 128,
 
   z_fit  = "top",
-},
+}
 
 PREFABS.Wall_hell_bloodgutters2 =
 {
   template = "Wall_hell_bloodgutters1",
 
   map = "MAP02",
-},
+}
 
 PREFABS.Wall_hell_bloodgutters_diag =
 {
@@ -43,7 +43,7 @@ PREFABS.Wall_hell_bloodgutters_diag =
   bound_z2 = 128,
 
   z_fit  = "top",
-},
+}
 
 PREFABS.Wall_hell_bloodgutters3 =
 {
@@ -56,7 +56,7 @@ PREFABS.Wall_hell_bloodgutters3 =
     SP_DUDE4 = 50,
     SP_DUDE5 = 50,
   },
-},
+}
 
 -- This utilizes the Doom1 textures not seen in Doom 2,
 PREFABS.Wall_hell_bloodgutters3_EPIC =
@@ -74,4 +74,4 @@ PREFABS.Wall_hell_bloodgutters3_EPIC =
     SPDUDE3  = 50,
     SPDUDE6  = 25,
   },
-},
+}

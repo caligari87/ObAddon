@@ -24,7 +24,7 @@ PREFABS.Joiner_door2 =
 
   sector_1  = { [0]=70, [1]=15, [2]=5, [3]=5, [8]=10, [12]=7, [13]=7 },
 
-},
+}
 
 PREFABS.Joiner_door2_urban2 =
 {
@@ -37,7 +37,7 @@ PREFABS.Joiner_door2_urban2 =
 tex_BIGDOOR4 = "BIGDOOR3",
 flat_FLOOR0_1 = "BIGDOOR3",
 
-},
+}
 
 PREFABS.Joiner_door2_urban3 =
 {
@@ -50,7 +50,7 @@ PREFABS.Joiner_door2_urban3 =
 tex_BIGDOOR4 = "BIGDOOR2",
 flat_FLOOR0_1 = "FLAT20",
 
-},
+}
 
 PREFABS.Joiner_door2_urban4 =
 {
@@ -62,7 +62,7 @@ PREFABS.Joiner_door2_urban4 =
 tex_BIGDOOR4 = { BIGDOOR5=50, BIGDOOR6=50, BIGDOOR7=50, WOODMET2=50 },
 flat_FLOOR0_1 = "CEIL5_2",
 
-},
+}
 
 
 PREFABS.Joiner_door2_tech1 =
@@ -74,7 +74,7 @@ PREFABS.Joiner_door2_tech1 =
 
   flat_FLOOR0_3 = { FLOOR0_3=50, FLAT5_4=50, CEIL3_5=50, FLAT1=50 },
 
-},
+}
 
 PREFABS.Joiner_door2_tech2 =
 {
@@ -88,7 +88,7 @@ flat_FLAT20 = "FLOOR7_2",
 
 flat_FLOOR0_3 = { FLOOR0_3=50, FLAT5_4=50, CEIL3_5=50, FLAT1=50 },
 
-},
+}
 
 PREFABS.Joiner_door2_tech3 =
 {
@@ -102,7 +102,7 @@ flat_FLAT20 = "FLOOR7_1",
 
   flat_FLOOR0_3 = { FLOOR0_3=50, FLAT5_4=50, CEIL3_5=50, FLAT1=50 },
 
-},
+}
 
 PREFABS.Joiner_door2_tech4 =
 {
@@ -116,7 +116,7 @@ flat_FLAT20 = "CRATOP2",
 
   flat_FLOOR0_3 = { FLOOR0_3=50, FLAT5_4=50, CEIL3_5=50, FLAT1=50 },
 
-},
+}
 
 
 PREFABS.Joiner_door2_hell =
@@ -129,7 +129,7 @@ PREFABS.Joiner_door2_hell =
 tex_BIGDOOR6 = { BIGDOOR6=50, BIGDOOR7=50, BIGDOOR5=50, WOODMET2=50 },
 
 tex_STONE2 = "STONE3",
-},
+}
 
 
 PREFABS.Joiner_door2_hell2 =
@@ -144,7 +144,7 @@ tex_BIGDOOR6 = { MARBFACE=50, MARBFAC3=50, MARBFAC2=15 },
 tex_STONE2 = "STONE3",
 flat_CEIL5_2 = "FLOOR7_2",
 
-},
+}
 
 PREFABS.Joiner_door2_hell3 =
 {
@@ -158,7 +158,7 @@ tex_BIGDOOR6 = "SKSPINE1",
 tex_METAL = "STONE3",
 flat_CEIL5_2 = "FLAT5_6",
 
-},
+}
 
 PREFABS.Joiner_door2_hell4 =
 {
@@ -171,4 +171,4 @@ tex_BIGDOOR6 = "WOODGARG",
 tex_STONE2 = "STONE3",
 flat_CEIL5_2 = "FLAT5_2",
 
-},
+}

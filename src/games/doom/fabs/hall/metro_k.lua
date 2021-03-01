@@ -19,8 +19,8 @@ PREFABS.Hallway_metro_locked_red =
 
   deep   = 16,
 
-  sector_1  = { [0]=90, [1]=15 },
-},
+  sector_1  = { [0]=90, [1]=15 }
+}
 
 PREFABS.Hallway_metro_locked_blue =
 {
@@ -30,8 +30,8 @@ PREFABS.Hallway_metro_locked_blue =
 
   tex_DOORRED = "DOORBLU",
 
-  sector_1  = { [0]=90, [1]=15 },
-},
+  sector_1  = { [0]=90, [1]=15 }
+}
 
 PREFABS.Hallway_metro_locked_yellow =
 {
@@ -41,8 +41,8 @@ PREFABS.Hallway_metro_locked_yellow =
 
   tex_DOORRED = "DOORYEL",
 
-  sector_1  = { [0]=90, [1]=15 },
-},
+  sector_1  = { [0]=90, [1]=15 }
+}
 
 PREFABS.Hallway_metro_barred =
 {
@@ -68,8 +68,8 @@ PREFABS.Hallway_metro_barred =
   tag_1  = "?door_tag",
   door_action = "S1_LowerFloor",
 
-  sector_1  = { [0]=90, [1]=15 },
-},
+  sector_1  = { [0]=90, [1]=15 }
+}
 
 -- slopeless engine fallbacks
 
@@ -84,7 +84,7 @@ PREFABS.Hallway_metro_barred_boxy =
   prob = 10,
 
   tex_SPCDOOR2 = "SPCDOOR1",
-},
+}
 
 PREFABS.Hallway_metro_barred_boxy_hell =
 {
@@ -98,7 +98,7 @@ PREFABS.Hallway_metro_barred_boxy_hell =
 
   tex_SPCDOOR1 = "SW1SKIN",
   tex_SPCDOOR2 = "SW2SKIN",
-},
+}
 
 ---- tech/urban versions
 
@@ -111,7 +111,7 @@ PREFABS.Hallway_metro_locked_red_boxy =
   theme = "!hell",
 
   prob = 10,
-},
+}
 
 PREFABS.Hallway_metro_locked_blue_boxy =
 {
@@ -127,7 +127,7 @@ PREFABS.Hallway_metro_locked_blue_boxy =
   tex_DOORRED = "DOORBLU",
 
   prob = 10,
-},
+}
 
 PREFABS.Hallway_metro_locked_yellow_boxy =
 {
@@ -143,13 +143,13 @@ PREFABS.Hallway_metro_locked_yellow_boxy =
   tex_DOORRED = "DOORYEL",
 
   prob = 10,
-},
+}
 
 ---- hell versions
 
 PREFABS.Hallway_metro_locked_red_boxy_hell =
 {
-  template = "Hallway_metro_locked_red_boxy",
+  template = "Hallway_metro_locked_red",
   map = "MAP11",
 
   engine = "any",
@@ -160,7 +160,7 @@ PREFABS.Hallway_metro_locked_red_boxy_hell =
   flat_FLAT23 = "CEIL5_1",
 
   prob = 10,
-},
+}
 
 PREFABS.Hallway_metro_locked_blue_boxy_hell =
 {
@@ -178,7 +178,7 @@ PREFABS.Hallway_metro_locked_blue_boxy_hell =
   flat_FLAT23 = "CEIL5_1",
 
   prob = 10,
-},
+}
 
 PREFABS.Hallway_metro_locked_yellow_boxy_hell =
 {
@@ -196,4 +196,4 @@ PREFABS.Hallway_metro_locked_yellow_boxy_hell =
   flat_FLAT23 = "CEIL5_1",
 
   prob = 10,
-},
+}

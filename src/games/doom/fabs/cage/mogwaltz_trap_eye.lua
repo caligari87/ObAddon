@@ -19,8 +19,8 @@ PREFABS.Cage_secret_trap_shootable_eye =
   y_fit  = { 64,96 },
 
   -- prevent monsters stuck in a barrel
-  solid_ents = true
-},
+  solid_ents = true,
+}
 
 PREFABS.Cage_secret_trap_shootable_eye_pair =
 {
@@ -28,4 +28,4 @@ PREFABS.Cage_secret_trap_shootable_eye_pair =
   map = "MAP02",
 
   prob = 37,
-},
+}

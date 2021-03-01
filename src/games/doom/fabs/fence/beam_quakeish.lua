@@ -21,7 +21,7 @@ PREFABS.Beam_quakeish =
 
   bound_z1 = 0,
   bound_z2 = 96,
-},
+}
 
 PREFABS.Beam_quakeish_diagonal =
 {
@@ -43,7 +43,7 @@ PREFABS.Beam_quakeish_diagonal =
 
   bound_z1 = 0,
   bound_z2 = 96,
-},
+}
 
 -- fallbacks for non ZDoom-slope supporting engines
 
@@ -64,7 +64,7 @@ PREFABS.Beam_quakeish_fallback =
   over   = 8,
 
   bound_z1 = 0,
-},
+}
 
 PREFABS.Beam_quakeish_diagonal_fallback =
 {
@@ -80,4 +80,4 @@ PREFABS.Beam_quakeish_diagonal_fallback =
   where  = "diagonal",
 
   bound_z1 = 0,
-},
+}

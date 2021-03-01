@@ -9,16 +9,16 @@ PREFABS.Decor_gtd_lamp_1 =
 
   where  = "point",
   size   = 80,
-},
+}
 
 PREFABS.Decor_gtd_lamp_2 =
 {
   template = "Decor_gtd_lamp_1",
   map      = "MAP02",
-},
+}
 
 PREFABS.Decor_gtd_lamp_3 =
 {
   template = "Decor_gtd_lamp_1",
   map      = "MAP03",
-},
+}

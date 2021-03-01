@@ -20,8 +20,8 @@ PREFABS.Lift_64 =
   bound_z1 = 0,
 
   delta_h = 64,
-  plain_ceiling = true
-},
+  plain_ceiling = true,
+}
 
 PREFABS.Lift_64_other =
 {
@@ -29,4 +29,4 @@ PREFABS.Lift_64_other =
 
   theme  = "!tech",
   tex_SUPPORT2 = "SUPPORT3",
-},
+}

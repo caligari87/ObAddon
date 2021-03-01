@@ -5,7 +5,7 @@ PREFABS.Decor_crackofdoom =
 
   prob   = 1500,
 
-  can_be_on_roads = true
+  can_be_on_roads = true,
 
   where  = "point",
   size   = 64,
@@ -14,4 +14,4 @@ PREFABS.Decor_crackofdoom =
   bound_z2 = 8,
 
   sink_mode = "never",
-},
+}

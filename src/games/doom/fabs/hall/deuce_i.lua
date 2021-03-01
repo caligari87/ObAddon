@@ -18,7 +18,7 @@ PREFABS.Hallway_deuce_i1 =
   seed_h = 2,
 
   sound = "Outdoors_Street",
-},
+}
 
 PREFABS.Hallway_deuce_i1_tech =
 {
@@ -28,7 +28,7 @@ PREFABS.Hallway_deuce_i1_tech =
 
   tex_METAL = "SHAWN2",
   flat_CEIL5_2 = "FLAT23",
-},
+}
 
 PREFABS.Hallway_deuce_i1_rise =
 {
@@ -41,8 +41,8 @@ PREFABS.Hallway_deuce_i1_rise =
 
   delta_h = 32,
 
-  can_flip = true
-},
+  can_flip = true,
+}
 
 PREFABS.Hallway_deuce_i_rise_tech =
 {
@@ -59,8 +59,8 @@ PREFABS.Hallway_deuce_i_rise_tech =
   tex_METAL = "SHAWN2",
   flat_CEIL5_2 = "FLAT23",
 
-  can_flip = true
-},
+  can_flip = true,
+}
 
 PREFABS.Hallway_deuce_i_windowed =
 {
@@ -72,10 +72,10 @@ PREFABS.Hallway_deuce_i_windowed =
   tex_DOORTRAK = "SUPPORT3",
   tex_METAL5 = "METAL",
 
-  can_flip = true
+  can_flip = true,
 
   sound = "Outdoors_Street",
-},
+}
 
 PREFABS.Hallway_deuce_i_windowed_tech =
 {
@@ -90,10 +90,10 @@ PREFABS.Hallway_deuce_i_windowed_tech =
   tex_METAL5 = "GRAY7",
   flat_CEIL5_2 = "FLAT23",
 
-  can_flip = true
+  can_flip = true,
 
   sound = "Outdoors_Street",
-},
+}
 
 PREFABS.Hallway_deuce_i_side_cage =
 {
@@ -105,8 +105,8 @@ PREFABS.Hallway_deuce_i_side_cage =
   tex_DOORTRAK = "SUPPORT3",
   tex_METAL5 = "METAL",
 
-  can_flip = true
-},
+  can_flip = true,
+}
 
 PREFABS.Hallway_deuce_i_side_cage_tech =
 {
@@ -124,8 +124,8 @@ PREFABS.Hallway_deuce_i_side_cage_tech =
   tex_STEP3 = "STEP4",
   flat_CEIL1_3 = "FLAT17",
 
-  can_flip = true
-},
+  can_flip = true,
+}
 
 PREFABS.Hallway_deuce_i_stout =
 {
@@ -134,8 +134,8 @@ PREFABS.Hallway_deuce_i_stout =
 
   prob = 17,
 
-  can_flip = true
-},
+  can_flip = true,
+}
 
 PREFABS.Hallway_deuce_i_stout_tech =
 {
@@ -151,8 +151,8 @@ PREFABS.Hallway_deuce_i_stout_tech =
   tex_CRACKLE2 = "COMPWERD",
   tex_SUPPORT3 = "DOORSTOP",
 
-  can_flip = true
-},
+  can_flip = true,
+}
 
 PREFABS.Hallway_deuce_i_light_box =
 {
@@ -160,7 +160,7 @@ PREFABS.Hallway_deuce_i_light_box =
   map = "MAP06",
 
   prob = 35,
-},
+}
 
 PREFABS.Hallway_deuce_i_light_box_tech =
 {
@@ -173,7 +173,7 @@ PREFABS.Hallway_deuce_i_light_box_tech =
   tex_METAL = "SHAWN2",
   flat_CEIL1_3 = "FLAT17",
   flat_CEIL5_2 = "FLAT23",
-},
+}
 
 --
 
@@ -192,8 +192,8 @@ PREFABS.Hallway_deuce_i_fake_door_and_window =
     SPCDOOR3=1,
   },
 
-  can_flip = true
-},
+  can_flip = true,
+}
 
 --
 
@@ -215,8 +215,8 @@ PREFABS.Hallway_deuce_i_fake_door_tech =
   flat_CEIL1_3 = "FLAT17",
   flat_CEIL5_2 = "FLAT23",
 
-  can_flip = true
-},
+  can_flip = true,
+}
 
 PREFABS.Hallway_deuce_i_fake_door_urban =
 {
@@ -233,8 +233,8 @@ PREFABS.Hallway_deuce_i_fake_door_urban =
     SPCDOOR3=1,
   },
 
-  can_flip = true
-},
+  can_flip = true,
+}
 
 --
 
@@ -257,8 +257,8 @@ PREFABS.Hallway_deuce_i_shutter_tech =
   flat_CEIL1_3 = "FLAT17",
   flat_CEIL5_2 = "FLAT23",
 
-  can_flip = true
-},
+  can_flip = true,
+}
 
 PREFABS.Hallway_deuce_i_shutter_urban =
 {
@@ -276,5 +276,5 @@ PREFABS.Hallway_deuce_i_shutter_urban =
     STEP5=1,
   },
 
-  can_flip = true
-},
+  can_flip = true,
+}

@@ -26,7 +26,7 @@ PREFABS.Pic_control_room =
   sector_1  = { [0]=70, [1]=20, [2]=5, [3]=5, [8]=10 },
 
   sound = "Computer_Station",
-},
+}
 
 PREFABS.Pic_control_room_small_monitors =
 {
@@ -35,13 +35,13 @@ PREFABS.Pic_control_room_small_monitors =
   tex_SILVER3 = "COMPSPAN",
   tex_COMPSTA1 = "SPACEW3",
   tex_COMPSTA2 = "SPACEW3",
-},
+}
 
 PREFABS.Pic_control_room_sideways_double =
 {
   template = "Pic_control_room",
   map = "MAP02",
-},
+}
 
 PREFABS.Pic_control_room_sideways_single =
 {
@@ -51,7 +51,7 @@ PREFABS.Pic_control_room_sideways_single =
   prob = 25,
 
   seed_w = 2,
-},
+}
 
 PREFABS.Pic_control_room_infested =
 {
@@ -61,4 +61,4 @@ PREFABS.Pic_control_room_infested =
   skip_prob = 65,
 
   sector_1 = 1,
-},
+}

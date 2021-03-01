@@ -18,7 +18,7 @@ PREFABS.Cage_auto_open =
 
   x_fit = "frame",
   y_fit = "top",
-},
+}
 
 PREFABS.Cage_auto_open_smaller =
 {
@@ -31,5 +31,5 @@ PREFABS.Cage_auto_open_smaller =
   seed_h = 2,
 
   x_fit  = { 80,96 , 160,176 },
-  y_fit  = { 48,80 },
-},
+  y_fit  = { 48,80 }
+}

@@ -29,7 +29,7 @@ PREFABS.Joiner_armaetus_v5_curve1 =
 
   tex_STEP5 = "STEP4",
 
-},
+}
 
 PREFABS.Joiner_armaetus_v5_curve1_urban =
 {
@@ -53,7 +53,7 @@ PREFABS.Joiner_armaetus_v5_curve1_urban =
 
   tex_STEP5 = "STEP6",
 
-},
+}
 
 PREFABS.Joiner_armaetus_v5_curve1_hell_torches =
 {
@@ -73,7 +73,7 @@ PREFABS.Joiner_armaetus_v5_curve1_hell_torches =
     red_torch_sm = 50,
     candelabra   = 25,
   },
-},
+}
 
 PREFABS.Joiner_armaetus_v5_curve1_hell_gore =
 {
@@ -100,7 +100,7 @@ PREFABS.Joiner_armaetus_v5_curve1_hell_gore =
     hang_twitching = 35,
   },
 
-},
+}
 
 PREFABS.Joiner_armaetus_v5_curve1_hellish_pillars =
 {
@@ -117,7 +117,7 @@ PREFABS.Joiner_armaetus_v5_curve1_hellish_pillars =
     red_pillar   = 50,
     red_column   = 50,
   },
-},
+}
 
 PREFABS.Joiner_armaetus_v5_curve1_eye =
 {
@@ -127,4 +127,4 @@ PREFABS.Joiner_armaetus_v5_curve1_eye =
 
   thing_2028 = "evil_eye",
 
-},
+}

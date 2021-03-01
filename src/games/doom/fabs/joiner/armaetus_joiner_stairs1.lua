@@ -21,4 +21,4 @@ PREFABS.Joiner_armaetus_long_joiner =
 
   delta_h  = 64,
   nearby_h = 128,
-},
+}

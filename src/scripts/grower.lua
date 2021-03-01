@@ -1134,7 +1134,7 @@ function Grower_determine_coverage()
   end
 
   -- ignore hallways when counting rooms
-  for _,R in pairs(pairs(LEVEL.rooms)) do
+  for _,R in pairs(LEVEL.rooms) do
     if R.is_grown and not R.is_hallway then
       room_count = room_count + 1
     end
@@ -1181,7 +1181,7 @@ function Grower_split_liquids()
 
     A2.seeds = seed_list
 
-    for _,S in pairs(pairs(seed_list)) do
+    for _,S in pairs(seed_list) do
       S.area = A2
 
       table.kill_elem(A.seeds, S)
@@ -1207,7 +1207,7 @@ function Grower_split_liquids()
     grow_contiguous_area(S, list)
 
     -- clear the marking flag
-    for _,S in pairs(pairs(list)) do
+    for _,S in pairs(list) do
       S.mark_contiguous = false
     end
 
@@ -1241,7 +1241,7 @@ function Grower_split_liquids()
 
 
   local function handle_symmetry(R)
-    for _,A in pairs(pairs(R.areas)) do
+    for _,A in pairs(R.areas) do
       if A.peer then goto continue end
 
       if A.mode == "liquid" or A.mode == "cage" then
@@ -1273,7 +1273,7 @@ function Grower_split_liquids()
   check_all_seeds("cage")
 
   -- in symmetrical rooms, peer up the mirrored parts
-  for _,R in pairs(pairs(LEVEL.rooms)) do
+  for _,R in pairs(LEVEL.rooms) do
     if R.symmetry then
       handle_symmetry(R)
     end
@@ -2122,7 +2122,7 @@ stderrf("prelim_conn %s --> %s : S=%s dir=%d\n", c_out.R1.name, c_out.R2.name, S
 
   local function find_chunk(sx, sy)
     if new_chunks then
-      for _,K in pairs(pairs(new_chunks)) do
+      for _,K in pairs(new_chunks) do
         if K.sx1 <= sx and sx <= K.sx2 and
            K.sy1 <= sy and sy <= K.sy2
         then
@@ -2692,7 +2692,7 @@ stderrf("prelim_conn %s --> %s : S=%s dir=%d\n", c_out.R1.name, c_out.R2.name, S
       link_chunk = nil
     end
 
-    for _,r in pairs(pairs(cur_rule.rects)) do
+    for _,r in pairs(cur_rule.rects) do
       local x1,y1, x2,y2 = transform_rect(T, r)
 
       assert(r.kind)
@@ -3591,7 +3591,7 @@ function Grower_grammatical_room(R, pass, is_emergency)
 
   elseif pass == "square_out" then
 
-    for _,A in pairs(pairs(R.areas)) do
+    for _,A in pairs(R.areas) do
       A:calc_volume()
       R.svolume = R.svolume + A.svolume
     end
@@ -3863,7 +3863,7 @@ function Grower_make_street(R)
   Grower_grammatical_room(R, "streets")
   Grower_grammatical_room(R, "street_fixer")
 
-  for _,A in pairs(pairs(R.areas)) do
+  for _,A in pairs(R.areas) do
     if not A.is_sidewalk then
       A.is_road = true
     end
@@ -3883,7 +3883,7 @@ function Grower_make_street(R)
     return
   end
 
-  for _,A in pairs(pairs(R.areas)) do
+  for _,A in pairs(R.areas) do
     if not A.is_road then
       A.is_sidewalk = true
     end
@@ -3968,7 +3968,7 @@ function Grower_kill_a_trunk(TR)
   table.kill_elem(LEVEL.trunks, TR)
 
   -- sanity check
-  for _,R in pairs(pairs(LEVEL.rooms)) do
+  for _,R in pairs(LEVEL.rooms) do
     assert(R.trunk ~= TR)
   end
 end
@@ -4033,7 +4033,7 @@ function Grower_begin_trunks()
 
   -- ensure the first floor of an exit room is kept usable for bosses
   if R.is_exit then
-    for _,A in pairs(pairs(R.areas)) do
+    for _,A in pairs(R.areas) do
       if A.mode == "floor" then
         A.is_bossy = true
         break;
@@ -4087,7 +4087,7 @@ gui.debugf("=== Coverage seeds: %d/%d  rooms: %d/%d\n",
 
 
   local function grow_teleport_trunk()
-    for _,R in pairs(pairs(LEVEL.rooms)) do
+    for _,R in pairs(LEVEL.rooms) do
       if R.need_teleports > 0 then
         R.need_teleports = R.need_teleports - 1
         Grower_add_teleporter_trunk(R)
@@ -4104,7 +4104,7 @@ gui.debugf("=== Coverage seeds: %d/%d  rooms: %d/%d\n",
 
     rand.shuffle(room_list)
 
-    for _,R in pairs(pairs(room_list)) do
+    for _,R in pairs(room_list) do
       local old_num = #LEVEL.rooms
 
       -- hallways cannot be regrown or resprouted
@@ -4154,7 +4154,7 @@ gui.debugf("=== Coverage seeds: %d/%d  rooms: %d/%d\n",
       return "ok"
     end
 
-    for _,R in pairs(pairs(LEVEL.rooms)) do
+    for _,R in pairs(LEVEL.rooms) do
 
       -- if it's a street, street it
       if R.is_street then
@@ -4177,7 +4177,7 @@ gui.debugf("=== Coverage seeds: %d/%d  rooms: %d/%d\n",
 
     local list = table.copy(LEVEL.rooms)
 
-    for _,R in pairs(pairs(list)) do
+    for _,R in pairs(list) do
       if not R.is_grown then
         Grower_kill_room(R)
       end
@@ -4280,7 +4280,7 @@ function Grower_decorate_rooms()
 
   rand.shuffle(room_list)
 
-  for _,R in pairs(pairs(room_list)) do
+  for _,R in pairs(room_list) do
     if not R.is_hallway and not R.is_street then
       Grower_grammatical_room(R, "decorate")
       if PARAM["live_minimap"] == "room" then
@@ -4297,10 +4297,10 @@ function Grower_expand_parks()
 
   rand.shuffle(room_list)
 
-  for _,R in pairs(pairs(room_list)) do
+  for _,R in pairs(room_list) do
     if R.is_outdoor and not R.is_street then
       -- disable the seed limit
-      for _,A in pairs(pairs(R.areas)) do
+      for _,A in pairs(R.areas) do
         if A.max_size then A.max_size = 999 end
       end
 
@@ -4308,7 +4308,7 @@ function Grower_expand_parks()
     end
   end
 
-  for _,R in pairs(pairs(room_list)) do
+  for _,R in pairs(room_list) do
     if R.is_outdoor and not R.is_street then
       Grower_grammatical_room(R, "smoother")
     end
@@ -4318,9 +4318,9 @@ function Grower_expand_parks()
   end
 
   -- fix area modes
-  for _,R in pairs(pairs(room_list)) do
+  for _,R in pairs(room_list) do
     if R.is_park or R.is_cave then
-      for _,A in pairs(pairs(R.areas)) do
+      for _,A in pairs(R.areas) do
         if A.mode == "floor" then
           A.mode = "nature"
         end
@@ -4340,8 +4340,8 @@ function Grower_flatten_outdoor_fences()
     sx1, sy1 =  9e9,  9e9
     sx2, sy2 = -9e9, -9e9
 
-    for _,A in pairs(pairs(R.areas)) do
-      for _,S in pairs(pairs(A.seeds)) do
+    for _,A in pairs(R.areas) do
+      for _,S in pairs(A.seeds) do
         sx1 = math.min(sx1, S.sx)
         sy1 = math.min(sy1, S.sy)
         sx2 = math.max(sx2, S.sx)
@@ -4426,7 +4426,7 @@ function Grower_flatten_outdoor_fences()
         -- once we hit a non-liquid area, stop
 
         if S.area.room == R then
-          for _,N in pairs(pairs(change_list)) do
+          for _,N in pairs(change_list) do
             set_liquid(R, N)
           end
         end
@@ -4500,7 +4500,7 @@ function Grower_flatten_outdoor_fences()
 
   ---| Grower_flatten_outdoor_fences |---
 
-  for _,R in pairs(pairs(LEVEL.rooms)) do
+  for _,R in pairs(LEVEL.rooms) do
     if R.is_outdoor and not R.is_cave then
       visit_park(R)
     end
@@ -4573,7 +4573,7 @@ function Grower_hallway_kinds__UNUSED()
 --???  TODO : review this, see if needed
 do return end
 
-  for _,H in pairs(pairs(LEVEL.rooms)) do
+  for _,H in pairs(LEVEL.rooms) do
     if H.is_hallway then
       visit_hall(H)
     end
@@ -4603,7 +4603,7 @@ function Grower_cave_stats()
   local cave  = 0
   local total = 0
 
-  for _,R in pairs(pairs(LEVEL.rooms)) do
+  for _,R in pairs(LEVEL.rooms) do
     local size = R:rough_size()
 
     if R.is_cave then

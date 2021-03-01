@@ -16,7 +16,7 @@ PREFABS.Wall_gtd_wood_frame_edge =
   bound_z2 = 128,
 
   z_fit = { 48,96 },
-},
+}
 
 PREFABS.Wall_gtd_wood_frame_diag =
 {
@@ -36,7 +36,7 @@ PREFABS.Wall_gtd_wood_frame_diag =
   bound_z2 = 128,
 
   z_fit = { 48,96 },
-},
+}
 
 PREFABS.Wall_gtd_wood_frame_edge_green =
 {
@@ -45,7 +45,7 @@ PREFABS.Wall_gtd_wood_frame_edge_green =
   group    = "gtd_woodframe_green",
 
   tex_PANEL2 = "PANEL3",
-},
+}
 
 PREFABS.Wall_gtd_wood_frame_diag_green =
 {
@@ -54,4 +54,4 @@ PREFABS.Wall_gtd_wood_frame_diag_green =
   group    = "gtd_woodframe_green",
 
   tex_PANEL2 = "PANEL3",
-},
+}

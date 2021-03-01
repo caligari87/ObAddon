@@ -12,20 +12,20 @@ PREFABS.Item_locker_bin =
   size = 56,
 
   bound_z1 = 0,
-},
+}
 
 PREFABS.Item_locker_bin_keyed =
 {
   template = "Item_locker_bin",
 
   item_kind = "key",
-},
+}
 
 PREFABS.Item_locker_cylinder =
 {
   template = "Item_locker_bin",
   map = "MAP02",
-},
+}
 
 PREFABS.Item_locker_cylinder_keyed =
 {
@@ -33,13 +33,13 @@ PREFABS.Item_locker_cylinder_keyed =
   map = "MAP02",
 
   item_kind = "key",
-},
+}
 
 PREFABS.Item_locker_bars =
 {
   template = "Item_locker_bin",
   map = "MAP03",
-},
+}
 
 PREFABS.Item_locker_bars_keyed =
 {
@@ -47,4 +47,4 @@ PREFABS.Item_locker_bars_keyed =
   map = "MAP03",
 
   item_kind = "key",
-},
+}

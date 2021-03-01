@@ -16,33 +16,33 @@ PREFABS.Hallway_ducts_u1 =
   seed_w = 2,
   seed_h = 2,
 
-},
+}
 
 PREFABS.Hallway_ducts_u2 =
 {
   template = "Hallway_ducts_u1",
   map    = "MAP02",
-},
+}
 
 PREFABS.Hallway_ducts_u3 =
 {
   template = "Hallway_ducts_u1",
   map    = "MAP03",
   style  = "cages",
-},
+}
 
 PREFABS.Hallway_ducts_u4 =
 {
   template = "Hallway_ducts_u1",
   map    = "MAP04",
   style  = "cages",
-},
+}
 
 PREFABS.Hallway_ducts_u5 =
 {
   template = "Hallway_ducts_u1",
   map    = "MAP05",
-},
+}
 
 PREFABS.Hallway_ducts_u6 =
 {
@@ -50,7 +50,7 @@ PREFABS.Hallway_ducts_u6 =
   map    = "MAP06",
 
   sound = "Indoor_Fan",
-},
+}
 
 PREFABS.Hallway_ducts_u7 =
 {
@@ -59,7 +59,7 @@ PREFABS.Hallway_ducts_u7 =
   style  = "cages",
 
   sound = "Indoor_Fan",
-},
+}
 
 PREFABS.Hallway_ducts_u8 =
 {
@@ -67,4 +67,4 @@ PREFABS.Hallway_ducts_u8 =
   map    = "MAP08",
 
   sound = "Indoor_Fan",
-},
+}

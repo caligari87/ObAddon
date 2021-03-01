@@ -660,7 +660,7 @@ function Seed_squarify()
   end -- sx, sy
   end
 
-  for _,A in pairs(pairs(LEVEL.areas)) do
+  for _,A in pairs(LEVEL.areas) do
     A:remove_dead_seeds()
   end
 end
@@ -974,7 +974,7 @@ function Seed_draw_minimap()
     y1 = (y1 - min_y + ofs_y) * map_H / size
     y2 = (y2 - min_y + ofs_y) * map_H / size
 
-    gui.minimap_draw_line(x1,y1, x2,y2, color)
+    gui.minimap_draw_line(int(x1),int(y1), int(x2),int(y2), color)
   end
 
 

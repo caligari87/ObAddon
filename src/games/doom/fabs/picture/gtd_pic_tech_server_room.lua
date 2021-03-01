@@ -21,7 +21,7 @@ PREFABS.Pic_gtd_tech_server_console =
   x_fit = "frame",
   y_fit = "top",
   z_fit = { 112,120 },
-},
+}
 
 PREFABS.Pic_gtd_tech_server_big_monitor =
 {
@@ -40,7 +40,7 @@ PREFABS.Pic_gtd_tech_server_big_monitor =
   },
 
   z_fit = "top",
-},
+}
 
 PREFABS.Pic_gtd_tech_server_CPU_banks =
 {
@@ -50,4 +50,4 @@ PREFABS.Pic_gtd_tech_server_CPU_banks =
   texture_pack = "armaetus",
 
   z_fit = "top",
-},
+}

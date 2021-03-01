@@ -28,7 +28,7 @@ PREFABS.Joiner_scionox_guardpost_outdoor =
   tex_BRONZE1 = { BRONZE1=50, BIGBRIK2=50, BROWNGRN=50, GRAY1=50, MODWALL1=50, SLADWALL=50 },
   flat_FLOOR4_6 = { FLOOR4_6=50, FLOOR1_1=50, FLOOR0_3=50, FLAT5=50 },
   flat_CEIL4_2 = { CEIL5_1=50, CEIL3_3=50, CEIL4_2=50, CEIL5_2=50 },
-},
+}
 
 -- Joiner Outside-to-outside Blue
 
@@ -38,7 +38,7 @@ PREFABS.Joiner_scionox_guardpost_outdoor_blue =
   map    = "MAP02",
 
   key    = "k_blue",
-},
+}
 
 -- Joiner Outside-to-outside Red
 
@@ -50,7 +50,7 @@ PREFABS.Joiner_scionox_guardpost_outdoor_red =
   key    = "k_red",
   tex_DOORBLU = "DOORRED",
   line_133     = 135,
-},
+}
 
 -- Joiner Outside-to-outside Yellow
 
@@ -62,7 +62,7 @@ PREFABS.Joiner_scionox_guardpost_outdoor_yellow =
   key    = "k_yellow",
   tex_DOORBLU = "DOORYEL",
   line_133     = 137,
-},
+}
 
 -- Joiner Outside-to-outside All
 
@@ -72,7 +72,7 @@ PREFABS.Joiner_scionox_guardpost_outdoor_all =
   map    = "MAP03",
 
   key    = "k_ALL",
-},
+}
 
 -- Joiner Outside-to-outside flipped
 
@@ -82,4 +82,4 @@ PREFABS.Joiner_scionox_guardpost_outdoor_2 =
   map    = "MAP04",
 
   y_fit = { 96,136 },
-},
+}

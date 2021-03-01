@@ -13,7 +13,7 @@ PREFABS.Hell_crucified_bodies1 =
   where  = "point",
   size   = 128,
   height = 160,
-},
+}
 
 
 --The bloody ones
@@ -23,10 +23,10 @@ PREFABS.Hell_crucified_bodies2 =
   map    = "MAP01",
 
  tex_SP_DUDE1 = "SP_DUDE7",
- tex_SP_DUDE2 = "SP_DUDE7" --Totally forgot SP_DUDE8 was used for vines
+ tex_SP_DUDE2 = "SP_DUDE7", --Totally forgot SP_DUDE8 was used for vines
  flat_FLOOR7_2 = "FLOOR7_1",
 
-},
+}
 
 -- The 64x128 one
 
@@ -43,7 +43,7 @@ PREFABS.Hell_small_bodies1 =
   height = 160,
 
   bound_z1 = 0,
-},
+}
 
 -- Torch decoration with pillars
 
@@ -69,9 +69,9 @@ PREFABS.Hell_torch_pillars =
     red_torch_sm = 50,
     blue_torch_sm = 50,
     green_torch_sm = 50,
-  },
+  }
 
-},
+}
 
 
 -- Just some hell themed pillars
@@ -94,7 +94,7 @@ PREFABS.Hell_pillar =
   tex_CRATELIT = { GSTGARG=50, GSTSATYR=50, GSTLION=50 },
   flat_CRATOP1 = "FLOOR7_2",
 
-},
+}
 
 -- Metal one
 PREFABS.Hell_pillar2 =
@@ -104,7 +104,7 @@ PREFABS.Hell_pillar2 =
   tex_CRATELIT = { SW1GARG=50, SW1SATYR=50, SW1LION=50 },
   flat_CRATOP1 = "CEIL5_2",
 
-},
+}
 
 --Large computer decor
 PREFABS.Tech_computer_box =
@@ -118,4 +118,4 @@ PREFABS.Tech_computer_box =
  tex_SP_DUDE1 = "COMPTALL",
  flat_FLOOR7_2 = "CEIL5_1",
 
-},
+}

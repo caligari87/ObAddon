@@ -11,7 +11,7 @@ PREFABS.Item_closet_toilet_point =
 
   height = { 128,368 },
   size  = 96,
-},
+}
 
 PREFABS.Item_closet_toilet_point_key_carrier =
 {
@@ -21,4 +21,4 @@ PREFABS.Item_closet_toilet_point_key_carrier =
   prob = 75,
 
   item_kind = "key",
-},
+}

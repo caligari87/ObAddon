@@ -18,7 +18,7 @@ PREFABS.Hallway_vent_locked_yellow =
 
   deep   = 16,
 
-},
+}
 
 
 PREFABS.Hallway_vent_locked_green =
@@ -29,7 +29,7 @@ PREFABS.Hallway_vent_locked_green =
 
   line_34     = 33,
   tex_DRIPWALL = "GRNBLOK1",
-},
+}
 
 
 PREFABS.Hallway_vent_locked_blue =
@@ -40,7 +40,7 @@ PREFABS.Hallway_vent_locked_blue =
 
   line_34     = 32,
   tex_DRIPWALL = "BLUEFRAG",
-},
+}
 
 
 ----------------------------------------------------------------
@@ -64,5 +64,5 @@ PREFABS.Hallway_vent_barred =
 
   tag_1  = "?door_tag",
   door_action = "S1_LowerFloor",
-},
+}
 

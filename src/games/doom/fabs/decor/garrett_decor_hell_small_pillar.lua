@@ -14,4 +14,4 @@ PREFABS.Decor_garrett_hell_small_pillar =
   bound_z2 = 128,
 
   z_fit  = "top",
-},
+}

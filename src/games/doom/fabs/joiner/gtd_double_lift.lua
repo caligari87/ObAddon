@@ -20,8 +20,8 @@ PREFABS.Joiner_double_lift_tech =
 
   delta_h  = 256,
   neighbor_h = 256+128,
-  can_flip = true
-},
+  can_flip = true,
+}
 
 PREFABS.Joiner_double_lift_hell =
 {
@@ -31,4 +31,4 @@ PREFABS.Joiner_double_lift_hell =
   y_fit  = { 16,24 , 136,144 },
 
   theme      = "hell",
-},
+}

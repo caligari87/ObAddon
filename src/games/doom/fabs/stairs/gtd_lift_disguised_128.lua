@@ -23,8 +23,8 @@ PREFABS.Lift_gtd_disguised_128 =
   bound_z1 = 0,
 
   delta_h = 128,
-  plain_ceiling = true
-},
+  plain_ceiling = true,
+}
 
 PREFABS.Lift_gtd_disguised_128_2h =
 {
@@ -32,7 +32,7 @@ PREFABS.Lift_gtd_disguised_128_2h =
   map = "MAP02",
 
   seed_h = 2,
-},
+}
 
 PREFABS.Lift_gtd_disguised_128_3h =
 {
@@ -40,4 +40,4 @@ PREFABS.Lift_gtd_disguised_128_3h =
   map = "MAP03",
 
   seed_h = 3,
-},
+}

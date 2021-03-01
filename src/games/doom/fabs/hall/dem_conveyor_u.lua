@@ -34,7 +34,7 @@ PREFABS.Hallway_conveyor_u1 =
   },
 
   sound = "Conveyor_Mech",
-},
+}
 
 PREFABS.Hallway_conveyor_u2 =
 {
@@ -44,5 +44,5 @@ PREFABS.Hallway_conveyor_u2 =
 
   prob   = 10,
 
-},
+}
 

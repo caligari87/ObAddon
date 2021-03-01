@@ -15,7 +15,7 @@ PREFABS.Decor_armaetus_big_computer =
   bound_z2 = 264,
 
   z_fit  = "top",
-},
+}
 
 PREFABS.Decor_gtd_armae_big_computer_2 =
 {
@@ -30,5 +30,5 @@ PREFABS.Decor_gtd_armae_big_computer_2 =
     [0] = 3,
     [12] = 4,
     [13] = 4,
-  },
-},
+  }
+}

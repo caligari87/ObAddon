@@ -18,7 +18,7 @@ PREFABS.Hallway_hellcata_i1 =
   seed_h = 2,
 
   engine = "zdoom",
-  can_flip = true
+  can_flip = true,
 
   tex_CATACMB2 = {
     CATACMB1=50, CATACMB2=50,
@@ -72,26 +72,26 @@ PREFABS.Hallway_hellcata_i1 =
     dead_imp = 50,
   },
 
-},
+}
 
 PREFABS.Hallway_hellcata_i2 =
 {
   template = "Hallway_hellcata_i1",
   map    = "MAP02",
-},
+}
 
 PREFABS.Hallway_hellcata_i3 =
 {
   template = "Hallway_hellcata_i1",
   map    = "MAP03",
-},
+}
 
 PREFABS.Hallway_hellcata_i4 =
 {
   template = "Hallway_hellcata_i1",
   map    = "MAP04",
   style  = "cages",
-},
+}
 
 PREFABS.Hallway_hellcata_i5 =
 {
@@ -99,28 +99,28 @@ PREFABS.Hallway_hellcata_i5 =
   map    = "MAP05",
   style  = "cages",
 
-},
+}
 
 PREFABS.Hallway_hellcata_i6 =
 {
   template = "Hallway_hellcata_i1",
   map    = "MAP06",
-},
+}
 
 PREFABS.Hallway_hellcata_i7 =
 {
   template = "Hallway_hellcata_i1",
   map    = "MAP07",
-},
+}
 
 PREFABS.Hallway_hellcata_i8 =
 {
   template = "Hallway_hellcata_i1",
   map    = "MAP08",
-},
+}
 
 PREFABS.Hallway_hellcata_i9 =
 {
   template = "Hallway_hellcata_i1",
   map    = "MAP09",
-},
+}

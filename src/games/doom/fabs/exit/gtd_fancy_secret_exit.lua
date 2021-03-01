@@ -10,4 +10,4 @@ PREFABS.Exit_gtd_fancy_secret =
   prob   = 200,
 
   line_11 = 51,
-},
+}

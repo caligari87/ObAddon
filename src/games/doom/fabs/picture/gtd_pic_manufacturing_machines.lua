@@ -7,7 +7,7 @@ PREFABS.Pic_industrial_ssg_assembler =
 
   engine = "zdoom",
 
-  prob   = 5 -- very rare
+  prob   = 5, -- very rare
   theme = "!hell",
 
   where  = "seeds",
@@ -24,4 +24,4 @@ PREFABS.Pic_industrial_ssg_assembler =
 
   x_fit = "frame",
   y_fit = "top",
-},
+}

@@ -7,7 +7,7 @@ PREFABS.Item_closet_hellish_loo =
   prob   = 125,
   theme  = "hell",
   env    = "outdoor",
-  open_to_sky = true
+  open_to_sky = true,
 
   where  = "seeds",
   seed_w = 2,
@@ -16,11 +16,11 @@ PREFABS.Item_closet_hellish_loo =
   item_kind = "key",
 
   x_fit = "frame",
-},
+}
 
 PREFABS.Item_closet_hellish_loo_shittier =
 {
   template = "Item_closet_hellish_loo",
 
   map = "MAP02",
-},
+}

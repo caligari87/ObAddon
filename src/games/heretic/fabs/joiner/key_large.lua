@@ -26,7 +26,7 @@ PREFABS.Locked_joiner_green =
 
   -- thing is already #95 (green statue)
   -- line special is already #33,
-},
+}
 
 
 PREFABS.Locked_joiner_blue =
@@ -38,7 +38,7 @@ PREFABS.Locked_joiner_blue =
   -- use the blue statue and correct line special
   thing_95 = 94,
   line_33  = 32,
-},
+}
 
 
 PREFABS.Locked_joiner_yellow =
@@ -50,5 +50,5 @@ PREFABS.Locked_joiner_yellow =
   -- use the yellow statue and correct line special
   thing_95 = 96,
   line_33  = 34,
-},
+}
 

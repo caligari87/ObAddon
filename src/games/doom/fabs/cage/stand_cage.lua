@@ -16,7 +16,7 @@ PREFABS.Cage_stand1 =
 
   bound_z1 = 0,
   bound_z2 = 120,
-},
+}
 
 
 PREFABS.Cage_stand2 =
@@ -35,5 +35,5 @@ PREFABS.Cage_stand2 =
 
   bound_z1 = 0,
   bound_z2 = 152,
-},
+}
 

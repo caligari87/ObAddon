@@ -14,7 +14,7 @@ PREFABS.Fence_gothic =
 
   fence_h  = 32,
   bound_z1 = 0,
-},
+}
 
 
 PREFABS.Fence_gothic_diag =
@@ -31,4 +31,4 @@ PREFABS.Fence_gothic_diag =
   fence_h = 32,
 
   bound_z1 = 0,
-},
+}

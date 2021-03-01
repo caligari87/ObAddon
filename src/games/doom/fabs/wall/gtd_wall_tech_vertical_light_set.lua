@@ -15,7 +15,7 @@ PREFABS.Wall_tech_vertical_light =
   bound_z2 = 128,
 
   z_fit  = "top",
-},
+}
 
 PREFABS.Wall_tech_vertical_light_diag =
 {
@@ -33,7 +33,7 @@ PREFABS.Wall_tech_vertical_light_diag =
   bound_z2 = 128,
 
   z_fit  = "top",
-},
+}
 
 PREFABS.Wall_tech_vertical_light_2 =
 {
@@ -42,7 +42,7 @@ PREFABS.Wall_tech_vertical_light_2 =
   group = "gtd_wall_vertical_light_2",
 
   tex_LITE2 = "LITE96",
-},
+}
 
 PREFABS.Wall_tech_vertical_light_2_diag =
 {
@@ -51,7 +51,7 @@ PREFABS.Wall_tech_vertical_light_2_diag =
   group = "gtd_wall_vertical_light_2",
 
   tex_LITE2 = "LITE96",
-},
+}
 
 PREFABS.Wall_tech_vertical_light_3 =
 {
@@ -60,7 +60,7 @@ PREFABS.Wall_tech_vertical_light_3 =
   group = "gtd_wall_vertical_light_3",
 
   tex_LITE2 = "LITESTON",
-},
+}
 
 PREFABS.Wall_tech_vertical_light_3_diag =
 {
@@ -69,4 +69,4 @@ PREFABS.Wall_tech_vertical_light_3_diag =
   group = "gtd_wall_vertical_light_3",
 
   tex_LITE2 = "LITESTON",
-},
+}

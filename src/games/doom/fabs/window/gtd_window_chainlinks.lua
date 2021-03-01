@@ -18,7 +18,7 @@ PREFABS.Window_chainlink_1 =
 
   bound_z1 = 0,
   bound_z2 = 128,
-},
+}
 
 PREFABS.Window_chainlink_2_even =
 {
@@ -26,7 +26,7 @@ PREFABS.Window_chainlink_2_even =
   map    = "MAP02",
 
   seed_w = 2,
-},
+}
 
 PREFABS.Window_chainlink_2_uneven =
 {
@@ -34,7 +34,7 @@ PREFABS.Window_chainlink_2_uneven =
   map    = "MAP03",
 
   seed_w = 2,
-},
+}
 
 PREFABS.Window_chainlink_3_machine =
 {
@@ -46,7 +46,7 @@ PREFABS.Window_chainlink_3_machine =
   prob = 30,
 
   seed_w = 3,
-},
+}
 
 PREFABS.Window_chainlink_3_plain =
 {
@@ -54,4 +54,4 @@ PREFABS.Window_chainlink_3_plain =
   map    = "MAP05",
 
   seed_w = 3,
-},
+}

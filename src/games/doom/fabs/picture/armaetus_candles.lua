@@ -23,7 +23,7 @@ PREFABS.Pic_armaetus_candles =
 
   x_fit = { 56,72 },
   y_fit = "top",
-},
+}
 
 PREFABS.Pic_gtd_arm_candles_2 =
 {
@@ -33,7 +33,7 @@ PREFABS.Pic_gtd_arm_candles_2 =
   seed_w = 2,
 
   x_fit = { 120,136 },
-},
+}
 
 PREFABS.Pic_gtd_arm_candles_3 =
 {
@@ -47,7 +47,7 @@ PREFABS.Pic_gtd_arm_candles_3 =
   seed_w = 2,
 
   x_fit = { 80,88 , 168,176 },
-},
+}
 
 -- Spooky hellish candles for the Deimos base, not seen as much
 PREFABS.Pic_armaetus_candles_deimos =
@@ -58,4 +58,4 @@ PREFABS.Pic_armaetus_candles_deimos =
   game = "doom",
   prob   = 8,
   theme = "deimos",
-},
+}

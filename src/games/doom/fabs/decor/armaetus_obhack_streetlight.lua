@@ -16,17 +16,17 @@ PREFABS.Decor_obhack_streetlight =
   bound_z1 = 0,
   bound_z2 = 128,
 
-  z_fit = { 20,78 },
-},
+  z_fit = { 20,78 }
+}
 
 PREFABS.Decor_obhack_streetlight_2 =
 {
   template = "Decor_obhack_streetlight",
   map = "MAP02",
-},
+}
 
 PREFABS.Decor_obhack_streetlight_3 =
 {
   template = "Decor_obhack_streetlight",
   map = "MAP03",
-},
+}

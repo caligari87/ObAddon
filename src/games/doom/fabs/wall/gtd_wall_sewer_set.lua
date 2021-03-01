@@ -17,7 +17,7 @@ PREFABS.Wall_sewer_plain =
   bound_z2 = 128,
 
   z_fit  = "top",
-},
+}
 
 PREFABS.Wall_sewer_sign =
 {
@@ -25,7 +25,7 @@ PREFABS.Wall_sewer_sign =
   map = "MAP02",
 
   prob = 15,
-},
+}
 
 PREFABS.Wall_sewer_sludgefall =
 {
@@ -37,7 +37,7 @@ PREFABS.Wall_sewer_sludgefall =
   prob = 15,
 
   sound = "Water_Streaming",
-},
+}
 
 PREFABS.Wall_sewer_horizontal_pipes =
 {
@@ -45,7 +45,7 @@ PREFABS.Wall_sewer_horizontal_pipes =
   map = "MAP04",
 
   prob = 15,
-},
+}
 
 PREFABS.Wall_sewer_diagonal =
 {
@@ -65,4 +65,4 @@ PREFABS.Wall_sewer_diagonal =
   bound_z2 = 128,
 
   z_fit = "top",
-},
+}

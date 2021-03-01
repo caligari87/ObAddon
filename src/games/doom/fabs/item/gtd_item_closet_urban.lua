@@ -17,14 +17,14 @@ PREFABS.Item_closet_urban_fake_shutter =
   x_fit = "frame",
   y_fit = "top",
 
-  sector_1 =  { [0]=20, [8]=20, [12]=50, [13]=30, [21]=10 },
-},
+  sector_1 =  { [0]=20, [8]=20, [12]=50, [13]=30, [21]=10 }
+}
 
 PREFABS.Item_closet_urban_fake_door =
 {
   template = "Item_closet_urban_fake_shutter",
   map      = "MAP02",
-},
+}
 
 PREFABS.Item_closet_urban_steal_stuff_right_off_windows_you_bad_person_you =
 {
@@ -46,8 +46,8 @@ PREFABS.Item_closet_urban_steal_stuff_right_off_windows_you_bad_person_you =
     BRICK3 = 1, BRICK4 = 1, BRICK7 = 1,
     STUCCO = 2, STUCCO1 = 2,
     STONE2 = 1,
-  },
-},
+  }
+}
 
 PREFABS.Item_closet_empty_shop =
 {
@@ -68,5 +68,5 @@ PREFABS.Item_closet_empty_shop =
   tex_COMPBLUE =
   {
     COMPBLUE = 1, REDWALL = 1,
-  },
-},
+  }
+}

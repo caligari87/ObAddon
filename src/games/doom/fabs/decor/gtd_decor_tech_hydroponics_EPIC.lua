@@ -13,19 +13,19 @@ PREFABS.Decor_hydroponics_tank_1 =
   size   = 96,
   height = 112,
 
-  face_open = true
+  face_open = true,
 
   bound_z1 = 0,
   bound_z2 = 112,
 
   z_fit = "top",
-},
+}
 
 PREFABS.Decor_hydroponics_tank_2 =
 {
   template = "Decor_hydroponics_tank_1",
   map = "MAP02",
-},
+}
 
 PREFABS.Decor_hydroponics_tank_3 =
 {
@@ -35,4 +35,4 @@ PREFABS.Decor_hydroponics_tank_3 =
   prob = 3500,
 
   size = 68,
-},
+}

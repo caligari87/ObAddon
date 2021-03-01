@@ -22,14 +22,14 @@ PREFABS.Wall_infestation_guts_on_wall =
 
   x_fit = "frame",
   z_fit = "top",
-},
+}
 
 PREFABS.Wall_infestation_guts_on_wall_DOOM1 =
 {
   template   = "Wall_infestation_guts_on_wall",
   game  = "doom",
   thing_81 = "gibs",
-},
+}
 
 PREFABS.Wall_infestation_guts_flowing_down_wall =
 {
@@ -51,14 +51,14 @@ PREFABS.Wall_infestation_guts_flowing_down_wall =
 
   x_fit = "frame",
   z_fit = "top",
-},
+}
 
 PREFABS.Wall_infestation_guts_flowing_down_wall_DOOM1 =
 {
   template   = "Wall_infestation_guts_flowing_down_wall",
   game       = "doom",
   thing_79 = "gibs",
- },
+ }
 
 PREFABS.Wall_infestation_evil_shrine_eye =
 {
@@ -80,7 +80,7 @@ PREFABS.Wall_infestation_evil_shrine_eye =
 
   x_fit = "frame",
   z_fit = "top",
-},
+}
 
 PREFABS.Wall_infestation_evil_shrine_rune =
 {
@@ -102,4 +102,4 @@ PREFABS.Wall_infestation_evil_shrine_rune =
 
   x_fit = "frame",
   z_fit = "top",
-},
+}

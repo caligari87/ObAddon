@@ -9,7 +9,7 @@ PREFABS.Decor_road_vehicle_tractor_thing =
 
   texture_pack = "armaetus",
 
-  can_be_on_roads = true
+  can_be_on_roads = true,
 
   where = "point",
   size = 160,
@@ -18,7 +18,7 @@ PREFABS.Decor_road_vehicle_tractor_thing =
   bound_z1 = 0,
   bound_z2 = 160,
 
-},
+}
 
 PREFABS.Decor_road_vehicle_dump_truck =
 {
@@ -26,13 +26,13 @@ PREFABS.Decor_road_vehicle_dump_truck =
   map = "MAP02",
 
   height = 96,
-},
+}
 
 PREFABS.Decor_road_vehicle_dozer =
 {
   template = "Decor_road_vehicle_tractor_thing",
   map = "MAP03",
-},
+}
 
 -- urban versions, lower priority
 
@@ -43,7 +43,7 @@ PREFABS.Decor_road_vehicle_tractor_thing_urban =
   theme = "urban",
 
   prob = 1000,
-},
+}
 
 PREFABS.Decor_road_vehicle_dump_truck_urban =
 {
@@ -54,7 +54,7 @@ PREFABS.Decor_road_vehicle_dump_truck_urban =
   theme = "urban",
 
   height = 96,
-},
+}
 
 PREFABS.Decor_road_vehicle_dozer_urban =
 {
@@ -63,4 +63,4 @@ PREFABS.Decor_road_vehicle_dozer_urban =
 
   prob = 1000,
   theme = "urban",
-},
+}

@@ -18,4 +18,4 @@ PREFABS.Hell_garrett_closet_exit =
 
   x_fit = "frame",
   y_fit = "bottom",
-},
+}

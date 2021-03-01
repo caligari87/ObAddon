@@ -12,4 +12,4 @@ PREFABS.Switch_armaetus_tech =
   where  = "point",
 
   tag_1  = "?switch_tag",
-},
+}

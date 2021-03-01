@@ -13,19 +13,19 @@ PREFABS.Hallway_mineshaft_i1 =
   seed_w = 1,
 
   mon_height = 96,
-},
+}
 
 PREFABS.Hallway_mineshaft_i2 =
 {
   template = "Hallway_mineshaft_i1",
   map = "MAP02",
-},
+}
 
 PREFABS.Hallway_mineshaft_i3 =
 {
   template = "Hallway_mineshaft_i1",
   map = "MAP03",
-},
+}
 
 PREFABS.Hallway_mineshaft_irise1=
 {
@@ -36,8 +36,8 @@ PREFABS.Hallway_mineshaft_irise1=
 
   delta_h = 32,
 
-  can_flip = true
-},
+  can_flip = true,
+}
 
 PREFABS.Hallway_mineshaft_i_collapse =
 {
@@ -46,8 +46,8 @@ PREFABS.Hallway_mineshaft_i_collapse =
 
   prob = 35,
 
-  can_flip = true
-},
+  can_flip = true,
+}
 
 PREFABS.Hallway_mineshaft_i_collapse2 =
 {
@@ -56,5 +56,5 @@ PREFABS.Hallway_mineshaft_i_collapse2 =
 
   prob = 35,
 
-  can_flip = true
-},
+  can_flip = true,
+}

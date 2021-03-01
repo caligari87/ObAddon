@@ -17,20 +17,20 @@ PREFABS.Item_closet_guts =
   x_fit = "frame",
   y_fit = "top",
 
-  sector_1 =  { [0]=20, [8]=20, [12]=50, [13]=30, [21]=10 },
-},
+  sector_1 =  { [0]=20, [8]=20, [12]=50, [13]=30, [21]=10 }
+}
 
 PREFABS.Item_closet_hellish_alcove =
 {
   template = "Item_closet_guts",
   map      = "MAP02",
-},
+}
 
 PREFABS.Item_closet_hellish_furnace =
 {
   template = "Item_closet_guts",
   map      = "MAP03",
-},
+}
 
 --
 
@@ -40,7 +40,7 @@ PREFABS.Item_closet_guts_big =
   map = "MAP04",
 
   prob = 33,
-},
+}
 
 PREFABS.Item_closet_hellish_alcove_big =
 {
@@ -48,7 +48,7 @@ PREFABS.Item_closet_hellish_alcove_big =
   map = "MAP05",
 
   prob = 33,
-},
+}
 
 PREFABS.Item_closet_hellish_furnace_big =
 {
@@ -56,4 +56,4 @@ PREFABS.Item_closet_hellish_furnace_big =
   map = "MAP06",
 
   prob = 33,
-},
+}

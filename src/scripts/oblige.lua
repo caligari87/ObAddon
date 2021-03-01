@@ -1349,8 +1349,8 @@ function ob_build_setup()
   -- merge tables from each module
   -- [ but skip GAME and ENGINE, which are already merged ]
 
-  for _,mod in pairs(GAME.modules) do
-    if _index > 2 and mod.tables then
+  for index,mod in pairs(GAME.modules) do
+    if index > 2 and mod.tables then
       ob_merge_table_list(mod.tables)
     end
   end

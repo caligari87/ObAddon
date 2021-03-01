@@ -76,5 +76,5 @@ PREFABS.Cage_wall_building_terrace =
     TLITE65O=50,
     TLITE65W=50,
     TLITE65Y=50,
-  },
-},
+  }
+}

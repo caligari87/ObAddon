@@ -19,8 +19,8 @@ PREFABS.Decor_tech_point_HVAC_1 =
     MIDBARS1 = 50,
     MIDBARS3 = 50,
     MIDSPACE = 50,
-  },
-},
+  }
+}
 
 PREFABS.Decor_tech_point_HVAC_2 =
 {
@@ -31,11 +31,11 @@ PREFABS.Decor_tech_point_HVAC_2 =
   height = 112,
 
   bound_z2 = 112,
-},
+}
 
 PREFABS.Decor_tech_point_HVAC_3 =
 {
   template = "Decor_tech_point_HVAC_1",
 
   map = "MAP03",
-},
+}

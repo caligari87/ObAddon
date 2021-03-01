@@ -42,11 +42,11 @@ PREFABS.Pic_beed28_broken_door =
   },
 
   sound = "Electric_Sparks",
-},
+}
 
 PREFABS.Pic_beed28_broken_door2 =
 {
   template = "Pic_beed28_broken_door",
 
   map = "MAP02",
-},
+}

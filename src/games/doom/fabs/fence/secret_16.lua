@@ -27,8 +27,8 @@ PREFABS.Fence_plain_secret =
     candle = 10,
     gibbed_player = 10,
     nothing = 10,
-  },
-},
+  }
+}
 
 
 PREFABS.Fence_plain_secret2 =
@@ -41,5 +41,5 @@ PREFABS.Fence_plain_secret2 =
 
   seed_w = 2,
   x_fit  = "frame",
-},
+}
 

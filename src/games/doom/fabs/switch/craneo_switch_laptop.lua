@@ -10,4 +10,4 @@ PREFABS.Switch_craneo_portable_laptop =
   prob = 65,
 
   tag_1 = "?switch_tag",
-},
+}

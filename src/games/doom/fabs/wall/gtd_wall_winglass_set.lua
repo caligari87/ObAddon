@@ -24,7 +24,7 @@ PREFABS.Wall_gtd_winglass_wall_edge =
     WINGLAS3=50,
     WINGLAS4=50,
   },
-},
+}
 
 PREFABS.Wall_gtd_winglass_wall_diag =
 {
@@ -52,4 +52,4 @@ PREFABS.Wall_gtd_winglass_wall_diag =
     WINGLAS3=50,
     WINGLAS4=50,
   },
-},
+}

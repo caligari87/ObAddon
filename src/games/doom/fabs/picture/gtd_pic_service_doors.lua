@@ -33,7 +33,7 @@ PREFABS.Pic_service_gate_1 =
     URBAN6 = 1,
     URBAN8 = 1,
   },
-},
+}
 
 PREFABS.Pic_service_gate_2 =
 {
@@ -41,4 +41,4 @@ PREFABS.Pic_service_gate_2 =
   map = "MAP02",
 
   x_fit = { 124,132 },
-},
+}

@@ -21,7 +21,7 @@ PREFABS.Item_sealed_armory_room_regular =
 
   x_fit = "frame",
   y_fit = "top",
-},
+}
 
 PREFABS.Item_sealed_armory_room_keyed =
 {
@@ -34,4 +34,4 @@ PREFABS.Item_sealed_armory_room_keyed =
   prob   = 100,
 
   sound = "Toilet_Running",
-},
+}

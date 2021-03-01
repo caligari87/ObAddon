@@ -20,7 +20,7 @@ PREFABS.Pic_simple_crates_1 =
 
   x_fit = "frame",
   y_fit = "top",
-},
+}
 
 PREFABS.Pic_simple_crates_2 =
 {
@@ -32,13 +32,13 @@ PREFABS.Pic_simple_crates_2 =
     [0] = 1,
     [15] = 1,
   },
-},
+}
 
 PREFABS.Pic_simple_crates_3 =
 {
   template = "Pic_simple_crates_1",
   map      = "MAP03",
-},
+}
 
 -- urban variants only appear inside buildings
 
@@ -50,7 +50,7 @@ PREFABS.Pic_simple_crates_1_u =
   theme = "urban",
 
   env = "building",
-},
+}
 
 PREFABS.Pic_simple_crates_2_u =
 {
@@ -66,7 +66,7 @@ PREFABS.Pic_simple_crates_2_u =
     [0] = 1,
     [15] = 1,
   },
-},
+}
 
 PREFABS.Pic_simple_crates_3_u =
 {
@@ -76,4 +76,4 @@ PREFABS.Pic_simple_crates_3_u =
   theme = "urban",
 
   env = "building",
-},
+}

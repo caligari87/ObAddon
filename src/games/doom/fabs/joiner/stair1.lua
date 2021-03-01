@@ -23,8 +23,8 @@ PREFABS.Joiner_stair1 =
 
   delta_h  = 48,
   nearby_h = 160,
-  can_flip = true
-},
+  can_flip = true,
+}
 
 PREFABS.Joiner_stair2 =
 {
@@ -33,7 +33,7 @@ PREFABS.Joiner_stair2 =
 
   tex_ICKWALL3 = { WOOD1=50, WOOD3=50, WOOD5=50, WOODVERT=50, WOOD12=50 },
   flat_FLAT1 = { FLAT5_1=50, FLAT5_2=50 },
- },
+ }
 
 
 PREFABS.Joiner_stair3 =
@@ -44,7 +44,7 @@ PREFABS.Joiner_stair3 =
 
   tex_ICKWALL3 = { SHAWN2=100, SUPPORT2=20 },
   flat_FLAT1 = { FLAT23=100, FLAT20=15 },
- },
+ }
 
 PREFABS.Joiner_stair4 =
 {
@@ -54,7 +54,7 @@ PREFABS.Joiner_stair4 =
 
   tex_ICKWALL3 = { TEKWALL1=50, TEKWALL4=50 },
   flat_FLAT1 = "CEIL5_1",
- },
+ }
 
 PREFABS.Joiner_stair5 =
 {
@@ -64,7 +64,7 @@ PREFABS.Joiner_stair5 =
 
   tex_ICKWALL3 = "COMPBLUE",
   flat_FLAT1 = { FLAT14=50, CEIL4_1=50, CEIL4_2=50 },
- },
+ }
 
 PREFABS.Joiner_stair6 =
 {
@@ -74,7 +74,7 @@ PREFABS.Joiner_stair6 =
 
   tex_ICKWALL3 = "COMPSPAN",
   flat_FLAT1 = "CEIL5_1",
- },
+ }
 
 PREFABS.Joiner_stair7 =
 {
@@ -83,7 +83,7 @@ PREFABS.Joiner_stair7 =
 
   tex_ICKWALL3 = { SKIN2=100, SKINFACE=50 },
   flat_FLAT1 = "SFLR6_4",
- },
+ }
 
 PREFABS.Joiner_stair8 =
 {
@@ -92,7 +92,7 @@ PREFABS.Joiner_stair8 =
 
   tex_ICKWALL3 = { METAL=50, SUPPORT3=50 },
   flat_FLAT1 = "CEIL5_2",
- },
+ }
 
 PREFABS.Joiner_stair9 =
 {
@@ -101,7 +101,7 @@ PREFABS.Joiner_stair9 =
 
   tex_ICKWALL3 = "ASHWALL2",
   flat_FLAT1 = "FLOOR6_2",
- },
+ }
 
 PREFABS.Joiner_stair10 =
 {
@@ -110,7 +110,7 @@ PREFABS.Joiner_stair10 =
 
   tex_ICKWALL3 = { ASHWALL3=50, ASHWALL4=50, BROWNHUG=10 },
   flat_FLAT1 = "FLAT10",
- },
+ }
 
 PREFABS.Joiner_stair11 =
 {
@@ -119,4 +119,4 @@ PREFABS.Joiner_stair11 =
 
   tex_ICKWALL3 = { BLAKWAL1=50, BLAKWAL2=50 },
   flat_FLAT1 = "CEIL5_1",
- },
+ }

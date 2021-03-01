@@ -13,16 +13,16 @@ PREFABS.Wall_natural_diag =
   bound_z2 = 2,
 
   z_fit  = "stretch",
-},
+}
 
 PREFABS.Wall_natural_diag2 =
 {
   template = "Wall_natural_diag",
   map      = "MAP02",
-},
+}
 
 PREFABS.Wall_natural_diag3 =
 {
   template = "Wall_natural_diag",
   map      = "MAP03",
-},
+}

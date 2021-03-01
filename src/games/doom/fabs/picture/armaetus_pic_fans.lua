@@ -25,7 +25,7 @@ PREFABS.Pic_armaetus_double_fans =
   y_fit = "top",
 
   sound = "Indoor_Fan",
-},
+}
 
 PREFABS.Pic_armaetus_double_fans_hell =
 {
@@ -35,7 +35,7 @@ PREFABS.Pic_armaetus_double_fans_hell =
   theme = "hell",
 
   tex_DOORSTOP = "METAL",
-},
+}
 
 --
 
@@ -50,7 +50,7 @@ PREFABS.Pic_arm_gtd_vented_fan =
 
   x_fit = { 148,160 },
   z_fit = { 48,56 },
-},
+}
 
 PREFABS.Pic_arm_gtd_vented_fan_double =
 {
@@ -63,4 +63,4 @@ PREFABS.Pic_arm_gtd_vented_fan_double =
 
   x_fit = { 104,120 },
   z_fit = "top",
-},
+}

@@ -14,7 +14,7 @@ PREFABS.Fence_tech_lit =
 
   fence_h  = 32,
   bound_z1 = 0,
-},
+}
 
 PREFABS.Fence_tech_lit_diag =
 {
@@ -30,7 +30,7 @@ PREFABS.Fence_tech_lit_diag =
   fence_h = 32,
 
   bound_z1 = 0,
-},
+}
 
 PREFABS.Fence_tech_lit_EPIC =
 {
@@ -53,7 +53,7 @@ PREFABS.Fence_tech_lit_EPIC =
   bound_z1 = 0,
 
   tex_MIDSPACE = "MIDSPAC5",
-},
+}
 
 PREFABS.Fence_tech_lit_diag_EPIC =
 {
@@ -74,7 +74,7 @@ PREFABS.Fence_tech_lit_diag_EPIC =
   bound_z1 = 0,
 
   tex_MIDSPACE = "MIDSPAC5",
-},
+}
 
 --
 -- HL Bars
@@ -99,7 +99,7 @@ PREFABS.Fence_tech_hl_bars =
 
   fence_h  = 32,
   bound_z1 = 0,
-},
+}
 
 PREFABS.Fence_tech_hl_bars_diag =
 {
@@ -112,7 +112,7 @@ PREFABS.Fence_tech_hl_bars_diag =
   texture_pack = "armaetus",
 
   where = "diagonal",
-},
+}
 
 -- fallback
 
@@ -132,7 +132,7 @@ PREFABS.Fence_gappy_fallback =
 
   fence_h  = 32,
   bound_z1 = 0,
-},
+}
 
 PREFABS.Fence_gappy_fallback_diag =
 {
@@ -148,7 +148,7 @@ PREFABS.Fence_gappy_fallback_diag =
   fence_h = 32,
 
   bound_z1 = 0,
-},
+}
 
 --
 -- Tech sloped silver
@@ -167,14 +167,14 @@ PREFABS.Fence_tech_sloped_silver = --#
 
   where  = "edge",
 
-  passable = true
+  passable = true,
 
   deep   = 16,
   over   = 16,
 
   fence_h  = 32,
   bound_z1 = 0,
-},
+}
 
 PREFABS.Fence_tech_sloped_silver_diag =
 {
@@ -183,12 +183,12 @@ PREFABS.Fence_tech_sloped_silver_diag =
 
   engine = "zdoom",
 
-  passable = true
+  passable = true,
 
   group = "fence_sloped_silver",
 
   where = "diagonal",
-},
+}
 
 -- fallback
 
@@ -210,7 +210,7 @@ PREFABS.Fence_sloped_silver_fallback =
 
   fence_h  = 32,
   bound_z1 = 0,
-},
+}
 
 PREFABS.Fence_sloped_silver_fallback_diag =
 {
@@ -227,4 +227,4 @@ PREFABS.Fence_sloped_silver_fallback_diag =
 
   fence_h = 32,
   bound_z1 = 0,
-},
+}

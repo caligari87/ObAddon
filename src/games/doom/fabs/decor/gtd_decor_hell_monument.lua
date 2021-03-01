@@ -14,4 +14,4 @@ PREFABS.Decor_hell_monument =
   bound_z2 = 128,
 
   z_fit  = "top",
-},
+}

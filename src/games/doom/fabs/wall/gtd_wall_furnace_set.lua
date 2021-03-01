@@ -16,7 +16,7 @@ PREFABS.Wall_gtd_furnace_1 =
   bound_z2 = 128,
 
   z_fit = "top",
-},
+}
 
 PREFABS.Wall_gtd_furnace_diag_1 =
 {
@@ -36,7 +36,7 @@ PREFABS.Wall_gtd_furnace_diag_1 =
   bound_z2 = 128,
 
   z_fit = "top",
-},
+}
 
 PREFABS.Wall_gtd_furnace_face_1 =
 {
@@ -45,7 +45,7 @@ PREFABS.Wall_gtd_furnace_face_1 =
   group    = "gtd_furnace_face",
 
   tex_FIRELAVA = "SP_FACE2",
-},
+}
 
 PREFABS.Wall_gtd_furnace_face_diag_1 =
 {
@@ -54,4 +54,4 @@ PREFABS.Wall_gtd_furnace_face_diag_1 =
   group    = "gtd_furnace_face",
 
   tex_FIRELAVA = "SP_FACE2",
-},
+}

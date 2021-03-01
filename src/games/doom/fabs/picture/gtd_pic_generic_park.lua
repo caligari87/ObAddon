@@ -35,19 +35,19 @@ PREFABS.Pic_park_generic_1 =
     [43] = 25,
     [0] = 50,
   },
-},
+}
 
 PREFABS.Pic_park_generic_2 =
 {
   template = "Pic_park_generic_1",
   map = "MAP02",
-},
+}
 
 PREFABS.Pic_park_generic_3 =
 {
   template = "Pic_park_generic_1",
   map = "MAP03",
-},
+}
 
 PREFABS.Pick_park_generic_4 =
 {
@@ -55,7 +55,7 @@ PREFABS.Pick_park_generic_4 =
   map = "MAP04",
 
   z_fit = { 0,56 },
-},
+}
 
 PREFABS.Pic_park_generic_5 =
 {
@@ -64,7 +64,7 @@ PREFABS.Pic_park_generic_5 =
   map = "MAP05",
 
   z_fit = { 40,120 },
-},
+}
 
 -- liquids
 
@@ -74,14 +74,14 @@ PREFABS.Pic_park_generic_1_liquid =
 
   prob = 15,
 
-  liquid = true
+  liquid = true,
 
   map = "MAP10",
 
   z_fit = { 40,120 },
 
   sound = "Waterfall_Rush",
-},
+}
 
 PREFABS.Pic_park_generic_2_liquid =
 {
@@ -89,13 +89,13 @@ PREFABS.Pic_park_generic_2_liquid =
 
   prob = 15,
 
-  liquid = true
+  liquid = true,
 
   map = "MAP11",
 
   z_fit = { 40,120 },
   sound = "Waterfall_Rush",
-},
+}
 
 PREFABS.Pic_park_generic_3_liquid =
 {
@@ -103,9 +103,9 @@ PREFABS.Pic_park_generic_3_liquid =
 
   prob = 15,
 
-  liquid = true
+  liquid = true,
 
   map = "MAP12",
 
   z_fit = { 40,120 },
-},
+}

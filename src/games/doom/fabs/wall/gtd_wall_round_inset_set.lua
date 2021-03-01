@@ -16,7 +16,7 @@ PREFABS.Wall_round_inset_plain =
 
   x_fit = "frame",
   z_fit = {56,80},
-},
+}
 
 PREFABS.Wall_round_inset_3_bar_lights =
 {
@@ -24,7 +24,7 @@ PREFABS.Wall_round_inset_3_bar_lights =
   prob     = 15,
 
   map      = "MAP02",
-},
+}
 
 PREFABS.Wall_round_inset_3_bar_lights_diagonal =
 {
@@ -32,4 +32,4 @@ PREFABS.Wall_round_inset_3_bar_lights_diagonal =
   map      = "MAP03",
 
   where    = "diagonal",
-},
+}

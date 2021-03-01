@@ -26,7 +26,7 @@ PREFABS.Start_closet1 =
 
   sector_1  = { [0]=75, [1]=15, [2]=5, [3]=5, [8]=5, [12]=5, [13]=5 },
 
-},
+}
 
 PREFABS.Start_closet1_urban =
 {
@@ -49,7 +49,7 @@ PREFABS.Start_closet1_urban =
                  STONE2=50, STONE3=50 },
 
   sector_1  = { [0]=75, [1]=15, [2]=5, [3]=5, [8]=5, [12]=5, [13]=5 },
-},
+}
 
 PREFABS.Start_closet1_hell =
 {
@@ -72,4 +72,4 @@ PREFABS.Start_closet1_hell =
                  SKSNAKE1=50, SKSNAKE2=50, SP_FACE2=50, SP_ROCK1=50, SP_HOT1=50, SLOPPY1=50, SLOPPY2=50, STONE4=50, STONE6=50  },
 
   sector_1  = { [0]=75, [1]=15, [2]=5, [3]=5, [8]=5, [12]=5, [13]=5 },
-},
+}

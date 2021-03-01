@@ -16,11 +16,11 @@ PREFABS.Wall_hell_bottom_glass =
   bound_z2 = 128,
 
   z_fit  = "top",
-},
+}
 
 PREFABS.Wall_hell_bottom_glass_plain =
 {
   template = "Wall_hell_bottom_glass",
 
   map = "MAP02",
-},
+}

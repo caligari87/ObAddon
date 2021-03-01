@@ -16,7 +16,7 @@ PREFABS.Wall_armaetus_glass_huge_red =
   bound_z2 = 128,
 
   z_fit  = "frame",
-},
+}
 
 PREFABS.Wall_armaetus_glass_huge_red_diag =
 {
@@ -34,7 +34,7 @@ PREFABS.Wall_armaetus_glass_huge_red_diag =
   bound_z2 = 128,
 
   z_fit  = "frame",
-},
+}
 
 PREFABS.Wall_armaetus_glass_huge_orange =
 {
@@ -45,7 +45,7 @@ PREFABS.Wall_armaetus_glass_huge_orange =
   group    = "gtd_tall_glass_epic_orange",
 
   tex_GLASS1 = "GLASS6",
-},
+}
 
 PREFABS.Wall_armaetus_glass_huge_orange_diag =
 {
@@ -56,7 +56,7 @@ PREFABS.Wall_armaetus_glass_huge_orange_diag =
   group    = "gtd_tall_glass_epic_orange",
 
   tex_GLASS1 = "GLASS6",
-},
+}
 
 PREFABS.Wall_armaetus_glass_huge_blue =
 {
@@ -67,7 +67,7 @@ PREFABS.Wall_armaetus_glass_huge_blue =
   group    = "gtd_tall_glass_epic_blue",
 
   tex_GLASS1 = "GLASS2",
-},
+}
 
 PREFABS.Wall_armaetus_glass_huge_blue_diag =
 {
@@ -78,4 +78,4 @@ PREFABS.Wall_armaetus_glass_huge_blue_diag =
   group    = "gtd_tall_glass_epic_blue",
 
   tex_GLASS1 = "GLASS2",
-},
+}

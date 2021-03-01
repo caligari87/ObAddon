@@ -17,7 +17,7 @@ PREFABS.Wall_tech_windows_top_corner_light =
   bound_z2 = 128,
 
   z_fit  = "bottom",
-},
+}
 
 PREFABS.Wall_tech_windows_top_corner_light_diag =
 {
@@ -36,7 +36,7 @@ PREFABS.Wall_tech_windows_top_corner_light_diag =
   bound_z2 = 128,
 
   z_fit  = "bottom",
-},
+}
 
 PREFABS.Wall_tech_windows_top_corner_light_hell =
 {
@@ -45,7 +45,7 @@ PREFABS.Wall_tech_windows_top_corner_light_hell =
 
   tex_TEKLITE2 = "SKINEDGE",
   flat_CEIL3_4 = "BLOOD1",
-},
+}
 
 PREFABS.Wall_tech_windows_top_corner_light_diag_hell =
 {
@@ -54,4 +54,4 @@ PREFABS.Wall_tech_windows_top_corner_light_diag_hell =
 
   tex_TEKLITE2 = "SKINEDGE",
   flat_CEIL3_4 = "BLOOD1",
-},
+}

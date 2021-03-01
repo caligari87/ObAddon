@@ -17,7 +17,7 @@ PREFABS.Wall_garrett_overturned_cross =
   bound_z2 = 128,
 
   z_fit  = "frame",
-},
+}
 
 -- the following are made by MSSP, based on Garrett's original
 
@@ -29,4 +29,4 @@ PREFABS.Wall_gtd_skin_cross =
 
   prob      = 50,
   skip_prob = 66,
-},
+}

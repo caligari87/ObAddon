@@ -21,7 +21,7 @@ PREFABS.Wall_epic_collite_inset_straight_green =
 
   x_fit = "frame",
   z_fit = { 64-8,64+8 },
-},
+}
 
 PREFABS.Wall_epic_collite_inset_diagonal_green =
 {
@@ -44,7 +44,7 @@ PREFABS.Wall_epic_collite_inset_diagonal_green =
 
   x_fit = "frame",
   z_fit = { 64-8,64+8 },
-},
+}
 
 -- tech variant
 
@@ -59,7 +59,7 @@ PREFABS.Wall_epic_collite_inset_straight_green_tech =
   tex_SUPPORT3 = "DOORSTOP",
   tex_STEPTOP = "STEP4",
   flat_CEIL5_2 = "FLAT23",
-},
+}
 
 PREFABS.Wall_epic_collite_inset_diagonal_green_tech =
 {
@@ -72,7 +72,7 @@ PREFABS.Wall_epic_collite_inset_diagonal_green_tech =
   tex_SUPPORT3 = "DOORSTOP",
   tex_STEPTOP = "STEP4",
   flat_CEIL5_2 = "FLAT23",
-},
+}
 
 -- ORANGE version
 
@@ -83,7 +83,7 @@ PREFABS.Wall_epic_collite_inset_straight_orange =
   group = "gtd_collite_set_orange",
 
   tex_COLLITE1= "COLLITE2",
-},
+}
 
 PREFABS.Wall_epic_collite_inset_diagonal_orange =
 {
@@ -92,7 +92,7 @@ PREFABS.Wall_epic_collite_inset_diagonal_orange =
   group = "gtd_collite_set_orange",
 
   tex_COLLITE1= "COLLITE2",
-},
+}
 
 -- tech variant
 
@@ -108,7 +108,7 @@ PREFABS.Wall_epic_collite_inset_straight_orange_tech =
   tex_SUPPORT3 = "DOORSTOP",
   tex_STEPTOP = "STEP4",
   flat_CEIL5_2 = "FLAT23",
-},
+}
 
 PREFABS.Wall_epic_collite_inset_diagonal_orange_tech =
 {
@@ -122,7 +122,7 @@ PREFABS.Wall_epic_collite_inset_diagonal_orange_tech =
   tex_SUPPORT3 = "DOORSTOP",
   tex_STEPTOP = "STEP4",
   flat_CEIL5_2 = "FLAT23",
-},
+}
 
 -- BLUE version
 
@@ -133,7 +133,7 @@ PREFABS.Wall_epic_collite_inset_straight_blue =
   group = "gtd_collite_set_blue",
 
   tex_COLLITE1= "COLLITE3",
-},
+}
 
 PREFABS.Wall_epic_collite_inset_diagonal_blue =
 {
@@ -142,7 +142,7 @@ PREFABS.Wall_epic_collite_inset_diagonal_blue =
   group = "gtd_collite_set_blue",
 
   tex_COLLITE1= "COLLITE3",
-},
+}
 
 -- tech
 
@@ -158,7 +158,7 @@ PREFABS.Wall_epic_collite_inset_straight_blue_tech =
   tex_SUPPORT3 = "DOORSTOP",
   tex_STEPTOP = "STEP4",
   flat_CEIL5_2 = "FLAT23",
-},
+}
 
 PREFABS.Wall_epic_collite_inset_diagonal_blue_tech =
 {
@@ -172,7 +172,7 @@ PREFABS.Wall_epic_collite_inset_diagonal_blue_tech =
   tex_SUPPORT3 = "DOORSTOP",
   tex_STEPTOP = "STEP4",
   flat_CEIL5_2 = "FLAT23",
-},
+}
 
 -- RED version
 
@@ -183,7 +183,7 @@ PREFABS.Wall_epic_collite_inset_straight_red =
   group = "gtd_collite_set_red",
 
   tex_COLLITE1= "RDWAL01",
-},
+}
 
 PREFABS.Wall_epic_collite_inset_diagonal_red =
 {
@@ -192,7 +192,7 @@ PREFABS.Wall_epic_collite_inset_diagonal_red =
   group = "gtd_collite_set_red",
 
   tex_COLLITE1= "RDWAL01",
-},
+}
 
 PREFABS.Wall_epic_collite_inset_straight_red_tech =
 {
@@ -206,7 +206,7 @@ PREFABS.Wall_epic_collite_inset_straight_red_tech =
   tex_SUPPORT3 = "DOORSTOP",
   tex_STEPTOP = "STEP4",
   flat_CEIL5_2 = "FLAT23",
-},
+}
 
 PREFABS.Wall_epic_collite_inset_diagonal_red_tech =
 {
@@ -220,4 +220,4 @@ PREFABS.Wall_epic_collite_inset_diagonal_red_tech =
   tex_SUPPORT3 = "DOORSTOP",
   tex_STEPTOP = "STEP4",
   flat_CEIL5_2 = "FLAT23",
-},
+}

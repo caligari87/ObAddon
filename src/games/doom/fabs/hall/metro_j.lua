@@ -17,8 +17,8 @@ PREFABS.Hallway_metro_term =
 
   deep   = 16,
 
-  sector_1  = { [0]=90, [1]=15 },
-},
+  sector_1  = { [0]=90, [1]=15 }
+}
 
 PREFABS.Hallway_metro_secret =
 {
@@ -27,8 +27,8 @@ PREFABS.Hallway_metro_secret =
   map  = "MAP02",
   key  = "secret",
 
-  sector_1  = { [0]=90, [1]=15 },
-},
+  sector_1  = { [0]=90, [1]=15 }
+}
 
 -- slopeless engine fallbacks
 
@@ -41,7 +41,7 @@ PREFABS.Hallway_metro_term_boxy =
   map = "MAP10",
 
   prob = 10,
-},
+}
 
 PREFABS.Hallway_metro_secret_boxy =
 {
@@ -53,4 +53,4 @@ PREFABS.Hallway_metro_secret_boxy =
   key = "secret",
 
   prob = 10,
-},
+}

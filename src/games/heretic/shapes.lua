@@ -19,7 +19,7 @@
 --
 ------------------------------------------------------------------------
 
-DOOM.SHAPE_GRAMMAR =
+HERETIC.SHAPE_GRAMMAR =
 {
 
 ROOT_1 =
@@ -4150,7 +4150,7 @@ GROW_CAGE_SIMPLE_CORNER =
   cage_mode = "fancy",
 },
 
-GROW_CAGE_DOOM_MAP01 =
+GROW_CAGE_HERETIC_MAP01 =
 {
   prob = 15,
   skip_prob = 75,
@@ -4168,7 +4168,7 @@ GROW_CAGE_DOOM_MAP01 =
   },
 },
 
-GROW_CAGE_DOOM_MAP01_PILLARED =
+GROW_CAGE_HERETIC_MAP01_PILLARED =
 {
   prob = 15,
   skip_prob = 75,

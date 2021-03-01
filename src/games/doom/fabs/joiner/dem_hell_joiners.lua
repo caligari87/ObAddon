@@ -28,8 +28,8 @@ PREFABS.Joiner_mirrors1 =
   x_fit = "frame",
   y_fit  = "frame",
 
-  can_flip = true
-},
+  can_flip = true,
+}
 
 --room of mirrors2,
 PREFABS.Joiner_mirrors2 =
@@ -41,7 +41,7 @@ PREFABS.Joiner_mirrors2 =
 
   seed_w = 2,
   seed_h = 3,
-},
+}
 
 --rift1,
 PREFABS.Joiner_rift1 =
@@ -67,10 +67,10 @@ PREFABS.Joiner_rift1 =
   x_fit = "frame",
   y_fit  = "frame",
 
-  can_flip = true
+  can_flip = true,
 
   texture_pack = "armaetus",
-},
+}
 
 --rift2,
 PREFABS.Joiner_rift2 =
@@ -96,10 +96,10 @@ PREFABS.Joiner_rift2 =
   x_fit = "frame",
   y_fit  = "frame",
 
-  can_flip = true
+  can_flip = true,
 
   texture_pack = "armaetus",
-},
+}
 
 
 --rift3,
@@ -126,10 +126,10 @@ PREFABS.Joiner_rift3 =
   x_fit = "frame",
   y_fit  = "frame",
 
-  can_flip = true
+  can_flip = true,
 
   texture_pack = "armaetus",
-},
+}
 
 --rift4,
 PREFABS.Joiner_rift4 =
@@ -155,10 +155,10 @@ PREFABS.Joiner_rift4 =
   x_fit = "frame",
   y_fit  = "frame",
 
-  can_flip = true
+  can_flip = true,
 
   texture_pack = "armaetus",
-},
+}
 
 --room of mirrors1V2,
 PREFABS.Joiner_mirrors1V2 =
@@ -186,8 +186,8 @@ PREFABS.Joiner_mirrors1V2 =
   x_fit = "frame",
   y_fit  = "frame",
 
-  can_flip = true
-},
+  can_flip = true,
+}
 
 --room of mirrors2V2,
 PREFABS.Joiner_mirrors2V2 =
@@ -197,28 +197,28 @@ PREFABS.Joiner_mirrors2V2 =
 
   seed_w = 2,
   seed_h = 3,
-},
+}
 
 --room of mirrors1V3,
 PREFABS.Joiner_mirrors1V3 =
 {
   template = "Joiner_mirrors1V2",
   map    = "MAP09",
-},
+}
 
 --room of mirrors1V4,
 PREFABS.Joiner_mirrors1V4 =
 {
   template = "Joiner_mirrors1V2",
   map    = "MAP10",
-},
+}
 
 --room of mirrors3 mazeish
 PREFABS.Joiner_mirrors3 =
 {
   template = "Joiner_mirrors1V2",
   map    = "MAP11",
-},
+}
 
 --room of mirrors4 mazeish
 PREFABS.Joiner_mirrors4 =
@@ -228,7 +228,7 @@ PREFABS.Joiner_mirrors4 =
 
   seed_w = 2,
   seed_h = 3,
-},
+}
 
 --rift1 trapped
 PREFABS.Joiner_rift1trap =
@@ -256,10 +256,10 @@ PREFABS.Joiner_rift1trap =
   x_fit = "frame",
   y_fit  = "frame",
 
-  can_flip = true
+  can_flip = true,
 
   texture_pack = "armaetus",
-},
+}
 
 --rift4 trapped
 PREFABS.Joiner_rift4trap =
@@ -287,10 +287,10 @@ PREFABS.Joiner_rift4trap =
   x_fit = "frame",
   y_fit  = "frame",
 
-  can_flip = true
+  can_flip = true,
 
   texture_pack = "armaetus",
-},
+}
 
 --room of mirrors1 secret
 PREFABS.Joiner_mirrors1S =
@@ -320,14 +320,14 @@ PREFABS.Joiner_mirrors1S =
   x_fit = "frame",
   y_fit  = "frame",
 
-  can_flip = true
+  can_flip = true,
 
   thing_2013 =
   {
     soul = 50,
     blue_armor = 50,
   },
-},
+}
 
 --room of mirrors2 secret
 PREFABS.Joiner_mirrors2S =
@@ -337,7 +337,7 @@ PREFABS.Joiner_mirrors2S =
 
   seed_w = 2,
   seed_h = 3,
-},
+}
 
 --room of eyes1,
 PREFABS.Joiner_eyes1 =
@@ -363,10 +363,10 @@ PREFABS.Joiner_eyes1 =
   x_fit = "frame",
   y_fit  = "frame",
 
-  can_flip = true
+  can_flip = true,
 
 
-},
+}
 
 --room of eyes2,
 PREFABS.Joiner_eyes2 =
@@ -392,10 +392,10 @@ PREFABS.Joiner_eyes2 =
   x_fit = "frame",
   y_fit  = "frame",
 
-  can_flip = true
+  can_flip = true,
 
 
-},
+}
 
 --room of eyes3,
 PREFABS.Joiner_eyes3 =
@@ -422,10 +422,10 @@ PREFABS.Joiner_eyes3 =
   x_fit = "frame",
   y_fit  = "frame",
 
-  can_flip = true
+  can_flip = true,
 
 
-},
+}
 
 --room of eyes4,
 PREFABS.Joiner_eyes4 =
@@ -452,10 +452,10 @@ PREFABS.Joiner_eyes4 =
   x_fit = "frame",
   y_fit  = "frame",
 
-  can_flip = true
+  can_flip = true,
 
 
-},
+}
 
 --room of eyes1secret
 PREFABS.Joiner_eyes1s =
@@ -483,7 +483,7 @@ PREFABS.Joiner_eyes1s =
   x_fit = "frame",
   y_fit  = "frame",
 
-  can_flip = true
+  can_flip = true,
 
   thing_2023 =
   {
@@ -494,7 +494,7 @@ PREFABS.Joiner_eyes1s =
     goggles = 50,
   },
 
-},
+}
 
 --room of eyes2secret
 PREFABS.Joiner_eyes2s =
@@ -522,7 +522,7 @@ PREFABS.Joiner_eyes2s =
   x_fit = "frame",
   y_fit  = "frame",
 
-  can_flip = true
+  can_flip = true,
 
   thing_2023 =
   {
@@ -532,4 +532,4 @@ PREFABS.Joiner_eyes2s =
     allmap = 50,
     goggles = 50,
   },
-},
+}

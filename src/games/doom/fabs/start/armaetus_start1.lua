@@ -21,7 +21,7 @@ PREFABS.Start_armaetus_start_center_pillar =
     DOOR1=50,
     DOOR3=50,
   },
-},
+}
 
 PREFABS.Start_armaetus_start_center_pillar_hell =
 {
@@ -42,7 +42,7 @@ PREFABS.Start_armaetus_start_center_pillar_hell =
     WOODMET1=50,
     WOOD4=50,
   },
-},
+}
 
 PREFABS.Start_armaetus_start_lift =
 {
@@ -67,7 +67,7 @@ PREFABS.Start_armaetus_start_lift =
     DOOR1=50,
     DOOR3=50,
   },
-},
+}
 
 PREFABS.Start_armaetus_start_lift_hell =
 {
@@ -89,13 +89,13 @@ PREFABS.Start_armaetus_start_lift_hell =
     WOODMET1=50,
     WOOD4=50,
   },
-},
+}
 
 PREFABS.Start_armaetus_start_lift_downwards =
 {
   template = "Start_armaetus_start_lift",
   map = "MAP03",
-},
+}
 
 PREFABS.Start_armaetus_start_lift_hell_downwards =
 {
@@ -117,4 +117,4 @@ PREFABS.Start_armaetus_start_lift_hell_downwards =
     WOODMET1=50,
     WOOD4=50,
   },
-},
+}

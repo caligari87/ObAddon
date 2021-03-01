@@ -28,7 +28,7 @@ PREFABS.Joiner_archy1 =
     green_torch_sm = 20,
   },
 
-},
+}
 
 
 --
@@ -43,7 +43,7 @@ PREFABS.Joiner_archy_workaround =
 
  x_fit = "frame",
  y_fit = "stretch",
-},
+}
 
 
 
@@ -63,7 +63,7 @@ PREFABS.Joiner_archy1_hell =
   flat_FLAT1 = "FLOOR6_2",
   tex_STONE2 = "ASHWALL2",
 
-},
+}
 
 
 PREFABS.Joiner_archy1_wide =
@@ -92,7 +92,7 @@ PREFABS.Joiner_archy1_wide =
     green_torch_sm = 30,
   },
 
-},
+}
 
 
 PREFABS.Joiner_archy1_wide_hell =
@@ -112,4 +112,4 @@ PREFABS.Joiner_archy1_wide_hell =
   flat_FLAT1 = "FLOOR6_2",
   tex_STONE2 = "ASHWALL2",
 
-},
+}

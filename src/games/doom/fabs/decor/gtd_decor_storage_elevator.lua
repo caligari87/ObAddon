@@ -17,5 +17,5 @@ PREFABS.Decor_tech_storage_elevator =
 
   sink_mode = "never",
 
-  z_fit = { 68+4,96-4 },
-},
+  z_fit = { 68+4,96-4 }
+}

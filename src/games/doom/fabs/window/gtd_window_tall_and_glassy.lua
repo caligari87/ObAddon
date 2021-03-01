@@ -19,7 +19,7 @@ PREFABS.Window_tall_and_glassy_1 =
   bound_z2 = 96,
 
   z_fit = {28,72},
-},
+}
 
 PREFABS.Window_tall_and_glassy_2 =
 {
@@ -27,7 +27,7 @@ PREFABS.Window_tall_and_glassy_2 =
   map      = "MAP02",
 
   seed_w   = 2,
-},
+}
 
 PREFABS.Window_tall_and_glassy_3 =
 {
@@ -35,4 +35,4 @@ PREFABS.Window_tall_and_glassy_3 =
   map      = "MAP03",
 
   seed_w   = 3,
-},
+}

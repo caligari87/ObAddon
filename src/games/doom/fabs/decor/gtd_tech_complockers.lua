@@ -15,4 +15,4 @@ PREFABS.Decor_tech_complockers =
   bound_z2 = 128,
 
   z_fit  = "top",
-},
+}

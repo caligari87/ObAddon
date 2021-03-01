@@ -31,7 +31,7 @@ PREFABS.Decor_dem_cavevines1 =
 
 texture_pack = "armaetus",
 
-},
+}
 
 PREFABS.Decor_dem_cavevines2 =
 {
@@ -39,7 +39,7 @@ PREFABS.Decor_dem_cavevines2 =
   map    = "MAP02",
 
 
-},
+}
 
 PREFABS.Decor_dem_cavevines2 =
 {
@@ -47,7 +47,7 @@ PREFABS.Decor_dem_cavevines2 =
   map    = "MAP03",
 
 
-},
+}
 
 PREFABS.Decor_dem_cavevines2 =
 {
@@ -55,7 +55,7 @@ PREFABS.Decor_dem_cavevines2 =
   map    = "MAP04",
 
 
-},
+}
 
 PREFABS.Decor_dem_cavevines2 =
 {
@@ -63,7 +63,7 @@ PREFABS.Decor_dem_cavevines2 =
   map    = "MAP05",
 
 
-},
+}
 
 PREFABS.Decor_dem_cavevines2 =
 {
@@ -71,7 +71,7 @@ PREFABS.Decor_dem_cavevines2 =
   map    = "MAP06",
 
 
-},
+}
 
 PREFABS.Decor_dem_cavevines2 =
 {
@@ -79,7 +79,7 @@ PREFABS.Decor_dem_cavevines2 =
   map    = "MAP07",
 
 
-},
+}
 
 PREFABS.Decor_dem_cavevines2 =
 {
@@ -87,7 +87,7 @@ PREFABS.Decor_dem_cavevines2 =
   map    = "MAP08",
 
 
-},
+}
 
 PREFABS.Decor_dem_cavevines2 =
 {
@@ -95,7 +95,7 @@ PREFABS.Decor_dem_cavevines2 =
   map    = "MAP09",
 
 
-},
+}
 
 
 ---- campfireC ----
@@ -122,7 +122,7 @@ PREFABS.Decor_dem_campfireC =
 texture_pack = "armaetus",
 
 
-},
+}
 
 ---- cave stalactites/stalagmites ----
 
@@ -144,9 +144,9 @@ PREFABS.Decor_dem_stala1 =
 
   z_fit = "stretch",
 
-  liquid = true
+  liquid = true,
 
-},
+}
 
 PREFABS.Decor_dem_stala2 =
 {
@@ -156,37 +156,37 @@ PREFABS.Decor_dem_stala2 =
   liquid = false
 
 
-},
+}
 
 PREFABS.Decor_dem_stala3 =
 {
   template  = "Decor_dem_stala1",
   map    = "MAP13",
 
-  liquid = true
+  liquid = true,
 
 
-},
+}
 
 PREFABS.Decor_dem_stala4 =
 {
   template  = "Decor_dem_stala1",
   map    = "MAP14",
 
-  liquid = true
+  liquid = true,
 
 
-},
+}
 
 PREFABS.Decor_dem_stala5 =
 {
   template  = "Decor_dem_stala1",
   map    = "MAP15",
 
-  liquid = true
+  liquid = true,
 
 
-},
+}
 
 PREFABS.Decor_dem_stala6 =
 {
@@ -196,7 +196,7 @@ PREFABS.Decor_dem_stala6 =
   liquid = false
 
 
-},
+}
 
 PREFABS.Decor_dem_stala7 =
 {
@@ -205,16 +205,16 @@ PREFABS.Decor_dem_stala7 =
 
   liquid = false
 
-},
+}
 
 PREFABS.Decor_dem_stala8 =
 {
   template  = "Decor_dem_stala1",
   map    = "MAP18",
 
-  liquid = true
+  liquid = true,
 
-},
+}
 
 PREFABS.Decor_dem_stala9 =
 {
@@ -223,7 +223,7 @@ PREFABS.Decor_dem_stala9 =
 
   liquid = false
 
-},
+}
 
 ---- cave stalactites/stalagmites with vines ----
 
@@ -251,47 +251,47 @@ PREFABS.Decor_dem_stalav1 =
 
 texture_pack = "armaetus",
 
-  liquid = true
+  liquid = true,
 
-},
+}
 
 PREFABS.Decor_dem_stalav2 =
 {
   template  = "Decor_dem_stalav1",
   map    = "MAP21",
 
-  liquid = false
+  liquid = false,
 
-  z_fit = { 12,128 },
-},
+  z_fit = { 12,128 }
+}
 
 PREFABS.Decor_dem_stalav3 =
 {
   template  = "Decor_dem_stalav1",
   map    = "MAP22",
 
-  liquid = true
+  liquid = true,
 
-  z_fit = { 12,128 },
-},
+  z_fit = { 12,128 }
+}
 
 PREFABS.Decor_dem_stalav4 =
 {
   template  = "Decor_dem_stalav1",
   map    = "MAP23",
 
-  liquid = true
+  liquid = true,
 
-  z_fit = { 12,128 },
-},
+  z_fit = { 12,128 }
+}
 
 PREFABS.Decor_dem_stalav5 =
 {
   template  = "Decor_dem_stalav1",
   map    = "MAP24",
 
-  liquid = false
-},
+  liquid = false,
+}
 
 ---- outdoors and cave ruins ----
 
@@ -314,14 +314,14 @@ PREFABS.Decor_dem_ruins1 =
 
 texture_pack = "armaetus",
 
-},
+}
 
 PREFABS.Decor_dem_ruins2 =
 {
   template  = "Decor_dem_ruins1",
   map    = "MAP26",
 
-},
+}
 
 PREFABS.Decor_dem_ruinsjs1 =
 {
@@ -352,13 +352,13 @@ texture_pack = "armaetus",
     invis = 50,
     allmap = 50,
     goggles = 50,
-  },
+  }
 
-},
+}
 
 PREFABS.Decor_dem_ruinsjs2 =
 {
   template  = "Decor_dem_ruinsjs1",
   map    = "MAP28",
 
-},
+}

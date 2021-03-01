@@ -18,9 +18,9 @@ PREFABS.Light_typh_tech =
   light_color = "orange",
 
   -- use the occasional-blink FX (fairly rarely)
-  sector_1  = { [0]=90, [1]=15 },
+  sector_1  = { [0]=90, [1]=15 }
 
-},
+}
 
 -- red circles with green cover
 PREFABS.Light_typh_tech_alt =
@@ -32,7 +32,7 @@ PREFABS.Light_typh_tech_alt =
   flat_TLITE6_6 = "TLITE6_5",
   flat_CEIL5_2 = "CEIL5_1",
   tex_BRONZE1 = "BROWNGRN",
-},
+}
 
 -- gray light, gray cover version
 PREFABS.Light_typh_tech_alt2 =
@@ -44,7 +44,7 @@ PREFABS.Light_typh_tech_alt2 =
   flat_TLITE6_6 = "FLAT2",
   flat_CEIL5_2 = "FLAT19",
   tex_BRONZE1 = "GRAY7",
-},
+}
 
 PREFABS.Light_typh_flourescent_lamp =
 {
@@ -53,7 +53,7 @@ PREFABS.Light_typh_flourescent_lamp =
   prob = 80,
 
   light_color = "white",
-},
+}
 
 -- blue lights, same shell
 PREFABS.Light_typh_flourescent_lamp_alt =
@@ -66,7 +66,7 @@ PREFABS.Light_typh_flourescent_lamp_alt =
 
   flat_FLAT23 = "FLAT14",
   tex_LITE3 = "LITEBLU4",
-},
+}
 
 -- red lights, same shell
 PREFABS.Light_typh_flourescent_lamp_alt2 =
@@ -79,7 +79,7 @@ PREFABS.Light_typh_flourescent_lamp_alt2 =
 
   flat_FLAT23 = "FLAT5_3",
   tex_LITE3 = "REDWALL",
-},
+}
 
 -- white lights, rusty inside shell
 PREFABS.Light_typh_flourescent_lamp_alt3 =
@@ -90,7 +90,7 @@ PREFABS.Light_typh_flourescent_lamp_alt3 =
 
   flat_CEIL5_1 = "CEIL5_2",
   tex_COMPSPAN = "SW1GARG",
-},
+}
 
 -- blue lights, rusty inside shell
 PREFABS.Light_typh_flourescent_lamp_alt4 =
@@ -105,7 +105,7 @@ PREFABS.Light_typh_flourescent_lamp_alt4 =
   flat_FLAT23 = "FLAT14",
   tex_COMPSPAN = "SW1GARG",
   tex_LITE3 = "LITEBLU4",
-},
+}
 
 -- red lights, rusty inside shell
 PREFABS.Light_typh_flourescent_lamp_alt5 =
@@ -120,7 +120,7 @@ PREFABS.Light_typh_flourescent_lamp_alt5 =
   flat_FLAT23 = "FLAT5_3",
   tex_COMPSPAN = "SW1GARG",
   tex_LITE3 = "REDWALL",
-},
+}
 
 PREFABS.Light_typh_sticks =
 {
@@ -131,7 +131,7 @@ PREFABS.Light_typh_sticks =
   light_color = "white",
 
   bound_z1 = -16,
-},
+}
 
 PREFABS.Light_typh_sticks_alt =
 {
@@ -144,7 +144,7 @@ PREFABS.Light_typh_sticks_alt =
   light_color = "blue",
 
   tex_LITE5 = "LITEBLU4",
-},
+}
 
 PREFABS.Light_typh_sticks_alt2 =
 {
@@ -158,7 +158,7 @@ PREFABS.Light_typh_sticks_alt2 =
 
   flat_FLAT23 = "FLAT5_3",
   tex_LITE5 = "REDWALL",
-},
+}
 
 PREFABS.Light_typh_short =
 {
@@ -171,7 +171,7 @@ PREFABS.Light_typh_short =
   light_color = "white",
 
   height = 184,
-},
+}
 
 PREFABS.Light_typh_short_alt =
 {
@@ -186,7 +186,7 @@ PREFABS.Light_typh_short_alt =
   light_color = "blue",
 
   tex_LITE5 = "LITEBLU1",
-},
+}
 
 PREFABS.Light_typh_short_alt2 =
 {
@@ -202,4 +202,4 @@ PREFABS.Light_typh_short_alt2 =
 
   flat_FLAT23 = "FLAT5_3",
   tex_LITE5 = "REDWALL",
-},
+}

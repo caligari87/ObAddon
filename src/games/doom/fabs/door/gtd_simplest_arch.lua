@@ -18,7 +18,7 @@ PREFABS.Arch_simplest =
 
   bound_z1 = 0,
   bound_z2 = 128,
-},
+}
 
 PREFABS.Arch_simplest_columned =
 {
@@ -27,8 +27,8 @@ PREFABS.Arch_simplest_columned =
 
   seed_w = 2,
 
-  x_fit = { 32,104 , 152,224 },
-},
+  x_fit = { 32,104 , 152,224 }
+}
 
 PREFABS.Arch_simplest_columned_2X =
 {
@@ -37,5 +37,5 @@ PREFABS.Arch_simplest_columned_2X =
 
   seed_w = 3,
 
-  x_fit = { 32,104 , 152,232, 280,352 },
-},
+  x_fit = { 32,104 , 152,232, 280,352 }
+}

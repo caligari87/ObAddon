@@ -19,8 +19,8 @@ PREFABS.Item_gtd_secret_cage =
   over = -16,
 
   x_fit = { 68,76 , 180,188 },
-  z_fit = { 96,100 },
-},
+  z_fit = { 96,100 }
+}
 
 PREFABS.Item_gtd_secret_cage_hell =
 {
@@ -29,4 +29,4 @@ PREFABS.Item_gtd_secret_cage_hell =
   theme = "hell",
 
   tex_LITE3 = "FIREWALL",
-},
+}

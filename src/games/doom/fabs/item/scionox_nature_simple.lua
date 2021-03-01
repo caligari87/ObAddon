@@ -8,7 +8,7 @@ PREFABS.Item_scionox_nature_simple_debris =
 
   size = 48,
   prob = 75,
-},
+}
 
 PREFABS.Item_scionox_nature_simple_boulder =
 {
@@ -20,7 +20,7 @@ PREFABS.Item_scionox_nature_simple_boulder =
   height = 152,
 
   map = "MAP02",
-},
+}
 
 PREFABS.Item_scionox_nature_simple_stalagmites =
 {
@@ -30,7 +30,7 @@ PREFABS.Item_scionox_nature_simple_stalagmites =
   height = 128,
 
   map = "MAP03",
-},
+}
 
 PREFABS.Item_scionox_nature_simple_pool =
 {
@@ -38,9 +38,9 @@ PREFABS.Item_scionox_nature_simple_pool =
 
   env  = "nature",
 
-  liquid = true
+  liquid = true,
 
   size = 72,
 
   map = "MAP04",
-},
+}

@@ -22,7 +22,7 @@ PREFABS.Stair_wide_v_curve_3x1 =
     [2028] = 1,
     [86] = 1,
   },
-},
+}
 
 PREFABS.Stair_wide_v_curve_3x1_hell =
 {
@@ -37,4 +37,4 @@ PREFABS.Stair_wide_v_curve_3x1_hell =
     [45] = 1,
     [46] = 1,
   },
-},
+}

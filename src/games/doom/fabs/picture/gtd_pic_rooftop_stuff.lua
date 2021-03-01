@@ -3,7 +3,7 @@ PREFABS.Pic_HVAC_unit =
   file   = "picture/gtd_pic_rooftop_stuff.wad",
   map    = "MAP01",
 
-  prob   = 25 --35,
+  prob   = 25, --35,
   theme = "!hell",
 
   env   = "!cave",
@@ -24,7 +24,7 @@ PREFABS.Pic_HVAC_unit =
   y_fit = "top",
 
   sound = "Machine_Ventilation",
-},
+}
 
 PREFABS.Pic_HVAC_unit_outdoor =
 {
@@ -35,7 +35,7 @@ PREFABS.Pic_HVAC_unit_outdoor =
   env = "outdoor",
 
   open_to_sky = 1,
-},
+}
 
 PREFABS.Pic_septic_tank =
 {
@@ -43,7 +43,7 @@ PREFABS.Pic_septic_tank =
   map = "MAP02",
 
   sound = "Water_Tank",
-},
+}
 
 PREFABS.Pic_air_filter =
 {
@@ -51,4 +51,4 @@ PREFABS.Pic_air_filter =
   map = "MAP03",
 
   sound = "Machine_Ventilation",
-},
+}

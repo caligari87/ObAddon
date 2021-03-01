@@ -19,8 +19,8 @@ PREFABS.Joiner_gtd_bridge_action =
   x_fit = { 72,76 , 180,184 },
   y_fit = { 64,96 },
 
-  can_flip = true
-},
+  can_flip = true,
+}
 
 PREFABS.Joiner_gtd_bridge_action_hell =
 {
@@ -34,4 +34,4 @@ PREFABS.Joiner_gtd_bridge_action_hell =
 
   x_fit = { 96,104 , 280,288 },
   y_fit = { 40,48 , 112,120 },
-},
+}

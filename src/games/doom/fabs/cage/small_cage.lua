@@ -16,5 +16,5 @@ PREFABS.Cage_small_1 =
 
   bound_z1 = 0,
   bound_z2 = 120,
-},
+}
 

@@ -10,4 +10,4 @@ PREFABS.Post =
   size   = 48,
 
   bound_z1 = 0,
-},
+}

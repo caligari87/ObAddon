@@ -16,13 +16,13 @@ PREFABS.Wall_gtd_writhing_mass_wall_1 =
   bound_z2 = 128,
 
   z_fit = "top",
-},
+}
 
 PREFABS.Wall_gtd_writhing_mass_wall_2 =
 {
   template = "Wall_gtd_writhing_mass_wall_1",
   map      = "MAP02",
-},
+}
 
 PREFABS.Wall_gtd_writhing_mass_diag_1 =
 {
@@ -42,4 +42,4 @@ PREFABS.Wall_gtd_writhing_mass_diag_1 =
   bound_z2 = 128,
 
   z_fit = "top",
-},
+}

@@ -19,5 +19,5 @@ PREFABS.Joiner_simplest =
   x_fit = { 60,68 },
   y_fit = { 72,88 },
 
-  can_flip = true
-},
+  can_flip = true,
+}

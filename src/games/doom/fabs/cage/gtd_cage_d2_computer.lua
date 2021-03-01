@@ -30,8 +30,8 @@ PREFABS.Cage_wall_d2_computer_tech =
   {
     [2014] = 50,
     [0] = 50,
-  },
-},
+  }
+}
 
 PREFABS.Cage_wall_d2_computer_hell =
 {
@@ -42,7 +42,7 @@ PREFABS.Cage_wall_d2_computer_hell =
   theme = "hell",
 
   tex_SUPPORT3 = "SUPPORT3",
-},
+}
 
 PREFABS.Cage_wall_d2_computer_tech_flipped =
 {
@@ -51,7 +51,7 @@ PREFABS.Cage_wall_d2_computer_tech_flipped =
   map = "MAP03",
 
   tex_SUPPORT3 = "SUPPORT2",
-},
+}
 
 PREFABS.Cage_wall_d2_computer_hell_flipped =
 {
@@ -62,7 +62,7 @@ PREFABS.Cage_wall_d2_computer_hell_flipped =
   theme = "hell",
 
   tex_SUPPORT3 = "SUPPORT3",
-},
+}
 
 PREFABS.Cage_freestanding_d2_computer_tech =
 {
@@ -86,8 +86,8 @@ PREFABS.Cage_freestanding_d2_computer_tech =
     [0] = 60,
   },
 
-  plain_ceiling = true
-},
+  plain_ceiling = true,
+}
 
 PREFABS.Cage_freestanding_d2_computer_urban =
 {
@@ -98,8 +98,8 @@ PREFABS.Cage_freestanding_d2_computer_urban =
   tex_COMPWERD = "WOOD4",
   flat_CEIL5_1 = "FLAT5_1",
 
-  plain_ceiling = true
-},
+  plain_ceiling = true,
+}
 
 PREFABS.Cage_freestanding_d2_computer_hell =
 {
@@ -109,5 +109,5 @@ PREFABS.Cage_freestanding_d2_computer_hell =
 
   theme = "hell",
 
-  plain_ceiling = true
-},
+  plain_ceiling = true,
+}

@@ -26,7 +26,7 @@ PREFABS.Quest_marine_teleporter_ambush_tech =
 
   x_fit = { 92,100 , 156,164 },
   y_fit = "top",
-},
+}
 
 PREFABS.Quest_teleporter_ambush_hell =
 {
@@ -36,4 +36,4 @@ PREFABS.Quest_teleporter_ambush_hell =
   theme    = "hell",
 
   x_fit    = "frame",
-},
+}

@@ -16,7 +16,7 @@ PREFABS.Item_lowering_remote1 =
 
   tag_1  = "?door_tag",
   door_action = "S1_LowerFloor",
-},
+}
 
 PREFABS.Item_lowering_remote1a =
 {
@@ -26,7 +26,7 @@ PREFABS.Item_lowering_remote1a =
   prob   = 80,
 
   height = 144,
-},
+}
 
 -- General purpose, non-Tech wood
 PREFABS.Item_lowering_remote7 =
@@ -48,7 +48,7 @@ PREFABS.Item_lowering_remote7 =
   tex_COMPSPAN = "WOOD12",
   flat_CEIL5_1 = "FLAT5_1",
 
-},
+}
 
 PREFABS.Item_lowering_remote7a =
 {
@@ -58,7 +58,7 @@ PREFABS.Item_lowering_remote7a =
   prob   = 80,
 
   height = 144,
-},
+}
 
 -- General purpose cement
 PREFABS.Item_lowering_remote8 =
@@ -79,7 +79,7 @@ PREFABS.Item_lowering_remote8 =
   tex_COMPSPAN = "CEMENT7",
   flat_CEIL5_1 = "FLAT19",
 
-},
+}
 
 PREFABS.Item_lowering_remote8a =
 {
@@ -89,7 +89,7 @@ PREFABS.Item_lowering_remote8a =
   prob   = 80,
 
   height = 144,
-},
+}
 
 
 -- Urban ones here --
@@ -108,7 +108,7 @@ PREFABS.Item_lowering_remote2 =
 
   tag_1  = "?door_tag",
   door_action = "S1_LowerFloor",
-},
+}
 
 PREFABS.Item_lowering_remote2a =
 {
@@ -119,7 +119,7 @@ PREFABS.Item_lowering_remote2a =
   prob   = 80,
 
   height = 144,
-},
+}
 
 -- Hell ones here --
 
@@ -138,9 +138,9 @@ PREFABS.Item_lowering_remote3 =
   tag_1  = "?door_tag",
   door_action = "S1_LowerFloor",
 
-  tex_MARBLE2 = { MARBLE2=50, MARBLE3=50, MARBGRAY=50 },
+  tex_MARBLE2 = { MARBLE2=50, MARBLE3=50, MARBGRAY=50 }
 
-},
+}
 
 PREFABS.Item_lowering_remote3a =
 {
@@ -151,7 +151,7 @@ PREFABS.Item_lowering_remote3a =
   prob   = 80,
 
   height = 144,
-},
+}
 
 -- Tech exclusive here --
 
@@ -172,9 +172,9 @@ PREFABS.Item_lowering_remote4 =
   tag_1  = "?door_tag",
   door_action = "S1_LowerFloor",
 
-  tex_TEKWALL1 = { TEKWALL1=50, TEKWALL4=50, TEKGREN1=50 },
+  tex_TEKWALL1 = { TEKWALL1=50, TEKWALL4=50, TEKGREN1=50 }
 
-},
+}
 
 PREFABS.Item_lowering_remote4a =
 {
@@ -185,7 +185,7 @@ PREFABS.Item_lowering_remote4a =
   prob   = 80,
 
   height = 144,
-},
+}
 
 -- Stoney
 PREFABS.Item_lowering_remote6 =
@@ -207,7 +207,7 @@ PREFABS.Item_lowering_remote6 =
   tex_COMPSPAN = "STONE",
   flat_CEIL5_1 = "FLAT5_4",
 
-},
+}
 
 PREFABS.Item_lowering_remote6a =
 {
@@ -218,7 +218,7 @@ PREFABS.Item_lowering_remote6a =
   prob   = 80,
 
   height = 144,
-},
+}
 
 -- Bluey
 PREFABS.Item_lowering_remote9 =
@@ -239,7 +239,7 @@ PREFABS.Item_lowering_remote9 =
   tex_TEKWALL1 = "COMPBLUE",
   tex_COMPSPAN = "TEKWALL4",
 
-},
+}
 
 PREFABS.Item_lowering_remote6a =
 {
@@ -250,4 +250,4 @@ PREFABS.Item_lowering_remote6a =
   prob   = 80,
 
   height = 144,
-},
+}

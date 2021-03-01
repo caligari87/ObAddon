@@ -16,16 +16,16 @@ PREFABS.Decor_armaetus_sky_penta =
   bound_z2 = 144,
 
   z_fit = "bottom",
-},
+}
 
 PREFABS.Decor_gtd_sky_reticule =
 {
   template = "Decor_armaetus_sky_penta",
   map = "MAP02",
-},
+}
 
 PREFABS.Decor_gtd_sky_bars =
 {
   template = "Decor_armaetus_sky_penta",
   map = "MAP03",
-},
+}

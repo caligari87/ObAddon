@@ -22,14 +22,14 @@ PREFABS.Joiner_gtd_basement_door_plain =
 
   delta_h  = 64,
   nearby_h = 96,
-  can_flip = true
-},
+  can_flip = true,
+}
 
 PREFABS.Joiner_gtd_basement_door_plain_fenced =
 {
   template = "Joiner_gtd_basement_door_plain",
   map = "MAP02",
-},
+}
 
 -- hell version
 
@@ -45,7 +45,7 @@ PREFABS.Joiner_gtd_basement_door_plain_hell =
   tex_DOOR1 = "WOODMET2",
   tex_MIDSPACE = "MIDGRATE",
   flat_FLAT19 = "CEIL5_2",
-},
+}
 
 PREFABS.Joiner_gtd_basement_door_plain_fenced_hell =
 {
@@ -59,7 +59,7 @@ PREFABS.Joiner_gtd_basement_door_plain_fenced_hell =
   tex_DOOR1 = "WOODMET2",
   tex_MIDSPACE = "MIDGRATE",
   flat_FLAT19 = "CEIL5_2",
-},
+}
 
 -- staired arch
 
@@ -88,4 +88,4 @@ PREFABS.Joiner_gtd_basement_arched =
   },
 
   y_fit = { 16,56 , 136,168 },
-},
+}

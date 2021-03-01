@@ -20,5 +20,5 @@ PREFABS.Item_craneo_gravesite =
 
   x_fit = "frame",
 
-  open_to_sky = true
-},
+  open_to_sky = true,
+}

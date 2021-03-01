@@ -21,7 +21,7 @@ PREFABS.Item_gtd_key_dispenser =
 
   x_fit = "frame",
   y_fit = "top",
-},
+}
 
 PREFABS.Item_gtd_key_dispenser_hell =
 {
@@ -35,4 +35,4 @@ PREFABS.Item_gtd_key_dispenser_hell =
   over = 0,
 
   theme = "hell",
-},
+}

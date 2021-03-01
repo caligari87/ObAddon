@@ -31,8 +31,8 @@ PREFABS.Cage_gtd_D2_floor_urban =
     MIDSPACE = 1,
     MIDGRATE = 1,
     MIDBARS1 = 1,
-  },
-},
+  }
+}
 
 PREFABS.Cage_gtd_D2_floor_tech =
 {
@@ -51,8 +51,8 @@ PREFABS.Cage_gtd_D2_floor_tech =
     MIDSPACE = 1,
     MIDBARS1 = 1,
     BRNSMALC = 1,
-  },
-},
+  }
+}
 
 PREFABS.Cage_gtd_D2_floor_hell =
 {
@@ -72,5 +72,5 @@ PREFABS.Cage_gtd_D2_floor_hell =
     MIDSPACE = 1,
     MIDBRN1 = 1,
     MIDGRATE = 1,
-  },
-},
+  }
+}

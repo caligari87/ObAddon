@@ -26,8 +26,8 @@ PREFABS.Joiner_zigzag1 =
 
   delta_h  = 128,
   nearby_h = 192,
-  can_flip = true
-},
+  can_flip = true,
+}
 
 PREFABS.Joiner_zigzag2 =
 {
@@ -36,13 +36,13 @@ PREFABS.Joiner_zigzag2 =
 
   seed_w = 3,
   seed_h = 2,
-},
+}
 
 PREFABS.Joiner_zigzag1_mirrored =
 {
   template = "Joiner_zigzag1",
   map      = "MAP03",
-},
+}
 
 PREFABS.Joiner_zigzag2_mirrored =
 {
@@ -51,4 +51,4 @@ PREFABS.Joiner_zigzag2_mirrored =
 
   seed_w = 3,
   seed_h = 2,
-},
+}

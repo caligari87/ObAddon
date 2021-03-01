@@ -16,7 +16,7 @@ PREFABS.Hallway_deuce_t1 =
 
   seed_w = 2,
   seed_h = 2,
-},
+}
 
 PREFABS.Hallway_deuce_t1_tech =
 {
@@ -26,7 +26,7 @@ PREFABS.Hallway_deuce_t1_tech =
 
   tex_METAL = "SHAWN2",
   flat_CEIL5_2 = "FLAT23",
-},
+}
 
 
 -- disabled for now
@@ -40,7 +40,7 @@ PREFABS.Hallway_deuce_t_stair =
   prob   = 25,
 
   delta_h = 32,
-},
+}
 
 PREFABS.Hallway_deuce_t_stair_tech =
 {
@@ -56,7 +56,7 @@ PREFABS.Hallway_deuce_t_stair_tech =
   tex_METAL = "SHAWN2",
   tex_SUPPORT3 = "SUPPORT2",
   flat_CEIL5_2 = "FLAT23",
-},
+}
 
 PREFABS.Hallway_deuce_t_stair_alt =
 {
@@ -67,7 +67,7 @@ PREFABS.Hallway_deuce_t_stair_alt =
   prob = 25,
 
   delta_h = 24,
-},
+}
 
 PREFABS.Hallway_deuce_t_stair_alt_tech =
 {
@@ -83,4 +83,4 @@ PREFABS.Hallway_deuce_t_stair_alt_tech =
   tex_METAL = "SHAWN2",
   tex_SUPPORT3 = "SUPPORT2",
   flat_CEIL5_2 = "FLAT23",
-},
+}

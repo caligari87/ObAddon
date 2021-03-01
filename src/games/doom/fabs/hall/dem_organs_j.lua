@@ -24,28 +24,28 @@ PREFABS.Hallway_organs_term =
 
   engine = "zdoom",
 
-},
+}
 
 PREFABS.Hallway_organs_term2 =
 {
   template = "Hallway_organs_term",
 
   map    = "MAP02",
-},
+}
 
 PREFABS.Hallway_organs_term3 =
 {
   template = "Hallway_organs_term",
 
   map    = "MAP03",
-},
+}
 
 PREFABS.Hallway_organs_term4 =
 {
   template = "Hallway_organs_term",
 
   map    = "MAP04",
-},
+}
 
 PREFABS.Hallway_organs_term5 =
 {
@@ -53,4 +53,4 @@ PREFABS.Hallway_organs_term5 =
 
   map    = "MAP05",
   key   = "secret",
-},
+}

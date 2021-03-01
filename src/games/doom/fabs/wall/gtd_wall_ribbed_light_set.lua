@@ -20,7 +20,7 @@ PREFABS.Wall_gtd_ribbed_lights =
   z_fit = "top",
 
   sector_1  = { [0]=90, [1]=15 },
-},
+}
 
 PREFABS.Wall_gtd_ribbed_lights_diag =
 {
@@ -29,7 +29,7 @@ PREFABS.Wall_gtd_ribbed_lights_diag =
   map = "MAP02",
 
   where = "diagonal",
-},
+}
 
 PREFABS.Wall_gtd_ribbed_lights_fallback =
 {
@@ -38,7 +38,7 @@ PREFABS.Wall_gtd_ribbed_lights_fallback =
   map = "MAP03",
 
   engine = "!zdoom",
-},
+}
 
 PREFABS.Wall_gtd_ribbed_lights_diag_fallback =
 {
@@ -49,4 +49,4 @@ PREFABS.Wall_gtd_ribbed_lights_diag_fallback =
   engine = "!zdoom",
 
   where = "diagonal",
-},
+}

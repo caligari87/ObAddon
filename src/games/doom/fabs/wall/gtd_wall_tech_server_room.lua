@@ -17,7 +17,7 @@ PREFABS.Wall_tech_server_wall =
   bound_z2 = 128,
 
   z_fit  = "top",
-},
+}
 
 PREFABS.Wall_tech_server_wall_diag =
 {
@@ -36,7 +36,7 @@ PREFABS.Wall_tech_server_wall_diag =
   bound_z2 = 128,
 
   z_fit  = "top",
-},
+}
 
 PREFABS.Wall_tech_server_wall1 =
 {
@@ -45,7 +45,7 @@ PREFABS.Wall_tech_server_wall1 =
   prob = 50,
 
   map = "MAP03",
-},
+}
 
 PREFABS.Wall_tech_server_wall2 =
 {
@@ -54,7 +54,7 @@ PREFABS.Wall_tech_server_wall2 =
   prob = 50,
 
   map = "MAP04",
-},
+}
 
 PREFABS.Wall_tech_server_wall3 =
 {
@@ -63,7 +63,7 @@ PREFABS.Wall_tech_server_wall3 =
   prob = 50,
 
   map = "MAP05",
-},
+}
 
 -- Epic versions:
 
@@ -84,7 +84,7 @@ PREFABS.Wall_tech_server_room_diag_EPIC =
   bound_z2 = 128,
 
   z_fit  = "top",
-},
+}
 
 PREFABS.Wall_tech_server_room1_EPIC =
 {
@@ -97,7 +97,7 @@ PREFABS.Wall_tech_server_room1_EPIC =
   map = "MAP06",
 
   tex_COMPSD1 = { COMPSD1=50, COMPFUZ1=50, COMPY1=50, COMPCT07=20 },
-},
+}
 
 PREFABS.Wall_tech_server_room2_EPIC =
 {
@@ -108,4 +108,4 @@ PREFABS.Wall_tech_server_room2_EPIC =
   prob = 200,
 
   map = "MAP08",
-},
+}

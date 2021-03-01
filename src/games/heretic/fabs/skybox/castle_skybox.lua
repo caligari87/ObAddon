@@ -11,4 +11,4 @@ PREFABS.Skybox_castle_skybox =
 
   bound_z1 = -64,
   bound_z2 = 320,
-},
+}

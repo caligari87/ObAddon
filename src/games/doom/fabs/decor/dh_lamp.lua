@@ -12,5 +12,5 @@ PREFABS.Decor_dittohead_lamp =
 
   where  = "point",
   size   = 80,
-},
+}
 

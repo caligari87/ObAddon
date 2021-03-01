@@ -37,8 +37,8 @@ PREFABS.Item_secret_garage_closet =
     CEMENT9=50,
     },
 
-  can_flip = true
-},
+  can_flip = true,
+}
 
 --a secret in a grocery store, shoot the electric panel
 PREFABS.Item_secret_store_closet =
@@ -64,7 +64,7 @@ PREFABS.Item_secret_store_closet =
   x_fit = "frame",
   y_fit  = "frame",
 
-  can_flip = true
+  can_flip = true,
 
   tex_BRICK9 = {
     BRICK1=50, BRICK10=50, BRICK11=50,
@@ -97,9 +97,9 @@ PREFABS.Item_secret_store_closet =
     hang_torso = 50,
     hang_leg   = 50,
     hang_leg_gone = 50,
-  },
+  }
 
-},
+}
 
 --a secret shrine to Nine inch nails where you need to be quick and open the 3 doors on the proper order to acess it.
 PREFABS.Item_secret_NIN_closet =
@@ -129,8 +129,8 @@ PREFABS.Item_secret_NIN_closet =
     blue_armor = 50,
   },
 
-  can_flip = true
-},
+  can_flip = true,
+}
 
 --The hell item shrine with a really crummy item, teach this cheeky gargoyle a lesson to reveal your prize.
 PREFABS.Item_secret_hellgargoyle_closet =
@@ -161,8 +161,8 @@ PREFABS.Item_secret_hellgargoyle_closet =
     helmet = 50,
   },
 
-  can_flip = true
-},
+  can_flip = true,
+}
 
 --To the one who sit upon this throne, secrets should be bestowed upon him.
 PREFABS.Item_secret_hellthrone_closet =
@@ -193,8 +193,8 @@ PREFABS.Item_secret_hellthrone_closet =
     helmet = 50,
   },
 
-  can_flip = true
-},
+  can_flip = true,
+}
 
 --To the one preaching spin yourself and shoot evil in its eye.
 PREFABS.Item_secret_lectern_closet =
@@ -225,8 +225,8 @@ PREFABS.Item_secret_lectern_closet =
     helmet = 50,
   },
 
-  can_flip = true
-},
+  can_flip = true,
+}
 
 --Stretch your arm under the hatch to open the machine V1,
 PREFABS.Item_secret_hellmachine1V1_closet =
@@ -252,10 +252,10 @@ PREFABS.Item_secret_hellmachine1V1_closet =
   x_fit = "frame",
   y_fit = "top",
 
-  can_flip = true
+  can_flip = true,
 
   texture_pack = "armaetus",
-},
+}
 
 --Stretch your arm under the hatch to open the machine V2,
 PREFABS.Item_secret_hellmachine1V2_closet =
@@ -281,10 +281,10 @@ PREFABS.Item_secret_hellmachine1V2_closet =
   x_fit = "frame",
   y_fit = "top",
 
-  can_flip = true
+  can_flip = true,
 
   texture_pack = "armaetus",
-},
+}
 
 --One of the cpu chip is defective, shoot it to open the core! V1,
 PREFABS.Item_secret_techmachine1V1_closet =
@@ -310,11 +310,11 @@ PREFABS.Item_secret_techmachine1V1_closet =
   x_fit = "frame",
   y_fit = "top",
 
-  can_flip = true
+  can_flip = true,
 
   texture_pack = "armaetus",
 
-},
+}
 
 --One of the cpu chip is defective, shoot it to open the core! V2,
 PREFABS.Item_secret_techmachine1V2_closet =
@@ -340,11 +340,11 @@ PREFABS.Item_secret_techmachine1V2_closet =
   x_fit = "frame",
   y_fit = "top",
 
-  can_flip = true
+  can_flip = true,
 
   texture_pack = "armaetus",
 
-},
+}
 
 
 ---- natural shrine getting corrupted by demon with an hidden item, find the switch.----
@@ -384,9 +384,9 @@ PREFABS.Item_dem_shrine_secretclosetC =
   {
     potion = 50,
     helmet = 50,
-  },
+  }
 
-},
+}
 
 PREFABS.Item_dem_shrine_secretclosetN =
 {
@@ -397,7 +397,7 @@ PREFABS.Item_dem_shrine_secretclosetN =
   group = "natural_walls",
 
 
-},
+}
 
 
 ----Natural corner with campsite that have a book than can be used to reveal a dark secret.----
@@ -432,7 +432,7 @@ PREFABS.Item_dem_campsiteC_secretcloset =
 
   texture_pack = "armaetus",
 
-},
+}
 
 PREFABS.Item_dem_campsiteN_secretcloset =
 {
@@ -441,7 +441,7 @@ PREFABS.Item_dem_campsiteN_secretcloset =
   env = "nature",
 
   group = "natural_walls",
-},
+}
 
 ---- Natural corners with a hidden secret ----
 
@@ -481,9 +481,9 @@ texture_pack = "armaetus",
   {
     potion = 50,
     helmet = 50,
-  },
+  }
 
-},
+}
 
 PREFABS.Item_dem_nook_secretcloset =
 {
@@ -528,9 +528,9 @@ PREFABS.Item_dem_nook_secretcloset =
     [54] = 50,
     [43] = 25,
     [0] = 50,
-  },
+  }
 
-},
+}
 
 PREFABS.Item_dem_cavestal_secretcloset =
 {
@@ -564,9 +564,9 @@ texture_pack = "armaetus",
   {
     potion = 50,
     helmet = 50,
-  },
+  }
 
-},
+}
 
 ----Natural corner with waterfall or lake with a secret----
 
@@ -605,15 +605,15 @@ PREFABS.Pic_dem_waterfallC1_secretcloset =
   {
     potion = 50,
     helmet = 50,
-  },
+  }
 
-},
+}
 
 PREFABS.Pic_dem_lakeC1_secretcloset =
 {
   template  = "Pic_dem_waterfallC1_secretcloset",
   map    = "MAP19",
-},
+}
 
 
 PREFABS.Pic_dem_waterfallN1_secretcloset =
@@ -652,15 +652,15 @@ PREFABS.Pic_dem_waterfallN1_secretcloset =
 
   tex_MIDVINE1 = {
     MIDVINE1=50, MIDVINE2=50,
-    },
+    }
 
-},
+}
 
 PREFABS.Pic_dem_lakeN1_secretcloset =
 {
   template  = "Pic_dem_waterfallN1_secretcloset",
   map    = "MAP21",
-},
+}
 
 ---- Jumpy natural closet fabs ----
 
@@ -702,9 +702,9 @@ PREFABS.Pic_dem_jumpy1_secretcloset =
   {
     potion = 50,
     helmet = 50,
-  },
+  }
 
-},
+}
 
 PREFABS.Pic_dem_jumpy2_secretcloset =
 {
@@ -716,7 +716,7 @@ PREFABS.Pic_dem_jumpy2_secretcloset =
   z_fit = { 88,96 },
 
   bound_z2 = 256,
-},
+}
 
 ---Garrett blood fountain with a secret---
 PREFABS.Item_dem_garrett_fountain1 =
@@ -745,20 +745,20 @@ PREFABS.Item_dem_garrett_fountain1 =
   y_fit  = "top",
   z_fit  = "top",
 
-  can_flip = true
-},
+  can_flip = true,
+}
 
 PREFABS.Item_dem_garrett_fountain2 =
 {
   template  = "Item_dem_garrett_fountain1",
   map    = "MAP25",
-},
+}
 
 PREFABS.Item_dem_garrett_fountain3 =
 {
   template  = "Item_dem_garrett_fountain1",
   map    = "MAP26",
-},
+}
 
 ---Garrett overturned cross with a secret---
 PREFABS.Item_dem_garrett_cross =
@@ -792,9 +792,9 @@ PREFABS.Item_dem_garrett_cross =
   {
     potion = 50,
     helmet = 50,
-  },
+  }
 
-},
+}
 
 ---Sgt sharp alcoves with a secret---
 PREFABS.Item_dem_gtd_alcove_secret =
@@ -827,5 +827,5 @@ PREFABS.Item_dem_gtd_alcove_secret =
   {
     potion = 50,
     helmet = 50,
-  },
-},
+  }
+}

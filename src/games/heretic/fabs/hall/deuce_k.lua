@@ -20,7 +20,7 @@ PREFABS.Hallway_deuce_locked_yellow =
   seed_h = 1,
 
   deep   = 16,
-},
+}
 
 PREFABS.Hallway_deuce_locked_green =
 {
@@ -30,7 +30,7 @@ PREFABS.Hallway_deuce_locked_green =
 
   line_34 = 33,
   thing_96 = 95,
-},
+}
 
 
 PREFABS.Hallway_deuce_locked_blue =
@@ -41,7 +41,7 @@ PREFABS.Hallway_deuce_locked_blue =
 
   line_34 = 32,
   thing_96 = 94,
-},
+}
 
 
 ----------------------------------------------------------------
@@ -66,4 +66,4 @@ PREFABS.Hallway_deuce_barred =
 
   tag_1  = "?door_tag",
   door_action = "S1_LowerFloor",
-},
+}

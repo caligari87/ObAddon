@@ -29,15 +29,15 @@ line_425 =
   [426]=50,
   [427]=50,
   [428]=50,
-},
+}
 
-},
+}
 
 PREFABS.Hallway_organs_u2 =
 {
   template = "Hallway_organs_u1",
   map    = "MAP02",
-},
+}
 
 PREFABS.Hallway_organs_u3 =
 {
@@ -45,13 +45,13 @@ PREFABS.Hallway_organs_u3 =
   map    = "MAP03",
 
   style  = "cages",
-},
+}
 
 PREFABS.Hallway_organs_u4 =
 {
   template = "Hallway_organs_u1",
   map    = "MAP04",
-},
+}
 
 PREFABS.Hallway_organs_u5 =
 {
@@ -59,10 +59,10 @@ PREFABS.Hallway_organs_u5 =
   map    = "MAP05",
 
   style  = "cages",
-},
+}
 
 PREFABS.Hallway_organs_u6 =
 {
   template = "Hallway_organs_u1",
   map    = "MAP06",
-},
+}

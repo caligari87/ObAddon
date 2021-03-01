@@ -12,7 +12,7 @@ PREFABS.Window_supertall_1 =
   group  = "supertall",
   prob   = 50,
 
-  passable = true
+  passable = true,
 
   rank   = 2,
   height = 128,
@@ -26,7 +26,7 @@ PREFABS.Window_supertall_1 =
 
   bound_z1 = 0,
   bound_z2 = 128,
-},
+}
 
 PREFABS.Window_supertall_2 =
 {
@@ -34,7 +34,7 @@ PREFABS.Window_supertall_2 =
   map = "MAP02",
 
   seed_w = 2,
-},
+}
 
 PREFABS.Window_supertall_3 =
 {
@@ -42,4 +42,4 @@ PREFABS.Window_supertall_3 =
   map = "MAP03",
 
   seed_w = 3,
-},
+}

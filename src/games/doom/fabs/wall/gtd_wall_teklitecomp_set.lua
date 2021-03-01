@@ -15,7 +15,7 @@ PREFABS.Wall_tech_teklitecomp_red =
   bound_z2 = 128,
 
   z_fit  = { 104,112 },
-},
+}
 
 PREFABS.Wall_tech_teklitecomp_red_console =
 {
@@ -37,7 +37,7 @@ PREFABS.Wall_tech_teklitecomp_red_console =
     COMPSTA9 = 1,
     COMPSTAA = 1,
   },
-},
+}
 
 PREFABS.Wall_tech_teklitecomp_red_diag =
 {
@@ -45,7 +45,7 @@ PREFABS.Wall_tech_teklitecomp_red_diag =
   map = "MAP10",
 
   where = "diagonal",
-},
+}
 
 -- orange
 
@@ -58,7 +58,7 @@ PREFABS.Wall_tech_teklitecomp_orange =
   tex_RDWAL01 = "COLLITE2",
   tex_TEKWALL8 = "TEKWALLE",
   flat_TEK1 = "TEK7",
-},
+}
 
 PREFABS.Wall_tech_teklitecomp_orange_console =
 {
@@ -86,7 +86,7 @@ PREFABS.Wall_tech_teklitecomp_orange_console =
     COMPSTA9 = 1,
     COMPSTAA = 1,
   },
-},
+}
 
 PREFABS.Wall_tech_teklitecomp_orange_diag =
 {
@@ -100,7 +100,7 @@ PREFABS.Wall_tech_teklitecomp_orange_diag =
   tex_RDWAL01 = "COLLITE2",
   tex_TEKWALL8 = "TEKWALLE",
   flat_TEK1 = "TEK7",
-},
+}
 
 -- blue
 
@@ -113,7 +113,7 @@ PREFABS.Wall_tech_teklitecomp_blue =
   tex_RDWAL01 = "COLLITE3",
   tex_TEKWALL8 = "TEKWALLB",
   flat_TEK1 = "TEK4",
-},
+}
 
 PREFABS.Wall_tech_teklitecomp_blue_console =
 {
@@ -141,7 +141,7 @@ PREFABS.Wall_tech_teklitecomp_blue_console =
     COMPSTA9 = 1,
     COMPSTAA = 1,
   },
-},
+}
 
 PREFABS.Wall_tech_teklitecomp_blue_diag =
 {
@@ -155,4 +155,4 @@ PREFABS.Wall_tech_teklitecomp_blue_diag =
   tex_RDWAL01 = "COLLITE3",
   tex_TEKWALL8 = "TEKWALLB",
   flat_TEK1 = "TEK4",
-},
+}

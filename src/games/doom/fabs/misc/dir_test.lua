@@ -4,4 +4,4 @@ PREFABS.Dir_test =
   map   = "MAP01",
 
   where = "point",
-},
+}

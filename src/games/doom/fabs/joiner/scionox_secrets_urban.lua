@@ -39,7 +39,7 @@ PREFABS.Joiner_generic_frontage_secret =
     STEP4 = 10,
     STEP5 = 10,
   },
-},
+}
 
 PREFABS.Joiner_generic_frontage_secret_2 =
 {
@@ -66,7 +66,7 @@ PREFABS.Joiner_generic_frontage_secret_2 =
 
   x_fit = "frame",
   y_fit = { 24,40 },
-},
+}
 
 --based on gtd_pic_urban_commercial_frontages
 
@@ -95,7 +95,7 @@ PREFABS.Joiner_commercial_frontage_secret =
 
   x_fit = "frame",
   y_fit = { 172,180 },
-},
+}
 
 PREFABS.Joiner_commercial_frontage_secret_2 =
 {
@@ -123,4 +123,4 @@ PREFABS.Joiner_commercial_frontage_secret_2 =
 
   x_fit = "frame",
   y_fit = { 136,152 },
-},
+}

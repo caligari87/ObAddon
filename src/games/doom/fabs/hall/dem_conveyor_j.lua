@@ -25,7 +25,7 @@ PREFABS.Hallway_conveyor_term1 =
   deep   = 16,
 
   sound = "Conveyor_Mech",
-},
+}
 
 PREFABS.Hallway_conveyor_term2 =
 {
@@ -33,7 +33,7 @@ PREFABS.Hallway_conveyor_term2 =
 
   map  = "MAP02",
 
-},
+}
 
 
 ---secret
@@ -44,4 +44,4 @@ PREFABS.Hallway_conveyor_secret =
 
   map  = "MAP05",
   key  = "secret",
-},
+}

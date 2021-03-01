@@ -33,4 +33,4 @@ PREFABS.Wall_epic_craneo_paintings =
     CPSATRN = 50,
     CPVLAD = 50,
   },
-},
+}

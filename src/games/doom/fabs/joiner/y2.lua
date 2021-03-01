@@ -24,7 +24,7 @@ PREFABS.Joiner_y2 =
   delta_h  = 32,
   nearby_h = 128,
   can_flip = false
-},
+}
 
 PREFABS.Joiner_y2_blue =
 {
@@ -32,4 +32,4 @@ PREFABS.Joiner_y2_blue =
 
   tex_REDWALL = "COMPBLUE",
   flat_CRATOP1 = "CEIL4_2",
-},
+}

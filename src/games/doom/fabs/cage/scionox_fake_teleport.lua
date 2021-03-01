@@ -21,8 +21,8 @@ PREFABS.Cage_scionox_fake_teleport =
   y_fit = "top",
 
   flat_FLAT5_3 = "REDWALL",
-  sector_8 = { [8]=50, [1]=15, [2]=10, [3]=10, [0]=5 },
-},
+  sector_8 = { [8]=50, [1]=15, [2]=10, [3]=10, [0]=5 }
+}
 
 PREFABS.Cage_scionox_fake_teleport_2 =
 {
@@ -30,8 +30,8 @@ PREFABS.Cage_scionox_fake_teleport_2 =
   map    = "MAP02",
 
   sector_13 = { [13]=50, [12]=25, [1]=15, [2]=10, [3]=10, [0]=5 },
-  tex_SW1GARG = { SW1GARG=50, SW1LION=50, SW1SATYR=50 },
-},
+  tex_SW1GARG = { SW1GARG=50, SW1LION=50, SW1SATYR=50 }
+}
 
 PREFABS.Cage_scionox_fake_teleport_3 =
 {
@@ -39,7 +39,7 @@ PREFABS.Cage_scionox_fake_teleport_3 =
   map    = "MAP03",
 
   theme  = "tech",
-},
+}
 
 PREFABS.Cage_scionox_fake_teleport_4 =
 {
@@ -47,8 +47,8 @@ PREFABS.Cage_scionox_fake_teleport_4 =
   map    = "MAP04",
 
   theme  = "urban",
-  sector_8 = { [8]=50, [1]=15, [2]=10, [3]=10, [0]=3 },
-},
+  sector_8 = { [8]=50, [1]=15, [2]=10, [3]=10, [0]=3 }
+}
 
 PREFABS.Cage_scionox_fake_teleport_5 =
 {
@@ -56,4 +56,4 @@ PREFABS.Cage_scionox_fake_teleport_5 =
   map    = "MAP05",
 
   theme  = "hell",
-},
+}

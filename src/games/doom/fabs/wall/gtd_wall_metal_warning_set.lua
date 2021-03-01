@@ -15,7 +15,7 @@ PREFABS.Wall_gtd_met_warning_wall =
   bound_z2 = 96,
 
   z_fit  = { 40,56 },
-},
+}
 
 PREFABS.Wall_gtd_met_warning_diag =
 {
@@ -33,4 +33,4 @@ PREFABS.Wall_gtd_met_warning_diag =
   bound_z2 = 96,
 
   z_fit  = { 40,56 },
-},
+}

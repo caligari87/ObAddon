@@ -28,7 +28,7 @@ PREFABS.Item_control_room_secret =
   sector_1  = { [0]=70, [1]=20, [2]=5, [3]=5, [8]=10 },
 
   sound = "Computer_Station",
-},
+}
 
 PREFABS.Item_control_room_secret_2 =
 {
@@ -37,7 +37,7 @@ PREFABS.Item_control_room_secret_2 =
   tex_SILVER3 = "COMPSPAN",
   tex_COMPSTA1 = "SPACEW3",
   tex_COMPSTA2 = "SPACEW3",
-},
+}
 
 --Based on gtd_pic_tech_wallmachines
 PREFABS.Item_wallmachines_secret =
@@ -66,7 +66,7 @@ PREFABS.Item_wallmachines_secret =
   y_fit = "top",
 
   sound = "Machine_Air",
-},
+}
 
 PREFABS.Item_wallmachines_secret_2 =
 {
@@ -88,7 +88,7 @@ PREFABS.Item_wallmachines_secret_2 =
 
   x_fit = "frame",
   y_fit = "top",
-},
+}
 
 PREFABS.Item_wallmachines_secret_3 =
 {
@@ -100,7 +100,7 @@ PREFABS.Item_wallmachines_secret_3 =
   seed_w = 3,
 
   sound = "Computer_Station",
-},
+}
 
 PREFABS.Item_wallmachines_secret_4 =
 {
@@ -111,7 +111,7 @@ PREFABS.Item_wallmachines_secret_4 =
 
   seed_w = 4,
   seed_h = 1,
-},
+}
 
 PREFABS.Item_wallmachines_secret_5 =
 {
@@ -139,7 +139,7 @@ PREFABS.Item_wallmachines_secret_5 =
   y_fit = "top",
 
   sound = "Machine_Air",
-},
+}
 
 PREFABS.Item_wallmachines_secret_6 =
 {
@@ -147,4 +147,4 @@ PREFABS.Item_wallmachines_secret_6 =
   tex_COMPBLUE = "REDWALL",
   tex_REDWALL = "COMPBLUE",
   flat_FLAT5_3 = "FLAT14",
-},
+}

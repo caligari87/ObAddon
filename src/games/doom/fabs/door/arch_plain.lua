@@ -19,7 +19,7 @@ PREFABS.Arch_plain =
 
   bound_z1 = 0,
   bound_z2 = 128,
-},
+}
 
 
 PREFABS.Arch_plain_diag =
@@ -34,5 +34,5 @@ PREFABS.Arch_plain_diag =
 
   bound_z1 = 0,
   bound_z2 = 128,
-},
+}
 

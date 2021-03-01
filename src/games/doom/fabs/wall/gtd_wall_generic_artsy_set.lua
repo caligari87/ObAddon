@@ -16,7 +16,7 @@ PREFABS.Wall_generic_artsy_bedazzled =
   bound_z2 = 128,
 
   z_fit = "top",
-},
+}
 
 PREFABS.Wall_generic_alternating_colors =
 {
@@ -26,7 +26,7 @@ PREFABS.Wall_generic_alternating_colors =
   group = "gtd_generic_alt_colors",
 
   z_fit = {40,88},
-},
+}
 
 PREFABS.Wall_generic_mid_band =
 {
@@ -36,7 +36,7 @@ PREFABS.Wall_generic_mid_band =
   group = "gtd_generic_mid_band",
 
   z_fit = "top",
-},
+}
 
 PREFABS.Wall_generic_double_banded_ceil =
 {
@@ -46,7 +46,7 @@ PREFABS.Wall_generic_double_banded_ceil =
   group = "gtd_generic_double_banded_ceil",
 
   z_fit = {60,68},
-},
+}
 
 PREFABS.Wall_frame_light_band =
 {
@@ -58,7 +58,7 @@ PREFABS.Wall_frame_light_band =
   theme = "!hell",
 
   z_fit = "top",
-},
+}
 
 --
 PREFABS.Wall_generic_artsy_frame_metal =
@@ -71,7 +71,7 @@ PREFABS.Wall_generic_artsy_frame_metal =
   theme = "!hell",
 
   z_fit = "top",
-},
+}
 
 PREFABS.Wall_generic_artsy_frame_metal_hell =
 {
@@ -87,7 +87,7 @@ PREFABS.Wall_generic_artsy_frame_metal_hell =
   flat_FLAT19 = "CEIL5_2",
 
   z_fit = "top",
-},
+}
 
 PREFABS.Wall_generic_artsy_center_braced_ind =
 {
@@ -101,7 +101,7 @@ PREFABS.Wall_generic_artsy_center_braced_ind =
   flat_CEIL5_2 = "FLAT19",
 
   z_fit = "top",
-},
+}
 
 PREFABS.Wall_generic_artsy_center_braced_hell =
 {
@@ -111,7 +111,7 @@ PREFABS.Wall_generic_artsy_center_braced_hell =
   group = "gtd_generic_artsy_center_braced_hell",
 
   z_fit = "top",
-},
+}
 
 -- diagonals
 
@@ -125,7 +125,7 @@ PREFABS.Wall_generic_mid_band_diag =
   where = "diagonal",
 
   z_fit = "top",
-},
+}
 
 PREFABS.Wall_generic_double_banded_ceil_diag =
 {
@@ -137,7 +137,7 @@ PREFABS.Wall_generic_double_banded_ceil_diag =
   where = "diagonal",
 
   z_fit = {60,68},
-},
+}
 
 PREFABS.Wall_generic_artsy_center_braced_ind_diag =
 {
@@ -153,7 +153,7 @@ PREFABS.Wall_generic_artsy_center_braced_ind_diag =
   flat_CEIL5_2 = "FLAT19",
 
   z_fit = "top",
-},
+}
 
 PREFABS.Wall_generic_artsy_center_braced_hell_diag =
 {
@@ -165,4 +165,4 @@ PREFABS.Wall_generic_artsy_center_braced_hell_diag =
   where = "diagonal",
 
   z_fit = "top",
-},
+}

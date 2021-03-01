@@ -17,13 +17,13 @@ PREFABS.Dem_teleports1 =
   tag_2 = "?in_tag",
 
   sector_8  = { [8]=60, [2]=10, [3]=10, [17]=10, [21]=10 },
-},
+}
 
 PREFABS.Dem_teleports2 =
 {
   template = "Dem_teleports1",
   map = "MAP02",
-},
+}
 
 --- Lill tribute to Turok 1 ---
 
@@ -31,7 +31,7 @@ PREFABS.Dem_teleports3 =
 {
   template = "Dem_teleports1",
   map = "MAP03",
-},
+}
 
 PREFABS.Dem_teleports4 =
 {
@@ -48,4 +48,4 @@ PREFABS.Dem_teleports4 =
 
   x_fit = "frame",
   y_fit = "top",
-},
+}

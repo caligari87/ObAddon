@@ -4,7 +4,7 @@ PREFABS.Decor_3x3_bookshelves_thin_grouped =
   map = "MAP01",
 
   group = "gtd_library",
-},
+}
 
 PREFABS.Decor_3x3_bookshelves_thick_grouped =
 {
@@ -14,7 +14,7 @@ PREFABS.Decor_3x3_bookshelves_thick_grouped =
   group = "gtd_library",
 
   size = 208,
-},
+}
 
 PREFABS.Decor_3x1_bookshelves_grouped =
 {
@@ -24,4 +24,4 @@ PREFABS.Decor_3x1_bookshelves_grouped =
   group = "gtd_library",
 
   size = 144,
-},
+}

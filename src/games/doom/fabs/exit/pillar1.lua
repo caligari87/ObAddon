@@ -15,5 +15,5 @@ PREFABS.Exit_pillar1_secret =
 
   -- replace normal exit special with "exit to secret" special
   line_11 = 51,
-},
+}
 

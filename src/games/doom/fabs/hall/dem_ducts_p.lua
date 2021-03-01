@@ -15,10 +15,10 @@ PREFABS.Hallway_ducts_p1 =
   seed_w = 2,
   seed_h = 2,
 
-},
+}
 
 PREFABS.Hallway_ducts_p2 =
 {
   template = "Hallway_ducts_p1",
   map    = "MAP02",
-},
+}

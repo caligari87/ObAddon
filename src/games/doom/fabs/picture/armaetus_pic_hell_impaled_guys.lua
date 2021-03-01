@@ -20,4 +20,4 @@ PREFABS.Pic_armaetus_hell_impaled_guys =
 
   x_fit = "frame",
   y_fit = "top",
-},
+}

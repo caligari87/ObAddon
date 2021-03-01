@@ -24,7 +24,7 @@ PREFABS.Item_rooftop_secret =
   y_fit = "top",
 
   sound = "Water_Tank",
-},
+}
 
 PREFABS.Item_rooftop_secret_2 =
 {
@@ -34,7 +34,7 @@ PREFABS.Item_rooftop_secret_2 =
   seed_h = 1,
 
   sound = "Machine_Ventilation",
-},
+}
 
 PREFABS.Item_rooftop_secret_3 =
 {
@@ -44,4 +44,4 @@ PREFABS.Item_rooftop_secret_3 =
   seed_h = 1,
 
   sound = "Machine_Air",
-},
+}

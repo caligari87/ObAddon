@@ -19,8 +19,8 @@ PREFABS.Exit_tech_immersive_exit =
   x_fit = "frame",
   y_fit = "top",
 
-  sector_1 = { [0]=70, [1]=15 },
-},
+  sector_1 = { [0]=70, [1]=15 }
+}
 
 PREFABS.Exit_tech_immersive_exit_urban =
 {
@@ -31,4 +31,4 @@ PREFABS.Exit_tech_immersive_exit_urban =
   theme = "urban",
 
   start_fab_peer = "Start_generic_immersive_start_urban",
-},
+}

@@ -14,7 +14,7 @@ PREFABS.Wall_trash1 =
 
   on_scenics = "never",
 
-  need_solid_back = true
+  need_solid_back = true,
 
   where  = "edge",
   height = 128,
@@ -34,7 +34,7 @@ PREFABS.Wall_trash1 =
     BODIESFL = 50,
   },
 
-},
+}
 
 PREFABS.Wall_trash2 =
 {
@@ -51,7 +51,7 @@ PREFABS.Wall_trash2 =
 
   on_scenics = "never",
 
-  need_solid_back = true
+  need_solid_back = true,
 
   where  = "edge",
   height = 128,
@@ -71,7 +71,7 @@ PREFABS.Wall_trash2 =
     BODIESFL = 50,
   },
 
-},
+}
 
 PREFABS.Wall_trash3 =
 {
@@ -88,7 +88,7 @@ PREFABS.Wall_trash3 =
 
   on_scenics = "never",
 
-  need_solid_back = true
+  need_solid_back = true,
 
   where  = "edge",
   height = 128,
@@ -108,7 +108,7 @@ PREFABS.Wall_trash3 =
     BODIESFL = 50,
   },
 
-},
+}
 
 PREFABS.Wall_dumpsteropen =
 {
@@ -123,7 +123,7 @@ PREFABS.Wall_dumpsteropen =
 
   on_scenics = "never",
 
-  need_solid_back = true
+  need_solid_back = true,
 
   where  = "edge",
   height = 128,
@@ -135,7 +135,7 @@ PREFABS.Wall_dumpsteropen =
   x_fit = "frame",
   z_fit = "top",
 
-},
+}
 
 PREFABS.Wall_dumpsterclosed =
 {
@@ -150,7 +150,7 @@ PREFABS.Wall_dumpsterclosed =
 
   on_scenics = "never",
 
-  need_solid_back = true
+  need_solid_back = true,
 
   where  = "edge",
   height = 128,
@@ -162,7 +162,7 @@ PREFABS.Wall_dumpsterclosed =
   x_fit = "frame",
   z_fit = "top",
 
-},
+}
 
 PREFABS.Wall_doorstopstep =
 {
@@ -177,7 +177,7 @@ PREFABS.Wall_doorstopstep =
 
   on_scenics = "never",
 
-  need_solid_back = true
+  need_solid_back = true,
 
   where  = "edge",
   height = 128,
@@ -195,7 +195,7 @@ PREFABS.Wall_doorstopstep =
     DOOR3 = 50,
   },
 
-},
+}
 
 PREFABS.Wall_doorstep =
 {
@@ -210,7 +210,7 @@ PREFABS.Wall_doorstep =
 
   on_scenics = "never",
 
-  need_solid_back = true
+  need_solid_back = true,
 
   where  = "edge",
   height = 128,
@@ -228,7 +228,7 @@ PREFABS.Wall_doorstep =
     DOOR3 = 50,
   },
 
-},
+}
 
 PREFABS.Wall_boombox =
 {
@@ -245,7 +245,7 @@ PREFABS.Wall_boombox =
 
   on_scenics = "never",
 
-  need_solid_back = true
+  need_solid_back = true,
 
   where  = "edge",
   height = 128,
@@ -257,4 +257,4 @@ PREFABS.Wall_boombox =
   x_fit = "frame",
   z_fit = "top",
 
-},
+}

@@ -24,11 +24,11 @@ PREFABS.Locked_small_red =
     SPCDOOR2 = 25,
     SPCDOOR3 = 50,
     SPCDOOR4 = 25,
-  },
+  }
 
   -- texture is already "DOORRED",
   -- line special is already #33,
-},
+}
 
 
 PREFABS.Locked_small_blue =
@@ -40,7 +40,7 @@ PREFABS.Locked_small_blue =
   tex_DOORRED = "DOORBLU",
 
   line_33 = 32,
-},
+}
 
 PREFABS.Locked_small_yellow =
 {
@@ -50,7 +50,7 @@ PREFABS.Locked_small_yellow =
   tex_DOORRED = "DOORYEL",
 
   line_33 = 34,
-},
+}
 
 PREFABS.Locked_small_red_hell =
 {
@@ -71,7 +71,7 @@ PREFABS.Locked_small_red_hell =
   },
   flat_TLITE6_6 = "TLITE6_5",
   tex_DOORRED = "DOORRED2",
-},
+}
 
 PREFABS.Locked_small_blue_hell =
 {
@@ -96,7 +96,7 @@ PREFABS.Locked_small_blue_hell =
   tex_DOORRED = "DOORBLU2",
 
   line_33 = 32,
-},
+}
 
 PREFABS.Locked_small_yellow_hell =
 {
@@ -121,4 +121,4 @@ PREFABS.Locked_small_yellow_hell =
   tex_DOORRED = "DOORYEL2",
 
   line_33 = 34,
-},
+}

@@ -21,7 +21,7 @@ PREFABS.Start_scionox_quakeish_portal_start =
 
   x_fit  = "frame",
   y_fit  = "top",
-},
+}
 
 PREFABS.Start_scionox_quakeish_portal_start_2 =
 {
@@ -37,7 +37,7 @@ PREFABS.Start_scionox_quakeish_portal_start_2 =
     skull_cairn = 50,
     skull_rock = 50,
   },
-},
+}
 
 PREFABS.Start_scionox_quakeish_portal_start_3 =
 {
@@ -45,7 +45,7 @@ PREFABS.Start_scionox_quakeish_portal_start_3 =
   map    = "MAP02",
   tex_BIGDOORJ = { BIGDOORJ=50, BIGDOOR2=50, BIGDOOR5=50,
   BIGDOOR7=50, BIGDOOR8=50, BIGDOORM=50, BIGDOORD=50 },
-},
+}
 
 PREFABS.Start_scionox_quakeish_portal_start_4 =
 {
@@ -64,4 +64,4 @@ PREFABS.Start_scionox_quakeish_portal_start_4 =
     skull_cairn = 50,
     skull_rock = 50,
   },
-},
+}

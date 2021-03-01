@@ -20,4 +20,4 @@ PREFABS.Item_striptease_pole_stage =
 
   x_fit = "frame",
   y_fit = "top",
-},
+}

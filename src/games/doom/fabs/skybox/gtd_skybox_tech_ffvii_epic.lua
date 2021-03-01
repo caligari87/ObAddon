@@ -13,4 +13,4 @@ PREFABS.Skybox_tech_ffvii_EPIC =
 
   bound_z1 = -256,
   bound_z2 = 256,
-},
+}

@@ -19,8 +19,8 @@ PREFABS.Locked_keyed_infestation_red =
   y_fit = "frame",
   x_fit = "frame",
 
-  can_flip = true
-},
+  can_flip = true,
+}
 
 PREFABS.Locked_keyed_infestation_blue =
 {
@@ -30,7 +30,7 @@ PREFABS.Locked_keyed_infestation_blue =
 
   tex_DOORRED = "DOORBLU",
   line_135 = 133,
-},
+}
 
 PREFABS.Locked_keyed_infestation_yellow =
 {
@@ -40,4 +40,4 @@ PREFABS.Locked_keyed_infestation_yellow =
 
   tex_DOORRED = "DOORYEL",
   line_135 = 137,
-},
+}

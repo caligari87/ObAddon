@@ -21,7 +21,7 @@ PREFABS.Wall_armaetus_fan_general =
   z_fit = "top",
 
   sound = "Indoor_Fan",
-},
+}
 
 PREFABS.Wall_armaetus_fan_hell =
 {
@@ -33,4 +33,4 @@ PREFABS.Wall_armaetus_fan_hell =
   tex_DOORSTOP = "METAL",
 
   prob = 3,
-},
+}

@@ -10,7 +10,7 @@ PREFABS.Joiner_barred1 =
 
   key    = "barred",
 
-  prob   = 70 --50,
+  prob   = 70, --50,
 
   seed_w = 2,
   seed_h = 1,
@@ -22,4 +22,4 @@ PREFABS.Joiner_barred1 =
   y_fit  = "frame",
   tag_1  = "?door_tag",
   door_action = "S1_OpenDoor",
-},
+}

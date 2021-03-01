@@ -41,11 +41,11 @@ PREFABS.Arch_gtd_beed28_door_crouch =
     dead_imp = 1,
     dead_demon = 1,
     [0] = 5,
-  },
-},
+  }
+}
 
 PREFABS.Arch_gtd_beed28_door_usable =
 {
   template = "Arch_gtd_beed28_door_crouch",
   map = "MAP02",
-},
+}

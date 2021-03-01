@@ -19,7 +19,7 @@ PREFABS.Beam =
   over   = 8,
 
   bound_z1 = 0,
-},
+}
 
 
 PREFABS.Beam_diagonal =
@@ -36,4 +36,4 @@ PREFABS.Beam_diagonal =
   where  = "diagonal",
 
   bound_z1 = 0,
-},
+}
