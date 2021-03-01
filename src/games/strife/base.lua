@@ -19,7 +19,7 @@
 --
 ------------------------------------------------------------------------
 
-STRIFE = { },
+STRIFE = { }
 
 
 ------------------------------------------------------------
@@ -40,7 +40,7 @@ gui.import("resources")
 
 UNFINISHED["strife"] =
 {
-  label = _("Strife")
+  label = _("Strife"),
   priority = 34,
 
   format = "doom",
@@ -56,8 +56,8 @@ UNFINISHED["strife"] =
 
   hooks =
   {
-    get_levels = STRIFE.get_levels
+    get_levels = STRIFE.get_levels,
     all_done   = STRIFE.all_done
   },
-},
+}
 

@@ -19,7 +19,7 @@
 --
 ------------------------------------------------------------------------
 
-HEXEN = { },
+HEXEN = { }
 
 
 ------------------------------------------------------------
@@ -40,7 +40,7 @@ gui.import("resources")
 
 OB_GAMES["hexen"] =
 {
-  label = _("Hexen")
+  label = _("Hexen"),
   priority = 34,
 
   -- Hexen map format is a minor variation on the DOOM format
@@ -57,8 +57,8 @@ OB_GAMES["hexen"] =
 
   hooks =
   {
-    get_levels = HEXEN.get_levels
+    get_levels = HEXEN.get_levels,
     all_done   = HEXEN.all_done
   },
-},
+}
 

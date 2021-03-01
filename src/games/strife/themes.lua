@@ -34,7 +34,7 @@ STRIFE.SINKS =
     dz  = -12,
   },
 
-},
+}
 
 
 STRIFE.THEMES =
@@ -179,7 +179,7 @@ STRIFE.THEMES =
 
   },
 
-},
+}
 
 
 STRIFE.ROOM_THEMES =
@@ -274,7 +274,7 @@ STRIFE.ROOM_THEMES =
 
   },
 
-},
+}
 ------------------------------------------------------------------------
 
 
@@ -291,7 +291,7 @@ STRIFE.ROOMS =
     prob = 50,
   },
 
-},
+}
 
 
 ------------------------------------------------------------------------
@@ -299,9 +299,9 @@ STRIFE.ROOMS =
 
 OB_THEMES["town"] =
 {
-  label = _("Town")
+  label = _("Town"),
   game = "strife",
   name_class = "CASTLE",
   mixed_prob = 50,
-},
+}
 

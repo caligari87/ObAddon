@@ -24,7 +24,7 @@ HEXEN.LIQUIDS =
 
   -- Ice isn't really a liquid, but may be placed like one in some ice levels
   icefloor = { mat="F_033", special=0 },
-},
+}
 
 
 HEXEN.MATERIALS =
@@ -442,7 +442,7 @@ HEXEN.MATERIALS =
 
   -- FIXME: TEMP HACK!!
   STNGLS1  = { t="GLASS01",  f="F_081" },
-},
+}
 
 
 ------------------------------------------------------------------------
@@ -450,10 +450,10 @@ HEXEN.MATERIALS =
 HEXEN.PREFAB_FIELDS =
 {
   -- TODO : compatibility with DOOM prefabs
-},
+}
 
 
 HEXEN.SKIN_DEFAULTS =
 {
-},
+}
 

@@ -18,7 +18,7 @@
 --
 ----------------------------------------------------------------
 
-ZDOOM = {},
+ZDOOM = {}
 
 
 ZDOOM.ENTITIES =
@@ -36,18 +36,18 @@ ZDOOM.ENTITIES =
   fountain_purple = { id=9031, r=16,h=16, pass=true },
   fountain_black  = { id=9032, r=16,h=16, pass=true },
   fountain_white  = { id=9033, r=16,h=16, pass=true },
-},
+}
 
 
 ZDOOM.PARAMETERS =
 {
   -- TODO
-},
+}
 
 
 OB_ENGINES["zdoom"] =
 {
-  label = _("ZDoom")
+  label = _("ZDoom"),
 
   extends = "boom",
 
@@ -60,20 +60,20 @@ OB_ENGINES["zdoom"] =
   {
     ZDOOM
   },
-},
+}
 
 
 ----------------------------------------------------------------
 
-GZDOOM = { },
+GZDOOM = { }
 
 GZDOOM.PARAMETERS =
 {
-  bridges = true
-  extra_floors = true
-  liquid_floors = true
+  bridges = true,
+  extra_floors = true,
+  liquid_floors = true,
   tga_images = true
-},
+}
 
 
 function GZDOOM.setup()
@@ -89,8 +89,8 @@ end
 
 OB_ENGINES["gzdoom"] =
 {
-  label = _("GZDoom")
-  priority = -1  -- keep at bottom with ZDoom
+  label = _("GZDoom"),
+  priority = -1,  -- keep at bottom with ZDoom
 
   extends = "zdoom",
 
@@ -108,5 +108,5 @@ OB_ENGINES["gzdoom"] =
   {
     setup = GZDOOM.setup
   },
-},
+}
 

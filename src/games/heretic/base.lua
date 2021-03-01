@@ -19,7 +19,7 @@
 --
 ------------------------------------------------------------------------
 
-HERETIC = { },
+HERETIC = { }
 
 
 gui.import("params")
@@ -40,7 +40,7 @@ gui.import("resources")
 
 OB_GAMES["heretic"] =
 {
-  label = _("Heretic")
+  label = _("Heretic"),
   priority = 40,
 
   format = "doom",
@@ -54,8 +54,8 @@ OB_GAMES["heretic"] =
 
   hooks =
   {
-    get_levels = HERETIC.get_levels
+    get_levels = HERETIC.get_levels,
     all_done   = HERETIC.all_done
   },
-},
+}
 

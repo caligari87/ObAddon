@@ -15,7 +15,7 @@
 STRIFE.LIQUIDS =
 {
   water = { mat="F_WATR01", light_add=16, special=0 },
-},
+}
 
 
 STRIFE.MATERIALS =
@@ -42,7 +42,7 @@ STRIFE.MATERIALS =
   -- liquids --
   F_WATR01 = { f="F_WATR01", t="WATR01" },
 
-},
+}
 
 
 ------------------------------------------------------------------------
@@ -50,10 +50,10 @@ STRIFE.MATERIALS =
 STRIFE.PREFAB_FIELDS =
 {
   -- TODO : compatibility with DOOM prefabs
-},
+}
 
 
 STRIFE.SKIN_DEFAULTS =
 {
-},
+}
 

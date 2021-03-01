@@ -29,7 +29,7 @@ HEXEN.SINKS =
     dz  = -12,
   },
 
-},
+}
 
 HEXEN.THEMES =
 {
@@ -719,7 +719,7 @@ HEXEN.THEMES =
 
     },
 
-},
+}
 
 
 
@@ -1540,7 +1540,7 @@ HEXEN.ROOM_THEMES =
     {
       STEEL01=40,
       STEEL02=10,
-      STEEL05=1  -- This one should be rare, since also the door texture, JB
+      STEEL05=1,  -- This one should be rare, since also the door texture, JB
       STEEL06=15,
       STEEL07=5,
       STEEL08=5,
@@ -2189,7 +2189,7 @@ HEXEN.ROOM_THEMES =
 
   },
 
-},
+}
 
 ------------------------------------------------------------------------
 
@@ -2207,79 +2207,79 @@ HEXEN.ROOMS =
     prob = 50,
   },
 
-},
+}
 
 --------------------------------------------------
 
 OB_THEMES["dungeon"] =
 {
-  label = _("Dungeon")
+  label = _("Dungeon"),
   game = "hexen",
   name_theme = "GOTHIC",
   mixed_prob = 50,
-},
+}
 
 OB_THEMES["fire"] =
 {
-  label = _("Fire")
+  label = _("Fire"),
   game = "hexen",
   name_theme = "GOTHIC",
   mixed_prob = 50,
-},
+}
 
 OB_THEMES["ice"] =
 {
-  label = _("Ice")
+  label = _("Ice"),
   game = "hexen",
   name_theme = "GOTHIC",
   mixed_prob = 50,
-},
+}
 
 OB_THEMES["steel"] =
 {
-  label = _("Steel")
+  label = _("Steel"),
   game = "hexen",
   name_theme = "GOTHIC",
   mixed_prob = 20,
-},
+}
 
 OB_THEMES["desert"] =
 {
-  label = _("Desert")
+  label = _("Desert"),
   game = "hexen",
   name_theme = "GOTHIC",
   mixed_prob = 10,
-},
+}
 
 OB_THEMES["cave"] =
 {
-  label = _("Cave")
+  label = _("Cave"),
   game = "hexen",
   name_theme = "GOTHIC",
   mixed_prob = 20,
-},
+}
 
 OB_THEMES["swamp"] =
 {
-  label = _("Swamp")
+  label = _("Swamp"),
   game = "hexen",
   name_theme = "GOTHIC",
   mixed_prob = 20,
-},
+}
 
 OB_THEMES["forest"] =
 {
-  label = _("Forest")
+  label = _("Forest"),
   game = "hexen",
   name_theme = "GOTHIC",
   mixed_prob = 20,
-},
+}
 
 OB_THEMES["village"] =
 {
-  label = _("Village")
+  label = _("Village"),
   game = "hexen",
   name_theme = "URBAN",
   mixed_prob = 20,
-},
+}
 

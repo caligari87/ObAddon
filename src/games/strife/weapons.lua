@@ -33,5 +33,5 @@ STRIFE.WEAPONS =
     per = 1,
   },
 
-},
+}
 

@@ -28,5 +28,5 @@ STRIFE.MONSTERS =
     weap_needed = { assault=true },
 --    give = { {ammo="crystal",count=1} },
   },
-},
+}
 

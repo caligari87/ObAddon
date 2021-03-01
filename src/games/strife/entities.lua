@@ -28,7 +28,7 @@ STRIFE.ENTITIES =
 
   --- scenery ---
   wall_torch  = { id=50, r=10, h=64, light=255 },
-},
+}
 
 STRIFE.PLAYER_MODEL =
 {
@@ -37,4 +37,4 @@ STRIFE.PLAYER_MODEL =
     stats   = { health=0 },
     weapons = { dagger=1 },
   },
-},
+}

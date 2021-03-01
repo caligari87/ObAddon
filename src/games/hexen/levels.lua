@@ -14,7 +14,7 @@
 
 HEXEN.SECRET_EXITS =
 {
-},
+}
 
 HEXEN.EPISODES =
 {
@@ -57,12 +57,12 @@ HEXEN.EPISODES =
     theme = "dungeon",
     sky_light = 0.50,
   },
-},
+}
 
 
 HEXEN.PREBUILT_LEVELS =
 {
-},
+}
 
 
 function HEXEN.get_levels()
@@ -79,7 +79,7 @@ function HEXEN.get_levels()
 
     local EPI = table.copy(ep_info)
 
-    EPI.levels = { },
+    EPI.levels = { }
 
     table.insert(GAME.episodes, EPI)
   end
@@ -95,14 +95,14 @@ function HEXEN.get_levels()
 
       local LEV =
       {
-        episode  = EPI
+        episode  = EPI,
 
-        name  = string.format("MAP%02d", map)
+        name  = string.format("MAP%02d", map),
         --name = string.format("E%dM%d", ep_index, map)
 
-          ep_along = ep_along
+          ep_along = ep_along,
         game_along = (ep_index - 1 + ep_along) / EP_NUM
-      },
+      }
 
       table.insert( EPI.levels, LEV)
       table.insert(GAME.levels, LEV)
@@ -113,7 +113,7 @@ function HEXEN.get_levels()
       LEV.prebuilt = GAME.PREBUILT_LEVELS[LEV.name]
 
       if LEV.prebuilt then
-        LEV.name_theme = LEV.prebuilt.name_theme or "BOSS",
+        LEV.name_theme = LEV.prebuilt.name_theme or "BOSS"
       end
 
           -- procedural gotcha management code
@@ -160,14 +160,14 @@ function HEXEN.get_levels()
 
       --5% of maps after map 4,
       if OB_CONFIG.procedural_gotchas == "5p" then
-        if map > 4 and map ~= 15 and map != 31 then
+        if map > 4 and map ~= 15 and map ~= 31 then
           if rand.odds(5) then LEV.is_procedural_gotcha = true end
         end
       end
 
       -- 10% of maps after map 4,
       if OB_CONFIG.procedural_gotchas == "10p" then
-        if map > 4 and map ~= 15 and map != 31 then
+        if map > 4 and map ~= 15 and map ~= 31 then
           if rand.odds(10) then LEV.is_procedural_gotcha = true end
         end
       end
@@ -229,8 +229,8 @@ function HEXEN.get_levels()
 
     -- set "dist_to_end" value
     if MAP_NUM >= 9 then
-      EPI.levels[7].dist_to_end = 1,
-      EPI.levels[6].dist_to_end = 2,
+      EPI.levels[7].dist_to_end = 1
+      EPI.levels[6].dist_to_end = 2
     end
 
   end -- for episode

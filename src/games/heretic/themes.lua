@@ -127,7 +127,7 @@ HERETIC.SINKS =
     trim_mat = "FLOOR10",
     trim_dz = 2,
   } ]]
-},
+}
 
 
 HERETIC.THEMES =
@@ -869,7 +869,7 @@ HERETIC.THEMES =
 
   },
 
-},
+}
 
 
 HERETIC.ROOM_THEMES =
@@ -2804,7 +2804,7 @@ HERETIC.ROOM_THEMES =
     },
   },
 
-},
+}
 ------------------------------------------------------------------------
 
 
@@ -2822,7 +2822,7 @@ HERETIC.ROOMS =
     prob = 50,
   },
 
-},
+}
 
 
 ------------------------------------------------------------------------
@@ -2830,41 +2830,41 @@ HERETIC.ROOMS =
 
 OB_THEMES["city"] =
 {
-  label = _("City")
+  label = _("City"),
   game = "heretic",
   name_class = "CASTLE",
   mixed_prob = 50,
-},
+}
 
 OB_THEMES["maw"] =
 {
-  label = _("Maw")
+  label = _("Maw"),
   game = "heretic",
   name_class = "CASTLE",
   mixed_prob = 50,
-},
+}
 
 OB_THEMES["dome"] =
 {
-  label = _("Dome")
+  label = _("Dome"),
   game = "heretic",
   name_class = "CASTLE",
   mixed_prob = 50,
-},
+}
 
 OB_THEMES["ossuary"] =
 {
-  label = _("Ossuary")
+  label = _("Ossuary"),
   game = "heretic",
   name_class = "CASTLE",
   mixed_prob = 50,
-},
+}
 
 OB_THEMES["demense"] =
 {
-  label = _("Demense")
+  label = _("Demense"),
   game = "heretic",
   name_class = "CASTLE",
   mixed_prob = 50,
-},
+}
 

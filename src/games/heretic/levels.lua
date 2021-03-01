@@ -14,12 +14,12 @@
 
 HERETIC.SECRET_EXITS =
 {
-  E1M6 = true
-  E2M4 = true
-  E3M4 = true
-  E4M4 = true
+  E1M6 = true,
+  E2M4 = true,
+  E3M4 = true,
+  E4M4 = true,
   E5M3 = true
-},
+}
 
 
 HERETIC.EPISODES =
@@ -78,8 +78,7 @@ HERETIC.EPISODES =
     dark_prob = 10,
 --    sky_light = 0.65,
   },
-},
-
+}
 
 HERETIC.PREBUILT_LEVELS =
 {
@@ -92,7 +91,7 @@ HERETIC.PREBUILT_LEVELS =
   {
     { prob=50, file="games/heretic/data/boss_portal1.wad", map="E2M8" },
   },
-},
+}
 
 
 ------------------------------------------------------------
@@ -111,7 +110,7 @@ function HERETIC.get_levels()
 
     local EPI = table.copy(ep_info)
 
-    EPI.levels = { },
+    EPI.levels = { }
 
     table.insert(GAME.episodes, EPI)
   end
@@ -127,13 +126,13 @@ function HERETIC.get_levels()
 
       local LEV =
       {
-        episode  = EPI
+        episode  = EPI,
 
-        name = string.format("E%dM%d", ep_index, map)
+        name = string.format("E%dM%d", ep_index, map),
 
-          ep_along = ep_along
+          ep_along = ep_along,
         game_along = (ep_index - 1 + ep_along) / EP_NUM
-      },
+      }
 
       table.insert( EPI.levels, LEV)
       table.insert(GAME.levels, LEV)
@@ -144,7 +143,7 @@ function HERETIC.get_levels()
       LEV.prebuilt = GAME.PREBUILT_LEVELS[LEV.name]
 
       if LEV.prebuilt then
-        LEV.name_theme = LEV.prebuilt.name_theme or "BOSS",
+        LEV.name_theme = LEV.prebuilt.name_theme or "BOSS"
       end
 
           -- procedural gotcha management code
@@ -191,14 +190,14 @@ function HERETIC.get_levels()
 
       --5% of maps after map 4,
       if OB_CONFIG.procedural_gotchas == "5p" then
-        if map > 4 and map ~= 15 and map != 31 then
+        if map > 4 and map ~= 15 and map ~= 31 then
           if rand.odds(5) then LEV.is_procedural_gotcha = true end
         end
       end
 
       -- 10% of maps after map 4,
       if OB_CONFIG.procedural_gotchas == "10p" then
-        if map > 4 and map ~= 15 and map != 31 then
+        if map > 4 and map ~= 15 and map ~= 31 then
           if rand.odds(10) then LEV.is_procedural_gotcha = true end
         end
       end
@@ -252,8 +251,8 @@ function HERETIC.get_levels()
 
     -- set "dist_to_end" value
     if MAP_NUM >= 9 then
-      EPI.levels[7].dist_to_end = 1,
-      EPI.levels[6].dist_to_end = 2,
+      EPI.levels[7].dist_to_end = 1
+      EPI.levels[6].dist_to_end = 2
     end
 
   end -- for episode
