@@ -2597,4 +2597,6 @@ ZDOOM_STORIES.QUIT_MESSAGES =
   [[Phobos is about 6,000 km (or about 3,700mi) from Mars's surface, compared to our moon's 384,402 km (or 238,856 mi)]],
 
   [[This is an actual line of code in Oblige:\n `if not is_big(mon) then has_small = true end`]],
+
+  [[Some people want to watch the world segfault. -dashodanger, 2021]]
 }

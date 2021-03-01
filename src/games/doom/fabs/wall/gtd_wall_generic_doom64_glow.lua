@@ -6,7 +6,6 @@ PREFABS.Wall_generic_doom64_1x=
   map    = "MAP01"
 
   prob   = 50
-  theme  = "tech"
 
   group  = "gtd_generic_d64_1x"
 
