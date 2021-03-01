@@ -16,7 +16,7 @@
 --
 ------------------------------------------------------------------------
 
-MUSIC_SWAP = {},
+MUSIC_SWAP = {}
 
 
 -- Notes:
@@ -50,7 +50,7 @@ MUSIC_SWAP.doom1_music =
     "E3M4", "E3M5", "E3M6",
     "E3M7", "E3M9",
   },
-},
+}
 
 
 MUSIC_SWAP.doom2_music =
@@ -72,7 +72,7 @@ MUSIC_SWAP.doom2_music =
     "COUNT2", "DDTBL3", "AMPIE",  "THEDA3", "ADRIAN",
     "MESSG2", "ROMER2", "TENSE",  "SHAWN3",
   },
-},
+}
 
 
 function MUSIC_SWAP.get_levels(self)
@@ -81,12 +81,12 @@ function MUSIC_SWAP.get_levels(self)
   --       The actual storage is done by the Boom DEHACKED code.
   --
 
-  local text = "[MUSIC]\n",
+  local text = "[MUSIC]\n"
 
   local epi_list = MUSIC_SWAP.doom2_music
 
   if OB_CONFIG.game == "doom1" or
-     OB_CONFIG.game == "ultdoom",
+     OB_CONFIG.game == "ultdoom"
   then
     epi_list = MUSIC_SWAP.doom1_music
   end
@@ -102,7 +102,7 @@ function MUSIC_SWAP.get_levels(self)
     end
 
     for i = 1, #src do
-      text = text .. src[i] .. " = " .. dest[i] .. "\n",
+      text = text .. src[i] .. " = " .. dest[i] .. "\n"
     end
   end
 
@@ -112,7 +112,7 @@ end
 
 OB_MODULES["music_swapper"] =
 {
-  label = _("Music Swapper")
+  label = _("Music Swapper"),
 
   side = "left",
   priority = 80,
@@ -125,5 +125,5 @@ OB_MODULES["music_swapper"] =
   {
     get_levels = MUSIC_SWAP.get_levels
   },
-},
+}
 

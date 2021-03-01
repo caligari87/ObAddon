@@ -19,20 +19,20 @@
 -- WARNING: This is not finished yet. If you are interested in adding
 -- patch definitions below, don't - the system is still likely to change.
 
-PROC_TEX = { },
+PROC_TEX = { }
 
 PROC_TEX.TEXTURE_SCOPE_CHOICES =
 {
   "vanilla", _("Vanilla Only"),
   "epic", _("Include Epic Textures"),
-},
+}
 
 PROC_TEX.BLENDING_OPTIONS =
 {
   "Translucent",
   "Add",
   "Subtract",
-},
+}
 
 PROC_TEX.GRAPHICS =
 {
@@ -217,10 +217,10 @@ PROC_TEX.GRAPHICS =
   {
 
   },
-},
+}
 
 function PROC_TEX.setup(self)
-  for name,opt in pairs(pairs(self.options)) do
+  for name,opt in pairs(self.options) do
     local value = self.options[name].value
     PARAM[name] = value
   end

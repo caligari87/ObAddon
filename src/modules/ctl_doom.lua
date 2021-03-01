@@ -17,7 +17,7 @@
 --
 ----------------------------------------------------------------
 
-CTL_DOOM = {},
+CTL_DOOM = {}
 
 CTL_DOOM.MON_CHOICES =
 {
@@ -29,7 +29,7 @@ CTL_DOOM.MON_CHOICES =
   "more",    _("More"),
   "heaps",   _("Heaps"),
   "insane",  _("INSANE"),
-},
+}
 
 CTL_DOOM.MON_PROBS =
 {
@@ -40,7 +40,7 @@ CTL_DOOM.MON_PROBS =
   more   = 120,
   heaps  = 300,
   insane = 2000,
-},
+}
 
 CTL_DOOM.DENSITIES =
 {
@@ -51,11 +51,11 @@ CTL_DOOM.DENSITIES =
   more   = 1.2,
   heaps  = 3.3,
   insane = 9.9,
-},
+}
 
 
 function CTL_DOOM.monster_setup(self)
-  for name,opt in pairs(pairs(self.options)) do
+  for name,opt in pairs(self.options) do
     local M = GAME.MONSTERS[name]
 
     if M and opt.value ~= "default" then
@@ -70,7 +70,7 @@ function CTL_DOOM.monster_setup(self)
       M.crazy_prob = nil
 
       if M.prob > 40 then
-        M.level = 1,
+        M.level = 1
         M.weap_min_damage = nil
       end
 
@@ -84,7 +84,7 @@ end
 
 OB_MODULES["doom_mon_control"] =
 {
-  label = _("Doom Monster Control")
+  label = _("Doom Monster Control"),
 
   game = "doomish",
 
@@ -117,7 +117,7 @@ OB_MODULES["doom_mon_control"] =
     Cyberdemon  = { label=_("Cyberdemon"),   choices=CTL_DOOM.MON_CHOICES },
     Spiderdemon = { label=_("Spiderdemon"),  choices=CTL_DOOM.MON_CHOICES },
   },
-},
+}
 
 
 ----------------------------------------------------------------
@@ -133,7 +133,7 @@ CTL_DOOM.WEAPON_CHOICES =
   "more",    _("More"),
   "heaps",   _("Heaps"),
   "loveit",  _("I LOVE IT"),
-},
+}
 
 CTL_DOOM.WEAPON_PROBS =
 {
@@ -144,7 +144,7 @@ CTL_DOOM.WEAPON_PROBS =
   more   = 120,
   heaps  = 300,
   loveit = 1000,
-},
+}
 
 CTL_DOOM.WEAPON_PREFS =
 {
@@ -155,18 +155,18 @@ CTL_DOOM.WEAPON_PREFS =
   more   = 70,
   heaps  = 100,
   loveit = 170,
-},
+}
 
 CTL_DOOM.WEAPON_PREF_CHOICES =
 {
   "normal",  _("Normal"),
   "vanilla", _("Vanilla"),
   "none",    _("NONE"),
-},
+}
 
 
 function CTL_DOOM.weapon_setup(self)
-  for name,opt in pairs(pairs(self.options)) do
+  for name,opt in pairs(self.options) do
     local W = GAME.WEAPONS[name]
 
     if W and opt.value ~= "default" then
@@ -174,14 +174,14 @@ function CTL_DOOM.weapon_setup(self)
       W.pref     = CTL_DOOM.WEAPON_PREFS[opt.value]
 
       -- loosen some of the normal restrictions
-      W.level = 1,
+      W.level = 1
     end
   end -- for opt
 
   -- specific instructions for the weapon_pref choices
   PARAM.weapon_prefs = self.options.weapon_prefs.value
 
-  if PARAM.weapon_prefs == "vanilla",
+  if PARAM.weapon_prefs == "vanilla"
   or PARAM.weapon_prefs == "none" then
     for _,mon in pairs(GAME.MONSTERS) do
       mon.weapon_prefs = nil
@@ -189,14 +189,14 @@ function CTL_DOOM.weapon_setup(self)
   end
 
   if PARAM.weapon_prefs == "vanilla" then
-    GAME.MONSTERS["Cyberdemon"].weap_prefs = { bfg = 10.0 },
-    GAME.MONSTERS["Spiderdemon"].weap_prefs = { bfg = 10.0 },
-    GAME.MONSTERS["demon"].weap_prefs = { launch = 0.3 },
-    GAME.MONSTERS["skull"].weap_prefs = { launch = 0.1 },
-    GAME.MONSTERS["spectre"].weap_prefs = { launch = 0.3 },
+    GAME.MONSTERS["Cyberdemon"].weap_prefs = { bfg = 10.0 }
+    GAME.MONSTERS["Spiderdemon"].weap_prefs = { bfg = 10.0 }
+    GAME.MONSTERS["demon"].weap_prefs = { launch = 0.3 }
+    GAME.MONSTERS["skull"].weap_prefs = { launch = 0.1 }
+    GAME.MONSTERS["spectre"].weap_prefs = { launch = 0.3 }
 
     if OB_CONFIG.game == "doom2" then
-      GAME.MONSTERS["pain"].weap_prefs = { launch = 0.1 },
+      GAME.MONSTERS["pain"].weap_prefs = { launch = 0.1 }
     end
   end
 
@@ -205,7 +205,7 @@ end
 
 OB_MODULES["doom_weapon_control"] =
 {
-  label = _("Doom Weapon Control")
+  label = _("Doom Weapon Control"),
 
   game = "doomish",
 
@@ -236,7 +236,7 @@ OB_MODULES["doom_weapon_control"] =
       default="normal",
     },
   },
-},
+}
 
 
 --
@@ -267,7 +267,7 @@ end
 
 OB_MODULES["doom_item_control"] =
 {
-  label = _("Doom Item Control")
+  label = _("Doom Item Control"),
 
   game = "doomish",
 
@@ -305,4 +305,4 @@ OB_MODULES["doom_item_control"] =
     cells = { label=_("Cell"), choices=CTL_DOOM.WEAPON_CHOICES, priority = 79 },
     cell_pack = { label=_("Cell Pack"), choices=CTL_DOOM.WEAPON_CHOICES, priority = 78 },
   },
-},
+}

@@ -1663,7 +1663,7 @@ ARMAETUS_DOOM1_ROOM_THEMES =
       FLOOR7_3 = 15,
     },
   },
-},
+}
 
 ARMAETUS_DOOM1_THEMES =
 {
@@ -2174,7 +2174,7 @@ ARMAETUS_DOOM1_THEMES =
       Skybox_garrett_hell_EPIC = 50,
     },
   },
-},
+}
 
 -- Custom liquids
 ARMAETUS_DOOM1_LIQUIDS =
@@ -2238,7 +2238,7 @@ ARMAETUS_DOOM1_LIQUIDS =
       ice2    = 30,
     },
   },
-},
+}
 
 -- MSSP-TODO: Could probably use an update with some of the more ceiling sink types
 -- defined from the main Epic themes table. Maybe unify the sink defs
@@ -2487,7 +2487,7 @@ ARMAETUS_DOOM1_SINK_DEFS =
     trim_light = 16,
   },
 
-},
+}
 
 -- Natural textures for outdoor parks.
 ARMAETUS_DOOM1_TECH_NATURALS =
@@ -2510,7 +2510,7 @@ ARMAETUS_DOOM1_TECH_NATURALS =
   VINES3 = 10,
   VINES4 = 10,
   MOSROK3 = 10,
-},
+}
 
 ARMAETUS_DOOM1_DEIMOS_NATURALS =
 {
@@ -2532,7 +2532,7 @@ ARMAETUS_DOOM1_DEIMOS_NATURALS =
   VINES3 = 10,
   VINES4 = 10,
   MOSROK3 = 10,
-},
+}
 
 ARMAETUS_DOOM1_HELL_NATURALS =
 {
@@ -2551,7 +2551,7 @@ ARMAETUS_DOOM1_HELL_NATURALS =
   VINES2 = 3,
   VINES3 = 3,
   VINES4 = 3,
-},
+}
 
 ARMAETUS_DOOM1_FLESH_NATURALS =
 {
@@ -2571,13 +2571,13 @@ ARMAETUS_DOOM1_FLESH_NATURALS =
   VINES2 = 3,
   VINES3 = 3,
   VINES4 = 3,
-},
+}
 
 ARMAETUS_NARROW_HALLWAYS =
 {
-},
+}
 
 ARMAETUS_WIDE_HALLWAYS =
 {
   ducts = 50,
-},
+}

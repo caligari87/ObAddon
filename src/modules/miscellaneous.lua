@@ -18,13 +18,13 @@
 --
 ------------------------------------------------------------------------
 
-MISC_STUFF = { },
+MISC_STUFF = { }
 
 MISC_STUFF.YES_NO =
 {
   "no",  _("No"),
   "yes", _("Yes"),
-},
+}
 
 MISC_STUFF.LIGHTINGS =
 {
@@ -32,7 +32,7 @@ MISC_STUFF.LIGHTINGS =
   "lower",   _("Lower"),
   "normal",  _("Normal"),
   "higher",  _("Higher"),
-},
+}
 
 MISC_STUFF.LIGHT_CHOICES =
 {
@@ -43,14 +43,14 @@ MISC_STUFF.LIGHT_CHOICES =
   "+1",   _("Brighter"),
   "+2",   _("Vivid"),
   "+3",   _("Radiant"),
-},
+}
 
 MISC_STUFF.LIVEMAP_CHOICES =
 {
   "step", _("Per Step (Very Slow)"),
   "room", _("Per Room (Slightly Slow)"),
   "none", _("No Live Minimap"),
-},
+}
 
 MISC_STUFF.SINK_STYLE_CHOICES =
 {
@@ -58,7 +58,7 @@ MISC_STUFF.SINK_STYLE_CHOICES =
   "curved", _("Curved"),
   "sharp", _("Sharp"),
   "random", _("Random"),
-},
+}
 
 MISC_STUFF.HEIGHT_CHOICES =
 {
@@ -68,28 +68,28 @@ MISC_STUFF.HEIGHT_CHOICES =
   "tall-ish",  _("Slightly Tall"),
   "tall",      _("Mostly Tall"),
   "mixed",     _("Mix It Up"),
-},
+}
 
 MISC_STUFF.WINDOW_BLOCKING_CHOICES =
 {
   "not_on_vistas", _("Not on Vistas"),
   "never",         _("Never"),
   "all",           _("All"),
-},
+}
 
 MISC_STUFF.RAIL_BLOCKING_CHOICES =
 {
   "never",       _("Never"),
   "on_occasion", _("Occasional"),
   "all",         _("All"),
-},
+}
 
 MISC_STUFF.LIQUID_SINK_OPTIONS =
 {
   "yes",          _("Yes"),
   "not_damaging", _("No Damaging"),
   "no",           _("No"),
-},
+}
 
 MISC_STUFF.LINEAR_START_CHOICES =
 {
@@ -99,7 +99,7 @@ MISC_STUFF.LINEAR_START_CHOICES =
   "25",      _("25% of All Levels"),
   "12",      _("12% of All Levels"),
   "default", _("DEFAULT"),
-},
+}
 
 MISC_STUFF.ROOM_SIZE_MULTIPLIER_CHOICES =
 {
@@ -115,7 +115,7 @@ MISC_STUFF.ROOM_SIZE_MULTIPLIER_CHOICES =
   "8", _("x8"),
   "vanilla", _("Vanilla"),
   "mixed", _("Mix It Up")
-},
+}
 
 MISC_STUFF.AREA_COUNT_MULTIPLIER_CHOICES =
 {
@@ -128,14 +128,14 @@ MISC_STUFF.AREA_COUNT_MULTIPLIER_CHOICES =
   "4", _("x4"),
   "vanilla", _("Vanilla"),
   "mixed", _("Mix It Up")
-},
+}
 
 MISC_STUFF.ROOM_SIZE_CONSISTENCY_CHOICES =
 {
   "normal", _("Vanilla"),
   "strict", _("Strict"),
   "mixed", _("Mix It Up")
-},
+}
 
 function MISC_STUFF.setup(self)
   -- these parameters have to be instantiated in this hook
@@ -174,7 +174,7 @@ end
 
 OB_MODULES["misc"] =
 {
-  label = _("Miscellaneous")
+  label = _("Miscellaneous"),
 
   game = "doomish",
 
@@ -183,7 +183,7 @@ OB_MODULES["misc"] =
 
   hooks =
   {
-    setup = MISC_STUFF.setup
+    setup = MISC_STUFF.setup,
     begin_level = MISC_STUFF.begin_level
   },
 
@@ -191,36 +191,36 @@ OB_MODULES["misc"] =
   {
     {
       name="pistol_starts",
-      label=_("Pistol Starts")
-      choices=MISC_STUFF.YES_NO
+      label=_("Pistol Starts"),
+      choices=MISC_STUFF.YES_NO,
       tooltip=_("Ensure every map can be completed from a pistol start (ignore weapons obtained from earlier maps)")
     },
     {
       name="alt_starts",
-      label=_("Alt-start Rooms")
-      choices=MISC_STUFF.YES_NO
+      label=_("Alt-start Rooms"),
+      choices=MISC_STUFF.YES_NO,
       tooltip=_("For Co-operative games, sometimes have players start in different rooms")
     },
     {
       name = "foreshadowing_exit",
-      label = _("Foreshadowing Exit")
-      choices = MISC_STUFF.YES_NO
+      label = _("Foreshadowing Exit"),
+      choices = MISC_STUFF.YES_NO,
       tooltip = "Gets exit room theme to follow the theme of the next level, if different.",
       default = "yes",
       gap=1,
     },
 
     {
-      name="room_size_multiplier", label=_("Room Size Multiplier")
-      choices = MISC_STUFF.ROOM_SIZE_MULTIPLIER_CHOICES
+      name="room_size_multiplier", label=_("Room Size Multiplier"),
+      choices = MISC_STUFF.ROOM_SIZE_MULTIPLIER_CHOICES,
       default = "mixed",
       tooltip = "Alters the general size and ground coverage of rooms.\n\n" ..
         "Vanilla: No room size multipliers.\n\n" ..
         "Mix It Up: All multiplier ranges are randomly used with highest and lowest multipliers being rarest.",
     },
     {
-      name="room_area_multiplier", label=_("Area Count Multiplier")
-      choices = MISC_STUFF.AREA_COUNT_MULTIPLIER_CHOICES
+      name="room_area_multiplier", label=_("Area Count Multiplier"),
+      choices = MISC_STUFF.AREA_COUNT_MULTIPLIER_CHOICES,
       default = "mixed",
       tooltip = "Alters the amount of areas in a room. Influences the amount rooms are divided into different elevations or "..
         "simply different ceilings if a level has no steepness.\n\n" ..
@@ -228,8 +228,8 @@ OB_MODULES["misc"] =
         "Mix It Up: All multiplier ranges are randomly used with highest and lowest multipliers being rarest.",
     },
     {
-      name="room_size_consistency", label=_("Size Consistency")
-      choices = MISC_STUFF.ROOM_SIZE_CONSISTENCY_CHOICES
+      name="room_size_consistency", label=_("Size Consistency"),
+      choices = MISC_STUFF.ROOM_SIZE_CONSISTENCY_CHOICES,
       default = "mixed",
       tooltip = "Changes whether rooms follow a strict single size or not. " ..
         "Can be paired with above choices for more enforced results.\n\n" ..
@@ -247,7 +247,7 @@ OB_MODULES["misc"] =
       choices=MISC_STUFF.HEIGHT_CHOICES,
       tooltip=_("Determines if rooms should have a height limit or should exaggerate their height. " ..
       "Short means room areas strictly have at most 128 units of height, tall means rooms immediately have " ..
-      "doubled heights. Normal is the default Oblige behavior.")
+      "doubled heights. Normal is the default Oblige behavior."),
       default="normal",
       gap=1,
     },
@@ -257,7 +257,7 @@ OB_MODULES["misc"] =
     {
       name="natural_parks",
       label=_("Natural Cliffs"),
-      tooltip=_("Percentage of parks that use completely naturalistic walls.")
+      tooltip=_("Percentage of parks that use completely naturalistic walls."),
       choices=STYLE_CHOICES,
       default="none",
     },
@@ -358,39 +358,39 @@ OB_MODULES["misc"] =
 
     {
       name="exit_signs",
-      label=_("Exit Signs")
-      choices=MISC_STUFF.YES_NO
-      tooltip=_("Places exit signs by exiting room")
+      label=_("Exit Signs"),
+      choices=MISC_STUFF.YES_NO,
+      tooltip=_("Places exit signs by exiting room"),
       default = "yes",
       gap=1,
     },
 
     {
       name="linear_start",
-      label=_("Linear Start")
-      choices=MISC_STUFF.LINEAR_START_CHOICES
+      label=_("Linear Start"),
+      choices=MISC_STUFF.LINEAR_START_CHOICES,
       tooltip=_("Stops start rooms from having more than one external room connection. " ..
       "Can help reduce being overwhelmed by attacks from multiple directions " ..
       "when multiple neighboring rooms connect into the start room. Default means " ..
       "no control, and levels can have linear starts at random based on shape grammars as " ..
-      "per original Oblige 7.7 behavior.")
+      "per original Oblige 7.7 behavior."),
       default = "default",
     },
     {
       name="dead_ends",
-      label=_("Dead Ends")
-      choices=STYLE_CHOICES
+      label=_("Dead Ends"),
+      choices=STYLE_CHOICES,
       tooltip=_("Cleans up and removes areas with staircases that lead to nowhere.\n" ..
       "NONE means all dead ends are removed.\n" ..
-      "Heaps means all dead ends are preserved (Oblige default).")
+      "Heaps means all dead ends are preserved (Oblige default)."),
       default = "heaps",
       gap = 1,
     },
 
     {
       name="live_minimap",
-      label=_("Live Growth Minimap")
-      choices=MISC_STUFF.LIVEMAP_CHOICES
+      label=_("Live Growth Minimap"),
+      choices=MISC_STUFF.LIVEMAP_CHOICES,
       tooltip=_("Shows more steps Oblige performs on rooms as they are grown on the GUI minimap. May take a hit on generation speed.")
     },
 
@@ -406,4 +406,4 @@ OB_MODULES["misc"] =
 
 --  lakes       = { label=_("Lakes"),          choices=STYLE_CHOICES },
   },
-},
+}

@@ -18,7 +18,7 @@
 --
 ------------------------------------------------------------------------
 
-UI_ARCH = { },
+UI_ARCH = { }
 
 UI_ARCH.SIZES =
 {
@@ -39,7 +39,7 @@ UI_ARCH.SIZES =
   "colossal", _("Colossal"),
   "gargan",   _("Gargantuan"),
   "trans",    _("Transcendent"),
-},
+}
 
 UI_ARCH.ABSURDITY_CHOICES =
 {
@@ -48,14 +48,14 @@ UI_ARCH.ABSURDITY_CHOICES =
   "75",   _("75% of Levels"),
   "50",   _("50% of Levels"),
   "25",   _("25% of Levels"),
-},
+}
 
 UI_ARCH.ZDOOM_VISTA_CHOICES =
 {
   "enable",        _("Enable"),
   "sky_gen_smart", _("Sky-gen Smart"),
   "disable",       _("Disable"),
-},
+}
 
 UI_ARCH.ZDOOM_SKYBOX_CHOICES =
 {
@@ -64,13 +64,13 @@ UI_ARCH.ZDOOM_SKYBOX_CHOICES =
   "random",   _("Random"),
   "generic",  _("Generic"),
   "disable",  _("Disable"),
-},
+}
 
 UI_ARCH.YES_NO =
 {
   "yes", _("Yes"),
   "no",  _("No"),
-},
+}
 
 UI_ARCH.PROC_GOTCHA_CHOICES =
 {
@@ -84,7 +84,7 @@ UI_ARCH.PROC_GOTCHA_CHOICES =
   "5p",    _("5% Chance, Any Map After MAP04"),
   "10p",   _("10% Chance, Any Map After MAP04"),
   "all",   _("Everything"),
-},
+}
 
 UI_ARCH.STREETS_CHOICES =
 {
@@ -99,7 +99,7 @@ UI_ARCH.STREETS_CHOICES =
   "25",       _("25% of All Levels"),
   "13",       _("13% of All Levels"),
   "no",       _("NONE"),
-},
+}
 
 UI_ARCH.LEVEL_PERCENTAGE_CHOICES =
 {
@@ -110,11 +110,11 @@ UI_ARCH.LEVEL_PERCENTAGE_CHOICES =
   "10",   _("10% of All Levels"),
   "5",    _("5% of All Levels"),
   "none", _("NONE"),
-},
+}
 
 OB_MODULES["ui_arch"] =
 {
-  label = _("Architecture")
+  label = _("Architecture"),
 
   side = "left",
   priority = 104,
@@ -130,15 +130,15 @@ OB_MODULES["ui_arch"] =
 
     {
       name = "streets_mode",
-      label = _("Streets Mode")
-      choices = UI_ARCH.STREETS_CHOICES
+      label = _("Streets Mode"),
+      choices = UI_ARCH.STREETS_CHOICES,
       default = "no",
       tooltip = "Allows Oblige to create large street-like outdoor rooms.",
     },
     {
       name = "linear_mode",
-      label = _("Linear Mode")
-      choices = UI_ARCH.LEVEL_PERCENTAGE_CHOICES
+      label = _("Linear Mode"),
+      choices = UI_ARCH.LEVEL_PERCENTAGE_CHOICES,
       default = "none",
       tooltip = "Creates linear levels, where rooms are connected along a " ..
       "linear layout from start to exit. \n\nNote: Due to the nature of linear levels, " ..
@@ -148,8 +148,8 @@ OB_MODULES["ui_arch"] =
     },
     {
       name = "nature_mode",
-      label = _("Nature Mode")
-      choices = UI_ARCH.LEVEL_PERCENTAGE_CHOICES
+      label = _("Nature Mode"),
+      choices = UI_ARCH.LEVEL_PERCENTAGE_CHOICES,
       tooltip = "Forces most of the map to be composed of naturalistic areas (parks and caves). " ..
       "The ratio is decided by Outdoors style setting while competing styles are ignored.",
       default = "10",
@@ -166,14 +166,14 @@ OB_MODULES["ui_arch"] =
 
     {
       name="prebuilt_levels",
-      label=_("Prebuilt Levels")
-      choices=UI_ARCH.YES_NO
+      label=_("Prebuilt Levels"),
+      choices=UI_ARCH.YES_NO,
       tooltip = "Enable or disable prebuilt maps. When disabled, are replaced with generated maps instead.",
     },
     {
       name="procedural_gotchas",
-      label=_("Procedural Gotcha")
-      choices=UI_ARCH.PROC_GOTCHA_CHOICES
+      label=_("Procedural Gotcha"),
+      choices=UI_ARCH.PROC_GOTCHA_CHOICES,
       default="none",
       tooltip = "Procedural Gotchas are two room maps, where the second is an immediate " ..
       "but immensely-sized exit room with gratitiously intensified monster strength. " ..
@@ -184,8 +184,8 @@ OB_MODULES["ui_arch"] =
 
     {
       name = "layout_absurdity",
-      label = _("Layout Absurdity")
-      choices=UI_ARCH.ABSURDITY_CHOICES
+      label = _("Layout Absurdity"),
+      choices=UI_ARCH.ABSURDITY_CHOICES,
       default="50",
       tooltip = "The layout absurdifier attempts to cause levels to overprefer specific shape " ..
       "rules from the ruleset in order to create odd and possibly broken but interesting combinations. " ..
@@ -196,8 +196,8 @@ OB_MODULES["ui_arch"] =
 
     {
       name = "zdoom_vista",
-      label = _("Bottomless Vistas")
-      choices=UI_ARCH.ZDOOM_VISTA_CHOICES
+      label = _("Bottomless Vistas"),
+      choices=UI_ARCH.ZDOOM_VISTA_CHOICES,
       default="disable",
       tooltip = "This feature allows for vistas that show more of the skybox below the horizon. " ..
       "This does not prevent skybox tiling.\n" ..
@@ -207,12 +207,12 @@ OB_MODULES["ui_arch"] =
     },
     {
       name = "zdoom_skybox",
-      label = _("ZDoom 3D Skybox")
-      choices=UI_ARCH.ZDOOM_SKYBOX_CHOICES
+      label = _("ZDoom 3D Skybox"),
+      choices=UI_ARCH.ZDOOM_SKYBOX_CHOICES,
       default="disable",
       tooltip = "If a ZDoom based engine is selected, one has the option " ..
       "to enable a custom 3D skybox to be rendered into the map. " ..
       "It is preferable to put this on if you have ZDoom Vista enabled.",
     },
   },
-},
+}

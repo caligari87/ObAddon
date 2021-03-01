@@ -16,7 +16,7 @@
 --
 ------------------------------------------------------------------------
 
-SMALL_SPIDERDEMON = {},
+SMALL_SPIDERDEMON = {}
 
 
 function SMALL_SPIDERDEMON.setup(self)
@@ -27,7 +27,7 @@ end
 
 OB_MODULES["small_spiderdemon"] =
 {
-  label = _("Smaller Spiderdemon")
+  label = _("Smaller Spiderdemon"),
 
   game = "doomish",
 
@@ -46,5 +46,5 @@ OB_MODULES["small_spiderdemon"] =
     "which allows her to be placed in maps more often " ..
     "(her default size is so large that there is rarely enough space)")
 
-},
+}
 

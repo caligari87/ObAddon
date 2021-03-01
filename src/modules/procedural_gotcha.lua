@@ -16,7 +16,7 @@
 --
 ------------------------------------------------------------------------
 
-PROCEDURAL_GOTCHA_FINE_TUNE = {},
+PROCEDURAL_GOTCHA_FINE_TUNE = {}
 
 PROCEDURAL_GOTCHA_FINE_TUNE.GOTCHA_STRENGTH_CHOICES =
 {
@@ -26,7 +26,7 @@ PROCEDURAL_GOTCHA_FINE_TUNE.GOTCHA_STRENGTH_CHOICES =
   "tougher", _("[+6] Tougher"),
   "crazier", _("[+8] CRAZIER"),
   "nightmarish", _("[+16] NIGHTMARISH")
-},
+}
 
 PROCEDURAL_GOTCHA_FINE_TUNE.GOTCHA_QUANTITY_CHOICES =
 {
@@ -39,7 +39,7 @@ PROCEDURAL_GOTCHA_FINE_TUNE.GOTCHA_QUANTITY_CHOICES =
   "150", _("+150% Monsters"),
   "200",  _("+200% Monsters"),
   "400", _("+400% Monsters")
-},
+}
 
 PROCEDURAL_GOTCHA_FINE_TUNE.GOTCHA_MAP_SIZES =
 {
@@ -47,18 +47,18 @@ PROCEDURAL_GOTCHA_FINE_TUNE.GOTCHA_MAP_SIZES =
   "regular", _("Regular"),
   "small", _("Small"),
   "tiny", _("Tiny")
-},
+}
 
 PROCEDURAL_GOTCHA_FINE_TUNE.FORCE_BOSS_FIGHT_CHOICES =
 {
   "yes", _("Yes"),
   "no",  _("No")
-},
+}
 
 
 
 function PROCEDURAL_GOTCHA_FINE_TUNE.setup(self)
-  for name,opt in pairs(pairs(self.options)) do
+  for name,opt in pairs(self.options) do
     local value = self.options[name].value
     PARAM[name] = value
   end
@@ -66,7 +66,7 @@ end
 
 OB_MODULES["procedural_gotcha"] =
 {
-  label = _("Procedural Gotcha Options")
+  label = _("Procedural Gotcha Options"),
 
   side = "right",
   priority = 92,
@@ -77,7 +77,7 @@ OB_MODULES["procedural_gotcha"] =
   },
 
   tooltip=_(
-    "This module allows you to fine tune the Procedural Gotcha experience if you have Procedural Gotchas enabled. Does not affect prebuilts. It is recommended to pick higher scales on one of the two options, but not both at once for a balanced challenge.")
+    "This module allows you to fine tune the Procedural Gotcha experience if you have Procedural Gotchas enabled. Does not affect prebuilts. It is recommended to pick higher scales on one of the two options, but not both at once for a balanced challenge."),
 
   options =
   {
@@ -117,4 +117,4 @@ OB_MODULES["procedural_gotcha"] =
       tooltip = "EXPERIMENTAL: Forces procedural gotchas to have guaranteed boss fights.",
     },
   },
-},
+}

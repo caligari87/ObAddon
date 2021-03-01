@@ -27,20 +27,20 @@ gui.import("zdoom_armaetus_doom1_themes.lua")
 
 gui.import("zdoom_armaetus_epic_texturex_lump.lua")
 
-ARMAETUS_EPIC_TEXTURES = { },
+ARMAETUS_EPIC_TEXTURES = { }
 
 ARMAETUS_EPIC_TEXTURES.YES_NO =
 {
   "yes", _("Yes"),
   "no",  _("No"),
-},
+}
 
 ARMAETUS_EPIC_TEXTURES.SOUCEPORT_CHOICES =
 {
   "zs",       _("ZScript"),
   "decorate", _("ACS-Decorate"),
   "no",       _("No"),
-},
+}
 
 ARMAETUS_EPIC_TEXTURES.ENVIRONMENT_THEME_CHOICES =
 {
@@ -52,7 +52,7 @@ ARMAETUS_EPIC_TEXTURES.ENVIRONMENT_THEME_CHOICES =
   "snow",      _("Always Snow"),
   "desert",    _("Always Desert"),
   "no",        _("No"),
-},
+}
 
 ARMAETUS_EPIC_TEXTURES.TEMPLATES =
 {
@@ -139,7 +139,7 @@ ARMAETUS_EPIC_TEXTURES.TEMPLATES =
                         break;
                     default:
                         unknownFlat = true;
-                },
+                }
 
                 if(onGrass)
                 {
@@ -162,8 +162,8 @@ ARMAETUS_EPIC_TEXTURES.TEMPLATES =
                             case 5:
                                 fstate = "TapwaveTreeB";
                                 break;
-                        },
-                    },
+                        }
+                    }
                     else //Bushes
                     {
                         switch(random(1,2))
@@ -174,9 +174,9 @@ ARMAETUS_EPIC_TEXTURES.TEMPLATES =
                             case 2:
                                 fstate = "ShrubB";
                                 break;
-                        },
-                    },
-                },
+                        }
+                    }
+                }
 
                 if(onSnow)
                 {
@@ -188,7 +188,7 @@ ARMAETUS_EPIC_TEXTURES.TEMPLATES =
                     }else
                     {
                         index = random(1,9);
-                    },
+                    }
 
                     switch(index)
                     {
@@ -234,8 +234,8 @@ ARMAETUS_EPIC_TEXTURES.TEMPLATES =
                         case 14:
                             fstate = "CraneoPine5";
                             break;
-                    },
-                },
+                    }
+                }
 
                 if(onSand)
                 {
@@ -256,8 +256,8 @@ ARMAETUS_EPIC_TEXTURES.TEMPLATES =
                         case 5:
                             fstate = "ShrubB";
                             break;
-                    },
-                },
+                    }
+                }
 
                 if(onHellscape)
                 {
@@ -281,8 +281,8 @@ ARMAETUS_EPIC_TEXTURES.TEMPLATES =
                         case 6:
                             fstate = "CraneoWeirwoodTreeC";
                             break;
-                    },
-                },
+                    }
+                }
 
                 if(unknownFlat)
                 {
@@ -297,10 +297,10 @@ ARMAETUS_EPIC_TEXTURES.TEMPLATES =
                         case 3:
                             fstate = "CraneoDeadTreeC";
                             break;
-                    },
-                },
+                    }
+                }
 
-                if(onCeil ~= 'F_SKY1')
+                if(onCeil != 'F_SKY1')
                 {
                     scale.x *= 0.5; //For those occasional indoor planters
                     scale.y *= 0.5; //in urban theme.
@@ -312,8 +312,8 @@ ARMAETUS_EPIC_TEXTURES.TEMPLATES =
                         case 2:
                             fstate = "ShrubB";
                             break;
-                    },
-                },
+                    }
+                }
 
                 //add a bit of random scaling jazz
                 //CraneoPine# set is already 200ish height and doesn't need
@@ -326,7 +326,7 @@ ARMAETUS_EPIC_TEXTURES.TEMPLATES =
                 scale.x *= randompick(-1,1);
 
                 return ResolveState(fstate);
-            },
+            }
 
         // temperate plants
         OakTree:
@@ -466,32 +466,32 @@ ARMAETUS_EPIC_TEXTURES.TEMPLATES =
         CraneoDeadTreeC:
             OBDT C 1;
             Loop;
-    },
-},
+    }
+}
 
 class FancyObligeTree2 : FancyObligeTree replaces TorchTree
 {
-}]]
+}]],
 
   DEC_TREES =
 [[
   actor FancyObligeTree replaces BigTree
 {
-    Radius 16,
-    Height 128,
-    ProjectilePassHeight -16,
+    Radius 16
+    Height 128
+    ProjectilePassHeight -16
     +SOLID
 
     States
     {
         Spawn:
-      TRE2 A 0,
+      TRE2 A 0
       TRE2 A 0 ACS_NamedExecuteAlways("IsMyAssGrass")
-      TRE2 A 5,
+      TRE2 A 5
       Goto Decide
 
         Decide:
-      TRE2 A 1,
+      TRE2 A 1
       TRE2 A 0 A_JumpIfInventory("AssIsGrass", 1, "OnGrass")
       TRE2 A 0 A_JumpIfInventory("AssIsSnow", 1, "OnSnow")
       TRE2 A 0 A_JumpIfInventory("AssIsSand", 1, "OnSand")
@@ -526,138 +526,138 @@ class FancyObligeTree2 : FancyObligeTree replaces TorchTree
 
         //temperate trees
         OakTree:
-      OAK1 A -1,
+      OAK1 A -1
 
         RedwoodTree:
-      RED1 A -1,
+      RED1 A -1
 
         SomeThinTree:
-      THN1 A -1,
+      THN1 A -1
 
         TapwaveTreeA:
-      TWTR A -1,
+      TWTR A -1
 
         TapwaveTreeB:
-      TWTR B -1,
+      TWTR B -1
 
         Shrub1:
-      SHB1 A -1,
+      SHB1 A -1
 
         Shrub2:
-      SHB2 A -1,
+      SHB2 A -1
 
         //snow trees
         SnowTreeDeadA:
-      XMAS A -1,
+      XMAS A -1
 
         SnowTreeKebab:
-      XMAS B -1,
+      XMAS B -1
 
         SnowTreePloughed:
-      XMAS C -1,
+      XMAS C -1
 
         SnowTreeDeadB:
-      XMAS D -1,
+      XMAS D -1
 
         SnowTreeDeadC:
-      XMAS E -1,
+      XMAS E -1
 
         SnowPineA:
-      XMAS F -1,
+      XMAS F -1
 
         SnowPineB:
-      XMAS G -1,
+      XMAS G -1
 
         SnowPineSmolA:
-      XMAS H -1,
+      XMAS H -1
 
         SnowPineSmolB:
-      XMAS I -1,
+      XMAS I -1
 
         CraneoPine1:
-      XMAS J -1,
+      XMAS J -1
 
         CraneoPine2:
-      XMAS K -1,
+      XMAS K -1
 
         CraneoPine3:
-      XMAS L -1,
+      XMAS L -1
 
         CraneoPine4:
-      XMAS M -1,
+      XMAS M -1
 
         CraneoPine5:
-      XMAS N -1,
+      XMAS N -1
 
         //desert trees
         PalmTree:
-      PLM1 A -1,
+      PLM1 A -1
 
         DesertTreeA:
-      DTR1 A -1,
+      DTR1 A -1
 
         DesertTreeB:
-      DTR2 A -1,
+      DTR2 A -1
 
         // hell trees
         // eyeball trees
         CraneoEyeTreeA:
-      OBET A -1,
+      OBET A -1
 
         CraneoEyeTreeB:
-      OBET B -1,
+      OBET B -1
 
         CraneoEyeTreeC:
-      OBET C -1,
+      OBET C -1
 
         // weirwood trees
         CraneoWeirwoodTreeA:
-      OBWT A -1,
+      OBWT A -1
 
         CraneoWeirwoodTreeB:
-      OBWT B -1,
+      OBWT B -1
 
         CraneoWeirwoodTreeC:
-      OBWT C -1,
+      OBWT C -1
 
         // sad, sad, sad dead trees very sad
         CraneoDeadTreeA:
-      OBDT A -1,
+      OBDT A -1
 
         CraneoDeadTreeB:
-      OBDT B -1,
+      OBDT B -1
 
         CraneoDeadTreeC:
-      OBDT C -1,
-    },
-},
+      OBDT C -1
+    }
+}
 
-actor FancyObligeTreeAndBush : FancyObligeTree replaces TorchTree{},
+actor FancyObligeTreeAndBush : FancyObligeTree replaces TorchTree{}
 
 actor AssIsGrass : Inventory
 {
-    Inventory.maxAmount 1,
-},
+    Inventory.maxAmount 1
+}
 
 actor AssIsSnow : Inventory
 {
-    Inventory.maxAmount 1,
-},
+    Inventory.maxAmount 1
+}
 
 actor AssIsSand : Inventory
 {
-    Inventory.maxAmount 1,
-},
+    Inventory.maxAmount 1
+}
 
 actor AssIsHell : Inventory
 {
-    Inventory.maxAmount 1,
-},
+    Inventory.maxAmount 1
+}
 ]]
-},
+}
 
 function ARMAETUS_EPIC_TEXTURES.setup(self)
-  for name,opt in pairs(pairs(self.options)) do
+  for name,opt in pairs(self.options) do
     local value = self.options[name].value
     PARAM[name] = value
   end
@@ -689,7 +689,7 @@ function ARMAETUS_EPIC_TEXTURES.decide_environment_themes()
 
   -- pick a random environment
   if PARAM.environment_themes == "random" then
-    for _,L in pairs(pairs(GAME.levels)) do
+    for _,L in pairs(GAME.levels) do
       L.outdoor_theme = rand.pick({"temperate","snow","desert"})
     end
   end
@@ -699,7 +699,7 @@ function ARMAETUS_EPIC_TEXTURES.decide_environment_themes()
     local previous_theme
     local outdoor_theme_along
 
-    for _,L in pairs(pairs(GAME.levels)) do
+    for _,L in pairs(GAME.levels) do
       if L.id == 1 then
         L.outdoor_theme = rand.pick({"temperate","snow","desert"})
         previous_theme = L.outdoor_theme
@@ -708,7 +708,7 @@ function ARMAETUS_EPIC_TEXTURES.decide_environment_themes()
         -- continue the same theme until the countdown ends
         if outdoor_theme_along > 0 then
           L.outdoor_theme = previous_theme
-          outdoor_theme_along = outdoor_theme_along - 1,
+          outdoor_theme_along = outdoor_theme_along - 1
         -- decide a new theme when the countdown ends
         -- logic goes that deserts cannot go to snow immediately
         -- and vice versa
@@ -716,7 +716,7 @@ function ARMAETUS_EPIC_TEXTURES.decide_environment_themes()
           if previous_theme == "temperate" then
             L.outdoor_theme = rand.pick({"snow","desert"})
           else
-            L.outdoor_theme = "temperate",
+            L.outdoor_theme = "temperate"
           end
           previous_theme = L.outdoor_theme
           outdoor_theme_along = rand.irange(2,4)
@@ -727,36 +727,36 @@ function ARMAETUS_EPIC_TEXTURES.decide_environment_themes()
 
   -- -ish environment themes
   if PARAM.environment_themes == "snowish" then
-    for _,L in pairs(pairs(GAME.levels)) do
+    for _,L in pairs(GAME.levels) do
       L.outdoor_theme = rand.pick({"temperate","snow"})
     end
   elseif PARAM.environment_themes == "desertish" then
-    for _,L in pairs(pairs(GAME.levels)) do
+    for _,L in pairs(GAME.levels) do
       L.outdoor_theme = rand.pick({"temperate","desert"})
     end
   end
 
   -- absolutes
   if PARAM.environment_themes == "snow" then
-    for _,L in pairs(pairs(GAME.levels)) do
-      L.outdoor_theme = "snow",
+    for _,L in pairs(GAME.levels) do
+      L.outdoor_theme = "snow"
     end
   elseif PARAM.environment_themes == "desert" then
-    for _,L in pairs(pairs(GAME.levels)) do
-      L.outdoor_theme = "desert",
+    for _,L in pairs(GAME.levels) do
+      L.outdoor_theme = "desert"
     end
   end
 
   if PARAM.environment_themes == "episodic" then
     local prev_theme
 
-    for _,E in pairs(pairs(GAME.episodes)) do
+    for _,E in pairs(GAME.episodes) do
       if not prev_theme then
         E.outdoor_theme = rand.pick({"temperate","desert","snow"})
         prev_theme = E.outdoor_theme
       else
         if prev_theme ~= "temperate" then
-          E.outdoor_theme = "temperate",
+          E.outdoor_theme = "temperate"
           prev_theme = E.outdoor_theme
         else
           E.outdoor_theme = rand.pick({"snow","desert"})
@@ -765,13 +765,13 @@ function ARMAETUS_EPIC_TEXTURES.decide_environment_themes()
       end
     end
 
-    for _,L in pairs(pairs(GAME.levels)) do
+    for _,L in pairs(GAME.levels) do
       L.outdoor_theme = L.episode.outdoor_theme
     end
   end
 
   gui.printf("\n--==| Environment Outdoor Themes |==--\n\n")
-  for _,L in pairs(pairs(GAME.levels)) do
+  for _,L in pairs(GAME.levels) do
     if L.outdoor_theme then
       gui.printf("Outdoor theme for " .. L.name .. ": " .. L.outdoor_theme .. "\n")
     end
@@ -807,7 +807,7 @@ function ARMAETUS_EPIC_TEXTURES.generate_environment_themes()
       PARAM.def_hell_naturals = GAME.ROOM_THEMES.hell_Outdoors_generic.naturals
 
     -- Doom 1,
-    elseif OB_CONFIG.game == "doom1",
+    elseif OB_CONFIG.game == "doom1"
     or OB_CONFIG.game == "ultdoom" then
       -- floors
       PARAM.def_tech_floors = GAME.ROOM_THEMES.tech_Outdoors.floors
@@ -865,7 +865,7 @@ function ARMAETUS_EPIC_TEXTURES.generate_environment_themes()
       GAME.ROOM_THEMES.hell_Outdoors_generic.naturals = PARAM.def_hell_naturals
     end
   -- MSSP-TODO: check cliff mats for Doom1,
-  elseif OB_CONFIG.game == "doom1",
+  elseif OB_CONFIG.game == "doom1"
   or OB_CONFIG.game == "ultdoom" then
     if LEVEL.outdoor_theme == "snow" then
       GAME.ROOM_THEMES.tech_Outdoors.floors = snow_floors
@@ -899,7 +899,7 @@ function ARMAETUS_EPIC_TEXTURES.generate_environment_themes()
 end
 
 function ARMAETUS_EPIC_TEXTURES.table_insert(table1, table2)
-  for x,y in pairs(pairs(table1)) do
+  for x,y in pairs(table1) do
     table2[x] = y
   end
 end
@@ -907,7 +907,7 @@ end
 function ARMAETUS_EPIC_TEXTURES.put_new_materials()
   -- MSSP-TODO - redo all this code to just use a single deep merge table operation
 
-  if OB_CONFIG.game == "doom2" or OB_CONFIG.game == "plutonia",
+  if OB_CONFIG.game == "doom2" or OB_CONFIG.game == "plutonia"
   or OB_CONFIG.game == "tnt" then
 
     -- remove old skybox tables
@@ -980,13 +980,13 @@ function ARMAETUS_EPIC_TEXTURES.put_new_materials()
 end
 
 function ARMAETUS_EPIC_TEXTURES.put_the_texture_wad_in()
-  local wad_file = "games/doom/data/ObAddon_Textures.wad",
+  local wad_file = "games/doom/data/ObAddon_Textures.wad"
   if PARAM.include_package ~= "no" then
     gui.wad_transfer_lump(wad_file, "ANIMDEFS", "ANIMDEFS")
     gui.wad_transfer_lump(wad_file, "CREDITS", "CREDITS")
     gui.wad_merge_sections(wad_file)
 
-    local dir = "games/doom/data/",
+    local dir = "games/doom/data/"
     -- wad_merge_sections currently does not support merging HI_START
     -- and HI_END... *sigh*
     gui.wad_add_binary_lump("HI_START",{})
@@ -1021,7 +1021,7 @@ end
 
 OB_MODULES["armaetus_epic_textures"] =
 {
-  label = _("ZDoom: Armaetus Texture Pack")
+  label = _("ZDoom: Armaetus Texture Pack"),
 
   side = "left",
   priority = 70,
@@ -1032,10 +1032,10 @@ OB_MODULES["armaetus_epic_textures"] =
 
   hooks =
   {
-    setup = ARMAETUS_EPIC_TEXTURES.setup
-    get_levels_after_themes = ARMAETUS_EPIC_TEXTURES.decide_environment_themes
-    begin_level = ARMAETUS_EPIC_TEXTURES.generate_environment_themes
-    level_layout_finished = ARMAETUS_EPIC_TEXTURES.create_environment_themes
+    setup = ARMAETUS_EPIC_TEXTURES.setup,
+    get_levels_after_themes = ARMAETUS_EPIC_TEXTURES.decide_environment_themes,
+    begin_level = ARMAETUS_EPIC_TEXTURES.generate_environment_themes,
+    level_layout_finished = ARMAETUS_EPIC_TEXTURES.create_environment_themes,
     all_done = ARMAETUS_EPIC_TEXTURES.put_the_texture_wad_in
   },
 
@@ -1046,8 +1046,8 @@ OB_MODULES["armaetus_epic_textures"] =
     custom_liquids =
     {
       name = "custom_liquids",
-      label = _("Custom Liquids")
-      choices = ARMAETUS_EPIC_TEXTURES.YES_NO
+      label = _("Custom Liquids"),
+      choices = ARMAETUS_EPIC_TEXTURES.YES_NO,
       default = "yes",
       tooltip = "Adds new custom Textures liquid flats.",
       priority=4,
@@ -1056,8 +1056,8 @@ OB_MODULES["armaetus_epic_textures"] =
     custom_trees =
     {
       name = "custom_trees",
-      label = _("Custom Trees")
-      choices = ARMAETUS_EPIC_TEXTURES.SOUCEPORT_CHOICES
+      label = _("Custom Trees"),
+      choices = ARMAETUS_EPIC_TEXTURES.SOUCEPORT_CHOICES,
       default = "zs",
       tooltip =
         "Adds custom flat-depedendent tree sprites into the game. Currently only replaces " ..
@@ -1070,8 +1070,8 @@ OB_MODULES["armaetus_epic_textures"] =
     environment_themes =
     {
       name = "environment_themes",
-      label = _("Environment Theme")
-      choices = ARMAETUS_EPIC_TEXTURES.ENVIRONMENT_THEME_CHOICES
+      label = _("Environment Theme"),
+      choices = ARMAETUS_EPIC_TEXTURES.ENVIRONMENT_THEME_CHOICES,
       default = "random",
       tooltip =
         "// THIS FEATURE IS CURRENTLY UNDER CONSTRUCTION \\\\\n" ..
@@ -1084,8 +1084,8 @@ OB_MODULES["armaetus_epic_textures"] =
     include_package =
     {
       name = "include_package",
-      label = _("Texture WAD Merge")
-      choices = ARMAETUS_EPIC_TEXTURES.YES_NO
+      label = _("Texture WAD Merge"),
+      choices = ARMAETUS_EPIC_TEXTURES.YES_NO,
       default = "yes",
       tooltip =
         "Allows the trimming down of resulting WAD by not merging the custom texture WAD.\n\n" ..
@@ -1094,4 +1094,4 @@ OB_MODULES["armaetus_epic_textures"] =
       priority=1,
     },
   },
-},
+}

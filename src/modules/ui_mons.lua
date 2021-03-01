@@ -18,7 +18,7 @@
 --
 ------------------------------------------------------------------------
 
-UI_MONS = { },
+UI_MONS = { }
 
 UI_MONS.QUANTITIES =
 {
@@ -41,7 +41,7 @@ UI_MONS.QUANTITIES =
     "ludicrous", _("[6.66] Merciless"),
     "mixed",     _("Mix It Up"),
     "prog",      _("Progressive"),
-},
+}
 
 UI_MONS.MIX_QUANTITIES =
 {
@@ -61,7 +61,7 @@ UI_MONS.MIX_QUANTITIES =
     "chaotic",   _("[5.5] Brutal"),
     "unhinged",  _("[6.0] Draconian"),
     "ludicrous", _("[6.66] Merciless"),
-},
+}
 
 UI_MONS.STRENGTHS =
 {
@@ -72,7 +72,7 @@ UI_MONS.STRENGTHS =
   "tough",  _("[1.7] Tough"),
   "fierce", _("[2.5] Fierce"),
   "crazy",  _("[12] CRAZY"),
-},
+}
 
 UI_MONS.BOSSES =
 {
@@ -80,7 +80,7 @@ UI_MONS.BOSSES =
   "easier", _("Easier"),
   "medium", _("Average"),
   "harder", _("Harder"),
-},
+}
 
 UI_MONS.RAMPS =
 {
@@ -91,7 +91,7 @@ UI_MONS.RAMPS =
   "veryfast", _("Very Fast"),
   "extfast",  _("Extremely Fast"),
   "epi",      _("Episodic"),
-},
+}
 
 UI_MONS.TRAP_STYLE =
 {
@@ -102,7 +102,7 @@ UI_MONS.TRAP_STYLE =
   "40",        _("40% Closets - 60% Teleports"),
   "60",        _("60% Closets - 40% Teleports"),
   "80",        _("80% Closets - 20% Teleports"),
-},
+}
 
 UI_MONS.CAGE_STRENGTH =
 {
@@ -115,20 +115,20 @@ UI_MONS.CAGE_STRENGTH =
   "deadly",    _("Deadly"),
   "lethal",    _("Lethal"),
   "crazy",     _("CRAZY"),
-},
+}
 
 UI_MONS.SECRET_MONSTERS =
 {
   "yesyes", _("Yes - Full Strength"),
   "yes",    _("Yes - Weak"),
   "no",     _("No"),
-},
+}
 
 UI_MONS.START_ROOM_MON_CHOICES =
 {
   "no",  _("No"),
   "yes", _("Yes"),
-},
+}
 
 UI_MONS.BOSSREGULARS =
 {
@@ -136,11 +136,11 @@ UI_MONS.BOSSREGULARS =
   "minor", _("Minor Bosses Only"),
   "nasty", _("Minor and Nasty Bosses Only"),
   "all", _("All Bosses"),
-},
+}
 
 OB_MODULES["ui_mons"] =
 {
-  label = _("Monsters")
+  label = _("Monsters"),
 
   side = "right",
   priority = 102,
@@ -238,4 +238,4 @@ OB_MODULES["ui_mons"] =
       default="no",
     },
   },
-},
+}

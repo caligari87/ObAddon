@@ -17,7 +17,7 @@
 --
 ------------------------------------------------------------------------
 
-MEGAWAD_SWAP = {},
+MEGAWAD_SWAP = {}
 
 MEGAWAD_SWAP.doom1_music =
 {
@@ -34,7 +34,7 @@ MEGAWAD_SWAP.doom1_music =
     "E3M7", "E3M9",
   },
 
-},
+}
 
 
 MEGAWAD_SWAP.doom2_music =
@@ -49,7 +49,7 @@ MEGAWAD_SWAP.doom2_music =
     "MESSG2", "ROMER2", "TENSE",  "SHAWN3", "OPENIN",
   },
 
-},
+}
 
 
 function MEGAWAD_SWAP.get_levels(self)
@@ -58,12 +58,12 @@ function MEGAWAD_SWAP.get_levels(self)
   --       The actual storage is done by the Boom DEHACKED code.
   --
 
-  local text = "[MUSIC]\n",
+  local text = "[MUSIC]\n"
 
   local epi_list = MEGAWAD_SWAP.doom2_music
 
   if OB_CONFIG.game == "doom1" or
-     OB_CONFIG.game == "ultdoom",
+     OB_CONFIG.game == "ultdoom"
   then
     epi_list = MEGAWAD_SWAP.doom1_music
   end
@@ -79,7 +79,7 @@ function MEGAWAD_SWAP.get_levels(self)
     end
 
     for i = 1, #src do
-      text = text .. src[i] .. " = " .. dest[i] .. "\n",
+      text = text .. src[i] .. " = " .. dest[i] .. "\n"
     end
   end
 
@@ -89,7 +89,7 @@ end
 
 OB_MODULES["megawad_swapper"] =
 {
-  label = _("Megawad Music Swapper")
+  label = _("Megawad Music Swapper"),
 
   side = "left",
   priority = 80,
@@ -97,11 +97,11 @@ OB_MODULES["megawad_swapper"] =
   game = "doomish",
 
   engine = "boom",
-  tooltip=_("Ideal if you have a music WAD replacing all tracks in the game. A note if you are using the ZDoom Specials Shuffle Music option, there is no need to use this module. This is ideal for non-ZDoom ports only.")
+  tooltip=_("Ideal if you have a music WAD replacing all tracks in the game. A note if you are using the ZDoom Specials Shuffle Music option, there is no need to use this module. This is ideal for non-ZDoom ports only."),
 
   hooks =
   {
     get_levels = MEGAWAD_SWAP.get_levels
   },
-},
+}
 

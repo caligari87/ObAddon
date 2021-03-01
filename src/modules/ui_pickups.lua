@@ -17,7 +17,7 @@
 --
 ------------------------------------------------------------------------
 
-UI_PICKUPS = { },
+UI_PICKUPS = { }
 
 UI_PICKUPS.HEALTH_CHOICES =
 {
@@ -29,7 +29,7 @@ UI_PICKUPS.HEALTH_CHOICES =
   "bit_more", _("Bit More"),
   "more",     _("More"),
   "heaps",    _("Heaps"),
-},
+}
 
 UI_PICKUPS.WEAPON_CHOICES =
 {
@@ -39,7 +39,7 @@ UI_PICKUPS.WEAPON_CHOICES =
   "normal",    _("Normal"),
   "later",     _("Later"),
   "very_late", _("Very Late"),
-},
+}
 
 UI_PICKUPS.ITEM_CHOICES =
 {
@@ -49,7 +49,7 @@ UI_PICKUPS.ITEM_CHOICES =
   "normal", _("Normal"),
   "more",   _("More"),
   "heaps",  _("Heaps"),
-},
+}
 
 UI_PICKUPS.SECRET_ROOM_BONUS =
 {
@@ -58,12 +58,12 @@ UI_PICKUPS.SECRET_ROOM_BONUS =
   "heaps", _("Heaps"),
   "heapser", _("Rich"),
   "heapsest", _("Resplendent")
-},
+}
 
 
 OB_MODULES["ui_pickups"] =
 {
-  label = _("Pickups")
+  label = _("Pickups"),
 
   side = "right",
   priority = 101,
@@ -84,4 +84,4 @@ OB_MODULES["ui_pickups"] =
       default="none",
     },
   },
-},
+}

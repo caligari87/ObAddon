@@ -12,7 +12,7 @@
 --
 --------------------------------------------------------------------
 
-BOSS_GEN_TUNE = {},
+BOSS_GEN_TUNE = {}
 
 BOSS_GEN_TUNE.BOSS_DIFF_CHOICES =
 {
@@ -20,7 +20,7 @@ BOSS_GEN_TUNE.BOSS_DIFF_CHOICES =
   "default", _("Moderate"),
   "harder", _("Harder"),
   "nightmare", _("Nightmare"),
-},
+}
 
 BOSS_GEN_TUNE.BOSS_HEALTH_CHOICES =
 {
@@ -30,19 +30,19 @@ BOSS_GEN_TUNE.BOSS_HEALTH_CHOICES =
   "more",  _("Increased by 50%"),
   "muchmore",  _("Increased by 100%"),
   "demiosmode",  _("Increased by 200%"),
-},
+}
 
 BOSS_GEN_TUNE.BOSS_HEALTH_BAR =
 {
   "yes", _("Yes"),
   "no",  _("No"),
-},
+}
 
 BOSS_GEN_TUNE.BOSS_MUSIC =
 {
   "yes", _("Yes"),
   "no",  _("No"),
-},
+}
 
 BOSS_GEN_TUNE.BOSS_LESS_HITSCAN =
 {
@@ -50,7 +50,7 @@ BOSS_GEN_TUNE.BOSS_LESS_HITSCAN =
   "less",     _("50% less"),
   "muchless", _("80% less"),
   "none", _("100% less"),
-},
+}
 
 BOSS_GEN_TUNE.ARENA_STEEPNESS =
 {
@@ -60,7 +60,7 @@ BOSS_GEN_TUNE.ARENA_STEEPNESS =
   "less",  _("Less"),
   "some",  _("Some"),
   "mixed", _("Mix It Up"),
-},
+}
 
 BOSS_GEN_TUNE.REINFORCE =
 {
@@ -70,7 +70,7 @@ BOSS_GEN_TUNE.REINFORCE =
   "harder",  _("Harder"),
   "tougher",  _("Much Harder"),
   "nightmare", _("Nightmare"),
-},
+}
 
 BOSS_GEN_TUNE.REINFORCER =
 {
@@ -81,32 +81,32 @@ BOSS_GEN_TUNE.REINFORCER =
   "harder",  _("Fast"),
   "tougher",  _("Faster"),
   "serious", _("Nightmare"),
-},
+}
 
 BOSS_GEN_TUNE.BOSS_TYPES =
 {
   "yes", _("Yes"),
   "no",  _("No"),
-},
+}
 
 BOSS_GEN_TUNE.BOSS_WEAP =
 {
   "scatter", _("Scatter around arena"),
   "close",  _("Close to player start"),
-},
+}
 
 BOSS_GEN_TUNE.BOSS_EXIT =
 {
   "default", _("Exit after 10 seconds"),
   "item",  _("Spawn pickup that exits the level"),
-},
+}
 
 BOSS_GEN_TUNE.BOSS_LIMITS =
 {
   "hardlimit",  _("Hard Limit"),
   "softlimit",     _("Soft Limit"),
   "nolimit", _("No Limit"),
-},
+}
 
 BOSS_GEN_TUNE.MULT =
 {
@@ -115,7 +115,7 @@ BOSS_GEN_TUNE.MULT =
   "3", _("x3 (default)"),
   "4", _("x4"),
   "5", _("x5"),
-},
+}
 
 BOSS_GEN_TUNE.TEMPLATES =
 {
@@ -130,10 +130,10 @@ class BossGenerator_Handler : EventHandler
     {
         int ln = level.LevelNum;
         if(a.angle==ln || a.angle==45+ln || a.angle==90+ln || a.angle==135+ln || a.angle==180+ln || a.angle==225+ln || a.angle==270+ln || a.angle==315+ln)
-        { return true;},
+        { return true;}
         else
-        { return false;},
-    },
+        { return false;}
+    }
     void SpreadMissile(actor Misl, float ang)
     {
         let proj = Misl.SpawnMissileAngleZSpeed(Misl.Pos.z, Misl.GetClassName(), Misl.Angle+ang, Misl.vel.z, Misl.Speed, Misl.Target,0);
@@ -142,12 +142,12 @@ class BossGenerator_Handler : EventHandler
             proj.A_GiveInventory("bossabilitygiver_spread");
             proj.target = Misl.Target;
             proj.tracer = Misl.Tracer;
-        },
-    },
+        }
+    }
     override void WorldLoaded(WorldEvent e)
     {
         LEVELCODE
-    },
+    }
     Override void WorldThingSpawned(WorldEvent e)
     {
         if(!bossEnabled) return;
@@ -155,17 +155,17 @@ class BossGenerator_Handler : EventHandler
         {
             e.Thing.bTHRUSPECIES = true;
             e.Thing.bNORADIUSDMG = true;
-        },
-        if( e.Thing && e.Thing.bMISSILE && e.Thing.GetMissileDamage(7,1)>0 && e.Thing.Target && e.Thing.Target.CountInv("bossabilitygiver_boss") && e.Thing.GetClassname() ~= "BossSpook" )
+        }
+        if( e.Thing && e.Thing.bMISSILE && e.Thing.GetMissileDamage(7,1)>0 && e.Thing.Target && e.Thing.Target.CountInv("bossabilitygiver_boss") && e.Thing.GetClassname() != "BossSpook" )
         {
             ThinkerIterator BossFinder = ThinkerIterator.Create("bossController");
             bossController mo;
             while (mo = bossController(BossFinder.Next()))
             {
                 mo.LProj=e.Thing.GetClassname();
-                if(mo.FProj==""){ mo.FProj=e.Thing.GetClassname(); },
-            },
-        },
+                if(mo.FProj==""){ mo.FProj=e.Thing.GetClassname(); }
+            }
+        }
         if( e.Thing && e.Thing.bMISSILE && !e.Thing.CountInv("bossabilitygiver_spread") && !e.Thing.CountInv("bossabilitygiver_boss") && e.Thing.Target && e.Thing.Target.CountInv("bossabilitygiver_spread") )
         {
             SpreadMissile(e.Thing, 25.0);
@@ -178,9 +178,9 @@ class BossGenerator_Handler : EventHandler
                 {
                     SpreadMissile(e.Thing, 37.5);
                     SpreadMissile(e.Thing, -37.5);
-                },
-            },
-        },
+                }
+            }
+        }
         if( e.Thing && e.Thing.bMISSILE && e.Thing.Target && e.Thing.Target.CountInv("bossabilitygiver_bounce") )
         {
             e.Thing.bBOUNCEONWALLS = true;
@@ -195,19 +195,19 @@ class BossGenerator_Handler : EventHandler
                 {
                     misl0.missile = e.Thing;
                     misl0.power = e.Thing.Target.CountInv("bossabilitygiver_bounce");
-                },
-            },
+                }
+            }
             if( e.Thing.Target.CountInv("bossabilitygiver_bounce")>1 )
             {
                 e.Thing.WallBounceFactor = 1.1;
                 e.Thing.bouncecount = 9;
-            },
+            }
             else if( e.Thing.Target.CountInv("bossabilitygiver_bounce")>2 )
             {
                 e.Thing.WallBounceFactor = 1.2;
                 e.Thing.bouncecount = 20;
-            },
-        },
+            }
+        }
         if( e.Thing && e.Thing.bMISSILE && e.Thing.Target && e.Thing.Target.CountInv("bossabilitygiver_pyro") )
         {
             e.Thing.Target.bNORADIUSDMG = true;
@@ -216,8 +216,8 @@ class BossGenerator_Handler : EventHandler
             {
                 misl.missile = e.Thing;
                 misl.power = e.Thing.Target.CountInv("bossabilitygiver_pyro");
-            },
-        },
+            }
+        }
         if( e.Thing && e.Thing.bMISSILE && e.Thing.Target && e.Thing.Target.Target && e.Thing.Target.CountInv("bossabilitygiver_homing") )
         {
             e.Thing.bSEEKERMISSILE = true;
@@ -227,12 +227,12 @@ class BossGenerator_Handler : EventHandler
                 misl2.missile = e.Thing;
                 e.Thing.tracer = e.Thing.Target.Target;
                 misl2.power = e.Thing.Target.CountInv("bossabilitygiver_homing");
-            },
-        },
+            }
+        }
         if(level.time > 1) return;
         if( e.Thing && e.Thing.bISMONSTER && IsBoss(e.Thing) && e.Thing.Health > 0 && e.Thing.Radius > 0 )
         {
-            if( e.Thing.speed == 0 && e.Thing.health == 1000 && e.Thing.height == 16 && e.Thing.radius == 20) {},
+            if( e.Thing.speed == 0 && e.Thing.health == 1000 && e.Thing.height == 16 && e.Thing.radius == 20) {}
             else
             {
                 if(!bossFound)
@@ -243,26 +243,26 @@ class BossGenerator_Handler : EventHandler
                     {
                         bossy.boss = e.Thing;
                         bossy.level = currentboss;
-                    },
-                },
+                    }
+                }
                 else
                 {
                     e.Thing.ClearCounters();
                     e.Thing.Destroy();
-                },
-            },
-        },
+                }
+            }
+        }
         else if( e.Thing && e.Thing.bISMONSTER && e.Thing.Radius > 0 && !e.Thing.bFRIENDLY)
         {
             if(e.Thing.Health < SMAXHEALTH)
             {
             BossSummonSpot mpos = BossSummonSpot(Actor.Spawn('BossSummonSpot', e.Thing.pos));
             mpos.MonsterClass = e.Thing.getClassName();
-            },
+            }
             e.Thing.ClearCounters();
             e.Thing.Destroy();
-        },
-    },
+        }
+    }
     Override void WorldThingDamaged(WorldEvent e)
     {
         if(!bossEnabled) return;
@@ -271,12 +271,12 @@ class BossGenerator_Handler : EventHandler
             if(random(0,5) == 0)
             {
                 e.thing.A_SkullAttack();
-            },
+            }
             else
             {
                 e.thing.VelFromAngle(20);
-            },
-        },
+            }
+        }
         if(e.thing && e.thing.bISMONSTER && e.thing.CountInv("bossabilitygiver_deflection") && e.DamageSource && e.Inflictor && !e.Inflictor.bMISSILE)
         {
             ThinkerIterator BossFinder = ThinkerIterator.Create("bossController");
@@ -288,21 +288,21 @@ class BossGenerator_Handler : EventHandler
                 if(e.thing.CountInv("bossabilitygiver_deflection")==3)
                 {
                     ang=ang+random(-10,10);
-                },
+                }
                 else if(e.thing.CountInv("bossabilitygiver_deflection")==2)
                 {
                     ang=ang+random(-45,45);
-                },
+                }
                 else if(e.thing.CountInv("bossabilitygiver_deflection")==1)
                 {
                     ang=ang+random(-60,60);
-                    if(ang > -5 && ang < 0) {ang=-5;},
-                    if(ang < 5 && ang > 0) {ang=5;},
-                },
+                    if(ang > -5 && ang < 0) {ang=-5;}
+                    if(ang < 5 && ang > 0) {ang=5;}
+                }
                 mo.SpawnMarkedProjectile("BossBDeflect",ang);
-            },
-        },
-    },
+            }
+        }
+    }
     override void WorldTick()
     {
         if(!bossEnabled) return;
@@ -321,24 +321,24 @@ class BossGenerator_Handler : EventHandler
                     {
                         bossy.boss = findme;
                         bossy.level = currentboss;
-                    },
+                    }
                     console.PrintF("Fallback detection successful");
                     Break;
-                },
-            },
-            if(!bossfound) { console.PrintF("Fallback detection failed..."); },
-        },
-    },
+                }
+            }
+            if(!bossfound) { console.PrintF("Fallback detection failed..."); }
+        }
+    }
     override void RenderOverlay(RenderEvent event)
     {
         if(!bossEnabled) return;
         if (level.time == 10 && !bossfound)
         {
             console.PrintF("There has been a problem spawning a boss!");
-        },
+        }
         BOSSHPBAR
-    },
-},
+    }
+}
 
 class bossController : thinker
 {
@@ -394,16 +394,16 @@ class bossController : thinker
                 {
                     count--;
                     mo.Activated=true;
-                },
-            },
-        },
+                }
+            }
+        }
         return count;
-    },
+    }
     void SpawnMarkedProjectile(string pclass, float angle)
     {
         let proj = boss.SpawnMissileAngle(pclass, angle, 0);
-        if(proj) { proj.A_GiveInventory("bossabilitygiver_boss"); proj.tracer = boss.target; },
-    },
+        if(proj) { proj.A_GiveInventory("bossabilitygiver_boss"); proj.tracer = boss.target; }
+    }
     override void PostBeginPlay()
     {
         super.PostBeginPlay();
@@ -415,32 +415,32 @@ class bossController : thinker
                 boss.mass *= 2;
                 boss.A_GiveInventory(abilstart2[level-1]);
                 boss.DamageMultiply *= 2;
-            },
+            }
             if(boss.health < 1000)
             {
                 boss.PainChance*=0.5;
                 boss.mass *= 2;
-            },
+            }
             if(boss.Health < 2000)
             {
                 if(boss.Radius<48)
                 {
                     boss.scale *= 2;
                     boss.A_SetSize(boss.Radius*2, boss.Height*2, false);
-                },
+                }
                 else
                 {
                     boss.scale *= 1.5;
                     boss.A_SetSize(boss.Radius*1.5, boss.Height*1.5, false);
-                },
+                }
                 if(type[level-1]=="melee")
                 {
                     boss.meleerange*=2;
-                },
+                }
                 boss.bALWAYSFAST = true;
                 boss.A_GiveInventory(abilstart[level-1]);
                 boss.mass *= 1.5;
-            },
+            }
             boss.Health = bosshealth[level-1];
             boss.starthealth = boss.health / G_SkillPropertyFloat(SKILLP_MonsterHealth);
             boss.bBOSS = true;
@@ -456,8 +456,8 @@ class bossController : thinker
             boss.A_GiveInventory("bossabilitygiver_boss");
             pcirclecd = 400;
             teleportcd = 400;
-        },
-    },
+        }
+    }
     override void Tick()
     {
         super.Tick();
@@ -471,47 +471,47 @@ class bossController : thinker
                 fixthefix.A_PrintBold(Stringtable.Localize(string.format("%s%i","$BOSS_DEATH",level)));
                 fixthefix.A_Quake(6,150,0,2048);
                 break;
-            },
-        },
+            }
+        }
         if(bossdead)
         {
             ending++;
-        },
+        }
         if(ending>50)
         {
             Thing_Destroy(0);
-        },
+        }
         BEXIT
         if(boss)
         {
             if(boss.starthealth < boss.health)
             {
                 boss.starthealth = boss.health;
-            },
+            }
             if(boss.CountInv("bossabilitygiver_spook") && !spooky && bossactive)
             {
                 spooky = true;
                 SpawnMarkedProjectile("BossSpook",0);
-            },
+            }
             if(boss.CountInv("bossabilitygiver_deflection"))
             {
                 if(boss.CountInv("bossabilitygiver_deflection") == 1 && reflect < 1)
                 {
                     boss.bREFLECTIVE = true;
                     reflect++;
-                },
+                }
                 if(boss.CountInv("bossabilitygiver_deflection") == 2 && reflect < 2)
                 {
                     boss.bMIRRORREFLECT = true;
                     reflect++;
-                },
+                }
                 if(boss.CountInv("bossabilitygiver_deflection") == 3 && reflect < 3)
                 {
                     boss.bMIRRORREFLECT = false;
                     boss.bAIMREFLECT = true;
                     reflect++;
-                },
-            },
+                }
+            }
             if(boss.target && !bossactive)
             {
                 if(!boss.CheckIfSeen() || boss.health < boss.starthealth)
@@ -521,8 +521,8 @@ class bossController : thinker
                     boss.A_PrintBold(Stringtable.Localize(string.format("%s%i","$BOSS_TAUNT",level)));
                     boss.A_Quake(6,60,0,2048);
                     MUSIC
-                },
-            },
+                }
+            }
             SUMCODE
             if(boss.health > 0 && boss.health < boss.starthealth*(0.3*(3-phase)))
             {
@@ -530,17 +530,17 @@ class bossController : thinker
                 boss.A_GiveInventory(abil[((level-1)*3)+phase]);
                 boss.A_Quake(6,60,0,2048);
                 phase++;
-            },
+            }
             if(boss.health < 1 && !bossdead)
             {
                 boss.A_PrintBold(Stringtable.Localize(string.format("%s%i","$BOSS_DEATH",level)));
                 boss.A_Quake(6,150,0,2048);
                 bossdead = true;
-            },
+            }
             if(boss.health > prevhealth)
             {
                 prevhealth = boss.health;
-            },
+            }
             if(boss.health < prevhealth && boss.health > 0)
             {
                 prevhealth = boss.health;
@@ -548,37 +548,37 @@ class bossController : thinker
                 {
                     for(int i = 0; i < boss.CountInv("bossabilitygiver_dmgshot")*2; i++ )
                     {
-                        if(FProj=="") { FProj = "CacodemonBall";},
+                        if(FProj=="") { FProj = "CacodemonBall";}
                         SpawnMarkedProjectile(FProj,random(0,359));
-                    },
-                },
-            },
+                    }
+                }
+            }
             if(summoncd > 0)
             {
                 summoncd--;
-            },
+            }
             if(teleportcd > 0)
             {
                 teleportcd--;
-            },
+            }
             if(pcirclecd > 0)
             {
                 pcirclecd--;
-            },
+            }
             if(boss.health > 0 && boss.target && teleportcd == 0 && boss.CountInv("bossabilitygiver_teleport"))
             {
             if(boss.CountInv("bossabilitygiver_teleport")>1)
             {
             teleportcd = 200;
-            },
+            }
             else if (boss.CountInv("bossabilitygiver_teleport")>2)
             {
             teleportcd = 60;
-            },
+            }
             else
             {
             teleportcd = 800;
-            },
+            }
             bossdelay=35;
             int maxstep = random(50,50*2);
             boss.A_SpawnItemEx("TeleportFog");
@@ -591,60 +591,60 @@ class bossController : thinker
                 {
                 boss.A_Chase(null, null,CHF_NORANDOMTURN);
                 boss.A_SpawnItemEx("TeleportFog",random(-32,32),random(-32,32),random(0,64));
-                },
+                }
             boss.bJUMPDOWN = boss.default.bJUMPDOWN;
             boss.bTHRUACTORS = boss.default.bTHRUACTORS;
             boss.MaxDropOffHeight = boss.default.MaxDropOffHeight;
             boss.MaxStepHeight = boss.Default.MaxStepHeight;
             boss.A_SpawnItemEx("TeleportFog");
-            },
+            }
             if(boss.health > 0 && boss.target && pcirclecd == 0 && boss.CountInv("bossabilitygiver_pcircle"))
             {
             if(boss.CountInv("bossabilitygiver_pcircle")>1)
             {
             pcirclecd = 250;
-            },
+            }
             else if (boss.CountInv("bossabilitygiver_pcircle")>2)
             {
             pcirclecd = 50;
-            },
+            }
             else
             {
             pcirclecd = 500;
-            },
-            if(FProj=="") { FProj = "CacodemonBall";},
+            }
+            if(FProj=="") { FProj = "CacodemonBall";}
             for(int i = 0; i < 18; i++)
             {
                 SpawnMarkedProjectile(FProj,i*20);
-            },
-            },
+            }
+            }
             if(bossdelay > 0)
             {
                 boss.bJUSTATTACKED = true;
                 bossdelay--;
-            },
+            }
             if(boss.health > 0 && boss.CountInv("bossabilitygiver_speed"))
             {
             double multi;
             if(boss.CountInv("bossabilitygiver_speed")>1)
             {
             multi=2.0;
-            },
+            }
             else if (boss.CountInv("bossabilitygiver_speed")>2)
             {
             multi=3.0;
-            },
+            }
             else
             {
             multi=1.5;
-            },
-            if (prevState ~= boss.curState)
-            { boss.A_SetTics (boss.tics / multi); },
+            }
+            if (prevState != boss.curState)
+            { boss.A_SetTics (boss.tics / multi); }
             prevState = boss.curState;
-            },
-        },
-    },
-},
+            }
+        }
+    }
+}
 
 class BossPyroThinker : Thinker
 {
@@ -657,12 +657,12 @@ class BossPyroThinker : Thinker
         if(fx>0)
         {
             fx--;
-        },
+        }
         if(missile && fx==0)
         {
             missile.A_SpawnItemEx("BossPyroFire", flags:SXF_NOCHECKPOSITION);
             fx=5;
-        },
+        }
         if(missile && missile.InStateSequence(missile.CurState, missile.ResolveState("Death")))
         {
             actor fire;
@@ -674,17 +674,17 @@ class BossPyroThinker : Thinker
                 truefire = BossPyroSpreadFire(fire);
                 truefire.power = power;
                 truefire.scale *= power;
-            },
+            }
             missile.A_Explode(missile.GetMissileDamage(7,1)/2,128);
             missile.A_PlaySound("weapons/rocklx");
             self.Destroy();
-        },
+        }
         if(!missile)
         {
             self.Destroy();
-        },
-    },
-},
+        }
+    }
+}
 
 class BossHomingThinker : Thinker
 {
@@ -697,7 +697,7 @@ class BossHomingThinker : Thinker
         if(fx>0)
         {
             fx--;
-        },
+        }
         if(missile && fx==0)
         {
             missile.A_SpawnItemEx("RevenantTracerSmoke", zvel:1, flags:SXF_NOCHECKPOSITION);
@@ -705,14 +705,14 @@ class BossHomingThinker : Thinker
             if(missile && !missile.InStateSequence(missile.CurState, missile.ResolveState("Death")))
             {
                 missile.A_SeekerMissile(1,3*power);
-            },
-        },
+            }
+        }
         if(!missile)
         {
             self.Destroy();
-        },
-    },
-},
+        }
+    }
+}
 
 class BossRicochetThinker : Thinker
 {
@@ -737,21 +737,21 @@ class BossRicochetThinker : Thinker
                 {
                     proj.WallBounceFactor = 1.1;
                     proj.bouncecount = 8;
-                },
+                }
                 else if( power == 3 )
                 {
                     proj.WallBounceFactor = 1.2;
                     proj.bouncecount = 19;
-                },
-            },
+                }
+            }
             self.Destroy();
-        },
+        }
         if(!missile)
         {
             self.Destroy();
-        },
-    },
-},
+        }
+    }
+}
 
 class BossPyroFire : Actor
 {
@@ -761,14 +761,14 @@ class BossPyroFire : Actor
         RenderStyle "Add";
         Alpha 0.5;
         Scale 0.5;
-    },
+    }
     States
     {
     Spawn:
         FIRE ABABCBCBCDCDCDEDEDEFEFEFGHGHGH 1 BRIGHT;
         Stop;
-    },
-},
+    }
+}
 class BossPyroSpreadFire : BossPyroFire
 {
     int dmgcd;
@@ -776,13 +776,13 @@ class BossPyroSpreadFire : BossPyroFire
     Default
     {
         Scale 2.0;
-    },
+    }
     States
     {
     Spawn:
         FIRE ABABCBCBCDCDCDEDEDEFEFEFGHGHGH 2 BRIGHT A_SetTics(1+2*power);
         Stop;
-    },
+    }
     override void Tick()
     {
         super.Tick();
@@ -790,13 +790,13 @@ class BossPyroSpreadFire : BossPyroFire
         {
             dmgcd=10;
             A_Explode(1+2*power,96+(32*power));
-        },
+        }
         else
         {
             dmgcd--;
-        },
-    },
-},
+        }
+    }
+}
 
 class BossBDeflect : Actor
 {
@@ -809,7 +809,7 @@ class BossBDeflect : Actor
         Projectile;
         RenderStyle "Add";
         Alpha 1;
-    },
+    }
     States
     {
     Spawn:
@@ -818,8 +818,8 @@ class BossBDeflect : Actor
     Death:
         PUFF BCDE 6 BRIGHT;
         Stop;
-    },
-},
+    }
+}
 
 class BossSpook : Actor
 {
@@ -835,7 +835,7 @@ class BossSpook : Actor
         RenderStyle "Add";
         Alpha 0.5;
         Scale 1.5;
-    },
+    }
     States
     {
     Spawn:
@@ -844,7 +844,7 @@ class BossSpook : Actor
     Death:
         SKUL FGHIJK 6 BRIGHT;
         Stop;
-    },
+    }
     override void Tick()
     {
         super.Tick();
@@ -855,17 +855,17 @@ class BossSpook : Actor
             A_Explode(1,32,0,0,32);
             A_SeekerMissile(1,3*power);
             Speed=8+(3*(power-1));
-        },
+        }
         else
         {
             if(power < 4)
             {
                 SetState(FindState("Death",true));
                 power = 4;
-            },
-        },
-    },
-},
+            }
+        }
+    }
+}
 
 class bossabilitygiver : Inventory
 {
@@ -874,14 +874,14 @@ class bossabilitygiver : Inventory
     +INVENTORY.UNDROPPABLE;
     +INVENTORY.UNTOSSABLE;
     Inventory.maxAmount 3;
-    },
-},
+    }
+}
 
 class BossSummonSpot : Actor
 {
     string MonsterClass;
     bool Activated;
-    Default { +NOINTERACTION },
+    Default { +NOINTERACTION }
     override void Tick()
     {
         super.Tick();
@@ -894,12 +894,12 @@ class BossSummonSpot : Actor
             {
                 mon.bNOTARGET = 1;
                 mon.bLOOKALLAROUND = 1;
-            },
+            }
             SpawnTeleportFog(self.pos,0,0);
             Activated = false;
-        },
-    },
-},
+        }
+    }
+}
 
 class BossExiter : CustomInventory
 {
@@ -907,7 +907,7 @@ class BossExiter : CustomInventory
     {
     Translation "168:191=250:254", "32:48=250:254", "192:207=32:47", "240:247=47:47";
     Scale 2;
-    },
+    }
     States
     {
     Spawn:
@@ -916,8 +916,8 @@ class BossExiter : CustomInventory
     Pickup:
         TNT1 A 1 Exit_Normal(0);
         Stop;
-    },
-},
+    }
+}
 class BossExiterGlow : Actor
 {
     Default
@@ -926,46 +926,46 @@ class BossExiterGlow : Actor
     Scale 2;
     +NOGRAVITY;
     +NOINTERACTION;
-    },
+    }
     States
     {
     Spawn:
         PINS ABCD 4 BRIGHT;
         Loop;
-    },
+    }
     override void Tick()
     {
         super.Tick();
         A_Fadeout(0.02);
         scale *= 0.99;
         SetZ(pos.z+2);
-    },
-},
+    }
+}
 
 //special
-class bossabilitygiver_nothing : bossabilitygiver { },
-class bossabilitygiver_boss : bossabilitygiver { },
+class bossabilitygiver_nothing : bossabilitygiver { }
+class bossabilitygiver_boss : bossabilitygiver { }
 //passive
-class bossabilitygiver_speed : bossabilitygiver { },
-class bossabilitygiver_dmgshot : bossabilitygiver { },
-class bossabilitygiver_deflection : bossabilitygiver { },
-class bossabilitygiver_spook : bossabilitygiver { },
+class bossabilitygiver_speed : bossabilitygiver { }
+class bossabilitygiver_dmgshot : bossabilitygiver { }
+class bossabilitygiver_deflection : bossabilitygiver { }
+class bossabilitygiver_spook : bossabilitygiver { }
 //major cooldown
-class bossabilitygiver_teleport : bossabilitygiver { },
-class bossabilitygiver_pcircle : bossabilitygiver { },
+class bossabilitygiver_teleport : bossabilitygiver { }
+class bossabilitygiver_pcircle : bossabilitygiver { }
 //projectile only
-class bossabilitygiver_spread : bossabilitygiver { },
-class bossabilitygiver_pyro : bossabilitygiver { },
-class bossabilitygiver_bounce : bossabilitygiver { },
-class bossabilitygiver_homing : bossabilitygiver { },
-]]
+class bossabilitygiver_spread : bossabilitygiver { }
+class bossabilitygiver_pyro : bossabilitygiver { }
+class bossabilitygiver_bounce : bossabilitygiver { }
+class bossabilitygiver_homing : bossabilitygiver { }
+]],
   LVL = [[if(level.LevelNum == NUM)
         {
             bossEnabled = true;
             currentboss = CNT;
-        },
-]]
-  MUS = [[S_ChangeMusic(string.format("%%s%%i","d_boss",level), 0, true, false);]]
+        }
+]],
+  MUS = [[S_ChangeMusic(string.format("%%s%%i","d_boss",level), 0, true, false);]],
   SUM = [[if(boss.health > 0 && boss.health < boss.starthealth*0.75 && summoncd == 0)
             {
                 summoncd = self.bosssummon[level-1];
@@ -974,21 +974,21 @@ class bossabilitygiver_homing : bossabilitygiver { },
                 if(leftover>0)
                 {
                     ActivateSpawners(leftover,1024);
-                },
-            },
-]]
+                }
+            }
+]],
   EXNORMAL = [[if(ending>350)
         {
             Exit_Normal(0);
-        },
-]]
+        }
+]],
   EXITEM = [[if(ending==100)
             {
                 if(boss)
                 {
                     boss.A_SpawnItemEx("TeleportFog", flags:SXF_NOCHECKPOSITION);
                     boss.A_SpawnItemEx("BossExiter", flags:SXF_NOCHECKPOSITION);
-                },
+                }
                 else
                 {
                     ThinkerIterator Exiter = ThinkerIterator.Create("BossSummonSpot");
@@ -998,11 +998,11 @@ class bossabilitygiver_homing : bossabilitygiver { },
                         fixexit.A_SpawnItemEx("TeleportFog", flags:SXF_NOCHECKPOSITION);
                         fixexit.A_SpawnItemEx("BossExiter", flags:SXF_NOCHECKPOSITION);
                         break;
-                    },
-                },
-            },
+                    }
+                }
+            }
 ]]
-},
+}
 
 BOSS_GEN_TUNE.TAUNTS =
 {
@@ -1066,9 +1066,9 @@ BOSS_GEN_TUNE.TAUNTS =
 
   ["THE WORLD BURNS AND YOU WILL BE AMONG THE ASHES"] = 50,
 
-  ["I wasn't supposed to be here today"] = 10 -- rare
-  ["You wanna go, bro? You wanna go?"] = 10 -- rare
-  ["Never gonna give you up, never gonna let you down"] = 10 --rare
+  ["I wasn't supposed to be here today"] = 10, -- rare
+  ["You wanna go, bro? You wanna go?"] = 10, -- rare
+  ["Never gonna give you up, never gonna let you down"] = 10, --rare
 
   -- Beed28,
   ["A MAN LIKE YOU IS NOTHING BUT A MISERABLE PILE OF SECRETS"] = 50,
@@ -1090,8 +1090,8 @@ BOSS_GEN_TUNE.TAUNTS =
   ["DEATH IS NOT YOUR END. YOUR SOUL WILL BURN IN HELL FOREVER."] = 50,
   ["EVERY STEP TAKEN BRINGS YOUR SOUL CLOSER TO ME"] = 50,
 
-  ["IT WAS ME WHO RUINED THE TOILETS!!!"] = 10 -- rare
-  ["Giggity"] = 10 -- rare
+  ["IT WAS ME WHO RUINED THE TOILETS!!!"] = 10, -- rare
+  ["Giggity"] = 10, -- rare
 
   -- Tapwave
   ["YOU WILL NEVER FIND WHAT YOU SEEK. IT IS TRAPPED IN HELL FOREVER."] = 50,
@@ -1110,12 +1110,12 @@ BOSS_GEN_TUNE.TAUNTS =
   ["HOW MANY OF YOUR MISBEGOTTEN KIND I MUST SQUASH?"] = 50,
 
   -- Frozsoul
-  ["ALL YOUR BASE ARE BELONG TO US"] = 10 -- rare
+  ["ALL YOUR BASE ARE BELONG TO US"] = 10, -- rare
 
   -- retxirT
   ["WHY MUST I DO EVERYTHING MYSELF?"] = 50,
   ["YOUR STAY OF EXECUTION IS OVER. I HAVE COME TO DELIVER."] = 50,
-},
+}
 
 BOSS_GEN_TUNE.DEATHS =
 {
@@ -1142,13 +1142,13 @@ BOSS_GEN_TUNE.DEATHS =
   ["CURSE YOU AND YOUR DESCENDANTS!"] = 50,
   ["NOT EVEN THE PITS OF HELL WILL CONTAIN MY REVENGE"] = 50,
   ["YOU ARE NOW WORTHY OF FIGHTING MY MASTER"] = 50,
-},
+}
 
 BOSS_GEN_TUNE.TRAITS =
 {
   SPEED =
   {
-    name = '"bossabilitygiver_speed"'
+    name = '"bossabilitygiver_speed"',
     probmisl = 60,
     probscan = 0,
     probmele = 90,
@@ -1159,7 +1159,7 @@ BOSS_GEN_TUNE.TRAITS =
 
   DMGSHOT =
   {
-    name = '"bossabilitygiver_dmgshot"'
+    name = '"bossabilitygiver_dmgshot"',
     probmisl = 50,
     probscan = 40,
     probmele = 50,
@@ -1170,7 +1170,7 @@ BOSS_GEN_TUNE.TRAITS =
 
   TELEPORT =
   {
-    name = '"bossabilitygiver_teleport"'
+    name = '"bossabilitygiver_teleport"',
     probmisl = 50,
     probscan = 50,
     probmele = 80,
@@ -1181,7 +1181,7 @@ BOSS_GEN_TUNE.TRAITS =
 
   PCIRCLE =
   {
-    name = '"bossabilitygiver_pcircle"'
+    name = '"bossabilitygiver_pcircle"',
     probmisl = 50,
     probscan = 40,
     probmele = 60,
@@ -1192,7 +1192,7 @@ BOSS_GEN_TUNE.TRAITS =
 
   SPREAD =
   {
-    name = '"bossabilitygiver_spread"'
+    name = '"bossabilitygiver_spread"',
     probmisl = 30,
     probscan = 0,
     probmele = 0,
@@ -1203,7 +1203,7 @@ BOSS_GEN_TUNE.TRAITS =
 
   PYRO =
   {
-    name = '"bossabilitygiver_pyro"'
+    name = '"bossabilitygiver_pyro"',
     probmisl = 50,
     probscan = 0,
     probmele = 0,
@@ -1214,7 +1214,7 @@ BOSS_GEN_TUNE.TRAITS =
 
   BOUNCE =
   {
-    name = '"bossabilitygiver_bounce"'
+    name = '"bossabilitygiver_bounce"',
     probmisl = 40,
     probscan = 0,
     probmele = 0,
@@ -1225,7 +1225,7 @@ BOSS_GEN_TUNE.TRAITS =
 
   HOMING =
   {
-    name = '"bossabilitygiver_homing"'
+    name = '"bossabilitygiver_homing"',
     probmisl = 50,
     probscan = 0,
     probmele = 0,
@@ -1236,7 +1236,7 @@ BOSS_GEN_TUNE.TRAITS =
 
   DEFLECTION =
   {
-    name = '"bossabilitygiver_deflection"'
+    name = '"bossabilitygiver_deflection"',
     probmisl = 20,
     probscan = 30,
     probmele = 40,
@@ -1247,7 +1247,7 @@ BOSS_GEN_TUNE.TRAITS =
 
     SPOOK =
   {
-    name = '"bossabilitygiver_spook"'
+    name = '"bossabilitygiver_spook"',
     probmisl = 40,
     probscan = 40,
     probmele = 30,
@@ -1255,7 +1255,7 @@ BOSS_GEN_TUNE.TRAITS =
     mislfact = 1.2,
     mindiff = 2,
   },
-},
+}
 
 function BOSS_GEN_TUNE.game_specific_hpbar()
     if OB_CONFIG.game == "heretic" then
@@ -1272,7 +1272,7 @@ function BOSS_GEN_TUNE.game_specific_hpbar()
             for(int i = 0; i<bars; i++)
             {
                 barsx.AppendFormat("1");
-            },
+            }
             string name = Stringtable.Localize(string.format("%%s%%i","$BOSS_NAME",currentboss));
             string bosshp = string.format("%%s %%s %%s", name, "\n", barsx);
             if(name.length()>32)
@@ -1280,19 +1280,19 @@ function BOSS_GEN_TUNE.game_specific_hpbar()
                 if(name.length()>41)
                 {
                     screen.DrawText(SmallFont, Font.CR_RED, -92, -32, bosshp, DTA_Clean, true);
-                },
+                }
                 else
                 {
                     screen.DrawText(BigFont, Font.CR_RED, -92, -32, bosshp, DTA_Clean, true);
-                },
-            },
+                }
+            }
             else
             {
                 screen.DrawText(BigFont, Font.CR_RED, 32, -32, bosshp, DTA_Clean, true);
-            },
-            },
-        },
-        },
+            }
+            }
+        }
+        }
 ]]
     else
      BOSS_GEN_TUNE.TEMPLATES.BAR = [[if(bossFound)
@@ -1308,7 +1308,7 @@ function BOSS_GEN_TUNE.game_specific_hpbar()
             for(int i = 0; i<bars; i++)
             {
                 barsx.AppendFormat("I");
-            },
+            }
             string name = Stringtable.Localize(string.format("%%s%%i","$BOSS_NAME",currentboss));
             string bosshp = string.format("%%s %%s %%s", name, "\n", barsx);
             if(name.length()>32)
@@ -1316,19 +1316,19 @@ function BOSS_GEN_TUNE.game_specific_hpbar()
                 if(name.length()>41)
                 {
                     screen.DrawText(SmallFont, Font.CR_RED, -92, -32, bosshp, DTA_Clean, true);
-                },
+                }
                 else
                 {
                     screen.DrawText(BigFont, Font.CR_RED, -92, -32, bosshp, DTA_Clean, true);
-                },
-            },
+                }
+            }
             else
             {
                 screen.DrawText(BigFont, Font.CR_RED, 32, -32, bosshp, DTA_Clean, true);
-            },
-            },
-        },
-        },
+            }
+            }
+        }
+        }
 ]]
     end
 end
@@ -1342,12 +1342,12 @@ function BOSS_GEN_TUNE.grab_random_death()
 end
 
 function BOSS_GEN_TUNE.grab_random_trait(btype, etraits)
-  local traits = {},
+  local traits = {}
 
   for name,info in pairs(BOSS_GEN_TUNE.TRAITS) do
 
   local tprob
-    local stack = 0,
+    local stack = 0
 
   if btype == "melee" and info.probmele > 0 then
     tprob = info.probmele
@@ -1361,23 +1361,23 @@ function BOSS_GEN_TUNE.grab_random_trait(btype, etraits)
   end
 
   if(info.mindiff>PARAM.boss_gen_dmult) then
-      tprob = 0,
+      tprob = 0
   end
 
   if etraits ~= nil then
     for etrait,einfo in pairs(etraits) do
         if einfo == info.name then
-          stack = stack + 1,
+          stack = stack + 1
         if PARAM.boss_gen_dmult < 0 then
           tprob = int(tprob * 0.25)
         elseif PARAM.boss_gen_dmult > 1 then
-          tprob = tprob * 2,
+          tprob = tprob * 2
         end
         end
     end
 
       if stack == 3 then
-        tprob = 0,
+        tprob = 0
       end
     end
 
@@ -1393,15 +1393,15 @@ end
 function BOSS_GEN_TUNE.syntaxize(str, str2)
   local final
   if str == "" then
-    final = str .. str2,
+    final = str .. str2
   else
-    final = str .. ",\n" .. str2,
+    final = str .. ",\n" .. str2
   end
   return final
 end
 
 function BOSS_GEN_TUNE.check_gotchas_enabled()
-  if OB_CONFIG.procedural_gotchas == "none",
+  if OB_CONFIG.procedural_gotchas == "none"
   and PARAM.boss_gen then
     error("Procedural gotchas must be enabled for boss generator!")
   end
@@ -1412,12 +1412,12 @@ end
 
 function BOSS_GEN_TUNE.setup(self)
   PARAM.boss_gen = true
-  PARAM.boss_types = {},
-  PARAM.lvlstr = "",
-  PARAM.BOSSSCRIPT = "",
-  PARAM.boss_count = 1,
-  PARAM.epi_bosses = {},
-  PARAM.epi_names = {},
+  PARAM.boss_types = {}
+  PARAM.lvlstr = ""
+  PARAM.BOSSSCRIPT = ""
+  PARAM.boss_count = 1
+  PARAM.epi_bosses = {}
+  PARAM.epi_names = {}
 
   for name,opt in pairs(pairs(self.options)) do
     local value = self.options[name].value
@@ -1425,43 +1425,43 @@ function BOSS_GEN_TUNE.setup(self)
   end
 
   if PARAM.boss_gen_health == "muchless" then
-    PARAM.boss_gen_mult = 0.5,
+    PARAM.boss_gen_mult = 0.5
   elseif PARAM.boss_gen_health == "less" then
-    PARAM.boss_gen_mult = 0.75,
+    PARAM.boss_gen_mult = 0.75
   elseif PARAM.boss_gen_health == "default" then
-    PARAM.boss_gen_mult = 1.0,
+    PARAM.boss_gen_mult = 1.0
   elseif PARAM.boss_gen_health == "more" then
-    PARAM.boss_gen_mult = 1.5,
+    PARAM.boss_gen_mult = 1.5
   elseif PARAM.boss_gen_health == "muchmore" then
-    PARAM.boss_gen_mult = 2.0,
+    PARAM.boss_gen_mult = 2.0
   elseif PARAM.boss_gen_health == "demiosmode" then
-    PARAM.boss_gen_mult = 3.0,
+    PARAM.boss_gen_mult = 3.0
   end
 
   if PARAM.boss_gen_diff == "easier" then
-    PARAM.boss_gen_dmult = -1.0,
+    PARAM.boss_gen_dmult = -1.0
   elseif PARAM.boss_gen_diff == "default" then
-    PARAM.boss_gen_dmult = 1.0,
+    PARAM.boss_gen_dmult = 1.0
   elseif PARAM.boss_gen_diff == "harder" then
-    PARAM.boss_gen_dmult = 2.0,
+    PARAM.boss_gen_dmult = 2.0
   elseif PARAM.boss_gen_diff == "nightmare" then
-    PARAM.boss_gen_dmult = 3.0,
+    PARAM.boss_gen_dmult = 3.0
   end
 
   if PARAM.boss_gen_reinforcerate == "weakester" then
-    PARAM.boss_gen_rmult = 4.0,
+    PARAM.boss_gen_rmult = 4.0
   elseif PARAM.boss_gen_reinforcerate == "weakest" then
-    PARAM.boss_gen_rmult = 2.0,
+    PARAM.boss_gen_rmult = 2.0
   elseif PARAM.boss_gen_reinforcerate == "weaker" then
-    PARAM.boss_gen_rmult = 1.5,
+    PARAM.boss_gen_rmult = 1.5
   elseif PARAM.boss_gen_reinforcerate == "default" then
-    PARAM.boss_gen_rmult = 1.0,
+    PARAM.boss_gen_rmult = 1.0
   elseif PARAM.boss_gen_reinforcerate == "harder" then
-    PARAM.boss_gen_rmult = 0.75,
+    PARAM.boss_gen_rmult = 0.75
   elseif PARAM.boss_gen_reinforcerate == "tougher" then
-    PARAM.boss_gen_rmult = 0.5,
+    PARAM.boss_gen_rmult = 0.5
   elseif PARAM.boss_gen_reinforcerate == "serious" then
-    PARAM.boss_gen_rmult = 0.25,
+    PARAM.boss_gen_rmult = 0.25
   end
 end
 
@@ -1472,7 +1472,7 @@ function BOSS_GEN_TUNE.end_lvl()
     scripty = string.gsub(scripty, "NUM", LEVEL.id)
     scripty = string.gsub(scripty, "CNT", PARAM.boss_count)
 
-    PARAM.lvlstr = PARAM.lvlstr .. scripty .. "\n",
+    PARAM.lvlstr = PARAM.lvlstr .. scripty .. "\n"
 
     if PARAM.story_generator == "proc" then
       if OB_CONFIG.length == "single" then
@@ -1487,31 +1487,31 @@ function BOSS_GEN_TUNE.end_lvl()
       end
     end
 
-    PARAM.boss_count = PARAM.boss_count + 1,
+    PARAM.boss_count = PARAM.boss_count + 1
   end
 end
 
 function BOSS_GEN_TUNE.all_done()
 
   local scripty = BOSS_GEN_TUNE.TEMPLATES.ZSC
-  local btrait = "",
-  local btrait2 = "",
-  local btrait3 = "",
-  local bhealth = "",
-  local bsummon = "",
-  local btype = "",
+  local btrait = ""
+  local btrait2 = ""
+  local btrait3 = ""
+  local bhealth = ""
+  local bsummon = ""
+  local btype = ""
 
   if PARAM.boss_count <= 1 then
     -- nothing happens and everyone is just sad
     warning("No procedural gotchas found by boss generator")
-    PARAM.boss_count = -1,
+    PARAM.boss_count = -1
     return
   end
 
   if OB_CONFIG.mons == "none" then
     -- no monsters, no boss, duh
     warning("No monsters found by boss generator")
-    PARAM.boss_count = -1,
+    PARAM.boss_count = -1
     return
   end
 
@@ -1551,7 +1551,7 @@ function BOSS_GEN_TUNE.all_done()
   for name,info in pairs(pairs(PARAM.boss_types)) do
     local bhp = info.health
     local batk = info.attack
-    local traitstack = {},
+    local traitstack = {}
     local ttrait
 
     if(bhp<2000) then
@@ -1576,7 +1576,7 @@ function BOSS_GEN_TUNE.all_done()
       btrait = BOSS_GEN_TUNE.syntaxize(btrait,ttrait)
     end
 
-    local batkx = "\"" .. batk .. "\"",
+    local batkx = "\"" .. batk .. "\""
 
     btype = BOSS_GEN_TUNE.syntaxize(btype,batkx)
 
@@ -1584,11 +1584,11 @@ function BOSS_GEN_TUNE.all_done()
     local hpcalc
 
     if PARAM.boss_gen_diff == "nightmare" then
-      mult=1.5,
+      mult=1.5
     else
-      if bhp<300 then mult=1.5,
-      elseif bhp<1000 then mult=1.3,
-      elseif bhp<2000 then mult=1.1,
+      if bhp<300 then mult=1.5
+      elseif bhp<1000 then mult=1.3
+      elseif bhp<2000 then mult=1.1
       else mult=1.0 end
     end
 
@@ -1613,10 +1613,10 @@ function BOSS_GEN_TUNE.all_done()
   scripty = string.gsub(scripty, "BTYPE", btype)
 
   PARAM.BOSSSCRIPT = PARAM.BOSSSCRIPT .. scripty
-  PARAM.BOSSLANG = {},
-  PARAM.boss_count = PARAM.boss_count - 1,
+  PARAM.BOSSLANG = {}
+  PARAM.boss_count = PARAM.boss_count - 1
 
-  local cnt = 1,
+  local cnt = 1
 
   for i = 1,PARAM.boss_count,1 do
 
@@ -1625,7 +1625,7 @@ function BOSS_GEN_TUNE.all_done()
       for _,epiboss in pairs(PARAM.epi_bosses) do
         if i == epiboss then
           demon_name = PARAM.epi_names[cnt]
-        cnt = cnt + 1,
+        cnt = cnt + 1
         end
       end
     end
@@ -1659,7 +1659,7 @@ end
 
 OB_MODULES["gzdoom_boss_gen"] =
 {
-  label = _("[Exp]GZDoom Boss Generator")
+  label = _("[Exp]GZDoom Boss Generator"),
 
 --  game = "doomish",
 
@@ -1668,14 +1668,14 @@ OB_MODULES["gzdoom_boss_gen"] =
 
   hooks =
   {
-    setup = BOSS_GEN_TUNE.setup
-    begin_level = BOSS_GEN_TUNE.check_gotchas_enabled
-    end_level = BOSS_GEN_TUNE.end_lvl
+    setup = BOSS_GEN_TUNE.setup,
+    begin_level = BOSS_GEN_TUNE.check_gotchas_enabled,
+    end_level = BOSS_GEN_TUNE.end_lvl,
     all_done = BOSS_GEN_TUNE.all_done
   },
 
   tooltip=_(
-    "[WIP/Experimental]This module replaces procedural gotchas with boss fight arenas.")
+    "[WIP/Experimental]This module replaces procedural gotchas with boss fight arenas."),
 
   options =
   {
@@ -1826,4 +1826,4 @@ OB_MODULES["gzdoom_boss_gen"] =
       tooltip = "Changes multiplier of healing items on the boss arena.",
     },
   },
-},
+}

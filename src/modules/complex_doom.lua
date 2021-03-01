@@ -54,7 +54,7 @@
 -- as I am not certain things are fully balanced yet.
 -- -Armaetus, Jan. 31st, 2021,
 
-COMPLEX_DOOM = { },
+COMPLEX_DOOM = { }
 
 COMPLEX_DOOM.MONSTERS =
 {
@@ -71,16 +71,16 @@ COMPLEX_DOOM.MONSTERS =
     h = 56,
     level = 1,
     prob = 50,
-    health = 45 -- Average health. All replacement health divided by 4.
-    damage = 3.0 -- Need some sort of average damage due to the replacements.
+    health = 45, -- Average health. All replacement health divided by 4.
+    damage = 3.0, -- Need some sort of average damage due to the replacements.
     attack = "hitscan",
     replaces = "shooter",
     replace_prob = 20,
     give = { {ammo="bullet",count=5} },
-    weap_prefs = { shotty=1.2, chain=1.5 } -- Pistol is actually useful on these guys!
+    weap_prefs = { shotty=1.2, chain=1.5 }, -- Pistol is actually useful on these guys!
     density = 1.5,
-    room_size = "any" --small
-    disloyal = true
+    room_size = "any", --small
+    disloyal = true,
     trap_factor = 0.3,
     infight_damage = 12.0 -- Due to the projectile damage done
   },
@@ -107,8 +107,8 @@ COMPLEX_DOOM.MONSTERS =
     species = "zombie",
     replaces = "zombie",
     replace_prob = 20,
-    room_size = "any" --small
-    disloyal = true
+    room_size = "any", --small
+    disloyal = true,
     trap_factor = 2.0,
     infight_damage = 20.0,
   },
@@ -133,8 +133,8 @@ COMPLEX_DOOM.MONSTERS =
     replace_prob = 25,
     weap_needed = { shotty=true },
     weap_prefs = { shotty=1.5, chain=1.25, super=1.2, plasma=1.2 },
-    room_size = "any" --small
-    trap_factor = 0.5 --0.3,
+    room_size = "any", --small
+    trap_factor = 0.5, --0.3,
     infight_damage = 12.0,
   },
 
@@ -149,11 +149,11 @@ COMPLEX_DOOM.MONSTERS =
     damage = 2.0,
     attack = "melee",
     density = 0.5,
-    float = true
+    float = true,
     weap_prefs = { super=1.5, chain=1.3, launch=0.3 },
     weap_needed = { shotty=true },
-    room_size = "any" --small
-    disloyal = true
+    room_size = "any", --small
+    disloyal = true,
     trap_factor = 0,
     cage_factor = 0,
     infight_damage = 6.0,
@@ -197,7 +197,7 @@ COMPLEX_DOOM.MONSTERS =
     damage = 5.0,
     attack = "melee",
     density = 0.5,
-    invis = true
+    invis = true,
     outdoor_factor = 3.0,
     weap_min_damage = 40,
     weap_needed = { shotty=true },
@@ -221,13 +221,13 @@ COMPLEX_DOOM.MONSTERS =
     attack = "missile",
     density = 0.6,
     weap_min_damage = 40,
-    float = true
+    float = true,
     weap_needed = { chain=true },
     weap_prefs = { launch=1.25, super=1.75, chain=1.2, shotty=0.7, plasma=1.2 },
     weap_min_damage = 40,
     replaces = "pain",
     replace_prob = 20,
-    room_size = "any" --large
+    room_size = "any", --large
     trap_factor = 0.5,
     infight_damage = 40,
   },
@@ -252,7 +252,7 @@ COMPLEX_DOOM.MONSTERS =
     attack = "missile",
     density = 0.3,
     weap_min_damage = 88,
-    room_size = "any" --medium
+    room_size = "any", --medium
     infight_damage = 120,
   },
 
@@ -273,7 +273,7 @@ COMPLEX_DOOM.MONSTERS =
     weap_needed = { bfg=true },
     weap_min_damage = 150,
     weap_prefs = { bfg=10.0 },
-    room_size = "large" --medium
+    room_size = "large", --medium
     infight_damage = 1600,
     cage_factor = 0,
     boss_replacement = "baron",
@@ -289,7 +289,7 @@ COMPLEX_DOOM.MONSTERS =
     level = 8,
     boss_type = "tough",
     boss_prob = 15,
-    boss_limit = 1 -- because they infight
+    boss_limit = 1, -- because they infight
     prob = 2.0,
     crazy_prob = 10,
     health = 3000,
@@ -329,10 +329,10 @@ COMPLEX_DOOM.MONSTERS =
     weap_prefs = { shotty=1.5, super=1.75, chain=2.0, plasma=1.3, launch=1.1 },
     density = 0.75,
     species = "zombie",
-    room_size = "any" --large
+    room_size = "any", --large
     replaces = "shooter",
     replace_prob = 15,
-    disloyal = true
+    disloyal = true,
     trap_factor = 2.4,
     infight_damage = 65,
   },
@@ -348,7 +348,7 @@ COMPLEX_DOOM.MONSTERS =
     level = 4,
     prob = 25,
     health = 300,
-    damage = 11.0 -- Some replacements do tons of damage
+    damage = 11.0, -- Some replacements do tons of damage
     attack = "missile",
     weap_min_damage = 60,
     density = 0.6,
@@ -380,7 +380,7 @@ COMPLEX_DOOM.MONSTERS =
     species = "baron",
     replaces = "mancubus",
     replace_prob = 25,
-    room_size = "any" --medium
+    room_size = "any", --medium
     infight_damage = 60,
   },
 
@@ -404,7 +404,7 @@ COMPLEX_DOOM.MONSTERS =
     replace_prob = 30,
     room_size = "large",
     outdoor_factor = 2.0,
-    infight_damage = 110 -- Has a close up flamethrower attack as well
+    infight_damage = 110, -- Has a close up flamethrower attack as well
     boss_replacement = "baron",
   },
 
@@ -446,7 +446,7 @@ COMPLEX_DOOM.MONSTERS =
     level = 8,
     boss_type = "nasty",
     boss_prob = 20,
-    boss_limit = 1 -- Vile replacements are pretty nasty, hence limited to 1,
+    boss_limit = 1, -- Vile replacements are pretty nasty, hence limited to 1,
     prob = 2,
     crazy_prob = 5,
     health = 850,
@@ -458,7 +458,7 @@ COMPLEX_DOOM.MONSTERS =
     weap_needed = { bfg=true },
     weap_prefs = { launch=3.0, super=1.5, plasma=2.0, bfg=2.5 },
     weap_min_damage = 120,
-    nasty = true
+    nasty = true,
     infight_damage = 150,
     boss_replacement = "baron",
   },
@@ -476,16 +476,16 @@ COMPLEX_DOOM.MONSTERS =
     boss_limit = 2,
     prob = 10,
     crazy_prob = 15,
-    health = 900  -- 400 + 5 skulls
-    damage = 16.0 -- about 5 skulls
+    health = 900,  -- 400 + 5 skulls
+    damage = 16.0, -- about 5 skulls
     attack = "missile",
     density = 0.2,
-    float = true
+    float = true,
     weap_min_damage = 100,
     weap_needed = { launch=true },
     weap_prefs = { launch=1.5, super=1.5, chain=1.5, shotty=0.7, plasma=1.7 },
-    room_size = "any" --large
-    cage_factor = 0  -- never put in cages
+    room_size = "any", --large
+    cage_factor = 0,  -- never put in cages
     trap_factor = 1.1,
     infight_damage = 50 -- Pain Elemental replacements have direct damage now
   },
@@ -512,7 +512,7 @@ COMPLEX_DOOM.MONSTERS =
     density = 1.5,
     infight_damage = 25,
   },
-},
+}
 
 COMPLEX_DOOM.WEAPONS =
 {
@@ -527,7 +527,7 @@ COMPLEX_DOOM.WEAPONS =
   {
     pref = 4,
     attack = "hitscan",
-    rate = 5.0 -- Pistol is semi-automatic now
+    rate = 5.0, -- Pistol is semi-automatic now
     accuracy = 85,
     damage = 10,
     ammo = "bullet",
@@ -598,7 +598,7 @@ COMPLEX_DOOM.WEAPONS =
     attack = "missile",
     rate = 1.7,
     accuracy = 80,
-    damage = 200 -- Rocket does a bit more damage
+    damage = 200, -- Rocket does a bit more damage
     splash = { 65,20,5 },
     ammo = "rocket",
     per = 1,
@@ -640,7 +640,7 @@ COMPLEX_DOOM.WEAPONS =
     give = { {ammo="cell",count=40} },
     bonus_ammo = 40,
   },
-},
+}
 
 -- Need some changes here too!
 COMPLEX_DOOM.PICKUPS =
@@ -676,7 +676,7 @@ COMPLEX_DOOM.PICKUPS =
   -- For example, the BLUE jacket saves 50% of damage, hence
   -- it is roughly equivalent to 100 units of health.
   --
-},
+}
 
 
 --------------------------------------------------------------------
@@ -694,7 +694,7 @@ function COMPLEX_DOOM.setup(self)
     GAME.MONSTERS["ss_nazi"] = nil
   end
 
-  for name,_ in pairs(pairs(COMPLEX_DOOM.MONSTERS)) do
+  for name,_ in pairs(COMPLEX_DOOM.MONSTERS) do
     local M = GAME.MONSTERS[name]
 
     if M and factor then
@@ -707,11 +707,11 @@ end
 -- How to implement this into "Modded Game Extras" module??
 OB_MODULES["complex_doom"] =
 {
-  label = _("Complex Doom Modifications")
+  label = _("Complex Doom Modifications"),
 
   side = "left",
   priority = 61,
-  game = { doom1=1, doom2=1 } -- Dunno if it has support for Heretic/Hexen
+  game = { doom1=1, doom2=1 }, -- Dunno if it has support for Heretic/Hexen
 
   tooltip = "Alters to better fit the difficulty that Complex Doom provides. Do not use with 'Harder Enemy Setup' addon, will conflict.",
 
@@ -727,4 +727,4 @@ OB_MODULES["complex_doom"] =
   {
     setup = COMPLEX_DOOM.setup
   },
-},
+}

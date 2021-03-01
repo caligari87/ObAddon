@@ -16,27 +16,27 @@
 --
 -------------------------------------------------------------------
 
-DEBUG_CONTROL = { },
+DEBUG_CONTROL = { }
 
 DEBUG_CONTROL.YES_NO =
 {
   "yes", _("Yes"),
   "no",  _("No"),
-},
+}
 
 DEBUG_CONTROL.NAME_GEN_CHOICES =
 {
   "32l",  _("Test Level Names"),
   "32t",  _("Test Title Names"),
   "none", _("None"),
-},
+}
 
 DEBUG_CONTROL.GROWTH_STEP_CHOICES =
 {
   "showmore", _("Show All Steps"),
   "show",     _("Show Successful Steps Only"),
   "no",       _("No"),
-},
+}
 
 DEBUG_CONTROL.LEVEL_NUM_CHOICES =
 {
@@ -77,10 +77,10 @@ DEBUG_CONTROL.LEVEL_NUM_CHOICES =
   "34",   _("34 only"),
   "35",   _("35 only"),
   "36",   _("36 only"),
-},
+}
 
 function DEBUG_CONTROL.setup(self)
-  for name,opt in pairs(pairs(self.options)) do
+  for name,opt in pairs(self.options) do
     local value = self.options[name].value
     PARAM[name] = value
   end
@@ -88,7 +88,7 @@ end
 
 function DEBUG_CONTROL.all_done()
   if PARAM.attach_debug_info and PARAM.attach_debug_info == "yes" then
-    local log_text = {},
+    local log_text = {}
 
     gui.wad_add_text_lump("OBLOGS", log_text)
   end
@@ -98,7 +98,7 @@ end
 
 OB_MODULES["debugger"] =
 {
-  label = _("Debug Control")
+  label = _("Debug Control"),
 
   side = "left",
   priority = 50,
@@ -116,8 +116,8 @@ OB_MODULES["debugger"] =
     name_gen_test =
     {
       name = "name_gen_test",
-      label=_("Name Generator")
-      choices=DEBUG_CONTROL.NAME_GEN_CHOICES
+      label=_("Name Generator"),
+      choices=DEBUG_CONTROL.NAME_GEN_CHOICES,
       tooltip="Prints a demonstration sample of 32 names per category.\n" ..
               "Level Names = TECH, GOTHIC, URBAN, and BOSS level names\n" ..
               "Title Names = TITLE, SUB_TITLE, and EPISODE names\n",
@@ -128,8 +128,8 @@ OB_MODULES["debugger"] =
     print_shape_steps =
     {
       name = "print_shape_steps",
-      label=_("Print Growth Steps")
-      choices=DEBUG_CONTROL.GROWTH_STEP_CHOICES
+      label=_("Print Growth Steps"),
+      choices=DEBUG_CONTROL.GROWTH_STEP_CHOICES,
       tooltip="Displays more information about the shape grammar steps "..
               "in the LOG. 'Show All Steps' will print all actions " ..
               "the shape grammar system performs but will greatly " ..
@@ -141,8 +141,8 @@ OB_MODULES["debugger"] =
     print_prefab_use =
     {
       name = "print_prefab_use",
-      label=_("Print Prefab Usage")
-      choices=DEBUG_CONTROL.YES_NO
+      label=_("Print Prefab Usage"),
+      choices=DEBUG_CONTROL.YES_NO,
       tooltip="Lists prefabs spawned per map.",
       default="yes",
       priority=98,
@@ -151,8 +151,8 @@ OB_MODULES["debugger"] =
     print_story_strings =
     {
       name = "print_story_strings",
-      label=_("Print ZDoom Strings")
-      choices=DEBUG_CONTROL.YES_NO
+      label=_("Print ZDoom Strings"),
+      choices=DEBUG_CONTROL.YES_NO,
       tooltip="Displays the story generator and custom quit message strings "..
               "added by the ZDoom Special Addons: Story Generator.",
       default="yes",
@@ -162,8 +162,8 @@ OB_MODULES["debugger"] =
     build_levels =
     {
       name = "build_levels",
-      label = _("Build Level")
-      choices=DEBUG_CONTROL.LEVEL_NUM_CHOICES
+      label = _("Build Level"),
+      choices=DEBUG_CONTROL.LEVEL_NUM_CHOICES,
       tooltip="Allows the skipping of level construction along the WAD " ..
               "for debugging purposes.",
       default="all",
@@ -173,8 +173,8 @@ OB_MODULES["debugger"] =
     shape_rule_stats =
     {
       name = "shape_rule_stats",
-      label = _("Shape Rule Stats")
-      choices=DEBUG_CONTROL.YES_NO
+      label = _("Shape Rule Stats"),
+      choices=DEBUG_CONTROL.YES_NO,
       tooltip = "Displays usage statistics for shape grammar rules.",
       default = "no",
       priority=95,
@@ -183,8 +183,8 @@ OB_MODULES["debugger"] =
     save_svg =
     {
       name = "save_svg",
-      label = _("Save Map Previews")
-      choices=DEBUG_CONTROL.YES_NO
+      label = _("Save Map Previews"),
+      choices=DEBUG_CONTROL.YES_NO,
       tooltip = "Saves SVG format images of generated map thumbnails.",
       default = "no",
       priority=94,
@@ -194,8 +194,8 @@ OB_MODULES["debugger"] =
     extra_games =
     {
       name = "extra_games",
-      label = _("Extra Games")
-      choices = DEBUG_CONTROL.YES_NO
+      label = _("Extra Games"),
+      choices = DEBUG_CONTROL.YES_NO,
       tooltip = "Enables games other than Doom 2 in Game Settings list.",
       default = "no",
       priority = 60,
@@ -205,8 +205,8 @@ OB_MODULES["debugger"] =
     peered_exits =
     {
       name = "peered_exits",
-      label = _("Peered Starts/Exits")
-      choices = DEBUG_CONTROL.YES_NO
+      label = _("Peered Starts/Exits"),
+      choices = DEBUG_CONTROL.YES_NO,
       default = "no",
       priority = 52,
     },
@@ -214,7 +214,7 @@ OB_MODULES["debugger"] =
     steppy_caves =
     {
       name = "steppy_caves",
-      label = _("Steppy Caves")
+      label = _("Steppy Caves"),
       choices =
       {
         "always", _("Always"),
@@ -230,8 +230,8 @@ OB_MODULES["debugger"] =
     start_room_size =
     {
       name = "start_room_size",
-      label = _ ("Start Size Variance")
-      choices = DEBUG_CONTROL.YES_NO
+      label = _ ("Start Size Variance"),
+      choices = DEBUG_CONTROL.YES_NO,
       tooltip = "Affects whether Room Size Variance also influences start rooms.",
       default = "no",
       priority = 50,
@@ -248,4 +248,4 @@ OB_MODULES["debugger"] =
     },
 ]]
   },
-},
+}

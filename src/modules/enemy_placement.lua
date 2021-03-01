@@ -20,7 +20,7 @@
 -- Comments under each entry explains difference between stock
 -- enemy placement in ObAddon/Oblige. -Armaetus
 
-HARDER_ENEMY = { },
+HARDER_ENEMY = { }
 
 HARDER_ENEMY.MONSTERS =
 {
@@ -41,8 +41,8 @@ HARDER_ENEMY.MONSTERS =
     give = { {ammo="bullet",count=5} },
     weap_prefs = { shotty=1.2, chain=1.5 },
     density = 1.5,
-    room_size = "any" --small
-    disloyal = true
+    room_size = "any", --small
+    disloyal = true,
     trap_factor = 0.01,
     outdoor_factor = 0.5,
     infight_damage = 1.9,
@@ -67,9 +67,9 @@ HARDER_ENEMY.MONSTERS =
     species = "zombie",
     replaces = "zombie",
     replace_prob = 25,
-    room_size = "any" --small
-    disloyal = true
-    trap_factor = 2.2 --2.0,
+    room_size = "any", --small
+    disloyal = true,
+    trap_factor = 2.2, --2.0,
     outdoor_factor = 0.66,
     infight_damage = 6.1,
   },
@@ -89,7 +89,7 @@ HARDER_ENEMY.MONSTERS =
     replaces = "demon",
     replace_prob = 25,
     weap_prefs = { shotty=1.5, chain=1.25, super=1.2 },
-    room_size = "any" --small
+    room_size = "any", --small
     trap_factor = 0.7,
     outdoor_factor = 0.8,
     infight_damage = 4.0,
@@ -106,10 +106,10 @@ HARDER_ENEMY.MONSTERS =
     damage = 1.7,
     attack = "melee",
     density = 0.5,
-    float = true
+    float = true,
     weap_prefs = { super=1.5, chain=1.3, launch=0.3 },
-    room_size = "any" --small
-    disloyal = true
+    room_size = "any", --small
+    disloyal = true,
     trap_factor = 0,
     cage_factor = 0,
     outdoor_factor = 2.5,
@@ -150,7 +150,7 @@ HARDER_ENEMY.MONSTERS =
     damage = 1.0,
     attack = "melee",
     density = 0.5,
-    invis = true
+    invis = true,
     outdoor_factor = 3.0,
     weap_min_damage = 40,
     weap_prefs = { super=1.75, shotty=1.35, chain=1.3, plasma=1.1, launch=0.3 },
@@ -174,11 +174,11 @@ HARDER_ENEMY.MONSTERS =
     attack = "missile",
     density = 0.6,
     weap_min_damage = 40,
-    float = true
+    float = true,
     weap_prefs = { launch=1.25, super=1.75, chain=1.2, shotty=0.7, plasma=1.2 },
     replaces = "pain",
     replace_prob = 20,
-    room_size = "any" --large
+    room_size = "any", --large
     trap_factor = 0.5,
     outdoor_factor = 1.33,
     infight_damage = 21,
@@ -204,7 +204,7 @@ HARDER_ENEMY.MONSTERS =
     attack = "missile",
     density = 0.3,
     weap_min_damage = 88,
-    room_size = "any" --medium
+    room_size = "any", --medium
     trap_factor = 0.5,
     infight_damage = 40,
   },
@@ -215,7 +215,7 @@ HARDER_ENEMY.MONSTERS =
     id = 16,
     r = 40,
     h = 110,
-    level = 6 --8,
+    level = 6, --8,
     boss_type = "tough",
     boss_prob = 50,
     prob = 1.6,
@@ -226,7 +226,7 @@ HARDER_ENEMY.MONSTERS =
     density = 0.1,
     weap_min_damage = 150,
     weap_prefs = { bfg=10.0 },
-    room_size = "large" --medium
+    room_size = "large", --medium
     infight_damage = 1600,
     cage_factor = 0,
     outdoor_factor = 2.0,
@@ -244,7 +244,7 @@ HARDER_ENEMY.MONSTERS =
     level = 6,
     boss_type = "tough",
     boss_prob = 15,
-    boss_limit = 1 -- because they infight
+    boss_limit = 1, -- because they infight
     prob = 2.0,
     crazy_prob = 10,
     health = 3000,
@@ -270,7 +270,7 @@ HARDER_ENEMY.MONSTERS =
     id = 65,
     r = 20,
     h = 56,
-    level = 1.5 --2,
+    level = 1.5, --2,
     prob = 60,
     health = 70,
     damage = 5.5,
@@ -281,10 +281,10 @@ HARDER_ENEMY.MONSTERS =
     weap_prefs = { shotty=1.5, super=1.75, chain=2.0, plasma=1.2, launch=1.1 },
     density = 0.75,
     species = "zombie",
-    room_size = "any" --large
+    room_size = "any", --large
     replaces = "shooter",
     replace_prob = 30,
-    disloyal = true
+    disloyal = true,
     trap_factor = 3.0,
     outdoor_factor = 0.75,
     infight_damage = 25,
@@ -301,7 +301,7 @@ HARDER_ENEMY.MONSTERS =
     level = 3.5,
     prob = 25,
     health = 300,
-    damage = 9 --8.5,
+    damage = 9, --8.5,
     attack = "missile",
     weap_min_damage = 60,
     density = 0.6,
@@ -332,7 +332,7 @@ HARDER_ENEMY.MONSTERS =
     species = "baron",
     replaces = "mancubus",
     replace_prob = 25,
-    room_size = "any" --medium
+    room_size = "any", --medium
     trap_factor = 1.1,
     outdoor_factor = 1.25,
     infight_damage = 36,
@@ -394,10 +394,10 @@ HARDER_ENEMY.MONSTERS =
     id = 64,
     r = 20,
     h = 56,
-    level = 6 --6.5,
+    level = 6, --6.5,
     boss_type = "nasty",
     boss_prob = 50,
-    boss_limit = 3 --Triple the pain for this module, up from 2,
+    boss_limit = 3, --Triple the pain for this module, up from 2,
     prob = 5,
     crazy_prob = 15,
     health = 700,
@@ -407,7 +407,7 @@ HARDER_ENEMY.MONSTERS =
     room_size = "medium",
     weap_prefs = { launch=2.0, super=1.25, plasma=1.5, bfg=1.5 },
     weap_min_damage = 120,
-    nasty = true
+    nasty = true,
     infight_damage = 18,
     trap_factor = 0.3,
     outdoor_factor = 1.5,
@@ -424,21 +424,21 @@ HARDER_ENEMY.MONSTERS =
     level = 4,
     boss_type = "nasty",
     boss_prob = 15,
-    boss_limit = 4 --Increases the pain, up from 3. hue hue
+    boss_limit = 4, --Increases the pain, up from 3. hue hue
     prob = 10,
     crazy_prob = 15,
-    health = 900  -- 400 + 5 skulls
-    damage = 14.5 -- about 5 skulls
+    health = 900,  -- 400 + 5 skulls
+    damage = 14.5, -- about 5 skulls
     attack = "missile",
     density = 0.2,
-    float = true
+    float = true,
     weap_min_damage = 100,
     weap_prefs = { launch=1.0, super=1.25, chain=1.5, shotty=0.7 },
-    room_size = "any" --large
-    cage_factor = 0  -- never put in cages
+    room_size = "any", --large
+    cage_factor = 0,  -- never put in cages
     trap_factor = 1.5,
     outdoor_factor = 3.0,
-    infight_damage = 4.5 -- guess
+    infight_damage = 4.5, -- guess
   },
 
   -- NOTE: this is not normally added to levels
@@ -457,7 +457,7 @@ HARDER_ENEMY.MONSTERS =
     density = 1.5,
     infight_damage = 6.0,
   },
-},
+}
 
 
 function HARDER_ENEMY.setup(self)
@@ -472,7 +472,7 @@ function HARDER_ENEMY.setup(self)
     GAME.MONSTERS["ss_nazi"] = nil
   end
 
-  for name,_ in pairs(pairs(HARDER_ENEMY.MONSTERS)) do
+  for name,_ in pairs(HARDER_ENEMY.MONSTERS) do
     local M = GAME.MONSTERS[name]
 
     if M and factor then
@@ -485,7 +485,7 @@ end
 
 OB_MODULES["harder_enemy"] =
 {
-  label = _("Harder Enemy Setup")
+  label = _("Harder Enemy Setup"),
 
   side = "left",
   priority = 61,
@@ -504,4 +504,4 @@ OB_MODULES["harder_enemy"] =
   {
     setup = HARDER_ENEMY.setup
   },
-},
+}
