@@ -89,7 +89,7 @@ Notes and Tips:
   down to the story chunk pieces. This will make it easier to navigate.
 ]]
 
-ZDOOM_STORIES = { },
+ZDOOM_STORIES = { }
 
 ZDOOM_STORIES.LIST =
 {
@@ -124,7 +124,7 @@ ZDOOM_STORIES.LIST =
   hell_to_pay = 2,
   oblige_history = 2,
   bouncy_castle = 2,
-},
+}
 
 ZDOOM_STORIES.STORIES =
 {
@@ -1032,7 +1032,7 @@ ZDOOM_STORIES.STORIES =
       Retreat!" You fire shots at the routed pawns and some of them tumble
       down. You bring one foot over the demon's head, weapon in hand,
       and survey the area. It seems you have struck fear upon the creatures.
-      All clear now, but they will return surely with greater force.]]
+      All clear now, but they will return surely with greater force.]],
 
       -- diabolus ex machina
       [[Before you land your final shot at the demon, a swirl of
@@ -1474,7 +1474,7 @@ ZDOOM_STORIES.STORIES =
       area, allowing the ground beneath you to stabilise once more.
       _SPACE
       Luckily, they haven't noticed you, at least not yet. You jump to
-      your feet and continue on.]]
+      your feet and continue on.]],
 
       [[As you proceed to the next area, something has been feeling off,
       lately. The ground beneath your feet has been feeling strange to walk
@@ -1538,7 +1538,7 @@ ZDOOM_STORIES.STORIES =
       [[It's...._GOTHIC_LEVEL?? How the fuck is this possible? ]],
     },
   },
-},
+}
 
 -- WARNING: absolute endings are supposed to be lines attached to the
 -- story end section of the final chapter. However, story strings
@@ -1555,7 +1555,7 @@ ZDOOM_STORIES.ABSOLUTE_ENDINGS =
   endured so far and put a decisive dent in their efforts.
   _SPACE
   However, this will not be the end of your encounters with them.]]
-},
+}
 
 ZDOOM_STORIES.GENERIC_STORIES =
 {
@@ -1607,7 +1607,7 @@ ZDOOM_STORIES.GENERIC_STORIES =
     Rest for now, but remember:
     Hell is already preparing for another challenge.]]
   },
-},
+}
 
 -- TapWave-TODO:
 -- Plz help proof-read! -MSSP
@@ -1797,7 +1797,7 @@ ZDOOM_STORIES.SECRET_TEXTS =
     yet another assault. It's good that you found them first;
     Time to bring them pain.]],
   },
-},
+}
 
 ZDOOM_STORIES.EVIL_TITLES =
 {
@@ -1815,7 +1815,7 @@ ZDOOM_STORIES.EVIL_TITLES =
   Amputator=5,
   Anathema=5,
   Ancient=5,
-  Annihilator=5,a
+  Annihilator=5,
   Antichrist=5,
   Aphotic=5,
   Argent=5,
@@ -2310,7 +2310,7 @@ ZDOOM_STORIES.EVIL_TITLES =
   ["Whore of Babylon"]=5,
   ["Woe to Man"]=5,
   ["World Ender"]=5,
-},
+}
 
 ZDOOM_STORIES.MCGUFFINS =
 {
@@ -2372,7 +2372,7 @@ ZDOOM_STORIES.MCGUFFINS =
     ["a gray keycard"]=5,
     ["a hot-swap hard drive"]=5,
   },
-},
+}
 
 ZDOOM_STORIES.ENTITIES =
 {
@@ -2459,7 +2459,7 @@ ZDOOM_STORIES.ENTITIES =
     THETA=5,
     IOTA=5,
   },
-},
+}
 
 ZDOOM_STORIES.INSTALLATIONS =
 {
@@ -2478,7 +2478,7 @@ ZDOOM_STORIES.INSTALLATIONS =
   ["waste processing plant"] = 5,
   ["weapons storage facility"] = 5,
   nest = 5,
-},
+}
 
 ZDOOM_STORIES.QUIT_MESSAGES =
 {
@@ -2597,4 +2597,4 @@ ZDOOM_STORIES.QUIT_MESSAGES =
   [[Phobos is about 6,000 km (or about 3,700mi) from Mars's surface, compared to our moon's 384,402 km (or 238,856 mi)]],
 
   [[This is an actual line of code in Oblige:\n `if not is_big(mon) then has_small = true end`]],
-},
+}

@@ -55,7 +55,7 @@ Water_Streaming =     {  lump = "WATSTRM"                                       
 Water_Tank =          {  lump = "WATTANK"                                               },
 Waterfall_Rush =      {  lump = "WATFALL"                                               },
 
-},
+}
 
 ZDOOM_SOUNDSCAPES =
 {
@@ -140,4 +140,4 @@ ZDOOM_SOUNDSCAPES =
     },
   },
 
-},
+}

@@ -17,7 +17,7 @@
 --
 -------------------------------------------------------------------
 
-PREFAB_CONTROL_HERETIC = { },
+PREFAB_CONTROL_HERETIC = { }
 
 PREFAB_CONTROL_HERETIC.WALL_CHOICES =
 {
@@ -27,7 +27,7 @@ PREFAB_CONTROL_HERETIC.WALL_CHOICES =
   "fab_few",     _("Few"),
   "fab_rare",    _("Rare"),
   "fab_random",  _("Mix It Up"),
-},
+}
 
 PREFAB_CONTROL_HERETIC.POINT_CHOICES =
 {
@@ -37,13 +37,13 @@ PREFAB_CONTROL_HERETIC.POINT_CHOICES =
   "fab_default", _("DEFAULT"),
   "fab_more",    _("More"),
   "fab_heaps",   _("Heaps"),
-},
+}
 
 PREFAB_CONTROL_HERETIC.ON_OFF =
 {
   "on",  _("On"),
   "off", _("Off"),
-},
+}
 
 PREFAB_CONTROL_HERETIC.FINE_TUNE_MULT_FACTORS =
 {
@@ -55,10 +55,10 @@ PREFAB_CONTROL_HERETIC.FINE_TUNE_MULT_FACTORS =
   "2", _("More"),
   "4", _("Heaps"),
   "8", _("I LOVE IT"),
-},
+}
 
 function PREFAB_CONTROL_HERETIC.setup(self)
-  for name,opt in pairs(pairs(self.options)) do
+  for name,opt in pairs(self.options) do
     local value = self.options[name].value
     PARAM[name] = value
   end
@@ -108,7 +108,7 @@ end
 
 OB_MODULES["prefab_control_heretic"] =
 {
-  label = _("Prefab Control")
+  label = _("Prefab Control"),
 
   side = "left",
   priority = 93,
@@ -126,8 +126,8 @@ OB_MODULES["prefab_control_heretic"] =
     autodetail =
     {
       name = "autodetail",
-      label=("Auto Detailing")
-      choices=PREFAB_CONTROL_HERETIC.ON_OFF
+      label=("Auto Detailing"),
+      choices=PREFAB_CONTROL_HERETIC.ON_OFF,
       tooltip = "Reduces the amount of complex architecture in a map based on its size. Default is on.",
       default = "on",
       priority = 102,
@@ -137,8 +137,8 @@ OB_MODULES["prefab_control_heretic"] =
     point_prob =
     {
       name = "point_prob",
-      label=_("Decor")
-      choices=PREFAB_CONTROL_HERETIC.POINT_CHOICES
+      label=_("Decor"),
+      choices=PREFAB_CONTROL_HERETIC.POINT_CHOICES,
       tooltip = "Decor prefabs are prefabs placed along the floors such as crates, pillars, and other decorative elements which aren't tied to walls. This directly modifies probabilities on a per-room basis, not the density for decor prefabs in any given room.\n\nNote: DEFAULT actually behaves like Mix-It-Up.",
       default = "fab_default",
       priority = 101,
@@ -147,8 +147,8 @@ OB_MODULES["prefab_control_heretic"] =
     wall_prob = -- code for this option is currently under revision
     {
       name = "wall_prob",
-      label=_("Walls")
-      choices=PREFAB_CONTROL_HERETIC.WALL_CHOICES
+      label=_("Walls"),
+      choices=PREFAB_CONTROL_HERETIC.WALL_CHOICES,
       tooltip = "Determines the amount plain wall prefabs. What it actually does is greatly increase the probability of Oblige's basic plain wall prefab, rather than reduce the probability of all the prefabs in the library.",
       default = "fab_default",
       priority = 100,
@@ -204,11 +204,11 @@ OB_MODULES["prefab_control_heretic"] =
     fab_match_theme =
     {
       name = "fab_match_theme",
-      label=("Match Theme")
-      choices=PREFAB_CONTROL_HERETIC.ON_OFF
+      label=("Match Theme"),
+      choices=PREFAB_CONTROL_HERETIC.ON_OFF,
       tooltip = "Ensures that prefabs selected match their intended Theme.",
       default = "on",
       priority = 1,
     },
   },
-},
+}

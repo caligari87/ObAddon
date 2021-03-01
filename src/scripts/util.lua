@@ -198,7 +198,7 @@ end
 
 function table.size(t)
   local count = 0;
-  for k,v in pairs(pairs(t)) do count = count+1 end
+  for k,v in pairs(t) do count = count+1 end
   return count
 end
 
@@ -211,14 +211,14 @@ function table.last(t)
 end
 
 function table.has_elem(t, v)
-  for _,value in pairs(ipairs(t)) do
+  for _,value in ipairs(t) do
     if v == value then return true end
   end
   return false
 end
 
 function table.kill_elem(t, v)
-  for idx,value in pairs(ipairs(t)) do
+  for idx,value in ipairs(t) do
     if v == value then
       table.remove(t, idx) ; return true
     end
@@ -279,7 +279,7 @@ function table.find_unused(t, start)
 end
 
 function table.append(t1, t2)
-  for _,value in pairs(ipairs(t2)) do
+  for _,value in ipairs(t2) do
     table.insert(t1, value)
   end
 
@@ -300,7 +300,7 @@ function table.subset(t, predicate)
   local new_t = {}
 
   if t then
-    for _,e in pairs(ipairs(t)) do
+    for _,e in ipairs(t) do
       if predicate(e) then
         table.insert(new_t, e)
       end
@@ -314,7 +314,7 @@ function table.subset_w_field(t, field, value)
   local new_t = {}
 
   if t then
-    for _,e in pairs(ipairs(t)) do
+    for _,e in ipairs(t) do
       if e[field] == value then
         table.insert(new_t, e)
       end
@@ -329,7 +329,7 @@ function table.keys(t)
 
   local keys = {}
 
-  for k,v in pairs(pairs(t)) do
+  for k,v in pairs(t) do
     table.insert(keys, k)
   end
 
@@ -353,7 +353,7 @@ function table.tostr(t, depth, prefix)
 
   local result = "{\n"
 
-  for idx,k in pairs(ipairs(table.keys_sorted(t))) do
+  for idx,k in ipairs(table.keys_sorted(t)) do
     local v = t[k]
     result = result .. prefix .. "  " .. tostring(k) .. " = "
     if type(v) == "table" and depth > 1 then
@@ -417,7 +417,7 @@ function table.pick_best(list, comp, remove_it)
 end
 
 function table.merge(dest, src)  -- shallow
-  for k,v in pairs(pairs(src)) do
+  for k,v in pairs(src) do
     if v == REMOVE_ME then
       dest[k] = nil
     else
@@ -437,7 +437,7 @@ function table.copy(t)  -- shallow
 end
 
 function table.merge_missing(dest, src)
-  for k,v in pairs(pairs(src)) do
+  for k,v in pairs(src) do
     if not dest[k] then dest[k] = v end
   end
   return dest
@@ -450,7 +450,7 @@ function table.deep_merge(dest, src, _curdepth)
     error("deep_copy failure: loop detected")
   end
 
-  for k,v in pairs(pairs(src)) do
+  for k,v in pairs(src) do
     if v == REMOVE_ME then
       dest[k] = nil
     elseif type(v) == "table" then
@@ -478,7 +478,7 @@ function table.deep_copy(t)
 end
 
 function table.merge_w_copy(dest, src)
-  for k,v in pairs(pairs(src)) do
+  for k,v in pairs(src) do
     if v == REMOVE_ME then
       dest[k] = nil
     elseif type(v) == "table" then
@@ -492,7 +492,7 @@ function table.merge_w_copy(dest, src)
 end
 
 function table.name_up(t)
-  for name,info in pairs(pairs(t)) do
+  for name,info in pairs(t) do
     info.name = name
   end
 end
@@ -504,7 +504,7 @@ function table.index_up(t)
 end
 
 function table.expand_templates(t)
-  for name,sub in pairs(pairs(t)) do
+  for name,sub in pairs(t) do
     if sub.template then
       local orig = t[sub.template]
 
@@ -637,14 +637,14 @@ function rand.index_by_probs(p)
   assert(#p > 0)
 
   local total = 0
-  for _,prob in pairs(ipairs(p)) do
+  for _,prob in ipairs(p) do
     total = total + prob
   end
 
   if total > 0 then
     local value = gui.random() * total
 
-    for idx, prob in pairs(ipairs(p)) do
+    for idx, prob in ipairs(p) do
       value = value - prob
       if (value <= 0) then return idx end
     end
@@ -660,7 +660,7 @@ function rand.key_by_probs(tab)
   local key_list  = {}
   local prob_list = {}
 
-  for key,prob in pairs(pairs(tab)) do
+  for key,prob in pairs(tab) do
     table.insert(key_list,  key)
     table.insert(prob_list, prob)
   end
@@ -1146,9 +1146,9 @@ end
 
 
 function link_seed_info_to_areas()
-  for _,R in pairs(pairs(LEVEL.rooms)) do
-    for _,A in pairs(pairs(R.areas)) do
-      for _,S in pairs(pairs(A.seeds)) do
+  for _,R in pairs(LEVEL.rooms) do
+    for _,A in pairs(R.areas) do
+      for _,S in pairs(A.seeds) do
         SEEDS[S.sx][S.sy] = S
       end
     end

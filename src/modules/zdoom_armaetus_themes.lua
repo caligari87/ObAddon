@@ -2076,7 +2076,7 @@ ARMAETUS_ROOM_THEMES =
     },
   },
 
-},
+}
 
 -- Custom liquids
 ARMAETUS_LIQUIDS =
@@ -2131,7 +2131,7 @@ ARMAETUS_LIQUIDS =
       "ice2",
     },
   },
-},
+}
 
 -- Custom sink definitions as well as probability tables.
 ARMAETUS_SINK_DEFS =
@@ -3107,7 +3107,7 @@ ARMAETUS_SINK_DEFS =
     trim_mat = "FLAT5_5",
     trim_dz = 2,
   },
-},
+}
 
 ARMAETUS_THEMES =
 {
@@ -3789,7 +3789,7 @@ ARMAETUS_THEMES =
       Skybox_city_hell_bloodfalls_EPIC = 50,
     },
   },
-},
+}
 
 -- Natural textures for outdoor parks.
 ARMAETUS_NATURALS =
@@ -3882,7 +3882,7 @@ ARMAETUS_NATURALS =
       CRHRTWLL = 5,
     },
   },
-},
+}
 
 -- exclude tables for specific environment themes
 ARMAETUS_SKYBOX_EXCLUSIONS =
@@ -3897,7 +3897,7 @@ ARMAETUS_SKYBOX_EXCLUSIONS =
   {
     "Skybox_garrett_winterfall_EPIC",
   },
-},
+}
 
 -- intercepts for the new environment theme feature
 
@@ -4023,7 +4023,7 @@ ARMAETUS_SNOW_OUTDOORS =
    SNOW14 = 3,
    SNOW15 = 5,
   },
-},
+}
 
 -- Snowed-in building facades, per map theme type
 
@@ -4180,7 +4180,7 @@ ARMAETUS_DESERT_OUTDOORS =
     DESROCK4 = 25,
     DESROCK5 = 20,
   },
-},
+}
 
 --[[ARMAETUS_DESERT_FACADES =
 {

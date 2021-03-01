@@ -90,7 +90,7 @@ Notes and Tips:
   down to the story chunk pieces. This will make it easier to navigate.
 ]]
 
-ZDOOM_STORIES_HERETIC = { },
+ZDOOM_STORIES_HERETIC = { }
 
 ZDOOM_STORIES_HERETIC.LIST =
 {
@@ -103,7 +103,7 @@ ZDOOM_STORIES_HERETIC.LIST =
   deus_ex_machina = 6,
   knock_knock_joke = 2,
   oblige_history = 2,
-},
+}
 
 ZDOOM_STORIES_HERETIC.STORIES =
 {
@@ -363,7 +363,7 @@ ZDOOM_STORIES_HERETIC.STORIES =
       [[It's...._CASTLE_LEVEL?? How the fuck is this possible? ]],
     },
   },
-},
+}
 
 -- TapWave-TODO:
 -- Plz help proof-read! -MSSP
@@ -387,7 +387,7 @@ ZDOOM_STORIES_HERETIC.SECRET_TEXTS =
     You grin and ready your wand. It's time to clear this place out.]]
   },
 
-},
+}
 
 ZDOOM_STORIES_HERETIC.EVIL_TITLES =
 {
@@ -405,7 +405,7 @@ ZDOOM_STORIES_HERETIC.EVIL_TITLES =
   Amputator=5,
   Anathema=5,
   Ancient=5,
-  Annihilator=5,a
+  Annihilator=5,
   Antichrist=5,
   Aphotic=5,
   Argent=5,
@@ -896,7 +896,7 @@ ZDOOM_STORIES_HERETIC.EVIL_TITLES =
   ["Whore of Babylon"]=5,
   ["Woe to Man"]=5,
   ["World Ender"]=5,
-},
+}
 
 ZDOOM_STORIES_HERETIC.MCGUFFINS =
 {
@@ -923,7 +923,7 @@ ZDOOM_STORIES_HERETIC.MCGUFFINS =
     ["a small, sigil inscripted bust"]=5,
     ["an inscripted bust of Razorfist"]=5, --LMFAO
   },
-},
+}
 
 --[[ZDOOM_STORIES_HERETIC.ENTITIES =
 {
@@ -1095,4 +1095,4 @@ ZDOOM_STORIES_HERETIC.QUIT_MESSAGES =
 
   -- other important facts, just facts no silly stuff
   [[This is an actual line of code in Oblige:\n `if not is_big(mon) then has_small = true end`]],
-},
+}

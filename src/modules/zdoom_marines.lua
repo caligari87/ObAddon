@@ -16,7 +16,7 @@
 --
 ----------------------------------------------------------------
 
-ZDOOM_MARINE = { },
+ZDOOM_MARINE = { }
 
 ZDOOM_MARINE.MONSTERS =
 {
@@ -38,7 +38,7 @@ ZDOOM_MARINE.MONSTERS =
     health = 100,
     damage = 4,
     attack = "melee",
-    nasty = true
+    nasty = true,
     density = 0.2,
   },
 
@@ -51,7 +51,7 @@ ZDOOM_MARINE.MONSTERS =
     health = 100,
     damage = 40,
     attack = "melee",
-    nasty = true
+    nasty = true,
     density = 0.2,
   },
 
@@ -64,7 +64,7 @@ ZDOOM_MARINE.MONSTERS =
     health = 100,
     damage = 15,
     attack = "melee",
-    nasty = true
+    nasty = true,
     density = 0.2,
   },
 
@@ -77,7 +77,7 @@ ZDOOM_MARINE.MONSTERS =
     health = 100,
     damage = 8,
     attack = "hitscan",
-    nasty = true
+    nasty = true,
     density = 0.5,
   },
 
@@ -90,7 +90,7 @@ ZDOOM_MARINE.MONSTERS =
     health = 100,
     damage = 10,
     attack = "hitscan",
-    nasty = true
+    nasty = true,
     density = 0.4,
   },
 
@@ -103,7 +103,7 @@ ZDOOM_MARINE.MONSTERS =
     health = 100,
     damage = 65,
     attack = "hitscan",
-    nasty = true
+    nasty = true,
     density = 0.3,
   },
 
@@ -116,7 +116,7 @@ ZDOOM_MARINE.MONSTERS =
     health = 100,
     damage = 50,
     attack = "hitscan",
-    nasty = true
+    nasty = true,
     density = 0.3,
   },
 
@@ -130,7 +130,7 @@ ZDOOM_MARINE.MONSTERS =
     health = 100,
     damage = 100,
     attack = "missile",
-    nasty = true
+    nasty = true,
     density = 0.2,
   },
 
@@ -144,7 +144,7 @@ ZDOOM_MARINE.MONSTERS =
     health = 100,
     damage = 70,
     attack = "missile",
-    nasty = true
+    nasty = true,
     density = 0.2,
   },
 
@@ -157,7 +157,7 @@ ZDOOM_MARINE.MONSTERS =
     health = 100,
     damage = 100,
     attack = "hitscan",
-    nasty = true
+    nasty = true,
     density = 0.1,
   },
 
@@ -170,10 +170,10 @@ ZDOOM_MARINE.MONSTERS =
     health = 100,
     damage = 100,
     attack = "missile",
-    nasty = true
+    nasty = true,
     density = 0.1,
   },
-},
+}
 
 
 ZDOOM_MARINE.CHOICES =
@@ -181,14 +181,14 @@ ZDOOM_MARINE.CHOICES =
   "plenty", _("Plenty"),
   "scarce", _("Scarce"),
   "heaps",  _("Heaps"),
-},
+}
 
 ZDOOM_MARINE.FACTORS =
 {
   scarce = 0.4,
   plenty = 1.0,
   heaps  = 2.5,
-},
+}
 
 
 function ZDOOM_MARINE.setup(self)
@@ -198,7 +198,7 @@ function ZDOOM_MARINE.setup(self)
 
   local factor = ZDOOM_MARINE.FACTORS[self.options.qty.value]
 
-  for name,_ in pairs(pairs(ZDOOM_MARINE.MONSTERS)) do
+  for name,_ in pairs(ZDOOM_MARINE.MONSTERS) do
     local M = GAME.MONSTERS[name]
 
     if M and factor then
@@ -213,7 +213,7 @@ end
 
 OB_MODULES["zdoom_marines"] =
 {
-  label = _("ZDoom Marines")
+  label = _("ZDoom Marines"),
 
   game = "doomish",
 
@@ -233,11 +233,11 @@ OB_MODULES["zdoom_marines"] =
   {
     qty =
     {
-      label = _("Default Quantity")
+      label = _("Default Quantity"),
       choices = ZDOOM_MARINE.CHOICES
     },
   },
-},
+}
 
 
 ----------------------------------------------------------------
@@ -253,7 +253,7 @@ ZDOOM_MARINE.CTL_CHOICES =
   "more",    _("More"),
   "heaps",   _("Heaps"),
   "insane",  _("INSANE"),
-},
+}
 
 -- these probabilities are lower than in the Monster Control module
 -- because these dudes really pack a punch.
@@ -267,11 +267,11 @@ ZDOOM_MARINE.CTL_PROBS =
   more   = 70,
   heaps  = 200,
   insane = 1000,
-},
+}
 
 
 function ZDOOM_MARINE.control_setup(self)
-  for name,opt in pairs(pairs(self.options)) do
+  for name,opt in pairs(self.options) do
     local M = GAME.MONSTERS[name]
 
     if M and opt.value ~= "default" then
@@ -289,7 +289,7 @@ end
 
 OB_MODULES["zdoom_marine_control"] =
 {
-  label = _("ZDoom Marines : Control")
+  label = _("ZDoom Marines : Control"),
 
   module = "zdoom_marines",
 
@@ -312,5 +312,5 @@ OB_MODULES["zdoom_marine_control"] =
     marine_rail      = { label="Railgun Marine",     choices=ZDOOM_MARINE.CTL_CHOICES },
     marine_bfg       = { label="BFG Marine",         choices=ZDOOM_MARINE.CTL_CHOICES },
   },
-},
+}
 
