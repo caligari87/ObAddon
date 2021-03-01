@@ -166,5 +166,5 @@ DOOM.WEAPONS =
     give = { {ammo="cell",count=40} },
     bonus_ammo = 40,
   },
-},
+}
 

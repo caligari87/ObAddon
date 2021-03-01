@@ -13,7 +13,7 @@
 
 DOOM.PARAMETERS =
 {
-  teleporters = true
+  teleporters = true,
 
   jump_height = 24,
 
@@ -47,10 +47,10 @@ DOOM.PARAMETERS =
   bex_secret2_name = "C6TEXT",
 
   -- meh, get rid of these (find a better way)
-  doom2_monsters = true
-  doom2_weapons  = true
-  doom2_skies    = true  -- RSKY# patches
-},
+  doom2_monsters = true,
+  doom2_weapons  = true,
+  doom2_skies    = true,  -- RSKY# patches
+}
 
 
 DOOM.ACTIONS =
@@ -60,9 +60,9 @@ DOOM.ACTIONS =
   -- triggered (by a switch or walk-over line).
   --
 
-  S1_OpenDoor = { id=103,  kind="open" }    -- opens and stays open
-  W1_OpenDoor = { id=2,    kind="open" }    --
-  GR_OpenDoor = { id=46,   kind="open" }    --
+  S1_OpenDoor = { id=103,  kind="open" },    -- opens and stays open
+  W1_OpenDoor = { id=2,    kind="open" },    --
+  GR_OpenDoor = { id=46,   kind="open" } ,   --
 
   W1_OpenDoorFast = { id=109, kind="open" },
 
@@ -70,13 +70,13 @@ DOOM.ACTIONS =
   S1_UnlockRed    = { id=135, kind="unlock" },
   S1_UnlockYellow = { id=137, kind="unlock" },
 
-  S1_RaiseStair = { id=127,  kind="stair" }  -- 16 units
-  W1_RaiseStair = { id=100,  kind="stair" }  --
+  S1_RaiseStair = { id=127,  kind="stair" }, -- 16 units
+  W1_RaiseStair = { id=100,  kind="stair" },  --
 
-  S1_FloorUp  = { id=18,   kind="floor_up" } -- up to next highest floor
-  W1_FloorUp  = { id=119,  kind="floor_up" } --
+  S1_FloorUp  = { id=18,   kind="floor_up" }, -- up to next highest floor
+  W1_FloorUp  = { id=119,  kind="floor_up" }, --
 
-  S1_LowerFloor = { id=23, kind="lower" }  -- down to lowest nb floor
-  W1_LowerFloor = { id=38, kind="lower" }  --
-},
+  S1_LowerFloor = { id=23, kind="lower" },  -- down to lowest nb floor
+  W1_LowerFloor = { id=38, kind="lower" },  --
+}
 

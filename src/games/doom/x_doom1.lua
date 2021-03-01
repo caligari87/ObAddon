@@ -23,19 +23,19 @@
 --    which was probably very confusing to most people.
 --
 
-ULTDOOM = { },
+ULTDOOM = { }
 
 
 ULTDOOM.PARAMETERS =
 {
   skip_monsters = { 15,25,35 },
 
-  episodic_monsters = true
+  episodic_monsters = true,
 
-  doom2_monsters = false
-  doom2_weapons  = false
+  doom2_monsters = false,
+  doom2_weapons  = false,
   doom2_skies    = false
-},
+}
 
 
 ULTDOOM.MATERIALS =
@@ -369,7 +369,7 @@ ULTDOOM.MATERIALS =
   MIDBARS1 = { t="MIDGRATE", rail_h=128 },
   MIDBRONZ = { t="MIDGRATE", rail_h=128 },
   MIDSPACE = { t="MIDGRATE", rail_h=128 },
-},
+}
 
 
 --------------------------------------------------------------------
@@ -377,26 +377,26 @@ ULTDOOM.MATERIALS =
 ULTDOOM.WEAPONS =
 {
   super = REMOVE_ME
-},
+}
 
 
 ULTDOOM.NICE_ITEMS =
 {
   mega = REMOVE_ME
-},
+}
 
 
 ULTDOOM.MONSTERS =
 {
-  gunner   = REMOVE_ME
-  revenant = REMOVE_ME
-  knight   = REMOVE_ME
-  mancubus = REMOVE_ME
-  arach    = REMOVE_ME
-  vile     = REMOVE_ME
-  pain     = REMOVE_ME
+  gunner   = REMOVE_ME,
+  revenant = REMOVE_ME,
+  knight   = REMOVE_ME,
+  mancubus = REMOVE_ME,
+  arach    = REMOVE_ME,
+  vile     = REMOVE_ME,
+  pain     = REMOVE_ME,
   ss_nazi  = REMOVE_ME
-},
+}
 
 
 ULTDOOM.ENTITIES =
@@ -417,7 +417,7 @@ ULTDOOM.ENTITIES =
   pool_blood_1  = { id=24, r=20, h=16, pass=true },
   pool_blood_2  = { id=24, r=20, h=16, pass=true },
   pool_brains   = { id=10, r=20, h=16, pass=true },
-},
+}
 
 
 --------------------------------------------------------------------
@@ -1111,12 +1111,12 @@ ULTDOOM.THEMES =
 
     wall_groups =
     {
-      torches2 = 30 --red
-      torches3 = 30 --blue
-      torches1 = 30 --green
-      torches6 = 10 --candelabra
-      torches8 = 10 --evil eye
-      torches10 = 7 --skull rock
+      torches2 = 30, --red
+      torches3 = 30, --blue
+      torches1 = 30, --green
+      torches6 = 10, --candelabra
+      torches8 = 10, --evil eye
+      torches10 = 7, --skull rock
       lowhell1 = 4,
       lowhell2 = 2,
       lowhell3 = 4,
@@ -1170,11 +1170,11 @@ ULTDOOM.THEMES =
 
     window_groups =
     {
-      round  = 80 --80,
-      tall   = 65 --65,
-      barred = 20 --20,
-      grate  = 40 --40,
-      square = 30 --30,
+      round  = 80, --80,
+      tall   = 65, --65,
+      barred = 20, --20,
+      grate  = 40, --40,
+      square = 30, --30,
       supertall = 60,
       gtd_window_cage_highbars = 20,
       gtd_window_cage_lowbars = 20,
@@ -1425,12 +1425,12 @@ ULTDOOM.THEMES =
 
     wall_groups =
     {
-      torches2 = 30 --red
-      torches3 = 30 --blue
-      torches1 = 30 --green
-      torches6 = 10 --candelabra
-      torches8 = 10 --evil eye
-      torches10 = 7 --skull rock
+      torches2 = 30, --red
+      torches3 = 30, --blue
+      torches1 = 30, --green
+      torches6 = 10, --candelabra
+      torches8 = 10, --evil eye
+      torches10 = 7, --skull rock
       lowhell1 = 4,
       lowhell2 = 2,
       lowhell3 = 4,
@@ -1594,14 +1594,14 @@ ULTDOOM.THEMES =
 
     ceil_light_prob = 45,
   },
-},
+}
 
 
 
 ULTDOOM.ROOM_THEMES =
 {
   -- this ensures the following room themes REPLACE those of Doom 2.
-  replace_all = true
+  replace_all = true,
 
 
 -----  GENERIC STUFF  ------------------------------
@@ -3134,7 +3134,7 @@ ULTDOOM.ROOM_THEMES =
   },
 
 
-},
+}
 
 
 --------------------------------------------------------------------
@@ -3192,7 +3192,7 @@ ULTDOOM.EPISODES =
     description  = "Thy Flesh Consumed",
     bex_end_name = "E4TEXT",
   },
-},
+}
 
 
 ULTDOOM.PREBUILT_LEVELS =
@@ -3228,16 +3228,16 @@ ULTDOOM.PREBUILT_LEVELS =
   {
     { prob=50, file="games/doom/data/boss1/dis1.wad", map="E3M8" },
   },
-},
+}
 
 
 function ULTDOOM.get_levels()
   local EP_MAX  = sel(OB_CONFIG.game   == "ultdoom", 4, 3)
   local EP_NUM  = sel(OB_CONFIG.length == "game", EP_MAX, 1)
 
-  local MAP_LEN_TAB = { single=1, few=4 },
+  local MAP_LEN_TAB = { single=1, few=4 }
 
-  local MAP_NUM = MAP_LEN_TAB[OB_CONFIG.length] or 9,
+  local MAP_NUM = MAP_LEN_TAB[OB_CONFIG.length] or 9
 
   -- this accounts for last two levels are BOSS and SECRET level
   local LEV_MAX = MAP_NUM
@@ -3251,7 +3251,7 @@ function ULTDOOM.get_levels()
 
     local EPI = table.copy(ep_info)
 
-    EPI.levels = { },
+    EPI.levels = { }
 
     table.insert(GAME.episodes, EPI)
   end
@@ -3267,19 +3267,19 @@ function ULTDOOM.get_levels()
       if MAP_NUM == 1 then
         ep_along = rand.range(0.3, 0.7);
       elseif map == 9 then
-        ep_along = 0.5,
+        ep_along = 0.5
       end
 
       local LEV =
       {
-        episode = EPI
+        episode = EPI,
 
-        name  = string.format("E%dM%d",   ep_index,   map)
-        patch = string.format("WILV%d%d", ep_index-1, map-1)
+        name  = string.format("E%dM%d",   ep_index,   map),
+        patch = string.format("WILV%d%d", ep_index-1, map-1),
 
-        ep_along = ep_along
+        ep_along = ep_along,
         game_along = (ep_index - 1 + ep_along) / EP_NUM
-      },
+      }
 
       table.insert( EPI.levels, LEV)
       table.insert(GAME.levels, LEV)
@@ -3296,7 +3296,7 @@ function ULTDOOM.get_levels()
       end
 
       if LEV.prebuilt then
-        LEV.name_class = LEV.prebuilt.name_class or "BOSS",
+        LEV.name_class = LEV.prebuilt.name_class or "BOSS"
       end
 
       -- procedural gotcha management code
@@ -3391,13 +3391,13 @@ function ULTDOOM.get_levels()
 
     -- set "dist_to_end" value
     if MAP_NUM >= 9 then
-      EPI.levels[7].dist_to_end = 1,
-      EPI.levels[6].dist_to_end = 2,
-      EPI.levels[5].dist_to_end = 3,
+      EPI.levels[7].dist_to_end = 1
+      EPI.levels[6].dist_to_end = 2
+      EPI.levels[5].dist_to_end = 3
 
     elseif MAP_NUM == 4 then
-      EPI.levels[4].dist_to_end = 1,
-      EPI.levels[3].dist_to_end = 3,
+      EPI.levels[4].dist_to_end = 1
+      EPI.levels[3].dist_to_end = 3
     end
 
   end -- for episode
@@ -3413,9 +3413,9 @@ end
 
 OB_GAMES["doom1"] =
 {
-  label = _("Doom 1")
+  label = _("Doom 1"),
 
-  priority = 98  -- keep at second spot
+  priority = 98,  -- keep at second spot
 
   format = "doom",
   game_dir = "doom",
@@ -3428,18 +3428,18 @@ OB_GAMES["doom1"] =
 
   hooks =
   {
-    setup      = ULTDOOM.setup
-    get_levels = ULTDOOM.get_levels
+    setup      = ULTDOOM.setup,
+    get_levels = ULTDOOM.get_levels,
 
-    end_level  = DOOM.end_level
+    end_level  = DOOM.end_level,
     all_done   = DOOM.all_done
   },
-},
+}
 
 
 OB_GAMES["ultdoom"] =
 {
-  label = _("Ultimate Doom")
+  label = _("Ultimate Doom"),
 
   extends = "doom1",
 
@@ -3448,26 +3448,26 @@ OB_GAMES["ultdoom"] =
   -- no additional tables
 
   -- no additional hooks
-},
+}
 
 
 --------------------------------------------------------------------
 
 OB_THEMES["deimos"] =
 {
-  label = _("Deimos")
+  label = _("Deimos"),
   game = "doom1",
   priority = 40,
   name_class = "TECH",
   mixed_prob = 30,
-},
+}
 
 
 OB_THEMES["flesh"] =
 {
-  label = _("Thy Flesh")
+  label = _("Thy Flesh"),
   game = "ultdoom",
   priority = 10,
   name_class = "GOTHIC",
   mixed_prob = 20,
-},
+}

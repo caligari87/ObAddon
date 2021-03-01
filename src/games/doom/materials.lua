@@ -21,7 +21,7 @@ DOOM.LIQUIDS =
 
   -- Doom II only --
   slime  = { mat="SLIME01", special=0, light_add=8, damage=0 },
-},
+}
 
 
 DOOM.MATERIALS =
@@ -609,7 +609,7 @@ DOOM.MATERIALS =
   RROCK02  = { f="RROCK02", t="CRACKLE4" },
   RROCK03  = { f="RROCK03", t="ASHWALL3" },
   RROCK04  = { f="RROCK04", t="ASHWALL3" },
-  RROCK05  = { f="RROCK05", t="ROCKRED1" } -- animated (using 05..08)
+  RROCK05  = { f="RROCK05", t="ROCKRED1" }, -- animated (using 05..08)
 
   RROCK09  = { f="RROCK09", t="TANROCK4" },
   RROCK10  = { f="RROCK10", t="BRICK1" },
@@ -625,7 +625,7 @@ DOOM.MATERIALS =
   RROCK19  = { f="RROCK19", t="ZIMMER2" },
   RROCK20  = { f="RROCK20", t="ZIMMER7" },
 
-  SLIME09  = { f="SLIME09", t="ROCKRED1" } -- animated
+  SLIME09  = { f="SLIME09", t="ROCKRED1" }, -- animated
   SLIME13  = { f="SLIME13", t="BRICK10" },
   SLIME14  = { f="SLIME14", t="METAL2" },
   SLIME15  = { f="SLIME15", t="METAL2" },
@@ -652,7 +652,7 @@ DOOM.MATERIALS =
   SFALL1   = { t="SFALL1",  f="NUKAGE1", sane=1 },
   NUKAGE1  = { t="SFALL1",  f="NUKAGE1", sane=1 },
 
-  KFALL1   = { t="BLODRIP1", f="SLIME01", sane=1 }  -- new patches
+  KFALL1   = { t="BLODRIP1", f="SLIME01", sane=1 },  -- new patches
   KFALL5   = { t="BLODRIP1", f="SLIME05", sane=1 },
   SLIME01  = { t="BLODRIP1", f="SLIME01", sane=1 },
   SLIME05  = { t="BLODRIP1", f="SLIME05", sane=1 },
@@ -680,16 +680,16 @@ DOOM.MATERIALS =
   -- Allows compatibility with Egypt theme prefabs (if Prefabs are set to not match Theme)
   MURAL2   = { t="MARBFAC3",   f="FLAT1_1" },
   BIGMURAL = { t="STARTAN3",   f="FLAT1_1" },
-},
+}
 
 
 --------------------------------------------------
 
 DOOM.PREFAB_FIELDS =
 {
-},
+}
 
 
 DOOM.SKIN_DEFAULTS =
 {
-},
+}

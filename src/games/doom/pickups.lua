@@ -173,7 +173,7 @@ DOOM.PICKUPS =
   -- For example, the BLUE jacket saves 50% of damage, hence
   -- it is roughly equivalent to 100 units of health.
   --
-},
+}
 
 
 --------------------------------------------------------------------
@@ -231,7 +231,7 @@ DOOM.NICE_ITEMS =
   saw =
   {
     id = 2005,
-    kind = "other"  -- really a weapon
+    kind = "other",  -- really a weapon
     add_prob = 5,
     secret_prob = 10,
     once_only = true
@@ -240,7 +240,7 @@ DOOM.NICE_ITEMS =
   berserk =
   {
     id = 2023,
-    kind = "health"  -- treat it like a big health item
+    kind = "health", -- treat it like a big health item
     add_prob = 10,
     secret_prob = 20,
     give = { {health=70} },
@@ -315,5 +315,5 @@ DOOM.NICE_ITEMS =
   -- needs special logic, e.g. when creating areas of nukage or lava
   -- which the player is forced to cross.
   --
-},
+}
 

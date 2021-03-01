@@ -69,7 +69,7 @@ DOOM.PALETTES =
   255,123,255, 255,  0,255, 207,  0,207, 159,  0,155, 111,  0,107,
   167,107,107,
   },
-},
+}
 
 
 --------------------------------------------------------------------
@@ -83,7 +83,7 @@ DOOM.LEVEL_GFX_COLORS =
 
   red    = { 0,2, 191,189,187,185,183,181,179 },
   black  = { 0,0,0,0, 0,0,0,0 },
-},
+}
 
 
 function DOOM.make_cool_gfx()
@@ -91,19 +91,19 @@ function DOOM.make_cool_gfx()
   {
     0, 7, 127, 126, 125, 124, 123,
     122, 120, 118, 116, 113,
-  },
+  }
 
   local BRONZE_2 =
   {
     0, 2, 191, 189, 187, 235, 233,
     223, 221, 219, 216, 213, 210,
-  },
+  }
 
   local RED =
   {
     0, 2, 188,185,184,183,182,181,
     180,179,178,177,176,175,174,173,172,
-  },
+  }
 
 
   local colmaps =
@@ -113,7 +113,7 @@ function DOOM.make_cool_gfx()
     DOOM.LEVEL_GFX_COLORS.gold,
     DOOM.LEVEL_GFX_COLORS.silver,
     DOOM.LEVEL_GFX_COLORS.iron,
-  },
+  }
 
   rand.shuffle(colmaps)
 
@@ -183,7 +183,7 @@ function DOOM.all_done()
   DOOM.make_cool_gfx()
   DOOM.make_episode_gfx()
 
-  local dir = "games/doom/data/",
+  local dir = "games/doom/data/"
 
   gui.wad_merge_sections(dir .. "doom_falls.wad")
   gui.wad_merge_sections(dir .. "lift_flat.wad")

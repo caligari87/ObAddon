@@ -12,7 +12,7 @@
 --
 --------------------------------------------------------------------
 
-PLUTONIA = { },
+PLUTONIA = { }
 
 
 PLUTONIA.PARAMETERS =
@@ -21,7 +21,7 @@ PLUTONIA.PARAMETERS =
 
   bex_secret_name  = "P5TEXT",
   bex_secret2_name = "P6TEXT",
-},
+}
 
 
 PLUTONIA.MATERIALS =
@@ -126,7 +126,7 @@ PLUTONIA.MATERIALS =
   BIGDOOR2 = { t="A-BROWN4", f="CEIL5_2" },
   BIGDOOR3 = { t="A-BROWN4", f="CEIL5_2" },
   BIGDOOR4 = { t="A-BROWN4", f="CEIL5_2" },
-},
+}
 
 
 PLUTONIA.EPISODES =
@@ -159,7 +159,7 @@ PLUTONIA.EPISODES =
     dark_prob = 40,
     bex_end_name = "P4TEXT",
   },
-},
+}
 
 -- WORK IN PROGRESS --
 -- TEMPORARY SHIT, USABLE BUT NEEDS MORE!
@@ -767,8 +767,8 @@ PLUTONIA.MONSTERS =
     species = "zombie",
     replaces = "zombie",
     replace_prob = 20,
-    room_size = "any" --small
-    disloyal = true
+    room_size = "any", --small
+    disloyal = true,
     trap_factor = 2.5,
     infight_damage = 6.1,
   },
@@ -787,8 +787,8 @@ PLUTONIA.MONSTERS =
     replaces = "demon",
     replace_prob = 25,
     weap_prefs = { shotty=1.5, chain=1.25, super=1.2 },
-    room_size = "any" --small
-    trap_factor = 0.7 --0.3,
+    room_size = "any", --small
+    trap_factor = 0.7, --0.3,
     infight_damage = 4.0,
   },
 
@@ -824,7 +824,7 @@ PLUTONIA.MONSTERS =
     damage = 1.0,
     attack = "melee",
     density = 0.7,
-    invis = true
+    invis = true,
     outdoor_factor = 3.0,
     weap_min_damage = 40,
     weap_prefs = { super=1.75, shotty=1.5, chain=1.4, plasma=1.1, launch=0.1 },
@@ -847,9 +847,9 @@ PLUTONIA.MONSTERS =
     attack = "missile",
     density = 0.6,
     weap_min_damage = 40,
-    float = true
+    float = true,
     weap_prefs = { launch=1.25, super=1.75, chain=1.2, shotty=0.7, plasma=1.2 },
-    room_size = "large" --any
+    room_size = "large", --any
     trap_factor = 0.85,
     cage_factor = 0,
     infight_damage = 21,
@@ -874,7 +874,7 @@ PLUTONIA.MONSTERS =
     room_size = "any",
     replaces = "shooter",
     replace_prob = 20,
-    disloyal = true
+    disloyal = true,
     trap_factor = 5.0,
     infight_damage = 25,
   },
@@ -973,7 +973,7 @@ PLUTONIA.MONSTERS =
     level = 5,
     boss_type = "nasty",
     boss_prob = 50,
-    boss_limit = 2 --Why? Because of the endless revival party in a room full of monsters -Armaetus
+    boss_limit = 2, --Why? Because of the endless revival party in a room full of monsters -Armaetus
     prob = 5,
     crazy_prob = 15,
     health = 700,
@@ -984,7 +984,7 @@ PLUTONIA.MONSTERS =
     weap_prefs = { launch=2.0, super=1.25, plasma=1.5, bfg=1.5 },
     weap_min_damage = 120,
     outdoor_factor = 0.4,
-    nasty = true
+    nasty = true,
     infight_damage = 18,
     trap_factor = 1.25,
     boss_replacement = "baron",
@@ -998,22 +998,22 @@ PLUTONIA.MONSTERS =
     level = 5,
     boss_type = "nasty",
     boss_prob = 20,
-    boss_limit = 4 --Number increased because Plutonia
+    boss_limit = 4, --Number increased because Plutonia
     prob = 10,
     crazy_prob = 15,
-    health = 900  -- 400 + 5 skulls
-    damage = 14.5 -- about 5 skulls
+    health = 900,  -- 400 + 5 skulls
+    damage = 14.5, -- about 5 skulls
     attack = "missile",
     density = 0.15,
-    float = true
+    float = true,
     weap_min_damage = 100,
     weap_prefs = { launch=1.0, super=1.25, chain=1.5, shotty=0.7 },
-    room_size = "large" --any
-    cage_factor = 0  -- never put in cages
+    room_size = "large", --any
+    cage_factor = 0,  -- never put in cages
     outdoor_factor = 1.5,
     infight_damage = 4.5 -- guess
   },
-},
+}
 
 function PLUTONIA.setup(self)
   if not PARAM.doom2_weapons then
@@ -1041,7 +1041,7 @@ end
 
 OB_GAMES["plutonia"] =
 {
-  label = _("Plutonia")
+  label = _("Plutonia"),
 
   extends = "doom2",
 
@@ -1051,4 +1051,4 @@ OB_GAMES["plutonia"] =
   {
     PLUTONIA
   },
-},
+}

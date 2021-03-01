@@ -125,7 +125,7 @@ ROOT_L1 =
 
 ROOT_T2 =
 {
-  prob = 25 --5,
+  prob = 25, --5,
 
   structure =
   {
@@ -152,7 +152,7 @@ ROOT_T2 =
 
 ROOT_LIQUID_1A =
 {
-  prob = 4 --7 --5,
+  prob = 4, --7 --5,
 
   structure =
   {
@@ -533,7 +533,7 @@ EXIT3_DECOR =
 
 GROW_2 =
 {
-  prob = 400 --Non-MSSP default: 100,
+  prob = 400, --Non-MSSP default: 100,
   prob_skew = 2,
 
   structure =
@@ -546,7 +546,7 @@ GROW_2 =
 
 GROW_3 =
 {
-  prob = 250 --Non-MSSP default: 50,
+  prob = 250, --Non-MSSP default: 50,
   prob_skew = 2,
 
   structure =
@@ -559,9 +559,9 @@ GROW_3 =
 
 GROW_4 =
 {
-  prob = 250 --Non-MSSP default: 50,
+  prob = 250, --Non-MSSP default: 50,
   prob_skew = 2,
-  skip_prob = 25 --50,
+  skip_prob = 25, --50,
 
   structure =
   {
@@ -573,7 +573,7 @@ GROW_4 =
 
 GROW_BLOB_1 =
 {
-  prob = 200 --Non-MSSP default: 25,
+  prob = 200, --Non-MSSP default: 25,
 
   structure =
   {
@@ -608,7 +608,7 @@ GROW_DIAG_BLOB1 =
 
 GROW_DIAG_BLOB2 =
 {
-  prob = 65 --45,
+  prob = 65, --45,
 
   structure =
   {
@@ -636,8 +636,8 @@ GROW_DIAG_BLOB2 =
 
 GROW_FUNNEL_2 =
 {
-  prob = 25 --5,
-  skip_prob = 15 --50,
+  prob = 25, --5,
+  skip_prob = 15, --50,
 
   structure =
   {
@@ -652,9 +652,9 @@ GROW_FUNNEL_2 =
 
 GROW_CURVE_1 =
 {
-  prob = 75 --50,
+  prob = 75, --50,
   prob_skew = 3,
-  skip_prob = 5 --25,
+  skip_prob = 5, --25,
 
   structure =
   {
@@ -670,7 +670,7 @@ GROW_CURVE_1 =
 
 GROW_AREA_1 =
 {
-  prob = 200 --40,
+  prob = 200, --40,
 
   structure =
   {
@@ -682,8 +682,8 @@ GROW_AREA_1 =
 
 GROW_AREA_2 =
 {
-  prob = 50 --6,
-  skip_prob = 30 --50,
+  prob = 50, --6,
+  skip_prob = 30, --50,
 
   structure =
   {
@@ -696,9 +696,9 @@ GROW_AREA_2 =
 
 GROW_DIAG_WING =
 {
-  prob = 70 --40,
+  prob = 70, --40,
   prob_skew = 2,
-  skip_prob = 5 --35,
+  skip_prob = 5, --35,
 
   env = "building",
 
@@ -757,7 +757,7 @@ GROW_CAGEPAIR_1 =
 GROW_CAGEPAIR_2 =
 {
   prob = 8,
-  skip_prob = 75 --30,
+  skip_prob = 75, --30,
   aversion = 5,
 
   structure =
@@ -777,7 +777,7 @@ GROW_CAGEPAIR_2 =
 GROW_LIQUID_CAGE3 =
 {
   prob = 10,
-  skip_prob = 20 --33,
+  skip_prob = 20, --33,
 
   structure =
   {
@@ -801,9 +801,9 @@ GROW_LIQUID_CAGE3 =
 
 GROW_STAIR_2 =
 {
-  prob = 10 --12,
+  prob = 10, --12,
   prob_skew = 3,
-  skip_prob = 45 --35,
+  skip_prob = 45, --35,
 
   structure =
   {
@@ -816,9 +816,9 @@ GROW_STAIR_2 =
 
 GROW_STAIR_3 =
 {
-  prob = 5 --5,
+  prob = 5, --5,
   prob_skew = 3,
-  skip_prob = 45 --35,
+  skip_prob = 45, --35,
 
   structure =
   {
@@ -831,9 +831,9 @@ GROW_STAIR_3 =
 
 GROW_NARROWSTAIR_1 =
 {
-  prob = 25 --10,
+  prob = 25, --10,
   prob_skew = 3,
-  skip_prob = 7 --25,
+  skip_prob = 7, --25,
 
   structure =
   {
@@ -846,9 +846,9 @@ GROW_NARROWSTAIR_1 =
 
 GROW_NARROWSTAIR_2 =
 {
-  prob = 20 --10,
+  prob = 20, --10,
   prob_skew = 3,
-  skip_prob = 15 --70,
+  skip_prob = 15, --70,
 
   z_dir = "up",
 
@@ -916,8 +916,8 @@ GROW_CAGESTAIR_3 =
 
 GROW_STAIRPAIR_4 =
 {
-  prob = 80 --200,
-  skip_prob = 40 --60,
+  prob = 80, --200,
+  skip_prob = 40, --60,
   aversion = 3,
 
   structure =
@@ -931,8 +931,8 @@ GROW_STAIRPAIR_4 =
 
 GROW_STAIRPAIR_4B =
 {
-  prob = 85 --120,
-  skip_prob = 40 --60,
+  prob = 85, --120,
+  skip_prob = 40, --60,
   aversion = 3,
 
   structure =
@@ -947,8 +947,8 @@ GROW_STAIRPAIR_4B =
 
 GROW_STAIRPAIR_4C =
 {
-  prob = 40 --50,
-  skip_prob = 40 --60,
+  prob = 40, --50,
+  skip_prob = 40, --60,
 
   structure =
   {
@@ -962,8 +962,8 @@ GROW_STAIRPAIR_4C =
 
 GROW_STAIRPAIR_5 =
 {
-  prob = 20 --20,
-  skip_prob = 45 --50,
+  prob = 20, --20,
+  skip_prob = 45, --50,
   aversion = 5,
 
   z_dir = "up",
@@ -982,7 +982,7 @@ GROW_STAIRPAIR_5 =
 -- FIXME : rename, as these are really L-shape new-floor rules
 GROW_STAIRPAIR_5E =
 {
-  prob = 60 --80,
+  prob = 60, --80,
   skip_prob = 33,
   aversion = 4,
 
@@ -1001,7 +1001,7 @@ GROW_STAIRPAIR_5E =
 
 GROW_STAIRPAIR_5F =
 {
-  prob = 25 --30,
+  prob = 25, --30,
   skip_prob = 50,
   aversion = 4,
 
@@ -1060,8 +1060,8 @@ GROW_STAIR_POOL2 =
 {
   -- this one is higher than STAIR_POOL1,
 
-  prob = 5 --7,
-  skip_prob = 85 --75,
+  prob = 5, --7,
+  skip_prob = 85, --75,
   aversion = 15,
 
   structure =
@@ -1087,7 +1087,7 @@ GROW_STAIR_SIDE2 =
 {
   prob = 80,
   prob_skew = 3,
-  skip_prob = 30 --30,
+  skip_prob = 30, --30,
 
   z_dir = "up",
 
@@ -1106,7 +1106,7 @@ GROW_STAIR_SIDE3 =
 {
   prob = 50,
   prob_skew = 3,
-  skip_prob = 70 --50,
+  skip_prob = 70, --50,
   aversion  = 7,
 
   structure =
@@ -1123,9 +1123,9 @@ GROW_STAIR_SIDE3 =
 
 GROW_STAIR_HUGE =
 {
-  prob = 8 --8,
-  skip_prob = 65 --80,
-  aversion  = 15 --20,
+  prob = 8, --8,
+  skip_prob = 65, --80,
+  aversion  = 15, --20,
 
   structure =
   {
@@ -1248,7 +1248,7 @@ AUX_LIQUID_3 =
 
 SPROUT_DIRECT_1 =
 {
-  prob = 3 --3,
+  prob = 3, --3,
 
   structure =
   {
@@ -1289,7 +1289,7 @@ SPROUT_DIRECT_2 =
 
 SPROUT_DIRECT_2_EMERGENCY =
 {
-  emergency = true
+  emergency = true,
 
   -- high prob to force this rule to be tried fairly early
   prob = 500,
@@ -1337,7 +1337,7 @@ SPROUT_DIRECT_2_EMERGENCY =
 
 SPROUT_DIRECT_THROUGH_2X_LIQUID =
 {
-  emergency = true
+  emergency = true,
 
   prob = 400,
 
@@ -1361,7 +1361,7 @@ SPROUT_DIRECT_THROUGH_2X_LIQUID =
 
 SPROUT_DIRECT_THROUGH_1X_LIQUID =
 {
-  emergency = true
+  emergency = true,
 
   prob = 400,
 
@@ -1384,7 +1384,7 @@ SPROUT_DIRECT_THROUGH_1X_LIQUID =
 
 SPROUT_DIRECT_FROM_DIAGONAL =
 {
-  emergency = true
+  emergency = true,
 
   prob = 250,
 
@@ -1455,7 +1455,7 @@ SPROUT_CASTLE_2 =
 {
   theme = "!urban",
   env = "outdoor",
-  prob = 350 --200,
+  prob = 350, --200,
 
   structure =
   {
@@ -1525,7 +1525,7 @@ SPROUT_SYMMETRY_3 =
 
 SPROUT_JOINER_2x1 =
 {
-  prob = 350 --360,
+  prob = 350, --360,
 
   structure =
   {
@@ -1597,7 +1597,7 @@ SPROUT_JOINER_4x1 =
 
 SPROUT_JOINER_2x2 =
 {
-  prob = 2000 --100,
+  prob = 2000, --100,
 
   structure =
   {
@@ -1698,7 +1698,7 @@ SPROUT_JOINER_2x3 =
 
 SPROUT_JOINER_L =
 {
-  prob = 60 --40 --30,
+  prob = 60, --40 --30,
 
   structure =
   {
@@ -1733,7 +1733,7 @@ SPROUT_TELEPORTER_2x2 =
     "11", "11",
   },
 
-  teleporter = true
+  teleporter = true,
 
   closet =
   {
@@ -1820,7 +1820,7 @@ AUX_CAGE_GROW3 =
 {
   pass = "cage_grow",
 
-  prob = 50 --50,
+  prob = 50, --50,
 
   structure =
   {
@@ -1873,7 +1873,7 @@ AUX_CAGE_GROW5 =
 
 DECORATE_CLOSET_2x1 =
 {
-  prob = 60 --40,
+  prob = 60, --40,
   prob_skew = 2,
 
   structure =
@@ -1888,7 +1888,7 @@ DECORATE_CLOSET_2x1 =
 
 DECORATE_CLOSET_2x2 =
 {
-  prob = 120 --80,
+  prob = 120, --80,
   prob_skew = 2,
 
   structure =
@@ -1919,7 +1919,7 @@ DECORATE_CLOSET_3x1 =
 
 DECORATE_CLOSET_3x2 =
 {
-  prob = 80 --60,
+  prob = 80, --60,
 --prob_skew = 4,
 
   structure =
@@ -1955,7 +1955,7 @@ DECORATE_CLOSET_4x2 =
 
 PARK_ROOT_3x3 =
 {
-  prob = 90 --50,
+  prob = 90, --50,
 
   structure =
   {
@@ -1968,7 +1968,7 @@ PARK_ROOT_3x3 =
 
 PARK_GROW_1 =
 {
-  prob = 200 --100,
+  prob = 200, --100,
 
   structure =
   {
@@ -1981,7 +1981,7 @@ PARK_GROW_1 =
 
 PARK_GROW_2 =
 {
-  prob = 80 --30,
+  prob = 80, --30,
 
   structure =
   {
@@ -1994,7 +1994,7 @@ PARK_GROW_2 =
 
 PARK_GROW_3 =
 {
-  prob = 600 --500,
+  prob = 600, --500,
 
   structure =
   {
@@ -2008,7 +2008,7 @@ PARK_GROW_3 =
 FILLER_1 =
 {
   pass = "filler",
-  prob = 40 --30,
+  prob = 40, --30,
 
   structure =
   {
@@ -2022,7 +2022,7 @@ FILLER_1 =
 FILLER_2 =
 {
   pass = "filler",
-  prob = 75 --60,
+  prob = 75, --60,
 
   structure =
   {
@@ -2035,7 +2035,7 @@ FILLER_2 =
 FILLER_3 =
 {
   pass = "filler",
-  prob = 45 --30,
+  prob = 45, --30,
 
   structure =
   {
@@ -2048,7 +2048,7 @@ FILLER_3 =
 SMOOTHER_1 =
 {
   pass = "smoother",
-  prob = 75 --50,
+  prob = 75, --50,
 
   structure =
   {
@@ -2067,7 +2067,7 @@ SMOOTHER_1 =
 
 CAVE_ROOT_5x5 =
 {
-  prob = 20 --10,
+  prob = 20, --10,
 
   structure =
   {
@@ -2229,7 +2229,7 @@ SPROUT_JOINER_3x2_cave =
 
 CAVE_GROW_3x1 =
 {
-  prob = 75 --50,
+  prob = 75, --50,
 
   structure =
   {
@@ -2241,7 +2241,7 @@ CAVE_GROW_3x1 =
 
 CAVE_GROW_3x2 =
 {
-  prob = 80 --50,
+  prob = 80, --50,
 
   structure =
   {
@@ -2291,7 +2291,7 @@ CAVE_GROW_5x1 =
 
 CAVE_GROW_5x2 =
 {
-  prob = 200 --150,
+  prob = 200, --150,
 
   structure =
   {
@@ -2308,7 +2308,7 @@ CAVE_GROW_5x2 =
 
 SPROUT_narrow_hallway =
 {
-  prob = 2500 -- 1100 --900,
+  prob = 2500, -- 1100 --900,
   skip_prob = 10,
 
   structure =
@@ -2334,7 +2334,7 @@ SPROUT_narrow_hallway =
 HALL_1_GROW_I1 =
 {
   pass = "hall_1",
-  prob = 90 --50,
+  prob = 90, --50,
 
   structure =
   {
@@ -2348,7 +2348,7 @@ HALL_1_GROW_I1 =
 HALL_1_GROW_L1 =
 {
   pass = "hall_1",
-  prob = 90 --50,
+  prob = 90, --50,
 
   structure =
   {
@@ -2364,7 +2364,7 @@ HALL_1_GROW_L1 =
 HALL_1_GROW_T1 =
 {
   pass = "hall_1",
-  prob = 90 --50,
+  prob = 90, --50,
 
   structure =
   {
@@ -2383,7 +2383,7 @@ HALL_1_GROW_T1 =
 HALL_1_GROW_P1 =
 {
   pass = "hall_1",
-  prob = 30 --5,
+  prob = 30, --5,
 
   structure =
   {
@@ -2403,7 +2403,7 @@ HALL_1_GROW_P1 =
 HALL_1_SPROUT_A =
 {
   pass = "hall_1_sprout",
-  prob = 120 --100,
+  prob = 120, --100,
 
   structure =
   {
@@ -2424,7 +2424,7 @@ HALL_1_SPROUT_A =
 
 SPROUT_wide_hallway =
 {
-  prob = 3200 --1800 --1500,
+  prob = 3200, --1800 --1500,
   skip_prob = 20,
 
   structure =
@@ -2451,7 +2451,7 @@ SPROUT_wide_hallway =
 HALL_2_GROW_I1 =
 {
   pass = "hall_2",
-  prob = 55 --40,
+  prob = 55, --40,
 
   structure =
   {
@@ -2467,7 +2467,7 @@ HALL_2_GROW_I1 =
 HALL_2_GROW_L1 =
 {
   pass = "hall_2",
-  prob = 35 --50,
+  prob = 35, --50,
 
   structure =
   {
@@ -2483,7 +2483,7 @@ HALL_2_GROW_L1 =
 HALL_2_GROW_T1 =
 {
   pass = "hall_2",
-  prob = 30 --25,
+  prob = 30, --25,
 
   structure =
   {
@@ -2502,7 +2502,7 @@ HALL_2_GROW_T1 =
 HALL_2_GROW_P1 =
 {
   pass = "hall_2",
-  prob = 10 --5,
+  prob = 10, --5,
 
   structure =
   {
@@ -2544,7 +2544,7 @@ HALL_2_SPROUT_A =
 HALL_2_SPROUT_B =
 {
   pass = "hall_2_sprout",
-  prob = 15 --10,
+  prob = 15, --10,
 
   structure =
   {
@@ -10881,4 +10881,4 @@ STREET_BUILDING_ENTRANCE_WITH_JOINER_3X2 =
 
 -- end of SHAPE_GRAMMAR
 
-},
+}

@@ -949,7 +949,7 @@ DOOM.SINKS =
     trim_mat = "FLAT1",
     trim_dz = 2,
   },
-},
+}
 
 
 
@@ -1042,8 +1042,8 @@ DOOM.THEMES =
     },
 
     -- FIXME: temp crud
-    has_triple_key_door = true
-    has_double_switch_door = true
+    has_triple_key_door = true,
+    has_double_switch_door = true,
 
     steps_mat = "GRAY7",
 
@@ -1442,7 +1442,7 @@ DOOM.THEMES =
       Skybox_hellish_city = 50,
     },
 
-    techy_doors = true
+    techy_doors = true,
 
     post_mat = "DOORSTOP",
   },
@@ -1603,12 +1603,12 @@ DOOM.THEMES =
 
     wall_groups =
     {
-      torches2 = 10 --red
-      torches3 = 10 --blue
-      torches1 = 10 --green
+      torches2 = 10, --red
+      torches3 = 10, --blue
+      torches1 = 10, --green
       torches6 = 5,
-      torches9 = 3 --burning barrel
-      torches10 = 2 --skull rock
+      torches9 = 3, --burning barrel
+      torches10 = 2, --skull rock
       gtd_wall_urban_storage = 8,
       gtd_wall_tech_top_corner_light_set = 8,
       gtd_wall_sewer = 10,
@@ -1750,7 +1750,7 @@ DOOM.THEMES =
       gunner   = 1.5,
       shooter  = 1.1,
       zombie   = 0.7,
-      vile     = 0.6 --Slightly less because multiple Arch-Viles in one area can be a pain in the ass -Chris
+      vile     = 0.6, --Slightly less because multiple Arch-Viles in one area can be a pain in the ass -Chris
       pain     = 0.8,
       mancubus = 1.1,
       Cyberdemon = 1.25,
@@ -2004,13 +2004,13 @@ DOOM.THEMES =
 
     wall_groups =
     {
-      torches2 = 30 --red
-      torches3 = 30 --blue
-      torches1 = 30 --green
-      torches6 = 10 --candelabra
-      torches8 = 10 --evil eye
-      torches9 = 5  --burning barrel
-      torches10 = 7 --skull rock
+      torches2 = 30, --red
+      torches3 = 30, --blue
+      torches1 = 30, --green
+      torches6 = 10, --candelabra
+      torches8 = 10, --evil eye
+      torches9 = 5,  --burning barrel
+      torches10 = 7, --skull rock
       lowhell1 = 4,
       lowhell2 = 2,
       lowhell3 = 4,
@@ -2098,11 +2098,11 @@ DOOM.THEMES =
 
     window_groups =
     {
-      round  = 80 --80,
-      tall   = 65 --65,
-      barred = 20 --20,
-      grate  = 40 --40,
-      square = 30 --30,
+      round  = 80, --80,
+      tall   = 65, --65,
+      barred = 20, --20,
+      grate  = 40, --40,
+      square = 30, --30,
       supertall = 60,
       gtd_window_cage_highbars = 20,
       gtd_window_cage_lowbars = 20,
@@ -2267,7 +2267,7 @@ DOOM.THEMES =
 
     ceil_light_prob = 40,
   },
-},
+}
 
 
 
@@ -4164,8 +4164,8 @@ DOOM.ROOM_THEMES =
       GRAYTALL = 5,
       STONE2 = 20,
 
-      ICKWALL1 = 10 -- well, some hospitals and offices
-      ICKWALL2 = 10 -- have probably fallen into disrepair by now
+      ICKWALL1 = 10, -- well, some hospitals and offices
+      ICKWALL2 = 10, -- have probably fallen into disrepair by now
     },
 
     floors =
@@ -4179,7 +4179,7 @@ DOOM.ROOM_THEMES =
       FLOOR0_3 = 50,
       FLOOR0_5 = 50,
 
-      FLAT14 = 80 -- nice colored carpet look
+      FLAT14 = 80, -- nice colored carpet look
       FLOOR1_6 = 80,
       FLOOR7_1 = 25,
       CEIL3_3 = 25,
@@ -4473,7 +4473,7 @@ DOOM.ROOM_THEMES =
       SLIME16 = 10,
     },
   },
-},
+}
 
 
 --------------------------------------------------------------------
@@ -4553,7 +4553,7 @@ DOOM.ROOMS =
     theme = { hell=1, urban=0.4 },
     prob = 20,
   },
-},
+}
 
 
 --------------------------------------------------------------------
@@ -4592,35 +4592,35 @@ DOOM.NAMES =
       },
     },
   },
-},
+}
 
 --------------------------------------------------------------------
 
 OB_THEMES["tech"] =
 {
-  label = _("Tech")
+  label = _("Tech"),
   game = "doomish",
   priority = 50,
   name_class = "TECH",
   mixed_prob = 90,
-},
+}
 
 
 OB_THEMES["urban"] =
 {
-  label = _("Urban")
+  label = _("Urban"),
   game = "doom2",
   priority = 30,
   name_class = "URBAN",
   mixed_prob = 35,
-},
+}
 
 
 OB_THEMES["hell"] =
 {
-  label = _("Hell")
+  label = _("Hell"),
   game = "doomish",
   priority = 20,
   name_class = "GOTHIC",
   mixed_prob = 35,
-},
+}

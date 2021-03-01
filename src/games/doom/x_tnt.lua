@@ -12,7 +12,7 @@
 --
 --------------------------------------------------------------------
 
-TNT = { },
+TNT = { }
 
 
 TNT.PARAMETERS =
@@ -21,7 +21,7 @@ TNT.PARAMETERS =
 
   bex_secret_name  = "T5TEXT",
   bex_secret2_name = "T6TEXT",
-},
+}
 
 
 TNT.MATERIALS =
@@ -59,7 +59,7 @@ TNT.MATERIALS =
 
   -- 64x64 etc
   CR64LB  = { t="CR64LB",  f="CRATOP2" },
-  CRLWDS6 = { t="CRLWDS6", f="CRATOP2" } --64x32, not really useful
+  CRLWDS6 = { t="CRLWDS6", f="CRATOP2" }, --64x32, not really useful
 
   -- 64x128,
   CRBLWDH6 = { t="CRBLWDH6", f="CRATOP2" },
@@ -133,34 +133,34 @@ TNT.MATERIALS =
   MURAL2   = { t="MURAL2",   f="FLAT1_1" },
 
   PILLAR   = { t="PILLAR",   f="FLAT1_1" },
-  BIGWALL  = { t="BIGWALL",  f="FLAT8"   } --256x128, Egyptian mural decor
-  DRSIDE1  = { t="DRSIDE1",  f="FLAT1_1" } --32x128, useful for small supports, doesn't tile too well
-  DRSIDE2  = { t="DRSIDE2",  f="FLAT1_1" } --32x128, useful for small supports, doesn't tile too well
-  DRTOPFR  = { t="DRTOPFR",  f="FLAT1_1" } --32x65,
-  DRTOPSID = { t="DRTOPSID", f="FLAT1_1" } --32x65,
-  LONGWALL = { t="LONGWALL", f="FLAT1_1" } --256x128, Anubis mural
-  SKIRTING = { t="SKIRTING", f="FLAT1_1" } --256x43, Egyptian hieroglyphics
+  BIGWALL  = { t="BIGWALL",  f="FLAT8"   }, --256x128, Egyptian mural decor
+  DRSIDE1  = { t="DRSIDE1",  f="FLAT1_1" }, --32x128, useful for small supports, doesn't tile too well
+  DRSIDE2  = { t="DRSIDE2",  f="FLAT1_1" }, --32x128, useful for small supports, doesn't tile too well
+  DRTOPFR  = { t="DRTOPFR",  f="FLAT1_1" }, --32x65,
+  DRTOPSID = { t="DRTOPSID", f="FLAT1_1" }, --32x65,
+  LONGWALL = { t="LONGWALL", f="FLAT1_1" }, --256x128, Anubis mural
+  SKIRTING = { t="SKIRTING", f="FLAT1_1" }, --256x43, Egyptian hieroglyphics
   STWALL   = { t="STWALL",   f="CRATOP2" },
-  DRFRONT  = { t="DRFRONT",  rail_h=128  } --Transparent in center, not really useful
+  DRFRONT  = { t="DRFRONT",  rail_h=128  }, --Transparent in center, not really useful
 
   -- Transparent openings --
 
-  GRNOPEN = { t="GRNOPEN", rail_h=128 } --SP_ROCK1 64x128 opening
-  REDOPEN = { t="REDOPEN", rail_h=128 } --ROCKRED 64x128 opening
-  BRNOPEN = { t="BRNOPEN", rail_h=128 } --STONE6 64x128 opening
+  GRNOPEN = { t="GRNOPEN", rail_h=128 }, --SP_ROCK1 64x128 opening
+  REDOPEN = { t="REDOPEN", rail_h=128 }, --ROCKRED 64x128 opening
+  BRNOPEN = { t="BRNOPEN", rail_h=128 }, --STONE6 64x128 opening
 
   -- Rails --
 
   DOGRID   = { t="DOGRID",   rail_h=128 },
-  DOWINDOW = { t="DOWINDOW", rail_h=68 } --Yea, it's 64x68,
+  DOWINDOW = { t="DOWINDOW", rail_h=68 }, --Yea, it's 64x68,
   DOGLPANL = { t="DOGLPANL", rail_h=128 },
   DOBWIRE  = { t="DOBWIRE",  rail_h=128 },
-  DOBWIRE2 = { t="DOBWIRE2", rail_h=128 } --Has no real use, no X flipped variant
+  DOBWIRE2 = { t="DOBWIRE2", rail_h=128 }, --Has no real use, no X flipped variant
   SMGLASS1 = { t="SMGLASS",  rail_h=128  },
   TYIRONLG = { t="TYIRONLG", rail_h=128 },
   TYIRONSM = { t="TYIRONSM", rail_h=72  },
-  WEBL = { t="WEBL", rail_h=128 } --Not really useful
-  WEBR = { t="WEBR", rail_h=128 } --Not really useful
+  WEBL = { t="WEBL", rail_h=128 }, --Not really useful
+  WEBR = { t="WEBR", rail_h=128 }, --Not really useful
 
   -- Overrides for existing DOOM materials --
 
@@ -172,7 +172,7 @@ TNT.MATERIALS =
   BIGDOOR2 = { t="METALDR",  f="CEIL5_2" },
   BIGDOOR3 = { t="METALDR",  f="CEIL5_2" },
   BIGDOOR4 = { t="METALDR",  f="CEIL5_2" },
-},
+}
 
 
 TNT.THEMES =
@@ -278,7 +278,7 @@ TNT.THEMES =
       Skybox_generic = 50,
     },
   },
-},
+}
 
 
 
@@ -413,12 +413,12 @@ TNT.ROOM_THEMES =
       FLAT10  = 20,
       STONE4  = 20,
 
-      SP_ROCK1 = 20 -- MFLR8_3,
+      SP_ROCK1 = 20, -- MFLR8_3,
       RROCK18  = 20,
       ASHWALL2 = 10,
     },
   },
-},
+}
 
 
 TNT.EPISODES =
@@ -456,14 +456,14 @@ TNT.EPISODES =
     dark_prob = 10,
     bex_end_name = "T4TEXT",
   },
-},
+}
 
 
 --------------------------------------------------------------------
 
 OB_GAMES["tnt"] =
 {
-  label = _("TNT Evilution")
+  label = _("TNT Evilution"),
 
   extends = "doom2",
 
@@ -473,17 +473,17 @@ OB_GAMES["tnt"] =
   {
     TNT
   },
-},
+}
 
 
 OB_THEMES["egypt"] =
 {
   -- TNT Evilution theme
 
-  label = _("Egypt")
+  label = _("Egypt"),
   game = "tnt",
   priority = 3,
   name_class = "GOTHIC",
   mixed_prob = 5,
   bit_limited = true
-},
+}
