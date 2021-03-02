@@ -2303,9 +2303,9 @@ function Level_choose_themes()
   end
 
 
-  local function set_single_theme(name)
+  local function set_single_theme(theme_name)
     each EPI in GAME.episodes do
-      set_an_episode(EPI, name)
+      set_an_episode(EPI, theme_name)
     end
   end
 

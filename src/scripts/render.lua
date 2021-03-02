@@ -1115,7 +1115,7 @@ function Render_corner(cx, cy)
 
     local T = Trans.spot_transform(mx, my, 1024, dir)
 
-    local skin = {wall=mat}
+    local skin = { wall=mat }
 
     Fabricate(nil, def, T, {skin})
   end
