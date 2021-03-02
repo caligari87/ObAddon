@@ -334,7 +334,7 @@ function MODDED_GAME_EXTRAS.create_hn_info()
       if C.R2 == R then goto continue end
       if C.lock then
         if C.lock.kind == "quest" then
-          for _,G in pairs(pairs(C.lock.goals)) do
+          for _,G in pairs(C.lock.goals) do
             if G.item == "k_yellow" or G.item == "ks_yellow" then
               goal_obstacles.yellow_door = true
             elseif G.item == "k_blue" or G.item == "ks_blue" then

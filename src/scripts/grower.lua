@@ -4676,7 +4676,7 @@ function Grower_create_rooms()
       end
 
       if info.trials > 0 then
-        local perc = math.floor((info.applied / info.trials) * 10000) / 100,
+        local perc = math.floor((info.applied / info.trials) * 10000) / 100
         gui.printf(" (" .. perc .. "%% success)")
       end
 

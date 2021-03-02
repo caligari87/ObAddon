@@ -369,7 +369,7 @@ function JOKEWAD_MODULE.all_done()
   if PARAM.pandemic_mode == "enable" then
 
     SCRIPTS.tissue_doc = JOKEWAD_MODULE.SUPER_DEC
-    local dir = "games/doom/data/",
+    local dir = "games/doom/data/"
     gui.wad_merge_sections(dir .. "events.wad")
 
   end

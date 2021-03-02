@@ -1419,7 +1419,7 @@ function BOSS_GEN_TUNE.setup(self)
   PARAM.epi_bosses = {}
   PARAM.epi_names = {}
 
-  for name,opt in pairs(pairs(self.options)) do
+  for name,opt in pairs(self.options) do
     local value = self.options[name].value
     PARAM[name] = value
   end
@@ -1548,7 +1548,7 @@ function BOSS_GEN_TUNE.all_done()
     scripty = string.gsub(scripty, "BEXIT", BOSS_GEN_TUNE.TEMPLATES.EXNORMAL)
   end
 
-  for name,info in pairs(pairs(PARAM.boss_types)) do
+  for name,info in pairs(PARAM.boss_types) do
     local bhp = info.health
     local batk = info.attack
     local traitstack = {}
