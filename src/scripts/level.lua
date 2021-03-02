@@ -2311,9 +2311,9 @@ function Level_choose_themes()
   end
 
 
-  local function set_single_theme(name)
-    for _,name in pairs(GAME.episodes) do
-      set_an_episode(EPI, name)
+  local function set_single_theme(theme_name)
+    for _,episode in pairs(GAME.episodes) do
+      set_an_episode(episode, theme_name)
     end
   end
 
