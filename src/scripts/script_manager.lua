@@ -8,7 +8,7 @@
 --
 --  This program is free software; you can redistribute it and/or
 --  modify it under the terms of the GNU General Public License
---  as published by the Free Software Foundation; either version 2,
+--  as published by the Free Software Foundation; either version 2
 --  of the License, or (at your option) any later version.
 --
 --  This program is distributed in the hope that it will be useful,
@@ -223,6 +223,11 @@ function ScriptMan_assemble_gldefs_lump()
         gldefs_lines = gldefs_lines ..
         ZDOOM_SPECIALS.GLOWING_FLATS_GLDEFS
     end
+  end
+
+  if PARAM.include_brightmaps == "yes" then
+    gldefs_lines = gldefs_lines ..
+    EPIC_BRIGHTMAPS
   end
 
   if gldefs_lines ~= "" then

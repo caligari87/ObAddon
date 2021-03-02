@@ -10,7 +10,7 @@
 --
 --  This program is free software; you can redistribute it and/or
 --  modify it under the terms of the GNU General Public License
---  as published by the Free Software Foundation; either version 2,
+--  as published by the Free Software Foundation; either version 2
 --  of the License, or (at your option) any later version.
 --
 --  This program is distributed in the hope that it will be useful,
@@ -57,7 +57,7 @@ function _(s) return gui.gettext(s) end
 OB_ENGINES["nolimit"] =
 {
   label = _("Limit Removing"),
-  priority = 95,
+  priority = 95
 }
 
 
@@ -65,28 +65,28 @@ OB_ENGINES["nolimit"] =
 OB_THEMES["original"] =
 {
   label = _("Original"),
-  priority = 91,
+  priority = 91
 }
 
 
 OB_THEMES["epi"] =
 {
   label = _("Episodic"),
-  priority = 85,
+  priority = 85
 }
 
 
 OB_THEMES["jumble"] =
 {
   label = _("Jumbled Up"),
-  priority = 80,
+  priority = 80
 }
 
 
 OB_THEMES["bit_mixed"] =
 {
   label = _("Bit Mixed"),
-  priority = 81,
+  priority = 81
 }
 
 
@@ -103,7 +103,7 @@ LENGTH_CHOICES =
   "single",  _("Single Level"),
   "few",     _("A Few Maps"),
   "episode", _("One Episode"),
-  "game",    _("Full Game"),
+  "game",    _("Full Game")
 }
 
 
@@ -113,8 +113,8 @@ LENGTH_CHOICES =
 SEED_SIZE = 128
 
 -- largest map size
-SEED_W    = 90 --112,
-SEED_H    = 90 --112,
+SEED_W    = 90 --112
+SEED_H    = 90 --112
 -- MSSP: the absolute maximum size is tightened down to the largest
 -- agreed map size for performance's sake. Current agreed maximum is 74 W.
 -- any higher will cause skyboxes and teleporter rooms to start merging with
@@ -153,7 +153,7 @@ MONSTER_QUANTITIES =
   nuts   = 5.0,
   chaotic = 5.5,
   unhinged = 6.0,
-  ludicrous = 6.66,
+  ludicrous = 6.66
 }
 
 MONSTER_KIND_TAB =
@@ -174,7 +174,7 @@ MONSTER_KIND_TAB =
   nuts   = 2.0,
   chaotic = 2.0,
   unhinged = 2.0,
-  ludicrous = 2.0,
+  ludicrous = 2.0
 }
 
 RAMP_UP_FACTORS =
@@ -184,14 +184,14 @@ RAMP_UP_FACTORS =
   medium = 1.00,
   fast   = 1.50,
   veryfast = 2.00,
-  extfast = 3.00,
+  extfast = 3.00
 }
 
 BOSS_FACTORS =
 {
   easier = 0.30,
   medium = 0.60,
-  harder = 1.00,
+  harder = 1.00
 }
 
 HEALTH_FACTORS =
@@ -201,9 +201,9 @@ HEALTH_FACTORS =
   less     = 0.64,
   bit_less = 0.8,
   normal   = 1.0,
-  bit_more = 1.15, --1.3,
-  more     = 1.5, --1.6,
-  heaps    = 2.5,
+  bit_more = 1.15, --1.3
+  more     = 1.5, --1.6
+  heaps    = 2.5
 }
 
 AMMO_FACTORS =
@@ -215,7 +215,7 @@ AMMO_FACTORS =
   normal   = 1.0,
   bit_more = 1.1,
   more     = 1.25,
-  heaps    = 1.6,
+  heaps    = 1.6
 }
 
 SECRET_BONUS_FACTORS =
@@ -224,15 +224,50 @@ SECRET_BONUS_FACTORS =
   more     = 0.5,
   heaps    = 1,
   heapser  = 2,
-  heapsest = 4,
+  heapsest = 4
 }
+
+--
+
+ROOM_SIZE_MULTIPLIER_MIXED_PROBS =
+{
+  [0.25] = 1,
+  [0.5] = 2,
+  [0.75] = 3,
+  [1] = 3,
+  [1.25] = 3,
+  [1.5] = 2,
+  [2] = 2,
+  [4] = 1.5,
+  [6] = 1,
+  [8] = 1
+}
+
+ROOM_AREA_MULTIPLIER_MIXED_PROBS =
+{
+  [0.15] = 1,
+  [0.5] = 2,
+  [0.75] = 2,
+  [1] = 3,
+  [1.5] = 2,
+  [2] = 2,
+  [4] = 1
+}
+
+SIZE_CONSISTENCY_MIXED_PROBS =
+{
+  strict = 25,
+  normal = 75
+}
+
+--
 
 PROC_GOTCHA_MAP_SIZES =
 {
   large = 30,
   regular = 26,
   small = 22,
-  tiny = 16,
+  tiny = 16
 }
 
 PROC_GOTCHA_STRENGTH_LEVEL =
@@ -241,7 +276,7 @@ PROC_GOTCHA_STRENGTH_LEVEL =
   harder      = 2,
   tougher     = 4,
   crazier     = 8,
-  nightmarish = 16,
+  nightmarish = 16
 }
 
 PROC_GOTCHA_QUANTITY_MULTIPLIER =
@@ -255,7 +290,7 @@ PROC_GOTCHA_QUANTITY_MULTIPLIER =
   ["100"] = 2,
   ["150"] = 3,
   ["200"] = 4,
-  ["400"] = 8,
+  ["400"] = 8
 }
 
 
@@ -300,10 +335,10 @@ GLOBAL_STYLE_LIST =
   -- PLANNED or UNFINISHED stuff --
 
   --[[
-  cycles      = { none=50, few=0,  some=50, heaps=50 },
-  ex_floors   = { none=0,  few=40, some=60, heaps=20 },
-  lakes       = { none=0,  few=60, some=0,  heaps=10 },
-  islands     = { none=0,  few=60, some=0,  heaps=40 },
+  cycles      = { none=50, few=0,  some=50, heaps=50 }
+  ex_floors   = { none=0,  few=40, some=60, heaps=20 }
+  lakes       = { none=0,  few=60, some=0,  heaps=10 }
+  islands     = { none=0,  few=60, some=0,  heaps=40 }
   ]]
 }
 
@@ -332,7 +367,7 @@ GLOBAL_PARAMETERS =
   jump_height = 24,
 
   spot_low_h  = 72,
-  spot_high_h = 128,
+  spot_high_h = 128
 }
 
 

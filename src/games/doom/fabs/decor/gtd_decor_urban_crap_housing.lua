@@ -1,6 +1,6 @@
 PREFABS.Decor_crap_house_1 =
 {
-  file   = "decor/gtd_urban_crap_housing.wad",
+  file   = "decor/gtd_decor_urban_crap_housing.wad",
   map    = "MAP01",
 
   prob   = 10000,
@@ -22,16 +22,7 @@ PREFABS.Decor_crap_house_1 =
     FLAT14 = 5,
     FLOOR1_6 = 5,
     FLAT4 = 2,
-    FLAT1 = 2,
-  },
-
-  tex_MODWALL3 =
-  {
-    MODWALL2 = 2,
-    MODWALL3 = 5,
-    MODWALL4 = 5,
-    BLAKWAL1 = 5,
-    BLAKWAL2 = 5,
+    FLAT1 = 2
   }
 }
 
@@ -42,19 +33,19 @@ PREFABS.Decor_crap_house_2 =
 
   height = 192,
 
-  bound_z2 = 192,
+  bound_z2 = 192
 }
 
 PREFABS.Decor_crap_house_3 =
 {
   template = "Decor_crap_house_1",
-  map = "MAP03",
+  map = "MAP03"
 }
 
 PREFABS.Decor_crap_house_4 =
 {
   template = "Decor_crap_house_1",
-  map = "MAP04",
+  map = "MAP04"
 }
 
 PREFABS.Decor_crap_house_5 =
@@ -66,5 +57,5 @@ PREFABS.Decor_crap_house_5 =
 
   height = 200,
 
-  bound_z = 200,
+  bound_z = 200
 }

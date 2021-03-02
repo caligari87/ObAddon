@@ -234,7 +234,7 @@ function Level_determine_map_size(LEV)
 
     -- Level Control fine tune for Mix It Up
     if PARAM.level_upper_bound then
-      for k,v in pairs(prob_table) do
+      for k,LEV in pairs(prob_table) do
         if SIZES[k] > SIZES[PARAM.level_upper_bound] then
           prob_table[k] = 0
         end
@@ -242,7 +242,7 @@ function Level_determine_map_size(LEV)
     end
 
     if PARAM.level_lower_bound then
-      for k,v in pairs(prob_table) do
+      for k,LEV in pairs(prob_table) do
         if SIZES[k] < SIZES[PARAM.level_lower_bound] then
           prob_table[k] = 0
         end
@@ -327,20 +327,7 @@ function Episode_determine_map_sizes()
 
     if PARAM.room_size_multiplier then
       if PARAM.room_size_multiplier == "mixed" then
-        LEV.size_multiplier = rand.key_by_probs(
-          {
-            [0.25] = 1,
-            [0.5] = 2,
-            [0.75] = 3,
-            [1] = 3,
-            [1.25] = 3,
-            [1.5] = 2,
-            [2] = 2,
-            [4] = 1.5,
-            [6] = 1,
-            [8] = 1,
-          }
-        )
+        LEV.size_multiplier = rand.key_by_probs(ROOM_SIZE_MULTIPLIER_MIXED_PROBS)
       elseif PARAM.room_size_multiplier ~= "vanilla" then
         LEV.size_multiplier = tonumber(PARAM.room_size_multiplier)
       end
@@ -348,17 +335,7 @@ function Episode_determine_map_sizes()
 
     if PARAM.room_area_multiplier then
       if PARAM.room_area_multiplier == "mixed" then
-        LEV.area_multiplier = rand.key_by_probs(
-          {
-            [0.15] = 1,
-            [0.5] = 2,
-            [0.75] = 2,
-            [1] = 3,
-            [1.5] = 2,
-            [2] = 2,
-            [4] = 1,
-          }
-        )
+        LEV.area_multiplier = rand.key_by_probs(ROOM_AREA_MULTIPLIER_MIXED_PROBS)
       elseif PARAM.room_area_multiplier ~= "vanilla" then
         LEV.area_multiplier = tonumber(PARAM.room_area_multiplier)
       end
@@ -366,12 +343,7 @@ function Episode_determine_map_sizes()
 
     if PARAM.room_size_consistency then
       if PARAM.room_size_consistency == "mixed" then
-        LEV.size_consistency = rand.key_by_probs(
-          {
-            strict = 25,
-            normal = 75,
-          }
-        )
+        LEV.size_consistency = rand.key_by_probs(SIZE_CONSISTENCY_MIXED_PROBS)
       else
         LEV.size_consistency = PARAM.room_size_consistency
       end
@@ -400,7 +372,7 @@ function Episode_pick_names()
 
 --
 function grab_many_and_test(num,category)
-  local i = 1,
+  local i = 1
   gui.printf("\nGenerator Test: (Category: " .. category .. ")\n\n")
   while i <= num do
     episode_test_name = Naming_grab_one(category)
@@ -460,7 +432,7 @@ function Episode_decide_specials()
 
   -- dump the results
 
-  local count = 0
+  local count = 0,
 
   gui.printf("\nSpecial levels:\n")
 
@@ -1093,7 +1065,7 @@ function Episode_plan_monsters()
     {
       mon = mon,
       count = count,
-      boss_type = "guard",
+      boss_type = "guard"
     }
 
     table.insert(LEV.boss_fights, FIGHT)
@@ -1859,7 +1831,7 @@ function Episode_plan_weapons()
       LEV.other_weapons = table.copy(LEV.new_weapons)
 
       -- subtract the ones already given
-      for _,sw in pairs(LEV.start_weapons) do
+      for _,w in pairs(LEV.start_weapons) do
         table.kill_elem(LEV.other_weapons, sw)
       end
 
@@ -1935,7 +1907,7 @@ function Hub_connect_levels(epi, keys)
   local function dump()
     gui.debugf("\nHub links:\n")
 
-    for _,link in pairs(epi.hub_links) do
+    for _,k in pairs(epi.hub_links) do
       gui.debugf("  %s --> %s\n", link.src.name, link.dest.name)
     end
 
@@ -2113,8 +2085,8 @@ function Hub_assign_pieces(epi, pieces)
 
   rand.shuffle(levels)
 
-  for _,piece in pairs(pieces) do
-    local L = levels[_index]
+  for index,name in pairs(pieces) do
+    local L = levels[index]
 
     L.hub_piece = piece
 
@@ -2125,7 +2097,7 @@ end
 
 
 function Hub_find_link(kind)
-  for _,link in pairs(LEVEL.hub_links) do
+  for _,k in pairs(LEVEL.hub_links) do
     if kind == "START" and link.dest.name == LEVEL.name then
       return link
     end
@@ -2340,7 +2312,7 @@ function Level_choose_themes()
 
 
   local function set_single_theme(name)
-    for _,EPI in pairs(GAME.episodes) do
+    for _,name in pairs(GAME.episodes) do
       set_an_episode(EPI, name)
     end
   end
@@ -2647,8 +2619,8 @@ end
 function Level_choose_skybox()
   local skyfab
 
-  local function Choose_episodic_skybox()
-    if not LEVEL.episode.skybox then
+  local function Choose_episodic_skybox(force_pick)
+    if not LEVEL.episode.skybox or force_pick then
       return PREFABS[rand.key_by_probs(THEME.skyboxes)]
     else
       return LEVEL.episode.skybox
@@ -2699,17 +2671,16 @@ function Level_choose_skybox()
   if LEVEL.outdoor_theme and LEVEL.outdoor_theme ~= "temperate"
   and ARMAETUS_SKYBOX_EXCLUSIONS then
 
+    local pick_attempts = 0
     while same_skyfab == "yes" do
 
-      for _,ex in pairs(ARMAETUS_SKYBOX_EXCLUSIONS[LEVEL.outdoor_theme]) do
+      for _,x in pairs(ARMAETUS_SKYBOX_EXCLUSIONS[LEVEL.outdoor_theme]) do
         if OB_CONFIG.zdoom_skybox == "episodic" then
           if LEVEL.episode.skybox.name == ex then
-            gui.printf("Initial skybox: " .. LEVEL.episode.skybox.name .. "\n")
             same_skyfab = "yes"
           else same_skyfab = "no" end
         elseif OB_CONFIG.zdoom_skybox ~= "disable" then
           if LEVEL.skybox.name == ex then
-            gui.printf("Initial skybox: " .. LEVEL.skybox.name .. "\n")
             same_skyfab = "yes"
           else same_skyfab = "no" end
         end
@@ -2717,12 +2688,19 @@ function Level_choose_skybox()
 
       if same_skyfab == "yes" then
         if OB_CONFIG.zdoom_skybox == "episodic" then
-          LEVEL.episode.skybox = Choose_episodic_skybox()
+          LEVEL.episode.skybox = Choose_episodic_skybox("force_it")
           skyfab = LEVEL.episode.skybox
         else
           LEVEL.skybox = Choose_skybox(OB_CONFIG.zdoom_skybox)
           skyfab = LEVEL.skybox
         end
+      end
+
+      pick_attempts = pick_attempts + 1
+      if pick_attempts > 10 then 
+        gui.printf(table.tostr(ARMAETUS_SKYBOX_EXCLUSIONS[LEVEL.outdoor_theme]))
+        error("Skybox pick repeated too many times!!!! Global warming is real and " ..
+        "a billion pigs have been killed by swine flu!!!!") 
       end
 
     end
@@ -2792,8 +2770,8 @@ function Level_handle_prebuilt()
   -- randomly pick one
   local probs = {}
 
-  for _,info in pairs(LEVEL.prebuilt) do
-    probs[_index] = info.prob or 50
+  for index,o in pairs(LEVEL.prebuilt) do
+    probs[index] = info.prob or 50
   end
 
   local info = LEVEL.prebuilt[rand.index_by_probs(probs)]

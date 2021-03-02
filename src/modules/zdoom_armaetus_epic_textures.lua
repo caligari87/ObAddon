@@ -7,7 +7,7 @@
 --
 --  This program is free software; you can redistribute it and/or
 --  modify it under the terms of the GNU General Public License
---  as published by the Free Software Foundation; either version 2,
+--  as published by the Free Software Foundation; either version 2
 --  of the License, or (at your option) any later version.
 --
 --  This program is distributed in the hope that it will be useful,
@@ -300,7 +300,7 @@ ARMAETUS_EPIC_TEXTURES.TEMPLATES =
                     }
                 }
 
-                if(onCeil != 'F_SKY1')
+                if(onCeil ~= 'F_SKY1')
                 {
                     scale.x *= 0.5; //For those occasional indoor planters
                     scale.y *= 0.5; //in urban theme.
@@ -795,7 +795,7 @@ function ARMAETUS_EPIC_TEXTURES.generate_environment_themes()
 
   -- initialize default tables
   if not PARAM.default_environment_themes_init then
-    -- Doom 2,
+    -- Doom 2
     if OB_CONFIG.game == "doom2" then
       -- floors
       PARAM.def_tech_floors = GAME.ROOM_THEMES.tech_Outdoors_generic.floors
@@ -806,7 +806,7 @@ function ARMAETUS_EPIC_TEXTURES.generate_environment_themes()
       PARAM.def_urban_naturals = GAME.ROOM_THEMES.urban_Outdoors_generic.naturals
       PARAM.def_hell_naturals = GAME.ROOM_THEMES.hell_Outdoors_generic.naturals
 
-    -- Doom 1,
+    -- Doom 1
     elseif OB_CONFIG.game == "doom1"
     or OB_CONFIG.game == "ultdoom" then
       -- floors
@@ -864,7 +864,7 @@ function ARMAETUS_EPIC_TEXTURES.generate_environment_themes()
       GAME.ROOM_THEMES.hell_Outdoors_generic.floors = PARAM.def_hell_floors
       GAME.ROOM_THEMES.hell_Outdoors_generic.naturals = PARAM.def_hell_naturals
     end
-  -- MSSP-TODO: check cliff mats for Doom1,
+  -- MSSP-TODO: check cliff mats for Doom1
   elseif OB_CONFIG.game == "doom1"
   or OB_CONFIG.game == "ultdoom" then
     if LEVEL.outdoor_theme == "snow" then
@@ -1014,7 +1014,13 @@ function ARMAETUS_EPIC_TEXTURES.put_the_texture_wad_in()
   end
 
   if PARAM.custom_trees ~= "no" then
-    gui.wad_merge_sections("modules/zdoom_internal_scripts/ObAddon_trees.wad")
+    wad_file = "modules/zdoom_internal_scripts/ObAddon_trees.wad"
+    gui.wad_merge_sections(wad_file)
+  end
+
+  if PARAM.include_brightmaps == "yes" then
+    wad_file = "games/doom/data/ObAddon_Textures_Brightmaps.wad"
+    gui.wad_merge_sections(wad_file)
   end
 end
 ----------------------------------------------------------------
@@ -1050,7 +1056,7 @@ OB_MODULES["armaetus_epic_textures"] =
       choices = ARMAETUS_EPIC_TEXTURES.YES_NO,
       default = "yes",
       tooltip = "Adds new custom Textures liquid flats.",
-      priority=4,
+      priority=4
     },
 
     custom_trees =
@@ -1064,7 +1070,7 @@ OB_MODULES["armaetus_epic_textures"] =
         "trees on specific grass flats and will be expanded in the future to accomnodate " ..
         "custom Textures and more. If you are playing a mod that already does its own trees, " ..
         "it may be better to leave this off.",
-      priority=3,
+      priority=3
     },
 
     environment_themes =
@@ -1078,20 +1084,31 @@ OB_MODULES["armaetus_epic_textures"] =
         "Influences outdoor environments with different textures such as " ..
         "desert sand or icey snow.",
       priority=2,
-      gap=1,
+      gap=1
     },
 
     include_package =
     {
       name = "include_package",
-      label = _("Texture WAD Merge"),
+      label = _("Merge Textures WAD"),
       choices = ARMAETUS_EPIC_TEXTURES.YES_NO,
       default = "yes",
       tooltip =
         "Allows the trimming down of resulting WAD by not merging the custom texture WAD.\n\n" ..
         "This will require you to extract and load up the WAD manually in your preferred sourceport installation.\n\n" ..
         "This is the preferrable option for multiplayer situations and server owners and have each client obtain a copy of the texture pack instead.\n",
-      priority=1,
+      priority=1
     },
-  },
+
+    include_brightmaps =
+    {
+      name = "include_brightmaps",
+      label = _("Include Brightmaps"),
+      choices = ARMAETUS_EPIC_TEXTURES.YES_NO,
+      default = "yes",
+      tooltip = "Allows merging Epic Textures brightmaps into the WAD. Does not include brightmaps for" ..
+        " base resources from any of the games.",
+      priority = 0
+    }
+  }
 }

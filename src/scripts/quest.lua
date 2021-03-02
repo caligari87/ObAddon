@@ -1465,7 +1465,7 @@ function Quest_start_room()
     -- prefer no teleporter
     if not R:has_teleporter() then score = score + 1 end
 
-    gui.debugf("eval_start_room in %s --> space:%d dist:%d %1.2f\n", R.name, space, R.dist_to_exit or -1, int(score))
+    gui.debugf("eval_start_room in %s --> space:%d dist:%d %1.2f\n", R.name, space, int(R.dist_to_exit or -1), score)
 
     -- tie breaker
     return score + gui.random() * 2

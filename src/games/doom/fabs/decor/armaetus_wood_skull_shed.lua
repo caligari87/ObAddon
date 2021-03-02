@@ -28,3 +28,9 @@ PREFABS.Decor_wood_skull_shed_octo =
 
   z_fit = { 40,88 }
 }
+
+PREFABS.Decor_wood_skull_shed_grate =
+{
+  template = "Decor_wood_skull_shed",
+  map = "MAP03"
+}
