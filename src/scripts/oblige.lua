@@ -381,20 +381,20 @@ function ob_resolve_theme_keyword(T)
     deimos =
     {
       "tech",
-      "hell",
+      "hell"
     },
 
     industrial =
     {
       "tech",
-      "urban",
+      "urban"
     },
 
     flesh =
     {
       "hell",
-      "urban",
-    },
+      "urban"
+    }
   }
 
   if keys[T] then

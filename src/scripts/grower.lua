@@ -2683,7 +2683,7 @@ stderrf("prelim_conn %s --> %s : S=%s dir=%d\n", c_out.R1.name, c_out.R2.name, S
       link_info =
       {
         dest_dir = assert(link_chunk.dest_dir)
-      },
+      }
 
       table.kill_elem(R.all_links, link_chunk)
 
@@ -3380,7 +3380,7 @@ end
 
       assert(aux.pass)
 
-      -- 'count' can be a number or a range of values: { low,high },
+      -- 'count' can be a number or a range of values: { low,high }
       local num = aux.count or 1
 
       if type(num) == "table" then

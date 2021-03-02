@@ -59,7 +59,7 @@ namelib.NAMES =
         ["is Back"]=10,
 
         -- these from Frozsoul
-        [": The Next Generation"]=10,
+        [": The Next Generation"]=10
 
       },
 
@@ -164,7 +164,7 @@ namelib.NAMES =
         ["Turmoil"]=10,
         ["Wasted"]=10,
         ["Woe"]=10,
-        ["Wrath"]=10,
+        ["Wrath"]=10
       },
 
       v =
@@ -248,7 +248,7 @@ namelib.NAMES =
         ["Destroy the"]=10,
         --["Shut Down the"]=15,
         --["Patrol the"]=15,
-        ["Secure the"]=10,
+        ["Secure the"]=10
         --["Clear this"]=5,
         --["Defend this"]=10,
 
@@ -256,7 +256,7 @@ namelib.NAMES =
         -- so I enabled them. Things like shutting down
         -- patrolling, defending, etc. are too explicit.
         -- MSSP
-      },
+      }
     },
 
     divisors =
@@ -275,7 +275,7 @@ namelib.NAMES =
       r = 40,
 
       s = 1000  -- single complete names
-    },
+    }
   },
   -- end of 'COMMON' theme
 
@@ -313,14 +313,14 @@ namelib.NAMES =
       ["%r the %b %n"] = 12,
 --]]
 
-      ["%s"] = 25,
+      ["%s"] = 25
     },
 
     lexicon =
     {
       t =
       {
-        The=50,
+        The=50
       },
 
       r =
@@ -330,7 +330,7 @@ namelib.NAMES =
         Reactivate = 20,
         Deactivate = 20,
         ["Turn on"] = 5,
-        ["Turn off"] = 5,
+        ["Turn off"] = 5
       },
 
       a =
@@ -409,7 +409,7 @@ namelib.NAMES =
 
         -- special tag for the name generator
         NOUNGENEXOTIC = 400,
-        NOUNGENANGLICAN = 400,
+        NOUNGENANGLICAN = 400
       },
 
       b =
@@ -947,9 +947,8 @@ namelib.NAMES =
         ["Orbitdancer"]=10,
         ["Powder Burns"]=10, -- Bolt Thrower
         ["The Particle Storm"]=10 -- Mostly Dark Tranquility, "Into the Particle Storm" won't fit, I think?
-
-      },
-    },
+      }
+    }
   },
   -- end of 'TECH' theme
 
@@ -994,7 +993,6 @@ namelib.NAMES =
       ["Dying in %e's name"] = 3,
       ["Unworthy for %e"] = 3,
       ["%e's Bitch"] = 2,
-
     },
 
     lexicon =
@@ -1153,7 +1151,7 @@ namelib.NAMES =
         -- ObAddon contributor names
         NOUNMEMBERS = 90,
 
-        NOUNGENEXOTIC = 700,
+        NOUNGENEXOTIC = 700
       },
 
       a =
@@ -1289,7 +1287,7 @@ namelib.NAMES =
         Rocky=5, Stone=5, Masonic=5,
         Iron=5, Steel=5, Hellforged=5,
         Obsidian=5, Mythril=5,
-        Rusted=5, Guilded=5, God_Forged=3,
+        Rusted=5, Guilded=5, God_Forged=3
       },
 
       n =
@@ -1435,7 +1433,7 @@ namelib.NAMES =
         Durance=5, Captivity=3, Confinement=3,
         Isolation=3, Duress=3, Remand=2, Thralldom=2,
         Immuration=3, Bastille=2, Brig=3,
-        Sty=3, Antechamber=3, Hold=3,
+        Sty=3, Antechamber=3, Hold=3
       },
 
       h = -- explicit descriptions i.e. "Arena of Death",
@@ -1476,7 +1474,7 @@ namelib.NAMES =
 
         Dread=5, Fate=5, Locusts=2, Erebus=5, Lethe=2,
         Reckoning=5, Minos=3, Hades=7, Acheron=5,
-        Leviathan=5, Baphomet=5, Devils=10,
+        Leviathan=5, Baphomet=5, Devils=10
       },
 
       o = -- implicit objects e.g. "Arena of the Doomed",
@@ -1549,7 +1547,7 @@ namelib.NAMES =
 
         -- danger
         Hazardous=10, Parlous=10, Perilous=10,
-        Treacherous=10,
+        Treacherous=10
       },
 
       s =
@@ -1914,9 +1912,9 @@ namelib.NAMES =
         ["Void"]=10,
         ["Windfall of Delerium"]=10,
         ["Winds of Dusk"]=10,
-        ["Withered and Forgotten"]=10,
-      },
-    },
+        ["Withered and Forgotten"]=10
+      }
+    }
   },
   -- end of 'GOTHIC' theme
 
@@ -1978,7 +1976,7 @@ namelib.NAMES =
     {
       t =
       {
-        The=50,
+        The=50
       },
 
       r =
@@ -1994,7 +1992,7 @@ namelib.NAMES =
         Avenue = 3,
         Drive = 2,
         Place = 2,
-        Lane = 2,
+        Lane = 2
       },
 
       a =
@@ -2230,7 +2228,7 @@ namelib.NAMES =
         Battlefront=5, Battlezone=5, Warzone=5,
         Battlegrounds=7, Front=5, Impasse=5,
         Standoff=5, Deadlock=5, Stalemate=5,
-        Quandary=5, Quagmire=3, Imbroglio=5,
+        Quandary=5, Quagmire=3, Imbroglio=5
       },
 
       h = -- explicit descriptors (e.g. "Arena of Doom")
@@ -2298,8 +2296,7 @@ namelib.NAMES =
         Spiders=2, Snakes=5,
 
         -- creepy furniture
-        Mirrors=5, Stakes=3,
-
+        Mirrors=5, Stakes=3
       },
 
       o = -- implicit descriptors (e.g. "Arena of the Doomed")
@@ -2357,7 +2354,7 @@ namelib.NAMES =
         Union=5, Fellowship=5,
 
         -- age and time
-        Ancients=5, Eternal=5, Night=10,
+        Ancients=5, Eternal=5, Night=10
       },
 
       s =
@@ -2637,9 +2634,9 @@ namelib.NAMES =
         ["Unspoken Stars"]=10,
         ["Urban Megalths"]=10,
         ["When All Hope is Lost"]=10,
-        ["Wicked Corridors"]=10,
-      },
-    },
+        ["Wicked Corridors"]=10
+      }
+    }
   },
   -- end of 'URBAN' theme
 
@@ -2691,14 +2688,14 @@ namelib.NAMES =
       ["NOUNMEMBERS %n"] = 5,
 
       ["NOUNGENANGLICAN %n"] = 35,
-      ["NOUNGENEXOTIC %n"] = 10,
+      ["NOUNGENEXOTIC %n"] = 10
     },
 
     lexicon =
     {
       t =
       {
-        The=50,
+        The=50
       },
 
       e =
@@ -2749,18 +2746,18 @@ namelib.NAMES =
         -- ObAddon contributor names
         NOUNMEMBERS = 90,
 
-        NOUNGENEXOTIC = 700,
+        NOUNGENEXOTIC = 700
       },
 
       r =
       {
-        Path=50,
+        Path=50
       },
 
       a =
       {
         Magical=50,
-        Mystical=50,
+        Mystical=50
       },
 
       n =
@@ -2768,36 +2765,34 @@ namelib.NAMES =
         Castle=20, Citadel=10,
         Keep=3, Slough=3, Temple=3,
         Gate=10, Prison=15, Dens=5,
-        Coliseum=2, Courtyard=10, Court=10,
+        Coliseum=2, Courtyard=10, Court=10
       },
 
       h = -- explicit descriptors (e.g. "Arena of Doom")
       {
-       Blasphemy=50,
-       Evil=50,
+        Blasphemy=50,
+        Evil=50
       },
 
       o = -- implicit descriptors (e.g. "Arena of the Doomed")
       {
-       Eternal=50,
-       Baleful=50,
-       Consumed=50,
-       Corrupted=50,
-       Diabolic=50,
-       Eternal=50,
-       Ruined=50,
-       Shattered=50,
-       Unhallowed=50,
+        Eternal=50,
+        Baleful=50,
+        Consumed=50,
+        Corrupted=50,
+        Diabolic=50,
+        Eternal=50,
+        Ruined=50,
+        Shattered=50,
+        Unhallowed=50
       },
 
       s =
       {
         -- single complete level names
-
-        ["Castle of Incomplete Heretic Support"]=10,
-
-      },
-    },
+        ["Castle of Incomplete Heretic Support"]=10
+      }
+    }
   },
   -- end of 'CASTLE' theme
 
@@ -3050,9 +3045,9 @@ namelib.NAMES =
         -- 2021 additions
         ["A Bit Too Simple"]=10,
         ["Dead End"]=10,
-        ["Much Too Simple"]=10,
-      },
-    },
+        ["Much Too Simple"]=10
+      }
+    }
   },
   -- end of 'BOSS' theme
 
@@ -3420,8 +3415,8 @@ namelib.NAMES =
         ["The Novice Experiment"]=10,
         ["Wronging Point"]=10,
         ["Void Moons"]=10,
-      },
-    },
+      }
+    }
   },
   -- end of 'PSYCHO' theme
 
@@ -3515,8 +3510,7 @@ namelib.NAMES =
       -- E.T.'s additions
       ["%p of the %a %j"]=4,
       ["%p of %a %j"]=4,
-      ["%p of %j"]=4,
-
+      ["%p of %j"]=4
     },
 
     lexicon =
@@ -3685,7 +3679,7 @@ namelib.NAMES =
         Firmament = 10,
         Pillar = 10,
         Vestibule = 10,
-        Walls = 10,
+        Walls = 10
       },
 
       q = -- adverbs?
@@ -3701,7 +3695,7 @@ namelib.NAMES =
 
         -- stuff MSSP adds
         ["Eternal"] = 10,
-        ["Raining Down"] = 5,
+        ["Raining Down"] = 5
       },
 
       a = -- adjectives
@@ -3864,7 +3858,7 @@ namelib.NAMES =
         Absolute = 5,
         Final = 10,
         Terminal = 5,
-        Ultimate = 10,
+        Ultimate = 10
       },
 
       k = -- body parts (because Doom 1 Episode 1)
@@ -3873,7 +3867,7 @@ namelib.NAMES =
         Neck = 20,
         Waist = 10,
         Chest = 3,
-        Thigh = 3,
+        Thigh = 3
       },
 
       j = -- objects
@@ -3974,7 +3968,7 @@ namelib.NAMES =
         Frost = 10,
         Lava = 10,
         Magma = 10,
-        Poison = 10,
+        Poison = 10
       },
 
       s = -- single whole names
@@ -4199,14 +4193,14 @@ namelib.NAMES =
 
         -- WAD title stuff
         ["Crossing Acheron"]=5,
-        ["Cyberdreams"]=5,
+        ["Cyberdreams"]=5
       },
 
       c = -- oh boy, here we go again...
       {
-        NOUNMEMBERS = 10,
-      },
-    },
+        NOUNMEMBERS = 10
+      }
+    }
   },
   -- end of 'EPISODE' theme
 
@@ -4345,7 +4339,7 @@ namelib.NAMES =
       ["%a Hellcraft"] = 3,
       ["%d! Oh My Oh My"] = 3,
       ["%c and Doomguy in the Same Room"] = 3,
-      ["Is %c %a?"]=3,
+      ["Is %c %a?"]=3
     },
 
     lexicon =
@@ -4498,7 +4492,7 @@ namelib.NAMES =
         Solar = 10,
         Stellar = 10,
 
-        Lit = 8,
+        Lit = 8
       },
 
       p = -- places
@@ -4664,7 +4658,7 @@ namelib.NAMES =
         Autumn = 8,
         Fall   = 8,
         Summer = 8,
-        Thundersnow = 8,
+        Thundersnow = 8
       },
 
       -- these are quite abstract
@@ -4867,7 +4861,7 @@ namelib.NAMES =
         Scourge = 10,
         Trouble = 8,
         Tribulation = 10,
-        Vexation = 8,
+        Vexation = 8
       },
 
       e = -- entities
@@ -5049,9 +5043,7 @@ namelib.NAMES =
         Mangled = 10,
         Mutilated = 20,
         Suffering = 10,
-        Tortured = 10,
-
-
+        Tortured = 10
       },
 
       -- Materials, namely metal alloys
@@ -5064,14 +5056,14 @@ namelib.NAMES =
         Brass = 5,
         Silver = 10,
         Bronze = 5,
-        Copper = 7,
+        Copper = 7
       },
 
       c = -- contributor names
       {
-        NOUNMEMBERS = 10,
-      },
-    },
+        NOUNMEMBERS = 10
+      }
+    }
   },
 
 
@@ -5079,7 +5071,7 @@ namelib.NAMES =
   {
     patterns =
     {
-      ["%s"] = 60,
+      ["%s"] = 60
     },
 
     lexicon =
@@ -5470,10 +5462,10 @@ namelib.NAMES =
         ["No Angels Fly"] = 20, -- Sabaton - "No Bullets Fly" (song)
 
         -- Nerdery stuff
-        ["d20 Edition"] = 15, -- Also Swedra
-      },
-    },
-  },
+        ["d20 Edition"] = 15 -- Also Swedra
+      }
+    }
+  }
   -- end of 'TITLE' and 'SUB_TITLE' themes
   -- end of all the 'TEXT_XXX' themes
 }
@@ -5485,7 +5477,7 @@ namelib.NAMES =
 namelib.IGNORE_WORDS =
 {
   ["the"]=1, ["a"]=1,  ["an"]=1, ["of"]=1, ["s"]=1,
-  ["for"]=1, ["in"]=1, ["on"]=1, ["to"]=1,
+  ["for"]=1, ["in"]=1, ["on"]=1, ["to"]=1
 }
 
 
@@ -5509,7 +5501,7 @@ namelib.COMMUNITY_MEMBERS =
     "Swedra",
     "Demios",
     "Scionox",
-    "Josh Seven", --josh771,
+    "Josh Seven" --josh771,
   },
 
   -- These people helped out OBLIGE and how they contributed.
@@ -5561,8 +5553,8 @@ namelib.COMMUNITY_MEMBERS =
     "The Nate",
     "Thexare",
     "TTBNC",
-    "Yandere Princess",
-  },
+    "Yandere Princess"
+  }
 }
 
 
@@ -5595,7 +5587,7 @@ namelib.HUMAN_NAMES =
     ["Y."] = 2,
     ["X."] = 1,
     ["Q."] = 1,
-    ["U."] = 1,
+    ["U."] = 1
   },
 
   l =
@@ -6599,7 +6591,7 @@ namelib.HUMAN_NAMES =
     Velazquez     = 1,
     Whitley     = 1,
     Noel     = 1,
-    Vang     = 1,
+    Vang     = 1
   },
 
   t =
@@ -7060,8 +7052,8 @@ namelib.HUMAN_NAMES =
 
     ["Hear no Evil"] = 1,
     ["See no Evil"] = 1,
-    ["Do no Evil"] = 1,
-  },
+    ["Do no Evil"] = 1
+  }
 }
 
 
@@ -7450,7 +7442,7 @@ namelib.SYLLABLES =
     dys = 50, -- dysnomia
     mia = 50,
 
-    oort = 50, -- oort
+    oort = 50 -- oort
   },
 
   -- MYTHIC
@@ -7468,7 +7460,7 @@ namelib.SYLLABLES =
       phoe = 1, rhea = 1, teth = 1, the = 1, them = 1,
       eos = 1, hel = 1, sel = 1,
       as = 1, ter = 1, pal = 1, per = 1,
-      at = 1, epi = 1, meth = 1, me = 1, no = 1, pro = 1,
+      at = 1, epi = 1, meth = 1, me = 1, no = 1, pro = 1
     },
     s = --suffixes
     {
@@ -7479,8 +7471,8 @@ namelib.SYLLABLES =
       ne = 1, syne = 1, be = 1, thys = 1, ia = 3,
       ios = 1,
       las = 2, ses = 1,
-      eus = 1, theus = 1,
-    },
+      eus = 1, theus = 1
+    }
   },
 
   a = --ANGLICAN names
@@ -7738,8 +7730,8 @@ namelib.SYLLABLES =
     wood = 50,
     yard = 50,
     yon = 50,
-    youngs = 50,
-  },
+    youngs = 50
+  }
 }
 
 
@@ -7767,14 +7759,14 @@ function namelib.generate_unique_noun(m)
 
     local number_list =
     {
-      "0","1","2","3","4","5","6","7","8","9",
+      "0","1","2","3","4","5","6","7","8","9"
     }
 
     local alphabet_list =
     {
       "A","B","C","D","E","F","G","H","I",
       "J","K","L","M","N","O","P","Q","R",
-      "S","T","U","V","W","X","Y","Z",
+      "S","T","U","V","W","X","Y","Z"
     }
 
     local function fetch_a_digit()

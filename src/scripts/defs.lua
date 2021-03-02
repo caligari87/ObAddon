@@ -331,7 +331,7 @@ GLOBAL_STYLE_LIST =
 
   beams       = { none=10, few=10, some=20, heaps=5  },
   porches     = { none=0,  few=10, some=60, heaps=30 },
-  fences      = { none=10, few=20, some=30, heaps=15 },
+  fences      = { none=10, few=20, some=30, heaps=15 }
   -- PLANNED or UNFINISHED stuff --
 
   --[[
@@ -352,7 +352,7 @@ STYLE_CHOICES =
   "some",   _("Some"),
   "more",   _("More"),
   "heaps",  _("Heaps"),
-  "mixed",  _("Mix It Up"),
+  "mixed",  _("Mix It Up")
 }
 
 
@@ -409,7 +409,7 @@ GLOBAL_PREFAB_FIELDS =
   offset_401   = "?y_offset1",
   offset_402   = "?y_offset2",
   offset_403   = "?y_offset3",
-  offset_404   = "?y_offset4",
+  offset_404   = "?y_offset4"
 }
 
 
@@ -446,5 +446,5 @@ GLOBAL_SKIN_DEFAULTS =
   style = "",
   message = "",
   wait = "",
-  targetname = "",
+  targetname = ""
 }

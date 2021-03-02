@@ -28,10 +28,10 @@
 Input
 -----
    monsters : list of monsters that the player must kill
-              { info=MONSTER_INFO },
+              { info=MONSTER_INFO }
 
    weapons : list of weapons that player can use
-             { info=WEAPON_INFO, factor=1.0 },
+             { info=WEAPON_INFO, factor=1.0 }
 
 
 Output

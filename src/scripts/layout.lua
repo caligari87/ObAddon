@@ -2877,7 +2877,7 @@ function Layout_outdoor_shadows()
         { x = S.x1 - dx, y = S.y1 - dy },
         { x = S.x2 - dx, y = S.y1 - dy },
         { x = S.x2     , y = S.y1 - 16 },
-        { x = S.x2     , y = S.y1      },
+        { x = S.x2     , y = S.y1      }
       }
     elseif dir == 4 then
       brush =
@@ -2887,7 +2887,7 @@ function Layout_outdoor_shadows()
         { x = S.x1     , y = S.y2      },
         { x = S.x1 - 16, y = S.y2      },
         { x = S.x1 - dx, y = S.y2 - dy },
-        { x = S.x1 - dx, y = S.y1 - dy },
+        { x = S.x1 - dx, y = S.y1 - dy }
       }
     elseif dir == 1 then
       brush =
@@ -2896,7 +2896,7 @@ function Layout_outdoor_shadows()
         { x = S.x1     , y = S.y2      },
         { x = S.x1 - dx, y = S.y2 - dy },
         { x = S.x2 - dx, y = S.y1 - dy },
-        { x = S.x2     , y = S.y1      },
+        { x = S.x2     , y = S.y1      }
       }
     elseif dir == 3 then
       brush =
@@ -2905,7 +2905,7 @@ function Layout_outdoor_shadows()
         { x = S.x1     , y = S.y1      },
         { x = S.x1 - dx, y = S.y1 - dy },
         { x = S.x2 - dx, y = S.y2 - dy },
-        { x = S.x2     , y = S.y2      },
+        { x = S.x2     , y = S.y2      }
       }
     else
       -- nothing needed

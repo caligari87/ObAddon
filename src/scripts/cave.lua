@@ -2471,7 +2471,7 @@ function Cave_make_waterfalls(R)
       return
     end
 
-    local deltas = { 0,1,2,3 },
+    local deltas = { 0,1,2,3 }
     rand.shuffle(deltas)
 
     for i = 1, 4 do
@@ -2843,16 +2843,17 @@ function Cave_build_a_cave(R, entry_h)
           [1] = {x=WC.cx1, y=WC.cy1},
           [2] = {x=WC.cx1, y=WC.cy2},
           [3] = {x=WC.cx2, y=WC.cy1},
-          [4] = {x=WC.cx2, y=WC.cy2},
-        },
+          [4] = {x=WC.cx2, y=WC.cy2}
+        }
 
         local points_to_compare =
         {
           [1] = {x=B.cx1, y=B.cy1},
           [2] = {x=B.cx1, y=B.cy2},
           [3] = {x=B.cx2, y=B.cy2},
-          [4] = {x=B.cx2, y=B.cy1},
-        },
+          [4] = {x=B.cx2, y=B.cy1}
+        }
+
         local yas_queen = false
 
         for _,P in pairs(points) do
@@ -3755,7 +3756,7 @@ function Cave_build_a_park(R, entry_h)
     --   stairs : list(STAIR_INFO)
     --
     --   blob_floors[blob_id] -> integer / "stair",
-    -- },
+    -- }
     --
 
     hill_clear()
@@ -4147,7 +4148,7 @@ function Cave_build_a_park(R, entry_h)
 
     -- create an info table for each floor
 
-    local floors = {}  --  [floor_id] -> { prelim_h=xxx },
+    local floors = {}  --  [floor_id] -> { prelim_h=xxx }
 
     for _,f_id in pairs(HILL.blob_floors) do
       if f_id ~= "stair" and not floors[f_id] then
@@ -4868,7 +4869,7 @@ function Cave_build_a_scenic_vista(area)
     local FL =
     {
       neighbors = {},
-      children  = {},
+      children  = {}
     }
 
     return FL

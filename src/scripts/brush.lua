@@ -369,13 +369,13 @@ function Trans.rect_coords(x1, y1, x2, y2)
     { x=x2, y=y1 },
     { x=x2, y=y2 },
     { x=x1, y=y2 },
-    { x=x1, y=y1 },
+    { x=x1, y=y1 }
   }
 end
 
 
 function Trans.spot_transform(x, y, z, dir)
-  local ANGS = { [2]=0, [8]=180, [4]=270, [6]=90 },
+  local ANGS = { [2]=0, [8]=180, [4]=270, [6]=90 }
 
   assert(x and y)
 
@@ -588,7 +588,7 @@ function brushlib.quad(x1,y1, x2,y2, b,t)
     { x=x1, y=y1 },
     { x=x2, y=y1 },
     { x=x2, y=y2 },
-    { x=x1, y=y2 },
+    { x=x1, y=y2 }
   }
 
   if b then table.insert(coords, { b=b }) end
@@ -603,7 +603,7 @@ function brushlib.triangle(x1,y1, x2,y2, x3,y3, b,t)
   {
     { x=x1, y=y1 },
     { x=x2, y=y2 },
-    { x=x3, y=y3 },
+    { x=x3, y=y3 }
   }
 
   if b then table.insert(coords, { b=b }) end
@@ -898,7 +898,7 @@ function brushlib.rail_brush(x1,y1, x2,y2, z, side_props)
     { x=x1, y=y1 },
     { x=x2, y=y2 },
     { x=x3, y=y3 },
-    { x=x4, y=y4 },
+    { x=x4, y=y4 }
   }
 
   if side_props then

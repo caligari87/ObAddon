@@ -59,7 +59,7 @@ OB_ENGINES["zdoom"] =
   tables =
   {
     ZDOOM
-  },
+  }
 }
 
 

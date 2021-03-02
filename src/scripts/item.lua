@@ -46,7 +46,7 @@ DOOM_FLAGS =
   EASY    = 1,
   MEDIUM  = 2,
   HARD    = 4,
-  DEAF    = 8,
+  DEAF    = 8
 }
 
 -- Hexen thing flags
@@ -56,7 +56,7 @@ HEXEN_FLAGS =
   CLERIC  = 64,
   MAGE    = 128,
 
-  DM      = 1024,
+  DM      = 1024
 }
 
 -- Quake flags
@@ -67,7 +67,7 @@ QUAKE_FLAGS =
   NOT_EASY   = 256,
   NOT_MEDIUM = 512,
   NOT_HARD   = 1024,
-  NOT_DM     = 2048,
+  NOT_DM     = 2048
 }
 
 -- Hexen2 flags  [NOT USED YET]
@@ -81,7 +81,7 @@ HEXEN2_FLAGS =
   NOT_EASY     = 4096,
   NOT_MEDIUM   = 8192,
   NOT_HARD     = 16384,
-  NOT_DM       = 32768,
+  NOT_DM       = 32768
 }
 
 

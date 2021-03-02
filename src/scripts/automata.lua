@@ -1823,7 +1823,7 @@ function GRID_CLASS.maze_render(maze, brush_func, data)
         { x=bx+64, y=by },
         { x=bx+64, y=by+64 },
         { x=bx,    y=by+64 },
-        { x=bx,    y=by },
+        { x=bx,    y=by }
       })
 
       return

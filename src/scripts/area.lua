@@ -240,7 +240,7 @@ function AREA_CLASS.new(mode)
 
     inner_points = {},
     floor_brushes = {},
-    side_edges = {},
+    side_edges = {}
   }
 
   A.name = "AREA_" .. A.id
@@ -2373,7 +2373,7 @@ function Area_divvy_up_borders()
     local TEMP =
     {
       name = "TEMP_" .. alloc_id("temp_area"),
-      seeds = {},
+      seeds = {}
     }
 
     if S.zborder == VOID then
