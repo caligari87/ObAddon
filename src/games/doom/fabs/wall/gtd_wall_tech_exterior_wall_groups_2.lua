@@ -15,7 +15,7 @@ PREFABS.Wall_tech_outdoor_hex_inset = --#
   bound_z1 = 0,
   bound_z2 = 128,
 
-  z_fit = "top",
+  z_fit = "top"
 }
 
 PREFABS.Wall_tech_outdoor_grated_greenwall = --#
@@ -30,8 +30,8 @@ PREFABS.Wall_tech_outdoor_grated_greenwall = --#
   tex_PIPEWAL1 =
   {
     PIPEWAL1 = 1,
-    PIPEWAL2 = 5,
-  },
+    PIPEWAL2 = 5
+  }
 }
 
 PREFABS.Wall_tech_outdoor_sewer_hatches = --#
@@ -48,10 +48,10 @@ PREFABS.Wall_tech_outdoor_sewer_hatches = --#
   tex_SLADRIP1 =
   {
     SLADRIP1 = 1,
-    NUKESLAD = 5,
+    NUKESLAD = 5
   },
 
-  on_scenics = "never",
+  on_scenics = "never"
 }
 
 PREFABS.Wall_tech_outdoor_red_wall = --#
@@ -64,8 +64,8 @@ PREFABS.Wall_tech_outdoor_red_wall = --#
   tex_SHAWN3 =
   {
     SHAWN3 = 1,
-    EXITDOOR = 3,
-  },
+    EXITDOOR = 3
+  }
 }
 
 PREFABS.Wall_tech_outdoor_blue_wall = --#
@@ -78,9 +78,10 @@ PREFABS.Wall_tech_outdoor_blue_wall = --#
   tex_SHAWN3 =
   {
     SHAWN3 = 1,
-    EXITDOOR = 3,
+    EXITDOOR = 3
   },
-  tex_REDWALL = "COMPBLUE",
+
+  tex_REDWALL = "COMPBLUE"
 }
 
 PREFABS.Wall_tech_outdoor_lots_of_cement = --#
@@ -90,5 +91,5 @@ PREFABS.Wall_tech_outdoor_lots_of_cement = --#
 
   engine = "any",
 
-  group = "tech_o_lots_of_cement",
+  group = "tech_o_lots_of_cement"
 }

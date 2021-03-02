@@ -1055,7 +1055,7 @@ DOOM.THEMES =
 
       STONE    = 20,
       SLADWALL = 20,
-      WOODVERT = 20,
+      WOODVERT = 20
     },
   },
 
@@ -1067,7 +1067,7 @@ DOOM.THEMES =
     {
       vent = 50,
       mineshaft = 50,
-      access = 50,
+      access = 50
     },
 
     liquids =
@@ -1075,7 +1075,7 @@ DOOM.THEMES =
       nukage = 70,
       water  = 30,
       slime  = 10,
-      lava   = 5,
+      lava   = 5
     },
 
     facades =
@@ -1103,7 +1103,7 @@ DOOM.THEMES =
 
       GRAY1 = 40,
       GRAY4 = 40,
-      GRAY5 = 40,
+      GRAY5 = 40
     },
 
     fences =
@@ -1122,7 +1122,7 @@ DOOM.THEMES =
       METAL1   = 10,
 
       GRAY5 = 50,
-      GRAY7 = 50,
+      GRAY7 = 50
     },
 
     cage_mats =
@@ -1145,7 +1145,7 @@ DOOM.THEMES =
       STONE    = 20,
       STONE2   = 20,
       STONE4   = 20,
-      TEKLITE  = 20,
+      TEKLITE  = 20
     },
 
     prefab_remap =
@@ -1154,12 +1154,12 @@ DOOM.THEMES =
 
     entity_remap =
     {
-      green_torch = "mercury_lamp",
+      green_torch = "mercury_lamp"
     },
 
     street_sinks =
     {
-      floor_default_streets = 1,
+      floor_default_streets = 1
     },
 
     floor_sinks =
@@ -1172,7 +1172,7 @@ DOOM.THEMES =
       floor_trim_liquid = 5,
       floor_mixup = 25,
       floor_shawn_wall = 25,
-      floor_shawn_c = 25,
+      floor_shawn_c = 25
     },
 
     ceiling_sinks =
@@ -1204,7 +1204,7 @@ DOOM.THEMES =
       light_side4 = 100,
       light_side5 = 100,
       light_side6 = 100,
-      ceil_vdark2 = 30,
+      ceil_vdark2 = 30
     },
 
     passable_decor =
@@ -1215,7 +1215,7 @@ DOOM.THEMES =
       pool_brains  = 2,
 
       gibbed_player = 20,
-      dead_player = 35,
+      dead_player = 35
     },
 
     beam_groups =
@@ -1225,7 +1225,7 @@ DOOM.THEMES =
       beam_lights = 50,
       beam_lights_white = 50,
       beam_lights_vertical_tech = 50,
-      beam_textured = 50,
+      beam_textured = 50
     },
 
     wall_groups =
@@ -1275,7 +1275,7 @@ DOOM.THEMES =
       gtd_generic_d64_2x = 4,
       gtd_generic_d64_2x_yellow = 4,
       gtd_generic_d64_2x_blue = 4,
-      gtd_generic_tek_grate = 25,
+      gtd_generic_tek_grate = 25
     },
 
     outdoor_wall_groups =
@@ -1312,7 +1312,7 @@ DOOM.THEMES =
       tech_o_grey_metal_sloped = 1,
       tech_o_tall_light = 0.5,
       tech_o_tall_light_alt = 0.5,
-      tech_o_hexagon_uac_spotlights = 1,
+      tech_o_hexagon_uac_spotlights = 1
     },
 
     window_groups =
@@ -1334,7 +1334,7 @@ DOOM.THEMES =
       gtd_window_weabdows = 15,
       gtd_window_metal_frames = 30,
       gtd_window_construction_frames = 5,
-      gtd_window_hexagon = 30,
+      gtd_window_hexagon = 30
     },
 
     fence_groups =
@@ -1345,7 +1345,7 @@ DOOM.THEMES =
       fence_corrugated_steel = 50,
       fence_tech_hl_bars = 50,
       fence_sloped_silver = 50,
-      fence_highway_bars = 10,
+      fence_highway_bars = 10
     },
 
     fence_posts =
@@ -1353,7 +1353,7 @@ DOOM.THEMES =
       Post_metal = 50,
       Post_tech_1 = 50,
       Post_tech_2 = 50,
-      Post_tech_simple = 50,
+      Post_tech_simple = 50
     },
 
     cave_torches =
@@ -1363,14 +1363,14 @@ DOOM.THEMES =
 
       lamp = 30,
       mercury_small = 30,
-      mercury_lamp  = 10,
+      mercury_lamp  = 10
     },
 
     outdoor_torches =
     {
       lamp   = 10,
       mercury_lamp  = 40,
-      mercury_small = 20,
+      mercury_small = 20
     },
 
     ceil_light_prob = 70,
@@ -1420,7 +1420,7 @@ DOOM.THEMES =
       parks   = { none=10 , few=2 , some=1 , heaps=1 },
       park_detail = { none=0, few=15, some=60, heaps=25 },
       porches = { none=5,  few=30, some=60, heaps=15 },
-      fences = { none=20, few=40, some=70, heaps=10 },
+      fences = { none=20, few=40, some=70, heaps=10 }
     },
 
     scenic_fences =
@@ -1428,24 +1428,24 @@ DOOM.THEMES =
       MIDBARS3 = 10,
       MIDSPACE = 5,
       MIDBARS1 = 8,
-      BRNSMALC = 2,
+      BRNSMALC = 2
     },
 
     sink_style =
     {
       sharp = 1,
-      curved = 0.1,
+      curved = 0.1
     },
 
     skyboxes =
     {
       Skybox_generic = 50,
-      Skybox_hellish_city = 50,
+      Skybox_hellish_city = 50
     },
 
     techy_doors = true,
 
-    post_mat = "DOORSTOP",
+    post_mat = "DOORSTOP"
   },
 
   ------------------------------------
@@ -1456,7 +1456,7 @@ DOOM.THEMES =
     {
       vent = 50,
       mineshaft = 50,
-      access = 25,
+      access = 25
     },
 
     liquids =
@@ -1465,7 +1465,7 @@ DOOM.THEMES =
       blood = 40,
       slime = 25,
       nukage = 10,
-      lava  = 7,
+      lava  = 7
     },
 
     facades =
@@ -1493,7 +1493,7 @@ DOOM.THEMES =
       METAL1   = 5,
       BROWN1   = 5,
       BSTONE1  = 10,
-      BSTONE2  = 10,
+      BSTONE2  = 10
     },
 
     fences =
@@ -1512,7 +1512,7 @@ DOOM.THEMES =
       STUCCO3  = 10,
 
       GRAY5 = 50,
-      GRAY7 = 50,
+      GRAY7 = 50
     },
 
     cage_mats =
@@ -1530,7 +1530,7 @@ DOOM.THEMES =
       STONE3   = 20,
       WOODVERT = 20,
       METAL2   = 20,
-      BSTONE1  = 20,
+      BSTONE1  = 20
     },
 
     prefab_remap =
@@ -1560,7 +1560,7 @@ DOOM.THEMES =
       floor_shawn_wall = 8,
       floor_metal_wall = 15,
       floor_shawn_c = 8,
-      floor_metal_c = 15,
+      floor_metal_c = 15
     },
 
     ceiling_sinks =
@@ -1588,7 +1588,7 @@ DOOM.THEMES =
       light_side3 = 70,
       light_side4 = 70,
       light_side5 = 70,
-      light_side6 = 70,
+      light_side6 = 70
     },
 
     beam_groups =
@@ -1599,7 +1599,7 @@ DOOM.THEMES =
       beam_lights_white = 40,
       beam_lights_vertical_tech = 30,
       beam_wood = 30,
-      beam_textured = 50,
+      beam_textured = 50
     },
 
     wall_groups =
@@ -1645,7 +1645,7 @@ DOOM.THEMES =
       gtd_generic_d64_2x = 2,
       gtd_generic_d64_2x_yellow = 2,
       gtd_generic_d64_2x_blue = 2,
-      gtd_generic_tek_grate = 15,
+      gtd_generic_tek_grate = 15
     },
 
     window_groups =
@@ -1671,7 +1671,7 @@ DOOM.THEMES =
       gtd_window_metal_frames = 70,
       gtd_window_pencil_holes = 35,
       gtd_window_construction_frames = 65,
-      gtd_window_hexagon = 25,
+      gtd_window_hexagon = 25
     },
 
     fence_groups =
@@ -1684,7 +1684,7 @@ DOOM.THEMES =
       fence_corrugated_steel = 50,
       fence_tech_hl_bars = 12,
       fence_sloped_silver = 12,
-      fence_highway_bars = 25,
+      fence_highway_bars = 25
     },
 
     fence_posts =
@@ -1697,7 +1697,7 @@ DOOM.THEMES =
       Post_gothic_red = 10,
       Post_gothic_blue_2 = 10,
       Post_gothic_green_2 = 10,
-      Post_gothic_red_2 = 10,
+      Post_gothic_red_2 = 10
     },
 
     cave_torches =
@@ -1711,7 +1711,7 @@ DOOM.THEMES =
 
       lamp = 10,
       candelabra = 10,
-      burning_barrel = 20,
+      burning_barrel = 20
     },
 
     outdoor_torches =
@@ -1724,7 +1724,7 @@ DOOM.THEMES =
       blue_torch_sm = 15,
       red_torch_sm  = 15,
       green_torch_sm = 15,
-      burning_barrel = 25,
+      burning_barrel = 25
     },
 
     passable_decor =
@@ -1740,7 +1740,7 @@ DOOM.THEMES =
       dead_shooter = 2,
       dead_imp = 2,
       dead_demon = 1,
-      dead_caco  = 1,
+      dead_caco  = 1
     },
 
     monster_prefs =
@@ -1755,7 +1755,7 @@ DOOM.THEMES =
       vile     = 0.6, --Slightly less because multiple Arch-Viles in one area can be a pain in the ass -Chris
       pain     = 0.8,
       mancubus = 1.1,
-      Cyberdemon = 1.25,
+      Cyberdemon = 1.25
     },
 
     style_list =
@@ -1783,7 +1783,7 @@ DOOM.THEMES =
       traps   = { none=10, few=40, some=70, heaps=25 },
       barrels = { none=10, few=50, some=20, heaps=5 },
       fences  = { none=5, few=20, some=80, heaps=15 },
-      porches = { none=5, few=15, some=80, heaps=50 },
+      porches = { none=5, few=15, some=80, heaps=50 }
     },
 
     ceil_light_prob = 65,
@@ -1793,19 +1793,19 @@ DOOM.THEMES =
       MIDBARS3 = 8,
       MIDSPACE = 8,
       MIDBARS1 = 8,
-      BRNSMALC = 2,
+      BRNSMALC = 2
     },
 
     sink_style =
     {
       sharp = 1,
-      curved = 1,
+      curved = 1
     },
 
     skyboxes =
     {
       Skybox_hellish_city = 50,
-      Skybox_garrett_city = 50,
+      Skybox_garrett_city = 50
     },
   },
 
@@ -1819,14 +1819,14 @@ DOOM.THEMES =
       blood  = 30,
       slime  = 15,
       water  = 10,
-      nukage = 5,
+      nukage = 5
     },
 
     entity_remap =
     {
       k_red    = "ks_red",
       k_blue   = "ks_blue",
-      k_yellow = "ks_yellow",
+      k_yellow = "ks_yellow"
     },
 
     facades =
@@ -1852,7 +1852,7 @@ DOOM.THEMES =
       BROWN1  = 10,
       METAL2  = 5,
       BROWNGRN = 5,
-      BROVINE2 = 5,
+      BROVINE2 = 5
     },
 
     fences =
@@ -1874,7 +1874,7 @@ DOOM.THEMES =
       SP_HOT1  = 15,
       BRICK10  = 10,
       SKINCUT  = 10,
-      STUCCO3  = 10,
+      STUCCO3  = 10
     },
 
     cage_mats =
@@ -1902,7 +1902,7 @@ DOOM.THEMES =
      ICKWALL7 = 20,
      SKSPINE1 = 20,
      STONE4   = 20,
-     TANROCK8 = 20,
+     TANROCK8 = 20
     },
 
     prefab_remap =
@@ -1917,7 +1917,7 @@ DOOM.THEMES =
       BIGDOOR4 = "BIGDOOR5",
 
       SW1COMP  = "SW1LION",
-      SW1PIPE  = "SW1BROWN",
+      SW1PIPE  = "SW1BROWN"
     },
 
     street_sinks =
@@ -1947,7 +1947,7 @@ DOOM.THEMES =
       floor_trim_liquid = 8,
       floor_mixup = 17,
       floor_metal_wall = 17,
-      floor_metal_c = 17,
+      floor_metal_c = 17
     },
 
     ceiling_sinks =
@@ -1990,7 +1990,7 @@ DOOM.THEMES =
       light_hell_red = 80,
       light_hell_lava = 40,
       ceil_redash = 25,
-      ceil_vdark = 10,
+      ceil_vdark = 10
     },
 
     beam_groups =
@@ -1999,7 +1999,7 @@ DOOM.THEMES =
       beam_quakeish = 50,
       beam_lights_vertical_hell = 50,
       beam_wood = 50,
-      beam_textured = 50,
+      beam_textured = 50
     },
 
     wall_group_prob = 65,
@@ -2062,7 +2062,7 @@ DOOM.THEMES =
       gtd_generic_d64_2x = 6,
       gtd_generic_d64_2x_yellow = 6,
       gtd_generic_d64_2x_blue = 6,
-      gtd_generic_tek_grate = 40,
+      gtd_generic_tek_grate = 40
     },
 
     outdoor_wall_groups =
@@ -2096,7 +2096,7 @@ DOOM.THEMES =
       hell_o_egyptish = 1,
       hell_o_blood_ocatgon = 1,
       hell_o_catamet = 1,
-      hell_o_crematorium_windows = 1,
+      hell_o_crematorium_windows = 1
     },
 
     window_groups =
@@ -2120,7 +2120,7 @@ DOOM.THEMES =
       gtd_window_arrowslit = 60,
       gtd_window_metal_frames = 60,
       gtd_window_pencil_holes = 60,
-      gtd_window_construction_frames = 60,
+      gtd_window_construction_frames = 60
     },
 
     fence_groups =
@@ -2128,7 +2128,7 @@ DOOM.THEMES =
       PLAIN = 50,
       gappy = 50,
       crenels = 50,
-      fence_gothic = 50,
+      fence_gothic = 50
     },
 
     fence_posts =
@@ -2139,7 +2139,7 @@ DOOM.THEMES =
       Post_gothic_red = 15,
       Post_gothic_blue_2 = 10,
       Post_gothic_green_2 = 10,
-      Post_gothic_red_2 = 15,
+      Post_gothic_red_2 = 15
     },
 
     cave_torches =
@@ -2154,7 +2154,7 @@ DOOM.THEMES =
       candelabra = 15,
       skull_rock = 15,
       skull_cairn = 20,
-      evil_eye   = 10,
+      evil_eye   = 10
     },
 
     outdoor_torches =
@@ -2167,7 +2167,7 @@ DOOM.THEMES =
       blue_torch_sm = 15,
       red_torch_sm  = 15,
       green_torch_sm = 15,
-      burning_barrel = 10,
+      burning_barrel = 10
     },
 
     passable_decor =
@@ -2183,7 +2183,7 @@ DOOM.THEMES =
       dead_shooter = 2,
       dead_imp = 1,
       dead_demon = 1,
-      dead_caco  = 1,
+      dead_caco  = 1
     },
 
     park_decor =
@@ -2201,8 +2201,7 @@ DOOM.THEMES =
       green_column_hrt = 3,
       red_pillar = 5,
       red_column = 5,
-      red_column_skl = 3,
-
+      red_column_skl = 3
     },
 
     style_list =
@@ -2229,7 +2228,7 @@ DOOM.THEMES =
       barrels = { none=45, few=15, some=5, heaps=4 },
       porches = { none=0, few=25, some=40, heaps=80 },
       fences  = { none=5, few=15, some=80, heaps=25 },
-      beams  = { none=15, few=60, some=30, heaps=10 },
+      beams  = { none=15, few=60, some=30, heaps=10 }
     },
 
     monster_prefs =
@@ -2246,30 +2245,30 @@ DOOM.THEMES =
       mancubus = 1.2,
       knight = 1.2,
       Cyberdemon = 1.25,
-      Mastermind = 1.5,
+      Mastermind = 1.5
     },
 
     scenic_fences =
     {
       MIDBRN1 = 3,
       MIDGRATE = 10,
-      MIDBARS3 = 8,
+      MIDBARS3 = 8
     },
 
     sink_style =
     {
       sharp = 0.1,
-      curved = 1,
+      curved = 1
     },
 
     skyboxes =
     {
       Skybox_garrett_hell = 50,
-      Skybox_hellish_city = 50,
+      Skybox_hellish_city = 50
     },
 
-    ceil_light_prob = 40,
-  },
+    ceil_light_prob = 40
+  }
 }
 
 
@@ -2290,7 +2289,7 @@ DOOM.ROOM_THEMES =
       GRAY1 = 50,
       GRAY5 = 50,
       ICKWALL1 = 30,
-      ICKWALL3 = 30,
+      ICKWALL3 = 30
     },
 
     floors =
@@ -2307,7 +2306,7 @@ DOOM.ROOM_THEMES =
       FLAT19 = 20,
       FLAT23 = 20,
       FLAT5_4 = 15,
-    },
+    }
   },
 
 
@@ -2319,18 +2318,18 @@ DOOM.ROOM_THEMES =
 
     walls =
     {
-      GRAY1 = 50,
+      GRAY1 = 50
     },
 
     floors =
     {
-      FLAT1 = 30,
+      FLAT1 = 30
     },
 
     ceilings =
     {
-      FLAT1 = 30,
-    },
+      FLAT1 = 30
+    }
   },
 
 
@@ -2345,7 +2344,7 @@ DOOM.ROOM_THEMES =
       GRAY1 = 50,
       GRAY5 = 50,
       ICKWALL1 = 30,
-      ICKWALL3 = 30,
+      ICKWALL3 = 30
     },
 
     floors =
@@ -2353,7 +2352,7 @@ DOOM.ROOM_THEMES =
       FLAT3 = 30,
       FLOOR0_3 = 10,
       FLAT20  = 15,
-      FLAT23 = 20,
+      FLAT23 = 20
     },
 
     ceilings =
@@ -2362,7 +2361,7 @@ DOOM.ROOM_THEMES =
       FLAT23 = 15,
       FLAT20 = 20,
       FLAT5_4 = 10,
-    },
+    }
   },
 
 
@@ -2377,7 +2376,7 @@ DOOM.ROOM_THEMES =
       GRAY1 = 50,
       GRAY5 = 50,
       ICKWALL1 = 30,
-      ICKWALL3 = 30,
+      ICKWALL3 = 30
     },
 
     floors =
@@ -2385,7 +2384,7 @@ DOOM.ROOM_THEMES =
       FLAT3 = 30,
       FLOOR0_3 = 10,
       FLAT20  = 15,
-      FLAT23 = 20,
+      FLAT23 = 20
     },
 
     ceilings =
@@ -2393,8 +2392,8 @@ DOOM.ROOM_THEMES =
       FLAT3 = 30,
       FLAT23 = 15,
       FLAT20 = 20,
-      FLAT5_4 = 10,
-    },
+      FLAT5_4 = 10
+    }
   },
 
 
@@ -2412,7 +2411,7 @@ DOOM.ROOM_THEMES =
       ROCK4 = 50,
       SP_ROCK1 = 50,
       TANROCK5 = 50,
-      TANROCK7 = 50,
+      TANROCK7 = 50
     },
 
     floors =
@@ -2430,14 +2429,14 @@ DOOM.ROOM_THEMES =
       RROCK15 = 50,
       RROCK16 = 50,
       RROCK17 = 50,
-      RROCK18 = 50,
+      RROCK18 = 50
     },
 
     ceilings =
     {
       FLAT3 = 50 -- the mineshafts don't actually have
                  -- separate _CEIL textures
-    },
+    }
   },
 
 -----  TECH BASES  --------------------------------
@@ -2461,7 +2460,7 @@ DOOM.ROOM_THEMES =
       STARGR1 = 50,
       STARGR2 = 20,
 
-      STARBR2  = 40,
+      STARBR2  = 40
     },
 
     floors =
@@ -2483,7 +2482,7 @@ DOOM.ROOM_THEMES =
       FLOOR1_6 = 6,
       FLOOR1_1 = 8,
       FLOOR0_5 = 5,
-      FLAT5 = 5,
+      FLAT5 = 5
     },
 
     ceilings =
@@ -2500,8 +2499,8 @@ DOOM.ROOM_THEMES =
       FLAT19 = 20,
       FLAT4  = 20,
       FLAT9  = 15,
-      FLAT23 = 5,
-    },
+      FLAT23 = 5
+    }
   },
 
 

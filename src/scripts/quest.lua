@@ -2968,7 +2968,9 @@ function Quest_room_themes()
     if THEME.outdoor_wall_groups then -- MSSP-TODO: No need for this check
                                       -- once all themes have outdoor_wall_groups?
       LEVEL.outdoor_wall_group = rand.key_by_probs(THEME.outdoor_wall_groups)
+      gui.debugf("outdoor_wall_group : " .. LEVEL.outdoor_wall_group .. "\n")
     end
+
   end
 
 
