@@ -26,7 +26,7 @@ FAUNA_MODULE.ENABLE_DISABLE =
 }
 
 function FAUNA_MODULE.setup(self)
-  for name,opt in pairs(pairs(self.options)) do
+  for name,opt in pairs(self.options) do
     local value = self.options[name].value
     PARAM[name] = value
   end

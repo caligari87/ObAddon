@@ -506,8 +506,6 @@ end
 function table.expand_templates(t)
   for name,sub in pairs(t) do
     if sub.template then
-      print("Name: " .. name)
-      print("Sub-Template: " .. sub.template)
       local orig = t[sub.template]
 
       if orig == nil then
@@ -519,7 +517,6 @@ function table.expand_templates(t)
       end
       
       if orig.template then
-        print("Orig-Template: " .. orig.template)
         error("Template reference cannot use templates (" .. tostring(sub.template) .. ")")
       end
 

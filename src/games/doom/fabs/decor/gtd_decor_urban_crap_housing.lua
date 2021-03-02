@@ -23,7 +23,7 @@ PREFABS.Decor_crap_house_1 =
     FLOOR1_6 = 5,
     FLAT4 = 2,
     FLAT1 = 2
-  }
+  },
 }
 
 PREFABS.Decor_crap_house_2 =

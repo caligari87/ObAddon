@@ -265,6 +265,17 @@ OB_MODULES["prefab_control"] =
 
     --
 
+    damaging_hallways =
+    {
+      name = "pf_damaging_halls", label = _("Damaging Hallways"), choices=PREFAB_CONTROL.DAMAGING_HALLWAY_CHOICES,
+      tooltip = "Changes the liquids on hallways with damaging floors to either be damaging (default) or non-damaging.",
+      default = "default",
+      priority = 25,
+      gap = 1
+    },
+
+    --
+
     fab_match_theme =
     {
       name = "fab_match_theme",
