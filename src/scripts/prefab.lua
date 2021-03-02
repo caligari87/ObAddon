@@ -64,7 +64,7 @@ WADFAB_ENTITIES =
 
   -- miscellaneous
 
-  [8199] = { kind="secret" },
+  [8199] = { kind="secret" }
 }
 
 
@@ -1216,7 +1216,7 @@ function Fab_load_wad(def)
   local function create_void_brush(coords)
     local B =
     {
-      { m="solid" },
+      { m="solid" }
     }
 
 
@@ -1256,7 +1256,7 @@ function Fab_load_wad(def)
 
     local B =
     {
-      { m="light" },
+      { m="light" }
     }
 
     decode_lighting(S, B[1])
@@ -1284,7 +1284,7 @@ function Fab_load_wad(def)
 
     local B =
     {
-      { m="solid" },
+      { m="solid" }
     }
 
     local is_door = (S.floor_h >= S.ceil_h)
@@ -1367,7 +1367,7 @@ function Fab_load_wad(def)
 
     local B =
     {
-      { m="solid" },
+      { m="solid" }
     }
 
     -- top of brush
@@ -1471,7 +1471,7 @@ function Fab_load_wad(def)
 
     local B =
     {
-      { m = "spot" },
+      { m = "spot" }
     }
 
     B[1].spot_kind = spot_info.kind

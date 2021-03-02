@@ -109,7 +109,7 @@ function Render_edge(E)
         { x=x1,      y=y2      },
         { x=x2,      y=y1      },
         { x=x2,      y=y1 + TK },
-        { x=x1 + TK, y=y2      },
+        { x=x1 + TK, y=y2      }
       }
 
     elseif dir == 9 then
@@ -118,7 +118,7 @@ function Render_edge(E)
         { x=x1,      y=y2      },
         { x=x1,      y=y2 - TK },
         { x=x2 - TK, y=y1      },
-        { x=x2,      y=y1      },
+        { x=x2,      y=y1      }
       }
 
     elseif dir == 3 then
@@ -127,7 +127,7 @@ function Render_edge(E)
         { x=x1,      y=y1 },
         { x=x2,      y=y2 },
         { x=x2 - TK, y=y2 },
-        { x=x1,      y=y1 + TK },
+        { x=x1,      y=y1 + TK }
       }
 
     elseif dir == 7 then
@@ -136,7 +136,7 @@ function Render_edge(E)
         { x=x1,      y=y1 },
         { x=x1 + TK, y=y1 },
         { x=x2,      y=y2 - TK },
-        { x=x2,      y=y2 },
+        { x=x2,      y=y2 }
       }
 
     else
@@ -822,7 +822,7 @@ stderrf("dA = (%1.1f %1.1f)  dB = (%1.1f %1.1f)\n", adx, ady, bdx, bdy)
       { x = bx, y = by },
       { x = ax, y = ay },
       { x = ax + adx * TK, y = ay + ady * TK },
-      { x = bx + bdx * TK, y = by + bdy * TK },
+      { x = bx + bdx * TK, y = by + bdy * TK }
     }
 
     return brush
@@ -1188,7 +1188,7 @@ function Render_corner(cx, cy)
       { x = x - ax*16, y = y - ay*16 },
 
       { x = x - ax*8 + nx*8, y = y - ay*8 + ny*8 },
-      { x = x + ax*8 + nx*8, y = y + ay*8 + ny*8 },
+      { x = x + ax*8 + nx*8, y = y + ay*8 + ny*8 }
     }
 
     if top_z then
@@ -1432,7 +1432,7 @@ function Render_sink_part(A, S, where, sink)
       { x = S.x1, y = S.y1 },
       { x = S.x2, y = S.y1 },
       { x = S.x2, y = S.y2 },
-      { x = S.x1, y = S.y2 },
+      { x = S.x1, y = S.y2 }
     }
 
     apply_brush(brush)
@@ -1448,7 +1448,7 @@ function Render_sink_part(A, S, where, sink)
     {
       { x = ax, y = ay },
       { x = cx, y = cy },
-      { x = bx, y = by },
+      { x = bx, y = by }
     }
 
     apply_brush(brush)
@@ -1527,7 +1527,7 @@ stderrf("away = %s\n\n", string.bool(away))
         { x = ax,  y = ay  },
         { x = ax2, y = ay2 },
         { x = bx2, y = by2 },
-        { x = bx,  y = by  },
+        { x = bx,  y = by  }
       }
 
       trim =
@@ -1535,7 +1535,7 @@ stderrf("away = %s\n\n", string.bool(away))
         { x = ax2, y = ay2 },
         { x = ax3, y = ay3 },
         { x = bx3, y = by3 },
-        { x = bx2, y = by2 },
+        { x = bx2, y = by2 }
       }
 
     else -- near
@@ -1543,7 +1543,7 @@ stderrf("away = %s\n\n", string.bool(away))
       {
         { x = ax2, y = ay2 },
         { x = cx,  y = cy  },
-        { x = bx2, y = by2 },
+        { x = bx2, y = by2 }
       }
 
       trim =
@@ -1551,7 +1551,7 @@ stderrf("away = %s\n\n", string.bool(away))
         { x = ax3, y = ay3 },
         { x = ax2, y = ay2 },
         { x = bx2, y = by2 },
-        { x = bx3, y = by3 },
+        { x = bx3, y = by3 }
       }
     end
 

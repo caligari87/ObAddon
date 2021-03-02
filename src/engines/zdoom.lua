@@ -35,7 +35,7 @@ ZDOOM.ENTITIES =
   fountain_yellow = { id=9030, r=16,h=16, pass=true },
   fountain_purple = { id=9031, r=16,h=16, pass=true },
   fountain_black  = { id=9032, r=16,h=16, pass=true },
-  fountain_white  = { id=9033, r=16,h=16, pass=true },
+  fountain_white  = { id=9033, r=16,h=16, pass=true }
 }
 
 
@@ -96,7 +96,7 @@ OB_ENGINES["gzdoom"] =
 
   game =
   {
-    chex3=1, doom1=1, doom2=1, heretic=1, hexen=1, strife=1,
+    chex3=1, doom1=1, doom2=1, heretic=1, hexen=1, strife=1
   },
 
   tables =
@@ -107,6 +107,6 @@ OB_ENGINES["gzdoom"] =
   hooks =
   {
     setup = GZDOOM.setup
-  },
+  }
 }
 

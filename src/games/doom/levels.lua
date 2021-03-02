@@ -35,7 +35,7 @@ DOOM.EPISODES =
     sky_patch = "RSKY1",
     dark_prob = 10,
     bex_mid_name = "C1TEXT",
-    bex_end_name = "C2TEXT",
+    bex_end_name = "C2TEXT"
   },
 
   episode2 =
@@ -45,7 +45,7 @@ DOOM.EPISODES =
     theme = "urban",
     sky_patch = "RSKY2",
     dark_prob = 40,
-    bex_end_name = "C3TEXT",
+    bex_end_name = "C3TEXT"
   },
 
   episode3 =
@@ -55,8 +55,8 @@ DOOM.EPISODES =
     theme = "hell",
     sky_patch = "RSKY3",
     dark_prob = 10,
-    bex_end_name = "C4TEXT",
-  },
+    bex_end_name = "C4TEXT"
+  }
 }
 
 
@@ -68,8 +68,8 @@ DOOM.PREBUILT_LEVELS =
     { prob=50, file="games/doom/data/boss2/icon2.wad", map="MAP30" },
     { prob=50, file="games/doom/data/boss2/icon3.wad", map="MAP01" },
     { prob=50, file="games/doom/data/boss2/icon3.wad", map="MAP02" },
-    { prob=50, file="games/doom/data/boss2/icon3.wad", map="MAP03" },
-  },
+    { prob=50, file="games/doom/data/boss2/icon3.wad", map="MAP03" }
+  }
 }
 
 

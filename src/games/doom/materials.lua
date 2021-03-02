@@ -20,7 +20,7 @@ DOOM.LIQUIDS =
   lava   = { mat="LAVA1",   light_add=56, special=5, damage=10 },
 
   -- Doom II only --
-  slime  = { mat="SLIME01", special=0, light_add=8, damage=0 },
+  slime  = { mat="SLIME01", special=0, light_add=8, damage=0 }
 }
 
 
@@ -679,7 +679,7 @@ DOOM.MATERIALS =
 
   -- Allows compatibility with Egypt theme prefabs (if Prefabs are set to not match Theme)
   MURAL2   = { t="MARBFAC3",   f="FLAT1_1" },
-  BIGMURAL = { t="STARTAN3",   f="FLAT1_1" },
+  BIGMURAL = { t="STARTAN3",   f="FLAT1_1" }
 }
 
 
