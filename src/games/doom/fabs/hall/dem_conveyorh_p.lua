@@ -4,36 +4,36 @@
 
 PREFABS.Hallway_conveyorh_p1 =
 {
-  file   = "hall/dem_conveyorh_p.wad"
-  map    = "MAP01"
-  engine = "zdoom"
+  file   = "hall/dem_conveyorh_p.wad",
+  map    = "MAP01",
+  engine = "zdoom",
 
-  theme  = "hell"
+  theme  = "hell",
 
-  group  = "conveyorh"
-  prob   = 50
+  group  = "conveyorh",
+  prob   = 50,
 
-  where  = "seeds"
-  shape  = "P"
+  where  = "seeds",
+  shape  = "P",
 
-  seed_w = 2
-  seed_h = 2
+  seed_w = 2,
+  seed_h = 2,
 
-  texture_pack = "armaetus"
+  texture_pack = "armaetus",
 
 }
 
 PREFABS.Hallway_conveyorh_p2 =
 {
-  template  = "Hallway_conveyorh_p1"
-  map    = "MAP02"
+  template  = "Hallway_conveyorh_p1",
+  map    = "MAP02",
 
 }
 
 PREFABS.Hallway_conveyorh_p3 =
 {
-  template  = "Hallway_conveyorh_p1"
-  map    = "MAP03"
+  template  = "Hallway_conveyorh_p1",
+  map    = "MAP03",
 
 }
 

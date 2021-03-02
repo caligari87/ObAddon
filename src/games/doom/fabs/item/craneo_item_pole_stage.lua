@@ -1,23 +1,23 @@
 PREFABS.Item_striptease_pole_stage =
 {
-  file  = "item/craneo_item_pole_stage.wad"
+  file  = "item/craneo_item_pole_stage.wad",
 
-  map   = "MAP01"
+  map   = "MAP01",
 
-  texture_pack = "armaetus"
+  texture_pack = "armaetus",
 
-  prob  = 100
+  prob  = 100,
 
-  theme = "urban"
-  env   = "building"
+  theme = "urban",
+  env   = "building",
 
-  where = "seeds"
+  where = "seeds",
 
-  seed_w = 3
-  seed_h = 2
+  seed_w = 3,
+  seed_h = 2,
 
-  deep = 16
+  deep = 16,
 
-  x_fit = "frame"
-  y_fit = "top"
+  x_fit = "frame",
+  y_fit = "top",
 }

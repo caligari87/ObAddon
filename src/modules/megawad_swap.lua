@@ -7,7 +7,7 @@
 --
 --  This program is free software; you can redistribute it and/or
 --  modify it under the terms of the GNU General Public License
---  as published by the Free Software Foundation; either version 2
+--  as published by the Free Software Foundation; either version 2,
 --  of the License, or (at your option) any later version.
 --
 --  This program is distributed in the hope that it will be useful,
@@ -31,8 +31,8 @@ MEGAWAD_SWAP.doom1_music =
     "E2M7", "E2M9",
     "E3M1", "E3M2", "E3M3",
     "E3M4", "E3M5", "E3M6",
-    "E3M7", "E3M9"
-  }
+    "E3M7", "E3M9",
+  },
 
 }
 
@@ -46,8 +46,8 @@ MEGAWAD_SWAP.doom2_music =
     "STLKS2", "THEDA2", "DOOM2",  "DDTBL2", "RUNNI2",
     "DEAD2",  "STLKS3", "ROMERO", "SHAWN2", "MESSAG",
     "COUNT2", "DDTBL3", "AMPIE",  "THEDA3", "ADRIAN",
-    "MESSG2", "ROMER2", "TENSE",  "SHAWN3", "OPENIN"
-  }
+    "MESSG2", "ROMER2", "TENSE",  "SHAWN3", "OPENIN",
+  },
 
 }
 
@@ -68,7 +68,7 @@ function MEGAWAD_SWAP.get_levels(self)
     epi_list = MEGAWAD_SWAP.doom1_music
   end
 
-  each _,src in epi_list do
+  for _,src in pairs(epi_list) do
     local dest = table.copy(src)
 
     -- this shuffle algorithm ensures first entry is never the same
@@ -89,19 +89,19 @@ end
 
 OB_MODULES["megawad_swapper"] =
 {
-  label = _("Megawad Music Swapper")
+  label = _("Megawad Music Swapper"),
 
-  side = "left"
-  priority = 80
+  side = "left",
+  priority = 80,
 
-  game = "doomish"
+  game = "doomish",
 
-  engine = "boom"
-  tooltip=_("Ideal if you have a music WAD replacing all tracks in the game. A note if you are using the ZDoom Specials Shuffle Music option, there is no need to use this module. This is ideal for non-ZDoom ports only.")
+  engine = "boom",
+  tooltip=_("Ideal if you have a music WAD replacing all tracks in the game. A note if you are using the ZDoom Specials Shuffle Music option, there is no need to use this module. This is ideal for non-ZDoom ports only."),
 
   hooks =
   {
     get_levels = MEGAWAD_SWAP.get_levels
-  }
+  },
 }
 

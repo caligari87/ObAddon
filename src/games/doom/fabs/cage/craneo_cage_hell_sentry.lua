@@ -1,20 +1,20 @@
 PREFABS.Cage_craneo_hell_sentry =
 {
-  file   = "cage/craneo_cage_hell_sentry.wad"
-  map = "MAP01"
+  file   = "cage/craneo_cage_hell_sentry.wad",
+  map = "MAP01",
 
-  prob  = 350
+  prob  = 350,
 
-  theme = "hell"
+  theme = "hell",
 
-  where = "seeds"
-  shape = "U"
+  where = "seeds",
+  shape = "U",
 
-  height = 128
+  height = 128,
 
-  seed_w = 2
-  seed_h = 2
+  seed_w = 2,
+  seed_h = 2,
 
-  x_fit = "frame"
-  y_fit = "top"
+  x_fit = "frame",
+  y_fit = "top",
 }

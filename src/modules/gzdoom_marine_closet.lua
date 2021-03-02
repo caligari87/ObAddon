@@ -6,7 +6,7 @@
 --
 --  This program is free software; you can redistribute it and/or
 --  modify it under the terms of the GNU General Public License
---  as published by the Free Software Foundation; either version 2
+--  as published by the Free Software Foundation; either version 2,
 --  of the License, or (at your option) any later version.
 --
 --------------------------------------------------------------------
@@ -396,7 +396,7 @@ class AIMarineWaker : Actor
         }
     }
 }
-]]
+]],
   MWEAK = [[
   class AIMarinePistol : AIMarine
 {
@@ -494,7 +494,7 @@ class AIMarineBFG : AIMarine
         Goto See;
     }
 }
-  ]]
+  ]],
   MSTRN = [[
   class AIMarinePistol : AIMarine
 {
@@ -597,7 +597,7 @@ class AIMarineBFG : AIMarine
         Goto See;
     }
 }
-  ]]
+  ]],
   MGSTRN = [[
   class AIMarinePistol : AIMarine
 {
@@ -890,7 +890,7 @@ class AIMarineBFG : AIMarine
     Goto See;
   }
 }
-  ]]
+  ]],
   MGWEAK = [[
   class AIMarinePistol : AIMarine
 {
@@ -1178,7 +1178,7 @@ class AIMarineBFG : AIMarine
     Goto See;
   }
 }
-  ]]
+  ]],
   WAKER1 = [[Spawn:
         TNT1 A 4 A_LookEx(LOF_NOSOUNDCHECK);
         Loop;
@@ -1186,7 +1186,7 @@ class AIMarineBFG : AIMarine
         TNT1 A 4 A_WakeUpMarines;
         TNT1 A 4;
         Stop;
-  ]]
+  ]],
   WAKER2 = [[Spawn:
         TNT1 A 4 A_LookEx(0,0,1000,1000);
         Loop;
@@ -1194,7 +1194,7 @@ class AIMarineBFG : AIMarine
         TNT1 A 4 A_WakeUpMarines;
         TNT1 A 4;
         Stop;
-  ]]
+  ]],
   WAKER3 = [[Spawn:
         TNT1 A 4 A_LookEx(LOF_NOSOUNDCHECK,0,256);
         Loop;
@@ -1202,13 +1202,13 @@ class AIMarineBFG : AIMarine
         TNT1 A 4 A_WakeUpMarines;
         TNT1 A 4;
         Stop;
-  ]]
+  ]],
   WAKER4 = [[Spawn:
         TNT1 AAA 4;
         TNT1 A 4 A_WakeUpMarines;
         TNT1 A 4;
         Stop;
-  ]]
+  ]],
   PROJREP = [[class BulletPuffAIMarine : BulletPuff
 {
     Default
@@ -1258,15 +1258,15 @@ class BFGBallAIMarine : BFGBall
         return super.DoSpecialDamage(target,damage,damagetype);
     }
 }
-]]
+]],
   TRANSL = [[A_SetTranslation(MTRANSDEF);
-  ]]
+  ]],
   TRANSL2 = [[int rng = random(1,4);
   A_SetTranslation(string.format("%%s%%i", "MarAI", rng));
-  ]]
+  ]],
   TRANSL3 = [[int rng = random(1,12);
   A_SetTranslation(string.format("%%s%%i", "MarAI", rng));
-  ]]
+  ]],
   FFX = [[if(inflictor && ((inflictor.bISMONSTER && inflictor.bFriendly) || (!inflictor.bISMONSTER && inflictor.target && inflictor.target is "AIMarine" && !(inflictor is "ExplosiveBarrel"))))
   {
     return 0;
@@ -1306,18 +1306,18 @@ MarAI12 = "112:127=224:231"
 
 MARINE_CLOSET_TUNE.TECHWPN =
 {
-[1] = { 31001 }
-[2] = { 31003, 31001, 31001, 31001, 31001, 31001, 31001, 31001 }
-[3] = { 31003, 31002, 31001, 31001, 31001, 31001, 31001, 31001 }
-[4] = { 31003, 31002, 31001, 31001 }
-[5] = { 31003, 31002, 31001, 31003, 31002, 31001, 31003, 31002, 31001, 31004 }
-[6] = { 31003, 31002, 31001, 31003, 31002, 31005, 31003, 31002, 31006, 31004 }
-[7] = { 31003, 31002, 31001, 31004, 31002, 31005, 31006, 31004 }
-[8] = { 31004, 31004, 31002, 31004, 31005, 31005, 31006 }
-[9] = { 31005, 31005, 31005, 31005, 31006, 31006, 31006, 31004, 31007 }
-[10] = { 31005, 31006, 31007 }
-[66] = { 31007 }
-[99] = { 31001, 31001, 31001, 31003, 31003, 31003 ,31002 ,31002 ,31002, 31004, 31004, 31005, 31005, 31006, 31006, 31007 }
+[1] = { 31001 },
+[2] = { 31003, 31001, 31001, 31001, 31001, 31001, 31001, 31001 },
+[3] = { 31003, 31002, 31001, 31001, 31001, 31001, 31001, 31001 },
+[4] = { 31003, 31002, 31001, 31001 },
+[5] = { 31003, 31002, 31001, 31003, 31002, 31001, 31003, 31002, 31001, 31004 },
+[6] = { 31003, 31002, 31001, 31003, 31002, 31005, 31003, 31002, 31006, 31004 },
+[7] = { 31003, 31002, 31001, 31004, 31002, 31005, 31006, 31004 },
+[8] = { 31004, 31004, 31002, 31004, 31005, 31005, 31006 },
+[9] = { 31005, 31005, 31005, 31005, 31006, 31006, 31006, 31004, 31007 },
+[10] = { 31005, 31006, 31007 },
+[66] = { 31007 },
+[99] = { 31001, 31001, 31001, 31003, 31003, 31003 ,31002 ,31002 ,31002, 31004, 31004, 31005, 31005, 31006, 31006, 31007 },
 }
 
 function MARINE_CLOSET_TUNE.setup(self)
@@ -1397,13 +1397,13 @@ function MARINE_CLOSET_TUNE.calc_closets()
 
   local info =
   {
-    kind = "marine_closet"
-    min_count = 1
-    max_count = PARAM.marine_closets
-    not_start = true
-    min_prog = 0
-    max_prog = 1
-    level_prob = 100
+    kind = "marine_closet",
+    min_count = 1,
+    max_count = PARAM.marine_closets,
+    not_start = true,
+    min_prog = 0,
+    max_prog = 1,
+    level_prob = 100,
   }
 
   if PARAM.level_has_marine_closets then
@@ -1416,7 +1416,7 @@ function MARINE_CLOSET_TUNE.grab_type()
 end
 
 function MARINE_CLOSET_TUNE.randomize_count()
-   if PARAM.m_c_m_type != "default" then return end
+   if PARAM.m_c_m_type ~= "default" then return end
    local rngmin = math.min(tonumber(PARAM.m_c_m_min),tonumber(PARAM.m_c_m_max))
    local rngmax = math.max(tonumber(PARAM.m_c_m_min),tonumber(PARAM.m_c_m_max))
    PARAM.marine_marines = rand.irange(rngmin,rngmax)
@@ -1458,7 +1458,7 @@ function MARINE_CLOSET_TUNE.all_done()
     scripty = string.gsub(scripty, "WSTATE", MARINE_CLOSET_TUNE.TEMPLATES.WAKER4)
   end
 
-  if PARAM.m_c_ff != "yes" then
+  if PARAM.m_c_ff ~= "yes" then
     scripty = scripty .. MARINE_CLOSET_TUNE.TEMPLATES.PROJREP
     scripty = string.gsub(scripty, "\"BulletPuff\"", "\"BulletPuffAIMarine\"")
     scripty = string.gsub(scripty, "\"PlasmaBall\"", "\"PlasmaBallAIMarine\"")
@@ -1490,29 +1490,29 @@ function MARINE_CLOSET_TUNE.all_done()
   PARAM.MARINESCRIPT = PARAM.MARINESCRIPT .. scripty
   PARAM.MARINEMAPINFO = MARINE_CLOSET_TUNE.MAPINFO
 
-  if PARAM.m_c_color != "MarAI1" then
+  if PARAM.m_c_color ~= "MarAI1" then
     PARAM.MARINETRNSLATE = MARINE_CLOSET_TUNE.TRNSLATE
   end
 end
 
 OB_MODULES["gzdoom_marine_closets"] =
 {
-  label = _("[Exp]GZDoom Marine Closets")
+  label = _("[Exp]GZDoom Marine Closets"),
 
-  game = "doomish"
+  game = "doomish",
 
-  side = "right"
-  priority = 93
+  side = "right",
+  priority = 93,
 
   hooks =
   {
-    setup = MARINE_CLOSET_TUNE.setup
-    begin_level = MARINE_CLOSET_TUNE.calc_closets
+    setup = MARINE_CLOSET_TUNE.setup,
+    begin_level = MARINE_CLOSET_TUNE.calc_closets,
     all_done = MARINE_CLOSET_TUNE.all_done
-  }
+  },
 
   tooltip=_(
-    "[WIP/Experimental]This module adds customizable closets to the map filled with friendly ai marines.")
+    "[WIP/Experimental]This module adds customizable closets to the map filled with friendly ai marines."),
 
   options =
   {
@@ -1524,7 +1524,7 @@ OB_MODULES["gzdoom_marine_closets"] =
       choices = MARINE_CLOSET_TUNE.CHANCE,
       default = "100",
       tooltip = "Chance per map of marine closets spawning at all. E.G. at 50% theres 50% chance of each map being empty of marine closets.",
-    }
+    },
 
     m_c_min =
     {
@@ -1534,7 +1534,7 @@ OB_MODULES["gzdoom_marine_closets"] =
       choices = MARINE_CLOSET_TUNE.COUNT,
       default = "1",
       tooltip = "Sets least amount of closets that can spawn per map.",
-    }
+    },
 
     m_c_max =
     {
@@ -1544,7 +1544,7 @@ OB_MODULES["gzdoom_marine_closets"] =
       choices = MARINE_CLOSET_TUNE.COUNT,
       default = "2",
       tooltip = "Sets most amount of closets that can spawn per map.",
-    }
+    },
 
     m_c_type =
     {
@@ -1558,7 +1558,7 @@ OB_MODULES["gzdoom_marine_closets"] =
       "Progressive: Goes from min to max through entire game\n" ..
       "Episodic: Goes from min to max through episode\n" ..
       "Regressive/Regressive episodic: Goes from max to min through game or episode" ,
-    }
+    },
 
     m_c_m_min =
     {
@@ -1568,7 +1568,7 @@ OB_MODULES["gzdoom_marine_closets"] =
       choices = MARINE_CLOSET_TUNE.COUNT,
       default = "1",
       tooltip = "Sets least amount of marines that can spawn per closet.",
-    }
+    },
 
     m_c_m_max =
     {
@@ -1578,7 +1578,7 @@ OB_MODULES["gzdoom_marine_closets"] =
       choices = MARINE_CLOSET_TUNE.COUNT,
       default = "5",
       tooltip = "Sets most amount of marines that can spawn per closet.",
-    }
+    },
 
     m_c_m_type =
     {
@@ -1592,7 +1592,7 @@ OB_MODULES["gzdoom_marine_closets"] =
       "Progressive: Goes from min to max through entire game\n" ..
       "Episodic: Goes from min to max through episode\n" ..
       "Regressive/Regressive episodic: Goes from max to min through game or episode" ,
-    }
+    },
 
     m_c_tech =
     {
@@ -1609,7 +1609,7 @@ OB_MODULES["gzdoom_marine_closets"] =
       "Mix it up: Any weapon goes, let the dice decide!\n" ..
       "BFG Fiesta: BFG only, cyberdemons beware!\n" ..
       "Progressive: Marines start with pistols and get more powerful weapons through episode/megawad",
-    }
+    },
 
     m_c_power =
     {
@@ -1619,7 +1619,7 @@ OB_MODULES["gzdoom_marine_closets"] =
       choices = MARINE_CLOSET_TUNE.YN,
       default = "yes",
       tooltip = "Influences whether marines are as accurate and rapid firing as player, or are weaker.",
-    }
+    },
 
     m_c_follow =
     {
@@ -1630,7 +1630,7 @@ OB_MODULES["gzdoom_marine_closets"] =
       default = "no",
       tooltip = "By default marines try to follow the player if they have nothing else to do but would otherwise prioritize chasing enemies, and are also unable to follow player through rough terrain.\n" ..
       "If this is enabled marines will much harder prioritize following player and will teleport if they are too far away.",
-    }
+    },
 
     m_c_health =
     {
@@ -1640,7 +1640,7 @@ OB_MODULES["gzdoom_marine_closets"] =
       choices = MARINE_CLOSET_TUNE.HEALTH,
       default = "100",
       tooltip = "Influences how much damage marines can take before dying.",
-    }
+    },
 
     m_c_waker =
     {
@@ -1654,7 +1654,7 @@ OB_MODULES["gzdoom_marine_closets"] =
       "Range: Closet activates when player is close enough, even if behind wall.\n" ..
       "Close Range: same as range except requires player to be really really close.\n" ..
       "Map Start: Closets are active on map start.",
-    }
+    },
 
     m_c_quantity =
     {
@@ -1664,7 +1664,7 @@ OB_MODULES["gzdoom_marine_closets"] =
       choices = MARINE_CLOSET_TUNE.QUANTITY,
       default = "default",
       tooltip = "Influences amount of monsters in rooms with a marine closet.",
-    }
+    },
 
     m_c_strength =
     {
@@ -1674,7 +1674,7 @@ OB_MODULES["gzdoom_marine_closets"] =
       choices = MARINE_CLOSET_TUNE.STRENGTH,
       default = "default",
       tooltip = "If set, this strength setting is used in the room with marine closet instead of normal one.",
-    }
+    },
     m_c_ff =
     {
       name = "m_c_ff",
@@ -1685,7 +1685,7 @@ OB_MODULES["gzdoom_marine_closets"] =
       tooltip = "By default marines do no damage to player. However that means their use their own version of puffs and projectiles.\n" ..
       "If this is enabled marines can damage player and original puffs and projectiles are used making them affected by mods that replace those.\n"..
       "Additionally if self damage variant is chosen marines can still get hurt by exploding barrels and such",
-    }
+    },
     m_c_sprites =
     {
       name = "m_c_sprites",
@@ -1696,7 +1696,7 @@ OB_MODULES["gzdoom_marine_closets"] =
       tooltip = "By default marines use default player sprite.\n" ..
       "If this is enabled, marines will use special sprites according to weapon they carry.\n" ..
       "With merge option sprites will be merged into oblige wad, otherwise they need to be loaded separately.",
-    }
+    },
     m_c_boss =
     {
       name = "m_c_boss",
@@ -1705,7 +1705,7 @@ OB_MODULES["gzdoom_marine_closets"] =
       choices = MARINE_CLOSET_TUNE.YN,
       default = "no",
       tooltip = "Allows or disallows marine closets to spawn on gotchas and boss generator levels.",
-    }
+    },
     m_c_color =
     {
       name = "m_c_color",
@@ -1714,6 +1714,6 @@ OB_MODULES["gzdoom_marine_closets"] =
       choices = MARINE_CLOSET_TUNE.COLORS,
       default = "MarAI1",
       tooltip = "Lets you choose the color of marines, including option for random color per marine.",
-    }
-  }
+    },
+  },
 }

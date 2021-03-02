@@ -3,11 +3,11 @@
 --------------------------------------------------------------------
 --
 --  Copyright (C) 2019-2021 MsrShooterPerson
---  Copyright (C) [Insert anyone else who worked on this] 2020-2021
+--  Copyright (C) [Insert anyone else who worked on this] 2020-2021,
 --
 --  This program is free software; you can redistribute it and/or
 --  modify it under the terms of the GNU General Public License
---  as published by the Free Software Foundation; either version 2
+--  as published by the Free Software Foundation; either version 2,
 --  of the License, or (at your option) any later version.
 --
 --------------------------------------------------------------------
@@ -958,14 +958,14 @@ class bossabilitygiver_spread : bossabilitygiver { }
 class bossabilitygiver_pyro : bossabilitygiver { }
 class bossabilitygiver_bounce : bossabilitygiver { }
 class bossabilitygiver_homing : bossabilitygiver { }
-]]
+]],
   LVL = [[if(level.LevelNum == NUM)
         {
             bossEnabled = true;
             currentboss = CNT;
         }
-]]
-  MUS = [[S_ChangeMusic(string.format("%%s%%i","d_boss",level), 0, true, false);]]
+]],
+  MUS = [[S_ChangeMusic(string.format("%%s%%i","d_boss",level), 0, true, false);]],
   SUM = [[if(boss.health > 0 && boss.health < boss.starthealth*0.75 && summoncd == 0)
             {
                 summoncd = self.bosssummon[level-1];
@@ -976,12 +976,12 @@ class bossabilitygiver_homing : bossabilitygiver { }
                     ActivateSpawners(leftover,1024);
                 }
             }
-]]
+]],
   EXNORMAL = [[if(ending>350)
         {
             Exit_Normal(0);
         }
-]]
+]],
   EXITEM = [[if(ending==100)
             {
                 if(boss)
@@ -1007,254 +1007,254 @@ class bossabilitygiver_homing : bossabilitygiver { }
 BOSS_GEN_TUNE.TAUNTS =
 {
   -- Scionox
-  ["YOU CANNOT HANDLE THE POWER OF THE INFINITE HELL"] = 50
-  ["YOU ARE DOOMED!"] = 50
+  ["YOU CANNOT HANDLE THE POWER OF THE INFINITE HELL"] = 50,
+  ["YOU ARE DOOMED!"] = 50,
 
   -- MSSP
-  ["YOUR SOUL WILL BE MINE"] = 50
-  ["AH. FRESH MEAT"] = 50
-  ["HELL IS INFINITE"] = 50
-  ["WE ARE LEGION"] = 50
+  ["YOUR SOUL WILL BE MINE"] = 50,
+  ["AH. FRESH MEAT"] = 50,
+  ["HELL IS INFINITE"] = 50,
+  ["WE ARE LEGION"] = 50,
 
-  ["SHED THE BLOOD OF THE INNOCENTS"] = 50
-  ["DARKNESS REIGNS"] = 50
-  ["YOUR HEAD MAKES A FINE TROPHY"] = 50
-  ["I WILL FEAST ON YOUR SOUL"] = 50
-  ["I WILL PLAY HOPSCOTCH ON YOUR CHEST CAVITY"] = 50
+  ["SHED THE BLOOD OF THE INNOCENTS"] = 50,
+  ["DARKNESS REIGNS"] = 50,
+  ["YOUR HEAD MAKES A FINE TROPHY"] = 50,
+  ["I WILL FEAST ON YOUR SOUL"] = 50,
+  ["I WILL PLAY HOPSCOTCH ON YOUR CHEST CAVITY"] = 50,
 
-  ["I SACRIFICE THEE TO THE BURNING VOID"] = 50
-  ["THY FLESH CONSUMED. THY SOUL DEVOURED."] = 50
-  ["GAZE UPON THE ABYSS, MORTAL"] = 50
-  ["I AM THE END OF ALL THINGS"] = 50
-  ["I WILL DRAG YOUR ENTRAILS INTO THE DARK AETHER"] = 50
+  ["I SACRIFICE THEE TO THE BURNING VOID"] = 50,
+  ["THY FLESH CONSUMED. THY SOUL DEVOURED."] = 50,
+  ["GAZE UPON THE ABYSS, MORTAL"] = 50,
+  ["I AM THE END OF ALL THINGS"] = 50,
+  ["I WILL DRAG YOUR ENTRAILS INTO THE DARK AETHER"] = 50,
 
-  ["ALL DEMONS SERVE. ALL MEN DIE."] = 50
-  ["I HAVE COME FOR HELL'S BOUNTY UPON YOU"] = 50
-  ["BEG FOR YOUR LIFE, MORTAL"] = 50
-  ["ANGELS FEAR WHERE I TREAD AND SO WILL YOU"] = 50
-  ["YOU WILL FIND ONLY DEATH HERE, MORTAL"] = 50
+  ["ALL DEMONS SERVE. ALL MEN DIE."] = 50,
+  ["I HAVE COME FOR HELL'S BOUNTY UPON YOU"] = 50,
+  ["BEG FOR YOUR LIFE, MORTAL"] = 50,
+  ["ANGELS FEAR WHERE I TREAD AND SO WILL YOU"] = 50,
+  ["YOU WILL FIND ONLY DEATH HERE, MORTAL"] = 50,
 
-  ["DOOMSLAYER! HELL REVEALS ITSELF TO YOU!"] = 50
-  ["WHO DARES ENTER MY REALM?"] = 50
-  ["YOU ARE NO HERO, MORTAL. HELL IS INFINITE"] = 50
-  ["I WILL DESTROY EVERYTHING YOU HAVE EVER LOVED"] = 50
-  ["WE FINALLY MEET, DOOMSLAYER"] = 50
+  ["DOOMSLAYER! HELL REVEALS ITSELF TO YOU!"] = 50,
+  ["WHO DARES ENTER MY REALM?"] = 50,
+  ["YOU ARE NO HERO, MORTAL. HELL IS INFINITE"] = 50,
+  ["I WILL DESTROY EVERYTHING YOU HAVE EVER LOVED"] = 50,
+  ["WE FINALLY MEET, DOOMSLAYER"] = 50,
 
-  ["STEP INTO THE FOLD. I WILL UNMAKE YOU"] = 50
-  ["THE END OF YOU IS REVEALED"] = 50
-  ["TO BEAT THE GAME, YOU MUST BEAT ALL OF HELL, DOOMSLAYER"] = 50
-  ["SUFFER ME NOW"] = 50
-  ["YOU CREATED ME, MORTAL. YOU TRULY HAVE"] = 50
+  ["STEP INTO THE FOLD. I WILL UNMAKE YOU"] = 50,
+  ["THE END OF YOU IS REVEALED"] = 50,
+  ["TO BEAT THE GAME, YOU MUST BEAT ALL OF HELL, DOOMSLAYER"] = 50,
+  ["SUFFER ME NOW"] = 50,
+  ["YOU CREATED ME, MORTAL. YOU TRULY HAVE"] = 50,
 
-  ["I WILL BREAK YOU LIKE A WISHBONE"] = 50
-  ["I CANNOT WAIT TO WEAR YOU FLESH, DOOMSLAYER!"] = 50
-  ["I HUNGER."] = 50
-  ["I THIRST FOR MORTAL FLESH AND BLOOD"] = 50
-  ["THE DEATH OF ALL THINGS IS NIGH"] = 50
+  ["I WILL BREAK YOU LIKE A WISHBONE"] = 50,
+  ["I CANNOT WAIT TO WEAR YOU FLESH, DOOMSLAYER!"] = 50,
+  ["I HUNGER."] = 50,
+  ["I THIRST FOR MORTAL FLESH AND BLOOD"] = 50,
+  ["THE DEATH OF ALL THINGS IS NIGH"] = 50,
 
-  ["YOU ARE BUT A MORTAL IN THE WRONG PLACE. I WILL SHOW YOU WHY."] = 50
-  ["THIS IS NO PLACE FOR A HERO"] = 50
-  ["NO GODS OR KINGS. ONLY HELL AND BEYOND."] = 50
-  ["THE WORLD FEARS ITS INEVITABLE DEMISE. AND ME."] = 50
-  ["THERE IS NO SALVATION FOR THE WICKED. YOU AND ME."] = 50
+  ["YOU ARE BUT A MORTAL IN THE WRONG PLACE. I WILL SHOW YOU WHY."] = 50,
+  ["THIS IS NO PLACE FOR A HERO"] = 50,
+  ["NO GODS OR KINGS. ONLY HELL AND BEYOND."] = 50,
+  ["THE WORLD FEARS ITS INEVITABLE DEMISE. AND ME."] = 50,
+  ["THERE IS NO SALVATION FOR THE WICKED. YOU AND ME."] = 50,
 
-  ["LONG WILL BE YOUR SUFFERING. JOYOUS WILL BE YOUR PAIN."] = 50
-  ["I AM THE DESTROYER OF WORLDS."] = 50
-  ["I WILL ANOINT MY BLADES WITH YOUR BLOOD"] = 50
-  ["A LITTLE FLEA. I AM INCLINED TO SCRATCH."] = 50
-  ["FOOLISH CUR. THE DARKNESS SURROUNDS YOU."] = 50
+  ["LONG WILL BE YOUR SUFFERING. JOYOUS WILL BE YOUR PAIN."] = 50,
+  ["I AM THE DESTROYER OF WORLDS."] = 50,
+  ["I WILL ANOINT MY BLADES WITH YOUR BLOOD"] = 50,
+  ["A LITTLE FLEA. I AM INCLINED TO SCRATCH."] = 50,
+  ["FOOLISH CUR. THE DARKNESS SURROUNDS YOU."] = 50,
 
-  ["THE WORLD BURNS AND YOU WILL BE AMONG THE ASHES"] = 50
+  ["THE WORLD BURNS AND YOU WILL BE AMONG THE ASHES"] = 50,
 
-  ["I wasn't supposed to be here today"] = 10 -- rare
-  ["You wanna go, bro? You wanna go?"] = 10 -- rare
-  ["Never gonna give you up, never gonna let you down"] = 10 --rare
+  ["I wasn't supposed to be here today"] = 10, -- rare
+  ["You wanna go, bro? You wanna go?"] = 10, -- rare
+  ["Never gonna give you up, never gonna let you down"] = 10, --rare
 
-  -- Beed28
-  ["A MAN LIKE YOU IS NOTHING BUT A MISERABLE PILE OF SECRETS"] = 50
-  ["WELCOME... TO DIE!"] = 50
+  -- Beed28,
+  ["A MAN LIKE YOU IS NOTHING BUT A MISERABLE PILE OF SECRETS"] = 50,
+  ["WELCOME... TO DIE!"] = 50,
 
   -- Craneo
-  ["GREETINGS, MORTAL. ARE YOU READY TO DIE?"] = 50
-  ["WE HAVE SUCH SIGHTS TO SHOW YOU"] = 50
-  ["WE WILL TEAR YOUR SOUL APART"] = 50
-  ["YOUR SUFFERING WILL BE LEGENDARY, EVEN IN HELL!"] = 50
+  ["GREETINGS, MORTAL. ARE YOU READY TO DIE?"] = 50,
+  ["WE HAVE SUCH SIGHTS TO SHOW YOU"] = 50,
+  ["WE WILL TEAR YOUR SOUL APART"] = 50,
+  ["YOUR SUFFERING WILL BE LEGENDARY, EVEN IN HELL!"] = 50,
 
-  ["PAIN HAS A FACE. I WILL SHOW IT TO YOU."] = 50
-  ["WELCOME TO YOUR DEATH, MORTAL!"] = 50
-  ["DID YOU HOPE TO ACCOMPLISH ANYTHING BY COMING HERE?"] = 50
-  ["ONLY SUFFERING AND PAIN AWAITS YOU FURTHER ON"] = 50
-  ["YOUR JOURNEY IS FUTILE. YOU WILL DIE AND YOU SOUL WILL BE MINE."] = 50
+  ["PAIN HAS A FACE. I WILL SHOW IT TO YOU."] = 50,
+  ["WELCOME TO YOUR DEATH, MORTAL!"] = 50,
+  ["DID YOU HOPE TO ACCOMPLISH ANYTHING BY COMING HERE?"] = 50,
+  ["ONLY SUFFERING AND PAIN AWAITS YOU FURTHER ON"] = 50,
+  ["YOUR JOURNEY IS FUTILE. YOU WILL DIE AND YOU SOUL WILL BE MINE."] = 50,
 
-  ["THERE IS NO ESCAPE"] = 50
-  ["DEATH IS NOT YOUR END. YOUR SOUL WILL BURN IN HELL FOREVER."] = 50
-  ["EVERY STEP TAKEN BRINGS YOUR SOUL CLOSER TO ME"] = 50
+  ["THERE IS NO ESCAPE"] = 50,
+  ["DEATH IS NOT YOUR END. YOUR SOUL WILL BURN IN HELL FOREVER."] = 50,
+  ["EVERY STEP TAKEN BRINGS YOUR SOUL CLOSER TO ME"] = 50,
 
-  ["IT WAS ME WHO RUINED THE TOILETS!!!"] = 10 -- rare
-  ["Giggity"] = 10 -- rare
+  ["IT WAS ME WHO RUINED THE TOILETS!!!"] = 10, -- rare
+  ["Giggity"] = 10, -- rare
 
   -- Tapwave
-  ["YOU WILL NEVER FIND WHAT YOU SEEK. IT IS TRAPPED IN HELL FOREVER."] = 50
+  ["YOU WILL NEVER FIND WHAT YOU SEEK. IT IS TRAPPED IN HELL FOREVER."] = 50,
 
   -- Demios
-  ["YOU? HERE?! ARGH! INCOMPETENTS ALL OF THEM!"] = 50
-  ["WHEN I'M DONE WITH YOU, I WILL SEE TO YOUR ETERNAL SUFFERING"] = 50
-  ["YOU DARE INTERFERE, MORTAL?"] = 50
-  ["YOU WILL RELIVE THIS NIGHTMARE FOREVER"] = 50
+  ["YOU? HERE?! ARGH! INCOMPETENTS ALL OF THEM!"] = 50,
+  ["WHEN I'M DONE WITH YOU, I WILL SEE TO YOUR ETERNAL SUFFERING"] = 50,
+  ["YOU DARE INTERFERE, MORTAL?"] = 50,
+  ["YOU WILL RELIVE THIS NIGHTMARE FOREVER"] = 50,
 
   -- EpicTyph
-  ["SMASH. TIME TO SMASH!"] = 50
-  ["YOUR KIND ARE OVER"] = 50
+  ["SMASH. TIME TO SMASH!"] = 50,
+  ["YOUR KIND ARE OVER"] = 50,
 
   -- Mogwaltz
-  ["HOW MANY OF YOUR MISBEGOTTEN KIND I MUST SQUASH?"] = 50
+  ["HOW MANY OF YOUR MISBEGOTTEN KIND I MUST SQUASH?"] = 50,
 
   -- Frozsoul
-  ["ALL YOUR BASE ARE BELONG TO US"] = 10 -- rare
+  ["ALL YOUR BASE ARE BELONG TO US"] = 10, -- rare
 
   -- retxirT
-  ["WHY MUST I DO EVERYTHING MYSELF?"] = 50
-  ["YOUR STAY OF EXECUTION IS OVER. I HAVE COME TO DELIVER."] = 50
+  ["WHY MUST I DO EVERYTHING MYSELF?"] = 50,
+  ["YOUR STAY OF EXECUTION IS OVER. I HAVE COME TO DELIVER."] = 50,
 }
 
 BOSS_GEN_TUNE.DEATHS =
 {
   -- Scionox
-  ["NOOOO, I SHALL RETURN!!!"] = 50
-  ["NOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO!"] = 50
+  ["NOOOO, I SHALL RETURN!!!"] = 50,
+  ["NOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO!"] = 50,
 
   -- MSSP
-  ["GRAAAAAHHH!!"] = 50
-  ["GRRRRHHHHH!"] = 50
-  ["THIS IS NOT THE END, MORTAL"] = 50
-  ["THIS IS NOT OVER, MORTAL"] = 50
-  ["HELL WILL NOT FORGIVE"] = 50
+  ["GRAAAAAHHH!!"] = 50,
+  ["GRRRRHHHHH!"] = 50,
+  ["THIS IS NOT THE END, MORTAL"] = 50,
+  ["THIS IS NOT OVER, MORTAL"] = 50,
+  ["HELL WILL NOT FORGIVE"] = 50,
 
-  ["HELL'S CHAMPIONS SHALL RISE WHERE I FALL"] = 50
-  ["DESTROYING ME DOES NOT DESTROY HELL"] = 50
-  ["HELL STILL REIGNS ETERNAL"] = 50
-  ["THERE WILL BE MORE COMING YOUR WAY, MORTAL"] = 50
+  ["HELL'S CHAMPIONS SHALL RISE WHERE I FALL"] = 50,
+  ["DESTROYING ME DOES NOT DESTROY HELL"] = 50,
+  ["HELL STILL REIGNS ETERNAL"] = 50,
+  ["THERE WILL BE MORE COMING YOUR WAY, MORTAL"] = 50,
 
-  ["And I thought I was retiring tomorrow"] = 5
-  ["MY LUNCH!"] = 5
+  ["And I thought I was retiring tomorrow"] = 5,
+  ["MY LUNCH!"] = 5,
 
   -- Craneo
-  ["CURSE YOU AND YOUR DESCENDANTS!"] = 50
-  ["NOT EVEN THE PITS OF HELL WILL CONTAIN MY REVENGE"] = 50
-  ["YOU ARE NOW WORTHY OF FIGHTING MY MASTER"] = 50
+  ["CURSE YOU AND YOUR DESCENDANTS!"] = 50,
+  ["NOT EVEN THE PITS OF HELL WILL CONTAIN MY REVENGE"] = 50,
+  ["YOU ARE NOW WORTHY OF FIGHTING MY MASTER"] = 50,
 }
 
 BOSS_GEN_TUNE.TRAITS =
 {
   SPEED =
   {
-    name = '"bossabilitygiver_speed"'
-    probmisl = 60
-    probscan = 0
-    probmele = 90
-    difffact = 1.1
-    mislfact = 1.1
-    mindiff = -1
-  }
+    name = '"bossabilitygiver_speed"',
+    probmisl = 60,
+    probscan = 0,
+    probmele = 90,
+    difffact = 1.1,
+    mislfact = 1.1,
+    mindiff = -1,
+  },
 
   DMGSHOT =
   {
-    name = '"bossabilitygiver_dmgshot"'
-    probmisl = 50
-    probscan = 40
-    probmele = 50
-    difffact = 1.2
-    mislfact = 1.3
-    mindiff = 1
-  }
+    name = '"bossabilitygiver_dmgshot"',
+    probmisl = 50,
+    probscan = 40,
+    probmele = 50,
+    difffact = 1.2,
+    mislfact = 1.3,
+    mindiff = 1,
+  },
 
   TELEPORT =
   {
-    name = '"bossabilitygiver_teleport"'
-    probmisl = 50
-    probscan = 50
-    probmele = 80
-    difffact = 1.1
-    mislfact = 1.1
-    mindiff = -1
-  }
+    name = '"bossabilitygiver_teleport"',
+    probmisl = 50,
+    probscan = 50,
+    probmele = 80,
+    difffact = 1.1,
+    mislfact = 1.1,
+    mindiff = -1,
+  },
 
   PCIRCLE =
   {
-    name = '"bossabilitygiver_pcircle"'
-    probmisl = 50
-    probscan = 40
-    probmele = 60
-    difffact = 1.1
-    mislfact = 1.3
-    mindiff = -1
-  }
+    name = '"bossabilitygiver_pcircle"',
+    probmisl = 50,
+    probscan = 40,
+    probmele = 60,
+    difffact = 1.1,
+    mislfact = 1.3,
+    mindiff = -1,
+  },
 
   SPREAD =
   {
-    name = '"bossabilitygiver_spread"'
-    probmisl = 30
-    probscan = 0
-    probmele = 0
-    difffact = 1.0
-    mislfact = 1.6
-    mindiff = -1
-  }
+    name = '"bossabilitygiver_spread"',
+    probmisl = 30,
+    probscan = 0,
+    probmele = 0,
+    difffact = 1.0,
+    mislfact = 1.6,
+    mindiff = -1,
+  },
 
   PYRO =
   {
-    name = '"bossabilitygiver_pyro"'
-    probmisl = 50
-    probscan = 0
-    probmele = 0
-    difffact = 1.0
-    mislfact = 1.3
-    mindiff = -1
-  }
+    name = '"bossabilitygiver_pyro"',
+    probmisl = 50,
+    probscan = 0,
+    probmele = 0,
+    difffact = 1.0,
+    mislfact = 1.3,
+    mindiff = -1,
+  },
 
   BOUNCE =
   {
-    name = '"bossabilitygiver_bounce"'
-    probmisl = 40
-    probscan = 0
-    probmele = 0
-    difffact = 1.0
-    mislfact = 1.4
-    mindiff = 1
-  }
+    name = '"bossabilitygiver_bounce"',
+    probmisl = 40,
+    probscan = 0,
+    probmele = 0,
+    difffact = 1.0,
+    mislfact = 1.4,
+    mindiff = 1,
+  },
 
   HOMING =
   {
-    name = '"bossabilitygiver_homing"'
-    probmisl = 50
-    probscan = 0
-    probmele = 0
-    difffact = 1.0
-    mislfact = 1.4
-    mindiff = -1
-  }
+    name = '"bossabilitygiver_homing"',
+    probmisl = 50,
+    probscan = 0,
+    probmele = 0,
+    difffact = 1.0,
+    mislfact = 1.4,
+    mindiff = -1,
+  },
 
   DEFLECTION =
   {
-    name = '"bossabilitygiver_deflection"'
-    probmisl = 20
-    probscan = 30
-    probmele = 40
-    difffact = 1.3
-    mislfact = 1.1
-    mindiff = 1
-  }
+    name = '"bossabilitygiver_deflection"',
+    probmisl = 20,
+    probscan = 30,
+    probmele = 40,
+    difffact = 1.3,
+    mislfact = 1.1,
+    mindiff = 1,
+  },
 
     SPOOK =
   {
-    name = '"bossabilitygiver_spook"'
-    probmisl = 40
-    probscan = 40
-    probmele = 30
-    difffact = 1.2
-    mislfact = 1.2
-    mindiff = 2
-  }
+    name = '"bossabilitygiver_spook"',
+    probmisl = 40,
+    probscan = 40,
+    probmele = 30,
+    difffact = 1.2,
+    mislfact = 1.2,
+    mindiff = 2,
+  },
 }
 
 function BOSS_GEN_TUNE.game_specific_hpbar()
@@ -1344,7 +1344,7 @@ end
 function BOSS_GEN_TUNE.grab_random_trait(btype, etraits)
   local traits = {}
 
-  each name,info in BOSS_GEN_TUNE.TRAITS do
+  for name,info in pairs(BOSS_GEN_TUNE.TRAITS) do
 
   local tprob
     local stack = 0
@@ -1364,8 +1364,8 @@ function BOSS_GEN_TUNE.grab_random_trait(btype, etraits)
       tprob = 0
   end
 
-  if etraits != nil then
-    each etrait,einfo in etraits do
+  if etraits ~= nil then
+    for etrait,einfo in pairs(etraits) do
         if einfo == info.name then
           stack = stack + 1
         if PARAM.boss_gen_dmult < 0 then
@@ -1419,7 +1419,7 @@ function BOSS_GEN_TUNE.setup(self)
   PARAM.epi_bosses = {}
   PARAM.epi_names = {}
 
-  for name,opt in pairs(self.options) do
+  for name,opt in pairs(pairs(self.options)) do
     local value = self.options[name].value
     PARAM[name] = value
   end
@@ -1530,7 +1530,7 @@ function BOSS_GEN_TUNE.all_done()
     scripty = string.gsub(scripty, "MUSIC", "")
   end
 
-  if PARAM.boss_gen_reinforce != "none" then
+  if PARAM.boss_gen_reinforce ~= "none" then
     scripty = string.gsub(scripty, "SUMCODE", BOSS_GEN_TUNE.TEMPLATES.SUM)
   else
     scripty = string.gsub(scripty, "SUMCODE", "")
@@ -1548,7 +1548,7 @@ function BOSS_GEN_TUNE.all_done()
     scripty = string.gsub(scripty, "BEXIT", BOSS_GEN_TUNE.TEMPLATES.EXNORMAL)
   end
 
-  for name,info in pairs(PARAM.boss_types) do
+  for name,info in pairs(pairs(PARAM.boss_types)) do
     local bhp = info.health
     local batk = info.attack
     local traitstack = {}
@@ -1622,7 +1622,7 @@ function BOSS_GEN_TUNE.all_done()
 
     local demon_name
     if PARAM.story_generator == "proc" then
-      each epiboss in PARAM.epi_bosses do
+      for _,epiboss in pairs(PARAM.epi_bosses) do
         if i == epiboss then
           demon_name = PARAM.epi_names[cnt]
         cnt = cnt + 1
@@ -1659,23 +1659,23 @@ end
 
 OB_MODULES["gzdoom_boss_gen"] =
 {
-  label = _("[Exp]GZDoom Boss Generator")
+  label = _("[Exp]GZDoom Boss Generator"),
 
---  game = "doomish"
+--  game = "doomish",
 
-  side = "right"
-  priority = 92
+  side = "right",
+  priority = 92,
 
   hooks =
   {
-    setup = BOSS_GEN_TUNE.setup
-    begin_level = BOSS_GEN_TUNE.check_gotchas_enabled
-    end_level = BOSS_GEN_TUNE.end_lvl
+    setup = BOSS_GEN_TUNE.setup,
+    begin_level = BOSS_GEN_TUNE.check_gotchas_enabled,
+    end_level = BOSS_GEN_TUNE.end_lvl,
     all_done = BOSS_GEN_TUNE.all_done
-  }
+  },
 
   tooltip=_(
-    "[WIP/Experimental]This module replaces procedural gotchas with boss fight arenas.")
+    "[WIP/Experimental]This module replaces procedural gotchas with boss fight arenas."),
 
   options =
   {
@@ -1687,7 +1687,7 @@ OB_MODULES["gzdoom_boss_gen"] =
       choices = BOSS_GEN_TUNE.BOSS_DIFF_CHOICES,
       default = "default",
       tooltip = "Increases or reduces chances of boss being based off more powerful monster and getting more powerful traits.",
-    }
+    },
 
     boss_gen_health =
     {
@@ -1698,7 +1698,7 @@ OB_MODULES["gzdoom_boss_gen"] =
       default = "default",
       tooltip = "Makes boss health higher or lower than default, useful when playing with mods that have different average power level of weapons.",
       gap = 1,
-    }
+    },
 
     boss_gen_hitscan =
     {
@@ -1708,7 +1708,7 @@ OB_MODULES["gzdoom_boss_gen"] =
       choices = BOSS_GEN_TUNE.BOSS_LESS_HITSCAN,
       default = "default",
       tooltip = "Reduces chance of hitscan bosses spawning.",
-    }
+    },
 
     boss_gen_hpbar =
     {
@@ -1717,8 +1717,8 @@ OB_MODULES["gzdoom_boss_gen"] =
       priority = 96,
       choices = BOSS_GEN_TUNE.BOSS_HEALTH_BAR,
       default = "yes",
-      tooltip = "If enabled, an hp bar will appear on UI while boss is active."
-    }
+      tooltip = "If enabled, an hp bar will appear on UI while boss is active.",
+    },
 
     boss_gen_music =
     {
@@ -1730,7 +1730,7 @@ OB_MODULES["gzdoom_boss_gen"] =
       tooltip = "If enabled, encountering a boss will start boss theme music." ..
       "(For now you have to have your own music files with lumps named D_BOSSx where x is boss number)",
       gap = 1,
-    }
+    },
 
     boss_gen_steepness =
     {
@@ -1741,7 +1741,7 @@ OB_MODULES["gzdoom_boss_gen"] =
       default = "none",
       tooltip = "Influences steepness settings for boss arenas. " ..
       "Boss arena steepness is capped to be less intrusive to boss movement.",
-    }
+    },
 
     boss_gen_reinforce =
     {
@@ -1751,7 +1751,7 @@ OB_MODULES["gzdoom_boss_gen"] =
       choices = BOSS_GEN_TUNE.REINFORCE,
       default = "default",
       tooltip = "Influences the strength of reinforcements summoned by bosses",
-    }
+    },
 
     boss_gen_reinforcerate =
     {
@@ -1761,7 +1761,7 @@ OB_MODULES["gzdoom_boss_gen"] =
       choices = BOSS_GEN_TUNE.REINFORCER,
       default = "default",
       tooltip = "Influences the spawn rate of reinforcements summoned by bosses",
-    }
+    },
 
     boss_gen_types =
     {
@@ -1770,8 +1770,8 @@ OB_MODULES["gzdoom_boss_gen"] =
       priority = 91,
       choices = BOSS_GEN_TUNE.BOSS_TYPES,
       default = "no",
-      tooltip = "If enabled, monsters disabled in monster control module cant be chosen as a boss."
-    }
+      tooltip = "If enabled, monsters disabled in monster control module cant be chosen as a boss.",
+    },
 
     boss_gen_typelimit =
     {
@@ -1784,7 +1784,7 @@ OB_MODULES["gzdoom_boss_gen"] =
       "hard limit: doesnt allow monster types outside of range to ever spawn.\n\n" ..
       "soft limit: reduces the probability of spawning of monster types outside of range.\n\n" ..
       "no limit: difficulty doesnt have effect on monster type selection.",
-    }
+    },
 
     boss_gen_weap =
     {
@@ -1793,8 +1793,8 @@ OB_MODULES["gzdoom_boss_gen"] =
       priority = 89,
       choices = BOSS_GEN_TUNE.BOSS_WEAP,
       default = "scatter",
-      tooltip = "Influences weapon placement in boss arena."
-    }
+      tooltip = "Influences weapon placement in boss arena.",
+    },
 
     boss_gen_exit =
     {
@@ -1803,8 +1803,8 @@ OB_MODULES["gzdoom_boss_gen"] =
       priority = 88,
       choices = BOSS_GEN_TUNE.BOSS_EXIT,
       default = "default",
-      tooltip = "Changes exit type after boss has been destroyed."
-    }
+      tooltip = "Changes exit type after boss has been destroyed.",
+    },
 
     boss_gen_ammo =
     {
@@ -1813,8 +1813,8 @@ OB_MODULES["gzdoom_boss_gen"] =
       priority = 87,
       choices = BOSS_GEN_TUNE.MULT,
       default = "3",
-      tooltip = "Changes multiplier of ammunition items on the boss arena(This is also affected by boss health multiplier)."
-    }
+      tooltip = "Changes multiplier of ammunition items on the boss arena(This is also affected by boss health multiplier).",
+    },
 
     boss_gen_heal =
     {
@@ -1823,7 +1823,7 @@ OB_MODULES["gzdoom_boss_gen"] =
       priority = 86,
       choices = BOSS_GEN_TUNE.MULT,
       default = "3",
-      tooltip = "Changes multiplier of healing items on the boss arena."
-    }
-  }
+      tooltip = "Changes multiplier of healing items on the boss arena.",
+    },
+  },
 }

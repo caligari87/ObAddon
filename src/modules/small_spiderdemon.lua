@@ -6,7 +6,7 @@
 --
 --  This program is free software; you can redistribute it and/or
 --  modify it under the terms of the GNU General Public License
---  as published by the Free Software Foundation; either version 2
+--  as published by the Free Software Foundation; either version 2,
 --  of the License, or (at your option) any later version.
 --
 --  This program is distributed in the hope that it will be useful,
@@ -27,19 +27,19 @@ end
 
 OB_MODULES["small_spiderdemon"] =
 {
-  label = _("Smaller Spiderdemon")
+  label = _("Smaller Spiderdemon"),
 
-  game = "doomish"
+  game = "doomish",
 
-  side = "left"
-  priority = 92
+  side = "left",
+  priority = 92,
 
-  engine = "boom"
+  engine = "boom",
 
   hooks =
   {
     setup = SMALL_SPIDERDEMON.setup
-  }
+  },
 
   tooltip=_(
     "Makes the Spider Mastermind smaller via a DEHACKED lump, " ..

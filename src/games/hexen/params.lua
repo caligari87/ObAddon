@@ -9,7 +9,7 @@
 
 --  This program is free software; you can redistribute it and/or
 --  modify it under the terms of the GNU General Public License
---  as published by the Free Software Foundation; either version 2
+--  as published by the Free Software Foundation; either version 2,
 --  of the License, or (at your option) any later version.
 --
 --  This program is distributed in the hope that it will be useful,
@@ -22,18 +22,18 @@
 HEXEN.PARAMETERS =
 {
   -- special logic for Hexen weapon system
-  hexen_weapons = true
+  hexen_weapons = true,
 
-  teleporters = true
+  teleporters = true,
 
-  jump_height = 66
+  jump_height = 66,
 
-  max_name_length = 28
+  max_name_length = 28,
 
-  skip_monsters = { 20,30 }
+  skip_monsters = { 20,30 },
 
-  monster_factor = 1.0
-  health_factor  = 1.0
-  ammo_factor    = 1.0
-  time_factor    = 1.0
+  monster_factor = 1.0,
+  health_factor  = 1.0,
+  ammo_factor    = 1.0,
+  time_factor    = 1.0,
 }

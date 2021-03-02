@@ -7,7 +7,7 @@
 --
 --  This program is free software; you can redistribute it and/or
 --  modify it under the terms of the GNU General Public License
---  as published by the Free Software Foundation; either version 2
+--  as published by the Free Software Foundation; either version 2,
 --  of the License, or (at your option) any later version.
 --
 --  This program is distributed in the hope that it will be useful,
@@ -109,72 +109,72 @@ ZDOOM_SPECIALS_HERETIC.MUSIC =
   [42] = "MUS_E2M6",
   [43] = "MUS_E2M7",
   [44] = "MUS_E2M8",
-  [45] = "MUS_E2M9"
+  [45] = "MUS_E2M9",
 }
 
 ZDOOM_SPECIALS_HERETIC.MAP_NOMENCLATURE =
 {
-  [1] = "E1M1"
-  [2] = "E1M2"
-  [3] = "E1M3"
-  [4] = "E1M4"
-  [5] = "E1M5"
-  [6] = "E1M6"
-  [7] = "E1M7"
-  [8] = "E1M8"
-  [9] = "E1M9"
-  [10] = "E2M1"
-  [11] = "E2M2"
-  [12] = "E2M3"
-  [13] = "E2M4"
-  [14] = "E2M5"
-  [15] = "E2M6"
-  [16] = "E2M7"
-  [17] = "E2M8"
-  [18] = "E2M9"
-  [19] = "E3M1"
-  [20] = "E3M2"
-  [21] = "E3M3"
-  [22] = "E3M4"
-  [23] = "E3M5"
-  [24] = "E3M6"
-  [25] = "E3M7"
-  [26] = "E3M8"
-  [27] = "E3M9"
-  [28] = "E4M1"
-  [29] = "E4M2"
-  [30] = "E4M3"
-  [31] = "E4M4"
-  [32] = "E4M5"
-  [33] = "E4M6"
-  [34] = "E4M7"
-  [35] = "E4M8"
-  [36] = "E4M9"
-  [37] = "E5M1"
-  [38] = "E5M2"
-  [39] = "E5M3"
-  [40] = "E5M4"
-  [41] = "E5M5"
-  [42] = "E5M6"
-  [43] = "E5M7"
-  [44] = "E5M8"
-  [45] = "E5M9"
+  [1] = "E1M1",
+  [2] = "E1M2",
+  [3] = "E1M3",
+  [4] = "E1M4",
+  [5] = "E1M5",
+  [6] = "E1M6",
+  [7] = "E1M7",
+  [8] = "E1M8",
+  [9] = "E1M9",
+  [10] = "E2M1",
+  [11] = "E2M2",
+  [12] = "E2M3",
+  [13] = "E2M4",
+  [14] = "E2M5",
+  [15] = "E2M6",
+  [16] = "E2M7",
+  [17] = "E2M8",
+  [18] = "E2M9",
+  [19] = "E3M1",
+  [20] = "E3M2",
+  [21] = "E3M3",
+  [22] = "E3M4",
+  [23] = "E3M5",
+  [24] = "E3M6",
+  [25] = "E3M7",
+  [26] = "E3M8",
+  [27] = "E3M9",
+  [28] = "E4M1",
+  [29] = "E4M2",
+  [30] = "E4M3",
+  [31] = "E4M4",
+  [32] = "E4M5",
+  [33] = "E4M6",
+  [34] = "E4M7",
+  [35] = "E4M8",
+  [36] = "E4M9",
+  [37] = "E5M1",
+  [38] = "E5M2",
+  [39] = "E5M3",
+  [40] = "E5M4",
+  [41] = "E5M5",
+  [42] = "E5M6",
+  [43] = "E5M7",
+  [44] = "E5M8",
+  [45] = "E5M9",
 }
 
 -- Attempting to make episode-specific Interpics
--- Interpics 1-5 are for Episodes 1-5
+-- Interpics 1-5 are for Episodes 1-5,
 -- Interpics 6-10 are the secret level for each episode
 -- For now, I've only made one picture, which is a tiled version
 -- of the regular level transition background
 ZDOOM_SPECIALS_HERETIC.INTERPICS =
 {
---  OBDNLOAD = 50
---  OBDNLOA2 = 50
---  OBDNLOA3 = 50
---  OBDNLOA4 = 50
---  OBDNLOA5 = 50
---  OBDNLOA6 = 50
---  OBDNLOA7 = 50
+--  OBDNLOAD = 50,
+--  OBDNLOA2 = 50,
+--  OBDNLOA3 = 50,
+--  OBDNLOA4 = 50,
+--  OBDNLOA5 = 50,
+--  OBDNLOA6 = 50,
+--  OBDNLOA7 = 50,
   [1] = "HERETIC1",
   [2] = "HERETIC1",
   [3] = "HERETIC1",
@@ -184,7 +184,7 @@ ZDOOM_SPECIALS_HERETIC.INTERPICS =
   [7] = "HERETIC1",
   [8] = "HERETIC1",
   [9] = "HERETIC1",
-  [10] = "HERETIC1"
+  [10] = "HERETIC1",
 }
 
 ZDOOM_SPECIALS_HERETIC.INTERPIC_MUSIC =
@@ -378,7 +378,7 @@ function ZDOOM_SPECIALS_HERETIC.shuffle_music()
 
   local music_table = ZDOOM_SPECIALS_HERETIC.MUSIC
 
-  if PARAM.mapinfo_music_shuffler != "no" then
+  if PARAM.mapinfo_music_shuffler ~= "no" then
     rand.shuffle(music_table)
   end
 
@@ -688,19 +688,19 @@ if map_num == 44 then
 
     local mapinfo =
     {
-      'map ' .. map_id .. ' lookup HHUSTR_'.. name_string_map_id ..'\n'
-      '{\n'
-      '  cluster = 1\n'
-      '  sky1 = "' .. sky_tex .. '"\n'
-      '' .. cluster_line .. ''
-      '' .. fog_color_line .. ''
-      '' .. fog_intensity_line .. ''
-      '' .. next_level_line .. ''
-      '' .. secret_level_line .. ''
-      '' .. music_line .. ''
-      '  EnterPic = "' .. interpic .. '"\n'
-      '  ExitPic = "' .. interpic .. '"\n'
-      '' .. special_attributes .. ''
+      'map ' .. map_id .. ' lookup HHUSTR_'.. name_string_map_id ..'\n',
+      '{\n',
+      '  cluster = 1\n',
+      '  sky1 = "' .. sky_tex .. '"\n',
+      '' .. cluster_line .. '',
+      '' .. fog_color_line .. '',
+      '' .. fog_intensity_line .. '',
+      '' .. next_level_line .. '',
+      '' .. secret_level_line .. '',
+      '' .. music_line .. '',
+      '  EnterPic = "' .. interpic .. '"\n',
+      '  ExitPic = "' .. interpic .. '"\n',
+      '' .. special_attributes .. '',
       '}\n'
     }
 
@@ -717,166 +717,166 @@ if map_num == 44 then
 
       clusterdef =
       {
-        'cluster 1\n' -- E1M1-E1M4
-        '{\n'
-        '' .. cluster_music_line .. ''
-        '  pic = "' .. interpic .. '"\n'
-        '  exittext =\n'
-        '    "The land before you is filled",\n'
-        '    "with peril...",\n'
-        '    " ",\n'
-        '    "Wand at the ready, you venture",\n'
-        '    "forth to find the source",\n'
-        '    "of this scourge."\n'
-        '}\n'
-        'cluster 2\n' -- E1M5-E1M8
-        '{\n'
-        '' .. cluster_music_line .. ''
-        '  pic = "' .. interpic .. '"\n'
-        '  exittext =\n'
-        '    "The enemy is relentless",\n'
-        '    "and their numbers seem to",\n'
-        '    "have no end.",\n'
-        '    " ",\n'
-        '    "Spellbook in hand,",\n'
-        '    "you continue the battle",\n'
-        '    "against the evil forces",\n'
-        '    "arrayed before you..."\n'
-        '}\n'
-        'cluster 3\n' -- E2M1-E2M4
-        '{\n'
-        '' .. cluster_music_line .. ''
-        '  pic = "' .. interpic .. '"\n'
-        '  exittext =\n'
-        '    "You approach the next stronghold,",\n'
-        '    "weary but determined...",\n'
-        '    " ",\n'
-        '    "The forces of darkness will not",\n'
-        '    "win this day!"\n'
-        '}\n'
-        'cluster 4\n' -- E2M5-E2M8
-        '{\n'
-        '' .. cluster_music_line .. ''
-        '  pic = "' .. interpic .. '"\n'
-        '  exittext =\n'
-        '    "In slaying the lord of this foul",\n'
-        '    "domain, you have struck a telling",\n'
-        '    "blow against the enemy.",\n'
-        '    " ",\n'
-        '    "Alas, there is no rest until the",\n'
-        '    "true master of this hellish army",\n'
-        '    "is slain..."\n'
-        '}\n'
-        'cluster 5\n' -- E3M1-E3M4
-        '{\n'
-        '' .. cluster_music_line .. ''
-        '  pic = "' .. interpic .. '"\n'
-        '  exittext =\n'
-        '    "You have nearly exhausted the",\n'
-        '    "fell legions that were sent to",\n'
-        '    "destroy you.",\n'
-        '    " ",\n'
-        '    "The final test approaches,",\n'
-        '    "and the greatest battle is yet",\n'
-        '    "to be fought..."\n'
-        '}\n'
-        'cluster 6\n' -- E3M5-E3M8
-        '{\n'
-        '' .. cluster_music_line .. ''
-        '  pic = "' .. interpic .. '"\n'
-        '  exittext =\n'
-        '    "You have emerged as the victor",\n'
-        '    "in a clash truly beyond reckoning.",\n'
-        '    " ",\n'
-        '    "Your quest is not over, however.",\n'
-        '    "The desolation left in your wake must",\n'
-        '    "be rebuilt...",\n'
-        '    " ",\n'
-        '    "After a well deserved rest."\n'
-        '}\n'
-        'cluster 7\n' -- E4M1-E4M4
-        '{\n'
-        '' .. cluster_music_line .. ''
-        '  pic = "' .. interpic .. '"\n'
-        '  exittext =\n'
-        '    "Filler text!"\n'
-        '}\n'
-        'cluster 8\n' -- E4M5-E4M8
-        '{\n'
-        '' .. cluster_music_line .. ''
-        '  pic = "' .. interpic .. '"\n'
-        '  exittext =\n'
-        '    "Can Oblige even make this many levels?"\n'
-        '}\n'
-        'cluster 9\n' -- E5M1-E5M4
-        '{\n'
-        '' .. cluster_music_line .. ''
-        '  pic = "' .. interpic .. '"\n'
-        '  exittext =\n'
-        '    "Seriously, how did you get here?"\n'
-        '}\n'
-        'cluster 10\n' -- E5M5-E5M8
-        '{\n'
-        '' .. cluster_music_line .. ''
-        '  pic = "' .. interpic .. '"\n'
-        '  exittext =\n'
-        '    "It\'s over...go home!"\n'
-        '}\n'
-        'cluster 11\n' -- E1M9
-        '{\n'
-        '' .. cluster_music_line .. ''
-        '  pic = "' .. interpic .. '"\n'
-        '  entertext =\n'
-        '    "You have found a secret zone!",\n'
-        '    "It seems the hellspawn have barricaded",\n'
-        '    "themselves within its confines with to",\n'
-        '    "gestate their hellish infection.",\n'
-        '    " ",\n'
-        '    "You are about to prove them otherwise."\n'
-        '}\n'
-        'cluster 12\n' -- E2M9
-        '{\n'
-        '' .. cluster_music_line .. ''
-        '  pic = "' .. interpic .. '"\n'
-        '  entertext =\n'
-        '    "It seems this secret trail",\n'
-        '    "goes further than expected.",\n'
-        '    "It is time to finish this",\n'
-        '    "once and for all and eradicate",\n'
-        '    "this hidden pocket of hellish infestation."\n'
-        '}\n'
-        'cluster 13\n' -- E3M9
-        '{\n'
-        '' .. cluster_music_line .. ''
-        '  pic = "' .. interpic .. '"\n'
-        '  entertext =\n'
-        '    "It seems this secret trail",\n'
-        '    "goes further than expected.",\n'
-        '    "It is time to finish this",\n'
-        '    "once and for all and eradicate",\n'
-        '    "this hidden pocket of hellish infestation."\n'
-        '}\n'
-        'cluster 14\n' -- E4M9
-        '{\n'
-        '' .. cluster_music_line .. ''
-        '  pic = "' .. interpic .. '"\n'
-        '  entertext =\n'
-        '    "It seems this secret trail",\n'
-        '    "goes further than expected.",\n'
-        '    "It is time to finish this",\n'
-        '    "once and for all and eradicate",\n'
-        '    "this hidden pocket of hellish infestation."\n'
-        '}\n'
-        'cluster 15\n' -- E5M9
-        '{\n'
-        '' .. cluster_music_line .. ''
-        '  pic = "' .. interpic .. '"\n'
-        '  entertext =\n'
-        '    "It seems this secret trail",\n'
-        '    "goes further than expected.",\n'
-        '    "It is time to finish this",\n'
-        '    "once and for all and eradicate",\n'
-        '    "this hidden pocket of hellish infestation."\n'
+        'cluster 1\n', -- E1M1-E1M4,
+        '{\n',
+        '' .. cluster_music_line .. '',
+        '  pic = "' .. interpic .. '"\n',
+        '  exittext =\n',
+        '    "The land before you is filled",\n',
+        '    "with peril...",\n',
+        '    " ",\n',
+        '    "Wand at the ready, you venture",\n',
+        '    "forth to find the source",\n',
+        '    "of this scourge."\n',
+        '}\n',
+        'cluster 2\n', -- E1M5-E1M8,
+        '{\n',
+        '' .. cluster_music_line .. '',
+        '  pic = "' .. interpic .. '"\n',
+        '  exittext =\n',
+        '    "The enemy is relentless",\n',
+        '    "and their numbers seem to",\n',
+        '    "have no end.",\n',
+        '    " ",\n',
+        '    "Spellbook in hand,",\n',
+        '    "you continue the battle",\n',
+        '    "against the evil forces",\n',
+        '    "arrayed before you..."\n',
+        '}\n',
+        'cluster 3\n', -- E2M1-E2M4,
+        '{\n',
+        '' .. cluster_music_line .. '',
+        '  pic = "' .. interpic .. '"\n',
+        '  exittext =\n',
+        '    "You approach the next stronghold,",\n',
+        '    "weary but determined...",\n',
+        '    " ",\n',
+        '    "The forces of darkness will not",\n',
+        '    "win this day!"\n',
+        '}\n',
+        'cluster 4\n', -- E2M5-E2M8,
+        '{\n',
+        '' .. cluster_music_line .. '',
+        '  pic = "' .. interpic .. '"\n',
+        '  exittext =\n',
+        '    "In slaying the lord of this foul",\n',
+        '    "domain, you have struck a telling",\n',
+        '    "blow against the enemy.",\n',
+        '    " ",\n',
+        '    "Alas, there is no rest until the",\n',
+        '    "true master of this hellish army",\n',
+        '    "is slain..."\n',
+        '}\n',
+        'cluster 5\n', -- E3M1-E3M4,
+        '{\n',
+        '' .. cluster_music_line .. '',
+        '  pic = "' .. interpic .. '"\n',
+        '  exittext =\n',
+        '    "You have nearly exhausted the",\n',
+        '    "fell legions that were sent to",\n',
+        '    "destroy you.",\n',
+        '    " ",\n',
+        '    "The final test approaches,",\n',
+        '    "and the greatest battle is yet",\n',
+        '    "to be fought..."\n',
+        '}\n',
+        'cluster 6\n', -- E3M5-E3M8,
+        '{\n',
+        '' .. cluster_music_line .. '',
+        '  pic = "' .. interpic .. '"\n',
+        '  exittext =\n',
+        '    "You have emerged as the victor",\n',
+        '    "in a clash truly beyond reckoning.",\n',
+        '    " ",\n',
+        '    "Your quest is not over, however.",\n',
+        '    "The desolation left in your wake must",\n',
+        '    "be rebuilt...",\n',
+        '    " ",\n',
+        '    "After a well deserved rest."\n',
+        '}\n',
+        'cluster 7\n', -- E4M1-E4M4,
+        '{\n',
+        '' .. cluster_music_line .. '',
+        '  pic = "' .. interpic .. '"\n',
+        '  exittext =\n',
+        '    "Filler text!"\n',
+        '}\n',
+        'cluster 8\n', -- E4M5-E4M8,
+        '{\n',
+        '' .. cluster_music_line .. '',
+        '  pic = "' .. interpic .. '"\n',
+        '  exittext =\n',
+        '    "Can Oblige even make this many levels?"\n',
+        '}\n',
+        'cluster 9\n', -- E5M1-E5M4,
+        '{\n',
+        '' .. cluster_music_line .. '',
+        '  pic = "' .. interpic .. '"\n',
+        '  exittext =\n',
+        '    "Seriously, how did you get here?"\n',
+        '}\n',
+        'cluster 10\n', -- E5M5-E5M8,
+        '{\n',
+        '' .. cluster_music_line .. '',
+        '  pic = "' .. interpic .. '"\n',
+        '  exittext =\n',
+        '    "It\'s over...go home!"\n',
+        '}\n',
+        'cluster 11\n', -- E1M9,
+        '{\n',
+        '' .. cluster_music_line .. '',
+        '  pic = "' .. interpic .. '"\n',
+        '  entertext =\n',
+        '    "You have found a secret zone!",\n',
+        '    "It seems the hellspawn have barricaded",\n',
+        '    "themselves within its confines with to",\n',
+        '    "gestate their hellish infection.",\n',
+        '    " ",\n',
+        '    "You are about to prove them otherwise."\n',
+        '}\n',
+        'cluster 12\n', -- E2M9,
+        '{\n',
+        '' .. cluster_music_line .. '',
+        '  pic = "' .. interpic .. '"\n',
+        '  entertext =\n',
+        '    "It seems this secret trail",\n',
+        '    "goes further than expected.",\n',
+        '    "It is time to finish this",\n',
+        '    "once and for all and eradicate",\n',
+        '    "this hidden pocket of hellish infestation."\n',
+        '}\n',
+        'cluster 13\n', -- E3M9,
+        '{\n',
+        '' .. cluster_music_line .. '',
+        '  pic = "' .. interpic .. '"\n',
+        '  entertext =\n',
+        '    "It seems this secret trail",\n',
+        '    "goes further than expected.",\n',
+        '    "It is time to finish this",\n',
+        '    "once and for all and eradicate",\n',
+        '    "this hidden pocket of hellish infestation."\n',
+        '}\n',
+        'cluster 14\n', -- E4M9,
+        '{\n',
+        '' .. cluster_music_line .. '',
+        '  pic = "' .. interpic .. '"\n',
+        '  entertext =\n',
+        '    "It seems this secret trail",\n',
+        '    "goes further than expected.",\n',
+        '    "It is time to finish this",\n',
+        '    "once and for all and eradicate",\n',
+        '    "this hidden pocket of hellish infestation."\n',
+        '}\n',
+        'cluster 15\n', -- E5M9,
+        '{\n',
+        '' .. cluster_music_line .. '',
+        '  pic = "' .. interpic .. '"\n',
+        '  entertext =\n',
+        '    "It seems this secret trail",\n',
+        '    "goes further than expected.",\n',
+        '    "It is time to finish this",\n',
+        '    "once and for all and eradicate",\n',
+        '    "this hidden pocket of hellish infestation."\n',
         '}\n'
       }
     end
@@ -885,95 +885,95 @@ if map_num == 44 then
       -- create cluster information
       clusterdef =
       {
-        'cluster 1\n' -- E1M1-E1M4
-        '{\n'
-        '' .. cluster_music_line .. ''
-        '  pic = "' .. interpic .. '"\n'
-        '  exittext = lookup, "STORYSTART1"\n'
-        '}\n'
-        'cluster 2\n' -- E1M5-E1M8
-        '{\n'
-        '' .. cluster_music_line .. ''
-        '  pic = "' .. interpic .. '"\n'
-        '  exittext = lookup, "STORYEND1"\n'
-        '}\n'
-        'cluster 3\n' -- E2M1-E2M4
-        '{\n'
-        '' .. cluster_music_line .. ''
-        '  pic = "' .. interpic .. '"\n'
-        '  exittext = lookup, "STORYSTART2"\n'
-        '}\n'
-        'cluster 4\n' -- E2M5-E2M8
-        '{\n'
-        '' .. cluster_music_line .. ''
-        '  pic = "' .. interpic .. '"\n'
-        '  exittext = lookup, "STORYEND2"\n'
-        '}\n'
-        'cluster 5\n' -- E3M1-E3M4
-        '{\n'
-        '' .. cluster_music_line .. ''
-        '  pic = "' .. interpic .. '"\n'
-        '  exittext = lookup, "STORYSTART3"\n'
-        '}\n'
-        'cluster 6\n' -- E3M5-E3M8
-        '{\n'
-        '' .. cluster_music_line .. ''
-        '  pic = "' .. interpic .. '"\n'
-        '  exittext = lookup, "STORYEND3"\n'
-        '}\n'
-        'cluster 7\n' -- E4M1-E4M4
-        '{\n'
-        '' .. cluster_music_line .. ''
-        '  pic = "' .. interpic .. '"\n'
-        '  exittext = lookup, "STORYSTART4"\n'
-        '}\n'
-        'cluster 8\n' -- E4M5-E4M8
-        '{\n'
-        '' .. cluster_music_line .. ''
-        '  pic = "' .. interpic .. '"\n'
-        '  entertext = lookup, "STORYEND4"\n'
-        '}\n'
-        'cluster 9\n' -- E5M1-E5M4
-        '{\n'
-        '' .. cluster_music_line .. ''
-        '  pic = "' .. interpic .. '"\n'
-        '  entertext = lookup, "STORYSTART5"\n'
-        '}\n'
-        'cluster 10\n' -- E5M5-E5M8
-        '{\n'
-        '' .. cluster_music_line .. ''
-        '  pic = "' .. interpic .. '"\n'
-        '  entertext = lookup, "STORYEND5"\n'
-        '}\n'
-        'cluster 11\n' -- E1M9
-        '{\n'
-        '' .. cluster_music_line .. ''
-        '  pic = "' .. interpic .. '"\n'
-        '  exittext = lookup, "SECRET"\n'
-        '}\n'
-        'cluster 12\n' -- E2M9
-        '{\n'
-        '' .. cluster_music_line .. ''
-        '  pic = "' .. interpic .. '"\n'
-        '  exittext = lookup, "SECRET"\n'
-        '}\n'
-        'cluster 13\n' -- E3M9
-        '{\n'
-        '' .. cluster_music_line .. ''
-        '  pic = "' .. interpic .. '"\n'
-        '  entertext = lookup, "SECRET"\n'
-        '}\n'
-        'cluster 14\n' -- E4M9
-        '{\n'
-        '' .. cluster_music_line .. ''
-        '  pic = "' .. interpic .. '"\n'
-        '  entertext = lookup, "SECRET"\n'
-        '}\n'
-        'cluster 15\n' -- E5M9
-        '{\n'
-        '' .. cluster_music_line .. ''
-        '  pic = "' .. interpic .. '"\n'
-        '  entertext = lookup, "SECRET"\n'
+        'cluster 1\n', -- E1M1-E1M4,
+        '{\n',
+        '' .. cluster_music_line .. '',
+        '  pic = "' .. interpic .. '"\n',
+        '  exittext = lookup, "STORYSTART1"\n',
+        '}\n',
+        'cluster 2\n', -- E1M5-E1M8,
+        '{\n',
+        '' .. cluster_music_line .. '',
+        '  pic = "' .. interpic .. '"\n',
+        '  exittext = lookup, "STORYEND1"\n',
+        '}\n',
+        'cluster 3\n', -- E2M1-E2M4,
+        '{\n',
+        '' .. cluster_music_line .. '',
+        '  pic = "' .. interpic .. '"\n',
+        '  exittext = lookup, "STORYSTART2"\n',
+        '}\n',
+        'cluster 4\n', -- E2M5-E2M8,
+        '{\n',
+        '' .. cluster_music_line .. '',
+        '  pic = "' .. interpic .. '"\n',
+        '  exittext = lookup, "STORYEND2"\n',
+        '}\n',
+        'cluster 5\n', -- E3M1-E3M4,
+        '{\n',
+        '' .. cluster_music_line .. '',
+        '  pic = "' .. interpic .. '"\n',
+        '  exittext = lookup, "STORYSTART3"\n',
+        '}\n',
+        'cluster 6\n', -- E3M5-E3M8,
+        '{\n',
+        '' .. cluster_music_line .. '',
+        '  pic = "' .. interpic .. '"\n',
+        '  exittext = lookup, "STORYEND3"\n',
+        '}\n',
+        'cluster 7\n', -- E4M1-E4M4,
+        '{\n',
+        '' .. cluster_music_line .. '',
+        '  pic = "' .. interpic .. '"\n',
+        '  exittext = lookup, "STORYSTART4"\n',
+        '}\n',
+        'cluster 8\n', -- E4M5-E4M8,
+        '{\n',
+        '' .. cluster_music_line .. '',
+        '  pic = "' .. interpic .. '"\n',
+        '  entertext = lookup, "STORYEND4"\n',
+        '}\n',
+        'cluster 9\n', -- E5M1-E5M4,
+        '{\n',
+        '' .. cluster_music_line .. '',
+        '  pic = "' .. interpic .. '"\n',
+        '  entertext = lookup, "STORYSTART5"\n',
+        '}\n',
+        'cluster 10\n', -- E5M5-E5M8,
+        '{\n',
+        '' .. cluster_music_line .. '',
+        '  pic = "' .. interpic .. '"\n',
+        '  entertext = lookup, "STORYEND5"\n',
+        '}\n',
+        'cluster 11\n', -- E1M9,
+        '{\n',
+        '' .. cluster_music_line .. '',
+        '  pic = "' .. interpic .. '"\n',
+        '  exittext = lookup, "SECRET"\n',
+        '}\n',
+        'cluster 12\n', -- E2M9,
+        '{\n',
+        '' .. cluster_music_line .. '',
+        '  pic = "' .. interpic .. '"\n',
+        '  exittext = lookup, "SECRET"\n',
+        '}\n',
+        'cluster 13\n', -- E3M9,
+        '{\n',
+        '' .. cluster_music_line .. '',
+        '  pic = "' .. interpic .. '"\n',
+        '  entertext = lookup, "SECRET"\n',
+        '}\n',
+        'cluster 14\n', -- E4M9,
+        '{\n',
+        '' .. cluster_music_line .. '',
+        '  pic = "' .. interpic .. '"\n',
+        '  entertext = lookup, "SECRET"\n',
+        '}\n',
+        'cluster 15\n', -- E5M9,
+        '{\n',
+        '' .. cluster_music_line .. '',
+        '  pic = "' .. interpic .. '"\n',
+        '  entertext = lookup, "SECRET"\n',
         '}\n'
       }
     end
@@ -991,9 +991,9 @@ if map_num == 44 then
 
     episodedef =
     {
-      'episode ' .. map_string .. '\n'
-      '{\n'
-      '  name = "' .. GAME.levels[map_num].episode.description .. '"\n'
+      'episode ' .. map_string .. '\n',
+      '{\n',
+      '  name = "' .. GAME.levels[map_num].episode.description .. '"\n',
       '}\n'
     }
 
@@ -1010,7 +1010,7 @@ if map_num == 44 then
 
   if PARAM.custom_quit_messages == "yes" then
     local gamedef_lines = add_gamedef()
-    each line in gamedef_lines do
+    for _,line in pairs(gamedef_lines) do
       table.insert(PARAM.gameinfolump,line)
     end
     ZStoryGen_heretic_quitmessages()
@@ -1062,7 +1062,7 @@ if map_num == 44 then
     end
 
     local mapinfo_lines = add_mapinfo(info)
-    each line in mapinfo_lines do
+    for _,line in pairs(mapinfo_lines) do
       table.insert(PARAM.mapinfolump,line)
     end
 
@@ -1073,34 +1073,34 @@ if map_num == 44 then
     table.insert(PARAM.mapinfolump,"clearepisodes\n")
 
     local episode_info = add_episodedef(1)
-    each line in episode_info do
+    for _,line in pairs(episode_info) do
       table.insert(PARAM.mapinfolump,line)
     end
 
     if #GAME.levels > 9 then
       episode_info = add_episodedef(10)
-      each line in episode_info do
+      for _,line in pairs(episode_info) do
         table.insert(PARAM.mapinfolump,line)
       end
     end
 
     if #GAME.levels > 18 then
       episode_info = add_episodedef(19)
-      each line in episode_info do
+      for _,line in pairs(episode_info) do
         table.insert(PARAM.mapinfolump,line)
       end
     end
 
     if #GAME.levels > 27 then
       episode_info = add_episodedef(28)
-      each line in episode_info do
+      for _,line in pairs(episode_info) do
         table.insert(PARAM.mapinfolump,line)
       end
     end
 
     if #GAME.levels > 36 then
       episode_info = add_episodedef(37)
-      each line in episode_info do
+      for _,line in pairs(episode_info) do
         table.insert(PARAM.mapinfolump,line)
       end
     end
@@ -1108,7 +1108,7 @@ if map_num == 44 then
   -- collect lines for the cluster information in MAPINFO
   local clusterinfo_lines = add_clusterdef(info.interpic)
   if clusterinfo_lines then
-    each line in clusterinfo_lines do
+    for _,line in pairs(clusterinfo_lines) do
       table.insert(PARAM.mapinfolump,line)
     end
   end
@@ -1124,118 +1124,118 @@ end
 
 OB_MODULES["zdoom_specials_heretic"] =
 {
-  label = _("ZDoom Special Addons")
+  label = _("ZDoom Special Addons"),
 
-  game = "heretic"
+  game = "heretic",
 
-  side = "left"
+  side = "left",
 
-  priority = 68
+  priority = 68,
 
-  engine = { zdoom=1, gzdoom=1, skulltag=1 }
+  engine = { zdoom=1, gzdoom=1, skulltag=1 },
 
   hooks =
   {
-    setup = ZDOOM_SPECIALS_HERETIC.setup
-    get_levels = ZDOOM_SPECIALS_HERETIC.shuffle_music
+    setup = ZDOOM_SPECIALS_HERETIC.setup,
+    get_levels = ZDOOM_SPECIALS_HERETIC.shuffle_music,
     all_done = ZDOOM_SPECIALS_HERETIC.do_special_stuff
-  }
+  },
 
-  tooltip = "This module adds new ZDoom-exclusive features such as fog. More ZDoom-specific features will be included soon."
+  tooltip = "This module adds new ZDoom-exclusive features such as fog. More ZDoom-specific features will be included soon.",
 
   options =
   {
     fog_generator = {
       label = _("Fog Generator"),
-      priority = 12
-      choices = ZDOOM_SPECIALS_HERETIC.FOG_GEN_CHOICES
-      default = "no"
-      tooltip = "Generates fog colors based on the Sky Generator or generate completely randomly."
-    }
+      priority = 12,
+      choices = ZDOOM_SPECIALS_HERETIC.FOG_GEN_CHOICES,
+      default = "no",
+      tooltip = "Generates fog colors based on the Sky Generator or generate completely randomly.",
+    },
 
     fog_env = {
       label = _("Fog Environment"),
-      priority = 11
-      choices = ZDOOM_SPECIALS_HERETIC.FOG_ENV_CHOICES
-      default = "all"
-      tooltip = "Limits fog to outdoors (sectors with exposed sky ceilings) or allows for all."
-    }
+      priority = 11,
+      choices = ZDOOM_SPECIALS_HERETIC.FOG_ENV_CHOICES,
+      default = "all",
+      tooltip = "Limits fog to outdoors (sectors with exposed sky ceilings) or allows for all.",
+    },
 
     fog_intensity = {
       label = _("Fog Intensity"),
-      priority = 10
-      choices = ZDOOM_SPECIALS_HERETIC.FOG_DENSITY_CHOICES
-      default = "subtle"
-      tooltip = "Determines thickness and intensity of fog, if the Fog Generator is enabled. Subtle or Misty is recommended."
-    }
+      priority = 10,
+      choices = ZDOOM_SPECIALS_HERETIC.FOG_DENSITY_CHOICES,
+      default = "subtle",
+      tooltip = "Determines thickness and intensity of fog, if the Fog Generator is enabled. Subtle or Misty is recommended.",
+    },
 
     fog_affects_sky = {
       label = _("Sky Fog"),
-      priority = 9
-      choices = ZDOOM_SPECIALS_HERETIC.YES_NO
-      default = "yes"
-      tooltip = "Tints the sky texture with the fog color, intensity is based on the Fog Intensity selection."
-      gap = 1
-    }
+      priority = 9,
+      choices = ZDOOM_SPECIALS_HERETIC.YES_NO,
+      default = "yes",
+      tooltip = "Tints the sky texture with the fog color, intensity is based on the Fog Intensity selection.",
+      gap = 1,
+    },
 
     dynamic_lights = {
-      label = _("Dynamic Lights")
-      priority = 8
-      choices = ZDOOM_SPECIALS_HERETIC.YES_NO
-      default = "yes"
-      tooltip = "Generates dynamic point lights on ceiling light prefabs."
-    }
+      label = _("Dynamic Lights"),
+      priority = 8,
+      choices = ZDOOM_SPECIALS_HERETIC.YES_NO,
+      default = "yes",
+      tooltip = "Generates dynamic point lights on ceiling light prefabs.",
+    },
 
     glowing_flats = {
-      label = _("Glowing Flats")
-      priority = 7
-      choices = ZDOOM_SPECIALS_HERETIC.YES_NO
-      default = "yes"
+      label = _("Glowing Flats"),
+      priority = 7,
+      choices = ZDOOM_SPECIALS_HERETIC.YES_NO,
+      default = "yes",
       tooltip = "Adds Doom-64 style lighting/glowing flats via GLDEFS lump. " ..
-                "Visible on Zandronum ports as well."
-      gap = 1
-    }
+                "Visible on Zandronum ports as well.",
+      gap = 1,
+    },
 
     mapinfo_music_shuffler = {
-      label = _("Shuffle Music")
-      priority = 6
-      choices = ZDOOM_SPECIALS_HERETIC.MUSIC_SHUFFLER_CHOICES
-      default = "no"
+      label = _("Shuffle Music"),
+      priority = 6,
+      choices = ZDOOM_SPECIALS_HERETIC.MUSIC_SHUFFLER_CHOICES,
+      default = "no",
       tooltip = "Shuffles music in the MAPINFO lump. Oblige's vanilla music shuffler uses " ..
-                "a BEX lump and is therefore ignored when the ZDoom Addons module is active."
-    }
+                "a BEX lump and is therefore ignored when the ZDoom Addons module is active.",
+    },
 
     story_generator = {
       label = _("Story Generator"),
-      priority = 5
-      choices = ZDOOM_SPECIALS_HERETIC.STORY_CHOICES
-      default = "proc"
-      tooltip = "Adds cluster information with generic or randomized story text into the MAPINFO structure!"
-    }
+      priority = 5,
+      choices = ZDOOM_SPECIALS_HERETIC.STORY_CHOICES,
+      default = "proc",
+      tooltip = "Adds cluster information with generic or randomized story text into the MAPINFO structure!",
+    },
 
     custom_quit_messages = {
       label = _("Quit Messages"),
-      priority = 4
-      choices = ZDOOM_SPECIALS_HERETIC.YES_NO
-      default = "yes"
-      tooltip = "Adds custom quit messages into the MAPINFO game definition."
-    }
+      priority = 4,
+      choices = ZDOOM_SPECIALS_HERETIC.YES_NO,
+      default = "yes",
+      tooltip = "Adds custom quit messages into the MAPINFO game definition.",
+    },
 
     generic_intermusic = {
       label = _("Intermission Music"),
-      priority = 3
-      choices = ZDOOM_SPECIALS_HERETIC.INTERPIC_MUSIC
-      default = "MUS_INTR"
-      tooltip = "Changes the music playing during intermission screens."
-    }
+      priority = 3,
+      choices = ZDOOM_SPECIALS_HERETIC.INTERPIC_MUSIC,
+      default = "MUS_INTR",
+      tooltip = "Changes the music playing during intermission screens.",
+    },
 
     no_intermission = {
       label = _("Disable Intermissions"),
-      priority = 1
-      choices = ZDOOM_SPECIALS_HERETIC.YES_NO
-      default = "no"
+      priority = 1,
+      choices = ZDOOM_SPECIALS_HERETIC.YES_NO,
+      default = "no",
       tooltip = "Removes end-level Intermission Screens (containing map completion data) but retains " ..
-                "Text Screens with story."
-    }
-  }
+                "Text Screens with story.",
+    },
+  },
 }

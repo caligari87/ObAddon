@@ -9,7 +9,7 @@
 
 --  This program is free software; you can redistribute it and/or
 --  modify it under the terms of the GNU General Public License
---  as published by the Free Software Foundation; either version 2
+--  as published by the Free Software Foundation; either version 2,
 --  of the License, or (at your option) any later version.
 --
 --  This program is distributed in the hope that it will be useful,
@@ -21,16 +21,16 @@
 
 STRIFE.PARAMETERS =
 {
-  rails = true
-  switches = true
-  light_brushes = true
+  rails = true,
+  switches = true,
+  light_brushes = true,
 
-  max_name_length = 28
+  max_name_length = 28,
 
-  skip_monsters = { 20,30 }
+  skip_monsters = { 20,30 },
 
-  time_factor   = 1.0
-  damage_factor = 1.0
-  ammo_factor   = 0.8
-  health_factor = 0.7
+  time_factor   = 1.0,
+  damage_factor = 1.0,
+  ammo_factor   = 0.8,
+  health_factor = 0.7,
 }

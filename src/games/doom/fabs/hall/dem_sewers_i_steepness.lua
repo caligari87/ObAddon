@@ -2,21 +2,21 @@
 
 PREFABS.Hallway_sewer_i_steepness =
 {
-  file   = "hall/dem_sewers_i_steepness.wad"
-  map    = "MAP01"
+  file   = "hall/dem_sewers_i_steepness.wad",
+  map    = "MAP01",
 
-  group  = "sewers"
-  prob   = 50
+  group  = "sewers",
+  prob   = 50,
 
-  style = "steepness"
+  style = "steepness",
 
-  where  = "seeds"
-  shape  = "I"
+  where  = "seeds",
+  shape  = "I",
 
-  seed_w = 2
-  seed_h = 2
+  seed_w = 2,
+  seed_h = 2,
 
-  delta_h = 64
+  delta_h = 64,
 
-  can_flip = true
+  can_flip = true,
 }

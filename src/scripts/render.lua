@@ -9,7 +9,7 @@
 --
 --  This program is free software; you can redistribute it and/or
 --  modify it under the terms of the GNU General Public License
---  as published by the Free Software Foundation; either version 2
+--  as published by the Free Software Foundation; either version 2,
 --  of the License, or (at your option) any later version.
 --
 --  This program is distributed in the hope that it will be useful,
@@ -106,37 +106,37 @@ function Render_edge(E)
     elseif dir == 1 then
       return
       {
-        { x=x1,      y=y2      }
-        { x=x2,      y=y1      }
-        { x=x2,      y=y1 + TK }
-        { x=x1 + TK, y=y2      }
+        { x=x1,      y=y2      },
+        { x=x2,      y=y1      },
+        { x=x2,      y=y1 + TK },
+        { x=x1 + TK, y=y2      },
       }
 
     elseif dir == 9 then
       return
       {
-        { x=x1,      y=y2      }
-        { x=x1,      y=y2 - TK }
-        { x=x2 - TK, y=y1      }
-        { x=x2,      y=y1      }
+        { x=x1,      y=y2      },
+        { x=x1,      y=y2 - TK },
+        { x=x2 - TK, y=y1      },
+        { x=x2,      y=y1      },
       }
 
     elseif dir == 3 then
       return
       {
-        { x=x1,      y=y1 }
-        { x=x2,      y=y2 }
-        { x=x2 - TK, y=y2 }
-        { x=x1,      y=y1 + TK }
+        { x=x1,      y=y1 },
+        { x=x2,      y=y2 },
+        { x=x2 - TK, y=y2 },
+        { x=x1,      y=y1 + TK },
       }
 
     elseif dir == 7 then
       return
       {
-        { x=x1,      y=y1 }
-        { x=x1 + TK, y=y1 }
-        { x=x2,      y=y2 - TK }
-        { x=x2,      y=y2 }
+        { x=x1,      y=y1 },
+        { x=x1 + TK, y=y1 },
+        { x=x2,      y=y2 - TK },
+        { x=x2,      y=y2 },
       }
 
     else
@@ -149,10 +149,10 @@ function Render_edge(E)
     -- find a window prefab to use
     local reqs =
     {
-      kind = "window"
+      kind = "window",
 
-      seed_w = assert(E.long)
-      group  = assert(E.window_group)
+      seed_w = assert(E.long),
+      group  = assert(E.window_group),
       height = assert(E.window_height)
     }
 
@@ -174,7 +174,7 @@ function Render_edge(E)
     local function check_area_state(S1, S2, mode)
 
       if mode == "narrow_area" then
-        if S1.area != S2.area then return true end
+        if S1.area ~= S2.area then return true end
       end
 
       if mode == "potentially_obstructing" then
@@ -182,7 +182,7 @@ function Render_edge(E)
         if not S2.area then return true end
 
         if S1.area.room and S2.area.room then
-          if S1.area.room != S2.area.room then return true end
+          if S1.area.room ~= S2.area.room then return true end
           if S2.area.chunk then return true end
         end
       end
@@ -192,11 +192,11 @@ function Render_edge(E)
 
     local reqs =
     {
-      kind = "wall"
+      kind = "wall",
 
-      seed_w = assert(E.long)
+      seed_w = assert(E.long),
 
-      height = math.abs(A.ceil_h - A.floor_h)
+      height = math.abs(A.ceil_h - A.floor_h),
 
       on_liquids = E.area.mode
     }
@@ -288,7 +288,7 @@ function Render_edge(E)
 
         -- if seed in front of the edge has anything on it
         -- choose a flat wall fab instead
-        if chunk.content and chunk.content != "MON_TELEPORT" then
+        if chunk.content and chunk.content ~= "MON_TELEPORT" then
           if chunk.prefab_def and chunk.prefab_def.size then
             reqs.deep = math.clamp(16, chunk.space - chunk.prefab_def.size, 9999)
 
@@ -373,9 +373,9 @@ function Render_edge(E)
   local function pick_fence_prefab()
     local reqs =
     {
-      kind = "fence"
+      kind = "fence",
 
-      group = assert(E.area.room.fence_group)
+      group = assert(E.area.room.fence_group),
 
       seed_w = assert(E.long)
     }
@@ -396,9 +396,9 @@ function Render_edge(E)
   local function pick_beam_prefab()
     local reqs =
     {
-      kind = "beam"
+      kind = "beam",
 
-      group = assert(E.area.room.beam_group)
+      group = assert(E.area.room.beam_group),
 
       seed_w = assert(E.long)
     }
@@ -432,7 +432,7 @@ function Render_edge(E)
 
     local f_brush = brushlib.quad(x1, y1, x2, y2)
 
-    each C in f_brush do
+    for _,C in pairs(f_brush) do
       C.flags = DOOM_LINE_FLAGS.draw_never
     end
 
@@ -457,9 +457,9 @@ function Render_edge(E)
 
     local side_props =
     {
-      tex = "ZZWOLF10" -- currently patch-replaced as an invisible wall
+      tex = "ZZWOLF10", -- currently patch-replaced as an invisible wall
 
-      blocked = 1
+      blocked = 1,
     }
 
     local x1,y1, x2,y2 = Edge_line_coords(edge)
@@ -540,10 +540,10 @@ function Render_edge(E)
 
     local side_props =
     {
-      tex = mat.t
-      v1  = 0
+      tex = mat.t,
+      v1  = 0,
 
-      blocked = E.rail_block
+      blocked = E.rail_block,
       tridee_midtex = E.rail_3dmidtex
     }
 
@@ -626,7 +626,7 @@ function Render_edge(E)
       if not E.count then E.count = 1 end
       if E.count then E.count = E.count + 1 end
       if beam_density == "sparse-even" and E.count%2 == 0 then return end
-      if beam_density == "sparse-odd" and E.count%2 != 0 then return end
+      if beam_density == "sparse-odd" and E.count%2 ~= 0 then return end
     end
 
     local T
@@ -670,7 +670,7 @@ function Render_edge(E)
 do return "narrow" end
 
     local junc = S.foo  -- FIXME
-    if not junc or junc.kind != "steps" then return "narrow" end
+    if not junc or junc.kind ~= "steps" then return "narrow" end
 
     local N, bord
 
@@ -714,7 +714,7 @@ do return "narrow" end
 do return "narrow" end
 
     local junc = S.foo -- FIXME
-    if not junc or junc.kind != "steps" then return "narrow" end
+    if not junc or junc.kind ~= "steps" then return "narrow" end
 
     local N, bord
 
@@ -796,17 +796,17 @@ do return "narrow" end
       if b_mode == "narrow" then bdy =  0.5 elseif b_mode == "wide" then bdy = -1 end
 
     elseif dir == 1 then
-      if a_mode != "wide" then ady = 1 else adx = 1 end
-      if b_mode != "wide" then bdx = 1 else bdy = 1 end
+      if a_mode ~= "wide" then ady = 1 else adx = 1 end
+      if b_mode ~= "wide" then bdx = 1 else bdy = 1 end
     elseif dir == 9 then
-      if a_mode != "wide" then ady = -1 else adx = -1 end
-      if b_mode != "wide" then bdx = -1 else bdy = -1 end
+      if a_mode ~= "wide" then ady = -1 else adx = -1 end
+      if b_mode ~= "wide" then bdx = -1 else bdy = -1 end
     elseif dir == 3 then
-      if a_mode != "wide" then adx = -1 else ady =  1 end
-      if b_mode != "wide" then bdy =  1 else bdx = -1 end
+      if a_mode ~= "wide" then adx = -1 else ady =  1 end
+      if b_mode ~= "wide" then bdy =  1 else bdx = -1 end
     elseif dir == 7 then
-      if a_mode != "wide" then adx =  1 else ady = -1 end
-      if b_mode != "wide" then bdy = -1 else bdx =  1 end
+      if a_mode ~= "wide" then adx =  1 else ady = -1 end
+      if b_mode ~= "wide" then bdy = -1 else bdx =  1 end
     else
       error("bad dir in make_step_brush")
     end
@@ -819,10 +819,10 @@ stderrf("dA = (%1.1f %1.1f)  dB = (%1.1f %1.1f)\n", adx, ady, bdx, bdy)
 
     local brush =
     {
-      { x = bx, y = by }
-      { x = ax, y = ay }
-      { x = ax + adx * TK, y = ay + ady * TK }
-      { x = bx + bdx * TK, y = by + bdy * TK }
+      { x = bx, y = by },
+      { x = ax, y = ay },
+      { x = ax + adx * TK, y = ay + ady * TK },
+      { x = bx + bdx * TK, y = by + bdy * TK },
     }
 
     return brush
@@ -837,7 +837,7 @@ stderrf("dA = (%1.1f %1.1f)  dB = (%1.1f %1.1f)\n", adx, ady, bdx, bdy)
     -- wrong side?
     assert(steps_z2 > steps_z1)
 
-    local diff_h = steps_z2 - steps_z1
+    local diff_h = steps_z2 - steps_z1,
     assert(diff_h > 8)
 
     local num_steps = 1
@@ -911,11 +911,11 @@ stderrf("dA = (%1.1f %1.1f)  dB = (%1.1f %1.1f)\n", adx, ady, bdx, bdy)
 
     local skin =
     {
-      wall   = inner_mat
-      outer  = outer_mat
-      floor  = floor1_mat
-      floor2 = floor2_mat
-      ceil   = ceil1_mat
+      wall   = inner_mat,
+      outer  = outer_mat,
+      floor  = floor1_mat,
+      floor2 = floor2_mat,
+      ceil   = ceil1_mat,
       ceil2  = ceil2_mat
     }
 
@@ -1025,14 +1025,14 @@ function Render_junction(A, S, dir)
   if N == "NODIR" then return end
 
   -- create edge-lines for spot finding code
-  if N and N.area != A then
+  if N and N.area ~= A then
     local x1,y1, x2,y2 = S:line_coords(dir)
 
     table.insert(A.side_edges, { x1=x1, y1=y1, x2=x2, y2=y2 })
   end
 
   -- proper EDGE objects are handled elsewhere (so don't clobber them here)
-  if S.edge[dir] and S.edge[dir].kind != "ignore" then
+  if S.edge[dir] and S.edge[dir].kind ~= "ignore" then
     return
   end
 
@@ -1080,7 +1080,7 @@ function Render_corner(cx, cy)
     if not corner.post_type then
       local brush  = brushlib.quad(mx - 8, my - 8, mx + 8, my + 8)
 
-      each C in brush do
+      for _,C in pairs(brush) do
         C.u1 = 0
         C.v1 = 0
       end
@@ -1098,7 +1098,7 @@ function Render_corner(cx, cy)
 
       local skins =
       {
-        wall = mat
+        wall = mat,
         floor = mat
       }
 
@@ -1115,7 +1115,7 @@ function Render_corner(cx, cy)
 
     local T = Trans.spot_transform(mx, my, 1024, dir)
 
-    local skin = {wall=mat}
+    local skin = {wall=mat},
 
     Fabricate(nil, def, T, {skin})
   end
@@ -1124,7 +1124,7 @@ function Render_corner(cx, cy)
   local function init_wall_analysis()
     analysis = {}
 
-    each dir in geom.ALL_DIRS do
+    for _,dir in pairs(geom.ALL_DIRS) do
       if corner.walls[dir] then
         analysis[dir] = corner.walls[dir]
       else
@@ -1137,7 +1137,7 @@ function Render_corner(cx, cy)
   local function init_fence_analysis()
     analysis = {}
 
-    each dir in geom.ALL_DIRS do
+    for _,dir in pairs(geom.ALL_DIRS) do
       if corner.fences[dir] then
         analysis[dir] = corner.fences[dir]
       else
@@ -1184,11 +1184,11 @@ function Render_corner(cx, cy)
 
     local brush =
     {
-      { x = x + ax*16, y = y + ay*16 }
-      { x = x - ax*16, y = y - ay*16 }
+      { x = x + ax*16, y = y + ay*16 },
+      { x = x - ax*16, y = y - ay*16 },
 
-      { x = x - ax*8 + nx*8, y = y - ay*8 + ny*8 }
-      { x = x + ax*8 + nx*8, y = y + ay*8 + ny*8 }
+      { x = x - ax*8 + nx*8, y = y - ay*8 + ny*8 },
+      { x = x + ax*8 + nx*8, y = y + ay*8 + ny*8 },
     }
 
     if top_z then
@@ -1237,7 +1237,7 @@ function Render_corner(cx, cy)
     -- OK --
 
     -- handle different textures, use a neutral value
-    if L_tex != R_tex and THEME.corner_fill_tex then
+    if L_tex ~= R_tex and THEME.corner_fill_tex then
       L_tex = THEME.corner_fill_tex
     end
 
@@ -1292,7 +1292,7 @@ function Render_corner(cx, cy)
       init_wall_analysis()
     end
 
-    each dir in geom.CORNERS do
+    for _,dir in pairs(geom.CORNERS) do
       if detect_gap(dir, 1, 1) or
          detect_gap(dir, 1, 2) or
          detect_gap(dir, 2, 1) or
@@ -1302,7 +1302,7 @@ function Render_corner(cx, cy)
       end
     end
 
-    each dir in geom.SIDES do
+    for _,dir in pairs(geom.SIDES) do
       if detect_gap(dir, 2, 2, "is_sharp") or
          detect_gap(dir, 3, 2, "is_sharp") or
          detect_gap(dir, 2, 3, "is_sharp")
@@ -1429,10 +1429,10 @@ function Render_sink_part(A, S, where, sink)
   local function do_whole_square()
     local brush =
     {
-      { x = S.x1, y = S.y1 }
-      { x = S.x2, y = S.y1 }
-      { x = S.x2, y = S.y2 }
-      { x = S.x1, y = S.y2 }
+      { x = S.x1, y = S.y1 },
+      { x = S.x2, y = S.y1 },
+      { x = S.x2, y = S.y2 },
+      { x = S.x1, y = S.y2 },
     }
 
     apply_brush(brush)
@@ -1446,9 +1446,9 @@ function Render_sink_part(A, S, where, sink)
 
     local brush =
     {
-      { x = ax, y = ay }
-      { x = cx, y = cy }
-      { x = bx, y = by }
+      { x = ax, y = ay },
+      { x = cx, y = cy },
+      { x = bx, y = by },
     }
 
     apply_brush(brush)
@@ -1472,7 +1472,7 @@ function Render_sink_part(A, S, where, sink)
     local ax2, ay2 = (ax + cx) / 2, (ay + cy) / 2
     local bx2, by2 = (bx + cx) / 2, (by + cy) / 2
 
-    local k1 = 0.375 --0.375
+    local k1 = 0.375 --0.375,
     local k2 = 1 - k1
 
     if away then k1, k2 = k2, k1 end
@@ -1492,7 +1492,7 @@ function Render_sink_part(A, S, where, sink)
             bx3, by3 = bx2, by2
           end
 
-          bx2 = bx * 0.375 + cx * 0.625 --.375 .625
+          bx2 = bx * 0.375 + cx * 0.625 --.375 .625,
           by2 = by * 0.375 + cy * 0.625
 
         elseif A + C == 10 then
@@ -1524,34 +1524,34 @@ stderrf("away = %s\n\n", string.bool(away))
     if away then
       brush =
       {
-        { x = ax,  y = ay  }
-        { x = ax2, y = ay2 }
-        { x = bx2, y = by2 }
-        { x = bx,  y = by  }
+        { x = ax,  y = ay  },
+        { x = ax2, y = ay2 },
+        { x = bx2, y = by2 },
+        { x = bx,  y = by  },
       }
 
       trim =
       {
-        { x = ax2, y = ay2 }
-        { x = ax3, y = ay3 }
-        { x = bx3, y = by3 }
-        { x = bx2, y = by2 }
+        { x = ax2, y = ay2 },
+        { x = ax3, y = ay3 },
+        { x = bx3, y = by3 },
+        { x = bx2, y = by2 },
       }
 
     else -- near
       brush =
       {
-        { x = ax2, y = ay2 }
-        { x = cx,  y = cy  }
-        { x = bx2, y = by2 }
+        { x = ax2, y = ay2 },
+        { x = cx,  y = cy  },
+        { x = bx2, y = by2 },
       }
 
       trim =
       {
-        { x = ax3, y = ay3 }
-        { x = ax2, y = ay2 }
-        { x = bx2, y = by2 }
-        { x = bx3, y = by3 }
+        { x = ax3, y = ay3 },
+        { x = ax2, y = ay2 },
+        { x = bx2, y = by2 },
+        { x = bx3, y = by3 },
       }
     end
 
@@ -1680,7 +1680,7 @@ end
 
 
 function Render_void_area(A, S)
-  each S in A.seeds do
+  for _,S in pairs(A.seeds) do
     local w_brush = S:make_brush()
 
     brushlib.set_mat(w_brush, "_DEFAULT")
@@ -1735,7 +1735,7 @@ function Render_floor(A)
 
   ---| Render_floor |---
 
-  each S in A.seeds do
+  for _,S in pairs(A.seeds) do
     if should_do_seed(S) then
       render_seed(S)
 
@@ -1789,7 +1789,7 @@ function Render_ceiling(A)
 
   ---| Render_ceiling |---
 
-  each S in A.seeds do
+  for _,S in pairs(A.seeds) do
     if should_do_seed(S) then
       render_seed(S)
 
@@ -1858,7 +1858,7 @@ function Render_chunk(chunk)
       local N  = SEEDS[sx][sy]
       local NR = N and N.area and N.area.room
 
-      if NR != R then break; end
+      if NR ~= R then break; end
 
       -- stop at closets and joiners too
       if N.area.mode == "void" then break; end
@@ -1873,7 +1873,7 @@ function Render_chunk(chunk)
         N  = N.top
         NR = N and N.area and N.area.room
 
-        if NR != R then break; end
+        if NR ~= R then break; end
         if N.area.mode == "void" then break; end
       end
 
@@ -1943,11 +1943,11 @@ function Render_chunk(chunk)
 
     local reqs =
     {
-      kind  = "item"
-      where = "point"
+      kind  = "item",
+      where = "point",
 
-      size   = assert(chunk.space)
-      height = z2 - z1
+      size   = assert(chunk.space),
+      height = z2 - z1,
     }
 
     local A = assert(chunk.area)
@@ -1980,11 +1980,11 @@ function Render_chunk(chunk)
   local function content_start_pad(chunk, dir)
     local reqs =
     {
-      kind  = "start"
-      where = "point"
+      kind  = "start",
+      where = "point",
 
-      size  = assert(chunk.space)
-      height = z2 - z1
+      size  = assert(chunk.space),
+      height = z2 - z1,
     }
 
     local def = Fab_pick(reqs)
@@ -2031,11 +2031,11 @@ function Render_chunk(chunk)
 
     local reqs =
     {
-      kind  = "exit"
-      where = "point"
+      kind  = "exit",
+      where = "point",
 
-      size  = assert(chunk.space)
-      height = z2 - z1
+      size  = assert(chunk.space),
+      height = z2 - z1,
     }
 
     if secret_exit then
@@ -2057,11 +2057,11 @@ function Render_chunk(chunk)
 
     local reqs =
     {
-      kind  = "switch"
-      where = "point"
+      kind  = "switch",
+      where = "point",
 
-      size   = assert(chunk.space)
-      height = z2 - z1
+      size   = assert(chunk.space),
+      height = z2 - z1,
     }
 
     reqs.key = "sw_metal"  -- FIXME GET IT PROPERLY
@@ -2097,11 +2097,11 @@ chunk.goal.action = "S1_OpenDoor"  -- FIXME IT SHOULD BE SET WHEN JOINER IS REND
 
     local reqs =
     {
-      kind  = "teleporter"
-      where = "point"
+      kind  = "teleporter",
+      where = "point",
 
-      size   = assert(chunk.space)
-      height = z2 - z1
+      size   = assert(chunk.space),
+      height = z2 - z1,
     }
 
     local def = Fab_pick(reqs)
@@ -2137,8 +2137,8 @@ chunk.goal.action = "S1_OpenDoor"  -- FIXME IT SHOULD BE SET WHEN JOINER IS REND
 
     local brush = brushlib.quad(mx - r, my - r, mx + r, my + r)
 
-    -- mark as "no draw"
-    each C in brush do
+    -- mark as "no draw",
+    for _,C in pairs(brush) do
       C.draw_never = 1
     end
 
@@ -2147,8 +2147,8 @@ chunk.goal.action = "S1_OpenDoor"  -- FIXME IT SHOULD BE SET WHEN JOINER IS REND
 
     local top =
     {
-      t = z1 + 1
-      delta_z = -1
+      t = z1 + 1,
+      delta_z = -1,
       tag = assert(chunk.out_tag)
     }
 
@@ -2229,7 +2229,7 @@ chunk.goal.action = "S1_OpenDoor"  -- FIXME IT SHOULD BE SET WHEN JOINER IS REND
 
 
   local function build_ceiling_thang()
-    if chunk.content != "DECORATION" then
+    if chunk.content ~= "DECORATION" then
       error("Unknown ceiling thang: " .. tostring(chunk.content))
     end
 
@@ -2245,23 +2245,23 @@ chunk.goal.action = "S1_OpenDoor"  -- FIXME IT SHOULD BE SET WHEN JOINER IS REND
 
     -- dynamic light fabrication for ZDoom dynamic lights module
     if PARAM.dynamic_lights == "yes" then
-      if def.kind == "light" and def.light_color != "none" then
+      if def.kind == "light" and def.light_color ~= "none" then
         local light_ent = {
-          x = chunk.mx
-          y = chunk.my
-          z = ceil_h - def.bound_z1 - 8
+          x = chunk.mx,
+          y = chunk.my,
+          z = ceil_h - def.bound_z1 - 8,
         }
 
         local light_id_table =
         {
-          red = 14998
-          orange = 14997
-          yellow = 14996
-          blue = 14995
-          green = 14994
-          beige = 14993
-          purple = 14992
-          white = 14999
+          red = 14998,
+          orange = 14997,
+          yellow = 14996,
+          blue = 14995,
+          green = 14994,
+          beige = 14993,
+          purple = 14992,
+          white = 14999,
         }
 
         if def.light_color then
@@ -2628,7 +2628,7 @@ chunk.goal.action = "S1_OpenDoor"  -- FIXME IT SHOULD BE SET WHEN JOINER IS REND
     A.ceil_mat = "_SKY"
 
     -- disable walls around/inside this chunk
-    each N in A.neighbors do
+    for _,N in pairs(A.neighbors) do
       Junction_make_empty(Junction_lookup(A, N))
     end
   end
@@ -2738,13 +2738,13 @@ function Render_area(A)
   if A.chunk and A.chunk.occupy == "whole" then
     -- whole chunks never build walls inside them
   else
-    each E in A.edges do
+    for _,E in pairs(A.edges) do
       assert(E.area == A)
       Render_edge(E)
     end
 
-    each S in A.seeds do
-      each dir in geom.ALL_DIRS do
+    for _,S in pairs(A.seeds) do
+      for _,dir in pairs(geom.ALL_DIRS) do
         Render_junction(A, S, dir)
       end
     end
@@ -2772,10 +2772,10 @@ function Render_all_chunks()
 
     local reqs =
     {
-      kind  = "floor"
-      where = "seeds"
+      kind  = "floor",
+      where = "seeds",
 
-      seed_w = chunk.sw
+      seed_w = chunk.sw,
       seed_h = chunk.sh
     }
 
@@ -2796,7 +2796,7 @@ function Render_all_chunks()
   local function visit_chunk(chunk)
     local is_switch = (chunk.content == "SWITCH" or chunk.content == "LOCAL_SWITCH")
 
-    if sel(is_switch, 1, 0) != sel(SWITCHES_ONLY, 1, 0) then
+    if sel(is_switch, 1, 0) ~= sel(SWITCHES_ONLY, 1, 0) then
       return
     end
 
@@ -2811,14 +2811,14 @@ function Render_all_chunks()
     -- [ to get correct action of the remote door, etc ]
     SWITCHES_ONLY = (pass == 2)
 
-    each R in LEVEL.rooms do
-      each chunk in R.floor_chunks do visit_chunk(chunk) end
-      each chunk in R.ceil_chunks  do visit_chunk(chunk) end
+    for _,R in pairs(LEVEL.rooms) do
+      for _,chunk in pairs(R.floor_chunks) do visit_chunk(chunk) end
+      for _,chunk in pairs(R.ceil_chunks ) do visit_chunk(chunk) end
 
-      each chunk in R.closets do visit_chunk(chunk) end
-      each chunk in R.stairs  do visit_chunk(chunk) end
-      each chunk in R.joiners do visit_chunk(chunk) end
-      each chunk in R.pieces  do visit_chunk(chunk) end
+      for _,chunk in pairs(R.closets) do visit_chunk(chunk) end
+      for _,chunk in pairs(R.stairs ) do visit_chunk(chunk) end
+      for _,chunk in pairs(R.joiners) do visit_chunk(chunk) end
+      for _,chunk in pairs(R.pieces ) do visit_chunk(chunk) end
     end
   end
 end
@@ -2856,7 +2856,7 @@ function Render_depot(depot)
   local cur_trap = assert(dest_R.traps[#dest_R.traps])
 
   if depot.max_spot_size then
-    each spot in cur_trap.mon_spots do
+    for _,spot in pairs(cur_trap.mon_spots) do
       if spot.x2 > spot.x1 + depot.max_spot_size then
          spot.x2 = spot.x1 + depot.max_spot_size
       end
@@ -2883,7 +2883,7 @@ end
 
 
 function Render_all_areas()
-  each A in LEVEL.areas do
+  for _,A in pairs(LEVEL.areas) do
     Render_area(A)
   end
 
@@ -2893,7 +2893,7 @@ function Render_all_areas()
   end
   end
 
-  each depot in LEVEL.depots do
+  for _,depot in pairs(LEVEL.depots) do
     Render_depot(depot)
   end
 
@@ -2919,14 +2919,14 @@ function Render_all_street_markings()
   -- MSSP-TODO: should probably be placed in themes.lua along with the sink info
   local road_fab_list =
   {
-    Road_lane_marker = 100
-    Road_crosswalk = 5
-    Road_lane_marker_with_stop = 5
+    Road_lane_marker = 100,
+    Road_crosswalk = 5,
+    Road_lane_marker_with_stop = 5,
   }
 
   local road_segments = 0
   local road_dead_ends = 0
-  each name,info in LEVEL.road_marking_spots do
+  for name,info in pairs(LEVEL.road_marking_spots) do
     local x = info.x
     local y = info.y
     local z = info.z
@@ -3025,7 +3025,7 @@ function Render_all_street_traffic()
 
   rand.shuffle(LEVEL.road_street_traffic_spots)
 
-  each SPOT in LEVEL.road_street_traffic_spots do
+  for _,SPOT in pairs(LEVEL.road_street_traffic_spots) do
 
     -- stagger positions a bit
     SPOT.x = SPOT.x + int(rand.range(-32,32))
@@ -3036,12 +3036,12 @@ function Render_all_street_traffic()
 
     reqs =
     {
-      kind = "decor"
-      env = "outdoor"
+      kind = "decor",
+      env = "outdoor",
 
-      is_road = true
-      where = "point"
-      size = 9999
+      is_road = true,
+      where = "point",
+      size = 9999,
       height = SPOT.height
     }
 
@@ -3077,7 +3077,7 @@ function Render_all_street_traffic()
     -- capture the material of the road sink, damn it!
     local skin =
     {
-      floor = "CEIL5_1"
+      floor = "CEIL5_1",
     }
 
     if def then
@@ -3085,10 +3085,10 @@ function Render_all_street_traffic()
 
       local street_traffic_spot =
       {
-        x = SPOT.x
-        y = SPOT.y
-        dir = SPOT.dir
-        size = def.size
+        x = SPOT.x,
+        y = SPOT.y,
+        dir = SPOT.dir,
+        size = def.size,
         def = def.name
       }
 
@@ -3130,7 +3130,7 @@ function Render_find_street_markings()
   --   y : y-position
   --   z : z-position
   --   dir : direction
-  --   kind : "dead_end" or "segment"
+  --   kind : "dead_end" or "segment",
 
   gui.printf("--== Render street markings ==--\n")
 
@@ -3163,9 +3163,9 @@ function Render_find_street_markings()
   end
 
   local function update_seeds_table()
-    each R in LEVEL.rooms do
-      each A in R.areas do
-        each S in A.seeds do
+    for _,R in pairs(LEVEL.rooms) do
+      for _,A in pairs(R.areas) do
+        for _,S in pairs(A.seeds) do
           SEEDS[S.sx][S.sy] = S
           if S.area.is_road and R.svolume > 48 then
             markable_seeds = markable_seeds + 1
@@ -3198,7 +3198,7 @@ function Render_find_street_markings()
       if not S2.area.is_road then
         score = score + 1
       elseif S2.area.is_road and
-      S.area.room.id != S2.area.room.id then
+      S.area.room.id ~= S2.area.room.id then
         score = score + 1
       end
 
@@ -3217,7 +3217,7 @@ function Render_find_street_markings()
           if not S2.area.is_road then
             score = score + 1
           elseif S2.area.is_road and
-          S.area.room.id != S2.area.room.id then
+          S.area.room.id ~= S2.area.room.id then
             score = score + 1
           end
         end
@@ -3250,15 +3250,15 @@ function Render_find_street_markings()
 
           S2 = seed_from_nudge(S,4,1)
           if not S2.area.is_road or
-          S2.area.mode != "floor" or
-          S2.area.room != S.area.room then
+          S2.area.mode ~= "floor" or
+          S2.area.room ~= S.area.room then
             mark_kind = "dead_end"
           end
 
           S2 = seed_from_nudge(S,6,1)
           if not S2.area.is_road or
-          S2.area.mode != "floor" or
-          S2.area.room != S.area.room then
+          S2.area.mode ~= "floor" or
+          S2.area.room ~= S.area.room then
             mark_kind = "dead_end"
           end
         end
@@ -3268,15 +3268,15 @@ function Render_find_street_markings()
 
           S2 = seed_from_nudge(S,8,1)
           if not S2.area.is_road or
-          S2.area.mode != "floor" or
-          S2.area.room != S.area.room then
+          S2.area.mode ~= "floor" or
+          S2.area.room ~= S.area.room then
             mark_kind = "dead_end"
           end
 
           S2 = seed_from_nudge(S,2,1)
           if not S2.area.is_road or
-          S2.area.mode != "floor" or
-          S2.area.room != S.area.room then
+          S2.area.mode ~= "floor" or
+          S2.area.room ~= S.area.room then
             mark_kind = "dead_end"
           end
         end
@@ -3298,11 +3298,11 @@ function Render_find_street_markings()
 
         local road_pos =
         {
-          id = #LEVEL.road_marking_spots + 1
-          x = mark_x
-          y = mark_y
-          z = mark_z
-          dir = mark_dir
+          id = #LEVEL.road_marking_spots + 1,
+          x = mark_x,
+          y = mark_y,
+          z = mark_z,
+          dir = mark_dir,
           kind = mark_kind
         }
 
@@ -3373,9 +3373,9 @@ function Render_establish_street_lanes()
     local S3 = SEEDS[S.sx][S.sy + 1]
     local S4 = SEEDS[S.sx + 1][S.sy + 1]
 
-    if S2.lane_dir != cur_dir then return false end
-    if S3.lane_dir != cur_dir then return false end
-    if S4.lane_dir != cur_dir then return false end
+    if S2.lane_dir ~= cur_dir then return false end
+    if S3.lane_dir ~= cur_dir then return false end
+    if S4.lane_dir ~= cur_dir then return false end
 
     local off_x = (S.mid_x + S4.mid_x) / 2
     local off_y = (S.mid_y + S4.mid_y) / 2
@@ -3396,11 +3396,11 @@ function Render_establish_street_lanes()
 
     spot =
     {
-      ref_seed = S
-      x = off_x
-      y = off_y
-      z = S.area.floor_h + 2
-      height = S.area.ceil_h - 2
+      ref_seed = S,
+      x = off_x,
+      y = off_y,
+      z = S.area.floor_h + 2,
+      height = S.area.ceil_h - 2,
       dir = cur_dir
     }
 
@@ -3438,17 +3438,17 @@ function Render_scenic_fabs()
     local function try_decor_here(area)
       local reqs =
       {
-        height = area.ceil_h - area.floor_h
-        env = "outdoor"
-        kind = "decor"
-        where = "point"
+        height = area.ceil_h - area.floor_h,
+        env = "outdoor",
+        kind = "decor",
+        where = "point",
       }
 
       local skin =
       {
-        floor = area.floor_mat
-        wall = area.zone.facade_mat
-        ceil = "_SKY"
+        floor = area.floor_mat,
+        wall = area.zone.facade_mat,
+        ceil = "_SKY",
       }
 
       local pick = rand.pick(area.seeds)
@@ -3473,7 +3473,7 @@ function Render_scenic_fabs()
           local S = SEEDS[new_x][new_y]
 
           if not S.area then return end
-          if S.area and S.area != area then return end
+          if S.area and S.area ~= area then return end
           if S.walls then return end
           if S.diagonal then return end
           if S.occupied then return end
@@ -3492,11 +3492,11 @@ function Render_scenic_fabs()
 
         local fab =
         {
-          prefab_def = def
-          x = fx
-          y = fy
-          z1 = area.floor_h
-          z2 = area.ceil_h
+          prefab_def = def,
+          x = fx,
+          y = fy,
+          z1 = area.floor_h,
+          z2 = area.ceil_h,
           prefab_skin = skin
         }
 
@@ -3510,7 +3510,7 @@ function Render_scenic_fabs()
   end
 
   local function render_the_fabs()
-    each info in LEVEL.scenic_fabs do
+    for _,info in pairs(LEVEL.scenic_fabs) do
       local T = Trans.spot_transform(info.x, info.y, info.z1, rand.pick({2,4,6,8}))
 
       local def = info.prefab_def
@@ -3524,7 +3524,7 @@ function Render_scenic_fabs()
     end
   end
 
-  each A in LEVEL.areas do
+  for _,A in pairs(LEVEL.areas) do
     if A.border_type == "fake_room" then
       place_scenic_fabs(A)
     end
@@ -3612,7 +3612,7 @@ end
 
 
 function Render_set_all_properties()
-  each A in LEVEL.areas do
+  for _,A in pairs(LEVEL.areas) do
     Render_properties_for_area(A)
   end
 end
@@ -3652,7 +3652,7 @@ function Render_triggers()
       brush = brushlib.quad(chunk.x1 + w, chunk.y1 + h, chunk.x2 - w, chunk.y2 - h)
     end
 
-    each C in brush do
+    for _,C in pairs(brush) do
       setup_coord(C, trig)
     end
 
@@ -3755,7 +3755,7 @@ function Render_triggers()
       do_spot_trigger(R, trig)
 
     elseif trig.kind == "edge" then
-      each E in trig.edges do
+      for _,E in pairs(trig.edges) do
         do_edge_trigger(R, trig, E)
       end
 
@@ -3766,15 +3766,15 @@ function Render_triggers()
 
 
   local function test_triggers()
-    each C in LEVEL.conns do
+    for _,C in pairs(LEVEL.conns) do
       local E = C.E1
       if C.R1.lev_along > C.R2.lev_along then E = C.E2 end
       if E then
         local TRIG =
         {
-          kind = "edge"
-          edge = E
-          action = "W1_OpenDoorFast"
+          kind = "edge",
+          edge = E,
+          action = "W1_OpenDoorFast",
           tag = C.R1.id
         }
         build_trigger(R, TRIG)
@@ -3785,8 +3785,8 @@ function Render_triggers()
 
   ---| Render_triggers |---
 
-  each R in LEVEL.rooms do
-    each trig in R.triggers do
+  for _,R in pairs(LEVEL.rooms) do
+    for _,trig in pairs(R.triggers) do
       build_trigger(R, trig)
     end
   end
@@ -3815,13 +3815,13 @@ function Render_determine_spots()
   --
 
   local function spots_in_flat_floor(R, A, mode)
-    -- the 'mode' is normally NIL, can also be "cage" or "trap"
+    -- the 'mode' is normally NIL, can also be "cage" or "trap",
     if not mode then mode = A.mode end
 
     -- get bbox of room
     local rx1, ry1, rx2, ry2 = A:calc_real_bbox()
 
-    -- initialize grid to "ledge"
+    -- initialize grid to "ledge",
     local floor_height = A.floor_h
 
     if A.is_road then floor_height = A.floor_h + 2 end
@@ -3829,12 +3829,12 @@ function Render_determine_spots()
     gui.spots_begin(rx1 - 48, ry1 - 48, rx2 + 48, ry2 + 48, floor_height, SPOT_LEDGE)
 
     -- clear polygons making up the floor
-    each brush in A.floor_brushes do
+    for _,brush in pairs(A.floor_brushes) do
       gui.spots_fill_poly(brush, SPOT_CLEAR)
     end
 
     -- set the edges of the area
-    each E in A.side_edges do
+    for _,E in pairs(A.side_edges) do
       gui.spots_draw_line(E.x1, E.y1, E.x2, E.y2, SPOT_LEDGE)
     end
 
@@ -3857,14 +3857,14 @@ function Render_determine_spots()
 
     -- this is mainly for traps
     if A.mon_focus then
-      each spot in mon_spots do
+      for _,spot in pairs(mon_spots) do
         spot.face = A.mon_focus
       end
     end
 
     -- for large cages/traps, adjust quantities
     if mode == "cage" or mode == "trap" then
-      each spot in mon_spots do
+      for _,spot in pairs(mon_spots) do
         spot.use_factor = 1.0 / (A.svolume ^ 0.64)
       end
     end
@@ -3879,7 +3879,7 @@ function Render_determine_spots()
     else
       -- do not place items in damaging liquids
       -- [ we skip monsters too because we can place big items in a mon spot ]
-      --if A.mode != "liquid" then
+      --if A.mode ~= "liquid" then
         table.append(R.item_spots, item_spots)
         table.append(R.mon_spots,  mon_spots)
       --end
@@ -3914,7 +3914,7 @@ function Render_determine_spots()
     local B = area.blobs[x][y]
     if not B then return end
 
-    if B != FL then
+    if B ~= FL then
       local poly = Cave_brush(area, x, y)
 
       gui.spots_fill_poly(poly, SPOT_LEDGE)
@@ -3932,7 +3932,7 @@ function Render_determine_spots()
     local x2 = area.base_x + (FL.cx2 + 1) * 64
     local y2 = area.base_y + (FL.cy2 + 1) * 64
 
-    -- initialize grid to "ledge"
+    -- initialize grid to "ledge",
     gui.spots_begin(x1, y1, x2, y2, FL.floor_h, SPOT_LEDGE)
 
     -- clear the floors
@@ -3950,7 +3950,7 @@ function Render_determine_spots()
     end
 
     -- set the edges of the room
-    each E in area.side_edges do
+    for _,E in pairs(area.side_edges) do
       gui.spots_draw_line(E.x1, E.y1, E.x2, E.y2, SPOT_LEDGE)
     end
 
@@ -3991,14 +3991,14 @@ gui.spots_dump("Cave spot dump")
 
 
   local function spots_in_natural_area(R, area)
-    each FL in area.walk_floors do
+    for _,FL in pairs(area.walk_floors) do
       spots_in_cave_floor(R, area, FL)
     end
   end
 
 
   local function spots_in_room(R)
-    each A in R.areas do
+    for _,A in pairs(R.areas) do
       if A.mode == "floor" or A.mode == "cage" then
         if not A.floor_group then
           spots_in_flat_floor(R, A)
@@ -4006,7 +4006,7 @@ gui.spots_dump("Cave spot dump")
           if A.floor_group.sink then
             if A.floor_group.sink.mat == "_LIQUID" and not LEVEL.liquid.damage then
               spots_in_flat_floor(R, A)
-            elseif A.floor_group.sink.mat != "_LIQUID" then
+            elseif A.floor_group.sink.mat ~= "_LIQUID" then
               spots_in_flat_floor(R, A)
             end
           else
@@ -4043,7 +4043,7 @@ gui.spots_dump("Cave spot dump")
 
   ---| Render_determine_spots |---
 
-  each R in LEVEL.rooms do
+  for _,R in pairs(LEVEL.rooms) do
     spots_in_room(R)
 
     R:exclude_monsters()
@@ -4091,7 +4091,7 @@ function Render_cells(area)
     assert(B)
     assert(B.floor_h)
 
-    return string.format("1-%5d-%5d", B.floor_h + 50000, 50000 - (B.ceil_h or 0))
+    return string.format("1-%5d-%5d", int(B.floor_h + 50000), int(50000 - (B.ceil_h or 0)))
   end
 
 
@@ -4231,8 +4231,8 @@ function Render_cells(area)
     if d >  276 then return 0  end
     if d >  104 then return 16 end
     if d >   40 then return 32 end
-    if R.light_level != "verydark" then return 32 end
-    return 48
+    if R.light_level ~= "verydark" then return 32 end
+    return 48,
   end
 --]]
 
@@ -4246,7 +4246,7 @@ function Render_cells(area)
 
     local result = 0
 
-    each L in area.cave_lights do
+    for _,L in pairs(area.cave_lights) do
       -- compute distance
       local dx = L.x - cell_x
       local dy = L.y - cell_y
@@ -4257,13 +4257,14 @@ function Render_cells(area)
 
       -- check if result would be updated.
       -- this does a distance check too (val is zero for far away lights)
-      if val <= result then continue end
+      if val <= result then goto continue end
 
       -- check if line of sight is blocked
       -- [ this is expensive, so call it AFTER distance test ]
       if not gui.trace_ray(L.x, L.y, L.z, cell_x, cell_y, cell_z, "v") then
         result = val
       end
+      ::continue::
     end
 
     return result
@@ -4279,11 +4280,11 @@ function Render_cells(area)
     if f_h then
       local top = { t=f_h }
 
-      if area.torch_mode != "none" then
+      if area.torch_mode ~= "none" then
         top.is_cave = 1
       end
 
--- top.reachable = 1
+-- top.reachable = 1,
 
 -- if area.room and area.room.id then top.tag = 1000 + area.room.id end
 
@@ -4307,7 +4308,7 @@ function Render_cells(area)
 
     -- disable liquid lighting in outdoor rooms
     if f_mat == "_LIQUID" and area.is_outdoor and not LEVEL.is_dark then
-      each C in f_brush do
+      for _,C in pairs(f_brush) do
         if C.t then C.light_add = 0 end
       end
     end
@@ -4413,7 +4414,7 @@ function Render_cells(area)
 
   render_all_cells(1)
 
-  if area.torch_mode != "none" then
+  if area.torch_mode ~= "none" then
 ---    do_torch_lighting()
   end
 

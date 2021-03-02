@@ -3,35 +3,35 @@
 
 --[[PREFABS.Cage_armaetus_scenic_outdoors1 =
 {
-  file   = "cage/armaetus_cage_scenic_outdoors.wad"
-  map = "MAP01"
+  file   = "cage/armaetus_cage_scenic_outdoors.wad",
+  map = "MAP01",
 
-  prob  = 250
+  prob  = 250,
 
-  liquid = true
+  liquid = true,
 
-  where  = "seeds"
-  shape  = "U"
-  env = "building"
+  where  = "seeds",
+  shape  = "U",
+  env = "building",
 
-  height = 128
+  height = 128,
 
-  seed_w = 2
-  seed_h = 2
+  seed_w = 2,
+  seed_h = 2,
 
-  x_fit = "stretch"
-  y_fit = "top"
+  x_fit = "stretch",
+  y_fit = "top",
 }
 
 PREFABS.Cage_armaetus_scenic_outdoors2 =
 {
-  template = "Cage_armaetus_scenic_outdoors1"
-  map = "MAP02"
+  template = "Cage_armaetus_scenic_outdoors1",
+  map = "MAP02",
 }
 
 PREFABS.Cage_armaetus_scenic_outdoors3 =
 {
-  template = "Cage_armaetus_scenic_outdoors1"
-  map = "MAP03"
+  template = "Cage_armaetus_scenic_outdoors1",
+  map = "MAP03",
 }
 ]]

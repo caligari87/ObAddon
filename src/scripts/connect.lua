@@ -9,7 +9,7 @@
 --
 --  This program is free software; you can redistribute it and/or
 --  modify it under the terms of the GNU General Public License
---  as published by the Free Software Foundation; either version 2
+--  as published by the Free Software Foundation; either version 2,
 --  of the License, or (at your option) any later version.
 --
 --  This program is distributed in the hope that it will be useful,
@@ -35,7 +35,7 @@
 
     id, name   -- debugging aids
 
-    kind : keyword  -- "edge", "joiner", "terminator", "teleporter"
+    kind : keyword  -- "edge", "joiner", "terminator", "teleporter",
 
     lock : LOCK
 
@@ -84,10 +84,10 @@ CONN_CLASS = {}
 function CONN_CLASS.new(kind, R1, R2)
   local C =
   {
-    kind = kind
-    id   = alloc_id("conn")
-    R1   = R1
-    R2   = R2
+    kind = kind,
+    id   = alloc_id("conn"),
+    R1   = R1,
+    R2   = R2,
   }
 
   C.name = string.format("CONN_%d", C.id)
@@ -188,8 +188,8 @@ end
 function Lock_new(kind, conn)
   local LOCK =
   {
-    id   = alloc_id("lock")
-    kind = kind
+    id   = alloc_id("lock"),
+    kind = kind,
     conn = conn
   }
 
@@ -209,7 +209,7 @@ end
 function Connect_directly(P)
   local kind = P.kind
 
-  if PARAM.print_shape_steps and PARAM.print_shape_steps != "no" then
+  if PARAM.print_shape_steps and PARAM.print_shape_steps ~= "no" then
     gui.printf("Connection: %s --> %s (via %s)\n", P.R1.name, P.R2.name, kind)
   end
 
@@ -278,7 +278,7 @@ function Connect_directly(P)
   C.A2 = assert(E2.S.area)
 
   -- error check from MSSP
-  if C.A1.room != C.R1 or C.A2.room != C.R2 then
+  if C.A1.room ~= C.R1 or C.A2.room ~= C.R2 then
     if C.R1 then
       print(table.tostr(C.R1))
     else
@@ -338,7 +338,7 @@ end
 
 
 function Connect_finalize()
-  each P in LEVEL.prelim_conns do
+  for _,P in pairs(LEVEL.prelim_conns) do
     assert(P.kind)
 
     if P.kind == "teleporter" then

@@ -9,7 +9,7 @@
 --
 --  This program is free software; you can redistribute it and/or
 --  modify it under the terms of the GNU General Public License
---  as published by the Free Software Foundation; either version 2
+--  as published by the Free Software Foundation; either version 2,
 --  of the License, or (at your option) any later version.
 --
 --  This program is distributed in the hope that it will be useful,
@@ -28,12 +28,12 @@
 
     mode : keyword  -- "floor"  (a flat traversible part of a normal room)
                     -- "nature" (a non-flat traversible part of a cave or park)
-                    -- "liquid"
-                    -- "cage"
+                    -- "liquid",
+                    -- "cage",
 
                     -- "chunk" (whole area is a single chunk)
-                    -- "scenic"
-                    -- "void"
+                    -- "scenic",
+                    -- "void",
 
     is_outdoor    -- true if outdoors (sky ceiling)
     is_boundary   -- true for areas outside the boundary line
@@ -43,13 +43,13 @@
 
     zone : ZONE
 
-    chunk : CHUNK   -- only used when mode == "chunk"
+    chunk : CHUNK   -- only used when mode == "chunk",
 
-    border_type : keyword  -- "simple_fence"
-                           -- "watery_drop"
-                           -- "bottomless_drop"
-                           -- "ocean"
-                           -- "cliff_gradient"
+    border_type : keyword  -- "simple_fence",
+                           -- "watery_drop",
+                           -- "bottomless_drop",
+                           -- "ocean",
+                           -- "cliff_gradient",
 
     facade_group : FACADE_GROUP   -- used by facade logic (temporarily)
 
@@ -114,15 +114,15 @@
 
     cave_map : GRID   -- the raw generated cave
 
-    step_mode   : keyword  -- "walkway", "up", "down", "mixed"
+    step_mode   : keyword  -- "walkway", "up", "down", "mixed",
 
-    liquid_mode : keyword  -- "none", "some", "lake"
+    liquid_mode : keyword  -- "none", "some", "lake",
 
-    sky_mode    : keyword  -- "none"
+    sky_mode    : keyword  -- "none",
                            -- "some" (indoor rooms only)
                            -- "low_wall", "high_wall"  (outdoor rooms)
 
-    torch_mode  : keyword  -- "none", "few", "some"
+    torch_mode  : keyword  -- "none", "few", "some",
 
     cave_lights : list     -- position of lamps and other point-lights
 --]]
@@ -145,7 +145,7 @@
 --[[
     -- contains info about the symmetry in a room
 
-    kind    -- "mirror" or "rotate"
+    kind    -- "mirror" or "rotate",
 
     x, y    -- seed coordinate for focal point
 
@@ -171,7 +171,7 @@
     --
 
     A1 : AREA
-    A2 : AREA   -- can be special value "map_edge"
+    A2 : AREA   -- can be special value "map_edge",
 
     --
     -- These are "pseudo edges" which will be used to render the
@@ -228,19 +228,19 @@ AREA_CLASS = {}
 function AREA_CLASS.new(mode)
   local A =
   {
-    id   = alloc_id("area")
-    mode = mode
-    svolume = 0
+    id   = alloc_id("area"),
+    mode = mode,
+    svolume = 0,
 
-    conns = {}
-    seeds = {}
-    neighbors = {}
-    corner_neighbors = {}
-    edges = {}
+    conns = {},
+    seeds = {},
+    neighbors = {},
+    corner_neighbors = {},
+    edges = {},
 
-    inner_points = {}
-    floor_brushes = {}
-    side_edges = {}
+    inner_points = {},
+    floor_brushes = {},
+    side_edges = {},
   }
 
   A.name = "AREA_" .. A.id
@@ -283,7 +283,7 @@ function AREA_CLASS.kill_it(A, remove_from_room)
   A.conns = nil
   A.chunk = nil
 
-  each S in A.seeds do
+  for _,S in pairs(A.seeds) do
     S.area = nil
     S.room = nil
   end
@@ -296,7 +296,7 @@ function AREA_CLASS.calc_seed_bbox(A)
   local sx1, sy1 = first_S.sx, first_S.sy
   local sx2, sy2 = first_S.sx, first_S.sy
 
-  each S in A.seeds do
+  for _,S in pairs(A.seeds) do
     sx1 = math.min(sx1, S.sx)
     sy1 = math.min(sy1, S.sy)
 
@@ -330,7 +330,7 @@ end
 function AREA_CLASS.calc_volume(A)
   local vol = 0
 
-  each S in A.seeds do
+  for _,S in pairs(A.seeds) do
     if S.diagonal then
       vol = vol + 0.5
     else
@@ -348,8 +348,8 @@ end
 
 
 function AREA_CLASS.has_conn(A)
-  each C in LEVEL.conns do
-    if C.kind != "teleporter" and (C.A1 == A or C.A2 == A) then
+  for _,C in pairs(LEVEL.conns) do
+    if C.kind ~= "teleporter" and (C.A1 == A or C.A2 == A) then
       return true
     end
   end
@@ -385,7 +385,7 @@ function AREA_CLASS.highest_neighbor(A)
 
   -- FIXME : handle "nature" areas better (checks cells along the junction)
 
-  each N in A.neighbors do
+  for _,N in pairs(A.neighbors) do
     if N.room == A.room and N.mode == "floor" and N.floor_h then
       local f_h = N.max_floor_h or N.floor_h
 
@@ -408,7 +408,7 @@ function AREA_CLASS.lowest_neighbor(A)
 
   -- FIXME : handle "nature" areas better (checks cells along the junction)
 
-  each N in A.neighbors do
+  for _,N in pairs(A.neighbors) do
     if N.room == A.room and N.mode == "floor" and N.floor_h then
       if not best or N.floor_h < best.floor_h or
          -- use ceiling heights to break ties
@@ -551,11 +551,11 @@ end
 function Symmetry_new(kind)
   local SYM =
   {
-    kind = kind
+    kind = kind,
 
-    transform = Symmetry_transform
-    conv_dir  = Symmetry_conv_dir
-    on_axis   = Symmetry_on_axis
+    transform = Symmetry_transform,
+    conv_dir  = Symmetry_conv_dir,
+    on_axis   = Symmetry_on_axis,
   }
 
   return SYM
@@ -566,9 +566,9 @@ end
 
 
 function Junction_lookup(A1, A2, create_it)
-  -- one area can be the special keyword "map_edge"
+  -- one area can be the special keyword "map_edge",
 
-  -- returns NIL when areas do not touch, or A1 == A2
+  -- returns NIL when areas do not touch, or A1 == A2,
 
   if A1 == A2 then return nil end
 
@@ -601,44 +601,44 @@ function Junction_init()
   -- the two areas.
   LEVEL.junctions = {}
 
-  each A in LEVEL.areas do
-  each N in A.neighbors do
+  for _,A in pairs(LEVEL.areas) do
+  for _,N in pairs(A.neighbors) do
     Junction_lookup(A, N, "create_it")
   end
   end
 
   -- compute the perimeter of each junction.
 
-  each A in LEVEL.areas do
-  each S in A.seeds do
-  each dir in geom.ALL_DIRS do
+  for _,A in pairs(LEVEL.areas) do
+  for _,S in pairs(A.seeds) do
+  for _,dir in pairs(geom.ALL_DIRS) do
 
     local N = S:neighbor(dir, "NODIR")
 
-    if N == "NODIR" then continue end
+    if N == "NODIR" then goto continue end
 
     -- edge of map?
     if not (N and N.area) then
       local junc = Junction_lookup(A, "map_edge", "create_it")
 
       junc.perimeter = junc.perimeter + 1
-      continue
+      goto continue
     end
 
-    if N.area == S.area then continue end
+    if N.area == S.area then goto continue end
 
     local junc = Junction_lookup(A, N.area)
 
     if dir < 5 then
       junc.perimeter = junc.perimeter + 1
     end
-
+    ::continue::
   end -- A, S, dir
   end
   end
 
 --[[ DEBUG
-  each name,J in LEVEL.junctions do
+  for name,J in pairs(LEVEL.junctions) do
     gui.printf("Junc %s : perimeter %d\n", name, J.perimeter)
   end
 --]]
@@ -698,7 +698,7 @@ function Junction_calc_wall_tex(A1, A2)
     end
   end
 
-  if A1.zone != A2.zone then
+  if A1.zone ~= A2.zone then
 
     if A1.room and not A1.is_outdoor then
       return assert(A1.room.main_tex)
@@ -746,10 +746,10 @@ function Junction_make_wall(junc)
     local A1 = sel(pass == 1, junc.A1, junc.A2)
     local A2 = sel(pass == 1, junc.A2, junc.A1)
 
-    --assert(A2 != "map_edge")
+    --assert(A2 ~= "map_edge")
 
     -- do not need walls inside a void area
-    if A1.mode == "void" then continue end
+    if A1.mode == "void" then goto continue end
 
     local E = { kind="wall", area=A1 }
 
@@ -757,7 +757,7 @@ function Junction_make_wall(junc)
 
     local plain_wall_prob = 0
 
-    if PARAM.wall_prob and PARAM.wall_prob != "fab_default" then
+    if PARAM.wall_prob and PARAM.wall_prob ~= "fab_default" then
       plain_wall_prob = plain_wall_prob + (PREFAB_CONTROL.WALL_REDUCTION_ODDS[PARAM.wall_prob] * 100)
       plain_wall_prob = math.clamp(0, plain_wall_prob, 100)
     end
@@ -769,6 +769,7 @@ function Junction_make_wall(junc)
     else
       junc.E2 = E
     end
+    ::continue::
   end
 end
 
@@ -852,9 +853,9 @@ function Junction_make_fence(junc)
 
   junc.E1 =
   {
-    kind = "fence"
-    fence_mat = assert(junc.A1.zone.fence_mat)
-    fence_top_z = Junction_calc_fence_z(junc.A1, junc.A2)
+    kind = "fence",
+    fence_mat = assert(junc.A1.zone.fence_mat),
+    fence_top_z = Junction_calc_fence_z(junc.A1, junc.A2),
     area = junc.A1
   }
 
@@ -875,10 +876,10 @@ function Junction_make_beams(junc)
 
   junc.E1 =
   {
-    kind = "beams"
-    fence_mat = assert(junc.A1.zone.fence_mat)
-    beam_z = Junction_calc_beam_z(junc.A1, junc.A2)
-    area = junc.A1
+    kind = "beams",
+    fence_mat = assert(junc.A1.zone.fence_mat),
+    beam_z = Junction_calc_beam_z(junc.A1, junc.A2),
+    area = junc.A1,
   }
 
   junc.E2 = { kind="nothing", area=junc.A2 }
@@ -902,10 +903,10 @@ function Junction_make_railing(junc, rail_mat, block)
 
   junc.E1 =
   {
-    kind = "railing"
-    rail_mat = rail_mat
-    rail_block = block and 1
-    area = junc.A1
+    kind = "railing",
+    rail_mat = rail_mat,
+    rail_block = block and 1,
+    area = junc.A1,
   }
 
   -- 3D midtex blocking support for rails
@@ -944,9 +945,9 @@ function Junction_make_steps(junc)
 
   junc.E1 =
   {
-    kind = "steps"
-    steps_mat = assert(A.zone.steps_mat)
-    steps_z1 = math.min(A.floor_h, A2.floor_h)
+    kind = "steps",
+    steps_mat = assert(A.zone.steps_mat),
+    steps_z1 = math.min(A.floor_h, A2.floor_h),
     steps_z2 = math.max(A.floor_h, A2.floor_h)
   }
 
@@ -982,15 +983,15 @@ function Corner_init()
   for cy = 1, LEVEL.corners.h do
     local CORNER =
     {
-      cx = cx
-      cy = cy
-      x = BASE_X + (cx-1) * SEED_SIZE
-      y = BASE_Y + (cy-1) * SEED_SIZE
-      areas = {}
-      junctions = {}
-      edges = {}
-      walls = {}
-      fences = {}
+      cx = cx,
+      cy = cy,
+      x = BASE_X + (cx-1) * SEED_SIZE,
+      y = BASE_Y + (cy-1) * SEED_SIZE,
+      areas = {},
+      junctions = {},
+      edges = {},
+      walls = {},
+      fences = {},
       seeds = {} -- MSSP
     }
 
@@ -1000,17 +1001,17 @@ function Corner_init()
 
   -- find touching areas
 
-  each A in LEVEL.areas do
-  each S in A.seeds do
-  each dir in geom.CORNERS do
+  for _,A in pairs(LEVEL.areas) do
+  for _,S in pairs(A.seeds) do
+  for _,dir in pairs(geom.CORNERS) do
 
-    if S.diagonal and S.diagonal == (10 - dir) then continue end
+    if S.diagonal and S.diagonal == (10 - dir) then goto continue end
 
     local corner = S:get_corner(dir)
 
     table.add_unique(corner.areas, A)
     table.add_unique(corner.seeds, S)
-
+    ::continue::
   end  -- A, S, dir
   end
   end
@@ -1053,7 +1054,7 @@ function Corner_detect_zone_diffs()
       local A1 = corner.areas[i]
       local A2 = corner.areas[k]
 
-      if A1.zone != A2.zone then
+      if A1.zone ~= A2.zone then
         has_diff = true
       end
 
@@ -1068,7 +1069,7 @@ function Corner_detect_zone_diffs()
 
 
   local function update_groups(corner)
-    each A in corner.areas do
+    for _,A in pairs(corner.areas) do
       if A.facade_group then
          A.facade_group.zone_diff = true
       end
@@ -1201,11 +1202,11 @@ end
 
 
 function Corner_touches_wall(corner)
-  each E in corner.edges do
+  for _,E in pairs(corner.edges) do
     if Edge_is_wallish(E) then return true end
   end
 
-  each junc in corner.junctions do
+  for _,junc in pairs(corner.junctions) do
     if junc.E1 and Edge_is_wallish(junc.E1) then return true end
     if junc.E2 and Edge_is_wallish(junc.E2) then return true end
   end
@@ -1219,7 +1220,7 @@ function Corner_get_env(corner)
   local outdoor_score = 0
   local building_score = 0
 
-  each A in corner.areas do
+  for _,A in pairs(corner.areas) do
     if A.room then
       if A.room.is_outdoor or not A.room then
         outdoor_score = outdoor_score + 1
@@ -1242,7 +1243,7 @@ function Corner_is_at_area_corner(corner)
 
   -- corner isn't at a corner when along parallel walls
   local wall_count = 0
-  each junc in corner.junctions do
+  for _,junc in pairs(corner.junctions) do
     if junc.E1 then
       if Edge_is_wallish(junc.E1) then
         wall_count = wall_count + 1
@@ -1253,7 +1254,7 @@ function Corner_is_at_area_corner(corner)
 
   -- no pillars if all junctions are beams
   local beam_count = 0
-  each junc in corner.junctions do
+  for _,junc in pairs(corner.junctions) do
     if junc.E1 then
       if junc.E1.kind == "beams" or Edge_is_wallish(junc.E1) then
         beam_count = beam_count + 1
@@ -1271,27 +1272,27 @@ function Corner_is_at_area_corner(corner)
   -- that doesn't match all the others
   if #corner.seeds == 4 then
 
-    if corner.seeds[1].area != corner.seeds[2].area and
-    corner.seeds[1].area != corner.seeds[3].area and
-    corner.seeds[1].area != corner.seeds[4].area then
+    if corner.seeds[1].area ~= corner.seeds[2].area and
+    corner.seeds[1].area ~= corner.seeds[3].area and
+    corner.seeds[1].area ~= corner.seeds[4].area then
       return true
     end
 
-    if corner.seeds[2].area != corner.seeds[1].area and
-    corner.seeds[2].area != corner.seeds[3].area and
-    corner.seeds[2].area != corner.seeds[4].area then
+    if corner.seeds[2].area ~= corner.seeds[1].area and
+    corner.seeds[2].area ~= corner.seeds[3].area and
+    corner.seeds[2].area ~= corner.seeds[4].area then
       return true
     end
 
-    if corner.seeds[3].area != corner.seeds[1].area and
-    corner.seeds[3].area != corner.seeds[3].area and
-    corner.seeds[3].area != corner.seeds[4].area then
+    if corner.seeds[3].area ~= corner.seeds[1].area and
+    corner.seeds[3].area ~= corner.seeds[3].area and
+    corner.seeds[3].area ~= corner.seeds[4].area then
       return true
     end
 
-    if corner.seeds[4].area != corner.seeds[1].area and
-    corner.seeds[4].area != corner.seeds[2].area and
-    corner.seeds[4].area != corner.seeds[3].area then
+    if corner.seeds[4].area ~= corner.seeds[1].area and
+    corner.seeds[4].area ~= corner.seeds[2].area and
+    corner.seeds[4].area ~= corner.seeds[3].area then
       return true
     end
 
@@ -1301,7 +1302,7 @@ function Corner_is_at_area_corner(corner)
   if #corner.areas > 1 then
     local diagonal_score = 0
 
-    each S in corner.seeds do
+    for _,S in pairs(corner.seeds) do
       if S.top then diagonal_score = diagonal_score + 1 end
     end
 
@@ -1319,11 +1320,11 @@ end
 function Area_calc_volumes()
   -- Note: computes room volumes too!
 
-  each R in LEVEL.rooms do
+  for _,R in pairs(LEVEL.rooms) do
     R.svolume = 0
   end
 
-  each A in LEVEL.areas do
+  for _,A in pairs(LEVEL.areas) do
     A:calc_volume()
 
     if A.room then
@@ -1361,18 +1362,18 @@ function Area_find_neighbors()
   local nb_map = {}
 
   -- clear previous stuff
-  each A in LEVEL.areas do
+  for _,A in pairs(LEVEL.areas) do
     if not table.empty(A.neighbors) then
       A.neighbors = {}
     end
   end
 
-  each A in LEVEL.areas do
-  each S in A.seeds do
-  each dir in geom.ALL_DIRS do
+  for _,A in pairs(LEVEL.areas) do
+  for _,S in pairs(A.seeds) do
+  for _,dir in pairs(geom.ALL_DIRS) do
     local N = S:neighbor(dir)
 
-    if N and N.area and N.area != A then
+    if N and N.area and N.area ~= A then
       try_pair_up(A, N.area, nb_map)
     end
   end -- A, S, dir
@@ -1399,21 +1400,21 @@ function Area_locate_chunks()
   -- don't always keep them
   local USE_PROBS =
   {
-    [44] = 60
-    [33] = 90
+    [44] = 60,
+    [33] = 90,
 
-    [42] = 15
-    [24] = 15
+    [42] = 15,
+    [24] = 15,
 
-    [32] = 15
-    [23] = 15
+    [32] = 15,
+    [23] = 15,
   }
 
 
   local function check_touches_wall(sx1,sy1, sx2,sy2)
     -- this is mainly for caves
 
-    each dir in geom.SIDES do
+    for _,dir in pairs(geom.SIDES) do
       local tx1, ty1 = sx1, sy1
       local tx2, ty2 = sx2, sy2
 
@@ -1431,7 +1432,7 @@ function Area_locate_chunks()
         local N = S:neighbor(dir)
 
         if not N then return true end
-        if N.room != S.room then return true end
+        if N.room ~= S.room then return true end
 
         if N.chunk and not (N.chunk == "floor" or N.chunk == "liquid") then
           return true
@@ -1484,7 +1485,7 @@ function Area_locate_chunks()
     end
 
     -- TODO : review the liquid check here
-    if not A.is_outdoor and A.mode != "liquid" then
+    if not A.is_outdoor and A.mode ~= "liquid" then
       local CEIL = make_chunk("ceil", A, sx1,sy1, sx2,sy2)
       table.insert(R.ceil_chunks, CEIL)
 
@@ -1511,7 +1512,7 @@ function Area_locate_chunks()
       local N = SEEDS[x][y]
 
       if not N then return false end
-      if N.area != A then return false end
+      if N.area ~= A then return false end
       if N.diagonal or N.chunk then return false end
     end -- x, y
     end
@@ -1559,8 +1560,8 @@ function Area_locate_chunks()
     end
 
     -- it *should* be the same area, but sanity check
-    if N1.area != A then return false end
-    if N2.area != A then return false end
+    if N1.area ~= A then return false end
+    if N2.area ~= A then return false end
 
     local nx1 = math.min(N1.sx, N2.sx)
     local ny1 = math.min(N1.sy, N2.sy)
@@ -1571,7 +1572,7 @@ function Area_locate_chunks()
     local is_straddler = (nx1 == sx1 and ny1 == sy1 and nx2 == sx2 and ny2 == sy2)
 
     if sym_pass == 1 and not is_straddler then return false end
-    if sym_pass != 1 and     is_straddler then return false end
+    if sym_pass ~= 1 and     is_straddler then return false end
 
     if is_straddler then
       local CHUNK = install_chunk_at_seed(A, sx1,sy1, sx2,sy2)
@@ -1617,7 +1618,7 @@ function Area_locate_chunks()
     if not R then return false end
     if not R.symmetry then return false end
 
-    if R.symmetry.kind != "mirror" then return false end
+    if R.symmetry.kind ~= "mirror" then return false end
 
     if geom.is_vert (R.symmetry.dir) then return S.sx > R.symmetry.x end
     if geom.is_horiz(R.symmetry.dir) then return S.sy > R.symmetry.y end
@@ -1634,19 +1635,20 @@ function Area_locate_chunks()
 
     local use_prob = USE_PROBS[pass] or 99
 
-    each S in seed_list do
+    for _,S in pairs(seed_list) do
       local sx1 = S.sx
       local sy1 = S.sy
       local sx2 = sx1 + dx
       local sy2 = sy1 + dy
 
       -- we can do less checks in symmetrical rooms
-      if can_skip_for_symmetry(A.room, S) then continue end
+      if can_skip_for_symmetry(A.room, S) then goto continue end
 
       -- save time by checking the usage prob *first*
-      if pass != 11 and not rand.odds(use_prob) then continue end
+      if pass ~= 11 and not rand.odds(use_prob) then goto continue end
 
       try_chunk_at_seed(A, sx1,sy1, sx2,sy2)
+      ::continue::
     end
   end
 
@@ -1654,7 +1656,7 @@ function Area_locate_chunks()
   local function find_chunks_in_area(A)
     local seed_list = table.copy(A.seeds)
 
-    each pass in PASSES do
+    for _,pass in pairs(PASSES) do
       rand.shuffle(seed_list)
 
       find_sized_chunks(A, seed_list, pass)
@@ -1663,7 +1665,7 @@ function Area_locate_chunks()
 
 
   local function visit_room(R)
-    each A in R.areas do
+    for _,A in pairs(R.areas) do
       if A.mode == "floor" or A.mode == "nature" or A.mode == "liquid" then
         find_chunks_in_area(A)
       end
@@ -1676,7 +1678,7 @@ function Area_locate_chunks()
   -- in symmetrical rooms, perform two passes, where the first
   -- pass ONLY checks for straddling chunks
 
-  each R in LEVEL.rooms do
+  for _,R in pairs(LEVEL.rooms) do
     max_vol = R:calc_walk_vol()
 
     -- smaller max_vol for caves
@@ -1702,16 +1704,16 @@ function Area_analyse_areas()
 
   Area_calc_volumes()
 
-  each R in LEVEL.rooms do
+  for _,R in pairs(LEVEL.rooms) do
     R:collect_seeds()
   end
 
   Area_find_neighbors()
 
 --[[
-  local total_seeds = 0
+  local total_seeds = 0,
 
-  each R in LEVEL.rooms do
+  for _,R in pairs(LEVEL.rooms) do
     total_seeds = total_seeds + R.svolume
   end
 
@@ -1727,26 +1729,26 @@ function Area_find_inner_points()
   local function collect_inner_points(A)
     -- check bottom-left corner of each seed
 
-    each S in A.seeds do
+    for _,S in pairs(A.seeds) do
       -- point is outside of area
-      if S.diagonal == 9 then continue end
+      if S.diagonal == 9 then goto continue end
 
       -- point is part of boundary, skip it
-      if S.diagonal == 3 or S.diagonal == 7 then continue end
+      if S.diagonal == 3 or S.diagonal == 7 then goto continue end
 
       local NA = S:neighbor(4)
       local NB = S:neighbor(2)
 
-      if not (NA and NA.area == A) then continue end
-      if not (NB and NB.area == A) then continue end
+      if not (NA and NA.area == A) then goto continue end
+      if not (NB and NB.area == A) then goto continue end
 
       local NC = NA:neighbor(2)
       local ND = NB:neighbor(4)
 
-      if not (NC and NC.area == A) then continue end
+      if not (NC and NC.area == A) then goto continue end
 
       -- we should reach the same seed going both ways
-      if ND != NC then continue end
+      if ND ~= NC then goto continue end
 
       -- OK --
 
@@ -1756,13 +1758,14 @@ function Area_find_inner_points()
       corner.inner_point = A
 
       table.insert(A.inner_points, corner)
+      ::continue::
     end
   end
 
 
   ---| Area_find_inner_points |---
 
-  each A in LEVEL.areas do
+  for _,A in pairs(LEVEL.areas) do
     collect_inner_points(A)
 
     A.openness = #A.inner_points / A.svolume
@@ -1797,7 +1800,7 @@ function Area_inner_points_for_group(R, group, where)
 
   -- collect seeds
 
-  each A in R.areas do
+  for _,A in pairs(R.areas) do
     if A[area_field] == group then
       table.append(seeds, A.seeds)
     end
@@ -1806,26 +1809,26 @@ function Area_inner_points_for_group(R, group, where)
 
   -- check bottom-left corner of each seed
 
-  each S in seeds do
+  for _,S in pairs(seeds) do
     -- point is outside of area
-    if S.diagonal == 9 then continue end
+    if S.diagonal == 9 then goto continue end
 
     -- point is part of boundary, skip it
-    if S.diagonal == 3 or S.diagonal == 7 then continue end
+    if S.diagonal == 3 or S.diagonal == 7 then goto continue end
 
     local NA = S:neighbor(4)
     local NB = S:neighbor(2)
 
-    if not same_group(NA) then continue end
-    if not same_group(NB) then continue end
+    if not same_group(NA) then goto continue end
+    if not same_group(NB) then goto continue end
 
     local NC = NA:neighbor(2)
     local ND = NB:neighbor(4)
 
-    if not same_group(NC) then continue end
+    if not same_group(NC) then goto continue end
 
     -- we should reach the same seed going both ways
-    if ND != NC then continue end
+    if ND ~= NC then goto continue end
 
     -- OK --
 
@@ -1835,6 +1838,7 @@ function Area_inner_points_for_group(R, group, where)
     corner[corner_field] = group
 
     num_inner = num_inner + 1
+    ::continue::
   end
 
   -- compute openness
@@ -1863,8 +1867,8 @@ function Area_closet_edges()
 
   ---| Area_closet_edges |---
 
-  each R in LEVEL.rooms do
-    each CL in R.closets do
+  for _,R in pairs(LEVEL.rooms) do
+    for _,CL in pairs(R.closets) do
       visit_closet(CL, R)
     end
   end
@@ -1879,7 +1883,7 @@ function Area_spread_zones()
   --
 
   local function setup_room_areas()
-    each A in LEVEL.areas do
+    for _,A in pairs(LEVEL.areas) do
       if A.room then
         A.zone = assert(A.room.zone)
       end
@@ -1891,16 +1895,17 @@ function Area_spread_zones()
     rand.shuffle(A.neighbors)
 
     for pass = 1, 2 do
-      each N in A.neighbors do
-        if not N.zone then continue end
+      for _,N in pairs(A.neighbors) do
+        if not N.zone then goto continue end
 
         -- on first pass, require neighbor to be a real room
         -- [ to prevent run-ons ]
-        if pass == 1 and not N.room then continue end
+        if pass == 1 and not N.room then goto continue end
 
         -- OK --
         A.zone = N.zone
-        return
+        if N then return end
+        ::continue::
       end
     end
   end
@@ -1914,14 +1919,14 @@ function Area_spread_zones()
 
     rand.shuffle(list)
 
-    each A in list do
-      if A.zone then continue end
-      if A.mode == "scenic" then continue end
+    for _,A in pairs(list) do
+      if A.zone then goto continue end
+      if A.mode == "scenic" then goto continue end
 
       all_done = false
 
       try_set_area(A)
-
+      ::continue::
     end -- A
 
     return all_done
@@ -1959,15 +1964,15 @@ function Area_pick_facing_rooms()
   local function build_facing_database(want_outdoor)
     facings = {}
 
-    each A in LEVEL.areas do
-      if not A.room then continue end
+    for _,A in pairs(LEVEL.areas) do
+      if not A.room then goto continue end
 
-      if not (A.mode == "floor" or A.mode == "nature") then continue end
+      if not (A.mode == "floor" or A.mode == "nature") then goto continue end
 
-      if sel(A.is_outdoor, 1, 0) != sel(want_outdoor, 1, 0) then continue end
+      if sel(A.is_outdoor, 1, 0) ~= sel(want_outdoor, 1, 0) then goto continue end
 
-      each S in A.seeds do
-      each dir in geom.ALL_DIRS do
+      for _,S in pairs(A.seeds) do
+      for _,dir in pairs(geom.ALL_DIRS) do
         local N = S:neighbor(dir)
         local T = N and N.area
 
@@ -1978,6 +1983,7 @@ function Area_pick_facing_rooms()
         end
       end -- S, dir
       end
+      ::continue::
     end -- A
 
 --  stderrf("facing DB:\n%s\n", table.tostr(facings))
@@ -1989,22 +1995,24 @@ function Area_pick_facing_rooms()
     local best_T
     local best_score = -1
 
-    each R in LEVEL.rooms do
-      if R.border then continue end
+    for _,R in pairs(LEVEL.rooms) do
+      if R.border then goto continue end
 
-      if sel(R.is_outdoor, 1, 0) != sel(want_outdoor, 1, 0) then continue end
+      if sel(R.is_outdoor, 1, 0) ~= sel(want_outdoor, 1, 0) then goto continue end
 
-      each T in scenics do
-        if T.zone then continue end
+      for _,T in pairs(scenics) do
+        if T.zone then goto continue end
 
         local score = facings[face_id(R, T)]
 
-        if score != nil and score > best_score then
+        if score ~= nil and score > best_score then
           best_R = R
           best_T = T
           best_score = score
         end
+        ::continue::
       end -- T
+      ::continue::
     end -- R
 
     return best_R, best_T
@@ -2012,7 +2020,7 @@ function Area_pick_facing_rooms()
 
 
   local function assign_borders(mode)
-    -- mode can be "outdoor", "cave" or "building"
+    -- mode can be "outdoor", "cave" or "building",
     local want_outdoor = (mode == "outdoor")
 
     build_facing_database(want_outdoor)
@@ -2036,13 +2044,13 @@ function Area_pick_facing_rooms()
   local function emergency_zone(A)
     rand.shuffle(A.neighbors)
 
-    each N in A.neighbors do
+    for _,N in pairs(A.neighbors) do
       if N.room then
         return N.room.zone
       end
     end
 
-    each N in A.neighbors do
+    for _,N in pairs(A.neighbors) do
       if N.zone then
         return N.zone
       end
@@ -2055,7 +2063,7 @@ function Area_pick_facing_rooms()
 
   ---| Area_pick_facing_rooms |---
 
-  each A in LEVEL.areas do
+  for _,A in pairs(LEVEL.areas) do
     if A.mode == "scenic" then
       table.insert(scenics, A)
     end
@@ -2065,7 +2073,7 @@ function Area_pick_facing_rooms()
 
   assign_borders("building")
 
-  each A in scenics do
+  for _,A in pairs(scenics) do
     if A.zone then
       A.ceil_h = A.zone.sky_h + 16
       A.ceil_mat = "_SKY"
@@ -2079,7 +2087,7 @@ function Area_pick_facing_rooms()
   end
 
   -- sanity check
-  each A in LEVEL.areas do
+  for _,A in pairs(LEVEL.areas) do
     assert(A.zone)
   end
 end
@@ -2106,8 +2114,8 @@ function Area_divvy_up_borders()
   --   (b) spread these continuously, filling most of the map.
   --
   --   (c) there will be gaps now, choose how to fill each seed:
-  --       (1) empty on sides 4/6, filled on sides 2/8 -> pick side 2
-  --       (2) empty on sides 2/8, filled on sides 4/6 -> pick side 4
+  --       (1) empty on sides 4/6, filled on sides 2/8 -> pick side 2,
+  --       (2) empty on sides 2/8, filled on sides 4/6 -> pick side 4,
   --       (3) if filled on all sides, with only two choices and
   --           forming a diagonal -> make a diagonal seed
   --       (4) if have a majority in the neighbors -> pick that one
@@ -2166,20 +2174,21 @@ function Area_divvy_up_borders()
     repeat
       local changes = {}
 
-      each S in seed_list do
+      for _,S in pairs(seed_list) do
         assert(S.zborder == nil)
 
-        if no_diags and S.diagonal then continue end
+        if no_diags and S.diagonal then goto continue end
 
         local zborder = func(S)
 
         if zborder then
           table.insert(changes, { S=S, zborder=zborder })
         end
+        ::continue::
       end
 
       -- apply the changes
-      each tab in changes do
+      for _,tab in pairs(changes) do
         set_zborder(tab.S, tab.zborder)
         table.kill_elem(seed_list, tab.S)
       end
@@ -2191,17 +2200,18 @@ function Area_divvy_up_borders()
   local function marking_func(S)
     local zb
 
-    each dir in geom.ALL_DIRS do
+    for _,dir in pairs(geom.ALL_DIRS) do
       local N = S:neighbor(dir)
-      if not N then continue end
+      if not N then goto continue end
 
       local nz = get_zborder(N)
-      if not nz then continue end
+      if not nz then goto continue end
 
       -- fail if we have two neighbors with differing rooms
-      if zb and zb != nz then return nil end
+      if zb and zb ~= nz then return nil end
 
       zb = nz
+      ::continue::
     end
 
     return zb
@@ -2280,23 +2290,24 @@ function Area_divvy_up_borders()
   local function majority_func(S)
     local counts = {}
 
-    each dir in geom.ALL_DIRS do
+    for _,dir in pairs(geom.ALL_DIRS) do
       local N = S:neighbor(dir)
-      if not N then continue end
+      if not N then goto continue end
 
       local z = get_zborder(N)
-      if not z then continue end
+      if not z then goto continue end
 
       counts[z] = (counts[z] or 0) + 1
+      ::continue::
     end
 
-    each z, num in counts do
+    for z, num in pairs(counts) do
       if num >= 3 then return z end
     end
 
     local double_z
 
-    each z, num in counts do
+    for z, num in pairs(counts) do
       if num == 2 then
         if double_z then return nil end
         double_z = z
@@ -2310,13 +2321,14 @@ function Area_divvy_up_borders()
   local function emergency_func(S)
     local counts = {}
 
-    each dir in geom.ALL_DIRS do
+    for _,dir in pairs(geom.ALL_DIRS) do
       local N = S:neighbor(dir)
-      if not N then continue end
+      if not N then goto continue end
 
       local z = get_zborder(N)
 
-      if z and z != VOID then return z end
+      if z and z ~= VOID then return z end
+      ::continue::
     end
 
     return VOID
@@ -2360,8 +2372,8 @@ function Area_divvy_up_borders()
   local function new_temp_area(S)
     local TEMP =
     {
-      name = "TEMP_" .. alloc_id("temp_area")
-      seeds = {}
+      name = "TEMP_" .. alloc_id("temp_area"),
+      seeds = {},
     }
 
     if S.zborder == VOID then
@@ -2404,7 +2416,7 @@ function Area_divvy_up_borders()
   local function create_temp_areas()
     temp_areas = {}
 
-    each S in collect_seeds() do
+    for _,S in pairs(collect_seeds()) do
       fill_at_seed(S)
     end
   end
@@ -2422,7 +2434,7 @@ function Area_divvy_up_borders()
     end
 
     -- update seed references (replace T2 with T1)
-    each S in T2.seeds do
+    for _,S in pairs(T2.seeds) do
       S.temp_area = T1
     end
 
@@ -2440,22 +2452,22 @@ function Area_divvy_up_borders()
 
 
   local function try_merge_an_area(T1)
-    each S in T1.seeds do
-    each dir in geom.ALL_DIRS do
+    for _,S in pairs(T1.seeds) do
+    for _,dir in pairs(geom.ALL_DIRS) do
       local N = S:neighbor(dir)
 
       local T2 = (N and N.temp_area)
 
-      if not T2 then continue end
-      if T2 == T1 then continue end
+      if not T2 then goto continue end
+      if T2 == T1 then goto continue end
 
       assert(not T2.is_dead)
 
-      if S.zborder != N.zborder then continue end
+      if S.zborder ~= N.zborder then goto continue end
 
       perform_merge(T1, T2)
-      return true
-
+      if dir then return true end
+      ::continue::
     end  -- S, dir
     end
 
@@ -2478,12 +2490,13 @@ function Area_divvy_up_borders()
     repeat
       local changed = false
 
-      each T1 in temp_areas do
-        if T1.is_dead then continue end
+      for _,T1 in pairs(temp_areas) do
+        if T1.is_dead then goto continue end
 
         if try_merge_an_area(T1) then
           changed = true
         end
+        ::continue::
       end
 
       prune_dead_areas()
@@ -2507,13 +2520,13 @@ function Area_divvy_up_borders()
 
 
   local function determine_neighbors()
-    each T in temp_areas do
+    for _,T in pairs(temp_areas) do
       T.neighbors = {}
     end
 
-    each T in temp_areas do
-      each S in T.seeds do
-        each dir in geom.ALL_DIRS do
+    for _,T in pairs(temp_areas) do
+      for _,S in pairs(T.seeds) do
+        for _,dir in pairs(geom.ALL_DIRS) do
           test_neighbor_at_seed(T, S, dir)
         end
       end
@@ -2527,15 +2540,15 @@ function Area_divvy_up_borders()
 
     determine_neighbors()
 
-    each T in temp_areas do
+    for _,T in pairs(temp_areas) do
       if not T.touches_edge then
         T.is_inner = true
       end
     end
 
     for loop = 1,9 do
-      each T in temp_areas do
-        each N in T.neighbors do
+      for _,T in pairs(temp_areas) do
+        for _,N in pairs(T.neighbors) do
           if T.is_inner and not N.is_inner then
             T.is_inner = nil
             break;
@@ -2549,8 +2562,8 @@ function Area_divvy_up_borders()
   local function handle_inners()
     -- merge contiguous inner areas
 
-    each T in temp_areas do
-    each N in T.neighbors do
+    for _,T in pairs(temp_areas) do
+    for _,N in pairs(T.neighbors) do
       if T.is_inner and not T.is_dead and
          N.is_inner and not N.is_dead
       then
@@ -2564,19 +2577,20 @@ function Area_divvy_up_borders()
 
     -- decide whether to void them up
     -- TODO: keep an inner area when its size and views are large enough
-    each T in temp_areas do
-      if T.is_void then continue end
+    for _,T in pairs(temp_areas) do
+      if T.is_void then goto continue end
 
       if T.is_inner then
         void_up_temp(T)
       end
+      ::continue::
     end
   end
 
 
   local function handle_voids()
-    each T in temp_areas do
-    each N in T.neighbors do
+    for _,T in pairs(temp_areas) do
+    for _,N in pairs(T.neighbors) do
       if T.is_void and not T.is_dead and
          N.is_void and not N.is_dead
       then
@@ -2599,15 +2613,15 @@ function Area_divvy_up_borders()
     rand.shuffle(temp_areas)
 
     for pass = 1, 6 do
-    each T in temp_areas do
-      if T.is_dead or T.is_inner or T.is_void then continue end
+    for _,T in pairs(temp_areas) do
+      if T.is_dead or T.is_inner or T.is_void then goto continue end
 
-      if not area_too_small(T) then continue end
+      if not area_too_small(T) then goto continue end
 
       rand.shuffle(T.neighbors)
 
-      each N in T.neighbors do
-        if N.is_dead or N.is_inner or N.is_void then continue end
+      for _,N in pairs(T.neighbors) do
+        if N.is_dead or N.is_inner or N.is_void then goto continue end
 
         -- only merge small areas with other small areas in the
         -- in first few passes (hoping they become large enough)
@@ -2616,16 +2630,19 @@ function Area_divvy_up_borders()
 
           if T.is_dead then break; end
         end
+        ::continue::
       end
+      ::continue::
     end  -- pass, T
     end
 
-    each T in temp_areas do
-      if T.is_dead or T.is_inner or T.is_void then continue end
+    for _,T in pairs(temp_areas) do
+      if T.is_dead or T.is_inner or T.is_void then goto continue end
 
       if area_too_small(T) then
         void_up_temp(T)
       end
+      ::continue::
     end
 
     prune_dead_areas()
@@ -2634,7 +2651,7 @@ function Area_divvy_up_borders()
 
 
   local function make_real_areas()
-    each T in temp_areas do
+    for _,T in pairs(temp_areas) do
       local A = AREA_CLASS.new("scenic")
 
       A.is_boundary  = true
@@ -2649,7 +2666,7 @@ function Area_divvy_up_borders()
       end
 
       -- install into seeds
-      each S in A.seeds do
+      for _,S in pairs(A.seeds) do
         S.area = A
         S.temp_area = nil
       end
@@ -2668,7 +2685,7 @@ function Area_divvy_up_borders()
     handle_voids()
 
     -- we don't need "zroom" after here....
-    each T in temp_areas do
+    for _,T in pairs(temp_areas) do
       T.zroom = nil
     end
   end
@@ -2701,8 +2718,8 @@ local test_textures =
   "BLOOD1",   "ASHWALL2", "SHAWN2",
   "TEKWALL4", "ASHWALL4", "ASHWALL7",
   "BRICK10",  "CEMENT9",
-  "DOORBLU2", "DOORRED2", "DOORYEL2"
-}
+  "DOORBLU2", "DOORRED2", "DOORYEL2",
+},
 --]]
 
 
@@ -2744,7 +2761,7 @@ local test_textures =
       A.facade_group.zone_diff = true
     end
 
-    each N in A.corner_neighbors do
+    for _,N in pairs(A.corner_neighbors) do
       if not N.facade_group and kinda_in_zone(N, Z) and N:is_indoor() then
         N.facade_group = A.facade_group
 
@@ -2755,7 +2772,7 @@ local test_textures =
 
 
   local function visit_zone(Z)
-    each A in LEVEL.areas do
+    for _,A in pairs(LEVEL.areas) do
       if not A.facade_group and kinda_in_zone(A, Z) and A:is_indoor() then
         A.facade_group = new_group(A)
 
@@ -2766,14 +2783,14 @@ local test_textures =
     Corner_detect_zone_diffs()
 
     -- assign a facade to groups which don't touch a zone difference
-    each A in LEVEL.areas do
+    for _,A in pairs(LEVEL.areas) do
       if A.facade_group and not A.facade_group.zone_diff then
         A.facade_crap = A.zone.other_facade
       end
     end
 
     -- clear the groups (for the sake of straddling joiners)
-    each A in LEVEL.areas do
+    for _,A in pairs(LEVEL.areas) do
       A.facade_group = nil
     end
   end
@@ -2782,10 +2799,10 @@ local test_textures =
   local function dump_facades()
     gui.debugf("Building Facades:\n")
 
-    each Z in LEVEL.zones do
+    for _,Z in pairs(LEVEL.zones) do
       gui.debugf("%s:\n", Z.name)
 
-      each A in Z.areas do
+      for _,A in pairs(Z.areas) do
         gui.debugf("  %s (%s / %s) ---> '%s'\n", A.name,
           A.mode, sel(A.is_outdoor, "outdoor", " indoor"),
           A.facade_crap or "(nil)")
@@ -2798,7 +2815,7 @@ local test_textures =
 
   ---| Area_building_facades |---
 
-  each Z in LEVEL.zones do
+  for _,Z in pairs(LEVEL.zones) do
     visit_zone(Z)
   end
 
@@ -2828,7 +2845,7 @@ function Area_create_rooms()
   gui.printf("Seed Map:\n")
   Seed_dump_rooms()
 
-  each R in LEVEL.rooms do
+  for _,R in pairs(LEVEL.rooms) do
     gui.debugf("Final %s   size: %dx%d\n", R.name, R.sw, R.sh)
   end
 

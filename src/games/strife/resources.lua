@@ -7,7 +7,7 @@
 --
 --  This program is free software; you can redistribute it and/or
 --  modify it under the terms of the GNU General Public License
---  as published by the Free Software Foundation; either version 2
+--  as published by the Free Software Foundation; either version 2,
 --  of the License, or (at your option) any later version.
 --
 ------------------------------------------------------------------------
@@ -67,8 +67,8 @@ STRIFE.PALETTES =
    61, 16, 16,  90, 36, 33, 118, 56, 49, 147, 77, 66, 176, 97, 83,
   204,117, 99,  71, 53,  2,  81, 63,  6,  96, 72,  0, 108, 80,  0,
   120, 88,  0, 128, 96,  0, 149,112,  1, 181,136,  3, 212,160,  4,
-  255,255,255
-  }
+  255,255,255,
+  },
 }
 
 
@@ -77,32 +77,32 @@ STRIFE.PALETTES =
 function STRIFE.make_cool_gfx()
   local PURPLE =
   {
-    0, 231, 232, 233, 234, 235, 236, 237, 238, 239
+    0, 231, 232, 233, 234, 235, 236, 237, 238, 239,
   }
 
   local GREEN =
   {
-    0, 186, 188, 190, 192, 194, 196, 198, 200, 202
+    0, 186, 188, 190, 192, 194, 196, 198, 200, 202,
   }
 
   local BROWN =
   {
-    0, 97, 99, 101, 103, 105, 107, 109, 111, 113, 115, 117, 119, 121
+    0, 97, 99, 101, 103, 105, 107, 109, 111, 113, 115, 117, 119, 121,
   }
 
   local RED =
   {
-    0, 164, 166, 168, 170, 172, 174, 176, 178, 180, 183
+    0, 164, 166, 168, 170, 172, 174, 176, 178, 180, 183,
   }
 
   local WHITE =
   {
-    0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30
+    0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30,
   }
 
   local BLUE =
   {
-    0, 146, 148, 150, 152, 154, 156, 217, 219, 221, 223
+    0, 146, 148, 150, 152, 154, 156, 217, 219, 221, 223,
   }
 
 
@@ -126,7 +126,7 @@ function STRIFE.make_cool_gfx()
     c_map = 4
   end
 
-  -- patches : SEWER08, BRASS3, BRASS4
+  -- patches : SEWER08, BRASS3, BRASS4,
   gui.wad_logo_gfx("W_121", "p", "BOLT",  64,128, 1)
   gui.wad_logo_gfx("W_320", "p", "PILL", 128,128, 2)
   gui.wad_logo_gfx("W_321", "p", carve,  128,128, c_map)

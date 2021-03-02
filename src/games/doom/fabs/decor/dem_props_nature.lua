@@ -7,92 +7,92 @@
 
 PREFABS.Decor_dem_cavevines1 =
 {
-  file   = "decor/dem_props_nature.wad"
-  map    = "MAP01"
+  file   = "decor/dem_props_nature.wad",
+  map    = "MAP01",
 
 
 
 
-  prob   = 4500
-  env    = "cave"
+  prob   = 4500,
+  env    = "cave",
 
-  where  = "point"
-  size   = 104
-  height = 128
+  where  = "point",
+  size   = 104,
+  height = 128,
 
-  bound_z1 = 0
-  bound_z2 = 224
+  bound_z1 = 0,
+  bound_z2 = 224,
 
-  z_fit = "stretch"
+  z_fit = "stretch",
 
   tex_MIDVINE1 = {
-    MIDVINE1=50, MIDVINE2=50
-    }
+    MIDVINE1=50, MIDVINE2=50,
+    },
 
-texture_pack = "armaetus"
-
-}
-
-PREFABS.Decor_dem_cavevines2 =
-{
-  template  = "Decor_dem_cavevines1"
-  map    = "MAP02"
-
+texture_pack = "armaetus",
 
 }
 
 PREFABS.Decor_dem_cavevines2 =
 {
-  template  = "Decor_dem_cavevines1"
-  map    = "MAP03"
+  template  = "Decor_dem_cavevines1",
+  map    = "MAP02",
 
 
 }
 
 PREFABS.Decor_dem_cavevines2 =
 {
-  template  = "Decor_dem_cavevines1"
-  map    = "MAP04"
+  template  = "Decor_dem_cavevines1",
+  map    = "MAP03",
 
 
 }
 
 PREFABS.Decor_dem_cavevines2 =
 {
-  template  = "Decor_dem_cavevines1"
-  map    = "MAP05"
+  template  = "Decor_dem_cavevines1",
+  map    = "MAP04",
 
 
 }
 
 PREFABS.Decor_dem_cavevines2 =
 {
-  template  = "Decor_dem_cavevines1"
-  map    = "MAP06"
+  template  = "Decor_dem_cavevines1",
+  map    = "MAP05",
 
 
 }
 
 PREFABS.Decor_dem_cavevines2 =
 {
-  template  = "Decor_dem_cavevines1"
-  map    = "MAP07"
+  template  = "Decor_dem_cavevines1",
+  map    = "MAP06",
 
 
 }
 
 PREFABS.Decor_dem_cavevines2 =
 {
-  template  = "Decor_dem_cavevines1"
-  map    = "MAP08"
+  template  = "Decor_dem_cavevines1",
+  map    = "MAP07",
 
 
 }
 
 PREFABS.Decor_dem_cavevines2 =
 {
-  template  = "Decor_dem_cavevines1"
-  map    = "MAP09"
+  template  = "Decor_dem_cavevines1",
+  map    = "MAP08",
+
+
+}
+
+PREFABS.Decor_dem_cavevines2 =
+{
+  template  = "Decor_dem_cavevines1",
+  map    = "MAP09",
 
 
 }
@@ -102,24 +102,24 @@ PREFABS.Decor_dem_cavevines2 =
 
 PREFABS.Decor_dem_campfireC =
 {
-  file   = "decor/dem_props_nature.wad"
-  map    = "MAP10"
+  file   = "decor/dem_props_nature.wad",
+  map    = "MAP10",
 
-  theme = "!hell"
+  theme = "!hell",
 
-  prob   = 3000
+  prob   = 3000,
 
-  env    = "nature"
+  env    = "nature",
 
-  sink_mode = "never"
+  sink_mode = "never",
 
-  where  = "point"
-  size   = 104
+  where  = "point",
+  size   = 104,
 
-  bound_z1 = 0
-  bound_z2 = 224
+  bound_z1 = 0,
+  bound_z2 = 224,
 
-texture_pack = "armaetus"
+texture_pack = "armaetus",
 
 
 }
@@ -128,30 +128,30 @@ texture_pack = "armaetus"
 
 PREFABS.Decor_dem_stala1 =
 {
-  file   = "decor/dem_props_nature.wad"
-  map    = "MAP11"
+  file   = "decor/dem_props_nature.wad",
+  map    = "MAP11",
 
-  prob   = 3000
+  prob   = 3000,
 
-  env    = "cave"
+  env    = "cave",
 
-  where  = "point"
-  size   = 104
-  height = 128
+  where  = "point",
+  size   = 104,
+  height = 128,
 
-  bound_z1 = 0
-  bound_z2 = 128
+  bound_z1 = 0,
+  bound_z2 = 128,
 
-  z_fit = "stretch"
+  z_fit = "stretch",
 
-  liquid = true
+  liquid = true,
 
 }
 
 PREFABS.Decor_dem_stala2 =
 {
-  template  = "Decor_dem_stala1"
-  map    = "MAP12"
+  template  = "Decor_dem_stala1",
+  map    = "MAP12",
 
   liquid = false
 
@@ -160,38 +160,38 @@ PREFABS.Decor_dem_stala2 =
 
 PREFABS.Decor_dem_stala3 =
 {
-  template  = "Decor_dem_stala1"
-  map    = "MAP13"
+  template  = "Decor_dem_stala1",
+  map    = "MAP13",
 
-  liquid = true
+  liquid = true,
 
 
 }
 
 PREFABS.Decor_dem_stala4 =
 {
-  template  = "Decor_dem_stala1"
-  map    = "MAP14"
+  template  = "Decor_dem_stala1",
+  map    = "MAP14",
 
-  liquid = true
+  liquid = true,
 
 
 }
 
 PREFABS.Decor_dem_stala5 =
 {
-  template  = "Decor_dem_stala1"
-  map    = "MAP15"
+  template  = "Decor_dem_stala1",
+  map    = "MAP15",
 
-  liquid = true
+  liquid = true,
 
 
 }
 
 PREFABS.Decor_dem_stala6 =
 {
-  template  = "Decor_dem_stala1"
-  map    = "MAP16"
+  template  = "Decor_dem_stala1",
+  map    = "MAP16",
 
   liquid = false
 
@@ -200,8 +200,8 @@ PREFABS.Decor_dem_stala6 =
 
 PREFABS.Decor_dem_stala7 =
 {
-  template  = "Decor_dem_stala1"
-  map    = "MAP17"
+  template  = "Decor_dem_stala1",
+  map    = "MAP17",
 
   liquid = false
 
@@ -209,17 +209,17 @@ PREFABS.Decor_dem_stala7 =
 
 PREFABS.Decor_dem_stala8 =
 {
-  template  = "Decor_dem_stala1"
-  map    = "MAP18"
+  template  = "Decor_dem_stala1",
+  map    = "MAP18",
 
-  liquid = true
+  liquid = true,
 
 }
 
 PREFABS.Decor_dem_stala9 =
 {
-  template  = "Decor_dem_stala1"
-  map    = "MAP19"
+  template  = "Decor_dem_stala1",
+  map    = "MAP19",
 
   liquid = false
 
@@ -229,136 +229,136 @@ PREFABS.Decor_dem_stala9 =
 
 PREFABS.Decor_dem_stalav1 =
 {
-  file   = "decor/dem_props_nature.wad"
-  map    = "MAP20"
+  file   = "decor/dem_props_nature.wad",
+  map    = "MAP20",
 
-  prob   = 3000
+  prob   = 3000,
 
-  env    = "cave"
+  env    = "cave",
 
-  where  = "point"
-  size   = 104
-  height = 128
+  where  = "point",
+  size   = 104,
+  height = 128,
 
-  bound_z1 = 0
-  bound_z2 = 128
+  bound_z1 = 0,
+  bound_z2 = 128,
 
-  z_fit = "stretch"
+  z_fit = "stretch",
 
   tex_MIDVINE1 = {
-    MIDVINE1=50, MIDVINE2=50
-    }
+    MIDVINE1=50, MIDVINE2=50,
+    },
 
-texture_pack = "armaetus"
+texture_pack = "armaetus",
 
-  liquid = true
+  liquid = true,
 
 }
 
 PREFABS.Decor_dem_stalav2 =
 {
-  template  = "Decor_dem_stalav1"
-  map    = "MAP21"
+  template  = "Decor_dem_stalav1",
+  map    = "MAP21",
 
-  liquid = false
+  liquid = false,
 
   z_fit = { 12,128 }
 }
 
 PREFABS.Decor_dem_stalav3 =
 {
-  template  = "Decor_dem_stalav1"
-  map    = "MAP22"
+  template  = "Decor_dem_stalav1",
+  map    = "MAP22",
 
-  liquid = true
+  liquid = true,
 
   z_fit = { 12,128 }
 }
 
 PREFABS.Decor_dem_stalav4 =
 {
-  template  = "Decor_dem_stalav1"
-  map    = "MAP23"
+  template  = "Decor_dem_stalav1",
+  map    = "MAP23",
 
-  liquid = true
+  liquid = true,
 
   z_fit = { 12,128 }
 }
 
 PREFABS.Decor_dem_stalav5 =
 {
-  template  = "Decor_dem_stalav1"
-  map    = "MAP24"
+  template  = "Decor_dem_stalav1",
+  map    = "MAP24",
 
-  liquid = false
+  liquid = false,
 }
 
 ---- outdoors and cave ruins ----
 
 PREFABS.Decor_dem_ruins1 =
 {
-  file   = "decor/dem_props_nature.wad"
-  map    = "MAP25"
+  file   = "decor/dem_props_nature.wad",
+  map    = "MAP25",
 
-  theme = "!hell"
+  theme = "!hell",
 
-  prob   = 3000
+  prob   = 3000,
 
-  env    = "nature"
+  env    = "nature",
 
-  where  = "point"
-  size   = 104
+  where  = "point",
+  size   = 104,
 
-  bound_z1 = 0
-  bound_z2 = 128
+  bound_z1 = 0,
+  bound_z2 = 128,
 
-texture_pack = "armaetus"
+texture_pack = "armaetus",
 
 }
 
 PREFABS.Decor_dem_ruins2 =
 {
-  template  = "Decor_dem_ruins1"
-  map    = "MAP26"
+  template  = "Decor_dem_ruins1",
+  map    = "MAP26",
 
 }
 
 PREFABS.Decor_dem_ruinsjs1 =
 {
-  file   = "decor/dem_props_nature.wad"
-  map    = "MAP27"
-  engine = "zdoom"
+  file   = "decor/dem_props_nature.wad",
+  map    = "MAP27",
+  engine = "zdoom",
 
-  theme = "!hell"
+  theme = "!hell",
 
-  prob   = 800
+  prob   = 800,
 
-  style = "secrets"
+  style = "secrets",
 
-  env    = "nature"
+  env    = "nature",
 
-  where  = "point"
-  size   = 104
+  where  = "point",
+  size   = 104,
 
-  bound_z1 = 0
-  bound_z2 = 152
+  bound_z1 = 0,
+  bound_z2 = 152,
 
-texture_pack = "armaetus"
+texture_pack = "armaetus",
 
   thing_2023 =
   {
-    green_armor = 50
-    berserk = 50
-    invis = 50
-    allmap = 50
-    goggles = 50
+    green_armor = 50,
+    berserk = 50,
+    invis = 50,
+    allmap = 50,
+    goggles = 50,
   }
 
 }
 
 PREFABS.Decor_dem_ruinsjs2 =
 {
-  template  = "Decor_dem_ruinsjs1"
-  map    = "MAP28"
+  template  = "Decor_dem_ruinsjs1",
+  map    = "MAP28",
 
 }

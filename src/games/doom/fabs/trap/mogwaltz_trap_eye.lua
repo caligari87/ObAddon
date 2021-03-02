@@ -1,31 +1,31 @@
 PREFABS.Cage_secret_trap_shootable_eye =
 {
-  file   = "cage/mogwaltz_trap_eye.wad"
-  map    = "MAP01"
+  file   = "cage/mogwaltz_trap_eye.wad",
+  map    = "MAP01",
 
-  prob   = 18
+  prob   = 18,
 
-  style  = "traps"
+  style  = "traps",
 
-  where  = "seeds"
-  shape  = "U"
+  where  = "seeds",
+  shape  = "U",
 
-  seed_w = 2
-  seed_h = 1
+  seed_w = 2,
+  seed_h = 1,
 
-  deep   = 16
+  deep   = 16,
 
-  x_fit  = "frame"
-  y_fit  = { 64,96 }
+  x_fit  = "frame",
+  y_fit  = { 64,96 },
 
   -- prevent monsters stuck in a barrel
-  solid_ents = true
+  solid_ents = true,
 }
 
 PREFABS.Cage_secret_trap_shootable_eye_pair =
 {
-  template = "Cage_secret_trap_shootable_eye"
-  map = "MAP02"
+  template = "Cage_secret_trap_shootable_eye",
+  map = "MAP02",
 
-  prob = 18
+  prob = 18,
 }

@@ -7,7 +7,7 @@
 --
 --  This program is free software; you can redistribute it and/or
 --  modify it under the terms of the GNU General Public License
---  as published by the Free Software Foundation; either version 2
+--  as published by the Free Software Foundation; either version 2,
 --  of the License, or (at your option) any later version.
 --
 --  This program is distributed in the hope that it will be useful,
@@ -26,7 +26,7 @@ FAUNA_MODULE.ENABLE_DISABLE =
 }
 
 function FAUNA_MODULE.setup(self)
-  for name,opt in pairs(self.options) do
+  for name,opt in pairs(pairs(self.options)) do
     local value = self.options[name].value
     PARAM[name] = value
   end
@@ -142,7 +142,7 @@ actor ScurryRat: Rodent 30100
 }
 ]]
 
--- ZScript code: josh771
+-- ZScript code: josh771,
 -- Sounds: FreeSounds
 -- Sprites: Blood
 -- Sprite Edit: Doomedarchviledemon
@@ -292,6 +292,7 @@ class SpringyFly : Actor
 }
 ]]
 
+
 -- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ SNDINFO ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 FAUNA_MODULE.SNDINFO =
@@ -324,15 +325,15 @@ FAUNA_MODULE.ACTORS =
 {
   SpringyFly =
   {
-    id = 30000
-    cluster = 2
-  }
+    id = 30000,
+    cluster = 2,
+  },
 
   rat =
   {
-    id = 30100
-    cluster = 1
-  }
+    id = 30100,
+    cluster = 1,
+  },
 }
 
 FAUNA_MODULE.DOOMEDNUMS =
@@ -361,10 +362,10 @@ end
 
 function FAUNA_MODULE.add_flies()
 
-  each A in LEVEL.areas do
+  for _,A in pairs(LEVEL.areas) do
 
     if (A.mode and A.mode == "floor") then
-      each S in A.seeds do
+      for _,S in pairs(A.seeds) do
 
         -- No spawning in outdoor snow areas
         if (A.is_outdoor and LEVEL.outdoor_theme == "snow") then end
@@ -385,7 +386,7 @@ function FAUNA_MODULE.add_flies()
         if rand.odds(spawn_odds) then
 
           local item_tab = {
-            SpringyFly = 5
+            SpringyFly = 5,
           }
 
           local choice = rand.key_by_probs(item_tab)
@@ -421,9 +422,9 @@ end
 
 function FAUNA_MODULE.add_rats()
 
-  each A in LEVEL.areas do
+  for _,A in pairs(LEVEL.areas) do
     if (A.mode and A.mode == "floor") then
-      each S in A.seeds do
+      for _,S in pairs(A.seeds) do
 
         -- No spawning in outdoor snow areas
         if (A.is_outdoor and LEVEL.outdoor_theme == "snow") then end
@@ -439,7 +440,7 @@ function FAUNA_MODULE.add_rats()
         if rand.odds(spawn_odds) then
 
           local item_tab = {
-            rat = 5
+            rat = 5,
           }
 
           local choice = rand.key_by_probs(item_tab)
@@ -504,41 +505,41 @@ end
 
 OB_MODULES["fauna_module"] =
 {
-  label = _("GZDoom: Fauna")
+  label = _("GZDoom: Fauna"),
 
---  game = "doomish"
+--  game = "doomish",
 
-  side = "left"
-  priority = 68
+  side = "left",
+  priority = 68,
 
-  engine = { gzdoom=1 }
+  engine = { gzdoom=1 },
 
   hooks =
   {
-    setup = FAUNA_MODULE.setup
-    get_levels = FAUNA_MODULE.get_levels
-    end_level = FAUNA_MODULE.end_level
+    setup = FAUNA_MODULE.setup,
+    get_levels = FAUNA_MODULE.get_levels,
+    end_level = FAUNA_MODULE.end_level,
     all_done = FAUNA_MODULE.all_done
-  }
+  },
 
   options =
   {
     flies =
     {
-      name = "flies"
-      label=_("Flies")
-      choices = FAUNA_MODULE.ENABLE_DISABLE
-      tooltip = _("Adds flies to maps. \n")
-      default = "disable"
-    }
+      name = "flies",
+      label=_("Flies"),
+      choices = FAUNA_MODULE.ENABLE_DISABLE,
+      tooltip = _("Adds flies to maps. \n"),
+      default = "disable",
+    },
 
     rats =
     {
-      name = "rats"
-      label=_("Rats")
-      choices = FAUNA_MODULE.ENABLE_DISABLE
-      tooltip = _("Adds scurrying rats to maps. \n")
-      default = "disable"
-    }
-  }
+      name = "rats",
+      label=_("Rats"),
+      choices = FAUNA_MODULE.ENABLE_DISABLE,
+      tooltip = _("Adds scurrying rats to maps. \n"),
+      default = "disable",
+    },
+  },
 }

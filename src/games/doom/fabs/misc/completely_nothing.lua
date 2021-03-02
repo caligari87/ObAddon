@@ -1,10 +1,10 @@
 PREFABS.Completely_nothing =
 {
-  file  = "misc/completely_nothing.wad"
-  map   = "MAP01"
+  file  = "misc/completely_nothing.wad",
+  map   = "MAP01",
 
-  where = "seeds"
+  where = "seeds",
 
-  seed_w = 1
-  seed_h = 1
+  seed_w = 1,
+  seed_h = 1,
 }

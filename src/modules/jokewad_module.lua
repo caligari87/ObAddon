@@ -6,7 +6,7 @@
 --
 --  This program is free software; you can redistribute it and/or
 --  modify it under the terms of the GNU General Public License
---  as published by the Free Software Foundation; either version 2
+--  as published by the Free Software Foundation; either version 2,
 --  of the License, or (at your option) any later version.
 --
 --  This program is distributed in the hope that it will be useful,
@@ -203,30 +203,30 @@ JOKEWAD_MODULE.TISSUES =
 {
   ob_1roll =
   {
-    id = 14949
-    cluster = 5
-  }
+    id = 14949,
+    cluster = 5,
+  },
 
   ob_2roll =
   {
-    id = 14950
-    cluster = 3
-  }
+    id = 14950,
+    cluster = 3,
+  },
 
   ob_5roll =
   {
-    id = 14951
-  }
+    id = 14951,
+  },
 
   ob_handsanitizer =
   {
-    id = 14952
-  }
+    id = 14952,
+  },
 
   ob_mask =
   {
-    id = 14953
-  }
+    id = 14953,
+  },
 }
 
 function JOKEWAD_MODULE.get_levels()
@@ -249,7 +249,7 @@ end
 
 function JOKEWAD_MODULE.go_fireblue()
 
-  each m,def in GAME.MATERIALS do
+  for m,def in pairs(GAME.MATERIALS) do
     if not string.match(m, "_SKY") then
       def.t = "GRAYTALL"
       def.f = "FIREBLU1"
@@ -291,25 +291,25 @@ function JOKEWAD_MODULE.populate_level(stuff)
     end
   end
 
-  each A in LEVEL.areas do
+  for _,A in pairs(LEVEL.areas) do
     if (A.mode and A.mode == "floor") then
-      each S in A.seeds do
+      for _,S in pairs(A.seeds) do
 
         -- not on chunks with something on it
-        if S.chunk and S.chunk.content then continue end
+        if S.chunk and S.chunk.content then goto continue end
 
         -- not by walls and diagonals
-        if S.wall_depth or S.diagonal then continue end
+        if S.wall_depth or S.diagonal then goto continue end
 
         -- not on areas with liquid sinks
         if A.floor_group and A.floor_group.sink
-        and A.floor_group.sink.mat == "_LIQUID" then continue end
+        and A.floor_group.sink.mat == "_LIQUID" then goto continue end
 
         render_items(A.ceil_h, S.mid_x, S.mid_y, 48)
-
+        ::continue::
       end
     elseif A.mode == "nature" then
-      each WC in A.walk_rects do
+      for _,WC in pairs(A.walk_rects) do
         if WC.chunk and WC.chunk.kind == "floor" then
 
           local i_x = WC.chunk.sx1
@@ -349,15 +349,15 @@ function JOKEWAD_MODULE.add_tissues()
 
   item_params =
   {
-    odds = 7
+    odds = 7,
     items =
     {
-      ob_1roll = 2
-      ob_2roll = 1
-      ob_5roll = 1
-      ob_handsanitizer = 1
-      ob_mask = 1
-    }
+      ob_1roll = 2,
+      ob_2roll = 1,
+      ob_5roll = 1,
+      ob_handsanitizer = 1,
+      ob_mask = 1,
+    },
     templates = JOKEWAD_MODULE.TISSUES
   }
 
@@ -369,7 +369,7 @@ function JOKEWAD_MODULE.all_done()
   if PARAM.pandemic_mode == "enable" then
 
     SCRIPTS.tissue_doc = JOKEWAD_MODULE.SUPER_DEC
-    local dir = "games/doom/data/"
+    local dir = "games/doom/data/",
     gui.wad_merge_sections(dir .. "events.wad")
 
   end
@@ -378,45 +378,45 @@ end
 
 OB_MODULES["jokewad_module"] =
 {
-  label = _("Jokewad Module")
+  label = _("Jokewad Module"),
 
-  game = "doomish"
+  game = "doomish",
 
-  side = "left"
-  priority = 60
+  side = "left",
+  priority = 60,
 
   hooks =
   {
-    setup = JOKEWAD_MODULE.setup
-    get_levels = JOKEWAD_MODULE.get_levels
-    end_level = JOKEWAD_MODULE.end_level
+    setup = JOKEWAD_MODULE.setup,
+    get_levels = JOKEWAD_MODULE.get_levels,
+    end_level = JOKEWAD_MODULE.end_level,
     all_done = JOKEWAD_MODULE.all_done
-  }
+  },
 
   options =
   {
     fireblu_mode =
     {
-      name = "fireblu_mode"
-      label=_("FIREBLU Mode")
-      choices = JOKEWAD_MODULE.ENABLE_DISABLE
+      name = "fireblu_mode",
+      label=_("FIREBLU Mode"),
+      choices = JOKEWAD_MODULE.ENABLE_DISABLE,
       tooltip = _(
         "Allows the creation of the greatest maps to ever be generated on " ..
         "on the face of the earth. Warning: ticking this waives any " ..
         "liability for potential emotional and physical damage on the " ..
-        "part of the user. \n")
-      default = "disable"
-    }
+        "part of the user. \n"),
+      default = "disable",
+    },
 
     pandemic_mode =
     {
-      name = "pandemic_mode"
-      label=_("Pandemic Mode")
-      choices = JOKEWAD_MODULE.ENABLE_DISABLE
+      name = "pandemic_mode",
+      label=_("Pandemic Mode"),
+      choices = JOKEWAD_MODULE.ENABLE_DISABLE,
       tooltip = _("Do your part in preventing the coronavirus crisis! Hell is taking " ..
       "away all our tissue rolls and hand sanitizers! It's up to the Slayer to take " ..
-      "it back. Every square and every squeeze.")
-      default = "disable"
-    }
-  }
+      "it back. Every square and every squeeze."),
+      default = "disable",
+    },
+  },
 }

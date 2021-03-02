@@ -300,7 +300,7 @@ ARMAETUS_EPIC_TEXTURES.TEMPLATES =
                     }
                 }
 
-                if(onCeil != 'F_SKY1')
+                if(onCeil ~= 'F_SKY1')
                 {
                     scale.x *= 0.5; //For those occasional indoor planters
                     scale.y *= 0.5; //in urban theme.
@@ -471,7 +471,7 @@ ARMAETUS_EPIC_TEXTURES.TEMPLATES =
 
 class FancyObligeTree2 : FancyObligeTree replaces TorchTree
 {
-}]]
+}]],
 
   DEC_TREES =
 [[
@@ -689,7 +689,7 @@ function ARMAETUS_EPIC_TEXTURES.decide_environment_themes()
 
   -- pick a random environment
   if PARAM.environment_themes == "random" then
-    each L in GAME.levels do
+    for _,L in pairs(GAME.levels) do
       L.outdoor_theme = rand.pick({"temperate","snow","desert"})
     end
   end
@@ -699,7 +699,7 @@ function ARMAETUS_EPIC_TEXTURES.decide_environment_themes()
     local previous_theme
     local outdoor_theme_along
 
-    each L in GAME.levels do
+    for _,L in pairs(GAME.levels) do
       if L.id == 1 then
         L.outdoor_theme = rand.pick({"temperate","snow","desert"})
         previous_theme = L.outdoor_theme
@@ -727,22 +727,22 @@ function ARMAETUS_EPIC_TEXTURES.decide_environment_themes()
 
   -- -ish environment themes
   if PARAM.environment_themes == "snowish" then
-    each L in GAME.levels do
+    for _,L in pairs(GAME.levels) do
       L.outdoor_theme = rand.pick({"temperate","snow"})
     end
   elseif PARAM.environment_themes == "desertish" then
-    each L in GAME.levels do
+    for _,L in pairs(GAME.levels) do
       L.outdoor_theme = rand.pick({"temperate","desert"})
     end
   end
 
   -- absolutes
   if PARAM.environment_themes == "snow" then
-    each L in GAME.levels do
+    for _,L in pairs(GAME.levels) do
       L.outdoor_theme = "snow"
     end
   elseif PARAM.environment_themes == "desert" then
-    each L in GAME.levels do
+    for _,L in pairs(GAME.levels) do
       L.outdoor_theme = "desert"
     end
   end
@@ -750,12 +750,12 @@ function ARMAETUS_EPIC_TEXTURES.decide_environment_themes()
   if PARAM.environment_themes == "episodic" then
     local prev_theme
 
-    each E in GAME.episodes do
+    for _,E in pairs(GAME.episodes) do
       if not prev_theme then
         E.outdoor_theme = rand.pick({"temperate","desert","snow"})
         prev_theme = E.outdoor_theme
       else
-        if prev_theme != "temperate" then
+        if prev_theme ~= "temperate" then
           E.outdoor_theme = "temperate"
           prev_theme = E.outdoor_theme
         else
@@ -765,13 +765,13 @@ function ARMAETUS_EPIC_TEXTURES.decide_environment_themes()
       end
     end
 
-    each L in GAME.levels do
+    for _,L in pairs(GAME.levels) do
       L.outdoor_theme = L.episode.outdoor_theme
     end
   end
 
   gui.printf("\n--==| Environment Outdoor Themes |==--\n\n")
-  each L in GAME.levels do
+  for _,L in pairs(GAME.levels) do
     if L.outdoor_theme then
       gui.printf("Outdoor theme for " .. L.name .. ": " .. L.outdoor_theme .. "\n")
     end
@@ -923,7 +923,7 @@ function ARMAETUS_EPIC_TEXTURES.put_new_materials()
 
     -- put the custom theme definitions in the themes table!!!
     -- LIQUIDZ
-    if PARAM.custom_liquids != "no" then
+    if PARAM.custom_liquids ~= "no" then
       GAME.THEMES = table.deep_merge(GAME.THEMES, ARMAETUS_LIQUIDS, 2)
     end
 
@@ -947,7 +947,7 @@ function ARMAETUS_EPIC_TEXTURES.put_new_materials()
 
     -- put the custom theme definitions in the themes table!!!
     -- LIQUIDZ
-    if PARAM.custom_liquids != "no" then
+    if PARAM.custom_liquids ~= "no" then
       GAME.THEMES = table.deep_merge(GAME.THEMES, ARMAETUS_DOOM1_LIQUIDS, 2)
     end
 
@@ -981,7 +981,7 @@ end
 
 function ARMAETUS_EPIC_TEXTURES.put_the_texture_wad_in()
   local wad_file = "games/doom/data/ObAddon_Textures.wad"
-  if PARAM.include_package != "no" then
+  if PARAM.include_package ~= "no" then
     gui.wad_transfer_lump(wad_file, "ANIMDEFS", "ANIMDEFS")
     gui.wad_transfer_lump(wad_file, "CREDITS", "CREDITS")
     gui.wad_merge_sections(wad_file)
@@ -1013,7 +1013,11 @@ function ARMAETUS_EPIC_TEXTURES.put_the_texture_wad_in()
     gui.wad_add_binary_lump("HI_END",{})
   end
 
+<<<<<<< HEAD
   if PARAM.custom_trees != "no" then
+=======
+  if PARAM.custom_trees ~= "no" then
+>>>>>>> pr/130
     wad_file = "modules/zdoom_internal_scripts/ObAddon_trees.wad"
     gui.wad_merge_sections(wad_file)
   end
@@ -1027,14 +1031,14 @@ end
 
 OB_MODULES["armaetus_epic_textures"] =
 {
-  label = _("ZDoom: Armaetus Texture Pack")
+  label = _("ZDoom: Armaetus Texture Pack"),
 
-  side = "left"
-  priority = 70
+  side = "left",
+  priority = 70,
 
-  engine = { zdoom=1, gzdoom=1, skulltag=1 }
+  engine = { zdoom=1, gzdoom=1, skulltag=1 },
 
-  game = "doomish"
+  game = "doomish",
 
   hooks =
   {
@@ -1043,9 +1047,9 @@ OB_MODULES["armaetus_epic_textures"] =
     begin_level = ARMAETUS_EPIC_TEXTURES.generate_environment_themes,
     level_layout_finished = ARMAETUS_EPIC_TEXTURES.create_environment_themes,
     all_done = ARMAETUS_EPIC_TEXTURES.put_the_texture_wad_in
-  }
+  },
 
-  tooltip = "If enabled, adds textures from Armaetus's Texture Pack, which also includes a few new custom texture exclusive prefabs."
+  tooltip = "If enabled, adds textures from Armaetus's Texture Pack, which also includes a few new custom texture exclusive prefabs.",
 
   options =
   {
@@ -1057,7 +1061,7 @@ OB_MODULES["armaetus_epic_textures"] =
       default = "yes",
       tooltip = "Adds new custom Textures liquid flats.",
       priority=4
-    }
+    },
 
     custom_trees =
     {
@@ -1071,7 +1075,7 @@ OB_MODULES["armaetus_epic_textures"] =
         "custom Textures and more. If you are playing a mod that already does its own trees, " ..
         "it may be better to leave this off.",
       priority=3
-    }
+    },
 
     environment_themes =
     {
@@ -1085,7 +1089,7 @@ OB_MODULES["armaetus_epic_textures"] =
         "desert sand or icey snow.",
       priority=2,
       gap=1
-    }
+    },
 
     include_package =
     {
@@ -1098,6 +1102,17 @@ OB_MODULES["armaetus_epic_textures"] =
         "This will require you to extract and load up the WAD manually in your preferred sourceport installation.\n\n" ..
         "This is the preferrable option for multiplayer situations and server owners and have each client obtain a copy of the texture pack instead.\n",
       priority=1
+    },
+
+    include_brightmaps =
+    {
+      name = "include_brightmaps",
+      label = _("Include Brightmaps"),
+      choices = ARMAETUS_EPIC_TEXTURES.YES_NO,
+      default = "yes",
+      tooltip = "Allows merging Epic Textures brightmaps into the WAD. Does not include brightmaps for" ..
+        " base resources from any of the games.",
+      priority = 0
     }
 
     include_brightmaps =

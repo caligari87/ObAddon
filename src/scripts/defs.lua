@@ -300,38 +300,38 @@ PROC_GOTCHA_QUANTITY_MULTIPLIER =
 --
 GLOBAL_STYLE_LIST =
 {
-  outdoors    = { none=30, few=30, some=30, heaps=7 }
-  caves       = { none=25, few=15, some=15, heaps=5 }
-  parks       = { none=7 , few=1 , some=1 , heaps=1 }
-  liquids     = { none=0,  few=20, some=25, heaps=50 }
+  outdoors    = { none=30, few=30, some=30, heaps=7 },
+  caves       = { none=25, few=15, some=15, heaps=5 },
+  parks       = { none=7 , few=1 , some=1 , heaps=1 },
+  liquids     = { none=0,  few=20, some=25, heaps=50 },
 
-  hallways    = { none=0,  few=60, some=30, heaps=10 }
-  big_rooms   = { none=15, few=40, some=30, heaps=20 }
-  big_outdoor_rooms = { none=15, few=20, some=50, heaps=35}
-  teleporters = { none=35, few=50, some=20, heaps=10 }
-  steepness   = { none=0,  few=10, some=70, heaps=40 }
+  hallways    = { none=0,  few=60, some=30, heaps=10 },
+  big_rooms   = { none=15, few=40, some=30, heaps=20 },
+  big_outdoor_rooms = { none=15, few=20, some=50, heaps=35},
+  teleporters = { none=35, few=50, some=20, heaps=10 },
+  steepness   = { none=0,  few=10, some=70, heaps=40 },
 
-  traps       = { none=0,  few=25, some=65, heaps=20 }
-  cages       = { none=10, few=20, some=40, heaps=10 }
-  secrets     = { none=0,  few=15, some=70, heaps=25 }
-  ambushes    = { none=10, few=20, some=50, heaps=10 }
+  traps       = { none=0,  few=25, some=65, heaps=20 },
+  cages       = { none=10, few=20, some=40, heaps=10 },
+  secrets     = { none=0,  few=15, some=70, heaps=25 },
+  ambushes    = { none=10, few=20, some=50, heaps=10 },
 
-  doors       = { none=0,  few=30, some=60, heaps=5 }
-  windows     = { none=0,  few=20, some=80, heaps=30 }
-  switches    = { none=15, few=30, some=50, heaps=15 }
-  keys        = { none=5,  few=15, some=40, heaps=60 }
-  trikeys     = { none=5,  few=40, some=30, heaps=20 }
+  doors       = { none=0,  few=30, some=60, heaps=5 },
+  windows     = { none=0,  few=20, some=80, heaps=30 },
+  switches    = { none=15, few=30, some=50, heaps=15 },
+  keys        = { none=5,  few=15, some=40, heaps=60 },
+  trikeys     = { none=5,  few=40, some=30, heaps=20 },
 
-  scenics     = { none=5,  few=10, some=40, heaps=40}
-  park_detail = { none=0,  few=5,  some=10, heaps=30}
+  scenics     = { none=5,  few=10, some=40, heaps=40},
+  park_detail = { none=0,  few=5,  some=10, heaps=30},
 
-  symmetry    = { none=35, few=60, some=20, heaps=10 }
-  pictures    = { none=0,  few=10, some=70, heaps=30 }
-  barrels     = { none=10, few=50, some=35, heaps=10 }
+  symmetry    = { none=35, few=60, some=20, heaps=10 },
+  pictures    = { none=0,  few=10, some=70, heaps=30 },
+  barrels     = { none=10, few=50, some=35, heaps=10 },
 
-  beams       = { none=10, few=10, some=20, heaps=5  }
-  porches     = { none=0,  few=10, some=60, heaps=30 }
-  fences      = { none=10, few=20, some=30, heaps=15 }
+  beams       = { none=10, few=10, some=20, heaps=5  },
+  porches     = { none=0,  few=10, some=60, heaps=30 },
+  fences      = { none=10, few=20, some=30, heaps=15 },
   -- PLANNED or UNFINISHED stuff --
 
   --[[
@@ -361,12 +361,12 @@ STYLE_CHOICES =
 --
 GLOBAL_PARAMETERS =
 {
-  map_limit = 10000
+  map_limit = 10000,
 
-  step_height = 16
-  jump_height = 24
+  step_height = 16,
+  jump_height = 24,
 
-  spot_low_h  = 72
+  spot_low_h  = 72,
   spot_high_h = 128
 }
 
@@ -379,72 +379,72 @@ GLOBAL_PREFAB_FIELDS =
   -- Note the double underscore, since these materials actually
   -- begin with an underscore (like "_WALL" and "_FLOOR").
 
-   tex__WALL   = "?wall"
-  flat__WALL   = "?wall"
+   tex__WALL   = "?wall",
+  flat__WALL   = "?wall",
 
-   tex__OUTER  = "?outer"
-  flat__OUTER  = "?outer"
+   tex__OUTER  = "?outer",
+  flat__OUTER  = "?outer",
 
-   tex__FLOOR  = "?floor"
-  flat__FLOOR  = "?floor"
+   tex__FLOOR  = "?floor",
+  flat__FLOOR  = "?floor",
 
-   tex__CEIL   = "?ceil"
-  flat__CEIL   = "?ceil"
+   tex__CEIL   = "?ceil",
+  flat__CEIL   = "?ceil",
 
-   tex__FLOOR2 = "?floor2"
-  flat__FLOOR2 = "?floor2"
+   tex__FLOOR2 = "?floor2",
+  flat__FLOOR2 = "?floor2",
 
-   tex__CEIL2  = "?ceil2"
-  flat__CEIL2  = "?ceil2"
+   tex__CEIL2  = "?ceil2",
+  flat__CEIL2  = "?ceil2",
 
-  thing_8166   = "?object"
+  thing_8166   = "?object",
 
-  line_888     = "?switch_action"
+  line_888     = "?switch_action",
 
-  offset_301   = "?x_offset1"
-  offset_302   = "?x_offset2"
-  offset_303   = "?x_offset3"
-  offset_304   = "?x_offset4"
+  offset_301   = "?x_offset1",
+  offset_302   = "?x_offset2",
+  offset_303   = "?x_offset3",
+  offset_304   = "?x_offset4",
 
-  offset_401   = "?y_offset1"
-  offset_402   = "?y_offset2"
-  offset_403   = "?y_offset3"
-  offset_404   = "?y_offset4"
+  offset_401   = "?y_offset1",
+  offset_402   = "?y_offset2",
+  offset_403   = "?y_offset3",
+  offset_404   = "?y_offset4",
 }
 
 
 GLOBAL_SKIN_DEFAULTS =
 {
-  wall   = "_ERROR"
+  wall   = "_ERROR",
 
-  fence  = "?wall"
-  floor  = "?wall"
-  ceil   = "?wall"
+  fence  = "?wall",
+  floor  = "?wall",
+  ceil   = "?wall",
 
-  outer  = "?wall"
-  floor2 = "?outer"
-  ceil2  = "?outer"
+  outer  = "?wall",
+  floor2 = "?outer",
+  ceil2  = "?outer",
 
-  x_offset1 = ""
-  x_offset2 = ""
-  x_offset3 = ""
-  x_offset4 = ""
+  x_offset1 = "",
+  x_offset2 = "",
+  x_offset3 = "",
+  x_offset4 = "",
 
-  y_offset1 = ""
-  y_offset2 = ""
-  y_offset3 = ""
-  y_offset4 = ""
+  y_offset1 = "",
+  y_offset2 = "",
+  y_offset3 = "",
+  y_offset4 = "",
 
   -- Doom engine stuff
-  tag = ""
-  light = ""
-  object = ""
-  switch_action = ""
-  scroller = ""
+  tag = "",
+  light = "",
+  object = "",
+  switch_action = "",
+  scroller = "",
 
   -- Quake engine stuff
-  style = ""
-  message = ""
-  wait = ""
-  targetname = ""
+  style = "",
+  message = "",
+  wait = "",
+  targetname = "",
 }

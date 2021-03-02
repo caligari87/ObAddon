@@ -1,18 +1,18 @@
 PREFABS.Item_weapon_case =
 {
-  file  = "item/gtd_item_crates.wad"
-  where = "point"
+  file  = "item/gtd_item_crates.wad",
+  where = "point",
 
-  map  = "MAP01"
+  map  = "MAP01",
 
-  prob = 75
+  prob = 75,
 }
 
 PREFABS.Item_broken_crate =
 {
-  template = "Item_weapon_case"
+  template = "Item_weapon_case",
 
-  size = 64
+  size = 64,
 
-  map = "MAP02"
+  map = "MAP02",
 }

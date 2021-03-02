@@ -1,31 +1,31 @@
 PREFABS.Lift_gtd_pistons_128 =
 {
-  file = "stairs/gtd_lift_pistons_64.wad"
-  map = "MAP01"
+  file = "stairs/gtd_lift_pistons_64.wad",
+  map = "MAP01",
 
-  theme = "!hell"
+  theme = "!hell",
 
-  prob = 10
-  style = "steepness"
+  prob = 10,
+  style = "steepness",
 
-  where = "seeds"
-  shape = "I"
+  where = "seeds",
+  shape = "I",
 
-  seed_h = 1
-  seed_w = 1
+  seed_h = 1,
+  seed_w = 1,
 
-  x_fit = "frame"
+  x_fit = "frame",
 
-  bound_z1 = 0
+  bound_z1 = 0,
 
-  delta_h = 64
-  plain_ceiling = true
+  delta_h = 64,
+  plain_ceiling = true,
 }
 
 PREFABS.Lift_gtd_pistons_128_hell =
 {
-  template = "Lift_gtd_pistons_128"
-  map = "MAP02"
+  template = "Lift_gtd_pistons_128",
+  map = "MAP02",
 
-  theme = "hell"
+  theme = "hell",
 }

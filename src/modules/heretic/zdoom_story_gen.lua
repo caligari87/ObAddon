@@ -7,7 +7,7 @@
 --
 --  This program is free software; you can redistribute it and/or
 --  modify it under the terms of the GNU General Public License
---  as published by the Free Software Foundation; either version 2
+--  as published by the Free Software Foundation; either version 2,
 --  of the License, or (at your option) any later version.
 --
 --  This program is distributed in the hope that it will be useful,
@@ -62,7 +62,7 @@ function ZStoryGen_heretic_format_story_chunk(story_strings, info, store)
 
   -- remove the spaces left behind by Lua's square bracket stuff.
   story_strings = string.gsub(story_strings, "  ", "")
-  if PARAM.print_story_strings != "no" then
+  if PARAM.print_story_strings ~= "no" then
     gui.printf(story_strings .. "\n\n")
   end
   story_strings = string.gsub(story_strings, "\n", " ")
@@ -73,7 +73,6 @@ function ZStoryGen_heretic_format_story_chunk(story_strings, info, store)
   local manhandled_string = ''
   local manhandled_string_length = 0
   local story_lines = {}
-
 
   -- splitting dem paragraphs
   for word in story_strings:gmatch("%S+") do
@@ -96,7 +95,7 @@ function ZStoryGen_heretic_format_story_chunk(story_strings, info, store)
       manhandled_string = '"' .. word .. ' '
       manhandled_string_length = word:len()
     else
-      if word != "\\n\\n" then
+      if word ~= "\\n\\n" then
         manhandled_string = manhandled_string .. word .. " "
       else
         -- line breaks aren't words, bruh
@@ -107,7 +106,7 @@ function ZStoryGen_heretic_format_story_chunk(story_strings, info, store)
   end
 
   -- properly add the last line if it exists.
-  if manhandled_string != "" then
+  if manhandled_string ~= "" then
     table.insert(story_lines, manhandled_string .. '"')
   end
   story_lines[#story_lines] = story_lines[#story_lines] .. ";"

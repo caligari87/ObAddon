@@ -1,16 +1,16 @@
 PREFABS.Skybox_garrett_city_EPIC =
 {
-  file  = "skybox/garrett_skybox_city_epictextures.wad"
-  map   = "MAP01"
+  file  = "skybox/garrett_skybox_city_epictextures.wad",
+  map   = "MAP01",
 
-  where = "point"
+  where = "point",
 
-  prob  = 50
+  prob  = 50,
 
-  texture_pack = "armaetus"
+  texture_pack = "armaetus",
 
-  kind  = "skybox"
+  kind  = "skybox",
 
-  bound_z1 = -256
-  bound_z2 = 256
+  bound_z1 = -256,
+  bound_z2 = 256,
 }

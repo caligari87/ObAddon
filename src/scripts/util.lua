@@ -8,7 +8,7 @@
 --
 --  This program is free software; you can redistribute it and/or
 --  modify it under the terms of the GNU General Public License
---  as published by the Free Software Foundation; either version 2
+--  as published by the Free Software Foundation; either version 2,
 --  of the License, or (at your option) any later version.
 --
 --  This program is distributed in the hope that it will be useful,
@@ -163,7 +163,7 @@ function string.tokenize(text)
   -- returns a list of words
   local words = {}
 
---##  text = " " .. text .. " "
+--##  text = " " .. text .. " ",
 --##  text = string.gsub(text, "%s%s+", " ")
 
   for w in string.gmatch(text, "(%S+)") do
@@ -498,14 +498,16 @@ function table.name_up(t)
 end
 
 function table.index_up(t)
-  each info in t do
-    info.id = _index
+  for index,info in pairs(t) do
+    info.id = index
   end
 end
 
 function table.expand_templates(t)
   for name,sub in pairs(t) do
     if sub.template then
+      print("Name: " .. name)
+      print("Sub-Template: " .. sub.template)
       local orig = t[sub.template]
 
       if orig == nil then
@@ -515,8 +517,9 @@ function table.expand_templates(t)
       if orig == nil then
         error("Missing template: " .. tostring(sub.template) .. " in: " .. name)
       end
-
+      
       if orig.template then
+        print("Orig-Template: " .. orig.template)
         error("Template reference cannot use templates (" .. tostring(sub.template) .. ")")
       end
 
@@ -829,7 +832,7 @@ end
 
 
 function geom.angle_add(A, B)
-  -- result ranges from 0 to 360
+  -- result ranges from 0 to 360,
   local D = A + B
 
   while D <    0 do D = D + 360 end
@@ -840,7 +843,7 @@ end
 
 function geom.angle_diff(A, B)
   -- A + result = B
-  -- result ranges from -180 to +180
+  -- result ranges from -180 to +180,
 
   local D = (B - A)
 
@@ -870,7 +873,7 @@ function geom.calc_angle(dx, dy)
     return nil
   end
 
-  local angle = math.atan2(dy, dx) * 180 / math.pi
+  local angle = math.atan(dy, dx) * 180 / math.pi
 
   if angle < 0 then angle = angle + 360 end
 
@@ -1081,7 +1084,7 @@ function geom.bezier_coord(S, C, E, t)
   -- C = control point
   -- E = end point
 
-  -- t ranges from 0.0 to 1.0
+  -- t ranges from 0.0 to 1.0,
 
   local ks = (1 - t) * (1 - t)
   local kc = 2 * (1 - t) * t
@@ -1146,9 +1149,9 @@ end
 
 
 function link_seed_info_to_areas()
-  each R in LEVEL.rooms do
-    each A in R.areas do
-      each S in A.seeds do
+  for _,R in pairs(LEVEL.rooms) do
+    for _,A in pairs(R.areas) do
+      for _,S in pairs(A.seeds) do
         SEEDS[S.sx][S.sy] = S
       end
     end
@@ -1160,7 +1163,7 @@ end
 function print_area(area)
   if not area.printed then
     gui.printf("AREA_" .. area.id .. " = {\n")
-    each k,v in area do
+    for k,v in pairs(area) do
       if type(v) == "table" then
         gui.printf("  " .. k .. " = " .. (v.name or v.id or "<table>") .. "\n")
       elseif type(v) == "boolean" then

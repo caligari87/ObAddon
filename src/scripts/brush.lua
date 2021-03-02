@@ -8,7 +8,7 @@
 --
 --  This program is free software; you can redistribute it and/or
 --  modify it under the terms of the GNU General Public License
---  as published by the Free Software Foundation; either version 2
+--  as published by the Free Software Foundation; either version 2,
 --  of the License, or (at your option) any later version.
 --
 --  This program is distributed in the hope that it will be useful,
@@ -28,7 +28,7 @@ AMBIENT_LIGHT = {}
 
 function raw_add_brush(brush)
   -- check for obsolete crud
-  each C in brush do
+  for _,C in pairs(brush) do
     assert(not C.x_offset)
     assert(not C.y_offset)
   end
@@ -284,7 +284,7 @@ function Trans.brush(coords)
   -- apply transform
   coords = table.copy(coords)
 
-  each C in coords do
+  for _,C in pairs(coords) do
     if C.x then
       C.x, C.y = Trans.apply_xy(C.x, C.y)
     elseif C.b then
@@ -306,7 +306,7 @@ end
 
 
 function Trans.remap_entity(name)
-  if THEME.entity_remap and name != nil then
+  if THEME.entity_remap and name ~= nil then
     return THEME.entity_remap[name] or name
   end
 
@@ -375,15 +375,15 @@ end
 
 
 function Trans.spot_transform(x, y, z, dir)
-  local ANGS = { [2]=0, [8]=180, [4]=270, [6]=90 }
+  local ANGS = { [2]=0, [8]=180, [4]=270, [6]=90 },
 
   assert(x and y)
 
   return
   {
-    add_x = x
-    add_y = y
-    add_z = z
+    add_x = x,
+    add_y = y,
+    add_z = z,
     rotate = ANGS[dir or 2]
   }
 end
@@ -558,26 +558,26 @@ end
 
 DOOM_LINE_FLAGS =
 {
-  blocked     = 0x01
-  block_mon   = 0x02
-  sound_block = 0x40
+  blocked     = 0x01,
+  block_mon   = 0x02,
+  sound_block = 0x40,
 
-  draw_secret = 0x20
-  draw_never  = 0x80
-  draw_always = 0x100
+  draw_secret = 0x20,
+  draw_never  = 0x80,
+  draw_always = 0x100,
 
-  pass_thru   = 0x200  -- Boom
+  pass_thru   = 0x200,  -- Boom
 
-  tridee_midtex   = 0x400
+  tridee_midtex   = 0x400,
 }
 
 
 HEXEN_ACTIONS =
 {
-  W1 = 0x0000, WR = 0x0200  -- walk
-  S1 = 0x0400, SR = 0x0600  -- switch
-  M1 = 0x0800, MR = 0x0A00  -- monster
-  G1 = 0x0c00, GR = 0x0E00  -- gun / projectile
+  W1 = 0x0000, WR = 0x0200,  -- walk
+  S1 = 0x0400, SR = 0x0600,  -- switch
+  M1 = 0x0800, MR = 0x0A00,  -- monster
+  G1 = 0x0c00, GR = 0x0E00,  -- gun / projectile
   B1 = 0x1000, BR = 0x1200  -- bump
 }
 
@@ -585,10 +585,10 @@ HEXEN_ACTIONS =
 function brushlib.quad(x1,y1, x2,y2, b,t)
   local coords =
   {
-    { x=x1, y=y1 }
-    { x=x2, y=y1 }
-    { x=x2, y=y2 }
-    { x=x1, y=y2 }
+    { x=x1, y=y1 },
+    { x=x2, y=y1 },
+    { x=x2, y=y2 },
+    { x=x1, y=y2 },
   }
 
   if b then table.insert(coords, { b=b }) end
@@ -601,9 +601,9 @@ end
 function brushlib.triangle(x1,y1, x2,y2, x3,y3, b,t)
   local coords =
   {
-    { x=x1, y=y1 }
-    { x=x2, y=y2 }
-    { x=x3, y=y3 }
+    { x=x1, y=y1 },
+    { x=x2, y=y2 },
+    { x=x3, y=y3 },
   }
 
   if b then table.insert(coords, { b=b }) end
@@ -616,10 +616,10 @@ end
 function brushlib.dump(brush, title)
   gui.debugf("%s:\n{\n", title or "Brush")
 
-  each C in brush do
+  for _,C in pairs(brush) do
     local field_list = {}
 
-    each name,val in C do
+    for name,val in pairs(C) do
       local pos
       if name == "m" or name == "x" or name == "b" or name == "t" then
         pos = 1
@@ -636,7 +636,7 @@ function brushlib.dump(brush, title)
 
     local line = ""
 
-    each name in field_list do
+    for _,name in pairs(field_list) do
       local val = C[name]
 
       if _index > 1 then line = line .. ", " end
@@ -654,7 +654,7 @@ end
 function brushlib.copy(brush)
   local newb = {}
 
-  each C in brush do
+  for _,C in pairs(brush) do
     table.insert(newb, table.copy(C))
   end
 
@@ -667,7 +667,7 @@ function brushlib.mid_point(brush)
   local sum_y = 0
   local total = 0
 
-  each C in brush do
+  for _,C in pairs(brush) do
     if C.x then
       sum_x = sum_x + C.x
       sum_y = sum_y + C.y
@@ -687,7 +687,7 @@ function brushlib.bbox(brush)
   local x1, x2 = 9e9, -9e9
   local y1, y2 = 9e9, -9e9
 
-  each C in brush do
+  for _,C in pairs(brush) do
     if C.x then
       x1 = math.min(x1, C.x) ; x2 = math.max(x2, C.x)
       y1 = math.min(y1, C.y) ; y2 = math.max(y2, C.y)
@@ -750,7 +750,7 @@ end
 
 
 function brushlib.get_bottom_h(brush)
-  each C in brush do
+  for _,C in pairs(brush) do
     if C.b then return C.b end
   end
 
@@ -759,7 +759,7 @@ end
 
 
 function brushlib.get_top_h(brush)
-  each C in brush do
+  for _,C in pairs(brush) do
     if C.t then return C.t end
   end
 
@@ -770,7 +770,7 @@ end
 function brushlib.slope_top(brush, nx, ny, nz)
   assert(nz > 0)
 
-  each C in brush do
+  for _,C in pairs(brush) do
     if C.t then
       C.slope = { nx=nx, ny=ny, nz=nz }
       return
@@ -784,7 +784,7 @@ end
 function brushlib.slope_bottom(brush, nx, ny, nz)
   assert(nz < 0)
 
-  each C in brush do
+  for _,C in pairs(brush) do
     if C.b then
       C.slope = { nx=nx, ny=ny, nz=nz }
       return
@@ -796,7 +796,7 @@ end
 
 
 function brushlib.set_tex(brush, wall, flat)
-  each C in brush do
+  for _,C in pairs(brush) do
     if wall and C.x and not C.tex then
       C.tex = wall
     end
@@ -817,7 +817,7 @@ function brushlib.set_mat(brush, wall, flat)
     -- handle the _LIQUID and _SKY materials
 
     if flat == "_LIQUID" and LEVEL.liquid then
-      each C in brush do
+      for _,C in pairs(brush) do
         if C.t then
           C.special   = C.special   or LEVEL.liquid.special
           C.light_add = C.light_add or LEVEL.liquid.light_add
@@ -838,7 +838,7 @@ end
 
 
 function brushlib.set_y_offset(brush, y_offset)
-  each C in brush do
+  for _,C in pairs(brush) do
     if C.x then
       C.v1 = y_offset
     end
@@ -852,7 +852,7 @@ function brushlib.q3_liquid(brush, medium, top_tex)
   -- only top face has a real texture
   brushlib.set_tex(brush, "nothing")
 
-  each C in brush do
+  for _,C in pairs(brush) do
     if C.t then
        C.tex = top_tex
     end
@@ -895,10 +895,10 @@ function brushlib.rail_brush(x1,y1, x2,y2, z, side_props)
   -- create the brush
   local brush =
   {
-    { x=x1, y=y1 }
-    { x=x2, y=y2 }
-    { x=x3, y=y3 }
-    { x=x4, y=y4 }
+    { x=x1, y=y1 },
+    { x=x2, y=y2 },
+    { x=x3, y=y3 },
+    { x=x4, y=y4 },
   }
 
   if side_props then
@@ -916,9 +916,9 @@ end
 function brushlib.solve_equation(X1,Y1,R1, X2,Y2,R2, X3,Y3,R3)
   --
   -- given the three simultaneous equations:
-  --    X1*a + Y1*b + c = R1
-  --    X2*a + Y2*b + c = R2
-  --    X3*a + Y3*b + c = R3
+  --    X1*a + Y1*b + c = R1,
+  --    X2*a + Y2*b + c = R2,
+  --    X3*a + Y3*b + c = R3,
   --
   -- computes and returns: a, b, c
   --
@@ -966,7 +966,7 @@ end
 function brushlib.calc_uv_vector(mode, x1,y1,z1,r1, x2,y2,z2,r2,
                                  x3,y3,z3,r3, out_mat)
 
-  -- mode can be "xy", "xz" or "yz"
+  -- mode can be "xy", "xz" or "yz",
   -- [ the other coordinate is linearly dependent on those two
   --   since a triangle always lies on a plane ]
 
@@ -1010,7 +1010,7 @@ end
 
 
 function brushlib.set_line_flag(brush, key, value)
-  each C in brush do
+  for _,C in pairs(brush) do
     if C.x then
       C[key] = value
     end
@@ -1019,9 +1019,9 @@ end
 
 
 function brushlib.collect_flags(coords)
-  each C in coords do
+  for _,C in pairs(coords) do
     -- these flags only apply to linedefs
-    if not C.x then continue end
+    if not C.x then goto continue end
 
     if GAME.format == "doom" then
       local flags = C.flags or 0
@@ -1034,26 +1034,27 @@ function brushlib.collect_flags(coords)
         flags = bit.bor(flags, spac)
       end
 
-      each name,value in DOOM_LINE_FLAGS do
-        if C[name] and C[name] != 0 then
+      for name,value in pairs(DOOM_LINE_FLAGS) do
+        if C[name] and C[name] ~= 0 then
           flags = bit.bor(flags, value)
           C[name] = nil
         end
       end
 
-      if flags != 0 then
+      if flags ~= 0 then
         C.flags = flags
 
         -- this makes sure the flags get applied
         if not C.special then C.special = 0 end
       end
     end
+    ::continue::
   end -- C
 end
 
 
 function brushlib.has_sky(brush)
-  each C in brush do
+  for _,C in pairs(brush) do
     if C.mat == "_SKY" then return true end
   end
 
@@ -1064,7 +1065,7 @@ end
 function brushlib.is_quad(brush)
   local x1,y1, x2,y2 = brushlib.bbox(brush)
 
-  each C in brush do
+  for _,C in pairs(brush) do
     if C.x then
       if C.x > x1+0.1 and C.x < x2-0.1 then return false end
       if C.y > y1+0.1 and C.y < y2-0.1 then return false end
@@ -1083,9 +1084,9 @@ function brushlib.reverse(brush)
 
   local xy_coords = {}
 
-  each C in brush do
+  for index,C in pairs(brush) do
     if C.x then
-      table.insert(xy_coords, { idx=_index, x=C.x, y=C.y })
+      table.insert(xy_coords, { idx=index, x=C.x, y=C.y })
     end
   end
 
@@ -1122,7 +1123,7 @@ function brushlib.line_passes_through(brush, px1, py1, px2, py2)
 
   local front, back
 
-  each C in brush do
+  for _,C in pairs(brush) do
     if C.x then
       local d = geom.perp_dist(C.x, C.y, px1,py1, px2,py2)
 
@@ -1245,13 +1246,13 @@ function Quake3_test()
     -- the coordinates will be unused.
     local ent =
     {
-      id = "func_static"
+      id = "func_static",
 
-      link_id = "m1"
+      link_id = "m1",
 
-      x = 0
-      y = 0
-      z = 0
+      x = 0,
+      y = 0,
+      z = 0,
     }
 
     raw_add_entity(ent)
@@ -1270,19 +1271,19 @@ end
 
 
 function Quake3_conversion()
-  each B in all_brushes do
-    if B[1].m != "xxxliquid" then
+  for _,B in pairs(all_brushes) do
+    if B[1].m ~= "xxxliquid" then
       Trans.brush(B)
     end
   end
 
-  each E in all_entities do
+  for _,E in pairs(all_entities) do
     if E.light then
       E.radius = E.light * 1.5
       E.light  = nil
     end
 
-    if E.id != "nothing" then
+    if E.id ~= "nothing" then
       raw_add_entity(E)
     end
   end

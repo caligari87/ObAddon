@@ -6,7 +6,7 @@
 --
 --  This program is free software; you can redistribute it and/or
 --  modify it under the terms of the GNU General Public License
---  as published by the Free Software Foundation; either version 2
+--  as published by the Free Software Foundation; either version 2,
 --  of the License, or (at your option) any later version.
 --
 --  This program is distributed in the hope that it will be useful,
@@ -109,89 +109,89 @@ ZDOOM_SPECIALS.MUSIC_DOOM_THYFLESH =
 
 ZDOOM_SPECIALS.MUSIC_DOOM2 =
 {
-  [1] = "$MUSIC_RUNNIN"
-  [2] = "$MUSIC_STALKS"
-  [3] = "$MUSIC_COUNTD"
-  [4] = "$MUSIC_BETWEE"
-  [5] = "$MUSIC_DOOM"
-  [6] = "$MUSIC_THE_DA"
-  [7] = "$MUSIC_SHAWN"
-  [8] = "$MUSIC_DDTBLU"
-  [9] = "$MUSIC_IN_CIT"
-  [10] = "$MUSIC_DEAD"
-  [11] = "$MUSIC_STLKS2"
-  [12] = "$MUSIC_THEDA2"
-  [13] = "$MUSIC_DOOM2"
-  [14] = "$MUSIC_DDTBL2"
-  [15] = "$MUSIC_RUNNI2"
-  [16] = "$MUSIC_DEAD2"
-  [17] = "$MUSIC_STLKS3"
-  [18] = "$MUSIC_ROMERO"
-  [19] = "$MUSIC_SHAWN2"
-  [20] = "$MUSIC_MESSAG"
-  [21] = "$MUSIC_COUNT2"
-  [22] = "$MUSIC_DDTBL3"
-  [23] = "$MUSIC_AMPIE"
-  [24] = "$MUSIC_THEDA3"
-  [25] = "$MUSIC_ADRIAN"
-  [26] = "$MUSIC_MESSG2"
-  [27] = "$MUSIC_ROMER2"
-  [28] = "$MUSIC_TENSE"
-  [29] = "$MUSIC_SHAWN3"
-  [30] = "$MUSIC_OPENIN"
-  [31] = "$MUSIC_EVIL"
-  [32] = "$MUSIC_ULTIMA"
+  [1] = "$MUSIC_RUNNIN",
+  [2] = "$MUSIC_STALKS",
+  [3] = "$MUSIC_COUNTD",
+  [4] = "$MUSIC_BETWEE",
+  [5] = "$MUSIC_DOOM",
+  [6] = "$MUSIC_THE_DA",
+  [7] = "$MUSIC_SHAWN",
+  [8] = "$MUSIC_DDTBLU",
+  [9] = "$MUSIC_IN_CIT",
+  [10] = "$MUSIC_DEAD",
+  [11] = "$MUSIC_STLKS2",
+  [12] = "$MUSIC_THEDA2",
+  [13] = "$MUSIC_DOOM2",
+  [14] = "$MUSIC_DDTBL2",
+  [15] = "$MUSIC_RUNNI2",
+  [16] = "$MUSIC_DEAD2",
+  [17] = "$MUSIC_STLKS3",
+  [18] = "$MUSIC_ROMERO",
+  [19] = "$MUSIC_SHAWN2",
+  [20] = "$MUSIC_MESSAG",
+  [21] = "$MUSIC_COUNT2",
+  [22] = "$MUSIC_DDTBL3",
+  [23] = "$MUSIC_AMPIE",
+  [24] = "$MUSIC_THEDA3",
+  [25] = "$MUSIC_ADRIAN",
+  [26] = "$MUSIC_MESSG2",
+  [27] = "$MUSIC_ROMER2",
+  [28] = "$MUSIC_TENSE",
+  [29] = "$MUSIC_SHAWN3",
+  [30] = "$MUSIC_OPENIN",
+  [31] = "$MUSIC_EVIL",
+  [32] = "$MUSIC_ULTIMA",
 }
 
 ZDOOM_SPECIALS.DOOM1_MAP_NOMENCLATURE =
 {
-  [1] = "E1M1"
-  [2] = "E1M2"
-  [3] = "E1M3"
-  [4] = "E1M4"
-  [5] = "E1M5"
-  [6] = "E1M6"
-  [7] = "E1M7"
-  [8] = "E1M8"
-  [9] = "E1M9"
-  [10] = "E2M1"
-  [11] = "E2M2"
-  [12] = "E2M3"
-  [13] = "E2M4"
-  [14] = "E2M5"
-  [15] = "E2M6"
-  [16] = "E2M7"
-  [17] = "E2M8"
-  [18] = "E2M9"
-  [19] = "E3M1"
-  [20] = "E3M2"
-  [21] = "E3M3"
-  [22] = "E3M4"
-  [23] = "E3M5"
-  [24] = "E3M6"
-  [25] = "E3M7"
-  [26] = "E3M8"
-  [27] = "E3M9"
-  [28] = "E4M1"
-  [29] = "E4M2"
-  [30] = "E4M3"
-  [31] = "E4M4"
-  [32] = "E4M5"
-  [33] = "E4M6"
-  [34] = "E4M7"
-  [35] = "E4M8"
-  [36] = "E4M9"
+  [1] = "E1M1",
+  [2] = "E1M2",
+  [3] = "E1M3",
+  [4] = "E1M4",
+  [5] = "E1M5",
+  [6] = "E1M6",
+  [7] = "E1M7",
+  [8] = "E1M8",
+  [9] = "E1M9",
+  [10] = "E2M1",
+  [11] = "E2M2",
+  [12] = "E2M3",
+  [13] = "E2M4",
+  [14] = "E2M5",
+  [15] = "E2M6",
+  [16] = "E2M7",
+  [17] = "E2M8",
+  [18] = "E2M9",
+  [19] = "E3M1",
+  [20] = "E3M2",
+  [21] = "E3M3",
+  [22] = "E3M4",
+  [23] = "E3M5",
+  [24] = "E3M6",
+  [25] = "E3M7",
+  [26] = "E3M8",
+  [27] = "E3M9",
+  [28] = "E4M1",
+  [29] = "E4M2",
+  [30] = "E4M3",
+  [31] = "E4M4",
+  [32] = "E4M5",
+  [33] = "E4M6",
+  [34] = "E4M7",
+  [35] = "E4M8",
+  [36] = "E4M9",
 }
 
 ZDOOM_SPECIALS.INTERPICS =
 {
-  OBDNLOAD = 50
-  OBDNLOA2 = 50
-  OBDNLOA3 = 50
-  OBDNLOA4 = 50
-  OBDNLOA5 = 50
-  OBDNLOA6 = 50
-  OBDNLOA7 = 50
+  OBDNLOAD = 50,
+  OBDNLOA2 = 50,
+  OBDNLOA3 = 50,
+  OBDNLOA4 = 50,
+  OBDNLOA5 = 50,
+  OBDNLOA6 = 50,
+  OBDNLOA7 = 50,
 }
 
 ZDOOM_SPECIALS.INTERPIC_MUSIC =
@@ -513,7 +513,7 @@ function ZDOOM_SPECIALS.shuffle_music()
     end
   end
 
-  if PARAM.mapinfo_music_shuffler != "no" then
+  if PARAM.mapinfo_music_shuffler ~= "no" then
     -- extra code for UltDoom music shuffling - replace the
     -- entries for the last episode with anything else to make sure
     -- there's no bias in picking songs
@@ -685,7 +685,7 @@ function ZDOOM_SPECIALS.do_special_stuff()
     local next_level_line = '  next = ' .. map_id_next .. '\n'
 
     -- establish secret map MAPINFO links
-    -- for DOOM2
+    -- for DOOM2,
     if OB_CONFIG.game == "doom2" or OB_CONFIG.game == "tnt" or OB_CONFIG.game == "plutonia"  then
       if map_num == 15 then
         next_level_line = '  next = MAP16\n'
@@ -701,7 +701,7 @@ function ZDOOM_SPECIALS.do_special_stuff()
       end
     end
 
-    -- for DOOM1
+    -- for DOOM1,
     if OB_CONFIG.game == "doom1" or OB_CONFIG.game == "ultdoom" then
       -- secret entrances
       if map_num == 3 then
@@ -780,7 +780,7 @@ function ZDOOM_SPECIALS.do_special_stuff()
       fog_intensity_line = ""
     end
 
-    -- add cluster linking for DOOM2
+    -- add cluster linking for DOOM2,
     local cluster_line = ''
 
     if PARAM.story_generator == "generic" then
@@ -825,7 +825,7 @@ function ZDOOM_SPECIALS.do_special_stuff()
       end
     end
 
-    -- fix for level name string linking between Doom VS Doom 2
+    -- fix for level name string linking between Doom VS Doom 2,
     local name_string_map_id
     if OB_CONFIG.game == "doom1" or OB_CONFIG.game == "ultdoom" then
       name_string_map_id = map_id
@@ -877,19 +877,19 @@ function ZDOOM_SPECIALS.do_special_stuff()
 
     local mapinfo =
     {
-      'map ' .. map_id .. ' lookup HUSTR_'.. name_string_map_id ..'\n'
-      '{\n'
+      'map ' .. map_id .. ' lookup HUSTR_'.. name_string_map_id ..'\n',
+      '{\n',
       --'  cluster = 1\n'
-      '  sky1 = "' .. sky_tex .. '"\n'
-      '' .. cluster_line .. ''
-      '' .. fog_color_line .. ''
-      '' .. fog_intensity_line .. ''
-      '' .. next_level_line .. ''
-      '' .. secret_level_line .. ''
-      '' .. music_line .. ''
-      '  EnterPic = "' .. interpic .. '"\n'
-      '  ExitPic = "' .. interpic .. '"\n'
-      '' .. special_attributes .. ''
+      '  sky1 = "' .. sky_tex .. '"\n',
+      '' .. cluster_line .. '',
+      '' .. fog_color_line .. '',
+      '' .. fog_intensity_line .. '',
+      '' .. next_level_line .. '',
+      '' .. secret_level_line .. '',
+      '' .. music_line .. '',
+      '  EnterPic = "' .. interpic .. '"\n',
+      '  ExitPic = "' .. interpic .. '"\n',
+      '' .. special_attributes .. '',
       '}\n'
     }
 
@@ -906,100 +906,100 @@ function ZDOOM_SPECIALS.do_special_stuff()
 
       clusterdef =
       {
-        'cluster 5\n' -- MAP01-05
-        '{\n'
-        '' .. cluster_music_line .. ''
-        '  pic = "' .. interpic .. '"\n'
-        '  exittext =\n'
-        '    "Hell has taken a strong hold",\n'
-        '    "upon these lands, corrupting it",\n'
-        '    "in their wake!",\n'
-        '    " ",\n'
-        '    "Ahead, their forces gather in strength",\n'
-        '    "almost inumerable in count."\n'
-        '}\n'
-        'cluster 6\n' -- MAP06-MAP11
-        '{\n'
-        '' .. cluster_music_line .. ''
-        '  pic = "' .. interpic .. '"\n'
-        '  exittext =\n'
-        '    "A lieutenant of hell falls",\n'
-        '    "but otherworldly shrieks echo",\n'
-        '    "further still.",\n'
-        '    " ",\n'
-        '    "You pick up your armaments",\n'
-        '    "and point them forward",\n'
-        '    "to continue the siege",\n'
-        '    "against the darkness.",\n'
-        '    " ",\n'
-        '    "The battle rages on!"\n'
-        '}\n'
-        'cluster 7\n' -- MAP12-14
-        '{\n'
-        '' .. cluster_music_line .. ''
-        '  pic = "' .. interpic .. '"\n'
-        '  exittext =\n'
-        '    "You tirelessly battle against",\n'
-        '    "waves upon waves of",\n'
-        '    "seemingly infinite hellspawn.",\n'
-        '    " ",\n'
-        '    "Your tracker informs you",\n'
-        '    "a secret point of interest",\n'
-        '    "may exist nearby..."\n'
-        '}\n'
-        'cluster 8\n' -- MAP15-20
-        '{\n'
-        '' .. cluster_music_line .. ''
-        '  pic = "' .. interpic .. '"\n'
-        '  exittext =\n'
-        '    "Hell\'s forces attempt to push back",\n'
-        '    "but your relentless assault on their",\n'
-        '    "breaches keeps them at bay!",\n'
-        '    " ",\n'
-        '    "More of their overlords have fallen",\n'
-        '    "and the opportunity for their defeat",\n'
-        '    "draws ever closer..."\n'
-        '}\n'
-        'cluster 9\n' -- MAP21-30
-        '{\n'
-        '' .. cluster_music_line .. ''
-        '  pic = "' .. interpic .. '"\n'
-        '  exittext =\n'
-        '    "Mission Accomplished!",\n'
-        '    " ",\n'
-        '    "You have loosened hell\'s grip upon",\n'
-        '    "this place! Demonic entities flee in terror",\n'
-        '    "from your display of indomitable strength.",\n'
-        '    " ",\n'
-        '    "You realize, however,",\n'
-        '    "while hell lies defeated today,",\n'
-        '    "hell has not yet been destroyed.",\n'
-        '    "Rest for now, but remember:",\n'
-        '    "Hell is already preparing",\n'
-        '    "for another challenge."\n'
-        '}\n'
-        'cluster 10\n' -- MAP31
-        '{\n'
-        '' .. cluster_music_line .. ''
-        '  pic = "' .. interpic .. '"\n'
-        '  entertext =\n'
-        '    "You have found a secret zone!",\n'
-        '    "It seems the hellspawn have barricaded",\n'
-        '    "themselves within its confines with to",\n'
-        '    "gestate their hellish infection.",\n'
-        '    " ",\n'
-        '    "You are about to prove them otherwise."\n'
-        '}\n'
-        'cluster 11\n' -- MAP32
-        '{\n'
-        '' .. cluster_music_line .. ''
-        '  pic = "' .. interpic .. '"\n'
-        '  entertext =\n'
-        '    "It seems this secret trail",\n'
-        '    "goes further than expected.",\n'
-        '    "It is time to finish this",\n'
-        '    "once and for all and eradicate",\n'
-        '    "this hidden pocket of hellish infestation."\n'
+        'cluster 5\n', -- MAP01-05,
+        '{\n',
+        '' .. cluster_music_line .. '',
+        '  pic = "' .. interpic .. '"\n',
+        '  exittext =\n',
+        '    "Hell has taken a strong hold",\n',
+        '    "upon these lands, corrupting it",\n',
+        '    "in their wake!",\n',
+        '    " ",\n',
+        '    "Ahead, their forces gather in strength",\n',
+        '    "almost inumerable in count."\n',
+        '}\n',
+        'cluster 6\n', -- MAP06-MAP11,
+        '{\n',
+        '' .. cluster_music_line .. '',
+        '  pic = "' .. interpic .. '"\n',
+        '  exittext =\n',
+        '    "A lieutenant of hell falls",\n',
+        '    "but otherworldly shrieks echo",\n',
+        '    "further still.",\n',
+        '    " ",\n',
+        '    "You pick up your armaments",\n',
+        '    "and point them forward",\n',
+        '    "to continue the siege",\n',
+        '    "against the darkness.",\n',
+        '    " ",\n',
+        '    "The battle rages on!"\n',
+        '}\n',
+        'cluster 7\n', -- MAP12-14,
+        '{\n',
+        '' .. cluster_music_line .. '',
+        '  pic = "' .. interpic .. '"\n',
+        '  exittext =\n',
+        '    "You tirelessly battle against",\n',
+        '    "waves upon waves of",\n',
+        '    "seemingly infinite hellspawn.",\n',
+        '    " ",\n',
+        '    "Your tracker informs you",\n',
+        '    "a secret point of interest",\n',
+        '    "may exist nearby..."\n',
+        '}\n',
+        'cluster 8\n', -- MAP15-20,
+        '{\n',
+        '' .. cluster_music_line .. '',
+        '  pic = "' .. interpic .. '"\n',
+        '  exittext =\n',
+        '    "Hell\'s forces attempt to push back",\n',
+        '    "but your relentless assault on their",\n',
+        '    "breaches keeps them at bay!",\n',
+        '    " ",\n',
+        '    "More of their overlords have fallen",\n',
+        '    "and the opportunity for their defeat",\n',
+        '    "draws ever closer..."\n',
+        '}\n',
+        'cluster 9\n', -- MAP21-30,
+        '{\n',
+        '' .. cluster_music_line .. '',
+        '  pic = "' .. interpic .. '"\n',
+        '  exittext =\n',
+        '    "Mission Accomplished!",\n',
+        '    " ",\n',
+        '    "You have loosened hell\'s grip upon",\n',
+        '    "this place! Demonic entities flee in terror",\n',
+        '    "from your display of indomitable strength.",\n',
+        '    " ",\n',
+        '    "You realize, however,",\n',
+        '    "while hell lies defeated today,",\n',
+        '    "hell has not yet been destroyed.",\n',
+        '    "Rest for now, but remember:",\n',
+        '    "Hell is already preparing",\n',
+        '    "for another challenge."\n',
+        '}\n',
+        'cluster 10\n', -- MAP31,
+        '{\n',
+        '' .. cluster_music_line .. '',
+        '  pic = "' .. interpic .. '"\n',
+        '  entertext =\n',
+        '    "You have found a secret zone!",\n',
+        '    "It seems the hellspawn have barricaded",\n',
+        '    "themselves within its confines with to",\n',
+        '    "gestate their hellish infection.",\n',
+        '    " ",\n',
+        '    "You are about to prove them otherwise."\n',
+        '}\n',
+        'cluster 11\n', -- MAP32,
+        '{\n',
+        '' .. cluster_music_line .. '',
+        '  pic = "' .. interpic .. '"\n',
+        '  entertext =\n',
+        '    "It seems this secret trail",\n',
+        '    "goes further than expected.",\n',
+        '    "It is time to finish this",\n',
+        '    "once and for all and eradicate",\n',
+        '    "this hidden pocket of hellish infestation."\n',
         '}\n'
       }
     end
@@ -1008,60 +1008,60 @@ function ZDOOM_SPECIALS.do_special_stuff()
       -- create cluster information
       clusterdef =
       {
-        'cluster 1\n' -- MAP01-MAP05
-        '{\n'
-        '' .. cluster_music_line .. ''
-        '  pic = "' .. interpic .. '"\n'
-        '  exittext = lookup, "STORYSTART1"\n'
-        '}\n'
-        'cluster 2\n' -- MAP06-MAP11
-        '{\n'
-        '' .. cluster_music_line .. ''
-        '  pic = "' .. interpic .. '"\n'
-        '  exittext = lookup, "STORYEND1"\n'
-        '}\n'
-        'cluster 3\n' -- MAP012
-        '{\n'
-        '' .. cluster_music_line .. ''
-        '  pic = "' .. interpic .. '"\n'
-        '  exittext = lookup, "STORYSTART2"\n'
-        '}\n'
-        'cluster 4\n' -- MAP13-MAP14
-        '{\n'
-        '' .. cluster_music_line .. ''
-        '  pic = "' .. interpic .. '"\n'
-        '  exittext = lookup, "SECRETNEARBY"\n'
-        '}\n'
-        'cluster 5\n' -- MAP15-MAP20
-        '{\n'
-        '' .. cluster_music_line .. ''
-        '  pic = "' .. interpic .. '"\n'
-        '  exittext = lookup, "STORYEND2"\n'
-        '}\n'
-        'cluster 6\n' -- MAP21
-        '{\n'
-        '' .. cluster_music_line .. ''
-        '  pic = "' .. interpic .. '"\n'
-        '  exittext = lookup, "STORYSTART3"\n'
-        '}\n'
-        'cluster 7\n' -- MAP22-30
-        '{\n'
-        '' .. cluster_music_line .. ''
-        '  pic = "' .. interpic .. '"\n'
-        '  exittext = lookup, "STORYEND3"\n'
-        '}\n'
-        'cluster 8\n' -- MAP31
-        '{\n'
-        '' .. cluster_music_line .. ''
-        '  pic = "' .. interpic .. '"\n'
-        '  entertext = lookup, "SECRET1"\n'
-        '}\n'
-        'cluster 9\n' -- MAP32
-        '{\n'
-        '' .. cluster_music_line .. ''
-        '  pic = "' .. interpic .. '"\n'
-        '  entertext = lookup, "SECRET2"\n'
-        '}\n'
+        'cluster 1\n', -- MAP01-MAP05,
+        '{\n',
+        '' .. cluster_music_line .. '',
+        '  pic = "' .. interpic .. '"\n',
+        '  exittext = lookup, "STORYSTART1"\n',
+        '}\n',
+        'cluster 2\n', -- MAP06-MAP11,
+        '{\n',
+        '' .. cluster_music_line .. '',
+        '  pic = "' .. interpic .. '"\n',
+        '  exittext = lookup, "STORYEND1"\n',
+        '}\n',
+        'cluster 3\n', -- MAP012,
+        '{\n',
+        '' .. cluster_music_line .. '',
+        '  pic = "' .. interpic .. '"\n',
+        '  exittext = lookup, "STORYSTART2"\n',
+        '}\n',
+        'cluster 4\n', -- MAP13-MAP14,
+        '{\n',
+        '' .. cluster_music_line .. '',
+        '  pic = "' .. interpic .. '"\n',
+        '  exittext = lookup, "SECRETNEARBY"\n',
+        '}\n',
+        'cluster 5\n', -- MAP15-MAP20,
+        '{\n',
+        '' .. cluster_music_line .. '',
+        '  pic = "' .. interpic .. '"\n',
+        '  exittext = lookup, "STORYEND2"\n',
+        '}\n',
+        'cluster 6\n', -- MAP21,
+        '{\n',
+        '' .. cluster_music_line .. '',
+        '  pic = "' .. interpic .. '"\n',
+        '  exittext = lookup, "STORYSTART3"\n',
+        '}\n',
+        'cluster 7\n', -- MAP22-30,
+        '{\n',
+        '' .. cluster_music_line .. '',
+        '  pic = "' .. interpic .. '"\n',
+        '  exittext = lookup, "STORYEND3"\n',
+        '}\n',
+        'cluster 8\n', -- MAP31,
+        '{\n',
+        '' .. cluster_music_line .. '',
+        '  pic = "' .. interpic .. '"\n',
+        '  entertext = lookup, "SECRET1"\n',
+        '}\n',
+        'cluster 9\n', -- MAP32,
+        '{\n',
+        '' .. cluster_music_line .. '',
+        '  pic = "' .. interpic .. '"\n',
+        '  entertext = lookup, "SECRET2"\n',
+        '}\n',
       }
     end
 
@@ -1088,9 +1088,9 @@ function ZDOOM_SPECIALS.do_special_stuff()
 
     episodedef =
     {
-      'episode ' .. map_string .. '\n'
-      '{\n'
-      '  name = "' .. GAME.levels[map_num].episode.description .. '"\n'
+      'episode ' .. map_string .. '\n',
+      '{\n',
+      '  name = "' .. GAME.levels[map_num].episode.description .. '"\n',
       '}\n'
     }
 
@@ -1107,7 +1107,7 @@ function ZDOOM_SPECIALS.do_special_stuff()
 
   if PARAM.custom_quit_messages == "yes" then
     local gamedef_lines = add_gamedef()
-    each line in gamedef_lines do
+    for _,line in pairs(gamedef_lines) do
       table.insert(PARAM.gameinfolump,line)
     end
     ZStoryGen_quitmessages()
@@ -1143,7 +1143,7 @@ function ZDOOM_SPECIALS.do_special_stuff()
     end
 
     local mapinfo_lines = add_mapinfo(info)
-    each line in mapinfo_lines do
+    for _,line in pairs(mapinfo_lines) do
       table.insert(PARAM.mapinfolump,line)
     end
 
@@ -1156,17 +1156,17 @@ function ZDOOM_SPECIALS.do_special_stuff()
     -- but there is from now on
     if OB_CONFIG.game == "doom2" or OB_CONFIG.game == "tnt" or OB_CONFIG.game == "plutonia" then
       local episode_1_info = add_episodedef(1)
-      each line in episode_1_info do
+      for _,line in pairs(episode_1_info) do
         table.insert(PARAM.mapinfolump,line)
       end
 
       if #GAME.levels > 11 then
         local episode_2_info = add_episodedef(12)
         local episode_3_info = add_episodedef(21)
-        each line in episode_2_info do
+        for _,line in pairs(episode_2_info) do
           table.insert(PARAM.mapinfolump,line)
         end
-        each line in episode_3_info do
+        for _,line in pairs(episode_3_info) do
           table.insert(PARAM.mapinfolump,line)
         end
       end
@@ -1174,24 +1174,24 @@ function ZDOOM_SPECIALS.do_special_stuff()
 
     if OB_CONFIG.game == "doom1" or OB_CONFIG.game == "ultdoom" then
       local episode_info = add_episodedef(1)
-      each line in episode_info do
+      for _,line in pairs(episode_info) do
         table.insert(PARAM.mapinfolump,line)
       end
 
       if #GAME.levels > 9 then
         episode_info = add_episodedef(10)
-        each line in episode_info do
+        for _,line in pairs(episode_info) do
           table.insert(PARAM.mapinfolump,line)
         end
         episode_info = add_episodedef(19)
-        each line in episode_info do
+        for _,line in pairs(episode_info) do
           table.insert(PARAM.mapinfolump,line)
         end
       end
 
       if #GAME.levels > 27 then
         episode_info = add_episodedef(28)
-        each line in episode_info do
+        for _,line in pairs(episode_info) do
           table.insert(PARAM.mapinfolump,line)
         end
       end
@@ -1201,7 +1201,7 @@ function ZDOOM_SPECIALS.do_special_stuff()
   -- collect lines for the cluster information in MAPINFO
   local clusterinfo_lines = add_clusterdef(ipic)
   if clusterinfo_lines then
-    each line in clusterinfo_lines do
+    for _,line in pairs(clusterinfo_lines) do
       table.insert(PARAM.mapinfolump,line)
     end
   end
@@ -1212,7 +1212,7 @@ function ZDOOM_SPECIALS.do_special_stuff()
   end
 
   -- insert custom music
-  if PARAM.story_generator != "none" then
+  if PARAM.story_generator ~= "none" then
     if PARAM.generic_intermusic == "$MUSIC_DM2INT" then
       gui.wad_insert_file("data/music/D_DM2INT.ogg","D_DM2INT")
     end
@@ -1223,129 +1223,129 @@ end
 
 OB_MODULES["zdoom_specials"] =
 {
-  label = _("ZDoom Special Addons")
+  label = _("ZDoom Special Addons"),
 
-  game = "doomish"
+  game = "doomish",
 
-  side = "left"
+  side = "left",
 
-  priority = 68
+  priority = 68,
 
-  engine = { zdoom=1, gzdoom=1, skulltag=1 }
+  engine = { zdoom=1, gzdoom=1, skulltag=1 },
 
   hooks =
   {
-    setup = ZDOOM_SPECIALS.setup
-    get_levels = ZDOOM_SPECIALS.shuffle_music
+    setup = ZDOOM_SPECIALS.setup,
+    get_levels = ZDOOM_SPECIALS.shuffle_music,
     all_done = ZDOOM_SPECIALS.do_special_stuff
-  }
+  },
 
-  tooltip = "This module adds new ZDoom-exclusive features such as fog. More ZDoom-specific features will be included soon."
+  tooltip = "This module adds new ZDoom-exclusive features such as fog. More ZDoom-specific features will be included soon.",
 
   options =
   {
     fog_generator = {
       label = _("Fog Generator"),
-      priority = 12
-      choices = ZDOOM_SPECIALS.FOG_GEN_CHOICES
-      default = "no"
-      tooltip = "Generates fog colors based on the Sky Generator or generate completely randomly."
-    }
+      priority = 12,
+      choices = ZDOOM_SPECIALS.FOG_GEN_CHOICES,
+      default = "no",
+      tooltip = "Generates fog colors based on the Sky Generator or generate completely randomly.",
+    },
 
     fog_env = {
       label = _("Fog Environment"),
-      priority = 11
-      choices = ZDOOM_SPECIALS.FOG_ENV_CHOICES
-      default = "all"
-      tooltip = "Limits fog to outdoors (sectors with exposed sky ceilings) or allows for all."
-    }
+      priority = 11,
+      choices = ZDOOM_SPECIALS.FOG_ENV_CHOICES,
+      default = "all",
+      tooltip = "Limits fog to outdoors (sectors with exposed sky ceilings) or allows for all.",
+    },
 
     fog_intensity = {
       label = _("Fog Intensity"),
-      priority = 10
-      choices = ZDOOM_SPECIALS.FOG_DENSITY_CHOICES
-      default = "subtle"
-      tooltip = "Determines thickness and intensity of fog, if the Fog Generator is enabled. Subtle or Misty is recommended."
-    }
+      priority = 10,
+      choices = ZDOOM_SPECIALS.FOG_DENSITY_CHOICES,
+      default = "subtle",
+      tooltip = "Determines thickness and intensity of fog, if the Fog Generator is enabled. Subtle or Misty is recommended.",
+    },
 
     fog_affects_sky = {
       label = _("Sky Fog"),
-      priority = 9
-      choices = ZDOOM_SPECIALS.YES_NO
-      default = "yes"
-      tooltip = "Tints the sky texture with the fog color, intensity is based on the Fog Intensity selection."
-      gap = 1
-    }
+      priority = 9,
+      choices = ZDOOM_SPECIALS.YES_NO,
+      default = "yes",
+      tooltip = "Tints the sky texture with the fog color, intensity is based on the Fog Intensity selection.",
+      gap = 1,
+    },
 
     dynamic_lights = {
-      label = _("Dynamic Lights")
-      priority = 8
-      choices = ZDOOM_SPECIALS.YES_NO
-      default = "yes"
-      tooltip = "Generates dynamic point lights on ceiling light prefabs."
-    }
+      label = _("Dynamic Lights"),
+      priority = 8,
+      choices = ZDOOM_SPECIALS.YES_NO,
+      default = "yes",
+      tooltip = "Generates dynamic point lights on ceiling light prefabs.",
+    },
 
     glowing_flats = {
-      label = _("Glowing Flats")
-      priority = 7
-      choices = ZDOOM_SPECIALS.YES_NO
-      default = "yes"
+      label = _("Glowing Flats"),
+      priority = 7,
+      choices = ZDOOM_SPECIALS.YES_NO,
+      default = "yes",
       tooltip = "Adds Doom-64 style lighting/glowing flats via GLDEFS lump. " ..
-                "Visible on Zandronum ports as well."
-      gap = 1
-    }
+                "Visible on Zandronum ports as well.",
+      gap = 1,
+    },
 
     mapinfo_music_shuffler = {
-      label = _("Shuffle Music")
-      priority = 6
-      choices = ZDOOM_SPECIALS.MUSIC_SHUFFLER_CHOICES
-      default = "no"
+      label = _("Shuffle Music"),
+      priority = 6,
+      choices = ZDOOM_SPECIALS.MUSIC_SHUFFLER_CHOICES,
+      default = "no",
       tooltip = "Shuffles music in the MAPINFO lump. Oblige's vanilla music shuffler uses " ..
                 "a BEX lump and is therefore ignored when the ZDoom Addons module is active." ..
                 "\n\nWarning: the 'Merge Doom 1 and 2' option is for music packs that contain both "..
-                "Doom 1 and 2 direct patch replacements. Do not use unless you have such a pack."
-    }
+                "Doom 1 and 2 direct patch replacements. Do not use unless you have such a pack.",
+    },
 
     story_generator = {
       label = _("Story Generator"),
-      priority = 5
-      choices = ZDOOM_SPECIALS.STORY_CHOICES
-      default = "proc"
-      tooltip = "Adds cluster information with generic or randomized story text into the MAPINFO structure!"
-    }
+      priority = 5,
+      choices = ZDOOM_SPECIALS.STORY_CHOICES,
+      default = "proc",
+      tooltip = "Adds cluster information with generic or randomized story text into the MAPINFO structure!",
+    },
 
     custom_quit_messages = {
       label = _("Quit Messages"),
-      priority = 4
-      choices = ZDOOM_SPECIALS.YES_NO
-      default = "yes"
-      tooltip = "Adds custom quit messages into the MAPINFO game definition."
-    }
+      priority = 4,
+      choices = ZDOOM_SPECIALS.YES_NO,
+      default = "yes",
+      tooltip = "Adds custom quit messages into the MAPINFO game definition.",
+    },
 
     generic_intermusic = {
       label = _("Intermission Music"),
-      priority = 3
-      choices = ZDOOM_SPECIALS.INTERPIC_MUSIC
-      default = "$MUSIC_READ_M"
-      tooltip = "Changes the music playing during intermission screens."
-    }
+      priority = 3,
+      choices = ZDOOM_SPECIALS.INTERPIC_MUSIC,
+      default = "$MUSIC_READ_M",
+      tooltip = "Changes the music playing during intermission screens.",
+    },
 
     episode_selection = {
       label = _("Episode Selection"),
-      priority = 2
-      choices = ZDOOM_SPECIALS.YES_NO
-      default = "no"
-      tooltip = "Creates a classic Doom/Ultimate Doom style episode selection."
-      gap = 1
-    }
+      priority = 2,
+      choices = ZDOOM_SPECIALS.YES_NO,
+      default = "no",
+      tooltip = "Creates a classic Doom/Ultimate Doom style episode selection.",
+      gap = 1,
+    },
 
     no_intermission = {
       label = _("Disable Intermissions"),
-      priority = 1
-      choices = ZDOOM_SPECIALS.YES_NO
-      default = "no"
+      priority = 1,
+      choices = ZDOOM_SPECIALS.YES_NO,
+      default = "no",
       tooltip = "Removes end-level Intermission Screens (containing map completion data) but retains " ..
-                "Text Screens with story."
-    }
-  }
+                "Text Screens with story.",
+    },
+  },
 }

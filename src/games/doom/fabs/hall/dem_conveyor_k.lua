@@ -4,50 +4,50 @@
 
 PREFABS.Hallway_conveyor_locked_red1 =
 {
-  file   = "hall/dem_conveyor_k.wad"
-  map    = "MAP01"
-  engine = "zdoom"
+  file   = "hall/dem_conveyor_k.wad",
+  map    = "MAP01",
+  engine = "zdoom",
 
-  theme  = "tech"
+  theme  = "tech",
 
-  kind   = "terminator"
-  group  = "conveyor"
-  key    = "k_red"
+  kind   = "terminator",
+  group  = "conveyor",
+  key    = "k_red",
 
-  prob   = 50
+  prob   = 50,
 
-  where  = "seeds"
-  shape  = "I"
+  where  = "seeds",
+  shape  = "I",
 
-  seed_w = 2
-  seed_h = 1
+  seed_w = 2,
+  seed_h = 1,
 
-  deep   = 16
+  deep   = 16,
 
-  texture_pack = "armaetus"
+  texture_pack = "armaetus",
 
-  sound = "Conveyor_Mech"
+  sound = "Conveyor_Mech",
 }
 
 PREFABS.Hallway_conveyor_locked_blue1 =
 {
-  template = "Hallway_conveyor_locked_red1"
+  template = "Hallway_conveyor_locked_red1",
 
-  key    = "k_blue"
+  key    = "k_blue",
 
-  tex_DOORRED = "DOORBLU"
-  line_33     = 32
+  tex_DOORRED = "DOORBLU",
+  line_33     = 32,
 }
 
 
 PREFABS.Hallway_conveyor_locked_yellow1 =
 {
-  template = "Hallway_conveyor_locked_red1"
+  template = "Hallway_conveyor_locked_red1",
 
-  key    = "k_yellow"
+  key    = "k_yellow",
 
-  tex_DOORRED = "DOORYEL"
-  line_33     = 34
+  tex_DOORRED = "DOORYEL",
+  line_33     = 34,
 }
 
 
@@ -56,36 +56,36 @@ PREFABS.Hallway_conveyor_locked_yellow1 =
 
 PREFABS.Hallway_conveyor_barred1 =
 {
-  file   = "hall/dem_conveyor_k.wad"
-  map    = "MAP03"
+  file   = "hall/dem_conveyor_k.wad",
+  map    = "MAP03",
 
-  kind   = "terminator"
-  group  = "conveyor"
-  key    = "barred"
+  kind   = "terminator",
+  group  = "conveyor",
+  key    = "barred",
 
-  theme  = "tech"
+  theme  = "tech",
 
-  prob   = 50
+  prob   = 50,
 
-  where  = "seeds"
-  shape  = "I"
+  where  = "seeds",
+  shape  = "I",
 
-  seed_w = 2
-  seed_h = 1
-  deep   = 16
+  seed_w = 2,
+  seed_h = 1,
+  deep   = 16,
 
-  texture_pack = "armaetus"
+  texture_pack = "armaetus",
 
  thing_2035 =
   {
-    barrel = 60
-    nothing = 40
-  }
+    barrel = 60,
+    nothing = 40,
+  },
 
 
-  tag_1  = "?door_tag"
-  door_action = "S1_LowerFloor"
+  tag_1  = "?door_tag",
+  door_action = "S1_LowerFloor",
 
-  sound = "Conveyor_Mech"
+  sound = "Conveyor_Mech",
 }
 

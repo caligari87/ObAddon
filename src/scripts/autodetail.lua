@@ -8,7 +8,7 @@
 --
 --  This program is free software; you can redistribute it and/or
 --  modify it under the terms of the GNU General Public License
---  as published by the Free Software Foundation; either version 2
+--  as published by the Free Software Foundation; either version 2,
 --  of the License, or (at your option) any later version.
 --
 --  This program is distributed in the hope that it will be useful,
@@ -46,7 +46,7 @@ function Autodetail_get_level_svolume()
 
   local total_walkable_area = 0
 
-  each R in LEVEL.rooms do
+  for _,R in pairs(LEVEL.rooms) do
     total_walkable_area = total_walkable_area + R.svolume
   end
 
@@ -65,7 +65,7 @@ function Autodetail_plain_walls()
   if PARAM.autodetail == "off" then return end
 
   local total_perimeter = 0
-  each _,junc in LEVEL.junctions do
+  for _,junc in pairs(LEVEL.junctions) do
     if junc.E1 and Edge_is_wallish(junc.E1) then
       total_perimeter = total_perimeter + junc.perimeter
     end
@@ -82,7 +82,7 @@ function Autodetail_plain_walls()
 
   LEVEL.autodetail_plain_walls_factor = math.clamp(0, tone_down_factor * 1.25, 100)
 
-  each _,junc in LEVEL.junctions do
+  for _,junc in pairs(LEVEL.junctions) do
     if junc.E1 and junc.E1.kind == "wall" then
       if rand.odds(LEVEL.autodetail_plain_walls_factor) then
         junc.E1.plain = true

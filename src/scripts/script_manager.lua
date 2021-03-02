@@ -49,23 +49,23 @@ function ScriptMan_assemble_mapinfo_lump()
   }
 
   local eventhandler_lines = "addeventhandlers = "
-  if PARAM.boss_gen and PARAM.boss_count != -1 then
+  if PARAM.boss_gen and PARAM.boss_count ~= -1 then
     eventhandler_lines = eventhandler_lines .. '"BossGenerator_Handler"'
   end
-  if PARAM.boss_gen and PARAM.boss_count != -1 and SCRIPTS.actor_name_script then
+  if PARAM.boss_gen and PARAM.boss_count ~= -1 and SCRIPTS.actor_name_script then
     eventhandler_lines = eventhandler_lines .. ", "
   end
   if SCRIPTS.actor_name_script then
     eventhandler_lines = eventhandler_lines .. '"bossNameHandler"'
   end
-  if (PARAM.boss_gen and PARAM.boss_count != -1) or SCRIPTS.actor_name_script then
+  if (PARAM.boss_gen and PARAM.boss_count ~= -1) or SCRIPTS.actor_name_script then
     eventhandler_lines = eventhandler_lines .. "\n"
     table.insert(mapinfo_lines, eventhandler_lines)
   end
 
   -- MAPINFO extras
   if PARAM.custom_quit_messages == "yes" then
-    each line in PARAM.gameinfolump do
+    for _,line in pairs(PARAM.gameinfolump) do
       table.insert(mapinfo_lines,line)
     end
   end
@@ -77,24 +77,24 @@ function ScriptMan_assemble_mapinfo_lump()
       "{\n",
   }
   if SCRIPTS.fauna_mapinfo then
-    each line in SCRIPTS.fauna_mapinfo do
+    for _,line in pairs(SCRIPTS.fauna_mapinfo) do
       table.insert(doomednum_lines,line)
     end
   end
   if PARAM.marine_gen then
-    each line in PARAM.MARINEMAPINFO do
+    for _,line in pairs(PARAM.MARINEMAPINFO) do
       table.insert(doomednum_lines,line)
     end
   end
   if #doomednum_lines > 2 then
     table.insert(doomednum_lines, "}\n")
-    each line in doomednum_lines do
+    for _,line in pairs(doomednum_lines) do
       table.insert(mapinfo_lines,line)
     end
   end
 
-  if PARAM.mapinfolump != nil then
-    each line in PARAM.mapinfolump do
+  if PARAM.mapinfolump ~= nil then
+    for _,line in pairs(PARAM.mapinfolump) do
       table.insert(mapinfo_lines,line)
     end
   end
@@ -111,7 +111,7 @@ function ScriptMan_assemble_trnslate_lump()
     trnslate_lines = trnslate_lines .. PARAM.MARINETRNSLATE .. "\n"
   end
 
-  if trnslate_lines != "" then
+  if trnslate_lines ~= "" then
     add_script_lump("TRNSLATE", trnslate_lines)
   end
 end
@@ -120,7 +120,7 @@ end
 function ScriptMan_assemble_zscript_lump()
   local zscript_lines = ""
 
-  if PARAM.boss_gen and PARAM.boss_count != -1 then
+  if PARAM.boss_gen and PARAM.boss_count ~= -1 then
     zscript_lines = zscript_lines .. PARAM.BOSSSCRIPT .. "\n"
   end
   if PARAM.marine_gen then
@@ -138,7 +138,7 @@ function ScriptMan_assemble_zscript_lump()
     zscript_lines = zscript_lines .. SCRIPTS.fauna_zsc .. "\n"
   end
 
-  if zscript_lines != "" then
+  if zscript_lines ~= "" then
     zscript_lines = 'version "4.3"\n' .. zscript_lines
     add_script_lump("ZSCRIPT", zscript_lines)
   end
@@ -178,7 +178,7 @@ function ScriptMan_assemble_decorate_lump()
     SCRIPTS.fauna_dec .. "\n"
   end
 
-  if decorate_script_lines != "" then
+  if decorate_script_lines ~= "" then
     add_script_lump("DECORATE", decorate_script_lines)
   end
 end
@@ -196,7 +196,7 @@ function ScriptMan_assemble_sndinfo_lump()
     SCRIPTS.fauna_SNDINFO .. "\n"
   end
 
-  if sndinfo_lines != "" then
+  if sndinfo_lines ~= "" then
     add_script_lump("SNDINFO", sndinfo_lines)
   end
 end
@@ -230,7 +230,11 @@ function ScriptMan_assemble_gldefs_lump()
     EPIC_BRIGHTMAPS
   end
 
+<<<<<<< HEAD
   if gldefs_lines != "" then
+=======
+  if gldefs_lines ~= "" then
+>>>>>>> pr/130
     add_script_lump("GLDEFS", gldefs_lines)
   end
 end
@@ -240,18 +244,18 @@ function ScriptMan_assemble_language_lump()
       "[enu default]\n",
   }
 
-  if PARAM.boss_gen and PARAM.boss_count != -1 then
-    each line in PARAM.BOSSLANG do
+  if PARAM.boss_gen and PARAM.boss_count ~= -1 then
+    for _,line in pairs(PARAM.BOSSLANG) do
       table.insert(language_lines,line)
     end
   end
-  if PARAM.language_lump != nil then
-    each line in PARAM.language_lump do
+  if PARAM.language_lump ~= nil then
+    for _,line in pairs(PARAM.language_lump) do
       table.insert(language_lines,line)
     end
   end
   if PARAM.quit_messages == "yes" then
-    each line in PARAM.quit_messagelump do
+    for _,line in pairs(PARAM.quit_messagelump) do
       table.insert(language_lines,line)
     end
   end

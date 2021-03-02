@@ -4,30 +4,30 @@
 
 PREFABS.Item_closet_toilet_drown =
 {
-  file   = "item/gtd_item_closet_toilet_drown.wad"
-  map    = "MAP01"
+  file   = "item/gtd_item_closet_toilet_drown.wad",
+  map    = "MAP01",
 
-  engine = "zdoom"
+  engine = "zdoom",
 
-  rank = 2
-  prob = 100
+  rank = 2,
+  prob = 100,
 
-  where  = "seeds"
-  theme = "!hell"
-  env = "!cave"
+  where  = "seeds",
+  theme = "!hell",
+  env = "!cave",
 
-  height = 160
+  height = 160,
 
-  item_kind = "key"
+  item_kind = "key",
 
-  seed_w = 2
-  seed_h = 2
+  seed_w = 2,
+  seed_h = 2,
 
-  deep =  16
-  over = -16
+  deep =  16,
+  over = -16,
 
-  x_fit = "frame"
-  y_fit = "top"
+  x_fit = "frame",
+  y_fit = "top",
 
-  sound = "Bathroom_Fan"
+  sound = "Bathroom_Fan",
 }

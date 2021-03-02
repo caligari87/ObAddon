@@ -1,87 +1,87 @@
 PREFABS.Hallway_metro_i =
 {
-  file   = "hall/metro_i.wad"
-  map    = "MAP01"
+  file   = "hall/metro_i.wad",
+  map    = "MAP01",
 
-  engine = "zdoom"
+  engine = "zdoom",
 
-  group  = "metro"
-  prob   = 50
+  group  = "metro",
+  prob   = 50,
 
-  where  = "seeds"
-  shape  = "I"
+  where  = "seeds",
+  shape  = "I",
 
-  seed_w = 2
-  seed_h = 2
+  seed_w = 2,
+  seed_h = 2,
 
   sector_1  = { [0]=90, [1]=15 }
 }
 
 PREFABS.Hallway_metro_i_rise =
 {
-  template = "Hallway_metro_i"
-  map = "MAP02"
+  template = "Hallway_metro_i",
+  map = "MAP02",
 
-  engine = "zdoom"
+  engine = "zdoom",
 
-  prob = 15
+  prob = 15,
 
-  style = "steepness"
+  style = "steepness",
 
-  delta_h = 64
+  delta_h = 64,
 
-  can_flip = true
+  can_flip = true,
 }
 
 -- slopeless fallbacks
 PREFABS.Hallway_metro_i_boxy =
 {
-  template = "Hallway_metro_i"
-  map = "MAP10"
+  template = "Hallway_metro_i",
+  map = "MAP10",
 
-  engine = "any"
+  engine = "any",
 
-  prob = 4
+  prob = 4,
 
-  can_flip = true
+  can_flip = true,
 }
 
 PREFABS.Hallway_metro_i_boxy_with_door =
 {
-  template = "Hallway_metro_i"
-  map = "MAP11"
+  template = "Hallway_metro_i",
+  map = "MAP11",
 
-  engine = "any"
+  engine = "any",
 
-  prob = 4
+  prob = 4,
 
-  can_flip = true
+  can_flip = true,
 }
 
 PREFABS.Hallway_metro_i_boxy_train_crossing =
 {
-  template = "Hallway_metro_i"
-  map = "MAP12"
+  template = "Hallway_metro_i",
+  map = "MAP12",
 
-  theme = "!hell"
+  theme = "!hell",
 
-  engine = "any"
+  engine = "any",
 
-  prob = 2
+  prob = 2,
 
-  can_flip = true
+  can_flip = true,
 }
 
 PREFABS.Hallway_metro_i_boxy_ticketing_office =
 {
-  template = "Hallway_metro_i"
-  map = "MAP13"
+  template = "Hallway_metro_i",
+  map = "MAP13",
 
-  theme = "!hell"
+  theme = "!hell",
 
-  engine = "any"
+  engine = "any",
 
-  prob = 2
+  prob = 2,
 
-  can_flip = true
+  can_flip = true,
 }

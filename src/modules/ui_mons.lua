@@ -8,7 +8,7 @@
 --
 --  This program is free software; you can redistribute it and/or
 --  modify it under the terms of the GNU General Public License
---  as published by the Free Software Foundation; either version 2
+--  as published by the Free Software Foundation; either version 2,
 --  of the License, or (at your option) any later version.
 --
 --  This program is distributed in the hope that it will be useful,
@@ -140,10 +140,10 @@ UI_MONS.BOSSREGULARS =
 
 OB_MODULES["ui_mons"] =
 {
-  label = _("Monsters")
+  label = _("Monsters"),
 
-  side = "right"
-  priority = 102
+  side = "right",
+  priority = 102,
 
   options =
   {
@@ -159,16 +159,16 @@ OB_MODULES["ui_mons"] =
               "It does not matter if your Upper/Lower Bound selections are reversed. " ..
               "Progressive will pick the min VS max quantities selected.",
       default="scarce",
-      gap = 1
-    }
+      gap = 1,
+    },
 
     {
       name="mix_it_up_upper_range",
       label=_("Upper Bound"),
       choices=UI_MONS.MIX_QUANTITIES,
       default="nuts",
-      tooltip="If you have Mix It Up or Progressive selected, you can define the upper bound here. Otherwise, this option is simply ignored."
-    }
+      tooltip="If you have Mix It Up or Progressive selected, you can define the upper bound here. Otherwise, this option is simply ignored.",
+    },
 
     {
       name="mix_it_up_lower_range",
@@ -176,27 +176,27 @@ OB_MODULES["ui_mons"] =
       choices=UI_MONS.MIX_QUANTITIES,
       default="scarce",
       tooltip="If you have Mix It Up or Progressive selected, you can define the lower bound here. Otherwise, this option is simply ignored.",
-      gap = 1
-    }
+      gap = 1,
+    },
 
-    { name="strength",  label=_("Strength"),  choices=UI_MONS.STRENGTHS}
-    { name="ramp_up",   label=_("Ramp Up"),   choices=UI_MONS.RAMPS}
+    { name="strength",  label=_("Strength"),  choices=UI_MONS.STRENGTHS},
+    { name="ramp_up",   label=_("Ramp Up"),   choices=UI_MONS.RAMPS},
     { name="mon_variety", label=_("Monster Variety"),choices=STYLE_CHOICES,
       tooltip= "Affects how many different monster types can " ..
                "appear in each room.\n" ..
                "Setting this to NONE will make each level use a single monster type",
-      gap=1
-    }
+      gap=1,
+    },
 
-    { name="bosses",    label=_("Bosses"),    choices=UI_MONS.BOSSES }
+    { name="bosses",    label=_("Bosses"),    choices=UI_MONS.BOSSES },
     {
       name="bossesnormal",
       label=_("Bosses As Regulars"),
       choices=UI_MONS.BOSSREGULARS,
       default="no",
-      tooltip="Normally Archviles/Barons/Cyberdemons and other big monsters are excluded from normal monster pool and only can appear as guard for important objective e.g. key. With this option enabled they are allowed to(rarely) spawn as a regular monster. \n\n WARNING: This CAN make maps much more difficult than normal."
-    }
-    { name="traps",     label=_("Traps"),     choices=STYLE_CHOICES }
+      tooltip="Normally Archviles/Barons/Cyberdemons and other big monsters are excluded from normal monster pool and only can appear as guard for important objective e.g. key. With this option enabled they are allowed to(rarely) spawn as a regular monster. \n\n WARNING: This CAN make maps much more difficult than normal.",
+    },
+    { name="traps",     label=_("Traps"),     choices=STYLE_CHOICES },
     {
       name="trap_style",
       label=_("Trap Style"),
@@ -204,23 +204,23 @@ OB_MODULES["ui_mons"] =
       default="default",
       tooltip="This option selects between using only teleport or closet traps. DEFAULT means both are used.",
       gap = 1,
-    }
+    },
     {
       name="trap_qty",
       label=_("Trap Monsters"),
       choices=UI_MONS.CAGE_STRENGTH,
       default="default",
       tooltip="Changes the quantity of ambushing monsters from traps.",
-    }
+    },
     {
       name="cage_qty",
       label=_("Cage Monsters"),
       choices=UI_MONS.CAGE_STRENGTH,
       default="default",
       tooltip="Changes the quantity of monsters in cages.",
-      gap=1
-    }
-    { name="cages",     label=_("Cages"),     choices=STYLE_CHOICES,  gap=1 }
+      gap=1,
+    },
+    { name="cages",     label=_("Cages"),     choices=STYLE_CHOICES,  gap=1 },
 
     {
       name="secret_monsters",
@@ -228,7 +228,7 @@ OB_MODULES["ui_mons"] =
       choices=UI_MONS.SECRET_MONSTERS,
       tooltip="I'm in your secret rooms, placing some monsters. Note: default is none.",
       default="no",
-    }
+    },
     {
       name="quiet_start",
       label=_("Quiet Start"),
@@ -236,6 +236,6 @@ OB_MODULES["ui_mons"] =
       tooltip="Makes start rooms mostly safe - no enemies and all outlooking windows are removed. " ..
       "(windows are retained on Procedural Gotchas) Default Oblige behavior is 'no'.",
       default="no",
-    }
-  }
+    },
+  },
 }

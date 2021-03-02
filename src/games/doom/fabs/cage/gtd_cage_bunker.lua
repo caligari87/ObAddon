@@ -1,39 +1,39 @@
 PREFABS.Cage_wall_bunker_tech =
 {
-  file   = "cage/gtd_cage_bunker.wad"
+  file   = "cage/gtd_cage_bunker.wad",
 
-  prob  = 800
+  prob  = 800,
 
-  theme  = "tech"
+  theme  = "tech",
 
-  where  = "seeds"
-  shape  = "U"
+  where  = "seeds",
+  shape  = "U",
 
-  height = 112
+  height = 112,
 
-  seed_w = 2
-  seed_h = 1
+  seed_w = 2,
+  seed_h = 1,
 
-  deep   =  16
-  over   = -16
+  deep   =  16,
+  over   = -16,
 
-  x_fit = { 120,136 }
-  y_fit = "top"
+  x_fit = { 120,136 },
+  y_fit = "top",
 
-  sector_8  = { [8]=60, [2]=10, [3]=10, [17]=10, [21]=5 }
+  sector_8  = { [8]=60, [2]=10, [3]=10, [17]=10, [21]=5 },
 
   tex_DOOR3 =
   {
-    DOOR1=50
-    DOOR3=50
+    DOOR1=50,
+    DOOR3=50,
   }
 }
 
 PREFABS.Cage_wall_bunker_hell =
 {
-  template = "Cage_wall_bunker_tech"
+  template = "Cage_wall_bunker_tech",
 
-  theme    = "hell"
+  theme    = "hell",
 
-  tex_DOOR3 = "WOODMET1"
+  tex_DOOR3 = "WOODMET1",
 }

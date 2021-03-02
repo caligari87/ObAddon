@@ -8,19 +8,19 @@
 --
 --  This program is free software; you can redistribute it and/or
 --  modify it under the terms of the GNU General Public License
---  as published by the Free Software Foundation; either version 2
+--  as published by the Free Software Foundation; either version 2,
 --  of the License, or (at your option) any later version.
 --
 --------------------------------------------------------------------
 
 DOOM.SECRET_EXITS =
 {
-  MAP15 = true
-  MAP31 = true
+  MAP15 = true,
+  MAP31 = true,
 
-  E1M3 = true
-  E2M5 = true
-  E3M6 = true
+  E1M3 = true,
+  E2M5 = true,
+  E3M6 = true,
   E4M2 = true
 }
 
@@ -29,34 +29,34 @@ DOOM.EPISODES =
 {
   episode1 =
   {
-    ep_index = 1
+    ep_index = 1,
 
-    theme = "tech"
-    sky_patch = "RSKY1"
-    dark_prob = 10
-    bex_mid_name = "C1TEXT"
-    bex_end_name = "C2TEXT"
-  }
+    theme = "tech",
+    sky_patch = "RSKY1",
+    dark_prob = 10,
+    bex_mid_name = "C1TEXT",
+    bex_end_name = "C2TEXT",
+  },
 
   episode2 =
   {
-    ep_index = 2
+    ep_index = 2,
 
-    theme = "urban"
-    sky_patch = "RSKY2"
-    dark_prob = 40
-    bex_end_name = "C3TEXT"
-  }
+    theme = "urban",
+    sky_patch = "RSKY2",
+    dark_prob = 40,
+    bex_end_name = "C3TEXT",
+  },
 
   episode3 =
   {
-    ep_index = 3
+    ep_index = 3,
 
-    theme = "hell"
-    sky_patch = "RSKY3"
-    dark_prob = 10
-    bex_end_name = "C4TEXT"
-  }
+    theme = "hell",
+    sky_patch = "RSKY3",
+    dark_prob = 10,
+    bex_end_name = "C4TEXT",
+  },
 }
 
 
@@ -64,12 +64,12 @@ DOOM.PREBUILT_LEVELS =
 {
   MAP30 =
   {
-    { prob=50, file="games/doom/data/boss2/icon1.wad", map="MAP30" }
-    { prob=50, file="games/doom/data/boss2/icon2.wad", map="MAP30" }
-    { prob=50, file="games/doom/data/boss2/icon3.wad", map="MAP01" }
-    { prob=50, file="games/doom/data/boss2/icon3.wad", map="MAP02" }
-    { prob=50, file="games/doom/data/boss2/icon3.wad", map="MAP03" }
-  }
+    { prob=50, file="games/doom/data/boss2/icon1.wad", map="MAP30" },
+    { prob=50, file="games/doom/data/boss2/icon2.wad", map="MAP30" },
+    { prob=50, file="games/doom/data/boss2/icon3.wad", map="MAP01" },
+    { prob=50, file="games/doom/data/boss2/icon3.wad", map="MAP02" },
+    { prob=50, file="games/doom/data/boss2/icon3.wad", map="MAP03" },
+  },
 }
 
 
@@ -133,12 +133,12 @@ function DOOM.get_levels()
 
     local LEV =
     {
-      episode = EPI
+      episode = EPI,
 
-      name  = string.format("MAP%02d", map)
-      patch = string.format("CWILV%02d", map-1)
+      name  = string.format("MAP%02d", map),
+      patch = string.format("CWILV%02d", map-1),
 
-      ep_along = ep_along
+      ep_along = ep_along,
       game_along = game_along
     }
 
@@ -229,16 +229,16 @@ function DOOM.get_levels()
         end
       end
 
-      --5% of maps after map 4
+      --5% of maps after map 4,
       if OB_CONFIG.procedural_gotchas == "5p" then
-        if map > 4 and map != 15 and map != 31 then
+        if map > 4 and map ~= 15 and map ~= 31 then
           if rand.odds(5) then LEV.is_procedural_gotcha = true end
         end
       end
 
-      -- 10% of maps after map 4
+      -- 10% of maps after map 4,
       if OB_CONFIG.procedural_gotchas == "10p" then
-        if map > 4 and map != 15 and map != 31 then
+        if map > 4 and map ~= 15 and map ~= 31 then
           if rand.odds(10) then LEV.is_procedural_gotcha = true end
         end
       end
@@ -270,7 +270,7 @@ function DOOM.get_levels()
     if not LEV.prebuilt then
       if OB_CONFIG.linear_mode == "all" then
         LEV.is_linear = true
-      elseif OB_CONFIG.linear_mode != "none" then
+      elseif OB_CONFIG.linear_mode ~= "none" then
         if rand.odds(int(OB_CONFIG.linear_mode)) then
           LEV.is_linear = true
         end
@@ -280,7 +280,7 @@ function DOOM.get_levels()
       if OB_CONFIG.nature_mode and not LEV.has_streets then
         if OB_CONFIG.nature_mode == "all" then
           LEV.is_nature = true
-        elseif OB_CONFIG.nature_mode != "none" then
+        elseif OB_CONFIG.nature_mode ~= "none" then
           if rand.odds(int(OB_CONFIG.nature_mode)) then
             LEV.is_nature = true
           end
@@ -295,7 +295,7 @@ function DOOM.get_levels()
   end
 
   -- handle "dist_to_end" for FEW and EPISODE lengths
-  if OB_CONFIG.length != "single" and OB_CONFIG.length != "game" then
+  if OB_CONFIG.length ~= "single" and OB_CONFIG.length ~= "game" then
     GAME.levels[#GAME.levels].dist_to_end = 1
 
     if OB_CONFIG.length == "episode" then

@@ -9,7 +9,7 @@
 --
 --  This program is free software; you can redistribute it and/or
 --  modify it under the terms of the GNU General Public License
---  as published by the Free Software Foundation; either version 2
+--  as published by the Free Software Foundation; either version 2,
 --  of the License, or (at your option) any later version.
 --
 --  This program is distributed in the hope that it will be useful,
@@ -24,58 +24,58 @@ WADFAB_ENTITIES =
 {
   -- monster spots
 
-  [8102] = { kind="monster", r= 20 }
-  [8103] = { kind="monster", r= 32 }
-  [8104] = { kind="monster", r= 48 }
-  [8106] = { kind="monster", r= 64 }
-  [8108] = { kind="monster", r=128 }
+  [8102] = { kind="monster", r= 20 },
+  [8103] = { kind="monster", r= 32 },
+  [8104] = { kind="monster", r= 48 },
+  [8106] = { kind="monster", r= 64 },
+  [8108] = { kind="monster", r=128 },
 
-  [8112] = { kind="flyer", r= 20 }
-  [8113] = { kind="flyer", r= 32 }
-  [8114] = { kind="flyer", r= 48 }
-  [8116] = { kind="flyer", r= 64 }
-  [8118] = { kind="flyer", r=128 }
+  [8112] = { kind="flyer", r= 20 },
+  [8113] = { kind="flyer", r= 32 },
+  [8114] = { kind="flyer", r= 48 },
+  [8116] = { kind="flyer", r= 64 },
+  [8118] = { kind="flyer", r=128 },
 
-  [8122] = { kind="cage", r= 20 }
-  [8123] = { kind="cage", r= 32 }
-  [8124] = { kind="cage", r= 48 }
-  [8126] = { kind="cage", r= 64 }
-  [8128] = { kind="cage", r=128 }
+  [8122] = { kind="cage", r= 20 },
+  [8123] = { kind="cage", r= 32 },
+  [8124] = { kind="cage", r= 48 },
+  [8126] = { kind="cage", r= 64 },
+  [8128] = { kind="cage", r=128 },
 
-  [8132] = { kind="trap", r= 20 }
-  [8133] = { kind="trap", r= 32 }
-  [8134] = { kind="trap", r= 48 }
-  [8136] = { kind="trap", r= 64 }
-  [8138] = { kind="trap", r=128 }
+  [8132] = { kind="trap", r= 20 },
+  [8133] = { kind="trap", r= 32 },
+  [8134] = { kind="trap", r= 48 },
+  [8136] = { kind="trap", r= 64 },
+  [8138] = { kind="trap", r=128 },
 
   -- special spots
 
-  [8151] = { kind="pickup",    r=16 }
-  [8152] = { kind="big_item",  r=16 }
-  [8160] = { kind="important", r=64 }
+  [8151] = { kind="pickup",    r=16 },
+  [8152] = { kind="big_item",  r=16 },
+  [8160] = { kind="important", r=64 },
 
   -- lighting
 
-  [8181] = { kind="light" }
+  [8181] = { kind="light" },
 
   -- souuuuund
 
-  [8185] = { kind="sound" }
+  [8185] = { kind="sound" },
 
   -- miscellaneous
 
-  [8199] = { kind="secret" }
+  [8199] = { kind="secret" },
 }
 
 
 WADFAB_FX_DELTAS =
 {
-  [1]  =  48  -- random off
-  [2]  =  48  -- blink fast
-  [12] =  48  -- blink fast, sync
-  [3]  =  48  -- blink slow
-  [13] =  48  -- blink slow, sync
-  [17] =  48  -- flickers
+  [1]  =  48,  -- random off
+  [2]  =  48,  -- blink fast
+  [12] =  48,  -- blink fast, sync
+  [3]  =  48,  -- blink slow
+  [13] =  48,  -- blink slow, sync
+  [17] =  48,  -- flickers
 
   [8]  = 128  -- oscillates
 }
@@ -106,7 +106,7 @@ function Fab_load_all_definitions()
 
     gui.set_import_dir(dir)
 
-    each filename in list do
+    for _,filename in pairs(list) do
       gui.debugf("Loading %s/%s\n", sub, filename)
 
       gui.import(filename)
@@ -126,7 +126,7 @@ function Fab_load_all_definitions()
       return
     end
 
-    each sub in subdirs do
+    for _,sub in pairs(subdirs) do
       load_from_subdir(top_level, sub)
     end
 
@@ -134,7 +134,7 @@ function Fab_load_all_definitions()
     -- [ we assume previous defs also got it, hence this will only set
     --   the dir_name in the definitions just loaded ]
 
-    each name,def in PREFABS do
+    for name,def in pairs(PREFABS) do
       if not def.dir_name then
         def.dir_name = top_level
       end
@@ -170,7 +170,7 @@ function Fab_load_all_definitions()
   local function calc_prob(def)
 
     -- attachment for the Hideous Destructor cover walls
-    if PARAM["hd_cover_walls"] != "enable" then
+    if PARAM["hd_cover_walls"] ~= "enable" then
       if def.is_hideous_destructor_fab == true then
         def.skip_prob = 100
       end
@@ -195,7 +195,7 @@ function Fab_load_all_definitions()
           table.remove(PREFABS[def.name])
 
           -- remove templates of a replaced fab as well
-          each name,odef in PREFABS do
+          for name,odef in pairs(PREFABS) do
             if odef.template == def.replaces then
               table.remove(PREFABS[odef])
             end
@@ -210,7 +210,7 @@ function Fab_load_all_definitions()
           PREFABS[def.replaces].use_prob = 0
           PREFABS[def.replaces].skip_prob = 100
 
-          each name,odef in PREFABS do
+          for name,odef in pairs(PREFABS) do
             if odef.template == def.replaces then
               PREFABS[odef].prob = 0
               PREFABS[odef].use_prob = 0
@@ -248,7 +248,7 @@ function Fab_load_all_definitions()
 
     local count = 0
 
-    each name,def in PREFABS do
+    for name,def in pairs(PREFABS) do
       if not def.kind then
         def.kind = kind_from_filename(def.file)
       end
@@ -276,7 +276,7 @@ end
 
 
 function Fab_update_skip_prob()
-  each name,def in PREFABS do
+  for name,def in pairs(PREFABS) do
     if def.skip_prob then
       if rand.odds(def.skip_prob) then
         def.use_prob = 0
@@ -308,14 +308,14 @@ function Fab_expansion_groups(list, axis_name, fit_size, pf_size, fabinfo)
   --assert(extra > 0)
 
   -- check some special keywords.
-  -- missing 'x_fit' field (etc) defaults to "stretch"
+  -- missing 'x_fit' field (etc) defaults to "stretch",
 
   if not list or list == "stretch" then
     local G =
     {
-      low   = 0
-      high  = pf_size
-      low2  = 0
+      low   = 0,
+      high  = pf_size,
+      low2  = 0,
       high2 = fit_size
     }
 
@@ -335,7 +335,7 @@ function Fab_expansion_groups(list, axis_name, fit_size, pf_size, fabinfo)
   end
 
 
-  if type(list) != "table" then
+  if type(list) ~= "table" then
     error("Bad " .. axis_name .. "_fit field in prefab: " .. tostring(list))
   end
 
@@ -369,7 +369,7 @@ function Fab_expansion_groups(list, axis_name, fit_size, pf_size, fabinfo)
   for i = 1,#list-1 do
     local G =
     {
-      low  = list[i]
+      low  = list[i],
       high = list[i+1]
     }
 
@@ -385,7 +385,7 @@ function Fab_expansion_groups(list, axis_name, fit_size, pf_size, fabinfo)
     G.low2  = pos
     G.high2 = pos + G.size2
 
-    pos = pos + G.size2
+    pos = pos + G.size2,
 
     table.insert(groups, G)
   end
@@ -403,8 +403,8 @@ end
 function Fab_apply_substitute(value, SKIN)
   assert(is_subst(value))
 
-  -- a simple substitution is just: "?varname"
-  -- a more complex one has an operator: "?varname+3",  "?foo==1"
+  -- a simple substitution is just: "?varname",
+  -- a more complex one has an operator: "?varname+3",  "?foo==1",
 
   local neg, var_name, op, number = string.match(value, "(.)([%w_]*)(%p*)(%-?[%d.]*)");
 
@@ -445,7 +445,7 @@ function Fab_apply_substitute(value, SKIN)
     if op == "-" then return value - number end
 
     if op == "==" then return sel(value == number, 1, 0) end
-    if op == "!=" then return sel(value != number, 1, 0) end
+    if op == "!=" then return sel(value ~= number, 1, 0) end
 
     error("bad subst operator: " .. tostring(op))
   end
@@ -459,16 +459,16 @@ function Fab_determine_bbox(fab)
   local x1, y1, z1
   local x2, y2, z2
 
-  -- Note: no need to handle slopes, they are defined to be "shrinky"
+  -- Note: no need to handle slopes, they are defined to be "shrinky",
   --       (i.e. never higher that t, never lower than b).
 
-  each B in fab.brushes do
-    if B[1].outlier then continue end
-    if B[1].m == "light" then continue end
-    if B[1].m == "rail"  then continue end
-    if B[1].m == "spot"  then continue end
+  for _,B in pairs(fab.brushes) do
+    if B[1].outlier then goto continue end
+    if B[1].m == "light" then goto continue end
+    if B[1].m == "rail"  then goto continue end
+    if B[1].m == "spot"  then goto continue end
 
-    each C in B do
+    for _,C in pairs(B) do
 
       if C.x then
         if not x1 then
@@ -492,6 +492,7 @@ function Fab_determine_bbox(fab)
       end
 
     end -- C
+    ::continue::
   end -- B
 
   assert(x1 and y1 and x2 and y2)
@@ -499,7 +500,7 @@ function Fab_determine_bbox(fab)
   -- Note: it is OK when z1 and z2 are not set (this happens with
   --       prefabs consisting entirely of infinitely tall solids).
 
-  -- Note: It is possible to get dz == 0
+  -- Note: It is possible to get dz == 0,
 
   local dz
   if z1 then dz = z2 - z1 end
@@ -517,14 +518,14 @@ end
 function Fab_transform_XY(fab, T)
 
   local function brush_xy(brush)
-    each C in brush do
+    for _,C in pairs(brush) do
       if C.x then C.x, C.y = Trans.apply_xy(C.x, C.y) end
 
       if C.slope then C.slope = Trans.apply_slope(C.slope) end
       if C.angle then C.angle = Trans.apply_angle(C.angle) end
     end
 
-    if sel(T.mirror_x, 1, 0) != sel(T.mirror_y, 1, 0) then
+    if sel(T.mirror_x, 1, 0) ~= sel(T.mirror_y, 1, 0) then
       brushlib.reverse(brush)
     end
   end
@@ -616,15 +617,15 @@ function Fab_transform_XY(fab, T)
 
   -- apply the coordinate transform to all parts of the prefab
 
-  each B in fab.brushes do
+  for _,B in pairs(fab.brushes) do
     brush_xy(B)
   end
 
-  each E in fab.entities do
+  for _,E in pairs(fab.entities) do
     entity_xy(E)
   end
 
-  each M in fab.models do
+  for _,M in pairs(fab.models) do
     model_xy(M)
     entity_xy(M.entity)
   end
@@ -639,7 +640,7 @@ function Fab_transform_Z(fab, T)
   local function brush_z(brush)
     local b, t
 
-    each C in brush do
+    for _,C in pairs(brush) do
       if C.b then C.b = Trans.apply_z(C.b) ; b = C.b end
       if C.t then C.t = Trans.apply_z(C.t) ; t = C.t end
     end
@@ -726,15 +727,15 @@ function Fab_transform_Z(fab, T)
 
   -- apply the coordinate transform to all parts of the prefab
 
-  each B in fab.brushes do
+  for _,B in pairs(fab.brushes) do
     brush_z(B)
   end
 
-  each E in fab.entities do
+  for _,E in pairs(fab.entities) do
     entity_z(E)
   end
 
-  each M in fab.models do
+  for _,M in pairs(fab.models) do
     model_z(M)
   end
 
@@ -746,7 +747,7 @@ end
 function Fab_bound_brushes_Z(fab, z1, z2)
   if not (z1 or z2) then return end
 
-  each B in fab.brushes do
+  for _,B in pairs(fab.brushes) do
     local b = Brush_get_b(B)
     local t = Brush_get_t(B)
 
@@ -770,17 +771,17 @@ function Fab_render(fab)
     fab_map = "object"
   end
 
-  each B in fab.brushes do
-    if B[1].m != "spot" then
+  for _,B in pairs(fab.brushes) do
+    if B[1].m ~= "spot" then
       raw_add_brush(B)
     end
   end
 
-  each M in fab.models do
+  for _,M in pairs(fab.models) do
     raw_add_model(M)
   end
 
-  each E in fab.entities do
+  for _,E in pairs(fab.entities) do
     if E.id then
       raw_add_entity(E)
     end
@@ -796,9 +797,9 @@ function Fab_solid_entities(fab, room)
 
   if not room then return end
 
-  if fab.solid_ents != true then return end
+  if fab.solid_ents ~= true then return end
 
-  each E in fab.entities do
+  for _,E in pairs(fab.entities) do
     if E.id then
       room:add_solid_ent(E.id, E.x, E.y, E.z)
     end
@@ -821,7 +822,7 @@ function Fab_process_spots(fab, room)
     if brushlib.is_quad(B) then
       x1,y1, x2,y2 = brushlib.bbox(B)
 
-      each C in B do
+      for _,C in pairs(B) do
         if C.b then z1 = C.b end
         if C.t then z2 = C.t end
       end
@@ -836,12 +837,12 @@ function Fab_process_spots(fab, room)
 
     local SPOT =
     {
-      kind  = B[1].spot_kind
-      angle = B[1].angle
-      rank  = B[1].rank
+      kind  = B[1].spot_kind,
+      angle = B[1].angle,
+      rank  = B[1].rank,
 
-      x1 = x1, y1 = y1, z1 = z1
-      x2 = x2, y2 = y2, z2 = z2
+      x1 = x1, y1 = y1, z1 = z1,
+      x2 = x2, y2 = y2, z2 = z2,
     }
 
     return SPOT
@@ -851,11 +852,11 @@ function Fab_process_spots(fab, room)
   local function OLD__distribute_spots(R, list)
     local seen = {}
 
-    each spot in list do
+    for _,spot in pairs(list) do
       seen[spot.kind] = 1
     end
 
-    each spot in list do
+    for _,spot in pairs(list) do
       if not seen["big_item"] and spot.kind == "important" then
         local new_spot = table.copy(spot)
         new_spot.kind = "big_item"
@@ -913,7 +914,7 @@ gui.debugf("Fab_process_spots @ %s\n", room and room.name or "???")
   --TODO : review this
   if not room then return end
 
-  each B in fab.brushes do
+  for _,B in pairs(fab.brushes) do
     if B[1].m == "spot" then
       process_spot(B)
     end
@@ -1017,9 +1018,9 @@ function Fab_parse_edges__OLD(skin)
 
   local function parse_edge(dir, str)
     -- check stuff
-    if type(str) != "string" then
+    if type(str) ~= "string" then
       error("bad edge string in prefab skin")
-    elseif #str != geom.vert_sel(dir, W, H) then
+    elseif #str ~= geom.vert_sel(dir, W, H) then
       error("edge string does not match prefab size")
     end
 
@@ -1043,7 +1044,7 @@ function Fab_parse_edges__OLD(skin)
   end
 
 
-  each k, edge in skin do
+  for k, edge in pairs(skin) do
     if k == "north" then parse_edge(8, edge) end
     if k == "south" then parse_edge(2, edge) end
     if k == "east"  then parse_edge(6, edge) end
@@ -1176,15 +1177,15 @@ function Fab_load_wad(def)
       --                   always-draw, block-sound, pass-thru
       flags = bit.band(flags, 0x2E3)
 
-      if flags != 0 then
+      if flags ~= 0 then
         C2.flags = flags
 
         -- this makes sure the flags get applied
         if not C2.special then C2.special = 0 end
       end
 
-      upper_unpeg = (bit.band(flags, MLF_UpperUnpegged) != 0)
-      lower_unpeg = (bit.band(flags, MLF_LowerUnpegged) != 0)
+      upper_unpeg = (bit.band(flags, MLF_UpperUnpegged) ~= 0)
+      lower_unpeg = (bit.band(flags, MLF_LowerUnpegged) ~= 0)
     end
 
     -- offsets --
@@ -1215,11 +1216,11 @@ function Fab_load_wad(def)
   local function create_void_brush(coords)
     local B =
     {
-      { m="solid" }
+      { m="solid" },
     }
 
 
-    each C in coords do
+    for _,C in pairs(coords) do
       table.insert(B, decode_polygon_side(nil, C, 1))
     end
 
@@ -1255,12 +1256,12 @@ function Fab_load_wad(def)
 
     local B =
     {
-      { m="light" }
+      { m="light" },
     }
 
     decode_lighting(S, B[1])
 
-    each C in coords do
+    for _,C in pairs(coords) do
       table.insert(B, decode_polygon_side(S, C, 1))
     end
 
@@ -1283,7 +1284,7 @@ function Fab_load_wad(def)
 
     local B =
     {
-      { m="solid" }
+      { m="solid" },
     }
 
     local is_door = (S.floor_h >= S.ceil_h)
@@ -1352,7 +1353,7 @@ function Fab_load_wad(def)
       table.insert(B, C)
     end
 
-    each C in coords do
+    for _,C in pairs(coords) do
       table.insert(B, decode_polygon_side(S, C, pass))
     end
 
@@ -1366,7 +1367,7 @@ function Fab_load_wad(def)
 
     local B =
     {
-      { m="solid" }
+      { m="solid" },
     }
 
     -- top of brush
@@ -1380,7 +1381,7 @@ function Fab_load_wad(def)
     table.insert(B, TOP)
 
     -- sides
-    each C in coords do
+    for _,C in pairs(coords) do
       table.insert(B, decode_3d_floor_side(exfl, C))
     end
 
@@ -1391,8 +1392,8 @@ function Fab_load_wad(def)
   local function skill_to_rank(flags)
     if not flags then return 2 end
 
-    if bit.band(flags, 2) != 0 then return 2 end
-    if bit.band(flags, 4) != 0 then return 3 end
+    if bit.band(flags, 2) ~= 0 then return 2 end
+    if bit.band(flags, 4) ~= 0 then return 3 end
 
     return 1
   end
@@ -1470,7 +1471,7 @@ function Fab_load_wad(def)
 
     local B =
     {
-      { m = "spot" }
+      { m = "spot" },
     }
 
     B[1].spot_kind = spot_info.kind
@@ -1479,7 +1480,7 @@ function Fab_load_wad(def)
 
     local r = spot_info.r
 
-    local mon_height = def.mon_height or 128
+    local mon_height = def.mon_height or 128,
 
     table.insert(B, { x = E.x - r, y = E.y - r })
     table.insert(B, { x = E.x + r, y = E.y - r })
@@ -1524,7 +1525,7 @@ function Fab_load_wad(def)
 
       -- check for a railing texture on this side
       local tex = side.mid_tex
-      if tex == nil or tex == "" or tex == "-" then continue end
+      if tex == nil or tex == "" or tex == "-" then goto continue end
 
       local S = gui.wadfab_get_sector(side.sector)
       assert(S)
@@ -1542,14 +1543,15 @@ function Fab_load_wad(def)
       -- create the brush
       local props =
       {
-        tex = tex
-        u1  = convert_offset(side.x_offset)
+        tex = tex,
+        u1  = convert_offset(side.x_offset),
         v1  = convert_offset(side.y_offset)
       }
 
       local B = brushlib.rail_brush(x1,y1, x2,y2, z, props)
 
       table.insert(fab.brushes, B)
+      ::continue::
     end
   end
 
@@ -1594,7 +1596,7 @@ function Fab_load_wad(def)
       -- negative value means "void" space
       if sec_idx < 0 then
         create_void_brush(coords)
-        continue
+        goto continue
       end
 
       local S = gui.wadfab_get_sector(sec_idx)
@@ -1610,6 +1612,7 @@ function Fab_load_wad(def)
 
         create_3d_floor(exfl, coords)
       end
+      ::continue::
     end
 
     for line_idx = 0,9999 do
@@ -1697,7 +1700,7 @@ function Fab_merge_skins(fab, room, list)
     table.merge(result, room.skin)
   end
 
-  each skin in list do
+  for _,skin in pairs(list) do
     table.merge(result, skin)
   end
 
@@ -1733,7 +1736,7 @@ function Fab_collect_fields(fab)
   local function matching_fields()
     local list = { }
 
-    each k,v in fab do
+    for k,v in pairs(fab) do
       if match_prefix(k) then
         table.insert(list, k)
       end
@@ -1747,7 +1750,7 @@ function Fab_collect_fields(fab)
 
   fab.fields = {}
 
-  each k in matching_fields() do
+  for _,k in pairs(matching_fields()) do
     fab.fields[k] = fab[k] ; fab[k] = nil
   end
 
@@ -1775,16 +1778,17 @@ function Fab_substitutions(fab, SKIN)
     -- most fields with a table value are considered to be random
     -- replacement, e.g. tex_FOO = { COMPSTA1=50, COMPSTA2=50 }.
 
-    each name in keys do
+    for _,name in pairs(keys) do
       local value = fab.fields[name]
 
-      if type(value) != "table" then continue end
+      if type(value) ~= "table" then goto continue end
 
       if table.size(value) == 0 then
         error("Fab_substitutions: random table is empty: " .. tostring(name))
       end
 
       fab.fields[name] = rand.key_by_probs(value)
+      ::continue::
     end
   end
 
@@ -1815,7 +1819,7 @@ function Fab_substitutions(fab, SKIN)
 
 
   local function subst_pass(keys)
-    each name in keys do
+    for _,name in pairs(keys) do
       local value = fab.fields[name]
 
       if is_subst(value) then
@@ -2001,7 +2005,7 @@ function Fab_replacements(fab)
   local function fixup_x_offsets(C)
     -- adjust X offset for split edges
 
-    if C.u1 and C.u1 != "" and C.u1_along then
+    if C.u1 and C.u1 ~= "" and C.u1_along then
       C.u1 = C.u1 + C.u1_along
       C.u1_along = nil
     end
@@ -2015,11 +2019,11 @@ function Fab_replacements(fab)
 
     if not THEME.entity_remap then return end
 
-    each name1,name2 in THEME.entity_remap do
+    for name1,name2 in pairs(THEME.entity_remap) do
       local id1 = get_entity_id(name1)
       local id2 = get_entity_id(name2)
 
-      if id1 and id2 and id1 != id2 then
+      if id1 and id2 and id1 ~= id2 then
         THEME.entity_remap_by_id[id1] = id2
       end
     end
@@ -2030,8 +2034,8 @@ function Fab_replacements(fab)
 
   build_entity_remap_table()
 
-  each B in fab.brushes do
-    each C in B do
+  for _,B in pairs(fab.brushes) do
+    for _,C in pairs(B) do
       if C.special and C.x     then C.special = check("line",   C.special) end
       if C.special and not C.x then C.special = check("sector", C.special) end
 
@@ -2048,7 +2052,7 @@ function Fab_replacements(fab)
     end
   end
 
-  each E in fab.entities do
+  for _,E in pairs(fab.entities) do
     check_props(E)
 
     -- unknown entities set the 'id' to NIL
@@ -2103,7 +2107,7 @@ function Fabricate(room, def, T, skins)
   if PARAM.marine_gen and PARAM.level_has_marine_closets and fab.group == "marine_closet" then
     MARINE_CLOSET_TUNE.randomize_count()
     local marines = PARAM.marine_marines
-    each E in fab.entities do
+    for _,E in pairs(fab.entities) do
       if E.id and E.id == 8001 then
         if marines > 0 then
           E.id = MARINE_CLOSET_TUNE.grab_type()
@@ -2118,7 +2122,7 @@ function Fabricate(room, def, T, skins)
 
   fab.state = "skinned"
 
-  if PARAM.print_prefab_use != "no" then
+  if PARAM.print_prefab_use ~= "no" then
     if fab.where == "point" or fab.where == "seeds" then
       gui.printf(LEVEL.name .. ": Adding " .. fab.name .. " ")
     end
@@ -2133,7 +2137,7 @@ function Fabricate(room, def, T, skins)
   Fab_solid_entities(fab, room)
   Fab_process_spots(fab, room)
 
-  if PARAM.print_prefab_use != "no" then
+  if PARAM.print_prefab_use ~= "no" then
     if fab.where == "point" or fab.where == "seeds" then
       gui.printf("{" .. T.add_x .. "," .. T.add_y .. "}")
       gui.printf("\n")
@@ -2157,7 +2161,7 @@ PREFAB SIZE MATCHING
 
    (a) prefab have "seed_w" and "seed_h" fields, default to 1 if not present
 
-   (b) prefabs can only occupy a larger space when "x_fit" / "y_fit"
+   (b) prefabs can only occupy a larger space when "x_fit" / "y_fit",
        is present in the definition
 
 3. for "edge" prefabs, only have "seed_w", and require "x_fit" to expand
@@ -2177,7 +2181,7 @@ function Fab_find_matches(reqs, match_state)
       return (def.size or 0) <= (reqs.size or 0)
     end
 
-    -- prefab definition defaults to 1
+    -- prefab definition defaults to 1,
     local sw = def.seed_w or 1
     local sh = def.seed_h or 1
 
@@ -2241,7 +2245,7 @@ function Fab_find_matches(reqs, match_state)
     end
 
     -- negated check?
-    if string.sub(def_k, 1, 1) == '!' then
+    if string.sub(def_k, 1, 1) == '~' then
       def_k = string.sub(def_k, 2)
 
       return not match_environment(def_k, req_k)
@@ -2254,7 +2258,7 @@ function Fab_find_matches(reqs, match_state)
   local function match_word_or_table(req_k, def_k)
     if type(req_k) == "table" and def_k then
       -- recursively check each keyword to allow table<-->table matches
-      each r2,_ in req_k do
+      for r2,_ in pairs(req_k) do
         if match_word_or_table(r2, def_k) then return true end
       end
 
@@ -2273,7 +2277,7 @@ function Fab_find_matches(reqs, match_state)
     -- type check
     local kind = assert(def.kind)
 
-    if reqs.kind != kind then return 0 end
+    if reqs.kind ~= kind then return 0 end
 
     -- placement check
     if not def.where then return 0 end
@@ -2296,7 +2300,7 @@ function Fab_find_matches(reqs, match_state)
     if not match_word_or_table(reqs.key, def.key) then return 0 end
 
     -- check on item type
-    if def.item_kind and reqs.item_kind != def.item_kind then return 0 end
+    if def.item_kind and reqs.item_kind ~= def.item_kind then return 0 end
 
     -- check on room type (building / outdoor / cave)
     if not match_environment(reqs.env,      def.env)      then return 0 end
@@ -2305,8 +2309,8 @@ function Fab_find_matches(reqs, match_state)
     if def.open_to_sky and not reqs.open_to_sky then return 0 end
 
     -- hallway stuff
-    if reqs.door   != def.door   then return 0 end
-    if reqs.secret != def.secret then return 0 end
+    if reqs.door   ~= def.door   then return 0 end
+    if reqs.secret ~= def.secret then return 0 end
 
     -- door check [WTF?]
     if def.no_door and reqs.has_door then return 0 end
@@ -2320,7 +2324,7 @@ function Fab_find_matches(reqs, match_state)
 
     -- on liquids check
     if def.on_liquids == "never" and reqs.on_liquids == "liquid" then return 0 end
-    if def.on_liquids == "only" and reqs.on_liquids != "liquid" then return 0 end
+    if def.on_liquids == "only" and reqs.on_liquids ~= "liquid" then return 0 end
 
     -- sink check
     if reqs.is_sink and def.sink_mode == "never" then return 0 end
@@ -2357,26 +2361,26 @@ function Fab_find_matches(reqs, match_state)
     -- Textures module Environment Themes -MSSP
     if not reqs.outdoor_theme then
       if def.outdoor_theme then
-        if def.outdoor_theme != "temperate" then
+        if def.outdoor_theme ~= "temperate" then
           return 0
         end
       end
     elseif reqs.outdoor_theme then
       if reqs.outdoor_theme == "temperate" then
         if def.outdoor_theme then
-          if def.outdoor_theme != "temperate" then
+          if def.outdoor_theme ~= "temperate" then
             return 0
           end
         end
       elseif reqs.outdoor_theme == "snow" then
         if def.outdoor_theme then
-          if def.outdoor_theme != "snow" then
+          if def.outdoor_theme ~= "snow" then
             return 0
           end
         end
       elseif reqs.outdoor_theme == "desert" then
         if def.outdoor_theme then
-          if def.outdoor_theme != "desert" then
+          if def.outdoor_theme ~= "desert" then
             return 0
           end
         end
@@ -2392,14 +2396,14 @@ function Fab_find_matches(reqs, match_state)
 
     local style_tab = def.style
 
-    if type(style_tab) != "table" then
+    if type(style_tab) ~= "table" then
       style_tab = { def.style }
       def.style = style_tab
     end
 
     local factor = 1.0
 
-    each name in style_tab do
+    for _,name in pairs(style_tab) do
       if STYLE[name] == nil then
         error("Unknown style name in prefab def: " .. tostring(name))
       end
@@ -2434,7 +2438,7 @@ function Fab_find_matches(reqs, match_state)
 
   local tab = {}
 
-  each name,def in PREFABS do
+  for name,def in pairs(PREFABS) do
     local prob = prob_for_match(def, match_state, reqs.theme_override)
 
     if prob > 0 then
