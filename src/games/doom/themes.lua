@@ -1230,55 +1230,6 @@ DOOM.THEMES =
 
     wall_groups =
     {
-<<<<<<< HEAD
-      low_gap = 2
-      low_gap2 = 2
-      low_gap3 = 3
-      low_gap4 = 3
-      mid_band = 3
-      mid_band2 = 3
-      lite1 = 7
-      lite2 = 12
-      torches4 = 35
-      torches5 = 35
-      torches6 = 3
-      torches7 = 65
-      torches11 = 7
-      gtd_wall_urban_storage = 25
-      gtd_wall_tech_top_corner_light_set = 25
-      gtd_wall_server_room = 25
-      gtd_wall_sewer = 25
-      gtd_generic_beamed_inset = 25
-      gtd_computers = 25
-      gtd_writhing_mass = 2
-      gtd_wall_octagon_insets = 25
-      gtd_wall_grated_machines = 25
-      gtd_wall_quakish_insets = 25
-      gtd_ribbed_lights = 25
-      gtd_wall_high_gap_set = 12
-      gtd_wall_high_gap_alt_set = 12
-      gtd_generic_half_floor = 20
-      gtd_generic_half_floor_no_trim = 20
-      gtd_generic_half_floor_inverted_braced = 20
-      gtd_wall_urban_cement_frame = 10
-      gtd_generic_ceilwall = 25
-      gtd_generic_glow_wall = 25
-      gtd_generic_artsy_bedazzled = 2
-      gtd_generic_alt_colors = 25
-      gtd_generic_mid_band = 25
-      gtd_generic_double_banded_ceil = 25
-      gtd_generic_frame_light_band = 25
-      gtd_generic_frame_metal = 25
-      gtd_generic_artsy_center_braced_ind = 25
-      gtd_generic_d64_1x = 4
-      gtd_generic_d64_1x_yellow = 4
-      gtd_generic_d64_1x_blue = 4
-      gtd_generic_d64_2x = 4
-      gtd_generic_d64_2x_yellow = 4
-      gtd_generic_d64_2x_blue = 4
-      gtd_generic_tek_grate = 25
-    }
-=======
       low_gap = 2,
       low_gap2 = 2,
       low_gap3 = 3,
@@ -1326,7 +1277,6 @@ DOOM.THEMES =
       gtd_generic_d64_2x_blue = 4,
       gtd_generic_tek_grate = 25,
     },
->>>>>>> pr/130
 
     outdoor_wall_groups =
     {
@@ -1654,51 +1604,6 @@ DOOM.THEMES =
 
     wall_groups =
     {
-<<<<<<< HEAD
-      torches2 = 10 --red
-      torches3 = 10 --blue
-      torches1 = 10 --green
-      torches6 = 5
-      torches9 = 3 --burning barrel
-      torches10 = 2 --skull rock
-      gtd_wall_urban_storage = 8
-      gtd_wall_tech_top_corner_light_set = 8
-      gtd_wall_sewer = 10
-      gtd_generic_beamed_inset = 15
-      gtd_computers = 4
-      gtd_drywall = 10
-      gtd_writhing_mass = 2
-      gtd_library = 10
-      gtd_wall_grated_machines = 4
-      gtd_wall_quakish_insets = 8
-      gtd_ribbed_lights = 4
-      gtd_wall_high_gap_set = 5
-      gtd_wall_high_gap_alt_set = 5
-      gtd_generic_half_floor = 8
-      gtd_generic_half_floor_no_trim = 8
-      gtd_generic_half_floor_inverted_braced = 8
-      gtd_woodframe = 5
-      gtd_woodframe_green = 5
-      gtd_round_inset = 5
-      gtd_wall_urban_cement_frame = 7
-      gtd_generic_ceilwall = 10
-      gtd_generic_glow_wall = 15
-      gtd_generic_artsy_bedazzled = 15
-      gtd_generic_alt_colors = 15
-      gtd_generic_mid_band = 10
-      gtd_generic_double_banded_ceil = 15
-      gtd_generic_frame_light_band = 15
-      gtd_generic_frame_metal = 15
-      gtd_generic_artsy_center_braced_ind = 15
-      gtd_generic_d64_1x = 2
-      gtd_generic_d64_1x_yellow = 2
-      gtd_generic_d64_1x_blue = 2
-      gtd_generic_d64_2x = 2
-      gtd_generic_d64_2x_yellow = 2
-      gtd_generic_d64_2x_blue = 2
-      gtd_generic_tek_grate = 15
-    }
-=======
       torches2 = 10, --red
       torches3 = 10, --blue
       torches1 = 10, --green
@@ -1742,7 +1647,6 @@ DOOM.THEMES =
       gtd_generic_d64_2x_blue = 2,
       gtd_generic_tek_grate = 15,
     },
->>>>>>> pr/130
 
     window_groups =
     {
@@ -2102,66 +2006,6 @@ DOOM.THEMES =
 
     wall_groups =
     {
-<<<<<<< HEAD
-      torches2 = 30 --red
-      torches3 = 30 --blue
-      torches1 = 30 --green
-      torches6 = 10 --candelabra
-      torches8 = 10 --evil eye
-      torches9 = 5  --burning barrel
-      torches10 = 7 --skull rock
-      lowhell1 = 4
-      lowhell2 = 2
-      lowhell3 = 4
-      runes1 = 7
-      runes2 = 7
-      runes3 = 7
-      runes4 = 7
-      runes5 = 7
-      cross1 = 7
-      cross2 = 15
-      cross3 = 7
-      cross4 = 5
-      cross5 = 10
-      mid_band_hell = 2
-      gtd_wall_hell_bloodgutters = 30
-      gtd_wall_tech_top_corner_light_set = 40
-      gtd_wall_hell_vaults = 40
-      gtd_generic_beamed_inset = 40
-      gtd_writhing_mass = 40
-      gtd_library = 40
-      gtd_furnace = 20
-      gtd_furnace_face = 20
-      gtd_wall_marbface = 40
-      gtd_wall_quakish_insets = 40
-      gtd_wall_hell_ossuary = 40
-      gtd_wall_high_gap_set = 20
-      gtd_wall_high_gap_alt_set = 20
-      gtd_generic_half_floor = 20
-      gtd_generic_half_floor_no_trim = 20
-      gtd_generic_half_floor_inverted_braced = 20
-      gtd_woodframe = 15
-      gtd_woodframe_green = 15
-      gtd_round_inset = 30
-      gtd_generic_ceilwall = 30
-      gtd_generic_glow_wall = 40
-      gtd_generic_artsy_bedazzled = 40
-      gtd_generic_alt_colors = 40
-      gtd_generic_mid_band = 10
-      gtd_generic_double_banded_ceil = 40
-      gtd_wall_hell_vaults_ftex = 40
-      gtd_generic_frame_light_band = 40
-      gtd_generic_frame_metal = 40
-      gtd_generic_artsy_center_braced_hell = 40
-      gtd_generic_d64_1x = 6
-      gtd_generic_d64_1x_yellow = 6
-      gtd_generic_d64_1x_blue = 6
-      gtd_generic_d64_2x = 6
-      gtd_generic_d64_2x_yellow = 6
-      gtd_generic_d64_2x_blue = 6
-      gtd_generic_tek_grate = 40
-    }
-=======
       torches2 = 30, --red
       torches3 = 30, --blue
       torches1 = 30, --green
@@ -2220,7 +2064,6 @@ DOOM.THEMES =
       gtd_generic_d64_2x_blue = 6,
       gtd_generic_tek_grate = 40,
     },
->>>>>>> pr/130
 
     outdoor_wall_groups =
     {

@@ -230,11 +230,7 @@ function ScriptMan_assemble_gldefs_lump()
     EPIC_BRIGHTMAPS
   end
 
-<<<<<<< HEAD
-  if gldefs_lines != "" then
-=======
   if gldefs_lines ~= "" then
->>>>>>> pr/130
     add_script_lump("GLDEFS", gldefs_lines)
   end
 end

@@ -291,17 +291,10 @@ PREFABS.Pic_dem_windows_deco7 =
 
   deep   = 48,
 
-<<<<<<< HEAD
-  height = 128
-
-  bound_z1 = 0
-  bound_z2 = 128
-=======
   height = 128,
 
   bound_z1 = 0,
   bound_z2 = 128,
->>>>>>> pr/130
 
   z_fit = "top",
   y_fit = "top",
@@ -365,17 +358,10 @@ PREFABS.Pic_dem_windows_deco10 =
 
   deep   = 48,
 
-<<<<<<< HEAD
-  height = 128
-
-  bound_z1 = 0
-  bound_z2 = 128
-=======
   height = 128,
 
   bound_z1 = 0,
   bound_z2 = 128,
->>>>>>> pr/130
 
   z_fit = "top",
   y_fit = "top",

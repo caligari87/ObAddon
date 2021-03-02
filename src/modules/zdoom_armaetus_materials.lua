@@ -1560,8 +1560,4 @@ brightmap texture SW2CHN
 {
   map OBRS2CN
 }
-<<<<<<< HEAD
 ]]
-=======
-]]
->>>>>>> pr/130

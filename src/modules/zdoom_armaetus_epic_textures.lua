@@ -1013,11 +1013,7 @@ function ARMAETUS_EPIC_TEXTURES.put_the_texture_wad_in()
     gui.wad_add_binary_lump("HI_END",{})
   end
 
-<<<<<<< HEAD
-  if PARAM.custom_trees != "no" then
-=======
   if PARAM.custom_trees ~= "no" then
->>>>>>> pr/130
     wad_file = "modules/zdoom_internal_scripts/ObAddon_trees.wad"
     gui.wad_merge_sections(wad_file)
   end
@@ -1103,17 +1099,6 @@ OB_MODULES["armaetus_epic_textures"] =
         "This is the preferrable option for multiplayer situations and server owners and have each client obtain a copy of the texture pack instead.\n",
       priority=1
     },
-
-    include_brightmaps =
-    {
-      name = "include_brightmaps",
-      label = _("Include Brightmaps"),
-      choices = ARMAETUS_EPIC_TEXTURES.YES_NO,
-      default = "yes",
-      tooltip = "Allows merging Epic Textures brightmaps into the WAD. Does not include brightmaps for" ..
-        " base resources from any of the games.",
-      priority = 0
-    }
 
     include_brightmaps =
     {

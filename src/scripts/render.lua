@@ -231,6 +231,7 @@ function Render_edge(E)
 
     if A.is_outdoor then
       reqs.group = LEVEL.outdoor_wall_group
+      gui.printf(reqs.group .. " botch\n")
       if A.room and A.room.is_exit and LEVEL.alt_outdoor_wall_group then
         reqs.group = LEVEL.alt_outdoor_wall_group
       end

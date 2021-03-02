@@ -121,11 +121,7 @@ end
 function PREFAB_CONTROL.set_damaging_hallways()
   if PARAM.pf_damaging_halls == "default" then return end
 
-<<<<<<< HEAD
-  each name,fab in PREFABS do
-=======
   for name,fab in pairs(PREFABS) do
->>>>>>> pr/130
     if fab.group == "hellcata" then
       fab.flat_LAVA1 = "BLOOD1"
       fab.tex_FIREMAG1 = "BFALL1"
@@ -164,15 +160,9 @@ OB_MODULES["prefab_control"] =
 
   hooks =
   {
-<<<<<<< HEAD
-    setup = PREFAB_CONTROL.setup
-    get_levels = PREFAB_CONTROL.get_levels
-  }
-=======
     setup = PREFAB_CONTROL.setup,
     get_levels = PREFAB_CONTROL.get_levels
   },
->>>>>>> pr/130
 
   options =
   {
@@ -278,11 +268,11 @@ OB_MODULES["prefab_control"] =
     damaging_hallways =
     {
       name = "pf_damaging_halls", label = _("Damaging Hallways"), choices=PREFAB_CONTROL.DAMAGING_HALLWAY_CHOICES,
-      tooltip = "Changes the liquids on hallways with damaging floors to either be damaging (default) or non-damaging."
-      default = "default"
-      priority = 25
+      tooltip = "Changes the liquids on hallways with damaging floors to either be damaging (default) or non-damaging.",
+      default = "default",
+      priority = 25,
       gap = 1
-    }
+    },
 
     --
 

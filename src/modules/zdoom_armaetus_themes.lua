@@ -3889,24 +3889,14 @@ ARMAETUS_SKYBOX_EXCLUSIONS =
 {
   desert =
   {
-<<<<<<< HEAD
-    "Skybox_garrett_winterfall_EPIC"
-  }
-=======
     "Skybox_garrett_winterfall_EPIC",
   },
->>>>>>> pr/130
 
   snow =
   {
     "Skybox_craneo_egypt_EPIC",
-<<<<<<< HEAD
-    "Skybox_craneo_space_shuttle_EPIC"
-  }
-=======
     "Skybox_craneo_space_shuttle_EPIC",
   },
->>>>>>> pr/130
 }
 
 -- intercepts for the new environment theme feature

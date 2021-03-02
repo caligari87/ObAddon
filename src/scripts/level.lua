@@ -328,11 +328,7 @@ function Episode_determine_map_sizes()
     if PARAM.room_size_multiplier then
       if PARAM.room_size_multiplier == "mixed" then
         LEV.size_multiplier = rand.key_by_probs(ROOM_SIZE_MULTIPLIER_MIXED_PROBS)
-<<<<<<< HEAD
-      elseif PARAM.room_size_multiplier != "vanilla" then
-=======
       elseif PARAM.room_size_multiplier ~= "vanilla" then
->>>>>>> pr/130
         LEV.size_multiplier = tonumber(PARAM.room_size_multiplier)
       end
     end
@@ -340,11 +336,7 @@ function Episode_determine_map_sizes()
     if PARAM.room_area_multiplier then
       if PARAM.room_area_multiplier == "mixed" then
         LEV.area_multiplier = rand.key_by_probs(ROOM_AREA_MULTIPLIER_MIXED_PROBS)
-<<<<<<< HEAD
-      elseif PARAM.room_area_multiplier != "vanilla" then
-=======
       elseif PARAM.room_area_multiplier ~= "vanilla" then
->>>>>>> pr/130
         LEV.area_multiplier = tonumber(PARAM.room_area_multiplier)
       end
     end

@@ -5,13 +5,9 @@ PREFABS.Wall_generic_doom64_1x=
   file   = "wall/gtd_wall_generic_doom64_glow.wad",
   map    = "MAP01",
 
-<<<<<<< HEAD
-  prob   = 50
-=======
   prob   = 50,
 
   group  = "gtd_generic_d64_1x",
->>>>>>> pr/130
 
   where  = "edge",
   deep   = 16,
