@@ -1361,11 +1361,7 @@ brightmap texture SILVER2G
 }
 
 // vent (the only one that needs a brightmap TBH
-<<<<<<< HEAD
-brightmap texture COMPVEN2
-=======
 brightmap texture COMPVEN2,
->>>>>>> pr/130
 {
   map OBRCPVN2
 }
@@ -1470,11 +1466,7 @@ brightmap texture NOISE3D
   map OBRNOIS3
 }
 
-<<<<<<< HEAD
-// lite5 recolors - excluding the original lite5
-=======
 // lite5 recolors - excluding the original lite5,
->>>>>>> pr/130
 brightmap texture T_VSLTEG
 {
   map OBRLITE5
