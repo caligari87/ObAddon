@@ -54,7 +54,7 @@ MODDED_GAME_EXTRAS.HELLSCAPE_NAVIGATOR_TEMPLATE =
   COPIES =
 [[actor m8f_hn_AreaNameMarker_NUMNUMNUM : m8f_hn_AreaNameMarker_ObAddon NUMNUMNUM
 {
-  Tag "NAMENAMENAME",
+  Tag "NAMENAMENAME"
   Health SIZESIZESIZE
 }
 
@@ -507,7 +507,7 @@ function MODDED_GAME_EXTRAS.generate_hn_decorate()
     local thing_chunk = MODDED_GAME_EXTRAS.HELLSCAPE_NAVIGATOR_TEMPLATE.COPIES
     thing_chunk = string.gsub(thing_chunk, "NUMNUMNUM", editor_num)
     thing_chunk = string.gsub(thing_chunk, "NAMENAMENAME", name)
-    thing_chunk = string.gsub(thing_chunk, "SIZESIZESIZE", radius)
+    thing_chunk = string.gsub(thing_chunk, "SIZESIZESIZE", int(radius))
 
     decorate_string = decorate_string .. thing_chunk
   end
