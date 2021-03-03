@@ -300,7 +300,7 @@ ARMAETUS_EPIC_TEXTURES.TEMPLATES =
                     }
                 }
 
-                if(onCeil ~= 'F_SKY1')
+                if(onCeil != 'F_SKY1')
                 {
                     scale.x *= 0.5; //For those occasional indoor planters
                     scale.y *= 0.5; //in urban theme.
