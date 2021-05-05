@@ -1,3 +1,12 @@
+# IMPORTANT: OBADDON IS NO LONGER BEING DEVELOPED!
+PLEASE CHECK OUT [**OBSIDIAN**](https://github.com/dashodanger/Oblige) FOR CONTINUED DEVELOPMENT EFFORTS.
+
+***
+***
+***
+***
+
+
 ![ObAddon Title Graphic](https://i.imgur.com/SK5gc0r.png)
 
 # ObAddon
